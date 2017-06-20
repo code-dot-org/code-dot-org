@@ -330,26 +330,9 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
-    Maze.subtype.start = undefined;
-    Maze.subtype.finish = undefined;
-
-    // Locate the start and finish squares.
-    for (var y = 0; y < Maze.map.ROWS; y++) {
-      for (var x = 0; x < Maze.map.COLS; x++) {
-        var cell = Maze.map.getTile(y, x);
-        if (cell === SquareType.START) {
-          Maze.subtype.start = {x: x, y: y};
-        } else if (cell === SquareType.FINISH) {
-          Maze.subtype.finish = {x: x, y: y};
-        } else if (cell === SquareType.STARTANDFINISH) {
-          Maze.subtype.start = {x: x, y: y};
-          Maze.subtype.finish = {x: x, y: y};
-        }
-      }
-    }
-
     Maze.map.resetDirt();
 
+    Maze.subtype.initStartFinish();
     Maze.subtype.createDrawer();
     Maze.subtype.initWallMap();
 
