@@ -34,10 +34,10 @@
     "permitted_errors": "0",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)\",\"hint_id\":\"courseF_artist_fwp_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/68b329da9893e34099c7d8ad5cb9c940/courseF_artist_fwp_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This is a series of octagons with sides that are `counter` pixels long. \",\"hint_id\":\"courseF_artist_fwp_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eb324631c0ce30c874437d26254d6599/courseF_artist_fwp_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each octagon is called from inside a `for` loop that goes from 200 down to 2 by 2. \",\"hint_id\":\"courseF_artist_fwp_challenge1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2a4a7cf68a9afb5ffc563b44c6fbf1da/courseF_artist_fwp_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't forget to turn by 22.5 degrees at the end of each iteration. \",\"hint_id\":\"courseF_artist_fwp_challenge1_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9aa4603d847b8da4fb93fe95bc5ab479/courseF_artist_fwp_challenge1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Both the color of each octagon and the width of the pen are controlled by the `counter` variable.\",\"hint_id\":\"courseF_artist_fwp_challenge1_e\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c3f4f3b8aadcf7f09670daa25b15fc08/courseF_artist_fwp_challenge1.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"**Solution:**\\n\\n![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)\",\"hint_id\":\"courseF_artist_fwp_challenge1_f\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/58958c365db37efc69a4c0b4439a4989/courseF_artist_fwp_challenge1.mp3\"}]",
     "discard_background": "false",
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
