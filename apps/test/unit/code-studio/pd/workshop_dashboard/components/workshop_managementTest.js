@@ -3,7 +3,6 @@ import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-// import {Router} from 'react-router';
 
 describe("WorkshopManagement", () => {
 
@@ -75,11 +74,7 @@ describe("WorkshopManagement", () => {
         viewUrl = "viewUrl"
         showSurveyUrl={true}
       />,
-      {
-        context: {
-          router: fakeRouter
-        }
-      }
+      {context}
     );
 
     const renderedButtons = workshopManagement.find("Button");
@@ -108,11 +103,7 @@ describe("WorkshopManagement", () => {
         viewUrl = "viewUrl"
         showSurveyUrl={true}
       />,
-      {
-        context: {
-          router: fakeRouter
-        }
-      }
+      {context}
     );
 
     const renderedButtons = workshopManagement.find("Button");
