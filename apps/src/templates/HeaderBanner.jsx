@@ -5,10 +5,11 @@
 
 import React from 'react';
 import color from "../util/color";
-import ProgressButton from './progress/ProgressButton';
-import i18n from "@cdo/locale";
 
 const styles = {
+  headerBanner: {
+    height: 260
+  },
   bannerHeading: {
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
@@ -29,54 +30,34 @@ const styles = {
     fontSize: 16,
     width: 600,
     marginBottom: 20,
-  },
-  spacer: {
-    marginBottom: 50
-  },
-  bigSpacer: {
-    marginBottom: 150
   }
 };
 
 const HeaderBanner = React.createClass({
   propTypes: {
-    showCreateAccount: React.PropTypes.bool,
     headingText: React.PropTypes.string,
     subHeadingText: React.PropTypes.string,
     description: React.PropTypes.string,
+    children: React.PropTypes.node
   },
 
   render() {
-    const {showCreateAccount, headingText, subHeadingText, description} = this.props;
+    const {headingText, subHeadingText, description} = this.props;
 
     return (
-      <div>
-        {!showCreateAccount && (
-          <div style={styles.spacer}/>
-        )}
+      <div style={styles.headerBanner}>
         <div style={styles.bannerHeading}>
           {headingText || <span>&nbsp;</span>}
         </div>
         <div style={styles.bannerSubHeading}>
           {subHeadingText || <span>&nbsp;</span>}
         </div>
-        {showCreateAccount && (
-          <div>
-            <div style={styles.bannerDescription}>
-              {description}
-            </div>
-            <ProgressButton
-              href= "/users/sign_up"
-              color={ProgressButton.ButtonColor.gray}
-              text={i18n.createAccount()}
-              style={styles.button}
-            />
-            <div style={styles.spacer}/>
+        {description && (
+          <div style={styles.bannerDescription}>
+            {description}
           </div>
         )}
-        {!showCreateAccount && (
-          <div style={styles.bigSpacer}/>
-        )}
+        {this.props.children}
       </div>
     );
   }

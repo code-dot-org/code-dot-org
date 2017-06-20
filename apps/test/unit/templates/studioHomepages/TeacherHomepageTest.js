@@ -91,7 +91,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const announcementsContainer = wrapper.childAt(2);
+    const announcementsContainer = wrapper.childAt(3);
     assert.equal(announcementsContainer.name(), 'Announcements');
     assert.equal(announcementsContainer.props().announcements.length, 1);
     // Check if Announcements receives correct props.
@@ -122,7 +122,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const announcementsContainer = wrapper.childAt(2);
+    const announcementsContainer = wrapper.childAt(3);
     assert.equal(announcementsContainer.name(), 'Announcements');
     assert.equal(announcementsContainer.props().announcements.length, 2);
     // Check if Announcements receives correct props.
@@ -164,7 +164,7 @@ describe('TeacherHomepage', () => {
       />
     );
     // Check if Sections receives correct props.
-    const sectionsContainer = wrapper.childAt(3);
+    const sectionsContainer = wrapper.childAt(4);
     assert.equal(sectionsContainer.name(),'Sections');
     assert.equal(sectionsContainer.props().sections.length, 2);
     const section1 = sectionsContainer.props().sections[0];
@@ -226,7 +226,7 @@ describe('TeacherHomepage', () => {
       />
     );
     // Check if Sections receives correct props.
-    const sectionsContainer = wrapper.childAt(3);
+    const sectionsContainer = wrapper.childAt(4);
     assert.equal(sectionsContainer.name(),'Sections');
     assert.equal(sectionsContainer.props().sections.length, 0);
     // Check if a ContentContainer is rendered.
@@ -256,7 +256,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const recentCourses = wrapper.childAt(4);
+    const recentCourses = wrapper.childAt(5);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
@@ -301,7 +301,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const recentCourses = wrapper.childAt(4);
+    const recentCourses = wrapper.childAt(5);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
