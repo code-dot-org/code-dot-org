@@ -20,7 +20,7 @@
     "instructions": "Run this code to see how the artist uses binary to draw this pattern.",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \r\n<hr/>\r\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n<hr/>\r\n**Run this code to see how the artist uses binary to draw this pattern.**",
+    "markdown_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \r\n___\r\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run this code to see how the artist uses binary to draw this pattern.**",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,10 +33,13 @@
     "examples_required": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:14:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
