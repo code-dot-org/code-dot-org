@@ -134,6 +134,8 @@ export default class WholeWeek extends FormComponent {
           rate how closely your own beliefs align to those in the statements.
         </p>
 
+        <hr />
+
         <Row>
           <Col md={6}>
             <h4>Statement A</h4>
@@ -163,6 +165,8 @@ export default class WholeWeek extends FormComponent {
             })}
           </Col>
         </Row>
+
+        <hr />
 
         <Row>
           <Col md={6}>
@@ -194,6 +198,8 @@ export default class WholeWeek extends FormComponent {
             })}
           </Col>
         </Row>
+
+        <hr />
 
         <Row>
           <Col md={6}>
