@@ -330,6 +330,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'cannot make a teacher with followeds an admin' do
+    follower = create :follower, student_user: (create :teacher)
+    assert_raises(ActiveRecord::RecordInvalid) do
+      follower.student_user.update!(admin: true)
+    end
+    refute follower.student_user.reload.admin?
+  end
+
   test "gallery" do
     user = create(:user)
     assert_equal [], user.gallery_activities
