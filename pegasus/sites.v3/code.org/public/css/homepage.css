@@ -54,6 +54,16 @@ body.modal-open .supreme-container{
   height: 100%;
 }
 
+#hero #fullwidth0.widehero {
+  animation: fadein 4s;
+  display: block;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 #homepage #hero #fullwidth {
   width: 100%;
 }
