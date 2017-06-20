@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Can you figure out how to make this drawing using the function that you just created?\r\n\r\n- The red spiral goes from 50 to 200 pixels\r\n- The blue spiral goes from 25 to 125 pixels\r\n- The green spiral goes from 100 to 300 pixels\r\n",
+    "markdown_instructions": "Freeplay! Can you figure out how to make this drawing using the function that you just created?\r\n\r\n- The red spiral goes from 50 to 200 pixels\r\n- The blue spiral goes from 25 to 125 pixels\r\n- The green spiral goes from 100 to 300 pixels\r\n",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -40,7 +40,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-19 18:13:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 18:13:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 17:45:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
