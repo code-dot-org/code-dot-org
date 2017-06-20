@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
+import i18n from '@cdo/locale';
 
 const styles = {
   table: {
@@ -52,7 +53,6 @@ class SectionTable extends Component {
   render() {
     const { sectionIds } = this.props;
 
-    // TODO: i18n
     return (
       <table style={styles.table}>
         <colgroup>
@@ -69,28 +69,28 @@ class SectionTable extends Component {
         <tbody>
           <tr>
             <th style={styles.headerRow}>
-              <a style={styles.link} href>Section</a>
+              <a style={styles.link} href>{i18n.section()}</a>
             </th>
             <th style={styles.headerRow}>
-              <a style={styles.link}>Login Type</a>
+              <a style={styles.link}>{i18n.loginType()}</a>
             </th>
             <th style={styles.headerRow}>
-              <a style={styles.link}>Grade</a>
+              <a style={styles.link}>{i18n.grade()}</a>
             </th>
             <th style={styles.headerRow}>
-              <a style={styles.link}>Course</a>
+              <a style={styles.link}>{i18n.course()}</a>
             </th>
             <th style={styles.headerRow}>
-              <a style={styles.link}>Stage Extras</a>
+              <a style={styles.link}>{i18n.stageExtras()}</a>
             </th>
             <th style={styles.headerRow}>
-              <a style={styles.link}>Pair Programming</a>
+              <a style={styles.link}>{i18n.pairProgramming()}</a>
             </th>
             <th style={styles.headerRow}>
-              <a style={styles.link}>Students</a>
+              <a style={styles.link}>{i18n.students()}</a>
             </th>
             <th style={styles.headerRow}>
-              Section Code
+              {i18n.sectionCode()}
             </th>
             <th style={styles.headerRow}>
             </th>

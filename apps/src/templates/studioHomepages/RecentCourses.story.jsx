@@ -26,7 +26,6 @@ export default storybook => {
               name: "Play Lab",
               description: "Create a story or make a game with Play Lab!",
               link: "https://code.org/playlab",
-              assignedSections: ["Section 1"]
             }]}
             showAllCoursesLink={true}
             heading="Courses"
@@ -44,13 +43,11 @@ export default storybook => {
                 name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
-                assignedSections: ["Section 1"]
               },
               {
                 name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
-                assignedSections: ["Section 1"]
               },
             ]}
             showAllCoursesLink={true}
@@ -69,19 +66,16 @@ export default storybook => {
                 name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
-                assignedSections: ["Section 1"]
               },
               {
                 name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
-                assignedSections: ["Section 1"]
               },
               {
                 name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
-                assignedSections: ["Section 1"]
               },
             ]}
             showAllCoursesLink={true}
@@ -100,25 +94,21 @@ export default storybook => {
                 name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
-                assignedSections: ["Section 1"]
               },
               {
                 name: "Play Lab",
                 description: "Create a story or make a game with Play Lab!",
                 link: "https://code.org/playlab",
-                assignedSections: ["Section 1"]
               },
               {
                 name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
-                assignedSections: ["Section 1"]
               },
               {
                 name: "CSP Unit 2 - Digital Information",
                 description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
                 link: "https://curriculum.code.org/csp/unit2/",
-                assignedSections: ["Section 1"]
               },
             ]}
             showAllCoursesLink={false}

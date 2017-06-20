@@ -9,19 +9,19 @@ import {
   ConfirmSave
 } from '@cdo/apps/templates/teacherDashboard/SectionRow';
 
-const section = {
-  id: 11,
-  courseId: 29,
-  scriptId: null,
-  name: "my_section",
-  loginType: "word",
-  grade: "3",
-  stageExtras: false,
-  pairingAllowed: true,
-  numStudents: 10,
-  code: "PMTKVH",
-  assignmentName: "CS Discoveries",
-  assignmentPath: "//localhost-studio.code.org:3000/courses/csd"
+const sections = {
+  11: {
+    id: 11,
+    courseId: 29,
+    scriptId: null,
+    name: "my_section",
+    loginType: "word",
+    grade: "3",
+    stageExtras: false,
+    pairingAllowed: true,
+    studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
+    code: "PMTKVH",
+  }
 };
 const validLoginTypes = ['word', 'email', 'picture'];
 const validGrades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"];
@@ -30,10 +30,23 @@ const defaultProps = {
   sectionId: 11,
   validLoginTypes,
   validGrades,
-  validAssignments: {},
-  section,
+  validAssignments: {
+    '29_null': {
+      id: 29,
+      name: "CS Discoveries",
+      script_name: "csd",
+      category: "Full Courses",
+      position: 1,
+      category_priority: -1,
+      courseId: 29,
+      scriptId: null,
+      assignId: "29_null",
+      path: '//localhost-studio.code.org:3000/courses/csd',
+    }
+  },
+  sections,
   updateSection: () => {},
-  cancelNewSection: () => {},
+  removeSection: () => {},
 };
 
 describe('SectionRow', () => {
@@ -113,7 +126,7 @@ describe('SectionRow', () => {
       );
       const col = wrapper.find('td').at(3);
       assert.equal(col.find('a').length, 1);
-      assert.equal(col.find('a').props().href, section.assignmentPath);
+      assert.equal(col.find('a').props().href, '//localhost-studio.code.org:3000/courses/csd');
       assert.equal(col.find('a').text(), 'CS Discoveries');
     });
 
@@ -177,8 +190,7 @@ describe('SectionRow', () => {
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'EditOrDelete');
       assert.equal(col.find('EditOrDelete').props().canDelete, false);
-      assert.equal(col.children().at(1).name(), 'ProgressButton');
-      assert.equal(col.children().at(1).props().text, 'Print Certificates');
+      assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
     describe('EditOrDelete', () => {
@@ -218,8 +230,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'ConfirmSave');
-      assert.equal(col.children().at(1).name(), 'ProgressButton');
-      assert.equal(col.children().at(1).props().text, 'Print Certificates');
+      assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
     describe('ConfirmSave', () => {
@@ -245,8 +256,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'ConfirmDelete');
-      assert.equal(col.children().at(1).name(), 'ProgressButton');
-      assert.equal(col.children().at(1).props().text, 'Print Certificates');
+      assert.equal(col.children().at(1).name(), 'PrintCertificates');
     });
 
     describe('ConfirmDelete', () => {
