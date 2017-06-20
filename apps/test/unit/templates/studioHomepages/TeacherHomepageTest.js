@@ -188,8 +188,8 @@ describe('TeacherHomepage', () => {
     // Check if a ContentContainer is rendered.
     const sectionsContentContainer = sectionsContainer.childAt(0);
     assert.equal(sectionsContentContainer.name(), 'ContentContainer');
-    assert.equal(sectionsContentContainer.props().heading, 'Sections');
-    assert.equal(sectionsContentContainer.props().linkText, 'View all sections');
+    assert.equal(sectionsContentContainer.props().heading, 'Classroom Sections');
+    assert.equal(sectionsContentContainer.props().linkText, 'Manage sections');
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a SectionsTable is rendered.
@@ -234,8 +234,8 @@ describe('TeacherHomepage', () => {
     // Check if a ContentContainer is rendered.
     const sectionsContentContainer = sectionsContainer.childAt(0);
     assert.equal(sectionsContentContainer.name(), 'ContentContainer');
-    assert.equal(sectionsContentContainer.props().heading, 'Sections');
-    assert.equal(sectionsContentContainer.props().linkText, 'View all sections');
+    assert.equal(sectionsContentContainer.props().heading, 'Classroom Sections');
+    assert.equal(sectionsContentContainer.props().linkText, 'Manage sections');
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a sections SetUpMessage is rendered.

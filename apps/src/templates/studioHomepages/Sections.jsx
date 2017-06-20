@@ -18,7 +18,7 @@ const Sections = React.createClass({
       <div>
         <ContentContainer
           heading={i18n.sectionsTitle()}
-          linkText={i18n.viewAllSections()}
+          linkText={i18n.manageSections()}
           link={editSectionsUrl}
           showLink={true}
         >
