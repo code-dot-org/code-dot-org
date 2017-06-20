@@ -1,6 +1,7 @@
 /** @file Serialport scanning logic for Maker Toolkit */
 import ChromeSerialPort from 'chrome-serialport';
 import {ConnectionFailedError} from './MakerError';
+/* global SerialPort */
 
 /**
  * @typedef {Object} SerialPortInfo
@@ -26,7 +27,6 @@ export const CIRCUIT_PLAYGROUND_PID = '0x8011';
  */
 export function findPortWithViableDevice() {
   return Promise.resolve()
-      .then(ensureAppInstalled)
       .then(listSerialDevices)
       .then(list => {
         const bestOption = getPreferredPort(list);
@@ -57,7 +57,7 @@ export function ensureAppInstalled() {
  */
 function listSerialDevices() {
   return new Promise((resolve, reject) => {
-    ChromeSerialPort.list((error, list) => error ? reject(error) : resolve(list));
+    SerialPort.list((error, list) => error ? reject(error) : resolve(list));
   });
 }
 

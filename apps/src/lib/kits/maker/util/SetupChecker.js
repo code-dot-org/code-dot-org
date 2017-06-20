@@ -1,25 +1,21 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../CircuitPlaygroundBoard';
 import {ensureAppInstalled, findPortWithViableDevice} from '../portScanning';
-import {isChrome, gtChrome33} from './browserChecks';
 
 export default class SetupChecker {
   port = null;
   boardController = null;
 
   /**
-   * Resolve if using Chrome > 33
+   * Resolve if using Electron Maker Bridge
    * @return {Promise}
    */
   detectChromeVersion() {
     return new Promise((resolve, reject) => {
-      if (!isChrome()) {
-        reject(new Error('Not using Chrome'));
-      } if (!gtChrome33()) {
-        reject(new Error('Not using Chrome > v33'));
-      } else {
+      if (window.MakerBridge && window.MakerBridge.getVersion && window.MakerBridge.getVersion() === '0.0.1') {
         resolve();
       }
+      reject(new Error('Not using Maker Bridge'));
     });
   }
 

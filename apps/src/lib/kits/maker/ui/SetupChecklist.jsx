@@ -2,7 +2,7 @@
 import React, {Component, PropTypes} from 'react';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
-import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
+import {isWindows} from '../util/browserChecks';
 import SetupStep, {
   HIDDEN,
   WAITING,
@@ -70,6 +70,9 @@ export default class SetupChecklist extends Component {
     const {setupChecker} = this.props;
     this.setState({...initialState, isDetecting: true});
 
+    // Irrelevant to Maker Bridge setup
+    this.hide(STATUS_APP_INSTALLED);
+
     if (!isWindows()) {
       this.hide(STATUS_WINDOWS_DRIVERS);
     }
@@ -79,10 +82,6 @@ export default class SetupChecklist extends Component {
         // Are we using a compatible browser?
         .then(() => this.detectStep(STATUS_IS_CHROME,
             () => setupChecker.detectChromeVersion()))
-
-        // Is Chrome App Installed?
-        .then(() => this.detectStep(STATUS_APP_INSTALLED,
-            () => setupChecker.detectChromeAppInstalled()))
 
         // Is board plugged in?
         .then(() => this.detectStep(STATUS_BOARD_PLUG,
@@ -176,12 +175,10 @@ export default class SetupChecklist extends Component {
           <div className="setup-status">
             <SetupStep
               stepStatus={this.state[STATUS_IS_CHROME]}
-              stepName="Chrome version 33+"
+              stepName="Electron Maker Bridge"
             >
-              {isChrome() && `It looks like your Chrome version is ${getChromeVersion()}.`}
               Your current browser is not supported at this time.
-              Please install the latest version of <a href="https://www.google.com/chrome/browser/">Google Chrome</a>.
-              <br/><em>Note: We plan to support other browsers including Internet Explorer in Fall 2017.</em>
+              Please install the Electron Maker Bridge.
             </SetupStep>
             <SetupStep
               stepStatus={this.state[STATUS_APP_INSTALLED]}
