@@ -12,6 +12,11 @@ class ScriptTest < ActiveSupport::TestCase
     # Level names match those in 'test.script'
     @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
+    # populate with a fake course
+    course = create(:course, name: 'foo')
+    script = create(:script, name: 'foo1', hidden: true)
+    create(:course_script, position: 1, course: course, script: script)
+
     Rails.application.config.stubs(:levelbuilder_mode).returns false
   end
 
@@ -747,5 +752,21 @@ class ScriptTest < ActiveSupport::TestCase
     create :course_script, position: 1, course: course, script: script
 
     assert_equal '/courses/csp', script.course_link
+  end
+
+  test 'course_link uses cache' do
+    # make sure this new script/course ends up in our cache
+    Script.stubs(:should_cache?).returns true
+    Script.get_from_cache('foo1')
+
+    # make sure course is also in our cache (by both name and id)
+    Course.stubs(:should_cache?).returns true
+    course = Course.get_from_cache('foo')
+    Course.get_from_cache(course.id)
+
+    populate_cache_and_disconnect_db
+
+    script = Script.get_from_cache('foo1')
+    assert_equal '/courses/foo', script.course_link
   end
 end
