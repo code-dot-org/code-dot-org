@@ -844,7 +844,8 @@ class Script < ActiveRecord::Base
   #   is one. A script is considered to have a matching course if there is exactly
   #   one course for this script
   def course_link
-    return nil if courses.length != 1
-    course_path(courses[0])
+    return nil if course_scripts.length != 1
+    course = Course.get_from_cache(course_scripts[0].course_id)
+    course_path(course)
   end
 end
