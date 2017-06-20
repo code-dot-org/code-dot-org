@@ -4996,11 +4996,11 @@ Studio.setMap = function (opts) {
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
   Studio.wallMapCollisions = true;
+  Studio.walls.setWallMapRequested(useMap);
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
   Studio.wallMapRequested = opts.value;
-  Studio.walls.setWallMapRequested(opts.value);
 
   if (opts.color && Studio.wallColor !== opts.color) {
     Studio.wallColor = opts.color;
