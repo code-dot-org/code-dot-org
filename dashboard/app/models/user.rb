@@ -108,7 +108,6 @@ class User < ActiveRecord::Base
     district_id
     ops_school
     ops_gender
-    races
     using_text_mode
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
@@ -334,6 +333,8 @@ class User < ActiveRecord::Base
 
   before_create :generate_secret_words
 
+  before_create :clear_ui_tips
+
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
@@ -371,9 +372,7 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    # TODO(asher): Add sanitize_and_set_race_data to the before_save callbacks after completely
-    # eliminating the `races` serialized attribute in all environments.
-    # :sanitize_and_set_race_data,
+    :sanitize_race_data_set_urm,
     :fix_by_user_type
 
   def make_teachers_21
@@ -395,24 +394,40 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  # Returns whether the comma separated list of races represents an under-represented minority user.
-  # @return [Boolean, nil] Whether races_comma_separated represents a URM user.
+  # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
+  # under-represented minority.
   #   - true: Yes, a URM user.
   #   - false: No, not a URM user.
   #   - nil: Don't know, may or may not be a URM user.
-  # TODO(asher): Replace instances of `read_attribute(:races)` with `races` after the serialized
-  # property `races` key has been fully eliminated.
   def urm_from_races
-    races_array = read_attribute(:races).split(',')
-    return nil if races_array.empty?
-    return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+    return nil unless races
+
+    races_as_list = races.split ','
+    return nil if races_as_list.empty?
+    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
     false
   end
 
-  def sanitize_and_set_race_data
-    return unless races_changed?
+  def sanitize_race_data_set_urm
+    return true unless races_changed?
+
+    if races
+      races_as_list = races.split ','
+      if races_as_list.include? 'closed_dialog'
+        self.races = 'closed_dialog'
+      elsif races_as_list.length > 5
+        self.races = 'nonsense'
+      else
+        races_as_list.each do |race|
+          self.races = 'nonsense' unless VALID_RACES.include? race
+        end
+      end
+    end
+
     self.urm = urm_from_races
+
+    true
   end
 
   def fix_by_user_type
@@ -564,17 +579,7 @@ class User < ActiveRecord::Base
 
   def update_without_password(params, *options)
     if params[:races]
-      update_columns(races: params[:races].join(','))
-      if params[:races].include? 'closed_dialog'
-        update_columns(races: 'closed_dialog')
-      end
-      if params[:races].length > 5
-        update_columns(races: 'nonsense')
-      end
-      params[:races].each do |race|
-        update_column(races: 'nonsense') unless VALID_RACES.include? race
-      end
-      update_column(:urm, urm_from_races)
+      self.races = params[:races].join ','
     end
     params.delete(:races)
     super
@@ -909,6 +914,13 @@ class User < ActiveRecord::Base
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
+  def clear_ui_tips
+    # New teachers don't need to see the UI tips for their home and course pages,
+    # so set them as already dismissed.
+    self.ui_tip_dismissed_homepage_header = true
+    self.ui_tip_dismissed_teacher_courses = true
+  end
+
   def advertised_scripts
     [
       Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
@@ -947,9 +959,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
-        # assigned_sections is current unused. When we support this, I think it makes
-        # more sense to get/store this data separately from courses.
-        assignedSections: []
       }
     end
 
@@ -960,9 +969,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
-        # assigned_sections is current unused. When we support this, I think it makes
-        # more sense to get/store this data separately from courses.
-        assignedSections: []
       }
     end
 
