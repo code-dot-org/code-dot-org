@@ -39,6 +39,8 @@ describe("WorkshopManagement", () => {
     mock.verify();
   });
 
+  // TODO: Test functionality of the delete button
+
   it("Renders expected buttons for started workshop", () => {
     const mock = sinon.mock(fakeRouter);
 
