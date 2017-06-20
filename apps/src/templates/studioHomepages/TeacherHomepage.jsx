@@ -21,6 +21,7 @@ const TeacherHomepage = React.createClass({
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
@@ -31,6 +32,9 @@ const TeacherHomepage = React.createClass({
         <HeaderBanner
           headingText={i18n.homepageHeading()}
           extended={false}
+        />
+        <ProtectedStatefulDiv
+          ref="flashes"
         />
         <ProtectedStatefulDiv
           ref="termsReminder"
