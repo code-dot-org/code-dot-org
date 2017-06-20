@@ -36,9 +36,9 @@
     "discard_background": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You need to click the \\\"edit\\\" button to get into the function.  Once you're there, add a parameter called `length` and use it inside your `move forward` block!\",\"hint_id\":\"courseF_artist_fwp2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b7defcaec660038f173a08dcd10da1a7/courseF_artist_fwp2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When calling your function, use a `for loop` for the best possible code!\",\"hint_id\":\"courseF_artist_fwp2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/062ac7c51ade064cc84b325a0e4b17db/courseF_artist_fwp2.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
