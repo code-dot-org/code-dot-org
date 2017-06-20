@@ -23,3 +23,7 @@ theme: responsive
 ### From Education
 
 <%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'education') %>
+
+### From [Diversity Council](/about/diversity-council)
+
+<%= view :about_people, people:DB[:cdo_team].where(kind_s:'diversity_council_short') %>
