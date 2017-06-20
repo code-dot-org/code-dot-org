@@ -34,19 +34,12 @@ var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
 import {generateCodeAliases} from '../dropletUtils';
-var mazeUtils = require('./mazeUtils');
+import getSubtypeForSkin from './mazeUtils';
 var dropletConfig = require('./dropletConfig');
 
 var MazeMap = require('./mazeMap');
 import drawMap from './drawMap';
 
-import Bee from './bee';
-import Collector from './collector';
-import WordSearch from './wordsearch';
-import Scrat from './scrat';
-import Farmer from './farmer';
-import Harvester from './harvester';
-import Planter from './planter';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -261,21 +254,8 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  if (mazeUtils.isBeeSkin(config.skinId)) {
-    Maze.subtype = new Bee(Maze, studioApp(), config);
-  } else if (mazeUtils.isCollectorSkin(config.skinId)) {
-    Maze.subtype = new Collector(Maze, studioApp(), config);
-  } else if (mazeUtils.isWordSearchSkin(config.skinId)) {
-    Maze.subtype = new WordSearch(Maze, studioApp(), config);
-  } else if (mazeUtils.isScratSkin(config.skinId)) {
-    Maze.subtype = new Scrat(Maze, studioApp(), config);
-  } else if (mazeUtils.isHarvesterSkin(config.skinId)) {
-    Maze.subtype = new Harvester(Maze, studioApp(), config);
-  } else if (mazeUtils.isPlanterSkin(config.skinId)) {
-    Maze.subtype = new Planter(Maze, studioApp(), config);
-  } else {
-    Maze.subtype = new Farmer(Maze, studioApp(), config);
-  }
+  const Type = getSubtypeForSkin(config.skinId);
+  Maze.subtype = new Type(Maze, studioApp(), config);
 
   if (Maze.subtype.overrideStepSpeed) {
     Maze.scale.stepSpeed = Maze.subtype.overrideStepSpeed;
