@@ -16,11 +16,16 @@ const styles = {
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
   },
+  lightRow: {
+    backgroundColor: color.table_light_row
+  },
+  darkRow: {
+    backgroundColor: color.table_dark_row
+  },
   row: {
     borderBottomColor: color.border_light_gray,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    backgroundColor: color.white,
   },
   col1: {
     borderRightWidth: 1,
@@ -60,12 +65,12 @@ const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: 'Gotham 5r',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
   },
   link: {
     color: color.teal,
-    fontFamily: 'Gotham 5r',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     textDecoration: 'none'
   }
@@ -117,7 +122,13 @@ const SectionsTable = React.createClass({
         </thead>
         <tbody>
           {sections.map((section, index) =>
-            <tr style={styles.row} key={index}>
+            <tr
+              style={{
+                ...(index % 2 === 0 ? styles.lightRow : styles.darkRow),
+                ...styles.row
+              }}
+              key={index}
+            >
               <td style={styles.col1}>
                 <a href={section.linkToProgress} style={styles.link}>
                   {section.name}

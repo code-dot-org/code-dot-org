@@ -44,13 +44,11 @@ const courses = [
     name: "Course 1",
     description: "Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
     link: "https://studio.code.org/s/course1",
-    assignedSections: []
   },
   {
     name: "Course 2",
     description: "Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
     link: "https://studio.code.org/s/course2",
-    assignedSections: []
   },
 ];
 
@@ -93,7 +91,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const announcementsContainer = wrapper.childAt(2);
+    const announcementsContainer = wrapper.childAt(3);
     assert.equal(announcementsContainer.name(), 'Announcements');
     assert.equal(announcementsContainer.props().announcements.length, 1);
     // Check if Announcements receives correct props.
@@ -124,7 +122,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const announcementsContainer = wrapper.childAt(2);
+    const announcementsContainer = wrapper.childAt(3);
     assert.equal(announcementsContainer.name(), 'Announcements');
     assert.equal(announcementsContainer.props().announcements.length, 2);
     // Check if Announcements receives correct props.
@@ -166,7 +164,7 @@ describe('TeacherHomepage', () => {
       />
     );
     // Check if Sections receives correct props.
-    const sectionsContainer = wrapper.childAt(3);
+    const sectionsContainer = wrapper.childAt(4);
     assert.equal(sectionsContainer.name(),'Sections');
     assert.equal(sectionsContainer.props().sections.length, 2);
     const section1 = sectionsContainer.props().sections[0];
@@ -188,8 +186,8 @@ describe('TeacherHomepage', () => {
     // Check if a ContentContainer is rendered.
     const sectionsContentContainer = sectionsContainer.childAt(0);
     assert.equal(sectionsContentContainer.name(), 'ContentContainer');
-    assert.equal(sectionsContentContainer.props().heading, 'Sections');
-    assert.equal(sectionsContentContainer.props().linkText, 'View all sections');
+    assert.equal(sectionsContentContainer.props().heading, 'Classroom Sections');
+    assert.equal(sectionsContentContainer.props().linkText, 'Manage sections');
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a SectionsTable is rendered.
@@ -228,14 +226,14 @@ describe('TeacherHomepage', () => {
       />
     );
     // Check if Sections receives correct props.
-    const sectionsContainer = wrapper.childAt(3);
+    const sectionsContainer = wrapper.childAt(4);
     assert.equal(sectionsContainer.name(),'Sections');
     assert.equal(sectionsContainer.props().sections.length, 0);
     // Check if a ContentContainer is rendered.
     const sectionsContentContainer = sectionsContainer.childAt(0);
     assert.equal(sectionsContentContainer.name(), 'ContentContainer');
-    assert.equal(sectionsContentContainer.props().heading, 'Sections');
-    assert.equal(sectionsContentContainer.props().linkText, 'View all sections');
+    assert.equal(sectionsContentContainer.props().heading, 'Classroom Sections');
+    assert.equal(sectionsContentContainer.props().linkText, 'Manage sections');
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a sections SetUpMessage is rendered.
@@ -258,7 +256,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const recentCourses = wrapper.childAt(4);
+    const recentCourses = wrapper.childAt(5);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
@@ -303,7 +301,7 @@ describe('TeacherHomepage', () => {
         codeOrgUrlPrefix="http://localhost:3000/"
       />
     );
-    const recentCourses = wrapper.childAt(4);
+    const recentCourses = wrapper.childAt(5);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');

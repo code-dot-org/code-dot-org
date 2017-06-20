@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170612195103) do
+ActiveRecord::Schema.define(version: 20170619170358) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -1018,6 +1018,7 @@ ActiveRecord::Schema.define(version: 20170612195103) do
     t.boolean  "active",                                 default: true,    null: false
     t.string   "hashed_email"
     t.datetime "deleted_at"
+    t.datetime "purged_at"
     t.string   "secret_words"
     t.text     "properties",               limit: 65535
     t.string   "invitation_token"
@@ -1040,6 +1041,7 @@ ActiveRecord::Schema.define(version: 20170612195103) do
     t.index ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
+    t.index ["purged_at"], name: "index_users_on_purged_at", using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
     t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree
