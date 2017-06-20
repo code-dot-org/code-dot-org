@@ -65,48 +65,30 @@ const Courses = React.createClass({
     }
   },
 
-  onClickFindCourse: function () {
-    $('html, body').animate({
-      scrollTop: $("#course-explorer-heading").offset().top
-    }, 1000);
-  },
-
   render() {
     const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
+    const subHeadingText = i18n.coursesHeadingSubText(
+      {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+    );
+    const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
       <div>
-        {isSignedOut && (
-          <HeaderBanner
-            headingText={headingText}
-            subHeadingText={i18n.coursesHeadingSubText(
-              {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
-            )}
-            description={i18n.coursesHeadingDescription()}
-          >
+        <HeaderBanner
+          headingText={headingText}
+          subHeadingText={subHeadingText}
+          description={headingDescription}
+        >
+          {isSignedOut && (
             <ProgressButton
               href= "/users/sign_up"
               color={ProgressButton.ButtonColor.gray}
               text={i18n.createAccount()}
               style={styles.button}
             />
-          </HeaderBanner>
-        )}
-
-        {!isSignedOut &&  (
-          <HeaderBanner
-            headingText={headingText}
-            subHeadingText={i18n.coursesHeadingSubTextSignedIn()}
-          >
-            <ProgressButton
-              color={ProgressButton.ButtonColor.gray}
-              text={i18n.findCourse()}
-              style={styles.button}
-              onClick={this.onClickFindCourse}
-            />
-          </HeaderBanner>
-        )}
+          )}
+        </HeaderBanner>
 
         {!isTeacher && (
           <ProtectedStatefulDiv
