@@ -121,4 +121,60 @@ class Course < ApplicationRecord
       end
     }
   end
+
+  @@course_cache = nil
+  COURSE_CACHE_KEY = 'course-cache'.freeze
+
+  # TODO(bjvanminnen): share this somehow with script.rb?
+  def self.should_cache?
+    return false if Rails.application.config.levelbuilder_mode
+    return false if ENV['UNIT_TEST'] || ENV['CI']
+    true
+  end
+
+  # generates our course_cache from what is in the Rails cache
+  def self.course_cache_from_cache
+    Course.connection
+    # make sure possible loaded objects are completely loaded
+    [CourseScript, Plc::Course].each(&:new)
+    Rails.cache.read COURSE_CACHE_KEY
+  end
+
+  def self.course_cache_from_db
+    {}.tap do |cache|
+      Course.all.pluck(:id).each do |course_id|
+        course = Course.includes([:plc_course, :course_scripts]).find(course_id)
+        cache[course.name] = course
+        cache[course.id.to_s] = course
+      end
+    end
+  end
+
+  def self.course_cache_to_cache
+    Rails.cache.write(COURSE_CACHE_KEY, course_cache_from_db)
+  end
+
+  def self.course_cache
+    return nil unless should_cache?
+    @@course_cache ||=
+      course_cache_from_cache || course_cache_from_db
+  end
+
+  def self.get_without_cache(id)
+    # a bit of trickery so we support both ids which are numbers and
+    # names which are strings that may contain numbers (eg. 2-3)
+    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    Course.find_by(find_by => id).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Course with id|name=#{id}") unless s
+    end
+  end
+
+  def self.get_from_cache(id)
+    return get_without_cache(id) unless should_cache?
+
+    course_cache.fetch(id.to_s) do
+      # Populate cache on miss.
+      course_cache[id.to_s] = get_without_cache(id)
+    end
+  end
 end
