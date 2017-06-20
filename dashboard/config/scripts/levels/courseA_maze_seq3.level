@@ -29,11 +29,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"One of the blocks is moving the bird in the wrong direction. Can you figure out which one and replace it with the correct block?\",\"hint_id\":\"courseA_maze_seq3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fc84034a9d3f1ed1bd1bdd8f97f33d6c/courseA_maze_seq3.mp3\"}]",
     "markdown_instructions": "*\"Fix the code to get me to the pig!\"*\r\n\r\n![](https://images.code.org/4adca88dc6df7378846a91d0fb0e59d1-image-1497995239069.gif)",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
