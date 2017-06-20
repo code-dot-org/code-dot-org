@@ -29,11 +29,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If the pig isn't moving far enough, try adding another block.\",\"hint_id\":\"courseA_maze_seq12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c0c16c090fb65265cc8b4a6ddc263fc1/courseA_maze_seq12.mp3\"}]",
     "markdown_instructions": "Get that pig!\r\n\r\n![](https://images.code.org/c6ae5024441e2305db82d06679e5a281-image-1497997160569.gif)",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

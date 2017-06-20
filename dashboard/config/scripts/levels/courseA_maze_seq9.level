@@ -29,11 +29,10 @@
     "markdown_instructions": "**Challenge:** Debug this level by adding blocks to get the bird to the pig!\r\n\r\n![](https://images.code.org/3f35068dd3cf51c420a536fa078f854d-image-1497996843105.gif)",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Stuck? Try tracing the bird's path with your finger.\",\"hint_id\":\"courseA_maze_seq9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6f51b2337ebe235039efad494b7b9412/courseA_maze_seq9.mp3\"}]",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

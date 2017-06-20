@@ -37,8 +37,8 @@
     "disable_if_else_editing": "false",
     "tts_instructions_override": "How can Laurel get all five piles of treasure using only one East block?",
     "shape_shift": "false",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "How can Laurel get all five piles of treasure using only one East block?"
+    "tts_markdown_instructions_override": "How can Laurel get all five piles of treasure using only one East block?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
