@@ -32,6 +32,15 @@ module SharedConstants
     }
   ).freeze
 
+  # The set of valid login types for a section
+  SECTION_LOGIN_TYPE = OpenStruct.new(
+    {
+      word: 'word',
+      picture: 'picture',
+      email: 'email',
+    }
+  )
+
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
   # what the full set of blocks available is.
