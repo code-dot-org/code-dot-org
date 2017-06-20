@@ -1,5 +1,9 @@
 import React from 'react';
-import {FormGroup} from 'react-bootstrap';
+import {
+  FormGroup,
+  Row,
+  Col
+} from 'react-bootstrap';
 import FormComponent from '../form_components/FormComponent';
 import QuestionsTable from '../form_components/QuestionsTable';
 
@@ -123,9 +127,108 @@ export default class WholeWeek extends FormComponent {
           required: true,
           type: 'radio',
         })}
+
+        <p>
+          Before TeacherCon we asked you how closely your own beliefs are to
+          statements in a given pair.  Consider these pairs of statements and
+          rate how closely your own beliefs align to those in the statements.
+        </p>
+
+        <Row>
+          <Col md={6}>
+            <h4>Statement A</h4>
+            <p>
+              Instruction and class activities should focus on maintaining high
+              standards and rigor so that students reach the highest level of
+              achievement, even if some students struggle with the material.
+            </p>
+          </Col>
+          <Col md={6}>
+            <h4>Statement B</h4>
+            <p>
+              Instruction and class activities should focus on ensuring that
+              students with the least prior knowledge and preparation are not
+              left behind, even if that means that less material can be covered.
+            </p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={4} mdOffset={4}>
+            {this.buildButtonsFromOptions({
+              label: '',
+              name: 'instructionFocus',
+              required: false,
+              type: 'radio',
+            })}
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={6}>
+            <h4>Statement A</h4>
+            <p>
+              Computer science teachers have a responsibility to recruit a set
+              of students into their classrooms that are representative of the
+              school’s population in terms of diversity (gender, racial,
+              socio-economic, etc)...
+            </p>
+          </Col>
+          <Col md={6}>
+            <h4>Statement B</h4>
+            <p>
+              Computer science teachers’ responsibility is to promote their
+              computer science classes broadly, to all students. The diversity
+              of the class will reflect those most interested in taking a
+              computer science class.
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={4} mdOffset={4}>
+            {this.buildButtonsFromOptions({
+              label: '',
+              name: 'teacherResponsibility',
+              required: false,
+              type: 'radio',
+            })}
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={6}>
+            <h4>Statement A</h4>
+            <p>
+              The teacher should ensure that their time, and students’ access to
+              resources are distributed equally for all.
+            </p>
+          </Col>
+          <Col md={6}>
+            <h4>Statement B</h4>
+            <p>
+              It’s important that the teacher prioritize their time and
+              resources for students who have the most need.
+            </p>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={4} mdOffset={4}>
+            {this.buildButtonsFromOptions({
+              label: '',
+              name: 'teacherTime',
+              required: false,
+              type: 'radio',
+            })}
+          </Col>
+        </Row>
       </FormGroup>
     );
   }
 }
 
-WholeWeek.associatedFields = Object.keys(LABELS);
+WholeWeek.associatedFields = Object.keys(LABELS).concat([
+  'instructionFocus',
+  'teacherResponsibility',
+  'teacherTime',
+]);
