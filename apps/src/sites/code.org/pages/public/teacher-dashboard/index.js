@@ -13,10 +13,9 @@ import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
-  setSections,
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
+import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import experiments from '@cdo/apps/util/experiments';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
@@ -56,19 +55,20 @@ function renderSectionProjects(sectionId) {
  * @param {object[]} sections - Data returned from server about what sections
  *   this user owns.
  */
-function renderSectionsTable(sections) {
-  const element = document.getElementById('sections-table-react');
+function renderSectionsPage(sections) {
+  const element = document.getElementById('sections-page');
   registerReducers({teacherSections});
   const store = getStore();
   store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
   store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
-  store.dispatch(setSections(sections));
+
+  $("#sections-page-angular").hide();
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionTable/>
+      <SectionsPage/>
     </Provider>,
     element
   );
@@ -261,11 +261,6 @@ function main() {
       $scope.sections.forEach(section => {
         section.assign_id = $scope.getAssignmentId(section);
       });
-      if (experiments.isEnabled('reactSections')) {
-        // TODO - eventually React should own this query
-        renderSectionsTable(sections);
-        $scope.hideSectionsTable = true;
-      }
       $scope.sectionsLoaded = true;
     });
 
@@ -274,6 +269,14 @@ function main() {
     $scope.hocAssignWarningEnabled = hoc_assign_warning;
 
     $scope.hocCategoryName = i18n.hoc_category_name;
+
+    // Angular does not offer a reliable way to wait for the template to load,
+    // so do it using a custom event here.
+    $scope.$on('section-page-rendered', () => {
+      if (experiments.isEnabled('reactSections')) {
+        renderSectionsPage();
+      }
+    });
 
     /**
      * Given a section, returns the assignment id of the course/script the section
