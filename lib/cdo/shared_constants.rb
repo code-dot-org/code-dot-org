@@ -204,6 +204,7 @@ module SharedConstants
       "analogWrite": null,
       "analogRead": null,
       "boardConnected": null,
+      "var myLed = createLed": null,
 
       // Circuit Playground
       "on": null,

@@ -47,9 +47,9 @@
     "instructions": "Use event handlers and actions to make your hero move.\r\n",
     "instructions_important": "true",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.\",\"hint_id\":\"courseE_playLab_scaffold1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ec0ca9f14716fdefffaaa435df54309/courseE_playLab_scaffold2.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
