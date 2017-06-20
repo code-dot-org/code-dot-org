@@ -65,12 +65,12 @@ const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
   },
   link: {
     color: color.teal,
-    fontFamily: '"Gotham 4r", sans-serif',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     textDecoration: 'none'
   }
@@ -124,8 +124,8 @@ const SectionsTable = React.createClass({
           {sections.map((section, index) =>
             <tr
               style={{
-                ...(!index%2 && styles.lightRow),
-                ...(index%2 && styles.darkRow), ...styles.row
+                ...(index % 2 === 0 ? styles.lightRow : styles.darkRow),
+                ...styles.row
               }}
               key={index}
             >
