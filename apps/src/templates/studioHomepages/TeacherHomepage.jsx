@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Announcements from './Announcements';
 import RecentCourses from './RecentCourses';
 import Sections from './Sections';
 import TeacherResources from './TeacherResources';
+import Notification from '../Notification';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -39,8 +39,14 @@ const TeacherHomepage = React.createClass({
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        <Announcements
-          announcements={announcements}
+        <Notification
+          type="bullhorn"
+          notice={announcements[0].heading}
+          details={announcements[0].description}
+          dismissible={false}
+          buttonText={announcements[0].buttonText}
+          buttonLink={announcements[0].link}
+          analyticId={announcements[0].id}
         />
         <Sections
           sections={sections}
