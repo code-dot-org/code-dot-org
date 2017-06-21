@@ -122,6 +122,19 @@ const TutorialDetail = React.createClass({
     document.removeEventListener('keydown', this.onKeyDown);
   },
 
+  // Now that we've rendered, if the dialog is showing, disable touch on
+  // background but keep it working on dialog body.
+  componentDidUpdate() {
+    if (!this.props.showing) {
+      $(document).off("touchmove");
+      $(document).off("touchmove");
+    } else {
+      // Disable touchmove on document, but enable it just for the body of the popup.
+      $(document).on("touchmove", e => e.preventDefault());
+      $(document).on("touchmove", ".modal-body", e => e.stopPropagation());
+    }
+  },
+
   onKeyDown({keyCode}) {
     if (!this.props.showing) {
       return;
