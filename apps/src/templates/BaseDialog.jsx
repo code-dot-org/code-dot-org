@@ -80,7 +80,7 @@ var BaseDialog = React.createClass({
     let modalBackdropClassNames = "modal-backdrop";
 
     if (this.props.useUpdatedStyles) {
-      modalBodyClassNames = "";
+      modalBodyClassNames = "dashboard-styles";
       modalBodyStyle = {
         background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
         height: 480,
