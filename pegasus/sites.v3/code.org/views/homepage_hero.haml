@@ -107,7 +107,7 @@
                 %button.herohocbutton= I18n.t(entry[:text1_s])
             %div{style: "clear: both;"}
           - elsif entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
+            %img#playimage{src: "/shared/images/fit-25/play-button.png", width:"25", height: "25", onclick: "return showVideo_mainvideo();"}
             %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
 
     #blankspaceleftmobile.mobile-feature

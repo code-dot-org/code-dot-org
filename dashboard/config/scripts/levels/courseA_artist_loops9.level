@@ -32,16 +32,18 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Add another block to the code you are given to draw the rest of the stairs.\",\"hint_id\":\"courseA_artist_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9cfcbf5620f0a5b937a561b4066d8016/courseA_artist_loops9.mp3\"}]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\n**Challenge:** The stairs down to the dock are broken.  Help me fix them.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/53c68133f897895caa0369b4afa3ec3b-image-1470789463684.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "##**Challenge:** The stairs down to the dock are broken.  Help me fix them.\r\n\r\n![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3a6de65cfa4cf228b89cf61ba712f3f5-image-1477123431903.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "tts_markdown_instructions_override": "Challenge: The stairs down to the dock are broken.  Help me fix them."
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 16:41:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
