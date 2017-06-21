@@ -458,6 +458,7 @@ class DashboardSection
   def add_student(student)
     student_id = student[:id] || DashboardStudent.create(student)
     return nil unless student_id
+    return nil if student[:admin]
 
     time_now = DateTime.now
 
