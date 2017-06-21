@@ -24,7 +24,7 @@ export const updateSection = (sectionId, serverSection) => ({
   sectionId,
   serverSection
 });
-export const newSection = () => ({ type: NEW_SECTION });
+export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 const initialState = {
@@ -97,8 +97,11 @@ export default function teacherSections(state=initialState, action) {
       sectionFromServerSection(section, state.validAssignments));
     return {
       ...state,
-      sectionIds: sections.map(section => section.id),
-      sections: _.keyBy(sections, 'id')
+      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sections: {
+        ...state.sections,
+        ..._.keyBy(sections, 'id')
+      }
     };
   }
 
@@ -134,6 +137,13 @@ export default function teacherSections(state=initialState, action) {
     // create an id that we can use in our local store that will be replaced
     // once persisted
     const sectionId = state.nextTempId;
+    let courseId = action.courseId || null;
+    if (courseId) {
+      if (!state.validAssignments[courseId]) {
+        courseId = null;
+      }
+    }
+
     return {
       ...state,
       // use negative numbers for our temp ids so that we dont need to worry about
@@ -151,7 +161,7 @@ export default function teacherSections(state=initialState, action) {
           pairingAllowed: true,
           studentNames: [],
           code: '',
-          courseId: null,
+          courseId: action.courseId || null,
           scriptId: null
         }
       }

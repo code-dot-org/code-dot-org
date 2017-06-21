@@ -12,6 +12,7 @@ function showCourseOverview() {
   ReactDOM.render(
     <CourseOverview
       title={courseSummary.title}
+      id={courseSummary.id}
       descriptionStudent={courseSummary.description_student}
       descriptionTeacher={courseSummary.description_teacher}
       viewAs="Teacher"
