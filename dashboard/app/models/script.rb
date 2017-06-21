@@ -282,10 +282,10 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id)
+  def self.get_without_cache(id_or_name)
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
-    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     Script.includes(
       [
         {
@@ -300,17 +300,17 @@ class Script < ActiveRecord::Base
         },
         :course_scripts
       ]
-    ).find_by(find_by => id).tap do |s|
-      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
+    ).find_by(find_by => id_or_name).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
     end
   end
 
-  def self.get_from_cache(id)
-    return get_without_cache(id) unless should_cache?
+  def self.get_from_cache(id_or_name)
+    return get_without_cache(id_or_name) unless should_cache?
 
-    script_cache.fetch(id.to_s) do
+    script_cache.fetch(id_or_name.to_s) do
       # Populate cache on miss.
-      script_cache[id.to_s] = get_without_cache(id)
+      script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
   end
 

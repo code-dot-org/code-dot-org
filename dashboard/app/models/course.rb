@@ -125,11 +125,9 @@ class Course < ApplicationRecord
   @@course_cache = nil
   COURSE_CACHE_KEY = 'course-cache'.freeze
 
-  # TODO(bjvanminnen): share this somehow with script.rb?
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
-    return false if ENV['UNIT_TEST'] || ENV['CI']
-    true
+    ENV['UNIT_TEST'] || ENV['CI']
   end
 
   # generates our course_cache from what is in the Rails cache
@@ -160,20 +158,20 @@ class Course < ApplicationRecord
       course_cache_from_cache || course_cache_from_db
   end
 
-  def self.get_without_cache(id)
+  def self.get_without_cache(id_or_name)
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
-    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
+    find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    Course.includes([:plc_course, :course_scripts]).find_by(find_by => id)
+    Course.includes([:plc_course, :course_scripts]).find_by(find_by => id_or_name)
   end
 
-  def self.get_from_cache(id)
-    return get_without_cache(id) unless should_cache?
+  def self.get_from_cache(id_or_name)
+    return get_without_cache(id_or_name) unless should_cache?
 
-    course_cache.fetch(id.to_s) do
+    course_cache.fetch(id_or_name.to_s) do
       # Populate cache on miss.
-      course_cache[id.to_s] = get_without_cache(id)
+      course_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
   end
 end
