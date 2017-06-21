@@ -1,7 +1,6 @@
 import React from 'react';
 import ProgressButton from '../progress/ProgressButton';
 import color from "../../util/color";
-import Radium from 'radium';
 
 const styles = {
   card: {
@@ -131,4 +130,4 @@ const ResourceCard = React.createClass({
   }
 });
 
-export default Radium(ResourceCard);
+export default ResourceCard;

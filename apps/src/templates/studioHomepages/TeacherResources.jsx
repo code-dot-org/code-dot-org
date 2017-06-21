@@ -15,7 +15,10 @@ const TeacherResources = React.createClass({
     const volunteerUrl = `${codeOrgUrlPrefix}/volunteer/local`;
 
     return (
-      <ContentContainer heading={i18n.resources()}>
+      <ContentContainer
+        heading={i18n.resources()}
+        isRtl={isRtl}
+      >
         <ResourceCard
           title={i18n.teacherCommunity()}
           description={i18n.teacherCommunityDescription()}

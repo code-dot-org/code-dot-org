@@ -42,16 +42,19 @@ const TeacherHomepage = React.createClass({
         />
         <Announcements
           announcements={announcements}
+          isRtl={isRtl}
         />
         <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
+          isRtl={isRtl}
         />
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           heading={i18n.recentCourses()}
           isTeacher={true}
+          isRtl={isRtl}
         />
         <TeacherResources
           codeOrgUrlPrefix={codeOrgUrlPrefix}
