@@ -395,6 +395,7 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
     get 'user_admin/find_user', to: 'user_admin#find_user'
+    post 'user_admin/assign_permission', to: 'user_admin#assign_permission'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

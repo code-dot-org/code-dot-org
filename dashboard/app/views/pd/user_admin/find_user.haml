@@ -20,24 +20,22 @@
         %th Name
       %tbody
         %tr
-          %td= link_to @user.id, action: :find_user, user_id: @user.id
+          %td= link_to @user.id, action: :find_user, search_term: @user.id
           %td= @user.email
           %td= @user.name
-  -else
-    %p No User Found
-  -if @permissions
-    = form_tag(action: 'assign_permission') do
-      %table.table.table-hover.table-condensed.table-auto-width
-        %thead
-          %th Action
-          %th Permission
-          %th Granted At
-        %tbody
-          - @permissions.each do |permission|
-            %tr
-              %td Revoke
-              %td= permission.permission
-              %td= permission.created_at
+    -if @permissions
+      = form_tag(action: 'assign_permission') do
+        %table.table.table-hover.table-condensed.table-auto-width
+          %thead
+            %th Action
+            %th Permission
+            %th Granted At
+          %tbody
+            - @permissions.each do |permission|
+              %tr
+                %td Revoke
+                %td= permission.permission
+                %td= permission.created_at
             %tr
               %td
                 .actions
@@ -47,3 +45,6 @@
                 .field
                   = select_tag :pd_user_permission_id, options_for_select(UserPermission::VALID_PERMISSIONS)
               %td
+  -else
+    -if params[:search_term]
+      %p No User Found
