@@ -36,6 +36,7 @@ class Follower < ActiveRecord::Base
   end
 
   def student_cannot_be_admin
+    return unless student_user
     errors.add(:student_user, 'cannot be admin') if student_user.admin?
   end
 
