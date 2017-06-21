@@ -199,21 +199,7 @@ class Script < ActiveRecord::Base
   def self.script_cache_from_db
     {}.tap do |cache|
       Script.all.pluck(:id).each do |script_id|
-        script = Script.includes(
-          [
-            {
-              script_levels: [
-                {levels: [:game, :concepts, :level_concept_difficulty]},
-                :stage,
-                :callouts
-              ]
-            },
-            {
-              stages: [{script_levels: [:levels]}]
-            },
-            :course_scripts
-          ]
-        ).find(script_id)
+        script = get_without_cache(script_id)
 
         cache[script.name] = script
         cache[script.id.to_s] = script
@@ -300,7 +286,21 @@ class Script < ActiveRecord::Base
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-    Script.find_by(find_by => id).tap do |s|
+    Script.includes(
+      [
+        {
+          script_levels: [
+            {levels: [:game, :concepts, :level_concept_difficulty]},
+            :stage,
+            :callouts
+          ]
+        },
+        {
+          stages: [{script_levels: [:levels]}]
+        },
+        :course_scripts
+      ]
+    ).find_by(find_by => id).tap do |s|
       raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
     end
   end

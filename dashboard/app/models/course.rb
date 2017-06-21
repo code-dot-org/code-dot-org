@@ -143,7 +143,7 @@ class Course < ApplicationRecord
   def self.course_cache_from_db
     {}.tap do |cache|
       Course.all.pluck(:id).each do |course_id|
-        course = Course.includes([:plc_course, :course_scripts]).find(course_id)
+        course = get_without_cache(course_id)
         cache[course.name] = course
         cache[course.id.to_s] = course
       end
@@ -164,9 +164,8 @@ class Course < ApplicationRecord
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-    Course.find_by(find_by => id).tap do |s|
-      raise ActiveRecord::RecordNotFound.new("Couldn't find Course with id|name=#{id}") unless s
-    end
+    # unlike script cache, we don't throw on miss
+    Course.includes([:plc_course, :course_scripts]).find_by(find_by => id)
   end
 
   def self.get_from_cache(id)
