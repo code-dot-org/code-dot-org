@@ -187,7 +187,10 @@ FactoryGirl.define do
         "facilitatorsCouldImprove": "facilitators could improve",
         "likedMost": "liked most",
         "wouldChange": "would change",
-        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name."
+        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
+        "instructionFocus": "Strongly aligned with A",
+        "teacherResponsibility": "Strongly aligned with A",
+        "teacherTime": "Strongly aligned with A",
       }.stringify_keys
     end
   end
