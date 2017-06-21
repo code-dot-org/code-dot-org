@@ -395,6 +395,7 @@
   homepage_slot_text_title_hoc: Kod Saatı
   homepage_slot_text_blurb_hoc: Hər kəs öyrənə bilər. Elə bu gün başlayın
   homepage_slot_text_link_hoc: Kod Saatında özünüzü sınayın
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Bir Kod Saatı təşkil edin
   homepage_slot_text_link_hocserved: "# nəfər faydalanıb"
   homepage_solot_text_link_volunteer: Kod Saatına könüllü kimi dəstək verin
@@ -802,6 +803,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Yeni bölmə
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
@@ -809,6 +811,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Sinif
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Şagirdlər"
   dashboard_sections_table_code: Bölmə kodu
@@ -1847,35 +1850,34 @@
   infinity_shortcode: inf
   playlab_shortcode: səsləndir
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
+  header_home: Ev səhifəsi
+  header_courses: marşrutlar
+  header_project_gallery: Layihə qalereyası
+  header_sections: Bölmələr
+  header_professional_learning: Peşəkar təhsil
+  header_educate_overview: Təlimçi üçün xülasə
+  header_educate_elementary: "İbtidai məktəb"
+  header_educate_middle: Orta məktəb
+  header_educate_high: Orta məktəbin yuxarı sinifləri
+  header_educate_hoc: Kod Saatı
+  header_educate_partner: Bizə tərəfadaş olun
   header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
+  header_educate_inspire: Bir şagirdi həvəsləndirin
+  header_educate_community: Onlayn icma
+  header_educate_tools: Alətlər və videolar
+  header_about_us: Haqqımızda
+  header_about_leadership: Rəhbərlik
+  header_about_donors: Donorlar
+  header_about_partners: Tərəfdaşlar
+  header_about_team: Tam komanda
+  header_about_news: Xəbər otağı
+  header_about_evaluation: Qiymətləndirmə
+  header_about_jobs: Vakansiyalar
+  header_about_contact: Bizimlə əlaqə saxlayın
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: Göstəricilər
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1883,6 +1885,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
