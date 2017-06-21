@@ -53,7 +53,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-09 18:22:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-09 18:22:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-21 18:57:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -381,8 +381,13 @@
             </mutation>
           </block>
         </category>
-        <category name="Variables" custom="VARIABLE">
-  </category>
+        <category name="Variables" custom="VARIABLE"/>
+        <category name="Text">
+          <block type="text">
+            <title name="TEXT"/>
+          </block>
+          <block type="text_join_simple" inline="false" inputcount="2"/>
+        </category>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
