@@ -215,6 +215,9 @@ export const executeUserCode = function (client, code) {
     },
     createBlockPos: function (x, y, z, prefix) {
       return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
+    },
+    getVariable: function (value) {
+      return `${value}`;
     }
   };
 
