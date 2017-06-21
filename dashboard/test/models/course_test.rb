@@ -4,14 +4,9 @@ class CourseTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   class CachingTests < ActiveSupport::TestCase
-    setup_all do
-      # preopulate a course so that it ends up in our cache
-      create(:course, name: 'csd')
-    end
-
     def populate_cache_and_disconnect_db
       Course.stubs(:should_cache?).returns true
-      @@course_cached ||= Course.course_cache_to_cache
+      @@course_cache ||= Course.course_cache_to_cache
       Course.course_cache_from_cache
 
       # NOTE: ActiveRecord collection association still references an active DB connection,
@@ -21,17 +16,22 @@ class CourseTest < ActiveSupport::TestCase
     end
 
     test "get_from_cache uses cache" do
-      csd = Course.find_by_name('csd')
+      course = create(:course, name: 'acourse')
+      # Ensure cache is populated with this course by name and id
+      Course.get_from_cache(course.name)
+      Course.get_from_cache(course.id)
+
+      uncached_course = Course.get_without_cache(course.id)
 
       populate_cache_and_disconnect_db
 
       # Uncached find should raise because db was disconnected
       assert_raises do
-        Course.find_by_name('csd')
+        Course.find_by_name('acourse')
       end
 
-      assert_equal csd, Course.get_from_cache('csd')
-      assert_equal csd, Course.get_from_cache(csd.id)
+      assert_equal uncached_course, Course.get_from_cache('acourse')
+      assert_equal uncached_course, Course.get_from_cache(course.id)
     end
   end
 
