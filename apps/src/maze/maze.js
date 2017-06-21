@@ -496,18 +496,6 @@ Maze.reset = function (first) {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
   }
 
-  var finishIcon = document.getElementById('finish');
-  if (finishIcon) {
-    // Move the finish icon into position.
-    finishIcon.setAttribute('x', Maze.SQUARE_SIZE * (Maze.subtype.finish.x + 0.5) -
-      finishIcon.getAttribute('width') / 2);
-    finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.subtype.finish.y + 0.9) -
-      finishIcon.getAttribute('height'));
-    finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goalIdle);
-    finishIcon.setAttribute('visibility', 'visible');
-  }
-
   // Make 'look' icon invisible and promote to top.
   var lookIcon = document.getElementById('look');
   lookIcon.style.display = 'none';
