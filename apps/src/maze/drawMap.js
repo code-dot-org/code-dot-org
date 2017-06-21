@@ -77,6 +77,15 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
     finishMarker.setAttribute('height', MARKER_HEIGHT);
     finishMarker.setAttribute('width', MARKER_WIDTH);
     svg.appendChild(finishMarker);
+
+    // Move the finish icon into position.
+    finishMarker.setAttribute('x', squareSize * (subtype.finish.x + 0.5) -
+      finishMarker.getAttribute('width') / 2);
+    finishMarker.setAttribute('y', squareSize * (subtype.finish.y + 0.9) -
+      finishMarker.getAttribute('height'));
+    finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin.goalIdle);
+    finishMarker.setAttribute('visibility', 'visible');
   }
 
   // Add obstacles.
