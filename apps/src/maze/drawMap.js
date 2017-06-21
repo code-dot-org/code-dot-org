@@ -7,6 +7,24 @@ const SquareType = tiles.SquareType;
 const MARKER_HEIGHT = 43;
 const MARKER_WIDTH = 50;
 
+/**
+ * Calculate the y coordinates for pegman sprite.
+ */
+export function getPegmanYForRow(skin, mazeRow, squareSize = 50) {
+  return Math.floor(squareSize * (mazeRow + 0.5) - skin.pegmanHeight / 2 +
+    skin.pegmanYOffset);
+}
+
+export function displayPegman(skin, pegmanIcon, clipRect, x, y, frame, squareSize = 50) {
+  const xOffset = skin.pegmanXOffset || 0;
+  pegmanIcon.setAttribute('x',
+    x * squareSize - frame * skin.pegmanWidth + 1 + xOffset);
+  pegmanIcon.setAttribute('y', getPegmanYForRow(skin, y));
+
+  clipRect.setAttribute('x', x * squareSize + 1 + xOffset);
+  clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
+}
+
 export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
   const MAZE_WIDTH = map.COLS * squareSize;
   const MAZE_HEIGHT = map.ROWS * squareSize;
@@ -56,6 +74,9 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
     pegmanIcon.setAttribute('width', skin.pegmanWidth * 21); // 49 * 21 = 1029
     pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
     svg.appendChild(pegmanIcon);
+
+    displayPegman(skin, pegmanIcon, clipRect, subtype.start.x, subtype.start.y,
+      tiles.directionToFrame(subtype.startDirection));
 
     var pegmanFadeoutAnimation = document.createElementNS(SVG_NS, 'animate');
     pegmanFadeoutAnimation.setAttribute('id', 'pegmanFadeoutAnimation');
