@@ -3,12 +3,14 @@ import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressButton from "./progress/ProgressButton";
+import trackEvent from '../util/trackEvent';
 
 const NotificationType = {
   information: 'information',
   success: 'success',
   failure: 'failure',
-  warning: 'warning'
+  warning: 'warning',
+  bullhorn: 'bullhorn'
 };
 
 const styles = {
@@ -16,8 +18,7 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderRadius: 3,
-    height: 68,
-    width: 900,
+    height: 100,
     backgroundColor: color.white,
     marginTop: 20,
     marginBottom: 20
@@ -33,12 +34,12 @@ const styles = {
   details: {
     fontFamily: 'Gotham-Book',
     fontSize: 12,
-    lineHeight: 2.5,
+    marginTop: 10,
     marginBottom: 16,
     color: color.charcoal,
   },
   wordBox: {
-    width: 600,
+    width: 'calc(100% - 320px)',
     marginLeft: 25,
     float: 'left'
   },
@@ -49,15 +50,15 @@ const styles = {
     marginRight: 14
   },
   iconBox: {
-    width: 68,
-    height: 68,
+    width: 100,
+    height: 100,
     backgroundColor: color.lightest_gray,
     float: 'left',
     textAlign: 'center'
   },
   icon: {
     color: color.white,
-    fontSize: 34,
+    fontSize: 48,
     lineHeight: 2
   },
   button: {
@@ -86,6 +87,11 @@ const styles = {
       color: color.charcoal,
       backgroundColor: color.mustardyellow
     },
+    [NotificationType.bullhorn]: {
+      borderColor: color.teal,
+      color: color.teal,
+      backgroundColor: color.teal
+    },
   }
 };
 
@@ -96,7 +102,8 @@ const Notification = React.createClass({
     details: React.PropTypes.string.isRequired,
     buttonText: React.PropTypes.string,
     buttonLink: React.PropTypes.string,
-    dismissible: React.PropTypes.bool.isRequired
+    dismissible: React.PropTypes.bool.isRequired,
+    analyticId: React.PropTypes.string
   },
 
   getInitialState() {
@@ -107,13 +114,20 @@ const Notification = React.createClass({
     this.setState({open: !this.state.open});
   },
 
+  onAnnouncementClick: function () {
+    if (this.props.analyticId) {
+      trackEvent('teacher_announcement','click', this.props.analyticId);
+    }
+  },
+
   render() {
     const { notice, details, type, buttonText, buttonLink, dismissible } = this.props;
     const icons = {
       information: 'info-circle',
       success: 'check-circle',
       failure: 'exclamation-triangle',
-      warning: 'exclamation-triangle'
+      warning: 'exclamation-triangle',
+      bullhorn: 'bullhorn'
     };
 
     if (!this.state.open) {
@@ -145,6 +159,8 @@ const Notification = React.createClass({
             color={ProgressButton.ButtonColor.gray}
             text={buttonText}
             style={styles.button}
+            target="_blank"
+            onClick={this.onAnnouncementClick}
           />
         )}
       </div>

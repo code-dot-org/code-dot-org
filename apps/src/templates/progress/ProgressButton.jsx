@@ -132,8 +132,8 @@ const ProgressButton = React.createClass({
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
 
-    if (!!href === !!onClick) {
-      throw new Error('Expect exactly one of href/onClick');
+    if (!href && !onClick) {
+      throw new Error('Expect at least one of href/onClick');
     }
 
     const Tag = href ? 'a' : 'div';

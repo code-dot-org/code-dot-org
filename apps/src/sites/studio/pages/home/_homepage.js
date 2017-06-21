@@ -53,7 +53,8 @@ function showHomepage() {
               buttonText: i18n.learnMore(),
               description: i18n.announcementDescription(),
               link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
-              image: "redesign-screencast"
+              image: "redesign-screencast",
+              id: "redesign_notification"
             }
           ]}
           courses={homepageData.courses}
