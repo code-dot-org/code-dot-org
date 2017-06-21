@@ -15,18 +15,11 @@ PEGASUS_REPORTING_DB_READONLY = sequel_connect(
   CDO.pegasus_reporting_db_reader
 )
 
-# Prints the precomputed aggregates for HOC Signup for the specified year.
-# @param [Integer] year The year to retrieve precomputed aggregate signup data for.
-def report_data(year)
-  existing_data = Properties.get "hoc_signup_#{year}"
-  puts "HOC Signup (#{year}): #{existing_data}" if existing_data
-end
-
 def main
   year = (ARGV[0] || DCDO.get('hoc_year', DEFAULT_YEAR)).to_i
 
-  report_data year
-
+  # Note that country_counts and us_state_counts are of the form
+  # [{"country" => nil, "count" => 1}, {"country" => "Afghanistan", "count" => 2}, ...].
   country_counts = PEGASUS_REPORTING_DB_READONLY[:forms].
     where(forms__kind: "HocSignup#{year}").
     join(:form_geos, form_id: :forms__id).
@@ -39,12 +32,19 @@ def main
     group_and_count(:form_geos__state).
     all
 
+  # Transform the data into more accessible hashes of the form
+  # {'' => 1, 'Afghanistan' => 2, ...}
+  country_counts = country_counts.map do |country_and_count_hash|
+    Hash[country_and_count_hash[:country], country_and_count_hash[:count]]
+  end.reduce({}, :merge)
+  us_state_counts = us_state_counts.map do |state_and_count_hash|
+    Hash[state_and_count_hash[:state], state_and_count_hash[:count]]
+  end.reduce({}, :merge)
+
   Properties.set(
     "hoc_signup_#{year}",
     {country_counts: country_counts, us_state_counts: us_state_counts}
   )
-
-  report_data year
 end
 
 main if only_one_running?(__FILE__)
