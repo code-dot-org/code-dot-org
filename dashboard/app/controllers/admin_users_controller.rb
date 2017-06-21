@@ -117,8 +117,12 @@ class AdminUsersController < ApplicationController
     end
 
     if permission == 'admin'
-      user.update!(admin: true)
-      flash[:alert] = "User #{user.id} granted admin status"
+      if user.sections_as_student.count > 0
+        flash[:alert] = "FAILED: user #{user.email} NOT granted as user has sections_as_students"
+      else
+        user.update!(admin: true)
+        flash[:alert] = "User #{user.id} granted admin status"
+      end
     else
       user.permission = permission
       flash[:alert] = "User #{user.id} granted #{permission} permission"
