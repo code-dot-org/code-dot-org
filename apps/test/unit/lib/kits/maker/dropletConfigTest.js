@@ -77,8 +77,7 @@ describe('maker/dropletConfig.js', () => {
       ]);
     });
 
-    // TODO (captouch): Re-enable
-    describe.skip('touchPads', () => {
+    describe('touchPads', () => {
       [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
         it(`touchPad${pin} dropdown`, () => {
           expect(getBoardEventDropdownForParam(`touchPad${pin}`)).to.deep.equal([
