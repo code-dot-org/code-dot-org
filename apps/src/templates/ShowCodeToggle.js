@@ -99,7 +99,7 @@ class DropletCodeToggle extends Component {
 
   toggle = () => {
     // are we trying to toggle from blocks to text (or the opposite)
-    let fromBlocks = studioApp().editor.currentlyUsingBlocks;
+    let fromBlocks = studioApp().editor.session.currentlyUsingBlocks;
 
     let result;
     try {
@@ -116,7 +116,7 @@ class DropletCodeToggle extends Component {
     } else {
       studioApp().onDropletToggle();
       this.forceUpdate();
-      this.props.onToggle(studioApp().editor.currentlyUsingBlocks);
+      this.props.onToggle(studioApp().editor.session.currentlyUsingBlocks);
     }
   }
 
@@ -124,7 +124,7 @@ class DropletCodeToggle extends Component {
     this.toggle();
     if (experiments.isEnabled('saveBlockMode')) {
       new UserPreferences().setUsingTextMode(
-        !studioApp().editor.currentlyUsingBlocks,
+        !studioApp().editor.session.currentlyUsingBlocks,
         {
           project_id: project.getCurrentId(),
           level_id: studioApp().config.level.id,

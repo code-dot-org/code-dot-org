@@ -915,7 +915,7 @@ Applab.runButtonClick = function () {
 
   if (studioApp().editor) {
     logToCloud.addPageAction(logToCloud.PageAction.RunButtonClick, {
-      usingBlocks: studioApp().editor.currentlyUsingBlocks,
+      usingBlocks: studioApp().editor.session.currentlyUsingBlocks,
       app: 'applab'
     }, 1/100);
   }

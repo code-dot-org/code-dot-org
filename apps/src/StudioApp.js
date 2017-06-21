@@ -1055,7 +1055,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 
   var hideFn = _.bind(function () {
     // Set focus to ace editor when instructions close:
-    if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
+    if (this.editCode && this.editor && !this.editor.session.currentlyUsingBlocks) {
       this.editor.aceEditor.focus();
     }
 
@@ -2127,7 +2127,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       if (range) {
         var lineIndex = range.start.row;
         var line = lineIndex + 1; // 1-based line number
-        if (this.editor.currentlyUsingBlocks) {
+        if (this.editor.session.currentlyUsingBlocks) {
           options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
           this.setDropletCursorToLine_(lineIndex);
           this.editor.scrollCursorIntoPosition();
@@ -2335,7 +2335,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
  */
 StudioApp.prototype.onDropletToggle = function (autoFocus) {
   autoFocus = utils.valueOr(autoFocus, true);
-  if (!this.editor.currentlyUsingBlocks) {
+  if (!this.editor.session.currentlyUsingBlocks) {
     if (autoFocus) {
       this.editor.aceEditor.focus();
     }
