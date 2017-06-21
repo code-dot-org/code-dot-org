@@ -35,8 +35,14 @@ class Follower < ActiveRecord::Base
     errors.add(:user, "must be a teacher") unless user.user_type == User::TYPE_TEACHER
   end
 
+  def student_cannot_be_admin
+    return unless student_user
+    errors.add(:student_user, 'cannot be admin') if student_user.admin?
+  end
+
   validate :cannot_follow_yourself, unless: -> {deleted?}
   validate :teacher_must_be_teacher, unless: -> {deleted?}
+  validate :student_cannot_be_admin
 
   validates_presence_of :student_user, unless: -> {deleted?}
   validates_presence_of :section, unless: -> {deleted?}

@@ -27,11 +27,14 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 **We are currently hiring for:**
 
+- **Education**
+ 	- [Program Associate](#education)
 - **Marketing**
-	- [Marketing Associate](#associate)
 	- [Marketing Coordinator](#markcoordinator)
+- **Outreach**
+	- [Regional Manager](#regional)
 - **Product and Engineering**
-	- [Infrastructure/Data Engineer](#data)
+	- [Data Engineer](#data)
 	- [Senior Software Engineer](#senior)
 	- [Software Engineer](#eng)
 
@@ -39,39 +42,38 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 
 To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-
-## <a name="associate"href="#associate">Marketing Associate (Seattle, WA)</a>
-
+## <a name="education"href="#education">Program Associate, Education Team (Seattle, WA)</a>
 **Job Summary:**
 
-Code.org is looking for a Marketing Associate who will support communications across the organization. The primary responsibility of this position will be assisting the Director of Marketing in the planning and execution of the annual Hour of Code campaign. The Hour of Code initiative encourages students to try computer science during Computer Science Education Week in December. The Marketing Associate will make essential contributions to this global and highly visible marketing effort, supporting social media and email outreach, live events, partnership cultivation, and more. 
+We are looking for a detail and customer-service oriented Program Associate to join Code.org’s Education team. The Education team is responsible for the creation of Code.org’s K-12 computer science courses and the success of Code.org professional development across the U.S. The Education team supports a network of roughly 400 computer science facilitators in their delivery of these professional development workshops, which have reached over 50,000 teachers in the past 3 years.
 
-The Marketing Associate will have a wide variety of additional day-to-day responsibilities supporting the marketing team, including everything from running email campaigns reaching millions of teachers, parents, students and volunteers to supporting public relations, media coverage, and events. 
+This is a full time, exempt position based in our Seattle office. Under the direction of the Education Program Manager for the middle and high school programs, the Program Associate provides operational and administrative assistance. This role will work collaboratively with the other team members supporting teachers and facilitators.
 
-Other responsibilities of the position may include:
+Responsibilities of the position include:
 
-- Managing, maintaining, and growing our social media presence 
-- Writing, sourcing and editing compelling stories for our blog or external press
-- Creating website content on code.org, csedweek.org, and hourofcode.com
+- Communicating through our customer service system to respond to professional development questions from teachers and facilitators in a timely manner
+- Communicating via email and other channels to send reminders, requests for information, and other updates to facilitators
+- Tracking and managing the teacher recruitment numbers and application status for Code.org’s year-long Professional Learning Program
+- Coordinating and scheduling the interview and onboarding process for new facilitators
+- Updating and ensuring the accuracy of our teacher and facilitator lists
+- Documenting common workflows and processes for internal use
+For teacher and facilitator related in-person events, supporting the Events Manager with upfront and onsite logistics
+- As new programs are developed to support teachers and facilitators, this position will support the operational aspects of these programs 
 
 **Experience and Qualifications:**
 
-We are looking for a self-starter, experienced in communications, who can multi-task, excel under pressure, and work independently with a geographically dispersed team. Must be extremely detail-oriented, tech-savvy, and able to swiftly prioritize duties as needed on multiple ongoing projects. Candidate should be flexible and willing to work in a fast-paced, start-up environment.
-
+We are looking for a customer-service oriented self-starter who is skilled in successfully delivering projects, enjoys multi-tasking, cheerfully excels under pressure, and works independently with a geographically dispersed team. Must be extremely detail-oriented, possess exceptional writing and communications ability, and be tech-savvy. Candidate should be flexible and willing to work in a fast-paced, start-up environment. 
+ 
 The ideal candidate has the following qualifications:
 
-- Excellent written and verbal communication skills
-- Strong copywriting and content development experience 
-- Knowledge and understanding of current trends in social media 
-- Passion for digital media and devices, an “early adopter” of digital trends
-- Familiar with methodologies of website and media tracking tools 
-- Proven ability to work effectively across a wide range of internal teams, and produce on deadline in a fast-paced environment
-- Proficient in using Google suite of applications, presentation and layout skills 
-- 2-5 years of relevant experience in communications and technology
-- Bachelor’s degree in communications, public relations, related field or equivalent work experience
-- Familiarity or background in educational communications preferred, no background in Computer Science needed
+- Passion for Code.org’s mission, with experience in education preferred
+- Tech-savvy (Computer science experience/degree not required, but proficiency in working with Microsoft Office and Google Docs a must). A successful candidate will have advanced knowledge and experience with Excel and/or Google Sheets. 
+- 2-3 years experience in a customer support role
+- Has a bachelors degree (Computer science background/experience not required)
+- Ability and willingness to travel up to 15% time 
 
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="markcoordinator"href="#markcoordinator">Marketing Coordinator (Seattle, WA)</a>
 
@@ -107,6 +109,49 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="regional"href="#regional">Regional Manager, Northwest (Seattle, WA preferred)</a>
+
+**Job Summary:**
+
+Code.org is looking for a Regional Manager to support our education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Regional Partners. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
+
+Responsibilities of the position include:
+
+- Outreach
+	- Recruit Regional Partners to partner with Code.org and recruit school districts to teach Computer Science in K-12 schools.
+	- Present Code.org partnership model
+	- Track partnership status
+	- Market and support the program in the region
+- Manage and support implementation for all partners in region at K-12 grade levels
+	- Evaluate and support regional partners in becoming a sustainable CS Hub in their area
+	- Develop working relationship with partners to implement partnership model, and collaborate with partners roadmap development, including metrics and oversight of partner goals
+	- Assist regional partners in district, school, and teacher recruitment/selection/retention
+	- Troubleshoot regional partnership issues
+	- Work with Education team to coordinate regional professional learning workshops for teachers
+- Collaborate with partners to market the programs in partner regions
+Represent Code.org and present the partnership model at conferences and other venues, as needed
+- Contribute to the Code.org’s and the Outreach Team’s mission and needs through collateral development, professional development, including operational support and other assigned duties.
+
+**Experience and Qualifications:**
+
+The ideal candidate has at least a Bachelor’s degree, experience collaborating with the K-12 public school system, and possesses the following skills:
+
+- Demonstrated ability to pitch the Code.org regional partner model to potential partners
+- Experience and aptitude for managing complex projects and relationships to realize successful project outcomes throughout the pitching and implementation life cycle, including potential mediation between different parties involved in partnership
+- Advanced organizational and problem solving skills
+- Understanding of and passion for equity in computer science and K-12 education
+
+Additional desired strengths include:
+
+- Experience working with schools districts or STEM education based organizations in a project implementation capacity
+- Desire to be in a collaborative, team-based work enviroment
+- Recent computer science teaching experience in a K-12 school setting
+- Strong existing connections to the computer science community 
+
+Candidates must be extremely detail-oriented, team-focused, possess exceptional written and interpersonal communication ability in English, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="senior"href="#senior">Senior Software Engineer (Seattle, WA)</a>
 

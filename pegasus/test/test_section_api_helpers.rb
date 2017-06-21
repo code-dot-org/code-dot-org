@@ -759,6 +759,22 @@ class SectionApiHelperTest < SequelTestCase
             first[:deleted_at]
         end
       end
+
+      it 'does not create follower for admin student' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+
+          pegasus_section.add_student(FakeDashboard::ADMIN)
+
+          assert_equal(
+            0,
+            Dashboard.db[:followers].where(student_user_id: FakeDashboard::ADMIN[:id]).count
+          )
+        end
+      end
     end
   end
 
