@@ -1884,4 +1884,24 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 'csd', courses[0].name
     end
   end
+
+  test 'clear_user removes all PII and other information' do
+    user = create :teacher
+
+    user.clear_user_and_mark_purged
+    user.reload
+
+    assert user.valid?
+    assert_nil user.name
+    assert_nil user.current_sign_in_ip
+    assert_nil user.last_sign_in_ip
+    assert_equal '', user.email
+    assert_equal '', user.hashed_email
+    assert_nil user.encrypted_password
+    assert_nil user.uid
+    assert_nil user.reset_password_token
+    assert_nil user.full_address
+    assert_equal({}, user.properties)
+    refute_nil user.purged_at
+  end
 end
