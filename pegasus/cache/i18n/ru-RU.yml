@@ -36,12 +36,12 @@
   twentyhours_heading: "Познакомьтесь с нашим курсом «введение в информатику»"
   twentyhours_text: "Закончили свой первый Час кода? Узнайте больше об информатике
     и концепциях программирования в следующем курсе."
-  og_title: "Час кода настал"
+  og_title: 'Code.org: Любой может научиться'
   og_description: "Каждый студент в каждой школе заслуживает возможность изучения
     компьютерных наук."
   csedweek_og_title: "Час кода настал"
-  csedweek_og_description: "Час Кода - это глобальное движение, охватывающее десятки
-    миллионов учеников в более чем 180 странах и более чем на 45 языках."
+  csedweek_og_description: 4-10 декабря 2017 года. Информатика - это основа для каждого
+    учащегося.
   hoc2014_heading: Присоединяйтесь к <a href="http://hourofcode.com">Часу кода</a><br/>8-14
     декабря 2014 года<br/>
   hoc2014_students: "Ученики"
@@ -260,7 +260,7 @@
   continue_learning_body: "Есть много возможностей. Вы можете учиться онлайн, в местной
     школе или в летнем лагере."
   learn_code_studio: "Попробуйте курсы студии кода"
-  learn_next_level: "Попробуйте другой курс студии кода"
+  learn_next_level: "Перейти на следующий уровень"
   learn_online: "Попробуйте другие курсы онлайн"
   learn_classes: "Найти занятия в своем городе"
   learn_back_to_minecraft: "Продолжаем учиться вместе с Minecraft"
@@ -298,7 +298,7 @@
   stats_michael: "«Я еще <b>никогда не</b> видел своих учеников настолько увлеченными
     обучением», — Майкл Кларк, учитель"
   studiobar_title: "Знакомьтесь со <a href='http://studio.code.org'>студией кода</a>"
-  studiobar_title_nolink: "Знакомьтесь со студией кода"
+  studiobar_title_nolink: "Исследуй Студию Кода"
   studiobar_elementary_title: "Начальные курсы"
   studiobar_elementary_body: "Наши три новых курса для K-5"
   studiobar_hoc_title: "Час кода"
@@ -390,13 +390,14 @@
   homepage_slot_text_title_hoc: "Час кода"
   homepage_slot_text_blurb_hoc: "Каждый может учиться. Начните сегодня"
   homepage_slot_text_link_hoc: "Попробуйте Час кода"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "Провести час кода"
   homepage_slot_text_link_hocserved: "Уже попробовали"
   homepage_solot_text_link_volunteer: "Станьте добровольцем часа кода"
   homepage_slot_text_title_students: "Ученики"
   homepage_slot_text_blurb_students: "Изучите все наши уроки"
   homepage_slot_text_blurb_students_courses: "Изучите наши курсы"
-  homepage_slot_text_link_codestudio: "Попробуйте студию кода"
+  homepage_slot_text_link_codestudio: "Попробуйте Студию Кода"
   homepage_slot_text_link_local: "Найти класс рядом с домом"
   homepage_slot_text_link_othercourses: "Другие онлайн курсы"
   homepage_slot_text_title_educators: "Преподаватели"
@@ -413,7 +414,7 @@
   homepage_slot_text_link_buy: "Принять участие"
   homepage_slot_text_link_donate: "Сделать пожертвование"
   homepage_slot_text_link_shop: "Футболки, головные уборы, и многое другое"
-  homepage_header_codestudio: "Творения учеников студии кода"
+  homepage_header_codestudio: "Творения учеников Студии Кода"
   homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: "Просмотреть всё"
   homepage_donors_donate: "Пожертвовать"
@@ -812,6 +813,7 @@
   dashboard_responses_view: "Просмотр текстовых ответов в:"
   dashboard_responses_none: "Нет текстовых ответов"
   dashboard_sections_new_section: "Новый раздел"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "Создавайте новые разделы и добавляйте
     в них учеников. Разделы помогают вам организовать учеников в маленькие группы,
     чтобы отслеживать их успехи и управлять их учетными записями."
@@ -819,6 +821,7 @@
   dashboard_sections_table_secret: "Тип входа"
   dashboard_sections_table_grade: "Оценка"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_pairing_allowed: "Программирование в парах"
   dashboard_sections_table_stage_extras: "Дополнительные материалы к учебному этапу"
   dashboard_sections_table_students: "Ученики"
   dashboard_sections_table_code: "Код раздела"
@@ -895,8 +898,8 @@
   dashboard_students_reset_password: "Сменить пароль"
   dashboard_students_share_section: "Поделитесь страницей со своими студентами для
     входа в этот раздел:"
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section_secondary: "Кроме того, поделитесь этой страницей
+    входа этого раздела со своими учениками:"
   dashboard_students_print_info: "Распечатать карточки с данными доступа учеников."
   dashboard_students_secret_picture_title: "Секретное изображение"
   dashboard_students_secret_picture: "В данном разделе в качестве секретного параметра
@@ -922,7 +925,7 @@
     или вы хотите создать учетные записи для них, измените секретный параметр этого
     раздела на <b>«слово»</b> или <b>«изображение»</b>."
   dashboard_students_print_page: "Распечатать эту страницу"
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: "Посетите %{join_url} и введите %{section_code}"
   dashboard_students_url: "Ссылка"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
     здесь</a>, чтобы распечатать нашу политику конфиденциальности или поделиться ею
@@ -1148,8 +1151,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: "Модуль 5: Данные и общество"
+  csd6_name: "Модуль 6: Физические вычислительния"
   csp1_name: "Урок 1: Интернет"
   csp2_name: "Урок 2: Цифровая информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1177,7 +1180,7 @@
   starwarsblocks_name: "Звездные войны (блоки)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: "Простое шифрование"
   text-compression_name: Text Compression
   math_category_name: "Математика"
   hoc_category_name: "Час Кода"
@@ -1929,42 +1932,41 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_home: "На главную"
+  header_courses: "курсы"
+  header_project_gallery: "Галерея проектов"
+  header_sections: "Секции"
+  header_professional_learning: "Профессиональное обучение"
+  header_educate_overview: "Обзор преподавателя"
+  header_educate_elementary: "Начальная школа"
+  header_educate_middle: "Средняя школа"
+  header_educate_high: "Старшая школа"
+  header_educate_hoc: "Час Кода"
+  header_educate_partner: "Партнер с нами"
+  header_educate_beyond: "За пределами Code.org"
+  header_educate_inspire: "Вдохновите студентов"
+  header_educate_community: "Онлайн сообщество"
+  header_educate_tools: "Инструменты и видео"
+  header_about_us: "О нас"
+  header_about_leadership: "Руководство"
+  header_about_donors: "Доноры"
+  header_about_partners: "Партнеры"
+  header_about_team: "Полная команда"
+  header_about_news: "Новости"
+  header_about_evaluation: "Оценка"
+  header_about_jobs: "Вакансии"
+  header_about_contact: "Свяжитесь с нами"
+  header_about_faqs: "Часто задаваемые вопросы"
+  header_learn: "Обучение"
+  header_teach: "Учить"
+  header_stats: "Посмотреть статистику"
+  header_help_us: "Помогите нам"
+  header_about: "О разработчике"
+  header_teacher_community: "Сообщество учителей"
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_report_bug: "Сообщить об ошибке"
+  header_tutorials: "Обучающие материалы"
+  header_documentation: "Документация"
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
