@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 require_relative '../../lib/cdo/hamburger'
+require 'active_support/i18n'
 
 class Level
   def report_bug_url(request)
