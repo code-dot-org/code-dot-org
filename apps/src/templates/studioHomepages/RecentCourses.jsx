@@ -33,6 +33,7 @@ const RecentCourses = React.createClass({
                 name={course.name}
                 description={course.description}
                 link={course.link}
+                isRtl={isRtl}
               />
             )}
           </ContentContainer>
@@ -43,6 +44,7 @@ const RecentCourses = React.createClass({
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
+            isRtl={isRtl}
           >
             <SetUpMessage type="courses"/>
           </ContentContainer>
