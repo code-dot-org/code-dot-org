@@ -392,6 +392,7 @@
   homepage_slot_text_title_hoc: "Соати рамз"
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Try the Hour of Code
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -805,6 +806,7 @@
     you can see their submissions to open-ended text response questions by choosing
     the assigned course from the drop down above.
   dashboard_sections_new_section: New section
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
@@ -812,6 +814,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Хонандагон"
   dashboard_sections_table_code: Section Code
@@ -1851,9 +1854,8 @@
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "Дарсҳо"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1861,7 +1863,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "Соати рамз"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1879,7 +1881,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: "Омор"
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1887,6 +1889,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
