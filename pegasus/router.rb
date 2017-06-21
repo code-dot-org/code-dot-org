@@ -185,6 +185,18 @@ class Documents < Sinatra::Base
     ).render
   end
 
+  get '/style-min.css' do
+    content_type :css
+    css_last_modified = Time.at(0)
+    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles_min/*.css')).sort.map do |i|
+      css_last_modified = [css_last_modified, File.mtime(i)].max
+      IO.read(i)
+    end.join("\n\n")
+    last_modified(css_last_modified) if css_last_modified > Time.at(0)
+    cache :static
+    css
+  end
+
   # rubocop:disable Lint/Eval
   Dir.glob(pegasus_dir('routes/*.rb')).sort.each {|path| eval(IO.read(path), nil, path, 1)}
   # rubocop:enable Lint/Eval
