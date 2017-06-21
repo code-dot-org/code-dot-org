@@ -70,15 +70,14 @@ describe('Circuit Playground Components', () => {
             'accelerometer',
             'buttonL',
             'buttonR',
-            // TODO (captouch): Restore when we re-enable
-            // 'touchPad0',
-            // 'touchPad1',
-            // 'touchPad2',
-            // 'touchPad3',
-            // 'touchPad6',
-            // 'touchPad9',
-            // 'touchPad10',
-            // 'touchPad12',
+            'touchPad0',
+            'touchPad1',
+            'touchPad2',
+            'touchPad3',
+            'touchPad6',
+            'touchPad9',
+            'touchPad10',
+            'touchPad12',
         ]);
       });
     });
@@ -562,16 +561,14 @@ describe('Circuit Playground Components', () => {
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
-      // TODO (captouch): Add 8 when re-enabled
-      expect(Object.keys(components)).to.have.length(10);
+      expect(Object.keys(components)).to.have.length(18);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(0);
     });
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
-      // TODO (captouch): Add 8 when re-enabled
-      expect(Object.keys(components)).to.have.length(11);
+      expect(Object.keys(components)).to.have.length(19);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(1);
       expect(components).to.haveOwnProperty('someOtherComponent');

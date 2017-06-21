@@ -61,8 +61,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       buttonR: initializeButton(board, '19'),
 
-      // TODO (captouch): Re-enable when we can lazy-enable streaming
-      // ...initializeTouchPads(board)
+      ...initializeTouchPads(board)
     };
   });
 }
@@ -261,8 +260,6 @@ function initializeAccelerometer(board) {
   return accelerometer;
 }
 
-// TODO (captouch)
-/* eslint-disable no-unused-vars */
 function initializeTouchPads(board) {
   // We make one playground-io Touchpad component for all captouch sensors,
   // then wrap it in our own separate objects to get the API we want to
@@ -278,4 +275,3 @@ function initializeTouchPads(board) {
   });
   return touchPads;
 }
-/* eslint-enable no-unused-vars */
