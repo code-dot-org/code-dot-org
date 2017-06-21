@@ -39,6 +39,7 @@ const Announcements = React.createClass({
                 buttonText={announcement.buttonText}
                 link={announcement.link}
                 image={announcement.image}
+                isRtl={isRtl}
               />
              )}
           </AnnouncementsCarousel>
