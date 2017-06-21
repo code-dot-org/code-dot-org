@@ -81,13 +81,43 @@
       = t('user.delete_text_teacher_note')
     - data_hash = { confirm: t('user.delete_confirm') }
     = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+- if current_user.can_create_personal_login? && !current_user.under_13? && params[:showTakeYourAccountWithYou]
+  = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
+    = form.hidden_field :hashed_email
+    .field
+      = form.label :email
+      = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
+    - if current_user.secret_word_account?
+      .field
+        = form.label :secret_words
+        = form.text_field :secret_words, maxlength: 255
+    .field
+      = form.label :password, maxlength: 255
+      = form.password_field :password, autocomplete: 'off', maxlength: 255
+    .field
+      = form.label :password_confirmation
+      = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+    %div= form.submit t('crud.update'), id: 'create-personal-login', class: 'btn btn-default', disabled: false
+
 = link_to t('crud.back'), :back
 
 :javascript
-  $( ".edit_user" ).on("submit", function(e){
+  $( "#edit_user" ).on("submit", function(e){
     if ($('#user_email').length) {
-      window.dashboard.hashEmail({ email_selector: '#user_email',
+      window.dashboard.hashEmail({
+        email_selector: '#user_email',
         hashed_email_selector: '#user_hashed_email',
-        age_selector: '#user_age'});
+        age_selector: '#user_age'
+      });
     }
   });
+  $( "#edit_user_create_personal_account" ).on("submit", function(e){
+    if ($('#create_personal_user_email').length) {
+      window.dashboard.hashEmail({
+        email_selector: '#create_personal_user_email',
+        hashed_email_selector: '#create_personal_user_hashed_email',
+        age_selector: '#user_age'
+      });
+    }
+  });
+

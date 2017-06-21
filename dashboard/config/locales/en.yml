@@ -30,6 +30,8 @@ en:
     errors:
       messages:
         blank: "is required"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Display Name'
