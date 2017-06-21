@@ -20,6 +20,7 @@ export default class MazeThumbnail extends React.Component {
     const subtype = new Type(Maze, null, {skin: skin, level: 0});
 
     Maze.map = MazeMap.parseFromOldValues(this.props.map, null, subtype.getCellClass());
+    subtype.initStartFinish();
     subtype.createDrawer();
     subtype.initWallMap();
 
