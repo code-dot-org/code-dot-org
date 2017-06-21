@@ -7,22 +7,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import teacherSections, {
-  setValidLoginTypes,
-  setValidGrades,
-  setValidAssignments,
-  setStudioUrl,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import experiments from '@cdo/apps/util/experiments';
-import { getStore, registerReducers } from '@cdo/apps/redux';
+import { renderSectionsPage } from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
-const data = JSON.parse(script.dataset.teacherdashboard);
+const scriptData = JSON.parse(script.dataset.teacherdashboard);
 
-main(data);
+main(scriptData);
 
 // Check the experiment at the top level, so that the enableExperiments and
 // disableExperiments url params will cause a persistent setting to be stored
@@ -33,7 +25,7 @@ function renderSectionProjects(sectionId) {
   const dataUrl = `/dashboardapi/v1/projects/section/${sectionId}`;
   const element = document.getElementById('projects-list');
 
-  const studioUrlPrefix = data.studiourlprefix;
+  const studioUrlPrefix = scriptData.studiourlprefix;
 
   $.ajax({
     method: 'GET',
@@ -50,40 +42,16 @@ function renderSectionProjects(sectionId) {
   });
 }
 
-/**
- * Render our sections table using React
- * @param {object[]} sections - Data returned from server about what sections
- *   this user owns.
- */
-function renderSectionsPage(sections) {
-  const element = document.getElementById('sections-page');
-  registerReducers({teacherSections});
-  const store = getStore();
-  store.dispatch(setStudioUrl(data.studiourlprefix));
-  store.dispatch(setValidLoginTypes(data.valid_login_types));
-  store.dispatch(setValidGrades(data.valid_grades));
-  store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
-
-  $("#sections-page-angular").hide();
-
-  ReactDOM.render(
-    <Provider store={store}>
-      <SectionsPage/>
-    </Provider>,
-    element
-  );
-}
-
 //  Everything below was copied wholesale from index.haml, where we had no linting.
 // TODO (bjvanminnen): Fix remaining lint errors and re-enable rules.
 /* eslint-disable eqeqeq, no-unused-vars */
 function main() {
-  const studioUrlPrefix = data.studiourlprefix;
-  var valid_scripts = data.valid_scripts;
-  var valid_courses = data.valid_courses;
-  var hoc_assign_warning = data.hoc_assign_warning;
-  var disabled_scripts = data.disabled_scripts;
-  var i18n = data.i18n;
+  const studioUrlPrefix = scriptData.studiourlprefix;
+  var valid_scripts = scriptData.valid_scripts;
+  var valid_courses = scriptData.valid_courses;
+  var hoc_assign_warning = scriptData.hoc_assign_warning;
+  var disabled_scripts = scriptData.disabled_scripts;
+  var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
 
@@ -274,7 +242,7 @@ function main() {
     // so do it using a custom event here.
     $scope.$on('section-page-rendered', () => {
       if (experiments.isEnabled('reactSections')) {
-        renderSectionsPage();
+        renderSectionsPage(scriptData);
       }
     });
 
