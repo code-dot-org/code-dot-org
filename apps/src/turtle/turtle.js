@@ -1467,7 +1467,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
     } else {
       clipSize = lineDistance;
     }
-    if (img.width !== 0) {
+    if (img.width > 0 && img.height > 0 && clipSize > 0) {
       this.ctxPattern.drawImage(img,
         // Start point for clipping image
         Math.round(lineDistance), 0,
