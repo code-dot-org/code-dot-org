@@ -159,6 +159,14 @@ class SectionTest < ActiveSupport::TestCase
     refute follower.reload.deleted?
   end
 
+  test 'add_student raises for admin students' do
+    assert_raises do
+      assert_does_not_create(Follower) do
+        @section.add_student (create :admin)
+      end
+    end
+  end
+
   test 'add_and_remove_student moves enrollment' do
     old_section = create :section
     new_section = create :section
