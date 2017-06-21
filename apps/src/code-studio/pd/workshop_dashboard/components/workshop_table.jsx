@@ -269,7 +269,6 @@ const WorkshopTable = React.createClass({
 
   formatManagement(manageData) {
     const {id, state} = manageData;
-    const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
 
     return (
       <WorkshopManagement
@@ -277,7 +276,7 @@ const WorkshopTable = React.createClass({
         viewUrl={`/workshops/${id}`}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        surveyUrl={state === 'Ended' && surveyBaseUrl ? `${surveyBaseUrl}/${id}` : null}
+        showSurveyUrl={state === 'Ended'}
       />
     );
   },
