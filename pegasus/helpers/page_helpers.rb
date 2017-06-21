@@ -33,7 +33,6 @@ def inline_css(css)
     $log.warn "Too much inlined CSS in page! [#{@total_css} bytes]" if @total_css > max_inline_css
   end
 
-  # rubocop:disable Layout/IndentHeredoc
   <<-HTML
 <style>
 #{css_string.indent(2)}
