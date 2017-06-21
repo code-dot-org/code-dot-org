@@ -73,6 +73,9 @@ export const additionalPredefValues = [
   'toggleSwitch',
 ];
 
+// Block properties we'll reuse in multiple entries
+const createLedProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
+
 export const blocks = [
   /**
    * Generic Johnny-Five / Firmata blocks
@@ -84,6 +87,9 @@ export const blocks = [
   {func: 'analogRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
   {func: 'boardConnected', parent: api, category: MAKER_CATEGORY, type: 'value'},
   {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
+
+  {func: 'createLed', ...createLedProps, type: 'either' },
+  {func: 'var myLed = createLed', ...createLedProps, noAutocomplete: true, docFunc: 'createLed' },
 
   /**
    * Circuit-Playground-specific blocks

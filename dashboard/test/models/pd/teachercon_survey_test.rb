@@ -49,7 +49,10 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
       "Form data facilitatorsCouldImprove",
       "Form data likedMost",
       "Form data wouldChange",
-      "Form data givePermissionToQuote"
+      "Form data givePermissionToQuote",
+      "Form data instructionFocus",
+      "Form data teacherResponsibility",
+      "Form data teacherTime",
     ], survey.errors.full_messages
 
     survey.form_data = build(:pd_teachercon_survey_hash).to_json
