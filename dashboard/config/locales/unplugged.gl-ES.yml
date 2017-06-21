@@ -120,25 +120,25 @@
         title: Mapas Felices
         desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
           mover un personaxe a través dun labirinto usando un único comando.
-        video: C1_mapas_felices_desconectado
+        video: C1_happy_maps_unplugged
       MoveIt:
         title: Móveo, móveo
         desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
           mover un personaxe a través dun labirinto usando un único comando.
-        video: C1_muévelomuévelo_desconectado
+        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmos da Vida Real: Planta unha Semente'
         desc: Esta lección presenta como usamos os algoritmos na nosa vida diaria,
           usando o acto de plantar unha semente como exemplo. Tamén se concentra no
           cadro xeral da informática e como os algoritmos desempeñan un papel fundamental.
-        video: C1_plantando_semillas
+        video: C1_planting_seed
       BuildingAFoundation:
         title: Construíndo unha base
         desc: Os alumnos constrúen unha estrutura usando só os materiais fornecidos.
           Esas estruturas deben completar unha tarefa (chegar a unha correcta altura
           ou soportar un determinado peso) e os alumnos discuten a idea de ser persistente
           cando as cousas se complican.
-        video: C1_construyendo_cimientos
+        video: C1_building_foundation
       GettingLoopy:
         title: Bucleándose
         desc: Esta clase introduce o concepto de programación de bucles (loops, ou
@@ -152,20 +152,20 @@
           de programación". Eles só poden escribir unha instrución por vez, e, se
           houbese un erro nalgún lugar teñen que eliminar todo e refacer os pasos
           a partir daquel punto.
-        video: C2_programación_relevos
+        video: C2_relay_programming
       Conditionals:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o alumno xoga un xogo de
           cartas e crea regras como "se eu tomo unha carta vermella, eu gaño un punto",
           e "se eu tomo unha carta negra, vostede gaña un punto"
-        video: C2_condiciones_con_tarjetas
+        video: C2_conditionals_with_cards
       BigEvent:
         title: O Gran Evento
         desc: Os alumnos son introducidos ao concepto de "eventos" en programación,
           que son accións que un computador monitora constantemente. O profesor vai
           apertar os botóns de forma remota, e os alumnos van reaccionar de acordo
           co botón presionado.
-        video: C1_granevento_desconectado
+        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Ir a Sitios en modo Seguro
         desc: A internet é poderosa, pero ás veces perigosa. Os profesores mostran
@@ -176,19 +176,19 @@
         desc: Os alumnos escriben un algoritmo (un conxunto de instrucións) usando
           un conxunto predefinido de comandos para orientar os seus compañeiros de
           clase na reprodución dun debuxo.
-        video: C2_papel_cuadriculado
+        video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritmos da vida real: avión de papel'
         desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente
           ao facer avións de papel. Esta lección tamén presenta a informática de forma
           xeral, e como os algoritmos teñen un papel esencial.
-        video: C2_aviones_de_papel
+        video: C2_paper_airplanes
       BinaryBracelets:
         title: Pulseiras Binarias
         desc: Os alumnos crean pulseiras como representacións binárias da primeira
           letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados
           e almacenados de máis dunha forma.
-        video: C2_pulseras_binarias
+        video: C2_binary_bracelets
       DigitalFootprint:
         title: A túa pegada dixital
         desc: Os profesores informan aos alumnos de que colocar informacións persoais
@@ -199,24 +199,24 @@
         desc: Os alumnos usan as etapas do pensamento computacional (descomposición,
           relación entre padróns, abstracción, algoritmos) para descubrir como xogar
           un xogo que non ten instrucións.
-        video: C3_pensamiento_computacional
+        video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Tragaluces Funcionais
         desc: Os alumnos crean un algoritmo con variábeis e funcións (fragmentos de
           código para usar varias veces) para crear colares usando fíos e doas.
-        video: C3_tragaluces_funcionales
+        video: C3_functional_suncatchers
       SongwritingParameters:
         title: Composición de música con parámetros
         desc: Os alumnos usan o concepto de retrouso nunha música para aprender sobre
           o paso de parámetros (os cales personalizan unha función sen a necesidade
           de reescribila).
-        video: C3_composición_musical_con_parámetros
+        video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algoritmos da vía real: xogo de dados'
         desc: Esta lección mostra como usamos os algoritmos na nosa vida. Como parte
           disto, os alumnos van identificar e escribir un algoritmo para un xogo de
           dados.
-        video: C3_carrera_dados
+        video: C3_dice_race
       Internet:
         title: Internet
         desc: Os alumnos envían mensaxes que representan varios métodos de transmisión
@@ -237,26 +237,26 @@
         desc: 'Esta clase móstranos algo importante sobre os algoritmos: se o manten
           simple, poderá facer moitas cousas con el; se quixese garantir que todos
           teñan o mesmo resultado no final, o seu algoritmo precisará de máis detalles.'
-        video: C4_algoritmos_sin_conexión
+        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Variábeis de sobre
         desc: As variábeis proporcionan moita liberdade na informática. Esta clase
           axuda a explicar o que son as variábeis e como podemos usalas de diversas
           maneiras. Faga esta actividade antes ou xunto coa clase sobre abstracción,
           para que a idea realmente teña sentido.
-        video: C4_variables_sin_conexión
+        video: C4_unplugged_variables
       MadGlibs:
         title: As Glibs tolas
         desc: A abstracción é unha das habilidades máis importantes que un informático
           debe coñecer. Esa actividade fará que os seus alumnos analicen as diferenzas
           entre historias para que poidan, entón, abstraelas. Esas historias abstraídas
           tórnanse modelos para novas historias tolas e divertidas.
-        video: C4_bibliotecas_locas_sin_conexión
+        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Diversión con bucles "para" (for)
         desc: Sabemos que os bucles nos permiten facer algo repetidas veces, pero
           agora imos aprender como usalos con estruturas adicionais.
-        video: C4_bucles_for_sin_conexión
+        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Escribindo unha canción con parámetros
         desc: 'Unha das estruturas máis incríbeis no mundo da informática é a función.
@@ -264,7 +264,7 @@
           ser usados repetidas veces dentro do programa maior. Esta clase axudará
           os alumnos a entender, de maneira intuitiva, por que combinar bloques de
           códigos en funcións é unha práctica útil.  '
-        video: C4_parámetros_sin_conexión
+        video: C4_unplugged_parameters
       BinaryImages:
         title: Imaxes binárias
         desc: Aínda que moitas persoas vexan o binário estritamente como ceros e uns,
@@ -273,7 +273,7 @@
           leva ese concepto un paso adiante, unha vez que demostra como un computador
           tamén pode almacenar informacións aínda máis complexas (como imaxes e cores)
           en binário.
-        video: C4_binario_sin_conexión
+        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Vídeo xogos e planos cartesianos
         desc: Descubre como os vídeo xogos cos que gostas xogar son, na verdade, conducidos
