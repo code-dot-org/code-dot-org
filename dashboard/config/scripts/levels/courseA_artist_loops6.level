@@ -32,14 +32,17 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out how to make the hill?  Try playing with the blocks a bit to see what each one draws.\",\"hint_id\":\"courseA_artist_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f830f86737c6bf500e401a085e644bec/courseA_artist_loops6.mp3\"}]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nLet's put a nice hill in the back.<br/><br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/bbbd114642d829029fc3b0566a4437e3-image-1477107329933.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "##Let's put a nice hill in the back.\r\n\r\n![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)",
     "ideal": "3",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/6a9171979a8e734e6c4fbb7e5205fec0-image-1477106973527.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 15:56:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 16:21:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
