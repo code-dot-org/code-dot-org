@@ -1,9 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
-import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
-import _ from 'lodash';
 
 const styles = {
   card: {
@@ -96,33 +94,6 @@ const CourseCard = React.createClass({
     name: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
-    assignedSections: React.PropTypes.array.isRequired,
-  },
-
-  renderEnrollmentIcon() {
-    const { assignedSections } = this.props;
-    const tooltipId = _.uniqueId();
-    const sections = assignedSections.slice(0,2).join(", ");
-    const ellipsis = (assignedSections.length > 2 ? " ..." : "");
-
-    if (assignedSections.length > 0) {
-      return (
-        <span>
-          <FontAwesome icon="check" style={styles.checkIcon} data-tip data-for={tooltipId}/>
-          <ReactTooltip
-            id={tooltipId}
-            role="tooltip"
-            wrapper="span"
-            effect="solid"
-            place="top"
-          >
-            <span style={styles.tooltip}>
-              {i18n.assignedTo()} {sections}{ellipsis}
-            </span>
-          </ReactTooltip>
-        </span>
-      );
-    }
   },
 
   render() {
@@ -131,7 +102,6 @@ const CourseCard = React.createClass({
     return (
       <a href={link} style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
-        {this.renderEnrollmentIcon()}
         <div style={styles.name}>
           {name}
         </div>

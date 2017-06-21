@@ -33,6 +33,7 @@
 #  active                   :boolean          default(TRUE), not null
 #  hashed_email             :string(255)
 #  deleted_at               :datetime
+#  purged_at                :datetime
 #  secret_words             :string(255)
 #  properties               :text(65535)
 #  invitation_token         :string(255)
@@ -58,6 +59,7 @@
 #  index_users_on_invitations_count                    (invitations_count)
 #  index_users_on_invited_by_id                        (invited_by_id)
 #  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
+#  index_users_on_purged_at                            (purged_at)
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
 #  index_users_on_school_info_id                       (school_info_id)
 #  index_users_on_studio_person_id                     (studio_person_id)
@@ -192,11 +194,12 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  validate :admins_must_be_teachers
+  validate :admins_must_be_teachers_without_followeds
 
-  def admins_must_be_teachers
+  def admins_must_be_teachers_without_followeds
     if admin
       errors.add(:admin, 'must be a teacher') unless teacher?
+      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
   end
 
@@ -330,6 +333,8 @@ class User < ActiveRecord::Base
   before_create :generate_secret_picture
 
   before_create :generate_secret_words
+
+  before_create :suppress_ui_tips_for_new_users
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
@@ -910,6 +915,13 @@ class User < ActiveRecord::Base
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
+  def suppress_ui_tips_for_new_users
+    # New teachers don't need to see the UI tips for their home and course pages,
+    # so set them as already dismissed.
+    self.ui_tip_dismissed_homepage_header = true
+    self.ui_tip_dismissed_teacher_courses = true
+  end
+
   def advertised_scripts
     [
       Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
@@ -948,9 +960,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
-        # assigned_sections is current unused. When we support this, I think it makes
-        # more sense to get/store this data separately from courses.
-        assignedSections: []
       }
     end
 
@@ -961,9 +970,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
-        # assigned_sections is current unused. When we support this, I think it makes
-        # more sense to get/store this data separately from courses.
-        assignedSections: []
       }
     end
 

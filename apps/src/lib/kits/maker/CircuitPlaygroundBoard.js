@@ -14,6 +14,7 @@ import {
   CP_COMMAND,
   J5_CONSTANTS
 } from './PlaygroundConstants';
+import Led from './Led';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -39,6 +40,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {Object} Map of component controllers */
     this.prewiredComponents_ = null;
+
+    /** @private {Array} List of dynamically-created component controllers. */
+    this.dynamicComponents_ = [];
   }
 
   /**
@@ -110,6 +114,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * Disconnect and clean up the board controller and all components.
    */
   destroy() {
+    this.dynamicComponents_.forEach(component => {
+      // For now, these are _always_ Leds.  Complain if they're not.
+      if (component instanceof Led) {
+        component.stop();
+      } else {
+        throw new Error('Added an unsupported component to dynamic components');
+      }
+    });
+    this.dynamicComponents_.length = 0;
+
     if (this.prewiredComponents_) {
       destroyCircuitPlaygroundComponents(this.prewiredComponents_);
     }
@@ -194,6 +208,12 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
   analogRead(pin, callback) {
     this.fiveBoard_.analogRead(pin, callback);
+  }
+
+  createLed(pin) {
+    const newLed = new Led({board: this.fiveBoard_, pin});
+    this.dynamicComponents_.push(newLed);
+    return newLed;
   }
 
   /**

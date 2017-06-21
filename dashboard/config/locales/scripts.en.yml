@@ -5091,6 +5091,8 @@ en:
               name: CSP Student Post-Course Survey
             Participate in a longitudinal study!:
               name: Participate in a longitudinal study!
+            CSP Post-Course Survey:
+              name: CSP Post-Course Survey
           title: CSP Student Post-Course Survey
           description_audience: CSP Students
           description_short: CSP Student Post Course Survey
@@ -5501,3 +5503,21 @@ en:
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '
+        novice-view:
+          stages:
+            CSP Tuesday:
+              name: CSP Tuesday
+            CSP Wednesday:
+              name: CSP Wednesday
+            CSP Thursday:
+              name: CSP Thursday
+            CSD Tuesday:
+              name: CSD Tuesday
+            CSD Wednesday:
+              name: CSD Wednesday
+            CSD Thursday:
+              name: CSD Thursday
+          title: view novice responses
+          description_audience: brook, dani, mal
+          description_short: NA
+          description: NA

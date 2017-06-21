@@ -792,6 +792,7 @@ DEPENDENCIES
   jquery-ui-rails (~> 5.0.3)
   jwt
   kaminari
+  launchy
   le (~> 2.2)
   lograge
   marked-rails
