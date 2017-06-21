@@ -9,7 +9,7 @@
     "video_key": "C4_function_create",
     "embed": "false",
     "instructions": "Create a function called 'draw a square' and use it to outline these four boxes using parameters.",
-    "markdown_instructions": "Now try creating the function from scratch!  \r\n\r\nCreate a function called `draw a square` and use it to outline these four boxes.  \r\nMake sure to add a parameter for `length`!\r\n\r\n<hr/>\r\nStarting from the upper right, the box widths are 50, 100, 150, and 200.",
+    "markdown_instructions": "Now try creating the function from scratch!  \r\n\r\nCreate a function called `draw a square` and use it to outline these four boxes.  \r\nMake sure to add a parameter for `length`!\r\n\r\n___\r\nStarting from the upper right, the box widths are 50, 100, 150, and 200.",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-19 17:56:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 17:56:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 19:02:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

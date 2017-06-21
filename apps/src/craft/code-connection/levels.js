@@ -22,45 +22,50 @@ module.exports = {
         craftBlock('move') +
         craftBlock('turn') +
         craftBlock('tptoplayer')+
-        craftBlock('place') +
+        craftBlock('place', `<value name='SLOTNUM'><block type="math_number"><title name='NUM'>0</title></block></value>`) +
         craftBlock('destroy') +
         craftBlock('till') +
         craftBlock('attack') +
-        craftBlock('collect') +
+        craftBlock('collect', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('collectall') +
-        craftBlock('drop') +
+        craftBlock('drop', `<value name='SLOTNUM'><block type="math_number"><title name='NUM'>0</title></block></value>
+                            <value name='QUANTITY'><block type="math_number"><title name='NUM'>1</title></block></value>`) +
         craftBlock('dropall') +
         craftBlock('detect') +
         craftBlock('inspect') +
         craftBlock('inspectdata') +
-        craftBlock('getitemdetail') +
-        craftBlock('getitemspace') +
-        craftBlock('getitemcount') +
-        craftBlock('transfer') +
+        craftBlock('getitemdetail', `<value name='SLOTNUM'><block type="math_number"><title name='NUM'>0</title></block></value>`) +
+        craftBlock('getitemspace', `<value name='SLOTNUM'><block type="math_number"><title name='NUM'>0</title></block></value>`) +
+        craftBlock('getitemcount', `<value name='SLOTNUM'><block type="math_number"><title name='NUM'>0</title></block></value>`) +
+        craftBlock('transfer', `<value name='SRCSLOTNUM'><block type="math_number"><title name='NUM'>0</title></block></value>
+                                <value name='DSTSLOTNUM'><block type="math_number"><title name='NUM'>1</title></block></value>
+                                <value name='QUANTITY'><block type="math_number"><title name='NUM'>1</title></block></value>`) +
         craftBlock('detectredstone')) +
       category('Item',
           craftBlock('block') +
           craftBlock('miscellaneous') +
           craftBlock('tool') +
           craftBlock('decoration') +
-          craftBlock('getnameof') +
-          craftBlock('getdataof') +
-          craftBlock('createblock')) +
+          craftBlock('getnameof', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+          craftBlock('getdataof', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+          craftBlock('createblock', `<value name='BLOCKTYPE'>${craftBlock('block')}</value>
+                                     <value name='BLOCKDATA'>${craftBlock('block')}</value>`)) +
       category('Blocks',
         craftBlock('tptotarget') +
         craftBlock('tptopos') +
-        craftBlock('fill') +
-        craftBlock('give') +
+        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('give', `<value name='ITEM'>${craftBlock('block')}</value>
+                            <value name='AMOUNT'><block type="math_number"><title name='NUM'>10</title></block></value>`) +
         craftBlock('kill') +
         craftBlock('setblock',`<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('summon') +
-        craftBlock('testforblock') +
+        craftBlock('testforblock', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('testforblocks') +
         craftBlock('clone') +
-        craftBlock('clonefiltered') +
+        craftBlock('clonefiltered', `<value name='ITEM'>${craftBlock('block')}</value>`) +
         craftBlock('executeasother') +
         craftBlock('timesetbyname') +
-        craftBlock('timesetbynumber') +
+        craftBlock('timesetbynumber', `<value name='TIME'><block type="math_number"><title name='NUM'>1200</title></block></value>`) +
         craftBlock('weather')) +
       category('Logic',
         block('logic_compare') +
@@ -81,8 +86,8 @@ module.exports = {
         block('math_number') +
         block('math_arithmetic') +
         block('math_random_int',
-          `<value name='FROM'>${block('math_number', '<field name="NUM">1</field>')}<value>` +
-          `<value name='TO'>${block('math_number', '<field name="NUM">10</field>')}<value>`))
+          `<value name='FROM'>${block('math_number', '<field name="FROM">1</field>')}</value>` +
+          `<value name='TO'>${block('math_number', '<field name="TO">10</field>')}</value>`))
     )
   }
 };

@@ -20,7 +20,7 @@
     "impressive": "false",
     "embed": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\r\n\r\n<img src=\"https://images.code.org/7910db8adf2ec7e4c5fdad0101c68368-image-1475911466143.24.03.png\" width=\"400px\"/>",
+    "markdown_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\r\n\r\n![](https://images.code.org/5a4eec10a53aa78ad6b12fb5e48680f8-image-1497991505852.png)",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -33,10 +33,13 @@
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The image in the drawing was made using a counter for the `set alpha` and `counter` / 10 as a brush size.\",\"hint_id\":\"courseF_artist_for10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1b8f9fc7ad54001532ec647f8f3ae868/courseF_artist_for10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The image in the drawing uses a turn of 61 degrees.\",\"hint_id\":\"courseF_artist_for10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67df3e70223b27deafbf59d37fc45837/courseF_artist_for10.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Want to know how the sample image was done?\\n\\n![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)\",\"hint_id\":\"courseF_artist_for10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42f11d6a7b1a2414f1c51ebf6909bde3/courseF_artist_for10.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

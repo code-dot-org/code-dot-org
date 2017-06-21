@@ -194,11 +194,12 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  validate :admins_must_be_teachers
+  validate :admins_must_be_teachers_without_followeds
 
-  def admins_must_be_teachers
+  def admins_must_be_teachers_without_followeds
     if admin
       errors.add(:admin, 'must be a teacher') unless teacher?
+      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
   end
 
@@ -333,7 +334,7 @@ class User < ActiveRecord::Base
 
   before_create :generate_secret_words
 
-  before_create :clear_ui_tips
+  before_create :suppress_ui_tips_for_new_users
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
@@ -914,7 +915,7 @@ class User < ActiveRecord::Base
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
-  def clear_ui_tips
+  def suppress_ui_tips_for_new_users
     # New teachers don't need to see the UI tips for their home and course pages,
     # so set them as already dismissed.
     self.ui_tip_dismissed_homepage_header = true
