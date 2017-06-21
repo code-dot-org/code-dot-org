@@ -408,75 +408,55 @@
       20hr_farmer_stage9_2_instruction: |-
         Next, move me to the hole and fill it with
         TWO shovelfuls of dirt, using the "fill" block.
-      20hr_farmer_stage9_3_instruction: |-
-        Move me to the pile of dirt and tell me
-        how many shovelfuls to remove using as few blocks as possible.
-      20hr_farmer_stage9_4_instruction: |-
-        Can you help me remove all four piles of
-        dirt? Hint: use a repeat block if you can.
-      20hr_farmer_stage9_5_instruction: |-
-        Help me fill in all these holes with 5 shovelfuls
-        of dirt. Hint: you can put a "repeat" block inside the "while" block.
-      20hr_farmer_stage9_6_instruction: |-
-        Remove all the piles of dirt, using as few
-        blocks as possible. The new options in the dropdown menu on the "while"
-        block tell me if I'm standing on a pile or a hole.
-      20hr_farmer_stage9_7_instruction: |-
-        Wow, I found a really deep hole! I don't
-        know how many shovelfuls of dirt it needs. Can you write a program that fills
-        it until the ground is even?
-      20hr_farmer_stage9_8_instruction: |-
-        Help me fill in the hole at the end of the
-        field, using as few blocks as possible.
-      20hr_farmer_stage9_9_instruction: |-
-        Make me remove all these piles of dirt.
-        Try to use as few blocks as possible. Hint: try using a "while" block.
-      20hr_maze_stage2_1_instruction: |-
-        Can you help me to catch the naughty pig?
-        Stack a couple of "move forward" blocks together and press "Run" to help
-        me get there.
-      20hr_maze_stage2_10_instruction: |-
-        Ok, try the new "repeat until" block -
-        it will repeat until I reach the annoying pig.
-      20hr_maze_stage2_11_instruction: |-
-        Ok, one last time for practice - can you
-        solve this one using only 4 blocks?
-      20hr_maze_stage2_12_instruction: |-
-        Dear person. Me zombie. Me hungry. Must...
-        get... to sunflower... Can you get me there with only 5 blocks?
-      20hr_maze_stage2_13_instruction: |-
-        Ok, this is similar, but slightly different.
-        Can you do it in only 5 blocks?
-      20hr_maze_stage2_14_instruction: |-
-        Use the new "if" block to let me decide
-        when to turn. Hint: you only need one more block, but learn how we set it
-        up so you can do it on your own next time.
-      20hr_maze_stage2_15_instruction: |-
-        Ok, this is just like the last puzzle, but
-        you need to remember how you used the "if" block and the "repeat" block
-        together.
-      20hr_maze_stage2_16_instruction: |-
-        Me want sunflower! Use an "if" block to
-        get me there with the fewest number of blocks.
-      20hr_maze_stage2_17_instruction: |-
-        Ok, let's do that again for practice - this
-        isn't very different, but watch out for the chompers!
-      20hr_maze_stage2_18_instruction: |-
-        The "If-else" blocks checks a condition,
-        and then does one thing OR another. To get me to the sunflower try to use
-        this new block.
+      20hr_farmer_stage9_3_instruction: Beni toprak yığınına doğru hareket ettir ve
+        olabildiğince az blok kullanarak kaç kürek dolusu boşaltmam gerektiğini söyle.
+      20hr_farmer_stage9_4_instruction: 'Tüm toprak yığınlarını kaldırmama yardımcı
+        olabilir miin? İpucu: Mümkünse repeat blogunu kullan.'
+      20hr_farmer_stage9_5_instruction: 'Delikleri 5 kürekdolusu toprakla doldurmam
+        için bana yardım et. İpucu: "While" blogunun içine "tekrar" blogunu yerleştirebilirsin.'
+      20hr_farmer_stage9_6_instruction: Tüm toprak yığınlarını kullanabildiğin kadar
+        az blok kullanarak kaldır. Liste menüsündeki yeni secenekler bana bir yığının
+        mı yoksa bir deliğin mi üstünde olduğumu söyler.
+      20hr_farmer_stage9_7_instruction: Wow, çok derin bir çukur buldum! Kaç kürek
+        dolusu toprağa ihtiyacı olur bilmiyorum. Dolana kadar onu dolduracak bir program
+        yazabilir misin?
+      20hr_farmer_stage9_8_instruction: Alanın sonundaki çukuru doldurmama yardım
+        et, kullanabildiğin kadar az blok kullanarak.
+      20hr_farmer_stage9_9_instruction: Tüm toprak yığınlarını yok etmememi sağla.
+        Kullanabildiğin kadar az blok kullanmaya çalış. İpucu:"sürece" bloğunu kullanmaya
+        çalış.
+      20hr_maze_stage2_1_instruction: Yaramaz domuzu yakalamama yardım edebilir misin?
+        Oraya gitmem için birkaç "İlerle" bloğunu birleştirmeli ve "Programı Çalıştır"
+        tuşuna basmalısın.
+      20hr_maze_stage2_10_instruction: Tamam, yeni "e kadar tekrarla" bloğunu dene.
+        Bu, ben yeşil domuza ulaşana kadar tekrarlayacak.
+      20hr_maze_stage2_11_instruction: Tamam, pratik için son kez. Bunu sadece 4 blok
+        kullanarak çözebilir misin?
+      20hr_maze_stage2_12_instruction: Değerli kişi. Ben zombi. Açım. Ayçiçeklerini
+        almam gerekli. Bana onları sadece 5 blok kullanarak getirebilir misin?
+      20hr_maze_stage2_13_instruction: Tamam, Bu benzer ama biraz farklı. Bunu sadece
+        5 blok ile yapabilir misin?
+      20hr_maze_stage2_14_instruction: 'Ne zaman döneceğime karar vermem için yeni
+        "eğer" bloğunu kullan. İpucu: Sadece bir bloğa daha ihtiyacın var ama bunu
+        nasıl kurduğumuzu öğren ki bir dahaki sefer kullanabilesin.'
+      20hr_maze_stage2_15_instruction: Tamam, bu sadece son bulmaca gibi ama "Eğer"
+        bloğu ile "Tekrarla" bloğunu nasıl birlikte kullandığını hatırlaman gerekiyor.
+      20hr_maze_stage2_16_instruction: Ayçiçeğini istiyorum! Sadece bir "Eğer" bloğu
+        kullanarak, en az sayıda blok ile oraya ulaşmamı sağla.
+      20hr_maze_stage2_17_instruction: Tamam, sadece alıştırma olsun diye bunu tekrar
+        yapalım - çok farklı değil, sadece canavar bitkilere dikkat et!
+      20hr_maze_stage2_18_instruction: '"Eğer-Değilse" bloğu bir koşulu kontrol eder
+        ve bir şeyi YA DA diğerini yapar. Ayçiçeğine ulaşmam için bu yeni bloğu kullanmayı
+        dene.'
       20hr_maze_stage2_19_instruction: bir koşul bloğu alıştırması daha, ilk denemenizde
         doğru yapabilir misiniz?
-      20hr_maze_stage2_2_instruction: |-
-        This pig is ruffling my feathers. Help me
-        to find him!
-      20hr_maze_stage2_20_instruction: |-
-        Can you add just 3 blocks to help me solve
-        a more complex maze? If you do it right, I can walk any curvy path no matter
-        the length.
-      20hr_maze_stage2_3_instruction: |-
-        Trace the path and lead me to the silly pig.
-        Avoid TNT or the feathers will fly!
+      20hr_maze_stage2_2_instruction: Bu domuz benim tüylerimi diken diken ediyor.
+        Onu bulmama yardımcı ol!
+      20hr_maze_stage2_20_instruction: Daha karmaşık bir labireti sadece 3 blok ekleyerek
+        çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu
+        ne olursa olsun yürüyebilirim.
+      20hr_maze_stage2_3_instruction: Yolu takip et ve beni sersem domuza götür. Patlayıcılardan
+        uzak dur yoksa bu tüylerim havaya uçacak!
       20hr_maze_stage2_4_instruction: |-
         Guide me to the green evilness! (Watch out
         for TNT)
@@ -2478,7 +2458,6 @@
       Collector Demo_instruction: |-
         Look at all this loot! Help me get as many coins
         as I can so I can improve my farm. I can only use 9 blocks though!
-      Collector Test_instruction: Tüm altını toplayın!
       Course 2 Bee Loops 1_instruction: "Hi, I'm a bee. Can you help me collect\nthe
         nectar from these flowers? "
       Course 2 Bee Loops 13_instruction: |-
@@ -3377,6 +3356,8 @@
         Introducing the setPosition command!
         Replace the moveTo in the button-click event handler to use setPosition to
         move the button itself to a random location when it's clicked.
+      Find the Wizard_instruction: Ne istersen geliştir. Bu sayı tahmin oyununa bir
+        örnektir!
       Food Fight!_instruction: "We've added one last function for you. \\r\n\\r\nUse\nan
         \"if\" statement to program your game to call the \"level_up\" function\nonly
         when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
@@ -3397,12 +3378,17 @@
       Geometric Sun_instruction: |-
         Project Idea: Create a pattern using geometric
         ideas like shapes. This requires persistence and planning!
+      Get To The Goal_instruction: Ne istersen geliştir. Bu sayı tahmin oyununa bir
+        örnektir!
       'Grade 4 Example PlayLab Project #1_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
       'Grade 4 Example PlayLab Project #2_instruction': |-
         Take a look at this project.  Do
         you see how it was made?
+      Guess The Number 2_instruction: |-
+        Build whatever you want. This is an example
+        of a number-guessing game!
       Guess The Number_instruction: |-
         Build whatever you want. This is an example
         of a number-guessing game!
@@ -4096,6 +4082,9 @@
         dönebileceğiniz bir proje olarak kaydedilir.
       New Course 4 Artist Functions Level 4_instruction: '"Kare Çiz" fonksiyonunu
         kullanarak bu deseni oluştur.'
+      New Gumball Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
+      New Ice Age Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
+      New Infinity Project_instruction: Kendi zevkinize göre bir şey yarat ve paylaş!
       Ninjacat Demo B (copy 1)_instruction: |
         \r
         Let’s begin by exploring a simple
@@ -4284,6 +4273,10 @@
       Pixelation - AllTheThings 4_instruction: Bu mozaik düzeyde 'hide_encoding_controls'
         seçeneği kullanımı gösterilmiştir.   düzey onaltılık olarak görüntü verilerini
         görüntüler ve geri ikiliye değiştirmenize izin vermez.
+      Pixelation - AllTheThings 5_instruction: |-
+        This pixelation level demonstrates
+        the use of the "Hide sliders" option.  Notice that the width and height
+        sliders are not available, and the width and height fields are not editable.
       Pixelation - Lesson 14 - Fix bit offset v.2_instruction: |-
         Something happened
         to the bits in this image! Find the error and fix it! Hint: a few extra bits
@@ -4398,6 +4391,13 @@
       Practice Create Performance Task_instruction: |-
         Design and implement your practice
         Create Performance Task. (Click to see full instructions)
+      Project - Final Image Scroller_instruction: |-
+        Update the image scroller to respond
+        to buttons and key presses. (Click to see full instructions)
+      Project - Finish your canvas app_instruction: |-
+        Extend the functionality of
+        one of the effects, or create an entirely new one of your own. (Click to see
+        full instructions)
       Project - Make Your Own Clicker Game_instruction: Tıkırtı oyununu tamamla! (Tüm
         talimatlar için tıklayınız)
       Project - Your Own Multi Screen App_instruction: |-
@@ -4413,6 +4413,12 @@
       Quantum Bee_instruction: Mor çiçekler 1 veya 0 nektara sahip olabilir, ama hangisi
         olduğunu bilmiyorsun! Mor çiçekte nektar yoksa toplamamaya dikkat et. "Eğer"
         bloğunu kullanarak nektarın 1'e eşit olup olmadığını kontrol et.
+      Robot Doodle_instruction: 'Proje fikri: gerçek dünyadan bir şey tanıdık bir
+        resim oluşturun. Bu sebat ve planlama gerektirir!'
+      Robot Drawing_instruction: 'Proje fikri: gerçek dünyadan bir şey tanıdık bir
+        resim oluşturun. Bu sebat ve planlama gerektirir!'
+      Robot_instruction: 'Proje fikri: gerçek dünyadan bir şey tanıdık bir resim oluşturun.
+        Bu sebat ve planlama gerektirir!'
       Rocket Height Course A_instruction: |-
         Follow the Design Recipe to create a function
         rocket-height.
@@ -4520,6 +4526,7 @@
         piksel olmalı.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
+      Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
         keeps using the `fill` block until the ground is even?  "
@@ -6650,6 +6657,8 @@
         misin? Hangi yoldan gitmek gerektiğini biliyorum fakat kaç adım bilmiyorum.
       courseA_collector_loops_challenge2_instruction: 'Bu sefer sadece ok bloklrından
         birini kullanabilirsiniz. Tüm hazineyi al! '
+      courseA_forVideoTest_artist_instruction: "'Tekrar' döngüsü kullanarak suya dalga
+        ekleyin."
       courseA_maze_seq1_instruction: Kuşu domuza ulaştırın!
       courseA_maze_seq10_instruction: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu
         domuza eriştirin! '
@@ -6660,6 +6669,9 @@
       courseA_maze_seq2_instruction: Beni domuza götürmek için kodu değiştir!
       courseA_maze_seq3_instruction: Kuşu domuza ulaştırmak için kodu düzeltin!
       courseA_maze_seq4_instruction: Kuşu domuza ulaştırmak için bir blok çıkartın!
+      courseA_maze_seq4a_instruction: |-
+        Get the bird to the pig using the fewest possible
+        blocks.
       courseA_maze_seq5_instruction: Try this one yourself from the beginning.
       courseA_maze_seq6_instruction: Bir yöne ilerle ve sonra başka yöne ve kuşu domuza
         götür!
@@ -6693,6 +6705,10 @@
         you make the dinosaur disappear when Jorge runs into him?
       courseA_playlab_events_challenge1_instruction: Büyük hayvan yarışı Zamanı! ▼
         bastığınızda aşağı ilerlesib. Kim en hızlı koşar?
+      courseA_playlab_events_challenge2_instruction: Bir parti verelim! Her arkadaş
+        tıkladığında yapması için bir şey ver. Hayvanlar ne desin? Başka ne olacak?
+      courseA_toMakeLoopsVideo_Collector_instruction: Döngüler içinde ne varsa tekrar
+        tekrar yapmana izin verir!
       courseA_video_events_instruction: Need a better playlab/events combo
       courseB_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
@@ -6712,9 +6728,8 @@
         five times so the artist can reach the top of the bushes.
       courseB_artist_loops6_instruction: Asmaya tırmanın ve nereye gittiğini görün?
       courseB_artist_loops7_instruction: "** Meydan Okuma: ** gizli bahçe! Hadi dolaşalım."
-      courseB_artist_loops8_instruction: |-
-        Time to head home. Can you fix this ladder
-        to help the artist get down?
+      courseB_artist_loops8_instruction: Eve dönme vakti. Sanatçıya yardımcı olmak
+        için sadece bir blok kullanarak bu merdiveni tamir edebilir misin?
       courseB_artist_loops9_instruction: |-
         Let's take the short way home, over the
         pond. Can you help the artist stay on the stones?
@@ -6760,7 +6775,9 @@
         of gold using only one `E -->` block?
       courseB_maze_seq1_instruction: |-
         Play with these blocks to see what they make
-        the bird do!
+        the bird do! \r
+        \r
+        Get the bird to the pig to complete the level.
       courseB_maze_seq10_instruction: Fix the bugs to get the bird to the pig.
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Domuza ulaşın!
@@ -6776,9 +6793,17 @@
         gerekiyor?
       courseB_maze_seq9_instruction: 'Meydan Okuma: TNT nin etrafından dolaşıp kuşu
         domuza eriştirin.'
+      courseB_maze_seq9_challenge1_instruction: "*O domuz şimdi nerede saklanıyor?
+        *"
       courseB_maze_seqCold_instruction: Blok ekleyerek kuşu domuza ulaştırın!
       courseB_maze_seqOld_instruction: Kuşu domuza götürmek için TNT'nin etrafından
         dolaş!
+      courseB_maze_seq_challenge1_instruction: |-
+        You can only move up to four times
+        in each direction. Can you find a path before you run out of blocks?
+      courseB_maze_seq_challenge2_instruction: |-
+        Debug this level. These are the right
+        blocks, but they're in the wrong order!
       courseB_playLab_events1_instruction: Her bir bloğun ne yaptığını anlamaya çalış.
       courseB_playlab_events2_instruction: |-
         Have Daisy the Dragon say something when
@@ -6796,7 +6821,8 @@
         Help your knight get all of the flags!\r
         \r
         To
-        do this, you'll need to add events to help the knight move up and down.
+        do this, you'll need to add events to help the knight move up, down, left,
+        and right.
       courseB_playlab_events7_instruction: |-
         Make this game fun by setting the knight
         to vanish when he runs into the dragon on his way to get the flags!  Play
@@ -6813,12 +6839,39 @@
       courseB_playlab_events_challenge1_instruction: Bu oyun eğlenceli hale getirmek
         için  şovalye dragona geldiğinde yok olmasını sağlayın!  Daha gerçekçi olmasını
         istiyorsan çarptığında ses çal.
+      courseB_playlab_events_challenge2_instruction: "Üstlerine tıkladığınızda hayvanların
+        yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli bir oyun yapabilirsiniz!"
+      courseB_playlab_events_challenge2_embed_instruction: "İşte senin bitmiş oyunun!"
+      courseB_playlab_events_challenge2_template_instruction: "Üstlerine tıkladığınızda
+        hayvanların yok olmalarını sağlayalım! Ses ve puan ekleyerek daha eğlenceli
+        bir oyun yapabilirsiniz!"
+      courseB_starWars_prog1_instruction: BB-8 e hurda metal almak için yardım et!
+      courseB_starWars_prog10_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
+      courseB_starWars_prog11_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
+      courseB_starWars_prog2_instruction: BB-8 e bütün parlak hurda metalleri toplamak
+        için yardım et
+      courseB_starWars_prog3_instruction: BB-8 e bütün parlak hurda metalleri toplamak
+        için yardım et
+      courseB_starWars_prog4_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
+      courseB_starWars_prog5_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
+      courseB_starWars_prog6_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
+      courseB_starWars_prog7_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
+      courseB_starWars_prog8_instruction: "**Meydan okuma**BB-8 e parlak hurda metal
+        toplamak için yardım et"
+      courseB_starWars_prog9_instruction: BB-8 e parlak hurda metal toplamak için
+        yardım et
       courseC_PlayLab_events1_instruction: |-
         Make Jorge the Dog (actor 1) say "Hi
         there."
       courseC_PlayLab_events2_instruction: |-
-        Can you make Jorge (actor 1) say something,
-        then have Olive the Cat (actor 2) say something afterward?
+        Can you make Jorge the Dog (actor 1)
+        say something, then have Olive the Cat (actor 2) say something afterward?
       courseC_PlayLab_events3_instruction: Köpeği, kediye doğru hareket ettiren bir
         program yazabilir misin?
       courseC_PlayLab_events4_instruction: |-
@@ -6827,10 +6880,11 @@
         reaches her?
       courseC_PlayLab_events5_instruction: |-
         Can you write a program to make Octavia
-        say "What's new?" when she is clicked?
+        the Octopus say "What's new?" when she is clicked?
       courseC_PlayLab_events6_instruction: |-
         Now, write a program to make Waddles
-        move around using the up / down / left / right keys to hit all of the targets!
+        the Penguin move around using the up / down / left / right keys to hit all
+        of the targets!
       courseC_PlayLab_events7_instruction: |-
         The `repeat forever` block allows you
         to run code over and over forever.  Use this block to move Chomp the Dino
@@ -6842,18 +6896,77 @@
         the game to make that happen.
       courseC_PlayLab_events9_instruction: |-
         Can you add a block to score a point
-        when Waddles (actor1) runs into Octavia (actor 3)? \r
-        Play the game and move
-        Waddles with the arrows until you score!
+        when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
+        \r
+        Play the game and move Waddles with the arrows until you score!
       courseC_PlayLab_eventsA_instruction: |-
         Add blocks to the `when run` event to
-        change the background scene and the speed of Waddles.\r
+        change the background scene and the speed of Waddles the Penguin.\r
         \r
-        Play the game
-        and move Waddles with the arrows until you score.
-      courseC_PlayLab_eventsFP_instruction: |-
-        Create your own story. When you're
-        done, click "Finish" to share with friends.
+        Play
+        the game and move Waddles with the arrows until you score.
+      courseC_PlayLab_eventsFP_instruction: Kendi hikayeni oluşturabilir misin? Bitirdiğinde
+        "Bitir" düğmesine bas ve aarkadaşların ile paylaş. İpuçlarında hikaye fikirleri
+        alabilirsin.
+      courseC_PlayLab_events_challenge1_instruction: |-
+        Here is a new block that is
+        somewhat complicated. Use it to move Waddles back to the start when he runs
+        into the Dinosaur and when he scores a point. This will make your game more
+        challenging and fun!\r
+        \r
+        Play the game and move Waddles with the arrows
+        until you score enough points.
+      courseC_PlayLab_events_challenge1_xy_blocks_instruction: |-
+        Here is a new block
+        that is somewhat complicated. Use it to move Waddles back to the start when
+        he runs into the Dinosaur and when he scores a point. This will make your
+        game more challenging and fun!\r
+        \r
+        Play the game and move Waddles with
+        the arrows until you score enough points.
+      courseC_artist_loop1_instruction: Let's add some pizazz!
+      courseC_artist_loops1_instruction: "*\"Zombie.  Draw!\"*\\r\n\\r\nThe zombie\nwants
+        to draw a line from where he is to the garden of sunflowers.  Can you\nhelp
+        him?  \\r\n*(The garden is 250 pixels away)*  "
+      courseC_artist_loops1a_instruction: "Get the artist to the center of the play\narea,
+        then draw a bird using a sticker. "
+      courseC_artist_loops2_instruction: |-
+        Now that the zombie knows his way, help
+        him dig holes along the path to plant more flowers!
+      courseC_artist_loops2a_instruction: |-
+        Now, use a loop to spin your bird around
+        10 times with a 36 degree turn.
+      courseC_artist_loops3_instruction: |-
+        Excellent!  Now that the flowers have sprouted,
+        help the zombie place a friend every 50 pixels to guard over them until they
+        are grown.
+      courseC_artist_loops3a_instruction: Now add a bat!
+      courseC_artist_loops4_instruction: |-
+        The zombie has found an empty farm!  Can
+        you help him bring it to life by stamping animal stickers every 100 pixels
+        around the border?
+      courseC_artist_loops4a_instruction: Try jumping forward by 75 pixels.
+      courseC_artist_loops5_instruction: |
+        Harika!  Şimdi hayvanları uzak tutmak için bir çit yapma zamanı.   \r \r
+      courseC_artist_loops5a_instruction: Try new stickers!
+      courseC_artist_loops5b_instruction: Try adding lines!
+      courseC_artist_loops6_instruction: |
+        What should the zombie put inside of the
+        garden?  \r
+        \r
+        \r
+      courseC_artist_loops6a_instruction: Add another sticker!
+      courseC_artist_loops7a_instruction: Play with the loops and angles.
+      courseC_artist_loops8a_instruction: Now try something on your own!
+      courseC_artist_loopsPre1a_instruction: Time to spin that line around!
+      courseC_artist_loopsPrePre1a_instruction: "Get the artist to the center of\nthe
+        play area, then draw a line. "
+      courseC_artist_loopsTemplate_instruction: |-
+        Excellent!  Now that the flowers
+        have sprouted, help the zombie place a friend every 50 pixels to guard over
+        them until they are grown.
+      courseC_artist_loopsTemplateA_instruction: "Get the artist to the center of\nthe
+        play area, then draw a bird using a sticker. "
       courseC_artist_prog1_instruction: |-
         Play with the blocks in the toolbox to see
         what they do!
@@ -6876,6 +6989,18 @@
         One more tag.  This is a triangle for Pi.\r
         (Each
         side is 150 pixels)
+      courseC_artist_prog_challenge1-doghouse_instruction: Jorge için bir köpek evi
+        inşa edelim!
+      courseC_artist_prog_challenge1_instruction: |-
+        Draw rooms for each of the animals.
+        There are many different ways to solve this puzzle, so have some fun. The
+        shortest possible solution is 6 blocks, but use as many as you like!
+      courseC_artist_prog_challenge2_instruction: |-
+        *Help me paint the yellow lines
+        on this road!*
+      courseC_collector_loops_challenge2_instruction: |-
+        Let's hunt for treasure -
+        using loops! Help the collector by debugging this code. Get all of the treasure!
       courseC_collector_prog1_instruction: |-
         Play around with the blocks to see if
         you can help Laurel collect some treasure.
@@ -6904,6 +7029,12 @@
       courseC_collector_progB_instruction: |-
         Collect as many coins as you can to finish
         the stage!
+      courseC_collector_prog_challenge1_instruction: |-
+        Look carefully! Can you collect
+        all *10* pieces of treasure?
+      courseC_collector_prog_challenge2_instruction: |-
+        There are *20* pieces of treasure
+        to be found. Collect at least half to finish this challenge!
       courseC_harvester_loops1_instruction: Use loops to pick all of the pumpkins.
       courseC_harvester_loops10_instruction: |-
         Collect all of the corn and all of
@@ -6933,34 +7064,43 @@
       courseC_harvester_loops9_instruction: |-
         Collect all of the corn and all of the
         pumpkins.
+      courseC_harvester_loops_challenge1_instruction: Bütün mısırları topla.
+      courseC_harvester_loops_challenge2_instruction: Tüm marulları topla. Ağaçlardan
+        ve tarlalardan sakın!
       courseC_maze_debugging1_instruction: |-
-        Fix the code to help get Skrat get to
+        Fix the code to help get Scrat get to
         the acorn.
       courseC_maze_debugging10_instruction: |-
         Debug this level by rearranging and
         changing blocks to get me to the pig!
       courseC_maze_debugging2_instruction: |-
-        Use your debugging skills to get Skrat
+        Use your debugging skills to get Scrat
         to the acorn.
       courseC_maze_debugging3_instruction: Remove blocks to get Skrat to the acorn!
       courseC_maze_debugging4_instruction: |-
         Someone has their directions mixed up!
-        Can you help? Watch out for the ice blocks that blow up!
+        Can you help?
       courseC_maze_debugging5_instruction: |-
         Debug this level by rearranging and changing
         blocks.
       courseC_maze_debugging6_instruction: |-
-        Figure out what is wrong and get Skrat
+        Figure out what is wrong and get Scrat
         to the acorn.
       courseC_maze_debugging7_instruction: |-
         **Challenge:** Debug this level by rearranging,
         adding, and deleting blocks.
       courseC_maze_debugging8_instruction: |-
-        Debug this level to get Skrat to the
+        Debug this level to get Scrat to the
         acorn.
       courseC_maze_debugging9_instruction: |-
-        Debug this level to get Skrat to the
+        Debug this level to get Scrat to the
         acorn.
+      courseC_maze_debugging_challenge1_instruction: |-
+        *"Am I just going around in
+        circles?"*
+      courseC_maze_debugging_challenge2_instruction: |-
+        *"If I turn too often, I might
+        get dizzy! Help me reach the acorn with only four `turn` commands."*
       courseC_maze_loops1_instruction: |-
         Can you get the bird to the pig using 5 of
         the same kind of blocks?
@@ -6984,6 +7124,11 @@
         Challenge: Combine ideas from the last few
         puzzles to complete this level.
       courseC_maze_loops9_instruction: You are doing great! Keep it up!
+      courseC_maze_loops_challenge1_instruction: "Şimdi Scrat onun meşe palamudu bulmak
+        için döngüleri kullanmak istiyor! "
+      courseC_maze_loops_challenge2_instruction: |-
+        Let's hunt for treasure - using
+        loops! Help the collector by debugging this code. Get all of the treasure!
       courseC_maze_programming1_instruction: |-
         For this puzzle, drag all of the blocks
         together and click "Run" to watch it go!
@@ -7010,6 +7155,10 @@
       courseC_maze_programming9_instruction: |-
         *"Now, help me sneak up on the pig
         any way you want to!"*
+      courseC_maze_programming_challenge1_instruction: '* "Domuz saklanıyor! Etrafından
+        bir yol bulmam için bana yardımcı olabilir misin?" *'
+      courseC_maze_programming_challenge2_instruction: Bazen aynı sorunu çözmek için
+        birden fazla yol vardır. Bazen geriye daha hızlı olur!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7021,6 +7170,41 @@
         Challenge: Combine ideas
         from the last few puzzles to complete this level.
       courseC_puppy_loops9_instruction: You are doing great! Keep it up!
+      courseC_starWars_loops1_instruction: |-
+        BB-8 will pick up any metal scraps along
+        the path where he moves. Use 5 of the same block to get BB-8 to pick up all
+        of the scrap metal in the play area.
+      courseC_starWars_loops10_instruction: You are doing great! Keep it up!
+      courseC_starWars_loops10_predict2_instruction: |-
+        You are doing great! Keep it
+        up!
+      courseC_starWars_loops11_instruction: |-
+        You are almost there! This time, choose
+        any path you like!
+      courseC_starWars_loops1_predict1_instruction: |-
+        BB-8 will pick up any metal
+        scraps along the path where he moves. Use 5 of the same block to get BB-8
+        to pick up all of the scrap metal in the play area.
+      courseC_starWars_loops2_instruction: |-
+        Can you get BB-8 to pick up all of the
+        scrap metal by creating a loop that uses only one block inside of a `repeat`
+        block?
+      courseC_starWars_loops4_instruction: |-
+        In this puzzle, two `repeat` loops will
+        help you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops5_instruction: |-
+        *Get BB-8 to pick up all the scrap metal
+        as quickly as possible!*
+      courseC_starWars_loops6_instruction: |-
+        Loops even work with more than one block
+        inside!  Can you loop this sequence?
+      courseC_starWars_loops7_instruction: |-
+        Can you try to get all the scrap metal
+        using just one loop? Try programming it all out then finding the repeating
+        code to place in a loop.
+      courseC_starWars_loops9_instruction: |-
+        Use what you have learned to pick up
+        all of the scrap metal!
       courseD_artist_binary1_instruction: |-
         Use the blocks below to have the artist
         draw "01010101" in binary in the first row.
@@ -7052,6 +7236,12 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binary_challenge1_instruction: |-
+        Try using nested loops to complete
+        this drawing.
+      courseD_artist_binary_challenge2_instruction: |-
+        Try using nested loops to complete
+        this drawing.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7126,6 +7316,37 @@
       courseD_artist_nestedLoopsPre1_instruction: |-
         Create a triangle to kickstart
         this stage.
+      courseD_artist_nestedLoops_challenge1_instruction: 'Meydan Okuma: Bu resmi nasıl
+        yapabileceğini çözdün mü?'
+      courseD_artist_nestedLoops_challenge2_instruction: 'Meydan Okuma: Bu resmi nasıl
+        yapabileceğini çözdün mü?'
+      courseD_artist_project1_instruction: |
+        Draw a small shape, between **20 and
+        50** pixels wide.  It can be any shape that you like.  \r
+      courseD_artist_project1a_instruction: |-
+        Draw a stair-step pattern that uses
+        turns between 75 and 105 degrees.
+      courseD_artist_project2_instruction: |-
+        Now take your shape and draw two or three
+        in a row!
+      courseD_artist_project2a_instruction: |-
+        Now, turn around 180 degrees and draw
+        the stair pattern again!
+      courseD_artist_project3_instruction: Let's spin that line of shapes around!
+      courseD_artist_project3a_instruction: |-
+        Spin that shape around 5 or 6 times
+        in a circle.
+      courseD_artist_project4_instruction: Bu şekilleri katmanlama vakti!
+      courseD_artist_project4a_instruction: |-
+        Try playing around with what you've
+        created. Draw whatever you like!\r
+        - What happens if you use two different
+        angles in your stair step pattern?\r
+        - What happens if you make your diamond
+        pattern longer or shorter?\r
+        - What does it look like to draw two snowflakes
+        on top of one another?
+      courseD_artist_project5_instruction: Kar taneleri ile oynayın!
       courseD_artist_ramp11_instruction: "Şimdi sanatçıyı kullanarak bir kare oluşturun!"
       courseD_artist_ramp12_instruction: Bu üçgeni içinde bir kare çizmek öğrendiklerini
         kullanın.
@@ -7167,6 +7388,12 @@
       courseD_bee_conditionals9_instruction: |-
         Collect all of the nectar or make all
         the honey.
+      courseD_bee_conditionals_challenge1_instruction: Tüm nektarı topla veya tüm
+        bal yap.
+      courseD_bee_conditionals_challenge2_instruction: Tüm nektarı topla veya tüm
+        bal yap.
+      courseD_bee_conditionals_challenge3_instruction: Tüm nektarı topla veya tüm
+        bal yap.
       courseD_bee_debugging1_instruction: |-
         Fix the error(s) to collect all of the
         nectar.
@@ -7187,6 +7414,12 @@
       courseD_bee_debugging9_instruction: |-
         Help the bee fix the code to get all the
         nectar.
+      courseD_bee_debugging_challenge1_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of honey?
+      courseD_bee_debugging_challenge2_instruction: |-
+        Watch how the bees gets the
+        nectar. Can you use the same kind of pattern to help the bee make all of honey?
       courseD_bee_nestedLoops1_instruction: Help the bee collect all of the nectar.
       courseD_bee_nestedLoops2_instruction: |-
         This time, help the bee collect all
@@ -7207,9 +7440,43 @@
         and make honey at the honeycomb. "
       courseD_bee_nestedLoops9_instruction: Make all of the honey.
       courseD_bee_nestedLoops9_predict2_instruction: Make all of the honey.
+      courseD_bee_nested_loops_challenge1_instruction: |-
+        Let's hunt for treasure
+        - using loops! Help the collector reach at least two piles of treasure using
+        only the blocks in your toolbox.
+      courseD_bee_nested_loops_challenge2_instruction: |-
+        Let's hunt for treasure
+        - using loops! Help the collector reach at least two piles of treasure using
+        only the blocks in your toolbox.
+      courseD_collector_debugging1_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
+      courseD_collector_debugging2_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
+      courseD_collector_debugging3_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
+      courseD_collector_debugging4_instruction: Tüm hazineyi toplamak için hataları
+        düzelt.
+      courseD_collector_debugging5_instruction: |-
+        Challenge: All of the commands that
+        you need are already here...now use your debugging skills to figure out how
+        to solve this puzzle.
+      courseD_collector_debugging6_instruction: |-
+        Challenge: Use your debugging skills
+        to fix the errors and collect all of the treasure.
+      courseD_collector_debugging7_instruction: |-
+        Challenge: All of the commands that
+        you need are already here...now use your debugging skills to figure out how
+        to solve this puzzle.
+      courseD_collector_debugging_challenge2_instruction: Iç içe döngülerin uzmanı
+        mısınız? Hazinenin tümünü toplamak öğrendiklerini kullanın!
+      courseD_collector_nested_loops_challenge2_instruction: Hadi döngüler kullanarak
+        hazine avı yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları
+        kullanarak en az iki yığın hazine topla. 3 yığın toplamak mümkün.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
+      courseD_collector_until_challenge1_instruction: Iç içe döngülerin uzmanı mısınız?
+        Hazinenin tümünü toplamak öğrendiklerini kullanın!
       courseD_debugging_1_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_2_instruction: Fix the error(s) to collect all of the nectar.
       courseD_debugging_3_instruction: Bu bloklar gerçekten beni dinlemiyor. Bütün
@@ -7224,8 +7491,7 @@
         of the nectar and make all of the honey.
       courseD_farmer_condLoops1_instruction: |-
         Use conditionals to make sure that
-        you pick all of the corn, but don't disturb the stalks where nothing is growing
-        yet.
+        you pick all of the corn, and nothing else.
       courseD_farmer_condLoops2_instruction: |-
         Help the farmer collect both corn and
         lettuce from the field.
@@ -7233,6 +7499,9 @@
         *"Corn, lettuce, AND pumpkins! Help
         me harvest them all."*
       courseD_farmer_condLoops4_instruction: |-
+        Help the farmer pick all of the lettuce
+        in each cluster before moving on to the next bunch.
+      courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops5_instruction: |-
@@ -7253,6 +7522,14 @@
       courseD_farmer_condLoops9_predict1_instruction: |-
         Collect all of the corn and
         lettuce, then pick the pumpkin.
+      courseD_farmer_condLoops_challenge1_instruction: |-
+        Turn right at the pumpkins.
+        Collect everything to complete the level. Each hidden crop has only one corn
+        or lettuce.
+      courseD_farmer_condLoops_challenge2_instruction: Seviyeyi tamamlamak için herşeyi
+        topla.
+      courseD_farmer_condLoops_challenge2_clone_instruction: Seviyeyi tamamlamak için
+        herşeyi topla.
       courseD_farmer_conditionals1_instruction: |-
         Move to the pile of dirt and use
         the `remove` block to remove it.
@@ -7279,6 +7556,10 @@
         as few blocks as possible. "
       courseD_farmer_conditionals9_instruction: "Flatten all of these piles using\nas
         few blocks as possible. "
+      courseD_farmer_until_challenge2_instruction: |-
+        Use If/Else blocks to follow
+        the curvy path. At each corner, use the `remove 1` command in a loop to clear
+        the piles.
       courseD_farmer_while1_instruction: |-
         Move to the pile of dirt and use the `remove`
         block to remove it.
@@ -7309,6 +7590,19 @@
         few blocks as possible. "
       courseD_farmer_while9_instruction: "Flatten all of these piles using as few\nblocks
         as possible. "
+      courseD_farmer_while_challenge1_instruction: Tüm delikleri doldurun ve tüm yığınları
+        kaldır.
+      courseD_farmer_while_challenge2_instruction: Tüm delikleri doldurun ve tüm yığınları
+        kaldır.
+      courseD_harvester_nested_loops_challenge1-broken_instruction: '"Çiftlikte yardıma
+        ihtiyacım var! Sadece araç kutusundaki blokları kullanarak bu mısırı hasat
+        etmeme yardım et."'
+      courseD_harvester_nested_loops_challenge1_instruction: '"Çiftlikte yardıma ihtiyacım
+        var! Sadece araç kutusundaki blokları kullanarak bu mısırı hasat etmeme yardım
+        et."'
+      courseD_maze_loops_challenge1_instruction: Hadi döngüler kullanarak hazine avı
+        yapalım! Toplayıcıya yardımcı ol ve araç kutusunda ki blokları kullanarak
+        en az iki yığın hazine topla.
       courseD_maze_nestedLoops3_instruction: |-
         Get the zombie to the sunflower using
         the fewest number of blocks possible.
@@ -7350,12 +7644,28 @@
       courseD_maze_until9_instruction: |-
         **Challenge:** Avoid the chompers and help
         the zombie get to the sunflower.
+      courseD_maze_until_challenge_instruction: Hiçbir ipuçları yok sadece meydan
+        okuma. Zombiyi ayçiçeğine ulaştır.
+      courseD_maze_until_challenge1-delete-this-copy_instruction: Hiçbir ipuçları
+        sadece meydan okuma. Zombiyi ayçiçeğine ulaştır.
+      courseD_maze_until_challenge1_instruction: Hiçbir ipuçları yok sadece meydan
+        okuma. Zombiyi ayçiçeğine ulaştır.
+      courseD_maze_until_challenge2_instruction: Hiçbir ipuçları yok sadece meydan
+        okuma. Zombiyi ayçiçeğine ulaştır.
+      courseD_pixelation_instruction: |-
+        Encode an image of anything you like using
+        binary. The binary language will be represented with '0' and '1' only.
       courseD_playLab_cond1_instruction: |-
         Get Pegleg to the dragon to solve this
         puzzle.
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
         to the dragon. "
       courseD_playLab_cond3_instruction: |-
+        1) Make the dragon change between random
+        emotions every second.  \r
+        2) Make it so when Pegleg gets to the dragon,
+        he gets 2 points if the dragon is happy and 1 otherwise.
+      courseD_playLab_cond3b_instruction: |-
         1) Make the dragon change between random
         emotions every second.  \r
         2) Make it so when Pegleg gets to the dragon,
@@ -7418,6 +7728,19 @@
       courseE_artist_functions9_instruction: |-
         Create this image using only the blocks
         provided.
+      courseE_artist_functions_challenge_instruction: |-
+        Once you define a function,
+        you can call it over and over again - whenever and wherever you want! Try
+        this code to see how it works, then change it to make your own impressive
+        design!
+      courseE_artist_functions_challenge1_instruction: |-
+        Once you define a function,
+        you can call it over and over again - whenever and wherever you want! Try
+        this code to see how it works, then change it to make your own impressive
+        design!
+      courseE_artist_functions_challenge2_instruction: |-
+        Try this code to see how
+        it works, then make the program your own!
       courseE_artist_ramp10_instruction: "Şimdi, son üçgen kodunu döngü içine sürükleyin
         ve kendi etrafında dönerek bir kar tanesi yapın!"
       courseE_artist_ramp11_instruction: "Şimdi sanatçıyı kullanarak bir kare oluşturun!"
@@ -7442,9 +7765,9 @@
         flowers?
       courseE_bee_functions1_instruction: Her bir çiçekten tüm  nektarları topla.
       courseE_bee_functions10_instruction: |-
-        Solve this function by creating a function
-        to turn, move forward and make all of the honey, then return the bee to where
-        it started and turn back.
+        Solve this puzzle by creating a function
+        that helps the bee go get all of the honey before returning back to the main
+        path.
       courseE_bee_functions2_instruction: |-
         Use the `get 2 nectar` function to collect
         the nectar from each flower.
@@ -7642,8 +7965,8 @@
         Just one little change to the code from the
         last image can create this drawing. Can you figure out what that change is?
       courseF_artist_for6_instruction: |-
-        Try using some of the code from the last
-        level, but turning 89 degrees to create this twisted square spiral.
+        Recreate your code from the last level, but
+        turn 89 degrees to create this twisted square spiral.
       courseF_artist_for7_instruction: |-
         Make three small changes to the code from
         the last level to get this!
@@ -7651,8 +7974,16 @@
         Take the angle down to 72 degrees to get
         a spiraled pentagon.
       courseF_artist_for9_instruction: |-
-        Use the counter inside the `set alpha` block
-        to get this faded center.
+        **Inspiration:**  Use the counter inside
+        the `set alpha` block to get this faded center.
+      courseF_artist_for_Template_instruction: Bazı kodları son seviyeden kullanmayı
+        deneyin, ama bu bükülmüş sarmalı oluşturmak için 89 derece dön.
+      courseF_artist_for_challenge1_instruction: |-
+        Can you figure out how to re-create
+        this drawing?
+      courseF_artist_for_challenge2_instruction: |-
+        Can you figure out how to re-create
+        this drawing with a single loop?
       courseF_artist_fwp1_instruction: Hare çiz fonsiyonunu açıp hatalarını bul.
       courseF_artist_fwp2_instruction: "'Uzunluğu' adında bir parametre için fonksiyonu
         düzenleyin."
@@ -7673,6 +8004,17 @@
         çizimi yapabilirmisin?
       courseF_artist_fwp9_instruction: 'Serbest Zaman: muhteşem bir şey çiz! Çizimlerinizi
         ne kadar farklı göründüğünü anlamak için kalem genişliği ile oynayın!'
+      courseF_artist_fwp_challenge1_instruction: |-
+        Try running this program, and make
+        changes to see what happens. Can you figure out how it works? (Or delete it
+        and replace it with something totally different)
+      courseF_artist_fwp_challenge2_instruction: "Use what you learned in the previous\nlevel
+        to draw an image like this. Note: The code becomes more simple if you\nincorporate
+        parameters. "
+      courseF_artist_ramp10_instruction: "Şimdi, son üçgen kodunu döngü içine sürükleyin
+        ve kendi etrafında dönerek bir kar tanesi yapın!"
+      courseF_artist_ramp8_instruction: "Şimdi sanatçıyı kullanarak bir kare oluşturun!"
+      courseF_artist_ramp9_instruction: Bu üçgen çizmek için öğrendiklerini kullanın.
       courseF_artist_variables1_instruction: |-
         Let's draw an equilateral triangle
         that is exactly 50 pixels long on each side.
@@ -7738,6 +8080,41 @@
         \r
         How can you use variables with squares,
         pentagons, or hexagons?
+      courseF_artist_variables_challenge1_instruction: |-
+        You've now learned everything
+        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
+        you stick with it until you figure out the solution?
+      courseF_artist_variables_challenge1a_instruction: |-
+        You've now learned everything
+        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
+        you stick with it until you figure out the solution?
+      courseF_artist_variables_challenge2_instruction: |-
+        You've now learned everything
+        you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
+        you stick with it until you figure out the solution?
+      courseF_bee_conditionals10_instruction: |-
+        Collect all of the nectar and make
+        all of the honey.
+      courseF_bee_conditionals1_predict1_instruction: Bulut altında çiçek olup olmadığını
+        kontrol edin. eğer çiçek varsa, nektar alın.
+      courseF_bee_conditionals2_instruction: |
+        Nektarı almadan önce bulutun altında çiçek saklanıyor mu kontrol edin.  \r
+      courseF_bee_conditionals3_instruction: |
+        Help the bee collect all of the nectar.
+        \r
+        \r
+      courseF_bee_conditionals4_instruction: |-
+        Get all of the nectar using as few
+        blocks as possible.
+      courseF_bee_conditionals5_instruction: |-
+        Collect all of the nectar using as
+        few blocks as possible
+      courseF_bee_conditionals7_predict2_instruction: "' Eğer Değilse' bloğu, kullanarak
+        çiçekten nektarı topla ve Peteklere Bal yap."
+      courseF_bee_conditionals8_instruction: |-
+        Collect nectar if there is a flower.\r
+        Otherwise,
+        make honey (because there is a honeycomb).
       courseF_bee_for1_instruction: |-
         Collect the nectar from each flower using the
         fewest blocks possible.
@@ -7768,6 +8145,45 @@
       courseF_bee_for9_instruction: |-
         Use the `counter` variable to navigate this
         garden with the fewest number of blocks possible.
+      courseF_bee_for_challenge1_instruction: |-
+        Use this for loop to collect all of
+        the nectar. There are a few actions that you will want to repeat 'counter'
+        times.
+      courseF_bee_for_challenge2_instruction: |-
+        Solve this puzzle using the fewest
+        number of blocks possible.
+      courseF_bee_for_challenge3_instruction: |-
+        Solve this puzzle using the fewest
+        number of blocks possible.
+      courseF_bee_functions2_instruction: Her çiçekten nektarı toplamak için 'yalnızca
+        nektar al' fonksiyonunu kullanın.
+      courseF_bee_functions3_instruction: '"Sadece bal yap'' fonksiyonu içine kodu
+        koymak için" Düzenle "'' yi tıklayın, sonra fonksiyonu bu bulmacayı çözmek
+        için kullanın.'
+      courseF_bee_functions3a_instruction: Eğer çiçek ise nektar alan değilse bal
+        yapan bir fonksiyon yazın.  Bulmaca çözmek için fonksiyonu kullanın!
+      courseF_bee_functions4_instruction: "''taşı ve nektarı al'' arıyı döndürür ve
+        nektarı toplar,sonra arıyı başladığı noktaya döndürür.Tüm nektarları toplamak
+        için fonksiyonu kullan."
+      courseF_bee_functions5_instruction: |-
+        Now write the function to collect nectar
+        from the flowers.
+      courseF_bee_functions5a_instruction: Tüm nektarı toplamak için "hareket ve kontrol"
+        fonksiyonu kullanın.
+      courseF_bee_functions6_instruction: Bir fonksiyon oluşturun ve tüm çiçeklerden
+        nektarı toplamak veya tüm her Peteklere Bal yapmak için kullanın.
+      courseF_bee_functions7_instruction: Tüm nektarı topla ve tüm balları yap!
+      courseF_bee_functions8a_instruction: Tüm nektarı topla veya tüm bal yap!
+      courseF_bee_functions_challenge1_instruction: |-
+        Create a new function to collect
+        all the nectar and honey while there is a path ahead. Use it to complete the
+        puzzle!
+      courseF_bee_functions_challenge2_instruction: |-
+        Use everything you have learned
+        to complete this puzzle!
+      courseF_bee_functions_challenge2_recursion_instruction: |-
+        Collect all the nectar
+        or make all of the honey!
       courseF_bee_fwp2_instruction: Bu kodu fonksiyonun içine çek, sonra fonksiyonu
         kullanarak nektarı kontrol et.
       courseF_bee_fwp3_instruction: Bu fonksiyonun 3 satır nektarı çabucak toplamasını
@@ -7783,6 +8199,33 @@
       courseF_bee_fwp9_predict1_instruction: |-
         Use your new function to solve this
         puzzle.
+      courseF_bee_fwp_challenge1_instruction: |-
+        Use one `for loop` in a function to
+        collect all of the corn. The same `for loop` can count to different maximum
+        values by using the `length` parameter.
+      courseF_bee_fwp_challenge2_instruction: |-
+        Use one `for loop` in a function to
+        collect all of the vegetables in the row. Make the `for loop` can count to
+        different maximum values by using the `length` parameter. Make your program
+        as short as possible by using a second `for loop` outside the function.
+      courseF_farmer_ramp11_instruction: Bu bulmaca iç içe döngüleri kullanır.  Nasıl
+        olduğunu anlayabildin mi?
+      courseF_maze_predict1_instruction: Bu kod yeni blok içermektedir. Çalıştır tuşuna
+        bastığınızda sizce ne olacak?
+      courseF_maze_ramp1_instruction: Bu bulmaca için tüm blokları 'çalıştırdı zaman'
+        olay bloğu altına bağlayın ve izlemek için "Çalıştır" ı tıklatın!
+      courseF_maze_ramp13_instruction: "Öğrendiklerimizi bir araya getirmek için son
+        bir bulmaca!"
+      courseF_maze_ramp15_instruction: Kuşu domuza ulaştırmak için öğrendiklerini
+        kullan!
+      courseF_maze_ramp2_instruction: Araç kutusundan 'tekrarla' bloğunu sürükleyin
+        ve 'çalıştığı zaman' olayına bağlamyın.   Kodunuzu bitirmek için 'İlerle'
+        bloğunu içine yerleştirin.
+      courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
+      courseF_maze_ramp5_instruction: Avoid the TNT.
+      courseF_maze_ramp6_instruction: Sakin ol ve kötü domuzu bulmama yardım et. Yoksa
+        sinirlenebilirim
+      courseF_maze_ramp7_instruction: Kuşu domuza ulaştırmak için öğrendiklerini kullan!
       courseF_playlab_variables0_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -7799,6 +8242,8 @@
       courseF_playlab_variables2a_instruction: |
         Now, decode Pirate Pegleg's speech
         by changing the value of the variables in just two places! \r
+      courseF_playlab_variables2b RYAN CLONE_instruction: "'Renk' Değişkeni cümlenin
+        ortasına yerleştirin."
       courseF_playlab_variables2b_instruction: |-
         Insert the variable `color` into
         the middle of a sentence by putting it into the empty slot in the `join` block.
@@ -7806,10 +8251,13 @@
         The `ask` block will automatically
         store whatever the user answers into the variable of your choice.
       courseF_playlab_variables3b_instruction: "Help Kiki have a conversation with\nBrian
-        by using the variable `A1` in all of the places where age `12` should\nbe
+        by using the variable `age` in all of the places where age `12` should\nbe
         used. "
       courseF_playlab_variables3bEdit_instruction: "Help Kiki have a conversation\nwith
         Brian by using the variable `A1` in all of the places where age `12`\nshould
+        be used. "
+      courseF_playlab_variables3b_josh_instruction: "Help Kiki have a conversation\nwith
+        Brian by using the variable `age` in all of the places where age `12`\nshould
         be used. "
       courseF_playlab_variables4_instruction: |-
         Can you find the correct variable
@@ -7823,16 +8271,49 @@
       courseF_playlab_variables5b_instruction: |-
         Put all of the variables in the correct
         place so that Pegleg's story makes sense.
+      courseF_playlab_variables5c RYAN Copy_instruction: |-
+        Let's combine the `ask`
+        block with an `if/else` statement to make a game!
+      courseF_playlab_variables5c_instruction: |-
+        Let's combine the `ask` block with
+        an `if/else` statement to have some fun!
       courseF_playlab_variables6b_instruction: |-
-        We have provided some starter questions
-        and variables for you. Join them together and put them in the title screen
-        to make a fun story.
+        Join the variables together to make
+        a fun story that takes more than one speech bubble to tell.
+      courseF_playlab_variables6c_instruction: |-
+        In the rest of this stage, we're
+        going to build a game that you control!
       courseF_playlab_variables7b_instruction: |-
         Create some questions and weave the
         answers together into your very own story.
+      courseF_playlab_variables7c_instruction: |-
+        Make the game do something by asking
+        the user to guess a color.
       courseF_playlab_variables8b_instruction: |-
         Use what you've learned to create
         an improv scene between the actors.
+      courseF_playlab_variables8c_instruction: |-
+        Use the variables to make the game
+        more personal.
+      courseF_playlab_variables_challenge1_instruction: |-
+        Use these blocks to make
+        the actors share a knock-knock joke. Change the setup and punchline to tell
+        your own joke!
+      courseF_playlab_variables_challenge2_instruction: |-
+        Now for a game of tag! This
+        game will use variables to keep track of points.  Tag Cat to get 2 points.
+        Tag Penguin to get 3 points.  Get exactly 10 points to win!\r
+        But be careful,
+        when Cat and Penguin tag each other, they take points away.\r
+        \r
+        Add the
+        blocks necessary to make this game work the way it's been explained.  How
+        will you get Dog to move in all directions using the arrow keys?  How will
+        you add points when Dog tags Cat or Penguin?  How will you subtract points
+        when Cat and Penguin touch?
+      courseF_video_createFunctions_instruction: |-
+        We don't have a video for creating
+        functions, yet. This is a placeholder.
       course_playlab_variables1_instruction: |-
         This is Pirate Pegleg.  He's awfully
         hard to understand these days!
@@ -7851,6 +8332,8 @@
       coursef_explore_playlab_cat_game_instruction: |-
         You can do whatever you want
         in play lab! Here's an example of game you can make.
+      coursef_maze_ramp3_instruction: Kuşun ezilmesine sebep olacak bir fazla blok
+        var. O bloğu bulup araç kurtusuna geri at.
       drawings!_instruction: |-
         Draw the equilateral triangle - all the sides are the
         same!
@@ -9822,6 +10305,7 @@
         The Artist is trying to draw a line five times,
         but can't get it right.  Can you help?
       test_sarah_instruction: hi
+      u3-old-drawing-view_instruction: DO This
       weird_playLab_instruction: |-
         About My Robot Project! Write code so that clicking
         on each bird shows a new fact about your robot.

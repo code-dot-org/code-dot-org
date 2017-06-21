@@ -116,109 +116,90 @@
         title: Krúttleg kort
         desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern
           ferðast um völundarhús með einni skipun.
-        video: C1_happy_maps_unplugged
       MoveIt:
         title: Hreyfa, hreyfa
         desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern
           ferðast um völundarhús með einni skipun.
-        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algrím úr raunheimi: Sá fræi'
         desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
           og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði
           og hvernig algrím gegna nauðsynlegu hlutverki."
-        video: C1_planting_seed
       BuildingAFoundation:
         title: Að byggja grunn
         desc: Nemendur byggja hlut með því að nota aðeins gefið efni. Hlutirnir verða
           að uppfylla kröfur (ná vissri hæð eða þola vissa þyngd) og nemendur ræða
           þá hugmynd að hvika ekki frá markmiði þó málin flækist.
-        video: C1_building_foundation
       GettingLoopy:
         title: Lykkjulæti
         desc: "Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir)
           með dansi. Nemendur læra einföld dansspor og fá síðan fyrirmæli um að endurtaka
           þau."
-        video: C1_getting_loopy
       RelayProgramming:
         title: Boðhlaupsforritun
         desc: Nemendur hlaupa boðhlaup þar sem þeir hlaupa yfir lóðina til að skrifa
           algrím sem byggir á mynd frá "Forritun með rúðublöðum". Þeir mega aðeins
           skrifa eina skipun í einu og ef það er villa einhversstaðar verða þeir að
           stroka allt út til baka að þeim stað.
-        video: C2_relay_programming
       Conditionals:
         title: Skilyrði
         desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa
           til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart
           spil, færð þú stig."
-        video: C2_conditionals_with_cards
       BigEvent:
         title: Stórviðburður
         desc: Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir
           sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu
           og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.
-        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Ferðast í öryggi
         desc: Internetið er öflugur en stundum hættulegur staður. Kennarar kynna hvernig
           þarf að passa sig þegar farið er um netið.
-        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Forritun rúðublaða
         desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum
           til að stýra bekkjarfélögum í að endurskapa teikningu.
-        video: C2_graph_paper
       PaperPlanes:
         title: 'Algrím úr raunheimi: Pappírsskutlur'
         desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
           og tekur sem dæmi að búa til pappírsskutlu. Einnig er horft almennar til
           tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki."
-        video: C2_paper_airplanes
       BinaryBracelets:
         title: Stafræn armbönd
         desc: Nemendur búa til armbönd sem sýna fyrsta stafinn í nafni hvers með gildi
           hans í tvenndarkerfi. Nemendur læra að það er hægt að tákna og geyma gögn
           á ýmsa vegu.
-        video: C2_binary_bracelets
       DigitalFootprint:
         title: Stafræna fótsporið þitt
         desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar
           um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.
-        video: C2_digital_footprint
       ComputationalThinking:
         title: Tölvunarmiðuð hugsun
         desc: Nemendur nota þrepin í tölvunarmiðaðri hugsun (niðurbrot, greiningu
           mynstra, útdrátt, algrím) til að finna út hvernig á að spila leik þar sem
           vantar leiðbeiningar.
-        video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Sólarskraut með föllum
         desc: Nemendur búa til algrím með breytum og föllum (kóða sem nýtist aftur
           og aftur) til að búa til sólarskraut (suncatcher) úr perlum og bandi.
-        video: C3_functional_suncatchers
       SongwritingParameters:
         title: Lagasmíð
         desc: Nemendur nota hugmyndina um viðlag í söng til að læra um skilgreiningu
           og notkun falla.
-        video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algrím úr raunheimi: Teningakapp'
         desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi.
           Meðal annars munu nemendur greina og skrifa niður algrím fyrir kappleik
           sem notar teningakast."
-        video: C3_dice_race
       Internet:
         title: Internet
         desc: Nemendur senda skilaboð á pappír til að líkja eftir hinum ýmsu sendingaraðferðum
           sem notaðar eru á netinu.
-        video: C3_internet
       Crowdsourcing:
         title: Hópvistun
         desc: Nemendur nota hópvistun (crowdsourcing) til að leysa verkefni saman
           sem bekkur með meiri árangri en ef nemandi reyndi að glíma við það einn.
           Þetta er algeng aðferð við að leita lausna í tölvunarfræði.
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: Stafrænn borgari
         desc: Nemendur kanna muninn á einkaupplýsingum og persónuupplýsingum og greina
@@ -228,26 +209,22 @@
         desc: "Þessi kennslustund sýnir okkur nokkuð mikilvægt varðandi algrím. Ef
           algrím er einfalt er hægt að nota það á marga vegu. Ef þú vilt að allir
           fái sömu niðurstöðuna verður algrímið að vera nákvæmara."
-        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Umslagabreytur
         desc: Breytur gefa mikið frelsi í tölvunarfræði. Þessi kennslustund hjálpar
           við að útskýra hvað breytur eru og fjölbreytta notkun þeirra. Notaðu þetta
           verkefni á undan (eða í tengslum við) kennslustundina um útdrátt til að
           koma þessari hugmynd enn betur til skila.
-        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs eyðufylling
         desc: "Útdráttur er eitt af því mikilvægasta sem tölvunarfræðingur þarf að
           kunna skil á. Í þessu verkefni greina nemendur sögur til að finna hvað er
           ólíkt í þeim og þannig finna sameiginlegan kjarna. Þessi sögukjarni verður
           síðan fyrirmynd að nýjum fyndnum og fáranlegum sögum."
-        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Fyndnar frá lykkjur
         desc: Við vitum að með lykkjum getum við gert eitthvað aftur og aftur, en
           nú ætlum við að læra hvernig við notum lykkjur með innbyggðum viðauka.
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Lagasmíð með stikum
         desc: 'Ein stórkostlegasta einingin í heimi tölvunarfræðinnar er fallið (function).
@@ -255,7 +232,6 @@
           og aftur innan í stærra forriti. Þessi kennslustund mun hjálpa nemendum
           að öðlast skilning á því hvers vegna það er svona gagnlegt að setja kóðabúta
           í föll.  '
-        video: C4_unplugged_parameters
       BinaryImages:
         title: Tvíundarmyndir
         desc: "Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn,
@@ -263,20 +239,17 @@
           tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra
           með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari
           upplýsingar (svo sem myndir og liti) með tvíundarsniði."
-        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Tölvuleikir og hnitakerfi
         desc: Uppgötvaðu hvernig tölvuleikirnir, sem þér finnst svo gaman að spila,
           eru í raun keyrðir á algebru! Kannaðu hvernig algebruformúlur og hnitakerfið
           geta hjálpað okkur að skilja hvernig tölvuleikir virka, og byrjaðu svo að
           áætla hvernig leik þú munt búa til.
-        video: alg_11_coordinate_plane
       Contracts:
         title: Samningar, gildamengi og svið
         desc: Samingar eru aðferð til að skilja og ræða um föll. Í þessari námseiningu
           munum við skoða hvernig samningar geta hjálpað okkur að skilja nýtt forritunarmál
           eða fall.
-        video: alg_5_contracts
       DesignRecipe:
         title: Hönnunaruppskriftin
         desc: "Í síðasta áfanga skrifuðu nemendur nokkur mjög einföld föll. En til
@@ -284,20 +257,17 @@
           (enska: Design Recipe) er formleg aðferð við að skrifa föll. Hluti af henni
           er að búa til dæmatilfelli til að tryggja að fallið geri það sem það á að
           gera."
-        video: alg_8_design_recipe
       Booleans:
         title: Boole gildi og rökvísi
         desc: Boole gildi eru fjórða og síðasta gagnategundin sem þú lærir um á þessu
           námskeiði. Í þessu verkefni muntu læra hvað Boole gildi eru og hvernig þau
           hjálpa okkur að skrifa föll sem nota rökvísi
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Skilyrði og Piecewise föll
         desc: Með því að hafa mismunandi gildi í stikunum, sem föll taka inn, fáum
           við mismunandi úttök, en þau fylgja mjög ákveðnu mynstri. En hvað ef við
           viljum láta mismunandi gildi stika skila mismunandi mynstrum í úttaki? Þá
           koma skilyrði að góðu gagni...
-        video: alg_10_conditionals
       CollisionDetection:
         title: Skynjun árekstra og regla Pýþagórasar
         desc: "Það er mikilvægur þáttur í flestum leikjum að skynja hvenær hlutir
@@ -305,4 +275,28 @@
           Pýþagórasar og fjarlægðarformúlan nýtast til að mæla fjarlægðina milli tveggja
           punkta á skjánum og hvernig við ákveðum hvort þessi tveir punktar (eða leikverur)
           snertist."
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: ''
+        desc: ''
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Verkefni án tölvu
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Verkefni án tölvu
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+          but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Verkefni án tölvu
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Verkefni án tölvu
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Verkefni án tölvu
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Verkefni án tölvu
+        desc: Today you will learn about what to do if someone is being mean online.
