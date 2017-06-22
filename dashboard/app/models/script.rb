@@ -42,6 +42,24 @@ class Script < ActiveRecord::Base
   has_many :course_scripts
   has_many :courses, through: :course_scripts
 
+  scope :with_associated_models, -> do
+    includes(
+      [
+        {
+          script_levels: [
+            {levels: [:game, :concepts, :level_concept_difficulty]},
+            :stage,
+            :callouts
+          ]
+        },
+        {
+          stages: [{script_levels: [:levels]}]
+        },
+        :course_scripts
+      ]
+    )
+  end
+
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
@@ -189,7 +207,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache_from_cache
-    Script.connection
     [
       ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
     ].each(&:new) # make sure all possible loaded objects are completely loaded
@@ -198,9 +215,7 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_db
     {}.tap do |cache|
-      Script.all.pluck(:id).each do |script_id|
-        script = get_without_cache(script_id)
-
+      Script.with_associated_models.find_each do |script|
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
@@ -286,21 +301,7 @@ class Script < ActiveRecord::Base
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
-    Script.includes(
-      [
-        {
-          script_levels: [
-            {levels: [:game, :concepts, :level_concept_difficulty]},
-            :stage,
-            :callouts
-          ]
-        },
-        {
-          stages: [{script_levels: [:levels]}]
-        },
-        :course_scripts
-      ]
-    ).find_by(find_by => id_or_name).tap do |s|
+    Script.with_associated_models.find_by(find_by => id_or_name).tap do |s|
       raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
     end
   end
