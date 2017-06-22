@@ -215,7 +215,7 @@ export const executeUserCode = function (client, code) {
     },
     createBlockPos: function (x, y, z, prefix) {
       return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
-    }
+    },
   };
 
   // Register async methods

@@ -90,9 +90,9 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockPlace()))
           .appendTitle(new blockly.FieldDropdown(sixDirections), 'DIR');
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
+      this.appendValueInput('SLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -100,8 +100,8 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_place = function () {
     var dir = this.getTitleValue('DIR');
-    var value = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return `place('block_id_${this.id}','${value}','${dir}');`;
+    var value = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    return `place('block_id_${this.id}',${value},'${dir}');`;
   };
 
   blockly.Blocks.craft_till = {
@@ -194,12 +194,12 @@ export const install = (blockly, blockInstallOptions) => {
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionDrop()))
           .appendTitle(new blockly.FieldDropdown(fourDirections), 'DIR');
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.quantity()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'QUANTITY');
+      this.appendValueInput('SLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()));
+      this.appendValueInput('QUANTITY')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.quantity()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -207,9 +207,9 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_drop = function () {
     var dir = this.getTitleValue('DIR');
-    var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    var quantity = window.parseInt(this.getTitleValue('QUANTITY'), 10);
-    return `drop('block_id_${this.id}','${slotNumber}','${quantity}','${dir}');`;
+    var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    var quantity = Blockly.JavaScript.valueToCode(this, 'QUANTITY', Blockly.JavaScript.ORDER_NONE);
+    return `drop('block_id_${this.id}',${slotNumber},${quantity},'${dir}');`;
   };
 
   blockly.Blocks.craft_dropall = {
@@ -297,48 +297,48 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetailInSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
+      this.appendValueInput('SLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemDetailInSlotNumber()));
       this.setOutput(true, Blockly.BlockValueType.STRING);
     }
   };
 
   blockly.JavaScript.craft_getitemdetail = function () {
-    var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return [`getitemdetail('block_id_${this.id}','${slotNumber}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    return [`getitemdetail('block_id_${this.id}',${slotNumber})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getitemspace = {
     helpUrl: '',
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpaceInSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
+      this.appendValueInput('SLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemSpaceInSlotNumber()));
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
   };
 
   blockly.JavaScript.craft_getitemspace = function () {
-    var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return [`getitemspace('block_id_${this.id}','${slotNumber}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    return [`getitemspace('block_id_${this.id}',${slotNumber})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getitemcount = {
     helpUrl: '',
     init: function () {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCountInSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SLOTNUM');
+      this.appendValueInput('SLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGetItemCountInSlotNumber()));
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
     }
   };
 
   blockly.JavaScript.craft_getitemcount = function () {
-    var slotNumber = window.parseInt(this.getTitleValue('SLOTNUM'), 10);
-    return [`getitemcount('block_id_${this.id}','${slotNumber}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    return [`getitemcount('block_id_${this.id}',${slotNumber})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_transfer = {
@@ -347,25 +347,25 @@ export const install = (blockly, blockInstallOptions) => {
       this.setHSV(agentBlockColor.h, agentBlockColor.s, agentBlockColor.v);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTransfer()));
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'SRCSLOTNUM');
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.toSlotNumber()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'DSTSLOTNUM');
-      this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.quantity()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'QUANTITY');
+      this.appendValueInput('SRCSLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.inSlotNumber()));
+      this.appendValueInput('DSTSLOTNUM')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.toSlotNumber()));
+      this.appendValueInput('QUANTITY')
+          .setCheck('Number')
+          .appendTitle(new blockly.FieldLabel(i18n.quantity()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
   };
 
   blockly.JavaScript.craft_transfer = function () {
-    var srcSlotNumber = window.parseInt(this.getTitleValue('SRCSLOTNUM'), 10);
-    var dstSlotNumber = window.parseInt(this.getTitleValue('DSTSLOTNUM'), 10);
-    var quantity = window.parseInt(this.getTitleValue('QUANTITY'), 10);
-    return `transfer('block_id_${this.id}','${srcSlotNumber}','${quantity}','${dstSlotNumber}');`;
+    var srcSlotNumber = Blockly.JavaScript.valueToCode(this, 'SRCSLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    var dstSlotNumber = Blockly.JavaScript.valueToCode(this, 'DSTSLOTNUM', Blockly.JavaScript.ORDER_NONE);
+    var quantity = Blockly.JavaScript.valueToCode(this, 'QUANTITY', Blockly.JavaScript.ORDER_NONE);
+    return `transfer('block_id_${this.id}',${srcSlotNumber},${quantity},${dstSlotNumber});`;
   };
 
   blockly.Blocks.craft_tptoplayer = {
@@ -414,10 +414,13 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldTextInput(''), 'TARGET');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.at()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -426,11 +429,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.JavaScript.craft_executeasother = function () {
     var target = encodeURIComponent(this.getTitleValue('TARGET'));
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var command = this.getTitleValue('COMMAND');
-    return `executeasother('block_id_${this.id}','${target}','${createBlockPos(x, y, z, positionType)}','${command}');`;
+    return `executeasother('block_id_${this.id}','${target}',createBlockPos(${x}, ${y}, ${z}, "${positionType}"),'${command}');`;
   };
 
   blockly.Blocks.craft_timesetbyname = {
@@ -454,17 +457,19 @@ export const install = (blockly, blockInstallOptions) => {
     helpUrl: '',
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
+      this.setInputsInline(true);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.timeSet()))
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TIME');
+          .appendTitle(new blockly.FieldLabel(i18n.timeSet()));
+      this.appendValueInput('TIME')
+          .setCheck('Number');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
   };
 
   blockly.JavaScript.craft_timesetbynumber = function () {
-    var time = this.getTitleValue('TIME');
-    return `timesetbynumber('block_id_${this.id}','${time}');`;
+    var time = Blockly.JavaScript.valueToCode(this, 'TIME', Blockly.JavaScript.ORDER_NONE) || '0';
+    return `timesetbynumber('block_id_${this.id}',${time});`;
   };
 
   blockly.Blocks.craft_weather = {
@@ -516,10 +521,13 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldTextInput(''), 'VICTIM');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -528,10 +536,10 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.JavaScript.craft_tptopos = function () {
     var victim = encodeURIComponent(this.getTitleValue('VICTIM'));
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
-    return `tptopos('block_id_${this.id}','${victim}','${createBlockPos(x, y, z, positionType)}');`;
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
+    return `tptopos('block_id_${this.id}','${victim}',createBlockPos(${x}, ${y}, ${z}, "${positionType}"));`;
   };
 
   blockly.Blocks.craft_fill = {
@@ -585,12 +593,14 @@ export const install = (blockly, blockInstallOptions) => {
     init: function () {
       this.setHSV(nonAgentBlockColor.h, nonAgentBlockColor.s, nonAgentBlockColor.v);
       this.setInputsInline(true);
-      this.appendValueInput('ITEM')
-          .appendTitle(new blockly.FieldLabel(i18n.blockActionGive()))
-          .setCheck(ITEM_TYPE);
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.items()))
-          .appendTitle(new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator), 'AMOUNT');
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionGive()));
+      this.appendValueInput('AMOUNT')
+          .setCheck('Number');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.itemsOfBlockType()));
+      this.appendValueInput('ITEM')
+          .setCheck(ITEM_TYPE);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
           .appendTitle(new blockly.FieldTextInput(''), 'PLAYER');
@@ -602,8 +612,8 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.JavaScript.craft_give = function () {
     var player = encodeURIComponent(this.getTitleValue('PLAYER'));
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
-    var amount = this.getTitleValue('AMOUNT');
-    return `give('block_id_${this.id}','${player}', ${item},'${amount}');`;
+    var amount = Blockly.JavaScript.valueToCode(this, 'AMOUNT', Blockly.JavaScript.ORDER_NONE) || '0';
+    return `give('block_id_${this.id}','${player}',${item},${amount});`;
   };
 
   blockly.Blocks.craft_kill = {
@@ -635,11 +645,15 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldDropdown(oldBlockHandlings), 'OLDBLOCKHANDLING')
           .appendTitle(new blockly.FieldLabel(i18n.oldBlockHandling()));
       this.appendDummyInput()
-          .appendTitle(new blockly.FieldLabel(i18n.at()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockActionWith()));
       this.appendValueInput('ITEM')
           .setCheck(ITEM_TYPE);
       this.setPreviousStatement(true);
@@ -650,11 +664,11 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.JavaScript.craft_setblock = function () {
     var positionType = this.getTitleValue('POSITIONTYPE');
     var oldBlockHandling = this.getTitleValue('OLDBLOCKHANDLING');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
-    return `setblock('block_id_${this.id}','${createBlockPos(x, y, z, positionType)}', ${item}, '${oldBlockHandling}');`;
+    return `setblock('block_id_${this.id}',createBlockPos(${x}, ${y}, ${z}, "${positionType}"), ${item}, '${oldBlockHandling}');`;
   };
 
   blockly.Blocks.craft_summon = {
@@ -669,10 +683,13 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldTextInput(''), 'ENTITYTYPE');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.at()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     }
@@ -681,10 +698,10 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.JavaScript.craft_summon = function () {
     var entityType = this.getTitleValue('ENTITYTYPE');
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
-    return `summon('block_id_${this.id}','${entityType}','${createBlockPos(x, y, z, positionType)}');`;
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
+    return `summon('block_id_${this.id}','${entityType}',createBlockPos(${x}, ${y}, ${z}, "${positionType}"));`;
   };
 
   blockly.Blocks.craft_testforblock = {
@@ -696,10 +713,15 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTestForBlock()));
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.at()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
+      this.appendDummyInput()
+          .appendTitle(new blockly.FieldLabel(i18n.blockIs()));
       this.appendValueInput('ITEM')
           .setCheck(ITEM_TYPE);
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
@@ -708,11 +730,11 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_testforblock = function () {
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
-    return [`testforblock('block_id_${this.id}','${createBlockPos(x, y, z, positionType)}',${item})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`testforblock('block_id_${this.id}',createBlockPos(${x}, ${y}, ${z}, "${positionType}"),${item})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_testforblocks = {
@@ -724,22 +746,31 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldLabel(i18n.blockActionTestForBlocks()));
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.from()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE');
+      this.appendValueInput('FROM_X')
+          .setCheck('Number');
+      this.appendValueInput('FROM_Y')
+          .setCheck('Number');
+      this.appendValueInput('FROM_Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE');
+      this.appendValueInput('TO_X')
+          .setCheck('Number');
+      this.appendValueInput('TO_Y')
+          .setCheck('Number');
+      this.appendValueInput('TO_Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.destination()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldDropdown(testModes), 'TESTMODE');
       this.setOutput(true, Blockly.BlockValueType.BOOLEAN);
@@ -748,19 +779,19 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_testforblocks= function () {
     var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
-    var fromX = this.getTitleValue('FROM_X');
-    var fromY = this.getTitleValue('FROM_Y');
-    var fromZ = this.getTitleValue('FROM_Z');
+    var fromX = Blockly.JavaScript.valueToCode(this, 'FROM_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromY = Blockly.JavaScript.valueToCode(this, 'FROM_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromZ = Blockly.JavaScript.valueToCode(this, 'FROM_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
-    var toX = this.getTitleValue('TO_X');
-    var toY = this.getTitleValue('TO_Y');
-    var toZ = this.getTitleValue('TO_Z');
+    var toX = Blockly.JavaScript.valueToCode(this, 'TO_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toY = Blockly.JavaScript.valueToCode(this, 'TO_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toZ = Blockly.JavaScript.valueToCode(this, 'TO_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var testMode = this.getTitleValue('TESTMODE');
-    return [`testforblocks('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${createBlockPos(x, y, z, positionType)}','${testMode}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`testforblocks('block_id_${this.id}',createBlockPos(${fromX}, ${fromY}, ${fromZ}, "${fromPositionType}"),createBlockPos(${toX}, ${toY}, ${toZ}, "${toPositionType}"),createBlockPos(${x}, ${y}, ${z}, "${positionType}"),'${testMode}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_clone = {
@@ -772,22 +803,31 @@ export const install = (blockly, blockInstallOptions) => {
           .appendTitle(new blockly.FieldLabel(i18n.blockActionClone()));
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.from()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE');
+      this.appendValueInput('FROM_X')
+          .setCheck('Number');
+      this.appendValueInput('FROM_Y')
+          .setCheck('Number');
+      this.appendValueInput('FROM_Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE');
+      this.appendValueInput('TO_X')
+          .setCheck('Number');
+      this.appendValueInput('TO_Y')
+          .setCheck('Number');
+      this.appendValueInput('TO_Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.destination()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.maskMode()))
           .appendTitle(new blockly.FieldDropdown(maskModes), 'MASKMODE')
@@ -800,20 +840,20 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_clone= function () {
     var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
-    var fromX = this.getTitleValue('FROM_X');
-    var fromY = this.getTitleValue('FROM_Y');
-    var fromZ = this.getTitleValue('FROM_Z');
+    var fromX = Blockly.JavaScript.valueToCode(this, 'FROM_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromY = Blockly.JavaScript.valueToCode(this, 'FROM_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromZ = Blockly.JavaScript.valueToCode(this, 'FROM_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
-    var toX = this.getTitleValue('TO_X');
-    var toY = this.getTitleValue('TO_Y');
-    var toZ = this.getTitleValue('TO_Z');
+    var toX = Blockly.JavaScript.valueToCode(this, 'TO_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toY = Blockly.JavaScript.valueToCode(this, 'TO_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toZ = Blockly.JavaScript.valueToCode(this, 'TO_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var maskMode = this.getTitleValue('MASKMODE');
     var cloneMode = this.getTitleValue('CLONEMODE');
-    return `clone('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${createBlockPos(x, y, z, positionType)}','${maskMode}','${cloneMode}');`;
+    return `clone('block_id_${this.id}',createBlockPos(${fromX}, ${fromY}, ${fromZ}, "${fromPositionType}"),createBlockPos(${toX}, ${toY}, ${toZ}, "${toPositionType}"),createBlockPos(${x}, ${y}, ${z}, "${positionType}"),'${maskMode}','${cloneMode}');`;
   };
 
   blockly.Blocks.craft_clonefiltered = {
@@ -827,22 +867,31 @@ export const install = (blockly, blockInstallOptions) => {
           .setCheck(ITEM_TYPE);
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.from()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'FROM_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'FROMPOSITIONTYPE');
+      this.appendValueInput('FROM_X')
+          .setCheck('Number');
+      this.appendValueInput('FROM_Y')
+          .setCheck('Number');
+      this.appendValueInput('FROM_Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.to()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'TO_Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'TOPOSITIONTYPE');
+      this.appendValueInput('TO_X')
+          .setCheck('Number');
+      this.appendValueInput('TO_Y')
+          .setCheck('Number');
+      this.appendValueInput('TO_Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.destination()))
-          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'X')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Y')
-          .appendTitle(new blockly.FieldTextInput('0', blockly.FieldTextInput.numberValidator), 'Z');
+          .appendTitle(new blockly.FieldDropdown(positionTypes), 'POSITIONTYPE');
+      this.appendValueInput('X')
+          .setCheck('Number');
+      this.appendValueInput('Y')
+          .setCheck('Number');
+      this.appendValueInput('Z')
+          .setCheck('Number');
       this.appendDummyInput()
           .appendTitle(new blockly.FieldLabel(i18n.cloneMode()))
           .appendTitle(new blockly.FieldDropdown(cloneModes), 'CLONEMODE');
@@ -853,17 +902,17 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_clonefiltered= function () {
     var fromPositionType = this.getTitleValue('FROMPOSITIONTYPE');
-    var fromX = this.getTitleValue('FROM_X');
-    var fromY = this.getTitleValue('FROM_Y');
-    var fromZ = this.getTitleValue('FROM_Z');
+    var fromX = Blockly.JavaScript.valueToCode(this, 'FROM_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromY = Blockly.JavaScript.valueToCode(this, 'FROM_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var fromZ = Blockly.JavaScript.valueToCode(this, 'FROM_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var toPositionType = this.getTitleValue('TOPOSITIONTYPE');
-    var toX = this.getTitleValue('TO_X');
-    var toY = this.getTitleValue('TO_Y');
-    var toZ = this.getTitleValue('TO_Z');
+    var toX = Blockly.JavaScript.valueToCode(this, 'TO_X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toY = Blockly.JavaScript.valueToCode(this, 'TO_Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var toZ = Blockly.JavaScript.valueToCode(this, 'TO_Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var positionType = this.getTitleValue('POSITIONTYPE');
-    var x = this.getTitleValue('X');
-    var y = this.getTitleValue('Y');
-    var z = this.getTitleValue('Z');
+    var x = Blockly.JavaScript.valueToCode(this, 'X', Blockly.JavaScript.ORDER_NONE) || '0';
+    var y = Blockly.JavaScript.valueToCode(this, 'Y', Blockly.JavaScript.ORDER_NONE) || '0';
+    var z = Blockly.JavaScript.valueToCode(this, 'Z', Blockly.JavaScript.ORDER_NONE) || '0';
     var cloneMode = this.getTitleValue('CLONEMODE');
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
     return `clonefiltered('block_id_${this.id}','${createBlockPos(fromX, fromY, fromZ, fromPositionType)}','${createBlockPos(toX, toY, toZ, toPositionType)}','${createBlockPos(x, y, z, positionType)}','${cloneMode}',${item});`;

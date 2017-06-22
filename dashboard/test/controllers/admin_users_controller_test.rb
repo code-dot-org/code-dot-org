@@ -231,6 +231,23 @@ class AdminUsersControllerTest < ActionController::TestCase
     )
   end
 
+  test 'grant_permission noops and redirects for granting admins to teachers with sections' do
+    sign_in @admin
+    follower = create :follower, student_user: (create :teacher)
+    assert_does_not_create(Follower) do
+      post(
+        :grant_permission,
+        params: {email: follower.student_user.email, permission: 'admin'}
+      )
+    end
+    assert_response :redirect
+    assert @response.redirect_url.include?('/admin/permissions')
+    assert_equal(
+      "FAILED: user #{follower.student_user.email} NOT granted as user has sections_as_students",
+      flash[:alert]
+    )
+  end
+
   test 'revoke_all_permissions revokes admin status' do
     sign_in @admin
     post :revoke_all_permissions, params: {email: @admin.email}

@@ -135,6 +135,8 @@ class User < ActiveRecord::Base
     windowslive
   ).freeze
 
+  SYSTEM_DELETED_USERNAME = 'system_deleted'
+
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
     TYPE_STUDENT = 'student'.freeze,
@@ -194,11 +196,12 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  validate :admins_must_be_teachers
+  validate :admins_must_be_teachers_without_followeds
 
-  def admins_must_be_teachers
+  def admins_must_be_teachers_without_followeds
     if admin
       errors.add(:admin, 'must be a teacher') unless teacher?
+      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
   end
 
@@ -333,13 +336,13 @@ class User < ActiveRecord::Base
 
   before_create :generate_secret_words
 
-  before_create :clear_ui_tips
+  before_create :suppress_ui_tips_for_new_users
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
 
-  validates :name, presence: true
+  validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
@@ -457,7 +460,7 @@ class User < ActiveRecord::Base
     User.find(user_id)
   end
 
-  validate :presence_of_email, if: :teacher?
+  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
@@ -914,7 +917,7 @@ class User < ActiveRecord::Base
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
-  def clear_ui_tips
+  def suppress_ui_tips_for_new_users
     # New teachers don't need to see the UI tips for their home and course pages,
     # so set them as already dismissed.
     self.ui_tip_dismissed_homepage_header = true
@@ -1307,5 +1310,27 @@ class User < ActiveRecord::Base
 
   def school_info_suggestion?
     !(school.blank? && full_address.blank?)
+  end
+
+  # Removes PII and other information from the user and marks the user as having been purged.
+  # WARNING: This (permanently) destroys data and cannot be undone.
+  # WARNING: This does not purge the user, only marks them as such.
+  def clear_user_and_mark_purged
+    self.name = nil
+    # The latter part yields a random string of length five from the characters 0 to 9 and a to z.
+    self.username = "#{SYSTEM_DELETED_USERNAME}_#{rand(36**5).to_s(36)}"
+    self.current_sign_in_ip = nil
+    self.last_sign_in_ip = nil
+    self.email = ''
+    self.hashed_email = ''
+    self.encrypted_password = nil
+    self.uid = nil
+    self.reset_password_token = nil
+    self.full_address = nil
+    self.properties = {}
+
+    self.purged_at = Time.zone.now
+
+    save!
   end
 end

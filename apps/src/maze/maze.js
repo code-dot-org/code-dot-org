@@ -34,7 +34,7 @@ var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
 import {generateCodeAliases} from '../dropletUtils';
-import getSubtypeForSkin from './mazeUtils';
+var getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
 var dropletConfig = require('./dropletConfig');
 
 var MazeMap = require('./mazeMap');

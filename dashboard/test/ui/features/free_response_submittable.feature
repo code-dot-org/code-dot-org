@@ -1,5 +1,4 @@
 @no_mobile
-@no_circle
 @as_taught_student
 Feature: Submittable free response
 
