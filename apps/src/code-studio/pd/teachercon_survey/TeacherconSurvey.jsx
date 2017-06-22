@@ -30,6 +30,19 @@ export default class TeacherconSurvey extends FormController {
   /**
    * @override
    */
+  getRequiredFields() {
+    const extras = [];
+
+    if (this.props.facilitatorNames.length) {
+      extras.push('whoFacilitated');
+    }
+
+    return super.getRequiredFields().concat(extras);
+  }
+
+  /**
+   * @override
+   */
   serializeFormData() {
     return {
       ...super.serializeFormData(),
