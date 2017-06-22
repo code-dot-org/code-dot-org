@@ -47,20 +47,6 @@ describe('ProgressButton', () => {
     assert.equal(wrapper.props().onClick, onClick);
   });
 
-  it('throws if we try to provide an href and an onClick', () => {
-    const onClick = () => console.log('clicked');
-    assert.throws(() => {
-      shallow(
-        <ProgressButton
-          onClick={onClick}
-          href="/foo/bar"
-          text="Click me"
-          target="_blank"
-        />
-      );
-    });
-  });
-
   it('renders bigger if we use a large size', () => {
     const regular = shallow(
       <ProgressButton
