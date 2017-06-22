@@ -4,63 +4,23 @@ import CourseCard from './CourseCard';
 const exampleCard = {
   name: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-  link: "link to the course",
-  assignedSections: [],
-  image: "small_teal_icons"
+  link: "https://curriculum.code.org/csp/unit2/",
 };
-
-const enrolledOne = {
-   ...exampleCard,
-   assignedSections: ["Section 1"]
- };
-
- const enrolledMany = {
-    ...exampleCard,
-    assignedSections: ["Section 1", "Section 2", "Section 3"]
-  };
 
 export default storybook => {
   return storybook
     .storiesOf('CourseCard', module)
     .addStoryTable([
       {
-        name: 'Course Card - NOT enrolled',
-        description: `This is an example course card where the teacher does not have sections enrolled in the course.`,
+        name: 'Course Card',
+        description: `This is an example course card that can show information about a course or script.`,
         story: () => (
           <CourseCard
             name={exampleCard.name}
             description={exampleCard.description}
-            image={exampleCard.image}
             link={exampleCard.link}
-            assignedSections={exampleCard.assignedSections}
           />
         )
-      },
-      {
-        name: 'Course Card - enrolled',
-        description: `This is an example course card where the teacher does have a section enrolled in the course.`,
-        story: () => (
-          <CourseCard
-            name={enrolledOne.name}
-            description={enrolledOne.description}
-            image={enrolledOne.image}
-            link={enrolledOne.link}
-            assignedSections={enrolledOne.assignedSections}
-          />
-        )
-      },
-      {
-        name: 'Course Card - enrolled mulitple',
-        description: `This is an example course card where the teacher has multiple sections enrolled in the course.`,
-        story: () => (
-          <CourseCard
-            name={enrolledMany.name}
-            description={enrolledMany.description}
-            image={enrolledMany.image}
-            link={enrolledMany.link}
-            assignedSections={enrolledMany.assignedSections}
-          />
-        )
-      },
+      }
     ]);
 };

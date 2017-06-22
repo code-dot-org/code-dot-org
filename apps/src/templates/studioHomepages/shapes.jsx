@@ -11,7 +11,6 @@ const shapes = {
       name: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
-      assignedSections: PropTypes.array.isRequired,
     })
   )
 };

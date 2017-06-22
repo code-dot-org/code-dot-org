@@ -1,4 +1,4 @@
-%script{:src=>"/js/fastclick.min.js"}
+%script{:defer => "defer", :src=>"/js/fastclick.min.js"}
 :javascript
   $(document).ready(function() {
     FastClick.attach(document.body);

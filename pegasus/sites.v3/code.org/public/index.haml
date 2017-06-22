@@ -13,8 +13,8 @@ social:
   "twitter:description": "<%= I18n.t(:og_description)%>"
 ---
 
-%link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
-%link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
+=inline_css 'homepage.css'
+=inline_css 'user-hero.css'
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]
@@ -27,8 +27,7 @@ social:
 #homepage.supreme-container
   = view :homepage_hero, languageFilter: languageFilter
 
-  #petitionexpand{style: "display: none"}
-    %script{:src=>"/js/jquery.placeholder.js"}
+  #petitionexpand{style: "display: block"}
     - if DB[:cdo_homepage].where(type_s: "petition")
       = view :petition_expand
 
@@ -42,31 +41,3 @@ social:
   = view :donor_slider
 
 = view :homepage_video
-
-
-:javascript
-
-  $(document).ready(function() {
-    // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
-    // set opacity to 0, ready for code to start showing them by fading them in.
-    $("#petitionexpand").css({display: "block", opacity: 0});
-  });
-
-  $(document).ready(function() {
-    $.ajax({
-      type: "GET",
-      url: '/dashboardapi/user_hero',
-      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-      complete: function(data, status) {
-        if (data.responseText == "" || status !== "success") {
-          $("#petitionexpand").animate({opacity:1}, { duration: 2000 });
-          $('#user_hero').css({display: "none"});
-          //$("#petitionaction").animate({opacity:1}, { duration: 2000 });
-        } else {
-          $("#petitionexpand").css({display: "none"});
-          // data is ur summary
-          $('#user_hero').html(data.responseText, status);
-        }
-      }
-    });
-  });

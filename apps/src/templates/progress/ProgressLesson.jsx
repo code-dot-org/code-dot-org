@@ -39,6 +39,7 @@ const styles = {
   heading: {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
+    cursor: 'pointer'
   },
   hiddenOrLocked: {
     background: color.white,
