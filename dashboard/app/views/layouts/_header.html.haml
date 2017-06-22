@@ -77,7 +77,7 @@
                 %i.fa.fa-pencil
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
-            - if !@hide_sign_in_option and signin_button_enabled
+            - if !@hide_sign_in_option && signin_button_enabled
               %span#sign_in_or_user
             = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
