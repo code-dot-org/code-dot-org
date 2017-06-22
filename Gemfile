@@ -30,7 +30,7 @@ gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cd
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
-gem 'google_drive', '~> 1.0.0'
+gem 'google_drive'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
