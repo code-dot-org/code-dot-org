@@ -46,7 +46,7 @@ const RecentCourses = React.createClass({
             showLink={showAllCoursesLink}
             isRtl={isRtl}
           >
-            <SetUpMessage type="courses"/>
+            <SetUpMessage type="courses" isRtl={isRtl}/>
           </ContentContainer>
         )}
       </div>
