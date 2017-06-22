@@ -39,15 +39,17 @@ const TeacherHomepage = React.createClass({
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        <Notification
-          type="bullhorn"
-          notice={announcements[0].heading}
-          details={announcements[0].description}
-          dismissible={false}
-          buttonText={announcements[0].buttonText}
-          buttonLink={announcements[0].link}
-          analyticId={announcements[0].id}
-        />
+        {announcements.length > 0 && (
+          <Notification
+            type="bullhorn"
+            notice={announcements[0].heading}
+            details={announcements[0].description}
+            dismissible={false}
+            buttonText={announcements[0].buttonText}
+            buttonLink={announcements[0].link}
+            analyticId={announcements[0].id}
+          />
+        )}
         <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
