@@ -20,6 +20,8 @@ class Course < ApplicationRecord
 
   after_save :write_serialization
 
+  scope :with_associated_models, -> {includes([:plc_course, :course_scripts])}
+
   def skip_name_format_validation
     !!plc_course
   end
@@ -132,7 +134,6 @@ class Course < ApplicationRecord
 
   # generates our course_cache from what is in the Rails cache
   def self.course_cache_from_cache
-    Course.connection
     # make sure possible loaded objects are completely loaded
     [CourseScript, Plc::Course].each(&:new)
     Rails.cache.read COURSE_CACHE_KEY
@@ -140,8 +141,7 @@ class Course < ApplicationRecord
 
   def self.course_cache_from_db
     {}.tap do |cache|
-      Course.all.pluck(:id).each do |course_id|
-        course = get_without_cache(course_id)
+      Course.with_associated_models.find_each do |course|
         cache[course.name] = course
         cache[course.id.to_s] = course
       end
@@ -163,7 +163,7 @@ class Course < ApplicationRecord
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    Course.includes([:plc_course, :course_scripts]).find_by(find_by => id_or_name)
+    Course.with_associated_models.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)
