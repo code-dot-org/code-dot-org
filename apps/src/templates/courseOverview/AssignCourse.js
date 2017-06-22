@@ -42,6 +42,7 @@ const styles = {
 class AssignCourse extends Component {
   static propTypes = {
     courseId: PropTypes.number.isRequired,
+    sectionNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
 
   state = {
@@ -77,7 +78,7 @@ class AssignCourse extends Component {
   render() {
     // TODO: i18n
     // TODO: behind flag?
-    const sectionNames = ['Section 1', 'Section 2', 'New Section...'];
+    const { courseId, sectionNames } = this.props;
     return (
       <div>
         <ProgressButton
@@ -91,7 +92,7 @@ class AssignCourse extends Component {
         />
         {this.state.dropdownOpen && (
           <div style={styles.dropdown}>
-            {sectionNames.map((name, index) => (
+            {sectionNames.map((text, index) => (
               <a
                 key={index}
                 style={{
@@ -99,9 +100,15 @@ class AssignCourse extends Component {
                   ...(index > 0 && styles.nonFirstSection)
                 }}
               >
-                {name}
+                {text}
               </a>
             ))}
+            <a
+              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?newSection=${courseId}#/sections`}
+              style={{...styles.section, ...styles.nonFirstSection}}
+            >
+              New Section...
+            </a>
           </div>
         )}
       </div>
