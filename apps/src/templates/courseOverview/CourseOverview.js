@@ -27,7 +27,10 @@ export default class CourseOverview extends Component {
         <div style={styles.description}>
           {viewAs === ViewType.Student ? descriptionStudent : descriptionTeacher}
         </div>
-        <AssignCourse courseId={id}/>
+        <AssignCourse
+          sectionNames={['Section 1', 'Section 2']}
+          courseId={id}
+        />
         {scripts.map((script, index) => (
           <CourseScript
             key={index}

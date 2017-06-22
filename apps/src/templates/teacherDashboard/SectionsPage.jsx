@@ -50,12 +50,14 @@ class SectionsPage extends Component {
             {i18n.studentAccountsAndProgress()}
           </b>
         </div>
-        <ProgressButton
-          text={i18n.newSection()}
-          style={styles.button}
-          onClick={newSection}
-          color={ProgressButton.ButtonColor.gray}
-        />
+        {sectionsLoaded &&
+          <ProgressButton
+            text={i18n.newSection()}
+            style={styles.button}
+            onClick={newSection}
+            color={ProgressButton.ButtonColor.gray}
+          />
+        }
         {sectionsLoaded && numSections === 0 &&
           <div className="jumbotron">
             <p>{i18n.createSectionsInfo()}</p>
