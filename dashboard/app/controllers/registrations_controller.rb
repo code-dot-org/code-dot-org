@@ -23,10 +23,10 @@ class RegistrationsController < Devise::RegistrationsController
         @user.update_without_password(update_params(params))
       end
 
-    account_update_response(successfully_updated, @user)
+    respond_to_account_update(successfully_updated, @user)
   end
 
-  def account_update_response(successfully_updated, user)
+  def respond_to_account_update(successfully_updated, user)
     respond_to do |format|
       if successfully_updated
         set_locale_cookie(user.locale)
@@ -75,7 +75,7 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
     successfully_updated = can_update && @user.update(update_params(params))
-    account_update_response(successfully_updated, @user)
+    respond_to_account_update(successfully_updated, @user)
   end
 
   private
