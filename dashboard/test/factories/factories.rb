@@ -478,13 +478,15 @@ FactoryGirl.define do
 
   factory :peer_review do
     submitter {create :user}
-    reviewer nil
     from_instructor false
     script {create :script}
     level {create :level}
     level_source {create :level_source}
     data "MyText"
-    status nil
+
+    before :create do |peer_review|
+      create :user_level, user: peer_review.submitter, level: peer_review.level
+    end
   end
 
   factory :level_group, class: LevelGroup do
