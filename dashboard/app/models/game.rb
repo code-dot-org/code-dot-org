@@ -51,6 +51,10 @@ class Game < ActiveRecord::Base
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
 
+  def self.flappy
+    @@game_flappy ||= find_by_name("Flappy")
+  end
+
   def self.unplugged
     @@game_unplugged ||= find_by_name("Unplugged")
   end
