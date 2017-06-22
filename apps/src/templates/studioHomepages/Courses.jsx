@@ -3,10 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
-import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
-import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import i18n from "@cdo/locale";
@@ -39,7 +37,6 @@ const styles = {
  */
 const Courses = React.createClass({
   propTypes: {
-    courses: shapes.courses,
     isEnglish: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
     isSignedOut: React.PropTypes.bool.isRequired,
@@ -66,7 +63,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
+    const { isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -94,15 +91,6 @@ const Courses = React.createClass({
           <ProtectedStatefulDiv
             style={styles.userHero}
             ref="userHero"
-          />
-        )}
-
-        {courses && courses.length > 0 && (
-          <RecentCourses
-            courses={courses}
-            showAllCoursesLink={false}
-            heading={i18n.myCourses()}
-            isTeacher={isTeacher}
           />
         )}
 
