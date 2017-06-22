@@ -46,7 +46,9 @@ class TablesTest < Minitest::Test
     assert_equal true, TableCoerce.number?("1")
     assert_equal true, TableCoerce.number?("1.23")
     assert_equal true, TableCoerce.number?("1000")
-    # assert_equal true, TableCoerce.number?("1,000")
+    assert_equal true, TableCoerce.number?("1,000")
+    assert_equal true, TableCoerce.number?("1,234,567")
+    assert_equal true, TableCoerce.number?("1,234,567.89")
 
     assert_equal false, TableCoerce.number?("asdf")
     assert_equal false, TableCoerce.number?("true")
@@ -54,6 +56,10 @@ class TablesTest < Minitest::Test
     assert_equal false, TableCoerce.number?(true)
     assert_equal false, TableCoerce.number?(false)
     assert_equal false, TableCoerce.number?("123asdf")
+    assert_equal false, TableCoerce.number?("1,23")
+    assert_equal false, TableCoerce.number?("123,456789")
+    assert_equal false, TableCoerce.number?("123,45")
+    assert_equal false, TableCoerce.number?("123,45.67")
   end
 
   def test_to_number
@@ -66,9 +72,11 @@ class TablesTest < Minitest::Test
     assert_equal 1, TableCoerce.to_number("1")
     assert_equal 1.23, TableCoerce.to_number("1.23")
     assert_equal 1000, TableCoerce.to_number("1000")
-    # assert_equal 1000, TableCoerce.to_number("1,000")
+    assert_equal 1000, TableCoerce.to_number("1,000")
+    assert_equal 1_234_567, TableCoerce.to_number("1,234,567")
+    assert_equal 1_234_567.89, TableCoerce.to_number("1,234,567.89")
 
-    ["asdf", "true", "false", true, false, "123asdf"].each do |val|
+    ["asdf", "true", "false", true, false, "123asdf", "123,45", "123,45.67"].each do |val|
       assert_raises 'Cannot coerce to number' do
         TableCoerce.to_number(val)
       end

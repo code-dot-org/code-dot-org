@@ -6,7 +6,7 @@
 module TableCoerce
   TRUE = /^true$/i
   FALSE = /^false$/i
-  NUMBER = /\A[-+]?[0-9]*\.?[0-9]+\Z/
+  NUMBER = /\A[-+]?(\d*|\d{1,3}(,\d{3})+)(\.\d+)?\Z/
 
   # Given a set of records, and a list of columns, attempt to convert each
   # column to a particular type. If we can convert the entire column to
@@ -93,7 +93,6 @@ module TableCoerce
   def self.number?(val)
     return true if val.is_a?(Numeric)
     return false unless val.is_a?(String)
-    # TODO: Doesn't work on things like 1,234.
     return !NUMBER.match(val).nil?
   end
 
@@ -101,7 +100,8 @@ module TableCoerce
   def self.to_number(val)
     return val if val.is_a?(Numeric)
     raise 'Cannot coerce to number' unless val.is_a?(String) && NUMBER.match(val)
-    new_val = val.to_f
+    val_without_commas = val.tr(',', '')
+    new_val = val_without_commas.to_f
     new_val = new_val.to_i if new_val.to_i == new_val
     new_val
   end
