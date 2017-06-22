@@ -1,11 +1,3 @@
-import Bee from './bee';
-import Collector from './collector';
-import WordSearch from './wordsearch';
-import Scrat from './scrat';
-import Farmer from './farmer';
-import Harvester from './harvester';
-import Planter from './planter';
-
 /**
  * Is skin either bee or bee_night
  */
@@ -41,22 +33,22 @@ exports.isWordSearchSkin = function (skinId) {
 
 exports.getSubtypeForSkin = function (skinId) {
   if (exports.isBeeSkin(skinId)) {
-    return Bee;
+    return require('./bee');
   }
   if (exports.isCollectorSkin(skinId)) {
-    return Collector;
+    return require('./collector');
   }
   if (exports.isWordSearchSkin(skinId)) {
-    return WordSearch;
+    return require('./wordsearch');
   }
   if (exports.isScratSkin(skinId)) {
-    return Scrat;
+    return require('./scrat');
   }
   if (exports.isHarvesterSkin(skinId)) {
-    return Harvester;
+    return require('./harvester');
   }
   if (exports.isPlanterSkin(skinId)) {
-    return Planter;
+    return require('./planter');
   }
-  return Farmer;
+  return require('./farmer');
 };
