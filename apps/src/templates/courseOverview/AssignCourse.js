@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
+import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 
@@ -72,9 +73,29 @@ class AssignCourse extends Component {
     }
   }
 
-  onClick = () => {
+  onClickDropdown = () => {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
+    });
+  }
+
+  onClickCourse = event => {
+    // TODO - confirm experience
+    const sectionId = event.target.getAttribute('data-section-id');
+
+    $.ajax({
+      url: `/sections/${sectionId}`,
+      method: 'PATCH',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify({
+        // TODO : script too?
+        course_id: this.props.courseId
+      }),
+    }).done(result => {
+      this.setState({dropdownOpen: false});
+    }).fail((jqXhr, status) => {
+      // TODO handle failure
+      console.error(status);
     });
   }
 
@@ -88,7 +109,7 @@ class AssignCourse extends Component {
           ref={element => this.button = element}
           text="Assign Course"
           style={styles.button}
-          onClick={this.onClick}
+          onClick={this.onClickDropdown}
           icon={this.state.dropdownOpen ? "caret-up" : "caret-down"}
           iconStyle={styles.icon}
           color={ProgressButton.ButtonColor.orange}
@@ -109,6 +130,8 @@ class AssignCourse extends Component {
                   ...styles.section,
                   ...styles.nonFirstSection
                 }}
+                data-section-id={section.id}
+                onClick={this.onClickCourse}
               >
                 {section.name}
               </a>

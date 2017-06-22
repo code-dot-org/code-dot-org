@@ -1,8 +1,18 @@
 class SectionsController < ApplicationController
-  before_action :load_section
+  before_action :load_section_by_code, except: :update
 
   def show
     @secret_pictures = SecretPicture.all.shuffle
+  end
+
+  # Allows you to update a section's course_id
+  def update
+    # TODO: tests
+    section = Section.find(params[:id])
+    authorize! :manage, section
+
+    section.update!(course_id: params[:course_id], script_id: nil)
+    render json: section.summarize
   end
 
   def log_in
@@ -27,7 +37,7 @@ class SectionsController < ApplicationController
     end
   end
 
-  def load_section
+  def load_section_by_code
     @section = Section.find_by!(
       code: params[:id],
       login_type: [Section::LOGIN_TYPE_PICTURE, Section::LOGIN_TYPE_WORD]
