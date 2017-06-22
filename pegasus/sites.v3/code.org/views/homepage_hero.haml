@@ -42,7 +42,8 @@
     - display = entry[:active_s] == "hide" ? "none" : "block"
     -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
-      -#Use Link rel=preload HTTP headers to preload as early as possible.
+      -#
+        Use Link rel=preload HTTP headers to preload as early as possible.
         Two headers with inverse media queries conditionally load the correctly-sized image.
       - response.add_header 'Link', "<#{entry[:image_t]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
       - response.add_header 'Link', "<#{entry[:image_t].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
