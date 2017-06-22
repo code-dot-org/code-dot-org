@@ -103,5 +103,18 @@ export default storybook => {
           />
         )
       },
+
+      {
+        name:'orange button with styled icon',
+        story: () => (
+          <ProgressButton
+            href="/foo/bar"
+            color={ProgressButton.ButtonColor.orange}
+            icon="caret-down"
+            iconStyle={{fontSize: 24, position: 'relative', top: 3}}
+            text="Assign Course"
+          />
+        )
+      },
     ]);
 };
