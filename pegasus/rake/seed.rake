@@ -166,7 +166,7 @@ class GSheetToCsv
     end
 
     begin
-      buf = @file.spreadsheet_csv
+      buf = @file.raw_file.export_as_string('text/csv')
     rescue GoogleDrive::Error => e
       puts "Error on file: #{@gsheet_path}, #{e}"
       throw e
