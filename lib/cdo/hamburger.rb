@@ -283,30 +283,30 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       [
-        {title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home")},
-        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses")},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects")},
+        {title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
+        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
         {title: I18n.t("#{loc_prefix}sections"), url: CDO.code_org_url("/teacher-dashboard#/sections"), id: "header-teacher-sections"},
-        {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning")}
+        {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
       ]
     elsif options[:user_type] == "student"
       [
-        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses")},
+        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
         {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
       ]
     elsif options[:language] == "en"
       [
-        {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/student")},
-        {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/educate")},
-        {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote")},
-        {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help")},
+        {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/student"), id: "header-en-learn"},
+        {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/educate"), id: "header-en-teach"},
+        {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
+        {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
         {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public")}
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-en-projects"}
       ]
     else
       [
-        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses")},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.code_org_url("/projects/public"), id: "header-signed-out-projects"}
+        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.code_org_url("/projects/public"), id: "header-non-en-projects"}
       ]
     end
   end
