@@ -220,7 +220,7 @@ export default class FormController extends React.Component {
     // the specific question on the page, but for purposes of determining which
     // page a given error is on we really only care about the "howInteresting"
     // key, not the "facilitator_name" data.
-    const flattenedErrors = errors.map(e => e.replace(/\[\w*\]/, ''));
+    const flattenedErrors = errors.map(e => e.replace(/\[[^\]]*\]/, ''));
     return pageFields.some(field => flattenedErrors.includes(field));
   }
 
@@ -250,6 +250,15 @@ export default class FormController extends React.Component {
   }
 
   /**
+   * Getter method for required field validation, so that inheriting classes can
+   * support conditionally-required fields
+   * @returns {String[]}
+   */
+  getRequiredFields() {
+    return this.props.requiredFields;
+  }
+
+  /**
    * checks the data collected so far against the required fields and the fields
    * for this page, to make sure that all required fields on this page have been
    * filled out. Flags any such fields with an error, and returns a boolean
@@ -259,8 +268,9 @@ export default class FormController extends React.Component {
    *         are missing
    */
   validateCurrentPageRequiredFields() {
+    const requiredFields = this.getRequiredFields();
     const pageFields = this.getCurrentPageComponent().associatedFields;
-    const pageRequiredFields = pageFields.filter(f => this.props.requiredFields.includes(f));
+    const pageRequiredFields = pageFields.filter(f => requiredFields.includes(f));
     const missingRequiredFields = pageRequiredFields.filter(f => !this.state.data[f]);
 
     if (missingRequiredFields.length) {
