@@ -18,6 +18,7 @@ import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
 import Led from './Led';
+import experiments from '../../../util/experiments';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -61,7 +62,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       buttonR: initializeButton(board, '19'),
 
-      ...initializeTouchPads(board)
+      ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
   });
 }
