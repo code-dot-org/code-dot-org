@@ -11,10 +11,11 @@ social:
   "twitter:url": "https://code.org/"
   "twitter:title": "<%= I18n.t(:og_title) %>"
   "twitter:description": "<%= I18n.t(:og_description)%>"
+critical_font: true
 ---
 
-%link{:href=>"/css/homepage.css", :rel=>"stylesheet"}
-%link{:href=>"/shared/css/user-hero.css", :rel=>"stylesheet"}
+=inline_css 'homepage.css'
+=inline_css 'user-hero.css'
 
 - cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
 - user_type = request.cookies[cookie_key]

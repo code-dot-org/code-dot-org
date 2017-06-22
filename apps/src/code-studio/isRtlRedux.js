@@ -12,7 +12,7 @@ export const setRtlFromDOM = () => setRtl(isRtlFromDOM());
 /**
  * This method looks at the DOM and decides whether or not we're in RTL mode.
  */
-function isRtlFromDOM() {
+export function isRtlFromDOM() {
   const head = document.getElementsByTagName('head')[0];
   if (head && head.parentElement) {
     const dir = head.parentElement.getAttribute('dir');
