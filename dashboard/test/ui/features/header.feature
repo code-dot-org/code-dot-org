@@ -46,6 +46,7 @@ Scenario: Signed out user in Spanish should see 2 header links
   Given I am on "http://code.org/lang/es"
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
+  Given I am on "http://studio.code.org/courses"
   And I wait to see "#headerlinks"
   And I see "#header-non-en-courses"
   And element "#header-non-en-courses" contains text "Courses"
