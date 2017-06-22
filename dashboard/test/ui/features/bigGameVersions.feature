@@ -1,6 +1,3 @@
-# Disabled on CircleCI 20 Oct 2016
-# Brad B. assigned to fix and re-enable
-@no_circle
 @dashboard_db_access
 @as_student
 Feature: Big Game Versions

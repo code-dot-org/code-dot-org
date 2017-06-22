@@ -96,3 +96,13 @@ export function onBoardEvent(opts) {
   }
   component.on(event, callback);
 }
+
+/**
+ * Create an LED component on the current maker board attached to the
+ * specified pin.
+ * @param {number} opts.pin
+ */
+export function createLed(opts) {
+  apiValidateType(opts, 'createLed', 'pin', opts.pin, 'pinid');
+  return board.createLed(opts.pin);
+}

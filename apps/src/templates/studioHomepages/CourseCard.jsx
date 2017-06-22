@@ -19,8 +19,6 @@ const styles = {
     height: 130
   },
   name: {
-    paddingLeft: 25,
-    paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 5,
     marginTop: 15,
@@ -29,7 +27,22 @@ const styles = {
     color: color.white,
     zIndex: 2,
     position: 'absolute',
-    display: 'inline'
+    display: 'inline',
+    paddingLeft: 25,
+    paddingRight: 10,
+  },
+  nameRtl: {
+    paddingTop: 10,
+    paddingBottom: 5,
+    marginTop: 15,
+    fontSize: 20,
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.white,
+    zIndex: 2,
+    position: 'absolute',
+    display: 'inline',
+    paddingRight: 25,
+    paddingLeft: 10,
   },
   description: {
     paddingLeft: 25,
@@ -78,6 +91,13 @@ const styles = {
     fontWeight: 'bold',
     marginLeft: 8,
   },
+  chevronRtl: {
+    display: 'inline',
+    color: color.teal,
+    fontSize: 12,
+    fontWeight: 'bold',
+    marginRight: 8,
+  },
   linkBox: {
     display: 'block',
     paddingBottom: 20,
@@ -94,15 +114,17 @@ const CourseCard = React.createClass({
     name: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { name, description, link } = this.props;
+    const { name, description, link, isRtl } = this.props;
+    const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
       <a href={link} style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
-        <div style={styles.name}>
+        <div style={isRtl? styles.nameRtl : styles.name}>
           {name}
         </div>
         <div style={styles.description}>
@@ -111,7 +133,10 @@ const CourseCard = React.createClass({
             <h3 style={styles.continueLink}>
               {i18n.viewCourse()}
             </h3>
-            <FontAwesome icon="chevron-right" style={styles.chevron}/>
+            <FontAwesome
+              icon={icon}
+              style={isRtl? styles.chevronRtl : styles.chevron}
+            />
           </div>
         </div>
       </a>

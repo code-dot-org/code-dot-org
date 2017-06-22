@@ -330,6 +330,14 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'cannot make a teacher with followeds an admin' do
+    follower = create :follower, student_user: (create :teacher)
+    assert_raises(ActiveRecord::RecordInvalid) do
+      follower.student_user.update!(admin: true)
+    end
+    refute follower.student_user.reload.admin?
+  end
+
   test "gallery" do
     user = create(:user)
     assert_equal [], user.gallery_activities
@@ -1883,5 +1891,26 @@ class UserTest < ActiveSupport::TestCase
       assert_equal 1, courses.length
       assert_equal 'csd', courses[0].name
     end
+  end
+
+  test 'clear_user removes all PII and other information' do
+    user = create :teacher
+
+    user.clear_user_and_mark_purged
+    user.reload
+
+    assert user.valid?
+    assert_nil user.name
+    refute_nil user.username =~ /system_deleted_\w{5}/
+    assert_nil user.current_sign_in_ip
+    assert_nil user.last_sign_in_ip
+    assert_equal '', user.email
+    assert_equal '', user.hashed_email
+    assert_nil user.encrypted_password
+    assert_nil user.uid
+    assert_nil user.reset_password_token
+    assert_nil user.full_address
+    assert_equal({}, user.properties)
+    refute_nil user.purged_at
   end
 end

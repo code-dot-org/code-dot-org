@@ -4,6 +4,7 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
@@ -162,6 +163,23 @@ describe('CircuitPlaygroundBoard', () => {
         });
       });
     });
+
+    it('stops any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'stop');
+        sinon.spy(led2, 'stop');
+
+        expect(led1.stop).not.to.have.been.called;
+        expect(led2.stop).not.to.have.been.called;
+
+        board.destroy();
+
+        expect(led1.stop).to.have.been.calledOnce;
+        expect(led2.stop).to.have.been.calledOnce;
+      });
+    });
   });
 
   describe(`celebrateSuccessfulConnection()`, () => {
@@ -305,6 +323,16 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         board.destroy();
         expect(board.boardConnected()).to.be.false;
+      });
+    });
+  });
+
+  describe(`createLed(pin)`, () => {
+    it('makes an LED controller', () => {
+      return board.connect().then(() => {
+        const pin = 13;
+        const newLed = board.createLed(pin);
+        expect(newLed).to.be.an.instanceOf(Led);
       });
     });
   });

@@ -1,62 +1,54 @@
-import Bee from './bee';
-import Collector from './collector';
-import WordSearch from './wordsearch';
-import Scrat from './scrat';
-import Farmer from './farmer';
-import Harvester from './harvester';
-import Planter from './planter';
-
 /**
  * Is skin either bee or bee_night
  */
-const isBeeSkin = function (skinId) {
+exports.isBeeSkin = function (skinId) {
   return (/bee(_night)?/).test(skinId);
 };
 
 /**
  * Is skin either collector or collector_night
  */
-const isCollectorSkin = function (skinId) {
+exports.isCollectorSkin = function (skinId) {
   return (/collector(_night)?/).test(skinId);
 };
 
 /**
  * Is skin scrat
  */
-const isScratSkin = function (skinId) {
+exports.isScratSkin = function (skinId) {
   return (/scrat/).test(skinId);
 };
 
-const isPlanterSkin = function (skinId) {
+exports.isPlanterSkin = function (skinId) {
   return (/planter/).test(skinId);
 };
 
-const isHarvesterSkin = function (skinId) {
+exports.isHarvesterSkin = function (skinId) {
   return (/harvester/).test(skinId);
 };
 
-const isWordSearchSkin = function (skinId) {
+exports.isWordSearchSkin = function (skinId) {
   return skinId === 'letters';
 };
 
-export default function getSubtypeForSkin(skinId) {
-  if (isBeeSkin(skinId)) {
-    return Bee;
+exports.getSubtypeForSkin = function (skinId) {
+  if (exports.isBeeSkin(skinId)) {
+    return require('./bee');
   }
-  if (isCollectorSkin(skinId)) {
-    return Collector;
+  if (exports.isCollectorSkin(skinId)) {
+    return require('./collector');
   }
-  if (isWordSearchSkin(skinId)) {
-    return WordSearch;
+  if (exports.isWordSearchSkin(skinId)) {
+    return require('./wordsearch');
   }
-  if (isScratSkin(skinId)) {
-    return Scrat;
+  if (exports.isScratSkin(skinId)) {
+    return require('./scrat');
   }
-  if (isHarvesterSkin(skinId)) {
-    return Harvester;
+  if (exports.isHarvesterSkin(skinId)) {
+    return require('./harvester');
   }
-  if (isPlanterSkin(skinId)) {
-    return Planter;
+  if (exports.isPlanterSkin(skinId)) {
+    return require('./planter');
   }
-  return Farmer;
-}
+  return require('./farmer');
+};

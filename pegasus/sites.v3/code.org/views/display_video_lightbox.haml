@@ -33,10 +33,12 @@
     ga('send', 'event', 'showvideo', eventAction, '#{id}');
   };
 
-  $("#showVideo_#{id}").on('hidden.bs.modal', function ()
-  {
-    // Pause the video.
-    window["playVideo_#{id}"](false);
+  $(document).ready(function() {
+    $("#showVideo_#{id}").on('hidden.bs.modal', function ()
+    {
+      // Pause the video.
+      window["playVideo_#{id}"](false);
+    });
   });
 
   window["playVideo_#{id}"] = function(play)

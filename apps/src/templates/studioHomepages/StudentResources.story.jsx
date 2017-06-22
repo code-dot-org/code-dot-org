@@ -9,7 +9,7 @@ export default storybook => {
         name: 'Resources for students',
         description: `StudentResources that will be used on the student homepage.`,
         story: () => (
-          <StudentResources/>
+          <StudentResources isRtl={false}/>
         )
       },
     ]);
