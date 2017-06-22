@@ -317,7 +317,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
       )
     )
 
-    assert_equal with_surveys.size, Pd::Enrollment.filter_for_survey_completion(enrollments).size
+    assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments)
     assert_equal with_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, true)
     assert_equal without_surveys, Pd::Enrollment.filter_for_survey_completion(enrollments, false)
   end
