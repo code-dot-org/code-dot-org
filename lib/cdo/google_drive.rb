@@ -19,7 +19,7 @@ module Google
       end
 
       def mtime
-        @file.api_file.modifiedDate
+        @file.api_file.modified_time.to_time
       end
 
       def spreadsheet

@@ -32,16 +32,18 @@
     "disable_sharing": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There should be 2 blocks inside of your loop to solve this puzzle.\",\"hint_id\":\"courseA_artist_loops11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4001039f4ff2dfcdf56e71dc0c49dce6/courseA_artist_loops11.mp3\"}]",
-    "markdown_instructions": "<div style=\"color: #7665a0; font-size: 1.6em; line-height: 1.4em;\" >\r\nHelp me build steps to watch the ship sail away.<br/>\r\n</div>\r\n\r\n<img src=\"https://images.code.org/0dfa647dbc835fae09989a0fbfd798c7-image-1470871168220.gif\" width=\"300\"/>\r\n",
+    "markdown_instructions": "##Help me build steps to watch the ship sail away.\r\n\r\n![](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/4adb0ff9bf619119908abfe1b3fade7d-image-1477125526950.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "tts_markdown_instructions_override": "Help me build steps to watch the ship sail away."
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 17:17:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

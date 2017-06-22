@@ -31,7 +31,6 @@ const RecentCourses = React.createClass({
                 name={course.name}
                 description={course.description}
                 link={course.link}
-                assignedSections={course.assignedSections}
               />
             )}
           </ContentContainer>

@@ -33,6 +33,14 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
 
   STRONGLY_DISAGREE_TO_STRONGLY_AGREE = (DISAGREES + AGREES).freeze
 
+  STATEMENT_ALIGNMENT = [
+    "Strongly aligned with A",
+    "Leaning toward A",
+    "Can't decide",
+    "Leaning toward B",
+    "Strongly aligned with B",
+  ].freeze
+
   def self.required_fields
     [
       :personal_learning_needs_met,
@@ -74,6 +82,10 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
       :liked_most,
       :would_change,
       :give_permission_to_quote,
+
+      :instruction_focus,
+      :teacher_responsibility,
+      :teacher_time,
     ].freeze
   end
 
@@ -165,6 +177,10 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
         "Yes, I give Code.org permission to quote me,  but I want to be anonymous. (Your name will not be used.)",
         "No, I do not give Code.org my permission.",
       ],
+
+      instruction_focus: STATEMENT_ALIGNMENT,
+      teacher_responsibility: STATEMENT_ALIGNMENT,
+      teacher_time: STATEMENT_ALIGNMENT,
 
     }.freeze
   end
