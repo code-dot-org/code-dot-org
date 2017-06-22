@@ -74,7 +74,7 @@ class RegistrationsController < Devise::RegistrationsController
         false
       end
 
-    successfully_updated = can_update && @user.update!(update_params(params))
+    successfully_updated = can_update && @user.update(update_params(params))
     account_update_response(successfully_updated, @user)
   end
 
