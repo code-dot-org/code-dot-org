@@ -79,16 +79,15 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 **Job Summary:**
 
-We are looking for a Marketing Coordinator to support communications, marketing, and public relations efforts at Code.org. The Marketing Coordinator will collaborate with members of our marketing team and across the organization to make sure projects get the resources and attention they need to be successful. 
+We are looking for a Marketing Coordinator to support communications, marketing, and public relations efforts at Code.org. The Marketing Coordinator will collaborate with members of our marketing team and across the organization to make sure projects get the resources and attention they need to be successful. The Marketing Coordinator will be instrumental in ensuring the smooth execution of a multitude of activities during the annual Hour of Code campaign. The Hour of Code initiative encourages students to try computer science during Computer Science Education Week in December.
 
 Other responsibilities of the position may include:
 
 - Work with marketing team to coordinate day-to-day activities that lead to the completion of projects and tasks
-Managing, maintaining, and growing our social media presence 
-- Writing, sourcing and editing compelling stories for our blog or external press
+- Managing programs or projects that support our overall efforts and strategy for  social media, public relations, media coverage, and events
 - Working with our advocacy team on grassroots lobbying campaigns across the country
-- Supporting public relations, media coverage, and events 
-- Creating website content on code.org, csedweek.org, and hourofcode.com
+- Writing, sourcing or editing compelling stories for our blog or external press
+- Producing and updating website content on code.org, csedweek.org, and hourofcode.com
 
 **Experience and Qualifications:**
 

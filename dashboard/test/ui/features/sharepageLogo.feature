@@ -8,7 +8,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -20,7 +20,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -32,7 +32,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -44,7 +44,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And element "div:contains('STUDIO')" does not exist
     And I press "logo-img" to load a new page
     And check that I am on "http://studio.code.org/courses"
@@ -56,7 +56,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And I am on "http://studio.code.org/users/sign_out"
     And I reload the page
     And I navigate to the last shared URL
@@ -71,7 +71,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And I am on "http://studio.code.org/users/sign_out"
     And I reload the page
     And I navigate to the last shared URL
@@ -86,7 +86,7 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And element "#main_logo" does not exist
 
   @only_mobile
@@ -96,5 +96,5 @@ Feature: Lab share page logo
     Then I click selector ".project_share"
     And I wait until element "#sharing-input" is visible
     And I navigate to the share URL
-    And I wait for the page to fully load
+    And I wait to see "#runButton"
     And element "#main_logo" does not exist

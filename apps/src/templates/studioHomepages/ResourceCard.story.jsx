@@ -15,6 +15,7 @@ export default storybook => {
             image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
+            isRtl={false}
           />
         )
       },

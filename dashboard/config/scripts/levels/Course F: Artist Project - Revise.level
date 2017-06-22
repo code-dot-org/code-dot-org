@@ -13,7 +13,7 @@
     "never_autoplay_video": "false",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
-    "use_modal_function_editor": "false",
+    "use_modal_function_editor": "true",
     "use_contract_editor": "false",
     "contract_highlight": "false",
     "contract_collapse": "false",
@@ -37,7 +37,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 21:41:12 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:41:12 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-22 14:54:28 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"contained_level_names\"],\"changed_by_id\":42,\"changed_by_email\":\"sarah.filman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
