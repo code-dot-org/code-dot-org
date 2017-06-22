@@ -20,18 +20,21 @@ export default storybook => {
         story: () => (
           <ContentContainer
             heading="Recent Courses"
+            isRtl={false}
           >
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
+              isRtl={false}
             />
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
+              isRtl={false}
             />
           </ContentContainer>
         )
@@ -45,18 +48,21 @@ export default storybook => {
             linkText="View all courses"
             link="link to see all of the courses"
             showLink={true}
+            isRtl={false}
           >
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
+              isRtl={false}
             />
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
+              isRtl={false}
             />
         </ContentContainer>
         )
