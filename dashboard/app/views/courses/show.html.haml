@@ -1,6 +1,11 @@
 - course = local_assigns[:course]
 
+- data = {}
+- data[:course_summary] = course.summarize
+- data[:sections] = @current_user.try{|u| u.sections.select(:id, :name)}
+- data[:is_teacher] = @current_user.try(:teacher?)
+
 - content_for(:head) do
-  %script{ src: minifiable_asset_path('js/courses/show.js'), data: {course_summary: course.summarize.to_json}}
+  %script{ src: minifiable_asset_path('js/courses/show.js'), data: {courses_show: data.to_json}}
 
 #course_overview
