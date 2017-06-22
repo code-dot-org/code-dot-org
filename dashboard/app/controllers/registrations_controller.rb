@@ -9,24 +9,24 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     return head(:bad_request) if params[:user].nil?
-    @user = User.find(current_user.id)
 
     successfully_updated =
-      if forbidden_change?(@user, params)
+      if forbidden_change?(current_user, params)
         false
-      elsif needs_password?(@user, params)
-        @user.update_with_password(update_params(params))
+      elsif needs_password?(current_user, params)
+        current_user.update_with_password(update_params(params))
       else
         # remove the virtual current_password attribute update_without_password
         # doesn't know how to ignore it
         params[:user].delete(:current_password)
-        @user.update_without_password(update_params(params))
+        current_user.update_without_password(update_params(params))
       end
 
-    respond_to_account_update(successfully_updated, @user)
+    respond_to_account_update(successfully_updated)
   end
 
-  def respond_to_account_update(successfully_updated, user)
+  def respond_to_account_update(successfully_updated)
+    user = current_user
     respond_to do |format|
       if successfully_updated
         set_locale_cookie(user.locale)
@@ -57,15 +57,14 @@ class RegistrationsController < Devise::RegistrationsController
 
   def upgrade
     return head(:bad_request) if params[:user].nil?
-    @user = User.find(current_user.id)
     user_params = params[:user]
 
     can_update =
-      if @user.teacher_managed_account?
-        if @user.secret_word_account?
-          secret_words_match = user_params[:secret_words] == @user.secret_words
+      if current_user.teacher_managed_account?
+        if current_user.secret_word_account?
+          secret_words_match = user_params[:secret_words] == current_user.secret_words
           error_string = user_params[:secret_words].blank? ? :blank_plural : :invalid_plural
-          @user.errors.add(:secret_words, error_string) unless secret_words_match
+          current_user.errors.add(:secret_words, error_string) unless secret_words_match
           secret_words_match
         else
           true
@@ -74,8 +73,8 @@ class RegistrationsController < Devise::RegistrationsController
         false
       end
 
-    successfully_updated = can_update && @user.update(update_params(params))
-    respond_to_account_update(successfully_updated, @user)
+    successfully_updated = can_update && current_user.update(update_params(params))
+    respond_to_account_update(successfully_updated)
   end
 
   private
