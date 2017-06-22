@@ -4,6 +4,8 @@
 let detailRowShowing = -1;
 let toolShowingIndex = -1;
 
+let courseShowingIndex = -1;
+
 module.exports.initCourseExplorer = function () {
   $('.tool').click(function () {
     const row = ($(this).data('row'));
@@ -36,5 +38,35 @@ module.exports.initCourseExplorer = function () {
   $('.tool_arrow_box_close').click(function () {
     $('.detailrow').slideUp();
     toolShowingIndex = -1;
+  });
+
+  $('.course.break').click(function () {
+    const courseIndex = $(this).attr("data-courseindex");
+
+    if (courseShowingIndex === -1) {
+      $('#courseextra-' + courseIndex).slideDown();
+      $('#course-' + courseIndex + ' .arrow-down').hide();
+      $('#course-' + courseIndex + ' .arrow-up').show();
+      courseShowingIndex = courseIndex;
+    } else if (courseShowingIndex === courseIndex) {
+      $('#courseextra-' + courseIndex).slideUp();
+      $('#course-' + courseIndex + ' .arrow-down').show();
+      $('#course-' + courseIndex + ' .arrow-up').hide();
+      courseShowingIndex = -1;
+    } else {
+      $('#courseextra-' + courseShowingIndex).slideUp();
+      $('#course-' + courseShowingIndex + ' .arrow-down').show();
+      $('#course-' + courseShowingIndex + ' .arrow-up').hide();
+      $('#courseextra-' + courseIndex).slideDown();
+      $('#course-' + courseIndex + ' .arrow-down').hide();
+      $('#course-' + courseIndex + ' .arrow-up').show();
+      courseShowingIndex = courseIndex;
+    }
+  });
+
+  $('.arrow_box_close').click(function () {
+    const courseIndex = $(this).attr("data-courseindex");
+    $('#courseextra-' + courseIndex).slideUp();
+    courseShowingIndex = -1;
   });
 };
