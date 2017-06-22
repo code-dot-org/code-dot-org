@@ -4092,6 +4092,10 @@ en:
               name: Nested Loops
             Introduction:
               name: Introduction
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            Debugging in Collector:
+              name: Debugging in Collector
         coursee-draft:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
@@ -5223,6 +5227,8 @@ en:
               name: 'Events: The Big Event'
             Events in Play Lab:
               name: Events in Play Lab
+            More Programming in Maze:
+              name: More Programming in Maze
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -5257,6 +5263,8 @@ en:
               name: Screen Out the Mean
             Binary Bracelets:
               name: Binary Bracelets
+            Loops in Artist:
+              name: Loops in Artist
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -5295,6 +5303,10 @@ en:
               name: 'Unplugged: Binary'
             Artist Binary:
               name: Artist Binary
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            Debugging in Collector:
+              name: Debugging in Collector
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
@@ -5411,6 +5423,8 @@ en:
               name: Presentation Your Project
             Present Your Project:
               name: Present Your Project
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
