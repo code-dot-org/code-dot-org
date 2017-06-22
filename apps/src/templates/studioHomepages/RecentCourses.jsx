@@ -10,11 +10,12 @@ const RecentCourses = React.createClass({
     courses: shapes.courses,
     showAllCoursesLink: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    heading: PropTypes.string.isRequired
+    heading: PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses, showAllCoursesLink, isTeacher, heading } = this.props;
+    const { courses, showAllCoursesLink, isTeacher, heading, isRtl } = this.props;
 
     return (
       <div>
@@ -24,6 +25,7 @@ const RecentCourses = React.createClass({
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
+            isRtl={isRtl}
           >
             {courses.map((course, index) =>
               <CourseCard
@@ -31,6 +33,7 @@ const RecentCourses = React.createClass({
                 name={course.name}
                 description={course.description}
                 link={course.link}
+                isRtl={isRtl}
               />
             )}
           </ContentContainer>
@@ -41,8 +44,9 @@ const RecentCourses = React.createClass({
             linkText={i18n.viewAllCourses()}
             link="/courses"
             showLink={showAllCoursesLink}
+            isRtl={isRtl}
           >
-            <SetUpMessage type="courses"/>
+            <SetUpMessage type="courses" isRtl={isRtl}/>
           </ContentContainer>
         )}
       </div>
