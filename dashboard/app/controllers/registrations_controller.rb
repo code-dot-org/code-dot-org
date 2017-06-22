@@ -60,7 +60,7 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.find(current_user.id)
     user_params = params[:user]
 
-    successfully_updated =
+    can_update =
       if @user.teacher_managed_account?
         if @user.secret_word_account?
           secret_words_match = user_params[:secret_words] == @user.secret_words
@@ -74,7 +74,7 @@ class RegistrationsController < Devise::RegistrationsController
         false
       end
 
-    successfully_updated &= @user.update!(update_params(params))
+    successfully_updated = can_update && @user.update!(update_params(params))
     account_update_response(successfully_updated, @user)
   end
 
