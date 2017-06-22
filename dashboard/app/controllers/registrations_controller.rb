@@ -25,30 +25,6 @@ class RegistrationsController < Devise::RegistrationsController
     respond_to_account_update(successfully_updated)
   end
 
-  def respond_to_account_update(successfully_updated)
-    user = current_user
-    respond_to do |format|
-      if successfully_updated
-        set_locale_cookie(user.locale)
-        # Sign in the user bypassing validation in case his password changed
-        bypass_sign_in user
-
-        format.html do
-          set_flash_message :notice, :updated
-          begin
-            redirect_back fallback_location: after_update_path_for(user)
-          rescue ActionController::RedirectBackError
-            redirect_to after_update_path_for(user)
-          end
-        end
-        format.any {head :no_content}
-      else
-        format.html {render "edit", formats: [:html]}
-        format.any {head :unprocessable_entity}
-      end
-    end
-  end
-
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       super
@@ -78,6 +54,30 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   private
+
+  def respond_to_account_update(successfully_updated)
+    user = current_user
+    respond_to do |format|
+      if successfully_updated
+        set_locale_cookie(user.locale)
+        # Sign in the user bypassing validation in case his password changed
+        bypass_sign_in user
+
+        format.html do
+          set_flash_message :notice, :updated
+          begin
+            redirect_back fallback_location: after_update_path_for(user)
+          rescue ActionController::RedirectBackError
+            redirect_to after_update_path_for(user)
+          end
+        end
+        format.any {head :no_content}
+      else
+        format.html {render "edit", formats: [:html]}
+        format.any {head :unprocessable_entity}
+      end
+    end
+  end
 
   # Reject certain changes for certain users outright
   def forbidden_change?(user, params)
