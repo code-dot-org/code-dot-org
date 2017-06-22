@@ -100,7 +100,7 @@
       = form.label :password_confirmation
       = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
     %p= t('user.create_personal_login_terms', terms_of_service_url: CDO.code_org_url('/tos')).html_safe
-    %p= t('user.creatE_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
+    %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
     %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
 
 = link_to t('crud.back'), :back
