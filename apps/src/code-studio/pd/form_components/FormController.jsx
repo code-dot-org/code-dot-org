@@ -68,7 +68,7 @@ export default class FormController extends React.Component {
    */
   componentDidUpdate(prevProps, prevState) {
     // If we got new errors or just changed pages, scroll to top of the page
-    const newErrors = prevState.errors.length !== this.state.errors.length;
+    const newErrors = prevState.errors.length < this.state.errors.length;
     const newPage = prevState.currentPage !== this.state.currentPage;
 
     if (newErrors || newPage) {
@@ -103,9 +103,15 @@ export default class FormController extends React.Component {
    * @param {Object} newState
    */
   handleChange(newState) {
+    // clear any errors for newly changed fields
+    const newFields = Object.keys(newState);
+    const errors = this.state.errors.filter(error => !newFields.includes(error));
+
+    // update state with new data
     const data = Object.assign({}, this.state.data, newState);
     this.setState({
-      data
+      data,
+      errors
     });
   }
 
