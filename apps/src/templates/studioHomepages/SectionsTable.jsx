@@ -48,7 +48,6 @@ export const styles = {
     width: 310
   },
   col2: {
-    lineHeight: '52px',
     width: 310
   },
   col3: {
