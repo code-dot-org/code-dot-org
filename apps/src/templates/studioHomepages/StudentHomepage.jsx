@@ -41,6 +41,7 @@ const StudentHomepage = React.createClass({
           courses={courses}
           showAllCoursesLink={true}
           header={i18n.recentCourses()}
+          isRtl={false}
         />
 
         <StudentResources/>

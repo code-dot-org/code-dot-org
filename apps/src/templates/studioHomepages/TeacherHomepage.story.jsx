@@ -71,6 +71,7 @@ export default storybook => {
             sections={[]}
             courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -83,6 +84,7 @@ export default storybook => {
             sections={[]}
             courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -95,6 +97,7 @@ export default storybook => {
             sections={sections}
             courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -107,8 +110,9 @@ export default storybook => {
             sections={sections}
             courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
-      }
+      },
     ]);
 };
