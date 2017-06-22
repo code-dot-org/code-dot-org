@@ -18,10 +18,12 @@ Scenario: Signed out user in English should see 6 header links
   And I see "#header-en-projects"
   And element "#header-en-projects" contains text "Project Gallery"
 
-Scenario: Student in English should see 2 header links
+Scenario: Student in English should see 3 header links
   Given I create a student named "Sally Student"
   Then check that I am on "http://studio.code.org/courses"
   And I wait to see ".headerlinks"
+  And I see "#header-student-home"
+  And element "#header-student-home" contains text "Home"
   And I see "#header-student-courses"
   And element "#header-student-courses" contains text "Courses"
   And I see "#header-student-projects"
@@ -52,7 +54,7 @@ Scenario: Signed out user in Spanish should see 2 header links
   And element "#header-non-en-courses" has "es" text from key "nav.header.courses"
   And I see "#header-non-en-projects"
   And element "#header-non-en-projects" has "es" text from key "nav.header.project_gallery"
-  
+
 Scenario: Student in Spanish should see 2 header links
   Given I create a student named "Estrella Estudiante"
   Then check that I am on "http://studio.code.org/courses"

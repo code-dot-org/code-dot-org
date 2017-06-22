@@ -100,6 +100,7 @@ class Hamburger
     end.freeze
 
     student_entries = [
+      {title: "home", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "courses", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
@@ -291,6 +292,7 @@ class Hamburger
       ]
     elsif options[:user_type] == "student"
       [
+        {title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "header-student-home"},
         {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
         {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
       ]
