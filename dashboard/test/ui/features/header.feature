@@ -47,12 +47,12 @@ Scenario: Signed out user in Spanish should see 2 header links
   Then check that I am on "http://code.org/"
   And I dismiss the language selector
   Given I am on "http://studio.code.org/courses"
-  And I wait to see "#headerlinks"
+  And I wait to see ".headerlinks"
   And I see "#header-non-en-courses"
-  And element "#header-non-en-courses" contains text "Courses"
+  And element "#header-non-en-courses" has "es" text from key "nav.header.courses"
   And I see "#header-non-en-projects"
-  And element "#header-non-en-projects" contains text "Project Gallery"
-
+  And element "#header-non-en-projects" has "es" text from key "nav.header.project_gallery"
+  
 Scenario: Student in Spanish should see 2 header links
   Given I create a student named "Estrella Estudiante"
   Then check that I am on "http://studio.code.org/courses"
@@ -62,7 +62,7 @@ Scenario: Student in Spanish should see 2 header links
   And I see "#header-student-courses"
   And element "#header-student-courses" has "es" text from key "nav.header.courses"
   And I see "#header-student-projects"
-  And element "#header-student-projects" contains text "Project Gallery"
+  And element "#header-student-projects" has "es" text from key "nav.header.project_gallery"
 
 Scenario: Teacher in Spanish should see 5 header links
   Given I create a teacher named "Pabla Profesora"
