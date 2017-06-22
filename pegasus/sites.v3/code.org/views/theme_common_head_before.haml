@@ -19,7 +19,7 @@
 
 =view :fonts
 -if use_min_stylesheet?
-  %link{rel:'stylesheet', type:'text/css', href:'/style-min.css'}
+  =inline_css 'style-min.css'
 -else
   %link{rel:'stylesheet', type:'text/css', href:'/style.css'}
 
