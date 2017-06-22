@@ -101,7 +101,7 @@ export const install = (blockly, blockInstallOptions) => {
   blockly.JavaScript.craft_place = function () {
     var dir = this.getTitleValue('DIR');
     var value = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
-    return `place('block_id_${this.id}',getVariable(${value}),'${dir}');`;
+    return `place('block_id_${this.id}',${value},'${dir}');`;
   };
 
   blockly.Blocks.craft_till = {
@@ -209,7 +209,7 @@ export const install = (blockly, blockInstallOptions) => {
     var dir = this.getTitleValue('DIR');
     var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
     var quantity = Blockly.JavaScript.valueToCode(this, 'QUANTITY', Blockly.JavaScript.ORDER_NONE);
-    return `drop('block_id_${this.id}',getVariable(${slotNumber}),getVariable(${quantity}),'${dir}');`;
+    return `drop('block_id_${this.id}',${slotNumber},${quantity},'${dir}');`;
   };
 
   blockly.Blocks.craft_dropall = {
@@ -306,7 +306,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_getitemdetail = function () {
     var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
-    return [`getitemdetail('block_id_${this.id}',getVariable(${slotNumber}))`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`getitemdetail('block_id_${this.id}',${slotNumber})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getitemspace = {
@@ -322,7 +322,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_getitemspace = function () {
     var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
-    return [`getitemspace('block_id_${this.id}',getVariable(${slotNumber}))`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`getitemspace('block_id_${this.id}',${slotNumber})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_getitemcount = {
@@ -338,7 +338,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_getitemcount = function () {
     var slotNumber = Blockly.JavaScript.valueToCode(this, 'SLOTNUM', Blockly.JavaScript.ORDER_NONE);
-    return [`getitemcount('block_id_${this.id}',getVariable(${slotNumber}))`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+    return [`getitemcount('block_id_${this.id}',${slotNumber})`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
   };
 
   blockly.Blocks.craft_transfer = {
@@ -365,7 +365,7 @@ export const install = (blockly, blockInstallOptions) => {
     var srcSlotNumber = Blockly.JavaScript.valueToCode(this, 'SRCSLOTNUM', Blockly.JavaScript.ORDER_NONE);
     var dstSlotNumber = Blockly.JavaScript.valueToCode(this, 'DSTSLOTNUM', Blockly.JavaScript.ORDER_NONE);
     var quantity = Blockly.JavaScript.valueToCode(this, 'QUANTITY', Blockly.JavaScript.ORDER_NONE);
-    return `transfer('block_id_${this.id}',getVariable(${srcSlotNumber}),getVariable(${quantity}),getVariable(${dstSlotNumber}));`;
+    return `transfer('block_id_${this.id}',${srcSlotNumber},${quantity},${dstSlotNumber});`;
   };
 
   blockly.Blocks.craft_tptoplayer = {
@@ -469,7 +469,7 @@ export const install = (blockly, blockInstallOptions) => {
 
   blockly.JavaScript.craft_timesetbynumber = function () {
     var time = Blockly.JavaScript.valueToCode(this, 'TIME', Blockly.JavaScript.ORDER_NONE) || '0';
-    return `timesetbynumber('block_id_${this.id}',getVariable(${time}));`;
+    return `timesetbynumber('block_id_${this.id}',${time});`;
   };
 
   blockly.Blocks.craft_weather = {
@@ -613,7 +613,7 @@ export const install = (blockly, blockInstallOptions) => {
     var player = encodeURIComponent(this.getTitleValue('PLAYER'));
     var item = Blockly.JavaScript.valueToCode(this, 'ITEM', Blockly.JavaScript.ORDER_NONE);
     var amount = Blockly.JavaScript.valueToCode(this, 'AMOUNT', Blockly.JavaScript.ORDER_NONE) || '0';
-    return `give('block_id_${this.id}','${player}', ${item},getVariable(${amount}));`;
+    return `give('block_id_${this.id}','${player}',${item},${amount});`;
   };
 
   blockly.Blocks.craft_kill = {
