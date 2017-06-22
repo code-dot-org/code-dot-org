@@ -172,26 +172,15 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
+    css, css_last_modified = combine_css 'styles'
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
-    Sass::Engine.new(css,
-      syntax: :scss,
-      style: :compressed
-    ).render
+    css
   end
 
   get '/style-min.css' do
     content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles_min/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
+    css, css_last_modified = combine_css 'styles_min'
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
     css
