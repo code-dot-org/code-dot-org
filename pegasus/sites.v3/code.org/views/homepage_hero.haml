@@ -40,10 +40,15 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
+    -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
     - if index == 0
-      %link{rel: 'preload', href: entry[:image_t], as: 'image', media: css_retina?(false)}
-      %link{rel: 'preload', href: entry[:image_t].gsub('.jpg', '_2x.jpg'), as: 'image', media: css_retina?}
-    .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
+      -#Use Link rel=preload HTTP headers to preload as early as possible.
+        Two headers with inverse media queries conditionally load the correctly-sized image.
+      - response.add_header 'Link', "<#{entry[:image_t]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image_t].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
+      .widehero#fullwidth0{style: "background-position: #{entry[:param1_s]}; background-image: url(#{entry[:image_t]});"}
+    - else
+      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
     - if request.site == 'code.org'
@@ -115,10 +120,11 @@
   .clear{style: "clear: both"}
 
 :javascript
-  // Use retina versions of the hero background images if on a retina display.
+  // Swap in 2x versions of the hero image URLs for retina displays.
   if (window.matchMedia('#{css_retina?}').matches) {
     document.querySelectorAll('#hero .widehero').forEach(function(item) {
       item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+      item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
     });
   }
 
