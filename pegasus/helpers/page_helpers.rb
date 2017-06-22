@@ -19,7 +19,10 @@ end
 def inline_css(css)
   path = resolve_static('public', "css/#{css}")
   path ||= shared_dir('css', css)
-  path = pegasus_dir('cache', 'css', css) unless File.file?(path)
+  unless File.file?(path)
+    Sass::Plugin.check_for_updates
+    path = pegasus_dir('cache', 'css', css)
+  end
   raise "CSS not found: #{css}" unless File.file?(path)
   css_string = Sass::Engine.new(File.read(path),
     syntax: :scss,
