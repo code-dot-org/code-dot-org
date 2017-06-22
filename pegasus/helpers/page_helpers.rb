@@ -51,3 +51,11 @@ def use_min_stylesheet?
     'Minecraft' => '/minecraft', 'Star Wars' => '/starwars', 'Student Overview' => '/student', 'Help Translate' => '/translate'}
   pages_verified.value?(request.path_info)
 end
+
+# Returns a CSS Media Query string matching devices with 'retina' displays.
+# Ref: https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/
+# Setting `is_retina` to `false` matches non-retina displays.
+def css_retina?(is_retina = true)
+  css_query_parts = ['-webkit-min-device-pixel-ratio: 2', 'min-resolution: 192dpi']
+  css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
+end
