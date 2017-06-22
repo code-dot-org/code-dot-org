@@ -12,6 +12,7 @@ export default storybook => {
           <SetUpMessage
             type="courses"
             codeOrgUrlPrefix="http://code.org/"
+            isRtl={false}
           />
         )
       },
@@ -22,6 +23,7 @@ export default storybook => {
           <SetUpMessage
             type="sections"
             codeOrgUrlPrefix="http://code.org/"
+            isRtl={false}
           />
         )
       },

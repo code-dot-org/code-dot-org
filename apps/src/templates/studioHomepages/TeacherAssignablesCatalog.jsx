@@ -12,13 +12,14 @@ const TeacherAssignablesCatalog = React.createClass({
     const codeOrgUrlPrefix = this.props.codeOrgUrlPrefix;
 
     return (
-      <ContentContainer heading={i18n.teacherCoursesHeading()}>
+      <ContentContainer heading={i18n.teacherCoursesHeading()} isRtl={false}>
         <ResourceCard
           title={i18n.teacherCourseHoc()}
           description={i18n.teacherCourseHocDescription()}
           image="hourofcode"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/hourofcode/overview`}
+          isRtl={false}
         />
         <ResourceCard
           title={i18n.teacherCourseElementary()}
@@ -26,6 +27,7 @@ const TeacherAssignablesCatalog = React.createClass({
           image="elementary"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/elementary-school`}
+          isRtl={false}
         />
         <ResourceCard
           title={i18n.teacherCourseMiddle()}
@@ -33,6 +35,7 @@ const TeacherAssignablesCatalog = React.createClass({
           image="middleschool"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/middle-school`}
+          isRtl={false}
         />
         <ResourceCard
           title={i18n.teacherCourseHighOlder()}
@@ -40,6 +43,7 @@ const TeacherAssignablesCatalog = React.createClass({
           image="highschool"
           buttonText={i18n.learnMore()}
           link={`${codeOrgUrlPrefix}/educate/curriculum/high-school`}
+          isRtl={false}
         />
       </ContentContainer>
     );

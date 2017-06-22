@@ -18,6 +18,7 @@ export default storybook => {
                 link: "to wherever"
               },
             ]}
+            isRtl={false}
           />
         )
       },
@@ -46,6 +47,7 @@ export default storybook => {
                 link: "to wherever"
               },
             ]}
+            isRtl={false}
           />
         )
       }

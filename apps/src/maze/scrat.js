@@ -91,7 +91,7 @@ export default class Scrat extends Subtype {
             tile = 'empty';
           }
         }
-        this.drawer.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
+        this.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
         tileId++;
       }
     }

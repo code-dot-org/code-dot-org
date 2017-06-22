@@ -99,6 +99,14 @@ We are building a growing library of educational videos available for re-use by 
 
 </div>
 
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/LVV_93mBfSU'} %>
+<% twitter = {:url=>'https://youtu.be/LVV_93mBfSU', :related=>'codeorg', :text=>'THE INTERNET: How Search Works @codeorg'} %>
+<%=view :display_video_thumbnail, id: "howsearchworks", video_code: "LVV_93mBfSU", caption: "THE INTERNET: How Search Works", play_button: 'center',  facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/how_search_works.mp4" %>
+
+</div>
+
 <div style="clear: both;"></div>
 
 ## The basics of computer science

@@ -7,6 +7,10 @@ FactoryGirl.define do
     funded true
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
+    trait :teachercon do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
+    end
     capacity 10
     transient do
       num_sessions 0
@@ -114,9 +118,14 @@ FactoryGirl.define do
     transient do
       form_data {build :pd_facilitator_program_registration_hash, user: user}
     end
-    form_data {from_data.to_json}
+    form_data {form_data.to_json}
   end
 
+  factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+
+    form_data {(build :pd_teachercon_survey_hash).to_json}
+  end
   # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
   factory :pd_facilitator_program_registration_hash, class: 'Hash' do
     initialize_with do
