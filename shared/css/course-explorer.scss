@@ -40,11 +40,15 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     margin: 5px 0;
 
     .arrow-down {
-      font-size: 14px;
+      font-size: 28px;
+      margin-top: 7px;
+      margin-right: 12px;
     }
 
     .arrow-up {
-      font-size: 14px;
+      font-size: 28px;
+      margin-top: 6px;
+      margin-right: 12px;
       display: none;
     }
   }
