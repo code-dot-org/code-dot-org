@@ -141,7 +141,9 @@ module DeleteAccountsHelper
       where(dashboard_user_id: user_id).
       map {|contact_rollup| contact_rollup[:pardot_id]}
     failed_ids = Pardot.delete_prospects(pardot_ids)
-    raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}." unless failed_ids
+    if failed_ids.any?
+      raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
+    end
 
     PEGASUS_DB[:contact_rollups].where(dashboard_user_id: user_id).delete
 
