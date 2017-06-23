@@ -5,6 +5,7 @@ import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, newSection } from './teacherSectionsRedux';
+import { loadClassroomList } from './googleClassroomRedux';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -21,8 +22,10 @@ const styles = {
 class SectionsPage extends Component {
   static propTypes = {
     numSections: PropTypes.number.isRequired,
+    classrooms: PropTypes.array,
     newSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
+    loadClassroomList: PropTypes.func.isRequired,
   };
 
   state = {
@@ -39,8 +42,14 @@ class SectionsPage extends Component {
     });
   }
 
+  handleImportOpen = () => {
+    this.setState({rosterDialogOpen: true});
+    this.props.loadClassroomList();
+  };
+
   handleImportClose = (selectedId) => {
     this.setState({rosterDialogOpen: false});
+    // TODO: use `selectedId`.
     console.log(selectedId);
   };
 
@@ -67,7 +76,7 @@ class SectionsPage extends Component {
         <ProgressButton
           text={i18n.importFromGoogleClassroom()}
           style={styles.button}
-          onClick={() => this.setState({rosterDialogOpen: true})}
+          onClick={this.handleImportOpen}
           color={ProgressButton.ButtonColor.gray}
         />
         {sectionsLoaded && numSections === 0 &&
@@ -79,6 +88,7 @@ class SectionsPage extends Component {
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
           handleClose={this.handleImportClose}
+          classrooms={this.props.classrooms}
         />
       </div>
     );
@@ -86,5 +96,6 @@ class SectionsPage extends Component {
 }
 
 export default connect(state => ({
-  numSections: state.teacherSections.sectionIds.length
-}), { newSection, setSections })(SectionsPage);
+  numSections: state.teacherSections.sectionIds.length,
+  classrooms: state.googleClassroom.classrooms,
+}), { newSection, setSections, loadClassroomList })(SectionsPage);
