@@ -392,6 +392,7 @@
   homepage_slot_text_title_hoc: "ช่วงเวลาของ Code"
   homepage_slot_text_blurb_hoc: "ทุกคนสามารถเรียนรู้ได้ เริ่มต้นวันนี้"
   homepage_slot_text_link_hoc: "ลองใช้ Hour of Code สิ"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "จัดงาน Hour of Code"
   homepage_slot_text_link_hocserved: "# คน เข้าร่วมแล้ว"
   homepage_solot_text_link_volunteer: "อาสาสมัครชั่วโมงแห่งการโค้ด"
@@ -784,12 +785,14 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "กลุ่มใหม่"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "สร้างกลุ่มใหม่ และเพิ่มนักเรียนเข้ากลุ่ม
     กลุ่มจะช่วยคุณจัดการนักเรียนให้อยู่ในกลุ่มย่อย ซึ่งคุณจะสามารถติดตามผลการเรียนและจัดการบัญชีได้ง่ายขึ้น"
   dashboard_sections_table_section: Section
   dashboard_sections_table_secret: "ประเภทการล็อกอิน"
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: "หลักสูตร"
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "นักเรียน"
   dashboard_sections_table_code: Section Code
@@ -1769,9 +1772,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "เล่น"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "คอร์ส"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1779,7 +1781,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "ช่วงเวลาของ Code"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1805,6 +1807,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
