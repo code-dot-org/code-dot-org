@@ -86,10 +86,7 @@ class HomeController < ApplicationController
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
       @recent_courses = current_user.recent_courses_and_scripts.slice(0, 2)
-
-      if current_user.teacher?
-        @sections = current_user.sections.map(&:summarize)
-      end
+      @sections = current_user.sections.map(&:summarize)
     end
   end
 end

@@ -28,6 +28,7 @@ const Sections = React.createClass({
           <SectionsTable
             sections={sections}
             isRtl={isRtl}
+            isTeacher={true}
           />
         )}
         {sections.length === 0 && (

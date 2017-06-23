@@ -1,6 +1,5 @@
 - homepage_data = {courses: @recent_courses}
-- if current_user.teacher?
-  - homepage_data[:sections] = @sections
+- homepage_data[:sections] = @sections
 - homepage_data[:codeorgurlprefix] = CDO.code_org_url
 - homepage_data[:showuitips] = show_ui_tips
 - homepage_data[:initialtipsdismissed] = current_user.ui_tip_dismissed_homepage_header
