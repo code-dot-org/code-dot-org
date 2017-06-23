@@ -19,6 +19,12 @@ class SectionsControllerTest < ActionController::TestCase
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
   end
 
+  setup do
+    # place in setup instead of setup_all otherwise course ends up being serialized
+    # to a file in levelbuilder_mode is true
+    @course = create(:course, name: 'course-for-section')
+  end
+
   test "do not show login screen for invalid section code" do
     assert_raises(ActiveRecord::RecordNotFound) do
       get :show, params: {id: @word_section.id} # we use code not id
@@ -136,5 +142,36 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to section_path(id: @picture_section.code)
+  end
+
+  test "update: can update section you own" do
+    sign_in @teacher
+    section_with_script = create(:section, user: @teacher, login_type: 'regular', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
+    post :update, params: {
+      id: section_with_script.id,
+      course_id: @course.id
+    }
+    assert_response :success
+    section_with_script.reload
+    assert_equal(@course.id, section_with_script.course_id)
+    assert_nil section_with_script.script_id
+  end
+
+  test "update: cannot update section you dont own" do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+    post :update, params: {
+      id: @regular_section.id,
+      course_id: @course.id,
+    }
+    assert_response 403
+  end
+
+  test "update: cannot update section if not logged in " do
+    post :update, params: {
+      id: @regular_section.id,
+      course_id: @course.id,
+    }
+    assert_response :redirect
   end
 end
