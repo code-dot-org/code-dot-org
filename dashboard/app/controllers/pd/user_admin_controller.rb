@@ -21,6 +21,13 @@ class Pd::UserAdminController < ApplicationController
     redirect_to action: "find_user", search_term: user_id
   end
 
+  def remove_permission
+    user_id = user_admin_params[:user_id]
+    @user = User.find(user_id)
+    @user.delete_permission user_admin_params[:pd_user_permission_id]
+    redirect_to action: "find_user", search_term: user_id
+  end
+
   private
 
   # white list permitted request parameters
