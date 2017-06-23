@@ -129,7 +129,6 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connectToFirmware()
         .then(() => board.initializeComponents())
         .then(() => {
-          // TODO (bbuchanan): Add 8 when we re-enable captouch by default
           expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         });
     });
