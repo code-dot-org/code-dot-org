@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
+import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, newSection } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
@@ -12,7 +13,8 @@ const styles = {
     marginBottom: 28
   },
   button: {
-    marginBottom: 20
+    marginBottom: 20,
+    marginRight: 5,
   }
 };
 
@@ -24,7 +26,8 @@ class SectionsPage extends Component {
   };
 
   state = {
-    sectionsLoaded: false
+    sectionsLoaded: false,
+    rosterDialogOpen: false,
   };
 
   componentDidMount() {
@@ -35,6 +38,11 @@ class SectionsPage extends Component {
       });
     });
   }
+
+  handleImportClose = (selectedId) => {
+    this.setState({rosterDialogOpen: false});
+    console.log(selectedId);
+  };
 
   render() {
     const { newSection, numSections } = this.props;
@@ -56,12 +64,22 @@ class SectionsPage extends Component {
           onClick={newSection}
           color={ProgressButton.ButtonColor.gray}
         />
+        <ProgressButton
+          text={i18n.importFromGoogleClassroom()}
+          style={styles.button}
+          onClick={() => this.setState({rosterDialogOpen: true})}
+          color={ProgressButton.ButtonColor.gray}
+        />
         {sectionsLoaded && numSections === 0 &&
           <div className="jumbotron">
             <p>{i18n.createSectionsInfo()}</p>
           </div>
         }
         {sectionsLoaded && numSections > 0 && <SectionTable/>}
+        <RosterDialog
+          isOpen={this.state.rosterDialogOpen}
+          handleClose={this.handleImportClose}
+        />
       </div>
     );
   }
