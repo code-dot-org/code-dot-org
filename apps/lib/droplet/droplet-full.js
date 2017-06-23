@@ -9714,15 +9714,21 @@ hook('resize_palette', 0, function() {
   return this.session.viewports.palette.width = this.paletteScroller.clientWidth;
 });
 
+Editor.prototype.computeMainCanvasHeight = function() {
+  var bounds, height, ref1;
+  bounds = this.session.view.getViewNodeFor(this.session.tree).getBounds();
+  return height = Math.max(bounds.bottom() + ((ref1 = this.options.extraBottomHeight) != null ? ref1 : this.session.fontSize), this.dropletElement.clientHeight);
+};
+
 hook('redraw_main', 1, function() {
-  var bounds, height, j, len, record, ref1, ref2;
+  var bounds, height, j, len, record, ref1;
   bounds = this.session.view.getViewNodeFor(this.session.tree).getBounds();
   ref1 = this.session.floatingBlocks;
   for (j = 0, len = ref1.length; j < len; j++) {
     record = ref1[j];
     bounds.unite(this.session.view.getViewNodeFor(record.block).getBounds());
   }
-  height = Math.max(bounds.bottom() + ((ref2 = this.options.extraBottomHeight) != null ? ref2 : this.session.fontSize), this.dropletElement.clientHeight);
+  height = this.computeMainCanvasHeight();
   if (height !== this.lastHeight) {
     this.lastHeight = height;
     this.mainCanvas.setAttribute('height', height);
@@ -10400,13 +10406,15 @@ Editor.prototype.setAnnotations = function(annotations) {
 };
 
 Editor.prototype.resizeGutter = function() {
+  var gutterHeight;
   if (this.lastGutterWidth !== this.aceEditor.renderer.$gutterLayer.gutterWidth) {
     this.lastGutterWidth = this.aceEditor.renderer.$gutterLayer.gutterWidth;
     this.gutter.style.width = this.lastGutterWidth + 'px';
     return this.resize();
   }
-  if (this.lastGutterHeight !== Math.max(this.dropletElement.clientHeight, this.mainCanvas.clientHeight)) {
-    this.lastGutterHeight = Math.max(this.dropletElement.clientHeight, this.mainCanvas.clientHeight);
+  gutterHeight = Math.max(this.dropletElement.clientHeight, this.computeMainCanvasHeight());
+  if (this.lastGutterHeight !== gutterHeight) {
+    this.lastGutterHeight = gutterHeight;
     return this.gutter.style.height = this.lastGutterHeight + 'px';
   }
 };
