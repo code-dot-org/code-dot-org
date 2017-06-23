@@ -21,10 +21,15 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
     end
   end
 
-  # TODO: Find a way to stub out the create_workshop_cert call to verify params
   test 'Generates certificate for CSD teachercon' do
     workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
     enrollment = create :pd_enrollment, workshop: workshop
+    mock_image = mock
+    @controller.expects(:create_workshop_certificate_helper).
+      with(workshop, [Pd::WorkshopCertificateController::HARDCODED_CSD_FACILITATOR]).
+      returns(mock_image)
+    mock_image.expects(:destroy!)
+    mock_image.expects(:to_blob)
 
     get :generate_certificate, params: {
       user: @user,
@@ -35,7 +40,12 @@ class Pd::WorkshopCertificateControllerTest < ::ActionController::TestCase
   test 'Generates certificate for CSP teachercon' do
     workshop = create :pd_workshop, num_sessions: 1, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON
     enrollment = create :pd_enrollment, workshop: workshop
-
+    mock_image = mock
+    @controller.expects(:create_workshop_certificate_helper).
+      with(workshop, [Pd::WorkshopCertificateController::HARDCODED_CSP_FACILITATOR]).
+      returns(mock_image)
+    mock_image.expects(:destroy!)
+    mock_image.expects(:to_blob)
     get :generate_certificate, params: {
       user: @user,
       enrollment_code: enrollment.code
