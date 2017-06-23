@@ -275,6 +275,7 @@ class Level < ActiveRecord::Base
     'ExternalLink', # no user submitted content
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
+    'Flappy', # no ideal solution
     'Gamelab', # freeplay
     'GoBeyond', # unknown
     'Level', # base class
