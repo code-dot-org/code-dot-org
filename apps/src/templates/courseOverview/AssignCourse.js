@@ -5,6 +5,7 @@ import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import AssignCourseConfirm from './AssignCourseConfirm';
 
 const styles = {
@@ -55,6 +56,7 @@ class AssignCourse extends Component {
   state = {
     dropdownOpen: false,
     sectionIndexToAssign: null,
+    errorString: null
   }
 
   componentDidMount = () => {
@@ -106,14 +108,21 @@ class AssignCourse extends Component {
     }).done(result => {
       this.setState({dropdownOpen: false});
     }).fail((jqXhr, status) => {
-      // TODO handle failure
-      console.error(status);
+      this.setState({
+        dropdownOpen: false,
+        sectionIndexToAssign: null,
+        errorString: i18n.unexpectedError()
+      });
     });
+  }
+
+  acknowledgeError = () => {
+    this.setState({errorString: null});
   }
 
   render() {
     const { courseId, courseName, sectionsInfo } = this.props;
-    const { dropdownOpen, sectionIndexToAssign } = this.state;
+    const { dropdownOpen, sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
 
     return (
@@ -158,6 +167,14 @@ class AssignCourse extends Component {
             onClose={this.onCloseDialog}
             onConfirm={this.updateCourse}
           />
+        )}
+        {errorString && (
+          <BaseDialog
+            isOpen={true}
+            onClose={this.acknowledgeError}
+          >
+            {errorString}
+          </BaseDialog>
         )}
       </div>
     );
