@@ -598,7 +598,8 @@ class User < ActiveRecord::Base
   # True if the account is teacher-managed and has any sections that use word logins.
   # Will not be true if the user has a password or is only in picture sections
   def secret_word_account?
-    teacher_managed_account? && sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
+    return false unless teacher_managed_account?
+    sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
