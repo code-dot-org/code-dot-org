@@ -55,11 +55,12 @@ const SetUpMessage = React.createClass({
   propTypes: {
     type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
     codeOrgUrlPrefix: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    isTeacher: React.PropTypes.bool.isRequired,
   },
 
   render() {
-    const { type, codeOrgUrlPrefix, isRtl } = this.props;
+    const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
     const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
@@ -68,13 +69,20 @@ const SetUpMessage = React.createClass({
           <div style={isRtl? styles.rtlHeading : styles.heading}>
             {i18n.startLearning()}
           </div>
-          <div style={isRtl? styles.rtlDescription : styles.description}>
-            {i18n.assignACourse()}
-          </div>
+          {isTeacher && (
+            <div style={isRtl? styles.rtlDescription : styles.description}>
+              {i18n.setupCoursesTeacher()}
+            </div>
+          )}
+          {!isTeacher && (
+            <div style={isRtl? styles.rtlDescription : styles.description}>
+              {i18n.setupCoursesStudent()}
+            </div>
+          )}
           <ProgressButton
             href="/courses"
             color={ProgressButton.ButtonColor.gray}
-            text={i18n.viewCourses()}
+            text={i18n.findCourse()}
             style={isRtl? styles.rtlButton : styles.button}
           />
         </div>
