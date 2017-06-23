@@ -53,8 +53,6 @@ class Flappy < Blockly
   end
 
   def self.create_from_level_builder(params, level_params)
-    puts params
-    puts level_params
     create!(
       level_params.merge(
         user: params[:user],
