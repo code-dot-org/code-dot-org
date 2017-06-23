@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ContentContainer from './ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
+import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
 
@@ -22,7 +23,7 @@ const RecentCourses = React.createClass({
         {courses.length > 0 && (
           <ContentContainer
             heading={heading}
-            linkText={i18n.viewAllCourses()}
+            linkText={i18n.findCourse()}
             link="/courses"
             showLink={showAllCoursesLink}
             isRtl={isRtl}
@@ -36,17 +37,27 @@ const RecentCourses = React.createClass({
                 isRtl={isRtl}
               />
             )}
+            {!isTeacher && (
+              <Notification
+                type="course"
+                notice={i18n.findCourse()}
+                details={i18n.findCourseDescription()}
+                buttonText={i18n.findCourse()}
+                buttonLink="/course"
+                dismissible={false}
+              />
+            )}
           </ContentContainer>
         )}
-        {courses.length === 0 && isTeacher && (
+        {courses.length === 0 && (
           <ContentContainer
             heading={heading}
-            linkText={i18n.viewAllCourses()}
+            linkText={i18n.findCourse()}
             link="/courses"
             showLink={showAllCoursesLink}
             isRtl={isRtl}
           >
-            <SetUpMessage type="courses" isRtl={isRtl}/>
+            <SetUpMessage type="courses" isRtl={isRtl} isTeacher={isTeacher}/>
           </ContentContainer>
         )}
       </div>
