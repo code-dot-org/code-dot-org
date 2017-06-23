@@ -9,12 +9,13 @@ class Pd::WorkshopCertificateController < ApplicationController
     workshop = @enrollment.workshop
 
     if workshop.teachercon?
-      if workshop.course == Pd::Workshop::COURSE_CSD
-        facilitator_names = [HARDCODED_CSD_FACILITATOR]
-      elsif workshop.course == Pd::Workshop::COURSE_CSP
-        facilitator_names = [HARDCODED_CSP_FACILITATOR]
-      else
-        facilitator_names = ["Code.org team"]
+      case workshop.course
+        when Pd::Workshop::COURSE_CSD
+          facilitator_names = [HARDCODED_CSD_FACILITATOR]
+        when Pd::Workshop::COURSE_CSP
+          facilitator_names = [HARDCODED_CSP_FACILITATOR]
+        else
+          facilitator_names = ["Code.org team"]
       end
     else
       facilitator_names = workshop.facilitators.map {|f| f.name.strip}.sort
