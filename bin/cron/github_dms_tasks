@@ -14,7 +14,8 @@ def main
 
     next unless task_name =~ /cron/
 
-    task_name_to_task_table_mappings[task_name] = task_table_mappings
+    task_name_to_task_table_mappings[task_name] =
+      JSON.pretty_generate JSON.parse(task_table_mappings)
   end
 
   # Persist the task to table mappings to files in our repository.
