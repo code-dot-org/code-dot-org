@@ -1,5 +1,5 @@
 import {expect} from '../../util/configuredChai';
-import {parseElement, serialize} from '@cdo/apps/xml';
+import {parseElement} from '@cdo/apps/xml';
 const Artist = require('@cdo/apps/turtle/turtle');
 const constants = require('@cdo/apps/constants');
 
@@ -191,65 +191,6 @@ describe('Artist', () => {
       artist.prepareForRemix();
 
       expect(newDom.querySelector('block[type="when_run"]')).to.be.defined;
-    });
-
-    it('removes setArtist blocks', () => {
-      artist.level = {};
-      oldXml = `
-        <block type="when_run">
-          <next>
-            <block type="draw_move" inline="true">
-              <value name="VALUE">
-                <block type="math_nubmer">
-                  <title name="NUM">40</title>
-                </block>
-              </value>
-              <next>
-                <block type="turtle_setArtist">
-                  <title name="VALUE">elsa</title>
-                  <next>
-                    <block type="draw_move" inline="true">
-                      <value name="VALUE">
-                        <block type="math_nubmer">
-                          <title name="NUM">40</title>
-                        </block>
-                      </value>
-                      <next>
-                        <block type="turtle_setArtist">
-                          <title name="VALUE">elsa</title>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>`;
-
-      artist.prepareForRemix();
-
-      expect(serialize(newDom).replace(/\s*</g, '<')).to.equal(`<xml>
-        <block type="when_run">
-          <next>
-            <block type="draw_move" inline="true">
-              <value name="VALUE">
-                <block type="math_nubmer">
-                  <title name="NUM">40</title>
-                </block>
-              </value>
-              <next>
-                <block type="draw_move" inline="true">
-                  <value name="VALUE">
-                    <block type="math_nubmer">
-                      <title name="NUM">40</title>
-                    </block>
-                  </value>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block></xml>`.replace(/\s*</g, '<'));
     });
   });
 });
