@@ -1,4 +1,4 @@
-/* global angular, gapi */
+/* global angular */
 
 /**
  * Entry point for teacher-dashboard/index.js bundle
@@ -16,7 +16,6 @@ import teacherSections, {
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
-import RosterDialog from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import experiments from '@cdo/apps/util/experiments';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 
@@ -71,40 +70,6 @@ function renderSectionsPage(sections) {
     <Provider store={store}>
       <SectionsPage/>
     </Provider>,
-    element
-  );
-
-  initGoogleClassroom();
-}
-
-function initGoogleClassroom() {
-  gapi.load('client:auth2', () => {
-    gapi.client.init({
-      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest'],
-      clientId: '254945981659-modh6ba8erd7iue9jr054o71dfa204o2.apps.googleusercontent.com',
-      scope: 'https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/classroom.rosters.readonly',
-    }).then(() => {
-      $('#google-section').show();
-    });
-  });
-}
-
-function getClassroomList() {
-  gapi.client.classroom.courses.list({teacherId: 'me'}).then(response => renderRosterDialog(response.result.courses));
-}
-
-function renderRosterDialog(data) {
-  const element = document.querySelector('#roster-dialog');
-  const handleClose = selectedId => {
-    ReactDOM.unmountComponentAtNode(element);
-    console.log(selectedId);
-  };
-  ReactDOM.render(
-    <RosterDialog
-      isOpen={true}
-      handleClose={handleClose}
-      classrooms={data}
-    />,
     element
   );
 }
@@ -453,14 +418,6 @@ function main() {
 
     $scope.new_section = function () {
       $scope.sections.unshift({editing: true, login_type: 'word', pairing_allowed: true});
-    };
-
-    $scope.new_google_section = function () {
-      if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
-        getClassroomList();
-      } else {
-        gapi.auth2.getAuthInstance().signIn().then(getClassroomList);
-      }
     };
   }]);
 
