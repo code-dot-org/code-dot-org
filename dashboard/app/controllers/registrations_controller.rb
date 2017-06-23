@@ -35,6 +35,7 @@ class RegistrationsController < Devise::RegistrationsController
   def upgrade
     return head(:bad_request) if params[:user].nil?
     user_params = params[:user]
+    user_params[:provider] = nil
     current_user.reload
 
     can_update =
@@ -116,6 +117,7 @@ class RegistrationsController < Devise::RegistrationsController
       :school,
       :full_address,
       :terms_of_service_version,
+      :provider,
       school_info_attributes: [
         :country,
         :school_type,
