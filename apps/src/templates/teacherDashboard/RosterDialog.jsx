@@ -84,7 +84,7 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
 ClassroomList.propTypes = {
   classrooms: React.PropTypes.array.isRequired,
   onSelect: React.PropTypes.func.isRequired,
-  selectedId: React.PropTypes.number,
+  selectedId: React.PropTypes.string,
 };
 
 export default class RosterDialog extends React.Component {
