@@ -13,8 +13,9 @@ if (window.Blockly && !data.uses_droplet) {
   window.Blockly.Css.styleSheet_ = window.goog.cssom.addCssText(Blockly.Css.CONTENT.join("\n")).sheet;
   window.Blockly.assetUrl = path => `/assets/${path}`;
   const appBlocks = require('@cdo/apps/' + data.app + '/blocks');
+  const skinsModule = require('@cdo/apps/' + data.app + '/skins');
   const options = {
-    skin: {id: data.skin_id},
+    skin: skinsModule.load(function (){}, data.skin_id),
     isK1: data.isK1,
   };
   commonBlocks.install(window.Blockly, options);
