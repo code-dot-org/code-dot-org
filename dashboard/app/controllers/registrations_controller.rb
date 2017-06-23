@@ -34,8 +34,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def upgrade
     return head(:bad_request) if params[:user].nil?
-    user_params = params[:user]
-    user_params[:provider] = nil
+    params_to_pass = params.deep_dup
+    # Set provider to nil to mark the account as self-managed
+    user_params = params_to_pass[:user].merge(provider: nil)
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
     can_update =
@@ -52,7 +53,7 @@ class RegistrationsController < Devise::RegistrationsController
         false
       end
 
-    successfully_updated = can_update && current_user.update(update_params(params))
+    successfully_updated = can_update && current_user.update(update_params(params_to_pass))
     respond_to_account_update(successfully_updated)
   end
 
