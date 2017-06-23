@@ -1,10 +1,9 @@
 import React from 'react';
 import AssignCourse from './AssignCourse';
 
-console.log('test');
-
 const defaultProps = {
   courseId: 30,
+  courseName: 'Computer Science Principles',
   sectionsInfo: [
     {
       id: 11,
