@@ -4,6 +4,7 @@ import Radium from 'radium';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -38,6 +39,24 @@ const styles = {
   },
   nonFirstSection: {
     borderTop: `1px solid ${color.charcoal}`
+  },
+  dialogHeader: {
+    fontSize: 16,
+    marginBottom: 5,
+    fontWeight: 'bold',
+  },
+  dialogContent: {
+    fontSize: 14,
+    marginBottom: 10,
+    marginTop: 10,
+    paddingBottom: 20,
+    paddingTop: 20,
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray
   }
 };
 
@@ -51,7 +70,8 @@ class AssignCourse extends Component {
   };
 
   state = {
-    dropdownOpen: false
+    dropdownOpen: false,
+    sectionIndexToAssign: null,
   }
 
   componentDidMount = () => {
@@ -81,11 +101,20 @@ class AssignCourse extends Component {
   }
 
   onClickCourse = event => {
-    // TODO - confirm experience
-    const sectionId = event.target.getAttribute('data-section-id');
+    const sectionIndex = event.target.getAttribute('data-section-index');
+    this.setState({
+      sectionIndexToAssign: sectionIndex
+    });
+  }
 
+  onCloseDialog = event => {
+    this.setState({sectionIndexToAssign: null});
+  }
+
+  updateCourse = () => {
+    const section = this.props.sectionsInfo[this.state.SectionIndexToAssign];
     $.ajax({
-      url: `/sections/${sectionId}`,
+      url: `/sections/${section.id}`,
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
@@ -101,11 +130,12 @@ class AssignCourse extends Component {
 
   render() {
     const { courseId, sectionsInfo } = this.props;
+    // TODO: dialog gets its own component
     return (
       <div>
         <ProgressButton
           ref={element => this.button = element}
-          text="Assign Course"
+          text={i18n.assignCourse()}
           style={styles.button}
           onClick={this.onClickDropdown}
           icon={this.state.dropdownOpen ? "caret-up" : "caret-down"}
@@ -128,7 +158,7 @@ class AssignCourse extends Component {
                   ...styles.section,
                   ...styles.nonFirstSection
                 }}
-                data-section-id={section.id}
+                data-section-index={index}
                 onClick={this.onClickCourse}
               >
                 {section.name}
@@ -136,6 +166,32 @@ class AssignCourse extends Component {
             ))}
           </div>
         )}
+        <BaseDialog
+          isOpen={!!this.state.sectionIndexToAssign}
+        >
+          <div style={styles.dialogHeader}>
+            {i18n.assignCourse()}
+          </div>
+          <div style={styles.dialogContent}>
+            {i18n.assignCourseConfirm({
+              courseName: 'course name',
+              sectionName: 'section name',
+            })}
+          </div>
+          <div style={{textAlign: 'right'}}>
+            <ProgressButton
+              text={i18n.dialogCancel()}
+              onClick={this.onCloseDialog}
+              color={ProgressButton.ButtonColor.gray}
+            />
+            <ProgressButton
+              text={i18n.assign()}
+              style={{marginLeft: 5}}
+              onClick={this.updateCourse}
+              color={ProgressButton.ButtonColor.orange}
+            />
+          </div>
+        </BaseDialog>
       </div>
     );
   }
