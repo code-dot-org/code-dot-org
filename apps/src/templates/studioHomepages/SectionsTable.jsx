@@ -44,7 +44,6 @@ export const styles = {
     paddingRight: 20,
   },
   col1: {
-    lineHeight: '52px',
     width: 310
   },
   col2: {
