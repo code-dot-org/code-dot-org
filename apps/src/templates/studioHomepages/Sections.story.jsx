@@ -40,6 +40,7 @@ export default storybook => {
               },
             ]}
             codeOrgUrlPrefix = "http://code.org/"
+            isRtl={false}
           />
         )
       },
@@ -50,6 +51,7 @@ export default storybook => {
           <Sections
             sections={[]}
             codeOrgUrlPrefix = "http://code.org/"
+            isRtl={false}
           />
         )
       },

@@ -17,14 +17,21 @@ def partner_site?
 end
 
 def inline_css(css)
-  path = resolve_static('public', "css/#{css}")
-  path ||= shared_dir('css', css)
-  path = pegasus_dir('cache', 'css', css) unless File.file?(path)
-  raise "CSS not found: #{css}" unless File.file?(path)
-  css_string = Sass::Engine.new(File.read(path),
-    syntax: :scss,
-    style: rack_env?(:development) ? :none : :compressed
-  ).render.chomp
+  if css == 'style-min.css'
+    css_string = combine_css('styles_min').first
+  else
+    path = resolve_static('public', "css/#{css}")
+    path ||= shared_dir('css', css)
+    unless File.file?(path)
+      Sass::Plugin.check_for_updates
+      path = pegasus_dir('cache', 'css', css)
+    end
+    raise "CSS not found: #{css}" unless File.file?(path)
+    css_string = Sass::Engine.new(File.read(path),
+      syntax: :scss,
+      style: rack_env?(:development) ? :none : :compressed
+    ).render.chomp
+  end
 
   if rack_env?(:development)
     max_inline_css = 1024 * 10
@@ -58,4 +65,18 @@ end
 def css_retina?(is_retina = true)
   css_query_parts = ['-webkit-min-device-pixel-ratio: 2', 'min-resolution: 192dpi']
   css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
+end
+
+# Returns a concatenated, minified CSS string from all CSS files in the given path.
+def combine_css(path)
+  css_last_modified = Time.at(0)
+  css = Dir.glob(pegasus_dir('sites.v3', request.site, path, '*.css')).sort.map do |i|
+    css_last_modified = [css_last_modified, File.mtime(i)].max
+    IO.read(i)
+  end.join("\n\n")
+  css_min = Sass::Engine.new(css,
+    syntax: :scss,
+    style: :compressed
+  ).render
+  [css_min, css_last_modified]
 end

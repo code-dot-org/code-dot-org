@@ -1,0 +1,47 @@
+// Inline critical-font (~5k gzipped) into HTML that renders immediately.
+// Include this JS view in the head of common site entry-points.
+<%
+require 'json'
+font_url = '/fonts/gotham4r-critical.woff2'
+font_data = File.read(content_dir('code.org', 'public' + font_url))
+%>
+var supportsFontLoading = !!document.fonts && ("FontFace" in window);
+if (supportsFontLoading) {
+  var fontData = <%=font_data.bytes.to_json%>;
+  // Passing a Uint8Array directly is much faster than decoding a Base64 Data-URI
+  // in some browsers.
+  // Slightly larger, but not much difference when the HTML is gzip-encoded.
+  var fontDataArray = new Uint8Array(fontData);
+  var fontOptions = {
+    style: 'normal',
+    weight: 'normal',
+    // 0-9,A-Z,a-z
+    unicodeRange: 'U+0020,U+0030-0039,U+0041-005A,U+0061-007A'
+  };
+
+  window.criticalFonts = ['4r', '5r', '7r', '4i', '5i', '7i'].map(function(path) {
+    var family = "Gotham " + path;
+    var criticalFont;
+    try {
+      criticalFont = new FontFace(family, fontDataArray, fontOptions);
+    } catch (e) {
+      // Some browsers (Safari) require the font-family string to be quoted.
+      criticalFont = new FontFace("'" + family + "'", fontDataArray, fontOptions);
+    }
+    criticalFont.load();
+    document.fonts.add(criticalFont);
+    return criticalFont;
+  });
+  // Remove critical font once the full font has finished loading.
+  document.fonts.addEventListener('loadingdone', function(load) {
+    load.fontfaces.forEach(function(font) {
+      window.criticalFonts.forEach(function(criticalFont) {
+        if(criticalFont.family == font.family) {
+          document.fonts.delete(criticalFont);
+        }
+      })
+    });
+  });
+} else {
+  // Unsupported browsers just lazy-load the full font normally.
+}

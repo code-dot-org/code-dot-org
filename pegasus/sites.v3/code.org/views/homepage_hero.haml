@@ -131,14 +131,13 @@
 
   var petition;
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $(".caption").css({display: "block", opacity: 0});
 
     showQuote(null, 0);
-  }
+  });
 
   function showQuote(lastImage, nextImage)
   {
