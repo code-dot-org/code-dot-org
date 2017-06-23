@@ -294,6 +294,16 @@ module LevelsHelper
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
 
+    script = @script
+
+    # Text to speech
+    if script && script.text_to_speech_enabled?
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
+    end
+
+    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
     if level_options['embed'] || level_overrides[:embed]

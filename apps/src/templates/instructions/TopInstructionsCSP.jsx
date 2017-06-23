@@ -63,9 +63,20 @@ var styles = {
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
   },
-  audioControls: {
-    position: 'absolute',
-    right: 12,
+};
+
+var audioStyle = {
+  wrapper: {
+    float: 'right',
+  },
+  button: {
+    height: 24,
+    marginTop: '3px',
+    marginBottom: '3px',
+  },
+  buttonImg: {
+    lineHeight: '24px',
+    fontSize: 15,
   }
 };
 
@@ -189,9 +200,8 @@ var TopInstructions = React.createClass({
 
           <div style={styles.paneHeaderOverride}>
             {experiments.isEnabled('CSDTTS') &&
-            <div id="foundIt!" style={styles.audioControls}>
-              <InlineAudio src={ttsUrl}/>
-            </div>}
+              <InlineAudio src={ttsUrl} style={audioStyle}/>
+            }
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
