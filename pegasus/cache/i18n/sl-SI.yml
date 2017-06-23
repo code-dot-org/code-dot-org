@@ -391,6 +391,7 @@
   homepage_slot_text_title_hoc: Ura kode
   homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organiziraj Hour of Code
   homepage_slot_text_link_hocserved: "# uporabnikov"
   homepage_solot_text_link_volunteer: Prostovoljec/ka Ure za kodo
@@ -804,6 +805,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Novo poglavje
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Ustvarite nove razdelke in jim dodajte
     učence. Razdelki razdelijo učence v manjše skupine, tako da lahko sledite njihovemu
     napredku in upravljate z njihovimi računi.
@@ -811,6 +813,7 @@
   dashboard_sections_table_secret: Vrsta prijave
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Tečaj
+  dashboard_sections_table_pairing_allowed: Programiranje parov
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenci
   dashboard_sections_table_code: Koda razdelka
@@ -1850,42 +1853,41 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
+  header_home: Domov
+  header_courses: Predavanja
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_educate_overview: Vzgojiteljev pregled
+  header_educate_elementary: Od 1. do 5. razreda
+  header_educate_middle: Od 6. do 9. razreda
+  header_educate_high: Srednja šola
+  header_educate_hoc: Ura kode
+  header_educate_partner: Postanite naš partner
+  header_educate_beyond: Po Code.org
+  header_educate_inspire: Navduši učenca
+  header_educate_community: Spletna skupnost
+  header_educate_tools: Orodja in video posnetki
+  header_about_us: O nas
+  header_about_leadership: Vodstvo
+  header_about_donors: Donatorji
+  header_about_partners: Partnerji
+  header_about_team: Celotna ekipa
+  header_about_news: Novinarsko središče
+  header_about_evaluation: Vrednotenje
+  header_about_jobs: Delovna mesta
+  header_about_contact: Kontaktirajte nas
+  header_about_faqs: Pogosta vprašanja
+  header_learn: Učenje
+  header_teach: Predavaj
   header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_help_us: Pomagaj nam
+  header_about: O programu
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

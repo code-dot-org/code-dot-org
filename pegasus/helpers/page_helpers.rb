@@ -18,7 +18,7 @@ end
 
 def inline_css(css)
   if css == 'style-min.css'
-    css_string = combine_css('styles').first
+    css_string = combine_css('styles_min').first
   else
     path = resolve_static('public', "css/#{css}")
     path ||= shared_dir('css', css)

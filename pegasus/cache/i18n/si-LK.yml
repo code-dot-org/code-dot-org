@@ -398,6 +398,7 @@
   homepage_slot_text_title_hoc: "පැයේ කේතය"
   homepage_slot_text_blurb_hoc: "ඕනෑම අයෙකුට ඉගෙනගත හැකියි. අදම ආරම්භ කරන්න"
   homepage_slot_text_link_hoc: Hour of Code උත්සාහ කරන්න
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Hour of Code වැඩසටහනක් සංවිධානය කරන්න
   homepage_slot_text_link_hocserved: "# ක් උත්සාහ කර ඇත"
   homepage_solot_text_link_volunteer: Hour of Code සඳහා ස්වෙච්චාවෙන් ඉදිරිපත් වන්න
@@ -819,6 +820,7 @@
     යෙදුම් විවෘත අන්තික පිළිතුරු, ඉහත ඇති drop down මේනුවෙහි අදාල පාඨමාලාව තේරීමෙන්
     බලාගත හැක."
   dashboard_sections_new_section: "නව අංශයක්"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "නව කොටස් පරාස  නිර්මාණය  කර ශිෂ්‍යාවන්
     එයට ඇතුලත් කරන්න .එය  ඔබට උදව් කරනවා ශිෂ්‍යාවන් කුඩා   කණ්ඩායම් වලට සංවිධානය කරන්න
     .ඒ හරහා ඔබට  ඔවුන්ගේ  ප්‍රගුති දාරිතාවය සහ ගිණුම්  පාලනය කර හැක."
@@ -826,6 +828,7 @@
   dashboard_sections_table_secret: "පිවිසුම් වර්ගය"
   dashboard_sections_table_grade: "ශ්‍රේණිය"
   dashboard_sections_table_course: "පාඨමාලාව"
+  dashboard_sections_table_pairing_allowed: "යුගල වශයෙන් ක්‍රමලේඛනය"
   dashboard_sections_table_stage_extras: "මෙම පියවරේ ඇති අමතර දේවල්"
   dashboard_sections_table_students: "සිසුන්"
   dashboard_sections_table_code: "අංශ කේතය"
@@ -1878,9 +1881,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "පරීක්ෂණාගාරය"
   artist_shortcode: "කලාව"
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "පාඨමාලාව"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1888,7 +1890,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "පැයේ කේතය"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1906,7 +1908,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: "සංඛ්‍යාන"
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1914,6 +1916,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -52,16 +52,20 @@
           %h2.course.break
             = course[:heading]
         - else
-          .course.break{id: "course-#{course_index}", onclick: "$('#courseextra-#{course_index}').slideToggle(); $('.courseexplorer .detailcontainer').not('#courseextra-#{course_index}').slideUp();"}
+          .course.break{id: "course-#{course_index}", data: {courseindex: course_index}}
             - unless course[:starts] == 0
               %div{class: "bar-#{course[:starts]}"}
                 &nbsp;
             %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "background-color: #{"#1AC7D6" || course[:color] || '#00adbc'}"}
-              .title
-                =course[:name]
-              - if course[:subtitle]
-                .subtitle
-                  =(course[:subtitle])
+              .left
+                .title
+                  =course[:name]
+                - if course[:subtitle]
+                  .subtitle
+                    =(course[:subtitle])
+              .arrow
+                %i.arrow-down{class: "fa fa-caret-down"}
+                %i.arrow-up{class: "fa fa-caret-up"}
           .course.detailcontainer{id: "courseextra-#{course_index}", style: "display: none; color: grey; cursor: auto"}
             .arrow_box{class: "arrow-offset-#{course[:starts]}"}
               .arrow_box_content{style: "overflow: hidden"}
@@ -88,7 +92,7 @@
                     %a{href: course[:link], style: "font-size: 12px; padding-left: 0px; color: #00adbc"}
                       Learn more
                       %i.fa.fa-chevron-right
-              .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", onclick: "$('#courseextra-#{course_index}').slideUp()" }
+              .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course_index}}
                 %i.fa.fa-times{"aria-hidden" => "true"}
 
           .cleardiv{style: "clear: both"}

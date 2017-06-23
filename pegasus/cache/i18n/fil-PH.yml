@@ -400,6 +400,7 @@
   homepage_slot_text_title_hoc: Hour of Code
   homepage_slot_text_blurb_hoc: Anybody can learn. Start today
   homepage_slot_text_link_hoc: Subukan ang Hour of Code
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Host an Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -423,7 +424,7 @@
   homepage_slot_text_link_buy: Sumali
   homepage_slot_text_link_donate: Magbigay ng donasyon
   homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_header_codestudio: Code Studio student creations
+  homepage_header_codestudio: Code Studio mga gawa ng estudyante
   homepage_header_donors: Pinasasalamatan ng Code.org ang mag tagasuporta nito
   homepage_donors_seall: See all
   homepage_donors_donate: Mag-donate
@@ -809,6 +810,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Bagong section
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Gumawa ng bagong mga section at magdagdag
     ng mga estudyante dito. Ang mga section ay tumutulong para ma-organize ang mga
     estudyante sa mas maliit na mga grupo upang makita ang progreso at ma-manage ang
@@ -817,6 +819,7 @@
   dashboard_sections_table_secret: Klase ng Login
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Kurso
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Mga mag-aaral
   dashboard_sections_table_code: Section Code
@@ -1870,42 +1873,41 @@
   infinity_shortcode: inf
   playlab_shortcode: i-play
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Mga kurso
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
+  header_educate_overview: Overview ng Nagtuturo
+  header_educate_elementary: Mababang Paaralan
   header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_high: Mataas na Paaralan
   header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
+  header_educate_partner: Makipag-partner sa Amin
+  header_educate_beyond: Pagkatapos ng Code.org
+  header_educate_inspire: Magbigay Inspirasyon sa Estudyante
+  header_educate_community: Online na Komunidad
+  header_educate_tools: Mga Tools at Videos
+  header_about_us: Tungkol sa Amin
+  header_about_leadership: Pamumuno
+  header_about_donors: Mga Donor
+  header_about_partners: Mga Partner
+  header_about_team: Buong Team
   header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
+  header_about_evaluation: Ebalwasyon
+  header_about_jobs: Mga Trabaho
+  header_about_contact: Kontakin Kami
   header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_learn: Matuto
+  header_teach: Magturo
   header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_help_us: Tulungan Kami
+  header_about: Tungkol
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
