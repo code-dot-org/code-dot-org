@@ -28,10 +28,10 @@ export default storybook => {
         story: () => (
           <ExampleDialogButton
             classrooms={[
-              {id: 123, name: 'New Test Classroom', section: 'Section 1', enrollmentCode: '19uag24'},
-              {id: 456, name: 'Other Test Classroom', section: 'Section 3A', enrollmentCode: 't108sh5'},
-              {id: 101, name: 'Intro to CS', section: 'Section A', enrollmentCode: 'rt508yg'},
-              {id: 102, name: 'Intro to CS', section: 'Section B', enrollmentCode: '12gjl42'},
+              {id: '123', name: 'New Test Classroom', section: 'Section 1', enrollmentCode: '19uag24'},
+              {id: '456', name: 'Other Test Classroom', section: 'Section 3A', enrollmentCode: 't108sh5'},
+              {id: '101', name: 'Intro to CS', section: 'Section A', enrollmentCode: 'rt508yg'},
+              {id: '102', name: 'Intro to CS', section: 'Section B', enrollmentCode: '12gjl42'},
             ]}
           />
         )
