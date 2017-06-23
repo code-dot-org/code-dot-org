@@ -56,7 +56,7 @@ class Flappy < Blockly
     create!(
       level_params.merge(
         user: params[:user],
-        game: Game.flappy,
+        game: Game.custom_flappy,
         level_num: 'custom',
       )
     )
