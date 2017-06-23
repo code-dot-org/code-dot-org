@@ -395,6 +395,7 @@ Dashboard::Application.routes.draw do
 
     get 'user_admin/find_user', to: 'user_admin#find_user'
     post 'user_admin/assign_permission', to: 'user_admin#assign_permission'
+    get 'user_admin/remove_permission', to: 'user_admin#remove_permission'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'

@@ -33,7 +33,7 @@
           %tbody
             - @permissions.each do |permission|
               %tr
-                %td Revoke
+                %td= link_to 'Revoke', action: :remove_permission, user_id: @user.id, :pd_user_permission_id => permission.permission
                 %td= permission.permission
                 %td= permission.created_at
             %tr
