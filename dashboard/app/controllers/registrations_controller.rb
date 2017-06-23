@@ -9,6 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     return head(:bad_request) if params[:user].nil?
+    current_user.reload
 
     successfully_updated =
       if forbidden_change?(current_user, params)
@@ -34,6 +35,7 @@ class RegistrationsController < Devise::RegistrationsController
   def upgrade
     return head(:bad_request) if params[:user].nil?
     user_params = params[:user]
+    current_user.reload
 
     can_update =
       if current_user.teacher_managed_account?
