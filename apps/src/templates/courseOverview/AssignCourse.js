@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
+import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import AssignCourseConfirm from './AssignCourseConfirm';
 
 const styles = {
   button: {
@@ -39,30 +39,13 @@ const styles = {
   },
   nonFirstSection: {
     borderTop: `1px solid ${color.charcoal}`
-  },
-  dialogHeader: {
-    fontSize: 16,
-    marginBottom: 5,
-    fontWeight: 'bold',
-  },
-  dialogContent: {
-    fontSize: 14,
-    marginBottom: 10,
-    marginTop: 10,
-    paddingBottom: 20,
-    paddingTop: 20,
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 0,
-    borderRightWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.lighter_gray
   }
 };
 
 class AssignCourse extends Component {
   static propTypes = {
     courseId: PropTypes.number.isRequired,
+    courseName: PropTypes.string.isRequired,
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
@@ -112,7 +95,7 @@ class AssignCourse extends Component {
   }
 
   updateCourse = () => {
-    const section = this.props.sectionsInfo[this.state.SectionIndexToAssign];
+    const section = this.props.sectionsInfo[this.state.sectionIndexToAssign];
     $.ajax({
       url: `/sections/${section.id}`,
       method: 'PATCH',
@@ -129,8 +112,10 @@ class AssignCourse extends Component {
   }
 
   render() {
-    const { courseId, sectionsInfo } = this.props;
-    // TODO: dialog gets its own component
+    const { courseId, courseName, sectionsInfo } = this.props;
+    const { dropdownOpen, sectionIndexToAssign } = this.state;
+    const section = sectionsInfo[sectionIndexToAssign];
+
     return (
       <div>
         <ProgressButton
@@ -138,12 +123,12 @@ class AssignCourse extends Component {
           text={i18n.assignCourse()}
           style={styles.button}
           onClick={this.onClickDropdown}
-          icon={this.state.dropdownOpen ? "caret-up" : "caret-down"}
+          icon={dropdownOpen ? "caret-up" : "caret-down"}
           iconStyle={styles.icon}
           color={ProgressButton.ButtonColor.orange}
         />
 
-        {this.state.dropdownOpen && (
+        {dropdownOpen && (
           <div style={styles.dropdown}>
             <a
               href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?newSection=${courseId}#/sections`}
@@ -166,32 +151,14 @@ class AssignCourse extends Component {
             ))}
           </div>
         )}
-        <BaseDialog
-          isOpen={!!this.state.sectionIndexToAssign}
-        >
-          <div style={styles.dialogHeader}>
-            {i18n.assignCourse()}
-          </div>
-          <div style={styles.dialogContent}>
-            {i18n.assignCourseConfirm({
-              courseName: 'course name',
-              sectionName: 'section name',
-            })}
-          </div>
-          <div style={{textAlign: 'right'}}>
-            <ProgressButton
-              text={i18n.dialogCancel()}
-              onClick={this.onCloseDialog}
-              color={ProgressButton.ButtonColor.gray}
-            />
-            <ProgressButton
-              text={i18n.assign()}
-              style={{marginLeft: 5}}
-              onClick={this.updateCourse}
-              color={ProgressButton.ButtonColor.orange}
-            />
-          </div>
-        </BaseDialog>
+        {sectionIndexToAssign && (
+          <AssignCourseConfirm
+            courseName={courseName}
+            sectionName={section.name}
+            onClose={this.onCloseDialog}
+            onConfirm={this.updateCourse}
+          />
+        )}
       </div>
     );
   }

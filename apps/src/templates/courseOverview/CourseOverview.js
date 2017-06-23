@@ -48,6 +48,7 @@ export default class CourseOverview extends Component {
           <AssignCourse
             sectionsInfo={sectionsInfo}
             courseId={id}
+            courseName={title}
           />
         )}
         {scripts.map((script, index) => (
