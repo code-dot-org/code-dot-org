@@ -118,11 +118,12 @@ export function destroyCircuitPlaygroundComponents(components) {
   delete components.buttonL;
   delete components.buttonR;
 
-  // TODO (captouch): Restore when we re-enable
-  // Remove listeners from each TouchSensor
-  // TOUCH_PINS.forEach(pin => {
-  //   delete components[`touchPad${pin}`];
-  // });
+  if (experiments.isEnabled('maker-captouch')) {
+    // Remove listeners from each TouchSensor
+    TOUCH_PINS.forEach(pin => {
+      delete components[`touchPad${pin}`];
+    });
+  }
 }
 
 /**

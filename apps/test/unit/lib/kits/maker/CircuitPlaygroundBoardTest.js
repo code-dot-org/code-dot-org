@@ -6,6 +6,7 @@ import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBo
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
 import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
+import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -61,6 +62,10 @@ describe('CircuitPlaygroundBoard', () => {
   itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
+    // TODO (bbuchanan): Remove when maker-captouch is on by default.
+    before(() => experiments.setEnabled('maker-captouch', true));
+    after(() => experiments.setEnabled('maker-captouch', false));
+
     it('initializes a set of components', () => {
       return board.connect().then(() => {
         expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
@@ -124,7 +129,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connectToFirmware()
         .then(() => board.initializeComponents())
         .then(() => {
-          // TODO (captouch): Add 8 when we re-enable
+          // TODO (bbuchanan): Add 8 when we re-enable captouch by default
           expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         });
     });
