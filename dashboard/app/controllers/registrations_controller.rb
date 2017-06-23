@@ -43,8 +43,10 @@ class RegistrationsController < Devise::RegistrationsController
       if current_user.teacher_managed_account?
         if current_user.secret_word_account?
           secret_words_match = user_params[:secret_words] == current_user.secret_words
-          error_string = user_params[:secret_words].blank? ? :blank_plural : :invalid_plural
-          current_user.errors.add(:secret_words, error_string) unless secret_words_match
+          unless secret_words_match
+            error_string = user_params[:secret_words].blank? ? :blank_plural : :invalid_plural
+            current_user.errors.add(:secret_words, error_string)
+          end
           secret_words_match
         else
           true
