@@ -486,11 +486,15 @@ class User < ActiveRecord::Base
     # skip the db lookup if we are already invalid
     return unless errors.blank?
 
-    if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
-        (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
-        other_user != self
+    # rubocop:disable Lint/UselessAssignment
+    if email.present? && other_user = User.find_by_email_or_hashed_email(email) &&
+      self != other_user
       errors.add :email, I18n.t('errors.messages.taken')
+    elsif hashed_email.present? && other_user = User.find_by_hashed_email(hashed_email) &&
+      self != other_user
+      errors.add :hashed_email, I18n.t('errors.messages.taken')
     end
+    # rubocop:enable Lint/UselessAssignment
   end
 
   def self.normalize_gender(v)
