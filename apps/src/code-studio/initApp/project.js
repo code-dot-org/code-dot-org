@@ -530,6 +530,9 @@ var projects = module.exports = {
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
+        if (appOptions.skin === 'elsa' || appOptions.skin === 'anna') {
+          return 'frozen';
+        }
         return 'artist';
       case 'calc':
         return 'calc';
