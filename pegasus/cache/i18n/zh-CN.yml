@@ -197,8 +197,8 @@
   petition_thankyou: "谢谢你在请愿书上签名"
   continue_learning_header: "继续学习"
   continue_learning_body: "你有很多的选择。你可以在线，或在当地学校或夏令营学习。"
-  learn_code_studio: "尝试代码工作室课程"
-  learn_next_level: "继续到下一级别"
+  learn_code_studio: "尝试Code.org的课程"
+  learn_next_level: "尝试另一个 Code.org 课程"
   learn_online: "请尝试其他在线课程"
   learn_classes: "查找本地的课程"
   learn_back_to_minecraft: "通过《我的世界》不断学习"
@@ -228,8 +228,8 @@
   stats_nina: '"每一天学生们都如此 &mdash; 100%的参与."-尼娜尼科尔斯佩里，老师'
   stats_student: '"我知到这是一个<b>千载难逢</b> 的机会。" - 马里亚纳.阿尔泽特，五年级学生'
   stats_michael: "“我<b>从来没有</b>见到我的学生们抱有如此大的学习热情。”- 弗兰克. 马丁内斯，教师。"
-  studiobar_title: "探索我们的 <a href='http://studio.code.org'>《编程工作室》</a>"
-  studiobar_title_nolink: "探索我们的 编程工作室"
+  studiobar_title: "探索<a href='http://studio.code.org'>Code.org的课程</a>"
+  studiobar_title_nolink: "探索Code.org的课程"
   studiobar_elementary_title: "初级课程"
   studiobar_elementary_body: "为 K&#8209;5 所制的三个新课程"
   studiobar_hoc_title: "编程一小时"
@@ -258,8 +258,8 @@
   homepage_hero_text_student5: "&ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;杰拉尔多老师。"
   homepage_hero_text_teacher1: "&ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;弗洛雷萨老师"
   homepage_hero_text_teacher2: "&ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;亚当，老师"
-  homepage_hero_text_stat_loc: "两百五十万女孩已经在编程工作室里注册了。"
-  homepage_hero_text_stat_students: "代码工作室有 #student_count 个学生帐户"
+  homepage_hero_text_stat_loc: "两百五十万女孩已经在Code.org里注册学习了。"
+  homepage_hero_text_stat_students: 'Code.org有 #student_count 个学生帐户'
   homepage_hero_text_stat_served: "编程一小时：已有 #served 次参与"
   homepage_slot_text_hoc: "编程一小时"
   homepage_slot_text_frozen: "与安娜与埃尔莎一起来玩冰雪奇缘"
@@ -300,13 +300,14 @@
   homepage_slot_text_title_hoc: "编程一小时"
   homepage_slot_text_blurb_hoc: "任何人都可学习。立即开始"
   homepage_slot_text_link_hoc: "来试试“编程一小时”项目！"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "举办一次“编程一小时”活动"
   homepage_slot_text_link_hocserved: "# 次参与"
   homepage_solot_text_link_volunteer: "成为编程一小时志愿者"
   homepage_slot_text_title_students: "学生"
   homepage_slot_text_blurb_students: "体验我们所有的教程"
   homepage_slot_text_blurb_students_courses: "探索我们的课程"
-  homepage_slot_text_link_codestudio: "尝试编程工作室"
+  homepage_slot_text_link_codestudio: "尝试Code.org的课程"
   homepage_slot_text_link_local: "找一个当地的班级"
   homepage_slot_text_link_othercourses: "其他在线的课程"
   homepage_slot_text_title_educators: "教育工作者"
@@ -321,9 +322,9 @@
   homepage_slot_text_blurb_advocates: "支持我们的工作"
   homepage_slot_text_link_stats: "请看统计信息"
   homepage_slot_text_link_buy: "加入进来"
-  homepage_slot_text_link_donate: "捐一笔钱"
+  homepage_slot_text_link_donate: "捐赠"
   homepage_slot_text_link_shop: T 恤，帽子，还有更多的东西
-  homepage_header_codestudio: "编程工作室 学生作品"
+  homepage_header_codestudio: Code.org学生作品
   homepage_header_donors: Code.org 感谢各位支持者
   homepage_donors_seall: "查看全部"
   homepage_donors_donate: "捐赠"
@@ -457,7 +458,7 @@
     7r'', sans-serif;"> 热衷于计算机科学教育的人士</span> 能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性
     （也可以通过视频聊天的方式讨论）<span style="font-family: ''Gotham 7r'', sans-serif;">激发 </span>
     他们学生的热情。'
-  volunteer_engineer_submission_intro_guide: 了解更多我们的 <a href="%{volunteer_guide}">志愿者项目</a>。
+  volunteer_engineer_submission_intro_guide: 进一步了解<a href="%{volunteer_guide}">志愿者项目</a>。
   volunteer_engineer_submission_intro_signup: 如果您是计算机科学专业的学生或软件专家，请输入以下信息。用 <span
     class="form-required-field"> *</span> 标记的字段是必填项。
   volunteer_engineer_submission_intro_links: 需要找志愿者吗? 用<a href="%{volunteer_local}">
@@ -584,8 +585,9 @@
   dashboard_action_required: "必填"
   dashboard_action_print_certificates: "打印证书"
   dashboard_assessments_view: "查看评价："
-  dashboard_assessments_none: "多数教师通过“查看进度”标签来知道学生的进度。如果你想给进行学生额外的评估，你可以在课程计划中找到推荐的问题和领域。这些都是在代码工作室之外完成的。"
-  dashboard_assessments_none_part2: "如果你在教中学或高中课程，我们代码工作室提供的部分评估问题可帮助你的学生用于准备 AP 考试。若要使用这些评估，首先将课程分配到课堂，然后上面的下拉列表中选择课程，你将会在此处看到学生的答案。"
+  dashboard_assessments_none: "多数教师通过“查看进度”标签来知道学生的进度。如果你想给进行学生额外的评估，你可以在课程计划中找到推荐的问题和领域。这些都是Code.org之外的资源。"
+  dashboard_assessments_none_part2: "如果你在教中学或高中课程，Code.org提供的部分评估问题可帮助你的学生用于准备 AP
+    考试。若要使用这些评估，首先将课程分配到课堂，然后在上面的列表中选择课程，你将会在此处看到学生的答案。"
   dashboard_assessments_summaries: "评估总结"
   dashboard_assessments_answers: "所有评估的答案"
   dashboard_surveys_answers: "调查"
@@ -607,7 +609,7 @@
   dashboard_navigation_view_assessments_surveys: "评估/调查"
   dashboard_navigation_add_students: "添加学生"
   dashboard_navigation_manage_students: "管理学生"
-  dashboard_navigation_lesson_plans_resources: "课程计划及资源"
+  dashboard_navigation_lesson_plans_resources: "教案标准"
   dashboard_navigation_view_stats: "统计信息"
   dashboard_navigation_section: "学习小组：%{section_name}"
   dashboard_navigation_student: "学生：%{student_name}"
@@ -624,11 +626,13 @@
   dashboard_responses_view: "查看文本响应 ︰"
   dashboard_responses_none: "我们的大多数课程是为较小年纪的孩子设计的，不要求学生用文本回答问题，所以，你不会在这里看到任何文本答案。给初中或高中学生的课程里，通过在上面的下拉框中选择，你能分配给他们的开放式的文本问题。"
   dashboard_sections_new_section: "新的学习小组"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "创建新的学习小组并为其添加学生。学习小组可以帮助您以小组为单位来管理学生，以便您跟踪他们的进度和管理他们的帐户。"
   dashboard_sections_table_section: "单元"
   dashboard_sections_table_secret: "登录类型"
   dashboard_sections_table_grade: "年级"
   dashboard_sections_table_course: "课程："
+  dashboard_sections_table_pairing_allowed: "结对编程"
   dashboard_sections_table_stage_extras: "此阶段的额外资源"
   dashboard_sections_table_students: "学生"
   dashboard_sections_table_code: "单元代码"
@@ -678,9 +682,8 @@
   dashboard_students_auto_generated: "自动生成"
   dashboard_students_reset_secret: "重置密钥"
   dashboard_students_reset_password: "重置密码"
-  dashboard_students_share_section: "与您的学生共享此学习小组的登录页面："
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section: "让您的学生点击<a href=%{join_url}>%{join_url}</a>，并且输入代码(%{section_code})。"
+  dashboard_students_share_section_secondary: "或者，将这个小组的登录页面共享给你的学生："
   dashboard_students_print_info: "打印出包含学生登录信息的卡片"
   dashboard_students_secret_picture_title: "秘密图片"
   dashboard_students_secret_picture: "这一节使用 <b>图片</b> 作为密钥的类型。 即您的每位学生都有一张密钥图片来代替密码用于登录。
@@ -694,7 +697,7 @@
   dashboard_students_no_email: "如果您的学生没有电子邮件地址，或您想为其创建帐户，请将学习小组的密钥类型更改为 <b>单词</b>
     或 <b>图片</b>。"
   dashboard_students_print_page: "打印此页面"
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: "访问%{join_url}， 并输入%{section_code}"
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">点击这里</a>以获取我们的隐私文件，您可以跟您的学生共享此文件或打印分发给他们的。
   dashboard_curriculum_k5_title: K-5 教育人才资源
@@ -897,8 +900,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: "单元 5︰ 数据和社会"
+  csd6_name: "单元 6︰ 物理计算"
   csp1_name: "第1单元：互联网"
   csp2_name: "第2单元︰ 数字信息"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -926,7 +929,7 @@
   starwarsblocks_name: "星球大战(块)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: "简单加密"
   text-compression_name: Text Compression
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
@@ -1383,42 +1386,41 @@
   infinity_shortcode: inf
   playlab_shortcode: "玩"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_home: "首页"
+  header_courses: "课程"
+  header_project_gallery: "项目集"
+  header_sections: "小组"
+  header_professional_learning: "专业学习"
+  header_educate_overview: "教育工作者概述"
+  header_educate_elementary: "小学"
+  header_educate_middle: "中学"
+  header_educate_high: "高中"
+  header_educate_hoc: "编程一小时"
+  header_educate_partner: "与我们合作"
+  header_educate_beyond: "超越Code.org的内容"
+  header_educate_inspire: "鼓舞学生"
+  header_educate_community: "在线社区"
+  header_educate_tools: "工具和视频"
+  header_about_us: "关于我们"
+  header_about_leadership: "管理团队"
+  header_about_donors: "捐助者"
+  header_about_partners: "合作伙伴"
+  header_about_team: "全体成员"
+  header_about_news: "新闻室"
+  header_about_evaluation: "评估"
+  header_about_jobs: "招聘"
+  header_about_contact: "联系我们"
+  header_about_faqs: "常见问答"
+  header_learn: "学习"
+  header_teach: "教学"
+  header_stats: "统计信息"
+  header_help_us: "帮助我们"
+  header_about: "关于"
+  header_teacher_community: "教师社区"
+  header_help_support: "帮助和支持 "
+  header_report_bug: "报告错误"
+  header_tutorials: "教程"
+  header_documentation: "使用文档"
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
