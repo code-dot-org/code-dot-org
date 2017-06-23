@@ -61,21 +61,6 @@ const styles = {
     position: 'absolute',
     zIndex: 2,
   },
-  checkIcon: {
-    position: 'absolute',
-    zIndex: 3,
-    fontSize: 18,
-    color: color.teal,
-    marginLeft: 400,
-    background: color.white,
-    padding: 10,
-    borderRadius: 100,
-    borderWidth: 1,
-    borderColor: color.gray,
-    borderStyle: 'solid',
-    display: 'inline',
-    marginTop: 15
-  },
   continueLink: {
     color: color.teal,
     fontSize: 14,
