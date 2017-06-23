@@ -2,10 +2,24 @@ class Pd::WorkshopCertificateController < ApplicationController
   before_action :authenticate_user!
   load_resource :enrollment, class: 'Pd::Enrollment', find_by: :code, id_param: :enrollment_code
 
+  HARDCODED_CSD_FACILITATOR = 'Dani McAvoy'
+  HARDCODED_CSP_FACILITATOR = 'Brook Osborne'
+
   def generate_certificate
     workshop = @enrollment.workshop
 
-    facilitator_names = workshop.facilitators.map {|f| f.name.strip}.sort
+    if workshop.teachercon?
+      if workshop.course == Pd::Workshop::COURSE_CSD
+        facilitator_names = [HARDCODED_CSD_FACILITATOR]
+      elsif workshop.course == Pd::Workshop::COURSE_CSP
+        facilitator_names = [HARDCODED_CSP_FACILITATOR]
+      else
+        facilitator_names = ["Code.org team"]
+      end
+    else
+      facilitator_names = workshop.facilitators.map {|f| f.name.strip}.sort
+    end
+
     facilitator_fields = facilitator_names.each_with_index.map do |name, i|
       {
         string: name,

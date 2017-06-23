@@ -20,7 +20,7 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
 
     # Link to the certificate
     @landing_page_data = {
-      last_workshop_survey_url: last_enrollment_with_pending_survey && CDO.code_org_url("/pd-workshop-survey/#{last_enrollment_with_pending_survey.code}"),
+      last_workshop_survey_url: last_enrollment_with_pending_survey.try(:exit_survey_url),
       last_workshop_survey_course: last_enrollment_with_pending_survey.try(:workshop).try(:course),
       summarized_plc_enrollments: summarized_plc_enrollments
     }.compact
