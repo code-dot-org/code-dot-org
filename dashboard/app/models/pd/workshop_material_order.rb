@@ -35,12 +35,6 @@ require_dependency 'pd/mimeo_rest_client'
 require 'state_abbr'
 module Pd
   class WorkshopMaterialOrder < ActiveRecord::Base
-    USER_CORRECTABLE_ORDER_ERRORS = [{
-      match_text: 'Address found, but requires a apartment/suite.',
-      field: :apartment_or_suite,
-      message: 'is required for this address'
-    }].freeze
-
     # Make sure the phone number contains at least 10 digits.
     # Allow any format and additional text, such as extensions.
     PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
@@ -91,28 +85,8 @@ module Pd
       end
     end
 
-    validate :no_user_correctable_order_errors?
-    # Validates that the order error is not a known user-correctable error.
-    # Note: the order error response body has fields ErrorCode and Message, for example:
-    # {
-    #   ErrorCode: 'InternalServerError',
-    #   Message: "PlaceOrder error occurs for andrew@code.org :
-    #             The recipient Andrew Oberhardt has address validation issue:
-    #             Address found, but requires a apartment/suite."
-    # }
-    def no_user_correctable_order_errors?
-      return if shipped?
-      error_message = order_error_body.try(:[], 'Message')
-      if error_message
-        USER_CORRECTABLE_ORDER_ERRORS.each do |user_correctable_error|
-          if error_message.include? user_correctable_error[:match_text]
-            errors.add(user_correctable_error[:field], user_correctable_error[:message])
-          end
-        end
-      end
-    end
-
     scope :active, -> {where(tracking_id: nil)}
+    scope :unordered, -> {where(order_id: nil)}
     scope :successfully_ordered, -> {where.not(order_id: nil)}
     scope :shipped, -> {where(order_status: MimeoRestClient::STATUS_SHIPPED)}
     scope :with_order_errors, -> {where.not(order_error: nil)}
@@ -163,16 +137,19 @@ module Pd
     #   on error: order_error
     # This is idempotent. Once an order has been successfully placed, subsequent calls will
     #   return the existing response.
+    # @param max_attempts [Integer] Number of attempts on known retryable errors for each API call
+    #   (Default 2, i.e. one retry)
     # @return [Hash, nil] either the raw order response, or nil if no order was made or it failed
     # @raise [RuntimeError] if the model fails validation.
-    def place_order
+    def place_order(max_attempts: 2)
       raise "Fix errors before ordering: #{errors.full_messages}" unless valid?
       return order_response if ordered?
 
-      self.order_attempted_at = Time.zone.now
+      update! order_attempted_at: Time.zone.now
       response = nil
       begin
-        response = MimeoRestClient.new.place_order(
+        client_params = {max_attempts: max_attempts}
+        response = MimeoRestClient.new(client_params).place_order(
           first_name: enrollment.first_name,
           last_name: enrollment.last_name,
           company_name: school_or_company,
@@ -186,15 +163,14 @@ module Pd
           phone_number: phone_number
         )
 
-        self.ordered_at = order_attempted_at
-        self.order_response = response.to_json
-        self.order_error = nil
-        self.order_id = response['OrderFriendlyId']
+        update!(
+          ordered_at: order_attempted_at,
+          order_response: response.to_json,
+          order_error: nil,
+          order_id: response['OrderFriendlyId']
+        )
       rescue RestClient::ExceptionWithResponse => error
-        is_correctable = USER_CORRECTABLE_ORDER_ERRORS.any? do |uce|
-          error.response.try(:body).try(:include?, uce[:match_text])
-        end
-        self.order_error = report_error(:place_order, error, notify_honeybadger: !is_correctable).to_json
+        update! order_error: report_error(:place_order, error).to_json
       end
 
       response
@@ -224,13 +200,15 @@ module Pd
       return nil unless order_id
       return order_status if MimeoRestClient.final_status? order_status
 
-      self.order_status_last_checked_at = Time.zone.now
+      update! order_status_last_checked_at: Time.zone.now
       begin
         new_status = MimeoRestClient.new(client_params).get_status order_id
 
         if new_status != order_status
-          self.order_status = new_status
-          self.order_status_changed_at = order_status_last_checked_at
+          update!(
+            order_status: new_status,
+            order_status_changed_at: order_status_last_checked_at
+          )
         end
       rescue RestClient::ExceptionWithResponse => error
         report_error :check_status, error
@@ -261,6 +239,7 @@ module Pd
     # Parse and report error
     # @param method [Symbol]
     # @param error [RestClient::ExceptionWithResponse]
+    # @param notify_honeybadger [Boolean] default: true
     # @return [Hash] hash of parsed error details, code: and body:
     def report_error(method, error, notify_honeybadger: true)
       # error response should have a JSON body, but in case the response is missing (i.e. timeout), or

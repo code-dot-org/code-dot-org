@@ -400,6 +400,7 @@
   homepage_slot_text_title_hoc: "ساعتی با کد"
   homepage_slot_text_blurb_hoc: "هرکسی می تواند بیاموزد. امروز شروع کنید"
   homepage_slot_text_link_hoc: "ساعتِ کد نویسی را امتحان کنید"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "میزبان یک ساعت کدزنی باشید"
   homepage_slot_text_link_hocserved: "# تائید شده"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -815,6 +816,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "بخش تازه"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "ایجاد بخش های جدید و افزودن دانش آموزان
     به آنها. بخش ها به شما کمک میکنند دانش آموزان را در گروه های کوچکتر سازماندهی
     کنید تا شما بتوانید پیشرفت آنهای را پیگیری و حساب کاربری آنها را مدیریت نمایید."
@@ -822,6 +824,7 @@
   dashboard_sections_table_secret: "نوع ورود"
   dashboard_sections_table_grade: "درجه"
   dashboard_sections_table_course: "دوره"
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "دانش آموزان"
   dashboard_sections_table_code: "بخش کد"
@@ -1906,7 +1909,6 @@
   infinity_shortcode: inf
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
   header_courses: Courses
   header_project_gallery: Project Gallery
@@ -1942,6 +1944,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
