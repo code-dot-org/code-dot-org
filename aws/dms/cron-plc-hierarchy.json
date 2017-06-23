@@ -51,6 +51,9 @@
       "rule-action": "include"
     },
     {
+       DO NOT MERGE 
+    }
+    {
       "rule-type": "selection",
       "rule-id": "6",
       "rule-name": "6",
