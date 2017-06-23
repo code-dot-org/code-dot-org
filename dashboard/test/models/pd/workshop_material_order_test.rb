@@ -177,24 +177,6 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     assert_equal ['Street must be a valid street address (no PO boxes)'], order.errors.full_messages
   end
 
-  test 'known user correctable error validation: apartment or suite required' do
-    order_error = {
-      ErrorCode: 'InternalServerError',
-      Message: 'PlaceOrder error occurs for andrew@code.org : '\
-        'The recipient Andrew Oberhardt has address validation issue: '\
-        'Address found, but requires a apartment/suite.'
-    }
-
-    @mock_mimeo_rest_client.expects(:place_order).raises(RestClient::BadRequest)
-    RestClient::BadRequest.any_instance.stubs(:response).returns(stub(code: 400, body: order_error.to_json))
-    Honeybadger.expects(:notify).never
-
-    order = build :pd_workshop_material_order, apartment_or_suite: nil
-    order.place_order
-    refute order.valid?
-    assert_equal ['Apartment or suite is required for this address'], order.errors.full_messages
-  end
-
   test 'place_order' do
     @mock_mimeo_rest_client.expects(:place_order).with(
       first_name: @enrollment.first_name,
