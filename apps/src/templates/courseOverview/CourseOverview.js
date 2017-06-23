@@ -2,12 +2,15 @@ import React, { Component, PropTypes } from 'react';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import CourseScript from './CourseScript';
 import AssignCourse from './AssignCourse';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   description: {
     marginBottom: 20
   }
 };
+
+const showCourseAssignment = experiments.isEnabled('assignCourse');
 
 export default class CourseOverview extends Component {
   static propTypes = {
@@ -41,7 +44,7 @@ export default class CourseOverview extends Component {
         <div style={styles.description}>
           {viewAs === ViewType.Student ? descriptionStudent : descriptionTeacher}
         </div>
-        {isTeacher && (
+        {showCourseAssignment && isTeacher && (
           <AssignCourse
             sectionsInfo={sectionsInfo}
             courseId={id}
