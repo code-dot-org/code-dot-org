@@ -5,14 +5,14 @@ class SectionsController < ApplicationController
     @secret_pictures = SecretPicture.all.shuffle
   end
 
-  # Allows you to update a section's course_id
+  # Allows you to update a section's course_id. Clears any assigned script_id
+  # in the process
   def update
-    # TODO: tests
     section = Section.find(params[:id])
     authorize! :manage, section
 
     section.update!(course_id: params[:course_id], script_id: nil)
-    render json: section.summarize
+    render json: {}
   end
 
   def log_in
