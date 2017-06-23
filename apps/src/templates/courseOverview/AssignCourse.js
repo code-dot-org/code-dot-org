@@ -4,6 +4,7 @@ import Radium from 'radium';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import i18n from '@cdo/locale';
 
 const styles = {
   button: {
@@ -88,7 +89,6 @@ class AssignCourse extends Component {
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
-        // TODO : script too?
         course_id: this.props.courseId
       }),
     }).done(result => {
@@ -100,8 +100,6 @@ class AssignCourse extends Component {
   }
 
   render() {
-    // TODO: i18n
-    // TODO: behind flag?
     const { courseId, sectionsInfo } = this.props;
     return (
       <div>
@@ -121,7 +119,7 @@ class AssignCourse extends Component {
               href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?newSection=${courseId}#/sections`}
               style={styles.section}
             >
-              New Section...
+              {i18n.newSection()}...
             </a>
             {sectionsInfo.map((section, index) => (
               <a
