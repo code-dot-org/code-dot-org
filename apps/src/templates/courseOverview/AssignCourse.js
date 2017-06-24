@@ -43,6 +43,11 @@ const styles = {
   }
 };
 
+/**
+ * A dropdown component that shows a list of sections for the current user, and
+ * lets them assign the current course to any of those sections (after accepting
+ * a confirmation dialog)
+ */
 class AssignCourse extends Component {
   static propTypes = {
     courseId: PropTypes.number.isRequired,
@@ -160,7 +165,7 @@ class AssignCourse extends Component {
             ))}
           </div>
         )}
-        {sectionIndexToAssign && (
+        {sectionIndexToAssign !== null && (
           <AssignCourseConfirm
             courseName={courseName}
             sectionName={section.name}
