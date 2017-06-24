@@ -36,7 +36,7 @@ class RegistrationsController < Devise::RegistrationsController
     return head(:bad_request) if params[:user].nil?
     params_to_pass = params.deep_dup
     # Set provider to nil to mark the account as self-managed
-    user_params = params_to_pass[:user].merge(provider: nil)
+    user_params = params_to_pass[:user].merge!({provider: nil})
     current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
     can_update =
