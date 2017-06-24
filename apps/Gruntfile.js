@@ -432,7 +432,8 @@ testsContext.keys().forEach(testsContext);
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
     'courses/show':                 './src/sites/studio/pages/courses/show.js',
-    'courses/edit':                 './src/sites/studio/pages/courses/edit.js'
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
+    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js'
   };
 
   var otherEntries = {
