@@ -178,29 +178,29 @@ function addGeocomplete() {
   }
 
   $("#geocomplete").geocomplete(geocomplete_options)
-    .bind("geocode:result", function (event, result) {
-      gmap.fitBounds(result.geometry.viewport);
+  .bind("geocode:result", function (event, result) {
+    gmap.fitBounds(result.geometry.viewport);
 
-      var bounds = gmap.getBounds();
-      var marker_found = false;
+    var bounds = gmap.getBounds();
+    var marker_found = false;
 
-      while (!marker_found && gmap.getZoom() > 4) {
-        $.each(markersByLocation, function (index, marker) {
-          if (bounds.contains(marker.getPosition())) {
-            marker_found = true;
-          }
-        });
-
-        if (!marker_found) {
-          gmap.setZoom(gmap.getZoom() - 1);
-          bounds = gmap.getBounds();
+    while (!marker_found && gmap.getZoom() > 4) {
+      $.each(markersByLocation, function (index, marker) {
+        if (bounds.contains(marker.getPosition())) {
+          marker_found = true;
         }
-      }
+      });
 
-      if (html5_storage_supported()) {
-        localStorage['geocomplete'] = result.formatted_address;
+      if (!marker_found) {
+        gmap.setZoom(gmap.getZoom() - 1);
+        bounds = gmap.getBounds();
       }
-    });
+    }
+
+    if (html5_storage_supported()) {
+      localStorage['geocomplete'] = result.formatted_address;
+    }
+  });
 
   $("#btn-submit").click(function () {
     $("#geocomplete").trigger("geocode");
