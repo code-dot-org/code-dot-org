@@ -1244,7 +1244,8 @@ Maze.scheduleFail = function (forward) {
                      frame);
   // Play sound and animation for hitting wall or obstacle
   var squareType = Maze.map.getTile(targetY, targetX);
-  if (squareType === SquareType.WALL || squareType === undefined) {
+  if (squareType === SquareType.WALL || squareType === undefined ||
+    (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE)) {
     // Play the sound
     studioApp().playAudio('wall');
     if (squareType !== undefined) {
