@@ -19,7 +19,6 @@ const styles = {
     height: 72,
     width: 940,
     backgroundColor: color.white,
-    // marginTop: 20,
     marginBottom: 20,
     float: 'left'
   },
@@ -120,7 +119,7 @@ const Notification = React.createClass({
       success: 'check-circle',
       failure: 'exclamation-triangle',
       warning: 'exclamation-triangle',
-      course: 'pencil-square-o'
+      course: 'plus'
     };
 
     if (!this.state.open) {
