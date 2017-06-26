@@ -1258,7 +1258,10 @@ Maze.scheduleFail = function (forward) {
       // Remove cracked ice, replace surrounding ice with cracked ice.
       Maze.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
         if (cell.getTile() === SquareType.OPEN) {
-          tileElement.setAttribute('x', tileElement.getAttribute('x') - 50);
+          tileElement.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.largerObstacleAnimationTiles
+          );
         } else if (cell.getTile() === SquareType.OBSTACLE) {
           tileElement.setAttribute('opacity', 0);
         }
