@@ -187,6 +187,7 @@ const InlineAudio = React.createClass({
             />
           </div>
           <div
+            className="playPause"
             style={[styles.button, styles.playPauseButton,
               (this.props.style && this.props.style.button) ? this.props.style.button : null]}
             onClick={this.toggleAudio}
