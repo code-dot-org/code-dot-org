@@ -84,19 +84,15 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'name is required' do
-    assert_does_not_create(Section) do
-      section = Section.new user: @teacher
-      refute section.valid?
-      assert_equal ['Name is required'], section.errors.full_messages
-    end
+    section = build :section, name: nil
+    refute section.valid?
+    assert_equal ['Name is required'], section.errors.full_messages
   end
 
   test 'user is required' do
-    assert_does_not_create(Section) do
-      section = Section.new name: 'a section'
-      refute section.valid?
-      assert_equal ['User is required', 'User must be a teacher'], section.errors.full_messages
-    end
+    section = build :section, user: nil
+    refute section.valid?
+    assert_equal ['User is required', 'User must be a teacher'], section.errors.full_messages
   end
 
   test "user must be teacher" do
@@ -163,6 +159,14 @@ class SectionTest < ActiveSupport::TestCase
     refute follower.reload.deleted?
   end
 
+  test 'add_student raises for admin students' do
+    assert_raises do
+      assert_does_not_create(Follower) do
+        @section.add_student (create :admin)
+      end
+    end
+  end
+
   test 'add_and_remove_student moves enrollment' do
     old_section = create :section
     new_section = create :section
@@ -184,7 +188,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'section_type validation' do
-    section = create :section
+    section = build :section
 
     section.section_type = 'invalid_section_type'
     refute section.valid?
@@ -249,10 +253,16 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'teacher_dashboard_url' do
-    section = create :section
+    section = build :section
 
     expected_url = "https://#{CDO.pegasus_hostname}/teacher-dashboard#/sections/#{section.id}/manage"
     assert_equal expected_url, section.teacher_dashboard_url
+  end
+
+  test 'clean_data' do
+    section = create :section
+    section.clean_data
+    assert_equal Section::SYSTEM_DELETED_NAME, section.reload.name
   end
 
   test 'default_script: no script or course assigned' do
@@ -288,5 +298,77 @@ class SectionTest < ActiveSupport::TestCase
 
     section = create :section, script: nil, course: course
     assert_equal script1, section.default_script
+  end
+
+  test 'summarize: section with a course assigned' do
+    course = create :course, name: 'somecourse'
+    section = create :section, script: nil, course: course
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with a script assigned' do
+    # Use an existing script so that it has a translation
+    script = Script.find_by_name('jigsaw')
+    section = create :section, script: script, course: nil
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: 'Jigsaw',
+      linkToAssigned: '/s/jigsaw',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with both a course and a script' do
+    # Use an existing script so that it has a translation
+    script = Script.find_by_name('jigsaw')
+    course = create :course, name: 'somecourse'
+    # If this were a real section, it would actually have a script that is part of
+    # the provided course
+    section = create :section, script: script, course: course
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: 'somecourse',
+      linkToAssigned: '/courses/somecourse',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
+  end
+
+  test 'summarize: section with neither course or script assigned' do
+    section = create :section, script: nil, course: nil
+
+    expected = {
+      id: section.id,
+      name: section.name,
+      linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+      assignedTitle: '',
+      linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
+      numberOfStudents: 0,
+      linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+      sectionCode: section.code
+    }
+    assert_equal expected, section.summarize
   end
 end

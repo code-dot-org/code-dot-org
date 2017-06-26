@@ -1,9 +1,10 @@
 name 'CSD U1 Input Output Intro'
+display_name 'Sample App'
 title 'title'
 description 'description here'
 href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
-# Input / Output
+# Problem Solving with Apps
 
 Look at the picture below.
 
@@ -11,16 +12,15 @@ Look at the picture below.
 ![](https://images.code.org/508aa98718310afbb5951ff08c6376cc-image-1473443588812.jpg)
 
 
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
 ## Discussion Questions
 
 * What problem does this piece of software address?
 
-* What information is input to the smartphone?
-* What information is stored in the smartphone?
-* What information is processed by the smartphone?
-* What information is output by the smartphone?
+* What role do input, output, storage, and processing play in this app?
 
-
-* What other types of input are available to the smartphone?
+Students should understand that there are different types of input to a computer, which may be appropriate for different types of programs. They also may see that some information (English-Spanish dictionary) can either be stored on the computer itself, or accessed over the Internet as input. Students should be able to identify the camera image (Spanish text) as input, the translation as processing, and the display screen image (English text) as output.
 
 MARKDOWN

@@ -1,50 +1,44 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
-import { sectionShape, assignmentShape } from './shapes';
+import i18n from '@cdo/locale';
+import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
 
 const styles = {
   table: {
-    width: '100%',
-    tableLayout: 'auto',
-    backgroundColor: 'transparent',
-    borderSpacing: 0,
-    borderCollapse: 'collapse'
-  },
-  headerRow: {
-    height: 45,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 15,
-    paddingRight: 15,
-    backgroundColor: color.teal,
-    color: color.white,
-    borderColor: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderTopColor: color.teal,
-    borderLeftColor: color.teal,
-    borderRightColor: color.teal,
-    textAlign: 'left'
+    borderColor: color.border_gray,
   },
+  headerRow: tableStyles.headerRow,
+  col: tableStyles.col,
+  colText: tableStyles.colText,
   link: {
     color: color.white
   }
 };
 
-export default class SectionTable extends Component {
+/**
+ * This is a component that shows information about the sections that a teacher
+ * owns, and allows for editing them.
+ * It shows some of the same information as the SectionsTable used on the teacher
+ * homepage. However, for historical reasons it unfortunately has a somewhat
+ * different set/shape of input data. This component gets its data from
+ * section_api_helpers in pegasus via an AJAX call, whereas that component gets
+ * its data from section.summarize on page load.
+ * Both ultimately source data from the dashboard db.
+ * Long term it would be ideal if section_api_helpers went away and both components
+ * used dashboard.
+ */
+class SectionTable extends Component {
   static propTypes = {
-    validLoginTypes: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
-    validCourses: PropTypes.arrayOf(assignmentShape).isRequired,
-    validScripts: PropTypes.arrayOf(assignmentShape).isRequired,
-    sections: PropTypes.arrayOf(sectionShape).isRequired
+    sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
   };
 
   render() {
-    const { sections, validLoginTypes, validGrades, validCourses, validScripts } = this.props;
+    const { sectionIds } = this.props;
 
-    // TODO: i18n
     return (
       <table style={styles.table}>
         <colgroup>
@@ -58,48 +52,68 @@ export default class SectionTable extends Component {
           <col/>
           <col/>
         </colgroup>
-        <tbody>
-          <tr>
-            <th style={styles.headerRow}>
-              <a style={styles.link} href>Section</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Login Type</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Grade</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Course</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Stage Extras</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Pair Programming</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Students</a>
-            </th>
-            <th style={styles.headerRow}>
-              Section Code
-            </th>
-            <th style={styles.headerRow}>
-            </th>
+        <thead>
+          <tr style={styles.headerRow}>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.section()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.loginType()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.grade()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.course()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.stageExtras()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.pairProgramming()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.students()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.sectionCode()}
+              </div>
+            </td>
+            <td style={styles.col}>
+            </td>
           </tr>
-          {sections.map((s, index) => (
+        </thead>
+        <tbody>
+          {sectionIds.map((sid, index) => (
             <SectionRow
-              key={index}
-              validLoginTypes={validLoginTypes}
-              validGrades={validGrades}
-              validCourses={validCourses}
-              validScripts={validScripts}
-              section={s}
+              key={sid}
+              sectionId={sid}
+              lightRow={index % 2 === 0}
             />
           ))}
         </tbody>
-
       </table>
     );
   }
 }
+
+export const UnconnectedSectionTable = SectionTable;
+
+export default connect(state => ({
+  sectionIds: state.teacherSections.sectionIds
+}))(SectionTable);

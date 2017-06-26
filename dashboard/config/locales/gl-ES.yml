@@ -260,7 +260,7 @@
       msg_publicschool: Confirme que é un profesor de unha escola pública dos E.U.A.
       msg_visit_website: Visitar o sitio Web
     providers:
-      apple_itunes: Tarjeta de regalo de $10 iTunes
+      apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
       dropbox: 10GB de espazo no Dropbox
@@ -271,7 +271,7 @@
       ea_pvz: Plants vs. Zombies (PC game download)
       skype: "$10 Skype credit"
     msg:
-      choose: 'Escoje un premio:'
+      choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
       earned: Gañaches un premio! (só para alumnos dos USA)
       not_earned_title: Termine o titorial e gañe recompensas (só para alumnos dos

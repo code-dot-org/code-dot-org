@@ -14,8 +14,8 @@ const sections = [
   {
     name: "Algebra Period 1",
     linkToProgress: "to Progress tab",
-    course: "CS in Algebra",
-    linkToCourse: "to Course",
+    assignedTitle: "CS in Algebra",
+    linkToAssigned: "to Course",
     numberOfStudents: 14,
     linkToStudents: "to Manage Students tab",
     sectionCode: "ABCDEF"
@@ -23,8 +23,8 @@ const sections = [
   {
     name: "Algebra Period 2",
     linkToProgress: "to Progress tab",
-    course: "CS in Algebra",
-    linkToCourse: "to Course",
+    assignedTitle: "CS in Algebra",
+    linkToAssigned: "to Course",
     numberOfStudents: 19,
     linkToStudents: "to Manage Students tab",
     sectionCode: "EEB206"
@@ -32,8 +32,8 @@ const sections = [
   {
     name: "Period 3",
     linkToProgress: "to Progress tab",
-    course: "Course 4",
-    linkToCourse: "to Course",
+    assignedTitle: "Course 4",
+    linkToAssigned: "to Course",
     numberOfStudents: 22,
     linkToStudents: "to Manage Students tab",
     sectionCode: "HPRWHG"
@@ -71,6 +71,7 @@ export default storybook => {
             sections={[]}
             courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -83,6 +84,7 @@ export default storybook => {
             sections={[]}
             courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -95,6 +97,7 @@ export default storybook => {
             sections={sections}
             courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -107,8 +110,9 @@ export default storybook => {
             sections={sections}
             courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
-      }
+      },
     ]);
 };

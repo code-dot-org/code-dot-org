@@ -26,7 +26,7 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "How can Laurel get all five piles of treasure using only one `[E-->]` block?",
+    "instructions": "How can Laurel get all five piles of treasure using only one `E ▶` block?",
     "ideal": "4",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"gradek_adventurer_loops2_1\",\r\n  \"callout_text\": \"This number tells you how many of these blocks you can use in this puzzle.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top right\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 10,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
@@ -35,10 +35,13 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a `repeat` loop to do the job!\",\"hint_id\":\"courseA_collector_loops3\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee56af25ac584625059e7f288dcdd217/courseA_collector_loops3.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "tts_instructions_override": "How can Laurel get all five piles of treasure using only one east block?",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:18:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-22 22:41:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

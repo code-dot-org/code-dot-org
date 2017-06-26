@@ -113,7 +113,8 @@ class Artist < Blockly
       </block>
       <block type="draw_pen"></block>
       <block type="draw_line_style_pattern"></block>
-      <block type="sticker"/>/block>
+      <block type="sticker"></block>
+      <block type="turtle_setArtist"></block>
     </category>
     <category name="Color">
       <block id="draw-color" type="draw_colour">

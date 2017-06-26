@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import TeacherCourses from './TeacherCourses';
+import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
@@ -32,7 +32,7 @@ const styles = {
 
 /**
  * Though named Courses, this component represents a collection of courses and/or
- * scripts. These come from sections the user is in, or from courses/scripts they
+ * scripts, refered to collectively as "assignables". These come from sections the user is in, or from courses/scripts they
  * have recently made progress in.
  * The component is only used on the /courses page, and also does some additional
  * DOM manipulation on mount.
@@ -59,22 +59,36 @@ const Courses = React.createClass({
       $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
+
+    if (!this.props.isTeacher) {
+      $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
+    }
   },
 
   render() {
     const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
+    const subHeadingText = i18n.coursesHeadingSubText(
+      {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+    );
+    const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
       <div>
         <HeaderBanner
           headingText={headingText}
-          subHeadingText={i18n.coursesHeadingSubText(
-            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+          subHeadingText={subHeadingText}
+          description={headingDescription}
+        >
+          {isSignedOut && (
+            <ProgressButton
+              href= "/users/sign_up"
+              color={ProgressButton.ButtonColor.gray}
+              text={i18n.createAccount()}
+              style={styles.button}
+            />
           )}
-          showCreateAccount={isSignedOut}
-          description={i18n.coursesHeadingDescription()}
-        />
+        </HeaderBanner>
 
         {!isTeacher && (
           <ProtectedStatefulDiv
@@ -89,6 +103,7 @@ const Courses = React.createClass({
             showAllCoursesLink={false}
             heading={i18n.myCourses()}
             isTeacher={isTeacher}
+            isRtl={false}
           />
         )}
 
@@ -122,7 +137,7 @@ const Courses = React.createClass({
 
               <br/>
               <br/>
-              <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+              <TeacherAssignablesCatalog codeOrgUrlPrefix={codeOrgUrlPrefix}/>
 
               <div>
                 <div style={styles.heading}>
@@ -146,6 +161,10 @@ const Courses = React.createClass({
 
         {!isTeacher && !isSignedOut && (
           <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
+        )}
+
+        {!isTeacher && !isSignedOut && (
+          <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>
     );

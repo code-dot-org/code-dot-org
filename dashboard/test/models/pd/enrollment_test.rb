@@ -148,8 +148,28 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal "#{base_url}/pd-workshop-survey/counselor-admin/#{admin_enrollment.code}", admin_enrollment.exit_survey_url
   end
 
+  test 'should_send_exit_survey' do
+    normal_workshop = create :pd_ended_workshop
+    normal_enrollment = create :pd_enrollment, workshop: normal_workshop
+
+    assert normal_enrollment.should_send_exit_survey?
+
+    fit_workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT
+    fit_enrollment = create :pd_enrollment, user: create(:teacher), workshop: fit_workshop
+
+    refute fit_enrollment.should_send_exit_survey?
+  end
+
   test 'send_exit_survey does not send mail when the survey was already sent' do
     enrollment = create :pd_enrollment, user: create(:teacher), survey_sent_at: Time.now
+    Pd::WorkshopMailer.expects(:exit_survey).never
+
+    enrollment.send_exit_survey
+  end
+
+  test 'send_exit_survey does not send mail for FIT Weekend workshops' do
+    workshop = create :pd_ended_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT
+    enrollment = create :pd_enrollment, user: create(:teacher), workshop: workshop
     Pd::WorkshopMailer.expects(:exit_survey).never
 
     enrollment.send_exit_survey
@@ -272,14 +292,23 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
+    teachercon1 = create :pd_workshop, :teachercon, num_enrollments: 1, num_sessions: 1
+    teachercon2 = create :pd_ended_workshop, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
+    teachercon3 = create :pd_ended_workshop, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
+
+    create :pd_teachercon_survey, pd_enrollment: teachercon3.enrollments.first
+
     enrollments = [
       enrollment_no_survey = create(:pd_enrollment),
       enrollment_with_unprocessed_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234)
+      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234),
+      enrollment_in_unfinished_teachercon = teachercon1.enrollments.first,
+      enrollment_in_finished_teachercon = teachercon2.enrollments.first,
+      enrollment_in_finished_teachercon_did_survey = teachercon3.enrollments.first,
     ]
 
-    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
-    without_surveys = [enrollment_no_survey]
+    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey, enrollment_in_finished_teachercon_did_survey]
+    without_surveys = [enrollment_no_survey, enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon]
     PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
         [
           {source_id: enrollment_with_unprocessed_survey.id.to_s},

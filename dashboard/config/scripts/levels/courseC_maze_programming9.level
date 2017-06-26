@@ -28,10 +28,16 @@
     "authored_hints": "[]",
     "markdown_instructions": "*\"Now, help me sneak up on the pig any way you want to!\"*",
     "instructions_important": "false",
+    "tts_instructions_override": "Now, help me sneak up on the pig any way you want to!",
+    "tts_markdown_instructions_override": "Now, help me sneak up on the pig any way you want to!",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 16:02:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

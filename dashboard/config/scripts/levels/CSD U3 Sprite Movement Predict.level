@@ -211,7 +211,7 @@
     "all_animations_single_frame": "true",
     "submittable": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "true",
+    "show_debug_watch": "false",
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
@@ -220,6 +220,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:46:07 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

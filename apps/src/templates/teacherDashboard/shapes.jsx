@@ -8,18 +8,20 @@ export const sectionShape = PropTypes.shape({
   loginType: PropTypes.oneOf(['word', 'email', 'picture']).isRequired,
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
-  numStudents: PropTypes.number.isRequired,
+  studentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   code: PropTypes.string.isRequired,
-  course_id: PropTypes.number,
-  script_id: PropTypes.number,
-  assignmentName: PropTypes.string,
-  assignmentPath: PropTypes.string
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
 });
 
 export const assignmentShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
+  courseId: PropTypes.number,
+  scriptId: PropTypes.number,
+  assignId: PropTypes.string.isRequried,
   category_priority: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   position: PropTypes.number,
   name: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 });

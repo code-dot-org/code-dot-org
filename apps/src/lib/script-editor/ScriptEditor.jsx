@@ -129,7 +129,9 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
-          Professional Learning Course
+          Professional Learning Course. When filled out, the course unit associated with
+          this script will be associated with the course named in this box. If the course
+          unit does not exist, and if the course does not exist it will be created.
           <input
             name="professional_learning_course"
             defaultValue={this.props.professionalLearningCourse}
@@ -137,7 +139,8 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <label>
-          Peer Reviews to Complete
+          Peer Reviews to Complete. Currently only supported for professional learning
+          courses
           <input
             name="peer_reviews_to_complete"
             defaultValue={this.props.peerReviewsRequired}

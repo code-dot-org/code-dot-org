@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.19":
-  version "1.6.19"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.19.tgz#5b1e6eacf5ff3b6b41ae81772f2ce8145740ded4"
+"@code-dot-org/blockly@1.6.21":
+  version "1.6.21"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.21.tgz#58406507363df10b70e3fd0ff832e11abb3b1a4a"
 
 "@code-dot-org/bramble@0.1.17":
   version "0.1.17"
@@ -75,9 +75,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.1.tgz#ba709dc67938b10c51738c6a0d6baff64ec777b0"
+"@code-dot-org/js-interpreter@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.5.tgz#fef6dbd3f472aac9cb175a147385dd6fd6a27ebb"
   dependencies:
     yargs "^7.0.1"
 

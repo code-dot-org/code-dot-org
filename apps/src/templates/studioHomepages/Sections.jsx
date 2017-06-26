@@ -8,29 +8,38 @@ const Sections = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { sections, codeOrgUrlPrefix } = this.props;
+    const { sections, codeOrgUrlPrefix, isRtl } = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
-      <ContentContainer
-        heading={i18n.sectionsTitle()}
-        linkText={i18n.viewAllSections()}
-        link={editSectionsUrl}
-        showLink={true}
-      >
-      {sections.length > 0 && (
-        <SectionsTable sections={sections}/>
-      )}
-      {sections.length === 0 && (
-        <SetUpMessage
-          type="sections"
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
-        />
-      )}
-    </ContentContainer>
+      <div>
+        <ContentContainer
+          heading={i18n.sectionsTitle()}
+          linkText={i18n.manageSections()}
+          link={editSectionsUrl}
+          showLink={true}
+          isRtl={isRtl}
+        >
+        {sections.length > 0 && (
+          <SectionsTable
+            sections={sections}
+            isRtl={isRtl}
+          />
+        )}
+        {sections.length === 0 && (
+          <SetUpMessage
+            type="sections"
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
+            isTeacher={false}
+          />
+        )}
+      </ContentContainer>
+    </div>
     );
   }
 });

@@ -30,6 +30,7 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Section < ActiveRecord::Base
+  include Rails.application.routes.url_helpers
   acts_as_paranoid
 
   belongs_to :user
@@ -48,6 +49,8 @@ class Section < ActiveRecord::Base
 
   has_many :section_hidden_stages
 
+  SYSTEM_DELETED_NAME = 'system_deleted'.freeze
+
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
 
@@ -55,6 +58,15 @@ class Section < ActiveRecord::Base
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  # Override default script accessor to use our cache
+  def script
+    Script.get_from_cache(script_id) if script_id
+  end
+
+  def course
+    Course.get_from_cache(course_id) if course_id
+  end
 
   def workshop_section?
     Pd::Workshop::SECTION_TYPES.include? section_type
@@ -129,12 +141,45 @@ class Section < ActiveRecord::Base
     add_student student
   end
 
+  # Clears all personal data from the section object.
+  def clean_data
+    update(name: SYSTEM_DELETED_NAME)
+  end
+
   # Figures out the default script for this section. If the section is assigned to
-  # a course rather than a script, it returns the first script in that course
+  # a course rather than a script, it returns the first script in that course.
   # @return [Script, nil]
   def default_script
     return script if script
     return course.try(:course_scripts).try(:first).try(:script)
+  end
+
+  # Provides some information about a section. This is consumed by our SectionsTable
+  # React component on the teacher homepage
+  def summarize
+    base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
+
+    title = ''
+    link_to_assigned = base_url
+
+    if course
+      title = course.localized_title
+      link_to_assigned = course_path(course)
+    elsif script_id
+      title = script.localized_title
+      link_to_assigned = script_path(script)
+    end
+
+    {
+      id: id,
+      name: name,
+      linkToProgress: "#{base_url}#{id}/progress",
+      assignedTitle: title,
+      linkToAssigned: link_to_assigned,
+      numberOfStudents: students.length,
+      linkToStudents: "#{base_url}#{id}/manage",
+      sectionCode: code
+    }
   end
 
   private
