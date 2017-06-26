@@ -13,27 +13,34 @@ social:
   "twitter:player:height": 1080
 max_age: 60
 ---
--cert_id = params[:i]
--cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
--pass unless ScriptConstants.script_in_any_category?(cert_script)
+:ruby
 
--if cert_id
-  -share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
--else
-  -share_url = "http://#{request.host_with_port}/certificates/blank"
+  cert_id = params[:i]
+  begin
+    cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
+  rescue
+    pass
+  end
+  pass unless ScriptConstants.script_in_any_category?(cert_script)
 
--facebook = {:u=>share_url}
--twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:just_did_hoc)}
--twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
+  if cert_id
+    share_url = "http://#{request.host_with_port}/certificates/#{cert_id}"
+  else
+    share_url = "http://#{request.host_with_port}/certificates/blank"
+  end
 
--company_param = params[:co]
--#
-  Do not show company profile sections for the cartoon network, even if someone
-  accidentally creates an entry for them in the forms table. (Our partnership
-  with cartoon network piggy-backs on our company profile infrastructure.)
--CARTOON_NETWORK = 'CN'
--form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param && company_param != CARTOON_NETWORK
--@company = company = JSON.parse(form[:data]) if form
+  facebook = {:u=>share_url}
+  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:just_did_hoc)}
+  twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
+
+  company_param = params[:co]
+  # Do not show company profile sections for the cartoon network, even if someone
+  # accidentally creates an entry for them in the forms table. (Our partnership
+  # with cartoon network piggy-backs on our company profile infrastructure.)
+  CARTOON_NETWORK = 'CN'
+  form = DB[:forms].where(kind:'CompanyProfile', name:company_param).first if company_param && company_param != CARTOON_NETWORK
+  @company = company = JSON.parse(form[:data]) if form
+
 -if company
   %link{rel: "stylesheet", type: "text/css", href: "/css/ee.css"}/
 
