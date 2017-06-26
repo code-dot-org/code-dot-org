@@ -90,10 +90,12 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "true",
     "watchers_prepopulated": "[\"apple.scale\"]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "encrypted_examples": "RbHUch7BxbgkpSrOJH5P3HUPGx5t/YPfRzfVUJlbcCKeJzXs2VoXx+bWYsZu\ncnZLm5YlNHzhukTsXsV+rTKOBA==\n"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 16:45:41 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

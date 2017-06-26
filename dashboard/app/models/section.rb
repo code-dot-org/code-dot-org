@@ -59,12 +59,13 @@ class Section < ActiveRecord::Base
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
-  # TODO(bjvanminnen): once we have a courses cache, we should create an accessor
-  # that takes advantage of that
-
   # Override default script accessor to use our cache
   def script
     Script.get_from_cache(script_id) if script_id
+  end
+
+  def course
+    Course.get_from_cache(course_id) if course_id
   end
 
   def workshop_section?
