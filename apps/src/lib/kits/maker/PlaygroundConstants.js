@@ -1,3 +1,4 @@
+import experiments from '../../../util/experiments';
 export const N_COLOR_LEDS = 10;
 export const TOUCH_PINS = [0, 1, 2, 3, 6, 9, 10, 12];
 export const J5_CONSTANTS = {
@@ -10,13 +11,11 @@ export const J5_CONSTANTS = {
 
 export const SENSOR_VARS = ['soundSensor', 'lightSensor', 'tempSensor'];
 export const BUTTON_VARS = ['buttonL', 'buttonR'];
-// TODO (captouch)
-// const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);
+const TOUCH_PAD_VARS = TOUCH_PINS.map(pin => `touchPad${pin}`);
 
 const BUTTON_EVENTS = ['press', 'down', 'up'];
 const SENSOR_EVENTS = ['change', 'data'];
-// TODO (captouch)
-// const TOUCH_EVENTS = ['down', 'up'];
+const TOUCH_EVENTS = ['down', 'up'];
 
 export const COMPONENT_EVENTS = {
   buttonL: BUTTON_EVENTS,
@@ -25,8 +24,9 @@ export const COMPONENT_EVENTS = {
   accelerometer: ['change', 'data', 'singleTap', 'doubleTap']
 };
 SENSOR_VARS.forEach(s => COMPONENT_EVENTS[s] = SENSOR_EVENTS);
-// TODO (captouch)
-// TOUCH_PAD_VARS.forEach(s => COMPONENT_EVENTS[s] = TOUCH_EVENTS);
+if (experiments.isEnabled('maker-captouch')) {
+  TOUCH_PAD_VARS.forEach(s => COMPONENT_EVENTS[s] = TOUCH_EVENTS);
+}
 
 export const BOARD_EVENT_ALIASES = {
   // codeStudioName: 'playground-io-name'
