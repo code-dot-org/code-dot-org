@@ -1254,7 +1254,7 @@ Maze.scheduleFail = function (forward) {
       studioApp().playAudio('wall' + Maze.subtype.wallMap[targetY][targetX]);
     }
 
-    if (Maze.subtype.isScrat()) {
+    if (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE) {
       // Remove cracked ice, replace surrounding ice with cracked ice.
       Maze.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
         if (cell.getTile() === SquareType.OPEN) {
