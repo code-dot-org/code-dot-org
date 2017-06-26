@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Anthony Bau.
  * MIT License.
  *
- * Date: 2017-06-23
+ * Date: 2017-06-26
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -12518,7 +12518,7 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
 
   JavaScriptParser.prototype.handleButton = function(text, button, oldBlock) {
     var argCount, currentElif, elementCount, elseLocation, known, lastArgPosition, lastElPosition, lastParamPosition, lines, match, maxArgs, minArgs, newLastArgPosition, newLastElPosition, newLastParamPosition, node, paramCount;
-    if (button === 'add-button' && indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
+    if (indexOf.call(oldBlock.classes, 'IfStatement') >= 0) {
       node = acorn.parse(text, {
         locations: true,
         line: 0,
@@ -12542,12 +12542,23 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           break;
         }
       }
-      if (elseLocation != null) {
-        lines = text.split('\n');
-        elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
-        return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
-      } else {
-        return text + ' else {\n  __\n}';
+      lines = text.split('\n');
+      if (button === 'add-button') {
+        if (elseLocation != null) {
+          elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
+          return text.slice(0, elseLocation).trimRight() + ' if (__) ' + text.slice(elseLocation).trimLeft() + ' else {\n  __\n}';
+        } else {
+          return text + ' else {\n  __\n}';
+        }
+      } else if (button === 'subtract-button') {
+        if (elseLocation != null) {
+          elseLocation = lines.slice(0, elseLocation.line).join('\n').length + elseLocation.column + 1;
+        } else if (currentElif.loc.start != null) {
+          elseLocation = lines.slice(0, currentElif.loc.start.line).join('\n').length + currentElif.loc.start.column + 1;
+        }
+        if (elseLocation != null) {
+          return text.slice(0, elseLocation).trimRight().replace(/(\s*)else(\s*)+$/, '');
+        }
       }
     } else if (indexOf.call(oldBlock.classes, 'CallExpression') >= 0) {
       node = acorn.parse(text, {
@@ -12750,9 +12761,13 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'IfStatement':
       case 'ConditionalExpression':
-        this.jsBlock(node, depth, bounds, {
+        buttons = {
           addButton: '+'
-        });
+        };
+        if (node.alternate) {
+          buttons.subtractButton = '-';
+        }
+        this.jsBlock(node, depth, bounds, buttons);
         this.jsSocketAndMark(indentDepth, node.test, depth + 1, NEVER_PAREN);
         this.jsSocketAndMark(indentDepth, node.consequent, depth + 1, null);
         currentElif = node.alternate;
