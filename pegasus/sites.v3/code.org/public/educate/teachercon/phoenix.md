@@ -116,6 +116,31 @@ We expect you to attend for the full conference. Make plans to be with us from R
 </p>
 </details>
 
+<a id="who"></a>
+## **Who's Who at TeacherCon?**
+<details>
+<summary>**Code.org Staff**</summary>
+ <p>
+ <br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconstaff_phoenix') %></p>
+</details>
+
+<details>
+<summary>**Session Lead Facilitators**</summary>
+ <p>
+ <br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_phoenix') %></p>
+</details>
+
+<details>
+<summary>**Regional Partners**</summary>
+ <p>
+ <br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrp_phoenix') %></p>
+</p>
+</details>
+
+<a id="previous"></a>
 ## **Previous Email Updates**
 This section will be updated as emails are sent for this event.
 
