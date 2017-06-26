@@ -18,6 +18,7 @@ import {
   CP_COMMAND,
   TOUCH_PINS
 } from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -70,16 +71,38 @@ describe('Circuit Playground Components', () => {
             'accelerometer',
             'buttonL',
             'buttonR',
-            // TODO (captouch): Restore when we re-enable
-            // 'touchPad0',
-            // 'touchPad1',
-            // 'touchPad2',
-            // 'touchPad3',
-            // 'touchPad6',
-            // 'touchPad9',
-            // 'touchPad10',
-            // 'touchPad12',
         ]);
+      });
+    });
+
+    // TODO (bbuchanan): Remove this whole describe block when maker-captouch is on by default.
+    describe('with capTouch enabled', () => {
+      before(() => experiments.setEnabled('maker-captouch', true));
+      after(() => experiments.setEnabled('maker-captouch', false));
+
+      it(`returns an exact set of expected components`, () => {
+        return createCircuitPlaygroundComponents(board).then(components => {
+          expect(Object.keys(components)).to.deep.equal([
+            'colorLeds',
+            'led',
+            'toggleSwitch',
+            'buzzer',
+            'soundSensor',
+            'lightSensor',
+            'tempSensor',
+            'accelerometer',
+            'buttonL',
+            'buttonR',
+            'touchPad0',
+            'touchPad1',
+            'touchPad2',
+            'touchPad3',
+            'touchPad6',
+            'touchPad9',
+            'touchPad10',
+            'touchPad12',
+          ]);
+        });
       });
     });
 
@@ -511,8 +534,11 @@ describe('Circuit Playground Components', () => {
       });
     });
 
-    // TODO (captouch): Un-skip when we re-enable
-    describe.skip('touchPads', () => {
+    describe('touchPads', () => {
+      // TODO (bbuchanan): Remove when maker-captouch is on by default.
+      before(() => experiments.setEnabled('maker-captouch', true));
+      after(() => experiments.setEnabled('maker-captouch', false));
+
       it('only creates one five.Touchpad for all the TouchSensors', () => {
         return createCircuitPlaygroundComponents(board).then(components => {
           const theOnlyTouchpadController = components.touchPad0.touchpadsController_;
@@ -547,6 +573,33 @@ describe('Circuit Playground Components', () => {
     });
   });
 
+  // TODO (bbuchanan): Remove this whole describe block when maker-captouch is on by default.
+  describe('destroyCircuitPlaygroundComponents() with capTouch enabled', () => {
+    let components;
+
+    before(() => experiments.setEnabled('maker-captouch', true));
+    after(() => experiments.setEnabled('maker-captouch', false));
+
+    beforeEach(() => {
+      return createCircuitPlaygroundComponents(board)
+          .then(c => components = c);
+    });
+
+    it('destroys everything that createCircuitPlaygroundComponents creates', () => {
+      expect(Object.keys(components)).to.have.length(18);
+      destroyCircuitPlaygroundComponents(components);
+      expect(Object.keys(components)).to.have.length(0);
+    });
+
+    it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
+      components.someOtherComponent = {};
+      expect(Object.keys(components)).to.have.length(19);
+      destroyCircuitPlaygroundComponents(components);
+      expect(Object.keys(components)).to.have.length(1);
+      expect(components).to.haveOwnProperty('someOtherComponent');
+    });
+  });
+
   describe('destroyCircuitPlaygroundComponents()', () => {
     let components;
 
@@ -562,7 +615,6 @@ describe('Circuit Playground Components', () => {
     });
 
     it('destroys everything that createCircuitPlaygroundComponents creates', () => {
-      // TODO (captouch): Add 8 when re-enabled
       expect(Object.keys(components)).to.have.length(10);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(0);
@@ -570,7 +622,6 @@ describe('Circuit Playground Components', () => {
 
     it('does not destroy components not created by createCircuitPlaygroundComponents', () => {
       components.someOtherComponent = {};
-      // TODO (captouch): Add 8 when re-enabled
       expect(Object.keys(components)).to.have.length(11);
       destroyCircuitPlaygroundComponents(components);
       expect(Object.keys(components)).to.have.length(1);

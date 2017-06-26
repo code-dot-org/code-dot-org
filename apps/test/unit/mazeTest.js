@@ -25,7 +25,8 @@ describe("Maze", function () {
       Maze.subtype = new Farmer(Maze, {}, {
         skin: {
           dirt: 'dirt.png'
-        }
+        },
+        level: {},
       });
       Maze.subtype.createDrawer();
       Maze.pegmanX = 0;
