@@ -2,11 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
-<<<<<<< HEAD
-=======
 import Sections from './Sections';
-import StudentResources from './StudentResources';
->>>>>>> 5d2878fb8d... Pass canLeave from StudentHomepage to SectionsTable
 import shapes from './shapes';
 import i18n from "@cdo/locale";
 
@@ -36,13 +32,9 @@ const StudentHomepage = React.createClass({
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-<<<<<<< HEAD
           heading={i18n.myCourses()}
           isRtl={false}
           isTeacher={false}
-=======
-          header={i18n.recentCourses()}
-          isRtl={isRtl}
         />
 
         <Sections
@@ -50,7 +42,6 @@ const StudentHomepage = React.createClass({
           isRtl={isRtl}
           isTeacher={false}
           canLeave={canLeave}
->>>>>>> 5d2878fb8d... Pass canLeave from StudentHomepage to SectionsTable
         />
 
       </div>
