@@ -281,7 +281,7 @@ describe('TeacherHomepage', () => {
     // Check if a ContentContainer is rendered.
     const coursesContentContainer = recentCourses.childAt(0);
     assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
+    assert.equal(coursesContentContainer.props().heading, 'My Courses');
     assert.equal(coursesContentContainer.props().linkText, 'Find a course');
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
@@ -318,7 +318,7 @@ describe('TeacherHomepage', () => {
     // Check if a ContentContainer is rendered.
     const coursesContentContainer = recentCourses.childAt(0);
     assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
+    assert.equal(coursesContentContainer.props().heading, 'My Courses');
     assert.equal(coursesContentContainer.props().linkText, 'Find a course');
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
