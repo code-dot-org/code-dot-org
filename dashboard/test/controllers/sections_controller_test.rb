@@ -22,7 +22,7 @@ class SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file in levelbuilder_mode is true
-    @course = create(:course, name: 'course-for-section')
+    @course = create(:course)
   end
 
   test "do not show login screen for invalid section code" do
@@ -146,7 +146,7 @@ class SectionsControllerTest < ActionController::TestCase
 
   test "update: can update section you own" do
     sign_in @teacher
-    section_with_script = create(:section, user: @teacher, login_type: 'regular', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
+    section_with_script = create(:section, user: @teacher, script_id: Script.flappy_script.id)
     post :update, params: {
       id: section_with_script.id,
       course_id: @course.id
@@ -164,7 +164,7 @@ class SectionsControllerTest < ActionController::TestCase
       id: @regular_section.id,
       course_id: @course.id,
     }
-    assert_response 403
+    assert_response :forbidden
   end
 
   test "update: cannot update section if not logged in " do
