@@ -93,7 +93,6 @@ const Courses = React.createClass({
             ref="userHero"
           />
         )}
-
         {isEnglish && isTeacher && (
           <div>
             <UiTips

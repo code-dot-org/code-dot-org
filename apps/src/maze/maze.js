@@ -34,19 +34,12 @@ var MazeVisualizationColumn = require('./MazeVisualizationColumn');
 var dom = require('../dom');
 var utils = require('../utils');
 import {generateCodeAliases} from '../dropletUtils';
-var mazeUtils = require('./mazeUtils');
+var getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
 var dropletConfig = require('./dropletConfig');
 
 var MazeMap = require('./mazeMap');
-import drawMap from './drawMap';
+import drawMap, {displayPegman, getPegmanYForRow} from './drawMap';
 
-import Bee from './bee';
-import Collector from './collector';
-import WordSearch from './wordsearch';
-import Scrat from './scrat';
-import Farmer from './farmer';
-import Harvester from './harvester';
-import Planter from './planter';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -261,21 +254,8 @@ Maze.init = function (config) {
   config.forceInsertTopBlock = 'when_run';
   config.dropletConfig = dropletConfig;
 
-  if (mazeUtils.isBeeSkin(config.skinId)) {
-    Maze.subtype = new Bee(Maze, studioApp(), config);
-  } else if (mazeUtils.isCollectorSkin(config.skinId)) {
-    Maze.subtype = new Collector(Maze, studioApp(), config);
-  } else if (mazeUtils.isWordSearchSkin(config.skinId)) {
-    Maze.subtype = new WordSearch(Maze, studioApp(), config);
-  } else if (mazeUtils.isScratSkin(config.skinId)) {
-    Maze.subtype = new Scrat(Maze, studioApp(), config);
-  } else if (mazeUtils.isHarvesterSkin(config.skinId)) {
-    Maze.subtype = new Harvester(Maze, studioApp(), config);
-  } else if (mazeUtils.isPlanterSkin(config.skinId)) {
-    Maze.subtype = new Planter(Maze, studioApp(), config);
-  } else {
-    Maze.subtype = new Farmer(Maze, studioApp(), config);
-  }
+  const Type = getSubtypeForSkin(config.skinId);
+  Maze.subtype = new Type(Maze, studioApp(), config);
 
   if (Maze.subtype.overrideStepSpeed) {
     Maze.scale.stepSpeed = Maze.subtype.overrideStepSpeed;
@@ -330,26 +310,9 @@ Maze.init = function (config) {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = codegen.loopHighlight("Maze");
     }
 
-    Maze.subtype.start = undefined;
-    Maze.subtype.finish = undefined;
-
-    // Locate the start and finish squares.
-    for (var y = 0; y < Maze.map.ROWS; y++) {
-      for (var x = 0; x < Maze.map.COLS; x++) {
-        var cell = Maze.map.getTile(y, x);
-        if (cell === SquareType.START) {
-          Maze.subtype.start = {x: x, y: y};
-        } else if (cell === SquareType.FINISH) {
-          Maze.subtype.finish = {x: x, y: y};
-        } else if (cell === SquareType.STARTANDFINISH) {
-          Maze.subtype.start = {x: x, y: y};
-          Maze.subtype.finish = {x: x, y: y};
-        }
-      }
-    }
-
     Maze.map.resetDirt();
 
+    Maze.subtype.initStartFinish();
     Maze.subtype.createDrawer();
     Maze.subtype.initWallMap();
 
@@ -414,15 +377,6 @@ function stepButtonClick() {
 }
 
 /**
- * Calculate the y coordinates for pegman sprite.
- */
-var getPegmanYForRow = function (mazeRow) {
-  var y = Maze.SQUARE_SIZE * (mazeRow + 0.5) - Maze.PEGMAN_HEIGHT / 2 +
-    Maze.PEGMAN_Y_OFFSET;
-  return Math.floor(y);
-};
-
-/**
  * Calculate the Y offset within the sheet
  */
 var getPegmanFrameOffsetY = function (animationRow) {
@@ -452,7 +406,7 @@ var createPegmanAnimation = function (svg, options) {
     rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   }
   if (options.row !== undefined) {
-    rect.setAttribute('y', getPegmanYForRow(options.row));
+    rect.setAttribute('y', getPegmanYForRow(skin, options.row));
   }
   rect.setAttribute('width', Maze.PEGMAN_WIDTH);
   rect.setAttribute('height', Maze.PEGMAN_HEIGHT);
@@ -475,7 +429,7 @@ var createPegmanAnimation = function (svg, options) {
     img.setAttribute('x', x);
   }
   if (options.row !== undefined) {
-    img.setAttribute('y', getPegmanYForRow(options.row));
+    img.setAttribute('y', getPegmanYForRow(skin, options.row));
   }
 };
 
@@ -491,12 +445,12 @@ var createPegmanAnimation = function (svg, options) {
 var updatePegmanAnimation = function (options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
   rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
-  rect.setAttribute('y', getPegmanYForRow(options.row));
+  rect.setAttribute('y', getPegmanYForRow(skin, options.row));
   var img = document.getElementById(options.idStr + 'Pegman');
   var x = Maze.SQUARE_SIZE * options.col -
       options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
   img.setAttribute('x', x);
-  var y = getPegmanYForRow(options.row) - getPegmanFrameOffsetY(options.animationRow);
+  var y = getPegmanYForRow(skin, options.row) - getPegmanFrameOffsetY(options.animationRow);
   img.setAttribute('y', y);
   img.setAttribute('visibility', 'visible');
 };
@@ -531,18 +485,6 @@ Maze.reset = function (first) {
     }, danceTime + 150);
   } else {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
-  }
-
-  var finishIcon = document.getElementById('finish');
-  if (finishIcon) {
-    // Move the finish icon into position.
-    finishIcon.setAttribute('x', Maze.SQUARE_SIZE * (Maze.subtype.finish.x + 0.5) -
-      finishIcon.getAttribute('width') / 2);
-    finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.subtype.finish.y + 0.9) -
-      finishIcon.getAttribute('height'));
-    finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goalIdle);
-    finishIcon.setAttribute('visibility', 'visible');
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -1513,13 +1455,8 @@ function scheduleDance(victoryDance, timeAlloted) {
  */
 Maze.displayPegman = function (x, y, frame) {
   var pegmanIcon = document.getElementById('pegman');
-  pegmanIcon.setAttribute('x',
-    x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET);
-  pegmanIcon.setAttribute('y', getPegmanYForRow(y));
-
   var clipRect = document.getElementById('clipRect');
-  clipRect.setAttribute('x', x * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
-  clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
+  displayPegman(skin, pegmanIcon, clipRect, x, y, frame);
 };
 
 var scheduleDirtChange = function (options) {

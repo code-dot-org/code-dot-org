@@ -6,8 +6,8 @@
   select_language: "אנא בחר את שפתך"
   upgrade_ie_message: Code.org יסיר בקרוב תמיכה ב- Internet Explorer 8, 9 ו-10. אנא
     שדרג לדפדפן מודרני.
-  upgrade_ie_message_csedweek: CSEdWeek.org will soon remove support for Internet
-    Explorer 8, 9, and 10. Please upgrade to a modern browser.
+  upgrade_ie_message_csedweek: Code.org יסיר בקרוב תמיכה ב- Internet Explorer 8, 9
+    ו-10. אנא שדרג לדפדפן מודרני.
   upgrade_ie_link: "למד עוד"
   en: "מדעי המחשב"
   computer_science_edweek: "שבוע החינוך למדעי המחשב"
@@ -36,8 +36,7 @@
   og_description: "כל תלמיד בכל בית ספר deserves the opportunity ללמוד computer science.
     It's changing everything."
   csedweek_og_title: "שבוע החינוך למדעי המחשב"
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  csedweek_og_description: 4-10 בדצמבר, 2017. מדעי המחשב הם הבסיס שעל כל תלמידה ללמוד.
   hoc2014_heading: הצטרפו ל <a href="http://hourofcode.com">שעה של קוד </a><br/>דצמבר
     8-14, 2014<br/>
   hoc2014_students: "סטודנטים"
@@ -88,8 +87,8 @@
   congratulations_on_completing_course4: "ברכות על סיום קורס 4"
   congratulations_on_completing_accelerated: "ברכות על סיום הקורס המואץ"
   congrats_next_tutorials_title: "הוסמכת לשלב הבא"
-  congrats_next_tutorials_desc: Try these shorter, 1 hour tutorials or try a <a href="%{current_path}/next">partner
-    tutorial</a>.
+  congrats_next_tutorials_desc: נסה את ההדרכות הקצרות יותר באורך כשעה, או נסה <a href="%{current_path}/next">
+    שותף הדרכה</a>.
   get_a_certificate_of_achievement: "קבל תעודה על ההישג"
   view_course: "צפה בקורס"
   view_unit: "הצג יחידה"
@@ -103,27 +102,28 @@
     ready to inspire your students remotely, via video chat.
   congrats_guest_speaker_cta: "מצא מרצה אורח"
   congrats_third_party_title: "השתמש בכישורים החדשים שלך באתרים והאפליקציות הללו"
-  third_party_gradelevel_kto8: Grades K-8
-  third_party_gradelevel_kto2: Grades K-2
-  third_party_gradelevel_2to8: Grades 2-8
-  third_party_gradelevel_4to12: Grades 4-12
-  third_party_gradelevel_5to12: Grades 5-12
-  third_party_gradelevel_6plus: Grades 6+
-  third_party_gradelevel_8plus: Grade 8+
+  third_party_gradelevel_kto8: "מגן חובה עד ח'"
+  third_party_gradelevel_kto2: "גן חובה -ב'"
+  third_party_gradelevel_2to8: "כיתות ב' עד ח'"
+  third_party_gradelevel_4to12: "כיתות ד' עד ח'"
+  third_party_gradelevel_5to12: "כיתות ה' עד ח'"
+  third_party_gradelevel_6plus: "כיתות ו' ומעלה"
+  third_party_gradelevel_8plus: "כיתות ח' ומעלה"
   third_party_platform_all: "פלטפורמה: דפדפן, אייפד ואנדרואיד"
   third_party_platform_mobile: "פלטפורמה: אייפד ואנדרואיד"
   third_party_platform_web: "פלטפורמה: דפדפן"
-  third_party_price_varies: 'Price: Plans vary'
+  third_party_price_varies: "המחיר משתנה לפי התוכנית"
   third_party_price_free: "מחיר: חינם"
   third_party_price_299: "מחיר: $2.99/הורדה"
   third_party_price_individual: "מחיר יחיד: ניסיון חינם ו - $25/לחודש"
-  third_party_price_school: 'School Price: Free Plans & Pro at $2500+'
-  third_party_tynker_desc: Tynker's creative computing platform helps children develop
-    computational thinking and programming skills in a fun, intuitive and imaginative
-    way. Our innovative visual programming language, interactive self-paced courses,
-    and game-based programming activities provide an easy introduction to programming,
-    and empower children to innovate and create.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_price_school: "המחיר לבית הספר: תוכניות חינמיות ותוכניות פרו החל מ2500$
+    ומעלה"
+  third_party_tynker_desc: "פלטפורמת מחשוב יצירתי של Tynker מסייעת לילדים לפתח חשיבה
+    חישובית, מיומנויות תיכנות בדרך כיפית אינטואיטיבית ומלאת דמיון. שפת התכנות החדשנית
+    שלנו של תכנות ויזואלי, הקורסים הם אינטראקטיביים ובקצב אישי, פעילויות תכנות מבוססות
+    משחק נועדו לספק מבוא קל תכנות, ולהעצים את הילדים לחדש וליצור."
+  third_party_tynker_btn_curriculum: "נסו את תוכנית הלימודים של Tynker עבור גילאי
+    ראשית קריאה"
   third_party_tynker_btn_site: "בקר ב - Tynker"
   third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
     that enables young children (ages 5-7) to create their own interactive stories
@@ -166,7 +166,7 @@
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_try: "מבוא למדעי המחשב מידע נוסף עבור בתי ספר"
   third_party_codecademy_desc: We are rethinking education from the bottom up. The
     web has rethought nearly everything - commerce, social networking, healthcare,
     and more. We are building the education the world needs - the first truly net
@@ -176,7 +176,7 @@
   third_party_organization: "ארגון"
   third_party_curriculum: "תוכנית לימוד"
   third_party_pricing: "מחירים"
-  third_party_cost_free: Free
+  third_party_cost_free: "חינם לתלמידים ולמורים"
   third_party_cost_5permonth: "$5/month per class"
   third_party_cost_299: 2.99 $/ להורדה
   third_party_cost_free_399: "נסיון חינם, $399 לכיתה"
@@ -192,7 +192,7 @@
   third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
   third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
-  third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
+  third_party_desc_20_2to8: "כ- 20 שיעורים, המיועדות לכיתות ב' עד ח'"
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
   third_party_desc_20_4to12: More than 20 lessons, geared toward grades 4-12
   enter_valid_age: "בבקשה, בחר את גילך"
@@ -243,7 +243,7 @@
   continue_learning_header: "המשך ללמוד מעבר לשעה אחת"
   continue_learning_body: "הרבה אפשרויות קיימות. אתה יכול ללמוד מהאינטרנט, בבית הספר
     או במחנה קיץ."
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: "נסו את הקורסים של Code.org"
   learn_next_level: "המשך לשלב הבא"
   learn_online: "נסה קורסים אחרים באינטרנט"
   learn_classes: "מצא כיתות מקומיות"
@@ -369,6 +369,7 @@
   homepage_slot_text_title_hoc: "שעה של קוד"
   homepage_slot_text_blurb_hoc: "כל אחד יכול ללמוד. התחל היום"
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "ארח שעה של קוד"
   homepage_slot_text_link_hocserved: "# למדו"
   homepage_solot_text_link_volunteer: Volunteer for the Hour of Code
@@ -772,6 +773,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "חלק חדש"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "צור חלקים חדשים והוסף תלמידים אליהם.
     חלקים עוזרים לך לארגן תלמידים לקבוצות קטנות כדי שתוכל לעקוב אחרי התהליך למידה
     שלהם ולנהל את המשתמשים שלהם."
@@ -779,6 +781,7 @@
   dashboard_sections_table_secret: "סוג התחברות"
   dashboard_sections_table_grade: "כיתה"
   dashboard_sections_table_course: "קורס"
+  dashboard_sections_table_pairing_allowed: "תכנות בזוגות"
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "סטודנטים"
   dashboard_sections_table_code: Section Code
@@ -1787,9 +1790,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "הפעל"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "מסלולים"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1797,7 +1799,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "שעה של קוד"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1823,6 +1825,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

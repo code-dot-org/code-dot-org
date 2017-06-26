@@ -228,35 +228,34 @@
     error:
       access_denied: "شما به اطلاعات آماری این شخص دسترسی ندارید"
   redeem_prizes:
-    title: "آزاد کردن جوایز: %{name}"
-    provider: "فراهم کننده:"
-    code: "کد:"
-    redeem_header: "به گرو در آوردن :"
-    donorschoose_register: "به عنوان یک معلم در DonorsChoose.org ثبت نام کنید"
-    donorschoose_project: "ارسال یک پروژه"
-    donorschoose_how_to: "چگونه از کد خود استفاده کنید"
-    success: "جایزه شما با موفقیت آزاد شد، کد زیر را مشاهده کنید."
-    error: "جایزه شما قابل آزاد شدن نیست, لطفا دوباره سعی کنید."
-    error_us_only: "پیشنهاد جایزه فقط برای کاربران ایالات متحده اعتبار دارد."
-    error_not_earned: "شما هنوز این جایزه را نبردید."
-    error_already_redeemed: "جایزه تان را قبلا استفاده کرده اید."
-    no_prizes_available: "متاسفیم، اما در حال حاضر هیچ جایزه ای موجود نیست."
-    teacher_info_required: "جوایز معلم نیاز به اطلاعات نام و ادرس مدرسه :"
-    teacher_email_required: "پاداش‌های معلم نیاز به یک آدرس ایمیل تأیید شده دارد:"
+    title: 'Redeem Prizes: %{name}'
+    provider: 'Provider:'
+    code: 'Code:'
+    redeem_header: 'To redeem:'
+    donorschoose_register: Register as a teacher on DonorsChoose.org
+    donorschoose_project: Post a project
+    donorschoose_how_to: How to use your code
+    success: Your prize was succesfully redeemed, see code below.
+    error: Your prize could not be redeemed, please try again.
+    error_us_only: The prize offer is only valid for U.S. users.
+    error_not_earned: You have not yet earned this prize.
+    error_already_redeemed: Your prize has already been redeemed.
+    no_prizes_available: We're sorry, but we currently have no prizes available.
+    teacher_info_required: 'Teacher prizes require school name and address information:'
+    teacher_email_required: 'Teacher prizes require a confirmed email address:'
     confirm:
-      title: "لطفا تایید کنید"
-      'no': "نه"
-      'yes': "بله"
-      msg: "آیا شما در مورد ادعای جایزه %{prize_name} مطمئنید؟"
-      msg_student: "توجه: شما تنها می توانید یک نوع جایزه انتخاب کنید."
-      msg_publicschool: "لطفا تایید کنید که شما یک معلم مدرسه دولتی در ایالات متحده
-        هستند."
-      msg_visit_website: "مشاهده وب سایت"
+      title: Please Confirm
+      'no': 'No'
+      'yes': 'Yes'
+      msg: Are you sure you want to claim the %{prize_name} prize?
+      msg_student: 'NOTE: You can only choose one type of prize.'
+      msg_publicschool: Please confirm that you are a U.S. public school teacher.
+      msg_visit_website: Visit website
     providers:
       apple_itunes: "$10 iTunes Gift Card"
       donors_choose: DonorsChoose.org $750 credit
       donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10 گیگابایت از فضای دراپ باکس
+      dropbox: 10GB of Dropbox Space
       valve: Portal 2 (PC or Mac game download)
       ea_bejeweled: Bejeweled 3 (PC game download)
       ea_fifa: FIFA Soccer 13 (PC game download)
@@ -264,43 +263,42 @@
       ea_pvz: Plants vs. Zombies (PC game download)
       skype: "$10 Skype credit"
     msg:
-      choose: "یک جایزه انتخاب کنید:"
+      choose: 'Choose a prize:'
       choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "شما برنده یک جایزه شدید (فقط دانش‌آموزان ایالات متحده)"
-      not_earned_title: "پایان آموزش، کسب پاداش (فقط دانشجویان آمریکایی)"
-      not_earned: "تمامی مفاهیم علوم کامپیوتر را یاد بگیرید، همه %{num_trophies} جایزه
-        را جمع‌آوری کنید و برنده پاداش‌های واقعی شوید. شما می‌توانید از بین ۱۰ گیگابایت
-        فضای رایگان در دراپ‌باکس (Dropbox) و ۱۰ دلار اعتبار اسکایپ (Skype) و دانلود
-        بازی مجانی انتخاب کنید. توجه: این پیشنهاد فقط برای دانش‌آموزان ایالات متحده
-        و تا زمانی که موجودی آن به اتمام نرسیده باشد معتبر است."
+      earned: You have earned a prize! (U.S. students only)
+      not_earned_title: Finish the tutorial, earn rewards (U.S. students only)
+      not_earned: 'Learn all the computer science concepts, collect all %{num_trophies}
+        trophies, and earn real-world prizes. You can choose between 10GB of free
+        Dropbox space, $10 in Skype credits, and free game downloads. NOTE: offer
+        only valid to U.S. students, and only as long as supplies last.'
       teacher:
-        earned: "بیش از 15 دانش‌آموز همه %{num_trophies} جایزه را جمع‌آوری کرده‌اند.
-          شما برنده پاداش معلمان شده‌اید! (فقط معلمان ایالات متحده)"
-        not_earned_title: کلاس آموزش, کسب درآمد تا 1،000 $ در  <a target="_blank"
-          href="http://DonorsChoose.org"> DonorsChoose.org</a> (تنها معلمان ایالات
-          متحده )
-        not_earned: برای تشویق معلمان علوم کامپیوتر تازه کار شما میتوانید تا ۱۰۰۰
-          دلار اعتبار از    <a href="http://DonorsChoose.org">DonorsChoose.org</a>
-          برای هدایت کلاس  درس K-8 intro دریافت کنید. برای واجد شرایط شدن شما باید
-          یک کلاس حداقل ۱۵ نفره را هدایت کنید تا دست کم ۱۵ دانش آموز بتوانند با موفقیت
-          تمام دوره K-8 intro را بگذرانند و همشون تعداد  %{num_trophies} غنیمت جمع
-          کنند. اگر حداقل ۷ نفر از دانش آموزانی که تمام غنایم را بدست آوردند دختر
-          بودند پاداش شما در <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>  به
-          ۱۰۰۰ دلار میرسد. در غیر اینصورت پاداش شما در <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          به ۷۵۰ دلار میرسد. اعتبارات  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>  فقط
-          به معلمان مدارس عمومی آمریکا تعلق میگیرد.
+        earned: 15 or more students collected all %{num_trophies} trophies. You have
+          won a teacher prize! (U.S. teachers only)
+        not_earned_title: Teach the class, earn up to $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+          only)
+        not_earned: To reward first-time computer science teachers, you can earn up
+          to $1,000 in <a href="http://DonorsChoose.org">DonorsChoose.org</a> credits
+          for guiding a classroom through the K-8 intro course. To qualify, you need
+          to successfully host a classroom of at least 15 students through the entire
+          K-8 intro course, with all 15 students (or more) completing all tutorials
+          and earning all %{num_trophies} trophies. If 7 or more of the students who
+          earn all of the trophies are girls, your reward is $1,000 in <a target="_blank"
+          href="http://DonorsChoose.org">DonorsChoose.org</a> credits. Otherwise,
+          your reward is $750 in <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          credits.  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
+          credits can only be used by teachers in U.S. public schools.
         bonus:
-          not_earned_title: شما هنوز هم میتوانید کسب کنید $250 را در  <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> اعتبار (تنها برای
-            معلمان ایالات متحده)
-          earned: "تعداد ۷ دانش‌آموز (یا بیشتر) که همه %{num_trophies} نشان پیروزی
-            را جمع کرده‌اند، دختر هستند. شما برنده یک جایزه شدید! (فقط معلمان ایالات
-            متحده)"
-          not_earned: حداقل ۷ نفر از دانش آموزان شما تمامی  %{num_trophies} غنیمت
-            را برنده شده اندو  شما ۲۵۰ دلار جایزه اضافی در اعتبارات  <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> دریافت نمودید. اعتبارات
-            <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-            فقط مخصوص معلمان مدارس عمومی آمریکا است.
+          not_earned_title: You can still earn an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits (U.S. teachers
+            only)
+          earned: 7 or more of the students who collected all %{num_trophies} trophies
+            are girls. You have won a bonus prize! (U.S. teachers only)
+          not_earned: If at least 7 of your students who earn all %{num_trophies}
+            trophies are girls, your reward is an additional $250 in <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits. <a target="_blank"
+            href="http://DonorsChoose.org">DonorsChoose.org</a> credits can only be
+            used by teachers in U.S. public schools.
   crud:
     new_model: "%{model} جدید"
     show: "نمایش"
@@ -328,7 +326,7 @@
       district_dashboard: "محدوده ی داشبورد"
       label: "سلام %{username}"
       stats: "پیشرفت من"
-      settings: "حساب کاربری من"
+      settings: My account
       prizes: Prizes
       logout: "خروج"
       signin: "ورود"
@@ -602,7 +600,7 @@
     report_abuse: "گزارش سوء استفاده"
     built_on_code_studio: "ساخته شده در کد استودیو"
     make_my_own_app: "برنامه ی خودم را بساز"
-    how_it_works: "چگونه کار می کند"
+    how_it_works: How it works
     try_hour_of_code: Try an Hour of Code!
   reference_area:
     title: "کمک نیاز دارید؟"

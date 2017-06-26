@@ -393,6 +393,7 @@
   homepage_slot_text_title_hoc: Hora del Código
   homepage_slot_text_blurb_hoc: Todos podemos aprender. Comience hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organice una Hora de Código
   homepage_slot_text_link_hocserved: "# servido"
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora del Código
@@ -503,12 +504,12 @@
   minecraft_download_adventurer: Descarga la versión offline del Aventurero de Minecraft.
   minecraft_subtitle: Hora de Código de Minecraft
   sports_page_title: Hora del Código de Los Deportes
-  sports_og_title: Tutoriales de La Hora del Código de Los Deportes
-  sports_og_description: Seleccione entre NBA y WNBA o los tutoriales de programación
-    de todos los deportes.
+  sports_og_title: Esfuérzate. Todo el mundo puede aprender.
+  sports_og_description: Campeones y medallistas de oro te animamos a probar la hora
+    del código. El código de su propio juego deportivo.
   sports_title: Crea tu propio Juego de deportes
   sports_watch_video: Mira el Video
-  sports_video_title: Tutoriales de La Hora del Código de Los Deportes
+  sports_video_title: Esfuérzate. Todo el mundo puede aprender.
   sports_select_theme: Seleccione el tema del tutorial
   sports_basketball_title: Crear un juego de baloncesto
   sports_all_sports_title: Multideporte
@@ -520,8 +521,8 @@
     tenis
   sports_athlete_Russell: Russell Okung, campeón de la Super Bowl y jugador en la
     NFL, Denver Broncos
-  sports_athlete_Sergio: Sergio Ramos, jugador y campeón de la Copa Mundial de fútbol,
-    Real Madrid
+  sports_athlete_Sergio: Sergio Ramos, futbolista del Real Madrid y campeón de la
+    Copa Mundial de fútbol
   sports_athlete_Sue: Sue Bird, medallista de oro olímpico y campeona de la WNBA,
     Seattle Storm
   sports_athlete_Alana: Alana Beard, medallista de oro y All-Star de la WNBA, Los
@@ -532,12 +533,12 @@
   sports_athlete_Carmelo: Carmelo Anthony, medallista de oro olímpico y NBA All-Star,
     New York Knicks
   sports_athlete_Marco: Marco Belinelli, campeón de la NBA, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., medallista de oro olímpico y futbolista en el
-    equipo nacional, FC Barcelona y Brasil
+  sports_athlete_Neymar: Neymar Jr., futbolista, medallista de oro olímpico con equipo
+    nacional de Brasil y FC Barcelona
   sports_athlete_Sarah: Sarah Quita Offringa, campeona de windsurf
   sports_athlete_Marcelo: Marcelo, campeón de fútbol y jugador en el equipo nacional,
     Real Madrid, Brasil
-  sports_athlete_Erika: Erika Olivera, maratonista campeona
+  sports_athlete_Erika: Erika Olivera, campeona maratonista
   sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
   sports_athlete_Chris: Chris Bosh, medallista de oro olímpico y campeón de la NBA,
     Miami Heat
@@ -828,6 +829,7 @@
     a las preguntas de respuesta abierta texto eligiendo el curso asignado en el desplegable
     de arriba.
   dashboard_sections_new_section: Nueva sección
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
     a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños
     para que puedas seguir su progreso y administrar sus cuentas.
@@ -835,6 +837,7 @@
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_pairing_allowed: Programación de pares
   dashboard_sections_table_stage_extras: Etapa Extra
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
@@ -1935,42 +1938,41 @@
   infinity_shortcode: inf
   playlab_shortcode: ejecutar
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
+  header_home: Inicio
+  header_courses: cursos
+  header_project_gallery: Lista de Proyectos
   header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_professional_learning: Aprendizaje Profesional
+  header_educate_overview: Resumen del docente
+  header_educate_elementary: Primaria
+  header_educate_middle: Secundaria
+  header_educate_high: Escuela Superior
+  header_educate_hoc: Hora del código
+  header_educate_partner: Asociese con nosotros
+  header_educate_beyond: Más allá de Code.org
+  header_educate_inspire: Inspire a un estudiante
+  header_educate_community: Comunidad en línea
+  header_educate_tools: Herramientas y videos
+  header_about_us: Acerca de nosotros
+  header_about_leadership: Liderazgo
+  header_about_donors: Donantes
+  header_about_partners: Asociados
+  header_about_team: Equipo completo
+  header_about_news: Centro de noticias
+  header_about_evaluation: Evaluación
+  header_about_jobs: Empleos
+  header_about_contact: Contáctanos
+  header_about_faqs: Preguntas Frecuentes
+  header_learn: Aprenda
+  header_teach: Enseña
+  header_stats: Estadísticas
+  header_help_us: Ayudenos
+  header_about: Acerca de
   header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
+  header_help_support: 'Ayuda y soporte técnico '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
