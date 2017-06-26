@@ -99,7 +99,7 @@ class DropletCodeToggle extends Component {
 
   toggle = () => {
     // are we trying to toggle from blocks to text (or the opposite)
-    let fromBlocks = studioApp().editor.session.currentlyUsingBlocks;
+    let fromBlocks = studioApp().currentlyUsingBlocks();
 
     let result;
     try {
@@ -116,7 +116,7 @@ class DropletCodeToggle extends Component {
     } else {
       studioApp().onDropletToggle();
       this.forceUpdate();
-      this.props.onToggle(studioApp().editor.session.currentlyUsingBlocks);
+      this.props.onToggle(studioApp().currentlyUsingBlocks());
     }
   }
 
@@ -124,7 +124,7 @@ class DropletCodeToggle extends Component {
     this.toggle();
     if (experiments.isEnabled('saveBlockMode')) {
       new UserPreferences().setUsingTextMode(
-        !studioApp().editor.session.currentlyUsingBlocks,
+        !studioApp().currentlyUsingBlocks(),
         {
           project_id: project.getCurrentId(),
           level_id: studioApp().config.level.id,
@@ -134,9 +134,6 @@ class DropletCodeToggle extends Component {
   }
 
   render() {
-    const currentlyUsingBlocks = studioApp().editor &&
-      studioApp().editor.session &&
-      studioApp().editor.session.currentlyUsingBlocks;
     return (
       <ShowCodeButton
         hasFocus={this.props.hasFocus}
@@ -144,7 +141,7 @@ class DropletCodeToggle extends Component {
         isMinecraft={this.props.isMinecraft}
         onClick={this.onClick}
         hidden={!studioApp().enableShowCode}
-        showingBlocks={currentlyUsingBlocks}
+        showingBlocks={studioApp().currentlyUsingBlocks()}
         showCodeLabel={msg.showTextHeader()}
       />
     );
