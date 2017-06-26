@@ -11,9 +11,9 @@ are and how they relate to each other.
 [NeilFraser/JS-Intepreter](https://github.com/NeilFraser/JS-Interpreter)
 is the main repository where development of the interpreter takes place. It gets updated
 sporadically every 3-6 months or so. The goal of "upgrading the interpreter" is about
-getting the updates in this repository to work on code.org.
+getting the updates in this repository to work on Code.org.
 
-### Code.org's "fork" of Neil's JS-Interpreter
+### Code.org's fork of Neil's JS-Interpreter
 
 [code-dot-org/JS-Interpreter](https://github.com/code-dot-org/JS-Interpreter) is a fork
 of Neil Fraser's interpreter which adds a bunch of developer oriented tooling like testing
@@ -120,7 +120,7 @@ extra work to setup your development environment. Assuming you already have the
 
 1. Create a new pull request to merge `code-dot-org/JS-Interpreter#merge-upstream` into `code-dot-org/JS-Interpreter#master`, for example by going to the following url: https://github.com/code-dot-org/JS-Interpreter/compare/master...code-dot-org:merge-upstream
 
-1. Wait for the automated tests to run on your pull request. It is incredibly rare that an upgrade to the interpreter causes absolutely no regressions against the test262 ECMAScript test suite. The only question to ask about a failure is whether the regressions are acceptable or not. Unless something serious has broken in the interpreter, the regressions usually involve incredibly esoteric nuances of the JavaScript language that few if any people will encounter in real life on code.org.
+1. Wait for the automated tests to run on your pull request. It is incredibly rare that an upgrade to the interpreter causes absolutely no regressions against the test262 ECMAScript test suite. The only question to ask about a failure is whether the regressions are acceptable or not. Unless something serious has broken in the interpreter, the regressions usually involve incredibly esoteric nuances of the JavaScript language that few if any people will encounter in real life on Code.org.
 
 1. Check the fixes and regressions using `js-interpreter-tyrant` by downloading the test results from circle ci. You will need the circle ci build number:
 
