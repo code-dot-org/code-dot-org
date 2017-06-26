@@ -21,6 +21,9 @@ machine:
   services:
     - docker
     - redis
+  hosts:
+    localhost.code.org: 127.0.0.1
+    localhost-studio.code.org: 127.0.0.1
 checkout:
   post:
     - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
