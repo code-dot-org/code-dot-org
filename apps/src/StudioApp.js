@@ -1055,7 +1055,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 
   var hideFn = _.bind(function () {
     // Set focus to ace editor when instructions close:
-    if (this.editCode && this.editor && !this.editor.session.currentlyUsingBlocks) {
+    if (this.editCode && this.currentlyUsingBlocks()) {
       this.editor.aceEditor.focus();
     }
 
@@ -1887,6 +1887,13 @@ StudioApp.prototype.setDropletCursorToLine_ = function (line) {
   }
 };
 
+/**
+ * Whether we are currently using droplet in block mode rather than text mode.
+ */
+StudioApp.prototype.currentlyUsingBlocks = function () {
+  return this.editor && this.editor.session && this.editor.session.currentlyUsingBlocks;
+};
+
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
@@ -2127,7 +2134,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       if (range) {
         var lineIndex = range.start.row;
         var line = lineIndex + 1; // 1-based line number
-        if (this.editor.session.currentlyUsingBlocks) {
+        if (this.currentlyUsingBlocks()) {
           options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
           this.setDropletCursorToLine_(lineIndex);
           this.editor.scrollCursorIntoPosition();
@@ -2335,7 +2342,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
  */
 StudioApp.prototype.onDropletToggle = function (autoFocus) {
   autoFocus = utils.valueOr(autoFocus, true);
-  if (!this.editor.session.currentlyUsingBlocks) {
+  if (!this.currentlyUsingBlocks()) {
     if (autoFocus) {
       this.editor.aceEditor.focus();
     }
