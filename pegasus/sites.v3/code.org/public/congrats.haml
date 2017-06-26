@@ -18,8 +18,8 @@ max_age: 60
   cert_id = params[:i]
   begin
     cert_script = params[:s] ? Base64.urlsafe_decode64(params[:s]) : ScriptConstants::HOC_NAME
-  rescue
-    pass
+  rescue ArgumentError
+    bad_request
   end
   pass unless ScriptConstants.script_in_any_category?(cert_script)
 
