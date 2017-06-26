@@ -22,7 +22,7 @@ const RecentCourses = React.createClass({
         {courses.length > 0 && (
           <ContentContainer
             heading={heading}
-            linkText={i18n.viewAllCourses()}
+            linkText={i18n.findCourse()}
             link="/courses"
             showLink={showAllCoursesLink}
             isRtl={isRtl}
@@ -38,15 +38,15 @@ const RecentCourses = React.createClass({
             )}
           </ContentContainer>
         )}
-        {courses.length === 0 && isTeacher && (
+        {courses.length === 0 && (
           <ContentContainer
             heading={heading}
-            linkText={i18n.viewAllCourses()}
+            linkText={i18n.findCourse()}
             link="/courses"
             showLink={showAllCoursesLink}
             isRtl={isRtl}
           >
-            <SetUpMessage type="courses" isRtl={isRtl}/>
+            <SetUpMessage type="courses" isRtl={isRtl} isTeacher={isTeacher}/>
           </ContentContainer>
         )}
       </div>
