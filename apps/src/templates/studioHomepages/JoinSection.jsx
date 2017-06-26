@@ -1,5 +1,6 @@
 import React from 'react';
 import color from '@cdo/apps/util/color';
+import i18n from "@cdo/locale";
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 
 const styles = {
@@ -63,7 +64,7 @@ const JoinSection = React.createClass({
   },
 
   joinSection() {
-    console.log("This action will enroll the student in a section");
+    return;
   },
 
   render() {
@@ -73,28 +74,27 @@ const JoinSection = React.createClass({
       <div style={{...styles.main, ...(enrolledInASection ? styles.main : styles.mainDashed)}}>
         <div style={styles.wordBox}>
           <div style={styles.heading}>
-            Join a Classroom
+            {i18n.joinASection()}
           </div>
           <div style={styles.details}>
-            Join your teacher's class by entering their Section Code
+            {i18n.joinSectionDescription()}
           </div>
         </div>
         <input
           type="text"
           name="sectionCode"
           style={styles.inputBox}
-          placeholder="Section Code (ABCDEF)"
+          placeholder={i18n.joinSectionPlaceholder()}
         />
         <ProgressButton
           href={this.joinSection}
           color={ProgressButton.ButtonColor.gray}
-          text="Join classroom"
+          text={i18n.joinSection()}
           style={styles.button}
         />
       </div>
     );
   }
-
 });
 
 export default JoinSection;
