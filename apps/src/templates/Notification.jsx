@@ -56,7 +56,7 @@ const styles = {
     textAlign: 'center'
   },
   icon: {
-    color: color.white,
+    color: 'rgba(255,255,255, .8)',
     fontSize: 38,
     lineHeight: 2
   },
