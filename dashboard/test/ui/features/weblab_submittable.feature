@@ -1,5 +1,6 @@
 @no_mobile
 @as_taught_student
+@no_circle
 Feature: Submittable WebLab
 
 Background:
