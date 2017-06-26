@@ -8,11 +8,13 @@ const Sections = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    isTeacher: React.PropTypes.bool.isRequired,
+    canLeave: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { sections, codeOrgUrlPrefix, isRtl } = this.props;
+    const { sections, codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
@@ -28,10 +30,11 @@ const Sections = React.createClass({
           <SectionsTable
             sections={sections}
             isRtl={isRtl}
-            isTeacher={true}
+            isTeacher={isTeacher}
+            canLeave={canLeave}
           />
         )}
-        {sections.length === 0 && (
+        {sections.length === 0 && isTeacher && (
           <SetUpMessage
             type="sections"
             codeOrgUrlPrefix={codeOrgUrlPrefix}

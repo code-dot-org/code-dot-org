@@ -52,7 +52,7 @@ export const styles = {
   },
   teacherCol: {
     lineHeight: '52px',
-    width: 135
+    width: 160
   },
   studentsCol: {
     width: 110
@@ -71,7 +71,6 @@ export const styles = {
     borderLeftWidth: 1,
     borderLeftColor: color.border_light_gray,
     borderLeftStyle: 'solid',
-    display: 'none'
   },
   colText: {
     color: color.charcoal,
@@ -102,6 +101,7 @@ const SectionsTable = React.createClass({
     ),
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
+    canLeave: PropTypes.bool.isRequired
   },
 
   onLeave() {
@@ -109,7 +109,7 @@ const SectionsTable = React.createClass({
   },
 
   render() {
-    const { sections, isRtl, isTeacher } = this.props;
+    const { sections, isRtl, isTeacher, canLeave } = this.props;
 
     return (
       <table style={styles.table}>
@@ -144,7 +144,7 @@ const SectionsTable = React.createClass({
                 {i18n.sectionCode()}
               </div>
             </td>
-            {!isTeacher && (
+            {canLeave && (
               <td style={{...styles.col, ...styles.leaveCol}}>
                 <div style={styles.colText}>
                 </div>
@@ -186,7 +186,7 @@ const SectionsTable = React.createClass({
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
                 {section.sectionCode}
               </td>
-              {!isTeacher && (
+              {canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   <ProgressButton
                     style={{marginLeft: 5}}
