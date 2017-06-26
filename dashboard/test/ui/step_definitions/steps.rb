@@ -1213,11 +1213,14 @@ Then /^I wait for initial project save to complete$/ do
   end
 end
 
-When /^I switch to text mode$/ do
+When /^I switch to text mode without remembering$/ do
   steps <<-STEPS
     When I press "show-code-header"
     And I wait to see Droplet text mode
   STEPS
+  wait_until do
+    @browser.execute_script('$.post("/api/v1/users/me/using_text_mode`, {using_text_mode: false})')
+  end
 end
 
 Then /^the project list contains ([\d]+) (?:entry|entries)$/ do |expected_num|
