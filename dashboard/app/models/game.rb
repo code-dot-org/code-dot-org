@@ -156,7 +156,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB || app == WEBLAB
+    [TURTLE, FLAPPY, BOUNCE, STUDIO, STUDIO_EC, APPLAB, CRAFT, GAMELAB, WEBLAB].include? app
   end
 
   def sharing_filtered?
@@ -168,7 +168,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
-    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC" || name == "Gamelab"
+    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
   end
 
   def uses_pusher?
@@ -176,20 +176,20 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB || app == WEBLAB
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB].include? app
   end
 
   # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
-    app === APPLAB || app == WEBLAB
+    [APPLAB, WEBLAB].include? app
   end
 
   def has_i18n?
-    !(app == NETSIM || app == APPLAB || app == GAMELAB || app == WEBLAB)
+    !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
   end
 
   def use_firebase_for_new_project?
-    app == APPLAB || app == GAMELAB
+    [APPLAB, GAMELAB].include? app
   end
 
   def self.setup
