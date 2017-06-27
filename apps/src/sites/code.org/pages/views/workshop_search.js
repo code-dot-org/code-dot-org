@@ -1,4 +1,10 @@
-/* global google MarkerClusterer */
+/* globals google */
+
+import $ from "jquery";
+import MarkerClusterer from 'node-js-marker-clusterer';
+import getScriptData from '@cdo/apps/util/getScriptData';
+
+const imagePath = getScriptData('workshopSearch').imagePath;
 
 var gmap,
   markersByLocation = {},
@@ -25,9 +31,7 @@ function initializeMap() {
 }
 
 function loadWorkshops() {
-  markerClusterer = new MarkerClusterer(gmap, [],
-    {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'}
-  );
+  markerClusterer = new MarkerClusterer(gmap, [], {imagePath});
 
   $.get('/dashboardapi/v1/pd/k5workshops').done(function (data) {
     processPdWorkshops(data);
@@ -42,7 +46,7 @@ function processLegacyWorkshops(response) {
   var results = JSON.parse(response);
 
   $.each(results.response.docs, function (index, workshop) {
-    if (typeof workshop.location_p !== 'undefined') {
+    if (workshop.location_p !== undefined) {
       var location = workshop.location_p.split(',');
       var latLng = new google.maps.LatLng(location[0], location[1]);
 
@@ -51,7 +55,7 @@ function processLegacyWorkshops(response) {
 
       var infoWindowContent = '';
 
-      if (typeof markersByLocation[hash] === 'undefined') {
+      if (markersByLocation[hash] === undefined) {
         infoWindowContent = compileHtml(workshop, true);
         markersByLocation[hash] = createNewMarker(latLng, workshop.location_name_p, infoWindowContent);
       } else {
@@ -71,7 +75,7 @@ function processPdWorkshops(workshops) {
 
     var infoWindowContent = '';
 
-    if (typeof markersByLocation[hash] === 'undefined') {
+    if (markersByLocation[hash] === undefined) {
       infoWindowContent = compileHtmlNew(workshop, true);
       markersByLocation[hash] = createNewMarker(latLng, workshop.location_name, infoWindowContent);
     } else {
@@ -173,7 +177,7 @@ function addGeocomplete() {
     country: 'us'
   };
 
-  if (html5_storage_supported() && typeof localStorage['geocomplete'] !== 'undefined') {
+  if (html5_storage_supported() && localStorage['geocomplete'] !== undefined) {
     geocomplete_options.location = localStorage['geocomplete'];
   }
 
