@@ -67,6 +67,10 @@ function showHomepage() {
       {!isTeacher && (
         <StudentHomepage
           courses={homepageData.courses}
+          sections={homepageData.sections}
+          canLeave={homepageData.canLeave}
+          codeOrgUrlPrefix={homepageData.codeorgurlprefix}
+          isRtl={isRtl}
         />
       )}
     </div>,

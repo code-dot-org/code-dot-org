@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
+import shapes from './shapes';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 
 // Many of these styles are also used by our similar SectionTable on the
@@ -87,30 +88,19 @@ export const styles = {
 
 const SectionsTable = React.createClass({
   propTypes: {
-    sections: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        teacherName: React.PropTypes.string.isRequired,
-        linkToProgress: React.PropTypes.string.isRequired,
-        assignedTitle: React.PropTypes.string,
-        linkToAssigned: React.PropTypes.string,
-        numberOfStudents: React.PropTypes.number.isRequired,
-        linkToStudents: React.PropTypes.string.isRequired,
-        sectionCode: React.PropTypes.string.isRequired
-      })
-    ),
+    sections: shapes.sections,
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired
   },
 
   onLeave() {
-
-    console.log("How do I remove a student from a section?");
+    // const { canLeave } = this.props;
   },
 
   render() {
-    const { sections, isRtl, isTeacher } = this.props;
+    const { sections, isRtl, isTeacher, canLeave } = this.props;
+    // const { leaving } = this.state;
 
     return (
       <table style={styles.table}>
@@ -145,7 +135,7 @@ const SectionsTable = React.createClass({
                 {i18n.sectionCode()}
               </div>
             </td>
-            {!isTeacher && (
+            {!isTeacher && canLeave && (
               <td style={{...styles.col, ...styles.leaveCol}}>
                 <div style={styles.colText}>
                 </div>

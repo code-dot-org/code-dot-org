@@ -47,6 +47,7 @@ export default storybook => {
             codeOrgUrlPrefix = "http://code.org/"
             isRtl={false}
             isTeacher={true}
+            canLeave={false}
           />
         )
       },
@@ -59,6 +60,7 @@ export default storybook => {
             codeOrgUrlPrefix = "http://code.org/"
             isRtl={false}
             isTeacher={true}
+            canLeave={false}
           />
         )
       },
