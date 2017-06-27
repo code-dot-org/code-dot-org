@@ -8669,6 +8669,7 @@ Editor.prototype.showDropdown = function(socket, inPalette) {
         }
         return _this.dropdownElement.style.top = dropdownTop + 'px';
       } else {
+        socket = _this.getCursor();
         location = _this.session.view.getViewNodeFor(socket).bounds[0];
         _this.dropdownElement.style.left = location.x - _this.session.viewports.main.x + _this.dropletElement.offsetLeft + _this.gutter.clientWidth + 'px';
         _this.dropdownElement.style.minWidth = location.width + 'px';
