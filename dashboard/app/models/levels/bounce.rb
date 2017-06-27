@@ -38,6 +38,24 @@ class Bounce < Grid
     use_flag_goal
   )
 
+  validate :validate_skin_and_theme
+
+  def validate_skin_and_theme
+    # the sports skin can have any theme except retro
+    sport_skin_non_sport_theme = (
+      skin === "sports" && theme === "retro"
+    )
+
+    # the bounce and basketball skins can only have retro or basketball themes
+    sport_theme_non_sport_skin = (
+      %(bounce basketball).include?(skin) &&
+      !%(retro basketball).include?(theme)
+    )
+
+    errors.add(:theme, "#{skin} skin and #{theme} theme are incompatible") if
+      sport_skin_non_sport_theme || sport_theme_non_sport_skin
+  end
+
   def self.soft_buttons
     %w(
       leftButton
