@@ -97,7 +97,6 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
     documentationUrl: React.PropTypes.string,
-    ttsInstructionsUrl: React.PropTypes.string,
     ttsMarkdownInstructionsUrl:  React.PropTypes.string
   },
 
@@ -263,7 +262,6 @@ module.exports = connect(function propsFromStore(state) {
     noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed,
     documentationUrl: state.pageConstants.documentationUrl,
-    ttsInstructionsUrl: state.pageConstants.ttsInstructionsUrl,
     ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
   };
 }, function propsFromDispatch(dispatch) {

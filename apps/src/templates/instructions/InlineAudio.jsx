@@ -174,28 +174,24 @@ const InlineAudio = React.createClass({
       return (
         <div
           className="inline-audio"
-          style={(this.props.style && this.props.style.wrapper) ? this.props.style.wrapper : null}
+          style={this.props.style && this.props.style.wrapper}
         >
           <div
-            style={[styles.button, styles.volumeButton,
-              (this.props.style && this.props.style.button) ? this.props.style.button : null]}
+            style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button]}
           >
             <i
               className={"fa fa-volume-up"}
-              style={[styles.buttonImg,
-                (this.props.style && this.props.style.buttonImg) ? this.props.style.buttonImg : null]}
+              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
             />
           </div>
           <div
             className="playPause"
-            style={[styles.button, styles.playPauseButton,
-              (this.props.style && this.props.style.button) ? this.props.style.button : null]}
+            style={[styles.button, styles.playPauseButton, this.props.style && this.props.style.button]}
             onClick={this.toggleAudio}
           >
             <i
               className={this.state.playing ? "fa fa-pause" : "fa fa-play"}
-              style={[styles.buttonImg,
-                (this.props.style && this.props.style.buttonImg) ? this.props.style.buttonImg : null]}
+              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
             />
           </div>
         </div>
