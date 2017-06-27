@@ -59,6 +59,7 @@ class Pd::Enrollment < ActiveRecord::Base
 
   before_validation :autoupdate_user_field
   after_create :enroll_in_corresponding_online_learning
+  after_save :enroll_in_corresponding_online_learning, if: -> {user_id_changed? || email_changed?}
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -226,6 +227,8 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   def enroll_in_corresponding_online_learning
+    autoupdate_user_field if email_changed?
+
     if user && workshop.associated_online_course
       Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
     end

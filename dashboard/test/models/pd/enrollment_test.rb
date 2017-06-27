@@ -339,6 +339,32 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     end
   end
 
+  test 'enrolling in class, and then later having the user field updated enrolls in online learning' do
+    teacher = create :teacher
+    create :plc_course, name: 'CSP Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    enrollment = create :pd_enrollment, user: nil, workshop: workshop
+    enrollment.update(user: teacher)
+    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+  end
+
+  test 'enrolling in class while not logged in still associates the user' do
+    teacher = create :teacher
+    create :plc_course, name: 'CSP Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
+    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+  end
+
+  test 'enrolling in class without an account creates an account when the user is created' do
+    create :plc_course, name: 'CSP Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    user_email = "#{SecureRandom.hex}@code.org"
+    create :pd_enrollment, user: nil, email: user_email, workshop: workshop
+    teacher = create(:teacher, email: user_email)
+    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+  end
+
   test 'attendance scopes' do
     workshop = create :pd_workshop, num_sessions: 2
     teacher = create :teacher
