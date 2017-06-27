@@ -1337,7 +1337,7 @@ Artist.prototype.selectPattern = function () {
 
 Artist.prototype.setPattern = function (pattern) {
   if (this.shouldDrawNormalized_) {
-    pattern = Object.keys(this.loadedPathPatterns)[0];
+    pattern = null;
   }
 
   if (this.loadedPathPatterns[pattern]) {
