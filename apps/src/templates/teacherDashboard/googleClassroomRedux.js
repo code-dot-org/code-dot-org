@@ -42,7 +42,7 @@ export default function googleClassroom(state = initialState, action) {
   if (action.type === SET_CLASSROOM_LIST) {
     return {
       ...state,
-      classrooms: action.classrooms,
+      classrooms: action.classrooms.slice(),
     };
   }
 

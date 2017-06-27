@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseDialog from '../BaseDialog';
+import { classroomShape } from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 
@@ -91,7 +92,7 @@ export default class RosterDialog extends React.Component {
   static propTypes = {
     handleClose: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.array,
+    classrooms: React.PropTypes.arrayOf(classroomShape),
   }
 
   constructor(props) {
