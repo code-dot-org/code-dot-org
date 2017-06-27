@@ -71,13 +71,12 @@ dependencies:
         dashboard_enable_pegasus: true
         dashboard_workers: 6
         skip_seed_all: true" >> locals.yml
+    # Settings specific to UI tests
     - |
         echo "
         use_dynamo_tables: false
         use_dynamo_properties: false
         no_https_store: true
-        override_dashboard: \"localhost-studio.code.org\"
-        override_pegasus: \"localhost.code.org\"
         dashboard_port: 3000
         pegasus_port: 3000" >> locals.yml
     - yarn version -V
@@ -119,6 +118,12 @@ test:
         parallel: true
         timeout:
             7200
+    # Apply these settings late so they don't mess up unit tests
+    - |
+        echo "
+        override_dashboard: \"localhost-studio.code.org\"
+        override_pegasus: \"localhost.code.org\"
+        " >> locals.yml
     - bundle exec rake circle:run_ui_tests:
         parallel: true
         timeout:
