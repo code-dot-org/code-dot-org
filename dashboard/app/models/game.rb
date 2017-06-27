@@ -67,6 +67,10 @@ class Game < ActiveRecord::Base
     @@game_custom_artist ||= find_by_name("Custom")
   end
 
+  def self.custom_flappy
+    @@game_custom_flappy ||= find_by_name("CustomFlappy")
+  end
+
   def self.calc
     @@game_calc ||= find_by_name("Calc")
   end
@@ -258,6 +262,7 @@ class Game < ActiveRecord::Base
         Weblab:weblab
         CurriculumReference:curriculum_reference
         Map:map
+        CustomFlappy:flappy
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
