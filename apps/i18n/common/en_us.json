@@ -309,6 +309,7 @@
   "myProjects": "My Projects",
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
   "newSection": "New section",
+  "newSectionEllipsis": "New section...",
   "nextLevel": "Congratulations! You completed Puzzle {puzzleNumber}.",
   "nextLevelTrophies": "Congratulations! You completed Puzzle {puzzleNumber} and won {numTrophies, plural, one {a trophy} other {# trophies}}.",
   "nextPuzzle": "Next puzzle",
