@@ -2,15 +2,17 @@
 #
 # Table name: channel_tokens
 #
-#  id         :integer          not null, primary key
-#  channel    :string(255)      not null
-#  user_id    :integer          not null
-#  level_id   :integer          not null
-#  created_at :datetime
-#  updated_at :datetime
+#  id             :integer          not null, primary key
+#  channel        :string(255)      not null
+#  storage_app_id :integer
+#  user_id        :integer          not null
+#  level_id       :integer          not null
+#  created_at     :datetime
+#  updated_at     :datetime
 #
 # Indexes
 #
+#  index_channel_tokens_on_storage_app_id        (storage_app_id)
 #  index_channel_tokens_on_user_id_and_level_id  (user_id,level_id) UNIQUE
 #
 
