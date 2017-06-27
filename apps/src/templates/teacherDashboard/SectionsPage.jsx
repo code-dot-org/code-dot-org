@@ -6,6 +6,7 @@ import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, newSection } from './teacherSectionsRedux';
 import { loadClassroomList } from './googleClassroomRedux';
+import { classroomShape } from './shapes';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -22,7 +23,7 @@ const styles = {
 class SectionsPage extends Component {
   static propTypes = {
     numSections: PropTypes.number.isRequired,
-    classrooms: PropTypes.array,
+    classrooms: PropTypes.arrayOf(classroomShape),
     newSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
@@ -49,7 +50,7 @@ class SectionsPage extends Component {
 
   handleImportClose = (selectedId) => {
     this.setState({rosterDialogOpen: false});
-    // TODO: use `selectedId`.
+    // TODO (josh): use `selectedId`.
     console.log(selectedId);
   };
 
