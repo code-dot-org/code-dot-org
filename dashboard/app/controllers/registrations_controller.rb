@@ -106,6 +106,7 @@ class RegistrationsController < Devise::RegistrationsController
   def update_params(params)
     params.require(:user).permit(
       :email,
+      :parent_email,
       :hashed_email,
       :password,
       :encrypted_password,
