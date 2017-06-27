@@ -1,5 +1,10 @@
 import React from 'react';
-import { WallTypeMask, WallTypeShift } from '@cdo/apps/studio/constants';
+import {
+  SquareType,
+  Direction,
+  WallTypeMask,
+  WallTypeShift
+} from '@cdo/apps/studio/constants';
 import tileGuide from '../../../static/code_studio/tile-guide.png';
 
 const options = {
@@ -18,6 +23,8 @@ const options = {
   covered_crates_3b: 0x350000,
 };
 
+const startDirections = Object.entries(Direction).slice(0, 5);
+
 export default class StarWarsGridCellEditor extends React.Component {
   static propTypes = {
     cell: React.PropTypes.object.isRequired,
@@ -33,8 +40,11 @@ export default class StarWarsGridCellEditor extends React.Component {
 
   handleChange() {
     const zoom = this.refs.zoom && this.refs.zoom.checked;
+    const direction = this.refs.direction ? +this.refs.direction.value : undefined;
+
     this.props.onUpdate({
-      tileType: zoom << WallTypeShift | this.refs.type.value
+      tileType: zoom << WallTypeShift | this.refs.type.value,
+      direction: direction,
     });
   }
 
@@ -59,6 +69,21 @@ export default class StarWarsGridCellEditor extends React.Component {
           <span>
             <label htmlFor="zoom">Double size:</label>
             <input ref="zoom" name="zoom" type="checkbox" checked={zoom} onChange={this.handleChange}/>
+          </span>
+        }
+        {type === SquareType.SPRITESTART &&
+          <span>
+            <label htmlFor="direction">Start direction:</label>
+            <select
+              ref="direction"
+              name="direction"
+              value={this.props.cell.direction_}
+              onChange={this.handleChange}
+            >
+              {startDirections.map(([name, value]) => (
+                <option value={value} key={value}>{name}</option>
+              ))}
+            </select>
           </span>
         }
       </form>
