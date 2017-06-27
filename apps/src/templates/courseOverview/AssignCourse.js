@@ -64,12 +64,18 @@ class AssignCourse extends Component {
     errorString: null
   }
 
-  componentDidMount = () => {
-    document.addEventListener('click', this.onClickDocument, false);
+  onComponentDidUnmount() {
+    document.removeEventListener('click', this.onClickDocument, false);
   }
 
-  componentWillUnmount = () => {
+  expandDropdown = () => {
+    document.addEventListener('click', this.onClickDocument, false);
+    this.setState({dropdownOpen: true});
+  }
+
+  collapseDropdown = () => {
     document.removeEventListener('click', this.onClickDocument, false);
+    this.setState({dropdownOpen: false});
   }
 
   onClickDocument = event => {
@@ -78,16 +84,16 @@ class AssignCourse extends Component {
       return;
     }
     if (this.state.dropdownOpen) {
-      this.setState({
-        dropdownOpen: false
-      });
+      this.collapseDropdown();
     }
   }
 
   onClickDropdown = () => {
-    this.setState({
-      dropdownOpen: !this.state.dropdownOpen
-    });
+    if (this.state.dropdownOpen) {
+      this.collapseDropdown();
+    } else {
+      this.expandDropdown();
+    }
   }
 
   onClickCourse = event => {
@@ -111,10 +117,13 @@ class AssignCourse extends Component {
         course_id: this.props.courseId
       }),
     }).done(result => {
-      this.setState({dropdownOpen: false});
-    }).fail((jqXhr, status) => {
+      this.collapseDropdown();
       this.setState({
-        dropdownOpen: false,
+        sectionIndexToAssign: null
+      });
+    }).fail((jqXhr, status) => {
+      this.collapseDropdown();
+      this.setState({
         sectionIndexToAssign: null,
         errorString: i18n.unexpectedError()
       });
@@ -148,7 +157,7 @@ class AssignCourse extends Component {
               href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?newSection=${courseId}#/sections`}
               style={styles.section}
             >
-              {i18n.newSection()}...
+              {i18n.newSectionEllipsis()}
             </a>
             {sectionsInfo.map((section, index) => (
               <a
