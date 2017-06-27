@@ -35,6 +35,7 @@ export default class Subtype {
     this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
+    this.startDirection = config.level.startDirection;
   }
 
   finished() {
