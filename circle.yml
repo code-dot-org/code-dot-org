@@ -23,7 +23,7 @@ machine:
     - redis
 checkout:
   post:
-    - case $CIRCLE_NODE_INDEX in 1) ./bin/circle/merge-eyes-baselines ;; *) echo "Skipping step." ;; esac:
+    - ./bin/circle/merge-eyes-baselines:
         parallel: true
     - ./bin/circle/merge-base:
         parallel: true
@@ -72,14 +72,14 @@ dependencies:
         dashboard_workers: 6
         skip_seed_all: true" >> locals.yml
     - |
-        case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "
+        echo "
         use_dynamo_tables: false
         use_dynamo_properties: false
         no_https_store: true
         override_dashboard: \"localhost-studio.code.org\"
         override_pegasus: \"localhost.code.org\"
         dashboard_port: 3000
-        pegasus_port: 3000" >> locals.yml ;; esac
+        pegasus_port: 3000" >> locals.yml
     - yarn version -V
     # For install, increase default 10 minute timeout to 16 minutes (960s)
     # We use ts to timestamp output lines
@@ -111,7 +111,15 @@ database:
     - 'echo "Skipping database phase (already ran)."'
 test:
   override:
-    - case $CIRCLE_NODE_INDEX in 0) bundle exec rake lint:javascript circle:run_tests ;; *) bundle exec rake circle:run_ui_tests ;; esac:
+    - bundle exec rake lint:javascript:
+        parallel: true
+        timeout:
+            7200
+    - bundle exec rake circle:run_tests:
+        parallel: true
+        timeout:
+            7200
+    - bundle exec rake circle:run_ui_tests:
         parallel: true
         timeout:
             7200
