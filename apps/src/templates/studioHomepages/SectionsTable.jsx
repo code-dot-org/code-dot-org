@@ -105,11 +105,12 @@ const SectionsTable = React.createClass({
   },
 
   onLeave() {
+
     console.log("How do I remove a student from a section?");
   },
 
   render() {
-    const { sections, isRtl, isTeacher, canLeave } = this.props;
+    const { sections, isRtl, isTeacher } = this.props;
 
     return (
       <table style={styles.table}>
@@ -144,7 +145,7 @@ const SectionsTable = React.createClass({
                 {i18n.sectionCode()}
               </div>
             </td>
-            {canLeave && (
+            {!isTeacher && (
               <td style={{...styles.col, ...styles.leaveCol}}>
                 <div style={styles.colText}>
                 </div>
@@ -186,7 +187,7 @@ const SectionsTable = React.createClass({
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
                 {section.sectionCode}
               </td>
-              {canLeave && (
+              {!isTeacher && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   <ProgressButton
                     style={{marginLeft: 5}}
