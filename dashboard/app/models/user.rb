@@ -1277,6 +1277,7 @@ class User < ActiveRecord::Base
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
+    return false if encrypted_password.present? && parent_email.present?
     # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
     !oauth?
   end
