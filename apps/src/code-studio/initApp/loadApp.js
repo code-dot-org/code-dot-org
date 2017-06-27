@@ -101,6 +101,9 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        if (appOptions.level.disableSharing) {
+          return;
+        }
         const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
         // Add the frame to the drawing.
         dataURIToFramedBlob(dataURI, blob => {
