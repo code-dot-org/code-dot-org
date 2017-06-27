@@ -77,7 +77,7 @@ var GridEditor = React.createClass({
   },
 
   getCellClass: function () {
-    if (this.props.skin === 'playlab') {
+    if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
       return StudioCell;
     } else if (mazeUtils.isBeeSkin(this.props.skin)) {
       return BeeCell;
