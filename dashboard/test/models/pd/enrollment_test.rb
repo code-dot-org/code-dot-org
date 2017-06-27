@@ -344,7 +344,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     create :plc_course, name: 'CSP Support'
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
     enrollment = create :pd_enrollment, user: nil, workshop: workshop
-    enrollment.update(user: teacher)
+
+    assert_creates Plc::UserCourseEnrollment do
+      enrollment.update(user: teacher)
+    end
     assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
@@ -352,16 +355,24 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     teacher = create :teacher
     create :plc_course, name: 'CSP Support'
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
-    create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
+
+    assert_creates Plc::UserCourseEnrollment do
+      create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
+    end
+
     assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
-  test 'enrolling in class without an account creates an account when the user is created' do
+  test 'enrolling in class without an account creates enrollment when the user is created' do
     create :plc_course, name: 'CSP Support'
     workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
     user_email = "#{SecureRandom.hex}@code.org"
     create :pd_enrollment, user: nil, email: user_email, workshop: workshop
-    teacher = create(:teacher, email: user_email)
+
+    teacher = assert_creates Plc::UserCourseEnrollment do
+      create(:teacher, email: user_email)
+    end
+
     assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
