@@ -122,7 +122,7 @@ def analyze_day_fast(date)
 
   cities = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
-    "SELECT city, #{WEIGHTED_COUNT} #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
+    "SELECT city, #{WEIGHTED_COUNT} #{from_where} GROUP BY city ORDER BY count DESC"
   ).each do |row|
     row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
     cities[row[:city]] += row[:count].to_i
