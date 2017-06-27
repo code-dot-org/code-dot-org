@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ContentContainer from './ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
+import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
 
@@ -34,6 +35,16 @@ const RecentCourses = React.createClass({
                 description={course.description}
                 link={course.link}
                 isRtl={isRtl}
+              />
+            )}
+            {!isTeacher && (
+              <Notification
+                type="course"
+                notice={i18n.findCourse()}
+                details={i18n.findCourseDescription()}
+                buttonText={i18n.findCourse()}
+                buttonLink="/course"
+                dismissible={false}
               />
             )}
           </ContentContainer>
