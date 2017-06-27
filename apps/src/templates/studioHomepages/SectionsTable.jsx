@@ -44,11 +44,9 @@ export const styles = {
     paddingRight: 20,
   },
   col1: {
-    lineHeight: '52px',
     width: 310
   },
   col2: {
-    lineHeight: '52px',
     width: 310
   },
   col3: {
@@ -59,6 +57,10 @@ export const styles = {
     lineHeight: '52px',
     width: 210,
     borderRightWidth: 0,
+  },
+  col4Rtl: {
+    lineHeight: '52px',
+    width: 210
   },
   colText: {
     color: color.charcoal,
@@ -85,11 +87,12 @@ const SectionsTable = React.createClass({
         linkToStudents: React.PropTypes.string.isRequired,
         sectionCode: React.PropTypes.string.isRequired
       })
-    )
+    ),
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { sections } = this.props;
+    const { sections, isRtl } = this.props;
 
     return (
       <table style={styles.table}>
@@ -110,7 +113,7 @@ const SectionsTable = React.createClass({
                 {i18n.students()}
               </div>
             </td>
-            <td style={{...styles.col, ...styles.col4}}>
+            <td style={{...styles.col, ...(isRtl? styles.col4Rtl: styles.col4)}}>
               <div style={styles.colText}>
                 {i18n.sectionCode()}
               </div>
@@ -141,7 +144,7 @@ const SectionsTable = React.createClass({
                   {section.numberOfStudents}
                 </a>
               </td>
-              <td style={{...styles.col, ...styles.col4}}>
+              <td style={{...styles.col, ...(isRtl? styles.col4Rtl: styles.col4)}}>
                 {section.sectionCode}
               </td>
             </tr>

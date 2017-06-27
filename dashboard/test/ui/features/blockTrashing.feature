@@ -7,9 +7,9 @@ Background:
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
   # In this level's initial setup:
-  And "when_run" refers to block "17"
-  And "gray set_color" refers to block "18"
-  And "turn_right" refers to block "23"
+  And "when_run" refers to block "25"
+  And "gray set_color" refers to block "26"
+  And "turn_right" refers to block "31"
 
 Scenario: Drag-delete a deletable block
   When I drag block "turn_right" to offset "-2000, 0"

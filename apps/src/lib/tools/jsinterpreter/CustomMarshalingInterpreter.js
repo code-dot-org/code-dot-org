@@ -592,6 +592,10 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
                interpreterVar.type === 'object') {
       var nativeObject = {};
       for (var prop in interpreterVar.properties) {
+        if (interpreterVar.notEnumerable[prop]) {
+          // skip properties which are not enumerable.
+          continue;
+        }
         nativeObject[prop] = this.marshalInterpreterToNative(interpreterVar.properties[prop]);
       }
       return nativeObject;

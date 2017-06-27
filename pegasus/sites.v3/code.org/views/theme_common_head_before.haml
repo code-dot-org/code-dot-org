@@ -17,13 +17,13 @@
   :javascript
     is_ie8 = true;
 
+=view :fonts
 -if use_min_stylesheet?
-  %link{rel:'stylesheet', type:'text/css', href:'/style-min.css'}
+  =inline_css 'style-min.css'
 -else
   %link{rel:'stylesheet', type:'text/css', href:'/style.css'}
 
 
 =inline_css 'user-menu.css'
 
-%script{src:'/js/jquery.min.js'}
-
+=view :jquery

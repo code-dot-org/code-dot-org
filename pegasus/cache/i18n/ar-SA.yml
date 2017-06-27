@@ -366,6 +366,7 @@
   homepage_slot_text_title_hoc: "ساعة البرمجة"
   homepage_slot_text_blurb_hoc: "بإمكان أي شخص أن يتعلم. ابدأ اليوم"
   homepage_slot_text_link_hoc: جرب ساعة من البرمجة - "Hour of Code"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "استضافة ساعة البرمجة"
   homepage_slot_text_link_hocserved: "#  خدمة قدمت"
   homepage_solot_text_link_volunteer: تطوع لفعالية "ساعة برمجة"
@@ -767,6 +768,7 @@
   dashboard_responses_view: "عرض استجابات النص في:"
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: "القسم جديد"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "انشئ أقسام جديدة وأضف الطلاب إليها، هذة
     الطريقة تساعد في توزيع الطلاب إلى مجموعات صغيرة يسهل متابعة عملية تقدمهم وإدارة
     حسابتهم."
@@ -774,6 +776,7 @@
   dashboard_sections_table_secret: "نوع تسجيل الدخول"
   dashboard_sections_table_grade: "الصف الدراسي"
   dashboard_sections_table_course: "الدرس"
+  dashboard_sections_table_pairing_allowed: "البرمجة الزوجية"
   dashboard_sections_table_stage_extras: "إضافات المرحلة"
   dashboard_sections_table_students: "الطلاب"
   dashboard_sections_table_code: "قسم البرمجة"
@@ -1777,9 +1780,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "إلعب"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "الدروس"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1787,7 +1789,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "ساعة البرمجة"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1805,7 +1807,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: "الإحصائيات"
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1813,6 +1815,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
