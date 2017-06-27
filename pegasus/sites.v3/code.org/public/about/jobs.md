@@ -32,6 +32,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Marketing**
 	- [Marketing Coordinator](#markcoordinator)
 - **Outreach**
+	- [International Outreach Manager](#intl)
 	- [Regional Manager](#regional)
 - **Product and Engineering**
 	- [Data Engineer](#data)
@@ -107,6 +108,35 @@ The ideal candidate has the following qualifications:
 - Familiarity or background in educational communications preferred, no background in Computer Science needed
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+## <a name="intl"href="#intl">International Outreach Manager (Seattle, WA preferred)</a>
+
+**Job Summary:**
+
+Code.org is looking for an International Outreach Manager to support Code.org’s outreach efforts through the development and management of our international partnerships. We are looking for an experienced program manager with passion for Computer Science education, and strengths in partnership management and communication.	
+
+Responsibilities of this position will include:
+
+- Implementing strategy, developing guidelines and roadmap for international partner engagement, and defining metrics for program success
+- Vetting and onboarding new partners 
+- Managing existing international relationships
+- Developing and managing international partnerships with international organizations with shared interests to Code.org (i.e. the College Board)
+- Hosting partner events domestically to share the CS community’s approach to best practices for K-12 CS, and educate partners on Code.org’s approach to curriculum, professional learning, scaling CS, localization, and policy development
+- Developing support collateral for international partners using existing Code.org materials 
+- Collaborating across teams to meet the needs of our international partners; working with product, education and marketing teams to develop or customize of products 
+
+**Experience and Qualifications:**
+
+- Passion for equity in computer science and K-12 education
+- 2+ years of developing and managing international programs; experience and aptitude for managing complex projects and relationships
+- Advanced organizational, problem solving, and project management skills
+- Bachelor’s degree required; education background prefered
+- Bilingual a plus  
+
+
+Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication abilities, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+Ability and willingness to travel up to 25% of the time is required.
 
 ## <a name="regional"href="#regional">Regional Manager, Northwest (Seattle, WA preferred)</a>
 
