@@ -79,6 +79,9 @@ def rank_tutorials(end_date)
   end
 end
 
+# TODO(asher): This method aggregates different states and cities with the same name into the same
+# bucket count. Fix this, so that (e.g.) Springfield, IL and Springfield, MO don't get added
+# together.
 def analyze_day_fast(date)
   from_where = generate_from_where(date)
   finished_from_where = generate_from_where(date, finished: true)
