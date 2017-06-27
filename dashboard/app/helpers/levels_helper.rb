@@ -275,6 +275,16 @@ module LevelsHelper
     app_options
   end
 
+  def set_tts_options(level_options, app_options)
+    # Text to speech
+    if @script && @script.text_to_speech_enabled?
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
+    end
+
+    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+  end
+
   # Options hash for Weblab
   def weblab_options
     # Level-dependent options
@@ -294,15 +304,7 @@ module LevelsHelper
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
 
-    script = @script
-
-    # Text to speech
-    if script && script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
-    end
-
-    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+    set_tts_options(level_options, app_options)
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
@@ -464,11 +466,7 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    # Text to speech
-    if script && script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
-    end
+    set_tts_options(level_options, app_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
@@ -509,7 +507,6 @@ module LevelsHelper
     end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
     app_options[:isSignedIn] = !current_user.nil?
-    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
