@@ -79,16 +79,15 @@ To apply, please email resume, cover letter, and/or LinkedIn profile to <a href=
 
 **Job Summary:**
 
-We are looking for a Marketing Coordinator to support communications, marketing, and public relations efforts at Code.org. The Marketing Coordinator will collaborate with members of our marketing team and across the organization to make sure projects get the resources and attention they need to be successful. 
+We are looking for a Marketing Coordinator to support communications, marketing, and public relations efforts at Code.org. The Marketing Coordinator will collaborate with members of our marketing team and across the organization to make sure projects get the resources and attention they need to be successful. The Marketing Coordinator will be instrumental in ensuring the smooth execution of a multitude of activities during the annual Hour of Code campaign. The Hour of Code initiative encourages students to try computer science during Computer Science Education Week in December.
 
 Other responsibilities of the position may include:
 
 - Work with marketing team to coordinate day-to-day activities that lead to the completion of projects and tasks
-Managing, maintaining, and growing our social media presence 
-- Writing, sourcing and editing compelling stories for our blog or external press
+- Managing programs or projects that support our overall efforts and strategy for  social media, public relations, media coverage, and events
 - Working with our advocacy team on grassroots lobbying campaigns across the country
-- Supporting public relations, media coverage, and events 
-- Creating website content on code.org, csedweek.org, and hourofcode.com
+- Writing, sourcing or editing compelling stories for our blog or external press
+- Producing and updating website content on code.org, csedweek.org, and hourofcode.com
 
 **Experience and Qualifications:**
 
@@ -184,13 +183,18 @@ In addition, candidates:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="data"href="#data">Infrastructure/Data Engineer (Seattle, WA)</a>
+## <a name="data"href="#data">Data Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
 Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
 
-As Infrastructure/Data Engineer, you’ll be responsible for Code.org’s AWS cloud infrastructure and operational and developer tools. You’ll drive and build improvements to our production and internal infrastructure to best serve our millions of student and teacher users worldwide at high scale. You’ll also be responsible for Code.org’s data warehouse and pipeline and be an important part of our data mission. You’ll collaborate with our data scientist and other stakeholders to ensure we obtain the data we need it and make it ready for analysis.
+As Data Engineer at Code.org, you are on the front line of turning our enormous set of educational data, in many respects the world’s largest, into actionable intelligence to improve computer science education worldwide for millions of students. This is a fantastic opportunity to use your data engineering skills to have positive impact in the world.
+
+You’ll also be responsible for Code.org’s data engineering and be a key part of our data mission. You’ll own our data BI pipeline and warehouse, build features for BI and analysis, and ensure that our data process operates seamlessly. You’ll collaborate with our data scientist and other stakeholders to ensure we obtain the data we need, perform analysis, and turn that analysis into action. You’ll also be a privacy advocate and ensure that we continue to protect the data privacy of our millions of students.
+
+You will be working in SQL to build recurring or ad-hoc analysis. You’ll be writing back end scripts in Ruby or shell script to automate processes. You may help build back end infrastructure and APIs related to the data mission. You’ll be involved with and may help implement or change the production data schema. You’ll be working with AWS infrastructure including Redshift, DMS, and Kinesis Firehose for data warehousing and delivering data into Tableau.
+
 
 **Experience and Qualifications:**
 
@@ -198,12 +202,17 @@ The ideal candidate has the following qualifications:
 
 - Passion for our mission of increasing access to computer science education
 - Bachelor’s degree with a major in Computer Science or related field
-- 5+ years professional experience in software engineering, infrastructure or DevOps
+- 5+ years professional experience in data or software engineering
 - Experience with any of the following:
-	- Cloud infrastructure (AWS or equivalent)
-	- SQL and relational databases (MySQL preferred)
-	- Server-side programming (Ruby on Rails preferred)
-	- Building developer tools and/or infrastructure
+	- SQL and relational databases
+	- Data warehousing and BI
+	- server-side programming 
+	- building data-related infrastructure and automation
+- Experience with these specific technologies is helpful but not required:
+	- MySQL
+	- Redshift
+	- Ruby/Rails
+
 	
 In addition, candidates:
 

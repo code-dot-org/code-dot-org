@@ -42,6 +42,24 @@ class Script < ActiveRecord::Base
   has_many :course_scripts
   has_many :courses, through: :course_scripts
 
+  scope :with_associated_models, -> do
+    includes(
+      [
+        {
+          script_levels: [
+            {levels: [:game, :concepts, :level_concept_difficulty]},
+            :stage,
+            :callouts
+          ]
+        },
+        {
+          stages: [{script_levels: [:levels]}]
+        },
+        :course_scripts
+      ]
+    )
+  end
+
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
 
@@ -189,7 +207,6 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache_from_cache
-    Script.connection
     [
       ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
     ].each(&:new) # make sure all possible loaded objects are completely loaded
@@ -198,23 +215,7 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_db
     {}.tap do |cache|
-      Script.all.pluck(:id).each do |script_id|
-        script = Script.includes(
-          [
-            {
-              script_levels: [
-                {levels: [:game, :concepts, :level_concept_difficulty]},
-                :stage,
-                :callouts
-              ]
-            },
-            {
-              stages: [{script_levels: [:levels]}]
-            },
-            :course_scripts
-          ]
-        ).find(script_id)
-
+      Script.with_associated_models.find_each do |script|
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
@@ -296,21 +297,21 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id)
+  def self.get_without_cache(id_or_name)
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
-    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-    Script.find_by(find_by => id).tap do |s|
-      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
+    find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
+    Script.with_associated_models.find_by(find_by => id_or_name).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
     end
   end
 
-  def self.get_from_cache(id)
-    return get_without_cache(id) unless should_cache?
+  def self.get_from_cache(id_or_name)
+    return get_without_cache(id_or_name) unless should_cache?
 
-    script_cache.fetch(id.to_s) do
+    script_cache.fetch(id_or_name.to_s) do
       # Populate cache on miss.
-      script_cache[id.to_s] = get_without_cache(id)
+      script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
   end
 
@@ -426,7 +427,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4).include? name
+    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include? name
   end
 
   def k5_draft_course?
@@ -844,7 +845,8 @@ class Script < ActiveRecord::Base
   #   is one. A script is considered to have a matching course if there is exactly
   #   one course for this script
   def course_link
-    return nil if courses.length != 1
-    course_path(courses[0])
+    return nil if course_scripts.length != 1
+    course = Course.get_from_cache(course_scripts[0].course_id)
+    course_path(course)
   end
 end

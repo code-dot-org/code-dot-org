@@ -39,6 +39,7 @@ export default storybook => {
                 sectionCode: "HPRWHG"
               },
             ]}
+            isRtl={false}
           />
         )
       },

@@ -103,6 +103,7 @@ const Courses = React.createClass({
             showAllCoursesLink={false}
             heading={i18n.myCourses()}
             isTeacher={isTeacher}
+            isRtl={false}
           />
         )}
 

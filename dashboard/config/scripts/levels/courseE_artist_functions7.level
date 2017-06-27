@@ -34,9 +34,9 @@
     "instructions": "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try creating your function first then adding in windows one at a time.\",\"hint_id\":\"courseD_artist_functions7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/26bf872a67250ca2710bd6b27c45e245/courseD_artist_functions7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need to add any extra repeat loops.  Just jump the artist 100 pixels forward for each top window, and 150 pixels down to get the bottom windows.\",\"hint_id\":\"courseD_artist_functions7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/999c42bca90cb4404e0d8e70b1724536/courseD_artist_functions7.mp3\"}]",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "In this puzzle, students will used a nested loop or a function to create a series of \"windows\". This is the second in a mini-sequence of puzzles",

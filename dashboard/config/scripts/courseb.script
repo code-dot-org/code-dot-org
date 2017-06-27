@@ -97,6 +97,19 @@ level 'courseB_maze_seq12'
 bonus 'courseB_maze_seq_challenge1', challenge: true
 bonus 'courseB_maze_seq_challenge2', challenge: true
 
+stage 'More Programming in Maze'
+level 'courseB_starWars_prog1'
+level 'courseB_starWars_prog2'
+level 'courseB_starWars_prog3'
+level 'courseB_starWars_prog4'
+level 'courseB_starWars_prog5'
+level 'courseB_starWars_prog6'
+level 'courseB_starWars_prog7'
+level 'courseB_starWars_prog8'
+level 'courseB_starWars_prog9'
+level 'courseB_starWars_prog10'
+level 'courseB_starWars_prog11'
+
 stage 'Loops: My Loopy Robotic Friends'
 level 'courseB_unplugged_loopyMRF'
 
