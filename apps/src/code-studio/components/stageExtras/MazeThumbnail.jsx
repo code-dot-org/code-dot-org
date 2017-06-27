@@ -11,15 +11,20 @@ export default class MazeThumbnail extends React.Component {
   static propTypes = {
     map: React.PropTypes.array.isRequired,
     skin: React.PropTypes.string.isRequired,
+    startDirection: React.PropTypes.number.isRequired,
   }
 
   componentDidMount() {
     const skin = skins.load(assetUrl, this.props.skin);
     const Maze = {};
     const Type = getSubtypeForSkin(this.props.skin);
-    const subtype = new Type(Maze, null, {skin: skin, level: 0});
+    const subtype = new Type(Maze, null, {
+      skin: skin,
+      level: {startDirection: this.props.startDirection}
+    });
 
     Maze.map = MazeMap.parseFromOldValues(this.props.map, null, subtype.getCellClass());
+    subtype.initStartFinish();
     subtype.createDrawer();
     subtype.initWallMap();
 

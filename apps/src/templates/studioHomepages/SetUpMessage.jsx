@@ -55,27 +55,35 @@ const SetUpMessage = React.createClass({
   propTypes: {
     type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
     codeOrgUrlPrefix: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    isTeacher: React.PropTypes.bool.isRequired,
   },
 
   render() {
-    const { type, codeOrgUrlPrefix, isRtl } = this.props;
+    const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
     const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
       return (
         <div style={styles.section} >
-          <div style={isRtl? styles.rtlHeading : styles.heading}>
+          <div style={isRtl ? styles.rtlHeading : styles.heading}>
             {i18n.startLearning()}
           </div>
-          <div style={isRtl? styles.rtlDescription : styles.description}>
-            {i18n.assignACourse()}
-          </div>
+          {isTeacher && (
+            <div style={isRtl ? styles.rtlDescription : styles.description}>
+              {i18n.setupCoursesTeacher()}
+            </div>
+          )}
+          {!isTeacher && (
+            <div style={isRtl ? styles.rtlDescription : styles.description}>
+              {i18n.setupCoursesStudent()}
+            </div>
+          )}
           <ProgressButton
             href="/courses"
             color={ProgressButton.ButtonColor.gray}
-            text={i18n.viewCourses()}
-            style={isRtl? styles.rtlButton : styles.button}
+            text={i18n.findCourse()}
+            style={isRtl ? styles.rtlButton : styles.button}
           />
         </div>
       );
@@ -83,17 +91,17 @@ const SetUpMessage = React.createClass({
     if (type === 'sections') {
       return (
         <div style={styles.section} >
-          <div style={isRtl? styles.rtlHeading : styles.heading}>
+          <div style={isRtl ? styles.rtlHeading : styles.heading}>
             {i18n.setUpClassroom()}
           </div>
-          <div style={isRtl? styles.rtlDescription : styles.description}>
+          <div style={isRtl ? styles.rtlDescription : styles.description}>
             {i18n.createNewClassroom()}
           </div>
           <ProgressButton
             href={sectionsUrl}
             color={ProgressButton.ButtonColor.gray}
             text={i18n.createSection()}
-            style={isRtl? styles.rtlButton : styles.button}
+            style={isRtl ? styles.rtlButton : styles.button}
           />
         </div>
       );
