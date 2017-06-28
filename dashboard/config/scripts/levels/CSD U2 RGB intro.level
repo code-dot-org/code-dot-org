@@ -182,10 +182,7 @@
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
     "display_name": "RGB Widget",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
