@@ -141,6 +141,7 @@
     "mock-firmata": "0.2.0",
     "moment": "2.14.1",
     "newrelic": "^1.27.2",
+    "node-js-marker-clusterer": "^1.0.0",
     "node-sass": "^4.0.0",
     "phantomjs-prebuilt": "^2.1.14",
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.0",
