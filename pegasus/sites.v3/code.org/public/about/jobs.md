@@ -120,10 +120,9 @@ Responsibilities of this position will include:
 - Implementing strategy, developing guidelines and roadmap for international partner engagement, and defining metrics for program success
 - Vetting and onboarding new partners 
 - Managing existing international relationships
-- Developing and managing international partnerships with international organizations with shared interests to Code.org (i.e. the College Board)
 - Hosting partner events domestically to share the CS community’s approach to best practices for K-12 CS, and educate partners on Code.org’s approach to curriculum, professional learning, scaling CS, localization, and policy development
-- Developing support collateral for international partners using existing Code.org materials 
-- Collaborating across teams to meet the needs of our international partners; working with product, education and marketing teams to develop or customize of products 
+- Developing collateral to support international partners using existing Code.org materials 
+- Collaborating across teams to meet the needs of our international partners; working with product, education and marketing to develop or customize products 
 
 **Experience and Qualifications:**
 
@@ -133,10 +132,12 @@ Responsibilities of this position will include:
 - Bachelor’s degree required; education background prefered
 - Bilingual a plus  
 
-
 Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication abilities, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
 
-Ability and willingness to travel up to 25% of the time is required.
+Ability and willingness to travel (domestically) up to 25% of the time is required.
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
 
 ## <a name="regional"href="#regional">Regional Manager, Northwest (Seattle, WA preferred)</a>
 
