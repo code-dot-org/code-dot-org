@@ -1,15 +1,14 @@
 {
   "rules": [
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "1",
       "rule-name": "1",
-      "rule-action": "rename",
-      "rule-target": "schema",
       "object-locator": {
-        "schema-name": "dashboard_production"
+        "schema-name": "dashboard_production",
+        "table-name": "studio_people"
       },
-      "value": "dashboard_production_pii"
+      "rule-action": "include"
     },
     {
       "rule-type": "selection",
@@ -17,7 +16,7 @@
       "rule-name": "2",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "studio_people"
+        "table-name": "teacher_profiles"
       },
       "rule-action": "include"
     },
@@ -27,7 +26,7 @@
       "rule-name": "3",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "teacher_profiles"
+        "table-name": "users"
       },
       "rule-action": "include"
     },
@@ -37,19 +36,20 @@
       "rule-name": "4",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users"
+        "table-name": "user_geos"
       },
       "rule-action": "include"
     },
     {
-      "rule-type": "selection",
+      "rule-type": "transformation",
       "rule-id": "5",
       "rule-name": "5",
+      "rule-action": "rename",
+      "rule-target": "schema",
       "object-locator": {
-        "schema-name": "dashboard_production",
-        "table-name": "user_geos"
+        "schema-name": "dashboard_production"
       },
-      "rule-action": "include"
+      "value": "dashboard_production_pii"
     }
   ]
 }
