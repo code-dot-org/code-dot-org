@@ -32,6 +32,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 - **Marketing**
 	- [Marketing Coordinator](#markcoordinator)
 - **Outreach**
+	- [International Outreach Manager](#intl)
 	- [Regional Manager](#regional)
 - **Product and Engineering**
 	- [Data Engineer](#data)
@@ -108,6 +109,36 @@ The ideal candidate has the following qualifications:
 
 To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
+## <a name="intl"href="#intl">International Outreach Manager (Seattle, WA preferred)</a>
+
+**Job Summary:**
+
+Code.org is looking for an International Outreach Manager to support Code.org’s outreach efforts through the development and management of our international partnerships. We are looking for an experienced program manager with passion for Computer Science education, and strengths in partnership management and communication.	
+
+Responsibilities of this position will include:
+
+- Implementing strategy, developing guidelines and roadmap for international partner engagement, and defining metrics for program success
+- Vetting and onboarding new partners 
+- Managing existing international relationships
+- Hosting partner events domestically to share the CS community’s approach to best practices for K-12 CS, and educate partners on Code.org’s approach to curriculum, professional learning, scaling CS, localization, and policy development
+- Developing collateral to support international partners using existing Code.org materials 
+- Collaborating across teams to meet the needs of our international partners; working with product, education and marketing to develop or customize products 
+
+**Experience and Qualifications:**
+
+- Passion for equity in computer science and K-12 education
+- 2+ years of developing and managing international programs; experience and aptitude for managing complex projects and relationships
+- Advanced organizational, problem solving, and project management skills
+- Bachelor’s degree required; education background prefered
+- Bilingual a plus  
+
+Candidates must be extremely detail-oriented, possess exceptional written and interpersonal communication abilities, and be tech-savvy. Must also be a self-starter, able to multi-task, excel under pressure, and work independently with a geographically dispersed team. Proficiency in working with Microsoft Office and Google Docs a must.
+
+Ability and willingness to travel (domestically) up to 25% of the time is required.
+
+To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+
 ## <a name="regional"href="#regional">Regional Manager, Northwest (Seattle, WA preferred)</a>
 
 **Job Summary:**
@@ -183,13 +214,18 @@ In addition, candidates:
 
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
-## <a name="data"href="#data">Infrastructure/Data Engineer (Seattle, WA)</a>
+## <a name="data"href="#data">Data Engineer (Seattle, WA)</a>
 
 **Job Summary:**
 
 Code.org is transforming computer science education and changing the world. Working at Code.org, you’ll be playing an active role in getting computer science education into all schools for all students and building the competitive workforce of the future.
 
-As Infrastructure/Data Engineer, you’ll be responsible for Code.org’s AWS cloud infrastructure and operational and developer tools. You’ll drive and build improvements to our production and internal infrastructure to best serve our millions of student and teacher users worldwide at high scale. You’ll also be responsible for Code.org’s data warehouse and pipeline and be an important part of our data mission. You’ll collaborate with our data scientist and other stakeholders to ensure we obtain the data we need it and make it ready for analysis.
+As Data Engineer at Code.org, you are on the front line of turning our enormous set of educational data, in many respects the world’s largest, into actionable intelligence to improve computer science education worldwide for millions of students. This is a fantastic opportunity to use your data engineering skills to have positive impact in the world.
+
+You’ll also be responsible for Code.org’s data engineering and be a key part of our data mission. You’ll own our data BI pipeline and warehouse, build features for BI and analysis, and ensure that our data process operates seamlessly. You’ll collaborate with our data scientist and other stakeholders to ensure we obtain the data we need, perform analysis, and turn that analysis into action. You’ll also be a privacy advocate and ensure that we continue to protect the data privacy of our millions of students.
+
+You will be working in SQL to build recurring or ad-hoc analysis. You’ll be writing back end scripts in Ruby or shell script to automate processes. You may help build back end infrastructure and APIs related to the data mission. You’ll be involved with and may help implement or change the production data schema. You’ll be working with AWS infrastructure including Redshift, DMS, and Kinesis Firehose for data warehousing and delivering data into Tableau.
+
 
 **Experience and Qualifications:**
 
@@ -197,12 +233,17 @@ The ideal candidate has the following qualifications:
 
 - Passion for our mission of increasing access to computer science education
 - Bachelor’s degree with a major in Computer Science or related field
-- 5+ years professional experience in software engineering, infrastructure or DevOps
+- 5+ years professional experience in data or software engineering
 - Experience with any of the following:
-	- Cloud infrastructure (AWS or equivalent)
-	- SQL and relational databases (MySQL preferred)
-	- Server-side programming (Ruby on Rails preferred)
-	- Building developer tools and/or infrastructure
+	- SQL and relational databases
+	- Data warehousing and BI
+	- server-side programming 
+	- building data-related infrastructure and automation
+- Experience with these specific technologies is helpful but not required:
+	- MySQL
+	- Redshift
+	- Ruby/Rails
+
 	
 In addition, candidates:
 

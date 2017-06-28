@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    course = Course.find_by_name(params[:course_name])
+    course = Course.get_from_cache(params[:course_name])
     unless course
       # PLC courses have different ways of getting to name. ideally this goes
       # away eventually

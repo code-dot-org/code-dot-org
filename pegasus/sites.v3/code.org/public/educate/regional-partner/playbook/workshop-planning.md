@@ -80,7 +80,8 @@ These guidelines explain the type of space your facilitators need to run a succe
   <summary>**Scheduling and Communication**</summary>
   <p> 
 
-Coming soon!
+Use [this document](https://docs.google.com/document/d/1rC4zG0DzVqmzsTLzmv1Qz-N2LfrsGqt9gWKRnSqVdV0/view) for guidance on when to schedule your workshop.
+
 </p>
 </details>
 
@@ -88,7 +89,7 @@ Coming soon!
   <summary>**Teacher Packets and Agendas**</summary>
   <p> 
   
-Coming soon!
+Coming soon! - As we're still building the PD model these will be coming in hot this year!
 </p>
 </details>
 
@@ -96,7 +97,7 @@ Coming soon!
   <summary>**Ordering Supplies and Catering**</summary>
   <p> 
 **Ordering Supplies**<br/>
-Coming soon!
+Please order your supplies for quarterly workshops through Mimeo. Supplies should be ordered at least 3 weeks prior to your workshop. They will be available online in August.
 
 
 **Catering** <br/>
@@ -154,21 +155,7 @@ These guidelines explain the type of space your facilitators need to run a succe
   <p> 
 **When Follow-up Workshops Should be Held**<br/>
 
-- Workshop 1 = end of unit 1, first half of unit 2
-	- ~4 weeks into school 
-	- Teachers should be implementing curriculum before attending this workshop.
-	- Airing on slightly later side is better than airing on slightly earlier side
-- Workshop 2 = second half of unit 2, unit 3 
-	- 9-12 weeks into school
-	- Should occur before teachers begin teaching unit 3
-- Workshop 3 = unit 4, first half of unit 5 
-	- Start of second semester is recommended, but December may be appropriate if schools in your region went back at the beginning of August)
-- Workshop 4 = second half of unit 5, unit 6 
-	- Ideally in mid February. 
-	- Early March  at the latest
-	- Ideally this should occur 1 month prior to teachers beginning to teach Unit 6<br/>
-
-Take a look at the <a href="https://code.org/curriculum/docs/csp/units_horizSnap.png" target=_blank>CSP pacing guide</a> for more information.<br/>
+Use [this document](https://docs.google.com/document/d/1rC4zG0DzVqmzsTLzmv1Qz-N2LfrsGqt9gWKRnSqVdV0/view) for guidance on when to schedule your workshop.
 
 **Automated Emails**<br/>
 Teachers attending your workshop will receive automated emails 10 days and 3 days prior to attending the workshop. You can see a copy of these emails in the [Local Summer Workshop Process Document.](https://docs.google.com/document/d/12rsY1FMkiVN90-83yvEsikawtsiQzy5wc1xQER1QoyM/edit#)

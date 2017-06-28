@@ -382,6 +382,7 @@
   homepage_slot_text_title_hoc: Timmen med Kod
   homepage_slot_text_blurb_hoc: Alla kan lära sig. Börja idag
   homepage_slot_text_link_hoc: Prova Kodtimmen
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Anordna en Kodtimme
   homepage_slot_text_link_hocserved: "# serverad"
   homepage_solot_text_link_volunteer: Ställ upp som frivillig för Hour of Code
@@ -793,6 +794,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Ny sektion
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Skapa nya grupper och lägg till elever
     i dem. Sektionerna hjälper dig att organisera elever i mindre grupper så att du
     kan följa deras framsteg och hantera deras konton.
@@ -800,6 +802,7 @@
   dashboard_sections_table_secret: Inloggningstyp
   dashboard_sections_table_grade: "Årskurs"
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_pairing_allowed: Par-programmering
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Avsnitt kod
@@ -1847,42 +1850,41 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
+  header_home: Hem
+  header_courses: kurser
+  header_project_gallery: Projektgalleriet
+  header_sections: Avsnitt
+  header_professional_learning: Kollaborativt lärande
+  header_educate_overview: Pedagog översikt
+  header_educate_elementary: Grundskolan
+  header_educate_middle: Högstadiet
+  header_educate_high: Gymnasiet
+  header_educate_hoc: Timmen med Kod
+  header_educate_partner: Jobba med oss
+  header_educate_beyond: Bortom Code.org
+  header_educate_inspire: Inspirera en elev
   header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_educate_tools: Verktyg och videor
+  header_about_us: Om oss
+  header_about_leadership: Ledarskap
+  header_about_donors: Donatorer
+  header_about_partners: Samarbetspartners
+  header_about_team: Hela teamet
+  header_about_news: Nyhetsrum
+  header_about_evaluation: Utvärdering
+  header_about_jobs: Jobb
+  header_about_contact: Kontakta oss
+  header_about_faqs: Vanliga frågor
+  header_learn: Lär dig
+  header_teach: Undervisa
+  header_stats: Statistik
+  header_help_us: Hjälp oss
+  header_about: Om
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_documentation: Dokumentation
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

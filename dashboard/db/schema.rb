@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170619170358) do
+ActiveRecord::Schema.define(version: 20170626160941) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -66,11 +66,13 @@ ActiveRecord::Schema.define(version: 20170619170358) do
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "channel",    null: false
-    t.integer  "user_id",    null: false
-    t.integer  "level_id",   null: false
+    t.string   "channel",        null: false
+    t.integer  "storage_app_id"
+    t.integer  "user_id",        null: false
+    t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
@@ -990,6 +992,7 @@ ActiveRecord::Schema.define(version: 20170619170358) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "studio_person_id"
     t.string   "email",                                  default: "",      null: false
+    t.string   "parent_email"
     t.string   "encrypted_password",                     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -1040,6 +1043,7 @@ ActiveRecord::Schema.define(version: 20170619170358) do
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
     t.index ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
+    t.index ["parent_email"], name: "index_users_on_parent_email", using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
     t.index ["purged_at"], name: "index_users_on_purged_at", using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree

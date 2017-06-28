@@ -38,7 +38,7 @@ var getSubtypeForSkin = require('./mazeUtils').getSubtypeForSkin;
 var dropletConfig = require('./dropletConfig');
 
 var MazeMap = require('./mazeMap');
-import drawMap from './drawMap';
+import drawMap, {displayPegman, getPegmanYForRow} from './drawMap';
 
 import {
   getContainedLevelResultInfo,
@@ -377,15 +377,6 @@ function stepButtonClick() {
 }
 
 /**
- * Calculate the y coordinates for pegman sprite.
- */
-var getPegmanYForRow = function (mazeRow) {
-  var y = Maze.SQUARE_SIZE * (mazeRow + 0.5) - Maze.PEGMAN_HEIGHT / 2 +
-    Maze.PEGMAN_Y_OFFSET;
-  return Math.floor(y);
-};
-
-/**
  * Calculate the Y offset within the sheet
  */
 var getPegmanFrameOffsetY = function (animationRow) {
@@ -415,7 +406,7 @@ var createPegmanAnimation = function (svg, options) {
     rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
   }
   if (options.row !== undefined) {
-    rect.setAttribute('y', getPegmanYForRow(options.row));
+    rect.setAttribute('y', getPegmanYForRow(skin, options.row));
   }
   rect.setAttribute('width', Maze.PEGMAN_WIDTH);
   rect.setAttribute('height', Maze.PEGMAN_HEIGHT);
@@ -438,7 +429,7 @@ var createPegmanAnimation = function (svg, options) {
     img.setAttribute('x', x);
   }
   if (options.row !== undefined) {
-    img.setAttribute('y', getPegmanYForRow(options.row));
+    img.setAttribute('y', getPegmanYForRow(skin, options.row));
   }
 };
 
@@ -454,12 +445,12 @@ var createPegmanAnimation = function (svg, options) {
 var updatePegmanAnimation = function (options) {
   var rect = document.getElementById(options.idStr + 'PegmanClipRect');
   rect.setAttribute('x', options.col * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
-  rect.setAttribute('y', getPegmanYForRow(options.row));
+  rect.setAttribute('y', getPegmanYForRow(skin, options.row));
   var img = document.getElementById(options.idStr + 'Pegman');
   var x = Maze.SQUARE_SIZE * options.col -
       options.direction * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET;
   img.setAttribute('x', x);
-  var y = getPegmanYForRow(options.row) - getPegmanFrameOffsetY(options.animationRow);
+  var y = getPegmanYForRow(skin, options.row) - getPegmanFrameOffsetY(options.animationRow);
   img.setAttribute('y', y);
   img.setAttribute('visibility', 'visible');
 };
@@ -494,18 +485,6 @@ Maze.reset = function (first) {
     }, danceTime + 150);
   } else {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
-  }
-
-  var finishIcon = document.getElementById('finish');
-  if (finishIcon) {
-    // Move the finish icon into position.
-    finishIcon.setAttribute('x', Maze.SQUARE_SIZE * (Maze.subtype.finish.x + 0.5) -
-      finishIcon.getAttribute('width') / 2);
-    finishIcon.setAttribute('y', Maze.SQUARE_SIZE * (Maze.subtype.finish.y + 0.9) -
-      finishIcon.getAttribute('height'));
-    finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
-      skin.goalIdle);
-    finishIcon.setAttribute('visibility', 'visible');
   }
 
   // Make 'look' icon invisible and promote to top.
@@ -1221,7 +1200,7 @@ Maze.scheduleTurn = function (endDirection) {
 /**
  * Replace the tiles surrounding the obstacle with broken tiles.
  */
-Maze.updateSurroundingTiles = function (obstacleY, obstacleX, brokenTiles) {
+Maze.updateSurroundingTiles = function (obstacleY, obstacleX, callback) {
   var tileCoords = [
     [obstacleY - 1, obstacleX - 1],
     [obstacleY - 1, obstacleX],
@@ -1233,12 +1212,13 @@ Maze.updateSurroundingTiles = function (obstacleY, obstacleX, brokenTiles) {
     [obstacleY + 1, obstacleX],
     [obstacleY + 1, obstacleX + 1]
   ];
-  for (var idx = 0; idx < tileCoords.length; ++idx) {
-    var tileIdx = tileCoords[idx][1] + Maze.map.COLS * tileCoords[idx][0];
-    var tileElement = document.getElementById('tileElement' + tileIdx);
+  for (let idx = 0; idx < tileCoords.length; ++idx) {
+    const row = tileCoords[idx][1];
+    const col = tileCoords[idx][0];
+    const tileIdx = row + Maze.map.COLS * col;
+    const tileElement = document.getElementById('tileElement' + tileIdx);
     if (tileElement) {
-      tileElement.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', brokenTiles);
+      callback(tileElement, Maze.map.getCell(col, row));
     }
   }
 };
@@ -1265,12 +1245,27 @@ Maze.scheduleFail = function (forward) {
                      frame);
   // Play sound and animation for hitting wall or obstacle
   var squareType = Maze.map.getTile(targetY, targetX);
-  if (squareType === SquareType.WALL || squareType === undefined) {
+  if (squareType === SquareType.WALL || squareType === undefined ||
+    (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE)) {
     // Play the sound
     studioApp().playAudio('wall');
     if (squareType !== undefined) {
       // Check which type of wall pegman is hitting
       studioApp().playAudio('wall' + Maze.subtype.wallMap[targetY][targetX]);
+    }
+
+    if (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE) {
+      // Remove cracked ice, replace surrounding ice with cracked ice.
+      Maze.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
+        if (cell.getTile() === SquareType.OPEN) {
+          tileElement.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.largerObstacleAnimationTiles
+          );
+        } else if (cell.getTile() === SquareType.OBSTACLE) {
+          tileElement.setAttribute('opacity', 0);
+        }
+      });
     }
 
     // Play the animation of hitting the wall
@@ -1359,8 +1354,12 @@ Maze.scheduleFail = function (forward) {
     // Replace the objects around obstacles with broken objects
     if (skin.largerObstacleAnimationTiles) {
       timeoutList.setTimeout(function () {
-        Maze.updateSurroundingTiles(
-            targetY, targetX, skin.largerObstacleAnimationTiles);
+        Maze.updateSurroundingTiles(targetY, targetX, tileElement => (
+          tileElement.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.largerObstacleAnimationTiles
+          )
+        ));
       }, stepSpeed);
     }
 
@@ -1476,13 +1475,8 @@ function scheduleDance(victoryDance, timeAlloted) {
  */
 Maze.displayPegman = function (x, y, frame) {
   var pegmanIcon = document.getElementById('pegman');
-  pegmanIcon.setAttribute('x',
-    x * Maze.SQUARE_SIZE - frame * Maze.PEGMAN_WIDTH + 1 + Maze.PEGMAN_X_OFFSET);
-  pegmanIcon.setAttribute('y', getPegmanYForRow(y));
-
   var clipRect = document.getElementById('clipRect');
-  clipRect.setAttribute('x', x * Maze.SQUARE_SIZE + 1 + Maze.PEGMAN_X_OFFSET);
-  clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
+  displayPegman(skin, pegmanIcon, clipRect, x, y, frame);
 };
 
 var scheduleDirtChange = function (options) {
