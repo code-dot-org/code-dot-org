@@ -75,6 +75,7 @@
   "penUp": "blyant opp",
   "reinfFeedbackMsg": "Her er teikninga di! Fortset å arbeide med ho eller gå til neste oppgåve.",
   "setAlpha": "angje gjennomskinneligheit",
+  "setCharacter": "set character to {character}",
   "setColour": "set farge",
   "setPattern": "set mønster",
   "setWidth": "set breidde",
@@ -90,6 +91,5 @@
   "turnTooltip": "Snur artisten mot venstre eller høgre med gitt vinkel.",
   "turtleVisibilityTooltip": "Gjør artisten synleg eller usynleg.",
   "widthTooltip": "Endrer breidda på blyanten.",
-  "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Bildet er feil farge.  I denne oppgåva må det vere %1."
 }

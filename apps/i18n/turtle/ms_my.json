@@ -75,6 +75,7 @@
   "penUp": "pensil di atas",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha": "set alpha",
+  "setCharacter": "set character to {character}",
   "setColour": "set warna",
   "setPattern": "set pattern",
   "setWidth": "set lebar",
@@ -90,6 +91,5 @@
   "turnTooltip": "Pusing artis kiri atau kanan dengan darjah nombor yang telah ditentukan.",
   "turtleVisibilityTooltip": "Jadikan artis kelihatan atau tidak kelihatan.",
   "widthTooltip": "Tukar lebar pensil.",
-  "wrongColour": "Warna gambar anda salah. Untuk Puzzle ini, ianya perlukan %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Warna gambar anda salah. Untuk Puzzle ini, ianya perlukan %1."
 }
