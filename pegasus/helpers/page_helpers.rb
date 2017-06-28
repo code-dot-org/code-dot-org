@@ -67,10 +67,11 @@ def css_retina?(is_retina = true)
   css_query_parts.map {|q| "#{!is_retina ? 'not all and ' : ''}(#{q})"}.join(', ')
 end
 
-# Returns a concatenated, minified CSS string from all CSS files in the given path.
-def combine_css(path)
+# Returns a concatenated, minified CSS string from all CSS files in the given paths.
+def combine_css(*paths)
+  files = paths.map {|path| Dir.glob(pegasus_dir('sites.v3', request.site, path, '*.css'))}.flatten
   css_last_modified = Time.at(0)
-  css = Dir.glob(pegasus_dir('sites.v3', request.site, path, '*.css')).sort.map do |i|
+  css = files.sort_by(&File.method(:basename)).map do |i|
     css_last_modified = [css_last_modified, File.mtime(i)].max
     IO.read(i)
   end.join("\n\n")
