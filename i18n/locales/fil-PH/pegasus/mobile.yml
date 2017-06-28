@@ -37,7 +37,7 @@
   hoc2014_everyone: "Lahat"
   hoc2014_support: "Suportahan ito &#x25BE;"
   hoc2014_whatishoc: "Ano ba ang Hour of Code?"
-  csedweek_map_header: "# CSEdWeek / Hour of Code events around the world"
+  csedweek_map_header: "# CSEdWeek / Mga pangyayari sa Hour of Code sa buong mundo"
   csedweek_map_signup: "Sign up your event"
   csedweek_map_search_placeholder: "Search for Hour of Code events"
   csedweek_map_search_search: "Search"
@@ -183,7 +183,7 @@
   petition_thankyou: "Maraming salamat sa pagpirma ng petisyon"
   continue_learning_header: "Magpatuloy matuto ng lampas sa Isang Oras"
   continue_learning_body: "Maraming mga pagpipilian. Maaari kang matuto online, o sa lokal na eskwelahan, o summer camp."
-  learn_code_studio: "Try Code Studio courses"
+  learn_code_studio: "Try Code.org's courses"
   learn_next_level: "Magpatuloy sa sunod ne level"
   learn_online: "Subukan ang ibang pang mga kurso online"
   learn_classes: "Hanapin ang lokal na mga klase"
@@ -215,7 +215,7 @@
   stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana Alzate, 5th grader'
   stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning." - Frank Martinez, Teacher'
   studiobar_title: "Tingnan ang <a href='http://studio.code.org'>Code Studio</a>"
-  studiobar_title_nolink: "Explore Code Studio"
+  studiobar_title_nolink: "Explore Code.org's courses"
   studiobar_elementary_title: "Mga kurso pang elementary"
   studiobar_elementary_body: "Ang tatlong bagong kurso namin para sa K&#8209;5"
   studiobar_hoc_title: "Ang Hour of Code"
@@ -270,8 +270,8 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, teacher
-  homepage_hero_text_stat_loc: "2.5 million girls are enrolled to learn on Code Studio"
-  homepage_hero_text_stat_students: "#student_count student accounts on Code Studio"
+  homepage_hero_text_stat_loc: "8.5 million girls are enrolled to learn on Code.org"
+  homepage_hero_text_stat_students: "#student_count student accounts on Code.org"
   homepage_hero_text_stat_served: 'The Hour of Code: #served served'
   homepage_slot_text_hoc: "Ang Hour of Code"
   homepage_slot_text_frozen: "Frozen kasama sina Anna at Elsa"
@@ -311,6 +311,7 @@
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Anybody can learn. Start today"
   homepage_slot_text_link_hoc: "Subukan ang Hour of Code"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Host an Hour of Code"
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: "Volunteer for the Hour of Code"
@@ -334,7 +335,7 @@
   homepage_slot_text_link_buy: "Sumali"
   homepage_slot_text_link_donate: "Magbigay ng donasyon"
   homepage_slot_text_link_shop: "T-shirts, hats, & more"
-  homepage_header_codestudio: "Code Studio student creations"
+  homepage_header_codestudio: "Code Studio mga gawa ng estudyante"
   homepage_header_donors: "Pinasasalamatan ng Code.org ang mag tagasuporta nito"
   homepage_donors_seall: "See all"
   homepage_donors_donate: "Mag-donate"
@@ -466,7 +467,7 @@
   volunteer_engineer_submission_intro_signup: "Please enter the following information if you are a computer science student or software professional. Fields marked with a <span class=\"form-required-field\">*</span> are required."
   volunteer_engineer_submission_intro_links: "Are you a teacher looking for volunteers? Find a local volunteer on our <a href=\"%{volunteer_local}\">volunteer map</a>."
   volunteer_engineer_submission_update_information: "Update your information"
-  volunteer_engineer_submission_header_shared: "Information shared with teachers on volunteer map"
+  volunteer_engineer_submission_header_shared: "Mga impormasyong ibinahagi sa mga guro sa volunteer map"
   volunteer_engineer_submission_field_name: "Pangalan"
   volunteer_engineer_submission_field_name_placeholder: "Full Name"
   volunteer_engineer_submission_field_company: "Company (or University)"
@@ -485,7 +486,7 @@
   volunteer_engineer_submission_field_description: "Deskripsyon"
   volunteer_engineer_submission_field_description_desc: "Describe your computer science experience or technical background and how you would like to participate as a volunteer for local teachers."
   volunteer_engineer_submission_field_description_placeholder: "Description of experience and/or participation. If you speak language(s) other than English, be sure to include it here."
-  volunteer_engineer_submission_header_private: "Information kept private and never shared"
+  volunteer_engineer_submission_header_private: "Ang impormasyon ay nananatiling pribado at hindi kailanman ibinabahagi"
   volunteer_engineer_submission_field_email: "Email address"
   volunteer_engineer_submission_field_email_desc: "Your email address will never be shared, but we'll send you requests from teachers."
   volunteer_engineer_submission_field_email_placeholder: "Email address"
@@ -582,8 +583,8 @@
   dashboard_action_required: "kinakailangan"
   dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Assessment summaries"
   dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Surveys"
@@ -622,11 +623,13 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Bagong section"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Gumawa ng bagong mga section at magdagdag ng mga estudyante dito. Ang mga section ay tumutulong para ma-organize ang mga estudyante sa mas maliit na mga grupo upang makita ang progreso at ma-manage ang kanilang mga account."
   dashboard_sections_table_section: "Bahagi"
   dashboard_sections_table_secret: "Klase ng Login"
   dashboard_sections_table_grade: "Grade"
   dashboard_sections_table_course: "Kurso"
+  dashboard_sections_table_pairing_allowed: "Pair Programming"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Mga mag-aaral"
   dashboard_sections_table_code: "Section Code"
@@ -878,9 +881,9 @@
   cspunit4_name: '(old) Unit 4: Data'
   cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -913,7 +916,7 @@
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
@@ -1322,3 +1325,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Home"
+  header_courses: "Mga kurso"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Overview ng Nagtuturo"
+  header_educate_elementary: "Mababang Paaralan"
+  header_educate_middle: "Middle School"
+  header_educate_high: "Mataas na Paaralan"
+  header_educate_hoc: "Hour of Code"
+  header_educate_partner: "Makipag-partner sa Amin"
+  header_educate_beyond: "Pagkatapos ng Code.org"
+  header_educate_inspire: "Magbigay Inspirasyon sa Estudyante"
+  header_educate_community: "Online na Komunidad"
+  header_educate_tools: "Mga Tools at Videos"
+  header_about_us: "Tungkol sa Amin"
+  header_about_leadership: "Pamumuno"
+  header_about_donors: "Mga Donor"
+  header_about_partners: "Mga Partner"
+  header_about_team: "Buong Team"
+  header_about_news: "Newsroom"
+  header_about_evaluation: "Ebalwasyon"
+  header_about_jobs: "Mga Trabaho"
+  header_about_contact: "Kontakin Kami"
+  header_about_faqs: "FAQs"
+  header_learn: "Matuto"
+  header_teach: "Magturo"
+  header_stats: "Stats"
+  header_help_us: "Tulungan Kami"
+  header_about: "Tungkol"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

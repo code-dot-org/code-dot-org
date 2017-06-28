@@ -37,7 +37,7 @@
   hoc2014_everyone: "全員"
   hoc2014_support: "サポートする &#x25BE;"
   hoc2014_whatishoc: "Hour of Codeとは何でしょうか？"
-  csedweek_map_header: "# CSEdWeek / Hour of Code 全世界のイベント"
+  csedweek_map_header: "世界中の # CSEdWeek / Hour of Code イベント"
   csedweek_map_signup: "イベントに参加する"
   csedweek_map_search_placeholder: "Hour of Code のイベントを探す"
   csedweek_map_search_search: "検索"
@@ -299,6 +299,7 @@
   homepage_slot_text_title_hoc: "Hour of Code（コーディングを学ぶ時間）"
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Hour of Code を主催する"
   homepage_slot_text_link_hocserved: "# 人が試しました"
   homepage_solot_text_link_volunteer: "Hour of Code のボランティア"
@@ -450,7 +451,7 @@
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} 人の教師が、ボランティアを求めています。<br>%{num_volunteers} 人がボランティア登録をしています。あなたも参加してください。"
   volunteer_engineer_submission_intro_background: "Hour of Code は1時間のコンピューター・サイエンス入門の世界的な運動です。180以上の国で数千万人の生徒に提供されています。12 月 7-13 日のコンピューター・サイエンス学習週間に参加しましょう。"
   volunteer_engineer_submission_intro_recruit: '教師は、クラスルームを助けてくれる <span style="font-family: ''Gotham 7r'', sans-serif;"> コンピューターサイエンス教育に情熱的な</span> 誰かを求めています。または、コンピューターサイエンスの持つ可能性の幅広さについて生徒を <span style="font-family: ''Gotham 7r'', sans-serif;"> 励ます</span> ことができる人を求めています。 (これはビデオ チャットで行うことができます)'
-  volunteer_engineer_submission_intro_guide: "Learn more about our <a href=\"%{volunteer_guide}\">volunteer program here</a>."
+  volunteer_engineer_submission_intro_guide: "私たちの <a href=\"%{volunteer_guide}\"> ボランティア プログラム</a> について詳しく見る。"
   volunteer_engineer_submission_intro_signup: "コンピュータ サイエンスの学生やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。 <span class=\"form-required-field\">*</span> とマークされているフィールドは必須です。"
   volunteer_engineer_submission_intro_links: "あなたはボランティアをお探しの先生ですか？<a href=\"%{volunteer_local}\">ボランティア マップ</a> で地域のボランティアを探してください。"
   volunteer_engineer_submission_update_information: "あなたの情報を更新する"
@@ -479,7 +480,7 @@
   volunteer_engineer_submission_field_email_placeholder: "Eメールアドレス"
   volunteer_engineer_submission_final_paragraph: "地域の教師が Hour of Code やその他のボランティアのために連絡できるよう、あなたは地図上に表示されます。あなたのメール アドレスと詳細な住所は決して公開される事はありません。しかし、その他の情報(おおよその所在地など) は地域の教師に公開されます。"
   volunteer_engineer_submission_checkbox_contact: '私は、教師がボランティアについて私に連絡することに同意します (注: あなたのメール アドレスが公開されることはありません)'
-  volunteer_engineer_submission_checkbox_age_18_plus: "I certify that I am at least 18 years old."
+  volunteer_engineer_submission_checkbox_age_18_plus: "私は 18 歳以上です。"
   volunteer_engineer_submission_submit: "送信"
   volunteer_engineer_submission_thankyou: "ボランティアへの登録ありがとうございます。教師は <a href=\"%{url}\"> このマップ</a> を使用して、あなたのようなボランティアを検索して連絡を取ります。"
   volunteer_engineer_submission_commitment_uncertain: "その他"
@@ -593,7 +594,7 @@
   dashboard_navigation_view_assessments_surveys: "評価/アンケート"
   dashboard_navigation_add_students: "生徒を追加"
   dashboard_navigation_manage_students: "生徒の管理"
-  dashboard_navigation_lesson_plans_resources: "レッスンプランと資料"
+  dashboard_navigation_lesson_plans_resources: "レッスンプランや各種資料"
   dashboard_navigation_view_stats: "統計"
   dashboard_navigation_section: 'セクション: %{section_name}'
   dashboard_navigation_student: '生徒: %{student_name}'
@@ -610,11 +611,13 @@
   dashboard_responses_view: 'テキスト応答を表示:'
   dashboard_responses_none: "私たちのクラスのほとんどは低学年向けに設計されており、生徒は文字を打ち込んで質問に回答する必要はありません。ここでは文字の応答は表示されません。中学・高校生のコースでは、上のドロップダウンから割り当てられたコースを選択することによって、質問に対する彼らの文章回答を見ることができます。"
   dashboard_sections_new_section: "新しいセクション"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "セクションを新規で作成し、学生を追加します。セクションを使うと生徒を複数の少人数のグループで管理できるので、進捗状況の把握や、アカウントの管理が容易になります。"
   dashboard_sections_table_section: "セクション"
   dashboard_sections_table_secret: "ログインタイプ"
   dashboard_sections_table_grade: "学年"
   dashboard_sections_table_course: "コース"
+  dashboard_sections_table_pairing_allowed: "ペアプログラミング"
   dashboard_sections_table_stage_extras: "追加ステージ"
   dashboard_sections_table_students: "生徒の皆さん"
   dashboard_sections_table_code: "セクション・コード"
@@ -663,7 +666,7 @@
   dashboard_students_reset_secret: "秘密のリセット"
   dashboard_students_reset_password: "パスワードのリセット"
   dashboard_students_share_section: "このセクションのサインインページを生徒達と共有する："
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s sign in page with your students:'
+  dashboard_students_share_section_secondary: 'または、生徒たちとセクションのサインイン ページを共有します:'
   dashboard_students_print_info: "学生用のログイン情報でカードを印刷する"
   dashboard_students_secret_picture_title: "秘密の画像"
   dashboard_students_secret_picture: "このセクションでは、各生徒が秘密の<b>画像</b>をパスワードの変わりに使用してログインします。ログインする際は上記のWebアドレスにログインしてください。"
@@ -674,7 +677,7 @@
   dashboard_students_join_link: "あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう"
   dashboard_students_no_email: "生徒がEメールアドレスを持っていない場合、もしくはあなたが生徒のアカウントを作りたい場合、セクションの秘密の種類を<b>単語</b>か<b>画像</b>にしてください。"
   dashboard_students_print_page: "このページを印刷"
-  dashboard_students_signin_card: "Visit %{join_url} and enter %{section_code}"
+  dashboard_students_signin_card: "%{join_url} を訪問し、%{section_code} を入力"
   dashboard_students_url: "URL"
   dashboard_privacy_document_link: "個人情報の扱いを参照したり印刷したりする場合は<a href=\"/privacy/student-privacy\", target=\"_blank\">ここをクリック</a>"
   dashboard_curriculum_k5_title: "幼稚園／小学校教師向けの資料"
@@ -866,12 +869,12 @@
   cspunit4_name: '(old) Unit 4: データ'
   cspunit5_name: '(old) Unit 5: PT を探索し作成'
   cspunit6_name: 'Post-AP: データベース'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'ユニット 5: データと社会'
+  csd6_name: 'ユニット 6: フィジカル ・ コンピューティング'
   csp1_name: '第 1 章: インターネット'
   csp2_name: '第 2 章: デジタル情報'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -895,13 +898,13 @@
   starwarsblocks_name: "スター ・ ウォーズ (ブロック)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: 単純な暗号化
   text-compression_name: Text Compression
   math_category_name: "数値"
   hoc_category_name: "Hour of Code"
   csf_category_name: "コンピューター・サイエンスの基礎"
   csf2_draft_category_name: '開発中: コース A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 コンピューター・サイエンス原理"
   csp17_category_name: "'16-'17 コンピューター・サイエンス原理"
   cspexams_category_name: "コンピューター・サイエンス原理実習テスト"
@@ -1310,3 +1313,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "ホーム"
+  header_courses: "コース"
+  header_project_gallery: "プロジェクト ギャラリー"
+  header_sections: "セクション"
+  header_professional_learning: "専門的な学習"
+  header_educate_overview: "教育の概要"
+  header_educate_elementary: "小学校"
+  header_educate_middle: "中学校"
+  header_educate_high: "高校"
+  header_educate_hoc: "Hour of Code"
+  header_educate_partner: "私達のパートナー"
+  header_educate_beyond: "Code.org を超えて"
+  header_educate_inspire: "生徒を応援する"
+  header_educate_community: "オンライン コミュニティ"
+  header_educate_tools: "ツールと動画"
+  header_about_us: "私たちについて"
+  header_about_leadership: "リーダーシップ"
+  header_about_donors: "ドナー"
+  header_about_partners: "パートナー"
+  header_about_team: "全チーム"
+  header_about_news: "ニュース"
+  header_about_evaluation: "評価"
+  header_about_jobs: "仕事"
+  header_about_contact: "お問い合わせ"
+  header_about_faqs: "よくある質問"
+  header_learn: "学ぶ"
+  header_teach: "教える"
+  header_stats: "統計"
+  header_help_us: "手を貸して下さい"
+  header_about: "概要"
+  header_teacher_community: "先生のコミュニティ"
+  header_help_support: 'ヘルプとサポート '
+  header_report_bug: "バグを報告"
+  header_tutorials: "チュートリアル"
+  header_documentation: "ドキュメント"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

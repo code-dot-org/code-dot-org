@@ -125,8 +125,8 @@
           nähdäksesi, kuka voittaa</h4>"
         "<h4>Player 1 rolls die</h4>": "<h4>Pelaaja 1 heittää noppaa</h4>"
         "<h4>Set Player 1 score to 0</h4>": "<h4>Nollaa pelaajan 1 pisteet</h4>"
-        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 'Yhdistä
-          noppakisapelin vaiheet oikeisiin kohtiin algoritmissa. '
+        Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Yhdistä
+          noppakisapelin vaiheet oikeisiin kohtiin algoritmissa.
         Matching: Yhdistely
       4-5 Computational Thinking Match 1:
         "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png": "/script_assets/4-5_images/unplugged/comp_thinking_2_a1.png"
