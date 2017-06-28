@@ -61,7 +61,7 @@
   "playSoundGoal1":"\"Hedef 1\" sesi çal",
   "playSoundGoal2":"\"Hedef 2\" sesi çal",
   "playSoundHit":"\"Çarpma\" sesi çal",
-  "playSoundKick":"tekme sesi çal",
+  "playSoundKick":"\"Çarpma\" sesi çal",
   "playSoundLosePoint":"\"Puan kaybetme\" sesi çal",
   "playSoundLosePoint2":"\"Puan kaybetme 2\" sesi çal",
   "playSoundRetro":"\"Retro\" sesi çal",

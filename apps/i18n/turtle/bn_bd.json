@@ -75,6 +75,7 @@
   "penUp": "পেন্সিল তোল",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha": "আলফা সেট করুন",
+  "setCharacter": "set character to {character}",
   "setColour": "রঙ স্থির (সেট) করুন",
   "setPattern": "নমুনা সেট করুন",
   "setWidth": "প্রস্থ স্থির (সেট) করুন",
@@ -90,6 +91,5 @@
   "turnTooltip": "Turns the artist left or right by the specified number of degrees.",
   "turtleVisibilityTooltip": "Makes the artist visible or invisible.",
   "widthTooltip": "পেন্সিলের প্রস্থ পরিবর্তন করে।",
-  "wrongColour": "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "আপনার ছবির রঙ ভুল আছে।  এই ধাঁধার জন্য এটি %1 করা প্রয়োজন।"
 }

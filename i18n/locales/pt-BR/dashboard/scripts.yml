@@ -359,15 +359,15 @@ pt-BR:
           description_audience: ''
           stages:
             Automatic DNS node:
-              name: Automatic DNS node
+              name: Nó DNS Automático
             Broadcasting messages:
               name: Broadcasting messages
             Internet Simulator Freeplay:
               name: Internet Simulator Freeplay
             Manual DNS:
-              name: Manual DNS
+              name: DNS Manual
             Overview and Setup Instructions:
-              name: Overview and Setup Instructions
+              name: Visão Geral e Instruções de Configuração
             Packets and Reliability:
               name: Packets and Reliability
             Peer to Peer - Sending Ascii:
@@ -738,17 +738,17 @@ pt-BR:
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introdução a Arrays
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: Introdução a Lógica Condicional
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: Introdução a Assistentes Digitais
             Looping and Random Numbers:
               name: Repetição e números aleatórios
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Laços e Simulações
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Aplicativos Multi-Tela
             Practice PT - Design a Digital Scene:
               name: Practice PT - Design a Digital Scene
             'Practice PT: Create':
@@ -1785,9 +1785,9 @@ pt-BR:
             Image Scroller with Key Events:
               name: Image Scroller with Key Events
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introdução a Arrays
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Laços e Simulações
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:
@@ -2291,15 +2291,15 @@ pt-BR:
             Introducing Design Mode:
               name: Introducing Design Mode
             Introduction to Arrays:
-              name: Introduction to Arrays
+              name: Introdução a Arrays
             Introduction to Conditional Logic:
-              name: Introduction to Conditional Logic
+              name: Introdução a Lógica Condicional
             Introduction to Digital Assistants:
-              name: Introduction to Digital Assistants
+              name: Introdução a Assistentes Digitais
             Loops and Simulations:
-              name: Loops and Simulations
+              name: Laços e Simulações
             Multi-screen Apps:
-              name: Multi-screen Apps
+              name: Aplicativos Multi-Tela
             'Practice PT: Create':
               name: 'Practice PT: Create'
             Processing Arrays:

@@ -75,6 +75,7 @@
   "penUp":"ფანქრის აწევა",
   "reinfFeedbackMsg":"ესეც თქვენი ნახატი! განაგრძეთ მასზე მუშაობა ან გადადით შემდეგ თავსატეხზე.",
   "setAlpha":"დააყენეთ ალფა",
+  "setCharacter":"set character to {character}",
   "setColour":"ფერის განსაზღვრა",
   "setPattern":"ნიმუშის შექმნა",
   "setWidth":"სიგანის განსაზღვრა",

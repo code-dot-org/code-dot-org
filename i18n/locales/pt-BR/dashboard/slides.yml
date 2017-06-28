@@ -747,7 +747,7 @@ pt-BR:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Quando queremos fazer chocolate, há várias etapas grandes nesse processo. Cada uma delas tem seu próprio conjunto de passos menores. E há diferentes receitas ou algoritmos, dependendo do gosto que queremos para o chocolate. Todas as etapas são importantes, mesmo as menores, então se pularmos uma delas as demais não poderão ser concluídas. Criar algoritmos que os outros possam entender é muito importante. É por isso que cada etapa deve ser escrita de forma que o resultado seja sempre o mesmo, não importa quem faça."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Até agora, você fez animações ou histórias que fazem exatamente as mesmas coisas quando você as executa. Agora, você pode fazer um jogo interativo e jogá-lo de verdade."
@@ -823,7 +823,7 @@ pt-BR:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Neste exemplo, vamos dizer que SE a flor roxa tem néctar maior que 0, obtenha néctar. Isso fará com que nossa abelha continue coletando néctar enquanto for possível. Bingo!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Você já ouvi falar em depurar um programa? Essa é uma forma de descobrir o que não está funcionando. Quando você depura um código, você identifica e remove os erros."

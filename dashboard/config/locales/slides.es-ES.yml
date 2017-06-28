@@ -1289,7 +1289,7 @@
           crear algoritmos que otros puedan entender. Es por ello que cada paso tiene
           que ser escrito para que el resultado sea el mismo, sin importar quién lo
           hace.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Hasta ahora, has hecho una animación o una historia que hace exactamente
@@ -1431,7 +1431,7 @@
         text: En este ejemplo, vamos a determinar SI la flor purpura tiene un néctar
           mayor que 0 y obtiene néctar. Eso le dice a nuestra abeja que continúe obteniendo
           néctar mientra haya. ¡Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: "¿Alguna vez has escuchado lo que es depurar un programa? Ésta es la
