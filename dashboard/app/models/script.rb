@@ -408,8 +408,25 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  private def csd_tts_level?
+    [
+      Script::CSD2_NAME,
+      Script::CSD3_NAME,
+      Script::CSD4_NAME,
+      Script::CSD6_NAME
+    ].include?(name)
+  end
+
+  private def csp_tts_level?
+    [
+      Script::CSP17_UNIT3_NAME,
+      Script::CSP17_UNIT5_NAME,
+      Script::CSP17_POSTAP_NAME
+    ].include?(name)
+  end
+
   def text_to_speech_enabled?
-    k1? || name == Script::COURSEC_DRAFT_NAME
+    k1? || name == Script::COURSEC_DRAFT_NAME || csd_tts_level? || csp_tts_level?
   end
 
   def hide_solutions?
