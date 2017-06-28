@@ -990,8 +990,8 @@
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
   dashboard_course4: 'Corso 4: '
-  dashboard_unplugged: Se non hai dei computers, <a href='%{unplugged_url}'>prova
-    queste lezioni</a> nella tua classe.
+  dashboard_unplugged: Se non hai un computer, <a href='%{unplugged_url}'>usa queste
+    lezioni tradizionali</a> nella tua classe.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Panoramica

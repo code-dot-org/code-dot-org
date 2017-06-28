@@ -1942,7 +1942,7 @@
   header_home: Beranda
   header_courses: Kursus
   header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_sections: Sesi
   header_professional_learning: Professional Learning
   header_educate_overview: Ikhtisar Pendidik
   header_educate_elementary: Sekolah Dasar
@@ -1969,11 +1969,11 @@
   header_stats: Statistik
   header_help_us: Bantu Kami
   header_about: Tentang
-  header_teacher_community: Teacher community
+  header_teacher_community: Komunitas guru
   header_help_support: 'Help and support '
   header_report_bug: Laporkan bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Tutorial
+  header_documentation: Dokumentasi
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

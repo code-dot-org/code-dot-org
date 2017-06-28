@@ -28,7 +28,7 @@
   og_title: Setiap anak berhak atas kesempatan
   og_description: "Setiap siswa di setiap sekolah layak mendapatkan kesempatan untuk belajar ilmu komputer. Ini mengubah segalanya."
   csedweek_og_title: "Minggu pendidikan ilmu komputer"
-  csedweek_og_description: "December 4-10, 2017. Computer science is foundational for every student to learn."
+  csedweek_og_description: "4-10 Desember 2017. Ilmu komputer adalah dasar bagi setiap siswa untuk belajar."
   hoc2014_heading: "Bergabung dengan <a href=\"http://hourofcode.com\">Hour of Code</a> <br/> 8-14 Desember 2014 <br/>"
   hoc2014_students: "Siswa"
   hoc2014_try: "Cobalah"
@@ -48,7 +48,7 @@
   cded_sign_up: "Daftar"
   cded_try_it: "Cobalah"
   try_now: "Coba sekarang"
-  california_heading: "Minta sekolah anda untuk mengajarkan ilmu komputer"
+  california_heading: "Minta sekolah Anda untuk mengajarkan ilmu komputer"
   california_text: "Setiap guru dapat menawarkan <a href='http://learn.code.org/'>kursus gratis</a> kami. Setiap sekolah dasar dapat <a href='http://code.org/educate/k5'> mengajar ilmu komputer</a>. Ajak sekolah menengah untuk  <a href='http://code.org/educate/districts'> bermitra dengan kami."
   california_button: "Pelajari lebih banyak"
   flappy_heading: "Ulang tahun 'FLappy' di Code.org"
@@ -95,20 +95,20 @@
   third_party_price_299: 'Harga: $2.99/unduhan'
   third_party_price_individual: 'Harga Perorangan: Gratis Coba & $25/ bulan'
   third_party_price_school: 'Harga Sekolah: Gratis & Pro di $2500 +'
-  third_party_tynker_desc: "Tynker's creative computing platform helps children develop computational thinking and programming skills in a fun, intuitive and imaginative way. Our innovative visual programming language, interactive self-paced courses, and game-based programming activities provide an easy introduction to programming, and empower children to innovate and create."
-  third_party_tynker_btn_curriculum: "Try Tynker's Curriculum for Early Readers"
+  third_party_tynker_desc: "Platform komputasi kreatif Tynker's membantu anak-anak mengembangkan pemikiran komputasi dan keterampilan pemrograman yang menyenangkan, intuitif dan imajinatif. Bahasa pemrograman visual kita yang inovatif, pelajaran mandiri yang interaktif, dan kegiatan pemrograman berbasis permainan memberikan pengantar pemrograman yang mudah, dan memberdayakan anak-anak untuk berinovasi dan berkreasi."
+  third_party_tynker_btn_curriculum: "Cobalah Kurikulum Tynker untuk Pembaca Awal"
   third_party_tynker_btn_site: "Kunjungi Tynker"
-  third_party_scratchjr_desc: "Scratch Jr. is an introductory programming language that enables young children (ages 5-7) to create their own interactive stories and games. Children snap together graphical programming blocks to make characters move, jump, dance, and sing. Children can modify characters in the paint editor, add their own voices and sounds, even insert photos of themselves - then use the programming blocks to make their characters come to life."
+  third_party_scratchjr_desc: "Scratch Jr. adalah bahasa pemrograman pengantar yang memungkinkan anak-anak kecil (usia 5-7) untuk membuat cerita interaktif dan permainan mereka sendiri. Anak-anak menyusun blok-blok pemrograman grafis untuk membuat karakter yang bergerak, melompat, menari dan menyanyi. Anak-anak dapat mengubah karakter dalam editor gambar, menambahkan suara dan suara mereka sendiri, bahkan memasukkan foto mereka sendiri - kemudian menggunakan blok-blok pemrograman untuk membuat karakter mereka menjadi nyata."
   third_party_scratchjr_btn_curriculum: "Unduh Scratch Jr. Curriculum"
   third_party_scratchjr_btn_site: "Kunjungi Scratch Jr."
-  third_party_scratch_desc: "With Scratch, you can program your own interactive stories, games, and animations and share your creations with others in the online community. Scratch helps young people learn to think creatively, reason systematically, and work collaboratively — essential skills for life in the 21st century."
+  third_party_scratch_desc: "Dengan Scratch, Anda dapat memrogram cerita interaktif, permainan, dan animasi Anda sendiri dan berbagi kreasi Anda dengan orang lain dalam komunitas online. Scratch membantu anak-anak belajar untuk berpikir kreatif, menalar secara sistematis, dan bekerja sama - keterampilan yang esensial untuk hidup di abad 21."
   third_party_scratch_btn_curriculum: "Unduk Kurikulum Scratch"
   third_party_scratch_btn_forum: "Forum Pengajar Scratch"
   third_party_scratch_btn_site: "Kunjungan Scratch"
-  third_party_lightbot_desc: "In Lightbot, students must program a robot with commands to solve puzzles. Students may play the game in the Browser (requires Flash Player), or on Android or iOS devices. Students play the initial set of “Basic” levels in Lightbot. They will learn how to tell a computer what to do with a series of basic commands and gain the general process by which computer programs are written."
+  third_party_lightbot_desc: "Dalam Lightbot, siswa harus memprogram robot dengan perintah untuk memecahkan teka-teki. Siswa bisa memainkan permainan dalam Browser (memerlukan Flash Player), atau pada perangkat Android atau iOS. Siswa bermain pada tingkat \"Dasar\" dalam Lightbot. Mereka akan belajar bagaimana memberitahu komputer apa yang harus dikerjakan dengan serangkaian perintah-perintah dasar dan mengerti proses umum tentang bagaimana program komputer ditulis."
   third_party_lightbot_btn_curriculum: "Unduh Kurikulum Lightbot"
   third_party_lightbot_btn_site: "Kunjungi Lightbot"
-  third_party_khan_desc: "Learn how to program drawings, animations, and games using JavaScript & ProcessingJS, or learn how to create webpages with HTML & CSS. You can share whatever you create, explore what others have created and learn from each other!"
+  third_party_khan_desc: "Belajar bagaimana memprogram gambar, animasi dan game menggunakan JavaScript & ProcessingJS, atau belajar cara membuat halaman web dengan HTML & CSS. Anda dapat berbagi apa pun yang Anda buat, mengeksplorasi apa yang telah dibuat orang lain dan saling belajar satu sama lain!"
   third_party_khan_btn_learn: "Belajar CS bersama Khan Academy"
   third_party_khan_btn_forum: "Forum CS Khan Academy"
   third_party_appinv_desc: "MIT App Inventor is a block-based programming tool that allows everyone, even novices, to start programming and build fully functional apps for Android devices. Newcomers to App Inventor can have their first app up and running in an hour or less, and can program more complex apps in significantly less time than with more traditional, text-based languages."
@@ -116,7 +116,7 @@
   third_party_appinv_btn_forum: "Forum App Inventor 2"
   third_party_appinv_btn_site: "Kunjungi App Inventor 2"
   third_party_codehs_desc: "CodeHS introduces the building blocks of programming with short videos, example code, and lots of programming exercises that make coding fun and accessible for beginners. For schools and teachers CodeHS provides curriculum, teacher tools and PD. For individual learners, you can get the help you need along the way from a network of tutors."
-  third_party_codehs_btn_try: "Intro CS Learn More for Schools"
+  third_party_codehs_btn_try: "Introduksi CS Pelajari Lebih Lanjut untuk Sekolah"
   third_party_codecademy_desc: "We are rethinking education from the bottom up. The web has rethought nearly everything - commerce, social networking, healthcare, and more. We are building the education the world needs - the first truly net native education."
   third_party_codecademy_btn_curriculum: "Download Codecademy Curriculum"
   third_party_codecademy_btn_site: "Kunjungi Codecademy"
@@ -183,14 +183,14 @@
   petition_thankyou: "Terima kasih untuk menandatangani petisi"
   continue_learning_header: "Lanjutkan pelajaran setelah Satu Jam"
   continue_learning_body: "Ada banyak pilihan.  Anda dapat belajar online, di sekolah/kursus, atau ketika liburan sekolah."
-  learn_code_studio: "Try Code Studio courses"
+  learn_code_studio: "Cobalah kursus Code Studio"
   learn_next_level: "Lanjut ke tingkat berikutnya"
   learn_online: "Coba kursus online lain"
   learn_classes: "Cari kelas kursus"
   learn_back_to_minecraft: "Terus belajar dengan Minecraft"
-  hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
+  hoc_is_here: "#HourOfCode akan datang lagi pada tanggal 5-11 Desember.\nhttps://youtu.be/KsOIlDT145A."
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
-  just_did_course1: "I just finished Course 1 - check it out! @codeorg"
+  just_did_course1: "Saya baru saja menyelesaikan Kursus 1 - coba lihat! @codeorg"
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
   just_did_course3: "I just finished Course 3 - check it out! @codeorg"
   just_did_course4: "I just finished Course 4 - check it out! @codeorg"
@@ -306,6 +306,7 @@
   homepage_slot_text_title_hoc: "Jam kode"
   homepage_slot_text_blurb_hoc: "Siapapun bisa belajar. Mulailah hari ini"
   homepage_slot_text_link_hoc: "Cobalah \"Hour of Code\""
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Selenggarakan Hour of Code"
   homepage_slot_text_link_hocserved: "# disajikan"
   homepage_solot_text_link_volunteer: "Relawan untuk Hour of Code"
@@ -319,7 +320,7 @@
   homepage_slot_text_blurb_educators: "Ajari siswa Anda"
   homepage_slot_text_link_elementary: "Sekolah dasar"
   homepage_slot_text_link_middle: "Sekolah Menengah Pertama"
-  homepage_slot_text_link_high: "Sekolah Menengah Umum"
+  homepage_slot_text_link_high: "Sekolah Menengah Atas"
   homepage_slot_text_link_k5: "Kursus untuk kelas K-5"
   homepage_slot_text_link_fullcurriculum: "Lihat kurikulum kami sepenuhnya"
   homepage_slot_text_link_pd: "Pengembangan profesional"
@@ -366,10 +367,10 @@
   class_submission_level_preschool: "Prasekolah"
   class_submission_level_elementary: "Sekolah Dasar"
   class_submission_level_middle_school: "Sekolah Menengah Pertama"
-  class_submission_level_high_school: "Sekolah Menengah Umum"
+  class_submission_level_high_school: "Sekolah Menengah Atas"
   class_submission_level_college: "Perguruan tinggi"
-  class_submission_level_vocational: "Kejuruan"
-  class_submission_languages_other: "Bahasa Lainnya"
+  class_submission_level_vocational: "Sekolah Kejuruan"
+  class_submission_languages_other: "Bahasa yang lain"
   videos_more: "More <a href='%{inspiring_videos_playlist}'>inspirational videos</a> featuring role models and celebrities"
   careers_page_more: "More <a href='%{careers_url}' target='_blank'>inspirational videos</a> featuring professionals in technology fields"
   playlab_choose_theme: "Pilih laboratorium bermain-mu"
@@ -391,9 +392,9 @@
   mc_gradelevel: "Usia 6 Keatas"
   mc_platformtext: "Browser modern, smartphone, tablet"
   mc_specs: "Berbagai bahasa | Situs pencarian | Ages 6-106"
-  minecraft_designer: "Minecraft Designer"
-  minecraft_adventurer: "Minecraft Adventurer"
-  minecraft_tutorials: "Minecraft Hour of Code Tutorials"
+  minecraft_designer: "Perancang Minecraft"
+  minecraft_adventurer: "Petualang Minecraft"
+  minecraft_tutorials: "Tutorial Minecraft Jam Kode"
   minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "Mulai"
@@ -405,14 +406,14 @@
   sports_page_title: "Hour of Code Sports"
   sports_og_title: "Push yourself. Anybody can learn."
   sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
-  sports_title: "Code your own sports game"
+  sports_title: "Kode permainan olahraga Anda"
   sports_watch_video: "Tonton videonya"
   sports_video_title: "Push yourself. Anybody can learn."
-  sports_select_theme: "Select your tutorial theme"
-  sports_basketball_title: "Make a basketball game"
+  sports_select_theme: "Pilih tema tutorial Anda"
+  sports_basketball_title: "Buat sebuah permainan basket"
   sports_all_sports_title: "Mix and match across sports"
   sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
+  sports_athletes_title: "Atlet unggulan"
   sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
   sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
   sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
@@ -433,7 +434,7 @@
   watch_inspirational_videos: "Sebelum Anda memulai, lihat salah satu video inspiratif ini"
   video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Inspirasi seorang gadis"
-  video_title_cs_intro: "Computer Science intro"
+  video_title_cs_intro: "Perkenalan Ilmu Komputer"
   video_title_schools_dont_teach: "What Most Schools Don't Teach"
   video_title_obama: "President Obama pada Ilmu Komputer"
   video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
@@ -577,11 +578,11 @@
   dashboard_action_required: "diperlukan"
   dashboard_action_print_certificates: "Cetak Sertifikat"
   dashboard_assessments_view: 'Lihat penilaian di:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Ringkasan penilaian"
   dashboard_assessments_answers: "All assessment answers"
-  dashboard_surveys_answers: "Surveys"
+  dashboard_surveys_answers: "Survei"
   dashboard_percent: "Persen"
   dashboard_filter_by_stage: 'Filter by stage:'
   dashboard_filter_all: "Semua"
@@ -612,16 +613,18 @@
   dashboard_progress_furthest_level_attempted: "tingkat terjauh yang dicoba"
   dashboard_progress_submitted: "terkirim"
   dashboard_progress_view: 'View progress in:'
-  dashboard_progress_student_in_script: "Progress information for %{student_name} in %{script_name}"
+  dashboard_progress_student_in_script: "Kemajuan informasi untuk %{student_name} di %{script_name}"
   dashboard_progress_pair_programming: "pair programming"
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Kelompok baru"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Buatlah kelompok baru dan tambahkan murid di dalamnya. Kelompok dapat membagi murid-murid menjadi kelompok yang lebih kecil agar Anda bisa memantau perkembangan dan mengelola akun mereka."
   dashboard_sections_table_section: "Sesi"
   dashboard_sections_table_secret: "Jenis login"
   dashboard_sections_table_grade: "Kelas"
   dashboard_sections_table_course: "Kursus"
+  dashboard_sections_table_pairing_allowed: "Pemrograman berpasangan"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Siswa"
   dashboard_sections_table_code: "Kode Sesi"
@@ -642,7 +645,7 @@
   dashboard_sections_both_sections: "Would you like the student(s) to be in both sections?"
   dashboard_sections_yes_both: "Yes, I want to copy student(s) to be in this current section AND the new section"
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
-  dashboard_sections_move_students: "Move students"
+  dashboard_sections_move_students: "Siswa pindahan"
   dashboard_sections_assign_hoc_script_desc: "Participating in the Hour of Code?"
   dashboard_sections_assign_hoc_script_msg: "Please note that we will not be able to save progress in this course from December 3 - 11 due to the amount of traffic our site will receive for the Hour of Code.  Everything else in this tutorial will continue to work as expected.  You may still assign the course and give all students certificates for participating.  (Most teachers <a href='%{certificate_url}'>print these in advance</a>.)  We will save and report student progress for every other week of the year."
   dashboard_sections_assign_activity: "Menetapkan kursus"
@@ -693,7 +696,7 @@
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: 'Kursus 4 (beta): '
-  dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
+  dashboard_unplugged: "Jika Anda tidak memiliki komputer, <a href='%{unplugged_url}'>cobalah pelajaran tanpa penggunaan komputer </a> di kelas Anda."
   dashboard_curriculum: "Kurikulum"
   dashboard_curriculum_overview: "Tinjauan Kurikulum K-5"
   dashboard_overview: "Tinjauan"
@@ -723,16 +726,16 @@
   dashboard_response: "Respon"
   dashboard_correctness: "Kebenaran"
   dashboard_correctness_free_response: "Respon gratis"
-  dashboard_correctness_unsubmitted: "Unsubmitted"
+  dashboard_correctness_unsubmitted: "Tidak terkirim"
   dashboard_correctness_correct: "Benar"
   dashboard_correctness_incorrect: "Salah"
-  dashboard_submission_submitted: "Submitted"
+  dashboard_submission_submitted: "Dikirim"
   dashboard_submission_in_progress: "Sedang berlangsung"
   dashboard_status: "Status"
   dashboard_multi_correct: "# pilihan ganda yang benar"
   dashboard_multi_count: "# pilihan ganda"
-  dashboard_multi_correct_percent: "% multiple choice correct"
-  dashboard_submission_timestamp: "Submission timestamp"
+  dashboard_multi_correct_percent: "% pilihan ganda benar"
+  dashboard_submission_timestamp: "Pengiriman stempel waktu"
   stats_hoc_2013_heading: 'Terdapat statistik yang luar biasa dari Hour of Code tahun lalu. Dalam satu minggu saja:'
   stats_hoc_2013_image_alt: "Statistik Hour of Code tahun 2013"
   dashboard_teacher: "Guru"
@@ -752,7 +755,7 @@
   code_hoc_coming: "Hour of Code hadir disini - 8-14 Desember!"
   code_sign_up: "Daftarlah untuk ikut serta dalam Pekan Edukasi Ilmu Komputer"
   host_an_hour: "Sekitar satu jam"
-  learn_banner_title: "Join us for the Hour of Code"
+  learn_banner_title: "Bergabung bersama kami untuk Jam kode"
   learn_banner_desc: "The Hour of Code is a global movement reaching over 100 million students in more than 180 countries. Anyone, anywhere can organize an Hour of Code event. Help us give every student the opportunity to learn computer science! Organizers can follow our <a href='%{how_to_url}' target='_blank'>how-to guide</a> for teaching an Hour of Code and inspire students with <a href='%{videos_url}' target='_blank'>these videos</a>."
   learn_more: "Pelajari lebih banyak"
   learn_sign_up_description: "Mendaftar untuk berpartisipasi dalam Hour of Code selama Minggu Pendidikan Ilmu komputer"
@@ -860,22 +863,22 @@
   course2_name: "Jalur 2"
   course3_name: "Kursus 3"
   course4_name: "Kursus 4"
-  coursea-draft_name: Course A
-  courseb-draft_name: Course B
-  coursec-draft_name: Course C
-  coursed-draft_name: Course D
-  coursee-draft_name: Course E
-  coursef-draft_name: Course F
+  coursea-draft_name: Kursus A
+  courseb-draft_name: Kursus B
+  coursec-draft_name: Kursus C
+  coursed-draft_name: Kursus D
+  coursee-draft_name: Kursus E
+  coursef-draft_name: Kursus F
   accelerated_name: "Kursus akselerasi"
-  cspunit1_name: '(old) Unit 1: Digital Information'
-  cspunit2_name: '(old) Unit 2: The Internet'
-  cspunit3_name: '(old) Unit 3: Programming'
-  cspunit4_name: '(old) Unit 4: Data'
-  cspunit5_name: '(old) Unit 5: Explore and Create PT'
-  cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  cspunit1_name: '(Lama) Unit 1: Informasi Digital'
+  cspunit2_name: '(lama) Unit 2: Internet'
+  cspunit3_name: '(lama) Unit 3: pemrograman'
+  cspunit4_name: '(lama) Unit 4: Data'
+  cspunit5_name: '(lama) Unit 5: Mengeksplorasi dan buat PT'
+  cspunit6_name: 'Kirim-AP: Database dalam aplikasi'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -908,14 +911,14 @@
   hoc_category_name: "Jam kode"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratorium Aplikasi"
-  basketball_name: "Make a basketball game"
-  sports_name: "Code your own sports game"
+  basketball_name: "Buat sebuah permainan basket"
+  sports_name: "Kode permainan olahraga Anda"
   applab_gradelevel: "Usia 13+"
   applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"
   codeorg_gradelevel: "Usia 4-104"
@@ -1317,3 +1320,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Beranda"
+  header_courses: "Kursus"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sesi"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Ikhtisar Pendidik"
+  header_educate_elementary: "Sekolah Dasar"
+  header_educate_middle: "Sekolah Menengah Pertama"
+  header_educate_high: "Sekolah Menengah Atas"
+  header_educate_hoc: "Jam kode"
+  header_educate_partner: "Bermitra dengan Kami"
+  header_educate_beyond: "Di Luar Code.org"
+  header_educate_inspire: "Menginspirasi seorang Siswa"
+  header_educate_community: "Komunitas Online"
+  header_educate_tools: "Alat dan Video"
+  header_about_us: "Tentang Kami"
+  header_about_leadership: "Kepemimpinan"
+  header_about_donors: "Donor"
+  header_about_partners: "Mitra-Mitra"
+  header_about_team: "Tim Penuh"
+  header_about_news: "Ruang Berita"
+  header_about_evaluation: "Pendidikan"
+  header_about_jobs: "Pekerjaan"
+  header_about_contact: "Hubungi Kami"
+  header_about_faqs: "Pertanyaan Yang Sering Diajukan"
+  header_learn: "Belajar"
+  header_teach: "Mengajar"
+  header_stats: "Statistik"
+  header_help_us: "Bantu Kami"
+  header_about: "Tentang"
+  header_teacher_community: "Komunitas guru"
+  header_help_support: 'Help and support '
+  header_report_bug: "Laporkan bug"
+  header_tutorials: "Tutorial"
+  header_documentation: "Dokumentasi"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

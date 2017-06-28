@@ -389,7 +389,7 @@
   homepage_slot_text_title_hoc: Klukkustund kóðunar
   homepage_slot_text_blurb_hoc: Allir geta lært. Byrjaðu í dag
   homepage_slot_text_link_hoc: Prófa Klukkustund kóðunar
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Um Klukkustund kóðunar
   homepage_slot_text_link_host: Haltu Klukkustund kóðunar
   homepage_slot_text_link_hocserved: "# þjónað"
   homepage_solot_text_link_volunteer: Hjálpaðu við Klukkustund kóðunar
@@ -806,7 +806,7 @@
     við opnum spurningum getur þú séð með því að velja viðkomandi námskeið úr fellilistanum
     hér fyrir ofan.
   dashboard_sections_new_section: Nýr hópur
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Flytja inn hóp frá Google Classroom
   dashboard_sections_jumbotron_instruction: Búa til nýja hópa og bæta nemendum í þá.
     Með því að skipta nemendum í hópa er auðveldara að fylgjast með framgangi námsins
     og sjá um reikninga þeirra.
@@ -1864,7 +1864,7 @@
   playlab_shortcode: spila
   artist_shortcode: art
   header_home: Forsíða
-  header_courses: námskeið
+  header_courses: Námskeið
   header_project_gallery: Verkefnagallerí
   header_sections: Hópar
   header_professional_learning: Fagnám
@@ -1898,6 +1898,6 @@
   header_report_bug: Tilkynna galla
   header_tutorials: Kennslutímar
   header_documentation: Skjölun
-  csp_name: CS Principles
+  csp_name: Hugtök TF
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
+  full_course_category_name: Heil námskeið

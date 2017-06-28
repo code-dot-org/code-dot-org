@@ -306,6 +306,7 @@
   homepage_slot_text_title_hoc: "Ura kode"
   homepage_slot_text_blurb_hoc: "Vsak se lahko nauči. Začni danes"
   homepage_slot_text_link_hoc: "Poizkusi Uro za programiranje (Hour to Code)"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Organiziraj Hour of Code"
   homepage_slot_text_link_hocserved: "# uporabnikov"
   homepage_solot_text_link_volunteer: "Prostovoljec/ka Ure za kodo"
@@ -577,8 +578,8 @@
   dashboard_action_required: "zahtevano"
   dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Assessment summaries"
   dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Surveys"
@@ -617,11 +618,13 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Novo poglavje"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Ustvarite nove razdelke in jim dodajte učence. Razdelki razdelijo učence v manjše skupine, tako da lahko sledite njihovemu napredku in upravljate z njihovimi računi."
   dashboard_sections_table_section: "Razdelek"
   dashboard_sections_table_secret: "Vrsta prijave"
   dashboard_sections_table_grade: "Razred"
   dashboard_sections_table_course: "Tečaj"
+  dashboard_sections_table_pairing_allowed: "Programiranje parov"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Učenci"
   dashboard_sections_table_code: "Koda razdelka"
@@ -873,9 +876,9 @@
   cspunit4_name: '(old) Unit 4: Data'
   cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -908,7 +911,7 @@
   hoc_category_name: "Ura kode"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
   csp17_category_name: "'16-'17 CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
@@ -1317,3 +1320,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Domov"
+  header_courses: "Predavanja"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Vzgojiteljev pregled"
+  header_educate_elementary: "Od 1. do 5. razreda"
+  header_educate_middle: "Od 6. do 9. razreda"
+  header_educate_high: "Srednja šola"
+  header_educate_hoc: "Ura kode"
+  header_educate_partner: "Postanite naš partner"
+  header_educate_beyond: "Po Code.org"
+  header_educate_inspire: "Navduši učenca"
+  header_educate_community: "Spletna skupnost"
+  header_educate_tools: "Orodja in video posnetki"
+  header_about_us: "O nas"
+  header_about_leadership: "Vodstvo"
+  header_about_donors: "Donatorji"
+  header_about_partners: "Partnerji"
+  header_about_team: "Celotna ekipa"
+  header_about_news: "Novinarsko središče"
+  header_about_evaluation: "Vrednotenje"
+  header_about_jobs: "Delovna mesta"
+  header_about_contact: "Kontaktirajte nas"
+  header_about_faqs: "Pogosta vprašanja"
+  header_learn: "Učenje"
+  header_teach: "Predavaj"
+  header_stats: "Stats"
+  header_help_us: "Pomagaj nam"
+  header_about: "O programu"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"
