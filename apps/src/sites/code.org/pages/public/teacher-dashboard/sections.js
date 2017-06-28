@@ -10,6 +10,7 @@ import teacherSections, {
   setStudioUrl,
   newSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import googleClassroom from '@cdo/apps/templates/teacherDashboard/googleClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
 /**
@@ -24,7 +25,7 @@ import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
  */
 export function renderSectionsPage(data) {
   const element = document.getElementById('sections-page');
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, googleClassroom});
   const store = getStore();
   store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));

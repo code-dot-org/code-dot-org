@@ -1,9 +1,17 @@
-/* global google */
+/* globals google */
+
+import $ from "jquery";
+import MarkerClusterer from 'node-js-marker-clusterer';
+import getScriptData from '@cdo/apps/util/getScriptData';
+
+const imagePath = getScriptData('workshopSearch').imagePath;
 
 var gmap,
-  markers = {},
+  markersByLocation = {},
   infoWindow,
-  remainingWorkshops;
+  processingPdWorkshops = true,
+  processingLegacyWorkshops = true,
+  markerClusterer;
 
 $(document).ready(function () {
   initializeMap();
@@ -23,50 +31,43 @@ function initializeMap() {
 }
 
 function loadWorkshops() {
-  var params = [];
+  markerClusterer = new MarkerClusterer(gmap, [], {imagePath});
 
   $.get('/dashboardapi/v1/pd/k5workshops').done(function (data) {
     processPdWorkshops(data);
-  });
+  }).always(completeProcessingPdWorkshops);
 
-  $.post('/forms/ProfessionalDevelopmentWorkshop/query', $.param(params), function (response) {
-    var results = JSON.parse(response);
+  $.post('/forms/ProfessionalDevelopmentWorkshop/query', function (data) {
+    processLegacyWorkshops(data);
+  }).always(completeProcessingLegacyWorkshops);
+}
 
-    $.each(results.response.docs, function (index, workshop) {
-      if (typeof workshop.location_p !== 'undefined') {
-        var location = workshop.location_p.split(',');
-        var latLng = new google.maps.LatLng(location[0], location[1]);
+function processLegacyWorkshops(response) {
+  var results = JSON.parse(response);
 
-        // This hash will round the latLngs to 6 decimals.
-        var hash = latLng.toUrlValue();
+  $.each(results.response.docs, function (index, workshop) {
+    if (workshop.location_p !== undefined) {
+      var location = workshop.location_p.split(',');
+      var latLng = new google.maps.LatLng(location[0], location[1]);
 
-        var infoWindowContent = '';
+      // This hash will round the latLngs to 6 decimals.
+      var hash = latLng.toUrlValue();
 
-        if (typeof markers[hash] === 'undefined') {
-          infoWindowContent = compileHtml(workshop, true);
-          markers[hash] = new google.maps.Marker({
-            position: latLng,
-            map: gmap,
-            title: workshop.location_name_p,
-            infoWindowContent: infoWindowContent
-          });
-          google.maps.event.addListener(markers[hash], "click",
-            function (e) {
-              infoWindow.setContent(this.get('infoWindowContent'));
-              infoWindow.open(gmap, this);
-            });
-        } else {
-          infoWindowContent = compileHtml(workshop, false);
-          // Extend existing marker.
-          markers[hash].infoWindowContent += infoWindowContent;
-        }
+      var infoWindowContent = '';
+
+      if (markersByLocation[hash] === undefined) {
+        infoWindowContent = compileHtml(workshop, true);
+        markersByLocation[hash] = createNewMarker(latLng, workshop.location_name_p, infoWindowContent);
+      } else {
+        // Extend existing marker.
+        infoWindowContent = compileHtml(workshop, false);
+        markersByLocation[hash].infoWindowContent += infoWindowContent;
       }
-    });
-  }).fail(displayQueryError).always(addGeocomplete());
+    }
+  });
 }
 
 function processPdWorkshops(workshops) {
-  remainingWorkshops = workshops.length;
   $.each(workshops, function (i, workshop) {
     var location = workshop.processed_location;
     var latLng = new google.maps.LatLng(location.latitude, location.longitude);
@@ -74,32 +75,43 @@ function processPdWorkshops(workshops) {
 
     var infoWindowContent = '';
 
-    if (typeof markers[hash] === 'undefined') {
+    if (markersByLocation[hash] === undefined) {
       infoWindowContent = compileHtmlNew(workshop, true);
-      markers[hash] = new google.maps.Marker({
-        position: latLng,
-        map: gmap,
-        title: workshop.location_name,
-        infoWindowContent: infoWindowContent
-      });
-      google.maps.event.addListener(markers[hash], "click",
-        function (e) {
-          infoWindow.setContent(this.get('infoWindowContent'));
-          infoWindow.open(gmap, this);
-        });
+      markersByLocation[hash] = createNewMarker(latLng, workshop.location_name, infoWindowContent);
     } else {
-      infoWindowContent = compileHtmlNew(workshop, false);
       // Extend existing marker.
-      markers[hash].infoWindowContent += infoWindowContent;
+      infoWindowContent = compileHtmlNew(workshop, false);
+      markersByLocation[hash].infoWindowContent += infoWindowContent;
     }
-
-    geolocateComplete();
   });
 }
 
-function geolocateComplete() {
-  remainingWorkshops--;
-  if (remainingWorkshops < 1) {
+function createNewMarker(latLng, title, infoWindowContent) {
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map: gmap,
+    title: title,
+    infoWindowContent: infoWindowContent
+  });
+  google.maps.event.addListener(marker, "click",
+    function () {
+      infoWindow.setContent(this.get('infoWindowContent'));
+      infoWindow.open(gmap, this);
+    });
+  markerClusterer.addMarker(marker);
+  return marker;
+}
+
+function completeProcessingLegacyWorkshops() {
+  processingLegacyWorkshops = false;
+  if (!processingPdWorkshops) {
+    addGeocomplete();
+  }
+}
+
+function completeProcessingPdWorkshops() {
+  processingPdWorkshops = false;
+  if (!processingLegacyWorkshops) {
     addGeocomplete();
   }
 }
@@ -165,34 +177,34 @@ function addGeocomplete() {
     country: 'us'
   };
 
-  if (html5_storage_supported() && typeof localStorage['geocomplete'] !== 'undefined') {
+  if (html5_storage_supported() && localStorage['geocomplete'] !== undefined) {
     geocomplete_options.location = localStorage['geocomplete'];
   }
 
   $("#geocomplete").geocomplete(geocomplete_options)
-    .bind("geocode:result", function (event, result) {
-      gmap.fitBounds(result.geometry.viewport);
+  .bind("geocode:result", function (event, result) {
+    gmap.fitBounds(result.geometry.viewport);
 
-      var bounds = gmap.getBounds();
-      var marker_found = false;
+    var bounds = gmap.getBounds();
+    var marker_found = false;
 
-      while (!marker_found && gmap.getZoom() > 4) {
-        $.each(markers, function (index, marker) {
-          if (bounds.contains(marker.getPosition())) {
-            marker_found = true;
-          }
-        });
-
-        if (!marker_found) {
-          gmap.setZoom(gmap.getZoom() - 1);
-          bounds = gmap.getBounds();
+    while (!marker_found && gmap.getZoom() > 4) {
+      $.each(markersByLocation, function (index, marker) {
+        if (bounds.contains(marker.getPosition())) {
+          marker_found = true;
         }
-      }
+      });
 
-      if (html5_storage_supported()) {
-        localStorage['geocomplete'] = result.formatted_address;
+      if (!marker_found) {
+        gmap.setZoom(gmap.getZoom() - 1);
+        bounds = gmap.getBounds();
       }
-    });
+    }
+
+    if (html5_storage_supported()) {
+      localStorage['geocomplete'] = result.formatted_address;
+    }
+  });
 
   $("#btn-submit").click(function () {
     $("#geocomplete").trigger("geocode");
@@ -215,7 +227,4 @@ function html5_storage_supported() {
   } catch (e) {
     return false;
   }
-}
-
-function displayQueryError() {
 }
