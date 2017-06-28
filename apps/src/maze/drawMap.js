@@ -110,25 +110,27 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
   }
 
   // Add obstacles.
-  var obsId = 0;
-  for (y = 0; y < map.ROWS; y++) {
-    for (x = 0; x < map.COLS; x++) {
-      if (map.getTile(y, x) === SquareType.OBSTACLE) {
-        var obsIcon = document.createElementNS(SVG_NS, 'image');
-        obsIcon.setAttribute('id', 'obstacle' + obsId);
-        obsIcon.setAttribute('height', MARKER_HEIGHT * skin.obstacleScale);
-        obsIcon.setAttribute('width', MARKER_WIDTH * skin.obstacleScale);
-        obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
-        obsIcon.setAttribute('x',
-          squareSize * (x + 0.5) -
-          obsIcon.getAttribute('width') / 2);
-        obsIcon.setAttribute('y',
-          squareSize * (y + 0.9) -
-          obsIcon.getAttribute('height'));
-        svg.appendChild(obsIcon);
+  if (skin.obstacleIdle) {
+    var obsId = 0;
+    for (y = 0; y < map.ROWS; y++) {
+      for (x = 0; x < map.COLS; x++) {
+        if (map.getTile(y, x) === SquareType.OBSTACLE) {
+          var obsIcon = document.createElementNS(SVG_NS, 'image');
+          obsIcon.setAttribute('id', 'obstacle' + obsId);
+          obsIcon.setAttribute('height', MARKER_HEIGHT * skin.obstacleScale);
+          obsIcon.setAttribute('width', MARKER_WIDTH * skin.obstacleScale);
+          obsIcon.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
+          obsIcon.setAttribute('x',
+            squareSize * (x + 0.5) -
+            obsIcon.getAttribute('width') / 2);
+          obsIcon.setAttribute('y',
+            squareSize * (y + 0.9) -
+            obsIcon.getAttribute('height'));
+          svg.appendChild(obsIcon);
+        }
+        ++obsId;
       }
-      ++obsId;
     }
   }
 }

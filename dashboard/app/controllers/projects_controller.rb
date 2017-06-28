@@ -12,6 +12,9 @@ class ProjectsController < ApplicationController
     artist: {
       name: 'New Artist Project'
     },
+    frozen: {
+      name: 'New Frozen Project'
+    },
     playlab: {
       name: 'New Play Lab Project'
     },

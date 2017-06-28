@@ -58,7 +58,7 @@ export default storybook => {
       },
       {
         name: "Recent Courses - student, no courses yet",
-        description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
+        description: "If the student does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
           <RecentCourses
             courses={[]}
@@ -97,7 +97,7 @@ export default storybook => {
       },
       {
         name: 'Recent Courses - teacher, 7 courses ',
-        description: ` Recent Courses when the teacher has sections enrolled in 6 courses. Should see a View More button`,
+        description: ` Recent Courses when the teacher has sections enrolled in 7 courses. Should see a View More button`,
         story: () => (
           <RecentCourses
             courses={courses}
@@ -110,7 +110,7 @@ export default storybook => {
       },
       {
         name: 'Recent Courses - student, 7 courses ',
-        description: ` Recent Courses when the student has progress in 6 courses. Should see a View More button`,
+        description: ` Recent Courses when the student has progress in 7 courses. Should see a View More button`,
         story: () => (
           <RecentCourses
             courses={courses}

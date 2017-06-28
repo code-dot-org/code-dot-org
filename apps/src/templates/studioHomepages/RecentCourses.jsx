@@ -3,6 +3,7 @@ import ContentContainer from './ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import SeeMoreCourses from './SeeMoreCourses';
+import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
 
@@ -39,14 +40,22 @@ const RecentCourses = React.createClass({
             />
           )
         )}
-
         {moreCourses.length > 0 && (
           <SeeMoreCourses
             courses={moreCourses}
             isRtl={isRtl}
           />
         )}
-
+        {!isTeacher && (
+          <Notification
+            type="course"
+            notice={i18n.findCourse()}
+            details={i18n.findCourseDescription()}
+            buttonText={i18n.findCourse()}
+            buttonLink="/course"
+            dismissible={false}
+          />
+        )}
         {courses.length === 0 && (
           <SetUpMessage
             type="courses"
