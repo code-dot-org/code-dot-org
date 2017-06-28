@@ -6,6 +6,7 @@ import {
   WallTypeShift
 } from '@cdo/apps/studio/constants';
 import tileGuide from '../../../static/code_studio/tile-guide.png';
+import CellEditor from './CellEditor';
 
 const options = {
   empty: 0x0,
@@ -25,42 +26,38 @@ const options = {
 
 const startDirections = Object.entries(Direction).slice(0, 5);
 
-export default class StarWarsGridCellEditor extends React.Component {
-  static propTypes = {
-    cell: React.PropTypes.object.isRequired,
-    row: React.PropTypes.number.isRequired,
-    col: React.PropTypes.number.isRequired,
-    onUpdate: React.PropTypes.func.isRequired,
-  }
-
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
+export default class StarWarsGridCellEditor extends CellEditor {
+  /**
+   * @override
+   */
   handleChange() {
-    const zoom = this.refs.zoom && this.refs.zoom.checked;
-    const direction = this.refs.direction ? +this.refs.direction.value : undefined;
-
+    const zoom = this.zoom && this.zoom.checked;
     this.props.onUpdate({
-      tileType: zoom << WallTypeShift | this.refs.type.value,
-      direction: direction,
+      tileType: zoom << WallTypeShift | this.type.value
     });
   }
 
+  /**
+   * @override
+   */
   render() {
     const type = ~WallTypeMask & this.props.cell.tileType_;
     const zoom = WallTypeMask & this.props.cell.tileType_;
 
     return (
       <form className="span4 offset1">
-        <img src={tileGuide}/>
+        <img src={tileGuide} />
         <header>
           <strong>Editing Cell ({this.props.row}, {this.props.col})</strong>
         </header>
 
         <label htmlFor="tileType">Tile Type (required):</label>
-        <select ref="type" name="tileType" value={type} onChange={this.handleChange}>
+        <select
+          ref={c => { this.type = c; }}
+          name="tileType"
+          value={type}
+          onChange={this.handleChange}
+        >
           {Object.entries(options).map(([name, value]) => (
             <option value={value} key={value}>{name}</option>
           ))}
@@ -68,14 +65,20 @@ export default class StarWarsGridCellEditor extends React.Component {
         {type > 0xFFFF &&
           <span>
             <label htmlFor="zoom">Double size:</label>
-            <input ref="zoom" name="zoom" type="checkbox" checked={zoom} onChange={this.handleChange}/>
+            <input
+              ref={c => { this.zoom = c; }}
+              name="zoom"
+              type="checkbox"
+              checked={zoom}
+              onChange={this.handleChange}
+            />
           </span>
         }
         {type === SquareType.SPRITESTART &&
           <span>
             <label htmlFor="direction">Start direction:</label>
             <select
-              ref="direction"
+              ref={c => { this.direction = c; }}
               name="direction"
               value={this.props.cell.direction_}
               onChange={this.handleChange}
