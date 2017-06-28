@@ -24,9 +24,7 @@ machine:
 checkout:
   post:
     - ./bin/circle/merge-eyes-baselines:
-        parallel: true
     - ./bin/circle/merge-base:
-        parallel: true
 dependencies:
   pre:
     - ./bin/circle/install-circle-predependencies.sh
@@ -103,13 +101,9 @@ database:
 test:
   override:
     - bundle exec rake lint:javascript:
-        parallel: true
-        timeout:
-            7200
+        timeout: 7200
     - bundle exec rake circle:run_tests:
-        parallel: true
-        timeout:
-            7200
+        timeout: 7200
     # Apply these settings late so they don't mess up unit tests
     - |
         echo "
@@ -121,10 +115,10 @@ test:
         dashboard_port: 3000
         pegasus_port: 3000
         " >> locals.yml
+    - bundle exec rake db:setup_or_migrate seed:ui_test:
+        timeout: 1000
     - bundle exec rake circle:run_ui_tests:
-        parallel: true
-        timeout:
-            7200
+        timeout: 7200
     - ./test.sh:
         pwd:
             cookbooks
