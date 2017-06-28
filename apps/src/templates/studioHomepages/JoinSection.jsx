@@ -87,7 +87,7 @@ const JoinSection = React.createClass({
           placeholder={i18n.joinSectionPlaceholder()}
         />
         <ProgressButton
-          href={this.joinSection}
+          onClick={this.joinSection}
           color={ProgressButton.ButtonColor.gray}
           text={i18n.joinSection()}
           style={styles.button}
