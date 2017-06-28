@@ -27,7 +27,10 @@ export default storybook => {
         name: 'See More Courses for homepages',
         description: `If a teacher has progress in more than 4 courses or a student in more than 5, they will see a "View More" button. When they click button, they will see the remainder of their courses.`,
         story: () => (
-          <SeeMoreCourses courses={courses}/>
+          <SeeMoreCourses
+            courses={courses}
+            isRtl={false}
+          />
         )
       },
     ]);

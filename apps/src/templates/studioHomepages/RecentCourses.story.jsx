@@ -1,123 +1,117 @@
 import React from 'react';
 import RecentCourses from './RecentCourses';
 
+const courses = [
+  {
+    name: "CSP Unit 1",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit1/",
+  },
+  {
+    name: "CSP Unit 2",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit2/",
+  },
+  {
+    name: "CSP Unit 3",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit3/",
+  },
+  {
+    name: "CSP Unit 4",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit4/",
+  },
+  {
+    name: "CSP Unit 5",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit5/",
+  },
+  {
+    name: "CSP Unit 6",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit6/",
+  },
+];
+
 export default storybook => {
   return storybook
     .storiesOf('RecentCourses', module)
     .addStoryTable([
       {
-        name: "Recent Courses - no courses yet",
+        name: "Recent Courses - teacher, no courses yet",
         description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
           <RecentCourses
             courses={[]}
             showAllCoursesLink={true}
-            heading="Courses"
+            heading="My Courses"
             isTeacher={true}
             isRtl={false}
           />
         )
       },
       {
-        name: 'Recent Courses - 1 course ',
-        description: ` Recent Courses when the teacher has sections enrolled in only 1 course.`,
+        name: "Recent Courses - student, no courses yet",
+        description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
         story: () => (
           <RecentCourses
-            courses= {[{
-              name: "Play Lab",
-              description: "Create a story or make a game with Play Lab!",
-              link: "https://code.org/playlab",
-            }]}
+            courses={[]}
             showAllCoursesLink={true}
-            heading="Courses"
-            isTeacher={true}
+            heading="My Courses"
+            isTeacher={false}
             isRtl={false}
           />
         )
       },
       {
-        name: 'Recent Courses - 2 courses ',
-        description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
+        name: 'Recent Courses - teacher, 4 courses ',
+        description: ` Recent Courses when the teacher has sections enrolled in 4 courses.`,
         story: () => (
           <RecentCourses
-            courses= {[
-              {
-                name: "Play Lab",
-                description: "Create a story or make a game with Play Lab!",
-                link: "https://code.org/playlab",
-              },
-              {
-                name: "CSP Unit 2 - Digital Information",
-                description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-                link: "https://curriculum.code.org/csp/unit2/",
-              },
-            ]}
+            courses={courses.slice(0,4)}
             showAllCoursesLink={true}
-            heading="Courses"
+            heading="My Courses"
             isTeacher={true}
             isRtl={false}
           />
         )
       },
       {
-        name: 'Recent Courses - 3 courses ',
-        description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
+        name: 'Recent Courses - student, 5 courses ',
+        description: ` Recent Courses when the student has progress in 5 courses.`,
         story: () => (
           <RecentCourses
-            courses= {[
-              {
-                name: "Play Lab",
-                description: "Create a story or make a game with Play Lab!",
-                link: "https://code.org/playlab",
-              },
-              {
-                name: "CSP Unit 2 - Digital Information",
-                description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-                link: "https://curriculum.code.org/csp/unit2/",
-              },
-              {
-                name: "CSP Unit 2 - Digital Information",
-                description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-                link: "https://curriculum.code.org/csp/unit2/",
-              },
-            ]}
+            courses={courses.slice(0,5)}
             showAllCoursesLink={true}
-            heading="Courses"
+            heading="My Courses"
+            isTeacher={false}
+            isRtl={false}
+          />
+        )
+      },
+      {
+        name: 'Recent Courses - teacher, 6 courses ',
+        description: ` Recent Courses when the teacher has sections enrolled in 6 courses. Should see a View More button`,
+        story: () => (
+          <RecentCourses
+            courses={courses}
+            showAllCoursesLink={true}
+            heading="My Courses"
             isTeacher={true}
             isRtl={false}
           />
         )
       },
       {
-        name: 'Recent Courses - 4 courses ',
-        description: `Recent courses when the teacher has sections enrolled in at least 2 courses.`,
+        name: 'Recent Courses - student, 6 courses ',
+        description: ` Recent Courses when the student has progress in 6 courses. Should see a View More button`,
         story: () => (
           <RecentCourses
-            courses= {[
-              {
-                name: "Play Lab",
-                description: "Create a story or make a game with Play Lab!",
-                link: "https://code.org/playlab",
-              },
-              {
-                name: "Play Lab",
-                description: "Create a story or make a game with Play Lab!",
-                link: "https://code.org/playlab",
-              },
-              {
-                name: "CSP Unit 2 - Digital Information",
-                description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-                link: "https://curriculum.code.org/csp/unit2/",
-              },
-              {
-                name: "CSP Unit 2 - Digital Information",
-                description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-                link: "https://curriculum.code.org/csp/unit2/",
-              },
-            ]}
-            showAllCoursesLink={false}
-            heading="Courses"
-            isTeacher={true}
+            courses={courses}
+            showAllCoursesLink={true}
+            heading="My Courses"
+            isTeacher={false}
             isRtl={false}
           />
         )

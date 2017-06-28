@@ -4,9 +4,10 @@ import ContentContainer from './ContentContainer';
 import ProgressButton from "../progress/ProgressButton";
 import shapes from './shapes';
 
-const SeeMoreCourses = React.creatClass({
+const SeeMoreCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -22,7 +23,7 @@ const SeeMoreCourses = React.creatClass({
 
     return (
       <div>
-        {this.state.open && (
+        {this.state.open && courses && (
           <ContentContainer
             heading=""
             linkText=""
@@ -45,9 +46,9 @@ const SeeMoreCourses = React.creatClass({
           <ProgressButton
             onClick={this.showMoreCourses}
             color={ProgressButton.ButtonColor.gray}
-            icon="down-caret"
+            icon="caret-down"
             text="View more"
-            style={{marginRight: 20}}
+            style={{float: 'right'}}
           />
         )}
       </div>
