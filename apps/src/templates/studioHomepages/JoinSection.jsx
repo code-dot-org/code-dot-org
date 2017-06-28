@@ -60,7 +60,7 @@ const styles = {
 
 const JoinSection = React.createClass({
   propTypes: {
-    enrolledInASection: React.PropTypes.boolean,
+    enrolledInASection: React.PropTypes.bool.isRequired,
   },
 
   joinSection() {
