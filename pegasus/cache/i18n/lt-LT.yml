@@ -381,6 +381,7 @@
   homepage_slot_text_title_hoc: "„Programavimo valanda“"
   homepage_slot_text_blurb_hoc: Išmokti gali kiekvienas. Pradėk šiandien
   homepage_slot_text_link_hoc: Išmėgink „Programavimo valandą“
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Pravesk „Programavimo valandą“
   homepage_slot_text_link_hocserved: "# išbandė"
   homepage_solot_text_link_volunteer: Savanoriauk "Programavimo valandose"
@@ -788,12 +789,14 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nauja grupė
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Sukurkite naujas grupes ir pridėkite į
     jas mokinius. Taip bus lengviau sekti jų pažangą ir tvarkyti jų prisijungimo duomenis.
   dashboard_sections_table_section: Grupė
   dashboard_sections_table_secret: Prisijungimo tipas
   dashboard_sections_table_grade: Klasė
   dashboard_sections_table_course: Kursas
+  dashboard_sections_table_pairing_allowed: Programavimas poroje
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Mokiniai
   dashboard_sections_table_code: Grupės kodas
@@ -1837,22 +1840,21 @@
   infinity_shortcode: inf
   playlab_shortcode: "žaisti"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
+  header_home: Pradžia
+  header_courses: Kursai
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
+  header_educate_elementary: Pradinė mokykla
+  header_educate_middle: Vidurinė mokykla
+  header_educate_high: Gimnazija
+  header_educate_hoc: "„Programavimo valanda“"
+  header_educate_partner: Būkite mūsų partneriais
+  header_educate_beyond: Už Code.org ribų
+  header_educate_inspire: "Įkvėpkite mokinius"
+  header_educate_community: Virtuali bendruomenė
+  header_educate_tools: "Įrankiai ir vaizdo įrašai"
   header_about_us: About Us
   header_about_leadership: Leadership
   header_about_donors: Donors
@@ -1868,11 +1870,11 @@
   header_stats: Stats
   header_help_us: Help Us
   header_about: About
-  header_teacher_community: Teacher community
+  header_teacher_community: Mokytojų bendruomenė
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
+  header_report_bug: Pranešti apie klaidą
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

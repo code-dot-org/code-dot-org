@@ -1249,7 +1249,7 @@
           pauso bat gabe, gainerakoak ezin dira aurrera eraman. Besteek ulertzen dituzten
           algoritmoak egitea oso garrantzitsua da. Horregatik idatzi behar dira pauso
           guztiak.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Orain arte, animazio edo istorio bat egiten aritu zara, exekutatzean
@@ -1387,7 +1387,7 @@
         text: Adibide honetan, lore moreak 0 nektar baino gehiago baldin badu, hartu
           nektarra. Honi esker gure erleak nektarra hartzen jarraituko du lorean badagoen
           bitartean. Ta-txan!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Entzun al duzu "programa bat debugeatu" esaldia? Horrela ikus dezakegu

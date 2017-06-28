@@ -21,6 +21,7 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
+          startDirection={1}
           skin="birds"
         />
       ),
@@ -30,6 +31,7 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
+          startDirection={1}
           skin="pvz"
         />
       ),
@@ -39,6 +41,7 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
+          startDirection={1}
           skin="scrat"
         />
       ),
@@ -48,6 +51,7 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
+          startDirection={1}
           skin="farmer"
         />
       ),
@@ -57,6 +61,7 @@ export default storybook => {
       story: () => (
         <MazeThumbnail
           map={sampleMap}
+          startDirection={1}
           skin="farmer_night"
         />
       ),

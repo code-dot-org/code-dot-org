@@ -7,6 +7,24 @@ const SquareType = tiles.SquareType;
 const MARKER_HEIGHT = 43;
 const MARKER_WIDTH = 50;
 
+/**
+ * Calculate the y coordinates for pegman sprite.
+ */
+export function getPegmanYForRow(skin, mazeRow, squareSize = 50) {
+  return Math.floor(squareSize * (mazeRow + 0.5) - skin.pegmanHeight / 2 +
+    skin.pegmanYOffset);
+}
+
+export function displayPegman(skin, pegmanIcon, clipRect, x, y, frame, squareSize = 50) {
+  const xOffset = skin.pegmanXOffset || 0;
+  pegmanIcon.setAttribute('x',
+    x * squareSize - frame * skin.pegmanWidth + 1 + xOffset);
+  pegmanIcon.setAttribute('y', getPegmanYForRow(skin, y));
+
+  clipRect.setAttribute('x', x * squareSize + 1 + xOffset);
+  clipRect.setAttribute('y', pegmanIcon.getAttribute('y'));
+}
+
 export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
   const MAZE_WIDTH = map.COLS * squareSize;
   const MAZE_HEIGHT = map.ROWS * squareSize;
@@ -57,6 +75,9 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
     pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
     svg.appendChild(pegmanIcon);
 
+    displayPegman(skin, pegmanIcon, clipRect, subtype.start.x, subtype.start.y,
+      tiles.directionToFrame(subtype.startDirection));
+
     var pegmanFadeoutAnimation = document.createElementNS(SVG_NS, 'animate');
     pegmanFadeoutAnimation.setAttribute('id', 'pegmanFadeoutAnimation');
     pegmanFadeoutAnimation.setAttribute('attributeType', 'CSS');
@@ -77,28 +98,39 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
     finishMarker.setAttribute('height', MARKER_HEIGHT);
     finishMarker.setAttribute('width', MARKER_WIDTH);
     svg.appendChild(finishMarker);
+
+    // Move the finish icon into position.
+    finishMarker.setAttribute('x', squareSize * (subtype.finish.x + 0.5) -
+      finishMarker.getAttribute('width') / 2);
+    finishMarker.setAttribute('y', squareSize * (subtype.finish.y + 0.9) -
+      finishMarker.getAttribute('height'));
+    finishMarker.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href',
+      skin.goalIdle);
+    finishMarker.setAttribute('visibility', 'visible');
   }
 
   // Add obstacles.
-  var obsId = 0;
-  for (y = 0; y < map.ROWS; y++) {
-    for (x = 0; x < map.COLS; x++) {
-      if (map.getTile(y, x) === SquareType.OBSTACLE) {
-        var obsIcon = document.createElementNS(SVG_NS, 'image');
-        obsIcon.setAttribute('id', 'obstacle' + obsId);
-        obsIcon.setAttribute('height', MARKER_HEIGHT * skin.obstacleScale);
-        obsIcon.setAttribute('width', MARKER_WIDTH * skin.obstacleScale);
-        obsIcon.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
-        obsIcon.setAttribute('x',
-          squareSize * (x + 0.5) -
-          obsIcon.getAttribute('width') / 2);
-        obsIcon.setAttribute('y',
-          squareSize * (y + 0.9) -
-          obsIcon.getAttribute('height'));
-        svg.appendChild(obsIcon);
+  if (skin.obstacleIdle) {
+    var obsId = 0;
+    for (y = 0; y < map.ROWS; y++) {
+      for (x = 0; x < map.COLS; x++) {
+        if (map.getTile(y, x) === SquareType.OBSTACLE) {
+          var obsIcon = document.createElementNS(SVG_NS, 'image');
+          obsIcon.setAttribute('id', 'obstacle' + obsId);
+          obsIcon.setAttribute('height', MARKER_HEIGHT * skin.obstacleScale);
+          obsIcon.setAttribute('width', MARKER_WIDTH * skin.obstacleScale);
+          obsIcon.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href', skin.obstacleIdle);
+          obsIcon.setAttribute('x',
+            squareSize * (x + 0.5) -
+            obsIcon.getAttribute('width') / 2);
+          obsIcon.setAttribute('y',
+            squareSize * (y + 0.9) -
+            obsIcon.getAttribute('height'));
+          svg.appendChild(obsIcon);
+        }
+        ++obsId;
       }
-      ++obsId;
     }
   }
 }

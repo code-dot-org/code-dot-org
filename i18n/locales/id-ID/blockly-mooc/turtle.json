@@ -75,6 +75,7 @@
   "penUp":"pensil keatas",
   "reinfFeedbackMsg":"Inilah gambar Anda! Teruslah mengerjakan atau lanjutan ke teka-teki berikutnya.",
   "setAlpha":"mengatur alpha",
+  "setCharacter":"set character to {character}",
   "setColour":"Atur warna",
   "setPattern":"tetapkan pola",
   "setWidth":"atur lebar",

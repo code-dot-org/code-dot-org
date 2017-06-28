@@ -19,10 +19,10 @@ nn:
         /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        <strong>N</strong>: '<strong>N</strong>'
-        <strong>O</strong>: '<strong>O</strong>'
-        <strong>P</strong>: '<strong>P</strong>'
-        <strong>Q</strong>: '<strong>Q</strong>'
+        <strong>N</strong>: <strong>N</strong>
+        <strong>O</strong>: <strong>O</strong>
+        <strong>P</strong>: <strong>P</strong>
+        <strong>Q</strong>: <strong>Q</strong>
         Matching: Samansetting
         Use the key to match each code to its letter: Bruk nøkkelen til å setje saman koden med brevet som høyrer til
       2-3 Graph Paper Match 1:
@@ -64,7 +64,7 @@ nn:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png
-        Artist Loops Matching One: 'Set saman kunstnarløkkene - Ein'
+        Artist Loops Matching One: Set saman kunstnarløkkene - Ein
         Match the loop to the shape: Finn figuren som passar til løkka
       2-3 artist match 1:
         /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artist_match_1_a1.png
@@ -111,14 +111,14 @@ nn:
         Match the puzzles to the blocks: Set oppgåvene saman med dei tilhøyrande blokkene
         Maze Match One: Labyrint-samansetjing
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Legg Spelar 1 sitt resultat til totalscore</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Samanlign poengsummane til spelarane for å sjå kven som vinn</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Spelar 1 kastar terning</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Spelar 1 sin poengsum til 0</h4>'
+        <h4>1)</h4>: <h4>1)</h4>
+        <h4>2)</h4>: <h4>2)</h4>
+        <h4>3)</h4>: <h4>3)</h4>
+        <h4>4)</h4>: <h4>4)</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>Legg Spelar 1 sitt resultat til totalscore</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>Samanlign poengsummane til spelarane for å sjå kven som vinn</h4>
+        <h4>Player 1 rolls die</h4>: <h4>Spelar 1 kastar terning</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Set Spelar 1 sin poengsum til 0</h4>
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Set saman stega i Terningkappløpet med rekkefølgen dei skal ha i algoritma.
         Matching: Samansetting
       4-5 Computational Thinking Match 1:
@@ -126,10 +126,10 @@ nn:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Hjul/side: 2<br/>Vindauge/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Hjul/side: 2<br/>Vindauge/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Hjul/side: 2<br/>Vindauge/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Hjul/side: 3<br/>Vindauge/side: 2</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Hjul/side: 2<br/>Vindauge/side: 0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Hjul/side: 2<br/>Vindauge/side: 1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Hjul/side: 2<br/>Vindauge/side: 6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Hjul/side: 3<br/>Vindauge/side: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Kvart av desse køyretya har blitt delt opp i mindre delar. Vel den delelista som passar til kvart køyrety.
         Matching: Samansetting
       4-5 Suncatchers Match 1:
@@ -138,10 +138,10 @@ nn:
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: Set saman kvart program med det ordet det lagar og bruk den gitte gruppa av fedigheiter.
         Matching: Samansetting
       4-5 maze match 1:
@@ -160,9 +160,9 @@ nn:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>over'
-        <br/><br/>below: '<br/><br/>under'
-        <br/><br/>next to: '<br/><br/>ved sida av'
+        <br/><br/>above: <br/><br/>over
+        <br/><br/>below: <br/><br/>under
+        <br/><br/>next to: <br/><br/>ved sida av
         Is the square next to, above, or below the ball?: Er kvadratet ved sida av, over eller under ballen?
         Matching: Samansetting
       K-1 Artist 2 Match 2:
@@ -288,18 +288,18 @@ nn:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: Vel ei algoritme for det vedlagte bildet.
         Multiple Choice: Fleirval
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start med ein firkant<br/>Sett eit parallellogram over firkanten<br/>Sett ein trekant til høgre for parallellogrammet'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start med eit kvadrat<br/>Set  ein trekant over kvadratet<br/>Set ein trekant under kvadratet'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start med ein firkant<br/>Sett ein trekant under firkanten<br/>Sett eit parallellogram til høgre for trekanten'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start med ein firkant<br/>Set ein trekant til høgre for firkanten<br/>Set eit parallellogram under firkanten<br/>Set ein trekant til høgre for parallellogrammet'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start med ein firkant<br/>Sett eit parallellogram over firkanten<br/>Sett ein trekant til høgre for parallellogrammet
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start med eit kvadrat<br/>Set  ein trekant over kvadratet<br/>Set ein trekant under kvadratet
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start med ein firkant<br/>Sett ein trekant under firkanten<br/>Sett eit parallellogram til høgre for trekanten
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: Start med ein firkant<br/>Set ein trekant til høgre for firkanten<br/>Set eit parallellogram under firkanten<br/>Set ein trekant til høgre for parallellogrammet
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Fleirval
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start med ein trekant<br/>Set eit kvadrat under trekanten<br/>Set ein trekant til under kvadratet'
-        Which image does <em>not</em> follow this algorithm?: 'Kva for eit bilde fylgjer <em>ikkje</em> denne algoritma?'
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start med ein trekant<br/>Set eit kvadrat under trekanten<br/>Set ein trekant til under kvadratet
+        Which image does <em>not</em> follow this algorithm?: Kva for eit bilde fylgjer <em>ikkje</em> denne algoritma?
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
@@ -434,7 +434,7 @@ nn:
         1: ': Her er tre setningar. Kva for ein av malane under abstraherer rett, slik at alle tre passar i det samme mønsteret som malen?'
         Multiple Choice: Fleirval
         Seattle _____ a _____ _____.: Seattle _____ ein _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle er ein stor by.<br/>Eugene er ein mellomstor by<br/>Hillview er ein liten by.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle er ein stor by.<br/>Eugene er ein mellomstor by<br/>Hillview er ein liten by.
         _____ is _____ a _____.: _____ er _____ ein _____.
         _____ is a _____ city.: _____ er ein _____ by.
       4-5 Crowdsourcing Multi 1:
@@ -463,10 +463,10 @@ nn:
         54.243.71.82: 54.243.71.82
         64.14.68.10: 64.14.68.10
         Multiple Choice: Fleirval
-        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: "Når du prøver å logge deg på code.org, kva for IP-adresse vil DNS'en sannsynligvis ta deg til?"
+        When you try to log on to code.org, which IP address is the DNS most likely to take you to?: Når du prøver å logge deg på code.org, kva for IP-adresse vil DNS'en sannsynligvis ta deg til?
       4-5 Internet Multi 2:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
-        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: "Hvis DNS'en har sendt deg til sida på IP-adressa 100.42.50.110, kva for nettside er du på?"
+        If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: Hvis DNS'en har sendt deg til sida på IP-adressa 100.42.50.110, kva for nettside er du på?
         Multiple Choice: Fleirval
         code.org: code.org
         csisfun.com: csisfun.com
@@ -474,10 +474,10 @@ nn:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Fleirval
         What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: Kva er den største delen av songen du kan definere som refreng, slik at refrenget gjentas nøyaktig kvar gong?
       4-5 Suncatchers Multi 1:
@@ -486,7 +486,7 @@ nn:
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Fleirval
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Kva for eit av programma under <em>vil ikkje</em> lage nøyaktig den same sekvensen som Program 1?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Kva for eit av programma under <em>vil ikkje</em> lage nøyaktig den same sekvensen som Program 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -509,7 +509,7 @@ nn:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: Kunstnar Funksjonar Fleirval
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Vel den løkka som representerer dette mønsteret: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Vel den løkka som representerer dette mønsteret: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
@@ -577,19 +577,19 @@ nn:
         Which blocks solve the puzzle?: Kva for blokker løyser oppgåva?
       Baker test of multi can delete:
         2+3: 2+3
-        3 - 7: '3 - 7'
+        3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
         5-1: 5-1
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
         Line 4: Line 4
         Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
         /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
@@ -644,7 +644,7 @@ nn:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Fleirval
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Kva for dyr har det digitale fotsporet som gjer han eller henne <strong>mest utrygg</strong>?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Kva for dyr har det digitale fotsporet som gjer han eller henne <strong>mest utrygg</strong>?
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
@@ -665,7 +665,7 @@ nn:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: Fleirval
-        Which information should you <strong>not</strong> share online?: 'Kva for informasjon skal du <strong>ikkje</strong> dele på nettet?'
+        Which information should you <strong>not</strong> share online?: Kva for informasjon skal du <strong>ikkje</strong> dele på nettet?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -680,14 +680,14 @@ nn:
         /script_assets/k_1_images/move_blocks/r3_NN.png: /script_assets/k_1_images/move_blocks/r3_NN.png
         /script_assets/k_1_images/move_blocks/r4_N.png: /script_assets/k_1_images/move_blocks/r4_N.png
         Multiple Choice: Fleirval
-        Which repeat block is the same?: 'Kva for "gjenta"-blokk er den same?'
+        Which repeat block is the same?: Kva for "gjenta"-blokk er den same?
       K-1 Maze Loops Multi 2:
         /script_assets/k_1_images/move_blocks/SESESEequals.png, 240: /script_assets/k_1_images/move_blocks/SESESEequals.png, 240
         /script_assets/k_1_images/move_blocks/r3_ES.png: /script_assets/k_1_images/move_blocks/r3_ES.png
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
         Multiple Choice: Fleirval
-        Pick the correct repeat block.: 'Vel den rette "gjenta"-blokka!'
+        Pick the correct repeat block.: Vel den rette "gjenta"-blokka!
       K-1 Maze Multiple Choice 2:
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -724,14 +724,14 @@ nn:
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Multiple Choice: Fleirval
-        Which blocks spell "MOVE"?: 'Kva for blokker stavar "MOVE"?'
+        Which blocks spell "MOVE"?: Kva for blokker stavar "MOVE"?
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Multiple Choice: Fleirval
-        Which blocks spell "JUMP"?: 'Kva for blokker stavar "JUMP"?'
+        Which blocks spell "JUMP"?: Kva for blokker stavar "JUMP"?
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Multiple Choice: Fleirval
@@ -744,15 +744,15 @@ nn:
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Sjåfør og hjelpar
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Ein av desse gutane er <b>sjåfør</b>.  Ein annan er <b>hjelpar</b>.'
-        Which boy is the <large>helper</large>?: 'Kva for gut er <large>hjelpar</large>?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Ein av desse gutane er <b>sjåfør</b>.  Ein annan er <b>hjelpar</b>.
+        Which boy is the <large>helper</large>?: Kva for gut er <large>hjelpar</large>?
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Sjåfær og hjelpar
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'Ein av desse gutane er <b>sjåfør</b>.  Ein annan er <b>hjelpar</b>.'
-        This time, which boy is the <large>driver</large>?: 'Denne gongen, kva for gut er <large>sjåfør</large>?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: Ein av desse gutane er <b>sjåfør</b>.  Ein annan er <b>hjelpar</b>.
+        This time, which boy is the <large>driver</large>?: Denne gongen, kva for gut er <large>sjåfør</large>?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -760,7 +760,7 @@ nn:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+        "https://studio.code.org/script_assets/msm/green-rect.png": 'https://studio.code.org/script_assets/msm/green-rect.png'
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.
