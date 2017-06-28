@@ -43,7 +43,6 @@ const styles = {
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
     background: color.white,
-    // height: 130,
     width: "65%",
     boxSizing: "border-box",
     position: 'absolute',
@@ -52,7 +51,6 @@ const styles = {
   buttonBox: {
     float: 'right',
     marginTop: 120,
-    // position: 'absolute',
     zIndex: 2,
   },
   lessonButton: {
@@ -76,14 +74,14 @@ const StudentTopCourse = React.createClass({
       <div style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
         <div style={styles.name}>
-          Welcome back to {assignableName}
+          {i18n.topCourseWelcome()} {assignableName}
         </div>
         <div style={styles.description}>
           <div>
-            You are currently working on {lessonName}.
+            {i18n.topCourseLessonIntro()} {lessonName}.
           </div>
           <div style={{marginTop: 5}}>
-            Continue lesson to jump to where you left off or view the whole course to see an overview of your progress.
+            {i18n.topCourseExplanation()}
           </div>
         </div>
         <div style={styles.buttonBox}>
@@ -95,7 +93,7 @@ const StudentTopCourse = React.createClass({
           <ProgressButton
             href={linkToLesson}
             color={ProgressButton.ButtonColor.orange}
-            text="Continue lesson"
+            text={i18n.continueLesson()}
             style={styles.lessonButton}
           />
         </div>
