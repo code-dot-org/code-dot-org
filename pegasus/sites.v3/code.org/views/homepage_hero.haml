@@ -124,8 +124,12 @@
   // Swap in 2x versions of the hero image URLs for retina displays.
   if (window.matchMedia('#{css_retina?}').matches) {
     document.querySelectorAll('#hero .widehero').forEach(function(item) {
-      item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
-      item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      if (item.dataset.bg) {
+        item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+      }
+      if (item.style['background-image']) {
+        item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      }
     });
   }
 

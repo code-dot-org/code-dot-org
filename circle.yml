@@ -69,7 +69,7 @@ dependencies:
         build_apps: true
         localize_apps: true
         dashboard_enable_pegasus: true
-        dashboard_workers: 6
+        dashboard_workers: 5
         skip_seed_all: true" >> locals.yml
     - |
         case $CIRCLE_NODE_INDEX in 0) echo "Skipping" ;; *) echo "

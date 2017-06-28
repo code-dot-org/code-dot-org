@@ -479,7 +479,8 @@ testsContext.keys().forEach(testsContext);
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
-    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js'
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js'
   };
 
   // Create a config for each of our bundles
