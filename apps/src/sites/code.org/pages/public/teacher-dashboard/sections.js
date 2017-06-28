@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import queryString from 'query-string';
+import $ from 'jquery';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
   setValidLoginTypes,
@@ -27,16 +28,19 @@ export function renderSectionsPage(data) {
   const element = document.getElementById('sections-page');
   registerReducers({teacherSections, googleClassroom});
   const store = getStore();
-  store.dispatch(setStudioUrl(data.studiourlprefix));
-  store.dispatch(setValidLoginTypes(data.valid_login_types));
-  store.dispatch(setValidGrades(data.valid_grades));
-  store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
 
-  const query = queryString.parse(window.location.search);
-  if (query.newSection) {
-    const courseId = parseInt(query.newSection, 10);
-    store.dispatch(newSection(courseId));
-  }
+  $.getJSON('/dashboardapi/courses').then(courses => {
+    store.dispatch(setStudioUrl(data.studiourlprefix));
+    store.dispatch(setValidLoginTypes(data.valid_login_types));
+    store.dispatch(setValidGrades(data.valid_grades));
+    store.dispatch(setValidAssignments(courses, data.valid_scripts));
+
+    const query = queryString.parse(window.location.search);
+    if (query.newSection) {
+      const courseId = parseInt(query.newSection, 10);
+      store.dispatch(newSection(courseId));
+    }
+  });
 
   $("#sections-page-angular").hide();
 
