@@ -12,6 +12,7 @@
 #
 #  index_courses_on_name  (name)
 #
+require 'cdo/script_constants'
 
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
@@ -108,6 +109,26 @@ class Course < ApplicationRecord
     end
     # Reload model so that course_scripts is up to date
     reload
+  end
+
+  # Get the assignable info for this course, then update translations
+  # @return AssignableInfo
+  def assignable_info
+    info = ScriptConstants.assignable_info(self)
+    # ScriptConstants gives us untranslated versions of our course name, and the
+    # category it's in. Set translated strings here
+    info[:name] = localized_title
+    info[:category] = I18n.t('courses_category')
+    info
+  end
+
+  # TODO: document me and test me
+  # TODO: figure out caching
+  def self.valid_courses
+    Course.
+      all.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map(&:assignable_info)
   end
 
   def summarize
