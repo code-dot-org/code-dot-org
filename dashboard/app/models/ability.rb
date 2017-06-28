@@ -75,6 +75,9 @@ class Ability
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
         end
+        can :manage, Section do |section|
+          user.id == section.user_id
+        end
         can :manage, SectionHiddenStage do |hidden_stage|
           user.id == hidden_stage.section.user_id
         end

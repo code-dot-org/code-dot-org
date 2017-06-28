@@ -54,8 +54,10 @@ class SectionsPage extends Component {
     console.log(selectedId);
   };
 
+  addSection = () => this.props.newSection();
+
   render() {
-    const { newSection, numSections } = this.props;
+    const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
     return (
       <div>
@@ -68,18 +70,22 @@ class SectionsPage extends Component {
             {i18n.studentAccountsAndProgress()}
           </b>
         </div>
-        <ProgressButton
-          text={i18n.newSection()}
-          style={styles.button}
-          onClick={newSection}
-          color={ProgressButton.ButtonColor.gray}
-        />
-        <ProgressButton
-          text={i18n.importFromGoogleClassroom()}
-          style={styles.button}
-          onClick={this.handleImportOpen}
-          color={ProgressButton.ButtonColor.gray}
-        />
+        {sectionsLoaded &&
+          <ProgressButton
+            text={i18n.newSection()}
+            style={styles.button}
+            onClick={this.addSection}
+            color={ProgressButton.ButtonColor.gray}
+          />
+        }
+        {sectionsLoaded &&
+          <ProgressButton
+            text={i18n.importFromGoogleClassroom()}
+            style={styles.button}
+            onClick={this.handleImportOpen}
+            color={ProgressButton.ButtonColor.gray}
+          />
+        }
         {sectionsLoaded && numSections === 0 &&
           <div className="jumbotron">
             <p>{i18n.createSectionsInfo()}</p>
