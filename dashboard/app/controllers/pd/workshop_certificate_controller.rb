@@ -1,4 +1,6 @@
 class Pd::WorkshopCertificateController < ApplicationController
+  include ActiveSupport::NumberHelper
+
   before_action :authenticate_user!
   load_resource :enrollment, class: 'Pd::Enrollment', find_by: :code, id_param: :enrollment_code
 
@@ -60,7 +62,7 @@ class Pd::WorkshopCertificateController < ApplicationController
           height: 100,
         },
         {
-          string: workshop.effective_num_hours.to_i.to_s,
+          string: number_to_rounded(workshop.effective_num_hours, precision: 1, strip_insignificant_zeros: true),
           y: 975,
           x: 1065,
           height: 40,
