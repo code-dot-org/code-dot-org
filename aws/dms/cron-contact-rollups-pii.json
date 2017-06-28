@@ -6,29 +6,19 @@
       "rule-name": "1",
       "object-locator": {
         "schema-name": "pegasus",
-        "table-name": "forms"
-      },
-      "rule-action": "include"
-    },
-    {
-      "rule-type": "selection",
-      "rule-id": "2",
-      "rule-name": "2",
-      "object-locator": {
-        "schema-name": "pegasus",
-        "table-name": "form_geos"
+        "table-name": "contact_rollups"
       },
       "rule-action": "include"
     },
     {
       "rule-type": "transformation",
-      "rule-id": "3",
-      "rule-name": "3",
-      "rule-action": "rename",
+      "rule-id": "2",
+      "rule-name": "2",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "pegasus"
       },
+      "rule-action": "rename",
       "value": "pegasus_pii"
     }
   ]
