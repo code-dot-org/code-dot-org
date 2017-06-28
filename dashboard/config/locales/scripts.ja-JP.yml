@@ -3039,7 +3039,7 @@
             'Jigsaw: Learn to drag and drop':
               name: "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
             Loops:
-              name: "ループ〔くりかえし〕"
+              name: "ループ"
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3107,7 +3107,7 @@
             'Jigsaw: Learn to drag and drop':
               name: "ジグソーパズル：ドラッグ＆ドロップを学びましょう"
             Loops:
-              name: "ループ〔くりかえし〕"
+              name: "ループ"
             Loops Intro:
               name: Loops Intro
             Loops Unplugged:
@@ -3804,7 +3804,7 @@
             Functions with Parameters:
               name: "パラメーター付き関数"
             Loops:
-              name: "ループ〔くりかえし〕"
+              name: "ループ"
             Nested Loops:
               name: "入れ子のループ"
             Variables:

@@ -11,7 +11,7 @@ ko:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
-        Match the button combination to the dance moves.: 조합되는 블럭을 댄스 무브에 맞춰보세요.
+        Match the button combination to the dance moves.: 단추에 알맞은 춤 동작을 고르세요.
         Matching: 맞추기
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
@@ -19,10 +19,10 @@ ko:
         /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        <strong>N</strong>: '<strong>N</strong>'
-        <strong>O</strong>: '<strong>O</strong>'
-        <strong>P</strong>: '<strong>P</strong>'
-        <strong>Q</strong>: '<strong>Q</strong>'
+        <strong>N</strong>: <strong>N</strong>
+        <strong>O</strong>: <strong>O</strong>
+        <strong>P</strong>: <strong>P</strong>
+        <strong>Q</strong>: <strong>Q</strong>
         Matching: 맞추기
         Use the key to match each code to its letter: 키를 사용해 코드와 글자를 맞추세요.
       2-3 Graph Paper Match 1:
@@ -111,14 +111,14 @@ ko:
         Match the puzzles to the blocks: 퍼즐 블럭 맞추기
         Maze Match One: 미로 퍼즐 맞추기1
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Player 1 점수를 총점으로 합칩니다.</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>누가 이겼는지 비교합니다.</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1이 주사위를 굴립니다.</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Player 1 점수를 0점으로</h4>'
+        <h4>1)</h4>: <h4>1)</h4>
+        <h4>2)</h4>: <h4>2)</h4>
+        <h4>3)</h4>: <h4>3)</h4>
+        <h4>4)</h4>: <h4>4)</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>Player 1 점수를 총점으로 합칩니다.</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>누가 이겼는지 비교합니다.</h4>
+        <h4>Player 1 rolls die</h4>: <h4>Player 1이 주사위를 굴립니다.</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Player 1 점수를 0점으로</h4>
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: 알고리즘에서 나타나도록 주사위 레이스 게임에서 단계들을 맞추세요.
         Matching: 맞추기
       4-5 Computational Thinking Match 1:
@@ -126,10 +126,10 @@ ko:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: 각각의 자동차들이 조각내어졌습니다. 자동차들의 짝을 맞추세요.
         Matching: 맞추기
       4-5 Suncatchers Match 1:
@@ -138,10 +138,10 @@ ko:
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: 주어진 방법들의 프로그램과 단어를 맞추세요.
         Matching: 맞추기
       4-5 maze match 1:
@@ -160,9 +160,9 @@ ko:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/><br/>위'
-        <br/><br/>below: '<br/><br/>아래'
-        <br/><br/>next to: '<br/><br/>옆'
+        <br/><br/>above: <br/><br/>위
+        <br/><br/>below: <br/><br/>아래
+        <br/><br/>next to: <br/><br/>옆
         Is the square next to, above, or below the ball?: 는 사각형입니다. 공의 위? 옆? 아래? 어디에 있나요?
         Matching: 맞추기
       K-1 Artist 2 Match 2:
@@ -288,18 +288,18 @@ ko:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: 주어진 이미지를 위한 알고리즘을 고르세요.
         Multiple Choice: 객관식
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: '사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: '사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: '사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: '사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의 오른쪽에 삼각형을 넣습니다'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 사각형으로 시작하세요<br/>사각형의 위쪽에 삼각형을 놓으세요<br/>평행 사변형의 오른쪽에 삼각형을 놓으세요
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 사각형에서 시작해서<br/>사각형 위에 삼각형을 그리고<br/>사각형 위에 삼각형을 그리세요.
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 사각형으로 시작하세요<br/>사각형의 아래쪽에 삼각형을 놓으세요<br/>삼각형의 오른쪽에 평행 사변형을 놓으세요
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 사격형으로부터 시작하여<br/>사각형의 오른쪽에 삼각형을 넣고<br/>사각형의 아래쪽에 평행 사변형을 넣고<br/>평행사변형의 오른쪽에 삼각형을 넣습니다
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: 객관식
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: '삼각형에서 시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.'
-        Which image does <em>not</em> follow this algorithm?: '어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>'
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 삼각형에서 시작해서<br/>삼각형 아래에 사각형을 그리고<br/>사각형 아래에 또 다른 삼각형을 그리세요.
+        Which image does <em>not</em> follow this algorithm?: 어떤 이미지가 이 알고리즘으로 만들 수 <em>없나요?</em>
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
@@ -434,7 +434,7 @@ ko:
         1: ': 3개의 문장이 있습니다. 주어진 3개의 패턴을 정확히 만들어낼 수 있는 것은 무엇일까요?'
         Multiple Choice: 객관식
         Seattle _____ a _____ _____.: 시애틀 _____ _____ _____입니다.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: '시애틀은 대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 시애틀은 대도시. <br/> 유진은 중간 도시 <br/> 힐뷰는 작은 도시입니다.
         _____ is _____ a _____.: _____ _____는 _____입니다.
         _____ is a _____ city.: _____은 _____ 도시입니다.
       4-5 Crowdsourcing Multi 1:
@@ -474,10 +474,10 @@ ko:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: 객관식
         What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: 코러스로 정의하여 호출될 때마다 반복될 이 노래의 가장 큰 구절은 무엇인가?
       4-5 Suncatchers Multi 1:
@@ -486,7 +486,7 @@ ko:
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: 객관식
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: '아래 프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 아래 프로그램 중 프로그램 1과 정확하게 동일한 시퀀스를 <em>만들지 않는가</em>  ?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -509,7 +509,7 @@ ko:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: 예술가 함수 객관식
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": '다음과 같은 패턴을 만들어내는 함수를 고르세요. : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': '다음과 같은 패턴을 만들어내는 함수를 고르세요. : 5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
@@ -577,19 +577,19 @@ ko:
         Which blocks solve the puzzle?: 어떤 블럭이 퍼즐을 해결할 수 있을까요?
       Baker test of multi can delete:
         2+3: 2+3
-        3 - 7: '3 - 7'
+        3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
         5-1: 5-1
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
         Line 4: Line 4
         Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
         /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
@@ -644,7 +644,7 @@ ko:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: 객관식
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: '디지털 흔적을 <strong>가장 적게</strong> 남기는 동물은?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 디지털 흔적을 <strong>가장 적게</strong> 남기는 동물은?
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
@@ -665,7 +665,7 @@ ko:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: 객관식
-        Which information should you <strong>not</strong> share online?: '온라인으로 공유하지 <strong>말아야 할</strong> 정보는?'
+        Which information should you <strong>not</strong> share online?: 온라인으로 공유하지 <strong>말아야 할</strong> 정보는?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -694,7 +694,7 @@ ko:
         /script_assets/k_1_images/move_blocks/ES.png: /script_assets/k_1_images/move_blocks/ES.png
         /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
-        Maze: Maze
+        Maze: 미로
         Which answer solves this level?: 이 레벨을 해결할 수 있는 답은?
       K-1 Move It Multi 1:
         /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
@@ -744,15 +744,15 @@ ko:
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: 드라이버와 헬퍼
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: '이들 중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.'
-        Which boy is the <large>helper</large>?: '누가 <large>헬퍼</large>일까요?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 이들 중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.
+        Which boy is the <large>helper</large>?: 누가 <large>헬퍼</large>일까요?
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: 드라이버와 헬퍼
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: '이들 중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.'
-        This time, which boy is the <large>driver</large>?: '이번에는 누가 <large>드라이버</large>일까요?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 이들 중 한 명은 <b>드라이버</b>이고, 다른 한 명은 <b>헬퍼</b>입니다.
+        This time, which boy is the <large>driver</large>?: 이번에는 누가 <large>드라이버</large>일까요?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -760,7 +760,7 @@ ko:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+        "https://studio.code.org/script_assets/msm/green-rect.png": 'https://studio.code.org/script_assets/msm/green-rect.png'
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.

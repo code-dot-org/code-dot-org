@@ -79,6 +79,7 @@
       CSD U3 Conditional Project_callout: []
       CSD U3 Conditionals Apple 2_callout: []
       CSD U3 Conditionals Apple_callout: []
+      CSD U3 Diagonal Movement_callout: []
       CSD U3 Direction Animations_callout: []
       CSD U3 Direction Arrows_callout: []
       CSD U3 Draw Loop Plugged update your scene_callout: []
@@ -105,6 +106,12 @@
       CSD U3 Sprites text debug_callout: []
       CSD U3 Sprites text_callout: []
       CSD U3 UP_ARROW_callout: []
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: "在此修改數值"
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: Click here to show the grid.
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -185,6 +192,8 @@
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 challenge face_callout: []
+      CSD U3 challenge new shape_callout: []
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
@@ -215,12 +224,11 @@
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional_callout: []
       CSD U3 my-rect_callout:
         CSD_U3_rect_c1: "這兒是代碼"
         CSD_U3_rect_c2: "這個是「運行」按鈕。"
-      CSD U3 picture_callout:
-        CSD_U3_rect_c1: "這兒是代碼"
-        CSD_U3_rect_c2: "拖曳這個積木到工作區裡。"
+      CSD U3 picture_callout: []
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -491,8 +499,12 @@
       PDAlg Big Game History_callout: []
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Click here to show the grid.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: "紫花上可能有 1 或 0 個花蜜…但在運行程式前你是不會知道到底是多少！"
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: Click here to show the grid.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
       Play Lab Rocket 2_callout:
@@ -504,6 +516,14 @@
         Play Lab Rocket 3 1: "在移到至範例和定義前更新目的陳述式。"
       Play Lab Rocket Free Play_callout: []
       Poorva copy U3L2 Using Simple Commands_callout: []
+      Quantum Bee - Ryan_callout:
+        feeling_stuck_callout_test: "感覺卡關了？<br />點擊燈炮圖案可以得到提示！"
+      Robot Doodle_callout:
+        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: "你喜愛的所有積木現在被依功能分成多個類別，點擊這些類別看看它們在哪裡！"
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
         New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
@@ -577,6 +597,8 @@
         artistLoopsK2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
+      courseA_artist_loops7_callout:
+        courseA_artist_loops7_1: "這個數字指的是解答中只可以使用一個這類型的積木"
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever
           you need to?
@@ -585,23 +607,41 @@
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: "這個數字是用來告訴你，這個關卡上你可以使用的最大積木數。"
       courseA_collector_loops3_predict1_callout: []
+      courseA_forVideoTest_artist_callout: []
+      courseA_maze_seq1_callout:
+        courseA_maze_seq1_1: "當您需要提示時，點一下燈泡！"
+      courseA_maze_seq2_callout:
+        courseA_maze_seqA_callout1: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+      courseA_maze_seq4_callout:
+        courseA_maze_seq4_1: "這些積木就像石頭一樣，你可以移動它們，但你無法刪除它們！"
+      courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
       courseA_playLab_events3_callout: []
-      courseA_playLab_events4_callout: []
-      courseA_playLab_events5_callout: []
+      courseA_playLab_events4_callout:
+        courseA_playlab_events4_callout1: "這是一個標注"
+      courseA_playLab_events5_callout:
+        courseA_playLab_events5_1: "點擊此處變更方向事件的箭頭方向。"
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means
           that you don't know what you are going to get until you hear it!
+      courseA_toMakeLoopsVideo_Collector_callout: []
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How
           will you use it?
+      courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: "這個數字指的是工具箱中已經沒有這個積木。"
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
-      courseB_maze_seq7_callout:
-        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that
-          they can't be trashed.
+      courseB_maze_seq1_callout:
+        courseB_maze_seq1: "當您需要提示時，點一下燈泡！"
+      courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
+      courseB_maze_seq3_callout:
+        courseB_maze_seq3_1: "灰色的積木就像石頭一樣，無法被破壞和丟棄。"
+      courseB_maze_seq7_callout: []
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
+      courseC_collector_loops_challenge2_callout: []
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
       courseC_collector_prog7_callout:
@@ -611,10 +651,15 @@
       courseC_collector_prog9_callout: []
       courseC_collector_progA_callout: []
       courseC_collector_progB_callout: []
+      courseC_collector_prog_challenge1_callout: []
+      courseC_collector_prog_challenge2_callout: []
+      courseC_harvester_loops1_callout:
+        courseC_harvester_loops1_callout1: "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this
           puzzle.
       courseC_maze_loops2_predict1_callout: []
+      courseC_maze_loops_challenge2_callout: []
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
@@ -624,6 +669,7 @@
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+        courseC_maze_programming3_callout2: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
@@ -631,6 +677,19 @@
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are
           meant to be hard and may take several tries.
+        courseC_maze_programming7_2: "這些積木就像石頭一樣，不能被破壞。"
+      courseC_starWars_loops10_callout: []
+      courseC_starWars_loops10_predict2_callout: []
+      courseC_starWars_loops11_callout: []
+      courseC_starWars_loops2_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this
+          puzzle.
+      courseC_starWars_loops4_callout: []
+      courseC_starWars_loops5_callout: []
+      courseC_starWars_loops6_callout: []
+      courseC_starWars_loops7_callout: []
+      courseC_starWars_loops8_callout: []
+      courseC_starWars_loops9_callout: []
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in
           the function will run. What should the artist do after drawing the first
@@ -638,16 +697,38 @@
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
+      courseD_artist_nestedLoops1a_callout:
+        courseD_artist_nestedLoops1a_1: "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+      courseD_artist_nestedLoops_challenge2_callout:
+        courseD_artist_nestedLoops_challenge2_callout1: "這個迴圈應該會畫出個八邊形。"
+        courseD_artist_nestedLoops_challenge2_callout2: "這個迴圈應該會畫出個六邊形。"
+        courseD_artist_nestedLoops_challenge2_callout3: "這個迴圈應該會畫出個正方形。"
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: "你可以修改這個數字。"
         courseD_artist_ramp11_2: "點擊此處輸入程式要重複的次數。"
       courseD_artist_ramp12_callout: []
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+      courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+      courseD_bee_conditionals_challenge3_callout:
+        courseD_bee_conditionals_challenge3_1: "試著使用迴圈來重複向前移動的積木。"
+      courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: "使用這個指令讓蜜蜂向後移動。"
+      courseD_bee_debugging_challenge2_callout:
+        courseD_bee_debugging_challenge1_callout1: "使用這個指令讓蜜蜂向後移動。"
+      courseD_bee_nested_loops_challenge1_callout: []
+      courseD_bee_nested_loops_challenge2_callout: []
+      courseD_collector_debugging_challenge2_callout: []
+      courseD_collector_nested_loops_challenge2_callout: []
       courseD_collector_ramp10_callout: []
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: "使用這個積木來收集寶藏。"
       courseD_collector_ramp9_callout: []
+      courseD_collector_until_challenge1_callout: []
+      courseD_farmer_until_challenge2_callout: []
+      courseD_harvester_nested_loops_challenge1-broken_callout: []
+      courseD_maze_loops_challenge1_callout: []
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.
@@ -657,15 +738,14 @@
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
           them away.
+        courseC_maze_programming3_callout2: "使用步進按鈕可以一步一步的運行程式中的指令，這可以讓你更容易找到出錯的地方！"
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many
           of these blocks you have left to use.
       courseD_maze_ramp5_callout: []
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
-      courseD_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant
-          to be hard and may take several tries.
+      courseD_maze_ramp7_callout: []
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to
           give you more code to play with!  Click here to see where everything went.
@@ -679,6 +759,21 @@
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
+      courseE_artist_functions_challenge_callout:
+        courseE_artist_functions_challenge_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge1_callout:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design,
+          change it to anything you want!
+      courseE_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
+          more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design,
+          change it to anything you want!
       courseE_artist_functions_predict1_callout: []
       courseE_artist_predict1_callout: []
       courseE_artist_ramp10_callout: []
@@ -754,6 +849,12 @@
         courseF_artist_fwp4_1: "要完成你的多邊形，請確保你每次都轉向 360 ÷ `sides`（邊數） 度。"
       courseF_artist_fwp5_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
+      courseF_artist_predict1_callout: []
+      courseF_artist_ramp10_callout: []
+      courseF_artist_ramp8_callout:
+        courseE_artist_ramp8_1: "你可以修改這個數字。"
+        courseE_artist_ramp8_2: "點擊此處輸入程式要重複的次數。"
+      courseF_artist_ramp9_callout: []
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter
           numbers. These `math` blocks can be pulled out and moved around!
@@ -790,6 +891,10 @@
       courseF_artist_variables_8_callout: []
       courseF_artist_variables_9_callout: []
       courseF_artist_variables_FP_callout: []
+      courseF_bee_conditionals2_callout:
+        courseF_bee_conditionals2_2: "這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！"
+      courseF_bee_conditionals5_callout:
+        courseF_bee_conditionals5_1: "當路徑的長度改變時（像長方形的邊），使用這個積木。"
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox
           into category mode to save space.  You will find the new `for` loop in here!
@@ -798,6 +903,16 @@
       courseF_bee_for6_callout: []
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for_challenge1_callout: []
+      courseF_bee_functions2_callout:
+        courseF_bee_functions2_1: "這個積木稱做函式（function）。點擊「編輯」按鈕看看裡面有什麼！"
+      courseF_bee_functions6_callout:
+        courseF_bee_functions6_1: "別忘了看看這兒，裡頭有更多積木，也許可以幫助你！"
+      courseF_bee_functions_challenge1_callout:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
+          be used here if edit it to make honey multiple times.
+      courseF_bee_functions_challenge2_callout: []
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp3_callout:
@@ -805,6 +920,26 @@
           spaces as well as clouds.
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_maze_predict1_callout: []
+      courseF_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
+          start your program.
+      courseF_maze_ramp13_callout: []
+      courseF_maze_ramp15_callout:
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
+      courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra
+          blocks to complete your puzzles.
+      courseF_maze_ramp4_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many
+          of these blocks you have left to use.
+      courseF_maze_ramp5_callout: []
+      courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: "不管你的程式是什麼，放到迴圈裡以後就會執行你所指定的次數，執行完以後才會繼續以後的程式。"
+      courseF_maze_ramp7_callout:
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant
+          to be hard and may take several tries.
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: "點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。"
         New Play Lab Project_callout2: "點擊「運行」以儲存並運行你的程式"
@@ -818,10 +953,23 @@
       courseF_playlab_variables3_callout: []
       courseF_playlab_variables4_callout: []
       courseF_playlab_variables5_callout: []
+      courseF_playlab_variables5c RYAN Copy_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables5c_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables6c_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables7c_callout: []
+      courseF_playlab_variables8c_callout: []
+      courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: "這就是設置變數值的方法，修改連結到這個積木上的文字以變更你的變數。"
       course_playlab_variables3_callout:
         course_playlab_variables3_1: "這是如何為你的變數設定值的方式。"
+      coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw
+          them away.
       drawings!_callout: []
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: "使用「建立一個圓形」積木並修改它的尺寸。"
@@ -855,8 +1003,7 @@
         grade1_artist_loops2_1: There is only one of these blocks in the toolbox.  How
           will you use it?
       grade1_maze_sequence6_callout:
-        grade1_maze_sequence6_1: These grey blocks are made of stone!  That means
-          that they can't be trashed.
+        grade1_maze_sequence6_1: "這些灰色的積木是用石頭做的！這表示他們不能被打掉。"
       grade2_CaringForNewPet_0_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
           start your program.

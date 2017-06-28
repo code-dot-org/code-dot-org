@@ -48,7 +48,7 @@
     submit: "添加密码提示"
   appname: Code.org
   stage: "阶段"
-  stage_number: "阶段 %{number}"
+  stage_number: "课程 %{number}"
   puzzle: "题目"
   trophies: "奖杯"
   courses: "课程"
@@ -79,8 +79,7 @@
     forgot_password: "忘记密码？"
     need_confirmation: "没有收到确认的说明吗？"
     need_unlock: "未收到解锁指令吗？"
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
+    not_linked: "对不起，你的编程一小时账户没有连接到你的%{provider}。你需要通过输入密码来登录。"
   signup_form:
     student_count: "%{count} 位学生已经注册。"
     teacher_count: "%{count} 位教师已经注册。"
@@ -120,24 +119,24 @@
     field_is_required: "必填"
     accept_terms: "您必须同意创建一个帐户"
   school_info:
-    title: "学校信息（可选）"
+    title: "学校信息（选填）"
     school_country: "学校所在国家"
     select_school_type: "学校类型"
-    charter: Charter
-    private: Private
-    public: Public
+    charter: "章程"
+    private: "隐私"
+    public: "公开"
     homeschool: "在家教育"
     after_school: "课后"
     other: "其他"
     state: "省/直辖市/自治区"
-    district: "区"
+    district: "地区"
     other_district_not_listed: "上面未列出的其他区"
     district_name: "地区名称"
-    school: "就读学校"
+    school: "学校"
     other_school_not_listed: "上面未列出的其他学校"
-    school_name: "校名"
-    school_zip: "学校邮编代号"
-    school_address: "校址"
+    school_name: "学校名称"
+    school_zip: "学校邮编"
+    school_address: "学校地址"
     school_organization_name: "学校/组织名称"
     school_organization_zip: "学校/组织的邮编"
   signin_form:
@@ -159,14 +158,15 @@
     login: "登录"
     invalid_login: "登录无效，请重试"
     pair_programming: "我在我的电脑上有伙伴"
-    student_privacy: Learn more about why you're not seeing your full name <a href='%{student_privacy_blog}'
-      target='_blank'>here</a>.
+    student_privacy: "了解更多：<a href='%{student_privacy_blog}' target='_blank'>为什么你看不到你的名字？</a>"
   password:
     reset_form:
       title: "忘记了您的密码吗？"
       instructions: "输入您的电子邮件地址，我们会向您发送密码重置指示。"
       email: "电子邮件地址"
       submit: "提交"
+    reset_errors:
+      invalid_email: "您也许用了无效的电子邮件地址来登录。请联系support@code.org 来获得恢复密码的链接。"
     change_form:
       title: "更换密码"
       new_password: "新密码"
@@ -181,12 +181,12 @@
       %{name}
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+      one: "你的小组："
+      other: "你的小组："
+    code_with_teacher: "%{teacher_name} 的%{section_code}"
     confirm:
-      remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+      remove: "您确定要离开这个小组吗？"
+    remove: "（删除小组）"
   follower:
     invite_sent: "邀请已发送"
     added_teacher: "添加%{name}为你的老师"
@@ -205,65 +205,6 @@
   reports:
     error:
       access_denied: "您没有权限访问此人的信息。"
-  redeem_prizes:
-    title: "奖品兑换: %{name}"
-    provider: "提供者："
-    code: "代码："
-    redeem_header: "兑换："
-    donorschoose_register: "在 DonorsChoose.org 上注册为老师"
-    donorschoose_project: "发布项目"
-    donorschoose_how_to: "如何使用您的代码"
-    success: "你的奖品已经成功兑现，请参见下面的代码。"
-    error: "你的奖品无法兑现，请重新尝试。"
-    error_us_only: "奖品仅向美国用户提供。"
-    error_not_earned: "你还没有获得这一奖品。"
-    error_already_redeemed: "您的奖品已经被兑换。"
-    no_prizes_available: "我们很抱歉，但我们目前有没有可用的奖品。"
-    teacher_info_required: "老师奖品需要学校名称和地址信息："
-    teacher_email_required: "老师奖品需要一个已确认电子邮件地址："
-    confirm:
-      title: "请确认"
-      'no': "不"
-      'yes': "是"
-      msg: "你确定你要领取奖品%{prize_name} 吗？"
-      msg_student: "注意：你只能选择一种奖品。"
-      msg_publicschool: "请确认您是美国公立学校的老师。"
-      msg_visit_website: "访问网站"
-    providers:
-      apple_itunes: "$10 iTunes Gift Card"
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: 10 GB 的 Dropbox 空间
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
-    msg:
-      choose: "选择奖励："
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "你赢得了奖品！（仅适用于美国学生）"
-      not_earned_title: "完成本教程，赚取报酬 (仅限美国学生)"
-      not_earned: "学习所有的计算机科学概念、 收集所有 %{num_trophies} 奖杯，和赚取真实世界的奖品。您可以选择 10 GB 免费的
-        Dropbox 空间， 10美元Skype信用 和免费游戏下载。注意： 仅向美国学生提供并且奖品发完为止。"
-      teacher:
-        earned: "超过15 个学生收集到所有 %{num_trophies} 个奖杯。你获得老师奖 ！（仅限美国教师)"
-        not_earned_title: 教导这一课程，赚取高达 1,000 美元 <a target="_blank"href="http://DonorsChoose.org">
-          DonorsChoose.org</a> 信用 （仅限美国教师)
-        not_earned: 为了奖励第一次计算机科学教师，通过指导一个教室通过K-8介绍课程，您可以赚取最高1,000 美元的<a href="http://DonorsChoose.org">
-          DonorsChoose.org</a> 信用。要符合资格，您需要成功地主持一个教室至少15 名学生完成所有K-8介绍课程，所有15个学生（或更多）完成所有的课程并获得所有
-          %{num_trophies} 奖杯。如果 7 或更多的赢得所有的奖杯学生是女孩，你的奖金为1000美元 <a target="_blank"href="http://DonorsChoose.org">
-          DonorsChoose.org</a> 信用。否则，您的奖金为750美元 <a target="_blank"href="http://DonorsChoose.org">
-          DonorsChoose.org</a> 学信用。只可由在美国的公立学校教师使用 <a target="_blank"href="http://DonorsChoose.org">
-          DonorsChoose.org</a> 信用。
-        bonus:
-          not_earned_title: 您仍然可以赚取额外 250 美元在 <a target="_blank"href="http://DonorsChoose.org">
-            DonorsChoose.org</a> 信用 （仅限美国教师)
-          earned: 7 或更多的获得所有 %{num_trophies} 奖杯的学生是女生。你获得了额外的奖励 ！（仅限美国教师)
-          not_earned: 如果你的学生赚取所有 %{num_trophies} 奖杯至少有7位女孩，您的额外奖励是250美元 <a target="_blank"href="http://DonorsChoose.org">
-            DonorsChoose.org</a> 信用。只可由在美国的公立学校教师使用 <a target="_blank"href="http://DonorsChoose.org">
-            DonorsChoose.org</a> 信用。
   crud:
     new_model: "新%{model}"
     show: "显示"
@@ -286,21 +227,56 @@
         artist: "画一些东西"
         calculate: Calculate Something
         applab: "创建一个游戏实验室应用"
+        gamelab: "创建一个游戏实验室项目"
+      home: "首页"
+      courses: "课程"
+      project_gallery: "项目集"
+      sections: "小组"
+      help_support: "帮助与支持"
+      report_bug: "报告错误"
+      teacher_community: "教师社区"
+      professional_learning: "专业学习"
+      documentation: "使用文档"
+      tutorials: "教程"
+      educate_overview: "教育工作者概述"
+      educate_elementary: "小学"
+      educate_middle: "中学"
+      educate_high: "高中"
+      educate_hoc: "编程一小时"
+      educate_partner: "与我们合作"
+      educate_beyond: "超越Code.org的内容"
+      educate_inspire: "鼓舞学生"
+      educate_community: "在线社区"
+      educate_tools: "工具和视频"
+      about_us: "关于我们"
+      about_leadership: "管理团队"
+      about_donors: "捐助者"
+      about_partners: "合作伙伴"
+      about_team: "全体成员"
+      about_news: "新闻室"
+      about_evaluation: "评估"
+      about_jobs: "招聘"
+      about_contact: "联系我们"
+      about_faqs: "常见问答"
+      learn: "学习"
+      stats: "统计信息"
+      help_us: "帮助我们"
+      teach: "教学"
+      about: "关于"
     user:
       classroom: "教师主页"
       district_dashboard: "分区信息"
       label: "你好%{username}"
       stats: "代码工作室"
-      settings: "我的账户"
-      prizes: "奖品"
+      settings: "帐户设置"
       logout: "注销"
       signin: "登录"
       signup: "创建一个账户"
       already_registered: "已经注册了？"
       pair_programming: "结对编程"
       team: "团队"
-      driver: "驱动者"
-      navigator: "导航者"
+      driver: "已登录"
+      navigator: "搭档"
     popup:
       progress_for_user: "%{name}的进度"
       progress: "您的进度"
@@ -324,7 +300,7 @@
     students:
       dashboard: "去教师管理面板"
     user_not_found: "不能找到老师"
-    student_teacher_disassociated: "你已经移除了老师：%{teacher_name}。"
+    student_teacher_disassociated: "你已经从%{section_code} 中移除了老师：%{teacher_name}。"
     panel:
       answer_viewer: "导师面板"
       student: "学生"
@@ -403,10 +379,7 @@
       <a href="%{pp_url}" target="_blank">跟踪多个学生的进展</a> 。你可以在<i>任何</i>课堂中，使用计算机科学课程的<a
       href="%{csp_widgets_url}" target="_blank">最佳互动的工具</a>。并且你的学生可以在他们的空间里<a href="%{unused_code_url}"
       target="_blank">保留未使用的代码</a>，从而鼓励他们多尝试！试试所有的新功能，让我们知道你的想法。
-    announcement_csp_widgets_message: Looking for some fun ways to teach your class
-      how the Internet works, how cryptography keeps data secure, and other concepts?
-      We’ve taken the best interactive tools from our Computer Science Principles
-      curriculum and released standalone widgets you can use at any time!
+    announcement_csp_widgets_message: "您在寻找一些有趣的方法来教您的班级一些计算机科学的概念吗？比如互联网如何工作，密码学如何为数学保密？我们已经从计算机科学原理课程中找到了最好的互动工具，并且你可以在任何时候，使用这些独立的小工具！"
     announcement_learn_more_button: "了解详情"
     announcement_try_now_button: "现在就试试"
     announcement_host_an_hour_button: "主办一小时"
@@ -415,7 +388,7 @@
       28位州长和美国一些最大的公司的首席执行官们一起在一封公开信里要求美国国会资助 K-12 计算机科学教育。"
     announcement_petition_button: "添加您的姓名"
     announcement_go_beyond_button: "超越"
-    announcement_apply_now: Apply now
+    announcement_apply_now: "立即申请"
     announcement_all: "关注我们老师的博客以追踪最新的新功能和更新。<a href='%{teacher_blog_url}' target='_blank'>
       看以前的公告。</a>"
     announcement_hoc_launch: "在12月5日至11日的《编程一小时》活动中，来自180多个国家数以千计的教育工作者会开始教授计算机科学。我们期待你来帮助比以往更多的学生。<a
@@ -426,45 +399,23 @@
       这个视频</a> ！"
     announcement_go_beyond: "每周抽出一个小时的时间，与你的学生共同探索计算机科学概念。Code.org 为所有年级学生提供课程教案、
       课程计划以及高质量的专业学习程序，还有很多有用的工具。&mdash;而且全部免费。:)你不需要任何计算机教学经验，<b>为你的课堂找到合适的内容。</b>"
-    announcement_teacher_recruitment: Teachers like you are leading the computer science
-      education movement. You can participate in high-quality K-12th grade professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Take the lead on computer science in your school, and apply for professional
-      learning.
-    announcement_teacher_recruitment2: Teachers like you are leading the computer
-      science education movement. You can participate in high-quality K-12th grade
-      professional learning programs <strong>at absolutely no cost to you or your
-      school</strong>. Take the lead on computer science in your school, and apply
-      for professional learning. Middle and high school teachers, apply by March 17th.
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
-      of updating our CS Fundamentals courses! We're looking for teachers to pilot
-      an updated CS Fundamentals curriculum during the winter and spring of 2017.
-      We're eager to hear your feedback before these updates go live in August 2017."
-    announcement_student_privacy: Code.org对于保护学生的隐私有着非常认真的态度。为了保护您的学生的隐私，我们已经对您的部分登陆后的页面做了修改来避免显示全名。尽管这个修改应能减低登录页面所带来的隐私风险，我们仍鼓励用户<i>不使用学生的全名</i>。
-    announcement_apcsp_recruitment: '<strong>Computer Science Principles teachers:</strong>
-      Your students could be featured in Code.org''s next viral video encouraging
-      students to take the AP CS Principles exam this year. We''re inviting all CS
-      Principles students to submit a 10-20 second video clip on Twitter, Instagram,
-      or Facebook saying "I''m taking the #APCSP exam because..." The best submissions
-      will be featured in our video and the winning students will receive Code.org
-      swag!'
-    announcement_apcsp_recruitment2: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send
-      you a gift</a>. Students can also encourage peers across the country in our
-      <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>.
-    announcement_apcsp_recruitment3: This year's AP CS Principles exam is poised to
-      break records. Student participation in the exam could dramatically shift diversity
-      in AP Computer Science, but we need your help. Encourage every CS Principles
-      student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a
-      gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this
-      video</a> so your students can hear from their peers around the country who
-      are taking the exam.
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
+    announcement_teacher_recruitment: "和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。"
+    announcement_teacher_recruitment2: "和您一样的教师在领导计算机科学教育的潮流。你可以参加高质量的12年级的专业学习课程，<strong>这对您和您的学校都是完全免费的</strong>。成为您的学校的计算机科学领头羊，并申请专业学习。中学老师请于3月17日前申请。"
+    announcement_csf_pilot: "<strong>小学教师们：</strong>加入我们来更新计算机基础教育课程！我们在寻找教师于2017年冬季春季，来试用计算机科学基础教程。我们希望能在2017年8月更新前听到您的反馈。"
+    announcement_student_privacy: Code.org对于保护学生的隐私有着非常认真的态度。为了保护您的学生的隐私，我们已经对您的小组的登录页面做了修改，不显示全名。尽管这个修改应能减低登录页面所带来的隐私风险，我们仍鼓励用户<i>不使用学生的全名</i>。
+    announcement_apcsp_recruitment: "<strong>计算机科学原理教师们：</strong> 您的学生有可能被下一个病毒式视频所选中，这个视频用来鼓励学生们获得计算机科学原理课程考试的绩点。我们正在邀请所有的计算机科学原理的学生来提交一个10到20秒的短片到各种社交网站上：“我正在学习
+      #APCSP 课程，因为...”。 最佳视频会被我们选到视频中，获胜的学生也会受到Code.org的礼物！"
+    announcement_apcsp_recruitment2: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，我们会<a
+      href='%{gift_url}' target='_blank'>送出礼物</a>。学生们也可以在我们的 <a href='%{challenge_url}'
+      target='_blank'>#APCSP 视频挑战</a>中相互激励。"
+    announcement_apcsp_recruitment3: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，您有可能会得到<a
+      href='%{gift_url}' target='_blank'>礼品卡、笔记本电脑或其它很酷的奖品</a>！分享<a href='%{video_url}'
+      target='_blank'>这个视频</a>，这样学生们能够从参加考试的同伴那里知道它。"
+    announcement_csp_deadline: "给高中老师的最后召唤！率先在您的学校里教授计算机科学，并申请我们的高质量的<strong>完全免费的</strong>专业学习课程。申请将在4月14日关闭。"
+    announcement_applab_export: "应用实验室是我们的网络编程环境，现在支持导出代码了！你可以通过拖放Javascript代码块来创建应用，然后将代码导出到任何专业的开发环境中继续编辑。"
+    announcement_csp_survey: "<b>祝贺计算机科学原理的教师们！</b><br/>您的正在参加AP计算机科学测验的学生们，会和超过50000名学生一起参加历史上最大的AP考试。现在，让您学生的声音被大家听到吧
+      ——记住完成课后调查！你能看到学生们的回答，我们也会将合计后全国的报告分享给您。"
+    announcement_navigation_redesign: "<b>即将到来的站点导航的变化</b><br/>夏天即将来临，我们正在改进整个Code.org站点的导航，以便你能从任何位置都访问自己的最常用的资源。一旦您登录了自己的教师账号，每一页都会有一个新的导航栏，里面的链接包括你的主页、课程、项目集、小组和专业课程。"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
@@ -472,7 +423,7 @@
     student_ids_not_entered: "请提供 student_ids。"
     student_not_found: "无法找到这一个或多个学生。"
     all_students_must_be_in_current_section: "所有的学生都必须注册到您的章节中。"
-    already_enrolled_in_new_section: "您无法移动这些学生，因为有老师将这些学生加入了别的章节中。"
+    already_enrolled_in_new_section: "您无法移动这些学生，因为他们已经在这个新的小组里了。"
   share:
     title: "在代码工作室学习"
     description: "任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。"
@@ -518,12 +469,12 @@
     report_abuse: "报告滥用"
     built_on_code_studio: "在代码工作室中建立"
     make_my_own_app: "制作我自己的应用程序"
-    how_it_works: "它是如何工作的"
+    how_it_works: "它是如何工作的（查看代码）"
     try_hour_of_code: "试试《编程一小时》！"
   reference_area:
     title: "需要帮助吗？"
     subtitle: "看看这些视频和提示"
-    teacher: "请参阅解决方案"
+    teacher: "参阅解决方案"
     auth_error: "您无权查看该解决方案。"
     submit: "更新小艺术家的位置"
     direction: "开始方向 （以度为单位）"
@@ -538,15 +489,9 @@
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}',
         target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
       link: "了解详情"
-      applab_unsupported_tablet: App Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
-      gamelab_unsupported_tablet: Game Lab works best on a desktop or laptop computer
-        with a mouse and keyboard. You may experience issues using this tool on your
-        current device.
-      weblab_unsupported_browser: Unfortunately, we're currently experiencing issues
-        with loading Web Lab on this browser. You may want to use a different browser
-        until this is resolved. Sorry for the inconvenience.
+      applab_unsupported_tablet: "应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。"
+      gamelab_unsupported_tablet: "游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。"
+      weblab_unsupported_browser: "很遗憾，在当前浏览器中加载网络实验室时遇到一些问题。您也许可以先试试另一个浏览器，直到我们解决了这个问题。很抱歉造成您的不便。"
       weblab_unsupported_locale_storage: "在私密浏览模式下使用 Web Lab可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。"
   slow_loading: "请再多等一会儿..."
   try_reloading: "请重新刷新页面"
@@ -603,6 +548,11 @@
     gallery:
       title: "作品"
       body: "查看由我们用户创建的应用程序和艺术家图片的作品"
+    gamelab:
+      title: "游戏实验室 （测试版）"
+      body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
+      audience: 13岁以上
+      cta: "了解操作方法"
     frozen:
       title: "冰雪奇缘"
     starwars:
@@ -621,6 +571,14 @@
       audience: "适合年龄 4 岁以上"
       body: "我们已经为你的班级编排了一系列的线下课程。现在无论你的课堂里是否有计算机，你都可以教计算机科学基础！尝试利用这些课程，来作为一门独立的课程或作为任何计算机科学课程的补充。"
       body_short: "如果你没有电脑，可以在你的教室试试这些离线的教程。"
+    unplugged_conditionals:
+      title: "条件语句"
+      body: "在这个离线活动中，通过扑克牌来学习算法和条件判断语句。"
+    widgets:
+      title: "小部件"
+      body: "学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。"
+      audience: 14 岁或以上
+      cta: "了解操作方法"
   gallery:
     students_drew_these_with_code: "学生使用代码画了这些图案!"
     students_made_these_with_code: "学生使用代码做了这些内容!"
@@ -644,7 +602,7 @@
     help_resources: "帮助和资源"
     help_support: "帮助与支持"
     documentation: "使用文档"
-    tutorials: "使用教程"
+    tutorials: "教程"
   multi:
     wrong_title: "不正确的答案"
     wrong_body: "你已输入的答案不正确。请再试一次 ！"
@@ -727,6 +685,11 @@
     reminder_desc: 我们更新了我们的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank">
       隐私政策</a>。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，我们教学 JavaScript 的工具学生可能不能使用。
     review_terms: "查看更新后的条款"
+  school_info_interstitial:
+    title: "我们想将计算机科学带给每一个学生——帮助我们记录进度！"
+    message: "请在下方输入您的学校信息。"
+    message_with_suggestion: "请检查下面的信息是否正确，或是否需要更新。"
+    save: "保存​​"
   race_interstitial:
     title: "可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。"
     message: "请告诉我们您的种族（选择所有适用的项目）"
@@ -765,6 +728,9 @@
     delete: "刪除"
     exit: "返回课程"
     my_projects: "我的项目"
+    project_gallery: "项目集"
+    publish: "发布"
+    unpublish: "取消发布"
     share: "分享"
     share_title: "分享您的项目"
     share_copy_link: "复制链接："
@@ -772,6 +738,7 @@
     share_u13_warning: "在分享之前问问你的老师。只和你学校里的其他人分享。"
     embed: "嵌入"
     advanced_share: "显示更高级的选项"
+    no_projects: "你当前没有任何项目，点击上面的任何按钮来开始一个项目。"
     close: "关闭"
     more: "更多"
     name: "姓名"
@@ -779,6 +746,7 @@
     project_type: "项目类型"
     help_text: "单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 制作一个新的游戏实验室或者是艺术家项目！<br/>您可以在随时来继续这个项目。"
     need_help: "实施这些课程来帮助你开始新项目。"
+    thumbnail_help: "没有为您的项目扎红到正确的缩略图？运行您的应用来生成一个新的缩略图。注意，需要几个小时后，缩略图才会同步显示到每个地方。"
     really_delete: "要删除吗？"
     delete_yes: "是"
     delete_no: "不"
@@ -838,16 +806,6 @@
     icon_library:
       search_placeholder_text: "搜索图标..."
       no_icons_found: "找不到图标"
-    playzone:
-      artist_description: "和小艺术家一起设计出很酷的图形！"
-      artist_title: "新的绘图"
-      continue_button: "去下一阶段"
-      playlab_description: "通过游戏实验室创建故事或制作游戏！"
-      playlab_title: "新的应用"
-      primary_header: "祝贺你 ！你完成了 %{stageName} ！"
-      projects_description: "重新审视你现有的项目之一。"
-      projects_title: "打开一个项目"
-      secondary_header: "问你的老师要下一步做什么"
   flex_category:
     required: "概览"
     content: "内容"
@@ -858,6 +816,31 @@
     optional_stages: Optional Stages
     main_course: "主要课程"
     extra_course_content: "额外的课程内容"
+    csd1_1: "第 1 章︰ 解决问题的流程"
+    csd1_2: "第 2 章︰ 计算机和解决问题的能力"
+    csd2_1: "第 1 章︰ 网站内容和 HTML"
+    csd2_2: "第 2 章︰ 样式和 CSS"
+    csd3_1: "第 1 章︰图像和动画"
+    csd3_2: "第 2 章︰ 创建游戏"
+    csd4_1: "第 1 章︰ 用户为中心的设计"
+    csd4_2: "第 2 章︰ 应用程序原型"
+    csd5_1: "第 1 章︰ 表达信息"
+    csd5_2: "第 2 章︰ 解决数据问题"
+    csd6_1: "第 1 章︰ 硬件输出"
+    csd6_2: "第 2 章︰ 硬件输入"
+    csp1_1: "第一章：表达和传输信息"
+    csp1_2: "第二章：发明互联网"
+    csp2_1: "第一章：编码和压缩复杂信息"
+    csp2_2: "第二章：使用和可视化数据"
+    csp3_1: "第一章：编程语言和算法"
+    csp4_1: "第一章：大数据和加密的世界"
+    csp5_1: "第一章：事件驱动编程"
+    csp5_2: "第二章：用数据结构编程"
+    cspSurvey: "调查"
+    cspAssessment: "章节测验"
+    csp_ap_1: "第一章：安装"
+    csp_ap_2: "第二章：浏览成绩工具"
+    csp_ap_3: "第三章：创建性能工具"
   external_links:
     disclaimer: "免责声明"
     leaving_domain: "你现在正在离开code.org，访问一个不由我们创建的站点。"
@@ -934,6 +917,7 @@
   locked_stage: "这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。"
   hidden_stage: "你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。"
   return_course_overview: "转到单元概述"
+  view_all_units: "查看所有单元"
   pd:
     survey:
       number_teachers: Number of attending teachers

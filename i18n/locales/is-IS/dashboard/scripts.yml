@@ -679,9 +679,9 @@ is:
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Eftirkönnun
             The Tutorial:
-              name: The Tutorial
+              name: Kennslustundin
             Using Computer Models in Science:
               name: Notkun tölvulíkana í vísindum
             Using Models in the Classroom:
@@ -885,9 +885,9 @@ is:
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Eftirkönnun
             The Tutorial:
-              name: The Tutorial
+              name: Kennslustundin
             Using Computer Models in Science:
               name: Notkun tölvulíkana í vísindum
             Using Models in the Classroom:
@@ -916,9 +916,9 @@ is:
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Eftirkönnun
             The Tutorial:
-              name: The Tutorial
+              name: Kennslustundin
             Using Computer Models in Science:
               name: Notkun tölvulíkana í vísindum
             Using Models in the Classroom:
@@ -970,7 +970,7 @@ is:
             Algorithms Detour - Hard Problems TSP:
               name: Erfið verkefni - Vandamál farandsölumannsins
             Algorithms Detour - How Routers Learn:
-              name: How Routers Learn
+              name: Hvernig beinar læra
             Algorithms Detour - Minimum Spanning Tree:
               name: Algorithms Detour - Minimum Spanning Tree
             Algorithms Detour - Shortest Path:
@@ -980,9 +980,9 @@ is:
             Cracking the Code:
               name: Cracking the Code
             DNS in the Real World:
-              name: DNS in the Real World
+              name: DNS í raunheimi
             Encryption Algorithms:
-              name: Keys and Passwords
+              name: Lyklar og aðgangsorð
             HTTP and Abstraction:
               name: HTTP and Abstraction on the Internet
             Invent an Addressing Protocol:
@@ -990,7 +990,7 @@ is:
             One Way Functions - Ice Cream Vans:
               name: One-Way Functions - The WiFi Hotspot Problem
             Packets and Making a Reliable Internet:
-              name: Packets and Making a Reliable Internet
+              name: Pakkar og gerð áreiðanlegs internets
             Practice PT - Cybersecurity Innovations:
               name: Practice PT - Cybersecurity Innovations
             Practice PT - The Internet and Society:
@@ -1000,13 +1000,13 @@ is:
             Routers and Redundancy:
               name: Routers and Redundancy
             Tell Me a Secret - Encrypting Text:
-              name: The Need for Encryption
+              name: Þörfin fyrir dulkóðun
             The Internet:
               name: Internetið
             The Need for Addressing:
-              name: The Need for Addressing
+              name: Þörfin fyrir vistföng
             The Need for DNS:
-              name: The Need for DNS
+              name: Þörfin fyrir DNS
           description_audience: ''
         algebraPD2a:
           title: Tölvunarfræði í algebru - fagmenntun
@@ -1015,15 +1015,15 @@ is:
           description_audience: ''
           stages:
             Big Game - Animation:
-              name: Big Game - Animation
+              name: Stórleikur - Hreyfimyndir
             Big Game - Booleans:
-              name: Big Game - Booleans
+              name: Stórleikur - Boole gildi
             Big Game - Collision Detection:
-              name: Big Game - Collision Detection
+              name: Stórleikur - Skynjun árekstra
             Big Game - Player Movement:
-              name: Big Game - Player Movement
+              name: Stórleikur - Hreyfing leikmanna
             Big Game - Variables:
-              name: Big Game - Variables
+              name: Stórleikur - Breytur
             Booleans:
               name: Boolean gildi
             Defining Variables:
@@ -1049,9 +1049,9 @@ is:
           description_audience: ''
           stages:
             Anonymous student survey:
-              name: Anonymous student survey
+              name: Nafnlaus nemendakönnun
             Anonymous student survey 2:
-              name: Anonymous student survey 2
+              name: Nafnlaus nemendakönnun 2
             AppLab:
               name: App-smiðjan
             Artist:
@@ -1063,19 +1063,19 @@ is:
             CSinA:
               name: CSinA
             Farmer:
-              name: Farmer
+              name: Bóndi
             Flappy:
               name: Flappy
             Free Response:
-              name: Free Response
+              name: Frjálst svar
             Gamelab:
-              name: Gamelab
+              name: Leikjasmiðja
             Jigsaw:
               name: Púsl
             Long assessment:
-              name: Long assessment
+              name: Langt mat
             Markdown Details:
-              name: Markdown Details
+              name: Markdown upplýsingar
             Match:
               name: Tengja
             Maze:
@@ -1095,7 +1095,7 @@ is:
             Pixelation:
               name: Dílamynstur
             PlayLab:
-              name: PlayLab
+              name: Leikjasmiðja
             Public Key Cryptography:
               name: Public Key Cryptography
             Rich long assessment:
@@ -1103,7 +1103,7 @@ is:
             Sample PLC Assessment:
               name: Sample PLC Assessment
             Star wars:
-              name: Star wars
+              name: Stjörnustríð
             Studio:
               name: Stúdíó
             Swapped Levels:
@@ -1506,13 +1506,13 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Intro to Unit 2:
-              name: Intro to Unit 2
+              name: Kynning á 2. einingu
             Lesson Overviews:
-              name: Lesson Overviews
+              name: Yfirlit kennslustunda
             Teaching Strategies:
               name: Kennslunálganir
             Unit 2 Challenge:
-              name: Unit 2 Challenge
+              name: Áskorun 2. einingar
         ECSPD3-Unit3:
           title: 'Exploring Computer Science: Unit 3'
           description: Academic Year Development
@@ -1524,13 +1524,13 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Intro to Unit 3:
-              name: Intro to Unit 3
+              name: Kynning á 3. einingu
             Teaching Strategies:
               name: Kennslunálganir
             Unit 3 Challenge:
-              name: Unit 3 Challenge
+              name: Áskorun 3. einingar
             Unit 3 Day-by-Day:
-              name: Unit 3 Day-by-Day
+              name: Dagskrá 3. einingar
         ECSPD3-Unit4:
           title: 'Exploring Computer Science: Unit 4'
           description: Academic Year Development
@@ -1542,13 +1542,13 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Intro to Unit 4:
-              name: Intro to Unit 4
+              name: Kynning á 4. einingu
             Teaching Strategies:
               name: Kennslunálganir
             Unit 4 Challenge:
-              name: Unit 4 Challenge
+              name: Áskorun 4. einingar
             Unit 4 Day-by-Day:
-              name: Unit 4 Day-by-Day
+              name: Dagskrá 4. einingar
         ECSPD3-Unit5:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1556,17 +1556,17 @@ is:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Getting Started:
               name: Fyrstu skrefin
             Introduction to the Unit 5 Challenge:
-              name: Introduction to the Unit 5 Challenge
+              name: Kynning á áskorun 5. einingar
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Yfirlit 5. einingar
             Unit 5 lessons:
-              name: Unit 5 lessons
+              name: Kennslustundir 5. einingar
         ECSPD3-Unit6:
           title: 'Exploring Computer Science PD: Academic Year Development'
           description: Academic Year Development
@@ -1574,17 +1574,17 @@ is:
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: Alternative Ideas for Unit 6
+              name: Aðrar hugmyndir fyrir 6. einingu
             Getting Started:
               name: Fyrstu skrefin
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 6 Challenge:
-              name: Unit 6 Challenge
+              name: Áskorun 6. einingar
             Unit 6 Overview:
-              name: Unit 6 Overview
+              name: Yfirlit 6. einingar
             Unit 6 lessons:
-              name: Unit 6 lessons
+              name: Kennslustundir 6. einingar
         cspunit4draft:
           title: CS Principles Unit 4 - Data
           description: "Collect, analyze, and extract knowledge from data by programming and\\r\nbuilding apps. Process data imported from other sources and also pull\\r\ndata from live data APIs."
@@ -1592,51 +1592,51 @@ is:
           description_audience: ''
           stages:
             Check Your Assumptions:
-              name: Check Your Assumptions
+              name: Kannaðu hvað þú heldur
             Cleaning Data:
-              name: Cleaning Data
+              name: Hreinsun gagna
             Compiling Data:
-              name: Compiling Data
+              name: Söfnun gagna
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Gerð Javascript hluta
             Creating Summary Tables:
-              name: Creating Summary Tables
+              name: Gerð samantektartaflna
             Data, Security, and Privacy:
-              name: Data, Security, and Privacy
+              name: Gögn, öryggi og persónuvernd
             Designing Data Collection:
-              name: Designing Data Collection
+              name: Söfnun gagna hönnuð
             Designing for Your User:
-              name: Designing for Your User
+              name: Hannað fyrir notandann
             Discover a Data Story:
               name: Discover a Data Story
             Finding Trends with Visualizations:
-              name: Finding Trends with Visualizations
+              name: Leitni fundin sjónrænt
             Good and Bad Data Visualizations:
-              name: Good and Bad Data Visualizations
+              name: Góðar og slæmar sjóngerðir gagna
             How is Data Collected?:
-              name: How is Data Collected?
+              name: Hvernig er gögnum safnað?
             Import, Export, and Visualize Data:
-              name: Import, Export, and Visualize Data
+              name: Innflutningur, útflutningur og sjóngerð gagna
             Interpreting Data Visualizations:
-              name: Interpreting Data Visualizations
+              name: Túlkun sjóngerðra gagna
             Making Data Visualizations:
-              name: Making Data Visualizations
+              name: Gögn gerð sjónræn
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Varanleg vistun gagna
             Permanent Data Storage and Clicker Completion:
-              name: Permanent Data Storage and Clicker Completion
+              name: Varanleg vistun gagna og lokið við Clicker
             'Practice Create PT: Data App':
               name: 'Practice Create PT: Data App'
             Privacy in a Digital World:
-              name: Privacy in a Digital World
+              name: Persónuvernd í stafrænum heimi
             Privacy vs Utility:
-              name: Privacy vs Utility
+              name: Persónuvernd gegn notagildi
             Rapid Research - Data Innovations:
               name: Rapid Research - Data Innovations
             Reading Records:
-              name: Reading Records
+              name: Lestur færslna
             Search Terms:
-              name: Search Terms
+              name: Leitarorð
             Unique IDs, Delete and Update Records:
               name: Unique IDs, Delete and Update Records
             Using Data in the Real World:
@@ -1694,11 +1694,11 @@ is:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Getting Started:
               name: Fyrstu skrefin
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 2 Overview:
               name: Unit 2 Overview
         duino:
@@ -1757,13 +1757,13 @@ is:
             Chunk 5 Overview:
               name: Chunk 5 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Getting Started:
               name: Fyrstu skrefin
             Practice Performance Task:
               name: Practice Performance Task
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 3 Overview:
               name: Unit 3 Overview
         cspunit3temp:
@@ -1846,9 +1846,9 @@ is:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
         ScienceP3OLPT3:
           title: Computer Science in Science PD Pre-Phase 3B
           description: Phase 3 Academic Year Development
@@ -1883,23 +1883,23 @@ is:
           description_audience: ''
           stages:
             Check Your Assumptions:
-              name: Check Your Assumptions
+              name: Kannaðu hvað þú heldur
             Cleaning Data:
-              name: Cleaning Data
+              name: Hreinsun gagna
             Creating Summary Tables:
-              name: Creating Summary Tables
+              name: Gerð samantektartaflna
             Discover a Data Story:
               name: Discover a Data Story
             Finding Trends with Visualizations:
-              name: Finding Trends with Visualizations
+              name: Leitni fundin sjónrænt
             Good and Bad Data Visualizations:
-              name: Good and Bad Data Visualizations
+              name: Góðar og slæmar sjóngerðir gagna
             Identifying People with Data:
               name: Identifying People with Data
             Intro to Data:
               name: Introduction to Data
             Making Data Visualizations:
-              name: Making Data Visualizations
+              name: Gögn gerð sjónræn
             Practice PT - Propose an Innovation:
               name: Practice PT - Propose an Innovation
             Practice PT - Tell a Data Story:
@@ -1922,13 +1922,13 @@ is:
             Chapter 2 Overview:
               name: Chapter 2 Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Getting Started:
               name: Fyrstu skrefin
             Practice Performance Tasks:
               name: Practice Performance Tasks
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 4 Overview:
               name: Unit 4 Overview
         cspunit6draft:
@@ -1937,7 +1937,7 @@ is:
           description_short: Data Apps
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Gerð Javascript hluta
             Deleting Records:
               name: Deleting Records
             Final Project:
@@ -1945,9 +1945,9 @@ is:
             Importing and Exporting Data:
               name: Importing and Exporting Data
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Varanleg vistun gagna
             Reading Records:
-              name: Reading Records
+              name: Lestur færslna
             Sample Apps:
               name: Sample Apps
             Updating Records:
@@ -1962,7 +1962,7 @@ is:
             Challenge Overview:
               name: Challenge Overview
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Create PT Breakdown:
               name: Create PT Breakdown
             Explore PT Breakdown:
@@ -1970,9 +1970,9 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Yfirlit 5. einingar
         cspunit6:
           title: CSP Post-AP Material - Databases and Using Data in Your Apps
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
@@ -1980,7 +1980,7 @@ is:
           description_audience: ''
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Gerð Javascript hluta
             Deleting Records:
               name: Deleting Records
             Final Project:
@@ -1988,9 +1988,9 @@ is:
             Importing and Exporting Data:
               name: Importing and Exporting Data
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Varanleg vistun gagna
             Reading Records:
-              name: Reading Records
+              name: Lestur færslna
             Sample Apps:
               name: Sample Apps
             Updating Records:
@@ -2105,7 +2105,7 @@ is:
             Number Systems:
               name: Talnakerfi
             Packets and Making a Reliable Internet:
-              name: Packets and Making a Reliable Internet
+              name: Pakkar og gerð áreiðanlegs internets
             Personal Innovations:
               name: Persónuleg nýsköpun
             Practice PT - The Internet and Society:
@@ -2121,9 +2121,9 @@ is:
             The Internet:
               name: Internetið
             The Need for Addressing:
-              name: The Need for Addressing
+              name: Þörfin fyrir vistföng
             The Need for DNS:
-              name: The Need for DNS
+              name: Þörfin fyrir DNS
             Unit 1 Chapter 1 Assessment:
               name: Unit 1 Chapter 1 Assessment
             Unit 1 Chapter 2 Assessment:
@@ -2143,11 +2143,11 @@ is:
             Bytes and File Sizes:
               name: Bæti og skráastærðir
             Check Your Assumptions:
-              name: Check Your Assumptions
+              name: Kannaðu hvað þú heldur
             Cleaning Data:
-              name: Cleaning Data
+              name: Hreinsun gagna
             Creating Summary Tables:
-              name: Creating Summary Tables
+              name: Gerð samantektartaflna
             Discover a Data Story:
               name: Discover a Data Story
             Encode a Complex Thing:
@@ -2157,15 +2157,15 @@ is:
             Encoding Color Images:
               name: Kóðun litmynda
             Finding Trends with Visualizations:
-              name: Finding Trends with Visualizations
+              name: Leitni fundin sjónrænt
             Good and Bad Data Visualizations:
-              name: Good and Bad Data Visualizations
+              name: Góðar og slæmar sjóngerðir gagna
             Intro to Data:
               name: Intro to Data
             Lossy Compression and File Formats:
               name: Þjöppun með tapi og skráasnið
             Making Data Visualizations:
-              name: Making Data Visualizations
+              name: Gögn gerð sjónræn
             Practice PT - Tell a Data Story:
               name: Practice PT - Tell a Data Story
             Text Compression:
@@ -2471,9 +2471,9 @@ is:
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Eftirkönnun
             The Tutorial:
-              name: The Tutorial
+              name: Kennslustundin
             Using Computer Models in Science:
               name: Notkun tölvulíkana í vísindum
             Using Models in the Classroom:
@@ -2547,9 +2547,9 @@ is:
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
-              name: Post-Survey
+              name: Eftirkönnun
             The Tutorial:
-              name: The Tutorial
+              name: Kennslustundin
             Using Computer Models in Science:
               name: Notkun tölvulíkana í vísindum
             Using Models in the Classroom:
@@ -3089,13 +3089,13 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Intro to Unit 2:
-              name: Intro to Unit 2
+              name: Kynning á 2. einingu
             Lesson Overviews:
-              name: Lesson Overviews
+              name: Yfirlit kennslustunda
             Teaching Strategies:
               name: Kennslunálganir
             Unit 2 Challenge:
-              name: Unit 2 Challenge
+              name: Áskorun 2. einingar
         ecs-unit3:
           title: ECS Unit 3
           description: 'Unit 3: Web Design'
@@ -3107,13 +3107,13 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Intro to Unit 3:
-              name: Intro to Unit 3
+              name: Kynning á 3. einingu
             Teaching Strategies:
               name: Kennslunálganir
             Unit 3 Challenge:
-              name: Unit 3 Challenge
+              name: Áskorun 3. einingar
             Unit 3 Day-by-Day:
-              name: Unit 3 Day-by-Day
+              name: Dagskrá 3. einingar
         ecs-unit4:
           title: ECS Unit 4
           description: 'Unit 4: Programming'
@@ -3125,13 +3125,13 @@ is:
             Getting Started:
               name: Fyrstu skrefin
             Intro to Unit 4:
-              name: Intro to Unit 4
+              name: Kynning á 4. einingu
             Teaching Strategies:
               name: Kennslunálganir
             Unit 4 Challenge:
-              name: Unit 4 Challenge
+              name: Áskorun 4. einingar
             Unit 4 Day-by-Day:
-              name: Unit 4 Day-by-Day
+              name: Dagskrá 4. einingar
         ecs-unit5:
           title: ECS Unit 5
           description: 'Unit 5: Computer and Data Analysis'
@@ -3139,17 +3139,17 @@ is:
           description_audience: ''
           stages:
             Complete the Challenge:
-              name: Complete the Challenge
+              name: Ljúka áskoruninni
             Getting Started:
               name: Fyrstu skrefin
             Introduction to the Unit 5 Challenge:
-              name: Introduction to the Unit 5 Challenge
+              name: Kynning á áskorun 5. einingar
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Yfirlit 5. einingar
             Unit 5 lessons:
-              name: Unit 5 lessons
+              name: Kennslustundir 5. einingar
             Unit 5 Challenge:
               name: Unit 5 Challenge
             Close & Next Steps:
@@ -3161,17 +3161,17 @@ is:
           description_audience: ''
           stages:
             Alternative Ideas for Unit 6:
-              name: Alternative Ideas for Unit 6
+              name: Aðrar hugmyndir fyrir 6. einingu
             Getting Started:
               name: Fyrstu skrefin
             Share out and Submit:
-              name: Share out and Submit
+              name: Deila og senda inn
             Unit 6 Challenge:
-              name: Unit 6 Challenge
+              name: Áskorun 6. einingar
             Unit 6 Overview:
-              name: Unit 6 Overview
+              name: Yfirlit 6. einingar
             Unit 6 lessons:
-              name: Unit 6 lessons
+              name: Kennslustundir 6. einingar
             Close & Next Steps:
               name: Close & Next Steps
         grade3:
@@ -3256,8 +3256,8 @@ is:
               name: Draw Loop and Randomization
             Drawing in Game Lab:
               name: Teikning í Leikjasmiðju
-              description_student: The class is introduced to Game Lab, the programming environment for this unit, and begins to use it to position shapes on the screen. Thee lesson covers the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, the class creates an online version of the image they designed in the previous lesson.
-              description_teacher: Students are introduced to Game Lab, the programming environment for this unit, and begin to use it to position shapes on the screen. They learn the basics of sequencing and debugging, as well as a few simple commands. At the end of the lesson, students will be able to program images like the ones they made with the drawing tool in the previous lesson.
+              description_student: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans býr hópurinn til netútgáfu af myndinni sem hann hannaði í næsta tíma á undan.
+              description_teacher: Hópurinn fær kynningu á Leikjasmiðjunni (Game Lab), sem er forritunarumhverfi þessarar einingar, og byrjar að nota hana til að setja form á skjáinn. Í kennslustundinni er farið í grunnatriði aðgerðaröðunar (sequencing) og villuleitar, svo og nokkrar einfaldar aðgerðir. Í lok tímans verða nemendur færir um að forrita myndir eins og þær sem þeir teiknuðu með teikniverkfærinu í tímanum á undan.
             'Project: Interactive Card':
               name: 'Verkefni: Gagnvirkt kort'
             Sprites and Images:
@@ -3270,28 +3270,28 @@ is:
               name: Breytur og hreyfing
             Velocity:
               name: Hraði
-              description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
-              description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
+              description_student: Eftir stutta skoðun á því hvernig teljaramynstrið er notað til að hreyfa kvika, fær hópurinn kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller).
+              description_teacher: Eftir stutta skoðun á því hvernig þeir notuðu teljaramynstrið til að hreyfa kvika í tímanum á undan, fá nemendur kynningu á þeim eiginleikum sem stjórna hraða og snúningshraða beint. Með því að nota þessa nýju eiginleika á mismunandi hátt, þróa nemendur þá færni sem þarf til að búa til einfaldan skrunleik (side scroller).
             Collision Detection:
               name: Skynjun árekstra
-              description_student: The class learns about collision detection on the computer.  Pairs explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  The class then uses the isTouching() block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
-              description_teacher: Students learn about collision detection on the computer.  Working in pairs, they explore how a computer could use sprite location and size properties and math to detect whether two sprites are touching.  They then use the `isTouching()` block to create different effects when sprites collide, including playing sounds.  Last, they use their new skills to improve the sidescroller game that they started in the last lesson.
+              description_student: Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
+              description_teacher: Hópurinn lærir um árekstragreiningu í forritun.  Pör kanna hvernig tölvan gæti notað eiginleika kvika fyrir stað og stærð ásamt stærðfræði til að greina hvort tveir kvikar séu að snertast.  Hópurinn notar svo kubbinn isTouching() til að skapa ýmis áhrif þegar kvikar rekast á, svo sem leikhljóð. Að síðustu nota þeir þessa nýju færni til að betrumbæta skrunleikinn sem þeir byrjuðu á í síðasta tíma.
             Complex Sprite Movement:
               name: Samsett kvikahreyfing
-              description_student: 'The class learns to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement, such as simulating gravity, making a sprite jump, and allowing a sprite to float left or right. In the final levels the class combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects coins. '
-              description_teacher: Students learn to combine the velocity properties of sprites with the counter pattern to create more complex sprite movement. In particular students will learn how to simulate gravity, make a sprite jump, and allow a sprite to float left or right. In the final levels of the Code Studio progression students combine these movements to animate and control a single sprite and build a simple game in which a character flies around and collects a coin. Students are encouraged to make their own additions to the game in the final level.
+              description_student: 'Hópurinn lærir að samtvinna hraðaeiginleika kvika og teljaramynstrið til að framkalla flóknari hreyfingar kvika, svo sem að líkja eftir þyngdaraflinu, láta kvika stökkva og leyfa kvika að sveima til hægri eða vinstri. Í síðustu áföngunum sameinar hópurinn þetta til að hreyfa og stjórna stökum kvika og smíða einfaldan leik þar sem leikvera flýgur um og safnar peningum. '
+              description_teacher: Nemendur læra að nota hraðaeiginleika kvika ásamt teljaramynstrinu til að kalla fram flóknari hreyfingar kvikanna. Sérstaklega munu nemendur læra að líkja eftir þyngdaraflinu, láta kvika stökkva og láta kvika svífa til hægri og vinstri. Í síðustu áföngum þessarar framvindu í Kóðastúdíóinu nota nemendur þessar hreyfingar saman til að hreyfa og stjórna stökum kvika og búa til einfaldan leik þar semleikvera flýgur um og safnar peningum. Nemendur eru hvattir til að bæta eigin hugmyndum í leikinn í síðasta áfanganum.
             Collisions:
               name: Árekstrar
-              description_student: The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
-              description_teacher: Students program their sprites to interact in new ways.  After a brief review of how they used the `isTouching` block, students brainstorm other ways that two sprites could interact.  They then use `isTouching` to make one sprite push another across the screen before practicing with the four collision blocks (`collide`, `displace`, `bounce`, and `bounceOff`).
+              description_student: Hópurinn forritar kvika til að eiga samskipti á nýjan hátt.  Eftir stutta upprifjun á hvernig isTouching() kubburinn var notaður, kannar hópurinn hvaða önnur samskipti kvikar gætu átt. Þeir nota síðan isTouching() til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (collide, displace, bounce og bounceOff).
+              description_teacher: Nemendur forrita kvika til að eiga samskipti á nýjan hátt.  Eftir stutta upprifjun á hvernig isTouching() kubburinn var notaður, kanna nemendur hvaða önnur samskipti tveir kvikar gætu átt. Þeir nota síðan isTouching() til að láta einn kvika ýta öðrum yfir skjáinn og æfa síðan árekstrarkubbana fjóra (`collide`, `displace`, `bounce` og `bounceOff`).
             Functions:
               name: Föll
-              description_student: This lesson covers functions as a way to organize their code, make it more readable, and remove repeated blocks of code. The class learns that higher level or more abstract steps make it easier to understand and reason about steps, then begins to create functions in Game Lab.  At the end of the lesson the class uses these skills to organize and add functionality to the final version of their side scroller game.
-              description_teacher: Students learn how to create functions to organize their code, make it more readable, and remove repeated blocks of code. An unplugged warmup explores how directions at different levels of detail can be useful depending on context. Students learn that higher level or more abstract steps make it easier to understand and reason about steps. Afterwards students learn to create functions in Game Lab. They will use functions to remove long blocks of code from their draw loop and to replace repeated pieces of code with a single function. At the end of the lesson students use these skills to organize and add functionality to the final version of their side scroller game.
+              description_student: Þessi kennslustund tekur fyrir föll sem aðferð til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Hópurinn lærir að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti og síðan mun hann byrja að búa til föll í Leikjasmiðjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til.
+              description_teacher: Nemendur læra að búa til föll til að skipuleggja kóða, gera hann læsilegri og losna við endurteknar skipanastæður. Upphitun án tölvu kannar hvernig hægt er að gefa fyrirmæli með mismunandi miklum smáatriðum og hvernig það getur verið gagnlegt eftir aðstæðum. Nemendur læra að það er auðveldara að skilja og útskýra óhlutbundari aðgerðir í forriti. Síðan læra þeir að búa til föll í Leikjasmiðjunni. Þeir munu læra að nota föll í stað langra runa af endurteknum kóða, sem þeir geta þá fjarlægt úr teiknilykkjunni. Í lok tímans notar hópurinn þessa færni til að skipuleggja og bæta virkni í lokaútgáfu skrunleiksins sem þau bjuggu til.
             The Game Design Process:
               name: Ferli leikjahönnunar
-              description_student: This lesson introduces the process the class will use to design games for the remainder of the unit. The class walks through through this process in a series of levels. As part of this lesson the class also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson they have an opportunity to make improvements to the game to make it their own.
-              description_teacher: This lesson introduces students to the process they will use to design games for the remainder of the unit. This process is centered around a project guide which asks students to define their sprites, variables, and functions before they begin programming their game. In this lesson students begin by playing a game on Game Lab where the code is hidden. They discuss what they think the sprites, variables, and functions would need to be to make the game. They are then given a completed project guide which shows one way to implement the game. Students are then walked through this process through a series of levels. As part of this lesson students also briefly learn to use multi-frame animations in Game Lab. At the end of the lesson students have an opportunity to make improvements to the game to make it their own.
+              description_student: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
+              description_teacher: Þessi kennslustund kynnir ferlið sem hópurinn mun nota til að hanna leiki það sem eftir er einingarinnar. Ferlið er byggt á verkefnishandbók sem biður nemendur að skilgreina kvika sína, breytur og föll áður en þeir byrja að forrita leikinn. Í tímanum byrja nemendur á að spila leik í Leikjasmiðjunni þar sem kóðinn er falinn. Þeir ræða hvaða kvika, breytur og föll gæti þurft til að búa til slíkan leik. Þeir fá síðan í hendur tilbúna verkefnishandbók sem sýnir eina leið til að gera leikinn. Hópurinn fer yfir þetta ferli í röð áfanga. Í tímanum fær hópurinn einnig stutta kynningu á að nota fjölrammahreyfingar í Leikjasmiðjunni. Í lok tímans fá þau tækifæri til að betrumbæta leikinn að vild.
             Using the Game Design Process:
               name: Notkun leikjahönnunarferlisins
               description_student: In this multi-day lesson, the class uses the problem solving process from Unit 1 to create a platform jumper game.  After looking at a sample game, the class defines what their games will look like and uses a structured process to build them.  Finally, the class reflects on how the games could be improved, and implements those changes.
@@ -3334,7 +3334,7 @@ is:
               description_teacher: By combining the Draw Loop and the Counter Pattern, students write programs that move sprites across the screen, as well as animate other sprite properties.
             Conditionals:
               name: Skilyrði
-              description_student: The class starts by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, the class adds conditional if statements to write code that responds to those boolean comparisons.
+              description_student: Hópurinn byrjar á að nota boole-virkja til að bera saman gildið í eiginleika kvika við markgildi og nota þann samanburð til að ákveða hvenær kvikinn hefur náð tilteknum stað á skjánum, náð tiltekinni stærð eða náð öðru tilteknu gildi með því að nota teljaramynstrið. Eftir að hafa nota boole-virkja beint til að kanna gildi í eiginleikum kvika, bætir hópurinn við ef yrðingum sem nota samanburð með boole-virkjum og skrifar kóða til að vinna úr þessum samanburði.
               description_teacher: Students start by using booleans to compare the current value of a sprite property with a target value, using that comparison to determine when a sprite has reached a point on the screen, grown to a given size, or otherwise reached a value using the counter pattern. After using booleans directly to investigate the values or sprite properties, students add conditional _if_ statements to write code that responds to those boolean comparisons.
             Keyboard Input:
               name: Keyboard Input
@@ -3616,7 +3616,7 @@ is:
             Processing Arrays and Functions with Return Values:
               name: Processing Arrays and Functions with Return Values
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Yfirlit 5. einingar
         csp1-support:
           title: Unit 1 Online Professional Learning Course
           description_short: Teacher Professional Learning Course for CSP Unit 1
@@ -4402,7 +4402,7 @@ is:
           description: This is a set of online supports arranged into a Professional Learning Course for CSP teachers preparing to teach Unit 5.
           stages:
             Unit 5 Overview:
-              name: Unit 5 Overview
+              name: Yfirlit 5. einingar
             Event Driven Programming:
               name: Event Driven Programming
             Variables and Strings:
@@ -4435,11 +4435,11 @@ is:
           description: App Lab has a number of tools that allow you to collect and use data in your apps. The following material provides an overview of how these tools work, a sampling of example projects that can be built using these tools, and a space in which to build and submit a final project.
           stages:
             Creating Javascript Objects:
-              name: Creating Javascript Objects
+              name: Gerð Javascript hluta
             Permanent Data Storage:
-              name: Permanent Data Storage
+              name: Varanleg vistun gagna
             Reading Records:
-              name: Reading Records
+              name: Lestur færslna
             Deleting Records:
               name: Deleting Records
             Updating Records:

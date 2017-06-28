@@ -743,9 +743,8 @@
       MikeStarNested_authored_hint:
         hint1: Don't give up!
       NEW Course 4 Artist Functions 13_authored_hint:
-        NEW_Course_4_Artist_Functions_13_a: "編輯 `draw a line of squares`（畫出方格邊）函式，這樣一來，你就不必呼叫它兩次。"
-        NEW_Course_4_Artist_Functions_13_b: "注意，你必須向前移動 60 像素還有轉向 144 度。"
-        NEW_Course_4_Artist_Functions_13_c: "如果你要製作一個有固定線條的星星圖像，需要怎麼編程呢？"
+        NEW_Course_4_Artist_Functions_13_a: "試試修改 `draw a line of squares`（畫出方格邊）函式，這樣一來，你就不必呼叫它兩次。"
+        NEW_Course_4_Artist_Functions_13_c: "如果你要製作一個有規律線條的星星圖像，要編寫怎樣的程式碼呢？"
       NEW Course 4 Artist Functions 4_authored_hint:
         NEW_Course_4_Artist_Functions_4_a: "你必須在畫出每個正方形之後使用 `轉向-右方 120 度`積木。"
       NEW Course 4 Artist Functions 9_authored_hint:
@@ -798,6 +797,8 @@
 
           ![](https://images.code.org/a4883ea91c2f879ca1bb281d7944ed87-image-1471477752512.48.07 PM.png)
         turn_at_honeycomb_pointer: "除了釀造蜂蜜，你看得出來在每個蜂窩上還要做些什麼嗎？"
+      Quantum Bee - Ryan_authored_hint:
+        test_hint: "這是測試用提示。"
       aE1_authored_hint: []
       aE2_authored_hint:
         aE2_a: "注意，由於餐巾是 20 像素長，你需要跳躍 20 像素，在你開始你的下一個迴圈之前。"
@@ -924,23 +925,19 @@
           code is good. Use it to build the rest of the stairs. '
       courseA_artist_loops_challenge1_authored_hint:
         courseA_artist_loops_challenge1_a: |
-          You can use loops like this to create the walls and the roof. Try repeating different blocks.
-
-
+          你可以使用像這樣的迴圈來創建圍牆和屋頂。試試重複不同的積木。
 
           ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
 
-          Design your own or click the ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) for some ideas!
+          自行設計或是點擊 ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) 以獲得更多靈感！
         courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
         courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
         courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
       courseA_artist_loops_challenge2_authored_hint:
-        courseA_artist_loops_challenge2_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml>
-          will let your artist move at a slant!'
-        courseA_artist_loops_challenge2_b: When you finish one bird house, `jump`
-          to the next!
-        courseA_artist_loops_challenge2_c: You will need a LOT of blocks inside the
-          loop for this challenge.
+        courseA_artist_loops_challenge2_a: 像這樣的程式積木：<xml>  <block type="simple_move_up_left"/></xml>
+          可以讓小藝術家斜著移動！
+        courseA_artist_loops_challenge2_b: "當你完成了一個鳥屋時，`跳躍`到下一個！"
+        courseA_artist_loops_challenge2_c: "這一關的迴圈裡用到了「很多」的程式積木喔。"
       courseA_artist_loops_challenge3_authored_hint:
         harvey_tictactoe: "你可以利用 `跳躍` 積木移動到其它的空格。"
       courseA_collector_loops10_authored_hint:
@@ -977,12 +974,9 @@
         courseA_collector_loops9_b: Does the code feel really long?  Try putting two
           of your `repeat` loops inside of another loop to make it much shorter!
       courseA_collector_loops_challenge1_authored_hint:
-        courseA_collector_loops_challenge1_a: Try changing the numbers in each loop
-          if something goes wrong.
-        courseA_collector_loops_challenge1_b: You don't need to use a loop if you
-          are only doing something one time.
-        courseA_collector_loops_challenge1_c: There are 6 gems on the right side of
-          the cave, but you only need to move and collect 5 times. Do you know why?
+        courseA_collector_loops_challenge1_a: "如果出錯了，可以試試修改每個迴圈裡的數值。"
+        courseA_collector_loops_challenge1_b: "如果你只要執行某段指令一次，就不需要用到迴圈。"
+        courseA_collector_loops_challenge1_c: "右邊的洞穴有 6 個寶石，而你只需移動並收集 5 次，你知道怎麼做嗎？"
       courseA_collector_loops_challenge2_authored_hint:
         courseA_collector_loops_challenge2_b: |
           只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
@@ -990,6 +984,7 @@
           在往南移動之前，你可以重複移動到相同路徑。
 
           ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      courseA_forVideoTest_artist_authored_hint: []
       courseA_maze_seq1_authored_hint:
         courseA_maze_seq1_a: If you are having trouble getting the bird to move, make
           sure blocks are clicked in under the `when run` event.
@@ -1019,6 +1014,10 @@
       courseA_maze_seq4_authored_hint:
         courseA_maze_seq4_a: If you are having trouble, try to figure out what the
           correct path is and then remove the block that doesn't fit.
+      courseA_maze_seq4a_authored_hint:
+        courseA_maze_seq4_a: If you are having trouble, try using your finger to figure
+          out the correct path by pointing it out on the map. What moves did your
+          finger make?
       courseA_maze_seq5_authored_hint:
         courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
       courseA_maze_seq6_authored_hint:
@@ -1056,6 +1055,10 @@
         courseA_playLab_events5_a: "Here are the event blocks that you will need to
           use to move Jorge up and down:\n\n![](https://images.code.org/cf9a6992f7b4619dfb592fb6905effbb-image-1478140906017.png)\nand
           \n![](https://images.code.org/bb2a117cef485e79119a63e5d027968e-image-1478140979742.png)"
+        courseA_playLab_events5_b: |-
+          你知道嗎？點擊積木，你就可以修改方向鍵囉！
+
+          ![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)
       courseA_playLab_events6_authored_hint:
         courseA_playLab_events6_a: |-
           Here is the event block that you would use to have Jorge do something when clicked:
@@ -1071,35 +1074,110 @@
           ![](https://images.code.org/81a8ef4f64023039438199fef67bb56b-image-1478140125332.png)
       courseA_playlab_challengeTemplate_authored_hint: []
       courseA_playlab_events_challenge1_authored_hint:
-        courseB_playlab_events7_a: "Make the other animals move down when you press
-          `▼`. \n<xml>\n  <block type=\"studio_whenArrow\" movable=\"false\">\n    <title
-          name=\"VALUE\">down</title>\n  </block>\n</xml>"
-        courseB_playlab_events7_b: |
-          Change the speed of the animals by using this block:
-          <xml>
-          <block type="studio_setSpriteSpeed">
-          <title name="SPRITE">0</title>
-          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
-          </block></xml>
-        courseB_playlab_events7_c: |-
-          What will the everyone say when the race is over? Make them talk with this event:
-          <xml>
-          <block type="studio_whenSpriteClicked">
-          <title name="SPRITE">2</title>
+        courseA_playlab_events_challenge1_a: "Make Waddles the Penguin show when you
+          click Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Make Boo the Ghost show when you click
+          Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Make Jayden the Fuzzy Monster show when
+          you click Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Make Spiff the Robot show when you click
+          the monster!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title
+          name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Finally, make Wendel the Wizard show
+          when you click on Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n
+          \   <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n
+          \       <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n
+          \     </block>\n    </next>\n  </block></xml>"
+      courseA_playlab_events_challenge1a_authored_hint:
+        courseA_playlab_events_challenge1_a: "You can make a bird sing.\n<xml> \n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "You can make a robot beep.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge1_c: |-
+          You can make an angry monster growl.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
           <next>
-          <block type="studio_saySpriteChoices">
-          <title name="SPRITE">2</title>
-          <title name="VALUE">Woo hoo!</title>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
           </block>
           </next>
           </block>
-          </xml>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "You can make a bird sing.\n<xml> \n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n
+          \   <next>\n\n          <block type=\"studio_saySprite\">\n            <title
+          name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n
+          \         </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "You can make a robot beep.\n<xml>\n
+          \ <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n
+          \   <next>\n      \n          <block type=\"studio_playSound\">\n            <title
+          name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n
+          \ </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          You can make an angry monster growl.
+
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      courseA_toMakeLoopsVideo_Collector_authored_hint: []
       courseB_artist_loops10_authored_hint: []
       courseB_artist_loops2_authored_hint:
         courseB_artist_loops2_a: "如果你想要重複程式 4 次以上，你可以修改積木上的數字。"
       courseB_artist_loops3_authored_hint:
         courseB_artist_loops3_a: Remember to use a `repeat` loop for better code!
-      courseB_artist_loops4_authored_hint: []
+      courseB_artist_loops4_authored_hint:
+        courseB_artist_loops4_a: The jump block lets you move forward without drawing
+          a line.
       courseB_artist_loops5_authored_hint:
         courseB_artist_loops5_a: Drag out a `repeat` loop, then put the other blocks
           inside of it. How many times do you need to repeat?
@@ -1117,16 +1195,19 @@
         courseB_artist_loops8_a: How many times should you repeat the pattern to make
           the ladder?
       courseB_artist_loops8_predict1_authored_hint: []
-      courseB_artist_loops9_authored_hint: []
+      courseB_artist_loops9_authored_hint:
+        courseB_artist_loops9_a: Remember that the jump blocks can be used to move
+          forward without drawing a line.
       courseB_artist_loops_challenge1_authored_hint:
-        courseB_artist_loops_challenge1_a: 'Blocks like this: <xml>  <block type="simple_move_up_left"/></xml>
-          will let your artist move at a slant!'
-        courseB_artist_loops_challenge1_b: When you finish one of the dice, `jump`
-          to the next!
-        courseB_artist_loops_challenge1_c: 'You will need to `move` or `jump` over
-          some of the same lines twice. '
+        courseB_artist_loops_challenge1_a: 像這樣的積木：<xml>  <block type="simple_move_up_right"/></xml>
+          能讓你的角色斜向移動！
+        courseB_artist_loops_challenge1_b: "當你完成了一個骰子時，`跳躍`到下一個！"
+        courseB_artist_loops_challenge1_c: "你需要在同一行上使用`移動`或`跳躍`兩次。"
       courseB_artist_loops_challenge2_authored_hint:
         harvey_tictactoe: "你可以利用 `跳躍` 積木移動到其它的空格。"
+      courseB_collector_loops1_authored_hint:
+        courseB_collector_loops1_a: The `get treasure` block can be used to pick up
+          treasure once you have moved to it.
       courseB_collector_loops10_authored_hint:
         courseB_collector_loops10_a: "你需要使用 3 個`重複`迴圈才能完成這個關卡。"
       courseB_collector_loops3_authored_hint:
@@ -1141,6 +1222,8 @@
       courseB_collector_loops6_authored_hint:
         courseB_collector_loops6_a: Can't figure out where things start going wrong?
           Use the "Step" button to run through your program one block at a time.
+        courseB_collector_loops6_b: You can change the number of times the repeat
+          loop runs by clicking on the "3" and choosing a different number of repetitions.
       courseB_collector_loops7_authored_hint:
         courseB_collector_loops7_a: If you are having a hard time with the puzzle,
           try drawing it on paper to help you figure it out.
@@ -1157,14 +1240,95 @@
         courseB_collector_loops_challenge1_b: |
           只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
         courseB_collector_loops_challenge1_a: |
-          You can move back over the path a second time before moving east.
+          The north pattern is a little different than the south pattern.
+          <xml>
+          <block type="collector_collect"/><next>
+          <block type="maze_moveNorth"/></next>next>
+          </xml>
+        courseB_collector_loops_challenge1_c: "只要 8 個積木就可以搞定！你必須把`重複`積木放到另一個`積木`裡。點擊以取得更多提示。\n<xml>\n<block
+          type=\"controls_repeat_simplified\">\n        <title name=\"TIMES\">?</title>\n
+          \       <statement name=\"DO\">\n          \n              <block type=\"controls_repeat_simplified\">\n
+          \               <title name=\"TIMES\">?</title>\n                <statement
+          name=\"DO\">\n                </statement></block><next><block type=\"controls_repeat_simplified\">\n
+          \               <title name=\"TIMES\">?</title>\n                <statement
+          name=\"DO\">\n                </statement></block></next></statement></block></xml>"
+        courseB_collector_loops_challenge1_d: |-
+          試試這個！
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveEast"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveWest"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge2_authored_hint:
-        courseB_collector_loops_challenge2_a: Try changing the numbers in each loop
-          if something goes wrong.
-        courseB_collector_loops_challenge2_b: If you miss any treasure, you might
-          need to move back west one extra space.
-        courseB_collector_loops_challenge2_c: Don't forget to use a loop to collect
-          the final pile of treasure!
+        courseB_collector_loops_challenge2_a: "如果出錯了，可以試試修改每個迴圈裡的數值。"
+        courseB_collector_loops_challenge2_b: "如果你錯過了寶藏，你需要移動回西邊一格。"
+        courseB_collector_loops_challenge2_c: "別忘了使用迴圈來收集最後一堆寶藏！"
+        courseB_collector_loops_challenge2_d: |-
+          Try this solution:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseB_collector_loops_challenge`_authored_hint:
         courseA_collector_loops_challenge2_b: |
           只要一個 ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) 積木就可以解決囉！
@@ -1196,6 +1360,8 @@
       courseB_maze_seq4_authored_hint:
         courseB_maze_seq4_a: Try adding one instruction at a time until you get to
           the pig.
+      courseB_maze_seq5_authored_hint:
+        courseB_maze_seq5_a: If you get stuck, try drawing out the path on paper.
       courseB_maze_seq6_authored_hint:
         courseB_maze_seq6_a: Your final code should have three movement blocks.
       courseB_maze_seq7_authored_hint:
@@ -1207,6 +1373,7 @@
       courseB_maze_seq9_authored_hint:
         courseB_maze_seq9_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
+      courseB_maze_seq9_challenge1_authored_hint: []
       courseB_maze_seqCold_authored_hint:
         courseB_maze_seqCold_a: Stuck? Try tracing the bird's path with your finger.
         courseB_maze_seqCold_b: The extra blocks need to be added before the last
@@ -1215,6 +1382,13 @@
       courseB_maze_seqOld_authored_hint:
         courseB_maze_seqOld_a: If you're having trouble, try writing down the steps
           on a piece of paper first.
+      courseB_maze_seq_challenge1_authored_hint:
+        courseB_maze_seq_challenge1_a: "這次最短的路徑不管用囉！"
+        courseB_maze_seq_challenge1_b: "試試先向西邊移動。"
+      courseB_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_a: "這個關卡不需要添加或是移除任何的積木。"
+        courseB_maze_seq_challenge2_b: "重新排列積木，走中間那條路。"
+      courseB_playlab_challenge1_Template_authored_hint: []
       courseB_playlab_events2_authored_hint:
         courseB_playlab_events2_a: |-
           This is the block to have Daisy say something:
@@ -1272,18 +1446,112 @@
 
           ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
       courseB_playlab_events_challenge1_authored_hint:
-        courseB_playlab_events7_a: |-
-          This is the event block that you will need:
+        courseB_playlab_events_challenge1_a: |-
+          使用`▼`讓其他的動物往下移動
+          <xml>
+            <block type="studio_whenArrow" movable="false">
+              <title name="VALUE">down</title>
+            </block>
+          </xml>
+        courseB_playlab_events_challenge1_b: |
+          利用這個程式積木改變動物的速度
+          <xml>
+          <block type="studio_setSpriteSpeed">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Studio.SpriteSpeed.NORMAL</title>
+          </block></xml>
+        courseB_playlab_events_challenge1_c: |-
+          當比賽結束時，大家會說些什麼？讓牠們說些話吧：
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">2</title>
+          <next>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">2</title>
+          <title name="VALUE">Woo hoo!</title>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseB_playlab_events_challenge2_authored_hint:
+        courseB_playlab_events_challenge2_a: "遊戲中的動物在被觸碰後會消失，它們應該要在一或二秒之後再出現！"
+        courseB_playlab_events_challenge2_b: |-
+          使用其他的事件類型積木來讓其他的動物消失！
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          改編一下！
 
-          ![](https://images.code.org/2ed42b3a3108c6affdfc866de57f2eec-image-1475624565390.42.18.png)
-        courseB_playlab_events7_b: |-
-          This is the block you need to play a sound.
+          讓某些動物得到的分數比其他的動物還高。
+          使用不同的音效。
+          改變動物的表情！
+      courseB_playlab_events_challenge2_embed_authored_hint:
+        courseB_playlab_events_challenge2_a: "遊戲中的動物在被觸碰後會消失，它們應該要在一或二秒之後再出現！"
+        courseB_playlab_events_challenge2_b: |-
+          使用其他的事件類型積木來讓其他的動物消失！
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          改編一下！
 
-          ![](https://images.code.org/58e9b9a146a4ca3a8eee25845110b805-image-1475624550269.42.00.png)
-        courseB_playlab_events7_c: |-
-          This is the block you need to make the knight vanish:
+          讓某些動物得到的分數比其他的動物還高。
+          使用不同的音效。
+          改變動物的表情！
+      courseB_playlab_events_challenge2_template_authored_hint:
+        courseB_playlab_events_challenge2_a: "遊戲中的動物在被觸碰後會消失，它們應該要在一或二秒之後再出現！"
+        courseB_playlab_events_challenge2_b: |-
+          使用其他的事件類型積木來讓其他的動物消失！
+          <xml>
+          <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">1</title>
+          </block>
+          </xml>
+        courseB_playlab_events_challenge2_c: |-
+          當你點擊動物時，使用其他的指令來播放音樂或紀錄得分！
+          <xml>
+          <block type="studio_playSound">
+          <title name="SOUND">slap</title>
+          </block>
+          <block type="studio_changeScore"/></xml>
+        courseB_playlab_events_challenge2_d: |-
+          改編一下！
 
-          ![](https://images.code.org/f468611cbe51e1cb35531334f625395a-image-1475624478204.41.02.png)
+          讓某些動物得到的分數比其他的動物還高。
+          使用不同的音效。
+          改變動物的表情！
+      courseB_starWars_prog10_authored_hint: []
+      courseB_starWars_prog11_authored_hint: []
+      courseB_starWars_prog8_authored_hint:
+        courseB_starWars_prog8_a: "沒關係，走過的路可以再走。"
+        courseB_starWars_prog8_b: |-
+          試試使用`重複`積木，看看在裡頭放些程式，會發生什麼事。
+
+          <xml>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">3</title>
+          </block>
+          </xml>
+      courseB_starWars_prog9_authored_hint: []
       courseC_PlayLab_events3_authored_hint:
         courseC_PlayLab_events3_a: You only need to move Jorge to the right by about
           25 pixels to solve this puzzle.
@@ -1327,6 +1595,48 @@
           *Need an idea?*
 
           **Pinball** - Make one character move using the arrow keys (use `when up arrow`, `when down arrow` blocks), then play random sounds when it collides with other characters on the screen.
+      courseC_PlayLab_events_challenge1_authored_hint:
+        courseC_PlayLab_events_challenge_a: "試試當它碰到其他的角色時，使用`設置角色 1 到左中方`。這會將遊戲重置，玩家就可以繼續嘗試用其他的方法。"
+      courseC_PlayLab_events_challenge1_xy_blocks_authored_hint:
+        courseC_PlayLab_events_challenge_a: "在積木上的這二個值可以讓你將角色在舞台間移動，你可以輸入 0 到 400
+          間的數字。"
+        courseC_PlayLab_events_challenge_b: |-
+          You can decide which numbers to use, by thinking about how far over from the top left corner you'd like to move. The first number is the number of pixels from the left. The second number is the number of pixels from the top.
+          <xml><block type="studio_setSpriteXY" inline="true">
+          <value name="SPRITE">
+          <block type="math_number" movable="false">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="XPOS">
+          <block type="math_number" movable="false">
+          <title name="NUM">37</title>
+          </block>
+          </value>
+          <value name="YPOS">
+          <block type="math_number" movable="false">
+          <title name="NUM">187</title>
+          </block>
+          </value>
+          </block></xml>
+          ![](https://images.code.org/b1559bf476ceb59f880c43271c5e10b2-image-1494111787192.59.49 PM.png)
+      courseC_artist_loops5_authored_hint:
+        courseC_artist_loops5_a: |-
+          試試使用`移至`積木，讓小藝術家返回中間位置：
+
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">100</title>
+          <title name="YPOS">100</title>
+          </block>
+          </xml>
+      courseC_artist_loops6_authored_hint:
+        courseC_artist_loops6_a: |
+          試試這朵三角形樣式的花朵：
+          <img src="https://images.code.org/4248a974a7631c4240effba06fdee731-image-1495821015097.49.18.png" width="150px" />
+
+          或是一隻小小小綠蟲：
+          <img src="https://images.code.org/b9454d6f1159e19c58d9f5b5b37fd156-image-1495821067980.52.43.png" width="150px" />
       courseC_artist_prog1_authored_hint: []
       courseC_artist_prog2_authored_hint:
         courseC_artist_prog2_a: "如果你使用`移動-向前 100 像素`這個積木，我就會向前移動並自動畫一條線啦。"
@@ -1362,6 +1672,26 @@
       courseC_artist_prog8_authored_hint:
         courseC_artist_prog7_a: The exterior angles on this triangle are 120 degrees
           each.
+      courseC_artist_prog_challenge1-doghouse_authored_hint:
+        courseC_artist_prog7_a: "使用 60 度來做出這個屋頂。"
+      courseC_artist_prog_challenge1_authored_hint:
+        courseC_artist_prog_challenge1_a: "這個矩形的寬是 200 像素，高是 100 像素。"
+      courseC_artist_prog_challenge2_authored_hint:
+        courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block
+          to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n
+          \           <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n
+          \             <block type=\"draw_move_by_constant_dropdown\">\n                <title
+          name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\"
+          config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block
+          type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n
+          \                   <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n
+          \                 </block>\n                </next>\n              </block>\n
+          \             </statement></block></xml>"
+      courseC_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: The original code would work great - if there
+          was only one piece of treasure in each pile!
+        courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect`
+          blocks!
       courseC_collector_prog2_authored_hint:
         courseC_collector_prog2_a: You can use four `move forward` blocks or use the
           `repeat 4 times` block to make your program shorter.
@@ -1370,6 +1700,9 @@
           to the `when run` block.
         courseC_collector_prog3_b: Try using the "Step" button to run your code one
           line at a time.  Do you see where the code goes wrong?
+      courseC_collector_prog4_authored_hint:
+        courseC_collector_prog4_a: If you get stuck, try writing out the steps on
+          a piece of paper.
       courseC_collector_prog5_authored_hint:
         courseC_collector_prog5_a: "Where does this program go wrong?\n\n- Does it
           work at the first step?\n- Does it work at the second step? \n- Where do
@@ -1390,6 +1723,68 @@
       courseC_collector_progA_authored_hint:
         courseC_collector_progA_a: Try using the "Step" button to go through your
           code line by line.
+      courseC_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: You can use the `collect` command more
+          often to collect the extra treasure.
+      courseC_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: You can use the `collect` command more
+          often to collect the extra treasure.
+      courseC_external_events_authored_hint: []
+      courseC_harvester_loops1_authored_hint:
+        courseC_harvester_loops1_a: Once you have moved to a pumpkin, use `pick pumpkin`
+          to collect it.
+      courseC_harvester_loops2_authored_hint:
+        courseC_harvester_loops2_a: If you get stuck, try writing the steps on paper
+          and looking for repeating patterns.
+      courseC_harvester_loops5_authored_hint:
+        courseC_harvester_loops5_a: If you get stuck, try drawing the entire program
+          and then looking for repeating patterns.
+      courseC_harvester_loops6_authored_hint:
+        courseC_harvester_loops6: Remember you can put multiple blocks in one repeat
+          loop.
+      courseC_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: "不用迴圈是不可能達成目標的！"
+        courseC_harvester_loops_challenge1_b: "你可以重複執行`移動-向前`和`收集玉木`到你想要的次數，然後在每次要轉向時使用`轉向-右邊`積木。"
+        courseC_harvester_loops_challenge1_c: |-
+          要收集一開始的四個玉米，最好的方式是在一個`重複`積木裡頭使用另一個`重複`積木。你可以用這個模式來解決後面的關卡！
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
+      courseC_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: One way to solve this looks like a zig-zag.
+          Another way looks like a spiral! There are lots of different solutions to
+          a puzzle like this. Be persistent!
+        courseC_harvester_loops_challenge2_b: "你可以重複執行`移動-向前`和`收集生菜`到你想要的次數，然後在每次要轉向時使用轉向積木。"
+        courseC_harvester_loops_challenge2_c: |
+          This zig-zag pattern can be repeated twice to finish the puzzle with just 20 blocks!
+
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          This spiral pattern can be coded with just 18 blocks!
+
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
       courseC_maze_debugging1_authored_hint:
         courseC_maze_debugging1_a: |-
           - Does everything work after the first step?
@@ -1449,6 +1844,18 @@
           - What is Skrat supposed to do?
           - What does Skrat do?
           - What does that tell you?
+      courseC_maze_debugging_challenge1_authored_hint:
+        courseC_maze_debugging_challenge1_a: "左邊還是右邊？你決定就好！"
+        courseC_maze_debugging_challenge1_b: "鼠奎特走的路徑是個四邊形！所以每次都轉向同要是同一邊！"
+        courseC_maze_debugging_challenge1_c: If you are getting stuck, you can always
+          start over, or remove all the code and find your own way!
+      courseC_maze_debugging_challenge2_authored_hint:
+        courseC_maze_debugging_challenge2_a: "有個解法，就是在每次轉向時添加更多的移動積木。"
+        courseC_maze_debugging_challenge2_b: "如果你卡關了，你可以重頭開始，或者移除所有的程式碼後再試試別的方法！"
+        courseC_maze_debugging_challenge2_c: |-
+          There are two different paths you can follow just using `move forward`, and only four turns. If you find a way to use the `repeat` block, there may be even more!
+
+          ![](https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png)
       courseC_maze_loops10_authored_hint: []
       courseC_maze_loops10_predict2_authored_hint: []
       courseC_maze_loops11_authored_hint: []
@@ -1497,6 +1904,20 @@
       courseC_maze_loops9_authored_hint:
         courseC_maze_loops9_1: 'If you''re having trouble finding where the code should
           repeat, try writing it down on a piece of paper and looking for a pattern. '
+      courseC_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Think about this path as being three different
+          pieces. Each one has a pattern you can repeat.
+        courseC_maze_loops_challenge1_b: In between each `repeat` block, you will
+          need to `turn left` or `turn right` to get ready Scrat for the next pattern.
+        courseC_maze_loops_challenge1_c: |-
+          If you make it this far, you just need to `turn left` then `move forward` a few times. Don't give up!
+
+          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      courseC_maze_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: The original code would work great - if there
+          was only one piece of treasure in each pile!
+        courseC_maze_loops_challenge2_b: Use loops so you don't run out of `collect`
+          blocks!
       courseC_maze_programming1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
           all three of the blocks have been fully clicked together, then click "Run"
@@ -1523,12 +1944,23 @@
         courseC_maze_programming6_a: "有 2 個方法可以完成這個關卡！"
         courseC_maze_programming6_b: Follow your finger from the bird to the pig,
           which steps did you take?
+        courseC_maze_programming6_c: Remember you have to turn first, since the bird
+          starts facing a wall.
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through
           block by block and look for errors.
-      courseC_maze_programming8_authored_hint: []
+      courseC_maze_programming8_authored_hint:
+        courseC_maze_programming8_a: Remember you can use the step button to look
+          through your code line by line if you get stuck.
       courseC_maze_programming8_predict1_authored_hint: []
       courseC_maze_programming9_authored_hint: []
+      courseC_maze_programming_challenge1_authored_hint: []
+      courseC_maze_programming_challenge2_authored_hint:
+        courseC_maze_programming_challenge2_a: "*If you send me backwards, be extra
+          careful that I turn the correct way!*"
+        courseC_maze_programming_challenge2_b: The shortest solution use only 5 blocks,
+          but it uses the `repeat` block!
+      courseC_playLab_embedded_authored_hint: []
       courseC_puppy_loops10_authored_hint:
         courseC_puppy_loops9_1: I need to move two or three time between each turn.
       courseC_puppy_loops11_authored_hint: []
@@ -1552,6 +1984,34 @@
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me
           to the pig with just four more blocks!
+      courseC_starWars_loops10_authored_hint: []
+      courseC_starWars_loops10_predict2_authored_hint: []
+      courseC_starWars_loops11_authored_hint: []
+      courseC_starWars_loops2_authored_hint:
+        courseC_starWars_loops2_a: You can solve this puzzle with just three blocks,
+          including `when run`.
+        courseC_starWars_loops2_b: You need to repeat the a move up command 5 times
+          to solve this puzzle.
+      courseC_starWars_loops4_authored_hint:
+        courseC_starWars_loops4_a: Use two `repeat` blocks set to different numbers.
+      courseC_starWars_loops5_authored_hint:
+        courseC_starWars_loops5_b: To move down, you have to turn and then move forward.
+        courseC_starWars_loops5_a: The best solution uses one move down and one loop
+          filled with another move command.
+      courseC_starWars_loops6_authored_hint:
+        courseC_starWars_loops6_a: If the pattern is hard to see, try coding it all
+          out first and see what repeats over and over before you put the loops in.
+      courseC_starWars_loops7_authored_hint: []
+      courseC_starWars_loops8_authored_hint:
+        course_starWars_loops8_a: Try thinking about this problem in small parts.
+          Take your time. You don't need to solve it on the first try!
+        course_starWars_loops8_b: The first half of this path is similar to the stairs
+          from the last puzzle, but it goes in a different direction.
+      courseC_starWars_loops9_authored_hint:
+        course_starWars_loops9_a: |-
+          You are doing great! Keep it up!
+
+          If you're having trouble finding where the code should repeat, try writing it down on a piece of paper and looking for a pattern.
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -1624,6 +2084,8 @@
           如果你的正方形是 20 像素高，而且兩個正方形相隔 20 像素遠，你需要跳多遠？
         courseD_artist_nestedLoops3_b: 'Don''t forget to use a nested loop to solve
           this puzzle quickly. '
+        courseD_artist_nestedLoops3_c: 'Start by using a `repeat` loop to make one
+          square.  Next, repeat that square 8 times, jumping 40 pixels in between. '
       courseD_artist_nestedLoops4_authored_hint:
         courseD_artist_nestedLoops4_a: |-
           To make a circle:
@@ -1641,6 +2103,8 @@
           - make a cirlce
           - jump forward 50 pixels
           - turn right 90 degrees
+        courseD_artist_nestedLoops5_b: To make a circle set a repeat loop to repeat
+          360 times. Inside the loop, move forward 1 pixel and turn by 1 degree.
       courseD_artist_nestedLoops6_authored_hint:
         courseD_artist_nestedLoops6_a: You'll need to repeat your outer loop 6 times
           now, instead of only 4.
@@ -1655,16 +2119,40 @@
           - make square
           - jump forward by 50 pixels
           - turn 60 degrees
+        courseD_artist_nestedLoops7_b: |-
+          Use a nested loop, where the inner loop is the code for a square.
+
+          - repeat 6 times
+          - make square
+          - jump forward by **50 pixels**
+          - turn **60 degrees**
       courseD_artist_nestedLoops8_authored_hint:
-        courseD_artist_nestedLoops8_d: To have 8 hexagons in your drawing, you'll
-          need to turn 45 degrees between each of them.
         courseD_artist_nestedLoops8_a: If you're stuck, start by looking at the last
           puzzle, then change the things that are different.
+        courseD_artist_nestedLoops8_b: If you're stuck, start by looking at the last
+          puzzle, then change the things that are different.
+        courseD_artist_nestedLoops8_c: |-
+          Use a nested loop:
+
+          - Repeat 8 times
+          - draw a hexagon
+          - jump forward 50 pixels
+          - turn right 45 degrees
       courseD_artist_nestedLoops9_authored_hint:
         courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before,
           but this time, make it with squares.
         courseD_artist_nestedLoops9_b: Add a second set of nested loops to the end
           of the first set, but this time use triangles.
+        courseD_artist_nestedLoops9_c: |-
+          Use two nested loops:
+          - Repeat 8 times
+          - draw a square
+          - jump forward 50 pixels
+          - turn right by 45 degrees
+          - Repeat 8 times
+          - draw a triangle
+          - jump forward 50 pixels
+          - turn right by 45 degrees
       courseD_artist_nestedLoops9_predict1_authored_hint:
         courseD_artist_nestedLoops9_a: Start by using a nested loop like you had before,
           but this time, make it with squares.
@@ -1684,9 +2172,68 @@
 
           This image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn.
       courseD_artist_nestedLoopsPre1_authored_hint: []
+      courseD_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: Start by making a nested loop to
+          create four octagons. Turn 45 degrees to make the octagon. Jump, then turn
+          90 degrees after each one.
+        courseD_artist_nestedLoops_challenge1_b: Add code to draw a triangle inside
+          of your nested loop. Use 120 degree turns for your triangle.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          Use a nested loop:
+          - Repeat 8 times
+          - draw an octagon
+          - draw a triangle
+          - jump forward 50 pixels
+          - turn right by 90 degrees
+      courseD_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: To draw a regular octagon, the artist
+          needs to turn 45 degrees at a time.
+        courseD_artist_nestedLoops_challenge2_b: To draw a regular hexagon, the artist
+          needs to turn 60 degrees at a time.
+      courseD_artist_project1_authored_hint: []
+      courseD_artist_project1a_authored_hint:
+        courseD_artist_project1a_a: |
+          This stair step uses a 76 degree turn and repeats 4 times.
+
+          <img src="https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png" width="200px" />
+      courseD_artist_project2_authored_hint: []
+      courseD_artist_project2Template_authored_hint: []
+      courseD_artist_project2a_authored_hint:
+        courseD_artist_project2a_a: |
+          This drawing was made by nesting a loop of 4 stairs and a `turn right 180 degrees` block inside of a `repeat 2 times` block.
+
+          <img src="https://images.code.org/bb24f9acee8afed2e119c1e920cb43f6-image-1495834479042.16.27.png" width="200px" />
+      courseD_artist_project3_authored_hint:
+        courseD_artist_project3_a: "Try nested loops!\n\nUse the code that you created
+          to draw a line of shapes and nest it inside of another loop.  At the bottom,
+          before the outside loop ends, add a block that will turn Elsa around.  \n\n-
+          Try 72 degrees if you are repeating the outer loop 5 times\n- Try 60 degrees
+          if you are repeating the outer loop 6 times"
+      courseD_artist_project3a_authored_hint: []
+      courseD_artist_project4_authored_hint:
+        courseD_artist_project4_a: |
+          Here is the pentagon snowflake with a turn of 36 degrees before a triangle snowflake:
+
+          <img src="https://images.code.org/2ba023db9404f948fab655bfa7923160-image-1495822526223.14.13.png" width="200px" />
+
+
+          Here's a set of hexagons with squares:
+
+          <img src="https://images.code.org/4d77462f3d07df6f1f5f2dc25e5d2b70-image-1495822526224.15.08.png" width="200px" />
+      courseD_artist_project4a_authored_hint:
+        courseD_artist_project4a_a: |
+          Here are two different lengths of snowflake, drawn one after another (with a 30 degree turn in between.)
+
+          <img src="https://images.code.org/45dedb51d89d3e5d0a88fe65ecbd7d7b-image-1495833855890.22.39.png" width="200px" />
+      courseD_artist_project5_authored_hint:
+        courseD_artist_project4_a: |
+          Lines of 2 hexagons and 4 triangles:
+
+          <img src="https://images.code.org/37ca9779bafd2ccc5cc801f82358008e-image-1495823683964.34.09.png" width="200px" />
+      courseD_artist_projectTemplate_authored_hint: []
       courseD_artist_ramp11_authored_hint:
         courseD_artist_ramp11a: "若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。"
-        courseD_artist_ramp11b: "若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。"
+        courseD_artist_ramp11b: "若要畫出 4 條邊，可以把`移動-向前 200 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。"
       courseD_artist_ramp12_authored_hint:
         courseD_artist_ramp12_a: "你也可以先畫出正方形，然後再畫三角形。調換畫的順序也可以！"
       courseD_bee_conditionals1_authored_hint:
@@ -1707,6 +2254,23 @@
           a cloud over it, even though you can see the whole path.
         courseD_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
           each space. '
+        courseD_bee_conditionals4_c: Using the block `while there is a path ahead`,
+          you should `move forward` and check for a flower. `if there is a flower`
+          what should the bee do?
+      courseD_bee_conditionals5_authored_hint:
+        courseD_bee_conditionals5_a: Think of every side of the rectangular path as
+          a path by itself. Set up a nested loop with a `repeat` block on the outside
+          and a `while there is a path ahead` on the inside. How many paths does the
+          bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseD_bee_conditionals5_b: Inside the `while there is a path ahead` block,
+          you will need to move forward and check for a flower. How do you check if
+          there is a flower? What do you do if there is a flower?
+        courseD_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
+          so the code needs to `repeat 3 times`. In every repeat, the bee will need
+          to continue along the path, `while there is a path ahead`. To continue down
+          the path, the bee will need to `move forward`. While on the path, the bee
+          needs to check for a flower. `if there is a flower`, the bee should `get
+          nectar`.
       courseD_bee_conditionals6_authored_hint:
         courseD_bee_conditionals6_a: Make sure to use an `if` statement to check for
           honeycomb beneath each cloud.
@@ -1731,6 +2295,32 @@
         courseD_bee_conditionals9_a: In this puzzle, you know that each square has
           either a flower or a honeycomb.  That means you can repeat your `if/else`
           conditional at each square.
+      courseD_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: In this puzzle, each space could have
+          a flower, a honey comb, or nothing.  That means you can repeat your `if/else`
+          conditional at each square.
+      courseD_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      courseD_bee_conditionals_challenge3_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Just like the `if at flower` blocks, the code inside a `while nectar > 0` will only run if the bee is at a flower. The main differences is that the code inside will run repetitively until there is no nectar left.  Try this pattern:
+
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
       courseD_bee_debugging1_authored_hint:
         courseD_bee_debugging1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -1802,6 +2392,34 @@
         courseD_bee_debugging9_b: Figure out how you would solve the puzzle, then
           move step-by-step to try to make the code match what is in your head.
       courseD_bee_debugging9_predict1_authored_hint: []
+      courseD_bee_debugging_challenge1_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why the first half of this program work?
+          Think about why the bee needs to move backward. How much nectar does the
+          bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the
+          same pattern. How much honey does the bee need to make each time it moves
+          over a honey comb?
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+          * Move forward
+          * Make 3 honey
+          * Move backward
+      courseD_bee_debugging_challenge2_authored_hint:
+        courseD_bee_debugging_challenge1_a: Why the first half of this program work?
+          Think about why the bee needs to move backward. How much nectar does the
+          bee collect each time it moves over a flower?
+        courseD_bee_debugging_challenge1_b: On the way back, have the bee follow the
+          same pattern. How much honey does the bee need to make each time it moves
+          over a honey comb?
+        courseD_bee_debugging_challenge1_c: |-
+          After the bee makes it to the bottom row, have it repeat these commands:
+
+          * Repeat 2 times:
+          * Move forward
+          * Make 3 honey
+          * Move backward
       courseD_bee_nestedLoops1_authored_hint:
         courseD_bee_nestedLoops1_a: Not working?  Try using the "Step" button to see
           what happens line by line.
@@ -1826,15 +2444,15 @@
           another `repeat` that also has the `move forward` block inside of it.
         courseD_bee_nestedLoops7_b: You will need to use all three of the available
           `repeat` blocks to solve this puzzle.
-        courseD_bee_nestedLoops7_c: |-
+        courseD_bee_nestedLoops7_c: |
           Nest your blocks three deep, like this:
 
           - repeat 3
+          - turn right
           - repeat 3
-          - move forward
           - repeat 12
           - get nectar
-          - turn right
+          - move forward
       courseD_bee_nestedLoops8_authored_hint:
         courseD_bee_nestedLoops8_a: Try building your code line by line and see if
           you can spot the places where a repeat will make the code shorter!
@@ -1844,6 +2462,232 @@
           Altogether, you should be using 3 loops.
       courseD_bee_nestedLoops9_authored_hint: []
       courseD_bee_nestedLoops9_predict2_authored_hint: []
+      courseD_bee_nested_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat`
+          a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop
+          to move away from the center. Turn left or right, then use a nested loop
+          to move from the first pile of treasure to the second. If you repeat the
+          nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all
+          the treasure uses only one `collect` block and two turns.
+      courseD_bee_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat`
+          a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop
+          to move away from the center. Turn left or right, then use a nested loop
+          to move from the first pile of treasure to the second. If you repeat the
+          nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all
+          the treasure uses only one `collect` block and two turns.
+      courseD_collector_debugging1_authored_hint:
+        courseD_collector_debugging1_a: |-
+          Use the "Step" button to see if everything is right at the first step.
+
+          How about the second?
+
+          Where does it go wrong?
+        courseD_collector_debugging1_b: Do you see any patterns that could be made
+          more simple using a `repeat` loop?
+      courseD_collector_debugging10_predict1_authored_hint:
+        courseD_collector_debugging9_a: There are several ways to solve this problem...but
+          they all involve turns!
+        courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
+          then move step-by-step to try to make the code match what is in your head.
+      courseD_collector_debugging2_authored_hint:
+        courseD_collector_debugging2_a: |-
+          Use the "Step" button to see if everything is right at the first step.
+
+          How about the second?
+
+          Where does it go wrong?
+        courseD_collector_debugging2_b: Do you see any patterns that could be made
+          more simple using a `repeat` loop?
+      courseD_collector_debugging3_authored_hint:
+        courseD_collector_debugging3_a: Is there any place where Laurel does something
+          that doesn't make sense? What happens when you change those blocks?
+        courseD_collector_debugging3_b: Try simplifying the code using nested loops.
+      courseD_collector_debugging4_authored_hint:
+        courseD_collector_debugging4_a: "Try using the debugging process a couple
+          of times in a row. \n\nWhat causes the first problem?\n\nOnce that problem
+          is fixed, what goes wrong?"
+        courseD_collector_debugging4_b: "If you're having a hard time figuring out
+          how to make the stair step pattern, try tracing it with your finger and
+          saying the commands out loud. \n\nDon't forget to point out the direction
+          of the turns!"
+      courseD_collector_debugging5_authored_hint:
+        courseD_collector_debugging5_a: |-
+          Start by looking at just the first loop.
+
+          What does it do?
+
+          What is it supposed to do?
+
+          What does that tell you?
+        courseD_collector_debugging5_b: Once you have the first loop the way you want
+          it, what is left over in your code?
+        courseD_collector_debugging5_c: |-
+          Try wrapping the leftover loop around the rest of your completed code.  Does is work now?
+
+          If not, what is still going wrong?
+      courseD_collector_debugging6_authored_hint:
+        courseD_collector_debugging6_a: |-
+          Try running through the code using the "Step" button.  Is everything good at the first step?
+
+          How about the second?
+
+          Where do things go wrong?
+        courseD_collector_debugging6_b: It looks like all of the right steps are here,
+          you just need more of them.  How can you repeat the `collect` action multiple
+          times?
+      courseD_collector_debugging7_authored_hint:
+        courseD_collector_debugging7_a: |-
+          Try running through the code using the "Step" button.  Is everything good at the first step?
+
+          How about the second?
+
+          Where do things go wrong?
+        courseD_collector_debugging7_b: If something needs to happen several times,
+          try adding a `repeat` loop.
+      courseD_collector_debugging8_authored_hint:
+        courseD_collector_debugging8_a: Do you see a pattern that you can simplify
+          with a loop?
+        courseD_collector_debugging8_b: Try using a nested loop to make this code
+          shorter.
+      courseD_collector_debugging9_authored_hint:
+        courseD_collector_debugging9_a: There are several ways to solve this problem...but
+          they all involve turns!
+        courseD_collector_debugging9_b: Figure out how you would solve the puzzle,
+          then move step-by-step to try to make the code match what is in your head.
+      courseD_collector_debugging_challenge2_authored_hint:
+        courseD_collector_debugging_challenge2_a: "Start by focusing on collect TWO
+          gems from each of the first two piles.\n\n![](https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04
+          AM copy.png)\nUse these blocks.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block
+          type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n
+          \ </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title
+          name=\"DIR\">moveForward</title>\n\n                  </block>\n                  \n
+          \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n
+          \   <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>"
+        courseD_collector_debugging_challenge2_b: "Next, collect the remaining gems
+          in this row.\n\n![](https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04
+          AM.png)\nAdd these blocks to your program.\n\n<xml><block type=\"maze_move\">\n
+          \                   <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block
+          type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement
+          name=\"DO\">\n          \n        </statement>\n      </block>\n</xml>"
+        courseD_collector_debugging_challenge2_c: "Finally, collect the remaining
+          treasure. Add these blocks to your program.\n\n<xml>\n  <block type=\"maze_turn\">\n
+          \               <title name=\"DIR\">turnRight</title>\n              </block>\n
+          \     <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n
+          \       <statement name=\"DO\">\n          \n        </statement>\n      </block>\n\n</xml>"
+        courseD_collector_debugging_challenge2_d: |-
+          Here is the complete solution for this puzzle.
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">4</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseD_collector_nested_loops_challenge2_authored_hint:
+        courseD_bee_nested_loops_challenge2_a: Don't forget that you can `repeat`
+          a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge2_b: To get all 4 gems, first use a loop
+          to move away from the center. Turn left or right, then use a nested loop
+          to move from the first pile of treasure to the second. If you repeat the
+          nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge2_c: The shortest program that reaches all
+          the treasure uses only one `collect` block and two turns.
+        courseD_bee_nested_loops_challenge2_d: |-
+          **Solution:**
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_dropdown">
+          <title name="TIMES" config="3-10">3</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseD_collector_ramp10_authored_hint:
         courseD_artist_ramp10_a: |-
           替換掉使用四個`移動-向前`積木的方式，改成把`移動-向前`積木放進`重複`迴圈，像這樣：
@@ -1854,6 +2698,7 @@
           </statement>
           </block></xml>
         courseD_artist_ramp10_b: "別忘了要收集寶藏後，再後在每步之後轉向！"
+      courseD_collector_until_challenge1_authored_hint: []
       courseD_debugging_1_authored_hint:
         courseD_debugging_1_a: |-
           Use the "Step" button to see if everything is right at the first step.
@@ -1908,6 +2753,7 @@
         courseD_debugging_6_b: It looks like all of the right steps are here, you
           just need more of them.  How can you repeat the `get nectar` and `make honey`
           actions multiple times?
+      courseD_external_cond_authored_hint: []
       courseD_farmer_condLoops1_authored_hint:
         courseD_farmer_condLoops1_a: You will need to look for corn 5 times, using
           a repeat loop.
@@ -1926,6 +2772,11 @@
         courseD_farmer_condLoops3_b: For this puzzle, you should have two `if/else`
           statements and one plain `if` statement.
       courseD_farmer_condLoops4_authored_hint:
+        grade3_RunningFarm_4courseD_farmer_condLoops4: |-
+          No one knows how many heads of lettuce will grow from each sprout.
+
+          Use a `while there is lettuce` loop to keep picking until each piece has been gathered.
+      courseD_farmer_condLoops4a_authored_hint:
         grade3_RunningFarm_4courseD_farmer_condLoops4: |-
           No one knows how many heads of lettuce will grow from each sprout.
 
@@ -1958,6 +2809,9 @@
       courseD_farmer_condLoops9_predict1_authored_hint:
         courseD_farmer_condLoops9_a: You shouldn't need the `while path ahead` loop
           this time.
+      courseD_farmer_condLoops_challenge1_authored_hint: []
+      courseD_farmer_condLoops_challenge2_authored_hint: []
+      courseD_farmer_condLoops_challenge2_clone_authored_hint: []
       courseD_farmer_conditionals10_authored_hint: []
       courseD_farmer_conditionals4_authored_hint:
         courseD_farmer_conditionals4_a: Instead of using a `repeat` loop, use a `while`
@@ -1981,6 +2835,7 @@
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
           path ahead`, `while there is a hole` code six times.
       courseD_farmer_conditionals9_authored_hint: []
+      courseD_farmer_until_challenge2_authored_hint: []
       courseD_farmer_while10_authored_hint: []
       courseD_farmer_while10_predict2_authored_hint: []
       courseD_farmer_while4_authored_hint:
@@ -1988,13 +2843,30 @@
           loop to keep digging until the pile is gone.
       courseD_farmer_while4_predict1_authored_hint: []
       courseD_farmer_while5_authored_hint:
-        courseD_farmer_conditionals5a: Try nesting a `while` loop inside of a `repeat`
+        courseD_farmer_conditionals5a_a: Try nesting a `while` loop inside of a `repeat`
           loop.
+        courseD_farmer_conditionals5a_b: The farmer needs to move forward a total
+          of five times to get to the end of the row. What else does the farmer need
+          to do?
+        courseD_farmer_conditionals5a_c: Move forward 5 times. Each time you move
+          forward, remove the pile of dirt by using the `while there is a pile` block.
       courseD_farmer_while6_authored_hint:
         courseD_farmer_conditionals6_a: Make sure you're using the `while` loop to
           figure out how many times to fill each hole.
         courseD_farmer_conditionals6_b: Notice that the farmer needs to move forward
           and down several times in a stair-step pattern.
+        courseD_farmer_conditionals6_c: |-
+          The stair step pattern uses the following blocks
+          - move forward
+          - fill hole
+          - turn right
+          - move forward
+          - fill hole
+          - turn left
+
+          How many times do you need to use this stair step pattern?
+
+          Make sure you are using the `while there is a hole` to fill the hole.
       courseD_farmer_while7_authored_hint:
         courseD_farmer_conditionals8_a: The `while path ahead` block lets you keep
           going, even if you don't know how many squares are in a path.
@@ -2006,6 +2878,41 @@
         courseD_farmer_conditionals8_c: Notice that you need to repeat the `while
           path ahead`, `while there is a hole` code six times.
       courseD_farmer_while9_authored_hint: []
+      courseD_farmer_while_challenge1_authored_hint:
+        courseD_farmer_while_challenge1_a: Each hole or pile is located one space
+          **backward** from the end of the path.
+        courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell
+          the farmer to remove a pile or fill a hole, even if one isn't there. That
+          means you can program her to remove any dirt and fill any hole, while standing
+          in the same place.
+        courseD_farmer_conditionals8_c: It is possible to solve this without using
+          any `repeat` loops. To do this, you will need to use four `while` loops.
+      courseD_farmer_while_challenge2_authored_hint:
+        courseD_farmer_while_challenge1_a: Each hole or pile is located one space
+          **backward** from the end of the path.
+        courseD_farmer_while_challenge1_b: If you use a `while` loop, you can tell
+          the farmer to remove a pile or fill a hole, even if one isn't there. That
+          means you can program her to remove any dirt and fill any hole, while standing
+          in the same place.
+        courseD_farmer_conditionals8_c: It is possible to solve this without using
+          any `repeat` loops. To do this, you will need to use four `while` loops.
+      courseD_harvester_nested_loops_challenge1-broken_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used
+          a loop to create a zig-zag pattern. If you remember that algorithm, you
+          can make a few additions to it here.
+      courseD_harvester_nested_loops_challenge1_authored_hint:
+        courseD_harvester_nested_loops_challenge1_a: You have probably already used
+          a loop to create a zig-zag pattern. If you remember that algorithm, you
+          can make a few additions to it here.
+      courseD_maze_loops_challenge1_authored_hint:
+        courseD_bee_nested_loops_challenge1_a: Don't forget that you can `repeat`
+          a single command or a longer pattern. You can even `repeat` a `repeat` block!
+        courseD_bee_nested_loops_challenge1_b: To get all 4 gems, first use a loop
+          to move away from the center. Turn left or right, then use a nested loop
+          to move from the first pile of treasure to the second. If you repeat the
+          nested loop enough times, the collector will move around the *entire* cave!
+        courseD_bee_nested_loops_challenge1_c: The shortest program that reaches all
+          the treasure uses only one `collect` block and two turns.
       courseD_maze_nestedLoops3_authored_hint:
         courseD_maze_nestedLoops3_a: To solve this puzzle, you will need to "nest"
           one `repeat` loop inside of another `repeat` loop.
@@ -2053,6 +2960,8 @@
           line by line. Can you figure out what you need to do next?
       courseD_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: "有 2 個方法可以完成這個關卡！"
+        courseC_maze_programming6_b: The bird starts facing a wall, so remember to
+          turn before you move.
       courseD_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through
           block by block and look for errors.
@@ -2068,6 +2977,8 @@
           - What does your code do?
           - What is it supposed to do?
           - What does that tell you?
+        courseD_maze_until3_b: If you are getting stuck, try writing out the steps
+          on a piece of paper and looking for places where they repeat.
       courseD_maze_until4_authored_hint:
         courseD_maze_until4_a: |-
           Use the "Step" button to go through your code line by line.
@@ -2090,6 +3001,10 @@
       courseD_maze_until9_authored_hint:
         courseD_maze_until8_a: Using `if path ahead` will keep you going forward whenever
           possible, helping you miss the paths with chompers.
+      courseD_maze_until_challenge_authored_hint: []
+      courseD_maze_until_challenge1-delete-this-copy_authored_hint: []
+      courseD_maze_until_challenge1_authored_hint: []
+      courseD_maze_until_challenge2_authored_hint: []
       courseD_playLab_cond1_authored_hint:
         courseD_playLab_cond1_a: To solve this challenge, attach the `move actor 1
           up` block to the `when up arrow` event, then do the same for every other
@@ -2105,6 +3020,9 @@
           second half of this challenge. '
         courseD_playLab_cond3_c: "`If` the dragon is happy `score point`, `score point`.\n<br/>\n
           \n`Else` `score point`."
+      courseD_playLab_cond3b_authored_hint:
+        courseD_playLab_cond3b_a: You will need to add blocks to your `repeat forever`
+          loop to make the dragon continue to move up and down
       courseD_playLab_cond4_authored_hint:
         courseD_playLab_cond4_a: You will want to use the `when run` event to get
           the ninja to chase the pirate.
@@ -2133,6 +3051,7 @@
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat
           forever` loop that checks the pirate position (but not inside the `if` statement)
           to keep points from being removed too quickly.
+      courseD_playLab_embedded_authored_hint: []
       courseE_artist_concept1_authored_hint:
         courseE_artist_concept1_a: The hexagons have 50 pixel sides and 60 degree
           turns to the right.
@@ -2143,6 +3062,10 @@
           you make a plan?
         courseE_artist_concept4_b: Try creating one square. Then make a line of squares.  What
           comes next?
+        courseE_artist_concept4_c: After drawing a line of squares, you can either
+          turn around and draw another line of squares going left, or you can jump
+          back to the left side of the figure to draw another line of squares going
+          right. Which do you prefer?
       courseE_artist_functions1_authored_hint:
         courseE_artist_functions1_a: "正方形每邊都有 100 像素，這代表你需要向前移動 175 像素之後才能開始畫第二個正方形。"
         courseE_artist_functions1_b: "畫出眼鏡時可以讓你的兩條線重疊沒關係。"
@@ -2151,6 +3074,10 @@
           the function draws a different kind of line.
         courseD_artist_functions10_a: To get around using multiple `move forward`
           blocks, create a `draw hexagon` function and call that multiple times.
+        courseD_artist_functions10_c: |-
+          Do you see where this drawing could use a function called `line of hexagons`?
+
+          ![](https://images.code.org/904e0f38232fd9c15a3d2d172e7dde0b-image-1493140714580.gif)
       courseE_artist_functions2_authored_hint:
         courseD_artist_functions2_a: |-
           你的程式應該要：
@@ -2180,21 +3107,63 @@
           jump the artist 100 pixels forward for each top window, and 150 pixels down
           to get the bottom windows.
       courseE_artist_functions8_authored_hint:
+        courseD_artist_functions8_f: You only need one `move forward` block, but you
+          will need quite a few `jump forward` and/or `jump backward` blocks!
         courseD_artist_functions8_a: |-
           Start by making a function for a square, then try making a function for a line of squares.
 
           How would you use the `draw a line of squares` function to make this image?
+        courseD_artist_functions8_d: |-
+          To make a line of squares,
+          - repeat 3 times
+          - draw a square with a side length of **50 pixels**
+          - jump forward **100 pixels**
         courseD_artist_functions8_b: After your first line of squares, you need to
           move the artist down and back before you start your second line of squares.
         courseD_artist_functions8_c: You should move the artist back a different number
           of pixels for even lines than for odd ones.
+        courseD_artist_functions8_g: "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
       courseE_artist_functions9_authored_hint:
-        courseD_artist_functions9_a: To get around the need to have multiple `move
-          forward` blocks, create a `draw triangle` function and call that multiple
-          times.
+        courseD_artist_functions9_e: |-
+          Can you spot all four places that the `line of triangles` can be used in this drawing?
+
+          ![](https://images.code.org/130e1040ecca7186dea87f42666f5620-image-1493140373966.gif)
+        courseD_artist_functions9_a: |-
+          This puzzle can be broken into three parts:
+          - draw a triangle
+          - draw a line of triangles
+          - draw the diamond made up of lines of triangles
         courseD_artist_functions9_b: This drawing is made by creating a line of triangles
           and turning either 60 or 120 degrees after each time you draw the triangle
           line.
+        courseD_artist_functions9_c: |-
+          To draw a line of triangles:
+          - repeat 4 times
+          - draw a triangle
+          - jump forward 50 pixels
+        courseD_artist_functions9_d: |-
+          To draw the diamond:
+          - repeat 2 times
+          - draw a line of triangles
+          - turn 120 degrees
+          - draw a line of triangles
+          - turn 60 degrees
+      courseE_artist_functions_challenge_authored_hint:
+        courseE_artist_functions_challenge_a: If you call the function one more time,
+          you can create the same design in the final corner. You can also `jump to`
+          other positions or change the whole thing around however you want!
+      courseE_artist_functions_challenge1_authored_hint:
+        courseE_artist_functions_challenge1_a: If you call the function one more time,
+          you can create the same design in the final corner. You can also `jump to`
+          other positions or change the whole thing around however you want!
+      courseE_artist_functions_challenge2_authored_hint:
+        courseE_artist_functions_challenge1_a: "<xml>\n\n  <block type=\"jump_to_xy\">\n
+          \   <title name=\"XPOS\">350</title>\n    <title name=\"YPOS\">200</title>\n
+          \ </block>\n  </xml>\n  \nThis `jump to` block lets you move the zombie
+          artist to any pixel on the grid, whenever you want. It works by moving him
+          a number of pixels over to the right and a number of pixels down. This is
+          always counted from the top left corner, which it means it doesn't matter
+          where the zombie artist is *before* the command is run!\n\n![](https://images.code.org/b90fdddc778a27e199221271ce91307a-image-1496450976440.png)"
       courseE_artist_functions_predict1_authored_hint: []
       courseE_artist_functions_predict2_authored_hint: []
       courseE_artist_predict1_authored_hint: []
@@ -2216,6 +3185,8 @@
           the patterns that you see.
       courseE_bee_concept2_authored_hint:
         courseE_bee_concept2_a: An `if` block will help you out in this puzzle.
+        courseE_bee_concept2_b: Remember there could be more than one honeycomb under
+          a cloud.
       courseE_bee_concept3_authored_hint:
         courseE_bee_concept3a_a: Try using nested `repeat` loops to solve this puzzle.
       courseE_bee_concept4_authored_hint:
@@ -2224,6 +3195,10 @@
         courseE_bee_concept5_a: 'The flowers follow a rectangular path.  You can trace
           that rectangle using `while path ahead` even with a different number of
           squares per side. '
+        courseE_bee_concept5_c: |-
+          Here's a picture of a rectangular path the bee could take.
+
+          ![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8 Hint Drawing.png)
         courseE_bee_concept5_b: You can check every square for a flower using the
           `if` block, even if you already know there's not one there.
       courseE_bee_functions1_authored_hint:
@@ -2319,6 +3294,28 @@
           help you out here.
         courseE_farmer_functions2b_b: You can repeat the code to check the squares
           for crops in two different `while path ahead` loops.
+        courseE_farmer_functions2b_c: You can repeat the code to check the squares
+          for crops in two different `while path ahead` loops.
+        courseE_farmer_functions2b_d: |-
+          Repeat using a  `while path ahead` for the first 3 paths. Then get to the fourth path and use another `while path ahead` block for the last path.
+
+          Remember: you need to move forward and check for plants in your `while path ahead` block.
+        courseE_farmer_functions2b_e: |-
+          To complete this puzzle use the following blocks:
+
+          repeat 3 times
+          - while path ahead
+          - move forward
+          - check for plants (see second hint)
+          - turn left
+
+          turn right
+
+          turn right
+
+          while path ahead
+          - move forward
+          - check for plants (see second hint)
       courseE_farmer_functions3_authored_hint:
         courseE_farmer_functions3_a: Try using a `while path ahead` loop to get you
           where you need to be.
@@ -2343,7 +3340,8 @@
       courseE_farmer_functions5b_authored_hint:
         courseE_farmer_functions5b_a: You will need to use a `while corn` loop, a
           `while lettuce` and a `while pumpkin` to make sure you get everything.
-      courseE_farmer_functions5c_authored_hint: []
+      courseE_farmer_functions5c_authored_hint:
+        courseE_farmer_functions5c_a: A staircase pattern will be helpful here!
       courseE_farmer_functions6_authored_hint: []
       courseE_farmer_functions6b_authored_hint: []
       courseE_farmer_functions6c_authored_hint: []
@@ -2351,10 +3349,34 @@
       courseE_farmer_functions7b_authored_hint:
         courseE_farmer_functions7b_a: You will want to use the `check and pick` function
           inside your new function to collect all of the produce.
+        courseE_farmer_functions7b_b: Each of the side paths are to the left. Your
+          function to take the farmer down these paths will involve checking if there
+          is a path to the left, turning to the left, checking for plants along the
+          path, then turning around and getting back on the main path.
+        courseE_farmer_functions7b_c: Once the farmer reaches the end of one of the
+          side paths, she will need to return to the main path. To do this, turn right
+          twice, move to the main path using a `while path ahead` block, then turn
+          to the left to face the right way on the main path.
+        courseE_farmer_functions7b_d: To move along the main path, use the `while
+          path ahead` block. Inside this loop, `move forward` and use your function
+          to harvest side paths if there is a path to the left.
       courseE_farmer_functions8_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
-      courseE_farmer_functions8b_authored_hint: []
+      courseE_farmer_functions8b_authored_hint:
+        courseE_farmer_functions8b_a: The farmer will reach the pumpkin at the very
+          end of this puzzle, so using the `repeat until at pumpkin` block will be
+          helpful.
+        courseE_farmer_functions8b_b: |-
+          Just like the last puzzle, think of a main path and side paths. Below is a picture where the main path is the yellow blocks and the side paths are the blue blocks.
+
+          ![](https://images.code.org/9b544ac0fca84eead7a0952286284c7b-image-1493151031070.6.10 Hint Drawing.png)
+
+          Because all of the side paths are to the left, you can use a function like the one you made from the last puzzle.
+        courseE_farmer_functions8b_c: "To finish this puzzle, use the following blocks.\n\nrepeat
+          until at pumpkin\n - while path ahead\n    - move forward\n    - harvest
+          path\n - turn right\n \nHarvest path references the function you made in
+          the last puzzle."
       courseE_farmer_functions9_authored_hint:
         courseE_farmer_functions8_a: Create a function that takes the farmer to the
           corn, gets all of the corn, then turns around and comes back.
@@ -2379,11 +3401,9 @@
       courseE_farmer_ramp15_authored_hint:
         courseE_farmer_ramp15_a: Use the 'repeat until at pumpkin' block to make it
           to the end of the path.
-        courseE_farmer_ramp15_b: What else needs to be done while moving along the
-          path to the pumpkin?
+        courseE_farmer_ramp15_b: "要沿著路徑移動到南瓜那兒，還需要怎麼做？"
       courseE_farmer_ramp16_authored_hint:
-        courseE_farmer_ramp16_a: If we are moving along the path to the pumpkin, what
-          do we have to repeatedly do? When do we stop repeating?
+        courseE_farmer_ramp16_a: "如果我們要沿著路徑走到南瓜那，我們要重複做什麼？什麼時候要停止重複？"
       courseE_maze_predict1_authored_hint: []
       courseE_maze_ramp1_authored_hint:
         courseC_maze_programming1_0: If the bird isn't getting to the pig, make sure
@@ -2413,6 +3433,8 @@
           line by line. Can you figure out what you need to do next?
       courseE_maze_ramp6_authored_hint:
         courseC_maze_programming6_a: "有 2 個方法可以完成這個關卡！"
+        courseC_maze_programming6_b: Remember to turn first before moving, since the
+          bird starts facing a wall.
       courseE_maze_ramp7_authored_hint:
         courseD_maze_ramp7_b: Don't forget to use the "Step" button to go through
           block by block and look for errors.
@@ -2421,12 +3443,18 @@
       courseE_multi_maze_ramp5_authored_hint:
         courseC_maze_programming5_a: Try using the "Step" button to run your code
           line by line. Can you figure out what you need to do next?
+      courseE_playLab_scaffold1_authored_hint:
+        courseE_playLab_scaffold1_a: The `set actor 1 to ??? image` block can be used
+          to add an actor to the stage.
       courseE_playLab_scaffold2_authored_hint:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow`
           event to change the direction the block controls.
       courseE_playLab_scaffold3_authored_hint:
         courseE_playLab_scaffold3_a: Use a `repeat forever` loop to have extra actors
           patrol up and down, or left and right for the entire game.
+        courseE_playLab_scaffold3_b: If both of your new actors are jumping to random
+          places on the screen, the puzzle may not mark as complete. Try setting one
+          to chase another, or move up and down repeatedly.
       courseF_artist_for1_authored_hint:
         courseF_artist_for1_a: |-
           Can you draw something like this:
@@ -2446,6 +3474,7 @@
           Use `counter` for the length of your triangles inside your `repeat` loop.
 
           ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
+        courseF_artist_for2_b: Remember to count by 10 within your for loop.
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
@@ -2464,8 +3493,244 @@
       courseF_artist_for7_authored_hint:
         courseF_artist_for7_a: The increment for this puzzle is 2.
         courseF_artist_for7_b: Notice that this spiral turns right instead of left!
+        courseF_artist_for7_c: "這個關卡的`計數迴圈`是從 15 到 300，間隔數為 2。"
+        courseF_artist_for7_d: "這個圖案是用轉向 89 度做出來的。"
       courseF_artist_for8_authored_hint: []
       courseF_artist_for9_authored_hint: []
+      courseF_artist_for_challenge1_authored_hint:
+        courseF_artist_for_challenge1_a: "`pen width`（筆跡寬度）是 1。而第一個正方形的邊長是 50 像素，每個正方形之間的邊長差了
+          50 像素。"
+        courseF_artist_for_challenge1_b: "筆刷的透明度固定都是 `counter`/2。"
+        courseF_artist_for_challenge1_c: "在你畫出一個正方形後，別忘了跳回去，轉向，再跳一次，再轉回去！"
+        courseF_artist_for_challenge1_d: |-
+          **Solution:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#0000cd</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">350</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">50</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpBackward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_artist_for_challenge2_authored_hint:
+        courseF_artist_for_challenge2_a: "使用`設定顏色`積木，可以讓顏色改變，使用的是 Rgb 顏色代碼。R（Red，紅）的值固定為
+          255、G（Green，綠）的值為 `counter`、B（Blue，藍）的值為 `255 - counter`。"
+        courseF_artist_for_challenge2_b: "這個程式並沒有你想的這麼複雜，只需要設定好`計數迴圈`裡頭的顏色部分，然後向前移動，最後轉向。"
+        courseF_artist_for_challenge2_c: "這個`計數迴圈`是從 5 算到 250，間隔數是 2。 "
+        courseF_artist_for_challenge2_d: |-
+          **Solution:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"/>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">250</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_rgb" inline="false">
+          <value name="RED">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="GREEN">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="BLUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">255</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">80</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+
+          ![](https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png)
       courseF_artist_fwp1_authored_hint:
         courseF_artist_fwp1_c: Put all of the code for drawing a square inside the
           function editor.
@@ -2486,13 +3751,15 @@
 
           ![](https://images.code.org/97bd8eded03c5aa39740876c8e9f7ff8-image-1469224745277.gif)
       courseF_artist_fwp4_authored_hint:
-        courseF_artist_fwp4_a: Use a `for` loop to get the code as smooth as you can.
         courseF_artist_fwp4_b: Remember to **add** a parameter.  Don't remove the
           one that is already there!
       courseF_artist_fwp5_authored_hint:
         courseF_artist_fwp5_a: The length of sides for each shape is 7 times the number
           of sides it has.
         courseF_artist_fwp5_b: Don't forget to jump 100 pixels between shapes.
+        courseF_artist_fwp5_c: You will need to edit the function a little bit, since
+          your previous function turned the artist to the right after each side, and
+          this image needs a turn to the left.
       courseF_artist_fwp6_authored_hint:
         courseF_artist_fwp6_a: It's okay to run the program a few times to figure
           out how the function works with different parameters.
@@ -2509,6 +3776,32 @@
           change it for this puzzle.
         courseF_artist_fwp8_b: The only thing you should need to do between function
           calls is change the color of the line.
+      courseF_artist_fwp9_authored_hint:
+        courseF_artist_fwp9_a: |-
+          試試底下的這些圖案。
+          ![](https://images.code.org/eae6d52956c2bc06b90db3693037df36-image-1493739069435.9.13 hints.png)
+      courseF_artist_fwp_challenge1_authored_hint: []
+      courseF_artist_fwp_challenge2_authored_hint:
+        courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
+        courseF_artist_fwp_challenge1_b: "這是一系列的八邊形，計數 `counter` 使用了 `sides` ，並當作每個形狀的邊長。 "
+        courseF_artist_fwp_challenge1_c: "每個八邊形都是由每次的循環構成，迴圈的計數方式是從 200 算到 2，間隔數是
+          2。 "
+        courseF_artist_fwp_challenge1_d: "別忘了在每個循環之後轉向 22.5 度。 "
+        courseF_artist_fwp_challenge1_e: "每個八邊形的顏色還有線條的寬度是利用 `counter` 變數來控制的。"
+        courseF_artist_fwp_challenge1_f: |-
+          **解決方案：**
+
+          ![Solution Blocks](https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
+      courseF_artist_predict1_authored_hint: []
+      courseF_artist_ramp10_authored_hint:
+        courseF_artist_ramp10_a: "別忘了在每個三角形畫完後轉向 60 度，你要在迴圈裡放置哪些程式積木呢？"
+      courseF_artist_ramp8_authored_hint:
+        courseF_artist_ramp8_a: "若要繪製一條邊，請用`移動向前 100 像素`積木，並把 100 改成 200。"
+        courseF_artist_ramp8_b: "若要畫出 4 條邊，可以把`移動-向前 100 像素`積木放到重複迴圈裡，並設定重複次數為 4 次。"
+      courseF_artist_ramp9_authored_hint:
+        courseF_artist_ramp9_a: "這和正方形有什麼類似的地方？又有哪些不同呢？"
+      courseF_artist_variables2_authored_hint:
+        courseF_artist_variables2_a: Remember to move forward after drawing each triangle.
       courseF_artist_variables4_authored_hint:
         courseF_artist_variables4_a: Your code won't be much different than it was
           in the last puzzle, except that you will need to turn the artist to jump
@@ -2527,6 +3820,10 @@
       courseF_artist_variables8_authored_hint:
         courseF_artist_variables8_a: |
           Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+      courseF_artist_variablesFP_authored_hint:
+        courseF_artist_variablesFP_a: |-
+          試試下方的三個圖案。
+          ![](https://images.code.org/f0bac32182162bd26a8031f5aa4364ef-image-1493738360437.3.15 hints.png)
       courseF_artist_variables_4_authored_hint:
         courseF_artist_variables_4_a: Your code won't be much different than it was
           in the last puzzle, except that you will need to turn the artist to move
@@ -2541,12 +3838,236 @@
       courseF_artist_variables_8_authored_hint:
         courseF_artist_variables_8_a: |
           Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+      courseF_artist_variables_challenge1_authored_hint:
+        courseF_artist_variables_challenge1_a: Each vertical line has a length of
+          `10`. Each horizontal line should have a length of `length`.
+        courseF_artist_variables_challenge1_b: You will want to increase the value
+          of `length` by 10 **twice** inside the loop.
+        courseF_artist_variables_challenge1_c: To complete the pattern you will need
+          to turn left twice, turn right twice, and move forward a total of four times.
+        courseF_artist_variables_challenge1_d: |-
+          This puzzle just uses one loop. Without any variables, a similar path might just be a zig-zag.
+
+          ![](https://images.code.org/664fdd219502d004fb07886f834fa3d5-image-1496868743379.51.36 PM.png)
+
+          If you are having trouble, start by creating this image, then try to see where you can use variables to change the length of the horizontal lines.
+        courseF_artist_variables_challenge1_e: |-
+          Here is the solution.
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">18</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">90</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_artist_variables_challenge1a_authored_hint:
+        courseF_artist_variables_challenge1_a: "變數非常有用，因為你每循環一次就可以加一個數值上去。 "
+        courseF_artist_variables_challenge1_b: "這個關卡有個畫出多邊形的迴圈，一個用來重複多邊形 `sides` 次，另一個在
+          `sides` 加上 5 以後再做一次。"
+        courseF_artist_variables_challenge1_c: "使用變數，`sides` 代表邊數，`length` 代表長度，用它們可以編寫出簡潔的程式，因為我們可以透過迴圈來執行相同的程式多次，這樣一來，模式相同但數字不同的程式就不需要編寫好多次。"
+        courseF_artist_variables_challenge1_d: |-
+          **解決方案：**
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_artist_variables_challenge2_authored_hint:
+        courseF_artist_variables_challenge2_a: "變數非常有用，因為你每循環一次就可以加一個數值上去。 "
+        courseF_artist_variables_challenge2_b: "這個關卡有個畫出多邊形的迴圈，一個用來重複多邊形 `sides` 次，另一個在
+          `sides` 加上 5 以後再做一次。"
+        courseF_artist_variables_challenge2_c: "使用變數，`sides` 代表邊數，`length` 代表長度，用它們可以編寫出簡潔的程式，因為我們可以透過迴圈來執行相同的程式多次，這樣一來，模式相同但數字不同的程式就不需要編寫好多次。"
+        courseF_artist_variables_challenge2_d: |-
+          **解決方案：**
+
+          ![Solution](https://images.code.org/311b4a946cb8f3b4144b5075be6460a3-image-1469641878222.png)
+      courseF_bee_conditionals1_predict1_authored_hint: []
+      courseF_bee_conditionals2_authored_hint:
+        courseF_bee_conditionals2_a: Sometimes a flower will be there, sometimes it
+          won't.  If you want your code to run in both cases, make sure to use an
+          `if` statement.
+      courseF_bee_conditionals3_authored_hint:
+        courseF_bee_conditionals3_a: Be sure to use an `if` statement to check each
+          space to see if it has either a flower or nothing.
+      courseF_bee_conditionals4_authored_hint:
+        courseD_bee_conditionals4_a: You can still treat every space as if there is
+          a cloud over it, even though you can see the whole path.
+        courseF_bee_conditionals4_b: 'Use an `if` statement inside your loop to check
+          each space for nectar. '
+        courseF_bee_conditionals4_c: Using the block `while there is a path ahead`,
+          you should `move forward` and check for a flower. `if there is a flower`
+          what should the bee do?
+      courseF_bee_conditionals5_authored_hint:
+        courseF_bee_conditionals5_a: Think of every side of the rectangular path as
+          a path by itself. Set up a nested loop with a `repeat` block on the outside
+          and a `while there is a path ahead` on the inside. How many paths does the
+          bee need to buzz down if the bee needs to buzz every side with a flower?
+        courseF_bee_conditionals5_b: Inside the `while there is a path ahead` block,
+          you will need to move forward and check for a flower. How do you check if
+          there is a flower? What do you do if there is a flower?
+        courseF_bee_conditionals5_c: There are 3 sides of the rectangle with flowers,
+          so the code needs to `repeat 3 times`. In every repeat, the bee will need
+          to continue along the path, `while there is a path ahead`. To continue down
+          the path, the bee will need to `move forward`. While on the path, the bee
+          needs to check for a flower. `if there is a flower`, the bee should `get
+          nectar`.
+      courseF_bee_conditionals7_predict2_authored_hint: []
+      courseF_bee_conditionals8_authored_hint:
+        courseF_bee_conditionals8_a: |-
+          **記住：**這個關卡在每次運行時都會有變化。
+
+          你會需要一個條件判斷的積木（`如果`或是`如果…否則`）來完成這個挑戰。
+        courseF_bee_conditionals8_b: |-
+          This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
+
+          Only check for nectar and honey at the end of your path.
       courseF_bee_for1_authored_hint:
         courseF_bee_for1_a: A loop will help you here.
       courseF_bee_for10_authored_hint:
         courseF_bee_for10_a: Can you find a pattern between the number of steps you
           need to take and the number of nectars to gather?
         courseF_bee_for10_b: You'll need to have 2 repeats, one will use a math block.
+        courseF_bee_for10_c: "In the puzzle, the first set of flowers has **14** flowers,
+          the second set has **10** flowers, third set has **6** flowers, and the
+          fourth set has **2** flowers.\n\nIn this drawing, notice there are **7**
+          red squares, **5** orange squares, **3** green squares, and **1** blue block.
+          \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11
+          Hint Drawing.png)\n\nHow do the numbers relate?"
+        courseF_bee_for10_d: You'll need to have 2 repeats, one will use a math block.
       courseF_bee_for11_authored_hint:
         courseF_bee_for11_a: "How much less is 12 than 15?  \nHow much less is 9 than
           12?\n\nDo you see a pattern?"
@@ -2586,9 +4107,479 @@
           of each loop iteration if you want to solve the puzzle.
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment
           is added to your `counter` variable each time through."
+      courseF_bee_for_challenge1_authored_hint: []
+      courseF_bee_for_challenge2_authored_hint:
+        courseF_bee_for_challenge2_a: |-
+          看看可用的移動方式：
+
+          ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_b: "試著使用 2 個`計數`迴圈：一個用來往上爬然後採集花蜜，另一個則是往下爬然後釀造蜂蜜。"
+        courseF_bee_for_challenge2_c: |-
+          注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
+
+          其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
+        courseF_bee_for_challenge2_d: |-
+          **Solution:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_bee_for_challenge3_authored_hint:
+        courseF_bee_for_challenge2_a: |-
+          看看可用的移動方式：
+
+          ![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)
+        courseF_bee_for_challenge2_b: "試著使用 2 個`計數`迴圈：一個用來往上爬然後採集花蜜，另一個則是往下爬然後釀造蜂蜜。"
+        courseF_bee_for_challenge2_c: |-
+          注意一個`計數`迴圈裡頭需要數個規律的重複積木，以重複 `counter` 次來製作出樓梯的模式。
+
+          其它的`計數`迴圈只需要一個普通的重複積木以收集到 `counter` 個蜂蜜。
+        courseF_bee_for_challenge2_d: |-
+          **Solution:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward"/>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="maze_moveForward">
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      courseF_bee_functions2_authored_hint:
+        courseF_bee_functions2_a: The function has been written for you, but you will
+          need to call it at each flower.
+      courseF_bee_functions3_authored_hint:
+        courseF_bee_functions3_a: 'Your function for this puzzle only needs to make
+          honey, it shouldn''t have any `move forward` or `turn` blocks in it. '
+      courseF_bee_functions3a_authored_hint:
+        courseF_bee_functions3a_a: 'Your function for this puzzle only needs to get
+          nectar or make honey, it shouldn''t have any `move forward` or `turn` blocks
+          in it. '
+        courseF_bee_functions3a_b: Use a stairstep pattern to check the first four
+          clouds.
+      courseF_bee_functions4_authored_hint:
+        courseF_bee_functions4_a: Your function should travel down the side paths
+          and return the bee back to the main road.  You don't need to add that part
+          to your main program.
+      courseF_bee_functions5_authored_hint:
+        courseE_bee_functions5_a: Edit the function so that it solves the puzzle without
+          having to change the main program.
+        courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n-
+          move forward\n- collect all of the nectar\n- turn around\n- move back to
+          the main path\n- turn back to the direction that the bee started from"
+      courseF_bee_functions5a_authored_hint:
+        courseF_bee_functions5a_a: "Your function should check if there's a path to
+          the right, and if there is, travel down the side paths and return the bee
+          back to the main road.  \n\nYou don't need to add that part to your main
+          program."
+      courseF_bee_functions6_authored_hint:
+        courseF_bee_functions6_a: |-
+          如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。
+
+          添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！
+
+          ![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)
+      courseF_bee_functions7_authored_hint:
+        courseF_bee_functions7_a: |-
+          如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。
+
+          添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！
+        courseF_bee_functions7_b: |-
+          記得要在綠色的函式積木裡建置你的程式。
+
+          ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
+        courseF_bee_functions7_c: This function should turn the bee to head him down
+          the path, collect the nectar, make the honey, then turn the bee around and
+          bring him back.
+      courseF_bee_functions8a_authored_hint:
+        courseF_bee_functions8a_a: |-
+          如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。
+
+          添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！
+        courseF_bee_functions8a_b: |
+          Remember to build code inside of the function editor.
+      courseF_bee_functions_challenge1_authored_hint:
+        courseF_bee_functions_challenge1_a: You can use the functions in the tool
+          box to help you. You can call a function inside of another function's definition!
+      courseF_bee_functions_challenge2_authored_hint:
+        courseF_bee_functions_challenge2_a: |-
+          If there is a path to the right, you should do the following:
+          * Get any nectar or make any honey.
+          * Turn right towards the side path.
+          * Move to the end of the side path.
+          * Turn right.
+
+          If you repeat the above actions twice, you will be ready to move back down the main path.
+
+          **Only click for another hint if you want to see the full solution!**
+        courseF_bee_functions_challenge2_b: |-
+          **Solution:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_untilBlocked">
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_if">
+          <title name="DIR">isPathRight</title>
+          <statement name="DO">
+          <block type="procedures_callnoreturn" id="function">
+          <mutation name="move and check"/>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation/>
+          <title name="NAME">check nectar or honey</title>
+          <statement name="STACK">
+          <block type="bee_ifElseFlower">
+          <title name="LOC">atFlower</title>
+          <statement name="DO">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block>
+          </statement>
+          <statement name="ELSE">
+          <block type="bee_whileNectarAmount">
+          <title name="ARG1">honeyAvailable</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>
+          <statement name="DO">
+          <block type="maze_honey"/>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          <block type="procedures_defnoreturn" deletable="false" movable="false" editable="false">
+          <mutation/>
+          <title name="NAME">move and check</title>
+          <statement name="STACK">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="check nectar or honey"/>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          <next>
+          <block type="maze_untilBlocked">
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </statement>
+          </block>
+          </xml>
+      courseF_bee_functions_challenge2_recursion_authored_hint:
+        courseF_bee_functions8a_a: |-
+          如果碰到了難度很高的關卡，試著花些時間建構出函式來利用。
+
+          添加一些積木到裡頭，然後試試看，接著再添加一些，再試試，最後，你就可以找到答案！
+        courseF_bee_functions8a_b: |
+          Remember to build code inside of the function editor.
       courseF_bee_fwp1_authored_hint:
         courseF_bee_fwp1_a: Use `if` statements to make sure you're only getting nectar
           from a flower.
+        courseF_bee_fwp1_b: Continue along the path using a `repeat` block. Make sure
+          you are using a `move forward` block and checking if there is a flower using
+          a `if` statement.
       courseF_bee_fwp2_authored_hint:
         courseF_bee_fwp2_a: "To turn this into a function, simply drag the code into
           the existing function block.  \n\n\n![](https://images.code.org/4d918c677ecb9f1618c1556566805b32-image-1477621874625.gif)"
@@ -2597,9 +4588,18 @@
       courseF_bee_fwp3_authored_hint:
         courseF_bee_fwp3_a: Your function will run no matter which direction you're
           facing.
+        courseF_bee_fwp3_b: There are 3 rows of nectar, what kind of turns and movements
+          do you need to make between each row?
+        courseF_bee_fwp3_c: To solve this puzzle, you'll need to call your function
+          3 times. In between each call, you need to `turn right`, `move forward`
+          2 times, then `turn right` again. OR, you need to `turn left`, `move forward`
+          2 times, then `turn left` again.
       courseF_bee_fwp4_authored_hint:
         courseF_bee_fwp4_a: You will need to add a parameter and use the resulting
           variable in your loop.
+        courseF_bee_fwp4_b: The parameter you create for your function will be used
+          to in the repeat loop to determine how many times the bee will move forward
+          and check for nectar.
       courseF_bee_fwp5_authored_hint:
         courseF_bee_fwp5_a: Count the number of spaces you need to check in each stretch
           and use those numbers as your parameters to the function call.
@@ -2610,9 +4610,379 @@
       courseF_bee_fwp7_authored_hint:
         courseF_bee_fwp7_a: You don't need a second parameter for this function, only
           a second `if` statement.
-      courseF_bee_fwp8_authored_hint: []
+        courseF_bee_fwp7_b: Add an `if` statement in your function so the bee checks
+          for both honeycombs and flowers.
+      courseF_bee_fwp8_authored_hint:
+        courseF_bee_fwp8_a: How could a `for` loop help in this puzzle?
       courseF_bee_fwp9_authored_hint: []
       courseF_bee_fwp9_predict1_authored_hint: []
+      courseF_bee_fwp_challenge1_authored_hint:
+        courseF_bee_fwp_challenge1_a: |-
+          The main program should look something like this:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">5</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseF_bee_fwp_challenge1_b: |-
+          Look at how much corn is available to harvest in each space. Do you see the counter pattern? The `length` parameter should be used to set the maximum value in the `for loop`.
+
+          Don't forget to have the farmer move back to the main path after harvesting!
+        courseF_bee_fwp_challenge1_c: |-
+          Place a `for loop` inside a function and set it to count from `1` to `length` by `1`.
+          Inside this loop, you should move forward and pick all of the corn.
+
+          <xml>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          </statement>
+          </block></xml>
+        courseF_bee_fwp_challenge1_d: |-
+          Inside the `for loop` you will want to `move forward` then `get nectar` **counter times**.
+          After the `for loop` you can just `move backward` **length times**.
+
+          You may need to read this hint several times to understand it. The part in **bold** is a hint about how to use the two `repeat` loops you will need.
+        courseF_bee_fwp_challenge1_e: |
+          **Here is the solution:**
+
+          <xml>
+          <block type="procedures_defnoreturn" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></xml>
+      courseF_bee_fwp_challenge2_authored_hint:
+        courseF_bee_fwp_challenge2_a: |-
+          Start by making sure you understand how this function is *supposed* to work. As the farmer moves down each path, she will only try to collect corn. Instead, how can you make her check for each of the 3 vegetables and pick only the one she finds?
+
+          Add conditional statements to the function to check for corn, pumpkins, and lettuce.
+        courseF_bee_fwp_challenge2_b: "Are you running out of `move forward` blocks?\nTry
+          using a *second* `for loop` in your main program. \n\n**Note:** Be careful
+          not to confuse `counter` with `counter2` in your code."
+        courseF_bee_fwp_challenge2_c: |-
+          **Here is what your function should look like:**
+
+          <xml><block type="procedures_defnoreturn" deletable="false" movable="false" editable="false" usercreated="true">
+          <mutation>
+          <arg name="length"/>
+          </mutation>
+          <title name="NAME">pick row</title>
+          <statement name="STACK">
+          <block type="maze_turn">
+          <title name="DIR">turnLeft</title>
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="harvester_ifAtCrop">
+          <title name="LOC">Corn</title>
+          <statement name="DO">
+          <block type="harvester_corn"/>
+          </statement>
+          <next>
+          <block type="harvester_ifAtCrop">
+          <title name="LOC">Pumpkin</title>
+          <statement name="DO">
+          <block type="harvester_pumpkin"/>
+          </statement>
+          <next>
+          <block type="harvester_ifAtCrop">
+          <title name="LOC">Lettuce</title>
+          <statement name="DO">
+          <block type="harvester_lettuce"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="parameters_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveBackward</title>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </xml>
+        courseF_bee_fwp_challenge2_d: |
+          **Here is what your main program should look like:**
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for" inline="true">
+          <title name="VAR">counter2</title>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">6</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="procedures_callnoreturn" inline="false">
+          <mutation name="pick row">
+          <arg name="length"/>
+          </mutation>
+          <value name="ARG0">
+          <block type="variables_get">
+          <title name="VAR">counter2</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block></xml>
+      courseF_farmer_ramp11_authored_hint:
+        courseF_farmer_ramp11_a: "如果你在編寫迴圈程式時有困難，可以試試先把所有的程式寫出來，然後找找裡面有哪些地方是重複執行的，找到模式（Pattern）把它放到迴圈裡。"
+        courseF_farmer_ramp11_b: "除了用 5 個`收集生菜`積木之外，要怎麼使用`重複`迴圈來收成生菜呢？"
+        courseF_farmer_ramp11_c: "你不必用 5 個重複迴圈來收集所有的生菜。我們可以把收集生菜的迴圈（連同`移動-向前`積木一起）放到另一個迴圈裡頭。"
+      courseF_maze_predict1_authored_hint: []
+      courseF_maze_ramp1_authored_hint:
+        courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
+          of the blocks have been fully clicked together, then click "Run" again.
+      courseF_maze_ramp13_authored_hint:
+        courseF_maze_ramp13_b: Don't forget to use the "Step" button to go through
+          block by block and look for errors.
+        courseF_maze_ramp13_a: "使用重複積木來不停的運作同一個或是多個指令。"
+      courseF_maze_ramp15_authored_hint:
+        courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through
+          block by block and look for errors.
+        courseF_maze_ramp7_a: "使用重複積木來不停的運作同一個或是多個指令。"
+      courseF_maze_ramp2_authored_hint:
+        courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into
+          the workspace and connect it to the program that is attached to the `when
+          run` block.
+      courseF_maze_ramp4_authored_hint:
+        courseF_maze_ramp4_a: You can turn right or left from the bird's point of
+          view. If you are facing right, turning right will make you point downwards.
+        courseF_maze_ramp4_b: To follow the path, move forward and turn one way, then
+          move three times before turning the opposite way. Move forward one more
+          time to reach the pig.
+      courseF_maze_ramp5_authored_hint:
+        courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
+          line. Can you figure out what you need to do next?
+      courseF_maze_ramp6_authored_hint:
+        courseF_maze_ramp6_a: "有 2 個方法可以完成這個關卡！"
+      courseF_maze_ramp7_authored_hint:
+        courseF_maze_ramp7_b: Don't forget to use the "Step" button to go through
+          block by block and look for errors.
+        courseF_maze_ramp7_a: "使用重複積木來不停的運作同一個或是多個指令。"
       courseF_playlab_variables1a_authored_hint:
         courseF_playlab_variables1a_a: Put the word "Goal!" inside the green block
           that is connected to the purple `set shout to` block.
@@ -2622,6 +4992,169 @@
       courseF_playlab_variables3bEdit_authored_hint:
         courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All
           you have to do is put them where they belong!
+      courseF_playlab_variables3b_josh_authored_hint:
+        courseF_playlab_variables3b_a: The variable blocks are already in the workspace.  All
+          you have to do is put them where they belong!
+      courseF_playlab_variables7b_authored_hint:
+        courseF_playlab_variables7b_a: Have a cat and a dog talk about their favorite
+          foods. Use the ask block to find out the favorite food, then display the
+          text to the screen!
+        courseF_playlab_variables7b_b: Have your favorite character ask if you want
+          to hear a joke. If the answer is yes, display a joke to the screen.
+      courseF_playlab_variables_challenge1_authored_hint:
+        courseF_playlab_variables_challenge1_a: |-
+          You will need additional blocks from the tool box to get the actors to talk.
+          <xml><block type="studio_saySpriteParamsTime" inline="true">
+          <value name="SPRITE">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TEXT">
+          <block type="text">
+          <title name="TEXT">Knock knock.</title>
+          </block>
+          </value>
+          <value name="TIME">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block></xml>
+      courseF_playlab_variables_challenge2_authored_hint:
+        courseF_playlab_variables_challenge2_a: 'Add and subtract points to the `score`
+          variable when sprites collide. '
+        courseF_playlab_variables_challenge2_b: "在每次方向鍵點擊時，你可以將參數改成角色移動的距離。"
+        courseF_playlab_variables_challenge2_c: |-
+          **Solution:**
+
+          <xml>
+          <block type="studio_whenArrow">
+          <title name="VALUE">up</title>
+          <next>
+          <block type="studio_moveDistanceParams" inline="true">
+          <title name="SPRITE">0</title>
+          <title name="DIR">1</title>
+          <value name="DISTANCE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          <block type="studio_whenArrow">
+          <title name="VALUE">down</title>
+          <next>
+          <block type="studio_moveDistanceParams" inline="true">
+          <title name="SPRITE">0</title>
+          <title name="DIR">4</title>
+          <value name="DISTANCE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          <block type="studio_whenArrow">
+          <title name="VALUE">left</title>
+          <next>
+          <block type="studio_moveDistanceParams" inline="true">
+          <title name="SPRITE">0</title>
+          <title name="DIR">8</title>
+          <value name="DISTANCE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          <block type="studio_whenArrow">
+          <title name="VALUE">right</title>
+          <next>
+          <block type="studio_moveDistanceParams" inline="true">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <value name="DISTANCE">
+          <block type="math_number">
+          <title name="NUM">25</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
+          <next>
+          <block type="studio_setScore" inline="false">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="studio_getScore"/>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">2</title>
+          <next>
+          <block type="studio_setScore" inline="false">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">ADD</title>
+          <value name="A">
+          <block type="studio_getScore"/>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">3</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">1</title>
+          <title name="SPRITE2">2</title>
+          <next>
+          <block type="studio_setScore" inline="false">
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">MINUS</title>
+          <value name="A">
+          <block type="studio_getScore"/>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </xml>
+      coursef_maze_ramp3_authored_hint:
+        courseF_maze_ramp3_a: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo
+          delete a block from the middle of your code, drag all of the blocks underneath
+          it away to the right and let them sit in the workspace for a while.  \n\nClick
+          on the block you want to delete, and drag it back to the toolbox.\n\nFinally,
+          put your other blocks back in place where they belong.\n"
       drawings!_authored_hint:
         triangle_geometry_hint: "請記住：一個正三角形有 3 條等長的邊，每個角是 60 度！"
         repeat_pointer: "你要畫出一條邊，然後轉向，共做 3 次…要執行一連串的指令多次，可以用什麼積木呢？"
@@ -3474,6 +6007,9 @@
         Course_4_Artist_Vars_13_c: "如果要在邊數改變的同時又保持圖形的尺寸，可以使用運算積木，將周長除以邊數。"
       grade5_artist_variables_square7_authored_hint:
         Course_4_Artist_Vars_6_a: "若要畫出一個正多邊形，可以在每一次循環轉 **360/邊數** 度。"
+      grade5_artist_variables_triangles1_authored_hint:
+        grade5_artist_variables_triangles1_a: To make an internal angle of 60 degrees
+          in this triangle, remember to turn the artist 120 degrees.
       grade5_bee_for_loops10_authored_hint:
         grade5_bee_for_loops10_a: "How much less is 12 than 15?  \nHow much less is
           9 than 12?\n\nDo you see a pattern?"

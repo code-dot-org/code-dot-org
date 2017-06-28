@@ -534,11 +534,11 @@ tr:
             Encoding Color Images:
               name: Renkli resimlerini kodlama
             Encoding Numbers in the Real World:
-              name: Encoding Numbers in the Real World
+              name: Gerçek dünyada sayıları kodlama
             Encoding and Sending Text:
-              name: Encoding and Sending Text
+              name: Biçimlendirilmiş metin kodlama ve gönderme
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: Kayıplı sıkıştırma ve dosya formatları
             Number Systems:
               name: Sayı Sistemleri
             Personal Innovations:
@@ -548,7 +548,7 @@ tr:
             Sending Binary Messages with the Internet Simulator:
               name: Internet simülatörü ile ikili ileti gönderme
             Sending Bits in the Real World:
-              name: Sending Bits in the Real World
+              name: Gerçek dünyada ikili verileri kullanma
             Sending Complex Messages:
               name: Kompleks mesaj gönderiyor
             Sending Formatted Text:
@@ -2163,7 +2163,7 @@ tr:
             Intro to Data:
               name: Veriye genel bakış
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: Kayıplı sıkıştırma ve dosya formatları
             Making Data Visualizations:
               name: Veri görselleştirmeleri yapma
             Practice PT - Tell a Data Story:
