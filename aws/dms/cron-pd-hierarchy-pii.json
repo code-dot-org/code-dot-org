@@ -61,9 +61,19 @@
       "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "7",
       "rule-name": "7",
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "pd_workshops_facilitators"
+      },
+      "rule-action": "include"
+    },
+    {
+      "rule-type": "transformation",
+      "rule-id": "8",
+      "rule-name": "8",
       "rule-target": "schema",
       "object-locator": {
         "schema-name": "dashboard_production"
