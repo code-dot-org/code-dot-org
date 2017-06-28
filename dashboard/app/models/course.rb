@@ -20,8 +20,6 @@ class Course < ApplicationRecord
 
   after_save :write_serialization
 
-  scope :with_associated_models, -> {includes([:plc_course, :course_scripts])}
-
   def skip_name_format_validation
     !!plc_course
   end
@@ -122,56 +120,5 @@ class Course < ApplicationRecord
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
       end
     }
-  end
-
-  @@course_cache = nil
-  COURSE_CACHE_KEY = 'course-cache'.freeze
-
-  def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
-    ENV['UNIT_TEST'] || ENV['CI']
-  end
-
-  # generates our course_cache from what is in the Rails cache
-  def self.course_cache_from_cache
-    # make sure possible loaded objects are completely loaded
-    [CourseScript, Plc::Course].each(&:new)
-    Rails.cache.read COURSE_CACHE_KEY
-  end
-
-  def self.course_cache_from_db
-    {}.tap do |cache|
-      Course.with_associated_models.find_each do |course|
-        cache[course.name] = course
-        cache[course.id.to_s] = course
-      end
-    end
-  end
-
-  def self.course_cache_to_cache
-    Rails.cache.write(COURSE_CACHE_KEY, course_cache_from_db)
-  end
-
-  def self.course_cache
-    return nil unless should_cache?
-    @@course_cache ||=
-      course_cache_from_cache || course_cache_from_db
-  end
-
-  def self.get_without_cache(id_or_name)
-    # a bit of trickery so we support both ids which are numbers and
-    # names which are strings that may contain numbers (eg. 2-3)
-    find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
-    # unlike script cache, we don't throw on miss
-    Course.with_associated_models.find_by(find_by => id_or_name)
-  end
-
-  def self.get_from_cache(id_or_name)
-    return get_without_cache(id_or_name) unless should_cache?
-
-    course_cache.fetch(id_or_name.to_s) do
-      # Populate cache on miss.
-      course_cache[id_or_name.to_s] = get_without_cache(id_or_name)
-    end
   end
 end
