@@ -17,11 +17,8 @@ const RecentCourses = React.createClass({
 
   render() {
     const { courses, showAllCoursesLink, isTeacher, heading, isRtl } = this.props;
-    const teacherCourses = courses.length > 4 ? courses.slice(0,4) : courses;
-    const teacherMoreCourses = courses.length > 4 ? courses.slice(4) : [];
-    //const studentTopCourse = courses[0];
-    const studentCourses = courses.length >= 5 ? courses.slice(1,5) : courses;
-    const studentMoreCourses = courses.length > 5 ? courses.slice(5) : [];
+    const topFourCourses = courses.length > 4 ? courses.slice(0,4) : courses;
+    const moreCourses = courses.length > 4 ? courses.slice(4) : [];
 
     return (
       <ContentContainer
@@ -31,8 +28,8 @@ const RecentCourses = React.createClass({
         showLink={showAllCoursesLink}
         isRtl={isRtl}
       >
-        {isTeacher && teacherCourses.length > 0 && (
-          teacherCourses.map((course, index) =>
+        {topFourCourses.length > 0 && (
+          topFourCourses.map((course, index) =>
             <CourseCard
               key={index}
               name={course.name}
@@ -43,28 +40,9 @@ const RecentCourses = React.createClass({
           )
         )}
 
-        {isTeacher && teacherMoreCourses.length > 0 && (
+        {moreCourses.length > 0 && (
           <SeeMoreCourses
-            courses={teacherMoreCourses}
-            isRtl={isRtl}
-          />
-        )}
-
-        {!isTeacher && studentCourses.length > 0 && (
-          studentCourses.map((course, index) =>
-            <CourseCard
-              key={index}
-              name={course.name}
-              description={course.description}
-              link={course.link}
-              isRtl={isRtl}
-            />
-          )
-        )}
-
-        {!isTeacher && studentMoreCourses.length > 0 && (
-          <SeeMoreCourses
-            courses={studentMoreCourses}
+            courses={moreCourses}
             isRtl={isRtl}
           />
         )}

@@ -32,6 +32,11 @@ const courses = [
     description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
     link: "https://curriculum.code.org/csp/unit6/",
   },
+  {
+    name: "CSP Unit 7",
+    description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
+    link: "https://curriculum.code.org/csp/unit7/",
+  },
 ];
 
 export default storybook => {
@@ -91,7 +96,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Recent Courses - teacher, 6 courses ',
+        name: 'Recent Courses - teacher, 7 courses ',
         description: ` Recent Courses when the teacher has sections enrolled in 6 courses. Should see a View More button`,
         story: () => (
           <RecentCourses
@@ -104,7 +109,7 @@ export default storybook => {
         )
       },
       {
-        name: 'Recent Courses - student, 6 courses ',
+        name: 'Recent Courses - student, 7 courses ',
         description: ` Recent Courses when the student has progress in 6 courses. Should see a View More button`,
         story: () => (
           <RecentCourses

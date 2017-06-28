@@ -1,4 +1,5 @@
 import React from 'react';
+import i18n from "@cdo/locale";
 import CourseCard from './CourseCard';
 import ContentContainer from './ContentContainer';
 import ProgressButton from "../progress/ProgressButton";
@@ -47,7 +48,7 @@ const SeeMoreCourses = React.createClass({
             onClick={this.showMoreCourses}
             color={ProgressButton.ButtonColor.gray}
             icon="caret-down"
-            text="View more"
+            text={i18n.viewMore()}
             style={{float: 'right'}}
           />
         )}
