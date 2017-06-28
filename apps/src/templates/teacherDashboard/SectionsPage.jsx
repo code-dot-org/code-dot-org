@@ -54,8 +54,10 @@ class SectionsPage extends Component {
     console.log(selectedId);
   };
 
+  addSection = () => this.props.newSection();
+
   render() {
-    const { newSection, numSections } = this.props;
+    const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
     return (
       <div>
@@ -72,7 +74,7 @@ class SectionsPage extends Component {
           <ProgressButton
             text={i18n.newSection()}
             style={styles.button}
-            onClick={newSection}
+            onClick={this.addSection}
             color={ProgressButton.ButtonColor.gray}
           />
         }
