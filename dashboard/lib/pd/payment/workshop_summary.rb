@@ -47,7 +47,7 @@ module Pd::Payment
     end
 
     def section_url
-      CDO.code_org_url("/teacher-dashboard#/sections/#{workshop.section.id}", 'http:')
+      CDO.code_org_url("/teacher-dashboard#/sections/#{workshop.section_id}", 'http:')
     end
 
     def workshop_url
