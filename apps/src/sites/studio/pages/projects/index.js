@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { getStore } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
 import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/PublicGallery';
+import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
@@ -34,6 +35,19 @@ $(document).ready(() => {
         <PublicGallery initialProjectLists={projectLists}/>
       </Provider>,
       publicGallery);
+  });
+
+  $.ajax({
+    method: 'GET',
+    url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
+    dataType: 'json'
+  }).done(projectLists => {
+    const widget = document.getElementById('projects-widget');
+    ReactDOM.render(
+      <Provider store={getStore()}>
+        <ProjectWidget projectList={projectLists.gamelab}/>
+      </Provider>,
+      widget);
   });
 });
 
