@@ -386,6 +386,7 @@
   homepage_slot_text_blurb_hoc: E āhei ana te tangata te ako ahakoa ko wai. Me tīmata
     i te rangi nei
   homepage_slot_text_link_hoc: Whakamātauria te Hour of Code
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Taurima i tētahi Hour of Code
   homepage_slot_text_link_hocserved: "# served"
   homepage_solot_text_link_volunteer: E kuhu hei tūao mō te Hour of Code
@@ -796,6 +797,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: New section
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Create new sections and add students to
     them. Sections help you organize students into smaller groups so you can track
     their progress and manage their accounts.
@@ -803,6 +805,7 @@
   dashboard_sections_table_secret: Login Type
   dashboard_sections_table_grade: Grade
   dashboard_sections_table_course: Course
+  dashboard_sections_table_pairing_allowed: Papatonotanga ā-Tānga
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Students
   dashboard_sections_table_code: Section Code
@@ -1848,9 +1851,8 @@
   infinity_shortcode: inf
   playlab_shortcode: lab
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Akoranga
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1884,6 +1886,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

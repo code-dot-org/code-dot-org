@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
-  authorize_resource
+  authorize_resource except: [:index]
 
   def index
     @recent_courses = current_user.try(:recent_courses_and_scripts)
@@ -12,7 +12,7 @@ class CoursesController < ApplicationController
   end
 
   def show
-    course = Course.find_by_name(params[:course_name])
+    course = Course.get_from_cache(params[:course_name])
     unless course
       # PLC courses have different ways of getting to name. ideally this goes
       # away eventually

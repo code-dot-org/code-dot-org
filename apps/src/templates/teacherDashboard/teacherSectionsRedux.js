@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
@@ -7,7 +8,7 @@ const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
-const CANCEL_NEW_SECTION = 'teacherDashboard/CANCEL_NEW_SECTION';
+const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -23,8 +24,8 @@ export const updateSection = (sectionId, serverSection) => ({
   sectionId,
   serverSection
 });
-export const newSection = () => ({ type: NEW_SECTION });
-export const cancelNewSection = sectionId => ({ type: CANCEL_NEW_SECTION, sectionId });
+export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
+export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 const initialState = {
   nextTempId: -1,
@@ -32,7 +33,7 @@ const initialState = {
   validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
-  validAssignments: [],
+  validAssignments: {},
   // Mapping from sectionId to section object
   sections: {}
 };
@@ -96,8 +97,11 @@ export default function teacherSections(state=initialState, action) {
       sectionFromServerSection(section, state.validAssignments));
     return {
       ...state,
-      sectionIds: sections.map(section => section.id),
-      sections: _.keyBy(sections, 'id')
+      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sections: {
+        ...state.sections,
+        ..._.keyBy(sections, 'id')
+      }
     };
   }
 
@@ -133,6 +137,13 @@ export default function teacherSections(state=initialState, action) {
     // create an id that we can use in our local store that will be replaced
     // once persisted
     const sectionId = state.nextTempId;
+    let courseId = action.courseId || null;
+    if (courseId) {
+      if (!state.validAssignments[courseId]) {
+        courseId = null;
+      }
+    }
+
     return {
       ...state,
       // use negative numbers for our temp ids so that we dont need to worry about
@@ -144,27 +155,24 @@ export default function teacherSections(state=initialState, action) {
         [sectionId]: {
           id: sectionId,
           name: '',
-          // TODO(bjvanminnen) - shared enum with server
-          loginType: 'word',
+          loginType: SectionLoginType.word,
           grade: '',
           stageExtras: false,
           pairingAllowed: true,
-          numStudents: 0,
+          studentNames: [],
           code: '',
-          courseId: null,
-          scriptId: null,
-          assignmentName: '',
-          assignmentPath: '',
+          courseId: action.courseId || null,
+          scriptId: null
         }
       }
     };
   }
 
-  if (action.type === CANCEL_NEW_SECTION) {
+  if (action.type === REMOVE_SECTION) {
     const sectionId = action.sectionId;
     const section = state.sections[sectionId];
-    if (section.code) {
-      throw new Error('Can not cancel persisted section');
+    if (!section) {
+      throw new Error('section does not exist');
     }
     return {
       ...state,
@@ -184,29 +192,37 @@ export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-export const sectionFromServerSection = (serverSection, validAssignments) => {
-  const courseId = serverSection.course_id || null;
-  const scriptId = serverSection.script ? serverSection.script.id : null;
+export const sectionFromServerSection = (serverSection, validAssignments) => ({
+  id: serverSection.id,
+  name: serverSection.name,
+  loginType: serverSection.login_type,
+  grade: serverSection.grade,
+  stageExtras: serverSection.stage_extras,
+  pairingAllowed: serverSection.pairing_allowed,
+  studentNames: serverSection.students.map(student => student.name),
+  code: serverSection.code,
+  courseId: serverSection.course_id,
+  scriptId: serverSection.script ? serverSection.script.id : null
+});
 
-  // When generating our assignment id, we want to ignore scriptId if we're assigned
-  // to both a script and course (i.e. we want to find the Course).
-  const assignId = assignmentId(courseId, courseId ? null : scriptId);
+const assignmentForSection = (validAssignments, section) => {
+  const assignId = assignmentId(section.courseId, section.courseId ? null : section.scriptId);
   const assignment = validAssignments[assignId];
+  return assignment;
+};
 
-  return {
-    id: serverSection.id,
-    name: serverSection.name,
-    loginType: serverSection.login_type,
-    grade: serverSection.grade,
-    stageExtras: serverSection.stage_extras,
-    pairingAllowed: serverSection.pairing_allowed,
-    numStudents: serverSection.students.length,
-    code: serverSection.code,
-    courseId: serverSection.course_id,
-    scriptId: scriptId,
-    // TODO(bjvanminnen): should maybe be getting these fields as selectors instead of
-    // living in state
-    assignmentName: assignment ? assignment.name : '',
-    assignmentPath: assignment ? assignment.path : ''
-  };
+/**
+ * Get the name of the course/script assigned to the given section
+ */
+export const assignmentName = (validAssignments, section) => {
+  const assignment = assignmentForSection(validAssignments, section);
+  return assignment ? assignment.name : '';
+};
+
+/**
+ * Get the path of the course/script assigned to the given section
+ */
+export const assignmentPath = (validAssignments, section) => {
+  const assignment = assignmentForSection(validAssignments, section);
+  return assignment ? assignment.path : '';
 };

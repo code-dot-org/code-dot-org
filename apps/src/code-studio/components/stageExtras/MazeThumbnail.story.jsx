@@ -15,14 +15,55 @@ const sampleMap = [
 export default storybook => {
   storybook
     .storiesOf('MazeThumbnail', module)
-    .addWithInfo(
-      'default',
-      'This is the MazeThumbnail component.',
-      () => (
+    .addStoryTable([{
+      name: 'Angry Birds',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
         <MazeThumbnail
           map={sampleMap}
+          startDirection={1}
+          skin="birds"
+        />
+      ),
+    }, {
+      name: 'Plants vs. Zombies',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          map={sampleMap}
+          startDirection={1}
           skin="pvz"
         />
-      )
-    );
+      ),
+    }, {
+      name: 'Scrat',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          map={sampleMap}
+          startDirection={1}
+          skin="scrat"
+        />
+      ),
+    }, {
+      name: 'Farmer',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          map={sampleMap}
+          startDirection={1}
+          skin="farmer"
+        />
+      ),
+    }, {
+      name: 'Farmer Night',
+      description: 'This is the MazeThumbnail component.',
+      story: () => (
+        <MazeThumbnail
+          map={sampleMap}
+          startDirection={1}
+          skin="farmer_night"
+        />
+      ),
+    }]);
 };

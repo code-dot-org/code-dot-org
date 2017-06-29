@@ -68,17 +68,27 @@ const Courses = React.createClass({
   render() {
     const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
+    const subHeadingText = i18n.coursesHeadingSubText(
+      {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+    );
+    const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
       <div>
         <HeaderBanner
           headingText={headingText}
-          subHeadingText={i18n.coursesHeadingSubText(
-            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+          subHeadingText={subHeadingText}
+          description={headingDescription}
+        >
+          {isSignedOut && (
+            <ProgressButton
+              href= "/users/sign_up"
+              color={ProgressButton.ButtonColor.gray}
+              text={i18n.createAccount()}
+              style={styles.button}
+            />
           )}
-          showCreateAccount={isSignedOut}
-          description={i18n.coursesHeadingDescription()}
-        />
+        </HeaderBanner>
 
         {!isTeacher && (
           <ProtectedStatefulDiv
@@ -93,6 +103,7 @@ const Courses = React.createClass({
             showAllCoursesLink={false}
             heading={i18n.myCourses()}
             isTeacher={isTeacher}
+            isRtl={false}
           />
         )}
 

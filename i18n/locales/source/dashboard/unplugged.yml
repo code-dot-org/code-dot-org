@@ -167,3 +167,24 @@ en:
       ! '':
         title: 
         desc: 
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Unplugged Activity
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Unplugged Activity
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Unplugged Activity
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Unplugged Activity
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Unplugged Activity
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Unplugged Activity
+        desc: Today you will learn about what to do if someone is being mean online.

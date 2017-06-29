@@ -75,6 +75,7 @@
   "penUp":"הרם את העיפרון",
   "reinfFeedbackMsg":"הנה הציור שלך! המשך לעבוד עליו או המשך לחידה הבאה.",
   "setAlpha":"הגדר אלפא",
+  "setCharacter":"set character to {character}",
   "setColour":"צבע קבוע",
   "setPattern":"הגדר דפוס קבוע",
   "setWidth":"העובי הקבוע",

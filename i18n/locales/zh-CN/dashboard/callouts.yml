@@ -3,11 +3,11 @@ zh-CN:
     callouts:
       2-3 Artist 1 new_callout: [ ]
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: Artist doesn't have a "Step" button, but you can drag the slider left to watch your program run more carefully.
+        2-3_Artist_Debugging_1_a: 小艺术家没有“步进”按钮，但你可以将滑块往左拖动来仔细看看你的程序如何运行的。
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: 紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。
       4-5 Artist Patterns Free Play_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       4-5 Bee Conditionals - FC Test_callout:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
       4-5 Bee Conditionals 2_callout:
@@ -73,6 +73,7 @@ zh-CN:
       CSD U3 Conditional Project_callout: [ ]
       CSD U3 Conditionals Apple 2_callout: [ ]
       CSD U3 Conditionals Apple_callout: [ ]
+      CSD U3 Diagonal Movement_callout: [ ]
       CSD U3 Direction Animations_callout: [ ]
       CSD U3 Direction Arrows_callout: [ ]
       CSD U3 Draw Loop Plugged update your scene_callout: [ ]
@@ -99,6 +100,12 @@ zh-CN:
       CSD U3 Sprites text debug_callout: [ ]
       CSD U3 Sprites text_callout: [ ]
       CSD U3 UP_ARROW_callout: [ ]
+      CSD U3 Variables Predict Where X_callout:
+        CSD_U3_variables: 改动这里的数字
+      CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Click here to show the grid.
+      CSD U3 Variables Predict Where XY_callout:
+        grid: Click here to show the grid.
       CSD U3 Variables TEMPLATE square_callout: [ ]
       CSD U3 Variables make a big square_callout: [ ]
       CSD U3 Variables make a square_callout: [ ]
@@ -179,6 +186,8 @@ zh-CN:
         CSD_U3_L11_S5_C1: Look at this code.
       CSD U3 abstraction velocityY_callout:
         CSD_U3_L11_S5_C1: Add your block here.
+      CSD U3 challenge face_callout: [ ]
+      CSD U3 challenge new shape_callout: [ ]
       CSD U3 collisions getSpeed_callout:
         CSD_U3_L11_S2_C1: Add your code for the compass here.
         CSD_U3_L11_S2_C2: Change the code to display speed here.
@@ -194,26 +203,25 @@ zh-CN:
       CSD U3 collisions types_callout:
         CSD_U3_L13_S6_C1: Add your code here.
       CSD U3 debug_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 ellipse_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 fill_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSD U3 game backgrounds_callout:
         CSD_U3_S18_L4_C1: This block calls your function.
         CSD_U3_L18_S4_C2: Functions area
       CSD U3 game variables_callout:
         CSD_U3_S18_L3_C1: This block creates a new variable.
         CSD_U3_L18_S3_C2: Variables area
+      CSD U3 keydown conditional_callout: [ ]
       CSD U3 my-rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
-      CSD U3 picture_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 这是"运行"按钮。
+      CSD U3 picture_callout: [ ]
       CSD U3 platform background1_callout:
         CSD_U3_L16_S3_C1: the function that draws the background
         CSD_U3_L16_S3_C2: the code that calls the function
@@ -225,11 +233,11 @@ zh-CN:
       CSD U3 platform variable1_callout:
         callout: This block creates a variable.
       CSD U3 rect_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Here is the "Run" button.
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 这是"运行"按钮。
       CSD U3 sequence_callout:
-        CSD_U3_rect_c1: Here is the code
-        CSD_U3_rect_c2: Drag this block into the code area.
+        CSD_U3_rect_c1: 这是代码
+        CSD_U3_rect_c2: 拖动此模块放到代码区域。
       CSDU4 - Design Mode - 3_callout: [ ]
       CSPU5_U3L16 - setPosition to fixed location_callout:
         firstTimeSetPosition: Drag this inside the event handler function. Then click the arrows to get rid of the width and height parameters.
@@ -262,9 +270,9 @@ zh-CN:
         Code Studio Puzzle Challenge 6 - Bee_callout1: Drag blocks into the trash can to delete them
       Code Studio Puzzle Challenge Var - Artist_callout: [ ]
       Counting_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Course 4 Artist 4_callout:
         repeat_full_circle: 输入僵尸至少需要移动多少次才能完成一个完整的循环
       Course 4 Artist 7_callout:
@@ -278,7 +286,7 @@ zh-CN:
       Course 4 Artist Functions 8_callout:
         edit_function: 单击此处来编辑您的函数。
       Course 4 Artist Functions challenge_callout:
-        Course_4_Artist_Functions_challenge_1: Notice that we've sorted all of blocks and put them behind categories to keep things tidy.  Click here to find all of the blocks that you need.
+        Course_4_Artist_Functions_challenge_1: 注意，为了井然有序，我们将所有模块都放到类别里，并排好了顺序。点击这里来找到所有你需要的模块。
       Course 4 Artist Params 2_callout:
         length_parameter: 你能修改这个函数，从而让它用到长度参数吗？
       Course 4 Artist Params 4_callout:
@@ -297,11 +305,11 @@ zh-CN:
       Course 4 Artist Vars 6_callout:
         degrees_per_side: 用360除以边的数量，从而算出每次转的角度。
       Course 4 Artist Vars 8_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the coding area wider.
+        Course_4_Artist_Vars_8_a: 需要更多空间？拉动这条分割线就能让代码区域更宽一些。
       Course 4 Artist Vars 9_callout:
         set_sides: 用这个模块来设置“边数”为正确的数值来通过这一关。
       Course 4 Bee 1_callout:
-        if_bee_nectar: Use the "if" block to decide if the bee should get nectar or make honey
+        if_bee_nectar: 用“如果”模块来决定蜜蜂应该采集花蜜还是酿蜂蜜。
       Course 4 Bee 3_callout:
         if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower and makes honey if it's not a flower
       Course 4 Bee For Loops 1_callout:
@@ -372,9 +380,9 @@ zh-CN:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: [ ]
       Geometric Pattern_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Geometric Sun_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Infinity_move_collide_callout:
         Infinity_move_collide_callout: 发生此事件时播放声音。
       Infinity_move_directions_callout:
@@ -411,9 +419,9 @@ zh-CN:
       MSM Defining Vars 3_callout:
         MSM Defining Vars 3: Click here to find your variables
       Mike Playlab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Modular Arithmetic_callout: [ ]
       NEW Course 4 Artist Functions 10_callout: [ ]
       NEW Course 4 Artist Functions 3_callout:
@@ -443,13 +451,13 @@ zh-CN:
       New App Lab Project_callout: [ ]
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Artist Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       New Maker Lab Project_callout: [ ]
       New Play Lab Project_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -468,10 +476,14 @@ zh-CN:
       PDAlg Big Game History_callout: [ ]
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
+      PS copy - CSD U3 Variables Predict Where XY Embed_callout:
+        grid: Click here to show the grid.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: 紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。
+      PS copy CSD U3 Variables Predict Where XY_callout:
+        grid: Click here to show the grid.
       Pizza on a Plate_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Play Lab Rocket 2_callout:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
         play lab rocket 2: Define your rocket-height function here
@@ -481,10 +493,18 @@ zh-CN:
         Play Lab Rocket 3 1: Update the purpose statement before moving on to the examples and definition.
       Play Lab Rocket Free Play_callout: [ ]
       Poorva copy U3L2 Using Simple Commands_callout: [ ]
+      Quantum Bee - Ryan_callout:
+        feeling_stuck_callout_test: " Feeling Stuck?<br />Click the lightbulb for a hint!"
+      Robot Doodle_callout:
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
+      Robot Drawing_callout:
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
+      Robot_callout:
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Rock Paper Scissors_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not the value your function returns with some input) into the rocket animation library. The animation you see on screen is actually using your function to move the rocket!
       Ryan - 4-5 Bee Conditionals 2_callout:
@@ -495,9 +515,9 @@ zh-CN:
         Sam the Butterfly 3 1: Edit this function to keep Sam from going off the right side
       Sam the Butterfly 5_callout: [ ]
       Test Play Lab Project With Walls_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       TestLab_callout: [ ]
       U3 - Simple Drawing - Ellipse and No Fill_callout: [ ]
       U3 - Simple Drawing - Fill_callout: [ ]
@@ -554,6 +574,8 @@ zh-CN:
         artistLoopsK2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you can use in this puzzle.
+      courseA_artist_loops7_callout:
+        courseA_artist_loops7_1: This number means that only one of this kind of block can be used in the final answer.
       courseA_artist_loops8_callout:
         courseA_artist_loops8_1: Did you know that you can draw back over a line whenever you need to?
       courseA_collector_loops1_callout:
@@ -561,20 +583,39 @@ zh-CN:
       courseA_collector_loops3_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       courseA_collector_loops3_predict1_callout: [ ]
+      courseA_forVideoTest_artist_callout: [ ]
+      courseA_maze_seq1_callout:
+        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+      courseA_maze_seq2_callout:
+        courseA_maze_seqA_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+      courseA_maze_seq4_callout:
+        courseA_maze_seq4_1: These blocks are made of stone.  You can move them, but you can't delete them!
+      courseA_maze_seq4a_callout: [ ]
       courseA_playLab_events2_callout: [ ]
       courseA_playLab_events3_callout: [ ]
-      courseA_playLab_events4_callout: [ ]
-      courseA_playLab_events5_callout: [ ]
+      courseA_playLab_events4_callout:
+        courseA_playlab_events4_callout1: This is a callout
+      courseA_playLab_events5_callout:
+        courseA_playLab_events5_1: Click here to change the direction of the event arrow.
       courseA_playLab_events6_callout:
         courseA_playLab_events6_1: This let's you choose a "random" sound, which means that you don't know what you are going to get until you hear it!
+      courseA_toMakeLoopsVideo_Collector_callout: [ ]
       courseB_artist_loops3_callout:
         courseB_artist_loops3_1: There is only one of these blocks in the toolbox.  How will you use it?
+      courseB_artist_loops5_callout:
+        courseB_artist_loops5_1: This number means that there are no more of this block left in the toolbox.
       courseB_collector_loops1_callout:
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
-      courseB_maze_seq7_callout:
-        courseB_maze_seq7_1: These grey blocks are made of stone!  That means that they can't be trashed.
+      courseB_maze_seq1_callout:
+        courseB_maze_seq1: Click the lightbulb when you need a hint!
+      courseB_maze_seq2_callout:
+        courseB_maze_seq2_callout1: Use the step button to go step-by-step through the program. This will help you find the bug!
+      courseB_maze_seq3_callout:
+        courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown away.
+      courseB_maze_seq7_callout: [ ]
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
+      courseC_collector_loops_challenge2_callout: [ ]
       courseC_collector_prog1_callout:
         courseC_collector_prog1_1: Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage.
       courseC_collector_prog7_callout:
@@ -583,47 +624,87 @@ zh-CN:
       courseC_collector_prog9_callout: [ ]
       courseC_collector_progA_callout: [ ]
       courseC_collector_progB_callout: [ ]
+      courseC_collector_prog_challenge1_callout: [ ]
+      courseC_collector_prog_challenge2_callout: [ ]
+      courseC_harvester_loops1_callout:
+        courseC_harvester_loops1_callout1: The number four on the pumpkin tells you that there are four pumpkins available to pick.
       courseC_maze_loops2_callout:
         courseC_maze_loops2_1: You only have one of these blocks available in this puzzle.
       courseC_maze_loops2_predict1_callout: [ ]
+      courseC_maze_loops_challenge2_callout: [ ]
       courseC_maze_programming1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseC_maze_programming2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseC_maze_programming3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_callout2: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseC_maze_programming4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseC_maze_programming5_callout: [ ]
       courseC_maze_programming7_callout:
         courseC_maze_programming7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+        courseC_maze_programming7_2: These blocks are made of stone and can't be thrown away.
+      courseC_starWars_loops10_callout: [ ]
+      courseC_starWars_loops10_predict2_callout: [ ]
+      courseC_starWars_loops11_callout: [ ]
+      courseC_starWars_loops2_callout:
+        courseC_starWars_loops2: You only have one of these blocks available in this puzzle.
+      courseC_starWars_loops4_callout: [ ]
+      courseC_starWars_loops5_callout: [ ]
+      courseC_starWars_loops6_callout: [ ]
+      courseC_starWars_loops7_callout: [ ]
+      courseC_starWars_loops8_callout: [ ]
+      courseC_starWars_loops9_callout: [ ]
       courseD_artist_functions2_callout:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseD_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseD_artist_nestedLoops1a_callout:
+        courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
+      courseD_artist_nestedLoops_challenge2_callout:
+        courseD_artist_nestedLoops_challenge2_callout1: This loop should create an octagon.
+        courseD_artist_nestedLoops_challenge2_callout2: This loop should create a hexagon.
+        courseD_artist_nestedLoops_challenge2_callout3: This loop should create a square.
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
       courseD_artist_ramp12_callout: [ ]
       courseD_bee_conditionals2_callout:
         4_5_Bee_Conditionals_2_1: 请注意检查是否每一朵云里都有一朵花，但不用检查蜂窝。
+      courseD_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb).
+      courseD_bee_conditionals_challenge3_callout:
+        courseD_bee_conditionals_challenge3_1: Try repeating the move forward block using this loop.
+      courseD_bee_debugging_challenge1_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_debugging_challenge2_callout:
+        courseD_bee_debugging_challenge1_callout1: Use this command to move the bee backward.
+      courseD_bee_nested_loops_challenge1_callout: [ ]
+      courseD_bee_nested_loops_challenge2_callout: [ ]
+      courseD_collector_debugging_challenge2_callout: [ ]
+      courseD_collector_nested_loops_challenge2_callout: [ ]
       courseD_collector_ramp10_callout: [ ]
       courseD_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseD_collector_ramp9_callout: [ ]
+      courseD_collector_until_challenge1_callout: [ ]
+      courseD_farmer_until_challenge2_callout: [ ]
+      courseD_harvester_nested_loops_challenge1-broken_callout: [ ]
+      courseD_maze_loops_challenge1_callout: [ ]
       courseD_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
       courseD_maze_ramp2_callout:
         courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
       courseD_maze_ramp3_callout:
         courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
+        courseC_maze_programming3_callout2: Use the step button to go step-by-step through the program. This will help you find the bug!
       courseD_maze_ramp4_callout:
         courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
       courseD_maze_ramp5_callout: [ ]
       courseD_maze_ramp6_callout:
         courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
-      courseD_maze_ramp7_callout:
-        courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
       courseE_artist_functions1_callout:
@@ -632,6 +713,15 @@ zh-CN:
         courseD_artist_functions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       courseE_artist_functions8_callout:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
+      courseE_artist_functions_challenge_callout:
+        courseE_artist_functions_challenge_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge_callout2: If you don't like this design, change it to anything you want!
+      courseE_artist_functions_challenge1_callout:
+        courseE_artist_functions_challenge1_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge1_callout2: If you don't like this design, change it to anything you want!
+      courseE_artist_functions_challenge2_callout:
+        courseE_artist_functions_challenge2_callout1: Keep this program going by adding more code to the bottom.
+        courseE_artist_functions_challenge2_callout2: If you don't like this design, change it to anything you want!
       courseE_artist_functions_predict1_callout: [ ]
       courseE_artist_predict1_callout: [ ]
       courseE_artist_ramp10_callout: [ ]
@@ -696,6 +786,12 @@ zh-CN:
         courseF_artist_fwp4_1: To complete your polygon, make sure you are always turning by 360 ÷ `sides` degrees.
       courseF_artist_fwp5_callout:
         courseF_artist_fwp5_1: You will find the polygon function in here.
+      courseF_artist_predict1_callout: [ ]
+      courseF_artist_ramp10_callout: [ ]
+      courseF_artist_ramp8_callout:
+        courseE_artist_ramp8_1: You can change this number.
+        courseE_artist_ramp8_2: Click here to type in the number of times to repeat your code.
+      courseF_artist_ramp9_callout: [ ]
       courseF_artist_variables1_callout:
         courseF_artist_variables1_1: Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!
       courseF_artist_variables10_callout: [ ]
@@ -727,6 +823,10 @@ zh-CN:
       courseF_artist_variables_8_callout: [ ]
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
+      courseF_bee_conditionals2_callout:
+        courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of the blocks you need are beneath these labels!
+      courseF_bee_conditionals5_callout:
+        courseF_bee_conditionals5_1: Use this block when the length of the path changes (as in the sides of the rectangle!)
       courseF_bee_for3_callout:
         courseF_bee_for3_1: The `for` loop is so wide that we have changed the toolbox into category mode to save space.  You will find the new `for` loop in here!
       courseF_bee_for3_predict1_callout: [ ]
@@ -734,16 +834,40 @@ zh-CN:
       courseF_bee_for6_callout: [ ]
       courseF_bee_for9_callout:
         courseF_bee_for9_1: You will find the `math` block in here.
+      courseF_bee_for_challenge1_callout: [ ]
+      courseF_bee_functions2_callout:
+        courseF_bee_functions2_1: This block calls a function.  Click this "edit" button to see what is inside!
+      courseF_bee_functions6_callout:
+        courseF_bee_functions6_1: Don't forget to look in here for more blocks that might help make this easier!
+      courseF_bee_functions_challenge1_callout:
+        courseF_bee_functions_challenge1_1: What code should you put in this function?
+        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can be used here if edit it to make honey multiple times.
+      courseF_bee_functions_challenge2_callout: [ ]
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
       courseF_bee_fwp3_callout:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_maze_predict1_callout: [ ]
+      courseF_maze_ramp1_callout:
+        grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.
+      courseF_maze_ramp13_callout: [ ]
+      courseF_maze_ramp15_callout:
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
+      courseF_maze_ramp2_callout:
+        courseC_maze_programming2_1: This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.
+      courseF_maze_ramp4_callout:
+        courseC_maze_programming4_1: This is your block limit.  It tells you how many of these blocks you have left to use.
+      courseF_maze_ramp5_callout: [ ]
+      courseF_maze_ramp6_callout:
+        courseD_maze_ramp6_1: Whatever code you put in here will repeat as many times as you tell it to, then continue to run the rest of the program.
+      courseF_maze_ramp7_callout:
+        courseF_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseF_playLab_func2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories to make it easier to find the blocks you need.
       courseF_playlab_variables2_callout:
@@ -752,10 +876,22 @@ zh-CN:
       courseF_playlab_variables3_callout: [ ]
       courseF_playlab_variables4_callout: [ ]
       courseF_playlab_variables5_callout: [ ]
+      courseF_playlab_variables5c RYAN Copy_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables5c_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables6c_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
+      courseF_playlab_variables7c_callout: [ ]
+      courseF_playlab_variables8c_callout: [ ]
+      courseF_playlab_variablesTemplate_callout:
+        courseF_playlab_variables5c_1: You will find your variable block in here.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: This is how you set the value of your variable.  Change the text connected to this block to change what is being held in your variable.
       course_playlab_variables3_callout:
         course_playlab_variables3_1: This is how you set the value of your variable.
+      coursef_maze_ramp3_callout:
+        courseC_maze_programming3_2: You can drag extra blocks to the toolbox to throw them away.
       drawings!_callout: [ ]
       frozen circle function with parameter_callout:
         frozen_circle_function_with_parameter_circle: 用“创建圆圈”模块，并且改变大小。
@@ -839,13 +975,13 @@ zh-CN:
       grade3_playLab_buildGame_2_callout:
         Playlab_cond_2_1: 'This block is your way to tell the computer to remember your value: when you use the block labeled `j`, the program will give you the number you generate here at the top. '
       grade4_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       grade4_artist_functions1_callout:
         grade4_artist_functions1_1: Let's start by using this block to help create the first square.
       grade4_artist_functions2_callout:
         grade4_artist_funcions2_1: When this green block runs, all of the code in the function will run. What should the artist do after drawing the first square?
       grade4_artist_functions_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       grade4_artist_functions_stars3_callout:
         grade4_artist_functions_stars3_1: Drag this block into your program. Every time you use this block, all of the commands in the function will be executed!
       grade4_artist_parameters_squares1_callout:
@@ -872,19 +1008,19 @@ zh-CN:
       grade4_frozen_square_loop3_callout:
         replace_questions: 使用下拉菜单来将"???"替换为数字
       grade4_playLab_proj_example1_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
       grade4_playLab_proj_example2_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       grade4_playlab_test_callout: [ ]
       grade4_review_artist1_callout: [ ]
       grade5_artist_for_loops1b_callout:
         grade5_artist_for_loops1b_1: The toolbox has been changed into "category" mode to make more room for your code.  Now, `for` loops live in here.
       grade5_artist_for_loops4_callout: [ ]
       grade5_artist_freeplay_callout:
-        4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized into categories.  Click on these words to see where everything went!
+        4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       grade5_artist_functionparameters8_callout:
         grade5_artist_functionparameters8_1: You will find the polygon function in here.
       grade5_artist_functionparameters_6_callout:
@@ -902,7 +1038,7 @@ zh-CN:
         edit_add_parameter: 点击编辑，在你的函数中添加参数
         add_and_drag_parameter: 在这里填写参数的名称，点击添加，然后将它拖动到函数定义中
       grade5_artist_variables_freeplay10_callout:
-        Course_4_Artist_Vars_8_a: Need more space?  Pull this bar over to make the coding area wider.
+        Course_4_Artist_Vars_8_a: 需要更多空间？拉动这条分割线就能让代码区域更宽一些。
       grade5_artist_variables_octagons13_callout: [ ]
       grade5_artist_variables_pentagons1_callout:
         place_length_variable: 将长度变量拖拽到这里来替代问号。
@@ -972,8 +1108,8 @@ zh-CN:
       sample9a_callout:
         sample9a_1: This would be a puzzle to connect stage to freeplay, but playlab does not have "turn" or "move forward". Also, the goals are not flexible (size or sprites).
       small_actors_playlab_projects_callout:
-        New Play Lab Project_callout1: Click the categories to see the blocks in your toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save this project to your account!
+        New Play Lab Project_callout1: 点击分类来看工具箱里的模块！将模块拖拽到工作区，来将它们加到你的程序里。
+        New Play Lab Project_callout2: 点击“运行”来保存并运行程序
+        sign_in_to_save_project: 想要稍后再访问你的项目吗？登录后就能将项目保存到你的账户中！
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

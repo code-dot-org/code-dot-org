@@ -140,6 +140,15 @@ class FollowersControllerTest < ActionController::TestCase
     assert_equal "Sorry, you can't join your own section.", flash[:alert]
   end
 
+  test 'student_user_new redirects admins to admin_directory' do
+    sign_in (create :admin)
+    assert_does_not_create(Follower) do
+      get :student_user_new, params: {section_code: @word_section.code}
+    end
+
+    assert_redirected_to admin_directory_path
+  end
+
   test "student_register as teacher" do
     sign_out @laurel
 

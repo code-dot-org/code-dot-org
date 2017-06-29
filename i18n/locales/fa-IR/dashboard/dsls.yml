@@ -19,10 +19,10 @@ fa:
         /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        <strong>N</strong>: '<strong>N</strong>'
-        <strong>O</strong>: '<strong>O</strong>'
-        <strong>P</strong>: '<strong>P</strong>'
-        <strong>Q</strong>: '<strong>Q</strong>'
+        <strong>N</strong>: <strong>N</strong>
+        <strong>O</strong>: <strong>O</strong>
+        <strong>P</strong>: <strong>P</strong>
+        <strong>Q</strong>: <strong>Q</strong>
         Matching: تطبیق
         Use the key to match each code to its letter: از کلید برای تطبیق هر کد با حرفش استفاده کن
       2-3 Graph Paper Match 1:
@@ -111,14 +111,14 @@ fa:
         Match the puzzles to the blocks: پازل ها را با بلوکها تطبیق کن
         Maze Match One: بازی هزارتوی یک
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>شمارۀ تاس بازیکن 1 را به امتیاز کل اضافه کن</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>امتیاز بازیکنان را مقایسه کن تا ببینی کی برده</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>بازیکن 1 تاس میاندازد</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>امتیاز بازیکن 1 را 0 کن</h4>'
+        <h4>1)</h4>: <h4>1)</h4>
+        <h4>2)</h4>: <h4>2)</h4>
+        <h4>3)</h4>: <h4>3)</h4>
+        <h4>4)</h4>: <h4>4)</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>شمارۀ تاس بازیکن 1 را به امتیاز کل اضافه کن</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>امتیاز بازیکنان را مقایسه کن تا ببینی کی برده</h4>
+        <h4>Player 1 rolls die</h4>: <h4>بازیکن 1 تاس میاندازد</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>امتیاز بازیکن 1 را 0 کن</h4>
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: مراحل مسابقه تاس انداختن را به ترتیبی که باید در الگوریتم ظاهر شوند مرتب کن.
         Matching: تطبیق
       4-5 Computational Thinking Match 1:
@@ -126,10 +126,10 @@ fa:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/تفکر_حسابی_2_آ4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>طرف/چرخها: 3<br/>طرف/پنجره ها: 2</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>طرف/چرخها: 2 <br/>طرف/پنجره ها: 6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>طرف/چرخها: 3<br/>طرف/پنجره ها: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: هر یک از این وسایل نقلیه به قطعات کوچکتر تجزیه شده است. هر خودرو را با لیست اجزایش تطبیق کن.
         Matching: تطبیق
       4-5 Suncatchers Match 1:
@@ -138,10 +138,10 @@ fa:
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /داراییهای_متنی/4-5_تصاویر/بدون_دستگاه/آفتابگیرها_1_آ4.png
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: هر برنامه را با کلمه ای که میسازد تطبیق کن، با استفاده از مجموعه مهارت های ارائه شده.
         Matching: تطبیق
       4-5 maze match 1:
@@ -160,9 +160,9 @@ fa:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/> <br/> رو'
-        <br/><br/>below: '<br/> <br/> زیر'
-        <br/><br/>next to: '<br/> <br/>در کنارِ'
+        <br/><br/>above: <br/> <br/> رو
+        <br/><br/>below: <br/> <br/> زیر
+        <br/><br/>next to: <br/> <br/>در کنارِ
         Is the square next to, above, or below the ball?: آیا مربع درکنارِ، بالای، و یا پایینِ توپ است؟
         Matching: تطبیق
       K-1 Artist 2 Match 2:
@@ -288,27 +288,25 @@ fa:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: یک الگوریتم را برای تصویر ارائه شده انتخاب کنید.
         Multiple Choice: انتخاب چندگانه
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'با یک مربع شروع کن<br/>یک متوازی الاضلاع بالای مربع قرار بده<br/>یک مثلث در راست متوازی الاضلاع قرار بده'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'با یک مربع شروع کن<br/>یک مثلث بالای مربع قرار بده<br/>یک مثلث زیر مربع قرار بده'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'با یک مربع شروع کن<br/>یک مثلث زیر مربع قرار بده<br/>یک متوازی الاضلاع در راست مثلث قرار بده'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'با یک مربع شروع کنید<br/>یک مثلث سمت راست مربع بگذارید<br/>یک متوازی الاضلاع زیر مربع بگذارید<br/>یک مثلث سمت راست متوازی الاضلاع بگذارید'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: با یک مربع شروع کن<br/>یک متوازی الاضلاع بالای مربع قرار بده<br/>یک مثلث در راست متوازی الاضلاع قرار بده
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: با یک مربع شروع کن<br/>یک مثلث بالای مربع قرار بده<br/>یک مثلث زیر مربع قرار بده
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: با یک مربع شروع کن<br/>یک مثلث زیر مربع قرار بده<br/>یک متوازی الاضلاع در راست مثلث قرار بده
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: با یک مربع شروع کنید<br/>یک مثلث سمت راست مربع بگذارید<br/>یک متوازی الاضلاع زیر مربع بگذارید<br/>یک مثلث سمت راست متوازی الاضلاع بگذارید
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: انتخاب چندگانه
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'با یک مثلث شروع کن<br/>یک مربع زیر مثلث قرار بده<br/>مثلث دیگری زیر مربع قرار بده'
-        Which image does <em>not</em> follow this algorithm?: 'کدام تصویر این الگوریتم را دنبال <em>نمی</em> کند؟'
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: با یک مثلث شروع کن<br/>یک مربع زیر مثلث قرار بده<br/>مثلث دیگری زیر مربع قرار بده
+        Which image does <em>not</em> follow this algorithm?: کدام تصویر این الگوریتم را دنبال <em>نمی</em> کند؟
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: انتخاب چندگانه
-        Which program makes this image?: |
-          کدام برنامه این تصویر را درست میکند؟
-          
+        Which program makes this image?: "کدام برنامه این تصویر را درست میکند؟\n"
       2-3 Conditionals Multi 1:
         /script_assets/2-3_images/unplugged/conditionals_1_a1.png: /script_assets/2-3_images/unplugged/conditionals_1_a1.png
         /script_assets/2-3_images/unplugged/conditionals_1_a2.png: /script_assets/2-3_images/unplugged/conditionals_1_a2.png
@@ -331,9 +329,7 @@ fa:
         /script_assets/2-3_images/unplugged/graph_paper_1_a3.png: /script_assets/2-3_images/unplugged/graph_paper_1_a3.png
         /script_assets/2-3_images/unplugged/graph_paper_1_q.png: /script_assets/2-3_images/unplugged/graph_paper_1_q.png
         Multiple Choice: انتخاب چندگانه
-        Which program makes this image?: |
-          کدام برنامه این تصویر را درست میکند؟
-          
+        Which program makes this image?: "کدام برنامه این تصویر را درست میکند؟\n"
       2-3 Maze Multi 2:
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png
@@ -434,11 +430,11 @@ fa:
         Which one of these items is hardest to describe an algorithm for?: تعریف یک الگوریتم برای کدام یک از این موارد سختتر است؟
       4-5 Computational Thinking Multi 1:
         Eugene is a _____ city.: یوجین یک شهر_____ است.
-        0: ؟ اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟
+        0: '؟ اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟'
         1: ': اینجا سه جمله داده شده. کدام یک از قالبهای زیر به درستی تفاوتشان را استخراج کرده طوری که هر سه جمله با همان قالب تطابق داشته باشند؟'
         Multiple Choice: انتخاب چندگانه
         Seattle _____ a _____ _____.: سیاتل یک _____ _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'سیاتل یک شهر بزرگ است. <br/> یوجین یک شهر متوسط است<br/> هیل ویو یک شهر کوچک است.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: سیاتل یک شهر بزرگ است. <br/> یوجین یک شهر متوسط است<br/> هیل ویو یک شهر کوچک است.
         _____ is _____ a _____.: _____ یک _____ _____ است.
         _____ is a _____ city.: _____ یک شهر_____ است.
       4-5 Crowdsourcing Multi 1:
@@ -461,9 +457,7 @@ fa:
         Your favorite food: غذای موردعلاقه تان
         Your parent's credit card number: شماره ی کارت اعتباری والدینتان
       4-5 Internet Multi 1:
-        /script_assets/4-5_images/unplugged/internet_1_q.png: |
-          /script_assets/4-5_images/unplugged/internet_1_q.png
-          
+        /script_assets/4-5_images/unplugged/internet_1_q.png: "/script_assets/4-5_images/unplugged/internet_1_q.png\n"
         23.23.224.106: 23.23.224.106
         54.209.61.132: 54.209.61.132
         54.243.71.82: 54.243.71.82
@@ -471,9 +465,7 @@ fa:
         Multiple Choice: انتخاب چندگانه
         When you try to log on to code.org, which IP address is the DNS most likely to take you to?: هنگامی که شما سعی می کنید به code.org وارد شوید، DNS شما را به احتمال زیاد به کدام آدرس آی پی خواهد برد؟
       4-5 Internet Multi 2:
-        /script_assets/4-5_images/unplugged/internet_1_q.png: |
-          /script_assets/4-5_images/unplugged/internet_1_q.png
-          
+        /script_assets/4-5_images/unplugged/internet_1_q.png: "/script_assets/4-5_images/unplugged/internet_1_q.png\n"
         If the DNS has sent you to the page at the IP address 100.42.50.110, which website are you on?: اگر DNS شما را به صفحه ای به آدرس آی پی 100.42.50.110 فرستاده است، در کدام وبسایت قرار دارید؟
         Multiple Choice: انتخاب چندگانه
         code.org: code.org
@@ -481,22 +473,20 @@ fa:
         khanacademy.org: khanacademy.org
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
-        /script_assets/4-5_images/unplugged/songwriting_1_q.png: |
-          /script_assets/4-5_images/unplugged/songwriting_1_q.png
-          
-        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        /script_assets/4-5_images/unplugged/songwriting_1_q.png: "/script_assets/4-5_images/unplugged/songwriting_1_q.png\n"
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: لو، لو، بپر به لوی من
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من.'
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>لو، لو، بپر به لوی من، <br/>بپر به لوی من، عزیز من.
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: انتخاب چندگانه
-        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: 'بزرگترین بخش این آهنگ که می توانید به آن "بخش همخوانی" بگویید که دقیقا هر زمان که فراخوانده شد تکرار شود چیست؟'
+        What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: بزرگترین بخش این آهنگ که می توانید به آن "بخش همخوانی" بگویید که دقیقا هر زمان که فراخوانده شد تکرار شود چیست؟
       4-5 Suncatchers Multi 1:
         /script_assets/4-5_images/unplugged/suncatchers_2_a1.png: /script_assets/4-5_images/unplugged/suncatchers_2_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a2.png: /script_assets/4-5_images/unplugged/suncatchers_2_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: انتخاب چندگانه
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'کدامیک از برنامه های زیر دقیقا همان دنباله ی برنامه ی 1 را <em> نمی سازد</em>?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: کدامیک از برنامه های زیر دقیقا همان دنباله ی برنامه ی 1 را <em> نمی سازد</em>?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -519,7 +509,7 @@ fa:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: چند گزینه ای توابع هنرمند
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'حلقه ای که الگوی زیر را نشان میدهد انتخاب کن: 5، 10، 15، 20، 25، 30، 35، 40، 45، 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'حلقه ای که الگوی زیر را نشان میدهد انتخاب کن: 5، 10، 15، 20، 25، 30، 35، 40، 45، 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
@@ -540,8 +530,8 @@ fa:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: ؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟
-        1: ؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟
+        0: '؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟'
+        1: '؟ یک گل بنفش ممکن است که 3، 2، و یا 1 شهد داشته باشد، اما شما نمی دانید که چند تا. کدام بلوکها به درستی همۀ شهد یک گل بنفش را بررسی و جمع آوری میکنند؟'
         Bee Conditionals Multiple Choice: چندگزینه ای شرطی های زنبور عسل
         Choose the best blocks.: بهترین بلوک ها را انتخاب کنید
       4-5 bee debug multi 1:
@@ -587,19 +577,19 @@ fa:
         Which blocks solve the puzzle?: کدام بلوک این معما را حل میکند؟?
       Baker test of multi can delete:
         2+3: 2+3
-        3 - 7: '3 - 7'
+        3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
         5-1: 5-1
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
         Line 4: Line 4
         Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
         /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
@@ -654,7 +644,7 @@ fa:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: انتخاب چندگانه
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'کدام حیوان رد پای دیجیتالی دارد که او را <strong>نا امن ترین</strong>میکند؟'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: کدام حیوان رد پای دیجیتالی دارد که او را <strong>نا امن ترین</strong>میکند؟
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
@@ -675,7 +665,7 @@ fa:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: انتخاب چندگانه
-        Which information should you <strong>not</strong> share online?: 'کدام اطلاعات را شما <strong>نباید</strong> بر روی اینترنت به اشتراک بگذارید؟'
+        Which information should you <strong>not</strong> share online?: کدام اطلاعات را شما <strong>نباید</strong> بر روی اینترنت به اشتراک بگذارید؟
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -697,7 +687,7 @@ fa:
         /script_assets/k_1_images/move_blocks/r3_S.png: /script_assets/k_1_images/move_blocks/r3_S.png
         /script_assets/k_1_images/move_blocks/r3_SE.png: /script_assets/k_1_images/move_blocks/r3_SE.png
         Multiple Choice: انتخاب چندگانه
-        Pick the correct repeat block.: 'بلوک تکرار  کننده صحیح را انتخاب کنید.'
+        Pick the correct repeat block.: بلوک تکرار  کننده صحیح را انتخاب کنید.
       K-1 Maze Multiple Choice 2:
         /script_assets/k_1_images/maze_images/maze_WS.png, 500: /script_assets/k_1_images/maze_images/maze_WS.png, 500
         /script_assets/k_1_images/move_blocks/EN.png: /script_assets/k_1_images/move_blocks/EN.png
@@ -705,7 +695,7 @@ fa:
         /script_assets/k_1_images/move_blocks/WN.png: /script_assets/k_1_images/move_blocks/WN.png
         /script_assets/k_1_images/move_blocks/WS.png: /script_assets/k_1_images/move_blocks/WS.png
         Maze: پیچ و خم
-        Which answer solves this level?: 'کدام پاسخ  معمای این سطح را حل میکند؟'
+        Which answer solves this level?: کدام پاسخ  معمای این سطح را حل میکند؟
       K-1 Move It Multi 1:
         /script_assets/k_1_images/unplugged_images/leftdown.png: /script_assets/k_1_images/unplugged_images/leftdown.png
         /script_assets/k_1_images/unplugged_images/leftleft.png: /script_assets/k_1_images/unplugged_images/leftleft.png
@@ -734,14 +724,14 @@ fa:
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Multiple Choice: انتخاب چندگانه
-        Which blocks spell "MOVE"?: 'چه بلوکهایی "حرکت" را هجی میکنند؟'
+        Which blocks spell "MOVE"?: چه بلوکهایی "حرکت" را هجی میکنند؟
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Multiple Choice: انتخاب چندگانه
-        Which blocks spell "JUMP"?: 'چه بلوکهایی "پرش" را هجی میکنند؟'
+        Which blocks spell "JUMP"?: چه بلوکهایی "پرش" را هجی میکنند؟
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Multiple Choice: انتخاب چندگانه
@@ -754,15 +744,15 @@ fa:
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: راننده و کمک راننده
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'یکی از این پسرها <b>راننده</b> است.  و یکی <b>کمک راننده</b> است.'
-        Which boy is the <large>helper</large>?: 'کدام پسر <large>کمک راننده</large> است؟'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: یکی از این پسرها <b>راننده</b> است.  و یکی <b>کمک راننده</b> است.
+        Which boy is the <large>helper</large>?: کدام پسر <large>کمک راننده</large> است؟
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: راننده و کمک راننده
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'یکی از این پسرها <b>راننده</b> است.  و یکی <b>کمک راننده</b> است.'
-        This time, which boy is the <large>driver</large>?: 'این دفعه کدام پسر <large>راننده</large> است؟'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: یکی از این پسرها <b>راننده</b> است.  و یکی <b>کمک راننده</b> است.
+        This time, which boy is the <large>driver</large>?: این دفعه کدام پسر <large>راننده</large> است؟
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -770,7 +760,7 @@ fa:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+        "https://studio.code.org/script_assets/msm/green-rect.png": 'https://studio.code.org/script_assets/msm/green-rect.png'
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.

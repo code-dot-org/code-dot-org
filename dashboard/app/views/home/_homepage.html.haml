@@ -15,6 +15,9 @@
     #user_hero
       = render template: 'api/user_hero'
 
+  #flashes
+    = show_flashes.html_safe
+
 .clear{style: "clear: both"}
 
 - if current_user

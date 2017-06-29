@@ -1,4 +1,4 @@
-%script{type: "text/javascript", src: "/js/bootstrap.min.js"}
+%script{:defer => "defer", type: "text/javascript", src: "/js/bootstrap.min.js"}
 
 %div{:class=>"modal fade", :id=>"selectLanguage"}
   %div{:class=>"modal-dialog", :width=>"500px"}
@@ -7,7 +7,7 @@
         %button{:type=>"button", :class=>"close", :"data-dismiss"=>"modal"}
           %span{:"aria-hidden"=>"true"} &times;
           %span{:class=>"sr-only"} Close
-        %img{:src=>avatar_image("flag sphere"), :style=>"width: 256px; height: 256px;"}
+        %img.lazyload{:'data-src'=>avatar_image("flag sphere"), :style=>"width: 256px; height: 256px;"}
       %div{:class=>"modal-body"}
         %h4{:class=>"modal-title"}= I18n.t('select_language')
         =view :language

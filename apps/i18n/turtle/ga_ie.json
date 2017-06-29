@@ -75,6 +75,7 @@
   "penUp": "peann suas",
   "reinfFeedbackMsg": "Seo é do líníocht! Lean ort ag obair uirthi, nó téigh ar aghaidh go dtí an chéad dúshlán eile.",
   "setAlpha": "socraigh alfa",
+  "setCharacter": "set character to {character}",
   "setColour": "socraigh an dath",
   "setPattern": "socraigh an patrún",
   "setWidth": "socraigh an leithead",
@@ -90,6 +91,5 @@
   "turnTooltip": "Casann seo an t-ealaíontóir ar chlé tríd an uillinn shonraithe.",
   "turtleVisibilityTooltip": "Taispeáin nó folaigh an t-ealaíontóir.",
   "widthTooltip": "Athraíonn seo leithead an phinn.",
-  "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Tá dath an phictiúir mícheart. Ní mór %1 a úsáid don dúshlán seo."
 }

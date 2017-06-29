@@ -75,6 +75,7 @@
   "penUp": "puja el llapis",
   "reinfFeedbackMsg": "Aquí tens el dibuix! Segueix treballant-hi o continua al puzzle següent.",
   "setAlpha": "establir alfa",
+  "setCharacter": "set character to {character}",
   "setColour": "defineix color",
   "setPattern": "defineix el patró",
   "setWidth": "defineix l'amplada",
@@ -90,6 +91,5 @@
   "turnTooltip": "Gira l'artista cap a l'esquerra o dreta segons el nombre especificat de graus.",
   "turtleVisibilityTooltip": "Fer l'artista visible o invisible.",
   "widthTooltip": "Canvia el gruix del llapis.",
-  "wrongColour": "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "La teva imatge té el color malament. Per a aquest puzzle necessita ser %1."
 }
