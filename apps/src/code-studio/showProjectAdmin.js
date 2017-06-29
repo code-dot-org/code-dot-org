@@ -23,7 +23,7 @@ export default () => {
     }
   }
 
-  if ($('.admin-abuse').length) {
+  if ($('.admin-abuse').length && dashboard.project.isProjectLevel()) {
     var abuseScore = dashboard.project.getAbuseScore();
     if (abuseScore) {
       $('.admin-abuse').show();
