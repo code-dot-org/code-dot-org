@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Courses from '@cdo/apps/templates/studioHomepages/Courses';
 import {initCourseExplorer} from '@cdo/apps/courseExplorer/courseExplorer';
+import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 
 $(document).ready(showCourses);
 
@@ -21,6 +22,7 @@ function showCourses() {
   const signedOut = coursesData.signedout;
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
+  const isRtl = isRtlFromDOM();
 
   ReactDOM.render (
     <Courses
@@ -33,6 +35,7 @@ function showCourses() {
       isSignedOut={signedOut}
       showInitialTips={showInitialTips}
       userId={userId}
+      isRtl={isRtl}
     />,
     document.getElementById('courses-container')
   );

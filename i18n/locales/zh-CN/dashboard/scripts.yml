@@ -91,7 +91,7 @@ zh-CN:
         course3:
           title: 课程 3
           description: 课程3是为已经学了课程2的学生准备的。学生将深入理解前面介绍过的编程话题，从而能够用灵活的方案来解决更复杂的问题。到课程结束时，学生们会创建出互动故事和游戏，并且可与任何人分享。建议4到5年级学生学习。
-          description_short: 在创建游戏和交互的故事时，更深入的学习编程。 课程3是课程2的延续。
+          description_short: 在创建游戏和交互的故事时，更深入的学习编程。 这是课程2的延续。
           description_audience: 8-18 岁
           stages:
             Artist:
@@ -167,7 +167,7 @@ zh-CN:
         course4:
           title: 第4课
           description: 课程4是为已经通过课程2和课程3的同学们准备的。这节课里同学们将学习怎样结合几种概念解决更复杂的问题。当这节课结束的时候，同学们将得以真正地编写程序来展现他们所学会的多种技能，包括用于循环的函数与带有参数的函数。建议4-8年级同学学习。
-          description_short: 通过计数循环和带有参数的函数等新概念来建立更复杂的程序。课程4是课程3的后续。
+          description_short: 通过计数循环和带有参数的函数等新概念来建立更复杂的程序。这是课程3的后续。
           description_audience: 10-18 岁
           stages:
             Artist:
@@ -3251,7 +3251,7 @@ zh-CN:
         csd3:
           title: CSD Unit 3 - Animations and Games
           description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
-          description_short: "编程"
+          description_short: " 在游戏实验室中学习编写动画，交互和比赛等的程序。"
           description_audience: ''
           stages:
             Booleans and Conditionals:

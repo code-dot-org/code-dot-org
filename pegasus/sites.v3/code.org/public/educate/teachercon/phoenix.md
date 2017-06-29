@@ -65,7 +65,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 **These include:**
 
 * Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
-* A room for you at the hotel -- No need to make a resrvation, we have booked this for you!
+* A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
 All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
@@ -148,7 +148,18 @@ This section will be updated as emails are sent for this event.
 <summary>**It's time to book your travel to TeacherCon. Complete by June 12th!**</summary>
  <p>
  <br>
-[Click Here](http://go.pardot.com/webmail/153401/191426343/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
+[Click here](http://go.pardot.com/webmail/153401/191426343/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email update for teachers.
+</p>
+</details>
+
+<details>
+<summary>**Pre-work and important infor about your upcoming TeacherCon!**</summary>
+ <p>
+ <br>
+**CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/210813081/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
+</p>
+ <p>
+**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/210813485/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
 </p>
 </details>
 

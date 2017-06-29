@@ -113,6 +113,7 @@ class Course < ApplicationRecord
   def summarize
     {
       name: name,
+      id: id,
       title: localized_title,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),
@@ -129,7 +130,8 @@ class Course < ApplicationRecord
 
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
-    ENV['UNIT_TEST'] || ENV['CI']
+    return false if ENV['UNIT_TEST'] || ENV['CI']
+    true
   end
 
   # generates our course_cache from what is in the Rails cache

@@ -75,6 +75,7 @@
   "penUp": "pensill upp",
   "reinfFeedbackMsg": "Hér er teikningin þín! Haltu áfram með hana eða farðu í næstu þraut.",
   "setAlpha": "stilla alpha",
+  "setCharacter": "stilla persónu á {character}",
   "setColour": "stilla lit",
   "setPattern": "stilla mynstur",
   "setWidth": "stilla breidd",
@@ -90,6 +91,5 @@
   "turnTooltip": "Snýr listamanninum til vinstri eða hægri um tiltekinn fjölda gráða.",
   "turtleVisibilityTooltip": "Gerir listamanninn sýnilegan eða ósýnilegan.",
   "widthTooltip": "Breytir breidd pensilsins.",
-  "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Myndin þín er í röngum lit. Í þessari þraut þarf að nota %1."
 }

@@ -1,0 +1,57 @@
+.col-50
+  .courseblock-span6.courseblock-wide-large{style: "height: 440px; max-width: 100%; margin-bottom: 20px;"}
+    %img.courseblock-span2.imgspan{src: "/images/next/tynker.png", style: "margin-right: 10px;"}
+    .courseblock-span4.heading
+      %h3 Tynker
+      %h4 
+        = I18n.t(:third_party_gradelevel_kto8)
+        %br
+        = I18n.t(:third_party_platform_all)
+        %br
+        = I18n.t(:third_party_price_varies)
+      .smalltext= I18n.t(:third_party_tynker_desc)
+      %br
+      %a{:href=>"https://www.tynker.com/school/lesson-plan/show?id=36-programming-1a"}
+        %button{:style=>'margin-left:10px'}= I18n.t(:third_party_tynker_btn_curriculum)
+      %a{:href=>"https://www.tynker.com/"}
+        %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_tynker_btn_site)
+.col-50
+  .courseblock-span6.courseblock-wide-large{style: "height: 440px; max-width: 100%;"}
+    %img.courseblock-span2.imgspan{src: "/images/next/scratchjr.png", style: "margin-right: 10px;"}
+    .courseblock-span4.heading
+      %h3 Scratch Jr.
+      %h4 
+        = I18n.t(:third_party_gradelevel_kto2)
+        %br
+        = I18n.t(:third_party_platform_mobile)
+        %br
+        = I18n.t(:third_party_price_free)
+      .smalltext= I18n.t(:third_party_scratchjr_desc)
+      %br
+      %a{:href=>"http://www.scratchjr.org/teach.html#curricula"}
+        %button{:style=>'margin-left:10px'}= I18n.t(:third_party_scratchjr_btn_curriculum)
+      %a{:href=>"http://www.scratchjr.org/"}
+        %button{:style=>'margin-top: 10px; margin-left:10px'}= I18n.t(:third_party_scratchjr_btn_site)
+
+.clear
+%br
+%table.responsive-table
+  %thead
+    %th= I18n.t(:third_party_organization)
+    %th= I18n.t(:third_party_curriculum)
+    %th= I18n.t(:third_party_pricing)
+  %tr
+    %td 
+      %a{:href=>"http://www.thefoos.com/"} The Foos
+    %td= I18n.t(:third_party_desc_10to12_kto3)
+    %td= I18n.t(:third_party_cost_free)
+  %tr
+    %td 
+      %a{:href=>"https://www.kodable.com/"} Kodable
+    %td= I18n.t(:third_party_desc_11_kto5)
+    %td= I18n.t(:third_party_cost_5permonth)
+  %tr
+    %td 
+      %a{:href=>"http://lightbot.com/"} Lightbot Jr.
+    %td= I18n.t(:third_party_desc_10to12_kto5)
+    %td= I18n.t(:third_party_cost_299)
