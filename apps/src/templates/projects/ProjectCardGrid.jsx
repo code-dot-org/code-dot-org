@@ -11,7 +11,7 @@ const NUM_PROJECTS_IN_APP_VIEW = 12;
 const styles = {
   grid: {
     padding: 10,
-    width: 1000
+    width: 970
   },
   link: {
     color: color.light_teal,
