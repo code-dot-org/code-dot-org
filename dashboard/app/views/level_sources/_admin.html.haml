@@ -2,8 +2,7 @@
   = render layout: 'shared/extra_links' do
     - if @level_source.hidden?
       %h4 This level is hidden but you can see it because you have the RESET_ABUSE permission. Everyone else gets a 404 page.
-    - if current_user.permission?(UserPermission::RESET_ABUSE)
-      = form_for(@level_source, html: {class: 'form-inline'}) do |f|
-        = f.label :hidden, 'Hide this solution and block sharing: '
-        = f.check_box :hidden
-        = f.submit 'Save'
+    = form_for(@level_source, html: {class: 'form-inline'}) do |f|
+      = f.label :hidden, 'Hide this solution and block sharing: '
+      = f.check_box :hidden
+      = f.submit 'Save'
