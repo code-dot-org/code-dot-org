@@ -24,7 +24,13 @@ const options = {
   covered_crates_3b: 0x350000,
 };
 
-const startDirections = Object.entries(Direction).slice(0, 5);
+const startDirections = {
+  '-': Direction.NONE,
+  East: Direction.EAST,
+  West: Direction.WEST,
+  North: Direction.NORTH,
+  South: Direction.SOUTH,
+};
 
 export default class StarWarsGridCellEditor extends CellEditor {
   /**
@@ -32,8 +38,11 @@ export default class StarWarsGridCellEditor extends CellEditor {
    */
   handleChange() {
     const zoom = this.zoom && this.zoom.checked;
+    const direction = this.direction ? +this.direction.value : undefined;
+
     this.props.onUpdate({
-      tileType: zoom << WallTypeShift | this.type.value
+      tileType: zoom << WallTypeShift | this.type.value,
+      direction: direction,
     });
   }
 
@@ -83,7 +92,7 @@ export default class StarWarsGridCellEditor extends CellEditor {
               value={this.props.cell.direction_}
               onChange={this.handleChange}
             >
-              {startDirections.map(([name, value]) => (
+              {Object.entries(startDirections).map(([name, value]) => (
                 <option value={value} key={value}>{name}</option>
               ))}
             </select>
