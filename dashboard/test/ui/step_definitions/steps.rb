@@ -883,11 +883,11 @@ def generate_teacher_student(name, teacher_authorized)
     Then I am on "http://code.org/teacher-dashboard#/sections"
     And I wait until element ".jumbotron" is visible
     And I dismiss the language selector
-    And I click selector ".btn-white:contains('New section')" once I see it
+    And I click selector ".uitest-newsection" once I see it
     Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
-    Then execute JavaScript expression "$('select').first().val('2').trigger('change')"
-    And I click selector ".btn-primary:contains('Save')" once I see it
-    And I click selector "a:contains('Manage Students')" once I see it
+    Then execute JavaScript expression "$('select').first().val('email').trigger('change')"
+    And I click selector ".uitest-save" once I see it
+    And I click selector "a:contains('0')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url
