@@ -31,6 +31,8 @@ export default () => {
       $('.admin-abuse-reset').click(function () {
         dashboard.project.adminResetAbuseScore();
       });
+    } else {
+      $('.admin-report-abuse').show();
     }
   }
 };
