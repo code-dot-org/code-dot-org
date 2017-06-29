@@ -362,7 +362,7 @@ function loadAppAsync(appOptions) {
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
     } else {
       project.load().then(function () {
-        if (project.hideBecauseAbusive()) {
+        if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
           return $.Deferred().reject();
         }
