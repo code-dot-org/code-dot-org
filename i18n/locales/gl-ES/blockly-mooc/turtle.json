@@ -75,6 +75,7 @@
   "penUp":"levante o lapis",
   "reinfFeedbackMsg":"Aquí está o seu debuxo! Continúe a traballar nel, ou siga para o próximo desafío.",
   "setAlpha":"definir alfa",
+  "setCharacter":"set character to {character}",
   "setColour":"definir cor",
   "setPattern":"definir padrón",
   "setWidth":"definir o longo",

@@ -747,7 +747,7 @@ tg:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "So far you've been making an animation or a story that does the exact same thing every time you run it. Now you can make an interactive game that you can actually play."
@@ -823,7 +823,7 @@ tg:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "In this example, we're going to say IF the purple flower has nectar greater than 0, get nectar. That will tell our bee to keep getting nectar as long as it's there. Ta-dah!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Have you ever heard of debugging a program? This is the way you figure out what's not working. When you debug code, you identify and remove errors."

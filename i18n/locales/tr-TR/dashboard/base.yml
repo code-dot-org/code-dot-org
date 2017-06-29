@@ -57,7 +57,7 @@ tr:
   more: "DAHA FAZLA"
   less: "DAHA AZ"
   beta: "deneme"
-  try_hoc: "Kod Saati'ni denemek için buraya tıklayın >> "
+  try_hoc: "Kodlama Saati'ni denemek için buraya tıklayın >> "
   try_k8intro: "İlköğretim okullarına yönelik Bilgisayar Bilimlerine Giriş dersimizi deneyin (15-25 saat)"
   k8intro: "K-8 Bilişim Teknolojilerine Giriş Kursu (15-25 saat)"
   already_started: "Zaten başladınız mı? Buradan devam edin >> "
@@ -86,7 +86,7 @@ tr:
     overview: 'İlerleme durumunuzu izlemek veya sınıfı yönetmek için bir hesap açın. <a href="/"> Farklı aşamaları ve bulmacaları inceleyebilirsiniz fakat ilerlemenizi ve projelerinizi saklamak için giriş yapmak gerekecektir.'
     hoc_already_signed_up_heading: 'Giriş yaparak başla'
     hoc_already_signed_up_content: 'Kodlama Saatinde öğretmek için kaydoldunuz! Siz ve öğrencilerinizin bu etkinliğe katılmak için kaydolmanıza gerek yok. Başlamak için <a href="https://code.org/learn">bir eğitim seçin </a> ve bu linki onlarla paylaşın.<br/><br/>. Eğer Kodlama Saatinden memnun kaldıysanız bir şifre oluşturup Code Studio hesabı yaratarak öğrencilerinizi aşağıdaki <a href="https://code.org/educate">daha uzun </a> kurslara kaydedebilirsiniz.'
-    hoc_already_signed_up_content_post_hoc: 'Bir saat kodu için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu senin ilerleme kaydetmek ve sınıfta yönetmenize olanak tanır. Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. <a href="%{studio_url}"> Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için devam edebilirsiniz</a>.'
+    hoc_already_signed_up_content_post_hoc: 'Kodlama saati için teşekkür ederiz. Kod stüdyoya kayıt hesabınız için bir parola ayarlamak gerekir. Bu senin ilerleme kaydetmek ve sınıfta yönetmenize olanak tanır. Öğrenciler için kurslar atama ve ilerlemelerini izleme olanağı bulacaksınız. <a href="%{studio_url}"> Ayrıca çeşitli aşamalara ve bulmacalara gözatmak için devam edebilirsiniz</a>.'
     teacher_educator_guide: 'Eğitim rehberine bakın'
     title: "Code.org için kayıt ol"
     school_name: 'Okul Adı (isteğe bağlı)'
@@ -159,6 +159,8 @@ tr:
       instructions: "E-mail adresinizi aşağıya yazın bu sayede size parola sıfırlama yönergeleri göndeririz."
       email: 'E-posta adresi'
       submit: 'Gönder'
+    reset_errors:
+      invalid_email: 'Geçersiz e-posta adresi ile kayıt olmuşsunuz gibi görünüyor. Parola kurtarma bağlantısı için support@code.org a e-posta gönderin.'
     change_form:
       title: 'Şifrenizi değiştirin'
       new_password: 'Yeni şifre'
@@ -197,55 +199,6 @@ tr:
   reports:
     error:
       access_denied: "Bu kişinin istatistiklerine erişemezsiniz"
-  redeem_prizes:
-    title: 'Ödülü alın:%{name}'
-    provider: 'Sağlayıcı:'
-    code: 'Kod:'
-    redeem_header: 'Telafi için:'
-    donorschoose_register: 'DonorsChoose.org''da öğretmen olarak kaydolun'
-    donorschoose_project: 'Bir proje yayınlayın'
-    donorschoose_how_to: 'Kodunuzu nasıl kullanırsınız'
-    success: 'Ödülünüzü başarılı bir şekilde kullandınız, aşağıdaki koda bakın.'
-    error: 'Ödülünüzü kullanamazsınız, lütfen tekrar deneyin.'
-    error_us_only: 'Ödül teklifi sadece A.B.D. kullanıcıları için geçerlidir.'
-    error_not_earned: 'Henüz bu ödülü kazanmadınız.'
-    error_already_redeemed: 'Ödülün zaten alındı.'
-    no_prizes_available: "Üzgünüz, ama şu anda kullanılabilir hiçbir ödülümüz yok."
-    teacher_info_required: "Öğretmen ödülleri okul adı ve adres bilgilerini gerektirir:"
-    teacher_email_required: "Öğretmen ödülleri teyitli eposta adresi gerektirir:"
-    confirm:
-      title: 'Lütfen onaylayın'
-      'no': 'Hayır'
-      'yes': 'Evet'
-      msg: '%{prize_name} ödülünü talep etmek istediğinize emin misiniz?'
-      msg_student: 'Not: Yalnızca bir tür ödül seçebilirsiniz.'
-      msg_publicschool: 'Lütfen ABD devlet okulu öğretmeni olduğunuzu onaylayın.'
-      msg_visit_website: 'Web sitesini ziyaret edin'
-    providers:
-      apple_itunes: '$10 iTunes Gift Card'
-      donors_choose: 'DonorsChoose.org $750 credit'
-      donors_choose_bonus: 'DonorsChoose.org $250 credit'
-      dropbox: '10GB Dropbox Alanı'
-      valve: 'Portal 2 (PC or Mac game download)'
-      ea_bejeweled: 'Bejeweled 3 (PC game download)'
-      ea_fifa: 'FIFA Soccer 13 (PC game download)'
-      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
-      ea_pvz: 'Plants vs. Zombies (PC game download)'
-      skype: '$10 Skype credit'
-    msg:
-      choose: 'Bir ödül seçin:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 'Bir ödül kazandın! (Sadece A.B.D. öğrencileri için)'
-      not_earned_title: 'Öğreticiyi tamamla, ödülleri kazan. (yalnızca ABD öğrenci)'
-      not_earned: 'Bütün bilgisayar bilimi kavramlarını öğren, %{num_trophies} kupanın tamamını topla ve gerçek hediyeler kazan. 10GB ücretsiz Dropbox disk alanı, 10$ Skype parası veya ücretsiz oyun indirme hediyelerinden birini seçebilirsin. NOT: Bu teklif sadece A.B.D. öğrencileri için geçerlidir ve elimizde kaldığı kadarıyla verilebilir.'
-      teacher:
-        earned: '10 veya daha fazla öğrenci %{num_trophies} adet kupanın tamamını topladı. Öğretmen ödülü kazandın! (Sadece A.B.D. öğretmenleri için)'
-        not_earned_title: 'Bir sınıfa öğreterek 1,000$ ''a kadar <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredisi kazanın (yalnızca ABD öğretmenlerini kapsar)'
-        not_earned: 'İlk defa bilgisayar bilimleri öğretmenliği yapanları ödüllendirmek amacıyla, bir sınıfa ilköğretim (K-8) giriş dersi boyunca rehberlik ettiğin için 1000$''a kadar <a href="http://DonorsChoose.org">DonorsChoose.org</a> parası kazanabilirsin. Buna hak kazanmak için, en az 15 kişilik bir sınıfı bütün bir ilköğretim giriş dersi boyunca başarıyla yönetmen ve 15 (veya daha fazla) öğrencinin derslerin hepsini tamamlaması ve %{num_trophies} adet kupanın hepsini kazanmaları gerekmektedir. Eğer bütün kupaları kazanan öğrencilerden 7 veya daha fazlası kız öğrenci ise, ödülün 1000$ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parasıdır. Aksi takdirde, ödülün 750$ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parasıdır. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parası sadece A.B.D. devlet okulu öğretmenleri tarafından kullanılabilir.'
-        bonus:
-          not_earned_title: 'Hala ek 250$ değerinde <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kredisi kazanabilirsin (yalnızca ABD öğretmenlerini kapsar)'
-          earned: '%{num_trophies} adet kupanın tamamını kazanan öğrencilerden 7 veya daha fazlası kız öğrencilerdir. Bonus ödül kazandın! (Sadece A.B.D. öğretmenleri için)'
-          not_earned: 'Eğer, %{num_trophies} adet kupanın tamamını kazanan öğrencilerden 7 veya daha fazlası kız öğrenciler ise, ödülün ilave olarak 250$ <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parasıdır. <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> parası sadece A.B.D. devlet okullarındaki öğretmenler tarafından kullanılabilir.'
   crud:
     new_model: 'Yeni %{model}'
     show: 'Göster'
@@ -266,15 +219,50 @@ tr:
       free_play:
         playlab: 'Uygulama oluşturun'
         artist: 'Bir şeyler çizin'
-        calculate: 'Calculate something'
+        calculate: 'Bir şey hesaplamak'
         applab: 'Uygulama oluşturun'
+        gamelab: 'Make a Game Lab project'
+      home: "Ana Sayfa"
+      courses: "kurslar"
+      project_gallery: "Proje Galerisi"
+      sections: "Bölümler"
+      help_support: "Yardım ve Destek"
+      report_bug: "Hata bildir"
+      teacher_community: "Öğretmen topluluğu"
+      professional_learning: "Profesyonel öğrenme"
+      documentation: "Belgeler"
+      tutorials: "Öğreticiler"
+      educate_overview: "Eğitimci genel bakış"
+      educate_elementary: "İlköğretim Okulu"
+      educate_middle: "Ortaokul"
+      educate_high: "Lise"
+      educate_hoc: "Saat Kodu"
+      educate_partner: "Bizimle işbirliği yap"
+      educate_beyond: "Code.org ötesi"
+      educate_inspire: "Öğrenciye ilham ver"
+      educate_community: "Çevrimiçi Topluluk"
+      educate_tools: "Araçlar ve videolar"
+      about_us: "Hakkımızda"
+      about_leadership: "Liderlik"
+      about_donors: "Bağışçılar"
+      about_partners: "Ortaklar"
+      about_team: "Tam takım"
+      about_news: "Haber odası"
+      about_evaluation: "Değerlendirme"
+      about_jobs: "İş Olanakları"
+      about_contact: "Bize Ulaşın"
+      about_faqs: "SSS"
+      learn: "Öğren"
+      stats: "Istatistikler"
+      help_us: "Bize yardım edin"
+      teach: "Öğret"
+      about: "Hakkında"
     user:
       classroom: 'Öğretmen ana sayfa'
       district_dashboard: 'Kontrol Paneli Bölgesi'
       label: 'Merhaba %{username}'
       stats: 'İlerlemem'
       settings: 'Hesabım'
-      prizes: 'Ödüller'
       logout: 'Çıkış Yap'
       signin: 'Giriş Yap'
       signup: 'Hesap oluştur'
@@ -371,7 +359,7 @@ tr:
     test_videos_help: 'Okulunuzda yeni video oynatıcımızı deneyin'
     try_beta_courses: 'Yeni! K-5 öğrencileri için beta kurslarımızı deneyin'
     use_as_teacher: 'Siteyi öğretmen profiliyle kullan'
-    heading_hoc2014: "<h2>Hour of Code </h2><h1> her yaş için</h1>"
+    heading_hoc2014: "<h2>Kodlama Saati </h2><h1> her yaş için</h1>"
     heading_elementary: "<h2>20 saat ders</h2><h1> yeni başlayanlar (bütün yaşlar) için </h1>"
     heading_apps: "<h1>Herkes</h1> için <h2>eğlence</h2>"
     heading_tools: "<h2>Bir sonraki adım için hazır mısın?</h2> <h1>Lise için JavaScript araçları</h1>"
@@ -395,7 +383,7 @@ tr:
     announcement_hoc_launch: "180 ülkede binden fazla eğitimci 5-11 Aralık tarihlerinde, ' Bir saatlik kod eğitimi' ile bilgisayar bilimini öğrenmeye başlıyor. Bir önceki organizasyonlardan daha fazla öğrenciye ulaşmak için sizlere güveniyoruz. <a href='%{signup_url}' target='_blank'> 'Bir saatlik kod eğitimi' etkinliğine başvuruda bulunun ve lütfen başka bir öğretmen arkadaşınıza bilgisayar bilimini öğretmeye başlayabileceğini söyleyin."
     announcement_mc_launch: "En popüler eğitimlerimizden birinin şimdi devamı var! Minecraft Kodlama Saati Tasarımcısı öğrencilerin Minecraft dünyasında kurallar oluşturmasını sağlıyor. Benzersiz bir Minecraft deneyimi yaşamalarını ve arkadaşlarıyla paylaşmalarını ya da telefonlarında oynamalarını sağlıyor. Kodlama Saatinde sınıfınla birlikte yap."
     announcement_how_code_studio: "Bilgisayar Bilimlerini, sınıf içinde öğretmeye başlamak için herhangi bir deneyime ihtiyacın yok. Code.org sunar: müfredat, ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar.Tüm sınıf düzeyleri için &mdash; Nereden başlıyacağını merak ediyorsan<a href='%{video_download_url}'> Bu video</a> indir!"
-    announcement_go_beyond: "Kod saatinin ötesine gidip  bilgisayar bilimi kavramlarını öğrenciler ile her hafta keşfedin. Code.org sunar: müfredat, ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar. Tüm düzeyler için &mdash; ve hepsi ücretsiz. :) Bilgisayar Bilimleri, sınıf içinde öğretim başlamak için herhangi bir deneyime ihtiyacın yok. <b>Sınıf için uygun olan adım.</b>"
+    announcement_go_beyond: "Kodlama saatinin ötesine gidip bilgisayar bilimi kavramlarını öğrenciler ile her hafta keşfedin. Code.org sunar: müfredat, ders planları, yüksek kaliteli profesyonel eğitim programları ve büyük araçlar. Tüm düzeyler için &mdash; ve hepsi ücretsiz. :) Bilgisayar Bilimleri, sınıf içinde öğretim başlamak için herhangi bir deneyime ihtiyacın yok. <b>Sınıf için uygun olan adım.</b>"
     announcement_teacher_recruitment: "Sizin öğretmenler bilişim hareketinin liderisiniz. Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak ve profesyonel öğretme için uygulayabilirsiniz."
     announcement_teacher_recruitment2: "Sizin öğretmenler bilişim hareketinin liderisiniz. Yüksek kaliteli K-12th notlu profesyonel programlara <strong>hiçbir ücret ödemeden katılabilirsiniz. </strong> Bilgisayar bilimi ile ilgili ipuclarını  alacak ve profesyonel öğretme için uygulayabilirsiniz."
     announcement_csf_pilot: "<strong>İlköğretim Okulu öğretmenleri:</strong> CS Temelleri kurslarımız güncelleştirme bir parçası olun! Güncellenme Zamanı bir CS Temelleri müfredat kış ve 2017 yılının baharında sırasında pilot için öğretmen arıyoruz. Biz bu güncelleştirmeleri Ağustos 2017 yılında canlı gitmeden önce görüşlerinizi duymak arzu ediyoruz."
@@ -404,6 +392,9 @@ tr:
     announcement_apcsp_recruitment2: "Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek her CS ilkeleri öğrenci teşvik ve <a href='%{gift_url}' target='_blank'> bir hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href='%{challenge_url}' target='_blank'> #APCSP video challenge</a> ülke genelinde eş teşvik edebilir."
     announcement_apcsp_recruitment3: "Bu yılki AP CS ilkeleri sınavı kayıtları kırmaya hazırlanıyor. Sınavı Öğrenci katılımı önemli ölçüde çeşitlilik AP Bilgisayar Biliminde kayması olabilir ama yardımına ihtiyacımız var. AP CSP sınava girmek her CS ilkeleri öğrenci teşvik ve n <a href='%{gift_url}' target='_blank'>a  bir hediye göndermek</a> olacak. Öğrenciler ayrıca bizim <a href='%{video_url}' target='_blank'> P video challenge</a> ülke genelinde eş teşvik edebilir."
     announcement_csp_deadline: "Lise öğretmenleri için son çağrı! Bilgisayar bilimi ile okulunuzda öncülük et ve eğrenme programlarımıza katıl. Hiçbir ücret ödemeden yüksek kaliteli profesyonel eğitim al. 14 Nisan da başvurular kapanıyor."
+    announcement_applab_export: "Uygulama laboratuvarı, bizim web tabanlı programlama ortamı, şimdi senin programını indirmeni destekliyor! JavaScript bloklarını Sürükle ve bırak ile uygulamalar oluşturmaya başlayın sonra seçtiğiniz herhangi bir geliştirme ortamında düzenlemeye devam edin."
+    announcement_csp_survey: "<b>Tebrikler Bilgisayar Bilimleri ilkeleri öğretmenleri!</b> <br/> Bilgisayar ilkeleri sınavına 50.000'i aşkın öğrenci tarihinin en büyük sınavına katılacak. Öğrencilerin seslerini duyalım-ders son anketi tamamlamak için onlara hatırlat! Senin öğrencilerin yanıtları gözden geçirmen mümkün olacak ve biz de seninle toplu Ulusal sonuç raporu paylaşacağız."
+    announcement_navigation_redesign: "<b>Sitedeki Gezinti değişiklikleri</b> <biz Code.org site genelinde kaynaklara erişimi kolaylaştırmak için değişiklik yapıyoruz. Öğretmen hesabınıza giriş yapın, ana sayfanızda kurslar, Proje Galerisi, bölümler ve profesyonel öğrenme linkleri ile yeni bir gezinti çubuğu olacak."
   move_students:
     new_section_dne: "Üzgünüm, ama %{new_section_code} yok. Lütfen başka bir bölüm kodu girin."
     section_code_cant_be_current_section: "Şimdiki bölüm yeni bölümle aynı olamaz."
@@ -415,7 +406,7 @@ tr:
   share:
     title: "Code Studio'da Öğrenin"
     description: "Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar ve sanat yarat."
-    try_hour_of_code: 'Kod Saatini dene!'
+    try_hour_of_code: 'Kodlama Saati''ni Deneyin!'
   gender:
     male: 'Erkek'
     female: 'Kadın'
@@ -431,7 +422,7 @@ tr:
     art_from_html_old: "Minecraft&#8482; &copy; %{current_year} Microsoft. Tüm hakları saklıdır. Star Wars&#8482; &copy; %{current_year} Disney ve Lucasfilm. Tüm hakları saklıdır. Dondurulmuş&#8482; &copy; %{current_year} Disney. Tüm hakları saklıdır. Buz çağı&#8482; &copy; %{current_year} 20th Century Fox. Tüm hakları saklıdır. Kızgın kuşlar&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Tüm hakları saklıdır. Mutant vs. Zombiler&#8482; &copy; %{current_year} Electronic Arts Inc. Tüm hakları saklıdır. The Amazing World of Gumball is trademark ve &copy; 2015 Cartoon Network.\n"
     code_from_html: 'Code.org p5.play, <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> altında lisanslı kullanır.'
     powered_by_aws: 'Amazon Web Services tarafından desteklenmektedir'
-    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kod Saati&reg; Code.org''un ticari markalarıdır.'
+    trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo ve Kodlama Saati&reg; Code.org''un ticari markalarıdır.'
     copyright: 'Telif Hakkı'
     more: 'Daha Fazla'
     feedback: 'Geri besleme sağla'
@@ -446,7 +437,7 @@ tr:
     built_on_code_studio: 'Kod Stüdyosunda Yapıldı'
     make_my_own_app: 'Kendi programımı yap'
     how_it_works: 'Nasıl çalışır'
-    try_hour_of_code: 'Kod Saatini dene!'
+    try_hour_of_code: 'Kodlama Saati''ni Deneyin!'
   reference_area:
     title: 'Yardım ister misiniz?'
     subtitle: 'Bu videolara ve ipuçlarına bakın'
@@ -523,6 +514,11 @@ tr:
     gallery:
       title: "Galeri"
       body: "Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı görsellerine göz atın"
+    gamelab:
+      title: "Oyun Laboratuvarı (beta)"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "13 + Yaş grubu"
+      cta: "Nasıl olduğunu öğren"
     frozen:
       title: "Donmuş"
     starwars:
@@ -541,6 +537,14 @@ tr:
       audience: "4 yaş ve üzeri"
       body: "Sınıfınızda kullanmanız için bağımsız dersler listesi toparladık. Sınıfınızda bilgisayar olsa da olmasa da bilgisayar bilimlerin temellerini öğretebilirsiniz. Bu ders konularını tek başına bir ders olarak kullanabileceğiniz gibi başka bir bilgisayar dersini destekleyecek şekilde kullanabilirsiniz."
       body_short: "Bilgisayarınız yok ise bu bağımsız dersleri derste kullanın."
+    unplugged_conditionals:
+      title: "Koşullar"
+      body: "\"Bir deste kart kullanarak algoritmaları ve bu koşullu deyimleri öğrenin."
+    widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Ages 14+"
+      cta: "Nasıl olduğunu öğren"
   gallery:
     students_drew_these_with_code: "Öğrenciler kod ile bunu çizdiler!"
     students_made_these_with_code: "Öğrenciler bunları kod ile yaptı!"
@@ -570,8 +574,8 @@ tr:
     wrong_body: "Girdiğiniz cevap doğru değil.  Lütfen tekrar deneyin!"
     correct_title: "Doğru"
     correct_body: "İşte bu doğru cevap."
-    toofew_title: "Too few answers."
-    toofew_body: "Please select two answers before submitting."
+    toofew_title: "Çok az cevap."
+    toofew_body: "Lütfen göndermeden önce iki cevap seçin."
   multi-submittable:
     wrong_title: "Teşekkür ederiz"
     wrong_body: "Cevabınızı gönderdiğiniz için teşekkür ederiz."
@@ -642,6 +646,11 @@ tr:
     print: "Yazdır"
     reminder_desc: ' <a href="%{tos_url}" target="_blank"> Hizmet şartları</a> ve <a href="%{privacy_url}" target="_blank"> Gizlilik Politikası</a> güncellendi. Bunlar onları kabul etmeden önce dikkatlice okuyunuz.  JavaScript öğretim özelliği güncellenen Şartları kabul etmeden önce kullanılamıyor olabilir.'
     review_terms: "Güncellenen Hizmet ve Gizlilik politikasını göster"
+  school_info_interstitial:
+    title: "Her öğrenciye bilgisayar bilim ini getirmek için bize yardım etmeni istiyoruz!"
+    message: "Lütfen aşağıya okul bilgilerinizi girin."
+    message_with_suggestion: "Lütfen aşağıdaki bilgileri doğru olduğundan emin olun veya gerektiği gibi güncelleştirin."
+    save: "Kaydet"
   race_interstitial:
     title: 'Opsiyonel: Bilgisayar bilimlerindeki çeşitliliği geliştirme yönündeki ilerlememizi izlememize yardımcı olun'
     message: " Lütfen bize ırkını söyle  ( Başvuruyu kontrol etmeyi unutma)"
@@ -687,6 +696,9 @@ tr:
     delete: "Sil"
     exit: "Kursa dön"
     my_projects: "Projelerim"
+    project_gallery: "Proje Galerisi"
+    publish: "Yayımla"
+    unpublish: "Yayımdan Kaldır"
     share: "Paylaş"
     share_title: Projenizi paylaşın
     share_copy_link: "Bağlantıyı kopyala:"
@@ -694,6 +706,7 @@ tr:
     share_u13_warning: "Öğretmenine paylaşmadan önce sor. Sadece senin okuldaki diğer kişilerle  paylaş."
     embed: "Yerleştir"
     advanced_share: "Gelişmiş seçenekleri göster"
+    no_projects: "Şu anda hiç proje var. Bir proje başlatmak için yukarıdaki düğmelerden birini tıklatın."
     close: "Kapat"
     more: "Daha Fazla"
     name: "İsim"
@@ -701,6 +714,7 @@ tr:
     project_type: "Proje türü"
     help_text: "Uygulama oluştur'a tıklayın veya Yeni bir oyun labaratuvarı veya sanatçı projesi çizin. \nGeri dönebilir ve istediğiniz zaman projelerinizi düzenleyebilirsiniz."
     need_help: "Başlarken yardıma mı ihtiyacınız var?"
+    thumbnail_help: "Projeniz için doğru küçük resim göremiyorum? Yeni küçük resim oluşturmak için uygulamanızı çalıştırın. Resmi her yerde yenilemek birkaç saat sürebilir."
     really_delete: 'Silinsin mi?'
     delete_yes: 'Evet'
     delete_no: 'Hayır'
@@ -747,7 +761,7 @@ tr:
     instructor_feedback: 'Eğitmen Geribildirimi'
     peer_feedback: 'Geribildirim Gönder'
     outdated: 'Bu geribildirim daha önce yollanan gönderiye eklendi'
-    review_in_progress: 'Ready to review'
+    review_in_progress: 'Gözden geçirmeye hazır'
     link_to_submitted_review: 'Link to submitted review'
     reviews_unavailable: 'Reviews unavailable at this time'
     review_count: 'You must complete %{review_count} reviews for this unit'
@@ -759,16 +773,6 @@ tr:
     icon_library:
       search_placeholder_text: 'Öğe ara...'
       no_icons_found: 'Öğe Bulunamadı'
-    playzone:
-      artist_description: 'Sanatçı ile harika resimler ve tasarımlar yap!'
-      artist_title: 'Yeni Çizim'
-      continue_button: 'Sonraki kademeye geç'
-      playlab_description: 'Oyun Laboratuvarı ile hikaye yarat veya oyun yap!'
-      playlab_title: 'Yeni Uygulama'
-      primary_header: 'Tebrikler!  %{stageName}! tamamlandı.'
-      projects_description: 'Varolan projelerinizi birini tekrarla.'
-      projects_title: 'Bir proje aç'
-      secondary_header: 'Öğretmenine sıradaki yapılacak şeyi sor'
   flex_category:
     required: 'Genel Bakış'
     content: 'İçerik'
@@ -776,20 +780,45 @@ tr:
     peer_review: 'Eş gözden geçirme'
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
-    optional_stages: 'Optional Stages'
+    optional_stages: 'İsteğe bağlı aşamalar'
     main_course: 'Ana ders'
     extra_course_content: 'İlave kurs içeriği'
+    csd1_1: 'Bölüm 1: Problem çözme süreci'
+    csd1_2: 'Bölüm 2: Bilgisayar ve Problem çözme'
+    csd2_1: 'Bölüm 1: Web içerik ve HTML'
+    csd2_2: 'Bölüm 2: Stil oluşturma ve CSS'
+    csd3_1: 'Bölüm 1: Resim ve animasyon'
+    csd3_2: 'Bölüm 2: Oyun geliştirme'
+    csd4_1: 'Bölüm 1: Kullanıcı merkezli tasarım'
+    csd4_2: 'Bölüm 2: Uygulama prototipleme'
+    csd5_1: 'Bölüm 1: Bilgileri gösterme'
+    csd5_2: 'Bölüm 2: Veri problemlerini çözme'
+    csd6_1: 'Bölüm 1: Donanım çıktısı'
+    csd6_2: 'Bölüm 1: Donanım girdisi'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil. 
     disclaimer_text: '<strong>Yasal uyarı: Code.org tarafından işletilen bir site değil.</strong> Bu sitenin Code.org''dan farklı gizlilik ilkeleri olabilir. <br/> <br/> Onlar sizin için yararlı olacağını düşündüğümüz için seçtik. Biz doğrudan bu Web sitesinin içeriği için sorumlu değiliz, <a href=''%{support_url}''> Destek hizmetlerine</a> tıklayarak sakıncalı içerik veya bağlantılı hatasını raporlayın.'
   hoc_download:
-    title: 'Saat Kodu İndirmeler'
+    title: 'Kodlama Saati İndirmeler'
     capsule_title: 'İnternetiniz var mı?'
     capsule_desc: 'Web tabanlı <a href="%{url}">%{app_name}</a> kullanın.'
     instructions_headline: 'İnternet Yok Mu?'
     instructions: 'Öğretmenler için Talimatlar: Eğer zayıf internet bağlantınız varsa, bu Kod Saati uygulamasını indirip çevrimdışı kullanabilirsiniz. Dilinizi ve platformunuzu seçin ve sınıftaki bütün bilgisayarlara yükleyin. USB kullanmak isteyebilirsiniz. NOT: Öğrenciler kod saatine giriş yapamayacak ve sertifika bastıramayacak. Öğretmenler önden sertifikaları yazdırabilir. a href="%{url}">here</a>.'
-    minecraft_name: 'Minecraft Kod Saati'
+    minecraft_name: 'Minecraft Kodlama Saati'
     starwars_blocks_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
     starwars_javascript_name: 'Yıldız Savaşları: Kod İle Bir Galaksiyi İnşa Etmek (Blocks)'
     download_message: 'Çevrimdışı kullanım  için %{app_name} (136 MB) indir'
@@ -849,6 +878,7 @@ tr:
   locked_stage: 'Bu sahnenin içeriği görünmemektedir çünkü bu sahne şu anda kilitlidir. Öğretmeniniz bu sahneyi size çalışmak veya yanıtlarınızı gözden geçirmek için zamanında açacaktır.'
   hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi derste olman gerektiğini sor."
   return_course_overview: 'Ünite genel bakışına git'
+  view_all_units: 'View all units'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'

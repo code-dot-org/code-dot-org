@@ -48,8 +48,8 @@
       "drawSprites": null,
       "var sprite = createSprite": null
     },
-    "contained_level_names": null,
-    "encrypted_examples": "IFAh74xxYCSRQiQ/VohLxQ4UuxlKuewM5b+XuDx6ZiObiwMkNRDZT5to6cJH\nax0RzUN1R7n8gLs279Ot8z1o+w==\n"
+    "encrypted_examples": "IFAh74xxYCSRQiQ/VohLxQ4UuxlKuewM5b+XuDx6ZiObiwMkNRDZT5to6cJH\nax0RzUN1R7n8gLs279Ot8z1o+w==\n",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

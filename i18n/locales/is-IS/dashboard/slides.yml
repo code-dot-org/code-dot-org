@@ -747,13 +747,13 @@ is:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Ef við viljum búa til súkkulaði, þá eru mörg stór þrep í því ferli. Og hvert þessara stóru þrepa inniheldur röð smærri þrepa. Og það eru mismunandi uppskriftir, eða algrím, eftir því hvernig við viljum að súkkulaðið bragðist. Hvert þrep er mikilvægt, jafnvel þau litlu. Svo að ef eitt þrep vantar, þá er ekki hægt að ljúka hinum. Að búa til algrím sem aðrir geta skilið er mjög mikilvægt. Þess vegna þarf að skrifa hvert þrep niður svo að sama hver gerir þetta þá verði útkoman alltaf eins."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Hingað til hefur þú verið að búa til hreyfimynd eða sögu sem gerir nákvæmlega það sama í hvert sinn sem þú keyrir hana. Nú getur þú búið til gagnvirkan leik sem hægt er að spila."
       2:
         image: 'notes/C2_playlab_createastory_2.png'
-        text: "Hér eru nýir kubbar til að prófa. Það er \"þegar ör\" kubbur og \"færa leikmann\" kubbur. Þú getur sett þessa kubba saman til að færa leikmennina með örvarlyklunum. Og það eru kubbar sem gera eitthvað þegar leikmenn rekast á eða ef smellt er á þá. Prófaðu þessa kubba og skemmtu þér vel!"
+        text: "Það er nokkrir nýjir kubbar til að prófa. Það er kubburinn \"þegar ör\" og kubburinn \"færa leikveru\". Þú getur sett þessa kubba saman til að færa leikverurnar með örvarlyklunum. Og það eru kubbar sem gera eitthvað þegar leikverur rekast saman eða þegar smellt er á þær. Kíktu á þetta og hafðu gaman af!"
     C2_relay_programming:
       1:
         image: 'notes/C2_relay_programming_1.png'
@@ -823,7 +823,7 @@ is:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Í þessu dæmi segjum við að EF fjólubláa blómið er með blómasafa sem er meiri en 0, þá eigi að safna safa. Þetta segir býflugunni að halda áfram að safna safa á meðan einhver safi er. Ta-dah!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Hefurðu heyrt um það að kemba forrit? Það er þannig sem þú finnur út hvað er ekki að virka. Þegar þú kembir kóða, finnur þú og fjarlægir villur."

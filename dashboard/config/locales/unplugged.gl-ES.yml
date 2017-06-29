@@ -120,31 +120,26 @@
         title: Mapas Felices
         desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
           mover un personaxe a través dun labirinto usando un único comando.
-        video: C1_happy_maps_unplugged
       MoveIt:
         title: Móveo, móveo
         desc: Os estudantes crean un algoritmo simple (conxunto de instrucións) para
           mover un personaxe a través dun labirinto usando un único comando.
-        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmos da Vida Real: Planta unha Semente'
         desc: Esta lección presenta como usamos os algoritmos na nosa vida diaria,
           usando o acto de plantar unha semente como exemplo. Tamén se concentra no
           cadro xeral da informática e como os algoritmos desempeñan un papel fundamental.
-        video: C1_planting_seed
       BuildingAFoundation:
         title: Construíndo unha base
         desc: Os alumnos constrúen unha estrutura usando só os materiais fornecidos.
           Esas estruturas deben completar unha tarefa (chegar a unha correcta altura
           ou soportar un determinado peso) e os alumnos discuten a idea de ser persistente
           cando as cousas se complican.
-        video: C1_building_foundation
       GettingLoopy:
         title: Bucleándose
         desc: Esta clase introduce o concepto de programación de bucles (loops, ou
           instrucións repetidas) por medio dunha actividade de danza. Os alumnos van
           aprender unha coreografia simple e daquela se lles dirá que a repitan.
-        video: C1_getting_loopy
       RelayProgramming:
         title: Programación por relevos
         desc: Os alumnos participan dunha carreira de relevos na cal deben atravesar
@@ -152,82 +147,68 @@
           de programación". Eles só poden escribir unha instrución por vez, e, se
           houbese un erro nalgún lugar teñen que eliminar todo e refacer os pasos
           a partir daquel punto.
-        video: C2_relay_programming
       Conditionals:
         title: Condicionais
         desc: Para aprender sobre estruturas condicionais, o alumno xoga un xogo de
           cartas e crea regras como "se eu tomo unha carta vermella, eu gaño un punto",
           e "se eu tomo unha carta negra, vostede gaña un punto"
-        video: C2_conditionals_with_cards
       BigEvent:
         title: O Gran Evento
         desc: Os alumnos son introducidos ao concepto de "eventos" en programación,
           que son accións que un computador monitora constantemente. O profesor vai
           apertar os botóns de forma remota, e os alumnos van reaccionar de acordo
           co botón presionado.
-        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Ir a Sitios en modo Seguro
         desc: A internet é poderosa, pero ás veces perigosa. Os profesores mostran
           como navegar en seguranza pola Internet.
-        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programación en Papel Cadriculado
         desc: Os alumnos escriben un algoritmo (un conxunto de instrucións) usando
           un conxunto predefinido de comandos para orientar os seus compañeiros de
           clase na reprodución dun debuxo.
-        video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritmos da vida real: avión de papel'
         desc: Esta lección mostra como usamos algoritmos na nosa vida, especificamente
           ao facer avións de papel. Esta lección tamén presenta a informática de forma
           xeral, e como os algoritmos teñen un papel esencial.
-        video: C2_paper_airplanes
       BinaryBracelets:
         title: Pulseiras Binarias
         desc: Os alumnos crean pulseiras como representacións binárias da primeira
           letra dos seus nomes. Os alumnos aprenden que os datos poden ser representados
           e almacenados de máis dunha forma.
-        video: C2_binary_bracelets
       DigitalFootprint:
         title: A túa pegada dixital
         desc: Os profesores informan aos alumnos de que colocar informacións persoais
           online crea unha pegada dixital ou un "rastro" que ten consecuencias.
-        video: C2_digital_footprint
       ComputationalThinking:
         title: Pensamento computacional
         desc: Os alumnos usan as etapas do pensamento computacional (descomposición,
           relación entre padróns, abstracción, algoritmos) para descubrir como xogar
           un xogo que non ten instrucións.
-        video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Tragaluces Funcionais
         desc: Os alumnos crean un algoritmo con variábeis e funcións (fragmentos de
           código para usar varias veces) para crear colares usando fíos e doas.
-        video: C3_functional_suncatchers
       SongwritingParameters:
         title: Composición de música con parámetros
         desc: Os alumnos usan o concepto de retrouso nunha música para aprender sobre
           o paso de parámetros (os cales personalizan unha función sen a necesidade
           de reescribila).
-        video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algoritmos da vía real: xogo de dados'
         desc: Esta lección mostra como usamos os algoritmos na nosa vida. Como parte
           disto, os alumnos van identificar e escribir un algoritmo para un xogo de
           dados.
-        video: C3_dice_race
       Internet:
         title: Internet
         desc: Os alumnos envían mensaxes que representan varios métodos de transmisión
           de Internet usando pedazos de papel.
-        video: C3_internet
       Crowdsourcing:
         title: Colaboración Aberta
         desc: Os alumnos usan o crowdsourcing, unha técnica común de resolución de
           problemas en informática, para concluír unha tarefa xuntos, na aula, de
           maneira máis eficiente que se un alumno tentase resolver el soíño.
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: Cidadanía dixital
         desc: Os alumnos exploran a diferenza entre informacións privadas e persoais,
@@ -237,26 +218,22 @@
         desc: 'Esta clase móstranos algo importante sobre os algoritmos: se o manten
           simple, poderá facer moitas cousas con el; se quixese garantir que todos
           teñan o mesmo resultado no final, o seu algoritmo precisará de máis detalles.'
-        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Variábeis de sobre
         desc: As variábeis proporcionan moita liberdade na informática. Esta clase
           axuda a explicar o que son as variábeis e como podemos usalas de diversas
           maneiras. Faga esta actividade antes ou xunto coa clase sobre abstracción,
           para que a idea realmente teña sentido.
-        video: C4_unplugged_variables
       MadGlibs:
         title: As Glibs tolas
         desc: A abstracción é unha das habilidades máis importantes que un informático
           debe coñecer. Esa actividade fará que os seus alumnos analicen as diferenzas
           entre historias para que poidan, entón, abstraelas. Esas historias abstraídas
           tórnanse modelos para novas historias tolas e divertidas.
-        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Diversión con bucles "para" (for)
         desc: Sabemos que os bucles nos permiten facer algo repetidas veces, pero
           agora imos aprender como usalos con estruturas adicionais.
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Escribindo unha canción con parámetros
         desc: 'Unha das estruturas máis incríbeis no mundo da informática é a función.
@@ -264,7 +241,6 @@
           ser usados repetidas veces dentro do programa maior. Esta clase axudará
           os alumnos a entender, de maneira intuitiva, por que combinar bloques de
           códigos en funcións é unha práctica útil.  '
-        video: C4_unplugged_parameters
       BinaryImages:
         title: Imaxes binárias
         desc: Aínda que moitas persoas vexan o binário estritamente como ceros e uns,
@@ -273,20 +249,17 @@
           leva ese concepto un paso adiante, unha vez que demostra como un computador
           tamén pode almacenar informacións aínda máis complexas (como imaxes e cores)
           en binário.
-        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: Vídeo xogos e planos cartesianos
         desc: Descubre como os vídeo xogos cos que gostas xogar son, na verdade, conducidos
           pola álxebra! Explora como as expresións alxebraicas e o plano cartesiano
           poden nos axudar a entender como funcionan os vídeo xogos e entón comeza
           a planear o xogo que vas crear.
-        video: alg_11_coordinate_plane
       Contracts:
         title: Contratos, dominio e imaxe
         desc: Os contratos dannos unha forma de entender e discutir as funcións. Nesta
           lección, imos ver como os contratos poden nos axudar a entender unha nova
           linguaxe de programación ou función.
-        video: alg_5_contracts
       DesignRecipe:
         title: A receita de deseño
         desc: Na última etapa os alumnos escribiron algunhas funcións bastante simples
@@ -294,20 +267,17 @@
           A fórmula de deseño é unha abordaxe estruturada para escribir funcións que
           inclúe casos de proba para garantir que a función traballe como tal e como
           se espera.
-        video: alg_8_design_recipe
       Booleans:
         title: Booleanos e lóxica
         desc: Os Booleanos son o cuarto e último tipo de dato que vai aprender neste
           curso. Nesta actividade, vostede vai aprender o que son booleanos e como
           poden nos axudar a escribir funcións que pensan de forma lóxica
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Condicións e funcións definidas por partes
         desc: Os parámetros que pasamos para as funcións fan as saídas variaren con
           base nun padrón bastante ríxido. Supoña que queremos parámetros con algúns
           valores para crear saídas usando un padrón, pero outros valores para usar
           un padrón distinto. É aí que as condicionais son necesarias...
-        video: alg_10_conditionals
       CollisionDetection:
         title: Detección de colisións e o teorema de Pitágoras
         desc: Determinar cando se tocan os obxectos na pantalla é un aspecto importante
@@ -315,4 +285,28 @@
           e a fórmula da distancia poden ser usados para medir a distancia entre dous
           puntos no plano, e entón decidir se eses dous puntos (ou personaxes do xogo)
           están se tocando.
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: ''
+        desc: ''
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Actividade off-line
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Actividade off-line
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+          but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Actividade off-line
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Actividade off-line
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Actividade off-line
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Actividade off-line
+        desc: Today you will learn about what to do if someone is being mean online.

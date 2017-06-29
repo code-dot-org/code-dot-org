@@ -75,6 +75,7 @@
   "penUp":"Kalemi kaldır",
   "reinfFeedbackMsg":"Çiziminiz burada!Çiziminizin üzerinde çalışmaya devam et veya devam etmek için sonraki bulmaca geç",
   "setAlpha":"alfa ayarla",
+  "setCharacter":"set character to {character}",
   "setColour":"renk ayarla",
   "setPattern":"deseni ayarla",
   "setWidth":"genişliği ayarla",

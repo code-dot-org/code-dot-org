@@ -184,7 +184,7 @@
   continue_learning_header: "Продължи обучението след Часа"
   continue_learning_body: "Има много възможности.  Можете да учите онлайн в местното училище или на летен лагер."
   learn_code_studio: "Опитайте курсовете в Студиото по кодиране"
-  learn_next_level: "Опитайте друг курс от Студиото по кодиране"
+  learn_next_level: "Продължи към следващото ниво"
   learn_online: "Опитайте други курсове онлайн"
   learn_classes: "Намерете местни класове"
   learn_back_to_minecraft: "Продължете да учите с Minecraft"
@@ -214,7 +214,7 @@
   stats_nina: '"Всеки ден отчитам същите резултати &mdash; 100 % ангажираност."-Нина Никълс Пири, учител'
   stats_student: '"Знаех, че това е <b>еднократна</b> възможност в живота."-Мариана Алзейт, 5-ти клас'
   stats_michael: 'Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани за нещо в обучението им. -Франк Мартинес, учител'
-  studiobar_title: "Разгледайте <a href='http://studio.code.org'> Студиото за кодиране</a>"
+  studiobar_title: "Разгледайте <a href='http://studio.code.org'> Студиото за програмиране</a>"
   studiobar_title_nolink: "Разгледайте Студиото за кодиране"
   studiobar_elementary_title: "Начални курсове"
   studiobar_elementary_body: "Нашите три нови курса за K &#8209; 5"
@@ -252,7 +252,7 @@
   homepage_hero_text_teacher1: "&ldquo;\"Писането на код разпалва креативност, вдъхновение и иновации, &mdash; които са от съществено значение за всяка кариера.\"&rdquo; Флорес, учител"
   homepage_hero_text_teacher2: |-
     &ldquo;Тази програма ангажира и увлича  учениците ми на 100%&rdquo; Адам, учител
-  homepage_hero_text_stat_loc: "2,5 милиона момичета са се записани да учат в Студиото по кодиране"
+  homepage_hero_text_stat_loc: "#loc линии код, написани от учениците"
   homepage_hero_text_stat_students: "#student_count Ученически акаунти на Студиото по кодиране"
   homepage_hero_text_stat_served: 'Часът на кодирането: #served пробваха'
   homepage_slot_text_hoc: "Часът на кодирането"
@@ -293,13 +293,14 @@
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Всеки може да се научи. Започнете днес"
   homepage_slot_text_link_hoc: "Опитайте Hour of Code"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Организирайте Hour of Code"
   homepage_slot_text_link_hocserved: "# опитаха"
   homepage_solot_text_link_volunteer: "Доброволец за Часа на кода"
   homepage_slot_text_title_students: "Ученици"
   homepage_slot_text_blurb_students: "Разгледайте всички наши уроци"
   homepage_slot_text_blurb_students_courses: "Разгледайте нашите курсове"
-  homepage_slot_text_link_codestudio: "Опитайте Студиото по кодиране"
+  homepage_slot_text_link_codestudio: "Опитайте Студиото по Програмиране"
   homepage_slot_text_link_local: "Намерете  клас в близост до Вас"
   homepage_slot_text_link_othercourses: "Други онлайн курсове"
   homepage_slot_text_title_educators: "Обучители"
@@ -604,11 +605,13 @@
   dashboard_responses_view: 'Изглед на текстовите отговори:'
   dashboard_responses_none: "Няма текстови отговори"
   dashboard_sections_new_section: "Нов раздел"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Създайте нови раздели и добавете ученици към тях. Разделите ще Ви помогнат да организирате учениците в по-малки групи, така че да можете да следите напредъка им и да управлявате техните акаунти."
   dashboard_sections_table_section: "Раздел"
   dashboard_sections_table_secret: "Тип парола за влизане"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_pairing_allowed: "Програмиране по двойки"
   dashboard_sections_table_stage_extras: "Екстри"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
@@ -860,9 +863,9 @@
   cspunit4_name: '(стар) Раздел 4: данни'
   cspunit5_name: '(стар) Раздел 5: Изследване и създаване на PT'
   cspunit6_name: 'Пост AP: Бази данни в приложения'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -895,7 +898,7 @@
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS основи"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "\"15-\" 16 CS принципи"
   csp17_category_name: "\"15-\" 16 CS принципи"
   cspexams_category_name: "CS принципи практически тест"
@@ -1304,3 +1307,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Начало"
+  header_courses: "Курсове"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Въведение за учителя"
+  header_educate_elementary: "Начално училище"
+  header_educate_middle: "Средно училище"
+  header_educate_high: "Гимназия"
+  header_educate_hoc: "Hour of Code"
+  header_educate_partner: "Партньорство с нас"
+  header_educate_beyond: "Отвъд Code.org"
+  header_educate_inspire: "Вдъхнови ученик"
+  header_educate_community: "Онлайн общност"
+  header_educate_tools: "Инструменти и видео"
+  header_about_us: "За нас"
+  header_about_leadership: "Лидерство"
+  header_about_donors: "Спонсори"
+  header_about_partners: "Партньори"
+  header_about_team: "Екипът"
+  header_about_news: "Новини"
+  header_about_evaluation: "Оценка"
+  header_about_jobs: "Работа"
+  header_about_contact: "Връзка с нас"
+  header_about_faqs: "Често задавани въпроси"
+  header_learn: "Научете"
+  header_teach: "Обучи"
+  header_stats: "Статистика"
+  header_help_us: "Помогнете ни"
+  header_about: "Относно"
+  header_teacher_community: "Учителска общност"
+  header_help_support: 'Help and support '
+  header_report_bug: "Съобщи за бъгове"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"
