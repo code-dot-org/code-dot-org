@@ -533,5 +533,6 @@
   "joinSectionPlaceholder": "Section Code (ABCDEF)",
   "newSectionEllipsis": "New section...",
   "setupCoursesTeacher": "Assign a course to your classroom or start your own course.",
-  "setupCoursesStudent": "Browse Code.org's courses to find your next challenge."
+  "setupCoursesStudent": "Browse Code.org's courses to find your next challenge.",
+  "viewMore": "View more"
 }
