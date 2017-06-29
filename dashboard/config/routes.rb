@@ -53,7 +53,7 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:show] do
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end

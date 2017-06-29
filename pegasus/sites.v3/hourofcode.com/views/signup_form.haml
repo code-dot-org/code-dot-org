@@ -1,4 +1,5 @@
 - signup_submit_error_message = hoc_s(:signup_submit_error_message).gsub(/"/,"\\\\\"")
+- hoc_year = DCDO.get("hoc_year", 2017)
 
 #signupform
   %h2= hoc_s(:signup_header).gsub(/%{campaign_date}/, campaign_date("full"))
@@ -114,7 +115,7 @@
     $("#signup_submit").attr('disabled','disabled');
 
     $.ajax({
-      url: "/forms/HocSignup2017",
+      url: "/forms/HocSignup#{hoc_year}",
       type: "post",
       dataType: "json",
       data: $("#hoc-signup-form").serialize()
