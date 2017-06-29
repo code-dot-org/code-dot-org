@@ -94,7 +94,7 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
-      sectionFromServerSection(section, state.validAssignments));
+      sectionFromServerSection(section));
     return {
       ...state,
       sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
@@ -106,8 +106,7 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === UPDATE_SECTION) {
-    const section = sectionFromServerSection(action.serverSection,
-      state.validAssignments);
+    const section = sectionFromServerSection(action.serverSection);
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;
 
@@ -192,7 +191,7 @@ export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-export const sectionFromServerSection = (serverSection, validAssignments) => ({
+export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   loginType: serverSection.login_type,
