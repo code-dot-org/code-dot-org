@@ -67,15 +67,17 @@ export default class CellEditor extends React.Component {
    * unlike value and range, tileTypes are used by all inheriting classes.
    *
    * @param {Object} values - this.getSanitizedValues()
+   * @param {Object} squareType - key/value pairs representing the tile types to
+   *        render. Defaults to maze.tiles.SquareType
    * @return {Element}
    */
-  renderTileTypes(values) {
+  renderTileTypes(values, squareTypes=SquareType) {
     return (
       <div>
         <label htmlFor="tileType">Tile Type (required):</label>
         <select name="tileType" value={values.tileType} onChange={this.handleChange}>
-          {Object.keys(SquareType).map(key => (
-            <option key={key} value={SquareType[key]}>{key.toLowerCase()}</option>
+          {Object.keys(squareTypes).map(key => (
+            <option key={key} value={squareTypes[key]}>{key.toLowerCase()}</option>
           ))}
         </select>
       </div>

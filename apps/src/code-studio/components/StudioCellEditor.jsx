@@ -46,7 +46,7 @@ export default class StudioCellEditor extends CellEditor {
   renderFields(values) {
     return (
       <div>
-        {super.renderTileTypes(values)}
+        {super.renderTileTypes(values, SquareType)}
 
         {(values.tileType === SquareType.SPRITESTART) &&
           <div>
