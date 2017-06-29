@@ -1,3 +1,4 @@
+=::NewRelic::Agent.browser_timing_header rescue ''
 %script=view 'google_analytics.js'
 
 %script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
