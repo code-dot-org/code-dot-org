@@ -8,6 +8,7 @@ import { setSections, setValidAssignments, newSection } from './teacherSectionsR
 import { loadClassroomList } from './googleClassroomRedux';
 import { classroomShape } from './shapes';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   breadcrumb: {
@@ -43,18 +44,27 @@ class SectionsPage extends Component {
     let validCourses;
     let sections;
 
+    // If sectionFocus is not enabled, we get valid_courses on page load and
+    // call setValidAssignments then. Otherwise, we get it async and set it here
+    const setAssignments = experiments.isEnabled('sectionFocus');
+
     const onAsyncLoad = () => {
-      if (validCourses && sections) {
-        setValidAssignments(validCourses, validScripts);
+      if ((validCourses || !setAssignments) && sections) {
+        if (setAssignments) {
+          setValidAssignments(validCourses, validScripts);
+        }
         setSections(sections);
         this.setState({sectionsLoaded: true});
       }
     };
 
-    $.getJSON('/dashboardapi/courses').then(response => {
-      validCourses = response;
-      onAsyncLoad();
-    });
+
+    if (setAssignments) {
+      $.getJSON('/dashboardapi/courses').then(response => {
+        validCourses = response;
+        onAsyncLoad();
+      });
+    }
 
     $.getJSON("/v2/sections/").done(response => {
       sections = response;

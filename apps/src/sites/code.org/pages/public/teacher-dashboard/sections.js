@@ -8,10 +8,12 @@ import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
   setStudioUrl,
+  setValidAssignments,
   newSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import googleClassroom from '@cdo/apps/templates/teacherDashboard/googleClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Render our sections table using React
@@ -31,6 +33,9 @@ export function renderSectionsPage(data) {
   store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
+  if (!experiments.isEnabled('sectionFocus')) {
+    store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
+  }
 
   const query = queryString.parse(window.location.search);
   if (query.newSection) {
