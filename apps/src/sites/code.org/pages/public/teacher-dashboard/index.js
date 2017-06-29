@@ -48,35 +48,11 @@ function renderSectionProjects(sectionId) {
 function main() {
   const studioUrlPrefix = scriptData.studiourlprefix;
   var valid_scripts = scriptData.valid_scripts;
-  var valid_courses = scriptData.valid_courses;
   var hoc_assign_warning = scriptData.hoc_assign_warning;
   var disabled_scripts = scriptData.disabled_scripts;
   var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
-
-  // Sections can be assigned to either a course or a script. Since there's a
-  // possibility that we could have a script and a course with the same id, we
-  // need a way to differentiate them. We do that by giving scripts and courses
-  // assignment ids, which are guaranteed to be unique across the population of
-  // both courses and scripts.
-  function scriptAssignmentId(script_id) {
-    return 's_' + script_id;
-  }
-
-  function courseAssignmentId(course_id) {
-    return 'c_' + course_id;
-  }
-
-  valid_scripts.forEach(function (script) {
-    script.assign_id = scriptAssignmentId(script.id);
-  });
-  valid_courses.forEach(function (course) {
-    course.assign_id = courseAssignmentId(course.id);
-    course.is_course = true;
-  });
-
-  const valid_assignments = valid_courses.concat(valid_scripts);
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
