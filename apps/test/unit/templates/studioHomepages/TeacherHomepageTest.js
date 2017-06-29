@@ -266,7 +266,7 @@ describe('TeacherHomepage', () => {
     const recentCourses = wrapper.childAt(5);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
-    assert.equal(recentCourses.props().heading, 'Recent Courses');
+    assert.equal(recentCourses.props().heading, 'My Courses');
     assert.equal(recentCourses.props().isTeacher, true);
     assert.equal(recentCourses.props().courses.length, 2);
     // Check if RecentCourses receives correct props.
@@ -281,7 +281,7 @@ describe('TeacherHomepage', () => {
     // Check if a ContentContainer is rendered.
     const coursesContentContainer = recentCourses.childAt(0);
     assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
+    assert.equal(coursesContentContainer.props().heading, 'My Courses');
     assert.equal(coursesContentContainer.props().linkText, 'Find a course');
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
@@ -312,13 +312,13 @@ describe('TeacherHomepage', () => {
     const recentCourses = wrapper.childAt(5);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
-    assert.equal(recentCourses.props().heading, 'Recent Courses');
+    assert.equal(recentCourses.props().heading, 'My Courses');
     assert.equal(recentCourses.props().isTeacher, true);
     assert.equal(recentCourses.props().courses.length, 0);
     // Check if a ContentContainer is rendered.
     const coursesContentContainer = recentCourses.childAt(0);
     assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
+    assert.equal(coursesContentContainer.props().heading, 'My Courses');
     assert.equal(coursesContentContainer.props().linkText, 'Find a course');
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
