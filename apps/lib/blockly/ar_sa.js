@@ -1,6 +1,6 @@
 Blockly.Msg.ACTUAL = "استدعاء";
-Blockly.Msg.ADD = "إضافة";
-Blockly.Msg.ADD_COMMENT = "إضافة تعليق";
+Blockly.Msg.ADD = "أضف";
+Blockly.Msg.ADD_COMMENT = "أضف تعليق";
 Blockly.Msg.ADD_PARAMETER = "إضافة عامل";
 Blockly.Msg.CANCEL = "إلغاء";
 Blockly.Msg.CHANGE_VALUE_TITLE = "تغيير القيمة:";
@@ -24,7 +24,7 @@ Blockly.Msg.COLOUR_RGB_HELPURL = "http://www.december.com/html/spec/colorper.htm
 Blockly.Msg.COLOUR_RGB_RED = "أحمر";
 Blockly.Msg.COLOUR_RGB_TITLE = "التلوين مع";
 Blockly.Msg.COLOUR_RGB_TOOLTIP = "إنشاء لون باستخدام القيمة المحددة من اللون الأحمر والأخضر والأزرق.  يجب أن تكون كافة القيم بين 0 و 100.";
-Blockly.Msg.CONFIRM_CREATE_VARIABLE = "إنشاء";
+Blockly.Msg.CONFIRM_CREATE_VARIABLE = "أنشئ";
 Blockly.Msg.CONFIRM_DELETE_FUNCTION_MESSAGE = "تحذير! هل أنت متأكد من أنك تريد حذف %1؟";
 Blockly.Msg.CONFIRM_RENAME_VARIABLE = "إعادة تسمية";
 Blockly.Msg.CONTRACT_EDITOR_HEADER = "خطوات التصميم";
@@ -376,7 +376,7 @@ Blockly.Msg.TEXT_TRIM_OPERATOR_BOTH = "ازالة الفراغات من كلا �
 Blockly.Msg.TEXT_TRIM_OPERATOR_LEFT = "ازالة الفراغات من الجانب الأيسر";
 Blockly.Msg.TEXT_TRIM_OPERATOR_RIGHT = "ازالة الفراغات من الجانب الأيمن";
 Blockly.Msg.TEXT_TRIM_TOOLTIP = "إرجاع نسخة من النص مع الفراغات المحذوفة من أحد أو كلا أطرافه.";
-Blockly.Msg.UNUSED_CODE = "كود برمجي غير مستخدم";
+Blockly.Msg.UNUSED_CODE = "الكود غير مستخدم";
 Blockly.Msg.VARIABLES_DEFAULT_NAME = "عنصر";
 Blockly.Msg.VARIABLES_GET_CREATE_SET = "إنشاء 'تعيين %1'";
 Blockly.Msg.VARIABLES_GET_HELPURL = "http://code.google.com/p/blockly/wiki/Variables#Get";
