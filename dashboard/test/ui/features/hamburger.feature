@@ -4,7 +4,7 @@ Feature: Hamburger dropdown
   Scenario: Signed out user in English should not see hamburger on desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
-    Then element ".header_button" is visible
+    Then I wait to see ".header_button"
     Then element "#hamburger-icon" is not visible
 
   Scenario: Student viewing hamburger dropdown in English on desktop
