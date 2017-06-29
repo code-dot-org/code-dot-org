@@ -11,7 +11,7 @@ export default storybook => {
         story: () => (
           <TeacherAssignablesCatalog
             codeOrgUrlPrefix="http://localhost:3000/"
-            rtl={false}
+            isRtl={false}
           />
         )
       },
