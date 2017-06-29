@@ -56,12 +56,14 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
     successfully_updated = can_update && current_user.update(update_params(params_to_pass))
-    respond_to_account_update(successfully_updated)
+    has_email = current_user.parent_email.blank? && !current_user.hashed_email.blank?
+    success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
+    respond_to_account_update(successfully_updated, success_message_kind)
   end
 
   private
 
-  def respond_to_account_update(successfully_updated)
+  def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
     user = current_user
     respond_to do |format|
       if successfully_updated
@@ -70,7 +72,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in user
 
         format.html do
-          set_flash_message :notice, :updated
+          set_flash_message :notice, flash_message_kind
           begin
             redirect_back fallback_location: after_update_path_for(user)
           rescue ActionController::RedirectBackError
@@ -106,7 +108,9 @@ class RegistrationsController < Devise::RegistrationsController
   def update_params(params)
     params.require(:user).permit(
       :email,
+      :parent_email,
       :hashed_email,
+      :username,
       :password,
       :encrypted_password,
       :current_password,
