@@ -28,7 +28,7 @@ export default class MazeThumbnail extends React.Component {
     subtype.createDrawer();
     subtype.initWallMap();
 
-    drawMap(this.refs.svg, skin, subtype, Maze.map);
+    drawMap(this.svg, skin, subtype, Maze.map);
   }
 
   render() {
@@ -37,7 +37,7 @@ export default class MazeThumbnail extends React.Component {
         <svg
           width="400"
           height="400"
-          ref="svg"
+          ref={c => {this.svg = c;}}
         />
       </ProtectedStatefulDiv>
     );
