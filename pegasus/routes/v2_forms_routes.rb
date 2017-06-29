@@ -61,8 +61,9 @@ end
 
 review '/v2/forms/:kind/:secret' do |kind, secret|
   dont_cache
+  hoc_year = DCDO.get("hoc_year", 2017)
   case kind
-  when "HocSignup2016"
+  when "HocSignup#{hoc_year}"
     unless dashboard_user && (dashboard_user[:user_type] == 'teacher' || dashboard_user[:admin])
       forbidden!
     end
