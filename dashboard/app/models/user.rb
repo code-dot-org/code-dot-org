@@ -1282,6 +1282,10 @@ class User < ActiveRecord::Base
     !oauth?
   end
 
+  def parent_managed_account?
+    student? && !parent_email.blank? && hashed_email.blank?
+  end
+
   def section_for_script(script)
     sections_as_student.find {|section| section.script_id == script.id}
   end

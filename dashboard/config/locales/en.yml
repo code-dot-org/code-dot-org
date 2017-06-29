@@ -37,7 +37,8 @@ en:
         name: 'Display Name'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
-        personal_email: 'Personal email address'
+        parent_email: 'Parent/guardian email'
+        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'Username'
         password: 'Password'
         password_confirmation: 'Password confirmation'
@@ -242,6 +243,11 @@ en:
     updated: '%{model} was successfully updated.'
     destroyed: '%{model} was successfully deleted.'
     access_denied: 'You do not have access to this %{model}.'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
     header:
       finished_hoc: "I've finished my Hour of Code"
