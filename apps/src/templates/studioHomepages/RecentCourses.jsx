@@ -22,48 +22,50 @@ const RecentCourses = React.createClass({
     const moreCourses = courses.length > 4 ? courses.slice(4) : [];
 
     return (
-      <ContentContainer
-        heading={heading}
-        linkText={i18n.findCourse()}
-        link="/courses"
-        showLink={showAllCoursesLink}
-        isRtl={isRtl}
-      >
-        {topFourCourses.length > 0 && (
-          topFourCourses.map((course, index) =>
-            <CourseCard
-              key={index}
-              name={course.name}
-              description={course.description}
-              link={course.link}
+      <div>
+        <ContentContainer
+          heading={heading}
+          linkText={i18n.findCourse()}
+          link="/courses"
+          showLink={showAllCoursesLink}
+          isRtl={isRtl}
+        >
+          {topFourCourses.length > 0 && (
+            topFourCourses.map((course, index) =>
+              <CourseCard
+                key={index}
+                name={course.name}
+                description={course.description}
+                link={course.link}
+                isRtl={isRtl}
+              />
+            )
+          )}
+          {moreCourses.length > 0 && (
+            <SeeMoreCourses
+              courses={moreCourses}
               isRtl={isRtl}
             />
-          )
-        )}
-        {moreCourses.length > 0 && (
-          <SeeMoreCourses
-            courses={moreCourses}
-            isRtl={isRtl}
-          />
-        )}
-        {!isTeacher && (
-          <Notification
-            type="course"
-            notice={i18n.findCourse()}
-            details={i18n.findCourseDescription()}
-            buttonText={i18n.findCourse()}
-            buttonLink="/course"
-            dismissible={false}
-          />
-        )}
-        {courses.length === 0 && (
-          <SetUpMessage
-            type="courses"
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-          />
-        )}
-      </ContentContainer>
+          )}
+          {!isTeacher && (
+            <Notification
+              type="course"
+              notice={i18n.findCourse()}
+              details={i18n.findCourseDescription()}
+              buttonText={i18n.findCourse()}
+              buttonLink="/course"
+              dismissible={false}
+            />
+          )}
+          {courses.length === 0 && (
+            <SetUpMessage
+              type="courses"
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+            />
+          )}
+        </ContentContainer>
+      </div>
     );
   }
 });

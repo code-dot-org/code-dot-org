@@ -5,6 +5,8 @@ import ContentContainer from './ContentContainer';
 import ProgressButton from "../progress/ProgressButton";
 import shapes from './shapes';
 
+// This component - used on the teacher and student homepages - shows a button to view more courses if the user has more than a few courses.  Teachers will see up to 4 courses and a button if they have more. Students will see up to 5 courses, with their most recent as a TopCourse, and the button if they have more. Clicking the button will show CoursesCards for all of the users' courses beyond the top 4 or 5.
+
 const SeeMoreCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
