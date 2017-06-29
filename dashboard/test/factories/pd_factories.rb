@@ -15,6 +15,7 @@ FactoryGirl.define do
     transient do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
       enrolled_unattending_users 0
@@ -22,7 +23,12 @@ FactoryGirl.define do
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
+        workshop.sessions << build(
+          :pd_session,
+          workshop: workshop,
+          start: evaluator.sessions_from + i.days,
+          duration_hours: evaluator.each_session_hours
+        )
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -49,9 +55,12 @@ FactoryGirl.define do
   end
 
   factory :pd_session, class: 'Pd::Session' do
+    transient do
+      duration_hours 6
+    end
     association :workshop, factory: :pd_workshop
     start {Date.today + 9.hours}
-    self.end {start + 6.hours}
+    self.end {start + duration_hours.hours}
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do

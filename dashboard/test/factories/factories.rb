@@ -161,6 +161,7 @@ FactoryGirl.define do
   factory :section do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
+    login_type 'email'
   end
 
   factory :game do

@@ -323,7 +323,7 @@ describe('teacherSectionsRedux', () => {
       assert(state.sections[-1]);
     });
 
-    it('initializes new section', () => {
+    it('initializes new section without a courseId assigned', () => {
       const action = newSection();
       const state = reducer(initialState, action);
       assert.deepEqual(state.sections[-1], {
@@ -336,6 +336,24 @@ describe('teacherSectionsRedux', () => {
         studentNames: [],
         code: '',
         courseId: null,
+        scriptId: null
+      });
+    });
+
+    it('initializes a new section with a courseId assigned', () => {
+      const action = newSection(29);
+      const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
+      const state = reducer(stateWithAssigns, action);
+      assert.deepEqual(state.sections[-1], {
+        id: -1,
+        name: '',
+        loginType: 'word',
+        grade: '',
+        stageExtras: false,
+        pairingAllowed: true,
+        studentNames: [],
+        code: '',
+        courseId: 29,
         scriptId: null
       });
     });

@@ -81,7 +81,11 @@ lessons = DB[:cdo_glossary_csf]
   %>
   
 <h3><%= lesson[:theWord_s]%></h3>
-<small style="line-height: 90%;"><i>(<%= lesson[:locations2_t] %>)</i></small><br/> 
+
+<!-- 
+<small style="line-height: 90%;"><i>(<%= lesson[:locations2_t] %>)</i></small><br/>
+-->
+
 <%= lesson[:defined_t]%>
 <br/><br/>
 

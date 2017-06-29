@@ -1,4 +1,5 @@
-login_required true
+stage 'Algorithms: Graph Paper Programming'
+level 'GraphPaperProgramming'
 
 stage 'Introduction'
 level 'courseD_video_ramp1'
@@ -17,9 +18,6 @@ level 'courseD_artist_ramp11'
 level 'courseC_video_angles'
 level 'courseD_artist_ramp12'
 level 'courseD_farmer_ramp13'
-
-stage 'Algorithms: Graph Paper Programming'
-level 'GraphPaperProgramming'
 
 stage 'Events in Bounce'
 skin 'bounce'

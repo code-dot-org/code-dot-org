@@ -747,7 +747,7 @@ tr:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Çikolata yapmak istediğimiz zaman, bu süreçte birçok büyük adım vardır. Her bir büyük adım kendi küçük adımlarına sahiptir. Nasıl bir çikolata tatmak istediğimize bağlı şekilde, değişik tarifler yada algoritmalar vardır. Her adım önemlidir, küçük olanları dahi. Bu nedenle herhangi bir adım olmadan, geri kalan tamamlanamaz. Başkalarının anlayabildiği algoritmaları oluşturmak gerçekten önemlidir. Her adımın not edilmesinin gereklilik nedeni de budur, böylece kimin yaptığının önemi yoktur, sonuç aynıdır."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Şimdiye kadar animasyon yada hikaye yaptığında her çalıştırdığında aynı şeyi yapıyordu. Şimdi etkileşimli bir oyun yapabilirsiniz."
@@ -823,7 +823,7 @@ tr:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Bu örnekte mor çiçekte Eğer (IF) sıfırdan çok nektar varsa nektar al diyeceğiz. Bu arıya nektar olduğu sürece nektar almasını söylüyor. Da daaa!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Programlardan hata ayıklamayı hiç duydunuz mu? Neyin çalışmadığını bulmanıza denir. Hata ayıklarken önce hatayı bulursunuz sonra düzeltirsiniz."
@@ -1315,7 +1315,7 @@ tr:
     unplug10:
       1:
         image: 'notes/unplug10_1.png'
-        text: "This activity explains in an easy-to-understand way how the internet works. We explain all the terminology you'll need in simple terms so that students can simulate transmitting messages, like an email."
+        text: "Bu etkinlik İnternetin nasıl çalıştığını anlaşılması kolay bir yolla açıklar. Basit dönemlerde ihtiyaç duyacağın tüm terimler dizgesini biz açıklıyoruz böylece öğrenciler gönderilen mesajların tıpkı elekronik postalar gibi benzerini yapabiliyor."
       2:
         image: 'notes/unplug10_2.png'
         text: "Students will transmit messages while pretending to be one of three transmission methods. Wireless internet, DSL or fiber optic. The students who represent wi-fi will have to wear the message they're transmitting on their head because wifi is the most likely to drop some information."
@@ -1325,10 +1325,10 @@ tr:
     unplug11:
       1:
         image: 'notes/unplug11_1.png'
-        text: "So now it's time to step back and take a birds eye view of everything you've done in these past nineteen lessons. This is a great time to call out to students that what they've just done is a huge achievement. They've learned more over these lessons than most adults know about computer science."
+        text: "Şimdi, yaptığın on dokuz etkinlikteki her şeye durup kuş bakışı bakarak düşünme zamanı. Bu öğrencilerin yaptıkları şeylerin ne kadar devasa bir başarı olduğunu söylemek için mükemmel bir zamandır. Öğrenciler birçok yetişkinin bilgisayar bilimi hakkında bildiğinden daha çok bu dersleri öğrenmişlerdir."
       2:
         image: 'notes/unplug11_2.png'
-        text: "Discuss as a class or in small groups about their favorite lessons. Once you take a look back at everything you've learned, this is where your students' creativity can shine. Split them into groups and have them create an unplugged lesson of their own. Assign each group a key concept, like functions or algorithms and have lots of craft materials on hand for them to use. Have each group present their new unplugged activity or even set aside another day to do a few of the student created activities."
+        text: "Sınıfça yada gruplar halinde en çok sevilen ders hakkında tartışın. Öğrendiğiniz her şeye dönüp baktığınızda, burası öğrencilerinizin yaratıcılığının parlayabileceği yerdir. Onları gruplara ayırın ve kendi bağlantısız derslerini oluşturmalarını isteyin. Her bir gruba anahtar bir kavram, fonksiyon yada algoritma gibi, atayın ve elinizde onların kullanması için birçok el yapımı materyal bulundurun. Her bir grup kendi yeni ve bağımsız aktivitesini sunsun yada bazı öğrecilerin yapılan aktiviteleri için başka bir gün ayırın."
       3:
         image: 'notes/unplug11_3.png'
         text: "From everyone here at Code.org, we hope you've had a TON of fun during this course. And whether your dream is to create the best new app, use programming to help cure diseases, or you just want to be a stellar problem-solver, this course was the first step in achieving those dreams."
@@ -1375,16 +1375,16 @@ tr:
         text: "Çalışma alanının sağında bulunan göster düğmesine tıklayarak bloklar ya da yazı ile kod girişi yapmak arasında geçiş yapabilirsin."
       4:
         image: 'notes/starwars_typing_4.JPG'
-        text: "In the next lesson, we'll start you out in typing mode. Here you can still drag the block from the toolbox or you can type the command name. As you start to type, you'll see names of possible commands show below where you're typing. Instead of typing the whole command name, you can select one of these to move faster. In my job, I use this auto-complete feature all the time when writing code."
+        text: "Bir sonraki derste, şimdiki yazma modunun dışına çıkarak başlayacağız. Burada hala blokları metin kutusundan sürükleyebilir yada komut adını yazabilirsiniz. Yazmaya başladığınızda, yazdığınız yerin altında muhtemel komutların isimlerini göreceksiniz. Komut adının tamamını yazmak yerine, daha hızlı ilerlemek için bunlardan birini seçebilirsiniz. Bu otomatik tamamlama özelliğini kod yazarken ben her zaman kullanırım."
       5:
         image: 'notes/starwars_typing_5.JPG'
-        text: "When you're typing code, the computer needs you to be very precise. You need to spell and capitalize the command name exactly correctly, including the parentheses and the semi-colon. Even with a small typing mistake, BB-8 cannot understand the code and won't be able to move."
+        text: "Kod yazarken, bilgisayar çok kesin olmanıza ihtiyaç duyar. Komut isimlerini, parantezler ve noktalı virgül dahil, tamamen doğru şekilde hecelemeniz ve büyük harfle yazmanız gerekir. En küçük yazım hatasında bile, BB-8 kodu anlayamaz ve hareket edemez."
       6:
         image: 'notes/starwars_typing_6.JPG'
         text: "Herhangi bir satırda hata yaptığında, editör senin için o satırı vurgular böylece o satırı daha kolay düzeltebilirsin."
       7:
         image: 'notes/starwars_typing_7.JPG'
-        text: "If you get stuck, you can always start over with the start over button and you can switch back to block mode at any time by clicking in the top-right corner. Ok, let's give typing a try! And if you make mistakes, don't get frustrated. It takes everybody a few tries to get it right."
+        text: "Eğer mahsur kalırsanız, başa dön butonuyla her zaman baştan başlayabilirsiniz ve herhangi bir zamanda sağ üst köşeye basarak blok moduna geçebilirsiniz. Haydi yazmayı deneyelim. Eğer hata yaparsanız, üzülmeyin. Doğruyu yapmak, herkesin birkaç denemesini alır."
     starwars_events:
       1:
         image: 'notes/starwars_events_1.JPG'
@@ -1416,16 +1416,16 @@ tr:
     starwars_congrats:
       1:
         image: 'notes/starwars_congrats_1.JPG'
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Merhaba, benim adım Alice ve Code.org firmasında ürün ve mühendislik ekiplerini yönetiyorum. Şu anda üzerinde uğraştığınız eğitimde üzerinde çalıştım."
       2:
         image: 'notes/starwars_congrats_2.JPG'
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: "Son seviyeye geldin. Tebrikler! Kendi yıldız savaşları oyununu yapmak için bilmeniz gereken her şeyi öğrendin. Şimdi daha fazla talimat yok, Çözecek bulmaca yok. Kendi oyununu yap ve nasıl çalıştığını seçin. Bir şey daha, hatta daha fazlasını yapman için yeni komutları ve yeni sesleri açtık."
       3:
         image: 'notes/starwars_congrats_3.JPG'
         text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
       4:
         image: 'notes/starwars_congrats_4.JPG'
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: "Kaybedemeyeceğin bir oyun yaptık ve bu oyunda ortadan kaldırdığın her şey sana puan verir. Programım için tuşların yerlerini değiştirdim böylece sen ne zaman yukarı tıklasan karakterin aşağı iner ve sağa gittiğinde, karakterin sola gider. Bu gerçekten zor! Bazen sadece avantaj elde edersin eğer oyunu geliştiren kişiysen adaletsiz bir avantaj. Anladım mı? Oley!"
       5:
         image: 'notes/starwars_congrats_5.JPG'
         text: "Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda oynayabilirsiniz. İyi eğlenceler!"
@@ -1485,16 +1485,16 @@ tr:
     starwars_blocks_congrats:
       1:
         image: 'notes/starwars_blocks_congrats_1.JPG'
-        text: "Hi, my name is Alice and I run the product and engineering teams here at Code.org and I worked on this tutorial that you're playing through right now."
+        text: "Merhaba, benim adım Alice ve Code.org firmasında ürün ve mühendislik ekiplerini yönetiyorum. Şu anda üzerinde uğraştığınız eğitimde üzerinde çalıştım."
       2:
         image: 'notes/starwars_blocks_congrats_2.JPG'
-        text: "You just made it to the last level. Congratulations! You just learned everything you need to know to make your own Star Wars game. Now there are no more instructions, no puzzles to solve. You can make your own game and you choose how it works. One more thing, you've unlocked new sounds and new commands to do even more."
+        text: "Son seviyeye geldin. Tebrikler! Kendi yıldız savaşları oyununu yapmak için bilmeniz gereken her şeyi öğrendin. Şimdi daha fazla talimat yok, Çözecek bulmaca yok. Kendi oyununu yap ve nasıl çalıştığını seçin. Bir şey daha, hatta daha fazlasını yapman için yeni komutları ve yeni sesleri açtık."
       3:
         image: 'notes/starwars_blocks_congrats_3.JPG'
         text: "[students speaking] So we made a game basically where you get points when you get puffer pigs. The twist is everytime you get a puffer pig a storm trooper appears. Actually the whole screen is full of puffer pigs and then when you touch 10,000 of them, you win."
       4:
         image: 'notes/starwars_blocks_congrats_4.JPG'
-        text: "[students speaking] We made a game where you can't lose and everything you kill gives you points. For my program, I reversed the keys so that whenever you click up, your character goes down and when you go right, your character goes left. It's really hard! Sometimes you just get an advantage, an unfair advantage if you're the developer of the game. Did I get it? Yay!"
+        text: "Kaybedemeyeceğin bir oyun yaptık ve bu oyunda ortadan kaldırdığın her şey sana puan verir. Programım için tuşların yerlerini değiştirdim böylece sen ne zaman yukarı tıklasan karakterin aşağı iner ve sağa gittiğinde, karakterin sola gider. Bu gerçekten zor! Bazen sadece avantaj elde edersin eğer oyunu geliştiren kişiysen adaletsiz bir avantaj. Anladım mı? Oley!"
       5:
         image: 'notes/starwars_blocks_congrats_5.JPG'
         text: "Oyununuzu tamamladığınızda, arkadaşlarınızla paylaşabilir veya telefonunuzda oynayabilirsiniz. İyi eğlenceler!"
@@ -1640,10 +1640,10 @@ tr:
     gumball_repeat:
       1:
         image: 'notes/gumball_repeat_1.JPG'
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things."
+        text: "Bir şeyi hiç durmadan daima yapman gerekiyor olduğunu hayal edebilir misin? Umarım gerekli olmamıştır çünkü bilgisayarlar nesneleri tekrarlamada gerçekten iyidir."
       2:
         image: 'notes/gumball_repeat_2.JPG'
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: "Bu sonsuza kadar tekrar et bloğu. Bu blok içerisindeki herhangi bir şey oyunda daima devam ediyor. Eğer oyunu oynayan kişi hiçbir şey yapmadığı halde bir şeyi sürekli yapan bir oyuncu istiyorsak, bu blokları sonsuza kadar tekrar et bloğu içerisine yerleştireceğiz."
       3:
         image: 'notes/gumball_repeat_3.JPG'
         text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."
@@ -1691,10 +1691,10 @@ tr:
     iceage_repeat:
       1:
         image: 'notes/iceage_repeat_1.JPG'
-        text: "Can you imagine if you had to repeat something forever and ever? Hopefully you never have to because computers are really good at repeating things."
+        text: "Bir şeyi hiç durmadan daima yapman gerekiyor olduğunu hayal edebilir misin? Umarım gerekli olmamıştır çünkü bilgisayarlar nesneleri tekrarlamada gerçekten iyidir."
       2:
         image: 'notes/iceage_repeat_2.JPG'
-        text: "This is the repeat forever block. Anything inside this block will happen forever in the game. If we want an actor to do something repeatedly without the player having to do anything, we'll put those blocks inside the repeat forever block."
+        text: "Bu sonsuza kadar tekrar et bloğu. Bu blok içerisindeki herhangi bir şey oyunda daima devam ediyor. Eğer oyunu oynayan kişi hiçbir şey yapmadığı halde bir şeyi sürekli yapan bir oyuncu istiyorsak, bu blokları sonsuza kadar tekrar et bloğu içerisine yerleştireceğiz."
       3:
         image: 'notes/iceage_repeat_3.JPG'
         text: "Sıradaki bu bulmacada, hedefimiz aktöre bir işi devamlı yapması için yardım etmek. Tekrarla komutunun nasıl çalıştığını öğrendiğin zaman sana kendi oyununu yaparken tonla zaman kazandıracak."

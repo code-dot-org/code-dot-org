@@ -75,17 +75,17 @@ class ContactRollups
     ProfessionalDevelopmentWorkshopSignup
   ).map {|s| "'#{s}'"}.join(',').freeze
 
+  hoc_year = DCDO.get("hoc_year", 2017)
+
   # Information about presence of which forms submitted by a user get recorded in which
   # rollup field with which value
-  FORM_INFOS =
-    [
-      {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"},
-      {kind: "'HocSignup2014'", dest_field: "hoc_organizer_years", dest_value: "'2014'"},
-      {kind: "'HocSignup2015'", dest_field: "hoc_organizer_years", dest_value: "'2015'"},
-      {kind: "'HocSignup2016'", dest_field: "hoc_organizer_years", dest_value: "'2016'"},
-      {kind: "'HocSignup2017'", dest_field: "hoc_organizer_years", dest_value: "'2017'"},
-      {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
-    ].freeze
+  FORM_INFOS = []
+  FORM_INFOS << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
+  [2014..hoc_year].each do |year|
+    FORM_INFOS << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
+  end
+  FORM_INFOS << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
+  FORM_INFOS.freeze
 
   ROLE_TEACHER = "Teacher".freeze
   ROLE_FORM_SUBMITTER = "Form Submitter".freeze
