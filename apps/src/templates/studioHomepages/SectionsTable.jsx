@@ -9,7 +9,7 @@ export const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    width: 940
+    width: 970
   },
   headerRow: {
     backgroundColor: color.table_header,
@@ -44,18 +44,18 @@ export const styles = {
     paddingRight: 20,
   },
   col1: {
-    width: 310
+    width: 325
   },
   col2: {
-    width: 310
+    width: 325
   },
   col3: {
     lineHeight: '52px',
-    width: 110
+    width: 135
   },
   col4: {
     lineHeight: '52px',
-    width: 210,
+    width: 135,
     borderRightWidth: 0,
   },
   col4Rtl: {
