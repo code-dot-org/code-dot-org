@@ -416,12 +416,9 @@ describe('teacherSectionsRedux', () => {
       course_id: 29,
       students: fakeStudents(10)
     };
-    const stateWithUrl = reducer(initialState, setStudioUrl('//test-studio.code.org'));
-    const stateWithAssigns = reducer(stateWithUrl, setValidAssignments(validCourses, validScripts));
-    const validAssignments = stateWithAssigns.validAssignments;
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
-      const section = sectionFromServerSection(serverSection, validAssignments);
+      const section = sectionFromServerSection(serverSection);
       assert.strictEqual(section.id, serverSection.id);
       assert.strictEqual(section.name, serverSection.name);
       assert.strictEqual(section.login_type, serverSection.loginType);
@@ -433,7 +430,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('maps from a script object to a script_id', () => {
-      const sectionWithoutScript = sectionFromServerSection(serverSection, validAssignments);
+      const sectionWithoutScript = sectionFromServerSection(serverSection);
       assert.strictEqual(sectionWithoutScript.scriptId, null);
 
       const sectionWithScript = sectionFromServerSection({
@@ -442,12 +439,12 @@ describe('teacherSectionsRedux', () => {
           id: 1,
           name: 'Accelerated Course'
         }
-      }, validAssignments);
+      });
       assert.strictEqual(sectionWithScript.scriptId, 1);
     });
 
     it('maps from students to names of students', () => {
-      const section = sectionFromServerSection(serverSection, validAssignments);
+      const section = sectionFromServerSection(serverSection);
       assert.equal(section.studentNames.length, 10);
       section.studentNames.forEach(name => {
         assert.equal(typeof(name), 'string');
