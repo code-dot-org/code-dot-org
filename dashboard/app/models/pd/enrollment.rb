@@ -58,7 +58,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_presence_of :school_info, unless: :created_before_school_info?
 
   before_validation :autoupdate_user_field
-  after_create :enroll_in_corresponding_online_learning
+  after_save :enroll_in_corresponding_online_learning, if: -> {user_id_changed? || email_changed?}
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)

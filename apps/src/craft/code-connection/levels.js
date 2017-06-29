@@ -12,6 +12,12 @@ function block(type, children = "") {
   return `<block type='${type}'>${children}</block>`;
 }
 
+function vecThree(x, y, z) {
+  return craftBlock('vecThree', `<value name='X'><block type="math_number"><title name='NUM'>${x}</title></block></value>
+                                <value name='Y'><block type="math_number"><title name='NUM'>${y}</title></block></value>
+                                <value name='Z'><block type="math_number"><title name='NUM'>${z}</title></block></value>`);
+}
+
 module.exports = {
   custom: {
     requiredBlocks: [],
@@ -52,18 +58,29 @@ module.exports = {
                                      <value name='BLOCKDATA'>${craftBlock('block')}</value>`)) +
       category('Blocks',
         craftBlock('tptotarget') +
-        craftBlock('tptopos') +
-        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>`) +
+        craftBlock('tptopos', `<value name='VEC3'>${vecThree(1, 1, 1)}</value>`) +
+        craftBlock('fill', `<value name='ITEM'>${craftBlock('block')}</value>
+                            <value name='FROM_VEC3'>${vecThree(1, 1, 1)}</value>
+                            <value name='TO_VEC3'>${vecThree(5, 5, 5)}</value>`) +
         craftBlock('give', `<value name='ITEM'>${craftBlock('block')}</value>
                             <value name='AMOUNT'><block type="math_number"><title name='NUM'>10</title></block></value>`) +
         craftBlock('kill') +
-        craftBlock('setblock',`<value name='ITEM'>${craftBlock('block')}</value>`) +
-        craftBlock('summon') +
-        craftBlock('testforblock', `<value name='ITEM'>${craftBlock('block')}</value>`) +
-        craftBlock('testforblocks') +
-        craftBlock('clone') +
-        craftBlock('clonefiltered', `<value name='ITEM'>${craftBlock('block')}</value>`) +
-        craftBlock('executeasother') +
+        craftBlock('setblock',`<value name='ITEM'>${craftBlock('block')}</value>
+                               <value name='VEC3'>${vecThree(1, 1, 1)}</value>`) +
+        craftBlock('summon', `<value name='VEC3'>${vecThree(1, 1, 1)}</value>`) +
+        craftBlock('testforblock', `<value name='ITEM'>${craftBlock('block')}</value>
+                                    <value name='VEC3'>${vecThree(1, 1, 1)}</value>`) +
+        craftBlock('testforblocks', `<value name='FROM_VEC3'>${vecThree(1, 1, 1)}</value>
+                                     <value name='TO_VEC3'>${vecThree(5, 5, 5)}</value>
+                                     <value name='VEC3'>${vecThree(10, 10, 10)}</value>`) +
+        craftBlock('clone', `<value name='FROM_VEC3'>${vecThree(1, 1, 1)}</value>
+                             <value name='TO_VEC3'>${vecThree(5, 5, 5)}</value>
+                             <value name='VEC3'>${vecThree(10, 10, 10)}</value>`) +
+        craftBlock('clonefiltered', `<value name='ITEM'>${craftBlock('block')}</value>
+                                     <value name='FROM_VEC3'>${vecThree(1, 1, 1)}</value>
+                                     <value name='TO_VEC3'>${vecThree(5, 5, 5)}</value>
+                                     <value name='VEC3'>${vecThree(10, 10, 10)}</value>`) +
+        craftBlock('executeasother',`<value name='VEC3'>${vecThree(1, 1, 1)}</value>`) +
         craftBlock('timesetbyname') +
         craftBlock('timesetbynumber', `<value name='TIME'><block type="math_number"><title name='NUM'>1200</title></block></value>`) +
         craftBlock('weather')) +
@@ -85,6 +102,9 @@ module.exports = {
       category('Math',
         block('math_number') +
         block('math_arithmetic') +
+        craftBlock('vecThree', `<value name='X'><block type="math_number"><title name='NUM'>0</title></block></value>
+                                <value name='Y'><block type="math_number"><title name='NUM'>0</title></block></value>
+                                <value name='Z'><block type="math_number"><title name='NUM'>0</title></block></value>`) +
         block('math_random_int',
           `<value name='FROM'>${block('math_number', '<field name="FROM">1</field>')}</value>` +
           `<value name='TO'>${block('math_number', '<field name="TO">10</field>')}</value>`))

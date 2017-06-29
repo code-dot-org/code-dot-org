@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseDialog from '../BaseDialog';
+import { classroomShape } from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 
@@ -67,7 +68,7 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
         }
         <span style={{float: 'right'}}>
           {locale.code()}
-          <span style={{fontFamily: 'monospace'}}> {classroom.code}</span>
+          <span style={{fontFamily: 'monospace'}}> {classroom.enrollmentCode}</span>
         </span>
       </div>
     ))}
@@ -84,14 +85,14 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
 ClassroomList.propTypes = {
   classrooms: React.PropTypes.array.isRequired,
   onSelect: React.PropTypes.func.isRequired,
-  selectedId: React.PropTypes.number,
+  selectedId: React.PropTypes.string,
 };
 
 export default class RosterDialog extends React.Component {
   static propTypes = {
     handleClose: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.array,
+    classrooms: React.PropTypes.arrayOf(classroomShape),
   }
 
   constructor(props) {

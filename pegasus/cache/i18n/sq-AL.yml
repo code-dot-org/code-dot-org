@@ -395,6 +395,7 @@
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_blurb_hoc: "Çdokush mund të mësojë. Fillo sot"
   homepage_slot_text_link_hoc: Provo Orën e Kodimit
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organizo një Orë Kodim
   homepage_slot_text_link_hocserved: "# e dorëzuar"
   homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
@@ -807,6 +808,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Seksion i ri
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Krijo seksione të reja dhe shto studentë
     në to. Seksionet të ndihmojnë për të organizuar studentët në grupe më të vogla
     kështu që ti mund të shohësh ecurinë e tyre dhe të menaxhosh llogaritë e tyre.
@@ -814,6 +816,7 @@
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_grade: Notë
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_pairing_allowed: Programim në çift
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Studentët
   dashboard_sections_table_code: Pjesë Kodi
@@ -1887,9 +1890,8 @@
   infinity_shortcode: inf
   playlab_shortcode: luaj
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Kurset
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1897,7 +1899,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Ora e Kodimit
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1923,6 +1925,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

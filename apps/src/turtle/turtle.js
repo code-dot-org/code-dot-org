@@ -177,22 +177,15 @@ var Artist = function () {
   this.speedSlider = null;
 
   this.ctxAnswer = null;
-  this.ctxNormalizedAnswer = null;
   this.ctxImages = null;
   this.ctxPredraw = null;
   this.ctxScratch = null;
-  this.ctxNormalizedScratch = null;
   this.ctxPattern = null;
   this.ctxFeedback = null;
   this.ctxDisplay = null;
 
   this.isDrawingAnswer_ = false;
   this.isPredrawing_ = false;
-
-  // This flag is used to draw a version of code (either user code or solution
-  // code) that nornamlizes patterns and stickers to always use the "first"
-  // option, so that validation can be agnostic
-  this.shouldDrawNormalized_ = false;
 };
 
 module.exports = Artist;
@@ -348,22 +341,8 @@ Artist.prototype.init = function (config) {
 Artist.prototype.prepareForRemix = function () {
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   const blocksDocument = blocksDom.ownerDocument;
-  let next, removedBlock = false;
-  let setArtistBlock = blocksDom.querySelector('block[type="turtle_setArtist"]');
-  while (setArtistBlock) {
-    removedBlock = true;
-    next = setArtistBlock.querySelector('next');
-    let parentNext = setArtistBlock.parentNode;
-    let parentBlock = parentNext.parentNode;
-    parentBlock.removeChild(parentNext);
-    if (next) {
-      parentBlock.appendChild(next);
-    }
-    setArtistBlock = blocksDom.querySelector('block[type="turtle_setArtist"]');
-  }
-
-  if (!removedBlock &&
-      REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+  let next = false;
+  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
         this.level[prop] === undefined ||
             this.level[prop] === group.defaultValues[prop]))) {
     // If all of the level props we need to worry about are undefined or equal
@@ -425,22 +404,6 @@ Artist.prototype.loadAudio_ = function () {
 };
 
 /**
- * We only attempt normalization for blockly levels, for two reasons;
- *
- * First, the blocks that we normalize (sticker and pattern) only exist in
- * blockly land.
- *
- * Second, the way we retrieve the user code in droplet does not use
- * this.api.log, so we'd have to make an alternate pathway for that use
- * case.
- *
- * @return {boolean}
- */
-Artist.prototype.shouldSupportNormalization = function () {
-  return this.studioApp_.isUsingBlockly();
-};
-
-/**
  * Code called after the blockly div + blockly core is injected into the document
  */
 Artist.prototype.afterInject_ = function (config) {
@@ -467,10 +430,6 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxPattern = this.createCanvas_('pattern', 400, 400).getContext('2d');
   this.ctxFeedback = this.createCanvas_('feedback', 154, 154).getContext('2d');
   this.ctxThumbnail = this.createCanvas_('thumbnail', 180, 180).getContext('2d');
-
-  // Create hidden canvases for normalized versions
-  this.ctxNormalizedScratch = this.createCanvas_('normalizedScratch', 400, 400).getContext('2d');
-  this.ctxNormalizedAnswer = this.createCanvas_('normalizedAnswer', 400, 400).getContext('2d');
 
   // Create display canvas.
   var displayCanvas = this.createCanvas_('display', 400, 400);
@@ -507,13 +466,8 @@ Artist.prototype.afterInject_ = function (config) {
   this.loadTurtle(true /* initializing */);
   this.drawImages();
 
-  // Draw the answer twice; once to the display canvas and once again in a
-  // normalized version to the validation canvas
   this.isDrawingAnswer_ = true;
-  this.drawAnswer(this.ctxAnswer);
-  this.shouldDrawNormalized_ = true;
-  this.drawAnswer(this.ctxNormalizedAnswer);
-  this.shouldDrawNormalized_ = false;
+  this.drawAnswer();
   this.isDrawingAnswer_ = false;
 
   if (this.level.predrawBlocks) {
@@ -541,13 +495,13 @@ Artist.prototype.loadPatterns = function () {
 };
 
 /**
- * On startup draw the expected answer and save it to the given canvas.
+ * On startup draw the expected answer and save it to the answer canvas.
  */
-Artist.prototype.drawAnswer = function (canvas) {
+Artist.prototype.drawAnswer = function () {
   if (this.level.solutionBlocks) {
-    this.drawBlocksOnCanvas(this.level.solutionBlocks, canvas);
+    this.drawBlocksOnCanvas(this.level.solutionBlocks, this.ctxAnswer);
   } else {
-    this.drawLogOnCanvas(this.level.answer.slice(), canvas);
+    this.drawLogOnCanvas(this.level.answer, this.ctxAnswer);
   }
 };
 
@@ -559,7 +513,7 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
   this.studioApp_.reset();
   while (log.length) {
     var tuple = log.shift();
-    this.step(tuple[0], tuple.slice(1), {smoothAnimate: false});
+    this.step(tuple[0], tuple.splice(1), {smoothAnimate: false});
     this.resetStepInfo_();
   }
   canvas.globalCompositeOperation = 'copy';
@@ -977,22 +931,7 @@ Artist.prototype.execute = function () {
   }
 
   // api.log now contains a transcript of all the user's actions.
-
-  if (this.shouldSupportNormalization()) {
-    // First, draw a normalized version of the user's actions (ie, one which
-    // doesn't vary patterns or stickers) to a dedicated context. Note that we
-    // clone this.api.log so the real log doesn't get mutated
-    this.shouldDrawNormalized_ = true;
-    this.drawLogOnCanvas(this.api.log.slice(), this.ctxNormalizedScratch);
-    this.shouldDrawNormalized_ = false;
-
-    // Then, reset our state and draw the user's actions in a visible, animated
-    // way
-    this.studioApp_.reset();
-  }
-
   this.studioApp_.playAudio('start', {loop : true});
-
   // animate the transcript.
 
   this.pid = window.setTimeout(_.bind(this.animate, this), 100);
@@ -1277,10 +1216,6 @@ Artist.prototype.step = function (command, values, options) {
       this.visible = true;
       break;
     case 'sticker':
-      if (this.shouldDrawNormalized_) {
-        values = Object.keys(this.stickers);
-      }
-
       var img = this.stickers[values[0]];
 
       var dimensions = scaleToBoundingBox(MAX_STICKER_SIZE, img.width, img.height);
@@ -1350,10 +1285,6 @@ Artist.prototype.selectPattern = function () {
 };
 
 Artist.prototype.setPattern = function (pattern) {
-  if (this.shouldDrawNormalized_) {
-    pattern = Object.keys(this.loadedPathPatterns)[0];
-  }
-
   if (this.loadedPathPatterns[pattern]) {
     this.currentPathPattern = this.loadedPathPatterns[pattern];
     this.isDrawingWithPattern = true;
@@ -1647,15 +1578,10 @@ removeK1Lengths.regex = /_length"><title name="length">.*?<\/title>/;
 Artist.prototype.checkAnswer = function () {
   // Compare the Alpha (opacity) byte of each pixel in the user's image and
   // the sample answer image.
-
-  var userCanvas = this.shouldSupportNormalization() ?
-      this.ctxNormalizedScratch :
-      this.ctxScratch;
-
-  var userImage = userCanvas.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+  var userImage =
+      this.ctxScratch.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var answerImage =
-      this.ctxNormalizedAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-
+      this.ctxAnswer.getImageData(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   var len = Math.min(userImage.data.length, answerImage.data.length);
   var delta = 0;
   // Pixels are in RGBA format.  Only check the Alpha bytes.
