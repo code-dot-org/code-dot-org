@@ -37,8 +37,7 @@
   twentyhours_text: Hai terminato la tua prima Ora del Codice? Impara un altro po'
     di concetti di informatica e di programmazione in quest'altro corso.
   og_title: Ogni bambino merita un'opportunità
-  og_description: Ogni stupende in ogni scuola merita l'opportunità di studiare l'informatica.
-    Essa sta cambiando tutto.
+  og_description: Ogni studente di ogni scuola merita l'opportunità di studiare informatica.
   csedweek_og_title: Ora di CodiceOra di Codice
   csedweek_og_description: The Hour of Code is a global movement reaching tens of
     millions of students of all ages in 180+ countries and over 45 languages.
@@ -51,7 +50,7 @@
   hoc2014_everyone: Tutti
   hoc2014_support: Sostienilo &#x25BE;
   hoc2014_whatishoc: Cosa è l'Ora del Codice?
-  csedweek_map_header: "#CSEdWeek / Eventi dell'Ora del Codice nel mondo"
+  csedweek_map_header: Eventi dell'Ora del Codice nel mondo
   csedweek_map_signup: Iscrivi il tuo evento
   csedweek_map_search_placeholder: Cerca eventi per l'Ora del codice
   csedweek_map_search_search: Cerca
@@ -308,7 +307,7 @@
     Alzate, 5a Elementare'
   stats_michael: '"Non ho <b>mai e poi mai</b> visto i miei studenti così entusiasti
     di imparare." - Michael Clark, Insegnante'
-  studiobar_title: Esplora la <a href='http://studio.code.org'>Galleria del Codice</a>
+  studiobar_title: Esplora l'<a href='http://studio.code.org'>Officina del Codice</a>
   studiobar_title_nolink: Esplora l'Officina del Codice
   studiobar_elementary_title: Scuola Primaria
   studiobar_elementary_body: I nostri tre nuovi corsi, specifici per la Scuola Primaria
@@ -418,6 +417,7 @@
   homepage_slot_text_title_hoc: L'Ora del Codice
   homepage_slot_text_blurb_hoc: Chiunque può imparare. Inizia oggi
   homepage_slot_text_link_hoc: Prova l'Ora del Codice
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organizza un'Ora del Codice
   homepage_slot_text_link_hocserved: "# fatte"
   homepage_solot_text_link_volunteer: Volontario per l'Ora del Codice
@@ -536,8 +536,8 @@
   sports_select_theme: Seleziona il tuo tema tutorial
   sports_basketball_title: Crea una partita di basket
   sports_all_sports_title: Mix and match across sports
-  sports_featured_athletes: Guarda gli atleti consigliati
-  sports_athletes_title: Atleti consigliati
+  sports_featured_athletes: Guarda gli atleti menzionati
+  sports_athletes_title: Atleti menzionati
   sports_athlete_Draymond: Draymond Green, medaglia d'oro olimpica e campione NBA,
     Golden State Warriors
   sports_athlete_Serena: Serena Williams, medaglia d'oro olimpica e campionessa di
@@ -546,7 +546,8 @@
     Denver Broncos
   sports_athlete_Sergio: Sergio Ramos, campione del mondo e giocatore di calcio/Futbol,
     Real Madrid
-  sports_athlete_Sue: Sue Bird, medaglia d'oro olimpica e campione WNBA, Seattle Storm
+  sports_athlete_Sue: Sue Bird, medaglia d'oro olimpica e campionessa WNBA, Seattle
+    Storm
   sports_athlete_Alana: Alana Beard, medaglia d'oro e WNBA All-Star, Los Angeles Sparks
   sports_athlete_Angelo: Angelo Matthews, capitano della squadra di Sri Lanka Cricket
   sports_athlete_Nneka: Nneka Ogwumike, medaglia d'oro, campione WNBA e 2016 MVP,
@@ -554,12 +555,12 @@
   sports_athlete_Carmelo: Carmelo Anthony, Medalist olimpico dell'oro e NBA All-Star,
     New York Knicks
   sports_athlete_Marco: Marco Belinelli, campione NBA, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., medaglia d'oro olimpica e giocatore di calcio/Futbol,
+  sports_athlete_Neymar: Neymar Jr., medaglia d'oro olimpica e giocatore di calcio,
     FC Barcelona e squadra nazionale Brasile
-  sports_athlete_Sarah: Sarah Quita Offringa, campione di windsurf
-  sports_athlete_Marcelo: Marcelo, campione del calcio/Futbol, Real Madrid e squadra
-    nazionale Brasile
-  sports_athlete_Erika: Erika Olivera, campione maratoneta
+  sports_athlete_Sarah: Sarah Quita Offringa, campionessa di windsurf
+  sports_athlete_Marcelo: Marcelo, campione di calcio, Real Madrid e squadra nazionale
+    Brasile
+  sports_athlete_Erika: Erika Olivera, campionessa maratoneta
   sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
   sports_athlete_Chris: Chris Bosh, medaglia d'oro olimpica e campione NBA, Miami
     Heat
@@ -568,7 +569,7 @@
   watch_inspirational_videos: Prima di iniziare, guarda uno di questi video stimolanti
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Convinci una ragazza a partecipare
-  video_title_cs_intro: Intro Informatica
+  video_title_cs_intro: Introduzione all'informatica
   video_title_schools_dont_teach: Che cosa non insegnano la maggior parte delle Scuole
   video_title_obama: Il Presidente Obama a proposito dell'informatica
   video_title_hoc_is_here: L'Ora del Codice è Qui - Chiunque Può Imparare
@@ -608,7 +609,7 @@
     dell''informatica (che potrebbe essere fatto con una chat video). Se non siete
     in cerca di volontari, <a href="%{url}"> impara</a> come organizzare il tuo evento
     dell''Ora del Codice.'
-  volunteer_engineer_submission_intro_guide: Scopri di più riguardo il nostro <a href="%{volunteer_guide}">programma
+  volunteer_engineer_submission_intro_guide: Scopri di più sul nostro <a href="%{volunteer_guide}">programma
     volontari</a>.
   volunteer_engineer_submission_intro_signup: Compila i campi sottostanti se sei uno
     studente di informatica o uno sviluppatore professionista. I campi contrassegnati
@@ -659,7 +660,7 @@
   volunteer_engineer_submission_checkbox_contact: 'Sono d''accordo che gli insegnanti
     possano contattarmi per richiedere attività di volontariato (Nota: il tuo indirizzo
     di posta elettronica non sarà condiviso)'
-  volunteer_engineer_submission_checkbox_age_18_plus: Certifico di avere più di 18
+  volunteer_engineer_submission_checkbox_age_18_plus: Dichiaro di avere più di 18
     anni.
   volunteer_engineer_submission_submit: Invia
   volunteer_engineer_submission_thankyou: Grazie per il l'attività di volontariato
@@ -854,6 +855,7 @@
   dashboard_responses_view: 'Visualizza il testo delle risposte in:'
   dashboard_responses_none: Nessuna risposta
   dashboard_sections_new_section: Nuova classe
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Crea nuove classi e aggiungici studenti.
     Le classi ti aiutano a organizzare gli studenti in gruppi più piccoli, così è
     possibile controllare i loro progressi e gestire i loro account.
@@ -861,6 +863,7 @@
   dashboard_sections_table_secret: Tipo di accesso
   dashboard_sections_table_grade: Livello
   dashboard_sections_table_course: Corso
+  dashboard_sections_table_pairing_allowed: Programmazione in Coppia
   dashboard_sections_table_stage_extras: Fase extra
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Codice-Classe
@@ -897,7 +900,7 @@
   dashboard_sections_no_move: No, voglio <b><u>spostare</u></b> gli studenti nella
     nuova classe <b><u>togliendoli</u></b> da quella attuale.
   dashboard_sections_move_students: Sposta gli studenti
-  dashboard_sections_assign_hoc_script_desc: Partecipate all'ora del codice?
+  dashboard_sections_assign_hoc_script_desc: Partecipi all'ora del codice?
   dashboard_sections_assign_hoc_script_msg: Vi preghiamo considerare che in questo
     corso, durante la settimana del 5-11 dicembre, i progressi non saranno salvati
     a causa del livello di traffico che riceveremo senza precedenti sul nostro sito
@@ -908,7 +911,7 @@
     la classe volesse procedere, è possibile avviare un corso dell'Ora del Codice
     per insegnare Fondamenti di Informatica.  Il nostro cruscotto insegnante vi permetterà
     di monitorare i progressi dei vostri studenti ogni altra settimana dell'anno.
-  dashboard_sections_assign_activity: Assegnare un corso
+  dashboard_sections_assign_activity: Assegna un corso
   dashboard_error_none_selected: Non hai selezionato alcuno studente. Per favore,
     scegli almeno uno studente.
   dashboard_error_other_section: Se stai spostando degli studenti tra le tue classi,
@@ -941,8 +944,8 @@
   dashboard_students_reset_password: Reimposta la password
   dashboard_students_share_section: 'Condividi la pagina di accesso di questa classe
     con i tuoi studenti:'
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section_secondary: 'In alternativa, condividi con i tuoi
+    studenti il riferimento alla pagina di questa sezione:'
   dashboard_students_print_info: Stampa le schede con le informazioni di accesso dei
     tuoi studenti.
   dashboard_students_secret_picture_title: Immagine segreta
@@ -972,7 +975,7 @@
     o tu vuoi creare gli account per loro, imposta il tipo di accesso di questa classe
     a <b>parola</b> o <b>immagine</b>.
   dashboard_students_print_page: Stampa questa pagina
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: Visita %{join_url} e inserisci il codice %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Clicca
     qui</a> per il nostro documento sulla privacy che puoi stampare e distribuire
@@ -1199,8 +1202,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Unit 5: Dati e società'
+  csd6_name: 'Unit 6: Informatica applicata'
   csp1_name: 'Unità 1: Internet'
   csp2_name: 'Unità 2: Informazioni digitali'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1486,9 +1489,9 @@
   thinkersmith_longdescription: Usando un "Vocabolario per Robot" pre-definito gli
     studenti capiscono come guidarsi a vicenda per svolgere compiti specifici senza
     essersi prima accordati. Questa lezione insegna ai bambini la connessione tra
-    simboli e azioni, nonché la preziosa capacità di debugging (correzione dei programmi).
-    La lezione "I miei amici robotici" funziona meglio se sviluppata in gruppo e include
-    una guida per l'insegnante per l'uso in aula.
+    simboli e azioni, nonché la preziosa capacità di <i>debugging</i> (correzione
+    di errori). La lezione "I miei amici robotici" funziona meglio se sviluppata in
+    gruppo e include una guida per l'insegnante per l'uso in aula.
   condcards_longdescription: Impara cosa sono gli algoritmi e le istruzioni condizionali
     in questa attività usando un semplice mazzo di carte (non sono necessari dei PC).
     Gli studenti svolgono questa attività in squadre e hanno bisogno di un mazzo di
@@ -1987,42 +1990,41 @@
   infinity_shortcode: inf
   playlab_shortcode: inizia
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
+  header_courses: Corsi
+  header_project_gallery: Progetti
+  header_sections: Classi
+  header_professional_learning: Professional learning
+  header_educate_overview: Panoramica dei corsi
+  header_educate_elementary: Scuola elementare
+  header_educate_middle: Scuola media
+  header_educate_high: Scuola superiore
+  header_educate_hoc: L'Ora del Codice
+  header_educate_partner: Collabora con noi
+  header_educate_beyond: Dopo Code.org
+  header_educate_inspire: Ispira uno studente
+  header_educate_community: Comunità Online
+  header_educate_tools: Strumenti e video
+  header_about_us: Chi siamo
   header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_about_donors: Sostenitori
+  header_about_partners: Partner
+  header_about_team: Tutto il team
+  header_about_news: Rassegna stampa
+  header_about_evaluation: Valutazione
+  header_about_jobs: Lavora con noi
+  header_about_contact: Contattaci
+  header_about_faqs: FAQ
+  header_learn: Impara
+  header_teach: Insegna
+  header_stats: Statistiche
+  header_help_us: Aiutaci
+  header_about: Informazioni
   header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_help_support: Help and support
+  header_report_bug: Report Bug
+  header_tutorials: Tutorial
+  header_documentation: Documentazione
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

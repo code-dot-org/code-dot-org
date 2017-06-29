@@ -382,6 +382,7 @@
   homepage_slot_text_title_hoc: Koodaustunti
   homepage_slot_text_blurb_hoc: Kuka tahansa voi oppia. Aloita jo tänään
   homepage_slot_text_link_hoc: Kokeile koodaustuntia
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Järjestä Koodaustunti
   homepage_slot_text_link_hocserved: "# käyttäjää"
   homepage_solot_text_link_volunteer: Toimi vapaaehtoisena Koodaustunnissa
@@ -477,23 +478,23 @@
   mc_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
   minecraft_designer: Minecraft suunnittelija
   minecraft_adventurer: Minecraft seikkailija
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
+  minecraft_tutorials: Minecraft Koodaustunnin ohjeet
+  minecraft_specs: Useita kieliä | Modernit selaimet | Yli 6-vuotiaille
   minecraft_designer_description: Program animals and enemies in your own version
     of Minecraft.
   minecraft_designer_button: Aloita
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Koodin avulla voit viedä Alexin tai Steven seikkailuun.
   minecraft_adventurer_button: Aloita
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_no_internet: Onko sinulla nettiyhteys?
+  minecraft_download_adventurer: Lataa Minecraft seikkailijan offline-versio.
   minecraft_subtitle: Minecraft Koodaustunti
-  sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
+  sports_page_title: Koodaustunti Urheilua
+  sports_og_title: Tee se. Kuka tahansa voi oppia.
   sports_og_description: Choose between making a basketball game or mix and match
     across sports.
   sports_title: Code your own sports game
   sports_watch_video: Katso video
-  sports_video_title: Push yourself. Anybody can learn.
+  sports_video_title: Tee se. Kuka tahansa voi oppia.
   sports_select_theme: Valitse tutorialin teema
   sports_basketball_title: Tee koripallopeli
   sports_all_sports_title: Mix and match across sports
@@ -543,12 +544,12 @@
   video_1min: 1 min
   video_2min: 2 min
   video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  speak_another_language: Puhutko muuta kieltä?
+  help_translate: Auta meitä kääntämisessä.
+  no_internet: Onko sinulla nettiyhteys?
+  download_offline: Lataa offline-versio.
   are_you_teacher: Oletko opettaja?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
+  review_lesson_plan: Tarkista tuntisuunnitelma ja muita opettajien resursseja.
   volunteer_engineer_submission_title: Inspiroi opiskelijoita ja toimi vapaaehtoisena
     Koodaustunnille.
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää
@@ -678,7 +679,7 @@
   dashboard_landing_progress_title: Luokan edistyminen
   dashboard_landing_progress_biggest: Suurimman ryhmäsi eteneminen.
   dashboard_landing_view_progress: Tarkastele etenemistä ryhmälle %{biggest_section}
-  dashboard_landing_print_progress: Print progress
+  dashboard_landing_print_progress: Tulosta edistyminen
   dashboard_landing_available_title: Saatavilla olevat kurssit
   dashboard_landing_available_courses: Nämä kurssit ovat tällä hetkellä saatavilla
     sinulle ja oppilaillesi.
@@ -754,11 +755,11 @@
     students' answers here.
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
-  dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
-  dashboard_download_csv: Download CSV
+  dashboard_surveys_answers: Kysely
+  dashboard_percent: Prosenttia
+  dashboard_filter_by_stage: 'Suodata tason mukaan:'
+  dashboard_filter_all: Kaikki
+  dashboard_download_csv: Lataa CSV
   dashboard_navigation_home_page: Opettajan päänäyttö
   dashboard_navigation_section_student_progress: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_section_teacher_progress: Sinun kurssisi edistyminen
@@ -768,13 +769,13 @@
   dashboard_navigation_section_speakers: Tietojenkäsittelyopin <br/> puhujavieraat
   dashboard_navigation_all_sections: Oppilaiden tunnukset ja edistyminen
   dashboard_navigation_view_progress: Edistyminen
-  dashboard_navigation_view_text_responses: Näytä tekstin vastaukset
-  dashboard_navigation_view_assessments: Assessments
-  dashboard_navigation_view_assessments_surveys: Assessments/Surveys
+  dashboard_navigation_view_text_responses: Tekstivastaukset
+  dashboard_navigation_view_assessments: Arvioinnit
+  dashboard_navigation_view_assessments_surveys: Arvionnit/Tutkimukset
   dashboard_navigation_add_students: Lisää oppilaita
   dashboard_navigation_manage_students: Hallinnoi oppilaita
   dashboard_navigation_lesson_plans_resources: Tuntisuunnitelmat ja resurssit
-  dashboard_navigation_view_stats: Tarkastele tilastoja
+  dashboard_navigation_view_stats: Tilastot
   dashboard_navigation_section: 'Ryhmä: %{section_name}'
   dashboard_navigation_student: 'Oppilas: %{student_name}'
   dashboard_progress_not_started: ei aloitettu
@@ -784,13 +785,14 @@
   dashboard_progress_completed_perfect: valmis, täydellinen
   dashboard_progress_furthest_level_attempted: vaikein taso jota yritetty
   dashboard_progress_submitted: lähetetty
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_view: 'Tarkastele etenemistä:'
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
-  dashboard_progress_pair_programming: pair programming
+  dashboard_progress_pair_programming: pariohjelmointi
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Uusi ryhmä
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Luo uusia ryhmiä ja lisää opiskelijoita
     niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että
     voit seurata heidän etenemistään ja hallinnoida heidän tilejään.
@@ -798,6 +800,7 @@
   dashboard_sections_table_secret: Kirjautumisen tyyppi
   dashboard_sections_table_grade: Taso
   dashboard_sections_table_course: Kurssi
+  dashboard_sections_table_pairing_allowed: Pariohjelmointi
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Oppilaat
   dashboard_sections_table_code: Ryhmän tunnus
@@ -819,10 +822,10 @@
     Moving students will not clear their progress.
   dashboard_sections_one_per_teacher: Students can only be in one section for each
     teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
+  dashboard_sections_move_to_section: 'Siirry osioon:'
+  dashboard_sections_enter_code: 'Syötä osion koodi:'
+  dashboard_sections_code_placeholder: 6-merkkinen koodi (ABCDEF)
+  dashboard_sections_other_section: Muu opettaja
   dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
   dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
     section AND the new section
@@ -1833,7 +1836,7 @@
     ja eri luokka-asteille.
   sphero_beyond_longdescription: Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan.
     Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja.
-  compatibility_hide_this_warning: Hide this warning
+  compatibility_hide_this_warning: Piilota varoitus
   compatibility_unsupported_browser: Your browser is not supported. Please upgrade
     your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our
     supported browsers</a>. You can try viewing the page, but expect functionality
@@ -1846,42 +1849,41 @@
   infinity_shortcode: inf
   playlab_shortcode: pelaa
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
+  header_home: Etusivu
+  header_courses: Kurssit
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_educate_overview: Kouluttajan yleiskatsaus
+  header_educate_elementary: Peruskoulu
+  header_educate_middle: Yläaste
+  header_educate_high: Lukio
+  header_educate_hoc: Koodaustunti
+  header_educate_partner: Ryhdy partneriksi
+  header_educate_beyond: Muualla kuin Code.org:ssa
+  header_educate_inspire: Innosta opiskelija
+  header_educate_community: Online-yhteisö
+  header_educate_tools: Työkalut ja videot
+  header_about_us: Tietoja meistä
+  header_about_leadership: Johto
+  header_about_donors: Lahjoittajat
+  header_about_partners: Kumppanit
+  header_about_team: Koko joukkue
+  header_about_news: Uutishuone
+  header_about_evaluation: Arviointi
+  header_about_jobs: Työpaikat
+  header_about_contact: Ota yhteyttä
+  header_about_faqs: UKK
+  header_learn: Oppia
+  header_teach: Opettaa
+  header_stats: Tilastot
+  header_help_us: Auta meitä
+  header_about: Tietoja
+  header_teacher_community: Opettajayhteisö
+  header_help_support: 'Ohjeet ja tuki '
+  header_report_bug: Raportoi ongelma
+  header_tutorials: Oppaat
+  header_documentation: Dokumentaatio
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

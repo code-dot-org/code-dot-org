@@ -34,10 +34,13 @@
     "step_speed": "2",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you get stuck, try drawing the entire program and then looking for repeating patterns.\",\"hint_id\":\"courseC_harvester_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5941e2b5d373af18e378cbb59c1436ea/courseC_harvester_loops5.mp3\"}]",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 19:27:01 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

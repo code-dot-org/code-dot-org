@@ -1,6 +1,40 @@
 require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
+
+  class CachingTests < ActiveSupport::TestCase
+    def populate_cache_and_disconnect_db
+      Course.stubs(:should_cache?).returns true
+      @@course_cache ||= Course.course_cache_to_cache
+      Course.course_cache_from_cache
+
+      # NOTE: ActiveRecord collection association still references an active DB connection,
+      # even when the data is already eager loaded.
+      # Best we can do is ensure that no queries are executed on the active connection.
+      ActiveRecord::Base.connection.stubs(:execute).raises 'Database disconnected'
+    end
+
+    test "get_from_cache uses cache" do
+      course = create(:course, name: 'acourse')
+      # Ensure cache is populated with this course by name and id
+      Course.get_from_cache(course.name)
+      Course.get_from_cache(course.id)
+
+      uncached_course = Course.get_without_cache(course.id)
+
+      populate_cache_and_disconnect_db
+
+      # Uncached find should raise because db was disconnected
+      assert_raises do
+        Course.find_by_name('acourse')
+      end
+
+      assert_equal uncached_course, Course.get_from_cache('acourse')
+      assert_equal uncached_course, Course.get_from_cache(course.id)
+    end
+  end
+
   class NameValidationTests < ActiveSupport::TestCase
     test "should allow valid course names" do
       create(:course, name: 'valid-name')
@@ -104,7 +138,7 @@ class CourseTest < ActiveSupport::TestCase
 
     summary = course.summarize
 
-    assert_equal [:name, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
+    assert_equal [:name, :id, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]

@@ -292,14 +292,23 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'filter_for_survey_completion' do
+    teachercon1 = create :pd_workshop, :teachercon, num_enrollments: 1, num_sessions: 1
+    teachercon2 = create :pd_ended_workshop, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
+    teachercon3 = create :pd_ended_workshop, :teachercon, enrolled_and_attending_users: 1, num_sessions: 1
+
+    create :pd_teachercon_survey, pd_enrollment: teachercon3.enrollments.first
+
     enrollments = [
       enrollment_no_survey = create(:pd_enrollment),
       enrollment_with_unprocessed_survey = create(:pd_enrollment),
-      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234)
+      enrollment_with_processed_survey = create(:pd_enrollment, completed_survey_id: 1234),
+      enrollment_in_unfinished_teachercon = teachercon1.enrollments.first,
+      enrollment_in_finished_teachercon = teachercon2.enrollments.first,
+      enrollment_in_finished_teachercon_did_survey = teachercon3.enrollments.first,
     ]
 
-    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey]
-    without_surveys = [enrollment_no_survey]
+    with_surveys = [enrollment_with_unprocessed_survey, enrollment_with_processed_survey, enrollment_in_finished_teachercon_did_survey]
+    without_surveys = [enrollment_no_survey, enrollment_in_unfinished_teachercon, enrollment_in_finished_teachercon]
     PEGASUS_DB.stubs('[]').with(:forms).returns(stub(where:
         [
           {source_id: enrollment_with_unprocessed_survey.id.to_s},
@@ -328,6 +337,43 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_no_difference('Plc::UserCourseEnrollment.count') do
       create :pd_enrollment, user: teacher, workshop: workshop
     end
+  end
+
+  test 'enrolling in class, and then later having the user field updated enrolls in online learning' do
+    teacher = create :teacher
+    create :plc_course, name: 'CSP Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    enrollment = create :pd_enrollment, user: nil, workshop: workshop
+
+    assert_creates Plc::UserCourseEnrollment do
+      enrollment.update(user: teacher)
+    end
+    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+  end
+
+  test 'enrolling in class while not logged in still associates the user' do
+    teacher = create :teacher
+    create :plc_course, name: 'CSP Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+
+    assert_creates Plc::UserCourseEnrollment do
+      create :pd_enrollment, user: nil, workshop: workshop, email: teacher.email
+    end
+
+    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
+  end
+
+  test 'enrolling in class without an account creates enrollment when the user is created' do
+    create :plc_course, name: 'CSP Support'
+    workshop = create :pd_workshop, course: Pd::Workshop::COURSE_CSP
+    user_email = "#{SecureRandom.hex}@code.org"
+    create :pd_enrollment, user: nil, email: user_email, workshop: workshop
+
+    teacher = assert_creates Plc::UserCourseEnrollment do
+      create(:teacher, email: user_email)
+    end
+
+    assert_equal 'CSP Support', Plc::UserCourseEnrollment.find_by(user: teacher).plc_course.name
   end
 
   test 'attendance scopes' do

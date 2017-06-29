@@ -41,7 +41,8 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
 
   test 'a post request to post_ui_tip_dismissed updates ui_tip_dismissed_homepage_header' do
     sign_in(@user)
-    assert !@user.ui_tip_dismissed_homepage_header
+    @user.ui_tip_dismissed_homepage_header = false
+    refute @user.ui_tip_dismissed_homepage_header
     post :post_ui_tip_dismissed, params: {user_id: 'me', tip: 'homepage_header'}
     assert_response :success
     @user.reload

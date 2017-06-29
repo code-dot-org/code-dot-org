@@ -1,5 +1,5 @@
-%link{:href=>'/css/mobile-footer.css', :rel=>'stylesheet'}
-%script{src: '/js/mobile-footer.js'}
+=inline_css 'mobile-footer.css'
+%script{:defer => "defer", src: '/js/mobile-footer.js'}
 
 -if request.language == "en"
   %footer#pagefooter

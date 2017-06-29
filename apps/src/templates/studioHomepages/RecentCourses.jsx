@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import ContentContainer from './ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
+import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
 
@@ -10,20 +11,22 @@ const RecentCourses = React.createClass({
     courses: shapes.courses,
     showAllCoursesLink: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    heading: PropTypes.string.isRequired
+    heading: PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses, showAllCoursesLink, isTeacher, heading } = this.props;
+    const { courses, showAllCoursesLink, isTeacher, heading, isRtl } = this.props;
 
     return (
       <div>
         {courses.length > 0 && (
           <ContentContainer
             heading={heading}
-            linkText={i18n.viewAllCourses()}
+            linkText={i18n.findCourse()}
             link="/courses"
             showLink={showAllCoursesLink}
+            isRtl={isRtl}
           >
             {courses.map((course, index) =>
               <CourseCard
@@ -31,19 +34,30 @@ const RecentCourses = React.createClass({
                 name={course.name}
                 description={course.description}
                 link={course.link}
-                assignedSections={course.assignedSections}
+                isRtl={isRtl}
+              />
+            )}
+            {!isTeacher && (
+              <Notification
+                type="course"
+                notice={i18n.findCourse()}
+                details={i18n.findCourseDescription()}
+                buttonText={i18n.findCourse()}
+                buttonLink="/course"
+                dismissible={false}
               />
             )}
           </ContentContainer>
         )}
-        {courses.length === 0 && isTeacher && (
+        {courses.length === 0 && (
           <ContentContainer
             heading={heading}
-            linkText={i18n.viewAllCourses()}
+            linkText={i18n.findCourse()}
             link="/courses"
             showLink={showAllCoursesLink}
+            isRtl={isRtl}
           >
-            <SetUpMessage type="courses"/>
+            <SetUpMessage type="courses" isRtl={isRtl} isTeacher={isTeacher}/>
           </ContentContainer>
         )}
       </div>

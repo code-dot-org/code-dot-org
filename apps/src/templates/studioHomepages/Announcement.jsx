@@ -27,6 +27,14 @@ const styles = {
     fontWeight: 'bold',
     textDecoration: 'none'
   },
+  headingRtl: {
+    marginRight: 350,
+    color: color.white,
+    fontSize: 18,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontWeight: 'bold',
+    textDecoration: 'none'
+  },
   description: {
     marginLeft: 350,
     marginRight: 20,
@@ -36,8 +44,21 @@ const styles = {
     lineHeight: 1.5,
     color: color.charcoal
   },
+  descriptionRtl: {
+    marginRight: 350,
+    marginLeft: 20,
+    marginTop: 15,
+    fontSize: 14,
+    fontFamily: '"Gotham 4r", sans-serif',
+    lineHeight: 1.5,
+    color: color.charcoal
+  },
   button: {
     marginLeft: 350,
+    marginTop: 50
+  },
+  buttonRtl: {
+    marginRight: 350,
     marginTop: 50
   },
   image: {
@@ -54,11 +75,12 @@ const Announcement = React.createClass({
     image: React.PropTypes.string,
     buttonText: React.PropTypes.string,
     description: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired
+    link: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { heading, buttonText, description, link, image } = this.props;
+    const { heading, buttonText, description, link, image, isRtl } = this.props;
     const filenameToImgUrl = {
       "redesign-screencast": require('@cdo/static/redesign-screencast.png'),
     };
@@ -72,19 +94,19 @@ const Announcement = React.createClass({
         </a>
         <div style={styles.tealBar}>
           <div style={styles.headingBox}>
-            <a href={link} style={styles.heading}>
+            <a href={link} style={isRtl? styles.headingRtl : styles.heading}>
               {heading}
             </a>
           </div>
         </div>
-        <div style={styles.description}>
+        <div style={isRtl? styles.descriptionRtl : styles.description}>
           {description}
         </div>
         <ProgressButton
           href={link}
           color={ProgressButton.ButtonColor.gray}
           text={buttonText}
-          style={styles.button}
+          style={isRtl? styles.buttonRtl : styles.button}
         />
       </div>
     );

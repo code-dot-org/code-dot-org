@@ -35,6 +35,7 @@ export default class Subtype {
     this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
+    this.startDirection = config.level.startDirection;
   }
 
   finished() {
@@ -197,6 +198,26 @@ export default class Subtype {
     this.wallMap = new Array(this.maze_.map.ROWS);
     for (let y = 0; y < this.maze_.map.ROWS; y++) {
       this.wallMap[y] = new Array(this.maze_.map.COLS);
+    }
+  }
+
+  initStartFinish() {
+    this.start = undefined;
+    this.finish = undefined;
+
+    // Locate the start and finish squares.
+    for (let y = 0; y < this.maze_.map.ROWS; y++) {
+      for (let x = 0; x < this.maze_.map.COLS; x++) {
+        let cell = this.maze_.map.getTile(y, x);
+        if (cell === SquareType.START) {
+          this.start = {x: x, y: y};
+        } else if (cell === SquareType.FINISH) {
+          this.finish = {x: x, y: y};
+        } else if (cell === SquareType.STARTANDFINISH) {
+          this.start = {x: x, y: y};
+          this.finish = {x: x, y: y};
+        }
+      }
     }
   }
 }

@@ -104,6 +104,7 @@ When /^I wait for the page to fully load$/ do
   steps <<-STEPS
     When I wait to see "#runButton"
     And I close the instructions overlay if it exists
+    And I wait to see ".header_user"
   STEPS
 end
 
