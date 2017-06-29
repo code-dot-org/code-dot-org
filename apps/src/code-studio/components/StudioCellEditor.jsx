@@ -29,6 +29,15 @@ const avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
     "ninja", "pirate", "caveboy", "cavegirl", "princess", "spacebot",
     "soccergirl", "soccerboy", "tennisgirl", "tennisboy"];
 
+// Use a subset of studio SquareTypes for the tiletypes, since many of them are
+// not used or are used only by non-levelbuilder-editable implementations.
+// Also override the names because 'goal' is prettier than 'spritefinish'
+const usedSquareTypes = {
+  OPEN: SquareType.OPEN,
+  GOAL: SquareType.SPRITEFINISH,
+  START: SquareType.SPRITESTART,
+};
+
 export default class StudioCellEditor extends CellEditor {
 
   /**
@@ -46,7 +55,7 @@ export default class StudioCellEditor extends CellEditor {
   renderFields(values) {
     return (
       <div>
-        {super.renderTileTypes(values, SquareType)}
+        {super.renderTileTypes(values, usedSquareTypes)}
 
         {(values.tileType === SquareType.SPRITESTART) &&
           <div>
