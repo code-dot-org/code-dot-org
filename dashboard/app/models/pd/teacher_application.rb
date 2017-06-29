@@ -407,7 +407,7 @@ class Pd::TeacherApplication < ActiveRecord::Base
     return errors.add :move_to_user, 'not found' if found_user.nil?
 
     # user's email must match the primary_email
-    unless found_user.email == primary_email.downcase
+    unless found_user.email == primary_email
       errors.add :move_to_user, 'must match primary email. '\
         "If you intend to move to this user, also update the primary_email to #{found_user.email}"
     end
