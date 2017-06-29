@@ -25,3 +25,10 @@ export const assignmentShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 });
+
+export const classroomShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  section: PropTypes.string,
+  enrollmentCode: PropTypes.string.isRequired,
+});

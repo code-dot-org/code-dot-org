@@ -146,13 +146,10 @@ var CONFIGS = {
 
  scrat: {
     goalIdle: 'goal.png',
-    obstacleIdle: 'obstacle.png',
-
     goalAnimation: 'goal.png',
     maze_forever: 'maze_forever.png',
     largerObstacleAnimationTiles: 'tiles-broken.png',
 
-    obstacleScale: 1.2,
     additionalSound: true,
     idlePegmanAnimation: 'idle_avatar_sheet.png',
     idlePegmanAnimationSpeedScale: 1.5,

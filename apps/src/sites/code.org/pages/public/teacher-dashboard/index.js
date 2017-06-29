@@ -15,6 +15,7 @@ import teacherSections, {
   setValidAssignments,
   setStudioUrl,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import googleClassroom from '@cdo/apps/templates/teacherDashboard/googleClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import experiments from '@cdo/apps/util/experiments';
 import { getStore, registerReducers } from '@cdo/apps/redux';
@@ -57,7 +58,7 @@ function renderSectionProjects(sectionId) {
  */
 function renderSectionsPage(sections) {
   const element = document.getElementById('sections-page');
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, googleClassroom});
   const store = getStore();
   store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));

@@ -124,21 +124,24 @@
   // Swap in 2x versions of the hero image URLs for retina displays.
   if (window.matchMedia('#{css_retina?}').matches) {
     document.querySelectorAll('#hero .widehero').forEach(function(item) {
-      item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
-      item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      if (item.dataset.bg) {
+        item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+      }
+      if (item.style['background-image']) {
+        item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      }
     });
   }
 
   var petition;
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $(".caption").css({display: "block", opacity: 0});
 
     showQuote(null, 0);
-  }
+  });
 
   function showQuote(lastImage, nextImage)
   {

@@ -19,6 +19,7 @@ theme: responsive
 
 - [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
 - [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
+- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
 ### Extension Activities:
 
