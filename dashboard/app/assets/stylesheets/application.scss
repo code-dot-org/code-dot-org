@@ -368,6 +368,10 @@ img.video_thumbnail {
         border-bottom: solid 2px $orange;
       }
     }
+
+    html[dir=rtl] & {
+      padding-right: 300px;
+    }
   }
 
   .header_button {
@@ -388,6 +392,12 @@ img.video_thumbnail {
     a:hover {
       text-decoration: none;
       background-color: $orange;
+    }
+  }
+
+  #sign_in_or_user {
+    html[dir=rtl] & {
+      padding-right: 20px;
     }
   }
 
