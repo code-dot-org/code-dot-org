@@ -123,6 +123,12 @@ namespace :circle do
     # More generally, we shouldn't have _any_ staged changes in the apps directory.
     raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
   end
+
+  task :seed_ui_test do
+    Dir.chdir('dashboard') do
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
