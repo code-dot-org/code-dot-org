@@ -47,7 +47,8 @@ const Courses = React.createClass({
     studentsCount: React.PropTypes.string.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number
+    userId: React.PropTypes.number,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -66,7 +67,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -103,7 +104,7 @@ const Courses = React.createClass({
             showAllCoursesLink={false}
             heading={i18n.myCourses()}
             isTeacher={isTeacher}
-            isRtl={false}
+            isRtl={isRtl}
           />
         )}
 
@@ -137,7 +138,10 @@ const Courses = React.createClass({
 
               <br/>
               <br/>
-              <TeacherAssignablesCatalog codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+              <TeacherAssignablesCatalog
+                codeOrgUrlPrefix={codeOrgUrlPrefix}
+                isRtl={isRtl}
+              />
 
               <div>
                 <div style={styles.heading}>

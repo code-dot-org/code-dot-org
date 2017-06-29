@@ -30,8 +30,9 @@ class PasswordsController < Devise::PasswordsController
   private
 
   def email_in_hoc_signups?(email)
+    hoc_year = DCDO.get("hoc_year", 2017)
     normalized_email = email.strip.downcase
-    PEGASUS_DB[:forms].where(email: normalized_email, kind: 'HocSignup2017').any?
+    PEGASUS_DB[:forms].where(email: normalized_email, kind: "HocSignup#{hoc_year}").any?
   end
 
   def show_reset_url_if_admin

@@ -6200,6 +6200,10 @@ node-gyp@^3.3.1:
     tar "^2.0.0"
     which "1"
 
+node-js-marker-clusterer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/node-js-marker-clusterer/-/node-js-marker-clusterer-1.0.0.tgz#d09a1e963ebc5f6c162ece8510e9e680bba097a9"
+
 "node-libs-browser@>= 0.4.0 <=0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-0.6.0.tgz#244806d44d319e048bc8607b5cc4eaf9a29d2e3c"

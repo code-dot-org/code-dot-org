@@ -21,26 +21,24 @@
       "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "3",
       "rule-name": "3",
-      "rule-target": "column",
-      "object-locator": { 
-        "schema-name": "pegasus",
-        "table-name": "storage_apps",
-        "column-name": "value"
+      "object-locator": {
+        "schema-name": "dashboard_production",
+        "table-name": "channel_tokens"
       },
-      "rule-action": "remove-column"
+      "rule-action": "include"
     },
     {
       "rule-type": "transformation",
       "rule-id": "4",
       "rule-name": "4",
       "rule-target": "column",
-      "object-locator": { 
+      "object-locator": {
         "schema-name": "pegasus",
         "table-name": "storage_apps",
-        "column-name": "updated_ip"
+        "column-name": "value"
       },
       "rule-action": "remove-column"
     }

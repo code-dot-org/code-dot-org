@@ -18,6 +18,15 @@ const styles = {
     color: color.charcoal,
     width: 940
   },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 20,
+    fontSize: 16,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 940
+  },
   linkToViewAll: {
     color: color.teal,
     fontSize: 14,
@@ -71,11 +80,12 @@ const ContentContainer= React.createClass({
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
     showLink: React.PropTypes.bool,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    description: React.PropTypes.string,
   },
 
   render() {
-    const { heading, link, linkText, showLink, isRtl }= this.props;
+    const { heading, link, linkText, showLink, description, isRtl }= this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
@@ -92,6 +102,11 @@ const ContentContainer= React.createClass({
             </a>
           }
         </div>
+        {description && (
+          <div style={styles.description}>
+            {description}
+          </div>
+        )}
         {React.Children.map(this.props.children, (child, index) => {
           return (
             <div key={index}>

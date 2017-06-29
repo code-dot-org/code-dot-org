@@ -1200,7 +1200,7 @@ Maze.scheduleTurn = function (endDirection) {
 /**
  * Replace the tiles surrounding the obstacle with broken tiles.
  */
-Maze.updateSurroundingTiles = function (obstacleY, obstacleX, brokenTiles) {
+Maze.updateSurroundingTiles = function (obstacleY, obstacleX, callback) {
   var tileCoords = [
     [obstacleY - 1, obstacleX - 1],
     [obstacleY - 1, obstacleX],
@@ -1212,12 +1212,13 @@ Maze.updateSurroundingTiles = function (obstacleY, obstacleX, brokenTiles) {
     [obstacleY + 1, obstacleX],
     [obstacleY + 1, obstacleX + 1]
   ];
-  for (var idx = 0; idx < tileCoords.length; ++idx) {
-    var tileIdx = tileCoords[idx][1] + Maze.map.COLS * tileCoords[idx][0];
-    var tileElement = document.getElementById('tileElement' + tileIdx);
+  for (let idx = 0; idx < tileCoords.length; ++idx) {
+    const row = tileCoords[idx][1];
+    const col = tileCoords[idx][0];
+    const tileIdx = row + Maze.map.COLS * col;
+    const tileElement = document.getElementById('tileElement' + tileIdx);
     if (tileElement) {
-      tileElement.setAttributeNS(
-          'http://www.w3.org/1999/xlink', 'xlink:href', brokenTiles);
+      callback(tileElement, Maze.map.getCell(col, row));
     }
   }
 };
@@ -1244,12 +1245,27 @@ Maze.scheduleFail = function (forward) {
                      frame);
   // Play sound and animation for hitting wall or obstacle
   var squareType = Maze.map.getTile(targetY, targetX);
-  if (squareType === SquareType.WALL || squareType === undefined) {
+  if (squareType === SquareType.WALL || squareType === undefined ||
+    (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE)) {
     // Play the sound
     studioApp().playAudio('wall');
     if (squareType !== undefined) {
       // Check which type of wall pegman is hitting
       studioApp().playAudio('wall' + Maze.subtype.wallMap[targetY][targetX]);
+    }
+
+    if (Maze.subtype.isScrat() && squareType === SquareType.OBSTACLE) {
+      // Remove cracked ice, replace surrounding ice with cracked ice.
+      Maze.updateSurroundingTiles(targetY, targetX, (tileElement, cell) => {
+        if (cell.getTile() === SquareType.OPEN) {
+          tileElement.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.largerObstacleAnimationTiles
+          );
+        } else if (cell.getTile() === SquareType.OBSTACLE) {
+          tileElement.setAttribute('opacity', 0);
+        }
+      });
     }
 
     // Play the animation of hitting the wall
@@ -1338,8 +1354,12 @@ Maze.scheduleFail = function (forward) {
     // Replace the objects around obstacles with broken objects
     if (skin.largerObstacleAnimationTiles) {
       timeoutList.setTimeout(function () {
-        Maze.updateSurroundingTiles(
-            targetY, targetX, skin.largerObstacleAnimationTiles);
+        Maze.updateSurroundingTiles(targetY, targetX, tileElement => (
+          tileElement.setAttributeNS(
+            'http://www.w3.org/1999/xlink', 'xlink:href',
+            skin.largerObstacleAnimationTiles
+          )
+        ));
       }, stepSpeed);
     }
 
