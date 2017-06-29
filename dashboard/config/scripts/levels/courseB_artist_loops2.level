@@ -31,14 +31,17 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you want the loop to repeat more than 4 times, you can change the number at the top of the block.\",\"hint_id\":\"courseB_artist_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2758b06d24f257ece55bedc80e9a4a7d/courseB_artist_loops2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you want the loop to repeat more than 4 times, you can change the number at the top of the block.\",\"hint_id\":\"courseB_artist_loops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2758b06d24f257ece55bedc80e9a4a7d/courseB_artist_loops2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code first to see where the artist ends up.\",\"hint_id\":\"courseB_artist_loops2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/51660adaed79a603c22758a27eaccb61/courseB_artist_loops2.mp3\"}]",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/d88fa03d0c42a961968b1b50a96bf4b9-image-1478557169080.png\", \"position\": [0,0]}\r\n]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 16:53:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
