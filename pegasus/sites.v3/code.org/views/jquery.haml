@@ -2,11 +2,11 @@
 - case @header['jquery']
 - when 'defer'
   %script{src:'/js/jquery.min.js', defer: true}
-  %script=view 'jquery_shim.js'
+  %script=js 'jquery_shim.js'
 - when 'async'
   %script{src:'/js/jquery.min.js', async: true}
-  %script=view 'jquery_shim.js'
+  %script=js 'jquery_shim.js'
 - when 'none'
-  %script=view 'jquery_shim.js'
+  %script=js 'jquery_shim.js'
 - else
   %script{src:'/js/jquery.min.js'}

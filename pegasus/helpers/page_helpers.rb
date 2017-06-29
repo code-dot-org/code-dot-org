@@ -1,4 +1,5 @@
 require 'active_support/core_ext/string/indent'
+require 'uglifier'
 
 def page_title_with_tagline
   title = @header['title'] || @config[:page_default_title].to_s
@@ -57,6 +58,18 @@ def use_min_stylesheet?
     'Teacher Resources-MINECRAFT' => '/hourofcode/mc', 'Learn' => '/learn', 'Promote Computer Science' => '/promote',
     'Minecraft' => '/minecraft', 'Star Wars' => '/starwars', 'Student Overview' => '/student', 'Help Translate' => '/translate'}
   pages_verified.value?(request.path_info)
+end
+
+# Returns a minified JavaScript string from a view or static file.
+def js(js)
+  js_string = view(js) rescue nil
+  unless js_string
+    js_file = resolve_static('public', "js/#{js}")
+    js_file ||= shared_dir('js', js)
+    raise "JS not found: #{js}" unless js_file
+    js_string = File.read(js_file)
+  end
+  Uglifier.compile(js_string)
 end
 
 # Returns a CSS Media Query string matching devices with 'retina' displays.
