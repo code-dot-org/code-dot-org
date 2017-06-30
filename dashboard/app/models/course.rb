@@ -123,8 +123,10 @@ class Course < ApplicationRecord
     info
   end
 
-  # TODO: document me and test me
-  # TODO: figure out caching
+  # TODO: figure out/test caching
+  # Get the set of valid courses for the dropdown in our sections table. This should
+  # be static data, but contains localized strings so we can only cache on a per
+  # locale basis
   def self.valid_courses
     Course.
       all.
