@@ -66,7 +66,6 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
 
-    // TODO: tests or primary ids
     // Primary assignment ids are (a) courses and (b) scripts that are not in any
     // of our courses.
     let primaryAssignmentIds = [];
