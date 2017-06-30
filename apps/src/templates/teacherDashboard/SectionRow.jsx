@@ -118,6 +118,7 @@ class SectionRow extends Component {
     ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
+    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
@@ -295,7 +296,7 @@ class SectionRow extends Component {
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              currentAssignId={assignmentId(section.courseId, section.scriptId)}
+              currentPrimaryId={assignmentId(section.courseId, section.scriptId)}
               primaryAssignmentIds={primaryAssignmentIds}
               assignments={validAssignments}
             />
