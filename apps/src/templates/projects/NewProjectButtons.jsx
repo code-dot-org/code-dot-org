@@ -27,14 +27,14 @@ const styles = {
     width: 1000
   },
   tile: {
-    width: 222,
+    width: 214,
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',
-    marginLeft: 9
+    marginLeft: 10
   },
   tilePadding: {
-    marginRight: 17,
+    marginRight: 18,
   },
   thumbnail: {
     borderTopLeftRadius: 2,
