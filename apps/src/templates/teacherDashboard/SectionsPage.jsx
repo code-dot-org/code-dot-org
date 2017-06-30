@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
@@ -130,6 +131,7 @@ class SectionsPage extends Component {
     );
   }
 }
+export const UnconnectedSectionsPage = SectionsPage;
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
