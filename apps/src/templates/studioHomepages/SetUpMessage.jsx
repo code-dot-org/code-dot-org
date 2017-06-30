@@ -5,7 +5,7 @@ import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   section: {
-    width: 940,
+    width: 970,
     backgroundColor: color.white,
     borderStyle: 'dashed',
     borderWidth: 5,

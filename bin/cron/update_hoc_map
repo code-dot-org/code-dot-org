@@ -8,22 +8,24 @@
 # most recent HocSignup (e.g., HocSignup2017 in Fall 2017).
 
 # After setting up authentication, provide the following CDO.* attributes (example values below):
-#   CDO.hoc_map_service_account_email: xxx-abcdef@developer.gserviceaccount.com
-#   CDO.hoc_map_api_key: ABCDEF123456 [Base64-encoded pkcs12 key file]
-#   CDO.hoc_map_api_secret: notasecret
+#   CDO.hoc_map_account: JSON of a credential which can edit the FusionTables table
 #   CDO.hoc_map_table_id: ABCDEF123456 (the id of the fusion table)
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require src_dir 'database'
 require 'cdo/properties'
+require 'dynamic_config/dcdo'
 
-require 'google/api_client'
+require 'google/apis/fusiontables_v2'
+require 'googleauth'
 
 DB_READONLY = Sequel.connect(CDO.pegasus_db_reader.sub('mysql:', 'mysql2:'))
 
 TABLE_ID = CDO.hoc_map_table_id
 
-all_forms = DB_READONLY[:forms].where(kind: 'HocSignup2017')
+hoc_year = DCDO.get("hoc_year", 2017)
+
+all_forms = DB_READONLY[:forms].where(kind: "HocSignup#{hoc_year}")
 
 file = Tempfile.new(['data', '.csv'])
 
@@ -45,32 +47,11 @@ end
 
 file.close
 
-client = Google::APIClient.new(
-  application_name: 'HOC map update',
-  application_version: '1.0.0'
-)
-key = Google::APIClient::KeyUtils.load_from_pkcs12(
-  Base64.strict_decode64(CDO.hoc_map_api_key),
-  CDO.hoc_map_api_secret
-)
-client.authorization = Signet::OAuth2::Client.new(
-  token_credential_uri: 'https://accounts.google.com/o/oauth2/token',
-  audience: 'https://accounts.google.com/o/oauth2/token',
+tables = Google::Apis::FusiontablesV2::FusiontablesService.new
+
+tables.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
   scope: 'https://www.googleapis.com/auth/fusiontables',
-  issuer: CDO.hoc_map_service_account_email,
-  signing_key: key
+  json_key_io: StringIO.new(CDO.hoc_map_account.to_s)
 )
-client.authorization.fetch_access_token!
 
-fusiontables = client.discovered_api('fusiontables', 'v2')
-
-media = Google::APIClient::UploadIO.new(file.path, 'application/octet-stream')
-
-client.execute(
-  api_method: fusiontables.table.replace_rows,
-  parameters: {
-    tableId: TABLE_ID,
-    uploadType: 'media',
-  },
-  media: media
-)
+tables.replace_table_rows(TABLE_ID, content_type: 'application/octet-stream', upload_source: file.path)

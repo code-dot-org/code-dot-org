@@ -18,6 +18,7 @@ class CourseTest < ActiveSupport::TestCase
     test "get_from_cache uses cache" do
       course = create(:course, name: 'acourse')
       # Ensure cache is populated with this course by name and id
+      Course.stubs(:should_cache?).returns true
       Course.get_from_cache(course.name)
       Course.get_from_cache(course.id)
 
@@ -138,7 +139,7 @@ class CourseTest < ActiveSupport::TestCase
 
     summary = course.summarize
 
-    assert_equal [:name, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
+    assert_equal [:name, :id, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]

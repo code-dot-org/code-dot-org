@@ -2,16 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
-import StudentResources from './StudentResources';
 import shapes from './shapes';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
-
-const styles = {
-  userHero: {
-    paddingTop: 10
-  }
-};
 
 const StudentHomepage = React.createClass({
   propTypes: {
@@ -30,22 +22,16 @@ const StudentHomepage = React.createClass({
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
-        />
-
-        <ProtectedStatefulDiv
-          style={styles.userHero}
-          ref="userHero"
+          short={true}
         />
 
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-          header={i18n.myCourses()}
+          heading={i18n.myCourses()}
           isRtl={false}
           isTeacher={false}
         />
-
-        <StudentResources/>
 
       </div>
     );
