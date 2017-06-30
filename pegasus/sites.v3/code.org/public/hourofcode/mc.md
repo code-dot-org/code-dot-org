@@ -3,6 +3,7 @@ title: Teacher Resources - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 # MINECRAFT Hour of Code
