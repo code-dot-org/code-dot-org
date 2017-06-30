@@ -1,4 +1,7 @@
-%script=view 'google_analytics.js'
+%script=js 'filter_newrelic.js'
+%script=js 'google_analytics.js'
+
+=view :jquery
 
 %script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
 
