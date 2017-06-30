@@ -67,5 +67,34 @@ export default storybook => {
         </ContentContainer>
         )
       },
+      {
+        name: 'link and description',
+        description: `Example ContentContainer with a link and description`,
+        story: () => (
+          <ContentContainer
+            heading="Recent Courses"
+            linkText="View all courses"
+            link="link to see all of the courses"
+            showLink={true}
+            isRtl={false}
+            description="These are courses that you have worked on recently"
+          >
+            <CourseCard
+              name={exampleCard.name}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              isRtl={false}
+            />
+            <CourseCard
+              name={exampleCard.name}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              isRtl={false}
+            />
+        </ContentContainer>
+        )
+      },
     ]);
 };

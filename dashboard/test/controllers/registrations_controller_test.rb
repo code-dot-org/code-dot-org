@@ -339,6 +339,11 @@ class RegistrationsControllerTest < ActionController::TestCase
   # passwords.  Examples of users without passwords are users that authenticate
   # via oauth (a third-party account), or students with a picture password.
 
+  # Tech debt note:
+  # These tests make multiple controller calls per-test, which is not fully supported as per http://api.rubyonrails.org/v4.2/classes/ActionController/TestCase.html
+  # Currently this is worked around by calling current_user.reload in registrations_controller.rb, but ideally
+  # these tests should be fixed up to avoid this issue.
+
   test "editing password of student-without-password is not allowed" do
     student_without_password = create :student
     student_without_password.update_attribute(:encrypted_password, '')

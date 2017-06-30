@@ -6,13 +6,22 @@ import color from "../../util/color";
 
 const styles = {
   box: {
-    width: 940,
+    width: 970,
   },
   heading: {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 970
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 20,
+    fontSize: 16,
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
@@ -71,11 +80,12 @@ const ContentContainer= React.createClass({
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
     showLink: React.PropTypes.bool,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    description: React.PropTypes.string,
   },
 
   render() {
-    const { heading, link, linkText, showLink, isRtl }= this.props;
+    const { heading, link, linkText, showLink, description, isRtl }= this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
@@ -92,6 +102,11 @@ const ContentContainer= React.createClass({
             </a>
           }
         </div>
+        {description && (
+          <div style={styles.description}>
+            {description}
+          </div>
+        )}
         {React.Children.map(this.props.children, (child, index) => {
           return (
             <div key={index}>

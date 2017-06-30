@@ -120,6 +120,7 @@ const ProgressButton = React.createClass({
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
     icon: PropTypes.string,
+    iconStyle: PropTypes.object,
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
@@ -127,7 +128,7 @@ const ProgressButton = React.createClass({
   },
 
   render() {
-    const { href, text, icon, target, style, onClick, disabled } = this.props;
+    const { href, text, icon, iconStyle, target, style, onClick, disabled } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -146,8 +147,10 @@ const ProgressButton = React.createClass({
         disabled={disabled}
         onClick={onClick}
       >
-        {icon && <FontAwesome icon={icon} style={styles.icon}/>}
-        {text}
+        <div>
+          {icon && <FontAwesome icon={icon} style={{...styles.icon, ...iconStyle}}/>}
+          {text}
+        </div>
       </Tag>
     );
   }

@@ -11,52 +11,44 @@
       "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "2",
       "rule-name": "2",
-      "rule-action": "remove-column",
-      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users",
-        "column-name": "email"
-      }
+        "table-name": "user_geos"
+      },
+      "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "3",
       "rule-name": "3",
-      "rule-action": "remove-column",
-      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users",
-        "column-name": "encrypted_password"
-      }
+        "table-name": "teacher_profiles"
+      },
+      "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "4",
       "rule-name": "4",
-      "rule-action": "remove-column",
-      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users",
-        "column-name": "reset_password_token"
-      }
+        "table-name": "studio_people"
+      },
+      "rule-action": "include"
     },
     {
-      "rule-type": "transformation",
+      "rule-type": "selection",
       "rule-id": "5",
       "rule-name": "5",
-      "rule-action": "remove-column",
-      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "users",
-        "column-name": "reset_password_sent_at"
-      }
+        "table-name": "sign_ins"
+      },
+      "rule-action": "include"
     },
     {
       "rule-type": "transformation",
@@ -67,7 +59,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "remember_created_at"
+        "column-name": "email"
       }
     },
     {
@@ -79,7 +71,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "current_sign_in_ip"
+        "column-name": "encrypted_password"
       }
     },
     {
@@ -91,7 +83,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "last_sign_in_ip"
+        "column-name": "reset_password_token"
       }
     },
     {
@@ -103,7 +95,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "username"
+        "column-name": "reset_password_sent_at"
       }
     },
     {
@@ -115,7 +107,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "uid"
+        "column-name": "remember_created_at"
       }
     },
     {
@@ -127,7 +119,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "name"
+        "column-name": "current_sign_in_ip"
       }
     },
     {
@@ -139,7 +131,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "school"
+        "column-name": "last_sign_in_ip"
       }
     },
     {
@@ -151,7 +143,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "full_address"
+        "column-name": "username"
       }
     },
     {
@@ -163,7 +155,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "confirmation_token"
+        "column-name": "uid"
       }
     },
     {
@@ -175,7 +167,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "confirmed_at"
+        "column-name": "name"
       }
     },
     {
@@ -187,7 +179,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "confirmation_sent_at"
+        "column-name": "school"
       }
     },
     {
@@ -199,7 +191,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "unconfirmed_email"
+        "column-name": "full_address"
       }
     },
     {
@@ -211,7 +203,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "secret_picture_id"
+        "column-name": "confirmation_token"
       }
     },
     {
@@ -223,7 +215,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "hashed_email"
+        "column-name": "confirmed_at"
       }
     },
     {
@@ -235,7 +227,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "secret_words"
+        "column-name": "confirmation_sent_at"
       }
     },
     {
@@ -247,7 +239,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "properties"
+        "column-name": "unconfirmed_email"
       }
     },
     {
@@ -259,7 +251,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitation_token"
+        "column-name": "secret_picture_id"
       }
     },
     {
@@ -271,7 +263,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitation_created_at"
+        "column-name": "hashed_email"
       }
     },
     {
@@ -283,7 +275,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitation_sent_at"
+        "column-name": "secret_words"
       }
     },
     {
@@ -295,7 +287,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitation_accepted_at"
+        "column-name": "properties"
       }
     },
     {
@@ -307,7 +299,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitation_limit"
+        "column-name": "invitation_token"
       }
     },
     {
@@ -319,7 +311,7 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitation_by_id"
+        "column-name": "invitation_created_at"
       }
     },
     {
@@ -331,18 +323,20 @@
       "object-locator": {
         "schema-name": "dashboard_production",
         "table-name": "users",
-        "column-name": "invitations_count"
+        "column-name": "invitation_sent_at"
       }
     },
     {
-      "rule-type": "selection",
+      "rule-type": "transformation",
       "rule-id": "29",
       "rule-name": "29",
+      "rule-action": "remove-column",
+      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "user_geos"
-      },
-      "rule-action": "include"
+        "table-name": "users",
+        "column-name": "invitation_accepted_at"
+      }
     },
     {
       "rule-type": "transformation",
@@ -352,8 +346,8 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "user_geos",
-        "column-name": "ip_address"
+        "table-name": "users",
+        "column-name": "invitation_limit"
       }
     },
     {
@@ -364,8 +358,8 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "user_geos",
-        "column-name": "latitude"
+        "table-name": "users",
+        "column-name": "invitation_by_id"
       }
     },
     {
@@ -376,29 +370,33 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "user_geos",
-        "column-name": "longitude"
+        "table-name": "users",
+        "column-name": "invitations_count"
       }
     },
     {
-      "rule-type": "selection",
+      "rule-type": "transformation",
       "rule-id": "33",
       "rule-name": "33",
+      "rule-action": "remove-column",
+      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "teacher_profiles"
-      },
-      "rule-action": "include"
+        "table-name": "user_geos",
+        "column-name": "ip_address"
+      }
     },
     {
-      "rule-type": "selection",
+      "rule-type": "transformation",
       "rule-id": "34",
       "rule-name": "34",
+      "rule-action": "remove-column",
+      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "studio_people"
-      },
-      "rule-action": "include"
+        "table-name": "user_geos",
+        "column-name": "latitude"
+      }
     },
     {
       "rule-type": "transformation",
@@ -408,19 +406,21 @@
       "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "studio_people",
-        "column-name": "emails"
+        "table-name": "user_geos",
+        "column-name": "longitude"
       }
     },
     {
-      "rule-type": "selection",
+      "rule-type": "transformation",
       "rule-id": "36",
       "rule-name": "36",
+      "rule-action": "remove-column",
+      "rule-target": "column",
       "object-locator": {
         "schema-name": "dashboard_production",
-        "table-name": "sign_ins"
-      },
-      "rule-action": "include"
+        "table-name": "studio_people",
+        "column-name": "emails"
+      }
     }
   ]
 }
