@@ -2,6 +2,7 @@
 title: Leadership
 nav: about_nav
 theme: responsive
+style_min: true
 ---
 
 # Leadership

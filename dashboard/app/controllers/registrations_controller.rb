@@ -9,32 +9,72 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     return head(:bad_request) if params[:user].nil?
-    @user = User.find(current_user.id)
+    current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
 
     successfully_updated =
-      if forbidden_change?(@user, params)
+      if forbidden_change?(current_user, params)
         false
-      elsif needs_password?(@user, params)
-        @user.update_with_password(update_params(params))
+      elsif needs_password?(current_user, params)
+        current_user.update_with_password(update_params(params))
       else
         # remove the virtual current_password attribute update_without_password
         # doesn't know how to ignore it
         params[:user].delete(:current_password)
-        @user.update_without_password(update_params(params))
+        current_user.update_without_password(update_params(params))
       end
 
+    respond_to_account_update(successfully_updated)
+  end
+
+  def create
+    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
+      super
+    end
+  end
+
+  def upgrade
+    return head(:bad_request) if params[:user].nil?
+    params_to_pass = params.deep_dup
+    # Set provider to nil to mark the account as self-managed
+    user_params = params_to_pass[:user].merge!({provider: nil})
+    current_user.reload # Needed to make tests pass for reasons noted in registrations_controller_test.rb
+
+    can_update =
+      if current_user.teacher_managed_account?
+        if current_user.secret_word_account?
+          secret_words_match = user_params[:secret_words] == current_user.secret_words
+          unless secret_words_match
+            error_string = user_params[:secret_words].blank? ? :blank_plural : :invalid_plural
+            current_user.errors.add(:secret_words, error_string)
+          end
+          secret_words_match
+        else
+          true
+        end
+      else
+        false
+      end
+
+    successfully_updated = can_update && current_user.update(update_params(params_to_pass))
+    respond_to_account_update(successfully_updated)
+  end
+
+  private
+
+  def respond_to_account_update(successfully_updated)
+    user = current_user
     respond_to do |format|
       if successfully_updated
-        set_locale_cookie(@user.locale)
+        set_locale_cookie(user.locale)
         # Sign in the user bypassing validation in case his password changed
-        bypass_sign_in @user
+        bypass_sign_in user
 
         format.html do
           set_flash_message :notice, :updated
           begin
-            redirect_back fallback_location: after_update_path_for(@user)
+            redirect_back fallback_location: after_update_path_for(user)
           rescue ActionController::RedirectBackError
-            redirect_to after_update_path_for(@user)
+            redirect_to after_update_path_for(user)
           end
         end
         format.any {head :no_content}
@@ -44,14 +84,6 @@ class RegistrationsController < Devise::RegistrationsController
       end
     end
   end
-
-  def create
-    Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
-      super
-    end
-  end
-
-  private
 
   # Reject certain changes for certain users outright
   def forbidden_change?(user, params)
@@ -88,6 +120,7 @@ class RegistrationsController < Devise::RegistrationsController
       :school,
       :full_address,
       :terms_of_service_version,
+      :provider,
       school_info_attributes: [
         :country,
         :school_type,
