@@ -54,6 +54,14 @@ def replace_hostname(url)
   url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
 end
 
+def request_js_error_recorder(url)
+  if /\?/ =~ url
+    "#{url}&ui_test_js_recorder=true"
+  else
+    "#{url}?ui_test_js_recorder=true"
+  end
+end
+
 # Get the SCSS color constant for a given status.
 def color_for_status(status)
   {
@@ -76,15 +84,19 @@ def individual_steps(steps)
   end
 end
 
+def navigate_to(url)
+  url = request_js_error_recorder(url)
+  @browser.navigate.to url
+end
+
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   url = replace_hostname(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
-    @browser.navigate.to url
+    navigate_to url
     refute_bad_gateway
     refute_site_unreachable
   end
-  install_js_error_recorder
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|
@@ -1100,12 +1112,12 @@ last_shared_url = nil
 Then /^I navigate to the share URL$/ do
   wait_short_until {@button = @browser.find_element(id: 'sharing-input')}
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-input').value")
-  @browser.navigate.to last_shared_url
+  navigate_to last_shared_url
   wait_for_jquery
 end
 
 Then /^I navigate to the last shared URL$/ do
-  @browser.navigate.to last_shared_url
+  navigate_to last_shared_url
   wait_for_jquery
 end
 
@@ -1115,7 +1127,7 @@ end
 
 Then /^I append "([^"]*)" to the URL$/ do |append|
   url = @browser.current_url + append
-  @browser.navigate.to url
+  navigate_to url
 end
 
 Then /^selector "([^"]*)" has class "(.*?)"$/ do |selector, class_name|
