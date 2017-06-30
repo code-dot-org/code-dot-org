@@ -75,20 +75,18 @@ export default function teacherSections(state=initialState, action) {
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
     action.validCourses.forEach(course => {
       const assignId = assignmentId(course.id, null);
+      const scriptAssignIds = (course.script_ids || []).map(scriptId =>
+        assignmentId(null, scriptId));
       validAssignments[assignId] = {
         ...course,
         courseId: course.id,
         scriptId: null,
+        scriptAssignIds,
         assignId,
         path: `${state.studioUrl}/courses/${course.script_name}`
       };
       primaryAssignmentIds.push(assignId);
-      // TODO: should I require courses to have script_ids? I think that becomes
-      // easier when we're not behind an experiment
-      if (course.script_ids) {
-        secondaryAssignmentIds.push(...course.script_ids.map(scriptId =>
-          assignmentId(null, scriptId)));
-      }
+      secondaryAssignmentIds.push(...scriptAssignIds);
     });
     secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
 
