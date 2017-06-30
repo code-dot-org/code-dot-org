@@ -119,6 +119,7 @@ class Course < ApplicationRecord
     # category it's in. Set translated strings here
     info[:name] = localized_title
     info[:category] = I18n.t('courses_category')
+    info[:script_ids] = course_scripts.map(&:script_id)
     info
   end
 
