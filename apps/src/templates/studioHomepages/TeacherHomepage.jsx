@@ -33,6 +33,7 @@ const TeacherHomepage = React.createClass({
         <HeaderBanner
           headingText={i18n.homepageHeading()}
           extended={false}
+          short={true}
         />
         <ProtectedStatefulDiv
           ref="flashes"

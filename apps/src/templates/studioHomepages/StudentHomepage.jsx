@@ -22,6 +22,7 @@ const StudentHomepage = React.createClass({
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
+          short={true}
         />
 
         <RecentCourses
