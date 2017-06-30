@@ -48,35 +48,11 @@ function renderSectionProjects(sectionId) {
 function main() {
   const studioUrlPrefix = scriptData.studiourlprefix;
   var valid_scripts = scriptData.valid_scripts;
-  var valid_courses = scriptData.valid_courses;
   var hoc_assign_warning = scriptData.hoc_assign_warning;
   var disabled_scripts = scriptData.disabled_scripts;
   var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
-
-  // Sections can be assigned to either a course or a script. Since there's a
-  // possibility that we could have a script and a course with the same id, we
-  // need a way to differentiate them. We do that by giving scripts and courses
-  // assignment ids, which are guaranteed to be unique across the population of
-  // both courses and scripts.
-  function scriptAssignmentId(script_id) {
-    return 's_' + script_id;
-  }
-
-  function courseAssignmentId(course_id) {
-    return 'c_' + course_id;
-  }
-
-  valid_scripts.forEach(function (script) {
-    script.assign_id = scriptAssignmentId(script.id);
-  });
-  valid_courses.forEach(function (course) {
-    course.assign_id = courseAssignmentId(course.id);
-    course.is_course = true;
-  });
-
-  const valid_assignments = valid_courses.concat(valid_scripts);
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -218,175 +194,11 @@ function main() {
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
 
-    $scope.sectionsLoaded = false;
-
-    $scope.script_list = valid_scripts;
-    $scope.assignable_list = valid_assignments;
-
-    $scope.sections = sectionsService.query();
-
-    $scope.sections.$promise.then(sections => {
-      $scope.sections.forEach(section => {
-        section.assign_id = $scope.getAssignmentId(section);
-      });
-      $scope.sectionsLoaded = true;
-    });
-
-    $scope.moving_students = {editing: true};
-
-    $scope.hocAssignWarningEnabled = hoc_assign_warning;
-
-    $scope.hocCategoryName = i18n.hoc_category_name;
-
     // Angular does not offer a reliable way to wait for the template to load,
     // so do it using a custom event here.
     $scope.$on('section-page-rendered', () => {
-      if (experiments.isEnabled('reactSections')) {
-        renderSectionsPage(scriptData);
-      }
+      renderSectionsPage(scriptData);
     });
-
-    /**
-     * Given a section, returns the assignment id of the course/script the section
-     * is assigned to (or null if not assigned to anything)
-     * @param {Section} section - The section we want the assignment id for
-     * @returns {string|null}
-     */
-    $scope.getAssignmentId = function (section) {
-      if (section.course_id) {
-        return courseAssignmentId(section.course_id);
-      }
-      if (section.script) {
-        return scriptAssignmentId(section.script.id);
-      }
-      return null;
-    };
-
-    /**
-     * Given a section, return the name of the course/script the section is
-     * assigned to
-     * @param {Section} section
-     * @returns {string}
-     */
-    $scope.getName = function (section) {
-      const firstMatch = $scope.assignable_list.find(val => val.assign_id == section.assign_id);
-      return firstMatch ? firstMatch.name : null;
-    };
-
-    /**
-     * Given a section, return the a link to the course/script the section is
-     * assigned to
-     * @param {Section} section
-     * @returns {string|null}
-     */
-    $scope.getPath = function (section) {
-      if (section.course_id) {
-        const course = valid_courses.find(course => course.id === section.course_id);
-        if (!course) {
-          // We're assigned a course that's not in our list of valid courses. Don't
-          // attempt to provide a link.
-          return null;
-        }
-        return `${studioUrlPrefix}/courses/${course.script_name}`;
-      }
-      if (section.script) {
-        return `${studioUrlPrefix}/s/${section.script.name}`;
-      }
-      return null;
-    };
-
-    $scope.edit = function (section) {
-      section.editing = true;
-    };
-
-    $scope.genericError = function (result) {
-      $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
-    };
-
-    $scope.save = function (section) {
-      // Changing our dropdown changes the assign_id. If that assign_id has changed,
-      // that indicates we're updating our script/course assigment
-      const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
-      if (assignIdChanged) {
-        const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
-        if ($scope.hocAssignWarningEnabled && assignable.category === $scope.hocCategoryName) {
-          $scope.sectionToSave = $scope.sections.indexOf(section);
-          $('#assign-confirm').modal('show');
-          return;
-        }
-      }
-      $scope.send_save(section);
-    };
-
-    $scope.confirm_save = function () {
-      $scope.send_save($scope.sections[$scope.sectionToSave]);
-      $('#assign-confirm').modal('hide');
-    };
-
-    $scope.send_save = function (section) {
-      const assignIdChanged = $scope.getAssignmentId(section) !== section.assign_id;
-      if (assignIdChanged) {
-        const assignable = $scope.assignable_list.find(a => a.assign_id === section.assign_id);
-        // update course/script assigned to section. Right now a section can only
-        // have one or the other, but that will change in the future.
-        section.script = null;
-        section.course_id = null;
-
-        if (assignable) {
-          if (assignable.is_course) {
-            section.course_id = assignable.id;
-          } else {
-            section.script = {
-              id: assignable.id,
-              name: assignable.name
-            };
-          }
-        }
-      }
-
-      if (section.id) { // update existing
-        sectionsService.update({id: section.id}, section).$promise.then(
-          function (result_section) {
-            result_section.assign_id = $scope.getAssignmentId(result_section);
-            $scope.sections[$scope.sections.indexOf(section)] = result_section;
-          }
-        ).catch($scope.genericError);
-      } else { // save new
-        sectionsService.save(section).$promise.then(
-          function (result_section) {
-            result_section.assign_id = $scope.getAssignmentId(result_section);
-            $scope.sections[$scope.sections.indexOf(section)] = result_section;
-          }
-        ).catch($scope.genericError);
-      }
-    };
-
-    $scope.confirm_delete = function (section) {
-      section.confirmDelete = true;
-    };
-
-    $scope.del = function (section) {
-      sectionsService.remove(section).$promise.then(
-        function () {
-          $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
-          section.confirmDelete = false;
-        }
-      ).catch(
-        function () { $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page."); }
-      );
-    };
-
-    $scope.cancel = function (section) {
-      if (section.id) {
-        section.editing = false;
-      } else {
-        $scope.sections.splice($scope.sections.indexOf(section), 1); // remove from array
-      }
-    };
-
-    $scope.new_section = function () {
-      $scope.sections.unshift({editing: true, login_type: 'word', pairing_allowed: true});
-    };
   }]);
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',

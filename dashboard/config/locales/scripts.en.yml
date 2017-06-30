@@ -1884,6 +1884,7 @@ en:
               name: Explore PT
             Explore PT Prep:
               name: Explore PT Prep
+          description_audience: ''
         cspunit4:
           title: "(old) CS Principles Unit 4 - Data"
           description: Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. The data-rich world we live in also introduces many complex questions related to public policy, law, ethics and societal impact. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -3373,6 +3374,10 @@ en:
               name: Project - Design a Game
               description_student: The class plans and builds original games using the project guide from the previous two lessons. Working individually or in pairs, the class plans, develops, and gives feedback on the games.  After incorporating the peer feedback, the class shares out the completed games.
               description_teacher: Students will plan and build their own game using the project guide from the previous two lessons to guide their project. Working individually or in pairs, students will first decide on the type of game they'd like to build, taking as inspiration a set of sample games. They will then complete a blank project guide where they will describe the game's behavior and scope out the variables, sprites, and functions they'll need to build. In Code Studio, a series of levels prompts them on a general sequence they can use to implement this plan. Partway through the process, students will share their projects for peer review and will incorporate feedback as they finish their game. At the end of the lesson, students will share their completed games with their classmates. This project will span multiple classes and can easily take anywhere from 3-5 class periods.
+            Parameters and Randomization:
+              name: Parameters and Randomization
+            Shapes and Randomization:
+              name: Shapes and Randomization
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -5169,6 +5174,12 @@ en:
               name: F7 add Conditionals
             F5 Minecraft:
               name: F5 Minecraft
+            Programming with BB-8:
+              name: Programming with BB-8
+            Loops with BB-8:
+              name: Loops with BB-8
+            D13 no If/While:
+              name: D13 no If/While
           title: ''
           description_audience: ''
           description_short: ''
@@ -5202,7 +5213,7 @@ en:
           title: 'CS Fundamentals: Course A'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
-          description: 'Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. '
+          description: Course A offers computer science curriculum for beginning readers around the kindergarten age range. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. By the end of this course, students create their very own custom game or story from Play Lab that they can share.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5234,7 +5245,7 @@ en:
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
-          description: Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share.
+          description: "Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\r\n\r\nAt the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link."
         coursec:
           stages:
             Building a Foundation:
@@ -5270,7 +5281,7 @@ en:
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. '
+          description: "Course C was developed for students in and around the second grade. It uses a limited understanding of shapes and elementary math concepts.\r\n\r\nStudents will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share. Each concept in Course C is taught from the beginning, graduating toward experiences that allow for growth and creativity to provide all students a rich and novel programming experience."
         coursed:
           stages:
             Introduction:
@@ -5312,7 +5323,7 @@ en:
           title: 'CS Fundamentals: Course D'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: In this course students will create programs to solve problems and develop interactive games or stories they can share.
+          description: "Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\r\n\r\nThe course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics."
         coursee:
           stages:
             'Algorithms: Tangrams':
@@ -5379,7 +5390,7 @@ en:
               name: Internet
             Crowdsourcing:
               name: Crowdsourcing
-          title: ''
+          title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project.

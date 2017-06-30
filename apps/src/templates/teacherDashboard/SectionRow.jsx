@@ -86,6 +86,7 @@ ConfirmDelete.propTypes = {
 export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
     <ProgressButton
+      className="uitest-save"
       text={i18n.save()}
       onClick={onClickSave}
       color={ProgressButton.ButtonColor.blue}

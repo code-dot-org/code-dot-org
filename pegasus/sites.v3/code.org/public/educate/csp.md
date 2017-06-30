@@ -3,6 +3,7 @@ title: Computer Science Principles
 nav: educate_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 # Computer Science Principles
@@ -59,7 +60,7 @@ We still have a few seats available at TeacherCon Phoenix, our five-day workshop
 
 
 <center><img src="/images/animated-examples/lessonplans.png" width="90%""></center>
-<div style="margin-top: 5px;"><a href="https://curriculum.code.org/csp">curriuclum.code.org</a> has daily lesson plans that come with detailed instructions, activity guides, assessments, standards mappings, and more</div>
+<div style="margin-top: 5px;"><a href="https://curriculum.code.org/csp">curriculum.code.org</a> has daily lesson plans that come with detailed instructions, activity guides, assessments, standards mappings, and more</div>
 
 
 [/col-33]

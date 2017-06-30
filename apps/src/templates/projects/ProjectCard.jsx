@@ -10,7 +10,7 @@ const styles = {
   card: {
     border: '1px solid #bbbbbb',
     borderRadius: 2,
-    width: 220,
+    width: 214,
     backgroundColor: color.white
   },
   title: {
@@ -63,7 +63,7 @@ const styles = {
     paddingRight: 8
   },
   thumbnail: {
-    width: 220,
+    width: 214,
     height: 150,
     display: 'flex',
     justifyContent: 'center',
