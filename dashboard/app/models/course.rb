@@ -123,7 +123,7 @@ class Course < ApplicationRecord
     info
   end
 
-  # TODO: figure out/test caching
+  # TODO(bjvanminnen): figure out/test caching
   # Get the set of valid courses for the dropdown in our sections table. This should
   # be static data, but contains localized strings so we can only cache on a per
   # locale basis
