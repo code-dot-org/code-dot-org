@@ -80,6 +80,7 @@ const Courses = React.createClass({
           headingText={headingText}
           subHeadingText={subHeadingText}
           description={headingDescription}
+          short={!isSignedOut}
         >
           {isSignedOut && (
             <ProgressButton
