@@ -8,6 +8,7 @@ import { setSections, newSection } from './teacherSectionsRedux';
 import { loadClassroomList } from './googleClassroomRedux';
 import { classroomShape } from './shapes';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   breadcrumb: {
@@ -59,6 +60,8 @@ class SectionsPage extends Component {
   render() {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
+
+    const showGoogleClassroom = experiments.isEnabled('googleClassroom');
     return (
       <div>
         <div style={styles.breadcrumb}>
@@ -72,13 +75,14 @@ class SectionsPage extends Component {
         </div>
         {sectionsLoaded &&
           <ProgressButton
+            className="uitest-newsection"
             text={i18n.newSection()}
             style={styles.button}
             onClick={this.addSection}
             color={ProgressButton.ButtonColor.gray}
           />
         }
-        {sectionsLoaded &&
+        {sectionsLoaded && showGoogleClassroom &&
           <ProgressButton
             text={i18n.importFromGoogleClassroom()}
             style={styles.button}
