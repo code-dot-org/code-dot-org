@@ -3,17 +3,15 @@ import _ from 'lodash';
 import { assignmentShape } from './shapes';
 
 /**
- * Group our assignments into categories for our dropdown. Memoize this method
- * as over the course of a session we'll be calling multiple times, always with
- * the same set of assignments
+ * Group our assignments into categories for our dropdown
  */
-const groupedAssignments = _.memoize(assignments => (
+const groupedAssignments = assignments => (
   _(assignments)
     .values()
     .orderBy(['category_priority', 'category', 'position', 'name'])
     .groupBy('category')
     .value()
-  ));
+  );
 
 /**
  * This component displays a dropdown of courses/scripts, with each of these
@@ -35,9 +33,15 @@ export default class AssignmentSelector extends Component {
   }
 
   render() {
-    const { currentAssignId, assignments } = this.props;
+    const { currentAssignId, assignments, primaryAssignmentIds } = this.props;
 
-    const grouped = groupedAssignments(assignments);
+    // TODO: test this case
+    let primaryAssignIds = primaryAssignmentIds;
+    if (currentAssignId && !primaryAssignmentIds.includes(currentAssignId)) {
+      primaryAssignIds = [currentAssignId].concat(primaryAssignIds);
+    }
+
+    const grouped = groupedAssignments(primaryAssignIds.map(id => assignments[id]));
 
     return (
       <select

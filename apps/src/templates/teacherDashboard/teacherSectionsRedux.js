@@ -34,6 +34,9 @@ const initialState = {
   validGrades: [],
   sectionIds: [],
   validAssignments: {},
+  // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
+  // that are not in a course)
+  primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {}
 };
@@ -63,6 +66,12 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
 
+    // TODO: tests or primary ids
+    // Primary assignment ids are (a) courses and (b) scripts that are not in any
+    // of our courses.
+    let primaryAssignmentIds = [];
+    let secondaryAssignmentIds = [];
+
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
     action.validCourses.forEach(course => {
       const assignId = assignmentId(course.id, null);
@@ -73,7 +82,15 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `${state.studioUrl}/courses/${course.script_name}`
       };
+      primaryAssignmentIds.push(assignId);
+      // TODO: should I require courses to have script_ids? I think that becomes
+      // easier when we're not behind an experiment
+      if (course.script_ids) {
+        secondaryAssignmentIds.push(...course.script_ids.map(scriptId =>
+          assignmentId(null, scriptId)));
+      }
     });
+    secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
 
     action.validScripts.forEach(script => {
       const assignId = assignmentId(null, script.id);
@@ -84,11 +101,16 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `${state.studioUrl}/s/${script.script_name}`
       };
+
+      if (!secondaryAssignmentIds.includes(assignId)) {
+        primaryAssignmentIds.push(assignId);
+      }
     });
 
     return {
       ...state,
-      validAssignments
+      validAssignments,
+      primaryAssignmentIds,
     };
   }
 

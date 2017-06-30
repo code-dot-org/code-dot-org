@@ -81,7 +81,7 @@ module ScriptConstants
       CSP17_UNIT3_NAME = 'csp3'.freeze,
       CSP17_UNIT4_NAME = 'csp4'.freeze,
       CSP17_UNIT5_NAME = 'csp5'.freeze,
-      CSP17_UNIT6_NAME = 'csp6'.freeze,
+      # CSP17_UNIT6_NAME = 'csp6'.freeze,
       CSP17_POSTAP_NAME = 'csppostap'.freeze,
     ],
     cspexams: [
