@@ -17,6 +17,7 @@ var BeeCellEditor = require('./BeeCellEditor');
 var CellEditor = require('./CellEditor');
 var StudioCellEditor = require('./StudioCellEditor');
 var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
+var BounceCellEditor = require('./BounceCellEditor');
 var Grid = require('./Grid');
 
 var CellJSON = React.createClass({
@@ -90,7 +91,9 @@ var GridEditor = React.createClass({
   },
 
   getEditorClass: function () {
-    if (this.props.skin === 'playlab') {
+    if (this.props.skin === 'bounce') {
+      return BounceCellEditor;
+    } else if (this.props.skin === 'playlab') {
       return StudioCellEditor;
     } else if (this.props.skin === 'starwarsgrid') {
       return StarWarsGridCellEditor;

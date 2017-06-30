@@ -14,6 +14,8 @@
     }
   }
 
+  ga('set', 'dimension4', "<%="#{user_type}"%>");
+
   ga('send', 'pageview');
   function trackEvent(category, action, label, value) {
     ga('send', 'event', category, action, label, value);

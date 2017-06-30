@@ -506,6 +506,7 @@ module LevelsHelper
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
+    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
