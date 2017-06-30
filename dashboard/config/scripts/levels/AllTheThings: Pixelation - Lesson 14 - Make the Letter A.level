@@ -1,0 +1,26 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2017-06-30T23:06:38.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "instructions": "Make a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then start entering pixel data.",
+    "markdown_instructions": "<img align=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\" hspace=\"20\">\r\n            # Task 1: Make a 3x5 letter 'A'\r\n            Start by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation widget. \r\n          \r\n            The image is intially setup with the *incorrect* dimensions. Your first task is to set the second byte to the 8-bit binary code for 5: 0000 0101. Then you can start entering pixel data to make the A.\r\n            ",
+    "version": "2",
+    "data": "0000 0011 0000 0010 010",
+    "href": "pixelation/pixelation.html",
+    "video_key": "csp_pixelation_bw",
+    "skip_dialog": true,
+    "instructions_important": "false",
+    "hex": "false",
+    "hide_encoding_controls": "false",
+    "v1_hide_sliders": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-30 16:06:46 -0700\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":556,\"changed_by_email\":\"brent@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>
