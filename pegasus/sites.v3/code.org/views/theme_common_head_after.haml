@@ -1,4 +1,7 @@
-%script=view 'google_analytics.js'
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
+
+%script=view 'google_analytics.js', user_type: user_type
 
 %script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
 
