@@ -23,9 +23,9 @@ module Pd::WorkshopSurveyResultsHelper
           # If not, concat it to the list of responses
           if v.is_a? Hash
             if sum_hash[k] == 0
-              sum_hash[k] = [facilitator_hash_to_string(v)]
+              sum_hash[k] = convert_facilitator_hash_to_string(v)
             else
-              sum_hash.concat facilitator_hash_to_string(v)
+              sum_hash[k].concat convert_facilitator_hash_to_string(v)
             end
           else
             sum_hash[k] == 0 ? sum_hash[k] = [v] : sum_hash[k] << v
