@@ -11,12 +11,6 @@
   Plan to switch to Optimizely X for future experiments.
   %script{src:'//cdn.optimizely.com/js/400912536.js'}
 
-:javascript
-  var is_ie8 = false;
-/[if IE 8]
-  :javascript
-    is_ie8 = true;
-
 =view :fonts
 -if use_min_stylesheet? && request.site != 'csedweek.org'
   =inline_css 'style-min.css'
@@ -25,5 +19,3 @@
 
 
 =inline_css 'user-menu.css'
-
-=view :jquery

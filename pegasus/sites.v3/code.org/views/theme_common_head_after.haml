@@ -1,10 +1,9 @@
+=view :old_ie
+=view :jquery
+
 %script=view 'google_analytics.js'
 
 %script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
-
-/[if lt IE 9]
-  %script{:src=>'/js/html5shiv.js'}
-  %script{src:'/js/respond.min.js'}
 
 - if header['chart']
   %script{src:'https://www.google.com/jsapi'}
