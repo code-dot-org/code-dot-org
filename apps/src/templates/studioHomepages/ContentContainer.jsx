@@ -6,7 +6,7 @@ import color from "../../util/color";
 
 const styles = {
   box: {
-    width: 940,
+    width: 970,
   },
   heading: {
     paddingRight: 10,
@@ -16,7 +16,7 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: 940
+    width: 970
   },
   description: {
     paddingRight: 10,

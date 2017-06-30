@@ -49,8 +49,8 @@
     "project_template_level_name": "gradek_playlab_events5c_template",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to control what happens when the actors collide.\\n\\n![](https://images.code.org/97b2532aaa66ed95b5e42eb1ca72e8ef-image-1498672674991.57.24 AM.png)\",\"hint_id\":\"courseA_playLab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dabd23b0a8db2e457139d9f44d3c81bf/courseA_playLab_events7.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to control what happens when the actors collide.\\n\\n![](https://images.code.org/97b2532aaa66ed95b5e42eb1ca72e8ef-image-1498672674991.57.24 AM.png)\",\"hint_id\":\"courseA_playLab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dabd23b0a8db2e457139d9f44d3c81bf/courseA_playLab_events7.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

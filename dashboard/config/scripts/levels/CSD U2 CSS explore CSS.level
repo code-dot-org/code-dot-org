@@ -10,9 +10,6 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "start_sources": "{\r\n  \"files\": [\r\n    {\"name\": \"style.css\",\r\n     \"data\": \"h1 {\\n    color: blue;\\n    text-align: center;\\n}\\n\\nh2 {\\ntext-align: right;\\n  color: red;\\n}\"\r\n     },\r\n    {\r\n      \"name\": \"index.html\",\r\n      \"data\": \"<!DOCTYPE html> \\n<html> \\n<head>\\n   <link rel=\\\"stylesheet\\\" href=\\\"style.css\\\">\\n</head>\\n<body>\\n  <h1>We're about to learn a new language!</h1>\\n  <h2>And it's going to help us add STYLE</h2>\\n  <h1>But how does it work?</h1>\\n</body>\\n</html>\"\r\n    }\r\n  ]\r\n}",
-    "encrypted_examples": [
-
-    ],
     "display_name": "Exploration: Adding Style",
     "teacher_markdown": "Have students explore this level with a partner. Afterwards lead a short share out so that partners can share with the class their responses to the three questions in the instructions. The subsequent video should help reinforce what students discovered so there's no need to lead a lengthy debrief conversation."
   },
