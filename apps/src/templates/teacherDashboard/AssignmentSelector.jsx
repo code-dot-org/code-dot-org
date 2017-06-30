@@ -25,11 +25,10 @@ const groupedAssignments = assignments => (
 /**
  * This component displays a dropdown of courses/scripts, with each of these
  * grouped and ordered appropriately.
- * TODO(bjvanminnen): could use some tests
  */
 export default class AssignmentSelector extends Component {
   static propTypes = {
-    currentPrimaryId: PropTypes.string,
+    currentPrimaryId: PropTypes.string.isRequired,
     currentSecondaryId: PropTypes.string,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -78,7 +77,6 @@ export default class AssignmentSelector extends Component {
     const { assignments, primaryAssignmentIds } = this.props;
     const { selectedPrimaryId, selectedSecondaryId } = this.state;
 
-    // TODO: test this case
     let primaryAssignIds = primaryAssignmentIds;
     if (selectedPrimaryId !== noAssignment &&
         !primaryAssignmentIds.includes(selectedPrimaryId)) {
