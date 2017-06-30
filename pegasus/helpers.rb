@@ -99,4 +99,13 @@ def csrf_tag
   Rack::Csrf.csrf_tag(env)
 end
 
+def language_dir_class(locale=request.locale)
+  # This list of RTL languages matches those in dashboard/config/locales.yml
+  if ["ar-SA", "fa-IR", "he-IL", "ur-PK"].include? locale
+    "rtl"
+  else
+    "ltr"
+  end
+end
+
 Dir.glob(pegasus_dir('helpers/*.rb')).sort.each {|path| require path}

@@ -17,7 +17,7 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     height: 72,
-    width: 940,
+    width: 970,
     backgroundColor: color.white,
     marginBottom: 20,
     float: 'left'

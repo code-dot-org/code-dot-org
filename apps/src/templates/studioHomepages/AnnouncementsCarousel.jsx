@@ -6,7 +6,7 @@ import _ from 'lodash';
 
 const styles = {
   box: {
-    width: 940,
+    width: 970,
     backgroundColor: color.white
   },
   arrowIcon: {

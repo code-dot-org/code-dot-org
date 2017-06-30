@@ -76,10 +76,9 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   };
 
   generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function () {
-    var pathForward = `Maze.isPathForward('block_id_${this.id}')`;
     var atCrop = `Maze.at${capitalizeFirstLetter(crop)}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    var code = `while (!${atCrop} && ${pathForward}) {\n${branch}}\n`;
+    var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
 }
