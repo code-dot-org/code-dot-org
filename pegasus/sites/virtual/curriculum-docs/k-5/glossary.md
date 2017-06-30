@@ -9,7 +9,7 @@ theme: none
 [content]
 
 
-Encouraging students to learn and use 'professional' terms enables them to communicate correctly and efficiently with others and builds their knowledge such that it can be further developed without having to relearn terms and concepts at a later time. The terms and concepts used in the unplugged lessons are defined using words that young students can understand. 
+Encouraging students to learn and use official computer science terms will enable them to communicate correctly and efficiently with others and builds their knowledge such that it can be further developed without having to relearn terms and concepts at a later time. The terms and concepts used in the unplugged lessons are defined using words that young students can understand. 
 
 [tip]
 
@@ -20,8 +20,10 @@ Best practice is to introduce the terms with easy-to-understand language, relate
 
 The following terms are introduced in an unplugged lesson as either a vocabulary word or as a term related to the online Blockly programming interface. Terms are subsequently reinforced in the following online puzzles and activities. Most terms appear multiple times throughout the courses and lessons providing the students with many opportunities to deepen their understanding and assimilate the words into conversations, both in and outside of the classroom. 
 
-The course and lesson numbers after each term indicate an unplugged lessons in which the term is emphasized. 
+<!--
 
+The course and lesson numbers after each term indicate an unplugged lessons in which the term is emphasized. 
+-->
 
 <%
 

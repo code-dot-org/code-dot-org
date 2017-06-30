@@ -267,6 +267,7 @@ class Level < ActiveRecord::Base
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
     'Applab', # freeplay
+    'Bounce', # no ideal solution
     'ContractMatch', # dsl defined, covered in dsl
     'CurriculumReference', # no user submitted content
     'DSLDefined', # dsl defined, covered in dsl

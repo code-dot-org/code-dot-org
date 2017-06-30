@@ -138,7 +138,7 @@ class CourseTest < ActiveSupport::TestCase
 
     summary = course.summarize
 
-    assert_equal [:name, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
+    assert_equal [:name, :id, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]

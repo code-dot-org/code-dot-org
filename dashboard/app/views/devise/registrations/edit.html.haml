@@ -81,13 +81,29 @@
       = t('user.delete_text_teacher_note')
     - data_hash = { confirm: t('user.delete_confirm') }
     = button_to t('user.delete'), registration_path(resource_name), data: data_hash, method: :delete, class: 'btn btn-danger'
+- if current_user.can_create_personal_login? && !current_user.under_13? && params[:showTakeYourAccountWithYou]
+  %h3= t('user.create_personal_login')
+  %p= t('user.create_personal_login_info')
+  = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
+    = form.hidden_field :hashed_email
+    .field
+      = form.label :personal_email
+      = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
+    - if current_user.secret_word_account?
+      .field
+        = form.label :secret_words
+        = form.text_field :secret_words, maxlength: 255
+    .field
+      = form.label :password, maxlength: 255
+      = form.password_field :password, autocomplete: 'off', maxlength: 255
+    .field
+      = form.label :password_confirmation
+      = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+    %p= t('user.create_personal_login_terms', terms_of_service_url: CDO.code_org_url('/tos')).html_safe
+    %p= t('user.create_personal_login_email_note', privacy_policy_url: CDO.code_org_url('/privacy')).html_safe
+    %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
+
 = link_to t('crud.back'), :back
 
-:javascript
-  $( ".edit_user" ).on("submit", function(e){
-    if ($('#user_email').length) {
-      window.dashboard.hashEmail({ email_selector: '#user_email',
-        hashed_email_selector: '#user_hashed_email',
-        age_selector: '#user_age'});
-    }
-  });
+%script{src: minifiable_asset_path('js/devise/registrations/edit.js')}
+

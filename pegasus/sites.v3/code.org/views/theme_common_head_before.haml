@@ -18,7 +18,7 @@
     is_ie8 = true;
 
 =view :fonts
--if @header['style_min']
+-if @header['style_min'] && request.site != 'csedweek.org'
   =inline_css 'style-min.css'
 -else
   %link{rel:'stylesheet', type:'text/css', href:'/style.css'}

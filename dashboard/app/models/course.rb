@@ -113,6 +113,7 @@ class Course < ApplicationRecord
   def summarize
     {
       name: name,
+      id: id,
       title: localized_title,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: I18n.t("data.course.name.#{name}.description_student", default: ''),

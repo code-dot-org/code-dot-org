@@ -161,6 +161,7 @@ FactoryGirl.define do
   factory :section do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
+    login_type 'email'
   end
 
   factory :game do
@@ -233,6 +234,9 @@ FactoryGirl.define do
   factory :text_match, parent: :level, class: TextMatch do
     game {create(:game, app: "textmatch")}
     properties {{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
+  end
+
+  factory :bounce, parent: :level, class: Bounce do
   end
 
   factory :artist, parent: :level, class: Artist do
