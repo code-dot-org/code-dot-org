@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
-import StudentResources from './StudentResources';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -44,8 +43,6 @@ const StudentHomepage = React.createClass({
           isRtl={false}
           isTeacher={false}
         />
-
-        <StudentResources/>
 
       </div>
     );
