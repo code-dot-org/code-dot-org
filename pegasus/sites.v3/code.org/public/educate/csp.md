@@ -3,6 +3,7 @@ title: Computer Science Principles
 nav: educate_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 # Computer Science Principles
