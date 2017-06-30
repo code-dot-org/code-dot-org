@@ -7,7 +7,6 @@ Scenario: Completing Minecraft HoC should go to certificate page and generate a 
   Given I am on "http://studio.code.org/s/mc/stage/1/puzzle/14?noautoplay=true&customSlowMotion=0.1"
   And I rotate to landscape
   And I wait for the page to fully load
-  And element "#runButton" is visible
   Then I wait until the Minecraft game is loaded
   And I press "runButton"
   Then I wait until element "#rightButton" is visible
