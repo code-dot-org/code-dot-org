@@ -1,11 +1,13 @@
 =::NewRelic::Agent.browser_timing_header rescue ''
-%script=view 'google_analytics.js'
+=view :old_ie
+=view :jquery
+
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- user_type = request.cookies[cookie_key]
+
+%script=view 'google_analytics.js', user_type: user_type
 
 %script{:defer => "defer", src: minifiable_asset_path("js/code.org/views/theme_common_head_after.js")}
-
-/[if lt IE 9]
-  %script{:src=>'/js/html5shiv.js'}
-  %script{src:'/js/respond.min.js'}
 
 - if header['chart']
   %script{src:'https://www.google.com/jsapi'}

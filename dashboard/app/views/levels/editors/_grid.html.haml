@@ -29,7 +29,11 @@
       $("select[name='level[skin]']").on('change', renderGridEditor);
       renderGridEditor();
 
-  - elsif @level.is_a? Studio
+  - elsif @level.is_a?(Studio) || @level.is_a?(Bounce)
+    - skin = 'bounce' if @level.is_a?(Bounce)
+    - skin = 'playlab' if @level.is_a?(Studio)
+    - skin = 'starwarsgrid' if @level.is_a?(Studio) && @level.skin == 'hoc2015x'
+
     #gridEditor
     :javascript
       var container = document.getElementById('gridEditor');
@@ -39,9 +43,10 @@
           return { tileType: cell };
         });
       });
+
       ReactDOM.render(React.createElement(dashboard.GridEditor, {
         serializedMaze: serializedMaze,
-        skin: '#{@level.skin === 'hoc2015x' ? 'starwarsgrid' : 'playlab'}',
+        skin: '#{skin}',
         onUpdate: function (serializedData) {
           $('#level_maze_data').val(JSON.stringify(serializedData));
         }
