@@ -40,7 +40,7 @@ namespace :install do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
         if ENV['CI']
-          RakeUtils.rake 'db:setup_or_migrate seed:ui_test'
+          RakeUtils.rake 'db:create db:test:prepare'
         else
           RakeUtils.rake 'dashboard:setup_db'
         end

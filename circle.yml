@@ -115,6 +115,9 @@ test:
         dashboard_port: 3000
         pegasus_port: 3000
         " >> locals.yml
+    - cd dashboard && bundle exec rake db:setup_or_migrate seed:ui_test:
+        timeout: 1000
+    - cd ..
     - bundle exec rake circle:run_ui_tests:
         timeout: 7200
     - ./test.sh:
