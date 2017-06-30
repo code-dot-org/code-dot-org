@@ -11,6 +11,8 @@
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
     = render partial: 'layouts/analytics'
+    - if params[:ui_test_js_recorder]
+      = render partial: 'layouts/ui_test_js_recorder'
     // essential.js is ordered above application.js to filter new relic errors
     %script{src: minifiable_asset_path('js/essential.js')}
     = javascript_include_tag 'application'
