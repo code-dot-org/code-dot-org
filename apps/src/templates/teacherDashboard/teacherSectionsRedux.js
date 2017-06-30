@@ -77,7 +77,7 @@ export default function teacherSections(state=initialState, action) {
       const scriptAssignIds = (course.script_ids || []).map(scriptId =>
         assignmentId(null, scriptId));
       validAssignments[assignId] = {
-        ...course,
+        ..._.omit(course, 'script_ids'),
         courseId: course.id,
         scriptId: null,
         scriptAssignIds,
