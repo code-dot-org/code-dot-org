@@ -10,9 +10,3 @@
 
 - if header['chart']
   %script{src:'https://www.google.com/jsapi'}
-
-- if @header['video_player']
-  :javascript
-    $(window).load(function() {
-      loadVideos(window.location.search.indexOf("force_youtube_fallback") !== -1)
-    });
