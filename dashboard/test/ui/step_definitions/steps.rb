@@ -592,7 +592,7 @@ Then /^element "([^"]*)" contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expec
 end
 
 Then /^element "([^"]*)" eventually contains text "((?:[^"\\]|\\.)*)"$/ do |selector, expected_text|
-  wait_until(15) {element_contains_text?(selector, expected_text)}
+  wait_until {element_contains_text?(selector, expected_text)}
 end
 
 Then /^element "([^"]*)" has value "([^"]*)"$/ do |selector, expected_value|
