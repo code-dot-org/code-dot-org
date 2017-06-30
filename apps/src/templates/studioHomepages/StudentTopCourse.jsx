@@ -74,13 +74,13 @@ const StudentTopCourse = React.createClass({
       <div style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
         <div style={styles.name}>
-          {i18n.topCourseWelcome()} {assignableName}
+          {i18n.topCourseWelcome({assignableName})}
         </div>
         <div style={styles.description}>
           <div>
-            {i18n.topCourseLessonIntro()} {lessonName}.
+            {i18n.topCourseLessonIntro({lessonName})}
           </div>
-          <div style={{marginTop: 5}}>
+          <div style={{marginTop: 10}}>
             {i18n.topCourseExplanation()}
           </div>
         </div>
