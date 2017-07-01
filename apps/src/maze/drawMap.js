@@ -1,5 +1,6 @@
 import {SVG_NS} from '../constants';
 import tiles from './tiles';
+import {createUuid} from '../utils';
 
 const SquareType = tiles.SquareType;
 
@@ -55,9 +56,10 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
 
   if (subtype.start) {
     // Pegman's clipPath element, whose (x, y) is reset by Maze.displayPegman
-    var pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
-    pegmanClip.setAttribute('id', 'pegmanClipPath');
-    var clipRect = document.createElementNS(SVG_NS, 'rect');
+    const pegmanClip = document.createElementNS(SVG_NS, 'clipPath');
+    const pegmanClipId = `pegmanClipPath-${createUuid()}`;
+    pegmanClip.setAttribute('id', pegmanClipId);
+    const clipRect = document.createElementNS(SVG_NS, 'rect');
     clipRect.setAttribute('id', 'clipRect');
     clipRect.setAttribute('width', skin.pegmanWidth);
     clipRect.setAttribute('height', skin.pegmanHeight);
@@ -72,7 +74,7 @@ export default function drawMap(svg, skin, subtype, map, squareSize = 50) {
       skin.avatar);
     pegmanIcon.setAttribute('height', skin.pegmanHeight);
     pegmanIcon.setAttribute('width', skin.pegmanWidth * 21); // 49 * 21 = 1029
-    pegmanIcon.setAttribute('clip-path', 'url(#pegmanClipPath)');
+    pegmanIcon.setAttribute('clip-path', `url(#${pegmanClipId})`);
     svg.appendChild(pegmanIcon);
 
     displayPegman(skin, pegmanIcon, clipRect, subtype.start.x, subtype.start.y,
