@@ -306,6 +306,17 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
+  def summarize_as_bonus
+    {
+      id: id,
+      name: level.display_name || level.name,
+      type: level.type,
+      map: JSON.parse(level.try(:maze) || '[]'),
+      skin: level.try(:skin),
+      start_direction: level.try(:start_direction).to_i,
+    }.camelize_keys
+  end
+
   def self.cache_find(id)
     Script.cache_find_script_level(id)
   end
