@@ -6,7 +6,7 @@ title: "Skills and Strategies" view: page_curriculum theme: none
 
 <%= partial('doc_header', :title => 'Skills and Strategies', :disclaimer => 'Code.org K-5 Computer Science') %>
 
-[内容]
+[content]
 
 ## Teaching Computer Science
 

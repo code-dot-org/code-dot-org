@@ -6,7 +6,7 @@ title: Curriculum Overview view: page_curriculum theme: none
 
 <%= partial('doc_header', :title => 'Curriculum Overview', :disclaimer=>'Code.org K-5 Computer Science') %>
 
-[内容]
+[content]
 
 ## Who made this?
 

@@ -6,17 +6,17 @@ title: <%= hoc_s(:title_prizes) %> layout: wide nav: prizes_nav
 
 <%= view :signup_button %>
 
-# 2015 Hour of Codeの粗品
+# 2015 Hour of Code prizes
 
 <% if @country == 'la' %>
 
-# 各主催者に送られる粗品
+# 給所有組織者的獎勵
 
-Hour of Codeイベントの各主催者は、10GB分のDropboxのスペースが"Thank you"ギフトとして授与されます。
+Every educator who hosts an Hour of Code for students receives 10 GB of Dropbox space as a thank-you gift!
 
 <% else %>
 
-## すべての主催者に対する賞品
+## Prizes for EVERY organizer
 
 **Every** educator who hosts an Hour of Code is eligible to receive **$10 to Amazon.com, iTunes or Windows Store** as a thank-you gift!*
 
@@ -60,7 +60,7 @@ Lucky classrooms will have the opportunity to talk with guest speakers who will 
 
 [col-33]
 
-![画像](/images/fit-175/Kevin_Systrom.jpg)  
+![圖片](/images/fit-175/Kevin_Systrom.jpg)  
 Kevin Systrom   
 (co-founder and CEO of Instagram)   
 [Watch live Dec. 9 11 am PST](https://plus.google.com/events/cpt85j7p1ohaqu5e86m272aukn4)
@@ -69,7 +69,7 @@ Kevin Systrom
 
 [col-33]
 
-![画像](/images/fit-175/Dao_Nguyen.jpg)  
+![圖片](/images/fit-175/Dao_Nguyen.jpg)  
 Dao Nguyen   
 (Publisher, Buzzfeed)   
 [Watch live Dec. 7 12 pm PST](https://plus.google.com/events/cag6mbpocahk8h8qr3hrd7h0skk)
@@ -78,7 +78,7 @@ Dao Nguyen
 
 [col-33]
 
-![画像](/images/fit-175/Aloe_Blacc.jpg)  
+![圖片](/images/fit-175/Aloe_Blacc.jpg)  
 Aloe Blacc   
 (Recording artist)   
 [Watch live Dec. 8 3 pm PST](https://plus.google.com/events/clir8qtd7t2fhh33n8d9o2m389g)
@@ -91,7 +91,7 @@ Aloe Blacc
 
 [col-33]
 
-![画像](/images/fit-175/Julie_Larson-Green.jpg)  
+![圖片](/images/fit-175/Julie_Larson-Green.jpg)  
 Julie Larson-Green   
 (Chief Experience Officer, Microsoft)   
 
@@ -100,7 +100,7 @@ Julie Larson-Green
 
 [col-33]
 
-![画像](/images/fit-175/Hadi-Partovi.jpg)  
+![圖片](/images/fit-175/Hadi-Partovi.jpg)  
 Hadi Partovi   
 (Code.org co-founder)   
 [Watch live Dec. 11 10 am PST](https://plus.google.com/events/c2e67fd7el3es36sits1fd67prc)
@@ -153,57 +153,57 @@ Organizatorii evenimentelor Hour of Code în România vor beneficia de un prem
 
 <% end %>
 
-# よくある質問
+# 常見問題與解答
 
-## 誰が"Thank you"ギフトを授与される権利があるのですか？
+## Who is eligible to receive the all organizer thank-you gift?
 
 Both US and non-US Hour of Code 2015 organizers are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is limited to US residents only.
 
-## なにか、ギフトを受け取るにあたり登録の期限はありますか？
+## Is there a deadline to sign up to receive the all organizer thank-you gift?
 
-はい。<%= campaign_date('start_long') %>よりも**前に**、登録をしていただく必要があります。
+You must sign up **before** <%= campaign_date('start_long') %> in order to be eligible to receive the all organizer thank-you gift.
 
-## いつ、"Thank you"ギフトを受け取ることができますか？
+## When will I receive my thank-you gift?
 
-コンピュータサイエンス教育週間(<%= campaign_date('full') %>)が終わった後で、我々の方から次のステップをご案内させていただきます。
+We will contact you in December after Computer Science Education Week (<%= campaign_date('full') %>) with next steps on how to redeem your choice of thank-you gift.
 
-## 全ての"Thank you"ギフトを受け取ることができるのですか？
+## Can I redeem all of the thank-you gift options?
 
 No. Thank-you gifts are limited to one per organizer while supplies last. We will contact you in December after Computer Science Education Week with next steps on how to redeem your choice of thank-you gift.
 
 <% if @country == 'us' %>
 
-## 1万ドル相当のハードウェアの懸賞に申し込むには学校全体での参加が必要ですか？
+## 是否全校都需要參加才能贏得價值 $10,000 美元的硬體呢？
 
-はい。 Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %). Every teacher participating will need to [sign up](%= resolve_url('/') %) their classroom individually in order to receive the all organizer thank you gift.
+Yes. Your whole school has to participate to be eligible for the prize but only one person needs to register and submit the Hardware Prize application form [here](%= resolve_url('/prizes/hardware-signup') %). Every teacher participating will need to [sign up](%= resolve_url('/') %) their classroom individually in order to receive the all organizer thank you gift.
 
 ## Who is eligible to win the $10,000 in hardware?
 
-この賞は K-12 アメリカの公立学校のみ対象です。 To qualify, your entire school must register for the Hour of Code by November 16, 2015. アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられます。 Code.org will select and notify winners via email by December 1, 2015.
+公共 K 12 美國的學校僅限於獎。 To qualify, your entire school must register for the Hour of Code by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
 
-## なぜ1万ドルのハードウェア賞は公立学校だけが対象なのですか？
+## 為甚麼價值一萬美元的硬體獎勵只提供給公立學校？
 
-私たちは公立と私立の先生を同じように手助けしたいと思っていますが、これは結局はロジスティックスの問題に帰着します。 私たちは、[DonorsChoose.org](http://donorschoose.org)と提携して、クラスルーム賞の資金を管理していますが、この団体は米国のK-12公立高校のみを対象としているためです。 DonorsChoose.orgによると、公立学校用のデータへのアクセスのほうがより正確かつ一貫的に可能とのことです。
+我們很樂意説明教師在公立和私立學校一致好評，但在這個時候，可以歸結為後勤。 我們與 [DonorsChoose.org](http://donorschoose.org) 成為伙伴，管理班級的獎金獎品，其中僅適用于公共，美國 k-12 學校合作。 根據 DonorsChoose.org，該組織能更有效地為公立學校存取一致、 準確的資料。
 
-## ハードウェア賞への応募締切はいつですか？
+## 硬件獎申請的截止日期是什麼時候?
 
-To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. アメリカ国内で、各州それぞれ１つ学校が選ばれ、クラス全員にコンピューターが与えられます。 Code.org will select and notify winners via email by December 1, 2015.
+To qualify, you must complete the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) by November 16, 2015. 在每個美國州一所學校將收到一類組的電腦。 Code.org will select and notify winners via email by December 1, 2015.
 
-## もしHour of Codeイベントを、コンピュータサイエンス教育週間(<%= campaign_date('short') %>)で行えなかった場合でも、粗品を受け取る権利はありますか？
+## If my whole school can’t do the Hour of Code during Computer Science Education Week (<%= campaign_date('short') %>), can I still qualify for prizes?
 
-はい。
+Yes, in the [Hardware Application form](%= resolve_url('/prizes/hardware-signup') %) include the dates that your whole school is participating.
 
 <% end %>
 
 <% if @country == 'us' || @country == 'ca' %>
 
-## ゲストで演説される方とのビデオ会話:
+## 視頻聊天的特邀演講者：
 
-賞品は米国およびカナダのK-12の教室に限っております。 Code.org は独自で学校を選考し、web会話の時間帯を提供し、コンピューターに詳しい先生と共に詳細の設定を行います。 学校全体でこの賞品の対象となるための申請をする必要はありません。 Both public and private schools are eligible to win.
+K 12 間教室在美國和加拿大只限于獎。 Code.org 將選擇獲獎教室、 網路聊天，為提供一段時間和工作適當的教師，以設置的技術詳細資訊。 你整個的學校不需要申請領取這一獎項。 Both public and private schools are eligible to win.
 
 <% end %>
 
-## 私は米国外に住んでますが、粗品への応募資格はありますか？
+## 我是美國以外的國家。可以領取獎品?
 
 Yes, all organizers, both US and non-US, are eligible to receive the all organizer thank-you gift while supplies last. The $10K hardware prize is US only.
 

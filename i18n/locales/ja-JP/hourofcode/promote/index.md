@@ -10,28 +10,28 @@ title: <%= hoc_s(:title_how_to_promote) %> layout: wide nav: promote_nav
 
 twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)} twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_default_text).include? '#HourOfCode' %>
 
-# どうやって協力すればいい？
+# 如何參與
 
-## 1. みんなに広めましょう
+## 1.廣為宣傳
 
-Tell your friends about the **#HourOfCode**!
+讓你的朋友們知道**#HourOfCode**活動!
 
 <%= view :share_buttons, facebook:facebook, twitter:twitter %>
 
-## 2. Hour of Codeを主催するよう学校と交渉しましょう。
+## 2.要求你的整所學校都提供一小程式設計活動
 
-[このメール](%= resolve_url('/promote/resources#sample-emails') %)を校長に送信して、あなたの学校の全てのクラスでHour of Codeのイベントを行うようにお願いしましょう。
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your principal and challenge every classroom at your school to sign up.
 
-## 3. 会社の方々にも働きかける
+## 3. 詢問你的上司是否想參予
 
-[このメール](%= resolve_url('/promote/resources#sample-emails') %)をあなたの上司やCEOに送信しましょう。
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your manager or company's CEO.
 
-## 4. Hour of Codeを、あなたの周りのコミュニティで宣伝
+## 4. Promote Hour of Code in your community
 
-[地元のグループを勧誘](%= resolve_url('/promote/resources#sample-emails') %)しましょう。例えば、ボーイスカウトや大学、教会などのグループです。 新しいスキルを学ぶのは、必ずしも学校である必要はありません。 [これらのポスターやバナー、ステッカーやビデオ](%= resolve_url('/promote/resources') %)をイベントで利用しましょう。
+[Recruit a local group](%= resolve_url('/promote/resources#sample-emails') %)— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. You don't have to be in school to learn new skills. Use these [posters, banners, stickers, videos and more](%= resolve_url('/promote/resources') %) for your own event.
 
-## 5. 地元選出の議員にもHour of Codeのサポートをお願いしましょう
+## 5. 詢問當地的政府機構是否參予Hour of Code
 
-[このメール](%= resolve_url('/promote/resources#sample-emails') %)を地元選出の議員や教育委員会に送信して、学校で行うHour of Codeのイベントを見学して頂けるようにお願いしましょう。 この取り組みは、コンピュータサイエンス教育に関する活動を長期的に支援することにつながります。
+[Send this email](%= resolve_url('/promote/resources#sample-emails') %) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. It can help build support for computer science in your area beyond one hour.
 
 <%= view :signup_button %>

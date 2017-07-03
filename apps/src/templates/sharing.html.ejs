@@ -30,6 +30,13 @@
         </button>
       </a>
     <% } -%>
+    <% if (options.wechatUrl) { -%>
+      <a href='<%= options.wechatUrl %>' target="_blank" class="popup-window">
+        <button>
+          <i class="fa fa-wechat fa-lg"></i>
+        </button>
+      </a>
+    <% } -%>
     <% if (!options.onMainPage && !options.disablePrinting) { %>
       <button id="print-button">
         <i class="fa fa-print fa-lg"></i>

@@ -901,7 +901,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     if (options.twitter && options.twitter.text !== undefined) {
       twitterUrl += "&text=" + encodeURI(options.twitter.text);
     } else {
-      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @codeorg");
+      twitterUrl += "&text=" + encodeURI(msg.defaultTwitterText() + " @istemedu");
     }
 
     if (options.twitter && options.twitter.hashtag !== undefined) {
@@ -922,6 +922,9 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
     var facebookUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                       options.response.level_source;
     options.facebookUrl = facebookUrl;
+    
+    var wechatUrl = "http://s.jiathis.com/?webid=weixin&url=" + options.response.level_source + "&title=" + encodeURI(msg.defaultTwitterText() + " @istemedu") + '&isexit=true';
+    options.wechatUrl = wechatUrl;
   }
 
   options.assetUrl = this.studioApp_.assetUrl;

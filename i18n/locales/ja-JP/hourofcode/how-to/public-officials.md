@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to bring the Hour of Code to your entire community.
+# 如何把Hour of Code 活動介紹給你的整個社區。
 
 [col-33]
 
@@ -18,7 +18,7 @@ title: <%= hoc_s(:title_how_to_officials) %> layout: wide nav: how_to_nav
   &nbsp;
 </p>
 
-## すべての学校が参加して、 すべての生徒が学ぶ！
+## 讓每個學校參予，每個學生學習！
 
   1. **Read our one-pager** on why computer science education is important, and how you can help the effort by supporting the Hour of Code. [Get the one-pager here.](/files/hoc-one-pager-public-officials-2016.pdf)
 

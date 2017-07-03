@@ -6,13 +6,13 @@ title: <%= hoc_s(:title_how_to_volunteers) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# ボランティア用ガイド
+# 給志工們的How-to指南
 
-## Why volunteer?
+## 為什麼需要志工的加入呢？
 
 Check out some testimony from past volunteers:
 
-  * “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
+  * 在我經驗中最美好的部分是，整個課堂上都是女性與各個族裔的人們。這預告了我們這個產業將擁有機會去觸及與激發這些孩子們的未來。
   * “Especially enjoyed getting to encourage young girls in technology. Felt like I was helping the next generation in my local area.”
   * “I LOVED seeing how excited the kids were. One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others are them - giving them a place to feel confident.”
 
@@ -29,7 +29,7 @@ Tell your friends and co-workers about the Hour of Code. We have thousands of te
   * A teacher will contact you through this form (your email address will never be shared with the teacher). 
       * If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher. 
 
-## How to prepare:
+## 如何準備:
 
 Try out tutorials before heading to the classroom by going to hourofcode.com/learn Prepare an intro: Get the students excited! Pick out a video to show to help focus the class and get them excited to do an Hour of Code.
 
@@ -61,7 +61,7 @@ Try out tutorials before heading to the classroom by going to hourofcode.com/lea
 
 ### **Sample agenda:**
 
-Introduce yourself: </ul>
+自我介紹: </ul>
 
   * What do you work, what do you do, and what do you love most about your job?
   * What or who inspired you

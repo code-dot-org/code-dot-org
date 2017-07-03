@@ -6,7 +6,7 @@ title: Implementation Tips view: page_curriculum theme: none
 
 <%= partial('doc_header', :title => 'Implementation Tips', :disclaimer => 'K-5 Curriculum: Courses 1, 2, 3') %>
 
-[内容]
+[content]
 
 This document offers suggestions for implementing an individual K-5 course in an elementary school classroom, as well as planning the rollout of all three K-5 courses as a pathway across elementary school grade levels.
 
@@ -16,7 +16,7 @@ Where do you teach the courses? Use an existing "special" like media (library) o
 
 Whether you are a grade level teacher or a specialist (media, art, technology), the K-5 courses are designed to be flexibly implemented. While each course is set up to run as one lesson per week for a semester (half-year), they can alternatively be run as contiguous lessons for about a month or one lesson every two weeks for a year. Lessons are meant to be completed in order and can range from as little as 20 minutes to more than 45 minutes if extension activities are included.
 
-[ヒント]
+[tip]
 
 # Unplugged Lessons
 
@@ -35,7 +35,7 @@ Here are implementation tips for three common computer use situations in an elem
   * Computers in the classroom (usually 2 to 6) 
       * Use a “centers” approach by mixing an unplugged activity station with a computer-based online puzzle station. In larger classes, you may want to split up components of the unplugged activity into separate stations and use pair programming at the computer station if there aren’t enough computers. 
 
-[ヒント]
+[tip]
 
 # Pair Programming
 

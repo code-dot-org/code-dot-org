@@ -4,7 +4,7 @@ title: <%= hoc_s(:title_partners) %>
 
 * * *
 
-The Hour of Code is driven by the Hour of Code and Computer Science Education Week Advisory and Review Committees.
+「一小時的程式設計課程」是由「一小時的程式設計課程與電腦科學教育週」諮詢與審查委員會所推動。
 
 The [Advisory Committee](%= resolve_url('/advisory-committee') %) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. This committee guides the strategy for the Hour of Code campaign.
 
@@ -116,37 +116,37 @@ Both committees' work and dedication have contributed to the success of the Hour
 
 <% end %>
 
-# 主要なパートナーおよび協賛企業
+# 主要合作夥伴和企業的贊助者
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'major') %>
 
 * * *
 
-# Major Promotional Partners
+# 宣傳的主要夥伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'promotional') %>
 
 * * *
 
-# International Partners
+# 國際夥伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'international') %>
 
 * * *
 
-# Tutorial Partners
+# 教案的夥伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'tutorial') %>
 
 * * *
 
-# Infrastructure partners and tools
+# 基礎設施的合作夥伴和工具
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'infrastructure') %>
 
 * * *
 
-# Additional Partners
+# 更多的夥伴
 
 <%= view :about_logos, logos:DB[:cdo_partners].where(hourofcode_b:true).and(kind_s:'additional') %>
 

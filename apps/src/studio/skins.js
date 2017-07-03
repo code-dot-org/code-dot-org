@@ -17,7 +17,7 @@ import skinsBase from '../skins';
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.
 var plainTwitterOptions = {
-  text: commonMsg.defaultTwitterText() + " @codeorg",
+  text: commonMsg.defaultTwitterText() + " @istemedu",
   hashtag: 'HourOfCode'
 };
 

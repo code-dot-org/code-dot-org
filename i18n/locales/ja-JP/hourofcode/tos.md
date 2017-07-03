@@ -1,90 +1,90 @@
 * * *
 
-タイトル: サービス利用規約
+標題: 服務條款
 
 * * *
 
 ### The binding legal language is in English, and can be found [here](https://code.org/tos). Below is a translation.
 
-# サービス利用規約
+# 服務條款
 
-最終改訂日: 2014 年 12 月 5 日
+Last Revised: December 5, 2014
 
-Code.orgは501(c)(3)に基づく非営利団体です(“Code.org”)。 我々の使命はコンピューターサイエンスを学ぶ機会を全ての生徒に提供することです。 その一環として、Code.orgは<http://code.org>, <http://csedweek.org>, <http://computinginthecore.org>, <http://hourofcode.com>などのウェブサイトで、各種情報、テキスト、カリキュラム、ビデオ、グラフィック、写真、API、電子メールによるお知らせ、そのた関連する資料、製品、サービス(“**サービス**”)などを運営します。その中には、<http://studio.code.org> でのチュートリアルプラットフォーム (“**Code Studio**”)も含まれます。
+Code.org 是一個 501(c)(3) 非營利組織("Code.org")。 我們的使命就是要給每個學生有機會學習資訊科學。 作為這一使命的一部分，Code.org 經營了以下數個網站： [HTTP://code.org](http://code.org)、 [HTTP://csedweek.org](http://csedweek.org)、 [HTTP://computinginthecore.org](http://computinginthecore.org)、 [HTTP://hourofcode.com](http://hourofcode.com)，還有其他網站、 資訊、 文字、 課程、 影片、 圖片、 照片、 API、 電子郵件通知、其他素材及相關的產品和服務 ("**服務**")，包括教學平台 [HTTP://studio.code.org](http://studio.code.org) ("**Code Studio**")。
 
-私たちのサービスを使ったりアクセスしたりする前に利用規約 (“**Terms**”) を注意深くお読みください。 "同意します"、”サインアップ”といったボタンをクリックしてサービスの一部を利用する、もしくはアクセスすることは、利用規約に同意したことを意味します。
+請在使用這些服務之前，仔細閱讀這些服務條款（"**條款**"）。 訪問或使用服務的任何部分，或點擊"我同意"或"註冊"按鈕，可表示你意味著您同意受這些條款而無需修改。
 
-これらの利用規約は、サービスを利用する上で、あなたとCode.orgの間での法的な契約となります。 Code.orgとの契約に同意できるときに限りサービスを利用することができます。合衆国の法律で禁止されている、もしくは他の法的な問題で禁止されている人は利用できません。 会社、組織、政府、その他の法人の代表として、利用規約に同意する場合、あなたがそれを行う権限があるものとします。 これらの利用規約、地域、州、国、国際的な法やルール、規制に準拠している場合のみ、サービスを利用することができます。
+這些條款是在您和 Code.org 之間，關於您使用服務的法律合同。 只有當你能與Code.org簽有約束力的合同，並且沒有接收根據美國或其他適用的司法管轄區的法律禁止接受服務的人，您就可以使用本服務。 如果您接受這些條款並在服務公司代表、 組織、 政府或其他法律實體使用，您表示並保證您有權這樣做。 您可以使用服務只有遵守這些條款和所有適用的當地、 國家、 國家和國際法律、 規則和條例。
 
-これらの規約は更新されることがあります。変更後にもサービスを利用する倍、これらの変更に同意したものとみなされます。ですから、定期的に更新をチェックするようにしてください。
+這些條款如有任何更改。表示您同意受此類更改，如果您繼續使用到服務後這些條件的變化，所以請檢查定期更改這些條款。
 
-## 追加条項
+## 附加條款
 
-いくつかのサービスは、利用規約 (“**追加情報**”) のルール、ガイドラインに準じます。そのようなサービスを利用した際には追加条項に同意したものとみなします。 利用規約と追加条項に不整合な箇所がある場合、利用規約が追加条項より優先すると明示的に示されない限り、追加条項が優先されるものとします。
+某些服務可能會受到額外發佈的指南、 規則或服務 ("**附加條款**") 的條款及條件您使用這種服務將是您附加的條款的協定。 如果這些條款之間有任何衝突和附加條款，附加條款將控制為該服務，除非附加條款明確指出，這些條款將控制。
 
-### 13歳未満のこども
+### 13 歲以下兒童
 
-Code.orgの[個人情報保護方針](http://code.org/privacy)に明記されているように、13歳未満の子供からの個人情報は極力収集しないようにしています。 もしあなたが13歳未満の場合、Code.orgでアカウントを作る前に保護者や法的保護者の許可を得ることを強くお勧めします。 Code.orgは、チュートリアルや教育関連のサービスを通して、学区の代表、学校、先生、管理者、カウンセラー、他の教育関係の方 (“**教育者**”) が生徒とつながることを許可しています。 あなたが教育者の場合、サービス用に生徒用のアカウントを作成するかもしれません。
+我們採取措施來減少 Code.org [隱私權原則](http://code.org/privacy) 所述的 13 歲來自使用者的個人資料的集合。 如果你是年齡在 13 歲以下，我們鼓勵您獲得父母或法律監護人的批准才可在 Code.org 上創建一個帳戶。 Code.org 允許某些代表的學區和學校，例如教師、 管理員、 輔導員和其他教育工作者 ("**教育家**") 連接與學生通過服務提供教程，教育和類似的服務。 如果你是一位教育家，您可以註冊帳戶對一個或多個您的學生服務。
 
 If you are an Educator and you register an account for a student who is under the age of 13 (a “**Child**”), you represent and warrant that you or the educational organization you work for has proper permission to register the Child for educational services, such as Code.org, that collect some of the Child’s personal information for the use and benefit of the school and for no other commercial purpose. In addition, you agree to be bound by these Terms on behalf of the educational organization you work for.
 
-### あなたのアカウント
+### 您的帳戶
 
-サービスを利用するためにアカウントを作成した場合、パスワードやアカウントの安全を保つのはあなたの責任となります。 教師によってアカウントを割り当てられた場合、その教師はアカウントへアクセスしたり、そのアカウントを無効にしたりすることができます。
+如果您為服務創建一個帳戶，你有責任為您的帳戶安全並保持自己的密碼安全。 如果您使用的帳戶分配給你的一位教育家，你教育家可能能夠訪問和禁用您的帳戶。
 
-Code.orgはFacebook Connect やGoogle (“**認証サービス**”)などのソーシャルネットワークサービスを介してアカウントを登録することを許可しています。 他の認証サービスを使ってサービスへ登録することは、認証サービスから取得したあなたのアカウント情報にCode.orgがアクセスすること、また、認証サービスの利用規約に同意したことになります。 認証サービスとのインタラクションについてはあなたが全責任を負うものとします。
+Code.org 可能允許您通過某些協力廠商的社交網路服務，如 Facebook 和谷歌 ("**身份驗證服務**") 的服務註冊一個帳戶。 註冊使用身份驗證服務的服務，即表示您同意 Code.org 可能會訪問您的帳戶資訊從身份驗證服務和您同意使用身份驗證服務的任何和所有條款關於您使用服務通過身份驗證服務。 你是獨自負責您與身份驗證服務的交互。
 
-### プライバシー
+### 隱私權
 
-あなたのプライバシーは私たちにとって重要です。 Code.orgの[個人情報保護方針](http://code.org/privacy)では、私たちがあなたの個人情報をどのように扱うか、どのように利用規約から参照されているかについて説明がなされています。 Code.orgの個人情報の開示、使用、収拾については、個人情報保護方針を注意深くお読みください。
+您的隱私對我們至關重要。 Code.org 的 [私隱政策](http://code.org/privacy) 解釋了我們如何對待您的個人資料，並納入這些條款通過引用。 請閱讀隱私政策仔細為有關 Code.org 的收集、 使用和披露您的個人資訊資料。
 
-もしあなたが生徒で、先生やその他教育関係者によって作成されたアカウントを利用している場合、Code.orgがあなたの情報を教育者に開示することに同意したことになります。 もしあなたが教育者の場合、 Code.org から取得した情報を、教室や学校区、その他の教育機関の認定エージェント以外の誰にも共有しない旨に同意したものとします。
+如果你是一個學生使用的帳戶由教育家為你註冊，或否則連接到一個教育工作者，你同意 Code.org 可能披露您的資訊與您的帳戶相關聯的教育工作者。 如果你是一名教育工作者，您同意不共用您收到來自 Code.org 與任何非授權代理商的教室、 學校區或其它你所代表的教育機構的學生資訊。
 
-### ユーザーが作成したコンテンツの管理: ライセンス付与; 表明と保証
+### 使用者生成的內容的管理; 許可證的授予; 陳述和保證
 
-Code.orgは現時点、もしくは将来において、あなたやほかのユーザーがコンピューターコード(ソースコードやオブジェクト形式を含む)、情報、テキスト、グラフィック、注釈、質問、コメント、レーティング、レビュー、画像、ビデオ、その他のコミュニケーション(以下, “**ユーザーコンテンツ**”)をポストすることを許可するものとします。 ユーザーコンテンツが公開されたか否かに関わらず、いかなる提出物に関しても、Code.orgはそのコンテンツの秘密性は保証しません。
+Code.org 可能現在或將來允許您和其他使用者發送到服務的電腦代碼 (包括原始程式碼和結果代碼)、 資訊、 文本、 圖形、 筆記、 問題、 評論、 評級、 評論、 圖像和視頻或其他通信 (統稱"**使用者內容**")。 你明白，不論發表了此類使用者內容，Code.org 並不保證任何提交任何保密。
 
-Code.orgはユーザーコンテンツや他の素材を監視する義務はないものとします。 正確性、完全性、信頼性など、全てのユーザーコンテンツの評価にはあなたが責任を持つものとします。また、ユーザーコンテンツを利用した際のリスクもあなたが負うものとします。 Code.orgはユーザーコンテンツの提出物による如何なるダメージに関しても責任は負わないものとします。
+Code.org 也沒有義務監控使用者內容或其他材料。 你是負責評估所有使用者內容的準確性、 完整性和可靠性，包括和您承擔所有風險的使用此類使用者內容。 Code.org 不會提交或使用的任何使用者內容所招致的任何損失負責。
 
-Code.orgは、ユーザーがお互いにコミュニケーションするようなサービス、例えばチャットルーム、ラブチャット、掲示板、その他のユーザーフォーラム、それに類するいかなるコミュニケーションでの内容を監視もしくはレビューするかもしれませんが、そのような義務は負いません。 そのようなコミュニケーションにはリスクがあることを認識してください。Code.orgはそのようなコミュニケーションの利用やその内容について何ら責任を負わないものとします。
+Code.org 可能，但並不一定要監視或審查任何服務在使用者完全互相溝通，包括但不是限於聊天室、 線上聊天、 電子公告板或其他使用者論壇和任何此類通信的內容。 你承擔風險的這種通信和 Code.org 有相關的內容或任何此類通信的使用不承擔任何責任。
 
-ウェブサイトの内容が利用規約に違反しない範囲で、ユーザーコンテンツの中にサードパーティーのウェブサイトへのリンクが含まれることがあります。 そのようなリンクをクリックすることはあなたの責任の範囲で行ってください。 Code.orgは、リンク先のウェブサイトが利用できるかどうか、広告の有無、製品やその他の内容について責任を負いません。
+使用者，只要此類網站的內容不違反這些條款可能包括使用者的內容，並與協力廠商網站的連結。 按一下這些連結是您唯一的風險。 Code.org 是網站的不負責的可用性或連結，包括廣告、 產品或其他材料有關的內容。
 
 By submitting or distributing User Content through the Services or directly to Code.org staff, you hereby grant to Code.org a worldwide, non-exclusive, transferable, assignable, fully paid-up, royalty-free, perpetual, irrevocable right and license to host, transfer, display, perform, reproduce, modify, distribute and re-distribute, adapt, prepare derivative works of, use, make, have made, import, and otherwise exploit your User Content, under all intellectual property rights therein, in whole or in part, in any media formats and through any media channels (now known or hereafter developed).
 
-更に、サービスを介してのユーザーコンテンツの提出や配布することは、サービスのユーザーに対しても、非排他的にアクセスしたり使用したりする許可を与えたものとします。
+此外，提交或發佈使用者內容通過服務，您在此授予對每個使用者的服務非獨家許可，訪問和使用您的使用者內容。
 
-### ユーザー コンテンツの表明および保証
+### 使用者內容的陳述和保證
 
-サービスに提出したユーザーコンテンツと、そのコンテンツを提出したり公開したりすることによる結果についても、あなたはすべての責任を負うものとします。 サービスへあなたのコンテンツをアップロード、提出、作成、公開することは、あなたが以下のことを表明・保証することを意味します。(1)あなたがコンテンツの所有者兼作成者であり、コンテンツを公開するうえで必要なライセンス、権利、同意、許可を得ているものとします。(2)あなたのコンテンツは、(a)所有権、知的財産権、肖像権、プライバシーの権利、人格権、企業秘密、特許、商標、著作権、サードパーティーの権利、といったこれらの権利を不正流用したり、抵触していないものとします。(b)中傷、毀損、告訴、プライバシーの侵害、肖像権や所有権の侵害をおこなっていないものとします。(3)あたなのコンテンツはいかなるウイルス、アドウェア、自己増殖プログラム、スパイウェア、など悪意のあるコードを含んでいないものとします。
+你是全權負責使用者內容您發佈到服務和張貼或發佈他們的後果。 通過上傳、 提交、 創建，或發佈您的使用者內容或通過服務，您代表，並保證: (1) 你的創造者和擁有者的您的使用者內容，你有權使用或有必要的許可證、 權利、 份同意書和許可權發佈使用者內容您提交;(2) 您的使用者內容不會也不會: (a) 侵犯，違反、 或挪用任何協力廠商權利，包括任何版權、 商標、 專利、 營業秘密、 道德權利、 隱私權利、 權利的宣傳，或任何其他智慧財產權或專有權利或 (b) 誹謗，詆毀、 誹謗，或侵犯隱私、 宣傳或其他智慧財產權的任何其他人; 權利(3) 您的使用者內容不包含任何病毒、 廣告軟體、 間諜軟體、 蠕蟲或其他惡意程式碼。
 
-### コンテンツおよびサービスの使用に関する制限事項
+### 對內容和使用的服務的限制
 
-私たちは、なんら責任を負うことなく、あなたのコンテンツの配布を断ったり、削除したり、ユーザーの利用を停止したり、削除したりする権利を常に有するものとします (ただし義務はありません)。 わたしたちは、如何なる情報にたいしても、アクセスしたり、読んだり、保存したり、開示したりする権利を有するものとします。これは、(i)如何なる法律、規制、法的手続き、政府からの要請にこたえるため、(ii)潜在的な利用違反の調査をふくめ、利用規約を順守するため、(iii)セキュリティやその他技術的な詐欺を検出、予防するため、(iv)ユーザーサポートリクエストに応えるため、(v)Code.orgとそのユーザーの安全性、権利を保護するため、です。
+我們在任何時候都有權 (但不是會有義務) 刪除或拒絕分發任何使用者內容的網站上，暫停或終止使用者，沒有給你的責任。 我們也有權訪問、 讀取、 保留，和透露任何資訊，因為我們有理由相信是必要的 (i) 滿足任何適用的法律，法規，法律程式或政府要求，(ii) 強制執行的條款，包括調查可能違反本協定，(iii) 檢測、 防止，或以其他方式解決欺詐、 安全或技術問題，(iv) 回應使用者支援請求，或 (v) 保護的權利財產或 Code.org、 其使用者及公眾的安全。
 
-サービスへアクセスしたり利用したりする際は以下のことをしてはいけません: (i)サービスの非公開エリア、Code.orgのコンピューターシステム、Code.orgのプロバイダーの配送システムへのアクセスや改ざん; (ii)システムやネットワークの脆弱性のテスト、調査、スキャン、認証方法やセキュリティの回避や侵害; (iii)Code.orgと別途合意の上で特別に認められていないかぎり、Code.orgが公開しているインタフェース以外の方法でもサービスにアクセスしたり、アクセスする方法を検索したりすること (注: robots.txtの規定などによりサービスをクロールすることは認められています。ただし、Code.orgとの事前合意なくウェブスクレイピングを行うことは禁止します); (iv)いかなるサービスを利用する際、投稿、メールなどにおいて、ソースを特定する情報を欺むくために、TCP/IPのパケットヘッダーやいかなるヘッダー情報も偽装すること; (v)他の人、ホスト、ネットワークの邪魔(もしくはそう試みること)や干渉すること、誹謗中傷、嫌がらせ、ウイルスの送信、過負荷、スパム、サービスへのメール攻撃、またサービスに負荷をかけるためスクリプトでのコンテンツ生成などにより干渉すること
+你不可能做的以下任何訪問或使用服務時: (i) 訪問、 篡改，或使用非公共領域的服務，Code.org 的電腦系統或技術的運載系統的 Code.org 的供應商;(ii) 探針、 掃描或測試漏洞的任何系統或網路或違反或規避任何安全或身份驗證的措施;(iii) 訪問或搜索或嘗試訪問或搜索的服務通過的任何方式 (自動或其它) 比其他目前可用，出版和也提供了 Code.org (只有根據這些條款及條件)，除非你有獲得特別允許，做到與 Code.org 的單獨協定的介面 (注: 爬行服務是允許的如果做的 robots.txt 檔規定然而，明文禁止刮 Code.org 事先未經服務);(iv) 任何 TCP/IP 資料包報頭或其任何部分的標頭資訊中的任何電子郵件或張貼，或以任何方式使用服務發送偽造塗改、 欺騙性或虛假源標識資訊;(v) 干擾或破壞，(或嘗試這樣做)，或訪問的任何使用者、 主機或網路，包括但不限於，欺負或騷擾、 發送病毒、 超載、 水浸、 發送垃圾郵件、 郵件炸彈的服務，或通過編寫腳本以這種方式創建內容干擾或在服務上創建不必要的負擔。
 
-### Code.orgのビデオ、チュートリアル、データ、APIsを使う際のライセンス
+### 您對使用 Code.org 視頻、 教程、 資料和 Api 的許可證
 
-Code.orgの[ビデオライブラリ](http://youtube.com/user/CodeOrg)はいかの以下の条件の下、自由に再配布することができます。 (1)ビデオはそのままの状態で再配布すること(提供されているビデオプレーヤーを使用して、もしくは、ダウンロード用のリンクから)、(2)ビデオはマッシュアップに組み込まれないこと、(3)ビデオはコンピューターサイエンスの教育に利用されること、(4)ビデオが特定のサードパーティーのサービスや製品の支持に利用されないこと、(5)コンテンツやサービスへのアクセスが無料で提供されること
+Code.org 的 [視頻庫，](http://youtube.com/user/CodeOrg) 可能會重新分配自由表達的條件 (1) 視頻被重新分發 AS-IS，(使用嵌入式視頻播放機提供，或如果提供下載連結) 與歸屬於 Code.org (2) 錄影不納入任何混搭，(3) 視頻用於電腦科學教育目的，和 (4) 使用的視頻並不構成協力廠商品牌背書提供服務或產品和 (5) 如果訪問類似重新分配內容或服務是免費。
 
-Code.orgのチュートリアルビデオの出演者は肖像権名前に関するすべての権利を保持しています。 チュートリアルやビデオをそのままの形で再配布することは許可されていますが、個々の出演者の肖像や名前の使用に関してはいかなる追加的な権利もCode.orgは許可していません。
+名人和 Code.org 教程視頻中出現的視頻"鑄"成員保留所有的權利，對他們的肖像和名稱。 通過允許您重新發佈這些視頻或作為AS-IS，Code.org 並不授予任何額外的許可權使用的肖像或這些個人的名字。
 
-チュートリアルで使用されているイラストは著作権を有するものであり、これらのチュートリアルを使用することはイラストを任意の方法で利用する権利を与えるものではありません。 プラント vs. Zombies are (c) 2014 [Electronic Arts Inc](http://www.ea.com/). プラント vs. ゾンビとポップキャップは[Electronic Arts Inc](http://www.ea.com/)の登録商標です。 Angry Birds are (c) 2014 [Rovio Entertainment Ltd](http://www.rovio.com/). アングリーバードは[Rovio Entertainment Ltd](http://www.rovio.com/)の登録商標です。 スクラットとアイスエイジはTwentieth Century Fox Licensing and Merchandisingの登録商標です。
+在我們的教程中使用的作品的版權和使用教程，這些並不授予您任何以任何其他方式使用該作品的權利。 植物大戰。 Zombies are (c) 2014 [Electronic Arts Inc](http://www.ea.com/). 植物大戰。 僵屍和 PopCap 是 [電子藝術公司](http://www.ea.com/) 的商標。 Angry Birds are (c) 2014 [Rovio Entertainment Ltd](http://www.rovio.com/). 憤怒的小鳥是 [Rovio 娛樂有限公司](http://www.rovio.com/) 的商標。 Scrat和冰河時代是商標和 © 二十世紀福克斯牌和商品。
 
-Code.orgのチュートリアルで動作するソフトウェアはオープンソースライセンスで管理されており、[source code repository](https://github.com/code-dot-org/)の一部としてポストされています。.
+作為 [原始程式碼儲存庫](https://github.com/code-dot-org/) 的一部分發布的開放原始碼許可受供電 Code.org 教程軟體.
 
-上述したビデオの所有者やイラスト以外、Code.orgによって開発されたすべてのカリキュラムとチュートリアルの素材はCreative Commons Attribution-NonCommercial-ShareAlike 4.0 Unported Licenseのもとであなたにライセンスされます。 このライセンスに関する詳細は<http://creativecommons.org/licenses/by-nc-sa/4.0/>をご覧ください。 Code.orgは、非排他的で、譲渡可能な、サブライセンス可能でない、Code.orgのカリキュラムとチュートリアルの素材へのアクセス、表示、利用、表示といった、限定された権利とライセンスをあなたに許可します。 Code.orgのカリキュラムとチュートリアルは、非商用のコンピューターサイエンス教育の目的のみに使用されます。
+非專有視頻和上面提到的藝術品，由 Code.org 開發的所有課程和教程材料都授權給您使用知識共用署名-非商業性使用 4.0 伝授權合約。 有關此許可證的詳細資訊可以在發現: <http://creativecommons.org/licenses/by-nc-sa/4.0/>。 Code.org 授予您非獨佔的、 可轉讓的、 非從屬許可的、 有限的許可權和許可來訪問、 查看、 使用和顯示的 Code.org 課程和教程材料。 Code.org 課程和教程材料只可用於非商業，電腦科學教育目的。
 
-[Code.org JSON API と学校用データベース](http://code.org/learn/find-school/json) は [Creative Commons attribution license](http://creativecommons.org/licenses/by-nc-sa/4.0/)を介してライセンスされます。これは、Code.orgに帰属しているかぎり、派生物を作成するためにデータを自由に利用できることを意味します。
+[Code.org JSON API 和資料庫的學校](http://code.org/learn/find-school/json) 被許可通過 [知識共用署名許可](http://creativecommons.org/licenses/by-nc-sa/4.0/)，這意味著你可以自由使用資料，使衍生作品，只要是你給 Code.org 歸屬。
 
-Conference Boardで提供される任意のデータは、そのままの状態で提供されるもので、何ら保証はしません。また、いかなるものであっても、米国および国際著作権の法律によって保護されます。 表示されているデータは情報提供目的のみであり、アクセスしたり、レビューしたり、出版したり、といった許可を与えるものではありません。Conference Boardは[www.conference-board.org](http://www.conference-board.org)に表示されている条件と一致します。 Conference Boardによる書面での許可を得ることなく、そのようなデータをデータベースで利用するために抽出すること、派生物を生成するために使用することは不正使用となります。ただし、1976年の著作権法、Section 107の公正使用のもと、非商用に限り利用する場合は除きます。 Conference Board® と Conference Board Help Wanted OnLine® はConference Boardの登録商標です。 Conference Boardは商標とそれに関わるすべての権利を保持します。 Conference Board Help Wanted OnLine®とそれに関する情報は[ここ](https://www.conference-board.org/data/helpwantedonline.cfm)をご覧ください。.
+會議局提供的任何資料都提供"按原樣"，沒有保修，並受美國和國際版權法。 顯示的資料提供僅用於提供資訊和可能只被訪問、 審查、 出版，或用於符合和會議委員會符合使用條件顯示在 [www.conference-board.org](http://www.conference-board.org) 的許可。 除了，你可以作為符合公平使用有限的非商業用途第 1976 年版權法第 107 條，不可能用於在資料庫中，用於創建衍生作品，或以任何方式未經明確的書面許可，從會議委員會，否則濫用提取這些資料。 世界大企業聯合會 ® 和會議委員會想要線上說明 ® 是會議委員會的註冊的商標。 世界大企業聯合會保留所有的權利和對其商標。 關於會議委員會想要線上說明 ® 資訊可以進一步發現 [在這裡](https://www.conference-board.org/data/helpwantedonline.cfm).
 
-### 著作権ポリシー
+### 版權政策
 
-Code.orgは他人の知的財産を尊重します。またサービスのユーザーも同じであることを期待します。 合法かつ適切に申し出された著作権侵害の申し立てには対応させて頂きます。 もしあなたの成果物が著作権を侵害する形で複製されていると疑われた場合は、次の情報をご連絡してください。(i) 著作権の所有者、もしうは正規の代理人の電子的、もしくは物理的な署名、(ii) 著作権侵害を受けた成果物を特定するもの、(iii) 成果物の著作権を侵害しているものを特定する情報、もしくは侵害しているアクティビティで、削除もしくは利用停止の対象となるもの、およびそれを私たちが特定できるに十分な情報、(iv) 住所、電話番号、メールアドレスなどあなたの連絡先、(v) 不服を申し立てられた素材の利用方法が、著作権所有者、代理人、法律によって公認されていないことを示す報告書、(vi) 偽りの場合は偽証罪に問われることを承知の上で、申し立ての内容が正確であるとする供述と、著作権所有者の代わりに行動することが認められていることを示す供述書
+Code.org 尊重他人的智慧財產權，並期望使用者要做同樣的服務。 我們會回應涉嫌侵犯著作權注意遵守適用的法律和適當地提供給我們。 If you believe that your work has been copied in a way that constitutes copyright infringement, please provide us with the following information: (i) a physical or electronic signature of the copyright owner or a person authorized to act on their behalf; (ii) identification of the copyrighted work claimed to have been infringed; (iii) identification of the material that is claimed to be infringing or to be the subject of infringing activity and that is to be removed or access to which is to be disabled, and information reasonably sufficient to permit us to locate the material; (iv) your contact information, including your address, telephone number, and an email address; (v) a statement by you that you have a good faith belief that use of the material in the manner complained of is not authorized by the copyright owner, its agent, or the law; and (vi) a statement that the information in the notification is accurate, and, under penalty of perjury, that you are authorized to act on behalf of the copyright owner.
 
-### デジタルミレニアム著作権法
+### 數位千年版權法案
 
 It is Code.org’s policy to respond to notices of alleged copyright infringement that comply with the Digital Millennium Copyright Act.
 
@@ -138,7 +138,7 @@ TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE CODE.ORG ENTITIES SHALL N
 
 SOME STATES OR OTHER JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSIONS MAY NOT APPLY TO YOU.
 
-### General Terms
+### 一般條款
 
 #### A. Waiver and Severability
 
@@ -164,4 +164,4 @@ You agree to indemnify, defend, and hold harmless Code.org, its affiliated compa
 
 We may revise these Terms from time to time, the most current version will always be at code.org/tos. If the revision, in our sole discretion, is material we will notify you via an e-mail to the email associated with your account. By continuing to access or use the Services after those revisions become effective, you agree to be bound by the revised Terms.
 
-これらの利用規約についてご質問がある場合は、[ご連絡ください](http://code.org/contact).
+If you have any questions about these Terms, please [contact us](http://code.org/contact).

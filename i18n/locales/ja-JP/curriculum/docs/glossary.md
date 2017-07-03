@@ -6,11 +6,11 @@ title: "Glossary" view: page_curriculum theme: none
 
 <%= partial('doc_header', :title => 'Glossary', :disclaimer=>'Code.org K-5 Computer Science') %>
 
-[内容]
+[content]
 
 Encouraging students to learn and use 'professional' terms enables them to communicate correctly and efficiently with others and builds their knowledge such that it can be further developed without having to relearn terms and concepts at a later time. The terms and concepts used in the unplugged lessons are defined using words that young students can understand.
 
-[ヒント]
+[tip]
 
 # Teaching Tip
 
@@ -102,7 +102,7 @@ The service that translates URLs to IP addresses. *(Course 3: Lesson 18)*
 
 A method of sending information using telephone or television cables. *(Course 3: Lesson 18)*
 
-#### イベント
+#### 事件
 
 An action that causes something to happen. *(Course 1: Lesson 15 | Course 2: Lesson 15)*
 

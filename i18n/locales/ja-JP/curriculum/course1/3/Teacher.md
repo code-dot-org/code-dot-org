@@ -1,79 +1,79 @@
 * * *
 
-title: "ジグソーパズル: ドラッグ アンド ドロップについて学びましょう" view: page_curriculum theme: none
+title: "Jigsaw: Learn to drag and drop" view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>3, :title=> 'ジグソーパズル: ドラッグ アンド ドロップについて学びましょう', :unplugged=>false, :time=>30) %>
+<%= partial('curriculum_header', :unittitle=>'Course 1', :lesson=>3, :title=> 'Jigsaw: Learn to drag and drop', :unplugged=>false, :time=>30) %>
 
 [content]
 
 [together]
 
-## 4歳児用レッスンの概要
+## K-1 Lesson Overview
 
-この最初のレッスンでは、マウスの基本的な使い方やブロックを使ったプログラミングのインターフェースに慣れることが目的です。ブロックを使ったプログラミングはこのコースを通して使われます。 生徒はスクリーン上の画像を単にドラッグすることから始め、パズルのピースを適切な順番でドラッグすることを学んでゆきます。
+In this first online activity students will become familiar with basic mouse use and the block-based programming interface they will be using throughout the course. Students will begin by simply dragging images on screen and then progress to dragging puzzle pieces into the proper order.
 
 [summary]
 
-## レッスンの概要
+## Teaching Summary
 
-### **はじめましょう**
+### **Getting Started**
 
-[イントロダクション](#GetStarted)   
+[Introduction](#GetStarted)   
 
 
-### **アクティビティ：ジグソーパズル：　ドラッグ アンド ドロップについて学びましょう**
+### **Activity: Jigsaw: Learn to drag and drop**
 
-[ジグソーパズル：　ドラッグ アンド ドロップについて学びましょう](#Activity)
+[Jigsaw: Learn to drag and drop](#Activity)
 
-### **更なる学習**
+### **Extended Learning**
 
-[より高度なアクティビティー](#Extended)
+[Extension Activies](#Extended)
 
 [/summary]
 
-## レッスンの目的
+## Lesson Objectives
 
-### 生徒が行うこと:
+### Students will:
 
-  * マウスを使ってコンピューターに情報を入力します
-  * ペアプログラミング(2人で協力して行うプログラミング)のルールに慣れます
-  * コンピューターの有無にかかわらずペアプログラミングを通して共同作業を行います
-  * ペアプログラミングのルールが使えない状況を理解します
-  * パズルのピースを正しい順番で並べます
-
-[/together]
-
-[together]
-
-## はじめましょう
-
-### <a name="GetStarted"></a>イントロダクション
-
-コンピューターのマウスを使ったことがあるか生徒に聞いてみましょう(もしくは、トラックパッド、タッチスクリーンなどのデバイス)
-
-  * マウスは何をするものでしょうか？
-  * マウスを動かすと画面上のカーソルはどうなりますか？
-  * マウスを使ってパズルのピースを動かして、パズルを完成させましょう
-  * マウスのボタンを押すのは、本物のパズルのピースを手でつまむようなことです。ボタンを離すことは、ピースを手放すことに相当します。 ピースを動かすときは、マウスのボタンを押しっぱなしにしてください。
-  * ペアプログラミングのビデオを一緒に見て、指示を出す人と操作する人の役割について話し合ってみましょう。
+  * Use a mouse to input information into a computer
+  * Recall and apply the rules of pair programming
+  * Use pair programming to complete collaborative tasks with or without a computer
+  * Identify situations when the rules of pair programming are not followed
+  * Arrange puzzle pieces into the proper order
 
 [/together]
 
 [together]
 
-## アクティビティ
+## Getting Started
 
-### <a name="Activity"></a>[ジグソーパズル: ドラッグ アンド ドロップについて学びましょう](http://learn.code.org/s/course1/stage/3/puzzle/1)
+### <a name="GetStarted"></a>Introduction
 
-ペアプログラミングは2人の生徒が1台のコンピューターで作業をする場合に最適です。誰が操作をして、だれが指示をだすのかが明確になります。 だれが操作をする人で、だれが指示を出す人か、明確にするために帽子やたすきなどを使うのも良いかもしれません。
+Ask students if they have ever used a computer mouse before (or trackpad, touchscreen, whatever device they'll be using).
+
+  * What does the mouse do?
+  * How does moving the mouse affect the cursor on the screen?
+  * You will now be using the mouse to put together puzzle pieces on the computer.
+  * Pushing down on the mouse button is like closing your hand on a real puzzle piece and letting go of the button is like opening your hand to drop the piece. Make sure you keep your mouse button pressed while you drag each piece.
+  * Watch the pair programming video together and discuss the role of the driver and navigator.
+
+[/together]
+
+[together]
+
+## Activity
+
+### <a name="Activity"></a>[Jigsaw: Learn to drag and drop](http://learn.code.org/s/course1/stage/3/puzzle/1)
+
+Pair programming works best with two students to a computer and clear expectations of who is the driver and who is the navigator. You may want to create a visual reminder, like hats or sashes, to identify the driver and the navigator.
 
 [tip]
 
-# レッスンのコツ
+# Lesson Tip
 
-パズルのピースが連結してしまい、それらをばらしたい場合は、下部にあるピースをドラッグします。上にあるピースを動かすと、全体が移動してしまいます。
+When puzzle pieces are connected and you want to separate them, you have to drag off from the bottom of the stack. Dragging the top will move the whole stack of pieces.
 
 [/tip]
 
@@ -84,13 +84,13 @@ title: "ジグソーパズル: ドラッグ アンド ドロップについて�
 
 [together]
 
-## 更なる学習
+## Extended Learning
 
-<a name="Extended"></a>より深く学習するため以下のようなアクティビティに取り組んでください。課外授業で取り組んでもよいでしょう。
+<a name="Extended"></a>Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.
 
 ### Human Computer
 
-本物のパズルピースを使って、2人生徒にコンピューター役とユーザー役をやらせます。ユーザーはマウスを使ってコンピューターを"操作"して、パズルを組み立てます。
+Use real puzzle pieces and pair students into the computer and the user. The user "controls" the computer with a mouse to put the puzzle together.
 
 [/together]
 

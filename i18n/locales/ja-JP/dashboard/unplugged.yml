@@ -1,168 +1,168 @@
-ja:
+zh-TW:
   data:
     unplugged:
       Unplug1:
-        title: コンピューター・サイエンス入門
-        desc: このレッスンではコンピュータ ・ サイエンスの概念を紹介して、コンピューター科学者が普段どのようなことをしているのか解説します。そしてみなさんは、コンピュータ科学者の役割を経験することができます。アクティビティの最後には、学んだ事について復習をする宿題が出されます。レッスンの後に関係ある単語を子供達に教えることなど忘れてしまいがちですが、楽しさと遊びの中で学んでいるこの時期に教える方が、もっと先に同じことを学ぶ機会を待つより遥かに効果的です。
+        title: 電腦科學導論
+        desc: 這一課將介紹計算機科學的概念，並解釋計算機科學家的工作，它也將給學生一個扮演計算機科學家的機會。在課程活動結束後，每位學生將會有一份可帶回家的清單提醒他們所學會的東西。課程中你可能會想跳過一些詞彙，但現在我們用有趣的、玩興的方式讓他們主動的去探索，這會比被動等待學習機會來得更有效果。
         pdfs:
-          - unplug1
-        video: Unplug1
+          - 不插電活動 1
+        video: 不插電活動 1
       Unplug2:
-        title: コンピュテーショナル・シンキング（コンピューターの様に考える）
-        desc: "何もなくても白紙やマーカーだけで、生徒達は計算論的思考の 4 つのステップを学びます。簡単な紹介の後、生徒達はグループに分かれて、他の生徒達のために（事前に選出したモンスターのカタログから)特定のモンスター を描くための手順を作成します。役割全体を分解し、そしてチームがカタログにあるすべてのモンスターを分析、モンスターの別の詳細を抽象化し、その情報を使用し別のチームが特定のモンスターを描画するためのアルゴリズム (手順) を作成します。チームは別のチームと一緒にアルゴリズムを交換し、そしてそのアルゴリズムの手順に従ってモンスターを描きます。その描画はオリジナルチームが意図していたものですか？\n"
+        title: 電腦計算式思維
+        desc: 我們只需要紙和筆，學生就可以學習到電腦式的思考模式。在簡短的介紹之後，學生們將會被分組以繪出一隻怪物(從預先發下的樣本中選取)。這整個任務必須要分工，小組才能夠將這隻怪物分析為一種特定的畫法，包括怪物身上的不同細節。然後他們會需要把圖像轉換成演算法(畫圖的技巧、指示)寫在紙上並交給別組讓他們畫出一樣的怪物來。學生們的組別將會相互交換演算法並畫出那隻建構在演算法基礎上的怪物。畫圖是小組最初的目標嗎？
         pdfs:
-          - unplug2
-        video: Unplug2
+          - 不插電活動 2
+        video: 不插電活動 2
       Unplug3:
-        title: グラフ用紙のプログラミング
-        desc: "1 つで別の絵を描くことをプログラミングで行うということによって、生徒達はプログラミングがどんなものか本当に理解し始めます。授業では、目の前にある画像を再現するのに、お互いグラフ用紙に色の正方形をつくる指示をすることで始められます。もし時間があれば、生徒自らが作り出した画像でレッスンを締めくくるのことができます。\n\n"
+        title: 圖畫紙程式設計
+        desc: 藉由一個又一個的繪圖編程活動，學生會愈來愈了解程式設計的面貌。這個課程將會在學生的相互引導下，模仿現有圖片，在圖上塗上顏色。如果時間允許，可以讓學生有自我創作的活動。
         pdfs:
-          - unplug3
-        video: Unplug3
+          - 不插電活動 3
+        video: 不插電活動 3
       Unplug4:
-        title: アルゴリズム
-        desc: このレッスンではアルゴリズムを学びます。まずタングラムとグラフ用紙を利用して、可能な限り明確かつ明瞭な指示をすることが大事であることを学びます。その後、紙を折って正方形を作る方法が何通りあり、方法によって紙を折る回数が異なることを学びます。
+        title: 演算法
+        desc: 這一課將介紹演算法。第一實驗用了七巧板和方格紙，將展現盡可能提供清楚的指令是多麼的重要。其後，會探討到有多少種將紙折成長方形的方法，又哪些方法可以在最少的折紙次數下完成長方形。
         pdfs:
-          - unplug4
-        video: Unplug4
+          - 不插電活動 4
+        video: 不插電活動 4
       Unplug5:
-        title: 関数
-        desc: このレッスンでは、学生は特別なチャーム、ビーズ、文字列からサンカッチャーになります。学生は一連の反復的な手順に従いますし、数回を重複している「スキル」の特定のセットを識別するように求められます。これらのスキルを定義すると、彼らはメイン プログラムから呼び出され、作成の美しい全体のプロセスは、紙の単一シートに記録されます。最終的なプログラムになりますどんな全体クラス チャーム、ビーズ、文字列のタイプを対象します。効果的にこれを可能にする、学生は彼らの特定の材料の詳細を「抽象」と個々 供給ためのあいまいな用語を作成する必要があります。 このジェネリック プレース ホルダーの使用は、変数に素晴らしい紹介です。
+        title: 函數類別
+        desc: 在這節課中，學生將以細繩、珠子以及特別的風格製作吊飾。學生將依照一連串重複的指示進行，之後已重複數次的方式判斷學生是否具備特定的技巧。一旦技巧養成後，他們便會被主程式呼叫，之後整個美妙的製成會被單一張紙張記錄起來。最終的程式將會提供給整個class ，無論他們細繩、珠子及風格的型態。為了有效地達成，學生將需要將材質細節抽象的表達出來並製作含糊地術語。此章節意在介紹美妙的泛型與變數。
         pdfs:
-          - unplug5
-        video: Unplug5
+          - 不插電活動 5
+        video: 不插電活動 5
       Unplug6:
-        title: 条件
-        desc: これはクラスみんなで行うゲームです。conditional と if-statement そして loop に関する基本的な考え方を紹介した後に、あらかじめ書かれたプログラムと、トランプ、くじ引きを使いながらみんなで練習できるようになっています。
+        title: 條件（Conditions）
+        desc: 這是一個課間遊戲。在介紹完條件判斷、如果陳述式、迴圈之後，學生可以透過預寫程式、一副撲克牌和抽籤比運氣來練習。
         pdfs:
-          - unplug6
-        video: Unplug6
+          - 不插電活動 6
+        video: 不插電活動 6
       Unplug7:
-        title: 作曲する
-        desc: 詩を読み解くことは多くの学生にとってとても創造的な活動になります。私達は今では常識とされている知識を define と関数呼び出しの学習へと転換するような活動を行います。学生達が define と call のプロセスに慣れてきたら、それらの関数の呼び出しの中でも、さらにパラメーターの引き渡しについて理解できるような知識を追加していきます。
+        title: 歌曲創作
+        desc: 讀歌詞對於大部分的學生都相當簡單。我們將以大家的常識進行活動，並轉化為對定義和呼叫函式（function）的扎實教育。在學生都熟知函式的定義及呼叫之後，我們將加入額外的功能讓函式能夠傳入傳出參數。
         pdfs:
-          - unplug7
-        video: Unplug7
+          - 不插電活動 7
+        video: 不插電活動 7
       Unplug8:
-        title: 抽象化
-        desc: ここでのアクティビティは、生徒たちが日頃いつも行っている活動を Mad-Lib 形式のゲームを行って表現することによって、抽象的な概念の効果的な使い方を楽しく学べるようにするものです。
+        title: 抽象概念
+        desc: 這個活動結合了學生們的日常及 Mad-Lib 式的思考模式，可以幫助你的班級學生更有效率的學習抽象的觀念。
         pdfs:
-          - unplug8
-        video: Unplug8
+          - 不插電活動 8
+        video: 不插電活動 8
       Unplug9:
-        title: プログラミングをリレーします。
-        desc: このレッスンは前回のアクティビティ (4. Graph Paper Programming) で習ったスキルを使い、シーケンスで動くプログラムを完成させることや、バグがないかプログラムを頻繁に確認することの重要さを強調します。
+        title: 接力式程式設計
+        desc: 這一課將以先前的活動（4. 方格紙編程）為觀念，並使用先前的技巧來強調程式執行順序的重要性，以及經常檢查程式中的 bug 的重要性。
         pdfs:
-          - unplug9
-        video: Unplug9
+          - 不插電活動 9
+        video: 不插電活動 9
       Unplug10:
-        title: インターネット
-        desc: このレッスンでは、生徒はインターネットを冒険して、ウェブアドレス、IP や DNS について学びます。
+        title: 網際網路
+        desc: 在這個課程中，學生將假裝流進網際網路世界，同時學習關於網路位址，IPs 及 DNS 等知識。
         pdfs:
-          - unplug10
-        video: Unplug10
+          - 不插電活動 10
+        video: 不插電活動 10
       Unplug11:
-        title: まとめ
-        desc: 最初の20時間のシリーズについての最後のまとめは、クラスの参加者たちに、彼らが楽しんだすべての時間を追体験させることを助けるものとなります。それは同時に、コンピュータ科学の旅を続けていくことに興味を持っている人を対象に、彼らが取り組むべき次のステップを与えることにもなります。
+        title: 總結
+        desc: 在 20 小時系列的最後總結將幫助課堂學生重溫最愛時光， 如果他們有興趣繼續計算機科學的旅程的話，這也給他們下一個邁進的方向。
         pdfs:
-          - unplug11
-        video: Unplug11
+          - 不插電活動 11
+        video: 不插電活動 11
       UnplugHappyMaps:
-        title: ハッピーマップ
-        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
+        title: 快樂地圖
+        desc: 學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。
       MoveIt:
-        title: 動かせ！動かせ！
-        desc: 生徒は1 つのコマンドを使用して、迷路をクリアする単純なアルゴリズム (命令のセット) を作成します。
+        title: 移動它，移動它
+        desc: 學生創建簡單的算法（一連串的指令），透過一個指令便引導人物走出迷宮。
       PlantASeed:
-        title: 現実のアルゴリズム：種を植えましょう
-        desc: このレッスンでは、種を蒔く行為を例にして、日常生活においてどのようにアルゴリズムが使われているかを学びます。また、コンピューター科学で使われるアルゴリズムの重要さについてもお話します。
+        title: 生活中的演算法 - 植物種植
+        desc: 這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
       BuildingAFoundation:
-        title: ピラミッドをたてよう
-        desc: Students build a structure using only provided supplies. Structures must complete a task (reach a certain height or bear a certain weight), and students discuss the idea of being persistent when things get complicated.
+        title: 打好基礎
+        desc: 學生使用所提供的元素建立結構，建立的結構必須達到任務目標（能到達指定的高度或是能承受指定的重量），同時，在問題變得愈來愈複雜時，學生們可以學習互相討論持久性相關的問題。
       GettingLoopy:
-        title: Getting Loopy
-        desc: ダンスを通じてループ (繰り返し命令) のプログラミングの概念を紹介します。学生はまず簡単な振り付けを学び、それを繰り返すように指示されます。
+        title: 學習迴圈
+        desc: 這一課經由舞蹈活動來介紹迴圈（重複一些指令）這個編程概念。學生會學習到簡單的動作，然後依照指示重複這些動作。
       RelayProgramming:
-        title: リレープログラミング
-        desc: Students run a relay race, where they dash across the yard to write an algorithm based on a "Graph Paper Programming" image. They can only write one instruction at a time and if there's an error somewhere, they have to erase everything back to that point.
+        title: 接力編程
+        desc: 學生們進行一場接力比賽，他們要跑到對面，根據「方格紙編程」的圖像寫一條演算法。他們一次只能寫一條指令，如果有什麼地方出錯，他們必須全部擦掉，重新開始。
       Conditionals:
-        title: 条件
-        desc: カードゲームをしながら、「もし赤いカードを引いたら、自分に点が入る」や「もし黒いカードを引いたら、相手に点が入る」などのルールを作って、条件文について学びます。
+        title: 條件判斷（Conditionals）
+        desc: 為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。
       BigEvent:
-        title: The Big Event
-        desc: ここでは「イベント」というプログラミングの基本的な考え方を生徒は学びます。それはコンピュータが常に把握している入力情報のことです。教師が紙の上のボタンを押して遠隔操作（えんかくそうさ）すると、生徒たちは押されたボタンによって違った反応をするようになります。
+        title: 大事件
+        desc: 學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。
       GoingPlacesSafely:
-        title: 安全な道を通って行く
-        desc: インターネットは役に立ちますが、時に危険な場所でもあります。先生は、インターネットを安全に利用する方法を紹介します。
+        title: 安全的到達地點
+        desc: 網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。
       GraphPaperProgramming:
-        title: グラフ用紙のプログラミング
-        desc: 生徒は、クラスメイトに図を再現してもらうために、あらかじめ定義されたコマンドを使ってアルゴリズム(命令の集まり)を書きます。
+        title: 圖畫紙程式設計
+        desc: 學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。
       PaperPlanes:
-        title: '現実世界のアルゴリズム: 紙飛行機を作る場合'
-        desc: この授業は日常生活でアルゴリズムを使う場面、特に紙飛行機を作る場合を説明します。また、コンピューターサイエンスの全体像と、なぜアルゴリズムが不可欠なのかについて焦点を当てます。
+        title: 生活中的演算法 - 紙飛機
+        desc: 這課以製作紙飛機為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。
       BinaryBracelets:
-        title: バイナリブレスレット
-        desc: Students create bracelets as a binary representations of the first letter of their name. Students learn that data can be represented and stored in more than one way.
+        title: 二進制手環
+        desc: 學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用一種以上的方法來呈現和儲存。
       DigitalFootprint:
-        title: あなたのデジタルフットプリント
-        desc: Teachers introduce to students the idea that putting information about themselves online creates a digital footprint or "trail" that has consequences.
+        title: 你的數位足跡
+        desc: 教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。
       ComputationalThinking:
-        title: コンピュテーショナル・シンキング（コンピューターの様に考える）
-        desc: Students use the steps of computational thinking (decompose, pattern match, abstract, algorithm) to figure out how to play a game that comes with no instructions.
+        title: 電腦計算式思維
+        desc: 學生用計算思維（Computational Thinking）的步驟（分解、模式匹配、抽象化、演算法），來找出要如何玩一個沒有任何說明指示的遊戲。
       FunctionalSuncatchers:
-        title: Functional Suncatchers
-        desc: Students create an algorithm with variables and functions (pieces of code that you want to use over and over again) to create suncatchers using string and beads.
+        title: 實用的透光窗飾（Suncatcher）
+        desc: 學生透過創作由珠珠和線組合而成的玻璃飾品，學習建立一個裡頭帶變數和函式（你想重複利用的程式片段）的演算法。
       SongwritingParameters:
-        title: Songwriting
-        desc: Students use the concept of the chorus in a song to learn about defining and calling functions.
+        title: 歌曲創作
+        desc: 學生使用一首歌的副歌的概念，學習怎麼定義和呼叫函式。
       DiceRace:
-        title: 'Real life algorithms: Dice Race'
-        desc: This lesson calls out ways we use algorithms in our daily lives. As part of that, students will identify and write down the algorithm for a dice race game.
+        title: 生活中的演算法 - 擲骰子比賽
+        desc: 這課展示我們在日常生活中使用的演算法。其中有個部分，學生會發現並寫出擲骰子比大小遊戲的演算法。
       Internet:
-        title: インターネット
-        desc: Students send messages representing various Internet transmission methods using pieces of paper.
+        title: 網際網路 Internet
+        desc: 學生用紙條傳遞訊息，從而體驗出各種網路傳輸數據的方式。
       Crowdsourcing:
-        title: クラウドソーシング
-        desc: Students use crowdsourcing, a problem-solving technique common in computer science, to complete a task together as a classroom more efficiently than if a student attempted it alone.
+        title: 群眾外包（Crowdsourcing）
+        desc: 透過使用群眾外包（Crowdsourcing）- 一種在計算機科學常見的解決問題的方式，學生可以學習到以一個教室為單位完成一個任務，比起一個人獨自完成來得更有效率。
       DigitalCitizenship:
-        title: Digital Citizenship
-        desc: Students explore the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
+        title: 數位公民
+        desc: 學生探索私密資訊和個人資訊的差異，辨別哪些東西在網路上分享是安全的，哪些是不安全的。
       TangramAlgorithms:
-        title: Tangram Algorithms
-        desc: This lesson shows us something important about algorithms. If you keep an algorithm simple there are lots of ways to use it. If you want to make sure everyone ends up with the same thing, then your algorithm needs more detail.
+        title: 七巧板演算法
+        desc: 這節課向我們展示的演算法的重要性，如果你讓一個演算法保持的愈純綷，你就有很多的方式來應用它。如果你想要確保每個人應用後都得到相同的結果，那麼你的演算法就需要更多的細節。
       EnvelopeVariables:
-        title: Envelope Variables
-        desc: Variables allow for a lot of freedom in computer science.  This lesson helps to explain what variables are and how we can use them in many different ways. Use this activity before (or in conjunction with) the lesson on abstraction to really hit the idea home.
+        title: 信封變數
+        desc: 在計算機科學中，變數提供了很大的自由度。這節課有助於解釋什麼是變數，以及我們如何用不同的方法來使用它們。在這節課實施前，需要先（或同時）清楚抽象概念。
       MadGlibs:
         title: Mad Glibs
-        desc: Abstraction is one of the most important skills for a computer scientist to understand.  This activity will have your students analyzing stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.
+        desc: 抽象概念（Abstraction）是一個資訊電腦科學家最需要了解的重要技巧之一。這個活動會讓你的學生分析故事間的差異性，進而讓他們把故事抽象化。這些被抽象化的故事就會變成有趣又瘋狂的新故事的範本。
       ForLoopFun:
-        title: For Loop Fun
-        desc: We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops with extra structure built right in.
+        title: 有趣的計數迴圈
+        desc: 我們知道迴圈可以讓我們不斷重複的做同一件事情，而現在我們要學習如何使用本身有多一些額外的結構的迴圈。
       SongwritingWithParameters:
-        title: パラメーターで作詞作曲
-        desc: 'One of the most magnificent structures in the computer science world is the function.  Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice.  '
+        title: 用參數寫歌
+        desc: '在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。  '
       BinaryImages:
-        title: バイナリ画像
-        desc: Though many people think of binary as strictly zeros and ones, our previous courses taught students that information can be represented in a variety of binary options.  This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
+        title: 二進制圖像
+        desc: 雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。
       VideoGamesCoordinatePlanes:
-        title: ビデオゲームと座標平面
-        desc: Discover how the video games you love to play are actually driven by algebra! Explore how algebraic expressions and the coordinate plane can help us understand how video games work, and then start planning for the video game that you will create.
+        title: 電視遊戲和座標系統
+        desc: 一起來發現你愛玩的電視遊戲是怎麼用代數驅動的！探索如何運用代數運算式和座標平面來幫助我們理解電視遊戲是怎麼運作的，並且開始規劃你想要創造的遊戲。
       Contracts:
-        title: Contracts, Domain, and Range
-        desc: Contracts give us a way to understand and discuss functions. In this lesson we'll look at how Contracts can help us make sense of a new programming language or function.
+        title: 契約（Contracts）、域（Domain）和範圍（Range）
+        desc: 契約（Contracts）是我們理解和討論函式一種途徑。這個課程裡我們將了解契約可何幫助我們理解一個新的程式語言或是函式。
       DesignRecipe:
-        title: The Design Recipe
-        desc: In the last stage students wrote some very simple functions - but more sophisticated functions demand a more thoughtful approach. The Design Recipe is a structured approach to writing functions that includes writing test cases to ensure that the function works as expected.
+        title: 設計程序
+        desc: 在上一個的階段，學生寫了一些很簡單的函式，但是更複雜的函式需要更週到的手法。設計程序是一個結構化的寫函式的方法，它包含了編寫測試項目來確保函式的運作是我們期待的。
       Booleans:
-        title: ブール値と論理
-        desc: Booleans are the fourth and final data type that you will learn about in this course. In this activity you will learn about what Booleans are, and how they can help us write functions that think logically
+        title: 布林值和邏輯運算子
+        desc: 布林值（Booleans）是第四個也是最後一個我們要在課程裡告訴你的數據類型。在這堂中你會學到何謂布林值，以及他如何幫助我們在程式設計和邏輯思考。
       ConditionalsPiecewiseFunctions:
-        title: Conditionals and Piecewise Functions
-        desc: The parameters we pass to functions cause the outputs to vary based on a very rigid pattern. Suppose we want parameters with some values to create outputs using one pattern but other values to use a different pattern. This is where conditionals are needed...
+        title: 條件判斷與片段函式
+        desc: 我們傳給函式的參數會讓結果根據一個既定的規則而改變。假設我們想要有某些特定值的參數使用這個模型產生結果，但其他值的時候就用不同的模型，這時候條件判斷式就派上用場了...
       CollisionDetection:
-        title: 衝突検出とピタゴラスの定理
-        desc: Determining when objects on the screen touch is an important aspect of most games. In this lesson we'll look at how the Pythagorean Theorem and the Distance Formula can be used to measure the distance between two points on the plane, and then decide whether those two points (or game characters) are touching.
+        title: 碰撞檢測和畢氏定理
+        desc: 偵測畫面上的物件有沒有碰到一起，是大多數遊戲中很重要的設計環節。在這堂課中，我們將看看畢氏定理和距離公式是怎麼用來測量平面上兩點間的距離，以及判斷這兩點（或遊戲角色）有沒有碰在一起。
       ! '':
         title: ""
         desc: ""
@@ -170,20 +170,20 @@ ja:
         title: Loops Unplugged
         desc: In this lesson, you will learn about loops!
       courseB_unplugged_MRF:
-        title: コンピューターを使わない活動
+        title: 不插電活動
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
-        title: コンピューターを使わない活動
+        title: 不插電活動
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
-        title: コンピューターを使わない活動
+        title: 不插電活動
         desc: Today you will learn about what to do if someone is being mean online.
       courseD_unplugged_digitalCitizenship:
-        title: コンピューターを使わない活動
+        title: 不插電活動
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: コンピューターを使わない活動
+        title: 不插電活動
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
-        title: コンピューターを使わない活動
+        title: 不插電活動
         desc: Today you will learn about what to do if someone is being mean online.

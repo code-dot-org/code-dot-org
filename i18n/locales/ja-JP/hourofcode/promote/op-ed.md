@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_op_ed) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-### 以下はコンピューターサイエンス週間の支援のための論説例です。州議員、国会議員、ビジネスリーダーの方々に利用してもらうことを意図しています。
+### 下面是由電腦科學教育周支援的示例專欄，目標是它可以由國家、地方立法者、商界領袖等使用。
 
   
 
@@ -17,7 +17,7 @@ Go to [<%= resolve_url('code.org/promote') %>](%= resolve_url('https://code.org/
 
 **By [NAME] and [CONSIDER CO-AUTHORING WITH EDUCATOR, SUPERINTENDENT OR BUSINESS LEADER]**
 
-Computers are everywhere. They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
+電腦充斥在我們的日常生活中。 They’re in our pockets. They’re on our walls. They’re in our cars. They’re a critical piece of our infrastructure, from power grids to traffic lights to the inner workings of our financial markets. And all of these computers have one thing in common. They depend on software to tell them what to do.
 
 But who exactly is going to write this software?
 
@@ -31,7 +31,7 @@ The problem begins in our middle and high schools. Nine out of ten of our school
 
 Nearly all major computing innovations were invented here in this country, but we’re at risk of losing that leadership if we don’t do something now.
 
-We need to make some changes.
+我們需要做出一些改變。
 
 **[OPTIONAL FOR STATES WHERE THIS APPLIES]**
 

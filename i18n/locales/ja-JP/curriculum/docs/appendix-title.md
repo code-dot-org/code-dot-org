@@ -6,7 +6,7 @@ title: "Appendix" view: page_curriculum theme: none
 
 <%= partial('doc_header', :title => 'Appendix', :disclaimer=>'Code.org K-5 Computer Science') %>
 
-[内容]
+[content]
 
 # Supplemental Documents
 

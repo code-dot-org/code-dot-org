@@ -6,12 +6,12 @@ title: <%= hoc_s(:title_how_to_parents) %> layout: wide nav: how_to_nav
 
 <%= view :signup_button %>
 
-# How to complete an Hour of Code with your child
+# 如何與您的孩子共同完成「一小時玩程式」
 
 Complete an Hour of Code at home, or volunteer to bring it to your child’s classroom! Here’s how:
 
-## 1) Watch this how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
-## 2) Choose a tutorial:
+## 1) 觀看指南影片 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen></iframe>
+## 2) 選擇一個教程︰
 
 We provide a variety of fun, hour-long tutorials for students of all ages, created by a variety of partners. [Try them out!](%= resolve_url('/learn') %)
 
@@ -30,11 +30,11 @@ The best Hour of Code experience will be with Internet-connected computers. But 
 
 Kick off your Hour of Code by inspiring your child and discussing how computer science impacts every part of our lives.
 
-**以下の映像を見せることも非常に効果的です:**
+**Show an inspirational video:**
 
-- オリジナルのCode.orgはビル・ゲイツ、マーク・ザッカーバーグ、NBAスターのクリス・ボッシュが出演されているビデオをリリースしています。 (それらは [1 分](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 分](https://www.youtube.com/watch?v=nKIu9yen5nc), そして[9分](https://www.youtube.com/watch?v=dU1xS07N-FA) バージョンがあります。)
-- [Hour of Code 2015年度版のビデオ](https://www.youtube.com/watch?v=7L97YMYqLHc)か、<% if @country == 'uk' %> [2013年度版のビデオ](https://www.youtube.com/watch?v=FC5FbmsH4fw)をみる。 <% else %> <% end %>
-- [アメリカのオバマ大統領が生徒たちにコンピュータサイエンスを学ぶよう呼びかけてる映像もあります。](https://www.youtube.com/watch?v=6XvmhE1J9PY)
+- 原 Code.org 的揭幕影片，由微軟總裁比爾 · 蓋茨、 臉書創辦人馬克 · 佐伯克和 NBA 明星球員克里斯·波許代言(有 [1 分鐘](https://www.youtube.com/watch?v=qYZF6oIZtfc)、 [5 分鐘](https://www.youtube.com/watch?v=nKIu9yen5nc) 和 [9 分鐘](https://www.youtube.com/watch?v=dU1xS07N-FA) 版本)
+- [Hour od Code 2013 年揭幕影片](https://www.youtube.com/watch?v=FC5FbmsH4fw)，或者 <% if @country == 'uk' %> = '英國'[Hour od Code 2014 年影片](https://www.youtube.com/watch?v=7L97YMYqLHc) <% else %> [Hour od Code 2014 年影片](https://www.youtube.com/watch?v=7L97YMYqLHc) <% end %>
+- [美國歐巴馬呼籲所有的學生都要學習電腦科學](https://www.youtube.com/watch?v=6XvmhE1J9PY)
 - Find more inspirational [resources](%= resolve_url('https://code.org/inspire') %) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
 It’s okay if both you and your child are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
@@ -51,29 +51,29 @@ Want more ideas? Check out our [template lesson plan](/files/AfterschoolEducator
 
 When you've chosen the tutorial you would like to do, you can bookmark the tutorial's short link.
 
-**When your child come across difficulties**
+**當您的孩子遇到困難**
 
-It’s okay to respond:
+您可以跟他們說:
 
-- 私もわからないから、一緒にやってみよう。
-- コンピュータは、思った通りに動くとは限らないんだよ
-- プログラミングを学ぶということは、新しい言葉を学ぶことと同じなんだ。すぐにペラペラにはなれないよ。
+- 「我也不知道，我們一起找出方法吧。」
+- 「科技總不是做我們想要的。」
+- 「學習程式設計就像是學習新的語言；你不會馬上就上手。」
 
-## 6) Celebrate
+## 6) 慶祝
 
 [Print certificates](%= resolve_url('https://code.org/certificates') %) for your child (and yourself!).
 
-Hour of Codeのイベントの様子を撮影した写真や映像をソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグを使って、 @codeorgに連絡をすれば、あなたの取り組みをハイライトすることができます！
+Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
 
-**Other Hour of Code resources:**
+**其它的「一小時玩程式」資源**
 
-- Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。
+- Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
-**Hour of Codeを終えたら？**
+**Hour of Code之後有什麼？**
 
 The Hour of Code is just the first step in a journey to learn more about how technology works and how to create software applications. To continue this journey:
 
-- Encourage your child to continue [to learn online](%= resolve_url('https://code.org/learn/beyond') %).
-- Help [promote](%= resolve_url('/promote') %) computer science education in your child’s school district.
+- 鼓勵您的孩子繼續[線上學習](%= resolve_url('https://code.org/learn/beyond') %)
+- 在您的孩子的學區中協助[推廣](%= resolve_url('/promote') %)電腦科學教育。
 
 <%= view :signup_button %>

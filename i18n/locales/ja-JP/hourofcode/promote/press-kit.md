@@ -6,25 +6,25 @@ title: <%= hoc_s(:title_press_kit) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-## メディアを Hour of Code イベントに惹きつけるには
+## 如何吸引媒體目光至您的Hour of Code活動
 
 *For all press and media inquiries, contact <press@code.org>*
 
-### 重要なヒント
+### 關鍵技巧
 
-  * イベントの2週間前にメールでメディアに連絡を取りましょう。もし最初の返事がなければメールや電話でフォローアップしましょう。
-  * 学校の先生やボランティアの人に、写真をとってオンラインで共有したり報道機関に送ってもらうようお願いしましょう。
-  * あなたのウェブサイトのトップページや学校新聞に Hour of Code について書いてみましょう。イベントの詳細や、学生の活動の写真を投稿しましょう。
+  * 在活動舉辦兩週前，透過電子郵件聯繫媒體。若沒有收到任何回應，則再進一步用電子郵件與電話追蹤。
+  * 請求學校行政人員或志工拍攝照片分享於網路上或寄送給記者。
+  * 在您的網站首頁及學校刊物上撰寫有關Hour of Code的文章。報導您活動的細節，以及學生活動的照片。
   * On Facebook and Twitter, share updates on your plans, announce your events and post pictures during Dec. 5-11. Use the hashtag **#HourOfCode** so Code.org can see and promote your events.
 
-### ステップ・バイ・ステップ ガイド:
+### 逐步指南
 
 **1. Plan your event**
 
-  * Hour of Code を始める集まりを計画しましょう。
+  * 規劃如何揭開Hour of Code序幕。
   * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to parents. Ask them to spread the word.
   * Send [a letter](%= resolve_url('/promote/resources#sample-emails') %) to invite your local mayor, congressman, governor, or influential businessperson to attend and speak to your students.
-  * （「電源のいらない」プログラミング活動の実演のような）グループ活動を準備したり、学生が作り主役となる活動を引き立たせたりしましょう。
+  * 組織系列活動 (如示範不插電的程式設計活動)，或展示學生創建和領導的活動。
   * Show Code.org’s [Hour of Code video](%= resolve_url('/') %) or one of [these](%= resolve_url('/promote/resources#videos') %) to inspire.
 
 **2. Identify specific local reporters that cover education or local events.**

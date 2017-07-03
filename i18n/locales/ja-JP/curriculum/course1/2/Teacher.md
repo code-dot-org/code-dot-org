@@ -1,47 +1,47 @@
 * * *
 
-title: うごかせ, うごかせ view: page_curriculum theme: none
+title: Move It, Move It view: page_curriculum theme: none
 
 * * *
 
-<%= partial('curriculum_header', :title=> 'うごかせ, うごかせ', :lesson=>2, :unplugged=>true,:disclaimer=>'アクティビティの実施のみにかかる時間です。 説明やまとめなどを行うとより時間がかかります。', :time=>20) %>
+<%= partial('curriculum_header', :title=> 'Move It, Move It', :lesson=>2, :unplugged=>true,:disclaimer=>'Basic lesson time includes activity only. Introductory and Wrap-Up suggestions can be used to delve deeper when time allows.', :time=>20) %>
 
 [content]
 
 [together]
 
-## レッスンの概要
+## 課程概述
 
-操作を伝えるためには、共通の言語が必要という「気づき」を与えます。 生徒は簡単なハンドジェスチャーを使って、お互いに指示をだすことを練習します。 共通の言語を学んだあとは、複数の命令を事前に伝えることで”プログラム”することを学びます。
+This lesson will help students realize that in order to give clear instructions, they need a common language. Students will practice controlling one another using a simple combination of hand gestures. Once they understand the language, they will begin to "program" one another by giving multiple instructions in advance.
 
 [summary]
 
-## 教えることのまとめ
+## 教學小結
 
-### **始めましょう** - 15分
+### **Getting Started** - 15 minutes
 
-1) [レビュー](#Review)   
-2) [ボキャブラリー](#Vocab)   
-3) [自分自身をコントロールしよう](#GetStarted)
+1) [Review](#Review)   
+2) [Vocabulary](#Vocab)   
+3) [Let's Control Ourselves](#GetStarted)
 
-### **アクティビティ: うごかせ、うごかせ** - 20 分
+### **Activity: Move It, Move It** - 20 minutes
 
-4) [うごかせ、うごかせ: いろいろな冒険](#Activity1)
+4) [Move It, Move It: Multi-Step Adventure](#Activity1)
 
-### **ふりかえり** - 5 分
+### **Wrap-up** - 5 minutes
 
 5) [Flash Chat](#WrapUp) - What did we learn?  
 6) [Vocab Shmocab](#Shmocab)
 
-### **評価** - 10 分
+### **Assessment** - 10 minutes
 
 7) [Move the Flurbs 2](#Assessment)
 
 [/summary]
 
-## Lesson Objectives
+## 課程目標
 
-### Students will:
+### 學生將：
 
   * Recognize situations where they can create programs to complete tasks
   * Predict moves necessary to get teammate from start to finish
@@ -52,11 +52,11 @@ title: うごかせ, うごかせ view: page_curriculum theme: none
 
 [together]
 
-# Teaching Guide
+# 教學指南
 
 ## Materials, Resources and Prep
 
-### For the Student
+### 為學生
 
   * Maps and Key from [Move It, Move It: Multi-Step Adventure](/curriculum/course1/2/Activity2-MoveItMoveIt.pdf)
   * Assessment Worksheet: [Move the Flurbs 2](/curriculum/course1/2/Assessment2-MoveIt.pdf)

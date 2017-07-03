@@ -6,7 +6,7 @@ title: <%= hoc_s(:title_proclamation) %> layout: wide nav: promote_nav
 
 <%= view :signup_button %>
 
-### 以下はコンピューターサイエンス週間の支援のためのコンピュータサイエンスの目的に関係する例です。州議員、国会議員の方々に利用してもらうことを意図しています。
+### 下面是支援電腦科學教育周的示例和其目標是可利用國家和地方立法者。
 
   
 [HOUSE,SENATE, STATE, COUNTY OR CITY RESOLUTION OR PROCLAMATION ###] – Whereas Computer Science Education Week highlights the crucial role that computer science plays in transforming our society and how computer science enables innovation and creates economic opportunities;

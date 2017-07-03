@@ -9,21 +9,21 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css" />
 </link>
 
-# Hour of Codeを多くの人に知ってもらうには
+# 推廣「一小時的程式設計課程」
 
-## Hour of Code を開催するには [ガイド](<%= resolve_url('/how-to') %>)を見て下さい。
+## 舉辦一場「一小時的程式設計課程」活動？<a
 
 <%= view :promote_handouts %> <%= view :promote_videos %>
 
 <a id="posters"></a>
 
-## あなたの学校にこのポスターを貼ってください。
+## 在您的學校張貼這些海報
 
 <%= view :promote_posters %>
 
 <a id="social"></a>
 
-## ソーシャル メディアに投稿してください
+## 在社群網絡媒體張貼訊息
 
 [![image](/images/fit-250/social-1.jpg)](/images/social-1.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-2.jpg)](/images/social-2.jpg)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/fit-250/social-3.jpg)](/images/social-3.jpg)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -31,17 +31,17 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="logo"></a>
 
-## 以下のロゴをHour of Codeを広めるために使ってください。
+## Use the Hour of Code logo to spread the word
 
 [![image](<%= localized_image('/images/fit-200/hour-of-code-logo.png') %>)](%= localized_image('/images/hour-of-code-logo.png') %)
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[下載高畫質版本](http://images.code.org/share/hour-of-code-logo.zip)
 
 **"Hour of Code" is trademarked. We don't want to prevent this usage, but we want to make sure it fits within a few limits:**
 
-  1. いかなる「Hour of Code」への言及も、それがあなたの独自のブランド名だと示唆する形ではなく、Hour of Code を草の根運動として参照する形で使われるべきです。 Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+  1. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code™ at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
   2. Use a "TM" superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-  3. ページに（またはフッターに）、CSEdWeek と Code.org へのリンクを含めて次の言葉を含めてください:
+  3. Include language on the page (or in the the footer), including links to the CSEdWeek and Code.org web sites, that says the following:
     
     *“The 'Hour of Code™' is a nationwide initiative by Computer Science Education Week[csedweek.org] and Code.org[code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
@@ -49,22 +49,22 @@ title: <%= hoc_s(:title_resources) %> layout: wide nav: promote_nav
 
 <a id="stickers"></a>
 
-## ステッカーを印刷して生徒に配布
+## 印下這些貼紙並給予你的學生
 
 (Stickers are 1" diameter, 63 per sheet)  
 [![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Hour of Code を宣伝するために以下のメールを送ってみてください
+## 發送這些電子郵件協助推廣Hour of Code活動
 
 <a id="email"></a>
 
-## 学校や社長、友達にイベントを開催するよう頼んでください:
+## 邀請您的學校、校長或朋友進行註冊：
 
-Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. 良いお知らせは、私たちはこれを変えようとしているということです。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+Computers are everywhere, changing every industry on the planet. But fewer than half of all schools teach computer science. 好消息是我們正在改變此狀況。 If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! ディズニーのホームページに掲載されました。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 與迪士尼。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 This year, let's make it even bigger. I’m asking you to join in for the Hour of Code 2016. Please get involved with an Hour of Code event during Computer Science Education Week, <%= campaign_date('full') %>.
 
@@ -74,13 +74,13 @@ Get started at http://hourofcode.com/<%= @country %>
 
 <a id="media-pitch"></a>
 
-## メディアをあなたが主催するイベントに招待してください:
+## 邀請大眾媒體參加您的活動：
 
 **Subject line:** Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but fewer than half of all schools teach computer science. Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 良いお知らせは、私たちはこれを変えようとしているということです。
+電腦到處都有，正在改變地球上的任何產業，但只有不到一半的學校有教電腦科學。 Girls and minorities are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! ディズニーのホームページに掲載されました。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo! 與迪士尼。 Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. President Obama wrote his first line of code as part of the campaign.
 
 That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (<%= campaign_date('full') %>).
 
@@ -98,11 +98,11 @@ I look forward to being in touch.
 
 <a id="parents"></a>
 
-## 保護者に学校でのイベントについてお知らせしてください:
+## 告訴家長關於您學校的活動：
 
-Dear Parents,
+親愛的家長們，
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+我們生活在一個被科技環繞的世界。 And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
 But only a tiny fraction of us are learning **how** technology works. Fewer than half of all schools teach computer science.
 
@@ -114,13 +114,13 @@ This is a chance to change the future of education in [TOWN/CITY NAME].
 
 See http://hourofcode.com/<%= @country %> for details, and help spread the word.
 
-Sincerely,
+誠摯地邀請您，
 
-Your principal
+您們的校長
 
 <a id="politicians"></a>
 
-## あなたの学校のイベントに地元の政治家を招待してください:
+## 邀請當地行政長官參加您的學校活動：
 
 Dear [Mayor/Governor/Representative/Senator LAST NAME]:
 
