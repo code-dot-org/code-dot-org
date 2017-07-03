@@ -12,6 +12,11 @@ export default class MazeThumbnail extends React.Component {
     map: React.PropTypes.array.isRequired,
     skin: React.PropTypes.string.isRequired,
     startDirection: React.PropTypes.number.isRequired,
+    scale: React.PropTypes.number
+  }
+
+  static defaultProps = {
+    scale: 1
   }
 
   componentDidMount() {
@@ -28,17 +33,28 @@ export default class MazeThumbnail extends React.Component {
     subtype.createDrawer();
     subtype.initWallMap();
 
-    drawMap(this.refs.svg, skin, subtype, Maze.map);
+    drawMap(this.svg, skin, subtype, Maze.map);
   }
 
   render() {
     return (
       <ProtectedStatefulDiv>
-        <svg
-          width="400"
-          height="400"
-          ref="svg"
-        />
+        <div
+          style={{
+            maxWidth: 400 * this.props.scale,
+            maxHeight: 400 * this.props.scale
+          }}
+        >
+          <svg
+            width="400"
+            height="400"
+            ref={c => {this.svg = c;}}
+            style={{
+              transform: `scale(${this.props.scale})`,
+              transformOrigin: '0 0'
+            }}
+          />
+        </div>
       </ProtectedStatefulDiv>
     );
   }
