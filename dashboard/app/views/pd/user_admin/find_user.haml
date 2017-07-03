@@ -25,7 +25,7 @@
           %td= @user.name
     -if @permissions
       = form_tag(action: 'assign_permission') do
-        %table.table.table-hover.table-condensed.table-auto-width
+        %table.table.table-hover.table-condensed.table-auto-width{:id => 'permission-table'}
           %thead
             %th Action
             %th Permission
@@ -39,7 +39,7 @@
             %tr
               %td
                 .actions
-                  = submit_tag('Assign Permission', id: 'submitAssignPermission')
+                  = submit_tag('Assign', id: 'submitAssignPermission')
               %td
                 %input{:hidden => true, :name => "user_id", :value => @user.id}
                 .field
