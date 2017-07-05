@@ -12685,10 +12685,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
           onFirstLine: true
         };
         if (!(this.opts.lockZeroParamFunctions && node.params.length === 0)) {
-          buttons.addButton = '\u21A0';
+          buttons.addButton = '\u2192';
         }
         if (node.params.length > 0) {
-          buttons.subtractButton = '\u219E';
+          buttons.subtractButton = '\u2190';
         }
         this.jsBlock(node, depth, bounds, buttons);
         this.mark(indentDepth, node.body, depth + 1, null);
@@ -12870,10 +12870,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         }
         if (showButtons) {
           if (argCount < maxArgs) {
-            buttons.addButton = '\u21A0';
+            buttons.addButton = '\u2192';
           }
           if (argCount > minArgs) {
-            buttons.subtractButton = '\u219E';
+            buttons.subtractButton = '\u2190';
           }
         }
         this.jsBlock(node, depth, bounds, buttons);
@@ -13015,10 +13015,10 @@ exports.JavaScriptParser = JavaScriptParser = (function(superClass) {
         break;
       case 'ArrayExpression':
         buttons = {
-          addButton: '\u21A0'
+          addButton: '\u2192'
         };
         if (node.elements.length > 0) {
-          buttons.subtractButton = '\u219E';
+          buttons.subtractButton = '\u2190';
         }
         this.jsBlock(node, depth, bounds, buttons);
         ref16 = node.elements;
@@ -15369,7 +15369,7 @@ exports.wrapParser = function(CustomParser) {
 
 
 },{"./helper.coffee":28,"./model.coffee":31,"sax":23}],34:[function(require,module,exports){
-var ANY_DROP, BLOCK_ONLY, CARRIAGE_ARROW_INDENT, CARRIAGE_ARROW_NONE, CARRIAGE_ARROW_SIDEALONG, CARRIAGE_GROW_DOWN, DEFAULT_OPTIONS, DROPDOWN_ARROW_HEIGHT, DROP_TRIANGLE_COLOR, MOSTLY_BLOCK, MOSTLY_VALUE, MULTILINE_END, MULTILINE_END_START, MULTILINE_MIDDLE, MULTILINE_START, NO, NO_MULTILINE, SVG_STANDARD, VALUE_ONLY, View, YES, arrayEq, avgColor, dedupe, draw, helper, model, toHex, toRGB, twoDigitHex, zeroPad,
+var ANY_DROP, BLOCK_ONLY, BUTTON_TEXT_HEIGHT_OFFSET, CARRIAGE_ARROW_INDENT, CARRIAGE_ARROW_NONE, CARRIAGE_ARROW_SIDEALONG, CARRIAGE_GROW_DOWN, DEFAULT_OPTIONS, DROPDOWN_ARROW_HEIGHT, DROP_TRIANGLE_COLOR, MOSTLY_BLOCK, MOSTLY_VALUE, MULTILINE_END, MULTILINE_END_START, MULTILINE_MIDDLE, MULTILINE_START, NO, NO_MULTILINE, SVG_STANDARD, VALUE_ONLY, View, YES, arrayEq, avgColor, dedupe, draw, helper, model, toHex, toRGB, twoDigitHex, zeroPad,
   indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; },
   extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
   hasProp = {}.hasOwnProperty,
@@ -15465,6 +15465,13 @@ DEFAULT_OPTIONS = {
     grey: '#eeeeee',
     bluegrey: '#b0bec5'
   }
+};
+
+BUTTON_TEXT_HEIGHT_OFFSET = {
+  '+': -1,
+  '-': -1,
+  '\u2190': -3,
+  '\u2192': -3
 };
 
 YES = function() {
@@ -17143,7 +17150,7 @@ exports.View = View = (function() {
           fillColor: this.view.getColor(this.model.color),
           cssClass: 'droplet-button-path'
         });
-        textElement = new this.view.draw.Text(new this.view.draw.Point((this.view.opts.buttonWidth - this.view.draw.measureCtx.measureText((ref1 = this.model.buttons) != null ? ref1.addButton : void 0).width) / 2, this.view.opts.buttonHeight - this.view.opts.textHeight), (ref2 = this.model.buttons) != null ? ref2.addButton : void 0);
+        textElement = new this.view.draw.Text(new this.view.draw.Point((this.view.opts.buttonWidth - this.view.draw.measureCtx.measureText((ref1 = this.model.buttons) != null ? ref1.addButton : void 0).width) / 2, this.view.opts.buttonHeight - this.view.opts.textHeight + BUTTON_TEXT_HEIGHT_OFFSET[this.model.buttons.addButton]), (ref2 = this.model.buttons) != null ? ref2.addButton : void 0);
         textElement.setParent(this.addButtonPath);
         this.addButtonPath.setParent(this.group);
         this.elements.push(this.addButtonPath);
@@ -17155,7 +17162,7 @@ exports.View = View = (function() {
           fillColor: this.view.getColor(this.model.color),
           cssClass: 'droplet-button-path'
         });
-        textElement = new this.view.draw.Text(new this.view.draw.Point((this.view.opts.buttonWidth - this.view.draw.measureCtx.measureText((ref4 = this.model.buttons) != null ? ref4.subtractButton : void 0).width) / 2, this.view.opts.buttonHeight - this.view.opts.textHeight), (ref5 = this.model.buttons) != null ? ref5.subtractButton : void 0);
+        textElement = new this.view.draw.Text(new this.view.draw.Point((this.view.opts.buttonWidth - this.view.draw.measureCtx.measureText((ref4 = this.model.buttons) != null ? ref4.subtractButton : void 0).width) / 2, this.view.opts.buttonHeight - this.view.opts.textHeight + BUTTON_TEXT_HEIGHT_OFFSET[this.model.buttons.subtractButton]), (ref5 = this.model.buttons) != null ? ref5.subtractButton : void 0);
         textElement.setParent(this.subtractButtonPath);
         this.subtractButtonPath.setParent(this.group);
         this.elements.push(this.subtractButtonPath);
