@@ -213,7 +213,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'grant_permission grants user_permission' do
     sign_in @admin
     post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
-    assert [UserPermission::LEVELBUILDER], @not_admin.reload.permissions
+    assert_equal [UserPermission::LEVELBUILDER], @not_admin.reload.permissions
   end
 
   test 'grant_permission noops for student user' do
@@ -226,7 +226,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_response :redirect
     assert @response.redirect_url.include?('/admin/permissions')
     assert_equal(
-      'FAILED: user test_user@example.com could not be found or was not a teacher',
+      "FAILED: user #{@user.id} could not be found or was not a teacher",
       flash[:alert]
     )
   end

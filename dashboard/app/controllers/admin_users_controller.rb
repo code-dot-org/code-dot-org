@@ -156,13 +156,6 @@ class AdminUsersController < ApplicationController
     redirect_to action: "permissions_form", search_term: user_id
   end
 
-  def revoke_all_permissions
-    hashed_email = User.hash_email params[:email]
-    # Though in theory a hashed email specifies a unique account, in practice it may not. As this is
-    # security related, we therefore iterate rather than use find_by_hashed_email.
-    User.with_deleted.where(hashed_email: hashed_email).each(&:revoke_all_permissions)
-  end
-
   private
 
   # white list permitted request parameters
