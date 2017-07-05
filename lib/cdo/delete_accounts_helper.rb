@@ -4,7 +4,6 @@ require 'cdo/solr'
 require 'cdo/solr_helper'
 
 module DeleteAccountsHelper
-  ANONYMIZED_SECTION_NAME = 'system_deleted'.freeze
   OPEN_ENDED_LEVEL_TYPES = %w(
     Applab
     FreeResponse
