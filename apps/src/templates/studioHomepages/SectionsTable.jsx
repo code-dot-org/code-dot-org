@@ -72,6 +72,7 @@ export const styles = {
     borderLeftWidth: 1,
     borderLeftColor: color.border_light_gray,
     borderLeftStyle: 'solid',
+    display: 'none'
   },
   colText: {
     color: color.charcoal,
@@ -95,12 +96,11 @@ const SectionsTable = React.createClass({
   },
 
   onLeave() {
-    // const { canLeave } = this.props;
+    //TODO: Clicking this button should remove the student from that section. Remove display: 'none' from leaveCol styles so the button will appear for students who have permission to leave sections.
   },
 
   render() {
     const { sections, isRtl, isTeacher, canLeave } = this.props;
-    // const { leaving } = this.state;
 
     return (
       <table style={styles.table}>
