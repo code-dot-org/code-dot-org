@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard.jsx';
-import {projectDataPropType2} from './projectConstants';
+import {personalProjectDataPropType} from './projectConstants';
 import color from "../../util/color";
+import i18n from "@cdo/locale";
 
 const styles = {
   grid: {
@@ -22,7 +23,7 @@ const styles = {
 
 const ProjectCardGrid = React.createClass({
   propTypes: {
-    projectList: PropTypes.arrayOf(projectDataPropType2).isRequired
+    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   },
 
   renderProjectCardList(projectList) {
@@ -34,6 +35,7 @@ const ProjectCardGrid = React.createClass({
               <ProjectCard
                 projectData={project}
                 currentGallery={'personal'}
+                hideActions={true}
               />
             </div>
           ))
@@ -45,7 +47,7 @@ const ProjectCardGrid = React.createClass({
   render() {
     return (
       <div style={styles.grid}>
-        <h3>Keep working on a recent project:</h3>
+        <h3>{i18n.projectsContinueWorking()}</h3>
         {this.renderProjectCardList(this.props.projectList)}
       </div>
     );

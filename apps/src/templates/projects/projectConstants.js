@@ -12,14 +12,13 @@ export const projectDataPropType = PropTypes.shape({
   publishedToClass: PropTypes.bool.isRequired,
 });
 
-export const projectDataPropType2 = PropTypes.shape({
+
+export const personalProjectDataPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
   name: PropTypes.string,
-  studentName: PropTypes.string,
-  studentAgeRange: PropTypes.string,
   thumbnailUrl: PropTypes.string,
   type: PropTypes.string.isRequired,
-  publishedAt: PropTypes.string.isRequired
+  updatedAt: PropTypes.string.isRequired
 });
 
 export const projectPropType = PropTypes.shape({
