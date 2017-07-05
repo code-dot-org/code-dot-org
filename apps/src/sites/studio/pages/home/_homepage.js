@@ -13,7 +13,7 @@ function showHomepage() {
   const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
-  const isTeacher = !!homepageData.sections;
+  const isTeacher = homepageData.isTeacher;
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
