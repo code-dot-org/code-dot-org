@@ -41,9 +41,9 @@
     "instructions": "Help BB-8 get the scrap metal!",
     "markdown_instructions": "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif) \r\nBB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!\r\n\r\nWatch out for walls and crates! \r\n\r\n",
     "ideal": "4",
-    "contained_level_names": null,
     "tts_markdown_instructions_override": "BB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all! \r\n\r\nWatch out for walls and crates! ",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try adding blocks one at a time, then running your code to see what happens.\",\"hint_id\":\"courseB_starWars_prog1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2813411b5bb62b33cd24de27c25a3f5a/courseB_starWars_prog1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move East to solve this puzzle. How far do you need to move?\",\"hint_id\":\"courseB_starWars_prog1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/39e050a442b98cb74ea8fd8a2456ed30/courseB_starWars_prog1.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try adding blocks one at a time, then running your code to see what happens.\",\"hint_id\":\"courseB_starWars_prog1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2813411b5bb62b33cd24de27c25a3f5a/courseB_starWars_prog1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move East to solve this puzzle. How far do you need to move?\",\"hint_id\":\"courseB_starWars_prog1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/39e050a442b98cb74ea8fd8a2456ed30/courseB_starWars_prog1.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
