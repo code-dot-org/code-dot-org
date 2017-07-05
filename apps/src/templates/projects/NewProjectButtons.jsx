@@ -68,7 +68,7 @@ const NewProjectButtons = React.createClass({
   render() {
     return (
       <div style={styles.fullsize}>
-        <h3>Start a new project</h3>
+        <h3>{i18n.projectStartNew()}</h3>
         {this.renderButtons()}
       </div>
     );
