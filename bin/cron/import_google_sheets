@@ -4,7 +4,8 @@ require 'cdo/only_one'
 
 def main
   Dir.chdir(pegasus_dir) do
-    `rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync 2>&1`
+    system('rake PEGASUS_RAKE_LOGGER=true seed:sync i18n:sync 2>&1')
+    exit $?.exitstatus
   end
 end
 

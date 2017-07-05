@@ -130,11 +130,6 @@ FactoryGirl.define do
     form_data {form_data.to_json}
   end
 
-  factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
-    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
-
-    form_data {(build :pd_teachercon_survey_hash).to_json}
-  end
   # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
   factory :pd_facilitator_program_registration_hash, class: 'Hash' do
     initialize_with do
@@ -164,6 +159,12 @@ FactoryGirl.define do
         liabilityWaiver: ["Yes"]
       }.stringify_keys
     end
+  end
+
+  factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+
+    form_data {(build :pd_teachercon_survey_hash).to_json}
   end
 
   factory :pd_teachercon_survey_hash, class: 'Hash' do
@@ -260,6 +261,11 @@ FactoryGirl.define do
         ]
       }.stringify_keys
     end
+  end
+
+  factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+    form_data {(build :pd_local_summer_workshop_survey_hash).to_json}
   end
 
   factory :pd_local_summer_workshop_survey_hash, class: 'Hash' do
