@@ -86,7 +86,7 @@ class HomeController < ApplicationController
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
       @recent_courses = current_user.recent_courses_and_scripts
-
+      # @recent_courses are used to generate CourseCards on the homepage. Rather than a CourseCard, student's most recent assignable will be displayed with a StudentTopCourse component. See below re: student_top_course. Thus, student recent_courses should drop the first course.
       unless current_user.teacher?
         @recent_courses = current_user.recent_courses_and_scripts.drop(1)
       end

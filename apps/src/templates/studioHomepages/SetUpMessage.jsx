@@ -5,11 +5,12 @@ import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   section: {
-    width: 960,
+    width: 970,
     backgroundColor: color.white,
     borderStyle: 'dashed',
     borderWidth: 5,
     borderColor: color.border_gray,
+    boxSizing: "border-box"
   },
   heading: {
     paddingLeft: 50,

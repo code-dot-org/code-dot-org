@@ -319,13 +319,13 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a CourseCards are rendered for each course.
-    const course1Card = coursesContentContainer.childAt(1).childAt(0);
+    const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
     assert.equal(course1Card.name(), 'CourseCard');
     assert.equal(course1Card.childAt(0).type(), 'img');
     assert.equal(course1Card.childAt(1).text(), courses[0].name);
     expect(course1Card.childAt(2).text()).to.contain(courses[0].description);
     expect(course1Card.childAt(2).text()).to.contain('View course');
-    const course2Card = coursesContentContainer.childAt(2).childAt(0);
+    const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
     assert.equal(course2Card.name(), 'CourseCard');
     assert.equal(course2Card.childAt(1).text(), courses[1].name);
     expect(course2Card.childAt(2).text()).to.contain(courses[1].description);
@@ -381,25 +381,25 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a CourseCards are rendered for first 4 courses.
-    const course1Card = coursesContentContainer.childAt(1).childAt(0);
+    const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
     assert.equal(course1Card.name(), 'CourseCard');
     assert.equal(course1Card.childAt(0).type(), 'img');
     assert.equal(course1Card.childAt(1).text(), moreCourses[0].name);
     expect(course1Card.childAt(2).text()).to.contain(moreCourses[0].description);
     expect(course1Card.childAt(2).text()).to.contain('View course');
-    const course2Card = coursesContentContainer.childAt(2).childAt(0);
+    const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
     assert.equal(course2Card.name(), 'CourseCard');
     assert.equal(course2Card.childAt(1).text(), moreCourses[1].name);
     expect(course2Card.childAt(2).text()).to.contain(moreCourses[1].description);
     expect(course2Card.childAt(2).text()).to.contain('View course');
-    const course3Card = coursesContentContainer.childAt(3).childAt(0);
+    const course3Card = coursesContentContainer.childAt(4).childAt(0).childAt(0);
     assert.equal(course3Card.childAt(1).text(), moreCourses[2].name);
     expect(course3Card.childAt(2).text()).to.contain(moreCourses[2].description);
-    const course4Card = coursesContentContainer.childAt(4).childAt(0);
+    const course4Card = coursesContentContainer.childAt(5).childAt(0).childAt(0);
     assert.equal(course4Card.childAt(1).text(), moreCourses[3].name);
     expect(course4Card.childAt(2).text()).to.contain(moreCourses[3].description);
     // Check if SeeMoreCourses is rendered.
-    const seeMoreCourses = coursesContentContainer.childAt(5).childAt(0);
+    const seeMoreCourses = coursesContentContainer.childAt(6).childAt(0);
     assert.equal(seeMoreCourses.name(), 'SeeMoreCourses');
     const viewMoreButton = seeMoreCourses.childAt(0);
     assert.equal(viewMoreButton.name(), 'ProgressButton');
@@ -430,7 +430,7 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a courses SetUpMessage is rendered.
-    const coursesSetUpMessage = coursesContentContainer.childAt(4).childAt(0);
+    const coursesSetUpMessage = coursesContentContainer.childAt(5).childAt(0);
     assert.equal(coursesSetUpMessage.name(), 'SetUpMessage');
     assert.equal(coursesSetUpMessage.props().type, 'courses');
     assert.equal(coursesSetUpMessage.childAt(0).text(), 'Start learning');
@@ -439,5 +439,4 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesSetUpMessage.childAt(2).props().href, '/courses');
     assert.equal(coursesSetUpMessage.childAt(2).props().text, 'Find a course');
   });
-
 });
