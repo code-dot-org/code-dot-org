@@ -14,7 +14,7 @@ class StorageApps
   def create(value, ip:, type: nil, published_at: nil)
     timestamp = DateTime.now
     row = {
-      storage_id: @storage_id.to_i,
+      storage_id: @storage_id,
       value: value.to_json,
       created_at: timestamp,
       updated_at: timestamp,
