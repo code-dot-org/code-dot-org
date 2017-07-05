@@ -447,7 +447,7 @@ end
 
 # Mock storage_id to generate random IDs
 def storage_id(_)
-  SecureRandom.hex
+  SecureRandom.random_number 1_000_000
 end
 
 def storage_encrypt_channel_id(storage_id, channel_id)
