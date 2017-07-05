@@ -135,7 +135,7 @@ Resources:
         SuspendProcesses: [ScheduledActions]
         WaitOnResourceSignals: true
     Properties:
-      VPCZoneIdentifier: <%= subnets.first(2).to_json %>
+      VPCZoneIdentifier: <%= subnets.to_json %>
       LaunchConfigurationName: !Ref FrontendLaunchConfig
       MinSize: !GetAtt [ASGCount, MinSize]
       MaxSize: !GetAtt [ASGCount, MaxSize]
