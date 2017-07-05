@@ -30,14 +30,13 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="clear: both;"></div>
 
-## <a name="what"></a>Apply for Professional Learning
+## <a name="what"></a>Professional Learning
 
  **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
  
-We still have a few seats available at TeacherCon Phoenix, our five-day workshop for CS Principles, July 16 - 21. If you are available for those dates, please apply now!
+If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
-[<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
-
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
 
 ## Code.org's AP CS Principles Curriculum
 
