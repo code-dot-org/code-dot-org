@@ -16,39 +16,51 @@ const TeacherHomepage = React.createClass({
     courses: shapes.courses,
     announcements: React.PropTypes.array.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
-    const { courses, sections, announcements, codeOrgUrlPrefix } = this.props;
+    const { courses, sections, announcements, codeOrgUrlPrefix, isRtl } = this.props;
 
     return (
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
           extended={false}
+          short={true}
+        />
+        <ProtectedStatefulDiv
+          ref="flashes"
         />
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
         <Announcements
           announcements={announcements}
+          isRtl={isRtl}
         />
         <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
+          isRtl={isRtl}
         />
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           heading={i18n.recentCourses()}
           isTeacher={true}
+          isRtl={isRtl}
         />
-        <TeacherResources codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+        <TeacherResources
+          codeOrgUrlPrefix={codeOrgUrlPrefix}
+          isRtl={isRtl}
+        />
       </div>
     );
   }

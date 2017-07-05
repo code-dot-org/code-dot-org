@@ -38,7 +38,7 @@
     "instructions": "Add two or more additional actors to your game and make them move.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Now that your game has a hero, add two or more additional actors to your game and make them move. \r\n\r\nDo you want to have an actor patrol back and forth or chase your main character? \r\nTry using a these new blocks to bring your game to life!\r\n\r\n<img src=\"https://images.code.org/8f82d0e0ceab3f4fba725800cb43f94d-image-1484023674541.46.14.png\" width=\"300px\"/>",
+    "markdown_instructions": "Now that your game has a hero, add two or more additional actors to your game and make them move. \r\n\r\nDo you want to have an actor patrol back and forth or chase your main character? \r\nTry using a these new blocks to bring your game to life!\r\n\r\n![](https://images.code.org/04951f51ad2fda34531c335ef10577ae-image-1497992195771.png)",
     "failure_message_override": "You must add two or more new actors to your game and program them to move.",
     "soft_buttons": [
       "leftButton",
@@ -55,7 +55,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 18:14:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:21:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 18:14:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:21:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 20:54:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 20:56:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

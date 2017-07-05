@@ -304,8 +304,8 @@
     Alzate, Aluna do 5.º Ano'
   stats_michael: '"Eu <b>nunca, nunca</b> vi meus alunos tão animados para aprender."
     - Michael Clark, professor'
-  studiobar_title: Explora o <a href='http://studio.code.org'>Code Studio</a>
-  studiobar_title_nolink: Explora o Code Studio
+  studiobar_title: Explore o <a href='http://studio.code.org'>Code Studio</a>
+  studiobar_title_nolink: Explore o Code Studio
   studiobar_elementary_title: Cursos elementares
   studiobar_elementary_body: Os nossos três cursos para alunos do 1.º Ciclo
   studiobar_hoc_title: A Hora de Código
@@ -313,7 +313,7 @@
   studiobar_flappy_title: Flappy Bird
   studiobar_flappy_body: Cria e partilha a tua própria versão do jogo “Flappy Bird”.
   studiobar_teacher_title: Salas de aula únicas
-  studiobar_teacher_body: Se for Professor, pode usar o Code Studio na sala de aula
+  studiobar_teacher_body: Apresente o Code Studio em sua sala de aula
   studiobar_frozen_title: Hora de Código
   studiobar_frozen_body: Cria obras de arte na neve com a Anna e com a Elsa
   studiobar_donate_title: Doar
@@ -417,6 +417,7 @@
     Todos podem aprender.
     Começa hoje com uma Hora de Código.
   homepage_slot_text_link_hoc: Exprimenta a Hora de Código
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organize um evento da Hora do Código
   homepage_slot_text_link_hocserved: "# já experimentaram"
   homepage_solot_text_link_volunteer: Seja voluntário na Hora do Código
@@ -845,6 +846,7 @@
   dashboard_responses_view: 'Ver respostas de texto em:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova turma
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Crie novas turmas e adicione alunos a
     elas. As turmas ajudam na organização dos alunos em grupos menores para que você
     possa acompanhar seu progresso e gerenciar suas contas.
@@ -852,6 +854,7 @@
   dashboard_sections_table_secret: Tipo de início de sessão
   dashboard_sections_table_grade: Ano
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_pairing_allowed: Programação em duplas
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alunos
   dashboard_sections_table_code: Código
@@ -1955,9 +1958,8 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Cursos
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1965,7 +1967,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Hora de Código
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1983,7 +1985,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: Estatística
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1991,6 +1993,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -8,12 +8,10 @@ export const sectionShape = PropTypes.shape({
   loginType: PropTypes.oneOf(['word', 'email', 'picture']).isRequired,
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
-  numStudents: PropTypes.number.isRequired,
+  studentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
-  assignmentName: PropTypes.string,
-  assignmentPath: PropTypes.string
 });
 
 export const assignmentShape = PropTypes.shape({
@@ -26,4 +24,11 @@ export const assignmentShape = PropTypes.shape({
   position: PropTypes.number,
   name: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
+});
+
+export const classroomShape = PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  section: PropTypes.string,
+  enrollmentCode: PropTypes.string.isRequired,
 });

@@ -5,7 +5,8 @@ class CustomDeviseFailure < Devise::FailureApp
   include LocaleHelper
 
   def hashed_email_in_hoc_signups?(hashed_email)
-    PEGASUS_DB[:forms].where(hashed_email: hashed_email, kind: 'HocSignup2017').any?
+    hoc_year = DCDO.get("hoc_year", 2017)
+    PEGASUS_DB[:forms].where(hashed_email: hashed_email, kind: "HocSignup#{hoc_year}").any?
   end
 
   def respond

@@ -75,6 +75,7 @@
   "penUp": "ceruza fel",
   "reinfFeedbackMsg": "Itt van a rajzod! Még dolgozhatsz rajta, de áttérhetsz a következő feladványra is.",
   "setAlpha": "alfa beállítása",
+  "setCharacter": "set character to {character}",
   "setColour": "színbeállítások megadása",
   "setPattern": "minta beállítása",
   "setWidth": "szélesség beállítása",

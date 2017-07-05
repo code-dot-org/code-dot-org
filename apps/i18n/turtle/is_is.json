@@ -75,6 +75,7 @@
   "penUp": "pensill upp",
   "reinfFeedbackMsg": "Hér er teikningin þín! Haltu áfram með hana eða farðu í næstu þraut.",
   "setAlpha": "stilla alpha",
+  "setCharacter": "stilla persónu á {character}",
   "setColour": "stilla lit",
   "setPattern": "stilla mynstur",
   "setWidth": "stilla breidd",

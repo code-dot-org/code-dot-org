@@ -5,9 +5,7 @@ import CourseCard from './CourseCard';
 const exampleCard = {
   name: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
-  image: "this is where there will be the source for the photo",
-  link: "link to the course",
-  assignedSections: []
+  link: "https://curriculum.code.org/csp/unit2/",
 };
 
 // ContentContainer is a generic component that will render whatever child components are passed to it.  CourseCards are used here as an example because it was first built to render them for the Teacher Homepage.
@@ -22,20 +20,21 @@ export default storybook => {
         story: () => (
           <ContentContainer
             heading="Recent Courses"
+            isRtl={false}
           >
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
+              isRtl={false}
             />
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
+              isRtl={false}
             />
           </ContentContainer>
         )
@@ -49,20 +48,50 @@ export default storybook => {
             linkText="View all courses"
             link="link to see all of the courses"
             showLink={true}
+            isRtl={false}
           >
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
+              isRtl={false}
             />
             <CourseCard
               name={exampleCard.name}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
-              assignedSections={exampleCard.assignedSections}
+              isRtl={false}
+            />
+        </ContentContainer>
+        )
+      },
+      {
+        name: 'link and description',
+        description: `Example ContentContainer with a link and description`,
+        story: () => (
+          <ContentContainer
+            heading="Recent Courses"
+            linkText="View all courses"
+            link="link to see all of the courses"
+            showLink={true}
+            isRtl={false}
+            description="These are courses that you have worked on recently"
+          >
+            <CourseCard
+              name={exampleCard.name}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              isRtl={false}
+            />
+            <CourseCard
+              name={exampleCard.name}
+              description={exampleCard.description}
+              image={exampleCard.image}
+              link={exampleCard.link}
+              isRtl={false}
             />
         </ContentContainer>
         )

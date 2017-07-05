@@ -75,6 +75,7 @@
   "penUp": "رفع القلم",
   "reinfFeedbackMsg": "ها هي رسمتك! بإمكانك الاستمرار في العمل عليها أو التوجه إلى اللغز التالي.",
   "setAlpha": "تعيين \"alpha\"تعيين",
+  "setCharacter": "set character to {character}",
   "setColour": "تعيين اللون",
   "setPattern": "تعيين النمط",
   "setWidth": "تعيين العرض",

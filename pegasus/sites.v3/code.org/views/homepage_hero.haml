@@ -40,7 +40,16 @@
   - heroes_arranged.each_with_index do |entry, index|
     -# note: this gsheet display parameter unused due to IE8 fix.
     - display = entry[:active_s] == "hide" ? "none" : "block"
-    .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
+    -# Preload the first hero image to render immediately, lazy-load the rest to conserve bandwidth.
+    - if index == 0
+      -#
+        Use Link rel=preload HTTP headers to preload as early as possible.
+        Two headers with inverse media queries conditionally load the correctly-sized image.
+      - response.add_header 'Link', "<#{entry[:image_t]}>; rel=preload; as=image; media=\"#{css_retina?(false)}\";"
+      - response.add_header 'Link', "<#{entry[:image_t].gsub('.jpg', '_2x.jpg')}>; rel=preload; as=image; media=\"#{css_retina?}\";"
+      .widehero#fullwidth0{style: "background-position: #{entry[:param1_s]}; background-image: url(#{entry[:image_t]});"}
+    - else
+      .widehero.lazyload{id: "fullwidth#{index}", "data-bg"=> "#{entry[:image_t]}", style: "background-position: #{entry[:param1_s]}"}
 
   #fullwidth
     - if request.site == 'code.org'
@@ -104,7 +113,7 @@
                 %button.herohocbutton= I18n.t(entry[:text1_s])
             %div{style: "clear: both;"}
           - elsif entry[:param1_s] == "video"
-            %img#playimage{src: "/shared/images/play-button.png", width:"25", onclick: "return showVideo_mainvideo();"}
+            %img#playimage{src: "/shared/images/fit-25/play-button.png", width:"25", height: "25", onclick: "return showVideo_mainvideo();"}
             %span#playtext{onclick: "return showVideo_mainvideo();"}= I18n.t(entry[:text1_s])
 
     #blankspaceleftmobile.mobile-feature
@@ -112,31 +121,27 @@
   .clear{style: "clear: both"}
 
 :javascript
+  // Swap in 2x versions of the hero image URLs for retina displays.
+  if (window.matchMedia('#{css_retina?}').matches) {
+    document.querySelectorAll('#hero .widehero').forEach(function(item) {
+      if (item.dataset.bg) {
+        item.dataset.bg = item.dataset.bg.replace(".jpg", "_2x.jpg");
+      }
+      if (item.style['background-image']) {
+        item.style['background-image'] = item.style['background-image'].replace(".jpg", "_2x.jpg");
+      }
+    });
+  }
+
   var petition;
 
-  $(document).ready()
-  {
+  $(document).ready(function() {
     // For IE8, can't start with opacity in the HTML, so we made things display: none.  Now we show them but
     // set opacity to 0, ready for code to start showing them by fading them in.
     $(".caption").css({display: "block", opacity: 0});
-    // Keep image hidden until fading in so it can lazy-load.
-    // $(".widehero").css({display: "block", opacity: 0});
-
-    $("#fullwidth0").fadeTo(4000, 1);
 
     showQuote(null, 0);
-
-    // Use retina versions of the hero background images if on a retina display.
-    $(".widehero").each(function()
-    {
-      var imageUrl = $(this).data('bg');
-      if (window.devicePixelRatio >= 2)
-      {
-        imageUrl = imageUrl.replace(".jpg", "_2x.jpg");
-      }
-      $(this).attr('data-bg', imageUrl);
-    });
-  }
+  });
 
   function showQuote(lastImage, nextImage)
   {

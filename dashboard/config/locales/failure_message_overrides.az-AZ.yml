@@ -45,8 +45,8 @@
       Eval Strings Images .2_failure_message_override: |-
         Make sure you append the
         string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
+      Kiki_StarWars_Test_5_failure_message_override: Oyun bitdi!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Oyun bitdi!
       MC HOC 2016 Level 1_failure_message_override: |-
         To go on, you’ll need to collect
         wool. To collect the wool, use the arrow keys to walk to the sheep and then
@@ -79,9 +79,8 @@
       MC HOC 2016 Level 8_failure_message_override: |-
         You need to use the exploding
         Creeper to blow up the wall so you can reach your sheep.
-      MC HOC 2016 Level 9_failure_message_override: |-
-        Oh No! You need to stop ALL
-        of the zombies in order to save the village. Get the Iron Golem to help you!
+      MC HOC 2016 Level 9_failure_message_override: Yox kəndi qorumaq üçün sənin bütün
+        zombiləri dayandırmağın lazımdır sənə kömək etməsi üçün Dəmir Golem əldə et!
       MC HOC 2016 Nerop_failure_message_override: |-
         To go on, you’ll need to collect
         wool. To collect the wool, use the arrow keys to walk to the sheep and then
@@ -108,19 +107,15 @@
       MC HOC 2016 Village Test_failure_message_override: |-
         You need to make the Iron
         Golem chase and attack the zombies to win.
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!
-      courseE_playLab_scaffold3_failure_message_override: |-
-        You must add two or more
-        new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: |-
-        You must add two or more
-        new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
+      WhileAdventure_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      courseE_playLab_scaffold3_failure_message_override: Sen oyununa və proqramına
+        hərəkət etmələri üçün 2 ve yaxud daha çox oyunçu elve etməlisən.
+      grade4_scaffolded_project3_failure_message_override: Sen oyununa 2 ve yaxud
+        daha çox oyunçu elve etməlisən.
+      kikiTesta_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      sample1_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
+      sample4_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!
       sample6_failure_message_override: |-
         Not quite.  Keep trying!  [Move to Play
         Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+      sample8_failure_message_override: Təbriklər! sən X qəpiklərini eldə etdin!

@@ -1,5 +1,4 @@
 @as_taught_student
-@no_circle
 @eyes
 Feature: Contained Levels
 

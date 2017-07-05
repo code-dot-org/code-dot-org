@@ -83,7 +83,7 @@ namespace :circle do
     end
     RakeUtils.system_stream_output 'until $(curl --output /dev/null --silent --head --fail http://localhost-studio.code.org:3000); do sleep 5; done'
     Dir.chdir('dashboard/test/ui') do
-      container_features = `find ./features -name '*.feature' | sort | awk "NR % (${CIRCLE_NODE_TOTAL} - 1) == (${CIRCLE_NODE_INDEX} - 1)"`.split("\n").map {|f| f[2..-1]}
+      container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..-1]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")
       container_eyes_features = container_features & eyes_features
       RakeUtils.system_stream_output "bundle exec ./runner.rb" \
@@ -122,6 +122,17 @@ namespace :circle do
 
     # More generally, we shouldn't have _any_ staged changes in the apps directory.
     raise "Unexpected staged changes in apps directory." if RakeUtils.git_staged_changes? apps_dir
+  end
+
+  task :seed_ui_test do
+    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+      next
+    end
+
+    Dir.chdir('dashboard') do
+      RakeUtils.rake_stream_output 'seed:ui_test'
+    end
   end
 end
 

@@ -747,7 +747,7 @@ et:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Šokolaadivalmistamise protsess koosneb mitmest suurest sammust ja iga suur samm koosneb paljudest väiksematest sammudest. Saame valida erinevate retseptide ja algoritmide vahel, sõltuvalt sellest, mis maitsega šokolaadi soovime. Iga samm, isegi kõige väiksem, on nii oluline, et ilma seda läbimata ei saa sooritada ka ülejäänud toiminguid. On väga tähtis luua algoritme, millest teised aru saavad. Seepärast tuleb iga samm kirja panna, nii et ükskõik kes seda teeb, oleks tulemus sama.  "
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Seni oled teinud animatsiooni või loo, mis teeb täpselt sama asja iga kord, kui see käivitada. Nüüd saad aga teha interaktiivse mängu, mida saab päriselt mängida."
@@ -823,7 +823,7 @@ et:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Selles näites ütleme, et KUI sinisel lillel on nektarit rohkem kui 0, korja nektarit. Seepeale kogub meie mesilane nektarit nii kaua, kuniks ta lille juurde jääb."
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Kas oled kunagi kuulnud terminit \"debugging\" ehk silumine? See on viis, kuidas leida asju, mis ei tööta. Kui parandad koodi, siis sa tuvastad ja parandad vigasid."

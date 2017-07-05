@@ -2500,9 +2500,6 @@ Studio.reset = function (first) {
     hasThrownProjectile: false
   };
 
-  // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = Direction.EAST;
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2556,6 +2553,7 @@ Studio.reset = function (first) {
       // overridden as soon as we call setSprite
       visible: !level.spritesHiddenToStart
     });
+    Studio.lastMoveSingleDir = spriteStart.direction;
 
     var sprite = i % Studio.startAvatars.length;
 
@@ -4996,11 +4994,11 @@ Studio.setMap = function (opts) {
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
   Studio.wallMapCollisions = true;
+  Studio.walls.setWallMapRequested(useMap);
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
   Studio.wallMapRequested = opts.value;
-  Studio.walls.setWallMapRequested(opts.value);
 
   if (opts.color && Studio.wallColor !== opts.color) {
     Studio.wallColor = opts.color;
@@ -5360,14 +5358,14 @@ Studio.queueCallback = function (callback, args) {
     },
     doneCallee_: true,
     func_: callback,
-    arguments: intArgs,
+    arguments_: intArgs,
     n_: intArgs.length
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
     // remove the last argument because stepCallExpression always wants to push it back on.
-    if (state.arguments.length > 0) {
-      state.value = state.arguments.pop();
+    if (state.arguments_.length > 0) {
+      state.value = state.arguments_.pop();
     }
 
     const depth = Studio.interpreter.pushStackFrame(state);

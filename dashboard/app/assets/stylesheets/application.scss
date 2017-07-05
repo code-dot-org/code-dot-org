@@ -242,6 +242,7 @@ img.video_thumbnail {
 }
 
 .header2-wrapper {
+  &.hide_on_mobile,
   .hide_on_mobile {
     @media screen and (max-device-width: 500px) {
       display: none;
@@ -367,6 +368,10 @@ img.video_thumbnail {
         border-bottom: solid 2px $orange;
       }
     }
+
+    html[dir=rtl] & {
+      padding-right: 300px;
+    }
   }
 
   .header_button {
@@ -387,6 +392,12 @@ img.video_thumbnail {
     a:hover {
       text-decoration: none;
       background-color: $orange;
+    }
+  }
+
+  #sign_in_or_user {
+    html[dir=rtl] & {
+      padding-right: 20px;
     }
   }
 
@@ -449,8 +460,12 @@ img.video_thumbnail {
   width: 100%;
   height: 320px;
   z-index: -1000;
-  background-position: 80% 50%;
+  background-position: 80% 10%;
   background-size: cover;
+
+  &.header-banner-short {
+    height: 180px;
+  }
 }
 
 .sign_in.show_only_on_mobile {

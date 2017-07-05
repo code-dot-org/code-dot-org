@@ -747,7 +747,7 @@ sv:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "När vi vill göra choklad, finns det många stora steg i denna process och alla dessa stora steg har en uppsättning mindre steg och det finns olika recept eller algoritmer beroende på hur vi vill ha chokladen efter smak. Varje steg är viktigt, även de små, så att resten av dem inte kan fullföljas om ett steg fattas. Det är verkligen viktigt att skapa algoritmer som andra kan förstå. Det är därför varje steg måste skrivas så att vem som än gör det, blir resultatet detsamma."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Du har hittills gjort en animation eller en berättelse som gör exakt samma sak varje gång du kör den. Nu kan du göra ett interaktivt spel som du faktiskt kan spela."
@@ -823,7 +823,7 @@ sv:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "I det här exemplet ska vi säga OM den lila blomman har nektar större än 0, få nektar. Det säger till vårt bi att fortsätta så länge det finns nektar där. Ta-dah!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Har du någonsin hört talas om felsökning av ett program? Detta är hur du tar reda på vad som inte fungerar. När du felsöker kod, kan du identifiera och ta bort fel."

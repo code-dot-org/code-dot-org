@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { isRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -9,6 +10,7 @@ import i18n from "@cdo/locale";
 $(document).ready(showHomepage);
 
 function showHomepage() {
+  const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
   const isTeacher = !!homepageData.sections;
@@ -40,7 +42,7 @@ function showHomepage() {
             [
               {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks(), arrowDirection: "up"},
               {type: "initial", position: {top: 80, right: 15}, text: i18n.homepageUiTipOtherLinks(), arrowDirection: "up_corner"},
-              {type: "triggered", position: {top: 80, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link", arrowDirection: "up"}
+              {type: "triggered", position: {top: 80, right: 15}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link", arrowDirection: "up_corner"}
             ]}
         />
       )}
@@ -59,6 +61,7 @@ function showHomepage() {
           courses={homepageData.courses}
           sections={homepageData.sections}
           codeOrgUrlPrefix={homepageData.codeorgurlprefix}
+          isRtl={isRtl}
         />
       )}
       {!isTeacher && (

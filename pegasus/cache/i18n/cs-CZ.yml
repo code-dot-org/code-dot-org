@@ -35,7 +35,6 @@
     a programovacích pojmech v  následujícím kurzu.
   og_title: Každé dítě si zaslouží příležitost
   og_description: Každý student v každé škole si zaslouží možnost studovat informatiku.
-    Ta mění vše.
   csedweek_og_title: Hodina kódu se blíží
   csedweek_og_description: Hodina Kódu je celosvětové hnutí, do kterého se zapojily
     desítky milionů žáků všech věkových kategorií z více než 180 zemí a mluvících
@@ -393,6 +392,7 @@
   homepage_slot_text_title_hoc: Hodina kódu
   homepage_slot_text_blurb_hoc: Každý se to může naučit. Začni dnes
   homepage_slot_text_link_hoc: Vyzkoušej Hodinu Programování
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Uspořádejte Hodinu kódu
   homepage_slot_text_link_hocserved: "# si vyzkoušelo"
   homepage_solot_text_link_volunteer: Dobrovolník v Hodině kódu
@@ -516,26 +516,25 @@
   sports_athlete_Russell: Russell Okung, mistr Super Bowl a hráč NFL, Denver Broncos
   sports_athlete_Sergio: Sergio Ramos, vítěz světového poháru a fotbalový hráč, Real
     Madrid
-  sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
-  sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
+  sports_athlete_Sue: Sue Bird, olympijská vítězka a šampionka WNBA, Seattle Storm
+  sports_athlete_Alana: Alana Beard, zlatá medailistka a WNBA All-Star, Los Angeles
     Sparks
-  sports_athlete_Angelo: Angelo Matthews, Captain of the Sri Lankan Cricket Team
-  sports_athlete_Nneka: Nneka Ogwumike, Gold Medalist, WNBA Champion and 2016 MVP,
-    Los Angeles Sparks
-  sports_athlete_Carmelo: Carmelo Anthony, Olympic Gold Medalist and NBA All-Star,
-    New York Knicks
-  sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
-    FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
+  sports_athlete_Angelo: Angelo Matthews, kapitán kriketového týmu ze Srí Lanky
+  sports_athlete_Nneka: Bohunka Ogwumike, zlatá medailistka, šampionka WNBA a 2016
+    MVP, Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, olympijský vítěz a NBA All-Star, New York
+    Knicks
+  sports_athlete_Marco: Marco Belinelli, šampion NBA, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., olympijský vítěz a fotbalový hráč, FC Barcelona
+    a brazilský národní tým
+  sports_athlete_Sarah: Sarah Quita Offringa, šampionka ve windsurfingu
+  sports_athlete_Marcelo: Marcelo, fotbalový šampion, Real Madrid a brazilský národní
+    tým
+  sports_athlete_Erika: Erika Olivera, šampionka maratónského běhu
   sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
+  sports_athlete_Chris: Chris Bosh, olympijský vítěz a šampion NBA, Miami Heat
+  sports_athlete_Harrison: Harrison Barnes, olympijský vítěz a šampion NBA, Dallas
+    Mavericks
   watch_inspirational_videos: Než začnete, podívejte se na jedno z následujících inspirativních
     videí
   video_title_cs_is_everything: Computer Science is Changing Everything
@@ -576,8 +575,8 @@
     možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete
     přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat
     svoji vlastní Hodinu kódu.'
-  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
-    program here</a>.
+  volunteer_engineer_submission_intro_guide: Více informací o našem <a href="%{volunteer_guide}">programu
+    dobrovolníků zde</a>.
   volunteer_engineer_submission_intro_signup: Zadejte následující informace, pokud
     jste počítačové vědy student nebo software profesionál, prosím. Pole označená
     <span class="form-required-field"> *</span> jsou požadovaná.
@@ -805,6 +804,7 @@
     stupni nebo na střední škole můžete vidět jejich textové odpovědi výběrem daného
     kurzu z nabídky výše.
   dashboard_sections_new_section: Nová sekce
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Vytvoř nové oddíly a přidejte do nich
     studenty. Sekce pomáhají organizovat studenty do menších skupin, můžete sledovat
     jejich postup a spravovat jejich účty.
@@ -812,6 +812,7 @@
   dashboard_sections_table_secret: Způsob přihlášení
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
+  dashboard_sections_table_pairing_allowed: Párové programování
   dashboard_sections_table_stage_extras: Extra bonusy
   dashboard_sections_table_students: Studenti
   dashboard_sections_table_code: Kód sekce
@@ -887,8 +888,8 @@
   dashboard_students_reset_password: Obnovit heslo
   dashboard_students_share_section: 'Sdílejte tuto část přihlašovací stránky se svými
     žáky:'
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section_secondary: 'Nebo sdílejte přihlašovací stránku
+    této sekce se svými žáky:'
   dashboard_students_print_info: Vytisknout kartičky s přihlašovacími údaji studentů.
   dashboard_students_secret_picture_title: Tajný obrázek
   dashboard_students_secret_picture: Tato část používá  <b>obrázek</b>jako svůj tajný
@@ -908,7 +909,7 @@
     ně chcete vytvořit účty sami, změňte typ tajemství v této sekci na <b>slovo</b>
     nebo <b>obrázek</b>.
   dashboard_students_print_page: Vytisknout stránku
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: Navštivte %{join_url} a zadejte %{section_code}
   dashboard_students_url: URL
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Klikněte
     zde</a> pro dokument o ochraně soukromých údajů, který můžete sdílet nebo vytisknout
@@ -1851,9 +1852,8 @@
   infinity_shortcode: inf
   playlab_shortcode: hrát
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: kurzy
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1861,7 +1861,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Hodina kódu
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1879,14 +1879,14 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: Statistiky
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
+  header_help_support: 'Nápověda a podpora '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -2,31 +2,18 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import SectionRow from './SectionRow';
+import i18n from '@cdo/locale';
+import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
 
 const styles = {
   table: {
-    width: '100%',
-    tableLayout: 'auto',
-    backgroundColor: 'transparent',
-    borderSpacing: 0,
-    borderCollapse: 'collapse'
-  },
-  headerRow: {
-    height: 45,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 15,
-    paddingRight: 15,
-    backgroundColor: color.teal,
-    color: color.white,
-    borderColor: color.white,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderTopColor: color.teal,
-    borderLeftColor: color.teal,
-    borderRightColor: color.teal,
-    textAlign: 'left'
+    borderColor: color.border_gray,
   },
+  headerRow: tableStyles.headerRow,
+  col: tableStyles.col,
+  colText: tableStyles.colText,
   link: {
     color: color.white
   }
@@ -52,7 +39,6 @@ class SectionTable extends Component {
   render() {
     const { sectionIds } = this.props;
 
-    // TODO: i18n
     return (
       <table style={styles.table}>
         <colgroup>
@@ -66,39 +52,58 @@ class SectionTable extends Component {
           <col/>
           <col/>
         </colgroup>
-        <tbody>
-          <tr>
-            <th style={styles.headerRow}>
-              <a style={styles.link} href>Section</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Login Type</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Grade</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Course</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Stage Extras</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Pair Programming</a>
-            </th>
-            <th style={styles.headerRow}>
-              <a style={styles.link}>Students</a>
-            </th>
-            <th style={styles.headerRow}>
-              Section Code
-            </th>
-            <th style={styles.headerRow}>
-            </th>
+        <thead>
+          <tr style={styles.headerRow}>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.section()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.loginType()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.grade()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.course()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.stageExtras()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.pairProgramming()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.students()}
+              </div>
+            </td>
+            <td style={styles.col}>
+              <div style={styles.colText}>
+                {i18n.sectionCode()}
+              </div>
+            </td>
+            <td style={styles.col}>
+            </td>
           </tr>
+        </thead>
+        <tbody>
           {sectionIds.map((sid, index) => (
             <SectionRow
-              key={index}
+              key={sid}
               sectionId={sid}
+              lightRow={index % 2 === 0}
             />
           ))}
         </tbody>

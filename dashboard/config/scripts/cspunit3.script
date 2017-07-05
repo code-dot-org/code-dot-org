@@ -1,5 +1,4 @@
-login_required 'true'
-hidden 'false'
+login_required true
 
 stage 'The Need For Programming Languages'
 level 'U3L01 Student Lesson Introduction'
@@ -89,7 +88,7 @@ level 'U3L09 Student Lesson Introduction'
 level 'U3L08 - individualCode'
 level 'U3L08 - digitalScene'
 
-stage 'Events Unplugged’
+stage 'Events Unplugged'
 level 'U3L12 - Student Introduction 1'
 
 stage 'Event-Driven Programming and Debugging'
@@ -139,13 +138,13 @@ level 'U3L13 - Project'
 stage 'Controlling Memory with Variables'
 level 'U3L19 Student Lesson Intro'
 level 'U3L14 - Message - basic mechanics of variables'
-level 'U3L19 - three basic ops of variables’
-level 'U3L19 - fix the var name syntax error v2’
-level 'U3L19 - write var and string with same name v2’
+level 'U3L19 - three basic ops of variables'
+level 'U3L19 - fix the var name syntax error v2'
+level 'U3L19 - write var and string with same name v2'
 level 'U3- Variables - Create And Assign'
 level 'U3- Variables - Text Mode'
 level 'U3L14 - Message - Other ways to assign values'
-level 'U3 - Variables - Set to Expression' 
+level 'U3 - Variables - Set to Expression'
 level 'U3L14 - concatenate simple'
 level 'U3 - Variables - Set to Expression with Other Variables'
 level 'U3L14 - Assigning Random Value'
