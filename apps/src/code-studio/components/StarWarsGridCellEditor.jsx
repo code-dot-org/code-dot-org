@@ -1,5 +1,10 @@
 import React from 'react';
-import { WallTypeMask, WallTypeShift } from '@cdo/apps/studio/constants';
+import {
+  SquareType,
+  Direction,
+  WallTypeMask,
+  WallTypeShift
+} from '@cdo/apps/studio/constants';
 import tileGuide from '../../../static/code_studio/tile-guide.png';
 import CellEditor from './CellEditor';
 
@@ -19,14 +24,25 @@ const options = {
   covered_crates_3b: 0x350000,
 };
 
+const startDirections = {
+  '-': Direction.NONE,
+  East: Direction.EAST,
+  West: Direction.WEST,
+  North: Direction.NORTH,
+  South: Direction.SOUTH,
+};
+
 export default class StarWarsGridCellEditor extends CellEditor {
   /**
    * @override
    */
   handleChange() {
     const zoom = this.zoom && this.zoom.checked;
+    const direction = this.direction ? +this.direction.value : undefined;
+
     this.props.onUpdate({
-      tileType: zoom << WallTypeShift | this.type.value
+      tileType: zoom << WallTypeShift | this.type.value,
+      direction: direction,
     });
   }
 
@@ -45,7 +61,12 @@ export default class StarWarsGridCellEditor extends CellEditor {
         </header>
 
         <label htmlFor="tileType">Tile Type (required):</label>
-        <select ref={c => { this.type = c; }} name="tileType" value={type} onChange={this.handleChange}>
+        <select
+          ref={c => { this.type = c; }}
+          name="tileType"
+          value={type}
+          onChange={this.handleChange}
+        >
           {Object.entries(options).map(([name, value]) => (
             <option value={value} key={value}>{name}</option>
           ))}
@@ -53,7 +74,28 @@ export default class StarWarsGridCellEditor extends CellEditor {
         {type > 0xFFFF &&
           <span>
             <label htmlFor="zoom">Double size:</label>
-            <input ref={c => { this.zoom = c; }} name="zoom" type="checkbox" checked={zoom} onChange={this.handleChange} />
+            <input
+              ref={c => { this.zoom = c; }}
+              name="zoom"
+              type="checkbox"
+              checked={zoom}
+              onChange={this.handleChange}
+            />
+          </span>
+        }
+        {type === SquareType.SPRITESTART &&
+          <span>
+            <label htmlFor="direction">Start direction:</label>
+            <select
+              ref={c => { this.direction = c; }}
+              name="direction"
+              value={this.props.cell.direction_}
+              onChange={this.handleChange}
+            >
+              {Object.entries(startDirections).map(([name, value]) => (
+                <option value={value} key={value}>{name}</option>
+              ))}
+            </select>
           </span>
         }
       </form>

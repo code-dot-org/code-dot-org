@@ -376,6 +376,7 @@ class Pd::Workshop < ActiveRecord::Base
         end
       end
       workshop.facilitators.each do |facilitator|
+        next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
         rescue => e
