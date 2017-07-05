@@ -21,6 +21,18 @@ const sections = {
     pairingAllowed: true,
     studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
     code: "PMTKVH",
+  },
+  12: {
+    id: 12,
+    courseId: 29,
+    scriptId: 168,
+    name: "section_with_course_and_script",
+    loginType: "word",
+    grade: "3",
+    stageExtras: false,
+    pairingAllowed: true,
+    studentNames: [],
+    code: "PMTKVZ",
   }
 };
 const validLoginTypes = ['word', 'email', 'picture'];
@@ -43,7 +55,19 @@ const defaultProps = {
       scriptId: null,
       assignId: "29_null",
       path: '//localhost-studio.code.org:3000/courses/csd',
-    }
+    },
+    'null_168': {
+      id: 168,
+      name: "Unit 1: Problem Solving",
+      script_name: "csd1",
+      category: "CS Discoveries",
+      position: 0,
+      category_priority: 0,
+      courseId: null,
+      scriptId: 168,
+      assignId: "null_168",
+      path: "//localhost-studio.code.org:3000/s/csd1"
+    },
   },
   primaryAssignmentIds: [],
   sections,
@@ -130,6 +154,17 @@ describe('SectionRow', () => {
       assert.equal(col.find('a').length, 1);
       assert.equal(col.find('a').props().href, '//localhost-studio.code.org:3000/courses/csd');
       assert.equal(col.find('a').text(), 'CS Discoveries');
+    });
+
+    it('has links to both primary and secondary assignments when not editing', () => {
+      const wrapper = shallow(
+        <SectionRow
+          {...defaultProps}
+          sectionId={12}
+        />
+      );
+      const col = wrapper.find('td').at(3);
+      assert.equal(col.find('a').length, 2);
     });
 
     it('has an AssignmentSelector when editing', () => {

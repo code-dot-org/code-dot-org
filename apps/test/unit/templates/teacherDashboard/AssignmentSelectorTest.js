@@ -3,11 +3,20 @@ import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/test
 import React from 'react';
 import { shallow } from 'enzyme';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import { assignmentId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
 
 const defaultProps = {
-  currentPrimaryId: assignmentId(null, null),
+  section: {
+    id: 11,
+    name: 'foo',
+    loginType: 'email',
+    stageExtras: false,
+    pairingAllowed: false,
+    studentNames: [],
+    code: 'asdf',
+    courseId: null,
+    scriptId: null,
+  },
   assignments: {
     // course with scripts
     '29_null': {
@@ -95,7 +104,11 @@ describe('AssignmentSelector', () => {
     const wrapper = shallow(
       <AssignmentSelector
         {...defaultProps}
-        currentPrimaryId="null_168"
+        section={{
+          ...defaultProps.section,
+          courseId: null,
+          scriptId: 168
+        }}
       />
     );
     assert.equal(wrapper.find('select').length, 1);
@@ -103,5 +116,32 @@ describe('AssignmentSelector', () => {
     // ends up before flappy, because it's in an earlier category
     assert.equal(wrapper.find('option').at(2).text(), 'Unit 1: Problem Solving');
     assert.equal(wrapper.find('option').at(3).text(), 'Make a Flappy game');
+  });
+
+  it('shows two dropdowns if section has a course selected', () => {
+    const wrapper = shallow(
+      <AssignmentSelector
+        {...defaultProps}
+        section={{
+          ...defaultProps.section,
+          courseId: 29,
+        }}
+      />
+    );
+    assert.equal(wrapper.find('select').length, 2);
+  });
+
+  it('shows two dropdowns if section has course and current unit selected', () => {
+    const wrapper = shallow(
+      <AssignmentSelector
+        {...defaultProps}
+        section={{
+          ...defaultProps.section,
+          courseId: 29,
+          scriptId: 168,
+        }}
+      />
+    );
+    assert.equal(wrapper.find('select').length, 2);
   });
 });
