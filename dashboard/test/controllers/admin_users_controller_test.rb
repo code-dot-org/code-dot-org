@@ -206,13 +206,13 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'grant_permission grants admin status' do
     sign_in @admin
-    post :grant_permission, params: {email: @not_admin.email, permission: 'admin'}
+    post :grant_permission, params: {user_id: @not_admin.id, permission: 'admin'}
     assert @not_admin.reload.admin
   end
 
   test 'grant_permission grants user_permission' do
     sign_in @admin
-    post :grant_permission, params: {email: @not_admin.email, permission: UserPermission::LEVELBUILDER}
+    post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
     assert [UserPermission::LEVELBUILDER], @not_admin.reload.permissions
   end
 
@@ -220,7 +220,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @admin
     post(
       :grant_permission,
-      params: {email: 'test_user@example.com', permission: UserPermission::LEVELBUILDER}
+      params: {user_id: @user.id, permission: UserPermission::LEVELBUILDER}
     )
     assert [], @user.reload.permissions
     assert_response :redirect
@@ -237,7 +237,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_does_not_create(Follower) do
       post(
         :grant_permission,
-        params: {email: follower.student_user.email, permission: 'admin'}
+        params: {user_id: follower.student_user.id, permission: 'admin'}
       )
     end
     assert_response :redirect
@@ -248,17 +248,9 @@ class AdminUsersControllerTest < ActionController::TestCase
     )
   end
 
-  test 'revoke_all_permissions revokes admin status' do
+  test 'revoke_permission revokes admin status' do
     sign_in @admin
-    post :revoke_all_permissions, params: {email: @admin.email}
+    post :revoke_permission, params: {user_id: @admin.id, permission: 'admin'}
     refute @admin.reload.admin
-  end
-
-  test 'revoke_all_permissions revokes user permissions' do
-    sign_in @admin
-    @not_admin.permission = UserPermission::RESET_ABUSE
-    @not_admin.permission = UserPermission::PLC_REVIEWER
-    post :revoke_all_permissions, params: {email: @not_admin.email}
-    assert [], @not_admin.reload.permissions
   end
 end

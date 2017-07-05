@@ -241,7 +241,7 @@ Dashboard::Application.routes.draw do
   post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
   get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
   post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
-  post '/admin/revoke_all_permissions', to: 'admin_users#revoke_all_permissions', as: 'revoke_all_permissions'
+  get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 
