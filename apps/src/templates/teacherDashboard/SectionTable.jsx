@@ -41,17 +41,6 @@ class SectionTable extends Component {
 
     return (
       <table style={styles.table}>
-        <colgroup>
-          <col width="200"/>
-          <col width="130"/>
-          <col width="98"/>
-          <col width="130"/>
-          <col/>
-          <col/>
-          <col/>
-          <col/>
-          <col/>
-        </colgroup>
         <thead>
           <tr style={styles.headerRow}>
             <td style={styles.col}>
