@@ -34,8 +34,8 @@
     "x": "70",
     "y": "70",
     "markdown_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\n___\r\nNeed an idea? Try making a design like this one.\r\n\r\n![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\nNeed an idea? Try making a design like this one."
+    "tts_markdown_instructions_override": "Now make something on your own.  What happens when you make two separate circles of different stickers?\r\nNeed an idea? Try making a design like this one.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

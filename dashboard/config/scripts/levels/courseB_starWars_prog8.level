@@ -41,8 +41,8 @@
     "instructions": "**Challenge:** Help BB-8 gather the glowing scrap metal",
     "ideal": "19",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"It is okay to go back over a set of spaces where you have already traveled.\",\"hint_id\":\"courseB_starWars_prog8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/aa8797b437b3c838b3a4f8e1a5117131/courseB_starWars_prog8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the `repeat` block to see what happens to the code that you put inside.\\n\\n<xml>\\n  <block type=\\\"controls_repeat_simplified\\\">\\n    <title name=\\\"TIMES\\\">3</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_starWars_prog8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/771cdcecf5aec6e5384c6a514985b713/courseB_starWars_prog8.mp3\"}]",
-    "contained_level_names": null,
-    "tts_instructions_override": "Challenge: Help BB-8 gather the glowing scrap metal"
+    "tts_instructions_override": "Challenge: Help BB-8 gather the glowing scrap metal",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -5393,7 +5393,7 @@ en:
           title: 'CS Fundamentals: Course E'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project.
+          description: Created with fourth grade students in mind, this course begins with a brief review of concepts previously taught in courses C and D. This introduction is intended to inspire beginners and remind the experts of the wonders of computer science. Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. At the end of the course, students will have the opportunity to create a capstone project that they can proudly share with peers and loved ones.
         coursef:
           stages:
             'Algorithms: Tangrams':
@@ -5441,7 +5441,7 @@ en:
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project.
+          description: "The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\r\n\r\nIn these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family."
         csdnovice:
           stages:
             Tuesday:

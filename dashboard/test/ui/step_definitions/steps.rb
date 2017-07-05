@@ -573,6 +573,21 @@ Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"
   }
 end
 
+Then /^I reopen the congrats dialog unless I see the sharing input/ do
+  next if @browser.execute_script("return $('#sharing-input').length > 0;")
+  puts "reopening congrats dialog"
+  individual_steps %{
+    And I press "again-button"
+    And I wait until element ".congrats" is not visible
+    And I press "resetButton"
+    And I press "runButton"
+    And I click selector "#finishButton" if I see it
+    And I click selector "#rightButton" if I see it
+    Then I wait to see a ".congrats"
+    Then element ".congrats" contains text "Congratulations"
+  }
+end
+
 # pixelation and other dashboard levels pull a bunch of hidden dialog elements
 # into the dom, so we have to check for the dialog more carefully.
 Then /^I wait to see a visible dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|

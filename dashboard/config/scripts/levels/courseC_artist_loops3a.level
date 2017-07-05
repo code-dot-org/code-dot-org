@@ -35,8 +35,8 @@
     "y": "70",
     "markdown_instructions": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below.\r\n___\r\n\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below."
+    "tts_markdown_instructions_override": "So much fun!  \r\n\r\nNow, add a bat sticker right after the bird to make an image like the one below.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
