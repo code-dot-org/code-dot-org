@@ -271,9 +271,9 @@ end
 
 def open_log_files
   FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
-  $success_log = File.open('success.log', 'w')
-  $error_log = File.open('error.log', 'w')
-  $errorbrowsers_log = File.open('errorbrowsers.log', 'w')
+  $success_log = File.open("#{LOCAL_LOG_DIRECTORY}/success.log", 'w')
+  $error_log = File.open("#{LOCAL_LOG_DIRECTORY}/error.log", 'w')
+  $errorbrowsers_log = File.open("#{LOCAL_LOG_DIRECTORY}/errorbrowsers.log", 'w')
 end
 
 def close_log_files
