@@ -87,12 +87,12 @@ sub vcl_recv
   if(req.http.host ~ "\.$")
   {
     /* Don't allow domain names that end in "." */
-    return(synth(751, "http://" + regsub(req.http.host, "\.$","") + req.url));
+    return(synth(751, "https://" + regsub(req.http.host, "\.$","") + req.url));
   }
   else if(req.http.host ~ "^www\.")
   {
     /* Normalize domain names to the short (non www.) form. */
-    return(synth(751, "http://" + regsub(req.http.host, "^www\.","") + req.url));
+    return(synth(751, "https://" + regsub(req.http.host, "^www\.","") + req.url));
   }
 <% redirects.each_pair do |domain, site| %>
   else if(req.http.Host == "<%= domain %>")

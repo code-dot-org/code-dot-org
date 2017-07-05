@@ -19,13 +19,13 @@ describe 'cdo-apps::workers' do
       node.automatic['memory']['total'] = "#{(memory * 1024 * 1024)}kB"
       node.automatic['cpu']['total'] = cpu
       node.override['cdo-varnish']['storage'] = "malloc,#{varnish}#{varnish_suffix}"
-      node.override['cdo-apps']['daemon'] = daemon
+      node.override['cdo-apps']['process_queues'] = process_queues
     end.converge(described_recipe)
   end
   let(:varnish_suffix) {'G'}
   let(:varnish) {0}
   let(:node) {chef_run.node}
-  let(:daemon) {false}
+  let(:process_queues) {false}
 
   # Test various cpu/ram/varnish configurations and the number of workers calculated
   #        context          cpu mem dash peg varn
@@ -65,10 +65,10 @@ describe 'cdo-apps::workers' do
     end
   end
 
-  context 'daemon' do
+  context 'process_queues' do
     let(:cpu) {32}
     let(:memory) {8}
-    let(:daemon) {true}
+    let(:process_queues) {true}
     it 'has correct number of workers' do
       expect(node['cdo-secrets']['dashboard_workers']).to eq(5)
     end

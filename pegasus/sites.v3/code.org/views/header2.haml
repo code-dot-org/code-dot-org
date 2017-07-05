@@ -17,28 +17,38 @@
 
   require 'cdo/hamburger'
 
-%link{:href=>"/shared/css/header2.css", :rel=>"stylesheet"}
-%link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
+  # A note on the use of language_dir_class below:
+  #
+  # Ideally, Pegasus would have <head dir="rtl"> on all pages as the dashboard
+  # does.  It would even be helpful if it had it on pages that are localized.
+  # As it is, dir="rtl" is not featured anywhere.  To make the header look the
+  # same as on dashboard, when in an RTL language, we wrap the header in this
+  # locale_dir_class and use CSS to make the header's options display RTL when
+  # at desktop width.
 
-#pageheader2-wrapper
-  #pageheader
-    .content
-      #left
-        #logo-wrapper
-          %a{:href=>CDO.studio_url("/home")}
-            %img#logo{:src=>'/images/logo.png'}
-        #headerlinks.desktop-feature
-          - Hamburger.get_header_contents(header_contents_options).each do |entry|
-            %a.headerlink{href: entry[:url]}= entry[:title]
+=inline_css 'header2.css'
+=inline_css 'hamburger.css'
 
-      #right
-        #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
-        = view :hamburger, hamburger_options
+#language_dir{class: language_dir_class}
+  #pageheader2-wrapper
+    #pageheader
+      .content
+        #left
+          #logo-wrapper
+            %a{:href=>CDO.studio_url("/home")}
+              %img#logo{:src=>'/images/logo.png'}
+          #headerlinks.desktop-feature
+            - Hamburger.get_header_contents(header_contents_options).each do |entry|
+              %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
-    #clear{:style=>'clear:both'}
+        #right
+          #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
+          = view :hamburger, hamburger_options
 
-    #loc.desktop-feature
-      -if banner = @header['banner']
-        =view banner
+      #clear{:style=>'clear:both'}
+
+      #loc.desktop-feature
+        -if banner = @header['banner']
+          =view banner
 
 #clear{:style=>'clear:both'}

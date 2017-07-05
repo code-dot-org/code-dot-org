@@ -49,11 +49,12 @@
     "project_template_level_name": "gradek_playlab_events5c_template",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to control what happens when the actors collide.\\n\\n![](https://images.code.org/97b2532aaa66ed95b5e42eb1ca72e8ef-image-1498672674991.57.24 AM.png)\",\"hint_id\":\"courseA_playLab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dabd23b0a8db2e457139d9f44d3c81bf/courseA_playLab_events7.mp3\"}]",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-10 19:29:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 19:29:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 17:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

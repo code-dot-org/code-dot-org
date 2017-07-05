@@ -370,7 +370,7 @@ describe("The CustomMarshalingInterpreter", () => {
     });
 
     it("will return the interpreter that was created to run the code", () => {
-      expect(CustomMarshalingInterpreter.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(Interpreter);
+      expect(CustomMarshalingInterpreter.evalWithEvents({}, {}).interpreter).to.be.an.instanceOf(CustomMarshalingInterpreter);
     });
 
     describe("when given event handlers that accept arguments", () => {
@@ -744,9 +744,12 @@ describe("The CustomMarshalingInterpreter", () => {
     });
 
     it("correctly marshals objects", () => {
-      expect(evalExpression(`{one: 1, two: "two", three: {four: 4}}`)).to.deep.equal(
-        {one: 1, two: "two", three: {four: 4}}
-      );
+      const value = evalExpression(`{one: 1, two: "two", three: {four: 4}}`);
+      expect(value.one).to.equal(1);
+      expect(value.two).to.equal("two");
+      expect(value.three.four).to.equal(4);
+      expect(Object.keys(value)).to.deep.equal(['one', 'two', 'three']);
+      expect(value).to.deep.equal({one: 1, two: "two", three: {four: 4}});
     });
 
     it("marshals functions by delegating to CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction", () => {

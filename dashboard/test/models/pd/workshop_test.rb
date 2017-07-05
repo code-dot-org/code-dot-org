@@ -275,7 +275,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
     assert workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
 
     workshop.send_exit_surveys
   end
@@ -444,6 +444,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 1, workshop_no_constraint.min_attendance_days
     assert_equal 2, workshop_no_constraint.effective_num_days
     assert_equal 12, workshop_no_constraint.effective_num_hours
+  end
+
+  test 'teacherCon workshops are capped at 33.5 hours' do
+    workshop_csd_teachercon = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    workshop_csp_teachercon = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    assert_equal 33.5, workshop_csd_teachercon.effective_num_hours
+    assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
   end
 
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do

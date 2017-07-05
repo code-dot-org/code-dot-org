@@ -19,6 +19,14 @@ class FollowerTest < ActiveSupport::TestCase
     assert_equal ['Section is required'], @follower.errors.full_messages
   end
 
+  test 'admins cannot be student followers' do
+    assert_raises do
+      assert_does_not_create(Follower) do
+        create :follower, student_user: (create :admin)
+      end
+    end
+  end
+
   # Ideally this test would also confirm cannot_follow_yourself and teacher_must_be_teacher are only
   # validated for non-deleted followers. As this situation cannot happen without manipulating the DB
   # (dependent callbacks), we do not worry about testing it.

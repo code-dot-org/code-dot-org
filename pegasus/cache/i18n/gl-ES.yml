@@ -402,6 +402,7 @@
   homepage_slot_text_title_hoc: Hora de Código
   homepage_slot_text_blurb_hoc: Calquera persoa pode aprender. Comeza hoxe mesmo
   homepage_slot_text_link_hoc: Proba a Hora do Código
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organiza un evento da Hora do Código
   homepage_slot_text_link_hocserved: "# estudantes que participaron"
   homepage_solot_text_link_volunteer: Voluntario da Hora do Código
@@ -824,6 +825,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nova sección
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Crea novas seccións e agrega alumnos.
     As seccións axudan na organización dos alumnos en grupos menores para que poidas
     seguir o seu progreso e administrar as súas contas.
@@ -831,6 +833,7 @@
   dashboard_sections_table_secret: Tipo de login
   dashboard_sections_table_grade: Grao
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_pairing_allowed: Programación por parellas
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Alumnas/os
   dashboard_sections_table_code: Código da sección
@@ -1931,9 +1934,8 @@
   infinity_shortcode: inf
   playlab_shortcode: xogar
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Cursos
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1941,7 +1943,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Hora de Código
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1967,6 +1969,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -8,37 +8,37 @@ const NotificationType = {
   information: 'information',
   success: 'success',
   failure: 'failure',
-  warning: 'warning'
+  warning: 'warning',
+  course: 'course'
 };
 
 const styles = {
   main: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderRadius: 3,
-    height: 68,
-    width: 900,
+    height: 72,
+    width: 970,
     backgroundColor: color.white,
-    marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
+    float: 'left'
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     letterSpacing: -0.2,
     marginTop: 16,
     backgroundColor: color.white,
   },
   details: {
-    fontFamily: 'Gotham-Book',
-    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
     lineHeight: 2.5,
     marginBottom: 16,
     color: color.charcoal,
   },
   wordBox: {
-    width: 600,
+    width: 640,
     marginLeft: 25,
     float: 'left'
   },
@@ -49,15 +49,15 @@ const styles = {
     marginRight: 14
   },
   iconBox: {
-    width: 68,
-    height: 68,
+    width: 72,
+    height: 72,
     backgroundColor: color.lightest_gray,
     float: 'left',
     textAlign: 'center'
   },
   icon: {
-    color: color.white,
-    fontSize: 34,
+    color: 'rgba(255,255,255, .8)',
+    fontSize: 38,
     lineHeight: 2
   },
   button: {
@@ -86,6 +86,11 @@ const styles = {
       color: color.charcoal,
       backgroundColor: color.mustardyellow
     },
+    [NotificationType.course]: {
+      borderColor: color.charcoal,
+      color: color.teal,
+      backgroundColor: color.teal
+    },
   }
 };
 
@@ -113,7 +118,8 @@ const Notification = React.createClass({
       information: 'info-circle',
       success: 'check-circle',
       failure: 'exclamation-triangle',
-      warning: 'exclamation-triangle'
+      warning: 'exclamation-triangle',
+      course: 'plus'
     };
 
     if (!this.state.open) {

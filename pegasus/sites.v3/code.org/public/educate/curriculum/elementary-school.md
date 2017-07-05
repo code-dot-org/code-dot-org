@@ -3,6 +3,7 @@ title: CS Fundamentals for grades K-5
 nav: educate_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 [solid-block-header]
@@ -61,6 +62,8 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 <a name="overview"></a>Curriculum Overview
 
 [/solid-block-header]
+
+## Courses 1 - 4
 
 Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
 
@@ -136,10 +139,12 @@ The Code Studio teacher home page makes it easy for teachers to view lesson plan
 ### <strong>Tech support & teacher forums</strong>
 Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
-### <strong>Pilot the '17-'18 version of the curriculum!</strong>
-We are revising Courses 1 - 4 based on the great feedback we've gotten in the last couple of years. In particular, the biggest change we are making
-is to break the content up into 6 courses aligned to each K-5 grade level. We're collecting feedback in Spring 2017 in preparation for making these courses broadly
-available for the '17 - '18 school year. [Learn more and sign up for the pilot](/educate/curriculum/cs-fundamentals-pilot).
+## Coming Soon: Courses A - F
+
+<img src="/images/csfundamentalspilot/introducingcoursesa-f.png" width="100%"/>
+
+We have revised Courses 1 - 4 based on the great feedback we've gotten in the last couple of years. In particular, the biggest change we are making
+is to break the content up into 6 courses aligned to each K-5 grade level. The courses will officially be available in August in preparation for the new school year. [Learn more about Courses A-F](/educate/curriculum/cs-fundamentals-a-f).
 
 If you are preparing for the transition from Courses 1 - 4 to Courses A - F, check out our short [transition guide](https://drive.google.com/file/d/0B2rFfrktasxBNUZDc2l5N01HYms/view) and [webinar](https://drive.google.com/open?id=0B2rFfrktasxBYVFCMDhfNVRFTjg) so that you have all the information you need to get started!
 

@@ -42,10 +42,10 @@ def insert_form(kind, data, options={})
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
 
-  # For the most recent HOC signups, a duplicate (matching email and name)
-  # entry is assumed to be an update rather than an insert.
+  # For HOC signups, a duplicate (matching email and name) entry is assumed to be an update rather
+  # than an insert.
   num_rows_updated = 0
-  if kind == 'HocSignup2016'
+  if (kind =~ /HocSignup/) == 0
     num_rows_updated = DB[:forms].
       where(email: row[:email], kind: kind, name: row[:name]).
       update(row)

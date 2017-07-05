@@ -322,8 +322,27 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   }
 
   /**
+   * Patches stepVariableDeclaration to not include performance improvement from
+   * https://github.com/NeilFraser/JS-Interpreter/commit/5139e93ae5a918206642d05d40bbea208d379b01
+   * which causes various other patches we've made to break.
+   * TODO (pcardune): revisit this and see if you can get the new version to work
+   *      with all of our other stuff.
+   * @override
+   */
+  stepVariableDeclaration() {
+    var state = this.peekStackFrame();
+    var node = state.node;
+    var n = state.n_ || 0;
+    if (node.declarations[n]) {
+      state.n_ = n + 1;
+      this.stateStack.push({node: node.declarations[n]});
+    } else {
+      this.stateStack.pop();
+    }
+  }
+
+  /**
    * Patched to add the 3rd "declarator" parameter on the setValue() call(s).
-   * Also removed erroneous? call to hasProperty when there is node.init
    * Changed to call setValue with this.UNDEFINED when there is no node.init
    * and JSInterpreter.baseHasProperty returns false for current scope.
    * @override
@@ -331,16 +350,13 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
   stepVariableDeclarator() {
     var state = this.peekStackFrame();
     var node = state.node;
-    if (node.init && !state.done) {
-      state.done = true;
+    if (node.init && !state.done_) {
+      state.done_ = true;
       this.pushStackFrame({node: node.init});
       return;
     }
-    if (!this.hasProperty(this, node.id.name) || node.init) {
-      if (node.init) {
-        var value = state.value;
-        this.setValue(this.createPrimitive(node.id.name), value, true);
-      }
+    if (node.init) {
+      this.setValue(this.createPrimitive(node.id.name), state.value, true);
     }
     this.popStackFrame();
   }
@@ -576,6 +592,10 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
                interpreterVar.type === 'object') {
       var nativeObject = {};
       for (var prop in interpreterVar.properties) {
+        if (interpreterVar.notEnumerable[prop]) {
+          // skip properties which are not enumerable.
+          continue;
+        }
         nativeObject[prop] = this.marshalInterpreterToNative(interpreterVar.properties[prop]);
       }
       return nativeObject;
@@ -645,12 +665,12 @@ module.exports = class CustomMarshalingInterpreter extends Interpreter {
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
-      state.arguments = intArgs;
+      state.arguments_ = intArgs;
       state.n_ = intArgs.length;
 
       // remove the last argument because stepCallExpression always wants to push it back on.
-      if (state.arguments.length > 0) {
-        state.value = state.arguments.pop();
+      if (state.arguments_.length > 0) {
+        state.value = state.arguments_.pop();
       }
 
       this.pushStackFrame(state);

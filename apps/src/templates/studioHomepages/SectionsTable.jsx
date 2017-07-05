@@ -2,70 +2,74 @@ import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 
-const styles = {
+// Many of these styles are also used by our similar SectionTable on the
+// teacher-dashboard page (which is why we export them).
+export const styles = {
   table: {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    width: 940
+    width: 970
   },
   headerRow: {
     backgroundColor: color.table_header,
     fontWeight: 'bold',
-    borderBottomColor: color.border_light_gray,
+    borderColor: color.border_light_gray,
     borderBottomWidth: 1,
-    borderBottomStyle: 'solid',
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+    borderRightWidth: 1,
+  },
+  lightRow: {
+    backgroundColor: color.table_light_row
+  },
+  darkRow: {
+    backgroundColor: color.table_dark_row
   },
   row: {
     borderBottomColor: color.border_light_gray,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    backgroundColor: color.white,
+  },
+  col: {
+    borderRightWidth: 1,
+    borderRightColor: color.border_light_gray,
+    borderRightStyle: 'solid',
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+    borderBottomWidth: 0,
+    color: color.charcoal,
+    paddingLeft: 20,
+    paddingRight: 20,
   },
   col1: {
-    borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
-    borderRightStyle: 'solid',
-    lineHeight: '52px',
-    color: color.charcoal,
-    paddingLeft: 20,
-    paddingRight: 20,
-    width: 310
+    width: 325
   },
   col2: {
-    borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
-    borderRightStyle: 'solid',
-    color: color.charcoal,
-    paddingLeft: 20,
-    paddingRight: 20,
-    width: 310
+    width: 325
   },
   col3: {
-    borderRightWidth: 1,
-    borderRightColor: color.border_light_gray,
-    borderRightStyle: 'solid',
     lineHeight: '52px',
-    color: color.charcoal,
-    paddingLeft: 20,
-    paddingRight: 20,
-    width: 110
+    width: 135
   },
   col4: {
     lineHeight: '52px',
-    color: color.charcoal,
-    paddingLeft: 20,
-    paddingRight: 20,
+    width: 135,
+    borderRightWidth: 0,
+  },
+  col4Rtl: {
+    lineHeight: '52px',
     width: 210
   },
   colText: {
     color: color.charcoal,
-    fontFamily: 'Gotham 5r',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
   },
   link: {
     color: color.teal,
-    fontFamily: 'Gotham 5r',
+    fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     textDecoration: 'none'
   }
@@ -83,32 +87,33 @@ const SectionsTable = React.createClass({
         linkToStudents: React.PropTypes.string.isRequired,
         sectionCode: React.PropTypes.string.isRequired
       })
-    )
+    ),
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { sections } = this.props;
+    const { sections, isRtl } = this.props;
 
     return (
       <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={styles.col1}>
+            <td style={{...styles.col, ...styles.col1}}>
               <div style={styles.colText}>
                 {i18n.section()}
               </div>
             </td>
-            <td style={styles.col2}>
+            <td style={{...styles.col, ...styles.col2}}>
               <div style={styles.colText}>
                 {i18n.course()}
               </div>
             </td>
-            <td style={styles.col3}>
+            <td style={{...styles.col, ...styles.col3}}>
               <div style={styles.colText}>
                 {i18n.students()}
               </div>
             </td>
-            <td style={styles.col4}>
+            <td style={{...styles.col, ...(isRtl? styles.col4Rtl: styles.col4)}}>
               <div style={styles.colText}>
                 {i18n.sectionCode()}
               </div>
@@ -117,26 +122,30 @@ const SectionsTable = React.createClass({
         </thead>
         <tbody>
           {sections.map((section, index) =>
-            <tr style={styles.row} key={index}>
-              <td style={styles.col1}>
+            <tr
+              style={{
+                ...(index % 2 === 0 ? styles.lightRow : styles.darkRow),
+                ...styles.row
+              }}
+              key={index}
+            >
+              <td style={{...styles.col, ...styles.col1}}>
                 <a href={section.linkToProgress} style={styles.link}>
                   {section.name}
                 </a>
               </td>
-              <td style={styles.col2}>
+              <td style={{...styles.col, ...styles.col2}}>
                 <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
               </td>
-              <td style={styles.col3}>
+              <td style={{...styles.col, ...styles.col3}}>
                 <a href={section.linkToStudents} style={styles.link}>
                   {section.numberOfStudents}
                 </a>
               </td>
-              <td style={styles.col4}>
-                <div style={styles.colText}>
-                  {section.sectionCode}
-                </div>
+              <td style={{...styles.col, ...(isRtl? styles.col4Rtl: styles.col4)}}>
+                {section.sectionCode}
               </td>
             </tr>
           )}

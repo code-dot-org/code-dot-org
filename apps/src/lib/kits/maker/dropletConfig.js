@@ -63,15 +63,10 @@ export function getBoardEventDropdownForParam(firstParam) {
 // We don't want these to show up as blocks (because that interferes with
 // parameter dropdowns) but we also don't want them to generate "_ is not
 // defined" warnings from the linter.
-export const additionalPredefValues = [
-  'accelerometer',
-  'buttonL',
-  'buttonR',
-  'lightSensor',
-  'soundSensor',
-  'tempSensor',
-  'toggleSwitch',
-];
+export const additionalPredefValues = Object.keys(COMPONENT_EVENTS);
+
+// Block properties we'll reuse in multiple entries
+const createLedProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
 
 export const blocks = [
   /**
@@ -84,6 +79,9 @@ export const blocks = [
   {func: 'analogRead', parent: api, category: MAKER_CATEGORY, type: 'value', nativeIsAsync: true, paletteParams: ['pin'], params: ['5']},
   {func: 'boardConnected', parent: api, category: MAKER_CATEGORY, type: 'value'},
   {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
+
+  {func: 'createLed', ...createLedProps, type: 'either' },
+  {func: 'var myLed = createLed', ...createLedProps, noAutocomplete: true, docFunc: 'createLed' },
 
   /**
    * Circuit-Playground-specific blocks

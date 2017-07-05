@@ -11,6 +11,7 @@
 
   header_class = 'header2-wrapper'
   header_class = header_class + (show_bug_links ? ' feedback-bug-links' : '')
+  header_class = header_class + (script_level || level ? ' hide_on_mobile' : '')
 
   if current_user
     if current_user.teacher?
@@ -62,7 +63,7 @@
             - else
               .headerlinks.hide_on_tablet
                 - Hamburger.get_header_contents(header_contents_options).each do |entry|
-                  %a.headerlink{href: entry[:url]}= entry[:title]
+                  %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
 
           .header_right.hide_on_mobile
             %span.freeplay_links
@@ -76,12 +77,14 @@
                 %i.fa.fa-pencil
               %a.header_status_bar.level_free_play.applab_free_play{title: t('nav.header.free_play.applab'), href: applab_project_projects_path, style: 'display: none;'}
                 %i.fa.fa-mobile
-            - if params[:controller] !~ /^sessions/ and signin_button_enabled
+            - if !@hide_sign_in_option && signin_button_enabled
               %span#sign_in_or_user
-              = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
+            = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if request.path == "/home" || request.path == "/courses"
-  #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+  - if request.path == "/home" || (request.path == "/courses" && user_type)
+    - extra_header_banner_class = "header-banner-short"
+  #header-banner{class: extra_header_banner_class, style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
 - if request.path == "/projects" || request.path == "/projects/public"
   #header-banner{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
 

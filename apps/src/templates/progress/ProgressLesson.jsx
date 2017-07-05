@@ -19,12 +19,18 @@ const styles = {
     display: 'table',
     width: '100%',
     height: '100%',
-    marginBottom: 12,
     background: color.lightest_gray,
-    borderWidth: 1,
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
+    // When toggling between hidden and not, we change our border size from 1 to 4.
+    // We want to limit how much toggling this changes our sizing, so we add +3
+    // to each of our non-hidden margins
+    borderWidth: 1,
+    marginTop: 3,
+    marginBottom: 15,
+    marginLeft: 3,
+    marginRight: 3
   },
   rightCol: {
     display: 'table-cell',
@@ -39,10 +45,15 @@ const styles = {
   heading: {
     fontSize: 18,
     fontFamily: '"Gotham 5r", sans-serif',
+    cursor: 'pointer'
   },
   hiddenOrLocked: {
-    background: color.white,
     borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0,
   },
   translucent: {
     opacity: 0.6
