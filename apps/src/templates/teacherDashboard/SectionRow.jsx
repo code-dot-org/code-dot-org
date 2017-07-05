@@ -119,6 +119,7 @@ class SectionRow extends Component {
     ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
+    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
@@ -226,7 +227,8 @@ class SectionRow extends Component {
       sectionId,
       validLoginTypes,
       validGrades,
-      validAssignments
+      validAssignments,
+      primaryAssignmentIds
     } = this.props;
     const { editing, deleting } = this.state;
 
@@ -295,7 +297,8 @@ class SectionRow extends Component {
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              currentAssignId={assignmentId(section.courseId, section.scriptId)}
+              currentPrimaryId={assignmentId(section.courseId, section.scriptId)}
+              primaryAssignmentIds={primaryAssignmentIds}
               assignments={validAssignments}
             />
           )}
@@ -366,5 +369,6 @@ export default connect(state => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
+  primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
 }), { updateSection, removeSection })(SectionRow);
