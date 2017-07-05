@@ -101,33 +101,59 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
+  # display the user search form, users found, and permissions for first user found
+  # grant / revoke permissions actions redirect back to this form to display the updated permission list
   def permissions_form
+    @users = Array.new # list of users that match search
+    @permissions = Array.new
+    search_term = user_permission_params[:search_term]
+    if search_term =~ /^\d+$/
+      user_id = search_term
+      @users = User.where(id: user_id)
+    elsif search_term
+      email = search_term
+      hashed_email = User.hash_email(email)
+      @users = User.where(hashed_email: hashed_email)
+    end
+    @user = @users.first if @users
+    @permissions = @user.permissions if @user
   end
 
-  # Grants the indicated permission to the indicated user. Expects params[:email] and
-  # params[:permission] to be populated.
   def grant_permission
-    permission = params[:permission]
-    user = User.find_by_email_or_hashed_email params[:email]
+    user_id = user_permission_params[:user_id]
+    permission = user_permission_params[:user_permission_id]
+    @user = User.find(user_id)
 
-    unless user && user.teacher?
-      flash[:alert] = "FAILED: user #{params[:email]} could not be found or was not a teacher"
-      redirect_to :permissions_form
+    unless @user && @user.teacher?
+      flash[:alert] = "FAILED: user #{user_permission_params[:user_id]} could not be found or was not a teacher"
+      redirect_to action: "permissions_form", search_term: user_id
       return
     end
 
     if permission == 'admin'
-      if user.sections_as_student.count > 0
-        flash[:alert] = "FAILED: user #{user.email} NOT granted as user has sections_as_students"
+      if @user.sections_as_student.count > 0
+        flash[:alert] = "FAILED: user #{@user.email} NOT granted as user has sections_as_students"
       else
-        user.update!(admin: true)
-        flash[:alert] = "User #{user.id} granted admin status"
+        #TODO(suresh) update User model to log to #infrasecurity that admin privilege was granted?
+        @user.update!(admin: true)
       end
     else
-      user.permission = permission
-      flash[:alert] = "User #{user.id} granted #{permission} permission"
+      @user.permission = permission
     end
-    redirect_to :permissions_form
+    redirect_to action: "permissions_form", search_term: user_id
+  end
+
+  def revoke_permission
+    user_id = user_permission_params[:user_id]
+    @user = User.find(user_id)
+    permission = user_permission_params[:user_permission_id]
+    if permission == 'admin'
+      @user.admin = nil
+      @user.save(validate: false)
+    else
+      @user.delete_permission permission
+    end
+    redirect_to action: "permissions_form", search_term: user_id
   end
 
   def revoke_all_permissions
@@ -135,5 +161,12 @@ class AdminUsersController < ApplicationController
     # Though in theory a hashed email specifies a unique account, in practice it may not. As this is
     # security related, we therefore iterate rather than use find_by_hashed_email.
     User.with_deleted.where(hashed_email: hashed_email).each(&:revoke_all_permissions)
+  end
+
+  private
+
+  # white list permitted request parameters
+  def user_permission_params
+    params.permit(:search_term, :user_id, :user_permission_id)
   end
 end
