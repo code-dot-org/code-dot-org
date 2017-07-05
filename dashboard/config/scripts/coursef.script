@@ -100,6 +100,8 @@ level 'courseF_playlab_variables6c'
 level 'courseF_playlab_variables7c'
 level 'courseF_playlab_variables8c'
 level 'courseF_playlab_variables7b'
+bonus 'courseF_playlab_variables_challenge1'
+bonus 'courseF_playlab_variables_challenge2'
 
 stage 'For Loop Fun'
 level 'ForLoopFun'

@@ -31,7 +31,7 @@ level 'CSD U3 challenge face', progression: 'Challenges'
 level 'CSD U3 challenge new shape', progression: 'Challenges'
 named_level 'CSD U3 L3 Freeplay'
 
-stage 'Shapes and Randomness', flex_category: 'csd3_1'
+stage 'Shapes and Randomization', flex_category: 'csd3_1'
 named_level 'CSD U3 Lesson Overview 4'
 level 'CSD U3 Random Taller Rectangle', progression: 'New Shapes'
 named_level 'CSD U3 shape size map'
