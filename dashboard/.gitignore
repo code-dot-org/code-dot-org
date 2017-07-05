@@ -15,9 +15,6 @@
 # unit test and ui test artifacts
 /coverage
 /public/assets
-/test/ui/success.log
-/test/ui/error.log
-/test/ui/errorbrowsers.log
 /test/ui/log
 
 # symlinks we use to provide links to test output
