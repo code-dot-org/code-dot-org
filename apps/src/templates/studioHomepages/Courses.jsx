@@ -64,6 +64,8 @@ const Courses = React.createClass({
     if (!this.props.isTeacher) {
       $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
     }
+
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
@@ -91,6 +93,10 @@ const Courses = React.createClass({
             />
           )}
         </HeaderBanner>
+
+        <ProtectedStatefulDiv
+          ref="flashes"
+        />
 
         {!isTeacher && (
           <ProtectedStatefulDiv
