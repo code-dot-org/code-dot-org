@@ -41,8 +41,8 @@
     "instructions": "Help BB-8 gather **all** of the glowing scrap metal",
     "markdown_instructions": "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)  Now, help BB-8 gather **all** of the glowing scrap metal! \r\n\r\nWatch out for walls and crates!  \r\n\r\n",
     "ideal": "6",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "Now, help BB-8 gather all of the glowing scrap metal! \r\n\r\nWatch out for walls and crates!  "
+    "tts_markdown_instructions_override": "Now, help BB-8 gather all of the glowing scrap metal! \r\n\r\nWatch out for walls and crates!  ",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
