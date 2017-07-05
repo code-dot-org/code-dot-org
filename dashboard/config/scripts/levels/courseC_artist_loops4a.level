@@ -35,8 +35,8 @@
     "y": "70",
     "markdown_instructions": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat.\r\n___\r\n\r\n![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat."
+    "tts_markdown_instructions_override": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

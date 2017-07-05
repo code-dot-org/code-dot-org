@@ -35,8 +35,8 @@
     "y": "70",
     "markdown_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r\n- Try using the `set pattern` block before you start your loop to make a work of art!\r\n___\r\n![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r\nTry using the `set pattern` block before you start your loop to make a work of art!"
+    "tts_markdown_instructions_override": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r\nTry using the `set pattern` block before you start your loop to make a work of art!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
