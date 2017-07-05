@@ -177,9 +177,67 @@ exports.install = function (blockly, blockInstallOptions) {
       skin.dropdownThumbnailHeight);
   }
 
+  /**
+   * Append an Input for selecting the actor to examine. Input can be
+   * either in the form of a dropdown (with both regular and K1
+   * versions) or a value input.
+   */
+  function appendActorSelect(block, dropdown = true) {
+    if (dropdown) {
+      if (spriteCount > 1) {
+        if (blockInstallOptions.isK1) {
+          block
+            .appendDummyInput()
+            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
+        } else {
+          block
+            .appendDummyInput()
+            .appendTitle(spriteNumberTextDropdown(msg.ifSpriteN), 'SPRITE');
+        }
+      } else {
+        block.appendDummyInput();
+      }
+    } else {
+      block
+        .appendValueInput('SPRITE')
+        .setCheck(blockly.BlockValueType.NUMBER)
+        .appendTitle(msg.ifSpriteN({spriteIndex: ''}));
+    }
+  }
+
+  /**
+   * Given a block init function and a code generation function, create
+   * two versions of a block; one which uses a dropdown and one which
+   * uses a value input to select the actor.
+   */
+  function addRegularAndParamsVersions(name, initFunc, generatorFunc) {
+    let regular = `studio_${name}`;
+    let params = `studio_${name}Params`;
+
+    Blockly.Blocks[regular] = {
+      init: function () {
+        initFunc.call(this, true);
+      }
+    };
+
+    Blockly.Blocks[params] = {
+      init: function () {
+        initFunc.call(this, false);
+      }
+    };
+
+    generator[regular] = function () {
+      return generatorFunc.call(this, true);
+    };
+    generator[params] = function () {
+      return generatorFunc.call(this, false);
+    };
+  }
+
   // started separating block generation for each block into it's own function
   installVanish(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions);
-  installConditionals(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions);
+  installConditionals(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown,
+      blockInstallOptions, appendActorSelect, addRegularAndParamsVersions);
 
   generator.studio_eventHandlerPrologue = function () {
     return '\n';
@@ -3035,83 +3093,22 @@ function installVanish(blockly, generator, spriteNumberTextDropdown, startingSpr
  * Add conditional blocks for examining the state of sprites via
  * callbacks.
  */
-function installConditionals(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown, blockInstallOptions) {
-
-  /**
-   * Append an Input for selecting the actor to examine. Input can be
-   * either in the form of a dropdown (with both regular and K1
-   * versions) or a value input.
-   */
-  function appendActorSelect(block, dropdown = true) {
-    if (dropdown) {
-      if (spriteCount > 1) {
-        if (blockInstallOptions.isK1) {
-          block
-            .appendDummyInput()
-            .appendTitle(startingSpriteImageDropdown(), 'SPRITE');
-        } else {
-          block
-            .appendDummyInput()
-            .appendTitle(spriteNumberTextDropdown(msg.ifSpriteN), 'SPRITE');
-        }
-      } else {
-        block.appendDummyInput();
-      }
-    } else {
-      block
-        .appendValueInput('SPRITE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.ifSpriteN({spriteIndex: ''}));
-    }
-  }
+function installConditionals(blockly, generator, spriteNumberTextDropdown, startingSpriteImageDropdown,
+    blockInstallOptions, appendActorSelect, addRegularAndParamsVersions) {
 
   /**
    * Given a block init function and a code generation function, create
-   * two versions of a block; one which uses a dropdown and one which
-   * uses a value input to select the actor.
+   * four versions of a block; one which uses a dropdown and one which
+   * uses a value input to select the actor, and those two but with space
+   * for an `else` clause.
    */
-  function addRegularAndParamsVersions(name, initFunc, generatorFunc) {
-    let regular = `studio_${name}`;
-    let params = `studio_${name}Params`;
-    let regularElse = `studio_${name}Else`;
-    let paramsElse = `studio_${name}ElseParams`;
-
-    Blockly.Blocks[regular] = {
-      init: function () {
-        initFunc.call(this, true);
-      }
-    };
-
-    Blockly.Blocks[params] = {
-      init: function () {
-        initFunc.call(this, false);
-      }
-    };
-
-    Blockly.Blocks[regularElse] = {
-      init: function () {
-        initFunc.call(this, true, true);
-      }
-    };
-
-    Blockly.Blocks[paramsElse] = {
-      init: function () {
-        initFunc.call(this, false, true);
-      }
-    };
-
-    generator[regular] = function () {
-      return generatorFunc.call(this, true);
-    };
-    generator[params] = function () {
-      return generatorFunc.call(this, false);
-    };
-    generator[regularElse] = function () {
-      return generatorFunc.call(this, true, true);
-    };
-    generator[paramsElse] = function () {
-      return generatorFunc.call(this, false, true);
-    };
+  function addRegularAndParamsVersionsWithElseClause(name, initFunc, generatorFunc) {
+    addRegularAndParamsVersions(name,
+        function (actorSelectDropdown) { initFunc.call(this, actorSelectDropdown, false); },
+        function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, false); });
+    addRegularAndParamsVersions(name + 'Else',
+        function (actorSelectDropdown) { initFunc.call(this, actorSelectDropdown, true); },
+        function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, true); });
   }
 
   // Actor Emotion
@@ -3129,7 +3126,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()]
   ];
 
-  addRegularAndParamsVersions('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
+  addRegularAndParamsVersionsWithElseClause('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
@@ -3181,7 +3178,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorYPosition(), 'y'],
   ];
 
-  addRegularAndParamsVersions('ifActorPosition', function (actorSelectDropdown, includeElseStatement) {
+  addRegularAndParamsVersionsWithElseClause('ifActorPosition', function (actorSelectDropdown, includeElseStatement) {
     const OPERATORS = Blockly.RTL ? [
       ['=', 'EQ'],
       ['\u2260', 'NEQ'],
@@ -3264,7 +3261,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorVisible(), 'true']
   ];
 
-  addRegularAndParamsVersions('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
+  addRegularAndParamsVersionsWithElseClause('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
@@ -3311,7 +3308,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     return [msg.isSet() + ' ' + choice[0], choice[1]];
   });
 
-  addRegularAndParamsVersions('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
+  addRegularAndParamsVersionsWithElseClause('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
