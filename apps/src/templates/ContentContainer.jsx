@@ -1,6 +1,6 @@
 import React from 'react';
-import FontAwesome from '../FontAwesome';
-import color from "../../util/color";
+import FontAwesome from './FontAwesome';
+import color from "../util/color";
 
 // ContentContainer provides a full-width container which will render whatever children are passed to it. The component is useful for creating clear, sub-sections on a page because it was built to reuse the styling and funtionality of a heading and the option to show a link. You can find an example of its use on studio.code.org/home.
 
