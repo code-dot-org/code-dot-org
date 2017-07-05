@@ -566,7 +566,7 @@ def html_output_filename(test_run_string, options)
 end
 
 def rerun_filename(test_run_string)
-  "#{test_run_string}.rerun"
+  "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}.rerun"
 end
 
 def cucumber_arguments_for_browser(browser, options)
