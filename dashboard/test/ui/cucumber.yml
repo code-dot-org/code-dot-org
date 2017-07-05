@@ -1,2 +1,2 @@
-default: -r support/ -r step_definitions/
+default: -r support/ -r features/step_definitions/
 
