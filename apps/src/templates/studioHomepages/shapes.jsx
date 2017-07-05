@@ -18,7 +18,6 @@ const shapes = {
     linkToOverview: PropTypes.string.isRequired,
     linkToLesson: PropTypes.string.isRequired,
     lessonName: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
   })
 };
 
