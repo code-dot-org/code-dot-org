@@ -41,9 +41,14 @@ theme: responsive
 
 ## Press Kit
 
-<div style='margin-left:40px'>
-<%= view :news_presskit %>
-</div>
+For all press and media inquiries, contact [press@code.org](mailto:press@code.org)
+
+[Download hi-res version of Code.org logo](https://www.dropbox.com/scl/fi/3qxs2z7ukocwc7apbn3mc/Code.org%20Logo.zip?dl=0)
+
+**Note**: The CODE&reg; logo design is a registered trademark of Code.org. You may not use the Code.org trademarked logo without explicit permission from Code.org, and even then only in reference to Code.org. Mashups or combinations of the Code.org logo with other logos or initiatives are expressly prohibited.
+
+Download hi-res photo of Code.org founder [Hadi Partovi](https://code.org/images/HadiPartoviHeadshot.jpg)
+
 
 ## Partnership Logo
 
@@ -55,16 +60,14 @@ If you're an official Code.org partner (such as a school district, or a tutorial
 <%= view :news_tag, tag:'announce', hide_source:true, show_dates:true %>
 </div>
 
+<br>
+
+Visit our [blog](https://medium.com/@codeorg) to see more or our [Tumblr](http://blog.code.org/) to see all past announcements.
+
 ## Code.org in the news
 
 <div style='margin-left:40px'>
-<%= view :news_tag, tag:'news' %>
-</div>
-
-## Computer Science in the news
-
-<div style='margin-left:40px'>
-<%= view :news_tag, tag:'csnews' %>
+<%= view :news_tag, show_dates:true, tag:'news' %>
 </div>
 
 <br/>

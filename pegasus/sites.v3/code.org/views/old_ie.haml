@@ -1,0 +1,18 @@
+:javascript
+  var is_ie8 = false;
+
+-# Old IE: add polyfills, show warning banner, disable NewRelic error tracking.
+/[if lt IE 9]
+  %script{src: 'https://cdn.polyfill.io/v2/polyfill.min.js?features=Event'}
+  %script{src:'/js/respond.min.js'}
+  %script{:src=>'/js/html5shiv.js'}
+  :javascript
+    is_ie8 = true;
+    document.addEventListener('DOMContentLoaded', function () {
+      $("#warning-banner").show();
+    });
+    if (window.newrelic) {
+      window.newrelic.setErrorHandler(function () {
+        return true;
+      });
+    }
