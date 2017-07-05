@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
 import shapes from './shapes';
@@ -7,16 +6,12 @@ import i18n from "@cdo/locale";
 
 const StudentHomepage = React.createClass({
   propTypes: {
-    courses: shapes.courses
-  },
-
-  componentDidMount() {
-    // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
+    courses: shapes.courses,
+    studentTopCourse: shapes.studentTopCourse
   },
 
   render() {
-    const { courses } = this.props;
+    const { courses, studentTopCourse } = this.props;
 
     return (
       <div>
@@ -31,6 +26,7 @@ const StudentHomepage = React.createClass({
           heading={i18n.myCourses()}
           isRtl={false}
           isTeacher={false}
+          studentTopCourse={studentTopCourse}
         />
 
       </div>

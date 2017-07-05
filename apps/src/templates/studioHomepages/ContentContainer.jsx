@@ -111,7 +111,6 @@ const ContentContainer= React.createClass({
           return (
             <div key={index}>
               {child}
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
             </div>
           );
         })}

@@ -85,10 +85,31 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
-      @recent_courses = current_user.recent_courses_and_scripts.slice(0, 2)
+      @recent_courses = current_user.recent_courses_and_scripts
+
+      unless current_user.teacher?
+        @recent_courses = current_user.recent_courses_and_scripts.drop(1)
+      end
 
       if current_user.teacher?
         @sections = current_user.sections.map(&:summarize)
+      end
+
+      unless current_user.teacher?
+        script = current_user.primary_script
+        if script
+          script_level = current_user.next_unpassed_progression_level(script)
+        end
+
+        if script && script_level
+          @student_top_course = {
+            assignableName: data_t_suffix('script.name', script[:name], 'title'),
+            lessonName: script_level.stage.localized_title,
+            linkToOverview: script_path(script),
+            linkToLesson: "Ask Brent?"
+            #build_script_level_path(script_level)
+          }
+        end
       end
     end
   end
