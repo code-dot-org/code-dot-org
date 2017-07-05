@@ -35,6 +35,7 @@ ENV['BUILD'] = `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
+LOCAL_LOG_DIRECTORY = 'log'
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
@@ -269,6 +270,7 @@ def prefix_string(msg, prefix)
 end
 
 def open_log_files
+  FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
   $success_log = File.open('success.log', 'w')
   $error_log = File.open('error.log', 'w')
   $errorbrowsers_log = File.open('errorbrowsers.log', 'w')
@@ -559,7 +561,7 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    options.out || "#{test_run_string}_output.html"
+    options.out || "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
   end
 end
 
