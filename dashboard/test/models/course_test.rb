@@ -171,4 +171,40 @@ class CourseTest < ActiveSupport::TestCase
     course = Course.find_by_name!('this-course')
     assert_equal 2, CourseScript.where(course: course).length
   end
+
+  test "valid_courses" do
+    # The data here must be in sync with the data in ScriptConstants.rb
+    csp = create(:course, name: 'csp')
+    csp1 = create(:script, name: 'csp1')
+    csp2 = create(:script, name: 'csp2')
+    csp3 = create(:script, name: 'csp3')
+    csd = create(:course, name: 'csd')
+    create(:course, name: 'madeup')
+
+    create(:course_script, position: 1, course: csp, script: csp1)
+    create(:course_script, position: 2, course: csp, script: csp2)
+    create(:course_script, position: 3, course: csp, script: csp3)
+
+    courses = Course.valid_courses
+
+    # one entry for each course that is in ScriptConstants
+    assert_equal 2, courses.length
+    assert_equal csp.id, courses[0][:id]
+    assert_equal csd.id, courses[1][:id]
+
+    csp_assign_info = courses[0]
+
+    # has fields from ScriptConstants::Assignable_Info
+    assert_equal csp.id, csp_assign_info[:id]
+    assert_equal 'csp', csp_assign_info[:script_name]
+    assert_equal 0, csp_assign_info[:position]
+    assert_equal(-1, csp_assign_info[:category_priority])
+
+    # has localized name, category
+    assert_equal 'Computer Science Principles', csp_assign_info[:name]
+    assert_equal 'Full Courses', csp_assign_info[:category]
+
+    # has script_ids
+    assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+  end
 end
