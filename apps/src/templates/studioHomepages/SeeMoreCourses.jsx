@@ -51,7 +51,7 @@ const SeeMoreCourses = React.createClass({
             color={ProgressButton.ButtonColor.gray}
             icon="caret-down"
             text={i18n.viewMore()}
-            style={{float: 'right'}}
+            style={{float: 'right', marginBottom: 20}}
           />
         )}
       </div>
