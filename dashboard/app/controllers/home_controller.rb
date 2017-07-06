@@ -106,8 +106,7 @@ class HomeController < ApplicationController
             assignableName: data_t_suffix('script.name', script[:name], 'title'),
             lessonName: script_level.stage.localized_title,
             linkToOverview: script_path(script),
-            linkToLesson: "Ask Brent?"
-            #build_script_level_path(script_level)
+            linkToLesson: script_next_path(script, 'next')
           }
         end
       end
