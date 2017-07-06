@@ -30,5 +30,5 @@ export const classroomShape = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   section: PropTypes.string,
-  enrollmentCode: PropTypes.string.isRequired,
+  enrollment_code: PropTypes.string.isRequired,
 });
