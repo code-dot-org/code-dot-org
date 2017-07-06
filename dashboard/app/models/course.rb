@@ -191,7 +191,7 @@ class Course < ApplicationRecord
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
     # TODO: can we avoid with_associated_models if not caching?
-    Course.with_associated_models.find_by(find_by => id_or_name)
+    Course.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)
