@@ -13,9 +13,10 @@ namespace :build do
       end
 
       # Only rebuild if apps contents have changed since last build.
+      commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(apps_dir) &&
-        File.exist?(apps_dir('commit_hash')) &&
-        File.read(apps_dir('commit_hash')) == RakeUtils.git_folder_hash(apps_dir)
+        File.exist?(commit_hash) &&
+        File.read(commit_hash) == RakeUtils.git_folder_hash(apps_dir)
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
@@ -33,7 +34,7 @@ namespace :build do
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
-      File.write(apps_dir('commit_hash'), RakeUtils.git_folder_hash(apps_dir))
+      File.write(commit_hash, RakeUtils.git_folder_hash(apps_dir))
     end
   end
 

@@ -19,7 +19,6 @@ npm-debug.log
 /apps/build
 /apps/build-times.log
 /apps/build-times-to-upload.log
-/apps/commit_hash
 /apps/coverage
 /apps/newrelic_agent.log
 /apps/node_modules/
