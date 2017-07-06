@@ -152,7 +152,7 @@ class RegistrationsController < Devise::RegistrationsController
   helper_method :resource_name
 
   def resource
-    @resource ||= current_user || User.new
+    @resource ||= super || current_user || User.new
   end
   helper_method :resource
 
