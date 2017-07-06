@@ -301,7 +301,7 @@ class Script < ActiveRecord::Base
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
-    Script.find_by(find_by => id_or_name).tap do |s|
+    Script.with_associated_models.find_by(find_by => id_or_name).tap do |s|
       raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
     end
   end
