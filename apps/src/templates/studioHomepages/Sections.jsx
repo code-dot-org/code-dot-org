@@ -23,7 +23,7 @@ const Sections = React.createClass({
           heading={i18n.sectionsTitle()}
           linkText={i18n.manageSections()}
           link={editSectionsUrl}
-          showLink={true}
+          showLink={isTeacher}
           isRtl={isRtl}
         >
         {sections.length > 0 && (
@@ -39,7 +39,7 @@ const Sections = React.createClass({
             type="sections"
             codeOrgUrlPrefix={codeOrgUrlPrefix}
             isRtl={isRtl}
-            isTeacher={false}
+            isTeacher={isTeacher}
           />
         )}
       </ContentContainer>
