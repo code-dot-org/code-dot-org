@@ -23,7 +23,7 @@ class ApiController < ApplicationController
     service = Google::Apis::ClassroomV1::ClassroomService.new
     service.authorization = client
 
-    response = service.list_courses(page_size: 100)
+    response = service.list_courses(teacher_id: 'me', page_size: 100)
     render json: response.to_h
 
     if client.access_token != current_user.oauth_token
