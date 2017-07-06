@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: Selamat atas penyelesaian Kursus 2
   congratulations_on_completing_course3: Selamat atas penyelesaian Kursus 3
   congratulations_on_completing_course4: Selamat atas penyelesaian Kursus 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Selamat atas menyelesaikan Kursus Akselerasi
   congrats_next_tutorials_title: Lulus ke tingkat berikutnya
   congrats_next_tutorials_desc: Cobalah yang lebih pendek, tutorial 1 jam ini atau
@@ -271,6 +277,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer?
     Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/
@@ -331,6 +343,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Ilmu komputer dapat membuka kesempatan-kesempatan terbaik di dunia.&rdquo;
     Satya, Direktur Utama Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Jika Anda belajar mengkode, Anda dapat mempelajari pelajaran terbaik dalam kehidupan Anda.&rdquo;
     Chris Bosh
@@ -944,6 +960,12 @@
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: 'Kursus 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: Jika Anda tidak memiliki komputer, <a href='%{unplugged_url}'>cobalah
     pelajaran tanpa penggunaan komputer </a> di kelas Anda.
   dashboard_curriculum: Kurikulum
@@ -1140,11 +1162,17 @@
   course3_name: Kursus 3
   course4_name: Kursus 4
   coursea-draft_name: Kursus A
+  coursea_name: Kursus A
   courseb-draft_name: Kursus B
+  courseb_name: Kursus B
   coursec-draft_name: Kursus C
+  coursec_name: Kursus C
   coursed-draft_name: Kursus D
+  coursed_name: Kursus D
   coursee-draft_name: Kursus E
+  coursee_name: Kursus E
   coursef-draft_name: Kursus F
+  coursef_name: Kursus F
   accelerated_name: Kursus akselerasi
   cspunit1_name: "(Lama) Unit 1: Informasi Digital"
   cspunit2_name: "(lama) Unit 2: Internet"
@@ -1257,6 +1285,12 @@
   course2_gradelevel: Usia 6 + (membaca diperlukan)
   course3_gradelevel: Usia 8 + (setelah kursus 2)
   course4_gradelevel: Usia 10 + (setelah Kursus 3)
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Kelas 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Usia 10 + (setelah Kursus 3)
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
@@ -1394,6 +1428,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Pelajari konsep-konsep dasar ilmu komputer dengan pemrograman
     tarik dan jatuhkan. Ini adalah tutorial permainan mandiri yang dibintangi kuliah
     video oleh Bill Gates, Mark Zuckerberg, Angry Birds dan Plants vs Zombies. Pelajari
@@ -1942,7 +1982,7 @@
   header_home: Beranda
   header_courses: Kursus
   header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_sections: Sesi
   header_professional_learning: Professional Learning
   header_educate_overview: Ikhtisar Pendidik
   header_educate_elementary: Sekolah Dasar
@@ -1969,51 +2009,11 @@
   header_stats: Statistik
   header_help_us: Bantu Kami
   header_about: Tentang
-  header_teacher_community: Teacher community
+  header_teacher_community: Komunitas guru
   header_help_support: 'Help and support '
   header_report_bug: Laporkan bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Tutorial
+  header_documentation: Dokumentasi
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  coursea_name: Course A
-  courseb_name: Course B
-  coursec_name: Course C
-  coursed_name: Course D
-  coursee_name: Course E
-  coursef_name: Course F
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''

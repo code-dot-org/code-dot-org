@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: Felicitări pentru finalizarea cursului 2
   congratulations_on_completing_course3: Felicitări pentru finalizarea cursului 3
   congratulations_on_completing_course4: Felicitări pentru finalizarea cursului 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Felicitări pentru finalizarea Cursului
     Accelerat
   congrats_next_tutorials_title: Mai departe incercati aceste tutoriale
@@ -275,6 +281,12 @@
   just_did_course2: Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg
   just_did_course3: Tocmai am terminat cursul 3 - vizualizeaza-l! @codeorg
   just_did_course4: Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg
   twitter_teach_cs: 9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa
     calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/.
@@ -328,6 +340,10 @@
     Sheryl, COO la Facebook
   homepage_hero_text_satya: "&ldquo;Informatica poate debloca cele mai bune oportunităţi
     în lume.&rdquo; \nSatya, CEO al Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Dacă știi să programezi, atunci poți să decizi care este cursul vieții tale.&rdquo;
     Chris Bosh
@@ -952,6 +968,12 @@
   dashboard_course2: 'Curs 2:'
   dashboard_course3: 'Curs 3:'
   dashboard_course4: 'Curs 4: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: Dacă nu aveți calculatoare, <a href='%{unplugged_url}'>încercați
     aceste lecţii offline</a> în clasa dvs.
   dashboard_curriculum: Curriculum
@@ -1148,11 +1170,17 @@
   course3_name: Cursul 3
   course4_name: Curs 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Curs intensiv
   cspunit1_name: "(vechi) Unitatea 1: Informaţii digitale"
   cspunit2_name: "(vechi) Unitatea 2: Internet"
@@ -1265,6 +1293,12 @@
   course2_gradelevel: Vârste 6 - 18 ani
   course3_gradelevel: Vârste 8 - 18 ani
   course4_gradelevel: Vârste 10 - 18 ani
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Gradele 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -1402,6 +1436,12 @@
     soluţii flexibile pentru probleme mai complexe. Până la sfârşitul acestui curs,
     elevii vor crea povesti interactive şi jocuri pe care le pot împărtăşi cu cineva.
     Recomandat pentru clasele 4-8.
+  coursea_shortdescription_congrats: "[șir gol]"
+  courseb_shortdescription_congrats: "[șir gol]"
+  coursec_shortdescription_congrats: "[șir gol]"
+  coursed_shortdescription_congrats: "[șir gol]"
+  coursee_shortdescription_congrats: "[șir gol]"
+  coursef_shortdescription_congrats: "[șir gol]"
   codeorg_longdescription: "Învață conceptele de bază ale programării cu o metodă
     simplă, distractivă, drag&drop. Este un tutorial ca un joc, simplu de realizat
     ce conține clipuri video cu Bil Gates, Mark Zukerberg Angry Birds and Plants vs.
@@ -1981,46 +2021,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: CS Principles
+  csp_name: Principii de CS 16-17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  coursea_name: Course A
-  courseb_name: Course B
-  coursec_name: Course C
-  coursed_name: Course D
-  coursee_name: Course E
-  coursef_name: Course F
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''

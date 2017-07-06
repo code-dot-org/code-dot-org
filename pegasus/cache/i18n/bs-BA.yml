@@ -90,6 +90,12 @@
   congratulations_on_completing_course2: "Čestitamo na završetku Kursa 2"
   congratulations_on_completing_course3: "Čestitamo na završetku Kursa 3"
   congratulations_on_completing_course4: "Čestitamo na završetku Kursa 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Čestitamo na završetku Ubrzanog Kursa"
   congrats_next_tutorials_title: Probaj sada ove tutorijale
   congrats_next_tutorials_desc: Probaj ove kraće, tutorijale od 1 sat ili probaj <a
@@ -264,6 +270,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Zašto se računarstvo ne predaje u više škola? Mi to možemo popraviti.
     http://youtu.be/2DxWIxec6yo. Posjeti http://code.org/ da naučiš više.
@@ -320,6 +332,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Računarstvo može otključati najbolje prilike na svijetu.&rdquo;
     Satya, generalni direktor Microsofta
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ako programiraš, možeš izabrati put u svome životu&rdquo;
     Chris Bosh
@@ -912,6 +928,12 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Nastavni plan
@@ -1102,11 +1124,17 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Ubrzani Kurs
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1219,6 +1247,12 @@
   course2_gradelevel: Dobi 6-18
   course3_gradelevel: Godine 8+ (poslije Kursa 2)
   course4_gradelevel: Dob 10+ (nakon Kursa 3)
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Razred 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Dob 10+ (nakon Kursa 3)
   codeorg_platformtext: Savremeni browser-i, mobiteli, tableti
   codeintl_platformtext: Savremeni browser-i, mobiteli, tableti
@@ -1350,6 +1384,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Nauči osnovne pojmove računarstva pomoću "povuci-i-ispusti"
     programiranja. Ovo je igroliki tutorijal kojim sam upravljaš, uz video lekcije
     koje vode Bill Gates, Mark Zuckerberg, Angry Birds i Plants vs. Zombies. Nauči
@@ -1895,43 +1935,3 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  coursea_name: Course A
-  courseb_name: Course B
-  coursec_name: Course C
-  coursed_name: Course D
-  coursee_name: Course E
-  coursef_name: Course F
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
