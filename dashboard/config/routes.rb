@@ -393,6 +393,8 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
+
+    get 'workshop_user_admin/facilitator_courses', controller: 'workshop_user_admin', action: 'facilitator_courses_form'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
