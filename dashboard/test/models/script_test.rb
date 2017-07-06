@@ -749,23 +749,23 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal '/courses/csp', script.course_link
   end
 
-  test 'course_link uses cache' do
-    # populate with a fake course
-    course = create(:course, name: 'foo')
-    script = create(:script, name: 'foo1', hidden: true)
-    create(:course_script, position: 1, course: course, script: script)
-
-    # make sure this new script/course ends up in our cache
-    Course.stubs(:should_cache?).returns true
-    Script.stubs(:should_cache?).returns true
-
-    Script.get_from_cache('foo1')
-    course = Course.get_from_cache('foo')
-    Course.get_from_cache(course.id)
-
-    populate_cache_and_disconnect_db
-
-    script = Script.get_from_cache('foo1')
-    assert_equal '/courses/foo', script.course_link
-  end
+  # test 'course_link uses cache' do
+  #   # populate with a fake course
+  #   course = create(:course, name: 'foo')
+  #   script = create(:script, name: 'foo1', hidden: true)
+  #   create(:course_script, position: 1, course: course, script: script)
+  #
+  #   # make sure this new script/course ends up in our cache
+  #   Course.stubs(:should_cache?).returns true
+  #   Script.stubs(:should_cache?).returns true
+  #
+  #   Script.get_from_cache('foo1')
+  #   course = Course.get_from_cache('foo')
+  #   Course.get_from_cache(course.id)
+  #
+  #   populate_cache_and_disconnect_db
+  #
+  #   script = Script.get_from_cache('foo1')
+  #   assert_equal '/courses/foo', script.course_link
+  # end
 end
