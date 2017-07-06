@@ -45,10 +45,10 @@
       "leftButton",
       "rightButton"
     ],
-    "contained_level_names": null,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
