@@ -157,7 +157,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
-      get 'extras', to: 'script_levels#stage_extras', format: false
+      get 'extras', to: 'script_levels#stage_extras', format: false, as: 'stage_extras'
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
