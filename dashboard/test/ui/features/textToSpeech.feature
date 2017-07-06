@@ -41,9 +41,7 @@ Scenario: Listen to TTS Audio in CSF
 Scenario: Listen to TTS Audio in CSD
   Given I am a student
   And I am on "http://studio.code.org/s/csd3/stage/4/puzzle/4?enableExperiments=CSDTTS"
-  And I rotate to landscape
-  And I wait for the page to fully load
-
+  
   # note: we expect audio for csd instructions
   Then I wait until element ".inline-audio" is visible
   Then I see 1 of jquery selector .inline-audio
@@ -53,8 +51,6 @@ Scenario: Listen to TTS Audio in CSD
 Scenario: Listen to TTS Audio in CSP
   Given I am a student
   And I am on "http://studio.code.org/s/csp5/stage/1/puzzle/11?enableExperiments=CSDTTS"
-  And I rotate to landscape
-  And I wait for the page to fully load
 
   # note: we expect audio for csp instructions
   Then I wait until element ".inline-audio" is visible
