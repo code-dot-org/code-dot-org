@@ -329,6 +329,7 @@ Dashboard::Application.routes.draw do
         delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :workshop_summary_report, only: :index

@@ -567,4 +567,11 @@ class Pd::Workshop < ActiveRecord::Base
   def organizer_or_facilitator?(user)
     organizer == user || facilitators.include?(user)
   end
+
+  # TODO: Extend this for non teachercon surveys when we get to it
+  def survey_responses
+    if teachercon?
+      Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
+    end
+  end
 end
