@@ -1,3 +1,4 @@
+require 'base64'
 require 'image_lib'
 
 class LevelSourcesController < ApplicationController
@@ -75,9 +76,11 @@ class LevelSourcesController < ApplicationController
 
   def set_level_source
     if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
-      @level_source = LevelSource.find(params[:id])
+      level_source_id = LevelSource.level_source_id_from_c_link params[:id], verify_user: false
+      @level_source = LevelSource.find level_source_id
     else
-      @level_source = LevelSource.where(hidden: false).find(params[:id])
+      level_source_id = LevelSource.level_source_id_from_c_link params[:id], verify_user: true
+      @level_source = LevelSource.where(hidden: false).find(level_source_id)
     end
     @level = Level.cache_find(@level_source.level_id)
     @game = @level.game

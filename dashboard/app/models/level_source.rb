@@ -42,6 +42,41 @@ class LevelSource < ActiveRecord::Base
     "#{level_id}-#{md5}"
   end
 
+  # Returns an obfuscated ID (URL) from which the LevelSource can be accessed.
+  # @param [Integer] user_id The ID of the user to obfuscate the LevelSource ID with. Note that the
+  #   user_id is a source for obfuscation only, not authorization or authentication.
+  # @return [String] The /c/ link, incorporating the user ID and the level source ID.
+  def c_link_from_user_id(user_id)
+    raise unless user_id
+    Base64.urlsafe_encode64 "#{id}:#{user_id}"
+  end
+
+  # Returns the LevelSource ID associated with an unobfuscated or obfuscated /c/ link. If the link
+  # is obfuscated and verify_user is true, returns nil if the obfuscated user does not exist and in various edge (error) cases.
+  # @param [String] c_link The /c/ link, unobfuscated or obfuscated.
+  # @param [Boolean] verify_user Whether the user's existence should be verified.
+  # @return [Integer, nil] The associated LevelSource ID.
+  def self.level_source_id_from_c_link(c_link, verify_user:)
+    # The /c/ link is not obfuscated, so simply return it.
+    return c_link.to_i if c_link == c_link.to_i.to_s
+
+    # The /c/ link is obfuscated, so decode it, verifying the existence of the obfuscated user as
+    # appropriate.
+    begin
+      level_source_id_and_user_id = Base64.urlsafe_decode64 c_link
+    rescue ArgumentError
+      return nil
+    end
+    level_source_id, user_id = level_source_id_and_user_id.split(':').map(&:to_i)
+
+    if verify_user
+      associated_user = User.find_by_id user_id
+      return nil unless associated_user
+    end
+
+    level_source_id
+  end
+
   def self.find_identical_or_create(level, data)
     md5 = Digest::MD5.hexdigest(data)
 

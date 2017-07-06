@@ -25,6 +25,14 @@ class LevelSourcesControllerTest < ActionController::TestCase
     assert_equal([], assigns(:view_options)[:callouts])
   end
 
+  test 'should get show with new /c/ link' do
+    user = create :user
+    c_link = @level_source.c_link_from_user_id user.id
+    get :show, params: {id: c_link}
+    assert_response :success
+    assert_equal @level_source, assigns(:level_source)
+  end
+
   test "should get show with embed" do
     get :show, params: {id: @level_source.id, embed: '1'}
     assert_response :success
