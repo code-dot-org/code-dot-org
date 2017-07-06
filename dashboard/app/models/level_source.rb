@@ -15,6 +15,7 @@
 #  index_level_sources_on_level_id_and_md5  (level_id,md5)
 #
 
+require 'base64'
 require 'digest/md5'
 
 # A specific solution attempt for a specific level
@@ -38,27 +39,15 @@ class LevelSource < ActiveRecord::Base
     self.md5 = Digest::MD5.hexdigest(data)
   end
 
-  def self.cache_key(level_id, md5)
-    "#{level_id}-#{md5}"
-  end
-
-  # Returns an obfuscated ID (URL) from which the LevelSource can be accessed.
-  # @param [Integer] user_id The ID of the user to obfuscate the LevelSource ID with. Note that the
-  #   user_id is a source for obfuscation only, not authorization or authentication.
-  # @return [String] The /c/ link, incorporating the user ID and the level source ID.
-  def c_link_from_user_id(user_id)
-    raise unless user_id
-    Base64.urlsafe_encode64 "#{id}:#{user_id}"
-  end
-
-  # Returns the LevelSource ID associated with an unobfuscated or obfuscated /c/ link. If the link
-  # is obfuscated and verify_user is true, returns nil if the obfuscated user does not exist and in various edge (error) cases.
-  # @param [String] c_link The /c/ link, unobfuscated or obfuscated.
-  # @param [Boolean] verify_user Whether the user's existence should be verified.
-  # @return [Integer, nil] The associated LevelSource ID.
-  def self.level_source_id_from_c_link(c_link, verify_user:)
-    # The /c/ link is not obfuscated, so simply return it.
-    return c_link.to_i if c_link == c_link.to_i.to_s
+  # @param [String] c_link The obfuscated or unobfuscated c_link.
+  # @param [Boolean] verify_user If the c_link is obfuscated, whether the sharing user's existence
+  #   should be verified. Default true.
+  # @return [LevelSource, nil] The LevelSource associated with the c_link.
+  def self.find_by_c_link(c_link, verify_user: true)
+    # The /c/ link is not obfuscated, so find the associated LevelSource. Though the method
+    # signature ostensibly requires a string, we intentionally handle integer inputs as well for
+    # safety.
+    return LevelSource.find_by_id(c_link) if (c_link.is_a? Integer) || (c_link == c_link.to_i.to_s)
 
     # The /c/ link is obfuscated, so decode it, verifying the existence of the obfuscated user as
     # appropriate.
@@ -74,7 +63,21 @@ class LevelSource < ActiveRecord::Base
       return nil unless associated_user
     end
 
-    level_source_id
+    LevelSource.find_by_id level_source_id
+  end
+
+  # Returns an unobfuscated ID (URL) [if user_id is nil] or obfuscated ID (URL) [otherwise] from
+  # which the LevelSource can be accessed.
+  # @param [Integer] user_id The ID of the user to obfuscate the LevelSource ID with. Note that the
+  #   user_id is a source for obfuscation only, not authorization or authentication.
+  # @return [String] The obfuscated or unobfuscated /c/ link.
+  def c_link_from_user_id(user_id)
+    return id.to_s unless user_id
+    Base64.urlsafe_encode64 "#{id}:#{user_id}"
+  end
+
+  def self.cache_key(level_id, md5)
+    "#{level_id}-#{md5}"
   end
 
   def self.find_identical_or_create(level, data)

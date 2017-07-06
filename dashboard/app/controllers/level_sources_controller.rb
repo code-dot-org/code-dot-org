@@ -1,14 +1,12 @@
-require 'base64'
 require 'image_lib'
 
 class LevelSourcesController < ApplicationController
   include LevelsHelper
+  before_action :set_level_source
   before_action :authenticate_user!, only: [:update]
   load_and_authorize_resource
   check_authorization
   skip_authorize_resource only: [:edit, :generate_image, :original_image] # edit is more like show
-
-  before_action :set_level_source
 
   def show
     if params[:embed]
@@ -75,13 +73,13 @@ class LevelSourcesController < ApplicationController
   protected
 
   def set_level_source
-    if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
-      level_source_id = LevelSource.level_source_id_from_c_link params[:id], verify_user: false
-      @level_source = LevelSource.find level_source_id
-    else
-      level_source_id = LevelSource.level_source_id_from_c_link params[:id], verify_user: true
-      @level_source = LevelSource.where(hidden: false).find(level_source_id)
+    reset_abuse_user = current_user && current_user.permission?(UserPermission::RESET_ABUSE)
+    level_source = LevelSource.find_by_c_link params[:id], verify_user: reset_abuse_user
+    unless level_source && (!level_source.hidden || reset_abuse_user)
+      raise ActiveRecord::RecordNotFound
     end
+
+    @level_source = level_source
     @level = Level.cache_find(@level_source.level_id)
     @game = @level.game
     view_options(
