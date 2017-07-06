@@ -85,6 +85,8 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+      @sections = current_user.sections.map(&:summarize)
+      @student_sections = current_user.sections_as_student.map(&:summarize)
       @recent_courses = current_user.recent_courses_and_scripts
       # @recent_courses are used to generate CourseCards on the homepage. Rather than a CourseCard, student's most recent assignable will be displayed with a StudentTopCourse component. See below re: student_top_course. Thus, student recent_courses should drop the first course.
       unless current_user.teacher?

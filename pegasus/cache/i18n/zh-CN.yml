@@ -19,8 +19,8 @@
   anybody_can_learn: "任何人都可以学习。"
   learn_now: "现在开始学习"
   petition_message: "在每个学校每个学生都应该有机会学习计算机科学"
-  petition_sign_message: "如果你同意，签上你的名字。加入#其他人。"
-  petition_sign_message_support: "如果你支持我们，签上你的名字。加入# 其他。"
+  petition_sign_message: "如果你同意，与#人一样签上你的名字。"
+  petition_sign_message_support: "如果你支持我们，与#人一样签上你的名字。"
   petition_join_others: "加入 # 其他"
   name: "姓名"
   email: "电子邮件"
@@ -258,7 +258,7 @@
   homepage_hero_text_student5: "&ldquo;计算机科学，不是别人的，是你的。它就在这里，快开始吧。&rdquo;杰拉尔多老师。"
   homepage_hero_text_teacher1: "&ldquo;编码火花讲求创意、 灵感和创新 &mdash; 这些是任何职业都不可或缺的。&rdquo;弗洛雷萨老师"
   homepage_hero_text_teacher2: "&ldquo;我所有的学生都投入，参与到了这个课程。&rdquo;亚当，老师"
-  homepage_hero_text_stat_loc: "两百五十万女孩已经在Code.org里注册学习了。"
+  homepage_hero_text_stat_loc: "八百五十万女孩已经在Code.org里注册学习了。"
   homepage_hero_text_stat_students: 'Code.org有 #student_count 个学生帐户'
   homepage_hero_text_stat_served: "编程一小时：已有 #served 次参与"
   homepage_slot_text_hoc: "编程一小时"
@@ -307,7 +307,7 @@
   homepage_slot_text_title_students: "学生"
   homepage_slot_text_blurb_students: "体验我们所有的教程"
   homepage_slot_text_blurb_students_courses: "探索我们的课程"
-  homepage_slot_text_link_codestudio: "尝试Code.org的课程"
+  homepage_slot_text_link_codestudio: "尝试代码工作室"
   homepage_slot_text_link_local: "找一个当地的班级"
   homepage_slot_text_link_othercourses: "其他在线的课程"
   homepage_slot_text_title_educators: "教育工作者"
@@ -1424,3 +1424,43 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
+  coursea_name: Course A
+  courseb_name: Course B
+  coursec_name: Course C
+  coursed_name: Course D
+  coursee_name: Course E
+  coursef_name: Course F
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Grade 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''

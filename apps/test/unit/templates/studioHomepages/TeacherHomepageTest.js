@@ -21,6 +21,7 @@ const announcements = [
 const sections = [
   {
     name: "Period 1",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/111111/progress",
     assignedTitle: "Course 1",
     linkToAssigned: "https://studio.code.org/s/course1",
@@ -30,6 +31,7 @@ const sections = [
   },
   {
     name: "Period 2",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/222222/progress",
     assignedTitle: "Course 2",
     linkToAssigned: "https://studio.code.org/s/course2",
@@ -233,7 +235,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsTable.name(), 'SectionsTable');
     assert.equal(sectionsTable.childAt(0).name(), 'thead');
     const column1 = sectionsTable.childAt(0).childAt(0).childAt(0);
-    assert.equal(column1.text(), 'Section');
+    assert.equal(column1.text(), 'Section Name');
     const column2 = sectionsTable.childAt(0).childAt(0).childAt(1);
     assert.equal(column2.text(), 'Course');
     const column3 = sectionsTable.childAt(0).childAt(0).childAt(2);

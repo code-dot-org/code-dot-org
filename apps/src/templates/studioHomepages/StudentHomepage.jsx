@@ -1,17 +1,21 @@
 import React from 'react';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
+import Sections from './Sections';
 import shapes from './shapes';
 import i18n from "@cdo/locale";
 
 const StudentHomepage = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    studentTopCourse: shapes.studentTopCourse
+    sections: shapes.sections,
+    studentTopCourse: shapes.studentTopCourse,
+    isRtl: React.PropTypes.bool.isRequired,
+    canLeave: React.PropTypes.bool.isRequired,
   },
 
   render() {
-    const { courses, studentTopCourse } = this.props;
+    const { courses, sections, isRtl, canLeave, studentTopCourse  } = this.props;
 
     return (
       <div>
@@ -27,6 +31,13 @@ const StudentHomepage = React.createClass({
           isRtl={false}
           isTeacher={false}
           studentTopCourse={studentTopCourse}
+        />
+
+        <Sections
+          sections={sections}
+          isRtl={isRtl}
+          isTeacher={false}
+          canLeave={canLeave}
         />
 
       </div>

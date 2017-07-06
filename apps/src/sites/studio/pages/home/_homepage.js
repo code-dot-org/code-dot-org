@@ -68,6 +68,10 @@ function showHomepage() {
         <StudentHomepage
           courses={homepageData.courses}
           studentTopCourse={homepageData.studentTopCourse}
+          sections={homepageData.sections}
+          canLeave={homepageData.canLeave}
+          codeOrgUrlPrefix={homepageData.codeorgurlprefix}
+          isRtl={isRtl}
         />
       )}
     </div>,

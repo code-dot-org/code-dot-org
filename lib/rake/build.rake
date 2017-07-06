@@ -7,6 +7,21 @@ namespace :build do
   desc 'Builds apps.'
   task :apps do
     Dir.chdir(apps_dir) do
+      if rack_env?(:staging)
+        ChatClient.log 'Updating <b>apps</b> i18n strings...'
+        RakeUtils.system './sync-apps.sh'
+      end
+
+      # Only rebuild if apps contents have changed since last build.
+      commit_hash = apps_dir('build/commit_hash')
+      if !RakeUtils.git_staged_changes?(apps_dir) &&
+        File.exist?(commit_hash) &&
+        File.read(commit_hash) == RakeUtils.git_folder_hash(apps_dir)
+
+        ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
+        next
+      end
+
       ChatClient.log 'Installing <b>apps</b> dependencies...'
       RakeUtils.npm_install
 
@@ -16,14 +31,10 @@ namespace :build do
       # Workaround for https://github.com/karma-runner/karma-phantomjs-launcher/issues/120
       RakeUtils.npm_rebuild 'phantomjs-prebuilt'
 
-      if rack_env?(:staging)
-        ChatClient.log 'Updating <b>apps</b> i18n strings...'
-        RakeUtils.system './sync-apps.sh'
-      end
-
       ChatClient.log 'Building <b>apps</b>...'
       npm_target = (rack_env?(:development) || ENV['CI']) ? 'build' : 'build:dist'
       RakeUtils.system "npm run #{npm_target}"
+      File.write(commit_hash, RakeUtils.git_folder_hash(apps_dir))
     end
   end
 
