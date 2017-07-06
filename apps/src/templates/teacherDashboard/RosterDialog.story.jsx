@@ -49,6 +49,13 @@ export default storybook => {
         story: () => (
           <ExampleDialogButton classrooms={[]} />
         )
-      }
+      },
+      {
+        name: 'Failed to load classrooms',
+        description: 'Dialog shown when an error is returned from the API.',
+        story: () => (
+          <ExampleDialogButton classrooms={false} />
+        )
+      },
     ]);
 };

@@ -88,11 +88,21 @@ ClassroomList.propTypes = {
   selectedId: React.PropTypes.string,
 };
 
+const LoadError = () =>
+  <div>
+    <a href="//localhost-studio.code.org:3000/users/auth/google_oauth2?scope=classroom.courses.readonly,classroom.rosters.readonly">
+      {locale.authorizeGoogleClassrooms()}
+    </a>
+  </div>;
+
 export default class RosterDialog extends React.Component {
   static propTypes = {
     handleClose: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.arrayOf(classroomShape),
+    classrooms: React.PropTypes.oneOf(
+      React.PropTypes.arrayOf(classroomShape),
+      React.PropTypes.bool,
+    ),
   }
 
   constructor(props) {
@@ -129,7 +139,7 @@ export default class RosterDialog extends React.Component {
               onSelect={this.onClassroomSelected}
               selectedId={this.state.selectedId}
             /> :
-            locale.loading()
+            this.props.classrooms === false ? <LoadError/> : locale.loading()
           }
         </div>
         <div style={styles.footer}>
