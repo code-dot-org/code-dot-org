@@ -27,7 +27,10 @@ class ApiController < ApplicationController
     render json: response.to_h
 
     if client.access_token != current_user.oauth_token
-      current_user.update oauth_token: client.access_token
+      current_user.update(
+        oauth_token: client.access_token,
+        oauth_token_expiration: client.expires_in + Time.now.to_i,
+      )
     end
   end
 
