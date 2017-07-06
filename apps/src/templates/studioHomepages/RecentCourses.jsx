@@ -19,7 +19,7 @@ const RecentCourses = React.createClass({
   render() {
     const { courses, showAllCoursesLink, isTeacher, heading, isRtl } = this.props;
     const topFourCourses = courses.length >= 4 ? courses.slice(0,4) : courses;
-    const moreCourses = courses.length > 4 ? courses.slice(4, -1) : [];
+    const moreCourses = courses.length > 4 ? courses.slice(4) : [];
 
     return (
       <div>
