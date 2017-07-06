@@ -61,10 +61,6 @@ const Courses = React.createClass({
       $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     }
 
-    if (!this.props.isTeacher) {
-      $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
-    }
-
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
@@ -174,9 +170,6 @@ const Courses = React.createClass({
           <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
         )}
 
-        {!isTeacher && !isSignedOut && (
-          <ProtectedStatefulDiv ref="sectionManagement"/>
-        )}
       </div>
     );
   }
