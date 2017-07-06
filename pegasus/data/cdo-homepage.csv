@@ -9,8 +9,9 @@ hero_stat_students,widehero,homepage_hero_text_stat_students,50% 30%,stat,bottom
 hero_stat_served,widehero,homepage_hero_text_stat_served,50% 35%,stat,top,,,,/images/homepage/girl9.jpg,both,show,all
 hero_malala,widehero,homepage_hero_text_malala,50% 30%,celeb,bottom,,,,/images/homepage/malala.jpg,both,show,all
 hero_susan,widehero,homepage_hero_text_susan,52% 6%,celeb,top,,,,/images/homepage/susan.jpg,both,show,all
-hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,bottom,,,,/images/homepage/satya.jpg,both,show,all
-hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeba,bottom,,,,/images/homepage/sheryl.jpg,both,show,all
+hero_satya,widehero,homepage_hero_text_satya,47% 21%,celeb,bottom,,,,/images/homepage/satya.jpg,both,nah,all
+hero_satya_new,widehero,homepage_hero_text_satya_new,47% 21%,celeba,bottom,,,,/images/homepage/satya_new.jpg,both,show,all
+hero_sheryl,widehero,homepage_hero_text_sheryl,59% 22%,celeb,bottom,,,,/images/homepage/sheryl.jpg,both,show,all
 hero_fistbump,widehero,homepage_hero_text_fistbump,55% 9%,celeba,bottom,,,,/images/homepage/fistbump.jpg,both,nah,all
 hero_student_girl,widehero,homepage_hero_text_student1,50% 30%,student,bottom,,,,/images/homepage/girl.jpg,both,show,all
 hero_student_boyblue,widehero,homepage_hero_text_student2,55% 7%,student,top,,,,/images/homepage/boy5.jpg,both,show,all

@@ -31,6 +31,8 @@
   -if current_user && !current_user.teacher?
     #user_hero
       = render template: 'api/user_hero'
+  #flashes
+    = show_flashes.html_safe
 
   .standalone-tools
     %br/
