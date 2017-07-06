@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
-import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import color from "../../util/color";
 import shapes from './shapes';
@@ -69,7 +68,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
+    const { isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -97,23 +96,6 @@ const Courses = React.createClass({
         <ProtectedStatefulDiv
           ref="flashes"
         />
-
-        {!isTeacher && (
-          <ProtectedStatefulDiv
-            style={styles.userHero}
-            ref="userHero"
-          />
-        )}
-
-        {courses && courses.length > 0 && (
-          <RecentCourses
-            courses={courses}
-            showAllCoursesLink={false}
-            heading={i18n.myCourses()}
-            isTeacher={isTeacher}
-            isRtl={isRtl}
-          />
-        )}
 
         {isEnglish && isTeacher && (
           <div>
