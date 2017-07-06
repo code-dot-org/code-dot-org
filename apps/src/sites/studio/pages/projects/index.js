@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import { getStore } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
 import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/PublicGallery';
-import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
@@ -35,41 +34,6 @@ $(document).ready(() => {
         <PublicGallery initialProjectLists={projectLists}/>
       </Provider>,
       publicGallery);
-  });
-
-  $.ajax({
-    method: 'GET',
-    url: `/v3/channels`,
-    dataType: 'json'
-  }).done(projectLists => {
-    const widget = document.getElementById('projects-widget');
-    projectLists.sort((a, b) => {
-      if (a.updatedAt < b.updatedAt) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
-    projectLists = projectLists.filter(project => {
-      return !project.hidden;
-    });
-    projectLists = projectLists.slice(0,4);
-    let convertedProjectList = [];
-    for (let i = 0; i < projectLists.length; i++){
-      let convertedProject = {
-        name: projectLists[i].name,
-        channel: projectLists[i].id,
-        thumbnailUrl: projectLists[i].thumbnailUrl,
-        type: projectLists[i].projectType,
-        updatedAt: projectLists[i].updatedAt
-      };
-      convertedProjectList.push(convertedProject);
-    }
-    ReactDOM.render(
-      <Provider store={getStore()}>
-        <ProjectWidget projectList={convertedProjectList}/>
-      </Provider>,
-      widget);
   });
 });
 
