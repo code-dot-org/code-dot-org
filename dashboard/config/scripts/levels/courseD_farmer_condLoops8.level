@@ -29,13 +29,17 @@
     "instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "step_speed": "1",
     "markdown_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
-    "ideal": "12",
+    "ideal": "10",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle uses almost the exact same code as the last level, except you only need to repeat 4 times.\",\"hint_id\":\"courseD_farmer_condLoops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a36fe7e0b69e33a473db85ad596b2ce1/courseD_farmer_condLoops8.mp3\"}]",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "Second \"If there is some treasure\" should be \"If no crop\"\r\n\r\nCollect can be our Harvest, but we also need a Plant block as well as an if statement checking to see if there is already a crop planted in the location (right now I am using Fill and If there is a hole to represent the needed blocks)\r\nWe will need to make a drop down menu on the crop blocks to specify which crop (wheat, potatoes, or carrots)\r\nWe will also need the crops to be able to grow to ripeness and only show a 1 when they are ripe\r\n",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 18:45:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-06 18:47:52 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-06 20:59:58 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -48,21 +52,25 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_ifAtCrop">
-          <title name="LOC">Lettuce</title>
-        </block>
-        <block type="harvester_ifAtCropElse">
-          <title name="LOC">Corn</title>
-        </block>
-        <block type="harvester_pumpkin"/>
-        <block type="harvester_corn"/>
-        <block type="harvester_lettuce"/>
+        <block type="harvester_untilAtPumpkin"/>
         <block type="harvester_whileHasCrop">
           <title name="LOC">Corn</title>
         </block>
         <block type="maze_untilBlocked"/>
-        <block type="controls_repeat" limit="1">
-          <title name="TIMES">6</title>
+        <block type="harvester_lettuce"/>
+        <block type="harvester_pumpkin"/>
+        <block type="harvester_corn"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_if">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="harvester_ifAtCropElse">
+          <title name="LOC">Corn</title>
+        </block>
+        <block type="harvester_ifAtCrop">
+          <title name="LOC">Lettuce</title>
         </block>
       </xml>
     </toolbox_blocks>
@@ -70,37 +78,26 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">4</title>
+            <block type="harvester_untilAtPumpkin">
               <statement name="DO">
                 <block type="maze_untilBlocked">
                   <statement name="DO">
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="harvester_ifAtCropElse">
+                        <block type="harvester_whileHasCrop">
                           <title name="LOC">Corn</title>
                           <statement name="DO">
-                            <block type="harvester_whileHasCrop">
-                              <title name="LOC">Corn</title>
-                              <statement name="DO">
-                                <block type="harvester_corn"/>
-                              </statement>
-                            </block>
+                            <block type="harvester_corn"/>
                           </statement>
-                          <statement name="ELSE">
-                            <block type="harvester_ifAtCrop">
+                          <next>
+                            <block type="harvester_whileHasCrop">
                               <title name="LOC">Lettuce</title>
                               <statement name="DO">
-                                <block type="harvester_whileHasCrop">
-                                  <title name="LOC">Lettuce</title>
-                                  <statement name="DO">
-                                    <block type="harvester_lettuce"/>
-                                  </statement>
-                                </block>
+                                <block type="harvester_lettuce"/>
                               </statement>
                             </block>
-                          </statement>
+                          </next>
                         </block>
                       </next>
                     </block>
