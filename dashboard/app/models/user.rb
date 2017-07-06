@@ -114,6 +114,9 @@ class User < ActiveRecord::Base
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
     ui_tip_dismissed_teacher_courses
+    oauth_refresh_token
+    oauth_token
+    oauth_token_expiration
   )
 
   # Include default devise modules. Others available are:
@@ -513,7 +516,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -547,6 +550,17 @@ class User < ActiveRecord::Base
       end
       user.gender = normalize_gender auth.info.gender
     end
+
+    if auth.credentials.refresh_token
+      omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+    end
+
+    omniauth_user.oauth_token = auth.credentials.token
+    omniauth_user.oauth_token_expiration = auth.credentials.expires_at
+
+    omniauth_user.save if omniauth_user.changed?
+
+    omniauth_user
   end
 
   def oauth?
