@@ -68,7 +68,7 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
         }
         <span style={{float: 'right'}}>
           {locale.code()}
-          <span style={{fontFamily: 'monospace'}}> {classroom.enrollmentCode}</span>
+          <span style={{fontFamily: 'monospace'}}> {classroom.enrollment_code}</span>
         </span>
       </div>
     ))}
