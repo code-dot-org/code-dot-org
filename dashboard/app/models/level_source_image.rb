@@ -66,11 +66,6 @@ class LevelSourceImage < ActiveRecord::Base
     upload_image(s3_framed_filename, framed_image)
   end
 
-  def delete_image_or_framed_image
-    AWS::S3.delete_from_bucket(S3_BUCKET, s3_filename)
-    AWS::S3.delete_from_bucket(S3_BUCKET, s3_framed_filename)
-  end
-
   # @return [String] The filename for the image frame.
   def frame_image_filename
     if ['anna', 'elsa'].include? level_source.level.try(:skin)
