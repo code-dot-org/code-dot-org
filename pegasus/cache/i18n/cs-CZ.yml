@@ -88,6 +88,12 @@
   congratulations_on_completing_course2: Gratulujeme ti k dokončení kurzu 2
   congratulations_on_completing_course3: Gratulujeme ti k dokončení kurzu 3
   congratulations_on_completing_course4: Gratulujeme ti k dokončení kurzu 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Gratulujeme ti k dokončení zrychleného
     kurzu
   congrats_next_tutorials_title: Dále vyzkoušejte tyto výukové programy
@@ -267,6 +273,12 @@
   just_did_course2: Právě jsem dokončil kurz 2 - zkus si ho! @codeorg
   just_did_course3: Právě jsem dokončil kurz 3 - zkus si ho! @codeorg
   just_did_course4: Právě jsem dokončil kurz 4 - zkus si ho! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Právě jsem dokončil zrychlený kurz - zkus si ho! @codeorg
   twitter_teach_cs: 9 z 10 lidí souhlasí s tím, že školy by měly učit informatiku.
     http://youtu.be/nKIu9yen5nc. Navštivte https://code.org/.
@@ -325,6 +337,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Informatika umí otevřít ty nejlepší příležitosti ve světě.&rdquo;
     Satya, CEO Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Když programuješ, můžeš si vybrat a zvolit směr svého života.&rdquo;
     Chris Bosh
@@ -923,6 +939,12 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Kurz 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: Pokud nemáte přístup k počítačům, vyzkoušejte ve třídě tyto
     <a href='%{unplugged_url}'>lekce bez počítače</a>.
   dashboard_curriculum: Kurikulum
@@ -1113,11 +1135,17 @@
   course3_name: Kurz 3
   course4_name: Kurz 4
   coursea-draft_name: Kurz A
+  coursea_name: Kurz A
   courseb-draft_name: Kurz B
+  courseb_name: Kurz B
   coursec-draft_name: Kurz C
+  coursec_name: Kurz C
   coursed-draft_name: Kurz D
+  coursed_name: Kurz D
   coursee-draft_name: Kurz E
+  coursee_name: Kurz E
   coursef-draft_name: Kurz F
+  coursef_name: Kurz F
   accelerated_name: Zrychlený kurz
   cspunit1_name: '1. lekce: Digitální informace'
   cspunit2_name: '2. lekce: Internet'
@@ -1230,6 +1258,12 @@
   course2_gradelevel: Věk 6-18
   course3_gradelevel: Ve věku 8-18
   course4_gradelevel: Stáří 10-13
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Známky 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Stáří 10-13
   codeorg_platformtext: Moderní prohlížeče, smartphony, tablety
   codeintl_platformtext: Moderní prohlížeče, smartphony, tablety
@@ -1359,6 +1393,12 @@
     do programovacích témat z předchozích kurzů a budou hledat vhodná řešení složitějších
     problémů. Na konci tohoto kurzu studenti tvoří interaktivní příběhy a hry, které
     mohou s kýmkoli sdílet. Vhodné pro 4.-8. ročník ZŠ.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Nauč se základní pojmy informatiky pomocí tahání myší.
     Je to hravá, samostatně vedená výuka, v jejíchž videolekcích v hlavních rolích
     vystupují hvězdy jako Bill Gates, Mark Zuckerberg, Angry Birds a Plants vs. Zombies.
@@ -1887,46 +1927,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: CS Principles
+  csp_name: Principy informatiky 2016-2017
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  coursea_name: Course A
-  courseb_name: Course B
-  coursec_name: Course C
-  coursed_name: Course D
-  coursee_name: Course E
-  coursef_name: Course F
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''
