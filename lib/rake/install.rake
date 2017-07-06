@@ -13,7 +13,7 @@ namespace :install do
     git_path = ".git/hooks"
 
     files.each do |f|
-      path = File.expand_path(deploy_dir("tools/hooks/#{f}"), __FILE__)
+      path = "../../tools/hooks/#{f}"
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
