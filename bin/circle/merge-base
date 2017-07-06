@@ -9,7 +9,7 @@ end
 
 def circle_yml_changed
   system('git fetch')
-  !`git diff ..origin/#{GitUtils.pr_base_branch_or_default_no_origin} -- circle.yml`.empty?
+  !`git diff ...origin/#{GitUtils.pr_base_branch_or_default_no_origin} -- circle.yml`.empty?
 end
 
 puts "Merging base branch #{GitUtils.pr_base_branch_or_default_no_origin}"
