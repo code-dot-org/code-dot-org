@@ -39,7 +39,7 @@ class HomeController < ApplicationController
   end
 
   # Signed out: redirect to code.org
-  # Show /home for teachers and students
+  # Students and teachers: show /home
   def home
     if !current_user
       redirect_to CDO.code_org_url
