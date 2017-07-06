@@ -22,6 +22,9 @@ npm install -g grunt-cli yarn@0.23.2
 # Perform first full build
 yarn
 npm run build
+
+# automatically rebuild every time you make changes to source files
+npm run start
 ```
 
 ### Seeing your development version of Apps in Dashboard
