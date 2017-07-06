@@ -3,10 +3,11 @@ import ProjectCard from './ProjectCard.jsx';
 import {personalProjectDataPropType} from './projectConstants';
 import color from "../../util/color";
 import i18n from "@cdo/locale";
+import Radium from 'radium';
 
 const styles = {
   grid: {
-    width: 1000
+    width: '100%'
   },
   link: {
     color: color.light_teal,
@@ -16,8 +17,20 @@ const styles = {
     display: "inline-block",
     paddingTop: 10,
     paddingBottom: 20,
-    paddingRight: 18,
+    paddingRight: 10,
     paddingLeft: 10
+  },
+  cardPadding: {
+    paddingRight: 18
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 10,
+    fontSize: 16,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 940
   }
 };
 
@@ -31,7 +44,7 @@ const ProjectCardGrid = React.createClass({
       <div>
         {
           projectList && projectList.slice(0,4).map((project, index) => (
-            <div key={index} style={styles.card}>
+            <div key={index} style={[styles.card, index < 3 && styles.cardPadding]}>
               <ProjectCard
                 projectData={project}
                 currentGallery={'personal'}
@@ -47,11 +60,11 @@ const ProjectCardGrid = React.createClass({
   render() {
     return (
       <div style={styles.grid}>
-        <h3>{i18n.projectsContinueWorking()}</h3>
+        <div style={styles.description}>{i18n.projectsContinueWorking()}</div>
         {this.renderProjectCardList(this.props.projectList)}
       </div>
     );
   }
 });
 
-export default ProjectCardGrid;
+export default Radium(ProjectCardGrid);

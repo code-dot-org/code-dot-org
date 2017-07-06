@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import {personalProjectDataPropType} from './projectConstants';
 import PersonalRecentProjects from './PersonalRecentProjects.jsx';
 import NewProjectButtons from './NewProjectButtons.jsx';
+import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 
 const ProjectWidget = React.createClass({
@@ -11,13 +12,18 @@ const ProjectWidget = React.createClass({
 
   render() {
     return (
-      <div>
-        <h2>{i18n.projects()}</h2>
+      <ContentContainer
+        heading={i18n.projects()}
+        linkText={i18n.projectsViewProjectGallery()}
+        link="/projects"
+        showLink={true}
+        isRtl={false}
+      >
         {this.props.projectList.length > 0 &&
           <PersonalRecentProjects projectList={this.props.projectList} />
         }
         <NewProjectButtons />
-      </div>
+      </ContentContainer>
     );
   }
 });
