@@ -3,7 +3,7 @@ module DashboardHelpers
   def require_rails_env
     puts 'Requiring rails env'
     start = Time.now
-    require File.expand_path('../../../../config/environment.rb', __FILE__)
+    require File.expand_path('../../../../../config/environment.rb', __FILE__)
     finish = Time.now
     puts "Requiring rails env took #{finish - start} seconds"
   end
