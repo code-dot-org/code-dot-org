@@ -2,7 +2,7 @@ module Pd::WorkshopSurveyResultsHelper
   # Summarize an array of workshop surveys that are of the same type
   # @param surveys List of TeacherconSurveys
   # @param options List of the questions the survey uses.
-  # @param facilitator Faciliator that
+  # @param facilitator Faciliator to restrict responses for
   # @returns Hash representing an average of all the respones, or array of free text responses
   def summarize_workshop_surveys(surveys, options, facilitator = nil)
     # Works on arrays where everything is either a teachercon survey or workshop survey
