@@ -13,8 +13,8 @@ end
 # Updated: Check that image is still visible after pressing play
 Then /^I listen to the (\d+)(?:st|nd|rd|th) inline audio element$/ do |n|
   steps <<-STEPS
-    Then I click selector ".csf-top-instructions .inline-audio:eq(#{n}) .playPause"
+    Then I click selector ".inline-audio:eq(#{n}) .playPause"
     And I wait for 2 seconds
-    And element ".csf-top-instructions .inline-audio:eq(#{n}) .playPause i" is visible
+    And element ".inline-audio:eq(#{n}) .playPause i" is visible
   STEPS
 end
