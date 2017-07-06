@@ -2,8 +2,9 @@ module Pd::WorkshopSurveyResultsHelper
   # Summarize an array of workshop surveys that are of the same type
   # @param surveys List of TeacherconSurveys
   # @param options List of the questions the survey uses.
+  # @param facilitator Faciliator that
   # @returns Hash representing an average of all the respones, or array of free text responses
-  def summarize_workshop_surveys(surveys, options)
+  def summarize_workshop_surveys(surveys, options, facilitator = nil)
     # Works on arrays where everything is either a teachercon survey or workshop survey
     # (but not both)
     raise 'Currently just sumarizes Teachercon surveys' unless
@@ -22,6 +23,8 @@ module Pd::WorkshopSurveyResultsHelper
         else
           # If not, concat it to the list of responses
           if v.is_a? Hash
+            v = v.keep_if {|key, _| key == facilitator} if facilitator
+
             if sum_hash[k] == 0
               sum_hash[k] = convert_facilitator_hash_to_string(v)
             else

@@ -30,6 +30,11 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal [['Facilitator Bob'], ['Facilitator Jane']], result_hash[:who_facilitated]
     assert_equal ['Facilitator Bob: Bob did well', 'Facilitator Jane: Jane did well'], result_hash[:things_facilitator_did_well]
     assert_equal ['Facilitator Bob: Bob could improve', 'Facilitator Jane: Jane could improve'], result_hash[:things_facilitator_could_improve]
+
+    # When viewing workshop surveys for just Facilitator Bob, expect to only see bob's feedback
+    result_hash = summarize_workshop_surveys([survey_1, survey_2], Pd::TeacherconSurvey.options, 'Facilitator Bob')
+    assert_equal ['Facilitator Bob: Bob did well'], result_hash[:things_facilitator_did_well]
+    assert_equal ['Facilitator Bob: Bob could improve'], result_hash[:things_facilitator_could_improve]
   end
 
   test 'get an error if summarizing a mix of workshop surveys' do
