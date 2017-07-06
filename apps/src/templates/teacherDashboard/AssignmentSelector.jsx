@@ -2,12 +2,15 @@ import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import { assignmentShape } from './shapes';
 import { assignmentId } from './teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   secondary: {
     marginTop: 10
   }
 };
+
+const sectionFocusExperiment = experiments.isEnabled('sectionFocus');
 
 const noAssignment = assignmentId(null, null);
 
@@ -86,7 +89,7 @@ export default class AssignmentSelector extends Component {
     const grouped = groupedAssignments(primaryAssignIds.map(id => assignments[id]));
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
-    if (primaryAssignment) {
+    if (primaryAssignment && sectionFocusExperiment) {
       secondaryOptions = primaryAssignment.scriptAssignIds;
     }
 
