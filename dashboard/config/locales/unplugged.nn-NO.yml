@@ -116,112 +116,93 @@
         title: Glade Kart
         desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte
           ein figur gjennom ein labyrint med berre ein kommando.
-        video: C1_happy_maps_unplugged
       MoveIt:
         title: Flytt, flytt
         desc: Elevane lagar enkle algoritmer (sett med instruksjonar) for å flytte
           ein figur gjennom ein labyrint med berre ein kommando.
-        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Verkelege algoritmar: Plante eit frø'
         desc: Denne oppgåva viser korleis me bruker algoritmer i dagliglivet, her
           med det å plante eit frø som eksempel. Den fokuserer og på det store større
           bildet av informatikk og korleis algoritmer er ein viktig del av det.
-        video: C1_planting_seed
       BuildingAFoundation:
         title: Bygge eit fundament
-        desc: 'Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene
+        desc: Elevene bygger en struktur med kun tilgjengelig tilbehør. Strukturene
           må fullføre en oppgave (når en viss høyde eller bære en viss vekt), og elevene
-          diskuterer ideen om å bli værende når ting blir mer komplisert. '
-        video: C1_building_foundation
+          diskuterer ideen om å bli værende når ting blir mer komplisert.
       GettingLoopy:
         title: Me blir sløyfete
-        desc: 'Denne leksjonen introduserer programmeringen av konseptet av sløyfer
+        desc: Denne leksjonen introduserer programmeringen av konseptet av sløyfer
           (gjentatt instruksjon) gjennom en danseaktivitet. Studentene vil lære enkel
-          koreografi, og deretter bli bedt om å gjenta den. '
-        video: C1_getting_loopy
+          koreografi, og deretter bli bedt om å gjenta den.
       RelayProgramming:
         title: Programmeringsstafett
         desc: Elevene skal gjennom et stafettløp der de skal gjennom skolegården for
           å skrive algoritmer basert på millimeterpapirprogrammering. De har kun lov
           til å skrive en instruksjon om gangen og dersom det er en feil må de viske
           ut alt til der de gjorde feilen.
-        video: C2_relay_programming
       Conditionals:
         title: Betingelser
         desc: For å lære om betingete instruksjoner skal elevene spille et kortspill
           og lage regler som "Hvis jeg tegner et rødt kort, får jeg et poeng" og "Hvis
           jeg tegner et svart kort, får du et poeng."
-        video: C2_conditionals_with_cards
       BigEvent:
         title: Den store hendinga
         desc: Eleven blir introdusert for programmeringskonseptet "hendelse" som er
           handlnger som datamaskinen overfoker. Læreren trykker på knapper på en papirfjernkontroll
           og elevene svarer basert på hvilken knapp som er trykket.
-        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Går stader trygt
         desc: Internett er en kraftig, men noen ganger farlig sted. Lærere presentere
           hvordan å være trygg når du navigerer på Internett.
-        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programmering på millimeterpapir
         desc: Elevene bruker forhåndsbestemte kommandoer til å lage en algoritme (en
           samling med instruksjoner) for å styre klassekameratene sine til å lage
           en tegning.
-        video: C2_graph_paper
       PaperPlanes:
         title: 'Verkelege algoritmar: Papirfly'
         desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
           i dette tilfellet for å å lage et papirfly. Det fokuserer også på det store
           bildet av informatikk og hvordan algoritmer spiller en essensiell rolle.
-        video: C2_paper_airplanes
       BinaryBracelets:
         title: Binær armbånd
         desc: Elevene skal lage armbånd som en binær representasjon av den første
           bokstaven i navnet. Elevene lærer at data kan være representert og lagret
           på mer enn én måte.
-        video: C2_binary_bracelets
       DigitalFootprint:
         title: Dine digitale fotspor
         desc: Lærere introdusere elever ideen at sette informasjon om seg selv online
           skaper en digitale fotavtrykk eller "sti" som har konsekvenser.
-        video: C2_digital_footprint
       ComputationalThinking:
         title: Programmeringstenking
         desc: Elever bruker trinnene i logisk tenkning (bryte ned problemer, finne
           mønstre, abstrahere, algoritmer) for å finne ut hvordan spille et spill
           uten instruksjoner.
-        video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Fungerande solfangarar
         desc: Elevene lager en algoritme med variabler og funksjoner (biter med kode
           som du skal bruke mange ganger) for å lage solfangere ved bruk av tråder
           og perler.
-        video: C3_functional_suncatchers
       SongwritingParameters:
         title: Låtskriving med parametere
         desc: Elever bruker konseptet med refrenget i en sang for å lære om å sende
           parametere (som tilpasser en funksjon uten å være nødt til å skrive om hele
           funksjonen).
-        video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Virkelige algoritmer: Terningrace'
         desc: Denne leksjonen viser måter vi bruker algoritmer i vårt daglige liv,
           ved hjelp av plante et frø som et eksempel. Som en del av dette skal elevene
           finne og skrive ned algoritmen for terningracet.
-        video: C3_dice_race
       Internet:
         title: Internett
         desc: Studentene sende meldinger som representerer ulike Internett metoder
           bruke papirark.
-        video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
         desc: Elevene bruker crowdsourcing, en problemløsningsteknikk som er vanlig
           å bruke i informatikk, for å fullføre en oppgave sammen i et klasserom mer
           effektivt enn hvis en elev prøvde det alene.
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digitalt statsborgerskap
         desc: Elevene utforsker forskjellene mellom privat informasjon og personlig
@@ -232,26 +213,22 @@
         desc: Denne leksjonen viser oss noe viktig om algoritmer. Hvis du holder en
           algoritme enkel finnes det mange måter å bruke den. Hvis du vil sikre at
           alle ender opp med samme resultat må algoritmen ha flere detaljer.
-        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: Konvolutt variabler
         desc: Variabler gir mye frihet i datavitenskap.  Denne leksjonen bidrar til
           å forklare hva variabler er og hvordan vi kan bruke dem på mange forskjellige
           måter. Bruk denne aktiviteten før (eller i forbindelse med) leksjonen på
           abstraksjon for å virkelig se sammenhengen.
-        video: C4_unplugged_variables
       MadGlibs:
         title: Adjektivhistorie
         desc: Abstraksjon er en av de viktigste ferdighetene for en programmerer å
           forstå.  Denne aktiviteten får elevene analysere historier for å finne ulikheter
           slik at de kan abstrahere dem bort dem bort. Disse abstraherte historiene
           blir maler for nye morsomme og gale historier.
-        video: C4_unplugged_madlibs
       ForLoopFun:
         title: Morro med for løkker
         desc: Vi vet at vi ved hjelp av løkker kan gjøre de samme tingene flere ganger,
           men nå skal vi lære hvordan du bruker løkker med ekstra struktur i seg.
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Låtskriving med parameter
         desc: 'En av de mest storslåtte strukturene i infromatikkens verden er funksjonen.
@@ -259,7 +236,6 @@
           igjen og igjen i et større program. Vi skal nå hjelpe elver med å intuitivt
           forstå hvorfor det å kombinere biter av kode inn i funksjoner er en veldig
           nyttig praksis.  '
-        video: C4_unplugged_parameters
       BinaryImages:
         title: Binære Bilder
         desc: Selv om mange mennesker tenker på binærsystemet som kun 0 og 1, viser
@@ -267,20 +243,17 @@
           rekke av binære alternativer. Denne leksjonen tar det konseptet et steg
           videre da det illustrerer hvordan en datamaskin kan lagre enda mer kompleks
           informasjon (som for eksempel bilder og farger) binært også.
-        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: TVspill og koordinatsystemer
         desc: Oppdag hvordan videospillene du elsker å spille faktisk er drevet av
           algebra! Utforsk hvordan algebra-utrykk og koordinatsystemet kan hjelpe
           oss med å forstå hvordan videospill fungerer og begynn å planlegg video-spillet
           du selv skal lage.
-        video: alg_11_coordinate_plane
       Contracts:
         title: Kontrakter, domene og rekkevidde
         desc: Kontraktene gir oss en måte å forstå og diskutere funksjoner. I denne
           leksjonen skal vi se på hvordan kontrakter kan hjelpe oss til å forstå et
           nytt programmeringsspråk eller en funksjon.
-        video: alg_5_contracts
       DesignRecipe:
         title: Design oppskrifta
         desc: På det forrige nivået skrev elevene noen veldig enkle funksjoner - men
@@ -288,20 +261,17 @@
           "The Design Recipe" er en strukturert tilnærming for å skrive funksjoner
           som inkluderer å skrive test-tilfeller for å forsikre seg om at funksjonen
           gjør det som er forventet av den.
-        video: alg_8_design_recipe
       Booleans:
         title: Boolske verdier og logikk
         desc: Bolske uttrykk er den fjerde og siste data-typen som du vil lære om
           i dette kurset. Du vil lære om hva bolske uttrykk er og hvordan de kan hjelpe
           oss med å skrive funksjoner som tenker logisk
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Vilkår og stykkevise funksjonar
         desc: Parameterne vi sender til funksjoner gjør at utfallet varierer basert
           på et mønster. Hvis vi vil at forskjellige verdier i paramterene skal skape
           forskjellige utfall fra funksjonen, bruker vi forskjellige mønstre for å
           skille mellom verdiene. Dette er hvor kondisjoner trengs...
-        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection og Pytagoras læresetning
         desc: "Å finne ut når objekter på skjermen berører hverandre er et viktig
@@ -309,4 +279,28 @@
           og formelen for avstand kan bli brukt til å finne avstanden mellom to punkter
           på et plan, og så avgjøre om de to punktene (eller spill-figurene) berører
           hverandre."
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: ''
+        desc: ''
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Aktivitet utan datamaskinar
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Aktivitet utan datamaskinar
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+          but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Aktivitet utan datamaskinar
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Aktivitet utan datamaskinar
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Aktivitet utan datamaskinar
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Aktivitet utan datamaskinar
+        desc: Today you will learn about what to do if someone is being mean online.

@@ -13,11 +13,14 @@
     errors:
       messages:
         blank: je požadováno
+        blank_plural: are required
+        invalid_plural: are invalid
     attributes:
       user:
         name: Zobrazit jméno
         name_example: Zobrazované jméno <br/> (např. Cool kodér nebo Jana S.)
         email: E-mail
+        personal_email: Personal email address
         username: uživatelské jméno
         password: heslo
         password_confirmation: Potvrzení hesla
@@ -236,6 +239,7 @@
     edit: Upravit
     edit_model: Upravit %{model}
     update: Aktualizovat
+    submit: Odeslat
     destroy: Zrušit
     back: Zpět
     confirm: Jsi si jistý?
@@ -354,6 +358,17 @@
     deleted_user: odstraněný uživatel
     no_password_because_oauth: Bez hesla, protože se přihlašujete pomocí jiného poskytovatele.
     no_password_because_sponsored: See your teacher to manage your password.
+    create_personal_login: Create a personal login
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: Dokončeno
     tried: Vyzkoušeno
@@ -1170,3 +1185,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+  courses_category: Full Courses
