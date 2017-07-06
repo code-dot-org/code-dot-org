@@ -47,10 +47,7 @@ module DeleteAccountsHelper
     end
   end
 
-  # Cleans all LevelSource-backed progress associated with the user.
-  # WARNING: Since the relationship between user_levels and activities and level_sources is
-  #   many-to-one, we cannot be certain that this is not messing with the integrity of the data for
-  #   other users.
+  # Removes the link between the user's level-backed progress and the progress itself.
   # @param [Integer] user_id The user to clean the LevelSource-backed progress of.
   def self.clean_level_source_backed_progress(user_id)
     GalleryActivity.where(user_id: user_id).each do |gallery_activity|
@@ -59,23 +56,17 @@ module DeleteAccountsHelper
     GalleryActivity.where(user_id: user_id).destroy_all
 
     UserLevel.where(user_id: user_id).find_each do |user_level|
-      if OPEN_ENDED_LEVEL_TYPES.include? user_level.level.type
-        user_level.level_source.try(:clear_data_and_image)
-      end
+      user_level.update!(level_source_id: nil)
     end
 
     Activity.where(user_id: user_id).find_each do |activity|
-      if OPEN_ENDED_LEVEL_TYPES.include? activity.level.type
-        activity.level_source.try(:clear_data_and_image)
-      end
+      activity.update!(level_source_id: nil)
     end
 
     # Note that the `overflow_activities` table exists only in the production environment.
     if ActiveRecord::Base.connection.data_source_exists? 'overflow_activities'
       OverflowActivity.where(user_id: user_id).find_each do |activity|
-        if OPEN_ENDED_LEVEL_TYPES.include? activity.level.type
-          activity.level_source.try(:clear_data_and_image)
-        end
+        activity.update!(level_source_id: nil)
       end
     end
   end
