@@ -23,14 +23,18 @@ class ApiController < ApplicationController
     service = Google::Apis::ClassroomV1::ClassroomService.new
     service.authorization = client
 
-    response = service.list_courses(teacher_id: 'me', page_size: 100)
-    render json: response.to_h
+    begin
+      response = service.list_courses(teacher_id: 'me', page_size: 100)
+      render json: response.to_h
 
-    if client.access_token != current_user.oauth_token
-      current_user.update(
-        oauth_token: client.access_token,
-        oauth_token_expiration: client.expires_in + Time.now.to_i,
-      )
+      if client.access_token != current_user.oauth_token
+        current_user.update(
+          oauth_token: client.access_token,
+          oauth_token_expiration: client.expires_in + Time.now.to_i,
+        )
+      end
+    rescue Google::Apis::ClientError => client_error
+      render status: :forbidden, json: {error: client_error}
     end
   end
 
