@@ -17,6 +17,7 @@
   "assignCourse": "Assign Course",
   "assignCourseConfirm": "Are you sure you want to assign \"{courseName}\" to \"{sectionName}\"?",
   "assignedTo": "Assigned to",
+  "authorizeGoogleClassrooms": "Click here to authorize Google Classroom.",
   "autolock": "Note: Stage auto-locks after 24 hours.",
   "backToPreviousLevel": "Back to previous level",
   "blocklyMessage": "Blockly",
