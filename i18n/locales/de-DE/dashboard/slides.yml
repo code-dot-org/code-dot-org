@@ -747,7 +747,7 @@ de:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Bei der Herstellung von Schokolade gibt es einen Prozess mit vielen großen Schritten. Und jeder dieser großen Schritte besteht aus einer Reihe kleinerer Schritte. Es gibt unterschiedliche Rezepte oder Algorithmen, je nachdem welchen Geschmack die Schokolade haben soll. Jeder Schritt ist wichtig, auch die ganz kleinen Schritte. Wenn ein Schritt fehlt, kann der Rest des Prozesses nicht abgeschlossen werden. Es ist wichtig, Algorithmen zu erstellen, die von anderen verstanden werden. Deshalb muss jeder Schritt aufgeschrieben werden, damit das Ergebnis immer dasselbe ist, egal, wer die Schritte durchführt."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Bisher hast du eine Animation oder eine Geschichte geschaffen, die jedes Mal, wenn du sie abspielst, genau dasselbe macht. Nun kannst du ein interaktives Spiel erstellen, das man tatsächlich spielen kann."
@@ -823,7 +823,7 @@ de:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Bei diesem Beispiel sagen wir, WENN in der lila Blume mehr als 0 Portionen Nektar sind, DANN hole den Nektar. Damit sagen wir unserer Biene, solange Nektar zu sammeln, bis er alle ist. Geschafft!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Hast du schon einmal vom \"Debugging\" gehört? Das ist die Methode, mit der du herausfindest, was nicht funktioniert. Beim Debuggen von Code suchst und behebst du Fehler."

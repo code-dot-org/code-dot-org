@@ -5,9 +5,9 @@
   'no': 'No'
   select_language: Selecciona tu idioma
   upgrade_ie_message: Code.org pronto eliminará el soporte para Internet Explorer
-    8, 9 y 10. Por favor actualicese a un navegador moderno.
+    8, 9 y 10. Por favor actualícese a un navegador moderno.
   upgrade_ie_message_csedweek: CSEdWeek.org pronto eliminará el soporte para Internet
-    Explorer 8, 9 y 10. Por favor actualice a un navegador moderno.
+    Explorer 8, 9 y 10. Por favor actualícese a un navegador moderno.
   upgrade_ie_link: Aprende más
   en: Ciencias de la computación
   computer_science_edweek: Semana de Educación en Ciencias de la Computación
@@ -35,12 +35,11 @@
   twentyhours_text: "¿Terminaste tu primera Hora de Code? Conoce más sobre informática
     y conceptos de programación en este curso de seguimiento."
   og_title: 'Code.org: Todos pueden aprender'
-  og_description: Todos los alumnos de todas las escuelas merecen la oportunidad de
-    estudiar Ciencias de la Informática.
+  og_description: Cada alumno de cualquier escuela merece la oportunidad de estudiar
+    Ciencias Informáticas.
   csedweek_og_title: La Hora del Código está llegando
-  csedweek_og_description: La Hora del Código es un movimiento global que llega a
-    decenas de millones de estudiantes de todas las edades de más de 180 países y
-    45 idiomas.
+  csedweek_og_description: 4-10, diciembre de 2017. Ciencia computacional es un aprendizaje
+    fundamental para todos los estudiantes.
   hoc2014_heading: Únete a la <a href="http://hourofcode.com">Hora de Code</a><br/>Del
     8 al 14 de diciembre, 2014<br/>
   hoc2014_students: Alumnos
@@ -50,7 +49,7 @@
   hoc2014_everyone: Todos
   hoc2014_support: Apóyalo ▾
   hoc2014_whatishoc: "¿Qué es la Hora de Programación?"
-  csedweek_map_header: "# CSEdWeek / Eventos sobre Hora de Code en el mundo"
+  csedweek_map_header: "#CSEdWeek/ eventos de la Hora del Código alrededor del mundo"
   csedweek_map_signup: Registra tu evento
   csedweek_map_search_placeholder: Busca eventos sobre Hora de Code
   csedweek_map_search_search: Buscar
@@ -101,15 +100,15 @@
   view_course: Ver el curso
   view_unit: Ver la unidad
   make_app: Crear una aplicación
-  congrats_guest_speaker_title: Encontrar un ponente invitado para tu clase
+  congrats_guest_speaker_title: Encuentra un ponente invitado para tu clase
   congrats_guest_speaker_desc: Ahora que sus alumnos han terminado un curso de ciencia
     de la computación, considere celebrar y conectarlos a cosas que ellos pueden construir
     en el mundo real invitando a un ponente a su clase. Puede utilizar nuestro mapa
     de voluntarios para contactar a voluntarios locales para visitar su clase, o buscar
     en cualquier ciudad para encontrar estudiantes de ciencias de la computación o
     profesionales técnicos que estén listos para inspirar a sus estudiantes vía video
-    chat.
-  congrats_guest_speaker_cta: Encontrar un ponente invitado
+    conversación.
+  congrats_guest_speaker_cta: Encuentra un ponente invitado
   congrats_third_party_title: Utiliza sus nuevas habilidades con estas aplicaciones
     y sitios web
   third_party_gradelevel_kto8: Grados K-8
@@ -127,12 +126,12 @@
   third_party_price_299: 'Precio: $ 2,99/descarga'
   third_party_price_individual: 'Precio Individual: Prueba gratis y $25/mes'
   third_party_price_school: 'Precio para Escuelas: Planes gratis y Pro en $2500 +'
-  third_party_tynker_desc: Plataforma informática creativa de Tynker ayuda a los niños
-    a desarrollar el pensamiento computacional y habilidades de programación de una
-    manera intuitiva, imaginativa y divertida. Nuestro lenguaje de programación visual
-    innovadora, interactiva, cursos autodidacta y actividades de programación de juego
-    proporcionan una fácil introducción a la programación y estimulan a los niños
-    para innovar y crear.
+  third_party_tynker_desc: La creativa plataforma informática Tynker ayuda a los niños
+    a desarrollar el pensamiento y habilidades de programación de una manera intuitiva,
+    imaginativa y divertida. Nuestro innovador lenguaje de programación visual, cursos
+    interactivos autodidactas y actividades de programación basadas en juegos proporcionan
+    una fácil introducción a la programación y estimulan a los niños para innovar
+    y crear.
   third_party_tynker_btn_curriculum: Pruebe el Curriculum de Tynker para primeros
     lectores
   third_party_tynker_btn_site: Visite Tynker
@@ -146,18 +145,18 @@
   third_party_scratchjr_btn_curriculum: Descargar currículum de Scratch Jr.
   third_party_scratchjr_btn_site: Visite Scratch Jr.
   third_party_scratch_desc: Con Scratch, puedes programar tus propias historias interactivas,
-    juegos y animaciones y compartir sus creaciones con otros en la comunidad en línea.
-    Scratch ayuda a los jóvenes a aprender a pensar creativamente, a razonar sistemáticamente
-    y trabajar en colaboración - habilidades esenciales para la vida en el siglo XXI.
+    juegos y animaciones; y compartir tus creaciones en la comunidad en línea. Scratch
+    ayuda a los jóvenes a aprender a pensar creativamente, a razonar sistemáticamente
+    y trabajar en colaboración - habilidades esenciales para la vida en el siglo Xxi-.
   third_party_scratch_btn_curriculum: Descargar Curriculum Scratch
   third_party_scratch_btn_forum: Foro de educador Scratch
   third_party_scratch_btn_site: Visite Scratch
-  third_party_lightbot_desc: En Lightbot, estudiantes deberán programar un robot con
-    comandos para resolver los puzzles. Los estudiantes pueden jugar en el navegador
-    (requiere Flash Player), o en dispositivos iOS o Android. Estudiantes juegan el
-    conjunto inicial de los niveles "Básicos" en Lightbot. Aprenderán cómo decirle
-    a un ordenador qué hacer con una serie de comandos básicos y obtener el proceso
-    general por el que se escriben programas de computadora.
+  third_party_lightbot_desc: En Lightbot, los estudiantes deberán programar un robot
+    con instrucciones para resolver los puzzles. Los estudiantes pueden jugar en el
+    navegador (requiere Flash Player), o en dispositivos iOS o Android. Los estudiantes
+    manejaran el paquete de niveles "Básicos" en Lightbot. Ellos aprenderán cómo decirle
+    a un ordenador qué hacer con una serie de ordenes básicas y lograr el proceso
+    general que permite que se escriban programas de computación.
   third_party_lightbot_btn_curriculum: Descargar Lightbot Curriculum
   third_party_lightbot_btn_site: Visite Lightbot
   third_party_khan_desc: Aprenda cómo programar dibujos, animaciones y juegos con
@@ -176,16 +175,16 @@
   third_party_appinv_btn_forum: Foro de App Inventor 2
   third_party_appinv_btn_site: Visita la aplicación Inventor 2
   third_party_codehs_desc: CodeHS presenta los bloques de programación con videos
-    cortos, códigos de ejemplo y un montón de ejercicios de programación que harán
-    la codificación divertida y accesible para los principiantes. Para las escuelas
-    y los maestros, CodeHS ofrece plan de estudios, profesor herramientas y PD. Para
-    los estudiantes individuales, puedes obtener la ayuda que necesita en el camino
-    desde una red de tutores.
-  third_party_codehs_btn_try: Introducción CS - Aprenda Más para escuelas
-  third_party_codecademy_desc: Estamos repensando la educación desde abajo hacia arriba.
-    La web ha reconsiderado casi todo - comercio, redes sociales, salud y más. Estamos
-    construyendo la educación que el mundo necesita - la primera red verdaderamente
-    nativa.
+    cortos, ejemplos de códigos y muchos ejercicios de programación que hacen la codificación
+    divertida y accesible para principiantes. Para las escuelas y los maestros, CodeHS
+    ofrece plan de estudios, herramientas para el profesor y PD. Para los estudiantes
+    independientes, puedes obtener la ayuda necesaria durante el curso en la red de
+    tutores.
+  third_party_codehs_btn_try: Introducción CS - Más Aprendizaje para la escuelas
+  third_party_codecademy_desc: Estamos repensando la educación de abajo hacia arriba.
+    La red ha reconsiderado casi todo - comercio, redes sociales, salud y más. Estamos
+    construyendo la educación que el mundo necesita - la primera educación verdaderamente
+    nativa de la red.
   third_party_codecademy_btn_curriculum: Descargar Codecademy Curriculum
   third_party_codecademy_btn_site: Visite Codecademy
   third_party_organization: Organización
@@ -194,16 +193,16 @@
   third_party_cost_free: Gratis para estudiantes y profesores
   third_party_cost_5permonth: "$5/mes por clase"
   third_party_cost_299: "$ 2,99/descargar"
-  third_party_cost_free_399: Gratis para probar, $399/aula
-  third_party_cost_free_2: Gratis para probar, $2/estudiante
-  third_party_cost_free_10: Gratis para probar, $ 9,99/mes
+  third_party_cost_free_399: Prueba Gratis, $399/aula
+  third_party_cost_free_2: Prueba Gratis, $2/estudiante
+  third_party_cost_free_10: Prueba Gratis, $ 9,99/mes
   third_party_desc_5_4to8: Aproximadamente 5 clases, dirigidos a los grados 4-8
   third_party_desc_10to12_kto3: Aproximadamente 10-12 lecciones, dirigidas a grado
     K-3
   third_party_desc_11_kto5: Aproximadamente 11 lecciones, dirigidas a grados K-5
   third_party_desc_10to12_kto5: Aproximadamente 10-12 lecciones, dirigidas a grados
     K-5
-  third_party_desc_40_4to8: Más de 40 lecciones, dirigido a los grados 4-8
+  third_party_desc_40_4to8: Más de 40 lecciones, dirigidas a los grados 4-8
   third_party_desc_dozens_kto8: Decenas de lecciones para todos los grados K-8
   third_party_desc_10to15_3to12: Entre 10 y 15 clases, dirigido a los grados 3-12
   third_party_desc_25to40_3to12: Desde 25-40 lecciones, diseñado para los grados 3-12
@@ -261,7 +260,7 @@
   continue_learning_body: Hay muchas opciones. Puedes aprender en línea, en una escuela
     local o en un campamento de verano.
   learn_code_studio: Pruebe los cursos de Code Studio
-  learn_next_level: Continuar al siguiente nivel
+  learn_next_level: Intente otro curso de Code Studio
   learn_online: Prueba otros cursos en línea
   learn_classes: Encontrar clases cerca de ti
   learn_back_to_minecraft: "Продолжаем учиться с Minecraft"
@@ -390,11 +389,12 @@
   homepage_slot_text_title_hoc: Hora del Codigo
   homepage_slot_text_blurb_hoc: Cualquiera puede aprender. Comienza hoy mismo
   homepage_slot_text_link_hoc: Prueba la Hora del Código
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Sea anfitrión de una hora de código
-  homepage_slot_text_link_hocserved: "# servido"
+  homepage_slot_text_link_hocserved: "# servidor"
   homepage_solot_text_link_volunteer: Hazte voluntario para la Hora de Code
   homepage_slot_text_title_students: Alumnos
-  homepage_slot_text_blurb_students: Explora todos nuestros tutoriales
+  homepage_slot_text_blurb_students: Explora todos nuestros instructivos
   homepage_slot_text_blurb_students_courses: Explora nuestros cursos
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_local: Busca una clase local
@@ -408,12 +408,12 @@
   homepage_slot_text_link_fullcurriculum: Ver nuestro currículum completo
   homepage_slot_text_link_pd: Desarrollo profesional
   homepage_slot_text_title_advocates: Defensores
-  homepage_slot_text_blurb_advocates: Apoye nuestro trabajo
+  homepage_slot_text_blurb_advocates: Apoye la diversidad en la computación
   homepage_slot_text_link_stats: Ver las estadísticas
   homepage_slot_text_link_buy: Involucrarse
   homepage_slot_text_link_donate: Haga una donación
   homepage_slot_text_link_shop: Camisetas, sombreros y más
-  homepage_header_codestudio: Creaciones de los estudiante de Code Studio
+  homepage_header_codestudio: Creaciones estudiantiles para Code.org
   homepage_header_donors: Code.org agradece a sus colaboradores
   homepage_donors_seall: Ver todo
   homepage_donors_donate: Dona
@@ -500,9 +500,9 @@
   minecraft_download_adventurer: Descarga la versión offline del Aventurero de Minecraft.
   minecraft_subtitle: Hora de Código de Minecraft
   sports_page_title: Hora del Código de Los Deportes
-  sports_og_title: Tutoriales de La Hora del Código de Los Deportes
-  sports_og_description: Seleccione entre NBA y WNBA o los tutoriales de programación
-    de todos los deportes.
+  sports_og_title: Esfuérzate. Todo el mundo puede aprender.
+  sports_og_description: Campeones y medallistas de oro te animamos a probar la hora
+    del código. El código de su propio juego deportivo.
   sports_title: Programa tu propio juego de deporte
   sports_watch_video: Mira el Vídeo
   sports_video_title: Esfuérzate. Todo el mundo puede aprender.
@@ -517,8 +517,8 @@
     tenis
   sports_athlete_Russell: Russell Okung, campeón de la Super Bowl y jugador en la
     NFL, Denver Broncos
-  sports_athlete_Sergio: Sergio Ramos, jugador y campeón de la Copa Mundial de fútbol,
-    Real Madrid
+  sports_athlete_Sergio: Sergio Ramos, futbolista del Real Madrid y campeón de la
+    Copa Mundial de fútbol
   sports_athlete_Sue: Sue Bird, medallista de oro olímpico y campeona de la WNBA,
     Seattle Storm
   sports_athlete_Alana: Alana Beard, medallista de oro y All-Star de la WNBA, Los
@@ -529,12 +529,12 @@
   sports_athlete_Carmelo: Carmelo Anthony, medallista de oro olímpico y NBA All-Star,
     New York Knicks
   sports_athlete_Marco: Marco Belinelli, campeón de la NBA, Charlotte Hornets
-  sports_athlete_Neymar: Neymar Jr., medallista de oro olímpico y futbolista en el
-    equipo nacional, FC Barcelona y Brasil
+  sports_athlete_Neymar: Neymar Jr., futbolista, medallista de oro olímpico con equipo
+    nacional de Brasil y FC Barcelona
   sports_athlete_Sarah: Sarah Quita Offringa, campeona de windsurf
   sports_athlete_Marcelo: Marcelo, campeón de fútbol y jugador en el equipo nacional,
     Real Madrid, Brasil
-  sports_athlete_Erika: Erika Olivera, maratonista campeona
+  sports_athlete_Erika: Erika Olivera, campeona maratonista
   sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
   sports_athlete_Chris: Chris Bosh, medallista de oro olímpico y campeón de la NBA,
     Miami Heat
@@ -592,8 +592,8 @@
     Aprende más</a> sobre cómo organizar tu propio evento Hora de Code y encontrando
     un voluntario local en nuestro <a href="%{volunteer_local}"> mapa de voluntariado</a>.
   volunteer_engineer_submission_update_information: Actualiza tu información
-  volunteer_engineer_submission_header_shared: Información compartida con docentes
-    en el mapa de voluntarios
+  volunteer_engineer_submission_header_shared: Información compartida con maestros
+    del mapa de voluntarios
   volunteer_engineer_submission_field_name: Nombre
   volunteer_engineer_submission_field_name_placeholder: Nombre Completo
   volunteer_engineer_submission_field_company: Empresa (o Universidad)
@@ -610,17 +610,18 @@
     tras la Hora de Code
   volunteer_engineer_submission_field_time_commitment: Puedo dedicar algo de tiempo
     tras la Hora de Code
-  volunteer_engineer_submission_field_linkedin: Perfil de LinkedIn
+  volunteer_engineer_submission_field_linkedin: Perfil en LinkedIn
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/tu_nombre
   volunteer_engineer_submission_field_facebook: Perfil de Facebook
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/tu_nombre
   volunteer_engineer_submission_field_description: Descripción
   volunteer_engineer_submission_field_description_desc: Describe tu experiencia en
     Informática y cómo te gustaría participar como voluntario con docentes locales.
-  volunteer_engineer_submission_field_description_placeholder: Descripción de experiencia
-    y/o participación
-  volunteer_engineer_submission_header_private: La información se mantiene en privado
-    y nunca es compartida
+  volunteer_engineer_submission_field_description_placeholder: Descripción de participación
+    o de experiencia. Si hablas idiomas aparte del inglés, asegúrese de incluirlo
+    aquí.
+  volunteer_engineer_submission_header_private: La información es privada y nunca
+    se comparte
   volunteer_engineer_submission_field_email: Dirección de correo electrónico
   volunteer_engineer_submission_field_email_desc: Tu dirección de correo electrónico
     nunca será compartida, pero te enviaremos solicitudes enviadas por docentes.
@@ -658,7 +659,8 @@
     de tecnología
   volunteer_engineer_submission_experience_university_student_or_researcher: Alumno
     actual de Universidad (o investigador)
-  volunteer_engineer_submission_experience_software_professional: Profesional en software
+  volunteer_engineer_submission_experience_software_professional: Ingeniero de software
+    o especialista técnico
   volunteer_engineer_submission_distance_8: 5 kilómetros
   volunteer_engineer_submission_distance_16: 10 kilómetros
   volunteer_engineer_submission_distance_24: 15 kilómetros
@@ -796,7 +798,7 @@
   dashboard_navigation_view_assessments_surveys: Evaluaciones/Encuestas
   dashboard_navigation_add_students: Añadir alumnos
   dashboard_navigation_manage_students: Administrar alumnos
-  dashboard_navigation_lesson_plans_resources: Planificaciones de lecciones y recursos
+  dashboard_navigation_lesson_plans_resources: Curriculum normales
   dashboard_navigation_view_stats: Estadísticas
   dashboard_navigation_section: 'Sección: %{section_name}'
   dashboard_navigation_student: 'Alumno: %{student_name}'
@@ -815,6 +817,7 @@
   dashboard_responses_view: 'Ver respuestas de texto:'
   dashboard_responses_none: Sin respuestas de texto
   dashboard_sections_new_section: Nueva sección
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Crea nuevas secciones y añade alumnos
     a ellas. Las secciones ayudan a organizar a los alumnos en grupos más pequeños
     para que puedas seguir su progreso y administrar sus cuentas.
@@ -822,6 +825,7 @@
   dashboard_sections_table_secret: Tipo de inicio de sesión
   dashboard_sections_table_grade: Grado
   dashboard_sections_table_course: Curso
+  dashboard_sections_table_pairing_allowed: Programación de pares
   dashboard_sections_table_stage_extras: Etapa Extra
   dashboard_sections_table_students: Alumnos
   dashboard_sections_table_code: Código de sección
@@ -911,7 +915,10 @@
     secreto</b>. Se generará una nueva imagen secreta para que ese estudiante pueda
     registrarse.
   dashboard_students_secret_word_title: Palabra secreta
-  dashboard_students_secret_word: Palabra secreta
+  dashboard_students_secret_word: Esta sección utiliza <b>imágenes</b> como tipo de
+    letra secreto. Esto significa que cada uno de tus alumnos tiene una imagen secreta
+    que utiliza en vez de una contraseña para iniciar la sesión. Los alumnos deben
+    utilizar la dirección web indicada arriba para iniciar la sesión.
   dashboard_students_reset_word: 'Puedes restablecer las palabras secretas de un alumno
     en cualquier momento seleccionando <b>Mostrar secreto</b> y luego <b>Restablecer
     secreto</b>. Se generará un nuevo par de palabras secretas para que ese estudiante
@@ -923,24 +930,24 @@
     a <b>palabra</b> o <b>imagen</b>.
   dashboard_students_print_page: Imprimir esta página
   dashboard_students_signin_card: Visite %{join_url} y entre a %{section_code}
-  dashboard_students_url: URL
+  dashboard_students_url: URL directo
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Haz
     clic aquí</a> para ver nuestro documento sobre privacidad, que puede compartirse
     o imprimirse para tus alumnos.
   dashboard_curriculum_k5_title: Recursos del educador para K-5
-  dashboard_curriculum_middle_title: Recursos del educador para Secundaria
-  dashboard_curriculum_high_title: Recursos del educador para Bachillerato
+  dashboard_curriculum_middle_title: Recursos para ell educador de Secundaria
+  dashboard_curriculum_high_title: Recursos para el educador de Bachillerato
   dashboard_lesson_plans: Planes de lecciones
-  dashboard_view_all_lesson_plans: Ver todos los planes de estudio
+  dashboard_view_all_lesson_plans: Descargar curriculum completo para los cursos 1-4
   dashboard_course1: 'Curso 1:'
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
-  dashboard_unplugged: Si no tiene computadoras, <a href='%{unplugged_url}'> intente
-    estas lecciones desenchufados</a> en su salón del clase.
+  dashboard_unplugged: Si no tienes equipos, <a href='%{unplugged_url}'> prueba estas
+    clases de unplugged</a> en su aula.
   dashboard_curriculum: Currículum
   dashboard_curriculum_overview: Resumen de currículo K-5
-  dashboard_overview: Resumen
+  dashboard_overview: Vista previa
   dashboard_sequence: Secuencia
   dashboard_framework: Marco de trabajo
   dashboard_standards: Estándares
@@ -971,12 +978,12 @@
   dashboard_correctness_correct: Correcto
   dashboard_correctness_incorrect: Incorrecto
   dashboard_submission_submitted: Enviado
-  dashboard_submission_in_progress: En progreso
+  dashboard_submission_in_progress: En proceso
   dashboard_status: Estado
   dashboard_multi_correct: "# opción múltiple correcta"
   dashboard_multi_count: "# opción múltiple"
   dashboard_multi_correct_percent: "% opción múltiple correcta"
-  dashboard_submission_timestamp: Marca de tiempo del envío
+  dashboard_submission_timestamp: Fecha de envio
   stats_hoc_2013_heading: 'Increíbles estadísticas de la Hora de Code del año pasado.
     En sólo una semana:'
   stats_hoc_2013_image_alt: Estadísticas de Hora de Code del 2013
@@ -987,7 +994,8 @@
   dashboard_sections_account_creation_question: "¿Quién crea la cuenta del estudiante?"
   dashboard_sections_password_question: ¿Qué usan los estudiantes como "contraseña"?
   dashboard_sections_picture_account_creation: Una foto asignada por Code.org
-  dashboard_sections_word_account_creation: Una palabra simple asignada por Code.org
+  dashboard_sections_word_account_creation: Un par de palabras sencillas asignadas
+    por Code.org
   dashboard_sections_sign_in_question: "¿Dónde se registran los estudiantes?"
   dashboard_sections_sign_in_unique: Una página web única listada en la pestaña de
     "Gestión de estudiantes"
@@ -1040,15 +1048,16 @@
   carousel_heading_codeorg_any_device: Tutoriales por Code.org (para todos los dispositivos)
   carousel_heading_3rd_party: Tutoriales realizados por terceros
   carousel_heading_third_party: Tutoriales realizados por terceros
-  carousel_heading_international: Tutoriales en tu idioma
-  carousel_heading_domestic: Guías disponibles en inglés
-  carousel_heading_beginners: Tutoriales para principiantes (en inglés)
+  carousel_heading_international: Asesorias en tu idioma
+  carousel_heading_domestic: Instructivos disponibles en inglés
+  carousel_heading_beginners: Instructivos asociados para grados K-8
   carousel_heading_beyond_beginners: Tutoriales para principiantes (en inglés)
   carousel_heading_javascript: Guías que enseñan JavaScript
   carousel_heading_beyond_javascript: Tutoriales para aprender JavaScript
   carousel_heading_unplugged: "¿No tienes dispositivo o Internet? Prueba informática
     sin conexión"
-  carousel_heading_devices: Aplicaciones Tutorial para teléfonos y tablets
+  carousel_heading_devices: Aplicaciones de Tutoriales asociadas para teléfonos y
+    tabletas
   carousel_heading_beyond_devices: Tutoriales en aplicaciones para teléfonos y tabletas
   carousel_heading_languages: Tutoriales en otros lenguajes de programación
   carousel_heading_beyond_languages: Tutoriales en otros lenguajes de programación
@@ -1072,11 +1081,11 @@
   teachers_notes_hoc: 'Profesores: Leer las notas importantes del educador aquí'
   previous: Anterior
   next: Siguiente
-  older_systems: Tutoriales que funcionan en sistemas más antiguos
+  older_systems: Instructivos que funcionan en sistemas más antiguos
   older_systems_subheading: Estos deberían funcionar sin problemas en navegadores
     no tan modernos. Para acceder al resto de los tutoriales vas a necesitar <a href="http://browsehappy.com/"
     target="_blank">actualizar tu navegador</a>.
-  mobile_devices: Guías para dispositivos móviles
+  mobile_devices: Guías asociadas para dispositivos móviles
   frozen_name: Programa con Ana y Elsa
   starwars_name: 'Star Wars: Creando una Galaxia con Código'
   codeorg_name: Laberinto clásico
@@ -1244,7 +1253,7 @@
   boxisland_gradelevel: Escuela primaria
   codesters_gradelevel: 12-14 años
   texasinstruments_gradelevel: 13-16 años
-  teacherled_gradelevel: Mayores de 5 años
+  teacherled_gradelevel: 5 años o mas
   course1_gradelevel: Edades de 4 a 6 años
   course2_gradelevel: Edades de 6 a 18 años
   course3_gradelevel: Edades de 8 a 18 años
@@ -1342,8 +1351,8 @@
   flappy_shortdescription: Haz tu propio juego - Flappy Bird, Tiburón o Submarino
   bitsbox_shortdescription: Programa una serie de aplicaciones para jugar y compartir,
     con JavaScript real.
-  makeschool_shortdescription: "¡Crea un juego para iPhone! ¡Aprende a escribir código
-    para enseñarle a tu monstruo nuevos movimientos!"
+  makeschool_shortdescription: "¡Crea un juego para iPhone! ¡Aprende a escribir un
+    código para enseñarle a tu monstruo nuevos movimientos!"
   touchdevelop_shortdescription: 'Resuelve problemas, crea juegos y aprende a programar,
     todo desde tu teléfono. '
   appinventor_shortdescription: "¡Crea tu propia aplicación! (sólo para Android)"
@@ -1364,10 +1373,10 @@
   infinity_shortdescription: Utilice el laboratorio de juegos para crear una historia
     o juego protagonizada por personajes de Disney Infinity.
   artist_shortdescription: "¡Dibuja imagenes estupendas y diseños con el Artista!"
-  monsterocding_shortdescription: Una programación a color guiada para niños.
-  allcancode_shortdescription: Un juego de inmersión guiado por Marco con un lenguaje
-    visual de programación.
-  csfirst_shortdescription: Una historia animada sobre dos personajes en el océano.
+  monsterocding_shortdescription: Una colorida programación auto guiada para niños.
+  allcancode_shortdescription: Un juego de inmersión para guiar a Marco con un lenguaje
+    de programaciónvisual.
+  csfirst_shortdescription: Anime una historia sobre dos personajes en el océano.
     ¡Añade tu propio estilo!
   boxisland_shortdescription: Parte en un viaje de codificación en una isla con el
     valiente Hiro.
@@ -1378,18 +1387,18 @@
   teacherled_shortdescription: |-
     Inspírate para diseñar tu propia Hora de Code con estos planes de lecciones.
     &#160;
-  course2_shortdescription_congrats: Para los estudiantes con habilidades de lectura
-    básicas, este curso se basa en el curso 1. Los estudiantes crearán programas para
-    resolver problemas y desarrollarán juegos interactivos o historias que podrán
-    compartir. Recomendado para los grados 2-5.
+  course2_shortdescription_congrats: Para estudiantes de nivel básico de lectura,
+    se construyo este curso 1. Los estudiantes crearán programas para resolver problemas
+    y desarrollarán juegos interactivos o historias que podrán compartir. Recomendado
+    para los grados 2-5.
   course3_shortdescription_congrats: "¿Listo para el siguiente nivel? Los estudiantes
-    se profundizarán los temas de programación introducidos en cursos anteriores para
-    encontrar soluciones flexibles a problemas más complejos. Al final de este curso,
-    los estudiantes crean historias interactivas y juegos que puedrán compartir con
-    cualquiera. Recomendado para los grados 4-5."
-  course4_shortdescription_congrats: "¿Listo para ir más allá? Los estudiantes profundizarán
-    los temas de programación introducidos en cursos anteriores para encontrar soluciones
-    flexibles a problemas más complejos. Al final de este curso, los estudiantes crearán
+    profundizarán en temas de programación de cursos anteriores para encontrar soluciones
+    flexibles a problemas más complejos. Al final de este curso, los estudiantes crearan
+    historias interactivas y juegos que podrán compartir con cualquiera. Recomendado
+    para los grados 4-5."
+  course4_shortdescription_congrats: "¿Listo para el siguiente nivel? Los estudiantes
+    profundizarán en temas de programación de cursos anteriores para encontrar soluciones
+    flexibles a problemas más complejos. Al final de este curso, los estudiantes crearan
     historias interactivas y juegos que podrán compartir con cualquiera. Recomendado
     para los grados 4-8."
   codeorg_longdescription: Aprende los conceptos básicos de la programación mediante
@@ -1924,42 +1933,41 @@
   infinity_shortcode: inf
   playlab_shortcode: jugar
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
+  header_home: Inicio
+  header_courses: cursos
+  header_project_gallery: Lista de Proyectos
+  header_sections: Secciones
+  header_professional_learning: Aprendizaje Profesional
+  header_educate_overview: Resumen del docente
+  header_educate_elementary: Escuela primaria
+  header_educate_middle: Secundaria
+  header_educate_high: Escuela Superior
+  header_educate_hoc: Hora del Código
+  header_educate_partner: Asociese con nosotros
+  header_educate_beyond: Más allá de Code.org
+  header_educate_inspire: Inspire a un estudiante
+  header_educate_community: Comunidad en línea
+  header_educate_tools: Herramientas y videos
+  header_about_us: Acerca de nosotros
+  header_about_leadership: Liderazgo
+  header_about_donors: Donantes
+  header_about_partners: Asociados
+  header_about_team: Equipo completo
+  header_about_news: Centro de noticias
+  header_about_evaluation: Evaluación
+  header_about_jobs: Empleos
+  header_about_contact: Contáctanos
+  header_about_faqs: Preguntas Frecuentes
+  header_learn: Aprenda
+  header_teach: Enseña
+  header_stats: Estadísticas
+  header_help_us: Ayudenos
+  header_about: Acerca de
+  header_teacher_community: Comunidad de profesores
+  header_help_support: 'Ayuda y soporte técnico '
+  header_report_bug: Reporte los errores
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

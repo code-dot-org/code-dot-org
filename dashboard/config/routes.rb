@@ -53,7 +53,7 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:show] do
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end
@@ -79,6 +79,7 @@ Dashboard::Application.routes.draw do
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
+    patch '/users/upgrade', to: 'registrations#upgrade'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -454,4 +455,5 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
+  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 end

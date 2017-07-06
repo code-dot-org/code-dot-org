@@ -215,7 +215,7 @@
   stats_student: '"Jeg visste at dette var en <b>sjanse jeg bare ville få en gang i livet</b>." - Mariana Alzate, femteklassing'
   stats_michael: '"Jeg har <b>aldri, noensinne</b> sett elevene mine så interessert i å lære." - Michael Clark, Lærer'
   studiobar_title: "Utforsk <a href='http://studio.code.org'>«Code Studio»</a>"
-  studiobar_title_nolink: "Utforsk Code Studio"
+  studiobar_title_nolink: "Utforsk «Code Studio»"
   studiobar_elementary_title: "Grunnleggende kurs"
   studiobar_elementary_body: "Våre tre nye kurs for K&#8209;5"
   studiobar_hoc_title: "Kodetimen"
@@ -301,6 +301,7 @@
   homepage_slot_text_title_hoc: "Kodetimen"
   homepage_slot_text_blurb_hoc: "Alle kan lære. Start i dag"
   homepage_slot_text_link_hoc: "Prøv Kodetimen"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Bli vertskap for Kodetimen"
   homepage_slot_text_link_hocserved: "# servert"
   homepage_solot_text_link_volunteer: "Meld deg som frivillig til Kodetimen"
@@ -612,11 +613,13 @@
   dashboard_responses_view: 'Vis tekstsvar i:'
   dashboard_responses_none: "De fleste av våre kurs er utformet for yngre aldersgrupper og krever ikke at elevene skriver tekstsvar på spørsmål, derfor vil du ikke se noen tekstsvar her. For eldre elever i ungdomsskolen og videregående skole, kan du se elevenes innleveringer på åpent tekstsvar-spørsmål ved å velge tilordnede kurs fra rullegardinmenyen ovenfor."
   dashboard_sections_new_section: "Ny seksjon"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Lag nye seksjoner og legg til elever. Seksjoner hjelper deg med å organisere elever i mindre grupper så du kan spore framgangen deres og vedlikeholde kontoene deres."
   dashboard_sections_table_section: "Seksjon"
   dashboard_sections_table_secret: "Logg inn Type"
   dashboard_sections_table_grade: "Karakter"
   dashboard_sections_table_course: "Kurs"
+  dashboard_sections_table_pairing_allowed: "Par Programmering"
   dashboard_sections_table_stage_extras: "Tilleggsmateriale"
   dashboard_sections_table_students: "Elever"
   dashboard_sections_table_code: "Delkode"
@@ -868,9 +871,9 @@
   cspunit4_name: '(gammel) Enhet 4: Data'
   cspunit5_name: '(gammel) Enhet 5: Utforsk og lag PT'
   cspunit6_name: 'Post-AP: Databaser i apper'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -903,7 +906,7 @@
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggende informatikk"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: "'16-'17 Prinsipper i informatikk"
   cspexams_category_name: "Prinsipper i informatikk teoriprøve"
@@ -1312,3 +1315,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Home"
+  header_courses: "kurs"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Educator Overview"
+  header_educate_elementary: "Elementary School"
+  header_educate_middle: "Middle School"
+  header_educate_high: "High School"
+  header_educate_hoc: "Kodetimen"
+  header_educate_partner: "Partner with Us"
+  header_educate_beyond: "Beyond Code.org"
+  header_educate_inspire: "Inspire a Student"
+  header_educate_community: "Online Community"
+  header_educate_tools: "Tools and Videos"
+  header_about_us: "About Us"
+  header_about_leadership: "Leadership"
+  header_about_donors: "Donors"
+  header_about_partners: "Partners"
+  header_about_team: "Full Team"
+  header_about_news: "Newsroom"
+  header_about_evaluation: "Evaluation"
+  header_about_jobs: "Jobs"
+  header_about_contact: "Contact Us"
+  header_about_faqs: "FAQs"
+  header_learn: "Learn"
+  header_teach: "Teach"
+  header_stats: "Statistikk"
+  header_help_us: "Help Us"
+  header_about: "About"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

@@ -16,6 +16,7 @@ const TeacherHomepage = React.createClass({
     courses: shapes.courses,
     announcements: React.PropTypes.array.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -25,13 +26,14 @@ const TeacherHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, announcements, codeOrgUrlPrefix } = this.props;
+    const { courses, sections, announcements, codeOrgUrlPrefix, isRtl } = this.props;
 
     return (
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
           extended={false}
+          short={true}
         />
         <ProtectedStatefulDiv
           ref="flashes"
@@ -41,18 +43,24 @@ const TeacherHomepage = React.createClass({
         />
         <Announcements
           announcements={announcements}
+          isRtl={isRtl}
         />
         <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
+          isRtl={isRtl}
         />
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
           heading={i18n.recentCourses()}
           isTeacher={true}
+          isRtl={isRtl}
         />
-        <TeacherResources codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+        <TeacherResources
+          codeOrgUrlPrefix={codeOrgUrlPrefix}
+          isRtl={isRtl}
+        />
       </div>
     );
   }

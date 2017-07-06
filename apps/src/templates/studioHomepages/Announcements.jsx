@@ -14,11 +14,12 @@ const Announcements = React.createClass({
         link: React.PropTypes.string.isRequired,
         buttonText: React.PropTypes.string.isRequired,
       })
-    )
+    ),
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { announcements } = this.props;
+    const { announcements, isRtl } = this.props;
 
     return (
       <div>
@@ -27,6 +28,7 @@ const Announcements = React.createClass({
           linkText={i18n.viewAllAnnouncements()}
           link="http://teacherblog.code.org/"
           showLink={true}
+          isRtl={isRtl}
         >
           <AnnouncementsCarousel>
             {announcements.map((announcement, index) =>
@@ -37,6 +39,7 @@ const Announcements = React.createClass({
                 buttonText={announcement.buttonText}
                 link={announcement.link}
                 image={announcement.image}
+                isRtl={isRtl}
               />
              )}
           </AnnouncementsCarousel>

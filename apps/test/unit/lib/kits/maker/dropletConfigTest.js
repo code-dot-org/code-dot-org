@@ -77,7 +77,7 @@ describe('maker/dropletConfig.js', () => {
       ]);
     });
 
-    // TODO (captouch): Re-enable
+    // TODO (bbuchanan): Enable when captouch is on by default
     describe.skip('touchPads', () => {
       [0, 1, 2, 3, 6, 9, 10, 12].forEach(pin => {
         it(`touchPad${pin} dropdown`, () => {

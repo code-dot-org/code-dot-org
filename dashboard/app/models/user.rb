@@ -5,6 +5,7 @@
 #  id                       :integer          not null, primary key
 #  studio_person_id         :integer
 #  email                    :string(255)      default(""), not null
+#  parent_email             :string(255)
 #  encrypted_password       :string(255)      default("")
 #  reset_password_token     :string(255)
 #  reset_password_sent_at   :datetime
@@ -58,6 +59,7 @@
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
 #  index_users_on_invitations_count                    (invitations_count)
 #  index_users_on_invited_by_id                        (invited_by_id)
+#  index_users_on_parent_email                         (parent_email)
 #  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
 #  index_users_on_purged_at                            (purged_at)
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
@@ -135,6 +137,8 @@ class User < ActiveRecord::Base
     windowslive
   ).freeze
 
+  SYSTEM_DELETED_USERNAME = 'system_deleted'
+
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
     TYPE_STUDENT = 'student'.freeze,
@@ -174,6 +178,8 @@ class User < ActiveRecord::Base
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  after_create :associate_with_potential_pd_enrollments
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -340,7 +346,7 @@ class User < ActiveRecord::Base
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
 
-  validates :name, presence: true
+  validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
@@ -458,7 +464,7 @@ class User < ActiveRecord::Base
     User.find(user_id)
   end
 
-  validate :presence_of_email, if: :teacher?
+  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
@@ -593,6 +599,13 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  # True if the account is teacher-managed and has any sections that use word logins.
+  # Will not be true if the user has a password or is only in picture sections
+  def secret_word_account?
+    return false unless teacher_managed_account?
+    sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
@@ -1254,6 +1267,13 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  # Users who might otherwise have orphaned accounts should have the option
+  # to create personal logins (using e-mail/password or oauth) so they can
+  # continue to use our site without losing progress.
+  def can_create_personal_login?
+    teacher_managed_account? # once parent e-mail is added, we should check for it here
+  end
+
   def teacher_managed_account?
     return false unless student?
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
@@ -1308,5 +1328,35 @@ class User < ActiveRecord::Base
 
   def school_info_suggestion?
     !(school.blank? && full_address.blank?)
+  end
+
+  # Removes PII and other information from the user and marks the user as having been purged.
+  # WARNING: This (permanently) destroys data and cannot be undone.
+  # WARNING: This does not purge the user, only marks them as such.
+  def clear_user_and_mark_purged
+    self.name = nil
+    # The latter part yields a random string of length five from the characters 0 to 9 and a to z.
+    self.username = "#{SYSTEM_DELETED_USERNAME}_#{rand(36**5).to_s(36)}"
+    self.current_sign_in_ip = nil
+    self.last_sign_in_ip = nil
+    self.email = ''
+    self.hashed_email = ''
+    self.encrypted_password = nil
+    self.uid = nil
+    self.reset_password_token = nil
+    self.full_address = nil
+    self.properties = {}
+
+    self.purged_at = Time.zone.now
+
+    save!
+  end
+
+  def associate_with_potential_pd_enrollments
+    if teacher?
+      Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
+        enrollment.update(user: self)
+      end
+    end
   end
 end

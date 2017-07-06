@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.20":
-  version "1.6.20"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.20.tgz#834e1478ff81e1b4eb1d739c05093be5e58d4a33"
+"@code-dot-org/blockly@1.6.21":
+  version "1.6.21"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.21.tgz#58406507363df10b70e3fd0ff832e11abb3b1a4a"
 
 "@code-dot-org/bramble@0.1.17":
   version "0.1.17"
@@ -75,9 +75,9 @@
     test262-harness "^2.4.0"
     yargs "^7.0.1"
 
-"@code-dot-org/js-interpreter@1.3.3":
-  version "1.3.3"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.3.tgz#ded5129f25ff82447dcb7866377a8d9ee0fe764e"
+"@code-dot-org/js-interpreter@^1.3.5":
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/js-interpreter/-/js-interpreter-1.3.5.tgz#fef6dbd3f472aac9cb175a147385dd6fd6a27ebb"
   dependencies:
     yargs "^7.0.1"
 
@@ -6199,6 +6199,10 @@ node-gyp@^3.3.1:
     semver "2.x || 3.x || 4 || 5"
     tar "^2.0.0"
     which "1"
+
+node-js-marker-clusterer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/node-js-marker-clusterer/-/node-js-marker-clusterer-1.0.0.tgz#d09a1e963ebc5f6c162ece8510e9e680bba097a9"
 
 "node-libs-browser@>= 0.4.0 <=0.6.0":
   version "0.6.0"

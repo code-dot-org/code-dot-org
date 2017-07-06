@@ -1,0 +1,32 @@
+"tr":
+  data:
+    course:
+      name:
+        csp:
+          title: Bilgisayar Bilimleri Prensipleri
+          description_student: Sonbaharda 2016, Üniversite Yönetim Kurulu en yeni  bilgisayar
+            bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel
+            kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl
+            etkisi olabilirler keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri
+            dersi bilgisayar bilimi alanında liderler oluşturma  oluşturmak amacı
+            ile tasarlanmıştır.
+          description_teacher: Sonbaharda 2016, Üniversite Yönetim Kurulu en yeni  bilgisayar
+            bilimi ilkeleri dersini başlattı. Ders öğrencilere bilgisayar bilimi temel
+            kavramlarını tanıtır ve onların bilgisayar ve teknolojinin dünyaya nasıl
+            etkisi olabilirler keşfetmelerini sağlar. AP bilgisayar bilim ilkeleri
+            dersi bilgisayar bilimi alanında liderler oluşturma  oluşturmak amacı
+            ile tasarlanmıştır.
+          description_short: Temel bilgisayar bilim kavramlarını öğrenin.
+        csd:
+          title: Bilgisayar Bilimi Keşifleri
+          description_student: Bilgisayar bilim keşifler (CS keşifler) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturma ve
+            yaratıcılık, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar
+            bilimi ile meşgul olmasını sağlar.
+          description_teacher: Bilgisayar bilim keşifler (CS keşifler) giriş seviyesi
+            bilgisayar bilimi dersi olup öğrencilerin otantik eserler oluşturma ve
+            yaratıcılık, iletişim, problem çözme ve eğlence için bir araç olarak bilgisayar
+            bilimi ile meşgul olmasını sağlar.
+          description_short: Bilgisayar bilimlerine giriş niteliğindeki bir kurs,
+            öğrencilere özgün eserler oluşturabilme yetkinliğini sağlamakta yardımcı
+            olur.

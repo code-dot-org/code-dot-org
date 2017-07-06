@@ -24,7 +24,7 @@ export const updateSection = (sectionId, serverSection) => ({
   sectionId,
   serverSection
 });
-export const newSection = () => ({ type: NEW_SECTION });
+export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 const initialState = {
@@ -34,6 +34,9 @@ const initialState = {
   validGrades: [],
   sectionIds: [],
   validAssignments: {},
+  // Ids of assignments that go in our first dropdown (i.e. courses, and scripts
+  // that are not in a course)
+  primaryAssignmentIds: [],
   // Mapping from sectionId to section object
   sections: {}
 };
@@ -63,17 +66,28 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_VALID_ASSIGNMENTS) {
     const validAssignments = {};
 
+    // Primary assignment ids are (a) courses and (b) scripts that are not in any
+    // of our courses.
+    let primaryAssignmentIds = [];
+    let secondaryAssignmentIds = [];
+
     // NOTE: We depend elsewhere on the order of our keys in validAssignments
     action.validCourses.forEach(course => {
       const assignId = assignmentId(course.id, null);
+      const scriptAssignIds = (course.script_ids || []).map(scriptId =>
+        assignmentId(null, scriptId));
       validAssignments[assignId] = {
-        ...course,
+        ..._.omit(course, 'script_ids'),
         courseId: course.id,
         scriptId: null,
+        scriptAssignIds,
         assignId,
         path: `${state.studioUrl}/courses/${course.script_name}`
       };
+      primaryAssignmentIds.push(assignId);
+      secondaryAssignmentIds.push(...scriptAssignIds);
     });
+    secondaryAssignmentIds = _.uniq(secondaryAssignmentIds);
 
     action.validScripts.forEach(script => {
       const assignId = assignmentId(null, script.id);
@@ -84,27 +98,34 @@ export default function teacherSections(state=initialState, action) {
         assignId,
         path: `${state.studioUrl}/s/${script.script_name}`
       };
+
+      if (!secondaryAssignmentIds.includes(assignId)) {
+        primaryAssignmentIds.push(assignId);
+      }
     });
 
     return {
       ...state,
-      validAssignments
+      validAssignments,
+      primaryAssignmentIds,
     };
   }
 
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
-      sectionFromServerSection(section, state.validAssignments));
+      sectionFromServerSection(section));
     return {
       ...state,
-      sectionIds: sections.map(section => section.id),
-      sections: _.keyBy(sections, 'id')
+      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sections: {
+        ...state.sections,
+        ..._.keyBy(sections, 'id')
+      }
     };
   }
 
   if (action.type === UPDATE_SECTION) {
-    const section = sectionFromServerSection(action.serverSection,
-      state.validAssignments);
+    const section = sectionFromServerSection(action.serverSection);
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;
 
@@ -134,6 +155,13 @@ export default function teacherSections(state=initialState, action) {
     // create an id that we can use in our local store that will be replaced
     // once persisted
     const sectionId = state.nextTempId;
+    let courseId = action.courseId || null;
+    if (courseId) {
+      if (!state.validAssignments[courseId]) {
+        courseId = null;
+      }
+    }
+
     return {
       ...state,
       // use negative numbers for our temp ids so that we dont need to worry about
@@ -151,7 +179,7 @@ export default function teacherSections(state=initialState, action) {
           pairingAllowed: true,
           studentNames: [],
           code: '',
-          courseId: null,
+          courseId: action.courseId || null,
           scriptId: null
         }
       }
@@ -182,7 +210,7 @@ export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
  */
-export const sectionFromServerSection = (serverSection, validAssignments) => ({
+export const sectionFromServerSection = serverSection => ({
   id: serverSection.id,
   name: serverSection.name,
   loginType: serverSection.login_type,

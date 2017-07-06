@@ -1048,6 +1048,8 @@ en:
         commands print true"
       CSD U3 Keypress Watchers_instruction: "Modify the code so that all of the console.log
         commands print true"
+      CSD U3 L5 Freeplay_instruction: "Change the value of petalSize multiple times.
+        How does it change your drawing?"
       CSD U3 Mouse Input Bee 2_instruction: "Do this"
       CSD U3 Random Animation_instruction: "Use randomNumber() to animate Gary's
         mouth."
@@ -3929,6 +3931,10 @@ en:
         Each side should be 100 pixels long."
       StepIntro_instruction: "Here's how to use the \"Step\" button."
       Test Play Lab_instruction: "This is a test play lab level."
+      Test Stamp- and Pattern-Agnostic Answer_instruction: "Answer validation should
+        be pattern- and stamp-agnostic, meaning that changing the patterns or the
+        stamp being drawn should still let you pass just so long as you're drawing
+        _some_ pattern and _some_ stamp. (much like color)"
       Test of comment block_instruction: "Drag out the subgoal label block you want."
       Testing Quantum Farmer_instruction: "Wow, look at that! \r\n\r\nI don't know
         how many shovelfuls of dirt this hole needs.  \r\nCan you write a program
@@ -5486,7 +5492,7 @@ en:
         can!"
       courseA_collector_loops2_instruction: "Get all three piles to pass this level."
       courseA_collector_loops3_instruction: "How can Laurel get all five piles of
-        treasure using only one `[E-->]` block?"
+        treasure using only one `E ▶` block?"
       courseA_collector_loops4_instruction: "Fix Laurel's path to get all of this
         treasure."
       courseA_collector_loops5_instruction: "Use what you learned to get all of the
@@ -5707,11 +5713,10 @@ en:
         the game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
         done, click \"Finish\" to share with friends. See story ideas in the hints."
-      courseC_PlayLab_events_challenge1_instruction: "Here is a new block that is
-        somewhat complicated. Use it to move Waddles back to the start when he runs
-        into the Dinosaur and when he scores a point. This will make your game more
-        challenging and fun!\r\n\r\nPlay the game and move Waddles with the arrows
-        until you score enough points."
+      courseC_PlayLab_events_challenge1_instruction: "Use a new block to make Waddles
+        automatically move back to the start when he runs into the Dinosaur and when
+        he scores a point. \r\nPlay the game and move Waddles with the arrows until
+        you score enough points."
       courseC_PlayLab_events_challenge1_xy_blocks_instruction: "Here is a new block
         that is somewhat complicated. Use it to move Waddles back to the start when
         he runs into the Dinosaur and when he scores a point. This will make your
@@ -6285,6 +6290,11 @@ en:
       courseE_artist_concept1_instruction: "Recreate this image. "
       courseE_artist_concept4_instruction: "Recreate this drawing using 13 blocks
         or fewer."
+      courseE_artist_concept_challenge1_instruction: "Feel free to use trial and
+        error. You are not expected to get the image perfect the first time.   Want
+        to see more hints?  Click here!"
+      courseE_artist_concept_challenge2_instruction: "Create five pinwheel designs
+        like using the code below."
       courseE_artist_functions1_instruction: "Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r\nThe bridge between the glasses is 75
         pixels long."
@@ -6459,6 +6469,10 @@ en:
       courseE_maze_ramp_predict1_instruction: "This code includes a new block. What
         do you think would happen if you press the \"Run\" block?"
       courseE_multi_maze_ramp5_instruction: "Avoid the TNT."
+      courseE_playLab_challenge1_instruction: "Something should happen when you get
+        enough points or when you run out of points. Add some code to the `win game`
+        and `lose game` functions to make the game work the way it should. \r\nClick
+        the hints for ideas!"
       courseE_playLab_exampleProject2_instruction: "Here's all of your code to choose
         a card - try adding some other fun features!"
       courseE_playLab_scaffold1_instruction: "Choose a background and map, and pick
@@ -6474,6 +6488,10 @@ en:
         play until you meet one of those conditions."
       courseE_playLab_scaffold6_instruction: "You've finished! Now you can play
         your game or share it with your friends and classmates!"
+      courseE_playlab_challenge2_instruction: "Can you figure out how this \"Fortune
+        Teller\" app works? Click `MORE` to see your challenges."
+      courseE_playlab_variables_challenge2_instruction: "Can you figure out how this
+        \"Fortune Teller\" app works? Click `MORE` to see your challenges."
       courseE_video_createFunctions_instruction: "We don't have a video for creating
         functions, yet. This is a placeholder."
       courseF_artist_for1_instruction: "Experiment with the `for` loop and play with
@@ -6588,6 +6606,9 @@ en:
       courseF_artist_variables_challenge2_instruction: "You've now learned everything
         you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
         you stick with it until you figure out the solution?"
+      courseF_artistembed_variables9_instruction: "See what happens when you repeat
+        the code from the last puzzle 30 times instead of only 3!  Feel free to make
+        your lines any color or pattern for some extra zest."
       courseF_bee_conditionals10_instruction: "Collect all of the nectar and make
         all of the honey."
       courseF_bee_conditionals1_predict1_instruction: "Check to see if there's a
@@ -6761,6 +6782,8 @@ en:
         will you get Dog to move in all directions using the arrow keys?  How will
         you add points when Dog tags Cat or Penguin?  How will you subtract points
         when Cat and Penguin touch?"
+      courseF_playlab_variables_challenge3_instruction: "Can you figure out how this
+        \"Fortune Teller\" app works? Click `MORE` to see your challenges."
       courseF_video_createFunctions_instruction: "We don't have a video for creating
         functions, yet. This is a placeholder."
       course_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully

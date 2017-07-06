@@ -21,6 +21,7 @@ require_relative 'helper_modules/dashboard'
 require 'dynamic_config/dcdo'
 require 'active_support/core_ext/hash'
 require 'sass'
+require 'sass/plugin'
 
 if rack_env?(:production)
   require 'newrelic_rpm'
@@ -96,6 +97,9 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb', '.fetch', '.haml', '.html', '.md', '.txt']
     set :non_static_extnames, settings.not_found_extnames + settings.redirect_extnames + settings.template_extnames + settings.exclude_extnames
     set :markdown, {autolink: true, tables: true, space_after_headers: true, fenced_code_blocks: true}
+    Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
+    Sass::Plugin.options[:css_location] = pegasus_dir('cache', 'css')
+    Sass::Plugin.options[:template_location] = shared_dir('css')
   end
 
   before do
@@ -172,26 +176,7 @@ class Documents < Sinatra::Base
 
   get '/style.css' do
     content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
-    last_modified(css_last_modified) if css_last_modified > Time.at(0)
-    cache :static
-    Sass::Engine.new(css,
-      syntax: :scss,
-      style: :compressed
-    ).render
-  end
-
-  get '/style-min.css' do
-    content_type :css
-    css_last_modified = Time.at(0)
-    css = Dir.glob(pegasus_dir('sites.v3', request.site, '/styles_min/*.css')).sort.map do |i|
-      css_last_modified = [css_last_modified, File.mtime(i)].max
-      IO.read(i)
-    end.join("\n\n")
+    css, css_last_modified = combine_css 'styles', 'styles_min'
     last_modified(css_last_modified) if css_last_modified > Time.at(0)
     cache :static
     css

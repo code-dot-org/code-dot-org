@@ -45,6 +45,7 @@ const defaultProps = {
       path: '//localhost-studio.code.org:3000/courses/csd',
     }
   },
+  primaryAssignmentIds: [],
   sections,
   updateSection: () => {},
   removeSection: () => {},
