@@ -1,6 +1,5 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
-- no_email = current_user.student?
-- no_email &= (current_user.parent_managed_account? || current_user.under_13? || params[:noEmail] == 'true')
+- no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
 %h2= @page_title
 
