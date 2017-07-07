@@ -135,7 +135,7 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
-    SUBJECT_CSP_SUMMER_WORKSHOP => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
     SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
