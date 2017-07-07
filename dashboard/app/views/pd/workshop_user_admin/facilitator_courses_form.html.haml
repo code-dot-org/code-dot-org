@@ -23,7 +23,7 @@
           %td= link_to @facilitator.id, action: :facilitator_courses_form, search_term: @facilitator.id
           %td= @facilitator.email
           %td= @facilitator.name
-    -if @permissions
+    -if @courses
       = form_tag(action: 'assign_course') do
         %table.table.table-hover.table-condensed.table-auto-width{:id => 'course-table'}
           %thead
@@ -32,8 +32,8 @@
           %tbody
             - @courses.each do |course|
               %tr
-                %td= link_to 'Remove', action: :remove_course, user_id: @facilitator.id, :course => course
-                %td= course
+                %td= link_to 'Remove', action: :remove_course, course_facilitator_id: course.id, facilitator_id: @facilitator.id
+                %td= course.course
             %tr
               %td
                 .actions
