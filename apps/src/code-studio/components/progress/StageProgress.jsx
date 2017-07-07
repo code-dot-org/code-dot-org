@@ -34,11 +34,13 @@ const StageProgress = React.createClass({
   propTypes: {
     stageId: React.PropTypes.number,
     levels: stageProgressShape,
-    courseOverviewPage: React.PropTypes.bool
+    courseOverviewPage: React.PropTypes.bool,
+    stageExtrasEnabled: React.PropTypes.bool,
   },
 
   shouldShowStageExtras() {
     return !this.props.courseOverviewPage &&
+      this.props.stageExtrasEnabled &&
       experiments.isEnabled('stageExtrasFlag');
   },
 
