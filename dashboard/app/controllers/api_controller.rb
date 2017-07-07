@@ -1,6 +1,38 @@
+require 'google/apis/classroom_v1'
+
 class ApiController < ApplicationController
   layout false
   include LevelsHelper
+
+  GOOGLE_AUTH_SCOPES = [
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
+    Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
+  ].freeze
+
+  def google_classrooms
+    client = Signet::OAuth2::Client.new(
+      authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
+      token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
+      client_id: CDO.dashboard_google_key,
+      client_secret: CDO.dashboard_google_secret,
+      refresh_token: current_user.oauth_refresh_token,
+      access_token: current_user.oauth_token,
+      expires_at: current_user.oauth_token_expiration,
+      scope: GOOGLE_AUTH_SCOPES,
+    )
+    service = Google::Apis::ClassroomV1::ClassroomService.new
+    service.authorization = client
+
+    response = service.list_courses(page_size: 100)
+    render json: response.to_h
+
+    if client.access_token != current_user.oauth_token
+      current_user.update!(
+        oauth_token: client.access_token,
+        oauth_token_expiration: client.expires_in + Time.now.to_i,
+      )
+    end
+  end
 
   def user_menu
     @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
