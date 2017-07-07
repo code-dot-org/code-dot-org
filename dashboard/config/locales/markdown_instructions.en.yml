@@ -477,6 +477,26 @@ en:
         what you should do - you can come back to watch this as many times as you
         need to get it right.\r\n<img src=\"https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif\"
         style=\"border: solid 1px black; width: 500px; margin: auto\">"
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img
+        align=\"right\" src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"
+        hspace=\"20\">\r\n            # Task 1: Make a 3x5 letter 'A'\r\n            Start
+        by trying to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation
+        widget. \r\n          \r\n            The image is intially setup with the
+        *incorrect* dimensions. Your first task is to set the second byte to the 8-bit
+        binary code for 5: 0000 0101. Then you can start entering pixel data to make
+        the A.\r\n            "
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': "#
+        Pixelation: Task 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\"
+        align=right width=200 hspace=20>\r\n**Directions:**\r\nWe start you out with
+        the 4x4 image Maddie created in the video.\r\n\r\nYour task is to fill a 4x4
+        grid with colors using *12-bits per pixel*. The result should look something
+        like (but not exactly) the image shown at right.  \r\n\r\nHere are the requirements:\r\n\r\n
+        * Row 1 - fill with shades of red. \r\n * Row 2 - shades of green. \r\n *
+        Row 3 - shades of blue. \r\n * Row 4 - shades of gray.\r\n"
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#
+        Color Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image
+        Maddie was creating, but we've left out the last two squares. \n* Finish
+        off the image by figuring out which two colors are missing and encode them.\n"
       App Lab test_markdown_instruction: "<a href=\"https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38\"
         target=\"_blank\">Innovation Project</a>"
       AppLab_test02_markdown_instruction: "#This is the title \r\n\r\n- bullet 1
@@ -15698,13 +15718,13 @@ en:
         the Pixelation Widget to encode the bits of color information.\n* The image
         must be encoded with at least 12 bits per pixel.\n\n"
       Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction: "# Pixelation:
-        Task 3\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right
-        width=200 hspace=20>\n**Directions:**\nWe start you out with the 4x4 image
-        Maddie created in the video.\n\nYour task is to fill a 4x4 grid with colors
+        Task 3\r\n<img src = \"https://code.org/images/cspunit1/ColorTask3.png\" align=right
+        width=200 hspace=20>\r\n**Directions:**\r\nWe start you out with the 4x4 image
+        Maddie created in the video.\r\n\r\nYour task is to fill a 4x4 grid with colors
         using *12-bits per pixel*. The result should look something like (but not
-        exactly) the image shown at right.  \n\nHere are the requirements:\n\n * Row
-        1 - fill with shades of red. \n * Row 2 - shades of green. \n * Row 3 - shades
-        of blue. \n * Row 4 - shades of gray.\n"
+        exactly) the image shown at right.  \r\n\r\nHere are the requirements:\r\n\r\n
+        * Row 1 - fill with shades of red. \r\n * Row 2 - shades of green. \r\n *
+        Row 3 - shades of blue. \r\n * Row 4 - shades of gray.\r\n"
       Pixelation - Lesson 15 - Color Shades_markdown_instruction: "# Color Pixelation:
         Task 2\n**Directions:**\n<img src='https://images.code.org/548d1daa698a17b1005b1747f152587f-image-1439476855059.png'
         style=\"width: 150px;\" align=right>We start you out with the row of shades
@@ -16627,7 +16647,8 @@ en:
         learned in this unit that will impact your future work in this class.\n\n\n"
       U1L2 Free response assessment question_markdown_instruction: "Provide an example
         of a question that could NOT be answered with a binary message. Explain why
-        this is the case making reference to the definition of a binary message. \n\n\n"
+        this is the case, making reference to the definition of a binary message.
+        \r\n\r\n\r\n"
       U1L2 Free response reflection question_markdown_instruction: " Modify your
         question so that it could be answered with a binary message. Explain why it
         can now be answered with a binary message.\n\n\n"
@@ -26832,17 +26853,15 @@ en:
         disappear when you click on them! Try playing with the dog now, then help
         the other animals join in the fun.\r\nYou can also add sounds and score points
         to create a game of Animal Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
-      courseB_starWars_prog1_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
-        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 picks
-        up glowing scrap metal as it rolls. Help BB-8 get it all!  \r\nWatch out for
-        walls and crates!  \r\n"
-      courseB_starWars_prog2_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
-        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> Now, help
-        BB-8 gather **all** of the glowing scrap metal!  \r\nWatch out for walls and
-        crates!  \r\n\r\n"
-      courseB_starWars_prog3_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
-        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/>Help BB-8
-        gather all of the glowing scrap metal!  \r\nWatch out for walls and crates!  \r\n\r\n"
+      courseB_starWars_prog1_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
+        \r\nBB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!\r\n\r\nWatch
+        out for walls and crates! \r\n\r\n"
+      courseB_starWars_prog2_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)  Now,
+        help BB-8 gather **all** of the glowing scrap metal! \r\n\r\nWatch out for
+        walls and crates!  \r\n\r\n"
+      courseB_starWars_prog3_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
+        Help BB-8 gather all of the glowing scrap metal!  \r\nWatch out for walls
+        and crates!  \r\n\r\n"
       courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor
         1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen
         you're done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
@@ -26864,34 +26883,34 @@ en:
         Each hole should be 25 pixels long\r\n- Each hole has 25 pixels of space before
         the next hole"
       courseC_artist_loops2a_markdown_instruction: "Now, use a loop to spin your
-        bird around 12 times with a 30 degree turn.\r\n<hr/>\r\n\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
+        bird around 12 times with a 30 degree turn.\r\n___\r\n\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
       courseC_artist_loops3a_markdown_instruction: "So much fun!  \r\n\r\nNow, add
-        a bat sticker right after the bird to make an image like the one below.\r\n<hr/>\r\n\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
+        a bat sticker right after the bird to make an image like the one below.\r\n___\r\n\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a_markdown_instruction: "Edit your code so that you jump
-        forward by 75 pixels between stamping the bird and the bat.\r\n<hr/>\r\n\r\n![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)"
+        forward by 75 pixels between stamping the bird and the bat.\r\n___\r\n\r\n![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)"
       courseC_artist_loops5_markdown_instruction: "Great!  Now it's time to make
         a fence inside to keep the animals out.   \r\nMake any kind of fence that
         you want!\r\n\r\n"
       courseC_artist_loops5a_markdown_instruction: "What happens when you replace
-        one or both of the stickers with a different creature?\r\n<hr/>\r\n![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)"
+        one or both of the stickers with a different creature?\r\n___\r\n![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)"
       courseC_artist_loops5b_markdown_instruction: "What happens when you `move forward`
         then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \r\n-
         Try using the `set pattern` block before you start your loop to make a work
-        of art!\r\n<hr/>\r\n![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
+        of art!\r\n___\r\n![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)"
       courseC_artist_loops6_markdown_instruction: "What should the zombie put inside
         of the garden?  \r\n\r\nDraw anything you'd like inside of the fence.  Would
         you like some flowers or a few bugs? \r\n*(See hints for more suggestions.)*\r\n\r\n\r\n"
       courseC_artist_loops6a_markdown_instruction: "Add a third sticker anywhere
         in the loop that you want! What does it look like now?\r\n- Change the pattern
-        on your brush for more variety!\r\n\r\n<hr/>\r\n\r\n![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)"
+        on your brush for more variety!\r\n\r\n___\r\n\r\n![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)"
       courseC_artist_loops7a_markdown_instruction: "Try changing the `repeat` loop
         to run a different number of times.  How far do you have to turn to go around
         in a full circle?\r\n- Try changing how many times you spin\r\n  - Try a 60
-        degree turn for 6 times around\r\n  - Try a 20 degree turn for 18 times around\r\n<hr/>\r\nThis
+        degree turn for 6 times around\r\n  - Try a 20 degree turn for 18 times around\r\n___\r\nThis
         image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20
         degree turn.\r\n\r\n![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)"
       courseC_artist_loops8a_markdown_instruction: "Now make something on your own.  What
-        happens when you make two separate circles of different stickers?\r\n<hr/>\r\nNeed
+        happens when you make two separate circles of different stickers?\r\n___\r\nNeed
         an idea? Try making a design like this one.\r\n\r\n![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)"
       courseC_artist_loopsPre1a_markdown_instruction: "Now, put the code that you
         already have inside of a `repeat` loop, and spin it around 6 times.\r\n- You
@@ -27052,10 +27071,9 @@ en:
         the last few puzzles to complete this level."
       courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Challenge:**
         Combine ideas from the last few puzzles to complete this level."
-      courseC_starWars_loops1_markdown_instruction: "<img src=\"https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif\"
-        style=\"border-radius:6px; float:left; margin: 0 10px 10px 0;\"/> BB-8 picks
-        up glowing scrap metal as it rolls. Help BB-8 get it all!  \r\nWatch out for
-        walls and crates!  \r\n"
+      courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
+        BB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!  \r\nWatch
+        out for walls and crates!  \r\n"
       courseC_starWars_loops8_markdown_instruction: "**Challenge:** Combine ideas
         from the last few puzzles to complete this level."
       courseD_artist_binary1_markdown_instruction: "We've provided you with a grid
@@ -27067,6 +27085,15 @@ en:
         left to right, top to bottom.  \r\n___\r\nThe artist will fill-in the squares
         when it sees a 1 and ignore the square when it sees a 0. \r\n___\r\n**Run
         this code to see how the artist uses binary to draw this pattern.**"
+      courseD_artist_binary_challenge1_markdown_instruction: "You can only use each
+        binary value (0 or 1) once each in the puzzle. Try using nested loops to complete
+        this drawing."
+      courseD_artist_binary_challenge2_markdown_instruction: "There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\r\n\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
+      courseD_artist_binary_challenge3_markdown_instruction: "There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\r\n\r\n![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)"
       courseD_artist_functions10_markdown_instruction: "This time, use lines of 8
         hexagons with 25 pixel sides.\r\n\r\n- To make each hexagon, repeat the 6
         times, turning 60 degrees.\r\n- To draw a diamond, you will need to alternate
@@ -27138,10 +27165,8 @@ en:
         are made with **120 degree** turns."
       courseD_artist_nestedLoops_challenge2_markdown_instruction: "Can you figure
         out how to make a picture like this?\r\n\r\n- The first inner loop should
-        make an octagon. ( [Show me where](#triggercallout=oct) )\r\n- The second
-        inner loop should make a hexagon. ( [Show me where](#triggercallout=hex) )\r\n-
-        The third inner loop should make a square. ( [Show me where](#triggercallout=sqr)
-        )"
+        make an octagon.\r\n- The second inner loop should make a hexagon.\r\n- The
+        third inner loop should make a square."
       courseD_artist_project1_markdown_instruction: "Draw a small shape, between
         **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
         can try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r\n\r\n  \r\n  \r\nOr
@@ -27341,14 +27366,21 @@ en:
       courseD_debugging_6_markdown_instruction: "**Challenge:**  Fix the errors to
         collect all of the nectar and make all of the honey."
       courseD_farmer_condLoops1_markdown_instruction: "*\"Corn you help me harvest
-        today?\"*\r\n\r\nUse conditionals to make sure that you pick all of the corn,
-        but don't disturb the areas where nothing is growing yet."
+        today?\"*\r\n\r\nHelp the farmer check her row of corn to see if anything
+        is ready to pick.  Use conditionals to look at each sprout.  Every stalk will
+        have either **0 or 1** pieces of corn ready to harvest."
       courseD_farmer_condLoops2_markdown_instruction: "*\"Lettuce collect both crops
-        from this row!\"*\r\n\r\nHelp the farmer collect both corn and lettuce from
-        the field."
+        from this row!\"*\r\n\r\nThis garden is all mixed up, it has both **corn and
+        lettuce**!  \r\n\r\nHelp the farmer harvest the items that are ready for picking.  Each
+        plant will have either one corn or one lettuce."
+      courseD_farmer_condLoops3_markdown_instruction: "*\"Corn, lettuce, AND pumpkins!
+        Help me harvest them all.\"*\r\n\r\nEach plant will have either one piece
+        of corn, one head of lettuce, or one pumpkin."
       courseD_farmer_condLoops4_markdown_instruction: "*\"Gosh! Now the crops are
-        growing in clusters!\"*  \r\n\r\nHelp the farmer pick all of the lettuce in
-        each cluster before moving on to the next bunch."
+        growing in clusters!\"*  \r\n\r\nThe farmer wants to pick everything from
+        her lettuce garden. Each plant will now have more than one head of lettuce
+        on it, so the farmer will need to keep picking while there is still lettuce
+        growing."
       courseD_farmer_condLoops4a_markdown_instruction: "*\"Gosh! Now the crops are
         growing in clusters!\"*  \r\n\r\nHelp the farmer pick all of the lettuce in
         each cluster before moving on to the next bunch. Keep it up until you get
@@ -27616,6 +27648,10 @@ en:
       courseE_bee_functions8_markdown_instruction: "**Challenge:** These flowers
         can have a different amount of nectar each time you run the puzzle.   \r\n\r\nCreate
         a function that collects all of the nectar from each flower."
+      courseE_bee_functions_challenge1_markdown_instruction: "You are on your own
+        for this challenge.  This could \"bee\" harder than it looks!"
+      courseE_bee_functions_challenge2_markdown_instruction: "You are on your own
+        for this challenge!"
       courseE_bee_ramp14_markdown_instruction: "The same technique works with nectar
         and honey!  \r\n\r\nLook at all of these clouds. Some of them will turn into
         honey, and others into nectar.  Use the `if at flower / else` block to get

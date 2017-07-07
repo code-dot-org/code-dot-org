@@ -96,6 +96,12 @@
   congratulations_on_completing_course2: "සුභ පැතුම්! දෙවන පාඨමාලාව සම්පූර්ණයි."
   congratulations_on_completing_course3: "සුභ පැතුම්! තෙවන පාඨමාලාව සම්පූර්ණයි"
   congratulations_on_completing_course4: "සුභ පැතුම්! සිව්වන පාඨමාලාව සම්පූර්ණයි"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "අධිවේගී පාඨමාලාව සම්පූර්ණ කළ ඔබට සුභ
     පැතුම්"
   congrats_next_tutorials_title: "මීළඟ අදියරට යන්න"
@@ -265,6 +271,12 @@
   just_did_course2: "මම දැන් දෙවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course3: "මම දැන් තෙවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course4: "මම දැන් සිවුවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "මම දැන් සීඝ්‍රගාමී පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න!
     @codeorg"
   twitter_teach_cs: |-
@@ -325,6 +337,10 @@
     Sheryl, Facebook COO
   homepage_hero_text_satya: "&ldquo;පරිගණක විද්‍යාවට \nලොව හොඳම අවස්ථා සඳහා දොරගුළු
     විවර කළ හැකියි:&rdquo;\nMicrosoft CEO, Satya"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;ඔබට කේතනය කළ හැකිනම්, \nඕබට ඔබේ ජීවන ගමන් මග රිසි
     සේ තෝරා ගත හැකියි.&rdquo;\nChris Bosh"
   homepage_hero_text_student1: |-
@@ -939,6 +955,12 @@
   dashboard_course2: "පාඨමාලා අංක 2:"
   dashboard_course3: "පාඨමාලා අංක 3:"
   dashboard_course4: "පාඨමාලා අංක 4: "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "ඔබට පරිගණක නොමැති නම්, ඔබේ පන්ති කාමරයේ <a href='%{unplugged_url}'>මෙම
     එළිදැක්වූ පාඩම් උත්සාහ කරන්න</a>."
   dashboard_curriculum: "විෂයමාලාව"
@@ -1132,11 +1154,17 @@
   course3_name: "පාඨමාලාව 3"
   course4_name: "පාඨමාලාව 4"
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: "කඩිනම් පාඨමාලා"
   cspunit1_name: "ඒකක 1: ඩිජිටල් තොරතුරු"
   cspunit2_name: "පාඩම් අංක 2: අන්තර්ජාලය"
@@ -1249,6 +1277,12 @@
   course2_gradelevel: "අවුරුදු 6 සිට 18 දක්වා"
   course3_gradelevel: "වයස අවුරුදු 8-18"
   course4_gradelevel: "වයස අවුරුදු 10-18"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 8 ශ්‍රේණියේ සිට ඉහලට
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "වයස අවුරුදු 10-18"
   codeorg_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
   codeintl_platformtext: "නවීන බ්‍රවුසර, ස්මාර්ට් දුරකථන, ටැබ්ලට්"
@@ -1389,6 +1423,12 @@
     සිසුන් විසින් පෙර පාඩම් වලදී උගත් ක්‍රමලේඛන සංකල්ප පිළිබඳ තවත් ගැඹුරින් හදාරමින්
     සංකීර්ණ ගැටළු වෙත විසඳුම් සොයනු ඇත. මෙම පාඩම අවසානයේදී, සිසුන් විසින් අන්තර්ක්‍රියා
     සහිත කතාන්දර සහ ක්‍රීඩා නිර්මාණය කරනු ඇත. 4 සිට 8 ශ්‍රේණි සඳහා නිර්දේශිතයි."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "මුලිකව පරිගණක විද්‍යාවේ සංකල්ප drag and drop ක්‍රමලේඛනය
     මගින් ඉගෙන ගන්න. මෙය ක්‍රීඩාවකට සමාන වූ, Angry Birds and Plants vs. Zombies ක්‍රීඩා
     ඇසුරින් Bill Gates, Mark Zuckerberg විසින් මෙහෙයවන නිබන්ධනයකි. repeat-loops, conditionals
@@ -1916,6 +1956,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: CS Principles
+  csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

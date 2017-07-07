@@ -11,6 +11,7 @@ ________________
 - [Facilitators](#facilitators)<br/>
 - [Administrator and Counselor Workshops](#ac)<br/>
 - [Community Events](#community)<br/>
+- [TeacherCon Evening Events](#evening)<br/>
 - [Welcome Kit Postage](#kits)<br/>
 
 ________________
@@ -87,6 +88,17 @@ To receive reimbursement for a community event, send an official invoice and an 
 Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
 
 [**Back to the top**](#top)
+
+________________
+<a id="evening"></a>
+<br/>
+## TeacherCon Evening Events
+To receive reimbursement for a Wednesday night event at TeacherCon, send an official invoice, receipts, and an attendance list to invoices@code.org within 30 days of the event. Code.org will reimburse each partner up to $45 per participant. Requests for reimbursement received after the 30 day cutoff will not be processed.<br/>
+
+Need an example of an official invoice? Visit [this site](http://www.wikihow.com/Sample/Services-Rendered-Invoice).
+
+[**Back to the top**](#top)
+
 
 ________________
 <a id="kits"></a>
