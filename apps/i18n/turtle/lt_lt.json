@@ -75,6 +75,7 @@
   "penUp": "pakelk pieštuką",
   "reinfFeedbackMsg": "Štai tavo piešinys! Gali ir toliau piešti arba eik toliau prie kito galvosūkio.",
   "setAlpha": "nustatyti permatomumą",
+  "setCharacter": "set character to {character}",
   "setColour": "spalva =",
   "setPattern": "šablonas = ",
   "setWidth": "plotis = ",
@@ -90,6 +91,5 @@
   "turnTooltip": "Pasuka menininką į kairę pasirinktu kampu laipsniais.",
   "turtleVisibilityTooltip": "Padaro menininką matomą arba nematomą.",
   "widthTooltip": "Pakeičia pieštuko plotį.",
-  "wrongColour": "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Tavo piešinys yra ne tokios spalvos. Šiai užduočiai atlikti, ji turi būti %1."
 }

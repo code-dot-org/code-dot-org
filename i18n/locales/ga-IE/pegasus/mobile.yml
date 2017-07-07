@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Comhghairdeas as Cúrsa 2 a chríochnú"
   congratulations_on_completing_course3: "Comhghairdeas as Cúrsa 3 a chríochnú"
   congratulations_on_completing_course4: "Comhghairdeas as Cúrsa 4 a chríochnú"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Comhghairdeas as an gCúrsa Luathaithe a chríochnú"
   congrats_next_tutorials_title: "Téigh ar aghaidh go dtí an chéad leibhéal eile"
   congrats_next_tutorials_desc: "Bain triail as na gearrchúrsaí teagaisc uair an chloig seo, nó <a href=\"%{current_path}/next\">cúrsa beirte</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Táim tar éis Cúrsa 2 a chríochnú - bain triail as! @codeorg"
   just_did_course3: "Táim tar éis Cúrsa 3 a chríochnú - bain triail as! @codeorg"
   just_did_course4: "Táim tar éis Cúrsa 4 a chríochnú - bain triail as! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail as! @codeorg"
   twitter_teach_cs: "Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/."
   twitter_cs_foundational: "Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim. https://youtu.be/QvyTEx1wyOY."
@@ -247,6 +259,10 @@
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
     Satya, Príomhoifigeach Feidhmiúcháin Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
@@ -701,6 +717,12 @@
   dashboard_course2: 'Cúrsa 2:'
   dashboard_course3: 'Cúrsa 3:'
   dashboard_course4: 'Cúrsa 4: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na ceachtanna \"díphlugáilte\" seo</a> i do sheomra ranga."
   dashboard_curriculum: "Curaclam"
   dashboard_curriculum_overview: "Foramharc ar an gCuraclam Bunscoile"
@@ -869,11 +891,17 @@
   course3_name: "Cúrsa 3"
   course4_name: "Cúrsa 4"
   coursea-draft_name: Cúrsa A
+  coursea_name: "Cúrsa A"
   courseb-draft_name: Cúrsa B
+  courseb_name: "Cúrsa B"
   coursec-draft_name: Cúrsa C
+  coursec_name: "Cúrsa C"
   coursed-draft_name: Cúrsa D
+  coursed_name: "Cúrsa D"
   coursee-draft_name: Cúrsa E
+  coursee_name: "Cúrsa E"
   coursef-draft_name: Cúrsa F
+  coursef_name: "Cúrsa F"
   accelerated_name: "Cúrsa Luathaithe"
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
@@ -980,6 +1008,12 @@
   course2_gradelevel: "Aois 6-18"
   course3_gradelevel: "Aois 8-18"
   course4_gradelevel: "Aois 10-18"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "Aois 13+"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Aois 10-18"
   codeorg_platformtext: "Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid"
   codeintl_platformtext: "Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid"
@@ -1082,6 +1116,12 @@
   course2_shortdescription_congrats: "Tá an cúrsa seo dírithe ar dhaltaí a bhfuil bunchumas léitheoireachta acu, agus tógann sé ar an ábhar ó Chúrsa 1. Cruthóidh na daltaí ríomhchláir chun fadhbanna a réiteach, agus forbróidh siad cluichí nó scéalta is féidir leo a chomhroinnt. Molta do bhlianta 2-5."
   course3_shortdescription_congrats: "An bhfuil tú réidh don chéad leibhéal eile? Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gcúrsaí roimhe seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-10."
   course4_shortdescription_congrats: "An bhfuil tú réidh dul ar aghaidh? Déanfaidh na daltaí staidéar níos doimhe ar thopaicí a d'fhoghlaim siad i gcúrsaí roimhe seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir a chomhroinnt le héinne. Dírithe ar aois 9-13."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Foghlaim buntús na ríomheolaíochta trí ríomhchlárú \"tarraingt is scaoileadh\". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga."
   codeintl_longdescription: "Foghlaim buntús na ríomheolaíochta trí ríomhchlárú \"tarraingt is scaoileadh\". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies. Foghlaim lúba, coinníollacha, agus algartaim shimplí. Ar fáil i 34 teanga."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1360,6 +1400,6 @@
   header_report_bug: "Report bug"
   header_tutorials: "Cúrsaí Teagaisc"
   header_documentation: "Doiciméadú"
-  csp_name: "CS Principles"
+  csp_name: "'16-'17 Foras Feasa ar an Ríomheolaíocht"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

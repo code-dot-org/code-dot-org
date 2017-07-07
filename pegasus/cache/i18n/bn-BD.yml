@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: "কোর্স ২ সম্পন্ন করার জন্য অভিনন্দন"
   congratulations_on_completing_course3: "কোর্স ৩ সম্পন্ন করার জন্য অভিনন্দন"
   congratulations_on_completing_course4: "কোর্স ৪ সম্পন্ন করার জন্য অভিনন্দন"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "অ্যাক্সিলারেটেড কোর্স সম্পন্ন করার জন্য
     অভিনন্দন"
   congrats_next_tutorials_title: "পরবর্তী পাঠ সহায়িকা (টিউটোরিয়াল) গুলী চেষ্টা করুন"
@@ -266,6 +272,12 @@
   just_did_course2: " দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg"
   just_did_course3: " দেখ আমি কেবল কোর্স ৩ শেষ করছে! @codeorg"
   just_did_course4: " দেখ আমি কেবল কোর্স ৪ শেষ করছে! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: " দেখ আমি কেবল অ্যাক্সিলারেটেড  কোর্স শেষ করছে! @codeorg"
   twitter_teach_cs: 10 জনের মধ্যে 9 মানুষ একমত যে বিদ্যালয় কম্পিউটার বিজ্ঞান শিক্ষা
     দেওয়া উচিত। http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
@@ -319,6 +331,10 @@
     কম্পিউটার বিজ্ঞান শিক্ষার সুযোগ দরকার" Sheryl, ফেইসবুক COO'
   homepage_hero_text_satya: "''কম্পিউটার বিজ্ঞানের পারে মুক্ত জগতের সবচেয়ে ভালো সুযোগ''
     \ Satya, CEO of Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "''যদি আপনি কোড, আপনি বেছে নিন এবং জীবন। কোর্স পছন্দ করতে
     পারেন।'' ক্রিস বস"
   homepage_hero_text_student1: "\"এই দক্ষতা আমার ভবিষ্যৎ পরিবর্তন করেছে। উল্লেখ না
@@ -913,6 +929,12 @@
   dashboard_course2: "কোর্স 2:"
   dashboard_course3: "কোর্স 3:"
   dashboard_course4: "কোর্স ৪ (পরীক্ষামুলক):"
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "পাঠ্যক্রম"
@@ -1104,11 +1126,17 @@
   course3_name: "কোর্স ২"
   course4_name: "কোর্স ৪"
   coursea-draft_name: "কোর্স A"
+  coursea_name: "কোর্স A"
   courseb-draft_name: "কোর্স B"
+  courseb_name: "কোর্স B"
   coursec-draft_name: "কোর্স C"
+  coursec_name: "কোর্স C"
   coursed-draft_name: "কোর্স D"
+  coursed_name: "কোর্স D"
   coursee-draft_name: "কোর্স E"
+  coursee_name: "কোর্স E"
   coursef-draft_name: "কোর্স F"
+  coursef_name: "কোর্স F"
   accelerated_name: Accelerated Course
   cspunit1_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
   cspunit2_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
@@ -1222,6 +1250,12 @@
   course2_gradelevel: "বয়স ৬-১৮"
   course3_gradelevel: "বয়স ৮-১৮"
   course4_gradelevel: "বয়স ১০-১৮"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "গ্রেড ৮ +"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "বয়স ১০-১৮"
   codeorg_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
   codeintl_platformtext: "আধুনিক ব্রাউজার, smartphones, ট্যাবলেট"
@@ -1354,6 +1388,12 @@
   course4_shortdescription_congrats: |-
     আরও এগোতে প্রস্তুত? ছাত্ররা অনেক জটিল সমস্যার সহজবোধ্য সমাধান বের করার জন্য পূর্ববর্তী কোর্সে দেখানো প্রোগ্রামিং বিষয়গুলো আরো ভাল ভাবে দেখবে। এই কোর্সের শেষের দিকে, ছাত্ররা ইন্টারেক্টিভ গল্প এবং গেম তৈরি করতে পারেন যা তারা যে কারো সাথে শেয়ার করতে পারেন।
     ৪-৮ গ্রেডের জন্য প্রস্তাবিত।
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "ড্রাগ ও ড্রপ প্রোগ্রামিং দিয়ে কম্পিউটার বিজ্ঞানের মৌলিক
     ধারনা শিখুন। এটি একটি খেলার মত, স্বচালিত ভিডিও টিউটোরিয়াল যার পাঠগুলি বিল গেটস,
     মার্ক যকারবার্গ, এংরি বার্ড, প্লান্ট বনাম জম্বি দ্বারা অভিনিত। পুনরায়-চক্র(লুপ),
@@ -1899,43 +1939,3 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
-  coursea_name: Course A
-  courseb_name: Course B
-  coursec_name: Course C
-  coursed_name: Course D
-  coursee_name: Course E
-  coursef_name: Course F
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
-  coursed_gradelevel: Grade 8+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
-  coursea_shortdescription_congrats: ''
-  courseb_shortdescription_congrats: ''
-  coursec_shortdescription_congrats: ''
-  coursed_shortdescription_congrats: ''
-  coursee_shortdescription_congrats: ''
-  coursef_shortdescription_congrats: ''

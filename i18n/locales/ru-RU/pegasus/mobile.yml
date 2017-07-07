@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Поздравляем вас с завершением курса 2"
   congratulations_on_completing_course3: "Поздравляем вас с завершением курса 3"
   congratulations_on_completing_course4: "Поздравляем вас с завершением курса 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Поздравляем с прохождением ускоренного курса"
   congrats_next_tutorials_title: "Теперь посмотрите эти уроки"
   congrats_next_tutorials_desc: "Попробуйте эти короткие уроки продолжительностью 1 час или попробуйте <a href=\"%{current_path}/next\">урок партнера</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Я только что закончил(а) курс 2 - посмотрите на @codeorg"
   just_did_course3: "Я только что закончил курс 3 - проверить это! @codeorg"
   just_did_course4: "Я только что закончил(а) курс 4 - посмотрите на @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Я только что закончил(а) ускоренный курс - посмотрите на @codeorg"
   twitter_teach_cs: "Почему не во всех школах изучают информатику? Мы можем исправить это. http://youtu.be/2DxWIxec6yo. Чтобы узнать больше, посетите наш сайт: http://code.org/."
   twitter_cs_foundational: "Компьютерные технологии являются основой обучения для каждого ученика. https://youtu.be/QvyTEx1wyOY."
@@ -239,6 +251,10 @@
     «У наших детей — в том числе у девочек — должна быть возможность изучать информатику». Шерил, главный операционный директор Facebook
   homepage_hero_text_satya: |-
     «Информатика поможет раскрыть лучшие возможности в мире». Сатья, генеральный директор Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     «Если вы программируете, значит вы можете выбрать направление своей жизни». Крис Бош
   homepage_hero_text_student1: |-
@@ -683,6 +699,12 @@
   dashboard_course2: 'Курс 2:'
   dashboard_course3: 'Курс 3:'
   dashboard_course4: 'Курс 4 (бета-версия): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте эти оффлайн уроки в вашем классе."
   dashboard_curriculum: "Учебная программа"
   dashboard_curriculum_overview: "Обзор программы для дошкольников и учеников начальной школы"
@@ -851,11 +873,17 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   coursea-draft_name: Курс A
+  coursea_name: "Курс A"
   courseb-draft_name: Курс B
+  courseb_name: "Курс B"
   coursec-draft_name: Курс С
+  coursec_name: "Курс С"
   coursed-draft_name: Курс D
+  coursed_name: "Курс D"
   coursee-draft_name: Курс E
+  coursee_name: "Курс E"
   coursef-draft_name: Курс F
+  coursef_name: "Курс F"
   accelerated_name: "Ускоренный курс"
   cspunit1_name: 'Урок 1: Цифровая информация'
   cspunit2_name: 'Урок 2: Интернет'
@@ -962,6 +990,12 @@
   course2_gradelevel: "Возраст 6-18 лет"
   course3_gradelevel: "Возраст 8-18 лет"
   course4_gradelevel: "Возраст 10-18 лет"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "Класс 8 и выше"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
   codeintl_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -1064,6 +1098,12 @@
   course2_shortdescription_congrats: "Для учеников, имеющих базовые навыки чтения, начинать обучение рекомендуется с курса 1. Ученики смогут создавать программы для решения задач и разрабатывать интерактивные игры или истории, которыми они могут поделиться. Рекомендуется для учеников 2-5 классов."
   course3_shortdescription_congrats: "Готовы перейти на новый уровень? Ученики будут более углубленно изучать темы,  с которыми они познакомились на предыдущем курсе, осваивая решение более сложных задач. К концу курса ученики смогут создавать интерактивные истории и игры, которыми они смогут поделиться с другими. Рекомендовано для учеников 4-5 классов."
   course4_shortdescription_congrats: "Готов идти дальше? Студенты будут углубляться в темы программирования, реализованные в предыдущих курсах, чтобы найти более гибкие решения сложных задач. К концу этого курса студенты создадут интерактивные истории и игры, они смогут поделиться с кем-либо. Рекомендуется для 4-8 классов."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Изучите основные понятия информатики, написав программу путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой форме, состоящие из видеолекций с участием Билла Гейтса, Марка Цукерберга, персонажей игр Angry Birds и Plants против Zombies. Изучите циклические, условные и линейные алгоритмы. Доступно на 34 языках."
   codeintl_longdescription: "Изучайте основные понятия информатики с помощью drag-and-drop программирования. Это похожий на игру самоучитель с видеолекциями Билла Гейтса, Марка Цукерберга, Angry Birds и Plants vs. Zombies. Изучите циклы, условные операторы и основные алгоритмы. Доступен на 34 языках."
   thinkersmithspanish_longdescription: "С помощью  словаря-робота, ученики научатся помогать друг другу для решать задачи без предварительных обсуждений. Этот урок показывает связи между символами и действиями, а также учит неотьемлемому навыку отладки программ.\n\n\nЭто упражнение учит устанавливать соответствие между символами и действиями, а также развивает навык отладки. \"Мои друзья-работы\" работает лучше как групповая деятельность, и содержит рабочие листы учителя для использования в классе."
@@ -1342,6 +1382,6 @@
   header_report_bug: "Сообщить об ошибке"
   header_tutorials: "Обучающие материалы"
   header_documentation: "Документация"
-  csp_name: "CS Principles"
+  csp_name: "«16 - 17» Основы информатики"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

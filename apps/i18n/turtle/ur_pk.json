@@ -75,6 +75,7 @@
   "penUp": "پنسل اَپ",
   "reinfFeedbackMsg": "یہاں ہے آپ کی ڈرائنگ! اس پر کام کرتے رہیں یا اگلے سوال پر چلیں.",
   "setAlpha": "سیٹ ایلفا",
+  "setCharacter": "set character to {character}",
   "setColour": "سیٹ کلر",
   "setPattern": "سیٹ پیٹرن",
   "setWidth": "سیٹ وڈتھ",
@@ -90,6 +91,5 @@
   "turnTooltip": "مصورکو بتائے گۓ ڈگری کے مطابق بائیں یا دائیں موڑتا ہے.",
   "turtleVisibilityTooltip": "مصور کو دکھاتا یا چھپاتا ہے.",
   "widthTooltip": "پنسل کی چوڑائی بدلتا ہے.",
-  "wrongColour": "آپ کی تصویر غلط رنگ کی ہے. اس سوال کے لیے، اسے %1 ہونا چاہئیے.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "آپ کی تصویر غلط رنگ کی ہے. اس سوال کے لیے، اسے %1 ہونا چاہئیے."
 }
