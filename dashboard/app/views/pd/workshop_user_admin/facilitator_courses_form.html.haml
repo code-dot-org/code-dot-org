@@ -1,2 +1,49 @@
-%h1 Pd::WorkshopUserAdmin#facilitator_courses_form
-%p Find me in app/views/pd/workshop_user_admin/facilitator_courses_form.html.haml
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 Manage Facilitator Courses
+
+#application-container.selectable
+
+  = show_flashes.html_safe
+
+%p Enter an Email or User ID to view and edit a Facilitator's Courses
+= form_tag url_for(action: 'facilitator_courses_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :search_term, params[:search_term], class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+  -if @facilitator
+    %table.table.table-hover.table-condensed.table-auto-width
+      %thead
+        %th ID
+        %th Email
+        %th Name
+      %tbody
+        %tr
+          %td= link_to @facilitator.id, action: :facilitator_courses_form, search_term: @facilitator.id
+          %td= @facilitator.email
+          %td= @facilitator.name
+    -if @permissions
+      = form_tag(action: 'assign_course') do
+        %table.table.table-hover.table-condensed.table-auto-width{:id => 'course-table'}
+          %thead
+            %th Action
+            %th Course
+          %tbody
+            - @courses.each do |course|
+              %tr
+                %td= link_to 'Remove', action: :remove_course, user_id: @facilitator.id, :course => course
+                %td= course
+            %tr
+              %td
+                .actions
+                  = submit_tag('Assign', id: 'submitAssignCourse')
+              %td
+                %input{:hidden => true, :name => "facilitator_id", :value => @facilitator.id}
+                .field
+                  = select_tag :course, options_for_select(Pd::Workshop::COURSES)
+              %td
+  -else
+    -if params[:search_term]
+      %p No Facilitator Found
+
