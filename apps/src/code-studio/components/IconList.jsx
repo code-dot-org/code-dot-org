@@ -1,9 +1,7 @@
-/* global dashboard */
-
-var React = require('react');
-var IconListEntry = require('./IconListEntry');
-var icons = require('./icons').aliases;
-dashboard.iconsUnicode = require('./icons').unicode;
+import React from 'react';
+import IconListEntry from './IconListEntry';
+import { aliases } from './icons';
+import i18n from '@cdo/locale';
 
 /**
  * A component for managing icons.
@@ -17,9 +15,9 @@ var IconList = React.createClass({
   getMatches: function (query) {
     var results = {};
 
-    Object.keys(icons).forEach(function (alias) {
+    Object.keys(aliases).forEach(function (alias) {
       if (query.test(alias)) {
-        icons[alias].forEach(function (match) {
+        aliases[alias].forEach(function (match) {
           results[match] = alias;
         });
       }
@@ -59,12 +57,9 @@ var IconList = React.createClass({
 
     return (
       <div style={styles.root}>
-        {iconEntries.length > 0 ? iconEntries : dashboard.i18n.t('components.icon_library.no_icons_found')}
+        {iconEntries.length > 0 ? iconEntries : i18n.noIconsFound()}
       </div>
     );
   }
 });
 module.exports = IconList;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.IconList = IconList;
