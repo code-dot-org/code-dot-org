@@ -14,7 +14,7 @@ class Pd::WorkshopUserAdminController < ApplicationController
       @facilitators = User.where(hashed_email: hashed_email)
     end
     @facilitator = @facilitators.first if @facilitators
-    @courses = Pd::CourseFacilitator.where(facilitator_id: @facilitator.id)
+    @courses = Pd::CourseFacilitator.where(facilitator_id: @facilitator.id) if @facilitator
   end
 
   def assign_course
