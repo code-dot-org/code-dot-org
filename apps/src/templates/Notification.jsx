@@ -66,7 +66,7 @@ const styles = {
   button: {
     float: 'left',
     marginLeft: 50,
-    marginTop: 33
+    marginTop: 15
   },
   colors: {
     [NotificationType.information]: {
