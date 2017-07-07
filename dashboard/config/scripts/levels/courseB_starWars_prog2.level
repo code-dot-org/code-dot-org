@@ -42,8 +42,8 @@
     "markdown_instructions": "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)  Now, help BB-8 gather **all** of the glowing scrap metal! \r\n\r\nWatch out for walls and crates!  \r\n\r\n",
     "ideal": "6",
     "tts_markdown_instructions_override": "Now, help BB-8 gather all of the glowing scrap metal! \r\n\r\nWatch out for walls and crates!  ",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can split this problem into two parts: first get one one pile of scrap metal, then figure out how to get to the second one from there.\",\"hint_id\":\"courseB_starWars_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/321c404780032e11104d010f99816eb7/courseB_starWars_prog2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.\",\"hint_id\":\"courseB_starWars_prog2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a5a095b8a20d9c8fbaf24fe0ec898a52/courseB_starWars_prog2.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can split this problem into two parts: first get one one pile of scrap metal, then figure out how to get to the second one from there.\",\"hint_id\":\"courseB_starWars_prog2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/321c404780032e11104d010f99816eb7/courseB_starWars_prog2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.\",\"hint_id\":\"courseB_starWars_prog2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a5a095b8a20d9c8fbaf24fe0ec898a52/courseB_starWars_prog2.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

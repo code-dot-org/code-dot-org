@@ -40,8 +40,8 @@
     "sprites_hidden_to_start": "false",
     "instructions": "Help BB-8 gather the glowing scrap metal",
     "ideal": "9",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the `repeat` block for shorter code.\",\"hint_id\":\"courseB_starWars_prog6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfb29b4ddf44e265043479ccfc6b1d6d/courseB_starWars_prog6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle looks like a larger version of the stair step pattern. Can you use a `repeat` block to make two steps exactly the same?\",\"hint_id\":\"courseB_starWars_prog6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/63e47d7162bad38b2db0597e1a598268/courseB_starWars_prog6.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the `repeat` block for shorter code.\",\"hint_id\":\"courseB_starWars_prog6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfb29b4ddf44e265043479ccfc6b1d6d/courseB_starWars_prog6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This puzzle looks like a larger version of the stair step pattern. Can you use a `repeat` block to make two steps exactly the same?\",\"hint_id\":\"courseB_starWars_prog6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/63e47d7162bad38b2db0597e1a598268/courseB_starWars_prog6.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
