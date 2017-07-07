@@ -10,6 +10,7 @@ const styles = {
     borderStyle: 'dashed',
     borderWidth: 5,
     borderColor: color.border_gray,
+    boxSizing: "border-box"
   },
   heading: {
     paddingLeft: 50,
