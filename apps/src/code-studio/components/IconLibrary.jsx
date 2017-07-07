@@ -62,6 +62,3 @@ var IconLibrary = React.createClass({
   }
 });
 module.exports = IconLibrary;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.IconLibrary = IconLibrary;
