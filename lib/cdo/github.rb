@@ -23,8 +23,8 @@ module GitHub
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_request_files-instance_method
   # @param pr_number [Integer] The PR number to query.
-  # @return [Array[String]] The filenames part of the pull request living in a "migration" or
-  #   "migrations" subdirectory.
+  # @return [Array[String]] The filenames part of the pull request living in the dashboard or
+  #   pegasus migrations subdirectory.
   def self.database_changes(pr_number)
     # For pagination documentation, see https://github.com/octokit/octokit.rb#pagination.
     Octokit.auto_paginate = true
