@@ -1231,7 +1231,7 @@
           the rest of them cannot be completed. Creating algorithms that others can
           understand is really important. That's why each step has to be written down,
           so no matter who does it, the result is the same.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Do sedaj si ustvarjal/a animacijo ali zgodbo, ki vsakič, ko jo zaženeš,
@@ -1371,7 +1371,7 @@
         text: 'V tem primeru bomo povedali: ČE ima vijolični cvet nektar, ki je večji
           od 0, dobi nektar. To bo naši čebeli povedalo, da naj pridobiva nektar tako
           dolgo, dokler ga je še kaj. Ta-da!'
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Have you ever heard of debugging a program? This is the way you figure

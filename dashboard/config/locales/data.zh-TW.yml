@@ -417,7 +417,17 @@
         C4_unplugged_forloops: "計數迴圈（For Loops）"
         C4_unplugged_parameters: "用參數寫歌"
         C4_unplugged_binary: "二進制（Binary）"
+        CSF_artist_angles: Angles in Artist
+        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_repeat_loops: Collector Repeat Loops
+        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
+        CSF_create_functions: Create Functions
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: "計算機科學很重要"
+        CSF_maze_intro_k1_blocks: Intro to Code Studio
+        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_my_robotic_friends: "我的機器人朋友"
         CSF_stevie_big_project: Stevie 和 Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: "重複迴圈"
@@ -431,6 +441,8 @@
         infinity_playlab_intro: Play Lab - 簡介
         infinity_playlab_events: Play Lab - 事件（Evnets）
         infinity_playlab_repeat_forever: Play Lab - 重複無限次
+        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_search: How Search Works
         csd_gamelab_animation_tab: "動畫頁籤"
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2

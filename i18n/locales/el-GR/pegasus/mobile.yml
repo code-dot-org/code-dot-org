@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος 2"
   congratulations_on_completing_course3: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος 3"
   congratulations_on_completing_course4: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Συγχαρητήρια για την ολοκλήρωση του Εντατικού Μαθήματος"
   congrats_next_tutorials_title: "Δοκιμάστε στη συνέχεια αυτά τα σεμινάρια"
   congrats_next_tutorials_desc: "Δοκιμάστε αυτά τα μικρότερα, σεμινάρια 1 ώρας ή δοκιμάστε ένα <a href=\"%{current_path}/next\">σεμινάριο συνεργάτη</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg"
   just_did_course3: "Μόλις τελειώσα το Μάθημα 3 - Ελεγξέ το! @codeorg"
   just_did_course4: "Μόλις τελείωσα το Μάθημα 4 - Ελεγξέ το! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Μόλις τελείωσα το Εντατικό Μάθημα - έλεγξέ το! @codeorg"
   twitter_teach_cs: "9 στους 10 ανθρώπους συμφωνούν ότι τα σχολεία πρέπει να διδάσκουν Πληροφορική. http://youtu.be/nKIu9yen5nc. Επισκεφθείτε https://code.org/."
   twitter_cs_foundational: "H Πληροφορική είναι θεμελιώδης μάθηση για κάθε μαθητή. https://youtu.be/QvyTEx1wyOY."
@@ -239,6 +251,10 @@
     &ldquo;Τα παιδιά μας &mdash; συμπεριλαμβανομένων και των κοριτσιών μας &mdash; χρειάζονται την ευκαιρία να μάθουν την Πληροφορική.&rdquo; Sheryl, COO του Facebook
   homepage_hero_text_satya: |-
     &ldquo;Η Πληροφορική μπορεί να ξεκλειδώσει τις καλύτερες ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε την πορεία της ζωής σας.&rdquo; Κρις Μπος
   homepage_hero_text_student1: |-
@@ -683,6 +699,12 @@
   dashboard_course2: 'Μάθημα 2:'
   dashboard_course3: 'Μάθημα 3:'
   dashboard_course4: 'Μάθημα 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Πρόγραμμα σπουδών"
   dashboard_curriculum_overview: "Επισκόπηση Πρόγραμμα Εκπαίδευσης Νηπιαγωγείο έως Ε΄ Δημοτικού"
@@ -851,11 +873,17 @@
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -962,6 +990,12 @@
   course2_gradelevel: "Ηλικίες 6+ (απαιτείται ανάγνωση)"
   course3_gradelevel: "Ηλικίες 8+ (μετά το Μάθημα 2)"
   course4_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "Τάξεις Β' Γυμνασίου +"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
@@ -1064,6 +1098,12 @@
   course2_shortdescription_congrats: "Για τους μαθητές με βασική δεξιότητα ανάγνωσης, αυτό το μάθημα βασίζεται στο Μάθημα 1. Οι μαθητές θα δημιουργήσουν προγράμματα για να λύσουν προβλήματα και να δημιουργήσουν διαδραστικά παιχνίδια ή ιστορίες που μπορούν να μοιραστούν. Συνιστάται για τάξεις Β' Δημοτικού έως Ε' Δημοτικού."
   course3_shortdescription_congrats: "Ετοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού που εσήχθησαν σε προηγούμενα μαθήματα και να βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
   course4_shortdescription_congrats: "Ετοιμος για το επόμενο επίπεδο; Οι μαθητές θα εμβαθύνουν σε θέματα προγραμματισμού που εσήχθησαν σε προηγούμενα μαθήματα και θα βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες."
   codeintl_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα Αngry Birds και τα Φυτά  εναντίον Ζόμπι. Μάθετε επαναληπτικούς βρόχους, συνθήκες και βασικούς αλγορίθμους. Διαθέσιμο σε 34 γλώσσες."
   thinkersmithspanish_longdescription: "Οι μαθητές χρησιμοποιώντας ένα προκαθορισμένο \"Λεξικό του Ρομπότ\" θα ανακαλύψουν τρόπους  να  κατευθύνουν ο ένας τον άλλο ώστε να τελειώσουν συγκεκριμένες εργασίες για τις οποίες δεν έχουν συζητήσει προηγουμένως.  Με αυτό το μάθημα τα παιδιά μαθαίνουν την σύνδεση ανάμεσα στα σύμβολα και τις ενέργειες, όπως επίσης και την ανεκτίμητη δεξιότητα του εντοπισμού σφαλμάτων."
@@ -1342,6 +1382,6 @@
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"
-  csp_name: "CS Principles"
+  csp_name: "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "გილოცავთ მე–2 კურსის დასრულებას"
   congratulations_on_completing_course3: "გილოცავთ მე–3 კურსის დასრულებას"
   congratulations_on_completing_course4: "გილოცავთ მე–4 კურსის დასრულებას"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "გილოცავთ ინტენსიური კურსის დასრულებას"
   congrats_next_tutorials_title: "შემდეგ სცადეთ ეს ტუტორიალები"
   congrats_next_tutorials_desc: "სცადეთ ეს უფრო მოკლე, ერთსაათიანი ტუტორიალები ან <a href=\"%{current_path}/next\">ჩვენი პარტნიორების ტუტორიალები</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "ახლახან დავასრულე მე–2 კურსი - ნახე! @codeorg"
   just_did_course3: "ახლახან დავასრულე მე–3 კურსი - ნახე! @codeorg"
   just_did_course4: "ახლახან დავასრულე მე–4 კურსი - ნახე! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "ახლახან დავასრულე ინტენსიური კურსი - ნახე! @codeorg"
   twitter_teach_cs: "10–დან 9 ადამიანი გვეთანმება: კომპიუტერული მეცნიერება უნდა ისწავლებოდეს სკოლებში. http://youtu.be/nKIu9yen5nc. ეწვიეთ: https://code.org/."
   twitter_cs_foundational: "კომპიუტერული მეცნიერებები ყოველმა მოსწავლემ უნდა ისწავლოს. https://youtu.be/QvyTEx1wyOY."
@@ -239,6 +251,10 @@
     &ldquo;ჩვენი ბავშვები, &mdash;ჩვენი გოგონების ჩათვლით&mdash; იმსახურებენ პროგრამირების სწავლის შესაძლებლობას&rdquo; შერილი, Facebook-ის მთავარი აღმასრულებელი დირექტორი
   homepage_hero_text_satya: |-
     &ldquo; ინფორმატიკა მსოფლიოს საუკეთესო შესაძლებლობებს გიხსნის&rdquo; სატია, Microsoft-ის დირექტორი
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo; თუ პროგრამირება შეგიძლია, ესე იგი, შენი ცხოვრების არჩევაც შეგიძლიათ &rdquo; კრის ბოში
   homepage_hero_text_student1: |-
@@ -683,6 +699,12 @@
   dashboard_course2: 'კურსი 2:'
   dashboard_course3: 'კურსი 3:'
   dashboard_course4: 'კურსი 4 (ბეტა): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "თუ არ გაქვთ კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში."
   dashboard_curriculum: "კურიკულუმი"
   dashboard_curriculum_overview: "K-5 კურიკულუმის მომიხილვა"
@@ -851,11 +873,17 @@
   course3_name: "კურსი 3"
   course4_name: "კურსი 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "დაჩქარებული კურსი"
   cspunit1_name: '(ძველი) სექცია 1: ციფრული ინფორმაცია'
   cspunit2_name: '(ძველი) სექცია 2: ინტერნეტი'
@@ -962,6 +990,12 @@
   course2_gradelevel: "ასაკი 6-18"
   course3_gradelevel: "ასაკი: 8-18"
   course4_gradelevel: "ასაკი: 10-18"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "კლასები 8+"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "ასაკი: 10-18"
   codeorg_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   codeintl_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
@@ -1064,6 +1098,12 @@
   course2_shortdescription_congrats: "მოსწავლეებისთვის, რომელთაც შეუძლიათ კითხვა. ამ კურსში მოსწავლეები შექმნიან ამოცანების ამომხსნელ პროგრამებს და განავითარებენ ინტერაქტიულ თამაშებს ან ისტორიებს, რომელთა გაზიარება შეეძლებათ. რეკომენდებულია 2-5 კლასებისთვის."
   course3_shortdescription_congrats: "მზად ხართ შემდეგი დონისთვის? მოსწავლეები უფრო ღრმად გაერკვევიან წინა კურსებში წამოჭრილ პროგრამირების საკითხებში და მოძებნიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები შექმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომენდებულია 4-5 კლასებისთვის."
   course4_shortdescription_congrats: "მზად ხართ, გააგრძელოთ? მოსწავლეები უფრო ღრმად გაერკვევიან წინა კურსებში წამოჭრილ პროგრამირების საკითხებში და მოძებნიან მოქნილ ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები შექმნიან ინტერაქტიულ ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომენდებულია 4-5 კლასებისთვის."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე."
   codeintl_longdescription: "ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით. ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი, Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები, თუ-მაშინ დებულებები და ბაზისური ალგორითმები. მისაწვდომია 34 ენაზე."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1342,6 +1382,6 @@
   header_report_bug: "Report bug"
   header_tutorials: "Tutorials"
   header_documentation: "Documentation"
-  csp_name: "CS Principles"
+  csp_name: "'16-'17 CS საფუძვლები"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

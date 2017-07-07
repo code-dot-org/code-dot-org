@@ -310,8 +310,10 @@ GameLab.prototype.init = function (config) {
     getStore().dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
   }
 
-  // Push project-sourced animation metadata into store
-  const initialAnimationList = config.initialAnimationList || this.startAnimations;
+  // Push project-sourced animation metadata into store. Always use the
+  // animations specified by the level definition for embed levels.
+  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
+      config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((

@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Parabéns por teres concluído o curso 2"
   congratulations_on_completing_course3: "Parabéns por teres concluído o curso 3"
   congratulations_on_completing_course4: "Parabéns por teres concluído o curso 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Parabéns por teres concluído o curso acelerado"
   congrats_next_tutorials_title: "A seguir, experimenta estes tutoriais"
   congrats_next_tutorials_desc: "Experimenta este tutoriais mais curtos de 1 hora ou experimenta um <a href=\"%{current_path}/next\">Tutorial de um parceiro</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Vejam! Acabei de concluir o curso 2! @codeorg"
   just_did_course3: "Vejam! Acabei de concluir o curso 3! @codeorg"
   just_did_course4: "Vejam! Acabei de concluir o curso 4! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Vejam! Acabei de concluir o curso acelerado! @codeorg"
   twitter_teach_cs: "9 de 10 pessoas concordam, as escolas devem ensinar ciência da computação. http://youtu.be/nKIu9yen5nc. Visite https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
@@ -247,6 +259,10 @@
     &ldquo;A informática permite-te descobrir as
     melhores oportunidades no mundo.&rdquo;
     Satya, CEO da Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Se souberes programar, sabes
     que podes definir toda a tua vida.&rdquo;
@@ -701,6 +717,12 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Currículo"
   dashboard_curriculum_overview: "Visão geral do currículo do pré ao 5º ano"
@@ -869,11 +891,17 @@
   course3_name: "Curso 3"
   course4_name: "Curso 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Curso acelerado"
   cspunit1_name: 'Unidade 1: Informação Digital'
   cspunit2_name: 'Unidade 2: A Internet'
@@ -918,7 +946,7 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
+  csp17_category_name: "CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Laboratório de aplicações"
@@ -980,6 +1008,12 @@
   course2_gradelevel: "Dos 6 aos 18 anos"
   course3_gradelevel: "Dos 8 aos 18 anos"
   course4_gradelevel: "Dos 10 aos 18 anos"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "Notas 8+"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Dos 10 aos 18 anos"
   codeorg_platformtext: "Navegadores modernos, smartphones e tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones e tablets"
@@ -1082,6 +1116,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   codeintl_longdescription: "Aprenda os conceitos básicos de Ciência da Computação com a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies. Aprenda sobre laços-repetição, condicionais e algoritmos básicos. Este tutorial está disponível em 34 idiomas."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
