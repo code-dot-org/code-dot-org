@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Tillykke med at du fuldførte Kursus 2"
   congratulations_on_completing_course3: "Tillykke med at du fuldførte Kursus 3"
   congratulations_on_completing_course4: "Tillykke med at du fuldførte Kursus 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Tillykke med at du fuldførte Lynkurset"
   congrats_next_tutorials_title: "Prøv dissse øvelser nu"
   congrats_next_tutorials_desc: "Prøv disse kortere, 1 times øvelser eller prøv en <a href=\"%{current_path}/next\">partner-øvelse</a>."
@@ -183,7 +189,7 @@
   petition_thankyou: "Tak for din underskrift"
   continue_learning_header: "Lær mere efter Hour of Code"
   continue_learning_body: "Der er masser af muligheder.  Du kan lære online, eller på en lokal skole, eller sommerlejr."
-  learn_code_studio: "Try Code Studio courses"
+  learn_code_studio: "Try Code.org's courses"
   learn_next_level: "Fortsæt til det næste niveau"
   learn_online: "Prøv andre online kurser"
   learn_classes: "Find lokale klasser"
@@ -194,6 +200,12 @@
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
   just_did_course3: "I just finished Course 3 - check it out! @codeorg"
   just_did_course4: "I just finished Course 4 - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   twitter_teach_cs: "9 ud af 10 mennesker er enige om, skoler bør undervise datalogi. http://youtu.be/nKIu9yen5nc. Besøg https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
@@ -243,6 +255,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Programmering kan åbne for de bedste muligheder i verden.&rdquo;
     Satya, CEO Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Hvis du kan kode, kan du selv vælge retningen på dit liv.&rdquo;
     Chris Bosh
@@ -302,6 +318,7 @@
   homepage_slot_text_title_hoc: "Hour of Code"
   homepage_slot_text_blurb_hoc: "Alle kan lære det. Start i dag"
   homepage_slot_text_link_hoc: "Prøv Hour of Code"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Hold selv en Hour of Code"
   homepage_slot_text_link_hocserved: "# har prøvet"
   homepage_solot_text_link_volunteer: "Meld dig som frivillig til Hour Of Code"
@@ -476,7 +493,7 @@
   volunteer_engineer_submission_field_description: "Beskrivelse"
   volunteer_engineer_submission_field_description_desc: "Beskrive din computer erfaring og hvordan du kan deltage som frivillige for lokale lærere."
   volunteer_engineer_submission_field_description_placeholder: "Beskrivelse af erfaring og/eller deltagelse. Hvis du taler andre sprog end dansk, skal du medtage det her."
-  volunteer_engineer_submission_header_private: "Oplysninger der er private og ikke deles"
+  volunteer_engineer_submission_header_private: "Oplysninger holdes fortrolige og videregives aldrig"
   volunteer_engineer_submission_field_email: "Email adresse"
   volunteer_engineer_submission_field_email_desc: "Din e-mail adresse vil aldrig blive delt, men vi sender dig anmodninger fra lærere."
   volunteer_engineer_submission_field_email_placeholder: "Email adresse"
@@ -573,8 +590,8 @@
   dashboard_action_required: "krævet"
   dashboard_action_print_certificates: "Udskriv certifikater"
   dashboard_assessments_view: 'Se vurderinger i:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Assessment summaries"
   dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Undersøgelser"
@@ -613,11 +630,13 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Nyt hold"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Opret nye hold og tilføj elever. Hold hjælper dig til at organisere eleverne i mindre grupper, så du kan følge deres fremskridt og administrere deres konti."
   dashboard_sections_table_section: "Hold"
   dashboard_sections_table_secret: "Login type"
   dashboard_sections_table_grade: "Graduering"
   dashboard_sections_table_course: "Kursus"
+  dashboard_sections_table_pairing_allowed: "Par programmering"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Elever"
   dashboard_sections_table_code: "Holdkode"
@@ -689,6 +708,12 @@
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: 'Kursus 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Læseplan"
   dashboard_curriculum_overview: "Indskoling og mellemtrin (0.-5. klasse)"
@@ -857,11 +882,17 @@
   course3_name: "Kursus 3"
   course4_name: "Kursus 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Accelereret kursus"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -869,9 +900,9 @@
   cspunit4_name: '(old) Unit 4: Data'
   cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -904,9 +935,9 @@
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
+  csp17_category_name: "CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
@@ -968,6 +999,12 @@
   course2_gradelevel: "Fra 6 år (læsning nødvendigt)"
   course3_gradelevel: "Fra 8 år (efter kursus 2)"
   course4_gradelevel: "Fra 10 år (efter kursus 3)"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "8. klasse+"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Fra 10 år (efter kursus 3)"
   codeorg_platformtext: "Moderne browsere, smartphones, tabletter"
   codeintl_platformtext: "Moderne browsere, smartphones, tabletter"
@@ -1070,6 +1107,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Lær de grundlæggende begreber i computer videnskab med træk og slip-programmering. Dette er et spil-lignende, selvstyret opgaveforløb med stjernespækket video foredrag af Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs Zombier. Lære gentag-løkker, betingede og grundlæggende algoritmer. Tilgængelige i 34 sprog."
   codeintl_longdescription: "Lær de grundlæggende begreber i computer videnskab med træk og slip-programmering. Dette er et spil-lignende, selvstyret opgaveforløb med stjernespækket video foredrag af Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs Zombier. Lære gentag-løkker, betingede og grundlæggende algoritmer. Tilgængelige i 34 sprog."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1313,3 +1356,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Hjem"
+  header_courses: "kurser"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Oversigt for undervisere"
+  header_educate_elementary: "Grundskole"
+  header_educate_middle: "Grundskole (mellemtrin/udskoling)"
+  header_educate_high: "Gymnasium"
+  header_educate_hoc: "Hour of Code"
+  header_educate_partner: "Kom og vær med"
+  header_educate_beyond: "Udover Code.org"
+  header_educate_inspire: "Vær med til at inspirere en elev"
+  header_educate_community: "Online community"
+  header_educate_tools: "Værktøjer og videoer"
+  header_about_us: "Om os"
+  header_about_leadership: "Lederskab"
+  header_about_donors: "Donorer"
+  header_about_partners: "Partnere"
+  header_about_team: "Hele holdet"
+  header_about_news: "Nyheder"
+  header_about_evaluation: "Evaluering"
+  header_about_jobs: "Stillinger"
+  header_about_contact: "Kontakt os"
+  header_about_faqs: "Ofte stillede spørgsmål"
+  header_learn: "Lær"
+  header_teach: "Undervis"
+  header_stats: "Stats"
+  header_help_us: "Hjælp os"
+  header_about: "Om"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

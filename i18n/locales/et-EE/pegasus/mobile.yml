@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Õnnitleme Kursus 2 läbimise puhul"
   congratulations_on_completing_course3: "Õnnitleme Kursus 3 läbimise puhul"
   congratulations_on_completing_course4: "Õnnitleme Kursus 4 läbimise puhul"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Õnnitleme kiirkursuse läbimise puhul"
   congrats_next_tutorials_title: "Proovi järgnevaid õpetusi"
   congrats_next_tutorials_desc: "Proovi neid lühemaid 1 tunni õpetusi, või proovi <a href=\"%{current_path}/next\">partneri õppetükki</a>."
@@ -183,7 +189,7 @@
   petition_thankyou: "Täname, et andsite petitsioonile oma allkirja"
   continue_learning_header: "Jätka õppimist ka peale KoodiTundi"
   continue_learning_body: "Võimalusi on mitmesuguseid. Võid õppida veebis, kohalikus koolis või suvelaagris."
-  learn_code_studio: "Try Code Studio courses"
+  learn_code_studio: "Try Code.org's courses"
   learn_next_level: "Proovi mõnda muud Code Studio kursust"
   learn_online: "Proovi ka teisi veebikursusi"
   learn_classes: "Leia kohalikud kursused"
@@ -194,6 +200,12 @@
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
   just_did_course3: "I just finished Course 3 - check it out! @codeorg"
   just_did_course4: "I just finished Course 4 - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   twitter_teach_cs: "9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
@@ -239,6 +251,10 @@
     &ldquo;Meie lapsed &mdash; kaasa arvatud meie tütred &mdash; vajavad arvutiteaduse õppimise võimalust.&rdquo; Sheryl, Facebooki COO
   homepage_hero_text_satya: |-
     &ldquo;Arvutiteadus saab avada parimad võimalused maailmas.&rdquo; - Satya, Microsofti tegevdirektor
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Kui sa programmeerid, siis saad valida ja otsustada enda elu teekonda.&rdquo; - Chris Bosh
   homepage_hero_text_student1: |-
@@ -293,6 +309,7 @@
   homepage_slot_text_title_hoc: "KoodiTund"
   homepage_slot_text_blurb_hoc: "Kõik suudavad õppida. Alusta täna"
   homepage_slot_text_link_hoc: "Proovi KoodiTundi"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Korralda KoodiTund üritus"
   homepage_slot_text_link_hocserved: "# läbinud"
   homepage_solot_text_link_volunteer: "Ole KoodiTund vabatahtlik"
@@ -564,8 +581,8 @@
   dashboard_action_required: "nõutud"
   dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Assessment summaries"
   dashboard_assessments_answers: "All assessment answers"
   dashboard_surveys_answers: "Surveys"
@@ -604,11 +621,13 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Uus osa"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Loo uusi osi ja lisa neisse õpilasi. Osad aitavad organiseerida õpilasi väiksematesse rühmadesse, et saaks paremini jälgida nende edenemist ja hallata nende kontosid."
   dashboard_sections_table_section: "Jaotis"
   dashboard_sections_table_secret: "Sisselogimise tüüp"
   dashboard_sections_table_grade: "Klass"
   dashboard_sections_table_course: "Kursus"
+  dashboard_sections_table_pairing_allowed: "Paarisprogrammeerimine"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Õpilased"
   dashboard_sections_table_code: "Jaotise kood"
@@ -680,6 +699,12 @@
   dashboard_course2: 'Kursus 2:'
   dashboard_course3: 'Kursus 3:'
   dashboard_course4: '4 Kursus (beeta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Õppekava"
   dashboard_curriculum_overview: "K-5 õppekava ülevaade"
@@ -848,11 +873,17 @@
   course3_name: "Kursus 3"
   course4_name: "Kursus 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Kiirendatud kursus"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -860,9 +891,9 @@
   cspunit4_name: '(old) Unit 4: Data'
   cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -895,9 +926,9 @@
   hoc_category_name: "KoodiTund"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
+  csp17_category_name: "CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
@@ -959,6 +990,12 @@
   course2_gradelevel: "Vanustele 6-18"
   course3_gradelevel: "Vanustele 8-18"
   course4_gradelevel: "Vanustele 10-18"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "8.+ klassid"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Vanustele 10-18"
   codeorg_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
   codeintl_platformtext: "Tänapäevased brauserid, nutitelefonid ja tahvelarvutid"
@@ -1061,6 +1098,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Õpi arvutiteaduse algpõhimõtteid \"sikuta ja lase lahti\" programmeerimise abil. See mängusarnane iseõppimise videos esinevad Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Õpi kordusi, tingimuslauseid ja algelisi algoritme. Saadaval 34 keeles."
   codeintl_longdescription: "Õpi arvutiteaduse algpõhimõtteid \"sikuta ja lase lahti\" programmeerimise abil. See mängusarnane iseõppimise videos esinevad Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Õpi kordusi, tingimuslauseid ja algelisi algoritme. Saadaval 34 keeles."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1304,3 +1347,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Home"
+  header_courses: "Kursused"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Educator Overview"
+  header_educate_elementary: "Elementary School"
+  header_educate_middle: "Middle School"
+  header_educate_high: "High School"
+  header_educate_hoc: "KoodiTund"
+  header_educate_partner: "Partner with Us"
+  header_educate_beyond: "Beyond Code.org"
+  header_educate_inspire: "Inspire a Student"
+  header_educate_community: "Online Community"
+  header_educate_tools: "Tools and Videos"
+  header_about_us: "About Us"
+  header_about_leadership: "Leadership"
+  header_about_donors: "Donors"
+  header_about_partners: "Partners"
+  header_about_team: "Full Team"
+  header_about_news: "Newsroom"
+  header_about_evaluation: "Evaluation"
+  header_about_jobs: "Jobs"
+  header_about_contact: "Contact Us"
+  header_about_faqs: "FAQs"
+  header_learn: "Learn"
+  header_teach: "Teach"
+  header_stats: "Stats"
+  header_help_us: "Help Us"
+  header_about: "About"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

@@ -747,7 +747,7 @@ fr:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Quand on veut faire du chocolat, il y a plusieurs étapes importantes à suivre pour compléter le processus. Et chacune de ces grandes étapes comporte son propre ensemble d’étapes plus petites. Et il y a différentes recettes, ou algorithmes, en fonction de la saveur que tu veux donner à ton chocolat. Chaque étape est importante, même les petites. Alors, si une étape manque, les autres ne peuvent pas être achevées. Créer des algorithmes que les autres peuvent comprendre est vraiment important. C'est pourquoi chaque étape doit être écrite, pour que peu importe qui suit ces étapes, le résultat reste le même."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Jusqu'ici, tu as fait une animation ou une histoire qui se rejoue à l'identique à chaque fois que tu l'exécutes. À présent, tu vas faire un jeu interactif auquel tu pourras véritablement jouer."
@@ -823,7 +823,7 @@ fr:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Dans cet exemple, nous allons dire que SI la fleur pourpre a du nectar supérieur à 0, alors il faut « Recueillir du nectar ». Cela va dire à notre abeille de continuer à recueillir du nectar tant qu’il y en a. La-la !"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "As-tu déjà entendu parler de déboguer un programme ? C’est la façon dont tu découvres ce qui ne fonctionne pas. Lorsque tu débogues le code, tu identifies et supprimes les erreurs."

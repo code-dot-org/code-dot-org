@@ -40,8 +40,8 @@
   og_description: Minden diáknak, minden iskolában meg kellene adni a lehetőséget,
     hogy számítástechnikát tanuljon.
   csedweek_og_title: A kódolás órája elérkezett
-  csedweek_og_description: The Hour of Code is a global movement reaching tens of
-    millions of students of all ages in 180+ countries and over 45 languages.
+  csedweek_og_description: 2017. december 4-10. A számítás tudomány minden diák számára
+    fontos tudást ad.
   hoc2014_heading: Csatlakozz a <a href="http://hourofcode.com"> Kódolás Órájához</a><br/>2014.
     December 8-14.<br/>
   hoc2014_students: Tanuló
@@ -57,7 +57,7 @@
   csedweek_map_search_search: Keresés
   csedweek_map_search_reset: Visszaállítás
   csedweek_map_legend_title: Jelmagyarázat
-  csedweek_map_legend_event: A Kódolás Órája esmény
+  csedweek_map_legend_event: Kódolás Órája esemény
   csedweek_map_legend_cs_tech_jam: Informatikai stúdió
   cded_sign_up: Regisztrálás
   cded_try_it: Próbáld ki
@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: Gratulálok, teljesítetted a 2. Szintet
   congratulations_on_completing_course3: Gratulálok, teljesítetted a 3. Szintet
   congratulations_on_completing_course4: Gratulálok, teljesítetted a 4. Szintet
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Gratulálok, teljesítetted a Nehezített
     szintet
   congrats_next_tutorials_title: Ezután próbálja meg ezeket a tanfolyamokat
@@ -252,17 +258,23 @@
   continue_learning_header: Folytasd a tanulást az első Kódolás Óra után is
   continue_learning_body: Több választási lehetősége is van. Tanulhat akár online,
     esetleg egy helyi iskolában, vagy nyári táborban.
-  learn_code_studio: Try Code Studio courses
+  learn_code_studio: Próbáld ki a Code.org tanfolyamait
   learn_next_level: Tovább a következő szintre
   learn_online: Megpróbáljon ki  más online tanfolyamokat
   learn_classes: Találjon helyi osztályokat
-  learn_back_to_minecraft: Keep learning with Minecraft
+  learn_back_to_minecraft: Folytasd a tanulást a Minecrafttal
   hoc_is_here: Tanuljon meg programozni. És minden megváltozik. https://youtu.be/xJqSu1IbcHg.
   just_did_hoc: "Épp most csináltam végig a #HourOfCode -t - nézd meg! @codeorg"
   just_did_course1: I just finished Course 1 - check it out! @codeorg
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: "Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: 10-ből 9 ember szerint már az általános iskolában el kellene kezdeni
     az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
@@ -323,6 +335,10 @@
     &ldquo;A számítástechnika a világ
     legjobb lehetőségeit nyitja meg.&rdquo;
     Satya, a Microsoft vezérigazgatója
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ha kódolsz, akkor életed legjobb tanfolyamán vehetsz részt.&rdquo;
     Chris Bosh
@@ -350,7 +366,7 @@
   homepage_hero_text_stat_served: 'A Kódolás órája: #served megtartva'
   homepage_slot_text_hoc: A kódolás órája
   homepage_slot_text_frozen: Jégvarázs Annával és Elzával
-  homepage_slot_text_teacher: Teacher Dashboard
+  homepage_slot_text_teacher: Tanári nyitólap
   homepage_slot_text_studio: Az összes gyakorlatunk
   homepage_slot_text_course4: 4. tanfolyam
   homepage_slot_text_shop: "Áruház"
@@ -383,14 +399,15 @@
   homepage_banner_congress: America's leaders are calling on Congress to fund K-12
     computer science.
   homepage_banner_congress_link: Add your support
-  homepage_banner_emailprivacy: We’re making an important change to how we support
-    student privacy.
-  homepage_banner_emailprivacy_link: Read more
+  homepage_banner_emailprivacy: Egy fontos változást vezettünk be a tanulók adatainak
+    védelme érdekében.
+  homepage_banner_emailprivacy_link: Tudj meg többet
   homepage_banner_40k_teachers: We've prepared 40,000 new computer science teachers.
   homepage_banner_40k_teachers_link: Tudj meg többet
   homepage_slot_text_title_hoc: A kódolás órája
   homepage_slot_text_blurb_hoc: Bárki megtanulhatja. Kezdd el ma
   homepage_slot_text_link_hoc: Próbáld ki a Kódolás Óráját
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Tarts egy Kódolás óráját
   homepage_slot_text_link_hocserved: "# fő már kipróbálta"
   homepage_solot_text_link_volunteer: "Önkéntes az kódolás órájához"
@@ -413,9 +430,9 @@
   homepage_slot_text_link_stats: Nézd meg a statisztikákat
   homepage_slot_text_link_buy: Légy részese
   homepage_slot_text_link_donate: Adományozz
-  homepage_slot_text_link_shop: T-shirts, hats, & more
-  homepage_header_codestudio: Kód stúdiós diákalkotások
-  homepage_header_donors: A Code.org megköszöni a támogatásokat
+  homepage_slot_text_link_shop: Pólók, sapkák & egyéb
+  homepage_header_codestudio: Code.org tanulóinak alkotásai
+  homepage_header_donors: A Code.org megköszöni a támogatókat
   homepage_donors_seall: "Összes megtekintése"
   homepage_donors_donate: Támogatás
   contact_form_topic_student: Diák vagyok
@@ -482,17 +499,18 @@
   mc_gradelevel: 6-tól 106 éves korig
   mc_platformtext: Modern böngészők, okostelefonok, tabletek
   mc_specs: Több nyelven | Modern böngészők, táblagépek | 6-tól 106 éves korig
-  minecraft_designer: Minecraft Designer
-  minecraft_adventurer: Minecraft Adventurer
-  minecraft_tutorials: Minecraft Hour of Code Tutorials
-  minecraft_specs: Many languages | Modern browsers and tablets | Grades 2+
-  minecraft_designer_description: Program animals and enemies in your own version
-    of Minecraft.
+  minecraft_designer: Minecraft tervező
+  minecraft_adventurer: Minecraft kaland
+  minecraft_tutorials: Minecraft Kódolás órája gyakorlatok
+  minecraft_specs: Több nyelven | Modern böngészők, táblagépek | 2. osztálytól
+  minecraft_designer_description: Programozz állatokat és egyéb Minecraft lényeket
+    a saját Minecraft verziódban.
   minecraft_designer_button: Kezdés
-  minecraft_adventurer_description: Use code to take Alex or Steve on an adventure.
+  minecraft_adventurer_description: Használj kódot, hogy átsegítsd Alexet vagy Steve-et
+    a kalandokon!
   minecraft_adventurer_button: Kezdés
-  minecraft_no_internet: Don't have Internet?
-  minecraft_download_adventurer: Download the offline version of Minecraft Adventurer.
+  minecraft_no_internet: Nincs internet?
+  minecraft_download_adventurer: Töltsd le a Minecraft kaland offline verzióját!
   minecraft_subtitle: Minecraft Kódolás Órája
   sports_page_title: Sports Hour of Code
   sports_og_title: Hour of Code Sports Tutorials
@@ -524,40 +542,38 @@
   sports_athlete_Marco: Marco Belinelli, NBA Champion, Charlotte Hornets
   sports_athlete_Neymar: Neymar Jr., Olympic Gold Medalist and Soccer/Futbol Player,
     FC Barcelona and Brazil National Team
-  sports_athlete_Sarah: Sarah Quita Offringa, Windsurfing Champion
-  sports_athlete_Marcelo: Marcelo, Soccer/Futbol Champion, Real Madrid and Brazil
-    National Team
-  sports_athlete_Erika: Erika Olivera, Champion Marathon Runner
-  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
-  sports_athlete_Chris: Chris Bosh, Olympic Gold Medalist and NBA Champion, Miami
-    Heat
-  sports_athlete_Harrison: Harrison Barnes, Olympic Gold Medalist and NBA Champion,
-    Dallas Mavericks
-  watch_inspirational_videos: Before you get started, watch one of these inspirational
-    videos
+  sports_athlete_Sarah: Sarah Quita Offringa, szörf bajnok
+  sports_athlete_Marcelo: Marcelo, foci bajnok, a Real Madrid és a Brazil Nemzeti
+    Csapat tagja
+  sports_athlete_Erika: Erika Olivera, maraton futó bajnok
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards csapatában
+  sports_athlete_Chris: Chris Bosh, olimpiai aranyérmes és NBA bajnok, Miami Heat
+    csapatában
+  sports_athlete_Harrison: Harrison Barnes, olimpiai aranyérmes és NBA bajnok, Dallas
+    Mavericks csapatában
+  watch_inspirational_videos: Mielőtt elkezdenéd, nézd meg az egyik inspiráló videót
   video_title_cs_is_everything: Computer Science is Changing Everything
   video_title_inspire_girl: Inspirálj egy lányt
-  video_title_cs_intro: Computer Science intro
-  video_title_schools_dont_teach: What Most Schools Don't Teach
-  video_title_obama: President Obama on computer science
-  video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
-  video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
-  video_title_chris_bosh: Chris Bosh on Computer Science
-  video_1min: 1 min
-  video_2min: 2 min
-  video_5min: 5 min
-  speak_another_language: Speak another language?
-  help_translate: Help us translate.
-  no_internet: Don't have Internet?
-  download_offline: Download the offline version.
+  video_title_cs_intro: Bevezetés a számítástechnikába
+  video_title_schools_dont_teach: Amit a legtöbb iskola nem tanít
+  video_title_obama: Obama, amerikai elnök, a számítógéptechnológiáról
+  video_title_hoc_is_here: A Kódolás Órája elérkezett - Mindenki tanulhat
+  video_title_anybody_can_learn: Mindenki tanulhat
+  video_title_draymond_green: Kódolás Órája Draymond Greennel
+  video_title_russell_okung: Kódolás Órája Russell Okunggal
+  video_title_real_madrid: Kódolás Órája a Real Madriddal
+  video_title_marco_belinelli: Kódolás Órája Marco Belinellivel
+  video_title_chris_bosh: Chris Bosh a számítógéptechnikáról
+  video_1min: 1 perc
+  video_2min: 2 perc
+  video_5min: 5 perc
+  speak_another_language: Más nyelven beszélsz?
+  help_translate: Segíts nekünk fordítani.
+  no_internet: Nincs internet?
+  download_offline: Töltsd le az offline verziót.
   are_you_teacher: Tanár vagy?
-  review_lesson_plan: Review the lesson plan and other teacher resources.
-  volunteer_engineer_submission_title: "Ösztönözz tanulókat és önkénteseket a Kódolás
-    Órájára."
+  review_lesson_plan: Nézd át a tanóra terveket és egyéb oktatói segédanyagokat.
+  volunteer_engineer_submission_title: "Ösztönözz tanulókat és jelentkezz önkéntesnek"
   volunteer_engineer_submission_subtitle_generic: '100 000 tanár for Kódolás Óráját
     tartani idén az osztályában, 2015. december 7-13 között. Szükségük van a segítségedre! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} tanárnak van szüksége
@@ -610,8 +626,8 @@
     tapasztalataidat és hogy hogyan vennél részt önkéntesként."
   volunteer_engineer_submission_field_description_placeholder: Tapasztalat vagy munkaelőzmény
     leírása. Ha beszélsz az angolon kívül más nyelvet mindenképp említsd meg.
-  volunteer_engineer_submission_header_private: Az információt bizalmasan kezeljük
-    és nem adjuk tovább harmadik személyeknek
+  volunteer_engineer_submission_header_private: Bizalmasan kezeljük az adatokat, nem
+    osztjuk meg senkivel
   volunteer_engineer_submission_field_email: E-mail cím
   volunteer_engineer_submission_field_email_desc: Email-címedet soha nem osztjuk meg
     senkivel, de értesítést küldünk tanári felkérésekről.
@@ -751,7 +767,7 @@
   dashboard_action_remove_confirm: Törlöd?
   dashboard_action_done: Kész
   dashboard_action_required: szükséges
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: Oklevelek nyomtatása
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
@@ -800,21 +816,23 @@
   dashboard_progress_pair_programming: pair programming
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
-  dashboard_sections_new_section: "Új szekció"
-  dashboard_sections_jumbotron_instruction: Hozz létre új szekciókat és adj hozzá
-    diákokat. Szekciók használatával a diákokat kisebb csoportokba szervezheted, így
+  dashboard_sections_new_section: "Új csoport"
+  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_jumbotron_instruction: Hozz létre új csoportokat és adj hozzá
+    diákokat. Csoportok használatával a diákokat kisebb egységekbe szervezheted, így
     követheted nyomon fejlődésüket és kezelheted a fiókjukat.
-  dashboard_sections_table_section: Szakasz
+  dashboard_sections_table_section: Csoport
   dashboard_sections_table_secret: Bejelentkezés típusa
   dashboard_sections_table_grade: "Évfolyam"
   dashboard_sections_table_course: Tanfolyam
-  dashboard_sections_table_stage_extras: Stage Extras
+  dashboard_sections_table_pairing_allowed: Páros programozás
+  dashboard_sections_table_stage_extras: Extra szakasz feladatok
   dashboard_sections_table_students: Tanuló
   dashboard_sections_table_code: Szakasz kódja
-  dashboard_sections_name: Szekció neve
+  dashboard_sections_name: Csoport neve
   dashboard_sections_choose_secret: Ha szeretnél hozzáférést biztosítani a diákjaid
     számára, akkor válassz a titkos <b>kép</b> vagy <b>szó</b> azonosítás közül az
-    adott szekciónál.
+    adott csoportnál.
   dashboard_sections_secret_word: A <b>szó</b> azonosítás lehetővé teszi, hogy minden
     diákhoz egy titkos szót állíts be.
   dashboard_sections_secret_picture: A <b>kép</b> azonosítás lehetővé teszi, hogy
@@ -824,23 +842,25 @@
     sem</b> pontot.
   dashboard_sections_print_secrets: Ezután kinyomtathatod diákoknak kiosztható, saját
     hozzáférési adataikat tartalmazó kártyákat.
-  dashboard_sections_switch_section: 'Válassz szekciót:'
+  dashboard_sections_switch_section: 'Válts csoportot:'
   dashboard_sections_close: Bezár
-  dashboard_sections_move_students_desc: Select students to move to a new section.
-    Moving students will not clear their progress.
-  dashboard_sections_one_per_teacher: Students can only be in one section for each
-    teacher. Your students will be added to this new section and leave their old section.
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: 6-character code (ABCDEF)
-  dashboard_sections_other_section: Other Section
-  dashboard_sections_both_sections: Would you like the student(s) to be in both sections?
-  dashboard_sections_yes_both: Yes, I want to copy student(s) to be in this current
-    section AND the new section
-  dashboard_sections_no_move: No, I want to move student(s) to be in the new section
-    only.
-  dashboard_sections_move_students: Move Students
-  dashboard_sections_assign_hoc_script_desc: Participating in the Hour of Code?
+  dashboard_sections_move_students_desc: Válassz ki tanulókat, hogy másik csoportba
+    tedd őket. A tanulók áthelyezésével nem törlődnek az eredményeik.
+  dashboard_sections_one_per_teacher: A tanulók egy tanárnak csak egy csoportjában
+    szerepelhetnek. A tanulók az új csoportba fognak kerülni és el fogják hagyni a
+    régit.
+  dashboard_sections_move_to_section: 'Csoportba helyezés:'
+  dashboard_sections_enter_code: 'Add meg a csoport kódját:'
+  dashboard_sections_code_placeholder: 6 jegyű kód (ABCDEF)
+  dashboard_sections_other_section: Másik tanár
+  dashboard_sections_both_sections: Szeretnéd a tanulót (tanulókat) mindkét csoportban
+    szerepeltetni?
+  dashboard_sections_yes_both: Igen, a tanulót (tanulókat) másolni szeretném, hogy
+    ebben a csoportba ÉS az új csoportban is benne legyen.
+  dashboard_sections_no_move: Nem, a tanulót (tanulókat) csak az új szekcióba szeretném
+    átmozgatni.
+  dashboard_sections_move_students: Tanulók mozgatása
+  dashboard_sections_assign_hoc_script_desc: Részt veszel a Kódolás Óráján?
   dashboard_sections_assign_hoc_script_msg: Please note that we will not save progress
     in this course during the week of December 3-7, due to the unprecedented level
     of traffic our site will receive for the Hour of Code.  You may still assign the
@@ -851,12 +871,12 @@
     go beyond an Hour of Code to teach a course such as Computer Science Fundamentals.
      Our teacher dashboard will let you track your student's progress every other
     week of the year.
-  dashboard_sections_assign_activity: Assign Course
+  dashboard_sections_assign_activity: Tanfolyam kijelölése
   dashboard_error_none_selected: You didn't select any students to move. Please select
     at least one student.
-  dashboard_error_other_section: If you're moving students between your own sections,
-    select your section from the dropdown. Only select 'Other Section' to move your
-    students to a different teacher's section.
+  dashboard_error_other_section: Ha a tanulóidat másik csoportba szeretnéd tenni,
+    válaszd ki a csoportot a legördülő listából. Válaszd ki a "másik csoport" lehetőséget,
+    hogy áthelyezd a tanulókat egy másik tanári csoportba.
   dashboard_students_add_student: Diák hozzáadása
   dashboard_students_add_students: Több diák hozzáadása
   dashboard_students_add_multiple: "Írd vagy másold be diákjaid nevét, soronként egyet:"
@@ -918,8 +938,14 @@
   dashboard_course2: 'Második kurzus:'
   dashboard_course3: 'Harmadik kurzus:'
   dashboard_course4: '4. tanfolyam (béta): '
-  dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
-    these unplugged lessons</a> in your classroom.
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
+  dashboard_unplugged: Ha nincs számítógép,  <a href='%{unplugged_url}'>próbálja ki
+    ezeket az offline tanórákat </a> az osztályával!
   dashboard_curriculum: Tanterv
   dashboard_curriculum_overview: K-5 (alsó tagozatos) tananyag áttekintés
   dashboard_overview: "Összefoglaló"
@@ -1112,11 +1138,17 @@
   course3_name: 3. tanfolyam
   course4_name: 4. tanfolyam
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Gyorsított tanfolyam
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1140,7 +1172,7 @@
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
   cspexam2-AKwgAh1ac5_name: Test Part 2 - 25 questions
-  cspunit3_gradelevel: Grades 9-12
+  cspunit3_gradelevel: 9-12. évfolyam
   cspunit3_shortdescription_congrats: This unit introduces the foundational concepts
     of computer programming, which unlocks the ability to make rich, interactive apps.
     This course uses JavaScript as the programming language, and App Lab as the programming
@@ -1229,6 +1261,12 @@
   course2_gradelevel: 6-tól 18 éves korig
   course3_gradelevel: 8-tól 18 éves korig
   course4_gradelevel: 10-től 18 éves korig
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 8+ évfolyam
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-től 18 éves korig
   codeorg_platformtext: Modern böngészők, okostelefonok, tabletek
   codeintl_platformtext: Modern böngészők, okostelefonok, tabletek
@@ -1363,6 +1401,12 @@
     az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére
     a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel
     megoszthatnak. 4.-8. osztályosok számára ajánlott.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Tanuld meg a számítástechnika alapgondolatait drag&drop
     elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben
     szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld
@@ -1893,42 +1937,41 @@
   infinity_shortcode: inf
   playlab_shortcode: lejátszás
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
+  header_home: Főmenü
+  header_courses: tanfolyamok
   header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_sections: Csoportok
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_educate_overview: "Áttekintés oktatóknak"
+  header_educate_elementary: Alsó tagozat
+  header_educate_middle: Felső tagozat
+  header_educate_high: Középiskola
+  header_educate_hoc: A kódolás órája
+  header_educate_partner: Legyen a partnerünk
+  header_educate_beyond: A Code.org-on túl
+  header_educate_inspire: Motiválj egy tanulót
+  header_educate_community: Online közösség
+  header_educate_tools: Eszközök és videók
+  header_about_us: Rólunk
+  header_about_leadership: Vezetőség
+  header_about_donors: Adományozók
+  header_about_partners: Partnerek
+  header_about_team: Teljes csapat
+  header_about_news: Sajtósarok
+  header_about_evaluation: "Értékelés"
+  header_about_jobs: "Állás"
+  header_about_contact: Kapcsolat
+  header_about_faqs: GYIK
+  header_learn: Tanulj
+  header_teach: Taníts
   header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_help_us: Támogass minket
+  header_about: Rólunk
+  header_teacher_community: Tanári közösség
+  header_help_support: 'Segítség és támogatás '
+  header_report_bug: Hiba jelentése
+  header_tutorials: Gyakorlatok
+  header_documentation: Dokumentáció
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

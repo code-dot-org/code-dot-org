@@ -45,10 +45,12 @@
     "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "expand_debugger": "true"
+    "expand_debugger": "true",
+    "encrypted_examples": "qHASsRt9P7AHes3CGv31taEEI1p2Wc54Ogr54/je7W6ikQfTCtkGJ8A+Dstz\nuQFRwxXp6do8vJtIxBqr8+GSbA==\n"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 16:37:52 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

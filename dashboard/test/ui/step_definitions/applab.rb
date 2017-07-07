@@ -112,18 +112,25 @@ When /^I drag a (\w+) into the app$/ do |element_type|
   @browser.execute_script(drag_script)
 end
 
+When /^I open the share dialog$/ do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
+    steps <<-STEPS
+      When I click selector ".project_share"
+      And I wait to see a dialog titled "Share your project"
+    STEPS
+  end
+end
+
 When /^I navigate to the shared version of my project$/ do
   steps <<-STEPS
-    When I click selector ".project_share"
-    And I wait to see a dialog titled "Share your project"
+    When I open the share dialog
     And I navigate to the share URL
   STEPS
 end
 
 When /^I navigate to the embedded version of my project$/ do
   steps <<-STEPS
-    When I click selector ".project_share"
-    And I wait to see a dialog titled "Share your project"
+    When I open the share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I copy the embed code into a new document
@@ -132,8 +139,7 @@ end
 
 When /^I navigate to the embedded version of my project with source hidden$/ do
   steps <<-STEPS
-    When I click selector ".project_share"
-    And I wait to see a dialog titled "Share your project"
+    When I open the share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"

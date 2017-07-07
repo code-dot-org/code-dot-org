@@ -27,16 +27,19 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.\",\"hint_id\":\"courseC_maze_programming2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05df2a28a83595398cf3c2a1c2a2ec9f/courseC_maze_programming2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To use a `move forward` block, drag it from the toolbox out into the workspace and connect it to the `when run` block.\",\"hint_id\":\"courseC_maze_programming2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05df2a28a83595398cf3c2a1c2a2ec9f/courseC_maze_programming2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If the bird isn't getting to the pig, make sure all of the blocks have been fully clicked together, then click \\\"Run\\\" again.\",\"hint_id\":\"courseC_maze_programming2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f29043c7dcce30b105a0d96f68d65827/courseC_maze_programming2.mp3\"}]",
     "markdown_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseC_maze_programming2_1\",\r\n  \"callout_text\": \"This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles.\",\r\n  \"element_id\": \"#toolbox-header\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 100\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "maze_data": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 03:32:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

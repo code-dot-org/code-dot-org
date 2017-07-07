@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Gratulacje z okazji ukończenia Kursu 2"
   congratulations_on_completing_course3: "Gratulacje z okazji ukończenia Kursu 3"
   congratulations_on_completing_course4: "Gratulacje z okazji ukończenia Kursu 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Gratulacje z okazji ukończenia Przyśpieszonego Kursu"
   congrats_next_tutorials_title: "Przejdź na następny poziom"
   congrats_next_tutorials_desc: "Wypróbuj te krótkie, jednogodzinne samouczki lub wypróbuj <a href=\"%{current_path}/next\">samouczki partnerów</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg"
   just_did_course3: "Właśnie skończyłem Kurs 3 - sprawdź to! @codeorg"
   just_did_course4: "Właśnie skończyłem Kurs 4 - sprawdź to! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg"
   twitter_teach_cs: "9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki. http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/."
   twitter_cs_foundational: "Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY."
@@ -244,6 +256,10 @@
     Sheryl, COO Facebook
   homepage_hero_text_satya: |-
     &ldquo;Informatyka może odblokować najlepsze możliwości na świecie.&rdquo; Satya, CEO firmy Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę swojego życia&rdquo; Chris Bosh
   homepage_hero_text_student1: |-
@@ -302,6 +318,7 @@
   homepage_slot_text_title_hoc: "Godzina Kodowania"
   homepage_slot_text_blurb_hoc: "Każdy może się nauczyć . Zacznij dzisiaj"
   homepage_slot_text_link_hoc: "Weź udział w Godzinie Kodowania (the Hour of Code)"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Zorganizuj Godzinę Kodowania"
   homepage_slot_text_link_hocserved: "# spróbowało"
   homepage_solot_text_link_volunteer: "Zostań wolontariuszem w Godzinie Kodowania"
@@ -325,7 +342,7 @@
   homepage_slot_text_link_buy: "Angażuj się"
   homepage_slot_text_link_donate: "Ofiaruj darowiznę"
   homepage_slot_text_link_shop: "Koszulki, czapki i inne"
-  homepage_header_codestudio: "Twórczość uczniów Studia Kodowania"
+  homepage_header_codestudio: "Twórczość uczniów Code Studio"
   homepage_header_donors: "Code.org dziękuje za wsparcie"
   homepage_donors_seall: "Zobacz wszystkich"
   homepage_donors_donate: "Podaruj"
@@ -613,11 +630,13 @@
   dashboard_responses_view: 'Wyświetl odpowiedzi w:'
   dashboard_responses_none: "Większość naszych lekcji jest przeznaczona dla młodszych dzieci i nie wymaga od nich wpisywania odpowiedzi tekstowych, zatem nie znajdziesz ich tutaj. W przypadku kursów dla gimnazjalistów i licealistów, ich odpowiedzi na tekstowe pytania otwarte znajdziesz wybierając odpowiedni kurs z rozwijanej listy powyżej."
   dashboard_sections_new_section: "Nowa sekcja"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Utwórz nowe sekcje i dodaj do nich uczniów. Sekcje umożliwiają podział uczniów na mniejsze grupy, dzięki czemu łatwiej jest śledzić ich postępy i zarządzać ich kontami."
   dashboard_sections_table_section: "Sekcja"
   dashboard_sections_table_secret: "Typ logowania"
   dashboard_sections_table_grade: "Poziom/Ocena"
   dashboard_sections_table_course: "Kurs (lekcja)"
+  dashboard_sections_table_pairing_allowed: "Programowanie w parach"
   dashboard_sections_table_stage_extras: "Ekstra aktywności"
   dashboard_sections_table_students: "Uczniowie"
   dashboard_sections_table_code: "Kod Sekcji"
@@ -689,6 +708,12 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Jeśli nie masz komputerów, <a href='%{unplugged_url}'> spróbuj tych lekcji bez komputera</a> w klasie."
   dashboard_curriculum: "Program nauczania"
   dashboard_curriculum_overview: "Streszczenie programu (curriculum) dla K-5"
@@ -857,11 +882,17 @@
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
   coursea-draft_name: Kurs A
+  coursea_name: "Kurs A"
   courseb-draft_name: Kurs B
+  courseb_name: "Kurs B"
   coursec-draft_name: Kurs C
+  coursec_name: "Kurs C"
   coursed-draft_name: Kurs D
+  coursed_name: "Kurs D"
   coursee-draft_name: Kurs E
+  coursee_name: "Kurs E"
   coursef-draft_name: Kurs F
+  coursef_name: "Kurs F"
   accelerated_name: "Przyspieszony Kurs"
   cspunit1_name: '(stary) Unit 1: Informacje cyfrowe'
   cspunit2_name: '(stary) Unit 2: Internet'
@@ -869,9 +900,9 @@
   cspunit4_name: '(stary) Unit 4: Dane'
   cspunit5_name: '(stary) Unit 5: Wypróbuj i Utwórz PT'
   cspunit6_name: 'Post-AP: Baz Danych w Aplikacjach'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -904,7 +935,7 @@
   hoc_category_name: "Godzina Kodowania"
   csf_category_name: "Podstawy Informatyki"
   csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "Podstawy Informatyki '15-'16"
   csp17_category_name: "Podstawy Informatyki '16-'17"
   cspexams_category_name: "Praktyczny Test Podstaw Informatyki"
@@ -968,6 +999,12 @@
   course2_gradelevel: "W wieku 6-18"
   course3_gradelevel: "W wieku 8-18"
   course4_gradelevel: "W wieku 10-18"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "Klasa 8+"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "W wieku 10-18"
   codeorg_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
   codeintl_platformtext: "Nowoczesne przeglądarki, smartfony, tablety"
@@ -1070,6 +1107,12 @@
   course2_shortdescription_congrats: "Dla uczniów z podstawową umiejętnością czytania, ten kurs jest oparty na Kursie 1. Uczniowie będą tworzyli programy, by rozwiązywać problemy i rozwijać interaktywne gry lub historyjki, którymi mogą się dzielić. Zalecane dla klas 2-5."
   course3_shortdescription_congrats: "Czy jesteście gotowi na następny poziom? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-5."
   course4_shortdescription_congrats: "Czy jesteście gotowi iść dalej? Uczniowie będą zgłębiać zagadnienia programowania wprowadzone w poprzednich kursach znajdując elastyczne rozwiązania dla bardziej złożonych problemów. Do końca tego kursu uczniowie tworzą interaktywne historie i gry, którymi mogą się dzielić z każdym. Zalecane dla klas 4-8."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   codeintl_longdescription: "Poznaj podstawowe pojęcia informatyki programując metodą przeciągnij i upuść. To jest jak gra, samodzielny samouczek z wykładami wideo Billa Gatesa, Marka Zuckerberga oraz udziałem Angry Birds i Plants vs. Zombies w rolach głównych. Nauczysz się stosować pętle, warunki oraz podstawowe algorytmy. Materiały są dostępne w 34 językach."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
@@ -1313,3 +1356,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Strona główna"
+  header_courses: "Kursy"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sekcje"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Przegląd edukatora"
+  header_educate_elementary: "Szkoła podstawowa"
+  header_educate_middle: "Gimnazjum"
+  header_educate_high: "Liceum"
+  header_educate_hoc: "Godzina Kodowania"
+  header_educate_partner: "Nasz partner"
+  header_educate_beyond: "Poza Code.org"
+  header_educate_inspire: "Inspiruj ucznia"
+  header_educate_community: "Społeczność online"
+  header_educate_tools: "Narzędzia i filmy"
+  header_about_us: "O nas"
+  header_about_leadership: "Przywództwo"
+  header_about_donors: "Darczyńcy"
+  header_about_partners: "Partnerzy"
+  header_about_team: "Cały zespół"
+  header_about_news: "Aktualności"
+  header_about_evaluation: "Ocenianie"
+  header_about_jobs: "Praca"
+  header_about_contact: "Skontaktuj się z nami"
+  header_about_faqs: "Najczęściej zadawane pytania (FAQ)"
+  header_learn: "Ucz się"
+  header_teach: "Ucz"
+  header_stats: "Statystyki"
+  header_help_us: "Pomóż nam"
+  header_about: "O programie"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "Podstawy Informatyki '16-'17"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

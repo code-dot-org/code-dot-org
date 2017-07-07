@@ -1,6 +1,7 @@
 ---
 title: How to help
 theme: responsive
+style_min: true
 ---
 
 # How to Help

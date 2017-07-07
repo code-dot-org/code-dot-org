@@ -1345,7 +1345,7 @@
           peuvent comprendre est vraiment important. C'est pourquoi chaque étape doit
           être écrite, pour que peu importe qui suit ces étapes, le résultat reste
           le même.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Jusqu'ici, tu as fait une animation ou une histoire qui se rejoue à
@@ -1497,7 +1497,7 @@
         text: Dans cet exemple, nous allons dire que SI la fleur pourpre a du nectar
           supérieur à 0, alors il faut « Recueillir du nectar ». Cela va dire à notre
           abeille de continuer à recueillir du nectar tant qu’il y en a. La-la !
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: As-tu déjà entendu parler de déboguer un programme ? C’est la façon

@@ -51,6 +51,10 @@ class Game < ActiveRecord::Base
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
 
+  def self.bounce
+    @@game_bounce ||= find_by_name("Bounce")
+  end
+
   def self.unplugged
     @@game_unplugged ||= find_by_name("Unplugged")
   end
@@ -65,6 +69,10 @@ class Game < ActiveRecord::Base
 
   def self.custom_artist
     @@game_custom_artist ||= find_by_name("Custom")
+  end
+
+  def self.custom_flappy
+    @@game_custom_flappy ||= find_by_name("CustomFlappy")
   end
 
   def self.calc
@@ -156,7 +164,7 @@ class Game < ActiveRecord::Base
   end
 
   def supports_sharing?
-    app == TURTLE || app == FLAPPY || app == BOUNCE || app == STUDIO || app == STUDIO_EC || app == APPLAB || app == CRAFT || app == GAMELAB || app == WEBLAB
+    [TURTLE, FLAPPY, BOUNCE, STUDIO, STUDIO_EC, APPLAB, CRAFT, GAMELAB, WEBLAB].include? app
   end
 
   def sharing_filtered?
@@ -168,7 +176,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_droplet?
-    name == "MazeEC" || name == "ArtistEC" || name == "Applab" || name == "StudioEC" || name == "Gamelab"
+    %w(MazeEC ArtistEC Applab StudioEC Gamelab).include? name
   end
 
   def uses_pusher?
@@ -176,20 +184,20 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    app == NETSIM || app == APPLAB || app == TEXT_COMPRESSION || app == GAMELAB || app == WEBLAB
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB].include? app
   end
 
   # True if the app takes responsibility for showing footer info
   def owns_footer_for_share?
-    app === APPLAB || app == WEBLAB
+    [APPLAB, WEBLAB].include? app
   end
 
   def has_i18n?
-    !(app == NETSIM || app == APPLAB || app == GAMELAB || app == WEBLAB)
+    !([NETSIM, APPLAB, GAMELAB, WEBLAB].include? app)
   end
 
   def use_firebase_for_new_project?
-    app == APPLAB || app == GAMELAB
+    [APPLAB, GAMELAB].include? app
   end
 
   def self.setup
@@ -258,6 +266,7 @@ class Game < ActiveRecord::Base
         Weblab:weblab
         CurriculumReference:curriculum_reference
         Map:map
+        CustomFlappy:flappy
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

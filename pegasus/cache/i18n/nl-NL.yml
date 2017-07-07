@@ -98,6 +98,12 @@
     3
   congratulations_on_completing_course4: Gefeliciteerd met het voltooien van cursus
     4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Gefeliciteerd met het voltooien van de
     Versnelde Cursus
   congrats_next_tutorials_title: Probeer nu deze opdrachten
@@ -272,6 +278,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Waarom wordt informatica niet op meer scholen onderwezen? Wij
     kunnen dit veranderen. http://youtu.be/nKIu9yen5nc. Bezoek http://code.org voor
@@ -327,6 +339,10 @@
     moeten de kans krijgen informatica te leren&rdquo; Sheryl, directeur van Facebook"
   homepage_hero_text_satya: "&ldquo;Informatica geeft je toegang tot de mooiste kansen
     ter wereld.&rdquo; Satya, directeur van Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo;
     Chris Bosh"
   homepage_hero_text_student1: |-
@@ -404,6 +420,7 @@
   homepage_slot_text_title_hoc: Uur Code
   homepage_slot_text_blurb_hoc: Iedereen kan het leren. Begin vandaag
   homepage_slot_text_link_hoc: Probeer een Uur Code
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organiseer een 'Hour of Code'
   homepage_slot_text_link_hocserved: "# bediend"
   homepage_solot_text_link_volunteer: Word vrijwilliger voor het Uur Code
@@ -816,6 +833,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nieuw onderdeel
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Maak nieuwe groepen aan en voeg er studenten
     aan toe. Groepen helpen u met het verdelen van studenten in kleinere groepen,
     zodat u makkelijker hun vorderingen kunt bijhouden en hun accounts  beheren.
@@ -823,6 +841,7 @@
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_grade: Cijfer
   dashboard_sections_table_course: Cursus
+  dashboard_sections_table_pairing_allowed: Programmeren in Tweetallen
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Leerlingen
   dashboard_sections_table_code: Groepscode
@@ -933,6 +952,12 @@
   dashboard_course2: 'Cursus 2:'
   dashboard_course3: 'Cursus 3:'
   dashboard_course4: 'Cursus 4 (bèta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Lesprogramma
@@ -1123,11 +1148,17 @@
   course3_name: Cursus 3
   course4_name: Les 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: versnelde cursus
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1240,6 +1271,12 @@
   course2_gradelevel: Leeftijden 6 + (kunnen lezen vereist)
   course3_gradelevel: Leeftijden 8 + (na cursus 2)
   course4_gradelevel: Leeftijden 10 + (na cursus 3)
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Rang 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Leeftijden 10 + (na cursus 3)
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
@@ -1374,6 +1411,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en
     drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds,
     Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg.
@@ -1899,9 +1942,8 @@
   infinity_shortcode: inf
   playlab_shortcode: afspelen
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Cursussen
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1909,15 +1951,15 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Uur Code
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
   header_educate_community: Online Community
   header_educate_tools: Tools and Videos
-  header_about_us: About Us
+  header_about_us: Over Ons
   header_about_leadership: Leadership
-  header_about_donors: Donors
+  header_about_donors: Sponsors
   header_about_partners: Partners
   header_about_team: Full Team
   header_about_news: Newsroom
@@ -1927,7 +1969,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: Statistieken
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1935,6 +1977,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

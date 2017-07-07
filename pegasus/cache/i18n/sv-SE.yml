@@ -88,6 +88,12 @@
   congratulations_on_completing_course2: Congratulations on completing Course 2
   congratulations_on_completing_course3: Congratulations on completing Course 3
   congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
   congrats_next_tutorials_title: Testa dessa nästa lektionerna
@@ -258,6 +264,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Varför undervisar  inte fler skolor i datavetenskap? Vi kan ordna
     detta. http://youtu.be/nKIu9yen5nc. Besök http://code.org/ för mer information.
@@ -314,6 +326,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Datavetenskap kan ge dig de bästa möjligheter i världen.&rdquo;
     Satya, CEO Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Om du kodar, kan du välja din egen kurs i livet.&rdquo;
     Chris Bosh
@@ -382,6 +398,7 @@
   homepage_slot_text_title_hoc: Timmen med Kod
   homepage_slot_text_blurb_hoc: Alla kan lära sig. Börja idag
   homepage_slot_text_link_hoc: Prova Kodtimmen
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Anordna en Kodtimme
   homepage_slot_text_link_hocserved: "# serverad"
   homepage_solot_text_link_volunteer: Ställ upp som frivillig för Hour of Code
@@ -759,7 +776,7 @@
   dashboard_surveys_answers: Undersökningar
   dashboard_percent: Procent
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_all: Alla
   dashboard_download_csv: Ladda ner CSV
   dashboard_navigation_home_page: Lärare hemsida
   dashboard_navigation_section_student_progress: Elevkonton och framsteg
@@ -793,6 +810,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Ny sektion
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Skapa nya grupper och lägg till elever
     i dem. Sektionerna hjälper dig att organisera elever i mindre grupper så att du
     kan följa deras framsteg och hantera deras konton.
@@ -800,6 +818,7 @@
   dashboard_sections_table_secret: Inloggningstyp
   dashboard_sections_table_grade: "Årskurs"
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_pairing_allowed: Par-programmering
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Elever
   dashboard_sections_table_code: Avsnitt kod
@@ -906,6 +925,12 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Läroplan
@@ -1095,11 +1120,17 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   coursea-draft_name: Kurs A
+  coursea_name: Kurs A
   courseb-draft_name: Kurs B
+  courseb_name: Kurs B
   coursec-draft_name: Kurs C
+  coursec_name: Kurs C
   coursed-draft_name: Kurs D
+  coursed_name: Kurs D
   coursee-draft_name: Kurs E
+  coursee_name: Kurs E
   coursef-draft_name: Kurs F
+  coursef_name: Kurs F
   accelerated_name: Snabbkurs
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1212,6 +1243,12 @@
   course2_gradelevel: "Åldrar 6 + (läsförmåga krävs)"
   course3_gradelevel: "Åldrar 8 + (efter kurs 2)"
   course4_gradelevel: "Åldrar 10 + (efter kurs 3)"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Grade 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Åldrar 10 + (efter kurs 3)"
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
@@ -1342,6 +1379,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Lär dig grundläggande begrepp av datavetenskap med dra
     och släpp-programmering. Detta är en spel-liknande, självförklarande handledningar
     video föreläsningar med Bill Gates, Mark Zuckerberg, Angry Birds och Plants vs.
@@ -1847,42 +1890,41 @@
   infinity_shortcode: inf
   playlab_shortcode: spela
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
+  header_home: Hem
+  header_courses: kurser
+  header_project_gallery: Projektgalleriet
+  header_sections: Avsnitt
+  header_professional_learning: Kollaborativt lärande
+  header_educate_overview: Pedagog översikt
+  header_educate_elementary: Grundskolan
+  header_educate_middle: Högstadiet
+  header_educate_high: Gymnasiet
+  header_educate_hoc: Timmen med Kod
+  header_educate_partner: Jobba med oss
+  header_educate_beyond: Bortom Code.org
+  header_educate_inspire: Inspirera en elev
   header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_educate_tools: Verktyg och videor
+  header_about_us: Om oss
+  header_about_leadership: Ledarskap
+  header_about_donors: Donatorer
+  header_about_partners: Samarbetspartners
+  header_about_team: Hela teamet
+  header_about_news: Nyhetsrum
+  header_about_evaluation: Utvärdering
+  header_about_jobs: Jobb
+  header_about_contact: Kontakta oss
+  header_about_faqs: Vanliga frågor
+  header_learn: Lär dig
+  header_teach: Undervisa
+  header_stats: Statistik
+  header_help_us: Hjälp oss
+  header_about: Om
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_documentation: Dokumentation
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

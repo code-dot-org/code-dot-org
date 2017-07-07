@@ -757,7 +757,7 @@
       4:
         image: notes/C2_paper_airplanes_4.png
         text: "当我们想要制作巧克力时，有许多大的步骤。而每一大步又可以分成很多更小的步骤，这些步骤又有不同的配方或者算法，它们会让巧克力有不同的味道。每个步骤都很重要，即使某些小步骤没有完成，可能剩下的事情都完成不了了。创建让其他人能够理解的算法真的很重要。这是为什么如果每一步都写下来了，不管谁来做，都能得到一样的结果。"
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: "你已经能做一个动画或者故事了，它每次都能在运行它的时候做出一样的动作。但现在你能做一个可以互动的，能玩的游戏了。"
@@ -834,7 +834,7 @@
       3:
         image: notes/C3_bee_conditionals_3.png
         text: "在这个例子中，我们会说“如果”紫色的花有大于0个花蜜，就采集花蜜。然后告诉蜜蜂不停的采集花蜜，直到变为0。哇塞！"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: "你以前听说过调试程序吗？这是一种找到哪里不正确的办法。当你调试代码时，你会找到并修好错误。"

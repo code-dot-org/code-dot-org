@@ -87,6 +87,12 @@
   congratulations_on_completing_course2: Gratulujeme ti k dokončeniu kurzu 2
   congratulations_on_completing_course3: Gratulujeme ti k dokončeniu kurzu 3
   congratulations_on_completing_course4: Gratulujeme ti k dokončeniu kurzu 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Gratulujeme ti k dokončeniu zrýchleného
     kurzu
   congrats_next_tutorials_title: Pokračovať na ďalšiu úroveň
@@ -260,6 +266,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: 9 z 10 ľudí súhlasí, že by školy mali učiť informatiku. http://youtu.be/nKIu9yen5nc.
     Navštív https://code.org/.
@@ -317,6 +329,10 @@
     Sheryl, COO Facebook
   homepage_hero_text_satya: "&ldquo;Počítačová veda odomyká \ntie najlepšie príležitosti
     sveta.&rdquo;\nSatya, CEO Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ak programuješ, môžeš si zvoliť
     smer svojho života.&rdquo;
@@ -390,6 +406,7 @@
   homepage_slot_text_title_hoc: Hodina kódovania
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni dnes
   homepage_slot_text_link_hoc: Vyskúšaj Hodinu Kódu
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Usporiadajte u vás Hodinu kódu
   homepage_slot_text_link_hocserved: "# účastníkov"
   homepage_solot_text_link_volunteer: Dobrovoľník pre Hodinu kódu
@@ -803,6 +820,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Nová sekcia
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Vytvorte nové oddiely a pridajte do nich
     študentov. Sekcie pomáhajú organizovať študentov do menších skupín, môžete sledovať
     ich postup a spravovať ich účty.
@@ -810,6 +828,7 @@
   dashboard_sections_table_secret: Spôsob prihlásenia
   dashboard_sections_table_grade: Stupeň
   dashboard_sections_table_course: Kurz
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Študenti"
   dashboard_sections_table_code: Kód sekcie
@@ -917,6 +936,12 @@
   dashboard_course2: 'Kurz 2:'
   dashboard_course3: 'Kurz 3:'
   dashboard_course4: 'Kurz 4: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Osnovy
@@ -1111,11 +1136,17 @@
   course3_name: Kurz 3
   course4_name: Kurz 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Zrýchlený kurz
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1228,6 +1259,12 @@
   course2_gradelevel: Vek 6-18
   course3_gradelevel: Vek 8-18
   course4_gradelevel: Ages 10-18
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Vek 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Ages 10-18
   codeorg_platformtext: Moderné prehliadače, smartfóny, tablety
   codeintl_platformtext: Moderné prehliadače, smartfóny, tablety
@@ -1358,6 +1395,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Nauč sa základné pojmy informatiky pomocou vizuálneho "drag
     & drop" programovania. Je to kurz pripomínajúci hru, ktorej tempo si určuješ sám.
     Vo videolekciách vystupujú hviezdy ako Bill Gates, Mark Zuckerberg, Angry Birds
@@ -1867,9 +1910,8 @@
   infinity_shortcode: inf
   playlab_shortcode: hrať
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: Kurzy
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1877,7 +1919,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: Hodina kódovania
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1895,14 +1937,14 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: "Štatistiky"
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_tutorials: Návody
+  header_documentation: Dokumentácia
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

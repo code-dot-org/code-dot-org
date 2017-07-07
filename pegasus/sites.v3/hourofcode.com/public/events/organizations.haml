@@ -4,10 +4,11 @@ layout: wide
 nav: events_nav
 ---
 -SOLR = Solr::Server.new(host:CDO.solr_server)
+-hoc_year = DCDO.get("hoc_year", 2017)
 
 -company_event_counts = Hash.new(0)
 
--events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup2017", "location_country_s:[* TO *]", "organization_name_s:[* TO *]", "hoc_company_s:[* TO *]"], sort:'location_country_s asc, location_state_s asc', rows:1000)
+-events = SOLR.query(q:"*:*", fq:["kind_s:HocSignup#{hoc_year}", "location_country_s:[* TO *]", "organization_name_s:[* TO *]", "hoc_company_s:[* TO *]"], sort:'location_country_s asc, location_state_s asc', rows:1000)
 -events.each do |event|
   -company = event['hoc_company_s'].to_s
   -company_event_counts[company] += 1

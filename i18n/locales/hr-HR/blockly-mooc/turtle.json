@@ -75,6 +75,7 @@
   "penUp":"podigni olovku",
   "reinfFeedbackMsg":"Evo vašeg crteža! Nastavite raditi na njemu ili prijeđite na idući zadatak.",
   "setAlpha":"postavi alfa",
+  "setCharacter":"set character to {character}",
   "setColour":"postavi boju",
   "setPattern":"postavi uzorak",
   "setWidth":"postavi širinu",

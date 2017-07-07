@@ -17,11 +17,14 @@
     errors:
       messages:
         blank: "è un dato obbligatorio"
+        blank_plural: are required
+        invalid_plural: are invalid
     attributes:
       user:
         name: Nome da visualizzare
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Indirizzo di posta elettronica
+        personal_email: Personal email address
         username: Nome utente
         password: password
         password_confirmation: Conferma della password
@@ -196,6 +199,9 @@
         le istruzioni per resettare la password.
       email: Indirizzo di posta elettronica
       submit: Invia
+    reset_errors:
+      invalid_email: It looks like you may have signed up with an invalid email address.
+        Please email support@code.org to receive a password recovery link.
     change_form:
       title: Cambia la tua password
       new_password: Nuova password
@@ -210,12 +216,12 @@
       Angry Birds e Plants vs Zombies! :-) \n\n%{name}\n"
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+      one: 'La tua sezione:'
+      other: 'Le tue sezioni:'
+    code_with_teacher: "%{section_code} con %{teacher_name}"
     confirm:
-      remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+      remove: Sicuro di voler lasciare questa sezione?
+    remove: "(rimuovi sezione)"
   follower:
     invite_sent: Invito spedito
     added_teacher: "%{name} è stato aggiunto come tuo insegnante"
@@ -236,95 +242,13 @@
   reports:
     error:
       access_denied: Non hai accesso alle statistiche di questa persona
-  redeem_prizes:
-    title: 'Richiedi i premi: %{name}'
-    provider: 'Fornitore:'
-    code: 'Codice del premio:'
-    redeem_header: 'Per richiedere i premi:'
-    donorschoose_register: Iscriviti come insegnante a DonorsChoose.org
-    donorschoose_project: Pubblica un progetto
-    donorschoose_how_to: Come usare il tuo codice-premio
-    success: Il tuo premio è stato richiesto correttamente, vedi il codice-premio
-      riportato di seguito.
-    error: Il premio non poteva essere richiesto, riprova.
-    error_us_only: L'offerta del premio vale solo per gli utenti degli Stati Uniti.
-    error_not_earned: Non hai ancora ottenuto questo premio.
-    error_already_redeemed: Il tuo premio è stato già richiesto.
-    no_prizes_available: Siamo spiacenti, ma attualmente non abbiamo premi disponibili.
-    teacher_info_required: 'I premi per l''insegnante richiedono nome ed indirizzo
-      della scuola:'
-    teacher_email_required: 'I premi per l''insegnante richiedono un indirizzo di
-      posta elettronica confermato:'
-    confirm:
-      title: Si prega di confermare
-      'no': 'No'
-      'yes': Sì
-      msg: Sei sicuro di voler richiedere il premio %{prize_name}?
-      msg_student: 'Attenzione: Puoi scegliere solo un tipo di premio.'
-      msg_publicschool: Per favore conferma di essere un insegnante di scuola pubblica
-        degli Stati Uniti.
-      msg_visit_website: Visita il sito
-    providers:
-      apple_itunes: "$10 Carta Regalo iTunes"
-      donors_choose: Buono di $750 di DonorsChoose.org
-      donors_choose_bonus: Buono di $250 di DonorsChoose.org
-      dropbox: 10GB di spazio su Dropbox
-      valve: Portal 2 (scarica gioco per PC o per Mac)
-      ea_bejeweled: Bejeweled 3 (scarica gioco per PC)
-      ea_fifa: FIFA Soccer 13 (scarica gioco per PC)
-      ea_simcity: SimCity 4 Deluxe Edition (scarica gioco per PC)
-      ea_pvz: Plants vs, Zombies (scarica gioco per PC)
-      skype: Credito Skype $10
-    msg:
-      choose: 'Scegli un premio:'
-      choose_teacher: 'Clicca sul logo qui sotto per richiedere il premio:'
-      earned: Hai vinto un premio! (Solo per gli studenti degli Stati Uniti)
-      not_earned_title: Finisci il corso e guadagna premi (solo per gli studenti degli
-        Stati Uniti)
-      not_earned: 'Impara tutti i concetti dell''informatica, raccogli tutti i %{num_trophies}
-        trofei e guadagna premi reali. È possibile scegliere tra 10GB di spazio di
-        archiviazione gratuito su Dropbox, 10 dollari in crediti Skype, e giochi gratuiti
-        da scaricare. Nota: offerta valida solo per gli studenti degli Stati Uniti
-        e solo fino ad esaurimento scorte.'
-      teacher:
-        earned: 15 o più studenti hanno ottenuto tutti i %{num_trophies} trofei. Hai
-          vinto un premio per l'insegnante! (Solo per gli insegnanti degli Stati Uniti)
-        not_earned_title: Insegna alla tua classe e guadagna fino a $1,000 in buoni
-          di <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          (solo per gli insegnanti degli Stati Uniti)
-        not_earned: Per premiare chi insegna informatica per la prima volta, puoi
-          guadagnare fino a $1.000 in buoni di <a href="http://DonorsChoose.org">DonorsChoose.org</a>
-          per guidare una classe attraverso uncorso di introduzione all'Informatica
-          per scuole elementari e medie inferiori. Per qualificarti, hai bisogno di
-          guidare con successo una classe di almeno 15 studenti attraverso l'intero
-          corso di introduzione all'Informatica per scuole elementari e medie inferiori,
-          con tutti i 15 alunni (o più) che completano tutti i corsi e guadagnano
-          tutti i %{num_trophies} trofei. Se 7 o più studenti che guadagnano tutti
-          i trofei sono ragazze, la tua ricompensa è $1.000 in buoni di <a target="_blank"
-          href="http://DonorsChoose.org">DonorsChoose.org</a>. Altrimenti, la tua
-          ricompensa è $750 in buoni di <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
-          I buoni di <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-          possono essere utilizzati solo dagli insegnanti delle scuole pubbliche degli
-          Stati Uniti.
-        bonus:
-          not_earned_title: Puoi ancora guadagnare ulteriori $250 in buoni di <a target="_blank"
-            href="http://DonorsChoose.org">DonorsChoose.org</a> (solo per gli insegnanti
-            degli Stati Uniti)
-          earned: 7 o più degli studenti che hanno raccolto tutti i %{num_trophies}
-            trofei sono ragazze. Hai vinto un premio bonus! (Solo per gli insegnanti
-            degli Stati Uniti)
-          not_earned: Se almeno 7 dei tuoi studenti che guadagnano tutti i %{num_trophies}
-            trofei sono ragazze, la tua ricompensa è un ulteriore buono da $250 di
-            <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>.
-            I buoni di <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>
-            possono essere utilizzati solo dagli insegnanti delle scuole pubbliche
-            degli Stati Uniti.
   crud:
     new_model: Nuovo %{model}
     show: Mostra
     edit: Modifica
     edit_model: Modifica %{model}
     update: Aggiorna
+    submit: Invia
     destroy: Elimina
     back: Indietro
     confirm: Sei sicuro?
@@ -341,13 +265,48 @@
         artist: Disegna qualcosa
         calculate: Calculate Something
         applab: Costruisci una App
+        gamelab: Make a Game Lab project
+      home: Home
+      courses: Corsi
+      project_gallery: Progetti
+      sections: Classi
+      help_support: Help and support
+      report_bug: Report Bug
+      teacher_community: Teacher community
+      professional_learning: Professional learning
+      documentation: Documentazione
+      tutorials: Tutorial
+      educate_overview: Panoramica dei corsi
+      educate_elementary: Scuola elementare
+      educate_middle: Scuola media
+      educate_high: Scuola superiore
+      educate_hoc: L'Ora del Codice
+      educate_partner: Collabora con noi
+      educate_beyond: Dopo Code.org
+      educate_inspire: Ispira uno studente
+      educate_community: Comunità Online
+      educate_tools: Strumenti e video
+      about_us: Chi siamo
+      about_leadership: Leadership
+      about_donors: Sostenitori
+      about_partners: Partner
+      about_team: Tutto il team
+      about_news: Rassegna stampa
+      about_evaluation: Valutazione
+      about_jobs: Lavora con noi
+      about_contact: Contattaci
+      about_faqs: FAQ
+      learn: Impara
+      stats: Statistiche
+      help_us: Aiutaci
+      teach: Insegna
+      about: Informazioni
     user:
       classroom: Cruscotto di Controllo dell'insegnante
       district_dashboard: Dashboard
       label: Ciao %{username}
       stats: I miei progressi
       settings: Il mio account
-      prizes: Premi
       logout: Esci
       signin: Accedi
       signup: Crea un account
@@ -410,6 +369,17 @@
     no_password_because_oauth: No password because you sign in with a third-party
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
+    create_personal_login: Create a personal login
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: Completato
     tried: Provato
@@ -466,13 +436,13 @@
       età)"
     heading_apps: "<h2>Divertimento per</h2><h1>tutti</h1>"
     heading_tools: "<h2>Pronto per il prossimo passo?</h2><h1>Strumenti JavaScript
-      per la Scuola Secondaria di Secondo Grado</h1>"
+      per la Scuola Superiore</h1>"
     heading_legacy: "<h2>Corso rapido</h2> per <h1>i più grandi</h1>"
     your_gallery: La tua collezione
     no_primary_course: Prova un corso di Code Studio
     choose_next_course: Prova un corso di Code Studio scegliendone uno qui sotto
     print_certificate: Stampa l'attestato
-    announcement_title: Annunci
+    announcement_title: Avvisi
     announcement_message_fall2016_features: Abbiamo passato l'estate a trasformare
       le vostre segnalazioni in nuove funzionalità. Ora, potete <a href="%{pp_url}"
       target="_blank">monitorare i vari progressi degli studenti</a> anche se stanno
@@ -499,7 +469,7 @@
       programma di informatica K-12.
     announcement_petition_button: Aggiungi il tuo nome
     announcement_go_beyond_button: Go beyond
-    announcement_apply_now: Apply now
+    announcement_apply_now: Applica ora
     announcement_all: Rimani aggiornato sulle nuove caratteristiche dei corsi di Code.org
       attraverso il <a href='%{teacher_blog_url}' target='_blank'>blog degli insegnanti
       (in inglese)</a>.
@@ -569,6 +539,19 @@
       on computer science in your school and apply for our high-quality professional
       learning programs <strong>at absolutely no cost to you or your school</strong>.
       Applications close on April 14th.
+    announcement_applab_export: App Lab, our web-based programming environment, now
+      supports exporting your code! You can start building apps with drag-and-drop
+      JavaScript blocks, then export the code to continue editing in any professional
+      development environment of your choice.
+    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your
+      CS Principles students taking the AP CS Exam will join over 50,000 other students
+      in the largest AP Exam launch in history. Now, let the voices of your students
+      be heard – remind them to complete the end-of-course survey! You'll be able
+      to review your students' responses and we'll also share an aggregate national
+      report with you."
+    announcement_navigation_redesign: |-
+      <b>In arrivo cambiamenti nella navigazione del sito</b><br/>
+      Con l'arrivo dell'estate, stiamo migliorando la navigazione nel sito Code.org in modo che tu possa avere accesso alle risorse principali da ogni parte del sito. Non appena accederai con la tua utenza di insegnante, ogni pagina avrà una nuova barra di navigazione con collegamenti a: Home, Corsi, Progetti, Classi e Professional Learning.
   move_students:
     new_section_dne: Ci dispiace, la classe col codice %{new_section_code} non esiste.
       Inserisci un codice di classe esistente.
@@ -729,8 +712,8 @@
       body: Questo corso rapido in 20 lezioni introduce in modo sintetico i concetti
         fondamentali dell'informatica e della programmazione. Il corso è pensato per
         l'uso nelle scuole a partire dai 10 anni, ma è divertente per imparare un
-        po' di informatica a qualunque età. Guarda i corsi 2-4 se vuoi sperimentare
-        in modo più approfondito.
+        po' di informatica a qualunque età. Fai i corsi 2, 3, 4 se vuoi imparare in
+        modo più graduale ed approfondito.
       body_short: Acquisisci le basi dell'informatica utilizzando una versione sintetica
         dei corsi 2-4.
     hoc2014:
@@ -739,6 +722,12 @@
     gallery:
       title: La tua collezione
       body: Guarda una collezione di app e immagini artistiche create dai nostri utenti
+    gamelab:
+      title: Game Lab (beta)
+      body: Game Lab is a programming environment where you can make simple animations
+        and games with objects and characters that interact with each other.
+      audience: Eta' 13+
+      cta: Scopri come
     frozen:
       title: Frozen
     starwars:
@@ -762,8 +751,18 @@
         le basi dell'informatica anche senza avere un computer! Puoi usare queste
         lezioni tradizionali sia come un corso a sé stante che come complemento agli
         altri corsi.
-      body_short: Se i computers non sono disponibili, prova queste lezioni tradizionali
-        in classe.
+      body_short: Se non hai un computer, prova queste lezioni tradizionali.
+    unplugged_conditionals:
+      title: Istruzioni condizionali
+      body: Quest'attività tradizionale ti introduce algoritmi ed istruzioni condizionali
+        usando un mazzo di carte.
+    widgets:
+      title: Widgets
+      body: Students can explore concepts from our Computer Science Principles course
+        hands-on using these digital tools. Use the widgets on their own, or create
+        a single-concept lesson for your class.
+      audience: Ages 14+
+      cta: Scopri come
   gallery:
     students_drew_these_with_code: Gli studenti li hanno disegnati con dei programmi!
     students_made_these_with_code: Gli studenti li hanno creati scrivendo del codice!
@@ -773,9 +772,9 @@
     activity_count: Negli ultimi <b>%{days}</b> giorni,  gli studenti hanno realizzato
       <b>%{count}</b> applicazioni e immagini scrivendo i loro programmi. Clicca sulle
       immagini per vedere ogni programma in azione.
-    want_to_make_your_own: Vuoi farne uno tuo?
-    how_to_save: Sull'ultimo livello di queste esercitazioni, fare clic su "Finish"
-      e "Salva" per salvare il vostro lavoro nella galleria.
+    want_to_make_your_own: Vuoi farne uno tu?
+    how_to_save: Al termine dell'ultimo esercizio di questi corsi, clicca su "Salva
+      e Pubblica" per salvare il tuo progetto nella collezione.
     more: Di più &rarr;
     caption_by_name_age: da %{name}, età %{age}
     caption_time_ago: "%{time_ago} fa"
@@ -900,6 +899,13 @@
       che i nostri strumenti per l'insegnamento di JavaScript potrebbero essere inaccessibili
       ai tuoi studenti prima di accettare esplicitamente i termini aggiornati.
     review_terms: Rivedi i termini dell'aggiornamento
+  school_info_interstitial:
+    title: Vogliamo portare l'Informatica ad ogni studente - aiutaci a tenere traccia
+      dei nostri progressi!
+    message: Per favore qui sotto inserisci le informazioni sulla scuola.
+    message_with_suggestion: Per favore verifica che le seguenti informazioni siano
+      corrette e aggiornale se necessario.
+    save: Salva
   race_interstitial:
     title: 'Optionale: Aiutaci a tracciare i vostri progressi per superare le diversità
       in informatica'
@@ -940,7 +946,10 @@
     save: Salva
     delete: Elimina
     exit: Ritorna al corso
-    my_projects: I miei progetti
+    my_projects: Collezione Privata
+    project_gallery: Progetti
+    publish: Pubblica
+    unpublish: Annulla Pubblicazione
     share: Condividi
     share_title: Condividi il tuo progetto
     share_copy_link: 'Copia il link:'
@@ -950,6 +959,8 @@
       solo con persone della tua classe/scuola.
     embed: Incorpora
     advanced_share: Mostra opzioni avanzate
+    no_projects: Attualmente non hai progetti. Clicca su uno dei bottoni qui sopra
+      per iniziarne uno.
     close: Chiudi
     more: Di più
     name: Nome
@@ -960,6 +971,9 @@
       negli ambienti "AppLab" o del Laboratorio o dell'Artista! <br/> Puoi salvare
       i progetti e riprenderli in qualsiasi momento.
     need_help: Hai bisogno di aiuto per iniziare?
+    thumbnail_help: Non trovi l'anteprima del tuo progetto? Esegui la tua App per
+      generare una nuova anteprima. Considera che ci vogliono un paio d'ore affinché
+      le anteprime si aggiornino ovunque.
     really_delete: Elimina?
     delete_yes: Sì
     delete_no: 'No'
@@ -970,7 +984,7 @@
     delete_confirm_text: L'eliminazione del progetto lo rimuoverà in modo permanente
       dal tuo elenco progetti. Se hai condiviso il link con altri questi non saranno
       più in grado di visualizzare il progetto.
-    view_all: Mostra i miei progetti
+    view_all: Guarda la Collezione Privata
     remix: Rimescola
     click_to_remix: Clicca su 'Rimescola' per ottenere una tua copia da cambiare a
       piacere!
@@ -1036,18 +1050,6 @@
     icon_library:
       search_placeholder_text: Cerca un'icona...
       no_icons_found: Non ho trovato alcun'icona
-    playzone:
-      artist_description: Disegna fantastiche immagini e decorazioni con l'artista!
-      artist_title: Disegno
-      continue_button: Vai alla prossima lezione
-      playlab_description: Crea una storia o inventa un gioco col Laboratorio!
-      playlab_title: Storia/Gioco
-      primary_header: Congratulazioni! Hai finito %{stageName}!
-      projects_description: Modifica uno dei tuoi precedenti progetti oppure creane
-        uno nuovo
-      projects_title: Progetto
-      secondary_header: 'Chiedi al tuo insegnante se proseguire con la prossima lezione
-        o svolgere una di queste attività:'
   flex_category:
     required: Panoramica
     content: Contenuto
@@ -1058,6 +1060,31 @@
     optional_stages: Optional Stages
     main_course: Corso principale
     extra_course_content: Extra Course Content
+    csd1_1: 'Chapter 1: The Problem Solving Process'
+    csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
+    csd3_1: 'Chapter 1: Images and Animations'
+    csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: Survey
+    cspAssessment: Chapter Assessment
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: Limiti di responsabilità
     leaving_domain: Stai per lasciare il nostro dominio, per entrare su un sito che
@@ -1147,6 +1174,7 @@
   hidden_stage: Il/La tuo/a insegnante non ti aspettava qui. Per favore chiedi al/alla
     tuo/a insegnante su quale lezione dovresti essere.
   return_course_overview: Vai alla visualizzazione delle unità
+  view_all_units: View all units
   pd:
     survey:
       number_teachers: Number of attending teachers
@@ -1195,3 +1223,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+  courses_category: Full Courses

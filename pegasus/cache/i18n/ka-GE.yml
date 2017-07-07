@@ -91,6 +91,12 @@
   congratulations_on_completing_course2: "გილოცავთ მე–2 კურსის დასრულებას"
   congratulations_on_completing_course3: "გილოცავთ მე–3 კურსის დასრულებას"
   congratulations_on_completing_course4: "გილოცავთ მე–4 კურსის დასრულებას"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "გილოცავთ ინტენსიური კურსის დასრულებას"
   congrats_next_tutorials_title: "შემდეგ სცადეთ ეს ტუტორიალები"
   congrats_next_tutorials_desc: სცადეთ ეს უფრო მოკლე, ერთსაათიანი ტუტორიალები ან <a
@@ -261,6 +267,12 @@
   just_did_course2: "ახლახან დავასრულე მე–2 კურსი - ნახე! @codeorg"
   just_did_course3: "ახლახან დავასრულე მე–3 კურსი - ნახე! @codeorg"
   just_did_course4: "ახლახან დავასრულე მე–4 კურსი - ნახე! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "ახლახან დავასრულე ინტენსიური კურსი - ნახე! @codeorg"
   twitter_teach_cs: '10–დან 9 ადამიანი გვეთანმება: კომპიუტერული მეცნიერება უნდა ისწავლებოდეს
     სკოლებში. http://youtu.be/nKIu9yen5nc. ეწვიეთ: https://code.org/.'
@@ -314,6 +326,10 @@
     აღმასრულებელი დირექტორი"
   homepage_hero_text_satya: "&ldquo; ინფორმატიკა მსოფლიოს საუკეთესო შესაძლებლობებს
     გიხსნის&rdquo; სატია, Microsoft-ის დირექტორი"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo; თუ პროგრამირება შეგიძლია, ესე იგი, შენი ცხოვრების
     არჩევაც შეგიძლიათ &rdquo; კრის ბოში"
   homepage_hero_text_student1: "&ldquo; ამ უნარებმა შეცვალა ჩემი მომავალი, არაფერი
@@ -378,6 +394,7 @@
   homepage_slot_text_title_hoc: "კოდის ერთი საათი"
   homepage_slot_text_blurb_hoc: "სწავლა შეუძლია ყველას. დაიწყეთ დღეს"
   homepage_slot_text_link_hoc: "სცადეთ კოდის ერთი საათი"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "ჩაატარეთ კოდის ერთი საათი"
   homepage_slot_text_link_hocserved: "#-მა უკვე სცადა"
   homepage_solot_text_link_volunteer: "გახდით კოდის ერთი საათის მოხალისე"
@@ -796,6 +813,7 @@
     შეგხვდებათ. უფრო დიდი მოსწავლეებისთვის ღია კითხვებზე მათი პასუხების ნახვა შეგიძლიათ
     შესაბამისი კურსის არჩევით ჩამოსაშლელ მენიუში."
   dashboard_sections_new_section: "ახალი განყოფილება"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "შექმენით ახალი განყოფილება და დაამატეთ
     მასში სტუდენტები. განყოფილებები გეხმარებათ დაჰყოთ მოსწავლეები უფრო პატარა ჯგუფებად
     - ასე მათ პროგრესს უკეთ დააკვირდებით."
@@ -803,6 +821,7 @@
   dashboard_sections_table_secret: "შესვლის ტიპი"
   dashboard_sections_table_grade: "შეფასება"
   dashboard_sections_table_course: "კურსი"
+  dashboard_sections_table_pairing_allowed: "პროგრამირება წყვილებში"
   dashboard_sections_table_stage_extras: "დამატებითი რესურსები"
   dashboard_sections_table_students: "მოსწავლეები"
   dashboard_sections_table_code: "სექციის კოდი"
@@ -914,6 +933,12 @@
   dashboard_course2: "კურსი 2:"
   dashboard_course3: "კურსი 3:"
   dashboard_course4: "კურსი 4 (ბეტა): "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "თუ არ გაქვთ კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ
     ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში."
   dashboard_curriculum: "კურიკულუმი"
@@ -1108,11 +1133,17 @@
   course3_name: "კურსი 3"
   course4_name: "კურსი 4"
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: "დაჩქარებული კურსი"
   cspunit1_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
   cspunit2_name: "(ძველი) სექცია 2: ინტერნეტი"
@@ -1225,6 +1256,12 @@
   course2_gradelevel: "ასაკი 6-18"
   course3_gradelevel: "ასაკი: 8-18"
   course4_gradelevel: "ასაკი: 10-18"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "კლასები 8+"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "ასაკი: 10-18"
   codeorg_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
   codeintl_platformtext: "თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები"
@@ -1367,6 +1404,12 @@
     ამოხსნებს უფრო რთული ამოცანებისთვის. კურსის ბოლოს მოსწავლეები შექმნიან ინტერაქტიულ
     ისტორიებს და თამაშებს, რომელთა გაზიარება ნებისმიერთან შეუძლიათ. რეკომენდებულია
     4-5 კლასებისთვის."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები,
@@ -1854,9 +1897,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "თამაში"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "კურსები"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1864,7 +1906,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "კოდის ერთი საათი"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -1882,7 +1924,7 @@
   header_about_faqs: FAQs
   header_learn: Learn
   header_teach: Teach
-  header_stats: Stats
+  header_stats: "სტატისტიკა"
   header_help_us: Help Us
   header_about: About
   header_teacher_community: Teacher community
@@ -1890,6 +1932,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: "'16-'17 CS საფუძვლები"
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -1,5 +1,6 @@
 require_relative 'test_helper'
 require_relative '../../lib/cdo/hamburger'
+require 'active_support/i18n'
 
 class Level
   def report_bug_url(request)
@@ -260,6 +261,6 @@ class HamburgerTest < Minitest::Test
 
   def test_header_content_nobody_nonen
     contents = Hamburger.get_header_contents({user_type: nil, language: "fr"})
-    assert_includes_id contents, "header-signed-out-projects"
+    assert_includes_id contents, "header-non-en-projects"
   end
 end

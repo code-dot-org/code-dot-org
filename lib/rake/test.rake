@@ -194,7 +194,7 @@ namespace :test do
 
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     task :dashboard do
-      run_tests_if_changed('dashboard', ['dashboard/**/*', 'lib/**/*', 'shared/**/*']) do
+      run_tests_if_changed('dashboard', ['dashboard/**/*', 'lib/**/*', 'shared/**/*'], ignore: ['dashboard/test/ui/**/*']) do
         TestRunUtils.run_dashboard_tests
       end
     end
@@ -239,12 +239,12 @@ namespace :test do
 end
 task test: ['test:changed']
 
-def run_tests_if_changed(test_name, changed_globs)
+def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base
   max_identifier_length = 12
   justified_test_name = test_name.ljust(max_identifier_length)
 
-  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs)
+  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs, ignore_patterns: ignore)
   if relevant_changed_files.empty?
     ChatClient.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
   else

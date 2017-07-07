@@ -91,6 +91,12 @@
   congratulations_on_completing_course2: Comhghairdeas as Cúrsa 2 a chríochnú
   congratulations_on_completing_course3: Comhghairdeas as Cúrsa 3 a chríochnú
   congratulations_on_completing_course4: Comhghairdeas as Cúrsa 4 a chríochnú
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Comhghairdeas as an gCúrsa Luathaithe
     a chríochnú
   congrats_next_tutorials_title: Téigh ar aghaidh go dtí an chéad leibhéal eile
@@ -265,6 +271,12 @@
   just_did_course2: Táim tar éis Cúrsa 2 a chríochnú - bain triail as! @codeorg
   just_did_course3: Táim tar éis Cúrsa 3 a chríochnú - bain triail as! @codeorg
   just_did_course4: Táim tar éis Cúrsa 4 a chríochnú - bain triail as! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail
     as! @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
@@ -326,6 +338,10 @@
     &ldquo;Computer science can unlock
     the best opportunities in the world.&rdquo;
     Satya, Príomhoifigeach Feidhmiúcháin Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
@@ -399,6 +415,7 @@
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "Óstáil Uair Chódála"
   homepage_slot_text_link_hocserved: "# códálaí"
   homepage_solot_text_link_volunteer: Bí i do shaorálaí don Uair Chódála
@@ -587,8 +604,8 @@
     ann <span style="font-family: ''Gotham 7r'', sans-serif;">daltaí a spreagadh</span>
     faoi na rudaí is féidir a dhéanamh le scileanna ríomhaireachta (mar shampla trí
     fhíschomhrá).'
-  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
-    program here</a>.
+  volunteer_engineer_submission_intro_guide: Faigh tuilleadh eolais faoi <a href="%{volunteer_guide}">oibriú
+    deonach anseo</a>.
   volunteer_engineer_submission_intro_signup: Líon isteach na réimsí seo a leanas
     más mac léinn ríomheolaíochta nó innealtóir bogearraí gairmiúil thú. Is gá na
     réimsí marcáilte le <span class="form-required-field">*</span> a líonadh isteach.
@@ -638,8 +655,8 @@
   volunteer_engineer_submission_checkbox_contact: 'Tugaim cead do mhúinteoirí dul
     i dteagmháil liom maidir le hobair dheonach (Nóta: ní fhoilseoimid do sheoladh
     ríomhphoist riamh)'
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
+  volunteer_engineer_submission_checkbox_age_18_plus: Deimhním go bhfuilim ar a laghad
+    ocht mbliana déag d'aois.
   volunteer_engineer_submission_submit: Seol
   volunteer_engineer_submission_thankyou: Go raibh maith agat! Tá tú cláraithe mar
     shaorálaí anois. Bainfidh múinteoirí úsáid as <a href="%{url}">an léarscáil seo</a>
@@ -830,6 +847,7 @@
     féidir na freagraí téacs a thugann siad ar cheisteanna oscailte a fheiceáil tríd
     an gcúrsa ceart a roghnú ón roghchlár anuas.
   dashboard_sections_new_section: Rannán nua
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Cruthaigh rannáin nua agus cuir daltaí
     leo. Le rannáin, is féidir do chuid daltaí a eagrú i ngrúpaí níos lú, sa chaoi
     go mbeidh sé níos éasca an dul chun cinn atá déanta acu a leanúint agus na cuntais
@@ -838,6 +856,7 @@
   dashboard_sections_table_secret: Cineál Seisiúin
   dashboard_sections_table_grade: Bliain
   dashboard_sections_table_course: Cúrsa
+  dashboard_sections_table_pairing_allowed: Códáil Bheirte
   dashboard_sections_table_stage_extras: Acmhainní Breise don Chéim
   dashboard_sections_table_students: Daltaí
   dashboard_sections_table_code: Cód an Rannáin
@@ -911,10 +930,10 @@
   dashboard_students_auto_generated: Ginte go huathoibríoch
   dashboard_students_reset_secret: Athshocraigh an rún
   dashboard_students_reset_password: Athshocraigh an focal faire
-  dashboard_students_share_section: 'Tabhair an leathanach logáil isteach do na daltaí
-    sa rannán seo:'
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section: Iarr ar do dhaltaí cuairt a thabhairt ar <a href=%{join_url}>%{join_url}</a>
+    agus cód an rannáin a chur isteach (%{section_code})
+  dashboard_students_share_section_secondary: 'Nó, tabhair an leathanach logáil isteach
+    do na daltaí sa rannán seo:'
   dashboard_students_print_info: Priontáil cártaí ar a bhfuil sonraí cuntais na ndaltaí.
   dashboard_students_secret_picture_title: Pictiúr Rúnda
   dashboard_students_secret_picture: Baineann an rannán seo úsáid as <b>pictiúir rúnda</b>.
@@ -938,8 +957,9 @@
     mian leat cuntais a chruthú ar a son, athraigh cineál an rannáin seo go <b>focal</b>
     nó <b>pictiúr</b>.
   dashboard_students_print_page: Priontáil an leathanach seo
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
-  dashboard_students_url: URL
+  dashboard_students_signin_card: Tabhair cuairt ar %{join_url} agus cuir isteach
+    %{section_code}
+  dashboard_students_url: URL Díreach
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Cliceáil
     anseo</a> chun ár bpolasaí príobháideachais a íoslódáil agus a chomhroinnt le
     do chuid daltaí.
@@ -952,6 +972,12 @@
   dashboard_course2: 'Cúrsa 2:'
   dashboard_course3: 'Cúrsa 3:'
   dashboard_course4: 'Cúrsa 4: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
     ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
   dashboard_curriculum: Curaclam
@@ -1148,11 +1174,17 @@
   course3_name: Cúrsa 3
   course4_name: Cúrsa 4
   coursea-draft_name: Cúrsa A
+  coursea_name: Cúrsa A
   courseb-draft_name: Cúrsa B
+  courseb_name: Cúrsa B
   coursec-draft_name: Cúrsa C
+  coursec_name: Cúrsa C
   coursed-draft_name: Cúrsa D
+  coursed_name: Cúrsa D
   coursee-draft_name: Cúrsa E
+  coursee_name: Cúrsa E
   coursef-draft_name: Cúrsa F
+  coursef_name: Cúrsa F
   accelerated_name: Cúrsa Luathaithe
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
@@ -1164,8 +1196,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: 'Aonad 5: Sonraí agus Sochaí'
+  csd6_name: 'Aonad 6: Ríomhaireacht Fisiceach'
   csp1_name: 'Aonad 1: An tIdirlíon'
   csp2_name: 'Aonad 2: Faisnéis dhigiteach'
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1193,7 +1225,7 @@
   starwarsblocks_name: Star Wars (Blocanna)
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: Criptiú Simplí
   text-compression_name: Text Compression
   math_category_name: Matamaitic
   hoc_category_name: An Uair Chódála
@@ -1265,6 +1297,12 @@
   course2_gradelevel: Aois 6-18
   course3_gradelevel: Aois 8-18
   course4_gradelevel: Aois 10-18
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Aois 13+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -1405,6 +1443,12 @@
     seo, chun réitigh níos solúbtha a thabhairt ar fhadhbanna níos casta. Ag deireadh
     an chúrsa, cruthóidh na daltaí cluichí agus scéalta idirghníomhacha is féidir
     a chomhroinnt le héinne. Dírithe ar aois 9-13.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Foghlaim buntús na ríomheolaíochta trí ríomhchlárú "tarraingt
     is scaoileadh". Is cúrsa teagaisc féintreoraithe é seo, cosúil le cluiche, ina
     bhfuil físléachtaí ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants
@@ -1952,42 +1996,41 @@
   infinity_shortcode: inf
   playlab_shortcode: play
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_home: Baile
+  header_courses: Cúrsaí
+  header_project_gallery: Gailearaí na dTionscadal
+  header_sections: Rannáin
+  header_professional_learning: Oideachas Proifisiúnta
+  header_educate_overview: Foramharc do Mhúinteoirí
+  header_educate_elementary: Bunscoil
+  header_educate_middle: Meánscoil
+  header_educate_high: Scoil dara leibhéal
+  header_educate_hoc: An Uair Chódála
+  header_educate_partner: Comhoibriú Linn
+  header_educate_beyond: Tar éis Code.org
+  header_educate_inspire: Spreag Dalta
+  header_educate_community: Comhphobal Ar Líne
+  header_educate_tools: Uirlisí agus Físeáin
+  header_about_us: Maidir Linn
+  header_about_leadership: Lucht Ceannais
+  header_about_donors: Deontóirí
+  header_about_partners: Comhpháirtithe
+  header_about_team: An Fhoireann Iomlán
+  header_about_news: Seomra Nuachta
+  header_about_evaluation: Measúnú
+  header_about_jobs: Postanna
+  header_about_contact: Déan Teagmháil Linn
+  header_about_faqs: CCanna
+  header_learn: Foghlaim
+  header_teach: Múineadh
+  header_stats: Staitisticí
+  header_help_us: Cabhraigh Linn
+  header_about: Maidir Linn
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_tutorials: Cúrsaí Teagaisc
+  header_documentation: Doiciméadú
+  csp_name: "'16-'17 Foras Feasa ar an Ríomheolaíocht"
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

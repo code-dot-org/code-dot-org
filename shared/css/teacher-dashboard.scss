@@ -54,6 +54,31 @@ select.ng-invalid-required + span.required {
   color: #900;
 }
 
+.dashboard-styles {
+  .modal-backdrop {
+    position: fixed;
+    bottom: 0;
+    opacity: 0.8;
+  }
+  .modal {
+    position: fixed;
+    display: block;
+    top: 10%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    z-index: 1050;
+    background-color: #fff;
+    border-radius: 6px;
+    div {
+      text-align: left;
+    }
+    button {
+      height: 38px;
+    }
+  }
+}
+
 /* PROGRESS */
 
 .table-wrapper {

@@ -281,9 +281,9 @@
         turtle_3_10: Hai imparato molto! Ora utilizza ciò che hai imparato per disegnare
           quello che vuoi. Prova a disegnare una stella, o una spirale o un fiocco
           di neve stravagante.
-        maze_karel_debug_seq_1: Benvenuto alla correzione del codice (debug)! Il mio
-          codice non funziona correttamente. Riesci ad individuare il problema e a
-          risolverlo in modo da livellare il campo e prepararlo per la semina?
+        maze_karel_debug_seq_1: Benvenuto alla "correzione di errori" (<i>debugging</i>)!
+          Il mio codice non funziona correttamente. Riesci ad individuare il problema
+          e a risolverlo in modo da livellare il campo e prepararlo per la semina?
         maze_karel_debug_seq_2: Che cosa c'è di sbagliato in questo programma? Come
           dovresti sistemarlo in modo da riuscire a rimuovere quel mucchio?
         maze_karel_debug_repeat: Correggi questo programma, in modo che il mio campo
@@ -476,15 +476,17 @@
         mazestep_3: Qui c'è la descrizione del passo del labirinto
         mazestep_4: Qui c'è la descrizione del passo del labirinto
         mazestep_5: Qui c'è la descrizione del passo del labirinto
-        studio_c2_1: Riesci a far dire a questo cane "Ciao a tutti"?
-        studio_c2_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
+        studio_c2_1: |-
+          Riesci a far dire a questo cane "Ciao a tutti"?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c2_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
         studio_c2_3: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto?
         studio_c2_4: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto, e fa dire "Ciao" al gatto quando il cane lo raggiunge?
-        studio_c2_5: Riesci a scrivere un programma per far dire "ciao" al polpo quando
-          viene cliccato?
+        studio_c2_5: |-
+          Riesci a scrivere un programma per far dire "ciao" al polpo quando viene cliccato?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-3/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
         studio_c2_6: Riesci a scrivere un programma per spostare questo pinguino in
           tutte le direzioni usando i tasti freccia in alto / in basso / a sinistra
           / a destra in modo da fargli raggiungere tutte le bandierine?
@@ -502,9 +504,11 @@
           un punto.
         studio_c2_11: Crea una storia come vuoi tu. Quando hai fatto, clicca su "Condividi"
           per far provare la storia ai tuoi amici sui loro smartphone.
-        studio_c3_story_1: Riesci a far dire a questo cane "Ciao a tutti"?
-        studio_c3_story_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
+        studio_c3_story_1: |-
+          Riesci a far dire a questo cane "Ciao a tutti"?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_c3_story_2: Fai in modo che il cane dica qualcosa e poi il gatto gli
+          risponda.
         studio_c3_story_3: Riesci a scrivere un programma che fa arrivare questo cane
           fino al gatto?
         studio_c3_story_4: Riesci a scrivere un programma che fa arrivare questo cane
@@ -643,17 +647,20 @@
           sui loro smartphone, tablet o computer!
         studio_full_sandbox: Crea un gioco per conto tuo. Quando hai fatto, clicca
           su "Condividi" per far provare il gioco ai tuoi amici sui loro smartphone.
-        studio_k1_1: Riesci a far dire a questo cane "Ciao a tutti"?
-        studio_k1_2: Riesci a far dire qualcosa al cane e dopo a far dire qualcosa
-          al gatto?
+        studio_k1_1: |-
+          Riesci a far dire a questo cane "Ciao a tutti"?<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-2/lezione-17#VIDEO" target="_blank">Video doppiato in italiano</a>
+        studio_k1_2: Fai in modo che il cane dica qualcosa e poi il gatto gli risponda.
         studio_k1_3: Riesci a scrivere un programma che fa arrivare questo cane fino
           al gatto?
-        studio_k1_4: Fai arrivare il cane fino al gatto e fai dire "ciao" al gatto
-          quando il cane arriva là.
+        studio_k1_4: Fai arrivare il cane fino al gatto e fai in modo che il gatto
+          dica "ciao" quando il cane arriva là.
         studio_k1_5: Riesci ad aggiungere un blocco per far sì che il polpo sia felice?
         studio_k1_6: Crea una storia tutta tua! Sposta il cane e il gatto in tutte
           le direzioni e fai dire loro ciò che desideri.
-        maze_wordsearch_k_1: Spostami per scrivere le lettere della parola EAST.
+        maze_wordsearch_k_1: |-
+          Spostami per scrivere le lettere della parola EAST.<br>
+          <a href="https://www.programmailfuturo.it/come/lezioni-tecnologiche/corso-1/lezione-11#VIDEO" target="_blank">Video doppiato in italiano</a>
         maze_wordsearch_k_2: Spostami per scrivere le lettere della parola SOUTH.
         maze_wordsearch_k_3: Spostami per scrivere le lettere della parola WEST.
         maze_wordsearch_k_4: Spostami per scrivere le lettere della parola NORTH.
@@ -774,7 +781,17 @@
         C4_unplugged_forloops: Cicli con Contatore
         C4_unplugged_parameters: Composizione di Canzoni - Parametri
         C4_unplugged_binary: Binario
+        CSF_artist_angles: Angles in Artist
+        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_repeat_loops: Collector Repeat Loops
+        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
+        CSF_create_functions: Create Functions
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: L'informatica conta
+        CSF_maze_intro_k1_blocks: Intro to Code Studio
+        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_my_robotic_friends: I miei amici robotici
         CSF_stevie_big_project: Stevie e il grande progetto
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
@@ -788,6 +805,8 @@
         infinity_playlab_intro: Laboratorio - Introduzione
         infinity_playlab_events: Laboratorio - Eventi
         infinity_playlab_repeat_forever: Laboratorio - Ripeti per sempre
+        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_search: How Search Works
         csd_gamelab_animation_tab: La scheda dell'animazione
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2

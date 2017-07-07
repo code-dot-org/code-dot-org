@@ -3,6 +3,7 @@ title: About Us
 nav: about_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 <%
@@ -36,6 +37,8 @@ Code.org&reg; is a non-profit dedicated to expanding access to computer science 
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
 
 For the second year in a row, underrepresented minorities make up 48% of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="/diversity">we encourage you to read more about our efforts</a>. 
+
+[Source data](https://docs.google.com/document/u/2/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub)
 
 
 <br />

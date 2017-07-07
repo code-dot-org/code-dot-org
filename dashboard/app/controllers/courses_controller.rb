@@ -1,18 +1,25 @@
 class CoursesController < ApplicationController
   before_action :require_levelbuilder_mode, except: [:index, :show]
   before_action :authenticate_user!, except: [:index, :show]
-  authorize_resource
+  authorize_resource except: [:index]
 
   def index
-    @recent_courses = current_user.try(:recent_courses_and_scripts)
-    @is_teacher = !!(current_user && current_user.teacher?)
-    @is_english = request.language == 'en'
-    @is_signed_out = current_user.nil?
-    @force_race_interstitial = params[:forceRaceInterstitial]
+    respond_to do |format|
+      format.html do
+        @recent_courses = current_user.try(:recent_courses_and_scripts)
+        @is_teacher = !!(current_user && current_user.teacher?)
+        @is_english = request.language == 'en'
+        @is_signed_out = current_user.nil?
+        @force_race_interstitial = params[:forceRaceInterstitial]
+      end
+      format.json do
+        render json: Course.valid_courses
+      end
+    end
   end
 
   def show
-    course = Course.find_by_name(params[:course_name])
+    course = Course.get_from_cache(params[:course_name])
     unless course
       # PLC courses have different ways of getting to name. ideally this goes
       # away eventually

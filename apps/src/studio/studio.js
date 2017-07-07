@@ -2500,9 +2500,6 @@ Studio.reset = function (first) {
     hasThrownProjectile: false
   };
 
-  // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = Direction.EAST;
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2556,6 +2553,7 @@ Studio.reset = function (first) {
       // overridden as soon as we call setSprite
       visible: !level.spritesHiddenToStart
     });
+    Studio.lastMoveSingleDir = spriteStart.direction;
 
     var sprite = i % Studio.startAvatars.length;
 
@@ -4996,11 +4994,11 @@ Studio.setMap = function (opts) {
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
   Studio.wallMapCollisions = true;
+  Studio.walls.setWallMapRequested(useMap);
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
   Studio.wallMapRequested = opts.value;
-  Studio.walls.setWallMapRequested(opts.value);
 
   if (opts.color && Studio.wallColor !== opts.color) {
     Studio.wallColor = opts.color;

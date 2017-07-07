@@ -47,7 +47,8 @@ const Courses = React.createClass({
     studentsCount: React.PropTypes.string.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number
+    userId: React.PropTypes.number,
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
@@ -63,10 +64,12 @@ const Courses = React.createClass({
     if (!this.props.isTeacher) {
       $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
     }
+
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -79,6 +82,7 @@ const Courses = React.createClass({
           headingText={headingText}
           subHeadingText={subHeadingText}
           description={headingDescription}
+          short={!isSignedOut}
         >
           {isSignedOut && (
             <ProgressButton
@@ -89,6 +93,10 @@ const Courses = React.createClass({
             />
           )}
         </HeaderBanner>
+
+        <ProtectedStatefulDiv
+          ref="flashes"
+        />
 
         {!isTeacher && (
           <ProtectedStatefulDiv
@@ -103,6 +111,7 @@ const Courses = React.createClass({
             showAllCoursesLink={false}
             heading={i18n.myCourses()}
             isTeacher={isTeacher}
+            isRtl={isRtl}
           />
         )}
 
@@ -136,7 +145,10 @@ const Courses = React.createClass({
 
               <br/>
               <br/>
-              <TeacherAssignablesCatalog codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+              <TeacherAssignablesCatalog
+                codeOrgUrlPrefix={codeOrgUrlPrefix}
+                isRtl={isRtl}
+              />
 
               <div>
                 <div style={styles.heading}>
@@ -159,7 +171,11 @@ const Courses = React.createClass({
         )}
 
         {!isTeacher && !isSignedOut && (
-          <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
+          <ProgressButton
+            text={i18n.viewMyProjects()}
+            href="/projects"
+            color={ProgressButton.ButtonColor.orange}
+          />
         )}
 
         {!isTeacher && !isSignedOut && (

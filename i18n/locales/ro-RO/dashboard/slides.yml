@@ -747,7 +747,7 @@ ro:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Cand vrem sa facem ciocolata, sunt multi pasi mari in acel proces. Si fiecare din acesti mari pasi are propriul set de pasi mai micuti. Si sunt multe retete sau algoritmi, in functie de gustul pe care il dorim sa o aiba ciocolata. Fiecare pas este important, chiar si cei mici. Astfel incat fara un singur pas, restul nu poate fi finalizat. Crearea de algoritmi pe care ceilalti o pot intelege este foarte importanta. De aceea fiecare pas trebuie sa fie scris, astfel incat indiferent de cine il utilizeaza, rezultatul sa fie acelasi."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Până acum aţi facut o animaţie sau o poveste care face exact acelaşi lucru de fiecare dată când o rulezi. Acum, puteţi face un joc interactiv, pe care îl puteți chiar juca."
@@ -823,7 +823,7 @@ ro:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "In acest exemplu, vom spune ca, daca floarea mov are nectar mai mare de 0, obtine nectar. Acest lucru va spune albinelor noastre sa continue obtinerea de nectar atata timp cat exista acolo. Ta-dah!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Ai auzit vreodată de depanarea unui program? Este o modalitate de a afla ce nu funcționează. Când depanezi un cod găsești și elimini erorile."

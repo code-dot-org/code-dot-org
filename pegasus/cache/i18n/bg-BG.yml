@@ -94,6 +94,12 @@
   congratulations_on_completing_course2: "Поздрави за завършване на курс 2"
   congratulations_on_completing_course3: "Поздрави за завършване на курс 3"
   congratulations_on_completing_course4: "Поздрави за завършване на курс 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Поздрави за завършване на ускореня курс"
   congrats_next_tutorials_title: "Опитайте тези уроци"
   congrats_next_tutorials_desc: Опитайте тези кратки, едночасови уроци или пробвайте
@@ -258,7 +264,7 @@
   continue_learning_body: "Има много възможности.  Можете да учите онлайн в местното
     училище или на летен лагер."
   learn_code_studio: "Опитайте курсовете в Студиото по кодиране"
-  learn_next_level: "Опитайте друг курс от Студиото по кодиране"
+  learn_next_level: "Продължи към следващото ниво"
   learn_online: "Опитайте други курсове онлайн"
   learn_classes: "Намерете местни класове"
   learn_back_to_minecraft: "Продължете да учите с Minecraft"
@@ -268,6 +274,12 @@
   just_did_course2: "Току-що завърших курс 2 - Проверете го! @codeorg"
   just_did_course3: "Току-що завърших курс 3 - Проверете го! @codeorg"
   just_did_course4: "Току-що завърших курс 4 - Проверете го! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "Току-що завърших ускореният курс - Проверете го! @codeorg"
   twitter_teach_cs: 9 от 10 човека са съгласни, че в училищата трябва да се учат компютърни
     науки. http://youtu.be/nKIu9yen5nc. Посетете https://code.org/.
@@ -294,7 +306,7 @@
     Алзейт, 5-ти клас'
   stats_michael: "Аз никога <b>до сега не съм</b> виждал учениците си толкова развълнувани
     за нещо в обучението им. -Франк Мартинес, учител"
-  studiobar_title: "Разгледайте <a href='http://studio.code.org'> Студиото за кодиране</a>"
+  studiobar_title: "Разгледайте <a href='http://studio.code.org'> Студиото за програмиране</a>"
   studiobar_title_nolink: "Разгледайте Студиото за кодиране"
   studiobar_elementary_title: "Начални курсове"
   studiobar_elementary_body: "Нашите три нови курса за K &#8209; 5"
@@ -322,6 +334,10 @@
     директор на Facebook"
   homepage_hero_text_satya: "&ldquo;Инфроматиката може да отключи най-добрите възможности
     в света.&rdquo; Сатя, изпълнителен директор на Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: '&ldquo;"Ако се научите да програмирате, можете да определите
     и изберете посоката на вашия живот."&rdquo; Крис Бош'
   homepage_hero_text_student1: "&ldquo;Тези умения промениха бъдещето ми. Да не говорим,
@@ -340,8 +356,7 @@
     Флорес, учител'
   homepage_hero_text_teacher2: "&ldquo;Тази програма ангажира и увлича  учениците
     ми на 100%&rdquo; Адам, учител"
-  homepage_hero_text_stat_loc: 2,5 милиона момичета са се записани да учат в Студиото
-    по кодиране
+  homepage_hero_text_stat_loc: "#loc линии код, написани от учениците"
   homepage_hero_text_stat_students: "#student_count Ученически акаунти на Студиото
     по кодиране"
   homepage_hero_text_stat_served: "Часът на кодирането: #served пробваха"
@@ -389,13 +404,14 @@
   homepage_slot_text_title_hoc: "Час на Кодирането"
   homepage_slot_text_blurb_hoc: "Всеки може да се научи. Започнете днес"
   homepage_slot_text_link_hoc: "Опитайте Hour of Code"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "Организирайте Hour of Code"
   homepage_slot_text_link_hocserved: "# опитаха"
   homepage_solot_text_link_volunteer: "Доброволец за Часа на кода"
   homepage_slot_text_title_students: "Ученици"
   homepage_slot_text_blurb_students: "Разгледайте всички наши уроци"
   homepage_slot_text_blurb_students_courses: "Разгледайте нашите курсове"
-  homepage_slot_text_link_codestudio: "Опитайте Студиото по кодиране"
+  homepage_slot_text_link_codestudio: "Опитайте Студиото по Програмиране"
   homepage_slot_text_link_local: "Намерете  клас в близост до Вас"
   homepage_slot_text_link_othercourses: "Други онлайн курсове"
   homepage_slot_text_title_educators: "Обучители"
@@ -806,6 +822,7 @@
   dashboard_responses_view: "Изглед на текстовите отговори:"
   dashboard_responses_none: "Няма текстови отговори"
   dashboard_sections_new_section: "Нов раздел"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "Създайте нови раздели и добавете ученици
     към тях. Разделите ще Ви помогнат да организирате учениците в по-малки групи,
     така че да можете да следите напредъка им и да управлявате техните акаунти."
@@ -813,6 +830,7 @@
   dashboard_sections_table_secret: "Тип парола за влизане"
   dashboard_sections_table_grade: "Клас"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_pairing_allowed: "Програмиране по двойки"
   dashboard_sections_table_stage_extras: "Екстри"
   dashboard_sections_table_students: "Ученици"
   dashboard_sections_table_code: "Код за раздел"
@@ -927,6 +945,12 @@
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4: "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Ако не разполагате с компютри, <a href='%{unplugged_url}'>
     Опитайте тези уроци без компютър</a> в класната стая."
   dashboard_curriculum: "Учебна програма"
@@ -1120,11 +1144,17 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: "Ускорен курс"
   cspunit1_name: "(стар) Урок 1: Цифрова информация"
   cspunit2_name: "(стар) Раздел 2: Интернет"
@@ -1237,6 +1267,12 @@
   course2_gradelevel: "Възраст 6 + (необходими са умения за четене)"
   course3_gradelevel: "Възраст 8 + (след курс 2)"
   course4_gradelevel: "Възраст 10 + (след курс 3)"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "Клас 8 +"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Възраст 10 + (след курс 3)"
   codeorg_platformtext: "Съвременни браузъри, смартфони, таблети"
   codeintl_platformtext: "Съвременни браузъри, смартфони, таблети"
@@ -1375,6 +1411,12 @@
     намират гъвкави решения за по-сложни проблеми. До края на този курс те ще създават
     интерактивни истории и игри, които да могат да споделят. Препоръчва се за класове
     от 4-8."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "Научете основните понятия на компютърните науки с drag
     and drop програмиране. Това е като игра, самонасочващи уроци с  видео лекции от
     Бил Гейтс, Марк Зукерберг, Angry Birds и Plants vs. Zombies. Научете за повторенията-цикли,
@@ -1883,42 +1925,41 @@
   infinity_shortcode: inf
   playlab_shortcode: "играй"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
+  header_home: "Начало"
+  header_courses: "Курсове"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_overview: "Въведение за учителя"
+  header_educate_elementary: "Начално училище"
+  header_educate_middle: "Средно училище"
+  header_educate_high: "Гимназия"
   header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_educate_partner: "Партньорство с нас"
+  header_educate_beyond: "Отвъд Code.org"
+  header_educate_inspire: "Вдъхнови ученик"
+  header_educate_community: "Онлайн общност"
+  header_educate_tools: "Инструменти и видео"
+  header_about_us: "За нас"
+  header_about_leadership: "Лидерство"
+  header_about_donors: "Спонсори"
+  header_about_partners: "Партньори"
+  header_about_team: "Екипът"
+  header_about_news: "Новини"
+  header_about_evaluation: "Оценка"
+  header_about_jobs: "Работа"
+  header_about_contact: "Връзка с нас"
+  header_about_faqs: "Често задавани въпроси"
+  header_learn: "Научете"
+  header_teach: "Обучи"
+  header_stats: "Статистика"
+  header_help_us: "Помогнете ни"
+  header_about: "Относно"
+  header_teacher_community: "Учителска общност"
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
+  header_report_bug: "Съобщи за бъгове"
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: '"15-" 16 CS принципи'
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses
