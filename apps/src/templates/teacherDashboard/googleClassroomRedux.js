@@ -5,13 +5,16 @@ export const loadClassroomList = () => {
   return dispatch => {
     $.ajax('/dashboardapi/google_classrooms')
       .success(response => dispatch(setClassroomList(response.courses)))
-      .fail(() => dispatch(failedLoad()));
+      .fail(result => {
+        const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
+        dispatch(failedLoad(result.status, message));
+      });
   };
 };
 
 export const setClassroomList = classrooms => ({ type: SET_CLASSROOM_LIST, classrooms });
 
-export const failedLoad = () => ({ type: FAILED_LOAD });
+export const failedLoad = (status, message) => ({ type: FAILED_LOAD, status, message });
 
 const initialState = {
   classrooms: null,
@@ -28,7 +31,10 @@ export default function googleClassroom(state = initialState, action) {
   if (action.type === FAILED_LOAD) {
     return {
       ...state,
-      classrooms: false,
+      loadError: {
+        status: action.status,
+        message: action.message,
+      }
     };
   }
 

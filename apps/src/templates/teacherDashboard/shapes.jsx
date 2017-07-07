@@ -32,3 +32,8 @@ export const classroomShape = PropTypes.shape({
   section: PropTypes.string,
   enrollment_code: PropTypes.string.isRequired,
 });
+
+export const loadErrorShape = PropTypes.shape({
+  status: PropTypes.number.isRequired,
+  message: PropTypes.string.isRequired,
+});
