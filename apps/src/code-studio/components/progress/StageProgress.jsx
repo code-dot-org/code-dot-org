@@ -47,6 +47,9 @@ const StageProgress = React.createClass({
     );
   }
 });
+
+export const UnconnectedStageProgress = StageProgress;
+
 export default connect((state, ownProps) => {
   let levels = ownProps.levels;
   const stageId = ownProps.stageId || state.progress.currentStageId;
