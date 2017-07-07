@@ -225,3 +225,7 @@ level 'AllTheThings_StandaloneVideo'
 stage 'Curriculum Reference'
 level 'allthethings_curriculum_reference'
 level 'allthethings_map'
+
+stage 'TTS'
+level 'allthethings_ttscsd'
+level 'allthethings_ttscsp'
