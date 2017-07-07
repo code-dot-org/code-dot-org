@@ -9,11 +9,14 @@ zh-CN:
     errors:
       messages:
         blank: "必填"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: '显示名称'
         name_example: '显示的名字<br/>（例如酷码、晓明）'
         email: '电子邮件'
+        personal_email: 'Personal email address'
         username: '用户名'
         password: '密码'
         password_confirmation: '密码确认：'
@@ -205,6 +208,7 @@ zh-CN:
     edit: '编辑'
     edit_model: '编辑 %{model}'
     update: '更新'
+    submit: '提交'
     destroy: '销毁'
     back: '返回'
     confirm: '是否确定？'
@@ -322,6 +326,10 @@ zh-CN:
     deleted_user: '已删除的用户'
     no_password_because_oauth: '无需密码，因为你使用第三方账号登录。'
     no_password_because_sponsored: '告诉你的老师来管理你的密码。'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: '已完成'
     tried: '试过了'
@@ -392,9 +400,9 @@ zh-CN:
     announcement_apcsp_recruitment2: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，我们会<a href='%{gift_url}' target='_blank'>送出礼物</a>。学生们也可以在我们的 <a href='%{challenge_url}' target='_blank'>#APCSP 视频挑战</a>中相互激励。"
     announcement_apcsp_recruitment3: "今年的计算机科学原理考试有望打破纪录。参与学生的多样性的到了很大的提升，但我们仍然需要你的帮助。鼓励每个学习计算机科学原理的学生来参加考试，您有可能会得到<a href='%{gift_url}' target='_blank'>礼品卡、笔记本电脑或其它很酷的奖品</a>！分享<a href='%{video_url}' target='_blank'>这个视频</a>，这样学生们能够从参加考试的同伴那里知道它。"
     announcement_csp_deadline: "给高中老师的最后召唤！率先在您的学校里教授计算机科学，并申请我们的高质量的<strong>完全免费的</strong>专业学习课程。申请将在4月14日关闭。"
-    announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
-    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
-    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
+    announcement_applab_export: "应用实验室是我们的网络编程环境，现在支持导出代码了！你可以通过拖放Javascript代码块来创建应用，然后将代码导出到任何专业的开发环境中继续编辑。"
+    announcement_csp_survey: "<b>祝贺计算机科学原理的教师们！</b><br/>您的正在参加AP计算机科学测验的学生们，会和超过50000名学生一起参加历史上最大的AP考试。现在，让您学生的声音被大家听到吧 ——记住完成课后调查！你能看到学生们的回答，我们也会将合计后全国的报告分享给您。"
+    announcement_navigation_redesign: "<b>即将到来的站点导航的变化</b><br/>夏天即将来临，我们正在改进整个Code.org站点的导航，以便你能从任何位置都访问自己的最常用的资源。一旦您登录了自己的教师账号，每一页都会有一个新的导航栏，里面的链接包括你的主页、课程、项目集、小组和专业课程。"
   move_students:
     new_section_dne: "抱歉，章节 %{new_section_code} 不存在。请输入不同的章节代码。"
     section_code_cant_be_current_section: "当前章节不能与新建单元相同。"
@@ -455,9 +463,9 @@ zh-CN:
     upgrade:
       unsupported_message: "您的浏览器不支持浏览本网页。请升级您的浏览器至<a href='%{supported_browsers_url}', target='_blank'>我们支持的浏览器</a>。您可以尝试访问此网页，但有可能会遇到功能问题。"
       link: "了解详情"
-      applab_unsupported_tablet: "App Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      gamelab_unsupported_tablet: "Game Lab works best on a desktop or laptop computer with a mouse and keyboard. You may experience issues using this tool on your current device."
-      weblab_unsupported_browser: "Unfortunately, we're currently experiencing issues with loading Web Lab on this browser. You may want to use a different browser until this is resolved. Sorry for the inconvenience."
+      applab_unsupported_tablet: "应用实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。"
+      gamelab_unsupported_tablet: "游戏实验室的最佳体验是在有键盘、鼠标的桌面或笔记本电脑。您可能会在当前设备上遇到一些问题。"
+      weblab_unsupported_browser: "很遗憾，在当前浏览器中加载网络实验室时遇到一些问题。您也许可以先试试另一个浏览器，直到我们解决了这个问题。很抱歉造成您的不便。"
       weblab_unsupported_locale_storage: "在私密浏览模式下使用 Web Lab可能会遇到问题。请在正常模式下重新加载您的项目。很抱歉给您带来的不便。"
   slow_loading: '请再多等一会儿...'
   try_reloading: '请重新刷新页面'
@@ -516,7 +524,7 @@ zh-CN:
       body: "查看由我们用户创建的应用程序和艺术家图片的作品"
     gamelab:
       title: "游戏实验室 （测试版）"
-      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
       audience: "13岁以上"
       cta: "了解操作方法"
     frozen:
@@ -539,10 +547,10 @@ zh-CN:
       body_short: "如果你没有电脑，可以在你的教室试试这些离线的教程。"
     unplugged_conditionals:
       title: "条件语句"
-      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+      body: "在这个离线活动中，通过扑克牌来学习算法和条件判断语句。"
     widgets:
       title: "小部件"
-      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      body: "学生们能使用这些数字工具来动手学习一些计算机科学原理课程的概念。学生们可以自己使用这些工具，也可以为您的班级上一堂单个概念的课程。"
       audience: "14 岁或以上"
       cta: "了解操作方法"
   gallery:
@@ -647,9 +655,9 @@ zh-CN:
     reminder_desc: '我们更新了我们的 <a href="%{tos_url}"target="_blank"> 服务条款</a> 和 <a href="%{privacy_url}"target="_blank"> 隐私政策</a>。请在接受之前仔细阅读。请注意，在你的学生接受更新的条款之前，我们教学 JavaScript 的工具学生可能不能使用。'
     review_terms: "查看更新后的条款"
   school_info_interstitial:
-    title: "We want to bring Computer Science to every student - help us track our progress!"
-    message: "Please enter your school information below."
-    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    title: "我们想将计算机科学带给每一个学生——帮助我们记录进度！"
+    message: "请在下方输入您的学校信息。"
+    message_with_suggestion: "请检查下面的信息是否正确，或是否需要更新。"
     save: "保存​​"
   race_interstitial:
     title: 可选︰ 帮助我们跟踪进展来提高在计算机科学中的多元化。
@@ -706,7 +714,7 @@ zh-CN:
     share_u13_warning: "在分享之前问问你的老师。只和你学校里的其他人分享。"
     embed: "嵌入"
     advanced_share: "显示更高级的选项"
-    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
+    no_projects: "你当前没有任何项目，点击上面的任何按钮来开始一个项目。"
     close: "关闭"
     more: "更多"
     name: "姓名"
@@ -714,7 +722,7 @@ zh-CN:
     project_type: "项目类型"
     help_text: "单击 <strong>制作一个App</strong> 或 <strong>绘制东西</strong> 制作一个新的游戏实验室或者是艺术家项目！<br/>您可以在随时来继续这个项目。"
     need_help: "实施这些课程来帮助你开始新项目。"
-    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
+    thumbnail_help: "没有为您的项目扎红到正确的缩略图？运行您的应用来生成一个新的缩略图。注意，需要几个小时后，缩略图才会同步显示到每个地方。"
     really_delete: '要删除吗？'
     delete_yes: '是'
     delete_no: '不'
@@ -795,19 +803,19 @@ zh-CN:
     csd5_2: 第 2 章︰ 解决数据问题
     csd6_1: 第 1 章︰ 硬件输出
     csd6_2: 第 2 章︰ 硬件输入
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp1_1: 第一章：表达和传输信息
+    csp1_2: 第二章：发明互联网
+    csp2_1: 第一章：编码和压缩复杂信息
+    csp2_2: 第二章：使用和可视化数据
+    csp3_1: 第一章：编程语言和算法
+    csp4_1: 第一章：大数据和加密的世界
+    csp5_1: 第一章：事件驱动编程
+    csp5_2: 第二章：用数据结构编程
+    cspSurvey: '调查'
+    cspAssessment: '章节测验'
+    csp_ap_1: 第一章：安装
+    csp_ap_2: 第二章：浏览成绩工具
+    csp_ap_3: 第三章：创建性能工具
   external_links:
     disclaimer: 免责声明
     leaving_domain: 你现在正在离开code.org，访问一个不由我们创建的站点。
@@ -878,7 +886,7 @@ zh-CN:
   locked_stage: '这一阶段的内容不可见是因为这一阶段当前已锁定。在你需要工作或审查你的答案的时候， 你的老师可以解锁这一阶段。'
   hidden_stage: "你的老师没有预料到你来到这里。 请询问你的老师你应该上什么课。"
   return_course_overview: '转到单元概述'
-  view_all_units: 'View all units'
+  view_all_units: '查看所有单元'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -908,3 +916,4 @@ zh-CN:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: '完整课程'

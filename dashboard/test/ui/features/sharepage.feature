@@ -10,6 +10,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   Then I press "runButton"
   Then I press "rightButton"
   And I wait to see "#x-close"
+  And I reopen the congrats dialog unless I see the sharing input
   Then I navigate to the share URL
 
   Then ensure Flappy gameState is WAITING
@@ -43,6 +44,7 @@ Scenario: Share and save an artist level to the project gallery
 
   When I press "runButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
+  And I reopen the congrats dialog unless I see the sharing input
   And I press "save-to-gallery-button"
   And I wait until element "#save-to-gallery-button" contains text "Saved"
 
@@ -70,6 +72,7 @@ Scenario: Share and save a playlab level to the project gallery
   When I press "runButton"
   And I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
+  And I reopen the congrats dialog unless I see the sharing input
   And I press "save-to-gallery-button"
   And I wait until element "#save-to-gallery-button" contains text "Saved"
 

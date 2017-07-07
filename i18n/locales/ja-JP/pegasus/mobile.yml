@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "おめでとうございます。コース 2 を修了しました"
   congratulations_on_completing_course3: "おめでとうございます。コース 3 を修了しました"
   congratulations_on_completing_course4: "おめでとうございます。コース 4 を修了しました"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "おめでとうございます。上級コースを修了しました"
   congrats_next_tutorials_title: "次のレベルへ進む"
   congrats_next_tutorials_desc: "短めの1時間チュートリアル、または <a href=\"%{current_path}/next\">パートナーのチュートリアル</a> を試してください。"
@@ -194,6 +200,12 @@
   just_did_course2: "コース2 完了 - やったー！@codeorg"
   just_did_course3: "コース 3完了 - やったー！@codeorg"
   just_did_course4: "コース 4 完了 - やっほー！@codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "上級コース完了 - やったー！@codeorg"
   twitter_teach_cs: "10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc 。Https://code.org/ をご覧ください。"
   twitter_cs_foundational: "コンピューターサイエンスは、学生が学ぶすべての基本です。https://youtu.be/QvyTEx1wyOY。"
@@ -242,6 +254,10 @@
     シェリル, COO of Facebook
   homepage_hero_text_satya: |-
     「コンピュータサイエンスを学べば世界中であらゆることに挑戦できます。」サティヤ、Microsoft CEO
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;コードできるということは、あなたの人生の進むべき道を選択できるということです。&rdquo;クリス・ボッシュ
   homepage_hero_text_student1: |-
@@ -689,6 +705,12 @@
   dashboard_course2: 'コース2'
   dashboard_course3: 'コース3'
   dashboard_course4: 'コース4（ベータ）: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "コンピューターが無い場合は、 <a href='%{unplugged_url}'> コンピューター不要のレッスン</a> を教室で試してください。"
   dashboard_curriculum: "カリキュラム"
   dashboard_curriculum_overview: "K 5 カリキュラム概要"
@@ -857,11 +879,17 @@
   course3_name: "コース3"
   course4_name: "コース4"
   coursea-draft_name: コース A
+  coursea_name: "コース A"
   courseb-draft_name: コース B
+  courseb_name: "コース B"
   coursec-draft_name: コース C
+  coursec_name: "コース C"
   coursed-draft_name: コース D
+  coursed_name: "コース D"
   coursee-draft_name: コース E
+  coursee_name: "コース E"
   coursef-draft_name: コース F
+  coursef_name: "コース F"
   accelerated_name: "上級コース"
   cspunit1_name: '(old) Unit 1: デジタル情報'
   cspunit2_name: '(old) Unit 2: インターネット'
@@ -968,6 +996,12 @@
   course2_gradelevel: "6-18 才"
   course3_gradelevel: "8-18 才"
   course4_gradelevel: "10-18 才"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "中学2年生以上向け"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "10-18 才"
   codeorg_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   codeintl_platformtext: "最新ブラウザ、スマート フォン、タブレット"
@@ -1070,6 +1104,12 @@
   course2_shortdescription_congrats: "基本的な読書スキルを持つ生徒のため、このコースはコース 1になります。生徒はプログラムを作って問題を解決したり、インタラクティブなゲームや物語を開発して共有します。小学2年～5年生が対象です。"
   course3_shortdescription_congrats: "次のレベルの準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
   course4_shortdescription_congrats: "次に行く準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   codeintl_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   thinkersmithspanish_longdescription: "\"ロボット語\"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。"
@@ -1348,6 +1388,6 @@
   header_report_bug: "バグを報告"
   header_tutorials: "チュートリアル"
   header_documentation: "ドキュメント"
-  csp_name: "CS Principles"
+  csp_name: "'16-'17 コンピューター・サイエンス原理"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

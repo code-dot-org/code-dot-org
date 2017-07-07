@@ -77,11 +77,19 @@ zh-TW:
       CSD U3 Direction Animations_callout: [ ]
       CSD U3 Direction Arrows_callout: [ ]
       CSD U3 Draw Loop Plugged update your scene_callout: [ ]
+      CSD U3 Drawing Squares to Corners_callout: [ ]
       CSD U3 Else_callout: [ ]
       CSD U3 If Else_callout: [ ]
       CSD U3 Keyboard Input Challenge_callout: [ ]
       CSD U3 Keypress Boolean_callout: [ ]
       CSD U3 Keypress Watchers_callout: [ ]
+      CSD U3 L11 Freeplay_callout: [ ]
+      CSD U3 L12 Freeplay_callout: [ ]
+      CSD U3 L13 Freeplay_callout: [ ]
+      CSD U3 L3 Freeplay_callout: [ ]
+      CSD U3 L4 Freeplay_callout: [ ]
+      CSD U3 L6 Freeplay_callout: [ ]
+      CSD U3 L7 Freeplay_callout: [ ]
       CSD U3 Property Conditional Multi_callout: [ ]
       CSD U3 Property Conditional_callout: [ ]
       CSD U3 Random Choice_callout: [ ]
@@ -453,6 +461,8 @@ zh-TW:
         New Artist Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
         New Artist Project_callout2: 點擊「運行」以儲存並運行你的程式
         sign_in_to_save_project: 想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！
+      New Frozen Project_callout:
+        snowflake_dropdown: 使用下拉清單來創建不同的雪花！
       New Maker Lab Project_callout: [ ]
       New Play Lab Project_callout:
         New Play Lab Project_callout1: 點擊工具箱上的各個類別以檢視其中的積木！拖曳積木到工作區，把他們添加到你的程式中。
@@ -613,6 +623,8 @@ zh-TW:
       courseB_maze_seq3_callout:
         courseB_maze_seq3_1: 灰色的積木就像石頭一樣，無法被破壞和丟棄。
       courseB_maze_seq7_callout: [ ]
+      courseC_PlayLab_events_challenge1_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseC_artist_prog1_callout: [ ]
       courseC_artist_prog2_callout: [ ]
       courseC_collector_loops_challenge2_callout: [ ]
@@ -662,10 +674,7 @@ zh-TW:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: 你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。
-      courseD_artist_nestedLoops_challenge2_callout:
-        courseD_artist_nestedLoops_challenge2_callout1: 這個迴圈應該會畫出個八邊形。
-        courseD_artist_nestedLoops_challenge2_callout2: 這個迴圈應該會畫出個六邊形。
-        courseD_artist_nestedLoops_challenge2_callout3: 這個迴圈應該會畫出個正方形。
+      courseD_artist_nestedLoops_challenge2_callout: [ ]
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: 你可以修改這個數字。
         courseD_artist_ramp11_2: 點擊此處輸入程式要重複的次數。
@@ -707,6 +716,8 @@ zh-TW:
       courseD_maze_ramp7_callout: [ ]
       courseD_playLab_condFP_callout:
         courseD_playLab_condFP_1: we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.
+      courseE_artist_concept_challenge2_callout: [ ]
+      courseE_artist_embed_functions8_callout: [ ]
       courseE_artist_functions1_callout:
         courseD_artist_functions1_1: Let's start by using this block to help create the first square.
       courseE_artist_functions2_callout:
@@ -775,8 +786,11 @@ zh-TW:
         courseD_maze_ramp7_1: This is your first challenge puzzle! These are meant to be hard and may take several tries.
       courseE_maze_ramp_predict1_callout: [ ]
       courseE_multi_maze_ramp5_callout: [ ]
+      courseE_playLab_challenge1_callout:
+        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different parts of the game space.
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: 讓角色移動到這個旗幟以完成這個關卡。
+      courseF_artist_embed_variables9_callout: [ ]
       courseF_artist_for1_callout:
         courseF_artist_for1_1: 工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。
       courseF_artist_for4_callout: [ ]
@@ -823,6 +837,8 @@ zh-TW:
       courseF_artist_variables_8_callout: [ ]
       courseF_artist_variables_9_callout: [ ]
       courseF_artist_variables_FP_callout: [ ]
+      courseF_artist_variables_template_callout: [ ]
+      courseF_artistembed_variables9_callout: [ ]
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: 這個工具箱現在是在分類模式，所有你需要的積木都被分類放置！
       courseF_bee_conditionals5_callout:
@@ -849,6 +865,8 @@ zh-TW:
         courseF_bee_fwp3_1: This same function can be used when checking for empty spaces as well as clouds.
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
+      courseF_bee_fwp_challenge2_callout:
+        courseF_bee_fwp_challenge2_callout1: This function will do a good job with corn, but what about the other vegetables?
       courseF_maze_predict1_callout: [ ]
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to start your program.

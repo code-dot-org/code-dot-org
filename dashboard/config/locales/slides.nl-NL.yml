@@ -1253,7 +1253,7 @@
           the rest of them cannot be completed. Creating algorithms that others can
           understand is really important. That's why each step has to be written down,
           so no matter who does it, the result is the same.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Tot nu toe maakte je een animatie of verhaal dat telkens hetzelfde deed
@@ -1395,7 +1395,7 @@
         text: In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan
           0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen
           zolang er voorraad is. Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Heb je ooit gehoord van het debuggen van een programma? Met debuggen

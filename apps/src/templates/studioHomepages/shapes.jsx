@@ -12,6 +12,24 @@ const shapes = {
       description: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
     })
+  ),
+  studentTopCourse: PropTypes.shape({
+    assignableName: PropTypes.string.isRequired,
+    linkToOverview: PropTypes.string.isRequired,
+    linkToLesson: PropTypes.string.isRequired,
+    lessonName: PropTypes.string.isRequired,
+  }),
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      teacherName: PropTypes.string.isRequired,
+      linkToProgress: PropTypes.string.isRequired,
+      assignedTitle: PropTypes.string.isRequired,
+      linkToAssigned: PropTypes.string.isRequired,
+      numberOfStudents: PropTypes.number.isRequired,
+      linkToStudents: PropTypes.string.isRequired,
+      sectionCode: PropTypes.string.isRequired
+    })
   )
 };
 

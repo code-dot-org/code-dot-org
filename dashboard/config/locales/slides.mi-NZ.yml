@@ -1311,7 +1311,7 @@
           whaitake ngā hipanga katoa, ahakoa te rahi, nā te mea, ki te ngaro tētahi
           o ngā hipanga, ka raru te katoa. Koina te take me āta tuhi i ngā hipanga
           katoa, kia rite tonu te huanga i ia wā, ahakoa te kaikawe.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: "Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei
@@ -1460,7 +1460,7 @@
         text: I tēnei tauira ka mea atu tātou MĒNĀ he waireka tō te putiputi tawa
           he nui ake i te 0, tikina atu te waireka. Mā tēnei ka whakahautia tā tātou
           pī ki te kohikohi i te waireka mēnā rā he waireka. Ana!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Kua rongo kōrero koe mō tētahi papatono patuiro? Koinei te ara e mōhio
