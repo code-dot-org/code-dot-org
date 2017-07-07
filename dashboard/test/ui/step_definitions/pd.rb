@@ -22,7 +22,6 @@ end
 
 Given(/^I am a teacher who has just followed a survey link$/) do
   random_teacher_name = "TestTeacher" + SecureRandom.hex[0..9]
-  require_rails_env
 
   steps %Q{
     And I create a teacher named "#{random_teacher_name}"
@@ -106,20 +105,33 @@ end
 
 def create_facilitator(course)
   facilitator = User.find_or_create_teacher(
-    {name: 'Facilitator', email: "facilitator#{SecureRandom.hex[0..5]}@code.org"}, nil, 'facilitator'
+    {
+      name: "Facilitator#{SecureRandom.hex[0..5]}",
+      email: "facilitator#{SecureRandom.hex[0..5]}@code.org"
+    },
+    nil,
+    'facilitator'
   )
+  facilitator.permission = UserPermission::FACILITATOR
   Pd::CourseFacilitator.create(facilitator_id: facilitator.id, course: course)
 
   facilitator
 end
 
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
+  require_rails_env
+
   # Organizer
   if role == 'organized'
     organizer = User.find_by(name: name)
   else
     organizer = User.find_or_create_teacher(
-      {name: 'Organizer', email: "organizer#{SecureRandom.hex[0..5]}@code.org"}, nil, 'workshop_organizer'
+      {
+        name: 'Organizer',
+        email: "organizer#{SecureRandom.hex[0..5]}@code.org"
+      },
+      nil,
+      'workshop_organizer'
     )
   end
 
