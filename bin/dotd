@@ -184,6 +184,10 @@ def content_push(server_name, environment_name)
   # Notice if the content push fails, and be helpful about fixing the problem.
   unless success
     puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
+    should_i "retry the #{server_name} content push" do
+      content_push(server_name, environment_name)
+      return
+    end
     should_i "ssh to #{server_name} so you can fix the problem manually" do
       puts <<-EOS.unindent
 
