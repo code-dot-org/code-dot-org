@@ -55,7 +55,7 @@ export default storybook => {
         name: 'Failed to load classrooms',
         description: 'Dialog shown when an error is returned from the API.',
         story: () => (
-          <ExampleDialogButton classrooms={false} />
+          <ExampleDialogButton loadError={{status: 403, message: 'Sample error message.'}} />
         )
       },
     ]);

@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseDialog from '../BaseDialog';
-import { classroomShape } from './shapes';
+import { classroomShape, loadErrorShape } from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 
@@ -49,6 +49,10 @@ const styles = {
     color: '#5b6770',
     border: '1px solid #c5c5c5',
   },
+  error: {
+    fontSize: 10,
+    color: color.light_gray,
+  },
 };
 
 const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length ?
@@ -88,13 +92,17 @@ ClassroomList.propTypes = {
   selectedId: React.PropTypes.string,
 };
 
-const LoadError = ({studioUrl}) =>
+const LoadError = ({error, studioUrl}) =>
   <div>
     <a href={`${studioUrl}/users/auth/google_oauth2?scope=classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
+    <p style={styles.error}>
+      {error.status} {error.message}
+    </p>
   </div>;
 LoadError.propTypes = {
+  error: loadErrorShape,
   studioUrl: React.PropTypes.string.isRequired,
 };
 
@@ -102,10 +110,8 @@ export default class RosterDialog extends React.Component {
   static propTypes = {
     handleClose: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.oneOf(
-      React.PropTypes.arrayOf(classroomShape),
-      React.PropTypes.bool,
-    ),
+    classrooms: React.PropTypes.arrayOf(classroomShape),
+    loadError: loadErrorShape,
     studioUrl: React.PropTypes.string.isRequired,
   }
 
@@ -137,15 +143,16 @@ export default class RosterDialog extends React.Component {
           {locale.selectGoogleClassroom()}
         </h2>
         <div style={styles.content}>
-          {this.props.classrooms ?
-            <ClassroomList
-              classrooms={this.props.classrooms}
-              onSelect={this.onClassroomSelected}
-              selectedId={this.state.selectedId}
+          {this.props.loadError ?
+            <LoadError
+              error={this.props.loadError}
+              studioUrl={this.props.studioUrl}
             /> :
-            this.props.classrooms === false ?
-              <LoadError
-                studioUrl={this.props.studioUrl}
+            this.props.classrooms ?
+              <ClassroomList
+                classrooms={this.props.classrooms}
+                onSelect={this.onClassroomSelected}
+                selectedId={this.state.selectedId}
               /> :
               locale.loading()
           }
