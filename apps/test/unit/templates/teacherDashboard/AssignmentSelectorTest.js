@@ -4,6 +4,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { assignmentId } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 const defaultProps = {
   currentPrimaryId: assignmentId(null, null),
@@ -55,6 +56,9 @@ const defaultProps = {
 describe('AssignmentSelector', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
+
+  before(() => experiments.setEnabled('sectionFocus', true));
+  after(() => experiments.setEnabled('sectionFocus', false));
 
   it('does not show script that is in course in primary dropdown', () => {
     const wrapper = shallow(

@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Félicitations, tu as fini le cours N°2 !"
   congratulations_on_completing_course3: "Félicitations, tu as fini le cours N°3 !"
   congratulations_on_completing_course4: "Félicitation, tu as fini le cours n°4 !"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Félicitations, tu as fini le cours accéléré !"
   congrats_next_tutorials_title: "Essaie ensuite ces tutoriels"
   congrats_next_tutorials_desc: "Essaie ces plus courts tutoriels d’une heure seulement ou essaie un <a href=\"%{current_path}/next\">tutoriel partenaire</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Je viens de finir le Cours 2 — jettes-y un œil ! @codeorg"
   just_did_course3: "Je viens de finir le Cours 3 — jettes-y un œil ! @codeorg"
   just_did_course4: "Je viens de finir le Cours 4 — jettes-y un œil ! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Je viens de finir le Cours accéléré — jettes-y un œil ! @codeorg"
   twitter_teach_cs: "Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/ pour en savoir plus."
   twitter_cs_foundational: "L’informatique est fondamentale à apprendre pour chaque élève. https://youtu.be/QvyTEx1wyOY."
@@ -239,6 +251,10 @@
     « Nos enfants — dont nos filles — doivent avoir l’occasion d'apprendre l'informatique. » Sheryl, Directrice des Opérations, Facebook
   homepage_hero_text_satya: |-
     «&#160;L'informatique peut vous apporter les meilleures opportunités du monde.&#160;» Satya, PDG de Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     «&#160;Si vous codez, vous pouvez choisir le déroulement de votre vie.&#160;» Chris Bosh
   homepage_hero_text_student1: |-
@@ -683,6 +699,12 @@
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
   dashboard_course4: 'Cours 4 (bêta) : '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez ces leçons en mode \"déconnecté\" </a> dans votre classe."
   dashboard_curriculum: "Programme"
   dashboard_curriculum_overview: "Aperçu du programme pour les élèves de primaire"
@@ -851,11 +873,17 @@
   course3_name: "Cours 3"
   course4_name: "Cours 4"
   coursea-draft_name: Cours A
+  coursea_name: "Cours A"
   courseb-draft_name: Cours B
+  courseb_name: "Cours B"
   coursec-draft_name: Cours C
+  coursec_name: "Cours C"
   coursed-draft_name: Cours D
+  coursed_name: "Cours D"
   coursee-draft_name: Cours E
+  coursee_name: "Cours E"
   coursef-draft_name: Cours F
+  coursef_name: "Cours F"
   accelerated_name: "Cours accéléré"
   cspunit1_name: Principes de l'informatique, unité 1
   cspunit2_name: Principes de l'informatique, unité 2
@@ -962,6 +990,12 @@
   course2_gradelevel: "De 6 à 18 ans"
   course3_gradelevel: "De 8 à 18 ans"
   course4_gradelevel: "De 10 à 18 ans"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "4ème ou plus"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "De 10 à 18 ans"
   codeorg_platformtext: "Navigateurs récents, smartphones, tablettes"
   codeintl_platformtext: "Navigateurs récents, smartphones, tablettes"
@@ -1064,6 +1098,12 @@
   course2_shortdescription_congrats: "Pour les élèves qui savent lire, ce cours s'appuie sur le Cours 1. Les élèves créeront des programmes pour résoudre des problèmes et développer des jeux interactifs ou des histoires qu'ils peuvent partager. Recommandé du CP au CM1."
   course3_shortdescription_congrats: "Prêt pour le prochain niveau ? Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires interactives et des jeux qu'ils pourront partager. Recommandé pour les CM1–CM2."
   course4_shortdescription_congrats: "Prêt à aller plus loin ? Les élèves vont approfondir les concepts de programmation vus dans les cours précédents pour résoudre des problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires interactives et des jeux qu'ils pourront partager. Recommandé du CM1 à la 4e."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Apprends les concepts de base de l'informatique avec la programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs. Zombies. Découvre les boucles «&#160;Répéter&#160;», les instructions conditionnelles et les algorithmes de base. Disponibles en 34 langues."
   codeintl_longdescription: "Apprends les concepts de base de l'informatique avec le glisser-déposer. Il s'agit d'un didacticiel ludique, autogéré, mettant en vedette les conférences vidéo de Bill Gates, Mark Zuckerberg, Angry Birds et Plants vs Zombies. Apprends les notions de boucles, d'instructions conditionnelles et des algorithmes de base. Disponible en 34 langues."
   thinkersmithspanish_longdescription: "En utilisant un « Robot Vocabulaire » prédéfini, les élèves découvriront comment se guider pour exécuter des tâches spécifiques sans en discuter au préalable. Cette leçon apprend aux enfants la relation entre les symboles et les actions, ainsi que l'inestimable capacité du débogage."
@@ -1342,6 +1382,6 @@
   header_report_bug: "Report bug"
   header_tutorials: "Tutoriels"
   header_documentation: "Documentation"
-  csp_name: "CS Principles"
+  csp_name: "Principes de CS 16-17"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"

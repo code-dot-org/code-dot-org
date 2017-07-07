@@ -75,6 +75,7 @@
   "penUp": "levantar o lápis",
   "reinfFeedbackMsg": "Aqui está o teu desenho! Continua a aperfeiçoá-lo ou continua para o próximo desafio.",
   "setAlpha": "definir transparência",
+  "setCharacter": "set character to {character}",
   "setColour": "definir cor",
   "setPattern": "definir padrão",
   "setWidth": "definir largura",
@@ -90,6 +91,5 @@
   "turnTooltip": "Vira o artista à direita ou à esquerda de acordo com o número de graus especificado.",
   "turtleVisibilityTooltip": "Torna o artista visível ou invisível.",
   "widthTooltip": "Altera a largura do lápis.",
-  "wrongColour": "A tua imagem está na cor errada. Neste desafio tem de ser %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "A tua imagem está na cor errada. Neste desafio tem de ser %1."
 }

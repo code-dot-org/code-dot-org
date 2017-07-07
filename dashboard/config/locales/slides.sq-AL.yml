@@ -1284,7 +1284,7 @@
           mund të kuptojnë është me të vërtetë i rëndësishëm. Kjo është për shkak
           që cdo hap duhet të shkruhet, kështu që nuk ka lidhje kush e bën atë, rezultati
           është i njejtë.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Deri tani ti ke qënë duke bërë një animim ose një histori që bën të
@@ -1434,7 +1434,7 @@
         text: Në këtë shembull, ne do të themi se NËSE lulja vjollcë ka nektar me
           të madh se 0, merr nektar. Ajo do të i tregojë bletës tonë të mbaj nektarin
           aq gjatë sa është atje. Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Keni ndegjuar ndonjëherë për rregullimin e një programi? Kjo është mënyra

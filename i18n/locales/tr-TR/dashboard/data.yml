@@ -29,15 +29,15 @@ tr:
         'Jigsaw': 'Yapboz'
         'MazeStep': 'Labirent Adım Modu'
         'Wordsearch': 'Kelime arama'
-        'Webapp': 'Uygulama Laboratuvarı'
+        'Webapp': 'App Laboratuvarı'
         'ArtistEC': 'Sanatçı'
         'TextMatch': 'Metin Eşleştirmesi'
         'StudioEC': 'Oyun Laboratuvarı'
-        'Applab': 'Uygulama Laboratuvarı'
+        'Applab': 'App Laboratuvarı'
         'NetSim': 'İnternet Simülatörü'
         'Custom': 'Aktör'
         'CustomStudio': 'Oyun Laboratuvarı'
-        'Gamelab': 'Oyun labaraturarı'
+        'Gamelab': 'Oyun Laboratuvarı'
     trophy:
       name:
         'Bronze': 'Bronz'
@@ -59,23 +59,23 @@ tr:
         'maze_2_2': "Yaramaz domuzu yakalamama yardım edebilir misin? Oraya gitmem için birkaç \"İlerle\" bloğunu birleştirmeli ve \"Programı Çalıştır\" tuşuna basmalısın."
         'maze_2_1': "Bu domuz benim tüylerimi diken diken ediyor. Onu bulmama yardımcı ol!"
         'maze_2_2_5': "Yolu takip et ve beni sersem domuza götür. Patlayıcılardan uzak dur yoksa bu tüylerim havaya uçacak!"
-        'maze_2_3': "Yeşil şeytana gitmeme önderlik et! (Patlayıcılara dikkat et)"
+        'maze_2_3': "Yeşil düşmanıma gitmeme yardımcı ol! (Patlayıcılara dikkat et)"
         'maze_2_4': "Sakin ol ve kötü domuzu bulmama yardımcı ol. Aksi halde kızmaya başlayabilirim!"
-        'maze_2_5': "2 blok kullanarak yeşil domuzcuğa ulaşabileceğim bir yol var. Bunu çözebilir misin?"
-        'maze_2_6': "Sadece üç blok kullanarak beni yeşil haine ulaştırmaya çalış."
+        'maze_2_5': "Sadece 2 blok kullanarak yeşil domuza ulaşabileceğim bir yol var. Bulabilir misin?"
+        'maze_2_6': "Sadece üç blok kullanarak beni yeşil işgalciye ulaştırmaya çalış."
         'maze_2_7': "Bloklar en az sayıda kullanarak bu kötü domuzcuğu ortadan kaldırmama yardım et. Birden fazla \"defa tekrar\" bloğu kullanmayı dene."
         'maze_2_8': "Eğer blok gri ise, bu onu silemeyeceğin anlamına gelir. Yapbozu 3 defa tekrar eden \"tekrar\" bloğunu kullanarak çöz. Bu 3 bloğu gri renkteki \"tekrar\" bloğunun içine yerleştir: oynat, oynat, dön."
         'maze_2_9': "Tamam, yeni \"e kadar tekrarla\" bloğunu dene. Bu, ben yeşil domuza ulaşana kadar tekrarlayacak."
         'maze_2_10': "Tamam, pratik için son kez. Bunu sadece 4 blok kullanarak çözebilir misin?"
-        'maze_2_11': "Değerli kişi.Ben zombi.Açım. Ayçiçeklerini almam gerekli.Bana onları sadece 5 blok kullanarak getirebilir misin?"
+        'maze_2_11': "Değerli kişi. Ben zombi. Ben açım. Ayçiçeklerini almam gerekli. Beni onlara sadece 5 blok kullanarak götürebilir misin?"
         'maze_2_12': "Tamam, Bu benzer ama biraz farklı. Bunu sadece 5 blok ile yapabilir misin?"
         'maze_2_13': "Ne zaman döneceğime karar vermem için yeni \"eğer\" bloğunu kullan. İpucu: Sadece bir bloğa daha ihtiyacın var ama bunu nasıl kurduğumuzu öğren ki bir dahaki sefer kullanabilesin."
         'maze_2_14': "Tamam, bu sadece son bulmaca gibi ama \"Eğer\" bloğu ile \"Tekrarla\" bloğunu nasıl birlikte kullandığını hatırlaman gerekiyor."
         'maze_2_15': "Ayçiçeğini istiyorum! Sadece bir \"Eğer\" bloğu kullanarak, en az sayıda blok ile oraya ulaşmamı sağla."
         'maze_2_16': "Tamam, sadece alıştırma olsun diye bunu tekrar yapalım - çok farklı değil, sadece canavar bitkilere dikkat et!"
         'maze_2_17': "\"Eğer-Değilse\" bloğu bir koşulu kontrol eder ve bir şeyi YA DA diğerini yapar. Ayçiçeğine ulaşmam için bu yeni bloğu kullanmayı dene."
-        'maze_2_18': "\"Eğer değilse\" bloğunun bir örneğini daha, ilk denemenizde doğru yapabildiniz mi?"
-        'maze_2_19': "Daha karmaşık bir labireti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaptıysan, bu kıvrımlı yolda uzunluğu ne olursa olsun yürüyebilirim."
+        'maze_2_18': "\"Eğer -değilse\" bloğunun bir örneği daha, ilk denemede doğru yapabilir misin?"
+        'maze_2_19': "Daha karmaşık bir labirenti sadece 3 blok ekleyerek çözmeme yardımcı olur musun? Eğer doğru yaparsan, uzunluğu ne olursa olsun her kıvrımlı yolda yürüyebilirim."
         'turtle_1_1': "Merhaba , ben bir sanatçıyım. İstediğin herhangi bir şeyi çizmek için beni programlayabilirsin. Resimdeki gri çizgileri çizdirmek için bir kaç blok kullan."
         'turtle_1_2': "Şimdi bir kare çiz. Not: Bunu \"rengi belirle\" bloğununda en sevdiğin rengi seçerek yapabilirsin."
         'turtle_1_3': "Sadece 3 blok kullanarak bir kare yapın."
@@ -272,7 +272,7 @@ tr:
         'studio_gumball_move_to_flag': "Banana Joe günlük bir yarışı kazanmak üzere! Son 200 pikseli gitmesine yardım etmek için \"ilerle\" bloğunu kullanın."
         'studio_gumball_move_to_actor': "Gumball (aktör 1) ve Darwin (aktör 2) bayram için geç kaldı! \"hareket aktör\" bloğu kullanarak Gumballin aşağı doğru Darwina 200 piksel ilerlemesine yardımcı ol.  Ardından, \"zaman oyuncu dokunur\" olayına bir blok ekleyerek ses çıkarmasını sağlayın."
         'studio_gumball_repeat': "\"Sonsuza kadar tekrarla\" bloğu size kodu sürekli oynatma imkanı verir. Gumballi sağa ve sola tekrar tekrar hareket ettirerek egzersiz yaptırıp ve yarışa hazırlayabilir misiniz?"
-        'studio_gumball_click_hello': "Antona \"Hazır, vaziyet, başla!\" diyerek yarışı başlatmasına yardım edebilir misin? Programı denemek için Çalıştıra tıkladıktan sona Antona tıklamayı unutmayın!"
+        'studio_gumball_click_hello': "Antona \"Hazır, vaziyet al, başla!\" diyerek yarışı başlatmasına yardım edebilir misin? Programını denemek için Çalıştıra tıkladıktan sona Antona tıklamayı unutmayın!"
         'studio_gumball_move_events': "Darwin bayrak toplama yarışında. Onun etrafta koşturmasına yardım etmek için her bir olaya \"hareket et \"bloğu ekle. Bittiğinde çalıştır tuşuna bas ve bütün bayrakları topla."
         'studio_gumball_sound_and_points': "Kodun çoğunu biz sağladık. Antuan sağa sola hareket edebiliyor ve Muz bütün ekranda hareket edebiliyor. Sizde ektra kodlar ekleyerek \"aktör zamanında dokunduğunda\" olayında ses çıkarmasını sağlayın. Ayrıca muz ile Antuan her çarptığında puan kazansın. Oyna tuşuna basarak oyunu oynayın."
         'studio_gumball_warn_food_fight': "Darwin yemek atma savaşından kaçtı! Arka Planı \"Karakterler arka planı\" olarak değiştir. Darwinin daha hızlı hareket etmesini sağla. Sonra Darwinin hızlıca gidip Pennyi uyarmasını sağla.\n"

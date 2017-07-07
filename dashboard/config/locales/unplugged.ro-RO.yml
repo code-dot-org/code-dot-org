@@ -122,116 +122,97 @@
         title: Hărţi Fericite
         desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
           un personaj printr-un labirint folosind o singură comandă.
-        video: C1_hărți_fericite_fără calculator
       MoveIt:
         title: Mişcă-te, Mişcă-te
         desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
           un personaj printr-un labirint folosind o singură comandă.
-        video: C1_mișcămișcă_fără calculator
       PlantASeed:
         title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
         desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
           de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
           aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
           în care algoritmii joacă un rol esențial.
-        video: C1_plantare_sămânță
       BuildingAFoundation:
         title: Construirea unei Fundaţii
         desc: Elevii construiesc o structură folosind numai rechizitele oferite. Structurile
           trebuie să finalizeze o sarcină (ating o anumită înălțime sau suportă o
           anumită greutate) și elevii discută ideea de a fi perseverent când lucrurile
           devin complicate.
-        video: C1_construcție_fundație
       GettingLoopy:
         title: Transformând în Buclă
         desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
           repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
           simplă, apoi vor fi instruiți să o repete.
-        video: C1_începem_repetițiile
       RelayProgramming:
         title: Programare de releu
         desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
           pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie milimetrică”.
           Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
           eroare, trebuie să șteargă tot înapoi până la acel punct.
-        video: C2_programarea_cu_ștafetă
       Conditionals:
         title: Condiţionale
         desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
           de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
           și ”Dacă trag o carte neagră, tu obții un punct.”'
-        video: C2_decizii_cu_cărți
       BigEvent:
         title: Marele eveniment
         desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
           reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
           Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
           în funcție de butonul care a fost apăsat.
-        video: C1_marele eveniment_fără calculator
       GoingPlacesSafely:
         title: Mergând în locuri în siguranţă
         desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
           arată cum poate fi sigură navigarea pe Internet.
-        video: C1_vizitând_locuri_în siguranță
       GraphPaperProgramming:
         title: Programare pe Hârtie Milimetrică
         desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
           comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
           un desen.
-        video: C2_hârtie_milimetrică
       PaperPlanes:
         title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
         desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
           de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
           De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
           informatică și rolul esențial pe care îl joacă algoritmii.
-        video: C2_avioane_de_hârtie
       BinaryBracelets:
         title: Brăţări Binare
         desc: Elevii creează brățări ca o reprezentare binară a primei litere din
           numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
           multe feluri.
-        video: C2_brățări_binare
       DigitalFootprint:
         title: Amprenta ta Digitală
         desc: Profesorii introduc elevilor ideea că postarea informațiilor online
           despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
-        video: C2_urme_digitale
       ComputationalThinking:
         title: Gândire Computațională
         desc: Elevii folosesc paşii de gândire computațională (descompunere, potrivire
           de patern, astractizare, algoritm) pentru a-și dea seama cum să joace un
           joc care vine fără instrucţiuni.
-        video: C3_gândire_computațională
       FunctionalSuncatchers:
         title: Prinzători ai Soarelui Funcţionali
         desc: Elevii creează un algoritm cu variabile şi funcţii (bucăţi de cod pe
           care doriţi să le utilizaţi în mod repetat) pentru a realiza suncatchers
           folosind ață și mărgele.
-        video: C3_suncatcher-uri_funționale
       SongwritingParameters:
         title: Compoziții muzicale cu parametri
         desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
           transmiterea parametrilor (care personalizează o funcție fără a trebui să
           rescrie întreaga funcție).
-        video: C3_compoziție_cu_parametri
       DiceRace:
         title: 'Algoritmi din viaţa reală: cursa de zaruri'
         desc: Această lecție indică modul în care noi folosim algoritmi în viața de
           zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
           pentru un joc de zaruri.
-        video: C3_cursa_de_zaruri
       Internet:
         title: Internet
         desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de
           transmisie pe Internet.
-        video: C3_internet
       Crowdsourcing:
         title: Obţinând Informaţii/Critici
         desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor
           din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai
           eficientă decât rezolvarea individuală.
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: Cetățenia Digitală
         desc: Elevii exploreaza diferenţa dintre informaţii private şi informaţii
@@ -242,14 +223,12 @@
           un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
           să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
           dumneavoastră are nevoie de mai multe detalii.
-        video: C4_algoritmi_fără_calculator
       EnvelopeVariables:
         title: Variabile de tip plic
         desc: Variabilele permit foarte multă libertate în informatică.  Această lecţie
           vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în multe
           moduri diferite. Utilizați această activitate înainte de (sau în conjuncție
           cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
-        video: C4_variabile_fără_calculator
       MadGlibs:
         title: Mad Glibs
         desc: Abstractizarea este una dintre cele mai importante aptitudini pentru
@@ -257,12 +236,10 @@
           dvs. să analizeze povestiri pentru a găsi diferenţe, astfel încât să poată
           abstractiza. Acele povestiri abstractizate vor deveni șabloane pentru altele
           noi, distractive și trăznite.
-        video: C4_madlib-uri_fără_calculator
       ForLoopFun:
         title: Pentru distracția cu bucle
         desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
           vom învăța cum să folosim bucle cu structură extra încorporată."
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Compozitie cu parametri
         desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
@@ -270,7 +247,6 @@
           și iar in interiorul programului vostru mai mare. Această lecţie va ajuta
           elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
           este o practică așa de utilă.  '
-        video: C4_parametri_fără_calculator
       BinaryImages:
         title: Imagini binare
         desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
@@ -279,40 +255,34 @@
           pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
           asemenea, chiar și informații mai complexe (precum imagini şi culori) în
           sistem binar.
-        video: C4_sistem_binar_fără_calculator
       VideoGamesCoordinatePlanes:
         title: Jocuri Video și Planuri de coordonate
         desc: Descoperă cum jocurile video la care îți place sa te joci sunt de fapt
           dirijate de algebră! Explorează cum expresiile algebrice și planul de coordonate
           ne pot ajuta să înțelegem cum funționează jocurile video și apoi începe
           planificarea unui joc pe care să-l creezi tu.
-        video: alg_11_coordinate_plane
       Contracts:
         title: Contracte, Domeniu și Gamă
         desc: Contractele ne ajută să înțelegem și să discutăm funcțiile. În această
           lecție, vom privi cum Contractele ne ajută să înțelegem un nou limbaj de
           programare sau o funcție.
-        video: alg_5_contracts
       DesignRecipe:
         title: Rețeta pentru design
         desc: "În ultima etapă elevii au scris niște funcţii foarte simple - dar funcțiile
           mai sofisticate solicită o abordare mai în profunzime. Rețeta Design este
           o abordare structurată în scrierea funcţiilor, care include teste de scriere
           menite să verifice dacă funcţia funcționează cum era de aşteptat."
-        video: alg_8_design_recipe
       Booleans:
         title: Boolean și Logică
         desc: Booleenii sunt al patrulea și ultimul tip de date despre care vei învăța
           în acest curs. În cadrul acestei activități vei învăța definirea operatorilor
           booleeni și cum ne ajută ei să scriem funcții care gândesc logic
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Condiționale și funcții pe porțiuni
         desc: Parametri pe care-i alocăm funcțiilor determină output-urile să varieze
           pe baza unui model foarte rigid. Să presupunem că vrem parametri cu niște
           valori pentru a crea output-uri folosind un model, dar alte valori pentru
           a utiliza un model diferit. Acum sunt necesare condiționalele...
-        video: alg_10_conditionals
       CollisionDetection:
         title: Detectarea coliziunilor şi teorema lui Pitagora
         desc: A determina când se ating obiectele de pe ecran este un aspect important
@@ -320,4 +290,28 @@
           Teorema lui Pitagora şi Formula Distanței pot fi folosite pentru a măsura
           distanţa dintre două puncte pe un plan, pentru ca apoi să decidem dacă aceste
           două puncte (sau caractere ale jocului) se ating.
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: "[șir gol]"
+        desc: "[șir gol]"
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Activitate fără Calculator
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Activitate fără Calculator
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+          but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Activitate fără Calculator
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Activitate fără Calculator
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Activitate fără Calculator
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Activitate fără Calculator
+        desc: Today you will learn about what to do if someone is being mean online.
