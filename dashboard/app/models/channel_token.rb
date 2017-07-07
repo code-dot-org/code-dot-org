@@ -31,13 +31,11 @@ class ChannelToken < ActiveRecord::Base
     # `find_by` should succeed.
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       # your own channel
-      channel_token = find_or_initialize_by(level: level.host_level, user: user) do |ct|
+      find_or_create_by!(level: level.host_level, user: user) do |ct|
         # Get a new channel_id.
         ct.channel = create_channel ip, storage_app, data: data
         ct.storage_app_id = (storage_decrypt_channel_id ct.channel).second
       end
-      channel_token.save!
-      channel_token
     end
   end
 
