@@ -7,10 +7,15 @@ FactoryGirl.define do
     funded true
     course Pd::Workshop::COURSES.first
     subject {Pd::Workshop::SUBJECTS[course].try(&:first)}
+    trait :teachercon do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
+    end
     capacity 10
     transient do
       num_sessions 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
       enrolled_unattending_users 0
@@ -18,7 +23,12 @@ FactoryGirl.define do
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
+        workshop.sessions << build(
+          :pd_session,
+          workshop: workshop,
+          start: evaluator.sessions_from + i.days,
+          duration_hours: evaluator.each_session_hours
+        )
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -45,9 +55,12 @@ FactoryGirl.define do
   end
 
   factory :pd_session, class: 'Pd::Session' do
+    transient do
+      duration_hours 6
+    end
     association :workshop, factory: :pd_workshop
     start {Date.today + 9.hours}
-    self.end {start + 6.hours}
+    self.end {start + duration_hours.hours}
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
@@ -114,7 +127,7 @@ FactoryGirl.define do
     transient do
       form_data {build :pd_facilitator_program_registration_hash, user: user}
     end
-    form_data {from_data.to_json}
+    form_data {form_data.to_json}
   end
 
   # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
@@ -146,6 +159,12 @@ FactoryGirl.define do
         liabilityWaiver: ["Yes"]
       }.stringify_keys
     end
+  end
+
+  factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+
+    form_data {(build :pd_teachercon_survey_hash).to_json}
   end
 
   factory :pd_teachercon_survey_hash, class: 'Hash' do
@@ -187,7 +206,10 @@ FactoryGirl.define do
         "facilitatorsCouldImprove": "facilitators could improve",
         "likedMost": "liked most",
         "wouldChange": "would change",
-        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name."
+        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
+        "instructionFocus": "Strongly aligned with A",
+        "teacherResponsibility": "Strongly aligned with A",
+        "teacherTime": "Strongly aligned with A",
       }.stringify_keys
     end
   end
@@ -239,6 +261,11 @@ FactoryGirl.define do
         ]
       }.stringify_keys
     end
+  end
+
+  factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+    form_data {(build :pd_local_summer_workshop_survey_hash).to_json}
   end
 
   factory :pd_local_summer_workshop_survey_hash, class: 'Hash' do

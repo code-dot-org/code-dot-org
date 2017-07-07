@@ -90,6 +90,12 @@
   congratulations_on_completing_course2: "Čestitke za dokončan Tečaj 2"
   congratulations_on_completing_course3: "Čestitke za dokončan Tečaj 3"
   congratulations_on_completing_course4: "Čestitke za dokončan Tečaj 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Čestitamo za dokončanje Pospešenega
     Tečaja"
   congrats_next_tutorials_title: Poskusi naslednje tutoriale
@@ -262,6 +268,12 @@
   just_did_course2: Pravkar sem končal Tečaj 2! @codeorg
   just_did_course3: Pravkar sem končal Tečaj 3! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Pravkar sem končal Pospešeni Tečaj! @codeorg
   twitter_teach_cs: "Zakaj več šol ne poučuje računalništva? To lahko spremenimo.
     \ \nhttp://youtu.be/nKIu9yen5nc. Obiščite http://code.org/ in izvedeli boste več.\n"
@@ -319,6 +331,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Računalništvo nam lahko odklene najboljše priložnosti na svetu.&rdquo;
     Satya, glavni direktor podjetja Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Če znaš programirati, lahko izbereš smer svojega življenja.&rdquo;
     Chris Bosh
@@ -391,6 +407,7 @@
   homepage_slot_text_title_hoc: Ura kode
   homepage_slot_text_blurb_hoc: Vsak se lahko nauči. Začni danes
   homepage_slot_text_link_hoc: Poizkusi Uro za programiranje (Hour to Code)
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Organiziraj Hour of Code
   homepage_slot_text_link_hocserved: "# uporabnikov"
   homepage_solot_text_link_volunteer: Prostovoljec/ka Ure za kodo
@@ -804,6 +821,7 @@
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Novo poglavje
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Ustvarite nove razdelke in jim dodajte
     učence. Razdelki razdelijo učence v manjše skupine, tako da lahko sledite njihovemu
     napredku in upravljate z njihovimi računi.
@@ -811,6 +829,7 @@
   dashboard_sections_table_secret: Vrsta prijave
   dashboard_sections_table_grade: Razred
   dashboard_sections_table_course: Tečaj
+  dashboard_sections_table_pairing_allowed: Programiranje parov
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: Učenci
   dashboard_sections_table_code: Koda razdelka
@@ -916,6 +935,12 @@
   dashboard_course2: 'Tečaj 2:'
   dashboard_course3: 'Tečaj 3:'
   dashboard_course4: 'Tečaj 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: kurikulum
@@ -1107,11 +1132,17 @@
   course3_name: Tečaj 3
   course4_name: Tečaj 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Pospešeni Tečaj
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1224,6 +1255,12 @@
   course2_gradelevel: Starost 6-18
   course3_gradelevel: Starost 8-18
   course4_gradelevel: Starost 10-18
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 8. razred in višje
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice
@@ -1358,6 +1395,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Nauči se osnov računalništva s povleci in spusti programiranjem.
     To je igri podobna vaja z video predavanji, v katerih nastopajo Bill Gates, Mark
     Zuckerberg, Angry Birds in Rastline vs zombiji. Naučite se zanke repeat, pogojne
@@ -1850,42 +1893,41 @@
   infinity_shortcode: inf
   playlab_shortcode: igraj
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
+  header_home: Domov
+  header_courses: Predavanja
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_educate_overview: Vzgojiteljev pregled
+  header_educate_elementary: Od 1. do 5. razreda
+  header_educate_middle: Od 6. do 9. razreda
+  header_educate_high: Srednja šola
+  header_educate_hoc: Ura kode
+  header_educate_partner: Postanite naš partner
+  header_educate_beyond: Po Code.org
+  header_educate_inspire: Navduši učenca
+  header_educate_community: Spletna skupnost
+  header_educate_tools: Orodja in video posnetki
+  header_about_us: O nas
+  header_about_leadership: Vodstvo
+  header_about_donors: Donatorji
+  header_about_partners: Partnerji
+  header_about_team: Celotna ekipa
+  header_about_news: Novinarsko središče
+  header_about_evaluation: Vrednotenje
+  header_about_jobs: Delovna mesta
+  header_about_contact: Kontaktirajte nas
+  header_about_faqs: Pogosta vprašanja
+  header_learn: Učenje
+  header_teach: Predavaj
   header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_help_us: Pomagaj nam
+  header_about: O programu
   header_teacher_community: Teacher community
   header_help_support: 'Help and support '
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: CS Principles
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

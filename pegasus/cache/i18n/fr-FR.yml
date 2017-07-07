@@ -97,6 +97,12 @@
   congratulations_on_completing_course2: Félicitations, tu as fini le cours N°2 !
   congratulations_on_completing_course3: Félicitations, tu as fini le cours N°3 !
   congratulations_on_completing_course4: Félicitation, tu as fini le cours n°4 !
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Félicitations, tu as fini le cours accéléré
     !
   congrats_next_tutorials_title: Essaie ensuite ces tutoriels
@@ -273,7 +279,7 @@
   continue_learning_body: Il y a beaucoup d'options. Tu peux apprendre en ligne, dans
     une école près de chez toi ou à l'occasion d’un stage en été.
   learn_code_studio: Essayez les cours de Code Studio
-  learn_next_level: Essaie un autre cours de Code Studio
+  learn_next_level: Essayez un autre cours de Code Studio
   learn_online: Essaie d'autres cours en ligne
   learn_classes: Trouve des cours près de chez toi
   learn_back_to_minecraft: Continuer à apprendre avec Minecraft
@@ -284,6 +290,12 @@
   just_did_course2: Je viens de finir le Cours 2 — jettes-y un œil ! @codeorg
   just_did_course3: Je viens de finir le Cours 3 — jettes-y un œil ! @codeorg
   just_did_course4: Je viens de finir le Cours 4 — jettes-y un œil ! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Je viens de finir le Cours accéléré — jettes-y un œil ! @codeorg
   twitter_teach_cs: Pourquoi n’y a-t-il pas plus d’écoles qui enseignent l’informatique
     ? Nous pouvons y remédier. http://youtu.be/2DxWIxec6yo. Visitez http://code.org/
@@ -337,6 +349,10 @@
     d'apprendre l'informatique. » Sheryl, Directrice des Opérations, Facebook"
   homepage_hero_text_satya: "«&#160;L'informatique peut vous apporter les meilleures
     opportunités du monde.&#160;» Satya, PDG de Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "«&#160;Si vous codez, vous pouvez choisir le déroulement
     de votre vie.&#160;» Chris Bosh"
   homepage_hero_text_student1: "«&#160;Ces compétences ont changé mon avenir. Sans
@@ -402,6 +418,7 @@
   homepage_slot_text_title_hoc: Heure de Code
   homepage_slot_text_blurb_hoc: Tout le monde peut apprendre. Commence aujourd'hui
   homepage_slot_text_link_hoc: Essayer l'Heure de Code
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Héberger une Heure de Code
   homepage_slot_text_link_hocserved: "# servi"
   homepage_solot_text_link_volunteer: Soyez bénévole pour l’Heure de Code
@@ -839,6 +856,7 @@
   dashboard_responses_view: 'Afficher les réponses écrites dans :'
   dashboard_responses_none: Pas de réponses écrites
   dashboard_sections_new_section: Nouvelle section
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Créer de nouvelles sections et leur ajouter
     des étudiants. Les sections vous aident à organiser les étudiants en petits groupes
     afin de suivre leur progression et de gérer leurs comptes.
@@ -846,10 +864,8 @@
   dashboard_sections_table_secret: Type de connexion
   dashboard_sections_table_grade: Classe
   dashboard_sections_table_course: Cours
-  dashboard_sections_table_stage_extras: |-
-    Root -> dashboard_sélections_table_stage_extras When a student completes a stage in a course, they have the option to see additional resources, suggested tutorials, etc. This string is for the teacher dashboard, to enable whether students see these extras at the end of each stage.
-
-    Quand un élève complète une stage dans une course, ils ont l'option à voir des ressources additionelles, des tutoriels suggérés, etc. Cette string est pour le dashboard de l'enseignant, pour activer si les élèves peuvent voir ses extras à la fin de chaque stage
+  dashboard_sections_table_pairing_allowed: Programmation en Binôme
+  dashboard_sections_table_stage_extras: "Étape Supplémentaire"
   dashboard_sections_table_students: "Élèves"
   dashboard_sections_table_code: Code de la section
   dashboard_sections_name: Nom de la section
@@ -970,6 +986,12 @@
   dashboard_course2: 'Cours 2&#160;:'
   dashboard_course3: 'Cours 3&#160;:'
   dashboard_course4: 'Cours 4 (bêta) : '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
     ces leçons en mode "déconnecté" </a> dans votre classe.
   dashboard_curriculum: Programme
@@ -1171,11 +1193,17 @@
   course3_name: Cours 3
   course4_name: Cours 4
   coursea-draft_name: Cours A
+  coursea_name: Cours A
   courseb-draft_name: Cours B
+  courseb_name: Cours B
   coursec-draft_name: Cours C
+  coursec_name: Cours C
   coursed-draft_name: Cours D
+  coursed_name: Cours D
   coursee-draft_name: Cours E
+  coursee_name: Cours E
   coursef-draft_name: Cours F
+  coursef_name: Cours F
   accelerated_name: Cours accéléré
   cspunit1_name: Principes de l'informatique, unité 1
   cspunit2_name: Principes de l'informatique, unité 2
@@ -1288,6 +1316,12 @@
   course2_gradelevel: De 6 à 18 ans
   course3_gradelevel: De 8 à 18 ans
   course4_gradelevel: De 10 à 18 ans
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 4ème ou plus
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -1431,6 +1465,12 @@
     les concepts de programmation vus dans les cours précédents pour résoudre des
     problèmes plus complexes. À la fin de ce cours, les élèves auront créé des histoires
     interactives et des jeux qu'ils pourront partager. Recommandé du CM1 à la 4e.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Apprends les concepts de base de l'informatique avec la
     programmation, en glissant et en déposant. Il s'agit d'un didacticiel ludique
     auto-dirigé mettant en vedette des conférences vidéo de Bill Gates, Mark Zuckerberg,
@@ -1997,42 +2037,41 @@
   infinity_shortcode: inf
   playlab_shortcode: jouer
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
+  header_home: Accueil
+  header_courses: Cours
+  header_project_gallery: Galerie de projets
   header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
+  header_professional_learning: Apprentissage professionnel
+  header_educate_overview: Aperçu enseignant
+  header_educate_elementary: "École primaire"
+  header_educate_middle: Collège
+  header_educate_high: Lycée
+  header_educate_hoc: Heure de Code
+  header_educate_partner: Devenir partenaire
+  header_educate_beyond: Aller plus loin
+  header_educate_inspire: Inspirer un élève
+  header_educate_community: Communauté en ligne
+  header_educate_tools: Outils et vidéos
+  header_about_us: "À propos"
+  header_about_leadership: "Équipe de direction"
+  header_about_donors: Donateurs
+  header_about_partners: Partenaires
+  header_about_team: Toute l'équipe
+  header_about_news: Actualité
+  header_about_evaluation: "Évaluation"
+  header_about_jobs: Emplois
+  header_about_contact: Nous contacter
+  header_about_faqs: FAQ
+  header_learn: Apprendre
+  header_teach: Enseigner
+  header_stats: Statistiques
+  header_help_us: Nous aider
+  header_about: "À propos"
   header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
+  header_help_support: 'Aide et support '
   header_report_bug: Report bug
-  header_tutorials: Tutorials
+  header_tutorials: Tutoriels
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: Principes de CS 16-17
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

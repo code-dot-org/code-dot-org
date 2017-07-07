@@ -17,6 +17,7 @@ var BeeCellEditor = require('./BeeCellEditor');
 var CellEditor = require('./CellEditor');
 var StudioCellEditor = require('./StudioCellEditor');
 var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
+var BounceCellEditor = require('./BounceCellEditor');
 var Grid = require('./Grid');
 
 var CellJSON = React.createClass({
@@ -77,7 +78,7 @@ var GridEditor = React.createClass({
   },
 
   getCellClass: function () {
-    if (this.props.skin === 'playlab') {
+    if (this.props.skin === 'playlab' || this.props.skin === 'starwarsgrid') {
       return StudioCell;
     } else if (mazeUtils.isBeeSkin(this.props.skin)) {
       return BeeCell;
@@ -90,7 +91,9 @@ var GridEditor = React.createClass({
   },
 
   getEditorClass: function () {
-    if (this.props.skin === 'playlab') {
+    if (this.props.skin === 'bounce') {
+      return BounceCellEditor;
+    } else if (this.props.skin === 'playlab') {
       return StudioCellEditor;
     } else if (this.props.skin === 'starwarsgrid') {
       return StarWarsGridCellEditor;
@@ -162,9 +165,13 @@ var GridEditor = React.createClass({
   /**
    * When a given cell is modified, update the grid
    */
-  handleCellChange: function (newSerializedCell) {
+  handleCellChange: function (newSerializedCellData) {
     var row = this.state.selectedRow;
     var col = this.state.selectedCol;
+
+    const oldCell = this.state.cells[row][col].serialize();
+    const newSerializedCell = Object.assign({}, oldCell, newSerializedCellData);
+
     // updateCells expects a two-dimentional array
     this.updateCells(row, col, [[newSerializedCell]]);
   },

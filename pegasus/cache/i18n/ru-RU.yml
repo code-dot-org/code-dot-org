@@ -36,12 +36,12 @@
   twentyhours_heading: "Познакомьтесь с нашим курсом «введение в информатику»"
   twentyhours_text: "Закончили свой первый Час кода? Узнайте больше об информатике
     и концепциях программирования в следующем курсе."
-  og_title: "Час кода настал"
+  og_title: 'Code.org: Любой может научиться'
   og_description: "Каждый студент в каждой школе заслуживает возможность изучения
     компьютерных наук."
   csedweek_og_title: "Час кода настал"
-  csedweek_og_description: "Час Кода - это глобальное движение, охватывающее десятки
-    миллионов учеников в более чем 180 странах и более чем на 45 языках."
+  csedweek_og_description: 4-10 декабря 2017 года. Информатика - это основа для каждого
+    учащегося.
   hoc2014_heading: Присоединяйтесь к <a href="http://hourofcode.com">Часу кода</a><br/>8-14
     декабря 2014 года<br/>
   hoc2014_students: "Ученики"
@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: "Поздравляем вас с завершением курса 2"
   congratulations_on_completing_course3: "Поздравляем вас с завершением курса 3"
   congratulations_on_completing_course4: "Поздравляем вас с завершением курса 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Поздравляем с прохождением ускоренного
     курса"
   congrats_next_tutorials_title: "Теперь посмотрите эти уроки"
@@ -260,7 +266,7 @@
   continue_learning_body: "Есть много возможностей. Вы можете учиться онлайн, в местной
     школе или в летнем лагере."
   learn_code_studio: "Попробуйте курсы студии кода"
-  learn_next_level: "Попробуйте другой курс студии кода"
+  learn_next_level: "Перейти на следующий уровень"
   learn_online: "Попробуйте другие курсы онлайн"
   learn_classes: "Найти занятия в своем городе"
   learn_back_to_minecraft: "Продолжаем учиться вместе с Minecraft"
@@ -270,6 +276,12 @@
   just_did_course2: "Я только что закончил(а) курс 2 - посмотрите на @codeorg"
   just_did_course3: "Я только что закончил курс 3 - проверить это! @codeorg"
   just_did_course4: "Я только что закончил(а) курс 4 - посмотрите на @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "Я только что закончил(а) ускоренный курс - посмотрите на
     @codeorg"
   twitter_teach_cs: "Почему не во всех школах изучают информатику? Мы можем исправить
@@ -298,7 +310,7 @@
   stats_michael: "«Я еще <b>никогда не</b> видел своих учеников настолько увлеченными
     обучением», — Майкл Кларк, учитель"
   studiobar_title: "Знакомьтесь со <a href='http://studio.code.org'>студией кода</a>"
-  studiobar_title_nolink: "Знакомьтесь со студией кода"
+  studiobar_title_nolink: "Исследуй Студию Кода"
   studiobar_elementary_title: "Начальные курсы"
   studiobar_elementary_body: "Наши три новых курса для K-5"
   studiobar_hoc_title: "Час кода"
@@ -324,6 +336,10 @@
     возможность изучать информатику». Шерил, главный операционный директор Facebook"
   homepage_hero_text_satya: "«Информатика поможет раскрыть лучшие возможности в мире».
     Сатья, генеральный директор Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "«Если вы программируете, значит вы можете выбрать направление
     своей жизни». Крис Бош"
   homepage_hero_text_student1: "«Эти навыки изменили мое будущее. Не считая того,
@@ -390,13 +406,14 @@
   homepage_slot_text_title_hoc: "Час кода"
   homepage_slot_text_blurb_hoc: "Каждый может учиться. Начните сегодня"
   homepage_slot_text_link_hoc: "Попробуйте Час кода"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "Провести час кода"
   homepage_slot_text_link_hocserved: "Уже попробовали"
   homepage_solot_text_link_volunteer: "Станьте добровольцем часа кода"
   homepage_slot_text_title_students: "Ученики"
   homepage_slot_text_blurb_students: "Изучите все наши уроки"
   homepage_slot_text_blurb_students_courses: "Изучите наши курсы"
-  homepage_slot_text_link_codestudio: "Попробуйте студию кода"
+  homepage_slot_text_link_codestudio: "Попробуйте Студию Кода"
   homepage_slot_text_link_local: "Найти класс рядом с домом"
   homepage_slot_text_link_othercourses: "Другие онлайн курсы"
   homepage_slot_text_title_educators: "Преподаватели"
@@ -413,7 +430,7 @@
   homepage_slot_text_link_buy: "Принять участие"
   homepage_slot_text_link_donate: "Сделать пожертвование"
   homepage_slot_text_link_shop: "Футболки, головные уборы, и многое другое"
-  homepage_header_codestudio: "Творения учеников студии кода"
+  homepage_header_codestudio: "Творения учеников Студии Кода"
   homepage_header_donors: Code.org благодарит своих помощников
   homepage_donors_seall: "Просмотреть всё"
   homepage_donors_donate: "Пожертвовать"
@@ -812,6 +829,7 @@
   dashboard_responses_view: "Просмотр текстовых ответов в:"
   dashboard_responses_none: "Нет текстовых ответов"
   dashboard_sections_new_section: "Новый раздел"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "Создавайте новые разделы и добавляйте
     в них учеников. Разделы помогают вам организовать учеников в маленькие группы,
     чтобы отслеживать их успехи и управлять их учетными записями."
@@ -819,6 +837,7 @@
   dashboard_sections_table_secret: "Тип входа"
   dashboard_sections_table_grade: "Оценка"
   dashboard_sections_table_course: "Курс"
+  dashboard_sections_table_pairing_allowed: "Программирование в парах"
   dashboard_sections_table_stage_extras: "Дополнительные материалы к учебному этапу"
   dashboard_sections_table_students: "Ученики"
   dashboard_sections_table_code: "Код раздела"
@@ -895,8 +914,8 @@
   dashboard_students_reset_password: "Сменить пароль"
   dashboard_students_share_section: "Поделитесь страницей со своими студентами для
     входа в этот раздел:"
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section_secondary: "Кроме того, поделитесь этой страницей
+    входа этого раздела со своими учениками:"
   dashboard_students_print_info: "Распечатать карточки с данными доступа учеников."
   dashboard_students_secret_picture_title: "Секретное изображение"
   dashboard_students_secret_picture: "В данном разделе в качестве секретного параметра
@@ -922,7 +941,7 @@
     или вы хотите создать учетные записи для них, измените секретный параметр этого
     раздела на <b>«слово»</b> или <b>«изображение»</b>."
   dashboard_students_print_page: "Распечатать эту страницу"
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: "Посетите %{join_url} и введите %{section_code}"
   dashboard_students_url: "Ссылка"
   dashboard_privacy_document_link: <a href="/privacy/student-privacy", target="_blank">Кликните
     здесь</a>, чтобы распечатать нашу политику конфиденциальности или поделиться ею
@@ -937,6 +956,12 @@
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (бета-версия): "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Если у вас нет компьютеров, <a href='%{unplugged_url}'>попробуйте
     эти оффлайн уроки в вашем классе."
   dashboard_curriculum: "Учебная программа"
@@ -1132,11 +1157,17 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   coursea-draft_name: "Курс A"
+  coursea_name: "Курс A"
   courseb-draft_name: "Курс B"
+  courseb_name: "Курс B"
   coursec-draft_name: "Курс С"
+  coursec_name: "Курс С"
   coursed-draft_name: "Курс D"
+  coursed_name: "Курс D"
   coursee-draft_name: "Курс E"
+  coursee_name: "Курс E"
   coursef-draft_name: "Курс F"
+  coursef_name: "Курс F"
   accelerated_name: "Ускоренный курс"
   cspunit1_name: "Урок 1: Цифровая информация"
   cspunit2_name: "Урок 2: Интернет"
@@ -1148,8 +1179,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: "Модуль 5: Данные и общество"
+  csd6_name: "Модуль 6: Физические вычислительния"
   csp1_name: "Урок 1: Интернет"
   csp2_name: "Урок 2: Цифровая информация"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -1177,7 +1208,7 @@
   starwarsblocks_name: "Звездные войны (блоки)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: "Простое шифрование"
   text-compression_name: Text Compression
   math_category_name: "Математика"
   hoc_category_name: "Час Кода"
@@ -1249,6 +1280,12 @@
   course2_gradelevel: "Возраст 6-18 лет"
   course3_gradelevel: "Возраст 8-18 лет"
   course4_gradelevel: "Возраст 10-18 лет"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "Класс 8 и выше"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Возраст 10-18 лет"
   codeorg_platformtext: "Современные браузеры, смартфоны, планшеты"
   codeintl_platformtext: "Современные браузеры, смартфоны, планшеты"
@@ -1390,6 +1427,12 @@
     в темы программирования, реализованные в предыдущих курсах, чтобы найти более
     гибкие решения сложных задач. К концу этого курса студенты создадут интерактивные
     истории и игры, они смогут поделиться с кем-либо. Рекомендуется для 4-8 классов."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "Изучите основные понятия информатики, написав программу
     путем перетаскивания блоков. Это уроки для самостоятельного изучения в игровой
     форме, состоящие из видеолекций с участием Билла Гейтса, Марка Цукерберга, персонажей
@@ -1929,42 +1972,41 @@
   infinity_shortcode: inf
   playlab_shortcode: "играть"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
-  header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_home: "На главную"
+  header_courses: "курсы"
+  header_project_gallery: "Галерея проектов"
+  header_sections: "Секции"
+  header_professional_learning: "Профессиональное обучение"
+  header_educate_overview: "Обзор преподавателя"
+  header_educate_elementary: "Начальная школа"
+  header_educate_middle: "Средняя школа"
+  header_educate_high: "Старшая школа"
+  header_educate_hoc: "Час Кода"
+  header_educate_partner: "Партнер с нами"
+  header_educate_beyond: "За пределами Code.org"
+  header_educate_inspire: "Вдохновите студентов"
+  header_educate_community: "Онлайн сообщество"
+  header_educate_tools: "Инструменты и видео"
+  header_about_us: "О нас"
+  header_about_leadership: "Руководство"
+  header_about_donors: "Доноры"
+  header_about_partners: "Партнеры"
+  header_about_team: "Полная команда"
+  header_about_news: "Новости"
+  header_about_evaluation: "Оценка"
+  header_about_jobs: "Вакансии"
+  header_about_contact: "Свяжитесь с нами"
+  header_about_faqs: "Часто задаваемые вопросы"
+  header_learn: "Обучение"
+  header_teach: "Учить"
+  header_stats: "Посмотреть статистику"
+  header_help_us: "Помогите нам"
+  header_about: "О разработчике"
+  header_teacher_community: "Сообщество учителей"
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_report_bug: "Сообщить об ошибке"
+  header_tutorials: "Обучающие материалы"
+  header_documentation: "Документация"
+  csp_name: "«16 - 17» Основы информатики"
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -100,6 +100,12 @@
     3"
   congratulations_on_completing_course4: "Συγχαρητήρια για την ολοκλήρωση του Μαθήματος
     4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Συγχαρητήρια για την ολοκλήρωση του
     Εντατικού Μαθήματος"
   congrats_next_tutorials_title: "Δοκιμάστε στη συνέχεια αυτά τα σεμινάρια"
@@ -283,7 +289,7 @@
   continue_learning_body: "Υπάρχουν πολλές επιλογές.  Μπορείτε να μάθετε σε απευθείας
     σύνδεση (on-line), ή σε ένα τοπικό σχολείο, ή σε θερινό σχολείο."
   learn_code_studio: "Δοκιμάστε μαθήματα του Code Studio"
-  learn_next_level: "Δοκιμάστε ένα άλλο μάθημα στο Code Studio"
+  learn_next_level: "Συνεχίστε στο επόμενο επίπεδο"
   learn_online: "Δοκιμάστε τα άλλα μαθήματα online"
   learn_classes: "Βρείτε τάξεις κοντά σας"
   learn_back_to_minecraft: "Εξακολουθήστε να μαθαίνετε με το Minecraft"
@@ -293,6 +299,12 @@
   just_did_course2: "Μόλις τελειώσα το Μάθημα 2 - Ελεγξέ το! @codeorg"
   just_did_course3: "Μόλις τελειώσα το Μάθημα 3 - Ελεγξέ το! @codeorg"
   just_did_course4: "Μόλις τελείωσα το Μάθημα 4 - Ελεγξέ το! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "Μόλις τελείωσα το Εντατικό Μάθημα - έλεγξέ το! @codeorg"
   twitter_teach_cs: 9 στους 10 ανθρώπους συμφωνούν ότι τα σχολεία πρέπει να διδάσκουν
     Πληροφορική. http://youtu.be/nKIu9yen5nc. Επισκεφθείτε https://code.org/.
@@ -329,8 +341,7 @@
   studiobar_flappy_title: Flappy κώδικας
   studiobar_flappy_body: "Φτιάξτε και μοιράστε το δικό σας παιχνίδι Flappy"
   studiobar_teacher_title: "Φτιαγμένο για εκπαιδευτικούς"
-  studiobar_teacher_body: "Παρουσιάστε το Στούντιο Κώδικα (Code Studio) στην τάξη
-    σας"
+  studiobar_teacher_body: "Εισάγετε το Στούντιο Κώδικα (Code Studio) στην τάξη σας"
   studiobar_frozen_title: "Ώρα του Κώδικα"
   studiobar_frozen_body: "Δημιουργήστε μια χειμερινή χώρα των θαυμάτων με την Άννα
     και την Έλσα"
@@ -349,6 +360,10 @@
     Sheryl, COO του Facebook"
   homepage_hero_text_satya: "&ldquo;Η Πληροφορική μπορεί να ξεκλειδώσει τις καλύτερες
     ευκαιρίες στον κόσμο.&rdquo; Satya, Διευθύνων Σύμβουλος της Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;Αν μπορείτε να γράψετε κώδικα, μπορείτε να επιλέξετε
     την πορεία της ζωής σας.&rdquo; Κρις Μπος"
   homepage_hero_text_student1: "&ldquo;Αυτές οι δεξιότητες έχουν αλλάξει το μέλλον
@@ -414,6 +429,7 @@
   homepage_slot_text_title_hoc: "Η Ώρα του Κώδικα"
   homepage_slot_text_blurb_hoc: "Οποιοσδήποτε μπορεί να μάθει. Ξεκινήστε σήμερα"
   homepage_slot_text_link_hoc: "Δοκίμασε την Ώρα του Κώδικα"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: "Φιλοξενήστε μια ώρα του κώδικα"
   homepage_slot_text_link_hocserved: "# ΕχουνΕξυπηρετηθεί"
   homepage_solot_text_link_volunteer: "Προσφερθείτε εθελοντικά για την Ώρα του Κώδικα"
@@ -846,6 +862,7 @@
   dashboard_responses_view: "Δείτε τις απαντήσεις κειμένου σε:"
   dashboard_responses_none: "Δεν υπάρχουν απαντήσεις κειμένου"
   dashboard_sections_new_section: "Νέα ενότητα"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "Δημιουργήστε νέες ενότητες και προσθέστε
     σε αυτές μαθητές. Οι ενότητες σας βοηθήσουν να οργανώσετε τους μαθητές σε μικρότερες
     ομάδες, ώστε να μπορείτε να παρακολουθείτε την πρόοδό τους και να διαχειρίζεστε
@@ -854,6 +871,7 @@
   dashboard_sections_table_secret: "Τύπος σύνδεσης"
   dashboard_sections_table_grade: "Βαθμος"
   dashboard_sections_table_course: "Μάθημα"
+  dashboard_sections_table_pairing_allowed: "Προγραμματισμός κατά ζεύγη"
   dashboard_sections_table_stage_extras: Stage Extras
   dashboard_sections_table_students: "Μαθητές"
   dashboard_sections_table_code: "Κωδικός ενότητας"
@@ -973,6 +991,12 @@
   dashboard_course2: "Μάθημα 2:"
   dashboard_course3: "Μάθημα 3:"
   dashboard_course4: "Μάθημα 4 (beta): "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Πρόγραμμα σπουδών"
@@ -1173,11 +1197,17 @@
   course3_name: "Μάθημα 3"
   course4_name: "Μάθημα 4"
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: "Επιταχυνόμενη πορεία μάθησης"
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1291,6 +1321,12 @@
   course2_gradelevel: "Ηλικίες 6+ (απαιτείται ανάγνωση)"
   course3_gradelevel: "Ηλικίες 8+ (μετά το Μάθημα 2)"
   course4_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "Τάξεις Β' Γυμνασίου +"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Ηλικίες 10+ (μετά το Μάθημα 3)"
   codeorg_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
   codeintl_platformtext: "Σύγχρονα προγράμματα περιήγησης, έξυπνα τηλέφωνα, tablet"
@@ -1442,6 +1478,12 @@
     θα βρούν ευέλικτες λύσεις σε πιό σύνθετα προβλήματα. Με το τέλος αυτού του Μαθήματος
     οι μαθητές δημιουργούν διαδραστικές ιστορίες και παιχνίδια που μπορούν να μοιραστούν
     με οποιονδήποτε. Συνιστάται για τάξεις Δ' Δημοτικού έως Ε' Δημοτικού."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "Μάθετε τις βασικές έννοιες της Επιστήμης των Υπολογιστών
     με προγραμματισμό drag and drop. Αυτό είναι ένα παιγνιώδες, αυτοκαθοδηγούμενο
     μάθημα με πρωταγωνιστές σε βιντεοδιαλέξεις τους Bill Gates, Mark Zuckerberg, τα
@@ -2015,9 +2057,8 @@
   infinity_shortcode: inf
   playlab_shortcode: "παίξε"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
   header_home: Home
-  header_courses: Courses
+  header_courses: "Τες"
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2025,7 +2066,7 @@
   header_educate_elementary: Elementary School
   header_educate_middle: Middle School
   header_educate_high: High School
-  header_educate_hoc: Hour of Code
+  header_educate_hoc: "Ώρα του Κώδικα"
   header_educate_partner: Partner with Us
   header_educate_beyond: Beyond Code.org
   header_educate_inspire: Inspire a Student
@@ -2051,6 +2092,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  csp_name: "Βασικές Αρχές της Επιστήμης των Υπολογιστών ' 16-'17"
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

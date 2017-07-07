@@ -41,7 +41,7 @@
   hoc2014_everyone: "全員"
   hoc2014_support: "サポートする &#x25BE;"
   hoc2014_whatishoc: Hour of Codeとは何でしょうか？
-  csedweek_map_header: "# CSEdWeek / Hour of Code 全世界のイベント"
+  csedweek_map_header: "世界中の # CSEdWeek / Hour of Code イベント"
   csedweek_map_signup: "イベントに参加する"
   csedweek_map_search_placeholder: Hour of Code のイベントを探す
   csedweek_map_search_search: "検索"
@@ -78,6 +78,12 @@
   congratulations_on_completing_course2: "おめでとうございます。コース 2 を修了しました"
   congratulations_on_completing_course3: "おめでとうございます。コース 3 を修了しました"
   congratulations_on_completing_course4: "おめでとうございます。コース 4 を修了しました"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "おめでとうございます。上級コースを修了しました"
   congrats_next_tutorials_title: "次のレベルへ進む"
   congrats_next_tutorials_desc: 短めの1時間チュートリアル、または <a href="%{current_path}/next">パートナーのチュートリアル</a>
@@ -215,6 +221,12 @@
   just_did_course2: "コース2 完了 - やったー！@codeorg"
   just_did_course3: "コース 3完了 - やったー！@codeorg"
   just_did_course4: "コース 4 完了 - やっほー！@codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "上級コース完了 - やったー！@codeorg"
   twitter_teach_cs: 10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc
     。Https://code.org/ をご覧ください。
@@ -264,6 +276,10 @@
     &ldquo; &mdash; 女の子を含む &mdash;子どもたちはコンピューターサイエンスを学ぶ機会が必要です。&rdquo;
     シェリル, COO of Facebook
   homepage_hero_text_satya: "「コンピュータサイエンスを学べば世界中であらゆることに挑戦できます。」サティヤ、Microsoft CEO"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;コードできるということは、あなたの人生の進むべき道を選択できるということです。&rdquo;クリス・ボッシュ"
   homepage_hero_text_student1: |-
     &ldquo;これらのスキルは私の人生を変えました。言うまでもないけど、単純に楽しいです。&rdquo;
@@ -320,6 +336,7 @@
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Hour of Code を主催する
   homepage_slot_text_link_hocserved: "# 人が試しました"
   homepage_solot_text_link_volunteer: Hour of Code のボランティア
@@ -477,8 +494,8 @@
     ''Gotham 7r'', sans-serif;"> コンピューターサイエンス教育に情熱的な</span> 誰かを求めています。または、コンピューターサイエンスの持つ可能性の幅広さについて生徒を
     <span style="font-family: ''Gotham 7r'', sans-serif;"> 励ます</span> ことができる人を求めています。
     (これはビデオ チャットで行うことができます)'
-  volunteer_engineer_submission_intro_guide: Learn more about our <a href="%{volunteer_guide}">volunteer
-    program here</a>.
+  volunteer_engineer_submission_intro_guide: 私たちの <a href="%{volunteer_guide}"> ボランティア
+    プログラム</a> について詳しく見る。
   volunteer_engineer_submission_intro_signup: コンピュータ サイエンスの学生やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。
     <span class="form-required-field">*</span> とマークされているフィールドは必須です。
   volunteer_engineer_submission_intro_links: あなたはボランティアをお探しの先生ですか？<a href="%{volunteer_local}">ボランティア
@@ -511,8 +528,7 @@
     アドレスと詳細な住所は決して公開される事はありません。しかし、その他の情報(おおよその所在地など) は地域の教師に公開されます。"
   volunteer_engineer_submission_checkbox_contact: "私は、教師がボランティアについて私に連絡することに同意します
     (注: あなたのメール アドレスが公開されることはありません)"
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
+  volunteer_engineer_submission_checkbox_age_18_plus: "私は 18 歳以上です。"
   volunteer_engineer_submission_submit: "送信"
   volunteer_engineer_submission_thankyou: ボランティアへの登録ありがとうございます。教師は <a href="%{url}">
     このマップ</a> を使用して、あなたのようなボランティアを検索して連絡を取ります。
@@ -633,7 +649,7 @@
   dashboard_navigation_view_assessments_surveys: "評価/アンケート"
   dashboard_navigation_add_students: "生徒を追加"
   dashboard_navigation_manage_students: "生徒の管理"
-  dashboard_navigation_lesson_plans_resources: "レッスンプランと資料"
+  dashboard_navigation_lesson_plans_resources: "レッスンプランや各種資料"
   dashboard_navigation_view_stats: "統計"
   dashboard_navigation_section: "セクション: %{section_name}"
   dashboard_navigation_student: "生徒: %{student_name}"
@@ -650,11 +666,13 @@
   dashboard_responses_view: "テキスト応答を表示:"
   dashboard_responses_none: "私たちのクラスのほとんどは低学年向けに設計されており、生徒は文字を打ち込んで質問に回答する必要はありません。ここでは文字の応答は表示されません。中学・高校生のコースでは、上のドロップダウンから割り当てられたコースを選択することによって、質問に対する彼らの文章回答を見ることができます。"
   dashboard_sections_new_section: "新しいセクション"
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: "セクションを新規で作成し、学生を追加します。セクションを使うと生徒を複数の少人数のグループで管理できるので、進捗状況の把握や、アカウントの管理が容易になります。"
   dashboard_sections_table_section: "セクション"
   dashboard_sections_table_secret: "ログインタイプ"
   dashboard_sections_table_grade: "学年"
   dashboard_sections_table_course: "コース"
+  dashboard_sections_table_pairing_allowed: "ペアプログラミング"
   dashboard_sections_table_stage_extras: "追加ステージ"
   dashboard_sections_table_students: "生徒の皆さん"
   dashboard_sections_table_code: "セクション・コード"
@@ -706,8 +724,7 @@
   dashboard_students_reset_secret: "秘密のリセット"
   dashboard_students_reset_password: "パスワードのリセット"
   dashboard_students_share_section: "このセクションのサインインページを生徒達と共有する："
-  dashboard_students_share_section_secondary: 'Alternatively, share this section''s
-    sign in page with your students:'
+  dashboard_students_share_section_secondary: "または、生徒たちとセクションのサインイン ページを共有します:"
   dashboard_students_print_info: "学生用のログイン情報でカードを印刷する"
   dashboard_students_secret_picture_title: "秘密の画像"
   dashboard_students_secret_picture: "このセクションでは、各生徒が秘密の<b>画像</b>をパスワードの変わりに使用してログインします。ログインする際は上記のWebアドレスにログインしてください。"
@@ -718,7 +735,7 @@
   dashboard_students_join_link: "あなたのセクションに入るよう生徒に自分のアカウントの作り方を教えましょう"
   dashboard_students_no_email: "生徒がEメールアドレスを持っていない場合、もしくはあなたが生徒のアカウントを作りたい場合、セクションの秘密の種類を<b>単語</b>か<b>画像</b>にしてください。"
   dashboard_students_print_page: "このページを印刷"
-  dashboard_students_signin_card: Visit %{join_url} and enter %{section_code}
+  dashboard_students_signin_card: "%{join_url} を訪問し、%{section_code} を入力"
   dashboard_students_url: URL
   dashboard_privacy_document_link: 個人情報の扱いを参照したり印刷したりする場合は<a href="/privacy/student-privacy",
     target="_blank">ここをクリック</a>
@@ -731,6 +748,12 @@
   dashboard_course2: "コース2"
   dashboard_course3: "コース3"
   dashboard_course4: "コース4（ベータ）: "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "コンピューターが無い場合は、 <a href='%{unplugged_url}'> コンピューター不要のレッスン</a>
     を教室で試してください。"
   dashboard_curriculum: "カリキュラム"
@@ -916,11 +939,17 @@
   course3_name: "コース3"
   course4_name: "コース4"
   coursea-draft_name: "コース A"
+  coursea_name: "コース A"
   courseb-draft_name: "コース B"
+  courseb_name: "コース B"
   coursec-draft_name: "コース C"
+  coursec_name: "コース C"
   coursed-draft_name: "コース D"
+  coursed_name: "コース D"
   coursee-draft_name: "コース E"
+  coursee_name: "コース E"
   coursef-draft_name: "コース F"
+  coursef_name: "コース F"
   accelerated_name: "上級コース"
   cspunit1_name: "(old) Unit 1: デジタル情報"
   cspunit2_name: "(old) Unit 2: インターネット"
@@ -932,8 +961,8 @@
   csd2_name: 'Unit 2: Web Development'
   csd3_name: 'Unit 3: Interactive Games and Animations'
   csd4_name: 'Unit 4: The Design Process'
-  csd5_name: 'Unit 5: Data and Society'
-  csd6_name: 'Unit 6: Physical Computing'
+  csd5_name: "ユニット 5: データと社会"
+  csd6_name: "ユニット 6: フィジカル ・ コンピューティング"
   csp1_name: "第 1 章: インターネット"
   csp2_name: "第 2 章: デジタル情報"
   csp3_name: 'Unit 3: Algorithms and Programming'
@@ -961,7 +990,7 @@
   starwarsblocks_name: "スター ・ ウォーズ (ブロック)"
   hoc-impact-study_name: Classic Maze with Survey
   flappy-impact-study_name: Flappy Code with Survey
-  hoc-encryption_name: Simple Encryption
+  hoc-encryption_name: "単純な暗号化"
   text-compression_name: Text Compression
   math_category_name: "数値"
   hoc_category_name: Hour of Code（コーディングを学ぶ時間）
@@ -1031,6 +1060,12 @@
   course2_gradelevel: 6-18 才
   course3_gradelevel: 8-18 才
   course4_gradelevel: 10-18 才
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "中学2年生以上向け"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-18 才
   codeorg_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   codeintl_platformtext: "最新ブラウザ、スマート フォン、タブレット"
@@ -1137,6 +1172,12 @@
   course2_shortdescription_congrats: "基本的な読書スキルを持つ生徒のため、このコースはコース 1になります。生徒はプログラムを作って問題を解決したり、インタラクティブなゲームや物語を開発して共有します。小学2年～5年生が対象です。"
   course3_shortdescription_congrats: "次のレベルの準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
   course4_shortdescription_congrats: "次に行く準備はできましたか？生徒は、前のコースで紹介されたプログラミング トピックを深く掘り下げ、より複雑な問題に解決策を見つけます。このコースの最後には、生徒はインタラクティブなストーリーとゲームを作成して、皆と共有します。小学4～5年生向けです。"
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   codeintl_longdescription: "ドラッグ＆ドロップによるプログラミングでコンピュータサイエンスの基本的なコンセプトを学びす。ゲーム感覚で独学でも進められます。ビル・ゲイツやマーク・ザッカバーグらによるビデオレクチャー、アングリーバードやプラネッツ対ゾンビなどを使った題材が用意されています。繰り返しループ、条件分岐、基本的なアルゴリズムを学習できます。３４もの言語に対応しています"
   thinkersmithspanish_longdescription: '"ロボット語"を使用して、事前に打ち合わせすることなく、お互いに課題を解決する方法を探ります。このレッスンでは、デバッグという非常に重要なスキルと同時に、シンボルとアクションの関連について学びます。'
@@ -1419,42 +1460,41 @@
   infinity_shortcode: inf
   playlab_shortcode: "再生する"
   artist_shortcode: art
-  dashboard_sections_table_pairing_allowed: Pair Programming
-  header_home: Home
-  header_courses: Courses
-  header_project_gallery: Project Gallery
-  header_sections: Sections
-  header_professional_learning: Professional Learning
-  header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_home: "ホーム"
+  header_courses: "コース"
+  header_project_gallery: "プロジェクト ギャラリー"
+  header_sections: "セクション"
+  header_professional_learning: "専門的な学習"
+  header_educate_overview: "教育の概要"
+  header_educate_elementary: "小学校"
+  header_educate_middle: "中学校"
+  header_educate_high: "高校"
   header_educate_hoc: Hour of Code
-  header_educate_partner: Partner with Us
-  header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
-  header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
-  header_stats: Stats
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: Computer Science Principles
-  csd_name: Computer Science Discoveries
+  header_educate_partner: "私達のパートナー"
+  header_educate_beyond: Code.org を超えて
+  header_educate_inspire: "生徒を応援する"
+  header_educate_community: "オンライン コミュニティ"
+  header_educate_tools: "ツールと動画"
+  header_about_us: "私たちについて"
+  header_about_leadership: "リーダーシップ"
+  header_about_donors: "ドナー"
+  header_about_partners: "パートナー"
+  header_about_team: "全チーム"
+  header_about_news: "ニュース"
+  header_about_evaluation: "評価"
+  header_about_jobs: "仕事"
+  header_about_contact: "お問い合わせ"
+  header_about_faqs: "よくある質問"
+  header_learn: "学ぶ"
+  header_teach: "教える"
+  header_stats: "統計"
+  header_help_us: "手を貸して下さい"
+  header_about: "概要"
+  header_teacher_community: "先生のコミュニティ"
+  header_help_support: "ヘルプとサポート "
+  header_report_bug: "バグを報告"
+  header_tutorials: "チュートリアル"
+  header_documentation: "ドキュメント"
+  csp_name: "'16-'17 コンピューター・サイエンス原理"
+  csd_name: CS Discoveries
   full_course_category_name: Full Courses

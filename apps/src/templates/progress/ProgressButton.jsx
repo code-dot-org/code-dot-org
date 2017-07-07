@@ -115,11 +115,13 @@ const styles = {
 
 const ProgressButton = React.createClass({
   propTypes: {
+    className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string.isRequired,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
     icon: PropTypes.string,
+    iconStyle: PropTypes.object,
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
@@ -127,7 +129,7 @@ const ProgressButton = React.createClass({
   },
 
   render() {
-    const { href, text, icon, target, style, onClick, disabled } = this.props;
+    const { className, href, text, icon, iconStyle, target, style, onClick, disabled } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
@@ -140,14 +142,17 @@ const ProgressButton = React.createClass({
 
     return (
       <Tag
+        className={className}
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
         href={href}
         target={target}
         disabled={disabled}
         onClick={onClick}
       >
-        {icon && <FontAwesome icon={icon} style={styles.icon}/>}
-        {text}
+        <div>
+          {icon && <FontAwesome icon={icon} style={{...styles.icon, ...iconStyle}}/>}
+          {text}
+        </div>
       </Tag>
     );
   }

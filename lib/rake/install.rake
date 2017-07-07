@@ -13,7 +13,7 @@ namespace :install do
     git_path = ".git/hooks"
 
     files.each do |f|
-      path = File.expand_path(deploy_dir("tools/hooks/#{f}"), __FILE__)
+      path = "../../tools/hooks/#{f}"
       RakeUtils.ln_s path, "#{git_path}/#{f}"
     end
   end
@@ -39,10 +39,10 @@ namespace :install do
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
         puts CDO.dashboard_db_writer
-        if ENV['CI'] && ENV['CIRCLE_NODE_INDEX'] != '1'
-          RakeUtils.rake_stream_output 'db:create db:test:prepare'
-        elsif ENV['CI'] && ENV['CIRCLE_NODE_INDEX'] == '1'
-          RakeUtils.rake 'db:setup_or_migrate seed:ui_test'
+        if ENV['CI']
+          # Prepare for dashboard unit tests to run. We can't seed UI test data
+          # yet because doing so would break unit tests.
+          RakeUtils.rake 'db:create db:test:prepare'
         else
           RakeUtils.rake 'dashboard:setup_db'
         end

@@ -13,6 +13,7 @@ const announcements = [
 const sections = [
   {
     name: "Algebra Period 1",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "to Progress tab",
     assignedTitle: "CS in Algebra",
     linkToAssigned: "to Course",
@@ -22,6 +23,7 @@ const sections = [
   },
   {
     name: "Algebra Period 2",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "to Progress tab",
     assignedTitle: "CS in Algebra",
     linkToAssigned: "to Course",
@@ -31,6 +33,7 @@ const sections = [
   },
   {
     name: "Period 3",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "to Progress tab",
     assignedTitle: "Course 4",
     linkToAssigned: "to Course",
@@ -71,6 +74,7 @@ export default storybook => {
             sections={[]}
             courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -83,6 +87,7 @@ export default storybook => {
             sections={[]}
             courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -95,6 +100,7 @@ export default storybook => {
             sections={sections}
             courses={[]}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
       },
@@ -107,8 +113,9 @@ export default storybook => {
             sections={sections}
             courses={courses}
             codeOrgUrlPrefix="http://localhost:3000/"
+            isRtl={false}
           />
         )
-      }
+      },
     ]);
 };

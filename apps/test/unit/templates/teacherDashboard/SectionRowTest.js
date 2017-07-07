@@ -28,6 +28,7 @@ const validGrades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11
 
 const defaultProps = {
   sectionId: 11,
+  lightRow: true,
   validLoginTypes,
   validGrades,
   validAssignments: {
@@ -44,6 +45,7 @@ const defaultProps = {
       path: '//localhost-studio.code.org:3000/courses/csd',
     }
   },
+  primaryAssignmentIds: [],
   sections,
   updateSection: () => {},
   removeSection: () => {},

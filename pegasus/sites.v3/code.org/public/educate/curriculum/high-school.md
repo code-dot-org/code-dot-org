@@ -141,7 +141,6 @@ Thousands of engineers and individuals passionate about computer science have si
 
 [<button>Find a guest speaker</button>](/volunteer/local)
 
-*AP® is a registered trademark of the College Board.
 
 ## Scholarship opportunities for students
 Raise.me is a college preparedness platform empowering millions of high school students to reach their full potential by helping them earn scholarship dollars from colleges for all the things that set them up to succeed - whether that’s getting good grades, volunteering in the community, or joining extracurriculars.
@@ -151,3 +150,5 @@ Click below to learn more about how Raise.me can help your students earn scholar
 </p>
 
 [<button>Learn more</button>](/educate/scholarships)
+
+*AP® is a registered trademark of the College Board.

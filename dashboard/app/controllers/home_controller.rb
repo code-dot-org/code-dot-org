@@ -40,16 +40,17 @@ class HomeController < ApplicationController
 
   # Show /home for teachers.
   # Signed out: redirect to code.org
+  # Signed in teacher or have student_homepage cookie: render this page
   # Signed in student: redirect to studio.code.org/courses
-  # Signed in teacher: render this page
+
   def home
     if !current_user
       redirect_to CDO.code_org_url
-    elsif current_user.student?
-      redirect_to '/courses'
-    else
+    elsif current_user.teacher? || request.cookies['pm'] == 'student_homepage'
       init_homepage
       render 'home/index'
+    else
+      redirect_to '/courses'
     end
   end
 
@@ -84,11 +85,9 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
-      @recent_courses = current_user.recent_courses_and_scripts.slice(0, 2)
-
-      if current_user.teacher?
-        @sections = current_user.sections.map(&:summarize)
-      end
+      @sections = current_user.sections.map(&:summarize)
+      @student_sections = current_user.sections_as_student.map(&:summarize)
+      @recent_courses = current_user.recent_courses_and_scripts
     end
   end
 end

@@ -30,7 +30,7 @@ gem 'seamless_database_pool', github: 'wjordan/seamless_database_pool', ref: 'cd
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
-gem 'google_drive', '~> 1.0.0'
+gem 'google_drive'
 gem 'le', '~> 2.2'
 gem 'os'
 gem 'parallel'
@@ -39,6 +39,7 @@ gem 'redis', '~> 3.3.3'
 gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read', ref: 'cfe1bd0f5cf65eee5b52560139cab133f22cb880'
 
 gem 'google-api-client'
+gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 
 gem 'crowdin-cli'
 
