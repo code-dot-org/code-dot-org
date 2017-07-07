@@ -43,8 +43,7 @@
     "callout_json": "[]",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To move down, you have to turn and then move forward.\",\"hint_id\":\"courseC_starWars_loops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4579c967f277444dbacc65360b10cf35/courseC_starWars_loops5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The best solution uses one move down and one loop filled with another move command.\",\"hint_id\":\"courseC_starWars_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8d48792b8a74e48401e25208da9120e1/courseC_starWars_loops5.mp3\"}]",
     "tts_instructions_override": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

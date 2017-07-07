@@ -2,6 +2,15 @@ import React from 'react';
 import ResourceCard from './ResourceCard';
 import ContentContainer from './ContentContainer';
 import i18n from "@cdo/locale";
+import color from "../../util/color";
+
+const styles = {
+  spacer: {
+    width: 20,
+    float: 'left',
+    color: color.white
+  }
+};
 
 const TeacherResources = React.createClass({
   propTypes: {
@@ -27,6 +36,7 @@ const TeacherResources = React.createClass({
           link="https://forum.code.org"
           isRtl={isRtl}
         />
+        <div style={styles.spacer}>.</div>
         <ResourceCard
           title={i18n.professionalLearning()}
           description={i18n.professionalLearningDescription()}
@@ -43,6 +53,7 @@ const TeacherResources = React.createClass({
           link={planUrl}
           isRtl={isRtl}
         />
+        <div style={styles.spacer}>.</div>
         <ResourceCard
           title={i18n.findGuestSpeaker()}
           description={i18n.findGuestSpeakerDescription()}

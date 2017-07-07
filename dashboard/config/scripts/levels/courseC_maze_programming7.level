@@ -32,11 +32,10 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "tts_instructions_override": "Challenge: This code has a lot of bugs. You'll need to remove some blocks and add others.",
     "tts_markdown_instructions_override": "It's time to get angry!\r\nChallenge: This code has a lot of bugs. You'll need to remove some blocks and add others.",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
