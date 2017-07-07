@@ -88,12 +88,15 @@ ClassroomList.propTypes = {
   selectedId: React.PropTypes.string,
 };
 
-const LoadError = () =>
+const LoadError = ({studioUrl}) =>
   <div>
-    <a href="//localhost-studio.code.org:3000/users/auth/google_oauth2?scope=classroom.courses.readonly,classroom.rosters.readonly">
+    <a href={`${studioUrl}/users/auth/google_oauth2?scope=classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
   </div>;
+LoadError.propTypes = {
+  studioUrl: React.PropTypes.string.isRequired,
+};
 
 export default class RosterDialog extends React.Component {
   static propTypes = {
@@ -103,6 +106,7 @@ export default class RosterDialog extends React.Component {
       React.PropTypes.arrayOf(classroomShape),
       React.PropTypes.bool,
     ),
+    studioUrl: React.PropTypes.string.isRequired,
   }
 
   constructor(props) {
@@ -139,7 +143,11 @@ export default class RosterDialog extends React.Component {
               onSelect={this.onClassroomSelected}
               selectedId={this.state.selectedId}
             /> :
-            this.props.classrooms === false ? <LoadError/> : locale.loading()
+            this.props.classrooms === false ?
+              <LoadError
+                studioUrl={this.props.studioUrl}
+              /> :
+              locale.loading()
           }
         </div>
         <div style={styles.footer}>
