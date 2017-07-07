@@ -18,6 +18,7 @@ const styles = {
     borderWidth: 5,
     borderStyle: 'dashed',
     borderColor: color.border_gray,
+    boxSizing: "border-box"
   },
   heading: {
     fontFamily: '"Gotham 4r", sans-serif',
