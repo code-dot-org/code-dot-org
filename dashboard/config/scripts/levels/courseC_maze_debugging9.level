@@ -30,9 +30,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What is Scrat supposed to do?\\n- What does Scrat do?\\n- What does that tell you?\",\"hint_id\":\"courseC_maze_debugging9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/da19211b98963aaf602d1827cc9bdfc2/courseC_maze_debugging9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out what's wrong? Try running the code a couple of times to see what happens.\",\"hint_id\":\"courseC_maze_debugging9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/788f7c187d8a4cb486a3616f73ced6c9/courseC_maze_debugging9.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
