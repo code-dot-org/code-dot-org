@@ -165,6 +165,8 @@ describe('SectionRow', () => {
       );
       const col = wrapper.find('td').at(3);
       assert.equal(col.find('a').length, 2);
+      assert.equal(col.find('a').at(0).props().href, '//localhost-studio.code.org:3000/courses/csd');
+      assert.equal(col.find('a').at(1).props().href, '//localhost-studio.code.org:3000/s/csd1');
     });
 
     it('has an AssignmentSelector when editing', () => {
