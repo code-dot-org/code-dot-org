@@ -11,10 +11,6 @@ require 'cdo/only_one'
 require 'cdo/rake_utils'
 require 'cdo/slack'
 
-RakeUtils.with_bundle_dir(File.dirname(__FILE__)) do
-  require 'cdo/redshift'
-end
-
 REPLICATION_TASK_TYPE = 'reload-target'.freeze
 SECONDS_PER_MINUTE = 60
 
@@ -32,10 +28,7 @@ SCHEMA_PERMISSIONS = {
 # @return [Boolean] Whether the task should be run.
 def run_task?(task_name, task_execution_time_sec)
   return false unless task_name.start_with? 'cron'
-  if task_execution_time_sec > 4800
-    return Time.now.saturday?
-  end
-  return true
+  Time.now.saturday?
 end
 
 # @param task_execution_time_sec [Integer] The number of seconds the task's
@@ -81,13 +74,6 @@ def main
       }
     )
     sleep task_delay
-  end
-
-  SCHEMA_PERMISSIONS.each do |schema, groups|
-    sql = "GRANT SELECT ON ALL TABLES IN SCHEMA #{schema} TO " +
-      groups.map {|group| "GROUP #{group}"}.join(', ')
-    RedshiftClient.instance.exec(sql)
-    ChatClient.message 'infra-dms', "Reset permissions on schema #{schema}.", color: 'green'
   end
 
   # Update the "data" room summary in Slack.
