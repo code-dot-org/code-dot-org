@@ -10,6 +10,13 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
+const styles = {
+  clear: {
+    clear: 'both',
+    height: 30
+  }
+};
+
 const TeacherHomepage = React.createClass({
   propTypes: {
     sections: React.PropTypes.array,
@@ -42,16 +49,21 @@ const TeacherHomepage = React.createClass({
           ref="termsReminder"
         />
         {announcements.length > 0 && (
-          <Notification
-            type="bullhorn"
-            notice={announcements[0].heading}
-            details={announcements[0].description}
-            dismissible={false}
-            buttonText={announcements[0].buttonText}
-            buttonLink={announcements[0].link}
-            analyticId={announcements[0].id}
-          />
+          <div>
+            <Notification
+              type="bullhorn"
+              notice={announcements[0].heading}
+              details={announcements[0].description}
+              dismissible={false}
+              buttonText={announcements[0].buttonText}
+              buttonLink={announcements[0].link}
+              newWindow={true}
+              analyticId={announcements[0].id}
+            />
+            <div style={styles.clear}/>
+          </div>
         )}
+
         <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}

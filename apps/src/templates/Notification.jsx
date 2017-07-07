@@ -40,7 +40,6 @@ const styles = {
     color: color.charcoal,
   },
   wordBox: {
-    //width: 'calc(100% - 320px)',
     width: 640,
     marginLeft: 25,
     float: 'left'
@@ -110,6 +109,7 @@ const Notification = React.createClass({
     buttonText: React.PropTypes.string,
     buttonLink: React.PropTypes.string,
     dismissible: React.PropTypes.bool.isRequired,
+    newWindow: React.PropTypes.bool,
     analyticId: React.PropTypes.string
   },
 
@@ -128,7 +128,7 @@ const Notification = React.createClass({
   },
 
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow } = this.props;
     const icons = {
       information: 'info-circle',
       success: 'check-circle',
@@ -167,7 +167,7 @@ const Notification = React.createClass({
             color={ProgressButton.ButtonColor.gray}
             text={buttonText}
             style={styles.button}
-            target="_blank"
+            target={newWindow ? "_blank" : null}
             onClick={this.onAnnouncementClick}
           />
         )}
