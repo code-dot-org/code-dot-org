@@ -10,8 +10,6 @@ const styles = {
   }
 };
 
-const sectionFocusExperiment = experiments.isEnabled('sectionFocus');
-
 const noAssignment = assignmentId(null, null);
 
 /**
@@ -85,6 +83,8 @@ export default class AssignmentSelector extends Component {
         !primaryAssignmentIds.includes(selectedPrimaryId)) {
       primaryAssignIds = [selectedPrimaryId].concat(primaryAssignIds);
     }
+
+    const sectionFocusExperiment = experiments.isEnabled('sectionFocus');
 
     const grouped = groupedAssignments(primaryAssignIds.map(id => assignments[id]));
     let secondaryOptions;
