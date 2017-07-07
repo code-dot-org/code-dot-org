@@ -769,7 +769,7 @@ en:
         abusive_url: 'URL of the content being reported'
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: 'Threats, cyberbullying, harassement'
+          harassment: 'Threats, cyberbullying, harassment'
           offensive: 'Offensive content'
           infringement: 'Copyright Infringement'
           other: 'Other'
