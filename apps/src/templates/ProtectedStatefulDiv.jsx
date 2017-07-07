@@ -35,7 +35,7 @@ var ProtectedStatefulDiv = React.createClass({
     // when using the storybook styleguide, we don't really need to protect
     // anything, and actually we want to unmount/remount stuff all the time
     // when the page is hot-reloaded
-    if (!BUILD_STYLEGUIDE) {
+    if (!IN_STORYBOOK) {
       throw new Error("Unmounting a ProtectedStatefulDiv is not allowed.");
     }
   },
