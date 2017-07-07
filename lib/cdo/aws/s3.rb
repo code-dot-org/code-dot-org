@@ -125,6 +125,8 @@ module AWS
       end
 
       # Uploads the given file to S3, returning a URL to the uploaded file.
+      # Files are kept flat within the LogUploader's prefix - only the file's
+      # basename is used for its S3 key.
       # @param [String] filename to upload to S3
       # @param [Hash] options
       # @return [String] public URL of uploaded file
@@ -132,7 +134,7 @@ module AWS
       # @see http://docs.aws.amazon.com/sdkforruby/api/Aws/S3/Client.html#put_object-instance_method for supported options
       def upload_file(filename, options={})
         File.open(filename, 'rb') do |file|
-          return upload_log(filename, file, options)
+          return upload_log(File.basename(filename), file, options)
         end
       end
     end

@@ -85,11 +85,9 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
+      @sections = current_user.sections.map(&:summarize)
+      @student_sections = current_user.sections_as_student.map(&:summarize)
       @recent_courses = current_user.recent_courses_and_scripts
-
-      if current_user.teacher?
-        @sections = current_user.sections.map(&:summarize)
-      end
     end
   end
 end

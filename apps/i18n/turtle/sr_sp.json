@@ -75,6 +75,7 @@
   "penUp": "Узми оловку",
   "reinfFeedbackMsg": "Овде је Ваш цртеж! Наставите да радите на њему или наставите даље.",
   "setAlpha": "поставите алфа",
+  "setCharacter": "set character to {character}",
   "setColour": "постави боју",
   "setPattern": "поставите шаблон",
   "setWidth": "постави ширину",
@@ -90,6 +91,5 @@
   "turnTooltip": "Окреће уметника улево или удесно за одређени број степени.",
   "turtleVisibilityTooltip": "Чини уметника видљивим или невидљивим.",
   "widthTooltip": "Мења ширину оловке.",
-  "wrongColour": "Ваша је слика погрешне боје. За слагалицу, мора бити %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Ваша је слика погрешне боје. За слагалицу, мора бити %1."
 }

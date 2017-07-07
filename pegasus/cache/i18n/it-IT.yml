@@ -96,6 +96,12 @@
     3
   congratulations_on_completing_course4: Complimenti per aver completato il Corso
     4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Complimenti per aver completato il Corso
     Rapido
   congrats_next_tutorials_title: Promosso ai corsi successivi!
@@ -278,6 +284,12 @@
   just_did_course2: Ho appena completato il Corso 2 - Provalo! Su @codeorg @programmafuturo
   just_did_course3: Ho appena completato il Corso 3 - Provalo! Su @codeorg @programmafuturo
   just_did_course4: Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Ho appena completato il Corso Rapido - Provalo! Su @codeorg
     @programmafuturo
   twitter_teach_cs: 9 su 10 persone sono d'accordo, le scuole dovrebbero insegnare
@@ -342,6 +354,10 @@
     Sheryl, Direttore Operativo di Facebook
   homepage_hero_text_satya: "&ldquo;L'informatica può creare \nle migliori opportunità
     del mondo.&rdquo;\nSatya, Amministratore Delegato di Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Se scrivi codice, puoi determinare il corso della tua vita.&rdquo;
     Chris Bosh
@@ -990,8 +1006,14 @@
   dashboard_course2: 'Corso 2:'
   dashboard_course3: 'Corso 3:'
   dashboard_course4: 'Corso 4: '
-  dashboard_unplugged: Se non hai dei computers, <a href='%{unplugged_url}'>prova
-    queste lezioni</a> nella tua classe.
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
+  dashboard_unplugged: Se non hai un computer, <a href='%{unplugged_url}'>usa queste
+    lezioni tradizionali</a> nella tua classe.
   dashboard_curriculum: Curriculum
   dashboard_curriculum_overview: K-5 Curriculum Overview
   dashboard_overview: Panoramica
@@ -1186,11 +1208,17 @@
   course3_name: Corso 3
   course4_name: Corso 4
   coursea-draft_name: Corso A
+  coursea_name: Corso A
   courseb-draft_name: Corso B
+  courseb_name: Corso B
   coursec-draft_name: Corso C
+  coursec_name: Corso C
   coursed-draft_name: Corso D
+  coursed_name: Corso D
   coursee-draft_name: Corso E
+  coursee_name: Corso E
   coursef-draft_name: Corso F
+  coursef_name: Corso F
   accelerated_name: Corso rapido
   cspunit1_name: I principi dell'informatica - Unità 1
   cspunit2_name: I principi dell'informatica - Unità 2
@@ -1303,6 +1331,12 @@
   course2_gradelevel: Da 6 anni in su (per chi sa leggere)
   course3_gradelevel: Da 8 anni in su (dopo il Corso 2)
   course4_gradelevel: Da 10 anni in su (dopo il Corso 3)
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Classi 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, Tablet
   codeintl_platformtext: Browser moderni, smartphone, Tablet
@@ -1443,6 +1477,12 @@
     trovare soluzioni a problemi più complessi. Alla fine di questo corso, gli studenti
     saranno in grado di creare storie interattive e giochi che potranno condividere
     con chiunque.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Impara i concetti di base dell'informatica con la programmazione
     visuale. Questo è un corso divertente, illustrato da lezioni video di Bill Gates
     e Mark Zuckerberg, ed ispirato ai giochi "Angry Birds" e "Plants vs Zombies".
@@ -2025,6 +2065,6 @@
   header_report_bug: Report Bug
   header_tutorials: Tutorial
   header_documentation: Documentazione
-  csp_name: CS Principles
+  csp_name: "'16-'17 principi d'informatica"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
