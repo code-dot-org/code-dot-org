@@ -4,8 +4,7 @@ import skins from "@cdo/apps/maze/skins";
 import {getSubtypeForSkin} from '@cdo/apps/maze/mazeUtils';
 import MazeMap from '@cdo/apps/maze/mazeMap';
 import drawMap from '@cdo/apps/maze/drawMap';
-
-const assetUrl = path => 'https://studio.code.org/blockly/' + path;
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
