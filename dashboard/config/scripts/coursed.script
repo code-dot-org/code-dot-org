@@ -182,7 +182,7 @@ bonus 'courseD_farmer_condLoops_challenge1'
 bonus 'courseD_farmer_condLoops_challenge2'
 
 stage 'Digital Citizenship'
-level 'DigitalCitizenship2'
+level 'courseD_unplugged_digitalCitizenship'
 
 stage 'Build a Play Lab Game'
 level 'courseD_playLab_cond1'
