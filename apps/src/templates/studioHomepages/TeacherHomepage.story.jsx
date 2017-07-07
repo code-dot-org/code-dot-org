@@ -13,6 +13,7 @@ const announcements = [
 const sections = [
   {
     name: "Algebra Period 1",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "to Progress tab",
     assignedTitle: "CS in Algebra",
     linkToAssigned: "to Course",
@@ -22,6 +23,7 @@ const sections = [
   },
   {
     name: "Algebra Period 2",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "to Progress tab",
     assignedTitle: "CS in Algebra",
     linkToAssigned: "to Course",
@@ -31,6 +33,7 @@ const sections = [
   },
   {
     name: "Period 3",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "to Progress tab",
     assignedTitle: "Course 4",
     linkToAssigned: "to Course",

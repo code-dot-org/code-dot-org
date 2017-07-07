@@ -35,6 +35,7 @@ ENV['BUILD'] = `git rev-parse --short HEAD`
 
 GIT_BRANCH = GitUtils.current_branch
 COMMIT_HASH = RakeUtils.git_revision
+LOCAL_LOG_DIRECTORY = 'log'
 S3_LOGS_BUCKET = 'cucumber-logs'
 S3_LOGS_PREFIX = ENV['CI'] ? "circle/#{ENV['CIRCLE_BUILD_NUM']}" : "#{Socket.gethostname}/#{GIT_BRANCH}"
 LOG_UPLOADER = AWS::S3::LogUploader.new(S3_LOGS_BUCKET, S3_LOGS_PREFIX, true)
@@ -92,7 +93,6 @@ def parse_options
     options.hourofcode_domain = 'test.hourofcode.com'
     options.local = nil
     options.html = nil
-    options.out = nil
     options.maximize = nil
     options.auto_retry = false
     options.magic_retry = false
@@ -157,9 +157,6 @@ def parse_options
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
-      end
-      opts.on("--out filename", String, "Output filename") do |f|
-        options.out = f
       end
       opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
         options.run_eyes_tests = true
@@ -269,9 +266,10 @@ def prefix_string(msg, prefix)
 end
 
 def open_log_files
-  $success_log = File.open('success.log', 'w')
-  $error_log = File.open('error.log', 'w')
-  $errorbrowsers_log = File.open('errorbrowsers.log', 'w')
+  FileUtils.mkdir_p(LOCAL_LOG_DIRECTORY)
+  $success_log = File.open("#{LOCAL_LOG_DIRECTORY}/success.log", 'w')
+  $error_log = File.open("#{LOCAL_LOG_DIRECTORY}/error.log", 'w')
+  $errorbrowsers_log = File.open("#{LOCAL_LOG_DIRECTORY}/errorbrowsers.log", 'w')
 end
 
 def close_log_files
@@ -559,12 +557,12 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    options.out || "#{test_run_string}_output.html"
+    "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
   end
 end
 
 def rerun_filename(test_run_string)
-  "#{test_run_string}.rerun"
+  "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}.rerun"
 end
 
 def cucumber_arguments_for_browser(browser, options)

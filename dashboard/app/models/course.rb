@@ -152,6 +152,12 @@ class Course < ApplicationRecord
   @@course_cache = nil
   COURSE_CACHE_KEY = 'course-cache'.freeze
 
+  def self.clear_cache
+    raise "only call this in a test!" unless Rails.env.test?
+    @@course_cache = nil
+    Rails.cache.delete COURSE_CACHE_KEY
+  end
+
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false if ENV['UNIT_TEST'] || ENV['CI']
@@ -189,7 +195,7 @@ class Course < ApplicationRecord
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    Course.with_associated_models.find_by(find_by => id_or_name)
+    Course.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)

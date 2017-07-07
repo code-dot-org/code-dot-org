@@ -39,6 +39,13 @@ const courses = [
   },
 ];
 
+const studentTopCourse = {
+  assignableName: "Course 1",
+  lessonName: "Lesson 3: Learn to drag and drop",
+  linkToOverview: "http://localhost-studio.code.org:3000/s/course1",
+  linkToLesson: "http://localhost-studio.code.org:3000/s/course1/stage/3/puzzle/1"
+};
+
 export default storybook => {
   return storybook
     .storiesOf('RecentCourses', module)
@@ -87,11 +94,12 @@ export default storybook => {
         description: ` Recent Courses when the student has progress in 5 courses.`,
         story: () => (
           <RecentCourses
-            courses={courses.slice(0,5)}
+            courses={courses.slice(0,4)}
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
             isRtl={false}
+            studentTopCourse={studentTopCourse}
           />
         )
       },
@@ -113,11 +121,12 @@ export default storybook => {
         description: ` Recent Courses when the student has progress in 7 courses. Should see a View More button`,
         story: () => (
           <RecentCourses
-            courses={courses}
+            courses={courses.slice(0,7)}
             showAllCoursesLink={true}
             heading="My Courses"
             isTeacher={false}
             isRtl={false}
+            studentTopCourse={studentTopCourse}
           />
         )
       },
