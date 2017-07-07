@@ -577,6 +577,7 @@ class User < ActiveRecord::Base
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
+    return false if parent_managed_account?
     true
   end
 
@@ -1285,7 +1286,11 @@ class User < ActiveRecord::Base
   end
 
   def parent_managed_account?
-    student? && !parent_email.blank? && hashed_email.blank?
+    student? && parent_email.present? && hashed_email.blank?
+  end
+
+  def no_personal_email?
+    under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
   def section_for_script(script)
