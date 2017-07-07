@@ -171,15 +171,22 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {!isTeacher && !isSignedOut && (
-          <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
-        )}
-
         {!isTeacher && (
           <FindLocalClassBanner
             codeOrgUrlPrefix={codeOrgUrlPrefix}
             isRtl={isRtl}
           />
+        )}
+
+        {!isTeacher && !isSignedOut && (
+          <div>
+            <div style={styles.spacer}>.</div>
+            <ProgressButton
+              text={i18n.viewMyProjects()}
+              href="/projects"
+              color={ProgressButton.ButtonColor.orange}
+            />
+          </div>
         )}
 
         {!isTeacher && !isSignedOut && (
