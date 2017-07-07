@@ -1,7 +1,6 @@
-/* global dashboard */
-
-var React = require('react');
-var IconList = require('./IconList');
+import React from 'react';
+import IconList from './IconList';
+import i18n from '@cdo/locale';
 
 /**
  * A component for managing icons.
@@ -50,7 +49,7 @@ var IconLibrary = React.createClass({
           <input
             onChange={this.search}
             style={styles.input}
-            placeholder={dashboard.i18n.t('components.icon_library.search_placeholder')}
+            placeholder={i18n.iconSearchPlaceholder()}
           />
           <i className="fa fa-search" style={styles.icon}/>
         </div>
@@ -63,6 +62,3 @@ var IconLibrary = React.createClass({
   }
 });
 module.exports = IconLibrary;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.IconLibrary = IconLibrary;
