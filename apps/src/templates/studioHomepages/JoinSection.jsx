@@ -8,8 +8,8 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.charcoal,
-    height: 68,
-    width: 940,
+    height: 72,
+    width: 970,
     backgroundColor: color.white,
     marginTop: 20,
     marginBottom: 20
@@ -36,7 +36,7 @@ const styles = {
     color: color.charcoal,
   },
   wordBox: {
-    width: 495,
+    width: 520,
     marginLeft: 25,
     float: 'left',
     borderWidth: 1,
