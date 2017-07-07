@@ -95,7 +95,7 @@
   "removeStack": "Fjern raden med med {shovelfuls} hauger",
   "repeatCarefullyError": "For å løse dette, se etter et mønster av to forflytninger og en retningsforandring  som kan plasseres i \"repeter\" blokken. Det er greit å avslutte med en ekstra retningsforandring.",
   "repeatUntil": "gjenta til",
-  "repeatUntilBlocked": "så lenge det er en sti foran",
+  "repeatUntilBlocked": "så lenge det finnes vei foran",
   "repeatUntilFinish": "gjenta til ferdig",
   "soil": "jord",
   "sprout": "spire",

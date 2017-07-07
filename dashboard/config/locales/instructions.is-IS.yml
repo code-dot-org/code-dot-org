@@ -15,7 +15,7 @@
         er 100 dílar, en hálfbyggði veggurinn er bara 50. Ljúktu við vegginn. "
       2-3 Artist 2_instruction: "Þetta hús er með hálfbyggðan vegg. Hver hlið er 100
         dílar, en hálfbyggði veggurinn er bara 50. Ljúktu við vegginn. "
-      2-3 Artist 3.4_instruction: Kubburinn "hoppa" færir listamanninn án þess að
+      2-3 Artist 3.4_instruction: Kubburinn `hoppa` færir listamanninn án þess að
         teikna. Gerðu brotalínuna með því að nota bæði hoppa og færa kubbana. Hver
         lína er 50 díla löng.
       2-3 Artist 3_instruction: "Þessi hattur er 100 dílar á hæð. Teiknaðu hatt sem
@@ -98,23 +98,23 @@
         að teikna stórt tannhjól og annað fyrir lítið tannhjól. Notaðu þau til að
         teikna innviði vélar!'
       2-3 Artist Functions 11.5_instruction: |-
-        Hér er sama "teikna sexhyrning" fallið. \r
+        Hér er sama `teikna sexhyrning` fallið. \r
         \r
         Hvað gerist ef þú endurtekur aðalforritið 6 sinnum og snýrð um 60 gráður í hverri umferð lykkjunnar?
       2-3 Artist Functions 11_instruction: |-
-        Við höfum breytt heiti "teikna ferning" fallsins í "teikna sexhyrning", en það teiknar samt bara ferninga! Getur þú breytt "teikna sexhyrning" fallinu svo það teikni sexhyrning með 50 díla hliðar?\r
+        Við höfum breytt heiti `teikna ferning` fallsins í `teikna sexhyrning`, en það teiknar samt bara ferninga! Getur þú breytt `teikna sexhyrning` fallinu svo það teikni sexhyrning með 50 díla hliðar?\r
         \r
         Teiknaðu myndina með nýja fallinu!
       2-3 Artist Functions 12 Mike_instruction: |-
         Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \r
         \r
-        Getur þú notað fallið "teikna blóm" til að fylla blómabeðið? \r
+        Getur þú notað fallið `teikna blóm` til að fylla blómabeðið? \r
         \r
         Það eru 100 dílar á milli plantna.
       2-3 Artist Functions 12_instruction: |-
         Föll er mjög hentug ef teikna þarf flókna hluti mörgum sinnum. \r
         \r
-        Getur þú notað fallið "teikna blóm" til að fylla blómabeðið? \r
+        Getur þú notað fallið `teikna blóm` til að fylla blómabeðið? \r
         \r
         Það eru 100 dílar á milli plantna.
       2-3 Artist Functions 13_instruction: Hér færðu fjögur föll. Notaðu þau eins
@@ -123,7 +123,7 @@
       2-3 Artist Functions 2_instruction: |-
         Með föllum getur þú búið til nýja kubba! \r
         \r
-        Við höfum fært kubbana sem teikna ferning inn í fall, sem heitir "teikna ferning". Getur þú notað "teikna ferning" fallið til að búa til gleraugun? \r
+        Við höfum fært kubbana sem teikna ferning inn í fall, sem heitir `teikna ferning`. Getur þú notað `teikna ferning` fallið til að búa til gleraugun? \r
         \r
         Það eru 75 dílar á milli ferninganna.
       2-3 Artist Functions 3_instruction: |-
@@ -175,16 +175,16 @@
         og hve oft lykkjan er endurtekin.
       2-3 Artist Loops New 15_instruction: Teiknaðu nú eitthvað skemmtilegt!
       2-3 Artist Loops New 2_instruction: |-
-        Hér er sama þraut og við vorum að leysa, en nú getum við aðeins notað einn "færa áfram" kubb og einn "snúa" kubb.\r
+        Hér er sama þraut og við vorum að leysa, en nú getum við aðeins notað einn `færa áfram` kubb og einn `snúa` kubb.\r
         \r
-        Getur þú notað "endurtaka" kubb til að leysa þessa þraut?
+        Getur þú notað `endurtaka` kubb til að leysa þessa þraut?
       2-3 Artist Loops New 9_instruction: Teiknaðu einfalt V með 50 díla hliðar til
         að ljúka við örina.
       2-3 Artist Match Hex Pic_instruction: 'Samsvörun: Hjálpaðu að klára sexhyrninginn.'
       2-3 Artist Match Rho Pic_instruction: 'Samsvörun: Finndu kóðann sem vantar.'
       2-3 Artist Match Sq Pic_instruction: 'Samsvörun: Finndu kóðann sem vantar'
       2-3 Artist Match Tri pic_instruction: 'Samsvörun: Finndu kóðann sem vantar.'
-      2-3 Artist Nested Loops 1_instruction: Settu "endurtaka" kubb utan um alla þessa
+      2-3 Artist Nested Loops 1_instruction: Settu `endurtaka` kubb utan um alla þessa
         stæðu af kóða til að teikna mynstrið.
       2-3 Artist Nested Loops 10_instruction: Endurtaktu kóðan 12 sinnum til að teikna
         mynstrið.
@@ -262,7 +262,7 @@
       2-3 Bee Conditionals 5_instruction: |-
         Gættu þess að reyna ekki að safna safa úr fjólubláu blómi sem hefur engan. \r
         \r
-        Þú verður fyrst að athuga hvort safinn er 1 með því að nota "ef blómasafi" kubbinn.
+        Þú verður fyrst að athuga hvort safinn er 1 með því að nota `ef blómasafi` kubbinn.
       2-3 Bee Conditionals 6_instruction: Athugaðu þetta blóm með "ef" kubbi til að
         gá hvort það hefur blómasafa.
       2-3 Bee Conditionals 7_instruction: Safnaðu blómasafa úr hverju blómi ef það
@@ -318,10 +318,10 @@
       2-3 Bee Functions 2_instruction: |-
         Föll eru kubbar með kóða sem leysir tiltekið verk.\r
         \r
-        Notaðu fallið "sækja 5" til að sækja 5 af blómasafa í einu.
+        Notaðu fallið `sækja 5` til að sækja 5 af blómasafa í einu.
       2-3 Bee Functions 3_instruction: Safnaðu öllum blómasafa úr hverju blómi.
       2-3 Bee Functions 4_instruction: |-
-        Fallið "færa og sækja blómasafa" snýr býflugunni, safnar safa og færir býfluguna aftur á upphafsstað. \r
+        Fallið `færa og sækja blómasafa` snýr býflugunni, safnar safa og færir býfluguna aftur á upphafsstað. \r
         \r
         Notaðu fallið til að safna öllum safanum.
       2-3 Bee Functions 5_instruction: Nú er meira af blómasafa í blómunum. Breyttu
@@ -361,8 +361,8 @@
         öllum blómasafanum."
       2-3 Bee Loops 3_instruction: Safnaðu blómasafa úr hverju blómi og búðu til hunang
         í hverju búi og notaðu sem allra fæsta kubba.
-      2-3 Bee Loops 3A_instruction: Notaðu "endurtaka" lykkju til að safna öllum blómasafanum.
-      2-3 Bee Loops 3B_instruction: Notaðu nú nýja "endurtaka" kubbinn til að safna
+      2-3 Bee Loops 3A_instruction: Notaðu `endurtaka` lykkju til að safna öllum blómasafanum.
+      2-3 Bee Loops 3B_instruction: Notaðu nú nýja `endurtaka` kubbinn til að safna
         öllum blómasafanum og búa til allt hunangið.
       2-3 Bee Loops 4_instruction: |-
         Þetta er bráðduglegt bý!\r
@@ -383,15 +383,15 @@
       2-3 Bee Loops 8_instruction: |-
         Þessi fjólubláu blóm hafa mismunandi magn blómasafa í hvert sinn sem þrautin er keyrð.\r
         \r
-        Notaðu "meðan blómasafi" lykkju til að safna öllum safanum.\r
+        Notaðu `meðan blómasafi` lykkju til að safna öllum safanum.\r
         \r
-        Þessi lykkja endurtekur sig á meðan skilyrðið er satt, hér 'blómasafi > 0'.
+        Þessi lykkja endurtekur sig á meðan skilyrðið er satt, hér `blómasafi > 0`.
       2-3 Bee Loops 9_instruction: '"Meðan" lykkjan getur gert það sama og "ef" setning
         innan í lykkju. Bættu "meðan" lykkju við þennan kóða til að leysa sama verk.'
-      2-3 Bee Loops Assessment 1_instruction: Mat - Notaðu "meðan" lykkju til að safna
+      2-3 Bee Loops Assessment 1_instruction: Mat - Notaðu `meðan` lykkju til að safna
         öllum blómasafanum úr þessum blómum.
       2-3 Maze 1_instruction: 'Getur þú hjálpað mér að ná óþekka svíninu? Smelltu
-        saman tveimur "færa áfram" kubbum fyrir neðan "þegar keyrt" kubbinn og ýttu
+        saman tveimur `færa áfram` kubbum fyrir neðan `þegar keyrt` kubbinn og ýttu
         svo á "Keyra". '
       2-3 Maze 10_instruction: Leiddu mig að hinum illa græna grís! (Gættu þín á TNT
         sprengjunum)
@@ -404,10 +404,10 @@
       2-3 Maze 12 (old)_instruction: Komdu mér til svínsins - í þetta sinn með "endurtaka"
         kubbnum!
       2-3 Maze 12 - One Move Block_instruction: Náðu til svínsins! En í þetta sinn
-        mátt þú aðeins nota einn "fara áfram" kubb. Sérðu nokkra aðra kubba sem gætu
+        mátt þú aðeins nota einn `færa áfram` kubb. Sérðu nokkra aðra kubba sem gætu
         hjálpað þér?
       2-3 Maze 12_instruction: Getur þú komist til svínsins með því að búa til lykkju
-        aðeins einum "færa áfram" kubbi innan í "endurtaka"?
+        með aðeins einum `færa áfram` kubbi innan í `endurtaka`?
       2-3 Maze 13 (old)_instruction: Komdu mér til svínsins - í þetta sinn með "endurtaka
         þar til" kubbnum!
       2-3 Maze 13_instruction: Komdu mér til svínsins! Í þetta sinn mátt þú aðeins
@@ -418,14 +418,14 @@
         kubbur þegar ég þarf hann?)
       2-3 Maze 15 (old)_instruction: Komdu mér til svínsins með "endurtaka þar til"
         kubbi!
-      2-3 Maze 15_instruction: Notaðu tvær "endurtaka" lykkjur til að ná svíninu með
-        sem fæstum kubbum.
+      2-3 Maze 15_instruction: Notaðu tvær `endurtaka` lykkjur til að ná svíninu með
+        sem fæstum kubbum!
       2-3 Maze 16 (old)_instruction: Komdu mér til svínsins með "endurtaka þar til"
         kubbi!
       2-3 Maze 16 before_instruction: Geturðu fundið fljótlegustu aðferðina til að
         koma mér til svínsins?
-      2-3 Maze 16_instruction: Lykkjur geta ínnihaldið fleiri einn kubb og samt virkað!
-        Geturðu sett þessa röð kubba í lykkju og komið uppvakningnum til sólblómsins?
+      2-3 Maze 16_instruction: Lykkjur geta ínnihaldið fleiri en einn kubb og samt
+        virkað! Geturðu sett þessa röð kubba í lykkju og komið uppvakningnum til sólblómsins?
       2-3 Maze 2_instruction: "Þetta svín ýfir á mér fjaðrirnar. Hjálpaðu mér að komast
         þangað!"
       2-3 Maze 3_instruction: Fylgdu slóðinni og láttu mig ná þessu kjánalega svíni.
@@ -445,9 +445,9 @@
       2-3 Maze Loops 17_instruction: Notaðu það sem þú hefur lært og komdu mér til
         sólsblómsins!
       2-3 Maze Loops 18_instruction: |-
-        Komdu mér til sólsblómsins með sem allra fæstum kubbum!\r
+        Komdu mér til sólblómsins með sem allra fæstum kubbum!\r
         \r
-        Reyndu að nota einn "endurtaka" kubb innan í öðrum til að kóðinn verði sem stystur.
+        Reyndu að nota einn `endurtaka` kubb innan í öðrum til að stytta kóðann.
       2-3 Maze Loops 19_instruction: Komdu mér til sólsblómsins!
       2-3 Maze Loops 20_instruction: Komdu mér til sólblómsins með sem allra fæstum
         kubbum!
@@ -595,7 +595,7 @@
         sinn.
       4-5 Artist 11_instruction: Ljúktu við grænu línurnar. Þær eru 300 díla langar
         með 15 díla millibili.
-      4-5 Artist 2_instruction: Settu þennan kóða í lykkju og notaðu "endurtaka" kubbinn
+      4-5 Artist 2_instruction: Settu þennan kóða í lykkju og notaðu `endurtaka` kubbinn
         til að ljúka við ferninginn.
       4-5 Artist 3.5_instruction: Reyndu að finna út hvað muni gerast ef þú keyrir
         þennan kóða (eða ýttu bara á "Keyra" til að komast því). Endurtaktu kóðann
@@ -776,9 +776,9 @@
         býflugnabú! Notaðu "ef-annars" kubb til að safna safa ef það er blóm, annars
         búa til hunang (því þá er það bú).
       4-5 Bee Conditionals 5_instruction: |-
-        Þessi ský fela annað hvort blóm eða býflugnabú. \r
+        Þessi ský fela annað hvort blóm eða býflugnabú! \r
         \r
-        Notaðu "ef-annars" kubbinn til að safna blómasafa ef um blóm er að ræða.\r
+        Notaðu `ef/annars` kubbinn til að safna blómasafa ef um blóm er að ræða.\r
         Annars búa til hunang (því þá er það bú).
       4-5 Bee Conditionals 6 (copy 1)_instruction: Þetta fjólubláa blóm gæti innihaldið
         3, 2 eða 1 af blómasafa. Hér er "ef-annars" kubbur settur í annan "ef-annars"
@@ -787,22 +787,22 @@
       4-5 Bee Conditionals 6_instruction: |-
         Þetta blóm gæti innihaldið 1, 2 eða 3 af blómasafa. \r
         \r
-        Hér eru skilyrðiskubbar ("ef" og/eða "ef-annars") notaðir saman til að safna nákvæmlega þeim safa sem blóm hefur. \r
+        Hér eru skilyrðiskubbar (`ef` og/eða `ef-annars`) notaðir saman til að safna nákvæmlega þeim safa sem blóm hefur. \r
         \r
         Mundu að magn blómasafans getur breyst í hvert sinn sem þrautin er keyrð!
       4-5 Bee Conditionals 7_instruction: |-
         Þessi blóm geta haft 3, 2 eða 1 af blómasafa. \r
         \r
-        Ljúktu við fallið "athuga fjólublátt blóm" og notaðu það til að safna öllum safa úr blómunum.
+        Ljúktu við fallið `athuga fjólublátt blóm` og notaðu það til að safna öllum safa úr blómunum.
       4-5 Bee Conditionals 8_instruction: |-
-        Skrifaðu fallið "athuga blóm búa til hunang". \r
+        Skrifaðu fallið `athuga blóm búa til hunang`. \r
         \r
         Fallið á að athuga hvort fjólubláa blómið hefur 3, 2 eða 1 af blómasafa og safna öllum safanum. \r
         Færa svo áfram og búa til hunang.
       4-5 Bee Conditionals Assessment 1_instruction: |
         **Mat:** Þetta ský felur annað hvort blóm með 1 safa eða býflugnabú sem þarf 1 hunang.\r
         \r
-        Ljúktu við fallið "sækja blómasafa eða búa til hunang" og kallaðu svo á það til að safna öllum safanum eða búa til hunangið.\r
+        Ljúktu við fallið `sækja blómasafa eða búa til hunang` og kallaðu svo á það til að safna öllum safanum eða búa til hunangið.\r
       4-5 Bee Debugging 1_instruction: |-
         Þessir kubbar eru eitthvað í ólagi. \r
         \r
@@ -874,46 +874,46 @@
         Komdu uppvakningnum til sólblómsins með sem fæstum kubbum. \r
         (Forðastu æturnar!)
       4-5 Maze 9_instruction: |-
-        Nú höfum við nýjan kubb sem nefnist "endurtaka þar til".\r
+        Nú höfum við nýja kubbinn `endurtaka þar til`.\r
         Með honum getum við endurtekið skipanir þar til uppvakningurinn nær til sólblómsins.\r
         \r
-        Notaðu nýja "endurtaka þar til" kubbinn til að leysa þessa þraut með sem fæstum skipunum.
+        Notaðu nýja `endurtaka þar til` kubbinn til að leysa þessa þraut með sem fæstum skipunum.
       4-5 Maze Assessment 1_instruction: 'Mat: Náðu til sólblómsins með sem fæstum
         kubbum.'
-      4-5 Maze Conditionals 1_instruction: Notaðu "endurtaka þar til" kubbinn til
+      4-5 Maze Conditionals 1_instruction: Notaðu `endurtaka þar til` kubbinn til
         að koma uppvakningnum til sólblómsins.
       4-5 Maze Conditionals 10_instruction: |-
         Getur þú bætt við bara 3 kubbum til að hjálpa uppvakningnum að rata flóknari leið? \r
         \r
         Ef þú gerir það rétt, getur hann gengið hvaða slóð sem er alveg sama hvað hún er löng!
-      4-5 Maze Conditionals 2_instruction: Notaðu "endurtaka þar til" kubbinn til
+      4-5 Maze Conditionals 2_instruction: Notaðu `endurtaka þar til` kubbinn til
         að koma uppvakningnum til sólblómsins.
       4-5 Maze Conditionals 3_instruction: |
-        Notaðu "ef" kubbinn til að hjálpa mér að ákveða hvenær á að snúa.\r
+        Notaðu `ef` kubbinn til að hjálpa mér að ákveða hvenær á að snúa.\r
       4-5 Maze Conditionals 4_instruction: Jæja, þetta er alveg eins og síðasta þraut,
-        en þú þarft að muna hvernig "ef" og "endurtaka þar til" kubbarnir voru notaðir
+        en þú þarft að muna hvernig `ef` og `endurtaka þar til` kubbarnir voru notaðir
         saman.
       4-5 Maze Conditionals 5_instruction: |-
         "Ég verða fá sólblóm!" \r
         \r
-        Notaðu "ef" kubb til að koma uppvakningnum að sólblóminu með sem fæstum kubbum.
+        Notaðu `ef` kubb til að koma uppvakningnum að sólblóminu með sem fæstum kubbum.
       4-5 Maze Conditionals 6_instruction: |-
         "Éta sólblóm!" \r
         \r
-        Notaðu "ef" kubb til að koma uppvakningnum að sólblóminu með sem fæstum kubbum.
+        Notaðu `ef` kubb til að koma uppvakningnum að sólblóminu með sem fæstum kubbum.
       4-5 Maze Conditionals 7_instruction: "Þessi þraut hefur svipaða lausn, en gættu
         þín á ætunum!"
       4-5 Maze Conditionals 8_instruction: |-
-        "Ef-annars" kubburinn athugar skilyrði og gerir svo eitt EÐA annað. \r
+        `Ef-annars` kubburinn athugar skilyrði og gerir svo eitt EÐA annað. \r
         \r
         Komdu mér til sólblómsins með því að nota þennan nýja kubb.
       4-5 Maze Conditionals 9_instruction: |-
-        Enn ein æfing með "ef-annars" kubbinn! \r
+        Enn ein æfing með `ef-annars` kubbinn! \r
         \r
         Rektu slóðina með fingrinum til að gá hvort þú getir leyst þetta í fyrstu tilraun.
-      4-5 Maze Conditionals Assessment 1_instruction: '**Mat:** Notaðu "endurtaka
-        þar til" og "ef-annars" kubb til að koma mér til sólblómsins með sem fæstum
-        kubbum.'
+      4-5 Maze Conditionals Assessment 1_instruction: "**Mat:** Notaðu `endurtaka
+        þar til` og `ef-annars` kubb til að koma mér til sólblómsins með sem fæstum
+        kubbum."
       4-5 Nested Loops 1_instruction: 'Ljúktu við kóðann til að teikna þessa þríhyrninga.
         Sá fyrsti er tilbúinn. Vísbending: 3 þríhyrningar í 360 gráðu snúningi.'
       4-5 Nested Loops 10_instruction: Teiknaðu síðustu röðina af stjörnum á flaggið
@@ -941,16 +941,16 @@
       4-5 Nested Loops 9_instruction: Teiknaðu tennur krókódílsins!
       4-5 Nested Loops Assessment 1_instruction: 'Mat: Notaðu faldaða lykkju til að
         ljúka teikningunni.'
-      4-5 While Loops 1_instruction: Færðu mig að holunni og notaðu "fylla" kubbinn
+      4-5 While Loops 1_instruction: Færðu mig að holunni og notaðu `fylla` kubbinn
         til að fylla hana með tveimur skóflufyllum af mold.
-      4-5 While Loops 2_instruction: Færðu mig að moldarhaugnum og notaðu "fjarlægja
-        1" kubbinn til að fjarlægja hann með 5 skóflustungum.
+      4-5 While Loops 2_instruction: Færðu mig að moldarhaugnum og notaðu `fjarlægja
+        1` kubbinn til að fjarlægja hann með 5 skóflustungum.
       4-5 While Loops 3_instruction: "Notaðu sem fæsta kubba til að ljúka þessari
         þraut! \\r\n\\r\nFærðu mig að haugnum og fjarlægðu hann allan. Farðu svo að
         holunni og fylltu hana. "
       4-5 While Loops 4_instruction: "Vá, ég fann mjög djúpa holu! \\r\n\\r\nÉg veit
-        ekki hve mörg skóflufylli af mold þarf. \\r\nGetur þú skrifað forrit sem fyllir
-        hana sléttfulla?  "
+        ekki hve mörg skóflufylli af mold þarf. \\r\nGetur þú skrifað forrit sem heldur
+        áfram að nota `fylla` kubbinn þar til holan er full?  "
       4-5 While Loops 5_instruction: Vá, nú eru tvær djúpar holur! Getur þú skrifað
         forrit sem sléttfyllir þær báðar?
       4-5 While Loops 6_instruction: Vá, hér er stór haugur af mold. Getur þú skrifað
@@ -965,6 +965,22 @@
       Alien Defender_instruction: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
       AllTheThings Applab - Turtle move with button_instruction: Bættu við hnappi
         sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': |-
+        Make
+        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
+        first task is to set the second byte to the 8-bit binary code for 5: 0000
+        0101. Then start entering pixel data.
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': |-
+        We
+        start you out with the 4x4 image Maddie created in the video. Your task is
+        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
+        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
+        blue. Row 4 - shades of gray.
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': |-
+        We
+        start you with the 4x2 image Maddie was creating, but we've left out the
+        last two squares. Finish off the image by figuring out which two colors are
+        missing and encode them.
       App Lab test_instruction: prófun
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
@@ -1202,6 +1218,8 @@
       CSD U3 Keypress Watchers_instruction: |-
         Modify the code so that all of the console.log
         commands print true
+      CSD U3 L5 Freeplay_instruction: Breyttu gildi petalSize oft. Hvaða áhrif hefur
+        það á teikninguna?
       CSD U3 Mouse Input Bee 2_instruction: Do this
       CSD U3 Random Animation_instruction: |-
         Use randomNumber() to animate Gary's
@@ -2599,14 +2617,14 @@
         með kubbunum sem þú hefur lært að nota
       Course 4 Artist For Loops 11_instruction: 'Manstu eftir fyrri áfanga þar sem
         við notuðum breytu til að stjórna fjölda hliða á formi? Við ætlum nú að gera
-        það sama með teljarabreytuna "counter". Mynstrið byrjar á þríhyrningi og bætir
-        við einni hlið í einu þangað til það teiknar tíhyrning (10 hliðar). Hver hlið
-        á að vera 100 dílar. '
+        það sama með teljarabreytunni `teljari`. Mynstrið byrjar á þríhyrningi og
+        bætir við einni hlið í einu þangað til það teiknar tíhyrning (10 hliðar).
+        Hver hlið á að vera 100 dílar. '
       Course 4 Artist For Loops 11a_instruction: "Setjum þetta allt saman! Notaðu
-        þekkingu þína á \"frá\" lykkjum og teljara til að búa til þessa teikningu
-        þar sem hvert form hefur tvær fleiri hliðar en formið á undan. Gættu þess
-        að hver hlið forms sé 10 sinnum fjöldi hliða á forminu.\\r\n\\r \nÞú færð
-        mjög lítinn kóða gefins."
+        þekkingu þína á `frá` lykkjum og breytunni `teljari` til að búa til þessa
+        teikningu þar sem hvert form hefur tvær fleiri hliðar en formið á undan. Gættu
+        þess að hver hlið forms sé 10 sinnum fjöldi hliða á forminu.\\r\n\\r \nÞú
+        færð mjög lítinn kóða gefins."
       Course 4 Artist For Loops 12_instruction: 'Þetta leit vel út, en nú vil ég teikna
         hvert form við hlið þess síðasta. Í þetta sinn er hver hlið 20 dílar. Notaðu
         "hoppa" kubb til fara fram um 40 díla eftir hvert form. '
@@ -2782,7 +2800,7 @@
       Course 4 Artist Vars 13_instruction: |-
         Eftir því sem form hefur fleiri hliðar, þarf hver hlið að vera styttri ef allt mynstrið á að geta komist fyrir á skjánum.
         \r
-        Við skulum búa til algrímið fyrir þetta flotta mynstur, en í stað þess að setja fasta tölu í  breytuna "lengd", skulum við nota reikningskubb með breytunni "hliðar" til að tryggja að hvert form komist fyrir. Ummál hvers marghyrnings er 300 dílar.\r
+        Við skulum búa til algrímið fyrir þetta flotta mynstur, en í stað þess að setja fasta tölu í  breytuna `lengd`, skulum við nota reikningskubb með breytunni `hliðar` til að tryggja að hvert form komist fyrir. Ummál hvers fjölhliðungs er 300 dílar.\r
         Þarftu vísbendingar. Smelltu hér.
       Course 4 Artist Vars 14_instruction: |-
         Frjáls æfing! Kíktu á þetta: Nú er algrímið þitt faldað í enn einni lykkju. Gerðu tilraunir með gildi í breytunum tveimur til að teikna óvænt mynstur.\r
@@ -2818,9 +2836,9 @@
       Course 4 Bee 1_instruction: |-
         Býflugan veit ekki hvað er undir skýinu! \r
         \r
-        Notaðu "ef" kubbinn til að athuga hvort það er blóm undir skýinu.\r
+        Notaðu `ef` kubbinn til að athuga hvort það er blóm undir skýinu.\r
         \r
-        Safnaðu blómasafa en AÐEINS ef það er blóm.
+        Safnaðu blómasafa einu sinni en AÐEINS ef það er blóm.
       Course 4 Bee 2_instruction: Notaðu "ef/annars" kubbinn til að athuga hvort hver
         hlutur er blóm eða bú. Ef hann er blóm, á að safna blómasafa, annars á að
         búa til hunang!
@@ -2872,9 +2890,9 @@
       Course 4 Bee Loops 5a NEW_instruction: Notaðu nú lykkjur til að hjálpa býflugunni
         að safna öllum blómasafanum á leið sinni til býflugnabúsins með sem allra
         fæstum kubbum. Ekki gleyma að búa til hunang þegar þú kemst þangað!
-      Course 4 Bee Params 1_instruction: Notaðu fallið "sækja 3 blómasafa", sem snýr,
-        færir til að safna safa og fer svo aftur á upphaflega staðinn. Notaðu fallið
-        í kóða til að safna öllum safanum.
+      Course 4 Bee Params 1_instruction: Skrifaðu röð skipana til að safna ökkum blómasafanum.
+        Notaðu fallið `sækja 3 blómasafa` sem snýr, færir til að safna safanum og
+        fer svo aftur á upphaflega staðinn.
       Course 4 Bee Params 2_instruction: Breyttu fallinu "sækja 3 blómasafa" svo að
         það láti mig snúa til hægri í stað vinstri.
       Course 4 Bee Params 3 (copy 1)_instruction: Nú eru blóm á báðar hliðar! Ef til
@@ -2968,8 +2986,8 @@
         kubbum?
       Course 4 Play Lab For Loops 2_instruction: Nú skulum við reyna að telja í oddatölum
         frá 1 til 100.
-      Course 4 Play Lab Params 1_instruction: Hér er fallið "stökkva" sem lætur leikmann
-        stökkva upp 100 díla. Keyrðu forritið og notaðu "stökkva" fallið til að safna
+      Course 4 Play Lab Params 1_instruction: Hér er fallið `stökkva` sem lætur leikmann
+        stökkva upp 100 díla. Keyrðu forritið og notaðu `stökkva` fallið til að safna
         öllum flöggunum með því að hreyfa hundinn með örvarlyklunum.
       Course 4 Play Lab Params 10_instruction: "Við höfum bætt síðasta fallinu fyrir
         þig.\\r\n\\r\nNotaðu \"ef\" setningu til að forrita leikinn svo hann kalli
@@ -2985,7 +3003,7 @@
         talið frá 1. Breyttu fallinu "stökkva" svo að það noti stikann "leikvera"
         til að láta rétta veru stökkva.
       Course 4 Play Lab Params 4_instruction: |-
-        Hér er fallið "rása". \r
+        Hér er fallið `rása`. \r
         \r
         Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.
       Course 4 Play Lab Params 5_instruction: Breyttu "rása" fallinu með því að bæta
@@ -3000,13 +3018,13 @@
         \r
         Notaðu svo örvarlyklana til að stjórna Hundi og safna öllum flöggunum.\r
         Athugaðu: þú þarft ekki að breyta forritinu neitt
-      Course 4 Play Lab Params 8_instruction: Notaðu kubbinn "þegar leikmaður snertir"
+      Course 4 Play Lab Params 8_instruction: Notaðu kubbinn `þegar leikmaður snertir`
         til að senda Hund aftur efst til vinstri en AÐEINS ef Hundur snertir einhvern
         annan leikmann.
       Course 4 Play Lab Params 9_instruction: "Hér er leikurinn okkar frá fyrra borði,
-        en mest af kóðanum er falið. Það er nýtt fall \"skora_stig\".\\r\n\\r\nBreyttu
-        fallinu svo að stika \"stig\" sé bætt við breytuna \"skor_spilara\".\\r\n\\r\nBreytan
-        \"skor_spilara\" ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum
+        en mest af kóðanum er falið. Það er nýtt fall `skora_stig`.\\r\n\\r\nBreyttu
+        fallinu svo að nýjum stika `stig` sé bætt við breytuna `skor_spilara`.\\r\n\\r\nBreytan
+        `skor_spilara` ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum
         og lækka í hvert sem Köttur klukkar Hund með hjörtum.\\r\n\\r\nTaktu eftir:
         Smelltu svo á \"Keyra\" til að spila. Þegar Hundur nær að skora 6 stig, munt
         þú færast áfram í næstu þraut. "
@@ -3015,7 +3033,7 @@
         hundurinn sem reynir að safna fleiri flöggum en kötturinn. Notaðu örvarlykilinn
         niður til að stjórna hundinum. Ýttu á "Ljúka" þegar þú vilt hætta.
       Course 4 Play Lab Vars 2_instruction: Keppnin í síðustu þraut var ekki sanngjörn!
-        Breyttu breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri
+        Breyttu breytunni `hraði_hunds` til að tryggja að þú náir að safna fleiri
         flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
       Course 4 Play Lab Vars 3_instruction: Notaðu vinstri og hægri örvarnar til að
         hreyfa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
@@ -3060,7 +3078,7 @@
         skorið fer upp fyrir 20 á óvinurinn að hverfa. Ef skorið fer niður fyrir 0,
         á leikmaðurinn að hverfa.
       Course 4 Play Labs For Loops 1_instruction: Við skulum láta hundinn segja hverja
-        tölu frá 1 til 100. Notaðu "frá" lykkju og teljarakubbinn til að segja teljarann
+        tölu frá 1 til 100. Notaðu `frá` lykkju og teljarakubbinn til að segja teljarann
         í hverri umferð lykkjunnar.
       Course 4 Play Labs For Loops 2_instruction: Hjálpaðu nú kisunni Ólafíu að telja
         bara oddatölur frá 1 til 101.
@@ -4495,6 +4513,10 @@
         á að vera 100 díla löng.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
+      Test Stamp- and Pattern-Agnostic Answer_instruction: Hvort lausn telst rétt
+        ætti að vera óháð vali á mynstri eða límmiða, sem þýðir að þó að þú breytir
+        mynstri eða límmiða þá teljist lausnin rétt svo framarlega sem þú notar eitthvað
+        mynstur og einhvern límmiða. (líkt og með litina)
       Test of comment block_instruction: Dragðu fram kubbinn sem þú vilt nota fyrir
         heiti undirmarkmiðs.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
@@ -6465,7 +6487,7 @@
       artistLoopsKFP_instruction: |-
         Picture time!  Use what you have learned to draw
         a picture of what you think the Artist saw on stage.
-      beeDebugVideo1_instruction: Notaðu "endurtaka" lykkju til að safna öllum blómasafanum.
+      beeDebugVideo1_instruction: Notaðu `endurtaka` lykkju til að safna öllum blómasafanum.
       birdsDebugVideo1_instruction: Færðu mig eftir slóðinni að kjánalega svíninu.
         Forðastu TNT sprengiefnið annars verður fjaðrafok!
       brendan hackathon level_instruction: |-
@@ -6871,7 +6893,7 @@
         þar til þau eru fullvaxin.
       courseC_artist_loops3a_instruction: Bættu nú við leðurblöku!
       courseC_artist_loops4_instruction: Uppvakningurinn hefur fundið eyðibýli! Getur
-        þú hjálpað honum að lífga það við með því að stimpla dýramyndir með 100 díla
+        þú hjálpað honum að lífga upp á það með því að líma dýramyndir með 100 díla
         millibili í kringum landið?
       courseC_artist_loops4a_instruction: Reyndu að stökkva áfram um 75 díla.
       courseC_artist_loops5_instruction: |
@@ -6921,7 +6943,8 @@
       courseC_artist_prog_challenge1_instruction: |-
         Teiknaðu bás fyrir hvert dýr.
         Það eru margar lausnir á þessari þraut svo þú getur haft gaman af. Stysta mögulega lausnin hefur 6 kubba, en notaðu eins marga og þér sýnist!
-      courseC_artist_prog_challenge2_instruction: "*Teiknum skínandi stjörnu á næturhimni!*"
+      courseC_artist_prog_challenge2_instruction: "*Hjálpaðu mér að teikna gulu línurnar
+        á þessum vegi!*"
       courseC_collector_loops_challenge2_instruction: Leitum að fjársjóð - með lykkjum!
         Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
         fjársjóðnum!
@@ -7146,9 +7169,14 @@
         \r
         See what happens when we start to
         get creative with the bits!
+      courseD_artist_binary_challenge0_instruction: |-
+        Try using nested loops to complete
+        this drawing.
       courseD_artist_binary_challenge1_instruction: Prófaðu að nota faldaðar lykkjur
         til að ljúka þessari teikningu.
       courseD_artist_binary_challenge2_instruction: Prófaðu að nota faldaðar lykkjur
+        til að ljúka þessari teikningu.
+      courseD_artist_binary_challenge3_instruction: Prófaðu að nota faldaðar lykkjur
         til að ljúka þessari teikningu.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
@@ -7228,18 +7256,15 @@
         svona mynd er búin til?
       courseD_artist_nestedLoops_challenge2_instruction: Getur þú fundið út hvernig
         svona mynd er búin til?
-      courseD_artist_project1_instruction: Hjálpaðu Elsu að teikna lítið form. Það
-        má vera hvað sem er.
+      courseD_artist_project1_instruction: |
+        Teiknaðu lítið form með breidd á milli **20 og 50** díla. Það má vera hvað sem er.\r
       courseD_artist_project1a_instruction: Teiknaðu tröppugang sem notar snúninga
         á milli 75 og 105 gráða.
       courseD_artist_project2_instruction: Teiknaðu nú tvö eða þrjú svona form í röð!
       courseD_artist_project2a_instruction: Snúðu nú við um 180 gráður og teiknaðu
         stjörnumynstrið aftur!
       courseD_artist_project3_instruction: Nú skulum við snúa þessari röð af formum!
-      courseD_artist_project3a_instruction: |-
-        Snúðu forminu 5 eða 6 sinnum í hring.\r
-        - Ef þú velur 5, getur þú notað 72 gráðu snúning\r
-        - Ef þú velur 6, getur þú notað 60 gráðu snúning
+      courseD_artist_project3a_instruction: Snúðu forminu 5 eða 6 sinnum í hring.
       courseD_artist_project4_instruction: Kominn tími til að hafa formin lagskipt!
       courseD_artist_project4a_instruction: |-
         Leiktu þér með það sem þú hefur skapað. Teiknaðu hvað sem þú vilt!\r
@@ -7364,7 +7389,7 @@
         lykkjum? Notaðu það sem þú hefur lært til að safna öllum fjársjóðnum!
       courseD_collector_nested_loops_challenge2_instruction: |-
         Við skulum leita að fjársjóði
-        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 3.
+        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4.
       courseD_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp8_instruction: Help Laurel collect all of the treasure.
       courseD_collector_ramp9_instruction: Help Laurel collect all of the treasure.
@@ -7384,7 +7409,7 @@
         of the nectar and make all of the honey.
       courseD_farmer_condLoops1_instruction: |-
         Use conditionals to make sure that
-        you pick all of the corn, and nothing else.
+        you pick corn only when it's there.
       courseD_farmer_condLoops2_instruction: |-
         Help the farmer collect both corn and
         lettuce from the field.
@@ -7398,8 +7423,8 @@
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
       courseD_farmer_condLoops5_instruction: |-
-        This field has clusters of corn, lettuce,
-        and pumpkins all growing together.  Can you collect them all?
+        Collect all of the corn and lettuce,
+        then grab the pumpkin at the end.
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
@@ -7584,6 +7609,11 @@
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
         or fewer.
+      courseE_artist_concept_challenge1_instruction: Ekki hika við að prófa þig áfram.
+        Það er engin krafa um að þú leysir þetta í fyrstu atrennu. Viltu fá fleiri
+        vísbendingar? Smelltu hér!
+      courseE_artist_concept_challenge2_instruction: Búðu til fimm hjóllaga mynstur
+        með kóðanum fyrir neðan.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -7676,6 +7706,12 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
+      courseE_bee_functions_challenge1_instruction: |-
+        You are on your own for this
+        challenge. This could "bee" harder than it looks!
+      courseE_bee_functions_challenge2_instruction: |-
+        You are on your own for this
+        challenge!
       courseE_bee_ramp14_instruction: 'Sæktu blómasafa á meðan það er enn blómasafi,
         **annars** búðu til hunang. '
       courseE_bee_ramp17_instruction: Notaðu það sem þú hefur lært til að leysa þessa
@@ -7811,6 +7847,9 @@
       courseE_maze_ramp_predict1_instruction: Í þessum kóða er nýr kubbur. Hvað heldur
         þú að muni gerast ef þú ýtir á "Keyra"?
       courseE_multi_maze_ramp5_instruction: Avoid the TNT.
+      courseE_playLab_challenge1_instruction: |-
+        Eitthvað ætti að gerast þegar þú færð nóg stig eða þegar stigin klárast. Bættu kóða í föllin `vinna leik` og `tapa leik` svo leikurinn virki eins og hann á að gera.\r
+        Smelltu á vísbendingar til að fá hugmyndir!
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -7832,6 +7871,10 @@
       courseE_playLab_scaffold6_instruction: |-
         You've finished! Now you can play
         your game or share it with your friends and classmates!
+      courseE_playlab_challenge2_instruction: Getur þú fundið út hvernig appið "Völvan"
+        virkar? Smelltu á `NÁNAR` til að sjá áskoranirnar.
+      courseE_playlab_variables_challenge2_instruction: Getur þú fundið út hvernig
+        appið "Völvan" virkar? Smelltu á `NÁNAR` til að sjá áskoranirnar.
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
@@ -7866,7 +7909,7 @@
         the `set alpha` block to get this faded center.
       courseF_artist_for_Template_instruction: Prófaðu að nota eitthvað af kóðanum
         úr síðasta stigi, en með 89 gráðu snúningi til að búa til þennan snúna ferningaspíral.
-      courseF_artist_for_challenge1_instruction: Getur þú fundið hvernig á að endurgera
+      courseF_artist_for_challenge1_instruction: Getur þú fundið út hvernig á að endurgera
         þessa teikningu?
       courseF_artist_for_challenge2_instruction: Getur þú fundið út hvernig á að endurgera
         þessa teikningu með einni lykkju?
@@ -7975,6 +8018,9 @@
       courseF_artist_variables_challenge2_instruction: "Þú hefur nú lært sem þú þarft
         að kunna til að búa til svona mynstur! Þessi þraut á að vera erfið. Getur
         þú haldið út þar til þú hefur fundið lausn?"
+      courseF_artistembed_variables9_instruction: Sjáðu hvað gerist þegar þú endurtekur
+        kóðann úr síðustu þraut 30 sinnum í stað 3 sinnum! Breyttu litum og mynstrum
+        línanna eins og þér sýnist.
       courseF_bee_conditionals10_instruction: |-
         Collect all of the nectar and make
         all of the honey.
@@ -8076,13 +8122,13 @@
       courseF_bee_fwp9_predict1_instruction: |-
         Use your new function to solve this
         puzzle.
-      courseF_bee_fwp_challenge1_instruction: Notaðu eina "frá" lykkju í falli til
-        að safna öllum maísnum. Sama "frá" lykkjan getur talið upp í mismunandi hámarkstölu
-        með því að nota stikann "lengd".
-      courseF_bee_fwp_challenge2_instruction: Notaðu eina "frá" lykkju í falli til
-        að safna öllu grænmetinu í röðinni. Láttu "frá" lykkjuna telja upp í mismunandi
-        hámarksgildi með því að nota stikann "lengd". Hafðu forritið eins stutt og
-        hægt er með því að nota aðra "frá" lykkju utan við fallið.
+      courseF_bee_fwp_challenge1_instruction: Notaðu eina `frá` lykkju í falli til
+        að safna öllum maísnum. Sama `frá` lykkjan getur talið upp í mismunandi hámarkstölu
+        með því að nota stikann `lengd`.
+      courseF_bee_fwp_challenge2_instruction: Notaðu eina `frá` lykkju í falli til
+        að safna öllu grænmetinu í röðinni. Láttu `frá` lykkjuna telja upp í mismunandi
+        hámarksgildi með því að nota stikann `lengd`. Hafðu forritið eins stutt og
+        hægt er með því að nota aðra `frá` lykkju utan við fallið.
       courseF_farmer_ramp11_instruction: "Þessi þraut notar líka faldaðar lykkjur.
         Getur þú fundið út hvernig?"
       courseF_maze_predict1_instruction: Í þessum kóða er nýr kubbur. Hvað heldur
@@ -8148,10 +8194,10 @@
       courseF_playlab_variables5b_instruction: |-
         Put all of the variables in the correct
         place so that Pegleg's story makes sense.
-      courseF_playlab_variables5c RYAN Copy_instruction: Nú skulum við nota "spyrja"
-        kubbinn með "ef/annars" yrðingu og búa til leik!
-      courseF_playlab_variables5c_instruction: Nú skulum við nota "spyrja" kubbinn
-        með "ef/annars" yrðingu og gera eitthvað skemmtilegt!
+      courseF_playlab_variables5c RYAN Copy_instruction: Nú skulum við nota `spyrja`
+        kubbinn með `ef/annars` yrðingu og búa til leik!
+      courseF_playlab_variables5c_instruction: Nú skulum við nota `spyrja` kubbinn
+        með `ef/annars` yrðingu og gera eitthvað skemmtilegt!
       courseF_playlab_variables6b_instruction: |-
         Join the variables together to make
         a fun story that takes more than one speech bubble to tell.
@@ -8175,6 +8221,8 @@
         En farðu varlega. Ef Köttur og Mörgæs klukka hvort annað, dragast stig frá.\r
         \r
         Bættu við kubbunum sem þarf í leikinn til að hann virki eins og lýsingin segir. Hvernig færðu Hund til að færast í allar áttir með örvarlyklunum? Hvernig bætirðu við stigum þegar Hundur klukkar Kött eða Mörgæs? Hvernig dregurðu frá stig þegar Köttur og Mörgæs snertast?
+      courseF_playlab_variables_challenge3_instruction: Getur þú fundið út hvernig
+        appið "Völvan" virkar? Smelltu á `NÁNAR` til að sjá áskoranirnar.
       courseF_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
@@ -8658,7 +8706,7 @@
       grade3_ConditionalsElse_7_instruction: |-
         Þessi blóm geta haft 3, 2 eða 1 af blómasafa. \r
         \r
-        Ljúktu við fallið "athuga fjólublátt blóm" og notaðu það til að safna öllum safa úr blómunum.
+        Ljúktu við fallið `athuga fjólublátt blóm` og notaðu það til að safna öllum safa úr blómunum.
       grade3_ConditionalsElse_8_instruction: |-
         Write the function for `check flower
         make honey`. \r
@@ -8693,7 +8741,7 @@
         Hér er margt að gerast!\r
         \r
         Notaðu það sem þú hefur lært til að safna öllum blómasafanum og búa svo til hunang.
-      grade3_Conditionals_11 BAD_instruction: Mat - Notaðu "meðan" lykkju til að safna
+      grade3_Conditionals_11 BAD_instruction: Mat - Notaðu `meðan` lykkju til að safna
         öllum blómasafanum úr þessum blómum.
       grade3_Conditionals_11_instruction: |-
         Nú skulum við nota þetta allt!\r
@@ -8765,7 +8813,7 @@
         að safna öllum blómasafanum og búa til allt hunangið?
       grade3_Loops_2_instruction: "Í þetta sinn áttu að nota lykkju til að safna öllum
         blómasafanum."
-      grade3_Loops_3_instruction: Notaðu "endurtaka" lykkju til að safna öllum blómasafanum.
+      grade3_Loops_3_instruction: Notaðu `endurtaka` lykkju til að safna öllum blómasafanum.
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
@@ -9810,7 +9858,7 @@
         \r
         Notaðu svo örvarlyklana til að stjórna Hundi og safna öllum flöggunum.\r
         Athugaðu: þú þarft ekki að breyta forritinu neitt
-      grade5_playlab_variables13_instruction: Notaðu kubbinn "þegar leikmaður snertir"
+      grade5_playlab_variables13_instruction: Notaðu kubbinn `þegar leikmaður snertir`
         til að senda Hund aftur efst til vinstri en AÐEINS ef Hundur snertir einhvern
         annan leikmann.
       grade5_playlab_variables14_instruction: "It's free play time! Have fun with\nall
@@ -9824,7 +9872,7 @@
         Pay attention to how
         this program is written!
       grade5_playlab_variables2_instruction: Keppnin í síðustu þraut var ekki sanngjörn!
-        Breyttu breytunni "hraði_hunds" til að tryggja að þú náir að safna fleiri
+        Breyttu breytunni `hraði_hunds` til að tryggja að þú náir að safna fleiri
         flöggum en kötturinn. Sá sem fyrst safnar 10 vinnur leikinn!
       grade5_playlab_variables3_instruction: Notaðu vinstri og hægri örvarnar til
         að hreyfa og upp örina til að stökkva. Reyndu að safna öllum flöggunum.
@@ -9855,9 +9903,9 @@
         stig svo að þetta sé ekki of erfitt. Láttu skorið lækka úr 10 í 0 til að klára
         borðið.
       grade5_playlab_variables71_instruction: "Hér er leikurinn okkar frá fyrra borði,
-        en mest af kóðanum er falið. Það er nýtt fall \"skora_stig\".\\r\n\\r\nBreyttu
-        fallinu svo að stika \"stig\" sé bætt við breytuna \"skor_spilara\".\\r\n\\r\nBreytan
-        \"skor_spilara\" ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum
+        en mest af kóðanum er falið. Það er nýtt fall `skora_stig`.\\r\n\\r\nBreyttu
+        fallinu svo að nýjum stika `stig` sé bætt við breytuna `skor_spilara`.\\r\n\\r\nBreytan
+        `skor_spilara` ætti að hækka í hvert sinn sem Hundur klukkar Kött með hjörtum
         og lækka í hvert sem Köttur klukkar Hund með hjörtum.\\r\n\\r\nTaktu eftir:
         Smelltu svo á \"Keyra\" til að spila. Þegar Hundur nær að skora 6 stig, munt
         þú færast áfram í næstu þraut. "
@@ -9867,7 +9915,7 @@
         tölu.\\r\n\\r\nTil dæmis \"stig_leikmanns\" > 6 \\r\n\\r\nSpilaðu leikinn
         og náðu að ljúka borði 3 til að fara í næstu þraut. "
       grade5_playlab_variables9_instruction: |-
-        Hér er fallið "rása". \r
+        Hér er fallið `rása`. \r
         \r
         Breyttu því svo að Köttur færist upp 400 díla og svo niður 400.
       grade5_playlab_variables_freeplay_instruction: |-

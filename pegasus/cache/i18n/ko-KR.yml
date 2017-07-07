@@ -83,6 +83,12 @@
   congratulations_on_completing_course2: "과정2 완료를 축하합니다."
   congratulations_on_completing_course3: "과정3 완료를 축하합니다."
   congratulations_on_completing_course4: "과정4 완료를 축하합니다."
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "속진 과정 완료를 축하합니다."
   congrats_next_tutorials_title: "이제 다음 튜토리얼들을 해보세요."
   congrats_next_tutorials_desc: 이러한 짧은 1시간짜리 튜토리얼을 해 보거나 <a href="%{current_path}/next">파트너
@@ -233,6 +239,12 @@
   just_did_course2: "과정2를 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course3: "과정3을 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course4: "과정4를 완료했습니다. - @codeorg 를 살펴보세요!"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "속진 과정을 완료했습니다. - @codeorg 를 살펴보세요!"
   twitter_teach_cs: 10명 중 9명의 사람들이, 모든 학교들에서 컴퓨터과학(정보과학)을 가르쳐야한다는데 동의하고 있습니다. http://youtu.be/nKIu9yen5nc.
     https://code.org/ 를 방문해 보세요.
@@ -280,6 +292,10 @@
     기회가 필요합니다.&rdquo; 셰릴, Facebook COO"
   homepage_hero_text_satya: "&ldquo;컴퓨터 과학은 세상의 가장 큰 기회를 열 수 있다.&rdquo; 사티아, 마이크로소프트
     CEO"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;코딩을 하면, 당신은 삶의 방향을 꼼꼼하게 선택할 수 있게된다.&rdquo; 크리스
     보쉬"
   homepage_hero_text_student1: "&ldquo; 이 기술들은 나의 미래를 바꿨습니다. 그 재미는 더 할 나위 없어요.&rdquo;
@@ -792,6 +808,12 @@
   dashboard_course2: "코스2:"
   dashboard_course3: "코스3:"
   dashboard_course4: "코스 4(베타):"
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "컴퓨터가 없다면, 수업에 <a href='%{unplugged_url}'>이러한 언플러그드 활동을 시도해보세요.</a>"
   dashboard_curriculum: "교과 과정"
   dashboard_curriculum_overview: K-5(초등 5학년) 교육과정 살펴보기
@@ -972,11 +994,17 @@
   course3_name: "과정3"
   course4_name: "과정4"
   coursea-draft_name: "과정 A"
+  coursea_name: "과정 A"
   courseb-draft_name: "과정 B"
+  courseb_name: "과정 B"
   coursec-draft_name: "과정 C"
+  coursec_name: "과정 C"
   coursed-draft_name: "과정 D"
+  coursed_name: "과정 D"
   coursee-draft_name: "과정 E"
+  coursee_name: "과정 E"
   coursef-draft_name: "과정 F"
+  coursef_name: "과정 F"
   accelerated_name: "빠른 과정"
   cspunit1_name: CS 원리 1단원
   cspunit2_name: CS 원리 2단원
@@ -1088,6 +1116,12 @@
   course2_gradelevel: 6-18 세
   course3_gradelevel: 8-18 세
   course4_gradelevel: "나이 10세-13세"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 8 학년 이상
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "나이 10세-13세"
   codeorg_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
   codeintl_platformtext: "최신 웹브라우저, 스마트폰, 태블릿"
@@ -1196,6 +1230,12 @@
   course4_shortdescription_congrats: "더 나아갈 준비가 되었나요? 학생들은 좀 더 복잡한 문제들에 대한 유연한 해법을
     찾기 위해 이전의 과정에서 소개된 프로그래밍 주제를 깊이 탐구할 것입니다. 이 과정을 완료하고나면 학생들은 상호작용 가능한 스토리와 게임을
     만들고 다른 사람들과 공유할 수 있습니다. 초등학교 4학년 - 중학교 2학년 학생들에게 권장합니다."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "드래그 앤 드롭 프로그래밍 으로 컴퓨터과학(정보과학)의 기초 개념들을 배워보세요. 마치 게임과 비슷하면서도,
     빌게이츠, 마크주커버그, 앵그리버드, 식물과 좀비 등이 나오는 동영상을 보면서 스스로 튜토리얼을 따라가며 배울 수 있습니다. 반복 실행, 조건/선택
     실행, 기초 알고리즘과 같은 것들을 배워보세요. 34개의 다양한 언어들로 가능합니다."
@@ -1622,6 +1662,6 @@
   header_report_bug: Report bug
   header_tutorials: "튜토리얼"
   header_documentation: "문서"
-  csp_name: CS Principles
+  csp_name: "'16 - '17 CS 원리"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

@@ -9,11 +9,14 @@ zh-TW:
     errors:
       messages:
         blank: "必填"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: '顯示名稱'
         name_example: '顯示名稱<br/>（例如 Cool Coder 或是 Jane S）'
         email: '電子信箱'
+        personal_email: 'Personal email address'
         username: '用戶名稱'
         password: '密碼'
         password_confirmation: '密碼確認'
@@ -208,6 +211,7 @@ zh-TW:
     edit: '编辑'
     edit_model: '編輯 %{model}'
     update: '更新'
+    submit: '提交'
     destroy: '摧毀'
     back: '返回'
     confirm: '你真的確定嗎？'
@@ -325,6 +329,10 @@ zh-TW:
     deleted_user: '已刪除的用戶'
     no_password_because_oauth: '沒有密碼，因為你使用第三方帳戶登入。'
     no_password_because_sponsored: '告訴你的老師以管理你的密碼。'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: '已完成'
     tried: '已體驗'
@@ -911,3 +919,4 @@ zh-TW:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

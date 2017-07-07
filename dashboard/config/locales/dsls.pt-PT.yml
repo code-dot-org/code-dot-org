@@ -139,9 +139,9 @@
         "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
           1</h3>"
         "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
-          6</h3>"
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rodas/lado: 3 <br/>janelas/lado:
-          2</h3>"
+          1</h3>"
+        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": "<h3>Rodas/lado: 2 <br/>janelas/lado:
+          1</h3>"
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Cada
           um desses veículos foi decomposto em partes menores. Associe cada veículo
           com sua lista de partes correta.
@@ -374,7 +374,7 @@
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png": "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
         "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500": "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png,
           500"
-        Maze Multiple Choice: Labirinto - Múltipla escolha
+        Maze Multiple Choice: Labirinto - Pergunta de escolha múltipla
         Which blocks work?: Que blocos funcionam?
       2-3 Relay Programming Multi 1:
         "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png": "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
@@ -670,7 +670,7 @@
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png": "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
         "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500": "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png,
           500"
-        Maze Multiple Choice: Labirinto - Escolha Múltipla
+        Maze Multiple Choice: Labirinto - Pergunta de escolha múltipla
         Which blocks solve the puzzle?: Quais blocos resolvem o desafio?
       Baker test of multi can delete:
         2+3: 2+3

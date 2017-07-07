@@ -74,6 +74,12 @@
   congratulations_on_completing_course2: "恭喜您完成課程 2"
   congratulations_on_completing_course3: "恭喜您完成課程 3"
   congratulations_on_completing_course4: "恭喜您完成課程 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "恭喜您完成速成課程"
   congrats_next_tutorials_title: "畢業到下一級別"
   congrats_next_tutorials_desc: 試試這些簡短的、不到 1 小時的教程，或是試試<a href="%{current_path}/next">合作夥伴的教程</a>。
@@ -207,6 +213,12 @@
   just_did_course2: "我剛完成了課程 2 - 快來瞧瞧！@codeorg"
   just_did_course3: "我剛完成了課程 3 - 快來瞧瞧！@codeorg"
   just_did_course4: "我剛完成了課程 4 - 快來瞧瞧！@codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "我剛完成了速成課程 - 快來瞧瞧！@codeorg"
   twitter_teach_cs: "每 10 人就有 9 人同意學校應該教計算機科學。http://youtu.be/nKIu9yen5nc，造訪 https://code.org/。"
   twitter_cs_foundational: "計算機科學是適合每一個學生學習的基礎觀念。https://youtu.be/QvyTEx1wyOY"
@@ -248,6 +260,10 @@
   homepage_hero_text_fistbump: "「不要只是在手機上玩遊戲，來寫程式吧。」歐巴馬，美國總統"
   homepage_hero_text_sheryl: "「我們的孩子（包括女孩子）需要學習計算機科學的機會。」謝麗爾，Facebook 營運長"
   homepage_hero_text_satya: "「計算機科學可以打開這個世界上最好的契機。」薩提亞，微軟執行長"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "「如果你學習編程，你就可以選擇自己人生的方向。」克里斯波什"
   homepage_hero_text_student1: "「這些技能已經改變了我的未來。更重要的是，它真的很有趣。」盧娜，國中一年級學生"
   homepage_hero_text_student2: "「我從來沒見過孩子們如此興奮地學習。」麥克，教師"
@@ -704,6 +720,12 @@
   dashboard_course2: "課程 2："
   dashboard_course3: "課程 3："
   dashboard_course4: "課程 4："
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "如果你沒有電腦，你可以在你的教室<a href='%{unplugged_url}'>試試這些不插電教學活動 </a>。"
   dashboard_curriculum: "課程"
   dashboard_curriculum_overview: K-5 課程概覽
@@ -876,11 +898,17 @@
   course3_name: "課程 3"
   course4_name: "課程 4"
   coursea-draft_name: "課程 A"
+  coursea_name: "課程 A"
   courseb-draft_name: "課程 B"
+  courseb_name: "課程 B"
   coursec-draft_name: "課程 C"
+  coursec_name: "課程 C"
   coursed-draft_name: "課程 D"
+  coursed_name: "課程 D"
   coursee-draft_name: "課程 E"
+  coursee_name: "課程 E"
   coursef-draft_name: "課程 F"
+  coursef_name: "課程 F"
   accelerated_name: "速成課程"
   cspunit1_name: "（舊）單元 1：數位資訊"
   cspunit2_name: "（舊）單元 2：網際網路"
@@ -992,6 +1020,12 @@
   course2_gradelevel: "年齡 6-18"
   course3_gradelevel: "年齡 8-18"
   course4_gradelevel: "年齡 10-18"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: "年級 8+"
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "現代瀏覽器、手機、平板"
   codeintl_platformtext: "瀏覽器, 智慧手機, 平板"
@@ -1097,6 +1131,12 @@
     4-5。"
   course4_shortdescription_congrats: "準備更進一步了嗎？學生會進入比之前更深入的編程主題，替更複雜的問題找出彈性的解決方案。在課程的最後，學生能創造並分享的自己的互動式故事和遊戲。建議年級
     4-8。"
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "使用拖曳程式積木的方式來學習計算機科學的基本概念。這是一個遊戲式、自學式的教程，由比爾 · 蓋茨、馬克 ·
     佐柏克、憤怒鳥和植物大戰僵屍所主演。在這個課程中您將學到重複迴圈、條件判斷、基礎的演算法。共有 34 種語言可用。"
   codeintl_longdescription: "學習電腦科學與阻力的基本概念，並將程式設計。這是主演視頻講座由比爾 · 蓋茨、 馬克 · 朱克伯格、 憤怒的小鳥和植物大戰僵屍的遊戲一樣，自編自導自演的教程。瞭解重複迴圈、
@@ -1419,6 +1459,6 @@
   header_report_bug: "回報 Bug"
   header_tutorials: "所有教程"
   header_documentation: "說明文件"
-  csp_name: CS Principles
+  csp_name: "'16-' 17 計算機科學原理"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

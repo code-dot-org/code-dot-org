@@ -675,10 +675,7 @@ en:
         courseD_artist_functions8_1: Your blocks to create functions have been moved under this label in the toolbox.
       courseD_artist_nestedLoops1a_callout:
         courseD_artist_nestedLoops1a_1: You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!
-      courseD_artist_nestedLoops_challenge2_callout:
-        courseD_artist_nestedLoops_challenge2_callout1: This loop should create an octagon.
-        courseD_artist_nestedLoops_challenge2_callout2: This loop should create a hexagon.
-        courseD_artist_nestedLoops_challenge2_callout3: This loop should create a square.
+      courseD_artist_nestedLoops_challenge2_callout: {}
       courseD_artist_ramp11_callout:
         courseD_artist_ramp11_1: You can change this number.
         courseD_artist_ramp11_2: Click here to type in the number of times to repeat your code.
@@ -841,6 +838,7 @@ en:
       courseF_artist_variables_8_callout: {}
       courseF_artist_variables_9_callout: {}
       courseF_artist_variables_FP_callout: {}
+      courseF_artist_variables_template_callout: {}
       courseF_artistembed_variables9_callout: {}
       courseF_bee_conditionals2_callout:
         courseF_bee_conditionals2_2: The toolbox is now in category mode.  All of the blocks you need are beneath these labels!
