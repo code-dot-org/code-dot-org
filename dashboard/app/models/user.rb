@@ -551,14 +551,16 @@ class User < ActiveRecord::Base
       user.gender = normalize_gender auth.info.gender
     end
 
-    if auth.credentials.refresh_token
-      omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+    if auth.credentials
+      if auth.credentials.refresh_token
+        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+      end
+
+      omniauth_user.oauth_token = auth.credentials.token
+      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
+
+      omniauth_user.save if omniauth_user.changed?
     end
-
-    omniauth_user.oauth_token = auth.credentials.token
-    omniauth_user.oauth_token_expiration = auth.credentials.expires_at
-
-    omniauth_user.save if omniauth_user.changed?
 
     omniauth_user
   end
