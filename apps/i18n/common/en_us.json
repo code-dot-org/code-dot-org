@@ -214,6 +214,7 @@
   "enableMakerDialogSetupPageLinkText": "Maker Toolkit Setup",
   "end": "end",
   "englishOnlyWarning": "Sorry! This stage is not available in your language. The puzzles in this stage use a mix of English words and characters that can’t be translated right now. You can move on to Stage {nextStage}.",
+  "enrollmentDescription": "Join your teacher's classroom by entering their section code below. Teachers will be able to see your course progress, projects, and reset your password in case you forget it.",
   "errorEmptyFunctionBlockModal": "There need to be blocks inside your function definition. Click \"edit\" and drag blocks inside the green block.",
   "errorIncompleteBlockInFunction": "Click \"edit\" to make sure you don't have any blocks missing inside your function definition.",
   "errorGenericLintError": "Your program contains an editor warning that needs to be corrected. Hover over the icons near the line numbers in the editor to learn more.",
