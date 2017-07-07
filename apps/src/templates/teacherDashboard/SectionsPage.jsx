@@ -28,6 +28,7 @@ class SectionsPage extends Component {
 
     // redux provided
     numSections: PropTypes.number.isRequired,
+    studioUrl: PropTypes.string.isRequired,
     classrooms: PropTypes.arrayOf(classroomShape),
     newSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
@@ -129,6 +130,7 @@ class SectionsPage extends Component {
           isOpen={this.state.rosterDialogOpen}
           handleClose={this.handleImportClose}
           classrooms={this.props.classrooms}
+          studioUrl={this.props.studioUrl}
         />
       </div>
     );
@@ -138,5 +140,6 @@ export const UnconnectedSectionsPage = SectionsPage;
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
+  studioUrl: state.teacherSections.studioUrl,
   classrooms: state.googleClassroom.classrooms,
 }), { newSection, setSections, setValidAssignments, loadClassroomList })(SectionsPage);

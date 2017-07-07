@@ -8,6 +8,7 @@ const ExampleDialogButton = React.createClass({
         <RosterDialog
           isOpen={!!this.state && this.state.open}
           handleClose={() => this.setState({open: false})}
+          studioUrl=""
           {...this.props}
         />
         <button onClick={() => this.setState({open: true})}>
