@@ -10,6 +10,7 @@
     - homepage_data[:isTeacher] = true
   - else
     - homepage_data[:sections] = @student_sections
+    - homepage_data[:studentTopCourse] = @student_top_course
     - homepage_data[:isTeacher] = false
     - unless current_user.teacher_managed_account?
       - homepage_data[:canLeave] = false
