@@ -7,6 +7,7 @@ import { stageProgressShape } from './types';
 import StatusProgressDot from './StatusProgressDot.jsx';
 import color from "../../../util/color";
 import StageExtrasProgressDot from './StageExtrasProgressDot';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   courseOverviewContainer: {
@@ -36,6 +37,11 @@ const StageProgress = React.createClass({
     courseOverviewPage: React.PropTypes.bool
   },
 
+  shouldShowStageExtras() {
+    return !this.props.courseOverviewPage &&
+      experiments.isEnabled('stageExtrasFlag');
+  },
+
   render() {
     const progressDots = this.props.levels.map((level, index) =>
       <StatusProgressDot
@@ -48,7 +54,7 @@ const StageProgress = React.createClass({
     return (
       <div className="react_stage" style={this.props.courseOverviewPage ? styles.courseOverviewContainer : styles.headerContainer}>
         {progressDots}
-        {!this.props.courseOverviewPage && <StageExtrasProgressDot stageId={this.props.stageId} />}
+        {this.shouldShowStageExtras() && <StageExtrasProgressDot stageId={this.props.stageId} />}
       </div>
     );
   }
