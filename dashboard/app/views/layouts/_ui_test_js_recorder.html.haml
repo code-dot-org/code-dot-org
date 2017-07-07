@@ -1,0 +1,16 @@
+-#
+  Javascript loaded very early on the page to record JavaScript errors during
+  a test run.  Used with UI tests to detect and surface JavaScript errors.
+- if params[:ui_test_js_recorder]
+  :javascript
+    // Wrap existing window onerror handler with a script error recorder.
+    (function (_window) {
+      var windowOnError = _window.onerror;
+      _window.onerror = function (msg) {
+        _window.detectedJSErrors = _window.detectedJSErrors || [];
+        _window.detectedJSErrors.push(msg);
+        if (windowOnError) {
+          return windowOnError.apply(this, arguments);
+        }
+      };
+    })(window);
