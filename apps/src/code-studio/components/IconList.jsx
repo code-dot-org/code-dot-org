@@ -63,7 +63,3 @@ var IconList = React.createClass({
   }
 });
 module.exports = IconList;
-
-window.dashboard = window.dashboard || {};
-window.dashboard.IconList = IconList;
-window.dashboard.iconsUnicode = require('./icons').unicode;
