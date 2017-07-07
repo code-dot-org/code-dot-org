@@ -123,7 +123,7 @@ function findTemplatesForSite(siteConfig) {
 
 function searchFilesForString(filesToSearch, searchString) {
   return new Promise(resolve => child_process.exec(
-    `grep "${searchString}" ${filesToSearch.join(' ')}`,
+    `grep "${searchString}" "${filesToSearch.join('" "')}"`,
     (err, stdout, stderr) => {
       let filesWithString = stdout
         .split('\n')
