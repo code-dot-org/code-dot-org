@@ -129,7 +129,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const announcementsContainer = wrapper.childAt(3);
+    const announcementsContainer = wrapper.childAt(3).childAt(0);
     assert.equal(announcementsContainer.name(), 'Notification');
     // Check if Announcements receives correct props.
     const announcement = announcementsContainer.props();
@@ -290,7 +290,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const recentCourses = wrapper.childAt(5);
+    const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
