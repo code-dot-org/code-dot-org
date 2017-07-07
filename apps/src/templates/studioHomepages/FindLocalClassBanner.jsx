@@ -51,7 +51,7 @@ const FindLocalClassBanner = React.createClass({
   },
 
   render() {
-    const { codeOrgUrlPrefix, isRtl }= this.props;
+    const { codeOrgUrlPrefix, isRtl } = this.props;
 
     return (
       <div>

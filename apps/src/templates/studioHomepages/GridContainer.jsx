@@ -12,7 +12,7 @@ const styles = {
   }
 };
 
-const GridContainer= React.createClass({
+const GridContainer = React.createClass({
   propTypes: {
     numColumns: React.PropTypes.number.isRequired,
     children: React.PropTypes.arrayOf(React.PropTypes.node),
