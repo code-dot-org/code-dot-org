@@ -769,7 +769,7 @@ en:
         abusive_url: 'URL of the content being reported'
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: 'Threats, cyberbullying, harassement'
+          harassment: 'Threats, cyberbullying, harassment'
           offensive: 'Offensive content'
           infringement: 'Copyright Infringement'
           other: 'Other'
@@ -796,10 +796,6 @@ en:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  components:
-    icon_library:
-      search_placeholder_text: 'Search for an icon...'
-      no_icons_found: 'No icons found'
   flex_category:
     required: 'Overview'
     content: 'Content'
@@ -935,3 +931,4 @@ en:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

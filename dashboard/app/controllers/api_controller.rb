@@ -4,10 +4,10 @@ class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
-  SCOPES = [
+  GOOGLE_AUTH_SCOPES = [
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
-  ]
+  ].freeze
 
   def google_classrooms
     client = Signet::OAuth2::Client.new(
@@ -18,7 +18,7 @@ class ApiController < ApplicationController
       refresh_token: current_user.oauth_refresh_token,
       access_token: current_user.oauth_token,
       expires_at: current_user.oauth_token_expiration,
-      scope: SCOPES,
+      scope: GOOGLE_AUTH_SCOPES,
     )
     service = Google::Apis::ClassroomV1::ClassroomService.new
     service.authorization = client
@@ -28,7 +28,7 @@ class ApiController < ApplicationController
       render json: response.to_h
 
       if client.access_token != current_user.oauth_token
-        current_user.update(
+        current_user.update!(
           oauth_token: client.access_token,
           oauth_token_expiration: client.expires_in + Time.now.to_i,
         )

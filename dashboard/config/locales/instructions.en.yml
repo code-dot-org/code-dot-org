@@ -827,6 +827,19 @@ en:
       Alien Defender_instruction: "Project Idea: Make a defender game in Play Lab!"
       AllTheThings Applab - Turtle move with button_instruction: "Add a button that
         moves the turtle when clicked.  (Click to see full instructions)"
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': "Make
+        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
+        first task is to set the second byte to the 8-bit binary code for 5: 0000
+        0101. Then start entering pixel data."
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': "We
+        start you out with the 4x4 image Maddie created in the video. Your task is
+        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
+        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
+        blue. Row 4 - shades of gray."
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': "We
+        start you with the 4x2 image Maddie was creating, but we've left out the
+        last two squares. Finish off the image by figuring out which two colors are
+        missing and encode them."
       App Lab test_instruction: "test"
       AppLab_test02_instruction: "One sentence summary of the activity. Click to
         view full instructions."
@@ -5949,10 +5962,15 @@ en:
       courseD_artist_binaryFP_instruction: "Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to
         get creative with the bits!"
-      courseD_artist_binary_challenge1_instruction: "Try using nested loops to complete
+      courseD_artist_binary_challenge0_instruction: "Try using nested loops to complete
         this drawing."
-      courseD_artist_binary_challenge2_instruction: "Try using nested loops to complete
+      courseD_artist_binary_challenge1_instruction: "You can only use each binary
+        value (0 or 1) once each in the puzzle. Try using nested loops to complete
         this drawing."
+      courseD_artist_binary_challenge2_instruction: "Are you persistent enough to
+        restore this logo back to normal?"
+      courseD_artist_binary_challenge3_instruction: "Are you persistent enough to
+        restore this logo back to normal?"
       courseD_artist_functions10_instruction: "This time, use lines of 8 hexagons
         with 25 pixel sides."
       courseD_artist_functions2_instruction: "This time, use the `draw a square`
@@ -6133,7 +6151,7 @@ en:
       courseD_debugging_6_instruction: "Challenge:  Fix the errors to collect all
         of the nectar and make all of the honey."
       courseD_farmer_condLoops1_instruction: "Use conditionals to make sure that
-        you pick all of the corn, and nothing else."
+        you pick corn only when it's there."
       courseD_farmer_condLoops2_instruction: "Help the farmer collect both corn and
         lettuce from the field."
       courseD_farmer_condLoops3_instruction: "*\"Corn, lettuce, AND pumpkins! Help
@@ -6142,8 +6160,8 @@ en:
         in each cluster before moving on to the next bunch."
       courseD_farmer_condLoops4a_instruction: "Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch."
-      courseD_farmer_condLoops5_instruction: "This field has clusters of corn, lettuce,
-        and pumpkins all growing together.  Can you collect them all?"
+      courseD_farmer_condLoops5_instruction: "Collect all of the corn and lettuce,
+        then grab the pumpkin at the end."
       courseD_farmer_condLoops6_instruction: "Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!"
       courseD_farmer_condLoops7_instruction: "Challenge: Collect all of the corn
@@ -6364,6 +6382,10 @@ en:
         the nectar from each flower."
       courseE_bee_functions9_instruction: "Create a function to collect all of the
         nectar from each flower."
+      courseE_bee_functions_challenge1_instruction: "You are on your own for this
+        challenge. This could \"bee\" harder than it looks!"
+      courseE_bee_functions_challenge2_instruction: "You are on your own for this
+        challenge!"
       courseE_bee_ramp14_instruction: "Get nectar while there is nectar, **else**
         make the honey. "
       courseE_bee_ramp17_instruction: "Use what you have learned to solve this puzzle."

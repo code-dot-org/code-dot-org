@@ -247,28 +247,19 @@ class DashboardSection
   # @option [Number] :position
   # @option [Number] :category_priority
 
-  # Sections can be assigned to both courses and scripts. We want to make sure
-  # we give teacher dashboard the same information for both sets of assignables,
-  # which we accomplish via this shared method
+  # Get the info for our script/course, and translate strings if needed.
   # @param course_or_script [Course|Script] A row object from either our courses
   #   or scripts dashboard db tables.
   # @param hidden [Boolean] True if the passed in item is hidden
   # @return AssignableInfo
   def self.assignable_info(course_or_script, hidden=false)
-    name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
-    first_category = ScriptConstants.categories(course_or_script[:name])[0] || 'other'
-    position = ScriptConstants.position_in_category(name, first_category)
-    category_priority = ScriptConstants.category_priority(first_category)
-    name = I18n.t("#{name}_name", default: name)
-    name += " *" if hidden
-    {
-      id: course_or_script[:id],
-      name: name,
-      script_name: course_or_script[:name],
-      category: I18n.t("#{first_category}_category_name", default: first_category),
-      position: position,
-      category_priority: category_priority,
-    }
+    info = ScriptConstants.assignable_info(course_or_script)
+    info[:name] = I18n.t("#{info[:name]}_name", default: info[:name])
+    info[:name] += " *" if hidden
+
+    info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
+
+    info
   end
 
   @@script_cache = {}

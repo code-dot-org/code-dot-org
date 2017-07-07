@@ -36,9 +36,9 @@
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/bd4e1ddff37c5efbbbb00dff166948e2-image-1478588910222.png\", \"position\": [0,0]}\r\n]",
     "markdown_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
