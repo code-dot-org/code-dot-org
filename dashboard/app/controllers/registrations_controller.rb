@@ -1,5 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
+  prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :upgrade]
 
   def new
     session[:user_return_to] ||= params[:user_return_to]
@@ -141,28 +142,4 @@ class RegistrationsController < Devise::RegistrationsController
       races: []
     )
   end
-
-  # resource_name, resource, devise_mapping, and resource_class are defined here mostly following
-  # https://pupeno.com/2016/04/26/show-a-devise-log-in-or-sign-up-forms-in-another-page/
-  # in order to allow the upgrade action to render an error page correctly
-
-  def resource_name
-    :user
-  end
-  helper_method :resource_name
-
-  def resource
-    @resource ||= super || current_user || User.new
-  end
-  helper_method :resource
-
-  def devise_mapping
-    @devise_mapping ||= Devise.mappings[:user]
-  end
-  helper_method :devise_mapping
-
-  def resource_class
-    User
-  end
-  helper_method :resource_class
 end
