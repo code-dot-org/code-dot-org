@@ -150,9 +150,9 @@ module RakeUtils
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     if CDO.bundler_use_sudo
-      sudo 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      sudo 'bundle', '--without', *without, '--verbose', '--jobs', nproc, *args
     else
-      system 'bundle', '--without', *without, '--quiet', '--jobs', nproc, *args
+      system 'bundle', '--without', *without, '--verbose', '--jobs', nproc, *args
     end
   end
 
