@@ -107,7 +107,7 @@
     - if current_user.secret_word_account?
       .field
         = form.label :secret_words
-        = form.text_field :secret_words, maxlength: 255
+        = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
     .field
       = form.label :password, maxlength: 255
       = form.password_field :password, autocomplete: 'off', maxlength: 255
