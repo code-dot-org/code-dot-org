@@ -5,6 +5,7 @@ import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
+import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -170,12 +171,22 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {!isTeacher && !isSignedOut && (
-          <ProgressButton
-            text={i18n.viewMyProjects()}
-            href="/projects"
-            color={ProgressButton.ButtonColor.orange}
+        {!isTeacher && (
+          <FindLocalClassBanner
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
           />
+        )}
+
+        {!isTeacher && !isSignedOut && (
+          <div>
+            <div style={styles.spacer}>.</div>
+            <ProgressButton
+              text={i18n.viewMyProjects()}
+              href="/projects"
+              color={ProgressButton.ButtonColor.orange}
+            />
+          </div>
         )}
 
         {!isTeacher && !isSignedOut && (
