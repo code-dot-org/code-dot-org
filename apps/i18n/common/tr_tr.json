@@ -540,5 +540,9 @@
   "whenRun": "Çalıştığı zaman",
   "withoutHints": "Herhangi bir ipucu kullanmadan!",
   "workspaceHeaderShort": "Çalışma alanı: ",
-  "yes": "Evet"
+  "yes": "Evet",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

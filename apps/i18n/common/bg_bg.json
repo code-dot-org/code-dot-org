@@ -540,5 +540,9 @@
   "whenRun": "при стартиране",
   "withoutHints": "Без да се използват съвети!",
   "workspaceHeaderShort": "Работна област: ",
-  "yes": "Да"
+  "yes": "Да",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }
