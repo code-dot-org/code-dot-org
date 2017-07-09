@@ -141,14 +141,12 @@ module GitHub
   # @param title [String] The title of the candidate pull request.
   # @raise [RuntimeError] If the environment is not development.
   def self.open_pull_request_in_browser(base:, head:, title:)
-    unless rack_env?(:development)
-      raise "GitHub.open_pull_request_in_browser called on non-dev environment"
-    end
     open_url "https://github.com/#{REPO}/compare/#{base}...#{head}"\
       "?expand=1&title=#{CGI.escape title}"
   end
 
   def self.open_url(url)
+    raise "GitHub.open_url called on non-dev environment" unless rack_env?(:development)
     # Based on http://stackoverflow.com/a/14053693/5000129
     if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
       system "sensible-browser \"#{url}\""
