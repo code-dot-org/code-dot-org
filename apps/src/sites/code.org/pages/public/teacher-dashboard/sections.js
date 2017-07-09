@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import queryString from 'query-string';
+import $ from 'jquery';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
   setValidLoginTypes,
   setValidGrades,
-  setValidAssignments,
   setStudioUrl,
+  setValidAssignments,
   newSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import googleClassroom from '@cdo/apps/templates/teacherDashboard/googleClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Render our sections table using React
@@ -27,10 +29,13 @@ export function renderSectionsPage(data) {
   const element = document.getElementById('sections-page');
   registerReducers({teacherSections, googleClassroom});
   const store = getStore();
+
   store.dispatch(setStudioUrl(data.studiourlprefix));
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
-  store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
+  if (!experiments.isEnabled('sectionFocus')) {
+    store.dispatch(setValidAssignments(data.valid_courses, data.valid_scripts));
+  }
 
   const query = queryString.parse(window.location.search);
   if (query.newSection) {
@@ -42,7 +47,7 @@ export function renderSectionsPage(data) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionsPage/>
+      <SectionsPage validScripts={data.valid_scripts}/>
     </Provider>,
     element
   );

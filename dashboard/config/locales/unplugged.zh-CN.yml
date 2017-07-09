@@ -71,130 +71,123 @@
       UnplugHappyMaps:
         title: "快乐地图"
         desc: "学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。"
-        video: C1_happy_maps_unplugged
       MoveIt:
         title: "移动它，移动它"
         desc: "学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。"
-        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: "真实算法： 播种一颗种子"
         desc: "这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。"
-        video: C1_planting_seed
       BuildingAFoundation:
         title: "打基础"
         desc: "学生们通过使用所提供的元素建立结构。结构必须完成一项任务 (即达到一定高度或承受一定重量)，同时问题变得复杂的时候，学生们就持久性的思路展开讨论。"
-        video: C1_building_foundation
       GettingLoopy:
         title: "越来越糊涂"
         desc: "本课通过舞蹈活动介绍循环 (用来重复的指令) 的编程概念。学生们将学习简单的编排，然后跟着老师的指示，再重复它。"
-        video: C1_getting_loopy
       RelayProgramming:
         title: "编程接力"
         desc: 学生们跑一场接力赛，他们要跑到对面，去根据"方格纸编程"的图象写一条算法。他们一次只能写一条指令，如果有什么地方出错，他们必须全部擦掉，重新开始。
-        video: C2_relay_programming
       Conditionals:
         title: "条件语句"
         desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"
-        video: C2_conditionals_with_cards
       BigEvent:
         title: "大事件"
         desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。
-        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: "去安全的地方"
         desc: "互联网既功能强大又是危险的领域。教师们讲解如何在浏览互联网时保证安全。"
-        video: C1_going_places_safely
       GraphPaperProgramming:
         title: "方格纸编程"
         desc: "学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。"
-        video: C2_graph_paper
       PaperPlanes:
         title: "生活中的算法: 纸飞机"
         desc: "这节课程以制作纸飞机的方法为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。"
-        video: C2_paper_airplanes
       BinaryBracelets:
         title: "二进制的手镯"
         desc: "学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。"
-        video: C2_binary_bracelets
       DigitalFootprint:
         title: "你的数字足迹"
         desc: "教师向学生介绍，把关于自己的信息放在网上会留下数字足迹，或者叫做“痕迹”，从而导致某些后果。"
-        video: C2_digital_footprint
       ComputationalThinking:
         title: "计算式思维技巧"
         desc: "学生应用计算式思维技巧的步骤(分解、模型匹配、抽象和算法) 在没有任何说明的情况下，找出如何玩一款游戏。"
-        video: C3_computational_thinking
       FunctionalSuncatchers:
         title: "函数化的吊饰"
         desc: "学生要用变量和函数（所谓函数，就是一系列会重复使用到的代码）来创建一个算法，这个算法能够用细绳和珠子串成一个吊饰。"
-        video: C3_functional_suncatchers
       SongwritingParameters:
         title: "写歌"
         desc: "学生会通过副歌的概念，来学习定义和调用函数。"
-        video: C3_songwriting_with_parameters
       DiceRace:
         title: "现实中的算法: 掷骰子比大小"
         desc: "这节课展示我们在日常生活中使用的算法。作为其中的一部分，学生将发现并写出掷骰子比大小游戏的算法。"
-        video: C3_dice_race
       Internet:
         title: "互联网"
         desc: "学生用纸条发送消息，从而体现出各种互联网传输数据的方式。"
-        video: C3_internet
       Crowdsourcing:
         title: "众包"
         desc: "学生采用众包的形式，解决计算机科学中共同的技术问题。以班级为单位一起完成一项任务，这比单个学生独自尝试会更有效率。"
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: "数字公民"
         desc: "学生们了解隐私信息与个人信息之间的区别，区分在网上共享时哪些安全、哪些不安全。"
       TangramAlgorithms:
         title: "七巧板算法"
         desc: "本课向我们展示算法的重要性。如果你的算法保持简约的风格就有很多的方式来应用它。如果你想要确保所有人都能做到这一点，那么你的算法需要更多的细节。"
-        video: C4_unplugged_algorithms
       EnvelopeVariables:
         title: "封装变量"
         desc: "在计算机科学中，变量提供了很多的自由度。 这节课有助于解释变量是什么，以及我们如何通过许多不同的方式使用它们。实践这项课堂活动之前 (或同时进行)，请先将抽象概念理解透彻。"
-        video: C4_unplugged_variables
       MadGlibs:
         title: "疯狂填词"
         desc: "对计算机科学家来说，理解抽象概念是最重要的技能之一。 这项课堂活动将让您的学生分析故事的差异，最终教学目标是他们可以将它们抽象化。这些抽象的故事变成有趣、疯狂的新模板。"
-        video: C4_unplugged_madlibs
       ForLoopFun:
         title: "计数循环的乐趣"
         desc: "我们知道了循环允许我们把事情重复做好多遍，而现在我们要学习如何在循环中放入正确的结构。"
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: "通过输入参数来作曲。"
         desc: "函数是计算机科学世界中最宏伟的建筑物之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
           \ "
-        video: C4_unplugged_parameters
       BinaryImages:
         title: "二进制图像"
         desc: "虽然很多人认为作为二进制就是严格的 0 和 1，我们之前的课程教导学生可以在各种二进制选项中表示信息。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息
           (如图像和颜色)。"
-        video: C4_unplugged_binary
       VideoGamesCoordinatePlanes:
         title: "视频游戏和坐标平面"
         desc: "理解你喜欢玩的视频游戏实际上由如何代数驱动！探索代数表达式和坐标平面如何帮助我们理解视频游戏工作的原理，随后开始规划你接下来要开发的视频游戏。"
-        video: alg_11_coordinate_plane
       Contracts:
         title: "合同、 域和范围"
         desc: "契约为我们提供我们一种理解和讨论函数的途径。本课我们将了解契约如何帮助我们理解新的编程语言或函数。"
-        video: alg_5_contracts
       DesignRecipe:
         title: "设计食谱"
         desc: "在后期阶段学生们写了一些非常简单的函数 — — 但更复杂的函数要求更深思熟虑的办法。设计诀窍是编写函数的结构化方法，其中包括编写测试案例，以确保函数按预期方式工作。"
-        video: alg_8_design_recipe
       Booleans:
         title: "布尔值和逻辑"
         desc: "布尔值是第四类也是本课要介绍的最后一种数据类型。在这次课堂活动中，您将了解布尔值是什么，以及他们如何帮助我们逻辑的思考、编写函数。"
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: "条件和分段函数"
         desc: "我们将参数传递给函数，会让僵化的模式有非常不同的输出。假设我们想输入一些参数值用某个模式得到输出，但其它参数用另一个不同的模式来输出。这就需要用到条件语句......"
-        video: alg_10_conditionals
       CollisionDetection:
         title: "碰撞检测与毕氏定理"
         desc: "确定屏幕上对象的触摸时间点是大多数游戏的一个重要方面。本课我们学习如何应用毕氏定理和距离公式测量平面上的两个点之间的距离，然后再决定那两个点
           (或游戏角色) 是否有接触。"
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: ''
+        desc: ''
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: "在这节课中，你会学到循环。"
+      courseB_unplugged_MRF:
+        title: "不用电脑的活动"
+        desc: "在这节课中，你会给你的朋友“编程”！"
+      courseB_unplugged_loopyMRF:
+        title: "不用电脑的活动"
+        desc: "就像在“我的机器人朋友”里一样，你将会给你的朋友“编程”，这次需要用到循环！"
+      courseC_Unplugged_ScreenOutTheMean:
+        title: "不用电脑的活动"
+        desc: "今天，你会学习到在互联网上意味着什么，能做什么。"
+      courseD_unplugged_digitalCitizenship:
+        title: "不用电脑的活动"
+        desc: "今天，你将会学到成为一个数字公民意味着什么。"
+      courseE_unplugged_privateInformation:
+        title: "不用电脑的活动"
+        desc: "今天，你会学会隐私和个人信息之间的区别！"
+      courseF_unplugged_powerOfWords:
+        title: "不用电脑的活动"
+        desc: "今天，你会学习到在互联网上意味着什么，能做什么。"

@@ -75,6 +75,7 @@
   "penUp": "penn opp",
   "reinfFeedbackMsg": "Her er tegningen din! Fortsett å jobbe på den eller fortsett til neste oppgave.",
   "setAlpha": "angi gjennomsiktighet",
+  "setCharacter": "set character to {character}",
   "setColour": "angi farge",
   "setPattern": "angi mønster",
   "setWidth": "angi bredde",
@@ -90,6 +91,5 @@
   "turnTooltip": "Snur kunstneren mot venstre eller høyre med den angitte vinkelen.",
   "turtleVisibilityTooltip": "Gjør kunstneren synlig eller usynlig.",
   "widthTooltip": "Endrer bredden på blyanten.",
-  "wrongColour": "Ditt bilde har feil farge. For denne oppgaven skal fargen være %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Ditt bilde har feil farge. For denne oppgaven skal fargen være %1."
 }

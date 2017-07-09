@@ -20,6 +20,8 @@ require 'cdo/cron'
 
 # Branch off existing AMI for adhoc.
 image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
+
+self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09

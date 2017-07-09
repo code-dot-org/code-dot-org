@@ -35,8 +35,8 @@
     "y": "70",
     "markdown_instructions": "Now, use a loop to spin your bird around 12 times with a 30 degree turn.\r\n___\r\n\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "Now, use a loop to spin your bird around 12 times with a 30 degree turn."
+    "tts_markdown_instructions_override": "Now, use a loop to spin your bird around 12 times with a 30 degree turn.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

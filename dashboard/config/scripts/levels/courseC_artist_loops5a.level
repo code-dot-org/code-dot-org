@@ -35,8 +35,8 @@
     "y": "70",
     "markdown_instructions": "What happens when you replace one or both of the stickers with a different creature?\r\n___\r\n![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "What happens when you replace one or both of the stickers with a different creature?"
+    "tts_markdown_instructions_override": "What happens when you replace one or both of the stickers with a different creature?",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -34,8 +34,8 @@
     "x": "70",
     "y": "70",
     "markdown_instructions": "Now, put the code that you already have inside of a `repeat` loop, and spin it around 6 times.\r\n- You will need to turn 60 degrees at the end of each loop to get the image on the screen.",
-    "contained_level_names": null,
-    "tts_markdown_instructions_override": "Now, put the code that you already have inside of a `repeat` loop, and spin it around 6 times.\r\nYou will need to turn 60 degrees at the end of each loop to get the image on the screen."
+    "tts_markdown_instructions_override": "Now, put the code that you already have inside of a `repeat` loop, and spin it around 6 times.\r\nYou will need to turn 60 degrees at the end of each loop to get the image on the screen.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

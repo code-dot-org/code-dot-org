@@ -18,11 +18,14 @@
     errors:
       messages:
         blank: "απαιτείται"
+        blank_plural: are required
+        invalid_plural: are invalid
     attributes:
       user:
         name: "Προβολή ονόματος"
         name_example: "Εμφανιζόμενο όνομα <br/> (π.χ. Προγραμματιστάκιας ή Μαρία)"
         email: "Ηλεκτρονικό ταχυδρομείο"
+        personal_email: Personal email address
         username: "όνομα χρήστη "
         password: "κωδικός"
         password_confirmation: "Επιβεβαίωση κωδικού"
@@ -253,6 +256,7 @@
     edit: "Τροποποίηση"
     edit_model: "Τροποποίηση %{model}"
     update: "Ενημέρωση"
+    submit: "Υποβολή"
     destroy: "Καταστροφή"
     back: "Πίσω"
     confirm: "Είσαι σίγουρος;"
@@ -377,6 +381,17 @@
       πάροχο."
     no_password_because_sponsored: "Συμβουλευτείτε τον δάσκαλό σας για να διαχειριστεί
       τον κωδικό σας."
+    create_personal_login: Create a personal login
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: "Ολοκληρώθηκε"
     tried: "Δοκιμάστηκε"
@@ -1222,3 +1237,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+  courses_category: Full Courses

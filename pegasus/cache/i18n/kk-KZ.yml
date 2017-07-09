@@ -95,6 +95,12 @@
   congratulations_on_completing_course2: 2-Курсты аяқтауыңызбен құттықтаймыз
   congratulations_on_completing_course3: 3-Курсты аяқтауыңызбен құттықтаймыз
   congratulations_on_completing_course4: 4-Курсты аяқтауыңызбен құттықтаймыз
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Жеделдетілген Курсты аяқтауыңызбен құттықтаймыз"
   congrats_next_tutorials_title: "Келесі"
   congrats_next_tutorials_desc: 1 сағаттық сабақтарымызды немесе <a href="%{current_path}/next">әріптестеріміздің
@@ -266,6 +272,12 @@
   just_did_course2: "Мен жаңа ғана 2-Курсты аяқтадым, @codeorg-тан нәтижесін көр"
   just_did_course3: "Мен жаңа ғана 3-Курсты аяқтадым, @codeorg-тан нәтижесін көр"
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: "Не себепті кейбір мектептерде информатика оқытылмайды? Біз бұл
     олқылықты түзете аламыз ttp://youtu.be/nKIu9yen5nc. Көбірек ақпарат алу үшін http://code.org/
@@ -320,6 +332,10 @@
     пәнін оқуға мүмкіндік болуы керек.» Sheryl, Facebook-тің бас операциялық директоры"
   homepage_hero_text_satya: "«Информатика пәні әлемнің жақсы жағын ашуға мүмкіндік
     береді», - Сатья, Microsoft-тің Бас директоры"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "«Егер сіз бағдарлама жазсаңыз, онда сіз өміріңіздің бағытың
     таңдай аласыз», - Крис Бош"
   homepage_hero_text_student1: «Бұл дағдылар қызық болуымен қатар, менің өмірімді
@@ -913,6 +929,12 @@
   dashboard_course2: '2 Курс:'
   dashboard_course3: '3 Курс:'
   dashboard_course4: '4 Курс (бета-нұсқа): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: "Оқу бағдарламасы"
@@ -1111,11 +1133,17 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: "Жеделдетілген курс"
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1228,6 +1256,12 @@
   course2_gradelevel: 6-18 жастағылар үшін
   course3_gradelevel: 8-18 жастағылар үшін
   course4_gradelevel: 10-18 жастағылар үшін
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 8-сыныптан бастап
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-18 жастағылар үшін
   codeorg_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
   codeintl_platformtext: "Заманауи браузерлер, смартфондар, планшеттер"
@@ -1368,6 +1402,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "Информатика негіздерін drag-and-drop бағдарламасы көмегімен
     үйреніңіз. Бұл өзіндік оқу Билл Гейтс, Марк Цукерберг, Angry Birds және Plants
     vs. Zombies видеодәрістері ойынына ұқсас. Циклдерді, шартты операторлар және негізгі

@@ -12,6 +12,7 @@
 #
 #  index_courses_on_name  (name)
 #
+require 'cdo/script_constants'
 
 class Course < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
@@ -110,6 +111,29 @@ class Course < ApplicationRecord
     reload
   end
 
+  # Get the assignable info for this course, then update translations
+  # @return AssignableInfo
+  def assignable_info
+    info = ScriptConstants.assignable_info(self)
+    # ScriptConstants gives us untranslated versions of our course name, and the
+    # category it's in. Set translated strings here
+    info[:name] = localized_title
+    info[:category] = I18n.t('courses_category')
+    info[:script_ids] = course_scripts.map(&:script_id)
+    info
+  end
+
+  # TODO(bjvanminnen): figure out/test caching
+  # Get the set of valid courses for the dropdown in our sections table. This should
+  # be static data, but contains localized strings so we can only cache on a per
+  # locale basis
+  def self.valid_courses
+    Course.
+      all.
+      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+      map(&:assignable_info)
+  end
+
   def summarize
     {
       name: name,
@@ -127,6 +151,12 @@ class Course < ApplicationRecord
 
   @@course_cache = nil
   COURSE_CACHE_KEY = 'course-cache'.freeze
+
+  def self.clear_cache
+    raise "only call this in a test!" unless Rails.env.test?
+    @@course_cache = nil
+    Rails.cache.delete COURSE_CACHE_KEY
+  end
 
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
@@ -165,7 +195,7 @@ class Course < ApplicationRecord
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
     # unlike script cache, we don't throw on miss
-    Course.with_associated_models.find_by(find_by => id_or_name)
+    Course.find_by(find_by => id_or_name)
   end
 
   def self.get_from_cache(id_or_name)

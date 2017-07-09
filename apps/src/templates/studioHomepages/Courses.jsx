@@ -5,6 +5,7 @@ import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import RecentCourses from './RecentCourses';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
+import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -64,6 +65,8 @@ const Courses = React.createClass({
     if (!this.props.isTeacher) {
       $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
     }
+
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
@@ -91,6 +94,10 @@ const Courses = React.createClass({
             />
           )}
         </HeaderBanner>
+
+        <ProtectedStatefulDiv
+          ref="flashes"
+        />
 
         {!isTeacher && (
           <ProtectedStatefulDiv
@@ -164,8 +171,22 @@ const Courses = React.createClass({
           </div>
         )}
 
+        {!isTeacher && (
+          <FindLocalClassBanner
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
+          />
+        )}
+
         {!isTeacher && !isSignedOut && (
-          <ProgressButton text={i18n.viewMyProjects()} href="/projects" color={ProgressButton.ButtonColor.orange}/>
+          <div>
+            <div style={styles.spacer}>.</div>
+            <ProgressButton
+              text={i18n.viewMyProjects()}
+              href="/projects"
+              color={ProgressButton.ButtonColor.orange}
+            />
+          </div>
         )}
 
         {!isTeacher && !isSignedOut && (

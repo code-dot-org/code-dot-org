@@ -81,7 +81,7 @@ class ContactRollups
   # rollup field with which value
   FORM_INFOS = []
   FORM_INFOS << {kind: "'CSEdWeekEvent2013'", dest_field: "hoc_organizer_years", dest_value: "'2013'"}
-  [2014..hoc_year].each do |year|
+  (2014..hoc_year).each do |year|
     FORM_INFOS << {kind: "'HocSignup#{year}'", dest_field: "hoc_organizer_years", dest_value: "'#{year}'"}
   end
   FORM_INFOS << {kind: "'Petition'", dest_field: "roles", dest_value: "'Petition Signer'"}
