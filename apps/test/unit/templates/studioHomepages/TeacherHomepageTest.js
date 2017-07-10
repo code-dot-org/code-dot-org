@@ -21,6 +21,7 @@ const announcements = [
 const sections = [
   {
     name: "Period 1",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/111111/progress",
     assignedTitle: "Course 1",
     linkToAssigned: "https://studio.code.org/s/course1",
@@ -30,6 +31,7 @@ const sections = [
   },
   {
     name: "Period 2",
+    teacherName: "Ms. Frizzle",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/222222/progress",
     assignedTitle: "Course 2",
     linkToAssigned: "https://studio.code.org/s/course2",
@@ -127,68 +129,14 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const announcementsContainer = wrapper.childAt(3);
-    assert.equal(announcementsContainer.name(), 'Announcements');
-    assert.equal(announcementsContainer.props().announcements.length, 1);
+    const announcementsContainer = wrapper.childAt(3).childAt(0);
+    assert.equal(announcementsContainer.name(), 'Notification');
     // Check if Announcements receives correct props.
-    const announcement1 = announcementsContainer.props().announcements[0];
-    assert.equal(announcement1.heading, announcements[0].heading);
-    assert.equal(announcement1.buttonText, announcements[0].buttonText);
-    assert.equal(announcement1.description, announcements[0].description);
-    assert.equal(announcement1.link, announcements[0].link);
-    // Check if a ContentContainer is rendered.
-    const contentContainer = announcementsContainer.childAt(0);
-    assert.equal(contentContainer.name(), 'ContentContainer');
-    assert.equal(contentContainer.props().heading, 'Announcements');
-    assert.equal(contentContainer.props().linkText, 'View all announcements');
-    assert.equal(contentContainer.props().link, 'http://teacherblog.code.org/');
-    assert.equal(contentContainer.props().showLink, true);
-    // Check for AnnouncementsCarousel
-    const announcementsCarousel = contentContainer.childAt(1).childAt(0);
-    // Arrow icons should not render because there is only one announcement.
-    expect(announcementsCarousel.childAt(0).childAt(0).name()).to.not.equal('FontAwesome');
-  });
-
-  it('shows multiple announcements with arrow icons to click through them', () => {
-    const wrapper = mount(
-      <TeacherHomepage
-        announcements={announcements}
-        courses={[]}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
-    );
-    const announcementsContainer = wrapper.childAt(3);
-    assert.equal(announcementsContainer.name(), 'Announcements');
-    assert.equal(announcementsContainer.props().announcements.length, 2);
-    // Check if Announcements receives correct props.
-    const announcement1 = announcementsContainer.props().announcements[0];
-    assert.equal(announcement1.heading, announcements[0].heading);
-    assert.equal(announcement1.buttonText, announcements[0].buttonText);
-    assert.equal(announcement1.description, announcements[0].description);
-    assert.equal(announcement1.link, announcements[0].link);
-    const announcement2 = announcementsContainer.props().announcements[1];
-    assert.equal(announcement2.heading, announcements[1].heading);
-    assert.equal(announcement2.buttonText, announcements[1].buttonText);
-    assert.equal(announcement2.description, announcements[1].description);
-    assert.equal(announcement2.link, announcements[1].link);
-    // Check if a ContentContainer is rendered.
-    const contentContainer = announcementsContainer.childAt(0);
-    assert.equal(contentContainer.name(), 'ContentContainer');
-    assert.equal(contentContainer.props().heading, 'Announcements');
-    assert.equal(contentContainer.props().linkText, 'View all announcements');
-    assert.equal(contentContainer.props().link, 'http://teacherblog.code.org/');
-    assert.equal(contentContainer.props().showLink, true);
-    // Check for AnnouncementsCarousel
-    const announcementsCarousel = contentContainer.childAt(1).childAt(0);
-    // Arrow icons should render because there are multiple announcements.
-    const leftArrow = announcementsCarousel.childAt(0).childAt(0);
-    assert.equal(leftArrow.name(), 'FontAwesome');
-    assert.equal(leftArrow.props().icon, 'caret-left');
-    const rightArrow = announcementsCarousel.childAt(0).childAt(1);
-    assert.equal(rightArrow.name(), 'FontAwesome');
-    assert.equal(rightArrow.props().icon, 'caret-right');
+    const announcement = announcementsContainer.props();
+    assert.equal(announcement.notice, announcements[0].heading);
+    assert.equal(announcement.buttonText, announcements[0].buttonText);
+    assert.equal(announcement.details, announcements[0].description);
+    assert.equal(announcement.buttonLink, announcements[0].link);
   });
 
   it('if there are sections, Sections component shows a SectionsTable', () => {
@@ -202,7 +150,7 @@ describe('TeacherHomepage', () => {
       />
     );
     // Check if Sections receives correct props.
-    const sectionsContainer = wrapper.childAt(4);
+    const sectionsContainer = wrapper.childAt(3);
     assert.equal(sectionsContainer.name(),'Sections');
     assert.equal(sectionsContainer.props().sections.length, 2);
     const section1 = sectionsContainer.props().sections[0];
@@ -233,7 +181,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsTable.name(), 'SectionsTable');
     assert.equal(sectionsTable.childAt(0).name(), 'thead');
     const column1 = sectionsTable.childAt(0).childAt(0).childAt(0);
-    assert.equal(column1.text(), 'Section');
+    assert.equal(column1.text(), 'Section Name');
     const column2 = sectionsTable.childAt(0).childAt(0).childAt(1);
     assert.equal(column2.text(), 'Course');
     const column3 = sectionsTable.childAt(0).childAt(0).childAt(2);
@@ -265,7 +213,7 @@ describe('TeacherHomepage', () => {
       />
     );
     // Check if Sections receives correct props.
-    const sectionsContainer = wrapper.childAt(4);
+    const sectionsContainer = wrapper.childAt(3);
     assert.equal(sectionsContainer.name(),'Sections');
     assert.equal(sectionsContainer.props().sections.length, 0);
     // Check if a ContentContainer is rendered.
@@ -296,7 +244,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const recentCourses = wrapper.childAt(5);
+    const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
@@ -319,13 +267,13 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a CourseCards are rendered for each course.
-    const course1Card = coursesContentContainer.childAt(1).childAt(0);
+    const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
     assert.equal(course1Card.name(), 'CourseCard');
     assert.equal(course1Card.childAt(0).type(), 'img');
     assert.equal(course1Card.childAt(1).text(), courses[0].name);
     expect(course1Card.childAt(2).text()).to.contain(courses[0].description);
     expect(course1Card.childAt(2).text()).to.contain('View course');
-    const course2Card = coursesContentContainer.childAt(2).childAt(0);
+    const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
     assert.equal(course2Card.name(), 'CourseCard');
     assert.equal(course2Card.childAt(1).text(), courses[1].name);
     expect(course2Card.childAt(2).text()).to.contain(courses[1].description);
@@ -342,7 +290,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const recentCourses = wrapper.childAt(5);
+    const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
@@ -381,25 +329,25 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a CourseCards are rendered for first 4 courses.
-    const course1Card = coursesContentContainer.childAt(1).childAt(0);
+    const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
     assert.equal(course1Card.name(), 'CourseCard');
     assert.equal(course1Card.childAt(0).type(), 'img');
     assert.equal(course1Card.childAt(1).text(), moreCourses[0].name);
     expect(course1Card.childAt(2).text()).to.contain(moreCourses[0].description);
     expect(course1Card.childAt(2).text()).to.contain('View course');
-    const course2Card = coursesContentContainer.childAt(2).childAt(0);
+    const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
     assert.equal(course2Card.name(), 'CourseCard');
     assert.equal(course2Card.childAt(1).text(), moreCourses[1].name);
     expect(course2Card.childAt(2).text()).to.contain(moreCourses[1].description);
     expect(course2Card.childAt(2).text()).to.contain('View course');
-    const course3Card = coursesContentContainer.childAt(3).childAt(0);
+    const course3Card = coursesContentContainer.childAt(4).childAt(0).childAt(0);
     assert.equal(course3Card.childAt(1).text(), moreCourses[2].name);
     expect(course3Card.childAt(2).text()).to.contain(moreCourses[2].description);
-    const course4Card = coursesContentContainer.childAt(4).childAt(0);
+    const course4Card = coursesContentContainer.childAt(5).childAt(0).childAt(0);
     assert.equal(course4Card.childAt(1).text(), moreCourses[3].name);
     expect(course4Card.childAt(2).text()).to.contain(moreCourses[3].description);
     // Check if SeeMoreCourses is rendered.
-    const seeMoreCourses = coursesContentContainer.childAt(5).childAt(0);
+    const seeMoreCourses = coursesContentContainer.childAt(6).childAt(0);
     assert.equal(seeMoreCourses.name(), 'SeeMoreCourses');
     const viewMoreButton = seeMoreCourses.childAt(0);
     assert.equal(viewMoreButton.name(), 'ProgressButton');
@@ -416,7 +364,7 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const recentCourses = wrapper.childAt(5);
+    const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
     assert.equal(recentCourses.props().showAllCoursesLink, true);
     assert.equal(recentCourses.props().heading, 'Recent Courses');
@@ -430,7 +378,7 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a courses SetUpMessage is rendered.
-    const coursesSetUpMessage = coursesContentContainer.childAt(4).childAt(0);
+    const coursesSetUpMessage = coursesContentContainer.childAt(5).childAt(0);
     assert.equal(coursesSetUpMessage.name(), 'SetUpMessage');
     assert.equal(coursesSetUpMessage.props().type, 'courses');
     assert.equal(coursesSetUpMessage.childAt(0).text(), 'Start learning');
@@ -439,5 +387,4 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesSetUpMessage.childAt(2).props().href, '/courses');
     assert.equal(coursesSetUpMessage.childAt(2).props().text, 'Find a course');
   });
-
 });

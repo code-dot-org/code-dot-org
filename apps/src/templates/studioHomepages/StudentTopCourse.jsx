@@ -59,6 +59,8 @@ const styles = {
   },
 };
 
+// While this is named a StudentTopCourse, it really refers to the most recent course or script in which the student has progress.
+
 const StudentTopCourse = React.createClass({
   propTypes: {
     isRtl: React.PropTypes.bool.isRequired,

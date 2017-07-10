@@ -307,6 +307,7 @@ class SectionTest < ActiveSupport::TestCase
     expected = {
       id: section.id,
       name: section.name,
+      teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: 'somecourse',
       linkToAssigned: '/courses/somecourse',
@@ -325,6 +326,7 @@ class SectionTest < ActiveSupport::TestCase
     expected = {
       id: section.id,
       name: section.name,
+      teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: 'Jigsaw',
       linkToAssigned: '/s/jigsaw',
@@ -346,6 +348,7 @@ class SectionTest < ActiveSupport::TestCase
     expected = {
       id: section.id,
       name: section.name,
+      teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: 'somecourse',
       linkToAssigned: '/courses/somecourse',
@@ -362,6 +365,7 @@ class SectionTest < ActiveSupport::TestCase
     expected = {
       id: section.id,
       name: section.name,
+      teacherName: section.teacher.name,
       linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
       assignedTitle: '',
       linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',

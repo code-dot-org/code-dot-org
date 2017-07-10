@@ -54,6 +54,13 @@ Download hi-res photo of Code.org founder [Hadi Partovi](https://code.org/images
 
 If you're an official Code.org partner (such as a school district, or a tutorial partner), you may reproduce the "In partnership with Code.org" logo using the guidelines and media files in [this ZIP file](/files/partner-logo.zip). Code.org&reg; and **any version of CODE logo may not be used without the explicit permission of Code.org**, and only according to the approved logo guidelines.
 
+## Code.org in the news
+
+<div style='margin-left:40px'>
+<%= view :news_tag, tag:'news' %>
+</div>
+
+
 ## Code.org announcements
 
 <div style='margin-left:40px'>
@@ -64,10 +71,5 @@ If you're an official Code.org partner (such as a school district, or a tutorial
 
 Visit our [blog](https://medium.com/@codeorg) to see more or our [Tumblr](http://blog.code.org/) to see all past announcements.
 
-## Code.org in the news
-
-<div style='margin-left:40px'>
-<%= view :news_tag, show_dates:true, tag:'news' %>
-</div>
 
 <br/>

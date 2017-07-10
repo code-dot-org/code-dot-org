@@ -155,7 +155,7 @@ class Section < ActiveRecord::Base
   end
 
   # Provides some information about a section. This is consumed by our SectionsTable
-  # React component on the teacher homepage
+  # React component on the teacher homepage and student homepage
   def summarize
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
@@ -173,6 +173,7 @@ class Section < ActiveRecord::Base
     {
       id: id,
       name: name,
+      teacherName: teacher.name,
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
       linkToAssigned: link_to_assigned,
