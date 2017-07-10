@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import i18n from '@cdo/locale';
 import color from '../../util/color';
 import experiments from '../../util/experiments';
 import CardContainer from './CardContainer';
@@ -50,13 +51,13 @@ class AddInitialStudentsView extends Component {
     return (
       <div>
         <h1 style={style.h1}>
-          Add students to: {sectionName}
+          {i18n.addStudentsToSection({section: sectionName})}
         </h1>
         <h2 style={style.h2}>
-          Choose how you want to add your students:
+          {i18n.addStudentsToSectionInstructions()}
         </h2>
         <h3 style={style.h3}>
-          Create and manage my own list of students
+          {i18n.addStudentsManageMyOwn()}
         </h3>
         <CardContainer>
           <PictureLoginCard/>
@@ -66,8 +67,7 @@ class AddInitialStudentsView extends Component {
         {anyThirdParty && (
           <div>
             <h3 style={style.h3}>
-              Sync my list of students from an existing classroom section in a third
-              party tool
+              {i18n.addStudentsSyncThirdParty()}
             </h3>
             <CardContainer>
               {googleClassroom && <GoogleClassroomCard/>}
@@ -84,10 +84,10 @@ export default AddInitialStudentsView;
 
 const PictureLoginCard = () => (
   <LoginTypeCard
-    title="Picture logins"
-    subtitle="Recommended for ages 4 - 8"
-    description="You will create accounts for your students. Students will log in with a secret picture."
-    buttonText="Use picture logins"
+    title={i18n.loginTypePicture()}
+    subtitle={i18n.loginTypePictureAgeGroup()}
+    description={i18n.loginTypePictureDescription()}
+    buttonText={i18n.loginTypePictureButton()}
     link="#"
     isRtl={false}
   />
@@ -95,10 +95,10 @@ const PictureLoginCard = () => (
 
 const WordLoginCard = () => (
   <LoginTypeCard
-    title="Word logins"
-    subtitle="Recommended for ages 9 - 12"
-    description="You will create accounts for your students. Students will log in with a secret pair of words."
-    buttonText="Use word logins"
+    title={i18n.loginTypeWord()}
+    subtitle={i18n.loginTypeWordAgeGroup()}
+    description={i18n.loginTypeWordDescription()}
+    buttonText={i18n.loginTypeWordButton()}
     link="#"
     isRtl={false}
   />
@@ -106,10 +106,10 @@ const WordLoginCard = () => (
 
 const EmailLoginCard = () => (
   <LoginTypeCard
-    title="Email logins"
-    subtitle="Recommended for ages 13+"
-    description="Each student will create their own Code.org account using their email address."
-    buttonText="Use email logins"
+    title={i18n.loginTypeEmail()}
+    subtitle={i18n.loginTypeEmailAgeGroup()}
+    description={i18n.loginTypeEmailDescription()}
+    buttonText={i18n.loginTypeEmailButton()}
     link="#"
     isRtl={false}
   />
@@ -117,9 +117,9 @@ const EmailLoginCard = () => (
 
 const GoogleClassroomCard = () => (
   <LoginTypeCard
-    title="Google Classroom"
-    description="Sync your Code.org section with an existing Google Classroom."
-    buttonText="Use Google Classroom"
+    title={i18n.loginTypeGoogleClassroom()}
+    description={i18n.loginTypeGoogleClassroomDescription()}
+    buttonText={i18n.loginTypeGoogleClassroomButton()}
     link="#"
     isRtl={false}
   />
@@ -127,9 +127,9 @@ const GoogleClassroomCard = () => (
 
 const MicrosoftClassroomCard = () => (
   <LoginTypeCard
-    title="Microsoft Classroom"
-    description="Sync your Code.org section with an existing Microsoft Classroom."
-    buttonText="Use Microsoft Classroom"
+    title={i18n.loginTypeMicrosoftClassroom()}
+    description={i18n.loginTypeMicrosoftClassroomDescription()}
+    buttonText={i18n.loginTypeMicrosoftClassroomButton()}
     link="#"
     isRtl={false}
   />
@@ -137,9 +137,9 @@ const MicrosoftClassroomCard = () => (
 
 const CleverCard = () => (
   <LoginTypeCard
-    title="Clever"
-    description="Sync your Code.org section with an existing Clever section."
-    buttonText="Use Clever"
+    title={i18n.loginTypeClever()}
+    description={i18n.loginTypeCleverDescription()}
+    buttonText={i18n.loginTypeCleverButton()}
     link="#"
     isRtl={false}
   />
