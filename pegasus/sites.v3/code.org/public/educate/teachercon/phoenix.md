@@ -163,6 +163,16 @@ This section will be updated as emails are sent for this event.
 </p>
 </details>
 
+<details>
+<summary>**We're one week away from TeacherCon!**</summary>
+ <p>
+ <br>
+**CS Principles Teachers:** [Click here](http://go.pardot.com/webmail/153401/218257869/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.</p>
+<p>
+**CS Discoveries Teachers:** [Click here](http://go.pardot.com/webmail/153401/218257875/f7e01395f2e5bb7f0cc319f4106346c043330c5b5b064af9cd862fed315c3da9) to view a web version of our previous email.
+</p>
+</details>
+
 
 ## **Contact Us**
 Check out our [FAQ's!](https://goo.gl/udZKLR)

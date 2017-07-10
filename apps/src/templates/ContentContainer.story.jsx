@@ -1,6 +1,6 @@
 import React from 'react';
 import ContentContainer from './ContentContainer';
-import CourseCard from './CourseCard';
+import CourseCard from './studioHomepages/CourseCard';
 
 const exampleCard = {
   name: "CSP Unit 2 - Digital Information",
