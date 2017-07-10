@@ -1,6 +1,7 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
+import $ from 'jQuery';
 
 const styles = {
   input: {
@@ -30,7 +31,12 @@ const ScriptEditor = React.createClass({
     studentDetailProgressView: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string
+    wrapupVideo: React.PropTypes.string,
+    projectWidgetVisible: React.PropTypes.bool
+  },
+
+  componentDidMount() {
+    $('.select_none').click(make_selection_handler(false));
   },
 
   render() {
@@ -155,6 +161,38 @@ const ScriptEditor = React.createClass({
             style={styles.input}
           />
         </label>
+        <h3>Project widget options</h3>
+        <label>
+          Project widget visible
+          <input
+            name="project_widget_visible"
+            type="checkbox"
+            defaultChecked={this.props.projectWidgetVisible}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked this script will have the projects widget (recent projects and new
+            project buttons) visible in stage extras.
+          </p>
+        </label>
+        <label>
+          Project widget new project types
+          <p>
+            Select up to 4 project type options to appear in the 'Start a new project' section. Select
+            <a className="select_none"> none </a>
+            or shift-click or cmd-click to select multiple.
+          </p>
+          <select
+            name="project_widget_types"
+            multiple
+          >
+            <option value="playlab">Play Lab</option>
+            <option value="artist">Artist</option>
+            <option value="applab">App Lab</option>
+            <option value="gamelab">Game Lab</option>
+            <option value="weblab">Web Lab</option>
+          </select>
+        </label>
         <h2>Stages and Levels</h2>
         {this.props.beta && <FlexGroup />}
       </div>
@@ -163,3 +201,10 @@ const ScriptEditor = React.createClass({
 });
 
 export default ScriptEditor;
+
+function make_selection_handler(flag) {
+  return function (e) {
+    e.preventDefault();
+    $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
+  };
+}
