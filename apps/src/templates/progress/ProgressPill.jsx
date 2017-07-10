@@ -32,8 +32,10 @@ const styles = {
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
     letterSpacing: -0.12,
-    marginLeft: 10
   },
+  iconMargin: {
+    marginLeft: 10
+  }
 };
 
 /**
@@ -67,7 +69,8 @@ const ProgressPill = React.createClass({
             <div
               style={{
                 ...styles.text,
-                fontSize
+                fontSize,
+                ...(icon && styles.iconMargin)
               }}
             >
               {text}
