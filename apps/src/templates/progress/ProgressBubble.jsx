@@ -47,6 +47,9 @@ const styles = {
 
 const ProgressBubble = React.createClass({
   propTypes: {
+    // TODO(bjvanminnen): Most of these props we end up just extracting from
+    // level. It probably make sense (in a future PR) to just pass level, and
+    // have this class own extracting data from it.
     number: PropTypes.number.isRequired,
     status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
     url: PropTypes.string,

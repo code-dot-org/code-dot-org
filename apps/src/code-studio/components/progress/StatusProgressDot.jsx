@@ -77,7 +77,7 @@ export const StatusProgressDot = React.createClass({
           status={status}
           url={level.url}
           disabled={false}
-          levelName={level.name}
+          levelName={level.name || level.progression}
           levelIcon={(level.icon || '').slice(3)}
           smallBubble={!onCurrent}
         />
