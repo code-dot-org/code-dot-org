@@ -5,8 +5,12 @@ import ReactTooltip from 'react-tooltip';
 import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
-import NewProgressBubble from './NewProgressBubble';
+
+/**
+ * As we do another redesign of our bubbles, this module represents the new version
+ * The goal is that the two are interchangeable, and once the redesign is finished
+ * we can delete ProgressBubble.jsx and replace it with this.
+ */
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -45,7 +49,7 @@ const styles = {
   }
 };
 
-const ProgressBubble = React.createClass({
+const NewProgressBubble = React.createClass({
   propTypes: {
     number: PropTypes.number.isRequired,
     status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
@@ -104,11 +108,6 @@ const ProgressBubble = React.createClass({
 
 // Expose our height, as ProgressBubbleSet needs this to stick the little gray
 // connector between bubbles
-ProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
+NewProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
 
-// If progressBubbles is enabled, use our NewProgressBubble instead
-let ExportedProgressBubble = Radium(ProgressBubble);
-if (experiments.isEnabled('progressBubbles')) {
-  ExportedProgressBubble = NewProgressBubble;
-}
-export default ExportedProgressBubble;
+export default Radium(NewProgressBubble);
