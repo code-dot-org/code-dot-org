@@ -131,6 +131,9 @@ module Dashboard
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
 
+    # disable IP spoofing check - in practice this only gives us false positives
+    config.action_dispatch.ip_spoofing_check = false
+
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
       size: 256.megabytes # max size of entire store
