@@ -101,7 +101,7 @@ const Courses = React.createClass({
           />
         )}
 
-        {courses && courses.length > 0 && (
+        {(courses && courses.length > 0) && (
           <RecentCourses
             courses={courses}
             showAllCoursesLink={false}
@@ -112,7 +112,7 @@ const Courses = React.createClass({
         )}
 
         {/* Signed-in teacher in English */}
-        {isEnglish && isTeacher && (
+        {(isEnglish && isTeacher) && (
           <div>
             <UiTips
               userId={userId}
@@ -162,7 +162,7 @@ const Courses = React.createClass({
         )}
 
         {/* Signed-in student in English */}
-        {!isSignedOut && !isTeacher && isEnglish && (
+        {(!isSignedOut && !isTeacher && isEnglish) && (
           <ContentContainer
             heading={i18n.teacherCourseHoc()}
             description={i18n.teacherCourseHocDescription()}
@@ -177,7 +177,7 @@ const Courses = React.createClass({
 
         {/* Anything but a teacher or student in English.
             That is: signed-out, or a student or teacher in non-English. */}
-        {isSignedOut || !isEnglish && (
+        {(isSignedOut || !isEnglish) && (
           <div id="all-courses">
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
@@ -190,7 +190,7 @@ const Courses = React.createClass({
           />
         )}
 
-        {!isTeacher && !isSignedOut && (
+        {(!isTeacher && !isSignedOut) && (
           <div>
             <div style={styles.spacer}>.</div>
             <ProgressButton
@@ -201,7 +201,7 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {!isTeacher && !isSignedOut && (
+        {(!isTeacher && !isSignedOut) && (
           <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>
