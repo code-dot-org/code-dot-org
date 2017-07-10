@@ -32,6 +32,7 @@ export default storybook => {
         story: () => (
           <ProgressPill
             url="/level1"
+            text="Unplugged Activity"
             status={LevelStatus.perfect}
             fontSize={12}
           />

@@ -1,4 +1,4 @@
-/* global dashboard */
+import { unicode } from '@cdo/apps/code-studio/components/icons';
 
 // For proxying non-https assets
 var MEDIA_PROXY = '//' + location.host + '/media?u=';
@@ -81,7 +81,7 @@ export function renderIconToString(value, element) {
   ctx.textAlign = 'center';
   ctx.fillStyle = element.getAttribute('data-icon-color') || '#000';
   var regex = new RegExp('^' + ICON_PREFIX + 'fa-');
-  var unicode = '0x' + dashboard.iconsUnicode[value.replace(regex, '')];
-  ctx.fillText(String.fromCharCode(unicode), 200, 200);
+  var character = '0x' + unicode[value.replace(regex, '')];
+  ctx.fillText(String.fromCharCode(character), 200, 200);
   return canvas.toDataURL();
 }
