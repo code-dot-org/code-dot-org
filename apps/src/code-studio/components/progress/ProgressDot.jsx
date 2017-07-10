@@ -194,15 +194,15 @@ export const BubbleInterior = React.createClass({
 export const ProgressDot = Radium(React.createClass({
   propTypes: {
     level: levelProgressShape.isRequired,
-    // More accurately, something like allStages. True on the overview page, but
-    // also when we select dropdown from header.
-    courseOverviewPage: React.PropTypes.bool,
     stageId: React.PropTypes.number,
     status: React.PropTypes.oneOf(Object.keys(LevelStatus)).isRequired,
 
     // redux provdied
     currentLevelId: React.PropTypes.string,
-    saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired
+    saveAnswersBeforeNavigation: React.PropTypes.bool.isRequired,
+    // More accurately, something like allStages. True on the overview page, but
+    // also when we select dropdown from header.
+    courseOverviewPage: React.PropTypes.bool,
   },
 
   onClick(event) {
@@ -358,6 +358,11 @@ export const ProgressDot = Radium(React.createClass({
 }));
 
 export default connect(state => ({
+  // We now use ProgressBubbles everywhere in course overview scenarios. Because
+  // we plan to also get rid of this component in the near future, rather than
+  // clean it up more thoroughly (and risk regressions), I'm just making it
+  // explicit that courseOverviewPage is false here.
+  courseOverviewPage: false,
   currentLevelId: state.progress.currentLevelId,
   saveAnswersBeforeNavigation: state.progress.saveAnswersBeforeNavigation
 }))(ProgressDot);
