@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
+import experiments from '@cdo/apps/util/experiments';
 import { stageProgressShape } from './types';
 import StatusProgressDot from './StatusProgressDot.jsx';
 import color from "../../../util/color";
@@ -13,7 +14,11 @@ const styles = {
     paddingRight: 10
   },
   headerContainer: {
-    padding: 5,
+    // With our new bubble we don't want any padding above/below
+    paddingTop: experiments.isEnabled('progressBubbles') ? 0 : 5,
+    paddingBottom: experiments.isEnabled('progressBubbles') ? 0 : 5,
+    paddingLeft: 5,
+    paddingRight: 5,
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5
