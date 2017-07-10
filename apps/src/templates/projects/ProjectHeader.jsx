@@ -13,6 +13,7 @@ const ProjectHeader = React.createClass({
     return (
       <div>
         <HeaderBanner
+          short={true}
           headingText={i18n.projectGalleryHeader()}
         />
         <GallerySwitcher
