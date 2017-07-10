@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Gratulálok, teljesítetted a 2. Szintet"
   congratulations_on_completing_course3: "Gratulálok, teljesítetted a 3. Szintet"
   congratulations_on_completing_course4: "Gratulálok, teljesítetted a 4. Szintet"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Gratulálok, teljesítetted a Nehezített szintet"
   congrats_next_tutorials_title: "Ezután próbálja meg ezeket a tanfolyamokat"
   congrats_next_tutorials_desc: "Próbáld ki ezeket a rövidebb, egy órás gyakorlatokat, vagy próbáld ki <a href=\"%{current_path}/next\">egy partnerünk gyakorlatát</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
   just_did_course3: "I just finished Course 3 - check it out! @codeorg"
   just_did_course4: "Épp most csináltam végig a 4. tanfolyamot - nézd meg! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   twitter_teach_cs: "10-ből 9 ember szerint már az általános iskolában el kellene kezdeni az informatika tanítását. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
@@ -247,6 +259,10 @@
     &ldquo;A számítástechnika a világ
     legjobb lehetőségeit nyitja meg.&rdquo;
     Satya, a Microsoft vezérigazgatója
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ha kódolsz, akkor életed legjobb tanfolyamán vehetsz részt.&rdquo;
     Chris Bosh
@@ -696,6 +712,12 @@
   dashboard_course2: 'Második kurzus:'
   dashboard_course3: 'Harmadik kurzus:'
   dashboard_course4: '4. tanfolyam (béta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Ha nincs számítógép,  <a href='%{unplugged_url}'>próbálja ki ezeket az offline tanórákat </a> az osztályával!"
   dashboard_curriculum: "Tanterv"
   dashboard_curriculum_overview: "K-5 (alsó tagozatos) tananyag áttekintés"
@@ -864,11 +886,17 @@
   course3_name: "3. tanfolyam"
   course4_name: "4. tanfolyam"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Gyorsított tanfolyam"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -913,7 +941,7 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
+  csp17_category_name: "CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "App Lab"
@@ -975,6 +1003,12 @@
   course2_gradelevel: "6-tól 18 éves korig"
   course3_gradelevel: "8-tól 18 éves korig"
   course4_gradelevel: "10-től 18 éves korig"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "8+ évfolyam"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "10-től 18 éves korig"
   codeorg_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeintl_platformtext: "Modern böngészők, okostelefonok, tabletek"
@@ -1077,6 +1111,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Készen állsz a továbbhaladásra? A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel megoszthatnak. 4-5. osztályosok számára ajánlott."
   course4_shortdescription_congrats: "Készen állsz a továbbhaladásra? A tanulók mélyebbre hatóan fogják tanulmányozni az előző tanfolyamokban bevezetett programozási fogalmakat az összetettebb problémák rugalmasabb megoldásának érdekében. E tanfolyam végére a tanulók interaktív történeteket és játékokat hoznak létre, amelyeket bárkivel megoszthatnak. 4.-8. osztályosok számára ajánlott."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   codeintl_longdescription: "Tanuld meg a számítástechnika alapgondolatait drag&drop elvű programozással. Ez egy játékszerű, önálló tutorial, amely video leckéiben szerepel Bill Gates, Mark Zuckerberg, Andry Birds és a Plants vs. Zombies. Tanuld meg az ismétlő ciklusokat, feltételeket és az alapvető algoritmusokat. Elérhető 34 nyelven."
   thinkersmithspanish_longdescription: "Az előre meghatározott \"Robot Szótár\" használatával a diákok ki fogják találni hogyan segítsenek egymáson a speciális feladatok végrehajtásában, anélkül hogy azt előre megbeszélnék. Ez az oktatóanyag megtanítja a gyerekeknek a szimbólumok és műveletek közötti összefüggéseket, valamint felbecsülhetetlen értékű hibakeresési tapasztalatot nyújt."

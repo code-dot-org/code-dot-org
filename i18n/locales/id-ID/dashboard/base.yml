@@ -9,11 +9,14 @@ id:
     errors:
       messages:
         blank: "diperlukan"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Nama Tampilan'
         name_example: 'Tampilan Nama<br/>(e.g. Cool Coder or Jane S.)'
         email: 'email'
+        personal_email: 'Personal email address'
         username: 'nama pengguna'
         password: 'kata sandi'
         password_confirmation: 'Konfirmasi sandi'
@@ -176,12 +179,12 @@ id:
       
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: '%{section_code} with %{teacher_name}'
+      one: 'Sesi Anda:'
+      other: 'Sesi Anda:'
+    code_with_teacher: '%{section_code} dengan %{teacher_name}'
     confirm:
-      remove: 'Are you sure you want to leave this section?'
-    remove: '(remove section)'
+      remove: 'Anda yakin untuk meninggalkan sesi ini?'
+    remove: '(hapus sesi)'
   follower:
     invite_sent: 'Undangan telah dikirim'
     added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
@@ -206,6 +209,7 @@ id:
     edit: 'Edit'
     edit_model: 'Edit %{model}'
     update: 'Update'
+    submit: 'Kirim'
     destroy: 'Hancurkan'
     back: 'Kembali'
     confirm: 'Anda yakin?'
@@ -222,17 +226,17 @@ id:
         artist: 'Gambarlah Sesuatu'
         calculate: 'Calculate something'
         applab: 'Buat sebuah aplikasi Lab Aplikasi'
-        gamelab: 'Make a Game Lab project'
+        gamelab: 'Buat sebuah proyek Lab Permainan'
       home: "Beranda"
       courses: "Kursus"
       project_gallery: "Project Gallery"
-      sections: "Sections"
-      help_support: "Help and support"
+      sections: "Sesi"
+      help_support: "Bantuan dan dukungan"
       report_bug: "Laporkan bug"
-      teacher_community: "Teacher community"
+      teacher_community: "Komunitas guru"
       professional_learning: "Professional Learning"
-      documentation: "Documentation"
-      tutorials: "Tutorials"
+      documentation: "Dokumentasi"
+      tutorials: "Tutorial"
       educate_overview: "Ikhtisar Pendidik"
       educate_elementary: "Sekolah Dasar"
       educate_middle: "Sekolah Menengah Pertama"
@@ -266,12 +270,12 @@ id:
       settings: 'Akun saya'
       logout: 'Keluar'
       signin: 'Masuk'
-      signup: 'Create an account'
+      signup: 'Buat sebuah akun'
       already_registered: 'Apa Sudah Terdaftar?'
       pair_programming: 'Pemrograman berpasangan'
       team: 'Tim'
-      driver: 'Logged in'
-      navigator: 'Partner'
+      driver: 'Masuk'
+      navigator: 'Mitra'
     popup:
       progress_for_user: "%{name} kemajuan"
       progress: 'Kemajuan Anda'
@@ -306,9 +310,9 @@ id:
       example_with_number: 'Contoh solusi %{solution_number}'
       submitted_on: 'Dikirimkan pada %{date}'
       unsubmit: 'Unsubmit'
-      worked_with: 'Worked With'
-      update_lock_settings: 'Update lock settings here.'
-      clear_response: 'Clear response'
+      worked_with: 'Bekerja bersama'
+      update_lock_settings: 'Perbarui pengaturan kunci di sini.'
+      clear_response: 'Bersihkan tanggapan'
   user:
     email_confirm_needed: 'Alamat email belum dikonfirmasi:'
     email_confirm_needed_required: 'Alamat email %{email} Anda belum dikonfirmasi:'
@@ -320,9 +324,13 @@ id:
     delete_text: "Klik tombol di bawah ini akan menghapus akun Anda."
     delete_text_teacher_note: 'Catatan : menghapus Akun Anda tidak akan menghapus akun murid-murid Anda.'
     delete_confirm: 'Apakah Anda yakin ingin menghapus akun Anda?'
-    deleted_user: 'deleted user'
-    no_password_because_oauth: 'No password because you sign in with a third-party provider.'
-    no_password_because_sponsored: 'See your teacher to manage your password.'
+    deleted_user: 'hapus pengguna'
+    no_password_because_oauth: 'Tidak ada kata sandi karena Anda masuk dengan penyedia pihak ketiga.'
+    no_password_because_sponsored: 'Lihat guru Anda untuk mengelola kata sandi Anda.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Selesai'
     tried: 'Telah mencoba'
@@ -375,11 +383,11 @@ id:
     announcement_learn_more_button: "Pelajari lebih banyak"
     announcement_try_now_button: "Coba sekarang"
     announcement_host_an_hour_button: "Host an Hour"
-    announcement_watch_video_button: "Watch video"
+    announcement_watch_video_button: "Lihat video"
     announcement_petition: "As a teacher, you're leading the way in a movement to give every student in every school the opportunity to learn computer science. Now, it's time to let your representatives hear from you. This week, education leaders, 28 governors, and CEOs of America's largest companies joined together in an open letter asking the U.S. Congress to fund K-12 computer science education."
     announcement_petition_button: "Tambahkan nama Anda"
-    announcement_go_beyond_button: "Go beyond"
-    announcement_apply_now: "Apply now"
+    announcement_go_beyond_button: "Melampaui"
+    announcement_apply_now: "Daftar sekarang"
     announcement_all: "Keep up to date with new features and updates on our teacher blog. <a href='%{teacher_blog_url}' target='_blank'>See past announcements.</a>"
     announcement_hoc_launch: "Thousands of educators in more than 180 countries will start teaching computer science during the Hour of Code this December 5-11. We're counting on you to help us reach more students than ever before. <a href='%{signup_url}' target='_blank'>Register your Hour of Code event</a> and let another teacher know that anyone can start teaching computer science."
     announcement_mc_launch: "One of our most popular tutorials now has a sequel! The all-new Minecraft Hour of Code Designer lets students make the rules of the Minecraft world. They can create a totally unique Minecraft experience, and then share it with friends or play it on their phones. Do it with your class for the Hour of Code."
@@ -567,9 +575,9 @@ id:
     support: "Dapatkan bantuan"
     support_url: "//support.code.org"
     help_resources: "Bantuan dan Sumber Daya"
-    help_support: "Help and support"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "Bantuan dan dukungan"
+    documentation: "Dokumentasi"
+    tutorials: "Tutorial"
   multi:
     wrong_title: "Jawaban Salah"
     wrong_body: "Jawaban yang anda masukkan salah. Silakan coba lagi!"
@@ -597,9 +605,9 @@ id:
     correct_body: "Terima kasih telah memberikan jawaban"
     unsubmit-title: "Unsubmit your assessment"
     unsubmit-body: "Unsubmitting your assessment will reset the submitted time and date.  Are you sure?"
-    submit-incomplete-title: "Submit your assessment"
+    submit-incomplete-title: "Kirim penilaian Anda"
     submit-incomplete-body: "You left some questions incomplete.  You cannot edit your assessment after submitting it.  Are you sure?"
-    submit-complete-title: "Submit your assessment"
+    submit-complete-title: "Kirim penilaian Anda"
     submit-complete-body: "You cannot edit your assessment after submitting it.  Are you sure?"
   match:
     wrong_title: "Solusi yang salah"
@@ -641,15 +649,15 @@ id:
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
     tos: "Syarat"
     privacy: "Kebijakan privasi"
-    privacy_notice: "Privacy Notice"
+    privacy_notice: "Pemberitahuan Privasi"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
-    accept: "Accept"
+    accept: "Terima"
     print: "Cetak"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
-    review_terms: "Review updated terms"
+    review_terms: "Tinjau ketentuan yang diperbarui"
   school_info_interstitial:
-    title: "We want to bring Computer Science to every student - help us track our progress!"
-    message: "Please enter your school information below."
+    title: "Kami ingin membawa ilmu komputer untuk setiap siswa - bantu kami memantau kemajuan kami!"
+    message: "Masukkan informasi sekolah Anda di bawah ini."
     message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
     save: "Simpan"
   race_interstitial:
@@ -671,7 +679,7 @@ id:
       - 
         other: Lain
       - 
-        opt_out: Prefer not to say
+        opt_out: Memilih untuk tidak menjawab
     submit: "Kirim"
     decline: "Tutup"
   zendesk_too_young_message: 'Maaf Pengguna lebih muda tidak bisa masuk ke dalam situs pendukung kami. Anda dapat mengakses  <a href="http://support.code.org">support.code.org</a> tanpa masuk atau minta orang tua anda  atau guru anda untuk menghubungi kami. u.'
@@ -698,8 +706,8 @@ id:
     exit: "Kembali ke Kursus"
     my_projects: "Project Saya"
     project_gallery: "Project Gallery"
-    publish: "Publish"
-    unpublish: "Unpublish"
+    publish: "Publikasikan"
+    unpublish: "Tidak dipublikasikan"
     share: "Bagikan"
     share_title: Bagikan proyek Anda
     share_copy_link: "Salin link:"
@@ -757,9 +765,9 @@ id:
       name: 'Ditolak'
       description: '<strong>No</strong>, this submission <strong>does not meet</strong> the requirements'
     escalated:
-      name: 'Escalated'
-      description: 'I would like an instructor to review this submission'
-    instructor_feedback: 'Instructor Feedback'
+      name: 'Meningkat'
+      description: 'Saya ingin seorang instruktur untuk meninjau kiriman ini'
+    instructor_feedback: 'Umpan balik instruktur'
     peer_feedback: 'Peer Feedback'
     outdated: 'This feedback was added for a previously submitted version'
     review_in_progress: 'Ready to review'
@@ -782,8 +790,8 @@ id:
     ramp_up: 'Ramp-Up'
     end_of_course_project: 'End of Course Project'
     optional_stages: 'Optional Stages'
-    main_course: 'Main Course'
-    extra_course_content: 'Extra Course Content'
+    main_course: 'Kursus Utama'
+    extra_course_content: 'Isi Kursus Tambahan'
     csd1_1: 'Chapter 1: The Problem Solving Process'
     csd1_2: 'Chapter 2: Computers and Problem Solving'
     csd2_1: 'Chapter 1: Web Content and HTML'
@@ -909,3 +917,4 @@ id:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

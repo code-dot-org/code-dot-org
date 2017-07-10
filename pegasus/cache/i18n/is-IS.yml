@@ -93,6 +93,12 @@
   congratulations_on_completing_course2: Til hamingju með að ljúka námskeiði 2
   congratulations_on_completing_course3: Til hamingju með að ljúka námskeiði 3
   congratulations_on_completing_course4: Til hamingju með að ljúka námskeiði 4
+  congratulations_on_completing_coursea: Til hamingju með að ljúka námskeiði A
+  congratulations_on_completing_courseb: Til hamingju með að ljúka námskeiði B
+  congratulations_on_completing_coursec: Til hamingju með að ljúka námskeiði C
+  congratulations_on_completing_coursed: Til hamingju með að ljúka námskeiði D
+  congratulations_on_completing_coursee: Til hamingju með að ljúka námskeiði E
+  congratulations_on_completing_coursef: Til hamingju með að ljúka námskeiði F
   congratulations_on_completing_accelerated: Til hamingju með að ljúka hraðnámskeiðinu
   congrats_next_tutorials_title: Prófaðu þetta kennsluefni næst
   congrats_next_tutorials_desc: Prófaðu þessar styttri 1 klst. kennslustundir eða
@@ -263,6 +269,12 @@
   just_did_course2: "Ég var að ljúka Námskeiði 2 - kíktu á það! @codeorg"
   just_did_course3: "Ég var að ljúka Námskeiði 3 - kíktu á það! @codeorg"
   just_did_course4: "Ég var að ljúka Námskeiði 4 - kíktu á það! @codeorg"
+  just_did_coursea: "Ég var að ljúka Námskeiði A - kíktu á það! @codeorg"
+  just_did_courseb: "Ég var að ljúka Námskeiði B - kíktu á það! @codeorg"
+  just_did_coursec: "Ég var að ljúka Námskeiði C - kíktu á það! @codeorg"
+  just_did_coursed: "Ég var að ljúka Námskeiði D - kíktu á það! @codeorg"
+  just_did_coursee: "Ég var að ljúka Námskeiði E - kíktu á það! @codeorg"
+  just_did_coursef: "Ég var að ljúka Námskeiði F - kíktu á það! @codeorg"
   just_did_accelerated: "Ég var að ljúka Hraðnámskeiðinu - kíktu á það! @codeorg"
   twitter_teach_cs: 9 af hverjum 10 eru sammála því að skólar eigi að kenna tölvunarfræði.
     http://youtu.be/nKIu9yen5nc. Heimsæktu https://code.org/.
@@ -320,6 +332,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Tölvunarfræði getur verið lykillinn að bestu tækifærunum í heiminum.&rdquo;
     Satya, aðalframkvæmdastjóri Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ef þú kannt að kóða, hefur þú valkosti í lífinu.&rdquo;
     Chris Bosh
@@ -343,7 +359,7 @@
   homepage_hero_text_teacher2: |-
     &ldquo;Í þessu verkefni voru 100% nemendanna virkir, áhugasamir þátttakendur.&rdquo;
     Adam, kennari
-  homepage_hero_text_stat_loc: 2,5 miljón stúlkur er skráðar til náms á Code.org
+  homepage_hero_text_stat_loc: 8,5 miljón stúlkur er skráðar til náms á Code.org
   homepage_hero_text_stat_students: "#student_count nemendur skráðir á Code.org"
   homepage_hero_text_stat_served: 'Klukkustund kóðunar: miðlað til #served'
   homepage_slot_text_hoc: Klukkustund kóðunar
@@ -923,6 +939,12 @@
   dashboard_course2: 'Námskeið 2:'
   dashboard_course3: 'Námskeið 3:'
   dashboard_course4: 'Námskeið 4: '
+  dashboard_coursea: 'Námskeið A: '
+  dashboard_courseb: 'Námskeið B: '
+  dashboard_coursec: 'Námskeið C: '
+  dashboard_coursed: 'Námskeið D: '
+  dashboard_coursee: 'Námskeið E: '
+  dashboard_coursef: 'Námskeið F: '
   dashboard_unplugged: Ef þú hefur engar tölvur, <a href='%{unplugged_url}'>ættir
     þú að prófa þessar kennslustundir án tengingar</a> í bekknum þínum.
   dashboard_curriculum: Námskrá
@@ -1114,11 +1136,17 @@
   course3_name: Námskeið 3
   course4_name: Námskeið 4
   coursea-draft_name: Námskeið A
+  coursea_name: Námskeið A
   courseb-draft_name: Námskeið B
+  courseb_name: Námskeið B
   coursec-draft_name: Námskeið C
+  coursec_name: Námskeið C
   coursed-draft_name: Námskeið D
+  coursed_name: Námskeið D
   coursee-draft_name: Námskeið E
+  coursee_name: Námskeið E
   coursef-draft_name: Námskeið F
+  coursef_name: Námskeið F
   accelerated_name: Hraðnámskeið
   cspunit1_name: Kafli 1 - Stafrænar upplýsingar
   cspunit2_name: 'Kafli 2: Internetið'
@@ -1231,6 +1259,12 @@
   course2_gradelevel: Fyrir 6-18 ára
   course3_gradelevel: Fyrir 8-18 ára
   course4_gradelevel: Fyrir 10-18 ára
+  coursea_gradelevel: Bekkur 5+
+  courseb_gradelevel: Bekkur 6+
+  coursec_gradelevel: Bekkur 7+
+  coursed_gradelevel: 14 ára og eldri
+  coursee_gradelevel: Bekkur 9+
+  coursef_gradelevel: Bekkur 10+
   accelerated_gradelevel: Fyrir 10-18 ára
   codeorg_platformtext: Nýjustu vafrar, snjallsímar, spjaldtölvur
   codeintl_platformtext: Fyrir nýjustu vafra, snjallsíma, spjaldtölvur
@@ -1361,6 +1395,12 @@
     sveigjanlegri lausnum á flóknari verkefni. Í lok þessa námskeiðs búa nemendur
     til gagnvirkar sögur og leiki sem þeir geta svo deilt með öðrum. Mælt með fyrir
     4. - 8. bekk.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Lærðu grunnhugtók tölvunarfræði með kubbaforritun. Þetta
     er leikjamiðað, sjálfstýrt kennsluefni með fyrirlestrum í myndskeiðum þar sem
     koma við sögu Bill Gates, Mark Zuckerberg, Angry Birds og Plants vs. Zombies.
@@ -1864,7 +1904,7 @@
   playlab_shortcode: spila
   artist_shortcode: art
   header_home: Forsíða
-  header_courses: námskeið
+  header_courses: Námskeið
   header_project_gallery: Verkefnagallerí
   header_sections: Hópar
   header_professional_learning: Fagnám
@@ -1898,6 +1938,6 @@
   header_report_bug: Tilkynna galla
   header_tutorials: Kennslutímar
   header_documentation: Skjölun
-  csp_name: Hugtök TF
+  csp_name: Grunnhugtök tölvunarfræði
   csd_name: CS Discoveries
   full_course_category_name: Heil námskeið

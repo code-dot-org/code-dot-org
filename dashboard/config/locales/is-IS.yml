@@ -15,11 +15,14 @@
     errors:
       messages:
         blank: er nauðsynlegt
+        blank_plural: are required
+        invalid_plural: are invalid
     attributes:
       user:
         name: Sýnilegt nafn
         name_example: Birtingarnafn<br/>(t.d. Kalli kóðari eða Anna J.)
         email: Netfang
+        personal_email: Personal email address
         username: notandanafn
         password: lykilorð
         password_confirmation: Staðfesting lykilorðs
@@ -58,7 +61,7 @@
   stage_number: "Áfangi %{number}"
   puzzle: "Þraut"
   trophies: bikarar
-  courses: námskeið
+  courses: Námskeið
   unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
@@ -243,6 +246,7 @@
     edit: Breyta
     edit_model: Breyta %{model}
     update: Uppfæra
+    submit: Senda inn
     destroy: Eyða
     back: Til baka
     confirm: Ertu viss?
@@ -261,7 +265,7 @@
         applab: Búa til forrit í App Lab
         gamelab: Búa til Leikjasmiðjuverkefni
       home: Forsíða
-      courses: námskeið
+      courses: Námskeið
       project_gallery: Verkefnagallerí
       sections: Hópar
       help_support: Aðstoð og þjónusta
@@ -364,6 +368,17 @@
     no_password_because_oauth: Ekkert lykilorð því þú skráir þig inn frá þriðja aðila.
     no_password_because_sponsored: Ræddu við kennarann þinn varðandi umsjón lykilorðs
       þíns.
+    create_personal_login: Create a personal login
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: Lokið
     tried: Reynt
@@ -415,8 +430,8 @@
     heading_elementary: "<h2>20 stunda námskeið í</h2><h1>Undirstöðuatriðum tölvunarfræði
       (fyrir alla aldurshópa)</h1>"
     heading_apps: "<h2>Skemmtun fyrir</h2><h1>alla</h1>"
-    heading_tools: "<h2>Viltu fara í næsta áfanga?</h2><h1>JavaScript Tools for High
-      School</h1>"
+    heading_tools: "<h2>Viltu fara í næsta áfanga?</h2><h1>Verkfæri fyrir mið- og
+      framhaldsskóla</h1>"
     heading_legacy: "<h2>Hraðnámskeiðið okkar fyrir</h2><h1>alla aldurshópa</h1>"
     your_gallery: Safn
     no_primary_course: Prófaðu námskeið í Kóðastúdíóinu
@@ -700,7 +715,7 @@
     gamelab:
       title: Leikjasmiðja (beta)
       body: Leikjasmiðja er forritunarumhverfi þar sem þú getur búið til einfaldar
-        hreyfimyndir og leiki sem nota hluti og leikverur sem verka hver á aðra.
+        hreyfimyndir og leiki með hlutum og gagnvirkum leikverum.
       audience: Aldur 13+
       cta: Læra hvernig
     frozen:
@@ -731,8 +746,8 @@
     widgets:
       title: Græjur
       body: Nemendur geta kannað hugtök úr námskeiðinu okkar Grunnhugtök tölvunarfræði
-        verklega með þessum stafrænu verkfærum. Notaðu græjurnar einar eða búðu til
-        kennslustundir um stök hugtök fyrir hópinn.
+        verklega með þessum stafrænu tækjum. Notaðu græjurnar einar eða búðu til kennslustundir
+        um einstök hugtök fyrir hópinn.
       audience: Aldur 14+
       cta: Læra hvernig
   gallery:
@@ -1043,11 +1058,11 @@
     csp1_1: 'Kafli 1: Framsetning og flutningur upplýsinga'
     csp1_2: 'Kafli 2: Að finna upp internetið'
     csp2_1: 'Kafli 1: Að umkóða og þjappa margbrotnar upplýsingar'
-    csp2_2: 'Kafli 2: Mótun og sjóngerð gagna'
+    csp2_2: 'Kafli 2: Mótun og sjóngerving gagna'
     csp3_1: 'Kafli 1: Forritunarmál og algrím'
     csp4_1: 'Kafli 1: Heimur ofurgagna og dulkóðun'
     csp5_1: 'Kafli 1: Atburðaknúin forritun'
-    csp5_2: 'Kafli 2: Forritað með formgerðum gögnum'
+    csp5_2: 'Kafli 2: Forritað með formgerðum gagna'
     cspSurvey: Könnun
     cspAssessment: Kaflamat
     csp_ap_1: 'Kafli 1: AP - Tækniumhverfið'
@@ -1190,3 +1205,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+  courses_category: Heil námskeið

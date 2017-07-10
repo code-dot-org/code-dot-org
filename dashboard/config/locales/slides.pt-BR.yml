@@ -1257,7 +1257,7 @@
           delas as demais não poderão ser concluídas. Criar algoritmos que os outros
           possam entender é muito importante. É por isso que cada etapa deve ser escrita
           de forma que o resultado seja sempre o mesmo, não importa quem faça.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas
@@ -1400,7 +1400,7 @@
         text: Neste exemplo, vamos dizer que SE a flor roxa tem néctar maior que 0,
           obtenha néctar. Isso fará com que nossa abelha continue coletando néctar
           enquanto for possível. Bingo!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Você já ouvi falar em depurar um programa? Essa é uma forma de descobrir

@@ -9,11 +9,14 @@ ka:
     errors:
       messages:
         blank: "სავალდებულოა"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'სახელი სისტემაში'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'ელექტრონული ფოსტა'
+        personal_email: 'Personal email address'
         username: 'მომხმარებლის სახელი'
         password: 'პაროლი'
         password_confirmation: 'პაროლის დადასტურება'
@@ -48,7 +51,7 @@ ka:
     submit: 'მინიშნების დამატება'
   appname: "Code.org"
   stage: "ეტაპი"
-  stage_number: "ეტაპი %{number}"
+  stage_number: "გაკვეთილი %{number}"
   puzzle: "თავსატეხი"
   trophies: "ჯილდოები"
   courses: 'კურსები'
@@ -208,6 +211,7 @@ ka:
     edit: 'ჩასწორება'
     edit_model: 'ჩაასწორეთ %{model}'
     update: 'განახლება'
+    submit: 'გაგზავნა'
     destroy: 'განადგურება'
     back: 'უკან'
     confirm: 'დარწმუნებული ხართ?'
@@ -265,15 +269,15 @@ ka:
       district_dashboard: 'განყოფილების მართვის პანელი'
       label: 'გამარჯობა %{username}'
       stats: 'კოდის სტუდია'
-      settings: 'ჩემი ანგარიში'
+      settings: 'ანგარიშის პარამეტრები'
       logout: 'გასვლა'
       signin: 'შესვლა'
       signup: 'ანგარიშის შექმნა'
       already_registered: 'უკვე გაქვთ ანგარიში?'
       pair_programming: 'პროგრამირება წყვილებში'
       team: 'გუნდი'
-      driver: 'მძღოლი'
-      navigator: 'წამყვანი'
+      driver: 'შესულია'
+      navigator: 'პარტნიორი'
     popup:
       progress_for_user: "%{name}-ს პროგრესი"
       progress: 'თქვენი პროგრესი'
@@ -297,7 +301,7 @@ ka:
     students:
       dashboard: 'მასწავლებლის მართვის პანელზე გადასვლა'
     user_not_found: 'მასწავლებელი ვერ მოიძებნა.'
-    student_teacher_disassociated: 'თქვენ წაშალეთ %{teacher_name} მასწავლებელი.'
+    student_teacher_disassociated: 'You have left section %{section_code} with %{teacher_name}.'
     panel:
       answer_viewer: 'მასწავლებელთა სია'
       student: 'მოსწავლე'
@@ -325,6 +329,10 @@ ka:
     deleted_user: 'წაშლილი მომხმარებელი'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'დასრულებულია'
     tried: 'უკვე ნაცადია'
@@ -365,7 +373,7 @@ ka:
     heading_hoc2014: "<h2>კოდის ერთი საათი</h2><h1>ნებისმიერი ასაკისთვის</h1>"
     heading_elementary: "<h2>ოცსაათიანი კურსები</h2><h1>დამწყებთათვის (ასაკი: ნებისმიერი)</h1>"
     heading_apps: "<h2>გასართობი</h2><h1>ყველასთვის</h1>"
-    heading_tools: "<h2>მზად ხართ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი კლასებისთვის</h1>"
+    heading_tools: "<h2>მზად ხარ შემდეგი ნაბიჯისთვის?</h2><h1>JavaScript დამამთავრებელი კლასებისთვის</h1>"
     heading_legacy: "<h2>ჩვენი დაჩქარებული კურსი</h2><h1>ნებისმიერი ასაკისთვის</h1>"
     your_gallery: გალერეა
     no_primary_course: "ნახეთ კურსი კოდის სტუდიაში"
@@ -405,7 +413,7 @@ ka:
     student_ids_not_entered: "გთხოვთ, წარმოადგინოთ student_ids."
     student_not_found: "ერთი ან მეტი მოსწავლე ვერ მოიძებნა."
     all_students_must_be_in_current_section: "ყველა სტუდენტი ამჟამად უნდა ირიცხებოდეს თქვენს სექციაში."
-    already_enrolled_in_new_section: "თქვენ არ შეგიძლიათ ამ სტუდენტების გადაადგილება, რადგან ამ მასწავლებელს უკვე ჰყავს ისინი სხვა სექციაში."
+    already_enrolled_in_new_section: "თქვენ არ შეგიძლიათ ამ სტუდენტების გადაადგილება, რადგანაც ისინი უკვე არიან ახალ სექციაში."
   share:
     title: "ისწავლეთ კოდის სტუდიაში"
     description: "ნებისმიერს შეუძლია კომპიუტერული მეცნერების სწავლა. შექმენით თამაშები, აპლიკაციები და ხელოვნების ნიმუშები კოდით."
@@ -429,7 +437,7 @@ ka:
     copyright: 'საავტორო უფლება'
     more: 'მეტი'
     feedback: 'უკუკავშირი'
-    translate: 'ვთარგმნოთ Code.org თქვენს ენაზე'
+    translate: 'გახდი ჩვენი მოხალისე მთარგმნელი'
     support: 'ტექ. მხარდაჭერა'
     support_url: 'http://support.code.org'
     tos_short: 'პირობები'
@@ -439,12 +447,12 @@ ka:
     report_abuse: 'შეგვატყობინეთ დარღვევა'
     built_on_code_studio: 'დაწერეთ კოდი კოდის სტუდიაში'
     make_my_own_app: 'ჩემი საკუთარი აპლიკაციის შექმნა'
-    how_it_works: 'როგორ მუშაობს ეს სივრცე'
+    how_it_works: 'როგორ მუშაობს (კოდის ნახვა)'
     try_hour_of_code: 'სცადეთ კოდის ერთი საათი!'
   reference_area:
     title: 'გჭირდებათ დახმარება?'
     subtitle: 'ნახეთ ეს ვიდეოები და მინიშნებები'
-    teacher: 'ნახეთ ამოხსნა'
+    teacher: 'ამოხსნის ნახვა'
     auth_error: 'თქვენ არ გაქვთ ამ ამოხსნის ნახვის უფლება.'
     submit: 'განაახლეთ მხატვრის ადგილმდებარეობა'
     direction: 'საწყისი მიმართულება (გრადუსებში)'
@@ -911,3 +919,4 @@ ka:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

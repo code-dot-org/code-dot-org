@@ -9,11 +9,14 @@ de:
     errors:
       messages:
         blank: "ist erforderlich"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Name anzeigen'
         name_example: 'Angezeigter Name<br/>(z.B. Cooler Codierer oder Jana B.)'
         email: 'E-Mail'
+        personal_email: 'Personal email address'
         username: 'Benutzername'
         password: 'Passwort'
         password_confirmation: 'Passwort Bestätigung'
@@ -208,6 +211,7 @@ de:
     edit: 'Bearbeiten'
     edit_model: 'Bearbeite %{model}'
     update: 'Aktualisieren'
+    submit: 'Absenden'
     destroy: 'Zerstören'
     back: 'Zurück'
     confirm: 'Bist du sicher?'
@@ -325,6 +329,10 @@ de:
     deleted_user: 'Benutzer entfernen'
     no_password_because_oauth: 'Kein Passwort, da du dich als Drittanbieter einloggst.'
     no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Abgeschlossen'
     tried: 'Versucht'
@@ -911,3 +919,4 @@ de:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'
