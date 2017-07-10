@@ -42,6 +42,11 @@ class AddInitialStudentsView extends Component {
 
   render() {
     const {sectionName} = this.props;
+    const googleClassroom = experiments.isEnabled('googleClassroom');
+    const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
+    const clever = experiments.isEnabled('clever');
+    const anyThirdParty = googleClassroom || microsoftClassroom || clever;
+
     return (
       <div>
         <h1 style={style.h1}>
@@ -58,19 +63,19 @@ class AddInitialStudentsView extends Component {
           <WordLoginCard/>
           <EmailLoginCard/>
         </CardContainer>
-        {experiments.isEnabled('googleClassroom') &&
+        {anyThirdParty && (
           <div>
             <h3 style={style.h3}>
               Sync my list of students from an existing classroom section in a third
               party tool
             </h3>
             <CardContainer>
-              <GoogleClassroomCard/>
-              <MicrosoftClassroomCard/>
-              <CleverCard/>
+              {googleClassroom && <GoogleClassroomCard/>}
+              {microsoftClassroom && <MicrosoftClassroomCard/>}
+              {clever && <CleverCard/>}
             </CardContainer>
           </div>
-        }
+        )}
       </div>
     );
   }
