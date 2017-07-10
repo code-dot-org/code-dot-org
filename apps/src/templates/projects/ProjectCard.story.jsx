@@ -12,7 +12,7 @@ const defaultData = {
   publishedToClass: false
 };
 
-const PUBLISHED_BOTH = {
+const publishedBoth = {
   ...defaultData,
   publishedToPublic: true,
   publishedToClass: true,
@@ -103,7 +103,7 @@ export default storybook => {
         description: 'Classroom gallery should show student display name and should NOT show chevron',
         story: () => (
           <ProjectCard
-            projectData={PUBLISHED_BOTH}
+            projectData={publishedBoth}
             currentGallery="class"
           />
         )
@@ -113,7 +113,7 @@ export default storybook => {
         description: 'Public gallery should NOT show student display name and should NOT show chevron',
         story: () => (
           <ProjectCard
-            projectData={PUBLISHED_BOTH}
+            projectData={publishedBoth}
             currentGallery="public"
           />
         )

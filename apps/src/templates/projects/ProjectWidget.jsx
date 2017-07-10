@@ -22,7 +22,7 @@ const ProjectWidget = React.createClass({
         {this.props.projectList.length > 0 &&
           <PersonalRecentProjects projectList={this.props.projectList} />
         }
-        <NewProjectButtons />
+        <NewProjectButtons/>
       </ContentContainer>
     );
   }

@@ -252,7 +252,9 @@ const ProjectCard = React.createClass({
           {(this.props.currentGallery !== 'personal' && projectData.publishedAt) &&
             <div style={styles.lastEdit}>
               {i18n.published()}:&nbsp;
-              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}> {this.getLastModifiedTimestamp(projectData.publishedAt)}</time>
+              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}>
+                {this.getLastModifiedTimestamp(projectData.publishedAt)}
+              </time>
             </div>
           }
 
@@ -260,7 +262,9 @@ const ProjectCard = React.createClass({
             <div style={styles.lastEdit}>
               {this.renderArrowIcon()}
               {i18n.projectLastUpdated()}:&nbsp;
-              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.updatedAt}> {this.getLastModifiedTimestamp(projectData.updatedAt)}</time>
+              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.updatedAt}>
+                {this.getLastModifiedTimestamp(projectData.updatedAt)}
+              </time>
             </div>
           }
         </div>
