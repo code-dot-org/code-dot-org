@@ -9,7 +9,7 @@ class ApiController < ApplicationController
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
   ].freeze
 
-  def google_classrooms
+  private def query_google_classroom_service
     client = Signet::OAuth2::Client.new(
       authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
       token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
@@ -24,8 +24,7 @@ class ApiController < ApplicationController
     service.authorization = client
 
     begin
-      response = service.list_courses(teacher_id: 'me', page_size: 100)
-      render json: response.to_h
+      yield service
 
       if client.access_token != current_user.oauth_token
         current_user.update!(
@@ -35,6 +34,22 @@ class ApiController < ApplicationController
       end
     rescue Google::Apis::ClientError => client_error
       render status: :forbidden, json: {error: client_error}
+    end
+  end
+
+  def google_classrooms
+    query_google_classroom_service do |service|
+      response = service.list_courses(teacher_id: 'me')
+      render json: response.to_h
+    end
+  end
+
+  def import_google_classroom
+    course_id = params[:course_id].to_i
+
+    query_google_classroom_service do |service|
+      response = service.list_course_students(course_id)
+      render json: response.to_h
     end
   end
 
