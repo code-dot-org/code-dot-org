@@ -41,7 +41,6 @@ const StageProgress = React.createClass({
         key={index}
         stageId={this.props.stageId}
         level={level}
-        courseOverviewPage={this.props.courseOverviewPage}
       />
     );
 
