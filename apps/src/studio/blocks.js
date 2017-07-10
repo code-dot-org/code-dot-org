@@ -778,7 +778,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   addRegularAndParamsVersions('throw', function (actorSelectDropdown) {
     this.setHSV(184, 1.00, 0.74);
-    appendActorSelect(this, msg.ifSpriteN, actorSelectDropdown);
+    appendActorSelect(this, actorSelectDropdown);
     this.appendDummyInput().appendTitle(msg.throwSprite());
     this.appendDummyInput()
       .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
@@ -3057,10 +3057,6 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
         function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, true); });
   }
 
-  function appendIfActorSelect(block, dropdown = true) {
-    appendActorSelect(block, msg.ifSpriteN, dropdown);
-  }
-
   // Actor Emotion
   const EMOTION_VALUES = [
     [msg.getActorHasEmotionNormal(), Emotions.NORMAL.toString()],
@@ -3081,7 +3077,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendIfActorSelect(this, actorSelectDropdown);
+    appendActorSelect(this, actorSelectDropdown);
 
     if (blockInstallOptions.isK1) {
       const fieldImageDropdown = new blockly.FieldImageDropdown(K1_EMOTION_VALUES, 34, 34);
@@ -3149,7 +3145,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendIfActorSelect(this, actorSelectDropdown);
+    appendActorSelect(this, actorSelectDropdown);
 
     this.appendDummyInput()
       .appendTitle(' ');
@@ -3216,7 +3212,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendIfActorSelect(this, actorSelectDropdown);
+    appendActorSelect(this, actorSelectDropdown);
 
     const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
     dropdown.setValue(VISIBILITY_VALUES[0][1]);
@@ -3263,7 +3259,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendIfActorSelect(this, actorSelectDropdown);
+    appendActorSelect(this, actorSelectDropdown);
 
     const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
     dropdown.setValue(SPRITE_VALUES[0][1]);
