@@ -540,5 +540,11 @@
   "whenRun": "Када кренеш",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Радни простор: ",
-  "yes": "Да"
+  "yes": "Да",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class",
+  "teacherCourseHocLinkText": "View more Hour of code tutorials",
+  "teacherCoursesDescription": "Select your grade below to see all courses and professional learning offered by Code.org and 3rd party partners."
 }
