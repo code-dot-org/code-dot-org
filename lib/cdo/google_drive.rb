@@ -27,10 +27,7 @@ module Google
       end
 
       def spreadsheet_csv
-        # Workaround to export spreadsheet csv through the Drive API
-        # See issue: https://code.google.com/a/google.com/p/apps-api-issues/issues/detail?id=3240
-        csv_uri = raw_file.export_links['application/pdf'].gsub(/pdf$/, 'csv')
-        @session.execute!(uri: csv_uri).body
+        raw_file.export_as_string('text/csv')
       end
     end
 

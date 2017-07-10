@@ -9,13 +9,13 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 245,
-    width: 458,
+    width: 473,
     float: 'left',
     marginBottom: 20
   },
   image: {
     position: 'absolute',
-    width: 458,
+    width: 473,
     height: 130
   },
   name: {

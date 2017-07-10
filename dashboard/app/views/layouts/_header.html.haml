@@ -82,7 +82,9 @@
             = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if request.path == "/home" || request.path == "/courses"
-  #header-banner{style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
+  - if request.path == "/home" || (request.path == "/courses" && user_type)
+    - extra_header_banner_class = "header-banner-short"
+  #header-banner{class: extra_header_banner_class, style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
 - if request.path == "/projects" || request.path == "/projects/public"
   #header-banner{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
 

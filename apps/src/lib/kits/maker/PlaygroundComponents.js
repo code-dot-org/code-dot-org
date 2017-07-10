@@ -18,6 +18,7 @@ import TouchSensor from './TouchSensor';
 import Piezo from './Piezo';
 import NeoPixel from './NeoPixel';
 import Led from './Led';
+import experiments from '../../../util/experiments';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently
@@ -61,8 +62,7 @@ export function createCircuitPlaygroundComponents(board) {
 
       buttonR: initializeButton(board, '19'),
 
-      // TODO (captouch): Re-enable when we can lazy-enable streaming
-      // ...initializeTouchPads(board)
+      ...(experiments.isEnabled('maker-captouch') && initializeTouchPads(board))
     };
   });
 }
@@ -118,11 +118,12 @@ export function destroyCircuitPlaygroundComponents(components) {
   delete components.buttonL;
   delete components.buttonR;
 
-  // TODO (captouch): Restore when we re-enable
-  // Remove listeners from each TouchSensor
-  // TOUCH_PINS.forEach(pin => {
-  //   delete components[`touchPad${pin}`];
-  // });
+  if (experiments.isEnabled('maker-captouch')) {
+    // Remove listeners from each TouchSensor
+    TOUCH_PINS.forEach(pin => {
+      delete components[`touchPad${pin}`];
+    });
+  }
 }
 
 /**
@@ -261,8 +262,6 @@ function initializeAccelerometer(board) {
   return accelerometer;
 }
 
-// TODO (captouch)
-/* eslint-disable no-unused-vars */
 function initializeTouchPads(board) {
   // We make one playground-io Touchpad component for all captouch sensors,
   // then wrap it in our own separate objects to get the API we want to
@@ -278,4 +277,3 @@ function initializeTouchPads(board) {
   });
   return touchPads;
 }
-/* eslint-enable no-unused-vars */

@@ -654,6 +654,10 @@ Flappy.reset = function (first) {
  */
 // XXX This is the only method used by the templates!
 Flappy.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Flappy.onPuzzleComplete();
+  }
+
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

@@ -95,6 +95,12 @@
   congratulations_on_completing_course2: Congratulations on completing Course 2
   congratulations_on_completing_course3: Congratulations on completing Course 3
   congratulations_on_completing_course4: Congratulations on completing Course 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Congratulations on completing the Accelerated
     Course
   congrats_next_tutorials_title: Try these courses next
@@ -265,6 +271,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Why don't more schools teach computer science? We can fix this.
     http://youtu.be/2DxWIxec6yo. Visit http://code.org/ to learn more.
@@ -319,6 +331,10 @@
     Pukamata (Facebook)"
   homepage_hero_text_satya: "&ldquo;Ka tuwhere ētahi o ngā tino huarahi i te ao mā
     roto mai i te pūtaiao rorohiko.&rdquo; Satya, Kaiurungi o Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "&ldquo;Mēnā koe ka tuhi waehere, māu anō tō ara haere
     ake nei e whiriwhiri.&rdquo; Chris Bosh"
   homepage_hero_text_student1: "&ldquo;Kua rerekē te ao kei mua i tōku aroaro i ēnei
@@ -917,6 +933,12 @@
   dashboard_course2: 'Course 2:'
   dashboard_course3: 'Course 3:'
   dashboard_course4: 'Course 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Curriculum
@@ -1107,11 +1129,17 @@
   course3_name: Akoranga 3
   course4_name: Akoranga 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Whakaakoranga Whakatere
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1224,6 +1252,12 @@
   course2_gradelevel: Ages 6-18
   course3_gradelevel: Ngā Tau 8-18
   course4_gradelevel: Ngā Tau 10-18
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Grade 8+
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: Ngā Tau 10-18
   codeorg_platformtext: Modern browsers, smartphones, tablets
   codeintl_platformtext: Modern browsers, smartphones, tablets
@@ -1354,6 +1388,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Learn the basic concepts of Computer Science with drag
     and drop programming. This is a game-like, self-directed tutorial starring video
     lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn

@@ -65,7 +65,7 @@ Code.org will pay for relevant travel, accommodation and meal expenses for your 
 **These include:**
 
 * Flights to and from your assigned TeacherCon Location **OR** mileage gift card for attendees driving over 25 miles one-way.
-* A room for you at the hotel -- No need to make a resrvation, we have booked this for you!
+* A room for you at the hotel -- No need to make a reservation, we have booked this for you!
 * Catered breakfast, lunch, and snacks, Monday through Friday; dinner on Sunday and Wednesday
 
 All participants will receive a $300 gift card upon their arrival to cover any additional expenses such as meals we do not provide, and other incidentals such as baggage fees, parking, taxis, public transportation, etc. No additional reimbursements will be provided to attendees or districts.
@@ -113,6 +113,30 @@ Of course! Sessions end each day at 4:30pm, which leaves plenty of time in the e
   <br>
 We expect you to attend for the full conference. Make plans to be with us from Registration on Sunday afternoon through the Closing Ceremonies on Friday afternoon to ensure that you receive the full training experience. We would love to have local teachers join us for registration and the Kick-Off dinner on Sunday evening. If you are not able to attend the dinner on Sunday evening, please plan to join us Monday morning by 8:00am to have time to register before sessions begin at 8:30am. If you have any concerns, please let us know at
 [teacher@code.org](mailto:teacher@code.org).
+</p>
+</details>
+
+<a id="who"></a>
+## **Who's Who at TeacherCon?**
+<details>
+<summary>**Code.org Staff**</summary>
+ <p>
+ <br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconstaff_philly') %></p>
+</details>
+
+<details>
+<summary>**Session Lead Facilitators**</summary>
+ <p>
+ <br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconfacilitators_philly') %></p>
+</details>
+
+<details>
+<summary>**Regional Partners**</summary>
+ <p>
+ <br>
+<%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'teacherconrp_philly') %></p>
 </p>
 </details>
 

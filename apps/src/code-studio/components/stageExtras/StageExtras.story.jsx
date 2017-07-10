@@ -12,8 +12,8 @@ export default storybook => {
           stageNumber={1}
           nextLevelPath="#"
           bonusLevels={[
-            {name: 'Sample Bonus Level'},
-            {name: 'Another Bonus Level'},
+            {id: 0, type: 'Blockly', name: 'Sample Bonus Level'},
+            {id: 1, type: 'Blockly', name: 'Another Bonus Level'},
           ]}
         />
       )

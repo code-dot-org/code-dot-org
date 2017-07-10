@@ -101,6 +101,9 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
+        if (appOptions.level.disableSharing) {
+          return;
+        }
         const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
         // Add the frame to the drawing.
         dataURIToFramedBlob(dataURI, blob => {
@@ -359,7 +362,7 @@ function loadAppAsync(appOptions) {
       setTimeout(loadLastAttemptFromSessionStorage, LAST_ATTEMPT_TIMEOUT);
     } else {
       project.load().then(function () {
-        if (project.hideBecauseAbusive()) {
+        if (project.hideBecauseAbusive() && !appOptions.canResetAbuse) {
           renderAbusive(window.dashboard.i18n.t('project.abuse.tos'));
           return $.Deferred().reject();
         }

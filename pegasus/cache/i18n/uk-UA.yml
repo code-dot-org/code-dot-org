@@ -90,6 +90,12 @@
   congratulations_on_completing_course2: "Вітаємо із завершенням курсу 2"
   congratulations_on_completing_course3: "Вітаємо із завершенням курсу 3"
   congratulations_on_completing_course4: "Вітаємо із завершенням курсу 4"
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: "Вітаємо із завершенням прискореного
     курсу"
   congrats_next_tutorials_title: "Перейти до наступного рівня"
@@ -262,6 +268,12 @@
   just_did_course2: "Щойно завершено Курс 2 - подивіться! @codeorg"
   just_did_course3: "Щойно завершено Курс 3 - подивіться! @codeorg"
   just_did_course4: "Щойно завершено Курс 4 - подивіться! @codeorg"
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: "Щойно завершено Прискорений курс - подивіться! @codeorg"
   twitter_teach_cs: 9 з 10 людей погоджуються із тим, інформатику потрібно викладати
     у школах. http://youtu.be/nKIu9yen5nc. Відвідайте https://code.org/.
@@ -323,6 +335,10 @@
     &ldquo;Інформатика допоможе розкрити
     кращі можливості в світі.&rdquo;
     Сатья, Генеральный директор Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Якщо вмієте програмувати, ви можете
     вибирати стежину в житті.&rdquo;
@@ -924,6 +940,12 @@
   dashboard_course2: "Курс 2:"
   dashboard_course3: "Курс 3:"
   dashboard_course4: "Курс 4 (beta): "
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Якщо немає комп'ютерів, <a href='%{unplugged_url}'>спробуйте
     ці безмашинні вправи</a> у своєму класі."
   dashboard_curriculum: "Навчальний план"
@@ -1117,11 +1139,17 @@
   course3_name: "Курс 3"
   course4_name: "Курс 4"
   coursea-draft_name: "Курс А"
+  coursea_name: "Курс А"
   courseb-draft_name: "Курс Б"
+  courseb_name: "Курс Б"
   coursec-draft_name: "Курс В"
+  coursec_name: "Курс В"
   coursed-draft_name: "Курс Г"
+  coursed_name: "Курс Г"
   coursee-draft_name: "Курс Ґ"
+  coursee_name: "Курс Ґ"
   coursef-draft_name: "Курс Д"
+  coursef_name: "Курс Д"
   accelerated_name: "Прискорений курс"
   cspunit1_name: "Розділ 1: Цифрова інформація"
   cspunit2_name: "Розділ 2: Інтернет"
@@ -1234,6 +1262,12 @@
   course2_gradelevel: "Вік 6-18"
   course3_gradelevel: "Вік 8-18"
   course4_gradelevel: "Вік 10-18"
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: 8+ класи
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: "Вік 10-18"
   codeorg_platformtext: "Сучасні браузери, смартфони, планшети"
   codeintl_platformtext: "Сучасні браузери, смартфони, планшети"
@@ -1365,6 +1399,12 @@
     з програмування, з якими ознайомились у попередньому курсі, і шукатимуть гнучкіших
     рішень складніших завдань. До кінця цього курсу учні навчаться створювати інтерактивні
     історії та ігри, якими зможуть поділитись. Рекомендовано для 4-8 класів."
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: "Вивчайте основи програмування шляхом перетягування блоків.
     Це середовище, схоже на гру, яку кожен проходить у власному темпі, за участю Біла
     Гейтса, Марка Цукенберга,  Angry Birds та Plants vs. Zombies. Вивчайте такі базові
@@ -1901,6 +1941,6 @@
   header_report_bug: Report bug
   header_tutorials: Tutorials
   header_documentation: Documentation
-  csp_name: CS Principles
+  csp_name: "'16-'17 принципи інформатики"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

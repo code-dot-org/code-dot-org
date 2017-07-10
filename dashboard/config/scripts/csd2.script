@@ -83,6 +83,7 @@ level 'CSD U2 project share', progression: 'Website Project'
 
 stage 'Styling Text with CSS', flex_category: 'csd2_2'
 named_level 'Unit 2 Lesson 7 Overview'
+named_level 'CSD U2 CSS explore CSS'
 named_level 'Video: Intro to CSS'
 level 'CSD U2 text style h1', progression: 'Styling Text'
 level 'CSD U2 text style h3', progression: 'Styling Text'

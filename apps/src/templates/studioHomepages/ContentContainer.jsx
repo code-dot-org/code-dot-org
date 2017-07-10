@@ -2,17 +2,30 @@ import React from 'react';
 import FontAwesome from '../FontAwesome';
 import color from "../../util/color";
 
-// ContentContainer provides a full-width container which will render whatever children are passed to it. The component is useful for creating clear, sub-sections on a page because it was built to reuse the styling and funtionality of a heading and the option to show a link. You can find an example of its use on studio.code.org/home.
+// ContentContainer provides a full-width container which will render whatever
+// children are passed to it. The component is useful for creating clear,
+// sub-sections on a page because it was built to reuse the styling and
+// functionality of a heading and the option to show a link. You can find an
+// example of its use on studio.code.org/home.
 
 const styles = {
   box: {
-    width: 940,
+    width: 970,
   },
   heading: {
     paddingRight: 10,
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: 24,
+    fontFamily: 'Gotham 3r',
+    zIndex: 2,
+    color: color.charcoal,
+    width: 970
+  },
+  description: {
+    paddingRight: 10,
+    paddingBottom: 20,
+    fontSize: 16,
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
@@ -71,11 +84,12 @@ const ContentContainer= React.createClass({
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
     showLink: React.PropTypes.bool,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    description: React.PropTypes.string,
   },
 
   render() {
-    const { heading, link, linkText, showLink, isRtl }= this.props;
+    const { heading, link, linkText, showLink, description, isRtl }= this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
@@ -92,11 +106,15 @@ const ContentContainer= React.createClass({
             </a>
           }
         </div>
+        {description && (
+          <div style={styles.description}>
+            {description}
+          </div>
+        )}
         {React.Children.map(this.props.children, (child, index) => {
           return (
             <div key={index}>
               {child}
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
             </div>
           );
         })}

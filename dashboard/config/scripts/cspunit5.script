@@ -1,18 +1,13 @@
-login_required 'true'
-hidden 'false'
+login_required true
 
-#1
 stage 'Explore PT Prep'
 level 'U5 - Explore PT Prep - Student Introduction'
 
-#2
 stage 'Explore PT'
 level 'U5 - Explore PT - Student Introduction'
 
-#3
 stage 'Create PT Prep'
 level 'U5 - Create PT Prep - Student Introduction'
 
-#4
 stage 'Create PT'
 level 'U5 - Create PT - Student Introduction'

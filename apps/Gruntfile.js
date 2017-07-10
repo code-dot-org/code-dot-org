@@ -432,7 +432,8 @@ testsContext.keys().forEach(testsContext);
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
     'courses/show':                 './src/sites/studio/pages/courses/show.js',
-    'courses/edit':                 './src/sites/studio/pages/courses/edit.js'
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
+    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js'
   };
 
   var otherEntries = {
@@ -479,7 +480,8 @@ testsContext.keys().forEach(testsContext);
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
-    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js'
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js'
   };
 
   // Create a config for each of our bundles

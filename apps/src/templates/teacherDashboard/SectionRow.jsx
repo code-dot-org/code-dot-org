@@ -7,9 +7,8 @@ import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
 import {
-  assignmentId,
-  assignmentName,
-  assignmentPath,
+  assignmentNames,
+  assignmentPaths,
   updateSection,
   removeSection
 } from './teacherSectionsRedux';
@@ -19,6 +18,9 @@ import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/Secti
 const styles = {
   link: tableStyles.link,
   col: tableStyles.col,
+  courseCol: {
+    minWidth: 200,
+  },
   lightRow: tableStyles.lightRow,
   darkRow: tableStyles.darkRow,
   row: tableStyles.row,
@@ -28,6 +30,9 @@ const styles = {
   nowrap: {
     whiteSpace: 'nowrap'
   },
+  currentUnit: {
+    marginTop: 10
+  }
 };
 
 /**
@@ -86,6 +91,7 @@ ConfirmDelete.propTypes = {
 export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
     <ProgressButton
+      className="uitest-save"
       text={i18n.save()}
       onClick={onClickSave}
       color={ProgressButton.ButtonColor.blue}
@@ -118,6 +124,7 @@ class SectionRow extends Component {
     ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
+    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
@@ -225,7 +232,8 @@ class SectionRow extends Component {
       sectionId,
       validLoginTypes,
       validGrades,
-      validAssignments
+      validAssignments,
+      primaryAssignmentIds
     } = this.props;
     const { editing, deleting } = this.state;
 
@@ -233,8 +241,8 @@ class SectionRow extends Component {
     if (!section) {
       return null;
     }
-    const assignName = assignmentName(validAssignments, section);
-    const assignPath = assignmentPath(validAssignments, section);
+    const assignNames = assignmentNames(validAssignments, section);
+    const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
 
@@ -285,16 +293,27 @@ class SectionRow extends Component {
             </select>
           )}
         </td>
-        <td style={styles.col}>
-          {!editing && assignName &&
-            <a href={assignPath} style={styles.link}>
-              {assignName}
+        <td style={{...styles.col, ...styles.courseCol}}>
+          {!editing && assignNames[0] &&
+            <a href={assignPaths[0]} style={styles.link}>
+              {assignNames[0]}
             </a>
+          }
+          {!editing && assignNames[1] &&
+            <div style={styles.currentUnit}>
+              {i18n.currentUnit()}
+              <div>
+                <a href={assignPaths[1]} style={styles.link}>
+                  {assignNames[1]}
+                </a>
+              </div>
+            </div>
           }
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              currentAssignId={assignmentId(section.courseId, section.scriptId)}
+              section={section}
+              primaryAssignmentIds={primaryAssignmentIds}
               assignments={validAssignments}
             />
           )}
@@ -351,7 +370,7 @@ class SectionRow extends Component {
           )}
           <PrintCertificates
             section={section}
-            assignmentName={assignName}
+            assignmentName={assignNames[0]}
           />
         </td>
       </tr>
@@ -365,5 +384,6 @@ export default connect(state => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
+  primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
 }), { updateSection, removeSection })(SectionRow);
