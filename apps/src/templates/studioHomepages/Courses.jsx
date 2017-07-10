@@ -166,7 +166,7 @@ const Courses = React.createClass({
         )}
 
         {!(isEnglish && isTeacher) && (
-          <div>
+          <div id="all-courses">
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
         )}
