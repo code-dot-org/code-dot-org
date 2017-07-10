@@ -792,7 +792,7 @@ exports.install = function (blockly, blockInstallOptions) {
     this.setTooltip(msg.throwTooltip());
   }, function (actorSelectDropdown) {
     // Generate JavaScript for throwing a projectile from a sprite.
-    var allDirections = this.DIR.slice(0, -1).map(function (item) {
+    var allDirections = blockly.Blocks.studio_throw.DIR.slice(0, -1).map(function (item) {
       return item[1];
     });
     var dirParam = this.getTitleValue('DIR');
