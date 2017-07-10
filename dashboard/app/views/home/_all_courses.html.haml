@@ -28,11 +28,12 @@
   .row
     .span12.twolineheader!= t('home.heading_hoc2014')
   .hour-of-code-courses
-    .row
-      = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_DESIGNER_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: show_state }
-      = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: show_state }
+    .hour-of-code-courses-first-row
+      .row
+        = render partial: 'shared/course_tall_block', locals: { id: Script::MINECRAFT_DESIGNER_NAME, showState: show_state }
+        = render partial: 'shared/course_tall_block', locals: { id: Script::STARWARS_NAME, showState: show_state }
+        = render partial: 'shared/course_tall_block', locals: { id: Script::FROZEN_NAME, showState: show_state }
+        = render partial: 'shared/course_tall_block', locals: { id: Script::HOC_NAME, showState: show_state }
     %br/
     %br/
     .row
