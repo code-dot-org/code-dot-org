@@ -114,6 +114,9 @@ class User < ActiveRecord::Base
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
     ui_tip_dismissed_teacher_courses
+    oauth_refresh_token
+    oauth_token
+    oauth_token_expiration
   )
 
   # Include default devise modules. Others available are:
@@ -513,7 +516,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -547,6 +550,19 @@ class User < ActiveRecord::Base
       end
       user.gender = normalize_gender auth.info.gender
     end
+
+    if auth.credentials
+      if auth.credentials.refresh_token
+        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+      end
+
+      omniauth_user.oauth_token = auth.credentials.token
+      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
+
+      omniauth_user.save if omniauth_user.changed?
+    end
+
+    omniauth_user
   end
 
   def oauth?
@@ -1334,9 +1350,10 @@ class User < ActiveRecord::Base
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
+    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(5).join
+
     self.name = nil
-    # The latter part yields a random string of length five from the characters 0 to 9 and a to z.
-    self.username = "#{SYSTEM_DELETED_USERNAME}_#{rand(36**5).to_s(36)}"
+    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
     self.current_sign_in_ip = nil
     self.last_sign_in_ip = nil
     self.email = ''

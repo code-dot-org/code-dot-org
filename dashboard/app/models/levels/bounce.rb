@@ -41,6 +41,7 @@ class Bounce < Grid
   validate :validate_skin_and_theme
 
   def validate_skin_and_theme
+    return unless skin && theme
     # the sports skin can have any theme except retro
     sport_skin_non_sport_theme = (
       skin === "sports" && theme === "retro"

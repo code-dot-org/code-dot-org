@@ -1913,4 +1913,23 @@ class UserTest < ActiveSupport::TestCase
     assert_equal({}, user.properties)
     refute_nil user.purged_at
   end
+
+  test 'omniauth login stores auth token' do
+    auth = OmniAuth::AuthHash.new(
+      provider: 'google_oauth2',
+      uid: '123456',
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+
+    params = {}
+
+    user = User.from_omniauth(auth, params)
+    assert_equal('fake oauth token', user.oauth_token)
+    assert_equal('fake refresh token', user.oauth_refresh_token)
+  end
 end
