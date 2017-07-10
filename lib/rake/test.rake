@@ -36,7 +36,7 @@ namespace :test do
   task :eyes_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
