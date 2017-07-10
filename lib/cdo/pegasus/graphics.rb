@@ -115,7 +115,7 @@ end
 
 def optimize_image(blob)
   image = Magick::Image.from_blob(blob).first
-  image.to_blob { self.quality = 85 }
+  image.to_blob {self.quality = 85}
 ensure
   image && image.destroy!
 end
