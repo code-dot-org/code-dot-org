@@ -125,6 +125,12 @@ function getSpriteIndex(block, inputName = 'SPRITE') {
   return index + '-1';
 }
 
+function getSpriteOrDropdownIndex(block, actorSelectDropdown, inputName = 'SPRITE') {
+  return actorSelectDropdown ?
+    block.getTitleValue(inputName) || 0 :
+    getSpriteIndex(block, inputName);
+}
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
@@ -770,30 +776,43 @@ exports.install = function (blockly, blockInstallOptions) {
       name: 'setItemSpeed'});
   };
 
-  blockly.Blocks.studio_throw = {
-    // Block for throwing a projectile from a sprite.
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      if (spriteCount > 1) {
-        this.appendDummyInput()
-          .appendTitle(spriteNumberTextDropdown(msg.throwSpriteN), 'SPRITE');
-      } else {
-        this.appendDummyInput()
-          .appendTitle(msg.throwSprite());
-      }
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
-      this.appendDummyInput()
-        .appendTitle('\t');
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.DIR), 'DIR');
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.throwTooltip());
+  addRegularAndParamsVersions('throw', function (actorSelectDropdown) {
+    this.setHSV(184, 1.00, 0.74);
+    appendActorSelect(this, msg.ifSpriteN, actorSelectDropdown);
+    this.appendDummyInput().appendTitle(msg.throwSprite());
+    this.appendDummyInput()
+      .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
+    this.appendDummyInput()
+      .appendTitle('\t');
+    this.appendDummyInput()
+      .appendTitle(new blockly.FieldDropdown(blockly.Blocks.studio_throw.DIR), 'DIR');
+    this.setPreviousStatement(true);
+    this.setInputsInline(true);
+    this.setNextStatement(true);
+    this.setTooltip(msg.throwTooltip());
+  }, function (actorSelectDropdown) {
+    // Generate JavaScript for throwing a projectile from a sprite.
+    var allDirections = this.DIR.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var dirParam = this.getTitleValue('DIR');
+    if (dirParam === 'random') {
+      dirParam = 'Studio.random([' + allDirections + '])';
     }
-  };
+    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
+      return item[1];
+    });
+    var valParam = this.getTitleValue('VALUE');
+    if (valParam === 'random') {
+      valParam = 'Studio.random([' + allValues + '])';
+    }
+
+    return 'Studio.throwProjectile(\'block_id_' + this.id +
+        '\', ' +
+        getSpriteOrDropdownIndex(this, actorSelectDropdown) + ', ' +
+        dirParam + ', ' +
+        valParam + ');\n';
+  });
 
   blockly.Blocks.studio_throw.DIR =
         [[msg.moveDirectionUp(), Direction.NORTH.toString()],
@@ -801,78 +820,6 @@ exports.install = function (blockly, blockInstallOptions) {
          [msg.moveDirectionLeft(), Direction.WEST.toString()],
          [msg.moveDirectionRight(), Direction.EAST.toString()],
          [msg.moveDirectionRandom(), 'random']];
-
-  generator.studio_throw = function () {
-    // Generate JavaScript for throwing a projectile from a sprite.
-    var allDirections = this.DIR.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var dirParam = this.getTitleValue('DIR');
-    if (dirParam === 'random') {
-      dirParam = 'Studio.random([' + allDirections + '])';
-    }
-    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var valParam = this.getTitleValue('VALUE');
-    if (valParam === 'random') {
-      valParam = 'Studio.random([' + allValues + '])';
-    }
-
-    return 'Studio.throwProjectile(\'block_id_' + this.id +
-        '\', ' +
-        (this.getTitleValue('SPRITE') || '0') + ', ' +
-        dirParam + ', ' +
-        valParam + ');\n';
-  };
-
-  blockly.Blocks.studio_throwParam = {
-    // Block for throwing a projectile from a sprite.
-    helpUrl: '',
-    init: function () {
-      this.setHSV(184, 1.00, 0.74);
-      this.appendValueInput('SPRITE')
-        .setCheck(blockly.BlockValueType.NUMBER)
-        .appendTitle(msg.actor());
-      this.appendDummyInput()
-        .appendTitle(msg.throwSprite());
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(skin.projectileChoices), 'VALUE');
-      this.appendDummyInput()
-        .appendTitle('\t');
-      this.appendDummyInput()
-        .appendTitle(new blockly.FieldDropdown(this.DIR), 'DIR');
-      this.setPreviousStatement(true);
-      this.setInputsInline(true);
-      this.setNextStatement(true);
-      this.setTooltip(msg.throwTooltip());
-    },
-    DIR: blockly.Blocks.studio_throw.DIR
-  };
-
-  generator.studio_throwParam = function () {
-    // Generate JavaScript for throwing a projectile from a sprite.
-    var allDirections = this.DIR.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var dirParam = this.getTitleValue('DIR');
-    if (dirParam === 'random') {
-      dirParam = 'Studio.random([' + allDirections + '])';
-    }
-    var allValues = skin.projectileChoices.slice(0, -1).map(function (item) {
-      return item[1];
-    });
-    var valParam = this.getTitleValue('VALUE');
-    if (valParam === 'random') {
-      valParam = 'Studio.random([' + allValues + '])';
-    }
-
-    return 'Studio.throwProjectile(\'block_id_' + this.id +
-        '\', ' +
-        (getSpriteIndex(this) || '0') + ', ' +
-        dirParam + ', ' +
-        valParam + ');\n';
-  };
 
   // Note: this block is for causing an action to happen to a projectile, not
   // to create a projectile
@@ -3098,17 +3045,20 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
 
   /**
    * Given a block init function and a code generation function, create
-   * four versions of a block; one which uses a dropdown and one which
-   * uses a value input to select the actor, and those two but with space
-   * for an `else` clause.
+   * four versions of a block: one with an else clause and one without,
+   * with both dropdown and params versions of each.
    */
-  function addRegularAndParamsVersionsWithElseClause(name, initFunc, generatorFunc) {
+  function addIfAndIfElseVersions(name, initFunc, generatorFunc) {
     addRegularAndParamsVersions(name,
         function (actorSelectDropdown) { initFunc.call(this, actorSelectDropdown, false); },
         function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, false); });
     addRegularAndParamsVersions(name + 'Else',
         function (actorSelectDropdown) { initFunc.call(this, actorSelectDropdown, true); },
         function (actorSelectDropdown) { generatorFunc.call(this, actorSelectDropdown, true); });
+  }
+
+  function appendIfActorSelect(block, dropdown = true) {
+    appendActorSelect(block, msg.ifSpriteN, dropdown);
   }
 
   // Actor Emotion
@@ -3126,12 +3076,12 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [blockInstallOptions.skin.emotionSad, Emotions.SAD.toString()]
   ];
 
-  addRegularAndParamsVersionsWithElseClause('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
+  addIfAndIfElseVersions('ifActorHasEmotion', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendActorSelect(this, actorSelectDropdown);
+    appendIfActorSelect(this, actorSelectDropdown);
 
     if (blockInstallOptions.isK1) {
       const fieldImageDropdown = new blockly.FieldImageDropdown(K1_EMOTION_VALUES, 34, 34);
@@ -3178,7 +3128,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorYPosition(), 'y'],
   ];
 
-  addRegularAndParamsVersionsWithElseClause('ifActorPosition', function (actorSelectDropdown, includeElseStatement) {
+  addIfAndIfElseVersions('ifActorPosition', function (actorSelectDropdown, includeElseStatement) {
     const OPERATORS = Blockly.RTL ? [
       ['=', 'EQ'],
       ['\u2260', 'NEQ'],
@@ -3199,7 +3149,7 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendActorSelect(this, actorSelectDropdown);
+    appendIfActorSelect(this, actorSelectDropdown);
 
     this.appendDummyInput()
       .appendTitle(' ');
@@ -3261,12 +3211,12 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     [msg.getActorVisible(), 'true']
   ];
 
-  addRegularAndParamsVersionsWithElseClause('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
+  addIfAndIfElseVersions('ifActorIsVisible', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendActorSelect(this, actorSelectDropdown);
+    appendIfActorSelect(this, actorSelectDropdown);
 
     const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
     dropdown.setValue(VISIBILITY_VALUES[0][1]);
@@ -3308,12 +3258,12 @@ function installConditionals(blockly, generator, spriteNumberTextDropdown, start
     return [msg.isSet() + ' ' + choice[0], choice[1]];
   });
 
-  addRegularAndParamsVersionsWithElseClause('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
+  addIfAndIfElseVersions('ifActorIsSprite', function (actorSelectDropdown, includeElseStatement) {
     this.setHSV(196, 1.0, 0.79);
     this.appendDummyInput()
         .appendTitle('if');
 
-    appendActorSelect(this, actorSelectDropdown);
+    appendIfActorSelect(this, actorSelectDropdown);
 
     const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
     dropdown.setValue(SPRITE_VALUES[0][1]);
