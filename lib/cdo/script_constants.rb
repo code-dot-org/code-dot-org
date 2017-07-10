@@ -103,7 +103,10 @@ module ScriptConstants
     minecraft: [
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME
-    ]
+    ],
+    tts: [
+      TTS_NAME = 'allthethings_tts'.freeze
+    ],
   }.freeze
 
   # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
