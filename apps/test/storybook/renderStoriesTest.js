@@ -13,7 +13,7 @@ describe('react-storybook stories render without errors or warnings', () => {
   throwOnConsoleWarnings();
 
   // Test all the *.story.jsx files that aren't blacklisted
-  const context = require.context('../../src/', true, /.*\.story\.jsx$/);
+  const context = require.context('../../src/', true, /.*\.story\.jsx?$/);
   context.keys()
       .filter(storyFile => !BLACKLIST.some(taboo => storyFile.includes(taboo)))
       .forEach(storyFile => {

@@ -118,114 +118,95 @@
         title: Mapes feliços
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-        video: C1_happy_maps_unplugged
       MoveIt:
         title: Mou-te, mou-te
         desc: Els alumnes creen algoritmes senzills (conjunts d'instruccions) per
           moure un personatge a través d'un laberint utilitzant tant sols una ordre.
-        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Algoritmes reals: Planta una llavor'
         desc: Aquesta unitat remarca com utilitzem els algoritmes a la nostra vida
           diària, utilitzant el fet de plantar una llavor com a exemple. També es
           centra en un marc més ampli de la informàtica i com els algoritmes hi juguen
           un rol important.
-        video: C1_plantant_llavors
       BuildingAFoundation:
         title: Posant les bases
         desc: Students build a structure using only provided supplies. Structures
           must complete a task (reach a certain height or bear a certain weight),
           and students discuss the idea of being persistent when things get complicated.
-        video: C1_building_foundation
       GettingLoopy:
         title: Fent bucles
         desc: Aquesta lliçó introdueix el concepte de dels bucles en programació (instruccions
           repetidess) a través d'una activitat de dansa. Els alumnes aprendran coreografies
           senzilles i, a continuació, aprendran a repetir-ho.
-        video: C1_getting_loopy
       RelayProgramming:
         title: Programació en relleus
         desc: Els estudiants executen una cursa de relleus on corren a través del
           pati per escriure un algoritme basat en la imatge "Programació de paper
           quadriculat". Només poden escriure una instrucció cada vegada i si hi ha
           un error han d'esborrar-ho tot fins el principi.
-        video: C2_relay_programming
       Conditionals:
         title: Condicionals
         desc: Per aprendre de les declaracions de condicionals, els alumnes juguen
           un joc de cartes i creen normes com "si dibuixo una tarja vermella, puc
           obtenir un punt" i "si dibuixo una tarja negra, el punt el guanyes tu."
-        video: C2_conditionals_with_cards
       BigEvent:
         title: El gran esdeveniment
         desc: Els alumnes es familiaritzen amb el concepte de programació d' "esdeveniments",
           que són accions que un ordinador supervisa constantment. El mestre polsarà
           botons en un paper a distància i els alumnes reaccionaran depenent de quin
           botó es prem.
-        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Anant a llocs segurs
         desc: Internet és una eina potent, però a vegades també és un lloc perillós.
           Els mestres t'expliquen com navegar amb seguretat per internet.
-        video: C1_going_places_safely
       GraphPaperProgramming:
         title: Programació de paper quadriculat
         desc: Els alumnes escriuen un algoritme (un conjunt d'instruccions) utilitzant
           un grup d'ordres predefinides per dirigir els seus companys a reproduir
           un dibuix.
-        video: C2_graph_paper
       PaperPlanes:
         title: 'Algoritmes de la vida quotidiana: Avions de paper'
         desc: Aquesta unitat ens repta a utilitzar els algoritmes en la nostra vida
           diària, concretament fent avions de paper. La unitat també se centra en
           un panorama més ampli de la informàtica i com els algoritmes juguen un rol
           essencial.
-        video: C2_avions_paper
       BinaryBracelets:
         title: Polseres binàries
         desc: Els alumnes creen polseres com una representació binària de la primera
           lletra del seu nom. Els alumnes aprenen que les dades poden ser representades
           i emmagatzemades de diferents maneres.
-        video: C2_bracelets_binaris
       DigitalFootprint:
         title: La vostra empremta digital
         desc: Teachers introduce to students the idea that putting information about
           themselves online creates a digital footprint or "trail" that has consequences.
-        video: C2_empremta_digital
       ComputationalThinking:
         title: Pensament computacional
         desc: Els alumnes usen les passes del pensament computacional (descomposar,
           relació de patrons, abstracció, algoritme) per a esbrinar com jugar a un
           joc que no duu instruccions.
-        video: C3_pensament_computacional
       FunctionalSuncatchers:
         title: Functional Suncatchers
         desc: Students create an algorithm with variables and functions (pieces of
           code that you want to use over and over again) to create suncatchers using
           string and beads.
-        video: C3_functional_suncatchers
       SongwritingParameters:
         title: Composició amb paràmetres
         desc: Els alumnes utilitzen el concepte de la tornada en una cançó per aprendre
           sobre passar paràmetres (que personalitzen una funció sense haver de reescriure-la).
-        video: C3_composiciómusical_amb_paràmetres
       DiceRace:
         title: 'Algoritmes de la vida real: cursa de daus'
         desc: This lesson calls out ways we use algorithms in our daily lives. As
           part of that, students will identify and write down the algorithm for a
           dice race game.
-        video: C3_cursa_daus
       Internet:
         title: Internet
         desc: Els alumnes envien missatges representant diversos mètodes de transmissió
           d'internet utilitzant peces de paper.
-        video: C3_internet
       Crowdsourcing:
         title: Col·laboració oberta
         desc: Students use crowdsourcing, a problem-solving technique common in computer
           science, to complete a task together as a classroom more efficiently than
           if a student attempted it alone.
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: Ciutadania digital
         desc: Els alumnes exploren la diferència entre la informació privada i personal,
@@ -236,26 +217,22 @@
           an algorithm simple there are lots of ways to use it. If you want to make
           sure everyone ends up with the same thing, then your algorithm needs more
           detail.
-        video: C4_algoritmes_sense connexió
       EnvelopeVariables:
         title: Envelope Variables
         desc: Variables allow for a lot of freedom in computer science.  This lesson
           helps to explain what variables are and how we can use them in many different
           ways. Use this activity before (or in conjunction with) the lesson on abstraction
           to really hit the idea home.
-        video: C4_unplugged_variables
       MadGlibs:
         title: Mad Glibs
         desc: L'abstracció és una de les habilitats més importants que un programador
           científic ha d'entendre. Aquesta activitat tindrà els vostres alumnes analitzant
           les diferències en les històries de manera que puguin abstreure-les. Aquestes
           històries esdevenen plantilles divertides i noves.
-        video: C4_senseconnexió_madlibs
       ForLoopFun:
         title: For Loop Fun
         desc: Sabem que els bucles ens permeten fer coses una i altra vegada, però
           ara aprendrem com utilitzar els bucles amb una estructura extra a l'interior.
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Composició de cançons Amb Paràmetres
         desc: 'Una de les estructures més esplèndides en el món de la programació
@@ -263,7 +240,6 @@
           programes que pots utilitzar una i altra vegada dins d''un programa més
           gran. Aquesta unitat ajudarà als estudiants a entendre intuïtivament perquè
           combinant trossos de programació cap a funcions és un exercici tant útil.  '
-        video: C4_senseconnexió_paràmetres
       BinaryImages:
         title: Imatges binàries
         desc: Encara que molta gent pensa en el codi binari com a zeros i uns estrictament,
@@ -271,28 +247,46 @@
           en una àmplia varietat d'opcions binàries. Aquesta unitat porta aquesta
           idea un pas més enllà i il·lustra com un ordinador pot emmagatzemar més
           informació complexa (com ara imatges i colors) en binari, també.
-        video: C4_binari_senseconnexió
       VideoGamesCoordinatePlanes:
         title: Video Games and Coordinate Planes
         desc: Video Games and Coordinate Planes lesson description
-        video: alg_11_coordinate_plane
       Contracts:
         title: Contracts
         desc: Contracts unplugged lesson description
-        video: alg_5_contracts
       DesignRecipe:
         title: The Design Recipe
         desc: Design Recipe lesson description
-        video: alg_8_design_recipe
       Booleans:
         title: Veritat o fals
         desc: Unitat de descripció de veritat o fals
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Conditionals and Piecewise Functions
         desc: Descripció de la unitat de Condicionals i Funcions definides a trossos
-        video: alg_10_conditionals
       CollisionDetection:
         title: Collision Detection
         desc: Collision Detection lesson description
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: ''
+        desc: ''
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Activitat sense connexió
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Activitat sense connexió
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+          but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Activitat sense connexió
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Activitat sense connexió
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Activitat sense connexió
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Activitat sense connexió
+        desc: Today you will learn about what to do if someone is being mean online.

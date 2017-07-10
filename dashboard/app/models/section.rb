@@ -59,12 +59,13 @@ class Section < ActiveRecord::Base
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
 
-  # TODO(bjvanminnen): once we have a courses cache, we should create an accessor
-  # that takes advantage of that
-
   # Override default script accessor to use our cache
   def script
     Script.get_from_cache(script_id) if script_id
+  end
+
+  def course
+    Course.get_from_cache(course_id) if course_id
   end
 
   def workshop_section?
@@ -154,7 +155,7 @@ class Section < ActiveRecord::Base
   end
 
   # Provides some information about a section. This is consumed by our SectionsTable
-  # React component on the teacher homepage
+  # React component on the teacher homepage and student homepage
   def summarize
     base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
 
@@ -172,6 +173,7 @@ class Section < ActiveRecord::Base
     {
       id: id,
       name: name,
+      teacherName: teacher.name,
       linkToProgress: "#{base_url}#{id}/progress",
       assignedTitle: title,
       linkToAssigned: link_to_assigned,

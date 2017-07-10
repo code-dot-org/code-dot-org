@@ -2500,9 +2500,6 @@ Studio.reset = function (first) {
     hasThrownProjectile: false
   };
 
-  // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = Direction.EAST;
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2556,6 +2553,7 @@ Studio.reset = function (first) {
       // overridden as soon as we call setSprite
       visible: !level.spritesHiddenToStart
     });
+    Studio.lastMoveSingleDir = spriteStart.direction;
 
     var sprite = i % Studio.startAvatars.length;
 

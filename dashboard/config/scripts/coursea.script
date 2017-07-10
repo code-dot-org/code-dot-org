@@ -1,5 +1,3 @@
-login_required true
-
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 level 'courseB_story_unspottedBugs1'
@@ -133,8 +131,8 @@ level 'courseA_artist_loops9', challenge: true
 level 'courseA_artist_loops10'
 level 'courseA_artist_loops11'
 level 'courseA_artist_loops12'
-bonus 'courseA_artist_loops_challenge1', challenge: true
-bonus 'courseA_artist_loops_challenge2', challenge: true
+bonus 'courseA_artist_loops_challenge2'
+bonus 'courseA_artist_loops_challenge1'
 
 stage 'Events: The Big Event'
 level 'BigEvent'

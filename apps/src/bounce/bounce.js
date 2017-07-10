@@ -971,6 +971,9 @@ Bounce.reset = function (first) {
  */
 // XXX This is the only method used by the templates!
 Bounce.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Bounce.onPuzzleComplete();
+  }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.

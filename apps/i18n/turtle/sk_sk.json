@@ -75,6 +75,7 @@
   "penUp": "pero hore",
   "reinfFeedbackMsg": "Tu je tvoja kresba! Môžeš na nej ďalej pracovať alebo pokračovať na ďalšiu hádanku.",
   "setAlpha": "nastav alfa",
+  "setCharacter": "set character to {character}",
   "setColour": "nastav farbu",
   "setPattern": "nastav vzor",
   "setWidth": "nastav šírku",
@@ -90,6 +91,5 @@
   "turnTooltip": "Otočí maliara vľavo alebo vpravo o zadaný počet stupňov.",
   "turtleVisibilityTooltip": "Zviditeľní alebo skryje maliara.",
   "widthTooltip": "Zmení šírku pera.",
-  "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1."
 }

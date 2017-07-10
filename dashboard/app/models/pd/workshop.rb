@@ -139,7 +139,9 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
+    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
+    SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
   }.freeze
 
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
@@ -374,6 +376,7 @@ class Pd::Workshop < ActiveRecord::Base
         end
       end
       workshop.facilitators.each do |facilitator|
+        next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
         rescue => e

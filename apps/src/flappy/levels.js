@@ -565,3 +565,29 @@ module.exports.k1_9 = {
     eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
     eventBlock('when_run', setSpeedBlock)
 };
+
+// custom
+module.exports.custom = {
+  'requiredBlocks': [],
+  'obstacles': true,
+  'ground': true,
+  'score': true,
+  'freePlay': false,
+  'goal': {
+    successCondition: function () {
+      return (Flappy.gameState === Flappy.GameStates.OVER);
+    }
+  },
+  'scale': {
+    'snapRadius': 2
+  },
+  'toolbox':
+    tb(flapBlock + endGameBlock + incrementScoreBlock + playSoundBlock +
+      setSpeedBlock + setBackgroundBlock + setPlayerBlock),
+  'startBlocks':
+    eventBlock('flappy_whenClick', flapBlock) +
+    eventBlock('flappy_whenCollideGround', endGameBlock) +
+    eventBlock('flappy_whenCollideObstacle', endGameBlock) +
+    eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
+    eventBlock('when_run', setSpeedBlock)
+};

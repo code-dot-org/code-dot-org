@@ -75,6 +75,7 @@
   "penUp": "creionul sus",
   "reinfFeedbackMsg": "Aici este desenul dvs.! Continuaţi să lucrați la el sau continuați cu următorul puzzle.",
   "setAlpha": "setează alfa",
+  "setCharacter": "set character to {character}",
   "setColour": "setează culoarea",
   "setPattern": "setează model",
   "setWidth": "setează lăţimea",
@@ -90,6 +91,5 @@
   "turnTooltip": "Întoarce artistul la stânga în funcție de unghiul specificat.",
   "turtleVisibilityTooltip": "Face artistul vizibil sau invizibil.",
   "widthTooltip": "Modifică lăţimea creionului.",
-  "wrongColour": "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Imaginea ta are culoarea greşită.  Pentru acest puzzle, aceasta trebuie să fie de %1."
 }

@@ -3,6 +3,7 @@ import Radium from 'radium';
 import React from 'react';
 import { connect } from 'react-redux';
 import trackEvent from '../../util/trackEvent';
+var color = require("../../util/color");
 
 // TODO (elijah): have these constants shared w/dashboard
 const VOICES = {
@@ -46,29 +47,30 @@ const styles = {
 
   button: {
     'float': 'left',
+    backgroundColor: color.lightest_purple,
     border: 'none',
-    height: 32,
-    margin: 0,
     outline: 'none',
-    padding: 8,
     width: 33,
     boxSizing: 'border-box'
   },
 
   volumeButton: {
-    background: "#7664A0",
-    borderRadius: "100px 0px 0px 100px",
+    borderRadius: "4px 0px 0px 4px",
+    marginLeft: '3px',
   },
 
   playPauseButton: {
-    background: "#A69BC1",
-    borderRadius: "0px 100px 100px 0px",
+    borderRadius: "0px 4px 4px 0px",
+    marginRight: '3px',
   },
 
   buttonImg: {
     opacity: 1,
-    'float': 'left'
-  }
+    'float': 'left',
+    paddingRight: 8,
+    paddingLeft: 8,
+    color: '#4d575f'
+  },
 };
 
 const InlineAudio = React.createClass({
@@ -77,7 +79,8 @@ const InlineAudio = React.createClass({
     locale: React.PropTypes.string,
     textToSpeechEnabled: React.PropTypes.bool,
     src: React.PropTypes.string,
-    message: React.PropTypes.string
+    message: React.PropTypes.string,
+    style: React.PropTypes.object
   },
 
   componentWillUpdate: function (nextProps) {
@@ -169,22 +172,31 @@ const InlineAudio = React.createClass({
   render: function () {
     if (this.props.textToSpeechEnabled && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
       return (
-        <div className="inline-audio">
-          <div style={[styles.button, styles.volumeButton]}>
-            <img style={styles.buttonImg} src={this.props.assetUrl("media/common_images/volume.png")} />
-          </div>
-          <button style={[styles.button, styles.playPauseButton]} onClick={this.toggleAudio}>
-            <img
-              style={styles.buttonImg}
-              src={this.state.playing ?
-                this.props.assetUrl("media/common_images/pause.png") :
-                this.props.assetUrl("media/common_images/play.png")}
+        <div
+          className="inline-audio"
+          style={this.props.style && this.props.style.wrapper}
+        >
+          <div
+            style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button]}
+          >
+            <i
+              className={"fa fa-volume-up"}
+              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
             />
-          </button>
+          </div>
+          <div
+            className="playPause"
+            style={[styles.button, styles.playPauseButton, this.props.style && this.props.style.button]}
+            onClick={this.toggleAudio}
+          >
+            <i
+              className={this.state.playing ? "fa fa-pause" : "fa fa-play"}
+              style={[styles.buttonImg, this.props.style && this.props.style.buttonImg]}
+            />
+          </div>
         </div>
       );
     }
-
     return null;
   }
 });

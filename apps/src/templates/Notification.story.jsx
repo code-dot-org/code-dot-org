@@ -25,6 +25,18 @@ const warning = {
   dismissible: true
 };
 
+const findCourse = {
+  notice: "Find a course",
+  details: "Try new courses to add them to your homepage.",
+  dismissible: false
+};
+
+const announcement = {
+  notice: "Here is some news",
+  details: "Here are the details of the news.",
+  dismissible: false
+};
+
 export default storybook => {
   return storybook
     .storiesOf('Notification', module)
@@ -79,6 +91,32 @@ export default storybook => {
           <Notification
             type="warning"
             {...warning}
+          />
+        )
+      },
+      {
+        name: 'Find a Course',
+        description: `Notification box that displays when there is a warning`,
+        story: () => (
+          <Notification
+            type="course"
+            {...findCourse}
+            buttonText="Find a course"
+            buttonLink="/courses"
+          />
+        )
+      },
+      {
+        name: 'Announcement',
+        description: `Notification box that displays when there is an announcement`,
+        story: () => (
+          <Notification
+            type="bullhorn"
+            {...announcement}
+            buttonText="Learn more"
+            buttonLink="/"
+            newWindow={true}
+            analyticId="sample_announcement"
           />
         )
       },

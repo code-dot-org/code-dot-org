@@ -1189,7 +1189,7 @@
           Vytváření algoritmů, které umí ostatní pochopit, je opravdu důležité. To
           je důvod, proč každý krok musí být napsán tak, aby bez ohledu na to, kdo
           to dělá, výsledek byl stejný.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé,
@@ -1321,7 +1321,7 @@
         text: V tomto příkladu chceme říci, zda fialový květ má nektar větší než 0
           ke sběru nektaru. To vám řekne, zda naše včely sbírají nektar čím dál, tak
           dlouho, jak je to tam. Ta-dá!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Už jsi někdy slyšel o ladění programu? To je způsob, jak přijít na tom,

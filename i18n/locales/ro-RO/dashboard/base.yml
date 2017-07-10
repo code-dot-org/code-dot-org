@@ -9,11 +9,14 @@ ro:
     errors:
       messages:
         blank: "este necesar"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Numele afișat'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-mail'
+        personal_email: 'Personal email address'
         username: 'nume de utilizator'
         password: 'parolă'
         password_confirmation: 'Confirmarea parolei'
@@ -159,6 +162,8 @@ ro:
       instructions: "Introduceți adresa de email mai jos şi vă vom trimite instructiuni de resetare a parolei."
       email: 'Adresă de email'
       submit: 'Trimite'
+    reset_errors:
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Schimbă-ți parola'
       new_password: 'Parolă nouă'
@@ -200,61 +205,13 @@ ro:
   reports:
     error:
       access_denied: "Nu ai acces la statisticile de progress ale acestei persoane"
-  redeem_prizes:
-    title: 'Revendică Premii: %{name}'
-    provider: 'Furnizor:'
-    code: 'Cod:'
-    redeem_header: 'De revendicat:'
-    donorschoose_register: 'Înregistrează-te ca profesor pe DonorsChoose.org'
-    donorschoose_project: 'Postează un proiect'
-    donorschoose_how_to: 'Cum să-ți utilizezi codul'
-    success: 'Ți-ai revendicat cu succes premiul, vezi codul de mai jos.'
-    error: 'Premiul tău nu a putut fi revendicat, te rugăm să încerci din nou.'
-    error_us_only: 'Oferta de premii este valabilă doar pentru utilizatorii din Statele Unite.'
-    error_not_earned: 'Nu ai câștigat încă acest premiu.'
-    error_already_redeemed: 'Premiul tău a fost deja revendicat.'
-    no_prizes_available: "Ne pare rău, dar nu avem niciun premiu disponibil în prezent."
-    teacher_info_required: "Premiile pentru profesori necesită informații despre numele  și adresa școlii:"
-    teacher_email_required: "Premiile profesorilor necesită o adresă de email confirmată:"
-    confirm:
-      title: 'Te rugăm să confirmi'
-      'no': 'Nu'
-      'yes': 'Da'
-      msg: 'Ești sigur(ă) ca vrei să revendici premiul %{prize_name}?'
-      msg_student: 'NOTĂ: Poți să alegi doar unul din aceste premii.'
-      msg_publicschool: 'Te rugăm să confirmi că ești un profesor la o școală publică din SUA.'
-      msg_visit_website: 'Vizitează site-ul'
-    providers:
-      apple_itunes: '$10 iTunes Gift Card'
-      donors_choose: 'DonorsChoose.org $750 credit'
-      donors_choose_bonus: 'DonorsChoose.org $250 credit'
-      dropbox: '10GB de spațiu pe Dropbox'
-      valve: 'Portal 2 (PC or Mac game download)'
-      ea_bejeweled: 'Bejeweled 3 (PC game download)'
-      ea_fifa: 'FIFA Soccer 13 (PC game download)'
-      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
-      ea_pvz: 'Plants vs. Zombies (PC game download)'
-      skype: '$10 Skype credit'
-    msg:
-      choose: 'Alege un premiu:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 'Ai câştigat un premiu! (Numai pentru studenţii din SUA)'
-      not_earned_title: 'Termină tutorial-ul și câştigă premii (valabil doar pentru studenţii din S.U.A)'
-      not_earned: 'Învață toate conceptele de informatică, colectează toate %{num_trophies} trofee, şi câştigă premii reale. Poţi alege între 10GB de spaţiu gratuit pe Dropbox, $10 în credit pe Skype, şi descărcări gratuite de jocuri. Notă: Ofertă valabilă numai pentru studenţii din SUA, şi numai atât timp cât încă mai sunt pe stoc.'
-      teacher:
-        earned: '15 sau mai mulți studenţii au colectat toate %{num_trophies} trofee. Ai câștigat un premiu pentru profesor! (Numai pentru profesorii din SUA)'
-        not_earned_title: 'Predai clasei tale și câştigi până la $1000 în <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credite (doar pentru profesorii din SUA)'
-        not_earned: 'Ca răsplată pentru profesorii de informatică nou veniți, poți câștiga până la 1.000$ in credite la <a href="http://DonorsChoose.org"> DonorsChoose.org</a> pentru coordonarea unei clase prin cursul introductiv K-8. Pentru a te califica, trebuie să găzduiești cu succes o clasă de cel puțin 15 studenți de-a lungul întregului curs de introducere K-8, cu toți cei 15 studenți (sau mai mulți) completând toate tutorialele și câștigând toate %{num_trophies} trofee. În cazul în care 7 sau mai mulți dintre studenții care câștigă toate trofeele sunt fete, atunci răsplata ta este de $1.000 în credite la <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>. În caz contrar, răsplata ta este de $750 în credite la <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>. Creditele de la <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> pot fi utilizate numai de profesori din școlile de stat din SUA.'
-        bonus:
-          not_earned_title: 'Încă mai poţi câştiga $250 adiționali în <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> credite (doar pentru profesorii din SUA)'
-          earned: '7 sau mai mulți dintre studenții care au completat toate cele  %{num_trophies} trofee sunt fete. Ai câștigat un premiu bonus! (numai pentru profesorii din SUA)'
-          not_earned: 'Dacă cel puțin 7 dintre studenții care câștigă toate %{num_trophies} trofee sunt fete, atunci recompensa ta este suplimentată cu $250 în credite la <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>. Creditele de pe <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> pot fi utilizate numai de profesori din școlile de stat din SUA.'
   crud:
     new_model: '%{model} nou'
     show: 'Arată'
     edit: 'Editează'
     edit_model: 'Editează %{model}'
     update: 'Actualizează'
+    submit: 'Trimite'
     destroy: 'Distruge'
     back: 'Înapoi'
     confirm: 'Eşti sigur(ă)?'
@@ -271,13 +228,48 @@ ro:
         artist: 'Desenează ceva'
         calculate: 'Calculate something'
         applab: 'Creează o aplicație'
+        gamelab: 'Make a Game Lab project'
+      home: "Home"
+      courses: "cursuri"
+      project_gallery: "Project Gallery"
+      sections: "Sections"
+      help_support: "Help and support"
+      report_bug: "Report bug"
+      teacher_community: "Teacher community"
+      professional_learning: "Professional Learning"
+      documentation: "Documentation"
+      tutorials: "Tutorials"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Oră de Programare"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "About Us"
+      about_leadership: "Leadership"
+      about_donors: "Donors"
+      about_partners: "Partners"
+      about_team: "Full Team"
+      about_news: "Newsroom"
+      about_evaluation: "Evaluation"
+      about_jobs: "Jobs"
+      about_contact: "Contact Us"
+      about_faqs: "FAQs"
+      learn: "Learn"
+      stats: "Statistici"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
     user:
       classroom: 'Pagina de Start a Profesorilor'
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
       label: 'Salut %{username}'
       stats: 'Atelierul de programare'
       settings: 'Contul meu'
-      prizes: 'Premii'
       logout: 'Deloghează-te'
       signin: 'Loghează-te'
       signup: 'Creează un cont'
@@ -337,6 +329,10 @@ ro:
     deleted_user: 'utilizator şters'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Finalizat'
     tried: 'Încercat'
@@ -407,6 +403,9 @@ ro:
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
     announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
+    announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
+    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
+    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_cant_be_current_section: "Secţiunea curentă nu poate fi la fel ca o secţiune nouă."
@@ -526,6 +525,11 @@ ro:
     gallery:
       title: "Galerie"
       body: "Vizualizează o galerie de imagini pentru aplicații și artiști, create de utilizatorii noștri"
+    gamelab:
+      title: "Game Lab (beta)"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Vârste 13 +"
+      cta: "Află cum"
     frozen:
       title: "Frozen"
     starwars:
@@ -544,6 +548,14 @@ ro:
       audience: "Vârsta +4 ani"
       body: "Am alcătuit o listă de lecţii offline pentru a le putea utiliza în clasa ta. Acum puteti preda fundamentele programarii, fie dacă aveţi computere în clasă sau nu! Încercaţi să utilizaţi aceste lecţii ca un curs de sine stătător sau ca lecţii complementare pentru orice curs de informatică."
       body_short: "Daca nu ai calculatoare, încearcă aceste lecţii offline în clasa ta."
+    unplugged_conditionals:
+      title: "Condiţionale"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+    widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Ages 14+"
+      cta: "Află cum"
   gallery:
     students_drew_these_with_code: "Elevii au realizat aceste desene prin programare!"
     students_made_these_with_code: "Elevii au creat acestea cu secvențe de cod!"
@@ -565,7 +577,7 @@ ro:
     support: "Obţine ajutor"
     support_url: "//support.code.org"
     help_resources: "Ajutor şi resurse"
-    help_support: "Help and Support"
+    help_support: "Help and support"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:
@@ -645,6 +657,11 @@ ro:
     print: "Tipărire"
     reminder_desc: 'Am actualizat <a href="%{tos_url}" target="_blank"> Termenii</a> şi <a href="%{privacy_url}" target="_blank"> Politica de confidenţialitate</a>. Vă rugăm să citiţi acestea cu atenţie înainte de a le accepta. Reţineţi că instrumentele noastre de predare JavaScript pot fi disponibile pentru studenţii dumneavoastră înainte de a accepta în mod explicit actualizarea de termeni.'
     review_terms: "Revedeţi termenii actualizati"
+  school_info_interstitial:
+    title: "We want to bring Computer Science to every student - help us track our progress!"
+    message: "Please enter your school information below."
+    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    save: "Salvează"
   race_interstitial:
     title: 'Optional: Ajuta-ne sa urmarim progresul fata de imbunatatirea nivelului diversitatii in domeniu.'
     message: "Va rog sa ne spuneti rasa dvs"
@@ -690,6 +707,9 @@ ro:
     delete: "Șterge"
     exit: "Revenire la curs"
     my_projects: "Proiectele mele"
+    project_gallery: "Project Gallery"
+    publish: "Publish"
+    unpublish: "Unpublish"
     share: "Distribuie"
     share_title: Ditribuie proiectul tău
     share_copy_link: "Copiază link-ul:"
@@ -697,6 +717,7 @@ ro:
     share_u13_warning: "Cere profesorului tău înainte de partajare. Partajaţi numai cu alţii în şcoala dumneavoastră."
     embed: "Încorporat"
     advanced_share: "Afişaţi opţiunile avansate"
+    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "Închide"
     more: "Mai mult"
     name: "Nume"
@@ -704,6 +725,7 @@ ro:
     project_type: "Tip de proiect"
     help_text: "Fă clic <strong>Creează o aplicație</strong>sau<strong>Desenează ceva</strong>pentru a realiza un nou laborator de joc sau proiect artistic<br/>Poți reveni și lucra la proiectele tale oricând."
     need_help: "Incearca acesta cursuri daca I nevoie de ajutor pentru a incepe noul tau proiect"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'Șterge?'
     delete_yes: 'Da'
     delete_no: 'Nu'
@@ -762,16 +784,6 @@ ro:
     icon_library:
       search_placeholder_text: 'Cauta o pictograma...'
       no_icons_found: 'Nu s-au găsit icons'
-    playzone:
-      artist_description: 'Desenează poze şi proiecte mişto cu Artistul!'
-      artist_title: 'Desen nou'
-      continue_button: 'Du-te la etapa următoare'
-      playlab_description: 'Creează o poveste sau fă un joc cu Laboratorul de Joacă!'
-      playlab_title: 'Aplicatie noua'
-      primary_header: 'Felicitări! Ai terminat %{stageName}!'
-      projects_description: 'Reviziteaza unul dintre proiectele existente.'
-      projects_title: 'Deschideţi un proiect'
-      secondary_header: 'Intreaba-ti profesorul ce să faci în continuare'
   flex_category:
     required: 'Prezentare generală'
     content: 'Conţinut'
@@ -782,6 +794,31 @@ ro:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csd1_1: 'Chapter 1: The Problem Solving Process'
+    csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
+    csd3_1: 'Chapter 1: Images and Animations'
+    csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de Code.org.
@@ -852,6 +889,7 @@ ro:
   locked_stage: 'Conţinutul de acest stadiu nu este vizibil deoarece aceasta etapa este blocată momentan. Profesorul poate debloca acest stadiu atunci când este timpul să lucrezi la el sau de a revizui raspunsurile.'
   hidden_stage: "Profesorul tău nu se așteaptă sa fii aici. Te rugăm întreabă-l ce lecție ar trebui să urmezi."
   return_course_overview: 'Mergi la unitatea de ansamblu'
+  view_all_units: 'View all units'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -881,3 +919,4 @@ ro:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

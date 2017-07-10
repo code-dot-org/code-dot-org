@@ -75,6 +75,7 @@
   "penUp":"Узми оловку",
   "reinfFeedbackMsg":"Овде је Ваш цртеж! Наставите да радите на њему или наставите даље.",
   "setAlpha":"поставите алфа",
+  "setCharacter":"set character to {character}",
   "setColour":"постави боју",
   "setPattern":"поставите шаблон",
   "setWidth":"постави ширину",

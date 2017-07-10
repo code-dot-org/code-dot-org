@@ -696,7 +696,7 @@
         C1_playlab_storytelling: Play Lab - Buat sebuah Cerita
         C1_planting_seed: Penanaman benih
         C1_building_foundation: Membangun dasar
-        C1_going_places_safely: Pergi ke tempat dengan aman
+        C1_going_places_safely: Pergi ke tempat-tempat dengan aman
         C2_maze_intro: Apa itu Labirin?
         C2_artist_intro: Introduksi Artis
         C2_zuck_repeat_loop: Pengulangan labirin
@@ -750,7 +750,17 @@
         C4_unplugged_forloops: Untuk Pengulangan
         C4_unplugged_parameters: Penulisan lagu dengan Parameter
         C4_unplugged_binary: Biner
+        CSF_artist_angles: Angles in Artist
+        CSF_collector_k1_blocks: 'CS Fundamentals: The Collector'
+        CSF_collector_repeat_loops: Collector Repeat Loops
+        CSF_collector_text_blocks: 'CS Fundamentals: The Collector'
+        CSF_create_functions: Create Functions
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_EF_cs_matters: Computer Science Matters
+        CSF_maze_intro_k1_blocks: Intro to Code Studio
+        CSF_maze_intro_text_blocks: Intro to Code Studio
+        CSF_my_robotic_friends: Teman-teman robot saya
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
@@ -764,6 +774,8 @@
         infinity_playlab_intro: Play Lab - Pendahuluan
         infinity_playlab_events: Play Lab - Kegiatan
         infinity_playlab_repeat_forever: Play Lab - ulangi selamanya
+        csd_concept_computer: What Makes a Computer, a Computer?
+        csd_concept_search: How Search Works
         csd_gamelab_animation_tab: The Animation Tab
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2

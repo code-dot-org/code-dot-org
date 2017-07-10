@@ -75,6 +75,7 @@
   "penUp": "kynä ylös",
   "reinfFeedbackMsg": "Tässä on piirustuksesi! Jatka työstämistä sen parissa tai siirry seuraavaan tehtävään.",
   "setAlpha": "aseta läpinäkymättömyys",
+  "setCharacter": "set character to {character}",
   "setColour": "aseta väri",
   "setPattern": "määritä malli",
   "setWidth": "aseta leveys",
@@ -90,6 +91,5 @@
   "turnTooltip": "Kääntää taiteilijaa vasemmalle tai oikealle annetun astemäärän.",
   "turtleVisibilityTooltip": "Tekee taiteilijasta näkyvän tai näkymättömän.",
   "widthTooltip": "Muuttaa kynän paksuutta.",
-  "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Kuvasi on väärän värinen. Tässä tehtävässä sen pitää olla %1."
 }

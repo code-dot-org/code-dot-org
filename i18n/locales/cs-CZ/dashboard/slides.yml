@@ -747,7 +747,7 @@ cs:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Když chceme udělat čokoládu, existuje mnoho velkých kroků k tomuto procesu. Každý z těchto velkých kroků má řadu menších kroků a existují různé předpisy nebo algoritmy podle toho, jak chceme, aby čokoláda chutnala. Každý krok je důležitý, a to i ty malé, takže bez jednoho kroku, nelze zbytek dokončit. Vytváření algoritmů, které umí ostatní pochopit, je opravdu důležité. To je důvod, proč každý krok musí být napsán tak, aby bez ohledu na to, kdo to dělá, výsledek byl stejný."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Zatím jsi udělal animaci nebo příběh, který dělá přesně to samé, pokaždé, když ji spustíš. Nyní můžeš vytvořit interaktivní hry, které můžeš skutečně hrát."
@@ -823,7 +823,7 @@ cs:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "V tomto příkladu chceme říci, zda fialový květ má nektar větší než 0 ke sběru nektaru. To vám řekne, zda naše včely sbírají nektar čím dál, tak dlouho, jak je to tam. Ta-dá!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Už jsi někdy slyšel o ladění programu? To je způsob, jak přijít na tom, co nefunguje. Při ladění kódu, určuješ a odstraňuje chyby."

@@ -627,9 +627,9 @@
         0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know
           how many. Which blocks correctly check and collect all of the nectar from
           a purple flower?"
-        1: :Một bông hoa tím có thể có 3,2 hoặc một nhị hoa, nhưng bạn không thể biết
-          được chính xác nó có bao nhiêu. Khối nào sau đây kiểm tra và lấy đúng số
-          nhị hoa trong mỗi bông hoa tím?
+        1: ":Một bông hoa tím có thể có 3,2 hoặc một nhị hoa, nhưng bạn không thể
+          biết được chính xác nó có bao nhiêu. Khối nào sau đây kiểm tra và lấy đúng
+          số nhị hoa trong mỗi bông hoa tím?"
         Bee Conditionals Multiple Choice: 'Ong - Cấu trúc rẽ nhánh: Chọn câu trả lời
           đúng'
         Choose the best blocks.: Chọn các khối tốt nhất.

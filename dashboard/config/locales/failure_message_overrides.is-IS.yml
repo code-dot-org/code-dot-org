@@ -2,141 +2,117 @@
   data:
     failure_message_overrides:
       Code Studio Puzzle Challenge 1 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 10 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 10b - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 11 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 12 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 13 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 14 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 2 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 3 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 4 - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 5 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 6 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 7 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 8 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge 9 - Bee_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
       Code Studio Puzzle Challenge Var - Artist_failure_message_override: |-
-        Nice attempt!
-        Try again to get it right.
-      Course 4 Artist Vars 10_failure_message_override: |-
-        Make sure you use the sides
-        variable!
-      Course 4 Playlab For Loops 4b_failure_message_override: |-
-        Remember, both characters
-        should get to their flags in the same number of moves!
-      Course 4 Playlab For Loops 5b_failure_message_override: |-
-        Remember, both characters
-        need to stop in the same place.
-      Eval Strings Images .2_failure_message_override: |-
-        Make sure you append the
-        string "Universe" to make the code create "Hello, Universe"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
-      MC HOC 2016 Level 1_failure_message_override: |-
-        To go on, you’ll need to collect
-        wool. To collect the wool, use the arrow keys to walk to the sheep and then
-        press the spacebar or click the game to shear the sheep. And, don’t forget
-        to add the “Drop Wool” block to your code.
-      MC HOC 2016 Level 2-2_failure_message_override: |-
-        Use `move forward` and `turn`
-        commands to get your chicken moving.
-      MC HOC 2016 Level 2_failure_message_override: |-
-        Use Move Forward and Turn commands
-        to get your chicken moving.
-      MC HOC 2016 Level 3_failure_message_override: |-
-        Use a `forever do` block and
-        `move forward` and `turn` commands to keep your chicken wandering.
-      MC HOC 2016 Level 4_failure_message_override: |-
-        If the chickens are all moving
-        in the same direction, use `turn random` to make the chickens turn randomly
-        left or right.
-      MC HOC 2016 Level 5_failure_message_override: |-
-        Try using 'Forever Do' with
-        'Move a Step Toward the Player'.
-      MC HOC 2016 Level 6_failure_message_override: |-
-        Use the `spawn zombie` command
-        under `when night` to spawn at least three zombies. Then, add `move a step
-        toward player` to their `when spawned` event with a loop to help them chase
-        you. If they’re too fast, add a `wait` command to slow them down.
-      MC HOC 2016 Level 7_failure_message_override: |-
-        Did you forget a step? The cow
-        needs to get to the pasture AND give milk.
-      MC HOC 2016 Level 8_failure_message_override: |-
-        You need to use the exploding
-        Creeper to blow up the wall so you can reach your sheep.
-      MC HOC 2016 Level 9_failure_message_override: |-
-        Oh No! You need to stop ALL
-        of the zombies in order to save the village. Get the Iron Golem to help you!
-      MC HOC 2016 Nerop_failure_message_override: |-
-        To go on, you’ll need to collect
-        wool. To collect the wool, use the arrow keys to walk to the sheep and then
-        press the spacebar or click the game to shear the sheep. And, don’t forget
-        to add the “Drop Wool” block to your code.
-      MC HOC 2016 New Drop_failure_message_override: |-
-        Use the arrow keys to walk
-        to the sheep and press space bar or click the game board to use the sheep.
-        And, don’t forget to add the 'Drop' block to your code.
-      MC HOC 2016 New Spawn_failure_message_override: |-
-        Place `spawn sheep` under
-        `when run`.
-      MC HOC 2016 New Walk_failure_message_override: |-
-        To open the door, press the
-        space bar or touch the game board while facing it. Walk inside to continue.
-      MC HOC 2016 New pn_failure_message_override: |-
-        To go on, you’ll need to collect
-        wool. To collect the wool, use the arrow keys to walk to the sheep and then
-        press the spacebar or click the game to shear the sheep. And, don’t forget
-        to add the “Drop Wool” block to your code.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: |-
-        If you're having trouble
-        tagging 5 Golems, try changing the score to 2 per tag.
-      MC HOC 2016 Village Test_failure_message_override: |-
-        You need to make the Iron
-        Golem chase and attack the zombies to win.
-      WhileAdventure_failure_message_override: |-
-        Congratulations!  You gathered X
-        coins!
-      courseE_playLab_scaffold3_failure_message_override: |-
-        You must add two or more
-        new actors to your game and program them to move.
-      grade4_scaffolded_project3_failure_message_override: |-
-        You must add two or more
-        new actors that move to your game.
-      kikiTesta_failure_message_override: Congratulations!  You gathered X coins!
-      sample1_failure_message_override: Congratulations!  You gathered X coins!
-      sample4_failure_message_override: Congratulations!  You gathered X coins!
-      sample6_failure_message_override: |-
-        Not quite.  Keep trying!  [Move to Play
-        Zone]
-      sample8_failure_message_override: Congratulations!  You gathered X coins!
+        Góð tilraun!
+        Reyndu aftur til að láta þetta takast.
+      Course 4 Artist Vars 10_failure_message_override: Gættu þess að nota breytuna
+        fyrir hliðar!
+      Course 4 Playlab For Loops 4b_failure_message_override: Mundu, báðir leikmenn
+        ættu að ná flöggunum með sama fjölda hreyfinga!
+      Course 4 Playlab For Loops 5b_failure_message_override: Mundu, báðir leikmenn
+        eiga að stoppa á sama stað.
+      Eval Strings Images .2_failure_message_override: Gættu þess að bæta við strengnum
+        "Universe" til að láta kóðann búa til "Hello, Universe"
+      Kiki_StarWars_Test_5_failure_message_override: Leik lokið!
+      Kiki_StarWars_Test_5_Example_failure_message_override: Leik lokið!
+      MC HOC 2016 Level 1_failure_message_override: Til að geta haldið áfram þarft
+        þú að safna ull. Safnaðu ull með því að nota örvarlyklana til að fara til
+        kindarinnar og ýttu svo á bilslána eða smelltu á leikinn til að rýja kindina.
+        Og gleymdu ekki að bæta kubbnum "Gefa ull" í kóðann þinn.
+      MC HOC 2016 Level 2-2_failure_message_override: Notaðu "færa áfram" og "snúa"
+        skipanir til að hreyfa hænuna.
+      MC HOC 2016 Level 2_failure_message_override: Notaðu Færa áfram og Snúa skipanir
+        til að hreyfa hænuna.
+      MC HOC 2016 Level 3_failure_message_override: Notaðu "gera endalaust" kubb og
+        "færa áfram" og "snúa" skipanir til að halda hænunni á hreyfingu.
+      MC HOC 2016 Level 4_failure_message_override: Ef hænurnar færast allar í sömu
+        átt, getur þú notað "snúa eitthvert" til að láta hænurnar snúa af handahófi
+        til hægri eða vinstri.
+      MC HOC 2016 Level 5_failure_message_override: Prófaðu að nota "Gera endalaust"
+        með "Færast skref í átt að leikmanni".
+      MC HOC 2016 Level 6_failure_message_override: Notaðu "kveikja uppvakning" undir
+        "þegar nótt" til að kveikja a.m.k. þrjá uppvakninga. Bættu svo "færa skref
+        í átt að leikmanni" skipun við "þegar kviknar" atburð þeirra með lykkju svo
+        þeir elti þig. Ef þeir fara of hratt, getur þú bætt við "bíða" skipun til
+        að hægja á þeim.
+      MC HOC 2016 Level 7_failure_message_override: Gleymdir þú einhverju? Kýrin þarf
+        að komast í hagann OG gefa mjólk.
+      MC HOC 2016 Level 8_failure_message_override: "Þú þarft að láta laumupúkann
+        sprengja vegginn svo að þú komist til kindarinnar."
+      MC HOC 2016 Level 9_failure_message_override: "Ó nei! Þú verður að stöðva ALLA
+        uppvakningana til að bjarga þorpinu. Fáðu járnþursinn til að hjálpa þér!"
+      MC HOC 2016 Nerop_failure_message_override: Til að geta haldið áfram þarft þú
+        að safna ull. Safnaðu ull með því að nota örvarlyklana til að fara til kindarinnar
+        og ýttu svo á bilslána eða smelltu á leikinn til að rýja kindina. Og gleymdu
+        ekki að bæta kubbnum "Gefa ull" í kóðann þinn.
+      MC HOC 2016 New Drop_failure_message_override: Notaðu örvarlyklana til að ganga
+        að kindinni og ýttu á bilslána eða smelltu á leikjaborðið til að nýta hana.
+        Og gleymdu ekki að bæta "Gefa" kubbnum við kóðann þinn.
+      MC HOC 2016 New Spawn_failure_message_override: Settu "kveikja kind" undir "þegar
+        keyrt".
+      MC HOC 2016 New Walk_failure_message_override: Dyrnar opnast ef þú snýrð að
+        þeim og ýtir á bilslána eða snertir leikjaborðið. Gakktu inn fyrir til að
+        halda áfram.
+      MC HOC 2016 New pn_failure_message_override: Til að geta haldið áfram þarft
+        þú að safna ull. Safnaðu ull með því að nota örvarlyklana til að fara til
+        kindarinnar og ýttu svo á bilslána eða smelltu á leikinn til að rýja kindina.
+        Og gleymdu ekki að bæta kubbnum "Gefa ull" í kóðann þinn.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Ef þú átt erfitt með að snerta
+        5 járnþursa, getur þú prófað að breyta skorinu í 2 fyrir hverja snertingu.
+      MC HOC 2016 Village Test_failure_message_override: Til að vinna þarft þú að
+        láta járnþursinn elta og ráðast á uppvakinganna.
+      WhileAdventure_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      courseE_playLab_scaffold3_failure_message_override: "Þú verður að bæta tveimur
+        eða fleiri nýjum leikmönnum við leikinn og forrita þá svo þeir hreyfist."
+      grade4_scaffolded_project3_failure_message_override: "Þú verður að bæta í leikinn
+        tveimur eða fleiri nýjum leikmönnum sem hreyfast."
+      kikiTesta_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      sample1_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      sample4_failure_message_override: Til hamingju! Þú safnaðir X peningum!
+      sample6_failure_message_override: Ekki alveg, Haltu áfram að reyna! [Fara á
+        leiksvæðið]
+      sample8_failure_message_override: Til hamingju! Þú safnaðir X peningum!

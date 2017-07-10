@@ -74,7 +74,7 @@ function loadStories() {
   require('./about');
   require('./colors');
 
-  var sidecarContext = require.context("../src/", true, /\.story\.jsx$/);
+  var sidecarContext = require.context("../src/", true, /\.story\.jsx?$/);
   sidecarContext.keys().forEach(key => {
     var module;
     try {

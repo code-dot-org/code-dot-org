@@ -45,17 +45,19 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.node, null);
   });
 
-  it('renders with white background when only visible for teachers', () => {
+  it('renders with dashed border when only visible for teachers', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
         lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
       />
     );
-    assert.equal(wrapper.props().style.background, color.white);
+    assert.equal(wrapper.props().style.background, color.lightest_gray);
+    assert.equal(wrapper.props().style.borderWidth, 4);
+    assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with white background when section is locked', () => {
+  it('renders with dashed border when section is locked', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -63,7 +65,9 @@ describe('ProgressLesson', () => {
         lessonLockedForSection={() => true}
       />
     );
-    assert.equal(wrapper.props().style.background, color.white);
+    assert.equal(wrapper.props().style.background, color.lightest_gray);
+    assert.equal(wrapper.props().style.borderWidth, 4);
+    assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
   it('disables bubbles when section is locked', () => {
@@ -78,7 +82,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, true);
   });
 
-  it('renders with white background locked for individual student', () => {
+  it('renders with dashbed border when locked for individual student', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -87,7 +91,9 @@ describe('ProgressLesson', () => {
         levels={defaultProps.levels.map(level => ({...level, status: LevelStatus.locked}))}
       />
     );
-    assert.equal(wrapper.props().style.background, color.white);
+    assert.equal(wrapper.props().style.background, color.lightest_gray);
+    assert.equal(wrapper.props().style.borderWidth, 4);
+    assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
   it('renders with gray background when section is lockable but unlocked', () => {

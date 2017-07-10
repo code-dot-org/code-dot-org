@@ -14,7 +14,7 @@ ko:
         'Farmer': '농부'
         'Unplug6': '조건/선택'
         'Artist3': '화가3'
-        'Unplug7': '작곡'
+        'Unplug7': '노래 만들기'
         'Farmer2': '농부2'
         'Unplug8': '추상화'
         'Artist4': '화가4'
@@ -114,10 +114,10 @@ ko:
         'turtle_2_4': "자 이제, 더 멋진 것을 만들어 봅시다. 100 픽셀 크기의 사각형 36개를 10 도씩 회전시켜서 그리는 코드로 수정하면 됩니다. 힌트: 더 빨리 움직이게 하려면 슬라이더를 이용하세요."
         'turtle_2_5': "50, 60, 70, 80, 90 픽셀 크기의 정사각형들을 그려보세요. \"사각형 그리기\" 함수 블럭을 5 번 사용면 됩니다."
         'turtle_2_6': "이번에는 사각형들을 그리기 위해서 카운터를 사용해 봅시다. 한 변의 길이가 카운터와 같은 사각형들을 그려야 합니다. \"카운터\" 블럭을 사용하세요. 힌트: 변수 분류에 들어있습니다."
-        'turtle_2_7': "여기 나선형을 그리는 프로그램이 있습니다. 하지만 블럭을 사용할 수 없어서 동작하지 않습니다. 동일한 모양의 나선형을 그리기 위해 \"for\" (반복) 와 \"counter\" (변수) 블럭을 사용해서 새로운 프로그램을 만들어보세요"
+        'turtle_2_7': "달팽이 나선을 그리는 프로그램이 있는데, 블록들이 사용가능하지 않게 되어서 제대로 동작하지 않고 있습니다. (반복 카테고리에 있는) \"for 반복\" 블록과 (변수 카테고리에 있는) \"카운터\" 블록을 사용해 똑같은 달팽이 나선을 그릴 수 있는 새로운 프로그램을 만들어보세요."
         'turtle_2_7_5': "이번에는 \"눈사람 그리기\" 함수가 있습니다.(함수 분류에 있음) 크기가 250, 100 인 눈사람 2개를 만들어 보세요."
         'turtle_2_8': "이번에는 잘 생각해야 합니다. \"눈사람 그리기\" 함수와, 동작 분류에 있는 \"앞으로 점프\" 블럭을 사용하세요. 3 개의 눈사람을 서로 다른 색으로 100 픽셀 만큼씩 띄워 그려보세요."
-        'turtle_2_9': "\"for\" 반복문을 사용해서 높이가 110, 100, 90, 80 그리고 70 인 눈사람을 그려보세요. 눈사람은 60픽셀씩 떨어져 있어야 합니다"
+        'turtle_2_9': "\"for 반복\" 블럭을 사용해, 110, 100, 90, 80, 70 크기의 눈사람 가족을 만드세요. 눈사람들은 60 픽셀씩 떨어져 있어야 합니다."
         'turtle_2_10': "이번에는 다양한 달팽이 나선을 그리는 연습을 해보세요. 회전하는 비율을 바꾸면 어떻게 될까요? 반복 실행 구조에서 랜덤 색으로 바꾸면 어떻게 될까요? 아무거나 그려보세요."
         'maze_karel_2_1': "밭에 있는 모든 흙더미와 구덩이를 없앨 수 있게 도와 주세요. \"반복\" 블럭을 활용하면 블럭을 여러 번 사용할 필요가 없습니다. 힌트: 반복 블럭 안에 다른 반복 블럭을 넣을 수 있습니다."
         'maze_karel_2_2': "\"메우기 5번\"이라는 블럭을 새로 만들어 \"함수\" 분류에 넣어 두었습니다. 그걸 이용해서 구덩이를 메울 수 있게 도와주세요."
@@ -158,22 +158,22 @@ ko:
         'maze_3_2': "초록 돼지를 잡을 수 있도록, 프로그램을 만들어줘."
         'maze_3_3': "어떻게 해야 초록 돼지를 잡을 수 있지? TNT 폭탄이 있는 곳으로는 갈 수 없어!"
         'maze_3_4': "아~~~! TNT 폭탄을 피해서 초록 돼지를 잡을 수 있게 해 줘."
-        'bounce_1_basketball': "블럭을 \"when left arrow\" 블럭에 연결하고 \"Run\" 을 눌러보세요. 목표물에 도착할때까지 왼쪽방향키로 손을 움직여보세요."
-        'bounce_2_basketball': "블럭을 \"when right arrow\" 와 \"when left arrow\" 블럭에 연결하세요. 양쪽의 목표물에 도착할때까지 손을 움직여보세요."
-        'bounce_5_basketball': "공을 손을 향에 날려보낼 겁니다. 공이 깃발에 도달하는지 확인하기 위해 블럭을 \"when ball hits hand\" 블럭에 연결합니다."
-        'bounce_6_basketball': "이제 깃발이 가장 위에 있습니다. 퍼즐을 풀기위해 블럭들을 양쪽의 \"when ball hits\" 블럭에 연결해야 합니다."
-        'bounce_7_basketball': "블럭들을 각각의 \"when\" 블럭에 연결하세요. 깃발에 때릴 때까지 공을 튕기세요"
-        'bounce_10_basketball': "이제 목표가 가장 위에 있습니다. \"score point\" 와 \"score opponent point\" 블럭을 \"when ball in goal\" 과 \" when ball misses hand\" 블럭에 연결하세요. 상대가 점수를 두번 내기전에 몇점을 낼수 있는지 알아보세요."
-        'bounce_11_basketball': "이제 블럭을 \"when run\" 블럭에 연결할 수 있습니다. 새로운 \"throw new ball\" 블럭을 한군데 이상 연결해야 합니다. 그리고 손의 속도와 배경을 변경해보고, 상대방이 점수를 두번 내기 전에 몇점을 낼 수 있는지 알아보세요"
-        'bounce_12_basketball': "자신만의 농구게임을 만드세요. 모든 규칙을 변경할 수 있습니다. 설정이 완료 되면, 당신의 친구들이 게임을 시작할 수 있도록 Finish 버튼을 클릭하세요"
-        'bounce_1_sports': "깃발로 획득하세요! 플레이어를 깃발로 이동하기 위해 블럭을 \"when left arrow\" 블럭에 연결하고 \"Run\" 을 누르세요"
-        'bounce_2_sports': "두개의 깃발이 있습니다. 플레이어가 양방향으로 움직일 수 있도록 블럭을 \"when left arrow\" 와 \"when right arrow\" 블럭에 연결하세요."
-        'bounce_5_sports': "하키퍽이 플레이어를 향해 날아갑니다. 깃발을 때리기 위해 블럭을 \"when ball hits player\" 블럭에 연결하세요."
-        'bounce_6_sports': "이제 깃발이 가장 위에 있습니다. 퍼즐을 풀기위해 블럭들을 양쪽의 \"when ball hits\" 블럭에 연결해야 합니다."
-        'bounce_7_sports': "블럭들을 각각의 \"when\" 블럭에 연결하세요. 깃발에 때릴 때까지 공을 튕기세요"
-        'bounce_10_sports': "이제 목표가 가장 위에 있습니다. \"score point\" 와 \"score opponent point\" 블럭을 \"when ball in goal\" 과 \" when ball misses hand\" 블럭에 연결하세요. 상대가 점수를 두번 내기전에 몇점을 낼수 있는지 알아보세요!"
-        'bounce_11_sports': "이제 블럭을 \"when run\" 블럭에 연결할 수 있습니다. 새로운 \"throw new ball\" 블럭을 한군데 이상 연결해야 합니다. 그리고 손의 속도와 배경을 변경해보고, 상대방이 점수를 두번 내기 전에 몇점을 낼 수 있는지 알아보세요"
-        'bounce_12_sports': "자신만의 게임을 만들어보세요! 당신은 이 게임의 주인: 당신은 모든 규칙을 만들 수 있고, 스포츠들을 창조적으로 조합할 수 있습니다. 완료되면 Finish 버튼을 클릭해서 당신의 친구들이 게임을 시작할수 있도록 하세요."
+        'bounce_1_basketball': "\"왼쪽 방향키가 눌렸을 때\" 블록에 다른 블록을 붙인 후, \"실행하기\"를 눌러 보세요. 왼쪽 방향키를 사용해 목표 지점까지 손을 이동시켜 보세요."
+        'bounce_2_basketball': "\"오른쪽 방향키가 눌렸을 때\", \"왼쪽 방향키가 눌렸을 때\" 블럭에 다른 블럭을 붙인 후, 양쪽의 목표 지점까지 손을 이동시켜 보세요."
+        'bounce_5_basketball': "손을 향해 공을 아래로 내려보낼 것입니다. \"공이 손에 닿으면\" 블럭을 붙여 공이 깃발에 닿는 것을 확인할 수 있게 해보세요."
+        'bounce_6_basketball': "이제 깃발이 가장 위에 있습니다. 이 퍼즐을 풀기 위해서는 \"공이 닿으면\" 블록의 양쪽에 블록들을 붙여야 합니다."
+        'bounce_7_basketball': "\"~할 때\" 블록에 다른 블록들을 붙여보세요. 깃발에 닿을 때까지 공이 튀기도록 해보세요."
+        'bounce_10_basketball': "이번 목표지점은 위쪽입니다! \"내 점수 올리기\", \"상대 점수 올리기\" 블록을 붙여, \"공이 들어갔을 때\", \"공이 손을 벗어났을 때\" 블록으로 게임을 만들어 보세요. 상대방 점수가 내 점수의 2배가 되기 전까지 얼마나 많은 점수를 얻을 수 있는지 해보세요."
+        'bounce_11_basketball': "이제 \"프로그램을 실행하면\" 블럭에 다른 블럭들을 붙일 수 있습니다. 새로운 \"새 공 넣기\" 블럭을 한 군데 이상 붙여야 합니다. 그리고 배경도 바꾸어 보고, 상대방 캐릭터의 점수가 2배가 되지 않도록 손의 스피드를 바꿔 보세요."
+        'bounce_12_basketball': "농구 게임을 직접 만들어보세요. 모든 규칙을 마음대로 바꿀 수 있습니다. 게임을 완성하면 만든 게임을 친구들이 스마트폰에서 직접해 볼 수 있도록 마침을 누르세요."
+        'bounce_1_sports': "깃발을 잡으세요! \"왼쪽 방향키를 누르면\" 블록에 다른 블록을 붙이고, \"실행하기\"를 눌러 깃발로 이동시키세요."
+        'bounce_2_sports': "이번에는 두 개의 깃발이 있습니다! \"왼쪽 방향키를 누르면\" 블록과 \"오른쪽 방향키를 누르면\" 블록에 다른 블록을 붙여 두 가지 방향으로 움직일 수 있도록 해보세요."
+        'bounce_5_sports': "하키퍽이 플레이어를 향해 아래쪽으로 날라갑니다! \"공이 플레이어에 맞으면\" 블록을 붙여 깃발을 맞춰보세요."
+        'bounce_6_sports': "이제 깃발이 가장 위에 있습니다. 이 퍼즐을 풀기 위해서는 \"공이 닿으면\" 블록의 양쪽에 블록들을 붙여야 합니다."
+        'bounce_7_sports': "\"~할 때\" 블록에 다른 블록들을 붙여보세요. 깃발에 닿을 때까지 공이 튀기도록 해보세요."
+        'bounce_10_sports': "이번 목표지점은 위쪽입니다! \"내 점수 올리기\", \"상대 점수 올리기\" 블록을 붙여, \"공이 들어갔을 때\", \"공이 손을 벗어났을 때\" 블록으로 게임을 만들어 보세요. 상대방 점수가 내 점수의 2배가 되기 전까지 얼마나 많은 점수를 얻을 수 있는지 해보세요."
+        'bounce_11_sports': "이제 \"프로그램을 실행하면\" 블럭에 다른 블럭들을 붙일 수 있습니다. 새로운 \"새 공 넣기\" 블럭을 한 군데 이상 붙여야 합니다. 그리고 배경도 바꾸어 보고, 상대방 캐릭터의 점수가 2배가 되지 않도록 손의 스피드를 바꿔 보세요."
+        'bounce_12_sports': "게임을 직접 만들어보세요. 모든 것을 마음대로 할 수 있습니다: 모든 규칙들을 바꿀 수 있고, 여러\n 가지 스포츠게임들을 창의적으로 섞을 수 있습니다! 게임을 완성하면 만든 게임을 친구들이 스마트폰에서 직접해 볼 수 있도록 마침을 누르세요."
         'bounce_1': "\"왼쪽 방향키가 눌렸을 때\" 블럭에 다른 블럭을 붙인 후, \"실행하기\"를 눌러 보세요. 왼쪽 방향키를 사용해 목표 지점까지 이동시켜 보세요."
         'bounce_2': "\"오른쪽 방향키가 눌렸을 때\", \"왼쪽 방향키가 눌렸을 때\" 블럭에 다른 블럭을 붙인 후, 양쪽의 목표 지점까지 이동시켜 보세요."
         'bounce_3': "\"위쪽 방향키가 눌렸을 때\" 을 비슷하게 사용해 보세요. 위쪽 목표 지점까지 이동시켜 보세요."
@@ -181,7 +181,7 @@ ko:
         'bounce_5': "공을 아래로 내려보낼 것입니다. \"라켓에 닿으면\" 블럭을 붙여 공이 목표지점에 도착하게 만들어 보세요."
         'bounce_6': "이번 목표지점은 가장 위쪽 입니다. \"공이 부딪치면\"블럭을 사용해 퍼즐을 해결해 보세요."
         'bounce_7': "\"~할 때\" 블럭에 블럭들을 붙여보세요. 목표 지점에 닿을 때까지 공이 튀기도록 해보세요. "
-        'bounce_10': "이제 목표가 가장 위에 있습니다. \"score point\" 와 \"score opponent point\" 블럭을 \"when ball in goal\" 과 \" when ball misses hand\" 블럭에 연결하세요. 상대가 점수를 두번 내기전에 몇점을 낼수 있는지 알아보세요!"
+        'bounce_10': "이번 목표지점은 위쪽입니다! \"내 점수 올리기\", \"상대 점수 올리기\" 블록을 붙여, \"공이 들어갔을 때\", \"공이 라켓을 벗어났을 때\" 블록으로 게임을 만들어 보세요. 상대방 점수가 내 점수의 2배가 되기 전까지 얼마나 많은 점수를 얻을 수 있는지 해보세요."
         'bounce_11': "\"프로그램을 실행하면\" 블럭에 다른 블럭들을 붙일 수 있습니다. 새로운 \"새 공 만들기\" 블럭을 한 군데 이상 붙여야 합니다. 그리고 배경도 바꾸어 보고, 상대방 케릭터의 점수가 2배가 되지 않도록 케릭터의 스피드를 바꿔 보세요."
         'bounce_12': "바운스 게임을 직접 만들어보세요. 화면에 보이는 것들과 규칙을 마음대로 바꿀 수 있습니다. 게임을 완성하면 만든 게임을 친구들이 스마트폰에서 직접해 볼 수 있도록 마침을 누르세요."
         'Custom_builder': "왼쪽의 도구 블럭 상자에서 오른쪽의 코딩창으로 블럭들을 끌어와서 원하는 레벨을 만드세요. 모두 준비가 되면 \"실행하기\"를 누르면 됩니다."
@@ -396,10 +396,20 @@ ko:
         'C4_unplugged_forloops': '반복을 위한'
         'C4_unplugged_parameters': '매개변수를 사용하는 음악 작곡'
         'C4_unplugged_binary': '2진'
-        'CSF_EF_cs_matters': '컴퓨터 공학 문제'
+        'CSF_artist_angles': 'Angles in Artist'
+        'CSF_collector_k1_blocks': 'CS Fundamentals: The Collector'
+        'CSF_collector_repeat_loops': 'Collector Repeat Loops'
+        'CSF_collector_text_blocks': 'CS Fundamentals: The Collector'
+        'CSF_create_functions': '함수 만들기'
+        'CSF_debugging_k1_blocks': 'Debugging'
+        'CSF_debugging_text_blocks': 'Debugging'
+        'CSF_EF_cs_matters': '컴퓨터과학(정보과학) 문제들'
+        'CSF_maze_intro_k1_blocks': 'Code Studio 소개'
+        'CSF_maze_intro_text_blocks': 'Code Studio 소개'
+        'CSF_my_robotic_friends': '내 로봇 친구'
         'CSF_stevie_big_project': '스티비와 큰 프로젝트'
         'CSF_unspotted_bugs': 'Unspotted Bugs'
-        'CSF_zuck_loops_short': 'Repeat Loops'
+        'CSF_zuck_loops_short': '반복 루프'
         'frozen_intro': 'Hour of Code 소개'
         'frozen_loops': '반복(Loop) 소개'
         'frozen_functions': '함수(Function) 소개'
@@ -410,18 +420,20 @@ ko:
         'infinity_playlab_intro': '플레이 랩 - 소개'
         'infinity_playlab_events': '플레이 랩 - 이벤트'
         'infinity_playlab_repeat_forever': '플레이 랩 - 무한 반복'
+        'csd_concept_computer': 'What Makes a Computer, a Computer?'
+        'csd_concept_search': 'How Search Works'
         'csd_gamelab_animation_tab': '애니메이션 탭'
         'csd_gamelab_draw_1': 'Drawing in Game Lab - Part 1'
         'csd_gamelab_draw_2': 'Drawing in Game Lab - Part 2'
         'csd_gamelab_drawloop': 'Introduction to the Draw Loop'
         'csd_gamelab_sprites_1': 'Introduction to Sprites'
         'csd_gamelab_sprites_2': 'Animating Sprites'
-        'csd_gamelab_velocity': 'Velocity'
-        'csd_weblab_intro_1': 'Intro to Web Lab - Part 1'
-        'csd_weblab_intro_2': 'Intro to Web Lab - Part 2'
-        'csd_weblab_css_1': 'Intro to CSS - Part 1'
-        'csd_weblab_css_2': 'Intro to CSS - Part 2'
-        'csd_weblab_intro_3': 'Intro to Web Lab - Part 3'
+        'csd_gamelab_velocity': '속도'
+        'csd_weblab_intro_1': '웹 연구소 소개 - 파트 1'
+        'csd_weblab_intro_2': '웹 연구소 소개 - 파트 2'
+        'csd_weblab_css_1': 'CSS(스타일시트) 소개 - 파트 1'
+        'csd_weblab_css_2': 'CSS(스타일시트) 소개 - 파트 2'
+        'csd_weblab_intro_3': '웹 연구소 소개 - 파트 3'
         'csp_applab_objects': 'Introduction to Objects'
         'csp_applab_databases_1': 'Introduction to Databases - Part 1'
         'csp_applab_databases_2': 'Introduction to Databases - Part 2'

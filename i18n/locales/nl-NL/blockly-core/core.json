@@ -376,7 +376,7 @@
   "TEXT_TRIM_OPERATOR_BOTH":"verwijder spaties van beide kanten",
   "TEXT_TRIM_OPERATOR_LEFT":"verwijder spaties van de linkerkant",
   "TEXT_TRIM_OPERATOR_RIGHT":"verwijder spaties aan de rechterkant",
-  "TEXT_TRIM_TOOLTIP":"Geeft een kopie van de tekst nadat de spaties verwijderd werden aan 1 of beide kanten.",
+  "TEXT_TRIM_TOOLTIP":"Geef een kopie van de tekst terug waaruit spaties aan 1 of beide einden verwijderd zijn.",
   "UNUSED_CODE":"Ongebruikte code",
   "VARIABLES_DEFAULT_NAME":"onderdeel",
   "VARIABLES_GET_CREATE_SET":"Maak 'verander %1'",

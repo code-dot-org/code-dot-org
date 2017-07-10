@@ -5,6 +5,7 @@
 #  id                       :integer          not null, primary key
 #  studio_person_id         :integer
 #  email                    :string(255)      default(""), not null
+#  parent_email             :string(255)
 #  encrypted_password       :string(255)      default("")
 #  reset_password_token     :string(255)
 #  reset_password_sent_at   :datetime
@@ -58,6 +59,7 @@
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
 #  index_users_on_invitations_count                    (invitations_count)
 #  index_users_on_invited_by_id                        (invited_by_id)
+#  index_users_on_parent_email                         (parent_email)
 #  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
 #  index_users_on_purged_at                            (purged_at)
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
@@ -112,6 +114,9 @@ class User < ActiveRecord::Base
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
     ui_tip_dismissed_teacher_courses
+    oauth_refresh_token
+    oauth_token
+    oauth_token_expiration
   )
 
   # Include default devise modules. Others available are:
@@ -176,6 +181,8 @@ class User < ActiveRecord::Base
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  after_create :associate_with_potential_pd_enrollments
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -509,7 +516,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -543,6 +550,19 @@ class User < ActiveRecord::Base
       end
       user.gender = normalize_gender auth.info.gender
     end
+
+    if auth.credentials
+      if auth.credentials.refresh_token
+        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+      end
+
+      omniauth_user.oauth_token = auth.credentials.token
+      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
+
+      omniauth_user.save if omniauth_user.changed?
+    end
+
+    omniauth_user
   end
 
   def oauth?
@@ -595,6 +615,13 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  # True if the account is teacher-managed and has any sections that use word logins.
+  # Will not be true if the user has a password or is only in picture sections
+  def secret_word_account?
+    return false unless teacher_managed_account?
+    sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
@@ -1256,6 +1283,13 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  # Users who might otherwise have orphaned accounts should have the option
+  # to create personal logins (using e-mail/password or oauth) so they can
+  # continue to use our site without losing progress.
+  def can_create_personal_login?
+    teacher_managed_account? # once parent e-mail is added, we should check for it here
+  end
+
   def teacher_managed_account?
     return false unless student?
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
@@ -1316,9 +1350,10 @@ class User < ActiveRecord::Base
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
+    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(5).join
+
     self.name = nil
-    # The latter part yields a random string of length five from the characters 0 to 9 and a to z.
-    self.username = "#{SYSTEM_DELETED_USERNAME}_#{rand(36**5).to_s(36)}"
+    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
     self.current_sign_in_ip = nil
     self.last_sign_in_ip = nil
     self.email = ''
@@ -1332,5 +1367,13 @@ class User < ActiveRecord::Base
     self.purged_at = Time.zone.now
 
     save!
+  end
+
+  def associate_with_potential_pd_enrollments
+    if teacher?
+      Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
+        enrollment.update(user: self)
+      end
+    end
   end
 end

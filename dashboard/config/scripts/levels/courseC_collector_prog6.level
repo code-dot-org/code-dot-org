@@ -31,13 +31,15 @@
     "ideal": "11",
     "instructions_important": "false",
     "min_collected": "3",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Can you figure out what is going wrong?  \\n\\nTry using the \\\"Step\\\" button to find errors by running your code line by line.\",\"hint_id\":\"courseC_collector_prog6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd16f0e0fb04fd44e4426a6555296e87/courseC_collector_prog6.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Can you figure out what is going wrong?  \\n\\nTry using the \\\"Step\\\" button to find errors by running your code line by line.\",\"hint_id\":\"courseC_collector_prog6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd16f0e0fb04fd44e4426a6555296e87/courseC_collector_prog6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There are many paths you can use to collect all of the treasure. Don't be afraid to try more than one to find the shortest solution.\",\"hint_id\":\"courseC_collector_prog6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9bc0c1bcc9361e402062c74e5451f57e/courseC_collector_prog6.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "All blocks already attached, but some in wrong order. How do you fix?",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:14:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

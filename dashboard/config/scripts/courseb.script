@@ -1,5 +1,3 @@
-login_required true
-
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 level 'courseB_story_unspottedBugs1'

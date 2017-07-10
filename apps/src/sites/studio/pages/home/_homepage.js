@@ -13,7 +13,7 @@ function showHomepage() {
   const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
-  const isTeacher = !!homepageData.sections;
+  const isTeacher = homepageData.isTeacher;
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
@@ -54,8 +54,9 @@ function showHomepage() {
               heading: i18n.announcementHeading(),
               buttonText: i18n.learnMore(),
               description: i18n.announcementDescription(),
-              link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
-              image: "redesign-screencast"
+              link: "http://teacherblog.code.org/post/162400738379/ap-cs-principles-score-distributions-released-from",
+              image: "",
+              id: "ap_csp_scores_2017"
             }
           ]}
           courses={homepageData.courses}
@@ -67,6 +68,11 @@ function showHomepage() {
       {!isTeacher && (
         <StudentHomepage
           courses={homepageData.courses}
+          studentTopCourse={homepageData.studentTopCourse}
+          sections={homepageData.sections}
+          canLeave={homepageData.canLeave}
+          codeOrgUrlPrefix={homepageData.codeorgurlprefix}
+          isRtl={isRtl}
         />
       )}
     </div>,

@@ -42,7 +42,7 @@
   "filterHeaderTutorialCountSingle": "1 výsledek",
   "filterHeaderTutorialCountPlural": "{tutorial_count} výsledky",
   "filterHeaderDefault": "Seřadit",
-  "filterHeaderDisplayWeight": "Nejlépe hodnocené",
+  "filterHeaderDisplayWeight": "Doporučené",
   "filterHeaderPopularityRank": "Nejoblíbenější",
   "roboticsButtonText": "Zobrazit robotickou činnost",
   "roboticsText": "Máte roboty? Využijte toho a vytvořte konkrétní Hodinu kódu pro studenty každého věku!",
