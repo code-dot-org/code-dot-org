@@ -540,5 +540,9 @@
   "whenRun": "عند التشغيل",
   "withoutHints": "بدون استخدام أي تلميحات! ",
   "workspaceHeaderShort": "مساحة العمل: ",
-  "yes": "نعم"
+  "yes": "نعم",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

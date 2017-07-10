@@ -540,5 +540,9 @@
   "whenRun": "suoritettaessa",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Työtila: ",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

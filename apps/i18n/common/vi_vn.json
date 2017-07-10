@@ -540,5 +540,9 @@
   "whenRun": "Khi chạy",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Không gian làm việc:",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

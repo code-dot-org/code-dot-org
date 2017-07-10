@@ -540,5 +540,9 @@
   "whenRun": "実行した時",
   "withoutHints": "ヒントを使わずにできました！",
   "workspaceHeaderShort": "ワークスペース：",
-  "yes": "はい"
+  "yes": "はい",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

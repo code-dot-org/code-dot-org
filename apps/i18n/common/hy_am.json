@@ -540,5 +540,9 @@
   "whenRun": "երբ կսկսի",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "խաղային տարածք",
-  "yes": "այո"
+  "yes": "այո",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

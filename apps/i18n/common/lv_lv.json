@@ -540,5 +540,9 @@
   "whenRun": "kad izpilda",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Darba virsma: ",
-  "yes": "Jā"
+  "yes": "Jā",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }
