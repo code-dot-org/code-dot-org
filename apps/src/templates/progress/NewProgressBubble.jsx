@@ -54,6 +54,9 @@ const styles = {
     marginLeft: 2,
     marginRight: 2
   },
+  tooltip: {
+    lineHeight: DOT_SIZE + 'px',
+  },
   tooltipIcon: {
     paddingRight: 5,
     paddingLeft: 5
@@ -114,8 +117,10 @@ const NewProgressBubble = React.createClass({
           wrapper="span"
           effect="solid"
         >
-          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-          {levelName}
+          <div style={styles.tooltip}>
+            <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+            {number}. {levelName}
+          </div>
         </ReactTooltip>
       </div>
     );
