@@ -30,6 +30,5 @@ module.exports = {
     "jQuery": true,
     "IN_UNIT_TEST": true,
     "IN_STORYBOOK": true,
-    "BUILD_STYLEGUIDE": true
   }
 };
