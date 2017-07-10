@@ -541,6 +541,7 @@
   "withoutHints": "没使用任何提示！",
   "workspaceHeaderShort": "工作区域",
   "yes": "是",
+  "currentUnit": "Current unit:",
   "findLocalClassHeading": "Find a local computer science class",
   "findLocalClassSubheading": "Local classes",
   "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
