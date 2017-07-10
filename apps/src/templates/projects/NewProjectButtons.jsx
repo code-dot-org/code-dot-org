@@ -57,31 +57,25 @@ const styles = {
 // Renders a static list of project types. V2 of this component will have
 // configurable project types.
 const NewProjectButtons = React.createClass({
-  renderButtons() {
-    // Using absolute URLs to get this working in storybook.
-    return  (
-      <div>
-        {
-          DEFAULT_PROJECT_TYPES.slice(0,4).map((object, index) => (
-            <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
-              <a href={"/p/" + object.type + "/new"}>
-                <img style={styles.thumbnail} src={"http://studio.code.org/shared/images/fill-70x70/courses/logo_" + object.type + ".png"} />
-                <span style={styles.label}>
-                  {object.label}
-                </span>
-              </a>
-            </div>
-          ))
-        }
-      </div>
-    );
-  },
-
   render() {
+    // Using absolute URLs to get this working in storybook.
     return (
       <div style={styles.fullsize}>
         <div style={styles.description}>{i18n.projectStartNew()}</div>
-        {this.renderButtons()}
+        <div>
+          {
+            DEFAULT_PROJECT_TYPES.slice(0,4).map((object, index) => (
+              <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
+                <a href={"/p/" + object.type + "/new"}>
+                  <img style={styles.thumbnail} src={"http://studio.code.org/shared/images/fill-70x70/courses/logo_" + object.type + ".png"} />
+                  <span style={styles.label}>
+                    {object.label}
+                  </span>
+                </a>
+              </div>
+            ))
+          }
+        </div>
       </div>
     );
   }

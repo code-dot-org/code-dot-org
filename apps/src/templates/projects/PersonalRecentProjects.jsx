@@ -9,10 +9,6 @@ const styles = {
   grid: {
     width: '100%'
   },
-  link: {
-    color: color.light_teal,
-    paddingLeft: 30
-  },
   card: {
     display: "inline-block",
     paddingTop: 10,
@@ -39,29 +35,23 @@ const ProjectCardGrid = React.createClass({
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   },
 
-  renderProjectCardList(projectList) {
-    return  (
-      <div>
-        {
-          projectList && projectList.slice(0,4).map((project, index) => (
-            <div key={index} style={[styles.card, index < 3 && styles.cardPadding]}>
-              <ProjectCard
-                projectData={project}
-                currentGallery={'personal'}
-                hideActions={true}
-              />
-            </div>
-          ))
-        }
-      </div>
-    );
-  },
-
   render() {
     return (
       <div style={styles.grid}>
         <div style={styles.description}>{i18n.projectsContinueWorking()}</div>
-        {this.renderProjectCardList(this.props.projectList)}
+        <div>
+          {
+            this.props.projectList && this.props.projectList.slice(0,4).map((project, index) => (
+              <div key={index} style={[styles.card, index < 3 && styles.cardPadding]}>
+                <ProjectCard
+                  projectData={project}
+                  currentGallery={'personal'}
+                  hideActions={true}
+                />
+              </div>
+            ))
+          }
+        </div>
       </div>
     );
   }
