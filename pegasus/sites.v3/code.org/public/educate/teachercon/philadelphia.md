@@ -17,7 +17,7 @@ TeacherCon Philadelphia
 
 TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
 
-### **Travel & Hotel Information**
+## **Travel & Hotel Information**
 <details>
   <summary>**Hotel Information**</summary>
   <p>
@@ -45,6 +45,17 @@ TeacherCon accomodations as well as all conference sessions will take place at:
   <p>
   <br>
 If you choose to drive to TeacherCon instead of fly, and are driving over 25 miles one-way, you will receive a $150 gift card at the end of August to help cover the cost of mileage. **No additional reimbursements will be provided for driving**.
+</p>
+ <p>
+How to get here: For detailed driving instructions, please look up the hotel address in your preferred navigation app or GPS when planning your route.
+</p>
+<p>
+Where to park: Philadelphia Marriott Downtown offers several parking options. 
+
+* 24-hour on-site valet parking rate: $53.90/day 
+* LIMITED ONSITE PARKING during special events and weekends: $63.70/day
+
+For less expensive parking options, we recommend that you [check this website](https://www.parkwhiz.com/philadelphia-marriott-downtown-parking/) for off-site parking locations and rates.
 </p>
 </details>
 

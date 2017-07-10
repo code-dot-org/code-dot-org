@@ -1,6 +1,6 @@
 import React from 'react';
-import FontAwesome from '../FontAwesome';
-import color from "../../util/color";
+import FontAwesome from './FontAwesome';
+import color from "../util/color";
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
