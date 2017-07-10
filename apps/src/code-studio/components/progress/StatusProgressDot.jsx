@@ -1,4 +1,5 @@
-// TODO: rename file now that it wraps ProgressBubble instead of dot
+// TODO(bjvanminnen): once progressBubbles is no longer an experiment, we should
+// rename this file (as it will not be a wrapper around ProgressDot)
 
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
@@ -67,6 +68,8 @@ export const StatusProgressDot = React.createClass({
     }
 
     if (experiments.isEnabled('progressBubbles')) {
+      // Determine whether this is the bubble for our current level, in which case
+      // it will be full sized.
       const onCurrent = currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
         level.uid === currentLevelId);
