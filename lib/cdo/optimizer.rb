@@ -69,7 +69,7 @@ module Cdo
     end
 
     # Increment OPTIMIZE_VERSION to change the cache key.
-    OPTIMIZE_VERSION = 2
+    OPTIMIZE_VERSION = 3
 
     def self.cache_key(data)
       "optimize-#{OPTIMIZE_VERSION}-#{Digest::MD5.hexdigest(data)}"

@@ -540,5 +540,10 @@
   "whenRun": "실행하면",
   "withoutHints": "힌트 전혀 없이!",
   "workspaceHeaderShort": "작업 영역: ",
-  "yes": "예"
+  "yes": "예",
+  "currentUnit": "Current unit:",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

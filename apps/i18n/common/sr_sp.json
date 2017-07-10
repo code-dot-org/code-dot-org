@@ -540,5 +540,10 @@
   "whenRun": "Када кренеш",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Радни простор: ",
-  "yes": "Да"
+  "yes": "Да",
+  "currentUnit": "Current unit:",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

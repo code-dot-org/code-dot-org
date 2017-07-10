@@ -33,6 +33,16 @@ def disallow_case_change
   end
 end
 
+def disallow_state_pdf
+  `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.split("\n").each do |line|
+    next unless %r{pegasus/sites.v3/code.org/public/advocacy/state-facts/..\.pdf$} =~ line
+    STDERR.puts "\nAborting because state pdf generation appears to be in progress:\n\n    #{line}\n\n"
+    STDERR.puts "Please wait 10 minutes and then try again.\n\n"
+    `git reset HEAD`
+    exit 1
+  end
+end
+
 def check_changes
   if `git status --porcelain --untracked-files=all #{CONTENT_PATHS}`.empty?
     puts "There are no unstaged or untracked files to commit."
@@ -40,6 +50,7 @@ def check_changes
   end
 
   disallow_case_change
+  disallow_state_pdf
 
   system("git status --untracked-files=all #{CONTENT_PATHS}")
   print "Should I commit and push all of these unstaged and untracked files in pegasus and dashboard? [Y/n] "
