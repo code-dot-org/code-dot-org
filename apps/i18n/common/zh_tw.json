@@ -540,5 +540,10 @@
   "whenRun": "當運行時",
   "withoutHints": "完全沒有使用提示！",
   "workspaceHeaderShort": "工作區：",
-  "yes": "是"
+  "yes": "是",
+  "currentUnit": "Current unit:",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class"
 }

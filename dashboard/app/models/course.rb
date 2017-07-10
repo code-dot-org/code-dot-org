@@ -123,15 +123,16 @@ class Course < ApplicationRecord
     info
   end
 
-  # TODO(bjvanminnen): figure out/test caching
   # Get the set of valid courses for the dropdown in our sections table. This should
   # be static data, but contains localized strings so we can only cache on a per
   # locale basis
   def self.valid_courses
-    Course.
-      all.
-      select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
-      map(&:assignable_info)
+    Rails.cache.fetch("valid_courses/#{I18n.locale}") do
+      Course.
+        all.
+        select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
+        map(&:assignable_info)
+    end
   end
 
   def summarize
