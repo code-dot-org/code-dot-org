@@ -276,7 +276,7 @@ class DashboardSection
     # only do this query once because in prod we only change scripts
     # when deploying (technically this isn't true since we are in
     # pegasus and scripts are owned by dashboard...)
-    if @@script_cache.key?(script_cache_key) && !rack_env(:levelbuilder)
+    if @@script_cache.key?(script_cache_key) && !rack_env?(:levelbuilder)
       return @@script_cache[script_cache_key]
     end
 
@@ -292,7 +292,7 @@ class DashboardSection
         select(:id, :name, :hidden).
         all.
         map {|script| assignable_info(script, script[:hidden])}
-    @@script_cache[script_cache_key] = scripts unless rack_env(:levelbuilder)
+    @@script_cache[script_cache_key] = scripts unless rack_env?(:levelbuilder)
     scripts
   end
 
@@ -303,7 +303,7 @@ class DashboardSection
   def self.valid_courses
     course_cache_key = I18n.locale.to_s
 
-    if @@course_cache.key?(course_cache_key) && !rack_env(:levelbuilder)
+    if @@course_cache.key?(course_cache_key) && !rack_env?(:levelbuilder)
       return @@course_cache[course_cache_key]
     end
 
@@ -315,7 +315,7 @@ class DashboardSection
       # Only return courses we've whitelisted in ScriptConstants
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
       map {|course| assignable_info(course)}
-    @@course_cache[course_cache_key] = courses unless rack_env(:levelbuilder)
+    @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
     courses
   end
 
