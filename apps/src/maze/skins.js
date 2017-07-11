@@ -67,6 +67,12 @@ var CONFIGS = {
     collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
+    dirtSound: true,
+    digSound: 'get_gem_2.mp3',
+    fillSound: 'fill.mp3',
+
+    walkSound: 'walk.mp3',
+
     look: '#000',
     transparentTileEnding: true,
     nonDisappearingPegmanHittingObstacle: true,
