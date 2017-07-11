@@ -70,7 +70,10 @@ class LoginTypeCard extends Component {
 
   render() {
     const { title, subtitle, description, buttonText, link, isRtl } = this.props;
-    const cardStyle = isRtl ? {...styles.card, ...styles.rtlCard} : styles.card;
+    const cardStyle = {
+      ...styles.card,
+      ...(isRtl && styles.rtlCard),
+    };
 
     return (
       <div style={cardStyle}>
