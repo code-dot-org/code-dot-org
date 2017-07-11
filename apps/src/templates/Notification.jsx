@@ -3,6 +3,7 @@ import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressButton from "./progress/ProgressButton";
+import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
 const NotificationType = {
@@ -19,7 +20,7 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     height: 72,
-    width: 970,
+    width: styleConstants['pegasus-content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
     float: 'left'

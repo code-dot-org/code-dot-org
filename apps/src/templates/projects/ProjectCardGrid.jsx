@@ -4,13 +4,14 @@ import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";
 import {connect} from 'react-redux';
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
 
 const styles = {
   grid: {
-    width: 970
+    width: styleConstants['pegasus-content-width']
   },
   link: {
     color: color.light_teal,

@@ -1,11 +1,12 @@
 import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   section: {
-    width: 970,
+    width: styleConstants['pegasus-content-width'],
     backgroundColor: color.white,
     borderStyle: 'dashed',
     borderWidth: 5,

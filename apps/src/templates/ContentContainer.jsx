@@ -1,6 +1,7 @@
 import React from 'react';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
+import styleConstants from '../styleConstants';
 
 // ContentContainer provides a full-width container which will render whatever
 // children are passed to it. The component is useful for creating clear,
@@ -8,9 +9,11 @@ import color from "../util/color";
 // functionality of a heading and the option to show a link. You can find an
 // example of its use on studio.code.org/home.
 
+const pegasusContentWidth = styleConstants['pegasus-content-width'];
+
 const styles = {
   box: {
-    width: 970,
+    width: pegasusContentWidth,
   },
   heading: {
     paddingRight: 10,
@@ -20,7 +23,7 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: 970
+    width: pegasusContentWidth
   },
   description: {
     paddingRight: 10,

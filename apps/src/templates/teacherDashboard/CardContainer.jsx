@@ -1,8 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import styleConstants from '../../styleConstants';
 
 const style = {
   root: {
-    width: 970,
+    width: styleConstants['pegasus-content-width'],
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',

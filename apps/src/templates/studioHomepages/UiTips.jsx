@@ -10,6 +10,7 @@ import React from 'react';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
 import _ from 'lodash';
+import styleConstants from '../../styleConstants';
 import trackEvent from '../../util/trackEvent';
 
 const UiTips = React.createClass({
@@ -43,7 +44,7 @@ const UiTips = React.createClass({
       showInitialTips: showInitialTips,
       tipsShowing: tipsShowing,
       showingDialog: showingDialog,
-      mobileWidth: $(window).width() <= 970
+      mobileWidth: $(window).width() <= styleConstants['pegasus-content-width']
     };
   },
 
@@ -149,7 +150,7 @@ const UiTips = React.createClass({
   },
 
   onResize() {
-    this.setState({mobileWidth: $(window).width() <= 970});
+    this.setState({mobileWidth: $(window).width() <= styleConstants['pegasus-content-width']});
   },
 
   render() {
