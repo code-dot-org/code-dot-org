@@ -35,8 +35,8 @@
     "y": "70",
     "markdown_instructions": "Let's build something bigger, one step at a time!  \r\n\r\nUse the `jump to 200 over 200 down` to get the artist to the center of the play area, then use the `draw a sticker` block to make a bird appear. ",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the first block you will need:\\n\\n![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)\",\"hint_id\":\"courseC_artist_loops1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ddaead4d058f071b3556fb5b8e603aa6/courseC_artist_loops1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to draw the sticker!\\n\\n![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)\",\"hint_id\":\"courseC_artist_loops1a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/64dc6bf594bb5da0538fdc14c8d6cf65/courseC_artist_loops1a.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the first block you will need:\\n\\n![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)\",\"hint_id\":\"courseC_artist_loops1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ddaead4d058f071b3556fb5b8e603aa6/courseC_artist_loops1a.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to draw the sticker!\\n\\n![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)\",\"hint_id\":\"courseC_artist_loops1a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/64dc6bf594bb5da0538fdc14c8d6cf65/courseC_artist_loops1a.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

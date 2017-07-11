@@ -75,17 +75,22 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ = 
       return;
     }
 
-    var funcName = $(blockHoverDiv).attr('title');
+    const funcName = $(blockHoverDiv).attr('title');
 
-    var hoverDivWidth = $(blockHoverDiv).width();
-    var hoverDivLeftToToolboxRight = $('.droplet-palette-canvas').width() -
-      parseInt(blockHoverDiv.style.left, 10);
-    var desiredXPosition = Math.min(hoverDivWidth, hoverDivLeftToToolboxRight);
-    var tooltipOffsetX = desiredXPosition - hoverDivWidth;
+    const hoverDivRect = blockHoverDiv.getBoundingClientRect();
+    const toolboxRight = $('.droplet-palette-scroller').width();
+    const offsetX = Math.min(hoverDivRect.width, toolboxRight);
 
-    var configuration = Object.assign({}, DEFAULT_TOOLTIP_CONFIG, {
+    // Vertically center the tooltip on the block it belongs to.
+    //
+    // The direction of the offsetY input to tooltipster appears to be inverted
+    // such that increasing offsetY moves the tooltip up.
+    const offsetY = -(hoverDivRect.height / 2) + 2;
+
+    const configuration = Object.assign({}, DEFAULT_TOOLTIP_CONFIG, {
       content: this.getTooltipHTML(funcName),
-      offsetX: tooltipOffsetX,
+      offsetX,
+      offsetY,
       functionReady: function (_, contents) {
         if (!this.showExamplesLink) {
           return;
