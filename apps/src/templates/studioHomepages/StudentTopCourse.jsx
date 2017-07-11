@@ -10,14 +10,14 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 200,
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     float: 'left',
     marginBottom: 20,
     background: color.white,
   },
   image: {
     position: 'absolute',
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     height: 80
   },
   name: {

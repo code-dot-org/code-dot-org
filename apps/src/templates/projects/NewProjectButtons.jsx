@@ -25,7 +25,7 @@ const DEFAULT_PROJECT_TYPES = [
 
 const styles = {
   fullsize: {
-    width: styleConstants['pegasus-content-width']
+    width: styleConstants['content-width']
   },
   tile: {
     width: 214,
