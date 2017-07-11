@@ -53,12 +53,13 @@ class ApiController < ApplicationController
           uid: student.user_id,
           provider: 'google_oauth2',
           info: {
-            name: student.profile.name.full_name
+            name: student.profile.name.full_name,
           },
         )
       end
 
-      section = Section.from_omniauth(course_id, Section::LOGIN_TYPE_GOOGLE_CLASSROOM, students, current_user.id)
+      code = "G-#{course_id}"
+      section = Section.from_omniauth(code, Section::LOGIN_TYPE_GOOGLE_CLASSROOM, students, current_user.id)
       render json: section.summarize
     end
   end
