@@ -7,7 +7,7 @@ import _ from 'lodash';
 
 const styles = {
   box: {
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     backgroundColor: color.white
   },
   arrowIcon: {

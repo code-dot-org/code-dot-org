@@ -9,7 +9,7 @@ import styleConstants from '../styleConstants';
 // functionality of a heading and the option to show a link. You can find an
 // example of its use on studio.code.org/home.
 
-const pegasusContentWidth = styleConstants['pegasus-content-width'];
+const pegasusContentWidth = styleConstants['content-width'];
 
 const styles = {
   box: {

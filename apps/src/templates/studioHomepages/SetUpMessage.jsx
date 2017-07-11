@@ -6,7 +6,7 @@ import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   section: {
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
     borderStyle: 'dashed',
     borderWidth: 5,

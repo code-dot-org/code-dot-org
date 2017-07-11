@@ -6,14 +6,14 @@ import ProgressButton from '../progress/ProgressButton';
 const styles = {
   container: {
     height: 250,
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
     backgroundColor: color.white,
   },
   tealBar: {
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     height: 65,
     backgroundColor: color.teal,
   },

@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import styleConstants from '../../styleConstants';
 
 const style = {
-  width: styleConstants['pegasus-content-width'],
+  width: styleConstants['content-width'],
   display: 'flex',
   flexDirection: 'row',
   flexWrap: 'wrap',

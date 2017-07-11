@@ -12,7 +12,7 @@ export const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    width: styleConstants['pegasus-content-width']
+    width: styleConstants['content-width']
   },
   headerRow: {
     backgroundColor: color.table_header,

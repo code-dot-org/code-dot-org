@@ -8,7 +8,7 @@ import ProgressButton from "../progress/ProgressButton";
 const styles = {
   grid: {
     padding: 10,
-    width: styleConstants['pegasus-content-width']
+    width: styleConstants['content-width']
   },
   card: {
     display: "inline-block",

@@ -11,7 +11,7 @@ const NUM_PROJECTS_IN_APP_VIEW = 12;
 
 const styles = {
   grid: {
-    width: styleConstants['pegasus-content-width']
+    width: styleConstants['content-width']
   },
   link: {
     color: color.light_teal,

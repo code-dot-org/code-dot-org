@@ -20,7 +20,7 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     height: 72,
-    width: styleConstants['pegasus-content-width'],
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
     float: 'left'

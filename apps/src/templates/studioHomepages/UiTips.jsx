@@ -44,7 +44,7 @@ const UiTips = React.createClass({
       showInitialTips: showInitialTips,
       tipsShowing: tipsShowing,
       showingDialog: showingDialog,
-      mobileWidth: $(window).width() <= styleConstants['pegasus-content-width']
+      mobileWidth: $(window).width() <= styleConstants['content-width']
     };
   },
 
@@ -150,7 +150,7 @@ const UiTips = React.createClass({
   },
 
   onResize() {
-    this.setState({mobileWidth: $(window).width() <= styleConstants['pegasus-content-width']});
+    this.setState({mobileWidth: $(window).width() <= styleConstants['content-width']});
   },
 
   render() {
