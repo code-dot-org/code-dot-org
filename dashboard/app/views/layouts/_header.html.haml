@@ -86,7 +86,7 @@
     - extra_header_banner_class = "header-banner-short"
   #header-banner{class: extra_header_banner_class, style: 'background-image: url("/shared/images/banners/teacher-homepage-hero.jpg")'}
 - if request.path == "/projects" || request.path == "/projects/public"
-  #header-banner{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
+  #header-banner.header-banner-short{style: 'background-image: url("/shared/images/banners/project-banner.jpg")'}
 
 - if script_level
   - view_as = @user || current_user
