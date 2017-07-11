@@ -9,7 +9,9 @@ export default storybook => storybook
     experiments.setEnabled('microsoftClassroom', false);
     experiments.setEnabled('clever', false);
     return (
-      <AddInitialStudentsView/>
+      <AddInitialStudentsView
+        sectionName="Section Alpha"
+      />
     );
   })
   .add('All options', () => {
@@ -17,6 +19,8 @@ export default storybook => storybook
     experiments.setEnabled('microsoftClassroom', true);
     experiments.setEnabled('clever', true);
     return (
-      <AddInitialStudentsView/>
+      <AddInitialStudentsView
+        sectionName="Section Beta"
+      />
     );
   });

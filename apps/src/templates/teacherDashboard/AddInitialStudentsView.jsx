@@ -1,34 +1,9 @@
 import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
 import experiments from '../../util/experiments';
+import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
-
-const style = {
-  h1: {
-    fontFamily: '"Gotham 7r", sans-serif',
-    fontWeight: 'normal',
-    fontSize: 32,
-    lineHeight: 1.5,
-    color: color.dark_charcoal,
-  },
-  h2: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontWeight: 'normal',
-    fontSize: 24,
-    lineHeight: 2,
-    color: color.dark_charcoal,
-    margin: '10px 0',
-  },
-  h3: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal',
-    fontSize: 16,
-    lineHeight: 2,
-    color: color.dark_charcoal,
-  },
-};
 
 /**
  * View shown to a teacher when beginning to add students to an empty section.
@@ -50,15 +25,15 @@ class AddInitialStudentsView extends Component {
 
     return (
       <div>
-        <h1 style={style.h1}>
+        <Heading1>
           {i18n.addStudentsToSection({section: sectionName})}
-        </h1>
-        <h2 style={style.h2}>
+        </Heading1>
+        <Heading2>
           {i18n.addStudentsToSectionInstructions()}
-        </h2>
-        <h3 style={style.h3}>
+        </Heading2>
+        <Heading3>
           {i18n.addStudentsManageMyOwn()}
-        </h3>
+        </Heading3>
         <CardContainer>
           <PictureLoginCard/>
           <WordLoginCard/>
@@ -66,9 +41,9 @@ class AddInitialStudentsView extends Component {
         </CardContainer>
         {anyThirdParty && (
           <div>
-            <h3 style={style.h3}>
+            <Heading3>
               {i18n.addStudentsSyncThirdParty()}
-            </h3>
+            </Heading3>
             <CardContainer>
               {googleClassroom && <GoogleClassroomCard/>}
               {microsoftClassroom && <MicrosoftClassroomCard/>}
