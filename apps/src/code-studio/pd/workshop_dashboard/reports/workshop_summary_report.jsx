@@ -135,8 +135,8 @@ const WorkshopSummaryReport = React.createClass({
       property: 'subject',
       header: {label: 'Subject'}
     }, {
-      property: 'section_url',
-      header: {label: 'Section URL'},
+      property: 'attendance_url',
+      header: {label: 'Attendance URL'},
       cell: {format: this.formatUrl}
     }, {
       property: 'facilitators',
