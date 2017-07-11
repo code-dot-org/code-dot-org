@@ -241,7 +241,9 @@ const assignmentsForSection = (validAssignments, section) => {
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment.name);
+  // we might not have an assignment object if we have a section that was somehow
+  // assigned to a hidden script (and we dont have permissions to see hidden scripts)
+  return assignments.map(assignment => assignment ? assignment.name : '');
 };
 
 /**
@@ -249,5 +251,5 @@ export const assignmentNames = (validAssignments, section) => {
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment.path);
+  return assignments.map(assignment => assignment ? assignment.path : '');
 };
