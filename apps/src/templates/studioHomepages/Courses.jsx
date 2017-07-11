@@ -178,7 +178,7 @@ const Courses = React.createClass({
         {/* Anything but a teacher or student in English.
             That is: signed-out, or a student or teacher in non-English. */}
         {(isSignedOut || !isEnglish) && (
-          <div id="all-courses">
+          <div>
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
         )}
