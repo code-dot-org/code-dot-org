@@ -330,9 +330,9 @@ class RegistrationsControllerTest < ActionController::TestCase
     sign_in student_without_password
 
     user_params = {
-        email: 'upgraded@code.org',
-        password: '1234567',
-        password_confirmation: '1234567'
+      email: 'upgraded@code.org',
+      password: '1234567',
+      password_confirmation: '1234567'
     }
 
     post :upgrade, params: {
@@ -349,10 +349,10 @@ class RegistrationsControllerTest < ActionController::TestCase
     sign_in student_without_password
 
     user_params = {
-        email: 'upgraded@code.org',
-        password: '1234567',
-        password_confirmation: '1234567',
-        secret_words: student_without_password.secret_words
+      email: 'upgraded@code.org',
+      password: '1234567',
+      password_confirmation: '1234567',
+      secret_words: student_without_password.secret_words
     }
     post :upgrade, params: {
       user: user_params
@@ -368,12 +368,12 @@ class RegistrationsControllerTest < ActionController::TestCase
     sign_in student_without_password
 
     user_params = {
-        email: 'upgraded@code.org',
-        password: '1234567',
-        password_confirmation: '1234567',
+      email: 'upgraded@code.org',
+      password: '1234567',
+      password_confirmation: '1234567',
     }
     post :upgrade, params: {
-        user: user_params
+      user: user_params
     }
 
     student_without_password.reload
