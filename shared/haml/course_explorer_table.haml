@@ -56,7 +56,7 @@
             - unless course[:starts] == 0
               %div{class: "bar-#{course[:starts]}"}
                 &nbsp;
-            %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "background-color: #{"#00adbc"}"}
+            %div{class: "courserow bar-#{course[:ends] - course[:starts] + 1}", style: "background-color: #00adbc"}
               .left
                 .title
                   =course[:name]

@@ -183,7 +183,7 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {!isTeacher && (
+        {(!isTeacher && isEnglish) && (
           <FindLocalClassBanner
             codeOrgUrlPrefix={codeOrgUrlPrefix}
             isRtl={isRtl}
