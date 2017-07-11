@@ -36,8 +36,8 @@
     "markdown_instructions": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat.\r\n___\r\n\r\n![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)",
     "project_template_level_name": "courseC_artist_loopsTemplateA",
     "tts_markdown_instructions_override": "Edit your code so that you jump forward by 75 pixels between stamping the bird and the bat.",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to jump forward:\\n\\n![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)\\n\\nDon't forget to change how far!\",\"hint_id\":\"courseC_artist_loops4a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1dc0530505a251354408ca1b9ee433e6/courseC_artist_loops4a.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to jump forward:\\n\\n![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)\\n\\nDon't forget to change how far!\",\"hint_id\":\"courseC_artist_loops4a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1dc0530505a251354408ca1b9ee433e6/courseC_artist_loops4a.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
