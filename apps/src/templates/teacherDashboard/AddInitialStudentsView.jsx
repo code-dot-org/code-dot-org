@@ -31,9 +31,11 @@ class AddInitialStudentsView extends Component {
         <Heading2>
           {i18n.addStudentsToSectionInstructions()}
         </Heading2>
-        <Heading3>
-          {i18n.addStudentsManageMyOwn()}
-        </Heading3>
+        {anyThirdParty && (
+          <Heading3>
+            {i18n.addStudentsManageMyOwn()}
+          </Heading3>
+        )}
         <CardContainer>
           <PictureLoginCard/>
           <WordLoginCard/>
