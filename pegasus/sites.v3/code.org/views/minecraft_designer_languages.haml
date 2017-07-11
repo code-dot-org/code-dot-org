@@ -1,0 +1,5 @@
+%h2 The Minecraft Designer tutorial is supported in the following languages
+%ul{:style=>"background: #0094ca padding: 20px;"}
+  - Languages.get_minecraft_designer_languages.each do |properties|
+    -if properties[:minecraft_designer_b] == true
+      %li.bullet= properties[:crowdin_name_s]
