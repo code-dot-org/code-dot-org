@@ -43,10 +43,12 @@ describe('The ShowCodeToggle component', () => {
 
   beforeEach(() => {
     editor = {
-      currentlyUsingBlocks: true,
+      session: {
+        currentlyUsingBlocks: true,
+      },
       getValue: () => '',
       toggleBlocks() {
-        this.currentlyUsingBlocks = !this.currentlyUsingBlocks;
+        this.session.currentlyUsingBlocks = !this.session.currentlyUsingBlocks;
       },
       aceEditor: {
         focus(){},
@@ -104,7 +106,7 @@ describe('The ShowCodeToggle component', () => {
       toggle = mount(
         <ShowCodeToggle onToggle={sinon.spy()}/>
       );
-      editor.currentlyUsingBlocks = false;
+      editor.session.currentlyUsingBlocks = false;
       studioApp().init(config);
     });
 
@@ -159,7 +161,7 @@ describe('The ShowCodeToggle component', () => {
       });
 
       it("makes the editor stop using blocks", () => {
-        expect(studioApp().editor.currentlyUsingBlocks).to.be.false;
+        expect(studioApp().editor.session.currentlyUsingBlocks).to.be.false;
       });
 
       it("saves the text mode setting to the user's preferences", () => {
@@ -190,7 +192,7 @@ describe('The ShowCodeToggle component', () => {
         });
 
         it("will make the editor start using blocks", () => {
-          expect(studioApp().editor.currentlyUsingBlocks).to.be.true;
+          expect(studioApp().editor.session.currentlyUsingBlocks).to.be.true;
         });
 
         it("save the text mode setting to the user's preferences again", () => {
