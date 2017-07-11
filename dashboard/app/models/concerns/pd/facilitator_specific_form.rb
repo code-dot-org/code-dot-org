@@ -90,7 +90,24 @@ module Pd::FacilitatorSpecificForm
     super(hash)
   end
 
-  def to_summary_for_facilitator(facilitator_name)
+  # Get a summary of the form data hash specific to a facilitator
+  # This is used to make the hash a flat hash that only has survey responses relevant for
+  # a facilitator. So if the initial survey was something like
+  #
+  # {
+  #   'q1': 'a1',
+  #   'q2': {
+  #     'f1': 'f1 answer',
+  #     'f2': 'f2 answer'
+  #   }
+  # }
+  #
+  # generate_summary_for_facilitator(f1) would return
+  # {
+  #   'q1': 'a1',
+  #   'q2': 'f1 answer'
+  # }
+  def generate_summary_for_facilitator(facilitator_name)
     hash = sanitize_form_data_hash
 
     hash.each do |k, v|

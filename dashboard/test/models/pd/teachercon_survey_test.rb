@@ -118,7 +118,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
 
     survey_1 = create :pd_teachercon_survey, pd_enrollment: (create :pd_enrollment, workshop: workshop), form_data: hash.to_json
 
-    summary_1 = survey_1.to_summary_for_facilitator('Facilitator Kirk')
+    summary_1 = survey_1.generate_summary_for_facilitator('Facilitator Kirk')
     assert_equal 'Kirk lead the away team well', summary_1[:things_facilitator_did_well]
     assert_equal 'Kirk talks slowly', summary_1[:things_facilitator_could_improve]
 
