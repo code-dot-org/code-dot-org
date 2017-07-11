@@ -25,7 +25,7 @@ HOME_DIR=/home/ubuntu/$ENVIRONMENT
 # Bootstrap prerequisites
 apt-get -qq update
 apt-get -qq -y install python3-pip jq curl
-pip3 show -q awscli || pip3 install -q awscli
+pip3 install -q awscli
 
 STACK=${AWS::StackName}
 CHEF_VERSION=12.7.2

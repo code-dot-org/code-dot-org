@@ -27,6 +27,7 @@ TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 class Script < ActiveRecord::Base
   include ScriptConstants
   include SharedConstants
+  include Rails.application.routes.url_helpers
 
   include Seeded
   has_many :levels, through: :script_levels
@@ -38,6 +39,26 @@ class Script < ActiveRecord::Base
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, foreign_key: 'wrapup_video_id', class_name: 'Video'
   belongs_to :user
+  has_many :course_scripts
+  has_many :courses, through: :course_scripts
+
+  scope :with_associated_models, -> do
+    includes(
+      [
+        {
+          script_levels: [
+            {levels: [:game, :concepts, :level_concept_difficulty]},
+            :stage,
+            :callouts
+          ]
+        },
+        {
+          stages: [{script_levels: [:levels]}]
+        },
+        :course_scripts
+      ]
+    )
+  end
 
   attr_accessor :skip_name_format_validation
   include SerializedToFileValidation
@@ -186,31 +207,15 @@ class Script < ActiveRecord::Base
   end
 
   def self.script_cache_from_cache
-    Script.connection
     [
-      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
+      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, CourseScript
     ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
 
   def self.script_cache_from_db
     {}.tap do |cache|
-      Script.all.pluck(:id).each do |script_id|
-        script = Script.includes(
-          [
-            {
-              script_levels: [
-                {levels: [:game, :concepts, :level_concept_difficulty]},
-                :stage,
-                :callouts
-              ]
-            },
-            {
-              stages: [{script_levels: [:levels]}]
-            }
-          ]
-        ).find(script_id)
-
+      Script.with_associated_models.find_each do |script|
         cache[script.name] = script
         cache[script.id.to_s] = script
       end
@@ -292,21 +297,21 @@ class Script < ActiveRecord::Base
     self.class.get_from_cache(id)
   end
 
-  def self.get_without_cache(id)
+  def self.get_without_cache(id_or_name)
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
-    find_by = (id.to_i.to_s == id.to_s) ? :id : :name
-    Script.find_by(find_by => id).tap do |s|
-      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id}") unless s
+    find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
+    Script.find_by(find_by => id_or_name).tap do |s|
+      raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
     end
   end
 
-  def self.get_from_cache(id)
-    return get_without_cache(id) unless should_cache?
+  def self.get_from_cache(id_or_name)
+    return get_without_cache(id_or_name) unless should_cache?
 
-    script_cache.fetch(id.to_s) do
+    script_cache.fetch(id_or_name.to_s) do
       # Populate cache on miss.
-      script_cache[id.to_s] = get_without_cache(id)
+      script_cache[id_or_name.to_s] = get_without_cache(id_or_name)
     end
   end
 
@@ -403,8 +408,25 @@ class Script < ActiveRecord::Base
     ].include?(name)
   end
 
+  private def csd_tts_level?
+    [
+      Script::CSD2_NAME,
+      Script::CSD3_NAME,
+      Script::CSD4_NAME,
+      Script::CSD6_NAME
+    ].include?(name)
+  end
+
+  private def csp_tts_level?
+    [
+      Script::CSP17_UNIT3_NAME,
+      Script::CSP17_UNIT5_NAME,
+      Script::CSP17_POSTAP_NAME
+    ].include?(name)
+  end
+
   def text_to_speech_enabled?
-    k1? || name == Script::COURSEC_DRAFT_NAME
+    k1? || name == Script::COURSEC_DRAFT_NAME || csd_tts_level? || csp_tts_level?
   end
 
   def hide_solutions?
@@ -422,7 +444,7 @@ class Script < ActiveRecord::Base
   end
 
   def k5_course?
-    %w(course1 course2 course3 course4).include? name
+    %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include? name
   end
 
   def k5_draft_course?
@@ -438,7 +460,7 @@ class Script < ActiveRecord::Base
   end
 
   def has_lesson_plan?
-    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
+    k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
   def has_banner?
@@ -815,8 +837,9 @@ class Script < ActiveRecord::Base
   end
 
   def self.clear_cache
-    # only call this in a test!
+    raise "only call this in a test!" unless Rails.env.test?
     @@script_cache = nil
+    Rails.cache.delete SCRIPT_CACHE_KEY
   end
 
   def localized_title
@@ -834,5 +857,14 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false
     }.compact
+  end
+
+  # @return {String|nil} path to the course overview page for this script if there
+  #   is one. A script is considered to have a matching course if there is exactly
+  #   one course for this script
+  def course_link
+    return nil if course_scripts.length != 1
+    course = Course.get_from_cache(course_scripts[0].course_id)
+    course_path(course)
   end
 end

@@ -432,7 +432,8 @@ testsContext.keys().forEach(testsContext);
     'home/_homepage':               './src/sites/studio/pages/home/_homepage.js',
     'courses/index':                './src/sites/studio/pages/courses/index.js',
     'courses/show':                 './src/sites/studio/pages/courses/show.js',
-    'courses/edit':                 './src/sites/studio/pages/courses/edit.js'
+    'courses/edit':                 './src/sites/studio/pages/courses/edit.js',
+    'devise/registrations/edit':    './src/sites/studio/pages/devise/registrations/edit.js'
   };
 
   var otherEntries = {
@@ -464,6 +465,7 @@ testsContext.keys().forEach(testsContext);
     'pd/facilitator_program_registration/new': './src/sites/studio/pages/pd/facilitator_program_registration/new.js',
     'pd/regional_partner_program_registration/new': './src/sites/studio/pages/pd/regional_partner_program_registration/new.js',
     'pd/workshop_survey/new': './src/sites/studio/pages/pd/workshop_survey/new.js',
+    'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
 
     'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
 
@@ -478,7 +480,8 @@ testsContext.keys().forEach(testsContext);
 
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
 
-    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js'
+    'code.org/public/educate/curriculum/courses': './src/sites/code.org/pages/public/educate/curriculum/courses.js',
+    'code.org/views/workshop_search' : './src/sites/code.org/pages/views/workshop_search.js'
   };
 
   // Create a config for each of our bundles

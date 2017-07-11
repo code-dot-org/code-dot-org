@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Onnittelut! Läpäisit kurssin 2"
   congratulations_on_completing_course3: "Onnittelut! Läpäisit kurssin 3"
   congratulations_on_completing_course4: "Onnittelut! Läpäisit kurssin 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Onnittelut nopeutetun kurssin suorittamisesta"
   congrats_next_tutorials_title: "Kokeile näitä johdantoja seuraavaksi"
   congrats_next_tutorials_desc: "Kokeile näitä lyhyempiä, yhden tunnin oppitunteja, tai kokeile <a href=\"%{current_path}/next\">kumppaneidemme oppitunteja</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Suoritin juuri kurssin 2 - tsekkaa tämä! @codeorg"
   just_did_course3: "Suoritin juuri kurssin 3 - tsekkaa tämä! @codeorg"
   just_did_course4: "Suoritin juuri kurssin 4 - tsekkaa tämä! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Suoritin juuri nopeutetun kurssin - tsekkaa tämä! @codeorg"
   twitter_teach_cs: "Yhdeksän kymmenestä haluaisi että kouluissa opettaisiin tietojenkäsittelyä. http://youtu.be/nKIu9yen5nc. Käy katsomassa https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
@@ -244,6 +256,10 @@
   homepage_hero_text_satya: |-
     &ldquo;Tietojenkäsittelytiede voi avata parhaat mahdollisuudet maailmassa.&rdquo;
     Satya, Microsoft:in toimitusjohtaja
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Jos koodaat, voit valita elämäsi suunnan.&rdquo;
     Chris Bosh
@@ -267,7 +283,7 @@
   homepage_hero_text_stat_served: 'Koodaustunti: #served tarjolla'
   homepage_slot_text_hoc: "Koodaustunti"
   homepage_slot_text_frozen: "Frozen Annan ja Elsan kanssa"
-  homepage_slot_text_teacher: "Teacher Dashboard"
+  homepage_slot_text_teacher: "Opettajan päänäyttö"
   homepage_slot_text_studio: "Kaikki oppituntimme"
   homepage_slot_text_course4: "Kurssi 4"
   homepage_slot_text_shop: "Kauppa"
@@ -297,12 +313,13 @@
   homepage_banner_congress: "America's leaders are calling on Congress to fund K-12 computer science."
   homepage_banner_congress_link: "Add your support"
   homepage_banner_emailprivacy: "We’re making an important change to how we support student privacy."
-  homepage_banner_emailprivacy_link: "Read more"
+  homepage_banner_emailprivacy_link: "Lue lisää"
   homepage_banner_40k_teachers: "We've prepared 40,000 new computer science teachers."
   homepage_banner_40k_teachers_link: "Lue lisää"
   homepage_slot_text_title_hoc: "Koodaustunti"
   homepage_slot_text_blurb_hoc: "Kuka tahansa voi oppia. Aloita jo tänään"
   homepage_slot_text_link_hoc: "Kokeile koodaustuntia"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Järjestä Koodaustunti"
   homepage_slot_text_link_hocserved: "# käyttäjää"
   homepage_solot_text_link_volunteer: "Toimi vapaaehtoisena Koodaustunnissa"
@@ -314,7 +331,7 @@
   homepage_slot_text_link_othercourses: "Muut verkkokurssit"
   homepage_slot_text_title_educators: "Opettajat"
   homepage_slot_text_blurb_educators: "Opeta opiskelijoillesi"
-  homepage_slot_text_link_elementary: "Elementary school"
+  homepage_slot_text_link_elementary: "Peruskoulu"
   homepage_slot_text_link_middle: "Yläaste"
   homepage_slot_text_link_high: "Lukio"
   homepage_slot_text_link_k5: "Kursseja luokkatasoille esi-5"
@@ -390,26 +407,26 @@
   mc_specs: "Useita kieliä | Modernit selaimet | Yli 6-vuotiaille"
   minecraft_designer: "Minecraft suunnittelija"
   minecraft_adventurer: "Minecraft seikkailija"
-  minecraft_tutorials: "Minecraft Hour of Code Tutorials"
-  minecraft_specs: "Many languages | Modern browsers and tablets | Grades 2+"
+  minecraft_tutorials: "Minecraft Koodaustunnin ohjeet"
+  minecraft_specs: "Useita kieliä | Modernit selaimet | Yli 6-vuotiaille"
   minecraft_designer_description: "Program animals and other Minecraft creatures in your own version of Minecraft."
   minecraft_designer_button: "Aloita"
-  minecraft_adventurer_description: "Use code to take Alex or Steve on an adventure."
+  minecraft_adventurer_description: "Koodin avulla voit viedä Alexin tai Steven seikkailuun."
   minecraft_adventurer_button: "Aloita"
-  minecraft_no_internet: "Don't have Internet?"
-  minecraft_download_adventurer: "Download the offline version of Minecraft Adventurer."
+  minecraft_no_internet: "Onko sinulla nettiyhteys?"
+  minecraft_download_adventurer: "Lataa Minecraft seikkailijan offline-versio."
   minecraft_subtitle: "Minecraft Koodaustunti"
-  sports_page_title: "Hour of Code Sports"
-  sports_og_title: "Push yourself. Anybody can learn."
+  sports_page_title: "Koodaustunti Urheilua"
+  sports_og_title: "Tee se. Kuka tahansa voi oppia."
   sports_og_description: "Champions and gold medalists encourage you to try the Hour of Code. Code your own sports game."
   sports_title: "Code your own sports game"
   sports_watch_video: "Katso video"
-  sports_video_title: "Push yourself. Anybody can learn."
-  sports_select_theme: "Select your tutorial theme"
-  sports_basketball_title: "Make a basketball game"
+  sports_video_title: "Tee se. Kuka tahansa voi oppia."
+  sports_select_theme: "Valitse tutorialin teema"
+  sports_basketball_title: "Tee koripallopeli"
   sports_all_sports_title: "Mix and match across sports"
-  sports_featured_athletes: "See featured athletes"
-  sports_athletes_title: "Featured athletes"
+  sports_featured_athletes: "Suositeltavat urheilijat"
+  sports_athletes_title: "Suositeltavat urheilijat"
   sports_athlete_Draymond: "Draymond Green, Olympic Gold Medalist and NBA Champion, Golden State Warriors"
   sports_athlete_Serena: "Serena Williams, Olympic Gold Medalist and Tennis Champion"
   sports_athlete_Russell: "Russell Okung, Super Bowl Champion and NFL player, Denver Broncos"
@@ -430,12 +447,12 @@
   watch_inspirational_videos: "Before you get started, watch one of these inspirational videos"
   video_title_cs_is_everything: "Computer Science is Changing Everything"
   video_title_inspire_girl: "Inspiroi tyttö"
-  video_title_cs_intro: "Computer Science intro"
+  video_title_cs_intro: "Tutustuminen tietojenkäsittelytieteisiin"
   video_title_schools_dont_teach: "What Most Schools Don't Teach"
   video_title_obama: "President Obama on computer science"
   video_title_hoc_is_here: "Hour of Code is Here - Anybody Can Learn"
-  video_title_anybody_can_learn: "Anybody Can Learn"
-  video_title_draymond_green: "Hour of Code with Draymond Green"
+  video_title_anybody_can_learn: "Kuka vain voi oppia"
+  video_title_draymond_green: "Kooditunti Draymond Greenin kanssa"
   video_title_russell_okung: "Hour of Code with Russell Okung"
   video_title_real_madrid: "Hour of Code with Real Madrid"
   video_title_marco_belinelli: "Hour of Code with Marco Belinelli"
@@ -443,12 +460,12 @@
   video_1min: "1 min"
   video_2min: "2 min"
   video_5min: "5 min"
-  speak_another_language: "Speak another language?"
-  help_translate: "Help us translate."
-  no_internet: "Don't have Internet?"
-  download_offline: "Download the offline version."
+  speak_another_language: "Puhutko muuta kieltä?"
+  help_translate: "Auta meitä kääntämisessä."
+  no_internet: "Onko sinulla nettiyhteys?"
+  download_offline: "Lataa offline-versio."
   are_you_teacher: "Oletko opettaja?"
-  review_lesson_plan: "Review the lesson plan and other teacher resources."
+  review_lesson_plan: "Tarkista tuntisuunnitelma ja muita opettajien resursseja."
   volunteer_engineer_submission_title: "Inspiroi opiskelijoita ja toimi vapaaehtoisena Koodaustunnille."
   volunteer_engineer_submission_subtitle_generic: '100 000 opettajaa aikovat järjestää Koodaustunnin luokissaan tänä vuonna, Joulukuussa 7-13, 2015. He tarvitsevat apuasi! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} teachers need volunteers.<br>%{num_volunteers} volunteers have signed up. Join them."
@@ -533,7 +550,7 @@
   dashboard_landing_progress_title: "Luokan edistyminen"
   dashboard_landing_progress_biggest: "Suurimman ryhmäsi eteneminen."
   dashboard_landing_view_progress: "Tarkastele etenemistä ryhmälle %{biggest_section}"
-  dashboard_landing_print_progress: "Print progress"
+  dashboard_landing_print_progress: "Tulosta edistyminen"
   dashboard_landing_available_title: "Saatavilla olevat kurssit"
   dashboard_landing_available_courses: "Nämä kurssit ovat tällä hetkellä saatavilla sinulle ja oppilaillesi."
   dashboard_landing_more_tutorials: "Haluatko nähdä vielä enemmän oppitunteja?"
@@ -574,15 +591,15 @@
   dashboard_action_required: "vaaditaan"
   dashboard_action_print_certificates: "Print certificates"
   dashboard_assessments_view: 'View assessments in:'
-  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code Studio."
-  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code Studio to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
+  dashboard_assessments_none: "Most teachers measure their students' progress using the \"View Progress\" tab. If you are interested in giving your students additional assessments, you can find recommended questions and areas in the lesson plans. These are done outside of Code.org."
+  dashboard_assessments_none_part2: "If you are teaching a middle or high school course, we have assessment questions available as part of Code.org to help your students prepare for the AP test. To use these assessments, first assign the course to your class and then pick the course from the drop down above and you'll see your students' answers here."
   dashboard_assessments_summaries: "Assessment summaries"
   dashboard_assessments_answers: "All assessment answers"
-  dashboard_surveys_answers: "Surveys"
-  dashboard_percent: "Percent"
-  dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: "All"
-  dashboard_download_csv: "Download CSV"
+  dashboard_surveys_answers: "Kysely"
+  dashboard_percent: "Prosenttia"
+  dashboard_filter_by_stage: 'Suodata tason mukaan:'
+  dashboard_filter_all: "Kaikki"
+  dashboard_download_csv: "Lataa CSV"
   dashboard_navigation_home_page: "Opettajan päänäyttö"
   dashboard_navigation_section_student_progress: "Oppilaiden tunnukset ja edistyminen"
   dashboard_navigation_section_teacher_progress: "Sinun kurssisi edistyminen"
@@ -592,13 +609,13 @@
   dashboard_navigation_section_speakers: "Tietojenkäsittelyopin <br/> puhujavieraat"
   dashboard_navigation_all_sections: "Oppilaiden tunnukset ja edistyminen"
   dashboard_navigation_view_progress: "Edistyminen"
-  dashboard_navigation_view_text_responses: "Text Responses"
-  dashboard_navigation_view_assessments: "Assessments"
-  dashboard_navigation_view_assessments_surveys: "Assessments/Surveys"
+  dashboard_navigation_view_text_responses: "Tekstivastaukset"
+  dashboard_navigation_view_assessments: "Arvioinnit"
+  dashboard_navigation_view_assessments_surveys: "Arvionnit/Tutkimukset"
   dashboard_navigation_add_students: "Lisää oppilaita"
   dashboard_navigation_manage_students: "Hallinnoi oppilaita"
   dashboard_navigation_lesson_plans_resources: "Tuntisuunnitelmat ja resurssit"
-  dashboard_navigation_view_stats: "Stats"
+  dashboard_navigation_view_stats: "Tilastot"
   dashboard_navigation_section: 'Ryhmä: %{section_name}'
   dashboard_navigation_student: 'Oppilas: %{student_name}'
   dashboard_progress_not_started: "ei aloitettu"
@@ -608,17 +625,19 @@
   dashboard_progress_completed_perfect: "valmis, täydellinen"
   dashboard_progress_furthest_level_attempted: "vaikein taso jota yritetty"
   dashboard_progress_submitted: "lähetetty"
-  dashboard_progress_view: 'View progress in:'
+  dashboard_progress_view: 'Tarkastele etenemistä:'
   dashboard_progress_student_in_script: "Progress information for %{student_name} in %{script_name}"
-  dashboard_progress_pair_programming: "pair programming"
+  dashboard_progress_pair_programming: "pariohjelmointi"
   dashboard_responses_view: 'View text responses in:'
   dashboard_responses_none: "Most of our classes are designed to work for younger ages and do not require students to type text responses to questions, so you will not see any text responses here. For older students in middle and high school courses, you can see their submissions to open-ended text response questions by choosing the assigned course from the drop down above."
   dashboard_sections_new_section: "Uusi ryhmä"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Luo uusia ryhmiä ja lisää opiskelijoita niihin. Ryhmät auttavat sinua organisoimaan oppilaat pienempiin ryhmiin niin että voit seurata heidän etenemistään ja hallinnoida heidän tilejään."
   dashboard_sections_table_section: "Ryhmä"
   dashboard_sections_table_secret: "Kirjautumisen tyyppi"
   dashboard_sections_table_grade: "Taso"
   dashboard_sections_table_course: "Kurssi"
+  dashboard_sections_table_pairing_allowed: "Pariohjelmointi"
   dashboard_sections_table_stage_extras: "Stage Extras"
   dashboard_sections_table_students: "Oppilaat"
   dashboard_sections_table_code: "Ryhmän tunnus"
@@ -632,10 +651,10 @@
   dashboard_sections_close: "Sulje"
   dashboard_sections_move_students_desc: "Select students to move to a new section. Moving students will not clear their progress."
   dashboard_sections_one_per_teacher: "Students can only be in one section for each teacher. Your students will be added to this new section and leave their old section."
-  dashboard_sections_move_to_section: 'Move to section:'
-  dashboard_sections_enter_code: 'Enter section code:'
-  dashboard_sections_code_placeholder: "6-character code (ABCDEF)"
-  dashboard_sections_other_section: "Other Teacher"
+  dashboard_sections_move_to_section: 'Siirry osioon:'
+  dashboard_sections_enter_code: 'Syötä osion koodi:'
+  dashboard_sections_code_placeholder: "6-merkkinen koodi (ABCDEF)"
+  dashboard_sections_other_section: "Muu opettaja"
   dashboard_sections_both_sections: "Would you like the student(s) to be in both sections?"
   dashboard_sections_yes_both: "Yes, I want to copy student(s) to be in this current section AND the new section"
   dashboard_sections_no_move: "No, I want to move student(s) to be in the new section only."
@@ -690,6 +709,12 @@
   dashboard_course2: 'Kurssi 2:'
   dashboard_course3: 'Kurssi 3:'
   dashboard_course4: 'Kurssi 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "Opetussuunnitelma"
   dashboard_curriculum_overview: "Ala-asteen opetussuunnitelman yleiskatsaus"
@@ -858,11 +883,17 @@
   course3_name: "Kurssi 3"
   course4_name: "Kurssi 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Nopeutettu kurssi"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -870,9 +901,9 @@
   cspunit4_name: '(old) Unit 4: Data'
   cspunit5_name: '(old) Unit 5: Explore and Create PT'
   cspunit6_name: 'Post-AP: Databases in Apps'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -905,13 +936,13 @@
   hoc_category_name: "Koodaustunti"
   csf_category_name: "CS Fundamentals"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
+  csp17_category_name: "CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "Sovelluksien laboratorio"
-  basketball_name: "Make a basketball game"
+  basketball_name: "Tee koripallopeli"
   sports_name: "Code your own sports game"
   applab_gradelevel: "Ikäryhmille 13+"
   applab_shortdescription_congrats: "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds"
@@ -969,6 +1000,12 @@
   course2_gradelevel: "6+ -vuotiaille (lukutaitoisille)"
   course3_gradelevel: "8+ -vuotiaille (kurssin 2 jälkeen)"
   course4_gradelevel: "10+ -vuotiaille (kurssin 3 jälkeen)"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "Kahdeksasluokkalaisista alkaen"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "10+ -vuotiaille (kurssin 3 jälkeen)"
   codeorg_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
   codeintl_platformtext: "Nykyaikaiset selaimet, älypuhelimet, tabletit"
@@ -1071,6 +1108,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä."
   codeintl_longdescription: "Opettele tietojenkäsittelytieteen perusteet rakentamalla tietokoneohjelmia palikoista. Tällä pelillisellä itseopiskelukurssilla johdantovideoilla (englanniksi, tekstit suomeksi) esiintyy Bill Gates, Mark Zuckerberg, Angry Birds ja Plants vs. Zombies. Kurssilla käydään läpi toistosilmukat, ehtolauseet ja yksinkertaisia algoritmeja. Tarjolla 34 kielellä."
   thinkersmithspanish_longdescription: "Käyttämällä ennakkoon \"Robotti kieltä\" , opiskelijat oppivat tekemään tiettyjä tehtäviä ilman etukäteistä keskustelua . Tämä opetus opettaa lapsille symbolien ja toimintojen suhdetta, lisäksi se on korvaamaton kyky virheenkorjauksessa."
@@ -1304,7 +1347,7 @@
   processing_beyond_longdescription: "Processing on ohjelmointikieli, kehitysympäristö ja verkkoyhteisö. Vuodesta 2001 lähtien Processing on kannustanut ohjelmointilukutaitoa kuvaamataiteissa ja visuaalista lukutaitoa teknologiassa. Aluksi se luotiin palvelemaan ohjelmoinnin luonnoskirjana ja opettamaan ohjelmoinnin perusteita visuaalisessa ympäristössä, josta Processing on kehittynyt ammattilaisten kehitystyökaluksi. Nykyään kymmenet tuhannet opiskelijat, suunnittelijat, tutkijat ja harrastajat käyttävät Processingia oppimisessa, prototyypeissä ja tuotannossa."
   alice_beyond_longdescription: "Käyttäen innovatiivista ohjelmointiympäristöä tukemaan 3D-animaatioiden luomista, Alice-projekti tarjoaa työkaluja ja materiaaleja automatisointiajattelun opettamiseen ja oppimiseen, ongelmanratkaisuun ja ohjelmointiin eri ikäisille ja eri luokka-asteille."
   sphero_beyond_longdescription: "Robottikurssilla lapset oppivat leikin lomassa ohjelmoimaan. Samalla tulee harjoiteltua myös matematiikan ja luonnontieteiden taitoja."
-  compatibility_hide_this_warning: "Hide this warning"
+  compatibility_hide_this_warning: "Piilota varoitus"
   compatibility_unsupported_browser: "Your browser is not supported. Please upgrade your browser to <a href='%{supported_browsers_url}', target='_blank'>one of our supported browsers</a>. You can try viewing the page, but expect functionality to be broken."
   starwars_shortcode: "star"
   mc_shortcode: "mc"
@@ -1314,3 +1357,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Etusivu"
+  header_courses: "Kurssit"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Kouluttajan yleiskatsaus"
+  header_educate_elementary: "Peruskoulu"
+  header_educate_middle: "Yläaste"
+  header_educate_high: "Lukio"
+  header_educate_hoc: "Koodaustunti"
+  header_educate_partner: "Ryhdy partneriksi"
+  header_educate_beyond: "Muualla kuin Code.org:ssa"
+  header_educate_inspire: "Innosta opiskelija"
+  header_educate_community: "Online-yhteisö"
+  header_educate_tools: "Työkalut ja videot"
+  header_about_us: "Tietoja meistä"
+  header_about_leadership: "Johto"
+  header_about_donors: "Lahjoittajat"
+  header_about_partners: "Kumppanit"
+  header_about_team: "Koko joukkue"
+  header_about_news: "Uutishuone"
+  header_about_evaluation: "Arviointi"
+  header_about_jobs: "Työpaikat"
+  header_about_contact: "Ota yhteyttä"
+  header_about_faqs: "UKK"
+  header_learn: "Oppia"
+  header_teach: "Opettaa"
+  header_stats: "Tilastot"
+  header_help_us: "Auta meitä"
+  header_about: "Tietoja"
+  header_teacher_community: "Opettajayhteisö"
+  header_help_support: 'Ohjeet ja tuki '
+  header_report_bug: "Raportoi ongelma"
+  header_tutorials: "Oppaat"
+  header_documentation: "Dokumentaatio"
+  csp_name: "CS Principles"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

@@ -17,7 +17,7 @@ import Hammer from "../third-party/hammer";
 import ImageFilterFactory from './ImageFilterFactory';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
-import JSInterpreter from '../JSInterpreter';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import JsInterpreterLogger from '../JsInterpreterLogger';
 import MusicController from '../MusicController';
 import ObstacleZoneWalls from './obstacleZoneWalls';
@@ -32,7 +32,7 @@ import ThreeSliceAudio from './ThreeSliceAudio';
 import TileWalls from './tileWalls';
 import api from './api';
 import blocks from './blocks';
-import * as codegen from '../codegen';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import commonMsg from '@cdo/locale';
 import dom from '../dom';
 import dropletConfig from './dropletConfig';
@@ -49,6 +49,7 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
+  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -78,18 +79,18 @@ var showDebugInfo = false;
 /**
  * Create a namespace for the application.
  */
-var Studio = module.exports;
+let Studio = module.exports;
 
 Studio.keyState = {};
 Studio.gesturesObserved = {};
 Studio.btnState = {};
 
-var ButtonState = {
+const ButtonState = {
   UP: 0,
   DOWN: 1
 };
 
-var ArrowIds = {
+const ArrowIds = {
   LEFT: 'leftButton',
   UP: 'upButton',
   RIGHT: 'rightButton',
@@ -102,20 +103,20 @@ Studio.GameStates = {
   OVER: 2
 };
 
-var DRAG_DISTANCE_TO_MOVE_RATIO = 25;
+const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
 
 // NOTE: all class names should be unique. eventhandler naming won't work
 // if we name a projectile class 'left' for example.
 
-var EdgeClassNames = [
+const EdgeClassNames = [
   'top',
   'left',
   'bottom',
   'right'
 ];
 
-var level;
-var skin;
+let level;
+let skin;
 
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
@@ -1039,7 +1040,7 @@ function callHandler(name, allowQueueExtension, extraArgs = []) {
 Studio.initAutoHandlers = function (map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
-    var nativeFunc = codegen.createNativeFunctionFromInterpreterFunction(func);
+    var nativeFunc = CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     if (func) {
       registerEventHandler(Studio.eventHandlers, map[funcName], nativeFunc);
     }
@@ -2499,9 +2500,6 @@ Studio.reset = function (first) {
     hasThrownProjectile: false
   };
 
-  // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = Direction.EAST;
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2555,6 +2553,7 @@ Studio.reset = function (first) {
       // overridden as soon as we call setSprite
       visible: !level.spritesHiddenToStart
     });
+    Studio.lastMoveSingleDir = spriteStart.direction;
 
     var sprite = i % Studio.startAvatars.length;
 
@@ -2679,10 +2678,10 @@ Studio.getStudioExampleFailure = function (exampleBlock) {
     var defCode = Blockly.Generator.blockSpaceToCode('JavaScript', ['functional_definition']);
     var exampleCode = Blockly.Generator.blocksToCode('JavaScript', [exampleBlock]);
     if (exampleCode) {
-      var resultBoolean = codegen.evalWith(defCode + '; return' + exampleCode, {
+      var resultBoolean = CustomMarshalingInterpreter.evalWith(defCode + '; return' + exampleCode, {
         Studio: api,
         Globals: Studio.Globals
-      }, true);
+      }, {legacy: true});
       return resultBoolean ? null : "Does not match definition.";
     } else {
       return "No example code.";
@@ -2746,7 +2745,7 @@ Studio.runButtonClick = function () {
  * App specific displayFeedback function that calls into
  * studioApp().displayFeedback when appropriate
  */
-var displayFeedback = function () {
+Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
   if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
@@ -2770,6 +2769,8 @@ var displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
+    const showFailureIcon = studioApp().hasContainedLevels &&
+      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2791,7 +2792,8 @@ var displayFeedback = function () {
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      disablePrinting: level.disablePrinting
+      disablePrinting: level.disablePrinting,
+      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -2804,7 +2806,7 @@ Studio.onReportComplete = function (response) {
   Studio.response = response;
   Studio.waitingForReport = false;
   studioApp().onReportComplete(response);
-  displayFeedback();
+  Studio.displayFeedback();
 };
 
 var registerEventHandler = function (handlers, name, func) {
@@ -2914,6 +2916,10 @@ var registerHandlersWithMultipleSpriteParams =
       blockParam2, 'any_projectile');
     registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
       blockParam2, 'anything');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'goal');
+    registerHandlers(handlers, blockName, eventNameBase, blockParam1, String(i),
+      blockParam2, 'wall');
   }
 };
 
@@ -2944,10 +2950,10 @@ var registerHandlersWithSpriteAndGroupParams = function (
 var defineProcedures = function (blockType) {
   var code = Blockly.Generator.blockSpaceToCode('JavaScript', blockType);
   try {
-    codegen.evalWith(code, {
+    CustomMarshalingInterpreter.evalWith(code, {
       Studio: api,
       Globals: Studio.Globals
-    }, true);
+    }, {legacy: true});
   } catch (e) { }
 };
 
@@ -3258,7 +3264,7 @@ Studio.execute = function () {
 
       Studio.interpretedHandlers.getGlobals = {code: `return Globals;`};
 
-      const {hooks, interpreter} = codegen.evalWithEvents(
+      const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(
         {Studio: api, Globals: Studio.Globals},
         Studio.interpretedHandlers,
         code
@@ -3337,7 +3343,8 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
+      (!studioApp().hasContainedLevels || getValidatedResult())) {
     Studio.playSound({ soundName: 'win' });
   } else {
     Studio.playSound({ soundName: 'failure' });
@@ -4987,11 +4994,11 @@ Studio.setMap = function (opts) {
   // Use the actual map for collisions, rendering, etc.
   Studio.wallMap = useMap;
   Studio.wallMapCollisions = true;
+  Studio.walls.setWallMapRequested(useMap);
 
   // Remember the requested name so that we can reuse it next time the
   // background is changed.
   Studio.wallMapRequested = opts.value;
-  Studio.walls.setWallMapRequested(opts.value);
 
   if (opts.color && Studio.wallColor !== opts.color) {
     Studio.wallColor = opts.color;
@@ -5344,18 +5351,26 @@ Studio.queueCallback = function (callback, args) {
   var state = {
     node: {
       type: 'CallExpression',
-      arguments: intArgs /* this just needs to be an array of the same size */
+      arguments: intArgs, /* this just needs to be an array of the same size */
+      // give this node an end so that the interpreter doesn't treat it
+      // like polyfill code and do weird weird scray terrible things.
+      end: 1,
     },
     doneCallee_: true,
     func_: callback,
-    arguments: intArgs,
+    arguments_: intArgs,
     n_: intArgs.length
   };
 
   registerEventHandler(Studio.eventHandlers, handlerName, () => {
-    const depth = Studio.interpreter.stateStack.unshift(state);
+    // remove the last argument because stepCallExpression always wants to push it back on.
+    if (state.arguments_.length > 0) {
+      state.value = state.arguments_.pop();
+    }
+
+    const depth = Studio.interpreter.pushStackFrame(state);
     Studio.interpreter.paused_ = false;
-    while (Studio.interpreter.stateStack.length >= depth) {
+    while (Studio.interpreter.getStackDepth() >= depth) {
       Studio.interpreter.step();
     }
     Studio.interpreter.paused_ = true;
@@ -5676,6 +5691,7 @@ function executeCollision(src, target) {
   // src is always an actor
   Studio.executeQueue(srcPrefix + 'any_actor');
   Studio.executeQueue(srcPrefix + 'anything');
+  Studio.executeQueue(srcPrefix + 'goal');
 
   if (isEdgeClass(target)) {
     Studio.executeQueue(srcPrefix + 'any_edge');
@@ -6059,18 +6075,21 @@ Studio.allGoalsVisited = function () {
           var allowQueueExtension = false;
           var prefix = 'whenSpriteCollided-' + Studio.protagonistSpriteIndex + '-';
           callHandler(prefix + 'anything', allowQueueExtension);
+          callHandler(prefix + 'goal', allowQueueExtension);
         }
 
       } else {
         goal.finished = false;
         for (var j = 0; j < Studio.sprite.length; j++) {
-          if (spriteAtGoal(Studio.sprite[j], goal)) {
+          if (Studio.sprite[j].visible &&
+              spriteAtGoal(Studio.sprite[j], goal)) {
             goal.finished = true;
             if (skin.fadeOutGoal) {
               goal.startFadeTime = new Date().getTime();
             }
 
             callHandler('whenTouchGoal');
+            callHandler('whenSpriteCollided-' + j + '-goal');
 
             break;
           }
@@ -6290,3 +6309,9 @@ var checkFinished = function () {
 
   return false;
 };
+
+if (IN_UNIT_TEST) {
+  module.exports.setLevel = (newLevel) => {
+    level = newLevel;
+  };
+}

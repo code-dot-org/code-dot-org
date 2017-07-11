@@ -1,4 +1,4 @@
-if node['cdo-apps']['daemon']
+if node['cdo-apps']['process_queues']
   poise_service 'process_queues' do
     root = File.join node[:home], node.chef_environment
     dashboard_root = File.join root, 'dashboard'

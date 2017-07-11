@@ -4,11 +4,12 @@ function isUnsupportedIE() {
   var IEVersion = navigator.appVersion.indexOf('Trident/');
   var IEBelow8 = isIE && IEVersion < 8;
 
+  var IE7 = navigator.userAgent.match('MSIE 7.0;');
   var IE8 = navigator.userAgent.match('MSIE 8.0;');
   var IE9 = navigator.userAgent.match('MSIE 9.0;');
   var IE10 = navigator.userAgent.match('MSIE 10.0;');
 
-  var unsupported = IEBelow8 || IE8 || IE9 || IE10;
+  var unsupported = IEBelow8 || IE7 || IE8 || IE9 || IE10;
   return unsupported;
 }
 

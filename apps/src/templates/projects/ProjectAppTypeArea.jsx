@@ -10,13 +10,13 @@ import {appendProjects, setHasOlderProjects} from './projectsModule';
 const styles = {
   grid: {
     padding: 10,
-    width: 1000
+    width: 970
   },
   card: {
     display: "inline-block",
     paddingTop: 10,
     paddingBottom: 20,
-    paddingRight: 18,
+    paddingRight: 16,
     paddingLeft: 10
   },
   labHeading: {

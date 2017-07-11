@@ -46,12 +46,13 @@ module Pd::Payment
       !payment.nil?
     end
 
-    def section_url
-      CDO.code_org_url("/teacher-dashboard#/sections/#{workshop.section.id}", 'http:')
+    def attendance_url
+      return nil if workshop.sessions.empty?
+      "#{workshop_url}/attendance/#{workshop.sessions.first.id}"
     end
 
     def workshop_url
-      CDO.studio_url("pd/workshop_dashboard/workshops/#{workshop.id}", 'http:')
+      CDO.studio_url("pd/workshop_dashboard/workshops/#{workshop.id}", CDO.default_scheme)
     end
 
     def num_teachers
@@ -79,7 +80,7 @@ module Pd::Payment
         workshop_dates: workshop.sessions.map(&:formatted_date).join(' '),
         on_map: workshop.on_map,
         funded: workshop.funded,
-        section_url: section_url,
+        attendance_url: attendance_url,
         facilitators: workshop.facilitators.map(&:name).join(', '),
         num_facilitators: workshop.facilitators.count,
         workshop_id: workshop.id,

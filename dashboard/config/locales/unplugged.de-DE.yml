@@ -122,31 +122,26 @@
         title: Glücklich Karten
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
           um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
-        video: C1_happy_maps_unplugged
       MoveIt:
         title: Achtung, fertig, LOS
         desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen),
           um einen Charakter mit einem einzigen Befehl durch ein Labyrinth zu steuern.
-        video: C1_moveitmoveit_unplugged
       PlantASeed:
         title: 'Real-Life-Algorithmen: Pflanze Samen'
         desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum
           Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild
           der Informatik und der Rolle von Algorithmen vermittelt.
-        video: C1_planting_seed
       BuildingAFoundation:
         title: Grundlagen aufbauen
         desc: Die Schüler nutzen bereitgestellte Materialien, um eine Struktur zu
           bauen. Die Struktur muss eine bestimmte Eigenschaft aufweisen (eine bestimmte
           Höhe erreichen oder ein Gewicht tragen). Dabei wird die Ausdauer beim Lösen
           schwieriger Aufgaben diskutiert.
-        video: C1_building_foundation
       GettingLoopy:
         title: Schöne Schleifen
         desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte
           Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine
           einfache Choreografie und werden angewiesen, diese zu wiederholen.
-        video: C1_getting_loopy
       RelayProgramming:
         title: Relais-Programmierung
         desc: Die Schüler machen einen Staffellauf, bei der sie über den Schulhof
@@ -154,84 +149,70 @@
           zu schreiben. Sie können jedes Mal nur eine Anweisung schreiben. Wenn ein
           Fehler auftritt, müssen sie alle geschriebenen Anweisungen bis zu diesem
           Punkt löschen.
-        video: C2_relay_programming
       Conditionals:
         title: Bedingungen
         desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel,
           für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich
           einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen
           Punkt" erstellen.
-        video: C2_conditionals_with_cards
       BigEvent:
         title: Der große Event
         desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine
           Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt
           auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren
           auf die verschiedenen Tasten.
-        video: C1_bigevent_unplugged
       GoingPlacesSafely:
         title: Sicher unterwegs
         desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer
           erklären, wie Schüler sicher im Internet navigieren.
-        video: C1_sicher_wohin_gehen
       GraphPaperProgramming:
         title: Programmieren auf Millimeterpapier
         desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen
           einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden
           anweisen, ein Bild zu reproduzieren.
-        video: C2_graph_paper
       PaperPlanes:
         title: 'Alltagsalgorithmen: Papierflieger'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
           behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes
           Bild der Informatik und der Rolle von Algorithmen vermittelt.
-        video: C2_paper_airplanes
       BinaryBracelets:
         title: Binäre Armbänder
         desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben
           ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise
           repräsentiert und gespeichert werden können.
-        video: C2_binary_bracelets
       DigitalFootprint:
         title: Dein digitaler Fußabdruck
         desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck
           oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins
           Internet stellt, und erläutern mögliche Konsequenzen.
-        video: C2_digitaler_Fußabdruck
       ComputationalThinking:
         title: Computerorientiertes Denken
         desc: Die Schüler benutzen die Schritte computerorentierten Denkens (Zerlegung,
           Musterabgleich, Abstraktion, Algorithmus) um herauszufinden, wie man ein
           Spiel spielt, für das keine Anleitung vorliegt.
-        video: C3_computational_thinking
       FunctionalSuncatchers:
         title: Funktionale Sonnenfänger
         desc: Die Schüler erstellen einen Algorithmus mit Variablen und Funktionen
           (wiederverwendbarer Code), um ein Fensterbild aus Faden und Perlen zu machen.
-        video: C3_functional_suncatchers
       SongwritingParameters:
         title: Songschreiben mit Parametern
         desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe
           von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird,
           ohne dass die gesamte Funktion neu geschrieben werden muss).
-        video: C3_songwriting_with_parameters
       DiceRace:
         title: 'Algorithmen in der realen Welt: Würfelrennen'
         desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben
           behandelt. Dazu identifizieren und schreiben die Schüler den Algorithmus
           für ein Würfelrennen.
-        video: C3_dice_race
       Internet:
         title: Internet
         desc: Die Schüler senden Nachrichten mithilfe von Papierstücken und simulieren
           damit unterschiedliche Internet-Übertragungsmethoden.
-        video: C3_internet
       Crowdsourcing:
         title: Crowdsourcing
         desc: Schüler nutzen Crowdsourcing, eine Problemlösungstechnik, die häufig
           in Informatik und Technik angewendet wird, um gemeinsam eine Aufgabe zu
           lösen, die für einzelne Schüler zu schwierig wäre.
-        video: C3_crowdsourcing
       DigitalCitizenship:
         title: Digitalen Staatsbürgerschaft
         desc: Schüler entdecken den Unterschied zwischen privaten und persönlichen
@@ -242,7 +223,6 @@
         desc: In dieser Lektion werden wichtige Kenntnisse über Algorithmen vermittelt.
           Einfache Algorithmen können flexibler genutzt werden. Wenn alle Ergebnisse
           genau gleich sein sollen, benötigt der Algorithmus mehr Details.
-        video: C4_unverfälscht_Algorithmen
       EnvelopeVariables:
         title: Umschlag-Variablen
         desc: Variablen bieten in der Informatik unzählige Möglichkeiten.  In dieser
@@ -250,20 +230,17 @@
           Weise verwendet werden können. Diese Aktivität sollte vor oder zusammen
           mit der Lektion über Abstraktion stattfinden, damit Schüler das Konzept
           verstehen.
-        video: C4_unverfälscht_Variablen
       MadGlibs:
         title: Lückentexte
         desc: Die Fähigkeit zur Abstraktion ist eine der wichtigsten Fähigkeiten des
           Informatikers.  Bei dieser Aktivität analysieren die Schüler Geschichten,
           und suchen Unterschiede, die sie dann abstrahieren. Die entstehenden Lückentexte
           werden zu Vorlagen für verrückte, neue Geschichten.
-        video: C4_unplugged_madlibs
       ForLoopFun:
         title: "„Zähle mit“-Schleifenspaß"
         desc: Wir wissen bereits, dass Schleifen uns ermöglichen, Dinge wieder und
           wieder zu tun. Jetzt lernen wir, wie Schleifen mit integrierten Zusatzfunktionen
           verwendet werden.
-        video: C4_unplugged_forloops
       SongwritingWithParameters:
         title: Komponieren mit Parametern
         desc: 'Eines der nützlichsten Elemente der Informatik ist die Funktion.  Funktionen
@@ -271,7 +248,6 @@
           Programmen wieder und wieder verwendet werden können. In dieser Lektion
           lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen
           zu Funktionen so nützlich ist.  '
-        video: C4_unverfälscht_Parameter
       BinaryImages:
         title: Binärbilder
         desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen
@@ -279,20 +255,17 @@
           binären Techniken repräsentiert werden können.  Diese Lektion entwickelt
           das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie
           Bilder und Farben als Binärcode speichern können.
-        video: C4_unverfälscht_Binärdatei
       VideoGamesCoordinatePlanes:
         title: Videospiele und Koordinatensysteme
         desc: Erfahre, wie deine Lieblingsspiele von Algebra angetrieben werden! Erkunde,
           wie algebraische Ausdrücke und das Koordinatensystem helfen, die Funktion
           von Videospielen zu verstehen. Beginne mit der Planung für das Videospiel,
           das du selbst erstellen wirst.
-        video: alg_11_coordinate_plane
       Contracts:
         title: Verträge, Domäne und Bereich
         desc: "Über Verträge kann das Konzept der Funktionen besser vermittelt und
           besprochen werden. In dieser Lektion helfen uns Verträge, eine neue Programmiersprache
           oder Funktion besser zu verstehen."
-        video: alg_5_contracts
       DesignRecipe:
         title: Das Design-Rezept
         desc: Im letzten Teil haben Studenten einige einfache Funktionen geschrieben.
@@ -300,20 +273,17 @@
           ist ein strukturierter Ansatz für die Erstellung von Funktionen. Es umfasst
           das Schreiben von Testfällen, um sicherzustellen, dass die Funktion wie
           erwartet funktioniert.
-        video: alg_8_design_recipe
       Booleans:
         title: Boolesche Werte und Logik
         desc: Boolesche Werte sind der vierte und letzte Datentyp, den du in diesem
           Kurs kennen lernst. Bei dieser Aktivität lernst du, was Boolesche Werte
           sind, und wie sie dabei helfen können, logisch denkende Funktionen zu schreiben.
-        video: alg_9_booleans
       ConditionalsPiecewiseFunctions:
         title: Bedingungen und stückweise Funktionen
         desc: Die Parameter, die wir an Funktionen weitergeben, führen zu Rückgabewerten,
           die auf einem starren Muster basieren. Stell dir vor, wir möchten Parameter,
           , bei denen einige Werte Ausgaben nach einem Muster bewirken und andere
           Werte ein unterschiedliches Muster erstellen. Dafür werden Bedingungen verwendet…
-        video: alg_10_conditionals
       CollisionDetection:
         title: Kollisionserkennung und der Satz des Pythagoras
         desc: Bei vielen Spielen ist es erforderlich, zu bestimmen, wann sich Objekte
@@ -321,4 +291,28 @@
           Satz des Pythagoras und die Distanz-Formel verwendet werden können, um die
           Entfernung zwischen zwei Punkten auf einer Ebene zu bestimmen und zu entscheiden,
           ob sich diese zwei Punkte (oder Spielcharaktere) berühren.
-        video: alg_16_biggame_collision_detection
+      ! '':
+        title: ''
+        desc: ''
+      courseA_unplugged_loops:
+        title: Loops Unplugged
+        desc: In this lesson, you will learn about loops!
+      courseB_unplugged_MRF:
+        title: Aktivität ohne Computer
+        desc: In this lesson, you will 'program' your friends!
+      courseB_unplugged_loopyMRF:
+        title: Aktivität ohne Computer
+        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
+          but this time with loops!
+      courseC_Unplugged_ScreenOutTheMean:
+        title: Aktivität ohne Computer
+        desc: Today you will learn about what to do if someone is being mean online.
+      courseD_unplugged_digitalCitizenship:
+        title: Aktivität ohne Computer
+        desc: Today you will learn what it means to be a Digital Citizen.
+      courseE_unplugged_privateInformation:
+        title: Aktivität ohne Computer
+        desc: Today you will learn the difference between private and personal information!
+      courseF_unplugged_powerOfWords:
+        title: Aktivität ohne Computer
+        desc: Today you will learn about what to do if someone is being mean online.

@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "Gratulerer med å fullføre Kurs 2"
   congratulations_on_completing_course3: "Gratulerer med å fullføre Kurs 3"
   congratulations_on_completing_course4: "Gratulerer med å fullføre Kurs 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "Gratulerer med å fullføre det Akselererte Kurset"
   congrats_next_tutorials_title: "Prøv desse kursa"
   congrats_next_tutorials_desc: "Prøv desse korte, 1-timars-kursa eller prøv eit kurs frå våre <a href=\"%{current_path}/next\">samarbeidspartnarar</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "Eg fullførte nettopp Kurs 2 - Sjekk det ut! @codeorg"
   just_did_course3: "Eg fullførte nettopp Kurs 3 - Sjekk det ut! @codeorg"
   just_did_course4: "Eg fullførte nettopp Kurs 4 - Sjekk det ut! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Eg fullførte nettopp det Akselererte Kurset - Sjekk det ut! @codeorg"
   twitter_teach_cs: "9 av 10 er enige i at skular bør undervise koding. http://youtu.be/nKIu9yen5nc. Besøk https://code.org/."
   twitter_cs_foundational: "Å lære datateknikk er fundamentalt for alle elever. https://youtu.be/QvyTEx1wyOY."
@@ -239,6 +251,10 @@
     &ldquo;Våre barn &mdash; inkludert våre jenter &mdash; treng å læra informatikk.&rdquo; Sheryl, COO i Facebook
   homepage_hero_text_satya: |-
     &ldquo;Informatikk kan opna for dei beste løysingane i verda.&rdquo; Satya, CEO i Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Om du kan programmera, kan du staka ut kursen til ditt eige liv.&rdquo; Chris Bosh
   homepage_hero_text_student1: |-
@@ -301,6 +317,7 @@
   homepage_slot_text_title_hoc: "Kodetimen"
   homepage_slot_text_blurb_hoc: "Alle kan lære. Start i dag"
   homepage_slot_text_link_hoc: "Prøv Kodetimen"
+  homepage_slot_text_link_about_hoc: "About the Hour of Code"
   homepage_slot_text_link_host: "Bli vertskap for Kodetimen"
   homepage_slot_text_link_hocserved: "# servert"
   homepage_solot_text_link_volunteer: "Meld deg som frivillig til Kodetimen"
@@ -612,11 +629,13 @@
   dashboard_responses_view: 'Vis tekstsvar i:'
   dashboard_responses_none: "De fleste av kursa våre er utforma for yngre aldersgrupper og krev ikke at studenter skriv tekstsvar på spørsmål, så du vil ikke sjå nokon tekstsvar her. For eldre elever i ungdomsskulen og videregåande skule, kan du sjå elevane sine innleveringar på åpent tekstsvar-spørsmål ved å velje tilordna kurs frå rullegardinmenyen ovanfor."
   dashboard_sections_new_section: "Ny seksjon"
+  dashboard_sections_new_google_section: "Import section from Google Classroom"
   dashboard_sections_jumbotron_instruction: "Opprett nye inndelingar og legg til elevar. Seksjonar hjelper deg med å organisere elevar i mindre grupper, slik at du kan spore framdrifta og administrere kontoane."
   dashboard_sections_table_section: "Seksjon"
   dashboard_sections_table_secret: "Logg inn"
   dashboard_sections_table_grade: "Trinn"
   dashboard_sections_table_course: "Leksjon"
+  dashboard_sections_table_pairing_allowed: "Parprogrammering"
   dashboard_sections_table_stage_extras: "Tilleggsmateriale"
   dashboard_sections_table_students: "Elevar"
   dashboard_sections_table_code: "Seksjonskode"
@@ -688,6 +707,12 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "Hvis dere ikke har datamaskiner i klasserommet, kan du <a href='%{unplugged_url}'>prøve disse analoge leksjonene</a>."
   dashboard_curriculum: "Læreplan"
   dashboard_curriculum_overview: "Oversikt for barnetrinnet"
@@ -856,11 +881,17 @@
   course3_name: "Kurs 3"
   course4_name: "Kurs 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "Framskunda kurs"
   cspunit1_name: '(gammel) Enhet 1: Digital informasjon'
   cspunit2_name: '(gammel) Enhet 2: Internett'
@@ -868,9 +899,9 @@
   cspunit4_name: '(gammel) Enhet 4: Data'
   cspunit5_name: '(gammel) Enhet 5: Utforsk og lag PT'
   cspunit6_name: 'Post-AP: Databaser i apper'
-  csd1_name: 'Unit 1: Computers and Logic'
+  csd1_name: 'Unit 1: Problem Solving'
   csd2_name: 'Unit 2: Web Development'
-  csd3_name: 'Unit 3: Interactive Games and Animations'
+  csd3_name: 'Unit 3: Animation and Games'
   csd4_name: 'Unit 4: The Design Process'
   csd5_name: 'Unit 5: Data and Society'
   csd6_name: 'Unit 6: Physical Computing'
@@ -903,7 +934,7 @@
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggende informatikk"
   csf2_draft_category_name: 'Under Development: Courses A - F'
-  csd_category_name: 'Under Development: CS Discoveries'
+  csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Prinsipper i informatikk"
   csp17_category_name: "'16-'17 Prinsipper i informatikk"
   cspexams_category_name: "Prinsipper i informatikk teoriprøve"
@@ -967,6 +998,12 @@
   course2_gradelevel: "Frå 6+ år (må kunne lese)"
   course3_gradelevel: "Frå 8+ år (etter Kurs 2)"
   course4_gradelevel: "Frå 10+ år (etter Kurs 3)"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "8.+ klasse"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "Frå 10+ år (etter Kurs 3)"
   codeorg_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
   codeintl_platformtext: "Moderne nettlesarar, smarttelefonar, tablet-pc'ar"
@@ -1069,6 +1106,12 @@
   course2_shortdescription_congrats: "For elever med grunnleggende leseferdigheter. Dette kurset bygger på Kurs 1. Elevene vil lage prigrammer for å løse problemer og utvikle interaktive spill og historier som de etterpå kan dele. Anbefalt for 2.-5. klasse."
   course3_shortdescription_congrats: "Klar for neste nivå? Elevene vil gå dypere inn i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive historier og spill som de kan dele med andre. Anbefalt for 4.-5. klasse."
   course4_shortdescription_congrats: "Klar for å gå videre? Elevene vil gå dypere inn i programmerings-temaer som ble introdusert i de forrige kursene for å finne fleksible løsninger på kompliserte problemer. Til slutt i dette kurset lager elevene interaktive historier og spill som de kan dele med andre. Anbefalt for 4.-8. klasse."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "Lær dei grunnlegjande konsepta for datavitksap med drag-og-slepp-programmering. Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande algoritmer. Tilgjengeleg på 34 språk."
   codeintl_longdescription: "Lær dei grunnlegjande konsepta for datavitksap med drag-og-slepp-programmering. Dette er ei spel-liknande, sjølvstyrt øving med videoforedrag av Bill Gates, Mark Zuckerberg, Angry Birds og Plantar mot Zombiar. Lær løkker, vilkår og grunnleggjande algoritmer. Tilgjengeleg på 34 språk."
   thinkersmithspanish_longdescription: "Ved å bruke et forhåndsdefinert \"Robot-språk\" vil finne ut hvordan de kan instruere hverandere til å utføre bestemte oppgaver uten å diskutere dem først. Denne leksjonen lærer barn sammenhengen mellom symboler og handlinger, i tillegg til uvurderlige ferdigheter i å finne feil."
@@ -1312,3 +1355,41 @@
   infinity_shortcode: "inf"
   playlab_shortcode: "lab"
   artist_shortcode: "art"
+  header_home: "Home"
+  header_courses: "Kurs"
+  header_project_gallery: "Project Gallery"
+  header_sections: "Sections"
+  header_professional_learning: "Professional Learning"
+  header_educate_overview: "Educator Overview"
+  header_educate_elementary: "Elementary School"
+  header_educate_middle: "Middle School"
+  header_educate_high: "High School"
+  header_educate_hoc: "Kodetimen"
+  header_educate_partner: "Partner with Us"
+  header_educate_beyond: "Beyond Code.org"
+  header_educate_inspire: "Inspire a Student"
+  header_educate_community: "Online Community"
+  header_educate_tools: "Tools and Videos"
+  header_about_us: "About Us"
+  header_about_leadership: "Leadership"
+  header_about_donors: "Donors"
+  header_about_partners: "Partners"
+  header_about_team: "Full Team"
+  header_about_news: "Newsroom"
+  header_about_evaluation: "Evaluation"
+  header_about_jobs: "Jobs"
+  header_about_contact: "Contact Us"
+  header_about_faqs: "FAQs"
+  header_learn: "Learn"
+  header_teach: "Teach"
+  header_stats: "Statistikk"
+  header_help_us: "Help Us"
+  header_about: "About"
+  header_teacher_community: "Teacher community"
+  header_help_support: 'Help and support '
+  header_report_bug: "Report bug"
+  header_tutorials: "Tutorials"
+  header_documentation: "Documentation"
+  csp_name: "'16-'17 Prinsipper i informatikk"
+  csd_name: "CS Discoveries"
+  full_course_category_name: "Full Courses"

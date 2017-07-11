@@ -56,7 +56,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "encrypted_examples": "EGo10ZJs29sGnQzEXnLl+BLV2pmzQkow6Ag+RDITfJrw3sVS69XprahqcZRi\nBSlA\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

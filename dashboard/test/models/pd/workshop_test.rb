@@ -275,7 +275,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
     assert workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
 
     workshop.send_exit_surveys
   end
@@ -446,19 +446,32 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 12, workshop_no_constraint.effective_num_hours
   end
 
+  test 'teacherCon workshops are capped at 33.5 hours' do
+    workshop_csd_teachercon = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    workshop_csp_teachercon = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    assert_equal 33.5, workshop_csd_teachercon.effective_num_hours
+    assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
+  end
+
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)
-    3.times do
-      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
-    end
-    2.times do
-      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
-    end
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times {create :pd_enrollment, workshop: workshop}
+    create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -472,17 +485,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email')
-    3.times do
-      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
-    end
-    2.times do
-      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
-    end
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
 
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times {create :pd_enrollment, workshop: workshop}
+    create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -496,17 +505,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in facilitator reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil)
-    3.times do
-      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
-    end
-    2.times do
-      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
-    end
-
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times {create :pd_enrollment, workshop: workshop}
+    create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -517,12 +521,40 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'bad email'
   end
 
+  test 'facilitator reminders are skipped when the facilitator is also the organizer' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    facilitator = create :facilitator
+    organizer = create :workshop_organizer
+
+    # The organizer is also a facilitator, and should not receive a facilitator reminder email.
+    workshop = create :pd_workshop, organizer: organizer, facilitators: [organizer, facilitator]
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).with(facilitator, workshop).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).with(organizer, workshop).never
+    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).with(workshop).returns(mock_mail)
+    Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+  end
+
   test 'workshop starting date picks the day of the first session' do
     session = create :pd_session, start: Date.today + 15.days
     session2 = create :pd_session, start: Date.today + 20.days
     @workshop.sessions << session
     @workshop.sessions << session2
     assert_equal session.start, @workshop.workshop_starting_date
+    assert_equal session2.start, @workshop.workshop_ending_date
+  end
+
+  test 'workshop date range string for single session workshop' do
+    workshop = create :pd_workshop, num_sessions: 1
+    assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
+  end
+
+  test 'workshop date range string for multi session workshop' do
+    workshop = create :pd_workshop, num_sessions: 2
+    assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do

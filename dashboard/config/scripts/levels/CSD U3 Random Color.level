@@ -53,7 +53,7 @@
     "show_d_pad": "false",
     "pause_animations_by_default": "false",
     "encrypted_examples": "16uExe+l1dEbadq1SWMg6u06I547h83FPa3j38f8Mkh6mUzov8hHULf0HlwB\n9Squ\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

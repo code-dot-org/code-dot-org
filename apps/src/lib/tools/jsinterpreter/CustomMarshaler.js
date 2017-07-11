@@ -61,7 +61,7 @@ module.exports = class CustomMarshaler {
       isPrimitive: false,
       isCustomMarshal: true,
       type: typeof nativeObj,
-      parent: nativeParentObj, // TODO (cpirich): replace with interpreter object?
+      proto: nativeParentObj, // TODO (cpirich): replace with interpreter object?
       toBoolean: function () {return Boolean(this.data);},
       toNumber: function () {return Number(this.data);},
       toString: function () {return String(this.data);},

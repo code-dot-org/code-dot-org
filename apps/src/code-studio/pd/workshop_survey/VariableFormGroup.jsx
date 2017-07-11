@@ -155,6 +155,13 @@ const VariableFormGroup = React.createClass({
     errors: React.PropTypes.arrayOf(React.PropTypes.string),
   },
 
+  getDefaultProps() {
+    return {
+      columnVariableQuestions: [],
+      rowVariableQuestions: []
+    };
+  },
+
   getInitialState() {
     let selected = [];
 
@@ -272,7 +279,7 @@ const VariableFormGroup = React.createClass({
             type={'check'}
           />
         }
-        <Table striped bordered>
+        {(columnQuestions.length > 0) && <Table striped bordered>
           <thead>
             <tr>
               <th style={thStyle}></th>
@@ -282,7 +289,7 @@ const VariableFormGroup = React.createClass({
           <tbody>
             {columnQuestions}
           </tbody>
-        </Table>
+        </Table>}
         {rowQuestions}
       </FormGroup>
     );

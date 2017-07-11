@@ -35,7 +35,7 @@
     "start_blocks": "penUp();\r\nmoveTo(150,200);\r\ndrawSquare(100);\r\nmoveTo(100,350);\r\ndrawSquare(25);\r\n\r\nfunction drawSquare(size){\r\n  penDown();\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  moveForward(33);\r\n  turnRight(90);\r\n  moveForward(size);\r\n  turnRight(90);\r\n  penUp();\r\n}",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "slider_speed": "1",
     "disable_param_editing": "false",
     "disable_variable_editing": "false",
@@ -98,10 +98,14 @@
       }
     ],
     "show_debug_watch": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-09 21:35:46 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"encrypted_examples\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

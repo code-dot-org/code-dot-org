@@ -5,6 +5,7 @@
 #  id                       :integer          not null, primary key
 #  studio_person_id         :integer
 #  email                    :string(255)      default(""), not null
+#  parent_email             :string(255)
 #  encrypted_password       :string(255)      default("")
 #  reset_password_token     :string(255)
 #  reset_password_sent_at   :datetime
@@ -33,6 +34,7 @@
 #  active                   :boolean          default(TRUE), not null
 #  hashed_email             :string(255)
 #  deleted_at               :datetime
+#  purged_at                :datetime
 #  secret_words             :string(255)
 #  properties               :text(65535)
 #  invitation_token         :string(255)
@@ -57,7 +59,9 @@
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
 #  index_users_on_invitations_count                    (invitations_count)
 #  index_users_on_invited_by_id                        (invited_by_id)
+#  index_users_on_parent_email                         (parent_email)
 #  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
+#  index_users_on_purged_at                            (purged_at)
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
 #  index_users_on_school_info_id                       (school_info_id)
 #  index_users_on_studio_person_id                     (studio_person_id)
@@ -106,11 +110,13 @@ class User < ActiveRecord::Base
     district_id
     ops_school
     ops_gender
-    races
     using_text_mode
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
     ui_tip_dismissed_teacher_courses
+    oauth_refresh_token
+    oauth_token
+    oauth_token_expiration
   )
 
   # Include default devise modules. Others available are:
@@ -124,12 +130,23 @@ class User < ActiveRecord::Base
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
 
-  OAUTH_PROVIDERS = %w{facebook twitter windowslive google_oauth2 clever the_school_project}.freeze
+  OAUTH_PROVIDERS = %w(
+    clever
+    facebook
+    google_oauth2
+    lti_lti_prod_kids.qwikcamps.com
+    the_school_project
+    twitter
+    windowslive
+  ).freeze
+
+  SYSTEM_DELETED_USERNAME = 'system_deleted'
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
-  TYPE_STUDENT = 'student'.freeze
-  TYPE_TEACHER = 'teacher'.freeze
-  USER_TYPE_OPTIONS = [TYPE_STUDENT, TYPE_TEACHER].freeze
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = 'student'.freeze,
+    TYPE_TEACHER = 'teacher'.freeze
+  ].freeze
   validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS
 
   belongs_to :studio_person
@@ -165,6 +182,8 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
 
+  after_create :associate_with_potential_pd_enrollments
+
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
   # @param school_info_attr the attributes to set and check
@@ -184,11 +203,12 @@ class User < ActiveRecord::Base
 
   belongs_to :invited_by, polymorphic: true
 
-  validate :admins_must_be_teachers
+  validate :admins_must_be_teachers_without_followeds
 
-  def admins_must_be_teachers
+  def admins_must_be_teachers_without_followeds
     if admin
       errors.add(:admin, 'must be a teacher') unless teacher?
+      errors.add(:admin, 'cannot be a followed') unless sections_as_student.empty?
     end
   end
 
@@ -323,15 +343,18 @@ class User < ActiveRecord::Base
 
   before_create :generate_secret_words
 
+  before_create :suppress_ui_tips_for_new_users
+
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   has_many :user_scripts, -> {order "-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc"}
   has_many :scripts, -> {where hidden: false}, through: :user_scripts, source: :script
 
-  validates :name, presence: true
+  validates :name, presence: true, unless: -> {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  validates :age, presence: true, on: :create # only do this on create to avoid problems with existing users
+  is_google = proc {|user| user.provider == 'google_oauth2'}
+  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
@@ -359,7 +382,7 @@ class User < ActiveRecord::Base
   before_save :make_teachers_21,
     :normalize_email,
     :hash_email,
-    :sanitize_and_set_race_data,
+    :sanitize_race_data_set_urm,
     :fix_by_user_type
 
   def make_teachers_21
@@ -381,44 +404,40 @@ class User < ActiveRecord::Base
     self.hashed_email = User.hash_email(email)
   end
 
-  # Returns whether the comma separated list of races represents an under-represented minority user.
-  # @return [Boolean, nil] Whether races_comma_separated represents a URM user.
+  # @return [Boolean, nil] Whether the the list of races stored in the `races` column represents an
+  # under-represented minority.
   #   - true: Yes, a URM user.
   #   - false: No, not a URM user.
   #   - nil: Don't know, may or may not be a URM user.
-  def self.urm_from_races(races_comma_separated)
-    races_array = races_comma_separated.split(',')
-    return nil if races_array.empty?
-    return nil if (races_array & ['opt_out', 'nonsense', 'closed_dialog']).any?
-    return true if (races_array & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
+  def urm_from_races
+    return nil unless races
+
+    races_as_list = races.split ','
+    return nil if races_as_list.empty?
+    return nil if (races_as_list & ['opt_out', 'nonsense', 'closed_dialog']).any?
+    return true if (races_as_list & ['black', 'hispanic', 'hawaiian', 'american_indian']).any?
     false
   end
 
-  def sanitize_and_set_race_data
-    return unless property_changed?('races')
-    # Though not possible from the UI, it seems wise to support manual clearing of this field. Thus
-    # we check for this edge case.
-    if races.nil?
-      update_column(:races, nil)
-      update_column(:urm, nil)
-      return
+  def sanitize_race_data_set_urm
+    return true unless races_changed?
+
+    if races
+      races_as_list = races.split ','
+      if races_as_list.include? 'closed_dialog'
+        self.races = 'closed_dialog'
+      elsif races_as_list.length > 5
+        self.races = 'nonsense'
+      else
+        races_as_list.each do |race|
+          self.races = 'nonsense' unless VALID_RACES.include? race
+        end
+      end
     end
 
-    # Sanitize the old (properties) data.
-    if races.include? 'closed_dialog'
-      self.races = %w(closed_dialog)
-    end
-    if races.length > 5
-      self.races = %w(nonsense)
-    end
-    races.each do |race|
-      self.races = %w(nonsense) unless VALID_RACES.include? race
-    end
+    self.urm = urm_from_races
 
-    # Set the new (urm and races columns) data.
-    races_comma_separated = races.join(',')
-    update_column(:races, races_comma_separated)
-    update_column(:urm, User.urm_from_races(races_comma_separated))
+    true
   end
 
   def fix_by_user_type
@@ -448,7 +467,7 @@ class User < ActiveRecord::Base
     User.find(user_id)
   end
 
-  validate :presence_of_email, if: :teacher?
+  validate :presence_of_email, if: -> {teacher? && purged_at.nil?}
   validate :presence_of_email_or_hashed_email, if: :email_required?, on: :create
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
@@ -497,7 +516,7 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
@@ -531,6 +550,19 @@ class User < ActiveRecord::Base
       end
       user.gender = normalize_gender auth.info.gender
     end
+
+    if auth.credentials
+      if auth.credentials.refresh_token
+        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+      end
+
+      omniauth_user.oauth_token = auth.credentials.token
+      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
+
+      omniauth_user.save if omniauth_user.changed?
+    end
+
+    omniauth_user
   end
 
   def oauth?
@@ -568,6 +600,14 @@ class User < ActiveRecord::Base
     provider == User::PROVIDER_MANUAL
   end
 
+  def update_without_password(params, *options)
+    if params[:races]
+      self.races = params[:races].join ','
+    end
+    params.delete(:races)
+    super
+  end
+
   def update_with_password(params, *options)
     if encrypted_password.blank?
       params.delete(:current_password) # user does not have password so current password is irrelevant
@@ -575,6 +615,13 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  # True if the account is teacher-managed and has any sections that use word logins.
+  # Will not be true if the user has a password or is only in picture sections
+  def secret_word_account?
+    return false unless teacher_managed_account?
+    sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
@@ -897,6 +944,13 @@ class User < ActiveRecord::Base
     self.secret_words = [SecretWord.random.word, SecretWord.random.word].join(" ")
   end
 
+  def suppress_ui_tips_for_new_users
+    # New teachers don't need to see the UI tips for their home and course pages,
+    # so set them as already dismissed.
+    self.ui_tip_dismissed_homepage_header = true
+    self.ui_tip_dismissed_teacher_courses = true
+  end
+
   def advertised_scripts
     [
       Script.hoc_2014_script, Script.frozen_script, Script.infinity_script,
@@ -935,9 +989,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
-        # assigned_sections is current unused. When we support this, I think it makes
-        # more sense to get/store this data separately from courses.
-        assignedSections: []
       }
     end
 
@@ -948,9 +999,6 @@ class User < ActiveRecord::Base
         name: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
-        # assigned_sections is current unused. When we support this, I think it makes
-        # more sense to get/store this data separately from courses.
-        assignedSections: []
       }
     end
 
@@ -1201,7 +1249,7 @@ class User < ActiveRecord::Base
   end
 
   def can_pair?
-    !sections_as_student.empty?
+    sections_as_student.any?(&:pairing_allowed)
   end
 
   def can_pair_with?(other_user)
@@ -1221,23 +1269,6 @@ class User < ActiveRecord::Base
     AsyncProgressHandler.progress_queue
   end
 
-  # can this user edit their own account?
-  def can_edit_account?
-    # Teachers can always edit their account
-    return true if teacher?
-    # Users with passwords can always edit their account
-    return true if encrypted_password.present?
-    # Oauth users can always edit their account
-    return true if oauth?
-    # Users that don't belong to any sections (i.e. can't be managed by any other
-    # user) can always edit their account
-    return true if sections_as_student.empty?
-    # if you log in only through picture passwords you can't edit your account
-    return true  unless sections_as_student.all? {|section| section.login_type == Section::LOGIN_TYPE_PICTURE}
-
-    false
-  end
-
   # We restrict certain users from editing their email address, because we
   # require a current password confirmation to edit email and some users don't
   # have passwords
@@ -1250,6 +1281,22 @@ class User < ActiveRecord::Base
   # picture, or some other unusual method
   def can_edit_password?
     encrypted_password.present?
+  end
+
+  # Users who might otherwise have orphaned accounts should have the option
+  # to create personal logins (using e-mail/password or oauth) so they can
+  # continue to use our site without losing progress.
+  def can_create_personal_login?
+    teacher_managed_account? # once parent e-mail is added, we should check for it here
+  end
+
+  def teacher_managed_account?
+    return false unless student?
+    # We consider the account teacher-managed if the student can't reasonably log in on their own.
+    # In some cases, a student might have a password but no e-mail (from our old UI)
+    return false if encrypted_password.present? && hashed_email.present?
+    # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
+    !oauth?
   end
 
   def section_for_script(script)
@@ -1297,5 +1344,36 @@ class User < ActiveRecord::Base
 
   def school_info_suggestion?
     !(school.blank? && full_address.blank?)
+  end
+
+  # Removes PII and other information from the user and marks the user as having been purged.
+  # WARNING: This (permanently) destroys data and cannot be undone.
+  # WARNING: This does not purge the user, only marks them as such.
+  def clear_user_and_mark_purged
+    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(5).join
+
+    self.name = nil
+    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
+    self.current_sign_in_ip = nil
+    self.last_sign_in_ip = nil
+    self.email = ''
+    self.hashed_email = ''
+    self.encrypted_password = nil
+    self.uid = nil
+    self.reset_password_token = nil
+    self.full_address = nil
+    self.properties = {}
+
+    self.purged_at = Time.zone.now
+
+    save!
+  end
+
+  def associate_with_potential_pd_enrollments
+    if teacher?
+      Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
+        enrollment.update(user: self)
+      end
+    end
   end
 end

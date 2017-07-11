@@ -8,7 +8,7 @@ require 'sshkit'
 SSHKit::Backend::Netssh.configure {|ssh| ssh.ssh_options = {paranoid: false}}
 
 unless CDO.daemon
-  CDO.log.error 'This script must be run on production-daemon'
+  CDO.log.error 'This script must be run on daemon'
   exit 1
 end
 

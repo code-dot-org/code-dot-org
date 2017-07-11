@@ -75,6 +75,7 @@
   "penUp":"levantar o lápis",
   "reinfFeedbackMsg":"Aqui está o teu desenho! Continua a aperfeiçoá-lo ou continua para o próximo desafio.",
   "setAlpha":"definir transparência",
+  "setCharacter":"set character to {character}",
   "setColour":"definir cor",
   "setPattern":"definir padrão",
   "setWidth":"definir largura",

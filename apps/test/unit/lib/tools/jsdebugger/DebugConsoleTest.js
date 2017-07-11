@@ -7,7 +7,7 @@ import DebugConsole from '@cdo/apps/lib/tools/jsdebugger/DebugConsole';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 describe('The DebugConsole component', () => {
   let root;

@@ -4,7 +4,18 @@ css 'unplugged'
 markdown <<MARKDOWN
 # Overview
 
-## Background
+The class programs their sprites to interact in new ways.  After a brief review of how they used the isTouching block, the class brainstorms other ways that two sprites could interact.  They then use isTouching to make one sprite push another across the screen before practicing with the four collision blocks (collide, displace, bounce, and bounceOff).
+## Vocabulary
 
-You'll learn a number of new ways to make your sprites interact with one another, like bouncing, colliding, and displacing one another. First learn how you might create these interactions with code you can already write, then check out the new set of abstractions that will take care of those details for you. You'll use the new blocks and sprite interactions you learn to complete the game you started in the last lesson.
+* **Abstraction** - Pulling out specific differences to make one solution work for multiple problems.
+
+## Introduced Code
+
+* [sprite.bounceOff()](//docs.code.org/gamelab/bounceOff/)
+* [sprite.collide()](//docs.code.org/gamelab/collide/)
+* [sprite.displace()](//docs.code.org/gamelab/displace/)
+* [sprite.setCollider()](//docs.code.org/gamelab/setCollider/)
+* [sprite.bounce()](//docs.code.org/gamelab/bounce/)
+* [sprite.bounciness](//docs.code.org/gamelab/bounciness/)
+
 MARKDOWN

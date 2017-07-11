@@ -74,7 +74,10 @@
       %br/
       .project_admin
     - if current_user.permission?(UserPermission::RESET_ABUSE)
+      %br
       %div.admin-abuse{ :style => "display: none" }
         Abuse score:
         %span.admin-abuse-score
         = link_to 'Reset', '#', { class: 'admin-abuse-reset' }
+      .admin-report-abuse{ style: 'display: none;' }
+        = link_to 'Report Abuse', '/report_abuse'

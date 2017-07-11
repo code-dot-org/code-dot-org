@@ -12,6 +12,9 @@ class ProjectsController < ApplicationController
     artist: {
       name: 'New Artist Project'
     },
+    frozen: {
+      name: 'New Frozen Project'
+    },
     playlab: {
       name: 'New Play Lab Project'
     },
@@ -181,7 +184,7 @@ class ProjectsController < ApplicationController
       callouts: [],
       channel: params[:channel_id],
       no_footer: no_footer,
-      code_studio_logo: @is_legacy_share && !iframe_embed,
+      code_studio_logo: sharing && !iframe_embed,
       no_header: sharing,
       is_legacy_share: @is_legacy_share,
       small_footer: !no_footer && (@game.uses_small_footer? || @level.enable_scrolling?),

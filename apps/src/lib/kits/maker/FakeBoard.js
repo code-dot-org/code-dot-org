@@ -114,6 +114,10 @@ export default class FakeBoard extends EventEmitter {
   boardConnected() {
     return false;
   }
+
+  createLed(pin) {
+    return new FakeLed();
+  }
 }
 
 class FakeComponent extends EventEmitter {}

@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How many times should you repeat the pattern to make the ladder?\",\"hint_id\":\"courseB_artist_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22fbd5a65bf2061f0f551317df5c22ef/courseB_artist_loops8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How many times should you repeat the pattern to make the ladder?\",\"hint_id\":\"courseB_artist_loops8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/22fbd5a65bf2061f0f551317df5c22ef/courseB_artist_loops8.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code you're given to see what it does.\",\"hint_id\":\"courseB_artist_loops8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/88d005bc8eef47a9bb561c6c6bc82ba3/courseB_artist_loops8.mp3\"}]",
     "ideal": "6",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/3947bcb7fca8d3d9a817904f2d5985b9-image-1478642066737.png\", \"position\": [0,0]}\r\n]",
@@ -41,6 +41,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 18:15:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

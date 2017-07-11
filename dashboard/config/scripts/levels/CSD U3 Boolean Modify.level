@@ -9,7 +9,7 @@
     "edit_code": true,
     "embed": "false",
     "instructions": "Modify the code so that all of the console.log commands print true",
-    "start_blocks": "// Modify these sprites so that all of the\r\n// console.log() commands print true\r\nvar sprite1 = createSprite(100, 200);\r\nsprite1.setAnimation(\"apple\");\r\nsprite1.rotation = 30;\r\nsprite1.scale = 1.5;\r\n\r\nvar sprite2 = createSprite(300, 200);\r\nsprite2.setAnimation(\"carrot\");\r\nsprite2.rotation = 60;\r\nsprite2.scale = 0.5\r\n\r\n// Don't edit the following (I'm serious!!!)\r\nconsole.log(sprite2.x == sprite2.y);\r\nconsole.log(sprite2.rotation < 40);\r\nconsole.log(sprite1.scale == sprite2.scale);\r\nconsole.log(sprite1.x > 150);\r\nconsole.log(sprite2.y < 200);\r\n\r\ndrawSprites();",
+    "start_blocks": "// Modify these sprites so that all of the\r\n// console.log() commands print true\r\nvar sprite1 = createSprite(100, 200);\r\nsprite1.setAnimation(\"apple\");\r\nsprite1.rotation = 30;\r\nsprite1.scale = 1.5;\r\n\r\nvar sprite2 = createSprite(300, 200);\r\nsprite2.setAnimation(\"carrot\");\r\nsprite2.rotation = 60;\r\nsprite2.scale = 0.5;\r\n\r\n// Don't edit the following (I'm serious!!!)\r\nconsole.log(\"Comparison 1: \" + (sprite2.x == sprite2.y));\r\nconsole.log(\"Comparison 2: \" + (sprite2.rotation < 40));\r\nconsole.log(\"Comparison 3: \" + (sprite1.scale == sprite2.scale));\r\nconsole.log(\"Comparison 4: \" + (sprite1.x > 150));\r\nconsole.log(\"Comparison 5: \" + (sprite2.y < 200));\r\n\r\ndrawSprites();\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -94,6 +94,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 17:42:06 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -75,6 +75,7 @@
   "penUp": "Stift anheben",
   "reinfFeedbackMsg": "Hier ist deine Zeichnung! Dein Bild ist fertig! Arbeite weiter daran oder gehe zur nächsten Aufgabe.",
   "setAlpha": "setze Transparenz",
+  "setCharacter": "set character to {character}",
   "setColour": "setze Farbe",
   "setPattern": "setze Muster",
   "setWidth": "setze Breite",

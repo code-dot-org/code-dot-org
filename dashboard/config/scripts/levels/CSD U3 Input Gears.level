@@ -92,7 +92,7 @@
     "pause_animations_by_default": "false",
     "palette_category_at_start": "control",
     "show_debug_watch": "true",
-    "encrypted_examples": "zwEu6VNB7clo7Mo6muBe49QEAmpL4XMurSQGPK/KcLD0hqKuK0T2DQHOmgE8\nQM+2\n",
+    "encrypted_examples": "RGw/zx1snIRr0CgGlXj29iiDvbUHBrhBFwibH+Ior1dHcG6miA6vnHNeWDFb\nL4XH1h9f2ZSmdCm2kZmdTwcznA==\n",
     "start_blocks": "var blueGear = createSprite(100, 220);\r\nblueGear.setAnimation(\"blue_gear\");\r\n\r\nvar greenGear = createSprite(183, 298);\r\ngreenGear.setAnimation(\"green_gear\");\r\n\r\nvar redGear = createSprite(185, 145);\r\nredGear.setAnimation(\"red_gear\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  blueGear.rotation = blueGear.rotation - 1;\r\n  greenGear.rotation = greenGear.rotation + 1;\r\n  redGear.rotation = redGear.rotation + 1;\r\n  drawSprites();\r\n}\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -102,6 +102,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:55:56 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

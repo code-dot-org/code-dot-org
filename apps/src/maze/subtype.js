@@ -35,6 +35,7 @@ export default class Subtype {
     this.studioApp_ = studioApp;
     this.skin_ = config.skin;
     this.level_ = config.level;
+    this.startDirection = config.level.startDirection;
   }
 
   finished() {
@@ -132,21 +133,21 @@ export default class Subtype {
         this.maze_.map.getTile(row, col) === undefined;
   }
 
-  getEmptyTile(x, y, adjacentToPath, wallMap) {
+  getEmptyTile(x, y, adjacentToPath) {
     let tile;
     // Empty square.  Use null0 for large areas, with null1-4 for borders.
     if (!adjacentToPath && Math.random() > 0.3) {
-      wallMap[y][x] = 0;
+      this.wallMap[y][x] = 0;
       tile = 'null0';
     } else {
       const wallIdx = Math.floor(1 + Math.random() * 4);
-      wallMap[y][x] = wallIdx;
+      this.wallMap[y][x] = wallIdx;
       tile = 'null' + wallIdx;
     }
 
     // For the first 3 levels in maze, only show the null0 image.
     if (['2_1', '2_2', '2_3'].includes(this.level_.id)) {
-      wallMap[y][x] = 0;
+      this.wallMap[y][x] = 0;
       tile = 'null0';
     }
     return tile;
@@ -155,7 +156,7 @@ export default class Subtype {
   /**
    * Draw the tiles making up the maze map.
    */
-  drawMapTiles(svg, wallMap) {
+  drawMapTiles(svg) {
     // Compute and draw the tile for each square.
     let tileId = 0;
     let tile;
@@ -172,7 +173,7 @@ export default class Subtype {
       // Draw the tile.
       if (!TILE_SHAPES[tile]) {
         // We have an empty square. Handle it differently based on skin.
-        tile = this.getEmptyTile(col, row, adjacentToPath, wallMap);
+        tile = this.getEmptyTile(col, row, adjacentToPath);
       }
 
       this.drawTile(svg, TILE_SHAPES[tile], row, col, tileId);
@@ -188,4 +189,35 @@ export default class Subtype {
     this.drawer.drawTile(svg, tileSheetLocation, row, col, tileId, this.skin_.tiles);
   }
 
+  /**
+   * Initialize the wallMap.  For any cell at location x,y Maze.wallMap[y][x] will
+   * be the index of which wall tile to use for that cell.  If the cell is not a
+   * wall, Maze.wallMap[y][x] is undefined.
+   */
+  initWallMap() {
+    this.wallMap = new Array(this.maze_.map.ROWS);
+    for (let y = 0; y < this.maze_.map.ROWS; y++) {
+      this.wallMap[y] = new Array(this.maze_.map.COLS);
+    }
+  }
+
+  initStartFinish() {
+    this.start = undefined;
+    this.finish = undefined;
+
+    // Locate the start and finish squares.
+    for (let y = 0; y < this.maze_.map.ROWS; y++) {
+      for (let x = 0; x < this.maze_.map.COLS; x++) {
+        let cell = this.maze_.map.getTile(y, x);
+        if (cell === SquareType.START) {
+          this.start = {x: x, y: y};
+        } else if (cell === SquareType.FINISH) {
+          this.finish = {x: x, y: y};
+        } else if (cell === SquareType.STARTANDFINISH) {
+          this.start = {x: x, y: y};
+          this.finish = {x: x, y: y};
+        }
+      }
+    }
+  }
 }

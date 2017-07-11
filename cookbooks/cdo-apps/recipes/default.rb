@@ -72,6 +72,10 @@ include_recipe 'cdo-apps::workers'
   node.override['cdo-secrets']["#{app}_port"] = node['cdo-apps'][app]['port']
 end
 node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-apps']['daemon']
+
+node.default['cdo-apps']['process_queues'] = node['cdo-apps']['daemon'] && node.chef_environment != 'adhoc'
+node.default['cdo-secrets']['process_queues'] = true if node['cdo-apps']['process_queues']
+
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-postfix'
 include_recipe 'cdo-varnish'

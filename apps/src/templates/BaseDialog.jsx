@@ -75,11 +75,13 @@ var BaseDialog = React.createClass({
       });
     }
 
+    let wrapperClassNames = "";
     let modalClassNames = "modal";
     let modalBodyClassNames = "modal-body";
     let modalBackdropClassNames = "modal-backdrop";
 
     if (this.props.useUpdatedStyles) {
+      wrapperClassNames = "dashboard-styles";
       modalBodyClassNames = "";
       modalBodyStyle = {
         background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
@@ -128,7 +130,7 @@ var BaseDialog = React.createClass({
     }
 
     return (
-      <div>
+      <div className={wrapperClassNames}>
         <div className={modalBackdropClassNames} onClick={this.closeDialog}></div>
         {body}
       </div>

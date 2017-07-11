@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { isRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -9,9 +10,10 @@ import i18n from "@cdo/locale";
 $(document).ready(showHomepage);
 
 function showHomepage() {
+  const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
   const homepageData = JSON.parse(script.dataset.homepage);
-  const isTeacher = !!homepageData.sections;
+  const isTeacher = homepageData.isTeacher;
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
@@ -40,7 +42,7 @@ function showHomepage() {
             [
               {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks(), arrowDirection: "up"},
               {type: "initial", position: {top: 80, right: 15}, text: i18n.homepageUiTipOtherLinks(), arrowDirection: "up_corner"},
-              {type: "triggered", position: {top: 80, right: 50}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link", arrowDirection: "up"}
+              {type: "triggered", position: {top: 80, right: 15}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link", arrowDirection: "up_corner"}
             ]}
         />
       )}
@@ -52,18 +54,25 @@ function showHomepage() {
               heading: i18n.announcementHeading(),
               buttonText: i18n.learnMore(),
               description: i18n.announcementDescription(),
-              link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
-              image: "redesign-screencast"
+              link: "http://teacherblog.code.org/post/162400738379/ap-cs-principles-score-distributions-released-from",
+              image: "",
+              id: "ap_csp_scores_2017"
             }
           ]}
           courses={homepageData.courses}
           sections={homepageData.sections}
           codeOrgUrlPrefix={homepageData.codeorgurlprefix}
+          isRtl={isRtl}
         />
       )}
       {!isTeacher && (
         <StudentHomepage
           courses={homepageData.courses}
+          studentTopCourse={homepageData.studentTopCourse}
+          sections={homepageData.sections}
+          canLeave={homepageData.canLeave}
+          codeOrgUrlPrefix={homepageData.codeorgurlprefix}
+          isRtl={isRtl}
         />
       )}
     </div>,

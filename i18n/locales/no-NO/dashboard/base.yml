@@ -9,11 +9,14 @@
     errors:
       messages:
         blank: "må fylles ut"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Visningsnavn'
-        name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
+        name_example: 'Kallenavn<br/>(f.eks Kule Knut eller Tøffe Trine)'
         email: 'E-post'
+        personal_email: 'Personal email address'
         username: 'brukernavn'
         password: 'passord'
         password_confirmation: 'Bekreftelse på passord'
@@ -159,6 +162,8 @@
       instructions: "Legg inn epost-adressen din nedenfor, så sender vi instrukser om hvordan du lager nytt passord."
       email: 'E-postadresse'
       submit: 'Send'
+    reset_errors:
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Endre passordet ditt'
       new_password: 'nytt passord'
@@ -200,61 +205,13 @@
   reports:
     error:
       access_denied: "Du har ikke tilgang til denne personens statistikk"
-  redeem_prizes:
-    title: 'Hent dine premier: %{name}'
-    provider: 'Tilbyder:'
-    code: 'Kode:'
-    redeem_header: 'For å innløse:'
-    donorschoose_register: 'Registrer som lærer på DonorsChoose.org'
-    donorschoose_project: 'Legg ut ett prosjekt'
-    donorschoose_how_to: 'Slik bruker du koden din'
-    success: 'Premien din ble innløst, se koden nedenfor.'
-    error: 'Premien din kunne ikke løses inn, prøv igjen.'
-    error_us_only: 'Tilbudet om premier gjelder bare for amerikanske brukere.'
-    error_not_earned: 'Du har ikke ennå fortjent denne premien.'
-    error_already_redeemed: 'Premien din har allerede blitt innløst.'
-    no_prizes_available: "Beklager, men vi har ingen premiene tilgjengelig."
-    teacher_info_required: "Lærerpremier krever navn og adresse til skolen:"
-    teacher_email_required: "Lærerpremier krever en bekreftet e-postadresse:"
-    confirm:
-      title: 'Vennligst bekreft'
-      'no': 'Nei'
-      'yes': 'Ja'
-      msg: 'Er du sikker på at du vil be om %{prize_name} premien?'
-      msg_student: 'Merk: Du kan bare velge én type premie.'
-      msg_publicschool: 'Bekreft at du er amerikanske offentlige skolelærer.'
-      msg_visit_website: 'Besøk nettsiden'
-    providers:
-      apple_itunes: '$10 iTunes Gift Card'
-      donors_choose: 'DonorsChoose.org $750 credit'
-      donors_choose_bonus: 'DonorsChoose.org $250 credit'
-      dropbox: '10GB Dropbox plass'
-      valve: 'Portal 2 (PC or Mac game download)'
-      ea_bejeweled: 'Bejeweled 3 (PC game download)'
-      ea_fifa: 'FIFA Soccer 13 (PC game download)'
-      ea_simcity: 'SimCity 4 Deluxe Edition (PC game download)'
-      ea_pvz: 'Plants vs. Zombies (PC game download)'
-      skype: '$10 Skype credit'
-    msg:
-      choose: 'Velg en premie:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 'Du har fortjent en premie! (Kun amerikanske elever)'
-      not_earned_title: 'Fullfør veiledningen, få premier (Kun amerikanske elever)'
-      not_earned: 'Lær alle informatikkbegrepene, samle alle %{num_trophies} pokalene, og få ordentlige premier. Du kan velge mellom et $10 iTunes-gavekort, 10GB gratis lagringsplass på Dropbox, $10 i Skype-kreditt, og gratis spill nedlastinger. Merk: tilbudet er bare for amerikanske elever, og bare så lenge som lageret rekker.'
-      teacher:
-        earned: '15 eller flere elever samlet alle de %{num_trophies} pokalene. Du har vunnet en lærerpremie! (Kun for lærere i USA)'
-        not_earned_title: 'Undervis klassen, tjen opp til $1000 i  <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> kreditt (Kun amerikanske lærere)'
-        not_earned: 'KUN I USA!: For å belønne første gangs lærere, kan du tjene opp til $1000 i <a href="http://DonorsChoose.org"> DonorsChoose.org</a> studiepoeng for å lede et klasserom gjennom kurset. For å kvalifisere, må du lede et klasserom med minst 10 elever gjennom hele intro kurset, med alle 10 elevene (eller mer) som fullfører alle opplæringsprogrammer og tjener alle %{num_trophies} pokalene. Hvis mengden elever som tjener alle pokalene består av minst 40% jenter, er din belønning $1000 i <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter. Ellers er din belønning $750 i <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter.  <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a>.'
-        bonus:
-          not_earned_title: 'Du kan tjene $250 i <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> ekstra kreditt (bare for lærerer i USA)'
-          earned: '7 eller flere av elevene som samlet alle %{num_trophies} trofeer er jenter. Du har vunnet en bonuspremie! (Kun for lærere i USA)'
-          not_earned: 'Hvis mengden elever som tjener alle %{num_trophies} pokalene består av minst 40% jenter, er din belønning ekstra $250 i <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter. <a target="_blank" href="http://DonorsChoose.org"> DonorsChoose.org</a> kreditter kan bare brukes av lærere i amerikanske offentlige skoler.'
   crud:
     new_model: 'Ny %{model}'
     show: 'vis'
     edit: 'Rediger'
     edit_model: 'Rediger %{model}'
     update: 'Oppdater'
+    submit: 'Send'
     destroy: 'Ødelegg'
     back: 'Tilbake'
     confirm: 'Er du sikker?'
@@ -271,13 +228,48 @@
         artist: 'Tegn noe'
         calculate: 'Calculate something'
         applab: 'Lag en app'
+        gamelab: 'Make a Game Lab project'
+      home: "Home"
+      courses: "kurs"
+      project_gallery: "Project Gallery"
+      sections: "Sections"
+      help_support: "Help and support"
+      report_bug: "Report bug"
+      teacher_community: "Teacher community"
+      professional_learning: "Professional Learning"
+      documentation: "Documentation"
+      tutorials: "Tutorials"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Kodetimen"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "About Us"
+      about_leadership: "Leadership"
+      about_donors: "Donors"
+      about_partners: "Partners"
+      about_team: "Full Team"
+      about_news: "Newsroom"
+      about_evaluation: "Evaluation"
+      about_jobs: "Jobs"
+      about_contact: "Contact Us"
+      about_faqs: "FAQs"
+      learn: "Learn"
+      stats: "Statistikk"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
     user:
       classroom: 'Hjemmeside for lærere'
       district_dashboard: 'Distrikt skrivebord'
       label: 'Hei %{username}'
       stats: 'Min fremdrift'
       settings: 'Min konto'
-      prizes: 'Premier'
       logout: 'Logg ut'
       signin: 'Logg inn'
       signup: 'Opprett en konto'
@@ -337,6 +329,10 @@
     deleted_user: 'slettet bruker'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Fullført'
     tried: 'Forsøkt'
@@ -407,6 +403,9 @@
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
     announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
+    announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
+    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
+    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
   move_students:
     new_section_dne: "Beklager, men seksjon %{new_section_code} finnes ikke. Legg inn en annen seksjonskode."
     section_code_cant_be_current_section: "Gjeldende seksjon kan ikke være den samme som den nye seksjonen."
@@ -526,6 +525,11 @@
     gallery:
       title: "Galleri"
       body: "Se et galleri av app- og artist-bilder laget av våre brukere"
+    gamelab:
+      title: "Game Lab (beta)"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Minstealder 13 år"
+      cta: "Lær hvordan"
     frozen:
       title: "Frost"
     starwars:
@@ -544,6 +548,14 @@
       audience: "Passer for de som er 6 år og eldre"
       body: "Vi har satt sammen en liste med \"analoge\" leksjoner som du kan prøve ut i klasserommet. Nå kan du undervise i grunnkonseptene for dataprogrammering uavhengig av om du har datamaskiner i klasserommet. Prøv disse leksjonene som frittstående kurs eller sammen med et hvilket som helst kurs i datakunnskap."
       body_short: "Hvis du ikke har datamaskiner, kan du prøve disse \"analoge\" leksjonene i ditt klasserom."
+    unplugged_conditionals:
+      title: "Betingelser"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+    widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Ages 14+"
+      cta: "Lær hvordan"
   gallery:
     students_drew_these_with_code: "Elever tegnet disse ved å kode."
     students_made_these_with_code: "Elever laget disse ved å kode."
@@ -565,7 +577,7 @@
     support: "Få hjelp"
     support_url: "//support.code.org"
     help_resources: "Hjelp og oppslagsverk"
-    help_support: "Help and Support"
+    help_support: "Help and support"
     documentation: "Documentation"
     tutorials: "Tutorials"
   multi:
@@ -645,6 +657,11 @@
     print: "Skriv ut"
     reminder_desc: 'Vi har oppdatert våre <a href="%{tos_url}" target="_blank">tjenestebetingelser</a> og <a href="%{privacy_url}" target="_blank">retningslinjer for personvern</a>. Vær snill å les disse nøye før du aksepterer dem. Merk at våre verktøy for å undervise i JavaScript kan være utilgjengelig for dine elever før de oppdaterte betingelsene aksepteres.'
     review_terms: "Les våre oppdaterte betingelser"
+  school_info_interstitial:
+    title: "We want to bring Computer Science to every student - help us track our progress!"
+    message: "Please enter your school information below."
+    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    save: "Lagre"
   race_interstitial:
     title: 'Valgfritt: Hjelp oss å spore fremdriften av forbedringen av mangfoldet innen programmering'
     message: "Oppgi din etnisitet (kryss av alle som passer)"
@@ -690,6 +707,9 @@
     delete: "Slett"
     exit: "Tilbake til kurset"
     my_projects: "Mine prosjekter"
+    project_gallery: "Project Gallery"
+    publish: "Publish"
+    unpublish: "Unpublish"
     share: "Del"
     share_title: Del prosjektet
     share_copy_link: "Kopier lenken:"
@@ -697,6 +717,7 @@
     share_u13_warning: "Spør læreren din før du deler. Del bare med andre på skolen din."
     embed: "Bygg inn"
     advanced_share: "Vis avanserte alternativer"
+    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "Lukk"
     more: "Mer"
     name: "Navn"
@@ -704,6 +725,7 @@
     project_type: "Prosjekttype"
     help_text: "Klikk <strong>Lag en App</strong> eller <strong>Tegn noe</strong> nedenfor for å lage et nytt Spill-Lab eller kunstprosjekt!<br/>Du kan komme tilbake og arbeide videre på prosjektene når som helst."
     need_help: "Trenger du hjelp for å komme i gang?"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'Slette?'
     delete_yes: 'Ja'
     delete_no: 'Nei'
@@ -762,16 +784,6 @@
     icon_library:
       search_placeholder_text: 'Søk etter et ikon...'
       no_icons_found: 'Ingen ikoner funnet'
-    playzone:
-      artist_description: 'Tegn kule bilder og tegninger med Kunstneren!'
-      artist_title: 'Ny tegning'
-      continue_button: 'Fortsett til neste nivå'
-      playlab_description: 'Lag en historie eller spill med Spill-labben!'
-      playlab_title: 'Ny app'
-      primary_header: 'Gratulerer! Du fullførte %{stageName}!'
-      projects_description: 'Gå tilbake til et tidligere prosjekt.'
-      projects_title: 'Åpne et prosjekt'
-      secondary_header: 'Spør læreren din hva du skal gjøre nå'
   flex_category:
     required: 'Oversikt'
     content: 'Innhold'
@@ -782,6 +794,31 @@
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csd1_1: 'Chapter 1: The Problem Solving Process'
+    csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
+    csd3_1: 'Chapter 1: Images and Animations'
+    csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: Ansvarsfraskrivelse
     leaving_domain: Du går nå utenfor vårt domene, til et nettsted som ikke drives av code.org.
@@ -852,6 +889,7 @@
   locked_stage: 'Innholdet i dette nivået er ikke synlig fordi det er låst. Læreren din kan låse opp nivået når det er på tide å arbeide med det eller se over svarene dine.'
   hidden_stage: "Læreren din hadde ikke ventet at du skulle være her nå. Spør læreren hvilken leksjon du skal gå i gang med."
   return_course_overview: 'Gå til kursoversikten'
+  view_all_units: 'View all units'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -881,3 +919,4 @@
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

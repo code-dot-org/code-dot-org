@@ -75,6 +75,7 @@
   "penUp": "পেন্সিল তোল",
   "reinfFeedbackMsg": "Here is your drawing! Keep working on it or continue to the next puzzle.",
   "setAlpha": "আলফা সেট করুন",
+  "setCharacter": "set character to {character}",
   "setColour": "রঙ স্থির (সেট) করুন",
   "setPattern": "নমুনা সেট করুন",
   "setWidth": "প্রস্থ স্থির (সেট) করুন",

@@ -52,6 +52,13 @@ class FollowersController < ApplicationController
   # GET /join/XXXXXX
   # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
+    # Though downstream validations would raise an exception, we redirect to the admin directory to
+    # improve user experience.
+    if current_user && current_user.admin?
+      redirect_to admin_directory_path
+      return
+    end
+
     if @section && @section.workshop_section?
       redirect_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: @section.code
       return

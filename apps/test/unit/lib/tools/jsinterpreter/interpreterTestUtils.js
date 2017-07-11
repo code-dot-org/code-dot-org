@@ -1,4 +1,3 @@
-import * as codegen from '@cdo/apps/codegen';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 
@@ -8,7 +7,6 @@ export function attachAssertToInterpreter(interpreter, scope, assertion) {
     'assert',
     interpreter.createNativeFunction((truthy, message) => {
       if (truthy !== interpreter.TRUE) {
-        console.log(interpreter.stateStack[interpreter.stateStack.length - 1]);
         throw new Error("failed assertion: " + assertion);
       }
     })
@@ -35,8 +33,7 @@ export function makeAssertion(interpreter, assertion, nativeVar, nativeParentObj
     interpreter.customMarshaler,
     (assertingInterpreter, scope) => {
       attachAssertToInterpreter(assertingInterpreter, scope, assertion);
-      const interpreterValue = codegen.marshalNativeToInterpreter(
-        assertingInterpreter,
+      const interpreterValue = assertingInterpreter.marshalNativeToInterpreter(
         nativeVar,
         nativeParentObj,
         maxDepth
@@ -48,8 +45,7 @@ export function makeAssertion(interpreter, assertion, nativeVar, nativeParentObj
 }
 
 export function makeAssertableObj(interpreter, nativeVar, nativeParentObj, maxDepth) {
-  const interpreterValue = codegen.marshalNativeToInterpreter(
-    interpreter,
+  const interpreterValue = interpreter.marshalNativeToInterpreter(
     nativeVar,
     nativeParentObj,
     maxDepth

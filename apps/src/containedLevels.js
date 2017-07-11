@@ -33,6 +33,15 @@ export function getContainedLevelResultInfo() {
 }
 
 /**
+ * We don't report the validated result to the server, since we always treat
+ * contained levels as correct from a progress point of view. We do use it for
+ * displaying feedback though.
+ */
+export function getValidatedResult() {
+  return codeStudioLevels.getContainedLevelResult().result.result;
+}
+
+/**
  * Called when clicking run. If we have a contained level, we want to submit our
  * attempt to the server (so that on reload, we'll have the saved answer and
  * don't let the student submit again).

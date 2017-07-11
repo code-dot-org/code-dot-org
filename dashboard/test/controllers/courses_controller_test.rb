@@ -17,6 +17,12 @@ class CoursesControllerTest < ActionController::TestCase
     File.stubs(:write)
   end
 
+  # Tests for index
+
+  test_user_gets_response_for :index, response: :success, user: :teacher
+
+  test_user_gets_response_for :index, response: :success, user: :admin
+
   # Tests for show
 
   test "show: plc courses get sent to user_course_enrollments_controller" do
@@ -45,6 +51,10 @@ class CoursesControllerTest < ActionController::TestCase
       get :show, params: {course_name: 'nosuchcourse'}
     end
   end
+
+  test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @course_regular.name}}
+
+  test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @course_regular.name}}
 
   # Tests for create
 

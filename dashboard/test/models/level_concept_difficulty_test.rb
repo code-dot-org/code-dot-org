@@ -2,7 +2,7 @@ require 'test_helper'
 
 class LevelConceptDifficultyTest < ActiveSupport::TestCase
   setup do
-    @level_concept_difficulty = create(:level_concept_difficulty)
+    @level_concept_difficulty = build :level_concept_difficulty
   end
 
   test 'serializes to hash of just concepts' do

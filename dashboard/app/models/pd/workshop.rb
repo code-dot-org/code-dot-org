@@ -139,7 +139,9 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
+    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
+    SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
   }.freeze
 
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
@@ -374,6 +376,7 @@ class Pd::Workshop < ActiveRecord::Base
         end
       end
       workshop.facilitators.each do |facilitator|
+        next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
         rescue => e
@@ -433,8 +436,7 @@ class Pd::Workshop < ActiveRecord::Base
       if account_required_for_attendance?
         next unless enrollment.user
 
-        # Make sure user joined the section
-        next unless section.students.exists?(enrollment.user.id)
+        next unless attending_teachers.include?(enrollment.user)
       end
 
       enrollment.send_exit_survey
@@ -512,6 +514,18 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.first.try(:start)
   end
 
+  def workshop_ending_date
+    sessions.last.try(:start)
+  end
+
+  def workshop_date_range_string
+    if workshop_starting_date == workshop_ending_date
+      workshop_starting_date.strftime('%B %e, %Y')
+    else
+      "#{workshop_starting_date.strftime('%B %e, %Y')} - #{workshop_ending_date.strftime('%B %e, %Y')}"
+    end
+  end
+
   # @return [String] url for this workshop in the workshop dashboard
   # Note the latter part of the path is handled by React-Router on the client, and is not known by rails url helpers
   def workshop_dashboard_url
@@ -529,6 +543,20 @@ class Pd::Workshop < ActiveRecord::Base
 
   def local_summer?
     course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
+  end
+
+  def teachercon?
+    [
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSD_TEACHER_CON,
+    ].include?(subject)
+  end
+
+  def fit_weekend?
+    [
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_FIT
+    ].include?(subject)
   end
 
   # Get all enrollments for this workshop with no associated attendances

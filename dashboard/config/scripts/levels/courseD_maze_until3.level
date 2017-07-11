@@ -29,11 +29,15 @@
     "step_mode": "1",
     "ideal": "6",
     "step_speed": "2",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What does your code do?\\n- What is it supposed to do?\\n- What does that tell you?\",\"hint_id\":\"courseD_maze_until3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cbfcd5e708cf4e1d0d8bda4a4741aeaf/courseD_maze_until3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"- What does your code do?\\n- What is it supposed to do?\\n- What does that tell you?\",\"hint_id\":\"courseD_maze_until3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cbfcd5e708cf4e1d0d8bda4a4741aeaf/courseD_maze_until3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are getting stuck, try writing out the steps on a piece of paper and looking for places where they repeat.\",\"hint_id\":\"courseD_maze_until3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ad7db9434793cc85123910f49ae2970b/courseD_maze_until3.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 21:48:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

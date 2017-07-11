@@ -19,7 +19,9 @@ frontends = %i(production adhoc).include?(rack_env)
 require 'cdo/cron'
 
 # Branch off existing AMI for adhoc.
-image_id = rack_env?(:adhoc) ? "!ImportValue AMI-#{environment}-ImageId2" : IMAGE_ID
+image_id = rack_env?(:adhoc) ? adhoc_image_id : IMAGE_ID
+
+self.log_resource_filter.push %w(FrontendLaunchConfig ASGCount)
 -%>
 ---
 AWSTemplateFormatVersion: 2010-09-09
@@ -135,7 +137,7 @@ Resources:
         SuspendProcesses: [ScheduledActions]
         WaitOnResourceSignals: true
     Properties:
-      VPCZoneIdentifier: <%= subnets.first(2).to_json %>
+      VPCZoneIdentifier: <%= subnets.to_json %>
       LaunchConfigurationName: !Ref FrontendLaunchConfig
       MinSize: !GetAtt [ASGCount, MinSize]
       MaxSize: !GetAtt [ASGCount, MaxSize]

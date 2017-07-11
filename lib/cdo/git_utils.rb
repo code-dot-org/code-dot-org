@@ -12,8 +12,18 @@ module GitUtils
     files_changed_in_branch_or_local(base_branch, glob_patterns).empty?
   end
 
-  def self.files_changed_in_branch_or_local(base_branch, glob_patterns)
-    files_changed_branch_or_local(base_branch).select do |file_path|
+  def self.files_changed_in_branch_or_local(base_branch, glob_patterns, ignore_patterns: [])
+    files = files_changed_branch_or_local(base_branch)
+    files_matching_globs(files, glob_patterns, ignore_patterns: ignore_patterns)
+  end
+
+  def self.files_matching_globs(files, glob_patterns, ignore_patterns: [])
+    files = files.reject do |file_path|
+      ignore_patterns.any? do |glob|
+        RakeUtils.glob_matches_file_path?(glob, file_path)
+      end
+    end
+    files.select do |file_path|
       glob_patterns.any? do |glob|
         RakeUtils.glob_matches_file_path?(glob, file_path)
       end

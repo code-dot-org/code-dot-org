@@ -38,7 +38,7 @@
                   - @user_level.driver_user_levels.each do |driver_user_level|
                     %div
                       - driver_user_name = driver_user_level.user ? driver_user_level.user.name : I18n.t('user.deleted_user')
-                      = link_to driver_user_name, build_script_level_path(@script_level, user_id: driver_user_level.user_id, section_id: @section.id)
+                      = link_to driver_user_name, build_script_level_path(@script_level)
                       %i= t('nav.user.driver')
                   - @user_level.navigator_user_levels.each do |navigator_user_level|
                     %div

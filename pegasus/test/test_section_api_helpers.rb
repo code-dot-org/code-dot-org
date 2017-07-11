@@ -262,7 +262,7 @@ class SectionApiHelperTest < SequelTestCase
           name: 'CS Principles',
           script_name: 'csp',
           category: 'Full Courses',
-          position: 1,
+          position: 0,
           category_priority: -1
         }
         assert_equal expected, csp_course
@@ -536,6 +536,7 @@ class SectionApiHelperTest < SequelTestCase
             user: {id: 15, user_type: 'teacher'},
             course_id: nil,
             script: {id: script_id},
+            pairing_allowed: true,
             stage_extras: false
           }
           DashboardSection.update_if_owner(update_params)
@@ -713,6 +714,31 @@ class SectionApiHelperTest < SequelTestCase
         end
       end
 
+      it 'creates a google classroom student' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+
+          id = pegasus_section.add_student(FakeDashboard::STUDENT_OAUTH)
+          assert_equal(
+            1,
+            Dashboard.db[:followers].where(student_user_id: id).count
+          )
+
+          user = Dashboard.db[:users].first(id: id)
+          assert_equal(
+            FakeDashboard::STUDENT_OAUTH[:uid],
+            user[:uid]
+          )
+          assert_equal(
+            FakeDashboard::STUDENT_OAUTH[:name],
+            user[:name]
+          )
+        end
+      end
+
       it 'restores deleted follower' do
         Dashboard.db.transaction(rollback: :always) do
           pegasus_section = DashboardSection.fetch_if_teacher(
@@ -731,6 +757,22 @@ class SectionApiHelperTest < SequelTestCase
           assert_nil Dashboard.db[:followers].
             where(student_user_id: FakeDashboard::STUDENT_DELETED_FOLLOWER[:id]).
             first[:deleted_at]
+        end
+      end
+
+      it 'does not create follower for admin student' do
+        Dashboard.db.transaction(rollback: :always) do
+          pegasus_section = DashboardSection.fetch_if_teacher(
+            FakeDashboard::SECTION_NORMAL[:id],
+            FakeDashboard::TEACHER[:id]
+          )
+
+          pegasus_section.add_student(FakeDashboard::ADMIN)
+
+          assert_equal(
+            0,
+            Dashboard.db[:followers].where(student_user_id: FakeDashboard::ADMIN[:id]).count
+          )
         end
       end
     end

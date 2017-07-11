@@ -75,7 +75,7 @@
     ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "true"
   },
   "published": true,

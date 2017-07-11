@@ -219,7 +219,7 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
-  def summarize
+  def summarize(include_prev_next=true)
     if level.unplugged?
       kind = LEVEL_KIND.unplugged
     elsif assessment
@@ -259,25 +259,27 @@ class ScriptLevel < ActiveRecord::Base
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
     end
 
-    # Add a previous pointer if it's not the obvious (level-1)
-    if previous_level
-      if previous_level.stage.absolute_position != stage.absolute_position
-        summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
-      end
-    else
-      # This is the first level in the script
-      summary[:previous] = false
-    end
-
-    # Add a next pointer if it's not the obvious (level+1)
-    if end_of_stage?
-      if next_level
-        summary[:next] = [next_level.stage.absolute_position, next_level.position]
+    if include_prev_next
+      # Add a previous pointer if it's not the obvious (level-1)
+      if previous_level
+        if previous_level.stage.absolute_position != stage.absolute_position
+          summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
+        end
       else
-        # This is the final level in the script
-        summary[:next] = false
-        if script.wrapup_video
-          summary[:wrapupVideo] = script.wrapup_video.summarize
+        # This is the first level in the script
+        summary[:previous] = false
+      end
+
+      # Add a next pointer if it's not the obvious (level+1)
+      if end_of_stage?
+        if next_level
+          summary[:next] = [next_level.stage.absolute_position, next_level.position]
+        else
+          # This is the final level in the script
+          summary[:next] = false
+          if script.wrapup_video
+            summary[:wrapupVideo] = script.wrapup_video.summarize
+          end
         end
       end
     end
@@ -302,6 +304,17 @@ class ScriptLevel < ActiveRecord::Base
       extra_levels << new_level
     end
     extra_levels
+  end
+
+  def summarize_as_bonus
+    {
+      id: id,
+      name: level.display_name || level.name,
+      type: level.type,
+      map: JSON.parse(level.try(:maze) || '[]'),
+      skin: level.try(:skin),
+      start_direction: level.try(:start_direction).to_i,
+    }.camelize_keys
   end
 
   def self.cache_find(id)

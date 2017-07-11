@@ -66,7 +66,7 @@
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "encrypted_examples": "YusAQ4o56rRch4pT3oF25ca5BavKypm29fTelYZYfrP2+LUAI4oVTdgIB53w\nuq4A+lg/Z/1MJFnIdNX7f09DLQ==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",

@@ -7,4 +7,3 @@ nav: about_nav
 
 <%= view :about_headshots, people:DB[:cdo_team].where(kind_s:'diversity_council') %>
 
-<%= view :about_people, people:DB[:cdo_team].where(kind_s:'diversity_council_short') %>

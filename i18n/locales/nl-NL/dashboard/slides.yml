@@ -747,7 +747,7 @@ nl:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "When we want to make chocolate, there are many big steps to that process. And each of those big steps has its own set of smaller steps. And there are different recipes, or algorithms, depending on how we want the chocolate to taste. Each step is important, even the small ones. So without one step, the rest of them cannot be completed. Creating algorithms that others can understand is really important. That's why each step has to be written down, so no matter who does it, the result is the same."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Tot nu toe maakte je een animatie of verhaal dat telkens hetzelfde deed wanneer je het uitvoert. Nu kan je een interactief spel maken dat je daadwerkelijk kan spelen."
@@ -823,7 +823,7 @@ nl:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "In dit voorbeeld zeggen we ALS de paarse bloem nectar heeft groter dan 0, haal nectar op. Dat zal onze bij vertellen dat hij nectar moet halen zolang er voorraad is. Ta-dah!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Heb je ooit gehoord van het debuggen van een programma? Met debuggen kun je uitvinden wat er niet werkt aan je programma. Bij het debuggen identificeer en herstel je de fouten."
