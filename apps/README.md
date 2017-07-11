@@ -26,6 +26,9 @@ npm rebuild node-sass
 
 # automatically rebuild every time you make changes to source files
 npm run start
+
+# or, if you want it to rebuild even faster, do this instead:
+CHEAP=1 npm run start
 ```
 
 ### Seeing your development version of Apps in Dashboard
