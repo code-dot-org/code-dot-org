@@ -1090,6 +1090,9 @@ ActiveRecord::Schema.define(version: 20170626160941) do
     t.index ["program_type"], name: "index_workshops_on_program_type", using: :btree
   end
 
+  add_foreign_key "authored_hint_view_requests", "levels"		
+  add_foreign_key "authored_hint_view_requests", "scripts"		
+  add_foreign_key "authored_hint_view_requests", "users"
   add_foreign_key "hint_view_requests", "users"
   add_foreign_key "level_concept_difficulties", "levels"
   add_foreign_key "pd_payment_terms", "regional_partners"
