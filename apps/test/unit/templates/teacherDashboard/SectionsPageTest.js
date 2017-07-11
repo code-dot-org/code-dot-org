@@ -3,7 +3,6 @@ import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/test
 import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import experiments from '@cdo/apps/util/experiments';
 import { UnconnectedSectionsPage as SectionsPage }
   from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
@@ -49,51 +48,10 @@ describe('SectionsPage', () => {
         {...defaultProps}
       />, options
     );
-    assert.equal(requests.length, 1);
-    assert.equal(requests[0].url, '/v2/sections/');
-  });
-
-  describe('with sectionFocus experiment not enabled', () => {
-    it('sets sectionsLoaded after section query', () => {
-      const wrapper = shallow(
-        <SectionsPage
-          {...defaultProps}
-        />, options
-      );
-      assert.equal(wrapper.state('sectionsLoaded'), false);
-      requests[0].respond(200, {}, '[]');
-      assert.equal(wrapper.state('sectionsLoaded'), true);
-    });
-
-    it('does not call setValidAssignments upon load', () => {
-      const setValidAssignments = sinon.spy();
-      shallow(
-        <SectionsPage
-          {...defaultProps}
-          setValidAssignments={setValidAssignments}
-        />, options
-      );
-      requests[0].respond(200, {}, '[]');
-      assert(setValidAssignments.notCalled);
-    });
-
-    it('does call setSections upon load', () => {
-      const setSections = sinon.spy();
-      shallow(
-        <SectionsPage
-          {...defaultProps}
-          setSections={setSections}
-        />, options
-      );
-      requests[0].respond(200, {}, '[]');
-      assert(setSections.called);
-    });
+    assert(requests.some(request => request.url === '/v2/sections/'));
   });
 
   describe('with sectionFocus experiment', () => {
-    before(() => experiments.setEnabled('sectionFocus', true));
-    after(() => experiments.setEnabled('sectionFocus', false));
-
     it('queries for courses', () => {
       shallow(
         <SectionsPage
