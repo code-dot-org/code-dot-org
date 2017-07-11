@@ -165,6 +165,7 @@ const iconClassFromIconType = {
   'fa-video-camera': 'fa fa-video-camera',
   'fa-stop-circle': 'fa fa-stop-circle',
   'fa-map': 'fa fa-map',
+  'fa-flag': 'fa fa-flag',
 };
 
 export const BubbleInterior = React.createClass({
@@ -266,16 +267,20 @@ export const ProgressDot = Radium(React.createClass({
 
     const { level, status, courseOverviewPage, currentLevelId } = this.props;
 
+    const isStageExtras = level.kind === LevelKind.stage_extras;
+    const isUnplugged = level.kind === LevelKind.unplugged;
+    const isPeerReview = level.kind === LevelKind.peer_review;
+
     const onCurrent = currentLevelId &&
         ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
+        (currentLevelId === 'stage_extras' && isStageExtras) ||
         level.uid === currentLevelId);
 
-    const isUnplugged = level.kind === LevelKind.unplugged;
     const showUnplugged = isUnplugged && (courseOverviewPage || onCurrent);
     const outlineCurrent = courseOverviewPage && onCurrent;
     const smallDot = !courseOverviewPage && !onCurrent;
     const showLevelName = courseOverviewPage && !!level.name;
-    const isPeerReview = level.kind === LevelKind.peer_review;
+
     // Account for both the level based concept of locked, and the progress based concept.
     const isLocked = status === LevelStatus.locked;
 
