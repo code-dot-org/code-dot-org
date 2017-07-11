@@ -90,7 +90,6 @@ module Pd::FacilitatorSpecificForm
     super(hash)
   end
 
-  # Takes a hash
   def to_summary_for_facilitator(facilitator_name)
     hash = sanitize_form_data_hash
 
