@@ -63,15 +63,10 @@ export function getBoardEventDropdownForParam(firstParam) {
 // We don't want these to show up as blocks (because that interferes with
 // parameter dropdowns) but we also don't want them to generate "_ is not
 // defined" warnings from the linter.
-export const additionalPredefValues = [
-  'accelerometer',
-  'buttonL',
-  'buttonR',
-  'lightSensor',
-  'soundSensor',
-  'tempSensor',
-  'toggleSwitch',
-];
+export const additionalPredefValues = Object.keys(COMPONENT_EVENTS);
+
+// Block properties we'll reuse in multiple entries
+const createLedProps = {parent: api, category: MAKER_CATEGORY, paletteParams: ['pin'], params: ["0"]};
 
 export const blocks = [
   /**
@@ -85,6 +80,9 @@ export const blocks = [
   {func: 'boardConnected', parent: api, category: MAKER_CATEGORY, type: 'value'},
   {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
 
+  {func: 'createLed', ...createLedProps, type: 'either' },
+  {func: 'var myLed = createLed', ...createLedProps, noAutocomplete: true, docFunc: 'createLed' },
+
   /**
    * Circuit-Playground-specific blocks
    */
@@ -97,7 +95,7 @@ export const blocks = [
   {func: 'led.toggle', category: CIRCUIT_CATEGORY},
   {func: 'led.pulse', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100']},
 
-  {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
   {func: 'on', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},
   {func: 'off', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.off', objectDropdown: {options: colorPixelVariables}},
 

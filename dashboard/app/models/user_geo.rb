@@ -22,4 +22,13 @@
 #
 
 class UserGeo < ActiveRecord::Base
+  def clear_user_geo
+    self.ip_address = nil
+    self.city = nil
+    self.postal_code = nil
+    self.latitude = nil
+    self.longitude = nil
+
+    save!
+  end
 end

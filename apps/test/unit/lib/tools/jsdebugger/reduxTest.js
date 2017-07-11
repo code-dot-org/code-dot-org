@@ -4,7 +4,7 @@ import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/red
 import {reducers, selectors, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import Observer from '@cdo/apps/Observer';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;

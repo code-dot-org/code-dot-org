@@ -9,15 +9,14 @@ import {Galleries} from './projectConstants';
 const styles = {
   container: {
     marginBottom: 20,
-    width: '100%',
     backgroundColor: color.lightest_gray,
     borderRadius: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.lighter_gray,
     padding: 10,
-    marginLeft: 25,
-    height: 36
+    height: 36,
+    marginLeft: 20
   },
   pill: {
     ':hover': {
@@ -75,7 +74,7 @@ class GallerySwitcher extends Component {
 
   render() {
     return (
-      <div style={styles.container}>
+      <div style={styles.container} id="uitest-gallery-switcher">
         <div
           key={'private'}
           style={[

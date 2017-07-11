@@ -160,7 +160,10 @@ module LevelsHelper
     # the projects code to save and load the user's progress on that level.
     view_options(is_external_project_level: true) if @level.is_a? Pixelation
 
-    view_options(is_channel_backed: true) if @level.channel_backed?
+    if @level.channel_backed?
+      view_options(is_channel_backed: true)
+      view_options(server_project_level_id: @level.project_template_level.try(:id))
+    end
 
     post_milestone = @script ? Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone: post_milestone)
@@ -272,6 +275,16 @@ module LevelsHelper
     app_options
   end
 
+  def set_tts_options(level_options, app_options)
+    # Text to speech
+    if @script && @script.text_to_speech_enabled?
+      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
+      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
+    end
+
+    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
+  end
+
   # Options hash for Weblab
   def weblab_options
     # Level-dependent options
@@ -290,6 +303,8 @@ module LevelsHelper
 
     # Ensure project_template_level allows start_sources to be overridden
     level_options['startSources'] = @level.try(:project_template_level).try(:start_sources) || @level.start_sources
+
+    set_tts_options(level_options, app_options)
 
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
@@ -451,11 +466,7 @@ module LevelsHelper
       app_options['pusherApplicationKey'] = CDO.pusher_application_key
     end
 
-    # Text to speech
-    if script && script.text_to_speech_enabled?
-      level_options['ttsInstructionsUrl'] = @level.tts_url(@level.tts_instructions_text)
-      level_options['ttsMarkdownInstructionsUrl'] = @level.tts_url(@level.tts_markdown_instructions_text)
-    end
+    set_tts_options(level_options, app_options)
 
     if @level.is_a? NetSim
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
@@ -495,8 +506,8 @@ module LevelsHelper
       app_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
     app_options[:isAdmin] = true if @game == Game.applab && current_user && current_user.admin?
+    app_options[:canResetAbuse] = true if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     app_options[:isSignedIn] = !current_user.nil?
-    app_options[:textToSpeechEnabled] = @script.try(:text_to_speech_enabled?)
     app_options[:pinWorkspaceToBottom] = true if l.enable_scrolling?
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?

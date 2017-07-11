@@ -457,7 +457,7 @@ const Workshop = React.createClass({
       <div>
         <p>
           Every day of the workshop, your participants must visit the attendance URL to receive
-          professional development credit.
+          professional development credit. The attendance URL will not show up until the day of the session.
         </p>
         <Row>
           <Col md={2}>

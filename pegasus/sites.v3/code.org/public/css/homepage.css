@@ -54,6 +54,16 @@ body.modal-open .supreme-container{
   height: 100%;
 }
 
+#hero #fullwidth0.widehero {
+  animation: fadein 4s;
+  display: block;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 #homepage #hero #fullwidth {
   width: 100%;
 }
@@ -313,7 +323,29 @@ body.modal-open .supreme-container{
 
 #homepage #gallerycolumn .thelinks {
   padding: 10px;
-  height: 100%
+  height: 0;
+}
+
+/* Pad height-auto div before images load.
+   Since the .col-50 layout changes by media query,
+   we need to calculate padding twice to match. */
+
+@media screen and (min-width: 971px) {
+  /* height/width == 120 / (750 * 2) */
+  #homepage #gallerycolumn .thelinks {
+    padding-bottom: 8%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 970px) {
+  /* height/width == (120 * 2) / 750 */
+  #homepage #gallerycolumn .thelinks {
+    padding-bottom: 32%;
+  }
+}
+
+#homepage #gallerycolumn .thelinks img {
+  height: auto;
 }
 
 #homepage #threedivs iframe {

@@ -1,14 +1,43 @@
 %script{type: "text/javascript", src: "/js/csf-congrats.js"}
 %link{:href=>"/shared/css/course-blocks.css", :type=>"text/css", :rel=>"stylesheet"}
 
-- cert_script = ScriptConstants::COURSE1_NAME
-- share_url = "https://studio.code.org"
+:ruby
+  cert_script = ScriptConstants::COURSE1_NAME
+  share_url = "https://studio.code.org"
 
-- facebook = {:u=>share_url}
-- twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:"just_did_#{course}")}
+  facebook = {:u=>share_url}
+  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:"just_did_#{course}")}
 
-- rec_code_studio = {"course1" => "course2", "course2" => "course3", "course3" => "course4", "accelerated" => "course4", "course4" => "applab"}
-- rec_third_party = {"course1" => "course1_next", "course2" => "course2_next", "course3" => "course3_next", "course4" => "course4_next", "accelerated" => "accelerated_next"}
+  rec_code_studio = {
+    "course1" => "course2",
+    "course2" => "course3",
+    "course3" => "course4",
+    "accelerated" => "course4",
+    "course4" => "applab",
+
+    "coursea" => "courseb",
+    "courseb" => "coursec",
+    "coursec" => "coursed",
+    "coursed" => "coursee",
+    "coursee" => "coursef",
+    "coursef" => "applab",
+  }
+
+  rec_third_party = {
+    "course1" => "course1_next",
+    "course2" => "course2_next",
+    "course3" => "course3_next",
+    "course4" => "course4_next",
+
+    "accelerated" => "accelerated_next",
+
+    "coursea" => "coursea_next",
+    "courseb" => "courseb_next",
+    "coursec" => "coursec_next",
+    "coursed" => "coursed_next",
+    "coursee" => "coursee_next",
+    "coursef" => "coursef_next",
+  }
 
 #congrats.mobile-pad{:style=>'margin: 0 auto;'}
 

@@ -158,7 +158,7 @@ const SessionAttendance = React.createClass({
           sectionRequiredForAttendance={!this.shouldUseNewAttendance}
           showSectionMembership={this.showSectionMembership}
           showPuzzlesCompleted={this.showPuzzlesCompleted}
-          displayYesNoAttendance={this.shouldUseNewAttendance && !this.permission.isAdmin && !this.permission.isPartner}
+          displayYesNoAttendance={this.shouldUseNewAttendance && !this.permission.isWorkshopAdmin && !this.permission.isPartner}
         />
       );
     });

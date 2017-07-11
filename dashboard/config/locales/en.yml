@@ -30,11 +30,14 @@ en:
     errors:
       messages:
         blank: "is required"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Display Name'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
+        personal_email: 'Personal email address'
         username: 'Username'
         password: 'Password'
         password_confirmation: 'Password confirmation'
@@ -231,6 +234,7 @@ en:
     edit: 'Edit'
     edit_model: 'Edit %{model}'
     update: 'Update'
+    submit: 'Submit'
     destroy: 'Destroy'
     back: 'Back'
     confirm: 'Are you sure?'
@@ -349,6 +353,10 @@ en:
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: "Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href='%{privacy_policy_url}', target='_blank'>privacy policy</a> for more information."
   user_level:
     completed: 'Completed'
     tried: 'Tried'
@@ -389,7 +397,7 @@ en:
     heading_hoc2014: "<h2>The Hour of Code for</h2><h1>All Ages</h1>"
     heading_elementary: "<h2>20 hour courses for</h2><h1>Computer Science Fundamentals (all ages)</h1>"
     heading_apps: "<h2>Fun for</h2><h1>Everybody</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High School</h1>"
     heading_legacy: "<h2>Our accelerated course for</h2><h1>All Ages</h1>"
     your_gallery: Gallery
     no_primary_course: "Try a Code Studio course"
@@ -761,7 +769,7 @@ en:
         abusive_url: 'URL of the content being reported'
         abuse_type:
           question: 'How does this content violate the %{link_start}Terms of Service%{link_end}?'
-          harassment: 'Threats, cyberbullying, harassement'
+          harassment: 'Threats, cyberbullying, harassment'
           offensive: 'Offensive content'
           infringement: 'Copyright Infringement'
           other: 'Other'
@@ -788,10 +796,6 @@ en:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  components:
-    icon_library:
-      search_placeholder_text: 'Search for an icon...'
-      no_icons_found: 'No icons found'
   flex_category:
     required: 'Overview'
     content: 'Content'
@@ -823,6 +827,10 @@ en:
     csp5_1: 'Chapter 1: Event-Driven Programming'
     csp5_2: 'Chapter 2: Programming with Data Structures'
     cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -893,6 +901,7 @@ en:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   return_course_overview: 'Go to unit overview'
+  view_all_units: 'View all units'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -922,3 +931,4 @@ en:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

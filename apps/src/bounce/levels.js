@@ -594,4 +594,48 @@ levels['12_sports'] = extend(levels['12_basketball'], {
   },
 });
 
+levels['custom'] = {
+  requiredBlocks: [],
+  scale: {
+    snapRadius: 2
+  },
+  softButtons: [
+    'leftButton',
+    'rightButton',
+    'downButton',
+    'upButton'
+  ],
+  map: [
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 8, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0,16, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0]
+  ],
+  toolbox:
+    tb('<block type="bounce_moveLeft"></block> \
+        <block type="bounce_moveRight"></block> \
+        <block type="bounce_bounceBall"></block> \
+        <block type="bounce_playSound"></block> \
+        <block type="bounce_incrementPlayerScore"></block> \
+        <block type="bounce_incrementOpponentScore"></block> \
+        <block type="bounce_launchBall"></block> \
+        <block type="bounce_setPaddleSpeed"></block> \
+        <block type="bounce_setBackground"></block> \
+        <block type="bounce_setBall"></block> \
+        <block type="bounce_setPaddle"></block> \
+        <block type="bounce_setBallSpeed"></block>'),
+  startBlocks:
+   '<block type="when_run" deletable="false" x="20" y="20"></block> \
+    <block type="bounce_whenLeft" deletable="false" x="20" y="220"></block> \
+    <block type="bounce_whenRight" deletable="false" x="180" y="220"></block> \
+    <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="310"></block> \
+    <block type="bounce_whenWallCollided" deletable="false" x="20" y="410"></block> \
+    <block type="bounce_whenBallInGoal" deletable="false" x="20" y="510"></block> \
+    <block type="bounce_whenBallMissesPaddle" deletable="false" x="20" y="630"></block>'
+};
+
 module.exports = levels;

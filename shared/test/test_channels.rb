@@ -288,15 +288,22 @@ class ChannelsTest < Minitest::Test
 
   private
 
+  def timestamp(time)
+    time.strftime('%Y-%m-%d %H:%M:%S.%L')
+  end
+
   def assert_can_publish(project_type)
-    start = DateTime.now - 1
+    start = 1.second.ago
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.ok?
     result = JSON.parse(last_response.body)
-    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    refute_nil result['publishedAt']
+    finish = 1.second.since
+    published = DateTime.parse(result['publishedAt'])
+    assert ((start..finish).cover? published), "(#{timestamp(start)}..#{timestamp(finish)}) covers #{timestamp(published)}"
 
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?

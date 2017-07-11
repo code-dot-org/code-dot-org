@@ -35,10 +35,12 @@
     "step_speed": "1",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 17:25:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-08 17:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-08 17:28:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-08 17:29:16 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -46,7 +48,7 @@
     <start_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn" movable="false">
+        <block type="procedures_defnoreturn" movable="false" x="40" y="250">
           <mutation/>
           <title name="NAME">harvest path</title>
           <statement name="STACK">
@@ -98,7 +100,7 @@
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn" movable="false">
+        <block type="procedures_defnoreturn" movable="false" x="350" y="250">
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">

@@ -192,17 +192,17 @@ function createGroupState(type, target, callback) {
       if (!state.__subState) {
         // Before we call _collideWith (another stateful function), hang a __subState
         // off of state, so it can use that instead to track its state:
-        state.__subState = { doneExec: true };
+        state.__subState = { doneExec_: true };
       }
       var didTouch = this._collideWith(type, target[state.__i], callback);
-      if (state.__subState.doneExec) {
+      if (state.__subState.doneExec_) {
         state.__didCollide = didTouch || state.__didCollide;
         delete state.__subState;
         state.__i++;
       }
-      state.doneExec = false;
+      state.doneExec_ = false;
     } else {
-      state.doneExec = true;
+      state.doneExec_ = true;
       return state.__didCollide;
     }
   } else {
@@ -266,8 +266,8 @@ function play() {
  *
  * Additional properties can be set on the state object to track state across
  * the multiple executions. If the function wants to be called again, it should
- * set state.doneExec to false. When the function is complete and no longer
- * wants to be called in a loop by the interpreter, it should set state.doneExec
+ * set state.doneExec_ to false. When the function is complete and no longer
+ * wants to be called in a loop by the interpreter, it should set state.doneExec_
  * to true and return a value.
  */
 
@@ -322,9 +322,9 @@ var _collideWith = function (p5Inst, type, target, callback) {
   if (state.__i < state.__others.length) {
     state.__result = this._collideWithOne(type, state.__others[state.__i], callback) || state.__result;
     // Not done, unless we're on the last item in __others:
-    state.doneExec = state.__i >= (state.__others.length - 1);
+    state.doneExec_ = state.__i >= (state.__others.length - 1);
   } else {
-    state.doneExec = true;
+    state.doneExec_ = true;
   }
   return state.__result;
 };

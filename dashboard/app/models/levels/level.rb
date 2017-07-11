@@ -267,15 +267,16 @@ class Level < ActiveRecord::Base
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
     'Applab', # freeplay
+    'Bounce', # no ideal solution
     'ContractMatch', # dsl defined, covered in dsl
     'CurriculumReference', # no user submitted content
     'DSLDefined', # dsl defined, covered in dsl
     'EvaluationMulti', # unknown
-    'EvaluationQuestion', # plc evaluation
     'External', # dsl defined, covered in dsl
     'ExternalLink', # no user submitted content
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
+    'Flappy', # no ideal solution
     'Gamelab', # freeplay
     'GoBeyond', # unknown
     'Level', # base class
@@ -284,9 +285,9 @@ class Level < ActiveRecord::Base
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
     'NetSim', # widget
+    'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
-    'Odometer', # widget
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget

@@ -5,7 +5,7 @@ video_player: true
 theme: responsive
 ---
 
-# Our newest course: CS Discoveries #
+# Our newest course: CS Discoveries &nbsp;&nbsp; <a href="<%= CDO.studio_url('/courses/csd')%>" name="CS Discoveries Course"><button style="margin-top: 0">View course</button></a>
 
 ## <a name="what"></a>What is CS Discoveries?
 
@@ -180,9 +180,12 @@ Want to know when we've posted new lesson drafts and have tools that are ready t
 <div style="clear:both"></div>
 
 
-## <a name="lessons"></a>Lesson Drafts
-We are releasing drafts of CS Discoveries units as they are finished, and would love for teachers and others in the CS education community to try them out and provide feedback. On the first page of every lesson plan, there is a Give Us Feedback! button that will open up a quick survey you can fill out with your thoughts and feedback. We really appreciate it!
+## <a name="lessons"></a>Lessons
 
+The [CS Discoveries Curriculum Guide](https://docs.google.com/document/d/1FhHPqlC6dU_z9retuBYb-duUwyKpnjwuEgjF4zfdhvI/export?format=pdf) is a great place to start if you'd like an in-depth introduction to the curriculum before jumping into lessons. The curriculum guide contains
+details on the classroom and student practices that flow throughout the course, overviews of each of the units, and implementation considerations. 
+
+<br>
 
 |                   Unit                   | Lesson Plans                             | Code Studio                              |
 | :--------------------------------------: | ---------------------------------------- | ---------------------------------------- |
@@ -225,9 +228,9 @@ CS Discoveries was written using both the K-12 Framework for Computer Science an
 * Couple Decks of Cards 
 * Aluminum Foil 
 * Containers that can hold water 
-* [Adafruit's Circuit Playground Boards](https://learn.adafruit.com/introducing-circuit-playground/overview) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
+* [Adafruit's Circuit Playground Boards](/circuitplayground) and Micro USB cables. The curriculum is designed for a ratio of 2 students to 1 board & 1 usb cable***
 
-\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing one [classroom kit](https://www.adafruit.com/product/3399) of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. The subsidized cost of the classroom kit will be less than $100 and further details about ordering kits will be sent to teachers in winter 2017. \***
+\*** For teachers participating in our 2017-18 Professional Learning Program who are implementing the full-year version of the course, we will be subsidizing or partially subsidizing one classroom kit of Adafruit Circuit Playground Boards. This kit contains 15 boards and accessories and supports a classroom of 30 students, assuming a 2:1 ratio of students to boards. To learn more about the classroom kit, software requirements, and the details of the subsidy visit [code.org/circuitplayground](/circuitplayground)  \***
 
 <!--
 #### Can I pilot the new course?

@@ -143,7 +143,7 @@ class GSheetToCsv
 
     begin
       mtime = @file.mtime
-      ctime = File.mtime(@csv_path).utc if File.file?(@csv_path)
+      ctime = File.mtime(@csv_path) if File.file?(@csv_path)
       return mtime.to_s == ctime.to_s
     rescue GoogleDrive::Error => e
       ChatClient.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'

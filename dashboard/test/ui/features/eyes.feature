@@ -88,7 +88,6 @@ Scenario:
   And I see no difference for "level load"
   And I close my eyes
 
-@no_circle
 Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://studio.code.org/s/allthethings/stage/2/puzzle/1?noautoplay=true"

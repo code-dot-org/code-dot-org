@@ -4,7 +4,9 @@ import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/CircuitPlaygroundBoard';
 import {SONG_CHARGE} from '@cdo/apps/lib/kits/maker/PlaygroundConstants';
+import Led from '@cdo/apps/lib/kits/maker/Led';
 import {itImplementsTheMakerBoardInterface} from './MakerBoardTest';
+import experiments from '@cdo/apps/util/experiments';
 
 // Polyfill node process.hrtime for the browser, which gets used by johnny-five
 process.hrtime = require('browser-process-hrtime');
@@ -60,10 +62,13 @@ describe('CircuitPlaygroundBoard', () => {
   itImplementsTheMakerBoardInterface(CircuitPlaygroundBoard);
 
   describe(`connect()`, () => {
+    // TODO (bbuchanan): Remove when maker-captouch is on by default.
+    before(() => experiments.setEnabled('maker-captouch', true));
+    after(() => experiments.setEnabled('maker-captouch', false));
+
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        // TODO (captouch): Add eight more when we re-enable
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(24);
         expect(board.prewiredComponents_.board).to.be.a('object');
         expect(board.prewiredComponents_.colorLeds).to.be.a('array');
         expect(board.prewiredComponents_.led).to.be.a('object');
@@ -75,15 +80,14 @@ describe('CircuitPlaygroundBoard', () => {
         expect(board.prewiredComponents_.accelerometer).to.be.a('object');
         expect(board.prewiredComponents_.buttonL).to.be.a('object');
         expect(board.prewiredComponents_.buttonR).to.be.a('object');
-        // TODO (captouch): Uncomment when we re-enable
-        // expect(board.prewiredComponents_.touchPad0).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad1).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad2).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad3).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad6).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad9).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad10).to.be.a('object');
-        // expect(board.prewiredComponents_.touchPad12).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad0).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad1).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad2).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad3).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad6).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad9).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad10).to.be.a('object');
+        expect(board.prewiredComponents_.touchPad12).to.be.a('object');
         expect(board.prewiredComponents_.INPUT).to.be.a('number');
         expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
         expect(board.prewiredComponents_.ANALOG).to.be.a('number');
@@ -125,7 +129,6 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connectToFirmware()
         .then(() => board.initializeComponents())
         .then(() => {
-          // TODO (captouch): Add 8 when we re-enable
           expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         });
     });
@@ -160,6 +163,23 @@ describe('CircuitPlaygroundBoard', () => {
           expect(playground.sysexResponse).to.have.been.calledTwice;
           expect(Playground.hasRegisteredSysexResponse).to.be.true;
         });
+      });
+    });
+
+    it('stops any created Leds', () => {
+      return board.connect().then(() => {
+        const led1 = board.createLed(0);
+        const led2 = board.createLed(1);
+        sinon.spy(led1, 'stop');
+        sinon.spy(led2, 'stop');
+
+        expect(led1.stop).not.to.have.been.called;
+        expect(led2.stop).not.to.have.been.called;
+
+        board.destroy();
+
+        expect(led1.stop).to.have.been.calledOnce;
+        expect(led2.stop).to.have.been.calledOnce;
       });
     });
   });
@@ -305,6 +325,16 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         board.destroy();
         expect(board.boardConnected()).to.be.false;
+      });
+    });
+  });
+
+  describe(`createLed(pin)`, () => {
+    it('makes an LED controller', () => {
+      return board.connect().then(() => {
+        const pin = 13;
+        const newLed = board.createLed(pin);
+        expect(newLed).to.be.an.instanceOf(Led);
       });
     });
   });

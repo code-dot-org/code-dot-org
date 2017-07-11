@@ -176,7 +176,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n* First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the `draw()` loop\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",
+    "markdown_instructions": "# Laying Out Your Background\r\nBefore beginning this project, you should have already completed the Interactive Card Planning activity, and you'll want to have that paper with you as you develop your program. Preparation is one of the **most important** elements of successfully creating a program!\r\n\r\n# Do This\r\nRefer to your planning activity sheet to help you lay out the shapes that will become the background to your card.\r\n\r\n* First, figure out what the lowest layer in your image is (this should use the `background()` block) and add it to the very top of the draw loop.\r\n* Next, layer each additional drawing block in the order you want them to appear in the stack.\r\n* Finally, add a comment to the top of this section of code to describe what it does, and if you have any particularly complicated chunks of code within (such as code to draw a tree or a house), add a descriptive comment to that as well.\r\n\r\n**Challenge:** Can you use variables or `randomNumber()` to add some subtle animation to your background layer?",
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -207,10 +207,14 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "encrypted_examples": "rDxA0J74EKa2mTQ7f+YYiavdcqCbs9s58qSqLA5bcc1x6N0HxQhv8mrcQHgV\n9LgB\n",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:27:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 19:29:36 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

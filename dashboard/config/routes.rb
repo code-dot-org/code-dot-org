@@ -53,7 +53,7 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:show] do
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end
@@ -79,6 +79,7 @@ Dashboard::Application.routes.draw do
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
+    patch '/users/upgrade', to: 'registrations#upgrade'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -343,6 +344,7 @@ Dashboard::Application.routes.draw do
       post :regional_partner_program_registrations, to: 'regional_partner_program_registrations#create'
 
       post :workshop_surveys, to: 'workshop_surveys#create'
+      post :teachercon_surveys, to: 'teachercon_surveys#create'
     end
   end
 
@@ -380,6 +382,7 @@ Dashboard::Application.routes.draw do
     get 'workshop_materials', action: 'admin_index', controller: 'workshop_material_orders'
 
     get 'workshop_survey/:enrollment_code', action: 'new', controller: 'workshop_survey', as: 'new_workshop_survey'
+    get 'teachercon_survey/:enrollment_code', action: 'new', controller: 'teachercon_survey', as: 'new_teachercon_survey'
 
     get 'generate_csf_certificate/:enrollment_code', controller: 'csf_certificate', action: 'generate_certificate'
     get 'generate_workshop_certificate/:enrollment_code', controller: 'workshop_certificate', action: 'generate_certificate'
@@ -452,4 +455,5 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
+  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 end

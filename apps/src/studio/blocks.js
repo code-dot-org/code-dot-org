@@ -506,7 +506,7 @@ exports.install = function (blockly, blockInstallOptions) {
           dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[2]]);
           dropdownArray2 = dropdownArray2.concat(this.PROJECTILES);
         }
-        dropdownArray2 = dropdownArray2.concat([this.GROUPINGS[3]]);
+        dropdownArray2 = dropdownArray2.concat(this.GROUPINGS.slice(3, 6));
         dropdownArray2 = dropdownArray2.concat(this.EDGES);
         dropdown2 = new blockly.FieldDropdown(dropdownArray2);
         this.appendDummyInput().appendTitle(dropdown1, 'SPRITE1');
@@ -528,6 +528,8 @@ exports.install = function (blockly, blockInstallOptions) {
       [[msg.whenSpriteCollidedWithAnything(), 'anything'],
        [msg.whenSpriteCollidedWithAnyActor(), 'any_actor'],
        [msg.whenSpriteCollidedWithAnyProjectile(), 'any_projectile'],
+       [msg.whenSpriteCollidedWithAnyGoal(), 'goal'],
+       [msg.whenSpriteCollidedWithAnyObstacle(), 'wall'],
        [msg.whenSpriteCollidedWithAnyEdge(), 'any_edge']];
 
   blockly.Blocks.studio_whenSpriteCollided.PROJECTILES = skin.whenProjectileCollidedChoices;

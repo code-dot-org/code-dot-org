@@ -71,18 +71,4 @@ class Api::V1::Pd::FacilitatorProgramRegistrationsControllerTest < ::ActionContr
     result_hash = Pd::FacilitatorProgramRegistration.last.form_data_hash
     assert_equal 'My favorite emoji, the Panda, would not be possible without CS', result_hash['notes']
   end
-
-  test 'multiple submissions ignores the first ones' do
-    sign_in @facilitator
-
-    assert_creates Pd::FacilitatorProgramRegistration do
-      put :create, params: @test_params
-      assert_response :success
-    end
-
-    assert_no_difference 'Pd::FacilitatorProgramRegistration.count' do
-      put :create, params: @test_params
-      assert_response :success
-    end
-  end
 end

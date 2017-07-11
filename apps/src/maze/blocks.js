@@ -23,7 +23,7 @@
  */
 var msg = require('./locale');
 var commonMsg = require('@cdo/locale');
-var codegen = require('../codegen');
+var codegen = require('../lib/tools/jsinterpreter/codegen');
 var blockUtils = require('../block_utils');
 var mazeUtils = require('./mazeUtils');
 

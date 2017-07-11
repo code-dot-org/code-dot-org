@@ -1,7 +1,7 @@
-import assert from 'assert';
+import {assert} from '../util/configuredChai';
 import sinon from 'sinon';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { getContainedLevelResultInfo } from '@cdo/apps/containedLevels';
+import { getContainedLevelResultInfo, getValidatedResult } from '@cdo/apps/containedLevels';
 import { TestResults } from '@cdo/apps/constants';
 
 describe('getContainedLevelResultInfo', () => {
@@ -40,5 +40,19 @@ describe('getContainedLevelResultInfo', () => {
         feedback: 'This is feedback',
         submitted: false
       });
+  });
+
+  it('returns an unvalidated result', () => {
+    const validatedResult = getValidatedResult();
+    assert.isFalse(validatedResult);
+  });
+
+  it('returns a validated result', () => {
+    containedLevelResult.result.result = true;
+
+    const validatedResult = getValidatedResult();
+    assert.isTrue(validatedResult);
+
+    containedLevelResult.result.result = false;
   });
 });

@@ -33,12 +33,14 @@
     "fast_get_nectar_animation": "false",
     "step_speed": "2",
     "callout_json": "[]",
-    "ideal": "11",
+    "ideal": "10",
     "min_collected": "8",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 21:17:33 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

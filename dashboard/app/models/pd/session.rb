@@ -44,7 +44,7 @@ class Pd::Session < ActiveRecord::Base
   end
 
   def formatted_date
-    start.strftime('%m/%d/%Y')
+    start.to_date.iso8601
   end
 
   def formatted_date_with_start_and_end_times

@@ -2200,6 +2200,7 @@ levels.js_hoc2015_move_finale = {
 /* ** level 7 ** */
 
 levels.js_hoc2015_event_two_items = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2295,6 +2296,7 @@ levels.js_hoc2015_event_two_items = {
 };
 
 levels.js_hoc2015_event_four_items = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2358,6 +2360,7 @@ levels.js_hoc2015_event_four_items = {
 
 levels.js_hoc2015_score =
 {
+  lockZeroParamFunctions: true,
   'avatarList': ['R2-D2'],
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2479,6 +2482,7 @@ levels.js_hoc2015_score =
 
 
 levels.js_hoc2015_win_lose = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2580,6 +2584,7 @@ levels.js_hoc2015_win_lose = {
 
 
 levels.js_hoc2015_add_characters = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2678,6 +2683,7 @@ levels.js_hoc2015_add_characters = {
 };
 
 levels.js_hoc2015_chain_characters = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2776,6 +2782,7 @@ levels.js_hoc2015_chain_characters = {
 };
 
 levels.js_hoc2015_multiply_characters = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -2861,6 +2868,7 @@ levels.js_hoc2015_multiply_characters = {
 };
 
 levels.js_hoc2015_change_setting = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   autocompletePaletteApisOnly: true,
   executePaletteApisOnly: true,
@@ -3018,6 +3026,7 @@ var js_hoc2015_event_free_markdown = [
 ].join('\r\n');
 
 levels.js_hoc2015_event_free = {
+  lockZeroParamFunctions: true,
   'editCode': true,
   'freePlay': true,
   'background': 'endor',

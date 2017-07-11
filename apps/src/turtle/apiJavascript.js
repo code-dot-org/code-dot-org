@@ -127,3 +127,7 @@ exports.showTurtle = function (id) {
 exports.drawSticker = function (sticker) {
   ArtistApi.log.push(['sticker', sticker, null]);
 };
+
+exports.setArtist = function (artist) {
+  ArtistApi.log.push(['setArtist', artist, null]);
+};

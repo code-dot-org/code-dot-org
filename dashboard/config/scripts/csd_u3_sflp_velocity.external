@@ -6,7 +6,14 @@ css 'unplugged'
 markdown <<MARKDOWN
 # Overview
 
-## Background
+After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
 
-Learn new ways to control the movement of your sprite as you see how "higher level" blocks can be used to hide away commonly used code. You'll start building a game that you'll complete in the next lesson.
+## Introduced Code
+
+* [playSound()](//docs.code.org/gamelab/playSound/)
+* [sprite.velocityY](//docs.code.org/gamelab/velocityY/)
+* [sprite.velocityX](//docs.code.org/gamelab/velocityX/)
+* [sprite.rotationSpeed](//docs.code.org/gamelab/rotationSpeed/)
+* [sprite.isTouching()](//docs.code.org/gamelab/isTouching/)
+
 MARKDOWN

@@ -40,6 +40,19 @@ const styles = {
   }
 };
 
+var audioStyle = {
+  wrapper:{
+    position: 'relative',
+  },
+  button: {
+    height: '32px',
+  },
+  buttonImg: {
+    lineHeight: '32px',
+    fontSize: 20,
+  }
+};
+
 const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMessage, textToSpeechEnabled }) => {
   borderColor = borderColor || 'white';
   const showAudioControls = textToSpeechEnabled && (ttsUrl || ttsMessage);
@@ -59,7 +72,7 @@ const ChatBubble = ({ children, isMinecraft, skinId, borderColor, ttsUrl, ttsMes
       </div>
       {showAudioControls &&
         <div style={styles.audioControls}>
-          <InlineAudio src={ttsUrl} message={ttsMessage} />
+          <InlineAudio src={ttsUrl} message={ttsMessage} style={audioStyle}/>
         </div>
       }
     </div>

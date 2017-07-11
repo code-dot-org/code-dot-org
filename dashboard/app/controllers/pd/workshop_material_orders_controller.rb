@@ -19,8 +19,6 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
 
   # POST /pd/workshop_materials/:enrollment_code
   def create
-    @workshop_material_order.place_order if @workshop_material_order.valid?
-
     if @workshop_material_order.save
       render :thanks
     else

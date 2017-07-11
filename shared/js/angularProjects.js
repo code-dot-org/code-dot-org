@@ -80,7 +80,6 @@ var controllers = angular.module('projectsApp.controllers', [])
 
 controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'projectsService',
     function ($scope, $http, $route, $routeParams, $location, $window, projectsService) {
-  $scope.isPublicGalleryEnabled = $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled');
   $scope.projectsLoaded = false;
 
   $scope.projects = projectsService.query();

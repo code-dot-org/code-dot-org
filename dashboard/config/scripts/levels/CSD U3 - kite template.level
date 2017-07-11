@@ -35,7 +35,7 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",

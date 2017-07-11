@@ -67,7 +67,7 @@
     "pause_animations_by_default": "false",
     "video_key": "csd_gamelab_drawloop",
     "encrypted_examples": "vHPFGs+Rw+A66AEWvRX0Ko9QSjr7+4cXyDyxHfzzSWDxWe31u3A+XgX4McRX\nS4dd\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

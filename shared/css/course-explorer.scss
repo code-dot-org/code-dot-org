@@ -38,6 +38,19 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     padding: 5px 10px;
     border-radius: 0;
     margin: 5px 0;
+
+    .arrow-down {
+      font-size: 28px;
+      margin-top: 7px;
+      margin-right: 12px;
+    }
+
+    .arrow-up {
+      font-size: 28px;
+      margin-top: 6px;
+      margin-right: 12px;
+      display: none;
+    }
   }
   .break {
     clear: both;
@@ -80,6 +93,12 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     width: 240px;
     padding: 0 10px 0 0;
     box-sizing: border-box;
+  }
+  .left {
+    float: left;
+  }
+  .arrow {
+    float: right;
   }
 }
 .arrow_box {

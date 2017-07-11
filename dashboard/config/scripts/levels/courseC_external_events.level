@@ -51,7 +51,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-17 22:45:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"embed\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-17 22:48:20 +0000\",\"changed\":[\"start_blocks\",\"timeout_after_when_run\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-17 22:45:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"embed\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-17 22:48:20 +0000\",\"changed\":[\"start_blocks\",\"timeout_after_when_run\",\"instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 22:39:00 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,6 +63,13 @@
             <block type="studio_move">
               <title name="SPRITE">0</title>
               <title name="DIR">1</title>
+            </block>
+          </next>
+        </block>
+        <block type="when_run">
+          <next>
+            <block type="studio_setBackground">
+              <title name="VALUE">random</title>
             </block>
           </next>
         </block>

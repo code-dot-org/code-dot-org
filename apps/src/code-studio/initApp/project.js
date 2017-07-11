@@ -530,6 +530,9 @@ var projects = module.exports = {
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
+        if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
+          return 'frozen';
+        }
         return 'artist';
       case 'calc':
         return 'calc';
@@ -545,11 +548,11 @@ var projects = module.exports = {
           return 'algebra_game';
         } else if (appOptions.skinId === 'hoc2015') {
           return 'starwars';
-        } else if (appOptions.skin === 'iceage') {
+        } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
-        } else if (appOptions.skin === 'infinity') {
+        } else if (appOptions.skinId === 'infinity') {
           return 'infinity';
-        } else if (appOptions.skin === 'gumball') {
+        } else if (appOptions.skinId === 'gumball') {
           return 'gumball';
         }
         return 'playlab';

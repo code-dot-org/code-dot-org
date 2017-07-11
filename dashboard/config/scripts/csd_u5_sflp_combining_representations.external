@@ -3,6 +3,11 @@ display_name 'Lesson Overview'
 markdown <<MARKDOWN
 # Overview
 
-Combine the different binary systems to make a pet record.
+This lesson combines all three types of binary representation systems (ASCII characters, binary number, and images) to allow for the encode of more complex types information in a record.  After seeing a series of bits and being asked to decode them, the class is introduced to the idea that  understanding binary information requires understanding both the system that is being used and the meaning of the information encoded.
 
+
+## Resources
+
+* [ Activity Guide - Pet Records](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/) - Activity Guide ([PDF](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=pdf) | [DOCX](https://docs.google.com/document/d/14-oji3xpZfTXyU6eXLETyc9r9MAZAxlDuxQAi4L3G9g/export?format=doc))
+* [ASCII to Binary Table](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/) - Reference ([PDF](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1RgqkSXE8NGRfJe2Slw5DSIaP_YbpMhRE5u1zrutoyMk/export?format=doc))
 MARKDOWN

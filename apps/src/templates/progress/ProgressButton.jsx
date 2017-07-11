@@ -14,7 +14,8 @@ const ButtonColor = {
   orange: 'orange',
   gray: 'gray',
   blue: 'blue',
-  white: 'white'
+  white: 'white',
+  red: 'red'
 };
 
 const ButtonSize = {
@@ -40,7 +41,8 @@ const styles = {
       cursor: 'pointer',
     },
     boxSizing: 'border-box',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    whiteSpace: 'nowrap'
   },
   icon: {
     marginRight: 5
@@ -83,6 +85,16 @@ const styles = {
         boxShadow: 'none',
         backgroundColor: color.lightest_gray
       }
+    },
+    [ButtonColor.red]: {
+      color: color.white,
+      backgroundColor: color.red,
+      boxShadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)',
+      ':hover': {
+        boxShadow: 'none',
+        color: color.red,
+        borderColor: color.red,
+      }
     }
   },
   sizes: {
@@ -103,11 +115,13 @@ const styles = {
 
 const ProgressButton = React.createClass({
   propTypes: {
+    className: PropTypes.string,
     href: PropTypes.string,
     text: PropTypes.string.isRequired,
     size: PropTypes.oneOf(Object.keys(ButtonSize)),
     color: PropTypes.oneOf(Object.keys(ButtonColor)),
     icon: PropTypes.string,
+    iconStyle: PropTypes.object,
     target: PropTypes.string,
     style: PropTypes.object,
     disabled: PropTypes.bool,
@@ -115,27 +129,30 @@ const ProgressButton = React.createClass({
   },
 
   render() {
-    const { href, text, icon, target, style, onClick, disabled } = this.props;
+    const { className, href, text, icon, iconStyle, target, style, onClick, disabled } = this.props;
 
     const color = this.props.color || ButtonColor.orange;
     const size = this.props.size || ButtonSize.default;
 
-    if (!!href === !!onClick) {
-      throw new Error('Expect exactly one of href/onClick');
+    if (!href && !onClick) {
+      throw new Error('Expect at least one of href/onClick');
     }
 
     const Tag = href ? 'a' : 'div';
 
     return (
       <Tag
+        className={className}
         style={[styles.main, styles.colors[color], styles.sizes[size], style]}
         href={href}
         target={target}
         disabled={disabled}
         onClick={onClick}
       >
-        {icon && <FontAwesome icon={icon} style={styles.icon}/>}
-        {text}
+        <div>
+          {icon && <FontAwesome icon={icon} style={{...styles.icon, ...iconStyle}}/>}
+          {text}
+        </div>
       </Tag>
     );
   }

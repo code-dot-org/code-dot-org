@@ -112,6 +112,7 @@ describe('Artist', () => {
             </block>
           </next>
         </block>`;
+      newDom = undefined;
       window.Blockly = {
         Xml: {
           blockSpaceToDom() {
@@ -191,6 +192,5 @@ describe('Artist', () => {
 
       expect(newDom.querySelector('block[type="when_run"]')).to.be.defined;
     });
-
   });
 });

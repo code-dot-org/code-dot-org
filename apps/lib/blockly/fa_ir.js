@@ -174,7 +174,7 @@ Blockly.Msg.LISTS_SET_INDEX_TOOLTIP_SET_RANDOM = "یک مورد تصادفی ر�
 Blockly.Msg.LISTS_TOOLTIP = "اگر فهرست خالی باشد، مقدار بولین true را بر می‌گرداند.";
 Blockly.Msg.LOGIC_BOOLEAN_FALSE = "ناصحیح";
 Blockly.Msg.LOGIC_BOOLEAN_HELPURL = "http://code.google.com/p/blockly/wiki/True_False";
-Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "بازگرداندن یکی از مقادیر بولین true یا false.";
+Blockly.Msg.LOGIC_BOOLEAN_TOOLTIP = "یک مقدار true یا false را برمیگرداند.";
 Blockly.Msg.LOGIC_BOOLEAN_TRUE = "صحیح";
 Blockly.Msg.LOGIC_COMPARE_HELPURL = "http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C";
 Blockly.Msg.LOGIC_COMPARE_TOOLTIP_EQ = "بازگشت صحیح اگر هر دو ورودی با یکدیگر برابر باشد.";
@@ -250,7 +250,7 @@ Blockly.Msg.MATH_ONLIST_TOOLTIP_SUM = "مجموع همهٔ عددهای لیست
 Blockly.Msg.MATH_POWER_SYMBOL = "^";
 Blockly.Msg.MATH_RANDOM_FLOAT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%AA%D8%B5%D8%A7%D8%AF%D9%81%DB%8C";
 Blockly.Msg.MATH_RANDOM_FLOAT_TITLE_RANDOM = "کسر تصادفی";
-Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "کسری تصادفی بین (و یا برابر) 0.0 و ( حتما کوچکتر) 1.0 را برمیگرداند.";
+Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP = "مقدار اعشاری تصادفی بین 0.0 تا 1.0 (ولی نه برابر با 1.0) را نمایش می دهد.";
 Blockly.Msg.MATH_RANDOM_INT_HELPURL = "http://fa.wikipedia.org/wiki/%D8%AA%D9%88%D9%84%DB%8C%D8%AF_%D8%A7%D8%B9%D8%AF%D8%A7%D8%AF_%D8%AA%D8%B5%D8%A7%D8%AF%D9%81%DB%8C";
 Blockly.Msg.MATH_RANDOM_INT_TITLE = "عدد صحیح تصادفی بین %1 تا %2";
 Blockly.Msg.MATH_RANDOM_INT_TOOLTIP = "یک عدد صحیح تصادفی بین و یا برابر دو مقدار مشخص‌شده به باز می‌گرداند.";

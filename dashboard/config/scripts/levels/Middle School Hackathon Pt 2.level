@@ -74,6 +74,7 @@
     "hide_view_data_button": "false",
     "debugger_disabled": "false",
     "instructions": "(Click to see full instructions)",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

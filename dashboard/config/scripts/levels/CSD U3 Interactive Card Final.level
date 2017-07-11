@@ -176,7 +176,7 @@
     "show_d_pad": "true",
     "edit_code": true,
     "embed": "false",
-    "markdown_instructions": "# Finishing Touches\r\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\r\n\r\n# Do This\r\nConsider adding any of the following to finish up your card:\r\n\r\n* Text (add it after the `drawSprites()` block if you want it on top of everything)\r\n* Additional images for your Sprites\r\n* Subtle animation in the background\r\n* Sound effects (can you figure out how to do this?)\r\n* More ways for a user to interact with your card",
+    "markdown_instructions": "# Finishing Touches\r\nNow's your chance to put some finishing touches on your card. We've included some new blocks that you haven't seen before, so take some time to look around and try out some new blocks.\r\n\r\n# Do This\r\nConsider adding any of the following to finish up your card:\r\n\r\n* Text\r\n* Additional images for your sprites\r\n* Subtle animation in the background\r\n* Sound effects  (Can you figure out now to do this?)\r\n* More ways for a user to interact with your card",
     "submittable": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -214,6 +214,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 19:29:22 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

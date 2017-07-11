@@ -42,7 +42,7 @@ stage 'Lossy Compression and File Formats', flex_category: 'csp2_1'
 level 'v2 U2L5 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 assessment 'U1L16 - Matching File Compression Types', progression: 'Check Your Understanding'
 
-stage 'Encode a Complex Thing', flex_category: 'csp2_1'
+stage 'Practice PT - Encode an Experience', flex_category: 'csp2_1'
 level 'v2 U2L6 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'
 
 stage 'Unit 2 Chapter 1 Assessment', lockable: true, flex_category: 'csp2_1'

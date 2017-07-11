@@ -77,7 +77,7 @@
     "all_animations_single_frame": "true",
     "instructions_important": "false",
     "encrypted_examples": "c4O5nqiSqI9LGJSAQSV5fV95FqlEPIHltguw1WtVPmUS6qWZEpj0K+CTxI86\n4tYt\n",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",

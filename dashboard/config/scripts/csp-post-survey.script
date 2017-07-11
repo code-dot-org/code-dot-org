@@ -3,3 +3,6 @@ login_required true
 
 stage 'Participate in a longitudinal study!'
 named_level 'Click Here!'
+
+stage 'CSP Post-Course Survey'
+assessment 'CSP post-assessment survey'

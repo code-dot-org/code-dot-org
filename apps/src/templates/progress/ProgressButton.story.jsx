@@ -59,6 +59,17 @@ export default storybook => {
       },
 
       {
+        name:'red button',
+        story: () => (
+          <ProgressButton
+            href="/foo/bar"
+            color={ProgressButton.ButtonColor.red}
+            text="Batman & Robin"
+          />
+        )
+      },
+
+      {
         name: 'large button',
         story: () => (
           <ProgressButton
@@ -89,6 +100,19 @@ export default storybook => {
             color={ProgressButton.ButtonColor.blue}
             icon="file-text"
             text="Assessment Settings"
+          />
+        )
+      },
+
+      {
+        name:'orange button with styled icon',
+        story: () => (
+          <ProgressButton
+            href="/foo/bar"
+            color={ProgressButton.ButtonColor.orange}
+            icon="caret-down"
+            iconStyle={{fontSize: 24, position: 'relative', top: 3}}
+            text="Assign Course"
           />
         )
       },
