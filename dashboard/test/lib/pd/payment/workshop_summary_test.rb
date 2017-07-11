@@ -15,16 +15,11 @@ module Pd::Payment
       )
     end
 
-    test 'section_url' do
-      assert_not_nil @workshop_summary.section_url
-      assert @workshop_summary.section_url.include? "/teacher-dashboard#/sections/#{@ended_workshop.section_id}"
-    end
-
-    test 'section_url is nil when the section is deleted' do
-      @ended_workshop.section.destroy!
-      @ended_workshop.reload
-
-      assert_nil @workshop_summary.section_url
+    test 'attendance_url' do
+      assert_not_nil @workshop_summary.attendance_url
+      assert @workshop_summary.attendance_url.include?(
+        "/pd/workshop_dashboard/workshops/#{@ended_workshop.id}/attendance/#{@ended_workshop.sessions.first.id}"
+      )
     end
   end
 end
