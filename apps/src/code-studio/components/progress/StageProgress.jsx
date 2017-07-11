@@ -7,7 +7,6 @@ import { stageProgressShape } from './types';
 import StatusProgressDot from './StatusProgressDot.jsx';
 import color from "../../../util/color";
 import StageExtrasProgressDot from './StageExtrasProgressDot';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   courseOverviewContainer: {
