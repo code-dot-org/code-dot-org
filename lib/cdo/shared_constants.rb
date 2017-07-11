@@ -38,6 +38,7 @@ module SharedConstants
       word: 'word',
       picture: 'picture',
       email: 'email',
+      google_classroom: 'google_classroom',
     }
   )
 

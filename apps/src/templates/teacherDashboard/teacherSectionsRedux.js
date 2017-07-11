@@ -18,7 +18,7 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
-export const setSections = sections => ({ type: SET_SECTIONS, sections });
+export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
 export const updateSection = (sectionId, serverSection) => ({
   type: UPDATE_SECTION,
   sectionId,
@@ -114,9 +114,10 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
+    const prevSectionIds = action.reset ? [] : state.sectionIds;
     return {
       ...state,
-      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')

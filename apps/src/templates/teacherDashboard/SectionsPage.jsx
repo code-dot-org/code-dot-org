@@ -80,10 +80,17 @@ class SectionsPage extends Component {
     this.props.loadClassroomList();
   };
 
-  handleImportClose = (selectedId) => {
+  handleImportClose = reload => {
     this.setState({rosterDialogOpen: false});
-    // TODO (josh): use `selectedId`.
-    console.log(selectedId);
+
+    if (reload) {
+      this.setState({sectionsLoaded: false});
+
+      $.getJSON("/v2/sections/").done(results => {
+        this.props.setSections(results, true);
+        this.setState({sectionsLoaded: true});
+      });
+    }
   };
 
   addSection = () => this.props.newSection();
