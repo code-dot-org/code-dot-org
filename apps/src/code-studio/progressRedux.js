@@ -327,6 +327,24 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
   levelNumber: index + 1
 }));
 
+// TODO: comment
+const levelWithStatus = (state, level) => {
+  if (level.kind !== LevelKind.unplugged) {
+    if (!level.title || typeof(level.title) !== 'number') {
+      throw new Error('Expect all non-unplugged levels to have a numerical title');
+    }
+  }
+  return {
+    status: statusForLevel(level, state.levelProgress),
+    url: level.url,
+    name: level.name,
+    progression: level.progression,
+    icon: level.icon,
+    isUnplugged: level.kind === LevelKind.unplugged,
+    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title
+  };
+};
+
 /**
  * The level object passed down to use via the server (and stored in stage.stages.levels)
  * contains more data than we need. This (a) filters to the parts our views care
@@ -335,24 +353,13 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
  */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
-    stage.levels.map(level => {
-      if (level.kind !== LevelKind.unplugged) {
-        if (!level.title || typeof(level.title) !== 'number') {
-          throw new Error('Expect all non-unplugged levels to have a numerical title');
-        }
-      }
-      return {
-        status: statusForLevel(level, state.levelProgress),
-        url: level.url,
-        name: level.name,
-        progression: level.progression,
-        icon: level.icon,
-        isUnplugged: level.kind === LevelKind.unplugged,
-        levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title
-      };
-    })
+    stage.levels.map(level => levelWithStatus(state, level))
   ))
 );
+
+export const levelsForStage = (state, stageId) => (
+  state.stages.find(stage => stage.id === stageId).map
+)
 
 /**
  * Given a level and levelProgress (both from our redux store state), determine
