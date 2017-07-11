@@ -30,6 +30,18 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Section < ActiveRecord::Base
+  self.inheritance_column = :login_type
+
+  class << self
+    def find_sti_class(type_name)
+      super(type_name.camelize)
+    end
+
+    def sti_name
+      name.underscore
+    end
+  end
+
   include Rails.application.routes.url_helpers
   acts_as_paranoid
 
@@ -59,18 +71,6 @@ class Section < ActiveRecord::Base
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
-
-  def self.from_omniauth(code, provider, students, owner_id)
-    oauth_section = where(code: code, login_type: provider).first_or_create do |section|
-      section.name = 'New Section'
-      section.user_id = owner_id
-    end
-    students.each do |student|
-      oauth_section.add_student User.from_omniauth(student, {})
-    end
-
-    oauth_section
-  end
 
   # Override default script accessor to use our cache
   def script
