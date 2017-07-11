@@ -46,6 +46,7 @@ const styles = {
   },
 
   button: {
+    cursor: 'pointer',
     'float': 'left',
     backgroundColor: color.lightest_purple,
     border: 'none',
@@ -175,9 +176,18 @@ const InlineAudio = React.createClass({
         <div
           className="inline-audio"
           style={this.props.style && this.props.style.wrapper}
+          onMouseOver={function (){
+            $("#volume").css("background-color", color.cyan);
+            $(".playPause").css("background-color", color.cyan);
+          }}
+          onMouseOut={function (){
+            $("#volume").css("background-color", color.lightest_purple);
+            $(".playPause").css("background-color", color.lightest_purple);
+          }}
         >
           <div
             style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button]}
+            id="volume"
           >
             <i
               className={"fa fa-volume-up"}

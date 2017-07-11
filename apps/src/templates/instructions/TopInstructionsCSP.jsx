@@ -77,6 +77,7 @@ var audioStyle = {
   buttonImg: {
     lineHeight: '24px',
     fontSize: 15,
+    paddingLeft: 12,
   }
 };
 
