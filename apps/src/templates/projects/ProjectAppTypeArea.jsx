@@ -2,12 +2,13 @@ import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
 import {projectPropType} from './projectConstants';
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 import ProgressButton from "../progress/ProgressButton";
 
 const styles = {
   grid: {
     padding: 10,
-    width: 970
+    width: styleConstants['pegasus-content-width']
   },
   card: {
     display: "inline-block",

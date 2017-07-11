@@ -2,11 +2,12 @@ import React from 'react';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 import _ from 'lodash';
 
 const styles = {
   box: {
-    width: 970,
+    width: styleConstants['pegasus-content-width'],
     backgroundColor: color.white
   },
   arrowIcon: {

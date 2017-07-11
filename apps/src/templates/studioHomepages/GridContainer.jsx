@@ -1,8 +1,9 @@
 import React from 'react';
+import styleConstants from '../../styleConstants';
 
 const styles = {
   container: {
-    width: 970,
+    width: styleConstants['pegasus-content-width'],
   },
   item: {
     float: "left",
