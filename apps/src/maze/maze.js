@@ -273,6 +273,10 @@ Maze.init = function (config) {
     // Load wall sounds.
     studioApp().loadAudio(skin.wallSound, 'wall');
 
+    if (skin.walkSound) {
+      studioApp().loadAudio(skin.walkSound, 'walk');
+    }
+
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
@@ -1176,6 +1180,8 @@ function scheduleMove(endX, endY, timeForAnimation) {
         skin.goalIdle);
     }
   }
+
+  studioApp().playAudio('walk');
 }
 
 
