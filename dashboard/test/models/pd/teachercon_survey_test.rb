@@ -99,4 +99,31 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
     refute survey.valid?
     assert_equal ["Form data howCouldImprove"], survey.errors.full_messages
   end
+
+  test 'to summary for faciliator takes specific facilitator fields' do
+    facilitator_1 = create :facilitator, name: 'Facilitator Kirk'
+    facilitator_2 = create :facilitator, name: 'Facilitator Picard'
+    workshop = create :pd_workshop, facilitators: [facilitator_1, facilitator_2]
+
+    hash = build :pd_teachercon_survey_hash
+    hash[:whoFacilitated] = [facilitator_1.name, facilitator_2.name]
+    hash[:thingsFacilitatorDidWell] = {
+      'Facilitator Kirk': 'Kirk lead the away team well',
+      'Facilitator Picard': 'Picard is a great diplomat'
+    }
+    hash[:thingsFacilitatorCouldImprove] = {
+      'Facilitator Kirk': 'Kirk talks slowly',
+      'Facilitator Picard': 'He is too awesome'
+    }
+
+    survey_1 = create :pd_teachercon_survey, pd_enrollment: (create :pd_enrollment, workshop: workshop), form_data: hash.to_json
+
+    summary_1 = survey_1.to_summary_for_facilitator('Facilitator Kirk')
+    assert_equal 'Kirk lead the away team well', summary_1[:things_facilitator_did_well]
+    assert_equal 'Kirk talks slowly', summary_1[:things_facilitator_could_improve]
+
+    summary_2 = survey_1.to_summary_for_facilitator('Facilitator Picard')
+    assert_equal 'Picard is a great diplomat', summary_2[:things_facilitator_did_well]
+    assert_equal 'He is too awesome', summary_2[:things_facilitator_could_improve]
+  end
 end
