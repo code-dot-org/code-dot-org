@@ -45,11 +45,21 @@ class ApiController < ApplicationController
   end
 
   def import_google_classroom
-    course_id = params[:course_id].to_i
+    course_id = params[:course_id].to_s
 
     query_google_classroom_service do |service|
-      response = service.list_course_students(course_id)
-      render json: response.to_h
+      students = service.list_course_students(course_id).students.map do |student|
+        OmniAuth::AuthHash.new(
+          uid: student.user_id,
+          provider: 'google_oauth2',
+          info: {
+            name: student.profile.name.full_name
+          },
+        )
+      end
+
+      section = Section.from_omniauth(course_id, Section::LOGIN_TYPE_GOOGLE_CLASSROOM, students, current_user.id)
+      render json: section.summarize
     end
   end
 
