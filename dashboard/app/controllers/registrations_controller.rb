@@ -1,6 +1,5 @@
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
-  prepend_before_action :authenticate_scope!, only: [:edit, :update, :destroy, :upgrade]
 
   def new
     session[:user_return_to] ||= params[:user_return_to]
@@ -57,14 +56,12 @@ class RegistrationsController < Devise::RegistrationsController
       end
 
     successfully_updated = can_update && current_user.update(update_params(params_to_pass))
-    has_email = current_user.parent_email.blank? && current_user.hashed_email.present?
-    success_message_kind = has_email ? :personal_login_created_email : :personal_login_created_username
-    respond_to_account_update(successfully_updated, success_message_kind)
+    respond_to_account_update(successfully_updated)
   end
 
   private
 
-  def respond_to_account_update(successfully_updated, flash_message_kind = :updated)
+  def respond_to_account_update(successfully_updated)
     user = current_user
     respond_to do |format|
       if successfully_updated
@@ -73,7 +70,7 @@ class RegistrationsController < Devise::RegistrationsController
         bypass_sign_in user
 
         format.html do
-          set_flash_message :notice, flash_message_kind
+          set_flash_message :notice, :updated
           begin
             redirect_back fallback_location: after_update_path_for(user)
           rescue ActionController::RedirectBackError
@@ -109,9 +106,7 @@ class RegistrationsController < Devise::RegistrationsController
   def update_params(params)
     params.require(:user).permit(
       :email,
-      :parent_email,
       :hashed_email,
-      :username,
       :password,
       :encrypted_password,
       :current_password,
