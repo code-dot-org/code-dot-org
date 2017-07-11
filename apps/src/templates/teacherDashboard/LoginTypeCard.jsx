@@ -8,10 +8,11 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    boxSizing: 'border-box',
     // Set width to form a three-column layout on 970px teacher dashboard.
-    width: 280,
+    width: 312,
     // Uniform height, even in different rows
-    height: 200,
+    height: 240,
     paddingTop: 15,
     paddingLeft: 20,
     paddingRight: 10,
@@ -30,6 +31,7 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5,
     fontSize: 18,
+    lineHeight: '18px',
     fontFamily:'"Gotham 4r", sans-serif',
     zIndex: 2,
     color: color.dark_charcoal,
@@ -37,6 +39,7 @@ const styles = {
   },
   subtitle: {
     fontSize: 14,
+    lineHeight: '18px',
     fontFamily:'"Gotham 4r", sans-serif',
     zIndex: 2,
     color: color.dark_charcoal,
@@ -46,6 +49,7 @@ const styles = {
     paddingTop: 10,
     paddingBottom: 5,
     fontSize: 14,
+    lineHeight: '18px',
     fontFamily: '"Gotham 4r", sans-serif',
     zIndex: 2,
     color: color.dark_charcoal

@@ -6,7 +6,6 @@ const baseHeadingStyle = {
   display: 'block',
   fontFamily: '"Gotham 5r", sans-serif',
   fontWeight: 'normal',
-  lineHeight: 2,
   margin: '10px 0',
   color: color.dark_charcoal,
 };
@@ -15,7 +14,7 @@ export const h1Style = {
   ...baseHeadingStyle,
   fontFamily: '"Gotham 7r", sans-serif',
   fontSize: 32,
-  lineHeight: 1.5,
+  lineHeight: '48px',
 };
 
 export class Heading1 extends Component {
@@ -31,6 +30,7 @@ export const h2Style = {
   ...baseHeadingStyle,
   fontFamily: '"Gotham 4r", sans-serif',
   fontSize: 24,
+  lineHeight: '48px',
 };
 
 export class Heading2 extends Component {
@@ -46,6 +46,7 @@ export const h3Style = {
   ...baseHeadingStyle,
   fontFamily: '"Gotham 5r", sans-serif',
   fontSize: 16,
+  lineHeight: '24px',
 };
 
 export class Heading3 extends Component {
