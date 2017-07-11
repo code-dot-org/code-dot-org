@@ -325,6 +325,62 @@ class RegistrationsControllerTest < ActionController::TestCase
       assigns(:user).errors.full_messages
   end
 
+  test 'upgrade word student to password without secret words fails' do
+    student_without_password = create(:student_in_word_section)
+    sign_in student_without_password
+
+    user_params = {
+        email: 'upgraded@code.org',
+        password: '1234567',
+        password_confirmation: '1234567'
+    }
+
+    post :upgrade, params: {
+      user: user_params
+    }
+
+    student_without_password.reload
+    assert student_without_password.teacher_managed_account?
+    refute student_without_password.provider.nil?
+  end
+
+  test 'upgrade word student to password with secret words succeeds' do
+    student_without_password = create(:student_in_word_section)
+    sign_in student_without_password
+
+    user_params = {
+        email: 'upgraded@code.org',
+        password: '1234567',
+        password_confirmation: '1234567',
+        secret_words: student_without_password.secret_words
+    }
+    post :upgrade, params: {
+      user: user_params
+    }
+
+    student_without_password.reload
+    refute student_without_password.teacher_managed_account?
+    assert student_without_password.provider.nil?
+  end
+
+  test 'upgrade picture student to password succeeds' do
+    student_without_password = create(:student_in_picture_section)
+    sign_in student_without_password
+
+    user_params = {
+        email: 'upgraded@code.org',
+        password: '1234567',
+        password_confirmation: '1234567',
+    }
+    post :upgrade, params: {
+        user: user_params
+    }
+
+    student_without_password.reload
+    refute student_without_password.teacher_managed_account?
+    assert student_without_password.provider.nil?
+  end
+
   test 'deleting sets deleted at on a user' do
     user = create :user
     sign_in user
