@@ -94,6 +94,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={false}
             currentLevelId="2049"
+            saveAnswersBeforeNavigation={false}
             status={LevelStatus.not_tried}
             level={{
               icon: 'fa-flag',
@@ -110,6 +111,7 @@ export default storybook => {
           <ProgressDot
             courseOverviewPage={false}
             currentLevelId="stage_extras"
+            saveAnswersBeforeNavigation={false}
             status={LevelStatus.not_tried}
             level={{
               icon: 'fa-flag',
