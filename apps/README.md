@@ -22,6 +22,7 @@ npm install -g grunt-cli yarn@0.23.2
 # Perform first full build
 yarn
 npm run build
+npm rebuild node-sass
 
 # automatically rebuild every time you make changes to source files
 npm run start
