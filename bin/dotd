@@ -125,6 +125,7 @@ end
 # response.
 # @param question [String] The question to prompt the user with.
 # @block The block to run if the user responsds affirmatively.
+# @return [Boolean] Whether the block was executed.
 def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
@@ -133,9 +134,9 @@ def should_i(question)
     if 'yes'.start_with?(response) # also catches blank/return ;)
       @logger.info(question)
       yield
-      return
+      return true
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
-      return
+      return false
     elsif 'quit'.start_with?(response)
       puts_quit_message
       exit(-1)
@@ -409,7 +410,10 @@ def main
           title: "DTP (Test > Production: #{test_green_commit})"
         )
         print_database_changes production_pr_number
-        GitHub.open_url GitHub.url(production_pr_number)
+        dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+          GitHub.merge_pull_request(production_pr_number, "DTP (Test > Production: #{test_green_commit})")
+        end
+        GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
 
         should_i 'DTL' do
           # TODO(asher): Remove this wait step if it is truly unnecessary now.

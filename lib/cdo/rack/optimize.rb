@@ -30,7 +30,9 @@ module Rack
 
       # If the optimizer returns nil, the optimization is still pending.
       if optimized_content.nil?
-        optimized_content = content
+        optimized_content = (content_type == 'image/jpeg') ?
+          optimize_image(content) :
+          content
 
         # Reduce the `s-maxage` cache-control header, so un-optimized content is only stored briefly in proxy caches.
         # Browsers will still hold the resource for whatever cache lifetime originally set.

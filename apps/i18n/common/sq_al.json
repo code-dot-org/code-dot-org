@@ -540,5 +540,16 @@
   "whenRun": "kur ekzekutohet",
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "hapësirë pune",
-  "yes": "Po"
+  "yes": "Po",
+  "authorizeGoogleClassrooms": "Click here to authorize Google Classroom.",
+  "currentUnit": "Current unit:",
+  "findLocalClassHeading": "Find a local computer science class",
+  "findLocalClassSubheading": "Local classes",
+  "findLocalClassDescription": "Find a local after-school program, summer camp, or school to learn in person.",
+  "findLocalClassButton": "Find a class",
+  "projectsContinueWorking": "Continue working on a recent project",
+  "projectLastUpdated": "Last updated",
+  "projectStartNew": "Start a new project",
+  "projectsViewProjectGallery": "View project gallery",
+  "projects": "Projects"
 }

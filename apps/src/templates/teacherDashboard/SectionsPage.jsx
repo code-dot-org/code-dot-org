@@ -7,7 +7,7 @@ import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
 import { loadClassroomList } from './googleClassroomRedux';
-import { classroomShape } from './shapes';
+import { classroomShape, loadErrorShape } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -28,7 +28,9 @@ class SectionsPage extends Component {
 
     // redux provided
     numSections: PropTypes.number.isRequired,
+    studioUrl: PropTypes.string.isRequired,
     classrooms: PropTypes.arrayOf(classroomShape),
+    loadError: loadErrorShape,
     newSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setValidAssignments: PropTypes.func.isRequired,
@@ -45,27 +47,18 @@ class SectionsPage extends Component {
     let validCourses;
     let sections;
 
-    // If sectionFocus is not enabled, we get valid_courses on page load and
-    // call setValidAssignments then. Otherwise, we get it async and set it here
-    const setAssignments = experiments.isEnabled('sectionFocus');
-
     const onAsyncLoad = () => {
-      if ((validCourses || !setAssignments) && sections) {
-        if (setAssignments) {
-          setValidAssignments(validCourses, validScripts);
-        }
+      if (validCourses && sections) {
+        setValidAssignments(validCourses, validScripts);
         setSections(sections);
         this.setState({sectionsLoaded: true});
       }
     };
 
-
-    if (setAssignments) {
-      $.getJSON('/dashboardapi/courses').then(response => {
-        validCourses = response;
-        onAsyncLoad();
-      });
-    }
+    $.getJSON('/dashboardapi/courses').then(response => {
+      validCourses = response;
+      onAsyncLoad();
+    });
 
     $.getJSON("/v2/sections/").done(response => {
       sections = response;
@@ -129,6 +122,8 @@ class SectionsPage extends Component {
           isOpen={this.state.rosterDialogOpen}
           handleClose={this.handleImportClose}
           classrooms={this.props.classrooms}
+          loadError={this.props.loadError}
+          studioUrl={this.props.studioUrl}
         />
       </div>
     );
@@ -138,5 +133,7 @@ export const UnconnectedSectionsPage = SectionsPage;
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
+  studioUrl: state.teacherSections.studioUrl,
   classrooms: state.googleClassroom.classrooms,
+  loadError: state.googleClassroom.loadError,
 }), { newSection, setSections, setValidAssignments, loadClassroomList })(SectionsPage);

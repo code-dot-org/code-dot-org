@@ -276,7 +276,9 @@ class DashboardSection
     # only do this query once because in prod we only change scripts
     # when deploying (technically this isn't true since we are in
     # pegasus and scripts are owned by dashboard...)
-    return @@script_cache[script_cache_key] if @@script_cache.key?(script_cache_key)
+    if @@script_cache.key?(script_cache_key) && !rack_env?(:levelbuilder)
+      return @@script_cache[script_cache_key]
+    end
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
@@ -284,12 +286,14 @@ class DashboardSection
     where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
 
     # cache result if we have to actually run the query
-    @@script_cache[script_cache_key] =
+    scripts =
       Dashboard.db[:scripts].
         where(where_clause).
         select(:id, :name, :hidden).
         all.
         map {|script| assignable_info(script, script[:hidden])}
+    @@script_cache[script_cache_key] = scripts unless rack_env?(:levelbuilder)
+    scripts
   end
 
   @@course_cache = {}
@@ -299,16 +303,20 @@ class DashboardSection
   def self.valid_courses
     course_cache_key = I18n.locale.to_s
 
-    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
+    if @@course_cache.key?(course_cache_key) && !rack_env?(:levelbuilder)
+      return @@course_cache[course_cache_key]
+    end
 
     return {} unless (Dashboard.db[:courses].count rescue nil)
 
-    @@course_cache[course_cache_key] = Dashboard.db[:courses].
+    courses = Dashboard.db[:courses].
       select(:id, :name).
       all.
       # Only return courses we've whitelisted in ScriptConstants
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
       map {|course| assignable_info(course)}
+    @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
+    courses
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via

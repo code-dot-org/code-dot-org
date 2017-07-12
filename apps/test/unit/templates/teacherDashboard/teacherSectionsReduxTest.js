@@ -10,8 +10,8 @@ import reducer, {
   newSection,
   removeSection,
   assignmentId,
-  assignmentName,
-  assignmentPath,
+  assignmentNames,
+  assignmentPaths,
   sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
@@ -62,10 +62,10 @@ const sections = [
     stage_extras: true,
     pairing_allowed: false,
     script: {
-      id: 46,
-      name: 'infinity'
+      id: 112,
+      name: 'csp1'
     },
-    course_id: null,
+    course_id: 29,
     students: []
   }
 ];
@@ -470,7 +470,7 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('assignmentName/assignmentPath', () => {
+  describe('assignmentNames/assignmentPaths', () => {
     const stateWithUrl = reducer(initialState, setStudioUrl('//test-studio.code.org'));
     const stateWithAssigns = reducer(stateWithUrl, setValidAssignments(validCourses, validScripts));
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
@@ -478,25 +478,36 @@ describe('teacherSectionsRedux', () => {
 
     const unassignedSection = stateWithNewSection.sections["-1"];
     const assignedSection = stateWithNewSection.sections["11"];
+    const assignedSectionWithUnit = stateWithNewSection.sections["307"];
 
-    it('assignmentName returns the name if the section is assigned a course/script', () => {
-      const name = assignmentName(stateWithNewSection.validAssignments, assignedSection);
-      assert.equal(name, 'CS Discoveries');
+    it('assignmentNames returns the name if the section is assigned a course/script', () => {
+      const names = assignmentNames(stateWithNewSection.validAssignments, assignedSection);
+      assert.deepEqual(names, ['CS Discoveries']);
     });
 
-    it('assignmentName returns empty string otherwise', () => {
-      const name = assignmentName(stateWithNewSection.validAssignments, unassignedSection);
-      assert.equal(name, '');
+    it('assignmentNames returns the names of course and script if assigned both', () => {
+      const names = assignmentNames(stateWithNewSection.validAssignments, assignedSectionWithUnit);
+      assert.deepEqual(names, ['CS Discoveries', 'Unit 1: The Internet']);
     });
 
-    it('assignmentPath returns the path if the section is assigned a course/script', () => {
-      const path = assignmentPath(stateWithNewSection.validAssignments, assignedSection);
-      assert.equal(path, '//test-studio.code.org/courses/csd');
+    it('assignmentName returns empty array if unassigned', () => {
+      const names = assignmentNames(stateWithNewSection.validAssignments, unassignedSection);
+      assert.deepEqual(names, []);
     });
 
-    it('assignmentPath returns empty string otherwise.validAssignments', () => {
-      const path = assignmentPath(stateWithNewSection, unassignedSection);
-      assert.equal(path, '');
+    it('assignmentPaths returns the path if the section is assigned a course/script', () => {
+      const paths = assignmentPaths(stateWithNewSection.validAssignments, assignedSection);
+      assert.deepEqual(paths, ['//test-studio.code.org/courses/csd']);
+    });
+
+    it('assignmentPaths returns the paths of course and script if assigned both', () => {
+      const paths = assignmentPaths(stateWithNewSection.validAssignments, assignedSectionWithUnit);
+      assert.deepEqual(paths, ['//test-studio.code.org/courses/csd', '//test-studio.code.org/s/csp1']);
+    });
+
+    it('assignmentPaths returns empty array if unassigned', () => {
+      const paths = assignmentPaths(stateWithNewSection, unassignedSection);
+      assert.deepEqual(paths, []);
     });
   });
 });
