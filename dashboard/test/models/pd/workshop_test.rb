@@ -463,6 +463,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
   end
 
+  test 'csp summer workshops are capped at 33.5 hours' do
+    workshop_csp_summer = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSP,
+      subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    assert_equal 33.5, workshop_csp_summer.effective_num_hours
+  end
+
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)

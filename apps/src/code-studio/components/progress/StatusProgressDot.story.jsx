@@ -18,7 +18,6 @@ export default storybook => {
 
   const defaultProps = {
     viewAs: ViewType.Student,
-    courseOverviewPage: true,
     postMilestoneDisabled: false,
     signInState: SignInState.SignedIn,
     saveAnswersBeforeNavigation: false,
