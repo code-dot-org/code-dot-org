@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ContentContainer from './ContentContainer';
+import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import SeeMoreCourses from './SeeMoreCourses';
