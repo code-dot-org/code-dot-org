@@ -9,10 +9,10 @@ style_min: true
 
 <%= view :csf_languages %>
 
-<%= view :frozen_languages %>
-
-<%= view :starwars_languages %>
+<%= view :minecraft_designer_languages %>
 
 <%= view :minecraft_adventurer_languages %>
 
-<%= view :minecraft_designer_languages %>
+<%= view :starwars_languages %>
+
+<%= view :frozen_languages %>
