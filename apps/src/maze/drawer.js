@@ -158,6 +158,8 @@ export default class Drawer {
       const hPadding = 2;
       const vPadding = 2;
       textElement = document.createElementNS(SVG_NS, 'text');
+      textElement.setAttribute('class', 'karel-counter-text');
+
       // Position text just inside the bottom right corner.
       textElement.setAttribute('x', (col + 1) * SQUARE_SIZE - hPadding);
       textElement.setAttribute('y', (row + 1) * SQUARE_SIZE - vPadding);
