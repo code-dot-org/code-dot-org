@@ -1,3 +1,4 @@
+/* global appOptions */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
@@ -36,7 +37,7 @@ const ContainedLevel = React.createClass({
       runButton.prop('disabled', true);
       // Disabled buttons don't trigger mouse events, add a dummy element to
       // receive the click and trigger the display of the callout.
-      let clickReceiver = $('<div/>');
+      let clickReceiver = $('<div id="clickReceiver"/>');
       let boundingClientRect = runButton.get(0).getBoundingClientRect();
       clickReceiver.css({
         height: boundingClientRect.height + 'px',
@@ -45,25 +46,24 @@ const ContainedLevel = React.createClass({
         top: 0,
       });
       $('#gameButtons').append(clickReceiver);
-      let showQtip = () => {
-        runButton.qtip({
+      clickReceiver.bind('click',
+        () => $(window).trigger('attemptedRunButtonClick'));
+
+      appOptions.callouts.push({
+        id: 'disabledRunButtonCallout',
+        element_id: '#runButton',
+        localized_text: locale.containedLevelRunDisabledTooltip(),
+        qtip_config: {
           codeStudio: {
             canReappear: true,
-          },
-          content: {
-            text: locale.containedLevelRunDisabledTooltip(),
-            title: {
-              button: $('<div class="tooltip-x-close"/>'),
-            },
           },
           position: {
             my: 'top left',
             at: 'bottom center',
           },
-          show: false,
-        }).qtip('show');
-      };
-      clickReceiver.bind('click', showQtip);
+        },
+        on: 'attemptedRunButtonClick',
+      });
       this.props.setAwaitingContainedResponse(true);
 
       codeStudioLevels.registerAnswerChangedFn(() => {
@@ -75,7 +75,6 @@ const ContainedLevel = React.createClass({
         runButton.prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
         if (codeStudioLevels.hasValidContainedLevelResult()) {
           runButton.qtip('hide');
-          clickReceiver.unbind('click', showQtip);
           clickReceiver.hide();
         }
         this.props.setAwaitingContainedResponse(!codeStudioLevels.hasValidContainedLevelResult());

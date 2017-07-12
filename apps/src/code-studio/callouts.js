@@ -155,7 +155,8 @@ module.exports = function createCallouts(callouts) {
         // place inside the 'prepareforcallout' event can complete first
         setTimeout(function () {
           if ($(config.codeStudio.selector).length > 0) {
-            if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
+            if (action === 'hashchange' || action === 'hashinit' || !callout.seen ||
+                config.codeStudio.canReappear) {
               $(config.codeStudio.selector).qtip(config).qtip('show');
             }
             callout.seen = true;
