@@ -6,8 +6,7 @@ export default class EditSectionForm extends Component{
 
   static propTypes = {
     handleSave: PropTypes.func.isRequired,
-  }
-
+  };
 
   render(){
     return (
@@ -20,3 +19,4 @@ export default class EditSectionForm extends Component{
     );
   }
 }
+
