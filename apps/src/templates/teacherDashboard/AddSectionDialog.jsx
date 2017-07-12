@@ -14,11 +14,16 @@ export default class AddSectionDialog extends Component {
     isOpen: PropTypes.bool,
   };
 
-  constructor(props) {
-    super(props);
-  }
+  state = {
+    loginType: ''
+  };
 
   handleClose = () => this.props.handleClose();
+
+  handleLoginChoice = (loginType) => {
+    this.setState({loginType});
+    alert(loginType);
+  };
 
   render() {
     return (
@@ -32,6 +37,7 @@ export default class AddSectionDialog extends Component {
       >
         <AddInitialStudentsView
           sectionName="Foobar"
+          handleLoginChoice={this.handleLoginChoice}
         />
       </BaseDialog>
     );
