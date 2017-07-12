@@ -7,7 +7,6 @@ import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import ProgressPill from './ProgressPill';
 import color from "@cdo/apps/util/color";
-import { getIconForLevel } from './progressHelpers';
 import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
 
@@ -87,12 +86,8 @@ const ProgressBubbleSet = React.createClass({
               {!level.isUnplugged &&
                 <ProgressBubble
                   level={level}
-                  number={level.levelNumber}
-                  status={level.status}
-                  url={level.url}
                   disabled={disabled}
-                  levelName={level.name || level.progression}
-                  levelIcon={getIconForLevel(level)}
+                  smallBubble={false}
                 />
               }
             </div>
