@@ -1,8 +1,13 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Heading1} from "../../lib/ui/Headings";
 import ProgressButton from '../progress/ProgressButton';
 
 export default class EditSectionForm extends Component{
+
+  static propTypes = {
+    handleSave: PropTypes.func.isRequired,
+  }
+
 
   render(){
     return (
@@ -10,7 +15,7 @@ export default class EditSectionForm extends Component{
        <Heading1>
          TemporaryTitle 2
        </Heading1>
-        <ProgressButton href="#" text="Save"/>
+        <ProgressButton onClick={this.props.handleSave} text="Save"/>
       </div>
     );
   }
