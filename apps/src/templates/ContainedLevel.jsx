@@ -5,7 +5,7 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import * as codeStudioLevels from '../code-studio/levels/codeStudioLevels';
 import { setAwaitingContainedResponse } from '../redux/runState';
 import locale from '@cdo/locale';
-import createCallouts from '../code-studio/callouts';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
 
 const styles = {
   main: {
@@ -49,7 +49,7 @@ const ContainedLevel = React.createClass({
       clickReceiver.bind('click',
         () => $(window).trigger('attemptedRunButtonClick'));
 
-      createCallouts([{
+      addCallouts([{
         id: 'disabledRunButtonCallout',
         element_id: '#runButton',
         localized_text: locale.containedLevelRunDisabledTooltip(),
