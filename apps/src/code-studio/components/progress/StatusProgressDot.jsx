@@ -1,6 +1,3 @@
-// TODO(bjvanminnen): once progressBubbles is no longer an experiment, we should
-// rename this file (as it will not be a wrapper around ProgressDot)
-
 import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import ProgressDot from './ProgressDot';
@@ -8,9 +5,7 @@ import { levelProgressShape } from './types';
 import { ViewType } from '../../stageLockRedux';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { SignInState, statusForLevel } from '../../progressRedux';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import { lessonIsLockedForAllStudents } from '@cdo/apps/templates/progress/progressHelpers';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Wrapper around ProgressDot that owns determining the correct status for the
@@ -27,7 +22,6 @@ export const StatusProgressDot = React.createClass({
     postMilestoneDisabled: PropTypes.bool.isRequired,
     signInState: PropTypes.oneOf(Object.values(SignInState)).isRequired,
     levelProgress: PropTypes.object.isRequired,
-    currentLevelId: React.PropTypes.string,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired
   },
 
@@ -39,7 +33,6 @@ export const StatusProgressDot = React.createClass({
       postMilestoneDisabled,
       signInState,
       levelProgress,
-      currentLevelId,
       lessonIsLockedForAllStudents
     } = this.props;
 
@@ -67,33 +60,13 @@ export const StatusProgressDot = React.createClass({
       }
     }
 
-    if (experiments.isEnabled('progressBubbles')) {
-      // Determine whether this is the bubble for our current level, in which case
-      // it will be full sized.
-      const onCurrent = currentLevelId &&
-        ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
-        level.uid === currentLevelId);
-
-      return (
-        <ProgressBubble
-          number={level.position}
-          status={status}
-          url={level.url}
-          disabled={false}
-          levelName={level.name || level.progression}
-          levelIcon={(level.icon || '').slice(3)}
-          smallBubble={!onCurrent}
-        />
-      );
-    } else {
-      return (
-        <ProgressDot
-          level={level}
-          stageId={stageId}
-          status={status}
-        />
-      );
-    }
+    return (
+      <ProgressDot
+        level={level}
+        stageId={stageId}
+        status={status}
+      />
+    );
   }
 });
 
@@ -104,6 +77,5 @@ export default connect(state => ({
   signInState: state.progress.signInState,
   viewAs: state.stageLock.viewAs,
   levelProgress: state.progress.levelProgress,
-  currentLevelId: state.progress.currentLevelId,
   lessonIsLockedForAllStudents: lessonId => lessonIsLockedForAllStudents(lessonId, state)
 }))(StatusProgressDot);

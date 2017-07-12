@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 
@@ -7,6 +7,9 @@ import { stageProgressShape } from './types';
 import StatusProgressDot from './StatusProgressDot.jsx';
 import color from "../../../util/color";
 import StageExtrasProgressDot from './StageExtrasProgressDot';
+import { levelsForLessonId } from '@cdo/apps/code-studio/progressRedux';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
   headerContainer: {
@@ -26,11 +29,12 @@ const styles = {
  */
 const StageProgress = React.createClass({
   propTypes: {
-    stageExtrasEnabled: React.PropTypes.bool,
+    stageExtrasEnabled: PropTypes.bool,
 
     // redux provided
-    levels: stageProgressShape,
-    stageId: React.PropTypes.number,
+    levels: experiments.isEnabled('progressBubbles') ?
+      PropTypes.arrayOf(levelType).isRequired : stageProgressShape.isRequired,
+    stageId: PropTypes.number.isRequired,
   },
 
   shouldShowStageExtras() {
@@ -39,19 +43,32 @@ const StageProgress = React.createClass({
   },
 
   render() {
-    const progressDots = this.props.levels.map((level, index) =>
-      <StatusProgressDot
-        key={index}
-        stageId={this.props.stageId}
-        level={level}
-      />
-    );
+    const { levels, stageId } = this.props;
+    const experimentEnabled = experiments.isEnabled('progressBubbles');
 
     return (
       <div className="react_stage" style={styles.headerContainer}>
-        {progressDots}
+        {!experimentEnabled && levels.map((level, index) =>
+          <StatusProgressDot
+            key={index}
+            stageId={stageId}
+            level={level}
+          />
+        )}
+        {experimentEnabled && levels.map((level, index) =>
+          <ProgressBubble
+            key={index}
+            number={level.levelNumber}
+            status={level.status}
+            url={level.url}
+            disabled={false}
+            levelName={level.name || level.progression}
+            levelIcon={(level.icon || '').slice(3)}
+            smallBubble={!level.isCurrentLevel}
+          />
+        )}
         {this.shouldShowStageExtras() &&
-          <StageExtrasProgressDot stageId={this.props.stageId} />
+          <StageExtrasProgressDot stageId={stageId} />
         }
       </div>
     );
@@ -66,8 +83,15 @@ export default connect(state => {
   // Extract levels by finding the current stageId
   const currentStage = _.find(state.progress.stages, stage => stage.id === stageId);
 
+  const experimentEnabled = experiments.isEnabled('progressBubbles');
+
   return {
-    levels: currentStage.levels,
+    // Without the experiment, we use StatusProgressDots, which expect levels in
+    // the format provided by the server (and in our store as state.progress.stages.levels)
+    // With the experiment, we use ProgressBubbles we expect our data in a
+    // different form, the biggest difference being this level includes a status
+    levels: experimentEnabled ? levelsForLessonId(state.progress, stageId) :
+      currentStage.levels,
     stageId
   };
 })(StageProgress);
