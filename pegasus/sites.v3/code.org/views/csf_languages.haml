@@ -2,5 +2,5 @@
   %a{href: "/educate/curriculum/elementary-school"} CS Fundamentals (Courses 1-4) is supported in the following languages
 %ul
   - Languages.get_csf_languages.each do |properties|
-    - if properties[:csf_b] == true
+    - if properties[:csf_b]
       %li= properties[:crowdin_name_s]
