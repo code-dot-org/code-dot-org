@@ -70,7 +70,7 @@ const RecentCourses = React.createClass({
               isRtl={isRtl}
             />
           )}
-          {!isTeacher && hasCourse && (
+          {hasCourse && (
             <Notification
               type="course"
               notice={i18n.findCourse()}
