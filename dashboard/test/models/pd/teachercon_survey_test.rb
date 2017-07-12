@@ -122,7 +122,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
     assert_equal 'Kirk lead the away team well', summary_1[:things_facilitator_did_well]
     assert_equal 'Kirk talks slowly', summary_1[:things_facilitator_could_improve]
 
-    summary_2 = survey_1.to_summary_for_facilitator('Facilitator Picard')
+    summary_2 = survey_1.generate_summary_for_facilitator('Facilitator Picard')
     assert_equal 'Picard is a great diplomat', summary_2[:things_facilitator_did_well]
     assert_equal 'He is too awesome', summary_2[:things_facilitator_could_improve]
   end
