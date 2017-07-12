@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import RecentCourses from './RecentCourses';
-import ContentContainer from './ContentContainer';
+import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
