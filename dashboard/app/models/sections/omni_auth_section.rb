@@ -25,5 +25,17 @@
 #  index_sections_on_user_id  (user_id)
 #
 
-class Email < Section
+class OmniAuthSection < Section
+  def self.from_omniauth(code:, type:, owner_id:, students:)
+    oauth_section = where(code: code).first_or_create do |section|
+      section.name = 'New Section'
+      section.user_id = owner_id
+      section.login_type = type
+    end
+    students.each do |student|
+      oauth_section.add_student User.from_omniauth(student, {})
+    end
+
+    oauth_section
+  end
 end
