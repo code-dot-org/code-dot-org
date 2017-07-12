@@ -13,7 +13,7 @@ class SectionsControllerTest < ActionController::TestCase
     @picture_section = create(:section, user: @teacher, login_type: 'picture')
     @picture_user_1 = create(:follower, section: @picture_section).student_user
 
-    @regular_section = create(:section, user: @teacher, login_type: 'regular')
+    @regular_section = create(:section, user: @teacher, login_type: 'email')
 
     @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
