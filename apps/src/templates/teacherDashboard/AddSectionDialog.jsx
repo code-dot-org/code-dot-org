@@ -3,6 +3,7 @@ import locale from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import color from '../../util/color';
 import AddInitialStudentsView from './AddInitialStudentsView';
+import EditSectionForm from "./EditSectionForm";
 
 const styles = {
 
@@ -25,6 +26,21 @@ export default class AddSectionDialog extends Component {
     alert(loginType);
   };
 
+  renderContent() {
+    if (this.state.loginType === '') {
+      return (
+        <AddInitialStudentsView
+          sectionName="Foobar"
+          handleLoginChoice={this.handleLoginChoice}
+        />
+      );
+    } else {
+      return (
+        <EditSectionForm/>
+      );
+    }
+  }
+
   render() {
     return (
       <BaseDialog
@@ -35,10 +51,7 @@ export default class AddSectionDialog extends Component {
         assetUrl={() => ''}
         {...this.props}
       >
-        <AddInitialStudentsView
-          sectionName="Foobar"
-          handleLoginChoice={this.handleLoginChoice}
-        />
+      {this.renderContent()}
       </BaseDialog>
     );
   }
