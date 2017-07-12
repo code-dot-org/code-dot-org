@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import { sectionShape, assignmentShape } from './shapes';
 import { assignmentId } from './teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   secondary: {
@@ -108,12 +107,10 @@ export default class AssignmentSelector extends Component {
       primaryAssignIds = [selectedPrimaryId].concat(primaryAssignIds);
     }
 
-    const sectionFocusExperiment = experiments.isEnabled('sectionFocus');
-
     const grouped = groupedAssignments(primaryAssignIds.map(id => assignments[id]));
     let secondaryOptions;
     const primaryAssignment = assignments[selectedPrimaryId];
-    if (primaryAssignment && sectionFocusExperiment) {
+    if (primaryAssignment) {
       secondaryOptions = primaryAssignment.scriptAssignIds;
     }
 

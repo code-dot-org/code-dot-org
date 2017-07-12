@@ -12,7 +12,8 @@ module SharedConstants
       assessment: "assessment",
       puzzle: "puzzle",
       unplugged: "unplugged",
-      level: "level"
+      level: "level",
+      stage_extras: "stage_extras",
     }
   ).freeze
 
