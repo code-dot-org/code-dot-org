@@ -10,6 +10,7 @@ import { loadClassroomList } from './googleClassroomRedux';
 import { classroomShape, loadErrorShape } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
+import AddSectionDialog from "./AddSectionDialog";
 
 const styles = {
   breadcrumb: {
@@ -40,6 +41,7 @@ class SectionsPage extends Component {
   state = {
     sectionsLoaded: false,
     rosterDialogOpen: false,
+    addSectionDialogOpen: false,
   };
 
   componentDidMount() {
@@ -86,9 +88,13 @@ class SectionsPage extends Component {
     console.log(selectedId);
   };
 
+  handleCloseAddSectionDialogs = () => {
+    this.setState({addSectionDialogOpen: false});
+  };
+
   addSection = () => {
     if (experiments.isEnabled('section-flow-2017')) {
-
+      this.setState({addSectionDialogOpen: true});
     } else {
       return this.props.newSection();
     }
@@ -139,6 +145,10 @@ class SectionsPage extends Component {
           classrooms={this.props.classrooms}
           loadError={this.props.loadError}
           studioUrl={this.props.studioUrl}
+        />
+        <AddSectionDialog
+          isOpen={this.state.addSectionDialogOpen}
+          handleClose={this.handleCloseAddSectionDialogs}
         />
       </div>
     );
