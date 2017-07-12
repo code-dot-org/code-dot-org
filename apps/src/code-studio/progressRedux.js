@@ -327,7 +327,24 @@ const peerReviewLevels = state => state.peerReviewStage.levels.map((level, index
   levelNumber: index + 1
 }));
 
-// TODO: comment
+/**
+ * Determine whether the passed in level is our current level (i.e. in the dots
+ * in our header
+ * @returns {boolean}
+ */
+const isCurrentLevel = (state, level) => {
+  const currentLevelId = state.currentLevelId;
+  return !!currentLevelId &&
+    ((level.ids && level.ids.map(id => id.toString()).indexOf(currentLevelId) !== -1) ||
+    level.uid === currentLevelId);
+};
+
+/**
+ * The level object passed down to use via the server (and stored in stage.stages.levels)
+ * contains more data than we need. This (a) filters to the parts our views care
+ * about and (b) determines current status based on the current state of
+ * state.levelProgress
+ */
 const levelWithStatus = (state, level) => {
   if (level.kind !== LevelKind.unplugged) {
     if (!level.title || typeof(level.title) !== 'number') {
@@ -341,15 +358,13 @@ const levelWithStatus = (state, level) => {
     progression: level.progression,
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,
-    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title
+    levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
+    isCurrentLevel: isCurrentLevel(state, level)
   };
 };
 
 /**
- * The level object passed down to use via the server (and stored in stage.stages.levels)
- * contains more data than we need. This (a) filters to the parts our views care
- * about and (b) determines current status based on the current state of
- * state.levelProgress
+ * Get level data for all lessons/stages
  */
 export const levelsByLesson = state => (
   state.stages.map(stage => (
@@ -357,9 +372,14 @@ export const levelsByLesson = state => (
   ))
 );
 
-export const levelsForStage = (state, stageId) => (
-  state.stages.find(stage => stage.id === stageId).map
-)
+/**
+ * Get data for a particular lesson/stage
+ */
+export const levelsForLessonId = (state, lessonId) => (
+  state.stages.find(stage => stage.id === lessonId).levels.map(
+    level => levelWithStatus(state, level)
+  )
+);
 
 /**
  * Given a level and levelProgress (both from our redux store state), determine
