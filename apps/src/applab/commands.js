@@ -1076,7 +1076,7 @@ function setSize_(elementId, width, height) {
 
 applabCommands.setProperty = function (opts) {
   apiValidateDomIdExistence(opts, 'setProperty', 'id', opts.elementId, true);
-  apiValidateType(opts, 'setProperty', 'property', opts.property, 'string');
+  apiValidateType(opts, 'setProperty', 'property', opts.property, 'uistring');
 
   var elementId = opts.elementId;
   var property = opts.property;
