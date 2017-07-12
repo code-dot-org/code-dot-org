@@ -1,13 +1,7 @@
 import React, {Component, PropTypes} from 'react';
-import locale from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
-import color from '../../util/color';
 import AddInitialStudentsView from './AddInitialStudentsView';
 import EditSectionForm from "./EditSectionForm";
-
-const styles = {
-
-};
 
 export default class AddSectionDialog extends Component {
   static propTypes = {
