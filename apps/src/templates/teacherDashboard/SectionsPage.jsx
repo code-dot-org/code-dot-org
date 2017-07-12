@@ -47,27 +47,18 @@ class SectionsPage extends Component {
     let validCourses;
     let sections;
 
-    // If sectionFocus is not enabled, we get valid_courses on page load and
-    // call setValidAssignments then. Otherwise, we get it async and set it here
-    const setAssignments = experiments.isEnabled('sectionFocus');
-
     const onAsyncLoad = () => {
-      if ((validCourses || !setAssignments) && sections) {
-        if (setAssignments) {
-          setValidAssignments(validCourses, validScripts);
-        }
+      if (validCourses && sections) {
+        setValidAssignments(validCourses, validScripts);
         setSections(sections);
         this.setState({sectionsLoaded: true});
       }
     };
 
-
-    if (setAssignments) {
-      $.getJSON('/dashboardapi/courses').then(response => {
-        validCourses = response;
-        onAsyncLoad();
-      });
-    }
+    $.getJSON('/dashboardapi/courses').then(response => {
+      validCourses = response;
+      onAsyncLoad();
+    });
 
     $.getJSON("/v2/sections/").done(response => {
       sections = response;

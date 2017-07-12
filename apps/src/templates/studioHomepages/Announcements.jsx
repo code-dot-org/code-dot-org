@@ -1,5 +1,5 @@
 import React, { PropTypes} from 'react';
-import ContentContainer from './ContentContainer';
+import ContentContainer from '../ContentContainer';
 import Announcement from './Announcement';
 import AnnouncementsCarousel from './AnnouncementsCarousel';
 import i18n from "@cdo/locale";
