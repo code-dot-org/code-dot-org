@@ -322,11 +322,26 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
     });
 
+    it(`adds the sectionId of a non-persisted section if it wasn't in the list`, () => {
+      assert.deepEqual(stateWithSections.sectionIds, [11, 12 ,307]);
+
+      const action = updateSection(-1, newServerSection);
+      const state = reducer(stateWithSections, action);
+      assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
+    });
+
     it('replaces the section of a non-persisted section', () => {
       const stateWithNewSection = reducer(stateWithSections, newSection());
 
       const action = updateSection(-1, newServerSection);
       const state = reducer(stateWithNewSection, action);
+      assert.strictEqual(state.sections[-1], undefined);
+      assert.strictEqual(state.sections[21].id, 21);
+    });
+
+    it(`adds the section of a non-persisted section if it wasn't in the list`, () => {
+      const action = updateSection(-1, newServerSection);
+      const state = reducer(stateWithSections, action);
       assert.strictEqual(state.sections[-1], undefined);
       assert.strictEqual(state.sections[21].id, 21);
     });

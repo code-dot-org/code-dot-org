@@ -1,14 +1,19 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import AddInitialStudentsView from './AddInitialStudentsView';
 import EditSectionForm from "./EditSectionForm";
-import i18n from '@cdo/locale';
+import i18n from '@cdo/locale';import {
+  updateSection,
+} from './teacherSectionsRedux';
 
-export default class AddSectionDialog extends Component {
+export class AddSectionDialog extends Component {
   static propTypes = {
     handleClose: PropTypes.func,
     isOpen: PropTypes.bool,
+    // Provided by Redux
+    updateSection: PropTypes.func.isRequired,
   };
 
   state = {
@@ -22,6 +27,7 @@ export default class AddSectionDialog extends Component {
   };
 
   onClickEditSave = () => {
+    const {updateSection} = this.props;
     //const persistedSection = false;
     const data = {
       //id: null,
@@ -34,6 +40,7 @@ export default class AddSectionDialog extends Component {
     };
 
     const suffix = '';
+    const sectionId = -1; // When it's a new section
 
     $.ajax({
       url: `/v2/sections${suffix}`,
@@ -41,7 +48,7 @@ export default class AddSectionDialog extends Component {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(data),
     }).done(result => {
-      //updateSection(sectionId, result);
+      updateSection(sectionId, result);
       // close modal after save
       this.handleClose();
     }).fail((jqXhr, status) => {
@@ -84,3 +91,6 @@ export default class AddSectionDialog extends Component {
     );
   }
 }
+
+
+export default connect(() => ({}), { updateSection })(AddSectionDialog);
