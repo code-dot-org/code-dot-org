@@ -34,11 +34,11 @@ class Section < ActiveRecord::Base
 
   class << self
     def find_sti_class(type_name)
-      super(type_name.camelize)
+      super(type_name.camelize + 'Section')
     end
 
     def sti_name
-      name.underscore
+      name.underscore.sub('_section', '')
     end
   end
 
