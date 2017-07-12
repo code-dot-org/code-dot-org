@@ -1,5 +1,7 @@
 %h2 
-  %a{href: CDO.studio_url('/s/frozen')} The Frozen tutorial is supported in the following languages
+  The
+  %a{href: CDO.studio_url('/s/frozen')} Frozen 
+  tutorial is supported in the following languages
 %ul
   - Languages.get_frozen_languages.each do |properties|
     - if properties[:frozen_b]
