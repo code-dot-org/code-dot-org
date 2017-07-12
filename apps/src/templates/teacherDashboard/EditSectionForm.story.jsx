@@ -5,6 +5,8 @@ export default storybook => storybook
   .storiesOf('EditSectionForm', module)
   .add('Basic options', () => {
     return (
-      <EditSectionForm/>
+      <EditSectionForm
+        handleSave={() => {}}
+      />
     );
   });

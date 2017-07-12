@@ -1,7 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import AddInitialStudentsView from './AddInitialStudentsView';
 import EditSectionForm from "./EditSectionForm";
+import i18n from '@cdo/locale';
 
 export default class AddSectionDialog extends Component {
   static propTypes = {
@@ -17,7 +19,37 @@ export default class AddSectionDialog extends Component {
 
   handleLoginChoice = (loginType) => {
     this.setState({loginType});
-    alert(loginType);
+  };
+
+  onClickEditSave = () => {
+    //const persistedSection = false;
+    const data = {
+      //id: null,
+      name: "TempTest",
+      login_type: this.state.loginType,
+      // grade: this.grade.value,
+      // stage_extras: this.stageExtras.checked,
+      // pairing_allowed: this.pairingAllowed.checked,
+      // course_id: assignment ? assignment.courseId : null,
+    };
+
+    const suffix = '';
+
+    $.ajax({
+      url: `/v2/sections${suffix}`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(data),
+    }).done(result => {
+      //updateSection(sectionId, result);
+      // close modal after save
+      this.handleClose();
+    }).fail((jqXhr, status) => {
+      // We may want to handle this more cleanly in the future, but for now this
+      // matches the experience we got in angular
+      alert(i18n.unexpectedError());
+      console.error(status);
+    });
   };
 
   renderContent() {
@@ -30,7 +62,9 @@ export default class AddSectionDialog extends Component {
       );
     } else {
       return (
-        <EditSectionForm/>
+        <EditSectionForm
+          handleSave={this.onClickEditSave}
+        />
       );
     }
   }
