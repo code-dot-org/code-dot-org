@@ -105,7 +105,7 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME
     ],
     tts: [
-      TTS_NAME = 'allthethings_tts'.freeze
+      TTS_NAME = 'allthettsthings'.freeze
     ],
   }.freeze
 
