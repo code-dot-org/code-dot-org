@@ -86,7 +86,13 @@ class SectionsPage extends Component {
     console.log(selectedId);
   };
 
-  addSection = () => this.props.newSection();
+  addSection = () => {
+    if (experiments.isEnabled('section-flow-2017')) {
+
+    } else {
+      return this.props.newSection();
+    }
+  };
 
   render() {
     const { numSections } = this.props;
