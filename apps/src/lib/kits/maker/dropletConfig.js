@@ -95,7 +95,7 @@ export const blocks = [
   {func: 'led.toggle', category: CIRCUIT_CATEGORY},
   {func: 'led.pulse', category: CIRCUIT_CATEGORY, paletteParams: ['interval'], params: ['100']},
 
-  {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty', noAutocomplete: true},
+  {func: 'colorLeds', category: CIRCUIT_CATEGORY, type: 'readonlyproperty'},
   {func: 'on', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.on', objectDropdown: {options: colorPixelVariables}},
   {func: 'off', blockPrefix: colorLedBlockPrefix, category: CIRCUIT_CATEGORY, tipPrefix: pixelType, modeOptionName: '*.off', objectDropdown: {options: colorPixelVariables}},
 

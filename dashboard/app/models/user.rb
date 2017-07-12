@@ -593,6 +593,7 @@ class User < ActiveRecord::Base
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
+    return false if parent_managed_account?
     true
   end
 
@@ -1295,8 +1296,17 @@ class User < ActiveRecord::Base
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
+    return false if encrypted_password.present? && parent_email.present?
     # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
     !oauth?
+  end
+
+  def parent_managed_account?
+    student? && parent_email.present? && hashed_email.blank?
+  end
+
+  def no_personal_email?
+    under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
   def section_for_script(script)
