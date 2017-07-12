@@ -25,5 +25,5 @@
 #  index_sections_on_user_id  (user_id)
 #
 
-class Picture < Section
+class PictureSection < Section
 end

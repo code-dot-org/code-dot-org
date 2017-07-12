@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GoogleClassroomTest < ActiveSupport::TestCase
+class GoogleClassroomSectionTest < ActiveSupport::TestCase
   test 'from google classroom service' do
     owner = create :teacher
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
@@ -12,12 +12,12 @@ class GoogleClassroomTest < ActiveSupport::TestCase
       }.to_json
     ).students
 
-    section = GoogleClassroom.from_service('101', owner.id, student_list)
+    section = GoogleClassroomSection.from_service('101', owner.id, student_list)
     assert_equal 'G-101', section.code
 
     assert_no_difference 'User.count' do
       # Should find the existing Google Classroom section.
-      section_2 = GoogleClassroom.from_service('101', owner.id, student_list)
+      section_2 = GoogleClassroomSection.from_service('101', owner.id, student_list)
       assert_equal section.id, section_2.id
     end
   end

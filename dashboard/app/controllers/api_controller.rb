@@ -49,7 +49,7 @@ class ApiController < ApplicationController
 
     query_google_classroom_service do |service|
       students = service.list_course_students(course_id).students
-      section = GoogleClassroom.from_service(course_id, current_user.id, students)
+      section = GoogleClassroomSection.from_service(course_id, current_user.id, students)
 
       render json: section.summarize
     end
