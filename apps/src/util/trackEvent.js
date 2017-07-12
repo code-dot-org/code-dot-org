@@ -6,7 +6,7 @@
  * In those where it isn't, we want this call to be a simple no-op.
  */
 export default function trackEvent(...args) {
-  if (IN_UNIT_TEST) {
+  if (IN_UNIT_TEST || IN_STORYBOOK) {
     // We should silently no-op in tests, but in other places we actually
     // want this call to fail if window.trackEvent is not available.
     return;

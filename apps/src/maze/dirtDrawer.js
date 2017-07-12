@@ -32,8 +32,14 @@ export default class DirtDrawer extends Drawer {
 
     // If the cell is a variable cell and we are not currently running,
     // draw it as either a max-height pile or a max-depth pit.
-    if (this.map_.getVariableCell(row, col).isVariable() && !running) {
-      val = (val < 0) ? -11 : 11;
+    // Also draw a "?"; other numbers are automatically included in the image
+    if (this.map_.getVariableCell(row, col).isVariable()) {
+      if (running) {
+        this.updateOrCreateText_('counter', row, col, '');
+      } else {
+        val = (val < 0) ? -11 : 11;
+        this.updateOrCreateText_('counter', row, col, '?');
+      }
     }
 
     let spriteIndex = DirtDrawer.spriteIndexForDirt(val);
