@@ -1,5 +1,6 @@
 import React from 'react';
 import i18n from "@cdo/locale";
+import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
 
@@ -24,7 +25,7 @@ const DEFAULT_PROJECT_TYPES = [
 
 const styles = {
   fullsize: {
-    width: 970
+    width: styleConstants['content-width']
   },
   tile: {
     width: 214,
