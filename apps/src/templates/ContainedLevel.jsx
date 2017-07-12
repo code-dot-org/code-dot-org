@@ -58,11 +58,7 @@ const ContainedLevel = React.createClass({
           },
           position: {
             my: 'top left',
-            at: 'button left',
-            adjust: {
-              x: boundingClientRect.width / 2,
-              y: boundingClientRect.height,
-            },
+            at: 'bottom center',
           },
           show: false,
         }).qtip('show');
