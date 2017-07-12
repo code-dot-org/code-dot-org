@@ -284,6 +284,10 @@ class DashboardSection
   @@course_cache = {}
   # Mimic the behavior of valid_scripts, but return courses instead. Also simpler
   # in that we don't have to worry about hidden courses.
+  # This is now only used to check to see if we have a valid_course_id when assigning
+  # a course to a section. This code could be simplified, as all we really want
+  # now is a list of course_ids. However, because we'd ultimately like this to
+  # all live in dashboard, I'm leaving this in its unsimplified form for now.
   # @return AssignableInfo[]
   def self.valid_courses
     course_cache_key = I18n.locale.to_s
