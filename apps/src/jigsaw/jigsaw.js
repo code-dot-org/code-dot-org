@@ -201,7 +201,8 @@ var displayFeedback = function () {
       skin: skin.id,
       feedbackType: Jigsaw.testResults,
       response: Jigsaw.response,
-      level: level
+      level: level,
+      hideTryAgain: true,
     });
   }
 };

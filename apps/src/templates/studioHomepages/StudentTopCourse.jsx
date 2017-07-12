@@ -1,6 +1,7 @@
 import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 import ProgressButton from '../progress/ProgressButton';
 
 const styles = {
@@ -9,14 +10,14 @@ const styles = {
     border: '1px solid gray',
     position: 'relative',
     height: 200,
-    width: 970,
+    width: styleConstants['content-width'],
     float: 'left',
     marginBottom: 20,
     background: color.white,
   },
   image: {
     position: 'absolute',
-    width: 970,
+    width: styleConstants['content-width'],
     height: 80
   },
   name: {
