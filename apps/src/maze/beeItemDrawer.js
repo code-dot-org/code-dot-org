@@ -101,15 +101,6 @@ export default class BeeItemDrawer extends Drawer {
     }
   }
 
-  /**
-   * @override
-   */
-  updateOrCreateText_(prefix, row, col, text) {
-    let textElement = super.updateOrCreateText_(prefix, row, col, text);
-    textElement.setAttribute('class', 'karel-counter-text');
-    return textElement;
-  }
-
   createCounterImage_(prefix, i, row, href) {
     var id = prefix + (i + 1);
     var image = document.createElementNS(SVG_NS, 'image');

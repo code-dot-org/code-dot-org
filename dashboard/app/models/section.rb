@@ -53,11 +53,24 @@ class Section < ActiveRecord::Base
 
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
+  LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
 
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  def self.from_omniauth(code, provider, students, owner_id)
+    oauth_section = where(code: code, login_type: provider).first_or_create do |section|
+      section.name = 'New Section'
+      section.user_id = owner_id
+    end
+    students.each do |student|
+      oauth_section.add_student User.from_omniauth(student, {})
+    end
+
+    oauth_section
+  end
 
   # Override default script accessor to use our cache
   def script
@@ -80,7 +93,7 @@ class Section < ActiveRecord::Base
 
   before_create :assign_code
   def assign_code
-    self.code = unused_random_code
+    self.code = unused_random_code unless code
   end
 
   def teacher_dashboard_url
