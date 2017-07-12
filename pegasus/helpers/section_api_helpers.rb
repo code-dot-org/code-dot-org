@@ -22,33 +22,23 @@ class DashboardStudent
   def self.create(params)
     name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Student'
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
-    provider = supported_provider?(params[:provider]) ? params[:provider] : 'sponsored'
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
 
     created_at = DateTime.now
 
-    data =
+    row = Dashboard.db[:users].insert(
       {
         name: name,
         user_type: 'student',
-        provider: provider,
+        provider: 'sponsored',
         gender: gender,
         birthday: birthday,
         created_at: created_at,
         updated_at: created_at,
         username: UserHelpers.generate_username(Dashboard.db[:users], name)
       }.merge(random_secrets)
-    if provider == 'sponsored'
-      row = Dashboard.db[:users].insert(data)
-    else
-      uid = params[:uid].to_s
-      data[:uid] = uid
-      row = Dashboard.db[:users].first(provider: provider, uid: uid)
-      if row.nil?
-        row = Dashboard.db[:users].insert(data)
-      end
-    end
+    )
     return nil unless row
 
     row
@@ -170,11 +160,6 @@ class DashboardStudent
     VALID_GENDERS.include?(gender)
   end
 
-  SUPPORTED_PROVIDERS = %w(google_oauth2)
-  def self.supported_provider?(provider)
-    SUPPORTED_PROVIDERS.include?(provider)
-  end
-
   def self.age_to_birthday(age)
     age = age.to_i
     return nil if age == 0
@@ -276,7 +261,9 @@ class DashboardSection
     # only do this query once because in prod we only change scripts
     # when deploying (technically this isn't true since we are in
     # pegasus and scripts are owned by dashboard...)
-    return @@script_cache[script_cache_key] if @@script_cache.key?(script_cache_key)
+    if @@script_cache.key?(script_cache_key) && !rack_env?(:levelbuilder)
+      return @@script_cache[script_cache_key]
+    end
 
     # don't crash when loading environment before database has been created
     return {} unless (Dashboard.db[:scripts].count rescue nil)
@@ -284,12 +271,14 @@ class DashboardSection
     where_clause = Dashboard.hidden_script_access?(user_id) ? "" : "hidden = 0"
 
     # cache result if we have to actually run the query
-    @@script_cache[script_cache_key] =
+    scripts =
       Dashboard.db[:scripts].
         where(where_clause).
         select(:id, :name, :hidden).
         all.
         map {|script| assignable_info(script, script[:hidden])}
+    @@script_cache[script_cache_key] = scripts unless rack_env?(:levelbuilder)
+    scripts
   end
 
   @@course_cache = {}
@@ -299,16 +288,20 @@ class DashboardSection
   def self.valid_courses
     course_cache_key = I18n.locale.to_s
 
-    return @@course_cache[course_cache_key] if @@course_cache.key?(course_cache_key)
+    if @@course_cache.key?(course_cache_key) && !rack_env?(:levelbuilder)
+      return @@course_cache[course_cache_key]
+    end
 
     return {} unless (Dashboard.db[:courses].count rescue nil)
 
-    @@course_cache[course_cache_key] = Dashboard.db[:courses].
+    courses = Dashboard.db[:courses].
       select(:id, :name).
       all.
       # Only return courses we've whitelisted in ScriptConstants
       select {|course| ScriptConstants.script_in_category?(:full_course, course[:name])}.
       map {|course| assignable_info(course)}
+    @@course_cache[course_cache_key] = courses unless rack_env?(:levelbuilder)
+    courses
   end
 
   # Gets a list of valid scripts in which progress tracking has been disabled via

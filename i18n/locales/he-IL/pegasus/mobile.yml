@@ -69,6 +69,12 @@
   congratulations_on_completing_course2: "ברכות על סיום קורס 2"
   congratulations_on_completing_course3: "ברכות על סיום קורס 3"
   congratulations_on_completing_course4: "ברכות על סיום קורס 4"
+  congratulations_on_completing_coursea: "Congratulations on completing Course A"
+  congratulations_on_completing_courseb: "Congratulations on completing Course B"
+  congratulations_on_completing_coursec: "Congratulations on completing Course C"
+  congratulations_on_completing_coursed: "Congratulations on completing Course D"
+  congratulations_on_completing_coursee: "Congratulations on completing Course E"
+  congratulations_on_completing_coursef: "Congratulations on completing Course F"
   congratulations_on_completing_accelerated: "ברכות על סיום הקורס המואץ"
   congrats_next_tutorials_title: "הוסמכת לשלב הבא"
   congrats_next_tutorials_desc: "נסה את ההדרכות הקצרות יותר באורך כשעה, או נסה <a href=\"%{current_path}/next\"> שותף הדרכה</a>."
@@ -194,6 +200,12 @@
   just_did_course2: "I just finished Course 2 - check it out! @codeorg"
   just_did_course3: "I just finished Course 3 - check it out! @codeorg"
   just_did_course4: "I just finished Course 4 - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
   twitter_teach_cs: "9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
@@ -241,6 +253,10 @@
     &ldquo;לילדים שלנו&mdash; כולל לבנות שלנו&mdash; מגיעה הזדמנות ללמוד מדעי המחשב&rdquo; שריל, מנכ"לית תפעול, פייסבוק
   homepage_hero_text_satya: |-
     &ldquo;מדעי המחשב יכולים לפתוח את ההזדמנויות הטובות ביותר בעולם.&rdquo; סטיה, מנכ"לית מיקרוסופט
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;אם תכתוב קוד, תוכל לבחור את מהלך חייך.&rdquo; כריס בוש
   homepage_hero_text_student1: |-
@@ -685,6 +701,12 @@
   dashboard_course2: 'חוג 2:'
   dashboard_course3: 'חוג 3:'
   dashboard_course4: 'קורס 4 (בטא): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: "If you don't have computers, <a href='%{unplugged_url}'>try these unplugged lessons</a> in your classroom."
   dashboard_curriculum: "תוכנית לימוד"
   dashboard_curriculum_overview: "סקירה על תוכנית הלימודים מגן חובה עד כיתה ה'"
@@ -853,11 +875,17 @@
   course3_name: "קורס 3"
   course4_name: "קורס 4"
   coursea-draft_name: Course A
+  coursea_name: "Course A"
   courseb-draft_name: Course B
+  courseb_name: "Course B"
   coursec-draft_name: Course C
+  coursec_name: "Course C"
   coursed-draft_name: Course D
+  coursed_name: "Course D"
   coursee-draft_name: Course E
+  coursee_name: "Course E"
   coursef-draft_name: Course F
+  coursef_name: "Course F"
   accelerated_name: "קורס מואץ"
   cspunit1_name: '(old) Unit 1: Digital Information'
   cspunit2_name: '(old) Unit 2: The Internet'
@@ -902,7 +930,7 @@
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
-  csp17_category_name: "'16-'17 CS Principles"
+  csp17_category_name: "CS Principles"
   cspexams_category_name: "CS Principles Practice Test"
   research_studies_category_name: "Research Studies"
   applab_name: "מעבדת היישומים"
@@ -964,6 +992,12 @@
   course2_gradelevel: "גילאי 6-18"
   course3_gradelevel: "גילאי 8-18"
   course4_gradelevel: "גילאי 10-18"
+  coursea_gradelevel: "Grade 5+"
+  courseb_gradelevel: "Grade 6+"
+  coursec_gradelevel: "Grade 7+"
+  coursed_gradelevel: "כיתות ח' ומעלה"
+  coursee_gradelevel: "Grade 9+"
+  coursef_gradelevel: "Grade 10+"
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמרטפונים, טבלטים"
@@ -1066,6 +1100,12 @@
   course2_shortdescription_congrats: "For students with basic reading skills, this course builds on Course 1. Students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5."
   course3_shortdescription_congrats: "Ready for the next level? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5."
   course4_shortdescription_congrats: "Ready to go further? Students will delve deeper into programming topics introduced in previous courses to find flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-8."
+  coursea_shortdescription_congrats: ""
+  courseb_shortdescription_congrats: ""
+  coursec_shortdescription_congrats: ""
+  coursed_shortdescription_congrats: ""
+  coursee_shortdescription_congrats: ""
+  coursef_shortdescription_congrats: ""
   codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   codeintl_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
   thinkersmithspanish_longdescription: "באמצעות שימוש ב\"מילון רובוטי\" המוגדר מראש, התלמידים ילמדו להנחות אחד את השני בהשלמת משימות ללא דיון מקדים. השיעור הזה מלמד את הילדים את הקשר בין סמלים לפעולות, וגם את היכולת החשובה מאוד של לדבג."

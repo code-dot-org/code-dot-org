@@ -769,7 +769,7 @@
       4:
         image: notes/C2_paper_airplanes_4.png
         text: "當我們製作巧克力時，會有很多的關鍵步驟，而每個關鍵步驟都各自有不同的烹調的小程序，隨著我們想製造出的味道不同，程序就會調整。即便是一個小程序都扮演舉足輕重的角色，缺一不可。同時，要建立一個別人都看得懂的程序也是相當重要的，把它們紀錄下來，如此一來不管是誰來做，得到的結果都會相同。"
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: "目前為止你已經製作了一個動畫或故事，在你運行它時，它會執行相同的操作。現在你可以設計一個互動式的、可以玩的遊戲了。"
@@ -851,7 +851,7 @@
       3:
         image: notes/C3_bee_conditionals_3.png
         text: "這個例子中，我們會說「如果」這朵紫花有花蜜（大於 0），就告訴我們的蜜蜂持續的採集花蜜，有多少採多少，噠啦！"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: "你有聽過替程式除錯嗎？其實就是找出程式哪兒不正常的方法。當你找到時，指出並且移除這些錯誤。"

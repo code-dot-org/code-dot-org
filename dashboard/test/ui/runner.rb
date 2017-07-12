@@ -93,7 +93,6 @@ def parse_options
     options.hourofcode_domain = 'test.hourofcode.com'
     options.local = nil
     options.html = nil
-    options.out = nil
     options.maximize = nil
     options.auto_retry = false
     options.magic_retry = false
@@ -158,9 +157,6 @@ def parse_options
       end
       opts.on("--html", "Use html reporter") do
         options.html = true
-      end
-      opts.on("--out filename", String, "Output filename") do |f|
-        options.out = f
       end
       opts.on("-e", "--eyes", "Run only Applitools eyes tests") do
         options.run_eyes_tests = true
@@ -561,7 +557,7 @@ end
 
 def html_output_filename(test_run_string, options)
   if options.html
-    options.out || "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
+    "#{LOCAL_LOG_DIRECTORY}/#{test_run_string}_output.html"
   end
 end
 

@@ -2,13 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
-import Announcements from './Announcements';
+import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import Sections from './Sections';
 import TeacherResources from './TeacherResources';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
+
+const styles = {
+  clear: {
+    clear: 'both',
+    height: 30
+  }
+};
 
 const TeacherHomepage = React.createClass({
   propTypes: {
@@ -41,14 +48,28 @@ const TeacherHomepage = React.createClass({
         <ProtectedStatefulDiv
           ref="termsReminder"
         />
-        <Announcements
-          announcements={announcements}
-          isRtl={isRtl}
-        />
+        {announcements.length > 0 && (
+          <div>
+            <Notification
+              type="bullhorn"
+              notice={announcements[0].heading}
+              details={announcements[0].description}
+              dismissible={false}
+              buttonText={announcements[0].buttonText}
+              buttonLink={announcements[0].link}
+              newWindow={true}
+              analyticId={announcements[0].id}
+            />
+            <div style={styles.clear}/>
+          </div>
+        )}
+
         <Sections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
           isRtl={isRtl}
+          isTeacher={true}
+          canLeave={false}
         />
         <RecentCourses
           courses={courses}

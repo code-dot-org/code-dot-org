@@ -1252,7 +1252,7 @@
           the rest of them cannot be completed. Creating algorithms that others can
           understand is really important. That's why each step has to be written down,
           so no matter who does it, the result is the same.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: So far you've been making an animation or a story that does the exact
@@ -1392,7 +1392,7 @@
         text: In this example, we're going to say IF the purple flower has nectar
           greater than 0, get nectar. That will tell our bee to keep getting nectar
           as long as it's there. Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Have you ever heard of debugging a program? This is the way you figure
@@ -3134,11 +3134,11 @@
     mc_2016_intro:
       1:
         image: notes/mc_2016_intro_1.jpg
-        text: Hi, my name is Jens and I'm the lead creative designer of Minecraft.
-          In the next hour, you'll make your own Minecraft game. This looks like Minecraft
-          but the world has stopped. The sheep aren't moving, the chickens aren't
-          laying eggs, and zombies are just standing still. It's up to you to add
-          the code to make the Minecraft world work.
+        text: 'Labas, aš esu Jens – pagrindinis Minecraft žaidimo projektuotojas.
+          Šiose pamokėlėse galėsi susikurti savo Minecraft žaidimą. Pamatysi Minecraft
+          aplinką, kurioje veiksmas sustojo: avys nejuda, viščiukai nededa kiaušinių,
+          o zombiai negaudo žmonių. Nuo tavęs priklausys, kaip parašysi kodą ir kaip
+          veiks tavo Minecraft pasaulis.'
       2:
         image: notes/mc_2016_intro_2.jpg
         text: 'My name is Melissa and I am a user researcher at Minecraft. What I''m

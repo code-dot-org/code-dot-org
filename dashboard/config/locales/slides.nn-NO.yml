@@ -1220,7 +1220,7 @@
           kan ikke de andre gjøres ferdige. Å lage algoritmer som andre kan forstå
           er veldig viktig. Det er derfor hvert skritt må skrives ned, så resultatet
           blir det sammen uansett hvem som gjør det.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Hittil har du laga ein animasjon eller ei historie som gjer akkurat
@@ -1359,7 +1359,7 @@
         text: I dette eksempelet skal vi si; HVIS den lilla blomsten har mer enn 0
           nektar, da tar vi nektar. Det vil få bien vår til å fortsette å ta nektar
           så lenge det er noe igjen å ta. Ta-daaa!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Har du noen gang hørt om å feilsøke i et program? Det er måten du finner

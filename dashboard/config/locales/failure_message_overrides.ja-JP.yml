@@ -53,8 +53,8 @@
       Course 4 Playlab For Loops 4b_failure_message_override: "両方のキャラは、同じ回数の動きで、それぞれのハタを取れるべきです！"
       Course 4 Playlab For Loops 5b_failure_message_override: "両方のキャラは、同じ場所で止まるべきです！"
       Eval Strings Images .2_failure_message_override: "文字列「うちゅう」を足して、「こんにちは、うちゅう」を作るコードにしてください。"
-      Kiki_StarWars_Test_5_failure_message_override: Game over!
-      Kiki_StarWars_Test_5_Example_failure_message_override: Game over!
+      Kiki_StarWars_Test_5_failure_message_override: "ゲーム オーバー！"
+      Kiki_StarWars_Test_5_Example_failure_message_override: "ゲーム オーバー！"
       MC HOC 2016 Level 1_failure_message_override: "行くところで、羊の毛を集めます。羊の毛を集めるには、矢印キーで羊のところへ歩き、スペース
         キーを打つか、ゲームをクリックして羊の毛を切ります。「落とす 羊の毛」ブロックをコードに足してください。"
       MC HOC 2016 Level 2-2_failure_message_override: "「まえにすすむ」と「まがる」コマンドを使って、ニワトリを動かします。"

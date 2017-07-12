@@ -16,8 +16,8 @@ export default storybook => {
             number={3}
             status={status}
             url="/foo/bar"
-            disabled={false}
-            levelIcon="document"
+            disabled={status === LevelStatus.locked}
+            levelIcon={status === LevelStatus.locked ? "lock": "document"}
           />
         )
       })).concat([{

@@ -9,11 +9,14 @@ bs:
     errors:
       messages:
         blank: "je neophodno"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Ime za Prikaz'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'Email'
+        personal_email: 'Personal email address'
         username: 'Korisničko ime'
         password: 'Šifra'
         password_confirmation: 'Potvrda šifre'
@@ -205,6 +208,7 @@ bs:
     edit: 'Uredi'
     edit_model: 'Uredi %{model}'
     update: 'Osvježi'
+    submit: 'Potvrdi'
     destroy: 'Uništi'
     back: 'Nazad'
     confirm: 'Jeste li sigurni?'
@@ -322,6 +326,10 @@ bs:
     deleted_user: 'obrisan korisnik'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'Javite se učitelju za upravljanje vašom lozinkom.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Kompletirano'
     tried: 'Pokušano'
@@ -362,7 +370,7 @@ bs:
     heading_hoc2014: "<h2>Sat Kodiranja za</h2><h1>sve uzraste</h1>"
     heading_elementary: "<h2>20-satni tečajevi za</h2><h1>početnike (svih uzrasta)</h1>"
     heading_apps: "<h2>Zabava za</h2><h1>sve</h1>"
-    heading_tools: "<h2>Ready for the next step?</h2><h1>JavaScript Tools for High School</h1>"
+    heading_tools: "<h2>Ready for the next step?</h2><h1>Tools for Middle and High School</h1>"
     heading_legacy: "<h2>Naš opšti kurs za</h2><h1>sve uzraste</h1>"
     your_gallery: Galerija
     no_primary_course: "Probajte Code Studio kurs"
@@ -908,3 +916,4 @@ bs:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

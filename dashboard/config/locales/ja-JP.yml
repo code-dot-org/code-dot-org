@@ -11,11 +11,14 @@
     errors:
       messages:
         blank: "が必要です"
+        blank_plural: are required
+        invalid_plural: are invalid
     attributes:
       user:
         name: "表示名"
         name_example: "表示名<br/>( 例: Cool Coder、ジェーン)"
         email: Eメール
+        personal_email: Personal email address
         username: "ユーザー名"
         password: "パスワード"
         password_confirmation: "パスワードの確認"
@@ -81,8 +84,7 @@
     forgot_password: "パスワードをお忘れですか？"
     need_confirmation: "確認Eメールが届かない"
     need_unlock: "ロック解除用のEメールが届いていない"
-    not_linked: Sorry, your Code.org account is not linked to your %{provider}. You'll
-      have to sign in by typing your password below.
+    not_linked: "申し訳ありませんが、あなたのCode.org アカウントは %{provider} にリンクしていません。以下のパスワードを入力してサインインして下さい。"
   signup_form:
     student_count: "%{count} 人の生徒がサインアップ済みです。"
     teacher_count: "%{count} 人の教師がサインアップ済みです。"
@@ -142,8 +144,8 @@
     school_name: "学校名"
     school_zip: "学校の郵便番号"
     school_address: "学校の住所"
-    school_organization_name: School/Organization Name
-    school_organization_zip: School/Organization Zip Code
+    school_organization_name: "学校・団体名"
+    school_organization_zip: "学校・団体の郵便番号"
   signin_form:
     title: "すでにアカウントをお持ちですか？サインイン"
     login: Eメール
@@ -171,6 +173,8 @@
       instructions: "下にメール アドレスを入力してください、パスワードのリセット手順を送ります。"
       email: Eメールアドレス
       submit: "送信"
+    reset_errors:
+      invalid_email: "無効なメール アドレスでサインアップしたようです。support@code.org にメールして、パスワードの回復リンクを受信してください。"
     change_form:
       title: "パスワードを変更"
       new_password: "新しいパスワード"
@@ -188,12 +192,12 @@
       %{name}
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+      one: "あなたのセクション:"
+      other: "あなたのセクション:"
+    code_with_teacher: "%{teacher_name} と %{section_code}"
     confirm:
-      remove: Are you sure you want to leave this section?
-    remove: "(remove section)"
+      remove: "本当に、このセクションから離れてよいですか？"
+    remove: "(セクションを削除)"
   follower:
     invite_sent: "招待状を送信しました"
     added_teacher: "%{name} あなたの先生として追加"
@@ -212,71 +216,13 @@
   reports:
     error:
       access_denied: "統計情報へのアクセス権がありません"
-  redeem_prizes:
-    title: "交換賞品： %{name}"
-    provider: "プロバイダ:"
-    code: "コード:"
-    redeem_header: "交換するには。"
-    donorschoose_register: DonorsChoose.orgに教師として登録
-    donorschoose_project: "プロジェクトを投稿"
-    donorschoose_how_to: "あなたのコードを使用する方法"
-    success: "あなたの賞金は獲得できました。下のコードを参照する"
-    error: "あなたの賞金は償還できませんでした、もう一度やり直す"
-    error_us_only: "賞金提供をされるのは米国内のユーザーのみに限られています"
-    error_not_earned: "あなたはまだこの賞を獲得していません。"
-    error_already_redeemed: "あなたの賞金は既に換金されています"
-    no_prizes_available: "申し訳ありませんが、ただ今賞品がありません"
-    teacher_info_required: "先生の賞品は学校の名前と住所の情報が必要です。"
-    teacher_email_required: "先生の賞品には、確認済みのEメール アドレスが必要です"
-    confirm:
-      title: "確認してください"
-      'no': "いいえ"
-      'yes': "はい"
-      msg: "%{prize_name} 賞金を本当に請求してもいいですか？"
-      msg_student: "注: 賞品は、 1 つの種類のみを選択できます"
-      msg_publicschool: "米国公立学校の教師であることを証明してください"
-      msg_visit_website: "ウェブサイトに行く"
-    providers:
-      apple_itunes: "$10 iTunes Gift Card"
-      donors_choose: DonorsChoose.org $750 credit
-      donors_choose_bonus: DonorsChoose.org $250 credit
-      dropbox: Dropbox の容量 10 GB
-      valve: Portal 2 (PC or Mac game download)
-      ea_bejeweled: Bejeweled 3 (PC game download)
-      ea_fifa: FIFA Soccer 13 (PC game download)
-      ea_simcity: SimCity 4 Deluxe Edition (PC game download)
-      ea_pvz: Plants vs. Zombies (PC game download)
-      skype: "$10 Skype credit"
-    msg:
-      choose: "賞品を選択"
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: "賞を獲得しました！(米国の学生のみ）"
-      not_earned_title: "チュートリアルを終了し、賞品を貰いましょう(米国の学生のみ)"
-      not_earned: "コンピュータサイエンスの概念を全て学び、 %{num_trophies}トロフィーと実際の商品を獲得します。10 ドル分の iTunes
-        ギフトカード、10 GB の無料の Dropbox のストレージ、 10 ドル分のSkipeクレジットそしてゲームの無料ダウンロードから選択できます。注：米国内の生徒のみ対象となります。商品はなくなり次第終了いたします"
-      teacher:
-        earned: 15人 以上の学生が % {num_trophies} 個すべてのトロフィーを獲得しました。教師賞を授与します！（米国の教師のみ）
-        not_earned_title: (アメリカの教師のみ) クラスを教えて、最大 1000 ドルの<a target="_blank"href="http://DonorsChoose.org">DonorsChoose.org</a>クレジットを獲得
-        not_earned: 初めてコンピュータサイエンスを経験する教師への報酬です、最大$1,000まで獲得できます。 <a href="http://DonorsChoose.org">DonorsChoose.org</a>
-          K 8 イントロ コースを通して教室をガイドするため <a href="http://DonorsChoose.org"> 支援チャリティー</a>
-          クレジット最大 $1,000 を得ることができます。対象は、正常にすべての 15 の学生 （またはそれ以上） のすべてのチュートリアルを完了、すべての  %{num_trophies}
-          トロフィーを獲得と K 8 イントロ コース全体を通じて、少なくとも 15 人の学生の教室をホストしている必要があります。7 人もしくはそれ以上の生徒のすべてがトロフィーを獲得し、さらにそれがた女子学生だった場合、あなたの報酬は
-          $1,000 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットです。それ以外の場合は、あなたの報酬は
-          <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットで 750
-          ドルです。<a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。
-        bonus:
-          not_earned_title: 支援チャリティー <a target="_blank"href="http://DonorsChoose.org">
-            DonorsChoose.org</a> でクレジット $250 を得ることができます。(米国教師のみ)
-          earned: "%{num_trophies} のトロフィーをすべての収集した学生は７人以上女学生でした。教師賞品を獲得しました ！（米国の教師のみ）"
-          not_earned: '% {Num_trophies} のすべてのトロフィーを獲得したあなたの学生の少なくとも 7 が場合女の子は、あなたの報酬は追加
-            $250 <a target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジット。<a
-            target="_blank"href="http://DonorsChoose.org"> 支援チャリティー</a> クレジットは、米国の公立学校の教師によってのみ使用できます。'
   crud:
     new_model: "新しい%{model}"
     show: "表示"
     edit: "編集"
     edit_model: "%{model} を編集"
     update: "更新のプログラム"
+    submit: "送信"
     destroy: "破壊"
     back: "戻る"
     confirm: "間違いありませんか？"
@@ -293,13 +239,48 @@
         artist: "絵を描く"
         calculate: Calculate Something
         applab: "アプリを作る"
+        gamelab: Make a Game Lab project
+      home: "ホーム"
+      courses: "コース"
+      project_gallery: "プロジェクト ギャラリー"
+      sections: "セクション"
+      help_support: "ヘルプとサポート"
+      report_bug: "バグを報告"
+      teacher_community: "先生のコミュニティ"
+      professional_learning: "専門的な学習"
+      documentation: "ドキュメント"
+      tutorials: "チュートリアル"
+      educate_overview: "教育の概要"
+      educate_elementary: "小学校"
+      educate_middle: "中学校"
+      educate_high: "高校"
+      educate_hoc: Hour of Code
+      educate_partner: "私達のパートナー"
+      educate_beyond: Code.org を超えて
+      educate_inspire: "生徒を応援する"
+      educate_community: "オンライン コミュニティ"
+      educate_tools: "ツールと動画"
+      about_us: "私たちについて"
+      about_leadership: "リーダーシップ"
+      about_donors: "ドナー"
+      about_partners: "パートナー"
+      about_team: "全チーム"
+      about_news: "ニュース"
+      about_evaluation: "評価"
+      about_jobs: "仕事"
+      about_contact: "お問い合わせ"
+      about_faqs: "よくある質問"
+      learn: "学ぶ"
+      stats: "統計"
+      help_us: "手を貸して下さい"
+      teach: "教える"
+      about: "概要"
     user:
       classroom: "先生用ホームページ"
       district_dashboard: "地区のダッシュ ボード"
       label: "こんにちは  %{username}"
       stats: "コード・スタジオ"
-      settings: "私のアカウント"
-      prizes: "賞品"
+      settings: "アカウント"
       logout: "サインアウト"
       signin: "ログイン"
       signup: "アカウントの作成（さくせい）"
@@ -359,6 +340,17 @@
     deleted_user: "削除されたユーザー"
     no_password_because_oauth: "サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。"
     no_password_because_sponsored: "あなたのパスワードの管理については、あなたの先生に聞いてください。"
+    create_personal_login: Create a personal login
+    create_personal_login_info: If you want to keep using your Code.org account even
+      after the end of the school year, you can create your own login below.
+    create_personal_login_terms: By creating a personal login, I agree to be bound
+      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
+      service</a>. If I am under 13 years of age, I confirm that I have my parent
+      or legal guardian's permission to use the Code.org services even without a teacher.
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
+      that allows us to contact students. Students will never receive emails from
+      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
+      target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: "完了"
     tried: "試してみました"
@@ -423,7 +415,7 @@
       知事とアメリカ最大企業のCEOが、 米議会に、学生のコンピューターサイエンス教育への資金供給を求める公開書簡に参加しています。"
     announcement_petition_button: "あなたの名前を追加します"
     announcement_go_beyond_button: "超えて行く"
-    announcement_apply_now: Apply now
+    announcement_apply_now: "今すぐ申し込む"
     announcement_all: "先生用ブログで、新しい機能や最新情報をアップデートします。<a href='%{teacher_blog_url}'
       target='_blank'> 過去のお知らせを参照する。</a>"
     announcement_hoc_launch: "この 12 月 5-11 日、180 カ国以上で数千の教育者がHour of Code によってコンピュータ
@@ -441,10 +433,8 @@
     announcement_teacher_recruitment2: |-
       あなたのような教師は、コンピューターサイエンス教育運動をリードしています。高品質な、幼稚園から高校生までの専門学習プログラムに <strong>あなたやあなたの学校は無償で</strong> 参加することができます。あなたの学校で、コンピューター科学をリードし、専門的な学習に参加しましょう。
       中学校、高校の先生は3月17日までに応募してください。
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part
-      of updating our CS Fundamentals courses! We're looking for teachers to pilot
-      an updated CS Fundamentals curriculum during the winter and spring of 2017.
-      We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_csf_pilot: "<strong>小学校の先生:</strong>私たちの CS 基礎コースのアップデートを共に！ 冬から2017
+      春にかけて更新 CS 基礎カリキュラムをパイロットして下さる教師を探しています。2017 年 8 月のアップデート公開前に、あなたのフィードバックをお聞かせください。"
     announcement_student_privacy: Code.org では、学生のプライバシーを非常に大切にしています。学生のプライバシーを守るため、フルネームが表示されないように、セクションのログイン
       ページを変更しました。この更新によって、ログイン ページのプライバシーへの懸念が減少しますが、引き続き <i>学生のフルネームは使用しない</i> よう、お勧めします。
     announcement_apcsp_recruitment: "<strong>コンピューターサイエンス原則 教師:</strong>あなたの生徒は、生徒たちが今年の
@@ -457,10 +447,15 @@
     announcement_apcsp_recruitment3: "今年の AP CS 原理試験は記録を破る態勢を整えています。AP コンピューターサイエンスでは、試験に参加する学生は、劇的に多様化していますが、あなたの助けが必要です。すべての
       CS 原理学生が、AP CSP 試験を受けるのを奨励して、 <a href='%{gift_url}' target='_blank'> ギフトカード、ラップトップ、その他の素晴らしい景品</a>を獲得するチャンスです！<a
       href='%{video_url}' target='_blank'>ビデオ</a> をシェアして学生が、試験を受けた全国の仲間の声を聞けるようにしましょう。"
-    announcement_csp_deadline: Final call for high school teachers! Take the lead
-      on computer science in your school and apply for our high-quality professional
-      learning programs <strong>at absolutely no cost to you or your school</strong>.
-      Applications close on April 14th.
+    announcement_csp_deadline: "高校教師のための最終呼び出し！あなたの学校のコンピューター科学をリードし、<strong>あなたや、あなたの学校に全く無料の</strong>
+      高品質な学習プログラムを適用しましょう。アプリケーションの締め切りは4 月 14 日です。"
+    announcement_applab_export: "アプリ ラボ、私たち web ベースのプログラミング環境は、コードをエクスポートできるようになりました！JavaScript
+      ブロックをドラッグ アンド ドロップ してアプリケーションの構築を始められ、コードをエクスポートして好きなプロフェッショナル開発環境で編集を続けられます。"
+    announcement_csp_survey: "<b>おめでとうございます CS 原則の先生たち!</b> <br/>CS原則生徒が AP CS 試験を受験することで、史上最大の
+      AP 試験受講者50,000 人以上の学生に加わります。さあ、コース完了アンケートを行わせて、あなたの学生の声を聞かせてください! あなたは学生のレビューを確認することができ、全国集計の報告も共有できます。"
+    announcement_navigation_redesign: "<b>サイト ナビゲーションの変更について</b> <br/>この夏、Code.org
+      サイトの全体でナビゲーションを改善をします。いつでも、サイトのどこからでも、あなたの重要なリソースへのアクセスができるようになります。教師用アカウントにログインすれば、全ページに新しいナビゲーションバーが付き、それはホームページ、コース、プロジェクト
+      ギャラリー、セクション、専門学習へリンクしています。"
   move_students:
     new_section_dne: "申し訳ありませんが、セクション %{new_section_code} は存在しません。別のセクション コードを入力してください。"
     section_code_cant_be_current_section: "現在のセクションを、新しいセクションと同じにすることはできません。"
@@ -526,7 +521,7 @@
   reference_area:
     title: "助けが必要ですか？"
     subtitle: "ビデオやヒントを見る"
-    teacher: "解答を参照する"
+    teacher: "答えを見る"
     auth_error: "解答を見る権限がありません"
     submit: "制作者の居住地を変更する"
     direction: "最初の方向 (度)"
@@ -600,6 +595,12 @@
     gallery:
       title: "ギャラリー"
       body: "ユーザーが作成したアプリやアーティストの画像のギャラリーを見る"
+    gamelab:
+      title: "ゲーム ラボ(ベータ版)"
+      body: Game Lab is a programming environment where you can make simple animations
+        and games with objects and characters that interact with each other.
+      audience: 13才以上対象
+      cta: "もっと知（し）る"
     frozen:
       title: "アナと雪の女王"
     starwars:
@@ -619,6 +620,16 @@
       body: "クラスで使用するためのアンプラグド・レッスンのリストをまとめました。あなたの教室にコンピューターが有るか否かにかかわらず、コンピューターサイエンスの基礎を教えることができます!
         独立したコースとしても、任意のコンピューターサイエンスの補間的なレッスンとしても使うことができます。"
       body_short: "クラスにコンピューターが無い場合は、 アンプラグド・レッスンを試してください。"
+    unplugged_conditionals:
+      title: "条件"
+      body: "この「コンピュータを使わない」活動では、1組のトランプを使用して、アルゴリズムと条件文を学習します。"
+    widgets:
+      title: Widgets
+      body: Students can explore concepts from our Computer Science Principles course
+        hands-on using these digital tools. Use the widgets on their own, or create
+        a single-concept lesson for your class.
+      audience: 14才以上
+      cta: "もっと知（し）る"
   gallery:
     students_drew_these_with_code: "これらの作品は、生徒たちがコードを使って描きました！"
     students_made_these_with_code: "これらの作品は、生徒たちがコードを使って創りました！"
@@ -701,7 +712,7 @@
     ok: OK
     startover_title: "本当に最初からやり直してもよいですか？"
     startover_body: "パズルを最初の状態にリセットし、追加または変更されたすべてのブロックを削除します。"
-    startover_ok: "最初（さいしょ）からやり直（なお）す。"
+    startover_ok: "最初からやりなおす"
     startover_cancel: "キャンセル"
   time:
     hour: 1 時間
@@ -730,6 +741,11 @@
       プライバシー ポリシー</a> を更新しました。それらを受け入れる前に、これらを慎重にお読みください。更新された条項に同意されない場合、JavaScript
       を教えるツールが無いかもしれないことに、注意してください。
     review_terms: "更新された条項を確認"
+  school_info_interstitial:
+    title: "すべての学生にコンピューターサイエンスを提供するため - 効果測定にご協力ください!"
+    message: "学校の情報を下に入力してください。"
+    message_with_suggestion: "次の情報が正しいことを確認し、必要に応じて更新してください。"
+    save: "保存"
   race_interstitial:
     title: "オプション: コンピュータ ・ サイエンスにおける多様性の向上の取り組みのため、ご協力ください"
     message: "あなたの人種 (該当するものすべてチェック) を教えてください。"
@@ -767,6 +783,9 @@
     delete: "削除"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
+    project_gallery: "プロジェクト ギャラリー"
+    publish: "公開"
+    unpublish: "非公開"
     share: "共有"
     share_title: "プロジェクトを共有"
     share_copy_link: "リンクをコピー:"
@@ -774,6 +793,7 @@
     share_u13_warning: "共有する前に先生に確認してください。あなたの学校だけで、他のユーザーと共有します。"
     embed: "埋め込み"
     advanced_share: "詳細オプションを表示"
+    no_projects: "あなたのプロジェクトは現在ありません。上のボタンをクリックしてプロジェクトを開始してください。"
     close: "閉じる"
     more: "表示"
     name: "名前"
@@ -782,6 +802,7 @@
     help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！
       <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
     need_help: "スタートするのをお手伝いしましょうか？"
+    thumbnail_help: "プロジェクトのサムネイルが正しく表示されませんか? 新しいサムネイルを生成するために、アプリを実行してみてください。サムネイルの更新には、数時間かかることがありますのでご注意ください。"
     really_delete: "削除しますか？"
     delete_yes: "はい"
     delete_no: "ちがいます"
@@ -842,16 +863,6 @@
     icon_library:
       search_placeholder_text: "アイコンの検索.."
       no_icons_found: "アイコンが見つかりませんでした。"
-    playzone:
-      artist_description: "アーティストでかっこいい絵やデザインを描きましょう！"
-      artist_title: "新しい描画"
-      continue_button: "次のステージに行く"
-      playlab_description: "プレイラボでお話やゲームを作りましょう！"
-      playlab_title: "新しいアプリ"
-      primary_header: "おめでとう ！あなたは%{stageName} をクリアしました。"
-      projects_description: "既存のプロジェクトを再度訪れる"
-      projects_title: "プロジェクトを開始する"
-      secondary_header: "次に何をすべきか、先生に聞いてみましょう"
   flex_category:
     required: "概要"
     content: "内容"
@@ -862,6 +873,31 @@
     optional_stages: Optional Stages
     main_course: "メイン コース"
     extra_course_content: "追加のコース内容"
+    csd1_1: "第 1章: 問題解決プロセス"
+    csd1_2: "第 2 章コンピューターと問題解決"
+    csd2_1: "第 1 章： Web コンテンツと HTML"
+    csd2_2: "第 2 章：スタイルと CSS"
+    csd3_1: "第 1 章: 画像とアニメーション"
+    csd3_2: "第2章: ゲームを作る"
+    csd4_1: "第 1 章：ユーザーを中心にしたデザイン"
+    csd4_2: "第 2 章：アプリのプロトタイピング"
+    csd5_1: "第1章：情報を表現する"
+    csd5_2: "第 2 章：データ問題を解決"
+    csd6_1: "第 1 章：ハードウェア出力"
+    csd6_2: "第 2 章：ハードウェア入力"
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: "章 1: プログラミング言語とアルゴリズム"
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: Survey
+    cspAssessment: Chapter Assessment
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
   external_links:
     disclaimer: "免責事項"
     leaving_domain: "このドメインから離れ、Code.org が運営していないサイトに移動します。"
@@ -939,6 +975,7 @@
   locked_stage: "このステージはロックされているために、このステージの内容は表示されません。あなたの先生は、作業やあなたの答えを確認する時に、このステージのロックを解除できます。"
   hidden_stage: "先生は、あなたの参加を予想していませんでした。どのレッスンに参加すべきか、あなたの先生に尋ねてください。"
   return_course_overview: "ユニットの概要へ"
+  view_all_units: View all units
   pd:
     survey:
       number_teachers: Number of attending teachers
@@ -987,3 +1024,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
+  courses_category: Full Courses
