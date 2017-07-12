@@ -11,17 +11,16 @@ module Pd::PageHelper
     current_page = collection.current_page
 
     base_params = params.permit(permitted_params + [:page_size])
-    button_factory = PageButtonFactory.new(self, base_params)
     page_buttons = [
-      button_factory.new_page_button('<<', page: 1, disabled: collection.first_page?),
-      button_factory.new_page_button('<', page: current_page - 1, disabled: collection.first_page?),
-      button_factory.new_page_button('>', page: current_page + 1, disabled: collection.last_page?),
-      button_factory.new_page_button('>>', page: collection.total_pages, disabled: collection.last_page?)
+      new_page_button('<<', base_params.merge(page: 1), disabled: collection.first_page?),
+      new_page_button('<', base_params.merge(page: current_page - 1), disabled: collection.first_page?),
+      new_page_button('>', base_params.merge(page: current_page + 1), disabled: collection.last_page?),
+      new_page_button('>>', base_params.merge(page: collection.total_pages), disabled: collection.last_page?)
     ]
 
     page_size = params[:page_size] || collection.limit_value
     page_size_buttons = %w(25 50 All).map do |page_size_option|
-      button_factory.new_page_size_button page_size_option
+      new_page_size_button page_size_option, base_params
     end
 
     locals = {
@@ -31,27 +30,19 @@ module Pd::PageHelper
       page_size: page_size,
       page_size_buttons: page_size_buttons
     }
+
     render partial: 'pd/page_header', locals: locals
   end
 
-  class PageButtonFactory
-    def initialize(context, base_params)
-      @context = context
-      @base_params = base_params
-    end
+  def new_page_button(text, params, disabled: false)
+    link_to text, params, class: btn_class(disabled: disabled)
+  end
 
-    def new_page_button(text, page:, disabled: false)
-      @context.link_to text, @base_params.merge(page: page), class: btn_class(disabled: disabled)
-    end
+  def new_page_size_button(page_size, base_params)
+    link_to page_size, base_params.merge(page_size: page_size)
+  end
 
-    def new_page_size_button(page_size)
-      @context.link_to page_size, @base_params.merge(page_size: page_size)
-    end
-
-    private
-
-    def btn_class(disabled: false)
-      'btn btn-default' + (disabled ? ' disabled' : '')
-    end
+  def btn_class(disabled: false)
+    "btn btn-default#{(disabled && ' disabled').presence}"
   end
 end
