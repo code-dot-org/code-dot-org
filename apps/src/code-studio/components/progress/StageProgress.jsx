@@ -58,12 +58,8 @@ const StageProgress = React.createClass({
         {experimentEnabled && levels.map((level, index) =>
           <ProgressBubble
             key={index}
-            number={level.levelNumber}
-            status={level.status}
-            url={level.url}
+            level={level}
             disabled={false}
-            levelName={level.name || level.progression}
-            levelIcon={(level.icon || '').slice(3)}
             smallBubble={!level.isCurrentLevel}
           />
         )}
