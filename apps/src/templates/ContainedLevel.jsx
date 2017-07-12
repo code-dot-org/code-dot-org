@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import * as codeStudioLevels from '../code-studio/levels/codeStudioLevels';
 import { setAwaitingContainedResponse } from '../redux/runState';
+import locale from '@cdo/locale';
 
 const styles = {
   main: {
@@ -50,7 +51,7 @@ const ContainedLevel = React.createClass({
             canReappear: true,
           },
           content: {
-            text: 'You need to answer the question before you can run the code',
+            text: locale.containedLevelRunDisabledTooltip(),
             title: {
               button: $('<div class="tooltip-x-close"/>'),
             },

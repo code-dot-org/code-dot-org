@@ -45,6 +45,7 @@
   "codeTooltip": "See generated JavaScript code.",
   "completedWithoutRecommendedBlock": "Congratulations! You completed Puzzle {puzzleNumber}. (But you could use a different block for stronger code.)",
   "connectToday": "Connect Today",
+  "containedLevelRunDisabledTooltip": "You need to answer the question before you can run the code",
   "continue": "Continue",
   "continueLesson": "Continue lesson",
   "copy": "Copy",
