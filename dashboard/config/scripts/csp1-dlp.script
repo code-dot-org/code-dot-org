@@ -1,0 +1,8 @@
+professional_learning_course 'CS Principles Facilitator in Training'
+peer_reviews_to_complete 5
+hidden false
+
+stage 'Deeper Learning Overview', flex_category: 'required'
+level 'deeper learning', progression: 'Background'
+level 'csp deeper learning timeline', progression: 'Deadlines and Payment'
+level 'deeper learning recommendations- csp', progression: 'Resource Recommendations'
