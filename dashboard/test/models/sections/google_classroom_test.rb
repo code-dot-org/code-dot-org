@@ -1,38 +1,24 @@
 require 'test_helper'
 
-class SectionTest < ActiveSupport::TestCase
-  test 'from omniauth' do
+class GoogleClassroomTest < ActiveSupport::TestCase
+  test 'from google classroom service' do
     owner = create :teacher
-    students = [
-      OmniAuth::AuthHash.new(
-        uid: 111,
-        provider: 'google_oauth2',
-        info: {
-          name: 'Sample User',
-        },
-      )
-    ]
+    student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
+      {
+        students: [
+          {userId: '222222222222222', profile: {name: {fullName: 'Sample User'}}},
+          {userId: '333333333333333', profile: {name: {fullName: 'Another Student'}}},
+        ],
+      }.to_json
+    ).students
 
-    section = Section.from_omniauth('G-222', Section::LOGIN_TYPE_GOOGLE_CLASSROOM, students, owner.id)
-    assert_equal 'G-222', section.code
+    section = GoogleClassroom.from_service('101', owner.id, student_list)
+    assert_equal 'G-101', section.code
 
     assert_no_difference 'User.count' do
       # Should find the existing Google Classroom section.
-      section_2 = Section.from_omniauth('G-222', Section::LOGIN_TYPE_GOOGLE_CLASSROOM, students, owner.id)
+      section_2 = GoogleClassroom.from_service('101', owner.id, student_list)
       assert_equal section.id, section_2.id
-    end
-
-    students << OmniAuth::AuthHash.new(
-      uid: 333,
-      provider: 'google_oauth2',
-      info: {
-        name: 'Added Student',
-      },
-    )
-    assert_difference 'User.count', 1 do
-      # Should add 1 student to the existing Google Classroom section.
-      section_3 = Section.from_omniauth('G-222', Section::LOGIN_TYPE_GOOGLE_CLASSROOM, students, owner.id)
-      assert_equal section.id, section_3.id
     end
   end
 end
