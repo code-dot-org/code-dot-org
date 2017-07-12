@@ -45,7 +45,7 @@ class ApiController < ApplicationController
   end
 
   def import_google_classroom
-    course_id = params[:course_id].to_s
+    course_id = params[:courseId].to_s
 
     query_google_classroom_service do |service|
       students = service.list_course_students(course_id).students.map do |student|
