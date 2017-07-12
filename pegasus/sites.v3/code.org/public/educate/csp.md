@@ -189,7 +189,8 @@ Yes, please! Our desire is that the curriculum will be a living document and not
 
 #### How/Where can I get professional development for this course?
 We have an in-person professional learning program...
-[here](/educate/professional-learning/cs-principles-apply)
+[click here](/educate/professional-learning/cs-principles) to learn more! 
+<p> Already interested? [Join our contact list](https://docs.google.com/a/code.org/forms/d/e/1FAIpQLSd-fZMKFQNioPK98aGJ4dCt1tMWTEb6yvy_Qie4YTo-hp7q4w/viewform?c=0&w=1) and we'll be in touch when applications are open.
 
 <br />
 

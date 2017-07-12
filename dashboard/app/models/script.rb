@@ -208,7 +208,7 @@ class Script < ActiveRecord::Base
 
   def self.script_cache_from_cache
     [
-      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly
+      ScriptLevel, Level, Game, Concept, Callout, Video, Artist, Blockly, CourseScript
     ].each(&:new) # make sure all possible loaded objects are completely loaded
     Rails.cache.read SCRIPT_CACHE_KEY
   end
@@ -301,7 +301,7 @@ class Script < ActiveRecord::Base
     # a bit of trickery so we support both ids which are numbers and
     # names which are strings that may contain numbers (eg. 2-3)
     find_by = (id_or_name.to_i.to_s == id_or_name.to_s) ? :id : :name
-    Script.with_associated_models.find_by(find_by => id_or_name).tap do |s|
+    Script.find_by(find_by => id_or_name).tap do |s|
       raise ActiveRecord::RecordNotFound.new("Couldn't find Script with id|name=#{id_or_name}") unless s
     end
   end
@@ -837,8 +837,9 @@ class Script < ActiveRecord::Base
   end
 
   def self.clear_cache
-    # only call this in a test!
+    raise "only call this in a test!" unless Rails.env.test?
     @@script_cache = nil
+    Rails.cache.delete SCRIPT_CACHE_KEY
   end
 
   def localized_title
