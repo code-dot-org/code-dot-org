@@ -27,23 +27,23 @@ class Languages
     @@table.select(:unique_language_s, :locale_s).where("locale_s = '#{locale}'").first[:unique_language_s]
   end
 
-  def self.get_starwars_languages
-    @@table.select(:starwars_b, :crowdin_name_s)
-  end
-
   def self.get_csf_languages
     @@table.select(:csf_b, :crowdin_name_s)
   end
 
-  def self.get_frozen_languages
-    @@table.select(:frozen_b, :crowdin_name_s)
+  def self.get_minecraft_designer_languages
+    @@table.select(:minecraft_designer_b, :crowdin_name_s)
   end
 
   def self.get_minecraft_adventurer_languages
     @@table.select(:minecraft_adventurer_b, :crowdin_name_s)
   end
 
-  def self.get_minecraft_designer_languages
-    @@table.select(:minecraft_designer_b, :crowdin_name_s)
+  def self.get_starwars_languages
+    @@table.select(:starwars_b, :crowdin_name_s)
+  end
+
+  def self.get_frozen_languages
+    @@table.select(:frozen_b, :crowdin_name_s)
   end
 end
