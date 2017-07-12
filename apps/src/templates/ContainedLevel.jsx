@@ -31,7 +31,42 @@ const ContainedLevel = React.createClass({
       codeStudioLevels.lockContainedLevelAnswers();
     } else {
       // No answers yet, disable Run button until there is an answer
-      $('#runButton').prop('disabled', true);
+      let runButton = $('#runButton');
+      runButton.prop('disabled', true);
+      // Disabled buttons don't trigger mouse events, add a dummy element to
+      // receive the click and trigger the display of the callout.
+      let clickReceiver = $('<div/>');
+      let boundingClientRect = runButton.get(0).getBoundingClientRect();
+      clickReceiver.css({
+        height: boundingClientRect.height + 'px',
+        width: boundingClientRect.width + 'px',
+        position: 'absolute',
+        top: 0,
+      });
+      $('#gameButtons').append(clickReceiver);
+      let showQtip = () => {
+        runButton.qtip({
+          codeStudio: {
+            canReappear: true,
+          },
+          content: {
+            text: 'You need to answer the question before you can run the code',
+            title: {
+              button: $('<div class="tooltip-x-close"/>'),
+            },
+          },
+          position: {
+            my: 'top left',
+            at: 'button left',
+            adjust: {
+              x: boundingClientRect.width / 2,
+              y: boundingClientRect.height,
+            },
+          },
+          show: false,
+        }).qtip('show');
+      };
+      clickReceiver.bind('click', showQtip);
       this.props.setAwaitingContainedResponse(true);
 
       codeStudioLevels.registerAnswerChangedFn(() => {
@@ -40,7 +75,12 @@ const ContainedLevel = React.createClass({
         // because runButton is also mutated outside of React (here and elsewhere)
         // we need to worry about cases where the DOM gets out of sync with the
         // React layer
-        $('#runButton').prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
+        runButton.prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
+        if (codeStudioLevels.hasValidContainedLevelResult()) {
+          runButton.qtip('hide');
+          clickReceiver.unbind('click', showQtip);
+          clickReceiver.hide();
+        }
         this.props.setAwaitingContainedResponse(!codeStudioLevels.hasValidContainedLevelResult());
       });
     }
