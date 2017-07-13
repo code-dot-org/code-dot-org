@@ -8,7 +8,6 @@ Scenario: Listen to TTS Audio in CSF
   Given I am on "http://studio.code.org/s/allthethings/stage/6/puzzle/3?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
 
   # note: we expect no audio for the instructions, because this test
   # level is not in course1.
@@ -42,7 +41,6 @@ Scenario: Listen to TTS Audio in CSD
   Given I am a student
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1?enableExperiments=CSDTTS"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
   
   # note: we expect audio for csd instructions
   Then I wait until element ".inline-audio" is visible
@@ -54,7 +52,6 @@ Scenario: Listen to TTS Audio in CSP
   Given I am a student
   And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2?enableExperiments=CSDTTS"
   And I wait for the page to fully load
-  And I close the instructions overlay if it exists
 
   # note: we expect audio for csp instructions
   Then I wait until element ".inline-audio" is visible
