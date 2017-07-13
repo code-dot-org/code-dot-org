@@ -19,7 +19,7 @@ describe('ProgressLesson', () => {
     lessonNumber: 3,
     showTeacherInfo: false,
     viewAs: ViewType.Teacher,
-    hasSelectedSection: true,
+    showLockIcon: true,
     lessonIsVisible: () => true,
     lessonLockedForSection: () => false
   };
@@ -145,11 +145,11 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.find('FontAwesome').at(2).props().icon, 'lock');
   });
 
-  it('does not have an unlocked icon if we dont have a section selected', () => {
+  it('does not have an unlocked icon if showLockIcon=false', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        hasSelectedSection={false}
+        showLockIcon={false}
         lesson={fakeLesson('lesson1', 1, true)}
       />
     );

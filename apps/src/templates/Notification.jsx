@@ -3,13 +3,16 @@ import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressButton from "./progress/ProgressButton";
+import styleConstants from '../styleConstants';
+import trackEvent from '../util/trackEvent';
 
 const NotificationType = {
   information: 'information',
   success: 'success',
   failure: 'failure',
   warning: 'warning',
-  course: 'course'
+  course: 'course',
+  bullhorn: 'bullhorn'
 };
 
 const styles = {
@@ -17,7 +20,7 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     height: 72,
-    width: 970,
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginBottom: 20,
     float: 'left'
@@ -91,6 +94,11 @@ const styles = {
       color: color.teal,
       backgroundColor: color.teal
     },
+    [NotificationType.bullhorn]: {
+      borderColor: color.teal,
+      color: color.teal,
+      backgroundColor: color.teal
+    }
   }
 };
 
@@ -101,7 +109,9 @@ const Notification = React.createClass({
     details: React.PropTypes.string.isRequired,
     buttonText: React.PropTypes.string,
     buttonLink: React.PropTypes.string,
-    dismissible: React.PropTypes.bool.isRequired
+    dismissible: React.PropTypes.bool.isRequired,
+    newWindow: React.PropTypes.bool,
+    analyticId: React.PropTypes.string
   },
 
   getInitialState() {
@@ -112,14 +122,21 @@ const Notification = React.createClass({
     this.setState({open: !this.state.open});
   },
 
+  onAnnouncementClick: function () {
+    if (this.props.analyticId) {
+      trackEvent('teacher_announcement','click', this.props.analyticId);
+    }
+  },
+
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow } = this.props;
     const icons = {
       information: 'info-circle',
       success: 'check-circle',
       failure: 'exclamation-triangle',
       warning: 'exclamation-triangle',
-      course: 'plus'
+      course: 'plus',
+      bullhorn: 'bullhorn'
     };
 
     if (!this.state.open) {
@@ -151,6 +168,8 @@ const Notification = React.createClass({
             color={ProgressButton.ButtonColor.gray}
             text={buttonText}
             style={styles.button}
+            target={newWindow ? "_blank" : null}
+            onClick={this.onAnnouncementClick}
           />
         )}
       </div>

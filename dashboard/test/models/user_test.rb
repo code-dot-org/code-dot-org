@@ -1673,6 +1673,34 @@ class UserTest < ActiveSupport::TestCase
     assert user_with_invalid_email.save
   end
 
+  test 'no personal email for under 13 users' do
+    user = create :young_student
+    assert user.no_personal_email?
+  end
+
+  test 'no personal email for users with parent-managed accounts' do
+    parent_managed_student = create(:parent_managed_student)
+    assert parent_managed_student.no_personal_email?
+  end
+
+  test 'no personal email is false for users with email' do
+    student = create :student
+    refute student.no_personal_email?
+
+    teacher = create :teacher
+    refute teacher.no_personal_email?
+  end
+
+  test 'parent_managed_account is true for users with parent email and no hashed email' do
+    parent_managed_student = create(:parent_managed_student)
+    assert parent_managed_student.parent_managed_account?
+  end
+
+  test 'parent_managed_account is false for teacher' do
+    teacher = create :teacher
+    refute teacher.parent_managed_account?
+  end
+
   test 'age is required for new users' do
     e = assert_raises ActiveRecord::RecordInvalid do
       create :user, birthday: nil
@@ -1912,5 +1940,24 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.full_address
     assert_equal({}, user.properties)
     refute_nil user.purged_at
+  end
+
+  test 'omniauth login stores auth token' do
+    auth = OmniAuth::AuthHash.new(
+      provider: 'google_oauth2',
+      uid: '123456',
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+
+    params = {}
+
+    user = User.from_omniauth(auth, params)
+    assert_equal('fake oauth token', user.oauth_token)
+    assert_equal('fake refresh token', user.oauth_refresh_token)
   end
 end

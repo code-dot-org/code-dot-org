@@ -133,6 +133,33 @@ FactoryGirl.define do
             create(:follower, section: section, student_user: user)
           end
         end
+        factory :parent_managed_student do
+          sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
+          email nil
+          hashed_email nil
+        end
+      end
+
+      factory :student_in_word_section do
+        encrypted_password nil
+        provider 'sponsored'
+
+        after(:create) do |user|
+          word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+          create(:follower, student_user: user, section: word_section)
+          user.reload
+        end
+      end
+
+      factory :student_in_picture_section do
+        encrypted_password nil
+        provider 'sponsored'
+
+        after(:create) do |user|
+          picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+          create(:follower, student_user: user, section: picture_section)
+          user.reload
+        end
       end
 
       factory :old_student do
@@ -162,6 +189,8 @@ FactoryGirl.define do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
     login_type 'email'
+
+    initialize_with {Section.new(attributes)}
   end
 
   factory :game do

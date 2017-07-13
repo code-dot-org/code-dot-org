@@ -1,5 +1,5 @@
 import React from 'react';
-import ContentContainer from './ContentContainer';
+import ContentContainer from '../ContentContainer';
 import SectionsTable from './SectionsTable';
 import SetUpMessage from './SetUpMessage';
 import JoinSection from './JoinSection';

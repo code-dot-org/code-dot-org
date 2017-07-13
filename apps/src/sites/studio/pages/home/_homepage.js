@@ -20,7 +20,7 @@ function showHomepage() {
 
   ReactDOM.render (
     <div>
-      {showUiTips && (
+      {(isTeacher && showUiTips) && (
         <UiTips
           userId={userId}
           tipId="homepage_header"
@@ -40,9 +40,39 @@ function showHomepage() {
           }}
           tips={
             [
-              {type: "initial", position: {top: 80, left: 100}, text: i18n.homepageUiTipKeyLinks(), arrowDirection: "up"},
-              {type: "initial", position: {top: 80, right: 15}, text: i18n.homepageUiTipOtherLinks(), arrowDirection: "up_corner"},
-              {type: "triggered", position: {top: 80, right: 15}, text: i18n.homepageUiTipAlreadyHome(), triggerId: "logo_home_link", arrowDirection: "up_corner"}
+              {
+                type: "initial",
+                position: {top: 80, left: 100},
+                text: i18n.homepageUiTipKeyLinks(),
+                arrowDirection: "up"
+              },
+              {
+                type: "initial",
+                position: {top: 80, right: 15},
+                text: i18n.homepageUiTipOtherLinks(),
+                arrowDirection: "up_corner"
+              },
+              {
+                type: "triggered",
+                position: {top: 80, right: 15},
+                text: i18n.homepageUiTipAlreadyHome(),
+                triggerId: "logo_home_link",
+                arrowDirection: "up_corner"}
+            ]}
+        />
+      )}
+
+      {(!isTeacher && showUiTips) && (
+        <UiTips
+          tips={
+            [
+              {
+                type: "triggered",
+                position: {top: 80, right: 15},
+                text: i18n.homepageUiTipAlreadyHome(),
+                triggerId: "logo_home_link",
+                arrowDirection: "up_corner"
+              }
             ]}
         />
       )}
@@ -54,8 +84,9 @@ function showHomepage() {
               heading: i18n.announcementHeading(),
               buttonText: i18n.learnMore(),
               description: i18n.announcementDescription(),
-              link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the",
-              image: "redesign-screencast"
+              link: "http://teacherblog.code.org/post/162400738379/ap-cs-principles-score-distributions-released-from",
+              image: "",
+              id: "ap_csp_scores_2017"
             }
           ]}
           courses={homepageData.courses}

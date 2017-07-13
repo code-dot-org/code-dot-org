@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ContentContainer from './ContentContainer';
+import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpMessage from './SetUpMessage';
 import SeeMoreCourses from './SeeMoreCourses';
@@ -31,6 +31,7 @@ const RecentCourses = React.createClass({
     const { courses, showAllCoursesLink, isTeacher, heading, isRtl, studentTopCourse } = this.props;
     const topFourCourses = courses.length >= 4 ? courses.slice(0,4) : courses;
     const moreCourses = courses.length > 4 ? courses.slice(4) : [];
+    const hasCourse = courses.length > 0 || studentTopCourse;
 
     return (
       <div>
@@ -69,7 +70,7 @@ const RecentCourses = React.createClass({
               isRtl={isRtl}
             />
           )}
-          {!isTeacher && (
+          {hasCourse && (
             <Notification
               type="course"
               notice={i18n.findCourse()}
@@ -79,7 +80,7 @@ const RecentCourses = React.createClass({
               dismissible={false}
             />
           )}
-          {courses.length === 0 && !studentTopCourse && (
+          {!hasCourse && (
             <SetUpMessage
               type="courses"
               isRtl={isRtl}
