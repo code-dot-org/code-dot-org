@@ -28,11 +28,11 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will only need to move once to get to the hole.\",\"hint_id\":\"courseD_farmer_while2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c10109549bc731bb95bdfe51deb6768f/courseD_farmer_while2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need the `fill 1` block six times. Can you use a loop to make this simpler?\",\"hint_id\":\"courseD_farmer_while2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/74645bd08df132afb075792e5e1517f1/courseD_farmer_while2.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
