@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Anthony Bau.
  * MIT License.
  *
- * Date: 2017-07-10
+ * Date: 2017-07-13
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -10857,7 +10857,7 @@ exports.Draw = Draw = (function() {
           this.element.style.display = 'none';
         }
         this.active = false;
-        this.parent = (ref = (ref1 = this.element) != null ? ref1.parentElement : void 0) != null ? ref : self.ctx;
+        this.parent = (ref = (ref1 = this.element) != null ? ref1.parentNode : void 0) != null ? ref : self.ctx;
       }
 
       ElementWrapper.prototype.manifest = function() {
@@ -10867,7 +10867,7 @@ exports.Draw = Draw = (function() {
           if (!this.active) {
             return this.element.style.display = 'none';
           }
-        } else if (this.element.parentElement == null) {
+        } else if (this.element.parentNode == null) {
           return this.getParentElement().appendChild(this.element);
         }
       };
@@ -10907,7 +10907,7 @@ exports.Draw = Draw = (function() {
         this.parent = parent;
         if (this.element != null) {
           parent = this.getParentElement();
-          if (parent !== this.element.parentElement) {
+          if (parent !== this.element.parentNode) {
             return parent.appendChild(this.element);
           }
         }
@@ -10915,8 +10915,8 @@ exports.Draw = Draw = (function() {
 
       ElementWrapper.prototype.destroy = function() {
         if (this.element != null) {
-          if (this.element.parentElement != null) {
-            return this.element.parentElement.removeChild(this.element);
+          if (this.element.parentNode != null) {
+            return this.element.parentNode.removeChild(this.element);
           }
         }
       };
