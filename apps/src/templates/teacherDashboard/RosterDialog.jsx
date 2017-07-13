@@ -55,7 +55,7 @@ const styles = {
   },
 };
 
-const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length ?
+const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classrooms.length ?
   <div>
     {classrooms.map(classroom => (
       <div
@@ -81,15 +81,21 @@ const ClassroomList = ({classrooms, onSelect, selectedId}) => classrooms.length 
     <p>
       {locale.noClassroomsFound()}
     </p>
-    <a href="https://classroom.google.com/">
-      {locale.addRemoveGoogleClassrooms()}
-    </a>
+    {provider === 'google' ?
+      <a href="https://classroom.google.com/">
+        {locale.addRemoveGoogleClassrooms()}
+      </a> :
+      <a href="https://clever.com/">
+        {locale.addRemoveCleverClassrooms()}
+      </a>
+    }
   </div>
 ;
 ClassroomList.propTypes = {
   classrooms: React.PropTypes.array.isRequired,
   onSelect: React.PropTypes.func.isRequired,
   selectedId: React.PropTypes.string,
+  provider: React.PropTypes.oneOf(['google', 'clever']),
 };
 
 const LoadError = ({error, studioUrl}) =>
@@ -114,6 +120,7 @@ export default class RosterDialog extends React.Component {
     classrooms: React.PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     studioUrl: React.PropTypes.string.isRequired,
+    provider: React.PropTypes.oneOf(['google', 'clever']),
   }
 
   constructor(props) {
@@ -144,7 +151,10 @@ export default class RosterDialog extends React.Component {
         {...this.props}
       >
         <h2 style={styles.title}>
-          {locale.selectGoogleClassroom()}
+          {this.props.provider === 'google' ?
+            locale.selectGoogleClassroom() :
+            locale.selectCleverClassroom()
+          }
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?
@@ -157,6 +167,7 @@ export default class RosterDialog extends React.Component {
                 classrooms={this.props.classrooms}
                 onSelect={this.onClassroomSelected}
                 selectedId={this.state.selectedId}
+                provider={this.props.provider}
               /> :
               locale.loading()
           }
