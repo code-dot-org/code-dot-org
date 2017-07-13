@@ -8,6 +8,10 @@ import i18n from '@cdo/locale';import {
   updateSection,
 } from './teacherSectionsRedux';
 
+const initialState = {
+  loginType: undefined,
+};
+
 export class AddSectionDialog extends Component {
   static propTypes = {
     handleClose: PropTypes.func,
@@ -17,10 +21,13 @@ export class AddSectionDialog extends Component {
   };
 
   state = {
-    loginType: ''
+    ...initialState,
   };
 
-  handleClose = () => this.props.handleClose();
+  handleClose = () => {
+    this.props.handleClose();
+    this.setState(initialState);
+  };
 
   handleLoginChoice = (loginType) => {
     this.setState({loginType});
@@ -60,7 +67,7 @@ export class AddSectionDialog extends Component {
   };
 
   renderContent() {
-    if (this.state.loginType === '') {
+    if (!this.state.loginType) {
       return (
         <AddInitialStudentsView
           sectionName="Foobar"
@@ -84,7 +91,6 @@ export class AddSectionDialog extends Component {
         isOpen={this.props.isOpen}
         handleClose={this.handleClose}
         assetUrl={() => ''}
-        {...this.props}
       >
         <PadAndCenter>
           {this.renderContent()}
