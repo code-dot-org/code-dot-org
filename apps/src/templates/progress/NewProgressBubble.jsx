@@ -17,7 +17,12 @@ import { levelType } from './progressTypes';
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
+const SQUARE_DOT_SIZE = 20;
 const SMALL_DOT_SIZE = 7;
+// TODO: small diamonds
+
+// TODO:(bjvanminnen) - The line behind a set of ProgressBubbles doesnt seem to
+// be quite vertically centered. This should be addressed at some point.
 
 const styles = {
   main: {
@@ -39,6 +44,26 @@ const styles = {
     marginTop: 5,
     marginBottom: 5,
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+  },
+  diamond: {
+    width: SQUARE_DOT_SIZE,
+    height: SQUARE_DOT_SIZE,
+    lineHeight: SQUARE_DOT_SIZE + 'px',
+    marginTop: 10,
+    marginBottom: 10,
+    // slightly more margin to account for the fact that this is computed on the
+    // pre-rotated diamond
+    marginLeft: 5,
+    marginRight: 5,
+    borderRadius: 0,
+    transform: 'rotate(45deg)'
+  },
+  contents: {
+    whiteSpace: 'nowrap'
+  },
+  diamondContents: {
+    // undo the rotation from the parent
+    transform: 'rotate(-45deg)'
   },
   enabled: {
     ':hover': {
@@ -91,6 +116,7 @@ const NewProgressBubble = React.createClass({
       ...styles.main,
       ...(!disabled && styles.enabled),
       ...(smallBubble && styles.smallBubble),
+      ...(level.isConceptLevel && styles.diamond),
       ...(BUBBLE_COLORS[disabled ? LevelStatus.not_tried : status])
     };
 
@@ -107,25 +133,32 @@ const NewProgressBubble = React.createClass({
         data-tip data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-        {levelIcon !== 'lock' && (
-          <span
-            style={smallBubble ? styles.smallBubbleSpan : undefined}
-          >
-            {number}
-          </span>
-        )}
-        <ReactTooltip
-          id={tooltipId}
-          role="tooltip"
-          wrapper="span"
-          effect="solid"
+        <div
+          style={{
+            ...styles.contents,
+            ...(level.isConceptLevel && styles.diamondContents)
+          }}
         >
-          <div style={styles.tooltip}>
-            <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-            {number}. {levelName}
-          </div>
-        </ReactTooltip>
+          {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
+          {levelIcon !== 'lock' && (
+            <span
+              style={smallBubble ? styles.smallBubbleSpan : undefined}
+            >
+              {number}
+            </span>
+          )}
+          <ReactTooltip
+            id={tooltipId}
+            role="tooltip"
+            wrapper="span"
+            effect="solid"
+          >
+            <div style={styles.tooltip}>
+              <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+              {number}. {levelName}
+            </div>
+          </ReactTooltip>
+        </div>
       </div>
     );
 
