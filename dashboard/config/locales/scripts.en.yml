@@ -5666,7 +5666,7 @@ en:
               name: Thursday
             Wrap Up:
               name: Wrap Up
-          title: CS Principles TeacherCon Novice Facilitators
+          title: CS Principles TeacherCon Novice Facilitator Reflection
           description_audience: CSP Novice Facilitators
           description_short: Reflection questions for novice facilitators at TeacherCon.
           description: 'A place to keep track of your reflection from TeacherCon as a novice facilitator. '
@@ -5692,7 +5692,53 @@ en:
           stages:
             Deeper Learning Overview:
               name: Deeper Learning Overview
+            Complete your Deeper Learning:
+              name: Complete your Deeper Learning
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
           title: CSP Unit 1 Deeper Learning
           description_audience: CS Principles Facilitators in Training
           description_short: 'Deeper Learning materials for CSP facilitators in training '
           description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 1 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning:
+              name: Complete Unit 2 Deeper Learning
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CSP Unit 2 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 2 Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CSP Unit 3 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 3 Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CSP Unit 4 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+        csp5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CSP Unit 5 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '

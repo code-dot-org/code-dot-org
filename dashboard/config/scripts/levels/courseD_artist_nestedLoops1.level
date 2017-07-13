@@ -34,9 +34,9 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The easiest way to draw this is to move forward and use right turns.\",\"hint_id\":\"courseD_artist_nestedLoops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/45d5ce91e3e7e37008f460f520eaa199/courseD_artist_nestedLoops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can draw this triangle with a `repeat` loop with two blocks inside. Which blocks do you need?\",\"hint_id\":\"courseD_artist_nestedLoops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/391918f44670a237a6fd063bfb43a6c9/courseD_artist_nestedLoops1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try writing the steps on paper and looking for patterns that can be simplified with loops.\",\"hint_id\":\"courseD_artist_nestedLoops1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b3d68820f0d5705900e29fb8f49ce9a4/courseD_artist_nestedLoops1.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

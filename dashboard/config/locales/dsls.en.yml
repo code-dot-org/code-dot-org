@@ -7616,20 +7616,12 @@ en:
         I don't know: I don't know
         ? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
         : Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
-        ? Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
-        : Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
         'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Look closely at the code below.  What do you think will happen when you click "Run"? '
         Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
         ? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
         : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
         The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
-        The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn: The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn
-        The farmer will go to the sprout and try to pick lettuce no matter what.: The farmer will go to the sprout and try to pick lettuce no matter what.
-        ? The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
-        : The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
         The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
-        ? We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
-        : We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
       courseE_multi_farmer_predict2:
         Correct!: Correct!
         I don't know.: I don't know.

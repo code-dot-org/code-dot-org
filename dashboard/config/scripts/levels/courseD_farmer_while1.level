@@ -29,11 +29,11 @@
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
     "markdown_instructions": "*\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"*  \r\n\r\nMove to the pile of dirt and use the `remove` block to remove it.",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to move forward four times to get to the pile. Can you use a `repeat` loop for this?\",\"hint_id\":\"courseD_farmer_while1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a84a6c1d9cac070019f17f53ef75d5ed/courseD_farmer_while1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `remove 1` block when you are standing on the pile of dirt to remove it.\",\"hint_id\":\"courseD_farmer_while1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5971c2eda5489b7804d7934b8515197/courseD_farmer_while1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
