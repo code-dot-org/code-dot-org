@@ -230,7 +230,6 @@ class SectionRow extends Component {
       lightRow,
       sections,
       sectionId,
-      validLoginTypes,
       validGrades,
       validAssignments,
       primaryAssignmentIds
