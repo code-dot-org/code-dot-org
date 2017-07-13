@@ -424,26 +424,65 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
   end
 
-  test 'time constraints' do
-    # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
-    workshop_2_3_18 = create :pd_workshop,
-      course: Pd::Workshop::COURSE_ECS,
-      subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
-      num_sessions: 2
-    assert_equal 2, workshop_2_3_18.min_attendance_days
-    assert_equal 2, workshop_2_3_18.effective_num_days
-    assert_equal 12, workshop_2_3_18.effective_num_hours
+  test 'time_constraint returns nil for any type when no entry exists for the workshop subject' do
+    setup_mock_time_constraint(nil)
+    assert_nil @workshop.time_constraint(:min_hours)
+  end
 
-    # Add 2 more sessions for a total of 4. It should cap at 3 days / 18 hours
-    workshop_2_3_18.sessions << [create(:pd_session), create(:pd_session)]
-    assert_equal 3, workshop_2_3_18.effective_num_days
-    assert_equal 18, workshop_2_3_18.effective_num_hours
+  test 'time_constraint returns the constraint for the specified type when one exists' do
+    setup_mock_time_constraint({min_hours: 10})
+    assert_equal 10, @workshop.time_constraint(:min_hours)
+  end
 
-    # No entry: min 1, max unlimited
-    workshop_no_constraint = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, num_sessions: 2
-    assert_equal 1, workshop_no_constraint.min_attendance_days
-    assert_equal 2, workshop_no_constraint.effective_num_days
-    assert_equal 12, workshop_no_constraint.effective_num_hours
+  test 'time_constraint returns the nil when no constraint exists for the specified type' do
+    setup_mock_time_constraint({min_hours: 10})
+    assert_nil @workshop.time_constraint(:max_hours)
+  end
+
+  test 'min_attendance_days with no min_days constraint returns 1' do
+    @workshop.expects(:time_constraint).with(:min_days).returns(nil)
+    assert_equal 1, @workshop.min_attendance_days
+  end
+
+  test 'min_attendance_days with min_days constraint returns that constraint' do
+    @workshop.expects(:time_constraint).with(:min_days).returns(100)
+    assert_equal 100, @workshop.min_attendance_days
+  end
+
+  test 'effective_num_days with no max_days constraint returns the session count' do
+    @workshop.sessions.expects(:count).returns(10)
+    @workshop.expects(:time_constraint).with(:max_days).returns(nil)
+    assert_equal 10, @workshop.effective_num_days
+  end
+
+  test 'effective_num_days with max_days constraint lower than the session count returns the constraint' do
+    @workshop.sessions.expects(:count).returns(10)
+    @workshop.expects(:time_constraint).with(:max_days).returns(5)
+    assert_equal 5, @workshop.effective_num_days
+  end
+
+  test 'effective_num_days with max_days constraint greater than the session count returns the session count' do
+    @workshop.sessions.expects(:count).returns(10)
+    @workshop.expects(:time_constraint).with(:max_days).returns(50)
+    assert_equal 10, @workshop.effective_num_days
+  end
+
+  test 'effective_num_hours with no max_hours constraint returns the total session hours' do
+    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
+    @workshop.expects(:time_constraint).with(:max_hours).returns(nil)
+    assert_equal 20, @workshop.effective_num_hours
+  end
+
+  test 'effective_num_hours with max_hours constraint lower than the session hours returns the constraint' do
+    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
+    @workshop.expects(:time_constraint).with(:max_hours).returns(15)
+    assert_equal 15, @workshop.effective_num_hours
+  end
+
+  test 'effective_num_hours with max_hours constraint greater than the session hours returns the session hours' do
+    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
+    @workshop.expects(:time_constraint).with(:max_hours).returns(50)
+    assert_equal 20, @workshop.effective_num_hours
   end
 
   test 'teacherCon workshops are capped at 33.5 hours' do
@@ -696,5 +735,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   def today
     Date.today.in_time_zone
+  end
+
+  def setup_mock_time_constraint(constraint_hash)
+    Pd::Workshop.send(:remove_const, :TIME_CONSTRAINTS_BY_SUBJECT)
+    mock_time_constraints_by_subject = mock
+    mock_time_constraints_by_subject.expects(:[]).returns(constraint_hash)
+    Pd::Workshop.const_set :TIME_CONSTRAINTS_BY_SUBJECT, mock_time_constraints_by_subject
   end
 end
