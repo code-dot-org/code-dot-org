@@ -6,7 +6,7 @@ import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
-import { loadClassroomList } from './googleClassroomRedux';
+import { loadClassroomList, importClassroomStarted } from './googleClassroomRedux';
 import { classroomShape, loadErrorShape } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
@@ -35,6 +35,7 @@ class SectionsPage extends Component {
     setSections: PropTypes.func.isRequired,
     setValidAssignments: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
+    importClassroomStarted: PropTypes.func.isRequired,
   };
 
   state = {
@@ -71,10 +72,21 @@ class SectionsPage extends Component {
     this.props.loadClassroomList();
   };
 
-  handleImportClose = (selectedId) => {
+  handleImportCancel = () => {
     this.setState({rosterDialogOpen: false});
-    // TODO (josh): use `selectedId`.
-    console.log(selectedId);
+  };
+
+  handleImport = courseId => {
+    this.props.importClassroomStarted();
+
+    $.getJSON('/dashboardapi/import_google_classroom', { courseId }).then(() => {
+      this.setState({rosterDialogOpen: false, sectionsLoaded: false});
+
+      $.getJSON("/v2/sections/").done(results => {
+        this.props.setSections(results, true);
+        this.setState({sectionsLoaded: true});
+      });
+    });
   };
 
   addSection = () => this.props.newSection();
@@ -120,7 +132,8 @@ class SectionsPage extends Component {
         {sectionsLoaded && numSections > 0 && <SectionTable/>}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
-          handleClose={this.handleImportClose}
+          handleImport={this.handleImport}
+          handleCancel={this.handleImportCancel}
           classrooms={this.props.classrooms}
           loadError={this.props.loadError}
           studioUrl={this.props.studioUrl}
@@ -136,4 +149,4 @@ export default connect(state => ({
   studioUrl: state.teacherSections.studioUrl,
   classrooms: state.googleClassroom.classrooms,
   loadError: state.googleClassroom.loadError,
-}), { newSection, setSections, setValidAssignments, loadClassroomList })(SectionsPage);
+}), { newSection, setSections, setValidAssignments, loadClassroomList, importClassroomStarted })(SectionsPage);

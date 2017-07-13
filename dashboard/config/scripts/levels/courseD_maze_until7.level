@@ -30,11 +30,10 @@
     "step_mode": "1",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need your code to be any longer, just because the maze is!\",\"hint_id\":\"courseD_maze_until7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c707fda19401c4212fd31ea93847c93/courseD_maze_until7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Although there are more turns than the last puzzle, your code can be almost identical because of the `repeat until` block!\",\"hint_id\":\"courseD_maze_until7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e204da8276ebceb98ba97ca9b24a73cc/courseD_maze_until7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to check for paths to the left, since turning right will lead you astray!\",\"hint_id\":\"courseD_maze_until7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/47757b83976f9129b68b004735618476/courseD_maze_until7.mp3\"}]",
     "ideal": "5",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

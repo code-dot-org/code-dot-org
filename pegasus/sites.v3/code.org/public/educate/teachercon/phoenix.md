@@ -18,6 +18,18 @@ TeacherCon Phoenix
 TeacherCon is an intensive, hands-on, in-person workshop providing foundational experiences with computer science and the Code.org suite of tools. The five-day workshop is the primary capacity building experience for teachers prior to their first year of instruction. Participants will explore the curriculum and tools, consider and experiment with specific classroom management and teaching strategies, and build a local community of teachers who are also using this curriculum.
 
 ## **Travel & Hotel Information**
+### NEW INFO: How to get from the airport to the hotel!
+**Want to share a ride from the airport to the hotel with fellow TeacherCon attendees?**
+<p>
+For privacy reasons, Code.org is not able to share attendee contact information, but you're welcome to meet up with each other at the airport and ride together to the hotel. If you'd like to share a ride, our suggestion is to join a group meeting every 30 minutes between 10 am and 4:30 pm inside the airport (see suggested meeting locations below), and then find a taxi, Uber, or Lyft together. **Please note that Code.org staff will not be at the meeting location.** When you get to the meeting location, make sure to ask others nearby if they are part of TeacherCon.
+</p> 
+
+**Suggested meeting locations at PHX Sky Harbor:**
+
+- Terminal 2: Meet at door 7
+- Terminal 3: Meet at door 4
+- Terminal 4: Meet at door 1
+
 <details>
   <summary>**Hotel Information**</summary>
   <p>
