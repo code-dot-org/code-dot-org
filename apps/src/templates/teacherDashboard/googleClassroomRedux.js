@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
@@ -34,7 +36,7 @@ export default function googleClassroom(state = initialState, action) {
   if (action.type === IMPORT_CLASSROOM_STARTED) {
     return {
       ...state,
-      classrooms: undefined,
+      classrooms: null,
     };
   }
 
