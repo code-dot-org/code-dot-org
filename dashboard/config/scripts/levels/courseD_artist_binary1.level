@@ -34,10 +34,10 @@
     "permitted_errors": "0",
     "discard_background": "false",
     "instructions_important": "true",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Replace the \\\"???\\\" with the binary image you want, in zeroes and ones.\",\"hint_id\":\"courseD_artist_binary1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/53bb6d9bd84bed43ff56c0ab24f69fea/courseD_artist_binary1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The artist will draw a white space for every 1 and a black space for every 0.\",\"hint_id\":\"courseD_artist_binary1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc0d49e87884141b7e83104d684c70f0/courseD_artist_binary1.mp3\"}]",
     "hide_share_and_remix": "false",
-    "disable_if_else_editing": "false"
+    "disable_if_else_editing": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
