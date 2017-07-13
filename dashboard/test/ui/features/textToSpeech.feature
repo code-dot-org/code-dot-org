@@ -39,7 +39,7 @@ Scenario: Listen to TTS Audio in CSF
 
 Scenario: Listen to TTS Audio in CSD
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1?enableExperiments=CSDTTS"
+  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/1"
   And I wait for the page to fully load
   
   # note: we expect audio for csd instructions
@@ -50,7 +50,7 @@ Scenario: Listen to TTS Audio in CSD
 
 Scenario: Listen to TTS Audio in CSP
   Given I am a student
-  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2?enableExperiments=CSDTTS"
+  And I am on "http://studio.code.org/s/allthettsthings/stage/1/puzzle/2"
   And I wait for the page to fully load
 
   # note: we expect audio for csp instructions

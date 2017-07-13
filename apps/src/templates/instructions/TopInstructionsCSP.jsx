@@ -8,7 +8,6 @@ import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
 import InlineAudio from './InlineAudio';
-import experiments from '../../util/experiments';
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -199,9 +198,7 @@ var TopInstructions = React.createClass({
         <PaneHeader hasFocus={false}>
 
           <div style={styles.paneHeaderOverride}>
-            {experiments.isEnabled('CSDTTS') &&
-              <InlineAudio src={ttsUrl} style={audioStyle}/>
-            }
+            <InlineAudio src={ttsUrl} style={audioStyle}/>
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
