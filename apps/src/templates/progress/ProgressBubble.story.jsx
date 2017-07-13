@@ -13,21 +13,27 @@ export default storybook => {
         name: `bubble status: ${status}`,
         story: () => (
           <ProgressBubble
-            number={3}
-            status={status}
-            url="/foo/bar"
+            level={{
+              levelNumber: 3,
+              status: status,
+              url: "/foo/bar",
+              icon: status === LevelStatus.locked ? "fa-lock": "fa-document"
+            }}
             disabled={status === LevelStatus.locked}
-            levelIcon={status === LevelStatus.locked ? "lock": "document"}
           />
         )
       })).concat([{
         name:'bubble with no url',
         story: () => (
           <ProgressBubble
-            number={3}
-            status={LevelStatus.perfect}
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.perfect,
+              url: "/foo/bar",
+              icon: "fa-document"
+            }}
             disabled={false}
-            levelIcon="document"
+
           />
         )
       }, {
@@ -35,11 +41,13 @@ export default storybook => {
         description: 'Should not be clickable or show progress',
         story: () => (
           <ProgressBubble
-            number={3}
-            status={LevelStatus.perfect}
-            url="/foo/bar"
+            level={{
+              levelNumber: 3,
+              status: LevelStatus.perfect,
+              url: "/foo/bar",
+              icon: "fa-document"
+            }}
             disabled={true}
-            levelIcon="document"
           />
         )
       }])
