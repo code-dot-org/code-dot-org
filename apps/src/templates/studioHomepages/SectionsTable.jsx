@@ -73,7 +73,6 @@ export const styles = {
     borderLeftWidth: 1,
     borderLeftColor: color.border_light_gray,
     borderLeftStyle: 'solid',
-    display: 'none'
   },
   colText: {
     color: color.charcoal,
@@ -178,7 +177,7 @@ const SectionsTable = React.createClass({
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
                 {section.sectionCode}
               </td>
-              {!isTeacher && (
+              {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   <ProgressButton
                     style={{marginLeft: 5}}
