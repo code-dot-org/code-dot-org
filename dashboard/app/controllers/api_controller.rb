@@ -4,6 +4,26 @@ class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
+  private def query_clever_service(endpoint)
+    RestClient.get "https://api.clever.com/#{endpoint}", {authorization: "Bearer #{current_user.oauth_token}"}
+  end
+
+  def clever_classrooms
+    response = JSON.parse query_clever_service("v1.1/teachers/#{current_user.uid}/sections")
+
+    json = response['data'].map do |section|
+      data = section['data']
+      {
+        id: data['id'],
+        name: data['course_name'],
+        section: data['course_number'],
+        enrollment_code: data['sis_id'],
+      }
+    end
+
+    render json: {courses: json}
+  end
+
   GOOGLE_AUTH_SCOPES = [
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
