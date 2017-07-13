@@ -86,11 +86,27 @@ export class AddSectionDialog extends Component {
         assetUrl={() => ''}
         {...this.props}
       >
-      {this.renderContent()}
+        <PadAndCenter>
+          {this.renderContent()}
+        </PadAndCenter>
       </BaseDialog>
     );
   }
 }
 
-
 export default connect(() => ({}), { updateSection })(AddSectionDialog);
+
+const PadAndCenter = ({children}) => (
+  <div
+    style={{
+      display: 'flex',
+      flexFlow: 'row',
+      justifyContent: 'center',
+      marginTop: 20,
+      marginBottom: 20,
+    }}
+  >
+    {children}
+  </div>
+);
+PadAndCenter.propTypes = {children: PropTypes.any};
