@@ -19,8 +19,7 @@ import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
  *   page load
  * @param {string} data.studiourlprefix
  * @param {string[]} data.valid_login_types
- * @param {string[]} data.valid_Grades
- * @param {object[]} data.valid_courses
+ * @param {string[]} data.valid_grades
  * @param {object[]} data.valid_scripts
  */
 export function renderSectionsPage(data) {
