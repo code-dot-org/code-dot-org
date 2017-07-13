@@ -1563,6 +1563,18 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'assign_course_as_facilitator assigns course to facilitator' do
+    facilitator = create :facilitator
+    facilitator.course_as_facilitator = Pd::Workshop::COURSES.last
+    assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSES.last).any?
+  end
+
+  test 'delete_course_as_facilitator removes facilitator course' do
+    facilitator = create :facilitator
+    facilitator.delete_course_as_facilitator Pd::Workshop::COURSES.first
+    refute facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSES.first).any?
+  end
+
   test 'should_see_inline_answer? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
