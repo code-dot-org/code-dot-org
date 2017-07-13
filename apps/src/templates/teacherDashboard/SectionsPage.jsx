@@ -80,8 +80,7 @@ class SectionsPage extends Component {
     this.props.importClassroomStarted();
 
     $.getJSON('/dashboardapi/import_google_classroom', { courseId }).then(() => {
-      this.setState({rosterDialogOpen: false});
-      this.setState({sectionsLoaded: false});
+      this.setState({rosterDialogOpen: false, sectionsLoaded: false});
 
       $.getJSON("/v2/sections/").done(results => {
         this.props.setSections(results, true);
