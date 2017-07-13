@@ -14,8 +14,8 @@ import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 const styles = {
   headerContainer: {
     // With our new bubble we don't want any padding above/below
-    paddingTop: experiments.isEnabled('progressBubbles') ? 0 : 5,
-    paddingBottom: experiments.isEnabled('progressBubbles') ? 0 : 5,
+    paddingTop: 5,
+    paddingBottom: 5,
     paddingLeft: 5,
     paddingRight: 5,
     backgroundColor: color.lightest_gray,
@@ -46,8 +46,16 @@ const StageProgress = React.createClass({
     const { levels, stageId } = this.props;
     const experimentEnabled = experiments.isEnabled('progressBubbles');
 
+    const headerStyle = {
+      ...styles.headerContainer,
+      ...(experimentEnabled && {
+        paddingTop: 0,
+        paddingBottom: 0
+      })
+    };
+
     return (
-      <div className="react_stage" style={styles.headerContainer}>
+      <div className="react_stage" style={headerStyle}>
         {!experimentEnabled && levels.map((level, index) =>
           <StatusProgressDot
             key={index}
