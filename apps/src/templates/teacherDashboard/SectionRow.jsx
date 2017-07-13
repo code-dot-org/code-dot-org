@@ -274,7 +274,7 @@ class SectionRow extends Component {
               defaultValue={section.loginType}
               ref={element => this.loginType = element}
             >
-              {validLoginTypes.map((type, index) => (
+              {['word', 'picture', 'email'].map((type, index) => (
                 <option key={index} value={type}>{type}</option>
               ))}
             </select>
