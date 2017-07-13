@@ -16,7 +16,7 @@ module Pd::WorkshopSurveyResultsHelper
   def summarize_workshop_surveys(surveys, facilitator = nil)
     # Works on arrays where everything is either a teachercon survey or workshop survey
     # (but not both)
-    raise 'Currently just sumarizes Teachercon surveys' unless
+    raise 'Currently just summarizes Local Summer and Teachercon surveys' unless
       surveys.all? {|survey| survey.is_a? Pd::TeacherconSurvey} ||
         surveys.all? {|survey| survey.is_a? Pd::LocalSummerWorkshopSurvey}
 
