@@ -7,6 +7,8 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import _ from 'lodash';
 import experiments from '@cdo/apps/util/experiments';
 import NewProgressBubble from './NewProgressBubble';
+import { getIconForLevel } from './progressHelpers';
+import { levelType } from './progressTypes';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -47,19 +49,17 @@ const styles = {
 
 const ProgressBubble = React.createClass({
   propTypes: {
-    // TODO(bjvanminnen): Most of these props we end up just extracting from
-    // level. It probably make sense (in a future PR) to just pass level, and
-    // have this class own extracting data from it.
-    number: PropTypes.number.isRequired,
-    status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
-    url: PropTypes.string,
+    level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
-    levelName: PropTypes.string,
-    levelIcon: PropTypes.string
   },
 
   render() {
-    const { number, status, url, levelName, levelIcon } = this.props;
+    const level = this.props.level;
+    const number = level.levelNumber;
+    const status = level.status;
+    const url = level.url;
+    const levelName = level.name || level.progression;
+    const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
 

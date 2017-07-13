@@ -13,6 +13,7 @@ import reducer, {
   setStudentDefaultsSummaryView,
   SignInState,
   levelsByLesson,
+  levelsForLessonId,
   progressionsFromLevels,
   categorizedLessons,
   statusForLevel,
@@ -555,7 +556,8 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: true,
-            levelNumber: undefined
+            levelNumber: undefined,
+            isCurrentLevel: false,
           },
           {
             status: 'not_tried',
@@ -564,7 +566,8 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 1
+            levelNumber: 1,
+            isCurrentLevel: false,
           },
           {
             status: 'not_tried',
@@ -573,7 +576,8 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 2
+            levelNumber: 2,
+            isCurrentLevel: false,
           }
         ],
         [
@@ -584,7 +588,8 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 1
+            levelNumber: 1,
+            isCurrentLevel: false,
           },
           {
             status: 'perfect',
@@ -593,7 +598,8 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 2
+            levelNumber: 2,
+            isCurrentLevel: false,
           },
           {
             status: 'attempted',
@@ -602,7 +608,8 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 3
+            levelNumber: 3,
+            isCurrentLevel: false,
           }
         ]
       ];
@@ -638,6 +645,32 @@ describe('progressReduxTest', () => {
       assert.equal(results[0][0].levelNumber, null);
       assert.equal(results[0][1].isUnplugged, false);
       assert.equal(results[0][1].levelNumber, 1);
+    });
+  });
+
+  describe('levelsForLessonId', () => {
+    it('returns levels for the given stage', () => {
+      const initializedState = reducer(undefined,
+        initProgress(initialScriptOverviewProgress));
+
+      const stageId = stageData[0].id;
+      const levels = levelsForLessonId(initializedState, stageId);
+      assert.strictEqual(levels.length, 3);
+    });
+
+    it('sets isCurrentLevel to true for current level only', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialScriptOverviewProgress)),
+        currentLevelId: stageData[0].levels[1].activeId.toString()
+      };
+
+      const stageId = stageData[0].id;
+      const levels = levelsForLessonId(initializedState, stageId);
+
+      assert.strictEqual(levels[0].isCurrentLevel, false, 'first level is not current');
+      assert.strictEqual(levels[1].isCurrentLevel, true, 'second level is current');
+      assert.strictEqual(levels[2].isCurrentLevel, false, 'third level is not current');
+
     });
   });
 

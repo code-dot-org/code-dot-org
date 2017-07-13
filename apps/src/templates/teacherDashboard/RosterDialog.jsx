@@ -108,7 +108,8 @@ LoadError.propTypes = {
 
 export default class RosterDialog extends React.Component {
   static propTypes = {
-    handleClose: React.PropTypes.func,
+    handleImport: React.PropTypes.func,
+    handleCancel: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
     classrooms: React.PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
@@ -118,24 +119,27 @@ export default class RosterDialog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.handleClose = this.handleClose.bind(this);
-    this.onClassroomSelected = this.onClassroomSelected.bind(this);
   }
 
-  handleClose() {
-    this.props.handleClose(this.state.selectedId);
-  }
+  importClassroom = () => {
+    this.props.handleImport(this.state.selectedId);
+    this.setState({selectedId: null});
+  };
 
-  onClassroomSelected(id) {
+  cancel = () => {
+    this.props.handleCancel();
+  };
+
+  onClassroomSelected = id => {
     this.setState({selectedId: id});
-  }
+  };
 
   render() {
     return (
       <BaseDialog
         useUpdatedStyles
         isOpen={this.props.isOpen}
-        handleClose={this.handleClose}
+        handleClose={this.cancel}
         assetUrl={() => ''}
         {...this.props}
       >
@@ -159,17 +163,18 @@ export default class RosterDialog extends React.Component {
         </div>
         <div style={styles.footer}>
           <button
-            onClick={this.handleClose}
+            onClick={this.cancel}
             style={{...styles.buttonPrimary, ...styles.buttonSecondary}}
           >
             {locale.dialogCancel()}
           </button>
           <button
-            onClick={this.handleClose}
+            onClick={this.importClassroom}
             style={Object.assign({},
               styles.buttonPrimary,
               !this.state.selectedId && {opacity: 0.5}
             )}
+            disabled={!this.state.selectedId}
           >
             {locale.chooseSection()}
           </button>
