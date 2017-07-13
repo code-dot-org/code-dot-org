@@ -206,7 +206,7 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {(!isTeacher && !isSignedOut) && (
+        {(!studentHomepagePreview && !isTeacher && !isSignedOut) && (
           <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>
