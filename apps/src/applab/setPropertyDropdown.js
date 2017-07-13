@@ -33,8 +33,8 @@ var PROP_INFO = {
   fontSize: { friendlyName: 'font-size', internalName: 'fontSize', type: 'number' },
   textAlign: { friendlyName: 'text-align', internalName: 'textAlign', type: 'string' },
   hidden: { friendlyName: 'hidden', internalName: 'hidden', type: 'boolean' },
-  text: { friendlyName: 'text', internalName: 'text', type: 'string' },
-  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'string' },
+  text: { friendlyName: 'text', internalName: 'text', type: 'uistring' },
+  placeholder: { friendlyName: 'placeholder', internalName: 'placeholder', type: 'uistring' },
   image: { friendlyName: 'image', internalName: 'image', type: 'string' },
   screenImage: { friendlyName: 'image', internalName: 'screen-image', type: 'string' },
   // pictureImage and picture both map to 'picture' internally, but allow us to accept
