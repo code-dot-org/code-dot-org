@@ -17,9 +17,9 @@ import { levelType } from './progressTypes';
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
-const SQUARE_DOT_SIZE = 20;
-const SMALL_DOT_SIZE = 7;
-// TODO: small diamonds
+const DIAMOND_DOT_SIZE = 20;
+const SMALL_DOT_SIZE = 9;
+const SMALL_DIAMOND_SIZE = 5;
 
 // TODO:(bjvanminnen) - The line behind a set of ProgressBubbles doesnt seem to
 // be quite vertically centered. This should be addressed at some point.
@@ -30,7 +30,7 @@ const styles = {
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE,
-    borderWidth: 1,
+    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     fontSize: 12,
@@ -38,17 +38,13 @@ const styles = {
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
     display: 'inline-block',
-    marginLeft: 3,
-    marginRight: 3,
-    // Top/Bottom margin of 5 is needed to get unplugged pills to line up correctly
-    marginTop: 5,
-    marginBottom: 5,
+    margin: 3,
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
   },
-  diamond: {
-    width: SQUARE_DOT_SIZE,
-    height: SQUARE_DOT_SIZE,
-    lineHeight: SQUARE_DOT_SIZE + 'px',
+  largeDiamond: {
+    width: DIAMOND_DOT_SIZE,
+    height: DIAMOND_DOT_SIZE,
+    lineHeight: DIAMOND_DOT_SIZE + 'px',
     marginTop: 10,
     marginBottom: 10,
     // slightly more margin to account for the fact that this is computed on the
@@ -56,10 +52,33 @@ const styles = {
     marginLeft: 5,
     marginRight: 5,
     borderRadius: 0,
-    transform: 'rotate(45deg)'
+    transform: 'rotate(45deg)',
+  },
+  small: {
+    width: SMALL_DOT_SIZE,
+    height: SMALL_DOT_SIZE,
+    borderRadius: SMALL_DOT_SIZE,
+    lineHeight: SMALL_DOT_SIZE + 'px',
+    fontSize: 0,
+    marginLeft: 2,
+    marginRight: 2,
+    marginTop: 0,
+    marginBottom: 0
+  },
+  smallDiamond: {
+    width: SMALL_DIAMOND_SIZE,
+    height: SMALL_DIAMOND_SIZE,
+    lineHeight: SMALL_DIAMOND_SIZE + 'px',
+    borderRadius: 0,
+    fontSize: 0,
+    transform: 'rotate(45deg)',
+    marginLeft: 3,
+    marginRight: 3,
+    position: 'relative',
+    top: 2
   },
   contents: {
-    whiteSpace: 'nowrap'
+    whiteSpace: 'nowrap',
   },
   diamondContents: {
     // undo the rotation from the parent
@@ -71,15 +90,6 @@ const styles = {
       color: color.white,
       backgroundColor: color.level_current
     }
-  },
-  smallBubble: {
-    width: SMALL_DOT_SIZE,
-    height: SMALL_DOT_SIZE,
-    borderRadius: SMALL_DOT_SIZE,
-    lineHeight: SMALL_DOT_SIZE + 'px',
-    fontSize: 0,
-    marginLeft: 2,
-    marginRight: 2
   },
   tooltip: {
     lineHeight: DOT_SIZE + 'px',
@@ -115,8 +125,8 @@ const NewProgressBubble = React.createClass({
     const style = {
       ...styles.main,
       ...(!disabled && styles.enabled),
-      ...(smallBubble && styles.smallBubble),
-      ...(level.isConceptLevel && styles.diamond),
+      ...(smallBubble && styles.small),
+      ...(level.isConceptLevel && (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
       ...(BUBBLE_COLORS[disabled ? LevelStatus.not_tried : status])
     };
 
