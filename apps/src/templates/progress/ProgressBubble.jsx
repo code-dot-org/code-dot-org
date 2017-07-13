@@ -54,6 +54,10 @@ const ProgressBubble = React.createClass({
   },
 
   render() {
+    if (experiments.isEnabled('progressBubbles')) {
+      return <NewProgressBubble {...this.props}/>;
+    }
+
     const level = this.props.level;
     const number = level.levelNumber;
     const status = level.status;
@@ -109,9 +113,4 @@ const ProgressBubble = React.createClass({
 // connector between bubbles
 ProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
 
-// If progressBubbles is enabled, use our NewProgressBubble instead
-let ExportedProgressBubble = Radium(ProgressBubble);
-if (experiments.isEnabled('progressBubbles')) {
-  ExportedProgressBubble = NewProgressBubble;
-}
-export default ExportedProgressBubble;
+export default Radium(ProgressBubble);
