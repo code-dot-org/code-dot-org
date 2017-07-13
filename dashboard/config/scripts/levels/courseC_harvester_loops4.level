@@ -32,11 +32,11 @@
     "fast_get_nectar_animation": "false",
     "ideal": "15",
     "step_speed": "2",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the new `pick corn` block to collect the corn.\",\"hint_id\":\"courseC_harvester_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0fde9173e7ce9c4a96658dcde04b5f5e/courseC_harvester_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can use multiple repeat loops in your code, some to pick corn and some to pick pumpkins.\",\"hint_id\":\"courseC_harvester_loops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/772b7ab76c3a6dfbc96fcdba4bf58bfc/courseC_harvester_loops4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.\",\"hint_id\":\"courseC_harvester_loops4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c428f9c713bab3d126b741b1119665e/courseC_harvester_loops4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

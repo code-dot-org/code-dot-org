@@ -576,5 +576,7 @@
   "projectLastUpdated": "Last updated",
   "projectStartNew": "Start a new project",
   "projectsViewProjectGallery": "View project gallery",
-  "projects": "Projects"
+  "projects": "Projects",
+  "teacherCourseHocLinkText": "View more Hour of code tutorials",
+  "teacherCoursesDescription": "Select your grade below to see all courses and professional learning offered by Code.org and 3rd party partners."
 }

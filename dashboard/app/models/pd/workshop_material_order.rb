@@ -90,6 +90,9 @@ module Pd
     scope :successfully_ordered, -> {where.not(order_id: nil)}
     scope :shipped, -> {where(order_status: MimeoRestClient::STATUS_SHIPPED)}
     scope :with_order_errors, -> {where.not(order_error: nil)}
+    scope :search_emails, ->(email_substring) do
+      joins(:enrollment).where('pd_enrollments.email LIKE ?', "%#{email_substring.strip.downcase}%")
+    end
 
     def full_address
       [street, apartment_or_suite, city, state, zip_code].compact.join(', ')
