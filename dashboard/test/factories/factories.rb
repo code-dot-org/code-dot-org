@@ -189,6 +189,8 @@ FactoryGirl.define do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
     login_type 'email'
+
+    initialize_with {Section.new(attributes)}
   end
 
   factory :game do

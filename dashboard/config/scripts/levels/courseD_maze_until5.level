@@ -30,11 +30,10 @@
     "step_mode": "1",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to use `if path to the left` to keep the zombie checking for a place to turn.\",\"hint_id\":\"courseD_maze_until5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec7f5609f025178b0830e2c228c7bd3c/courseD_maze_until5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To use only one `move forward`, put it inside the `repeat until sunflower` block.\",\"hint_id\":\"courseD_maze_until5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/619efbf260d1b1289e1e784d5647637f/courseD_maze_until5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"After each step, the zombie should check whether there is a path to the left. What should he do if he finds one?\",\"hint_id\":\"courseD_maze_until5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/24836ce537d2a376b6f6f8dcc52ce533/courseD_maze_until5.mp3\"}]",
     "ideal": "5",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "maze_data": null,
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
