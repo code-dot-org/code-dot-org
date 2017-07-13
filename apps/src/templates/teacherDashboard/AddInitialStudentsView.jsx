@@ -1,24 +1,27 @@
-import React, {Component, PropTypes} from 'react';
-import i18n from '@cdo/locale';
-import experiments from '../../util/experiments';
-import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
-import CardContainer from './CardContainer';
-import LoginTypeCard from './LoginTypeCard';
-
 /**
  * View shown to a teacher when beginning to add students to an empty section.
  * Lets the teacher decide whether to use word/picture logins, have students
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
+import React, {Component, PropTypes} from 'react';
+import i18n from '@cdo/locale';
+import experiments from '../../util/experiments';
+import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
+import CardContainer from './CardContainer';
+import DialogFooter from './DialogFooter';
+import LoginTypeCard from './LoginTypeCard';
+import ProgressButton from "../progress/ProgressButton";
+
 class AddInitialStudentsView extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
     handleLoginChoice: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
   };
 
   render() {
-    const {sectionName, handleLoginChoice} = this.props;
+    const {sectionName, handleLoginChoice, handleCancel} = this.props;
     const googleClassroom = experiments.isEnabled('googleClassroom');
     const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
     const clever = experiments.isEnabled('clever');
@@ -69,6 +72,14 @@ class AddInitialStudentsView extends Component {
             </CardContainer>
           </div>
         )}
+        <DialogFooter>
+          <ProgressButton
+            onClick={handleCancel}
+            text="Cancel"
+            size={ProgressButton.ButtonSize.large}
+            color={ProgressButton.ButtonColor.gray}
+          />
+        </DialogFooter>
       </div>
     );
   }

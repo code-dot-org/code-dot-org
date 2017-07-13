@@ -72,6 +72,7 @@ export class AddSectionDialog extends Component {
         <AddInitialStudentsView
           sectionName="Foobar"
           handleLoginChoice={this.handleLoginChoice}
+          handleCancel={this.handleClose}
         />
       );
     } else {
@@ -89,7 +90,7 @@ export class AddSectionDialog extends Component {
         useUpdatedStyles
         fixedWidth={1010}
         isOpen={this.props.isOpen}
-        handleClose={this.handleClose}
+        uncloseable
         assetUrl={() => ''}
       >
         <PadAndCenter>
