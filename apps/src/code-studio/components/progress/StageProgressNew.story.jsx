@@ -86,14 +86,14 @@ export default storybook => {
   }));
 
   storybook
-    .storiesOf('StageProgress', module)
+    .storiesOf('StageProgress - ProgressBubbleNew', module)
     .addStoryTable([
       {
         name: 'StageProgress example',
         // Provide an outer div to simulate some of the CSS that gets leaked into
         // this component
         story: () => {
-          experiments.setEnabled('progressBubbles', false);
+          experiments.setEnabled('progressBubbles', true);
           console.log('disable');
           return (
             <div style={{display: 'inline-block'}} className="header_level">
