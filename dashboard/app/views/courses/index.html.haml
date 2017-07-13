@@ -28,8 +28,8 @@
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml')
   = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
   = render partial: 'home/all_courses'
-  -if current_user && !current_user.teacher?
-    #user_hero
+  #user_hero
+    -if current_user && !current_user.teacher?
       = render template: 'api/user_hero'
   #flashes
     = show_flashes.html_safe
