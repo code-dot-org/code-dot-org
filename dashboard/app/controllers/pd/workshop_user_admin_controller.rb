@@ -23,12 +23,12 @@ class Pd::WorkshopUserAdminController < ApplicationController
   end
 
   def assign_course
-    Pd::CourseFacilitator.create(facilitator_id: facilitator_course_params[:facilitator_id], course: facilitator_course_params[:course])
+    User.find(facilitator_course_params[:facilitator_id]).try(:course_as_facilitator=, facilitator_course_params[:course])
     redirect_to action: "facilitator_courses_form", search_term: facilitator_course_params[:facilitator_id]
   end
 
   def remove_course
-    Pd::CourseFacilitator.find(facilitator_course_params[:course_facilitator_id]).try(:destroy)
+    User.find(facilitator_course_params[:facilitator_id]).try(:delete_course_as_facilitator, facilitator_course_params[:course])
     redirect_to action: "facilitator_courses_form", search_term: facilitator_course_params[:facilitator_id]
   end
 
