@@ -45,8 +45,8 @@ const styles = {
     width: DIAMOND_DOT_SIZE,
     height: DIAMOND_DOT_SIZE,
     lineHeight: DIAMOND_DOT_SIZE + 'px',
-    marginTop: 10,
-    marginBottom: 10,
+    marginTop: 8,
+    marginBottom: 8,
     // slightly more margin to account for the fact that this is computed on the
     // pre-rotated diamond
     marginLeft: 5,

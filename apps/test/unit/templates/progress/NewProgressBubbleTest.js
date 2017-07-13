@@ -103,6 +103,6 @@ describe('NewProgressBubble', () => {
       />
     );
 
-    assert.equal(wrapper.childAt(0).props().style.width, 7);
+    assert.equal(wrapper.childAt(0).props().style.width, 9);
   });
 });
