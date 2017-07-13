@@ -5,23 +5,39 @@ class ApiController < ApplicationController
   include LevelsHelper
 
   private def query_clever_service(endpoint)
-    RestClient.get "https://api.clever.com/#{endpoint}", {authorization: "Bearer #{current_user.oauth_token}"}
+    begin
+      auth = {authorization: "Bearer #{current_user.oauth_token}"}
+      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+    rescue RestClient::ExceptionWithResponse => e
+      render status: e.response.code, json: {error: e.response.body}
+    end
+
+    yield JSON.parse(response)['data']
   end
 
   def clever_classrooms
-    response = JSON.parse query_clever_service("v1.1/teachers/#{current_user.uid}/sections")
+    query_clever_service("v1.1/teachers/#{current_user.uid}/sections") do |response|
+      json = response.map do |section|
+        data = section['data']
+        {
+          id: data['id'],
+          name: data['course_name'],
+          section: data['course_number'],
+          enrollment_code: data['sis_id'],
+        }
+      end
 
-    json = response['data'].map do |section|
-      data = section['data']
-      {
-        id: data['id'],
-        name: data['course_name'],
-        section: data['course_number'],
-        enrollment_code: data['sis_id'],
-      }
+      render json: {courses: json}
     end
+  end
 
-    render json: {courses: json}
+  def import_clever_classroom
+    course_id = params[:courseId].to_s
+
+    query_clever_service("v1.1/sections/#{course_id}/students") do |students|
+      section = CleverSection.from_service(course_id, current_user.id, students)
+      render json: section.summarize
+    end
   end
 
   GOOGLE_AUTH_SCOPES = [
