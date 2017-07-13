@@ -31,7 +31,7 @@ describe( 'handler', ()=> {
       ],
       "detail": {
         "LifecycleActionToken": "87654321-4321-4321-4321-210987654321",
-        "AutoScalingGroupName": "my-asg",
+        "AutoScalingGroupName": "adhoc-abcdef",
         "LifecycleHookName": "my-lifecycle-hook",
         "EC2InstanceId": instanceId,
         "LifecycleTransition": "autoscaling:EC2_INSTANCE_LAUNCHING"
@@ -107,7 +107,7 @@ describe( 'handler', ()=> {
       ],
       "detail": {
         "LifecycleActionToken":"87654321-4321-4321-4321-210987654321",
-        "AutoScalingGroupName":"my-asg",
+        "AutoScalingGroupName":"autoscale-prod-abcdef",
         "LifecycleHookName":"my-lifecycle-hook",
         "EC2InstanceId": instanceId,
         "LifecycleTransition":"autoscaling:EC2_INSTANCE_TERMINATING"
@@ -172,22 +172,28 @@ describe( 'handler', ()=> {
     }
   };
   let matchers = {
-    launch_lifecycle_action: body => body.text.match(/EC2 Instance Launch/),
-    terminate_lifecycle_action: body => body.text.match(/EC2 Instance Terminate/),
+    launch_lifecycle_action: body =>
+      body.text.match(/EC2 Instance Launch/) &&
+      body.channel === 'adhoc' &&
+      body.username === 'adhoc-abcdef',
+    terminate_lifecycle_action: body =>
+      body.text.match(/EC2 Instance Terminate/) &&
+      body.username === 'Auto Scaling' &&
+      body.channel === 'infra-production',
     launch_successful: body => {
       let attachment = body.attachments[0];
       return (
         attachment.author_name.match(instanceId) &&
-        attachment.fields.find(f=>f.title == 'Capacity').value.match(`.${from}. to .${to}.`) &&
-        attachment.fields.find(f=>f.title == 'Duration').value.match(`.${duration}. min`)
+        attachment.fields.find(f=>f.title === 'Capacity').value.match(`.${from}. to .${to}.`) &&
+        attachment.fields.find(f=>f.title === 'Duration').value.match(`.${duration}. min`)
       )
     },
     terminate_successful: body => {
       let attachment = body.attachments[0];
       return (
         attachment.author_name.match(instanceId) &&
-        attachment.fields.find(f=>f.title == 'Capacity').value.match(`.${to}. to .${from}.`) &&
-        attachment.fields.find(f=>f.title == 'Duration').value.match(`.${duration}. min`)
+        attachment.fields.find(f=>f.title === 'Capacity').value.match(`.${to}. to .${from}.`) &&
+        attachment.fields.find(f=>f.title === 'Duration').value.match(`.${duration}. min`)
       )
     },
     launch_unsuccessful: body => {
@@ -210,6 +216,7 @@ describe( 'handler', ()=> {
 
   Object.keys(matchers).forEach(matcher => {
     it(events[matcher]['detail-type'], () => {
+      nock.cleanAll();
       let scope = nock('https://hooks.slack.com').
         post(`/services/${process.env.SLACK_ENDPOINT}`, matchers[matcher]).
         reply(200, 'Ok');
