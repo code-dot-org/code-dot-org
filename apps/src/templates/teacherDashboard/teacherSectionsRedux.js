@@ -18,6 +18,13 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
+
+/**
+ * Set the list of sections to display. If `reset` is true, first clear the
+ * existing list.
+ * @param sections
+ * @param reset
+ */
 export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
 export const updateSection = (sectionId, serverSection) => ({
   type: UPDATE_SECTION,
