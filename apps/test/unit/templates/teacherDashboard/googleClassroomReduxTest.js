@@ -8,7 +8,7 @@ import reducer, {
   setClassroomList,
   failedLoad,
   importClassroomStarted,
-} from '@cdo/apps/templates/teacherDashboard/googleClassroomRedux';
+} from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 
 describe('googleClassroomRedux', () => {
   const initialState = reducer(undefined, {});

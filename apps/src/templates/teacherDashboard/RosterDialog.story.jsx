@@ -10,6 +10,7 @@ const ExampleDialogButton = React.createClass({
           handleImport={() => this.setState({open: false})}
           handleCancel={() => this.setState({open: false})}
           studioUrl=""
+          provider="google"
           {...this.props}
         />
         <button onClick={() => this.setState({open: true})}>
@@ -46,7 +47,7 @@ export default storybook => {
         )
       },
       {
-        name: 'No classrooms found',
+        name: 'No Google Classrooms found',
         description: 'Dialog shown when no Google Classrooms are returned from the API.',
         story: () => (
           <ExampleDialogButton classrooms={[]} />
@@ -57,6 +58,31 @@ export default storybook => {
         description: 'Dialog shown when an error is returned from the API.',
         story: () => (
           <ExampleDialogButton loadError={{status: 403, message: 'Sample error message.'}} />
+        )
+      },
+      {
+        name: 'Clever Classroom',
+        description: 'Dialog for choosing a Clever section from the API.',
+        story: () => (
+          <ExampleDialogButton
+            provider="clever"
+            classrooms={[
+              {id: '123', name: 'New Test Classroom', section: '321', enrollment_code: '1000'},
+              {id: '456', name: 'Other Test Classroom', section: '3A', enrollment_code: '1001'},
+              {id: '101', name: 'Intro to CS', section: '45', enrollment_code: '1002'},
+              {id: '102', name: 'Intro to CS', section: '55', enrollment_code: '1003'},
+            ]}
+          />
+        )
+      },
+      {
+        name: 'No Clever sections found',
+        description: 'Dialog shown when no Clever sections are returned from the API.',
+        story: () => (
+          <ExampleDialogButton
+            provider="clever"
+            classrooms={[]}
+          />
         )
       },
     ]);
