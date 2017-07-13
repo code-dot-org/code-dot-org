@@ -40,8 +40,8 @@
     "sprites_hidden_to_start": "false",
     "instructions": "Help BB-8 gather the glowing scrap metal",
     "ideal": "7",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.\",\"hint_id\":\"courseB_starWars_prog4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a5a095b8a20d9c8fbaf24fe0ec898a52/courseB_starWars_prog4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the `repeat` block for shorter code.\",\"hint_id\":\"courseB_starWars_prog4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfb29b4ddf44e265043479ccfc6b1d6d/courseB_starWars_prog4.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can write one piece of the code at a time, then run it to figure out where you need to go from there.\",\"hint_id\":\"courseB_starWars_prog4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a5a095b8a20d9c8fbaf24fe0ec898a52/courseB_starWars_prog4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the `repeat` block for shorter code.\",\"hint_id\":\"courseB_starWars_prog4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cfb29b4ddf44e265043479ccfc6b1d6d/courseB_starWars_prog4.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -7,7 +7,7 @@ class CourseTest < ActiveSupport::TestCase
     def populate_cache_and_disconnect_db
       Course.stubs(:should_cache?).returns true
       @@course_cache ||= Course.course_cache_to_cache
-      Course.course_cache_from_cache
+      Course.course_cache
 
       # NOTE: ActiveRecord collection association still references an active DB connection,
       # even when the data is already eager loaded.

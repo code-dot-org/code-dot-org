@@ -18,23 +18,14 @@ dashboard_enable_pegasus: true
 #build_apps: true
 
 
-# Whether rake:build should rebuild the code-studio package
-#build_code_studio: true
-
-
 # Whether dashboard should use your local build of the apps package.
 # If false, dashboard will try to use a prepackaged version from S3.
 #use_my_apps: true
 
 
-# Whether dashboard should use your local build of the code-studio package.
-# If false, dashboard will try to use a prepackaged version from S3.
-#use_my_code_studio: true
-
-
 # Whether to skip the slow `rake seed:all` command during `rake build`.
 # Until you manually run `rake seed:all` or disable this flag, you won't
-# see changes to: videos, concepts, levels, scripts, trophies, prize providers, 
+# see changes to: videos, concepts, levels, scripts, trophies, prize providers,
 # callouts, hints, secret words, or secret pictures.
 #skip_seed_all: true
 
