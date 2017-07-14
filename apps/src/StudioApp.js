@@ -2303,6 +2303,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableIfElseEditing: utils.valueOr(config.level.disableIfElseEditing, false),
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    disableProcedureAutopopulate: utils.valueOr(config.level.disableProcedureAutopopulate, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),

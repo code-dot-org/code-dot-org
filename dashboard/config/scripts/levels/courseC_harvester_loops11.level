@@ -33,10 +33,10 @@
     "ideal": "8",
     "step_speed": "2",
     "hide_share_and_remix": "false",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Does this stair step look familiar from other puzzles? The movements should be similar, just remember to collect crops along the way.\",\"hint_id\":\"courseC_harvester_loops11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e3ddb12425183642b4756b572f267972/courseC_harvester_loops11.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseC_harvester_loops11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3fb79c1b4cfe0db91bdfaaa8a045ea46/courseC_harvester_loops11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try coding this one one piece at a time; figure out how the stair step movement works, then add the crop collection.\",\"hint_id\":\"courseC_harvester_loops11_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4607b53c2dc6f8f820a41a38fcb8a5f9/courseC_harvester_loops11.mp3\"}]",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

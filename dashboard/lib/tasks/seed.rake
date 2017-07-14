@@ -22,6 +22,7 @@ namespace :seed do
     'allthehiddenthings',
     'alltheplcthings',
     'allthethings',
+    'allthettsthings',
     'artist',
     'course1',
     'course2',
