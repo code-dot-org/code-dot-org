@@ -30,10 +30,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use `while there is a pile` even if you know how much dirt you need to remove, to make simpler code.\",\"hint_id\":\"courseD_farmer_while10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a65547c9f5a23a522e72da54549a399b/courseD_farmer_while10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Do you recognize a stair step pattern like in other puzzles?\",\"hint_id\":\"courseD_farmer_while10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/79dc101cc24e8bc76d81fa67e3b8afe0/courseD_farmer_while10.mp3\"}]",
     "instructions_important": "false",
     "ideal": "10",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Left this so it works either way (two move forwards or one while path).  Better puzzle if not ambiguous, better assessment if it is.",
