@@ -23,7 +23,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      redirect_to_section_script
+      redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')
       redirect_to section_path(id: @section.code)
@@ -32,9 +32,11 @@ class SectionsController < ApplicationController
 
   private
 
-  def redirect_to_section_script
+  def redirect_to_section_script_or_course
     if @section.script
       redirect_to @section.script
+    elsif @section.course
+      redirect_to @section.course
     else
       redirect_to '/'
     end

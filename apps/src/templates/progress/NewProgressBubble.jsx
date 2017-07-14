@@ -1,10 +1,12 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
-import color from "@cdo/apps/util/color";
+import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
+import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import _ from 'lodash';
+import { getIconForLevel } from './progressHelpers';
+import { levelType } from './progressTypes';
 
 /**
  * As we do another redesign of our bubbles, this module represents the new version
@@ -69,17 +71,19 @@ const styles = {
 
 const NewProgressBubble = React.createClass({
   propTypes: {
-    number: PropTypes.number.isRequired,
-    status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
-    url: PropTypes.string,
+    level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
-    levelName: PropTypes.string,
-    levelIcon: PropTypes.string.isRequired,
     smallBubble: PropTypes.bool,
   },
 
   render() {
-    const { number, status, url, levelName, levelIcon, smallBubble } = this.props;
+    const { level, smallBubble } = this.props;
+
+    const number = level.levelNumber;
+    const status = level.status;
+    const url = level.url;
+    const levelName = level.name || level.progression;
+    const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
 
