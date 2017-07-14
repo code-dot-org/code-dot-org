@@ -30,13 +30,17 @@
     "instructions_important": "false",
     "ideal": "13",
     "markdown_instructions": "Use your new function to solve this puzzle.",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use either `while` loops or `if/else` statements to move along the path.\",\"hint_id\":\"courseE_farmer_functions4b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a21303c4af0b84784fda4675d15ec98/courseE_farmer_functions4b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `check and pick` block to call your function.\",\"hint_id\":\"courseE_farmer_functions4b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fa013a1e2e9f28431de1f6e3818553fd/courseE_farmer_functions4b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To simplify your code, you can check every space for a crop, even if you know it is empty.\",\"hint_id\":\"courseE_farmer_functions4b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a90a280f3f7ff787533b6519ac8ca985/courseE_farmer_functions4b.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 22:32:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
