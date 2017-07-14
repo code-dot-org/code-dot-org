@@ -48,9 +48,9 @@
     "instructions_important": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `score point` to add a point, and `remove point` to subtract one.\",\"hint_id\":\"courseE_playLab_scaffold4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8bb2c0a65d4564eab4270aabffcddeb1/courseE_playLab_scaffold4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The `when actor touches` block can help you out here!\",\"hint_id\":\"courseE_playLab_scaffold4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ab75d54c961f7d1609c8bb0f15e5a389/courseE_playLab_scaffold4.mp3\"}]",
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "Success Conditions (all):\r\n background is not cave\r\n actors 1-3 are visible and have moved\r\n score is not 0\r\n 500 ticks have passed\r\n\r\nFail Conditions (either):\r\n actors 2 or 3 are hidden at the start of game, or\r\n score is still 0 after 450 ticks",
