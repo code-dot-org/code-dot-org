@@ -17,7 +17,7 @@ import { levelType } from './progressTypes';
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
-const DIAMOND_DOT_SIZE = 20;
+const DIAMOND_DOT_SIZE = 22;
 const SMALL_DOT_SIZE = 9;
 const SMALL_DIAMOND_SIZE = 5;
 
@@ -35,20 +35,17 @@ const styles = {
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
     display: 'inline-block',
-    margin: 3,
+    marginTop: 3,
+    marginBottom: 3,
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
     height: DIAMOND_DOT_SIZE,
     lineHeight: DIAMOND_DOT_SIZE + 'px',
-    marginTop: 8,
-    marginBottom: 8,
-    // slightly more margin to account for the fact that this is computed on the
-    // pre-rotated diamond
-    marginLeft: 5,
-    marginRight: 5,
-    borderRadius: 0,
+    marginTop: 7,
+    marginBottom: 7,
+    borderRadius: 4,
     transform: 'rotate(45deg)',
   },
   small: {
@@ -57,8 +54,6 @@ const styles = {
     borderRadius: SMALL_DOT_SIZE,
     lineHeight: SMALL_DOT_SIZE + 'px',
     fontSize: 0,
-    marginLeft: 2,
-    marginRight: 2,
     marginTop: 0,
     marginBottom: 0
   },
@@ -66,11 +61,9 @@ const styles = {
     width: SMALL_DIAMOND_SIZE,
     height: SMALL_DIAMOND_SIZE,
     lineHeight: SMALL_DIAMOND_SIZE + 'px',
-    borderRadius: 0,
+    borderRadius: 1,
     fontSize: 0,
     transform: 'rotate(45deg)',
-    marginLeft: 3,
-    marginRight: 3,
     position: 'relative',
     top: 2
   },
@@ -134,37 +127,48 @@ const NewProgressBubble = React.createClass({
 
     const tooltipId = _.uniqueId();
 
+    // Outer div here is used to make sure our bubbles all take up equivalent
+    // amounts of space, whether they're diamonds or circles
     let bubble = (
       <div
-        style={style}
-        data-tip data-for={tooltipId}
-        aria-describedby={tooltipId}
+        style={{
+          display: 'inline-block',
+          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) +
+            2 * styles.main.borderWidth + 2 * 2,
+          textAlign: 'center',
+        }}
       >
         <div
-          style={{
-            ...styles.contents,
-            ...(level.isConceptLevel && styles.diamondContents)
-          }}
+          style={style}
+          data-tip data-for={tooltipId}
+          aria-describedby={tooltipId}
         >
-          {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-          {levelIcon !== 'lock' && (
-            <span
-              style={smallBubble ? styles.smallBubbleSpan : undefined}
-            >
-              {number}
-            </span>
-          )}
-          <ReactTooltip
-            id={tooltipId}
-            role="tooltip"
-            wrapper="span"
-            effect="solid"
+          <div
+            style={{
+              ...styles.contents,
+              ...(level.isConceptLevel && styles.diamondContents)
+            }}
           >
-            <div style={styles.tooltip}>
-              <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-              {number}. {levelName}
-            </div>
-          </ReactTooltip>
+            {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
+            {levelIcon !== 'lock' && (
+              <span
+                style={smallBubble ? styles.smallBubbleSpan : undefined}
+              >
+                {number}
+              </span>
+            )}
+            <ReactTooltip
+              id={tooltipId}
+              role="tooltip"
+              wrapper="span"
+              effect="solid"
+            >
+              <div style={styles.tooltip}>
+                <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+                {number}. {levelName}
+              </div>
+            </ReactTooltip>
+          </div>
         </div>
       </div>
     );

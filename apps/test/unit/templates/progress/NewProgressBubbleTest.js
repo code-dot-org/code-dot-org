@@ -59,7 +59,7 @@ describe('NewProgressBubble', () => {
       />
     );
 
-    assert.equal(wrapper.find('div').at(0).props().style.backgroundColor, color.level_perfect);
+    assert.equal(wrapper.find('div').at(1).props().style.backgroundColor, color.level_perfect);
   });
 
   it('has a white background when we are disabled', () => {
@@ -70,7 +70,7 @@ describe('NewProgressBubble', () => {
       />
     );
 
-    assert.equal(wrapper.find('div').at(0).props().style.backgroundColor, color.level_not_tried);
+    assert.equal(wrapper.find('div').at(1).props().style.backgroundColor, color.level_not_tried);
   });
 
   it('uses name when specified', () => {
@@ -103,6 +103,6 @@ describe('NewProgressBubble', () => {
       />
     );
 
-    assert.equal(wrapper.childAt(0).props().style.width, 9);
+    assert.equal(wrapper.find('div').at(1).props().style.width, 9);
   });
 });
