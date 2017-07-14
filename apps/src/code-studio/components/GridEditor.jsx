@@ -169,11 +169,8 @@ var GridEditor = React.createClass({
     var row = this.state.selectedRow;
     var col = this.state.selectedCol;
 
-    const oldCell = this.state.cells[row][col].serialize();
-    const newSerializedCell = Object.assign({}, oldCell, newSerializedCellData);
-
     // updateCells expects a two-dimentional array
-    this.updateCells(row, col, [[newSerializedCell]]);
+    this.updateCells(row, col, [[newSerializedCellData]]);
   },
 
   /**
