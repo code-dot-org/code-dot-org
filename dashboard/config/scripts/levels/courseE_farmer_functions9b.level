@@ -32,11 +32,11 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can call the `check and pick` function at every space, even if you know what is there.\",\"hint_id\":\"courseE_farmer_functions9b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/65ec611f0e3ea3eb241d4b574cfb13a9/courseE_farmer_functions9b.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Would a `while` loop or an `if/else` statement be more helpful to go around this path?\",\"hint_id\":\"courseE_farmer_functions9b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/635d642267e5812ebdf8a910e8dd8f07/courseE_farmer_functions9b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can use a `repeat until at pumpkin` loop to get to the end of the path, since there is only one pumpkin in the puzzle.\",\"hint_id\":\"courseE_farmer_functions9b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6bc5fc980cc412aea38744848ef6fd50/courseE_farmer_functions9b.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
