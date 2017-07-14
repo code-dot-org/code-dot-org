@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseDialog from '../BaseDialog';
-import { classroomShape, loadErrorShape } from './shapes';
+import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
 
@@ -77,25 +77,43 @@ const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classroo
       </div>
     ))}
   </div> :
-  <div>
-    <p>
-      {locale.noClassroomsFound()}
-    </p>
-    {provider === 'google' ?
-      <a href="https://classroom.google.com/">
-        {locale.addRemoveGoogleClassrooms()}
-      </a> :
-      <a href="https://clever.com/">
-        {locale.addRemoveCleverClassrooms()}
-      </a>
-    }
-  </div>
+  <NoClassroomsFound provider={provider}/>
 ;
 ClassroomList.propTypes = {
   classrooms: React.PropTypes.array.isRequired,
   onSelect: React.PropTypes.func.isRequired,
   selectedId: React.PropTypes.string,
-  provider: React.PropTypes.oneOf(['google', 'clever']),
+  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+};
+
+const NoClassroomsFound = ({provider}) => {
+  switch (provider) {
+    case OAuthSectionTypes.google_classroom:
+      return (
+        <div>
+          <p>
+            {locale.noClassroomsFound()}
+          </p>
+          <a href="https://classroom.google.com/">
+              {locale.addRemoveGoogleClassrooms()}
+          </a>
+        </div>
+      );
+    case OAuthSectionTypes.clever:
+      return (
+        <div>
+          <p>
+            {locale.noClassroomsFound()}
+          </p>
+          <a href="https://classroom.google.com/">
+            {locale.addRemoveCleverClassrooms()}
+          </a>
+        </div>
+      );
+  }
+};
+NoClassroomsFound.propTypes = {
+  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const LoadError = ({error, studioUrl}) =>
@@ -120,7 +138,7 @@ export default class RosterDialog extends React.Component {
     classrooms: React.PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     studioUrl: React.PropTypes.string.isRequired,
-    provider: React.PropTypes.oneOf(['google', 'clever']),
+    provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   }
 
   constructor(props) {
@@ -142,6 +160,16 @@ export default class RosterDialog extends React.Component {
   };
 
   render() {
+    let title = '';
+    switch (this.props.provider) {
+      case OAuthSectionTypes.google_classroom:
+        title = locale.selectGoogleClassroom();
+        break;
+      case OAuthSectionTypes.clever:
+        title = locale.selectCleverSection();
+        break;
+    }
+
     return (
       <BaseDialog
         useUpdatedStyles
@@ -151,10 +179,7 @@ export default class RosterDialog extends React.Component {
         {...this.props}
       >
         <h2 style={styles.title}>
-          {this.props.provider === 'google' ?
-            locale.selectGoogleClassroom() :
-            locale.selectCleverClassroom()
-          }
+          {title}
         </h2>
         <div style={styles.content}>
           {this.props.loadError ?

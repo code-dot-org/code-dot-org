@@ -41,7 +41,7 @@ class CleverSection < OmniAuthSection
       )
     end
 
-    OmniAuthSection.from_omniauth(
+    from_omniauth(
       code: code,
       type: Section::LOGIN_TYPE_CLEVER,
       owner_id: owner_id,
