@@ -7,9 +7,14 @@ import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
 import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
-import { classroomShape, loadErrorShape } from './shapes';
+import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
+
+const urlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+};
 
 const styles = {
   breadcrumb: {
@@ -44,7 +49,12 @@ class SectionsPage extends Component {
   };
 
   componentWillMount() {
-    this.provider = experiments.isEnabled('googleClassroom') ? 'google' : 'clever';
+    if (experiments.isEnabled('googleClassroom')) {
+      this.provider = OAuthSectionTypes.google_classroom;
+    }
+    if (experiments.isEnabled('cleverClassroom')) {
+      this.provider = OAuthSectionTypes.clever;
+    }
   }
 
   componentDidMount() {
@@ -83,7 +93,7 @@ class SectionsPage extends Component {
   handleImport = courseId => {
     this.props.importClassroomStarted();
 
-    const url = `/dashboardapi/import_${this.provider}_classroom`;
+    const url = urlByProvider[this.provider];
     $.getJSON(url, { courseId }).then(() => {
       this.setState({rosterDialogOpen: false, sectionsLoaded: false});
 
@@ -131,12 +141,12 @@ class SectionsPage extends Component {
           />
         }
         {sectionsLoaded && showCleverClassroom &&
-        <ProgressButton
-          text={i18n.importFromCleverClassroom()}
-          style={styles.button}
-          onClick={this.handleImportOpen}
-          color={ProgressButton.ButtonColor.gray}
-        />
+          <ProgressButton
+            text={i18n.importFromClever()}
+            style={styles.button}
+            onClick={this.handleImportOpen}
+            color={ProgressButton.ButtonColor.gray}
+          />
         }
         {sectionsLoaded && numSections === 0 &&
           <div className="jumbotron">

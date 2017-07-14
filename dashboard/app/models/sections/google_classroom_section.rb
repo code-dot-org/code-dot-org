@@ -39,7 +39,7 @@ class GoogleClassroomSection < OmniAuthSection
       )
     end
 
-    OmniAuthSection.from_omniauth(
+    from_omniauth(
       code: code,
       type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
       owner_id: owner_id,
