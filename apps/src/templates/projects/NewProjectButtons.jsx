@@ -22,7 +22,7 @@ const PROJECT_INFO = {
   },
   'applab': {
     label: i18n.projectTypeApplab(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_applab.png"
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_applab_square.png"
   },
   'gamelab': {
     label: i18n.projectTypeGamelab(),
@@ -31,6 +31,22 @@ const PROJECT_INFO = {
   'weblab': {
     label: i18n.projectTypeWeblab(),
     thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_weblab.png"
+  },
+  'calc': {
+    label: i18n.projectTypeCalc(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_calc.png"
+  },
+  'eval': {
+    label: i18n.projectTypeEval(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_eval.png"
+  },
+  'frozen': {
+    label: i18n.projectTypeFrozen(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_frozen.png"
+  },
+  'mc': {
+    label: i18n.projectTypeMC(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_mc.png"
   }
 };
 
