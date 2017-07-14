@@ -32,7 +32,8 @@ const ScriptEditor = React.createClass({
     professionalLearningCourse: React.PropTypes.bool,
     peerReviewsRequired: React.PropTypes.number,
     wrapupVideo: React.PropTypes.string,
-    projectWidgetVisible: React.PropTypes.bool
+    projectWidgetVisible: React.PropTypes.bool,
+    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
   },
 
   componentDidMount() {
@@ -183,8 +184,9 @@ const ScriptEditor = React.createClass({
             or shift-click or cmd-click to select multiple.
           </p>
           <select
-            name="project_widget_types"
+            name="project_widget_types[]"
             multiple
+            defaultValue={this.props.projectWidgetTypes}
           >
             <option value="playlab">Play Lab</option>
             <option value="artist">Artist</option>
