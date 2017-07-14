@@ -10,7 +10,7 @@ import experiments from '@cdo/apps/util/experiments';
 export default storybook => {
   const store = createStore(combineReducers({progress, stageLock, sections}));
   store.dispatch(initProgress({
-    currentLevelId: '2723',
+    currentLevelId: '2444',
     scriptName: 'csp1',
     saveAnswersBeforeNavigation: false,
     stages: [{
@@ -27,7 +27,8 @@ export default storybook => {
           "title": 1,
           "url": "http://studio.code.org/s/csp1/stage/2/puzzle/1",
           "freePlay": false,
-          "progression": "Lesson Vocabulary & Resources"
+          "progression": "Lesson Vocabulary & Resources",
+          is_concept_level: true,
         },
         {
           "ids": [
@@ -40,7 +41,8 @@ export default storybook => {
           "title": 2,
           "url": "http://studio.code.org/s/csp1/stage/2/puzzle/2",
           "freePlay": false,
-          "progression": "Check Your Understanding"
+          "progression": "Check Your Understanding",
+          is_concept_level: true,
         },
         {
           "ids": [
