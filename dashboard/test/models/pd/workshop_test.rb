@@ -424,21 +424,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
   end
 
-  test 'time_constraint returns nil for any type when no entry exists for the workshop subject' do
-    setup_mock_time_constraint(nil)
-    assert_nil @workshop.time_constraint(:min_hours)
-  end
-
-  test 'time_constraint returns the constraint for the specified type when one exists' do
-    setup_mock_time_constraint({min_hours: 10})
-    assert_equal 10, @workshop.time_constraint(:min_hours)
-  end
-
-  test 'time_constraint returns the nil when no constraint exists for the specified type' do
-    setup_mock_time_constraint({min_hours: 10})
-    assert_nil @workshop.time_constraint(:max_hours)
-  end
-
   test 'min_attendance_days with no min_days constraint returns 1' do
     @workshop.expects(:time_constraint).with(:min_days).returns(nil)
     assert_equal 1, @workshop.min_attendance_days
@@ -735,12 +720,5 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   def today
     Date.today.in_time_zone
-  end
-
-  def setup_mock_time_constraint(constraint_hash)
-    Pd::Workshop.send(:remove_const, :TIME_CONSTRAINTS_BY_SUBJECT)
-    mock_time_constraints_by_subject = mock
-    mock_time_constraints_by_subject.expects(:[]).returns(constraint_hash)
-    Pd::Workshop.const_set :TIME_CONSTRAINTS_BY_SUBJECT, mock_time_constraints_by_subject
   end
 end
