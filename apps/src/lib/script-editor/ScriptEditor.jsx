@@ -1,7 +1,7 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
-import $ from 'jQuery';
+import $ from 'jquery';
 
 const styles = {
   input: {
@@ -36,8 +36,8 @@ const ScriptEditor = React.createClass({
     projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
   },
 
-  componentDidMount() {
-    $('.select_none').click(make_selection_handler(false));
+  handleClearProjectWidgetSelectClick() {
+    $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
   },
 
   render() {
@@ -180,13 +180,14 @@ const ScriptEditor = React.createClass({
           Project widget new project types
           <p>
             Select up to 4 project type options to appear in the 'Start a new project' section. Select
-            <a className="select_none"> none </a>
+            <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
             or shift-click or cmd-click to select multiple.
           </p>
           <select
             name="project_widget_types[]"
             multiple
             defaultValue={this.props.projectWidgetTypes}
+            ref={select => this.projectWidgetSelect = select}
           >
             <option value="playlab">Play Lab</option>
             <option value="artist">Artist</option>
@@ -203,10 +204,3 @@ const ScriptEditor = React.createClass({
 });
 
 export default ScriptEditor;
-
-function make_selection_handler(flag) {
-  return function (e) {
-    e.preventDefault();
-    $(this).parent().siblings('select').children('option')[flag ? 'attr' : 'removeAttr']('selected', true);
-  };
-}

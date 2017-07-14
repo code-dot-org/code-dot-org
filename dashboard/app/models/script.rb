@@ -861,7 +861,7 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
-      project_widget_types: script_data[:project_widget_types] || nil
+      project_widget_types: script_data[:project_widget_types]
     }.compact
   end
 
