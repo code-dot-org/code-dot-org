@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.21":
-  version "1.6.21"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.21.tgz#58406507363df10b70e3fd0ff832e11abb3b1a4a"
+"@code-dot-org/blockly@1.6.22":
+  version "1.6.22"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.22.tgz#bb6e32f0e509ad94a780e3c61f91765d9985567f"
 
 "@code-dot-org/bramble@0.1.17":
   version "0.1.17"
@@ -7815,6 +7815,10 @@ redux-logger@^2.6.1:
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-2.7.4.tgz#891e5d29e7f111d08b5781a237b9965b5858c7f8"
   dependencies:
     deep-diff "0.3.4"
+
+redux-mock-store@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/redux-mock-store/-/redux-mock-store-1.2.3.tgz#1b3ad299da91cb41ba30d68e3b6f024475fb9e1b"
 
 redux-thunk@^2.0.1:
   version "2.1.0"

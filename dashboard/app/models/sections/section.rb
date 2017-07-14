@@ -30,6 +30,18 @@ require 'cdo/code_generation'
 require 'cdo/safe_names'
 
 class Section < ActiveRecord::Base
+  self.inheritance_column = :login_type
+
+  class << self
+    def find_sti_class(type_name)
+      super(type_name.camelize + 'Section')
+    end
+
+    def sti_name
+      name.underscore.sub('_section', '')
+    end
+  end
+
   include Rails.application.routes.url_helpers
   acts_as_paranoid
 
@@ -53,6 +65,7 @@ class Section < ActiveRecord::Base
 
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
+  LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -80,7 +93,7 @@ class Section < ActiveRecord::Base
 
   before_create :assign_code
   def assign_code
-    self.code = unused_random_code
+    self.code = unused_random_code unless code
   end
 
   def teacher_dashboard_url

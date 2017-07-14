@@ -27,14 +27,16 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a stair-step pattern in this maze to find where a nested loop can be used.\",\"hint_id\":\"courseD_maze_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c535ba90030522858e57e315b3fe6a33/courseD_maze_nestedLoops5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a stair-step pattern in this maze to find where a nested loop can be used.\",\"hint_id\":\"courseD_maze_nestedLoops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c535ba90030522858e57e315b3fe6a33/courseD_maze_nestedLoops5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseD_maze_nestedLoops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0c3029016e3eab1e4d341f3759d7219a/courseD_maze_nestedLoops5.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:27:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

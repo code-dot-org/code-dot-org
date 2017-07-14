@@ -1,5 +1,16 @@
 // Send Auto Scaling notifications to production channel.
 const slack_url = `https://hooks.slack.com/services/${process.env.SLACK_ENDPOINT}`;
+
+// Map Auto Scaling Group name prefixes to Slack channel targets.
+const channelMap = {
+  'adhoc': 'adhoc',
+  'staging': 'infra-staging',
+  'test': 'infra-test',
+  'production': 'infra-production',
+  'autoscale-prod': 'infra-production',
+  '': 'infra-production',
+};
+
 console.log('Loading function');
 
 const https = require('https');
@@ -31,8 +42,15 @@ exports.handler = function(event, context, callback) {
   }
   var instanceId = event.detail.EC2InstanceId;
   var instanceLink = `https://console.aws.amazon.com/ec2/v2/home?&region=us-east-1#Instances:search=${instanceId}`;
+  var asg = event.detail.AutoScalingGroupName;
+  var channel = channelMap[Object.keys(channelMap).find(asgName => asg.match(asgName))];
+  if (asg.match('autoscale-prod')) {
+    asg = 'Auto Scaling';
+  }
+
   var message = {
-    username: 'Auto Scaling'
+    username: asg,
+    channel: channel
   };
   var type = event["detail-type"];
   var action;
