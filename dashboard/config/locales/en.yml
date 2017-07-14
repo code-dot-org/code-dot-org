@@ -202,6 +202,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
   section:
     your_section:
       one: 'Your section:'
