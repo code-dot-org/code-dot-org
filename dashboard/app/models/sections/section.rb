@@ -66,6 +66,7 @@ class Section < ActiveRecord::Base
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
   LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
+  LOGIN_TYPE_CLEVER = 'clever'.freeze
 
   TYPES = [
     # Insert non-workshop section types here.

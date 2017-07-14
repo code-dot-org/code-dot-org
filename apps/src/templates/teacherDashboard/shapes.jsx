@@ -1,5 +1,6 @@
 import { PropTypes } from 'react';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
+import { makeEnum } from '@cdo/apps/utils';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -38,3 +39,5 @@ export const loadErrorShape = PropTypes.shape({
   status: PropTypes.number.isRequired,
   message: PropTypes.string.isRequired,
 });
+
+export const OAuthSectionTypes = makeEnum('google_classroom', 'clever');

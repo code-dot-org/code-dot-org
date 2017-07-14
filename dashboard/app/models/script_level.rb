@@ -240,6 +240,7 @@ class ScriptLevel < ActiveRecord::Base
       position: position,
       kind: kind,
       icon: icon,
+      is_concept_level: level.concept_level?,
       title: level_display_text,
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true",
