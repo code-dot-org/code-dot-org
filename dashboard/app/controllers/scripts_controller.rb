@@ -109,7 +109,7 @@ class ScriptsController < ApplicationController
       :wrapup_video,
       :student_detail_progress_view,
       :project_widget_visible,
-      :project_widget_types
+      project_widget_types: []
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
     h[:hidden] = !h[:visible_to_teachers]
