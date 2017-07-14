@@ -30,15 +30,16 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Use what you have learned to solve this puzzle.",
-    "ideal": "11",
+    "ideal": "10",
     "step_speed": "2",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Because we don't have a repeat block to do something a certain number of times, what block should we use to get us along the path?\",\"hint_id\":\"courseE_bee_ramp17_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/48f6cd43f546d8d9b0d703ec1eae2733/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you were to solve this puzzle without a while block, where would you see repeated code? How can you use this repeated code to shape how you must use a while block to solve the problem?\",\"hint_id\":\"courseE_bee_ramp17\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/15d6d7fcec3115f97788262fde8c56b4/courseE_bee_ramp17.mp3\"}]",
-    "markdown_instructions": "For the final puzzle in this stage, use what you have learned to collect all of the nectar and make all of the honey.  \r\n\r\nYou'll need every block in the toolbox to complete this one!",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Because we don't have a repeat block to do something a certain number of times, what block should we use to get us along the path?\",\"hint_id\":\"courseE_bee_ramp17_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/48f6cd43f546d8d9b0d703ec1eae2733/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you were to solve this puzzle without an until block, where would you see repeated code? How can you use this repeated code to shape how you must use an until block to solve the problem?\",\"hint_id\":\"courseE_bee_ramp17\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bbadf5674dca4fe14127fe971d1e74a7/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseE_bee_ramp17_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move in a stair step pattern. Try coding that first, then adding the `if/else` statement and `while` loops to check for flowers and honeycombs.\",\"hint_id\":\"courseE_bee_ramp17_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/902ed2999bf83f598d0db5424b73c3ff/courseE_bee_ramp17.mp3\"}]",
+    "markdown_instructions": "For the final puzzle in this stage, use what you have learned to collect all of the nectar and make all of the honey.  ",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-02 22:23:46 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-02 22:23:46 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:59:20 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 23:00:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 23:01:52 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 23:03:11 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 23:35:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 03:08:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -57,9 +58,9 @@
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
-        </block>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
+        <block type="maze_untilBlocked"/>
         <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
           <title name="OP">&gt;</title>
@@ -70,9 +71,9 @@
           <title name="OP">&gt;</title>
           <title name="ARG2">0</title>
         </block>
-        <block type="maze_untilBlocked"/>
-        <block type="maze_nectar"/>
-        <block type="maze_honey"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -83,19 +84,14 @@
               <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="bee_ifElseFlower">
-                      <title name="LOC">atFlower</title>
+                    <block type="bee_whileNectarAmount">
+                      <title name="ARG1">nectarRemaining</title>
+                      <title name="OP">&gt;</title>
+                      <title name="ARG2">0</title>
                       <statement name="DO">
-                        <block type="bee_whileNectarAmount">
-                          <title name="ARG1">nectarRemaining</title>
-                          <title name="OP">&gt;</title>
-                          <title name="ARG2">0</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                        </block>
+                        <block type="maze_nectar"/>
                       </statement>
-                      <statement name="ELSE">
+                      <next>
                         <block type="bee_whileNectarAmount">
                           <title name="ARG1">honeyAvailable</title>
                           <title name="OP">&gt;</title>
@@ -103,16 +99,16 @@
                           <statement name="DO">
                             <block type="maze_honey"/>
                           </statement>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnLeft</title>
                           <next>
-                            <block type="maze_moveForward">
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnRight</title>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnRight</title>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>

@@ -9,9 +9,11 @@ describe('ProgressBubble', () => {
   it('renders an anchor tag when we have a url', () => {
     const wrapper = shallow(
       <ProgressBubble
-        number={1}
-        status={LevelStatus.perfect}
-        url="/foo/bar"
+        level={{
+          levelNumber: 1,
+          status: LevelStatus.perfect,
+          url: "/foo/bar"
+        }}
         disabled={false}
       />
     );
@@ -22,8 +24,10 @@ describe('ProgressBubble', () => {
   it('does not render an anchor tag when we have no url', () => {
     const wrapper = shallow(
       <ProgressBubble
-        number={1}
-        status={LevelStatus.perfect}
+        level={{
+          levelNumber: 1,
+          status: LevelStatus.perfect,
+        }}
         disabled={false}
       />
     );
@@ -34,9 +38,11 @@ describe('ProgressBubble', () => {
   it('does not render an anchor tag if we are disabled', () => {
     const wrapper = shallow(
       <ProgressBubble
-        number={1}
-        status={LevelStatus.perfect}
-        url="/foo/bar"
+        level={{
+          levelNumber: 1,
+          status: LevelStatus.perfect,
+          url: "/foo/bar"
+        }}
         disabled={true}
       />
     );
@@ -47,9 +53,11 @@ describe('ProgressBubble', () => {
   it('has a green background when we have perfect status', () => {
     const wrapper = shallow(
       <ProgressBubble
-        number={1}
-        status={LevelStatus.perfect}
-        url="/foo/bar"
+        level={{
+          levelNumber: 1,
+          status: LevelStatus.perfect,
+          url: "/foo/bar"
+        }}
         disabled={false}
       />
     );
@@ -60,9 +68,11 @@ describe('ProgressBubble', () => {
   it('has a white background when we are disabled', () => {
     const wrapper = shallow(
       <ProgressBubble
-        number={1}
-        status={LevelStatus.perfect}
-        url="/foo/bar"
+        level={{
+          levelNumber: 1,
+          status: LevelStatus.perfect,
+          url: "/foo/bar"
+        }}
         disabled={true}
       />
     );
