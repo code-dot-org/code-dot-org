@@ -4,10 +4,9 @@ import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import AddInitialStudentsView from './AddInitialStudentsView';
 import EditSectionForm from "./EditSectionForm";
-import i18n from '@cdo/locale';import {
-  updateSection,
-} from './teacherSectionsRedux';
 
+import i18n from '@cdo/locale';
+import { updateSection } from './teacherSectionsRedux';
 const initialState = {
   loginType: undefined,
 };
@@ -31,6 +30,10 @@ export class AddSectionDialog extends Component {
 
   handleLoginChoice = (loginType) => {
     this.setState({loginType});
+  };
+
+  handleGoBack = () => {
+    this.setState({loginType: ''});
   };
 
   onClickEditSave = () => {
@@ -79,6 +82,7 @@ export class AddSectionDialog extends Component {
       return (
         <EditSectionForm
           handleSave={this.onClickEditSave}
+          handleBack={this.handleGoBack}
         />
       );
     }
@@ -117,3 +121,4 @@ const PadAndCenter = ({children}) => (
   </div>
 );
 PadAndCenter.propTypes = {children: PropTypes.any};
+
