@@ -10,7 +10,7 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ::ActionController::Tes
     workshop_dates
     on_map
     funded
-    section_url
+    attendance_url
     facilitators
     num_facilitators
     workshop_id

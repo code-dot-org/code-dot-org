@@ -18,7 +18,14 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
-export const setSections = sections => ({ type: SET_SECTIONS, sections });
+
+/**
+ * Set the list of sections to display. If `reset` is true, first clear the
+ * existing list.
+ * @param sections
+ * @param reset
+ */
+export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
 export const updateSection = (sectionId, serverSection) => ({
   type: UPDATE_SECTION,
   sectionId,
@@ -114,9 +121,10 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === SET_SECTIONS) {
     const sections = action.sections.map(section =>
       sectionFromServerSection(section));
+    const prevSectionIds = action.reset ? [] : state.sectionIds;
     return {
       ...state,
-      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
       sections: {
         ...state.sections,
         ..._.keyBy(sections, 'id')
@@ -241,7 +249,9 @@ const assignmentsForSection = (validAssignments, section) => {
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment.name);
+  // we might not have an assignment object if we have a section that was somehow
+  // assigned to a hidden script (and we dont have permissions to see hidden scripts)
+  return assignments.map(assignment => assignment ? assignment.name : '');
 };
 
 /**
@@ -249,5 +259,5 @@ export const assignmentNames = (validAssignments, section) => {
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment.path);
+  return assignments.map(assignment => assignment ? assignment.path : '');
 };
