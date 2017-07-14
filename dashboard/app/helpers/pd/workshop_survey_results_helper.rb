@@ -20,6 +20,8 @@ module Pd::WorkshopSurveyResultsHelper
       surveys.all? {|survey| survey.is_a? Pd::TeacherconSurvey} ||
         surveys.all? {|survey| survey.is_a? Pd::LocalSummerWorkshopSurvey}
 
+    return Hash.new if surveys.empty?
+
     options = surveys.first.class.options
     facilitator_specific_options = surveys.first.class.facilitator_required_fields
 
@@ -91,11 +93,5 @@ module Pd::WorkshopSurveyResultsHelper
         end
       end
     end
-  end
-
-  private
-
-  def convert_facilitator_hash_to_string(facilitator_hash)
-    facilitator_hash.map {|k, v| "#{k}: #{v}"}
   end
 end
