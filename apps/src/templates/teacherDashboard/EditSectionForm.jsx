@@ -41,7 +41,7 @@ export class EditSectionForm extends Component{
               students will be able to see this section name.</p>
             <input
               value={this.state.name}
-              onChange={val => this.setState({name: val})}
+              onChange={val => this.setState({name: val.target.value})}
             />
           </div>
           <Heading3>
@@ -50,7 +50,7 @@ export class EditSectionForm extends Component{
           <div>
             <select
               value = {this.state.grade}
-              onChange={val => this.setState({grade: val})}
+              onChange={val => this.setState({grade: val.target.value})}
             >
               {[""].concat(this.props.validGrades).map((grade, index) => (
                 <option key={index} value={grade}>{grade}</option>
@@ -58,14 +58,14 @@ export class EditSectionForm extends Component{
             </select>
           </div>
           <Heading3>
-            Choose a Course
+            Course
           </Heading3>
           <div>
             <p>Don't know which course to teach? Find a course from the courses page to assign a course to your section
               later. </p>
             <AssignmentSelector
               value = {this.state.course}
-              onChange={val => this.setState({course: val})}
+              onChange={val => this.setState({course: val.target.value})}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
             />
@@ -76,10 +76,10 @@ export class EditSectionForm extends Component{
           <div>
             <p>When Lesson Extras is on, students will end each lesson with some bonus challenges and creative projects rather
               than being automatically advanced to the next lesson. This feature gives students the opportunity to expand
-              their knowledge and further practice, without getting ahead of their classmates. Learn more about Lesson Extras. </p>
+              their knowledge and further practice, without getting ahead of their classmates. Learn more about Lesson Extras.</p>
             <select
               value = {this.state.extras}
-              onChange={val => this.setState({extras: val})}
+              onChange={val => this.setState({extras: val.target.value})}
             >
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -91,10 +91,10 @@ export class EditSectionForm extends Component{
           <div>
             <p>When pair programming is turned on, students can choose to work with a classmate at the same computer. Turn
               this setting on if you want students to be able to work together while sharing progress. Learn more about
-              pair programming. </p>
+              pair programming.</p>
             <select
               value = {this.state.pairing}
-              onChange={val => this.setState({pairing: val})}
+              onChange={val => this.setState({pairing: val.target.value})}
             >
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -103,7 +103,7 @@ export class EditSectionForm extends Component{
         </div>
         <div>
           <ProgressButton onClick={this.props.handleBack} text="Go Back"/>
-          <ProgressButton onClick={this.props.handleSave} text="Save"/>
+          <ProgressButton onClick={() => this.props.handleSave(this.state.name, this.state.grade, this.state.course, this.state.extras, this.state.pairing)} text="Save"/>
         </div>
       </div>
     );
