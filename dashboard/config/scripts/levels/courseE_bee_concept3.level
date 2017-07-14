@@ -32,15 +32,18 @@
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested `repeat` loops to solve this puzzle.\",\"hint_id\":\"courseE_bee_concept3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/335e5d824c42d9df56938010be873e5a/courseE_bee_concept3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested `repeat` loops to solve this puzzle.\",\"hint_id\":\"courseE_bee_concept3a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/335e5d824c42d9df56938010be873e5a/courseE_bee_concept3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out where to put the loops, try writing your code step-by-step and looking for patterns.\",\"hint_id\":\"courseE_bee_concept3a_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f8ee81379f0cbe0f5831ed53323a3c25/courseE_bee_concept3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There are three groups of flowers, so your outer `repeat` loop should repeat three times.\",\"hint_id\":\"courseE_bee_concept3a_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/325545c7acb7d4b294512ebfd146508d/courseE_bee_concept3.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":5,\"range\":5,\"featureType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":5,\"range\":5,\"featureType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":5,\"range\":5,\"featureType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "nectar_goal": "15",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:35:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
