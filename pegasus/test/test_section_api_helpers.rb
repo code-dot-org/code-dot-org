@@ -268,29 +268,6 @@ class SectionApiHelperTest < SequelTestCase
         assert_equal expected, csp_course
       end
     end
-
-    describe "fetch_user_sections" do
-      before do
-        DashboardSection.clear_caches
-        FakeDashboard.use_fake_database
-      end
-
-      it 'returns all sections belonging to teacher' do
-        sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
-        assert_equal 3, sections.length
-      end
-
-      it 'specifies course_id for sections that have one assigned' do
-        sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
-        sections.each do |section|
-          if section[:id] == FakeDashboard::SECTION_COURSE[:id]
-            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:course_id]
-          else
-            assert_nil section[:course_id]
-          end
-        end
-      end
-    end
   end
 
   # A set of tests that use our fake database
