@@ -25,23 +25,25 @@
 #  index_sections_on_user_id  (user_id)
 #
 
-class GoogleClassroomSection < OmniAuthSection
+class CleverSection < OmniAuthSection
   def self.from_service(course_id, owner_id, student_list)
-    code = "G-#{course_id}"
+    code = "C-#{course_id}"
 
     students = student_list.map do |student|
+      data = student['data']
       OmniAuth::AuthHash.new(
-        uid: student.user_id,
-        provider: 'google_oauth2',
+        uid: data['id'],
+        provider: 'clever',
         info: {
-          name: student.profile.name.full_name,
+          name: data['name'],
+          dob: data['dob'],
         },
       )
     end
 
     from_omniauth(
       code: code,
-      type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      type: Section::LOGIN_TYPE_CLEVER,
       owner_id: owner_id,
       students: students,
     )

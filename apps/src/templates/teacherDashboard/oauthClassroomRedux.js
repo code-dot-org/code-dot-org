@@ -1,13 +1,21 @@
 import $ from 'jquery';
+import { OAuthSectionTypes } from './shapes';
 
 const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
 
-export const loadClassroomList = () => {
+const urlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+};
+
+export const loadClassroomList = provider => {
+  const url = urlByProvider[provider];
+
   return dispatch => {
-    $.ajax('/dashboardapi/google_classrooms')
-      .success(response => dispatch(setClassroomList(response.courses)))
+    $.ajax(url)
+      .success(response => dispatch(setClassroomList(response.courses || [])))
       .fail(result => {
         const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
         dispatch(failedLoad(result.status, message));
@@ -25,7 +33,7 @@ const initialState = {
   classrooms: null,
 };
 
-export default function googleClassroom(state = initialState, action) {
+export default function oauthClassroom(state = initialState, action) {
   if (action.type === SET_CLASSROOM_LIST) {
     return {
       ...state,
