@@ -17,36 +17,16 @@ def youtube_thumbnails
   end
 end
 
-def commit_thumbnails
-  thumbnail_path = 'dashboard/public/c/video_thumbnails'
-  commit_msg = "committing video thumbnails from #{$0} in #{rack_env}"
-
-  return if `git status --porcelain --untracked-files=all #{thumbnail_path}`.empty?
-
-  raise unless system("git add #{thumbnail_path}")
-  raise unless system("git commit -m '#{commit_msg}' -- #{thumbnail_path}")
-  raise unless system('git push')
-end
-
 def main
-  downloaded_all = true
   youtube_thumbnails.each_pair do |path, url|
     begin
       puts "Downloading #{url} to #{path}" if rack_env?(:development)
       IO.write(path, open(url).read)
     rescue => e
-      downloaded_all = false
       ChatClient.log "Unable to download <b>#{url}<b> to <b>#{path}</b>", color: 'yellow'
       ChatClient.log "/quote #{e}", message_format: 'text'
     end
   end
-
-  # Commit and push the video thumbnails to minimize the chances of a deploy to
-  # test failing due to mismatched thumbnails.
-  #
-  # If there were errors, leave the files uncommitted until a subsequent run of
-  # this cronjob is successful, or an engineer resolves the issue.
-  commit_thumbnails if downloaded_all
 end
 
 main if only_one_running?(__FILE__)
