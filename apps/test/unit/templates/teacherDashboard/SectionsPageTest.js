@@ -49,7 +49,7 @@ describe('SectionsPage', () => {
         {...defaultProps}
       />, options
     );
-    assert(requests.some(request => request.url === '/v2/sections/'));
+    assert(requests.some(request => request.url === '/dashboardapi/sections'));
   });
 
   describe('with sectionFocus experiment', () => {
