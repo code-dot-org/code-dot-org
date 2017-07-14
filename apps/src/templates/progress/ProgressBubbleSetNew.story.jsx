@@ -2,6 +2,7 @@ import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import { fakeLevels, fakeLevel } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 const statusForLevel = [
   LevelStatus.perfect,
@@ -14,10 +15,12 @@ const levels = fakeLevels(5).map((level, index) => ({
   ...level,
   status: statusForLevel[index]
 }));
+levels[0].isConceptLevel = true;
 
 export default storybook => {
+  experiments.setEnabled('progressBubbles', true);
   storybook
-    .storiesOf('ProgressBubbleSet', module)
+    .storiesOf('ProgressBubbleSet - progressBubbles', module)
     .addStoryTable([
       {
         name:'starting at 3',
