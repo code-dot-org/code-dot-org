@@ -30,15 +30,17 @@
     "instructions_important": "false",
     "ideal": "15",
     "markdown_instructions": "Your function will come in handy here.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"A staircase pattern will be helpful here!\",\"hint_id\":\"courseE_farmer_functions5c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e5a2353dcb065a1ed9a80fdaf85ff77f/courseE_farmer_functions5c.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"A staircase pattern will be helpful here!\",\"hint_id\":\"courseE_farmer_functions5c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e5a2353dcb065a1ed9a80fdaf85ff77f/courseE_farmer_functions5c.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To simplify your code, you can check every space for every crop, even if you know exactly what is there.\",\"hint_id\":\"courseE_farmer_functions5c_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/59f8e5d3478500cfa812b13e1b4b48c8/courseE_farmer_functions5c.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The staircase looks complicated, but look at where all of the crops are! There is actually a much simpler stair step you can follow.\",\"hint_id\":\"courseE_farmer_functions5c_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e80d9a04cf0c66fc9fd60db2f2854282/courseE_farmer_functions5c.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 22:34:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
