@@ -101,16 +101,12 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
-        if (appOptions.level.disableSharing || !report.image) {
-          return;
-        }
-        const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
-        // Add the frame to the drawing.
-        imageUtils.dataURIToFramedBlob(dataURI, blob => {
-          files.putFile(SHARE_IMAGE_NAME, blob);
+        return tryToUploadShareImageToS3({
+          image: report.image,
+          level: appOptions.level,
         });
-        return;
       }
+
       if (appOptions.channel && !appOptions.level.edit_blocks &&
           !appOptions.hasContainedLevels) {
         // Unless we are actually editing blocks and not really completing a
@@ -252,6 +248,27 @@ export function setupApp(appOptions) {
   // stopped being able to use the user agent on the server, and thus try
   // to have the same logic on the client.
   appOptions.noPadding = userAgentParser.isMobile();
+}
+
+/**
+ * Store a share image preview to S3.
+ * Used for artist projects, since they don't post to a milestone like other
+ * artist levels do.
+ *
+ * Note: This is intentionally async with no callback - it's "fire and forget."
+ *
+ * @param {string} image - base64 encoded PNG image
+ * @param {object} level - a level definition
+ */
+function tryToUploadShareImageToS3({image, level}) {
+  if (level.disableSharing || !image) {
+    return;
+  }
+  const dataURI = `data:image/png;base64,${decodeURIComponent(image)}`;
+  // Add the frame to the drawing.
+  imageUtils.dataURIToFramedBlob(dataURI, blob => {
+    files.putFile(SHARE_IMAGE_NAME, blob);
+  });
 }
 
 function loadAppAsync(appOptions) {
