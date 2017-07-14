@@ -362,6 +362,7 @@ class User < ActiveRecord::Base
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -472,6 +473,17 @@ class User < ActiveRecord::Base
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
+
+  def requires_email?
+    provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
+  end
+
+  def presence_of_hashed_email_or_parent_email
+    if hashed_email.blank? && parent_email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
 
   def presence_of_email
     if email.blank?
@@ -593,6 +605,7 @@ class User < ActiveRecord::Base
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
+    return false if parent_managed_account?
     true
   end
 
@@ -1295,8 +1308,17 @@ class User < ActiveRecord::Base
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
+    return false if encrypted_password.present? && parent_email.present?
     # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
     !oauth?
+  end
+
+  def parent_managed_account?
+    student? && parent_email.present? && hashed_email.blank?
+  end
+
+  def no_personal_email?
+    under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
   def section_for_script(script)

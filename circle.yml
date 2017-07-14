@@ -85,7 +85,9 @@ dependencies:
     - ? |
         for i in 1 2; do
           mispipe "timeout 13m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
-          echo "rake build failed on attempt $i with error code $?";
+          ERR=$?
+          echo "rake build failed on attempt $i with error code $ERR";
+          (exit $ERR)
         done
       :
         timeout: 960

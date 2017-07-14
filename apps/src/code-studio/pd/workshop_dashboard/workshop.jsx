@@ -404,8 +404,8 @@ const Workshop = React.createClass({
             </p>
             <p>
               Teachers will receive an email with survey link from{' '}
-              <a href="mailto:hadi_partovi@code.org">
-                hadi_partovi@code.org
+              <a href="mailto:survey@code.org">
+                survey@code.org
               </a>.{' '}
               If they do not receive the link ask them to check their spam.
               Many school districts block outside emails.

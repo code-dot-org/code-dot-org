@@ -1,11 +1,12 @@
 import { PropTypes } from 'react';
+import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
-  loginType: PropTypes.oneOf(['word', 'email', 'picture']).isRequired,
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
   studentNames: PropTypes.arrayOf(PropTypes.string).isRequired,

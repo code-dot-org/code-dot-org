@@ -12,7 +12,8 @@ module SharedConstants
       assessment: "assessment",
       puzzle: "puzzle",
       unplugged: "unplugged",
-      level: "level"
+      level: "level",
+      stage_extras: "stage_extras",
     }
   ).freeze
 
@@ -38,6 +39,7 @@ module SharedConstants
       word: 'word',
       picture: 'picture',
       email: 'email',
+      google_classroom: 'google_classroom',
     }
   )
 

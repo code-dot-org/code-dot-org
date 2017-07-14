@@ -32,18 +32,4 @@ describe('ProgressBubbleSet', () => {
     assert.equal(wrapper.find('ProgressPill').length, 1);
     assert.equal(wrapper.find('ProgressBubble').length, defaultProps.levels.length - 1);
   });
-
-  it('uses progression as levelName when no level name', () => {
-    const wrapper = shallow(
-      <ProgressBubbleSet
-        {...defaultProps}
-        levels={defaultProps.levels.map(level => ({
-          ...level,
-          name: undefined,
-          progression: 'My Progression'
-        }))}
-      />
-    );
-    assert.equal(wrapper.find('ProgressBubble').first().props().levelName, 'My Progression');
-  });
 });

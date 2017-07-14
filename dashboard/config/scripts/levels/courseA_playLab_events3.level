@@ -47,7 +47,7 @@
     "timeout_failure_tick": "250",
     "callout_json": "[]",
     "markdown_instructions": "Help Jorge the Dog get moving by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png) event block that is already in the workspace.   \r\n\r\nGet Jorge to the flag to finish this level!",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)\",\"hint_id\":\"courseA_playLab_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c780c19ef4ef3c820a81af31c5155963/courseA_playLab_events3.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"drag this block out ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png) and connect it to ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)\",\"hint_id\":\"courseA_playLab_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c780c19ef4ef3c820a81af31c5155963/courseA_playLab_events3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use the left arrow key to move Jorge to the flag once you have written your program. When the flag turns green, you're there!\",\"hint_id\":\"courseA_playLab_events3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/daa653b0eb3fa2335487b7c4738f4242/courseA_playLab_events3.mp3\"}]",
     "tts_instructions_override": "Help Jorge the Dog get moving by connecting the move block to the when event block that is already in the workspace. Finish the level by getting Jorge to the flag!",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -56,7 +56,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:39:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 21:18:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 21:19:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:39:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 21:18:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 21:19:03 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 20:48:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
