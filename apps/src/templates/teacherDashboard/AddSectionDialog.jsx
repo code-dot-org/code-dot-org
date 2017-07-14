@@ -36,17 +36,18 @@ export class AddSectionDialog extends Component {
     this.setState({loginType: ''});
   };
 
-  onClickEditSave = () => {
+  onClickEditSave = (name, grade, assignment, extras, pairing) => {
     const {updateSection} = this.props;
     //const persistedSection = false;
+
     const data = {
       //id: null,
-      name: "TempTest",
+      name: name,
       login_type: this.state.loginType,
-      // grade: this.grade.value,
-      // stage_extras: this.stageExtras.checked,
-      // pairing_allowed: this.pairingAllowed.checked,
-      // course_id: assignment ? assignment.courseId : null,
+      grade: grade,
+      stage_extras: extras,
+      pairing_allowed: pairing,
+      course_id: assignment,
     };
 
     const suffix = '';
