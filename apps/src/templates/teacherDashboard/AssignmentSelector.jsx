@@ -29,7 +29,7 @@ const groupedAssignments = assignments => (
  */
 export default class AssignmentSelector extends Component {
   static propTypes = {
-    section: sectionShape.isRequired,
+    section: sectionShape,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
   };
@@ -40,7 +40,10 @@ export default class AssignmentSelector extends Component {
     const { section } = props;
 
     let selectedPrimaryId, selectedSecondaryId;
-    if (section.courseId) {
+    if (!section){
+      selectedPrimaryId = noAssignment;
+      selectedSecondaryId = noAssignment;
+    } else if (section.courseId) {
       selectedPrimaryId = assignmentId(section.courseId, null);
       selectedSecondaryId = assignmentId(null, section.scriptId);
     } else {
@@ -77,7 +80,12 @@ export default class AssignmentSelector extends Component {
 
   onChangePrimary = (event) => {
     const { assignments, section } = this.props;
-    const currentSecondaryId = assignmentId(null, section.scriptId);
+    let currentSecondaryId;
+    if (!section) {
+      currentSecondaryId = noAssignment;
+    } else {
+      currentSecondaryId = assignmentId(null, section.scriptId);
+    }
 
     let selectedPrimaryId = event.target.value;
     const scriptAssignIds = assignments[selectedPrimaryId].scriptAssignIds || [];
