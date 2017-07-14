@@ -21,9 +21,6 @@ const DIAMOND_DOT_SIZE = 20;
 const SMALL_DOT_SIZE = 9;
 const SMALL_DIAMOND_SIZE = 5;
 
-// TODO:(bjvanminnen) - The line behind a set of ProgressBubbles doesnt seem to
-// be quite vertically centered. This should be addressed at some point.
-
 const styles = {
   main: {
     fontFamily: '"Gotham 5r", sans-serif',
