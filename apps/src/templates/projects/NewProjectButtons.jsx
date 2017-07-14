@@ -26,7 +26,7 @@ const PROJECT_INFO = {
   },
   'gamelab': {
     label: i18n.projectTypeGamelab(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_gamelab.png"
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_gamelab_square.png"
   },
   'weblab': {
     label: i18n.projectTypeWeblab(),
