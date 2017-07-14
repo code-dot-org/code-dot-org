@@ -194,6 +194,10 @@ const ScriptEditor = React.createClass({
             <option value="applab">App Lab</option>
             <option value="gamelab">Game Lab</option>
             <option value="weblab">Web Lab</option>
+            <option value="calc">Calc</option>
+            <option value="eval">Eval</option>
+            <option value="frozen">Frozen</option>
+            <option value="mc">Minecraft Adventurer</option>
           </select>
         </label>
         <h2>Stages and Levels</h2>
