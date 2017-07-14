@@ -50,6 +50,4 @@
                 .field
                   = select_tag :user_permission_id, options_for_select(UserPermission::VALID_PERMISSIONS + ['admin'])
               %td
-  -else
-    -if params[:search_term]
-      %p No User Found
+
