@@ -13,7 +13,7 @@ class SectionsControllerTest < ActionController::TestCase
     @picture_section = create(:section, user: @teacher, login_type: 'picture')
     @picture_user_1 = create(:follower, section: @picture_section).student_user
 
-    @regular_section = create(:section, user: @teacher, login_type: 'regular')
+    @regular_section = create(:section, user: @teacher, login_type: 'email')
 
     @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
@@ -21,8 +21,10 @@ class SectionsControllerTest < ActionController::TestCase
 
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
-    # to a file in levelbuilder_mode is true
+    # to a file if levelbuilder_mode is true
     @course = create(:course)
+    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
+    @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
   end
 
   test "do not show login screen for invalid section code" do
@@ -105,6 +107,16 @@ class SectionsControllerTest < ActionController::TestCase
     }
 
     assert_redirected_to '/s/flappy'
+  end
+
+  test "login to section with a course redirects to course" do
+    post :log_in, params: {
+      id: @section_with_course.code,
+      user_id: @section_with_course_user_1.id,
+      secret_words: @section_with_course_user_1.secret_words
+    }
+
+    assert_redirected_to "/courses/#{@section_with_course.course.name}"
   end
 
   test "login with show_pairing_dialog shows pairing dialog" do

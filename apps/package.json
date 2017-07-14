@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@cdo/apps": "file:src",
-    "@code-dot-org/blockly": "1.6.21",
+    "@code-dot-org/blockly": "1.6.22",
     "@code-dot-org/bramble": "0.1.17",
     "@code-dot-org/johnny-five": "0.11.1-cdo.0",
     "@code-dot-org/js-interpreter-tyrant": "0.2.2",
@@ -171,6 +171,7 @@
     "reactabular": "^2.0.3",
     "redux": "^3.3.1",
     "redux-logger": "^2.6.1",
+    "redux-mock-store": "^1.2.3",
     "redux-thunk": "^2.0.1",
     "rgbcolor": "0.0.4",
     "sanitize-html": "^1.11.3",

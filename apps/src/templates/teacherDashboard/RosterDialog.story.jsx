@@ -7,7 +7,8 @@ const ExampleDialogButton = React.createClass({
       <div>
         <RosterDialog
           isOpen={!!this.state && this.state.open}
-          handleClose={() => this.setState({open: false})}
+          handleImport={() => this.setState({open: false})}
+          handleCancel={() => this.setState({open: false})}
           studioUrl=""
           {...this.props}
         />
