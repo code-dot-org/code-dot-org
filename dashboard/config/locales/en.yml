@@ -182,7 +182,7 @@ en:
   password:
     reset_form:
       title: 'Forgot your password?'
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email address'
       submit: 'Submit'
     reset_errors:
