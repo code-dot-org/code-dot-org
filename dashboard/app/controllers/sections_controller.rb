@@ -1,5 +1,17 @@
 class SectionsController < ApplicationController
-  before_action :load_section_by_code, except: :update
+  layout false, only: :index
+  before_action :load_section_by_code, only: [:log_in, :show]
+
+  # Get the list of sections owned by the current user.
+  def index
+    if !current_user
+      render head: :forbidden
+    elsif current_user.teacher?
+      render json: current_user.sections.map(&:summarize)
+    else
+      render json: []
+    end
+  end
 
   def show
     @secret_pictures = SecretPicture.all.shuffle
