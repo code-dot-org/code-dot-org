@@ -6835,7 +6835,7 @@ Editor.prototype.absoluteOffset = function(el) {
 
 Editor.prototype.trackerPointToMain = function(point) {
   var gbr;
-  if (this.mainCanvas.parentElement == null) {
+  if (this.mainCanvas.parentNode == null) {
     return new this.draw.Point(0/0, 0/0);
   }
   gbr = this.mainCanvas.getBoundingClientRect();
@@ -6844,7 +6844,7 @@ Editor.prototype.trackerPointToMain = function(point) {
 
 Editor.prototype.trackerPointToPalette = function(point) {
   var gbr;
-  if (this.paletteCanvas.parentElement == null) {
+  if (this.paletteCanvas.parentNode == null) {
     return new this.draw.Point(0/0, 0/0);
   }
   gbr = this.paletteCanvas.getBoundingClientRect();
@@ -6856,7 +6856,7 @@ Editor.prototype.trackerPointIsInElement = function(point, element) {
   if ((this.session == null) || this.session.readOnly) {
     return false;
   }
-  if (element.parentElement == null) {
+  if (element.parentNode == null) {
     return false;
   }
   gbr = element.getBoundingClientRect();
