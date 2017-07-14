@@ -101,7 +101,7 @@ export function setupApp(appOptions) {
     },
     onAttempt: function (report) {
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
-        if (appOptions.level.disableSharing) {
+        if (appOptions.level.disableSharing || !report.image) {
           return;
         }
         const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;

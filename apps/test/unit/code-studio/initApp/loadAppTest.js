@@ -187,10 +187,21 @@ describe('loadApp.js', () => {
       expect(imageUtils.dataURIToFramedBlob).to.have.been.calledOnce;
     });
 
+    // Make sure we can prevent sharing of certain level types
     it('does nothing if the level has disabled sharing', () => {
       appOptions.level.disableSharing = true;
       setupApp(appOptions);
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
+      expect(writtenLevelId).to.be.undefined;
+      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
+      expect(files.putFile).not.to.have.been.called;
+    });
+
+    // Catch the edge case with calc and eval projects, which don't generate
+    // an image for sharing.
+    it('does nothing if the provided report has no image', () => {
+      setupApp(appOptions);
+      appOptions.onAttempt({/* No image in report */});
       expect(writtenLevelId).to.be.undefined;
       expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
       expect(files.putFile).not.to.have.been.called;
