@@ -7,7 +7,7 @@ const DEFAULT_PROJECT_TYPES = [
   'playlab',
   'artist',
   'applab',
-  'playlab'
+  'gamelab'
 ];
 
 const PROJECT_INFO = {
@@ -65,8 +65,6 @@ const styles = {
   }
 };
 
-// Renders a static list of project types. V2 of this component will have
-// configurable project types.
 const NewProjectButtons = React.createClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(PropTypes.string)
