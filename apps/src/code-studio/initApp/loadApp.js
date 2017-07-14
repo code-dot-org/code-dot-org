@@ -23,7 +23,7 @@ import {
   getContainedLevelId,
 } from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import queryString from 'query-string';
-import { dataURIToFramedBlob } from '@cdo/apps/imageUtils';
+import * as imageUtils from '@cdo/apps/imageUtils';
 import trackEvent from '../../util/trackEvent';
 
 // Max milliseconds to wait for last attempt data from the server
@@ -106,7 +106,7 @@ export function setupApp(appOptions) {
         }
         const dataURI = `data:image/png;base64,${decodeURIComponent(report.image)}`;
         // Add the frame to the drawing.
-        dataURIToFramedBlob(dataURI, blob => {
+        imageUtils.dataURIToFramedBlob(dataURI, blob => {
           files.putFile(SHARE_IMAGE_NAME, blob);
         });
         return;
