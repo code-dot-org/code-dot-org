@@ -236,6 +236,7 @@ class User < ActiveRecord::Base
   # TODO(asher): Determine whether request level caching is sufficient, or
   #   whether a memcache or otherwise should be employed.
   def permission?(permission)
+    return false unless teacher?
     if @permissions.nil?
       # The user's permissions have not yet been cached, so do the DB query,
       # caching the results.
@@ -255,6 +256,7 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
+    return false unless teacher?
     district_as_contact.present?
   end
 
