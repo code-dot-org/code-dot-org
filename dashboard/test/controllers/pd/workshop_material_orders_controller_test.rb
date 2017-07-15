@@ -88,6 +88,23 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
   test_user_gets_response_for :admin_index, user: :admin, response: :success
   test_user_gets_response_for :admin_index, user: :teacher, response: :forbidden
 
+  test 'admin index has page header' do
+    sign_in create(:admin)
+    get :admin_index
+    assert_select 'h5.page-header' do
+      assert_select 'a.btn', '<<'
+      assert_select 'a.btn', '<'
+      assert_select 'a.btn', '>'
+      assert_select 'a.btn', '>>'
+
+      assert_select 'span.dropdown', /Show/ do
+        assert_select 'a', '25'
+        assert_select 'a', '50'
+        assert_select 'a', 'All'
+      end
+    end
+  end
+
   private
 
   def assert_thanks

@@ -32,11 +32,11 @@
     "fast_get_nectar_animation": "false",
     "ideal": "10",
     "step_speed": "2",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseC_harvester_loops10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3fb79c1b4cfe0db91bdfaaa8a045ea46/courseC_harvester_loops10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try coding one side of the square, collecting both the corn and pumpkin. Can you repeat this sequence for the other sides?\",\"hint_id\":\"courseC_harvester_loops10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e2d8005dfec8b04f5c8cfac767aa3c95/courseC_harvester_loops10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you want to simplify your code more, you can actually put one `repeat` loop inside of another! This is called a **nested loop**.\",\"hint_id\":\"courseC_harvester_loops10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6c428f9c713bab3d126b741b1119665e/courseC_harvester_loops10.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

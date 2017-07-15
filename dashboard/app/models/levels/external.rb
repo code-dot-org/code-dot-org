@@ -48,6 +48,10 @@ class External < DSLDefined
     'fa-file-text'
   end
 
+  def concept_level?
+    true
+  end
+
   # returns a properties hash in which USER_ID_REPLACE_STRING is replaced by the current user's id
   # in markdown
   def properties_with_replaced_markdown(user)

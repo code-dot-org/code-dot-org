@@ -1,27 +1,38 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
 import color from "../../util/color";
 import Radium from 'radium';
 
 const DEFAULT_PROJECT_TYPES = [
-  {
-    type: 'playlab',
-    label: i18n.projectTypePlaylab()
-  },
-  {
-    type: 'artist',
-    label: i18n.projectTypeArtist()
-  },
-  {
-    type: 'applab',
-    label: i18n.projectTypeApplab()
-  },
-  {
-    type: 'gamelab',
-    label: i18n.projectTypeGamelab()
-  }
+  'playlab',
+  'artist',
+  'applab',
+  'gamelab'
 ];
+
+const PROJECT_INFO = {
+  'playlab': {
+    label: i18n.projectTypePlaylab(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_playlab.png"
+  },
+  'artist': {
+    label: i18n.projectTypeArtist(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_artist.png"
+  },
+  'applab': {
+    label: i18n.projectTypeApplab(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_applab.png"
+  },
+  'gamelab': {
+    label: i18n.projectTypeGamelab(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_gamelab_square.png"
+  },
+  'weblab': {
+    label: i18n.projectTypeWeblab(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_weblab.png"
+  }
+};
 
 const styles = {
   fullsize: {
@@ -55,22 +66,25 @@ const styles = {
   }
 };
 
-// Renders a static list of project types. V2 of this component will have
-// configurable project types.
 const NewProjectButtons = React.createClass({
+  propTypes: {
+    projectTypes: PropTypes.arrayOf(PropTypes.string)
+  },
+
   render() {
     // Using absolute URLs to get this working in storybook.
+    const projectTypes = this.props.projectTypes || DEFAULT_PROJECT_TYPES;
     return (
       <div style={styles.fullsize}>
         <div style={styles.description}>{i18n.projectStartNew()}</div>
         <div>
           {
-            DEFAULT_PROJECT_TYPES.slice(0,4).map((object, index) => (
+            projectTypes.slice(0,4).map((projectType, index) => (
               <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
-                <a href={"/p/" + object.type + "/new"}>
-                  <img style={styles.thumbnail} src={"http://studio.code.org/shared/images/fill-70x70/courses/logo_" + object.type + ".png"} />
+                <a href={"/p/" + projectType + "/new"}>
+                  <img style={styles.thumbnail} src={PROJECT_INFO[projectType].thumbnail} />
                   <span style={styles.label}>
-                    {object.label}
+                    {PROJECT_INFO[projectType].label}
                   </span>
                 </a>
               </div>
