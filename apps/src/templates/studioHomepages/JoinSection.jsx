@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from "@cdo/locale";
@@ -7,7 +8,7 @@ const styles = {
   main: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.charcoal,
+    borderColor: color.border_gray,
     height: 72,
     width: 970,
     backgroundColor: color.white,
@@ -37,8 +38,9 @@ const styles = {
     color: color.charcoal,
   },
   wordBox: {
-    width: 520,
+    width: 500,
     marginLeft: 25,
+    marginRight: 20,
     float: 'left',
     borderWidth: 1,
     borderColor: 'red'
@@ -65,7 +67,15 @@ const JoinSection = React.createClass({
   },
 
   joinSection() {
-    return;
+    const sectionCode = this.refs.sectionCode;
+
+    $.post('/followers', {section_code: $(sectionCode).val()})
+      .done(function () {
+        window.location.reload(true);
+      }.bind(this))
+      .fail(function () {
+      }.bind(this)
+    );
   },
 
   render() {
@@ -84,6 +94,7 @@ const JoinSection = React.createClass({
         <input
           type="text"
           name="sectionCode"
+          ref="sectionCode"
           style={styles.inputBox}
           placeholder={i18n.joinSectionPlaceholder()}
         />
