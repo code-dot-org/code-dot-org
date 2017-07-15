@@ -30,10 +30,10 @@
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.\",\"hint_id\":\"courseD_farmer_conditionals8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67bf5b89188b28ffa16d00c7dcd7e8ce/courseD_farmer_while7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Putting a `while path ahead` loop inside of a repeat loop can help you in this puzzle.\",\"hint_id\":\"courseD_farmer_conditionals8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c04ab9cb1b7f37b60b09fb7e667e151c/courseD_farmer_while7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What do you need to do at the end of each path?\",\"hint_id\":\"courseD_farmer_conditionals8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c325f4861dddc8f4acd542a9a65237ee/courseD_farmer_while7.mp3\"}]",
     "ideal": "6",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

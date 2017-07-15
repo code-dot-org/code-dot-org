@@ -13,6 +13,7 @@ import reducer, {
   setStudentDefaultsSummaryView,
   SignInState,
   levelsByLesson,
+  levelsForLessonId,
   progressionsFromLevels,
   categorizedLessons,
   statusForLevel,
@@ -45,7 +46,8 @@ const stageData = [
         icon: null,
         title: "Unplugged Activity",
         url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
-        previous: false
+        previous: false,
+        is_concept_level: false,
       },
       {
           ids: [323],
@@ -54,7 +56,8 @@ const stageData = [
           kind: LevelKind.assessment,
           icon: null,
           title: 1,
-          url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
+          url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
+          is_concept_level: false,
       },
       {
           ids: [322],
@@ -64,7 +67,8 @@ const stageData = [
           icon: null,
           title: 2,
           url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
-          next: [2, 1]
+          next: [2, 1],
+          is_concept_level: false,
       }
     ],
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/1/Teacher",
@@ -91,7 +95,8 @@ const stageData = [
         icon: null,
         title: 1,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
-        previous: [1, 3]
+        previous: [1, 3],
+        is_concept_level: false,
       }, {
         ids: [339],
         activeId: 339,
@@ -100,6 +105,7 @@ const stageData = [
         icon: null,
         title: 2,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
+        is_concept_level: false,
       }, {
         ids: [341],
         activeId: 341,
@@ -108,6 +114,7 @@ const stageData = [
         icon: null,
         title: 3,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
+        is_concept_level: false,
       }
     ],
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher",
@@ -555,7 +562,9 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: true,
-            levelNumber: undefined
+            levelNumber: undefined,
+            isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'not_tried',
@@ -564,7 +573,9 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 1
+            levelNumber: 1,
+            isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'not_tried',
@@ -573,7 +584,9 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 2
+            levelNumber: 2,
+            isCurrentLevel: false,
+            isConceptLevel: false,
           }
         ],
         [
@@ -584,7 +597,9 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 1
+            levelNumber: 1,
+            isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'perfect',
@@ -593,7 +608,9 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 2
+            levelNumber: 2,
+            isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'attempted',
@@ -602,7 +619,9 @@ describe('progressReduxTest', () => {
             progression: undefined,
             icon: null,
             isUnplugged: false,
-            levelNumber: 3
+            levelNumber: 3,
+            isCurrentLevel: false,
+            isConceptLevel: false,
           }
         ]
       ];
@@ -638,6 +657,32 @@ describe('progressReduxTest', () => {
       assert.equal(results[0][0].levelNumber, null);
       assert.equal(results[0][1].isUnplugged, false);
       assert.equal(results[0][1].levelNumber, 1);
+    });
+  });
+
+  describe('levelsForLessonId', () => {
+    it('returns levels for the given stage', () => {
+      const initializedState = reducer(undefined,
+        initProgress(initialScriptOverviewProgress));
+
+      const stageId = stageData[0].id;
+      const levels = levelsForLessonId(initializedState, stageId);
+      assert.strictEqual(levels.length, 3);
+    });
+
+    it('sets isCurrentLevel to true for current level only', () => {
+      const initializedState = {
+        ...reducer(undefined, initProgress(initialScriptOverviewProgress)),
+        currentLevelId: stageData[0].levels[1].activeId.toString()
+      };
+
+      const stageId = stageData[0].id;
+      const levels = levelsForLessonId(initializedState, stageId);
+
+      assert.strictEqual(levels[0].isCurrentLevel, false, 'first level is not current');
+      assert.strictEqual(levels[1].isCurrentLevel, true, 'second level is current');
+      assert.strictEqual(levels[2].isCurrentLevel, false, 'third level is not current');
+
     });
   });
 

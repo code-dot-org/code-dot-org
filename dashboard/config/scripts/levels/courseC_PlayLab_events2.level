@@ -40,8 +40,8 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Attach two of these blocks to the `when run` block:\\n\\n![](https://images.code.org/14e36b6b8486b7d8f8391f1ae52f42c2-image-1499792920559.06.43 AM.png)\",\"hint_id\":\"courseC_PlayLab_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4eefa982033952304669d05ccbe24317/courseC_PlayLab_events2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down menu on the block to change which actor speaks.\",\"hint_id\":\"courseC_PlayLab_events2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1e460dbf462caaa1ade20778f4da7731/courseC_PlayLab_events2.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Attach two of these blocks to the `when run` block:\\n\\n![](https://images.code.org/14e36b6b8486b7d8f8391f1ae52f42c2-image-1499792920559.06.43 AM.png)\",\"hint_id\":\"courseC_PlayLab_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4eefa982033952304669d05ccbe24317/courseC_PlayLab_events2.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down menu on the block to change which actor speaks.\",\"hint_id\":\"courseC_PlayLab_events2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1e460dbf462caaa1ade20778f4da7731/courseC_PlayLab_events2.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

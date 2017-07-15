@@ -35,11 +35,11 @@
     "honey_goal": "4",
     "markdown_instructions": "Conditionals can be helpful, even when you know exactly what is in each spot!\r\n\r\nCollect all of the nectar and make all of the honey.",
     "instructions_important": "false",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"This puzzle looks a lot like the last one. Can you re-use your code to solve it?\",\"hint_id\":\"courseD_bee_conditionals10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdf5aee44b5d13a526a9a302d0e919bf/courseD_bee_conditionals10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If it helps, imagine there is a cloud over each space. That way you can use conditionals and make your code shorter!\",\"hint_id\":\"courseD_bee_conditionals10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bac07360a3b31e6060f0fa9c41740a57/courseD_bee_conditionals10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use an `if/else` block at each square to check for either a flower or a honeycomb.\",\"hint_id\":\"courseD_bee_conditionals10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a919d0c5d4d7d4b3742501de84295ca4/courseD_bee_conditionals10.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

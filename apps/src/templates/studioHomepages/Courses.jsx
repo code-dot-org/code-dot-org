@@ -61,6 +61,8 @@ const Courses = React.createClass({
     $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
     $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     $('.hour-of-code-courses-first-row').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesFirstRow)).show();
+    $('.csf-courses').appendTo(ReactDOM.findDOMNode(this.refs.csfCourses)).show();
+    $('.tools-courses').appendTo(ReactDOM.findDOMNode(this.refs.toolsCourses)).show();
     $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
@@ -168,16 +170,20 @@ const Courses = React.createClass({
 
         {/* Signed-in student in English */}
         {(!isSignedOut && !isTeacher && isEnglish) && (
-          <ContentContainer
-            heading={i18n.teacherCourseHoc()}
-            description={i18n.teacherCourseHocDescription()}
-            isRtl={isRtl}
-            linkText={i18n.teacherCourseHocLinkText()}
-            link={`${codeOrgUrlPrefix}/learn`}
-            showLink={true}
-          >
-            <ProtectedStatefulDiv ref="hocCoursesFirstRow"/>
-          </ContentContainer>
+          <div>
+            <ProtectedStatefulDiv ref="csfCourses"/>
+            <ProtectedStatefulDiv ref="toolsCourses"/>
+            <ContentContainer
+              heading={i18n.teacherCourseHoc()}
+              description={i18n.teacherCourseHocDescription()}
+              isRtl={isRtl}
+              linkText={i18n.teacherCourseHocLinkText()}
+              link={`${codeOrgUrlPrefix}/learn`}
+              showLink={true}
+            >
+              <ProtectedStatefulDiv ref="hocCoursesFirstRow"/>
+            </ContentContainer>
+          </div>
         )}
 
         {/* Anything but a teacher or student in English.
