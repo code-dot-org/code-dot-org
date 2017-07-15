@@ -30,10 +30,10 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each pile is at the end of a path. Does that tell you something about which `while` loop you need?\",\"hint_id\":\"courseD_farmer_while9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b31c24cc6f9c86b617db41a38d794205/courseD_farmer_while9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Notice that every pile is the same size, so you don't need a while loop to remove dirt.\",\"hint_id\":\"courseD_farmer_while9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8d5427ed2b9da5fe9e441c105e627341/courseD_farmer_while9.mp3\"}]",
     "instructions_important": "false",
     "ideal": "6",
-    "contained_level_names": null,
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

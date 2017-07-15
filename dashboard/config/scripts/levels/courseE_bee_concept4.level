@@ -34,14 +34,17 @@
     "nectar_goal": "12",
     "honey_goal": "9",
     "step_speed": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"An `if/else` statement could really help you out here.\",\"hint_id\":\"courseE_bee_concept4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f1367bb034b83deac7a7ebedd9990752/courseE_bee_concept4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"An `if/else` statement could really help you out here.\",\"hint_id\":\"courseE_bee_concept4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f1367bb034b83deac7a7ebedd9990752/courseE_bee_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The stair step pattern can help you get through all of the flowers and honeycombs.\",\"hint_id\":\"courseE_bee_concept4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5a4580759fece5bd1a47dd6eabdf2fd/courseE_bee_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you are at a flower, how many times do you have to get nectar? Is this the same number for all flowers?\",\"hint_id\":\"courseE_bee_concept4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/73c9bec95c93ad813a8199dd0098b62f/courseE_bee_concept4.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

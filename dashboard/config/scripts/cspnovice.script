@@ -1,6 +1,8 @@
-professional_learning_course 'CS Principles TeacherCon Novice'
+professional_learning_course 'CS Principles Facilitator in Training'
+login_required true
+student_detail_progress_view true
 
-stage 'Welcome'
+stage 'Welcome', flex_category: 'required'
 named_level 'welcome-csp-novice'
 
 stage 'Tuesday'

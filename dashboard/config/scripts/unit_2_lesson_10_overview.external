@@ -4,7 +4,7 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Overview
 
-This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then use them to style their personal websites.
+This lesson covers classes and custom colors. The class first learns how to specify custom colors using RGB (red, green, blue) values, then applies these colors to a new Four Seasons web page, which uses CSS classes.  Using classes, the class adds more styles to the Four Seasons web page, then uses them to style their personal websites.
 ## Vocabulary
 
 * **HTML Class** - Makes it possible to define equal styles for elements by giving them all the same class name.
