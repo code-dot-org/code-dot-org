@@ -6,10 +6,15 @@ import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
-import { loadClassroomList } from './googleClassroomRedux';
-import { classroomShape, loadErrorShape } from './shapes';
+import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
+import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
+
+const urlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
+};
 
 const styles = {
   breadcrumb: {
@@ -35,12 +40,22 @@ class SectionsPage extends Component {
     setSections: PropTypes.func.isRequired,
     setValidAssignments: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
+    importClassroomStarted: PropTypes.func.isRequired,
   };
 
   state = {
     sectionsLoaded: false,
     rosterDialogOpen: false,
   };
+
+  componentWillMount() {
+    if (experiments.isEnabled('googleClassroom')) {
+      this.provider = OAuthSectionTypes.google_classroom;
+    }
+    if (experiments.isEnabled('cleverClassroom')) {
+      this.provider = OAuthSectionTypes.clever;
+    }
+  }
 
   componentDidMount() {
     const { validScripts, setValidAssignments, setSections } = this.props;
@@ -68,13 +83,25 @@ class SectionsPage extends Component {
 
   handleImportOpen = () => {
     this.setState({rosterDialogOpen: true});
-    this.props.loadClassroomList();
+    this.props.loadClassroomList(this.provider);
   };
 
-  handleImportClose = (selectedId) => {
+  handleImportCancel = () => {
     this.setState({rosterDialogOpen: false});
-    // TODO (josh): use `selectedId`.
-    console.log(selectedId);
+  };
+
+  handleImport = courseId => {
+    this.props.importClassroomStarted();
+
+    const url = urlByProvider[this.provider];
+    $.getJSON(url, { courseId }).then(() => {
+      this.setState({rosterDialogOpen: false, sectionsLoaded: false});
+
+      $.getJSON("/v2/sections/").done(results => {
+        this.props.setSections(results, true);
+        this.setState({sectionsLoaded: true});
+      });
+    });
   };
 
   addSection = () => this.props.newSection();
@@ -84,6 +111,7 @@ class SectionsPage extends Component {
     const { sectionsLoaded } = this.state;
 
     const showGoogleClassroom = experiments.isEnabled('googleClassroom');
+    const showCleverClassroom = experiments.isEnabled('cleverClassroom');
     return (
       <div>
         <div style={styles.breadcrumb}>
@@ -112,6 +140,14 @@ class SectionsPage extends Component {
             color={ProgressButton.ButtonColor.gray}
           />
         }
+        {sectionsLoaded && showCleverClassroom &&
+          <ProgressButton
+            text={i18n.importFromClever()}
+            style={styles.button}
+            onClick={this.handleImportOpen}
+            color={ProgressButton.ButtonColor.gray}
+          />
+        }
         {sectionsLoaded && numSections === 0 &&
           <div className="jumbotron">
             <p>{i18n.createSectionsInfo()}</p>
@@ -120,10 +156,12 @@ class SectionsPage extends Component {
         {sectionsLoaded && numSections > 0 && <SectionTable/>}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
-          handleClose={this.handleImportClose}
+          handleImport={this.handleImport}
+          handleCancel={this.handleImportCancel}
           classrooms={this.props.classrooms}
           loadError={this.props.loadError}
           studioUrl={this.props.studioUrl}
+          provider={this.provider}
         />
       </div>
     );
@@ -134,6 +172,6 @@ export const UnconnectedSectionsPage = SectionsPage;
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
   studioUrl: state.teacherSections.studioUrl,
-  classrooms: state.googleClassroom.classrooms,
-  loadError: state.googleClassroom.loadError,
-}), { newSection, setSections, setValidAssignments, loadClassroomList })(SectionsPage);
+  classrooms: state.oauthClassroom.classrooms,
+  loadError: state.oauthClassroom.loadError,
+}), { newSection, setSections, setValidAssignments, loadClassroomList, importClassroomStarted })(SectionsPage);

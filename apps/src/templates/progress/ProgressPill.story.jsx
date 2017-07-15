@@ -10,8 +10,10 @@ export default storybook => {
         name: 'single level pill',
         story: () => (
           <ProgressPill
-            url="/level1"
-            status={LevelStatus.perfect}
+            levels={[{
+              url: "/level1",
+              status: LevelStatus.perfect
+            }]}
             icon="desktop"
             text="1"
           />
@@ -21,7 +23,13 @@ export default storybook => {
         name: 'multi level pill',
         story: () => (
           <ProgressPill
-            status={LevelStatus.not_tried}
+            levels={[{
+              url: "/level1",
+              status: LevelStatus.perfect
+            }, {
+              url: "/level2",
+              status: LevelStatus.not_tried
+            }]}
             icon="desktop"
             text="1-4"
           />
@@ -31,9 +39,11 @@ export default storybook => {
         name: 'unplugged pill',
         story: () => (
           <ProgressPill
-            url="/level1"
+            levels={[{
+              url: "/level1",
+              status: LevelStatus.perfect
+            }]}
             text="Unplugged Activity"
-            status={LevelStatus.perfect}
             fontSize={12}
           />
         )

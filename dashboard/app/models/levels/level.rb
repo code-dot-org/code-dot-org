@@ -422,6 +422,17 @@ class Level < ActiveRecord::Base
   def icon
   end
 
+  # Level are either activity levels (default) or concept levels
+  # An activity level is a one where a student has to complete an activity / puzzle.
+  # - This includes programming levels, widget levels, unplugged activities, assessment levels, etc.
+  # - These get circular progress bubbles
+  # A concept level is one that introduces or discusses a concept.
+  # - This includes video levels, external HTML levels, and map levels.
+  # - These get diamond progress bubbles
+  def concept_level?
+    false
+  end
+
   # Returns an array of all the contained levels
   # (based on the contained_level_names property)
   def contained_levels

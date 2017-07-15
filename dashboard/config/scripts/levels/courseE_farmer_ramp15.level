@@ -30,14 +30,16 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Solve this puzzle using only the blocks available.",
-    "ideal": "9",
+    "ideal": "8",
     "step_speed": "2",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the 'repeat until at pumpkin' block to make it to the end of the path.\",\"hint_id\":\"courseE_farmer_ramp15_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a1400e9ef59330cb1810760c5996cd0e/courseE_farmer_ramp15.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What else needs to be done while moving along the path to the pumpkin?\",\"hint_id\":\"courseE_farmer_ramp15_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c763b2bd1a14edb995be161696d54756/courseE_farmer_ramp15.mp3\"}]",
-    "markdown_instructions": "Solve this puzzle using only the blocks available.\r\n\r\nThis level will help give you practice with the `repeat until` block.  Repeat your code until you reach the pumpkin.\r\n(Don't forget to collect the pumpkin, too!)",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the `repeat until at pumpkin` block to make it to the end of the path.\",\"hint_id\":\"courseE_farmer_ramp15_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/776e0a79fd4b25171406e8d635141a4a/courseE_farmer_ramp15.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What else needs to be done while moving along the path to the pumpkin?\",\"hint_id\":\"courseE_farmer_ramp15_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c763b2bd1a14edb995be161696d54756/courseE_farmer_ramp15.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The sprouts hide various amounts of either corn or lettuce to harvest on your way to the pumpkin.\",\"hint_id\":\"courseE_farmer_ramp15_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fcad77e84081a3424f4c8919fa4db772/courseE_farmer_ramp15.mp3\"}]",
+    "markdown_instructions": "Solve this puzzle using only the blocks available.\r\n\r\nThis level will help give you practice with the `repeat until` block.  Collect all of the corn and lettuce until you get to the pumpkin. (Don't forget to collect the pumpkin, too!)",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 22:38:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:41:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:42:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:42:54 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:43:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 02:57:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,7 +51,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_moveForward"/>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
@@ -59,18 +61,18 @@
         <block type="harvester_untilAtCrop">
           <title name="LOC">Pumpkin</title>
         </block>
-        <block type="harvester_ifAtCropElse" limit="1">
+        <block type="harvester_whileHasCrop">
           <title name="LOC">Corn</title>
         </block>
-        <block type="harvester_whileHasCrop" limit="2">
-          <title name="LOC">Corn</title>
-        </block>
-        <block type="harvester_whileHasCrop" limit="2">
+        <block type="harvester_whileHasCrop">
           <title name="LOC">Lettuce</title>
         </block>
         <block type="harvester_pumpkin"/>
-        <block type="harvester_corn" limit="1"/>
-        <block type="harvester_lettuce" limit="1"/>
+        <block type="harvester_corn"/>
+        <block type="harvester_lettuce"/>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
@@ -82,24 +84,19 @@
               <statement name="DO">
                 <block type="maze_moveForward">
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_whileHasCrop">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
-                        <block type="harvester_whileHasCrop">
-                          <title name="LOC">Corn</title>
-                          <statement name="DO">
-                            <block type="harvester_corn"/>
-                          </statement>
-                        </block>
+                        <block type="harvester_corn"/>
                       </statement>
-                      <statement name="ELSE">
+                      <next>
                         <block type="harvester_whileHasCrop">
                           <title name="LOC">Lettuce</title>
                           <statement name="DO">
                             <block type="harvester_lettuce"/>
                           </statement>
                         </block>
-                      </statement>
+                      </next>
                     </block>
                   </next>
                 </block>

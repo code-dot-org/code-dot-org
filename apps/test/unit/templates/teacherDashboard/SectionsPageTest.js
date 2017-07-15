@@ -16,6 +16,7 @@ const defaultProps = {
   setValidAssignments: () => {},
   loadClassroomList: () => {},
   studioUrl: '',
+  importClassroomStarted: () => {},
 };
 
 describe('SectionsPage', () => {
