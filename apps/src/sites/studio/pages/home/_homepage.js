@@ -81,9 +81,9 @@ function showHomepage() {
         <TeacherHomepage
           announcements={[
             {
-              heading: i18n.announcementHeading(),
+              heading: i18n.announcementHeadingCspScores(),
               buttonText: i18n.learnMore(),
-              description: i18n.announcementDescription(),
+              description: i18n.announcementDescriptionCspScores(),
               link: "http://teacherblog.code.org/post/162400738379/ap-cs-principles-score-distributions-released-from",
               image: "",
               id: "ap_csp_scores_2017"
