@@ -47,6 +47,10 @@ const PROJECT_INFO = {
   'mc': {
     label: i18n.projectTypeMC(),
     thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_mc.png"
+  },
+  'starwars': {
+    label: i18n.projectTypeStarwars(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_starwars.png"
   }
 };
 
