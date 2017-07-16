@@ -540,12 +540,11 @@ class DashboardSection
       first
   end
 
-  def to_owner_hash
+  def to_section_detail_hash
     to_member_hash.merge(
-      script: script,
-      course_id: @row[:course_id],
-      teachers: teachers,
-      students: students
+      scriptId: script,
+      courseId: @row[:course_id],
+      studentNames: students.map(&:name),
     )
   end
 
@@ -554,11 +553,11 @@ class DashboardSection
       id: @row[:id],
       location: "/v2/sections/#{@row[:id]}",
       name: @row[:name],
-      login_type: @row[:login_type],
+      loginType: @row[:login_type],
       grade: @row[:grade],
       code: @row[:code],
-      stage_extras: @row[:stage_extras],
-      pairing_allowed: @row[:pairing_allowed],
+      stageExtras: @row[:stage_extras],
+      pairingAllowed: @row[:pairing_allowed],
     }
   end
 

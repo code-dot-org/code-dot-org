@@ -21,7 +21,7 @@ get '/v2/sections/:id' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_teacher(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.to_owner_hash)
+  JSON.pretty_generate(section.to_section_detail_hash)
 end
 
 delete '/v2/sections/:id' do |id|
@@ -40,7 +40,7 @@ patch '/v2/sections/:id' do |id|
   unsupported_media_type! unless payload = request.json_body
   forbidden! unless section = DashboardSection.update_if_owner(payload.merge(id: id, user: dashboard_user))
   content_type :json
-  JSON.pretty_generate(section.to_owner_hash)
+  JSON.pretty_generate(section.to_section_detail_hash)
 end
 post '/v2/sections/:id/update' do |id|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/sections/#{id}"))
@@ -51,7 +51,7 @@ get '/v2/sections/:id/students' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.to_owner_hash[:students])
+  JSON.pretty_generate(section.students)
 end
 
 post '/v2/sections/:id/students' do |id|
@@ -82,5 +82,5 @@ get '/v2/sections/:id/teachers' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.to_owner_hash[:teachers])
+  JSON.pretty_generate(section.teachers)
 end
