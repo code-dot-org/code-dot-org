@@ -28,7 +28,7 @@ const sections = [
     code: "PMTKVH",
     stageExtras: false,
     pairingAllowed: true,
-    script: null,
+    scriptId: null,
     courseId: 29,
     students: fakeStudents(10)
   },
@@ -41,11 +41,8 @@ const sections = [
     code: "DWGMFX",
     stageExtras: false,
     pairingAllowed: true,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
-    course_id: null,
+    scriptId: 36,
+    courseId: null,
     students: fakeStudents(1)
   },
   {
@@ -57,10 +54,7 @@ const sections = [
     code: "WGYXTR",
     stageExtras: true,
     pairingAllowed: false,
-    script: {
-      id: 112,
-      name: 'csp1'
-    },
+    scriptId: 112,
     courseId: 29,
     students: []
   }
@@ -254,7 +248,7 @@ describe('teacherSectionsRedux', () => {
         code: "ZVTKVH",
         stageExtras: false,
         pairingAllowed: true,
-        script: null,
+        scriptId: null,
         courseId: 29,
         students: [],
       }], true);
@@ -290,7 +284,7 @@ describe('teacherSectionsRedux', () => {
       code: "ABCDEF",
       stageExtras: false,
       pairingAllowed: true,
-      script: null,
+      scriptId: null,
       courseId: 29,
       students: fakeStudents(10)
     };
@@ -374,7 +368,7 @@ describe('teacherSectionsRedux', () => {
         studentNames: [],
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
       });
     });
 
@@ -392,7 +386,7 @@ describe('teacherSectionsRedux', () => {
         studentNames: [],
         code: '',
         courseId: 29,
-        scriptId: null
+        scriptId: null,
       });
     });
 
