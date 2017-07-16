@@ -16,45 +16,39 @@ const sections = [
     id: 11,
     location: "/v2/sections/11",
     name: "brent_section",
-    login_type: "picture",
+    loginType: "picture",
     grade: "2",
     code: "PMTKVH",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: null,
-    course_id: 29,
+    stageExtras: false,
+    pairingAllowed: true,
+    scriptId: null,
+    courseId: 29,
     students: fakeStudents(10)
   },
   {
     id: 12,
     location: "/v2/sections/12",
     name: "section2",
-    login_type: "picture",
+    loginType: "picture",
     grade: "11",
     code: "DWGMFX",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
-    course_id: null,
+    stageExtras: false,
+    pairingAllowed: true,
+    scriptId: 36,
+    courseId: null,
     students: fakeStudents(1)
   },
   {
     id: 307,
     location: "/v2/sections/307",
     name: "plc",
-    login_type: "email",
+    loginType: "email",
     grade: "10",
     code: "WGYXTR",
-    stage_extras: true,
-    pairing_allowed: false,
-    script: {
-      id: 46,
-      name: 'infinity'
-    },
-    course_id: null,
+    stageExtras: true,
+    pairingAllowed: false,
+    scriptId: 46,
+    courseId: null,
     students: []
   }
 ];

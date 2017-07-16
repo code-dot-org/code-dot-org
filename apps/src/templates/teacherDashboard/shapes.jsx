@@ -13,7 +13,7 @@ export const sectionShape = PropTypes.shape({
   studentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
-  scriptId: PropTypes.number,
+  script: PropTypes.number,
 });
 
 export const assignmentShape = PropTypes.shape({
