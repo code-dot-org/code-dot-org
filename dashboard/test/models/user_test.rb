@@ -1549,11 +1549,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? returns true when permission exists' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     assert user.permission?(UserPermission::FACILITATOR)
   end
 
@@ -1567,11 +1563,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? caches all permissions' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     user.permission?(UserPermission::LEVELBUILDER)
 
     no_database
