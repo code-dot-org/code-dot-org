@@ -45,4 +45,8 @@ class CurriculumReference < Level
     return nil unless properties['reference']
     "/docs#{properties['reference']}"
   end
+
+  def concept_level?
+    true
+  end
 end

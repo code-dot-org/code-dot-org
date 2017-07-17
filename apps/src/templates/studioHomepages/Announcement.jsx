@@ -1,18 +1,19 @@
 import React from 'react';
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 import ProgressButton from '../progress/ProgressButton';
 
 const styles = {
   container: {
     height: 250,
-    width: 970,
+    width: styleConstants['content-width'],
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
     backgroundColor: color.white,
   },
   tealBar: {
-    width: 970,
+    width: styleConstants['content-width'],
     height: 65,
     backgroundColor: color.teal,
   },

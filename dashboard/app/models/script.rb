@@ -117,6 +117,8 @@ class Script < ActiveRecord::Base
     professional_learning_course
     redirect_to
     student_detail_progress_view
+    project_widget_visible
+    project_widget_types
   )
 
   def self.twenty_hour_script
@@ -426,7 +428,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    k1? || name == Script::COURSEC_DRAFT_NAME || csd_tts_level? || csp_tts_level?
+    k1? || name == Script::COURSEC_DRAFT_NAME || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
   end
 
   def hide_solutions?
@@ -797,7 +799,9 @@ class Script < ActiveRecord::Base
       isHocScript: hoc?,
       peerReviewsRequired: peer_reviews_to_complete || 0,
       peerReviewStage: peer_review_stage,
-      student_detail_progress_view: student_detail_progress_view?
+      student_detail_progress_view: student_detail_progress_view?,
+      project_widget_visible: project_widget_visible?,
+      project_widget_types: project_widget_types
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -855,7 +859,9 @@ class Script < ActiveRecord::Base
       hideable_stages: script_data[:hideable_stages] || false, # default false
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
-      student_detail_progress_view: script_data[:student_detail_progress_view] || false
+      student_detail_progress_view: script_data[:student_detail_progress_view] || false,
+      project_widget_visible: script_data[:project_widget_visible] || false,
+      project_widget_types: script_data[:project_widget_types]
     }.compact
   end
 

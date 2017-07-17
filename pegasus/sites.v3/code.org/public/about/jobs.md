@@ -33,7 +33,7 @@ Launched in 2013, Code.org&reg; is a non-profit dedicated to expanding access to
 	- [Marketing Coordinator](#markcoordinator)
 - **Outreach**
 	- [International Outreach Manager](#intl)
-	- [Regional Manager](#regional)
+	- [Regional Manager - Northwest and Midwest](#regional)
 - **Product and Engineering**
 	- [Data Engineer](#data)
 	- [Senior Software Engineer](#senior)
@@ -139,11 +139,11 @@ Ability and willingness to travel (domestically) up to 25% of the time is requir
 To apply, please email resume, cover letter, and/or LinkedIn profile to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 
-## <a name="regional"href="#regional">Regional Manager, Northwest (Seattle, WA preferred)</a>
+## <a name="regional"href="#regional">Regional Manager (Northwest or Midwest)</a>
 
 **Job Summary:**
 
-Code.org is looking for a Regional Manager to support our education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Regional Partners. This position is highly on focused on developing relationships and building sustainability of Computer Science in a region.
+Code.org is looking for two Regional Managers to support our education efforts through the development, implementation, and maintenance of Code.org’s partnership model with Regional Partners. These positions are highly focused on developing relationships and building sustainability of Computer Science in the Northwest (Seattle preferred) and Midwest. 
 
 Responsibilities of the position include:
 
