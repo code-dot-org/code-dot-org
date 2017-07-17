@@ -10,6 +10,14 @@ export class EditSectionForm extends Component{
   static propTypes = {
     handleSave: PropTypes.func.isRequired,
     handleBack: PropTypes.func.isRequired,
+    name: PropTypes.string,
+    handleName: PropTypes.func.isRequired,
+    grade: PropTypes.string,
+    handleGrade: PropTypes.func.isRequired,
+    extras: PropTypes.string,
+    handleExtras: PropTypes.func.isRequired,
+    pairing: PropTypes.string,
+    handlePairing: PropTypes.func.isRequired,
 
     //Comes from redux
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -18,13 +26,9 @@ export class EditSectionForm extends Component{
     sections: PropTypes.objectOf(sectionShape).isRequired,
   };
 
-  state = {
-    name: '',
-    grade: "Choose a grade",
-    course: "Choose a course",
-    extras: true,
-    pairing: true,
-  };
+  getSelectedAssignments(){
+    return this.assignment.getSelectedAssignment();
+  }
 
   render(){
     return (
@@ -40,8 +44,8 @@ export class EditSectionForm extends Component{
             <p>Enter a name for your section that will help you remember which classroom it is for. Both you and your
               students will be able to see this section name.</p>
             <input
-              value={this.state.name}
-              onChange={val => this.setState({name: val.target.value})}
+              value={this.props.name}
+              onChange={val => this.props.handleName(val.target.value)}
             />
           </div>
           <Heading3>
@@ -49,8 +53,8 @@ export class EditSectionForm extends Component{
           </Heading3>
           <div>
             <select
-              value = {this.state.grade}
-              onChange={val => this.setState({grade: val.target.value})}
+              value = {this.props.grade}
+              onChange={val => this.props.handleGrade(val.target.value)}
             >
               {[""].concat(this.props.validGrades).map((grade, index) => (
                 <option key={index} value={grade}>{grade}</option>
@@ -64,8 +68,7 @@ export class EditSectionForm extends Component{
             <p>Don't know which course to teach? Find a course from the courses page to assign a course to your section
               later. </p>
             <AssignmentSelector
-              value = {this.state.course}
-              onChange={val => this.setState({course: val.target.value})}
+              ref={element => this.assignment = element}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
             />
@@ -78,8 +81,8 @@ export class EditSectionForm extends Component{
               than being automatically advanced to the next lesson. This feature gives students the opportunity to expand
               their knowledge and further practice, without getting ahead of their classmates. Learn more about Lesson Extras.</p>
             <select
-              value = {this.state.extras}
-              onChange={val => this.setState({extras: val.target.value})}
+              value = {this.props.extras}
+              onChange={val => this.props.handleExtras(val.target.value)}
             >
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -93,8 +96,8 @@ export class EditSectionForm extends Component{
               this setting on if you want students to be able to work together while sharing progress. Learn more about
               pair programming.</p>
             <select
-              value = {this.state.pairing}
-              onChange={val => this.setState({pairing: val.target.value})}
+              value = {this.props.pairing}
+              onChange={val => this.props.handlePairing(val.target.value)}
             >
               <option value="yes">Yes</option>
               <option value="no">No</option>
@@ -103,7 +106,7 @@ export class EditSectionForm extends Component{
         </div>
         <div>
           <ProgressButton onClick={this.props.handleBack} text="Go Back"/>
-          <ProgressButton onClick={() => this.props.handleSave(this.state.name, this.state.grade, this.state.course, this.state.extras, this.state.pairing)} text="Save"/>
+          <ProgressButton onClick={() => {this.props.handleSave();}} text="Save"/>
         </div>
       </div>
     );
