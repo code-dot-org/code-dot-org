@@ -71,7 +71,7 @@ const ProgressPill = React.createClass({
       style = {
         ...style,
         ...styles.levelPillNew,
-        ...(!multiLevelStep && levelProgressStyle(levels[0]))
+        ...(!multiLevelStep && levelProgressStyle(levels[0], false))
       };
     }
 
