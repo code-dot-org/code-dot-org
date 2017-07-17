@@ -12,17 +12,20 @@ module Pd::WorkshopSurveyResultsHelper
   #
   # @param surveys List of TeacherconSurveys or LocalWorkshopSurveys
   # @param facilitator Facilitator name to restrict responses for
+  # @param facilitator_breakdown Whether to have a facilitator breakdown
   # @returns Hash representing an average of all the respones, or array of free text responses
-  def summarize_workshop_surveys(surveys, facilitator = nil)
+  def summarize_workshop_surveys(workshops, facilitator = nil, facilitator_breakdown = true)
     # Works on arrays where everything is either a teachercon survey or workshop survey
     # (but not both)
+    surveys = workshops.flat_map(&:survey_responses)
+
     raise 'Currently just summarizes Local Summer and Teachercon surveys' unless
       surveys.all? {|survey| survey.is_a? Pd::TeacherconSurvey} ||
         surveys.all? {|survey| survey.is_a? Pd::LocalSummerWorkshopSurvey}
 
     return Hash.new if surveys.empty?
 
-    options = surveys.first.class.options
+    questions = surveys.first.class.options
     facilitator_specific_options = surveys.first.class.facilitator_required_fields
 
     # Hash representing overall score sums
@@ -39,19 +42,23 @@ module Pd::WorkshopSurveyResultsHelper
 
       response_hash.each do |k, v|
         # Multiple choice questions
-        if options.key? k
+        if questions.key? k
           if v.is_a? Hash
-            # Multiple choice answers for each facilitator
-            sum_hash[k] = Hash.new(0) if sum_hash[k] == 0
+            if facilitator_breakdown
+              # Multiple choice answers for each facilitator
+              sum_hash[k] = Hash.new(0) if sum_hash[k] == 0
 
-            v.each do |facilitator_name, answer|
-              sum_hash[k][facilitator_name] += options[k].index(answer) + 1
+              v.each do |facilitator_name, answer|
+                sum_hash[k][facilitator_name] += questions[k].index(answer) + 1
+              end
+            else
+              sum_hash[k] += v.values.map {|value| questions[k].index(value) + 1}.reduce(:+)
             end
           else
             next unless v.presence
 
             # Multiple choice answer for the workshop as a whole
-            sum_hash[k] += options[k].index(v) + 1
+            sum_hash[k] += questions[k].index(v) + 1
           end
         else
           # The answer is a free response - either specific to the faciliator or in general
@@ -77,21 +84,26 @@ module Pd::WorkshopSurveyResultsHelper
     end
 
     sum_hash.each do |k, v|
-      next unless options.key? k
+      next unless questions.key? k
 
       if v.is_a? Integer
-        if facilitator_specific_options.include?(k) && facilitator
+        if facilitator_specific_options.include?(k) && facilitator && facilitator_breakdown
           # For facilitator specific questions, take the average over all respones for that faciliator
-          sum_hash[k] = v / responses_per_facilitator[facilitator].to_f
+          sum_hash[k] = (v / responses_per_facilitator[facilitator].to_f).round(2)
         else
           # For non facilitator specific answers, take the average over all surveys
-          sum_hash[k] = v / surveys.count.to_f
+          sum_hash[k] = (v / surveys.count.to_f).round(2)
         end
       else
         v.each do |facilitator_name, value|
-          sum_hash[k][facilitator_name] = value / responses_per_facilitator[facilitator_name].to_f
+          sum_hash[k][facilitator_name] = (value / responses_per_facilitator[facilitator_name].to_f).round(2)
         end
       end
     end
+
+    sum_hash[:num_enrollments] = workshops.flat_map(&:enrollments).size
+    sum_hash[:num_surveys] = surveys.size
+
+    sum_hash
   end
 end
