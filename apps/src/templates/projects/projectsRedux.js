@@ -1,6 +1,7 @@
 /** @file Redux actions and reducer for the Projects Gallery */
 import { combineReducers } from 'redux';
 import _ from 'lodash';
+import { Galleries } from './projectConstants';
 
 // Action types
 
@@ -12,8 +13,9 @@ const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 
 // Reducers
 
-function selectedGallery(state, action) {
-  state = state || 'PUBLIC';
+const initialSelectedGalleryState = Galleries.PUBLIC;
+
+function selectedGallery(state = initialSelectedGalleryState, action) {
   switch (action.type) {
     case TOGGLE_GALLERY:
       return action.projectType;
@@ -91,8 +93,8 @@ export default reducer;
  * @returns {{type: string, projectType: string}}
  */
 export function selectGallery(projectType) {
-  projectType = projectType || 'PUBLIC';
-  return { type: TOGGLE_GALLERY, projectType: projectType };
+  projectType = projectType || Galleries.PUBLIC;
+  return { type: TOGGLE_GALLERY, projectType };
 }
 
 /**
