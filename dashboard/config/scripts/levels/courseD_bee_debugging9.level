@@ -39,9 +39,9 @@
     "instructions": "Help the bee fix the code to get all the nectar.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
