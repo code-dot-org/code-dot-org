@@ -42,3 +42,7 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 	* [Events](https://www.amara.org/en/videos/hxYdN6C1btWM/info/minecraft-hour-of-code-events/)
 	* [Spawning](https://www.amara.org/en/videos/C39R4IDzVqgL/info/minecraft-hour-of-code-spawn/)
 	* [Congratulations](https://www.amara.org/en/videos/QAwclz2DTh3J/info/minecraft-hour-of-code-congratulations/)
+
+---
+
+<%= view :minecraft_designer_languages %>

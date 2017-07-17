@@ -878,6 +878,37 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
+    assert mail.body.to_s =~ /Change my password/
+
+    assert mail.body.to_s =~ /reset_password_token=(.+)"/
+    # HACK: Fix my syntax highlighting "
+    token = $1
+
+    User.reset_password_by_token(
+      reset_password_token: token,
+      password: 'newone',
+      password_confirmation: 'newone'
+    )
+
+    student = User.find(student.id)
+    # password was changed
+    assert old_password != student.encrypted_password
+  end
+
+  test 'send reset password to parent for student without email address' do
+    parent_email = 'parent_reset_email@email.xx'
+    student = create :student, password: 'oldone', email: nil, parent_email: parent_email
+
+    assert User.send_reset_password_instructions(email: parent_email)
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [parent_email], mail.to
+    assert_equal 'Code.org reset password instructions', mail.subject
+    student = User.find(student.id)
+    old_password = student.encrypted_password
+
+    assert mail.body.to_s =~ /Change password for/
+
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
     token = $1
@@ -1671,6 +1702,34 @@ class UserTest < ActiveSupport::TestCase
     user_with_invalid_email.name = 'updated name'
     assert user_with_invalid_email.valid?
     assert user_with_invalid_email.save
+  end
+
+  test 'no personal email for under 13 users' do
+    user = create :young_student
+    assert user.no_personal_email?
+  end
+
+  test 'no personal email for users with parent-managed accounts' do
+    parent_managed_student = create(:parent_managed_student)
+    assert parent_managed_student.no_personal_email?
+  end
+
+  test 'no personal email is false for users with email' do
+    student = create :student
+    refute student.no_personal_email?
+
+    teacher = create :teacher
+    refute teacher.no_personal_email?
+  end
+
+  test 'parent_managed_account is true for users with parent email and no hashed email' do
+    parent_managed_student = create(:parent_managed_student)
+    assert parent_managed_student.parent_managed_account?
+  end
+
+  test 'parent_managed_account is false for teacher' do
+    teacher = create :teacher
+    refute teacher.parent_managed_account?
   end
 
   test 'age is required for new users' do

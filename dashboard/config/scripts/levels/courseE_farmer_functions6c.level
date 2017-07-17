@@ -30,15 +30,17 @@
     "instructions_important": "false",
     "ideal": "18",
     "markdown_instructions": "What do you need to add this program to collect all of the produce?",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can modify your function to solve this puzzle, so you don't even need to change the main program.\",\"hint_id\":\"courseE_farmer_functions6c_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fe87639f825aa4e06295ef719ffea71f/courseE_farmer_functions6c.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There is no longer just one lettuce, corn, or pumpkin in a space. Would a `while` loop help collect them all?\",\"hint_id\":\"courseE_farmer_functions6c_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6f92ad3eb0e96a5b2aaea05e0977d040/courseE_farmer_functions6c.mp3\"}]",
     "callout_json": "[]",
     "step_speed": "1",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 22:36:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

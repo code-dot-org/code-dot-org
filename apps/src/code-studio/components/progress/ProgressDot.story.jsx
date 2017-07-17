@@ -88,5 +88,39 @@ export default storybook => {
           />
         )
       },
+      {
+        name: 'stage extras in header',
+        story: () => (
+          <ProgressDot
+            courseOverviewPage={false}
+            currentLevelId="2049"
+            saveAnswersBeforeNavigation={false}
+            status={LevelStatus.not_tried}
+            level={{
+              icon: 'fa-flag',
+              kind: LevelKind.stage_extras,
+              title: 'Stage Extras',
+              url: 'http://localhost-studio.code.org:3000/s/coursea/stage/1/extras'
+            }}
+          />
+        )
+      },
+      {
+        name: 'current stage extras in header',
+        story: () => (
+          <ProgressDot
+            courseOverviewPage={false}
+            currentLevelId="stage_extras"
+            saveAnswersBeforeNavigation={false}
+            status={LevelStatus.not_tried}
+            level={{
+              icon: 'fa-flag',
+              kind: LevelKind.stage_extras,
+              title: 'Stage Extras',
+              url: 'http://localhost-studio.code.org:3000/s/coursea/stage/1/extras'
+            }}
+          />
+        )
+      },
     ]);
 };

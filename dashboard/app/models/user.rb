@@ -362,6 +362,7 @@ class User < ActiveRecord::Base
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -461,6 +462,11 @@ class User < ActiveRecord::Base
     User.find_by(hashed_email: hashed_email)
   end
 
+  def self.find_by_parent_email(email)
+    return nil if email.blank?
+    User.find_by(parent_email: email)
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
@@ -472,6 +478,17 @@ class User < ActiveRecord::Base
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
+
+  def requires_email?
+    provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
+  end
+
+  def presence_of_hashed_email_or_parent_email
+    if hashed_email.blank? && parent_email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
 
   def presence_of_email
     if email.blank?
@@ -593,6 +610,7 @@ class User < ActiveRecord::Base
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
+    return false if parent_managed_account?
     true
   end
 
@@ -899,6 +917,23 @@ class User < ActiveRecord::Base
     return false
   end
 
+  # Returns an array of users associated with an email address.
+  # Will contain all users that have this email either in
+  # plaintext, hashed, or as a parent email. Empty array
+  # if no associated users are found.
+  def self.associated_users(email)
+    result = []
+    return result if email.blank?
+
+    primary_account = User.find_by_email_or_hashed_email(email)
+    result.push(primary_account) if primary_account
+
+    child_accounts = User.where(parent_email: email)
+    result += child_accounts
+
+    result
+  end
+
   # Override how devise tries to find users by email to reset password
   # to also look for the hashed email. For users who have their email
   # stored hashed (and not in plaintext), we can still allow them to
@@ -913,15 +948,47 @@ class User < ActiveRecord::Base
       return user
     end
 
-    user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
-    if user && user.persisted?
-      user.raw_token = user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
-    else
-      user.errors.add :email, :not_found
-    end
-    user
+    email = attributes[:email]
+    associated_users = User.associated_users(email)
+    return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
 
+  attr_accessor :child_users
+  def send_reset_password_for_users(email, users)
+    if users.empty?
+      not_found_user = User.new(email: email)
+      not_found_user.errors.add :email, :not_found
+      return not_found_user
+    end
+
+    # Normal case: single user, owner of the email attached to this account
+    if users.length == 1 && (users.first.email == email || users.first.hashed_email == User.hash_email(email))
+      primary_user = users.first
+      primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
+      return primary_user
+    end
+
+    # One or more users are associated with parent email, generate reset tokens for each one
+    users.each do |user|
+      raw, enc = Devise.token_generator.generate(User, :reset_password_token)
+      user.raw_token = raw
+      user.reset_password_token   = enc
+      user.reset_password_sent_at = Time.now.utc
+      user.save(validate: false)
+    end
+
+    begin
+      # Send the password reset to the parent
+      raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
+      self.child_users = users
+      send_devise_notification(:reset_password_instructions, raw, {to: email})
+    rescue ArgumentError
+      errors.add :base, I18n.t('password.reset_errors.invalid_email')
+      return nil
+    end
+  end
+
+  # Send a password reset email to the user (not to their parent)
   def send_reset_password_instructions(email)
     raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
 
@@ -1295,8 +1362,17 @@ class User < ActiveRecord::Base
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
+    return false if encrypted_password.present? && parent_email.present?
     # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
     !oauth?
+  end
+
+  def parent_managed_account?
+    student? && parent_email.present? && hashed_email.blank?
+  end
+
+  def no_personal_email?
+    under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
   def section_for_script(script)
