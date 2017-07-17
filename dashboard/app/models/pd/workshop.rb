@@ -565,6 +565,10 @@ class Pd::Workshop < ActiveRecord::Base
   def survey_responses
     if teachercon?
       Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
+    elsif local_summer?
+      Pd::LocalSummerWorkshopSurvey.where(pd_enrollment: enrollments)
+    else
+      raise 'Not supported for this workshop type'
     end
   end
 
