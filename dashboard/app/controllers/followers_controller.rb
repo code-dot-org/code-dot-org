@@ -5,13 +5,24 @@
 
 class FollowersController < ApplicationController
   before_action :authenticate_user!, except: [:student_user_new, :student_register]
-  before_action :load_section, only: [:create, :student_user_new, :student_register]
+  before_action :load_section, only: [:create, :create_sync, :student_user_new, :student_register]
 
   # join a section as a logged in student
   def create
     @section.add_student current_user
 
     redirect_to redirect_url, notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
+  end
+
+  # As a logged-in student, join a section.  Returns JSON.  Designed to be called by ajax request.
+  def create_async
+    @section = Section.find_by_code params[:section_code]
+    if @section
+      @section.add_student current_user
+      render json: {result: "okay", sections: current_user.sections_as_student.map(&:summarize)}
+    else
+      render json: {result: "fail", sections: current_user.sections_as_student.map(&:summarize)}
+    end
   end
 
   # Remove enrollment in a section (as a student in the section).
@@ -47,6 +58,39 @@ class FollowersController < ApplicationController
         section_code: params[:section_code]
       )
     )
+  end
+
+  def remove_async
+    @section = Section.find_by_code params[:section_code]
+
+    if @section
+      f = Follower.where(section: @section.id, student_user_id: current_user.id).first
+    end
+
+    unless @section && f
+      puts "early fail"
+      render json: {result: "fail"}
+      return
+    end
+
+    @teacher = @section.user
+
+    authorize! :destroy, f
+    f.delete
+    # Though in theory required, we are missing an email address for many teachers.
+    if @teacher && @teacher.email.present?
+      FollowerMailer.student_disassociated_notify_teacher(@teacher, current_user).deliver_now
+    end
+    teacher_name = @teacher ? @teacher.name : I18n.t('user.deleted_user')
+    render json: {
+      result: "okay",
+      notice: t(
+        'teacher.student_teacher_disassociated',
+        teacher_name: teacher_name,
+        section_code: params[:section_code]
+      ),
+      sections: current_user.sections_as_student.map(&:summarize)
+    }
   end
 
   # GET /join/XXXXXX

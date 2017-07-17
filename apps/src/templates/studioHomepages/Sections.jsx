@@ -14,8 +14,17 @@ const Sections = React.createClass({
     canLeave: React.PropTypes.bool.isRequired
   },
 
+  getInitialState: function () {
+    return {sections: this.props.sections};
+  },
+
+  updateSections: function (sections) {
+    this.setState({sections: sections});
+  },
+
   render() {
-    const { sections, codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
+    const sections = this.state.sections;
+    const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
     const enrolledInASection = sections.length === 0 ? false : true;
     const enrollmentDescription = !isTeacher ? i18n.enrollmentDescription() : "";
@@ -36,6 +45,7 @@ const Sections = React.createClass({
             isRtl={isRtl}
             isTeacher={isTeacher}
             canLeave={canLeave}
+            updateSections={this.updateSections}
           />
         )}
         {sections.length === 0 && isTeacher && (
@@ -49,6 +59,7 @@ const Sections = React.createClass({
         {!isTeacher && (
           <JoinSection
             enrolledInASection={enrolledInASection}
+            updateSections={this.updateSections}
           />
         )}
       </ContentContainer>

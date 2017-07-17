@@ -202,6 +202,9 @@ Dashboard::Application.routes.draw do
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
+  post '/followers/create_async', to: 'followers#create_async', defaults: {format: 'json'}
+  post '/followers/remove_async', to: 'followers#remove_async', defaults: {format: 'json'}
+
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
