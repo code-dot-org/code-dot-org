@@ -53,12 +53,14 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:index, :show, :update] do
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end
   end
-  get '/dashboardapi/sections/', to: 'sections#index'
+  scope '/dashboardapi' do
+    resources :sections, only: [:index]
+  end
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
