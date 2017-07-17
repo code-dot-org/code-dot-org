@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
-import {selectedGallery, selectGallery, hasOlderProjects} from './projectsModule';
+import {selectedGallery, selectGallery, hasOlderProjects} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import {Galleries} from './projectConstants';

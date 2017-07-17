@@ -5,7 +5,7 @@ import {expect} from '../../../util/configuredChai';
 import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
 import sinon from 'sinon';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-import {hasOlderProjects, projectLists} from '@cdo/apps/templates/projects/projectsModule';
+import {hasOlderProjects, projectLists} from '@cdo/apps/templates/projects/projectsRedux';
 
 function generateFakeProjects(numProjects, projectType) {
   const startTime = Date.parse('2017-01-01T11:00:00.000-00:00');

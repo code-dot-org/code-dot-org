@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from "../../util/color";
 import Radium from 'radium';
-import {selectGallery} from './projectsModule.js';
+import {selectGallery} from './projectsRedux.js';
 import {connect} from 'react-redux';
 import {Galleries} from './projectConstants';
 

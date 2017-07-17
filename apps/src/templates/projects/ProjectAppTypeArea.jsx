@@ -6,7 +6,7 @@ import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import ProgressButton from "../progress/ProgressButton";
 import {connect} from 'react-redux';
-import {appendProjects, setHasOlderProjects} from './projectsModule';
+import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
 const styles = {
   grid: {
