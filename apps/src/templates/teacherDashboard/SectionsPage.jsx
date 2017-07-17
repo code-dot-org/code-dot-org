@@ -27,6 +27,8 @@ const styles = {
   }
 };
 
+const sectionsApiBasePath = '/dashboardapi/sections/';
+
 class SectionsPage extends Component {
   static propTypes = {
     validScripts: PropTypes.array.isRequired,
@@ -75,7 +77,7 @@ class SectionsPage extends Component {
       onAsyncLoad();
     });
 
-    $.getJSON("/v2/sections/").done(response => {
+    $.getJSON(sectionsApiBasePath).done(response => {
       sections = response;
       onAsyncLoad();
     });
@@ -97,7 +99,7 @@ class SectionsPage extends Component {
     $.getJSON(url, { courseId }).then(() => {
       this.setState({rosterDialogOpen: false, sectionsLoaded: false});
 
-      $.getJSON("/v2/sections/").done(results => {
+      $.getJSON(sectionsApiBasePath).done(results => {
         this.props.setSections(results, true);
         this.setState({sectionsLoaded: true});
       });
