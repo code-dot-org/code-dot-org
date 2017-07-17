@@ -10,8 +10,8 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const fakeStudents = num => _.range(num).map(x => ({id: x}));
-const sections = [
+const fakeStudentNames = num => _.range(num).map(x => 'Student ' + x);
+const serverSections = [
   {
     id: 11,
     location: "/v2/sections/11",
@@ -23,7 +23,7 @@ const sections = [
     pairing_allowed: true,
     script: null,
     course_id: 29,
-    students: fakeStudents(10)
+    studentNames: fakeStudentNames(10)
   },
   {
     id: 12,
@@ -39,7 +39,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
-    students: fakeStudents(1)
+    studentNames: fakeStudentNames(1)
   },
   {
     id: 307,
@@ -55,7 +55,7 @@ const sections = [
       name: 'infinity'
     },
     course_id: null,
-    students: []
+    studentNames: []
   }
 ];
 
@@ -139,7 +139,7 @@ export default storybook => {
           store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
           store.dispatch(setValidAssignments(validCourses, validScripts));
-          store.dispatch(setSections(sections));
+          store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
               <SectionTable/>

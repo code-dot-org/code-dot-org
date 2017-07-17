@@ -17,10 +17,7 @@ import reducer, {
 
 // Our actual student object are much more complex than this, but really all we
 // care about is how many there are.
-const fakeStudents = num => _.range(num).map(x => ({
-  id: x,
-  name: 'Student' + x,
-}));
+const fakeStudentNames = num => _.range(num).map(x => 'Student' + x);
 
 const sections = [
   {
@@ -34,7 +31,7 @@ const sections = [
     pairing_allowed: true,
     script: null,
     course_id: 29,
-    students: fakeStudents(10)
+    studentNames: fakeStudentNames(10)
   },
   {
     id: 12,
@@ -50,7 +47,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
-    students: fakeStudents(1)
+    studentNames: fakeStudentNames(1)
   },
   {
     id: 307,
@@ -66,7 +63,7 @@ const sections = [
       name: 'csp1'
     },
     course_id: 29,
-    students: []
+    studentNames: []
   }
 ];
 
@@ -296,7 +293,7 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       script: null,
       course_id: 29,
-      students: fakeStudents(10)
+      students: fakeStudentNames(10)
     };
 
     it('does not change our list of section ids when updating a persisted section', () => {
@@ -456,7 +453,7 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       script: null,
       course_id: 29,
-      students: fakeStudents(10)
+      studentNames: fakeStudentNames(10)
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {

@@ -226,7 +226,7 @@ export const sectionFromServerSection = serverSection => ({
   grade: serverSection.grade,
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
-  studentNames: serverSection.students.map(student => student.name),
+  studentNames: serverSection.studentNames,
   code: serverSection.code,
   courseId: serverSection.course_id,
   scriptId: serverSection.script ? serverSection.script.id : null
