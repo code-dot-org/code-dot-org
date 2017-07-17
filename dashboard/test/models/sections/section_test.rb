@@ -313,7 +313,13 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      sectionCode: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: "email",
+      courseId: course.id,
+      script: {id: nil, name: nil},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
@@ -332,7 +338,13 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/s/jigsaw',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      sectionCode: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: "email",
+      courseId: nil,
+      script: {id: script.id, name: script.name},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
@@ -354,7 +366,13 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      sectionCode: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: "email",
+      courseId: course.id,
+      script: {id: script.id, name: script.name},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
@@ -371,7 +389,13 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      sectionCode: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: "email",
+      courseId: nil,
+      script: {id: nil, name: nil},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
