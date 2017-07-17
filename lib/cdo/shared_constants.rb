@@ -40,6 +40,7 @@ module SharedConstants
       picture: 'picture',
       email: 'email',
       google_classroom: 'google_classroom',
+      clever: 'clever',
     }
   )
 

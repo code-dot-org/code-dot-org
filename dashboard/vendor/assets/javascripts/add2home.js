@@ -296,9 +296,9 @@ var addToHome = (function (w) {
 
 	function clicked () {
 		try {
+			close();
 			w.sessionStorage.setItem('addToHomeSession', '1');
 			isSessionActive = true;
-			close();
 		} catch (exc) {
 			console.log('Caught exception in sessionStorage.setItem: ', exc);
 		}
