@@ -58,7 +58,7 @@ Dashboard::Application.routes.draw do
       post 'log_in'
     end
   end
-  scope '/dashboardapi' do
+  namespace :dashboardapi do
     resources :sections, only: [:index]
   end
 
