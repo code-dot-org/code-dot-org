@@ -58,6 +58,7 @@ Dashboard::Application.routes.draw do
       post 'log_in'
     end
   end
+  get '/dashboardapi/sections/', to: 'sections#index'
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
