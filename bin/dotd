@@ -292,9 +292,7 @@ def do_dtt_subroutine
   should_i 'DTT' do
     view_commits base: 'test', head: 'staging'
     should_i 'merge from staging to test' do
-      should_i 'reset DTT message to in progress' do
-        DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
-      end
+      DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
       pr_number = GitHub.create_and_merge_pull_request(
         base: 'test',
         head: 'staging',
@@ -303,14 +301,10 @@ def do_dtt_subroutine
       url = GitHub.url(pr_number)
       wait_for "DTT (#{url}) to complete, re-run / investigate failures"
 
-      should_i 'reset DTT message to yes' do
-        DevelopersTopic.set_dtt 'yes'
-      end
+      DevelopersTopic.set_dtt 'yes'
 
-      should_i 'update test room status with green commit and timestamp' do
-        new_sha = GitHub.sha 'test'
-        InfraTestTopic.set_green_commit new_sha
-      end
+      new_sha = GitHub.sha 'test'
+      InfraTestTopic.set_green_commit new_sha
     end
   end
 end
@@ -357,9 +351,7 @@ def main
     InfraTestTopic.set_green_commit test_sha
   end
 
-  should_i 'reset DTT message to yes' do
-    DevelopersTopic.set_dtt 'yes'
-  end
+  DevelopersTopic.set_dtt 'yes'
 
   should_i 'retrieve recent honeybadger issues' do
     get_honeybadger_issues
@@ -395,9 +387,7 @@ def main
   test_green_commit = InfraTestTopic.green_commit
   if test_green_commit
     should_i "DTP #{test_green_commit}" do
-      should_i 'set DTP message to in progress' do
-        DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
-      end
+      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
 
       # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
       # request from a commit hash (only a branch name), we create and push a branch.
@@ -435,13 +425,9 @@ def main
         end
 
         wait_for 'DTP to finish'
-        should_i 'reset DTP message to yes' do
-          DevelopersTopic.set_dtp 'yes'
-        end
-        should_i 'update Slack#infra-production topic' do
-          sha = GitHub.sha 'production'
-          InfraProductionTopic.set_dtp_commit(sha)
-        end
+        DevelopersTopic.set_dtp 'yes'
+        sha = GitHub.sha 'production'
+        InfraProductionTopic.set_dtp_commit(sha)
 
         puts_after_dtp_tasks
       ensure
