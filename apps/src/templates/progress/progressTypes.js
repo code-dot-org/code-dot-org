@@ -9,6 +9,7 @@ export const levelType = (
     isUnplugged: PropTypes.bool,
     levelNumber: PropTypes.number,
     isCurrentLevel: PropTypes.bool,
+    isConceptLevel: PropTypes.bool,
   })
 );
 
