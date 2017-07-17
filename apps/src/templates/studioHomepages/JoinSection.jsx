@@ -64,14 +64,15 @@ const styles = {
 const JoinSection = React.createClass({
   propTypes: {
     enrolledInASection: React.PropTypes.bool.isRequired,
+    updateSections: React.PropTypes.func.isRequired
   },
 
   joinSection() {
     const sectionCode = this.refs.sectionCode;
 
-    $.post('/followers', {section_code: $(sectionCode).val()})
-      .done(function () {
-        window.location.reload(true);
+    $.post('/followers/create_async', {section_code: $(sectionCode).val()})
+      .done(function (data) {
+        this.props.updateSections(data.sections);
       }.bind(this))
       .fail(function () {
       }.bind(this)

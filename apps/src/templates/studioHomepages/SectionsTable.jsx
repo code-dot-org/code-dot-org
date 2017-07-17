@@ -91,15 +91,17 @@ export const styles = {
 const SectionsTable = React.createClass({
   propTypes: {
     sections: shapes.sections,
-    isRtl: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    canLeave: PropTypes.bool.isRequired
+    canLeave: PropTypes.bool.isRequired,
+    updateSections: PropTypes.func.isRequired
   },
 
   onLeave(sectionCode) {
-    $.post('/followers/remove', {section_code: sectionCode})
-      .done(function () {
-        window.location.reload(true);
+    $.post('/followers/remove_async', {section_code: sectionCode})
+      .done(function (data) {
+        console.log(data.sections);
+        this.props.updateSections(data.sections);
       }.bind(this))
       .fail(function () {
       }.bind(this)
