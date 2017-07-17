@@ -13,8 +13,34 @@ export const hoverStyle = {
 };
 
 
+const statusStyle = {
+  [LevelStatus.perfect]: {
+    backgroundColor: color.level_perfect,
+    color: color.white,
+  },
+  [LevelStatus.passed]: {
+    backgroundColor: color.level_passed,
+  },
+  // Note: There are submittable levels that are not assessments.
+  [LevelStatus.submitted]: {
+    borderColor: color.level_submitted,
+    backgroundColor: color.level_submitted,
+    color: color.white,
+  },
+  // Used by peer reviews
+  [LevelStatus.review_rejected]: {
+    color: color.white,
+    borderColor: color.level_review_rejected,
+    backgroundColor: color.level_review_rejected,
+  },
+  [LevelStatus.review_accepted]: {
+    color: color.white,
+    backgroundColor: color.level_perfect
+  },
+
+};
+
 // TODO: write tests?
-// TODO: dont forget about peer review
 /**
  * Given a level object, figure out styling related to it's color, border color,
  * and background color
@@ -32,26 +58,17 @@ export const levelProgressStyle = level => {
       style.color = color.white;
     }
   } else if (level.status === LevelStatus.locked) {
-    // Used for peer reviews
+    // Used for peer reviews - can just use default styling
     // TODO - check on lockable stages too
   } else {
     if (level.status !== LevelStatus.not_tried) {
       style.borderColor = color.level_perfect;
     }
-    if (level.status === LevelStatus.perfect) {
-      style.backgroundColor = color.level_perfect;
-      style.color = color.white;
-    }
-    if (level.status === LevelStatus.passed) {
-      style.backgroundColor = color.level_passed;
-    }
 
-    // Note: There are submittable levels that are not assessments.
-    if (level.status === LevelStatus.submitted) {
-      style.borderColor = color.level_submitted;
-      style.backgroundColor = color.level_submitted;
-      style.color = color.white;
-    }
+    style = {
+      ...style,
+      ...statusStyle[level.status]
+    };
   }
 
   return style;
