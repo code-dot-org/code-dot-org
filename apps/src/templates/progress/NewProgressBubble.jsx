@@ -107,7 +107,7 @@ const NewProgressBubble = React.createClass({
       ...(!disabled && hoverStyle),
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel && (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...levelProgressStyle(level)
+      ...levelProgressStyle(level, disabled)
     };
 
     let href = '';

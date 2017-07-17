@@ -1,8 +1,9 @@
 import color from "@cdo/apps/util/color";
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
-// Style used when hovering. This might be able to be combined with levelProgressStyle
-// once the progressBubbles experiment is not behind a flag
+// Style used when hovering. Once the progressBubbles experiment is not behind
+// a flag we can likely get rid of external references and depend on
+// levelProgressStyle
 export const hoverStyle = {
   ':hover': {
     textDecoration: 'none',
@@ -27,7 +28,7 @@ const statusStyle = {
     backgroundColor: color.level_submitted,
     color: color.white,
   },
-  // Used by peer reviews
+  // Below three are used by peer reviews
   [LevelStatus.review_rejected]: {
     color: color.white,
     borderColor: color.level_review_rejected,
@@ -37,6 +38,10 @@ const statusStyle = {
     color: color.white,
     backgroundColor: color.level_perfect
   },
+  [LevelStatus.locked]: {
+    // Don't want our green border even though status isn't not_tried
+    borderColor: color.lighter_gray,
+  }
 
 };
 
@@ -45,21 +50,23 @@ const statusStyle = {
  * Given a level object, figure out styling related to it's color, border color,
  * and background color
  */
-export const levelProgressStyle = level => {
+export const levelProgressStyle = (level, disabled) => {
   let style = {
     color: color.charcoal,
     backgroundColor: color.level_not_tried,
   };
 
-  if (level.kind === LevelKind.assessment && level.status !== LevelStatus.not_tried) {
+  if (disabled) {
+    style = {
+      ...style,
+      ...!disabled && hoverStyle
+    };
+  } else if (level.kind === LevelKind.assessment && level.status !== LevelStatus.not_tried) {
     style.borderColor = color.level_submitted;
     if (level.status === LevelStatus.perfect) {
       style.backgroundColor = color.level_submitted;
       style.color = color.white;
     }
-  } else if (level.status === LevelStatus.locked) {
-    // Used for peer reviews - can just use default styling
-    // TODO - check on lockable stages too
   } else {
     if (level.status !== LevelStatus.not_tried) {
       style.borderColor = color.level_perfect;
