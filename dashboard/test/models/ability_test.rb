@@ -154,11 +154,7 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'levelbuilders can manage appropriate objects' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id,
-      permission: UserPermission::LEVELBUILDER
-    )
+    user = create :levelbuilder
     ability = Ability.new user
 
     assert ability.can?(:manage, Game)
