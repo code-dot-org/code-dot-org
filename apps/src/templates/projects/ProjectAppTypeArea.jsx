@@ -198,5 +198,5 @@ const ProjectAppTypeArea = React.createClass({
 });
 
 export default connect((state, ownProps) => ({
-  hasOlderProjects: state.hasOlderProjects[ownProps.labKey]
+  hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
 }), { appendProjects, setHasOlderProjects })(ProjectAppTypeArea);

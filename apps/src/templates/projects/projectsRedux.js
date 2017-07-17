@@ -1,5 +1,5 @@
 /** @file Redux actions and reducer for the Projects Gallery */
-import {registerReducers} from '@cdo/apps/redux';
+import { combineReducers } from 'redux';
 import _ from 'lodash';
 
 // Action types
@@ -12,7 +12,7 @@ const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 
 // Reducers
 
-export function selectedGallery(state, action) {
+function selectedGallery(state, action) {
   state = state || 'PUBLIC';
   switch (action.type) {
     case TOGGLE_GALLERY:
@@ -30,7 +30,7 @@ const initialProjectListState = {
   artist: [],
 };
 
-export function projectLists(state = initialProjectListState, action) {
+function projectLists(state = initialProjectListState, action) {
   switch (action.type) {
     case SET_PROJECT_LISTS:
       return action.projectLists;
@@ -64,7 +64,7 @@ const initialHasOlderProjects = {
   artist: true,
 };
 
-export function hasOlderProjects(state = initialHasOlderProjects, action) {
+function hasOlderProjects(state = initialHasOlderProjects, action) {
   switch (action.type) {
     case SET_HAS_OLDER_PROJECTS:
       return {
@@ -75,6 +75,13 @@ export function hasOlderProjects(state = initialHasOlderProjects, action) {
       return state;
   }
 }
+
+const reducer = combineReducers({
+  selectedGallery,
+  projectLists,
+  hasOlderProjects,
+});
+export default reducer;
 
 // Action creators
 
@@ -111,5 +118,3 @@ export function setProjectLists(projectLists) {
 export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
 }
-
-registerReducers({selectedGallery, projectLists, hasOlderProjects});

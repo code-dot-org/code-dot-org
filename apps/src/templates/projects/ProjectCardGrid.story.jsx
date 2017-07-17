@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
-import {selectedGallery, selectGallery, hasOlderProjects} from './projectsRedux';
+import projects, {selectGallery} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import {Galleries} from './projectConstants';
@@ -99,10 +99,7 @@ function generateFakeClassProjects() {
 }
 
 const createProjectsStore = function () {
-  return createStore(combineReducers({
-    selectedGallery: selectedGallery,
-    hasOlderProjects: hasOlderProjects,
-  }));
+  return createStore(combineReducers({projects}));
 };
 
 

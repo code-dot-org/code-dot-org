@@ -57,5 +57,5 @@ class PublicGallery extends Component {
   }
 }
 export default connect(state => ({
-  projectLists: state.projectLists,
+  projectLists: state.projects.projectLists,
 }))(PublicGallery);
