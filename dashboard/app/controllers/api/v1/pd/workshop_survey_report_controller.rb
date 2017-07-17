@@ -59,12 +59,12 @@ module Api::V1::Pd
       facilitator_name = current_user.facilitator? ? current_user.name : nil
       survey_report = Hash.new
 
-      survey_report[:this_workshop] = summarize_workshop_surveys(@workshop.survey_responses, facilitator_name)
+      survey_report[:this_workshop] = summarize_workshop_surveys([@workshop], facilitator_name)
       survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
         Pd::Workshop.where(
           subject: @workshop.subject,
           course: @workshop.course
-        ).facilitated_by(current_user).flat_map(&:survey_responses),
+        ).facilitated_by(current_user),
         facilitator_name
       )
 
