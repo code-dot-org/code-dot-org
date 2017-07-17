@@ -389,10 +389,6 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
-function enableFullscreenPreview() {
-  brambleProxy_.enableFullscreenPreview();
-}
-
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
@@ -480,7 +476,6 @@ const brambleHost = {
   enableInspector: enableInspector,
   disableInspector: disableInspector,
   refreshPreview: refreshPreview,
-  enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
   onBrambleReady: onBrambleReady,
   onInspectorChanged: onInspectorChanged,
