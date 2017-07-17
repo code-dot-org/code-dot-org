@@ -101,7 +101,7 @@ class GallerySwitcher extends Component {
 }
 
 export default connect(state => ({
-  selectedGallery: state.selectedGallery
+  selectedGallery: state.projects.selectedGallery
 }), dispatch => ({
   selectGallery(gallery){
     dispatch(selectGallery(gallery));

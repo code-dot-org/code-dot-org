@@ -2,15 +2,16 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { getStore } from '@cdo/apps/redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
-import { selectGallery, setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
+import projects, { selectGallery, setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
 
 $(document).ready(() => {
+  registerReducers({projects});
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={getStore()}>

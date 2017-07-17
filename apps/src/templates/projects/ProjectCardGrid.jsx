@@ -163,5 +163,5 @@ const ProjectCardGrid = React.createClass({
 });
 
 export default connect(state => ({
-  selectedGallery: state.selectedGallery
+  selectedGallery: state.projects.selectedGallery
 }))(ProjectCardGrid);
