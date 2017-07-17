@@ -4,11 +4,11 @@ import _ from 'lodash';
 
 // Action types
 
-const TOGGLE_GALLERY = 'selectedGallery/TOGGLE_GALLERY';
-const APPEND_PROJECTS = 'projectLists/APPEND_PROJECTS';
-const SET_PROJECT_LISTS = 'projectLists/SET_PROJECT_LISTS';
-const SET_HAS_OLDER_PROJECTS = 'hasOlderProjects/SET_HAS_OLDER_PROJECTS';
-const PREPEND_PROJECTS = 'projectLists/PREPEND_PROJECTS';
+const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
+const APPEND_PROJECTS = 'projects/APPEND_PROJECTS';
+const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
+const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
+const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 
 // Reducers
 
