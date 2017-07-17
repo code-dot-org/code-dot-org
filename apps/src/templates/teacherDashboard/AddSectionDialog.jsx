@@ -9,6 +9,11 @@ import i18n from '@cdo/locale';
 import { updateSection } from './teacherSectionsRedux';
 const initialState = {
   loginType: undefined,
+  name: '',
+  grade: '',
+  course: '',
+  extras: 'yes',
+  pairing: 'yes',
 };
 
 export class AddSectionDialog extends Component {
@@ -36,18 +41,39 @@ export class AddSectionDialog extends Component {
     this.setState({loginType: ''});
   };
 
-  onClickEditSave = (name, grade, assignment, extras, pairing) => {
+  handleNameChange = (name) => {
+    this.setState({name});
+  };
+
+  handleGradeChange = (grade) => {
+    this.setState({grade});
+  };
+
+  handleCourseChange = (course1) => {
+    //alert(course1.courseId);
+    this.setState({course: course1});
+    //alert('here: ' + this.state.course);
+  };
+
+  handleExtrasChange = (extras) => {
+    this.setState({extras});
+  };
+
+  handlePairingChange = (pairing) => {
+    this.setState({pairing});
+  }
+
+  onClickEditSave = () => {
     const {updateSection} = this.props;
     //const persistedSection = false;
 
     const data = {
       //id: null,
-      name: name,
+      name: this.state.name,
       login_type: this.state.loginType,
-      grade: grade,
-      stage_extras: extras,
-      pairing_allowed: pairing,
-      course_id: assignment,
+      grade: this.state.grade,
+      stage_extras: this.state.extras === 'yes' ? true : false,
+      pairing_allowed: this.state.pairing === 'yes' ? true : false,
     };
 
     const suffix = '';
@@ -84,6 +110,14 @@ export class AddSectionDialog extends Component {
         <EditSectionForm
           handleSave={this.onClickEditSave}
           handleBack={this.handleGoBack}
+          name={this.state.name}
+          handleName={this.handleNameChange}
+          grade={this.state.grade}
+          handleGrade={this.handleGradeChange}
+          extras={this.state.extras}
+          handleExtras={this.handleExtrasChange}
+          pairing={this.state.pairing}
+          handlePairing={this.handlePairingChange}
         />
       );
     }
