@@ -1,8 +1,9 @@
 class Pd::WorkshopUserAdminController < ApplicationController
   authorize_resource class: :pd_workshop_user_admin
 
-  # display the Facilitator search form, Facilitators found, and Courses for first Facilitator found
+  # display the Facilitator search form, Facilitator found, and Courses assigned to the Facilitator
   # assign / remove Courses actions redirect back to this form to display the updated course list
+  # get /pd/workshop_user_admin/facilitator_courses
   def facilitator_courses_form
     search_term = facilitator_course_params[:search_term]
     if search_term =~ /^\d+$/
@@ -22,11 +23,13 @@ class Pd::WorkshopUserAdminController < ApplicationController
     @courses = Pd::CourseFacilitator.where(facilitator_id: @facilitator.id) if @facilitator
   end
 
+  # post /pd/workshop_user_admin/assign_course
   def assign_course
     User.find(facilitator_course_params[:facilitator_id]).try(:course_as_facilitator=, facilitator_course_params[:course])
     redirect_to action: "facilitator_courses_form", search_term: facilitator_course_params[:facilitator_id]
   end
 
+  # get /pd/workshop_user_admin/remove_course
   def remove_course
     User.find(facilitator_course_params[:facilitator_id]).try(:delete_course_as_facilitator, facilitator_course_params[:course])
     redirect_to action: "facilitator_courses_form", search_term: facilitator_course_params[:facilitator_id]
