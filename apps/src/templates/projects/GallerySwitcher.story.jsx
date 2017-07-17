@@ -1,7 +1,7 @@
 import React from 'react';
 import GallerySwitcher from './GallerySwitcher';
 import {Galleries} from './projectConstants';
-import {selectedGallery, selectGallery} from './projectsModule';
+import {selectedGallery, selectGallery} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 

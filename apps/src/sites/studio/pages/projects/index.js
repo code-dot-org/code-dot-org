@@ -8,7 +8,7 @@ import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
-import { selectGallery, setProjectLists } from '@cdo/apps/templates/projects/projectsModule';
+import { selectGallery, setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
 
 $(document).ready(() => {
   const projectsHeader = document.getElementById('projects-header');

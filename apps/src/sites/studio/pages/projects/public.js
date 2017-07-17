@@ -6,7 +6,7 @@ import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import i18n from "@cdo/locale";
 import { Provider } from 'react-redux';
 import { getStore } from '@cdo/apps/redux';
-import { setProjectLists } from '@cdo/apps/templates/projects/projectsModule';
+import { setProjectLists } from '@cdo/apps/templates/projects/projectsRedux';
 import { MAX_PROJECTS_PER_CATEGORY } from '@cdo/apps/templates/projects/projectConstants';
 
 $(document).ready(() => {
