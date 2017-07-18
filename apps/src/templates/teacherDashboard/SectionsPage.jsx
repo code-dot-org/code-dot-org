@@ -27,7 +27,7 @@ const styles = {
   }
 };
 
-const sectionsApiBasePath = '/dashboardapi/sections/';
+const sectionsApiPath = '/dashboardapi/sections/';
 
 class SectionsPage extends Component {
   static propTypes = {
@@ -77,7 +77,7 @@ class SectionsPage extends Component {
       onAsyncLoad();
     });
 
-    $.getJSON(sectionsApiBasePath).done(response => {
+    $.getJSON(sectionsApiPath).done(response => {
       sections = response;
       onAsyncLoad();
     });
@@ -99,7 +99,7 @@ class SectionsPage extends Component {
     $.getJSON(url, { courseId }).then(() => {
       this.setState({rosterDialogOpen: false, sectionsLoaded: false});
 
-      $.getJSON(sectionsApiBasePath).done(results => {
+      $.getJSON(sectionsApiPath).done(results => {
         this.props.setSections(results, true);
         this.setState({sectionsLoaded: true});
       });
