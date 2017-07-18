@@ -4,12 +4,14 @@ import {Heading1, Heading3} from "../../lib/ui/Headings";
 import ProgressButton from '../progress/ProgressButton';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, assignmentShape } from './shapes';
+import DialogFooter from './DialogFooter';
+import i18n from '@cdo/locale';
 
 export class EditSectionForm extends Component{
 
   static propTypes = {
     handleSave: PropTypes.func.isRequired,
-    handleBack: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
     name: PropTypes.string,
     handleName: PropTypes.func.isRequired,
     grade: PropTypes.string,
@@ -18,6 +20,7 @@ export class EditSectionForm extends Component{
     handleExtras: PropTypes.func.isRequired,
     pairing: PropTypes.string,
     handlePairing: PropTypes.func.isRequired,
+    assignmentRef: PropTypes.func.isRequired,
 
     //Comes from redux
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -32,24 +35,23 @@ export class EditSectionForm extends Component{
 
   render(){
     return (
-      <div>
+      <div style={{width: 970}}>
         <Heading1>
-          Edit Section Details
+          {i18n.editSectionDetails()}
         </Heading1>
         <div>
           <Heading3>
-            Section Name
+            {i18n.sectionName()}
           </Heading3>
           <div>
-            <p>Enter a name for your section that will help you remember which classroom it is for. Both you and your
-              students will be able to see this section name.</p>
+            <div>{i18n.addSectionName()}</div>
             <input
               value={this.props.name}
               onChange={val => this.props.handleName(val.target.value)}
             />
           </div>
           <Heading3>
-            Grade
+            {i18n.grade()}
           </Heading3>
           <div>
             <select
@@ -62,52 +64,57 @@ export class EditSectionForm extends Component{
             </select>
           </div>
           <Heading3>
-            Course
+            {i18n.course()}
           </Heading3>
           <div>
-            <p>Don't know which course to teach? Find a course from the courses page to assign a course to your section
-              later. </p>
+            <div>{i18n.whichCourse()}</div>
             <AssignmentSelector
-              ref={element => this.assignment = element}
+              ref={this.props.assignmentRef}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
             />
           </div>
           <Heading3>
-            Enable Lesson Extras
+            {i18n.enableLessonExtras()}
           </Heading3>
           <div>
-            <p>When Lesson Extras is on, students will end each lesson with some bonus challenges and creative projects rather
-              than being automatically advanced to the next lesson. This feature gives students the opportunity to expand
-              their knowledge and further practice, without getting ahead of their classmates. Learn more about Lesson Extras.</p>
+            <div>{i18n.explainLessonExtras()}</div>
             <select
               value = {this.props.extras}
               onChange={val => this.props.handleExtras(val.target.value)}
             >
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
+              <option value="yes">{i18n.yes()}</option>
+              <option value="no">{i18n.no()}</option>
             </select>
           </div>
           <Heading3>
-            Enable Pair Programming
+            {i18n.enablePairProgramming()}
           </Heading3>
           <div>
-            <p>When pair programming is turned on, students can choose to work with a classmate at the same computer. Turn
-              this setting on if you want students to be able to work together while sharing progress. Learn more about
-              pair programming.</p>
+            <div>{i18n.explainPairProgramming()}</div>
             <select
               value = {this.props.pairing}
               onChange={val => this.props.handlePairing(val.target.value)}
             >
-              <option value="yes">Yes</option>
-              <option value="no">No</option>
+              <option value="yes">{i18n.yes()}</option>
+              <option value="no">{i18n.no()}</option>
             </select>
           </div>
         </div>
-        <div>
-          <ProgressButton onClick={this.props.handleBack} text="Go Back"/>
-          <ProgressButton onClick={() => {this.props.handleSave();}} text="Save"/>
-        </div>
+        <DialogFooter>
+          <ProgressButton
+            onClick={this.props.handleClose}
+            text={i18n.dialogCancel()}
+            size={ProgressButton.ButtonSize.large}
+            color={ProgressButton.ButtonColor.gray}
+          />
+          <ProgressButton
+            onClick={this.props.handleSave}
+            text={i18n.save()}
+            size={ProgressButton.ButtonSize.large}
+            color={ProgressButton.ButtonColor.orange}
+          />
+        </DialogFooter>
       </div>
     );
   }
