@@ -1346,7 +1346,6 @@ class User < ActiveRecord::Base
       secret_picture_path: secret_picture.path,
       location: "/v2/users/#{id}",
       age: age,
-      completed_levels_count: user_levels.passing.count,
     }
   end
 

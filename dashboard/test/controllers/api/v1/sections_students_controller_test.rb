@@ -33,8 +33,9 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
     get :index, params: {section_id: @word_section.id}
     assert_response :success
-    response_json = JSON.parse(@response.body)
-    assert_equal @word_section.students.size, response_json.size
-    # TODO: More detailed assertions about student details revealed?
+    expected_summary = [
+      @word_user_1.summarize.merge(completed_levels_count: @word_user_1.user_levels.passing.count)
+    ].to_json
+    assert_equal expected_summary, @response.body
   end
 end

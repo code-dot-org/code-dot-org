@@ -2002,7 +2002,6 @@ class UserTest < ActiveSupport::TestCase
         secret_picture_path: user.secret_picture.path,
         location: "/v2/users/#{user.id}",
         age: user.age,
-        completed_levels_count: user.user_levels.passing.count,
       },
       user.summarize
     )

@@ -129,4 +129,11 @@ class UserLevel < ActiveRecord::Base
       best_result: (locked || readonly_answers) ? ActivityConstants::BEST_PASS_RESULT : user_level.best_result
     )
   end
+
+  # Get number of passed levels per user for the given set of user IDs
+  # @param [Array<Integer>] user_ids
+  # @return [Hash<Integer, Integer>] user_id => passed_level_count
+  def self.count_passed_levels_for_users(user_ids)
+    where(user_id: user_ids).passing.group(:user_id).count
+  end
 end
