@@ -182,7 +182,7 @@ en:
   password:
     reset_form:
       title: 'Forgot your password?'
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email address'
       submit: 'Submit'
     reset_errors:
@@ -202,6 +202,8 @@ en:
       The tutorials are fun, visually engaging, and teach the basic concepts of computer science using a simple, guided, game-like experience. Learn to code from Bill Gates, Mark Zuckerberg, Angry Birds, and Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
   section:
     your_section:
       one: 'Your section:'

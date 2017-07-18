@@ -236,6 +236,7 @@ class User < ActiveRecord::Base
   # TODO(asher): Determine whether request level caching is sufficient, or
   #   whether a memcache or otherwise should be employed.
   def permission?(permission)
+    return false unless teacher?
     if @permissions.nil?
       # The user's permissions have not yet been cached, so do the DB query,
       # caching the results.
@@ -255,6 +256,7 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
+    return false unless teacher?
     district_as_contact.present?
   end
 
@@ -460,6 +462,11 @@ class User < ActiveRecord::Base
 
     hashed_email = User.hash_email(email)
     User.find_by(hashed_email: hashed_email)
+  end
+
+  def self.find_by_parent_email(email)
+    return nil if email.blank?
+    User.find_by(parent_email: email)
   end
 
   def self.find_channel_owner(encrypted_channel_id)
@@ -912,6 +919,23 @@ class User < ActiveRecord::Base
     return false
   end
 
+  # Returns an array of users associated with an email address.
+  # Will contain all users that have this email either in
+  # plaintext, hashed, or as a parent email. Empty array
+  # if no associated users are found.
+  def self.associated_users(email)
+    result = []
+    return result if email.blank?
+
+    primary_account = User.find_by_email_or_hashed_email(email)
+    result.push(primary_account) if primary_account
+
+    child_accounts = User.where(parent_email: email)
+    result += child_accounts
+
+    result
+  end
+
   # Override how devise tries to find users by email to reset password
   # to also look for the hashed email. For users who have their email
   # stored hashed (and not in plaintext), we can still allow them to
@@ -926,15 +950,47 @@ class User < ActiveRecord::Base
       return user
     end
 
-    user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
-    if user && user.persisted?
-      user.raw_token = user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
-    else
-      user.errors.add :email, :not_found
-    end
-    user
+    email = attributes[:email]
+    associated_users = User.associated_users(email)
+    return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
 
+  attr_accessor :child_users
+  def send_reset_password_for_users(email, users)
+    if users.empty?
+      not_found_user = User.new(email: email)
+      not_found_user.errors.add :email, :not_found
+      return not_found_user
+    end
+
+    # Normal case: single user, owner of the email attached to this account
+    if users.length == 1 && (users.first.email == email || users.first.hashed_email == User.hash_email(email))
+      primary_user = users.first
+      primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
+      return primary_user
+    end
+
+    # One or more users are associated with parent email, generate reset tokens for each one
+    users.each do |user|
+      raw, enc = Devise.token_generator.generate(User, :reset_password_token)
+      user.raw_token = raw
+      user.reset_password_token   = enc
+      user.reset_password_sent_at = Time.now.utc
+      user.save(validate: false)
+    end
+
+    begin
+      # Send the password reset to the parent
+      raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
+      self.child_users = users
+      send_devise_notification(:reset_password_instructions, raw, {to: email})
+    rescue ArgumentError
+      errors.add :base, I18n.t('password.reset_errors.invalid_email')
+      return nil
+    end
+  end
+
+  # Send a password reset email to the user (not to their parent)
   def send_reset_password_instructions(email)
     raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
 

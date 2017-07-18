@@ -25,7 +25,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     workshops = [enrollment_1.workshop, enrollment_2.workshop]
     workshops.each {|w| w.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON)}
 
-    result_hash = summarize_workshop_surveys(workshops)
+    result_hash = summarize_workshop_surveys(workshops: workshops)
     assert_equal 3.5, result_hash[:personal_learning_needs_met]
     assert_equal 1, result_hash[:have_ideas_about_formative]
     assert_equal ['venue feedback', 'more venue feedback'], result_hash[:venue_feedback]
@@ -35,7 +35,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal({'Facilitator Bob' => ['Bob could improve'], 'Facilitator Jane' => ['Jane could improve']}, result_hash[:things_facilitator_could_improve])
 
     # When viewing workshop surveys for just Facilitator Bob, expect to only see bob's feedback
-    result_hash = summarize_workshop_surveys(workshops, 'Facilitator Bob')
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name: 'Facilitator Bob')
     assert_equal ['Bob did well'], result_hash[:things_facilitator_did_well]
     assert_equal ['Bob could improve'], result_hash[:things_facilitator_could_improve]
   end
@@ -87,7 +87,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     workshops.each {|w| w.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)}
     create :pd_enrollment, workshop: workshops.first
 
-    result_hash = summarize_workshop_surveys(workshops)
+    result_hash = summarize_workshop_surveys(workshops: workshops)
     assert_equal 4, result_hash[:num_enrollments]
     assert_equal 3, result_hash[:num_surveys]
     assert_equal 4, result_hash[:how_much_learned]
@@ -96,23 +96,25 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal({'Facilitator Bert' => 5.0, 'Facilitator Ernie' => 3.0}, result_hash[:how_clearly_presented])
     assert_equal({'Facilitator Bert' => ['Bert was very strict'], 'Facilitator Ernie' => ['Ernie did not put down the ducky', 'Ernie was disorganized']}, result_hash[:things_facilitator_could_improve])
 
-    result_hash = summarize_workshop_surveys(workshops, 'Facilitator Ernie')
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_name: 'Facilitator Ernie')
     assert_equal 4.0, result_hash[:how_much_learned]
     assert_equal ['venue feedback', 'venue feedback', 'venue feedback'], result_hash[:venue_feedback]
     assert_equal [['Facilitator Bert'], ['Facilitator Ernie'], ['Facilitator Ernie']], result_hash[:who_facilitated]
     assert_equal 3.0, result_hash[:how_clearly_presented]
     assert_equal ['Ernie did not put down the ducky', 'Ernie was disorganized'], result_hash[:things_facilitator_could_improve]
 
-    result_hash = summarize_workshop_surveys(workshops, nil, false)
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_breakdown: false)
     assert_equal 3.67, result_hash[:how_clearly_presented]
   end
 
   test 'get an error if summarizing a mix of workshop surveys' do
+    local_workshop = create(:pd_local_summer_workshop_survey).pd_enrollment.workshop
+    local_workshop.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
+
+    teachercon = create(:pd_teachercon_survey).pd_enrollment.workshop
+    teachercon.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON)
     assert_raise RuntimeError do
-      summarize_workshop_surveys(
-        [create(:pd_local_summer_workshop_survey).pd_enrollment.workshop, create(:pd_teachercon_survey).pd_enrollment.workshop],
-        Pd::TeacherconSurvey.options
-      )
+      summarize_workshop_surveys(workshops: [local_workshop, teachercon])
     end
   end
 end

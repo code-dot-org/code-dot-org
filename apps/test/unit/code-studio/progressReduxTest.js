@@ -46,7 +46,8 @@ const stageData = [
         icon: null,
         title: "Unplugged Activity",
         url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
-        previous: false
+        previous: false,
+        is_concept_level: false,
       },
       {
           ids: [323],
@@ -55,7 +56,8 @@ const stageData = [
           kind: LevelKind.assessment,
           icon: null,
           title: 1,
-          url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2"
+          url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
+          is_concept_level: false,
       },
       {
           ids: [322],
@@ -65,7 +67,8 @@ const stageData = [
           icon: null,
           title: 2,
           url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
-          next: [2, 1]
+          next: [2, 1],
+          is_concept_level: false,
       }
     ],
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/1/Teacher",
@@ -92,7 +95,8 @@ const stageData = [
         icon: null,
         title: 1,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
-        previous: [1, 3]
+        previous: [1, 3],
+        is_concept_level: false,
       }, {
         ids: [339],
         activeId: 339,
@@ -101,6 +105,7 @@ const stageData = [
         icon: null,
         title: 2,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
+        is_concept_level: false,
       }, {
         ids: [341],
         activeId: 341,
@@ -109,6 +114,7 @@ const stageData = [
         icon: null,
         title: 3,
         url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
+        is_concept_level: false,
       }
     ],
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher",
@@ -554,30 +560,36 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/1",
             name: undefined,
             progression: undefined,
+            kind: LevelKind.unplugged,
             icon: null,
             isUnplugged: true,
             levelNumber: undefined,
             isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/2",
             name: undefined,
             progression: undefined,
+            kind: LevelKind.assessment,
             icon: null,
             isUnplugged: false,
             levelNumber: 1,
             isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'not_tried',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/1/puzzle/3",
             name: undefined,
             progression: undefined,
+            kind: LevelKind.assessment,
             icon: null,
             isUnplugged: false,
             levelNumber: 2,
             isCurrentLevel: false,
+            isConceptLevel: false,
           }
         ],
         [
@@ -586,30 +598,36 @@ describe('progressReduxTest', () => {
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/1",
             name: undefined,
             progression: undefined,
+            kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
             levelNumber: 1,
             isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'perfect',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/2",
             name: undefined,
             progression: undefined,
+            kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
             levelNumber: 2,
             isCurrentLevel: false,
+            isConceptLevel: false,
           },
           {
             status: 'attempted',
             url: "http://localhost-studio.code.org:3000/s/course3/stage/2/puzzle/3",
             name: undefined,
             progression: undefined,
+            kind: LevelKind.puzzle,
             icon: null,
             isUnplugged: false,
             levelNumber: 3,
             isCurrentLevel: false,
+            isConceptLevel: false,
           }
         ]
       ];

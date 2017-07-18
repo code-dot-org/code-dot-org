@@ -66,6 +66,7 @@ class Section < ActiveRecord::Base
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
   LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
+  LOGIN_TYPE_CLEVER = 'clever'.freeze
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -192,7 +193,7 @@ class Section < ActiveRecord::Base
       linkToAssigned: link_to_assigned,
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
-      sectionCode: code
+      code: code,
     }
   end
 

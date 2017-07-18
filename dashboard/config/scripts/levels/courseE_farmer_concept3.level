@@ -28,12 +28,17 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67bf5b89188b28ffa16d00c7dcd7e8ce/grade3_robotFarmer_ConditionalsIntro_8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67bf5b89188b28ffa16d00c7dcd7e8ce/courseE_farmer_concept3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"What should you do once you've reached the end of a path?\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/96906f34fa082a4bad8cb4cfad068c7d/courseE_farmer_concept3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat` loop to run your code multiple times for each straight path.\",\"hint_id\":\"grade3_robotFarmer_ConditionalsIntro_8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/413c9163b72074cedde6194c0f78c945/courseE_farmer_concept3.mp3\"}]",
     "ideal": "6",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:42:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 20:49:15 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:49:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -56,7 +61,7 @@
         </block>
         <block type="maze_dig"/>
         <block type="maze_fill"/>
-        <block type="controls_repeat" limit="1">
+        <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
         <block type="maze_untilBlockedOrNotClear">
@@ -69,12 +74,15 @@
         <block type="maze_ifElse">
           <title name="DIR">isPathLeft</title>
         </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">do something</title>
+        <block type="karel_if">
+          <title name="DIR">holePresent</title>
         </block>
         <block type="procedures_callnoreturn">
           <mutation name="do something"/>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">do something</title>
         </block>
       </xml>
     </toolbox_blocks>
