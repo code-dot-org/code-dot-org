@@ -18,11 +18,13 @@ FactoryGirl.define do
     capacity 10
     transient do
       num_sessions 0
+      num_facilitators 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
       each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
       enrolled_unattending_users 0
+      num_completed_surveys 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
@@ -33,6 +35,9 @@ FactoryGirl.define do
           start: evaluator.sessions_from + i.days,
           duration_hours: evaluator.each_session_hours
         )
+      end
+      evaluator.num_facilitators.times do
+        workshop.facilitators << (create :facilitator)
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
