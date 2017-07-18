@@ -91,12 +91,12 @@
   congratulations_on_completing_course2: Comhghairdeas as Cúrsa 2 a chríochnú
   congratulations_on_completing_course3: Comhghairdeas as Cúrsa 3 a chríochnú
   congratulations_on_completing_course4: Comhghairdeas as Cúrsa 4 a chríochnú
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Comhghairdeas as Cúrsa A a chríochnú
+  congratulations_on_completing_courseb: Comhghairdeas as Cúrsa B a chríochnú
+  congratulations_on_completing_coursec: Comhghairdeas as Cúrsa C a chríochnú
+  congratulations_on_completing_coursed: Comhghairdeas as Cúrsa D a chríochnú
+  congratulations_on_completing_coursee: Comhghairdeas as Cúrsa E a chríochnú
+  congratulations_on_completing_coursef: Comhghairdeas as Cúrsa F a chríochnú
   congratulations_on_completing_accelerated: Comhghairdeas as an gCúrsa Luathaithe
     a chríochnú
   congrats_next_tutorials_title: Téigh ar aghaidh go dtí an chéad leibhéal eile
@@ -271,12 +271,18 @@
   just_did_course2: Táim tar éis Cúrsa 2 a chríochnú - bain triail as! @codeorg
   just_did_course3: Táim tar éis Cúrsa 3 a chríochnú - bain triail as! @codeorg
   just_did_course4: Táim tar éis Cúrsa 4 a chríochnú - bain triail as! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: Táim go díreach tar éis Cúrsa A a chríochnú - bain triail as!
+    @codeorg
+  just_did_courseb: Táim go díreach tar éis Cúrsa B a chríochnú - bain triail as!
+    @codeorg
+  just_did_coursec: Táim go díreach tar éis Cúrsa C a chríochnú - bain triail as!
+    @codeorg
+  just_did_coursed: Táim go díreach tar éis Cúrsa D a chríochnú - bain triail as!
+    @codeorg
+  just_did_coursee: Táim go díreach tar éis Cúrsa E a chríochnú - bain triail as!
+    @codeorg
+  just_did_coursef: Táim go díreach tar éis Cúrsa F a chríochnú - bain triail as!
+    @codeorg
   just_did_accelerated: Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail
     as! @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
@@ -341,7 +347,7 @@
   homepage_hero_text_satya_new: |-
     &ldquo;Computer science empowers
     students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    Satya, Príomhoifigeach Mhicrosoft
   homepage_hero_text_bosh: |
     &ldquo;If you code, you can pick and choose
     the course of your life.&rdquo;
@@ -368,9 +374,8 @@
     &ldquo;This program got 100% of my students
     engaged, involved and participating.&rdquo;
     Adam, múinteoir
-  homepage_hero_text_stat_loc: Tá 2.5 milliún cailín cláraithe leis an Stiúideo Códála
-  homepage_hero_text_stat_students: "#student_count dalta cláraithe leis an Stiúideo
-    Códála"
+  homepage_hero_text_stat_loc: Tá 8.5 milliún cailín cláraithe le Code.org
+  homepage_hero_text_stat_students: "#student_count dalta cláraithe le Code.org"
   homepage_hero_text_stat_served: 'An Uair Chódála: #served códálaí'
   homepage_slot_text_hoc: An Uair Chódála
   homepage_slot_text_frozen: Frozen in éindí le hAnna agus Elsa
@@ -415,7 +420,7 @@
   homepage_slot_text_title_hoc: An Uair Chódála
   homepage_slot_text_blurb_hoc: Is féidir le héinne foghlaim. Tosaigh inniu
   homepage_slot_text_link_hoc: Bain triail as an Uair Chódála
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Maidir leis an Uair Chódála
   homepage_slot_text_link_host: "Óstáil Uair Chódála"
   homepage_slot_text_link_hocserved: "# códálaí"
   homepage_solot_text_link_volunteer: Bí i do shaorálaí don Uair Chódála
@@ -825,7 +830,7 @@
   dashboard_navigation_view_assessments_surveys: Measúnuithe/Suirbhéanna
   dashboard_navigation_add_students: Cuir Daltaí Leis
   dashboard_navigation_manage_students: Bainistigh Daltaí
-  dashboard_navigation_lesson_plans_resources: Pleananna Ceachta agus Acmhainní
+  dashboard_navigation_lesson_plans_resources: Caighdeáin Churaclaim
   dashboard_navigation_view_stats: Staitisticí
   dashboard_navigation_section: 'Rannán: %{section_name}'
   dashboard_navigation_student: 'Dalta: %{student_name}'
@@ -847,7 +852,7 @@
     féidir na freagraí téacs a thugann siad ar cheisteanna oscailte a fheiceáil tríd
     an gcúrsa ceart a roghnú ón roghchlár anuas.
   dashboard_sections_new_section: Rannán nua
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Iompórtáil rannán ó Google Classroom
   dashboard_sections_jumbotron_instruction: Cruthaigh rannáin nua agus cuir daltaí
     leo. Le rannáin, is féidir do chuid daltaí a eagrú i ngrúpaí níos lú, sa chaoi
     go mbeidh sé níos éasca an dul chun cinn atá déanta acu a leanúint agus na cuntais
@@ -972,12 +977,12 @@
   dashboard_course2: 'Cúrsa 2:'
   dashboard_course3: 'Cúrsa 3:'
   dashboard_course4: 'Cúrsa 4: '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Cúrsa A: '
+  dashboard_courseb: 'Cúrsa B: '
+  dashboard_coursec: 'Cúrsa C: '
+  dashboard_coursed: 'Cúrsa D: '
+  dashboard_coursee: 'Cúrsa E: '
+  dashboard_coursef: 'Cúrsa F: '
   dashboard_unplugged: Mura bhfuil ríomhairí agat, bain triail as <a href='%{unplugged_url}'>na
     ceachtanna "díphlugáilte" seo</a> i do sheomra ranga.
   dashboard_curriculum: Curaclam
@@ -1204,6 +1209,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Iar-AP: Bunachair Sonraí in Aipeanna'
   cspassessment_name: An Scrúdú Iomlán - 50 ceist
   cspexam1-mWU7ilDYM9_name: Cuid 1 den Scrúdú - 25 ceist
@@ -1233,7 +1239,7 @@
   csf2_draft_category_name: "Á bhforbairt: Cúrsaí A-F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"
-  csp17_category_name: "'16-'17 Foras Feasa ar an Ríomheolaíocht"
+  csp17_category_name: Foras Feasa ar an Ríomheolaíocht
   cspexams_category_name: 'Scrúdú Cleachtaidh: Foras Feasa ar an Ríomheolaíocht'
   research_studies_category_name: Research Studies
   applab_name: Saotharlann Aipeanna
@@ -1297,12 +1303,12 @@
   course2_gradelevel: Aois 6-18
   course3_gradelevel: Aois 8-18
   course4_gradelevel: Aois 10-18
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: Aois 10+
+  courseb_gradelevel: Aois 11+
+  coursec_gradelevel: Aois 12+
   coursed_gradelevel: Aois 13+
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
+  coursee_gradelevel: Aois 14+
+  coursef_gradelevel: Aois 15+
   accelerated_gradelevel: Aois 10-18
   codeorg_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
   codeintl_platformtext: Brabhsálaithe nua-aimseartha, gutháin chliste, táibléid
@@ -2026,11 +2032,11 @@
   header_stats: Staitisticí
   header_help_us: Cabhraigh Linn
   header_about: Maidir Linn
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
+  header_teacher_community: Comhphobal múinteoirí
+  header_help_support: 'Cabhair agus tacaíocht '
+  header_report_bug: Déan tuairisc ar fhadhb
   header_tutorials: Cúrsaí Teagaisc
   header_documentation: Doiciméadú
-  csp_name: "'16-'17 Foras Feasa ar an Ríomheolaíocht"
+  csp_name: Foras Feasa ar an Ríomheolaíocht
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
+  full_course_category_name: Cúrsaí Iomlána
