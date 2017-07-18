@@ -42,11 +42,10 @@ const statusStyle = {
     // Don't want our green border even though status isn't not_tried
     borderColor: color.lighter_gray,
   }
-
 };
 
 /**
- * Given a level object, figure out styling related to it's color, border color,
+ * Given a level object, figure out styling related to its color, border color,
  * and background color
  */
 export const levelProgressStyle = (level, disabled) => {
