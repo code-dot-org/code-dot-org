@@ -134,12 +134,13 @@ export function initializeContainedLevel() {
       // because runButton is also mutated outside of React (here and elsewhere)
       // we need to worry about cases where the DOM gets out of sync with the
       // React layer
-      runButton.prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
-      if (codeStudioLevels.hasValidContainedLevelResult()) {
+      const validResult = codeStudioLevels.hasValidContainedLevelResult();
+      runButton.prop('disabled', !validResult);
+      if (validResult) {
         runButton.qtip('hide');
         $('#gameButtons').unbind('click', disabledRunButtonHandler);
       }
-      getStore().dispatch(setAwaitingContainedResponse(!codeStudioLevels.hasValidContainedLevelResult()));
+      getStore().dispatch(setAwaitingContainedResponse(!validResult));
     });
   }
 }
