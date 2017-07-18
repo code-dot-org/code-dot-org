@@ -45,7 +45,6 @@ const statusStyle = {
 
 };
 
-// TODO: write tests?
 /**
  * Given a level object, figure out styling related to it's color, border color,
  * and background color
