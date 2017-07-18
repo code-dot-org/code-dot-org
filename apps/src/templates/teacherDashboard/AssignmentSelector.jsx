@@ -32,6 +32,7 @@ export default class AssignmentSelector extends Component {
     section: sectionShape,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
+    chooseLaterOption: PropTypes.bool,
   };
 
   constructor(props) {
@@ -132,6 +133,7 @@ export default class AssignmentSelector extends Component {
           onChange={this.onChangePrimary}
         >
           <option key="default" value={noAssignment}/>
+          {this.props.chooseLaterOption && <option key="later" value="decideLater">Decide later</option>}
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (
