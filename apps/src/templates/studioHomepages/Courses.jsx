@@ -62,7 +62,6 @@ const Courses = React.createClass({
     $('.hour-of-code-courses-first-row').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesFirstRow)).show();
     $('.csf-courses').appendTo(ReactDOM.findDOMNode(this.refs.csfCourses)).show();
     $('.tools-courses').appendTo(ReactDOM.findDOMNode(this.refs.toolsCourses)).show();
-    $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
@@ -205,10 +204,6 @@ const Courses = React.createClass({
               color={ProgressButton.ButtonColor.orange}
             />
           </div>
-        )}
-
-        {(!isTeacher && !isSignedOut) && (
-          <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>
     );
