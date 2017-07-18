@@ -342,7 +342,6 @@ function reportComplete(report, response) {
   if (response) {
     lastServerResponse.report_error = report.error;
     lastServerResponse.nextRedirect = response.redirect;
-    lastServerResponse.previousLevelRedirect = response.previous_level;
     lastServerResponse.videoInfo = response.video_info;
     lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
     lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;

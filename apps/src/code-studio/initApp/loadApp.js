@@ -189,12 +189,6 @@ export function setupApp(appOptions) {
         window.location.href = lastServerResponse.nextRedirect;
       }
     },
-    backToPreviousLevel: function () {
-      var lastServerResponse = reporting.getLastServerResponse();
-      if (lastServerResponse.previousLevelRedirect) {
-        window.location.href = lastServerResponse.previousLevelRedirect;
-      }
-    },
     showInstructionsWrapper: function (showInstructions) {
       // Always skip all pre-level popups on share levels or when configured thus
       if (this.share || appOptions.level.skipInstructionsPopup) {
