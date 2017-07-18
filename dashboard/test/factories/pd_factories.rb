@@ -61,9 +61,8 @@ FactoryGirl.define do
       end
 
       evaluator.num_completed_surveys.times do
+        enrollment = create :pd_enrollment, workshop: workshop
         if workshop.teachercon?
-          enrollment = create :pd_enrollment, workshop: workshop
-
           survey_hash = build :pd_teachercon_survey_hash
 
           Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
@@ -78,11 +77,27 @@ FactoryGirl.define do
             end
           end
 
-          puts survey_hash.to_json
-
           create :pd_teachercon_survey, pd_enrollment: enrollment, form_data: survey_hash.to_json
         elsif workshop.local_summer?
-          raise 'Not supported yet'
+          survey_hash = build :pd_local_summer_workshop_survey_hash
+
+          Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+            survey_hash[field] = {}
+          end
+
+          survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+          workshop.facilitators.each do |facilitator|
+            Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+              if Pd::LocalSummerWorkshopSurvey.options.key? field
+                survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
+              else
+                survey_hash[field][facilitator.name] = 'Free Response'
+              end
+            end
+          end
+
+          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, form_data: survey_hash.to_json
         else
           raise 'Num_completed_surveys trait unsupported for '
         end
