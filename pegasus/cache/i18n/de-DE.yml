@@ -1178,6 +1178,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Vollständiger Test - 50 Fragen
   cspexam1-mWU7ilDYM9_name: Test Teil 1 - 25 Fragen
@@ -1947,33 +1948,33 @@
   header_sections: Sektionen
   header_professional_learning: Professionelles Lernen
   header_educate_overview: Educator Overview
-  header_educate_elementary: Elementary School
-  header_educate_middle: Middle School
-  header_educate_high: High School
+  header_educate_elementary: Grundschule
+  header_educate_middle: Mittelschule
+  header_educate_high: High School/Gymnasium
   header_educate_hoc: Stunde des Codes
-  header_educate_partner: Partner with Us
+  header_educate_partner: Eine Partnerschaft mit uns
   header_educate_beyond: Beyond Code.org
-  header_educate_inspire: Inspire a Student
+  header_educate_inspire: Inspiriere einen Schüler/eine Schülerin
   header_educate_community: Online Community
-  header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
+  header_educate_tools: Hilfsmittel und Videos
+  header_about_us: "Über uns "
+  header_about_leadership: Die Leitung
+  header_about_donors: Sponsoren
+  header_about_partners: Partner
+  header_about_team: Das Team
   header_about_news: Newsroom
   header_about_evaluation: Evaluation
   header_about_jobs: Jobs
-  header_about_contact: Contact Us
+  header_about_contact: Kontaktieren Sie uns
   header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_learn: Lernen
+  header_teach: Unterrichten
   header_stats: Statistiken
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
+  header_help_us: Helfen Sie uns
+  header_about: "Über"
+  header_teacher_community: Lehrer Community
   header_help_support: 'Help and support '
-  header_report_bug: Report bug
+  header_report_bug: Einen Fehler melden
   header_tutorials: Einführungen
   header_documentation: Dokumentation
   csp_name: CS Principles
