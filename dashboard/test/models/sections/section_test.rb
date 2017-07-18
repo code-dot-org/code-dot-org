@@ -313,7 +313,7 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
     }
     assert_equal expected, section.summarize
   end
@@ -332,7 +332,7 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/s/jigsaw',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
     }
     assert_equal expected, section.summarize
   end
@@ -354,7 +354,7 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
     }
     assert_equal expected, section.summarize
   end
@@ -371,7 +371,7 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
     }
     assert_equal expected, section.summarize
   end
