@@ -10,7 +10,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const fakeStudents = num => _.range(num).map(x => ({id: x}));
+const fakeStudents = num => _.range(num).map(x => 'Student' + x);
 const sections = [
   {
     id: 11,
@@ -23,7 +23,7 @@ const sections = [
     pairingAllowed: true,
     scriptId: null,
     courseId: 29,
-    students: fakeStudents(10)
+    studentNames: fakeStudents(10)
   },
   {
     id: 12,
@@ -36,7 +36,7 @@ const sections = [
     pairingAllowed: true,
     scriptId: 36,
     courseId: null,
-    students: fakeStudents(1)
+    studentNames: fakeStudents(1)
   },
   {
     id: 307,
@@ -49,7 +49,7 @@ const sections = [
     pairingAllowed: false,
     scriptId: 46,
     courseId: null,
-    students: []
+    studentNames: []
   }
 ];
 
