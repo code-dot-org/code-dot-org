@@ -53,12 +53,21 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
+  # User-facing section routes
   resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end
   end
-  namespace :dashboardapi do
+  # Section API routes (JSON only)
+  namespace :api do
+    namespace :v1 do
+      resources :sections, only: [:show, :index]
+    end
+  end
+  # Temporarily expose Section API routes on dashboardapi, making them
+  # available to pegasus as well.
+  scope 'dashboardapi', module: 'api/v1' do
     resources :sections, only: [:show, :index]
   end
 
