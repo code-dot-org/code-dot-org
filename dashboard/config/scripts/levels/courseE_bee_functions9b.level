@@ -6,8 +6,6 @@
   "user_id": 63,
   "properties": {
     "skin": "bee",
-    "maze_data": null,
-    "contained_level_names": null,
     "serialized_maze": "[[{\"tileType\":2},{\"tileType\":1,\"value\":0,\"range\":0,\"featureType\":\"\",\"cloudType\":\"\"},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions": "Now try it in Bee!",
     "markdown_instructions": "*\"I can't BEE-lieve how full this field is!\"*\r\n\r\nLook very carefully at this puzzle to see if you can use what you learned to solve it.",
@@ -35,7 +33,8 @@
     "step_mode": "0",
     "shape_shift": "false",
     "flower_type": "redWithNectar",
-    "fast_get_nectar_animation": "false"
+    "fast_get_nectar_animation": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
