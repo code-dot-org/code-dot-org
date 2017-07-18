@@ -4,13 +4,8 @@ class SectionsController < ApplicationController
 
   # Get the set of sections owned by the current user
   def index
-    if !current_user
-      head :forbidden
-    elsif current_user.teacher?
-      render json: current_user.sections.map(&:summarize)
-    else
-      render json: []
-    end
+    return head :forbidden unless current_user
+    render json: current_user.sections.map(&:summarize)
   end
 
   def show
