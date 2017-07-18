@@ -7,6 +7,6 @@ class Api::V1::SectionsStudentsController < ApplicationController
 
     section = Section.find(params[:section_id])
     authorize! :manage, section
-    render json: section.students
+    render json: section.students.map(&:summarize)
   end
 end

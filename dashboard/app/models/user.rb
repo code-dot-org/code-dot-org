@@ -1329,6 +1329,27 @@ class User < ActiveRecord::Base
     User.csv_attributes.map {|attr| send(attr)}
   end
 
+  # Format user information for the JSON API
+  def summarize
+    {
+      id: id,
+      name: name,
+      username: username,
+      email: email,
+      hashed_email: hashed_email,
+      user_type: user_type,
+      gender: gender,
+      birthday: birthday,
+      total_lines: total_lines,
+      secret_words: secret_words,
+      secret_picture_name: secret_picture.name,
+      secret_picture_path: secret_picture.path,
+      location: "/v2/users/#{id}",
+      age: age,
+      completed_levels_count: user_levels.passing.count,
+    }
+  end
+
   def self.progress_queue
     AsyncProgressHandler.progress_queue
   end
