@@ -75,6 +75,11 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     assert_response :success
     response_hash = JSON.parse(@response.body)
 
+    assert_equal 3, response_hash['this_workshop']['num_enrollments']
+    assert_equal 6, response_hash['all_my_local_workshops']['num_surveys']
+    assert_equal 3, response_hash['this_workshop']['num_enrollments']
+    assert_equal 6, response_hash['all_my_local_workshops']['num_surveys']
+
     assert_equal 5, response_hash['this_workshop']['how_much_learned']
     assert_equal 3, response_hash['all_my_local_workshops']['how_much_learned']
     assert_equal 5, response_hash['this_workshop']['how_clearly_presented']
