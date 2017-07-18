@@ -30,3 +30,5 @@ export const Galleries = {
   PUBLIC: 'PUBLIC',
   PRIVATE: 'PRIVATE',
 };
+
+export const MAX_PROJECTS_PER_CATEGORY = 100;
