@@ -106,19 +106,10 @@ export function initializeContainedLevel() {
     // No answers yet, disable Run button until there is an answer
     let runButton = $('#runButton');
     runButton.prop('disabled', true);
-    // Disabled buttons don't trigger mouse events, add a dummy element to
-    // receive the click and trigger the display of the callout.
-    let clickReceiver = $('<div id="clickReceiver"/>');
-    let boundingClientRect = runButton.get(0).getBoundingClientRect();
-    clickReceiver.css({
-      height: boundingClientRect.height + 'px',
-      width: boundingClientRect.width + 'px',
-      position: 'absolute',
-      top: 0,
-    });
-    $('#gameButtons').append(clickReceiver);
-    clickReceiver.bind('click',
-      () => $(window).trigger('attemptedRunButtonClick'));
+    const disabledRunButtonHandler = e => {
+      $(window).trigger('attemptedRunButtonClick');
+    };
+    $('#gameButtons').bind('click', disabledRunButtonHandler);
 
     addCallouts([{
       id: 'disabledRunButtonCallout',
@@ -146,7 +137,7 @@ export function initializeContainedLevel() {
       runButton.prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
       if (codeStudioLevels.hasValidContainedLevelResult()) {
         runButton.qtip('hide');
-        clickReceiver.hide();
+        $('#gameButtons').unbind('click', disabledRunButtonHandler);
       }
       getStore().dispatch(setAwaitingContainedResponse(!codeStudioLevels.hasValidContainedLevelResult()));
     });
