@@ -1321,7 +1321,8 @@
           til að finna réttu slóðina með því að benda á kortið. Hvernig hreyfðir þú
           fingurinn?
       courseA_maze_seq5_authored_hint:
-        courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
+        courseA_maze_seq5_a: You will need two different blocks, pointing in two different
+          directions.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have three movement blocks.
         courseA_maze_seq6_b: Ef þú festist er ráð að reyna að skipta þrautinni í það
@@ -3864,10 +3865,11 @@
       courseE_farmer_functions2a_authored_hint: []
       courseE_farmer_functions2aALT_authored_hint: []
       courseE_farmer_functions2b_authored_hint:
-        courseE_farmer_functions2b_a: Nested `if` and `if/else` statements will really
-          help you out here.
-        courseE_farmer_functions2b_b: You can repeat the code to check the squares
-          for crops in two different `while path ahead` loops.
+        courseE_farmer_functions2b_a: Nested `if` and `if/else` statements will  help
+          you out.
+        courseE_farmer_functions2b_b: "To check what kind of plant is in the farmer's
+          space, use\n\nif at corn\n - pick corn\n \nelse\n - if at lettuce\n    -
+          pick lettuce\n - else\n    - if there are pumpkins\n       - pick pumpkin"
         courseE_farmer_functions2b_c: "Þú getur endurtekið kóðann, sem athugar hvort
           reitirnir hafi uppskeru, í tveimur mismunandi `meðan slóð framundan` lykkjum."
         courseE_farmer_functions2b_d: Endurtaktu notkun `meðan slóð framundan` fyrir

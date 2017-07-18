@@ -1333,7 +1333,8 @@
           out the correct path by pointing it out on the map. What moves did your
           finger make?
       courseA_maze_seq5_authored_hint:
-        courseA_maze_seq5_a: Try writing down the steps on paper to find a solution!
+        courseA_maze_seq5_a: You will need two different blocks, pointing in two different
+          directions.
       courseA_maze_seq6_authored_hint:
         courseA_maze_seq6_a: Your final code should have three movement blocks.
         courseA_maze_seq6_b: If you get stuck, try solving the puzzle in two separate
@@ -3876,10 +3877,11 @@
       courseE_farmer_functions2a_authored_hint: []
       courseE_farmer_functions2aALT_authored_hint: []
       courseE_farmer_functions2b_authored_hint:
-        courseE_farmer_functions2b_a: Nested `if` and `if/else` statements will really
-          help you out here.
-        courseE_farmer_functions2b_b: You can repeat the code to check the squares
-          for crops in two different `while path ahead` loops.
+        courseE_farmer_functions2b_a: Nested `if` and `if/else` statements will  help
+          you out.
+        courseE_farmer_functions2b_b: "To check what kind of plant is in the farmer's
+          space, use\n\nif at corn\n - pick corn\n \nelse\n - if at lettuce\n    -
+          pick lettuce\n - else\n    - if there are pumpkins\n       - pick pumpkin"
         courseE_farmer_functions2b_c: You can repeat the code to check the squares
           for crops in two different `while path ahead` loops.
         courseE_farmer_functions2b_d: |-
