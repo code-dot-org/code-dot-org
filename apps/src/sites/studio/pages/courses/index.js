@@ -23,6 +23,7 @@ function showCourses() {
   const showInitialTips = !coursesData.initialtipsdismissed;
   const userId = coursesData.userid;
   const isRtl = isRtlFromDOM();
+  const studentHomepagePreview = coursesData.student_homepage_preview;
 
   ReactDOM.render (
     <Courses
@@ -36,6 +37,7 @@ function showCourses() {
       showInitialTips={showInitialTips}
       userId={userId}
       isRtl={isRtl}
+      studentHomepagePreview={studentHomepagePreview}
     />,
     document.getElementById('courses-container')
   );
