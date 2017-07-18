@@ -40,9 +40,10 @@ function projectLists(state = initialProjectListState, action) {
       // Append the incoming list of older projects to the existing list,
       // removing duplicates.
       const {projects, projectType} = action;
-      state = {...state};
-      state[projectType] = _.unionBy(state[projectType], projects, 'channel');
-      return state;
+      return {
+        ...state,
+        [projectType]: _.unionBy(state[projectType], projects, 'channel'),
+      };
     }
     case PREPEND_PROJECTS: {
       // Prepend newer projects to the existing list, removing duplicates.
