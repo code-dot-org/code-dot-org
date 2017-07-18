@@ -14,7 +14,7 @@ import PlayZone from '@cdo/apps/code-studio/components/playzone';
 var timing = require('@cdo/apps/code-studio/initApp/timing');
 var chrome34Fix = require('@cdo/apps/code-studio/initApp/chrome34Fix');
 var project = require('@cdo/apps/code-studio/initApp/project');
-import createCallouts from '@cdo/apps/code-studio/callouts';
+var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var reporting = require('@cdo/apps/code-studio/reporting');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
