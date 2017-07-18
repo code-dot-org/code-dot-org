@@ -24,6 +24,7 @@
         name: Ipapakita na Pangalan
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Email
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Username
         password: Password
@@ -215,6 +216,8 @@
       Ang mga tutorials ay masaya, nakatatawag-pansin at itinuturo ang mga pangunahing konsepto ng computer science gamit ang simple, ginagabayan, mala-larong karanasan. Matutong mag-code mula kay Bill Gates, Mark Zuckerberg, Angry Birds, at Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
   section:
     your_section:
       one: 'Your section:'
@@ -257,6 +260,13 @@
     updated: "%{model} ay matagumpay na na-update."
     destroyed: "%{model} ay matagumpay na tinanggal."
     access_denied: Wala kang access sa %{model} na ito.
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Natapos ko ang aking Hour of Code
@@ -370,6 +380,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -1025,10 +1041,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Search for an icon...
-      no_icons_found: No icons found
   flex_category:
     required: Overview
     content: Content
@@ -1064,6 +1076,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated
