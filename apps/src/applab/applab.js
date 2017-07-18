@@ -1229,7 +1229,7 @@ Applab.onPuzzleComplete = function (submit) {
 
     if (containedLevelResultsInfo) {
       // We already reported results when run was clicked. Make sure that call
-      // finished, then call onCompelte
+      // finished, then call onComplete.
       runAfterPostContainedLevel(onComplete);
     } else {
       studioApp().report({

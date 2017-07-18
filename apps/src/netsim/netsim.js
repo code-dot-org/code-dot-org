@@ -11,6 +11,7 @@ import ReactDOM from 'react-dom';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
 import {getStore} from '../redux';
 var _ = require('lodash');
+/** @type {Object<string, function>} */
 var i18n = require('@cdo/netsim/locale');
 var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
 var RunLoop = require('../RunLoop');
@@ -1317,19 +1318,20 @@ NetSim.prototype.completeLevelAndContinue = function () {
     level: this.level.id,
     result: true,
     testResult: 100,
-    onComplete: function (serverResponse) {
+    onComplete: function () {
 
       // Re-enable submit button, in case there's nowhere to go.
       $('.submitButton').attr('disabled', false);
 
       // If there's somewhere to go, disconnect and go!
-      if (serverResponse.redirect) {
+      const redirect = window.appOptions.report.fallback_response.success;
+      if (redirect) {
         if (this.isConnectedToRemote()) {
           this.disconnectFromRemote(function () {
-            window.location.href = serverResponse.redirect;
+            window.location.href = redirect;
           });
         } else {
-          window.location.href = serverResponse.redirect;
+          window.location.href = redirect;
         }
       }
     }.bind(this)

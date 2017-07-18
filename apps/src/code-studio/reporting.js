@@ -7,40 +7,8 @@ import experiments from '../util/experiments';
 var clientState = require('./clientState');
 
 var lastAjaxRequest;
-var lastServerResponse = {};
 
-/**
- * Notify the progression system of level attempt or completion.
- * Provides a response to a callback, which can provide a video to play
- * and next/previous level URLs.
- *
- * The client posts the progress JSON to the URL specified by
- * report.callback (e.g. /milestone). In the event of a failure or timeout,
- * the client relies on report.fallbackResponse (if specified) to allow
- * the user to progress.
- *
- * @param {Object} report
- * @param {string} report.callback - The url where the report should be sent.
- *        For studioApp-based levels, this is provided on initialization as
- *        appOptions.report.callback.
- * @param {Object} report.fallbackResponse - ??? I'm not sure ???
- *        For studioApp-based levels, this is provided on initialization as
- *        appOptions.report.fallback_response
- * @param {string} report.app - The app name, as defined by its model.
- * @param {string} report.level - The level name or number.  Maybe deprecated?
- * @param {number|boolean} report.result - Whether the attempt succeeded or failed.
- * @param {number} report.testResult - Additional detail on the outcome of the
- *        attempt. Standard responses seem to be zero for failures or one
- *        hundred for success.
- * @param {function} report.onComplete - Callback invoked when reporting is
- *        completed.  Is passed a single 'response' argument which contains
- *        information about what to do / where to go next.
- */
 var reporting = module.exports;
-
-reporting.getLastServerResponse = function () {
-  return lastServerResponse;
-};
 
 /**
  * Validate that the provided field on our report object is one of the given
@@ -68,6 +36,7 @@ function validateType(key, value, type) {
  * This is meant in part to serve as documentation of the existing behavior. In
  * cases where I believe the behavior should potentially be different going
  * forward, I've made notes.
+ * @param {Report} report
  */
 function validateReport(report) {
   for (var key in report) {
@@ -90,14 +59,6 @@ function validateReport(report) {
         } else {
           validateType('program', value, 'string');
         }
-        break;
-      case 'fallbackResponse':
-        // Sometimes we get an object, sometimes we get json for that object.
-        // When each is true depends on whether it's a contained level or not,
-        // whether it's in a script or not, and what type of level it is.
-        // Attempts to describe when each happens have fallen up short. What
-        // should likely happen is we consolidate around one, then make sure we
-        // always use that.}
         break;
       case 'callback':
         validateType('callback', value, 'string');
@@ -191,6 +152,34 @@ function validateReport(report) {
   }
 }
 
+/**
+ * @typedef  {Object} Report
+ * @property {string} callback - The url where the report should be sent.
+ *           For studioApp-based levels, this is provided on initialization as
+ *           appOptions.report.callback.
+ * @property {string} app - The app name, as defined by its model.
+ * @property {string} level - The level name or number.  Maybe deprecated?
+ * @property {number|boolean} result - Whether the attempt succeeded or failed.
+ * @property {TestResult} testResult - Additional detail on the outcome of the attempt.
+ * @property {onComplete} onComplete - Callback invoked when reporting is completed.
+ * @property {boolean} allowMultipleSends - ??
+ * @property {number} lines - number of lines of code written.
+ * @property {number} serverLevelId - ??
+ */
+
+/**
+ * @callback onComplete
+ * @param {MilestoneResponse} response
+ */
+
+/**
+ * Notify the progression system of level attempt or completion.
+ *
+ * The client posts the progress JSON to the URL specified by
+ * report.callback (e.g. /milestone).
+ *
+ * @param {Report} report
+ */
 reporting.sendReport = function (report) {
   // The list of report fields we want to send to the server
   const serverFields = [
@@ -224,7 +213,13 @@ reporting.sendReport = function (report) {
   }
   const queryString = queryItems.join('&');
 
-  clientState.trackProgress(report.result, report.lines, report.testResult, appOptions.scriptName, report.serverLevelId || appOptions.serverLevelId);
+  clientState.trackProgress(
+    report.result,
+    report.lines,
+    report.testResult,
+    appOptions.scriptName,
+    report.serverLevelId || appOptions.serverLevelId
+  );
 
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
@@ -236,9 +231,9 @@ reporting.sendReport = function (report) {
       type: 'POST',
       url: report.callback,
       contentType: 'application/x-www-form-urlencoded',
-      // Set a timeout of fifteen seconds so the user will get the fallback
+      // Set a timeout of five seconds so the user will get the fallback
       // response even if the server is hung and unresponsive.
-      timeout: 15000,
+      timeout: 5000,
       data: queryString,
       dataType: 'json',
       jsonp: false,
@@ -249,14 +244,6 @@ reporting.sendReport = function (report) {
         if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
-        if (appOptions.hasContainedLevels && !response.redirect) {
-          // for contained levels, we want to allow the user to Continue even
-          // if the answer was incorrect and nextRedirect was not supplied, so
-          // populate nextRedirect from the fallback if necessary
-          report.pass = true;
-          var fallback = getFallbackResponse(report) || {};
-          response.redirect = fallback.redirect;
-        }
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
@@ -264,7 +251,7 @@ reporting.sendReport = function (report) {
           return;
         }
         report.error = xhr.responseText;
-        reportComplete(report, getFallbackResponse(report));
+        reportComplete(report);
       }
     });
 
@@ -274,7 +261,7 @@ reporting.sendReport = function (report) {
     //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
     //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
     setTimeout(function () {
-      reportComplete(report, getFallbackResponse(report));
+      reportComplete(report);
     }, 1000);
   }
 
@@ -287,33 +274,12 @@ reporting.cancelReport = function () {
   lastAjaxRequest = null;
 };
 
-function getFallbackResponse(report) {
-  var fallbackResponse = maybeParse(report.fallbackResponse);
-  if (!fallbackResponse) {
-    return null;
-  }
-  return report.pass ? fallbackResponse.success : fallbackResponse.failure;
-}
-
-// TODO: sometimes fallback response is a string, not a parsed object
-function maybeParse(data) {
-  if (typeof data === 'string') {
-    try {
-      return JSON.parse(data);
-    } catch (e) {}
-  }
-  return data;
-}
-
+/**
+ * @param {Report} report
+ * @param {MilestoneResponse} response
+ */
 function reportComplete(report, response) {
   lastAjaxRequest = null;
-  if (response) {
-    lastServerResponse.report_error = report.error;
-    lastServerResponse.nextRedirect = response.redirect;
-    lastServerResponse.videoInfo = response.video_info;
-    lastServerResponse.endOfStageExperience = response.end_of_stage_experience;
-    lastServerResponse.previousStageInfo = response.stage_changing && response.stage_changing.previous;
-  }
   if (report.onComplete) {
     report.onComplete(response);
   }

@@ -70,15 +70,6 @@ var MIN_VISUALIZATION_WIDTH = 200;
  */
 var MAX_PHONE_WIDTH = 500;
 
-/**
- * Object representing everything in window.appOptions (often passed around as
- * config)
- * @typedef {Object} AppOptionsConfig
- * @property {?boolean} is13Plus - Will be true if the user is 13 or older,
- *           false if they are 12 or younger, and undefined if we don't know
- *           (such as when they are not signed in).
- */
-
 class StudioApp extends EventEmitter {
   constructor() {
     super();
@@ -1377,8 +1368,7 @@ StudioApp.prototype.clearHighlighting = function () {
 /**
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
-* @param {{feedbackType: number}} Test results (a constant property of
-*     TestResults).
+* @param {TestResults} options.feedbackType Test results.
 */
 StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
@@ -2254,7 +2244,7 @@ StudioApp.prototype.openFunctionDefinition_ = function (config) {
 };
 
 /**
- * @param {AppOptionsConfig}
+ * @param {AppOptionsConfig} config
  */
 StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // Allow empty blocks if editing blocks.

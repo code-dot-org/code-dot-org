@@ -40,7 +40,7 @@ const SHARE_IMAGE_NAME = '_share_image.png';
  * be to attach a listener to our redux store, and then update clientState whenever
  * levelProgress changes in the store.
  * @param {string} scriptName
- * @param {Object<number, number>} Mapping from levelId to TestResult
+ * @param {Object<number, TestResult>} serverProgress Mapping from levelId to TestResult
  */
 function mergeProgressData(scriptName, serverProgress) {
   const store = getStore();
@@ -58,16 +58,21 @@ function mergeProgressData(scriptName, serverProgress) {
   });
 }
 
-// Legacy Blockly initialization that was moved here from _blockly.html.haml.
-// Modifies `appOptions` with some default values in `baseOptions`.
-// TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+/**
+ * Legacy Blockly initialization that was moved here from _blockly.html.haml.
+ * Modifies `appOptions` with some default values in `baseOptions`.
+ * TODO(dave): Move blockly-specific setup function out of shared and back into dashboard.
+ * @param {AppOptionsConfig} appOptions
+ */
 export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
   }
   timing.startTiming('Puzzle', window.script_path, '');
 
-  var lastSavedProgram;
+  let lastSavedProgram;
+  /** @type {MilestoneResponse} */
+  let fallback;
 
   if (appOptions.hasContainedLevels) {
     if (appOptions.readonlyWorkspace) {
@@ -100,6 +105,10 @@ export function setupApp(appOptions) {
       $(document).trigger('appInitialized');
     },
     onAttempt: function (report) {
+      fallback = report.pass ?
+        appOptions.report.fallback_response.success :
+        appOptions.report.fallback_response.failure;
+
       if (appOptions.level.isProjectLevel && !appOptions.level.edit_blocks) {
         if (appOptions.level.disableSharing) {
           return;
@@ -163,12 +172,11 @@ export function setupApp(appOptions) {
       reporting.cancelReport();
     },
     onContinue: function () {
-      var lastServerResponse = reporting.getLastServerResponse();
-      if (lastServerResponse.videoInfo) {
-        showVideoDialog(lastServerResponse.videoInfo);
-      } else if (lastServerResponse.endOfStageExperience) {
+      if (fallback.video_info) {
+        showVideoDialog(fallback.video_info);
+      } else if (fallback.end_of_stage_experience) {
         const body = document.createElement('div');
-        const stageInfo = lastServerResponse.previousStageInfo;
+        const stageInfo = fallback.stage_changing && fallback.stage_changing.previous;
         const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
         ReactDOM.render(
           <PlayZone
@@ -181,11 +189,11 @@ export function setupApp(appOptions) {
         const dialog = new LegacyDialog({
           body: body,
           width: 800,
-          redirect: lastServerResponse.nextRedirect
+          redirect: fallback.redirect
         });
         dialog.show();
-      } else if (lastServerResponse.nextRedirect) {
-        window.location.href = lastServerResponse.nextRedirect;
+      } else if (fallback.redirect) {
+        window.location.href = fallback.redirect;
       }
     },
     showInstructionsWrapper: function (showInstructions) {
@@ -248,6 +256,10 @@ export function setupApp(appOptions) {
   appOptions.noPadding = userAgentParser.isMobile();
 }
 
+/**
+ * @param {AppOptionsConfig} appOptions
+ * @return {Promise.<AppOptionsConfig>}
+ */
 function loadAppAsync(appOptions) {
   return new Promise((resolve, reject) => {
     setupApp(appOptions);
@@ -259,7 +271,7 @@ function loadAppAsync(appOptions) {
         lastAttemptLoaded = true;
 
         // Load the locally-cached last attempt (if one exists)
-        appOptions.level.lastAttempt = clientState.sourceForLevel(
+        appOptions.level.lastAttempts = clientState.sourceForLevel(
           appOptions.scriptName,
           appOptions.serverProjectLevelId || appOptions.serverLevelId
         );
@@ -443,13 +455,18 @@ window.apps = {
   },
 };
 
+/** @type {AppOptionsConfig} */
 let APP_OPTIONS;
+
+/** @param {AppOptionsConfig} appOptions */
 export function setAppOptions(appOptions) {
   APP_OPTIONS = appOptions;
   // ugh, a lot of code expects this to be on the window object pretty early on.
+  /** @type {AppOptionsConfig} */
   window.appOptions = appOptions;
 }
 
+/** @return {AppOptionsConfig} */
 export function getAppOptions() {
   if (!APP_OPTIONS) {
     throw new Error(
@@ -466,7 +483,7 @@ export function getAppOptions() {
  * This should only be called once per page load, with appoptions specified as a
  * data attribute on the script tag.
  *
- * @returns a Promise object which resolves to the fully populated appOptions
+ * @return {Promise.<AppOptionsConfig>} a Promise object which resolves to the fully populated appOptions
  */
 export default function loadAppOptions() {
   return new Promise((resolve, reject) => {

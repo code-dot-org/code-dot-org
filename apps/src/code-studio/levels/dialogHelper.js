@@ -20,9 +20,9 @@ var dialogType = null;
 var adjustedScroll = false;
 
 function dialogHidden() {
-  var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-  if (dialogType === "success" && lastServerResponse.nextRedirect) {
-    window.location.href = lastServerResponse.nextRedirect;
+  const fallback = appOptions.report.fallback_response.success;
+  if (dialogType === "success" && fallback.redirect) {
+    window.location.href = fallback.redirect;
   }
 
   if (dialogType === "error") {
@@ -158,17 +158,19 @@ export function processResults(onComplete, beforeHook) {
       testResult: testResult,
       submitted: submitted,
       onComplete: function () {
-        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-        var willRedirect = !!lastServerResponse.nextRedirect;
+        const fallbackResponse = result ?
+          appOptions.report.fallback_response.success :
+          appOptions.report.fallback_response.failure;
+        const redirect = fallbackResponse.redirect;
+        const stageInfo = fallbackResponse.stage_changing && fallbackResponse.stage_changing.previous;
         if (onComplete) {
-          onComplete(willRedirect);
+          onComplete(!!redirect);
         }
 
-        if (lastServerResponse.videoInfo) {
-          window.dashboard.videos.showVideoDialog(lastServerResponse.videoInfo);
-        } else if (lastServerResponse.endOfStageExperience) {
+        if (fallbackResponse.video_info) {
+          window.dashboard.videos.showVideoDialog(fallbackResponse.video_info);
+        } else if (fallbackResponse.end_of_stage_experience) {
           const body = document.createElement('div');
-          const stageInfo = lastServerResponse.previousStageInfo;
           const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
           ReactDOM.render(
             <PlayZone
@@ -180,10 +182,10 @@ export function processResults(onComplete, beforeHook) {
           const dialog = new LegacyDialog({
             body: body,
             width: 800,
-            redirect: lastServerResponse.nextRedirect
+            redirect: redirect
           });
           dialog.show();
-        } else if (lastServerResponse.nextRedirect) {
+        } else if (redirect) {
           if (appOptions.dialog.shouldShowDialog) {
             if (experiments.isEnabled('gamification')) {
               const progress = Feedback.calculateStageProgress(
@@ -197,7 +199,6 @@ export function processResults(onComplete, beforeHook) {
 
               let onContinue = dialogHidden;
               if (Feedback.isLastLevel()) {
-                const stageInfo = lastServerResponse.previousStageInfo;
                 const stageName = `${window.dashboard.i18n.t('stage')} ${stageInfo.position}: ${stageInfo.name}`;
                 onContinue = () => {
                   const div = document.createElement('div');
@@ -221,7 +222,7 @@ export function processResults(onComplete, beforeHook) {
               showDialog("success");
             }
           } else {
-            window.location.href = lastServerResponse.nextRedirect;
+            window.location.href = redirect;
           }
         }
       }

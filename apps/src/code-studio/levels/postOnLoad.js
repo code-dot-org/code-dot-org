@@ -6,7 +6,7 @@
  */
 
 import { getResult } from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import { sendReport, getLastServerResponse } from '@cdo/apps/code-studio/reporting';
+import { sendReport } from '@cdo/apps/code-studio/reporting';
 import { TestResults } from '@cdo/apps/constants';
 
 /**
@@ -41,17 +41,11 @@ export function postMilestoneForPageLoad() {
 
 /**
  * Code to run when clicking continue on a page where we make our milestone
- * post on page load. In this case, if we heard back we want to check the response
- * for the next page to go to. If we didn't hear back, just use the fallback.
- * In practice, these will be identical.
+ * post on page load.
  */
 export function onContinue() {
-  const lastServerResponse = getLastServerResponse();
-  let url = lastServerResponse && lastServerResponse.nextRedirect;
-  if (!url) {
-    const fallback = JSON.parse(appOptions.dialog.fallbackResponse);
-    url = fallback.success.redirect;
+  let url = appOptions.report.fallback_response.success.redirect;
+  if (url) {
+    window.location.href = url;
   }
-
-  window.location.href = url;
 }

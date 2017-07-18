@@ -64,12 +64,12 @@
       pass: true,
       testResult: 100,
       onComplete: function() {
-        var lastServerResponse = window.dashboard.reporting.getLastServerResponse();
-        if (lastServerResponse.videoInfo) {
-          showVideoDialog(lastServerResponse.videoInfo);
+        var fallback = appOptions.report.fallback_response.success;
+        if (fallback.video_info) {
+          showVideoDialog(fallback.video_info);
           finishedButton.removeClass("disabled");
-        } else if (lastServerResponse.nextRedirect) {
-          window.location.href = lastServerResponse.nextRedirect;
+        } else if (fallback.redirect) {
+          window.location.href = fallback.redirect;
         }
       }
     });

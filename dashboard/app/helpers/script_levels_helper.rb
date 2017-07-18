@@ -1,5 +1,6 @@
 module ScriptLevelsHelper
-  def script_level_solved_response(response, script_level)
+  def script_level_solved_response(script_level)
+    response = {}
     next_user_redirect = script_level.next_level_or_redirect_path_for_user current_user
 
     if script_level.has_another_level_to_go_to?
@@ -27,6 +28,7 @@ module ScriptLevelsHelper
     end
 
     response[:redirect] = next_user_redirect
+    response
   end
 
   def wrapup_video_then_redirect_response(wrapup_video, redirect)
