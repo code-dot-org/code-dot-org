@@ -101,14 +101,27 @@ module ProjectsList
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            map {|project| get_published_project_data project}
+            map {|project_and_user| get_published_project_and_user_data project_and_user}
         end
       end
     end
 
-    def get_published_project_data(project)
+    # extracts published project data from a row that is a join of the
+    # storage_apps and user tables.
+    def get_published_project_and_user_data(project_and_user)
+      channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:channel_id])
+      get_published_project_data(project_and_user, channel_id).merge(
+        {
+          # For privacy reasons, include only the first initial of the student's name.
+          studentName: UserHelpers.initial(project_and_user[:name]),
+          studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
+        }
+      ).with_indifferent_access
+    end
+
+    # extracts published project data from a project (aka storage_apps table row).
+    def get_published_project_data(project, channel_id)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      channel_id = storage_encrypt_channel_id(project[:storage_id], project[:channel_id])
       {
         channel: channel_id,
         name: project_value['name'],
@@ -117,9 +130,6 @@ module ProjectsList
         # it from :value. :project_type might not be present in unpublished projects.
         type: project[:project_type],
         publishedAt: project[:published_at],
-        # For privacy reasons, include only the first initial of the student's name.
-        studentName: UserHelpers.initial(project[:name]),
-        studentAgeRange: UserHelpers.age_range_from_birthday(project[:birthday]),
       }.with_indifferent_access
     end
 
