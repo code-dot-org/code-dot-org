@@ -27,6 +27,7 @@ get '/v2/sections/membership' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: Use GET /dashboardapi/sections/<id> instead
 get '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
