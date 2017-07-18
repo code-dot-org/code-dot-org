@@ -72,6 +72,7 @@ export class EditSectionForm extends Component{
               ref={this.props.assignmentRef}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
+              chooseLaterOption={true}
             />
           </div>
           <Heading3>
