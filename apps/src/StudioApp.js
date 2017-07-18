@@ -44,6 +44,7 @@ import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
+import {initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning} from './redux/runState';
@@ -506,6 +507,8 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
+
+  initializeContainedLevel();
 
   this.emit('afterInit');
 };

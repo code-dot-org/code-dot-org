@@ -1,5 +1,9 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import { getStore } from './redux';
+import { setAwaitingContainedResponse } from './redux/runState';
+import locale from '@cdo/locale';
 
 const PostState = {
   None: 'None',
@@ -87,4 +91,64 @@ export function runAfterPostContainedLevel(fn) {
     return;
   }
   callOnPostCompletion = fn;
+}
+
+export function initializeContainedLevel() {
+  const store = getStore();
+  if (!store.getState().instructions.hasContainedLevels) {
+    return;
+  }
+  if (codeStudioLevels.hasValidContainedLevelResult()) {
+    // We already have an answer, don't allow it to be changed, but allow Run
+    // to be pressed so the code can be run again.
+    codeStudioLevels.lockContainedLevelAnswers();
+  } else {
+    // No answers yet, disable Run button until there is an answer
+    let runButton = $('#runButton');
+    runButton.prop('disabled', true);
+    // Disabled buttons don't trigger mouse events, add a dummy element to
+    // receive the click and trigger the display of the callout.
+    let clickReceiver = $('<div id="clickReceiver"/>');
+    let boundingClientRect = runButton.get(0).getBoundingClientRect();
+    clickReceiver.css({
+      height: boundingClientRect.height + 'px',
+      width: boundingClientRect.width + 'px',
+      position: 'absolute',
+      top: 0,
+    });
+    $('#gameButtons').append(clickReceiver);
+    clickReceiver.bind('click',
+      () => $(window).trigger('attemptedRunButtonClick'));
+
+    addCallouts([{
+      id: 'disabledRunButtonCallout',
+      element_id: '#runButton',
+      localized_text: locale.containedLevelRunDisabledTooltip(),
+      qtip_config: {
+        codeStudio: {
+          canReappear: true,
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+      on: 'attemptedRunButtonClick',
+    }]);
+    store.dispatch(setAwaitingContainedResponse(true));
+
+    codeStudioLevels.registerAnswerChangedFn(() => {
+      // Ideally, runButton would be declaratively disabled or not based on redux
+      // store state. We might be close to a point where we can do that, but
+      // because runButton is also mutated outside of React (here and elsewhere)
+      // we need to worry about cases where the DOM gets out of sync with the
+      // React layer
+      runButton.prop('disabled', !codeStudioLevels.hasValidContainedLevelResult());
+      if (codeStudioLevels.hasValidContainedLevelResult()) {
+        runButton.qtip('hide');
+        clickReceiver.hide();
+      }
+      getStore().dispatch(setAwaitingContainedResponse(!codeStudioLevels.hasValidContainedLevelResult()));
+    });
+  }
 }
