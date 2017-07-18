@@ -34,7 +34,24 @@
     "embed": "false",
     "free_play": "false",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are multiple paths you can take. Which is the shortest?\",\"hint_id\":\"Overworld Avoid Monsters_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5706db8a4e2a885f66f599e61eea7459/Overworld Avoid Monsters.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to use `repeat` loops to simplify your code.\",\"hint_id\":\"Overworld Avoid Monsters_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b02f2879885fa2048d68b65128e0d7fc/Overworld Avoid Monsters.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Your goal is to get into the doorway of the house, at the top of the screen.\",\"hint_id\":\"Overworld Avoid Monsters_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/45e44e622764839db8dd52d20617722b/Overworld Avoid Monsters.mp3\"}]",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "use_score": "false",
+    "is_event_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "level_verification_timeout": "0",
+    "use_player": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 15:27:38 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

@@ -36,7 +36,24 @@
     "place_block_options": "[\"rail\"]",
     "ideal": "9",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `place rail` to lay rail on the square you are standing in.\",\"hint_id\":\"Overworld Powered Minecart_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1987fa40c94c3cdbc06efd88f914914e/Overworld Powered Minecart.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use `repeat` loops to make your code simpler.\",\"hint_id\":\"Overworld Powered Minecart_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69fe79d9433255bd884423185b5a1330/Overworld Powered Minecart.mp3\"}]",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "use_score": "false",
+    "is_event_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "level_verification_timeout": "0",
+    "use_player": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 15:39:52 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

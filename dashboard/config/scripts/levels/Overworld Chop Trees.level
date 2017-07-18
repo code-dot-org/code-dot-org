@@ -35,7 +35,24 @@
     "free_play": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"craft_callout_preplaced\",\r\n  \"callout_text\": \"We've put some blocks here to get you started\",\r\n  \"element_id\": \"[block-id=\\\"5\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "grid_width": "10",
-    "grid_height": "10"
+    "grid_height": "10",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can chop down the trees in any order, but one order requires fewer blocks.\",\"hint_id\":\"Overworld Chop Trees_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9b45b795e7986e30aade23e31af0eaef/Overworld Chop Trees.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `destroy block` to chop down each tree.\",\"hint_id\":\"Overworld Chop Trees_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/74488b90d94eead6b633a7dffb907236/Overworld Chop Trees.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you find you are turning in the wrong direction, use the drop down menu on the `turn` commands to change it!\",\"hint_id\":\"Overworld Chop Trees_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d77f02eb81dc122da6749063f013425c/Overworld Chop Trees.mp3\"}]",
+    "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "use_score": "false",
+    "is_event_level": "false",
+    "day_night_cycle_start": "0",
+    "day_night_cycle_time": "0",
+    "level_verification_timeout": "0",
+    "use_player": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 03:38:55 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
