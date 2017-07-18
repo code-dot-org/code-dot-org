@@ -12,9 +12,10 @@ import projects, { selectGallery, setProjectLists } from '@cdo/apps/templates/pr
 
 $(document).ready(() => {
   registerReducers({projects});
+  const store = getStore();
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <ProjectHeader showGallery={showGallery} />
     </Provider>,
     projectsHeader
@@ -22,17 +23,17 @@ $(document).ready(() => {
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
-  getStore().dispatch(selectGallery(initialState));
+  store.dispatch(selectGallery(initialState));
 
   $.ajax({
     method: 'GET',
     url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
     dataType: 'json'
   }).done(projectLists => {
-    getStore().dispatch(setProjectLists(projectLists));
+    store.dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <Provider store={getStore()}>
+      <Provider store={store}>
         <PublicGallery />
       </Provider>,
       publicGallery);
