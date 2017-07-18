@@ -877,6 +877,7 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
+  options.sendToPhone = window.appOptions.sendToPhone;
   if (this.studioApp_.disableSocialShare || window.appOptions.disableSocialShare) {
     // Clear out our urls so that we don't display any of our social share links
     options.twitterUrl = undefined;
@@ -971,7 +972,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
           phone.prop('readonly', true);
           submitButton.disabled = true;
           submitted = true;
-          $.post(options.response.phone_share_url, params)
+          $.post(window.appOptions.send_to_phone_url, params)
             .done(function (response) {
               $(submitButton).text("Sent!");
               trackEvent("SendToPhone", "success");
