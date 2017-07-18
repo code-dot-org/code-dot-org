@@ -67,10 +67,30 @@ const JoinSection = React.createClass({
     updateSections: React.PropTypes.func.isRequired
   },
 
-  joinSection() {
-    const sectionCode = this.refs.sectionCode;
+  getInitialState() {
+    return {
+      sectionCode: ''
+    };
+  },
 
-    $.post('/followers/create_async', {section_code: $(sectionCode).val()})
+  handleChange(event) {
+    this.setState({sectionCode: event.target.value});
+  },
+
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.joinSection();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
+  },
+
+  joinSection() {
+    const sectionCode = this.state.sectionCode;
+
+    this.setState(this.getInitialState());
+
+    $.post('/followers/create_async', {section_code: sectionCode})
       .done(function (data) {
         this.props.updateSections(data.sections);
       }.bind(this))
@@ -96,6 +116,9 @@ const JoinSection = React.createClass({
           type="text"
           name="sectionCode"
           ref="sectionCode"
+          value={this.state.sectionCode}
+          onChange={this.handleChange}
+          onKeyUp={this.handleKeyUp}
           style={styles.inputBox}
           placeholder={i18n.joinSectionPlaceholder()}
         />

@@ -19,9 +19,16 @@ class FollowersController < ApplicationController
     @section = Section.find_by_code params[:section_code]
     if @section
       @section.add_student current_user
-      render json: {result: "okay", sections: current_user.sections_as_student.map(&:summarize)}
+      render json: {
+        result: "success",
+        sections: current_user.sections_as_student.map(&:summarize),
+        notice: I18n.t('follower.added_teacher', name: @section.teacher.name)
+      }
     else
-      render json: {result: "fail", sections: current_user.sections_as_student.map(&:summarize)}
+      render json: {
+        result: "error",
+        sections: current_user.sections_as_student.map(&:summarize)
+      }
     end
   end
 
@@ -68,8 +75,10 @@ class FollowersController < ApplicationController
     end
 
     unless @section && f
-      puts "early fail"
-      render json: {result: "fail"}
+      render json: {
+        result: "error",
+        sections: current_user.sections_as_student.map(&:summarize)
+      }
       return
     end
 
@@ -83,7 +92,7 @@ class FollowersController < ApplicationController
     end
     teacher_name = @teacher ? @teacher.name : I18n.t('user.deleted_user')
     render json: {
-      result: "okay",
+      result: "success",
       notice: t(
         'teacher.student_teacher_disassociated',
         teacher_name: teacher_name,
