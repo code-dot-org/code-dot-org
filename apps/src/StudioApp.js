@@ -972,6 +972,9 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
   this.authoredHintsController_.displayMissingBlockHints(blocks);
 };
 
+/**
+ * @param {MilestoneResponse} response
+ */
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response);
 

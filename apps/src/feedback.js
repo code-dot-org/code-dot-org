@@ -28,6 +28,7 @@ module.exports = FeedbackUtils;
 //   Blockly
 
 var codegen = require('./lib/tools/jsinterpreter/codegen');
+/** @type {Object<string, function>} */
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -68,6 +69,7 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
  * @param {Object} options
+ * @param {MilestoneResponse} options.response
  * @param {!TestableBlock[]} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
@@ -873,7 +875,8 @@ FeedbackUtils.prototype.getFeedbackMessageElement_ = function (options) {
 };
 
 /**
- *
+ * @param {Object} options
+ * @param {MilestoneResponse} options.response
  */
 FeedbackUtils.prototype.createSharingDiv = function (options) {
   // TODO: this bypasses the config encapsulation to ensure we have the most up-to-date value.
@@ -1025,10 +1028,9 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
 };
 
 /**
- * Determines whether the user can proceed to the next level, based on the level feedback
- * @param {Object} options
- * @param {number} options.feedbackType Test results (a constant property
- *     of TestResults).false
+ * Determines whether the user can proceed to the next level, based on the level feedback.
+ * @param {TestResult} feedbackType
+ * @return {boolean}
  */
 FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
   return (feedbackType === TestResults.ALL_PASS ||
@@ -1043,8 +1045,7 @@ FeedbackUtils.prototype.canContinueToNextLevel = function (feedbackType) {
  * Determines whether we should prompt the user to show the given
  * feedback, rather than showing it to them automatically. Currently
  * only used for missing block feedback; may expand in the future
- * @param {number} feedbackType A constant property of TestResults,
- *     typically produced by StudioApp.getTestResults().
+ * @param {TestResult} feedbackType
  */
 FeedbackUtils.prototype.shouldPromptForHint = function (feedbackType) {
   return (feedbackType === TestResults.MISSING_BLOCK_UNFINISHED ||
@@ -1405,6 +1406,7 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
  * set of passed blocks that are missing from the user's code and should
  * be presented to the user as hints.
  * @param {!TestableBlock[]} blocks
+ * @param {boolean} [isK1=false]
  */
 FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
   return this.getMissingBlocks_(blocks, 1)

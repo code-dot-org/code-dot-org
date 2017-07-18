@@ -200,10 +200,21 @@
 
 /**
  * @typedef {Object} MilestoneResponse
+ * @property {?} script_id
+ * @property {?} level_id
+ * @property {?} total_lines
+ * @property {?} new_level_completed
+ * @property {?} level_path
  * @property {string} video_info
  * @property {string} redirect
- * @property {Object} stage_changing
- * @property {Object} stage_changing.previous
- * @property {number} stage_changing.previous.position
- * @property {string} stage_changing.previous.name
+ * @property {{previous: {position: number, name: string}}} stage_changing
+ * @property {boolean} end_of_stage_experience
+ * @property {{message: ?, type: ?, contents: ?}} share_failure
+ * @property {{feedback_type: string, feedback_xml: string}[]} hint_view_requests
+ * @property {'no more levels'|string} message
+ * @property {number} hints_used
+ * @property {boolean} puzzle_ratings_enabled
+ * @property {string} save_to_gallery_url
+ * @property {string} level_source
+ * @property {string} level_source_id
  */
