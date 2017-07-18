@@ -73,6 +73,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'summarizes section details' do
+    sign_in @teacher
+
+    get :show, params: {id: @picture_section.id}
+    assert_response :success
+    assert_equal @picture_section.summarize.to_json, @response.body
+  end
+
   test 'specifies course_id' do
     sign_in @teacher
 
