@@ -35,9 +35,7 @@ def main
     false
   )
 
-  AWS::S3.upload_to_bucket('pd-workshop-surveys', "test-aggregate-workshop-scores-#{CDO.rack_env}", course_scores.to_json, no_random: true)
-
-  puts course_scores
+  AWS::S3.upload_to_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}", course_scores.to_json, no_random: true)
 end
 
 main if only_one_running?(__FILE__)
