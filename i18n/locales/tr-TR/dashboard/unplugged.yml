@@ -167,23 +167,26 @@ tr:
         title: ""
         desc: ""
       courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        title: Bağımsız (Unplugged) Döngüler
+        desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
       courseB_unplugged_MRF:
         title: Bağlantısız Etkinlik
-        desc: In this lesson, you will 'program' your friends!
+        desc: Bu derste arkadaşlarınızı yargılanmayacaksınız!
       courseB_unplugged_loopyMRF:
         title: Bağlantısız Etkinlik
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+        desc: Tıpkı 'Benim Robot Arkadaşlarım'da olduğu gibi, arkadaşlarınızı programlayacaksınız, ama bu kez döngülerle!
       courseC_Unplugged_ScreenOutTheMean:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
       courseD_unplugged_digitalCitizenship:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseE_unplugged_privateInformation:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn the difference between private and personal information!
+        desc: Bugün, özel ve kişisel bilgiler arasındaki farkı öğreneceksiniz!
       courseF_unplugged_powerOfWords:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
