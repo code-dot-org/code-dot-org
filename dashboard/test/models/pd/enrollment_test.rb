@@ -431,6 +431,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     safe_names = Pd::Enrollment.where(id: enrollments.map(&:id)).get_safe_names
     assert_equal 5, safe_names.length
     assert safe_names.all? {|n| n[0].present?}
-    assert_equal enrollments, safe_names.map(&:last)
+    assert_equal enrollments.sort, safe_names.map(&:last).sort
   end
 end
