@@ -62,7 +62,9 @@ Dashboard::Application.routes.draw do
   # Temporarily expose Section API routes on dashboardapi, making them
   # available to pegasus as well.  Also added to api/v1 below.
   scope 'dashboardapi', module: 'api/v1' do
-    resources :sections, only: [:show, :index]
+    resources :sections, only: [:show, :index] do
+      resources :students, only: [:index], controller: 'sections_students'
+    end
   end
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
@@ -441,7 +443,9 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
-      resources :sections, only: [:show, :index]
+      resources :sections, only: [:show, :index] do
+        resources :students, only: [:index], controller: 'sections_students'
+      end
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
