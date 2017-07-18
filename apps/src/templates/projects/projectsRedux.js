@@ -90,11 +90,10 @@ export default reducer;
 
 /**
  * Select a gallery to display on the projects page.
- * @param {string} projectType
+ * @param {string} projectType Default: 'PUBLIC'
  * @returns {{type: string, projectType: string}}
  */
-export function selectGallery(projectType) {
-  projectType = projectType || Galleries.PUBLIC;
+export function selectGallery(projectType = Galleries.PUBLIC) {
   return { type: TOGGLE_GALLERY, projectType };
 }
 
