@@ -984,7 +984,7 @@
         abuse_type:
           question: "این مطالب به چه نحوی %{link_start} شرایط سرویس %{link_end} را
             نقض می کند؟"
-          harassment: "ارعاب، تهدید سایبری، آزار و اذیت"
+          harassment: Threats, cyberbullying, harassement
           offensive: "مطالب توهین آمیز"
           infringement: "نقض قانون کپی برداری"
           other: "دیگر"
