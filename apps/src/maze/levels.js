@@ -365,8 +365,7 @@ module.exports = {
       [0, 3, 1, 1, 1, 1, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0]
     ],
-    'levelIncompleteError': mazeMsg.ifInRepeatError(),
-    'showPreviousLevelButton': true
+    'levelIncompleteError': mazeMsg.ifInRepeatError()
   },
   '2_15': {
     'toolbox': toolbox(2, 15),
