@@ -15,13 +15,14 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     display: 'inline-block',
+    fontSize: 13,
     fontFamily: '"Gotham 5r", sans-serif',
     borderRadius: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingTop: 5,
     paddingBottom: 5,
-    minWidth: 60
+    minWidth: 60,
   },
   // Override some styles when progressBubbles is enabled so that it has a
   // similar style to bubbles, and lines up properly

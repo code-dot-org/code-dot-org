@@ -2,11 +2,13 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
+import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
 import { getIconForLevel } from './progressHelpers';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
+import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 
 /**
  * As we do another redesign of our bubbles, this module represents the new version
@@ -101,6 +103,25 @@ const NewProgressBubble = React.createClass({
     const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
+
+    if (level.isUnplugged && !smallBubble) {
+      // TODO: rationalize with levelPillNew
+      return (
+        <div
+          style={{
+            display: 'inline-block',
+            paddingTop: 6,
+            paddingBottom: 6,
+          }}
+        >
+          <ProgressPill
+            levels={[level]}
+            text={i18n.unpluggedActivity()}
+            fontSize={12}
+          />
+        </div>
+      );
+    }
 
     const style = {
       ...styles.main,
