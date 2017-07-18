@@ -556,7 +556,7 @@ class DashboardSection
       course_id: @row[:course_id],
       teachers: teachers,
       students: students,
-      studentNames: students.map(&:name),
+      studentNames: students.map {|student| student[:name]},
     )
   end
 
