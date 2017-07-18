@@ -2,6 +2,9 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+import { levelType } from './progressTypes';
+import { levelProgressStyle, hoverStyle } from './progressStyles';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -20,12 +23,12 @@ const styles = {
     paddingBottom: 5,
     minWidth: 60
   },
-  hoverStyle: {
-    ':hover': {
-      textDecoration: 'none',
-      color: color.white,
-      backgroundColor: color.level_current
-    }
+  // Override some styles when progressBubbles is enabled so that it has a
+  // similar style to bubbles, and lines up properly
+  levelPillNew: {
+    borderWidth: 2,
+    paddingTop: 3,
+    paddingBottom: 3,
   },
   text: {
     display: 'inline-block',
@@ -45,24 +48,37 @@ const styles = {
  */
 const ProgressPill = React.createClass({
   propTypes: {
-    url: PropTypes.string,
-    status: PropTypes.string.isRequired,
+    levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
     fontSize: PropTypes.number
   },
 
   render() {
-    const { url, status, icon, text, fontSize } = this.props;
+    const { levels, icon, text, fontSize } = this.props;
+
+    const multiLevelStep = levels.length > 1;
+    const url = multiLevelStep ? undefined : levels[0].url;
+    const status = multiLevelStep ? 'multi_level' : levels[0].status;
+
+    let style = {
+      ...styles.levelPill,
+      ...BUBBLE_COLORS[status],
+      ...(url && hoverStyle)
+    };
+
+    if (experiments.isEnabled('progressBubbles')) {
+      style = {
+        ...style,
+        ...styles.levelPillNew,
+        ...(!multiLevelStep && levelProgressStyle(levels[0], false))
+      };
+    }
 
     return (
       <a href={url}>
         <div
-          style={{
-            ...styles.levelPill,
-            ...BUBBLE_COLORS[status],
-            ...(url && styles.hoverStyle)
-          }}
+          style={style}
         >
           {icon && <FontAwesome icon={icon}/>}
           {text && (

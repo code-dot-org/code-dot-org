@@ -28,6 +28,7 @@ class XhrProxyController < ApplicationController
     accuweather.com
     apex.oracle.com
     api.data.gov
+    api.nasa.gov
     api.open-notify.org
     api.openweathermap.org
     api.pegelalarm.at

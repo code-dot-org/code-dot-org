@@ -46,6 +46,7 @@ const styles = {
   },
 
   button: {
+    cursor: 'pointer',
     'float': 'left',
     backgroundColor: color.lightest_purple,
     border: 'none',
@@ -71,6 +72,10 @@ const styles = {
     paddingLeft: 8,
     color: '#4d575f'
   },
+
+  hover: {
+    backgroundColor: color.cyan
+  }
 };
 
 const InlineAudio = React.createClass({
@@ -106,6 +111,7 @@ const InlineAudio = React.createClass({
       audio: undefined,
       playing: false,
       error: false,
+      hover: false,
     };
   },
 
@@ -169,15 +175,22 @@ const InlineAudio = React.createClass({
     this.setState({ playing: false });
   },
 
-  render: function () {
+  toggleHover: function (){
+    this.setState({ hover: !this.state.hover });
+  },
+
+ render: function () {
     if (this.props.textToSpeechEnabled && !this.state.error && this.isLocaleSupported() && this.getAudioSrc()) {
       return (
         <div
           className="inline-audio"
           style={this.props.style && this.props.style.wrapper}
+          onMouseOver={this.toggleHover}
+          onMouseOut={this.toggleHover}
         >
           <div
-            style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button]}
+            style={[styles.button, styles.volumeButton, this.props.style && this.props.style.button, this.state.hover && styles.hover]}
+            id="volume"
           >
             <i
               className={"fa fa-volume-up"}
@@ -186,7 +199,7 @@ const InlineAudio = React.createClass({
           </div>
           <div
             className="playPause"
-            style={[styles.button, styles.playPauseButton, this.props.style && this.props.style.button]}
+            style={[styles.button, styles.playPauseButton, this.props.style && this.props.style.button, this.state.hover && styles.hover]}
             onClick={this.toggleAudio}
           >
             <i
