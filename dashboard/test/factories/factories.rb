@@ -72,7 +72,7 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
-        name 'Facilitator Person'
+        sequence(:name) {|n| "Facilitator Person #{n}"}
         sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
