@@ -65,6 +65,13 @@ function onShowConfirmPublishDialog(callback) {
 // once My Projects is moved to React.
 window.onShowConfirmPublishDialog = onShowConfirmPublishDialog;
 
+/**
+ * Shows a project at the front of the specified list of published projects.
+ * @param {Object} projectData The data for a published project, in the format
+ *   defined by projectConstants.projectDataPropType.
+ * @param {string} projectType Which list of projects to add this project to.
+ *   Valid values include applab, gamelab, playlab, or artist.
+ */
 function showNewPublishedProject(projectData, projectType) {
   getStore().dispatch(prependProjects([projectData], projectType));
 }
