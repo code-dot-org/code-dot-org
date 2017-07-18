@@ -35,9 +35,7 @@ FactoryGirl.define do
           start: evaluator.sessions_from + i.days,
           duration_hours: evaluator.each_session_hours
         )
-      end
-      evaluator.num_facilitators.times do
-        workshop.facilitators << (create :facilitator)
+        puts "built session"
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -52,6 +50,42 @@ FactoryGirl.define do
       evaluator.enrolled_unattending_users.times do
         teacher = create :teacher
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
+      end
+    end
+
+    after(:create) do |workshop, evaluator|
+      workshop.sessions.map(&:save)
+
+      evaluator.num_facilitators.times do
+        workshop.facilitators << (create :facilitator)
+      end
+
+      evaluator.num_completed_surveys.times do
+        if workshop.teachercon?
+          enrollment = create :pd_enrollment, workshop: workshop
+
+          survey_hash = build :pd_teachercon_survey_hash
+
+          Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+            survey_hash[field] = {}
+          end
+
+          survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+          workshop.facilitators.each do |facilitator|
+            Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+              survey_hash[field][facilitator.name] = 'Free response'
+            end
+          end
+
+          puts survey_hash.to_json
+
+          create :pd_teachercon_survey, pd_enrollment: enrollment, form_data: survey_hash.to_json
+        elsif workshop.local_summer?
+          raise 'Not supported yet'
+        else
+          raise 'Num_completed_surveys trait unsupported for '
+        end
       end
     end
   end
