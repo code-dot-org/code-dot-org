@@ -14,7 +14,7 @@ def main
   Pd::Workshop::COURSES.each do |course|
     workshops = ::Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(course: course)
 
-    # course_scores[course] = get_score_for_workshops(workshops)
+    #course_scores[course] = get_score_for_workshops(workshops)
   end
 
   course_scores['CSP Local Summer Workshops'] = summarize_workshop_surveys(
@@ -23,7 +23,21 @@ def main
     false
   )
 
-  AWS::S3.upload_to_bucket('pd-workshop-surveys', "aggregate-workshop-scores-#{CDO.rack_env}", course_scores.to_json, no_random: true)
+  course_scores['CSD TeacherCon'] = summarize_workshop_surveys(
+    Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
+    nil,
+    false
+  )
+
+  course_scores['CSP TeacherCon'] = summarize_workshop_surveys(
+    Pd::Workshop.in_state(Pd::Workshop::STATE_ENDED).where(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
+    nil,
+    false
+  )
+
+  AWS::S3.upload_to_bucket('pd-workshop-surveys', "test-aggregate-workshop-scores-#{CDO.rack_env}", course_scores.to_json, no_random: true)
+
+  puts course_scores
 end
 
 main if only_one_running?(__FILE__)
