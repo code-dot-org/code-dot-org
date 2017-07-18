@@ -38,9 +38,9 @@ module Api::V1::Pd
 
       survey_report = Hash.new
 
-      survey_report[:this_teachercon] = summarize_workshop_surveys(@workshop.survey_responses)
+      survey_report[:this_teachercon] = summarize_workshop_surveys(workshops: @workshop)
       survey_report[:all_my_teachercons] = summarize_workshop_surveys(
-        Pd::Workshop.where(subject: [SUBJECT_CSP_TEACHER_CON, SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user).flat_map(&:survey_responses)
+        workshops: Pd::Workshop.where(subject: [SUBJECT_CSP_TEACHER_CON, SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user).flat_map(&:survey_responses)
       )
 
       respond_to do |format|
@@ -59,13 +59,13 @@ module Api::V1::Pd
       facilitator_name = current_user.facilitator? ? current_user.name : nil
       survey_report = Hash.new
 
-      survey_report[:this_workshop] = summarize_workshop_surveys([@workshop], facilitator_name)
+      survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name: facilitator_name)
       survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-        Pd::Workshop.where(
+        workshops: Pd::Workshop.where(
           subject: @workshop.subject,
           course: @workshop.course
         ).facilitated_by(current_user),
-        facilitator_name
+        facilitator_name: facilitator_name
       )
 
       respond_to do |format|
