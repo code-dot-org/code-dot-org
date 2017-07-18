@@ -555,7 +555,8 @@ class DashboardSection
       script: script,
       course_id: @row[:course_id],
       teachers: teachers,
-      students: students
+      students: students,
+      studentCount: students.count,
     )
   end
 
