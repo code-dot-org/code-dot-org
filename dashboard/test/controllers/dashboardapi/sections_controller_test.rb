@@ -61,4 +61,25 @@ class Dashboardapi::SectionsControllerTest < ActionController::TestCase
     course_id = json.find {|section| section['id'] == @section_with_course.id}['course_id']
     assert_equal @course.id, course_id
   end
+
+  test 'logged out cannot view section detail' do
+    get :show, params: {id: @word_section.id}
+    assert_response :forbidden
+  end
+
+  test 'student cannot view section detail' do
+    sign_in @word_user_1
+    get :show, params: {id: @word_section.id}
+    assert_response :forbidden
+  end
+
+  test 'specifies course_id' do
+    sign_in @teacher
+
+    get :show, params: {id: @section_with_course.id}
+    assert_response :success
+    json = JSON.parse(@response.body)
+
+    assert_equal @course.id, json['course_id']
+  end
 end

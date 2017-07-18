@@ -59,7 +59,7 @@ Dashboard::Application.routes.draw do
     end
   end
   namespace :dashboardapi do
-    resources :sections, only: [:index]
+    resources :sections, only: [:show, :index]
   end
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
