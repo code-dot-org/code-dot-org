@@ -105,7 +105,9 @@ export function initializeContainedLevel() {
   } else {
     // No answers yet, disable Run button until there is an answer
     let runButton = $('#runButton');
+    let stepButton = $('#stepButton');
     runButton.prop('disabled', true);
+    stepButton.prop('disabled', true);
     const disabledRunButtonHandler = e => {
       $(window).trigger('attemptedRunButtonClick');
     };
@@ -136,6 +138,7 @@ export function initializeContainedLevel() {
       // React layer
       const validResult = codeStudioLevels.hasValidContainedLevelResult();
       runButton.prop('disabled', !validResult);
+      stepButton.prop('disabled', !validResult);
       if (validResult) {
         runButton.qtip('hide');
         $('#gameButtons').unbind('click', disabledRunButtonHandler);
