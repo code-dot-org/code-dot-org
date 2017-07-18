@@ -11,7 +11,6 @@ const initialState = {
   loginType: undefined,
   name: '',
   grade: '',
-  course: '',
   extras: 'yes',
   pairing: 'yes',
 };
@@ -37,22 +36,12 @@ export class AddSectionDialog extends Component {
     this.setState({loginType});
   };
 
-  handleGoBack = () => {
-    this.setState({loginType: ''});
-  };
-
   handleNameChange = (name) => {
     this.setState({name});
   };
 
   handleGradeChange = (grade) => {
     this.setState({grade});
-  };
-
-  handleCourseChange = (course1) => {
-    //alert(course1.courseId);
-    this.setState({course: course1});
-    //alert('here: ' + this.state.course);
   };
 
   handleExtrasChange = (extras) => {
@@ -67,6 +56,7 @@ export class AddSectionDialog extends Component {
     const {updateSection} = this.props;
     //const persistedSection = false;
 
+    const selectedAssignment = this.assignment.getSelectedAssignment();
     const data = {
       //id: null,
       name: this.state.name,
@@ -74,7 +64,14 @@ export class AddSectionDialog extends Component {
       grade: this.state.grade,
       stage_extras: this.state.extras === 'yes' ? true : false,
       pairing_allowed: this.state.pairing === 'yes' ? true : false,
+      course_id: selectedAssignment ? selectedAssignment.courseId : null,
     };
+
+    if (selectedAssignment && selectedAssignment.scriptId) {
+      data.script = {
+        id: selectedAssignment.scriptId
+      };
+    }
 
     const suffix = '';
     const sectionId = -1; // When it's a new section
@@ -108,8 +105,9 @@ export class AddSectionDialog extends Component {
     } else {
       return (
         <EditSectionForm
+          assignmentRef = {(element) => this.assignment = element}
           handleSave={this.onClickEditSave}
-          handleBack={this.handleGoBack}
+          handleClose={this.handleClose}
           name={this.state.name}
           handleName={this.handleNameChange}
           grade={this.state.grade}
