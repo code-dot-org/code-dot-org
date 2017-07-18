@@ -150,7 +150,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       hideTryAgain: options.hideTryAgain,
       keepPlayingText: options.keepPlayingText,
       continueText: options.continueText,
-      showPreviousButton: options.level.showPreviousLevelButton,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
       finalLevel: finalLevel
@@ -159,7 +158,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var againButton = feedback.querySelector('#again-button');
   var hintRequestButton = feedback.querySelector('#hint-request-button');
-  var previousLevelButton = feedback.querySelector('#back-button');
   var continueButton = feedback.querySelector('#continue-button');
 
   // Don't show the continue button on share pages.
@@ -167,8 +165,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     continueButton.style.display = 'none';
   }
 
-  const hasNeitherBackButton = !againButton && !previousLevelButton;
-  const onlyContinue = continueButton && hasNeitherBackButton;
+  const onlyContinue = continueButton && !againButton;
   const defaultContinue = onlyContinue || options.defaultToContinue;
 
   // get the topmost missing recommended block, if it exists, to be
@@ -298,13 +295,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
       feedbackDialog.hideButDontContinue = false;
-    });
-  }
-
-  if (previousLevelButton) {
-    dom.addClickTouchEvent(previousLevelButton, function () {
-      feedbackDialog.hide();
-      options.backToPreviousLevel();
     });
   }
 
@@ -645,9 +635,6 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   }
 
   ReactDOM.render(React.createElement(DialogButtons, {
-    previousLevel:
-      !this.canContinueToNextLevel(options.feedbackType) &&
-      options.showPreviousButton,
     tryAgain: tryAgainText,
     continueText: options.continueText || (options.finalLevel ? msg.finish() : msg.continue()),
     nextLevel: this.canContinueToNextLevel(options.feedbackType),
