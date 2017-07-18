@@ -40,12 +40,3 @@
   = f.label :failure_condition, "Failure Condition"
   %p condition(s), which if true at any point, indicates the puzzle is complete (indicating failure if success condition not met)
   = f.text_area :failure_condition, rows: 4
-
-.field
-  = f.label :app_specific_fail_error, "App-Specific Fail Error"
-  %p
-    custom error message to be displayed when the custom failure condition is
-    met; this is distinct from "Failure Message Override" in that this changes
-    the message specifically for the custom fail function and the other changes
-    the generic fail message.
-  = f.text_area :app_specific_fail_error
