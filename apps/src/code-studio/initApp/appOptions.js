@@ -111,6 +111,7 @@
  * @property {?} iframeEmbed
  * @property {?} lastAttempt
  * @property {?} submittable
+ * @property {boolean} final_level
  */
 
 /**
@@ -212,7 +213,7 @@
  * @property {{message: ?, type: ?, contents: ?}} share_failure
  * @property {HintViewRequest[]} hint_view_requests
  * @property {string} hint_view_request_url
- * @property {'no more levels'|string} message
+ * @property {string} message
  * @property {number} hints_used - used by gamification.
  * @property {boolean} puzzle_ratings_enabled
  * @property {string} save_to_gallery_url

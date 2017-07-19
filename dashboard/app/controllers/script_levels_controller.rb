@@ -369,7 +369,7 @@ class ScriptLevelsController < ApplicationController
     }
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
       success: milestone_response(milestone_options.merge(
-        total_lines: current_user.total_lines,
+        total_lines: current_user.try(:total_lines) || 0,
         solved?: true
       )),
       failure: milestone_response(milestone_options)

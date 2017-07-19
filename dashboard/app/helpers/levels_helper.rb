@@ -207,8 +207,26 @@ module LevelsHelper
       @app_options = view_options.camelize_keys
     end
 
+    # Script-dependent options.
+    if (script = @script)
+      @app_options[:scriptId] = script.id
+      @app_options[:scriptName] = script.name
+    end
+
+    # ScriptLevel-dependent options.
+    level = @app_options[:level] ||= Hash.new
+    level['puzzle_number'] = @script_level ? @script_level.position : 1
+    level['stage_total'] = @script_level ? @script_level.stage_total : 1
+    level['final_level'] = @script_level.final_level? if @script_level
+
     # Blockly caches level properties, whereas this field depends on the user
     @app_options['teacherMarkdown'] = @level.properties['teacher_markdown'] if current_user.try(:authorized_teacher?)
+
+    @app_options[:report] = {
+      fallback_response: @fallback_response,
+      callback: @callback,
+      sublevelCallback: @sublevel_callback,
+    }
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -332,11 +350,6 @@ module LevelsHelper
 
     app_options[:app] = 'weblab'
     app_options[:baseUrl] = Blockly.base_url
-    app_options[:report] = {
-      fallback_response: @fallback_response,
-      callback: @callback,
-      sublevelCallback: @sublevel_callback,
-    }
 
     if (@game && @game.owns_footer_for_share?) || @is_legacy_share
       app_options[:copyrightStrings] = build_copyright_strings
@@ -385,21 +398,10 @@ module LevelsHelper
     level_options = l.blockly_level_options.dup
     app_options[:level] = level_options
 
-    # Locale-depdendant option
+    # Locale-depdendent option
     level_options['instructions'] = l.localized_instructions unless l.localized_instructions.nil?
     level_options['authoredHints'] = l.localized_authored_hints unless l.localized_authored_hints.nil?
     level_options['failureMessageOverride'] = l.localized_failure_message_override unless l.localized_failure_message_override.nil?
-
-    # Script-dependent option
-    script = @script
-    app_options[:scriptId] = script.id if script
-    app_options[:scriptName] = script.name if script
-
-    # ScriptLevel-dependent option
-    script_level = @script_level
-    level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.stage_total : 1
-    level_options['final_level'] = script_level.final_level? if script_level
 
     # Unused Blocks option
     ## TODO (elijah) replace this with more-permanent level configuration
@@ -411,7 +413,9 @@ module LevelsHelper
     ## Allow gatekeeper to disable otherwise-enabled unused blocks in a
     ## cascading way; more specific options take priority over
     ## less-specific options.
-    if script && script_level && app_options[:showUnusedBlocks] != false
+    if (script = @script) &&
+      (script_level = @script_level) &&
+      app_options[:showUnusedBlocks] != false
 
       # puzzle-specific
       enabled = Gatekeeper.allows(
@@ -512,11 +516,6 @@ module LevelsHelper
     app_options[:hasVerticalScrollbars] = true if l.enable_scrolling?
     app_options[:showExampleTestButtons] = true if l.enable_examples?
     app_options[:rackEnv] = CDO.rack_env
-    app_options[:report] = {
-      fallback_response: @fallback_response,
-      callback: @callback,
-      sublevelCallback: @sublevel_callback,
-    }
 
     unless params[:no_last_attempt]
       level_options[:lastAttempt] = @last_attempt

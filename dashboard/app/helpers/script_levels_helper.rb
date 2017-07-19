@@ -16,7 +16,7 @@ module ScriptLevelsHelper
         response[:end_of_stage_experience] = enabled_for_stage && enabled_for_user
       end
     else
-      response[:message] = 'no more levels' # used by blockly to show a different feedback message on the last level
+      response[:message] = 'no more levels'
 
       if script_level.script.wrapup_video
         response[:video_info] = wrapup_video_then_redirect_response(
