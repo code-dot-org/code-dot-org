@@ -2,7 +2,7 @@
  * Copyright (c) 2017 Anthony Bau.
  * MIT License.
  *
- * Date: 2017-07-13
+ * Date: 2017-07-19
  */
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.droplet = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -6775,7 +6775,7 @@ Editor.prototype.clearPalette = function() {};
 Editor.prototype.clearPaletteHighlightCanvas = function() {};
 
 Editor.prototype.redrawPalette = function() {
-  var binding, element, entry, j, k, lastBottomEdge, len, len1, paletteBlockView, ref1, ref2, ref3, ref4;
+  var binding, element, entry, j, k, lastBottomEdge, len, len1, paletteBlockClass, paletteBlockView, ref1, ref2, ref3, ref4;
   if (((ref1 = this.session) != null ? ref1.currentPaletteBlocks : void 0) == null) {
     return;
   }
@@ -6793,7 +6793,10 @@ Editor.prototype.redrawPalette = function() {
     element.innerHTML = (ref3 = entry.title) != null ? ref3 : entry.block.stringify();
     paletteBlockView.group.element.appendChild(element);
     paletteBlockView.group.element.setAttribute('data-id', entry.id);
-    paletteBlockView.group.element.setAttribute('class', 'droplet-hover-div');
+    paletteBlockClass = paletteBlockView.group.element.getAttribute('class') || '';
+    if (!(paletteBlockClass.indexOf('droplet-hover-div') > -1)) {
+      paletteBlockView.group.element.setAttribute('class', paletteBlockClass + ' droplet-hover-div');
+    }
     paletteBlockView.group.element.setAttribute('title', entry.title);
     lastBottomEdge = paletteBlockView.getBounds().bottom() + PALETTE_MARGIN;
   }
