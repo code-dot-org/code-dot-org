@@ -62,41 +62,9 @@ FactoryGirl.define do
       evaluator.num_completed_surveys.times do
         enrollment = create :pd_enrollment, workshop: workshop
         if workshop.teachercon?
-          survey_hash = build :pd_teachercon_survey_hash
-
-          Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
-            survey_hash[field] = {}
-          end
-
-          survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
-
-          workshop.facilitators.each do |facilitator|
-            Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
-              survey_hash[field][facilitator.name] = 'Free response'
-            end
-          end
-
-          create :pd_teachercon_survey, pd_enrollment: enrollment, form_data: survey_hash.to_json
+          create :pd_teachercon_survey, pd_enrollment: enrollment
         elsif workshop.local_summer?
-          survey_hash = build :pd_local_summer_workshop_survey_hash
-
-          Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
-            survey_hash[field] = {}
-          end
-
-          survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
-
-          workshop.facilitators.each do |facilitator|
-            Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
-              if Pd::LocalSummerWorkshopSurvey.options.key? field
-                survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
-              else
-                survey_hash[field][facilitator.name] = 'Free Response'
-              end
-            end
-          end
-
-          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, form_data: survey_hash.to_json
+          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment
         else
           raise 'Num_completed_surveys trait unsupported for this workshop type'
         end
@@ -221,7 +189,26 @@ FactoryGirl.define do
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
-    form_data {(build :pd_teachercon_survey_hash).to_json}
+    after(:build) do |survey|
+      enrollment = survey.pd_enrollment
+      workshop = enrollment.workshop
+
+      survey_hash = build :pd_teachercon_survey_hash
+
+      Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+        survey_hash[field] = {}
+      end
+
+      survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+      workshop.facilitators.each do |facilitator|
+        Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+          survey_hash[field][facilitator.name] = 'Free response'
+        end
+      end
+
+      survey.update_form_data_hash(survey_hash)
+    end
   end
 
   factory :pd_teachercon_survey_hash, class: 'Hash' do
@@ -322,7 +309,31 @@ FactoryGirl.define do
 
   factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
-    form_data {(build :pd_local_summer_workshop_survey_hash).to_json}
+
+    after(:build) do |survey|
+      enrollment = survey.pd_enrollment
+      workshop = enrollment.workshop
+
+      survey_hash = build :pd_local_summer_workshop_survey_hash
+
+      Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+        survey_hash[field] = {}
+      end
+
+      survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+      workshop.facilitators.each do |facilitator|
+        Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+          if Pd::LocalSummerWorkshopSurvey.options.key? field
+            survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
+          else
+            survey_hash[field][facilitator.name] = 'Free Response'
+          end
+        end
+      end
+
+      survey.update_form_data_hash(survey_hash)
+    end
   end
 
   factory :pd_local_summer_workshop_survey_hash, class: 'Hash' do
