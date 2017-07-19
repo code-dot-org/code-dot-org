@@ -4,7 +4,7 @@ const levelProgressShape = React.PropTypes.shape({
   title: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
   name: React.PropTypes.string,
   status: React.PropTypes.string,
-  kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle', 'named_level', 'peer_review']),
+  kind: React.PropTypes.oneOf(['unplugged', 'assessment', 'puzzle', 'named_level', 'peer_review', 'stage_extras']),
   url: React.PropTypes.string,
   id: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number]),
   locked: React.PropTypes.bool,

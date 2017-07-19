@@ -32,11 +32,11 @@
     "fast_get_nectar_animation": "false",
     "ideal": "11",
     "step_speed": "2",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can solve this puzzle two ways, either get the corn or the pumpkins first.\",\"hint_id\":\"courseC_harvester_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/adde3bd9326573e66f992d8747dc70f8/courseC_harvester_loops7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You will need multiple `repeat` loops to solve this puzzle.\",\"hint_id\":\"courseC_harvester_loops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/72b1517eb7ec9bc8153b7bff245721a5/courseC_harvester_loops7.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

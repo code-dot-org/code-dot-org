@@ -32,14 +32,17 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\"hint_id\":\"courseE_artist_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/06fcb0423acf147330e54d8e3e7e575d/courseE_artist_functions1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"It is okay to draw overlapping lines to make your glasses.\",\"hint_id\":\"courseE_artist_functions1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee1e39df00da7e51b2cc6fe840044e34/courseE_artist_functions1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The squares each have 100 pixel sides, that means that you will have to move forward 175 pixels before drawing your second square.\",\"hint_id\":\"courseE_artist_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/06fcb0423acf147330e54d8e3e7e575d/courseE_artist_functions1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"It is okay to draw overlapping lines to make your glasses.\",\"hint_id\":\"courseE_artist_functions1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ee1e39df00da7e51b2cc6fe840044e34/courseE_artist_functions1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"For shorter code, try using a `repeat` loop to draw the square frames of the glasses.\",\"hint_id\":\"courseE_artist_functions1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f861c61c36ee91e50dbb7fba4f3f0931/courseE_artist_functions1.mp3\"}]",
     "discard_background": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_artist_functions1_1\",\r\n  \"callout_text\": \"Let's start by using this block to help create the first square.\",\r\n  \"element_id\": \"#loop\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "This level has new scaffolding since the original to help guide students to the ideal solution.  While it is usually a good thing for students to be able to use many different programs to create the same algorithm, we want to lead them by the hand here so that the addition of functions makes sense.",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:12:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

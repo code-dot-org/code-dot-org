@@ -33,26 +33,33 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.\",\"hint_id\":\"courseE_bee_concept1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b2a78405a6a9846a241f6572c1758c9e/courseE_bee_concept1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Are there any patterns that *repeat* here?\",\"hint_id\":\"courseE_bee_concept1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/feb242dad6a6d64a8921f20d8aa046d3/courseE_bee_concept1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you don't understand how to use nested loops here, try writing out the instructions step by step on a piece of paper.  Circle the patterns that you see.\",\"hint_id\":\"courseE_bee_concept1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b2a78405a6a9846a241f6572c1758c9e/courseE_bee_concept1.mp3\"}]",
     "instructions_important": "false",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:29:14 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 19:35:47 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:10:40 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar" limit="1"/>
+        <block type="maze_nectar"/>
         <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
@@ -70,6 +77,12 @@
         </block>
         <block type="bee_ifFlower">
           <title name="LOC">atFlower</title>
+        </block>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_if">
+          <title name="DIR">isPathForward</title>
         </block>
       </xml>
     </toolbox_blocks>

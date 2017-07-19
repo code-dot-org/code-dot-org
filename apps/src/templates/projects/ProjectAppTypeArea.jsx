@@ -1,13 +1,17 @@
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
-import {projectPropType} from './projectConstants';
+import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 import ProgressButton from "../progress/ProgressButton";
+import {connect} from 'react-redux';
+import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
 const styles = {
   grid: {
     padding: 10,
-    width: 970
+    width: styleConstants['content-width']
   },
   card: {
     display: "inline-block",
@@ -51,8 +55,12 @@ const ProjectAppTypeArea = React.createClass({
     // Only show one project type.
     isDetailView: PropTypes.bool.isRequired,
 
-    hasOlderProjects: PropTypes.bool,
-    fetchOlderProjects: PropTypes.func,
+    // from redux state
+    hasOlderProjects: PropTypes.bool.isRequired,
+
+    // from redux dispatch
+    appendProjects: PropTypes.func.isRequired,
+    setHasOlderProjects: PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -105,10 +113,42 @@ const ProjectAppTypeArea = React.createClass({
     const {hasOlderProjects} = this.props;
     if (this.state.maxNumProjects < newNumProjects && hasOlderProjects) {
       this.setState({disableViewMore: true});
-      this.props.fetchOlderProjects(this.props.labKey, () => {
+      this.fetchOlderProjects().always(() => {
         this.setState({disableViewMore: false});
       });
     }
+  },
+
+  /**
+   * Fetch additional projects of the specified type which were published
+   * earlier than the oldest published project currently in our list.
+   * @returns {$.Deferred} Deferred object after the network request has
+   *   completed and the done handler has been run (if successful).
+   */
+  fetchOlderProjects() {
+    const {projectList, labKey: projectType} = this.props;
+    const oldestProject = projectList[projectList.length - 1];
+    const oldestPublishedAt = oldestProject && oldestProject.projectData.publishedAt;
+
+    return $.ajax({
+      method: 'GET',
+      url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
+      dataType: 'json'
+    }).done(data => {
+      // olderProjects all have an older publishedAt date than oldestProject.
+      const olderProjects = data[projectType];
+
+      // Don't try to fetch projects of this projectType again in the future if we
+      // received fewer than we asked for this time.
+      if (olderProjects.length < MAX_PROJECTS_PER_CATEGORY) {
+        this.props.setHasOlderProjects(false, projectType);
+      }
+
+      // Append any projects we just received to the appropriate list,
+      // ignoring any duplicates. This preserves the newest-to-oldest
+      // ordering of the project list.
+      this.props.appendProjects(olderProjects, projectType);
+    });
   },
 
   renderViewMoreButtons() {
@@ -157,4 +197,6 @@ const ProjectAppTypeArea = React.createClass({
   }
 });
 
-export default ProjectAppTypeArea;
+export default connect((state, ownProps) => ({
+  hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
+}), { appendProjects, setHasOlderProjects })(ProjectAppTypeArea);

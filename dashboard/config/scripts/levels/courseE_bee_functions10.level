@@ -37,11 +37,13 @@
     "markdown_instructions": "*\"Show me the HONEY!\"*\r\n\r\nSolve this puzzle by creating a function that causes the bee to: \r\n- turn toward the branch in the path\r\n- move forward\r\n- make all of the honey\r\n- return to the main path \r\n- turn back to the original direction",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need a `while` loop to collect all of the honey, since it varies between honeycombs.\",\"hint_id\":\"courseE_bee_functions10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/73f88f2d419710757b6d89623a4bace3/courseE_bee_functions10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Include the turns and movement in your function, so you can call it when the bee is on the main path.\",\"hint_id\":\"courseE_bee_functions10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/af02f483b778baab4581ac1e784c805c/courseE_bee_functions10.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to call your function in the main program!\",\"hint_id\":\"courseE_bee_functions10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9a980736e2a17e633fe5151aaf9205c2/courseE_bee_functions10.mp3\"}]",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-06 00:40:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-06 00:40:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 04:19:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
