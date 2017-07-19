@@ -1563,16 +1563,27 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  # test 'assign_course_as_facilitator assigns course to facilitator' do
+  #   facilitator = create :facilitator
+  #   facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+  #   assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_CS_IN_A).any?
+  # end
+
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
-    facilitator.course_as_facilitator = Pd::Workshop::COURSES.last
-    assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSES.last).any?
+    assert_creates Pd::CourseFacilitator do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+    end
+    course_facilitator = Pd::CourseFacilitator.last
+    assert_equal Pd::Workshop::COURSE_CS_IN_A, course_facilitator.course
+    assert_equal facilitator, course_facilitator.facilitator
   end
 
   test 'delete_course_as_facilitator removes facilitator course' do
-    facilitator = create :facilitator
-    facilitator.delete_course_as_facilitator Pd::Workshop::COURSES.first
-    refute facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSES.first).any?
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    assert_difference 'Pd::CourseFacilitator.count', -1 do
+      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
+    end
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do

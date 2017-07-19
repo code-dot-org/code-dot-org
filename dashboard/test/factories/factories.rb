@@ -75,7 +75,6 @@ FactoryGirl.define do
         name 'Facilitator Person'
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
-          facilitator.course_as_facilitator = Pd::Workshop::COURSES.first
         end
       end
       factory :workshop_admin do
