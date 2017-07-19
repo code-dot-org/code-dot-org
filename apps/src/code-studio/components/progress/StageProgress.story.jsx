@@ -6,7 +6,6 @@ import sections from '../../sectionsRedux';
 import stageLock from '../../stageLockRedux';
 import progress, { initProgress } from '../../progressRedux';
 import experiments from '@cdo/apps/util/experiments';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 export default storybook => {
   const store = createStore(combineReducers({progress, stageLock, sections}));
@@ -29,7 +28,6 @@ export default storybook => {
           url: "http://studio.code.org/s/csp1/stage/2/puzzle/1",
           freePlay: false,
           progression: "Lesson Vocabulary & Resources",
-          status: LevelStatus.not_tried
         },
         {
           ids: [
@@ -38,12 +36,11 @@ export default storybook => {
           activeId: 2723,
           position: 2,
           kind: "assessment",
-          icon: "fa-list-ol",
+          icon: "fa-check-square-o",
           title: 2,
           url: "http://studio.code.org/s/csp1/stage/2/puzzle/2",
           freePlay: false,
           progression: "Check Your Understanding",
-          status: LevelStatus.not_tried
         },
         {
           ids: [
@@ -52,12 +49,11 @@ export default storybook => {
           activeId: 2441,
           position: 3,
           kind: "assessment",
-          icon: "fa-list-ol",
+          icon: "fa-check-square-o",
           title: 3,
           url: "http://studio.code.org/s/csp1/stage/2/puzzle/3",
           freePlay: false,
           progression: "Check Your Understanding",
-          status: LevelStatus.not_tried
         },
         {
           ids: [
@@ -66,12 +62,11 @@ export default storybook => {
           activeId: 2444,
           position: 4,
           kind: "assessment",
-          icon: "fa-list-ol",
+          icon: "fa-check-square-o",
           title: 4,
           url: "http://studio.code.org/s/csp1/stage/2/puzzle/4",
           freePlay: false,
           progression: "Check Your Understanding",
-          status: LevelStatus.not_tried
         },
         {
           ids: [
@@ -80,12 +75,11 @@ export default storybook => {
           activeId: 2744,
           position: 5,
           kind: "assessment",
-          icon: "fa-list-ol",
+          icon: "fa-check-square-o",
           title: 5,
           url: "http://studio.code.org/s/csp1/stage/2/puzzle/5",
           freePlay: false,
           progression: "Check Your Understanding",
-          status: LevelStatus.not_tried
         }
       ]
     }]

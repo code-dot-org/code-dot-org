@@ -39,4 +39,8 @@ ruby
   def supports_markdown?
     true
   end
+
+  def icon
+    'fa-check-square-o'
+  end
 end

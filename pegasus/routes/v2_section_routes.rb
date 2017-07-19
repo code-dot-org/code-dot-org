@@ -1,3 +1,14 @@
+# Get the set of sections owned by the current user
+# DEPRECATED: Use GET /dashboardapi/sections instead
+get '/v2/sections' do
+  only_for 'code.org'
+  dont_cache
+  content_type :json
+  sections = DashboardSection.fetch_user_sections(dashboard_user_id)
+  forbidden! unless sections
+  JSON.pretty_generate(sections)
+end
+
 post '/v2/sections' do
   only_for 'code.org'
   dont_cache
