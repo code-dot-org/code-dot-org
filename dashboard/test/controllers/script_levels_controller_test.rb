@@ -1479,4 +1479,27 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     get :show, params: {script_id: script.name, stage_position: '1', id: '2'}
     assert_redirected_to "/s/#{new_script.name}/stage/1/puzzle/1"
   end
+
+  test "should indicate challenge levels as challenge levels" do
+    script_level = create :script_level,
+      properties: {challenge: true}
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: 1,
+      id: '1',
+    }
+    assert_response :success
+    assert_not_nil assigns(:view_options)[:is_challenge_level]
+  end
+
+  test "should not indicate non-challenge levels as challenge levels" do
+    script_level = create :script_level
+    get :show, params: {
+      script_id: script_level.script,
+      stage_position: 1,
+      id: '1',
+    }
+    assert_response :success
+    assert_nil assigns(:view_options)[:is_challenge_level]
+  end
 end
