@@ -87,7 +87,7 @@ var styles = {
   }
 };
 
-var debugAreaTransitionValue = 'height 0.4s';
+const debugAreaTransitionValue = 'height 0.4s';
 
 const MIN_DEBUG_AREA_HEIGHT = 120;
 const MAX_DEBUG_AREA_HEIGHT = 400;
@@ -326,7 +326,8 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     // Toggle transition style to 'none' to allow height to update immediately
     this.root.style.transition = 'none';
     this.root.style.height = newDbgHeight + 'px';
-    // Force reference to offsetHeight - see https://stackoverflow.com/a/16575811
+    // Force reference to offsetHeight, to trigger a reflow and make the browser
+    // pick up the CSS changes immediately. see https://stackoverflow.com/a/16575811
     this.root.offsetHeight;
     this.root.style.transition = debugAreaTransitionValue;
 
