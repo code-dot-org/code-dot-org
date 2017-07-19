@@ -144,7 +144,7 @@ module ScriptConstants
 
   def self.category_priority(category)
     if category == OTHER_CATEGORY_NAME
-      1e6 # 'other' goes at the end
+      CATEGORIES.keys.length # 'other' goes at the end
     else
       CATEGORIES.keys.find_index(category.to_sym)
     end
