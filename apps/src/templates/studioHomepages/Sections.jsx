@@ -14,11 +14,11 @@ const Sections = React.createClass({
     canLeave: React.PropTypes.bool.isRequired
   },
 
-  getInitialState: function () {
+  getInitialState() {
     return {sections: this.props.sections};
   },
 
-  updateSections: function (sections) {
+  updateSections(sections) {
     this.setState({sections: sections});
   },
 
