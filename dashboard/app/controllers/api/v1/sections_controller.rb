@@ -17,14 +17,17 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Create a new section
   def create
     authorize! :create, Section
+
+    valid_script = params[:script] && valid_script_id?(params[:script][:id])
+    script_to_assign = valid_script && Script.find(params[:script][:id])
+
     section = Section.create!(
       {
         user_id: current_user.id,
         name: !params[:name].to_s.empty? ? params[:name].to_s : 'New Section',
         login_type: params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s,
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
-        script_id: params[:script] && valid_script_id?(params[:script][:id]) ?
-          params[:script][:id].to_i : params[:script_id],
+        script_id: script_to_assign ? script_to_assign.id : params[:script_id],
         course_id: params[:course_id] && valid_course_id?(params[:course_id]) ?
           params[:course_id].to_i : nil,
         code: CodeGeneration.random_unique_code(length: 6),
@@ -33,9 +36,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }
     )
 
-    if params[:script] && valid_script_id?(params[:script][:id])
-      # How would I do this in Dashboard?
-      # DashboardUserScript.assign_script_to_user(params[:script][:id].to_i, current_user.id)
+    # TODO: Move to an after_create step on Section model?
+    if script_to_assign
+      current_user.assign_script script_to_assign
     end
 
     render json: section.summarize
