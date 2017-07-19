@@ -16,7 +16,10 @@ Feature: Using the teacher dashboard
     Given I create a teacher-associated student named "Sally"
     And I give user "Teacher_Sally" hidden script access
     And I complete the level on "http://studio.code.org/s/allthethings/stage/2/puzzle/1"
+    And I complete the free response on "http://studio.code.org/s/allthethings/stage/27/puzzle/1"
+    And I submit the assessment on "http://studio.code.org/s/allthethings/stage/33/puzzle/1"
     And I sign out
+
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
@@ -27,6 +30,31 @@ Feature: Using the teacher dashboard
     And I wait until I see selector "a[href*='/s/allthethings/stage/2/puzzle/1']"
     Then selector "a[href*='/s/allthethings/stage/2/puzzle/1']" has class "perfect"
     But selector "a[href*='/s/allthethings/stage/2/puzzle/2']" doesn't have class "perfect"
+
+    When I click selector "a:contains('Section: SectionName')" once I see it
+    And I click selector "#learn-tabs a:contains('Stats')" once I see it
+    And I wait until element "#stats-tab" is visible
+    And element "#stats-tab td:nth(0)" contains text "Sally"
+    And element "#stats-tab td:nth(1)" contains text "3"
+    And element "#stats-tab td:nth(2)" contains text "2"
+
+    When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
+    And I wait until element "#course-dropdown" is visible
+    And I select the "allthethings *" option in dropdown "course-dropdown"
+    And I wait until element "#responses-tab" is visible
+    And element "#responses-tab td:nth(0)" contains text "Sally"
+    And element "#responses-tab td:nth(4)" contains text "hello world"
+
+    When I click selector "#learn-tabs a:contains('Manage Students')" once I see it
+    And I wait until element "#manage-tab" is visible
+
+    When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
+    And I wait until element "#course-dropdown" is visible
+    And I select the "allthethings *" option in dropdown "course-dropdown"
+    And I wait until element "#assessments-tab" is visible
+    And element "#assessments-tab td:nth(0)" contains text "Sally"
+    And element "#assessments-tab td:nth(3)" contains text "Submitted"
+    And element "#assessments-tab td:nth(4)" contains text "1"
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
