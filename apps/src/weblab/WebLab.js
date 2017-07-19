@@ -6,7 +6,6 @@ import consoleApi from '../consoleApi';
 import WebLabView from './WebLabView';
 import { Provider } from 'react-redux';
 import weblabMsg from '@cdo/weblab/locale';
-import commonMsg from '@cdo/locale';
 import {
   initializeSubmitHelper,
   onSubmitComplete
@@ -17,7 +16,6 @@ import * as actions from './actions';
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('../code-studio/assets/assetListStore');
 import project from '@cdo/apps/code-studio/initApp/project';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 
@@ -77,16 +75,6 @@ WebLab.prototype.init = function (config) {
 
   this.skin = config.skin;
   this.level = config.level;
-  this.hideSource = config.hideSource;
-
-  if (config.share) {
-    $("#codeApp").css({
-      top: "0",
-      left: "0",
-      right: "0",
-      bottom: `${WEBLAB_FOOTER_HEIGHT}px`
-    });
-  }
 
   this.brambleHost = null;
 
@@ -164,10 +152,6 @@ WebLab.prototype.init = function (config) {
     // NOTE: if we called studioApp_.init(), this call would not be needed...
     this.studioApp_.initVersionHistoryUI(config);
 
-    if (config.share) {
-      this.renderFooterInSharedMode(container, config.copyrightStrings);
-    }
-
     let finishButton = document.getElementById('finishButton');
     if (finishButton) {
       dom.addClickTouchEvent(finishButton, this.onFinish.bind(this, false));
@@ -235,7 +219,6 @@ WebLab.prototype.init = function (config) {
   ReactDOM.render((
     <Provider store={getStore()}>
       <WebLabView
-        hideToolbar={!!config.share}
         onAddFileHTML={onAddFileHTML.bind(this)}
         onAddFileCSS={onAddFileCSS.bind(this)}
         onAddFileImage={onAddFileImage.bind(this)}
@@ -269,63 +252,6 @@ WebLab.prototype.onFinish = function (submit) {
       onComplete: onComplete,
     });
   });
-};
-
-WebLab.prototype.renderFooterInSharedMode = function (container, copyrightStrings) {
-  var footerDiv = document.createElement('div');
-  footerDiv.setAttribute('id', 'footerDiv');
-  document.body.appendChild(footerDiv);
-  var menuItems = [
-    {
-      text: commonMsg.reportAbuse(),
-      link: '/report_abuse',
-      newWindow: true
-    },
-/*    {
-      text: applabMsg.makeMyOwnApp(),
-      link: '/projects/applab/new',
-      hideOnMobile: true
-    },
-*/
-    {
-      text: commonMsg.openWorkspace(),
-      link: project.getProjectUrl('/view'),
-    },
-    {
-      text: commonMsg.copyright(),
-      link: '#',
-      copyright: true
-    },
-    {
-      text: commonMsg.privacyPolicy(),
-      link: 'https://code.org/privacy',
-      newWindow: true
-    }
-  ];
-  if (dom.isMobile()) {
-    menuItems = menuItems.filter(function (item) {
-      return !item.hideOnMobile;
-    });
-  }
-
-  ReactDOM.render(
-    <SmallFooter
-      i18nDropdown={''}
-      privacyPolicyInBase={false}
-      copyrightInBase={false}
-      copyrightStrings={copyrightStrings}
-      baseMoreMenuString={commonMsg.builtOnCodeStudio()}
-      rowHeight={WEBLAB_FOOTER_HEIGHT}
-      style={{fontSize:18}}
-      baseStyle={{
-        width: '100%',
-        paddingLeft: 0
-      }}
-      className="dark"
-      menuItems={menuItems}
-      phoneFooter={true}
-    />,
-    footerDiv);
 };
 
 WebLab.prototype.getCodeAsync = function () {
@@ -436,9 +362,6 @@ WebLab.prototype.onInspectorChanged = function (inspectorOn) {
 WebLab.prototype.setBrambleHost = function (obj) {
   this.brambleHost = obj;
   this.brambleHost.onBrambleReady(() => {
-    if (this.hideSource) {
-      this.brambleHost.enableFullscreenPreview();
-    }
     // Enable the Finish/Submit/Unsubmit button if it is present:
     let shareCell = document.getElementById('share-cell');
     if (shareCell) {

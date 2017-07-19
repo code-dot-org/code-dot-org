@@ -34,11 +34,13 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"After you have moved to a square with treasure, use the get treasure block to pick it up.\",\"hint_id\":\"courseA_collector_loops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2688c34f38c974d53927773d5e2b23ca/courseA_collector_loops1.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"A simple solution would be to move East twice, then get treasure.\",\"hint_id\":\"courseA_collector_loops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f772b2718448bc1128c4cf97dbd38b98/courseA_collector_loops1.mp3\"}]",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "tts_markdown_instructions_override": "Free Play: This is Laurel the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-23 22:30:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-23 22:30:59 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 17:26:01 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
