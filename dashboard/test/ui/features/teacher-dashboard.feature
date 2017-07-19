@@ -35,7 +35,7 @@ Feature: Using the teacher dashboard
     And I click selector "#learn-tabs a:contains('Stats')" once I see it
     And I wait until element "#stats-tab" is visible
     And element "#stats-tab td:nth(0)" contains text "Sally"
-    And element "#stats-tab td:nth(1)" contains text "3"
+    And element "#stats-tab td:nth(1)" contains text "5"
     And element "#stats-tab td:nth(2)" contains text "2"
 
     When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
@@ -53,7 +53,7 @@ Feature: Using the teacher dashboard
     And I select the "allthethings *" option in dropdown "course-dropdown"
     And I wait until element "#assessments-tab" is visible
     And element "#assessments-tab td:nth(0)" contains text "Sally"
-    And element "#assessments-tab td:nth(3)" contains text "Submitted"
+    And element "#assessments-tab td:nth(1)" contains text "Lesson 33: Single page assessment"
     And element "#assessments-tab td:nth(4)" contains text "1"
 
   Scenario: Loading section projects
