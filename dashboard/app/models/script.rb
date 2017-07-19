@@ -177,6 +177,33 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
+  # Get the set of scripts that are valid for the current user, ignoring those
+  # that are hidden based on the user's permission.
+  # @param [User] user
+  # @return [AssignableInfo[]]
+  def self.valid_scripts(user)
+    with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+    cache_key = "valid_scripts/#{I18n.locale}-#{with_hidden ? 'all' : 'valid'}"
+    Rails.cache.fetch(cache_key) do
+      Script.
+          all.
+          select {|script| with_hidden || !script.hidden}.
+          map(&:assignable_info)
+    end
+  end
+
+  # Get the assignable info for this script, then update translations
+  # @return AssignableInfo
+  def assignable_info
+    info = ScriptConstants.assignable_info(self)
+    # ScriptConstants gives us untranslated versions of our course name, and the
+    # category it's in. Set translated strings here
+    info[:name] = localized_title
+    info[:name] += ' *' if hidden
+    info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
+    info
+  end
+
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level

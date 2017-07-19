@@ -40,4 +40,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
     render json: section.summarize
   end
+
+  # @param script_id [String] id of the course we're checking the validity of
+  # @return [Course|nil] The valid course if we have one, otherwise nil
+  def valid_course_id?(course_id)
+    Course.valid_courses.find {|course| course[:id] == course_id.to_i}
+  end
+
+  # @param script_id [String] id of the script we're checking the validity of
+  # @return [Script|nil] The valid script if we have one, otherwise nil
+  def valid_script_id?(script_id)
+    Script.valid_scripts(current_user).find {|script| script[:id] == script_id.to_i}
+  end
 end

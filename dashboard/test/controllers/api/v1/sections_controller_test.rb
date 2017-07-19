@@ -24,6 +24,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @course = create(:course)
     @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
+
+    @script = create(:script)
+
+    @csp_course = create(:course, name: 'csp')
+    @csp_script = create(:script, name: 'csp1')
+    create(:course_script, course: @csp_course, script: @csp_script, position: 1)
   end
 
   test 'returns all sections belonging to teacher' do
@@ -111,34 +117,21 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     post :create
     assert_response :success
-    created_section = JSON.parse(@response.body).with_indifferent_access
-    refute_nil created_section[:id]
-    assert_equal(
-      {
-        id: created_section[:id],
-        name: "New Section",
-        teacherName: @teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{created_section[:id]}/progress",
-        assignedTitle: "",
-        linkToAssigned: "//test.code.org/teacher-dashboard#/sections/",
-        numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{created_section[:id]}/manage",
-        code: created_section[:code],
-        stage_extras: false,
-        pairing_allowed: true,
-        login_type: "",
-        course_id:  nil,
-        script: {'id': nil, 'name': nil},
-        studentNames: [],
-      }.with_indifferent_access,
-      created_section
-    )
+    refute_nil returned_section
   end
 
-  test 'current user is the owner of the created section' do
+  test 'creating a section returns the section summary' do
     sign_in @teacher
     post :create
-    assert_response :success
+
+    # See section_test.rb for tests covering the shape of the section summary.
+    assert_equal returned_section.summarize.with_indifferent_access,
+      returned_json.with_indifferent_access
+  end
+
+  test 'current user owns the created section' do
+    sign_in @teacher
+    post :create
 
     assert_equal @teacher.name, returned_json['teacherName']
     assert_equal @teacher, returned_section.user
@@ -157,7 +150,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'can name section during creation' do
     sign_in @teacher
     post :create, params: {name: 'Glulx'}
-    assert_response :success
 
     assert_equal 'Glulx', returned_json['name']
     assert_equal 'Glulx', returned_section.name
@@ -166,7 +158,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'default name is New Section' do
     sign_in @teacher
     post :create, params: {name: ''}
-    assert_response :success
 
     assert_equal 'New Section', returned_json['name']
     assert_equal 'New Section', returned_section.name
@@ -176,7 +167,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     test "can set login_type to #{desired_type} during creation" do
       sign_in @teacher
       post :create, params: {login_type: desired_type}
-      assert_response :success
 
       assert_equal desired_type, returned_json['login_type']
       assert_equal desired_type, returned_section.login_type
@@ -207,8 +197,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     test "can set grade to #{desired_grade} during creation" do
       sign_in @teacher
       post :create, params: {grade: desired_grade}
-      assert_response :success
-
       assert_equal desired_grade, returned_section.grade
     end
   end
@@ -216,8 +204,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "default grade is nil" do
     sign_in @teacher
     post :create, params: {grade: nil}
-    assert_response :success
-
     assert_nil returned_section.grade
   end
 
@@ -252,7 +238,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     [true, false].each do |desired_value|
       post :create, params: {stage_extras: desired_value}
-      assert_response :success
 
       assert_equal desired_value, returned_json['stage_extras']
       assert_equal desired_value, returned_section.stage_extras
@@ -262,7 +247,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'default stage_extras value is FALSE' do
     sign_in @teacher
     post :create
-    assert_response :success
 
     assert_equal false, returned_json['stage_extras']
     assert_equal false, returned_section.stage_extras
@@ -282,7 +266,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     [true, false].each do |desired_value|
       post :create, params: {pairing_allowed: desired_value}
-      assert_response :success
 
       assert_equal desired_value, returned_json['pairing_allowed']
       assert_equal desired_value, returned_section.pairing_allowed
@@ -292,7 +275,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'default pairing_allowed value is TRUE' do
     sign_in @teacher
     post :create
-    assert_response :success
 
     assert_equal true, returned_json['pairing_allowed']
     assert_equal true, returned_section.pairing_allowed
@@ -308,9 +290,62 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal true, returned_section.pairing_allowed
   end
 
+  test 'can create with a course id but no script id' do
+    sign_in @teacher
+    post :create, params: {course_id: @csp_course.id}
+
+    assert_equal @csp_course.id, returned_json['course_id']
+    assert_equal @csp_course, returned_section.course
+    assert_nil returned_json['script']['id']
+    assert_nil returned_section.script
+  end
+
+  test 'cannot assign an invalid course id' do
+    sign_in @teacher
+    post :create, params: {course_id: @course.id} # Not CSP or CSD
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_json['course_id']
+    assert_nil returned_section.course
+  end
+
+  test 'can create with a script id but no course id' do
+    sign_in @teacher
+    post :create, params: {script: {id: @script.id}}
+
+    assert_equal @script.id, returned_json['script']['id']
+    assert_equal @script, returned_section.script
+    assert_nil returned_json['course_id']
+    assert_nil returned_section.course
+  end
+
+  test 'cannot assign an invalid script id' do
+    sign_in @teacher
+    post :create, params: {script: {id: 'MALYON'}} # Script IDs are numeric
+    assert_response :success
+    # TODO: Better to fail here?
+
+    assert_nil returned_json['script']['id']
+    assert_nil returned_section.script
+    assert_nil returned_json['course_id']
+    assert_nil returned_section.course
+  end
+
+  test 'can create with both a course id and a script id' do
+    sign_in @teacher
+    post :create, params: {
+      course_id: @csp_course.id,
+      script: {id: @csp_script.id},
+    }
+
+    assert_equal @csp_course.id, returned_json['course_id']
+    assert_equal @csp_course, returned_section.course
+    assert_equal @csp_script.id, returned_json['script']['id']
+    assert_equal @csp_script, returned_section.script
+  end
+
   # TODO
-  # script_id tests
-  # course_id tests
   # Test assigning script to user when creating section with script.
 
   # Parsed JSON returned after the last request, for easy assertions.
