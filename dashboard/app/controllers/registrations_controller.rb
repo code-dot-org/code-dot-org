@@ -88,7 +88,6 @@ class RegistrationsController < Devise::RegistrationsController
         end
         format.any {head :no_content}
       else
-        puts 'Error: ' + user.errors.to_json
         format.html {render "edit", formats: [:html]}
         format.any {head :unprocessable_entity}
       end
