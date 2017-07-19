@@ -27,7 +27,6 @@ const styles = {
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE,
-    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     fontSize: 12,
@@ -105,21 +104,12 @@ const NewProgressBubble = React.createClass({
     const disabled = this.props.disabled || levelIcon === 'lock';
 
     if (level.isUnplugged && !smallBubble) {
-      // TODO: rationalize with levelPillNew
       return (
-        <div
-          style={{
-            display: 'inline-block',
-            paddingTop: 6,
-            paddingBottom: 6,
-          }}
-        >
-          <ProgressPill
-            levels={[level]}
-            text={i18n.unpluggedActivity()}
-            fontSize={12}
-          />
-        </div>
+        <ProgressPill
+          levels={[level]}
+          text={i18n.unpluggedActivity()}
+          fontSize={12}
+        />
       );
     }
 
@@ -137,6 +127,10 @@ const NewProgressBubble = React.createClass({
     }
 
     const tooltipId = _.uniqueId();
+    let tooltipText = levelName || '';
+    if (number) {
+      tooltipText = `${number}. ${tooltipText}`;
+    }
 
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
@@ -144,8 +138,8 @@ const NewProgressBubble = React.createClass({
       <div
         style={{
           display: 'inline-block',
-          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) +
-            2 * styles.main.borderWidth + 2 * 2,
+          // two pixles on each side for border, 2 pixels on each side for margin
+          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
           textAlign: 'center',
         }}
       >
@@ -165,7 +159,10 @@ const NewProgressBubble = React.createClass({
               <span
                 style={smallBubble ? styles.smallBubbleSpan : undefined}
               >
-                {number}
+                {/*Text will not show up for smallBubble, but it's presence
+                  causes bubble to be properly aligned vertically
+                  */}
+                {smallBubble ? '-' : number}
               </span>
             )}
             <ReactTooltip
@@ -176,7 +173,7 @@ const NewProgressBubble = React.createClass({
             >
               <div style={styles.tooltip}>
                 <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-                {`${number}. ${levelName || ''}`}
+                {tooltipText}
               </div>
             </ReactTooltip>
           </div>

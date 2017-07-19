@@ -24,13 +24,6 @@ const styles = {
     paddingBottom: 5,
     minWidth: 60,
   },
-  // Override some styles when progressBubbles is enabled so that it has a
-  // similar style to bubbles, and lines up properly
-  levelPillNew: {
-    borderWidth: 2,
-    paddingTop: 3,
-    paddingBottom: 3,
-  },
   text: {
     display: 'inline-block',
     fontFamily: '"Gotham 5r", sans-serif',
@@ -71,7 +64,6 @@ const ProgressPill = React.createClass({
     if (experiments.isEnabled('progressBubbles')) {
       style = {
         ...style,
-        ...styles.levelPillNew,
         ...(!multiLevelStep && levelProgressStyle(levels[0], false))
       };
     }
