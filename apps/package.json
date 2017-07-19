@@ -83,7 +83,7 @@
     "ejs": "0.8.4",
     "ejs-compiled-loader": "2.1.1",
     "ejs-loader": "0.2.1",
-    "enzyme": "2.4.1",
+    "enzyme": "^2.9.1",
     "es6-promise": "3.0.2",
     "eslint": "^3.19.0",
     "eslint-plugin-mocha": "^4.9.0",
