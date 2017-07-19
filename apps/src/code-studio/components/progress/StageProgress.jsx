@@ -32,8 +32,11 @@ const StageProgress = React.createClass({
     stageExtrasEnabled: PropTypes.bool,
 
     // redux provided
-    levels: experiments.isEnabled('progressBubbles') ?
-      PropTypes.arrayOf(levelType).isRequired : stageProgressShape.isRequired,
+    levels: (...args) => {
+      const fn = experiments.isEnabled('progressBubbles') ?
+        PropTypes.arrayOf(levelType).isRequired : stageProgressShape.isRequired;
+      return fn(...args);
+    },
     stageId: PropTypes.number.isRequired,
   },
 
