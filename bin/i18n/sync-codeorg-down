@@ -4,4 +4,4 @@
 # project to i18n/locales.
 # https://crowdin.com/project/codeorg
 
-exec "crowdin-cli download"
+exec "crowdin --identity crowdin_credentials.yml download"

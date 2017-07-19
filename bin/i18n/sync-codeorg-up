@@ -4,4 +4,4 @@
 # to Code.org project on Crowdin for translation.
 # https://crowdin.com/project/codeorg
 
-exec "crowdin-cli upload sources"
+exec "crowdin --identity crowdin_credentials.yml upload sources"
