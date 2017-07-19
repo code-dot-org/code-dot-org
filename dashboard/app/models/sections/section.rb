@@ -199,7 +199,7 @@ class Section < ActiveRecord::Base
       loginType: login_type,
       courseId: course_id,
       scriptId: script_id,
-      studentNames: students.size,
+      studentCount: students.size,
     }
   end
 
