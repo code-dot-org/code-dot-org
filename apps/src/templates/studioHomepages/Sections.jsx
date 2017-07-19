@@ -27,7 +27,7 @@ const Sections = React.createClass({
     const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
     const enrolledInASection = sections.length === 0 ? false : true;
-    const enrollmentDescription = !isTeacher ? i18n.enrollmentDescription() : "";
+    const enrollmentDescription = isTeacher ? "" : i18n.enrollmentDescription();
 
     return (
       <div>

@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from "@cdo/locale";
+import styleConstants from '../../styleConstants';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 
 const styles = {
@@ -10,7 +11,7 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.border_gray,
     height: 72,
-    width: 970,
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginTop: 20,
     marginBottom: 20
@@ -91,12 +92,7 @@ const JoinSection = React.createClass({
     this.setState(this.getInitialState());
 
     $.post('/followers/create_async', {section_code: sectionCode})
-      .done(function (data) {
-        this.props.updateSections(data.sections);
-      }.bind(this))
-      .fail(function () {
-      }.bind(this)
-    );
+      .done(data => this.props.updateSections(data.sections));
   },
 
   render() {

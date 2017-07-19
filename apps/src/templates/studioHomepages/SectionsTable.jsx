@@ -99,13 +99,7 @@ const SectionsTable = React.createClass({
 
   onLeave(sectionCode) {
     $.post('/followers/remove_async', {section_code: sectionCode})
-      .done(function (data) {
-        console.log(data.sections);
-        this.props.updateSections(data.sections);
-      }.bind(this))
-      .fail(function () {
-      }.bind(this)
-    );
+      .done(data => this.props.updateSections(data.sections));
   },
 
   render() {
