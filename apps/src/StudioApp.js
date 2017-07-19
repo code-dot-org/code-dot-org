@@ -2774,6 +2774,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isDroplet: !!level.editCode,
     isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
+    isChallengeLevel: !!config.isChallengeLevel,
     isEmbedView: !!config.embed,
     isResponsive: this.isResponsiveFromConfig(config),
     isShareView: !!config.share,
