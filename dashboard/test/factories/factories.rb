@@ -85,7 +85,7 @@ FactoryGirl.define do
         end
       end
       factory :workshop_organizer do
-        name 'Workshop Organizer Person'
+        sequence(:name) {|n| "Workshop Organizer Person #{n}"}
         sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
