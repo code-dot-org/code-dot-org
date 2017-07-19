@@ -54,7 +54,7 @@ content-type: text/ng-template
       %td
         .stage{"ng-repeat" => "stage in progress.script.stages", 'ng-style' => "{width: (99.9 * stage.length / progress.script.levels_count) + '%'}", title: '{{stage.title}}', 'ng-click' => 'scrollToStage($event)'}
           {{stage.title}}
-    %tr.studentrow{"ng-repeat" => "student in section.students | orderBy:order"}
+    %tr.studentrow{"ng-repeat" => "student in students | orderBy:order"}
       %td.studentname
         %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}/script/{{script_id}}", title: '{{student.name}}'} {{student.name}}
       %td.studentprogress{'ng-hide' => 'progressLoaded'} &nbsp;
