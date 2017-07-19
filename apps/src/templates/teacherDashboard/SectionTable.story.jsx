@@ -9,7 +9,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const sections = [
+const serverSections = [
   {
     id: 11,
     location: "/v2/sections/11",
