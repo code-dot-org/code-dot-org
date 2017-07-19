@@ -110,31 +110,13 @@ module ProjectsList
     # storage_apps and user tables.
     def get_published_project_and_user_data(project_and_user)
       channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:channel_id])
-      get_published_project_data(project_and_user, channel_id).merge(
+      StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {
           # For privacy reasons, include only the first initial of the student's name.
           studentName: UserHelpers.initial(project_and_user[:name]),
           studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
         }
       ).with_indifferent_access
-    end
-
-    # extracts published project data from a project (aka storage_apps table row).
-    def get_published_project_data(project, channel_id)
-      project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      {
-        channel: channel_id,
-        name: project_value['name'],
-        thumbnailUrl: make_cacheable(project_value['thumbnailUrl']),
-        # Note that we are using the new :project_type field rather than extracting
-        # it from :value. :project_type might not be present in unpublished projects.
-        type: project[:project_type],
-        publishedAt: project[:published_at],
-      }.with_indifferent_access
-    end
-
-    def make_cacheable(url)
-      url.sub('/v3/files/', '/v3/files-public/') if url
     end
   end
 end
