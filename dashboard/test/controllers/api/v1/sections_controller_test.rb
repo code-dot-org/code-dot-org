@@ -73,6 +73,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "teacher cannot view another teacher's section detail" do
+    sign_in create :teacher
+    get :show, params: {id: @word_section.id}
+    assert_response :forbidden
+  end
+
   test 'summarizes section details' do
     sign_in @teacher
 
