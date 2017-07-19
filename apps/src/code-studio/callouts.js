@@ -25,11 +25,7 @@ var clientState = require('./clientState');
  * Given a set of callout definitions, installs them on the page
  * @param {CalloutDefinition[]} callouts
  */
-module.exports = function createCallouts(callouts) {
-  if (!callouts) {
-    return;
-  }
-
+export default function createCallouts(callouts) {
   if (!callouts || callouts.length === 0) {
     return;
   }
@@ -71,9 +67,36 @@ module.exports = function createCallouts(callouts) {
     showHideDropletGutterCallouts();
   });
 
-  var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
 
   $.fn.qtip.zindex = 500;
+  addCallouts(callouts);
+
+  // Insert a hashchange handler to detect triggercallout= hashes and fire
+  // appropriate events to open the callout
+  function detectTriggerCalloutOnHash(event) {
+    var loc = window.location;
+    var splitHash = loc.hash.split('#triggercallout=');
+    if (splitHash.length > 1) {
+      var eventName = splitHash[1];
+      var eventType = (event && event.type) || 'hashinit';
+      $(window).trigger(eventName, [eventType]);
+      // NOTE: normally we go back to avoid populating history, but not during init
+      if (window.history.go && eventType === 'hashchange') {
+        history.go(-1);
+      } else {
+        loc.hash = '';
+      }
+    }
+  }
+
+  // Call once during init to detect the hash from the initial page load
+  detectTriggerCalloutOnHash();
+  // Call again when the hash changes:
+  $(window).on('hashchange', detectTriggerCalloutOnHash);
+}
+
+export function addCallouts(callouts) {
+  var showCalloutsMode = document.URL.indexOf('show_callouts=1') !== -1;
   callouts.forEach(function (callout) {
     var selector = callout.element_id; // jquery selector.
     if ($(selector).length === 0 && !callout.on) {
@@ -155,7 +178,8 @@ module.exports = function createCallouts(callouts) {
         // place inside the 'prepareforcallout' event can complete first
         setTimeout(function () {
           if ($(config.codeStudio.selector).length > 0) {
-            if (action === 'hashchange' || action === 'hashinit' || !callout.seen) {
+            if (action === 'hashchange' || action === 'hashinit' || !callout.seen ||
+                config.codeStudio.canReappear) {
               $(config.codeStudio.selector).qtip(config).qtip('show');
             }
             callout.seen = true;
@@ -166,30 +190,7 @@ module.exports = function createCallouts(callouts) {
       $(selector).qtip(config).qtip('show');
     }
   });
-
-  // Insert a hashchange handler to detect triggercallout= hashes and fire
-  // appropriate events to open the callout
-  function detectTriggerCalloutOnHash(event) {
-    var loc = window.location;
-    var splitHash = loc.hash.split('#triggercallout=');
-    if (splitHash.length > 1) {
-      var eventName = splitHash[1];
-      var eventType = (event && event.type) || 'hashinit';
-      $(window).trigger(eventName, [eventType]);
-      // NOTE: normally we go back to avoid populating history, but not during init
-      if (window.history.go && eventType === 'hashchange') {
-        history.go(-1);
-      } else {
-        loc.hash = '';
-      }
-    }
-  }
-
-  // Call once during init to detect the hash from the initial page load
-  detectTriggerCalloutOnHash();
-  // Call again when the hash changes:
-  $(window).on('hashchange', detectTriggerCalloutOnHash);
-};
+}
 
 /**
  * Snap all callouts to their target positions.  Keeps them in
