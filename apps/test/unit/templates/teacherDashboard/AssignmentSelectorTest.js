@@ -109,9 +109,9 @@ describe('AssignmentSelector', () => {
     );
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('option').length, 4);
-    // ends up before flappy, because it's in an earlier category
-    assert.equal(wrapper.find('option').at(2).text(), 'Unit 1: Problem Solving');
-    assert.equal(wrapper.find('option').at(3).text(), 'Make a Flappy game');
+    // ends up after flappy, because it's in a later category
+    assert.equal(wrapper.find('option').at(2).text(), 'Make a Flappy game');
+    assert.equal(wrapper.find('option').at(3).text(), 'Unit 1: Problem Solving');
   });
 
   it('shows two dropdowns if section has a course selected', () => {
