@@ -33,27 +33,27 @@ Feature: Using the teacher dashboard
 
     When I click selector "a:contains('Section: SectionName')" once I see it
     And I click selector "#learn-tabs a:contains('Stats')" once I see it
-    And I wait until element "#stats-tab td:nth(0)" is visible
-    And element "#stats-tab td:nth(0)" contains text "Sally"
-    And element "#stats-tab td:nth(2)" contains text "2"
+    And I wait until element "#uitest-stats-tab td:nth(0)" is visible
+    And element "#uitest-stats-tab td:nth(0)" contains text "Sally"
+    And element "#uitest-stats-tab td:nth(2)" contains text "2"
 
     When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
-    And I wait until element "#course-dropdown" is visible
-    And I select the "allthethings *" option in dropdown "course-dropdown"
-    And I wait until element "#responses-tab td:nth(0)" is visible
-    And element "#responses-tab td:nth(0)" contains text "Sally"
-    And element "#responses-tab td:nth(4)" contains text "hello world"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "allthethings *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#uitest-responses-tab td:nth(0)" is visible
+    And element "#uitest-responses-tab td:nth(0)" contains text "Sally"
+    And element "#uitest-responses-tab td:nth(4)" contains text "hello world"
 
     When I click selector "#learn-tabs a:contains('Manage Students')" once I see it
-    And I wait until element "#manage-tab" is visible
+    And I wait until element "#uitest-manage-tab" is visible
 
     When I click selector "#learn-tabs a:contains('Assessments/Surveys')" once I see it
-    And I wait until element "#course-dropdown" is visible
-    And I select the "allthethings *" option in dropdown "course-dropdown"
-    And I wait until element "#assessments-tab td:nth(0)" is visible
-    And element "#assessments-tab td:nth(0)" contains text "Sally"
-    And element "#assessments-tab td:nth(1)" contains text "Lesson 33: Single page assessment"
-    And element "#assessments-tab td:nth(4)" contains text "1"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "allthethings *" option in dropdown "uitest-course-dropdown"
+    And I wait until element "#uitest-assessments-tab td:nth(0)" is visible
+    And element "#uitest-assessments-tab td:nth(0)" contains text "Sally"
+    And element "#uitest-assessments-tab td:nth(1)" contains text "Lesson 33: Single page assessment"
+    And element "#uitest-assessments-tab td:nth(4)" contains text "1"
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
