@@ -345,8 +345,45 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal @csp_script, returned_section.script
   end
 
-  # TODO
-  # Test assigning script to user when creating section with script.
+  test 'creating a section with a script assigns the script to the creating user' do
+    teacher = create :teacher
+    sign_in teacher
+    teacher.assign_script @csp_script
+    assert_includes teacher.scripts, @csp_script
+    refute_includes teacher.scripts, @script
+
+    post :create, params: {script: {id: @script.id}}
+    assert_includes teacher.scripts, @csp_script
+    assert_includes teacher.scripts, @script
+  end
+
+  test 'creating a section with a script does not assign script if it was already assigned' do
+    teacher = create :teacher
+    sign_in teacher
+    teacher.assign_script @script
+    original_user_script = teacher.user_scripts.first
+    assert_equal 1, teacher.scripts.size
+
+    post :create, params: {script: {id: @script.id}}
+    assert_equal 1, teacher.scripts.size
+    assert_equal original_user_script, teacher.user_scripts.first
+  end
+
+  test 'creating a section with a course does not assign a script' do
+    sign_in @teacher
+    assert_equal 0, @teacher.scripts.size
+
+    post :create, params: {course_id: @csp_course.id}
+    assert_equal 0, @teacher.scripts.size
+  end
+
+  test 'creating a section with no course or script does not assign a script' do
+    sign_in @teacher
+    assert_equal 0, @teacher.scripts.size
+
+    post :create
+    assert_equal 0, @teacher.scripts.size
+  end
 
   # Parsed JSON returned after the last request, for easy assertions.
   # Returned hash has string keys
