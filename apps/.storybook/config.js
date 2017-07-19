@@ -4,6 +4,7 @@ import infoAddon from '@kadira/react-storybook-addon-info';
 import Node from '@kadira/react-storybook-addon-info/dist/components/Node';
 import {Pre} from '@kadira/react-storybook-addon-info/dist/components/markdown/code';
 import addStoriesGroup from 'react-storybook-addon-add-stories-group';
+import experiments from '@cdo/apps/util/experiments';
 
 import '../style/common.scss';
 import '../style/netsim/style.scss';
@@ -97,44 +98,58 @@ Centered.propTypes = {
 };
 
 storybook.setAddon({
+  withExperiments(...experimentList) {
+    this.experiments = experimentList;
+  }
+});
+
+storybook.setAddon({
   addStoryTable(items) {
     this.add(
       'Overview',
-      () => (
-        <div>
-          <table style={styles.storyTable.table}>
-            <thead>
-              <tr>
-                <th>Version</th>
-                <th>Rendered</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.map((item, index) => (
-                 <tr style={styles.storyTable.row} key={index}>
-                   <td style={styles.storyTable.cell}>
-                     <strong>
-                       {item.name}
-                     </strong>
-                     <p>
-                       {item.description || ''}
-                     </p>
-                     <Pre>
-                       <Node depth={0} node={item.story()}/>
-                     </Pre>
-                   </td>
-                   <td
-                     className={item.storyCellClass}
-                     style={styles.storyTable.cell}
-                   >
-                     {item.story()}
-                   </td>
-                 </tr>
-               ))}
-            </tbody>
-          </table>
-        </div>
-      )
+      () => {
+        // Make sure that the only experiments enabled are those that we explicitly
+        // added via withExperiments
+        localStorage.removeItem('experimentsList');
+        if (this.experiments) {
+          this.experiments.forEach(key => experiments.setEnabled(key, true));
+        }
+        return (
+          <div>
+            <table style={styles.storyTable.table}>
+              <thead>
+                <tr>
+                  <th>Version</th>
+                  <th>Rendered</th>
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((item, index) => (
+                   <tr style={styles.storyTable.row} key={index}>
+                     <td style={styles.storyTable.cell}>
+                       <strong>
+                         {item.name}
+                       </strong>
+                       <p>
+                         {item.description || ''}
+                       </p>
+                       <Pre>
+                         <Node depth={0} node={item.story()}/>
+                       </Pre>
+                     </td>
+                     <td
+                       className={item.storyCellClass}
+                       style={styles.storyTable.cell}
+                     >
+                       {item.story()}
+                     </td>
+                   </tr>
+                 ))}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
     );
     items.forEach(item => this.add(item.name, item.story));
   }
