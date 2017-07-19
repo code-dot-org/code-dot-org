@@ -73,6 +73,7 @@ module UserHelpers
     age_cutoff ? "#{age_cutoff}+" : nil
   end
 
+  # Upcase and return the first non-whitespace character of the user's name.
   def self.initial(name)
     return nil if name.blank?
     return name.strip[0].upcase
