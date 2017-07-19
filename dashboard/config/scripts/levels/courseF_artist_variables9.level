@@ -36,10 +36,15 @@
     "discard_background": "false",
     "instructions_important": "false",
     "project_template_level_name": "courseF_artist_variables_template",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"For this puzzle, all you need to do is change how many times the loop repeats.\",\"hint_id\":\"courseF_artist_variables9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e0a2c149f388d7b5dbb40726b112d74d/courseF_artist_variables9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure the blocks that increment `length` are within your loop so the lines keep getting longer.\",\"hint_id\":\"courseF_artist_variables9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fa4b764cb997676473e07c1e6f93fedd/courseF_artist_variables9.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 16:09:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

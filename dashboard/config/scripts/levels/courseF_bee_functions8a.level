@@ -15,7 +15,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,1,1,0],[0,0,0,1,0,0,1,0],[0,0,0,1,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,7,0,0,7,0],[0,0,0,-7,0,0,-7,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "10",
+    "ideal": "9",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
@@ -38,11 +38,12 @@
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1,\"value\":5,\"range\":6,\"featureType\":2,\"cloudType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "markdown_instructions": "Underneath this cloud, there might be a flower with an unknown amount of nectar, or a honeycomb with an unknown amount of honey.  \r\n\r\nCan you write a program that can handle either?",
     "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-31 19:07:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-12 17:57:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 19:07:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-12 17:57:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 23:12:55 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 23:13:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -149,6 +150,30 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
+        <block type="procedures_defnoreturn" editable="false">
+          <mutation/>
+          <title name="NAME">get nectar make honey</title>
+          <statement name="STACK">
+            <block type="bee_whileNectarAmount">
+              <title name="ARG1">nectarRemaining</title>
+              <title name="OP">&gt;</title>
+              <title name="ARG2">0</title>
+              <statement name="DO">
+                <block type="maze_nectar"/>
+              </statement>
+              <next>
+                <block type="bee_whileNectarAmount">
+                  <title name="ARG1">honeyAvailable</title>
+                  <title name="OP">&gt;</title>
+                  <title name="ARG2">0</title>
+                  <statement name="DO">
+                    <block type="maze_honey"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
         <block type="when_run" deletable="false" movable="false">
           <next>
             <block type="maze_move">
@@ -165,35 +190,6 @@
               </next>
             </block>
           </next>
-        </block>
-        <block type="procedures_defnoreturn" editable="false">
-          <mutation/>
-          <title name="NAME">get nectar make honey</title>
-          <statement name="STACK">
-            <block type="bee_ifElseFlower">
-              <title name="LOC">atFlower</title>
-              <statement name="DO">
-                <block type="bee_whileNectarAmount">
-                  <title name="ARG1">nectarRemaining</title>
-                  <title name="OP">&gt;</title>
-                  <title name="ARG2">0</title>
-                  <statement name="DO">
-                    <block type="maze_nectar"/>
-                  </statement>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="bee_whileNectarAmount">
-                  <title name="ARG1">honeyAvailable</title>
-                  <title name="OP">&gt;</title>
-                  <title name="ARG2">0</title>
-                  <statement name="DO">
-                    <block type="maze_honey"/>
-                  </statement>
-                </block>
-              </statement>
-            </block>
-          </statement>
         </block>
       </xml>
     </solution_blocks>

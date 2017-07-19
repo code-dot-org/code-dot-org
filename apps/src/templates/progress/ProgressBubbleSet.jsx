@@ -77,8 +77,7 @@ const ProgressBubbleSet = React.createClass({
             >
               {level.isUnplugged &&
                 <ProgressPill
-                  url={level.url}
-                  status={level.status}
+                  levels={[level]}
                   text={i18n.unpluggedActivity()}
                   fontSize={12}
                 />

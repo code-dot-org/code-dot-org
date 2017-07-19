@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import _ from 'lodash';
 import reducer, {
   setStudioUrl,
   setValidLoginTypes,
@@ -14,10 +13,6 @@ import reducer, {
   assignmentPaths,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-// Our actual student object are much more complex than this, but really all we
-// care about is how many there are.
-const fakeStudents = num => _.range(num).map(x => 'Student' + x);
-
 const sections = [
   {
     id: 11,
@@ -30,7 +25,7 @@ const sections = [
     pairingAllowed: true,
     scriptId: null,
     courseId: 29,
-    students: fakeStudents(10)
+    studentCount: 10,
   },
   {
     id: 12,
@@ -43,7 +38,7 @@ const sections = [
     pairingAllowed: true,
     scriptId: 36,
     courseId: null,
-    students: fakeStudents(1)
+    studentCount: 1,
   },
   {
     id: 307,
@@ -56,7 +51,7 @@ const sections = [
     pairingAllowed: false,
     scriptId: 112,
     courseId: 29,
-    students: []
+    studentCount: 0,
   }
 ];
 
@@ -250,7 +245,7 @@ describe('teacherSectionsRedux', () => {
         pairingAllowed: true,
         scriptId: null,
         courseId: 29,
-        students: [],
+        studentCount: 0,
       }], true);
 
       const state = reducer(startState, setSections(sections));
@@ -286,7 +281,7 @@ describe('teacherSectionsRedux', () => {
       pairingAllowed: true,
       scriptId: null,
       courseId: 29,
-      students: fakeStudents(10)
+      studentCount: 10,
     };
 
     it('does not change our list of section ids when updating a persisted section', () => {
@@ -305,13 +300,7 @@ describe('teacherSectionsRedux', () => {
 
       // Other fields should remain unchanged
       Object.keys(stateWithSections.sections[sectionId]).forEach(field => {
-        if (field === 'loginType') {
-          return;
-        }
-        if (field === 'studentNames') {
-          assert.deepEqual(state.sections[sectionId][field],
-            stateWithSections.sections[sectionId][field]);
-        } else {
+        if (field !== 'loginType') {
           assert.strictEqual(state.sections[sectionId][field],
             stateWithSections.sections[sectionId][field]);
         }
@@ -365,7 +354,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        studentNames: [],
+        studentCount: 0,
         code: '',
         courseId: null,
         scriptId: null,
@@ -383,7 +372,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        studentNames: [],
+        studentCount: 0,
         code: '',
         courseId: 29,
         scriptId: null,

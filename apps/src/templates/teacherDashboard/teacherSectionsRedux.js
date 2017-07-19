@@ -185,7 +185,7 @@ export default function teacherSections(state=initialState, action) {
           grade: '',
           stageExtras: false,
           pairingAllowed: true,
-          studentNames: [],
+          studentCount: 0,
           code: '',
           courseId: action.courseId || null,
           scriptId: null
