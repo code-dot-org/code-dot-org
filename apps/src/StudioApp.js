@@ -984,7 +984,7 @@ StudioApp.prototype.onReportComplete = function (response) {
 
   // Track GA events
   if (response.new_level_completed) {
-    trackEvent('Puzzle', 'Completed', response.level_path, response.level_attempts);
+    trackEvent('Puzzle', 'Completed', response.level_path);
   }
 
   if (response.share_failure) {
@@ -2796,6 +2796,7 @@ StudioApp.prototype.showRateLimitAlert = function () {
 
 let instance;
 
+/** @return StudioApp */
 export function singleton() {
   if (!instance) {
     instance = new StudioApp();
