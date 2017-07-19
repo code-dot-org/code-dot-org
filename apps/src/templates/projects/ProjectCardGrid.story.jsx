@@ -25,11 +25,14 @@ const defaultProject = {
   currentGallery: "public"
 };
 
+let nextChannelId = 0;
+
 function generateFakeProject(overrideData) {
   return {
     ...defaultProject,
     projectData: {
       ...defaultProject.projectData,
+      channel: `${defaultProject.projectData.channel}_${nextChannelId++}`,
       ...overrideData
     }
   };

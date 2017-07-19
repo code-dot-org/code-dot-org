@@ -356,6 +356,7 @@ const levelWithStatus = (state, level) => {
     url: level.url,
     name: level.name,
     progression: level.progression,
+    kind: level.kind,
     icon: level.icon,
     isUnplugged: level.kind === LevelKind.unplugged,
     levelNumber: level.kind === LevelKind.unplugged ? undefined : level.title,
