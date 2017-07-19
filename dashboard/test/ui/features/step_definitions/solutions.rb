@@ -32,6 +32,7 @@ Then /^I submit the assessment on "([^"]*)"$/ do |puzzle_url|
     And I am on "#{puzzle_url}?noautoplay=true"
     And I click selector ".answers:nth(0) .answerbutton[index=1]" once I see it
     And I click selector ".submitButton" once I see it
-    And I click selector "#ok-button" to load a new page
+    And I wait until element ".modal" is visible
+    And I click selector ".modal #ok-button" to load a new page
   }
 end
