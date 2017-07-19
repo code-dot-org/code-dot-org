@@ -25,6 +25,7 @@
 
 class Flappy < Blockly
   serialized_attrs %w(
+    app_specific_fail_error
     success_condition
     failure_condition
     default_flap
