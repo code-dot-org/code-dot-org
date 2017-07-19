@@ -198,7 +198,7 @@ const SectionsTable = React.createClass({
                   <ProgressButton
                     style={{marginLeft: 5}}
                     text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(this, section.sectionCode)}
+                    onClick={this.onLeave.bind(this, section.code)}
                     color={ProgressButton.ButtonColor.gray}
                   />
                 </td>
