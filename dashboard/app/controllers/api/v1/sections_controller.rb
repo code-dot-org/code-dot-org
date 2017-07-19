@@ -33,6 +33,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       }
     )
 
+    if params[:script] && valid_script_id?(params[:script][:id])
+      # How would I do this in Dashboard?
+      # DashboardUserScript.assign_script_to_user(params[:script][:id].to_i, current_user.id)
+    end
+
     render json: section.summarize
   end
 end
