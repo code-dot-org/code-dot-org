@@ -13,8 +13,7 @@
     "skip_instructions_popup": "false",
     "free_play": "false",
     "slider_speed": "1",
-    "instructions": "Recreate this drawing using 13 blocks or fewer.",
-    "ideal": "13",
+    "instructions": "Recreate this drawing.",
     "disable_param_editing": "true",
     "embed": "false",
     "disable_variable_editing": "false",
@@ -22,7 +21,7 @@
     "use_contract_editor": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "markdown_instructions": "Recreate this drawing using 13 blocks or fewer. Each square has a side length of **20 pixels** and there are **15 squares per row**.",
+    "markdown_instructions": "Recreate this drawing. \r\n\r\nEach square has a side length of **20 pixels** and there are **15 squares per row**.",
     "contract_highlight": "false",
     "contract_collapse": "false",
     "examples_highlight": "false",
@@ -37,54 +36,56 @@
     "discard_background": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-17 20:52:42 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"ideal\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:55:29 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:57:22 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="draw_move_by_constant">
-          <title name="DIR">moveForward</title>
-          <title name="VALUE">20</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnRight</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="draw_turn_by_constant_dropdown">
-          <title name="DIR">turnLeft</title>
-          <title name="VALUE" config="45,60,90,120,180">90</title>
-        </block>
-        <block type="jump_by_constant">
-          <title name="DIR">jumpForward</title>
-          <title name="VALUE">300</title>
-        </block>
-        <block type="controls_repeat">
-          <title name="TIMES">???</title>
-        </block>
-        <block type="procedures_callnoreturn">
-          <mutation name="do something"/>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">do something</title>
-        </block>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_picker">
-              <title name="COLOUR">#ff0000</title>
-            </block>
-          </value>
-        </block>
-        <block type="draw_colour" inline="true">
-          <value name="COLOUR">
-            <block type="colour_random"/>
-          </value>
-        </block>
+        <category name="Actions">
+          <block type="draw_move_by_constant">
+            <title name="DIR">moveForward</title>
+            <title name="VALUE">20</title>
+          </block>
+          <block type="draw_turn_by_constant_dropdown">
+            <title name="DIR">turnRight</title>
+            <title name="VALUE" config="45,60,90,120,180">90</title>
+          </block>
+          <block type="draw_turn_by_constant_dropdown">
+            <title name="DIR">turnLeft</title>
+            <title name="VALUE" config="45,60,90,120,180">90</title>
+          </block>
+          <block type="jump_by_constant">
+            <title name="DIR">jumpForward</title>
+            <title name="VALUE">300</title>
+          </block>
+        </category>
+        <category name="Loops">
+          <block type="controls_repeat">
+            <title name="TIMES">???</title>
+          </block>
+        </category>
+        <category name="Brushes">
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="draw_colour" inline="true">
+            <value name="COLOUR">
+              <block type="colour_random"/>
+            </value>
+          </block>
+        </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>
@@ -94,34 +95,61 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
+            <block type="procedures_callnoreturn">
+              <mutation name="draw a plane of squares"/>
+            </block>
+          </next>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a square</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="draw_move_by_constant">
+                  <title name="DIR">moveForward</title>
+                  <title name="VALUE">20</title>
+                  <next>
+                    <block type="draw_turn_by_constant">
+                      <title name="DIR">turnRight</title>
+                      <title name="VALUE">90</title>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a line of squares</title>
+          <statement name="STACK">
             <block type="controls_repeat">
               <title name="TIMES">15</title>
               <statement name="DO">
-                <block type="controls_repeat">
-                  <title name="TIMES">15</title>
-                  <statement name="DO">
-                    <block type="controls_repeat">
-                      <title name="TIMES">4</title>
-                      <statement name="DO">
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">20</title>
-                          <next>
-                            <block type="draw_turn_by_constant">
-                              <title name="DIR">turnRight</title>
-                              <title name="VALUE">90</title>
-                            </block>
-                          </next>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="draw_move_by_constant">
-                          <title name="DIR">moveForward</title>
-                          <title name="VALUE">20</title>
-                        </block>
-                      </next>
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a square"/>
+                  <next>
+                    <block type="draw_move_by_constant">
+                      <title name="DIR">moveForward</title>
+                      <title name="VALUE">20</title>
                     </block>
-                  </statement>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </statement>
+        </block>
+        <block type="procedures_defnoreturn">
+          <mutation/>
+          <title name="NAME">draw a plane of squares</title>
+          <statement name="STACK">
+            <block type="controls_repeat">
+              <title name="TIMES">15</title>
+              <statement name="DO">
+                <block type="procedures_callnoreturn">
+                  <mutation name="draw a line of squares"/>
                   <next>
                     <block type="draw_move_by_constant">
                       <title name="DIR">moveBackward</title>
@@ -149,7 +177,7 @@
                 </block>
               </statement>
             </block>
-          </next>
+          </statement>
         </block>
       </xml>
     </solution_blocks>

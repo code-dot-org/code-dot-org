@@ -186,7 +186,7 @@ export default function teacherSections(state=initialState, action) {
           grade: '',
           stageExtras: false,
           pairingAllowed: true,
-          studentNames: [],
+          studentCount: 0,
           code: '',
           courseId: action.courseId || null,
           scriptId: null
@@ -226,7 +226,7 @@ export const sectionFromServerSection = serverSection => ({
   grade: serverSection.grade,
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
-  studentNames: serverSection.studentNames,
+  studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
   scriptId: serverSection.script ? serverSection.script.id : null
