@@ -5,7 +5,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   setup do
     published_applab_project = {
       storage_id: 22,
-      channel_id: 33,
+      id: 33,
       published_at: '2017-03-03T00:00:00.000-08:00',
       project_type: 'applab',
       value: {
@@ -140,6 +140,6 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   private
 
   def db_result(result)
-    stub(select_append: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
+    stub(select: stub(join: stub(join: stub(where: stub(where: stub(exclude: stub(order: stub(limit: result))))))))
   end
 end
