@@ -33,7 +33,7 @@
     "embed": "false",
     "free_play": "false",
     "ideal": "7",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The `shear` command works the same as the `destroy block` command: It will act on the square in front of your character.\",\"hint_id\":\"Overworld Shear Sheep_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cb01d5da1796e0ced31059a9de3a2003/Overworld Shear Sheep.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You will need to turn to complete this puzzle. Remember that turns are from the perspective of your character!\",\"hint_id\":\"Overworld Shear Sheep_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f063f42e7e16d20a32ac5263a0e3d01/Overworld Shear Sheep.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"Overworld Shear Sheep_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/Overworld Shear Sheep.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
@@ -50,7 +50,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 03:32:52 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 03:32:52 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:46:37 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

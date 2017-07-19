@@ -11,7 +11,7 @@ const defaultProps = {
     loginType: 'email',
     stageExtras: false,
     pairingAllowed: false,
-    studentNames: [],
+    studentCount: 0,
     code: 'asdf',
     courseId: null,
     scriptId: null,

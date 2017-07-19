@@ -33,9 +33,8 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "tts_markdown_instructions_override": "Try this one yourself from the beginning.",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
