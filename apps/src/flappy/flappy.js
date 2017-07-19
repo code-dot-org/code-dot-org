@@ -774,7 +774,7 @@ Flappy.onPuzzleComplete = function () {
   // Special case for Flappy level 1 where you have the right blocks, but you
   // don't flap to the goal.  Note: See pivotal item 66362504 for why we
   // check for both TOO_FEW_BLOCKS_FAIL and LEVEL_INCOMPLETE_FAIL here.
-  if (level.id === "1" &&
+  if (level.appSpecificFailError &&
     (Flappy.testResults === TestResults.TOO_FEW_BLOCKS_FAIL ||
      Flappy.testResults === TestResults.LEVEL_INCOMPLETE_FAIL)) {
     // Feedback message is found in level.other1StarError.

@@ -48,4 +48,8 @@ class FreeResponse < Level
   def peer_reviewable?
     try(:peer_reviewable).to_bool
   end
+
+  def icon
+    'fa-check-square-o'
+  end
 end

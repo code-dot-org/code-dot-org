@@ -11,7 +11,7 @@ content-type: text/ng-template
 
 %div{'ng-show' => 'responsesLoaded'}
   = I18n.t('dashboard_responses_view')
-  %select{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
+  %select#uitest-course-dropdown{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
 
 %br/
 
@@ -20,7 +20,7 @@ content-type: text/ng-template
 
 %div{style: "padding-left:20px", 'ng-show' => '!responses.length'}
   = I18n.t('dashboard_responses_none')
-%div{style: "padding-left:20px", 'ng-show' => 'responses.length'}
+#uitest-responses-tab{style: "padding-left:20px", 'ng-show' => 'responses.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'responses.length', "ng-form" => "allForm"}
     %colgroup
       %col{width: "200"}/

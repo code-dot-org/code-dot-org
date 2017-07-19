@@ -4,17 +4,15 @@ import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import { getIconForLevel } from './progressHelpers';
 import { levelType } from './progressTypes';
+import { levelProgressStyle, hoverStyle } from './progressStyles';
 
 /**
  * As we do another redesign of our bubbles, this module represents the new version
  * The goal is that the two are interchangeable, and once the redesign is finished
  * we can delete ProgressBubble.jsx and replace it with this.
  */
-
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
 const DIAMOND_DOT_SIZE = 22;
@@ -46,7 +44,7 @@ const styles = {
     marginTop: 7,
     marginBottom: 7,
     borderRadius: 4,
-    transform: 'rotate(45deg)',
+    transform: 'rotate(45deg)'
   },
   small: {
     width: SMALL_DOT_SIZE,
@@ -74,13 +72,6 @@ const styles = {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
   },
-  enabled: {
-    ':hover': {
-      textDecoration: 'none',
-      color: color.white,
-      backgroundColor: color.level_current
-    }
-  },
   tooltip: {
     lineHeight: DOT_SIZE + 'px',
   },
@@ -105,7 +96,6 @@ const NewProgressBubble = React.createClass({
     const { level, smallBubble } = this.props;
 
     const number = level.levelNumber;
-    const status = level.status;
     const url = level.url;
     const levelName = level.name || level.progression;
     const levelIcon = getIconForLevel(level);
@@ -114,10 +104,10 @@ const NewProgressBubble = React.createClass({
 
     const style = {
       ...styles.main,
-      ...(!disabled && styles.enabled),
+      ...(!disabled && hoverStyle),
       ...(smallBubble && styles.small),
       ...(level.isConceptLevel && (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
-      ...(BUBBLE_COLORS[disabled ? LevelStatus.not_tried : status])
+      ...levelProgressStyle(level, disabled)
     };
 
     let href = '';
@@ -165,7 +155,7 @@ const NewProgressBubble = React.createClass({
             >
               <div style={styles.tooltip}>
                 <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-                {number}. {levelName}
+                {`${number}. ${levelName || ''}`}
               </div>
             </ReactTooltip>
           </div>
