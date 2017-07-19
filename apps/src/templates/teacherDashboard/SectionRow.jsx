@@ -340,7 +340,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`} style={styles.link}>
-              {section.studentNames.length}
+              {section.studentCount}
             </a>
           }
         </td>
@@ -350,7 +350,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.studentNames.length === 0}
+              canDelete={section.studentCount === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -368,7 +368,7 @@ class SectionRow extends Component {
             />
           )}
           <PrintCertificates
-            section={section}
+            sectionId={section.id}
             assignmentName={assignNames[0]}
           />
         </td>
