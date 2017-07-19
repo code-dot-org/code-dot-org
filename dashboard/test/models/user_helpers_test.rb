@@ -121,6 +121,13 @@ class UserHelpersTest < ActiveSupport::TestCase
     assert_equal '8+', UserHelpers.age_range_from_birthday(8.years.ago.to_datetime)
     assert_equal '4+', UserHelpers.age_range_from_birthday(7.years.ago.to_datetime)
     assert_equal '4+', UserHelpers.age_range_from_birthday(5.years.ago.to_datetime)
+
+    # For some reason, 4.years.ago is interpreted as age 3 on localhost, while
+    # the test machine and CircleCI interpret it as age 4. Work around this by
+    # testing 4 years and 1 day ago, which is interpreted consistently in all
+    # environments.
+    assert_equal '4+', UserHelpers.age_range_from_birthday(4.years.ago.to_datetime - 1)
+
     assert_nil UserHelpers.age_range_from_birthday(3.years.ago.to_datetime)
     assert_nil UserHelpers.age_range_from_birthday(1.year.since.to_datetime)
   end
