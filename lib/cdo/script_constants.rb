@@ -23,6 +23,16 @@ module ScriptConstants
       CSP = 'csp'.freeze,
       CSD = 'csd'.freeze,
     ],
+    csf: [
+      COURSEA_NAME = 'coursea'.freeze,
+      COURSEB_NAME = 'courseb'.freeze,
+      COURSEC_NAME = 'coursec'.freeze,
+      COURSED_NAME = 'coursed'.freeze,
+      COURSEE_NAME = 'coursee'.freeze,
+      COURSEF_NAME = 'coursef'.freeze,
+      EXPRESS_NAME = 'express'.freeze,
+      PRE_READER_EXPRESS_NAME = 'pre-express'.freeze,
+    ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
       # If adding a script here,
@@ -47,12 +57,21 @@ module ScriptConstants
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
     ],
-    csf: [
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
+    csf_international: [
       COURSE1_NAME = 'course1'.freeze,
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+      TWENTY_HOUR_NAME = '20-hour'.freeze,
+    ],
+    math: [
+      ALGEBRA_NAME = 'algebra'.freeze,
+      ALGEBRA_A_NAME = 'AlgebraA'.freeze,
+      ALGEBRA_B_NAME = 'AlgebraB'.freeze,
+    ],
+    research_studies: [
+      HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
+      FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
     ],
     csf2_draft: [
       COURSEA_DRAFT_NAME = 'coursea-draft'.freeze,
@@ -92,15 +111,6 @@ module ScriptConstants
       CSP_ASSESSMENT_NAME = 'cspassessment'.freeze,
       CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
       CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
-    ],
-    math: [
-      ALGEBRA_NAME = 'algebra'.freeze,
-      ALGEBRA_A_NAME = 'AlgebraA'.freeze,
-      ALGEBRA_B_NAME = 'AlgebraB'.freeze,
-    ],
-    research_studies: [
-      HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
-      FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
     ],
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
