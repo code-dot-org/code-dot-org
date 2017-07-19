@@ -19,8 +19,9 @@
         check the wiki.
 
   - [:google_oauth2, :facebook, :windowslive].each do |provider|
-    = link_to image_tag("auth/#{provider}.png"), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT)
-    = link_to t('auth.sign_in_with', provider: t("auth.#{provider}")), omniauth_authorize_path(resource_name, provider, user_type: resource.try(:user_type) || User::TYPE_STUDENT), class: "oauth_sign_in with_#{provider}"
+    = link_to omniauth_authorize_path(resource_name, provider), class: "oauth_sign_in with_#{provider}" do
+      = image_tag("auth/#{provider}.png")
+      = t('auth.sign_in_with', provider: t("auth.#{provider}"))
     %br/
     %br/
 
