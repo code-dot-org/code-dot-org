@@ -15,9 +15,7 @@ class Pd::WorkshopUserAdminControllerTest < ActionController::TestCase
     test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: success_response
   end
 
-  # test anonymous user redirect to sign in
   test_redirect_to_sign_in_for :facilitator_courses_form
-  # test facilitator/course form is forbidden to students/teachers and permitted for workshop admins
   test_workshop_admin_only :get, :facilitator_courses_form, :success
 
   test 'find facilitator for non-existent email displays no facilitator error' do
