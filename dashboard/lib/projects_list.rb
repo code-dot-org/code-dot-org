@@ -119,18 +119,12 @@ module ProjectsList
         publishedAt: project[:published_at],
         # For privacy reasons, include only the first initial of the student's name.
         studentName: UserHelpers.initial(project[:name]),
-        studentAgeRange: student_age_range(project),
+        studentAgeRange: UserHelpers.age_range_from_birthday(project[:birthday]),
       }.with_indifferent_access
     end
 
     def make_cacheable(url)
       url.sub('/v3/files/', '/v3/files-public/') if url
-    end
-
-    # Return the highest age range applicable to the student, e.g.
-    # 18+, 13+, 8+ or 4+
-    def student_age_range(project)
-      UserHelpers.age_range_from_birthday(project[:birthday])
     end
   end
 end
