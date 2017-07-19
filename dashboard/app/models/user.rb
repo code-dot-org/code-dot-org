@@ -1337,7 +1337,7 @@ class User < ActiveRecord::Base
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    encrypted_password.present?
+    encrypted_password.present? || oauth?
   end
 
   # We restrict certain users from editing their password; in particular, those
