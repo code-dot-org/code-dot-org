@@ -45,11 +45,12 @@ const ProgressPill = React.createClass({
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
-    fontSize: PropTypes.number
+    fontSize: PropTypes.number,
+    tooltip: PropTypes.element
   },
 
   render() {
-    const { levels, icon, text, fontSize } = this.props;
+    const { levels, icon, text, fontSize, tooltip } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -68,9 +69,19 @@ const ProgressPill = React.createClass({
       };
     }
 
+    // If we're passed a tooltip, we also need to reference it from our div
+    let tooltipProps = {};
+    if (tooltip) {
+      const id = tooltip.props.id;
+      tooltipProps['data-tip'] = true;
+      tooltipProps['data-for'] = id;
+      tooltipProps['aria-describedby'] = id;
+    }
+
     return (
       <a href={url}>
         <div
+          {...tooltipProps}
           style={style}
         >
           {icon && <FontAwesome icon={icon}/>}
@@ -85,6 +96,7 @@ const ProgressPill = React.createClass({
               {text}
             </div>
           )}
+          {tooltip}
         </div>
       </a>
     );
