@@ -4,7 +4,11 @@ exports.serialize = function (node) {
   return serializer.serializeToString(node);
 };
 
-// Parses a single root element string, wrapping it in an <xml/> element
+/**
+ * Parses a single root element string, wrapping it in an <xml/> element.
+ * @param {string} text
+ * @return {Element}
+ */
 exports.parseElement = function (text) {
   var parser = new DOMParser();
   text = text.trim();

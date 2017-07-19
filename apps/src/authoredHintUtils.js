@@ -50,7 +50,6 @@ var msg = require('@cdo/locale');
  * @property {number} [prevTime]
  * @property {number} [prevAttempt]
  * @property {number} [prevTestResult]
- * @property {number} [prevActivityId]
  * @property {number} [prevLevelSourceId]
  */
 /**
@@ -59,7 +58,6 @@ var msg = require('@cdo/locale');
  * @property {number} nextTime
  * @property {number} nextAttempt
  * @property {number} nextTestResult
- * @property {number} nextActivityId
  * @property {number} nextLevelSourceId
  */
 /**
@@ -68,7 +66,6 @@ var msg = require('@cdo/locale');
  * @property {number} finalTime
  * @property {number} finalAttempt
  * @property {number} finalTestResult
- * @property {number} finalActivityId
  * @property {number} finalLevelSourceId
  */
 /**
@@ -76,7 +73,6 @@ var msg = require('@cdo/locale');
  * @property {number} time
  * @property {number} attempt
  * @property {number} testResult
- * @property {number} activityId
  * @property {number} levelSourceId
  */
 
@@ -163,7 +159,6 @@ authoredHintUtils.finalizeHints_ = function () {
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
         finalTestResult: finalAttemptRecord.testResult,
-        finalActivityId: finalAttemptRecord.activityId,
         finalLevelSourceId: finalAttemptRecord.levelSourceId,
       }, hint)
     );
@@ -186,7 +181,6 @@ authoredHintUtils.recordUnfinishedHint = function (hint) {
       prevTime: lastAttemptRecord.time,
       prevAttempt: lastAttemptRecord.attempt,
       prevTestResult: lastAttemptRecord.testResult,
-      prevActivityId: lastAttemptRecord.activityId,
       prevLevelSourceId: lastAttemptRecord.levelSourceId,
     }, hint);
   }
@@ -210,7 +204,6 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
       nextTestResult: nextAttemptRecord.testResult,
-      nextActivityId: nextAttemptRecord.activityId,
       nextLevelSourceId: nextAttemptRecord.levelSourceId,
     }, hint)
   );
@@ -229,7 +222,6 @@ authoredHintUtils.submitHints = function (url) {
       time: finalHint.prevTime,
       attempt: finalHint.prevAttempt,
       testResult: finalHint.prevTestResult,
-      activityId: finalHint.prevActivityId,
       levelSourceId: finalHint.prevLevelSourceId,
     });
   }
@@ -253,15 +245,13 @@ authoredHintUtils.submitHints = function (url) {
 
 /**
  * Generates contextual hints as used by StudioApp from Blockly XML
- * @param {Object[]} blocks An array of objects representing the
+ * @param {BlockHint[]} blocks An array of objects representing the
  *        missing recommended Blockly Blocks for which we want to
  *        create hints.
- * @param {string} blocks[].blockDisplayXML
- * @param {boolean} blocks[].alreadySeen
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
-  var hints = blocks.map(function (block) {
+  return blocks.map(function (block) {
     var xmlBlock = parseXmlElement(FeedbackBlocks.generateXMLForBlocks([block]));
     var blockType = xmlBlock.firstChild.getAttribute("type");
     return {
@@ -275,7 +265,6 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
       alreadySeen: block.alreadySeen
     };
   });
-  return hints;
 };
 
 /**

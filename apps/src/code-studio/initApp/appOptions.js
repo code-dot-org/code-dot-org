@@ -203,18 +203,43 @@
  * @property {?} script_id
  * @property {?} level_id
  * @property {?} total_lines
- * @property {?} new_level_completed
- * @property {?} level_path
+ * @property {?} new_level_completed - Only used by GA event, todo remove.
+ * @property {?} level_path - Only used by GA event, todo remove.
  * @property {string} video_info
- * @property {string} redirect
+ * @property {string} redirect - path to 'next' level in the stage/script sequence.
  * @property {{previous: {position: number, name: string}}} stage_changing
  * @property {boolean} end_of_stage_experience
  * @property {{message: ?, type: ?, contents: ?}} share_failure
- * @property {{feedback_type: string, feedback_xml: string}[]} hint_view_requests
+ * @property {HintViewRequest[]} hint_view_requests
+ * @property {string} hint_view_request_url
  * @property {'no more levels'|string} message
- * @property {number} hints_used
+ * @property {number} hints_used - used by gamification.
  * @property {boolean} puzzle_ratings_enabled
  * @property {string} save_to_gallery_url
  * @property {string} level_source
  * @property {string} level_source_id
+ */
+
+/**
+ * @typedef {{feedback_type: TestResult, feedback_xml: string}} HintViewRequest
+ */
+
+/**
+ * @typedef {Object} FeedbackOptions
+ * @property {MilestoneResponse} response
+ * @property {string} app
+ * @property {string} skin
+ * @property {TestResult} feedbackType
+ * @property {string} message
+ * @property {Level} level
+ * @property {boolean} showingSharing
+ * @property {string} saveToGalleryUrl
+ * @property {Object<string, string>} appStrings
+ * @property {string} feedbackImage
+ * @property {boolean} defaultToContinue
+ * @property {ExecutionError} executionError
+ */
+
+/**
+ * @typedef {{ err, lineNumber: number}} ExecutionError
  */

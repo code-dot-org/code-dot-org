@@ -151,21 +151,33 @@ class ApplicationController < ActionController::Base
     script_level = options[:script_level]
     level = options[:level]
 
-    if script_level
-      response[:script_id] = script_level.script.id
-      response[:level_id] = level.id
+    # Fallback logic is performed only on page-load, not every puzzle attempt.
+    if options[:fallback]
+      if script_level
+        response[:script_id] = script_level.script.id
+        response[:level_id] = level.id
 
-      # if they solved it, figure out next level
-      if options[:solved?]
-        response[:total_lines] = options[:total_lines]
-        response[:new_level_completed] = options[:new_level_completed]
-        response[:level_path] = build_script_level_path(script_level)
-        response.merge script_level_solved_response(script_level)
-      else # not solved
-        response[:message] = 'try again'
+        # if they solved it, figure out next level
+        if options[:solved?]
+          response[:total_lines] = options[:total_lines]
+          response.merge script_level_solved_response(script_level)
+        else # not solved
+          response[:message] = 'try again'
+        end
+      else
+        response[:message] = 'no script provided'
       end
-    else
-      response[:message] = 'no script provided'
+
+      if HintViewRequest.enabled?
+        if script_level && current_user
+          response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
+          response[:hint_view_request_url] = hint_view_requests_path
+        end
+      end
+
+      if PuzzleRating.enabled?
+        response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
+      end
     end
 
     if options[:level_source].try(:id)
@@ -177,17 +189,6 @@ class ApplicationController < ActionController::Base
       response[:share_failure] = response_for_share_failure(options[:share_failure])
     end
 
-    if HintViewRequest.enabled?
-      if script_level && current_user
-        response[:hint_view_requests] = HintViewRequest.milestone_response(script_level.script, level, current_user)
-        response[:hint_view_request_url] = hint_view_requests_path
-      end
-    end
-
-    if PuzzleRating.enabled?
-      response[:puzzle_ratings_enabled] = script_level && PuzzleRating.can_rate?(script_level.script, level, current_user)
-    end
-
     # logged in users can:
     if current_user
       # save solved levels to a gallery (subject to
@@ -195,12 +196,11 @@ class ApplicationController < ActionController::Base
       # which levels are worth saving)
       if options[:level_source].try(:id) &&
           options[:solved?] &&
-          options[:activity] &&
           options[:level_source_image]
         response[:save_to_gallery_url] = gallery_activities_path(
           gallery_activity: {
             level_source_id: options[:level_source].try(:id),
-            user_level_id: options[:user_level] && options[:user_level].id
+            user_level_id: options[:user_level].is_a?(UserLevel) && options[:user_level].id
           }
         )
       end
@@ -211,8 +211,6 @@ class ApplicationController < ActionController::Base
           AuthoredHintViewRequest.hints_used(current_user.id, script_level.script.id, level.id).count
       end
     end
-
-    response[:activity_id] = options[:activity] && options[:activity].id
 
     response
   end

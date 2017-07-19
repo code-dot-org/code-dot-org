@@ -115,28 +115,6 @@ class StudioApp extends EventEmitter {
     this.IDEAL_BLOCK_NUM = undefined;
 
     /**
-     * @typedef {Object} TestableBlock
-     * @property {string|function} test - A test whether the block is
-     *           present, either:
-     *           - A string, in which case the string is searched for in
-     *             the generated code.
-     *           - A single-argument function is called on each user-added
-     *             block individually.  If any call returns true, the block
-     *             is deemed present.  "User-added" blocks are ones that are
-     *             neither disabled or undeletable.
-     * @property {string} type - The type of block to be produced for
-     *           display to the user if the test failed.
-     * @property {Object} [titles] - A dictionary, where, for each
-     *           KEY-VALUE pair, this is added to the block definition:
-     *           <title name="KEY">VALUE</title>.
-     * @property {Object} [value] - A dictionary, where, for each
-     *           KEY-VALUE pair, this is added to the block definition:
-     *           <value name="KEY">VALUE</value>
-     * @property {string} [extra] - A string that should be blacked
-     *           between the "block" start and end tags.
-     */
-
-    /**
      * @type {!TestableBlock[]}
      */
     this.requiredBlocks_ = [];
@@ -976,16 +954,17 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
  * @param {MilestoneResponse} response
  */
 StudioApp.prototype.onReportComplete = function (response) {
-  this.authoredHintsController_.finishHints(response);
+  this.authoredHintsController_.finishHints(response && response.level_source_id);
 
   if (!response) {
     return;
   }
 
   // Track GA events
-  if (response.new_level_completed) {
-    trackEvent('Puzzle', 'Completed', response.level_path);
-  }
+  // TODO use client-side logic to track this event.
+  // if (response.new_level_completed) {
+  //   trackEvent('Puzzle', 'Completed', response.level_path);
+  // }
 
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
@@ -1371,7 +1350,7 @@ StudioApp.prototype.clearHighlighting = function () {
 /**
 * Display feedback based on test results.  The test results must be
 * explicitly provided.
-* @param {TestResults} options.feedbackType Test results.
+* @param {FeedbackOptions} options
 */
 StudioApp.prototype.displayFeedback = function (options) {
   options.onContinue = this.onContinue;
@@ -1405,9 +1384,7 @@ StudioApp.prototype.displayFeedback = function (options) {
 /**
  * Whether feedback should be displayed as a modal dialog or integrated
  * into the top instructions
- * @param {Object} options
- * @param {number} options.feedbackType Test results (a constant property
- *     of TestResults).false
+ * @param {FeedbackOptions} options
  */
 StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
   // If we show instructions when collapsed, we only use dialogs for

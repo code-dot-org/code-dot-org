@@ -361,9 +361,18 @@ class ScriptLevelsController < ApplicationController
     )
 
     @@fallback_responses ||= {}
+    milestone_options = {
+      script_level: @script_level,
+      level: @level,
+      solved?: false,
+      fallback: true
+    }
     @fallback_response = @@fallback_responses[@script_level.id] ||= {
-      success: milestone_response(script_level: @script_level, level: @level, solved?: true),
-      failure: milestone_response(script_level: @script_level, level: @level, solved?: false)
+      success: milestone_response(milestone_options.merge(
+        total_lines: current_user.total_lines,
+        solved?: true
+      )),
+      failure: milestone_response(milestone_options)
     }
     render 'levels/show', formats: [:html]
   end

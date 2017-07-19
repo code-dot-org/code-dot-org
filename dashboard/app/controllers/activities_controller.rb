@@ -17,7 +17,7 @@ class ActivitiesController < ApplicationController
 
   def milestone
     # TODO: do we use the :result and :testResult params for the same thing?
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
     script_name = ''
 
     if params[:script_level_id]
@@ -42,8 +42,8 @@ class ActivitiesController < ApplicationController
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
+    share_failure = nil
     if params[:program] && sharing_allowed
-      share_failure = nil
       if @level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
@@ -98,23 +98,17 @@ class ActivitiesController < ApplicationController
       end
     end
 
-    @new_level_completed = false
-    if current_user
-      track_progress_for_user if @script_level
-    else
-      track_progress_in_session
-    end
+    user_level = if current_user
+                  track_progress_for_user if @script_level
+                 else
+                   track_progress_in_session
+                 end
 
     total_lines = if current_user && current_user.total_lines
                     current_user.total_lines
                   else
                     client_state.lines
                   end
-
-    milestone_response_user_level = nil
-    if @new_level_completed.is_a? UserLevel
-      milestone_response_user_level = @new_level_completed
-    end
 
     render json: milestone_response(
       script_level: @script_level,
@@ -123,11 +117,9 @@ class ActivitiesController < ApplicationController
       solved?: solved,
       level_source: @level_source.try(:hidden) ? nil : @level_source,
       level_source_image: @level_source_image,
-      activity: @activity,
-      new_level_completed: @new_level_completed,
       get_hint_usage: params[:gamification_enabled],
       share_failure: share_failure,
-      user_level: milestone_response_user_level
+      user_level: user_level
     )
 
     if solved
@@ -150,12 +142,14 @@ class ActivitiesController < ApplicationController
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
   end
 
+  # @return [UserLevel, Boolean] Either the UserLevel object,
+  #   or a boolean indicating whether a level was newly completed.
   def track_progress_for_user
     authorize! :create, Activity
     authorize! :create, UserLevel
 
     test_result = params[:testResult].to_i
-    solved = ('true' == params[:result])
+    solved = (params[:result] == 'true')
 
     lines = params[:lines].to_i
 
@@ -183,9 +177,11 @@ class ActivitiesController < ApplicationController
     else
       @activity = Activity.create_async!(attributes)
     end
+
+    user_level = nil
     if @script_level
       if synchronous_save
-        @new_level_completed = User.track_level_progress_sync(
+        user_level = User.track_level_progress_sync(
           user_id: current_user.id,
           level_id: @level.id,
           script_id: @script_level.script_id,
@@ -195,7 +191,7 @@ class ActivitiesController < ApplicationController
           pairing_user_ids: pairing_user_ids,
         )
       else
-        @new_level_completed = current_user.track_level_progress_async(
+        user_level = current_user.track_level_progress_async(
           script_level: @script_level,
           new_result: test_result,
           submitted: params[:submitted] == "true",
@@ -218,24 +214,23 @@ class ActivitiesController < ApplicationController
     if params[:save_to_gallery] == 'true' && @level_source_image && solved
       @gallery_activity = GalleryActivity.create!(
         user: current_user,
-        user_level_id: @new_level_completed.try(:id),
+        user_level_id: user_level.try(:id),
         level_source_id: @level_source_image.level_source_id,
         autosaved: true
       )
     end
+    user_level
   end
 
+  # @return [Boolean] true if a level was newly completed.
   def track_progress_in_session
     # track scripts
     if @script_level.try(:script).try(:id)
       test_result = params[:testResult].to_i
       old_result = client_state.level_progress(@script_level)
 
-      if !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
-        @new_level_completed = true
-      end
-
       client_state.add_script(@script_level.script_id)
+      !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
     end
   end
 

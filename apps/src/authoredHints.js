@@ -46,7 +46,7 @@ AuthoredHints.prototype.getSeenHints = function () {
  * Creates contextual hints for the specified blocks and adds them to
  * the queue of hints to display. Triggers an animation on the hint
  * lightbulb if the queue has changed.
- * @param {Object[]} blocks @see authoredHintUtils.createContextualHintsFromBlocks
+ * @param {BlockHint[]} blocks {@see authoredHintUtils.createContextualHintsFromBlocks}
  */
 AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
   var newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
@@ -58,15 +58,14 @@ AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
 };
 
 /**
- * @param {MilestoneResponse} response
+ * @param {number} levelSourceId
  */
-AuthoredHints.prototype.finishHints = function (response) {
+AuthoredHints.prototype.finishHints = function (levelSourceId) {
   authoredHintUtils.finishHints({
     time: ((new Date().getTime()) - this.studioApp_.initTime),
     attempt: this.studioApp_.attempts,
     testResult: this.studioApp_.lastTestResult,
-    activityId: response && response.activity_id,
-    levelSourceId: response && response.level_source_id,
+    levelSourceId: levelSourceId,
   });
 };
 

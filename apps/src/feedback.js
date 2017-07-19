@@ -57,19 +57,19 @@ import StageAchievementDialog from './templates/StageAchievementDialog';
  *             neither disabled or undeletable.
  * @property {string} type - The type of block to be produced for
  *           display to the user if the test failed.
- * @property {Object} [titles] - A dictionary, where, for each
+ * @property {Object<string,string>} [titles] - A dictionary, where, for each
  *           KEY-VALUE pair, this is added to the block definition:
  *           <title name="KEY">VALUE</title>.
- * @property {Object} [value] - A dictionary, where, for each
+ * @property {Object<string,string>} [value] - A dictionary, where, for each
  *           KEY-VALUE pair, this is added to the block definition:
  *           <value name="KEY">VALUE</value>
  * @property {string} [extra] - A string that should be blacked
  *           between the "block" start and end tags.
+ * @property {string} blockDisplayXML - XML string representing the block.
  */
 
 /**
- * @param {Object} options
- * @param {MilestoneResponse} options.response
+ * @param {FeedbackOptions} options
  * @param {!TestableBlock[]} requiredBlocks The blocks that are required to be used in
  *   the solution to this level.
  * @param {number} maxRequiredBlocksToFlag The number of required blocks to
@@ -83,11 +83,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     maxRequiredBlocksToFlag, recommendedBlocks, maxRecommendedBlocksToFlag) {
 
   options.level = options.level || {};
+  const response = options.response || {};
+  const fallback = window.appOptions.report.fallback_response.success;
 
-  var hadShareFailure = (options.response && options.response.share_failure);
+  var hadShareFailure = response.share_failure;
   // options.response.level_source is the url that we are sharing; can't
   // share without it
-  var canShare = options.response && options.response.level_source;
+  var canShare = response.level_source;
   var showingSharing = options.showingSharing && !hadShareFailure && canShare;
 
   var canContinue = this.canContinueToNextLevel(options.feedbackType);
@@ -101,8 +103,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     feedbackBlocks = new FeedbackBlocks(
         options,
         this.getMissingBlocks_(requiredBlocks, maxRequiredBlocksToFlag),
-        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag),
-        this.studioApp_);
+        this.getMissingBlocks_(recommendedBlocks, maxRecommendedBlocksToFlag)
+    );
   }
   // feedbackMessage must be initialized after feedbackBlocks
   // because FeedbackBlocks can mutate options.response.hint.
@@ -142,8 +144,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   feedback.className += canContinue ? " win-feedback" : " failure-feedback";
 
-  var finalLevel = (options.response &&
-    (options.response.message === "no more levels"));
+  var finalLevel = (fallback.message === "no more levels");
 
   feedback.appendChild(
     this.getFeedbackButtons_({
@@ -170,9 +171,12 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   const onlyContinue = continueButton && !againButton;
   const defaultContinue = onlyContinue || options.defaultToContinue;
 
-  // get the topmost missing recommended block, if it exists, to be
-  // added to the queue of contextual hints. If the user views the block
-  // in the dialog, mark it as seen and add it to the list as such.
+  /**
+   * get the topmost missing recommended block, if it exists, to be
+   * added to the queue of contextual hints. If the user views the block
+   * in the dialog, mark it as seen and add it to the list as such.
+   * @type !BlockHint[]
+   */
   var missingRecommendedBlockHints = this.getMissingBlockHints(recommendedBlocks, options.level.isK1);
   var markContextualHintsAsSeen = function () {
     missingRecommendedBlockHints.filter(function (hint) {
@@ -200,8 +204,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (!options.level.freePlay && experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
-    const hintsUsed = (options.response.hints_used || 0) +
-      authoredHintUtils.currentOpenedHintCount(options.response.level_id);
+    const hintsUsed = (response.hints_used || 0) +
+      authoredHintUtils.currentOpenedHintCount(fallback.level_id);
     const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
     const actualBlocks = this.getNumCountableBlocks();
 
@@ -212,7 +216,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     const progress = FeedbackUtils.calculateStageProgress(
         isPerfect,
         hintsUsed,
-        options.response.level_id,
+        fallback.level_id,
         isFinite(idealBlocks));
 
     const achievements = FeedbackUtils.getAchievements(
@@ -247,13 +251,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     }
 
     const showPuzzleRatingButtons =
-        options.response && options.response.puzzle_ratings_enabled;
+        fallback.puzzle_ratings_enabled;
     if (showPuzzleRatingButtons) {
       const prevOnContinue = onContinue;
       onContinue = () => {
         puzzleRatingUtils.cachePuzzleRating(container, {
-          script_id: options.response.script_id,
-          level_id: options.response.level_id,
+          script_id: fallback.script_id,
+          level_id: fallback.level_id,
         });
         prevOnContinue();
       };
@@ -284,7 +288,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   // Update the background color if it is set to be in special design.
   if (this.useSpecialFeedbackDesign_(options)) {
-    if (options.response.design === "white_background") {
+    if (fallback.design === "white_background") {
       document.getElementById('feedback-dialog')
           .className += " white-background";
       document.getElementById('feedback-content')
@@ -304,15 +308,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   // be shown (including any feedback blocks), and add code to restore the
   // hint if the button gets pressed.
   if (hintRequestButton) {
-
-    var alreadySeen = options.response &&
-        options.response.hint_view_requests &&
-        options.response.hint_view_requests.some(function (request) {
-          var requestMatchesFeedback = request.feedback_type === options.feedbackType;
-          if (feedbackBlocks && feedbackBlocks.xml) {
-            requestMatchesFeedback = requestMatchesFeedback && request.feedback_xml === feedbackBlocks.xml;
-          }
-          return requestMatchesFeedback;
+    const feedbackXml = feedbackBlocks ? feedbackBlocks.xml : undefined;
+    var alreadySeen = fallback.hint_view_requests.some(function (request) {
+          return request.feedback_type === options.feedbackType &&
+            request.feedback_xml === feedbackXml;
         });
 
     if (alreadySeen) {
@@ -353,16 +352,22 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           feedbackBlocks.show();
         }
 
+        // Add hint request to local cache.
+        fallback.hint_view_requests.push({
+          feedback_type: options.feedbackType,
+          feedback_xml: feedbackXml
+        });
+
         // Report hint request to server.
-        if (options.response.hint_view_request_url) {
+        if (fallback.hint_view_request_url) {
           $.ajax({
-            url: options.response.hint_view_request_url,
+            url: fallback.hint_view_request_url,
             type: 'POST',
             data: {
-              script_id: options.response.script_id,
-              level_id: options.response.level_id,
+              script_id: fallback.script_id,
+              level_id: fallback.level_id,
               feedback_type: options.feedbackType,
-              feedback_xml: feedbackBlocks ? feedbackBlocks.xml : undefined
+              feedback_xml: feedbackXml
             }
           });
         }
@@ -372,14 +377,14 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   if (continueButton) {
 
-    if (options.response && options.response.puzzle_ratings_enabled) {
+    if (fallback.puzzle_ratings_enabled) {
       feedback.appendChild(puzzleRatingUtils.buildPuzzleRatingButtons());
     }
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
 
-      if (options.response && options.response.puzzle_ratings_enabled) {
+      if (fallback.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
           script_id: options.response.script_id,
           level_id: options.response.level_id
@@ -411,9 +416,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           });
       }, {shouldPublish: true});
     });
-  } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
+  } else if (saveToGalleryButton && response.save_to_gallery_url) {
     dom.addClickTouchEvent(saveToGalleryButton, function () {
-      $.post(options.response.save_to_gallery_url,
+      $.post(response.save_to_gallery_url,
              function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
     });
   }
@@ -680,6 +685,7 @@ FeedbackUtils.prototype.useSpecialFeedbackDesign_ = function (options) {
  *    specific result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
  * 4. System-wide message (e.g., msg.emptyBlocksErrorMsg()) for specific
  *    result type (e.g., TestResults.EMPTY_BLOCK_FAIL).
+ * @param {FeedbackOptions} options
  * @return {string} message
  */
 FeedbackUtils.prototype.getFeedbackMessage = function (options) {
@@ -1002,11 +1008,9 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   showCodeDiv.setAttribute('id', 'show-code');
 
   var numLinesWritten = this.getNumBlocksUsed();
-  var shouldShowTotalLines =
-    (options.response &&
-      options.response.total_lines &&
-      (options.response.total_lines !== numLinesWritten));
-  var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
+  var response = window.appOptions.report.fallback_response.success;
+  response.total_lines += numLinesWritten;
+  var totalNumLinesWritten = response.total_lines > numLinesWritten ? response.total_lines : 0;
 
   var generatedCodeProperties = this.getGeneratedCodeProperties_({
     generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
@@ -1284,7 +1288,7 @@ FeedbackUtils.prototype.getEmptyContainerBlock_ = function () {
 /**
  * Check for empty container blocks, and return an appropriate failure
  * code if any are found.
- * @return {TestResults} ALL_PASS if no empty blocks are present, or
+ * @return {TestResult} ALL_PASS if no empty blocks are present, or
  *   EMPTY_BLOCK_FAIL or EMPTY_FUNCTION_BLOCK_FAIL if empty blocks
  *   are found.
  */
@@ -1402,16 +1406,21 @@ FeedbackUtils.prototype.getCountableBlocks_ = function () {
 };
 
 /**
+ * @typedef {TestableBlock} BlockHint
+ * @property {boolean} alreadySeen
+ */
+/**
  * Returns a list of zero or one objects representing blocks from the
  * set of passed blocks that are missing from the user's code and should
  * be presented to the user as hints.
  * @param {!TestableBlock[]} blocks
  * @param {boolean} [isK1=false]
+ * @return {!BlockHint[]}
  */
 FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
   return this.getMissingBlocks_(blocks, 1)
     .blocksToDisplay
-    .map(function (block) {
+    .map(function (/*BlockHint*/block) {
       // in K1, we default to already seen
       block.alreadySeen = isK1;
       return block;
@@ -1423,11 +1432,10 @@ FeedbackUtils.prototype.getMissingBlockHints = function (blocks, isK1=false) {
  * @param {!TestableBlock[]} blocks
  * @param {number} maxBlocksToFlag The maximum number of blocks to
  *   return. We most often only care about a single block at a time
- * @return {{blocksToDisplay:!Array, message:?string}} 'missingBlocks' is an
+ * @return {DisplayBlocks} 'missingBlocks' is an
  *   array of array of strings where each array of strings is a set of blocks
  *   that at least one of them should be used. Each block is represented as the
- *   prefix of an id in the corresponding template.soy. 'message' is an
- *   optional message to override the default error text.
+ *   prefix of an id in the corresponding template.soy.
  */
 FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
   var missingBlocks = [];
@@ -1481,6 +1489,7 @@ FeedbackUtils.prototype.getMissingBlocks_ = function (blocks, maxBlocksToFlag) {
 
 /**
  * Do we have any floating blocks not attached to an event block or function block?
+ * @return {boolean}
  */
 FeedbackUtils.prototype.hasExtraTopBlocks = function () {
   if (this.studioApp_.editCode) {
@@ -1515,7 +1524,7 @@ FeedbackUtils.prototype.hasExtraTopBlocks = function () {
  *   recommended to be used in the solution to this level.
  * @param {boolean} shouldCheckForEmptyBlocks Whether empty blocks should cause
  *   a test fail result.
- * @param {Object} options
+ * @param {{executionError: ExecutionError, allowTopBlocks: boolean}} options
  * @return {number} The appropriate property of TestResults.
  */
 FeedbackUtils.prototype.getTestResults = function (levelComplete, requiredBlocks,
