@@ -544,7 +544,7 @@ class DashboardSection
     to_member_hash.merge(
       scriptId: script,
       courseId: @row[:course_id],
-      studentNames: students.map {|student| student[:name]},
+      studentCount: students.count,
     )
   end
 

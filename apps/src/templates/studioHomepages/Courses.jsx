@@ -50,7 +50,8 @@ const Courses = React.createClass({
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     showInitialTips: React.PropTypes.bool.isRequired,
     userId: React.PropTypes.number,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    studentHomepagePreview: React.PropTypes.bool
   },
 
   componentDidMount() {
@@ -67,7 +68,7 @@ const Courses = React.createClass({
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl, studentHomepagePreview } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -96,21 +97,25 @@ const Courses = React.createClass({
           ref="flashes"
         />
 
-        {!isTeacher && (
-          <ProtectedStatefulDiv
-            style={styles.userHero}
-            ref="userHero"
-          />
-        )}
+        {!studentHomepagePreview && (
+          <div>
+            {!isTeacher && (
+              <ProtectedStatefulDiv
+                style={styles.userHero}
+                ref="userHero"
+              />
+            )}
 
-        {(courses && courses.length > 0) && (
-          <RecentCourses
-            courses={courses}
-            showAllCoursesLink={false}
-            heading={i18n.myCourses()}
-            isTeacher={isTeacher}
-            isRtl={isRtl}
-          />
+            {(courses && courses.length > 0) && (
+              <RecentCourses
+                courses={courses}
+                showAllCoursesLink={false}
+                heading={i18n.myCourses()}
+                isTeacher={isTeacher}
+                isRtl={isRtl}
+              />
+            )}
+          </div>
         )}
 
         {/* Signed-in teacher in English */}
@@ -207,7 +212,7 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {(!isTeacher && !isSignedOut) && (
+        {(!studentHomepagePreview && !isTeacher && !isSignedOut) && (
           <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>

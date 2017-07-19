@@ -11,6 +11,10 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
     end
+    trait :local_summer_workshop do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    end
     capacity 10
     transient do
       num_sessions 0
