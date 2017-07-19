@@ -97,7 +97,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Reject certain changes for certain users outright
   def forbidden_change?(user, params)
     return true if params[:user][:password].present? && !user.can_edit_password?
-    return true if params[:user][:email].present? && !user.can_edit_email?
+    return true if params[:user][:email].present? && !user.can_edit_email? && !user.oauth?
     return true if params[:user][:hashed_email].present? && !user.can_edit_email?
     false
   end
