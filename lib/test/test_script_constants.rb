@@ -41,7 +41,7 @@ class ScriptConstantsTest < Minitest::Test
     assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::HOC_NAME)
     assert_equal ['hoc'], ScriptConstants.categories(ScriptConstants::STARWARS_NAME)
     assert_equal ['hoc', 'flappy'], ScriptConstants.categories(ScriptConstants::FLAPPY_NAME)
-    assert_equal ['csf'], ScriptConstants.categories(ScriptConstants::COURSE1_NAME)
+    assert_equal ['csf_international'], ScriptConstants.categories(ScriptConstants::COURSE1_NAME)
     assert_equal ['csp'], ScriptConstants.categories(ScriptConstants::CSP_UNIT1_NAME)
   end
 
@@ -55,6 +55,12 @@ class ScriptConstantsTest < Minitest::Test
 
     assert_nil ScriptConstants.position_in_category('script', :not_a_category)
     assert_nil ScriptConstants.position_in_category('not a script', :csp)
+  end
+
+  def test_category_priority
+    assert_equal 0, ScriptConstants.category_priority(:full_course)
+    assert_equal 3, ScriptConstants.category_priority(:csf_international)
+    assert_equal 5, ScriptConstants.category_priority(:research_studies)
   end
 
   describe 'ScriptConstants::script_in_any_category?' do
