@@ -1,5 +1,9 @@
 import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
 import { TestResults } from './constants';
+import { addCallouts } from '@cdo/apps/code-studio/callouts';
+import { getStore } from './redux';
+import { setAwaitingContainedResponse } from './redux/runState';
+import locale from '@cdo/locale';
 
 const PostState = {
   None: 'None',
@@ -87,4 +91,59 @@ export function runAfterPostContainedLevel(fn) {
     return;
   }
   callOnPostCompletion = fn;
+}
+
+export function initializeContainedLevel() {
+  const store = getStore();
+  if (!store.getState().instructions.hasContainedLevels) {
+    return;
+  }
+  if (codeStudioLevels.hasValidContainedLevelResult()) {
+    // We already have an answer, don't allow it to be changed, but allow Run
+    // to be pressed so the code can be run again.
+    codeStudioLevels.lockContainedLevelAnswers();
+  } else {
+    // No answers yet, disable Run button until there is an answer
+    let runButton = $('#runButton');
+    let stepButton = $('#stepButton');
+    runButton.prop('disabled', true);
+    stepButton.prop('disabled', true);
+    const disabledRunButtonHandler = e => {
+      $(window).trigger('attemptedRunButtonClick');
+    };
+    $('#gameButtons').bind('click', disabledRunButtonHandler);
+
+    addCallouts([{
+      id: 'disabledRunButtonCallout',
+      element_id: '#runButton',
+      localized_text: locale.containedLevelRunDisabledTooltip(),
+      qtip_config: {
+        codeStudio: {
+          canReappear: true,
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+      on: 'attemptedRunButtonClick',
+    }]);
+    store.dispatch(setAwaitingContainedResponse(true));
+
+    codeStudioLevels.registerAnswerChangedFn(() => {
+      // Ideally, runButton would be declaratively disabled or not based on redux
+      // store state. We might be close to a point where we can do that, but
+      // because runButton is also mutated outside of React (here and elsewhere)
+      // we need to worry about cases where the DOM gets out of sync with the
+      // React layer
+      const validResult = codeStudioLevels.hasValidContainedLevelResult();
+      runButton.prop('disabled', !validResult);
+      stepButton.prop('disabled', !validResult);
+      if (validResult) {
+        runButton.qtip('hide');
+        $('#gameButtons').unbind('click', disabledRunButtonHandler);
+      }
+      getStore().dispatch(setAwaitingContainedResponse(!validResult));
+    });
+  }
 }
