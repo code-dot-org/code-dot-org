@@ -51,6 +51,28 @@ class ScaryChangeDetector
     end
   end
 
+  def verify_yarn_lock_versions
+    changed_yarn_lock = @all.include? 'apps/yarn.lock'
+    yarn_version = '0.27.5'
+    node_version = '6.9.0'
+    if changed_yarn_lock
+      if `head apps/yarn.lock | grep '# yarn v#{yarn_version}'`.empty?
+        puts "You changed yarn.lock, but it does not have the right yarn version:"
+        puts `head apps/yarn.lock | grep '# yarn v'`
+        puts "Please make sure you are using yarn version #{yarn_version} and that"
+        puts "`yarn config get yarn-enable-lockfile-versions` returns `true`."
+        raise "Commit blocked."
+      end
+      if `head apps/yarn.lock | grep '# node v#{node_version}'`.empty?
+        puts "You changed yarn.lock, but it does not have the right node version:"
+        puts `head apps/yarn.lock | grep '# node v'`
+        puts "Please make sure you are using node version #{node_version} and that"
+        puts "`yarn config get yarn-enable-lockfile-versions` returns `true`."
+        raise "Commit blocked."
+      end
+    end
+  end
+
   def detect_special_files
     changes = @all.grep(/locals.yml$/)
     unless changes.empty?
@@ -71,6 +93,7 @@ class ScaryChangeDetector
   def detect_scary_changes
     detect_new_models
     detect_missing_yarn_lock
+    verify_yarn_lock_versions
     detect_special_files
   end
 end
