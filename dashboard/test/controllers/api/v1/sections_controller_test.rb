@@ -173,10 +173,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     end
   end
 
-  ['', nil, 'none'].each do |empty_type|
+  ['none', '', nil].each do |empty_type|
     empty_type_name = empty_type.nil? ? 'nil' : "\"#{empty_type}\""
     test "sets login_type to default 'email' when passing #{empty_type_name}" do
-      skip('Currently failing - fix before merge!')
       sign_in @teacher
       post :create, params: {login_type: empty_type}
       assert_response :success
@@ -187,10 +186,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'cannot pass an invalid login_type' do
-    skip('Currently failing - fix before merge!')
     sign_in @teacher
     post :create, params: {login_type: 'golmac'}
-    assert_response :error
+    assert_response :bad_request
   end
 
   %w(K 1 2 3 4 5 6 7 8 9 10 11 12 Other).each do |desired_grade|

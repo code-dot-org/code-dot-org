@@ -18,6 +18,11 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   def create
     authorize! :create, Section
 
+    # Validate login_type
+    # TODO: Push validation into model?
+    login_type = (['none', '', nil].include? params[:login_type]) ? 'email' : params[:login_type]
+    return head :bad_request unless %w(word picture email).include? login_type
+
     valid_script = params[:script] && valid_script_id?(params[:script][:id])
     script_to_assign = valid_script && Script.find(params[:script][:id])
 
@@ -25,7 +30,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       {
         user_id: current_user.id,
         name: !params[:name].to_s.empty? ? params[:name].to_s : 'New Section',
-        login_type: params[:login_type].to_s == 'none' ? 'email' : params[:login_type].to_s,
+        login_type: login_type,
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
         course_id: params[:course_id] && valid_course_id?(params[:course_id]) ?
