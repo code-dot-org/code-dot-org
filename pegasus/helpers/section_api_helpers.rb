@@ -420,6 +420,16 @@ class DashboardSection
     return section
   end
 
+  def self.fetch_user_sections(user_id)
+    return if user_id.nil?
+
+    Dashboard.db[:sections].
+      join(:users, id: :user_id).
+      select(*fields).
+      where(sections__user_id: user_id, sections__deleted_at: nil).
+      map {|row| new(row).to_owner_hash}
+  end
+
   def self.fetch_student_sections(student_id)
     return if student_id.nil?
 
@@ -540,7 +550,7 @@ class DashboardSection
       first
   end
 
-  def to_section_detail_hash
+  def to_owner_hash
     to_member_hash.merge(
       scriptId: script,
       courseId: @row[:course_id],
