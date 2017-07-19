@@ -203,6 +203,14 @@ class Section < ActiveRecord::Base
     }
   end
 
+  def self.valid_grades
+    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+  end
+
+  def self.valid_grade?(grade)
+    valid_grades.include? grade
+  end
+
   private
 
   def unused_random_code

@@ -95,4 +95,43 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     assert_equal @course.id, json['courseId']
   end
+
+  test 'logged out cannot create a section' do
+    post :create
+    assert_response :forbidden
+  end
+
+  test 'student cannot create a section' do
+    sign_in @word_user_1
+    post :create
+    assert_response :forbidden
+  end
+
+  test 'teacher can create a section' do
+    sign_in @teacher
+    post :create
+    assert_response :success
+    created_section = JSON.parse(@response.body).with_indifferent_access
+    refute_nil created_section[:id]
+    assert_equal(
+      {
+        id: created_section[:id],
+        name: "New Section",
+        teacherName: @teacher.name,
+        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{created_section[:id]}/progress",
+        assignedTitle: "",
+        linkToAssigned: "//test.code.org/teacher-dashboard#/sections/",
+        numberOfStudents: 0,
+        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{created_section[:id]}/manage",
+        code: created_section[:code],
+        stage_extras: false,
+        pairing_allowed: true,
+        login_type: "",
+        course_id:  nil,
+        script: {'id': nil, 'name': nil},
+        studentNames: [],
+      }.with_indifferent_access,
+      created_section
+    )
+  end
 end
