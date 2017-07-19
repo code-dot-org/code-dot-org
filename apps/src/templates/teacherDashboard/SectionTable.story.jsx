@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
-import _ from 'lodash';
 import SectionTable from './SectionTable';
 import teacherSections, {
   setValidLoginTypes,
@@ -10,7 +9,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const fakeStudents = num => _.range(num).map(x => ({id: x}));
 const sections = [
   {
     id: 11,
@@ -23,7 +21,7 @@ const sections = [
     pairing_allowed: true,
     script: null,
     course_id: 29,
-    students: fakeStudents(10)
+    studentCount: 10,
   },
   {
     id: 12,
@@ -39,7 +37,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
-    students: fakeStudents(1)
+    studentCount: 1,
   },
   {
     id: 307,
@@ -55,7 +53,7 @@ const sections = [
       name: 'infinity'
     },
     course_id: null,
-    students: []
+    studentCount: 0,
   }
 ];
 

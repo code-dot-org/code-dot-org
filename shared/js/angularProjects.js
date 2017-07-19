@@ -123,6 +123,7 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
     }).then(function (response) {
       if (response.data && response.data.publishedAt) {
         project.publishedAt = response.data.publishedAt;
+        window.showNewPublishedProject(response.data, type);
       }
     });
   }

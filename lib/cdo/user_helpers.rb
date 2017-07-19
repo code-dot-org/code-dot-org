@@ -62,4 +62,20 @@ module UserHelpers
   def self.age_from_birthday(birthday)
     ((Date.today - birthday) / 365).to_i
   end
+
+  AGE_CUTOFFS = [18, 13, 8, 4].freeze
+
+  # Return the highest age range for the given birthday, e.g.
+  # 18+, 13+, 8+ or 4+
+  def self.age_range_from_birthday(birthday)
+    age = age_from_birthday(birthday)
+    age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
+    age_cutoff ? "#{age_cutoff}+" : nil
+  end
+
+  # Upcase and return the first non-whitespace character of the user's name.
+  def self.initial(name)
+    return nil if name.blank?
+    return name.strip[0].upcase
+  end
 end

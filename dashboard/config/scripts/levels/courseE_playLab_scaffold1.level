@@ -38,7 +38,7 @@
     "instructions": "Choose a background and map, and pick an actor to be your game's hero.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "It is amazing how much you have learned! Let's put it together to make a game, step by step. \r\n\r\nWe've put these blocks in your toolbox. Choose a random background, then pick an actor to be your game's hero.\r\n\r\n![](https://images.code.org/745931ce34b3c47de19c36009e4a9c48-image-1471464938470.14.47 PM.png)",
+    "markdown_instructions": "It is amazing how much you have learned! Let's make a game step by step.\r\n\r\nUsing new blocks in your toolbox, choose a new background, then pick an actor to be in your game.",
     "instructions_important": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -48,7 +48,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 18:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:45:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 18:53:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:45:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:15:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

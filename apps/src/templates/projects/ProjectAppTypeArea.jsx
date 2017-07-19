@@ -88,8 +88,8 @@ const ProjectAppTypeArea = React.createClass({
     return  (
       <div>
         {
-          projectList && projectList.slice(0,max).map((project, index) => (
-            <div key={index} style={styles.card}>
+          projectList && projectList.slice(0,max).map(project => (
+            <div key={project.projectData.channel} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
                 currentGallery={galleryType}
