@@ -84,11 +84,11 @@ class StorageApps
 
   # extracts published project data from a project (aka storage_apps table row).
   def self.get_published_project_data(project, channel_id)
-    project_value = project[:value] ? JSON.parse(project[:value]) : {}
+    project_value = JSON.parse(project[:value])
     {
       channel: channel_id,
       name: project_value['name'],
-      thumbnailUrl: StorageApps.make_cacheable(project_value['thumbnailUrl']),
+      thumbnailUrl: StorageApps.make_thumbnail_url_cacheable(project_value['thumbnailUrl']),
       # Note that we are using the new :project_type field rather than extracting
       # it from :value. :project_type might not be present in unpublished projects.
       type: project[:project_type],
@@ -96,7 +96,8 @@ class StorageApps
     }
   end
 
-  def self.make_cacheable(url)
+  # This method can be removed once thumbnails are being served with s3 version ids.
+  def self.make_thumbnail_url_cacheable(url)
     url.sub('/v3/files/', '/v3/files-public/') if url
   end
 
