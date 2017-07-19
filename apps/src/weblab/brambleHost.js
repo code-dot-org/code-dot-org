@@ -371,10 +371,6 @@ function refreshPreview() {
   brambleProxy_.refreshPreview();
 }
 
-function enableFullscreenPreview() {
-  brambleProxy_.enableFullscreenPreview();
-}
-
 function onProjectChanged(callback) {
   onProjectChangedCallback_ = callback;
 }
@@ -462,7 +458,6 @@ const brambleHost = {
   enableInspector: enableInspector,
   disableInspector: disableInspector,
   refreshPreview: refreshPreview,
-  enableFullscreenPreview: enableFullscreenPreview,
   onProjectChanged: onProjectChanged,
   onBrambleReady: onBrambleReady,
   onInspectorChanged: onInspectorChanged,
@@ -478,7 +473,7 @@ function load(Bramble) {
   bramble_ = Bramble;
 
   Bramble.load("#bramble", {
-    url: "//downloads.computinginthecore.org/bramble_0.1.17/index.html?disableExtensions=bramble-move-file",
+    url: "//downloads.computinginthecore.org/bramble_0.1.18/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE (local) url: "../blockly/js/bramble/index.html?disableExtensions=bramble-move-file",
     // DEVMODE: INSECURE url: "http://127.0.0.1:8000/src/index.html?disableExtensions=bramble-move-file",
     useLocationSearch: true,

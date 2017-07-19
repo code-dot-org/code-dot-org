@@ -36,12 +36,13 @@
     "disable_sharing": "false",
     "callout_json": "[]",
     "ideal": "7",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseF_artist_ramp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseF_artist_ramp9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"How is this similar to a square?  How is it different?\",\"hint_id\":\"courseF_artist_ramp9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/89f1d45a6f7b107fd8a2bf6648c50237/courseF_artist_ramp9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use the drop down menu on the `turn` blocks to see which angle you need!\",\"hint_id\":\"courseF_artist_ramp9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b5b76af7795f852f315ac145422b8ea2/courseF_artist_ramp9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move forward 100 pixels, then turn right 120 degrees for each side. Can you use a `repeat` loop to make your code shorter?\",\"hint_id\":\"courseF_artist_ramp9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/532b562e53f991b3da82ef9d781d940b/courseF_artist_ramp9.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 21:35:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:35:43 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 02:15:06 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

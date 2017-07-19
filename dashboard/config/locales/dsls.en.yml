@@ -7708,22 +7708,21 @@ en:
       courseF_multi_bee_conditionals1_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
+        ? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
-        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseF_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
         ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
         : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
-        ? Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be one flower or one honeycomb under each cloud. Look carefully at the code below.  What do you think will happen after you click "Run"?
-        : Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be one flower or one honeycomb under each cloud. Look carefully at the code below.  What do you think will happen after you click "Run"?
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
         The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
         The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.

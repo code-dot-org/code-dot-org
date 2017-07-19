@@ -39,7 +39,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:47:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:38:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-13 21:47:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-19 00:07:07 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-19 00:07:35 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-19 00:09:04 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -51,6 +51,34 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="simple_move_up"/>
+        <block type="simple_move_down"/>
+        <block type="simple_move_right"/>
+        <block type="simple_move_left"/>
+        <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+        </block>
+        <block type="draw_colour_simple">
+          <title name="COLOUR">#ff0000</title>
+        </block>
+        <block type="draw_line_style_pattern">
+          <title name="VALUE">rainbowLine</title>
+        </block>
+        <block type="sticker">
+          <title name="VALUE">Alien</title>
+        </block>
+        <block type="simple_move_up_left"/>
+        <block type="simple_move_up_right"/>
+        <block type="simple_move_down_left"/>
+        <block type="simple_move_down_right"/>
+        <block type="simple_jump_up"/>
+        <block type="simple_jump_down"/>
+        <block type="simple_jump_right"/>
+        <block type="simple_jump_left"/>
+        <block type="simple_jump_up_left"/>
+        <block type="simple_jump_up_right"/>
+        <block type="simple_jump_down_left"/>
+        <block type="simple_jump_down_right"/>
       </xml>
     </toolbox_blocks>
   </blocks>
