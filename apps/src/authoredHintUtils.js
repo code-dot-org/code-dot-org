@@ -205,16 +205,15 @@ authoredHintUtils.finishHints = function (nextAttemptRecord) {
   trySetLocalStorage('last_attempt_record', JSON.stringify(nextAttemptRecord));
   var unfinishedHintViews = authoredHintUtils.getUnfinishedHints_();
   authoredHintUtils.clearUnfinishedHints();
-  var finishedHintViews = unfinishedHintViews.map(function (hint){
-    hint = Object.assign({
+  var finishedHintViews = unfinishedHintViews.map((hint) =>
+    Object.assign({
       nextTime: nextAttemptRecord.time,
       nextAttempt: nextAttemptRecord.attempt,
       nextTestResult: nextAttemptRecord.testResult,
       nextActivityId: nextAttemptRecord.activityId,
       nextLevelSourceId: nextAttemptRecord.levelSourceId,
-    }, hint);
-    return hint;
-  });
+    }, hint)
+  );
   authoredHintUtils.recordFinishedHints_(finishedHintViews);
 };
 
@@ -300,16 +299,14 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   } catch (e) {
     hints = [];
   }
-  return hints.map(function (hint) {
-    return {
-      content: processMarkdown(hint.hint_markdown),
-      hintId: hint.hint_id,
-      hintClass: hint.hint_class,
-      hintType: hint.hint_type,
-      ttsUrl: hint.tts_url,
-      alreadySeen: false
-    };
-  });
+  return hints.map((hint) => ({
+    content: processMarkdown(hint.hint_markdown),
+    hintId: hint.hint_id,
+    hintClass: hint.hint_class,
+    hintType: hint.hint_type,
+    ttsUrl: hint.tts_url,
+    alreadySeen: false
+  }));
 };
 
 /**
@@ -319,7 +316,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
 authoredHintUtils.currentOpenedHintCount = function (levelId) {
   const unfinished = authoredHintUtils.getUnfinishedHints_();
   const finished = authoredHintUtils.getFinishedHints_();
-  return unfinished.concat(finished).filter((hint) => {
-    return hint.levelId === levelId;
-  }).length;
+  return unfinished.concat(finished).filter((hint) =>
+    hint.levelId === levelId
+  ).length;
 };
