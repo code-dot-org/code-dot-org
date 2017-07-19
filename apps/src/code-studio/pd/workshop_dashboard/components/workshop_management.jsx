@@ -31,9 +31,7 @@ const WorkshopManagement = React.createClass({
       this.permission = new Permission();
 
       const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
-      const surveyUrl = this.props.showSurveyUrl && `${surveyBaseUrl}/${this.props.workshopId}`;
-
-      this.surveyUrl = surveyUrl;
+      this.surveyUrl = this.props.showSurveyUrl && `${surveyBaseUrl}/${this.props.workshopId}`;
     }
   },
 
@@ -68,7 +66,7 @@ const WorkshopManagement = React.createClass({
 
   handleSurveyClick(event) {
     event.preventDefault();
-    this.context.router.push(this.state.surveyUrl);
+    this.context.router.push(this.surveyUrl);
   },
 
   renderViewButton() {

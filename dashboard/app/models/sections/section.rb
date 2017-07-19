@@ -193,7 +193,7 @@ class Section < ActiveRecord::Base
       linkToAssigned: link_to_assigned,
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
-      sectionCode: code
+      code: code,
     }
   end
 

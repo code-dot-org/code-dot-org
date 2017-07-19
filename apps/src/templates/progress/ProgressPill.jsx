@@ -4,6 +4,7 @@ import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import { levelType } from './progressTypes';
+import { levelProgressStyle, hoverStyle } from './progressStyles';
 
 import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
@@ -28,13 +29,6 @@ const styles = {
     borderWidth: 2,
     paddingTop: 3,
     paddingBottom: 3,
-  },
-  hoverStyle: {
-    ':hover': {
-      textDecoration: 'none',
-      color: color.white,
-      backgroundColor: color.level_current
-    }
   },
   text: {
     display: 'inline-block',
@@ -67,15 +61,24 @@ const ProgressPill = React.createClass({
     const url = multiLevelStep ? undefined : levels[0].url;
     const status = multiLevelStep ? 'multi_level' : levels[0].status;
 
+    let style = {
+      ...styles.levelPill,
+      ...BUBBLE_COLORS[status],
+      ...(url && hoverStyle)
+    };
+
+    if (experiments.isEnabled('progressBubbles')) {
+      style = {
+        ...style,
+        ...styles.levelPillNew,
+        ...(!multiLevelStep && levelProgressStyle(levels[0], false))
+      };
+    }
+
     return (
       <a href={url}>
         <div
-          style={{
-            ...styles.levelPill,
-            ...(experiments.isEnabled('progressBubbles') && styles.levelPillNew),
-            ...BUBBLE_COLORS[status],
-            ...(url && styles.hoverStyle)
-          }}
+          style={style}
         >
           {icon && <FontAwesome icon={icon}/>}
           {text && (
