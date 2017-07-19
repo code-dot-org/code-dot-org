@@ -426,6 +426,7 @@ testsContext.keys().forEach(testsContext);
     'scripts/stage_extras':         './src/sites/studio/pages/scripts/stage_extras.js',
     'signup':                       './src/sites/studio/pages/signup.js',
     'raceInterstitial':             './src/sites/studio/pages/raceInterstitial.js',
+    'layouts/_age_interstitial':    './src/sites/studio/pages/layouts/_age_interstitial.js',
     'layouts/_terms_interstitial':  './src/sites/studio/pages/layouts/_terms_interstitial.js',
     'maker/setup':                  './src/sites/studio/pages/maker/setup.js',
     'scriptOverview':               './src/sites/studio/pages/scriptOverview.js',

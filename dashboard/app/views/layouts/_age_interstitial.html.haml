@@ -4,32 +4,25 @@
       %h1{style: 'margin: 10px 0;font-size: 32px'}= t('age_interstitial.header')
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.message').html_safe
       = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
-        .form-group
+        - if current_user.sections_as_student.empty?
+          #usertype.form-group
+            = f.label :user_type, 'User Type'
+            = f.select :user_type, [User::TYPE_STUDENT, User::TYPE_TEACHER]
+        #age.form-group
           = f.label :age, t('age_interstitial.age')
           = f.select :age, User::AGE_DROPDOWN_OPTIONS, include_blank: true
+        - if current_user.sections_as_student.empty?
+          #email-address.form-group
+            = f.label :email, 'Email Address'
+            = f.email_field :email, class: 'input-xlarge fieldblock', maxlength: 255
         .form-group
           = f.submit t('continue'), class: 'btn btn-primary', disabled: true
       %p{style: 'font-size: 13px; line-height: 18px; color: #333'}!= t('age_interstitial.sign_out', url: destroy_user_session_url)
-:javascript
-  $().ready(function() {
-    $("#age-modal").modal('show');
 
-    $("#edit_user select").on('change', function(event) {
-      if (this.value === '') {
-        $("#edit_user .btn").prop('disabled', true);
-      } else {
-        $("#edit_user .btn").prop('disabled', false);
-      }
-    });
-
-    $( "#edit_user" ).submit(function( event ) {
-      event.preventDefault();
-      $.ajax({
-        type: 'POST',
-        url: $(this).attr('action'),
-        data: $(this).serialize(),
-        dataType: 'json',
-        success: function(data) {$("#age-modal").modal('hide');}
-      });
-    });
-  });
+:ruby
+  script_data = {
+    ageInterstitial: {
+      hasSections: !current_user.sections_as_student.empty?
+    }.to_json
+  }
+%script{src: minifiable_asset_path('js/layouts/_age_interstitial.js'), data: script_data}
