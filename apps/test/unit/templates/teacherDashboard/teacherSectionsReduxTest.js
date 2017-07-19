@@ -77,7 +77,7 @@ const validCourses = [
     script_name: "csd",
     category: "Full Courses",
     position: 1,
-    category_priority: -1,
+    category_priority: 0,
   },
   {
     id: 30,
@@ -85,7 +85,7 @@ const validCourses = [
     script_name: "csp",
     category: "Full Courses",
     position: 0,
-    category_priority: -1,
+    category_priority: 0,
     script_ids: [112, 113],
   }];
 
@@ -94,9 +94,9 @@ const validCourses = [
     id: 1,
     name: "Accelerated Course",
     script_name: "20-hour",
-    category: "CS Fundamentals",
+    category: "CS Fundamentals International",
     position: 0,
-    category_priority: 0,
+    category_priority: 3,
   },
   {
     id: 2,
@@ -104,7 +104,7 @@ const validCourses = [
     script_name: "Hour of Code",
     category: "Hour of Code",
     position: 1,
-    category_priority: 0,
+    category_priority: 2,
   },
   {
     id: 3,
@@ -112,7 +112,7 @@ const validCourses = [
     script_name: "edit-code",
     category: "other",
     position: null,
-    category_priority: 3,
+    category_priority: 15,
   },
   {
     id: 4,
@@ -120,7 +120,7 @@ const validCourses = [
     script_name: "events",
     category: "other",
     position: null,
-    category_priority: 3,
+    category_priority: 15,
   },
   {
     id: 112,
@@ -128,7 +128,7 @@ const validCourses = [
     script_name: "csp1",
     category: "'16-'17 CS Principles",
     position: 0,
-    category_priority: 0,
+    category_priority: 7,
   },
   {
     id: 113,
@@ -136,7 +136,7 @@ const validCourses = [
     script_name: "csp2",
     category: "'16-'17 CS Principles",
     position: 1,
-    category_priority: 0,
+    category_priority: 7,
   }
 ];
 
