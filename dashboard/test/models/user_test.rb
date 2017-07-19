@@ -741,6 +741,17 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', user.age
   end
 
+  test 'changing oauth user from student to teacher with different email is allowed' do
+    user = create :google_oauth2_student
+
+    assert user.provider == 'google_oauth2'
+
+    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@new.xx')
+    user.save!
+
+    assert_equal 'email@new.xx', user.email
+  end
+
   test 'changing from student to teacher clears terms_of_service_version' do
     user = create :student, terms_of_service_version: 1
     user.update!(user_type: User::TYPE_TEACHER, email: 'tos@example.com')
