@@ -8,13 +8,16 @@ module ScriptConstants
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
 
+  OTHER_CATEGORY_NAME = 'other'.freeze
+
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'Minecraft Adventurer'.freeze
   MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'Minecraft Designer'.freeze
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
-  # a category will be the order in which they appear in the dropdown.
+  # a category will be the order in which they appear in the dropdown, and the
+  # order of the categories will be their order in the dropdown.
   CATEGORIES = {
     full_course: [
       CSP = 'csp'.freeze,
@@ -110,17 +113,6 @@ module ScriptConstants
     ],
   }.freeze
 
-  # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
-  # This can be used to override that, with lower numbers ordered sooner, and higher numbers
-  # ordered later.
-  CATEGORY_ORDERING_PRIORITY = {
-    # We want full courses to show up first in our list
-    full_course: -1,
-    research_studies: 1,
-    csp: 2,
-    other: 3,
-  }.freeze
-
   def self.script_in_category?(category, script)
     return CATEGORIES[category].include? script
   end
@@ -141,7 +133,11 @@ module ScriptConstants
   end
 
   def self.category_priority(category)
-    CATEGORY_ORDERING_PRIORITY[category.to_sym] || 0
+    if category == OTHER_CATEGORY_NAME
+      1e6 # 'other' goes at the end
+    else
+      CATEGORIES.keys.find_index(category.to_sym)
+    end
   end
 
   def self.teacher_dashboard_name(script)
@@ -169,7 +165,8 @@ module ScriptConstants
   # @return {AssignableInfo} without strings translated
   def self.assignable_info(course_or_script)
     name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
-    first_category = ScriptConstants.categories(course_or_script[:name])[0] || 'other'
+    first_category = ScriptConstants.categories(course_or_script[:name])[0] ||
+        OTHER_CATEGORY_NAME
     {
       id: course_or_script[:id],
       name: name,
