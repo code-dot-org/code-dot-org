@@ -48,7 +48,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should get show if hidden and we have reset abuse permission" do
-    user = create(:user)
+    user = create(:teacher)
     user.permission = UserPermission::RESET_ABUSE
     sign_in user
     get :show, params: {id: @hidden_level_source.id}
@@ -56,7 +56,7 @@ class LevelSourcesControllerTest < ActionController::TestCase
   end
 
   test "should update if we have reset abuse permission" do
-    user = create(:user)
+    user = create(:teacher)
     user.permission = UserPermission::RESET_ABUSE
     sign_in user
     patch :update, params: {level_source: {hidden: true}, id: @level_source}

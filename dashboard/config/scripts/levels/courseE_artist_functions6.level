@@ -33,12 +33,15 @@
     "disable_sharing": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Focus only on making one window for now.  We'll create a function for it in the next puzzle.\",\"hint_id\":\"grade4_artist_functions_windows0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/921634d77b4474329a83fe08276bcf07/grade4_artist_functions_windows0.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.\",\"hint_id\":\"grade4_artist_functions_windows0_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4e936a477a6aabc925be299efa8be9db/grade4_artist_functions_windows0.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Focus only on making one window for now.  We'll create a function for it in the next puzzle.\",\"hint_id\":\"grade4_artist_functions_windows0_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/921634d77b4474329a83fe08276bcf07/courseE_artist_functions6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using nested loops, where the inner loop makes the square and the outer loop rotates the square four times.\",\"hint_id\":\"grade4_artist_functions_windows0_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4e936a477a6aabc925be299efa8be9db/courseE_artist_functions6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"grade4_artist_functions_windows0_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseE_artist_functions6.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:48:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

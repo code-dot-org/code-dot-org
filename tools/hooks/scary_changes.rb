@@ -52,7 +52,7 @@ class ScaryChangeDetector
   end
 
   def detect_special_files
-    changes = @all.grep(/locals.yml/)
+    changes = @all.grep(/locals.yml$/)
     unless changes.empty?
       puts red <<-EOS
 

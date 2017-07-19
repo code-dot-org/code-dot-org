@@ -4,12 +4,48 @@ class ApiController < ApplicationController
   layout false
   include LevelsHelper
 
+  private def query_clever_service(endpoint)
+    begin
+      auth = {authorization: "Bearer #{current_user.oauth_token}"}
+      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
+    rescue RestClient::ExceptionWithResponse => e
+      render status: e.response.code, json: {error: e.response.body}
+    end
+
+    yield JSON.parse(response)['data']
+  end
+
+  def clever_classrooms
+    query_clever_service("v1.1/teachers/#{current_user.uid}/sections") do |response|
+      json = response.map do |section|
+        data = section['data']
+        {
+          id: data['id'],
+          name: data['course_name'],
+          section: data['course_number'],
+          enrollment_code: data['sis_id'],
+        }
+      end
+
+      render json: {courses: json}
+    end
+  end
+
+  def import_clever_classroom
+    course_id = params[:courseId].to_s
+
+    query_clever_service("v1.1/sections/#{course_id}/students") do |students|
+      section = CleverSection.from_service(course_id, current_user.id, students)
+      render json: section.summarize
+    end
+  end
+
   GOOGLE_AUTH_SCOPES = [
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_COURSES_READONLY,
     Google::Apis::ClassroomV1::AUTH_CLASSROOM_ROSTERS_READONLY,
   ].freeze
 
-  def google_classrooms
+  private def query_google_classroom_service
     client = Signet::OAuth2::Client.new(
       authorization_uri: 'https://accounts.google.com/o/oauth2/auth',
       token_credential_uri:  'https://www.googleapis.com/oauth2/v3/token',
@@ -24,8 +60,7 @@ class ApiController < ApplicationController
     service.authorization = client
 
     begin
-      response = service.list_courses(teacher_id: 'me', page_size: 100)
-      render json: response.to_h
+      yield service
 
       if client.access_token != current_user.oauth_token
         current_user.update!(
@@ -35,6 +70,24 @@ class ApiController < ApplicationController
       end
     rescue Google::Apis::ClientError => client_error
       render status: :forbidden, json: {error: client_error}
+    end
+  end
+
+  def google_classrooms
+    query_google_classroom_service do |service|
+      response = service.list_courses(teacher_id: 'me')
+      render json: response.to_h
+    end
+  end
+
+  def import_google_classroom
+    course_id = params[:courseId].to_s
+
+    query_google_classroom_service do |service|
+      students = service.list_course_students(course_id).students
+      section = GoogleClassroomSection.from_service(course_id, current_user.id, students)
+
+      render json: section.summarize
     end
   end
 
