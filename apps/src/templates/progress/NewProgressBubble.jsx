@@ -103,16 +103,6 @@ const NewProgressBubble = React.createClass({
 
     const disabled = this.props.disabled || levelIcon === 'lock';
 
-    if (level.isUnplugged && !smallBubble) {
-      return (
-        <ProgressPill
-          levels={[level]}
-          text={i18n.unpluggedActivity()}
-          fontSize={12}
-        />
-      );
-    }
-
     const style = {
       ...styles.main,
       ...(!disabled && hoverStyle),
@@ -127,11 +117,36 @@ const NewProgressBubble = React.createClass({
     }
 
     const tooltipId = _.uniqueId();
-    let tooltipText = levelName || '';
+    let tooltipText = levelName ||
+      (level.isUnplugged && i18n.unpluggedActivity()) || '';
     if (number) {
       tooltipText = `${number}. ${tooltipText}`;
     }
 
+    const tooltip = (
+      <ReactTooltip
+        id={tooltipId}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        <div style={styles.tooltip}>
+          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+          {tooltipText}
+        </div>
+      </ReactTooltip>
+    );
+
+    if (level.isUnplugged && !smallBubble) {
+      return (
+        <ProgressPill
+          levels={[level]}
+          text={i18n.unpluggedActivity()}
+          fontSize={12}
+          tooltip={tooltip}
+        />
+      );
+    }
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
     let bubble = (
@@ -165,17 +180,7 @@ const NewProgressBubble = React.createClass({
                 {smallBubble ? '-' : number}
               </span>
             )}
-            <ReactTooltip
-              id={tooltipId}
-              role="tooltip"
-              wrapper="span"
-              effect="solid"
-            >
-              <div style={styles.tooltip}>
-                <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-                {tooltipText}
-              </div>
-            </ReactTooltip>
+            {tooltip}
           </div>
         </div>
       </div>
