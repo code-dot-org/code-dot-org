@@ -6,7 +6,7 @@ import { trySetSessionStorage } from '../utils';
 import cookies from 'js-cookie';
 var sessionStorage = window.sessionStorage;
 
-import { mergeActivityResult } from './activityUtils';
+import { mergeActivityResult, activityCssClass } from './activityUtils';
 
 var clientState = module.exports = {};
 
@@ -103,6 +103,7 @@ clientState.levelProgress = function (scriptName, levelId) {
  * @param {TestResult} testResult - Indicates pass, fail, perfect
  * @param {string} scriptName - Which script this is for
  * @param {number} levelId - Which level this is for
+ * @return {boolean} true if the update changes visible level progress.
  */
 clientState.trackProgress = function (result, lines, testResult, scriptName, levelId) {
   if (result && isFinite(lines)) {
@@ -112,7 +113,9 @@ clientState.trackProgress = function (result, lines, testResult, scriptName, lev
   var savedResult = clientState.levelProgress(scriptName, levelId);
   if (testResult <= clientState.MAXIMUM_CACHABLE_RESULT &&
       savedResult !== mergeActivityResult(savedResult, testResult)) {
-    setLevelProgress(scriptName, levelId, testResult);
+    return setLevelProgress(scriptName, levelId, testResult);
+  } else {
+    return false;
   }
 };
 
@@ -141,15 +144,17 @@ clientState.batchTrackProgress = function (scriptName, progress) {
  * @param {string} scriptName The script name
  * @param {number} levelId The level
  * @param {number} progress Indicates pass, fail, perfect
- * @returns {number}
+ * @return {boolean} true if the update changes visible level progress.
  */
 function setLevelProgress(scriptName, levelId, progress) {
   var progressMap = clientState.allLevelsProgress();
   if (!progressMap[scriptName]) {
     progressMap[scriptName] = {};
   }
+  const oldProgress = progressMap[scriptName][levelId];
   progressMap[scriptName][levelId] = progress;
   trySetSessionStorage('progress', JSON.stringify(progressMap));
+  return activityCssClass(oldProgress) !== activityCssClass(progress);
 }
 
 /**

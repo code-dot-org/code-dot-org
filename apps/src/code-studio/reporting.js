@@ -213,7 +213,7 @@ reporting.sendReport = function (report) {
   }
   const queryString = queryItems.join('&');
 
-  clientState.trackProgress(
+  const progressUpdated = clientState.trackProgress(
     report.result,
     report.lines,
     report.testResult,
@@ -224,7 +224,7 @@ reporting.sendReport = function (report) {
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (appOptions.postMilestone ||
+  if (progressUpdated && appOptions.postMilestone ||
     (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
 
     var thisAjax = $.ajax({
