@@ -17,71 +17,71 @@ export default storybook => {
       id: 123,
       levels: [
         {
-          "ids": [
+          ids: [
             5086
           ],
-          "activeId": 5086,
-          "position": 1,
-          "kind": "puzzle",
-          "icon": "fa-file-text",
-          "title": 1,
-          "url": "http://studio.code.org/s/csp1/stage/2/puzzle/1",
-          "freePlay": false,
-          "progression": "Lesson Vocabulary & Resources",
+          activeId: 5086,
+          position: 1,
+          kind: "puzzle",
+          icon: "fa-file-text",
+          title: 1,
+          url: "http://studio.code.org/s/csp1/stage/2/puzzle/1",
+          freePlay: false,
+          progression: "Lesson Vocabulary & Resources",
           is_concept_level: true,
         },
         {
-          "ids": [
+          ids: [
             2723
           ],
-          "activeId": 2723,
-          "position": 2,
-          "kind": "assessment",
-          "icon": "fa-list-ol",
-          "title": 2,
-          "url": "http://studio.code.org/s/csp1/stage/2/puzzle/2",
-          "freePlay": false,
-          "progression": "Check Your Understanding",
+          activeId: 2723,
+          position: 2,
+          kind: "assessment",
+          icon: "fa-check-square-o",
+          title: 2,
+          url: "http://studio.code.org/s/csp1/stage/2/puzzle/2",
+          freePlay: false,
+          progression: "Check Your Understanding",
           is_concept_level: true,
         },
         {
-          "ids": [
+          ids: [
             2441
           ],
-          "activeId": 2441,
-          "position": 3,
-          "kind": "assessment",
-          "icon": "fa-list-ol",
-          "title": 3,
-          "url": "http://studio.code.org/s/csp1/stage/2/puzzle/3",
-          "freePlay": false,
-          "progression": "Check Your Understanding"
+          activeId: 2441,
+          position: 3,
+          kind: "assessment",
+          icon: "fa-check-square-o",
+          title: 3,
+          url: "http://studio.code.org/s/csp1/stage/2/puzzle/3",
+          freePlay: false,
+          progression: "Check Your Understanding"
         },
         {
-          "ids": [
+          ids: [
             2444
           ],
-          "activeId": 2444,
-          "position": 4,
-          "kind": "assessment",
-          "icon": "fa-list-ol",
-          "title": 4,
-          "url": "http://studio.code.org/s/csp1/stage/2/puzzle/4",
-          "freePlay": false,
-          "progression": "Check Your Understanding"
+          activeId: 2444,
+          position: 4,
+          kind: "assessment",
+          icon: "fa-check-square-o",
+          title: 4,
+          url: "http://studio.code.org/s/csp1/stage/2/puzzle/4",
+          freePlay: false,
+          progression: "Check Your Understanding"
         },
         {
-          "ids": [
+          ids: [
             2744
           ],
-          "activeId": 2744,
-          "position": 5,
-          "kind": "assessment",
-          "icon": "fa-list-ol",
-          "title": 5,
-          "url": "http://studio.code.org/s/csp1/stage/2/puzzle/5",
-          "freePlay": false,
-          "progression": "Check Your Understanding"
+          activeId: 2744,
+          position: 5,
+          kind: "assessment",
+          icon: "fa-check-square-o",
+          title: 5,
+          url: "http://studio.code.org/s/csp1/stage/2/puzzle/5",
+          freePlay: false,
+          progression: "Check Your Understanding"
         }
       ]
     }]
