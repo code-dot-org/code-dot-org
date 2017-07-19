@@ -18,23 +18,15 @@ module ScriptLevelsHelper
     else
       response[:message] = 'no more levels'
 
-      if script_level.script.wrapup_video
-        response[:video_info] = wrapup_video_then_redirect_response(
-          script_level.script.wrapup_video,
-          next_user_redirect
-        )
-        return
+      if (wrapup = script_level.script.wrapup_video)
+        response[:video_info] = wrapup.summarize
+        response[:video_info][:redirect] = next_user_redirect
+        return response
       end
     end
 
     response[:redirect] = next_user_redirect
     response
-  end
-
-  def wrapup_video_then_redirect_response(wrapup_video, redirect)
-    video_info_response = wrapup_video.summarize
-    video_info_response[:redirect] = redirect
-    video_info_response
   end
 
   def script_completion_redirect(script)
