@@ -96,7 +96,6 @@ export default storybook => {
         // this component
         story: () => {
           experiments.setEnabled('progressBubbles', true);
-          console.log('disable');
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
