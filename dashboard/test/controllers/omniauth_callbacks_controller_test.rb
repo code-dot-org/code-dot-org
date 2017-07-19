@@ -215,19 +215,19 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create(:teacher, provider: nil, email: 'test123@xyz.com')
 
     @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(
-      provider:"google_oauth2",
-      uid:"12345",
+      provider: "google_oauth2",
+      uid: "12345",
       info: {
-        name:"Test Teacher",
-        user_type:"teacher",
-        email:"test123@xyz.com",
-        first_name:"Test",
-        last_name:"Teacher",
+        name: "Test Teacher",
+        user_type: "teacher",
+        email: "test123@xyz.com",
+        first_name: "Test",
+        last_name: "Teacher",
       },
-      credentials:{
-         token:"ya29.Glxxx",
-         expires_at:1500430899,
-         expires:true
+      credentials: {
+        token: "xxxxxxxx",
+        expires_at: 1_500_430_899,
+        expires: true
       }
     )
     @request.env['omniauth.params'] = {}
