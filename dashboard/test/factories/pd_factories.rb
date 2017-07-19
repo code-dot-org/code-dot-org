@@ -190,24 +190,26 @@ FactoryGirl.define do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
     after(:build) do |survey|
-      enrollment = survey.pd_enrollment
-      workshop = enrollment.workshop
+      if survey.form_data.presence.nil?
+        enrollment = survey.pd_enrollment
+        workshop = enrollment.workshop
 
-      survey_hash = build :pd_teachercon_survey_hash
+        survey_hash = build :pd_teachercon_survey_hash
 
-      Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
-        survey_hash[field] = {}
-      end
-
-      survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
-
-      workshop.facilitators.each do |facilitator|
         Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
-          survey_hash[field][facilitator.name] = 'Free response'
+          survey_hash[field] = {}
         end
-      end
 
-      survey.update_form_data_hash(survey_hash)
+        survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+        workshop.facilitators.each do |facilitator|
+          Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+            survey_hash[field][facilitator.name] = 'Free response'
+          end
+        end
+
+        survey.update_form_data_hash(survey_hash)
+      end
     end
   end
 
@@ -311,28 +313,30 @@ FactoryGirl.define do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
     after(:build) do |survey|
-      enrollment = survey.pd_enrollment
-      workshop = enrollment.workshop
+      if survey.form_data.nil?
+        enrollment = survey.pd_enrollment
+        workshop = enrollment.workshop
 
-      survey_hash = build :pd_local_summer_workshop_survey_hash
+        survey_hash = build :pd_local_summer_workshop_survey_hash
 
-      Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
-        survey_hash[field] = {}
-      end
-
-      survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
-
-      workshop.facilitators.each do |facilitator|
         Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
-          if Pd::LocalSummerWorkshopSurvey.options.key? field
-            survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
-          else
-            survey_hash[field][facilitator.name] = 'Free Response'
+          survey_hash[field] = {}
+        end
+
+        survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+        workshop.facilitators.each do |facilitator|
+          Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+            if Pd::LocalSummerWorkshopSurvey.options.key? field
+              survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
+            else
+              survey_hash[field][facilitator.name] = 'Free Response'
+            end
           end
         end
-      end
 
-      survey.update_form_data_hash(survey_hash)
+        survey.update_form_data_hash(survey_hash)
+      end
     end
   end
 
