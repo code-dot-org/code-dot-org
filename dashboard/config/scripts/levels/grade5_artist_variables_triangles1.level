@@ -34,14 +34,15 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To make an internal angle of 60 degrees in this triangle, remember to turn the artist 120 degrees.\",\"hint_id\":\"grade5_artist_variables_triangles1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/919a8ad3ea9d5b2c41e3df2d5696f613/grade5_artist_variables_triangles1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To make an internal angle of 60 degrees in this triangle, remember to turn the artist 120 degrees.\",\"hint_id\":\"grade5_artist_variables_triangles1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/919a8ad3ea9d5b2c41e3df2d5696f613/grade5_artist_variables_triangles1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `repeat` loop to make your code shorter.\",\"hint_id\":\"grade5_artist_variables_triangles1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78490252ecc2f035d5a9cbc74d1985a1/grade5_artist_variables_triangles1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Inside your loop, you will want to move forward 50 pixels, then turn left 120 degrees.\",\"hint_id\":\"grade5_artist_variables_triangles1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1e58cef7b16a85042e9110a0b3b2994d/grade5_artist_variables_triangles1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 20:17:12 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 20:17:12 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:42:27 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
