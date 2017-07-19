@@ -88,12 +88,24 @@ module ProjectsList
       }.with_indifferent_access
     end
 
+    def project_and_user_fields
+      [
+        :storage_apps__id___id,
+        :storage_apps__storage_id___storage_id,
+        :storage_apps__value___value,
+        :storage_apps__project_type___project_type,
+        :storage_apps__published_at___published_at,
+        :users__name___name,
+        :users__birthday___birthday,
+      ]
+    end
+
     def fetch_published_project_types(project_types, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
       {}.tap do |projects|
         project_types.map do |type|
           projects[type] = PEGASUS_DB[:storage_apps].
-            select_append(Sequel[:storage_apps][:id].as(:channel_id)).
+            select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
             where(state: 'active', project_type: type, abuse_score: 0).
@@ -107,9 +119,10 @@ module ProjectsList
     end
 
     # extracts published project data from a row that is a join of the
-    # storage_apps and user tables.
+    # storage_apps and user tables. See project_and_user_fields for which
+    # fields it contains.
     def get_published_project_and_user_data(project_and_user)
-      channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:channel_id])
+      channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
       StorageApps.get_published_project_data(project_and_user, channel_id).merge(
         {
           # For privacy reasons, include only the first initial of the student's name.
