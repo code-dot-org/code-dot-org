@@ -43,7 +43,8 @@ var msg = require('@cdo/locale');
  * @property {string} hintType
  * @property {string} ttsUrl
  * @property {string} ttsMessage
- *
+ */
+/**
  * @typedef {Object} UnfinishedHint
  * @augments HintData
  * @property {number} [prevTime]
@@ -51,7 +52,8 @@ var msg = require('@cdo/locale');
  * @property {number} [prevTestResult]
  * @property {number} [prevActivityId]
  * @property {number} [prevLevelSourceId]
- *
+ */
+/**
  * @typedef {Object} FinishedHint
  * @augments UnfinishedHint
  * @property {number} nextTime
@@ -59,7 +61,8 @@ var msg = require('@cdo/locale');
  * @property {number} nextTestResult
  * @property {number} nextActivityId
  * @property {number} nextLevelSourceId
- *
+ */
+/**
  * @typedef {Object} FinalizedHint
  * @augments FinishedHint
  * @property {number} finalTime
@@ -67,7 +70,8 @@ var msg = require('@cdo/locale');
  * @property {number} finalTestResult
  * @property {number} finalActivityId
  * @property {number} finalLevelSourceId
- *
+ */
+/**
  * @typedef {Object} AttemptRecord
  * @property {number} time
  * @property {number} attempt
@@ -147,23 +151,22 @@ authoredHintUtils.clearFinishedHints_ = function () {
 };
 
 /**
- * @return {FinalizedHints[]}
+ * @return {FinalizedHint[]}
  */
 authoredHintUtils.finalizeHints_ = function () {
-  var finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
+  const finalAttemptRecord = authoredHintUtils.getLastAttemptRecord_();
   localStorage.removeItem('last_attempt_record');
   var hints = authoredHintUtils.getFinishedHints_();
   if (finalAttemptRecord) {
-    hints = hints.map(function (hint){
-      hint = Object.assign({
+    hints = hints.map((hint) =>
+      Object.assign({
         finalTime: finalAttemptRecord.time,
         finalAttempt: finalAttemptRecord.attempt,
         finalTestResult: finalAttemptRecord.testResult,
         finalActivityId: finalAttemptRecord.activityId,
         finalLevelSourceId: finalAttemptRecord.levelSourceId,
-      }, hint);
-      return hint;
-    });
+      }, hint)
+    );
   }
   return hints;
 };
@@ -278,10 +281,19 @@ authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
 
 /**
  * Generates authored hints as used by StudioApp from levelbuilder JSON.
- * @param {string} - JSON representing an array of hints
+ * @param {string} levelBuilderAuthoredHints - JSON representing an array of hints
  * @return {AuthoredHint[]}
  */
 authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
+  /**
+   * @type {{
+   *   hint_markdown,
+   *   hint_id,
+   *   hint_class,
+   *   hint_type,
+   *   tts_url
+   * }[]}
+   */
   var hints;
   try {
     hints = JSON.parse(levelBuilderAuthoredHints);
@@ -301,7 +313,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
 };
 
 /**
- * Returns the number of hints that the user has opened on the given level, but
+ * @return {number} number of hints that the user has opened on the given level, but
  * haven't been reported to the server yet.
  */
 authoredHintUtils.currentOpenedHintCount = function (levelId) {

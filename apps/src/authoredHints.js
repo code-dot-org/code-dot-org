@@ -58,7 +58,7 @@ AuthoredHints.prototype.displayMissingBlockHints = function (blocks) {
 };
 
 /**
- * @param {Object} response
+ * @param {MilestoneResponse} response
  */
 AuthoredHints.prototype.finishHints = function (response) {
   authoredHintUtils.finishHints({
