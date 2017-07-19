@@ -162,6 +162,12 @@ FactoryGirl.define do
         end
       end
 
+      factory :google_oauth2_student do
+        encrypted_password nil
+        provider 'google_oauth2'
+        sequence(:uid) {|n| n}
+      end
+
       factory :old_student do
         birthday Time.zone.today - 30.years
       end
