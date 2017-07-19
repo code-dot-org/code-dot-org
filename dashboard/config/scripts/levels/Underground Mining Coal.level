@@ -43,13 +43,13 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember that the `destroy block` command acts on the space in front of your character.\",\"hint_id\":\"Underground Mining Coal_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e86cecd2d4764c41bb13ba91c83c3676/Underground Mining Coal.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The pieces of wall with black specks in them are coal! Use `destroy block` on these to mine the coal.\",\"hint_id\":\"Underground Mining Coal_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9142065b18428de39346862b8dc59cf/Underground Mining Coal.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use `place torch` to put a torch in a space.\",\"hint_id\":\"Underground Mining Coal_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0c62d63f2eeea16f6612c6fbb8fb7caf/Underground Mining Coal.mp3\"}]",
+    "authored_hints": "[]",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 15:25:12 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:31:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 15:25:12 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:31:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:49:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
