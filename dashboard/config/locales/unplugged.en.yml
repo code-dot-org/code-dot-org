@@ -191,3 +191,15 @@ en:
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Real-life Algorithms: Plant a Seed'
+        desc: This lesson calls out ways we use algorithms in our daily lives, using the act of planting a seed as an example. It also focuses on the bigger picture of computer science and how algorithms play an essential part.
+      courseA_unplugged_happyMaps:
+        title: Happy Maps
+        desc: Students create simple algorithms (sets of instructions) to move a character through a maze using a single command.
+      courseA_unplugged_goingPlacesSafely:
+        title: Going Places Safely
+        desc: The Internet is a powerful, but sometimes dangerous place. Teachers introduce how to stay safe while navigating the Internet.
+      courseABC_unplugged_bigEvent:
+        title: The Big Event
+        desc: Students are introduced to the programming concept of "events," which are actions that a computer constantly monitors for. The teacher will press buttons on a paper remote and students will react depending on which button is pressed.

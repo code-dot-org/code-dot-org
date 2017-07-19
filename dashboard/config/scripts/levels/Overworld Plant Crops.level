@@ -35,7 +35,7 @@
     "free_play": "false",
     "grid_width": "10",
     "grid_height": "10",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `plant crop` command to plant a crop in the square you are standing in.\",\"hint_id\":\"Overworld Plant Crops_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9b23bee6ea249ded38094076d2838e38/Overworld Plant Crops.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Both stripes of dark brown land by the water need to be filled with crops.\",\"hint_id\":\"Overworld Plant Crops_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e47070564e384a962f88f4ea02623b76/Overworld Plant Crops.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember you can put more than one command inside of a `repeat` loop.\",\"hint_id\":\"Overworld Plant Crops_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/206a0e2da98b93b006d848483fd58af1/Overworld Plant Crops.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "false",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
@@ -50,7 +50,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-18 15:25:10 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 15:25:10 +0000\",\"changed\":[\"notes\",\"published\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:48:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

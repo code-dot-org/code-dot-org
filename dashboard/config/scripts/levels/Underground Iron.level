@@ -45,13 +45,13 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The iron blocks are the speckled spaces behind the torch! But how are you going to get there?\",\"hint_id\":\"Underground Iron_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78a9733fd40faaad97abe38c529699bb/Underground Iron.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!\",\"hint_id\":\"Underground Iron_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08bd79e348bf4004792784582509f948/Underground Iron.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"Underground Iron_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/Underground Iron.mp3\"}]",
+    "authored_hints": "[]",
     "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 15:27:33 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:34:14 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 15:27:33 +0000\",\"changed\":[\"notes\",\"published\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 15:34:14 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 15:49:55 +0000\",\"changed\":[\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
