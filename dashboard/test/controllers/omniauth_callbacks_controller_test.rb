@@ -210,4 +210,34 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = User.last
     assert_equal '', user.email
   end
+
+  test 'authorizing with Google account with known email performs silent takeover' do
+    user = create(:teacher, provider: nil, email: 'test123@xyz.com')
+
+    @request.env['omniauth.auth'] = OmniAuth::AuthHash.new(
+      provider:"google_oauth2",
+      uid:"12345",
+      info: {
+        name:"Test Teacher",
+        user_type:"teacher",
+        email:"test123@xyz.com",
+        first_name:"Test",
+        last_name:"Teacher",
+      },
+      credentials:{
+         token:"ya29.Glxxx",
+         expires_at:1500430899,
+         expires:true
+      }
+    )
+    @request.env['omniauth.params'] = {}
+
+    assert_does_not_create(User) do
+      get :google_oauth2
+    end
+
+    assert_equal user.id, session['warden.user.user.key'].first.first
+    assert_equal user.provider, 'google_oauth2'
+    assert_equal user.uid, '12345'
+  end
 end
