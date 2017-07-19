@@ -13,7 +13,7 @@ export const sectionShape = PropTypes.shape({
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
-  script: PropTypes.number,
+  scriptId: PropTypes.number,
 });
 
 export const assignmentShape = PropTypes.shape({

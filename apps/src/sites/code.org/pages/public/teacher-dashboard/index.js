@@ -153,7 +153,7 @@ function main() {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
       //  'save':   {method:'POST'},
-      //  'query':  {method:'GET', isArray:true},
+         query: {method: 'GET', url: '/dashboardapi/sections', isArray: true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
