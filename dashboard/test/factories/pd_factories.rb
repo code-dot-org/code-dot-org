@@ -35,7 +35,6 @@ FactoryGirl.define do
           start: evaluator.sessions_from + i.days,
           duration_hours: evaluator.each_session_hours
         )
-        puts "built session"
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -99,7 +98,7 @@ FactoryGirl.define do
 
           create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, form_data: survey_hash.to_json
         else
-          raise 'Num_completed_surveys trait unsupported for '
+          raise 'Num_completed_surveys trait unsupported for this workshop type'
         end
       end
     end
