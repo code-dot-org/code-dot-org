@@ -141,15 +141,18 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 <a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @codeorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <br/><br/>
+
 <script src="//platform.linkedin.com/in.js" type="text/javascript">
   lang: en_US
 </script>
+<!--  FOLLOW BUTTONS FOR GOOGLE PLUS OR TUMBLR ETC
 <script type="IN/FollowCompany" data-id="3129360" data-counter="none"></script>
 <br/>
 <iframe  frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="116" src="https://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=codeorg&color_scheme=dark"></iframe>
 <br/>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/113408212816493509628" data-rel="publisher"></div>
+-->
 
 <hr/>
 

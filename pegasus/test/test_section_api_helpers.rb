@@ -290,6 +290,15 @@ class SectionApiHelperTest < SequelTestCase
           end
         end
       end
+
+      it 'returns student count but not students' do
+        sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
+        assert_equal [1, 0, 0], sections.map {|s| s[:studentCount]}
+
+        # Shouldn't return section-specific data -- use the specific API for each.
+        refute sections.any? {|section| section[:students]}
+        refute sections.any? {|section| section[:teachers]}
+      end
     end
   end
 
