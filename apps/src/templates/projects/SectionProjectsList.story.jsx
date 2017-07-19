@@ -1,5 +1,6 @@
 import React from 'react';
 import SectionProjectsList from './SectionProjectsList';
+import experiments from '@cdo/apps/util/experiments';
 
 const STUB_PROJECTS_DATA = [
   {
@@ -30,12 +31,12 @@ const STUB_PROJECTS_DATA = [
 export default storybook => {
   return storybook
     .storiesOf('SectionProjectsList', module)
-    .withExperiments('showProjectThumbnails')
     .addStoryTable([
       {
         name: 'basic section projects list without thumbnail column',
         description: `This is a simple section projects list with stub data.`,
         story: () => {
+          experiments.setEnabled('showProjectThumbnails', true);
           return (
             <SectionProjectsList
               projectsData={STUB_PROJECTS_DATA}
@@ -49,6 +50,7 @@ export default storybook => {
         name: 'basic section projects list with thumbnail column',
         description: `This is a simple section projects list with stub data.`,
         story: () => {
+          experiments.setEnabled('showProjectThumbnails', true);
           return (
             <SectionProjectsList
               projectsData={STUB_PROJECTS_DATA}
