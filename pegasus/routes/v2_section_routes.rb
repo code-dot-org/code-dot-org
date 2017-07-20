@@ -58,6 +58,7 @@ post '/v2/sections/:id/update' do |id|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/sections/#{id}"))
 end
 
+# DEPRECATED: Use GET /dashboardapi/sections/<id>/students
 get '/v2/sections/:id/students' do |id|
   only_for 'code.org'
   dont_cache
