@@ -107,7 +107,16 @@ class EditSectionForm extends Component{
             {i18n.enableLessonExtras()}
           </Heading3>
           <div>
-            <div>{i18n.explainLessonExtras()}</div>
+            <div>
+              {i18n.explainLessonExtras()}
+              {' '}
+              <a
+                href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
+                target="_blank"
+              >
+                {i18n.explainLessonExtrasLearnMore()}
+              </a>
+            </div>
             <select
               value = {this.props.extras}
               onChange={val => this.props.handleExtras(val.target.value)}
@@ -120,7 +129,16 @@ class EditSectionForm extends Component{
             {i18n.enablePairProgramming()}
           </Heading3>
           <div>
-            <div>{i18n.explainPairProgramming()}</div>
+            <div>
+              {i18n.explainPairProgramming()}
+              {' '}
+              <a
+                href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
+                target="_blank"
+              >
+                {i18n.explainPairProgrammingLearnMore()}
+              </a>
+            </div>
             <select
               value = {this.props.pairing}
               onChange={val => this.props.handlePairing(val.target.value)}
