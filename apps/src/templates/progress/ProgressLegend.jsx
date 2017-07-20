@@ -72,11 +72,11 @@ TD.propTypes = {
 
 export default class ProgressLegend extends Component {
   static propTypes = {
-    csfColumn: PropTypes.bool.isRequired,
+    excludeCsfColumn: PropTypes.bool.isRequired,
   };
 
   render() {
-    const { csfColumn } = this.props;
+    const { excludeCsfColumn } = this.props;
     return (
       <table style={styles.table}>
         <thead>
@@ -87,7 +87,7 @@ export default class ProgressLegend extends Component {
             <TD style={styles.headerCell} colSpan={3}>
               {i18n.levelDetails()}
             </TD>
-            <TD style={styles.headerCell} colSpan={csfColumn ? 5 : 4}>
+            <TD style={styles.headerCell} colSpan={excludeCsfColumn ? 4 : 5}>
               {i18n.levelStatus()}
             </TD>
           </tr>
@@ -95,7 +95,7 @@ export default class ProgressLegend extends Component {
             <TD colSpan={4}/>
             <TD>{i18n.notStarted()}</TD>
             <TD>{i18n.inProgress()}</TD>
-            {csfColumn &&
+            {!excludeCsfColumn &&
               <TD>
                 <div>{i18n.completed()}</div>
                 <div style={styles.secondaryText}>({i18n.tooManyBlocks()})</div>
@@ -103,7 +103,7 @@ export default class ProgressLegend extends Component {
             }
             <TD>
               <div>{i18n.completed()}</div>
-              {csfColumn && <div style={styles.secondaryText}>({i18n.perfect()})</div>}
+              {!excludeCsfColumn && <div style={styles.secondaryText}>({i18n.perfect()})</div>}
             </TD>
             <TD>{i18n.submitted()}</TD>
           </tr>
@@ -149,7 +149,7 @@ export default class ProgressLegend extends Component {
                 disabled={false}
               />
             </TD>
-            {csfColumn && <TD>N/A</TD>}
+            {!excludeCsfColumn && <TD>N/A</TD>}
             <TD>
               <NewProgressBubble
                 level={{
@@ -202,7 +202,7 @@ export default class ProgressLegend extends Component {
                 disabled={false}
               />
             </TD>
-            {csfColumn &&
+            {!excludeCsfColumn &&
               <TD>
                 <NewProgressBubble
                   level={{

@@ -13,6 +13,7 @@ import experiments from '@cdo/apps/util/experiments';
 const ScriptOverview = React.createClass({
   propTypes: {
     onOverviewPage: React.PropTypes.bool.isRequired,
+    excludeCsfColumnInLegend: React.PropTypes.bool.isRequired,
 
     // redux provided
     perLevelProgress: React.PropTypes.object.isRequired,
@@ -35,12 +36,12 @@ const ScriptOverview = React.createClass({
       scriptName,
       viewAs,
       isRtl,
-      onOverviewPage
+      onOverviewPage,
+      excludeCsfColumnInLegend
     } = this.props;
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
-    // TODO: Make csfColumn LB configurable instead of hard coded to true
     return (
       <div>
         {onOverviewPage && (
@@ -55,7 +56,7 @@ const ScriptOverview = React.createClass({
 
         <ProgressTable/>
         {experiments.isEnabled('progressBubbles') && onOverviewPage &&
-          <ProgressLegend csfColumn={true}/>
+          <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend}/>
         }
       </div>
     );
