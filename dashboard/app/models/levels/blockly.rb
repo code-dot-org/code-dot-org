@@ -48,6 +48,7 @@ class Blockly < Level
     slider_speed
     disable_param_editing
     disable_variable_editing
+    disable_procedure_autopopulate
     use_modal_function_editor
     use_contract_editor
     default_num_example_blocks
@@ -294,7 +295,8 @@ class Blockly < Level
 
       # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
       if level_prop['fn_successCondition'] || level_prop['fn_failureCondition']
-        level_prop['goal'] = {fn_successCondition: level_prop['fn_successCondition'], fn_failureCondition: level_prop['fn_failureCondition']}
+        level_prop['goal'] ||= {}
+        level_prop['goal'].merge!({fn_successCondition: level_prop['fn_successCondition'], fn_failureCondition: level_prop['fn_failureCondition']})
         level_prop.delete('fn_successCondition')
         level_prop.delete('fn_failureCondition')
       end

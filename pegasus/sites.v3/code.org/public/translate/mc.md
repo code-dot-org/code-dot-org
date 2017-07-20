@@ -42,3 +42,7 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 	* [If statements](https://amara.org/en/videos/CQ2Pl9U4YGzH/info/minecraft-hour-of-code-if-statements/)
 	* [Congrats](https://amara.org/en/videos/qTYN8blMcwOQ/info/minecraft-hour-of-code-build-your-own/)
 	* [Congrats with share](https://amara.org/en/videos/YOo9ipbbkmzG/info/minecraft-hour-of-code-build-your-own-share/)
+
+---
+
+<%= view :minecraft_adventurer_languages %>

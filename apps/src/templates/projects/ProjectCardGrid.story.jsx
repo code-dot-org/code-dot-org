@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
-import {selectedGallery, selectGallery} from './projectsModule';
+import projects, {selectGallery} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import {Galleries} from './projectConstants';
@@ -25,18 +25,14 @@ const defaultProject = {
   currentGallery: "public"
 };
 
-const hasOlderProjects = {
-  applab: true,
-  gamelab: true,
-  playlab: true,
-  artist: true,
-};
+let nextChannelId = 0;
 
 function generateFakeProject(overrideData) {
   return {
     ...defaultProject,
     projectData: {
       ...defaultProject.projectData,
+      channel: `${defaultProject.projectData.channel}_${nextChannelId++}`,
       ...overrideData
     }
   };
@@ -106,9 +102,7 @@ function generateFakeClassProjects() {
 }
 
 const createProjectsStore = function () {
-  return createStore(combineReducers({
-    selectedGallery: selectedGallery
-  }));
+  return createStore(combineReducers({projects}));
 };
 
 
@@ -126,8 +120,6 @@ export default storybook => {
             <Provider store={store}>
               <ProjectCardGrid
                 projectLists = {generateFakePublicProjectsWithStudentInfo()}
-                hasOlderProjects = {hasOlderProjects}
-                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
                 galleryType = "public"
               />
             </Provider>
@@ -144,8 +136,6 @@ export default storybook => {
             <Provider store={store}>
               <ProjectCardGrid
                 projectLists = {generateFakePublicProjectsWithoutStudentInfo()}
-                hasOlderProjects = {hasOlderProjects}
-                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
                 galleryType = "public"
               />
             </Provider>
@@ -162,8 +152,6 @@ export default storybook => {
             <Provider store={store}>
               <ProjectCardGrid
                 projectLists = {generateFakeClassProjects()}
-                hasOlderProjects = {hasOlderProjects}
-                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
                 galleryType = "class"
               />
             </Provider>
@@ -180,8 +168,6 @@ export default storybook => {
             <Provider store={store}>
               <ProjectCardGrid
                 projectLists = {generateFakePersonalProjects()}
-                hasOlderProjects = {hasOlderProjects}
-                fetchOlderProjects = {storybook.action('fetchOlderProjects')}
                 galleryType = "personal"
               />
             </Provider>

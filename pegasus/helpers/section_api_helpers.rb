@@ -22,33 +22,23 @@ class DashboardStudent
   def self.create(params)
     name = !params[:name].to_s.empty? ? params[:name].to_s : 'New Student'
     gender = valid_gender?(params[:gender]) ? params[:gender] : nil
-    provider = supported_provider?(params[:provider]) ? params[:provider] : 'sponsored'
     birthday = age_to_birthday(params[:age]) ?
       age_to_birthday(params[:age]) : params[:birthday]
 
     created_at = DateTime.now
 
-    data =
+    row = Dashboard.db[:users].insert(
       {
         name: name,
         user_type: 'student',
-        provider: provider,
+        provider: 'sponsored',
         gender: gender,
         birthday: birthday,
         created_at: created_at,
         updated_at: created_at,
         username: UserHelpers.generate_username(Dashboard.db[:users], name)
       }.merge(random_secrets)
-    if provider == 'sponsored'
-      row = Dashboard.db[:users].insert(data)
-    else
-      uid = params[:uid].to_s
-      data[:uid] = uid
-      row = Dashboard.db[:users].first(provider: provider, uid: uid)
-      if row.nil?
-        row = Dashboard.db[:users].insert(data)
-      end
-    end
+    )
     return nil unless row
 
     row
@@ -168,11 +158,6 @@ class DashboardStudent
   VALID_GENDERS = %w(m f)
   def self.valid_gender?(gender)
     VALID_GENDERS.include?(gender)
-  end
-
-  SUPPORTED_PROVIDERS = %w(google_oauth2)
-  def self.supported_provider?(provider)
-    SUPPORTED_PROVIDERS.include?(provider)
   end
 
   def self.age_to_birthday(age)
@@ -299,6 +284,10 @@ class DashboardSection
   @@course_cache = {}
   # Mimic the behavior of valid_scripts, but return courses instead. Also simpler
   # in that we don't have to worry about hidden courses.
+  # This is now only used to check to see if we have a valid_course_id when assigning
+  # a course to a section. This code could be simplified, as all we really want
+  # now is a list of course_ids. However, because we'd ultimately like this to
+  # all live in dashboard, I'm leaving this in its unsimplified form for now.
   # @return AssignableInfo[]
   def self.valid_courses
     course_cache_key = I18n.locale.to_s
@@ -563,10 +552,9 @@ class DashboardSection
 
   def to_owner_hash
     to_member_hash.merge(
-      script: script,
-      course_id: @row[:course_id],
-      teachers: teachers,
-      students: students
+      scriptId: script,
+      courseId: @row[:course_id],
+      studentCount: students.count,
     )
   end
 
@@ -575,11 +563,11 @@ class DashboardSection
       id: @row[:id],
       location: "/v2/sections/#{@row[:id]}",
       name: @row[:name],
-      login_type: @row[:login_type],
+      loginType: @row[:login_type],
       grade: @row[:grade],
       code: @row[:code],
-      stage_extras: @row[:stage_extras],
-      pairing_allowed: @row[:pairing_allowed],
+      stageExtras: @row[:stage_extras],
+      pairingAllowed: @row[:pairing_allowed],
     }
   end
 

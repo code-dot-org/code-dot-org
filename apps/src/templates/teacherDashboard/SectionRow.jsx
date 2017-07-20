@@ -230,7 +230,6 @@ class SectionRow extends Component {
       lightRow,
       sections,
       sectionId,
-      validLoginTypes,
       validGrades,
       validAssignments,
       primaryAssignmentIds
@@ -274,7 +273,7 @@ class SectionRow extends Component {
               defaultValue={section.loginType}
               ref={element => this.loginType = element}
             >
-              {validLoginTypes.map((type, index) => (
+              {['word', 'picture', 'email'].map((type, index) => (
                 <option key={index} value={type}>{type}</option>
               ))}
             </select>
@@ -341,7 +340,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`} style={styles.link}>
-              {section.studentNames.length}
+              {section.studentCount}
             </a>
           }
         </td>
@@ -351,7 +350,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.studentNames.length === 0}
+              canDelete={section.studentCount === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -369,7 +368,7 @@ class SectionRow extends Component {
             />
           )}
           <PrintCertificates
-            section={section}
+            sectionId={section.id}
             assignmentName={assignNames[0]}
           />
         </td>

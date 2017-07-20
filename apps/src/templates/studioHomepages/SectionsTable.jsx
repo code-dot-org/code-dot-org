@@ -176,7 +176,7 @@ const SectionsTable = React.createClass({
                 </td>
               )}
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
-                {section.sectionCode}
+                {section.code}
               </td>
               {!isTeacher && (
                 <td style={{...styles.col, ...styles.leaveCol}}>

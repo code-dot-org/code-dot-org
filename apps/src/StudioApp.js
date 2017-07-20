@@ -44,6 +44,7 @@ import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
+import {initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning} from './redux/runState';
@@ -506,6 +507,8 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
+
+  initializeContainedLevel();
 
   this.emit('afterInit');
 };
@@ -2286,6 +2289,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableIfElseEditing: utils.valueOr(config.level.disableIfElseEditing, false),
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    disableProcedureAutopopulate: utils.valueOr(config.level.disableProcedureAutopopulate, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),

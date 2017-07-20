@@ -311,4 +311,18 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     order.user = nil
     refute order.valid?
   end
+
+  test 'search_emails' do
+    included = [
+      create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'included1@example.net')),
+      create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'included2@example.net')),
+      create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'IncludedWithMismatchedCase@example.net'))
+    ]
+
+    # excluded
+    create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'excluded@example.net'))
+
+    found = Pd::WorkshopMaterialOrder.search_emails('include')
+    assert_equal included.map(&:id).sort, found.pluck(:id).sort
+  end
 end

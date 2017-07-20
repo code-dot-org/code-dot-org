@@ -4,7 +4,10 @@ import $ from "jquery";
 import MarkerClusterer from 'node-js-marker-clusterer';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
-const imagePath = getScriptData('workshopSearch').imagePath;
+const markerCustererOptions = {
+  imagePath: getScriptData('workshopSearch').imagePath,
+  gridSize: 10
+};
 
 var gmap,
   markersByLocation = {},
@@ -31,7 +34,7 @@ function initializeMap() {
 }
 
 function loadWorkshops() {
-  markerClusterer = new MarkerClusterer(gmap, [], {imagePath});
+  markerClusterer = new MarkerClusterer(gmap, [], markerCustererOptions);
 
   $.get('/dashboardapi/v1/pd/k5workshops').done(function (data) {
     processPdWorkshops(data);
