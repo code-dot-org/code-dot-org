@@ -19,35 +19,43 @@ const styles = {
     fontSize: 350,
     lineHeight: `400px`,
     color: '#fff',
-    opacity: '0.8',
+    opacity: 0.8,
   },
 };
 
 export default class CompletableLevelThumbnail extends React.Component {
   static propTypes = {
     children: React.PropTypes.element.isRequired,
-    width: React.PropTypes.number,
-    completed: React.PropTypes.boolean,
+    size: React.PropTypes.number,
+    completed: React.PropTypes.bool,
   }
 
   render() {
-    const scale = (this.props.width || 400) / 400;
+    const scale = (this.props.size || 400) / 400;
     return (
       <div
         style={{
-          transform: `scale(${scale})`,
-          ...styles.wrapper
+          width: this.props.size,
+          height: this.props.size,
+          display: 'inline-block',
         }}
       >
-        {this.props.children}
-        {this.props.completed &&
-          <div style={styles.overlay}>
-            <i
-              className="fa fa-check"
-              style={styles.check}
-            />
-          </div>
-        }
+        <div
+          style={{
+            transform: `scale(${scale})`,
+            ...styles.wrapper
+          }}
+        >
+          {this.props.children}
+          {this.props.completed &&
+            <div style={styles.overlay}>
+              <i
+                className="fa fa-check"
+                style={styles.check}
+              />
+            </div>
+          }
+        </div>
       </div>
     );
   }
