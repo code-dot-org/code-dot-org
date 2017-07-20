@@ -16,7 +16,7 @@ Computer Science Fundamentals
 
 Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate. Our curriculum is available at [no cost](/commitment) for anyone, anywhere in the world to teach. 
 
-<center><h3> [Curriculum Overview](#overview) | [Free Professional Learning](#plc) | [3rd Party Resources](#thirdparty) </h3></center>
+<center><h3> [Curriculum Overview](#overview) | [Free Professional Learning](#plc) | [3rd Party Courses](#thirdparty) </h3></center>
 
 <br>
 <hr>
@@ -25,7 +25,7 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 ## Free Professional Learning 
 
-To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
+To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States. If you are located outside the US, try our [self-paced, online course](/educate/professional-development-online).
 
 Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
 
@@ -33,13 +33,7 @@ Attendees learn how to use Code.org's courses to introduce computer science basi
 
 <img src="/images/k5teacherquotes.png" width="100%"/>
 
-### 1. No workshop in your area?
 
-[Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you and request a workshop or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
-
-### 2. Already enjoying the K-5 program?
-
-Help [spread the word](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
 
 <br>
 <hr>
@@ -48,7 +42,7 @@ Help [spread the word](/educate/k5/resources) or share this [one-pager](/educate
 
 ## Curriculum Overview: Courses A-F
 
-Our Computer Science (CS) Fundamentals curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Learn more about each course below or download the complete curriculum guide [here](/curriculum/docs/k-5/complete.pdf). By the end of each course, students create interactive games or stories that they can share with anyone.
+Our Computer Science (CS) Fundamentals curriculum consists of multiple courses, each of which has about 15 lessons that may be implemented as one unit or over the course of a semester. Learn more about each course below or download the complete curriculum guide [here](/curriculum/docs/k-5/complete.pdf). By the end of each course, students create interactive games or stories that they can share with anyone.
 
 The courses are flexible, too, so educators can adjust them based on their students’ developmental level and prior experience. All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
@@ -126,7 +120,7 @@ Course 4 is designed for students who have taken Courses 2 and 3. Students will 
 <p style="clear:both">&nbsp;</p>
 
 ### <strong>Teacher Home Page</strong>
-The Code Studio teacher home page makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
+Create a teacher account to to view your student’s progress, print login cards for your students, and print certificates they can bring home when they finish the course. Young students can log in with picture or simple word passwords. And, we integrate with Google, Clever, Facebook, and Microsoft Accounts to make it even faster to get started.
 
 [col-50]
 
@@ -175,4 +169,9 @@ The Code Studio teacher home page makes it easy for teachers to view lesson plan
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
+
+## Already enjoying CS Fundamentals?
+
+Help [spread the word](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
+
 
