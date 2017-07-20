@@ -11,7 +11,6 @@ export default class MazeThumbnail extends React.Component {
     map: React.PropTypes.array.isRequired,
     skin: React.PropTypes.string.isRequired,
     startDirection: React.PropTypes.number.isRequired,
-    scale: React.PropTypes.number
   }
 
   static defaultProps = {
@@ -38,22 +37,11 @@ export default class MazeThumbnail extends React.Component {
   render() {
     return (
       <ProtectedStatefulDiv>
-        <div
-          style={{
-            maxWidth: 400 * this.props.scale,
-            maxHeight: 400 * this.props.scale
-          }}
-        >
-          <svg
-            width="400"
-            height="400"
-            ref={c => {this.svg = c;}}
-            style={{
-              transform: `scale(${this.props.scale})`,
-              transformOrigin: '0 0'
-            }}
-          />
-        </div>
+        <svg
+          width="400"
+          height="400"
+          ref={c => {this.svg = c;}}
+        />
       </ProtectedStatefulDiv>
     );
   }
