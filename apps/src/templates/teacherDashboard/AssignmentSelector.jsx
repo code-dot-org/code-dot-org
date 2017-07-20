@@ -10,6 +10,8 @@ const styles = {
 };
 
 const noAssignment = assignmentId(null, null);
+const decideLater = '__decideLater__';
+const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
 /**
  * Group our assignments into categories for our dropdown
@@ -32,6 +34,7 @@ export default class AssignmentSelector extends Component {
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     chooseLaterOption: PropTypes.bool,
+    dropdownStyle: PropTypes.object,
   };
 
   constructor(props) {
@@ -61,7 +64,7 @@ export default class AssignmentSelector extends Component {
     const { selectedPrimaryId, selectedSecondaryId } = this.state;
     const primary = this.props.assignments[selectedPrimaryId];
 
-    if (selectedSecondaryId !== noAssignment) {
+    if (isValidAssignment(selectedSecondaryId)) {
       // If we have a secondary, that implies that (a) our primary is a course
       // and (b) our secondary is a script
       const secondary = this.props.assignments[selectedSecondaryId];
@@ -88,7 +91,9 @@ export default class AssignmentSelector extends Component {
     }
 
     let selectedPrimaryId = event.target.value;
-    const scriptAssignIds = assignments[selectedPrimaryId].scriptAssignIds || [];
+    const scriptAssignIds = isValidAssignment(selectedPrimaryId)
+      ? (assignments[selectedPrimaryId].scriptAssignIds || [])
+      : [];
 
     // If our current secondaryId is in this course, default to that
     const selectedSecondaryId = scriptAssignIds.includes(currentSecondaryId) ?
@@ -107,11 +112,11 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const { assignments, primaryAssignmentIds } = this.props;
+    const { assignments, primaryAssignmentIds, dropdownStyle } = this.props;
     const { selectedPrimaryId, selectedSecondaryId } = this.state;
 
     let primaryAssignIds = primaryAssignmentIds;
-    if (selectedPrimaryId !== noAssignment &&
+    if (isValidAssignment(selectedPrimaryId) &&
         !primaryAssignmentIds.includes(selectedPrimaryId)) {
       primaryAssignIds = [selectedPrimaryId].concat(primaryAssignIds);
     }
@@ -128,9 +133,14 @@ export default class AssignmentSelector extends Component {
         <select
           value={selectedPrimaryId}
           onChange={this.onChangePrimary}
+          style={dropdownStyle}
         >
           <option key="default" value={noAssignment}/>
-          {this.props.chooseLaterOption && <option key="later" value="decideLater">Decide later</option>}
+          {this.props.chooseLaterOption &&
+            <option key="later" value={decideLater}>
+              Decide later
+            </option>
+          }
           {Object.keys(grouped).map((groupName, index) => (
             <optgroup key={index} label={groupName}>
               {grouped[groupName].map((assignment) => (
@@ -150,6 +160,7 @@ export default class AssignmentSelector extends Component {
             <select
               value={selectedSecondaryId}
               onChange={this.onChangeSecondary}
+              style={dropdownStyle}
             >
               <option value={noAssignment}/>
               {secondaryOptions.map(scriptAssignId => (

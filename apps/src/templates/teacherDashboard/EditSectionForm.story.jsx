@@ -6,6 +6,7 @@ export default storybook => storybook
   .add('Basic options', () => {
     return (
       <UnconnectedEditSectionForm
+        title="Edit section details"
         handleSave={storybook.action('handleSave')}
         handleClose={storybook.action('handleClose')}
         handleName={storybook.action('handleName')}
