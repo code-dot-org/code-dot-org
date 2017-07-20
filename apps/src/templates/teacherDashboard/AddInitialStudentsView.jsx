@@ -15,13 +15,13 @@ import ProgressButton from "../progress/ProgressButton";
 
 class AddInitialStudentsView extends Component {
   static propTypes = {
-    sectionName: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     handleLoginChoice: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
   };
 
   render() {
-    const {sectionName, handleLoginChoice, handleCancel} = this.props;
+    const {title, handleLoginChoice, handleCancel} = this.props;
     const googleClassroom = experiments.isEnabled('googleClassroom');
     const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
     const clever = experiments.isEnabled('clever');
@@ -30,7 +30,7 @@ class AddInitialStudentsView extends Component {
     return (
       <div>
         <Heading1>
-          {i18n.addStudentsToSection({section: sectionName})}
+          {title}
         </Heading1>
         <Heading2>
           {i18n.addStudentsToSectionInstructions()}
