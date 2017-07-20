@@ -160,7 +160,7 @@ class ApplicationController < ActionController::Base
         # if they solved it, figure out next level
         if options[:solved?]
           response[:total_lines] = options[:total_lines]
-          response.merge script_level_solved_response(script_level)
+          response.merge! script_level_solved_response(script_level)
         else # not solved
           response[:message] = 'try again'
         end
