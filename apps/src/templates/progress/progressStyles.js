@@ -50,6 +50,7 @@ const statusStyle = {
  */
 export const levelProgressStyle = (level, disabled) => {
   let style = {
+    borderWidth: 2,
     color: color.charcoal,
     backgroundColor: color.level_not_tried,
   };

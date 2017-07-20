@@ -314,6 +314,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: 'email',
+      courseId: section.course_id,
+      scriptId: section.script_id,
+      studentCount: 0,
     }
     assert_equal expected, section.summarize
   end
@@ -333,6 +339,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: 'email',
+      courseId: section.course_id,
+      scriptId: section.script_id,
+      studentCount: 0,
     }
     assert_equal expected, section.summarize
   end
@@ -355,6 +367,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: 'email',
+      courseId: section.course_id,
+      scriptId: section.script_id,
+      studentCount: 0,
     }
     assert_equal expected, section.summarize
   end
@@ -372,6 +390,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stageExtras: false,
+      pairingAllowed: true,
+      loginType: 'email',
+      courseId: section.course_id,
+      scriptId: section.script_id,
+      studentCount: 0,
     }
     assert_equal expected, section.summarize
   end

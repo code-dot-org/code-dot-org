@@ -100,27 +100,25 @@
         wool. To collect the wool, use the arrow keys to walk to the sheep and then
         press the spacebar or click the game to shear the sheep. And, don’t forget
         to add the “Drop Wool” block to your code.
-      MC HOC 2016 New Drop_failure_message_override: |-
-        Use the arrow keys to walk
-        to the sheep and press space bar or click the game board to use the sheep.
-        And, don’t forget to add the 'Drop' block to your code.
+      MC HOC 2016 New Drop_failure_message_override: Verwende die Pfeiltaste um zum
+        Schaf zu laufen und drücke die Leertase oder berühre das Spielbrett um das
+        Schaf zu verwenden. Und vergiss nicht, den "Loslassen" Block zu deinem Code
+        hinzu zu fügen.
       MC HOC 2016 New Spawn_failure_message_override: |-
         Place `spawn sheep` under
         `when run`.
-      MC HOC 2016 New Walk_failure_message_override: |-
-        To open the door, press the
-        space bar or touch the game board while facing it. Walk inside to continue.
+      MC HOC 2016 New Walk_failure_message_override: Um die Tür zu öffnen, drücke
+        die Leertaste oder berühre das Spielbrett von vorne. Gehe nach drinnen, um
+        weiter zu gehen.
       MC HOC 2016 New pn_failure_message_override: |-
         To go on, you’ll need to collect
         wool. To collect the wool, use the arrow keys to walk to the sheep and then
         press the spacebar or click the game to shear the sheep. And, don’t forget
         to add the “Drop Wool” block to your code.
-      MC HOC 2016 SCORE LEVEL_failure_message_override: |-
-        If you're having trouble
-        tagging 5 Golems, try changing the score to 2 per tag.
-      MC HOC 2016 Village Test_failure_message_override: |-
-        You need to make the Iron
-        Golem chase and attack the zombies to win.
+      MC HOC 2016 SCORE LEVEL_failure_message_override: Wenn du Schwierigkeiten hast,
+        die 5 Golems zu markieren, versuche den Score zu 2 pro Markierung zu ändern.
+      MC HOC 2016 Village Test_failure_message_override: Ziel ist es, die Zombies
+        mit dem Eisen Golem zu verfolgen und anzugreifen.
       WhileAdventure_failure_message_override: Herzlichen Glückwunsch!  Sie haben
         X Münzen gesammelt!
       courseE_playLab_scaffold3_failure_message_override: Du musst deinem Spiel zwei

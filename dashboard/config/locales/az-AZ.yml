@@ -23,6 +23,7 @@
         name: Göstərilən adınız
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-poçt
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: istifadəçi adı
         password: Parol
@@ -211,6 +212,8 @@
       Bu dərsliklər əyləncəli, baxımlıdır və sadə, göstərişlərlə müşayiət olunan, oyunabənzər tapşırıqlar vasitəsilə informatikanın əsas anlayışlarını öyrədir. Kod yazmağı Bill Qeyts, Mark Tsukerberq, "Angry Birds" və "Plants vs. Zombies"dən öyrənin! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
   section:
     your_section:
       one: 'Your section:'
@@ -255,6 +258,13 @@
     updated: "%{model} müvəffəqiyyətlə yeniləndi."
     destroyed: "%{model} was successfully deleted."
     access_denied: You do not have access to this %{model}.
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Kod Saatımı bitirdim
@@ -369,6 +379,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -1021,10 +1037,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Bir ikon axtar...
-      no_icons_found: "İkon tapılmadı"
   flex_category:
     required: Yekun
     content: Məzmun
@@ -1060,6 +1072,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

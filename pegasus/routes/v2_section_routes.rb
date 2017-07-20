@@ -1,4 +1,5 @@
 # Get the set of sections owned by the current user
+# DEPRECATED: Use GET /dashboardapi/sections instead
 get '/v2/sections' do
   only_for 'code.org'
   dont_cache
@@ -26,6 +27,7 @@ get '/v2/sections/membership' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: Use GET /dashboardapi/sections/<id> instead
 get '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
@@ -56,6 +58,7 @@ post '/v2/sections/:id/update' do |id|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/sections/#{id}"))
 end
 
+# DEPRECATED: Use GET /dashboardapi/sections/<id>/students
 get '/v2/sections/:id/students' do |id|
   only_for 'code.org'
   dont_cache
@@ -87,6 +90,7 @@ post '/v2/sections/:id/delete' do |id|
   call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}/students/#{student_id}"))
 end
 
+# DEPRECATED: Will be removed, do not use.
 get '/v2/sections/:id/teachers' do |id|
   only_for 'code.org'
   dont_cache

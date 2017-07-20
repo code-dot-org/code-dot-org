@@ -41,8 +41,6 @@ gem 'redis-slave-read', require: false, github: 'code-dot-org/redis-slave-read',
 gem 'google-api-client'
 gem 'launchy' # Peer dependency of Google::APIClient::InstalledAppFlow
 
-gem 'crowdin-cli'
-
 # CSRF protection for Sinatra.
 gem 'rack_csrf'
 
