@@ -24,6 +24,9 @@ const styles = {
   secondRow: {
     backgroundColor: color.lightest_gray,
     color: color.charcoal,
+    borderWidth: 2,
+    borderColor: color.lightest_gray,
+    borderStyle: 'solid',
     verticalAlign: 'top'
   },
   subsequentRow: {
@@ -160,7 +163,7 @@ export default class ProgressLegend extends Component {
             <TD>N/A</TD>
           </tr>
           <tr style={styles.subsequentRow}>
-            <TD style={styles.rightBorder}>{i18n.activity}</TD>
+            <TD style={styles.rightBorder}>{i18n.activity()}</TD>
             <TD>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="scissors" style={styles.icon}/>
