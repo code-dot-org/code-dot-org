@@ -11,7 +11,7 @@ content-type: text/ng-template
 
 %div{'ng-show' => 'assessmentsLoaded'}
   = I18n.t('dashboard_assessments_view')
-  %select{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
+  %select#uitest-course-dropdown{"ng-model" => "script_id", "ng-options"=>"script.id as script.name group by script.category for script in script_list | orderBy:['category_priority', 'category', 'position', 'name']", 'ng-change' => 'changeScript(script_id)'}
 
 :ruby
   surveys_filtered = "surveyLevels | orderBy:orderSurveyAnswers | filter:(stageFilterSurveyAnswers && {stage: stageFilterSurveyAnswers}):true"
@@ -72,7 +72,7 @@ content-type: text/ng-template
   %br
   %br
   = I18n.t('dashboard_assessments_none_part2')
-%div{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
+#uitest-assessments-tab{style: "padding-left:20px", 'ng-show' => 'assessments.length'}
   %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'assessments.length', "ng-form" => "allForm"}
     %colgroup
       %col{width: "100"}/

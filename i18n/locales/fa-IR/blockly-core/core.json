@@ -175,7 +175,7 @@
   "LISTS_TOOLTIP":"اگر فهرست خالی باشد، مقدار بولین true را بر می‌گرداند.",
   "LOGIC_BOOLEAN_FALSE":"ناصحیح",
   "LOGIC_BOOLEAN_HELPURL":"http://code.google.com/p/blockly/wiki/True_False",
-  "LOGIC_BOOLEAN_TOOLTIP":"یک مقدار true یا false را برمیگرداند.",
+  "LOGIC_BOOLEAN_TOOLTIP":"بازگرداندن یکی از مقادیر بولین true یا false.",
   "LOGIC_BOOLEAN_TRUE":"صحیح",
   "LOGIC_COMPARE_HELPURL":"http://fa.wikipedia.org/wiki/%D9%86%D8%A7%D8%A8%D8%B1%D8%A7%D8%A8%D8%B1%DB%8C",
   "LOGIC_COMPARE_TOOLTIP_EQ":"بازگشت صحیح اگر هر دو ورودی با یکدیگر برابر باشد.",

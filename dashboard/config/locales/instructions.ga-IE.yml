@@ -1381,7 +1381,8 @@
       CSD U5 black white images pixelation 4_instruction: |-
         Add eyebrows to the smiley
         face (click here to see the image)
-      CSD U5 black white images pixelation 5_instruction: Draw anything you like
+      CSD U5 black white images pixelation 5_instruction: Anois, tarraing cibé is
+        rogha leat
       CSD U5 black white images pixelation_instruction: |-
         Complete the X shape by
         typing 0s and 1s
@@ -1535,7 +1536,7 @@
         instructions) "
       CSP U4 - Objects - createObject_instruction: "Create an object with at least\n5
         values including at least one string and one number. (Click to see full\ninstructions) "
-      CSP student contact info_instruction: Please enter your email address.
+      CSP student contact info_instruction: Cuir isteach do sheoladh ríomhphoist.
       CSPU5 Add Screens to Chaser Game_instruction: |-
         Recreate the game from the "Chaser
         Game" with a Welcome Screen and Game Over Screen. (Click to see full instructions.)
@@ -3330,11 +3331,8 @@
         at least 10 times, the game is over.
       Course 4 Playlab For Loop Freeplay_instruction: 'Saorimirt: Bain úsáid as gach
         uile rud atá foghlamtha agat chun cluiche a dhéanamh a úsáideann lúb "do gach"!'
-      Course 4 Playlab For Loops 4b_instruction: Anois beidh an dá charachtar ag rásaíocht
-        in aghaidh a chéile! Rachaidh siad ar aghaidh "counter" céim as a chéile,
-        ach beidh luachanna difriúla ar na háiritheoirí mar gheall ar na lúba "do
-        gach". An féidir leat an incrimint i gceann de na lúba a athrú sa chaoi go
-        gcríochnóidh siad an rás san am céanna?
+      Course 4 Playlab For Loops 4b_instruction: An féidir leat **an incrimint** i
+        gceann de na lúba a athrú sa chaoi go gcríochnóidh siad an rás san am céanna?
       Course 4 Playlab For Loops 5b_instruction: Athraigh an incrimint sna lúba "do
         gach" seo, sa chaoi go gcríochnóidh an dá charachtar seo san áit chéanna.
       Course 4 Playlab For Loops 6b_instruction: 'Cuir an lúb "do gach" seo in eagar
@@ -3357,9 +3355,9 @@
         le paraiméadair. "
       Course 4 SCFL 1_instruction: Réitigh an dúshlán seo leis an líon is lú blocanna
         agus is féidir.
-      Course 4 SCFL 1a_instruction: An féidir leat Skrat a threorú go dtí a dhearcán
+      Course 4 SCFL 1a_instruction: An féidir leat Scrat a threorú go dtí a dhearcán
         leis an líon is lú blocanna agus is féidir?
-      Course 4 SCFL 1b_instruction: An féidir leat Skrat a threorú go dtí a dhearcán
+      Course 4 SCFL 1b_instruction: An féidir leat Scrat a threorú go dtí a dhearcán
         leis an líon is lú blocanna agus is féidir?
       Course 4 SCFL 2_instruction: Réitigh an dúshlán seo leis an líon is lú blocanna
         agus is féidir.
@@ -4930,11 +4928,6 @@
         picteilín ar gach taobh.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test Stamp- and Pattern-Agnostic Answer_instruction: |-
-        Answer validation should
-        be pattern- and stamp-agnostic, meaning that changing the patterns or the
-        stamp being drawn should still let you pass just so long as you're drawing
-        _some_ pattern and _some_ stamp. (much like color)
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: 'Féach sin anois! Níl a fhios agam cé mhéad
         sluasaid atá de dhíth. An féidir leat an bloc "líon" a úsáid go dtí go mbeidh
@@ -6896,6 +6889,9 @@
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_ttscsp_instruction: |-
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       artistDebugVideo1_instruction: Úsáid an bloc "athdhéan" chun tonnta a chur ar
         an uisce.
       artistFunctionsVideo1_instruction: Lean na treoracha chun d'fheidhm féin a dhéanamh.
@@ -7055,12 +7051,10 @@
         X's as you can! Can you get 3 in a row?
       courseA_collector_loops1_instruction: Bog Laurel thart agus bailigh an méid
         is mó óir agus is féidir!
-      courseA_collector_loops10_instruction: |-
-        Help Laurel get all of the treasure
-        from this deep valley.
-      courseA_collector_loops11_instruction: |-
-        Help Laurel get all of the treasure
-        from this cave.
+      courseA_collector_loops10_instruction: Cabhraigh le Laurel an t-ór go léir a
+        bhailiú ón ghleann domhain seo.
+      courseA_collector_loops11_instruction: Cabhraigh le Laurel an t-ór go léir a
+        bhailiú ón bpluais seo.
       courseA_collector_loops12_instruction: |-
         Eureka!  Get as much treasure as you
         can!
@@ -7081,8 +7075,8 @@
         get all of the treasure?
       courseA_collector_loops8_instruction: Write the code to get all of this gold.
       courseA_collector_loops9_instruction: "**Dúshlán:** Aimseoidh tú ór i rith an
-        bhealaigh go barr an staighre! Scríobh an cód agus cabhraigh liom an t-ór
-        go léir a bhailiú."
+        bhealaigh go barr an staighre! Scríobh an cód agus cabhraigh le Laurel an
+        t-ór go léir a bhailiú."
       courseA_collector_loops_challenge1_instruction: |-
         Can you help me spot some
         bugs? I know which way I want to go, but I'm not sure how many steps to take.
@@ -7120,9 +7114,8 @@
       courseA_maze_seq_challenge1_instruction: |-
         Debug this level. Remove the extra
         blocks and add the missing blocks. Get the bird to the pig!
-      courseA_maze_seq_challenge2_instruction: |-
-        Trace the path and lead me to the
-        silly pig. Avoid TNT or the feathers will fly!
+      courseA_maze_seq_challenge2_instruction: Lean an cosán agus treoraigh chuig
+        an mhuc amaideach mé. Seachain TNT nó pléascfaidh na cleití!
       courseA_playLab_events1_instruction: |-
         This is a Play Lab level.  Move blocks
         to the workspace and see what happens!
@@ -7143,9 +7136,8 @@
       courseA_playLab_events7_instruction: |-
         Add anything you want to this game.  Can
         you make the dinosaur disappear when Jorge runs into him?
-      courseA_playlab_events_challenge1_instruction: |-
-        Where are my friends hiding?
-        Can you write code to show the rest of my friends?
+      courseA_playlab_events_challenge1_instruction: Cá bhfuil mo chairde ina bhfolach?
+        An féidir leat cód a scríobh chun an chuid eile de mo chairde a thaispeáint?
       courseA_playlab_events_challenge2_instruction: |-
         Let's have a party! Give each
         of my friends something to do when you click or tap them. What do the animals
@@ -7186,9 +7178,8 @@
       courseB_artist_loops_challenge2_instruction: |-
         Let's play a game! Draw as many
         X's as you can! Can you get 3 in a row?
-      courseB_collector_loops1_instruction: |-
-        This is Laurel the Adventurer!  Can
-        you move her around and get treasure?
+      courseB_collector_loops1_instruction: Seo Laurel an tEachtránaí! An féidir leat
+        í a bhogadh thart chun ór a fháil?
       courseB_collector_loops10_instruction: Cabhraigh le Laurel an t-ór go léir a
         bhailiú ón bpluais seo.
       courseB_collector_loops11_instruction: |-
@@ -7250,7 +7241,8 @@
         cabhrú leis an éan an mhuc a shroicheadh?
       courseB_maze_seq9_instruction: 'Dúshlán: Treoraigh an t-éan timpeall an TNT
         go dtí an mhuc.'
-      courseB_maze_seq9_challenge1_instruction: "*Where's that pig hiding now?*"
+      courseB_maze_seq9_challenge1_instruction: "*Cá bhfuil an mhuc sin ina folach
+        anois?*"
       courseB_maze_seqCold_instruction: 'Dúshlán: Cuir blocanna leis an gcód chun
         é a cheartú agus cabhraigh leis an éan an mhuc a shroicheadh!'
       courseB_maze_seqOld_instruction: 'Seachain an TNT agus cabhraigh leis an éan
@@ -7366,9 +7358,9 @@
         \r
         Play
         the game and move Waddles with the arrows until you score.
-      courseC_PlayLab_eventsFP_instruction: |-
-        Create your own story. When you're
-        done, click "Finish" to share with friends. See story ideas in the hints.
+      courseC_PlayLab_eventsFP_instruction: Scríobh do scéal féin. Nuair a bheidh
+        tú críochnaithe, cliceáil "Críochnaigh" agus lig do chairde do scéal a fheiceáil.
+        Gheobhaidh tú cúpla smaoineamh sna leideanna.
       courseC_PlayLab_events_challenge1_instruction: |-
         Use a new block to make Waddles
         automatically move back to the start when he runs into the Dinosaur and when
@@ -7457,9 +7449,8 @@
         Draw rooms for each of the animals.
         There are many different ways to solve this puzzle, so have some fun. The
         shortest possible solution is 6 blocks, but use as many as you like!
-      courseC_artist_prog_challenge2_instruction: |-
-        *Help me paint the yellow lines
-        on this road!*
+      courseC_artist_prog_challenge2_instruction: "*Cabhraigh liom na línte buí a
+        phéinteáil ar an mbóthar seo!*"
       courseC_collector_loops_challenge2_instruction: |-
         Let's hunt for treasure -
         using loops! Help the collector by debugging this code. Get all of the treasure!
@@ -7527,10 +7518,9 @@
       courseC_harvester_loops9_instruction: |-
         Collect all of the corn and all of the
         pumpkins.
-      courseC_harvester_loops_challenge1_instruction: Collect all of the corn.
-      courseC_harvester_loops_challenge2_instruction: |-
-        Collect all of the lettuce.
-        Avoid the trees and fields!
+      courseC_harvester_loops_challenge1_instruction: Bailigh an t-arbhar go léir.
+      courseC_harvester_loops_challenge2_instruction: Bailigh an leitís go léir. Seachain
+        na crainn agus na páirceanna!
       courseC_maze_debugging1_instruction: |-
         Fix the code to help get Scrat get to
         the acorn.
@@ -7641,9 +7631,8 @@
         the path where he moves. Use 5 of the same block to get BB-8 to pick up all
         of the scrap metal in the play area.
       courseC_starWars_loops10_instruction: You are doing great! Keep it up!
-      courseC_starWars_loops10_predict2_instruction: |-
-        You are doing great! Keep it
-        up!
+      courseC_starWars_loops10_predict2_instruction: Tá tú ag déanamh go seoigh! Lean
+        ort!
       courseC_starWars_loops11_instruction: |-
         You are almost there! This time, choose
         any path you like!
@@ -7655,9 +7644,9 @@
         Can you get BB-8 to pick up all of the
         scrap metal by creating a loop that uses only one block inside of a `repeat`
         block?
-      courseC_starWars_loops4_instruction: |-
-        In this puzzle, two `repeat` loops will
-        help you get BB-8 to all of the scrap metal with the fewest number of blocks!
+      courseC_starWars_loops4_instruction: Sa dúshlán seo, is féidir leat dhá bhloc
+        "athdhéan" a úsáid chun BB-8 a threorú go dtí an dramh-mhiotal go léir leis
+        an líon is lú blocanna agus is féidir!
       courseC_starWars_loops5_instruction: |-
         *Get BB-8 to pick up all the scrap metal
         as quickly as possible!*
@@ -7867,15 +7856,12 @@
       courseD_bee_conditionals9_instruction: |-
         Collect all of the nectar or make all
         the honey.
-      courseD_bee_conditionals_challenge1_instruction: |-
-        Collect all of the nectar
-        or make all the honey.
-      courseD_bee_conditionals_challenge2_instruction: |-
-        Collect all of the nectar
-        or make all the honey.
-      courseD_bee_conditionals_challenge3_instruction: |-
-        Collect all of the nectar
-        or make all the honey.
+      courseD_bee_conditionals_challenge1_instruction: Bailigh an neachtar go léir
+        nó déan an mhil go léir.
+      courseD_bee_conditionals_challenge2_instruction: Bailigh an neachtar go léir
+        nó déan an mhil go léir.
+      courseD_bee_conditionals_challenge3_instruction: Bailigh an neachtar go léir
+        nó déan an mhil go léir.
       courseD_bee_debugging1_instruction: |-
         Fix the error(s) to collect all of the
         nectar.
@@ -7944,9 +7930,9 @@
         Fix the error(s) to collect all
         of the treasure.
       courseD_collector_debugging5_instruction: |-
-        Challenge: All of the commands that
-        you need are already here...now use your debugging skills to figure out how
-        to solve this puzzle.
+        All of the commands that you need
+        are already here...now use your debugging skills to figure out how to solve
+        this puzzle.
       courseD_collector_debugging6_instruction: |-
         Challenge: Use your debugging skills
         to fix the errors and collect all of the treasure.
@@ -8019,9 +8005,8 @@
       courseD_farmer_condLoops_challenge2_instruction: |-
         Collect everything to complete
         the level.
-      courseD_farmer_condLoops_challenge2_clone_instruction: |-
-        Collect everything
-        to complete the level.
+      courseD_farmer_condLoops_challenge2_clone_instruction: Bailigh gach uile rud
+        chun an leibhéal seo a chríochnú.
       courseD_farmer_conditionals1_instruction: |-
         Move to the pile of dirt and use
         the `remove` block to remove it.
@@ -8121,10 +8106,9 @@
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseD_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseD_maze_ramp5_instruction: Avoid the TNT.
-      courseD_maze_ramp6_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
-      courseD_maze_ramp7_instruction: "**Challenge:**  Get the bird to the pig!"
+      courseD_maze_ramp6_instruction: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
+      courseD_maze_ramp7_instruction: Cabhraigh leis an éan an mhuc a bhaint amach!
       courseD_maze_until1_instruction: Get the angry bird to the pig.
       courseD_maze_until10_instruction: Help the zombie get to the sunflower.
       courseD_maze_until10_predict2_instruction: Help the zombie get to the sunflower.
@@ -8200,10 +8184,9 @@
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
         or fewer.
-      courseE_artist_concept_challenge1_instruction: |-
-        Feel free to use trial and
-        error. You are not expected to get the image perfect the first time.   Want
-        to see more hints?  Click here!
+      courseE_artist_concept_challenge1_instruction: Tá fáilte romhat "triail agus
+        earráid" a úsáid. Nílimid ag súil le pictiúr foirfe ar an gcéad iarracht.
+        An bhfuil cabhair uait? Cliceáil anseo!
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         like using the code below.
@@ -8306,14 +8289,16 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
+      courseE_bee_functions9b_instruction: Now try it in Bee!
       courseE_bee_functions_challenge1_instruction: |-
         You are on your own for this
         challenge. This could "bee" harder than it looks!
       courseE_bee_functions_challenge2_instruction: |-
         You are on your own for this
         challenge!
-      courseE_bee_ramp14_instruction: "Get nectar while there is nectar, **else**\nmake
-        the honey. "
+      courseE_bee_ramp14_instruction: |-
+        Help the bee follow the path to gather all
+        of the honey and all of the nectar.
       courseE_bee_ramp17_instruction: Use what you have learned to solve this puzzle.
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
@@ -8355,8 +8340,11 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn, lettuce,
-        and pumpkin.
+        Help the farmer pick the corn and
+        pumpkins.
+      courseE_farmer_functions2ba_instruction: |-
+        Help the farmer pick the corn and
+        pumpkins using the `corn and pumpkin` function.
       courseE_farmer_functions3_instruction: |-
         What happens when the paths to the
         pumpkins are all different lengths?   \r
@@ -8367,10 +8355,9 @@
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions3c_instruction: |-
-        Which set of blocks helps the farmer
-        check for produce and pick it when it is available? Drag that code into a
-        function, then call your function from inside the `while path ahead` loops
-        (after the `move forward` block).
+        Now, fill-in the function yourself
+        by pulling the blocks from the code and dropping them into the **function
+        definition**.
       courseE_farmer_functions4_instruction: |-
         Great!  Now you have code that will
         work to get pumpkins from any size path.\r
@@ -8400,21 +8387,24 @@
       courseE_farmer_functions6b_instruction: Pick all of the produce.
       courseE_farmer_functions6c_instruction: |-
         What do you need to add this program
-        to collect all of the produce?
+        to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Make a second function that lets the
-        farmer get all of the produce down a path, then brings her back to where she
-        began.
+        Help the farmer find her way down
+        this confusing path and to the pumpkin by turning left at the corn and right
+        at the lettuce.
       courseE_farmer_functions8_instruction: |-
         **Challenge:**  Solve this puzzle with
         as few blocks as possible.
-      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
-        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the\npumpkins
+        using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_farmer_functions9b_instruction: |-
+        Can you figure out the pattern that
+        you need to solve this puzzle?
       courseE_farmer_predict1_instruction: |-
-        Pick lettuce if there is lettuce. Otherwise,
-        pick corn.
+        Pick all of the lettuce (only while there
+        is some to pick.)
       courseE_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
@@ -8424,8 +8414,8 @@
         Now use nested loops (`repeat` and `while`)
         to solve this puzzle.
       courseE_farmer_ramp12a_instruction: |-
-        Pick lettuce if there is lettuce. Otherwise,
-        pick corn.
+        Help the farmer correctly travel the path
+        to gather all of the lettuce.
       courseE_farmer_ramp13_instruction: |-
         Pick corn if there is corn, and pick lettuce
         while there is lettuce.
@@ -8450,9 +8440,8 @@
         cause the bird to crash. Throw it away by dragging it back to the toolbox.
       courseE_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseE_maze_ramp5_instruction: Avoid the TNT.
-      courseE_maze_ramp6_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
+      courseE_maze_ramp6_instruction: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseE_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
@@ -8529,19 +8518,15 @@
       courseF_artist_for_Template_instruction: |-
         Try using some of the code from the
         last level, but turning 89 degrees to create this twisted square spiral.
-      courseF_artist_for_challenge1_instruction: |-
-        Can you figure out how to re-create
-        this drawing?
-      courseF_artist_for_challenge2_instruction: |-
-        Can you figure out how to re-create
-        this drawing with a single loop?
+      courseF_artist_for_challenge1_instruction: An féidir leat an pictiúr seo a athchruthú?
+      courseF_artist_for_challenge2_instruction: An féidir leat an pictiúr seo a athchruthú
+        gan ach lúb amháin a úsáid?
       courseF_artist_fwp1_instruction: Cuir an fheidhm "tarraing cearnóg" in eagar
         le fabhtanna a cheartú.
       courseF_artist_fwp2_instruction: Cuir an fheidhm in eagar sa chaoi go nglacfaidh
         sí le paraiméadar darb ainm "length".
-      courseF_artist_fwp2_predict1_instruction: |-
-        Edit the function to accept a parameter
-        called `length`.
+      courseF_artist_fwp2_predict1_instruction: Cuir an fheidhm in eagar sa chaoi
+        go nglacfaidh sí le paraiméadar darb ainm "length".
       courseF_artist_fwp3_instruction: Cruthaigh feidhm darb ainm "tarraing cearnóg",
         agus bain úsáid aisti le paraiméadair oiriúnacha chun imlíne a chur timpeall
         na ceithre bhosca seo.
@@ -8558,13 +8543,13 @@
         chun an pictiúr seo a tharraingt?
       courseF_artist_fwp9_instruction: 'Saorimirt: Tarraing rud éigin iontach! Athraigh
         leithead an phinn agus féach cé chomh difriúil atá na pictiúir!'
-      courseF_artist_fwp_challenge1_instruction: |-
-        Try running this program, and make
-        changes to see what happens. Can you figure out how it works? (Or delete it
-        and replace it with something totally different)
-      courseF_artist_fwp_challenge2_instruction: "Use what you learned in the previous\nlevel
-        to draw an image like this. Note: The code becomes more simple if you\nincorporate
-        parameters. "
+      courseF_artist_fwp_challenge1_instruction: Bain triail as an gclár seo, déan
+        athruithe, agus féach cad a tharlóidh. An féidir leat déanamh amach conas
+        a oibríonn sé? (Nó scrios é agus scríobh rud éigin go hiomlán difriúil ina
+        áit)
+      courseF_artist_fwp_challenge2_instruction: "Úsáid gach rud a d'fhoghlaim tú
+        sa leibhéal roimhe seo chun pictiúr cosúil leis seo a tharraingt. Nóta: Is
+        féidir an cód a shimpliú le paraiméadair. "
       courseF_artist_ramp10_instruction: |-
         Now, drag the code for the last triangle
         into a new loop to spin it around and make a snowflake!
@@ -8712,12 +8697,10 @@
         Use this for loop to collect all of
         the nectar. There are a few actions that you will want to repeat 'counter'
         times.
-      courseF_bee_for_challenge2_instruction: |-
-        Solve this puzzle using the fewest
-        number of blocks possible.
-      courseF_bee_for_challenge3_instruction: |-
-        Solve this puzzle using the fewest
-        number of blocks possible.
+      courseF_bee_for_challenge2_instruction: Réitigh an dúshlán seo leis an líon
+        is lú blocanna agus is féidir.
+      courseF_bee_for_challenge3_instruction: Réitigh an dúshlán seo leis an líon
+        is lú blocanna agus is féidir.
       courseF_bee_functions2_instruction: |-
         Use the `get only nectar` function to
         collect the nectar from each flower.
@@ -8738,14 +8721,15 @@
         Use the `move and check` function to
         collect all of the nectar.
       courseF_bee_functions6_instruction: |-
-        Create a function and call it to collect
-        all of the nectar at each flower or make all of the honey at each honeycomb.
-      courseF_bee_functions7_instruction: |-
-        Collect all the nectar and make all the
-        honey!
-      courseF_bee_functions8a_instruction: |-
-        Collect all the nectar or make all of
-        the honey!
+        Help the bee through the maze by turning
+        left at flowers and right at honeycomb.
+      courseF_bee_functions7_instruction: Bailigh an neachtar go léir agus déan an
+        mhil go léir!
+      courseF_bee_functions8a_instruction: Bailigh an neachtar go léir nó déan an
+        mhil go léir!
+      courseF_bee_functionsPre7_instruction: |-
+        Now try building a function to solve
+        this maze.  How is it different from last time?
       courseF_bee_functions_challenge1_instruction: |-
         Create a new function to collect
         all the nectar and honey while there is a path ahead. Use it to complete the
@@ -8753,9 +8737,8 @@
       courseF_bee_functions_challenge2_instruction: |-
         Use everything you have learned
         to complete this puzzle!
-      courseF_bee_functions_challenge2_recursion_instruction: |-
-        Collect all the nectar
-        or make all of the honey!
+      courseF_bee_functions_challenge2_recursion_instruction: Bailigh an neachtar
+        go léir nó déan an mhil go léir!
       courseF_bee_fwp2_instruction: Cuir an cód seo isteach i bhfeidhm nua, ansin
         bain úsáid as an bhfeidhm chun neachtar a lorg sa tsraith seo.
       courseF_bee_fwp3_instruction: An bhfuil sé níos éasca an neachtar a bhailiú
@@ -8804,9 +8787,8 @@
         to finish your code.
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
-      courseF_maze_ramp6_instruction: |-
-        "Keep calm and help me find the bad pig.
-        Otherwise I might get angry!"
+      courseF_maze_ramp6_instruction: '"Tóg go bog é agus cabhraigh liom an mhuc dhána
+        a aimsiú. Nó b''fhéidir go dtiocfaidh fearg orm!"'
       courseF_maze_ramp7_instruction: |-
         Use what you've learned to get the bird to
         the pig!
@@ -10913,7 +10895,7 @@
         gan ach trí bhloc nua a chur leis an gcód? Má dhéanann tú mar is ceart é,
         beidh mé in ann aon chosán cuarach a leanúint, is cuma cé chomh fada. Déan
         deifir! Tá an t-oighear ag leá!
-      skratDebugVideo1_instruction: Cabhraigh le Skrat an dearcán a fháil.
+      skratDebugVideo1_instruction: Cabhraigh le Scrat an dearcán a fháil.
       template test_instruction: what up
       testArtistForTestK_instruction: |-
         The Artist is trying to draw a line five times,

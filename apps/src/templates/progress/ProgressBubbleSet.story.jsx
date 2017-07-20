@@ -54,7 +54,7 @@ export default storybook => {
       },
       {
         name:'first level is unplugged',
-        description: 'Should still get a bubble (not a pill) for unplugged',
+        description: 'Should get a pill for unplugged',
         story: () => (
           <ProgressBubbleSet
             levels={[

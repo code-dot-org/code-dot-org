@@ -748,6 +748,8 @@ se:
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: [ ]
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:
@@ -758,6 +760,7 @@ se:
         courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+      courseE_farmer_functions2ba_callout: [ ]
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions3c_callout: [ ]

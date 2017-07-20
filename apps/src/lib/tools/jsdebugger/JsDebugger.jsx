@@ -87,6 +87,8 @@ var styles = {
   }
 };
 
+const debugAreaTransitionValue = 'height 0.4s';
+
 const MIN_DEBUG_AREA_HEIGHT = 120;
 const MAX_DEBUG_AREA_HEIGHT = 400;
 const MIN_WATCHERS_AREA_WIDTH = 120;
@@ -308,13 +310,26 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
         (window.innerHeight - event.pageY) - offset
       )
     );
-
     if (!this.props.isOpen) {
-      this.slideOpen();
+      this.props.open();
+      this.setState({
+        open: true,
+        openedHeight: newDbgHeight,
+      });
+    } else {
+      this.setState({
+        openedHeight: newDbgHeight,
+      });
     }
 
     codeTextbox.style.bottom = newDbgHeight + 'px';
+    // Toggle transition style to 'none' to allow height to update immediately
+    this.root.style.transition = 'none';
     this.root.style.height = newDbgHeight + 'px';
+    // Force reference to offsetHeight, to trigger a reflow and make the browser
+    // pick up the CSS changes immediately. see https://stackoverflow.com/a/16575811
+    this.root.offsetHeight;
+    this.root.style.transition = debugAreaTransitionValue;
 
     this.handleResizeConsole();
 
@@ -409,7 +424,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     return (
       <div
         id="debug-area"
-        style={[{transition: 'height 0.4s'}, this.props.style, {height}]}
+        style={[{transition: debugAreaTransitionValue}, this.props.style, {height}]}
         onTransitionEnd={this.onTransitionEnd}
         ref={root => this.root = root}
       >
