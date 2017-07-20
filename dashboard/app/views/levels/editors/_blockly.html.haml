@@ -58,6 +58,19 @@
 .field
   = f.label :disable_if_else_editing, 'Don\'t let users mutate (add or remove) branches to if/else blocks'
   = boolean_check_box f, :disable_if_else_editing
+.field
+  = f.label :disable_procedure_autopopulate, 'Disable autopopulation of Functions category with default toolbox blocks'
+  %p
+    By default, Functions categories in Blockly will be automatically populated
+    with blocks for three default procedure definitions (noreturn, return, and
+    ifreturn), as well as the call blocks for any procedures that have already
+    been defined. Any XML manually included in the toolbox category will be ignored.
+  %p
+    With this setting enabled, only the call blocks will be injected into this
+    category and NOT the default definition blocks. Any XML manually included in
+    the toolbox category will be included, allowing you to specify a subset of
+    the definition blocks that you would like to include for this level.
+  = boolean_check_box f, :disable_procedure_autopopulate
 
 - if @level.game.uses_droplet?
   .field

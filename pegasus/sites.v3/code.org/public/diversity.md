@@ -20,13 +20,19 @@ social:
 
 The fields of software, computing and computer science are plagued by tremendous underrepresentation of women, African Americans, and Hispanics.  In high school, the Advanced Placement exam in Computer Science has the worst gender diversity across all courses, with 78 percent participation by men and 22 percent by women. Participation by students of color is 13 percent. These underrepresented groups represent 65 percent of the entire US population! 
 
-This problem extends into the software workplace, which suffers a similar lack of diversity. Obviously there are many issues to address to solve the entire problem of diversity in the tech workforce - from unconscious bias in hiring or retention practices, or capacity-building in university programs. 
+This problem extends into the software workplace, which suffers a similar lack of diversity. Obviously there are many issues to address to solve the entire problem of diversity in the tech workforce - from unconscious bias in hiring or retention practices, or capacity-building in university programs. We work with our [Diversity Advisory Council](/about/diversity-council) to help connect our work in K-12 to the bigger picture.
 
 <center><img src="/images/diversitypipeline2.png" style="max-width: 100%"/></center>
 <br/><br/>
 Our focus is primarily on K-12 learning, which is where the diversity problem begins: Among women, those who try AP Computer Science in high school are 10 times more likely to major in computer science. Black and Hispanic students who try AP Computer Science in high school are 7-8 times more likely to major in computer science (see tables 3, 7, 8 in [this document](http://research.collegeboard.org/sites/default/files/publications/2012/7/researchreport-2007-4-ap-students-college-analysis-five-year-academic-careers.pdf)). But more importantly, computer science is now a foundational science for all 21st century careers, making access in K-12 to this knowledge an equity issue the country must address.
 
-## Diversity of students in our courses
+## Diversity in AP Computer Science since Code.org launch in 2013
+The charts below show participation in the AP Computer Science exam among female students and underrepresented minorities since 2007. Not only has overall participation grown, but the overall proportion of these traditionally underrepresented groups has been increasing. Although these charts are a barometer of Code.org's work to popularize computer science, break stereotypes, and build the K-12 pipeline, the improvements aren't the result of Code.org's work alone. Besides all the organizations working on diversity in tech, the real credit belongs to the thousands of teachers who have worked for years to improve diversity in their classrooms. While things are moving in the right direction, we have a long way to go to reach a balanced population in AP Computer Science, which is why Code.org focuses on the entire K-12 pathway.
+
+<center><img src="/images/infographics/fit-800/female-urm-ap-cs-07-18.png" style="max-width: 100%"/></center>
+<br/><br/>
+
+## Diversity of students in Code.org courses across grades K-12
 <center><img src="/images/infographics/fit-800/diversity-courses-updated-05-23.png" style="max-width: 100%"/></center>
 
 Addressing diversity issues is foundational to Code.org’s work, and is woven throughout our programs - from curriculum to teacher professional learning to advocacy to marketing. We focus not only on gender and socioeconomic diversity, but also on increasing participation among underrepresented minorities: African Americans, Hispanic/Latino students, Native American/Alaskans, and Native Hawaiian/Pacific Islanders. We increase diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. Of course, when our teachers integrate computer science into classrooms that *all* students attend, we have an immediate impact on diversity. Below are examples of some of the other tactics we use address diversity issues:

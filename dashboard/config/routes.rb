@@ -53,11 +53,12 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:show, :update] do
+  resources :sections, only: [:index, :show, :update] do
     member do
       post 'log_in'
     end
   end
+  get '/dashboardapi/sections/', to: 'sections#index'
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
@@ -157,7 +158,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
-      get 'extras', to: 'script_levels#stage_extras', format: false
+      get 'extras', to: 'script_levels#stage_extras', format: false, as: 'stage_extras'
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
@@ -329,6 +330,7 @@ Dashboard::Application.routes.draw do
         delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :workshop_summary_report, only: :index

@@ -284,11 +284,20 @@ class SectionApiHelperTest < SequelTestCase
         sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
         sections.each do |section|
           if section[:id] == FakeDashboard::SECTION_COURSE[:id]
-            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:course_id]
+            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:courseId]
           else
             assert_nil section[:course_id]
           end
         end
+      end
+
+      it 'returns student count but not students' do
+        sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
+        assert_equal [1, 0, 0], sections.map {|s| s[:studentCount]}
+
+        # Shouldn't return section-specific data -- use the specific API for each.
+        refute sections.any? {|section| section[:students]}
+        refute sections.any? {|section| section[:teachers]}
       end
     end
   end
@@ -710,31 +719,6 @@ class SectionApiHelperTest < SequelTestCase
           assert_equal(
             1,
             Dashboard.db[:followers].where(student_user_id: FakeDashboard::STUDENT_SELF[:id]).count
-          )
-        end
-      end
-
-      it 'creates a google classroom student' do
-        Dashboard.db.transaction(rollback: :always) do
-          pegasus_section = DashboardSection.fetch_if_teacher(
-            FakeDashboard::SECTION_NORMAL[:id],
-            FakeDashboard::TEACHER[:id]
-          )
-
-          id = pegasus_section.add_student(FakeDashboard::STUDENT_OAUTH)
-          assert_equal(
-            1,
-            Dashboard.db[:followers].where(student_user_id: id).count
-          )
-
-          user = Dashboard.db[:users].first(id: id)
-          assert_equal(
-            FakeDashboard::STUDENT_OAUTH[:uid],
-            user[:uid]
-          )
-          assert_equal(
-            FakeDashboard::STUDENT_OAUTH[:name],
-            user[:name]
           )
         end
       end

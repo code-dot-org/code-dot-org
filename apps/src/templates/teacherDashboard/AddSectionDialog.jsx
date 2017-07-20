@@ -138,7 +138,7 @@ export class AddSectionDialog extends Component {
   }
 }
 
-export default connect(() => ({}), { updateSection })(AddSectionDialog);
+export default connect(undefined, { updateSection })(AddSectionDialog);
 
 const PadAndCenter = ({children}) => (
   <div

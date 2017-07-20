@@ -39,7 +39,7 @@
     "timeout_failure_tick": "850",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need these event blocks:\\n\\n![](https://images.code.org/02dcc4efc752dfa4187d0b1268427100-image-1475707266348.40.55.png)\",\r\n  \"hint_id\": \"courseB_playlab_events6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need these event blocks:\\n\\n![](https://images.code.org/02dcc4efc752dfa4187d0b1268427100-image-1475707266348.40.55.png)\",\"hint_id\":\"courseB_playlab_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f260a2b4e89cbc7d06ac4122d1466fd8/courseB_playlab_events6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down arrows on the green `when arrow key pressed` event blocks to choose different directions.\",\"hint_id\":\"courseB_playlab_events6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/11db28f3319789d03d2ce7ae1db03a21/courseB_playlab_events6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Get to all of the flags to pass!\",\"hint_id\":\"courseB_playlab_events6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/11a0536e54b12c3b86bacac7dfcc4694/courseB_playlab_events6.mp3\"}]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
     "markdown_instructions": "Help your knight get all of the flags!\r\n\r\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "soft_buttons": [
@@ -55,7 +55,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-19 16:02:04 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 16:02:04 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 20:54:23 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

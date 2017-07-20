@@ -1,5 +1,12 @@
 class SectionsController < ApplicationController
-  before_action :load_section_by_code, except: :update
+  layout false, only: :index
+  before_action :load_section_by_code, only: [:log_in, :show]
+
+  # Get the set of sections owned by the current user
+  def index
+    return head :forbidden unless current_user
+    render json: current_user.sections.map(&:summarize)
+  end
 
   def show
     @secret_pictures = SecretPicture.all.shuffle
@@ -23,7 +30,7 @@ class SectionsController < ApplicationController
       bypass_sign_in user
       user.update_tracked_fields!(request)
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
-      redirect_to_section_script
+      redirect_to_section_script_or_course
     else
       flash[:alert] = I18n.t('signinsection.invalid_login')
       redirect_to section_path(id: @section.code)
@@ -32,9 +39,11 @@ class SectionsController < ApplicationController
 
   private
 
-  def redirect_to_section_script
+  def redirect_to_section_script_or_course
     if @section.script
       redirect_to @section.script
+    elsif @section.course
+      redirect_to @section.course
     else
       redirect_to '/'
     end

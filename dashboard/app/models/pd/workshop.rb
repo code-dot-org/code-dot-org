@@ -135,7 +135,7 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
-    SUBJECT_CSP_SUMMER_WORKSHOP => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
     SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
@@ -482,27 +482,20 @@ class Pd::Workshop < ActiveRecord::Base
   # Min number of days a teacher must attend for it to count.
   # @return [Integer]
   def min_attendance_days
-    constraints = TIME_CONSTRAINTS_BY_SUBJECT[subject]
-    if constraints
-      constraints[:min_days]
-    else
-      1
-    end
+    [1, time_constraint(:min_days)].compact.max
   end
 
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
   # @return [Integer] number of payment days, after applying constraints
   def effective_num_days
-    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_days]}
-    [sessions.count, max_days].compact.min
+    [sessions.count, time_constraint(:max_days)].compact.min
   end
 
   # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
-    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_hours]}
-    [actual_hours, max_hours].compact.min
+    [actual_hours, time_constraint(:max_hours)].compact.min
   end
 
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
@@ -566,5 +559,23 @@ class Pd::Workshop < ActiveRecord::Base
 
   def organizer_or_facilitator?(user)
     organizer == user || facilitators.include?(user)
+  end
+
+  # TODO: Extend this for non teachercon surveys when we get to it
+  def survey_responses
+    if teachercon?
+      Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
+    elsif local_summer?
+      Pd::LocalSummerWorkshopSurvey.where(pd_enrollment: enrollments)
+    else
+      raise 'Not supported for this workshop type'
+    end
+  end
+
+  # Lookup a time constraint by type
+  # @param constraint_type [Symbol] e.g. :min_days, :max_days, or :max_hours
+  # @returns [Number, nil] constraint for the specified subject and type, or nil if none exists
+  def time_constraint(constraint_type)
+    TIME_CONSTRAINTS_BY_SUBJECT[subject].try(:[], constraint_type)
   end
 end

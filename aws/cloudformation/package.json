@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "license": "apache-2.0",
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "aws-sdk": "^2.50.0"
   },

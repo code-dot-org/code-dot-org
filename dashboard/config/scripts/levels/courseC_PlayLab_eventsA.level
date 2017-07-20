@@ -44,7 +44,7 @@
     ],
     "first_sprite_index": "0",
     "project_template_level_name": "grade2_playlab_project_template",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.\",\"hint_id\":\"courseC_PlayLab_eventsA_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19d71663f6fd0aad88badf139591fa81/courseC_PlayLab_eventsA.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `set background` block and the `set actor to a ____ speed` block to solve this puzzle.\",\"hint_id\":\"courseC_PlayLab_eventsA_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/19d71663f6fd0aad88badf139591fa81/courseC_PlayLab_eventsA.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You will need to specifically drag a `when run` event block into the workspace to solve this puzzle.\",\"hint_id\":\"courseC_PlayLab_eventsA_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3ad6ed3de92f1f9968100f830d048dff/courseC_PlayLab_eventsA.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -52,6 +52,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 18:27:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,4 +1,5 @@
 # Get the set of sections owned by the current user
+# DEPRECATED: Use GET /dashboardapi/sections instead
 get '/v2/sections' do
   only_for 'code.org'
   dont_cache
@@ -61,7 +62,7 @@ get '/v2/sections/:id/students' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.to_owner_hash[:students])
+  JSON.pretty_generate(section.students)
 end
 
 post '/v2/sections/:id/students' do |id|
@@ -92,5 +93,5 @@ get '/v2/sections/:id/teachers' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.to_owner_hash[:teachers])
+  JSON.pretty_generate(section.teachers)
 end

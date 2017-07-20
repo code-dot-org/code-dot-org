@@ -46,7 +46,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-14 20:08:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 20:10:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 20:08:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-14 20:10:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:05:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:05:42 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:05:57 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -54,7 +54,7 @@
     <start_blocks>
       <xml>
         <block type="when_run"/>
-        <block type="studio_whenSpriteCollided" y="200px">
+        <block type="studio_whenSpriteCollided" deletable="false">
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
         </block>
@@ -70,6 +70,10 @@
         <block type="studio_saySpriteChoices">
           <title name="SPRITE">1</title>
           <title name="VALUE">Hi there.</title>
+        </block>
+        <block type="studio_whenSpriteCollided">
+          <title name="SPRITE1">0</title>
+          <title name="SPRITE2">1</title>
         </block>
       </xml>
     </toolbox_blocks>
