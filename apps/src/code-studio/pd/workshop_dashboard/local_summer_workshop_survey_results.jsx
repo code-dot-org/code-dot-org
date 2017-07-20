@@ -48,11 +48,10 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
   },
 
   componentDidMount() {
-    window.setTimeout(this.load(), 5000);
+    this.load();
   },
 
   load() {
-    this.setState({loading: true});
     const url = `/api/v1/pd/workshops/${this.props.params['workshopId']}/local_workshop_survey_report`;
 
     this.loadRequest = $.ajax({
