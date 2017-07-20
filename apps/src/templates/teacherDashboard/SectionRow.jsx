@@ -166,7 +166,15 @@ class SectionRow extends Component {
 
   onClickEdit = () => {
     const section = this.props.sections[this.props.sectionId];
-    this.props.handleEdit(section);
+    const editData = {
+      name: section.name,
+      grade: section.grade,
+      course: section.course_id,
+      extras: section.stageExtras,
+      pairing: section.pairingAllowed,
+      sectionId: this.props.sectionId
+    };
+    this.props.handleEdit(editData);
   }
 
   onClickEditSave = () => {

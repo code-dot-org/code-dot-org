@@ -104,7 +104,7 @@ class SectionsPage extends Component {
 
   handleEditRequest = (section) => {
     this.setState({editSectionDialogOpen : true});
-    this.editer.updateStates(section);
+    this.editer.getWrappedInstance().updateStates(section);
   }
 
   render() {
