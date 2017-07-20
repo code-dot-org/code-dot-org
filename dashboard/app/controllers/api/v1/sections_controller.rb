@@ -56,6 +56,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: section.summarize
   end
 
+  # DELETE /api/v1/sections/<id>
+  # Delete a section
+  def destroy
+    @section.destroy
+    head :no_content
+  end
+
   # POST /api/v1/sections/<id>/join
   def join
     unless current_user

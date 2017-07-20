@@ -96,6 +96,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'teacher cannot view nonexistent section details' do
+    sign_in @teacher
+    get :show, params: {id: 1_000_000}
+    assert_response :forbidden
+  end
+
   test 'summarizes section details' do
     sign_in @teacher
 
@@ -520,6 +526,47 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     }
     assert_response :success
     assert_equal 0, @teacher.scripts.size
+  end
+
+  test 'logged out cannot delete a section' do
+    delete :destroy, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'student cannot delete a section' do
+    sign_in @student
+    delete :destroy, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test "teacher cannot delete another teacher's section" do
+    sign_in create :teacher
+    delete :destroy, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'teacher can delete own section' do
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
+    sign_in teacher
+    refute section.deleted_at
+
+    delete :destroy, params: {id: section.id}
+    assert_response :success
+
+    section.reload
+    refute_nil section.deleted_at
+  end
+
+  test 'deleting section deletes followers too' do
+    sign_in @teacher
+    refute_empty @section.followers
+
+    delete :destroy, params: {id: @section.id}
+    assert_response :success
+
+    @section.reload
+    assert_empty @section.followers
   end
 
   # Parsed JSON returned after the last request, for easy assertions.
