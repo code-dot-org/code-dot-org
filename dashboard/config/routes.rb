@@ -202,9 +202,6 @@ Dashboard::Application.routes.draw do
   resources :followers, only: [:create]
   post '/followers/remove', to: 'followers#remove', as: 'remove_follower'
 
-  post '/followers/create_async', to: 'followers#create_async', defaults: {format: 'json'}
-  post '/followers/remove_async', to: 'followers#remove_async', defaults: {format: 'json'}
-
   get '/join(/:section_code)', to: 'followers#student_user_new', as: 'student_user_new'
   post '/join(/:section_code)', to: 'followers#student_register', as: 'student_register'
 
@@ -419,6 +416,9 @@ Dashboard::Application.routes.draw do
   end
   get '/dashboardapi/v1/pd/k5workshops', to: 'api/v1/pd/workshops#k5_public_map_index'
   get '/api/v1/pd/workshops_user_enrolled_in', to: 'api/v1/pd/workshops#workshops_user_enrolled_in'
+
+  post '/api/v1/sections/:section_code/join', action: 'join', controller: 'api/v1/sections', defaults: {format: 'json'}
+  post '/api/v1/sections/:section_code/leave', action: 'leave', controller: 'api/v1/sections', defaults: {format: 'json'}
 
   post '/api/lock_status', to: 'api#update_lockable_state'
   get '/api/lock_status', to: 'api#lockable_state'
