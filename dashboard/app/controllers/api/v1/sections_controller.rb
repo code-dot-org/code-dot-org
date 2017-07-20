@@ -17,6 +17,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/join
   def join
+    unless current_user
+      render_404
+      return
+    end
     @section.add_student current_user
     render json: {
       sections: current_user.sections_as_student.map(&:summarize)
@@ -35,7 +39,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   private
 
   def find_follower
-    raise "No user signed in" unless current_user
+    unless current_user
+      render_404
+      return
+    end
     @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
   end
 end
