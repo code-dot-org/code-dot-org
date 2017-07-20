@@ -1,4 +1,6 @@
 class Pd::TeacherApplicationController < ApplicationController
+  include Pd::PageHelper
+
   EMAIL_TEMPLATE_PREFIX = '2017_teacher_application_'.freeze
   DEFAULT_MANAGE_PAGE_SIZE = 25
 

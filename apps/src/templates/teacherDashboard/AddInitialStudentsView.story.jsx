@@ -11,6 +11,8 @@ export default storybook => storybook
     return (
       <AddInitialStudentsView
         sectionName="Section Alpha"
+        handleLoginChoice={storybook.action('handleLoginChoice')}
+        handleCancel={storybook.action('handleCancel')}
       />
     );
   })
@@ -21,6 +23,8 @@ export default storybook => storybook
     return (
       <AddInitialStudentsView
         sectionName="Section Beta"
+        handleLoginChoice={storybook.action('handleLoginChoice')}
+        handleCancel={storybook.action('handleCancel')}
       />
     );
   });

@@ -8,7 +8,7 @@
     "skin": "artist_zombie",
     "embed": "false",
     "instructions": "Draw only those three stars to finish this puzzle.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"courseD_artist_functions5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/courseD_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"courseD_artist_functions5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/courseD_artist_functions5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't give up!  Remember what you have been learning.\",\"hint_id\":\"courseD_artist_functions5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5565ab5a03e2e30868c82267a0d63cdc/courseE_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Functions make it easy to call saved code at any time, not just from inside a loop!\",\"hint_id\":\"courseD_artist_functions5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/62fbc4434b6a63445243be3d9c05def0/courseE_artist_functions5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by dragging the code for a star shape into the `draw a star` function, then use this function to draw the three stars!\",\"hint_id\":\"courseD_artist_functions5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9fa243cdd4366f9c2e80ac8155192e4/courseE_artist_functions5.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -34,10 +34,13 @@
     "ideal": "11",
     "markdown_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\r\n\r\nDraw only those three stars to finish this puzzle.",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:44:59 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

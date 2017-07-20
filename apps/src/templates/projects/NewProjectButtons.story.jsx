@@ -11,6 +11,13 @@ export default storybook => {
         story: () => (
           <NewProjectButtons/>
         )
+      },
+      {
+        name: 'Modified project buttons',
+        description: 'Buttons to make a new Web Lab, Game Lab, Play Lab and Artist project',
+        story: () => (
+          <NewProjectButtons projectTypes={['weblab', 'gamelab', 'playlab', 'artist']}/>
+        )
       }
     ]);
 };

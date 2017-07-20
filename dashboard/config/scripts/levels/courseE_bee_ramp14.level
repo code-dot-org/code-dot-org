@@ -6,7 +6,7 @@
   "user_id": 63,
   "properties": {
     "skin": "bee",
-    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1,\"value\":3,\"range\":5,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":4,\"range\":4,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":2,\"range\":2,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":1,\"range\":2,\"featureType\":2,\"cloudType\":1},{\"tileType\":1,\"value\":4,\"range\":5,\"featureType\":2,\"cloudType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":2},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":5,\"featureType\":1,\"cloudType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":2,\"cloudType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":3,\"featureType\":0,\"cloudType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":3,\"featureType\":2,\"cloudType\":1},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -28,16 +28,21 @@
     "start_direction": "1",
     "step_mode": "1",
     "flower_type": "redWithNectar",
-    "fast_get_nectar_animation": "false",
-    "instructions": "Get nectar while there is nectar, **else** make the honey. ",
-    "ideal": "8",
-    "step_speed": "2",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar if there is nectar, otherwise make honey!\",\"hint_id\":\"courseE_bee_ramp14_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b1a0feedca16aa04ac00b95f9080404f/courseE_bee_ramp14.mp3\"}]",
-    "markdown_instructions": "The same technique works with nectar and honey!  \r\n\r\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.  Use the `if at flower / else` block to get nectar while there is nectar, **else** make the honey. \r\n\r\n\r\n\r\n",
+    "fast_get_nectar_animation": "true",
+    "instructions": "Help the bee follow the path to gather all of the honey and all of the nectar.",
+    "ideal": "9",
+    "step_speed": "1",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.\",\"hint_id\":\"courseE_bee_ramp14_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d489b74af76acdd548125bbb2754073b/courseE_bee_ramp14.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There can be more than one flower or honeycomb at each space, so make sure to use `while` loops to get them all!\",\"hint_id\":\"courseE_bee_ramp14_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba6a1b5a03e901fbfdf67b11e4bbf133/courseE_bee_ramp14.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"This puzzle is nearly identical to the previous one, just with honey and nectar instead of vegetables.\",\"hint_id\":\"courseE_bee_ramp14_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/be81eb4e055a6102942596aff199604b/courseE_bee_ramp14.mp3\"}]",
+    "markdown_instructions": "The same technique works with nectar and honey!  \r\n\r\nLook at all of these clouds. Some of them will turn into honey, and others into nectar.   \r\nHelp the bee follow the path and solve this puzzle.\r\n\r\n\r\n\r\n",
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "nectar_goal": "0",
+    "honey_goal": "0",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 20:10:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:10:36 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:15:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:32:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"fast_get_nectar_animation\",\"ideal\",\"step_speed\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:33:31 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 20:36:42 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:30:30 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 02:56:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-19 18:01:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-19 18:04:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"nectar_goal\",\"honey_goal\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -49,18 +54,20 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="1"/>
+        <block type="maze_move">
+          <title name="DIR">moveForward</title>
+        </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="controls_repeat" limit="1">
+        <block type="controls_repeat">
           <title name="TIMES">5</title>
         </block>
-        <block type="bee_ifElseFlower">
-          <title name="LOC">atFlower</title>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
         </block>
         <block type="bee_whileNectarAmount">
           <title name="ARG1">nectarRemaining</title>
@@ -80,24 +87,25 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat_dropdown">
-              <title name="TIMES" config="3-10">5</title>
+            <block type="controls_repeat">
+              <title name="TIMES">19</title>
               <statement name="DO">
-                <block type="maze_moveForward">
-                  <next>
-                    <block type="bee_ifElseFlower">
-                      <title name="LOC">atFlower</title>
+                <block type="maze_ifElse">
+                  <title name="DIR">isPathForward</title>
+                  <statement name="DO">
+                    <block type="maze_move">
+                      <title name="DIR">moveForward</title>
+                    </block>
+                  </statement>
+                  <statement name="ELSE">
+                    <block type="bee_whileNectarAmount">
+                      <title name="ARG1">nectarRemaining</title>
+                      <title name="OP">&gt;</title>
+                      <title name="ARG2">0</title>
                       <statement name="DO">
-                        <block type="bee_whileNectarAmount">
-                          <title name="ARG1">nectarRemaining</title>
-                          <title name="OP">&gt;</title>
-                          <title name="ARG2">0</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                        </block>
+                        <block type="maze_nectar"/>
                       </statement>
-                      <statement name="ELSE">
+                      <next>
                         <block type="bee_whileNectarAmount">
                           <title name="ARG1">honeyAvailable</title>
                           <title name="OP">&gt;</title>
@@ -105,10 +113,15 @@
                           <statement name="DO">
                             <block type="maze_honey"/>
                           </statement>
+                          <next>
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
+                            </block>
+                          </next>
                         </block>
-                      </statement>
+                      </next>
                     </block>
-                  </next>
+                  </statement>
                 </block>
               </statement>
             </block>

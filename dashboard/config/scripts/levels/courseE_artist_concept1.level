@@ -32,13 +32,17 @@
     "impressive": "false",
     "disable_sharing": "false",
     "never_autoplay_video": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The hexagons have 50 pixel sides and 60 degree turns to the right.\",\"hint_id\":\"courseE_artist_concept1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6a7bcdb88693200892f4aa35f14ed47e/courseE_artist_concept1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a function here so you don't have to write the code for a hexagon over and over again.\",\"hint_id\":\"courseE_artist_concept1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3ec56046b054b01764f3baf64aaa649a/courseE_artist_concept1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"The hexagons have 50 pixel sides and 60 degree turns to the right.\",\"hint_id\":\"courseE_artist_concept1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6a7bcdb88693200892f4aa35f14ed47e/courseE_artist_concept1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a function here so you don't have to write the code for a hexagon over and over again.\",\"hint_id\":\"courseE_artist_concept1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3ec56046b054b01764f3baf64aaa649a/courseE_artist_concept1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `set width` block before each function call to change the pen width.\",\"hint_id\":\"courseE_artist_concept1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8f025a9bc6670088ec6a364e0505692a/courseE_artist_concept1.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "true",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:36:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -38,7 +38,7 @@
     "instructions": "Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.\r\n___\r\n*Don't forget: Keep testing your game as you code. You'll not only want a game that works, but one that is fun to play!*\r\n___\r\nYour toolbox has been re-organized to make it easier to find what you need. We've also added these blocks (and more):\r\n\r\n![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57 PM.png)",
+    "markdown_instructions": "Great job! You have all the basic components of a working game. Now spend some time making sure the game works the way you want. Include a way to win or lose your game, then play until you meet one of those conditions.",
     "instructions_important": "false",
     "soft_buttons": [
       "leftButton",
@@ -48,11 +48,13 @@
     ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish.\",\"hint_id\":\"courseE_playLab_scaffold5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/325da1a83f40cedf619fe658feb10692/courseE_playLab_scaffold5.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 18:45:11 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:46:42 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 21:08:12 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 18:45:11 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:46:42 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 21:08:12 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:38:58 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -34,11 +34,15 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The second half of your code should look almost the same as the first half, except you will be turning *left*, jumping, then turning *right*.\",\"hint_id\":\"courseF_artist_variables5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0ef202ba94d4bfa80119017cd642faa3/courseF_artist_variables5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The second half of your code should look almost the same as the first half, except you will be turning *left*, jumping, then turning *right*.\",\"hint_id\":\"courseF_artist_variables5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0ef202ba94d4bfa80119017cd642faa3/courseF_artist_variables5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The first half of your code will draw three triangles, and the second half will draw the other three.\",\"hint_id\":\"courseF_artist_variables5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57cafdbf9e20dbd8645558cfdc9b8e04/courseF_artist_variables5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Start by duplicating the code in the first half of your program, then alter it to make the design shown.\",\"hint_id\":\"courseF_artist_variables5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7cd8ffe1836582cb375f5005de6f642e/courseF_artist_variables5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the pattern your artist will follow:\\n\\n![](https://images.code.org/e4ac66f8e9a4503e49c4fad1e4fafc1d-image-1500326800109.7_hint.gif)\",\"hint_id\":\"courseF_artist_variables5_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5b0d983195113f00eeaa3fbae586d801/courseF_artist_variables5.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-17 21:27:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

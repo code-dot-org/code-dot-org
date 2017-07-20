@@ -33,13 +33,15 @@
     "instructions_important": "false",
     "discard_background": "false",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Start by using a nested loop like you had before, but this time, make it with squares.\",\"hint_id\":\"courseD_artist_nestedLoops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3e1de81abebceef1a94290e280193d1d/courseD_artist_nestedLoops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Add a second set of nested loops to the end of the first set, but this time use triangles.\",\"hint_id\":\"courseD_artist_nestedLoops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a4f2f012bc71946ae9f1216a6856b325/courseD_artist_nestedLoops9.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Use two nested loops:\\n - Repeat 8 times\\n    - draw a square\\n    - jump forward 50 pixels\\n    - turn right by 45 degrees\\n - Repeat 8 times\\n    - draw a triangle\\n    - jump forward 50 pixels\\n    - turn right by 45 degrees\",\"hint_id\":\"courseD_artist_nestedLoops9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0a49033c48543d92a12f632f31745f8b/courseD_artist_nestedLoops9.mp3\"}]",
-    "markdown_instructions": "**Challenge:** Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel sides**",
+    "markdown_instructions": "**Challenge:** Can you figure out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel sides**\r\n- Between each pair of shapes, you will need to jump forward the length of a side, and turn 45 degrees.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 19:29:44 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -80,7 +80,7 @@ const ProgressLesson = React.createClass({
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    hasSelectedSection: PropTypes.bool.isRequired,
+    showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired
   },
@@ -115,7 +115,7 @@ const ProgressLesson = React.createClass({
       levels,
       showTeacherInfo,
       viewAs,
-      hasSelectedSection,
+      showLockIcon,
       lessonIsVisible,
       lessonLockedForSection
     } = this.props;
@@ -162,7 +162,7 @@ const ProgressLesson = React.createClass({
                 style={styles.icon}
               />
             }
-            {hasSelectedSection && lesson.lockable &&
+            {showLockIcon && lesson.lockable &&
               <span data-tip data-for={tooltipId}>
                 <FontAwesome
                   icon={locked ? 'lock' : 'unlock'}
@@ -210,7 +210,7 @@ export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.stageLock.viewAs,
-  hasSelectedSection: !!state.sections.selectedSectionId,
+  showLockIcon: !!state.sections.selectedSectionId || state.stageLock.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

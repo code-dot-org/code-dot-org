@@ -9,11 +9,13 @@
   hamburger_options[:language] = request.language
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "header_"
+  hamburger_options[:page_mode] = request.cookies['pm']
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "header_"
+  header_contents_options[:page_mode] = request.cookies['pm']
 
   require 'cdo/hamburger'
 

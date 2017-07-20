@@ -1,4 +1,5 @@
 import {mount} from 'enzyme';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Generate and run a suite of simple tests that make sure all of provided
@@ -60,9 +61,21 @@ class FakeStorybook {
     return function () {};
   }
 
+  withExperiments(...experimentList) {
+    this.experiments = experimentList;
+    return this;
+  }
+
   test() {
     this.groups.forEach(group => {
       describe(group.name, () => {
+        // Make sure that the only experiments enabled are those that we explicitly
+        // added via withExperiments
+        localStorage.removeItem('experimentsList');
+        if (this.experiments) {
+          this.experiments.forEach(key => experiments.setEnabled(key, true));
+        }
+
         group.stories.forEach(story => {
           it(story.name, () => {
             mount(group.decorate(story.story));
