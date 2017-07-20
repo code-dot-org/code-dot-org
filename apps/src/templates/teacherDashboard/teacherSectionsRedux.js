@@ -18,7 +18,14 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
-export const setSections = sections => ({ type: SET_SECTIONS, sections });
+
+/**
+ * Set the list of sections to display. If `reset` is true, first clear the
+ * existing list.
+ * @param sections
+ * @param reset
+ */
+export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
 export const updateSection = (sectionId, serverSection) => ({
   type: UPDATE_SECTION,
   sectionId,
@@ -112,20 +119,21 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === SET_SECTIONS) {
-    const sections = action.sections.map(section =>
-      sectionFromServerSection(section));
+    const sections = action.sections;
+    const prevSectionIds = action.reset ? [] : state.sectionIds;
+    const prevSections = action.reset ? [] : state.sections;
     return {
       ...state,
-      sectionIds: state.sectionIds.concat(sections.map(section => section.id)),
+      sectionIds: prevSectionIds.concat(sections.map(section => section.id)),
       sections: {
-        ...state.sections,
+        ...prevSections,
         ..._.keyBy(sections, 'id')
       }
     };
   }
 
   if (action.type === UPDATE_SECTION) {
-    const section = sectionFromServerSection(action.serverSection);
+    const section = action.serverSection;
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;
 
@@ -186,7 +194,7 @@ export default function teacherSections(state=initialState, action) {
           grade: '',
           stageExtras: false,
           pairingAllowed: true,
-          studentNames: [],
+          studentCount: 0,
           code: '',
           courseId: action.courseId || null,
           scriptId: null
@@ -215,23 +223,6 @@ export default function teacherSections(state=initialState, action) {
 
 export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
 
-/**
- * Maps from the data we get back from the server for a section, to the format
- * we want to have in our store.
- */
-export const sectionFromServerSection = serverSection => ({
-  id: serverSection.id,
-  name: serverSection.name,
-  loginType: serverSection.login_type,
-  grade: serverSection.grade,
-  stageExtras: serverSection.stage_extras,
-  pairingAllowed: serverSection.pairing_allowed,
-  studentNames: serverSection.students.map(student => student.name),
-  code: serverSection.code,
-  courseId: serverSection.course_id,
-  scriptId: serverSection.script ? serverSection.script.id : null
-});
-
 const assignmentsForSection = (validAssignments, section) => {
   const assignments = [];
   if (section.courseId) {
@@ -250,7 +241,9 @@ const assignmentsForSection = (validAssignments, section) => {
  */
 export const assignmentNames = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment.name);
+  // we might not have an assignment object if we have a section that was somehow
+  // assigned to a hidden script (and we dont have permissions to see hidden scripts)
+  return assignments.map(assignment => assignment ? assignment.name : '');
 };
 
 /**
@@ -258,5 +251,5 @@ export const assignmentNames = (validAssignments, section) => {
  */
 export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
-  return assignments.map(assignment => assignment.path);
+  return assignments.map(assignment => assignment ? assignment.path : '');
 };

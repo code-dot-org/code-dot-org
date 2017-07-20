@@ -34,8 +34,8 @@
     "x": "70",
     "y": "70",
     "markdown_instructions": "Fantastic!  \r\n\r\nLet's add some pizazz by changing the brush using the `set pattern` block before our loop starts.",
-    "contained_level_names": null,
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to make any changes to the loop, just put one block above it.\",\"hint_id\":\"courseC_artist_loop1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0f6c7d9994e0bde3a8d816bf9946c7b4/courseC_artist_loop1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you will need to set a pattern:\\n\\n![](https://images.code.org/02064f52d5e4ae2d51dd5c6ce0016a3f-image-1499710835404.19.44 AM.png)\\n\\nChoose any pattern you like!\",\"hint_id\":\"courseC_artist_loop1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/205adad2e3b59118ad534b84c3c8f873/courseC_artist_loop1.mp3\"}]"
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to make any changes to the loop, just put one block above it.\",\"hint_id\":\"courseC_artist_loop1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0f6c7d9994e0bde3a8d816bf9946c7b4/courseC_artist_loop1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you will need to set a pattern:\\n\\n![](https://images.code.org/02064f52d5e4ae2d51dd5c6ce0016a3f-image-1499710835404.19.44 AM.png)\\n\\nChoose any pattern you like!\",\"hint_id\":\"courseC_artist_loop1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/205adad2e3b59118ad534b84c3c8f873/courseC_artist_loop1.mp3\"}]",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -17,25 +17,15 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, tutorials, and 
 
 Want to submit your own self-guided game, teacher-led lesson, or activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day long, or week long activities. 
 
-After reading the guidelines below, feel free to submit your activity, lesson plan, tutorial, or video here: 
-
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2017 will not be listed for 2017's Hour of Code.)**
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](http://bit.ly/29zt9ki). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2017 will not be listed for 2017's Hour of Code.)** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
 A few tips:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we will now list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually.
+1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we will now list your activities separately so each teacher can find the right thing for their classroom. So if you previously built a landing page and gave us a single URL to promote, don’t do that anymore. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review up to 5 activities per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
 
-2. **Intermediate and Advanced Lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we will list learning experiences this year for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for more advanced classes. Advanced learners could be any age from 9 to 99.
+2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we will list learning experiences this year for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics. These learners could be any age from 9 to 99.
 
-3. **Lesson plans**: In the past, we’ve highlighted student-guided, puzzle-style tutorials first, leaving a space for more ambitious teachers to find lesson plans for teacher-guided activities - whether unplugged or using open-sandbox programming environments. These will now all be represented similarly, letting teachers or students choose. 
-
-4. **Subject Areas**: Have a great lesson idea that integrates Computer Science in Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area (particularly with the upgraded ISTE standards for students including “innovative designer” and “computational thinker”). Teachers will be able to filter for their classroom type (grade band or subject area) so we’ll need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We will always continue to have a “Computer Science” category for teachers who are looking for generic CS activities, which will be the default selection and how most of the current tutorials will be classified.
-
-5. **Go beyond one hour**: It’s called an “Hour of Code”, but we know that 85% of  students and the majority of classrooms do more, and many schools celebrate all week for Computer Science Education Week. So when you submit your one-hour activity, if you have follow-on learning materials, please encourage students (or teachers) to continue beyond an hour, and we’ll help motivated classrooms find those activities that come with follow-on courses. We’ll even make a filter to allow longer activities (2~6 hours)
-
-6. **Robotics**: Previously, we only listed activities teachers could do without buying hardware. If you have a robotics activity that requires specific robotics hardware that teachers need to purchase, we will list these under a dropdown for teachers looking for these activities. 
-
-<u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best activities for their classroom.
+3. **Subject areas**: Have a great lesson idea that integrates Computer Science in Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers year round who want to connect the Hour of Code to their subject area (particularly with the upgraded ISTE standards for students including “innovative designer” and “computational thinker”). Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
 
 <a id="top"></a>
 ## Index:
@@ -79,9 +69,9 @@ Examples:
 - A history of technology activity for a history teacher
 - And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
 
-**For students with disabilities**
+**For students with special needs**
 
-If you create an activity or tutorial that is designed for the vision-impaired, we’d love to highlight it for viewers with screen-readers. 
+If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
 
 [**Back to the top**](#top)
 
@@ -95,7 +85,7 @@ The goal of an Hour of Code is to give beginners an accessible first taste of co
 - Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
 - Encourage students to create something unique that can be shared with parents/friends or online. 
 
-The activities should teach a computer science concept such as how the Internet works, loops, conditionals, or encryption. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will not highlight activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+The activities should teach a computer science concept such as how the Internet works, loops, conditionals, or encryption. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
 
 *Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see [http://csunplugged.com/](http://csunplugged.com/)). Activities that require an app-install, desktop app, or game-console experiences are ok but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
 
@@ -155,11 +145,7 @@ What you’ll need:
 		* Android Chrome (mobile-optimized)
 	* Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
 	* Unplugged
-* Screenshots or marketing images of the Hour of Code activity. Please send at least one image for each of the three sizes below. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-	* 1:1 square image with at least 600 x 600 resolution
-	* 4:3 image with at least 800 x 600 resolution
-	* 2:3 image with at least 400 x 600 resolution
-	* 10:3 image with at least 1000 x 300 resolution
+* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
 * In order to more accurately track participation we want third party tutorial partners to include 1-pixel tracking images on the first and last page of their Hour of Code tutorials. Place a starting pixel-image on the start page and a final pixel-image on the end page. Do not place pixels on interim pages). See the Tracking Pixel section below for more details.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to:
 	* Share on social media that they completed the Hour of Code
@@ -186,7 +172,7 @@ What you’ll need:
 <a id="inclusion"></a>
 ## How activities will be evaluated
 
-A committee of computer science educators will rank submissions based on qualitative and quantitative metrics, including survey results from a broader set of educators. <u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best activities for their classroom.
+A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. <u>Unlike previous years, we will not filter the activity list—all activities that fit the basic criteria will be listed.</u> Teachers will be able to filter and sort to find the best activities for their classroom.
 
 The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
 
@@ -200,7 +186,7 @@ If the review committee rates the activity a zero in production quality (due to 
 
 In addition, in order to be listed, all activities must:
 
-- Be appropriate for the classroom (no guns, explicit content, etc.)
+- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
 - Require no sign up 
 - Require no payment (exception for robotics activities these can require robot/kit purchase)
 For self-directed activities for new teachers and students the review committee will be looking for whether:
@@ -236,7 +222,7 @@ You can include either the CSEdWeek logo ([small](https://www.dropbox.com/s/ojll
 
 **Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode”  or “I’ve done an #HourofCode as a part of #CSEdWeek. Have you? @Scratch.”  Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**Create your activity in Spanish or in other languages besides English.** ]
+**Create your activity in Spanish or in other languages besides English.** 
 
 **Explain or connect the activity to a socially significant context.**  Computer programming becomes a superpower when students see how it can change the world for the better!
 

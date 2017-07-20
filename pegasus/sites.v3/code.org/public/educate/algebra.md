@@ -7,7 +7,7 @@ theme: responsive
 # Computer Science in Algebra
 ### Powered by Bootstrap, Preferred Provider for Professional Development
 
-Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The two ten hour courses focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org's CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+Code.org has partnered with [Bootstrap](http://www.BootstrapWorld.org) to develop a curriculum which teaches algebraic and geometric concepts through computer programming. The two ten hour courses from Code.org focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, Code.org's CS in Algebra demonstrates how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 
 ## The Two Courses
 

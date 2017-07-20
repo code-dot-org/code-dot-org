@@ -30,12 +30,17 @@ export default storybook => {
       },
       {
         name:'multiple lines',
-        story: () => (
-          <ProgressBubbleSet
-            levels={fakeLevels(20)}
-            disabled={false}
-          />
-        )
+        story: () => {
+          const levels = fakeLevels(20);
+          levels[2].icon = 'fa-video-camera';
+          levels[12].icon = 'fa-video-camera';
+          return (
+            <ProgressBubbleSet
+              levels={levels}
+              disabled={false}
+            />
+          );
+        }
       },
       {
         name:'disabled bubble set',
@@ -49,7 +54,7 @@ export default storybook => {
       },
       {
         name:'first level is unplugged',
-        description: 'Should still get a bubble (not a pill) for unplugged',
+        description: 'Should get a pill for unplugged',
         story: () => (
           <ProgressBubbleSet
             levels={[

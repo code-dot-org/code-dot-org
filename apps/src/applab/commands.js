@@ -1041,6 +1041,7 @@ applabCommands.setPosition = function (opts) {
     el.style.position = 'absolute';
     el.style.left = opts.left + 'px';
     el.style.top = opts.top + 'px';
+    el.style.margin = 0;
 
     // if we have a width and/or height given, validate args and setSize
     if (opts.width !== undefined || opts.height !== undefined) {

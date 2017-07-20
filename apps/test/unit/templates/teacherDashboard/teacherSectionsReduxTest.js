@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import _ from 'lodash';
 import reducer, {
   setStudioUrl,
   setValidLoginTypes,
@@ -12,61 +11,47 @@ import reducer, {
   assignmentId,
   assignmentNames,
   assignmentPaths,
-  sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-// Our actual student object are much more complex than this, but really all we
-// care about is how many there are.
-const fakeStudents = num => _.range(num).map(x => ({
-  id: x,
-  name: 'Student' + x,
-}));
 
 const sections = [
   {
     id: 11,
     location: "/v2/sections/11",
     name: "brent_section",
-    login_type: "picture",
+    loginType: "picture",
     grade: "2",
     code: "PMTKVH",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: null,
-    course_id: 29,
-    students: fakeStudents(10)
+    stageExtras: false,
+    pairingAllowed: true,
+    scriptId: null,
+    courseId: 29,
+    studentCount: 10,
   },
   {
     id: 12,
     location: "/v2/sections/12",
     name: "section2",
-    login_type: "picture",
+    loginType: "picture",
     grade: "11",
     code: "DWGMFX",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
-    course_id: null,
-    students: fakeStudents(1)
+    stageExtras: false,
+    pairingAllowed: true,
+    scriptId: 36,
+    courseId: null,
+    studentCount: 1,
   },
   {
     id: 307,
     location: "/v2/sections/307",
     name: "plc",
-    login_type: "email",
+    loginType: "email",
     grade: "10",
     code: "WGYXTR",
-    stage_extras: true,
-    pairing_allowed: false,
-    script: {
-      id: 112,
-      name: 'csp1'
-    },
-    course_id: 29,
-    students: []
+    stageExtras: true,
+    pairingAllowed: false,
+    scriptId: 112,
+    courseId: 29,
+    studentCount: 0,
   }
 ];
 
@@ -247,6 +232,30 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(nextState.sections[12].id, 12);
       assert.strictEqual(nextState.sections[307].id, 307);
     });
+
+    it('empties the store when reset param is set', () => {
+      const action = setSections([{
+        id: 308,
+        location: "/v2/sections/308",
+        name: "added_section",
+        loginType: "email",
+        grade: "2",
+        code: "ZVTKVH",
+        stageExtras: false,
+        pairingAllowed: true,
+        scriptId: null,
+        courseId: 29,
+        studentCount: 0,
+      }], true);
+
+      const state = reducer(startState, setSections(sections));
+      assert.deepEqual(Object.keys(state.sections), ['11', '12', '307']);
+      assert.deepEqual(state.sectionIds, [11, 12, 307]);
+
+      const finalState = reducer(state, action);
+      assert.deepEqual(finalState.sectionIds, [308]);
+      assert.deepEqual(Object.keys(finalState.sections), ['308']);
+    });
   });
 
   describe('updateSection', () => {
@@ -258,21 +267,21 @@ describe('teacherSectionsRedux', () => {
     const updatedSection = {
       ...sections[0],
       // change login type from picture to word
-      login_type: 'word'
+      loginType: 'word'
     };
 
     const newServerSection = {
       id: 21,
       location: "/v2/sections/21",
       name: "brent_section",
-      login_type: "picture",
+      loginType: "picture",
       grade: "2",
       code: "ABCDEF",
-      stage_extras: false,
-      pairing_allowed: true,
-      script: null,
-      course_id: 29,
-      students: fakeStudents(10)
+      stageExtras: false,
+      pairingAllowed: true,
+      scriptId: null,
+      courseId: 29,
+      studentCount: 10,
     };
 
     it('does not change our list of section ids when updating a persisted section', () => {
@@ -291,13 +300,7 @@ describe('teacherSectionsRedux', () => {
 
       // Other fields should remain unchanged
       Object.keys(stateWithSections.sections[sectionId]).forEach(field => {
-        if (field === 'loginType') {
-          return;
-        }
-        if (field === 'studentNames') {
-          assert.deepEqual(state.sections[sectionId][field],
-            stateWithSections.sections[sectionId][field]);
-        } else {
+        if (field !== 'loginType') {
           assert.strictEqual(state.sections[sectionId][field],
             stateWithSections.sections[sectionId][field]);
         }
@@ -366,10 +369,10 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        studentNames: [],
+        studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null
+        scriptId: null,
       });
     });
 
@@ -384,10 +387,10 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        studentNames: [],
+        studentCount: 0,
         code: '',
         courseId: 29,
-        scriptId: null
+        scriptId: null,
       });
     });
 
@@ -431,56 +434,6 @@ describe('teacherSectionsRedux', () => {
     it('doesnt let you remove a non-existent section',  () => {
       assert.throws(() => {
         reducer(stateWithSections, removeSection(1234));
-      });
-    });
-  });
-
-  describe('sectionFromServerSection', () => {
-    const serverSection = {
-      id: 11,
-      location: "/v2/sections/11",
-      name: "brent_section",
-      login_type: "picture",
-      grade: "2",
-      code: "PMTKVH",
-      stage_extras: false,
-      pairing_allowed: true,
-      script: null,
-      course_id: 29,
-      students: fakeStudents(10)
-    };
-
-    it('transfers some fields directly, mapping from snake_case to camelCase', () => {
-      const section = sectionFromServerSection(serverSection);
-      assert.strictEqual(section.id, serverSection.id);
-      assert.strictEqual(section.name, serverSection.name);
-      assert.strictEqual(section.login_type, serverSection.loginType);
-      assert.strictEqual(section.grade, serverSection.grade);
-      assert.strictEqual(section.code, serverSection.code);
-      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
-      assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
-      assert.strictEqual(section.course_id, serverSection.courseId);
-    });
-
-    it('maps from a script object to a script_id', () => {
-      const sectionWithoutScript = sectionFromServerSection(serverSection);
-      assert.strictEqual(sectionWithoutScript.scriptId, null);
-
-      const sectionWithScript = sectionFromServerSection({
-        ...serverSection,
-        script: {
-          id: 1,
-          name: 'Accelerated Course'
-        }
-      });
-      assert.strictEqual(sectionWithScript.scriptId, 1);
-    });
-
-    it('maps from students to names of students', () => {
-      const section = sectionFromServerSection(serverSection);
-      assert.equal(section.studentNames.length, 10);
-      section.studentNames.forEach(name => {
-        assert.equal(typeof(name), 'string');
       });
     });
   });

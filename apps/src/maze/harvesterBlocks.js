@@ -223,10 +223,9 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 
   generator.harvester_untilAtCrop = function () {
-    var pathForward = `Maze.isPathForward('block_id_${this.id}')`;
     var atCrop = `Maze.at${this.getTitleValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    var code = `while (!${atCrop} && ${pathForward}) {\n${branch}}\n`;
+    var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
 

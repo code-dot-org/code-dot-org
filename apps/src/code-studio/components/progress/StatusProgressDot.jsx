@@ -15,7 +15,6 @@ export const StatusProgressDot = React.createClass({
   propTypes: {
     // non-redux provided
     level: levelProgressShape.isRequired,
-    courseOverviewPage: PropTypes.bool,
     stageId: PropTypes.number,
 
     // redux provided
@@ -29,7 +28,6 @@ export const StatusProgressDot = React.createClass({
   render() {
     const {
       level,
-      courseOverviewPage,
       stageId,
       viewAs,
       postMilestoneDisabled,
@@ -65,7 +63,6 @@ export const StatusProgressDot = React.createClass({
     return (
       <ProgressDot
         level={level}
-        courseOverviewPage={courseOverviewPage}
         stageId={stageId}
         status={status}
       />

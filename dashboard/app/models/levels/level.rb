@@ -332,7 +332,12 @@ class Level < ActiveRecord::Base
     # blockly levels.js. for example, from hourofcode.script:
     # level 'blockly:Maze:2_14'
     # level 'scrat 16'
-    find_by(key_to_params(key))
+    if key.start_with?('blockly:Flappy')
+      level_num = key.split(':')[2]
+      find_by_name("flappy_#{level_num}") || find_by(key_to_params(key))
+    else
+      find_by(key_to_params(key))
+    end
   end
 
   def self.key_to_params(key)
@@ -420,6 +425,17 @@ class Level < ActiveRecord::Base
   end
 
   def icon
+  end
+
+  # Level are either activity levels (default) or concept levels
+  # An activity level is a one where a student has to complete an activity / puzzle.
+  # - This includes programming levels, widget levels, unplugged activities, assessment levels, etc.
+  # - These get circular progress bubbles
+  # A concept level is one that introduces or discusses a concept.
+  # - This includes video levels, external HTML levels, and map levels.
+  # - These get diamond progress bubbles
+  def concept_level?
+    false
   end
 
   # Returns an array of all the contained levels

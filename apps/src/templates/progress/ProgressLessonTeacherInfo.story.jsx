@@ -12,7 +12,7 @@ const lockableStage = {
   id: 123,
   levels: [1,2,3,4].map(id => ({
     ids: [id],
-    icon: 'fa-list-ol',
+    icon: 'fa-check-square-o',
     kind: LevelKind.assessment,
     url: '/foo/bar'
   })),

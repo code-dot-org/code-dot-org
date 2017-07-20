@@ -2,18 +2,20 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { getStore } from '@cdo/apps/redux';
+import { getStore, registerReducers } from '@cdo/apps/redux';
 import Dialog from '@cdo/apps/templates/Dialog';
-import PublicGallery, {MAX_PROJECTS_PER_CATEGORY} from '@cdo/apps/templates/projects/PublicGallery';
+import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import i18n from '@cdo/locale';
-import { Galleries } from '@cdo/apps/templates/projects/projectConstants';
-import { selectGallery } from '@cdo/apps/templates/projects/projectsModule';
+import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
+import projects, { selectGallery, setProjectLists, prependProjects } from '@cdo/apps/templates/projects/projectsRedux';
 
 $(document).ready(() => {
+  registerReducers({projects});
+  const store = getStore();
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <ProjectHeader showGallery={showGallery} />
     </Provider>,
     projectsHeader
@@ -21,17 +23,18 @@ $(document).ready(() => {
 
   const isPublic = window.location.pathname.startsWith('/projects/public');
   const initialState = isPublic ? Galleries.PUBLIC : Galleries.PRIVATE;
-  getStore().dispatch(selectGallery(initialState));
+  store.dispatch(selectGallery(initialState));
 
   $.ajax({
     method: 'GET',
     url: `/api/v1/projects/gallery/public/all/${MAX_PROJECTS_PER_CATEGORY}`,
     dataType: 'json'
   }).done(projectLists => {
+    store.dispatch(setProjectLists(projectLists));
     const publicGallery = document.getElementById('public-gallery');
     ReactDOM.render(
-      <Provider store={getStore()}>
-        <PublicGallery initialProjectLists={projectLists}/>
+      <Provider store={store}>
+        <PublicGallery />
       </Provider>,
       publicGallery);
   });
@@ -61,6 +64,21 @@ function onShowConfirmPublishDialog(callback) {
 // Make this method available to angularProjects.js. This can go away
 // once My Projects is moved to React.
 window.onShowConfirmPublishDialog = onShowConfirmPublishDialog;
+
+/**
+ * Shows a project at the front of the specified list of published projects.
+ * @param {Object} projectData The data for a published project, in the format
+ *   defined by projectConstants.projectDataPropType.
+ * @param {string} projectType Which list of projects to add this project to.
+ *   Valid values include applab, gamelab, playlab, or artist.
+ */
+function showNewPublishedProject(projectData, projectType) {
+  getStore().dispatch(prependProjects([projectData], projectType));
+}
+
+// Make this method available to angularProjects.js. This can go away
+// once My Projects is moved to React.
+window.showNewPublishedProject = showNewPublishedProject.bind(this);
 
 function onConfirmPublish(callback) {
   hideDialog();
