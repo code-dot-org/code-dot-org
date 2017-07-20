@@ -24,6 +24,7 @@ const style = {
 class EditSectionForm extends Component{
 
   static propTypes = {
+    title: PropTypes.string.isRequired,
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     name: PropTypes.string,
@@ -76,7 +77,7 @@ class EditSectionForm extends Component{
     return (
       <div style={{width: 970}}>
         <Heading1>
-          {i18n.editSectionDetails()}
+          {this.props.title}
         </Heading1>
         <div>
           <FieldName>
