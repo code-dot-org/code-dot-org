@@ -23,6 +23,7 @@ class Api::V1::SectionsController < ApplicationController
   private
 
   def find_follower
+    raise "No user signed in" unless current_user
     @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
   end
 end
