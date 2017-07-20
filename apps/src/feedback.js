@@ -388,8 +388,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
       if (fallback.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
-          script_id: options.response.script_id,
-          level_id: options.response.level_id
+          script_id: fallback.script_id,
+          level_id: fallback.level_id
         });
       }
 
