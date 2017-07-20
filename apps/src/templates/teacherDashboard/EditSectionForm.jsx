@@ -7,6 +7,17 @@ import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 
+const style = {
+  sectionNameInput: {
+    // Full-width, large happy text, lots of space.
+    display: 'block',
+    width: '100%',
+    boxSizing: 'border-box',
+    fontSize: 'large',
+    padding: '0.5em',
+  }
+};
+
 class EditSectionForm extends Component{
 
   static propTypes = {
@@ -28,6 +39,16 @@ class EditSectionForm extends Component{
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
   };
+
+  renderSectionNameInput() {
+    return (
+      <input
+        value={this.props.name}
+        onChange={val => this.props.handleName(val.target.value)}
+        style={style.sectionNameInput}
+      />
+    );
+  }
 
   renderGradeSelector() {
     const gradeOptions = [""]
@@ -60,10 +81,7 @@ class EditSectionForm extends Component{
           </Heading3>
           <div>
             <div>{i18n.addSectionName()}</div>
-            <input
-              value={this.props.name}
-              onChange={val => this.props.handleName(val.target.value)}
-            />
+            {this.renderSectionNameInput()}
           </div>
           <Heading3>
             {i18n.grade()}
