@@ -59,14 +59,8 @@ Dashboard::Application.routes.draw do
       post 'log_in'
     end
   end
-  # Section API routes (JSON only)
-  namespace :api do
-    namespace :v1 do
-      resources :sections, only: [:show, :index]
-    end
-  end
   # Temporarily expose Section API routes on dashboardapi, making them
-  # available to pegasus as well.
+  # available to pegasus as well.  Also added to api/v1 below.
   scope 'dashboardapi', module: 'api/v1' do
     resources :sections, only: [:show, :index]
   end
@@ -447,6 +441,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      resources :sections, only: [:show, :index]
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
