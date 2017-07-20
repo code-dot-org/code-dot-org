@@ -90,6 +90,7 @@ post '/v2/sections/:id/delete' do |id|
   call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}/students/#{student_id}"))
 end
 
+# DEPRECATED: Will be removed, do not use.
 get '/v2/sections/:id/teachers' do |id|
   only_for 'code.org'
   dont_cache
