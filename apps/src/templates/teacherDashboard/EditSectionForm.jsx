@@ -29,6 +29,25 @@ class EditSectionForm extends Component{
     sections: PropTypes.objectOf(sectionShape).isRequired,
   };
 
+  renderGradeSelector() {
+    const gradeOptions = [""]
+      .concat(this.props.validGrades)
+      .map(grade => ({
+        value: grade,
+        text: grade === 'Other' ? 'Other/Mixed' : grade,
+      }));
+    return (
+      <select
+        value = {this.props.grade}
+        onChange={event => this.props.handleGrade(event.target.value)}
+      >
+        {gradeOptions.map((grade, index) => (
+          <option key={index} value={grade.value}>{grade.text}</option>
+        ))}
+      </select>
+    );
+  }
+
   render(){
     return (
       <div style={{width: 970}}>
@@ -50,15 +69,7 @@ class EditSectionForm extends Component{
             {i18n.grade()}
           </Heading3>
           <div>
-            <select
-              value = {this.props.grade}
-              onChange={val => this.props.handleGrade(val.target.value)}
-            >
-              {/* TODO: Other -> Other/Mixed (display only) */}
-              {[""].concat(this.props.validGrades).map((grade, index) => (
-                <option key={index} value={grade}>{grade}</option>
-              ))}
-            </select>
+            {this.renderGradeSelector()}
           </div>
           <Heading3>
             {i18n.course()}
