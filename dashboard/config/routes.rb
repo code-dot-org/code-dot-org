@@ -53,12 +53,17 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:index, :show, :update] do
+  # User-facing section routes
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end
   end
-  get '/dashboardapi/sections/', to: 'sections#index'
+  # Temporarily expose Section API routes on dashboardapi, making them
+  # available to pegasus as well.  Also added to api/v1 below.
+  scope 'dashboardapi', module: 'api/v1' do
+    resources :sections, only: [:show, :index]
+  end
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
@@ -436,6 +441,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      resources :sections, only: [:show, :index]
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
