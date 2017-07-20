@@ -1,5 +1,5 @@
 import React from 'react';
-
+import $ from 'jquery';
 import _ from 'lodash';
 import Spinner from './components/spinner';
 
@@ -116,6 +116,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         <div key={i} className="well">
           <b>{question['text']}</b>
           {
+            Array.isArray(this.state.thisWorkshop[question['key']]) &&
             this.state.thisWorkshop[question['key']].map((answer, j) => {
               return !!(_.trim(answer)) && (
                 <li key={j}>
