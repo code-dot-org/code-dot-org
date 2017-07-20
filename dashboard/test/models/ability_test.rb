@@ -154,6 +154,7 @@ class AbilityTest < ActiveSupport::TestCase
   end
 
   test 'levelbuilders can manage appropriate objects' do
+    set_env :levelbuilder
     user = create :levelbuilder
     ability = Ability.new user
 
