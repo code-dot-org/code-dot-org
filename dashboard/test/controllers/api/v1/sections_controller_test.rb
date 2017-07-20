@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class Api::V1::SectionsControllerTest < ActionController::TestCase
