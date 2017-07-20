@@ -236,7 +236,7 @@ class User < ActiveRecord::Base
   # TODO(asher): Determine whether request level caching is sufficient, or
   #   whether a memcache or otherwise should be employed.
   def permission?(permission)
-    return false unless teacher?
+    return false unless teacher? || Rails.env.levelbuilder?
     if @permissions.nil?
       # The user's permissions have not yet been cached, so do the DB query,
       # caching the results.
