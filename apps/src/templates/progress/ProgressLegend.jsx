@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import color from "@cdo/apps/util/color";
+import i18n from '@cdo/locale';
 import NewProgressBubble from './NewProgressBubble';
 import FontAwesome from '../FontAwesome';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
@@ -73,57 +74,56 @@ export default class ProgressLegend extends Component {
 
   render() {
     const { csfColumn } = this.props;
-    // TODO: i81n
     return (
       <table style={styles.table}>
         <thead>
           <tr style={styles.header}>
             <TD style={styles.headerCell}>
-              Level Type
+              {i18n.levelType()}
             </TD>
             <TD style={styles.headerCell} colSpan={3}>
-              Level Details
+              {i18n.levelDetails()}
             </TD>
             <TD style={styles.headerCell} colSpan={csfColumn ? 5 : 4}>
-              Level Status
+              {i18n.levelStatus()}
             </TD>
           </tr>
           <tr style={styles.secondRow}>
             <TD colSpan={4}/>
-            <TD>Not started</TD>
-            <TD>In progress</TD>
+            <TD>{i18n.notStarted()}</TD>
+            <TD>{i18n.inProgress()}</TD>
             {csfColumn &&
               <TD>
-                <div>Completed</div>
-                <div style={styles.secondaryText}>(too many blocks)</div>
+                <div>{i18n.completed()}</div>
+                <div style={styles.secondaryText}>({i18n.tooManyBlocks()})</div>
               </TD>
             }
             <TD>
-              <div>Completed</div>
-              {csfColumn && <div style={styles.secondaryText}>(perfect)</div>}
+              <div>{i18n.completed()}</div>
+              {csfColumn && <div style={styles.secondaryText}>({i18n.perfect()})</div>}
             </TD>
-            <TD>Submitted</TD>
+            <TD>{i18n.submitted()}</TD>
           </tr>
         </thead>
         <tbody>
           <tr style={styles.subsequentRow}>
-            <TD style={styles.rightBorder}>Concept</TD>
+            <TD style={styles.rightBorder}>{i18n.concept()}</TD>
             <TD>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="file-text" style={styles.icon}/>
-                Text
+                {i18n.text()}
               </div>
             </TD>
             <TD>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="video-camera" style={styles.icon}/>
-                Video
+                {i18n.video()}
               </div>
             </TD>
             <TD style={styles.rightBorder}>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="map" style={styles.icon}/>
-                Map
+                {i18n.map()}
               </div>
             </TD>
             <TD>
@@ -131,7 +131,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.not_tried,
                   isConceptLevel: true,
-                  name: "Concept: Not started"
+                  name: `${i18n.concept()}: ${i18n.notStarted()}`
                 }}
                 disabled={false}
               />
@@ -141,7 +141,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.attempted,
                   isConceptLevel: true,
-                  name: "Concept: In progress"
+                  name: `${i18n.concept()}: ${i18n.inProgress()}`
                 }}
                 disabled={false}
               />
@@ -152,7 +152,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.perfect,
                   isConceptLevel: true,
-                  name: "Concept: Completed (perfect)"
+                  name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
                 }}
                 disabled={false}
               />
@@ -160,23 +160,23 @@ export default class ProgressLegend extends Component {
             <TD>N/A</TD>
           </tr>
           <tr style={styles.subsequentRow}>
-            <TD style={styles.rightBorder}>Activity</TD>
+            <TD style={styles.rightBorder}>{i18n.activity}</TD>
             <TD>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="scissors" style={styles.icon}/>
-                Unplugged
+                {i18n.unplugged()}
               </div>
             </TD>
             <TD>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="desktop" style={styles.icon}/>
-                Online
+                {i18n.online()}
               </div>
             </TD>
             <TD style={styles.rightBorder}>
               <div style={styles.iconAndText}>
                 <FontAwesome icon="check-square-o" style={styles.icon}/>
-                Question
+                {i18n.question()}
               </div>
             </TD>
             <TD>
@@ -184,7 +184,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.not_tried,
                   isConceptLevel: false,
-                  name: "Activity: Not started"
+                  name: `${i18n.activity()}: ${i18n.notStarted()}`
                 }}
                 disabled={false}
               />
@@ -194,7 +194,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.attempted,
                   isConceptLevel: false,
-                  name: "Activity: In progress"
+                  name: `${i18n.activity()}: ${i18n.inProgress()}`
                 }}
                 disabled={false}
               />
@@ -205,7 +205,7 @@ export default class ProgressLegend extends Component {
                   level={{
                     status: LevelStatus.passed,
                     isConceptLevel: false,
-                    name: "Activity: Completed (too many blocks)"
+                    name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
                   }}
                   disabled={false}
                 />
@@ -216,7 +216,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.perfect,
                   isConceptLevel: false,
-                  name: "Activity: Completed (perfect)"
+                  name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
                 }}
                 disabled={false}
               />
@@ -226,7 +226,7 @@ export default class ProgressLegend extends Component {
                 level={{
                   status: LevelStatus.submitted,
                   isConceptLevel: false,
-                  name: "Activity: Submitted"
+                  name: `${i18n.activity()}: ${i18n.submitted()}`
                 }}
                 disabled={false}
               />
