@@ -105,6 +105,7 @@ export class EditSectionDialog extends Component {
   renderContent() {
     return (
       <EditSectionForm
+        title={i18n.editSectionDetails()}
         assignmentRef = {(element) => this.assignment = element}
         handleSave={this.onClickEditSave}
         handleClose={this.handleClose}
