@@ -1,8 +1,9 @@
 import React, {Component, PropTypes} from 'react';
+import { connect } from 'react-redux';
 import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import EditSectionForm from "./EditSectionForm";
-
+import { updateSection } from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 const initialState = {
@@ -11,12 +12,16 @@ const initialState = {
   grade: '',
   extras: 'yes',
   pairing: 'yes',
+  sectionId: -1,
 };
 
-export default class EditSectionDialog extends Component {
+export class EditSectionDialog extends Component {
   static propTypes = {
     handleClose: PropTypes.func,
     isOpen: PropTypes.bool,
+
+    //From Redux
+    updateSection: PropTypes.func.isRequired,
   };
 
   state = {
@@ -44,7 +49,7 @@ export default class EditSectionDialog extends Component {
   }
 
   onClickEditSave = () => {
-    //const {updateSection} = this.props;
+    const {updateSection} = this.props;
     //const persistedSection = false;
 
     const selectedAssignment = this.assignment.getSelectedAssignment();
@@ -65,7 +70,7 @@ export default class EditSectionDialog extends Component {
     }
 
     const suffix = '';
-    //const sectionId = -1; // When it's a new section
+    const sectionId = this.state.sectionId;
 
     $.ajax({
       url: `/v2/sections${suffix}`,
@@ -73,7 +78,7 @@ export default class EditSectionDialog extends Component {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(data),
     }).done(result => {
-     // updateSection(sectionId, result);
+      updateSection(sectionId, result);
       // close modal after save
       this.handleClose();
     }).fail((jqXhr, status) => {
@@ -89,10 +94,11 @@ export default class EditSectionDialog extends Component {
       this.setState({loginType: data.loginType});
       this.setState({name: data.name});
       this.setState({grade: data.grade});
-      this.setState({extras: data.stageExtras});
-      this.setState({pairing: data.pairingAllowed});
-      this.setState({course: data.course_id});
+      this.setState({extras: data.extras ? 'yes' : 'no'});
+      this.setState({pairing: data.pairing ? 'yes' : 'no'});
+      this.setState({course: data.course});
       this.setState({choseLoginType: false});
+      this.setState({sectionId: data.sectionId});
     }
   }
 
@@ -106,9 +112,9 @@ export default class EditSectionDialog extends Component {
         handleName={this.handleNameChange}
         grade={this.state.grade}
         handleGrade={this.handleGradeChange}
-        extras={this.state.extras ? 'yes' : 'no'}
+        extras={this.state.extras}
         handleExtras={this.handleExtrasChange}
-        pairing={this.state.pairing ? 'yes' : 'no'}
+        pairing={this.state.pairing}
         handlePairing={this.handlePairingChange}
       />
     );
@@ -130,6 +136,8 @@ export default class EditSectionDialog extends Component {
     );
   }
 }
+
+export default connect(() => ({}), { updateSection }, null, { withRef: true })(EditSectionDialog);
 
 const PadAndCenter = ({children}) => (
   <div

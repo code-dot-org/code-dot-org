@@ -29,10 +29,6 @@ export class EditSectionForm extends Component{
     sections: PropTypes.objectOf(sectionShape).isRequired,
   };
 
-  getSelectedAssignments(){
-    return this.assignment.getSelectedAssignment();
-  }
-
   render(){
     return (
       <div style={{width: 970}}>
