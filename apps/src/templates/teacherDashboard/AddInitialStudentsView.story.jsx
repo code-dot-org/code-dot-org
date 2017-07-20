@@ -10,7 +10,7 @@ export default storybook => storybook
     experiments.setEnabled('clever', false);
     return (
       <AddInitialStudentsView
-        sectionName="Section Alpha"
+        title="New section"
         handleLoginChoice={storybook.action('handleLoginChoice')}
         handleCancel={storybook.action('handleCancel')}
       />
@@ -22,7 +22,7 @@ export default storybook => storybook
     experiments.setEnabled('clever', true);
     return (
       <AddInitialStudentsView
-        sectionName="Section Beta"
+        title="New section"
         handleLoginChoice={storybook.action('handleLoginChoice')}
         handleCancel={storybook.action('handleCancel')}
       />

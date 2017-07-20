@@ -1,15 +1,30 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
-import {Heading1, Heading3} from "../../lib/ui/Headings";
+import {Heading1, h3Style} from "../../lib/ui/Headings";
 import ProgressButton from '../progress/ProgressButton';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 
+const style = {
+  dropdown: {
+    padding: '0.3em',
+  },
+  sectionNameInput: {
+    // Full-width, large happy text, lots of space.
+    display: 'block',
+    width: '100%',
+    boxSizing: 'border-box',
+    fontSize: 'large',
+    padding: '0.5em',
+  }
+};
+
 class EditSectionForm extends Component{
 
   static propTypes = {
+    title: PropTypes.string.isRequired,
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     name: PropTypes.string,
@@ -29,76 +44,111 @@ class EditSectionForm extends Component{
     sections: PropTypes.objectOf(sectionShape).isRequired,
   };
 
+  renderSectionNameInput() {
+    return (
+      <input
+        value={this.props.name}
+        onChange={val => this.props.handleName(val.target.value)}
+        style={style.sectionNameInput}
+      />
+    );
+  }
+
+  renderGradeSelector() {
+    const gradeOptions = [""]
+      .concat(this.props.validGrades)
+      .map(grade => ({
+        value: grade,
+        text: grade === 'Other' ? 'Other/Mixed' : grade,
+      }));
+    return (
+      <Dropdown
+        value = {this.props.grade}
+        onChange={event => this.props.handleGrade(event.target.value)}
+      >
+        {gradeOptions.map((grade, index) => (
+          <option key={index} value={grade.value}>{grade.text}</option>
+        ))}
+      </Dropdown>
+    );
+  }
+
   render(){
     return (
       <div style={{width: 970}}>
         <Heading1>
-          {i18n.editSectionDetails()}
+          {this.props.title}
         </Heading1>
         <div>
-          <Heading3>
+          <FieldName>
             {i18n.sectionName()}
-          </Heading3>
+          </FieldName>
           <div>
-            <div>{i18n.addSectionName()}</div>
-            <input
-              value={this.props.name}
-              onChange={val => this.props.handleName(val.target.value)}
-            />
+            <FieldDescription>{i18n.addSectionName()}</FieldDescription>
+            {this.renderSectionNameInput()}
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.grade()}
-          </Heading3>
+          </FieldName>
           <div>
-            <select
-              value = {this.props.grade}
-              onChange={val => this.props.handleGrade(val.target.value)}
-            >
-              {/* TODO: Other -> Other/Mixed (display only) */}
-              {[""].concat(this.props.validGrades).map((grade, index) => (
-                <option key={index} value={grade}>{grade}</option>
-              ))}
-            </select>
+            {this.renderGradeSelector()}
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.course()}
-          </Heading3>
-          {/* TODO: JS error when selecting blank course? */}
+          </FieldName>
           <div>
-            <div>{i18n.whichCourse()}</div>
-            {/* TODO: Decide later option */}
+            <FieldDescription>{i18n.whichCourse()}</FieldDescription>
             <AssignmentSelector
               ref={this.props.assignmentRef}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
               chooseLaterOption={true}
+              dropdownStyle={style.dropdown}
             />
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.enableLessonExtras()}
-          </Heading3>
+          </FieldName>
           <div>
-            <div>{i18n.explainLessonExtras()}</div>
-            <select
+            <FieldDescription>
+              {i18n.explainLessonExtras()}
+              {' '}
+              <a
+                href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
+                target="_blank"
+              >
+                {i18n.explainLessonExtrasLearnMore()}
+              </a>
+            </FieldDescription>
+            <Dropdown
               value = {this.props.extras}
               onChange={val => this.props.handleExtras(val.target.value)}
             >
               <option value="yes">{i18n.yes()}</option>
               <option value="no">{i18n.no()}</option>
-            </select>
+            </Dropdown>
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.enablePairProgramming()}
-          </Heading3>
+          </FieldName>
           <div>
-            <div>{i18n.explainPairProgramming()}</div>
-            <select
+            <FieldDescription>
+              {i18n.explainPairProgramming()}
+              {' '}
+              <a
+                href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
+                target="_blank"
+              >
+                {i18n.explainPairProgrammingLearnMore()}
+              </a>
+            </FieldDescription>
+            <Dropdown
               value = {this.props.pairing}
               onChange={val => this.props.handlePairing(val.target.value)}
             >
               <option value="yes">{i18n.yes()}</option>
               <option value="no">{i18n.no()}</option>
-            </select>
+            </Dropdown>
           </div>
         </div>
         <DialogFooter>
@@ -129,3 +179,26 @@ export default connect(state => ({
   sections: state.teacherSections.sections,
 }))(EditSectionForm);
 
+const FieldName = props => (
+  <div
+    style={{
+      ...h3Style,
+      marginTop: 20,
+      marginBottom: 0,
+    }}
+    {...props}
+  />
+);
+
+const FieldDescription = props => (
+  <div
+    style={{
+      marginBottom: 5,
+    }}
+    {...props}
+  />
+);
+
+const Dropdown = props => (
+  <select style={style.dropdown} {...props}/>
+);

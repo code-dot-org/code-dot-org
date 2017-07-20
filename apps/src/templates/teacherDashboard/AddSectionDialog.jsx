@@ -94,10 +94,11 @@ export class AddSectionDialog extends Component {
   };
 
   renderContent() {
+    const title = i18n.newSection();
     if (!this.state.loginType) {
       return (
         <AddInitialStudentsView
-          sectionName="Foobar"
+          title={title}
           handleLoginChoice={this.handleLoginChoice}
           handleCancel={this.handleClose}
         />
@@ -105,6 +106,7 @@ export class AddSectionDialog extends Component {
     } else {
       return (
         <EditSectionForm
+          title={title}
           assignmentRef = {(element) => this.assignment = element}
           handleSave={this.onClickEditSave}
           handleClose={this.handleClose}
