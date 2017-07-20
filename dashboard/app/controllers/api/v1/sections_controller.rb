@@ -16,8 +16,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # POST /api/v1/sections
   # Create a new section
   def create
-    authorize! :create, Section
-
     # Validate login_type
     # TODO: Push validation into model?
     login_type = (['none', '', nil].include? params[:login_type]) ? 'email' : params[:login_type]
