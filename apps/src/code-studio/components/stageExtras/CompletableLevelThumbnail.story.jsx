@@ -20,7 +20,7 @@ export default storybook => {
       name: 'Angry Birds',
       description: 'This is the CompletableLevelThumbnail component.',
       story: () => (
-        <CompletableLevelThumbnail width={200}>
+        <CompletableLevelThumbnail width={200} completed={true}>
           <MazeThumbnail
             map={sampleMap}
             startDirection={1}
