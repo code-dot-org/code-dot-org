@@ -91,7 +91,7 @@ const JoinSection = React.createClass({
 
     this.setState(this.getInitialState());
 
-    $.post('/followers/create_async', {section_code: sectionCode})
+    $.post(`/api/v1/sections/${sectionCode}/join`)
       .done(data => this.props.updateSections(data.sections));
   },
 
