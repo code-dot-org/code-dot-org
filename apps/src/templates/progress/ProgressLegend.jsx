@@ -64,28 +64,40 @@ TD.propTypes = {
 };
 
 export default class ProgressLegend extends Component {
+  static propTypes = {
+    csfColumn: PropTypes.bool.isRequired,
+  };
+
   render() {
+    const { csfColumn } = this.props;
     // TODO: i81n
-    // TODO: different tables for CSP/CSF
     return (
       <table style={styles.table}>
         <thead>
           <tr style={styles.header}>
-            <TD style={styles.headerCell}>Level Type</TD>
-            <TD style={styles.headerCell} colSpan={3}>Level Details</TD>
-            <TD style={styles.headerCell} colSpan={5}>Level Status</TD>
+            <TD style={styles.headerCell}>
+              Level Type
+            </TD>
+            <TD style={styles.headerCell} colSpan={3}>
+              Level Details
+            </TD>
+            <TD style={styles.headerCell} colSpan={csfColumn ? 5 : 4}>
+              Level Status
+            </TD>
           </tr>
           <tr style={styles.secondRow}>
             <TD colSpan={4}/>
             <TD>Not started</TD>
             <TD>In progress</TD>
+            {csfColumn &&
+              <TD>
+                <div>Completed</div>
+                <div style={styles.secondaryText}>(too many blocks)</div>
+              </TD>
+            }
             <TD>
               <div>Completed</div>
-              <div style={styles.secondaryText}>(too many blocks)</div>
-            </TD>
-            <TD>
-              <div>Completed</div>
-              <div style={styles.secondaryText}>(perfect)</div>
+              {csfColumn && <div style={styles.secondaryText}>(perfect)</div>}
             </TD>
             <TD>Submitted</TD>
           </tr>
@@ -131,7 +143,7 @@ export default class ProgressLegend extends Component {
                 disabled={false}
               />
             </TD>
-            <TD>N/A</TD>
+            {csfColumn && <TD>N/A</TD>}
             <TD>
               <NewProgressBubble
                 level={{
@@ -184,16 +196,18 @@ export default class ProgressLegend extends Component {
                 disabled={false}
               />
             </TD>
-            <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.passed,
-                  isConceptLevel: false,
-                  name: "Activity: Completed (too many blocks)"
-                }}
-                disabled={false}
-              />
-            </TD>
+            {csfColumn &&
+              <TD>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.passed,
+                    isConceptLevel: false,
+                    name: "Activity: Completed (too many blocks)"
+                  }}
+                  disabled={false}
+                />
+              </TD>
+            }
             <TD>
               <NewProgressBubble
                 level={{

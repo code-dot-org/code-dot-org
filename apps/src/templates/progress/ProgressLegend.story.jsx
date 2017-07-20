@@ -6,9 +6,16 @@ export default storybook => {
     .storiesOf('ProgressLegend', module)
     .addStoryTable([
       {
-        name:'progress legend',
+        name:'progress legend - CSF',
         story: () => (
-          <ProgressLegend/>
+          <ProgressLegend csfColumn={true}/>
+        )
+      },
+
+      {
+        name:'progress legend - CSP',
+        story: () => (
+          <ProgressLegend csfColumn={false}/>
         )
       },
     ]);
