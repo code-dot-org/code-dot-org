@@ -157,7 +157,7 @@ export function setupApp(appOptions) {
       }
       reporting.sendReport(report);
     },
-    onComplete: function (response) {
+    onComplete: function (/*LiveMilestoneResponse*/response) {
       if (!appOptions.channel && !appOptions.hasContainedLevels) {
         // Update the cache timestamp with the (more accurate) value from the server.
         clientState.writeSourceForLevel(

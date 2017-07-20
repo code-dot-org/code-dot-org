@@ -96,8 +96,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   var displayShowCode = this.studioApp_.enableShowCode && this.studioApp_.enableShowLinesCount && canContinue && !showingSharing;
   var feedback = document.createElement('div');
   var sharingDiv = (canContinue && showingSharing) ? this.createSharingDiv(options) : null;
-  var showCode = displayShowCode ? this.getShowCodeElement_(options) : null;
-  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options) : null;
+  var showCode = displayShowCode ?
+    this.getShowCodeElement_(options.appStrings && options.appStrings.generatedCodeDescription) :
+    null;
+  var shareFailureDiv = hadShareFailure ? this.getShareFailure_(options.response.share_failure) : null;
   var feedbackBlocks;
   if (this.studioApp_.isUsingBlockly()) {
     feedbackBlocks = new FeedbackBlocks(
@@ -658,8 +660,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
 /**
  *
  */
-FeedbackUtils.prototype.getShareFailure_ = function (options) {
-  var shareFailure = options.response.share_failure;
+FeedbackUtils.prototype.getShareFailure_ = function (shareFailure) {
   var shareFailureDiv = document.createElement('div');
   shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({
     shareFailure: shareFailure
@@ -1002,17 +1003,16 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 /**
  *
  */
-FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
+FeedbackUtils.prototype.getShowCodeElement_ = function (generatedCodeDescription) {
   var showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
 
   var numLinesWritten = this.getNumBlocksUsed();
-  var response = window.appOptions.report.fallback_response.success;
-  response.total_lines += numLinesWritten;
-  var totalNumLinesWritten = response.total_lines > numLinesWritten ? response.total_lines : 0;
+  const lines = ClientState.lines();
+  var totalNumLinesWritten = lines > numLinesWritten ? lines : 0;
 
   var generatedCodeProperties = this.getGeneratedCodeProperties_({
-    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
+    generatedCodeDescription: generatedCodeDescription
   });
 
   ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>

@@ -5,6 +5,11 @@ import _ from 'lodash';
 import { TestResults } from '@cdo/apps/constants';
 import experiments from '../util/experiments';
 var clientState = require('./clientState');
+import {
+  trySetLocalStorage,
+  tryGetLocalStorage,
+  tryRemoveLocalStorage
+} from '@cdo/apps/utils';
 
 var lastAjaxRequest;
 
@@ -36,7 +41,7 @@ function validateType(key, value, type) {
  * This is meant in part to serve as documentation of the existing behavior. In
  * cases where I believe the behavior should potentially be different going
  * forward, I've made notes.
- * @param {Report} report
+ * @param {MilestoneReport} report
  */
 function validateReport(report) {
   for (var key in report) {
@@ -153,10 +158,11 @@ function validateReport(report) {
 }
 
 /**
- * @typedef  {Object} Report
+ * @typedef  {Object} MilestoneReport
  * @property {string} callback - The url where the report should be sent.
  *           For studioApp-based levels, this is provided on initialization as
  *           appOptions.report.callback.
+ * @property {?} program - contents of submitted program.
  * @property {string} app - The app name, as defined by its model.
  * @property {string} level - The level name or number.  Maybe deprecated?
  * @property {number|boolean} result - Whether the attempt succeeded or failed.
@@ -165,6 +171,13 @@ function validateReport(report) {
  * @property {boolean} allowMultipleSends - ??
  * @property {number} lines - number of lines of code written.
  * @property {number} serverLevelId - ??
+ * @property {?} submitted - ??
+ * @property {?} time - ??
+ * @property {?} save_to_gallery - ??
+ * @property {?} attempt - ??
+ * @property {?} image - ??
+ * @property {boolean} pass - true if the attempt is passing.
+ * @property {boolean} gamification_enabled - true if experiment is enabled.
  */
 
 /**
@@ -176,9 +189,9 @@ function validateReport(report) {
  * Notify the progression system of level attempt or completion.
  *
  * The client posts the progress JSON to the URL specified by
- * report.callback (e.g. /milestone).
+ * {@link MilestoneReport.callback} (e.g. /milestone).
  *
- * @param {Report} report
+ * @param {MilestoneReport} report
  */
 reporting.sendReport = function (report) {
   // The list of report fields we want to send to the server
@@ -194,24 +207,18 @@ reporting.sendReport = function (report) {
     'lines',
     'save_to_gallery',
     'attempt',
-    'image'
+    'image',
+    'gamification_enabled'
   ];
 
   validateReport(report);
 
-  // jQuery can do this implicitly, but when url-encoding it, jQuery calls a method that
-  // shows the result dialog immediately
-  var queryItems = [];
-  const serverReport = _.pick(report, serverFields);
-  for (var key in serverReport) {
-    queryItems.push(key + '=' + report[key]);
-  }
-
   // Tell the server about the current list of experiments (right now only Gamification has server-side changes)
   if (experiments.isEnabled('gamification')) {
-    queryItems.push('gamification_enabled=true');
+    report.gamification_enabled = true;
   }
-  const queryString = queryItems.join('&');
+
+  const serverReport = _.pick(report, serverFields);
 
   const progressUpdated = clientState.trackProgress(
     report.result,
@@ -224,47 +231,56 @@ reporting.sendReport = function (report) {
   // Post milestone iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (progressUpdated && appOptions.postMilestone ||
+  if (appOptions.postMilestone ||
     (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
 
-    var thisAjax = $.ajax({
-      type: 'POST',
-      url: report.callback,
-      contentType: 'application/x-www-form-urlencoded',
-      // Set a timeout of five seconds so the user will get the fallback
-      // response even if the server is hung and unresponsive.
-      timeout: 5000,
-      data: queryString,
-      dataType: 'json',
-      jsonp: false,
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-      },
-      success: function (response) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-          return;
+    let milestones = JSON.parse(tryGetLocalStorage(report.callback, null)) || [];
+    milestones.push(serverReport);
+    console.log(`${milestones.length} milestones, ${JSON.stringify(milestones).length} bytes`);
+    if (progressUpdated) {
+      const data = JSON.stringify({milestones: milestones});
+      var thisAjax = $.ajax({
+        type: 'POST',
+        url: report.callback,
+        contentType: 'application/json',
+        // Set a timeout of five seconds so the user will get the fallback
+        // response even if the server is hung and unresponsive.
+        timeout: 5000,
+        data: data,
+        dataType: 'json',
+        jsonp: false,
+        beforeSend: function (xhr) {
+          xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+        },
+        success: function (response) {
+          if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+            return;
+          }
+          tryRemoveLocalStorage(report.callback);
+          reportComplete(report, response);
+        },
+        error: function (xhr, textStatus, thrownError) {
+          if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+            return;
+          }
+          report.error = xhr.responseText;
+          reportComplete(report);
         }
-        reportComplete(report, response);
-      },
-      error: function (xhr, textStatus, thrownError) {
-        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-          return;
-        }
-        report.error = xhr.responseText;
-        reportComplete(report);
-      }
-    });
-
-    lastAjaxRequest = thisAjax;
-  } else {
-    //There's a potential race condition here - we show the dialog after animation completion, but also after the report
-    //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
-    //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
-    setTimeout(function () {
-      reportComplete(report);
-    }, 1000);
+      });
+      lastAjaxRequest = thisAjax;
+      return;
+    } else {
+      // Queue milestone post for later.
+      trySetLocalStorage(report.callback, JSON.stringify(milestones));
+    }
   }
-
+  // If no milestone post was sent, call the onComplete callback directly.
+  //There's a potential race condition here - we show the dialog after animation completion, but also after the report
+  //is done posting. There is logic that says "don't show the dialog if we are animating" but if milestone posting
+  //is disabled then we might show the dialog before the animation starts. Putting a 1-sec delay works around this
+  setTimeout(function () {
+    reportComplete(report);
+  }, 1000);
 };
 
 reporting.cancelReport = function () {

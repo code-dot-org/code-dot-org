@@ -200,23 +200,27 @@
  */
 
 /**
+ * @typedef {Object} LiveMilestoneResponse
+ * @augments MilestoneResponse
+ * @property {?} timestamp
+ * @property {{message: ?, type: ?, contents: ?}} share_failure
+ * @property {number} hints_used - used by gamification.
+ * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
+ */
+
+/**
  * @typedef {Object} MilestoneResponse
  * @property {?} script_id
  * @property {?} level_id
  * @property {?} total_lines
- * @property {?} new_level_completed - Only used by GA event, todo remove.
- * @property {?} level_path - Only used by GA event, todo remove.
  * @property {string} video_info
  * @property {string} redirect - path to 'next' level in the stage/script sequence.
  * @property {{previous: {position: number, name: string}}} stage_changing
  * @property {boolean} end_of_stage_experience
- * @property {{message: ?, type: ?, contents: ?}} share_failure
  * @property {HintViewRequest[]} hint_view_requests
  * @property {string} hint_view_request_url
  * @property {string} message
- * @property {number} hints_used - used by gamification.
  * @property {boolean} puzzle_ratings_enabled
- * @property {string} save_to_gallery_url
  * @property {string} level_source
  * @property {string} level_source_id
  */

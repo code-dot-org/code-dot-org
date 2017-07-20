@@ -16,35 +16,48 @@ class ActivitiesController < ApplicationController
   MAX_LINES_OF_CODE = 1000
 
   def milestone
+    responses = params[:milestones].map do |milestone|
+      process_milestone(milestone.merge(
+        script_level_id: params[:script_level_id],
+        level_id: params[:level_id]
+      ))
+    end
+    render json: responses.last
+  end
+
+  private
+
+  def process_milestone(params)
     # TODO: do we use the :result and :testResult params for the same thing?
     solved = (params[:result] == 'true')
     script_name = ''
+    script_level,
+      level,
+      level_source,
+      level_source_image = nil
 
     if params[:script_level_id]
-      @script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
-      @level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : @script_level.oldest_active_level
-      script_name = @script_level.script.name
+      script_level = ScriptLevel.cache_find(params[:script_level_id].to_i)
+      level = params[:level_id] ? Script.cache_find_level(params[:level_id].to_i) : script_level.oldest_active_level
+      script_name = script_level.script.name
     elsif params[:level_id]
-      @level = Script.cache_find_level(params[:level_id].to_i)
+      level = Script.cache_find_level(params[:level_id].to_i)
     end
 
-    # Immediately return with a "Service Unavailable" status if milestone posts are
+    # Immediately return if milestone posts are
     # disabled. (A cached view might post to this action even if milestone posts
     # are disabled in the gatekeeper.)
     # Check a second switch if we passed the last level of the script.
     # Keep this logic in sync with code-studio/reporting#sendReport on the client.
     post_milestone = Gatekeeper.allows('postMilestone', where: {script_name: script_name}, default: true)
     post_final_milestone = Gatekeeper.allows('postFinalMilestone', where: {script_name: script_name}, default: true)
-    solved_final_level = solved && @script_level.try(:final_level?)
-    unless post_milestone || (post_final_milestone && solved_final_level)
-      head 503
-      return
-    end
+    solved_final_level = solved && script_level.try(:final_level?)
+    return unless post_milestone || (post_final_milestone && solved_final_level)
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
     share_failure = nil
     if params[:program] && sharing_allowed
-      if @level.game.sharing_filtered?
+      if level && level.game.sharing_filtered?
         begin
           share_failure = ShareFiltering.find_share_failure(params[:program], locale)
         rescue OpenURI::HTTPError, IO::EAGAINWaitReadable => share_checking_error
@@ -55,30 +68,30 @@ class ActivitiesController < ApplicationController
       end
 
       unless share_failure
-        @level_source = LevelSource.find_identical_or_create(
-          @level,
+        level_source = LevelSource.find_identical_or_create(
+          level,
           params[:program].strip_utf8mb4
         )
         if share_checking_error
           slog(
             tag: 'share_checking_error',
             error: "#{share_checking_error.class.name}: #{share_checking_error}",
-            level_source_id: @level_source.id
+            level_source_id: level_source.id
           )
         end
       end
     end
 
-    if current_user && !current_user.authorized_teacher? && @script_level && @script_level.stage.lockable?
+    if current_user && !current_user.authorized_teacher? && script_level && script_level.stage.lockable?
       user_level = UserLevel.find_by(
         user_id: current_user.id,
-        level_id: @script_level.level.id,
-        script_id: @script_level.script.id
+        level_id: script_level.level.id,
+        script_id: script_level.script.id
       )
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
-        return head 403
-      end
+      return if user_level.nil? ||
+        user_level.locked?(script_level.stage) ||
+        user_level.try(:readonly_answers?)
     end
 
     if params[:lines]
@@ -88,35 +101,43 @@ class ActivitiesController < ApplicationController
     end
 
     # Store the image only if the image is set, and the image has not been saved
-    if params[:image] && @level_source.try(:id)
-      @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
-      unless @level_source_image
-        @level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
-        unless @level_source_image.save_to_s3(Base64.decode64(params[:image]))
-          @level_source_image = nil
+    if params[:image] && level_source.try(:id)
+      level_source_image = LevelSourceImage.find_by(level_source_id: level_source.id)
+      unless level_source_image
+        level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
+        unless level_source_image.save_to_s3(Base64.decode64(params[:image]))
+          level_source_image = nil
         end
       end
     end
 
-    user_level = if current_user
-                  track_progress_for_user if @script_level
-                 else
-                   track_progress_in_session
-                 end
+    test_result = params[:testResult].to_i
+    user_level = current_user && script_level ?
+      track_progress_for_user(
+        level,
+        level_source,
+        script_level,
+        test_result,
+        params[:lines],
+        params[:attempt].to_i,
+        params[:time].to_i,
+        params[:submitted] == 'true',
+        params[:save_to_gallery] == 'true',
+        level_source_image
+      ) :
+      track_progress_in_session(script_level, test_result)
 
-    total_lines = if current_user && current_user.total_lines
-                    current_user.total_lines
-                  else
-                    client_state.lines
-                  end
+    total_lines = current_user ?
+      current_user.total_lines :
+      client_state.lines
 
-    render json: milestone_response(
-      script_level: @script_level,
-      level: @level,
+    response = milestone_response(
+      script_level: script_level,
+      level: level,
       total_lines: total_lines,
       solved?: solved,
-      level_source: @level_source.try(:hidden) ? nil : @level_source,
-      level_source_image: @level_source_image,
+      level_source: level_source.try(:hidden) ? nil : level_source,
+      level_source_image: level_source_image,
       get_hint_usage: params[:gamification_enabled],
       share_failure: share_failure,
       user_level: user_level
@@ -125,18 +146,18 @@ class ActivitiesController < ApplicationController
     if solved
       slog(
         tag: 'activity_finish',
-        script_level_id: @script_level.try(:id),
-        level_id: @level.id,
+        script_level_id: script_level.try(:id),
+        level_id: level.id,
         user_agent: request.user_agent,
         locale: locale
       )
     end
 
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
-    log_milestone(@level_source, params)
-  end
+    log_milestone(level_source, params)
 
-  private
+    response
+  end
 
   def milestone_logger
     @@milestone_logger ||= Logger.new("#{Rails.root}/log/milestone.log")
@@ -144,34 +165,40 @@ class ActivitiesController < ApplicationController
 
   # @return [UserLevel, Boolean] Either the UserLevel object,
   #   or a boolean indicating whether a level was newly completed.
-  def track_progress_for_user
+  def track_progress_for_user(level,
+    level_source,
+    script_level,
+    test_result,
+    lines,
+    attempt,
+    time,
+    submitted,
+    save_to_gallery,
+    level_source_image)
     authorize! :create, Activity
     authorize! :create, UserLevel
 
-    test_result = params[:testResult].to_i
-    solved = (params[:result] == 'true')
-
-    lines = params[:lines].to_i
+    passed = ActivityConstants.passing?(test_result)
 
     # Create the activity.
     attributes = {
       user: current_user,
-      level: @level,
-      action: solved, # TODO: I think we don't actually use this. (maybe in a report?)
+      level: level,
+      action: passed, # TODO: I think we don't actually use this. (maybe in a report?)
       test_result: test_result,
-      attempt: params[:attempt].to_i,
+      attempt: attempt,
       lines: lines,
-      time: [[params[:time].to_i, 0].max, MAX_INT_MILESTONE].min,
-      level_source_id: @level_source.try(:id)
+      time: [[time, 0].max, MAX_INT_MILESTONE].min,
+      level_source_id: level_source.try(:id)
     }
 
     # Save the activity and user_level synchronously if the level might be saved
     # to the gallery (for which the activity.id and user_level.id is required).
     # This is true for levels auto-saved to the gallery, free play levels, and
     # "impressive" levels.
-    synchronous_save = solved &&
-        (params[:save_to_gallery] == 'true' || @level.try(:free_play) == 'true' ||
-            @level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
+    synchronous_save = passed &&
+        (save_to_gallery || level.try(:free_play) == 'true' ||
+            level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
     if synchronous_save
       @activity = Activity.create!(attributes)
     else
@@ -179,30 +206,29 @@ class ActivitiesController < ApplicationController
     end
 
     user_level = nil
-    if @script_level
+    if script_level
       if synchronous_save
         user_level = User.track_level_progress_sync(
           user_id: current_user.id,
-          level_id: @level.id,
-          script_id: @script_level.script_id,
+          level_id: level.id,
+          script_id: script_level.script_id,
           new_result: test_result,
-          submitted: params[:submitted] == 'true',
-          level_source_id: @level_source.try(:id),
+          submitted: submitted,
+          level_source_id: level_source.try(:id),
           pairing_user_ids: pairing_user_ids,
         )
       else
         user_level = current_user.track_level_progress_async(
-          script_level: @script_level,
+          script_level: script_level,
           new_result: test_result,
-          submitted: params[:submitted] == "true",
-          level_source_id: @level_source.try(:id),
-          level: @level,
+          submitted: submitted,
+          level_source_id: level_source.try(:id),
+          level: level,
           pairing_user_ids: pairing_user_ids
         )
       end
     end
 
-    passed = ActivityConstants.passing?(test_result)
     if lines > 0 && passed
       current_user.total_lines += lines
       # bypass validations/transactions/etc
@@ -211,11 +237,11 @@ class ActivitiesController < ApplicationController
 
     # Blockly sends us 'undefined', 'false', or 'true' so we have to check as a
     # string value.
-    if params[:save_to_gallery] == 'true' && @level_source_image && solved
-      @gallery_activity = GalleryActivity.create!(
+    if save_to_gallery && level_source_image && passed
+      GalleryActivity.create!(
         user: current_user,
         user_level_id: user_level.try(:id),
-        level_source_id: @level_source_image.level_source_id,
+        level_source_id: level_source_image.level_source_id,
         autosaved: true
       )
     end
@@ -223,13 +249,11 @@ class ActivitiesController < ApplicationController
   end
 
   # @return [Boolean] true if a level was newly completed.
-  def track_progress_in_session
+  def track_progress_in_session(script_level, test_result)
     # track scripts
-    if @script_level.try(:script).try(:id)
-      test_result = params[:testResult].to_i
-      old_result = client_state.level_progress(@script_level)
-
-      client_state.add_script(@script_level.script_id)
+    if script_level.try(:script_id)
+      old_result = client_state.level_progress(script_level)
+      client_state.add_script(script_level.script_id)
       !ActivityConstants.passing?(old_result) && ActivityConstants.passing?(test_result)
     end
   end
