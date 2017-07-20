@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import ScriptOverviewTopRow from './ScriptOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -20,6 +22,13 @@ const ScriptOverview = React.createClass({
     isRtl: React.PropTypes.bool.isRequired,
   },
 
+  componentDidMount() {
+    if (experiments.isEnabled('progressBubbles')) {
+      // get rid of existing legend
+      $(".user-stats-block .key").hide();
+    }
+  },
+
   render() {
     const {
       professionalLearningCourse,
@@ -31,6 +40,7 @@ const ScriptOverview = React.createClass({
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
 
+    // TODO: Make csfColumn LB configurable instead of hard coded to true
     return (
       <div>
         {onOverviewPage && (
@@ -44,6 +54,9 @@ const ScriptOverview = React.createClass({
         )}
 
         <ProgressTable/>
+        {experiments.isEnabled('progressBubbles') && onOverviewPage &&
+          <ProgressLegend csfColumn={true}/>
+        }
       </div>
     );
   }

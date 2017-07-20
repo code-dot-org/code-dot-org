@@ -7,7 +7,10 @@ import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 const styles = {
   table: {
     textAlign: 'center',
-    cellpadding: 10
+    width: '100%',
+    // Margin to get it to line up with ProgressLesson
+    marginLeft: 3,
+    marginRight: 3
   },
   tdStyle: {
     padding: 10,
