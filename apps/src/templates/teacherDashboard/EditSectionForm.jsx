@@ -7,7 +7,7 @@ import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 
-export class EditSectionForm extends Component{
+class EditSectionForm extends Component{
 
   static propTypes = {
     handleSave: PropTypes.func.isRequired,
@@ -119,6 +119,8 @@ export class EditSectionForm extends Component{
     );
   }
 }
+
+export const UnconnectedEditSectionForm = EditSectionForm;
 
 export default connect(state => ({
   validGrades: state.teacherSections.validGrades,
