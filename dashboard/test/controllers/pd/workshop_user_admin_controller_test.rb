@@ -7,6 +7,7 @@ class Pd::WorkshopUserAdminControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @student = create :student
     @facilitator = create :facilitator
+    @facilitator_with_course = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
   end
 
   def self.test_workshop_admin_only(method, action, success_response, params = nil)
@@ -44,15 +45,14 @@ class Pd::WorkshopUserAdminControllerTest < ActionController::TestCase
 
   test 'assign course to facilitator assigns course' do
     sign_in @workshop_admin
-    get :assign_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSES.first}
+    get :assign_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSE_ECS}
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator.id}
-    assert @facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSES.first).any?, "#{Pd::Workshop::COURSES.first} was not assigned to Facilitator - #{@facilitator.email}"
+    assert @facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_ECS).exists?, "#{Pd::Workshop::COURSE_ECS} was not assigned to Facilitator - #{@facilitator.email}"
   end
 
   test 'remove course from facilitator removes course' do
     sign_in @workshop_admin
-    get :remove_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSES.first}
-    assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator.id}
-    refute @facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSES.first).any?, "#{Pd::Workshop::COURSES.first} was not removed from Facilitator - #{@facilitator.email}"
+    get :remove_course, params: {facilitator_id: @facilitator_with_course.id, course: Pd::Workshop::COURSE_CSF}
+    assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator_with_course.id}
   end
 end
