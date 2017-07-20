@@ -178,4 +178,12 @@ class SectionsControllerTest < ActionController::TestCase
     }
     assert_response :forbidden
   end
+
+  test "update: cannot update section if not logged in " do
+    post :update, params: {
+      id: @regular_section.id,
+      course_id: @course.id,
+    }
+    assert_response :redirect
+  end
 end

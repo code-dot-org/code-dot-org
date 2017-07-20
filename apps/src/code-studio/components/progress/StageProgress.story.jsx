@@ -5,7 +5,6 @@ import StageProgress from './StageProgress';
 import sections from '../../sectionsRedux';
 import stageLock from '../../stageLockRedux';
 import progress, { initProgress } from '../../progressRedux';
-import experiments from '@cdo/apps/util/experiments';
 
 export default storybook => {
   const store = createStore(combineReducers({progress, stageLock, sections}));
@@ -93,7 +92,6 @@ export default storybook => {
         // Provide an outer div to simulate some of the CSS that gets leaked into
         // this component
         story: () => {
-          experiments.setEnabled('progressBubbles', false);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
