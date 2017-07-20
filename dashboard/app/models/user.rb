@@ -540,7 +540,7 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
       user.email = auth.info.email
-      user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
+      user.user_type = params['user_type'] || auth.info.user_type
 
       if auth.provider == :the_school_project
         user.username = auth.extra.raw_info.nickname
@@ -1327,6 +1327,26 @@ class User < ActiveRecord::Base
 
   def to_csv
     User.csv_attributes.map {|attr| send(attr)}
+  end
+
+  # Format user information for the JSON API
+  def summarize
+    {
+      id: id,
+      name: name,
+      username: username,
+      email: email,
+      hashed_email: hashed_email,
+      user_type: user_type,
+      gender: gender,
+      birthday: birthday,
+      total_lines: total_lines,
+      secret_words: secret_words,
+      secret_picture_name: secret_picture.name,
+      secret_picture_path: secret_picture.path,
+      location: "/v2/users/#{id}",
+      age: age,
+    }
   end
 
   def self.progress_queue

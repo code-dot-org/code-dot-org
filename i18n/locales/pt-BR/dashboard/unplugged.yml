@@ -168,13 +168,13 @@ pt-BR:
         desc: ""
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: Nesta aula, vais aprender mais sobre os ciclos!
       courseB_unplugged_MRF:
         title: Atividade off-line
-        desc: In this lesson, you will 'program' your friends!
+        desc: Nesta aula, vais “programar” os teus amigos!
       courseB_unplugged_loopyMRF:
         title: Atividade off-line
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+        desc: Tal como fizeste em “Os meus amigos robótidos”, vais “programar” os teus amigos, mas desta vez com ciclos!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade off-line
         desc: Today you will learn about what to do if someone is being mean online.
@@ -187,3 +187,6 @@ pt-BR:
       courseF_unplugged_powerOfWords:
         title: Atividade off-line
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
