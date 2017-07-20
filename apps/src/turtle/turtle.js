@@ -276,6 +276,10 @@ Artist.prototype.preloadAllPatternImages = function () {
   }
 };
 
+Artist.prototype.isFrozenSkin = function () {
+  return this.skin.id === "anna" || this.skin.id === "elsa";
+};
+
 /**
  * Initialize Blockly and the turtle.  Called on page load.
  */
@@ -287,7 +291,7 @@ Artist.prototype.init = function (config) {
   this.skin = config.skin;
   this.level = config.level;
 
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     // let's try adding a background image
     this.level.images = [{}];
     this.level.images[0].filename = 'background.jpg';
@@ -466,7 +470,7 @@ Artist.prototype.afterInject_ = function (config) {
   this.ctxDisplay = displayCanvas.getContext('2d');
 
   // TODO (br-pair): - pull this out?
-  if (this.studioApp_.isUsingBlockly() && (this.skin.id === "anna" || this.skin.id === "elsa")) {
+  if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
     // Override colour_random to only generate random colors from within our frozen
     // palette
     Blockly.JavaScript.colour_random = function () {
@@ -597,7 +601,7 @@ Artist.prototype.placeImage = function (filename, position, scale) {
     this.display();
   }, this);
 
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     img.src = this.skin.assetUrl(filename);
   } else {
     // This is necessary when loading images from image.code.org to
@@ -671,7 +675,7 @@ Artist.prototype.drawTurtle = function () {
   var sourceY;
   // Computes the index of the image in the sprite.
   var index = Math.floor(this.heading * this.numberAvatarHeadings / 360);
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     // the rotations in the sprite sheet go in the opposite direction.
     index = this.numberAvatarHeadings - index;
 
@@ -679,7 +683,7 @@ Artist.prototype.drawTurtle = function () {
     index = (index + this.numberAvatarHeadings/2) % this.numberAvatarHeadings;
   }
   var sourceX = this.avatarImage.spriteWidth * index;
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     sourceY = this.avatarImage.spriteHeight * turtleFrame;
     turtleFrame = (turtleFrame + 1) % this.skin.turtleNumFrames;
   } else {
@@ -780,7 +784,7 @@ Artist.prototype.reset = function (ignore) {
   // Clear the display.
   this.ctxScratch.canvas.width = this.ctxScratch.canvas.width;
   this.ctxPattern.canvas.width = this.ctxPattern.canvas.width;
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     this.ctxScratch.strokeStyle = 'rgb(255,255,255)';
     this.ctxScratch.fillStyle = 'rgb(255,255,255)';
     this.ctxScratch.lineWidth = 2;
@@ -845,7 +849,7 @@ Artist.prototype.display = function () {
   this.ctxDisplay.drawImage(this.ctxPredraw.canvas, 0, 0);
 
   // Draw the answer layer.
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     this.ctxDisplay.globalAlpha = 0.4;
   } else {
     this.ctxDisplay.globalAlpha = 0.3;
@@ -1245,7 +1249,7 @@ Artist.prototype.step = function (command, values, options) {
     case 'PC':  // Pen Colour
       this.ctxScratch.strokeStyle = values[0];
       this.ctxScratch.fillStyle = values[0];
-      if (this.skin.id !== "anna" && this.skin.id !== "elsa") {
+      if (!this.isFrozenSkin()) {
         this.isDrawingWithPattern = false;
       }
       break;
@@ -1416,7 +1420,7 @@ Artist.prototype.moveForward_ = function (distance, isDiagonal) {
     this.drawForwardLineWithPattern_(distance);
 
     // Frozen gets both a pattern and a line over the top of it.
-    if (this.skin.id !== "elsa" && this.skin.id !== "anna") {
+    if (!this.isFrozenSkin()) {
       return;
     }
   }
@@ -1463,7 +1467,7 @@ Artist.prototype.drawForwardWithJoints_ = function (distance, isDiagonal) {
 
 Artist.prototype.drawForwardLine_ = function (distance) {
 
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     this.ctxScratch.beginPath();
     this.ctxScratch.moveTo(this.stepStartX, this.stepStartY);
     this.jumpForward_(distance);
@@ -1484,7 +1488,7 @@ Artist.prototype.drawForwardLineWithPattern_ = function (distance) {
   var startX;
   var startY;
 
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     this.ctxPattern.moveTo(this.stepStartX, this.stepStartY);
     img = this.currentPathPattern;
     startX = this.stepStartX;
@@ -1783,7 +1787,7 @@ Artist.prototype.getFeedbackImage_ = function (width, height) {
   // Clear the feedback layer
   this.clearImage_(this.ctxFeedback);
 
-  if (this.skin.id === "anna" || this.skin.id === "elsa") {
+  if (this.isFrozenSkin()) {
     // For frozen skins, show everything - including background,
     // characters, and pattern - along with drawing.
     this.ctxFeedback.globalCompositeOperation = 'copy';
