@@ -11,6 +11,7 @@ import { classroomShape, loadErrorShape } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
+import EditSectionDialog from "./EditSectionDialog";
 
 const styles = {
   breadcrumb: {
@@ -42,6 +43,7 @@ class SectionsPage extends Component {
     sectionsLoaded: false,
     rosterDialogOpen: false,
     addSectionDialogOpen: false,
+    editSectionDialogOpen: false,
   };
 
   componentDidMount() {
@@ -100,6 +102,11 @@ class SectionsPage extends Component {
     }
   };
 
+  handleEditRequest = (section) => {
+    this.setState({editSectionDialogOpen : true});
+    this.editer.updateStates(section);
+  }
+
   render() {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
@@ -138,7 +145,7 @@ class SectionsPage extends Component {
             <p>{i18n.createSectionsInfo()}</p>
           </div>
         }
-        {sectionsLoaded && numSections > 0 && <SectionTable/>}
+        {sectionsLoaded && numSections > 0 && <SectionTable onEdit={this.handleEditRequest}/>}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
           handleClose={this.handleImportClose}
@@ -149,6 +156,11 @@ class SectionsPage extends Component {
         <AddSectionDialog
           isOpen={this.state.addSectionDialogOpen}
           handleClose={this.handleCloseAddSectionDialogs}
+        />
+        <EditSectionDialog
+          ref = {(element) => this.editer = element}
+          isOpen={this.state.editSectionDialogOpen}
+          handleClose={() => this.setState({editSectionDialogOpen: false})}
         />
       </div>
     );

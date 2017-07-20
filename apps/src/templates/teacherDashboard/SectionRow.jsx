@@ -117,6 +117,7 @@ class SectionRow extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     lightRow: PropTypes.bool.isRequired,
+    handleEdit: PropTypes.func,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(
@@ -163,7 +164,10 @@ class SectionRow extends Component {
     });
   }
 
-  onClickEdit = () => this.setState({editing: true});
+  onClickEdit = () => {
+    const section = this.props.sections[this.props.sectionId];
+    this.props.handleEdit(section);
+  }
 
   onClickEditSave = () => {
     const { sections, sectionId, updateSection } = this.props;
