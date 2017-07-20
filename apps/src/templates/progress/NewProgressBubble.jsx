@@ -180,6 +180,7 @@ const NewProgressBubble = React.createClass({
                 {smallBubble ? '-' : number}
               </span>
             )}
+            {tooltip}
           </div>
         </div>
       </div>
