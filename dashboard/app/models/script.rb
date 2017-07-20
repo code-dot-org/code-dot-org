@@ -407,7 +407,16 @@ class Script < ActiveRecord::Base
     [
       Script::COURSEA_DRAFT_NAME,
       Script::COURSEB_DRAFT_NAME,
+      Script::COURSEA_NAME,
+      Script::COURSEB_NAME,
       Script::COURSE1_NAME
+    ].include?(name)
+  end
+
+  private def csf_tts_level?
+    k1? || [
+      Script::COURSEC_NAME,
+      Script::COURSEC_DRAFT_NAME,
     ].include?(name)
   end
 
@@ -429,7 +438,7 @@ class Script < ActiveRecord::Base
   end
 
   def text_to_speech_enabled?
-    k1? || name == Script::COURSEC_DRAFT_NAME || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
+    csf_tts_level? || csd_tts_level? || csp_tts_level? || name == Script::TTS_NAME
   end
 
   def hide_solutions?
