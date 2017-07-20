@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
-import {Heading1, Heading3} from "../../lib/ui/Headings";
+import {Heading1, h3Style} from "../../lib/ui/Headings";
 import ProgressButton from '../progress/ProgressButton';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, assignmentShape } from './shapes';
@@ -76,26 +76,24 @@ class EditSectionForm extends Component{
           {i18n.editSectionDetails()}
         </Heading1>
         <div>
-          <Heading3>
+          <FieldName>
             {i18n.sectionName()}
-          </Heading3>
+          </FieldName>
           <div>
-            <div>{i18n.addSectionName()}</div>
+            <FieldDescription>{i18n.addSectionName()}</FieldDescription>
             {this.renderSectionNameInput()}
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.grade()}
-          </Heading3>
+          </FieldName>
           <div>
             {this.renderGradeSelector()}
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.course()}
-          </Heading3>
-          {/* TODO: JS error when selecting blank course? */}
+          </FieldName>
           <div>
-            <div>{i18n.whichCourse()}</div>
-            {/* TODO: Decide later option */}
+            <FieldDescription>{i18n.whichCourse()}</FieldDescription>
             <AssignmentSelector
               ref={this.props.assignmentRef}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
@@ -103,11 +101,11 @@ class EditSectionForm extends Component{
               chooseLaterOption={true}
             />
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.enableLessonExtras()}
-          </Heading3>
+          </FieldName>
           <div>
-            <div>
+            <FieldDescription>
               {i18n.explainLessonExtras()}
               {' '}
               <a
@@ -116,7 +114,7 @@ class EditSectionForm extends Component{
               >
                 {i18n.explainLessonExtrasLearnMore()}
               </a>
-            </div>
+            </FieldDescription>
             <select
               value = {this.props.extras}
               onChange={val => this.props.handleExtras(val.target.value)}
@@ -125,11 +123,11 @@ class EditSectionForm extends Component{
               <option value="no">{i18n.no()}</option>
             </select>
           </div>
-          <Heading3>
+          <FieldName>
             {i18n.enablePairProgramming()}
-          </Heading3>
+          </FieldName>
           <div>
-            <div>
+            <FieldDescription>
               {i18n.explainPairProgramming()}
               {' '}
               <a
@@ -138,7 +136,7 @@ class EditSectionForm extends Component{
               >
                 {i18n.explainPairProgrammingLearnMore()}
               </a>
-            </div>
+            </FieldDescription>
             <select
               value = {this.props.pairing}
               onChange={val => this.props.handlePairing(val.target.value)}
@@ -176,3 +174,22 @@ export default connect(state => ({
   sections: state.teacherSections.sections,
 }))(EditSectionForm);
 
+const FieldName = props => (
+  <div
+    style={{
+      ...h3Style,
+      marginTop: 20,
+      marginBottom: 0,
+    }}
+    {...props}
+  />
+);
+
+const FieldDescription = props => (
+  <div
+    style={{
+      marginBottom: 5,
+    }}
+    {...props}
+  />
+);
