@@ -218,7 +218,7 @@ describe('NewProgressBubble', () => {
       />
     );
     assert.equal(wrapper.find('ProgressPill').length, 1);
-    assert(!!wrapper.find('ProgressPill').props.tooltip);
+    assert(!!wrapper.find('ProgressPill').props().tooltip);
   });
 
   it('does not render a progress pill for unplugged when small', () => {
