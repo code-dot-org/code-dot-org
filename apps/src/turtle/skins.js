@@ -15,6 +15,8 @@ exports.load = function (assetUrl, id) {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [[skin.assetUrl('annaline-menuicon.png'), 'annaLine']],
       artistOptions: ['anna', 'elsa'],
+      avatarAllowedScripts: ['frozen'],
+      blankAvatar: skin.assetUrl('blank.png'),
     },
 
     elsa: {
@@ -28,6 +30,8 @@ exports.load = function (assetUrl, id) {
       // Used to populate the Set Pattern block
       lineStylePatternOptions: [[skin.assetUrl('elsaline-menuicon.png'), 'elsaLine']],
       artistOptions: ['anna', 'elsa'],
+      avatarAllowedScripts: ['frozen'],
+      blankAvatar: skin.assetUrl('blank.png'),
     },
 
     artist: {
