@@ -97,7 +97,7 @@ export class AddSectionDialog extends Component {
     if (!this.state.loginType) {
       return (
         <AddInitialStudentsView
-          sectionName="Foobar"
+          title={i18n.newSection()}
           handleLoginChoice={this.handleLoginChoice}
           handleCancel={this.handleClose}
         />
