@@ -50,11 +50,13 @@ export class EditSectionDialog extends Component {
 
   onClickEditSave = () => {
     const {updateSection} = this.props;
-    //const persistedSection = false;
 
+    //Assumes section are already created.
+    const sectionId = this.state.sectionId;
     const selectedAssignment = this.assignment.getSelectedAssignment();
+
     const data = {
-      //id: null,
+      id: sectionId,
       name: this.state.name,
       login_type: this.state.loginType,
       grade: this.state.grade,
@@ -69,8 +71,7 @@ export class EditSectionDialog extends Component {
       };
     }
 
-    const suffix = '';
-    const sectionId = this.state.sectionId;
+    const suffix =`/${sectionId}/update`;
 
     $.ajax({
       url: `/v2/sections${suffix}`,
