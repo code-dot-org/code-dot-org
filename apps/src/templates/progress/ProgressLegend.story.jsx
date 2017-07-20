@@ -8,14 +8,14 @@ export default storybook => {
       {
         name:'progress legend - CSF',
         story: () => (
-          <ProgressLegend csfColumn={true}/>
+          <ProgressLegend excludeCsfColumn={false}/>
         )
       },
 
       {
         name:'progress legend - CSP',
         story: () => (
-          <ProgressLegend csfColumn={false}/>
+          <ProgressLegend excludeCsfColumn={true}/>
         )
       },
     ]);
