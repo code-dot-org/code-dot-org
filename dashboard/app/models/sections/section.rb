@@ -131,9 +131,7 @@ class Section < ActiveRecord::Base
   # @param student [User] The student to enroll in this section.
   # @return [Follower] The newly created follower enrollment.
   def add_student(student)
-    puts "add student"
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
-    puts follower.to_json
     if follower
       if follower.deleted?
         follower.restore

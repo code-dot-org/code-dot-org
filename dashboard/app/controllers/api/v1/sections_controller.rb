@@ -1,5 +1,5 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
-  load_resource :section, class: 'Section', find_by: :code, only: [:join, :leave], id_param: :id
+  load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave]
 
@@ -17,7 +17,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/join
   def join
-    puts @section.to_json
     @section.add_student current_user
     render json: {
       sections: current_user.sections_as_student.map(&:summarize)
