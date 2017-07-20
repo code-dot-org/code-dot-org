@@ -27,6 +27,21 @@ const styles = {
     fontSize: 13,
     fontWeight: 'bold'
   },
+  button: {
+    backgroundColor: color.purple,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 12.5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 0,
+    marginRight: 8,
+    verticalAlign: 'top',
+  },
 };
 
 
@@ -53,6 +68,8 @@ var ShareDialog = React.createClass({
     icon: React.PropTypes.string,
     shareUrl: React.PropTypes.string.isRequired,
     isAbusive: React.PropTypes.bool.isRequired,
+    isOwner: React.PropTypes.bool.isRequired,
+    isPublished: React.PropTypes.bool.isRequired,
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
@@ -124,6 +141,18 @@ var ShareDialog = React.createClass({
     );
   },
 
+  publish: function () {
+    window.dashboard.project.publish(this.props.appType).then(() => {
+      this.close();
+    });
+  },
+
+  unpublish: function () {
+    window.dashboard.project.unpublish().then(() => {
+      this.close();
+    });
+  },
+
   render: function () {
     var image;
     var modalClass = 'modal-content';
@@ -160,6 +189,7 @@ var ShareDialog = React.createClass({
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
+    const {isOwner, isPublished} = this.props;
     return (
       <BaseDialog
         useDeprecatedGlobalStyles
@@ -203,6 +233,24 @@ var ShareDialog = React.createClass({
                 <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                 <span>Send to phone</span>
               </a>
+              {isOwner && !isPublished &&
+                <button
+                  id="sharing-publish"
+                  style={styles.button}
+                  onClick={this.publish}
+                >
+                  Publish
+                </button>
+              }
+              {isOwner && isPublished &&
+                <button
+                  id="sharing-unpublish"
+                  style={styles.button}
+                  onClick={this.unpublish}
+                >
+                  Unpublish
+                </button>
+              }
               {this.props.canShareSocial &&
                <span>
                  {this.state.isFacebookAvailable &&
