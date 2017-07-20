@@ -96,16 +96,15 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal @course.id, json['courseId']
   end
 
- test "join with invalid section code" do
+  test "join with invalid section code" do
     assert_raises(ActiveRecord::RecordNotFound) do
       post :join, params: {id: 'xxxxxx'}
     end
   end
 
   test "join with nobody signed in" do
-    assert_raises(ActiveRecord::RecordInvalid) do
-      post :join, params: {id: @word_section.code}
-    end
+    post :join, params: {id: @word_section.code}
+    assert_response 404
   end
 
   test "join with valid section code" do
@@ -122,9 +121,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "leave with nobody signed in" do
-    assert_raises(RuntimeError) do
-      post :leave, params: {id: @word_section.code}
-    end
+    post :leave, params: {id: @word_section.code}
+    assert_response 404
   end
 
   test "leave with valid section code" do
