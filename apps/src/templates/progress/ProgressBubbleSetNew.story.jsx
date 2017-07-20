@@ -2,7 +2,6 @@ import React from 'react';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import { fakeLevels, fakeLevel } from './progressTestHelpers';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import experiments from '@cdo/apps/util/experiments';
 
 const statusForLevel = [
   LevelStatus.perfect,
@@ -18,9 +17,9 @@ const levels = fakeLevels(5).map((level, index) => ({
 levels[0].isConceptLevel = true;
 
 export default storybook => {
-  experiments.setEnabled('progressBubbles', true);
   storybook
     .storiesOf('ProgressBubbleSet - progressBubbles', module)
+    .withExperiments('progressBubbles')
     .addStoryTable([
       {
         name:'starting at 3',
@@ -57,7 +56,7 @@ export default storybook => {
       },
       {
         name:'first level is unplugged',
-        description: 'Should still get a bubble (not a pill) for unplugged',
+        description: 'Should get a pill for unplugged',
         story: () => (
           <ProgressBubbleSet
             levels={[

@@ -284,7 +284,7 @@ class SectionApiHelperTest < SequelTestCase
         sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
         sections.each do |section|
           if section[:id] == FakeDashboard::SECTION_COURSE[:id]
-            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:course_id]
+            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:courseId]
           else
             assert_nil section[:course_id]
           end
