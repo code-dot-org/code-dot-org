@@ -9,50 +9,44 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const sections = [
+const serverSections = [
   {
     id: 11,
     location: "/v2/sections/11",
     name: "brent_section",
-    login_type: "picture",
+    loginType: "picture",
     grade: "2",
     code: "PMTKVH",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: null,
-    course_id: 29,
+    stageExtras: false,
+    pairingAllowed: true,
+    scriptId: null,
+    courseId: 29,
     studentCount: 10,
   },
   {
     id: 12,
     location: "/v2/sections/12",
     name: "section2",
-    login_type: "picture",
+    loginType: "picture",
     grade: "11",
     code: "DWGMFX",
-    stage_extras: false,
-    pairing_allowed: true,
-    script: {
-      id: 36,
-      name: 'course3'
-    },
-    course_id: null,
+    stageExtras: false,
+    pairingAllowed: true,
+    scriptId: 36,
+    courseId: null,
     studentCount: 1,
   },
   {
     id: 307,
     location: "/v2/sections/307",
     name: "plc",
-    login_type: "email",
+    loginType: "email",
     grade: "10",
     code: "WGYXTR",
-    stage_extras: true,
-    pairing_allowed: false,
-    script: {
-      id: 46,
-      name: 'infinity'
-    },
-    course_id: null,
+    stageExtras: true,
+    pairingAllowed: false,
+    scriptId: 46,
+    courseId: null,
     studentCount: 0,
   }
 ];
@@ -137,7 +131,7 @@ export default storybook => {
           store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
           store.dispatch(setValidAssignments(validCourses, validScripts));
-          store.dispatch(setSections(sections));
+          store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
               <SectionTable/>
