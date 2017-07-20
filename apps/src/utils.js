@@ -660,3 +660,18 @@ export function bisect(array, conditional) {
   const negative = array.filter(x => !conditional(x));
   return [positive, negative];
 }
+
+/**
+ * Post data to a url with a timeout, using sendBeacon with fallback.
+ * @param {string} url
+ * @param {Object} data
+ * @param {number} [timeout]
+ */
+export function beacon(url, data, timeout) {
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon(url, JSON.stringify(data));
+  } else {
+    console.log("sendBeacon not supported, fallback to synchronous ajax");
+
+  }
+}

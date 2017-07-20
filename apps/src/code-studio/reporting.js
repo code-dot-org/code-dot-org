@@ -8,7 +8,8 @@ var clientState = require('./clientState');
 import {
   trySetLocalStorage,
   tryGetLocalStorage,
-  tryRemoveLocalStorage
+  tryRemoveLocalStorage,
+  beacon
 } from '@cdo/apps/utils';
 
 var lastAjaxRequest;
@@ -228,50 +229,25 @@ reporting.sendReport = function (report) {
     report.serverLevelId || appOptions.serverLevelId
   );
 
-  // Post milestone iff the server tells us.
+  // Enable reports for this level iff the server tells us.
   // Check a second switch if we passed the last level of the script.
   // Keep this logic in sync with ActivitiesController#milestone on the server.
-  if (appOptions.postMilestone ||
-    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level)) {
+  const reportsEnabled = appOptions.postMilestone ||
+    (appOptions.postFinalMilestone && report.pass && appOptions.level.final_level);
 
+  if (reportsEnabled) {
+    // Add report to the milestone queue.
     let milestones = JSON.parse(tryGetLocalStorage(report.callback, null)) || [];
     milestones.push(serverReport);
+    trySetLocalStorage(report.callback, JSON.stringify(milestones));
+
     console.log(`${milestones.length} milestones, ${JSON.stringify(milestones).length} bytes`);
-    if (progressUpdated) {
-      const data = JSON.stringify({milestones: milestones});
-      var thisAjax = $.ajax({
-        type: 'POST',
-        url: report.callback,
-        contentType: 'application/json',
-        // Set a timeout of five seconds so the user will get the fallback
-        // response even if the server is hung and unresponsive.
-        timeout: 5000,
-        data: data,
-        dataType: 'json',
-        jsonp: false,
-        beforeSend: function (xhr) {
-          xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
-        },
-        success: function (response) {
-          if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-            return;
-          }
-          tryRemoveLocalStorage(report.callback);
-          reportComplete(report, response);
-        },
-        error: function (xhr, textStatus, thrownError) {
-          if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
-            return;
-          }
-          report.error = xhr.responseText;
-          reportComplete(report);
-        }
-      });
-      lastAjaxRequest = thisAjax;
+
+    // Send report synchronously in certain cases.
+    const sync = progressUpdated || serverReport.image;
+    if (sync) {
+      milestonePost(report, milestones);
       return;
-    } else {
-      // Queue milestone post for later.
-      trySetLocalStorage(report.callback, JSON.stringify(milestones));
     }
   }
   // If no milestone post was sent, call the onComplete callback directly.
@@ -289,6 +265,43 @@ reporting.cancelReport = function () {
   }
   lastAjaxRequest = null;
 };
+
+/**
+ * @param {Report} report
+ * @param {MilestoneResponse[]} milestones
+ */
+function milestonePost(report, milestones) {
+    const data = JSON.stringify({milestones: milestones});
+    var thisAjax = $.ajax({
+      type: 'POST',
+      url: report.callback,
+      contentType: 'application/json',
+      // Set a timeout of five seconds so the user will get the fallback
+      // response even if the server is hung and unresponsive.
+      timeout: 5000,
+      data: data,
+      dataType: 'json',
+      jsonp: false,
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'));
+      },
+      success: function (response) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+          return;
+        }
+        tryRemoveLocalStorage(report.callback);
+        reportComplete(report, response);
+      },
+      error: function (xhr, textStatus, thrownError) {
+        if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
+          return;
+        }
+        report.error = xhr.responseText;
+        reportComplete(report);
+      }
+    });
+    lastAjaxRequest = thisAjax;
+}
 
 /**
  * @param {Report} report
