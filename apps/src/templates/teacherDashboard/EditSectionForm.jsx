@@ -58,6 +58,7 @@ class EditSectionForm extends Component{
               value = {this.props.grade}
               onChange={val => this.props.handleGrade(val.target.value)}
             >
+              {/* TODO: Other -> Other/Mixed (display only) */}
               {[""].concat(this.props.validGrades).map((grade, index) => (
                 <option key={index} value={grade}>{grade}</option>
               ))}
@@ -66,8 +67,10 @@ class EditSectionForm extends Component{
           <Heading3>
             {i18n.course()}
           </Heading3>
+          {/* TODO: JS error when selecting blank course? */}
           <div>
             <div>{i18n.whichCourse()}</div>
+            {/* TODO: Decide later option */}
             <AssignmentSelector
               ref={this.props.assignmentRef}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
@@ -127,5 +130,5 @@ export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
-}), {})(EditSectionForm);
+}))(EditSectionForm);
 
