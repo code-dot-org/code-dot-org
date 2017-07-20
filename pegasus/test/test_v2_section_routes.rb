@@ -36,11 +36,11 @@ class V2SectionRoutesTest < SequelTestCase
               "id" => 150001,
               "location" => "/v2/sections/150001",
               "name" => "Fake Section A",
-              "login_type" => "email",
+              "loginType" => "email",
               "grade" => nil,
               "code" => nil,
-              "stage_extras" => false,
-              "pairing_allowed" => true,
+              "stageExtras" => false,
+              "pairingAllowed" => true,
             }
           ],
           JSON.parse(@pegasus.last_response.body)
