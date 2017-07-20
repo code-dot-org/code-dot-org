@@ -1,11 +1,5 @@
-class Api::V1::SectionsController < ApplicationController
+class Api::V1::SectionsController < Api::V1::JsonApiController
   load_and_authorize_resource
-  layout false
-
-  # Don't bother redirecting to login when denying access to the JSON APIs
-  rescue_from CanCan::AccessDenied do
-    head :forbidden
-  end
 
   # GET /api/v1/sections
   # Get the set of sections owned by the current user

@@ -1,11 +1,5 @@
-class Api::V1::SectionsStudentsController < ApplicationController
+class Api::V1::SectionsStudentsController < Api::V1::JsonApiController
   load_and_authorize_resource :section
-  layout false
-
-  # Don't bother redirecting to login when denying access to the JSON APIs
-  rescue_from CanCan::AccessDenied do
-    head :forbidden
-  end
 
   # GET /sections/<section_id>/students
   def index
