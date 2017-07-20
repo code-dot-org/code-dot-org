@@ -74,13 +74,15 @@ var ShareDialog = React.createClass({
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
     onClickExport: React.PropTypes.func,
+    onClose: React.PropTypes.func.isRequired,
+    onShowPublishDialog: React.PropTypes.func.isRequired,
+    onUnpublish: React.PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
     canShareSocial: React.PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
     return {
-      isOpen: true,
       showSendToPhone: false,
       showAdvancedOptions: false,
       exporting: false,
@@ -105,12 +107,9 @@ var ShareDialog = React.createClass({
     }
   },
 
-  componentWillReceiveProps: function (newProps) {
-    this.setState({isOpen: true});
-  },
 
   close: function () {
-    this.setState({isOpen: false});
+    this.props.onClose();
   },
 
   showSendToPhone: function (event) {
@@ -142,15 +141,11 @@ var ShareDialog = React.createClass({
   },
 
   publish: function () {
-    window.dashboard.project.publish(this.props.appType).then(() => {
-      this.close();
-    });
+    this.props.onShowPublishDialog();
   },
 
   unpublish: function () {
-    window.dashboard.project.unpublish().then(() => {
-      this.close();
-    });
+    this.props.onUnpublish();
   },
 
   render: function () {
@@ -193,7 +188,7 @@ var ShareDialog = React.createClass({
     return (
       <BaseDialog
         useDeprecatedGlobalStyles
-        isOpen={this.state.isOpen}
+        isOpen={true}
         handleClose={this.close}
         hideBackdrop={this.props.hideBackdrop}
       >

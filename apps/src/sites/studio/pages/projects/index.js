@@ -3,10 +3,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
-import Dialog from '@cdo/apps/templates/Dialog';
+import PublishDialog from '@cdo/apps/templates/projects/PublishDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
-import i18n from '@cdo/locale';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
 import projects, { selectGallery, setProjectLists, prependProjects } from '@cdo/apps/templates/projects/projectsRedux';
 
@@ -48,14 +47,9 @@ function showGallery(gallery) {
 function onShowConfirmPublishDialog(callback) {
   const publishConfirm = document.getElementById('publish-confirm');
   ReactDOM.render(
-    <Dialog
-      title={i18n.publishToPublicGallery()}
-      body={i18n.publishToPublicGalleryWarning()}
-      confirmText={i18n.publish()}
-      isOpen={true}
-      handleClose={hideDialog}
-      onCancel={hideDialog}
-      onConfirm={onConfirmPublish.bind(this, callback)}
+    <PublishDialog
+      onConfirmPublish={onConfirmPublish.bind(this, callback)}
+      onClose={hideDialog}
     />,
     publishConfirm
   );
@@ -87,5 +81,5 @@ function onConfirmPublish(callback) {
 
 function hideDialog() {
   const publishConfirm = document.getElementById('publish-confirm');
-  ReactDOM.render(<Dialog isOpen={false}/>, publishConfirm);
+  ReactDOM.unmountComponentAtNode(publishConfirm);
 }

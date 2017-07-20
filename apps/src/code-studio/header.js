@@ -10,6 +10,7 @@ import progress from './progress';
 import Dialog from './LegacyDialog';
 import {Provider} from 'react-redux';
 import {getStore} from '../redux';
+import PublishDialog from '../templates/projects/PublishDialog';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -185,12 +186,51 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
+          onClose={hideShareProjectDialog}
+          onShowPublishDialog={showPublishDialog}
+          onUnpublish={unpublishProject}
           canShareSocial={canShareSocial}
         />
       </Provider>,
       dialogDom
     );
   });
+}
+
+function hideShareProjectDialog() {
+  var dialogDom = document.getElementById('project-share-dialog');
+  ReactDOM.unmountComponentAtNode(dialogDom);
+}
+
+function showPublishDialog() {
+  hideShareProjectDialog();
+  var publishDialog = document.getElementById('publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.setAttribute('id', 'publish-dialog');
+    document.body.appendChild(publishDialog);
+  }
+  ReactDOM.render(
+    <PublishDialog
+      onConfirmPublish={publishProject}
+      onClose={hidePublishDialog}
+    />,
+    publishDialog
+  );
+}
+
+function publishProject() {
+  const appType = dashboard.project.getStandaloneApp();
+  window.dashboard.project.publish(appType).then(hidePublishDialog);
+}
+
+function hidePublishDialog() {
+  var publishDialog = document.getElementById('publish-dialog');
+  ReactDOM.unmountComponentAtNode(publishDialog);
+}
+
+function unpublishProject() {
+  window.dashboard.project.unpublish().then(hideShareProjectDialog);
 }
 
 function remixProject() {
