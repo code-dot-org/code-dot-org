@@ -8,6 +8,9 @@ import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 
 const style = {
+  dropdown: {
+    padding: '0.3em',
+  },
   sectionNameInput: {
     // Full-width, large happy text, lots of space.
     display: 'block',
@@ -58,14 +61,14 @@ class EditSectionForm extends Component{
         text: grade === 'Other' ? 'Other/Mixed' : grade,
       }));
     return (
-      <select
+      <Dropdown
         value = {this.props.grade}
         onChange={event => this.props.handleGrade(event.target.value)}
       >
         {gradeOptions.map((grade, index) => (
           <option key={index} value={grade.value}>{grade.text}</option>
         ))}
-      </select>
+      </Dropdown>
     );
   }
 
@@ -99,6 +102,7 @@ class EditSectionForm extends Component{
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
               chooseLaterOption={true}
+              dropdownStyle={style.dropdown}
             />
           </div>
           <FieldName>
@@ -115,13 +119,13 @@ class EditSectionForm extends Component{
                 {i18n.explainLessonExtrasLearnMore()}
               </a>
             </FieldDescription>
-            <select
+            <Dropdown
               value = {this.props.extras}
               onChange={val => this.props.handleExtras(val.target.value)}
             >
               <option value="yes">{i18n.yes()}</option>
               <option value="no">{i18n.no()}</option>
-            </select>
+            </Dropdown>
           </div>
           <FieldName>
             {i18n.enablePairProgramming()}
@@ -137,13 +141,13 @@ class EditSectionForm extends Component{
                 {i18n.explainPairProgrammingLearnMore()}
               </a>
             </FieldDescription>
-            <select
+            <Dropdown
               value = {this.props.pairing}
               onChange={val => this.props.handlePairing(val.target.value)}
             >
               <option value="yes">{i18n.yes()}</option>
               <option value="no">{i18n.no()}</option>
-            </select>
+            </Dropdown>
           </div>
         </div>
         <DialogFooter>
@@ -192,4 +196,8 @@ const FieldDescription = props => (
     }}
     {...props}
   />
+);
+
+const Dropdown = props => (
+  <select style={style.dropdown} {...props}/>
 );
