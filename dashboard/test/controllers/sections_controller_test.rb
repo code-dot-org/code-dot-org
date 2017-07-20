@@ -218,7 +218,7 @@ class SectionsControllerTest < ActionController::TestCase
     assert_response :success
     json = JSON.parse(@response.body)
 
-    course_id = json.find {|section| section['id'] == @section_with_course.id}['course_id']
+    course_id = json.find {|section| section['id'] == @section_with_course.id}['courseId']
     assert_equal @course.id, course_id
   end
 end
