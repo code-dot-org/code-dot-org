@@ -60,7 +60,7 @@ level 'courseB_maze_seq12'
 bonus 'courseB_maze_seq_challenge1', challenge: true
 bonus 'courseB_maze_seq_challenge2', challenge: true
 
-stage 'More Programming in Maze'
+stage 'Programming with Rey and BB-8'
 level 'courseB_starWars_prog1'
 level 'courseB_starWars_prog2'
 level 'courseB_starWars_prog3'
