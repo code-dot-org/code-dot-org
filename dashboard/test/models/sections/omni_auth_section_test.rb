@@ -51,4 +51,20 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
       assert_equal section.id, section_3.id
     end
   end
+
+  test 'cannot add students to omniauth section' do
+    owner = create :teacher
+    student = create :student
+
+    section = OmniAuthSection.from_omniauth(
+      code: 'ZZZ',
+      type: Section::LOGIN_TYPE_CLEVER,
+      owner_id: owner.id,
+      students: [],
+    )
+
+    assert_raise do
+      section.add_student student
+    end
+  end
 end
