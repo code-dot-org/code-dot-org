@@ -55,7 +55,7 @@ module Pd::WorkshopSurveyResultsHelper
               sum_hash[k] += v.values.map {|value| questions[k].index(value) + 1}.reduce(:+)
             end
           else
-            next unless v.presence
+            next unless v.presence && questions[k].include?(v)
 
             # Multiple choice answer for the workshop as a whole
             sum_hash[k] += questions[k].index(v) + 1
