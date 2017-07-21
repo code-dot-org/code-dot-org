@@ -29,7 +29,7 @@ const styles = {
     borderRadius: DOT_SIZE,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    fontSize: 12,
+    fontSize: 16,
     letterSpacing: -0.11,
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
@@ -142,7 +142,7 @@ const NewProgressBubble = React.createClass({
         <ProgressPill
           levels={[level]}
           text={i18n.unpluggedActivity()}
-          fontSize={12}
+          fontSize={16}
           tooltip={tooltip}
         />
       );
