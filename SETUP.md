@@ -61,7 +61,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
     1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
-
+1. Prevent future problems related to the `Too many open files` error:
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+        ```
+        ulimit -n 8192
+        ```
+    1. close and reopen your current terminal window
+    1. make sure that `ulimit -n` returns 8192
 
 ### Ubuntu 14.04
 
