@@ -319,7 +319,7 @@ function milestonePost(report, milestones) {
 }
 
 /**
- * @param {Report} report
+ * @param {MilestoneReport} report
  * @param {MilestoneResponse} response
  */
 function reportComplete(report, response) {
