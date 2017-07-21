@@ -1,7 +1,6 @@
 %h1 Manage User Permissions
 
-#application-container.selectable
-
+#application-container
   = show_flashes.html_safe
 
 %p Enter an Email or User ID to view and edit a User's permissions
@@ -9,45 +8,41 @@
   = text_field_tag :search_term, params[:search_term], class: 'form-control'
   %button.btn{type: 'submit'}
     %i.fa.fa-search
-  -if @users.length > 0
-    %table.table.table-hover.table-condensed.table-auto-width
+-if @user
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th ID
+      %th Email
+      %th Name
+    %tbody
+      %tr
+        %td= link_to @user.id, action: :permissions_form, search_term: @user.id
+        %td= @user.email
+        %td= @user.name
+  = form_tag(action: 'grant_permission') do
+    %table.table.table-hover.table-condensed.table-auto-width{:id => 'permission-table'}
       %thead
-        %th ID
-        %th Email
-        %th Name
+        %th Action
+        %th Permission
+        %th Granted At
       %tbody
-        - @users.each do |user|
+        -if @user.admin
           %tr
-            %td= link_to user.id, action: :permissions_form, search_term: user.id
-            %td= user.email
-            %td= user.name
-    -# display permissions for first user in search results
-    -if @permissions || @user.admin
-      %h2= 'Permissions for User ID - ' + @user.id.to_s
-      = form_tag(action: 'grant_permission') do
-        %table.table.table-hover.table-condensed.table-auto-width{:id => 'permission-table'}
-          %thead
-            %th Action
-            %th Permission
-            %th Granted At
-          %tbody
-            -if @user.admin
-              %tr
-                %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :user_permission_id => 'admin'
-                %td= 'admin'
-                %td
-            - @permissions.each do |permission|
-              %tr
-                %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :user_permission_id => permission.permission
-                %td= permission.permission
-                %td= permission.created_at
-            %tr
-              %td
-                .actions
-                  = submit_tag('Assign', id: 'submitAssignPermission')
-              %td
-                %input{:hidden => true, :name => "user_id", :value => @user.id}
-                .field
-                  = select_tag :user_permission_id, options_for_select(UserPermission::VALID_PERMISSIONS + ['admin'])
-              %td
+            %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :user_permission_id => 'admin'
+            %td= 'admin'
+            %td
+        - @user.permissions.each do |permission|
+          %tr
+            %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :user_permission_id => permission.permission
+            %td= permission.permission
+            %td= permission.created_at
+        %tr
+          %td
+            .actions
+              = submit_tag('Assign', id: 'submitAssignPermission')
+          %td
+            %input{:hidden => true, :name => "user_id", :value => @user.id}
+            .field
+              = select_tag :user_permission_id, options_for_select(UserPermission::VALID_PERMISSIONS + ['admin'])
+          %td
 
