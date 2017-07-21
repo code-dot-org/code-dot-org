@@ -20,6 +20,24 @@ The whole API is prefixed with the "/v2" version indicator so that we can manage
 
 ## Sections
 
+### List my sections
+
+Returns all of the sections associated with the logged in user, grouped by said user's role in the section, i.e. "student" or "teacher". This call should return enough information to render a list of the sections with reasonable meta-data about the section, e.g. # of students/teachers.
+
+```
+GET /v2/sections
+
+200 OK
+Content-Type: application/json
+{
+  "student":[],
+  "teacher":[
+    { "id":"1", "name":"Morning", "student_count":5, "teacher_count":1 },
+    { "id":"2", "name":"Afternoon", ... }
+  ]
+}
+```
+
 ### Create a section
 
 Create a new section. If "name" is empty or null, set it to a default (e.g. "New Section") to avoid an error case. "login_page" specifies the kind of login page to display for the section ("picture", "word-pair", "none").

@@ -314,12 +314,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
-      stageExtras: false,
-      pairingAllowed: true,
-      loginType: 'email',
-      courseId: section.course_id,
-      scriptId: section.script_id,
-      studentCount: 0,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: course.id,
+      script: {id: nil, name: nil},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
@@ -339,12 +339,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
-      stageExtras: false,
-      pairingAllowed: true,
-      loginType: 'email',
-      courseId: section.course_id,
-      scriptId: section.script_id,
-      studentCount: 0,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: nil,
+      script: {id: script.id, name: script.name},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
@@ -367,12 +367,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
-      stageExtras: false,
-      pairingAllowed: true,
-      loginType: 'email',
-      courseId: section.course_id,
-      scriptId: section.script_id,
-      studentCount: 0,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: course.id,
+      script: {id: script.id, name: script.name},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
@@ -390,12 +390,12 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
-      stageExtras: false,
-      pairingAllowed: true,
-      loginType: 'email',
-      courseId: section.course_id,
-      scriptId: section.script_id,
-      studentCount: 0,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: nil,
+      script: {id: nil, name: nil},
+      studentNames: [],
     }
     assert_equal expected, section.summarize
   end
