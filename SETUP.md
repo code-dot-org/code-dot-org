@@ -32,34 +32,34 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
-  1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
-  1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+    1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
+    1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
-  1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
-  1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
+    1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
+    1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
 1. Set up rbenv
-  1. Run `rbenv init`
-  1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
-  1. Pick up those changes: `source ~/.bash_profile`
+    1. Run `rbenv init`
+    1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
+    1. Pick up those changes: `source ~/.bash_profile`
 1. Install Ruby 2.2.3
-  1. `rbenv install 2.2.3`
-  1. Set the global version of Ruby: `rbenv global 2.2.3`
-  1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
+    1. `rbenv install 2.2.3`
+    1. Set the global version of Ruby: `rbenv global 2.2.3`
+    1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
-  1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
-  1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+    1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
 
-     ```
-     # Load nvm function into the shell
-     export NVM_DIR=~/.nvm
-     source $(brew --prefix nvm)/nvm.sh
-     ```
+        ```
+        # Load nvm function into the shell
+        export NVM_DIR=~/.nvm
+        source $(brew --prefix nvm)/nvm.sh
+        ```
 
-  1. Pick up those changes: `source ~/.bash_profile`
+    1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node, npm, and yarn
-  1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
-  1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
-  1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
+    1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
+    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
+    1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 
 
@@ -67,11 +67,11 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
-  * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
+    * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
 1. Upgrade npm to 3.10.8 If `npm -v` says less than 3.10.8 then
-  * `sudo add-apt-repository ppa:chris-lea/node.js`
-  * `sudo apt-get update`
-  * `sudo apt-get install nodejs`
+    * `sudo add-apt-repository ppa:chris-lea/node.js`
+    * `sudo apt-get update`
+    * `sudo apt-get install nodejs`
 1. Either A. Install Ruby 2.2 from OS packages; B. Setup `rbenv`; or C. Setup `rvm`
     - A. OS packages (from the [Brightbox Ubuntu PPA](https://www.brightbox.com/docs/ruby/ubuntu/)):
         - `sudo apt-get install software-properties-common`
@@ -88,19 +88,19 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         1. `rvm install 2.2.3`
         1. `rvm use 2.2.3 --default`
 1. Install Node, npm, and yarn
-  1. Option A - [nvm](https://github.com/creationix/nvm)
-    1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
-      - After completion, close your current terminal window and open a new one.
-    1. `nvm install` (this will install the version defined in `.nvmrc`)
-  1. Option B - nodesource repository
-    1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
-    1. `sudo apt-get install -y nodejs`
-  1. Option C - Manual install
-    1. [Nodejs.org](https://nodejs.org/download/)
-  1. Finally, install yarn: `npm install -g yarn@0.23.2`
+    1. Option A - [nvm](https://github.com/creationix/nvm)
+        1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
+            - After completion, close your current terminal window and open a new one.
+        1. `nvm install` (this will install the version defined in `.nvmrc`)
+    1. Option B - nodesource repository
+        1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
+        1. `sudo apt-get install -y nodejs`
+    1. Option C - Manual install
+        1. [Nodejs.org](https://nodejs.org/download/)
+    1. Finally, install yarn: `npm install -g yarn@0.23.2`
 1. When running `bundle install`, you may need to run
 
-   `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
+     `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
 
    first so that nokogiri picks up the built in libxml2 library. See this [stackoverflow answer](http://stackoverflow.com/a/40038954/186771).
 
