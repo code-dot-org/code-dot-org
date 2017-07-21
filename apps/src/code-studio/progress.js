@@ -134,7 +134,10 @@ progress.renderCourseProgress = function (scriptData) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ScriptOverview onOverviewPage={true}/>
+      <ScriptOverview
+        onOverviewPage={true}
+        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+      />
     </Provider>,
     mountPoint
   );

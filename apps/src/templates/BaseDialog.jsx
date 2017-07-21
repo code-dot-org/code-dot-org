@@ -18,6 +18,8 @@ var BaseDialog = React.createClass({
     useDeprecatedGlobalStyles: React.PropTypes.bool,
     children: React.PropTypes.node,
     assetUrl: React.PropTypes.func,
+    fixedWidth: React.PropTypes.number,
+    fixedHeight: React.PropTypes.number,
   },
 
   componentDidMount: function () {
@@ -85,13 +87,13 @@ var BaseDialog = React.createClass({
       modalBodyClassNames = "";
       modalBodyStyle = {
         background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
-        height: 480,
+        height: this.props.fixedHeight,
         overflow: 'hidden',
         borderRadius: 4,
       };
       bodyStyle = Object.assign({}, bodyStyle, {
-        width: 700,
-        marginLeft: -350,
+        width: this.props.fixedWidth || 700,
+        marginLeft: (-this.props.fixedWidth / 2) || -350,
       });
       xCloseStyle = {
         position: 'absolute',
