@@ -38,4 +38,8 @@ class OmniAuthSection < Section
 
     oauth_section
   end
+
+  def provider_managed?
+    true
+  end
 end
