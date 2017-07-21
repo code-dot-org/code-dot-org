@@ -119,7 +119,8 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === SET_SECTIONS) {
-    const sections = action.sections;
+    const sections = action.sections.map(section =>
+      sectionFromServerSection(section));
     const prevSectionIds = action.reset ? [] : state.sectionIds;
     const prevSections = action.reset ? [] : state.sections;
     return {
@@ -133,7 +134,7 @@ export default function teacherSections(state=initialState, action) {
   }
 
   if (action.type === UPDATE_SECTION) {
-    const section = action.serverSection;
+    const section = sectionFromServerSection(action.serverSection);
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;
 
@@ -222,6 +223,23 @@ export default function teacherSections(state=initialState, action) {
 // Helpers and Selectors
 
 export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
+
+/**
+ * Maps from the data we get back from the server for a section, to the format
+ * we want to have in our store.
+ */
+export const sectionFromServerSection = serverSection => ({
+  id: serverSection.id,
+  name: serverSection.name,
+  loginType: serverSection.login_type,
+  grade: serverSection.grade,
+  stageExtras: serverSection.stage_extras,
+  pairingAllowed: serverSection.pairing_allowed,
+  studentCount: serverSection.studentCount,
+  code: serverSection.code,
+  courseId: serverSection.course_id,
+  scriptId: serverSection.script ? serverSection.script.id : null
+});
 
 const assignmentsForSection = (validAssignments, section) => {
   const assignments = [];
