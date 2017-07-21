@@ -32,7 +32,7 @@ export default storybook => {
       'This is the CompletableLevelThumbnail component.',
       () => (
         <div>
-          <CompletableLevelThumbnail size={200} completed={true} style={{float: 'left'}}>
+          <CompletableLevelThumbnail size={200} completed={true}>
             <MazeThumbnail
               map={sampleMapA}
               startDirection={1}
