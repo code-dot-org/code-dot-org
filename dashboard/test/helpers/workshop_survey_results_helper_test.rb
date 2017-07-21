@@ -107,7 +107,21 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal 3.67, result_hash[:how_clearly_presented]
   end
 
-  test 'averaging across multiple surveys'
+  test 'averaging across multiple surveys' do
+    workshop_1 = create(:pd_workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 2, num_completed_surveys: 5)
+    workshop_2 = create(:pd_workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10)
+
+    workshop_2.survey_responses.each do |response|
+      response.update_form_data_hash({how_clearly_presented: {'Facilitator Person 3': 'Not at all clearly', 'Facilitator Person 4': 'Not at all clearly', 'Facilitator Person 5': 'Not at all clearly'}})
+      response.save
+    end
+
+    # With 10 people saying "Not at all clearly" to 3 facilitators, and 5 people saying
+    # "Extremely Clearly" to 2 facilitators, we'd expect the answer to be
+    # [(10 * 3 * 1) + (5 * 2 * 5)] / (10 + 30)
+    result_hash = summarize_workshop_surveys(workshops: [workshop_1, workshop_2], facilitator_breakdown: false)
+    assert_equal 2, result_hash[:how_clearly_presented]
+  end
 
   test 'get an error if summarizing a mix of workshop surveys' do
     local_workshop = create(:pd_local_summer_workshop_survey).pd_enrollment.workshop
