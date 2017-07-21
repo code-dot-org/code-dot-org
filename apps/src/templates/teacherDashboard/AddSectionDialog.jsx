@@ -92,48 +92,42 @@ export class AddSectionDialog extends Component {
     });
   };
 
-  renderContent() {
+  render() {
+    const {isOpen} = this.props;
     const {name, grade, loginType, extras, pairing} = this.state;
     const title = i18n.newSection();
-    if (!loginType) {
-      return (
-        <AddInitialStudentsView
-          title={title}
-          handleLoginChoice={this.handleLoginChoice}
-          handleCancel={this.handleClose}
-        />
-      );
-    } else {
-      return (
-        <EditSectionForm
-          title={title}
-          assignmentRef={(element) => this.assignment = element}
-          handleSave={this.onClickEditSave}
-          handleClose={this.handleClose}
-          name={name}
-          handleName={this.handleNameChange}
-          grade={grade}
-          handleGrade={this.handleGradeChange}
-          extras={extras}
-          handleExtras={this.handleExtrasChange}
-          pairing={pairing}
-          handlePairing={this.handlePairingChange}
-        />
-      );
-    }
-  }
-
-  render() {
     return (
       <BaseDialog
         useUpdatedStyles
         fixedWidth={1010}
-        isOpen={this.props.isOpen}
+        isOpen={isOpen}
         uncloseable
         assetUrl={() => ''}
       >
         <PadAndCenter>
-          {this.renderContent()}
+          {!loginType && /* First page */
+            <AddInitialStudentsView
+              title={title}
+              handleLoginChoice={this.handleLoginChoice}
+              handleCancel={this.handleClose}
+            />
+          }
+          {loginType && /* Second page */
+            <EditSectionForm
+              title={title}
+              assignmentRef={(element) => this.assignment = element}
+              handleSave={this.onClickEditSave}
+              handleClose={this.handleClose}
+              name={name}
+              handleName={this.handleNameChange}
+              grade={grade}
+              handleGrade={this.handleGradeChange}
+              extras={extras}
+              handleExtras={this.handleExtrasChange}
+              pairing={pairing}
+              handlePairing={this.handlePairingChange}
+            />
+          }
         </PadAndCenter>
       </BaseDialog>
     );
