@@ -854,6 +854,19 @@ class UserTest < ActiveSupport::TestCase
     assert ActionMailer::Base.deliveries.empty?
   end
 
+  test 'create new teacher sends email' do
+    teacher = create(:teacher)
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [teacher.email], mail.to
+    assert_equal 'Welcome to Code.org!', mail.subject
+    assert mail.body.to_s =~ /Hadi Partovi/
+  end
+
+  test 'create new student does not send email' do
+    create(:student)
+    assert ActionMailer::Base.deliveries.empty?
+  end
+
   test 'provides helpful error on bad email address' do
     # Though validation now exists to prevent grossly malformed emails, such was not always the
     # case. Consequently, we must bypass validation to create the state of such an account.
