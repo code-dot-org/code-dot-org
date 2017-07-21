@@ -1,6 +1,7 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
+import LegendSelector from './LegendSelector';
 import $ from 'jquery';
 
 const styles = {
@@ -32,6 +33,7 @@ const ScriptEditor = React.createClass({
     professionalLearningCourse: React.PropTypes.bool,
     peerReviewsRequired: React.PropTypes.number,
     wrapupVideo: React.PropTypes.string,
+    excludeCsfColumnInLegend: React.PropTypes.bool,
     projectWidgetVisible: React.PropTypes.bool,
     projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
   },
@@ -162,6 +164,10 @@ const ScriptEditor = React.createClass({
             style={styles.input}
           />
         </label>
+        <LegendSelector
+          excludeCsf={this.props.excludeCsfColumnInLegend}
+          inputStyle={styles.checkbox}
+        />
         <h3>Project widget options</h3>
         <label>
           Project widget visible
