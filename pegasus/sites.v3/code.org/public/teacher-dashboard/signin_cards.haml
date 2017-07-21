@@ -11,7 +11,7 @@ content-type: text/ng-template
     = I18n.t('dashboard_students_print_page')
   %br
 
-  %div.signin_card{"ng-repeat" => "student in students | orderBy:name"}
+  %div.signin_card{"ng-repeat" => "student in section.students | orderBy:name"}
     %dl
       %dd= I18n.t 'dashboard_students_signin_card', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
     %dl
