@@ -414,10 +414,7 @@ class Script < ActiveRecord::Base
   end
 
   private def csf_tts_level?
-    k1? || [
-      Script::COURSEC_NAME,
-      Script::COURSEC_DRAFT_NAME,
-    ].include?(name)
+    k5_course?
   end
 
   private def csd_tts_level?
