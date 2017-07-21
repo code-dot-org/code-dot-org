@@ -52,7 +52,7 @@ level 'Farmer for TTS testing'
 stage 'Flappy'
 skin 'flappy'
 level_concept_difficulty '{"sequencing":1,"events":2}'
-level 'blockly:Flappy:1'
+level 'flappy_1'
 
 stage 'Bounce'
 skin 'bounce'
