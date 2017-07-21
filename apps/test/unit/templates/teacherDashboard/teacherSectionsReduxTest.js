@@ -11,6 +11,7 @@ import reducer, {
   assignmentId,
   assignmentNames,
   assignmentPaths,
+  sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sections = [
@@ -18,39 +19,45 @@ const sections = [
     id: 11,
     location: "/v2/sections/11",
     name: "brent_section",
-    loginType: "picture",
+    login_type: "picture",
     grade: "2",
     code: "PMTKVH",
-    stageExtras: false,
-    pairingAllowed: true,
-    scriptId: null,
-    courseId: 29,
+    stage_extras: false,
+    pairing_allowed: true,
+    script: null,
+    course_id: 29,
     studentCount: 10,
   },
   {
     id: 12,
     location: "/v2/sections/12",
     name: "section2",
-    loginType: "picture",
+    login_type: "picture",
     grade: "11",
     code: "DWGMFX",
-    stageExtras: false,
-    pairingAllowed: true,
-    scriptId: 36,
-    courseId: null,
+    stage_extras: false,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
     studentCount: 1,
   },
   {
     id: 307,
     location: "/v2/sections/307",
     name: "plc",
-    loginType: "email",
+    login_type: "email",
     grade: "10",
     code: "WGYXTR",
-    stageExtras: true,
-    pairingAllowed: false,
-    scriptId: 112,
-    courseId: 29,
+    stage_extras: true,
+    pairing_allowed: false,
+    script: {
+      id: 112,
+      name: 'csp1'
+    },
+    course_id: 29,
     studentCount: 0,
   }
 ];
@@ -238,13 +245,13 @@ describe('teacherSectionsRedux', () => {
         id: 308,
         location: "/v2/sections/308",
         name: "added_section",
-        loginType: "email",
+        login_type: "email",
         grade: "2",
         code: "ZVTKVH",
-        stageExtras: false,
-        pairingAllowed: true,
-        scriptId: null,
-        courseId: 29,
+        stage_extras: false,
+        pairing_allowed: true,
+        script: null,
+        course_id: 29,
         studentCount: 0,
       }], true);
 
@@ -267,20 +274,20 @@ describe('teacherSectionsRedux', () => {
     const updatedSection = {
       ...sections[0],
       // change login type from picture to word
-      loginType: 'word'
+      login_type: 'word'
     };
 
     const newServerSection = {
       id: 21,
       location: "/v2/sections/21",
       name: "brent_section",
-      loginType: "picture",
+      login_type: "picture",
       grade: "2",
       code: "ABCDEF",
-      stageExtras: false,
-      pairingAllowed: true,
-      scriptId: null,
-      courseId: 29,
+      stage_extras: false,
+      pairing_allowed: true,
+      script: null,
+      course_id: 29,
       studentCount: 10,
     };
 
@@ -357,7 +364,7 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: null,
-        scriptId: null,
+        scriptId: null
       });
     });
 
@@ -375,7 +382,7 @@ describe('teacherSectionsRedux', () => {
         studentCount: 0,
         code: '',
         courseId: 29,
-        scriptId: null,
+        scriptId: null
       });
     });
 
@@ -420,6 +427,53 @@ describe('teacherSectionsRedux', () => {
       assert.throws(() => {
         reducer(stateWithSections, removeSection(1234));
       });
+    });
+  });
+
+  describe('sectionFromServerSection', () => {
+    const serverSection = {
+      id: 11,
+      location: "/v2/sections/11",
+      name: "brent_section",
+      login_type: "picture",
+      grade: "2",
+      code: "PMTKVH",
+      stage_extras: false,
+      pairing_allowed: true,
+      script: null,
+      course_id: 29,
+      studentCount: 10,
+    };
+
+    it('transfers some fields directly, mapping from snake_case to camelCase', () => {
+      const section = sectionFromServerSection(serverSection);
+      assert.strictEqual(section.id, serverSection.id);
+      assert.strictEqual(section.name, serverSection.name);
+      assert.strictEqual(section.login_type, serverSection.loginType);
+      assert.strictEqual(section.grade, serverSection.grade);
+      assert.strictEqual(section.code, serverSection.code);
+      assert.strictEqual(section.stage_extras, serverSection.stageExtras);
+      assert.strictEqual(section.pairing_allowed, serverSection.pairingAllowed);
+      assert.strictEqual(section.course_id, serverSection.courseId);
+    });
+
+    it('maps from a script object to a script_id', () => {
+      const sectionWithoutScript = sectionFromServerSection(serverSection);
+      assert.strictEqual(sectionWithoutScript.scriptId, null);
+
+      const sectionWithScript = sectionFromServerSection({
+        ...serverSection,
+        script: {
+          id: 1,
+          name: 'Accelerated Course'
+        }
+      });
+      assert.strictEqual(sectionWithScript.scriptId, 1);
+    });
+
+    it('sets student count', () => {
+      const section = sectionFromServerSection(serverSection);
+      assert.equal(section.studentCount, 10);
     });
   });
 
