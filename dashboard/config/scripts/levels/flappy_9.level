@@ -6,16 +6,41 @@
   "user_id": 156,
   "properties": {
     "skin": "flappy",
-    "obstacles": true,
-    "ground": true,
-    "score": true,
+    "obstacles": "true",
+    "ground": "true",
+    "score": "true",
     "goal": "{}",
     "scale": "{\"snapRadius\":2}",
-    "success_condition": "function successCondition() {\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\n\t      }",
+    "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
     "instructions": "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "default_flap": "NORMAL",
+    "free_play": "false",
+    "shareable": "false"
   },
   "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 18:40:38 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:41:12 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 2
@@ -61,7 +86,9 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="flappy_setScore"/>
+        <block type="flappy_setScore">
+          <title name="VALUE">0</title>
+        </block>
       </xml>
     </required_blocks>
   </blocks>
