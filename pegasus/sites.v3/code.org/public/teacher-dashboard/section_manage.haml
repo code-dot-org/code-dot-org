@@ -64,10 +64,10 @@ content-type: text/ng-template
       %button.btn.btn-primary{"ng-click" => "add_bulk_import()"}= I18n.t('dashboard_action_done')
       %button.btn.btn-white{"ng-click" => "clear_bulk_import()"}= I18n.t('dashboard_action_cancel')
 
-  %div.jumbotron{'ng-show' => "section.id && students.length <= 0 && section.login_type !== 'email'", style: "line-height: 36px;"}
+  %div.jumbotron{'ng-show' => "section.id && section.students.length <= 0 && section.login_type !== 'email'", style: "line-height: 36px;"}
     = I18n.t('dashboard_students_new_section')
 
-  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'students.length > 0', "ng-form" => "allForm"}
+  %table{style: "width:950px; table-layout:fixed;", 'ng-show' => 'section.students.length > 0', "ng-form" => "allForm"}
     %colgroup
       %col{width: "300"}/
       %col{width: "100"}/
@@ -85,8 +85,8 @@ content-type: text/ng-template
         %span{"ng-if" => "section.login_type !== 'email'"}= I18n.t('dashboard_students_secret')
         %span{"ng-if" => "section.login_type === 'email'"}= I18n.t('dashboard_students_password')
       %th.manage-th
-        %button.btn.btn-primary{"ng-click" => "save(students)", "ng-show" => "editingAny(students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
-    %tr{"ng-repeat" => "student in students | orderBy:order", "ng-form" => "form"}
+        %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
+    %tr{"ng-repeat" => "student in section.students | orderBy:order", "ng-form" => "form"}
       %td
         %span{"ng-hide" => "student.editing"}
           %a{"ng-href" => "#/sections/{{section.id}}/student/{{student.id}}"} {{student.name}}
@@ -141,17 +141,17 @@ content-type: text/ng-template
     %tr
       %th{colspan: "4", style: "padding-top:5px;padding-bottom:5px"}
       %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
-        %button.btn.btn-primary{"ng-click" => "save(students)", "ng-show" => "editingAny(students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
+        %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
 
   %div{"ng-if" => "section.login_type === 'picture' || section.login_type === 'word'"}
-    %h3{"ng-show" => 'students.length > 0'}
+    %h3{"ng-show" => 'section.students.length > 0'}
       = I18n.t 'dashboard_students_share_section', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
       %br/
       %br/
       = I18n.t('dashboard_students_share_section_secondary')
       %a{"ng-href" => CDO.studio_url("/sections/{{section.code}}"), target: "_blank"}
         http:#{CDO.studio_url('/sections/{{section.code}}')}
-    %h3{"ng-show" => 'students.length > 0'}
+    %h3{"ng-show" => 'section.students.length > 0'}
       %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
         = I18n.t('dashboard_students_print_info')
     %br/

@@ -50,20 +50,19 @@ export class AddSectionDialog extends Component {
 
   handlePairingChange = (pairing) => {
     this.setState({pairing});
-  }
+  };
 
   onClickEditSave = () => {
     const {updateSection} = this.props;
-    //const persistedSection = false;
+    const {name, loginType, grade, extras, pairing} = this.state;
 
     const selectedAssignment = this.assignment.getSelectedAssignment();
     const data = {
-      //id: null,
-      name: this.state.name,
-      login_type: this.state.loginType,
-      grade: this.state.grade,
-      stage_extras: this.state.extras === 'yes' ? true : false,
-      pairing_allowed: this.state.pairing === 'yes' ? true : false,
+      name: name,
+      login_type: loginType,
+      grade: grade,
+      stage_extras: extras === 'yes',
+      pairing_allowed: pairing === 'yes',
       course_id: selectedAssignment ? selectedAssignment.courseId : null,
     };
 
@@ -94,8 +93,9 @@ export class AddSectionDialog extends Component {
   };
 
   renderContent() {
+    const {name, grade, loginType, extras, pairing} = this.state;
     const title = i18n.newSection();
-    if (!this.state.loginType) {
+    if (!loginType) {
       return (
         <AddInitialStudentsView
           title={title}
@@ -107,16 +107,16 @@ export class AddSectionDialog extends Component {
       return (
         <EditSectionForm
           title={title}
-          assignmentRef = {(element) => this.assignment = element}
+          assignmentRef={(element) => this.assignment = element}
           handleSave={this.onClickEditSave}
           handleClose={this.handleClose}
-          name={this.state.name}
+          name={name}
           handleName={this.handleNameChange}
-          grade={this.state.grade}
+          grade={grade}
           handleGrade={this.handleGradeChange}
-          extras={this.state.extras}
+          extras={extras}
           handleExtras={this.handleExtrasChange}
-          pairing={this.state.pairing}
+          pairing={pairing}
           handlePairing={this.handlePairingChange}
         />
       );
