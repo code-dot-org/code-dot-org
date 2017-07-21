@@ -46,6 +46,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {getStore} from '../redux';
+import mazeReducer from './redux';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -231,6 +232,12 @@ function resetDirtImages(running) {
 function rotate(data) {
   return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
 }
+
+Maze.getAppReducers = function () {
+  return {
+    maze: mazeReducer
+  };
+};
 
 /**
  * Initialize Blockly and the maze.  Called on page load.
