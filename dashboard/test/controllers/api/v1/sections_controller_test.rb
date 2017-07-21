@@ -57,7 +57,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     json = JSON.parse(@response.body)
 
-    course_id = json.find {|section| section['id'] == @section_with_course.id}['courseId']
+    course_id = json.find {|section| section['id'] == @section_with_course.id}['course_id']
     assert_equal @course.id, course_id
   end
 
@@ -93,7 +93,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     json = JSON.parse(@response.body)
 
-    assert_equal @course.id, json['courseId']
+    assert_equal @course.id, json['course_id']
   end
 
   test "join with invalid section code" do
