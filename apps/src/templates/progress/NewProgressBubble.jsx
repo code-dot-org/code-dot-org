@@ -2,11 +2,13 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
+import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
 import { getIconForLevel } from './progressHelpers';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
+import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 
 /**
  * As we do another redesign of our bubbles, this module represents the new version
@@ -25,10 +27,9 @@ const styles = {
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE,
-    borderWidth: 2,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    fontSize: 12,
+    fontSize: 16,
     letterSpacing: -0.11,
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
@@ -116,15 +117,44 @@ const NewProgressBubble = React.createClass({
     }
 
     const tooltipId = _.uniqueId();
+    let tooltipText = levelName ||
+      (level.isUnplugged && i18n.unpluggedActivity()) || '';
+    if (number) {
+      tooltipText = `${number}. ${tooltipText}`;
+    }
 
+    const tooltip = (
+      <ReactTooltip
+        id={tooltipId}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        <div style={styles.tooltip}>
+          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+          {tooltipText}
+        </div>
+      </ReactTooltip>
+    );
+
+    if (level.isUnplugged && !smallBubble) {
+      return (
+        <ProgressPill
+          levels={[level]}
+          text={i18n.unpluggedActivity()}
+          fontSize={16}
+          tooltip={tooltip}
+        />
+      );
+    }
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
     let bubble = (
       <div
         style={{
           display: 'inline-block',
-          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) +
-            2 * styles.main.borderWidth + 2 * 2,
+          // two pixles on each side for border, 2 pixels on each side for margin
+          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
           textAlign: 'center',
         }}
       >
@@ -144,20 +174,13 @@ const NewProgressBubble = React.createClass({
               <span
                 style={smallBubble ? styles.smallBubbleSpan : undefined}
               >
-                {number}
+                {/*Text will not show up for smallBubble, but it's presence
+                  causes bubble to be properly aligned vertically
+                  */}
+                {smallBubble ? '-' : number}
               </span>
             )}
-            <ReactTooltip
-              id={tooltipId}
-              role="tooltip"
-              wrapper="span"
-              effect="solid"
-            >
-              <div style={styles.tooltip}>
-                <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-                {`${number}. ${levelName || ''}`}
-              </div>
-            </ReactTooltip>
+            {tooltip}
           </div>
         </div>
       </div>

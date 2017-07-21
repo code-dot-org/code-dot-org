@@ -1,0 +1,934 @@
+{
+  "1": {
+    "instructionsImportant": true,
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 16, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "2": {
+    "ideal": 5,
+    "requiredBlocks": [
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 16, 0, 0, 0, 8],
+      [0, 0, 0, 0, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "3": {
+    "requiredBlocks": [
+      [{
+        "test": "moveUp",
+        "type": "bounce_moveUp"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["upButton"],
+    "map": [
+      [0, 0, 0, 8, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_moveUp\"></block> \t        <block type=\"bounce_moveDown\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenUp\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "4": {
+    "requiredBlocks": [
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveUp",
+        "type": "bounce_moveUp"
+      }],
+      [{
+        "test": "moveDown",
+        "type": "bounce_moveDown"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+    "map": [
+      [0, 0, 8, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 8],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 8, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_moveUp\"></block> \t        <block type=\"bounce_moveDown\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenUp\" deletable=\"false\" x=\"20\" y=\"120\"></block> \t    <block type=\"bounce_whenDown\" deletable=\"false\" x=\"180\" y=\"120\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "5": {
+    "timeoutFailureTick": 100,
+    "requiredBlocks": [
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "ballDirection": 4.0369465598628835,
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [32, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 4, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "6": {
+    "timeoutFailureTick": 140,
+    "requiredBlocks": [
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "ballDirection": 4.0369465598628835,
+    "map": [
+      [1, 1, 33, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 16, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"120\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "7": {
+    "timeoutFailureTick": 900,
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "failOnBallExit": true,
+    "map": [
+      [1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 32, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"120\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"220\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "10": {
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }],
+      [{
+        "test": "incrementPlayerScore",
+        "type": "bounce_incrementPlayerScore"
+      }],
+      [{
+        "test": "incrementOpponentScore",
+        "type": "bounce_incrementOpponentScore"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "goal": {},
+    "respawnBalls": true,
+    "map": [
+      [1, 1, 2, 2, 2, 2, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"100\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"180\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"260\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"340\"></block>",
+    "successCondition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
+    "failureCondition": ""
+  },
+  "11": {
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }],
+      [{
+        "test": "incrementPlayerScore",
+        "type": "bounce_incrementPlayerScore"
+      }],
+      [{
+        "test": "incrementOpponentScore",
+        "type": "bounce_incrementOpponentScore"
+      }],
+      [{
+        "test": "launchBall",
+        "type": "bounce_launchBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "minWorkspaceHeight": 750,
+    "goal": {},
+    "map": [
+      [1, 1, 2, 2, 2, 2, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setBallSpeed\"></block> \t        <block type=\"bounce_setBackground\"></block> \t        <block type=\"bounce_setBall\"></block> \t        <block type=\"bounce_setPaddle\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"180\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"180\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"270\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"370\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"470\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"590\"></block>",
+    "successCondition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
+    "failureCondition": ""
+  },
+  "12": {
+    "requiredBlocks": [],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "minWorkspaceHeight": 800,
+    "freePlay": true,
+    "map": [
+      [1, 1, 2, 2, 2, 2, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setBallSpeed\"></block> \t        <block type=\"bounce_setBackground\"></block> \t        <block type=\"bounce_setBall\"></block> \t        <block type=\"bounce_setPaddle\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"220\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"220\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"310\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"410\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"510\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"630\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "1_basketball": {
+    "instructionsImportant": true,
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 16, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "useFlagGoal": true,
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "1_sports": {
+    "instructionsImportant": true,
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 16, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "useFlagGoal": true,
+    "theme": "soccer",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "2_basketball": {
+    "ideal": 5,
+    "requiredBlocks": [
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 16, 0, 0, 0, 8]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block>",
+    "useFlagGoal": true,
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "2_sports": {
+    "ideal": 5,
+    "requiredBlocks": [
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [8, 0, 0, 16, 0, 0, 0, 8]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block>",
+    "useFlagGoal": true,
+    "theme": "soccer",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "5_basketball": {
+    "timeoutFailureTick": 100,
+    "requiredBlocks": [
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "ballDirection": 4.0369465598628835,
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [32, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 4, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_bounceBall\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "useFlagGoal": true,
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "5_sports": {
+    "timeoutFailureTick": 100,
+    "requiredBlocks": [
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "ballDirection": 4.0369465598628835,
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [32, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 4, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_bounceBall\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"20\"></block>",
+    "useFlagGoal": true,
+    "theme": "hockey",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "6_basketball": {
+    "timeoutFailureTick": 140,
+    "requiredBlocks": [
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "ballDirection": 4.0369465598628835,
+    "map": [
+      [1, 1, 33, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 16, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_bounceBall\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"120\"></block>",
+    "useFlagGoal": true,
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "6_sports": {
+    "timeoutFailureTick": 140,
+    "requiredBlocks": [
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "ballDirection": 4.0369465598628835,
+    "map": [
+      [1, 1, 33, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 16, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_bounceBall\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"120\"></block>",
+    "useFlagGoal": true,
+    "theme": "hockey",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "7_basketball": {
+    "timeoutFailureTick": 900,
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "failOnBallExit": true,
+    "map": [
+      [1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 32, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"120\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"220\"></block>",
+    "useFlagGoal": true,
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "7_sports": {
+    "timeoutFailureTick": 900,
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "failOnBallExit": true,
+    "map": [
+      [1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 0, 0, 0, 0, 32, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"120\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"220\"></block>",
+    "useFlagGoal": true,
+    "theme": "football",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "10_basketball": {
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }],
+      [{
+        "test": "incrementPlayerScore",
+        "type": "bounce_incrementPlayerScore"
+      }],
+      [{
+        "test": "incrementOpponentScore",
+        "type": "bounce_incrementOpponentScore"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "goal": {},
+    "respawnBalls": true,
+    "map": [
+      [1, 1, 1, 2, 2, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"100\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"180\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"260\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"340\"></block>",
+    "successCondition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
+    "failureCondition": ""
+  },
+  "10_sports": {
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }],
+      [{
+        "test": "incrementPlayerScore",
+        "type": "bounce_incrementPlayerScore"
+      }],
+      [{
+        "test": "incrementOpponentScore",
+        "type": "bounce_incrementOpponentScore"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "goal": {},
+    "respawnBalls": true,
+    "map": [
+      [1, 1, 2, 2, 2, 2, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 4, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block></xml>",
+    "startBlocks": "<block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"100\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"180\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"260\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"340\"></block>",
+    "theme": "football",
+    "successCondition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
+    "failureCondition": ""
+  },
+  "11_basketball": {
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }],
+      [{
+        "test": "incrementPlayerScore",
+        "type": "bounce_incrementPlayerScore"
+      }],
+      [{
+        "test": "incrementOpponentScore",
+        "type": "bounce_incrementOpponentScore"
+      }],
+      [{
+        "test": "launchBall",
+        "type": "bounce_launchBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "minWorkspaceHeight": 750,
+    "goal": {},
+    "map": [
+      [1, 1, 1, 2, 2, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setBallSpeed\"></block> \t        <block type=\"bounce_setPaddleDropdown\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"180\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"180\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"270\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"370\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"470\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"590\"></block>",
+    "successCondition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
+    "failureCondition": ""
+  },
+  "11_sports": {
+    "requiredBlocks": [
+      [{
+        "test": "moveLeft",
+        "type": "bounce_moveLeft"
+      }],
+      [{
+        "test": "moveRight",
+        "type": "bounce_moveRight"
+      }],
+      [{
+        "test": "bounceBall",
+        "type": "bounce_bounceBall"
+      }],
+      [{
+        "test": "incrementPlayerScore",
+        "type": "bounce_incrementPlayerScore"
+      }],
+      [{
+        "test": "incrementOpponentScore",
+        "type": "bounce_incrementOpponentScore"
+      }],
+      [{
+        "test": "launchBall",
+        "type": "bounce_launchBall"
+      }]
+    ],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "minWorkspaceHeight": 750,
+    "goal": {},
+    "map": [
+      [1, 1, 1, 2, 2, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setBallSpeed\"></block> \t        <block type=\"bounce_setPaddleDropdown\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"180\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"180\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"270\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"370\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"470\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"590\"></block>",
+    "successCondition": "function successCondition() {\n\t      return Bounce.opponentScore >= 2;\n\t    }",
+    "failureCondition": ""
+  },
+  "12_basketball": {
+    "requiredBlocks": [],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "minWorkspaceHeight": 800,
+    "freePlay": true,
+    "map": [
+      [1, 1, 1, 2, 2, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setTeam\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setPaddleDropdown\"></block> \t        <block type=\"bounce_setBallSpeed\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"220\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"220\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"310\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"410\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"510\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"630\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "12_sports": {
+    "requiredBlocks": [],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton"],
+    "minWorkspaceHeight": 800,
+    "freePlay": true,
+    "map": [
+      [1, 1, 1, 2, 2, 1, 1, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 16, 0, 0, 0, 0, 1]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setBackground\"></block> \t        <block type=\"bounce_setPaddleDropdown\"></block> \t        <block type=\"bounce_setBall\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setBallSpeed\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"220\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"220\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"310\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"410\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"510\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"630\"></block>",
+    "maps": {
+      "basketball": [
+        [1, 1, 1, 2, 2, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 16, 0, 0, 0, 0, 1]
+      ],
+      "football": [
+        [1, 1, 2, 2, 2, 2, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 16, 0, 0, 0, 0, 1]
+      ],
+      "hockey": [
+        [1, 1, 1, 2, 2, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 16, 0, 0, 0, 0, 1]
+      ],
+      "soccer": [
+        [1, 1, 2, 2, 2, 2, 1, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 0, 0, 0, 0, 0, 1],
+        [1, 0, 16, 0, 0, 0, 0, 1]
+      ]
+    },
+    "successCondition": "",
+    "failureCondition": ""
+  },
+  "custom": {
+    "requiredBlocks": [],
+    "scale": {
+      "snapRadius": 2
+    },
+    "softButtons": ["leftButton", "rightButton", "downButton", "upButton"],
+    "map": [
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 8, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 16, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0]
+    ],
+    "toolbox": "<xml id=\"toolbox\" style=\"display: none;\"><block type=\"bounce_moveLeft\"></block> \t        <block type=\"bounce_moveRight\"></block> \t        <block type=\"bounce_bounceBall\"></block> \t        <block type=\"bounce_playSound\"></block> \t        <block type=\"bounce_incrementPlayerScore\"></block> \t        <block type=\"bounce_incrementOpponentScore\"></block> \t        <block type=\"bounce_launchBall\"></block> \t        <block type=\"bounce_setPaddleSpeed\"></block> \t        <block type=\"bounce_setBackground\"></block> \t        <block type=\"bounce_setBall\"></block> \t        <block type=\"bounce_setPaddle\"></block> \t        <block type=\"bounce_setBallSpeed\"></block></xml>",
+    "startBlocks": "<block type=\"when_run\" deletable=\"false\" x=\"20\" y=\"20\"></block> \t    <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"220\"></block> \t    <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"220\"></block> \t    <block type=\"bounce_whenPaddleCollided\" deletable=\"false\" x=\"20\" y=\"310\"></block> \t    <block type=\"bounce_whenWallCollided\" deletable=\"false\" x=\"20\" y=\"410\"></block> \t    <block type=\"bounce_whenBallInGoal\" deletable=\"false\" x=\"20\" y=\"510\"></block> \t    <block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\" x=\"20\" y=\"630\"></block>",
+    "successCondition": "",
+    "failureCondition": ""
+  }
+}

@@ -8,7 +8,7 @@ import StatusProgressDot from './StatusProgressDot.jsx';
 import color from "../../../util/color";
 import StageExtrasProgressDot from './StageExtrasProgressDot';
 import { levelsForLessonId } from '@cdo/apps/code-studio/progressRedux';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import NewProgressBubble from '@cdo/apps/templates/progress/NewProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
@@ -21,6 +21,11 @@ const styles = {
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5
+  },
+  pillContainer: {
+    // Vertical padding is so that this lines up with other bubbles
+    paddingTop: 4,
+    paddingBottom: 4,
   }
 };
 
@@ -67,12 +72,19 @@ const StageProgress = React.createClass({
           />
         )}
         {experimentEnabled && levels.map((level, index) =>
-          <ProgressBubble
+          <div
             key={index}
-            level={level}
-            disabled={false}
-            smallBubble={!level.isCurrentLevel}
-          />
+            style={{
+              display: 'inline-block',
+              ...(level.isUnplugged && level.isCurrentLevel && styles.pillContainer)
+            }}
+          >
+            <NewProgressBubble
+              level={level}
+              disabled={false}
+              smallBubble={!level.isCurrentLevel}
+            />
+          </div>
         )}
         {this.shouldShowStageExtras() &&
           <StageExtrasProgressDot stageId={stageId} />

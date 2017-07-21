@@ -53,7 +53,7 @@ class Pd::TeacherconSurveyTest < ActiveSupport::TestCase
       "Form data instructionFocus",
       "Form data teacherResponsibility",
       "Form data teacherTime",
-    ], survey.errors.full_messages
+    ].sort, survey.errors.full_messages.sort
 
     survey.form_data = build(:pd_teachercon_survey_hash).to_json
 

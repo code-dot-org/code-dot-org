@@ -237,4 +237,20 @@ class UserLevelTest < ActiveSupport::TestCase
     assert_equal 'DriverName',
       UserLevel.most_recent_driver(nil, @level, @navigator).first
   end
+
+  test 'count passed levels for users' do
+    students = (0...3).map do |n|
+      create :student, :with_puzzles, num_puzzles: 10 - n
+    end
+
+    passing_level_counts = UserLevel.count_passed_levels_for_users(students.map(&:id))
+    assert_equal(
+      {
+        students[0].id => 10,
+        students[1].id => 9,
+        students[2].id => 8,
+      },
+      passing_level_counts
+    )
+  end
 end
