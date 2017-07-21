@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 
 export default class PublishDialog extends Component {
   static propTypes = {
+    isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     onConfirmPublish: PropTypes.func.isRequired,
   }
@@ -18,7 +19,7 @@ export default class PublishDialog extends Component {
         title={i18n.publishToPublicGallery()}
         body={i18n.publishToPublicGalleryWarning()}
         confirmText={i18n.publish()}
-        isOpen={true}
+        isOpen={this.props.isOpen}
         handleClose={this.close}
         onCancel={this.close}
         onConfirm={this.confirm}

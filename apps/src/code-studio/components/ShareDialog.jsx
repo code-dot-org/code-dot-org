@@ -68,6 +68,7 @@ var ShareDialog = React.createClass({
     icon: React.PropTypes.string,
     shareUrl: React.PropTypes.string.isRequired,
     isAbusive: React.PropTypes.bool.isRequired,
+    isOpen: React.PropTypes.bool.isRequired,
     isOwner: React.PropTypes.bool.isRequired,
     isPublished: React.PropTypes.bool.isRequired,
     channelId: React.PropTypes.string.isRequired,
@@ -188,7 +189,7 @@ var ShareDialog = React.createClass({
     return (
       <BaseDialog
         useDeprecatedGlobalStyles
-        isOpen={true}
+        isOpen={this.props.isOpen}
         handleClose={this.close}
         hideBackdrop={this.props.hideBackdrop}
       >
