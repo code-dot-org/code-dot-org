@@ -1152,7 +1152,7 @@ tr:
         text: "Variables are placeholders for pieces of information that can change. By using a variable for the missing information, we can continue working on whatever we were doing and let someone else fill in the missing information later. In software, we use variables a lot. We use variables as placeholders for name, email address, and even username. That way we can let the program know where those details will appear after the user fills them in. We use variables all the time in our work."
       3:
         image: 'notes/C4_unplugged_variables_3.png'
-        text: "Any time you need to store a piece of information for later, we use a variable. Let's say we need to count the number of times the user has tweeted. Every time that user tweets, we'll add one to that number and every time the user deletes a tweet, we'll decrease that number by one. Anytime we need to know how many times that user has tweeted, we'll just look at that variable."
+        text: "Daha sonra ihtiyacımız olacak bilgileri saklamak için değişkenleri kullanırız. Diyelim ki kullanıcıların mesajlarını (tweet) saymamız gerekiyor. Kullanıcı her mesaj attıdığında değişkeni bir sayı arttırmak ve her mesaj sildiğinde değişkeni bir sayı azaltmak gerekir. Kaç mesaj olduğunu öğrenmek için bu değişkene bakarız."
     C4_variables_artist:
       1:
         image: 'notes/C4_variables_artist_1.png'
@@ -1305,7 +1305,7 @@ tr:
     unplug9:
       1:
         image: 'notes/unplug9_1.png'
-        text: "Relay programming is an extremely fun lesson that gets across way more than computer science. Sometimes everybody is getting a little bit antsy and you want to get them up on their feet. This is a great way to add some excitement to computer science."
+        text: "Röle programlama, bilgisayar biliminden çok daha eğlencelidir. Bazen herkes biraz sabırsızlanmaya başlar ve onları yeniden heyecanlandırmak istersin. Bu bilgisayar bilimine biraz heyecan eklemenin bir yoludur."
       2:
         image: 'notes/unplug9_2.png'
         text: "You break everyone up into two groups where they stand in a line and run relay style. The first person in each group runs to the other side of the room where you have a graph paper drawing and a blank piece of paper waiting for them. They write down the first step to creating that image, run back to their line, tag the next player who goes back up to write the next step."
@@ -1620,7 +1620,7 @@ tr:
         text: "Kendi ekleyeceğiniz blokları \"Çalıştığı zaman\" bloğuna bağlamak gerekir. Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz."
       8:
         image: 'notes/gumball_intro_8.JPG'
-        text: "In this first puzzle, we'll make the actors say something by linking the \"say\" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed."
+        text: "Bu ilk bulmacada, \"söyle\" bloğunu \"çalıştığı zaman\" bloğuna bağlayarak aktörlere bir şeyler söyleteceğiz. Bloklarınızı yerleştirdikten sonra, ne programladığınızı görmek için \"çalıştır\" butonuna basın."
       9:
         image: 'notes/gumball_intro_9.JPG'
         text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, birşeyler atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
@@ -1633,7 +1633,7 @@ tr:
         text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
       3:
         image: 'notes/gumball_events_3.JPG'
-        text: "Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the \"say\" block to it. When the player clicks, all the blocks attached to this block will be performed."
+        text: "Burada, oyuncu aktöre tıkladığında aktöre bir şeyler söyleteceğiz. Tıklağında bloğunu kullanacağınız ve ona \"söyle\" bloğunu ekleyeceğiz. Oyuncu tıkladığında, bu bloğa bağlı olan tüm bloklar uygulanacak."
       4:
         image: 'notes/gumball_events_4.JPG'
         text: "Ayrıca \"zaman okları\" parçaları var. Eğer \"hareket\" parçalarını bunlara bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor."
@@ -1671,7 +1671,7 @@ tr:
         text: "Kendi ekleyeceğiniz blokları \"Çalıştığı zaman\" bloğuna bağlamak gerekir. Blokları sürükleyip sarı çizgi çıkana kadar birbirine yaklaştırarak bağlayabilirsiniz."
       8:
         image: 'notes/iceage_intro_8.JPG'
-        text: "In this first puzzle, we'll make the actors say something by linking the \"say\" block to the when run block and typing in your message. Once you have your blocks in place, hit the run button to see what you programmed."
+        text: "Bu ilk bulmacada, \"söyle\" bloğunu \"çalıştığı zaman\" bloğuna bağlayarak aktörlere bir şeyler söyleteceğiz. Bloklarınızı yerleştirdikten sonra, ne programladığınızı görmek için \"çalıştır\" butonuna basın."
       9:
         image: 'notes/iceage_intro_9.JPG'
         text: "Haydi başla ve sonunda kendi oyununu yarat. Oyununda farklı oyuncular iletişim kurabilir, mutlu yada üzgün olabilir, puan kazanabilir, birşeyler atabilir ve hatta birbirini yok edebilir. Bunların hepsi senin elinde istediğin gibi oyununu yapabilirsin."
@@ -1684,7 +1684,7 @@ tr:
         text: "Olayların dinlemesine bazı örnekler; fare tıklaması veya aşağı/yukarı tuşu veya ekrana bir kere dokunma."
       3:
         image: 'notes/iceage_events_3.JPG'
-        text: "Here, we're going to make the actor say something when the player clicks on it. We will use the when clicked block and attach the \"say\" block to it. When the player clicks, all the blocks attached to this block will be performed."
+        text: "Burada, oyuncu aktöre tıkladığında aktöre bir şeyler söyleteceğiz. Tıklağında bloğunu kullanacağınız ve ona \"söyle\" bloğunu ekleyeceğiz. Oyuncu tıkladığında, bu bloğa bağlı olan tüm bloklar uygulanacak."
       4:
         image: 'notes/iceage_events_4.JPG'
         text: "Ayrıca \"zaman okları\" parçaları var. Eğer \"hareket\" parçalarını bunlara bağlarsanız, karakterinizi yukarı, aşağı, sola ve sağa hareket ettirmeye başlayabilirsiniz!. Git gide oyununuz daha çok interaktif oluyor."

@@ -111,9 +111,9 @@ zh-CN:
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: 改动这里的数字
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: 点击这里显示网格。
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: 点击这里显示网格。
       CSD U3 Variables TEMPLATE square_callout: [ ]
       CSD U3 Variables make a big square_callout: [ ]
       CSD U3 Variables make a square_callout: [ ]
@@ -319,7 +319,7 @@ zh-CN:
       Course 4 Bee 1_callout:
         if_bee_nectar: 用“如果”模块来决定蜜蜂应该采集花蜜还是酿蜂蜜。
       Course 4 Bee 3_callout:
-        if_else_bee: Use the "if/else" block so that the Bee gets nectar from a flower and makes honey if it's not a flower
+        if_else_bee: 用“如果/否则”模块让蜜蜂从花朵里采集花蜜，否则就酿蜂蜜。
       Course 4 Bee For Loops 1_callout:
         get_nectar: 使用新的"得到花蜜"块。
       Course 4 Bee For Loops 6_callout:
@@ -328,11 +328,11 @@ zh-CN:
         edit_get_nectar: 用这个按钮来编辑函数，并改变蜜蜂的方向让它到达花蜜。
       Course 4 Bee Params 3_callout: [ ]
       Course 4 Bee Params 4 - Two WhenRun_callout:
-        Course_4_Bee_Params_4: Setting these variables to either "0" or "1" is called setting a "flag". This flag can signal our function with the direction that our bee needs to go.
+        Course_4_Bee_Params_4: 将这些变量设置为1或0，也被称作设置“标志”。标志能够给我们的函数发出信号，来让蜜蜂往需要的方向前进。
       Course 4 Bee Params 4_callout: [ ]
       Course 4 Maze 1_callout:
         Course 4 Maze 1_callout1: 点击"运行"以尝试您的程序
-        Course 4 Maze 1_callout2: Drag the "move" block and snap it below the other blocks in the workspace
+        Course 4 Maze 1_callout2: 拖动“向前移动”模块到工作区中，并将它接到其它模块的下面。
       Course 4 Maze 4_callout:
         repeat: 在循环中放入模块来重复执行命令
       Course 4 Play Lab Params 2_callout:
@@ -487,11 +487,11 @@ zh-CN:
       PDAlg Big Game Remix_callout: [ ]
       PDAlg Design Recipe Delete_callout: [ ]
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: 点击这里显示网格。
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: 紫花里可能有一个花蜜，也可能没有...这要等你运行了代码才知道。
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: 点击这里显示网格。
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: 所有你喜欢的模块都组织到了分类中。点击这些词语来看看它们都在哪里！
       Play Lab Rocket 2_callout:
@@ -748,6 +748,8 @@ zh-CN:
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: [ ]
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: [ ]
       courseE_farmer_functions11_predict_callout: [ ]
       courseE_farmer_functions1a_callout:
@@ -758,6 +760,7 @@ zh-CN:
         courseE_farmer_functions2a_2: This code might not look exactly like what you wrote, but it will get the job done!
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
+      courseE_farmer_functions2ba_callout: [ ]
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time you run the program.
       courseE_farmer_functions3c_callout: [ ]

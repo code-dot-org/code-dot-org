@@ -53,12 +53,18 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:index, :show, :update] do
+  # User-facing section routes
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
     end
   end
-  get '/dashboardapi/sections/', to: 'sections#index'
+  # Section API routes (JSON only)
+  concern :section_api_routes do
+    resources :sections, only: [:show, :index] do
+      resources :students, only: [:index], controller: 'sections_students'
+    end
+  end
 
   post '/dashboardapi/sections/transfers', to: 'transfers#create'
   post '/api/sections/transfers', to: 'transfers#create'
@@ -402,6 +408,9 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
+  scope 'dashboardapi', module: 'api/v1' do
+    concerns :section_api_routes
+  end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,
   # and all template names in `app/views/api/*`.
@@ -436,6 +445,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 

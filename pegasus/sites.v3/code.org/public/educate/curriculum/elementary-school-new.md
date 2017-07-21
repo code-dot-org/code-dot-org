@@ -10,159 +10,87 @@ style_min: true
 
 [solid-block-header]
 
-Computer Science Fundamentals
+Overview and Professional Development
 
 [/solid-block-header]
 
-Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate. Our curriculum is available at [no cost](/commitment) for anyone, anywhere in the world to teach. 
+Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
-<center><h3> [Curriculum Overview](#overview) | [Free Professional Learning](#plc) | [3rd Party Resources](#thirdparty) </h3></center>
+All lessons align to all relevant computer science standards, as well as to the ISTE standards. They additionally reinforce concepts and skills taught in other subject areas by integrating national Math, English Language Arts, and Science standards. Read more about our curriculum philosophy <a href="something">here</a>
 
-<br>
-<hr>
+## New to Teaching Computer Science?
 
-<a name="plc"></a>
+No worries! Most of our teachers have never taught computer science before. 
 
-## Free Professional Learning 
+<img src="/images/k5teacherquotes.png" width="30%"/>
+Try one of our courses yourself to learn ahead of your students. Sign up as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need.
 
-To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
-
-Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
+We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities. 
 
 [<button>Find a workshop</button>](/professional-development-workshops)
 
-<img src="/images/k5teacherquotes.png" width="100%"/>
 
-### 1. No workshop in your area?
-
-[Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you and request a workshop or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
-
-### 2. Already enjoying the K-5 program?
-
-Help [spread the word](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
-
-<br>
-<hr>
-
-<a name="overview"></a>
-
-## Curriculum Overview: Courses A-F
-
-Our Computer Science (CS) Fundamentals curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Learn more about each course below or download the complete curriculum guide [here](/curriculum/docs/k-5/complete.pdf). By the end of each course, students create interactive games or stories that they can share with anyone.
-
-The courses are flexible, too, so educators can adjust them based on their students’ developmental level and prior experience. All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
-
-Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
 
 <br>
 
-### Layout option 1
+[solid-block-header]
 
+Courses
+
+[/solid-block-header]
+
+## Selecting the Right Course For Your Class
+
+<img src="https://code.org/images/csfundamentalspilot/introducingcoursesa-f.png" width="100%"/>
+
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers).
+
+
+## Courses A-F
+
+
+[](table layout 1
 <div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'coursea', teacherview: true %></div>
 <div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'courseb', teacherview: true %></div>
 <div style="clear: both;"></div>
 <div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'coursec', teacherview: true %></div>
 <div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'coursed', teacherview: true %></div>
 <div style="clear: both;"></div>
-
+)
 <br>
 
-### Layout option 2
+<div class="col-50" style="padding-right: 10px;"></div>
+
+<div class="col-50" style="padding-right: 10px;"> <a href="<%= CDO.studio_url('/s/course3') %>"><img src="/images/curriculum/course-tile-placeholder.png"></a></div>
+<div class="col-50" style="padding-right: 10px;"> <a href="<%= CDO.studio_url('/s/course2') %>"><img src="/images/curriculum/course-tile-placeholder.png"></a></div>
+<div class="col-50" style="padding-right: 10px;"> <a href="<%= CDO.studio_url('/s/course1') %>"><img src="/images/curriculum/course-tile-placeholder.png"></a></div>
+
+<div style="clear: both;"></div>
+<br>
+
+## Express Course
 
 <div class="col-33" style="padding-right: 10px;">
   <a href="<%= CDO.studio_url('/s/course3') %>"><img src="/images/curriculum/course-tile-placeholder.png"></a>
 </div>
-
-[col-66]
-
-Course 3 is designed for students who have taken Course 2. Students will delve deeper into programming topics introduced in previous courses to create flexible solutions to more complex problems. By the end of this course, students create interactive stories and games they can share with anyone. Recommended for grades 4-5.
-
-[<button>View course</button>](<%= CDO.studio_url('/s/course3') %>) &nbsp;&nbsp; [Lesson Plans](/curriculum/course3) | [Sequence](/curriculum/course3/docs/overview.pdf) | [Framework](/curriculum/docs/k-5/framework_course3.pdf) | [Standards](/curriculum/docs/k-5/standards_course3.pdf)
-
-[/col-66]
-
-<div style="clear: both;"></div><br>
-
-<div class="col-33" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/course4') %>"><img src="/images/curriculum/course-tile-placeholder.png"></a>
-</div>
-
-[col-66]
-
-Course 4 is designed for students who have taken Courses 2 and 3. Students will learn how to tackle puzzles with increased complexity as they learn how to combine several concepts when solving each challenge. By the time this Course is completed, students will be creating programs that let them showcase multiple skills, including for loops and functions with parameters. Recommended for grades 4-8.
-
-[<button>View course</button>](<%= CDO.studio_url('/s/course4') %>) &nbsp;&nbsp; [Lesson Plans](/curriculum/course4) | [Sequence](/curriculum/course4/docs/overview.pdf) | [Framework](/curriculum/docs/k-5/framework_course4.pdf) | [Standards](/curriculum/docs/k-5/standards_course4.pdf)
-
-[/col-66]
-
-<div style="clear: both;"></div>
-
-### <strong>Examples of student creations</strong>
-
-[col-33]
-
-<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
-
-<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
-
-[/col-33]
-
-[col-33]
-
-<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
-
-<div style="margin-left: 15px; margin-top: 5px;">This student created a game with multiple levels in which you play against different characters. Game on!</div>
-
-[/col-33]
-
-[col-33]
-
-<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
-
-<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
-
-[/col-33]
-
-<p style="clear:both">&nbsp;</p>
-
-### <strong>Teacher Home Page</strong>
-The Code Studio teacher home page makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
-
-[col-50]
-
-<img src="/images/dashboard_teacher_section.png" width="350"/>
-
-[/col-50]
-
-[col-50]
-
-<img src="/images/dashboard_teacher_progress.png" width="350"/>
-
-[/col-50]
-
-<p style="clear:both">&nbsp;</p>
-
-
-[<button>Go to the Teacher Home Page</button>](https://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher`)<br />
+CS Fundamentals Express combines the best of Courses A-F into a single condensed course (for readers and pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple years of content in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat puzzles for students. This is also our recommended option for students studying computer science on their own outside of a classroom.
 
 <br>
-<hr>
-
-## Curriculum Overview: Courses 1-4
-
-<div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'course1', teacherview: true %></div>
-<div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'course2', teacherview: true %></div>
-<div style="clear: both;"></div>
-<div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'course3', teacherview: true %></div>
-<div class="col-50" style="padding-right: 10px;"><%= view :course_block, id: 'course4', teacherview: true %></div>
-<div style="clear: both;"></div>
-
 <br>
-<hr>
+<br>
 
-<a name="thirdparty"></a>
 
-## 3rd Party Resources
+
+## Looking for Translated Courses for ELL Students?
+
+
+We are working on translating the A-F and CSF Express courses to languages beyond English. In the meantime, you can leverage the great courses we already have translated for 25+ languages.[ View Courses 1-4 and Computer Science Fundamentals Accelerated](somewhere)
+
+[solid-block-header]
+
+3rd Party Resources
+
+[/solid-block-header]
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
