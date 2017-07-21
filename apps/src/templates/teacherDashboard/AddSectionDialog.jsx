@@ -54,11 +54,9 @@ export class AddSectionDialog extends Component {
 
   onClickEditSave = () => {
     const {updateSection} = this.props;
-    //const persistedSection = false;
 
     const selectedAssignment = this.assignment.getSelectedAssignment();
     const data = {
-      //id: null,
       name: this.state.name,
       login_type: this.state.loginType,
       grade: this.state.grade,
