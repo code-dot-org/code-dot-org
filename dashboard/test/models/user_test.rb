@@ -1563,20 +1563,20 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
-  # test 'assign_course_as_facilitator assigns course to facilitator' do
-  #   facilitator = create :facilitator
-  #   facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
-  #   assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_CS_IN_A).any?
-  # end
-
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
     assert_creates Pd::CourseFacilitator do
       facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
     end
-    course_facilitator = Pd::CourseFacilitator.last
-    assert_equal Pd::Workshop::COURSE_CS_IN_A, course_facilitator.course
-    assert_equal facilitator, course_facilitator.facilitator
+    assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_CS_IN_A).exists?
+  end
+
+  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+    assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_CSD).exists?
+    assert_no_difference 'Pd::CourseFacilitator.count' do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+    end
   end
 
   test 'delete_course_as_facilitator removes facilitator course' do
