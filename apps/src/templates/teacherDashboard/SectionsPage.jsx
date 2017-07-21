@@ -124,7 +124,7 @@ class SectionsPage extends Component {
 
   handleEditRequest = (section) => {
     this.setState({editSectionDialogOpen : true});
-    this.editer.getWrappedInstance().updateStates(section);
+    this.editor.getWrappedInstance().updateStates(section);
   }
 
   render() {
@@ -189,7 +189,7 @@ class SectionsPage extends Component {
           handleClose={this.handleCloseAddSectionDialogs}
         />
         <EditSectionDialog
-          ref = {(element) => this.editer = element}
+          ref = {(element) => this.editor = element}
           isOpen={this.state.editSectionDialogOpen}
           handleClose={() => this.setState({editSectionDialogOpen: false})}
         />
