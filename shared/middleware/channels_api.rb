@@ -178,8 +178,7 @@ class ChannelsApi < Sinatra::Base
 
     # Once we have back-filled the project_type column for all channels,
     # it will no longer be necessary to specify the project type here.
-    published_at = StorageApps.new(storage_id('user')).publish(channel_id, project_type)
-    {publishedAt: published_at}.to_json
+    StorageApps.new(storage_id('user')).publish(channel_id, project_type, current_user).to_json
   end
 
   #

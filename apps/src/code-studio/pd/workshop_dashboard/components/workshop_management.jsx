@@ -13,6 +13,7 @@ const WorkshopManagement = React.createClass({
 
   propTypes: {
     workshopId: React.PropTypes.number.isRequired,
+    subject: React.PropTypes.string.isRequired,
     viewUrl: React.PropTypes.string.isRequired,
     editUrl: React.PropTypes.string,
     onDelete: React.PropTypes.func,
@@ -30,10 +31,16 @@ const WorkshopManagement = React.createClass({
     if (this.props.showSurveyUrl) {
       this.permission = new Permission();
 
-      const surveyBaseUrl = this.permission.isOrganizer ? "/organizer_survey_results" : "/survey_results";
-      const surveyUrl = this.props.showSurveyUrl && `${surveyBaseUrl}/${this.props.workshopId}`;
+      let surveyBaseUrl;
 
-      this.surveyUrl = surveyUrl;
+      // TODO: Remove the workshop admin permission when we are ready to launch
+      if (this.props.subject === '5-day Summer' && this.permission.isWorkshopAdmin) {
+        surveyBaseUrl = "local_summer_workshop_survey_results";
+      } else {
+        surveyBaseUrl = this.permission.isOrganizer ? "organizer_survey_results" : "survey_results";
+      }
+
+      this.surveyUrl = `/${surveyBaseUrl}/${this.props.workshopId}`;
     }
   },
 
@@ -68,7 +75,7 @@ const WorkshopManagement = React.createClass({
 
   handleSurveyClick(event) {
     event.preventDefault();
-    this.context.router.push(this.state.surveyUrl);
+    this.context.router.push(this.surveyUrl);
   },
 
   renderViewButton() {

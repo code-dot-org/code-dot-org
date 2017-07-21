@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
+import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
@@ -11,7 +12,7 @@ export const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    width: 970
+    width: styleConstants['content-width']
   },
   headerRow: {
     backgroundColor: color.table_header,
@@ -175,7 +176,7 @@ const SectionsTable = React.createClass({
                 </td>
               )}
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
-                {section.sectionCode}
+                {section.code}
               </td>
               {!isTeacher && (
                 <td style={{...styles.col, ...styles.leaveCol}}>

@@ -61,9 +61,10 @@ class Ability
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
+      can :index, Section, user_id: user.id
 
       if user.teacher?
-        can :read, Section, user_id: user.id
+        can :manage, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
         can :manage, Follower
@@ -74,9 +75,6 @@ class Ability
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
-        end
-        can :manage, Section do |section|
-          user.id == section.user_id
         end
         can :manage, SectionHiddenStage do |hidden_stage|
           user.id == hidden_stage.section.user_id

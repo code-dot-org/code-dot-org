@@ -15,7 +15,7 @@
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,98,1,98,4,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "skip_instructions_popup": "false",
-    "ideal": "11",
+    "ideal": "10",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -34,29 +34,32 @@
     "nectar_goal": "12",
     "honey_goal": "9",
     "step_speed": "1",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"An `if/else` statement could really help you out here.\",\"hint_id\":\"courseE_bee_concept4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f1367bb034b83deac7a7ebedd9990752/courseE_bee_concept4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"An `if/else` statement could really help you out here.\",\"hint_id\":\"courseE_bee_concept4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f1367bb034b83deac7a7ebedd9990752/courseE_bee_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The stair step pattern can help you get through all of the flowers and honeycombs.\",\"hint_id\":\"courseE_bee_concept4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f5a4580759fece5bd1a47dd6eabdf2fd/courseE_bee_concept4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you are at a flower, how many times do you have to get nectar? Is this the same number for all flowers?\",\"hint_id\":\"courseE_bee_concept4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/73c9bec95c93ad813a8199dd0098b62f/courseE_bee_concept4.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 01:38:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 20:12:44 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:14:41 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-17 20:15:46 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <toolbox_blocks>
       <xml>
-        <block type="maze_moveForward" limit="2"/>
+        <block type="maze_moveForward"/>
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="maze_nectar" limit="1"/>
-        <block type="maze_honey" limit="1"/>
+        <block type="maze_nectar"/>
+        <block type="maze_honey"/>
         <block type="controls_repeat">
           <title name="TIMES">???</title>
         </block>
@@ -77,43 +80,48 @@
         <block type="bee_ifElseFlower">
           <title name="LOC">atFlower</title>
         </block>
+        <block type="maze_ifElse">
+          <title name="DIR">isPathForward</title>
+        </block>
+        <block type="maze_if">
+          <title name="DIR">isPathForward</title>
+        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="controls_repeat">
-              <title name="TIMES">6</title>
+            <block type="maze_untilBlocked">
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
-                    <block type="bee_ifElseFlower">
-                      <title name="LOC">atFlower</title>
+                    <block type="bee_whileNectarAmount">
+                      <title name="ARG1">nectarRemaining</title>
+                      <title name="OP">&gt;</title>
+                      <title name="ARG2">0</title>
                       <statement name="DO">
-                        <block type="controls_repeat">
-                          <title name="TIMES">4</title>
-                          <statement name="DO">
-                            <block type="maze_nectar"/>
-                          </statement>
-                        </block>
+                        <block type="maze_nectar"/>
                       </statement>
-                      <statement name="ELSE">
-                        <block type="controls_repeat">
-                          <title name="TIMES">3</title>
+                      <next>
+                        <block type="bee_whileNectarAmount">
+                          <title name="ARG1">honeyAvailable</title>
+                          <title name="OP">&gt;</title>
+                          <title name="ARG2">0</title>
                           <statement name="DO">
                             <block type="maze_honey"/>
                           </statement>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
                           <next>
-                            <block type="maze_moveForward">
+                            <block type="maze_turn">
+                              <title name="DIR">turnRight</title>
                               <next>
-                                <block type="maze_turn">
-                                  <title name="DIR">turnLeft</title>
+                                <block type="maze_moveForward">
+                                  <next>
+                                    <block type="maze_turn">
+                                      <title name="DIR">turnLeft</title>
+                                    </block>
+                                  </next>
                                 </block>
                               </next>
                             </block>

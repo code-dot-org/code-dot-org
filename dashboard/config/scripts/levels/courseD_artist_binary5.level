@@ -32,10 +32,14 @@
     "examples_required": "false",
     "discard_background": "false",
     "instructions_important": "false",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code first to see what you have to work with.\",\"hint_id\":\"courseD_artist_binary5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/eba9f125d4d9e4d82a6843cb4d6cf765/courseD_artist_binary5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You only need to switch two rows to make a smile.\",\"hint_id\":\"courseD_artist_binary5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/80a832a575aa26e24431071be2441fe6/courseD_artist_binary5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the binary lines down on a piece of paper and looking for a pattern.\",\"hint_id\":\"courseD_artist_binary5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8d56d16f74413e1e8af8d09c40cd67dc/courseD_artist_binary5.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 19:17:23 +0000\",\"changed\":[\"start_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

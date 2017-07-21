@@ -19,11 +19,33 @@ export default class CellEditor extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    const value = event.target.value;
-    this.props.onUpdate && this.props.onUpdate({
-      [event.target.name]: isNaN(value) ? '' : Number(value)
-    });
+  handleChange() {
+    // Serialize the form data to an iterator
+    const formData = new FormData(this.form);
+
+    // Convert the iterator to an array and reduce it to an object, combining
+    // duplicate names when appropriate (ie for checkboxes)
+    const values = Array.from(formData).reduce((serialized, [name, value]) => {
+      if (value === "undefined") {
+        value = undefined;
+      } else {
+        value = isNaN(value) ? '' : Number(value);
+      }
+
+      if (name in serialized) {
+        if (Array.isArray(serialized[name])) {
+          serialized[name].push(value);
+        } else {
+          serialized[name] = [serialized[name], value];
+        }
+      } else {
+        serialized[name] = value;
+      }
+
+      return serialized;
+    }, {});
+
+    this.props.onUpdate(values);
   }
 
   /**
@@ -108,7 +130,7 @@ export default class CellEditor extends React.Component {
 
   render() {
     return (
-      <form className="span4 offset1">
+      <form className="span4 offset1" ref={(form) => {this.form = form;}}>
         <header>
           <strong>Editing Cell ({this.props.row}, {this.props.col})</strong>
         </header>

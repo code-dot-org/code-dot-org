@@ -53,9 +53,16 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
+  # User-facing section routes
   resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
+    end
+  end
+  # Section API routes (JSON only)
+  concern :section_api_routes do
+    resources :sections, only: [:show, :index] do
+      resources :students, only: [:index], controller: 'sections_students'
     end
   end
 
@@ -329,7 +336,7 @@ Dashboard::Application.routes.draw do
         delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
-        get :teachercon_survey_report, action: :teachercon_survey_report, controller: 'workshop_survey_report'
+        get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :workshop_summary_report, only: :index
@@ -401,6 +408,9 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
+  scope 'dashboardapi', module: 'api/v1' do
+    concerns :section_api_routes
+  end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,
   # and all template names in `app/views/api/*`.
@@ -435,6 +445,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 

@@ -69,9 +69,7 @@ const ProgressLevelSet = React.createClass({
     const { name, levels, disabled } = this.props;
 
     const multiLevelStep = levels.length > 1;
-    const status = multiLevelStep ? 'multi_level' : levels[0].status;
-
-    const url = levels[0].url;
+    const url = multiLevelStep ? undefined : levels[0].url;
 
     let pillText;
     if (levels[0].isUnplugged || levels[levels.length - 1].isUnplugged) {
@@ -90,8 +88,7 @@ const ProgressLevelSet = React.createClass({
           <tr>
             <td style={styles.col1}>
               <ProgressPill
-                url={multiLevelStep ? undefined : url}
-                status={status}
+                levels={levels}
                 icon={getIconForLevel(levels[0])}
                 text={pillText}
               />
