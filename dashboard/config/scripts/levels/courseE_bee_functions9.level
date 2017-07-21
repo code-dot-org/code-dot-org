@@ -34,11 +34,15 @@
     "fast_get_nectar_animation": "true",
     "instructions_important": "false",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1,\"value\":7,\"range\":7,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":3,\"range\":5,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":1,\"value\":6,\"range\":6,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}]]",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.\",\"hint_id\":\"courseE_bee_functions9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba822e2e922376acd91cd5ba9cf337cc/courseE_bee_functions9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.\",\"hint_id\":\"courseE_bee_functions9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba822e2e922376acd91cd5ba9cf337cc/courseE_bee_functions9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.\",\"hint_id\":\"courseE_bee_functions9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/85dcb3a678e403ff001f1f5078058215/courseE_bee_functions9.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 04:18:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

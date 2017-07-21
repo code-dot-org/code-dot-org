@@ -27,7 +27,7 @@ const sections = [
     linkToAssigned: "https://studio.code.org/s/course1",
     numberOfStudents: 1,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/111111/manage",
-    sectionCode: "ABCDEF"
+    code: "ABCDEF"
   },
   {
     name: "Period 2",
@@ -37,7 +37,7 @@ const sections = [
     linkToAssigned: "https://studio.code.org/s/course2",
     numberOfStudents: 2,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
-    sectionCode: "EEBSKR"
+    code: "EEBSKR"
   },
 ];
 
@@ -160,7 +160,7 @@ describe('TeacherHomepage', () => {
     assert.equal(section1.linkToAssigned, sections[0].linkToAssigned);
     assert.equal(section1.numberOfStudents, 1);
     assert.equal(section1.linkToStudents, sections[0].linkToStudents);
-    assert.equal(section1.sectionCode, sections[0].sectionCode);
+    assert.equal(section1.code, sections[0].code);
     const section2 = sectionsContainer.props().sections[1];
     assert.equal(section2.name, sections[1].name);
     assert.equal(section2.linkToProgress, sections[1].linkToProgress);
@@ -168,7 +168,7 @@ describe('TeacherHomepage', () => {
     assert.equal(section2.linkToAssigned, sections[1].linkToAssigned);
     assert.equal(section2.numberOfStudents, 2);
     assert.equal(section2.linkToStudents, sections[1].linkToStudents);
-    assert.equal(section2.sectionCode, sections[1].sectionCode);
+    assert.equal(section2.code, sections[1].code);
     // Check if a ContentContainer is rendered.
     const sectionsContentContainer = sectionsContainer.childAt(0);
     assert.equal(sectionsContentContainer.name(), 'ContentContainer');
@@ -194,12 +194,12 @@ describe('TeacherHomepage', () => {
     assert.equal(row1.childAt(0).text(), sections[0].name);
     assert.equal(row1.childAt(1).text(), sections[0].assignedTitle);
     assert.equal(row1.childAt(2).text(), sections[0].numberOfStudents);
-    assert.equal(row1.childAt(3).text(), sections[0].sectionCode);
+    assert.equal(row1.childAt(3).text(), sections[0].code);
     const row2 = sectionsTable.childAt(1).childAt(1);
     assert.equal(row2.childAt(0).text(), sections[1].name);
     assert.equal(row2.childAt(1).text(), sections[1].assignedTitle);
     assert.equal(row2.childAt(2).text(), sections[1].numberOfStudents);
-    assert.equal(row2.childAt(3).text(), sections[1].sectionCode);
+    assert.equal(row2.childAt(3).text(), sections[1].code);
   });
 
   it('if there are no sections, Sections component shows SetUpMessage', () => {

@@ -53,7 +53,7 @@ content-type: text/ng-template
               %button{ :type=>"button", :class=>"btn btn-primary btn-white", :"data-dismiss"=>"modal" }= I18n.t('dashboard_action_cancel')
               %button{ :type=>"button", :class=>"btn btn-primary", "ng-click" => "moveStudents()" }= I18n.t('dashboard_sections_move_students')
 
-%div{style: "padding-left:20px"}
+#uitest-manage-tab{style: "padding-left:20px"}
 
   #bulk_import.panel.panel-default{"ng-show" => "bulk_import.editing"}
     .panel-heading
@@ -143,7 +143,7 @@ content-type: text/ng-template
       %th.manage-th{style: "padding-top:5px;padding-bottom:5px; height:45px"}
         %button.btn.btn-primary{"ng-click" => "save(section.students)", "ng-show" => "editingAny(section.students)", style: "float:left", "ng-disabled" => "allForm.$invalid"}= I18n.t('dashboard_action_save_all')
 
-  %div{"ng-if" => "section.login_type !== 'email'"}
+  %div{"ng-if" => "section.login_type === 'picture' || section.login_type === 'word'"}
     %h3{"ng-show" => 'section.students.length > 0'}
       = I18n.t 'dashboard_students_share_section', section_code: '{{section.code}}', join_url: CDO.code_org_url('/join', 'http:')
       %br/

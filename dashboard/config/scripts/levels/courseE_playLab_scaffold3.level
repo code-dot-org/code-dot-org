@@ -6,7 +6,7 @@
   "user_id": 285,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n    return (Studio.sprite[0].lastMove != Infinity) && (Studio.sprite[1].value != \"hidden\") && (Studio.sprite[2].value != \"hidden\") && ((Studio.sprite[2].lastMove != Infinity) || (Studio.sprite[1].lastMove != Infinity)) && (Studio.allGoalsVisited());\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n    return (Studio.sprite[1].value != \"hidden\") && (Studio.allGoalsVisited());\r\n}",
     "failure_condition": "function () {\r\n  return ((Studio.sprite[1].value == \"hidden\") || (Studio.sprite[2]..value == \"hidden\")) && (Studio.tickCount > 300);\r\n}",
     "timeout_after_when_run": "true",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1}]]",
@@ -38,7 +38,7 @@
     "instructions": "Add two or more additional actors to your game and make them move.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Now that your game has a hero, add two or more additional actors to your game and make them move. \r\n\r\nDo you want to have an actor patrol back and forth or chase your main character? \r\nTry using a these new blocks to bring your game to life!\r\n\r\n![](https://images.code.org/04951f51ad2fda34531c335ef10577ae-image-1497992195771.png)",
+    "markdown_instructions": "Let's add some more characters to your game!\r\n\r\nUse the `set actor` block to add more characters then move to the goal to complete this puzzle.",
     "failure_message_override": "You must add two or more new actors to your game and program them to move.",
     "soft_buttons": [
       "leftButton",
@@ -46,16 +46,17 @@
       "downButton",
       "upButton"
     ],
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat forever` loop to have extra actors patrol up and down, or left and right for the entire game.\",\"hint_id\":\"courseE_playLab_scaffold3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6964def0a3f9c9b2a0b38e52f158bad1/courseE_playLab_scaffold3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If both of your new actors are jumping to random places on the screen, the puzzle may not mark as complete. Try setting one to chase another, or move up and down repeatedly.\",\"hint_id\":\"courseE_playLab_scaffold3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/001cf6ab47567194f2c4bf578a96f81e/courseE_playLab_scaffold3.mp3\"}]",
+    "authored_hints": "[]",
     "instructions_important": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseE_playLab_scaffold3_1\",\r\n  \"callout_text\": \"Get the actor to this flag to move on to the next level.\",\r\n  \"element_id\": \"#background\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": -20\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-08 18:14:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:21:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 20:54:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 20:56:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-08 18:14:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:21:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-08 18:39:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 20:54:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 20:56:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:48:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:22:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-18 18:24:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-18 18:25:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-18 18:32:50 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -182,13 +183,6 @@
               <title name="DIR">4</title>
             </block>
           </next>
-        </block>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="studio_setSpritesWander">
-              <title name="VALUE">"penguin"</title>
-            </block>
-          </statement>
         </block>
         <block type="studio_whenArrow">
           <title name="VALUE">left</title>

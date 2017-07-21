@@ -72,7 +72,8 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
-        name 'Facilitator Person'
+        sequence(:name) {|n| "Facilitator Person #{n}"}
+        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
         end
@@ -84,7 +85,8 @@ FactoryGirl.define do
         end
       end
       factory :workshop_organizer do
-        name 'Workshop Organizer Person'
+        sequence(:name) {|n| "Workshop Organizer Person #{n}"}
+        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -189,6 +191,8 @@ FactoryGirl.define do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
     login_type 'email'
+
+    initialize_with {Section.new(attributes)}
   end
 
   factory :game do

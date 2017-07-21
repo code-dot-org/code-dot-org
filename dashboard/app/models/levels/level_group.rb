@@ -41,6 +41,10 @@ level 'level 4'
 ruby
   end
 
+  def icon
+    'fa-check-square-o'
+  end
+
   # Returns a flattened array of all the Levels in this LevelGroup, in order.
   def levels
     level_names = []

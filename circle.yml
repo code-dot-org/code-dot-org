@@ -68,7 +68,8 @@ dependencies:
         localize_apps: true
         dashboard_enable_pegasus: true
         dashboard_workers: 5
-        skip_seed_all: true" >> locals.yml
+        skip_seed_all: true
+        " >> locals.yml
     - yarn version -V
     # For install, increase default 10 minute timeout to 16 minutes (960s)
     # We use ts to timestamp output lines
@@ -85,7 +86,9 @@ dependencies:
     - ? |
         for i in 1 2; do
           mispipe "timeout 13m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
-          echo "rake build failed on attempt $i with error code $?";
+          ERR=$?
+          echo "rake build failed on attempt $i with error code $ERR";
+          (exit $ERR)
         done
       :
         timeout: 960

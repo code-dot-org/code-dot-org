@@ -39,7 +39,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:45:14 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:03:14 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -60,6 +60,14 @@
             <value name="VALUE">
               <block type="math_number">
                 <title name="NUM">90</title>
+              </block>
+            </value>
+          </block>
+          <block type="jump" inline="true">
+            <title name="DIR">jumpForward</title>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">100</title>
               </block>
             </value>
           </block>

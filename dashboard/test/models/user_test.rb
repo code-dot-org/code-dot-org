@@ -878,6 +878,37 @@ class UserTest < ActiveSupport::TestCase
     student = User.find(student.id)
     old_password = student.encrypted_password
 
+    assert mail.body.to_s =~ /Change my password/
+
+    assert mail.body.to_s =~ /reset_password_token=(.+)"/
+    # HACK: Fix my syntax highlighting "
+    token = $1
+
+    User.reset_password_by_token(
+      reset_password_token: token,
+      password: 'newone',
+      password_confirmation: 'newone'
+    )
+
+    student = User.find(student.id)
+    # password was changed
+    assert old_password != student.encrypted_password
+  end
+
+  test 'send reset password to parent for student without email address' do
+    parent_email = 'parent_reset_email@email.xx'
+    student = create :student, password: 'oldone', email: nil, parent_email: parent_email
+
+    assert User.send_reset_password_instructions(email: parent_email)
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [parent_email], mail.to
+    assert_equal 'Code.org reset password instructions', mail.subject
+    student = User.find(student.id)
+    old_password = student.encrypted_password
+
+    assert mail.body.to_s =~ /Change password for/
+
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
     token = $1
@@ -1518,11 +1549,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? returns true when permission exists' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     assert user.permission?(UserPermission::FACILITATOR)
   end
 
@@ -1536,11 +1563,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? caches all permissions' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     user.permission?(UserPermission::LEVELBUILDER)
 
     no_database
@@ -1959,5 +1982,28 @@ class UserTest < ActiveSupport::TestCase
     user = User.from_omniauth(auth, params)
     assert_equal('fake oauth token', user.oauth_token)
     assert_equal('fake refresh token', user.oauth_refresh_token)
+  end
+
+  test 'summarize' do
+    user = create :student
+    assert_equal(
+      {
+        id: user.id,
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        hashed_email: user.hashed_email,
+        user_type: user.user_type,
+        gender: user.gender,
+        birthday: user.birthday,
+        total_lines: user.total_lines,
+        secret_words: user.secret_words,
+        secret_picture_name: user.secret_picture.name,
+        secret_picture_path: user.secret_picture.path,
+        location: "/v2/users/#{user.id}",
+        age: user.age,
+      },
+      user.summarize
+    )
   end
 end

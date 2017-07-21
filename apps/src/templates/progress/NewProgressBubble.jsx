@@ -1,10 +1,14 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
-import color from "@cdo/apps/util/color";
-import ReactTooltip from 'react-tooltip';
-import FontAwesome from '../FontAwesome';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 import _ from 'lodash';
+import ReactTooltip from 'react-tooltip';
+import i18n from '@cdo/locale';
+import color from "@cdo/apps/util/color";
+import FontAwesome from '../FontAwesome';
+import { getIconForLevel } from './progressHelpers';
+import { levelType } from './progressTypes';
+import { levelProgressStyle, hoverStyle } from './progressStyles';
+import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
 
 /**
  * As we do another redesign of our bubbles, this module represents the new version
@@ -12,10 +16,10 @@ import _ from 'lodash';
  * we can delete ProgressBubble.jsx and replace it with this.
  */
 
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
-
 export const DOT_SIZE = 30;
-const SMALL_DOT_SIZE = 7;
+const DIAMOND_DOT_SIZE = 22;
+const SMALL_DOT_SIZE = 9;
+const SMALL_DIAMOND_SIZE = 5;
 
 const styles = {
   main: {
@@ -23,36 +27,51 @@ const styles = {
     width: DOT_SIZE,
     height: DOT_SIZE,
     borderRadius: DOT_SIZE,
-    borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    fontSize: 12,
+    fontSize: 16,
     letterSpacing: -0.11,
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
     display: 'inline-block',
-    marginLeft: 3,
-    marginRight: 3,
-    // Top/Bottom margin of 5 is needed to get unplugged pills to line up correctly
-    marginTop: 5,
-    marginBottom: 5,
+    marginTop: 3,
+    marginBottom: 3,
     transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
   },
-  enabled: {
-    ':hover': {
-      textDecoration: 'none',
-      color: color.white,
-      backgroundColor: color.level_current
-    }
+  largeDiamond: {
+    width: DIAMOND_DOT_SIZE,
+    height: DIAMOND_DOT_SIZE,
+    lineHeight: DIAMOND_DOT_SIZE + 'px',
+    marginTop: 7,
+    marginBottom: 7,
+    borderRadius: 4,
+    transform: 'rotate(45deg)'
   },
-  smallBubble: {
+  small: {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
     lineHeight: SMALL_DOT_SIZE + 'px',
     fontSize: 0,
-    marginLeft: 2,
-    marginRight: 2
+    marginTop: 0,
+    marginBottom: 0
+  },
+  smallDiamond: {
+    width: SMALL_DIAMOND_SIZE,
+    height: SMALL_DIAMOND_SIZE,
+    lineHeight: SMALL_DIAMOND_SIZE + 'px',
+    borderRadius: 1,
+    fontSize: 0,
+    transform: 'rotate(45deg)',
+    position: 'relative',
+    top: 2
+  },
+  contents: {
+    whiteSpace: 'nowrap',
+  },
+  diamondContents: {
+    // undo the rotation from the parent
+    transform: 'rotate(-45deg)'
   },
   tooltip: {
     lineHeight: DOT_SIZE + 'px',
@@ -69,25 +88,27 @@ const styles = {
 
 const NewProgressBubble = React.createClass({
   propTypes: {
-    number: PropTypes.number.isRequired,
-    status: PropTypes.oneOf(Object.keys(BUBBLE_COLORS)).isRequired,
-    url: PropTypes.string,
+    level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
-    levelName: PropTypes.string,
-    levelIcon: PropTypes.string.isRequired,
     smallBubble: PropTypes.bool,
   },
 
   render() {
-    const { number, status, url, levelName, levelIcon, smallBubble } = this.props;
+    const { level, smallBubble } = this.props;
+
+    const number = level.levelNumber;
+    const url = level.url;
+    const levelName = level.name || level.progression;
+    const levelIcon = getIconForLevel(level);
 
     const disabled = this.props.disabled || levelIcon === 'lock';
 
     const style = {
       ...styles.main,
-      ...(!disabled && styles.enabled),
-      ...(smallBubble && styles.smallBubble),
-      ...(BUBBLE_COLORS[disabled ? LevelStatus.not_tried : status])
+      ...(!disabled && hoverStyle),
+      ...(smallBubble && styles.small),
+      ...(level.isConceptLevel && (smallBubble ? styles.smallDiamond : styles.largeDiamond)),
+      ...levelProgressStyle(level, disabled)
     };
 
     let href = '';
@@ -96,32 +117,72 @@ const NewProgressBubble = React.createClass({
     }
 
     const tooltipId = _.uniqueId();
+    let tooltipText = levelName ||
+      (level.isUnplugged && i18n.unpluggedActivity()) || '';
+    if (number) {
+      tooltipText = `${number}. ${tooltipText}`;
+    }
 
+    const tooltip = (
+      <ReactTooltip
+        id={tooltipId}
+        role="tooltip"
+        wrapper="span"
+        effect="solid"
+      >
+        <div style={styles.tooltip}>
+          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
+          {tooltipText}
+        </div>
+      </ReactTooltip>
+    );
+
+    if (level.isUnplugged && !smallBubble) {
+      return (
+        <ProgressPill
+          levels={[level]}
+          text={i18n.unpluggedActivity()}
+          fontSize={16}
+          tooltip={tooltip}
+        />
+      );
+    }
+    // Outer div here is used to make sure our bubbles all take up equivalent
+    // amounts of space, whether they're diamonds or circles
     let bubble = (
       <div
-        style={style}
-        data-tip data-for={tooltipId}
-        aria-describedby={tooltipId}
+        style={{
+          display: 'inline-block',
+          // two pixles on each side for border, 2 pixels on each side for margin
+          width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
+          textAlign: 'center',
+        }}
       >
-        {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
-        {levelIcon !== 'lock' && (
-          <span
-            style={smallBubble ? styles.smallBubbleSpan : undefined}
-          >
-            {number}
-          </span>
-        )}
-        <ReactTooltip
-          id={tooltipId}
-          role="tooltip"
-          wrapper="span"
-          effect="solid"
+        <div
+          style={style}
+          data-tip data-for={tooltipId}
+          aria-describedby={tooltipId}
         >
-          <div style={styles.tooltip}>
-            <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-            {number}. {levelName}
+          <div
+            style={{
+              ...styles.contents,
+              ...(level.isConceptLevel && styles.diamondContents)
+            }}
+          >
+            {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
+            {levelIcon !== 'lock' && (
+              <span
+                style={smallBubble ? styles.smallBubbleSpan : undefined}
+              >
+                {/*Text will not show up for smallBubble, but it's presence
+                  causes bubble to be properly aligned vertically
+                  */}
+                {smallBubble ? '-' : number}
+              </span>
+            )}
+            {tooltip}
           </div>
-        </ReactTooltip>
+        </div>
       </div>
     );
 

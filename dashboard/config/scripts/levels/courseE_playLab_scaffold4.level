@@ -6,10 +6,10 @@
   "user_id": 285,
   "properties": {
     "skin": "studio",
-    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n    return  (Studio.playerScore != 0);\r\n}",
+    "success_condition": "function () {\r\n  // Sample conditions:\r\n  // return Studio.sprite[0].isCollidingWith(1);\r\n  // return Studio.sayComplete > 0;\r\n  // return Studio.sprite[0].emotion === Emotions.HAPPY;\r\n  // return Studio.tickCount > 50;\r\n    return  (Studio.playerScore == 10);\r\n}",
     "failure_condition": "function () {\r\n}",
     "timeout_after_when_run": "true",
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.5},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -38,7 +38,7 @@
     "instructions": "Find some interesting ways to change the score in your game. Get the score to show something other than 0 to continue.",
     "project_template_level_name": "grade4_scaffolded_template",
     "first_sprite_index": "0",
-    "markdown_instructions": "Getting the actors moving is a great step, but we need to do more to make this feel like a real game. A simple way to do this is to add or remove points when actors collide with things. Find some interesting ways to change the score in your game.\r\n<hr/>\r\n\r\nGet the score to show something other than 0 to continue.\r\n\r\n___\r\n\r\n*Don't expect to get this right on the first try. Keep testing your game as you code. You'll not only want a game that works, but one that is fun to play!*\r\n___\r\nWe've added these blocks to your toolbox:\r\n\r\n![](https://images.code.org/ad0df96aa91c89e3d903dce2fe19517f-image-1472070105051.20.55 PM.png)",
+    "markdown_instructions": "Multiple characters and getting the actors moving is a great start to a game, but we need to do more to make this feel like a real game. Let's add a score!\r\n\r\nUse the new blocks like the `when actor touches` to change the score. Score 10 points to complete this puzzle.",
     "soft_buttons": [
       "leftButton",
       "rightButton",
@@ -48,11 +48,13 @@
     "instructions_important": "true",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `score point` to add a point, and `remove point` to subtract one.\",\"hint_id\":\"courseE_playLab_scaffold4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8bb2c0a65d4564eab4270aabffcddeb1/courseE_playLab_scaffold4.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
-  "notes": "Success Conditions (all):\r\n background is not cave\r\n actors 1-3 are visible and have moved\r\n score is not 0\r\n 500 ticks have passed\r\n\r\nFail Conditions (either):\r\n actors 2 or 3 are hidden at the start of game, or\r\n score is still 0 after 450 ticks",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 20:58:45 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 20:58:45 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:50:18 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-18 18:30:21 +0000\",\"changed\":[\"notes\",\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-18 18:31:21 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-18 18:33:40 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"success_condition\",\"markdown_instructions\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -148,27 +150,6 @@
         </block>
       </xml>
     </toolbox_blocks>
-    <required_blocks>
-      <xml>
-        <block type="pick_one">
-          <statement name="PICK">
-            <block type="studio_addPoints">
-              <title name="VALUE">???</title>
-              <next>
-                <block type="studio_removePoints">
-                  <title name="VALUE">???</title>
-                  <next>
-                    <block type="studio_changeScore">
-                      <title name="VALUE">???</title>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </required_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run">
@@ -222,13 +203,6 @@
               <title name="DIR">4</title>
             </block>
           </next>
-        </block>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="studio_setSpritesWander">
-              <title name="VALUE">"penguin"</title>
-            </block>
-          </statement>
         </block>
         <block type="studio_whenArrow">
           <title name="VALUE">left</title>

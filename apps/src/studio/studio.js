@@ -2147,9 +2147,19 @@ Studio.init = function (config) {
     }
   };
 
-  studioApp().setPageConstants(config, {
-    hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
-  });
+  // Override Page constants
+  const appSpecificConstants = {
+    hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
+  };
+
+  // for hoc2015x, we only have permission to show the Rey avatar for approved
+  // scripts. For all others, we override the avatars with an empty image
+  if (config.skin.avatarAllowedScripts &&
+      !config.skin.avatarAllowedScripts.includes(config.scriptName)) {
+    appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
+    appSpecificConstants.failureAvatar = config.skin.blankAvatar;
+  }
+  studioApp().setPageConstants(config, appSpecificConstants);
 
   var visualizationColumn = (
     <StudioVisualizationColumn
@@ -2748,7 +2758,8 @@ Studio.runButtonClick = function () {
 Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
+  if ((level.freePlay || Studio.testResults >= TestResults.MINIMUM_OPTIMAL_RESULT) &&
+      !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
   } else {
     tryAgainText = commonMsg.tryAgain();

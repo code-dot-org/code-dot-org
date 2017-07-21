@@ -33,11 +33,13 @@
   hamburger_options[:language] = request.language
   hamburger_options[:show_gallery] = true
   hamburger_options[:loc_prefix] = "nav.header."
+  hamburger_options[:page_mode] = request.cookies['pm']
 
   header_contents_options = {}
   header_contents_options[:user_type] = user_type
   header_contents_options[:language] = request.language
   header_contents_options[:loc_prefix] = "nav.header."
+  header_contents_options[:page_mode] = request.cookies['pm']
 
   should_show_progress = script_level || @stage_extras
 
@@ -117,6 +119,6 @@
       "#{uid}",
       #{puzzle_page},
       #{signed_in},
-      #{stage_extras_enabled}
+      #{stage_extras_enabled || 'null'}
     )
     //]]>

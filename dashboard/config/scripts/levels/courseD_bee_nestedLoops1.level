@@ -8,7 +8,7 @@
     "skin": "bee",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":1},{\"tileType\":1},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "instructions": "Help the bee collect all of the nectar.",
-    "markdown_instructions": "*\"This is going to **BEE** great!\"**\r\n\r\nHelp the bee collect all of the nectar.",
+    "markdown_instructions": "*\"This is going to **BEE** great!\"*\r\n\r\nHelp the bee collect all of the nectar.",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -32,15 +32,16 @@
     "nectar_goal": "6",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Not working?  Try using the \\\"Step\\\" button to see what happens line by line.\",\"hint_id\":\"courseD_bee_nestedLoops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd4b05e196784186c0fdf9d471dd2f2a/courseD_bee_nestedLoops1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Not working?  Try using the \\\"Step\\\" button to see what happens line by line.\",\"hint_id\":\"courseD_bee_nestedLoops1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd4b05e196784186c0fdf9d471dd2f2a/courseD_bee_nestedLoops1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing code for one side of the square first. Can you loop this to get all of the nectar?\",\"hint_id\":\"courseD_bee_nestedLoops1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/967862afa1b7b03be074e9079ee2ddd2/courseD_bee_nestedLoops1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember to use the `get nectar` block once you are on a square with a flower.\",\"hint_id\":\"courseD_bee_nestedLoops1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fd1f8e2172a87ebcc286cbe42601f7e5/courseD_bee_nestedLoops1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-14 21:27:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 21:27:35 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-11 19:18:08 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 17:59:39 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

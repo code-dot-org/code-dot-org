@@ -19,7 +19,7 @@ const sections = {
     grade: "3",
     stageExtras: false,
     pairingAllowed: true,
-    studentNames: ['joe', 'bob', 'tim', 'mary', 'jane', 'jen', 'john', 'tam', 'chris', 'lisa'],
+    studentCount: 10,
     code: "PMTKVH",
   },
   12: {
@@ -31,7 +31,7 @@ const sections = {
     grade: "3",
     stageExtras: false,
     pairingAllowed: true,
-    studentNames: [],
+    studentCount: 0,
     code: "PMTKVZ",
   }
 };

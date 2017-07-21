@@ -32,11 +32,11 @@
     "fast_get_nectar_animation": "false",
     "ideal": "10",
     "step_speed": "2",
-    "contained_level_names": null,
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to turn at the end of the row of corn.\",\"hint_id\":\"courseC_harvester_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2334c70d76707985156d74f57aa1dbb9/courseC_harvester_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each loop will have two blocks inside of it: a `move` and a `collect`.\",\"hint_id\":\"courseC_harvester_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/58895dcec950cbb8a4dc3116dc27fa34/courseC_harvester_loops9.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

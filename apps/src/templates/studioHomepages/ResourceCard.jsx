@@ -15,6 +15,15 @@ const styles = {
     borderColor: color.border_gray,
     background: color.teal
   },
+  cardJumbo: {
+    overflow: 'hidden',
+    position: 'relative',
+    height: 250,
+    width: 310,
+    float: 'left',
+    marginBottom: 20,
+    background: color.teal
+  },
   image: {
     position: 'absolute',
   },
@@ -86,17 +95,18 @@ const styles = {
 
 const ResourceCard = React.createClass({
   propTypes: {
+    isJumbo: React.PropTypes.bool,
     title: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     buttonText: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string.isRequired,
+    image: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
 
-    const { title, description, buttonText, link, image, isRtl } = this.props;
+    const { isJumbo, title, description, buttonText, link, image, isRtl } = this.props;
     const filenameToImgUrl = {
       "teacher-community": require('@cdo/static/resource_cards/teachercommunity.png'),
       "guest-speaker": require('@cdo/static/resource_cards/findguestspeaker.png'),
@@ -111,14 +121,17 @@ const ResourceCard = React.createClass({
     const imgSrc = filenameToImgUrl[image];
 
     return (
-      <div style={styles.card}>
-        <img src={imgSrc} style={styles.image}/>
+      <div style={isJumbo ? styles.cardJumbo : styles.card}>
+        {image && (
+          <img src={imgSrc} style={styles.image}/>
+        )}
         <div style={isRtl ? styles.rtlTitle : styles.title}>
           {title}
         </div>
         <div style={isRtl ? styles.rtlDescription : styles.description}>
           {description}
         </div>
+        <br/>
         <ProgressButton
           href={link}
           color={ProgressButton.ButtonColor.gray}
