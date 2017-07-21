@@ -1549,11 +1549,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? returns true when permission exists' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     assert user.permission?(UserPermission::FACILITATOR)
   end
 
@@ -1567,11 +1563,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? caches all permissions' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     user.permission?(UserPermission::LEVELBUILDER)
 
     no_database
@@ -1990,5 +1982,28 @@ class UserTest < ActiveSupport::TestCase
     user = User.from_omniauth(auth, params)
     assert_equal('fake oauth token', user.oauth_token)
     assert_equal('fake refresh token', user.oauth_refresh_token)
+  end
+
+  test 'summarize' do
+    user = create :student
+    assert_equal(
+      {
+        id: user.id,
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        hashed_email: user.hashed_email,
+        user_type: user.user_type,
+        gender: user.gender,
+        birthday: user.birthday,
+        total_lines: user.total_lines,
+        secret_words: user.secret_words,
+        secret_picture_name: user.secret_picture.name,
+        secret_picture_path: user.secret_picture.path,
+        location: "/v2/users/#{user.id}",
+        age: user.age,
+      },
+      user.summarize
+    )
   end
 end

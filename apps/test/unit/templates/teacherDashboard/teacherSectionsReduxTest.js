@@ -1,5 +1,4 @@
 import { assert } from '../../../util/configuredChai';
-import _ from 'lodash';
 import reducer, {
   setStudioUrl,
   setValidLoginTypes,
@@ -15,13 +14,6 @@ import reducer, {
   sectionFromServerSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-// Our actual student object are much more complex than this, but really all we
-// care about is how many there are.
-const fakeStudents = num => _.range(num).map(x => ({
-  id: x,
-  name: 'Student' + x,
-}));
-
 const sections = [
   {
     id: 11,
@@ -34,7 +26,7 @@ const sections = [
     pairing_allowed: true,
     script: null,
     course_id: 29,
-    students: fakeStudents(10)
+    studentCount: 10,
   },
   {
     id: 12,
@@ -50,7 +42,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
-    students: fakeStudents(1)
+    studentCount: 1,
   },
   {
     id: 307,
@@ -66,7 +58,7 @@ const sections = [
       name: 'csp1'
     },
     course_id: 29,
-    students: []
+    studentCount: 0,
   }
 ];
 
@@ -260,7 +252,7 @@ describe('teacherSectionsRedux', () => {
         pairing_allowed: true,
         script: null,
         course_id: 29,
-        students: [],
+        studentCount: 0,
       }], true);
 
       const state = reducer(startState, setSections(sections));
@@ -296,7 +288,7 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       script: null,
       course_id: 29,
-      students: fakeStudents(10)
+      studentCount: 10,
     };
 
     it('does not change our list of section ids when updating a persisted section', () => {
@@ -315,13 +307,7 @@ describe('teacherSectionsRedux', () => {
 
       // Other fields should remain unchanged
       Object.keys(stateWithSections.sections[sectionId]).forEach(field => {
-        if (field === 'loginType') {
-          return;
-        }
-        if (field === 'studentNames') {
-          assert.deepEqual(state.sections[sectionId][field],
-            stateWithSections.sections[sectionId][field]);
-        } else {
+        if (field !== 'loginType') {
           assert.strictEqual(state.sections[sectionId][field],
             stateWithSections.sections[sectionId][field]);
         }
@@ -346,11 +332,26 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
     });
 
+    it(`adds the sectionId of a non-persisted section if it wasn't in the list`, () => {
+      assert.deepEqual(stateWithSections.sectionIds, [11, 12 ,307]);
+
+      const action = updateSection(-1, newServerSection);
+      const state = reducer(stateWithSections, action);
+      assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
+    });
+
     it('replaces the section of a non-persisted section', () => {
       const stateWithNewSection = reducer(stateWithSections, newSection());
 
       const action = updateSection(-1, newServerSection);
       const state = reducer(stateWithNewSection, action);
+      assert.strictEqual(state.sections[-1], undefined);
+      assert.strictEqual(state.sections[21].id, 21);
+    });
+
+    it(`adds the section of a non-persisted section if it wasn't in the list`, () => {
+      const action = updateSection(-1, newServerSection);
+      const state = reducer(stateWithSections, action);
       assert.strictEqual(state.sections[-1], undefined);
       assert.strictEqual(state.sections[21].id, 21);
     });
@@ -375,7 +376,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        studentNames: [],
+        studentCount: 0,
         code: '',
         courseId: null,
         scriptId: null
@@ -393,7 +394,7 @@ describe('teacherSectionsRedux', () => {
         grade: '',
         stageExtras: false,
         pairingAllowed: true,
-        studentNames: [],
+        studentCount: 0,
         code: '',
         courseId: 29,
         scriptId: null
@@ -456,7 +457,7 @@ describe('teacherSectionsRedux', () => {
       pairing_allowed: true,
       script: null,
       course_id: 29,
-      students: fakeStudents(10)
+      studentCount: 10,
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -485,12 +486,9 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(sectionWithScript.scriptId, 1);
     });
 
-    it('maps from students to names of students', () => {
+    it('sets student count', () => {
       const section = sectionFromServerSection(serverSection);
-      assert.equal(section.studentNames.length, 10);
-      section.studentNames.forEach(name => {
-        assert.equal(typeof(name), 'string');
-      });
+      assert.equal(section.studentCount, 10);
     });
   });
 

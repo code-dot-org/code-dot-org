@@ -193,7 +193,17 @@ class Section < ActiveRecord::Base
       linkToAssigned: link_to_assigned,
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
-      sectionCode: code
+      code: code,
+      stage_extras: stage_extras,
+      pairing_allowed: pairing_allowed,
+      login_type: login_type,
+      course_id: course_id,
+      script: {
+        id: script_id,
+        name: script.try(:name),
+      },
+      studentCount: students.size,
+      grade: grade,
     }
   end
 

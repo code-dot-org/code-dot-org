@@ -117,6 +117,7 @@ class SectionRow extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     lightRow: PropTypes.bool.isRequired,
+    handleEdit: PropTypes.func,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(
@@ -163,7 +164,18 @@ class SectionRow extends Component {
     });
   }
 
-  onClickEdit = () => this.setState({editing: true});
+  onClickEdit = () => {
+    const section = this.props.sections[this.props.sectionId];
+    const editData = {
+      name: section.name,
+      grade: section.grade,
+      course: section.course_id,
+      extras: section.stageExtras,
+      pairing: section.pairingAllowed,
+      sectionId: this.props.sectionId
+    };
+    this.props.handleEdit(editData);
+  }
 
   onClickEditSave = () => {
     const { sections, sectionId, updateSection } = this.props;
@@ -340,7 +352,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`} style={styles.link}>
-              {section.studentNames.length}
+              {section.studentCount}
             </a>
           }
         </td>
@@ -350,7 +362,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.studentNames.length === 0}
+              canDelete={section.studentCount === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -368,7 +380,7 @@ class SectionRow extends Component {
             />
           )}
           <PrintCertificates
-            section={section}
+            sectionId={section.id}
             assignmentName={assignNames[0]}
           />
         </td>

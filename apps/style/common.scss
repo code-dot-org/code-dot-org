@@ -554,6 +554,9 @@ button.launch {
   /* Can't use "text-align: start" due to IE. */
   text-align: left;
 }
+button.launch[disabled] {
+  pointer-events: none;
+}
 html[dir="RTL"] button.launch {
   text-align: right;
 }

@@ -33,7 +33,7 @@ class OmniAuthSection < Section
       section.login_type = type
     end
     students.each do |student|
-      oauth_section.add_student User.from_omniauth(student, {})
+      oauth_section.add_student User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT})
     end
 
     oauth_section

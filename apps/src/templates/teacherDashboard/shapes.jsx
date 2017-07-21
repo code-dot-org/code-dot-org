@@ -10,10 +10,11 @@ export const sectionShape = PropTypes.shape({
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
-  studentNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+  studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
+  grade: PropTypes.string,
 });
 
 export const assignmentShape = PropTypes.shape({

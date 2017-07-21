@@ -236,6 +236,7 @@ class User < ActiveRecord::Base
   # TODO(asher): Determine whether request level caching is sufficient, or
   #   whether a memcache or otherwise should be employed.
   def permission?(permission)
+    return false unless teacher?
     if @permissions.nil?
       # The user's permissions have not yet been cached, so do the DB query,
       # caching the results.
@@ -255,6 +256,7 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
+    return false unless teacher?
     district_as_contact.present?
   end
 
@@ -538,7 +540,7 @@ class User < ActiveRecord::Base
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
       user.email = auth.info.email
-      user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
+      user.user_type = params['user_type'] || auth.info.user_type
 
       if auth.provider == :the_school_project
         user.username = auth.extra.raw_info.nickname
@@ -885,13 +887,8 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def self.initial(name)
-    return nil if name.blank?
-    return name.strip[0].upcase
-  end
-
   def initial
-    User.initial(name)
+    UserHelpers.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -1331,6 +1328,26 @@ class User < ActiveRecord::Base
 
   def to_csv
     User.csv_attributes.map {|attr| send(attr)}
+  end
+
+  # Format user information for the JSON API
+  def summarize
+    {
+      id: id,
+      name: name,
+      username: username,
+      email: email,
+      hashed_email: hashed_email,
+      user_type: user_type,
+      gender: gender,
+      birthday: birthday,
+      total_lines: total_lines,
+      secret_words: secret_words,
+      secret_picture_name: secret_picture.name,
+      secret_picture_path: secret_picture.path,
+      location: "/v2/users/#{id}",
+      age: age,
+    }
   end
 
   def self.progress_queue

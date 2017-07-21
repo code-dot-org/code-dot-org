@@ -10,6 +10,8 @@ import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import i18n from '@cdo/locale';
 import experiments from '@cdo/apps/util/experiments';
+import AddSectionDialog from "./AddSectionDialog";
+import EditSectionDialog from "./EditSectionDialog";
 
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
@@ -26,6 +28,8 @@ const styles = {
     marginRight: 5,
   }
 };
+
+const sectionsApiPath = '/dashboardapi/sections/';
 
 class SectionsPage extends Component {
   static propTypes = {
@@ -46,6 +50,8 @@ class SectionsPage extends Component {
   state = {
     sectionsLoaded: false,
     rosterDialogOpen: false,
+    addSectionDialogOpen: false,
+    editSectionDialogOpen: false,
   };
 
   componentWillMount() {
@@ -75,7 +81,7 @@ class SectionsPage extends Component {
       onAsyncLoad();
     });
 
-    $.getJSON("/v2/sections/").done(response => {
+    $.getJSON(sectionsApiPath).done(response => {
       sections = response;
       onAsyncLoad();
     });
@@ -97,14 +103,29 @@ class SectionsPage extends Component {
     $.getJSON(url, { courseId }).then(() => {
       this.setState({rosterDialogOpen: false, sectionsLoaded: false});
 
-      $.getJSON("/v2/sections/").done(results => {
+      $.getJSON(sectionsApiPath).done(results => {
         this.props.setSections(results, true);
         this.setState({sectionsLoaded: true});
       });
     });
   };
 
-  addSection = () => this.props.newSection();
+  handleCloseAddSectionDialogs = () => {
+    this.setState({addSectionDialogOpen: false});
+  };
+
+  addSection = () => {
+    if (experiments.isEnabled('section-flow-2017')) {
+      this.setState({addSectionDialogOpen: true});
+    } else {
+      return this.props.newSection();
+    }
+  };
+
+  handleEditRequest = (section) => {
+    this.setState({editSectionDialogOpen : true});
+    this.editor.getWrappedInstance().updateStates(section);
+  }
 
   render() {
     const { numSections } = this.props;
@@ -153,7 +174,7 @@ class SectionsPage extends Component {
             <p>{i18n.createSectionsInfo()}</p>
           </div>
         }
-        {sectionsLoaded && numSections > 0 && <SectionTable/>}
+        {sectionsLoaded && numSections > 0 && <SectionTable onEdit={this.handleEditRequest}/>}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
           handleImport={this.handleImport}
@@ -162,6 +183,15 @@ class SectionsPage extends Component {
           loadError={this.props.loadError}
           studioUrl={this.props.studioUrl}
           provider={this.provider}
+        />
+        <AddSectionDialog
+          isOpen={this.state.addSectionDialogOpen}
+          handleClose={this.handleCloseAddSectionDialogs}
+        />
+        <EditSectionDialog
+          ref = {(element) => this.editor = element}
+          isOpen={this.state.editSectionDialogOpen}
+          handleClose={() => this.setState({editSectionDialogOpen: false})}
         />
       </div>
     );

@@ -332,7 +332,15 @@ class Level < ActiveRecord::Base
     # blockly levels.js. for example, from hourofcode.script:
     # level 'blockly:Maze:2_14'
     # level 'scrat 16'
-    find_by(key_to_params(key))
+    if key.start_with?('blockly:Flappy')
+      level_num = key.split(':')[2]
+      find_by_name("flappy_#{level_num}") || find_by(key_to_params(key))
+    elsif key.start_with?('blockly:Bounce')
+      level_num = key.split(':')[2]
+      find_by_name("bounce_#{level_num}") || find_by(key_to_params(key))
+    else
+      find_by(key_to_params(key))
+    end
   end
 
   def self.key_to_params(key)

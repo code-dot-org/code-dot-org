@@ -313,7 +313,14 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: course.id,
+      script: {id: nil, name: nil},
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
@@ -332,7 +339,14 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/s/jigsaw',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: nil,
+      script: {id: script.id, name: script.name},
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
@@ -354,7 +368,14 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '/courses/somecourse',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: course.id,
+      script: {id: script.id, name: script.name},
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
@@ -371,7 +392,14 @@ class SectionTest < ActiveSupport::TestCase
       linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
-      sectionCode: section.code
+      code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: nil,
+      script: {id: nil, name: nil},
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end

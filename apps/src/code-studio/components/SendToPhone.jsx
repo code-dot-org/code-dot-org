@@ -39,7 +39,8 @@ var baseStyles = {
  */
 var SendToPhone = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string.isRequired,
+    isLegacyShare: React.PropTypes.bool.isRequired,
+    channelId: React.PropTypes.string,
     appType: React.PropTypes.string.isRequired,
     styles: React.PropTypes.shape({
       label: React.PropTypes.object,
@@ -83,12 +84,17 @@ var SendToPhone = React.createClass({
 
     this.setState({sendState: SendState.sending});
 
-    var params = $.param({
+    const params = {
       type: this.props.appType,
-      channel_id: this.props.channelId,
-      phone: $(phone).val()
-    });
-    $.post('/sms/send', params)
+      phone: $(phone).val(),
+    };
+    if (this.props.isLegacyShare) {
+      params.level_source = +location.pathname.split('/')[2];
+    } else {
+      params.channel_id = this.props.channelId;
+    }
+
+    $.post('/sms/send', $.param(params))
       .done(function () {
         this.setState({sendState: SendState.sent});
         trackEvent('SendToPhone', 'success');

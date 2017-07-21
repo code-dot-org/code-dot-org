@@ -138,16 +138,25 @@ export default function teacherSections(state=initialState, action) {
     const oldSectionId = action.sectionId;
     const newSection = section.id !== oldSectionId;
 
+    let newSectionIds = state.sectionIds;
+    if (newSection) {
+      if (state.sectionIds.includes(oldSectionId)) {
+        newSectionIds = state.sectionIds.map(id => id === oldSectionId ? section.id : id);
+      } else {
+        newSectionIds = [
+          section.id,
+          ...state.sectionIds,
+        ];
+      }
+    }
+
     // When updating a persisted section, oldSectionId will be identical to
     // section.id. However, if this is a newly persisted section, oldSectionId
     // will represent our temporary section. In that case, we want to delete that
     // section, and replace it with our new one.
     return {
       ...state,
-      sectionIds: newSection ?
-        // replace oldSectionId with new section.id
-        state.sectionIds.map(id => id === oldSectionId ? section.id : id) :
-        state.sectionIds,
+      sectionIds: newSectionIds,
       sections: {
         // When updating a persisted section, omitting oldSectionId is still fine
         // because we're adding it back on the next line
@@ -186,7 +195,7 @@ export default function teacherSections(state=initialState, action) {
           grade: '',
           stageExtras: false,
           pairingAllowed: true,
-          studentNames: [],
+          studentCount: 0,
           code: '',
           courseId: action.courseId || null,
           scriptId: null
@@ -226,7 +235,7 @@ export const sectionFromServerSection = serverSection => ({
   grade: serverSection.grade,
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
-  studentNames: serverSection.students.map(student => student.name),
+  studentCount: serverSection.studentCount,
   code: serverSection.code,
   courseId: serverSection.course_id,
   scriptId: serverSection.script ? serverSection.script.id : null
