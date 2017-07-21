@@ -182,6 +182,10 @@ export default class Subtype {
     });
   }
 
+  scheduleDirtChange(row, col) {
+    this.drawer.updateItemImage(row, col, true);
+  }
+
   /**
    * Draw the given tile at row, col
    */

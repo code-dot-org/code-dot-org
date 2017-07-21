@@ -30,6 +30,10 @@ export default class Collector extends Subtype {
     this.minCollected_ = config.level.minCollected;
   }
 
+  scheduleDirtChange(row, col) {
+    super.scheduleDirtChange(row, col);
+  }
+
   /**
    * @override
    */
