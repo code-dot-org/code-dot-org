@@ -565,11 +565,11 @@ class DashboardSection
       id: @row[:id],
       location: "/v2/sections/#{@row[:id]}",
       name: @row[:name],
-      loginType: @row[:login_type],
+      login_type: @row[:login_type],
       grade: @row[:grade],
       code: @row[:code],
-      stageExtras: @row[:stage_extras],
-      pairingAllowed: @row[:pairing_allowed],
+      stage_extras: @row[:stage_extras],
+      pairing_allowed: @row[:pairing_allowed],
     }
   end
 
