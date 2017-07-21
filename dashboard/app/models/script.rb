@@ -192,6 +192,13 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # @param [User] user
+  # @param script_id [String] id of the script we're checking the validity of
+  # @return [Boolean] Whether this is a valid script ID
+  def self.valid_script_id?(user, script_id)
+    valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
+  end
+
   # Get the assignable info for this script, then update translations
   # @return AssignableInfo
   def assignable_info
