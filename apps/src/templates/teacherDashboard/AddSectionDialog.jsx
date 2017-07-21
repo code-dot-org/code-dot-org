@@ -60,8 +60,8 @@ export class AddSectionDialog extends Component {
       name: this.state.name,
       login_type: this.state.loginType,
       grade: this.state.grade,
-      stage_extras: this.state.extras === 'yes' ? true : false,
-      pairing_allowed: this.state.pairing === 'yes' ? true : false,
+      stage_extras: this.state.extras === 'yes',
+      pairing_allowed: this.state.pairing === 'yes',
       course_id: selectedAssignment ? selectedAssignment.courseId : null,
     };
 
