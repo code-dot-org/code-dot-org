@@ -87,9 +87,13 @@ module Pd::WorkshopSurveyResultsHelper
       next unless questions.key? k
 
       if v.is_a? Integer
-        if facilitator_specific_options.include?(k) && facilitator_name && facilitator_breakdown
-          # For facilitator specific questions, take the average over all responses for that facilitator
-          sum_hash[k] = (v / responses_per_facilitator[facilitator_name].to_f).round(2)
+        if facilitator_specific_options.include?(k)
+          if facilitator_name && facilitator_breakdown
+            # For facilitator specific questions, take the average over all responses for that facilitator
+            sum_hash[k] = (v / responses_per_facilitator[facilitator_name].to_f).round(2)
+          else
+            sum_hash[k] = (v / responses_per_facilitator.values.reduce(:+).to_f).round(2)
+          end
         else
           # For non facilitator specific answers, take the average over all surveys
           sum_hash[k] = (v / surveys.count.to_f).round(2)
