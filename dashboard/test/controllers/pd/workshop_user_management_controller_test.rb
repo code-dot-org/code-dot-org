@@ -47,7 +47,7 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
     sign_in @workshop_admin
     get :assign_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSE_ECS}
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator.id}
-    assert @facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_ECS).exists?, "#{Pd::Workshop::COURSE_ECS} was not assigned to Facilitator - #{@facilitator.email}"
+    assert @facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_ECS), "#{Pd::Workshop::COURSE_ECS} was not assigned to Facilitator - #{@facilitator.email}"
   end
 
   test 'remove course from facilitator removes course' do
