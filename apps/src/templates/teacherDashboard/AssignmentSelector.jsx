@@ -10,6 +10,7 @@ const styles = {
 };
 
 const noAssignment = assignmentId(null, null);
+//Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
 
