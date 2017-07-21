@@ -101,33 +101,26 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
-  # display the user search form, user search results, and permissions for first user search result
-  # grant / revoke permissions actions redirect back to this form to display the updated permission list
+  # get /admin/permissions
   def permissions_form
-    search_term = user_permission_params[:search_term]
+    search_term = params[:search_term]
     if search_term =~ /^\d+$/
-      user_id = search_term
-      @users = User.where(id: user_id)
+      @user = User.find(search_term)
     elsif search_term
-      email = search_term
-      hashed_email = User.hash_email(email)
-      # use where instead of find because in rare cases there may be multiple Users with the same email address
-      @users = User.where(hashed_email: hashed_email)
+      @user = User.find_by_email_or_hashed_email(search_term)
     end
-    @user = @users.first if @users
     unless @user || search_term.blank?
       flash[:notice] = "User Not Found"
     end
-    @permissions = @user.try(:permissions)
   end
 
   def grant_permission
-    user_id = user_permission_params[:user_id]
-    permission = user_permission_params[:user_permission_id]
+    user_id = params[:user_id]
+    permission = params[:user_permission_id]
     @user = User.find(user_id)
 
     unless @user && @user.teacher?
-      flash[:alert] = "FAILED: user #{user_permission_params[:user_id]} could not be found or was not a teacher"
+      flash[:alert] = "FAILED: user #{user_id} could not be found or was not a teacher"
       redirect_to action: "permissions_form", search_term: user_id
       return
     end
@@ -136,7 +129,7 @@ class AdminUsersController < ApplicationController
       if @user.sections_as_student.count > 0
         flash[:alert] = "FAILED: user #{@user.email} NOT granted as user has sections_as_students"
       else
-        #TODO(suresh) update User model to log to #infrasecurity that admin privilege was granted
+        #TODO: update User model to log to #infrasecurity that admin privilege was granted
         @user.update!(admin: true)
       end
     else
@@ -146,9 +139,9 @@ class AdminUsersController < ApplicationController
   end
 
   def revoke_permission
-    user_id = user_permission_params[:user_id]
+    user_id = params[:user_id]
     @user = User.find(user_id)
-    permission = user_permission_params[:user_permission_id]
+    permission = params[:user_permission_id]
     if permission == 'admin'
       @user.admin = nil
       @user.save(validate: false)
@@ -156,12 +149,5 @@ class AdminUsersController < ApplicationController
       @user.delete_permission permission
     end
     redirect_to permissions_form_path(search_term: user_id)
-  end
-
-  private
-
-  # white list permitted request parameters
-  def user_permission_params
-    params.permit(:search_term, :user_id, :user_permission_id)
   end
 end
