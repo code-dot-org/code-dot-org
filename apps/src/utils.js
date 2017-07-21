@@ -2,6 +2,7 @@ import $ from 'jquery';
 import Immutable from 'immutable';
 import constants from './constants';
 import './polyfills';
+import encode from 'form-urlencoded';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -662,16 +663,50 @@ export function bisect(array, conditional) {
 }
 
 /**
- * Post data to a url with a timeout, using sendBeacon with fallback.
+ * Post data to a url with a timeout, using sendBeacon with fallback to synchronous ajax.
  * @param {string} url
  * @param {Object} data
  * @param {number} [timeout]
  */
 export function beacon(url, data, timeout) {
-  if (navigator.sendBeacon) {
-    navigator.sendBeacon(url, JSON.stringify(data));
-  } else {
-    console.log("sendBeacon not supported, fallback to synchronous ajax");
-
+  let sentBeacon = false;
+  try  {
+    if (window.navigator.sendBeacon) {
+      const blob = new Blob([encode(data, {skipIndex: true})], {type: 'application/x-www-form-urlencoded'});
+      sentBeacon = window.navigator.sendBeacon(url, blob);
+    }
+  } catch (e) {}
+  if (!sentBeacon) {
+    console.log("fallback to synchronous ajax");
   }
+}
+
+/**
+ * Fire only once on the first unload-related event.
+ *
+ * Uses page-visibility API in addition to various unload events because we can't
+ * rely on pagehide, beforeunload, and unload events to fire on mobile platforms.
+ * @see https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/
+ *
+ * @param {function} callback
+ * @return {function}
+ */
+export function onUnload(callback) {
+  let called = false;
+  const unloadListener = (/*Event*/event) => {
+    if (event.type === 'visibilitychange' && !document.hidden) { return; }
+    if (called) { return; }
+    called = true;
+    ['pagehide', 'beforeunload', 'unload'].forEach((eventType) => {
+      window.removeEventListener(eventType, unloadListener);
+    });
+    document.removeEventListener('visibilitychange', unloadListener);
+    callback(event);
+  };
+
+  ['pagehide', 'beforeunload', 'unload'].forEach((eventType) => {
+    window.addEventListener(eventType, unloadListener);
+  });
+  document.addEventListener('visibilitychange', unloadListener);
+  return unloadListener;
 }

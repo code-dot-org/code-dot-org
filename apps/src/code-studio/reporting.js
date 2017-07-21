@@ -6,13 +6,13 @@ import { TestResults } from '@cdo/apps/constants';
 import experiments from '../util/experiments';
 var clientState = require('./clientState');
 import {
-  trySetLocalStorage,
-  tryGetLocalStorage,
-  tryRemoveLocalStorage,
+  onUnload,
   beacon
 } from '@cdo/apps/utils';
 
-var lastAjaxRequest;
+var lastAjaxRequest,
+  unloadListener;
+let milestones = [];
 
 var reporting = module.exports;
 
@@ -221,6 +221,15 @@ reporting.sendReport = function (report) {
 
   const serverReport = _.pick(report, serverFields);
 
+  // Decode existing urlencoded objects.
+  // TODO update upstream source to avoid initial conversion.
+  if (serverReport.program) {
+    serverReport.program = window.decodeURIComponent(serverReport.program);
+  }
+  if (serverReport.image) {
+    serverReport.image = window.decodeURIComponent(serverReport.image);
+  }
+
   const progressUpdated = clientState.trackProgress(
     report.result,
     report.lines,
@@ -237,17 +246,24 @@ reporting.sendReport = function (report) {
 
   if (reportsEnabled) {
     // Add report to the milestone queue.
-    let milestones = JSON.parse(tryGetLocalStorage(report.callback, null)) || [];
     milestones.push(serverReport);
-    trySetLocalStorage(report.callback, JSON.stringify(milestones));
 
     console.log(`${milestones.length} milestones, ${JSON.stringify(milestones).length} bytes`);
 
     // Send report synchronously in certain cases.
     const sync = progressUpdated || serverReport.image;
     if (sync) {
+      unloadListener = null;
       milestonePost(report, milestones);
+      milestones = [];
       return;
+    } else if (!unloadListener) {
+      unloadListener = onUnload(() => {
+        unloadListener = null;
+        beacon(report.callback, {milestones: milestones});
+        milestones = [];
+        console.log("Done unloading");
+      });
     }
   }
   // If no milestone post was sent, call the onComplete callback directly.
@@ -289,7 +305,6 @@ function milestonePost(report, milestones) {
         if (!report.allowMultipleSends && thisAjax !== lastAjaxRequest) {
           return;
         }
-        tryRemoveLocalStorage(report.callback);
         reportComplete(report, response);
       },
       error: function (xhr, textStatus, thrownError) {
