@@ -22,7 +22,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     valid_script = params[:script] && valid_script_id?(params[:script][:id])
     script_to_assign = valid_script && Script.get_from_cache(params[:script][:id])
 
-    section = Section.create!(
+    section = Section.create(
       {
         user_id: current_user.id,
         name: !params[:name].to_s.empty? ? params[:name].to_s : 'New Section',
@@ -36,6 +36,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
       }
     )
+    render head :bad_request unless section
 
     # TODO: Move to an after_create step on Section model?
     if script_to_assign
