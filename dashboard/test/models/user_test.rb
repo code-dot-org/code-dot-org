@@ -1568,12 +1568,12 @@ class UserTest < ActiveSupport::TestCase
     assert_creates Pd::CourseFacilitator do
       facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
     end
-    assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_CS_IN_A).exists?
+    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
   end
 
   test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    assert facilitator.courses_as_facilitator.where(course: Pd::Workshop::COURSE_CSD).exists?
+    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CSD)
     assert_no_difference 'Pd::CourseFacilitator.count' do
       facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
     end
