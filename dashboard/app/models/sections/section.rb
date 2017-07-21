@@ -202,7 +202,8 @@ class Section < ActiveRecord::Base
         id: script_id,
         name: script.try(:name),
       },
-      studentNames: students.pluck(:name),
+      studentCount: students.size,
+      grade: grade,
     }
   end
 
