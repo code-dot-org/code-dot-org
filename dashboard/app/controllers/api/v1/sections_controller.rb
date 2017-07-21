@@ -20,7 +20,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
     valid_script = params[:script] && valid_script_id?(params[:script][:id])
-    script_to_assign = valid_script && Script.find(params[:script][:id])
+    script_to_assign = valid_script && Script.get_from_cache(params[:script][:id])
 
     section = Section.create!(
       {
