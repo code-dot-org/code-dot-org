@@ -107,7 +107,7 @@ export class AddSectionDialog extends Component {
       return (
         <EditSectionForm
           title={title}
-          assignmentRef = {(element) => this.assignment = element}
+          assignmentRef={(element) => this.assignment = element}
           handleSave={this.onClickEditSave}
           handleClose={this.handleClose}
           name={name}
