@@ -202,4 +202,39 @@ describe('NewProgressBubble', () => {
 
     assert.equal(wrapper.find('div').at(1).props().style.width, 9);
   });
+
+  it('renders a progress pill for unplugged lessons', () => {
+    const unpluggedLevel = {
+      status: LevelStatus.perfect,
+      kind: LevelKind.unplugged,
+      url: '/foo/bar',
+      isUnplugged: true
+    };
+    const wrapper = shallow(
+      <NewProgressBubble
+        {...defaultProps}
+        level={unpluggedLevel}
+        smallBubble={false}
+      />
+    );
+    assert.equal(wrapper.find('ProgressPill').length, 1);
+    assert(!!wrapper.find('ProgressPill').props().tooltip);
+  });
+
+  it('does not render a progress pill for unplugged when small', () => {
+    const unpluggedLevel = {
+      status: LevelStatus.perfect,
+      kind: LevelKind.unplugged,
+      url: '/foo/bar',
+      isUnplugged: true
+    };
+    const wrapper = shallow(
+      <NewProgressBubble
+        {...defaultProps}
+        level={unpluggedLevel}
+        smallBubble={true}
+      />
+    );
+    assert.equal(wrapper.find('ProgressPill').length, 0);
+  });
 });
