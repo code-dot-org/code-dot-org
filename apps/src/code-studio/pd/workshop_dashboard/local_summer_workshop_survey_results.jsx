@@ -36,8 +36,7 @@ const freeResponseQuestions = [
 const LocalSummerWorkshopSurveyResults = React.createClass({
   propTypes: {
     params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired,
-      facilitators: React.PropTypes.arrayOf(React.PropTypes.string)
+      workshopId: React.PropTypes.string.isRequired
     })
   },
 
@@ -63,23 +62,33 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         loading: false,
         results: data,
         thisWorkshop: data['this_workshop'],
-        allMyLocalWorkshops: data['all_my_local_workshops']
+        allMyLocalWorkshops: data['all_my_local_workshops'],
+        facilitatorBreakdown: data['facilitator_breakdown'],
+        facilitatorNames: data['facilitator_names']
       });
     });
   },
 
   renderLocalSummerWorkshopSurveyResultsTable() {
-    let thisWorkshop = this.state.results['this_workshop'];
-    let allMyLocalWorkshops = this.state.results['all_my_local_workshops'];
+    let facilitatorColumnHeaders;
+
+    if (this.state.facilitatorBreakdown) {
+       facilitatorColumnHeaders = this.state.facilitatorNames.map((facilitator, i) => {
+        return (
+          <th key={i}>
+            {facilitator}
+          </th>
+        );
+      });
+    }
 
     return (
       <table className="table table-bordered" style={{width: 'auto'}}>
         <thead>
           <tr>
             <th/>
-            <th>
-              This workshop
-            </th>
+            <th>This workshop</th>
+            {facilitatorColumnHeaders}
             <th>
               All my local summer workshops
             </th>
@@ -89,16 +98,49 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
           {
             rowOrder.map((row, i) => {
               return (
-                <tr key={i}>
-                  <td>{row['text']}</td>
-                  <td>{this.renderScore(row, thisWorkshop[row['key']])}</td>
-                  <td>{this.renderScore(row, allMyLocalWorkshops[row['key']])}</td>
-                </tr>
+                this.renderRow(row, i)
               );
             })
           }
         </tbody>
       </table>
+    );
+  },
+
+  renderRow(row, i) {
+    let scoreCells;
+    let thisWorkshopData = this.state.thisWorkshop[row['key']];
+
+    if (this.state.facilitatorBreakdown && typeof thisWorkshopData === 'object') {
+      scoreCells = this.state.facilitatorNames.map((facilitator, i) => {
+        return (
+          <td key={i}>
+            {this.renderScore(row, thisWorkshopData[facilitator])}
+          </td>
+        );
+      });
+
+      scoreCells.unshift((<td key={this.state.facilitatorNames.length}/>));
+    } else {
+      scoreCells = [(
+        <td key={0}>
+          {this.renderScore(row, thisWorkshopData)}
+        </td>
+      )];
+
+      if (this.state.facilitatorBreakdown) {
+        _.times(this.state.facilitatorNames.length, (i) => {
+          scoreCells.push((<td key={i + 1}/>));
+        });
+      }
+    }
+
+    return (
+      <tr key={i}>
+        <td>{row['text']}</td>
+        {scoreCells}
+        <td>{this.renderScore(row, this.state.allMyLocalWorkshops[row['key']])}</td>
+      </tr>
     );
   },
 
@@ -110,21 +152,49 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
     }
   },
 
+  renderFreeResponseBullets(question, answerCollection) {
+    if (question['facilitator_breakdown']) {
+      return this.freeResponseMapToBullets(answerCollection);
+    } else {
+      return answerCollection.map((answer, i) => {
+        return (
+          <li key={i}>
+            {answer}
+          </li>
+        );
+      });
+    }
+  },
+
+  freeResponseMapToBullets(answer) {
+    return Object.keys(answer).map((facilitator_name, i) => {
+      return (
+        <li key={i}>
+          {facilitator_name}
+          <ul>
+            {
+              answer[facilitator_name].map((feedback, j) => {
+                return (
+                  <li key={j}>
+                    {feedback}
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </li>
+      );
+    });
+  },
+
   renderFreeResponseFeedback() {
     const freeResponseAnswers = freeResponseQuestions.map((question, i) => {
+      let answerCollection = this.state.thisWorkshop[question['key']];
+      console.log(answerCollection);
       return (
         <div key={i} className="well">
           <b>{question['text']}</b>
-          {
-            Array.isArray(this.state.thisWorkshop[question['key']]) &&
-            this.state.thisWorkshop[question['key']].map((answer, j) => {
-              return !!(_.trim(answer)) && (
-                <li key={j}>
-                  {answer}
-                </li>
-              );
-            })
-          }
+          {this.renderFreeResponseBullets(question, answerCollection)}
         </div>
       );
     });
