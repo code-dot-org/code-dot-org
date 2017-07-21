@@ -741,15 +741,34 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', user.age
   end
 
-  test 'changing oauth user from student to teacher with different email is allowed' do
+  test 'changing oauth user from student to teacher with same email is allowed' do
+    user = create :google_oauth2_student, email: 'email@new.xx'
+
+    assert user.provider == 'google_oauth2'
+
+    user.update!(
+      user_type: User::TYPE_TEACHER,
+      email: 'email@new.xx',
+      hashed_email: User.hash_email('email@new.xx')
+    )
+    assert_equal 'email@new.xx', user.email
+    assert_equal User::TYPE_TEACHER, user.user_type
+  end
+
+  test 'changing oauth user from student to teacher with different email is not allowed' do
     user = create :google_oauth2_student
 
     assert user.provider == 'google_oauth2'
 
-    user.update_attributes(user_type: User::TYPE_TEACHER, email: 'email@new.xx')
-    user.save!
-
-    assert_equal 'email@new.xx', user.email
+    user.update_attributes(
+      user_type: User::TYPE_TEACHER,
+      email: 'email@new.xx',
+      hashed_email: User.hash_email('email@new.xx')
+    )
+    assert !user.save
+    assert_equal user.errors[:base].first, "The email address you provided doesn't match with the email address for this account"
+    user.reload
+    assert_not_equal 'email@new.xx', user.email
   end
 
   test 'changing from student to teacher clears terms_of_service_version' do
