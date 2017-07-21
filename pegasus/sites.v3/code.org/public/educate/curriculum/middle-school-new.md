@@ -11,9 +11,9 @@ Middle School
 
 [/solid-block-header]
 
-Our current middle school curriculum focuses on a broad introduction to computer science topics. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). Browse more information on our CS Discoveries or CS Fundamentals Express courses, or review a third party option below.
+Our middle school curriculum focuses on a broad introduction to computer science topics. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
 
-<center><h3> [CS Discoveries](#csd) | [CS Fundamentals - Express](#express) | [3rd Party Resources](#thirdparty) </h3></center>
+<center><h3> [CS Discoveries](#csd) | [CS Fundamentals - Express](#express) | [3rd Party Courses](#thirdparty) </h3></center>
 
 <br>
 <hr>
@@ -30,7 +30,7 @@ Our current middle school curriculum focuses on a broad introduction to computer
 
 [col-50]
 
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun. This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+Computer Science Discoveries is designed for 7-9th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
@@ -53,7 +53,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 [col-50]
 
-For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
+For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](https://studio.code.org), but at an accelerated pace designed for students ages 10-18.
 
 [<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
 
@@ -64,7 +64,7 @@ For a lighterweight option that can be integrated as a unit in an existing techn
 <br>
 <hr>
 
-## Computer Science in Science
+## For Science Classrooms
 
 <div class="col-50" style="padding-right: 10px;">
 
@@ -74,9 +74,7 @@ For a lighterweight option that can be integrated as a unit in an existing techn
 
 [col-50]
 
-Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
-
-*Note: Starting in the 2017-2018 school year, Code.org will not be offering professional development for this course.*
+Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to help science teachers introduce computer science as a tool to teach modeling and simulation. This curriculum teaches computer science practices and concepts in the context of life, physical and earth sciences. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
 
 [<button>Learn more about curriculum</button>](/curriculum/science)
 
@@ -89,7 +87,9 @@ Code.org has partnered with the award-winning [Project GUTS](http://www.projectg
 
 ## For Algebra Classrooms
 
-Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
+Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. 
+
+[<button>Learn more about curriculum</button>](/edcuate/algebra)
 
 <br>
 <hr>

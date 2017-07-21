@@ -26,7 +26,11 @@ export default class CellEditor extends React.Component {
     // Convert the iterator to an array and reduce it to an object, combining
     // duplicate names when appropriate (ie for checkboxes)
     const values = Array.from(formData).reduce((serialized, [name, value]) => {
-      value = isNaN(value) ? '' : Number(value);
+      if (value === "undefined") {
+        value = undefined;
+      } else {
+        value = isNaN(value) ? '' : Number(value);
+      }
 
       if (name in serialized) {
         if (Array.isArray(serialized[name])) {

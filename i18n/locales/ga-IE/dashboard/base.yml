@@ -9,14 +9,15 @@ ga:
     errors:
       messages:
         blank: "riachtanach"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "riachtanach"
+        invalid_plural: "neamhbhailí"
     attributes:
       user:
         name: 'Ainm Taispeána'
         name_example: 'Ainm Taispeána<br/>(m.sh. Sárchódálaí nó Sinéad S.)'
         email: 'Seoladh ríomhphoist'
-        personal_email: 'Personal email address'
+        parent_email: 'Parent/guardian email'
+        personal_email: "Seoladh ríomhphoist pearsanta"
         username: 'Ainm úsáideora'
         password: 'Focal faire'
         password_confirmation: 'Deimhniú an fhocail faire'
@@ -179,6 +180,8 @@ ga:
       Tá na cúrsaí teagaisc taitneamhach agus tarraingteach, agus múineann siad buntús na ríomheolaíochta trí chomhéadan simplí treoraithe cosúil le cluiche. Foghlaim códáil ó Liam na nGeataí, Mark Zuckerberg, Angry Birds, agus Plants vs. Zombies! :-)
       
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
   section:
     your_section:
       one: 'Do rannán:'
@@ -219,6 +222,11 @@ ga:
     updated: 'Nuashonraíodh %{model}.'
     destroyed: 'Scriosadh %{model}.'
     access_denied: 'Níl cead agat teacht ar an %{model} seo.'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
     header:
       finished_hoc: "Chríochnaigh mé an Uair Chódála"
@@ -228,14 +236,14 @@ ga:
         artist: 'Tarraing pictiúr'
         calculate: 'Calculate something'
         applab: 'Déan aip sa Spraotharlann'
-        gamelab: 'Make a Game Lab project'
+        gamelab: 'Déan tionscadal sa tSaotharlann Cluichíochta'
       home: "Baile"
       courses: "Cúrsaí"
       project_gallery: "Gailearaí na dTionscadal"
       sections: "Rannáin"
       help_support: "Cabhair agus tacaíocht"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
+      report_bug: "Déan tuairisc ar fhadhb"
+      teacher_community: "Comhphobal múinteoirí"
       professional_learning: "Oideachas Proifisiúnta"
       documentation: "Doiciméadú"
       tutorials: "Cúrsaí Teagaisc"
@@ -276,8 +284,8 @@ ga:
       already_registered: 'Cláraithe cheana?'
       pair_programming: 'Códáil Bheirte'
       team: 'Foireann'
-      driver: 'Tiománaí'
-      navigator: 'Stiúrthóir'
+      driver: 'Logáilte isteach'
+      navigator: 'Comhpháirtí'
     popup:
       progress_for_user: "Dul chun cinn %{name}"
       progress: 'Do dhul chun cinn'
@@ -329,9 +337,12 @@ ga:
     deleted_user: 'úsáideoir scriosta'
     no_password_because_oauth: 'Ní gá focal faire a roghnú. Logálfaidh tú isteach trí sholáthraí tríú páirtí.'
     no_password_because_sponsored: 'Cabhróidh do mhúinteoir leat d''fhocal faire a bhainistiú.'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
-    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login: 'Cruthaigh do chuntas féin'
+    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_info: 'Más mian leat Code.org a úsáid fiú tar éis dheireadh na scoilbhliana, is féidir leat do chuntas féin a chruthú thíos.'
+    create_personal_login_terms: "Má chruthaíonn tú cuntas pearsanta, glacann tú le <a href='%{terms_of_service_url}', target='_blank'>téarmaí seirbhíse Code.org</a>. Má tá tú níos óige ná 13 bliain d'aois, deimhníonn tú go bhfuair tú cead ó thuismitheoir nó ó chaomhnóir dlíthiúil seirbhísí Code.org a úsáid fiú gan múinteoir i láthair."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Críochnaithe'
@@ -373,7 +384,7 @@ ga:
     heading_hoc2014: "<h2>An Uair Chódála</h2><h1>ó Liath go Leanbh</h1>"
     heading_elementary: "<h2>Cúrsaí 20 uair an chloig ar</h2><h1>Bhuntús na Ríomheolaíochta (gach aois)</h1>"
     heading_apps: "<h2>Craic</h2><h1>do Chách</h1>"
-    heading_tools: "<h2>Réidh don chéad chéim eile?</h2><h1>Uirlisí JavaScript ag an dara leibhéal</h1>"
+    heading_tools: "<h2>Réidh don chéad chéim eile?</h2><h1>Uirlisí do scoileanna dara leibhéil</h1>"
     heading_legacy: "<h2>Ár gcúrsa luathaithe</h2><h1>Ó liath go leanbh</h1>"
     your_gallery: Gailearaí
     no_primary_course: "Bain triail as cúrsa sa Stiúideo Códála"
@@ -552,9 +563,9 @@ ga:
       title: "Coinníollacha"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
+      title: "Giuirléidí"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Aois 14+"
       cta: "Foghlaim anois"
   gallery:
     students_drew_these_with_code: "Tharraing daltaí na pictiúir seo le cód!"
@@ -780,10 +791,6 @@ ga:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  components:
-    icon_library:
-      search_placeholder_text: 'Lorg deilbhín...'
-      no_icons_found: 'Níor aimsíodh aon deilbhíní'
   flex_category:
     required: 'Foramharc'
     content: 'Ábhar'
@@ -794,31 +801,32 @@ ga:
     optional_stages: 'Optional Stages'
     main_course: 'Príomhchúrsa'
     extra_course_content: 'Ábhar Breise'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
-    csd2_1: 'Chapter 1: Web Content and HTML'
-    csd2_2: 'Chapter 2: Styling and CSS'
+    csd1_1: 'Caibidil 1: Próiseas Réitithe Fadhbanna'
+    csd1_2: 'Caibidil 2: Ríomhairí agus Réiteach Fadhbanna'
+    csd2_1: 'Caibidil 1: Ábhar Gréasáin agus HTML'
+    csd2_2: 'Caibidil 2: Stíleáil agus CSS'
     csd3_1: 'Caibidil 1: Íomhánna agus Beochan'
     csd3_2: 'Caibidil 2: Tógáil Cluichí'
     csd4_1: 'Caibidil 1: Dearadh Dírithe ar an Úsáideoir'
     csd4_2: 'Caibidil 2: Fréamhshamhaltú Aipeanna'
-    csd5_1: 'Chapter 1: Representing Information'
-    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd5_1: 'Caibidil 1: Léiriú Sonraí'
+    csd5_2: 'Caibidil 2: Réiteach Fadhbanna Sonraí'
     csd6_1: 'Caibidil 1: Crua-Earraí Aschurtha'
     csd6_2: 'Caibidil 2: Crua-Earraí Ionchurtha'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
+    csp1_1: 'Caibidil 1: Léiriú agus Traschur Sonraí'
+    csp1_2: 'Caibidil 2: Airgeadh an Idirlín'
+    csp2_1: 'Caibidil 1: Ionchódú agus Comhbhrú Sonraí Casta'
+    csp2_2: 'Caibidil 2: Láimhseáil agus Léirshamhlú Sonraí'
+    csp3_1: 'Caibidil 1: Teangacha Ríomhchlárúcháin agus Algartaim'
+    csp4_1: 'Caibidil 1: Olltiomsú Sonraí agus Criptiú'
+    csp5_1: 'Caibidil 1: Ríomhchlárú Bunaithe ar Theagmhais'
+    csp5_2: 'Caibidil 2: Struchtúir Sonraí sa Ríomhchlárú'
+    cspSurvey: 'Suirbhé'
+    cspAssessment: 'Measúnú Caibidle'
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Séanadh
     leaving_domain: Tá tú ar tí an fearann seo a fhágáil, agus cuairt a thabhairt ar shuíomh nach bhfuil faoi stiúir Code.org.
@@ -889,7 +897,7 @@ ga:
   locked_stage: 'Níl cead agat an t-ábhar sa gcéim seo a fheiceáil faoi láthair toisc bhfuil an chéim faoi ghlas. Beidh do mhúinteoir in ann an chéim seo a dhíghlasáil nuair a bheidh sé in am obair a dhéanamh air, nó do chuid freagraí a athbhreithniú.'
   hidden_stage: "Níor cheap do mhúinteoir go mbeifeá anseo. Fiafraigh de do mhúinteoir cad é an chéad leibhéal eile ba chóir duit a dhéanamh."
   return_course_overview: 'Féach ar fhoramharc an aonaid'
-  view_all_units: 'View all units'
+  view_all_units: 'Gach aonad'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -919,4 +927,4 @@ ga:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
-  courses_category: 'Full Courses'
+  courses_category: 'Cúrsaí Iomlána'

@@ -9,14 +9,15 @@ de:
     errors:
       messages:
         blank: "ist erforderlich"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "ist erforderlich"
+        invalid_plural: "sind ungültig"
     attributes:
       user:
         name: 'Name anzeigen'
         name_example: 'Angezeigter Name<br/>(z.B. Cooler Codierer oder Jana B.)'
         email: 'E-Mail'
-        personal_email: 'Personal email address'
+        parent_email: 'Parent/guardian email'
+        personal_email: "Persönliche E-Mail-Adresse"
         username: 'Benutzername'
         password: 'Passwort'
         password_confirmation: 'Passwort Bestätigung'
@@ -82,7 +83,7 @@ de:
     forgot_password: 'Passwort vergessen?'
     need_confirmation: "Keine Anmeldebestätigung erhalten?"
     need_unlock: "Keine Anweisungen zum Entsperren erhalten?"
-    not_linked: "Sorry, your Code.org account is not linked to your %{provider}. You'll have to sign in by typing your password below."
+    not_linked: "Sorry, dein Code.org Konto ist nicht mit %{provider} verbunden. Bitte logge dich unten mit deinem Passwort ein."
   signup_form:
     student_count: '%{count} Schüler haben sich bereits angemeldet.'
     teacher_count: '%{count} Lehrer haben sich bereits angemeldet.'
@@ -134,8 +135,8 @@ de:
     school_name: 'Schulname'
     school_zip: 'Postleitzahl der Schule'
     school_address: 'Adresse der Schule'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_organization_name: 'Name Schule/Organisation'
+    school_organization_zip: 'Postleitzahl Schule/Organisation'
   signin_form:
     title: 'Hast du bereits einen Account? Anmelden'
     login: 'E-Mail'
@@ -163,7 +164,7 @@ de:
       email: 'E-Mail-Adresse'
       submit: 'Absenden'
     reset_errors:
-      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
+      invalid_email: 'Du scheinst dich mit einer ungültigen E-Mail-Adresse eingeloggt zu haben. Bitte emaile support@code.org um einen Link zur Wiederherstellung deines Passwortes zu erhalten.'
     change_form:
       title: 'Ändere dein Passwort'
       new_password: 'Neues Passwort'
@@ -179,14 +180,16 @@ de:
       Die Tutorials machen Spaß, sind visuell attraktiv und vermitteln spielend einfach die Grundlagen der Informatik. Lerne Programmieren mit Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. :-)
       
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: '%{section_code} with %{teacher_name}'
+      one: 'Dein Bereich:'
+      other: 'Deine Bereiche:'
+    code_with_teacher: '%{section_code} mit %{teacher_name}'
     confirm:
-      remove: 'Are you sure you want to leave this section?'
-    remove: '(remove section)'
+      remove: 'Bist du sicher, dass du diesen Bereich verlassen möchtest?'
+    remove: '(Bereich löschen)'
   follower:
     invite_sent: 'Einladung gesendet'
     added_teacher: '%{name} wurde als dein Lehrer hinzugefügt'
@@ -219,6 +222,11 @@ de:
     updated: '%{model} wurde erfolgreich aktualisiert.'
     destroyed: '%{model} wurde erfolgreich gelöscht.'
     access_denied: 'Du hast keinen Zugriff auf dieses %{model}.'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
     header:
       finished_hoc: "Ich habe meine Programmierstunde beendet."
@@ -228,42 +236,42 @@ de:
         artist: 'Zeichne etwas'
         calculate: 'Calculate something'
         applab: 'Erstelle eine App'
-        gamelab: 'Make a Game Lab project'
+        gamelab: 'Ein Game Lab Projekt eröffnen.'
       home: "Home"
       courses: "Kurse"
       project_gallery: "Projekt Galerie"
       sections: "Sektionen"
       help_support: "Hilfe und Support"
-      report_bug: "Report bug"
-      teacher_community: "Teacher community"
+      report_bug: "Einen Fehler melden"
+      teacher_community: "Lehrer Community"
       professional_learning: "Professionelles Lernen"
       documentation: "Dokumentation"
       tutorials: "Einführungen"
       educate_overview: "Educator Overview"
-      educate_elementary: "Elementary School"
-      educate_middle: "Middle School"
-      educate_high: "High School"
+      educate_elementary: "Grundschule"
+      educate_middle: "Mittelschule"
+      educate_high: "High School/Gymnasium"
       educate_hoc: "Stunde des Codes"
-      educate_partner: "Partner with Us"
+      educate_partner: "Eine Partnerschaft mit uns"
       educate_beyond: "Beyond Code.org"
-      educate_inspire: "Inspire a Student"
+      educate_inspire: "Inspiriere einen Schüler/eine Schülerin"
       educate_community: "Online Community"
-      educate_tools: "Tools and Videos"
-      about_us: "About Us"
-      about_leadership: "Leadership"
-      about_donors: "Donors"
-      about_partners: "Partners"
-      about_team: "Full Team"
+      educate_tools: "Hilfsmittel und Videos"
+      about_us: "Über uns "
+      about_leadership: "Die Leitung"
+      about_donors: "Sponsoren"
+      about_partners: "Partner"
+      about_team: "Das Team"
       about_news: "Newsroom"
       about_evaluation: "Evaluation"
       about_jobs: "Jobs"
-      about_contact: "Contact Us"
+      about_contact: "Kontaktieren Sie uns"
       about_faqs: "FAQs"
-      learn: "Learn"
+      learn: "Lernen"
       stats: "Statistiken"
-      help_us: "Help Us"
-      teach: "Teach"
-      about: "About"
+      help_us: "Helfen Sie uns"
+      teach: "Unterrichten"
+      about: "Über"
     user:
       classroom: 'Lehrer-Homepage'
       district_dashboard: 'Landkreis-Dashboard'
@@ -329,8 +337,11 @@ de:
     deleted_user: 'Benutzer entfernen'
     no_password_because_oauth: 'Kein Passwort, da du dich als Drittanbieter einloggst.'
     no_password_because_sponsored: 'Wende dich an deinen Lehrer um dich um dein Passwort zu kümmern.'
-    create_personal_login: 'Create a personal login'
-    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login: 'Erstelle ein persönliches Login'
+    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_info: 'Wenn du dein Code.org Konto auch nach dem Ende des laufenden Schuljahres weiterverwenden möchtest, kannst du unten dein eigenes Login-Konto erstellen.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
@@ -389,7 +400,7 @@ de:
     announcement_petition: "Als Lehrer ist es deine Aufgabe, jedem Schüler an jeder Schule den Weg zu computerwissenschaftlicher Bildung zu ebnen. Jetzt ist es an der Zeit, deine Repräsentanten von dir hören zu machen. In dieser Woche vereinten führende Köpfe der Bildung, 28 Gouverneure und CEOs von Amerikas größten Firmen ihre Stimmen in einem offenen Brief an den U.S. Kongress, um die Finanzierung von \"K-12 computer science education\" zu erbitten."
     announcement_petition_button: "Fügen Sie Ihren Namen ein"
     announcement_go_beyond_button: "Noch weiter gehen"
-    announcement_apply_now: "Apply now"
+    announcement_apply_now: "Jetzt bewerben!"
     announcement_all: "Informieren Sie sich über neue Funktionen und Aktualisierungen in unserem Lehrkräfte-Blog. <a href='%{teacher_blog_url}' target='_blank'>Vergangene Meldungen anzeigen.</a>"
     announcement_hoc_launch: "Tausende von Pädagogen in mehr als 180 Ländern lehren Informatik während der Hour-of-Code vom 5. bis zum 11. Dezember. Wir zählen auf Ihre Hilfe, mehr Studierende als je zuvor zu erreichen. <a href='%{signup_url}' target='_blank'> Registrieren Sie Ihre Hour-of-Code- Veranstaltung</a> und sagen Sie Ihren Lehrerkollegen, dass jeder Informatik lehren kann."
     announcement_mc_launch: "Eines unserer beliebtesten Tutorials hat jetzt eine Fortsetzung! Im neuen \"Minecraft Hour of Code\"-Designer können Schülerinnen und Schüler die Regeln der Minecraft Welt nachbauen. Sie können eine Regeln in Minecraft erstellen, und diese Programme mit Freunden teile oder auf ihren Handys spielen. Versuchen Sie das mit Ihrer Klasse als Erlebnis in der 'Hour of Code'."
@@ -397,12 +408,12 @@ de:
     announcement_go_beyond: "Lassen Sie Hour of Code hinter sich und erkunden Sie mit Ihren Schülern jede Woche Konzepte der Informatik. Code.org bietet Ihnen einen Lehrplan, vorgefertigte Unterrichtsstunden, hoch qualitative und professionelle Lernporgramme und jede Menge großartige Werkzeuge für jede Klassenstufe - und es ist kostenlos. :) Um Informatik in Ihren Klassenzimmer zu lehren, brauchen Sie keine Erfahrung. Finden Sie den nächsten richtigen Schritt für Ihr Klassenzimmer"
     announcement_teacher_recruitment: "Dank Lehrern wie Ihnen lernen Schüler die Informatik richtig kennen und anzuwenden. Sie können sich an einem hochwertigen 12 Klassen-Lernprogramm teilnehmen, <strong>das sie und Ihre Schule nichts kosten wird</strong>. Übernehmen sie die Führung in Informatik und vertreten sie professionelles Lernen."
     announcement_teacher_recruitment2: "Dank Lehrern wie Ihnen lernen Schüler die Informatik richtig kennen und anzuwenden. Sie können sich an einem hochwertigen 12 Klassen-Lernprogramm teilnehmen, <strong>das sie und Ihre Schule nichts kosten wird</strong>. Übernehmen sie die Führung in Informatik und vertreten sie professionelles Lernen."
-    announcement_csf_pilot: "<strong>Elementary school teachers:</strong> Be part of updating our CS Fundamentals courses! We're looking for teachers to pilot an updated CS Fundamentals curriculum during the winter and spring of 2017. We're eager to hear your feedback before these updates go live in August 2017."
+    announcement_csf_pilot: "<strong>Grundschullehrer:</strong> Werden Sie Teil der Aktualisierung unserer CS Grundlagen-Kurse! Wir sind auf der Suche nach Lehrern, die unsere aktualisierten CS-Grundlagen-Lehrpläne im Winter und Frühjahr 2017 testen. Wir freuen uns auf Ihr Feedback, bevor diese Updates im August 2017 live gehen."
     announcement_student_privacy: "Wir von Code.org nehmen die Privatsphäre der Schüler sehr ernst. Um diese zu schützen, haben wir eine Veränderung am Login-Abschnitt der Anmeldeseite gemacht, um zu verhindern, dass der vollständige Name angezeigt wird. Auch wenn dieses Update Bedenken hinsichtlich der Login-Seite beheben sollte, bitten wir trotzdem darum, <i>keine vollständigen Namen für Schüler zu verwenden</i>."
     announcement_apcsp_recruitment: "<strong>Informatik Lehrer:</strong> Ihre Schüler könnten im nächsten viralen Video von Code.org vorgestellt werden, in dem es um die Prüfungen über die Informatik-Grundsätze geht. Wir laden dazu alle Informatik-Schüler ein uns ein 10-20 Sekunden-Video auf Twitter, Instagram oder Facebook zu schicken, in welchem ihr sagt \"I'm taking the #APCSP exam because...\". Die beste Einsendung wird in unserem Video gezeigt und die gewinnenden Schüler erhalten ganz viel Code.org Ehre und Swag!"
     announcement_apcsp_recruitment2: "Die diesjährigen Informatik Test sind darauf ausgelegt Rekorde zu brechen. Die Teilnahme der Studierenden an der Prüfung könnte die Vielfalt drastisch verschieben, aber wir brauchen ihre Hilfe. Ermutigen sie ihre Schüler teilzunehmen und wir werden ihnen für jeden <a href='%{gift_url}' target='_blank'>ein Geschenk schicken</a>. Schüler können auch ihre landesweiten Freunde dazu einladen, an unserer <a href='%{challenge_url}' target='_blank'>#APCSP Video Challenge</a> teilzunehmen."
     announcement_apcsp_recruitment3: "Die diesjährigen Informatik Test sind darauf ausgelegt Rekorde zu brechen. Die Teilnahme der Studierenden an der Prüfung könnte die Vielfalt drastisch verschieben, aber wir brauchen ihre Hilfe. Ermutigen sie ihre Schüler teilzunehmen und gewinnen sie <a href='%{gift_url}' target='_blank'>Gutscheine, Laptops und andere coole Preise</a>! Teilen sie dazu einfach <a href='%{video_url}' target='_blank'>dieses Video</a>, sodass Schüler von ihren Kollegen erfahren, dass sie an den Prüfungen teilnehmen."
-    announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
+    announcement_csp_deadline: "Letzte Chance für Oberstufen-Lehrer/-Lehrerinnen! Übernehmen Sie die Leitung für Informatik in Ihrer Schule und bewerben Sie sich für unsere erstklassigen professionellen Programme <strong>absolut ohne Kosten für Sie oder Ihre Schule</strong>. Anmeldung endet am 14. April."
     announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
     announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
     announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
@@ -780,10 +791,6 @@ de:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  components:
-    icon_library:
-      search_placeholder_text: 'Suche nach einem Icon-Symbol...'
-      no_icons_found: 'Keine Icon-Symbole gefunden'
   flex_category:
     required: 'Übersicht'
     content: 'Inhalt'
@@ -819,6 +826,7 @@ de:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Haftungsausschluss
     leaving_domain: "Sie verlassen jetzt die Code.org Website. Bitte beachten Sie, dass dieser\nLink eine Website öffnet, für deren Inhalt wir nicht verantwortlich sind."

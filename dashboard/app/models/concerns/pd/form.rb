@@ -13,6 +13,11 @@ module Pd::Form
       {}
     end
 
+    def public_fields
+      # should be overridden by including model
+      []
+    end
+
     def required_fields
       # should be overridden by including model
       []
@@ -78,5 +83,9 @@ module Pd::Form
 
   def sanitize_form_data_hash
     form_data_hash.transform_keys {|key| key.underscore.to_sym}
+  end
+
+  def public_sanitized_form_data_hash
+    sanitize_form_data_hash.select {|key| self.class.public_fields.include? key}
   end
 end
