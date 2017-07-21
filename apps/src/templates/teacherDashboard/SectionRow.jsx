@@ -245,6 +245,15 @@ class SectionRow extends Component {
 
     const persistedSection = !!section.code;
 
+    let sectionCode = '';
+    if (!editing) {
+      if (section.providerManaged) {
+        sectionCode = '---';
+      } else {
+        sectionCode = section.code;
+      }
+    }
+
     return (
       <tr
         style={{
@@ -345,7 +354,7 @@ class SectionRow extends Component {
           }
         </td>
         <td style={styles.col}>
-          {section.code}
+          {sectionCode}
         </td>
         <td style={styles.col}>
           {!editing && !deleting && (
