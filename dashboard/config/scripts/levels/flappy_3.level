@@ -12,7 +12,6 @@
     "success_condition": "function successCondition() {\r\n\t        var avatarCenter = {\r\n\t          x: (Flappy.avatarX + 34) / 2,\r\n\t          y: (Flappy.avatarY + 24) / 2\r\n\t        };\r\n\t        var goalCenter = {\r\n\t          x: (Flappy.goalX + Flappy.GOAL_SIZE) / 2,\r\n\t          y: (Flappy.goalY + Flappy.GOAL_SIZE) / 2\r\n\t        };\r\n\t\r\n\t        var diff = {\r\n\t          x: Math.abs(avatarCenter.x - goalCenter.x),\r\n\t          y: Math.abs(avatarCenter.y - goalCenter.y)\r\n\t        };\r\n\t\r\n\t        return diff.x < 15 && diff.y < 15;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        return Flappy.activeTicks() >= 120 && Flappy.SPEED === 0;\r\n\t      }",
     "instructions": "The \"when run\" block allows you to run code when your game starts.  Try setting the level speed and flapping to the target.",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -37,11 +36,12 @@
     "free_play": "false",
     "obstacles": "false",
     "score": "false",
-    "shareable": "false"
+    "shareable": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-21 02:16:47 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ground\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 02:16:47 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"ground\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:34:32 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:36:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 3
@@ -67,7 +67,9 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="flappy_setSpeed"/>
+        <block type="flappy_setSpeed">
+          <title name="VALUE">???</title>
+        </block>
       </xml>
     </required_blocks>
   </blocks>
