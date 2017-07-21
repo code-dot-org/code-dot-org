@@ -64,7 +64,7 @@ get '/v2/sections/:id/students' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.students)
+  JSON.pretty_generate(section.to_owner_hash[:students])
 end
 
 post '/v2/sections/:id/students' do |id|
@@ -96,5 +96,5 @@ get '/v2/sections/:id/teachers' do |id|
   dont_cache
   forbidden! unless section = DashboardSection.fetch_if_allowed(id, dashboard_user_id)
   content_type :json
-  JSON.pretty_generate(section.teachers)
+  JSON.pretty_generate(section.to_owner_hash[:teachers])
 end
