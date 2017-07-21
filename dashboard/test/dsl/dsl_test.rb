@@ -41,6 +41,7 @@ class DslTest < ActiveSupport::TestCase
       login_required: false,
       professional_learning_course: nil,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       peer_reviews_to_complete: nil
     }
@@ -85,6 +86,7 @@ level 'Level 3'
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -219,6 +221,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -257,6 +260,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -277,6 +281,19 @@ level 'Level 2'
 DSL
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal true, output[:hideable_stages]
+  end
+
+  test 'can set exclude_csf_column_in_legend' do
+    input_dsl = <<DSL
+exclude_csf_column_in_legend 'true'
+
+stage 'Stage1'
+level 'Level 1'
+stage 'Stage2'
+level 'Level 2'
+DSL
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal true, output[:exclude_csf_column_in_legend]
   end
 
   test 'can set student_detail_progress_view' do
@@ -315,6 +332,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -357,6 +375,7 @@ level 'Level 3'
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
@@ -408,6 +427,7 @@ DSL
       wrapup_video: nil,
       login_required: false,
       hideable_stages: false,
+      exclude_csf_column_in_legend: false,
       student_detail_progress_view: false,
       professional_learning_course: nil,
       peer_reviews_to_complete: nil
