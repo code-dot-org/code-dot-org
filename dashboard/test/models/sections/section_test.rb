@@ -319,7 +319,8 @@ class SectionTest < ActiveSupport::TestCase
       login_type: "email",
       course_id: course.id,
       script: {id: nil, name: nil},
-      studentNames: [],
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
@@ -344,7 +345,8 @@ class SectionTest < ActiveSupport::TestCase
       login_type: "email",
       course_id: nil,
       script: {id: script.id, name: script.name},
-      studentNames: [],
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
@@ -372,7 +374,8 @@ class SectionTest < ActiveSupport::TestCase
       login_type: "email",
       course_id: course.id,
       script: {id: script.id, name: script.name},
-      studentNames: [],
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
@@ -395,7 +398,8 @@ class SectionTest < ActiveSupport::TestCase
       login_type: "email",
       course_id: nil,
       script: {id: nil, name: nil},
-      studentNames: [],
+      studentCount: 0,
+      grade: nil,
     }
     assert_equal expected, section.summarize
   end
