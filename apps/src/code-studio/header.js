@@ -8,9 +8,14 @@ import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
 import Dialog from './LegacyDialog';
-import {Provider} from 'react-redux';
-import {getStore} from '../redux';
+import { Provider, connect } from 'react-redux';
+import { getStore } from '../redux';
 import PublishDialog from '../templates/projects/PublishDialog';
+import {
+  showShareDialog,
+  showPublishDialog as showPublishDialogAction,
+  hideDialogs
+} from './headerRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -147,6 +152,12 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   }
 };
 
+const ConnectedShareDialog = connect(state => ({
+  isOpen: state.header.get('isShareDialogOpen')
+}), dispatch => ({
+  onClose: () => dispatch(hideDialogs())
+}))(ShareDialog);
+
 function shareProject() {
   dashboard.project.save(function () {
     var shareUrl;
@@ -174,7 +185,7 @@ function shareProject() {
 
     ReactDOM.render(
       <Provider store={getStore()}>
-        <ShareDialog
+        <ConnectedShareDialog
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
@@ -186,7 +197,6 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
-          onClose={hideShareProjectDialog}
           onShowPublishDialog={showPublishDialog}
           onUnpublish={unpublishProject}
           canShareSocial={canShareSocial}
@@ -194,43 +204,48 @@ function shareProject() {
       </Provider>,
       dialogDom
     );
+
+    getStore().dispatch(showShareDialog());
   });
 }
 
-function hideShareProjectDialog() {
-  var dialogDom = document.getElementById('project-share-dialog');
-  ReactDOM.unmountComponentAtNode(dialogDom);
-}
+const ConnectedPublishDialog = connect(state => ({
+  isOpen: state.header.get('isPublishDialogOpen'),
+}), dispatch => ({
+  onClose: () => dispatch(hideDialogs()),
+}))(PublishDialog);
 
 function showPublishDialog() {
-  hideShareProjectDialog();
   var publishDialog = document.getElementById('publish-dialog');
   if (!publishDialog) {
     publishDialog = document.createElement('div');
     publishDialog.setAttribute('id', 'publish-dialog');
     document.body.appendChild(publishDialog);
   }
+
   ReactDOM.render(
-    <PublishDialog
-      onConfirmPublish={publishProject}
-      onClose={hidePublishDialog}
-    />,
+    <Provider store={getStore()}>
+      <ConnectedPublishDialog
+        onConfirmPublish={publishProject}
+      />
+    </Provider>,
     publishDialog
   );
+
+  getStore().dispatch(showPublishDialogAction());
 }
 
 function publishProject() {
   const appType = dashboard.project.getStandaloneApp();
-  window.dashboard.project.publish(appType).then(hidePublishDialog);
-}
-
-function hidePublishDialog() {
-  var publishDialog = document.getElementById('publish-dialog');
-  ReactDOM.unmountComponentAtNode(publishDialog);
+  window.dashboard.project.publish(appType).then(() => {
+    getStore().dispatch(hideDialogs());
+  });
 }
 
 function unpublishProject() {
-  window.dashboard.project.unpublish().then(hideShareProjectDialog);
+  window.dashboard.project.unpublish().then(() => {
+    getStore().dispatch(hideDialogs());
+  });
 }
 
 function remixProject() {

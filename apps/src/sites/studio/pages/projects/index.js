@@ -1,13 +1,19 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import PublishDialog from '@cdo/apps/templates/projects/PublishDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
-import projects, { selectGallery, setProjectLists, prependProjects } from '@cdo/apps/templates/projects/projectsRedux';
+import projects, {
+  selectGallery,
+  setProjectLists,
+  showPublishDialog,
+  hidePublishDialog,
+  prependProjects,
+} from '@cdo/apps/templates/projects/projectsRedux';
 
 $(document).ready(() => {
   registerReducers({projects});
@@ -44,15 +50,25 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
+const ConnectedPublishDialog = connect(state => ({
+  isOpen: state.projects.isPublishDialogOpen,
+}), dispatch => ({
+  onClose() {
+    dispatch(hidePublishDialog());
+  },
+}))(PublishDialog);
+
 function onShowConfirmPublishDialog(callback) {
   const publishConfirm = document.getElementById('publish-confirm');
   ReactDOM.render(
-    <PublishDialog
-      onConfirmPublish={onConfirmPublish.bind(this, callback)}
-      onClose={hideDialog}
-    />,
+    <Provider store={getStore()}>
+      <ConnectedPublishDialog
+        onConfirmPublish={onConfirmPublish.bind(this, callback)}
+      />
+    </Provider>,
     publishConfirm
   );
+  getStore().dispatch(showPublishDialog());
 }
 
 // Make this method available to angularProjects.js. This can go away
@@ -75,11 +91,6 @@ function showNewPublishedProject(projectData, projectType) {
 window.showNewPublishedProject = showNewPublishedProject.bind(this);
 
 function onConfirmPublish(callback) {
-  hideDialog();
+  getStore().dispatch(hidePublishDialog());
   callback();
-}
-
-function hideDialog() {
-  const publishConfirm = document.getElementById('publish-confirm');
-  ReactDOM.unmountComponentAtNode(publishConfirm);
 }

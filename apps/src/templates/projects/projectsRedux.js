@@ -9,6 +9,8 @@ const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
 const APPEND_PROJECTS = 'projects/APPEND_PROJECTS';
 const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
+const SHOW_PUBLISH_DIALOG = 'projects/SHOW_PUBLISH_DIALOG';
+const HIDE_PUBLISH_DIALOG = 'projects/HIDE_PUBLISH_DIALOG';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 
 // Reducers
@@ -79,10 +81,24 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
+const initialShowPublishDialog = false;
+
+function isPublishDialogOpen(state = initialShowPublishDialog, action) {
+  switch (action.type) {
+    case SHOW_PUBLISH_DIALOG:
+      return true;
+    case HIDE_PUBLISH_DIALOG:
+      return false;
+    default:
+      return state;
+  }
+}
+
 const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
+  isPublishDialogOpen,
 });
 export default reducer;
 
@@ -119,4 +135,12 @@ export function setProjectLists(projectLists) {
 
 export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
+}
+
+export function showPublishDialog() {
+  return {type: SHOW_PUBLISH_DIALOG};
+}
+
+export function hidePublishDialog() {
+  return {type: HIDE_PUBLISH_DIALOG};
 }
