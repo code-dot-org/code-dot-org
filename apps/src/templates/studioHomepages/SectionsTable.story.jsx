@@ -34,6 +34,9 @@ const sections = [
   }
 ];
 
+function updateSections() {
+}
+
 export default storybook => {
   return storybook
     .storiesOf('SectionsTable', module)
@@ -47,6 +50,7 @@ export default storybook => {
             isRtl={false}
             isTeacher={true}
             canLeave={false}
+            updateSections={updateSections}
           />
         )
       },
@@ -59,6 +63,7 @@ export default storybook => {
             isRtl={false}
             isTeacher={false}
             canLeave={false}
+            updateSections={updateSections}
           />
         )
       },
@@ -71,6 +76,7 @@ export default storybook => {
             isRtl={false}
             isTeacher={false}
             canLeave={true}
+            updateSections={updateSections}
           />
         )
       },
