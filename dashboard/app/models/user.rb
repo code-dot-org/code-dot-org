@@ -183,6 +183,11 @@ class User < ActiveRecord::Base
   validates_presence_of :school_info, unless: :school_info_optional?
 
   after_create :associate_with_potential_pd_enrollments
+  after_create :send_new_teacher_email, if: :teacher?
+
+  def send_new_teacher_email
+    TeacherMailer.new_teacher_email(self).deliver_now if teacher?
+  end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
