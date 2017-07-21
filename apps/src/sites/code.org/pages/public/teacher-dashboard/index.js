@@ -153,7 +153,7 @@ function main() {
       // default methods: see https://code.angularjs.org/1.2.21/docs/api/ngResource/service/$resource
       //  'get':    {method:'GET'},
       //  'save':   {method:'POST'},
-         query: {method: 'GET', url: '/dashboardapi/sections', isArray: true},
+      //  'query':  {method:'GET', isArray:true},
       //  'remove': {method:'DELETE'},
       //  'delete': {method:'DELETE'}
          update: {method:'POST', url: 'v2/sections/:id/update'},
@@ -221,7 +221,6 @@ function main() {
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
 
     // error handling
     $scope.genericError = function (result) {
@@ -236,14 +235,13 @@ function main() {
       }
     });
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.students.$promise.catch($scope.genericError);
 
     $scope.tab = $routeParams.tab;
 
     $scope.section.$promise.then(
       function ( section ){
         if (!$scope.tab) {
-          if ($scope.section.studentCount > 0) {
+          if ($scope.section.students.length > 0) {
             $location.path('/sections/' + $routeParams.id + '/progress');
           } else {
             $location.path('/sections/' + $routeParams.id + '/manage');
@@ -280,7 +278,7 @@ function main() {
       );
 
       newStudent.$promise.catch($scope.genericError);
-      $scope.students[$scope.students.indexOf(student)] = newStudent;
+      $scope.section.students[$scope.section.students.indexOf(student)] = newStudent;
     };
 
     $scope.save = function (students) {
@@ -305,13 +303,13 @@ function main() {
       if (newStudents && newStudents.length > 0) {
         // remove 'new' students from array
         $.each(newStudents, function (index, student) {
-          $scope.students.splice($scope.students.indexOf(student), 1);
+          $scope.section.students.splice($scope.section.students.indexOf(student), 1);
         });
 
         // add the results from the service to the array
         sectionsService.addStudents({id: $scope.section.id}, newStudents, function (resultStudents) {
           $.each(resultStudents, function (index, student) {
-            $scope.students.unshift(student);
+            $scope.section.students.unshift(student);
           });
         }).$promise.catch($scope.genericError);
       }
@@ -321,7 +319,7 @@ function main() {
         studentsService.update({id: student.id}, student).$promise.then(
           function (result_student) {
             result_student.editing = false;
-            $scope.students[$scope.students.indexOf(student)] = result_student;
+            $scope.section.students[$scope.section.students.indexOf(student)] = result_student;
           }
         ).catch($scope.genericError);
       });
@@ -334,7 +332,7 @@ function main() {
     $scope.del = function (student) { // note -- IE doesn't like it when you name things 'delete'
       sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
         function () {
-          $scope.students.splice($scope.students.indexOf(student), 1); // remove from array
+          $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
       ).catch($scope.genericError);
     };
@@ -343,12 +341,12 @@ function main() {
       if (student.id) {
         student.editing = false;
       } else {
-        $scope.students.splice($scope.students.indexOf(student), 1); // remove from array
+        $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
       }
     };
 
     $scope.new_student = function () {
-      $scope.students.unshift({editing: true});
+      $scope.section.students.unshift({editing: true});
     };
 
     $scope.showMoveStudentsModal = function () {
@@ -366,7 +364,7 @@ function main() {
         var student_name = student_names[i];
         student_name = student_name.trim();
         if (student_name.length > 0) {
-          $scope.students.unshift({editing: true, name: student_name});
+          $scope.section.students.unshift({editing: true, name: student_name});
         }
       }
       $scope.clear_bulk_import();
@@ -495,7 +493,6 @@ function main() {
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
 
     // error handling
     $scope.genericError = function (result) {
@@ -503,7 +500,6 @@ function main() {
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.students.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
@@ -552,7 +548,6 @@ function main() {
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
     $scope.progress = sectionsService.progress({id: $routeParams.id});
     $scope.tab = 'progress';
     $scope.page = {zoom: false};
@@ -563,7 +558,6 @@ function main() {
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.students.$promise.catch($scope.genericError);
     $scope.progress.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
@@ -672,8 +666,8 @@ function main() {
       };
 
       // Put levels on the student object
-      for (var i = 0; i < $scope.students.length; i++) {
-        var student = $scope.students[i];
+      for (var i = 0; i < $scope.section.students.length; i++) {
+        var student = $scope.section.students[i];
 
         // default is no progress
         student.levels = [];
