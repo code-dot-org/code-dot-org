@@ -204,7 +204,12 @@ class Section < ActiveRecord::Base
       },
       studentCount: students.size,
       grade: grade,
+      providerManaged: provider_managed?
     }
+  end
+
+  def provider_managed?
+    false
   end
 
   private

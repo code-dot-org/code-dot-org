@@ -10,6 +10,7 @@ class CleverSectionTest < ActiveSupport::TestCase
     ]
 
     section = CleverSection.from_service('101', owner.id, student_list)
+    assert section.provider_managed?
     assert_equal 'C-101', section.code
 
     assert_no_difference 'User.count' do
