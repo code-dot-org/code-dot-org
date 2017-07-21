@@ -107,6 +107,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     assert_equal 3.67, result_hash[:how_clearly_presented]
   end
 
+  test 'averaging across multiple surveys'
+
   test 'get an error if summarizing a mix of workshop surveys' do
     local_workshop = create(:pd_local_summer_workshop_survey).pd_enrollment.workshop
     local_workshop.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP)
