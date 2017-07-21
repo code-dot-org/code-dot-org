@@ -194,12 +194,15 @@ class Section < ActiveRecord::Base
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
-      stageExtras: stage_extras,
-      pairingAllowed: pairing_allowed,
-      loginType: login_type,
-      courseId: course_id,
-      scriptId: script_id,
-      studentCount: students.size,
+      stage_extras: stage_extras,
+      pairing_allowed: pairing_allowed,
+      login_type: login_type,
+      course_id: course_id,
+      script: {
+        id: script_id,
+        name: script.try(:name),
+      },
+      studentNames: students.pluck(:name),
     }
   end
 
