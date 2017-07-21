@@ -396,6 +396,7 @@ Dashboard::Application.routes.draw do
 
     get 'workshop_user_admin/facilitator_courses', controller: 'workshop_user_admin', action: 'facilitator_courses_form'
     post 'workshop_user_admin/assign_course', controller: 'workshop_user_admin', action: 'assign_course'
+    # TODO: change remove_course to use http delete method
     get 'workshop_user_admin/remove_course', controller: 'workshop_user_admin', action: 'remove_course'
   end
 
