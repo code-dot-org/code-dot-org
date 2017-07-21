@@ -1,0 +1,42 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2014-09-20T02:48:46.000Z",
+  "level_num": "1",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "instructions_important": true,
+    "goal": "{\"startX\":100,\"startY\":0}",
+    "scale": "{\"snapRadius\":2}",
+    "app_specific_fail_error": "Your code looks good - it will flap with each click. But you need to click many times to flap to the target.",
+    "success_condition": "function successCondition() {\n\t        return Flappy.avatarY <= 40;\n\t      }",
+    "failure_condition": "function failureCondition() {\n\t        return Flappy.avatarY > Flappy.MAZE_HEIGHT;\n\t      }",
+    "instructions": "Attach a block to the \"when click\" block, then press \"Run\". Click or tap the screen to move Flappy to the target.",
+    "contained_level_names": null
+  },
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 2
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="flappy_whenClick" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap"/>
+        <block type="flappy_playSound"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="flappy_flap"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Flappy>

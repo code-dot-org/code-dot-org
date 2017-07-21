@@ -1,0 +1,55 @@
+<Flappy>
+  <config><![CDATA[{
+  "game_id": 61,
+  "created_at": "2014-09-20T02:48:46.000Z",
+  "level_num": "11",
+  "user_id": 156,
+  "properties": {
+    "skin": "flappy",
+    "shareable": true,
+    "obstacles": true,
+    "ground": true,
+    "score": true,
+    "free_play": true,
+    "scale": "{\"snapRadius\":2}",
+    "instructions": "Create your own Flappy game. You can change all the visuals and all the rules, even the gravity. When you're done, click Finish to let friends try your game on their phones.",
+    "goal": "null",
+    "contained_level_names": null
+  },
+  "published": true,
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="flappy_whenClick" deletable="false"/>
+        <block type="flappy_whenCollideGround" deletable="false"/>
+        <block type="flappy_whenCollideObstacle" deletable="false"/>
+        <block type="flappy_whenEnterObstacle" deletable="false"/>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="flappy_flap_height"/>
+        <block type="flappy_playSound"/>
+        <block type="flappy_incrementPlayerScore"/>
+        <block type="flappy_endGame"/>
+        <block type="flappy_setSpeed"/>
+        <block type="flappy_setBackground"/>
+        <block type="flappy_setPlayer"/>
+        <block type="flappy_setObstacle"/>
+        <block type="flappy_setGround"/>
+        <block type="flappy_setGapHeight"/>
+        <block type="flappy_setGravity"/>
+        <block type="flappy_setScore"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml/>
+    </required_blocks>
+  </blocks>
+</Flappy>
