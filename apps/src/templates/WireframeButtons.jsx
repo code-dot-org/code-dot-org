@@ -56,7 +56,7 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
  */
 let WireframeButtons = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string.isRequired,
+    channelId: React.PropTypes.string,
     appType: React.PropTypes.string.isRequired,
     isLegacyShare: React.PropTypes.bool.isRequired,
   },
@@ -132,6 +132,7 @@ let WireframeButtons = React.createClass({
               styles={styles.sendToPhone}
               channelId={this.props.channelId}
               appType={this.props.appType}
+              isLegacyShare={this.props.isLegacyShare}
             />
           </div>
       );
