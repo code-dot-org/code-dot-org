@@ -187,3 +187,6 @@ ro:
       courseF_unplugged_powerOfWords:
         title: Activitate fără Calculator
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: '[șir gol]'
+        desc: 'translation missing: en-US.data.unplugged.desc'

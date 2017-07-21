@@ -16,7 +16,8 @@ eu:
         name: 'Izena Erakutsi'
         name_example: 'Display Name<br/>(e.g. Cool Coder or Jane S.)'
         email: 'E-posta'
-        personal_email: 'Personal email address'
+        parent_email: 'Parent/guardian email'
+        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'Erabiltzaile-izena'
         password: 'Pasahitza'
         password_confirmation: 'Pasahitza errepikatu'
@@ -159,7 +160,7 @@ eu:
   password:
     reset_form:
       title: 'Pasahitza ahaztu duzu?'
-      instructions: "Enter your email address below and we'll send you password reset instructions."
+      instructions: "Enter your email address associated with your account below and we'll send you password reset instructions."
       email: 'Email helbidea'
       submit: 'Bidali'
     reset_errors:
@@ -179,6 +180,8 @@ eu:
       Tutorialak dibertigarriak eta bisualki erakargarriak dira, eta jolas-antzeko esperientzia sinple eta gidatu batez informatikaren oinarrizko kontzeptuak irakasten dituzte. Ikasi programatzen Bill Gates, Mark Zuckerberg, Angry Birds eta Plants vs. Zombies-en eskutik! :-)
       
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
   section:
     your_section:
       one: 'Your section:'
@@ -219,6 +222,11 @@ eu:
     updated: '%{model} ongi eguneratu da.'
     destroyed: '%{model} ongi ezabatu da.'
     access_denied: 'Ez daukazu %{model} eredu honetarako baimenik.'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
     header:
       finished_hoc: "Nire Kode Ordua bukatu dut"
@@ -330,6 +338,9 @@ eu:
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
     create_personal_login: 'Create a personal login'
+    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
@@ -780,10 +791,6 @@ eu:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  components:
-    icon_library:
-      search_placeholder_text: 'Ikono bat bilatu...'
-      no_icons_found: 'Ez da ikonorik aurkitu'
   flex_category:
     required: 'Bista orokorra'
     content: 'Content'
@@ -819,6 +826,7 @@ eu:
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
