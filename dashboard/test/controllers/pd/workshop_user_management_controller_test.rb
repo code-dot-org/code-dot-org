@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Pd::WorkshopUserAdminControllerTest < ActionController::TestCase
+class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
   setup_all do
     @workshop_admin = create :workshop_admin

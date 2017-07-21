@@ -1,7 +1,7 @@
-class Pd::WorkshopUserAdminController < ApplicationController
-  authorize_resource class: :pd_workshop_user_admin
+class Pd::WorkshopUserManagementController < ApplicationController
+  authorize_resource class: :pd_workshop_user_management
 
-  # get /pd/workshop_user_admin/facilitator_courses
+  # get /pd/workshop_user_management/facilitator_courses
   def facilitator_courses_form
     search_term = params[:search_term]
     if search_term =~ /^\d+$/
@@ -21,13 +21,13 @@ class Pd::WorkshopUserAdminController < ApplicationController
     end
   end
 
-  # post /pd/workshop_user_admin/assign_course
+  # post /pd/workshop_user_management/assign_course
   def assign_course
     User.find(params[:facilitator_id]).try(:course_as_facilitator=, params[:course])
     redirect_to action: "facilitator_courses_form", search_term: params[:facilitator_id]
   end
 
-  # get /pd/workshop_user_admin/remove_course
+  # get /pd/workshop_user_management/remove_course
   def remove_course
     User.find(params[:facilitator_id]).try(:delete_course_as_facilitator, params[:course])
     redirect_to action: "facilitator_courses_form", search_term: params[:facilitator_id]
