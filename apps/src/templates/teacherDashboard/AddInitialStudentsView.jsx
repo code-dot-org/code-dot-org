@@ -93,7 +93,7 @@ const PictureLoginCard = (props) => (
     description={i18n.loginTypePictureDescription()}
     buttonText={i18n.loginTypePictureButton()}
     isRtl={false}
-    onClick={props.onClick.bind(this, 'picture')}
+    onClick={() => props.onClick('picture')}
   />
 );
 PictureLoginCard.propTypes = {
@@ -107,7 +107,7 @@ const WordLoginCard = (props) => (
     description={i18n.loginTypeWordDescription()}
     buttonText={i18n.loginTypeWordButton()}
     isRtl={false}
-    onClick={props.onClick.bind(this, 'word')}
+    onClick={() => props.onClick('word')}
   />
 );
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -119,7 +119,7 @@ const EmailLoginCard = (props) => (
     description={i18n.loginTypeEmailDescription()}
     buttonText={i18n.loginTypeEmailButton()}
     isRtl={false}
-    onClick={props.onClick.bind(this, 'email')}
+    onClick={() => props.onClick('email')}
   />
 );
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
@@ -130,7 +130,7 @@ const GoogleClassroomCard = (props) => (
     description={i18n.loginTypeGoogleClassroomDescription()}
     buttonText={i18n.loginTypeGoogleClassroomButton()}
     isRtl={false}
-    onClick={props.onClick.bind(this, 'google')}
+    onClick={() => props.onClick('google')}
   />
 );
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -141,7 +141,7 @@ const MicrosoftClassroomCard = (props) => (
     description={i18n.loginTypeMicrosoftClassroomDescription()}
     buttonText={i18n.loginTypeMicrosoftClassroomButton()}
     isRtl={false}
-    onClick={props.onClick.bind(this, 'microsoft')}
+    onClick={() => props.onClick('microsoft')}
   />
 );
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
@@ -152,7 +152,7 @@ const CleverCard = (props) => (
     description={i18n.loginTypeCleverDescription()}
     buttonText={i18n.loginTypeCleverButton()}
     isRtl={false}
-    onClick={props.onClick.bind(this, 'clever')}
+    onClick={() => props.onClick('clever')}
   />
 );
 CleverCard.propTypes = PictureLoginCard.propTypes;
