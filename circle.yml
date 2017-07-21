@@ -68,7 +68,8 @@ dependencies:
         localize_apps: true
         dashboard_enable_pegasus: true
         dashboard_workers: 5
-        skip_seed_all: true" >> locals.yml
+        skip_seed_all: true
+        " >> locals.yml
     - yarn version -V
     # For install, increase default 10 minute timeout to 16 minutes (960s)
     # We use ts to timestamp output lines
