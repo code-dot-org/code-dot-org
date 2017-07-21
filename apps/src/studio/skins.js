@@ -1190,6 +1190,14 @@ function loadHoc2015x(skin, assetUrl) {
     "scrapmetal2": skin.assetUrl('goal2.png'),
   };
 
+  // An empty transparent PNG, used to override the instructions avatar for
+  // scripts in which we don't have permission to show Rey's face
+  skin.blankAvatar = skin.assetUrl('blank.png');
+  skin.avatarAllowedScripts = [
+    'starwars',
+    'starwarsblocks'
+  ];
+
   // NOTE: all class names should be unique.  eventhandler naming won't work
   // if we name a projectile class 'left' for example.
   skin.ProjectileClassNames = [
