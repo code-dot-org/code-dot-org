@@ -10,7 +10,7 @@ const rowOrder = [
   {text: 'Overall, how much have you learned about computer science from your workshop?', key: 'how_much_learned', score_base: 5},
   {text: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?', key: 'how_clearly_presented', score_base: 5},
   {text: 'During your workshop, how much did you participate?', key: 'how_much_participated', score_base: 5},
-  {text: 'When you are not in workshops about the Code.org {course} curriculum how often do you talk about the ideas from the workshops?', key: 'how_often_talk_about_ideas_outside', score_base: 5},
+  {text: 'When you are not in workshops about the Code.org curriculum how often do you talk about the ideas from the workshops?', key: 'how_often_talk_about_ideas_outside', score_base: 5},
   {text: 'How often did you get so focused on workshop activities that you lost track of time?', key: 'how_often_lost_track_of_time', score_base: 5},
   {text: 'Before the workshop, how excited were you about going to your workshop?', key: 'how_excited_before', score_base: 5},
   {text: 'Overall, how interested were you in the in-person workshop?', key: 'overall_how_interested', score_base: 5},
@@ -190,8 +190,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
   renderFreeResponseFeedback() {
     const freeResponseAnswers = freeResponseQuestions.map((question, i) => {
       let answerCollection = this.state.thisWorkshop[question['key']];
-      console.log(answerCollection);
-      return (
+      return answerCollection && (
         <div key={i} className="well">
           <b>{question['text']}</b>
           {this.renderFreeResponseBullets(question, answerCollection)}
