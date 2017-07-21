@@ -1493,7 +1493,7 @@ var scheduleDirtChange = function (options) {
   var previousValue = Maze.map.getValue(row, col) || 0;
 
   Maze.map.setValue(row, col, previousValue + options.amount);
-  Maze.subtype.drawer.updateItemImage(row, col, true);
+  Maze.subtype.scheduleDirtChange(row, col);
   studioApp().playAudio(options.sound);
 };
 
