@@ -173,6 +173,7 @@ export default class RosterDialog extends React.Component {
     return (
       <BaseDialog
         useUpdatedStyles
+        fixedHeight={480}
         isOpen={this.props.isOpen}
         handleClose={this.cancel}
         assetUrl={() => ''}
