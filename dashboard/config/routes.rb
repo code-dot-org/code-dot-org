@@ -394,10 +394,10 @@ Dashboard::Application.routes.draw do
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
 
-    get 'workshop_user_admin/facilitator_courses', controller: 'workshop_user_admin', action: 'facilitator_courses_form'
-    post 'workshop_user_admin/assign_course', controller: 'workshop_user_admin', action: 'assign_course'
+    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
     # TODO: change remove_course to use http delete method
-    get 'workshop_user_admin/remove_course', controller: 'workshop_user_admin', action: 'remove_course'
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
