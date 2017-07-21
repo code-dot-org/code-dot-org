@@ -36,7 +36,7 @@ module Pd::WorkshopSurveyResultsHelper
     surveys.each do |response|
       response_hash = facilitator_name ?
                         response.generate_summary_for_facilitator(facilitator_name) :
-                        response.sanitize_form_data_hash
+                        response.public_sanitized_form_data_hash
 
       response_hash[:who_facilitated].each {|name| responses_per_facilitator[name] += 1}
 
@@ -74,7 +74,7 @@ module Pd::WorkshopSurveyResultsHelper
               end
             end
           else
-            # Free response answers for the workshop as a wholoe
+            # Free response answers for the workshop as a whole
             sum_hash[k] = [] if sum_hash[k] == 0
 
             sum_hash[k] << v if v.presence
