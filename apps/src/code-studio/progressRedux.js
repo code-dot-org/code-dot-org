@@ -46,7 +46,7 @@ const initialState = {
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
   isSummaryView: true,
-  hasFullProgress: false
+  hasFullProgress: false,
 };
 
 /**
@@ -68,7 +68,8 @@ export default function reducer(state = initialState, action) {
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId,
-      hasFullProgress: action.isFullProgress
+      hasFullProgress: action.isFullProgress,
+      stageExtrasUrl: action.stage_extras_level_url
     };
   }
 
@@ -234,7 +235,7 @@ export function processedStages(stages, isPlc) {
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName,
-    isFullProgress}) => ({
+    isFullProgress, stageExtrasUrl}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
@@ -242,7 +243,8 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   stages,
   peerReviewStage,
   scriptName,
-  isFullProgress
+  isFullProgress,
+  stageExtrasUrl,
 });
 
 export const mergeProgress = levelProgress => ({
@@ -381,6 +383,10 @@ export const levelsForLessonId = (state, lessonId) => (
   state.stages.find(stage => stage.id === lessonId).levels.map(
     level => levelWithStatus(state, level)
   )
+);
+
+export const stageExtrasUrl = (state, stageId) => (
+  state.stages.find(stage => stage.id === stageId).stage_extras_level_url
 );
 
 /**
