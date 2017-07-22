@@ -80,6 +80,8 @@ module Api::V1::Pd
           ).organized_by(current_user),
           facilitator_breakdown: false
         )
+      else
+        survey_report[:all_my_local_workshops] = {}
       end
 
       respond_to do |format|
