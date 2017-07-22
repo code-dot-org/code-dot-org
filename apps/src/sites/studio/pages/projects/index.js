@@ -15,6 +15,16 @@ import projects, {
   prependProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
 
+const ConnectedPublishDialog = connect(state => ({
+  isOpen: state.projects.publishDialog.isOpen,
+  projectId: state.projects.publishDialog.projectId,
+  projectType: state.projects.publishDialog.projectType,
+}), dispatch => ({
+  onClose() {
+    dispatch(hidePublishDialog());
+  },
+}))(PublishDialog);
+
 $(document).ready(() => {
   registerReducers({projects});
   const store = getStore();
@@ -43,6 +53,17 @@ $(document).ready(() => {
       </Provider>,
       publicGallery);
   });
+
+  const publishConfirm = document.getElementById('publish-confirm');
+
+  ReactDOM.render(
+    <Provider store={getStore()}>
+      <ConnectedPublishDialog
+        onConfirmPublish={onConfirmPublish}
+      />
+    </Provider>,
+    publishConfirm
+  );
 });
 
 function showGallery(gallery) {
@@ -50,30 +71,13 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
-const ConnectedPublishDialog = connect(state => ({
-  isOpen: state.projects.isPublishDialogOpen,
-}), dispatch => ({
-  onClose() {
-    dispatch(hidePublishDialog());
-  },
-}))(PublishDialog);
-
-function onShowConfirmPublishDialog(callback) {
-  const publishConfirm = document.getElementById('publish-confirm');
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <ConnectedPublishDialog
-        onConfirmPublish={onConfirmPublish.bind(this, callback)}
-      />
-    </Provider>,
-    publishConfirm
-  );
-  getStore().dispatch(showPublishDialog());
+function onShowConfirmPublishDialog(projectId, projectType) {
+  getStore().dispatch(showPublishDialog(projectId, projectType));
 }
 
 // Make this method available to angularProjects.js. This can go away
 // once My Projects is moved to React.
-window.onShowConfirmPublishDialog = onShowConfirmPublishDialog;
+window.onShowConfirmPublishDialog = onShowConfirmPublishDialog.bind(this);
 
 /**
  * Shows a project at the front of the specified list of published projects.
@@ -90,7 +94,7 @@ function showNewPublishedProject(projectData, projectType) {
 // once My Projects is moved to React.
 window.showNewPublishedProject = showNewPublishedProject.bind(this);
 
-function onConfirmPublish(callback) {
+function onConfirmPublish(projectId, projectType) {
   getStore().dispatch(hidePublishDialog());
-  callback();
+  window.projectGalleryPublishProject(projectId, projectType);
 }

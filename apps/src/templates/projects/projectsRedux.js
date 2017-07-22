@@ -81,14 +81,26 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
-const initialShowPublishDialog = false;
+const initialPublishDialogState = {
+  isOpen: false,
+  projectId: null,
+  projectType: null,
+};
 
-function isPublishDialogOpen(state = initialShowPublishDialog, action) {
+function publishDialog(state = initialPublishDialogState, action) {
   switch (action.type) {
     case SHOW_PUBLISH_DIALOG:
-      return true;
+      return {
+        isOpen: true,
+        projectId: action.projectId,
+        projectType: action.projectType,
+      };
     case HIDE_PUBLISH_DIALOG:
-      return false;
+      return {
+        isOpen: false,
+        projectId: null,
+        projectType: null,
+      };
     default:
       return state;
   }
@@ -98,7 +110,7 @@ const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
-  isPublishDialogOpen,
+  publishDialog,
 });
 export default reducer;
 
@@ -137,8 +149,8 @@ export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
 }
 
-export function showPublishDialog() {
-  return {type: SHOW_PUBLISH_DIALOG};
+export function showPublishDialog(projectId, projectType) {
+  return {type: SHOW_PUBLISH_DIALOG, projectId, projectType};
 }
 
 export function hidePublishDialog() {

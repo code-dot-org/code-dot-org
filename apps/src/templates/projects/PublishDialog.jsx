@@ -7,9 +7,16 @@ export default class PublishDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     onConfirmPublish: PropTypes.func.isRequired,
+    projectId: PropTypes.string,
+    projectType: PropTypes.string,
   }
 
-  confirm = () => this.props.onConfirmPublish();
+  confirm = () => {
+    this.props.onConfirmPublish(
+      this.props.projectId,
+      this.props.projectType,
+    );
+  };
 
   close = () => this.props.onClose();
 

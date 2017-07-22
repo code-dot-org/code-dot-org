@@ -107,26 +107,47 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
   };
 
   $scope.showPublishProjectDialog = function (project) {
-    window.onShowConfirmPublishDialog(publishProject.bind(this, project));
+    var projectType = getProjectType(project);
+    window.onShowConfirmPublishDialog(project.id, projectType);
   };
 
   var PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'artist', 'playlab'];
 
-  function publishProject(project) {
-    var type = getProjectType(project);
-    if (PROJECT_TYPES.indexOf(type) === -1) {
-      throw 'Cannot publish project of type "' + type + '"';
+  function setProjectPublishedAt(projectId, publishedAt) {
+    for (var i = 0; i < $scope.projects.length; i++) {
+      var project = $scope.projects[i];
+      if (project.id === projectId) {
+        project.publishedAt = publishedAt;
+        break;
+      }
+    }
+
+    // Refresh the UI
+    $scope.$apply();
+  }
+
+  // Keep the logic for publishing and unpublishing projects in angular for now,
+  // because we need to use the result to update the publishedAt date within
+  // angular.
+
+  function publishProject(projectId, projectType) {
+    if (PROJECT_TYPES.indexOf(projectType) === -1) {
+      throw 'Cannot publish project of type "' + projectType + '"';
     }
     $http({
       method:'POST',
-      url: '/v3/channels/' + project.id + '/publish/' + type,
+      url: '/v3/channels/' + projectId + '/publish/' + projectType,
     }).then(function (response) {
       if (response.data && response.data.publishedAt) {
-        project.publishedAt = response.data.publishedAt;
-        window.showNewPublishedProject(response.data, type);
+        setProjectPublishedAt(projectId, response.data.publishedAt);
+        window.showNewPublishedProject(response.data, projectType);
       }
     });
   }
+
+  // Make this method available to projects/index.js. This can go away
+  // once this file is moved to React.
+  window.projectGalleryPublishProject = publishProject.bind(this);
 
   $scope.unpublishProject = function (project) {
     $http({
