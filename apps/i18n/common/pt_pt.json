@@ -595,6 +595,7 @@
   "editSectionDetails": "Edit Section Details",
   "enableLessonExtras": "Enable Lesson Extras",
   "enablePairProgramming": "Enable Pair Programming",
+  "enrollmentDescription": "Join your teacher's classroom by entering their section code below. Teachers will be able to see your course progress, projects, and reset your password in case you forget it.",
   "explainLessonExtras": "When Lesson Extras is on, students will end each lesson with some bonus challenges and creative projects rather than being automatically advanced to the next lesson. This feature gives students the opportunity to expand their knowledge and further practice, without getting ahead of their classmates.",
   "explainLessonExtrasLearnMore": "Learn more about Lesson Extras.",
   "explainPairProgramming": "When pair programming is turned on, students can choose to work with a classmate at the same computer. Turn this setting on if you want students to be able to work together while sharing progress.",
