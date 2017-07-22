@@ -101,20 +101,29 @@ class Api::V1::Pd::WorkshopSurveyReportControllerTest < ::ActionController::Test
     assert_equal Array.new(3, 'Jaime was very funny'), response_hash['this_workshop']['things_facilitator_did_well']
     assert_equal Array.new(3, 'Jaime was very funny'), response_hash['all_my_local_workshops']['things_facilitator_did_well']
 
-    [organizer, admin].each do |user|
-      sign_in(user)
-      @controller = @controller.class.new
-      get :local_workshop_survey_report, params: {workshop_id: workshop_2.id}
-      assert_response :success
-      response_hash = JSON.parse(@response.body)
+    sign_in(organizer)
+    @controller = @controller.class.new
+    get :local_workshop_survey_report, params: {workshop_id: workshop_2.id}
+    assert_response :success
+    response_hash = JSON.parse(@response.body)
 
-      assert_equal 1, response_hash['this_workshop']['how_much_learned']
-      assert_nil response_hash['all_my_local_workshops']['how_much_learned']
-      assert_equal({'Jaime' => 1.0}, response_hash['this_workshop']['how_clearly_presented'])
-      assert_nil response_hash['all_my_local_workshops']['how_clearly_presented']
-      assert_equal({'Jaime' => Array.new(3, 'Jaime was very funny')}, response_hash['this_workshop']['things_facilitator_did_well'])
-      assert_nil response_hash['all_my_local_workshops']['things_facilitator_did_well']
-    end
+    assert_equal 1, response_hash['this_workshop']['how_much_learned']
+    assert_equal 3, response_hash['all_my_local_workshops']['how_much_learned']
+    assert_equal({'Jaime' => 1.0}, response_hash['this_workshop']['how_clearly_presented'])
+    assert_equal 3, response_hash['all_my_local_workshops']['how_clearly_presented']
+    assert_equal({'Jaime' => Array.new(3, 'Jaime was very funny')}, response_hash['this_workshop']['things_facilitator_did_well'])
+    assert_equal({'Cersei' => Array.new(3, 'Cersei brought good wine'), 'Jaime' => Array.new(3, 'Jaime was very funny')}, response_hash['all_my_local_workshops']['things_facilitator_did_well'])
+
+    sign_in(admin)
+    @controller = @controller.class.new
+    get :local_workshop_survey_report, params: {workshop_id: workshop_2.id}
+    assert_response :success
+    response_hash = JSON.parse(@response.body)
+
+    assert_equal 1, response_hash['this_workshop']['how_much_learned']
+    assert_equal({}, response_hash['all_my_local_workshops'])
+    assert_equal({'Jaime' => 1.0}, response_hash['this_workshop']['how_clearly_presented'])
+    assert_equal({'Jaime' => Array.new(3, 'Jaime was very funny')}, response_hash['this_workshop']['things_facilitator_did_well'])
   end
 
   [:student, :teacher, :facilitator, :workshop_organizer].each do |user|
