@@ -15,7 +15,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     enrollment_2 = create :pd_enrollment
     enrollment_2.workshop.facilitators << create(:facilitator, name: 'Facilitator Jane')
     hash_2 = build :pd_teachercon_survey_hash
-    hash_2[:personalLearningNeedsMet] = 'Strongly Disagree'
+    hash_2[:receivedClearCommunication] = 'Strongly Disagree'
     hash_2[:venueFeedback] = 'more venue feedback'
     hash_2[:howCouldImprove] = 'so much'
     hash_2[:whoFacilitated] = ['Facilitator Jane']
@@ -26,8 +26,8 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     workshops.each {|w| w.update(course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON)}
 
     result_hash = summarize_workshop_surveys(workshops: workshops)
-    assert_equal 3.5, result_hash[:personal_learning_needs_met]
-    assert_equal 1, result_hash[:have_ideas_about_formative]
+    assert_equal 3.5, result_hash[:received_clear_communication]
+    assert_equal 2, result_hash[:part_of_community]
     assert_equal ['venue feedback', 'more venue feedback'], result_hash[:venue_feedback]
     assert_equal [['Facilitator Bob'], ['Facilitator Jane']], result_hash[:who_facilitated]
 
