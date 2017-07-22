@@ -111,7 +111,6 @@ const JoinSection = React.createClass({
         <input
           type="text"
           name="sectionCode"
-          ref="sectionCode"
           value={this.state.sectionCode}
           onChange={this.handleChange}
           onKeyUp={this.handleKeyUp}
