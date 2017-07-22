@@ -11,6 +11,8 @@ const HIDE_DIALOGS = 'header/HIDE_DIALOGS';
 const initialState = Immutable.fromJS({
   isShareDialogOpen: false,
   isPublishDialogOpen: false,
+  projectIdToPublish: null,
+  projectTypeToPublish: null,
 });
 
 export default function reducer(state = initialState, action) {
@@ -23,11 +25,15 @@ export default function reducer(state = initialState, action) {
       return state.merge({
         isShareDialogOpen: false,
         isPublishDialogOpen: true,
+        projectIdToPublish: action.projectId,
+        projectTypeToPublish: action.projectType,
       });
     case HIDE_DIALOGS:
       return state.merge({
         isShareDialogOpen: false,
         isPublishDialogOpen: false,
+        projectIdToPublish: null,
+        projectTypeToPublish: null,
       });
     default:
       return state;
@@ -40,8 +46,8 @@ export function showShareDialog() {
   return {type: SHOW_SHARE_DIALOG};
 }
 
-export function showPublishDialog() {
-  return {type: SHOW_PUBLISH_DIALOG};
+export function showPublishDialog(projectId, projectType) {
+  return {type: SHOW_PUBLISH_DIALOG, projectId, projectType};
 }
 
 export function hideDialogs() {

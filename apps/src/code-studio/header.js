@@ -211,6 +211,8 @@ function shareProject() {
 
 const ConnectedPublishDialog = connect(state => ({
   isOpen: state.header.get('isPublishDialogOpen'),
+  projectId: state.header.get('projectIdToPublish'),
+  projectType: state.header.get('projectTypeToPublish'),
 }), dispatch => ({
   onClose: () => dispatch(hideDialogs()),
 }))(PublishDialog);
@@ -232,12 +234,13 @@ function showPublishDialog() {
     publishDialog
   );
 
-  getStore().dispatch(showPublishDialogAction());
+  const projectId = window.dashboard.project.getCurrentId();
+  const projectType = dashboard.project.getStandaloneApp();
+  getStore().dispatch(showPublishDialogAction(projectId, projectType));
 }
 
-function publishProject() {
-  const appType = dashboard.project.getStandaloneApp();
-  window.dashboard.project.publish(appType).then(() => {
+function publishProject(projectId, projectType) {
+  window.dashboard.project.publish(projectType).then(() => {
     getStore().dispatch(hideDialogs());
   });
 }
