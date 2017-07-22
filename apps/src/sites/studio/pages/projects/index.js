@@ -10,10 +10,12 @@ import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projec
 import projects, {
   selectGallery,
   setProjectLists,
-  showPublishDialog,
-  hidePublishDialog,
   prependProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
+import {
+  showPublishDialog,
+  hidePublishDialog
+} from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
 const ConnectedPublishDialog = connect(state => ({
   isOpen: state.projects.publishDialog.isOpen,

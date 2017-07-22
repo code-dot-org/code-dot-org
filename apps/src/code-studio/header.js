@@ -13,9 +13,12 @@ import { getStore } from '../redux';
 import PublishDialog from '../templates/publishDialog/PublishDialog';
 import {
   showShareDialog,
-  showPublishDialog as showPublishDialogAction,
-  hideDialogs
+  hideShareDialog,
 } from './headerRedux';
+import {
+  showPublishDialog as showPublishDialogAction,
+  hidePublishDialog,
+} from '../templates/publishDialog/publishDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -153,9 +156,9 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
 };
 
 const ConnectedShareDialog = connect(state => ({
-  isOpen: state.header.get('isShareDialogOpen')
+  isOpen: state.header.shareDialog.isOpen,
 }), dispatch => ({
-  onClose: () => dispatch(hideDialogs())
+  onClose: () => dispatch(hideShareDialog())
 }))(ShareDialog);
 
 function shareProject() {
@@ -210,11 +213,11 @@ function shareProject() {
 }
 
 const ConnectedPublishDialog = connect(state => ({
-  isOpen: state.header.get('isPublishDialogOpen'),
-  projectId: state.header.get('projectIdToPublish'),
-  projectType: state.header.get('projectTypeToPublish'),
+  isOpen: state.header.publishDialog.isOpen,
+  projectId: state.header.publishDialog.projectId,
+  projectType: state.header.publishDialog.projectType,
 }), dispatch => ({
-  onClose: () => dispatch(hideDialogs()),
+  onClose: () => dispatch(hidePublishDialog()),
 }))(PublishDialog);
 
 function showPublishDialog() {
@@ -236,18 +239,19 @@ function showPublishDialog() {
 
   const projectId = window.dashboard.project.getCurrentId();
   const projectType = dashboard.project.getStandaloneApp();
+  getStore().dispatch(hideShareDialog());
   getStore().dispatch(showPublishDialogAction(projectId, projectType));
 }
 
 function publishProject(projectId, projectType) {
   window.dashboard.project.publish(projectType).then(() => {
-    getStore().dispatch(hideDialogs());
+    getStore().dispatch(hidePublishDialog());
   });
 }
 
 function unpublishProject() {
   window.dashboard.project.unpublish().then(() => {
-    getStore().dispatch(hideDialogs());
+    getStore().dispatch(hideShareDialog());
   });
 }
 

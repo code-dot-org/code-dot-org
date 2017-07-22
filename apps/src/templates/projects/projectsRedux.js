@@ -2,6 +2,7 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
+import publishDialog from '../publishDialog/publishDialogRedux';
 
 // Action types
 
@@ -9,8 +10,6 @@ const TOGGLE_GALLERY = 'projects/TOGGLE_GALLERY';
 const APPEND_PROJECTS = 'projects/APPEND_PROJECTS';
 const SET_PROJECT_LISTS = 'projects/SET_PROJECT_LISTS';
 const SET_HAS_OLDER_PROJECTS = 'projects/SET_HAS_OLDER_PROJECTS';
-const SHOW_PUBLISH_DIALOG = 'projects/SHOW_PUBLISH_DIALOG';
-const HIDE_PUBLISH_DIALOG = 'projects/HIDE_PUBLISH_DIALOG';
 const PREPEND_PROJECTS = 'projects/PREPEND_PROJECTS';
 
 // Reducers
@@ -81,31 +80,6 @@ function hasOlderProjects(state = initialHasOlderProjects, action) {
   }
 }
 
-const initialPublishDialogState = {
-  isOpen: false,
-  projectId: null,
-  projectType: null,
-};
-
-function publishDialog(state = initialPublishDialogState, action) {
-  switch (action.type) {
-    case SHOW_PUBLISH_DIALOG:
-      return {
-        isOpen: true,
-        projectId: action.projectId,
-        projectType: action.projectType,
-      };
-    case HIDE_PUBLISH_DIALOG:
-      return {
-        isOpen: false,
-        projectId: null,
-        projectType: null,
-      };
-    default:
-      return state;
-  }
-}
-
 const reducer = combineReducers({
   selectedGallery,
   projectLists,
@@ -147,12 +121,4 @@ export function setProjectLists(projectLists) {
 
 export function setHasOlderProjects(hasOlderProjects, projectType) {
   return {type: SET_HAS_OLDER_PROJECTS, hasOlderProjects, projectType};
-}
-
-export function showPublishDialog(projectId, projectType) {
-  return {type: SHOW_PUBLISH_DIALOG, projectId, projectType};
-}
-
-export function hidePublishDialog() {
-  return {type: HIDE_PUBLISH_DIALOG};
 }
