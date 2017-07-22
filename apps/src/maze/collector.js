@@ -107,6 +107,17 @@ export default class Collector extends Subtype {
    * @override
    */
   finished() {
+    const minRequired = this.minCollected_ || 1;
+    const collectedEnough = this.getTotalCollected() >= minRequired;
+    const usedFewEnoughBlocks = this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+
+    return collectedEnough && usedFewEnoughBlocks;
+  }
+
+  /**
+   * @override
+   */
+  shouldCheckSuccessOnMove() {
     return false;
   }
 
