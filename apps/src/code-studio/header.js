@@ -10,7 +10,7 @@ import progress from './progress';
 import Dialog from './LegacyDialog';
 import { Provider, connect } from 'react-redux';
 import { getStore } from '../redux';
-import PublishDialog from '../templates/projects/PublishDialog';
+import PublishDialog from '../templates/publishDialog/PublishDialog';
 import {
   showShareDialog,
   showPublishDialog as showPublishDialogAction,
