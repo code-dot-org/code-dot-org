@@ -1,15 +1,17 @@
+import $ from 'jquery';
 import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from "@cdo/locale";
+import styleConstants from '../../styleConstants';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 
 const styles = {
   main: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: color.charcoal,
-    height: 68,
-    width: 940,
+    borderColor: color.border_gray,
+    height: 72,
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginTop: 20,
     marginBottom: 20
@@ -18,6 +20,7 @@ const styles = {
     borderWidth: 5,
     borderStyle: 'dashed',
     borderColor: color.border_gray,
+    boxSizing: "border-box"
   },
   heading: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -36,8 +39,9 @@ const styles = {
     color: color.charcoal,
   },
   wordBox: {
-    width: 495,
+    width: 500,
     marginLeft: 25,
+    marginRight: 20,
     float: 'left',
     borderWidth: 1,
     borderColor: 'red'
@@ -61,10 +65,34 @@ const styles = {
 const JoinSection = React.createClass({
   propTypes: {
     enrolledInASection: React.PropTypes.bool.isRequired,
+    updateSections: React.PropTypes.func.isRequired
+  },
+
+  getInitialState() {
+    return {
+      sectionCode: ''
+    };
+  },
+
+  handleChange(event) {
+    this.setState({sectionCode: event.target.value});
+  },
+
+  handleKeyUp(event) {
+    if (event.key === 'Enter') {
+      this.joinSection();
+    } else if (event.key === 'Escape') {
+      this.setState(this.getInitialState());
+    }
   },
 
   joinSection() {
-    return;
+    const sectionCode = this.state.sectionCode;
+
+    this.setState(this.getInitialState());
+
+    $.post(`/api/v1/sections/${sectionCode}/join`)
+      .done(data => this.props.updateSections(data.sections));
   },
 
   render() {
@@ -83,6 +111,9 @@ const JoinSection = React.createClass({
         <input
           type="text"
           name="sectionCode"
+          value={this.state.sectionCode}
+          onChange={this.handleChange}
+          onKeyUp={this.handleKeyUp}
           style={styles.inputBox}
           placeholder={i18n.joinSectionPlaceholder()}
         />
