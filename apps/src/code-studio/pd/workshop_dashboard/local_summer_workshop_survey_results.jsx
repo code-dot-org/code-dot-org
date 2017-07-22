@@ -6,23 +6,32 @@ import Spinner from './components/spinner';
 const rowOrder = [
   {text: 'Number of enrollments', key: 'num_enrollments'},
   {text: 'Number of survey responses', key: 'num_surveys'},
-  {text: 'I received clear communication about when and where the workshop would take place', key: 'received_clear_communication', score_base: 6},
+
   {text: 'Overall, how much have you learned about computer science from your workshop?', key: 'how_much_learned', score_base: 5},
+  {text: 'During your workshop, how motivating were the activities that this program had you do?', key: 'how_motivating', score_base: 5},
   {text: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?', key: 'how_clearly_presented', score_base: 5},
+  {text: 'How interesting did your facilitator make what you learned in the workshop?', key: 'how_interesting', score_base: 5},
+  {text: 'How often did your facilitator give you feedback that helped you learn?', key: 'how_often_given_feedback', score_base: 5},
+  {text: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?', key: 'how_comfortable_asking_questions', score_base: 5},
+  {text: "How often did your facilitator teach you things that you didn't know before taking this workshop?", key: 'how_often_taught_new_things', score_base: 5},
+  {text: 'When you needed extra help, how good was your facilitator at giving you that help?', key: 'help_quality', score_base: 5},
+
   {text: 'During your workshop, how much did you participate?', key: 'how_much_participated', score_base: 5},
   {text: 'When you are not in workshops about the Code.org curriculum how often do you talk about the ideas from the workshops?', key: 'how_often_talk_about_ideas_outside', score_base: 5},
   {text: 'How often did you get so focused on workshop activities that you lost track of time?', key: 'how_often_lost_track_of_time', score_base: 5},
   {text: 'Before the workshop, how excited were you about going to your workshop?', key: 'how_excited_before', score_base: 5},
   {text: 'Overall, how interested were you in the in-person workshop?', key: 'overall_how_interested', score_base: 5},
+
   {text: 'I feel more prepared to teach the material covered in this workshop than before I came.', key: 'more_prepared_than_before', score_base: 6},
   {text: 'I know where to go if I need help preparing to teach this material.', key: 'know_where_to_go_for_help', score_base: 6},
   {text: 'This professional development was suitable for my level of experience with teaching this course.', key: 'suitable_for_my_experience', score_base: 6},
   {text: 'I would recommend this professional development to others.', key: 'would_recommend', score_base: 6},
-  {text: 'I look forward to continuing my training throughout the year.', key: 'anticipate_continuing', score_base: 6},
+  {text: "I feel more connected to the community of computer science teachers after this workshop.", key: 'part_of_community', score_base: 6},
+
   {text: 'I feel confident I can teach this course to my students this year.', key: 'confident_can_teach', score_base: 6},
+  {text: 'I look forward to continuing my training throughout the year.', key: 'anticipate_continuing', score_base: 6},
+  {text: 'I received clear communication about when and where the workshop would take place', key: 'received_clear_communication', score_base: 6},
   {text: 'I believe all students should take this course', key: 'believe_all_students', score_base: 6},
-  {text: "This was the absolute best professional development I've ever participated in.", key: 'best_pd_ever', score_base: 6},
-  {text: "I feel more connected to the community of computer science teachers after this workshop.", key: 'part_of_community', score_base: 6}
 ];
 
 const freeResponseQuestions = [
@@ -153,7 +162,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
   },
 
   renderFreeResponseBullets(question, answerCollection) {
-    if (question['facilitator_breakdown']) {
+    if (question['facilitator_breakdown'] && this.state.facilitatorBreakdown) {
       return this.freeResponseMapToBullets(answerCollection);
     } else {
       return answerCollection.map((answer, i) => {
