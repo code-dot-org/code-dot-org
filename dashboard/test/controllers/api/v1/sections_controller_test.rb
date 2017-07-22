@@ -125,9 +125,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response 404
   end
 
-  test "leave with valid section code" do
+  test "leave with valid joined section code" do
     sign_in @word_user_1
     post :leave, params: {id: @word_section.code}
     assert_response :success
+  end
+
+  test "leave with valid unjoined section code" do
+    student = create :student
+    sign_in student
+    post :leave, params: {id: @word_section.code}
+    assert_response 403
   end
 end
