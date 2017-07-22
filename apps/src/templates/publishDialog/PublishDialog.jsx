@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import Dialog from '../../templates/Dialog';
+import Dialog from '../Dialog';
 import i18n from '@cdo/locale';
 
 export default class PublishDialog extends Component {
