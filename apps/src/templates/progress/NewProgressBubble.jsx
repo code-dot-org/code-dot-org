@@ -147,6 +147,7 @@ const NewProgressBubble = React.createClass({
         />
       );
     }
+
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
     let bubble = (
