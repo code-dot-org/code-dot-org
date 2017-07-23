@@ -6,23 +6,32 @@ import Spinner from './components/spinner';
 const rowOrder = [
   {text: 'Number of enrollments', key: 'num_enrollments'},
   {text: 'Number of survey responses', key: 'num_surveys'},
-  {text: 'I received clear communication about when and where the workshop would take place', key: 'received_clear_communication', score_base: 6},
+
   {text: 'Overall, how much have you learned about computer science from your workshop?', key: 'how_much_learned', score_base: 5},
+  {text: 'During your workshop, how motivating were the activities that this program had you do?', key: 'how_motivating', score_base: 5},
   {text: 'For this workshop, how clearly did your facilitator present the information that you needed to learn?', key: 'how_clearly_presented', score_base: 5},
+  {text: 'How interesting did your facilitator make what you learned in the workshop?', key: 'how_interesting', score_base: 5},
+  {text: 'How often did your facilitator give you feedback that helped you learn?', key: 'how_often_given_feedback', score_base: 5},
+  {text: 'How comfortable were you asking your facilitator questions about what you were learning in his or her workshop?', key: 'how_comfortable_asking_questions', score_base: 5},
+  {text: "How often did your facilitator teach you things that you didn't know before taking this workshop?", key: 'how_often_taught_new_things', score_base: 5},
+  {text: 'When you needed extra help, how good was your facilitator at giving you that help?', key: 'help_quality', score_base: 5},
+
   {text: 'During your workshop, how much did you participate?', key: 'how_much_participated', score_base: 5},
-  {text: 'When you are not in workshops about the Code.org {course} curriculum how often do you talk about the ideas from the workshops?', key: 'how_often_talk_about_ideas_outside', score_base: 5},
+  {text: 'When you are not in workshops about the Code.org curriculum how often do you talk about the ideas from the workshops?', key: 'how_often_talk_about_ideas_outside', score_base: 5},
   {text: 'How often did you get so focused on workshop activities that you lost track of time?', key: 'how_often_lost_track_of_time', score_base: 5},
   {text: 'Before the workshop, how excited were you about going to your workshop?', key: 'how_excited_before', score_base: 5},
   {text: 'Overall, how interested were you in the in-person workshop?', key: 'overall_how_interested', score_base: 5},
+
   {text: 'I feel more prepared to teach the material covered in this workshop than before I came.', key: 'more_prepared_than_before', score_base: 6},
   {text: 'I know where to go if I need help preparing to teach this material.', key: 'know_where_to_go_for_help', score_base: 6},
   {text: 'This professional development was suitable for my level of experience with teaching this course.', key: 'suitable_for_my_experience', score_base: 6},
   {text: 'I would recommend this professional development to others.', key: 'would_recommend', score_base: 6},
-  {text: 'I look forward to continuing my training throughout the year.', key: 'anticipate_continuing', score_base: 6},
+  {text: "I feel more connected to the community of computer science teachers after this workshop.", key: 'part_of_community', score_base: 6},
+
   {text: 'I feel confident I can teach this course to my students this year.', key: 'confident_can_teach', score_base: 6},
+  {text: 'I look forward to continuing my training throughout the year.', key: 'anticipate_continuing', score_base: 6},
+  {text: 'I received clear communication about when and where the workshop would take place', key: 'received_clear_communication', score_base: 6},
   {text: 'I believe all students should take this course', key: 'believe_all_students', score_base: 6},
-  {text: "This was the absolute best professional development I've ever participated in.", key: 'best_pd_ever', score_base: 6},
-  {text: "I feel more connected to the community of computer science teachers after this workshop.", key: 'part_of_community', score_base: 6}
 ];
 
 const freeResponseQuestions = [
@@ -36,8 +45,7 @@ const freeResponseQuestions = [
 const LocalSummerWorkshopSurveyResults = React.createClass({
   propTypes: {
     params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired,
-      facilitators: React.PropTypes.arrayOf(React.PropTypes.string)
+      workshopId: React.PropTypes.string.isRequired
     })
   },
 
@@ -63,23 +71,33 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         loading: false,
         results: data,
         thisWorkshop: data['this_workshop'],
-        allMyLocalWorkshops: data['all_my_local_workshops']
+        allMyLocalWorkshops: data['all_my_local_workshops'],
+        facilitatorBreakdown: data['facilitator_breakdown'],
+        facilitatorNames: data['facilitator_names']
       });
     });
   },
 
   renderLocalSummerWorkshopSurveyResultsTable() {
-    let thisWorkshop = this.state.results['this_workshop'];
-    let allMyLocalWorkshops = this.state.results['all_my_local_workshops'];
+    let facilitatorColumnHeaders;
+
+    if (this.state.facilitatorBreakdown) {
+       facilitatorColumnHeaders = this.state.facilitatorNames.map((facilitator, i) => {
+        return (
+          <th key={i}>
+            {facilitator}
+          </th>
+        );
+      });
+    }
 
     return (
       <table className="table table-bordered" style={{width: 'auto'}}>
         <thead>
           <tr>
             <th/>
-            <th>
-              This workshop
-            </th>
+            <th>This workshop</th>
+            {facilitatorColumnHeaders}
             <th>
               All my local summer workshops
             </th>
@@ -89,16 +107,49 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
           {
             rowOrder.map((row, i) => {
               return (
-                <tr key={i}>
-                  <td>{row['text']}</td>
-                  <td>{this.renderScore(row, thisWorkshop[row['key']])}</td>
-                  <td>{this.renderScore(row, allMyLocalWorkshops[row['key']])}</td>
-                </tr>
+                this.renderRow(row, i)
               );
             })
           }
         </tbody>
       </table>
+    );
+  },
+
+  renderRow(row, i) {
+    let scoreCells;
+    let thisWorkshopData = this.state.thisWorkshop[row['key']];
+
+    if (this.state.facilitatorBreakdown && typeof thisWorkshopData === 'object') {
+      scoreCells = this.state.facilitatorNames.map((facilitator, i) => {
+        return (
+          <td key={i}>
+            {this.renderScore(row, thisWorkshopData[facilitator])}
+          </td>
+        );
+      });
+
+      scoreCells.unshift((<td key={this.state.facilitatorNames.length}/>));
+    } else {
+      scoreCells = [(
+        <td key={0}>
+          {this.renderScore(row, thisWorkshopData)}
+        </td>
+      )];
+
+      if (this.state.facilitatorBreakdown) {
+        _.times(this.state.facilitatorNames.length, (i) => {
+          scoreCells.push((<td key={i + 1}/>));
+        });
+      }
+    }
+
+    return (
+      <tr key={i}>
+        <td>{row['text']}</td>
+        {scoreCells}
+        <td>{this.renderScore(row, this.state.allMyLocalWorkshops[row['key']])}</td>
+      </tr>
     );
   },
 
@@ -110,21 +161,48 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
     }
   },
 
+  renderFreeResponseBullets(question, answerCollection) {
+    if (question['facilitator_breakdown'] && this.state.facilitatorBreakdown) {
+      return this.freeResponseMapToBullets(answerCollection);
+    } else {
+      return answerCollection.map((answer, i) => {
+        return (
+          <li key={i}>
+            {answer}
+          </li>
+        );
+      });
+    }
+  },
+
+  freeResponseMapToBullets(answer) {
+    return Object.keys(answer).map((facilitator_name, i) => {
+      return (
+        <li key={i}>
+          {facilitator_name}
+          <ul>
+            {
+              answer[facilitator_name].map((feedback, j) => {
+                return (
+                  <li key={j}>
+                    {feedback}
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </li>
+      );
+    });
+  },
+
   renderFreeResponseFeedback() {
     const freeResponseAnswers = freeResponseQuestions.map((question, i) => {
-      return (
+      let answerCollection = this.state.thisWorkshop[question['key']];
+      return answerCollection && (
         <div key={i} className="well">
           <b>{question['text']}</b>
-          {
-            Array.isArray(this.state.thisWorkshop[question['key']]) &&
-            this.state.thisWorkshop[question['key']].map((answer, j) => {
-              return !!(_.trim(answer)) && (
-                <li key={j}>
-                  {answer}
-                </li>
-              );
-            })
-          }
+          {this.renderFreeResponseBullets(question, answerCollection)}
         </div>
       );
     });
