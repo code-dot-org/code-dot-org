@@ -99,14 +99,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "join with nobody signed in" do
-    post :join, params: {id: @word_section.code}
+    post :join, params: {id: @section.code}
     assert_response 404
   end
 
   test "join with valid section code" do
     student = create :student
     sign_in student
-    post :join, params: {id: @word_section.code}
+    post :join, params: {id: @section.code}
     assert_response :success
   end
 
@@ -117,20 +117,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "leave with nobody signed in" do
-    post :leave, params: {id: @word_section.code}
+    post :leave, params: {id: @section.code}
     assert_response 404
   end
 
   test "leave with valid joined section code" do
-    sign_in @word_user_1
-    post :leave, params: {id: @word_section.code}
+    sign_in @student
+    post :leave, params: {id: @section.code}
     assert_response :success
   end
 
   test "leave with valid unjoined section code" do
     student = create :student
     sign_in student
-    post :leave, params: {id: @word_section.code}
+    post :leave, params: {id: @section.code}
     assert_response 403
   end
 
@@ -221,7 +221,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         login_type: desired_type,
       }
 
-      assert_equal desired_type, returned_json['loginType']
+      assert_equal desired_type, returned_json['login_type']
       assert_equal desired_type, returned_section.login_type
     end
   end
@@ -299,7 +299,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         stage_extras: desired_value,
       }
 
-      assert_equal desired_value, returned_json['stageExtras']
+      assert_equal desired_value, returned_json['stage_extras']
       assert_equal desired_value, returned_section.stage_extras
     end
   end
@@ -310,7 +310,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
     }
 
-    assert_equal false, returned_json['stageExtras']
+    assert_equal false, returned_json['stage_extras']
     assert_equal false, returned_section.stage_extras
   end
 
@@ -323,7 +323,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_equal true, returned_json['stageExtras']
+    assert_equal true, returned_json['stage_extras']
     assert_equal true, returned_section.stage_extras
   end
 
@@ -335,7 +335,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
         pairing_allowed: desired_value,
       }
 
-      assert_equal desired_value, returned_json['pairingAllowed']
+      assert_equal desired_value, returned_json['pairing_allowed']
       assert_equal desired_value, returned_section.pairing_allowed
     end
   end
@@ -346,7 +346,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       login_type: Section::LOGIN_TYPE_EMAIL,
     }
 
-    assert_equal true, returned_json['pairingAllowed']
+    assert_equal true, returned_json['pairing_allowed']
     assert_equal true, returned_section.pairing_allowed
   end
 
@@ -359,7 +359,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_equal true, returned_json['pairingAllowed']
+    assert_equal true, returned_json['pairing_allowed']
     assert_equal true, returned_section.pairing_allowed
   end
 
@@ -370,9 +370,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       course_id: @csp_course.id,
     }
 
-    assert_equal @csp_course.id, returned_json['courseId']
+    assert_equal @csp_course.id, returned_json['course_id']
     assert_equal @csp_course, returned_section.course
-    assert_nil returned_json['scriptId']
+    assert_nil returned_json['script']['id']
     assert_nil returned_section.script
   end
 
@@ -385,7 +385,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_nil returned_json['courseId']
+    assert_nil returned_json['course_id']
     assert_nil returned_section.course
   end
 
@@ -396,9 +396,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       script: {id: @script.id},
     }
 
-    assert_equal @script.id, returned_json['scriptId']
+    assert_equal @script.id, returned_json['script']['id']
     assert_equal @script, returned_section.script
-    assert_nil returned_json['courseId']
+    assert_nil returned_json['course_id']
     assert_nil returned_section.course
   end
 
@@ -411,9 +411,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     # TODO: Better to fail here?
 
-    assert_nil returned_json['scriptId']
+    assert_nil returned_json['script']['id']
     assert_nil returned_section.script
-    assert_nil returned_json['courseId']
+    assert_nil returned_json['course_id']
     assert_nil returned_section.course
   end
 
@@ -425,9 +425,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       script: {id: @csp_script.id},
     }
 
-    assert_equal @csp_course.id, returned_json['courseId']
+    assert_equal @csp_course.id, returned_json['course_id']
     assert_equal @csp_course, returned_section.course
-    assert_equal @csp_script.id, returned_json['scriptId']
+    assert_equal @csp_script.id, returned_json['script']['id']
     assert_equal @csp_script, returned_section.script
   end
 
