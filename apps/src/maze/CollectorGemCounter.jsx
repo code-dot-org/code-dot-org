@@ -1,5 +1,41 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import color from '../util/color';
+import msg from './locale';
+
+const styles = {
+  container: {
+    display: 'inline-block',
+    fontFamily: '"Gotham 5r"',
+    paddingRight: 10,
+    pointerEvents: "none",
+    textAlign: 'right',
+    verticalAlign: 'top',
+  },
+  label: {
+    color: color.lighter_gray,
+    textTransform: 'capitalize'
+  },
+  hr: {
+    borderColor: color.lighter_gray,
+    borderWidth: 2,
+    margin: '0 auto',
+  },
+  gemImage: {
+    backgroundImage: "url(\"/blockly/media/skins/collector/gem.png\")",
+    backgroundSize: "100%",
+    display: "inline",
+    padding: 5
+  },
+  checkmark: {
+    color: 'lightgreen',
+    fontSize: 18,
+    left: 5,
+    lineHeight: '25px',
+    position: 'relative',
+    top: 7,
+  },
+};
 
 export class CollectorGemCounter extends React.Component {
   static propTypes = {
@@ -12,43 +48,17 @@ export class CollectorGemCounter extends React.Component {
   }
 
   render() {
+    const showCheckmark = this.props.currentCollected >= this.props.minRequired;
     return (
-      <div
-        style={{
-          width: "100%",
-          position: "absolute",
-          pointerEvents: "none",
-          top: 5,
-          left: 0,
-          textAlign: 'center',
-          fontFamily: '"Gotham 5r"'
-        }}
-      >
-        <div style={{display: 'block'}}>
-          <span>Goal</span>
-          <hr
-            style={{
-              margin: '0 auto',
-              width: 50
-            }}
-          />
-          <div
-            style={{
-              backgroundImage: "url(\"/blockly/media/skins/collector/gem.png\")",
-              backgroundSize: "100%",
-              display: "inline",
-              padding: 5
-            }}
-          >
+      <div style={styles.container}>
+        <div>
+          <span style={styles.label}>{msg.goal()}</span>
+          <hr style={styles.hr} />
+          <div style={styles.gemImage}>
             <i
               style={{
-                color: 'lightgreen',
-                lineHeight: '25px',
-                fontSize: 18,
-                visibility: (this.props.currentCollected >= this.props.minRequired) ? 'visible' : 'hidden',
-                position: 'relative',
-                left: 5,
-                top: 7,
+                ...styles.checkmark,
+                visibility: showCheckmark ? 'visible' : 'hidden',
               }}
               className="fa fa-check"
               aria-hidden="true"
