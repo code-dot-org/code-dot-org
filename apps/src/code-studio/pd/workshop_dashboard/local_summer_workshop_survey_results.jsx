@@ -121,10 +121,10 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
     let thisWorkshopData = this.state.thisWorkshop[row['key']];
 
     if (this.state.facilitatorBreakdown && typeof thisWorkshopData === 'object') {
-      scoreCells = this.state.facilitatorNames.map((facilitator, i) => {
+      scoreCells = this.state.facilitatorNames.map((facilitator_name) => {
         return (
-          <td key={i}>
-            {this.renderScore(row, thisWorkshopData[facilitator])}
+          <td key={facilitator_name}>
+            {this.renderScore(row, thisWorkshopData[facilitator_name])}
           </td>
         );
       });

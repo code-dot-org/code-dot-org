@@ -51,7 +51,7 @@ describe("Local Summer Workshop Management", () => {
   };
 
   describe("View summarization", () => {
-    it("Spinner displayed initially", () => {
+    it("Initially displays spinner", () => {
       let localSummerWorkshopSurveyResults = shallow(
         <LocalSummerWorkshopSurveyResults
           params={{workshopId: '1', facilitators: []}}
@@ -62,7 +62,7 @@ describe("Local Summer Workshop Management", () => {
       expect(localSummerWorkshopSurveyResults.find('Spinner')).to.have.length(1);
     });
 
-    it("Table gets displayed after loading is completed", () => {
+    it("Displays table after loading is completed for facilitator", () => {
       let server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
@@ -87,7 +87,7 @@ describe("Local Summer Workshop Management", () => {
       expect(localSummerWorkshopSurveyResults.find('.well li')).to.have.length(2);
     });
 
-    it("Table gets displayed after loading is completed for workshop organizer", () => {
+    it("Displays table after loading is completed for workshop organizer", () => {
       let server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
