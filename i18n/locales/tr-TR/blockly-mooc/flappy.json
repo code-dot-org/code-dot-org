@@ -36,7 +36,7 @@
   "reinfFeedbackMsg":"Oyununuzu tekrar oynamak için \"yeniden dene\" butonuna basabilirsiniz.",
   "scoreText":"Skor: {playerScore}",
   "setBackground":"sahneyi ayarla",
-  "setBackgroundRandom":"sahneyi rasgele ayarla",
+  "setBackgroundRandom":"sahneyi rastgele ayarla",
   "setBackgroundFlappy":"sahneyi şehir (gündüz) olarak ayarla",
   "setBackgroundNight":"sahneyi şehir (gece) olarak ayarla",
   "setBackgroundSciFi":"sahneyi bilim-kurgu olarak ayarla",
