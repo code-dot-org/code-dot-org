@@ -14,6 +14,7 @@ import PublishDialog from '../templates/publishDialog/PublishDialog';
 import {
   showShareDialog,
   hideShareDialog,
+  unpublishProject as unpublishProjectAction,
 } from './headerRedux';
 import {
   showPublishDialog as showPublishDialogAction,
@@ -249,9 +250,9 @@ function publishProject(projectId, projectType) {
   });
 }
 
-function unpublishProject() {
-  window.dashboard.project.unpublish().then(() => {
-    getStore().dispatch(hideShareDialog());
+function unpublishProject(projectId) {
+  getStore().dispatch(unpublishProjectAction(projectId)).then(() => {
+    window.dashboard.project.setPublishedAt(null);
   });
 }
 
