@@ -6,8 +6,6 @@
   "user_id": 182,
   "properties": {
     "skin": "birds",
-    "maze_data": null,
-    "contained_level_names": null,
     "maze": "[[2,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "instructions_important": "false",
     "is_k1": "false",
@@ -30,7 +28,8 @@
     "disable_if_else_editing": "false",
     "start_direction": "0",
     "step_mode": "0",
-    "shape_shift": "true"
+    "shape_shift": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
