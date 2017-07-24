@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import Radium from 'radium';
-import color from "../util/color";
+import color from '../util/color';
+import locale from '@cdo/locale';
 
-const styles = {
+const newStyles = {
   puzzleRatingButton: {
     fill: color.light_gray,
     cursor: 'pointer',
@@ -48,6 +49,17 @@ const styles = {
   },
 };
 
+const legacyStyles = {
+  puzzleRatingButton: {
+    verticalAlign: 'middle',
+  },
+  question: {
+    fontSize: 16,
+    color: color.light_gray,
+    marginRight: 10,
+  },
+};
+
 class PuzzleRatingButtons extends Component {
   constructor() {
     super();
@@ -55,6 +67,10 @@ class PuzzleRatingButtons extends Component {
       liked: false,
       disliked: false,
     };
+  }
+
+  static propTypes = {
+    useLegacyStyles: React.PropTypes.bool,
   }
 
   like() {
@@ -66,13 +82,20 @@ class PuzzleRatingButtons extends Component {
   }
 
   render() {
+    const styles = this.props.useLegacyStyles ? legacyStyles : newStyles;
     return (
       <div
         id="puzzleRatingButtons"
         style={{display: 'inline-block'}}
       >
+        {this.props.useLegacyStyles &&
+          <span style={styles.question}>{locale.puzzleRatingQuestion()}</span>
+        }
         <a
-          className={this.state.liked ? "enabled" : ""}
+          className={
+            (this.state.liked ? 'enabled' : '') + ' ' +
+            (this.props.useLegacyStyles ? 'puzzle-rating-btn' : '')
+          }
           id="like"
           key="like"
           data-value="1"
@@ -101,7 +124,10 @@ class PuzzleRatingButtons extends Component {
         </a>
 
         <a
-          className={this.state.disliked ? "enabled" : ""}
+          className={
+            (this.state.disliked ? 'enabled' : '') + ' ' +
+            (this.props.useLegacyStyles ? 'puzzle-rating-btn' : '')
+          }
           id="dislike"
           key="dislike"
           data-value="0"

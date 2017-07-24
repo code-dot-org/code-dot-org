@@ -480,6 +480,7 @@
   "published": "Published",
   "publicGallery": "Public Gallery",
   "puzzleCompleted": "Puzzle completed!",
+  "puzzleRatingQuestion": "Did you like this puzzle?",
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
   "question": "Question",
   "readonlyWorkspaceHeader": "View only: ",
