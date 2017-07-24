@@ -207,13 +207,15 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'grant_permission grants admin status' do
     sign_in @admin
     post :grant_permission, params: {user_id: @not_admin.id, permission: 'admin'}
+    assert_redirected_to permissions_form_path(search_term: @not_admin.id)
     assert @not_admin.reload.admin
   end
 
   test 'grant_permission grants user_permission' do
     sign_in @admin
     post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
-    assert_equal [UserPermission::LEVELBUILDER], @not_admin.reload.permissions
+    assert_redirected_to permissions_form_path(search_term: @not_admin.id)
+    assert @not_admin.reload.permission?(UserPermission::LEVELBUILDER), 'Permission not granted to user'
   end
 
   test 'grant_permission noops for student user' do
@@ -223,8 +225,7 @@ class AdminUsersControllerTest < ActionController::TestCase
       params: {user_id: @user.id, permission: UserPermission::LEVELBUILDER}
     )
     assert [], @user.reload.permissions
-    assert_response :redirect
-    assert @response.redirect_url.include?('/admin/permissions')
+    assert_redirected_to permissions_form_path(search_term: @user.id)
     assert_equal(
       "FAILED: user #{@user.id} could not be found or was not a teacher",
       flash[:alert]
@@ -240,8 +241,7 @@ class AdminUsersControllerTest < ActionController::TestCase
         params: {user_id: follower.student_user.id, permission: 'admin'}
       )
     end
-    assert_response :redirect
-    assert @response.redirect_url.include?('/admin/permissions')
+    assert_redirected_to permissions_form_path(search_term: follower.student_user.id)
     assert_equal(
       "FAILED: user #{follower.student_user.email} NOT granted as user has sections_as_students",
       flash[:alert]
@@ -251,6 +251,7 @@ class AdminUsersControllerTest < ActionController::TestCase
   test 'revoke_permission revokes admin status' do
     sign_in @admin
     post :revoke_permission, params: {user_id: @admin.id, permission: 'admin'}
+    assert_redirected_to permissions_form_path(search_term: @admin.id)
     refute @admin.reload.admin
   end
 end

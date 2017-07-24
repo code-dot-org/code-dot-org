@@ -116,7 +116,7 @@ class AdminUsersController < ApplicationController
 
   def grant_permission
     user_id = params[:user_id]
-    permission = params[:user_permission_id]
+    permission = params[:permission]
     @user = User.find(user_id)
 
     unless @user && @user.teacher?
@@ -141,7 +141,7 @@ class AdminUsersController < ApplicationController
   def revoke_permission
     user_id = params[:user_id]
     @user = User.find(user_id)
-    permission = params[:user_permission_id]
+    permission = params[:permission]
     if permission == 'admin'
       @user.admin = nil
       @user.save(validate: false)
