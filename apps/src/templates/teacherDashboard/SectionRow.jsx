@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
@@ -27,6 +28,10 @@ const styles = {
   row: tableStyles.row,
   rightButton: {
     marginLeft: 5
+  },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16,
   },
   nowrap: {
     whiteSpace: 'nowrap'
@@ -111,12 +116,12 @@ ConfirmSave.propTypes = {
 };
 
 const ProviderManagedSectionCode = ({provider}) => (
-  <div>
+  <div data-tip={i18n.providerManagedSection({provider})}>
     {i18n.none()}
     &nbsp;
     <i
       className="fa fa-question-circle"
-      data-tip={i18n.providerManagedSection({provider})}
+      style={styles.sectionCodeNone}
     />
     <ReactTooltip
       role="tooltip"
