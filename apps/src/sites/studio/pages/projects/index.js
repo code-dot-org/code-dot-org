@@ -20,6 +20,7 @@ import {
 
 const ConnectedPublishDialog = connect(state => ({
   isOpen: state.projects.publishDialog.isOpen,
+  isPublishPending: state.header.publishDialog.isPublishPending,
   projectId: state.projects.publishDialog.projectId,
   projectType: state.projects.publishDialog.projectType,
 }), dispatch => ({

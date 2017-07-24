@@ -1,10 +1,14 @@
 import React, { Component, PropTypes } from 'react';
-import Dialog from '../Dialog';
+import Radium from 'radium';
+import Dialog, { Body, styles as dialogStyles } from '../Dialog';
+import PendingButton from '../PendingButton';
+import LegacyButton, { BUTTON_TYPES } from '../LegacyButton';
 import i18n from '@cdo/locale';
 
-export default class PublishDialog extends Component {
+class PublishDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
+    isPublishPending: PropTypes.bool.isRequired,
     onClose: PropTypes.func.isRequired,
     onConfirmPublish: PropTypes.func.isRequired,
     projectId: PropTypes.string,
@@ -24,13 +28,27 @@ export default class PublishDialog extends Component {
     return (
       <Dialog
         title={i18n.publishToPublicGallery()}
-        body={i18n.publishToPublicGalleryWarning()}
-        confirmText={i18n.publish()}
         isOpen={this.props.isOpen}
         handleClose={this.close}
-        onCancel={this.close}
-        onConfirm={this.confirm}
-      />
+      >
+        <Body>
+          <div style={[dialogStyles.body, {marginBottom: 10}]}>
+            {i18n.publishToPublicGalleryWarning()}
+          </div>
+          <LegacyButton type="cancel" onClick={this.close}>
+            {i18n.dialogCancel()}
+          </LegacyButton>
+          <PendingButton
+            isPending={this.props.isPublishPending}
+            onClick={this.confirm}
+            pendingStyle={BUTTON_TYPES.default.style}
+            pendingText={i18n.publishPending()}
+            style={[BUTTON_TYPES.primary.style, {float: 'right'}]}
+            text={i18n.publish()}
+          />
+        </Body>
+      </Dialog>
     );
   }
 }
+export default Radium(PublishDialog);
