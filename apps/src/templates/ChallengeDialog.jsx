@@ -2,7 +2,6 @@ import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';
 import Radium from 'radium';
 import React from 'react';
-import locale from '@cdo/locale';
 
 const stylesGenerator = assetUrl => ({
   dialog: {
@@ -47,13 +46,21 @@ const ChallengeDialog = Radium(React.createClass({
   propTypes: {
     assetUrl: React.PropTypes.func,
     avatar: React.PropTypes.string,
+    cancelButtonLabel: React.PropTypes.string,
+    children: React.PropTypes.oneOfType([
+      React.PropTypes.node,
+      React.PropTypes.arrayOf(React.PropTypes.node)
+    ]),
     isOpen: React.PropTypes.bool,
     handleSkip: React.PropTypes.func,
     handleStart: React.PropTypes.func,
+    hideBackdrop: React.PropTypes.bool,
+    primaryButtonLabel: React.PropTypes.string,
+    title: React.PropTypes.string,
   },
 
   getInitialState() {
-    return { isOpen: true };
+    return { isOpen: this.props.isOpen === undefined || this.props.isOpen };
   },
 
   handleStart() {
@@ -77,25 +84,26 @@ const ChallengeDialog = Radium(React.createClass({
         style={styles.dialog}
         handleClose={this.handleStart}
         hideCloseButton={true}
+        hideBackdrop={this.props.hideBackdrop}
       >
         <img className="modal-image" src={this.props.avatar} />
         <div style={styles.banner}>
           <h1 style={styles.title}>
-            {locale.challengeLevelTitle()}
+            {this.props.title}
           </h1>
         </div>
         <div style={styles.introText}>
-          {locale.challengeLevelIntro()}
+          {this.props.children}
         </div>
         <LegacyButton type="cancel" onClick={this.handleSkip}>
-          {locale.challengeLevelSkip()}
+          {this.props.cancelButtonLabel}
         </LegacyButton>
         <LegacyButton
           type="primary"
           style={styles.primaryButton}
           onClick={this.handleStart}
         >
-          {locale.challengeLevelStart()}
+          {this.props.primaryButtonLabel}
         </LegacyButton>
       </BaseDialog>
     );
