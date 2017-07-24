@@ -126,8 +126,7 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     # With 10 people saying "Not at all clearly" to 3 facilitators, and 5 people saying
     # "Extremely Clearly" to 2 facilitators, we'd expect the answer to be
-    # [(10 * 3 * 1) + (5 * 2 * 5)] / (10 + 30)
-
+    # [(10 * 3 * 1) + (5 * 2 * 5)] / (10 + 30) = 2
     result_hash = summarize_workshop_surveys(workshops: [workshop_1, workshop_2], facilitator_breakdown: false)
     assert_equal 2, result_hash[:how_clearly_presented]
   end

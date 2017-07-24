@@ -121,6 +121,9 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
     let thisWorkshopData = this.state.thisWorkshop[row['key']];
 
     if (this.state.facilitatorBreakdown && typeof thisWorkshopData === 'object') {
+      // If thisWorkshopData is an object, that means it's the facilitator breakdown for
+      // facilitator specific questions. So the numbers belong under facilitator names
+      // and the "this workshop column" is intentionally left blank
       scoreCells = this.state.facilitatorNames.map((facilitator_name) => {
         return (
           <td key={facilitator_name}>
@@ -129,7 +132,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         );
       });
 
-      scoreCells.unshift((<td key={this.state.facilitatorNames.length}/>));
+      scoreCells.unshift((<td key="this workshop"/>));
     } else {
       scoreCells = [(
         <td key={0}>
