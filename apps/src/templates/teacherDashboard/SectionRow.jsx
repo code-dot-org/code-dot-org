@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
@@ -107,6 +108,24 @@ export const ConfirmSave = ({onClickSave, onCancel}) => (
 ConfirmSave.propTypes = {
   onClickSave: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
+};
+
+const ProviderManagedSectionCode = ({provider}) => (
+  <div>
+    {i18n.none()}
+    &nbsp;
+    <i
+      className="fa fa-question-circle"
+      data-tip={i18n.providerManagedSection({provider})}
+    />
+    <ReactTooltip
+      role="tooltip"
+      effect="solid"
+    />
+  </div>
+);
+ProviderManagedSectionCode.propTypes = {
+  provider: PropTypes.string.isRequired,
 };
 
 /**
@@ -260,7 +279,7 @@ class SectionRow extends Component {
     let sectionCode = '';
     if (!editing) {
       if (section.providerManaged) {
-        sectionCode = '---';
+        sectionCode = <ProviderManagedSectionCode provider={section.loginType}/>;
       } else {
         sectionCode = section.code;
       }
