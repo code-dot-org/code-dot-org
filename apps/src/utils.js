@@ -666,18 +666,19 @@ export function bisect(array, conditional) {
  * Post data to a url with a timeout, using sendBeacon with fallback to synchronous ajax.
  * @param {string} url
  * @param {Object} data
- * @param {number} [timeout]
  */
-export function beacon(url, data, timeout) {
+export function beacon(url, data) {
   let sentBeacon = false;
+  const blob = new Blob([encode(data, {skipIndex: true})], {type: 'application/x-www-form-urlencoded'});
   try  {
     if (window.navigator.sendBeacon) {
-      const blob = new Blob([encode(data, {skipIndex: true})], {type: 'application/x-www-form-urlencoded'});
       sentBeacon = window.navigator.sendBeacon(url, blob);
     }
   } catch (e) {}
   if (!sentBeacon) {
-    console.log("fallback to synchronous ajax");
+    let request = new XMLHttpRequest();
+    request.open('POST', url, false);
+    request.send(blob);
   }
 }
 
