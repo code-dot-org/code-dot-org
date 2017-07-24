@@ -1,9 +1,9 @@
 import {
   Direction,
   KeyCodes,
-} from './constants';
+} from '../constants';
 import CustomGameLogic from './customGameLogic';
-require('../utils'); // Provides Function.prototype.inherits
+import '@cdo/apps/utils'; // Provides Function.prototype.inherits
 
 /**
  * Custom logic for the Sam the Bat levels
