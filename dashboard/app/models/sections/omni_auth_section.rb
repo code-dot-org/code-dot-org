@@ -42,8 +42,4 @@ class OmniAuthSection < Section
   def provider_managed?
     true
   end
-
-  def add_student(_)
-    raise 'Cannot add student to a provider-managed section'
-  end
 end
