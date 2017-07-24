@@ -216,6 +216,7 @@ function shareProject() {
 
 const ConnectedPublishDialog = connect(state => ({
   isOpen: state.header.publishDialog.isOpen,
+  isPublishPending: state.header.publishDialog.isPublishPending,
   projectId: state.header.publishDialog.projectId,
   projectType: state.header.publishDialog.projectType,
 }), dispatch => ({

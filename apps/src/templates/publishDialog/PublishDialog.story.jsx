@@ -9,12 +9,29 @@ export default storybook => {
     .storiesOf('PublishDialog', module)
     .addStoryTable([
       {
-        name: 'Publish Dialog',
+        name: 'dialog open',
         description: '',
         story: () => {
           return (
             <PublishDialog
               isOpen={true}
+              isPublishPending={false}
+              onClose={storybook.action('close')}
+              onConfirmPublish={storybook.action('publish')}
+              projectId={PROJECT_ID}
+              projectType={PROJECT_TYPE}
+            />
+          );
+        }
+      },
+      {
+        name: 'dialog open with publish pending',
+        description: '',
+        story: () => {
+          return (
+            <PublishDialog
+              isOpen={true}
+              isPublishPending={true}
               onClose={storybook.action('close')}
               onConfirmPublish={storybook.action('publish')}
               projectId={PROJECT_ID}
