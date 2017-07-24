@@ -287,7 +287,7 @@ function loadAppAsync(appOptions) {
         lastAttemptLoaded = true;
 
         // Load the locally-cached last attempt (if one exists)
-        appOptions.level.lastAttempts = clientState.sourceForLevel(
+        appOptions.level.lastAttempt = clientState.sourceForLevel(
           appOptions.scriptName,
           appOptions.serverProjectLevelId || appOptions.serverLevelId
         );
