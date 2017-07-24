@@ -321,6 +321,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: nil, name: nil},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -347,6 +348,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: script.id, name: script.name},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -376,6 +378,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: script.id, name: script.name},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -400,6 +403,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: nil, name: nil},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
