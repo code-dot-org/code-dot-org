@@ -1019,21 +1019,12 @@ var projects = module.exports = {
   },
 
   /**
-   * Makes a network request to unpublish the project.
-   * @returns {Promise} Promise indicating whether the request succeeded.
+   * Set the publishedAt date in our copy of the project data.
+   * @param {string|null} publishedAt
    */
-  unpublish() {
-    return new Promise((resolve, reject) => {
-      channels.update(`${current.id}/unpublish`, null, err => {
-        if (err) {
-          reject(err);
-        } else {
-          current = current || {};
-          delete current.publishedAt;
-          resolve();
-        }
-      });
-    });
+  setPublishedAt(publishedAt) {
+    current = current || {};
+    current.publishedAt = publishedAt;
   },
 };
 

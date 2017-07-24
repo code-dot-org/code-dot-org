@@ -146,7 +146,7 @@ var ShareDialog = React.createClass({
   },
 
   unpublish: function () {
-    this.props.onUnpublish();
+    this.props.onUnpublish(this.props.channelId);
   },
 
   render: function () {
