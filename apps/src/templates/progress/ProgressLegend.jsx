@@ -11,7 +11,8 @@ const styles = {
     width: '100%',
     // Margin to get it to line up with ProgressLesson
     marginLeft: 3,
-    marginRight: 3
+    marginRight: 3,
+    marginTop: 60,
   },
   tdStyle: {
     padding: 10,
@@ -42,7 +43,7 @@ const styles = {
   },
   headerCell: {
     fontWeight: 'bold',
-    fontSize: 14,
+    fontSize: 18,
   },
   secondaryText: {
     fontSize: 10,
