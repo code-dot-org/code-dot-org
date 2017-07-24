@@ -18,7 +18,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # POST /api/v1/sections
   # Create a new section
   def create
-    # TODO: Push validation into model?
+    # TODO: Push validation into model when old API is fully deprecated
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
     valid_script = params[:script] && Script.valid_script_id?(current_user, params[:script][:id])
@@ -40,7 +40,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     )
     render head :bad_request unless section
 
-    # TODO: Move to an after_create step on Section model?
+    # TODO: Move to an after_create step on Section model when old API is fully deprecated
     if script_to_assign
       current_user.assign_script script_to_assign
     end
