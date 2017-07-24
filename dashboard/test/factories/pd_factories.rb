@@ -25,6 +25,7 @@ FactoryGirl.define do
       enrolled_and_attending_users 0
       enrolled_unattending_users 0
       num_completed_surveys 0
+      randomized_survey_answers false
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
@@ -64,7 +65,7 @@ FactoryGirl.define do
         if workshop.teachercon?
           create :pd_teachercon_survey, pd_enrollment: enrollment
         elsif workshop.local_summer?
-          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment
+          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
         else
           raise 'Num_completed_surveys trait unsupported for this workshop type'
         end
@@ -359,12 +360,26 @@ FactoryGirl.define do
   factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
-    after(:build) do |survey|
+    transient do
+      randomized_survey_answers false
+    end
+
+    after(:build) do |survey, evaluator|
       if survey.form_data.nil?
         enrollment = survey.pd_enrollment
         workshop = enrollment.workshop
 
         survey_hash = build :pd_local_summer_workshop_survey_hash
+
+        if evaluator.randomized_survey_answers
+          survey_hash.each do |k, _|
+            if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
+              survey_hash[k] = Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
+            else
+              survey_hash[k] = SecureRandom.hex[0..8]
+            end
+          end
+        end
 
         Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
           survey_hash[field] = {}
@@ -375,9 +390,10 @@ FactoryGirl.define do
         workshop.facilitators.each do |facilitator|
           Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
             if Pd::LocalSummerWorkshopSurvey.options.key? field
-              survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
+              answers = Pd::LocalSummerWorkshopSurvey.options[field]
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? answers.sample : answers.last
             else
-              survey_hash[field][facilitator.name] = 'Free Response'
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
             end
           end
         end
