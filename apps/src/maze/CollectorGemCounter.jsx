@@ -8,7 +8,7 @@ const styles = {
     display: 'inline-block',
     fontFamily: '"Gotham 5r"',
     paddingRight: 10,
-    pointerEvents: "none",
+    pointerEvents: 'none',
     textAlign: 'right',
     verticalAlign: 'top',
   },
@@ -22,8 +22,8 @@ const styles = {
     margin: '0 auto',
   },
   gemImage: {
-    backgroundSize: "100%",
-    display: "inline",
+    backgroundSize: '100%',
+    display: 'inline',
     padding: 5
   },
   checkmark: {
