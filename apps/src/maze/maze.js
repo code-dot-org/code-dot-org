@@ -349,6 +349,7 @@ Maze.init = function (config) {
 
   var visualizationColumn = (
     <MazeVisualizationColumn
+      showCollectorGemCounter={Maze.subtype.isCollector()}
       showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
     />
