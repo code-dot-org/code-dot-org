@@ -68,8 +68,7 @@ export default function reducer(state = initialState, action) {
       peerReviewStage: action.peerReviewStage,
       scriptName: action.scriptName,
       currentStageId,
-      hasFullProgress: action.isFullProgress,
-      stageExtrasUrl: action.stage_extras_level_url
+      hasFullProgress: action.isFullProgress
     };
   }
 
@@ -235,7 +234,7 @@ export function processedStages(stages, isPlc) {
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
     saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName,
-    isFullProgress, stageExtrasUrl}) => ({
+    isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
@@ -244,7 +243,6 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   peerReviewStage,
   scriptName,
   isFullProgress,
-  stageExtrasUrl,
 });
 
 export const mergeProgress = levelProgress => ({
