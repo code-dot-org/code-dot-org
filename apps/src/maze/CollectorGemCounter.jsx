@@ -7,6 +7,10 @@ export class CollectorGemCounter extends React.Component {
     minRequired: React.PropTypes.number.isRequired,
   }
 
+  static defaultProps = {
+    minRequired: 1,
+  }
+
   render() {
     return (
       <div
