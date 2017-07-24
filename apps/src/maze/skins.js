@@ -67,11 +67,12 @@ var CONFIGS = {
     collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
-    dirtSound: true,
-    digSound: 'get_gem_2.mp3',
-    fillSound: 'fill.mp3',
+    // collectSounds are labeled `get_gem_{1..6}.mp3`
+    collectSounds: new Array(6).fill().map((_, i) => `get_gem_${i+1}.mp3`),
 
-    walkSound: 'walk.mp3',
+    // Walk sound works, but the current available audio is a bit too harsh for
+    // classroom usage. Temporarily disabling until we get some milder audio
+    //walkSound: 'walk.mp3',
 
     look: '#000',
     transparentTileEnding: true,
