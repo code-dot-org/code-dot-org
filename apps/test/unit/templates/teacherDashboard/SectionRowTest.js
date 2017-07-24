@@ -238,8 +238,10 @@ describe('SectionRow', () => {
           sectionId={12}
         />
       );
-      const col = wrapper.find('td').at(7);
-      assert.equal(col.text(), '---');
+      const component = wrapper.find('ProviderManagedSectionCode').dive();
+      const div = component.find('div').at(0);
+      assert.include(div.text(), 'None');
+      assert.equal(div.prop('data-tip'), 'This section is managed by google_classroom. Add students there, then re-sync this section.');
     });
 
     it('is empty when editing', () => {
