@@ -60,15 +60,29 @@ module Api::V1::Pd
       survey_report = Hash.new
 
       survey_report[:facilitator_breakdown] = facilitator_name.nil?
+      survey_report[:facilitator_names] = @workshop.facilitators.map(&:name) if facilitator_name.nil?
 
       survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name: facilitator_name)
-      survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-        workshops: Pd::Workshop.where(
-          subject: @workshop.subject,
-          course: @workshop.course
-        ).facilitated_by(current_user),
-        facilitator_name: facilitator_name
-      )
+
+      if current_user.facilitator?
+        survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
+          workshops: Pd::Workshop.where(
+            subject: @workshop.subject,
+            course: @workshop.course
+          ).facilitated_by(current_user),
+          facilitator_name: facilitator_name
+        )
+      elsif current_user.workshop_organizer?
+        survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
+          workshops: Pd::Workshop.where(
+            subject: @workshop.subject,
+            course: @workshop.course
+          ).organized_by(current_user),
+          facilitator_breakdown: false
+        )
+      else
+        survey_report[:all_my_local_workshops] = {}
+      end
 
       respond_to do |format|
         format.json do
