@@ -21,7 +21,7 @@ var plainTwitterOptions = {
   hashtag: 'HourOfCode'
 };
 
-function loadGumball(skin, assetUrl) {
+function loadGumball(skin) {
   skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'dots';
   skin.projectileFrames = 10;
@@ -231,7 +231,7 @@ function loadGumball(skin, assetUrl) {
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
-function loadIceAge(skin, assetUrl) {
+function loadIceAge(skin) {
   skin.twitterOptions = plainTwitterOptions;
   skin.defaultBackground = 'icy1';
   skin.projectileFrames = 10;
@@ -393,7 +393,7 @@ function loadIceAge(skin, assetUrl) {
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
-function loadInfinity(skin, assetUrl) {
+function loadInfinity(skin) {
   skin.preloadAssets = true;
 
   skin.defaultBackground = 'leafy';
@@ -569,7 +569,7 @@ function loadInfinity(skin, assetUrl) {
     [msg.itemRandom(), RANDOM_VALUE]];
 }
 
-function loadStudio(skin, assetUrl) {
+function loadStudio(skin) {
   skin.defaultBackground = 'cave';
   skin.projectileFrames = 8;
   skin.itemFrames = 8;
@@ -972,23 +972,23 @@ exports.load = function (assetUrl, id) {
   // take care of items specific to skins
   switch (skin.id) {
     case 'gumball':
-      loadGumball(skin, assetUrl);
+      loadGumball(skin);
       break;
     case 'iceage':
-      loadIceAge(skin, assetUrl);
+      loadIceAge(skin);
       break;
     case 'infinity':
-      loadInfinity(skin, assetUrl);
+      loadInfinity(skin);
       break;
     case 'hoc2015':
-      loadStarWarsEvents(skin, assetUrl);
+      loadStarWarsEvents(skin);
       skin.twitterOptions = plainTwitterOptions;
       break;
     case 'hoc2015x':
-      loadStarWarsGrid(skin, assetUrl);
+      loadStarWarsGrid(skin);
       break;
     case 'studio':
-      loadStudio(skin, assetUrl);
+      loadStudio(skin);
       break;
   }
 
