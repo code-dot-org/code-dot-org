@@ -112,7 +112,15 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
     workshop_2 = create(:pd_workshop, :local_summer_workshop, num_sessions: 1, num_facilitators: 3, num_completed_surveys: 10)
 
     workshop_2.survey_responses.each do |response|
-      response.update_form_data_hash({how_clearly_presented: {workshop_2.facilitators.first.name => 'Not at all clearly', workshop_2.facilitators.second.name => 'Not at all clearly', workshop_2.facilitators.third.name => 'Not at all clearly'}})
+      response.update_form_data_hash(
+        {
+          how_clearly_presented: {
+            workshop_2.facilitators.first.name => 'Not at all clearly',
+            workshop_2.facilitators.second.name => 'Not at all clearly',
+            workshop_2.facilitators.third.name => 'Not at all clearly'
+          }
+        }
+      )
       response.save
     end
 
