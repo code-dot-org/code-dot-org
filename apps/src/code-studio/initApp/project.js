@@ -22,8 +22,6 @@ import {queryParams, hasQueryParam} from '../utils';
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
 
-const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
-
 var events = {
   // Fired when run state changes or we enter/exit design mode
   appModeChanged: 'appModeChanged',
@@ -990,30 +988,6 @@ var projects = module.exports = {
         resolve();
       }, error => {
         reject(`error saving thumbnail image: ${error}`);
-      });
-    });
-  },
-
-  /**
-   * Makes a network request to publish the project.
-   * @param {string} projectType Project type to publish the project as.
-   *   Must be one of PUBLISHED_PROJECT_TYPES.
-   * @returns {Promise} Promise indicating whether the operation succeeded.
-   */
-  publish(projectType) {
-    if (!PUBLISHED_PROJECT_TYPES.includes(projectType)) {
-      return Promise.reject(`Cannot publish project of type ${projectType}.`);
-    }
-    return new Promise((resolve, reject) => {
-      channels.update(`${current.id}/publish/${projectType}`, null, (err, data) => {
-        if (err) {
-          reject(err);
-        } else {
-          current = current || {};
-          data = JSON.parse(data);
-          current.publishedAt = data.publishedAt;
-          resolve();
-        }
       });
     });
   },

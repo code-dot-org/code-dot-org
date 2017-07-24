@@ -14,7 +14,8 @@ import projects, {
 } from '@cdo/apps/templates/projects/projectsRedux';
 import {
   showPublishDialog,
-  hidePublishDialog
+  hidePublishDialog,
+  publishProject,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
 const ConnectedPublishDialog = connect(state => ({
@@ -81,22 +82,9 @@ function onShowConfirmPublishDialog(projectId, projectType) {
 // once My Projects is moved to React.
 window.onShowConfirmPublishDialog = onShowConfirmPublishDialog.bind(this);
 
-/**
- * Shows a project at the front of the specified list of published projects.
- * @param {Object} projectData The data for a published project, in the format
- *   defined by projectConstants.projectDataPropType.
- * @param {string} projectType Which list of projects to add this project to.
- *   Valid values include applab, gamelab, playlab, or artist.
- */
-function showNewPublishedProject(projectData, projectType) {
-  getStore().dispatch(prependProjects([projectData], projectType));
-}
-
-// Make this method available to angularProjects.js. This can go away
-// once My Projects is moved to React.
-window.showNewPublishedProject = showNewPublishedProject.bind(this);
-
 function onConfirmPublish(projectId, projectType) {
-  getStore().dispatch(hidePublishDialog());
-  window.projectGalleryPublishProject(projectId, projectType);
+  getStore().dispatch(publishProject(projectId, projectType)).then(projectData => {
+    getStore().dispatch(prependProjects([projectData], projectType));
+    window.setProjectPublishedAt(projectId, projectData.publishedAt);
+  });
 }
