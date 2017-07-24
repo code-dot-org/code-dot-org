@@ -1,9 +1,11 @@
 import React, { PropTypes, Component } from 'react';
 import Radium from 'radium';
+import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from "@cdo/apps/util/color";
-// TODO - should this be in progressStyles?
-import { DOT_SIZE } from './NewProgressBubble';
+import i18n from '@cdo/locale';
+import TooltipWithIcon from './TooltipWithIcon';
+import { DOT_SIZE } from './progressStyles';
 
 const styles = {
   main: {
@@ -33,7 +35,9 @@ class StageExtrasProgressDot extends Component {
   };
   render() {
     const { stageExtrasUrl, onStageExtras } = this.props;
-    // TODO: tooltip
+
+    const tooltipId = _.uniqueId();
+    const icon = onStageExtras ? 'flag-checkered' : 'flag';
     return (
       <a
         href={stageExtrasUrl}
@@ -41,8 +45,15 @@ class StageExtrasProgressDot extends Component {
           ...styles.main,
           ...(onStageExtras && styles.focused)
         }}
+        data-tip data-for={tooltipId}
+        aria-describedby={tooltipId}
       >
-          <FontAwesome icon={onStageExtras ? 'flag-checkered' : 'flag'}/>
+        <FontAwesome icon={icon}/>
+        <TooltipWithIcon
+          tooltipId={tooltipId}
+          icon={icon}
+          text={i18n.stageExtras()}
+        />
       </a>
     );
   }

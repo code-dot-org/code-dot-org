@@ -1,6 +1,11 @@
 import color from "@cdo/apps/util/color";
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
+export const DOT_SIZE = 30;
+export const DIAMOND_DOT_SIZE = 22;
+export const SMALL_DOT_SIZE = 9;
+export const SMALL_DIAMOND_SIZE = 5;
+
 // Style used when hovering
 export const hoverStyle = {
   ':hover': {
@@ -10,7 +15,6 @@ export const hoverStyle = {
     backgroundColor: color.level_current
   }
 };
-
 
 const statusStyle = {
   [LevelStatus.perfect]: {
