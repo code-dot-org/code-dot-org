@@ -630,39 +630,15 @@ en:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "If your loop is counting up, the increment is added to your counter variable each time through. \n\nWhat do you need to add to each number to get the number after it?"
-      Overworld Avoid Monsters_authored_hint:
-        Overworld Avoid Monsters_a: There are multiple paths you can take. Which is the shortest?
-        Overworld Avoid Monsters_b: Remember to use `repeat` loops to simplify your code.
-        Overworld Avoid Monsters_c: Your goal is to get into the doorway of the house, at the top of the screen.
-      Overworld Chop Tree_authored_hint:
-        Overworld Chop Tree_a: You will need to `move forward` twice to be standing in front of the tree.
-        Overworld Chop Tree_b: The `destroy block` command will destroy the block in the square in front of your character, so make sure your character is facing the right way!
-      Overworld Chop Trees_authored_hint:
-        Overworld Chop Trees_a: You can chop down the trees in any order, but one order requires fewer blocks.
-        Overworld Chop Trees_b: Use `destroy block` to chop down each tree.
-        Overworld Chop Trees_c: If you find you are turning in the wrong direction, use the drop down menu on the `turn` commands to change it!
-      Overworld House Frame Chosen_authored_hint:
-        Overworld House Frame Chosen_a: You can change materials using the drop down menu on the `place` command.
-        Overworld House Frame Chosen_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-        Overworld House Frame Chosen_c: Remember you can put more than one command inside of a `repeat` loop.
-      Overworld Move to Sheep_authored_hint:
-        Overworld Move to Sheep_a: The `move forward` block is at the top of the toolbox.
-        Overworld Move to Sheep_b: Make sure both `move forward` commands are connected to the `when run` block to complete the puzzle.
-      Overworld Place Wall_authored_hint:
-        Overworld Place Wall_a: In this case, you will want the `place` command first, and then the `move` command.
-        Overworld Place Wall_b: Make sure both blocks are inside of the `repeat` loop, so they will run more than once.
-        Overworld Place Wall_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-      Overworld Plant Crops_authored_hint:
-        Overworld Plant Crops_a: Use the `plant crop` command to plant a crop in the square you are standing in.
-        Overworld Plant Crops_b: Both stripes of dark brown land by the water need to be filled with crops.
-        Overworld Plant Crops_c: Remember you can put more than one command inside of a `repeat` loop.
-      Overworld Powered Minecart_authored_hint:
-        Overworld Powered Minecart_a: Use `place rail` to lay rail on the square you are standing in.
-        Overworld Powered Minecart_b: Use `repeat` loops to make your code simpler.
-      Overworld Shear Sheep_authored_hint:
-        Overworld Shear Sheep_a: 'The `shear` command works the same as the `destroy block` command: It will act on the square in front of your character.'
-        Overworld Shear Sheep_b: You will need to turn to complete this puzzle. Remember that turns are from the perspective of your character!
-        Overworld Shear Sheep_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
+      Overworld Avoid Monsters_authored_hint: {}
+      Overworld Chop Tree_authored_hint: {}
+      Overworld Chop Trees_authored_hint: {}
+      Overworld House Frame Chosen_authored_hint: {}
+      Overworld Move to Sheep_authored_hint: {}
+      Overworld Place Wall_authored_hint: {}
+      Overworld Plant Crops_authored_hint: {}
+      Overworld Powered Minecart_authored_hint: {}
+      Overworld Shear Sheep_authored_hint: {}
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Start by thinking about this part: what's different each step of the way? What kind of block can you use to make a *decision* about whether you're at a flower or honeycomb?
@@ -677,21 +653,10 @@ en:
         turn_at_honeycomb_pointer: Other than making honey, do you see anything different that you have to do at each honeycomb?
       Quantum Bee - Ryan_authored_hint:
         test_hint: This is a test hint.
-      Underground Avoiding Lava_authored_hint:
-        Underground Avoiding Lava_a: All of the code is in place to check for lava and deal with it. All you need to do is add movement.
-        Underground Avoiding Lava_b: Should your `move forward` command go inside of the if statement or after?
-      Underground If Statements_authored_hint:
-        Underground If Statements_a: The redstone is in the spaces with red speckles.
-        Underground If Statements_b: Can you use a `repeat` loop to make your code simpler?
-        Underground If Statements_c: Don't forget to check spaces for lava, and place cobblestones. Use an `if` statement!
-      Underground Iron_authored_hint:
-        Underground Iron_a: The iron blocks are the speckled spaces behind the torch! But how are you going to get there?
-        Underground Iron_b: When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!
-        Underground Iron_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
-      Underground Mining Coal_authored_hint:
-        Underground Mining Coal_a: Remember that the `destroy block` command acts on the space in front of your character.
-        Underground Mining Coal_b: The pieces of wall with black specks in them are coal! Use `destroy block` on these to mine the coal.
-        Underground Mining Coal_c: Use `place torch` to put a torch in a space.
+      Underground Avoiding Lava_authored_hint: {}
+      Underground If Statements_authored_hint: {}
+      Underground Iron_authored_hint: {}
+      Underground Mining Coal_authored_hint: {}
       aE1_authored_hint: {}
       aE2_authored_hint:
         aE2_a: Notice that since the napkins are 20 pixels long, you'll need to jump 20 pixels before you start your next loop.
@@ -1940,7 +1905,7 @@ en:
         courseC_maze_programming2_b: If the bird isn't getting to the pig, make sure all of the blocks have been fully clicked together, then click "Run" again.
       courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: Try running the code first to see where it goes wrong.
-        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox (left of the workspace, labeled \"Blocks\").\n\nFinally, put your other blocks back in place where they belong.\n"
       courseC_maze_programming4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
@@ -1979,7 +1944,7 @@ en:
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
-        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if it rolls over some, it will pick it up automatically.
+        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if he rolls over some, he will pick it up automatically.
         courseC_starWars_loops1_b: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
@@ -2267,7 +2232,7 @@ en:
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
-        courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward. Use whichever one you like!
+        courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
         courseD_bee_conditionals3_c: Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
@@ -3302,13 +3267,11 @@ en:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
         courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks, with a direction to move underneath each.
         courseE_playLab_scaffold1_c: When you are done, you should be able to move your hero with the arrow keys!
-      courseE_playLab_scaffold3_authored_hint:
-        courseE_playLab_scaffold3_a: Use a `repeat forever` loop to have extra actors patrol up and down, or left and right for the entire game.
-        courseE_playLab_scaffold3_b: If both of your new actors are jumping to random places on the screen, the puzzle may not mark as complete. Try setting one to chase another, or move up and down repeatedly.
-        courseE_playLab_scaffold3_c: A `repeat forever` block does not need to be attached to any event block to run.
+      courseE_playLab_scaffold3_authored_hint: {}
       courseE_playLab_scaffold4_authored_hint:
         courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove point` to subtract one.
-        courseE_playLab_scaffold4_b: The `when actor touches` block can help you out here!
+      courseE_playLab_scaffold5_authored_hint:
+        courseE_playLab_scaffold5_a: To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish.
       courseE_playlab_challenge2_authored_hint:
         courseE_playlab_challenge2_a: |-
           The actor knows what to say based on its mood. Try playing with the things the witch might say.
