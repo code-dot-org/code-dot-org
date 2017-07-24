@@ -73,6 +73,13 @@ export default class Subtype {
     return Cell;
   }
 
+  playAudio_(sound) {
+    // Check for StudioApp, which will often be undefined in unit tests
+    if (this.studioApp_) {
+      this.studioApp_.playAudio(sound);
+    }
+  }
+
   createDrawer() {
     this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt);
   }
