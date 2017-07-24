@@ -11,7 +11,7 @@ const MazeVisualizationColumn = function (props) {
     <span>
       <Visualization />
       <GameButtons>
-        <CollectorGemCounter />
+        {props.showCollectorGemCounter && <CollectorGemCounter />}
         <StepButton showStepButton={props.showStepButton} />
       </GameButtons>
       {props.searchWord && <SpellingControls searchWord={props.searchWord} />}
@@ -21,6 +21,7 @@ const MazeVisualizationColumn = function (props) {
 };
 
 MazeVisualizationColumn.propTypes = {
+  showCollectorGemCounter: React.PropTypes.bool,
   showStepButton: React.PropTypes.bool.isRequired,
   searchWord: React.PropTypes.string
 };
