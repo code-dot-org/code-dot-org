@@ -68,12 +68,12 @@ class LoginTypeCard extends Component {
     subtitle: PropTypes.string,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired,
-    isRtl: PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
   };
 
   render() {
-    const { title, subtitle, description, buttonText, link, isRtl } = this.props;
+    const { title, subtitle, description, buttonText, onClick, isRtl } = this.props;
     const cardStyle = {
       ...styles.card,
       ...(isRtl && styles.rtlCard),
@@ -95,7 +95,7 @@ class LoginTypeCard extends Component {
           </div>
         </div>
         <ProgressButton
-          href={link}
+          onClick={onClick}
           color={ProgressButton.ButtonColor.gray}
           text={buttonText}
           style={styles.button}

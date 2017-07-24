@@ -1,5 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
-  load_and_authorize_resource
+  load_resource :section, find_by: :code, only: [:join, :leave]
+  before_action :find_follower, only: :leave
+  load_and_authorize_resource except: [:join, :leave]
 
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
@@ -44,5 +46,36 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
 
     render json: section.summarize
+  end
+
+  # POST /api/v1/sections/<id>/join
+  def join
+    unless current_user
+      render_404
+      return
+    end
+    @section.add_student current_user
+    render json: {
+      sections: current_user.sections_as_student.map(&:summarize)
+    }
+  end
+
+  # POST /api/v1/sections/<id>/leave
+  def leave
+    authorize! :destroy, @follower
+    @section.remove_student(current_user, @follower, {notify: true})
+    render json: {
+      sections: current_user.sections_as_student.map(&:summarize)
+    }
+  end
+
+  private
+
+  def find_follower
+    unless current_user
+      render_404
+      return
+    end
+    @follower = Follower.where(section: @section.id, student_user_id: current_user.id).first
   end
 end

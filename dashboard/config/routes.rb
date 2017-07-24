@@ -63,6 +63,10 @@ Dashboard::Application.routes.draw do
   concern :section_api_routes do
     resources :sections, only: [:index, :show, :create] do
       resources :students, only: [:index], controller: 'sections_students'
+      member do
+        post 'join'
+        post 'leave'
+      end
     end
   end
 

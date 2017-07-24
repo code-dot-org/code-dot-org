@@ -14,6 +14,7 @@ import {
 } from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   link: tableStyles.link,
@@ -117,6 +118,7 @@ class SectionRow extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     lightRow: PropTypes.bool.isRequired,
+    handleEdit: PropTypes.func,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(
@@ -163,7 +165,22 @@ class SectionRow extends Component {
     });
   }
 
-  onClickEdit = () => this.setState({editing: true});
+  onClickEdit = () => {
+    if (experiments.isEnabled('section-flow-2017')) {
+      const section = this.props.sections[this.props.sectionId];
+      const editData = {
+        name: section.name,
+        grade: section.grade,
+        course: section.course_id,
+        extras: section.stageExtras,
+        pairing: section.pairingAllowed,
+        sectionId: this.props.sectionId
+      };
+      this.props.handleEdit(editData);
+    } else {
+      this.setState({editing: true});
+    }
+  };
 
   onClickEditSave = () => {
     const { sections, sectionId, updateSection } = this.props;
