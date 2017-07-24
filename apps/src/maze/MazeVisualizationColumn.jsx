@@ -11,8 +11,8 @@ const MazeVisualizationColumn = function (props) {
     <span>
       <Visualization />
       <GameButtons>
-        {props.showCollectorGemCounter && <CollectorGemCounter />}
         <StepButton showStepButton={props.showStepButton} />
+        {props.showCollectorGemCounter && <CollectorGemCounter />}
       </GameButtons>
       {props.searchWord && <SpellingControls searchWord={props.searchWord} />}
       <BelowVisualization />
