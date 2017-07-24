@@ -123,9 +123,11 @@ class SectionsPage extends Component {
   };
 
   handleEditRequest = (section) => {
-    this.setState({editSectionDialogOpen : true});
-    this.editor.getWrappedInstance().updateStates(section);
-  }
+    if (experiments.isEnabled('section-flow-2017')) {
+      this.setState({editSectionDialogOpen : true});
+      this.editor.getWrappedInstance().updateStates(section);
+    }
+  };
 
   render() {
     const { numSections } = this.props;
