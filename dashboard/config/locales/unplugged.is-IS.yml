@@ -279,7 +279,7 @@
         title: ''
         desc: ''
       courseA_unplugged_loops:
-        title: Loops Unplugged
+        title: Lykkjur án tölvu
         desc: "Í þessum tíma munt þú læra um lykkjur!"
       courseB_unplugged_MRF:
         title: Verkefni án tölvu
@@ -302,3 +302,6 @@
         title: Verkefni án tölvu
         desc: "Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við
           þig á netinu."
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'

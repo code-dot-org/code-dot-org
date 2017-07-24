@@ -9,15 +9,15 @@ id:
     errors:
       messages:
         blank: "diperlukan"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "diperlukan"
+        invalid_plural: "tidak benar"
     attributes:
       user:
         name: 'Nama Tampilan'
         name_example: 'Tampilan Nama<br/>(e.g. Cool Coder or Jane S.)'
         email: 'email'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Email orang tua/wali'
+        personal_email: "Alamat email pribadi <a href=\"%{url}\">(klik di sini jika Anda tidak memiliki sebuah alamat email)</a>"
         username: 'nama pengguna'
         password: 'kata sandi'
         password_confirmation: 'Konfirmasi sandi'
@@ -561,9 +561,9 @@ id:
       title: "Kondisi"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
+      title: "Widget"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Usia 14+"
       cta: "Pelajari caranya"
   gallery:
     students_drew_these_with_code: "Siswa-siswa telah menggambar ini dengan kode!"
