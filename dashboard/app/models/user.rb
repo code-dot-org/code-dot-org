@@ -372,6 +372,19 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
+  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?'
+
+  def email_matches_for_oauth_upgrade
+    if user_type == User::TYPE_TEACHER
+      # The stored email must match the passed email
+      unless hashed_email == hashed_email_was
+        errors.add :base, I18n.t('devise.registrations.user.user_type_change_email_mismatch')
+        errors.add :email_mismatch, "Email mismatch" # only used to check for this error's existence
+      end
+    end
+    true
+  end
+
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
@@ -1357,7 +1370,7 @@ class User < ActiveRecord::Base
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    encrypted_password.present?
+    encrypted_password.present? || oauth?
   end
 
   # We restrict certain users from editing their password; in particular, those

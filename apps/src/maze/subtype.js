@@ -73,6 +73,27 @@ export default class Subtype {
     return Cell;
   }
 
+  /**
+   * Load subtype-specific audio; called by Maze.init
+   *
+   * @param {Object} skin
+   */
+  loadAudio(skin) {
+    // noop; overridable
+  }
+
+  /**
+   * Simple safe passthrough to StudioApp.playAudio
+   * @param {String} sound - string key of sound to play, as defined by
+   *    StudioApp.loadAudio
+   */
+  playAudio_(sound) {
+    // Check for StudioApp, which will often be undefined in unit tests
+    if (this.studioApp_) {
+      this.studioApp_.playAudio(sound);
+    }
+  }
+
   createDrawer() {
     this.drawer = new DirtDrawer(this.maze_.map, this.skin_.dirt);
   }
@@ -180,6 +201,10 @@ export default class Subtype {
 
       tileId++;
     });
+  }
+
+  scheduleDirtChange(row, col) {
+    this.drawer.updateItemImage(row, col, true);
   }
 
   /**
