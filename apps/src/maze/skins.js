@@ -241,16 +241,26 @@ exports.load = function (assetUrl, id) {
   skin.wall4Sound = soundAssetUrls(skin, 'wall4.mp3');
 
   // (3) Get properties from config
-  var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
-  var isSound = /^(.*)\.mp3$/; // something.mp3
-  for (var prop in config) {
-    var val = config[prop];
+  const isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
+  const isSound = /^(.*)\.mp3$/; // something.mp3
+
+  function determineAssetUrl(val) {
     if (isSound.test(val)) {
       val = soundAssetUrls(skin, val);
     } else if (isAsset.test(val)) {
       val = skin.assetUrl(val);
     }
-    skin[prop] = val;
+
+    return val;
+  }
+
+  for (const prop in config) {
+    const val = config[prop];
+    if (Array.isArray(val)) {
+      skin[prop] = val.map(determineAssetUrl);
+    } else {
+      skin[prop] = determineAssetUrl(val);
+    }
   }
 
   return skin;
