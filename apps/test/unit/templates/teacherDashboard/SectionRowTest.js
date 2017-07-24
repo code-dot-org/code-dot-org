@@ -17,6 +17,7 @@ const sections = {
     name: "my_section",
     loginType: "word",
     grade: "3",
+    providerManaged: false,
     stageExtras: false,
     pairingAllowed: true,
     studentCount: 10,
@@ -27,12 +28,13 @@ const sections = {
     courseId: 29,
     scriptId: 168,
     name: "section_with_course_and_script",
-    loginType: "word",
+    loginType: "google_classroom",
     grade: "3",
+    providerManaged: true,
     stageExtras: false,
     pairingAllowed: true,
     studentCount: 0,
-    code: "PMTKVZ",
+    code: "G-1234567",
   }
 };
 const validLoginTypes = ['word', 'email', 'picture'];
@@ -217,6 +219,38 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(5);
       assert.equal(col.find('input').length, 1);
       assert.equal(col.find('input').props().defaultChecked, true);
+    });
+  });
+
+  describe('section code column', () => {
+    it('shows the code when not provider-managed', () => {
+      const wrapper = shallow(
+        <SectionRow {...defaultProps}/>
+      );
+      const col = wrapper.find('td').at(7);
+      assert.equal(col.text(), 'PMTKVH');
+    });
+
+    it('has no code when provider-managed', () => {
+      const wrapper = shallow(
+        <SectionRow
+          {...defaultProps}
+          sectionId={12}
+        />
+      );
+      const component = wrapper.find('ProviderManagedSectionCode').dive();
+      const div = component.find('div').at(0);
+      assert.include(div.text(), 'None');
+      assert.equal(div.prop('data-tip'), 'This section is managed by google_classroom. Add students there, then re-sync this section.');
+    });
+
+    it('is empty when editing', () => {
+      const wrapper = shallow(
+        <SectionRow {...defaultProps}/>
+      );
+      wrapper.setState({editing: true});
+      const col = wrapper.find('td').at(7);
+      assert.equal(col.text(), '');
     });
   });
 

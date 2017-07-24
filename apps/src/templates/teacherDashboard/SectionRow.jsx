@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
@@ -27,6 +29,10 @@ const styles = {
   row: tableStyles.row,
   rightButton: {
     marginLeft: 5
+  },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16,
   },
   nowrap: {
     whiteSpace: 'nowrap'
@@ -108,6 +114,24 @@ export const ConfirmSave = ({onClickSave, onCancel}) => (
 ConfirmSave.propTypes = {
   onClickSave: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
+};
+
+const ProviderManagedSectionCode = ({provider}) => (
+  <div data-tip={i18n.providerManagedSection({provider})}>
+    {i18n.none()}
+    &nbsp;
+    <i
+      className="fa fa-question-circle"
+      style={styles.sectionCodeNone}
+    />
+    <ReactTooltip
+      role="tooltip"
+      effect="solid"
+    />
+  </div>
+);
+ProviderManagedSectionCode.propTypes = {
+  provider: PropTypes.string.isRequired,
 };
 
 /**
@@ -262,6 +286,15 @@ class SectionRow extends Component {
 
     const persistedSection = !!section.code;
 
+    let sectionCode = '';
+    if (!editing) {
+      if (section.providerManaged) {
+        sectionCode = <ProviderManagedSectionCode provider={section.loginType}/>;
+      } else {
+        sectionCode = section.code;
+      }
+    }
+
     return (
       <tr
         style={{
@@ -362,7 +395,7 @@ class SectionRow extends Component {
           }
         </td>
         <td style={styles.col}>
-          {section.code}
+          {sectionCode}
         </td>
         <td style={styles.col}>
           {!editing && !deleting && (
