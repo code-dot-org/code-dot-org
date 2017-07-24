@@ -40,6 +40,40 @@ const serverSections = [
     studentCount: 1,
   },
   {
+    id: 20,
+    location: "/v2/sections/20",
+    name: "imported_section",
+    login_type: "clever",
+    grade: null,
+    providerManaged: true,
+    code: "C-1234567890",
+    stage_extras: true,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
+    studentCount: 5,
+  },
+  {
+    id: 21,
+    location: "/v2/sections/21",
+    name: "imported_section_2",
+    login_type: "google_classroom",
+    grade: "7",
+    providerManaged: true,
+    code: "G-12345",
+    stage_extras: true,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
+    studentCount: 4,
+  },
+  {
     id: 307,
     location: "/v2/sections/307",
     name: "plc",

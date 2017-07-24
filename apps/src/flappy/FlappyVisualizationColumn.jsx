@@ -5,23 +5,26 @@ var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
-var FlappyVisualizationColumn = function () {
+const FlappyVisualizationColumn = ({showFinishButton}) => {
   return (
     <span>
       <ProtectedVisualizationDiv>
         <svg version="1.1" id="svgFlappy"/>
       </ProtectedVisualizationDiv>
       <GameButtons>
-        <div id="right-button-cell">
+        {showFinishButton && <div id="right-button-cell">
           <button id="rightButton" className="share">
             <img src="/blockly/media/1x1.gif"/>
             {msg.finish()}
           </button>
-        </div>
+        </div>}
       </GameButtons>
       <BelowVisualization/>
     </span>
   );
+};
+FlappyVisualizationColumn.propTypes = {
+  showFinishButton: React.PropTypes.bool.isRequired,
 };
 
 module.exports = FlappyVisualizationColumn;
