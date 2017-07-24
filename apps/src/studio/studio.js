@@ -14,7 +14,7 @@ import AppView from '../templates/AppView';
 import BigGameLogic from './bigGameLogic';
 import CollisionMaskWalls from './collisionMaskWalls';
 import Hammer from "../third-party/hammer";
-import ImageFilterFactory from './ImageFilterFactory';
+import GlowFilter from './starwars/GlowFilter';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
@@ -735,7 +735,7 @@ var goalFilterEffect = null;
 Studio.applyGoalEffect = function () {
   if (!goalFilterEffect) {
     var svg = document.getElementById('svgStudio');
-    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+    goalFilterEffect = new GlowFilter(svg);
   }
 
   if (goalFilterEffect) {

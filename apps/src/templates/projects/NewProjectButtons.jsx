@@ -48,6 +48,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypeMC(),
     thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_mc.png"
   },
+  'minecraft': {
+    label: i18n.projectTypeMinecraft(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_minecraft.png"
+  },
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_starwars.png"
