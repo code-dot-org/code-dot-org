@@ -53,7 +53,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     json = JSON.parse(@response.body)
 
-    course_id = json.find {|section| section['id'] == @section_with_course.id}['courseId']
+    course_id = json.find {|section| section['id'] == @section_with_course.id}['course_id']
     assert_equal @course.id, course_id
   end
 
@@ -89,7 +89,49 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     json = JSON.parse(@response.body)
 
-    assert_equal @course.id, json['courseId']
+    assert_equal @course.id, json['course_id']
+  end
+
+  test "join with invalid section code" do
+    assert_raises(ActiveRecord::RecordNotFound) do
+      post :join, params: {id: 'xxxxxx'}
+    end
+  end
+
+  test "join with nobody signed in" do
+    post :join, params: {id: @word_section.code}
+    assert_response 404
+  end
+
+  test "join with valid section code" do
+    student = create :student
+    sign_in student
+    post :join, params: {id: @word_section.code}
+    assert_response :success
+  end
+
+  test "leave with invalid section code" do
+    assert_raises(ActiveRecord::RecordNotFound) do
+      post :leave, params: {id: 'xxxxxx'}
+    end
+  end
+
+  test "leave with nobody signed in" do
+    post :leave, params: {id: @word_section.code}
+    assert_response 404
+  end
+
+  test "leave with valid joined section code" do
+    sign_in @word_user_1
+    post :leave, params: {id: @word_section.code}
+    assert_response :success
+  end
+
+  test "leave with valid unjoined section code" do
+    student = create :student
+    sign_in student
+    post :leave, params: {id: @word_section.code}
+    assert_response 403
   end
 
   test 'logged out cannot create a section' do

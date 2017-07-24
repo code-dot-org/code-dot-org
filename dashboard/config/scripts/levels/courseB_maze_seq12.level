@@ -30,6 +30,7 @@
   },
   "published": true,
   "notes": "\"Free Play\"",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 17:23:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-21 17:24:38 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -51,7 +52,25 @@
     </recommended_blocks>
     <solution_blocks>
       <xml>
-</xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="controls_repeat_simplified">
+              <title name="TIMES">4</title>
+              <statement name="DO">
+                <block type="maze_moveNorth"/>
+              </statement>
+              <next>
+                <block type="controls_repeat_simplified">
+                  <title name="TIMES">6</title>
+                  <statement name="DO">
+                    <block type="maze_moveWest"/>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
     </solution_blocks>
   </blocks>
 </Maze>

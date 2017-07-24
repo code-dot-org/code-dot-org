@@ -119,6 +119,7 @@ class Script < ActiveRecord::Base
     student_detail_progress_view
     project_widget_visible
     project_widget_types
+    exclude_csf_column_in_legend
   )
 
   def self.twenty_hour_script
@@ -835,7 +836,8 @@ class Script < ActiveRecord::Base
       peerReviewStage: peer_review_stage,
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
-      project_widget_types: project_widget_types
+      project_widget_types: project_widget_types,
+      excludeCsfColumnInLegend: exclude_csf_column_in_legend?
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages
@@ -891,6 +893,7 @@ class Script < ActiveRecord::Base
   def self.build_property_hash(script_data)
     {
       hideable_stages: script_data[:hideable_stages] || false, # default false
+      exclude_csf_column_in_legend: script_data[:exclude_csf_column_in_legend] || false,
       professional_learning_course: script_data[:professional_learning_course] || false, # default false
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,

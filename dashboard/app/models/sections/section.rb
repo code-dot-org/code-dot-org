@@ -167,6 +167,20 @@ class Section < ActiveRecord::Base
     add_student student
   end
 
+  # Remove a student from the section.
+  # Follower is determined by the controller so that it can authorize first.
+  # Optionally email the teacher.
+  def remove_student(student, follower, options)
+    follower.delete
+
+    if options[:notify]
+      # Though in theory required, we are missing an email address for many teachers.
+      if user && user.email.present?
+        FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
+      end
+    end
+  end
+
   # Clears all personal data from the section object.
   def clean_data
     update(name: SYSTEM_DELETED_NAME)
@@ -206,12 +220,17 @@ class Section < ActiveRecord::Base
       numberOfStudents: students.length,
       linkToStudents: "#{base_url}#{id}/manage",
       code: code,
-      stageExtras: stage_extras,
-      pairingAllowed: pairing_allowed,
-      loginType: login_type,
-      courseId: course_id,
-      scriptId: script_id,
+      stage_extras: stage_extras,
+      pairing_allowed: pairing_allowed,
+      login_type: login_type,
+      course_id: course_id,
+      script: {
+        id: script_id,
+        name: script.try(:name),
+      },
       studentCount: students.size,
+      grade: grade,
+      providerManaged: provider_managed?
     }
   end
 
@@ -221,6 +240,10 @@ class Section < ActiveRecord::Base
 
   def self.valid_grade?(grade)
     valid_grades.include? grade
+  end
+
+  def provider_managed?
+    false
   end
 
   private
