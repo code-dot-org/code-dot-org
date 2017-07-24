@@ -111,8 +111,6 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
     window.onShowConfirmPublishDialog(project.id, projectType);
   };
 
-  var PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'artist', 'playlab'];
-
   function setProjectPublishedAt(projectId, publishedAt) {
     for (var i = 0; i < $scope.projects.length; i++) {
       var project = $scope.projects[i];
@@ -126,28 +124,9 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
     $scope.$apply();
   }
 
-  // Keep the logic for publishing and unpublishing projects in angular for now,
-  // because we need to use the result to update the publishedAt date within
-  // angular.
-
-  function publishProject(projectId, projectType) {
-    if (PROJECT_TYPES.indexOf(projectType) === -1) {
-      throw 'Cannot publish project of type "' + projectType + '"';
-    }
-    $http({
-      method:'POST',
-      url: '/v3/channels/' + projectId + '/publish/' + projectType,
-    }).then(function (response) {
-      if (response.data && response.data.publishedAt) {
-        setProjectPublishedAt(projectId, response.data.publishedAt);
-        window.showNewPublishedProject(response.data, projectType);
-      }
-    });
-  }
-
   // Make this method available to projects/index.js. This can go away
   // once this file is moved to React.
-  window.projectGalleryPublishProject = publishProject.bind(this);
+  window.setProjectPublishedAt = setProjectPublishedAt.bind(this);
 
   $scope.unpublishProject = function (project) {
     $http({

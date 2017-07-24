@@ -19,6 +19,7 @@ import {
 import {
   showPublishDialog as showPublishDialogAction,
   hidePublishDialog,
+  publishProject as publishProjectAction,
 } from '../templates/publishDialog/publishDialogRedux';
 
 /**
@@ -245,9 +246,10 @@ function showPublishDialog() {
 }
 
 function publishProject(projectId, projectType) {
-  window.dashboard.project.publish(projectType).then(() => {
-    getStore().dispatch(hidePublishDialog());
-  });
+  getStore().dispatch(publishProjectAction(projectId, projectType))
+    .then(projectData => {
+      window.dashboard.project.setPublishedAt(projectData.publishedAt);
+    });
 }
 
 function unpublishProject(projectId) {
