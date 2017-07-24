@@ -43,7 +43,7 @@ Computer Science Discoveries is designed for 7-9th grade students and can be tau
 
 <a name="csp"></a>
 
-## Computer Science Principles
+## Computer Science Principles (can be offered as an AP course)
 
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
 <% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
