@@ -13,7 +13,7 @@ import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import ProgressButton from "../progress/ProgressButton";
 
-class AddInitialStudentsView extends Component {
+class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
     handleLoginChoice: PropTypes.func.isRequired,
@@ -84,7 +84,7 @@ class AddInitialStudentsView extends Component {
     );
   }
 }
-export default AddInitialStudentsView;
+export default LoginTypePicker;
 
 const PictureLoginCard = (props) => (
   <LoginTypeCard
