@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
-import AddInitialStudentsView from './AddInitialStudentsView';
+import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
 
 import i18n from '@cdo/locale';
@@ -106,7 +106,7 @@ export class AddSectionDialog extends Component {
       >
         <PadAndCenter>
           {!loginType && /* First page */
-            <AddInitialStudentsView
+            <LoginTypePicker
               title={title}
               handleLoginChoice={this.handleLoginChoice}
               handleCancel={this.handleClose}
