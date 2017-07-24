@@ -291,13 +291,7 @@ Maze.init = function (config) {
       studioApp().loadAudio(skin.fillSound, 'fill');
       studioApp().loadAudio(skin.digSound, 'dig');
     }
-    if (skin.harvestSound) {
-      studioApp().loadAudio(skin.harvestSound, 'harvest');
-    }
-    if (skin.beeSound) {
-      studioApp().loadAudio(skin.nectarSound, 'nectar');
-      studioApp().loadAudio(skin.honeySound, 'honey');
-    }
+    Maze.subtype.loadAudio(skin);
   };
 
   config.afterInject = function () {
