@@ -184,11 +184,6 @@ class Ability
     if user.admin?
       can :manage, :all
 
-      # We don't want admins to accidentally try to index _all_ existing
-      # sections so constrain their access.
-      cannot :index, Section
-      can :index, Section, user_id: user.id
-
       cannot :manage, [
         Activity,
         Game,
