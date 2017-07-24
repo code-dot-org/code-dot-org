@@ -32,6 +32,14 @@ export default class Collector extends Subtype {
 
   scheduleDirtChange(row, col) {
     super.scheduleDirtChange(row, col);
+
+    // Play one of our various collect sounds, looping through them
+    if (this.collectSoundsCount) {
+      this.collectSoundsI = this.collectSoundsI || 0;
+      this.playAudio_('collect' + this.collectSoundsI);
+      this.collectSoundsI += 1;
+      this.collectSoundsI %= this.collectSoundsCount;
+    }
   }
 
   /**
@@ -48,6 +56,18 @@ export default class Collector extends Subtype {
     } else {
       this.maze_.executionInfo.queueAction('pickup', id);
       this.maze_.map.setValue(row, col, currVal - 1);
+    }
+  }
+
+  /**
+   * @override
+   */
+  loadAudio(skin) {
+    if (skin.collectSounds) {
+      this.collectSoundsCount = skin.collectSounds.length;
+      skin.collectSounds.forEach((sound, i) => {
+        this.studioApp_.loadAudio(sound, 'collect' + i);
+      });
     }
   }
 
