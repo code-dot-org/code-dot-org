@@ -184,12 +184,11 @@ class Script < ActiveRecord::Base
   # @return [AssignableInfo[]]
   def self.valid_scripts(user)
     with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
-    cache_key = "valid_scripts/#{I18n.locale}-#{with_hidden ? 'all' : 'valid'}"
+    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
     Rails.cache.fetch(cache_key) do
       Script.
           all.
-          select {|script| with_hidden || !script.hidden}.
-          map(&:assignable_info)
+          select {|script| with_hidden || !script.hidden}
     end
   end
 
@@ -198,18 +197,6 @@ class Script < ActiveRecord::Base
   # @return [Boolean] Whether this is a valid script ID
   def self.valid_script_id?(user, script_id)
     valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
-  end
-
-  # Get the assignable info for this script, then update translations
-  # @return AssignableInfo
-  def assignable_info
-    info = ScriptConstants.assignable_info(self)
-    # ScriptConstants gives us untranslated versions of our course name, and the
-    # category it's in. Set translated strings here
-    info[:name] = localized_title
-    info[:name] += ' *' if hidden
-    info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
-    info
   end
 
   def starting_level
