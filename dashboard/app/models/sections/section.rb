@@ -155,6 +155,20 @@ class Section < ActiveRecord::Base
     add_student student
   end
 
+  # Remove a student from the section.
+  # Follower is determined by the controller so that it can authorize first.
+  # Optionally email the teacher.
+  def remove_student(student, follower, options)
+    follower.delete
+
+    if options[:notify]
+      # Though in theory required, we are missing an email address for many teachers.
+      if user && user.email.present?
+        FollowerMailer.student_disassociated_notify_teacher(teacher, student).deliver_now
+      end
+    end
+  end
+
   # Clears all personal data from the section object.
   def clean_data
     update(name: SYSTEM_DELETED_NAME)
