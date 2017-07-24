@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import color from '../util/color';
 import msg from './locale';
 
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
+
 const styles = {
   container: {
     display: 'inline-block',
@@ -22,6 +24,7 @@ const styles = {
     margin: '0 auto',
   },
   gemImage: {
+    backgroundImage: `url("${assetUrl('media/skins/collector/gem.png')}")`,
     backgroundSize: '100%',
     display: 'inline',
     padding: 5
@@ -38,7 +41,6 @@ const styles = {
 
 export class CollectorGemCounter extends React.Component {
   static propTypes = {
-    assetUrl: React.PropTypes.func.isRequired,
     currentCollected: React.PropTypes.number.isRequired,
     minRequired: React.PropTypes.number,
   }
@@ -49,19 +51,13 @@ export class CollectorGemCounter extends React.Component {
 
   render() {
     const showCheckmark = this.props.currentCollected >= this.props.minRequired;
-    const gemUrl = this.props.assetUrl('media/skins/collector/gem.png');
 
     return (
       <div style={styles.container}>
         <div>
           <span style={styles.label}>{msg.goal()}</span>
           <hr style={styles.hr} />
-          <div
-            style={{
-              ...styles.gemImage,
-              backgroundImage: `url("${gemUrl}")`
-            }}
-          >
+          <div style={styles.gemImage} >
             <i
               style={{
                 ...styles.checkmark,
@@ -79,7 +75,6 @@ export class CollectorGemCounter extends React.Component {
 }
 
 export default connect(state => ({
-  assetUrl: state.pageConstants.assetUrl,
   currentCollected: state.maze.collectorCurrentCollected,
   minRequired: state.maze.collectorMinRequired,
 }))(CollectorGemCounter);
