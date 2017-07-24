@@ -13,7 +13,6 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
     "instructions": "To mix things up, when hitting an obstacle, instead of ending the game try setting the score back to 0.",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -36,7 +35,8 @@
     "disable_if_else_editing": "false",
     "default_flap": "NORMAL",
     "free_play": "false",
-    "shareable": "false"
+    "shareable": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
