@@ -13,6 +13,7 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     ).students
 
     section = GoogleClassroomSection.from_service('101', owner.id, student_list)
+    assert section.provider_managed?
     assert_equal 'G-101', section.code
 
     assert_no_difference 'User.count' do
