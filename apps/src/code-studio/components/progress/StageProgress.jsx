@@ -4,9 +4,9 @@ import _ from 'lodash';
 
 import experiments from '@cdo/apps/util/experiments';
 import { stageProgressShape } from './types';
-import StatusProgressDot from './StatusProgressDot.jsx';
+import StatusProgressDot from './StatusProgressDot';
 import color from "../../../util/color";
-import StageExtrasProgressDot from '@cdo/apps/templates/progress/StageExtrasProgressDot';
+import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
 import NewProgressBubble from '@cdo/apps/templates/progress/NewProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
@@ -83,7 +83,7 @@ const StageProgress = React.createClass({
           </div>
         )}
         {stageExtrasUrl && experiments.isEnabled('stageExtras') &&
-          <StageExtrasProgressDot
+          <StageExtrasProgressBubble
             stageExtrasUrl={stageExtrasUrl}
             onStageExtras={onStageExtras}
           />

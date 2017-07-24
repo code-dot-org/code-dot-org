@@ -27,8 +27,7 @@ const styles = {
   }
 };
 
-// TODO: rename
-class StageExtrasProgressDot extends Component {
+class StageExtrasProgressBubble extends Component {
   static propTypes = {
     stageExtrasUrl: PropTypes.string.isRequired,
     onStageExtras: PropTypes.bool.isRequired,
@@ -45,10 +44,12 @@ class StageExtrasProgressDot extends Component {
           ...styles.main,
           ...(onStageExtras && styles.focused)
         }}
-        data-tip data-for={tooltipId}
-        aria-describedby={tooltipId}
       >
-        <FontAwesome icon={icon}/>
+        <FontAwesome
+          icon={icon}
+          data-tip data-for={tooltipId}
+          aria-describedby={tooltipId}
+        />
         <TooltipWithIcon
           tooltipId={tooltipId}
           icon={icon}
@@ -59,4 +60,4 @@ class StageExtrasProgressDot extends Component {
   }
 }
 
-export default Radium(StageExtrasProgressDot);
+export default Radium(StageExtrasProgressBubble);
