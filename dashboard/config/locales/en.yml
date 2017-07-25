@@ -266,6 +266,7 @@ en:
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "Courses"
       project_gallery: "Project Gallery"
