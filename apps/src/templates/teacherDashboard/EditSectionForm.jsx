@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import {Heading1, h3Style} from "../../lib/ui/Headings";
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import { sectionShape, assignmentShape } from './shapes';
+import { sectionShape, newSectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
+import {editSectionProperties} from './teacherSectionsRedux';
 
 const style = {
   dropdown: {
@@ -27,14 +28,6 @@ class EditSectionForm extends Component{
     title: PropTypes.string.isRequired,
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
-    name: PropTypes.string,
-    handleName: PropTypes.func.isRequired,
-    grade: PropTypes.string,
-    handleGrade: PropTypes.func.isRequired,
-    extras: PropTypes.string,
-    handleExtras: PropTypes.func.isRequired,
-    pairing: PropTypes.string,
-    handlePairing: PropTypes.func.isRequired,
     assignmentRef: PropTypes.func.isRequired,
 
     //Comes from redux
@@ -42,13 +35,15 @@ class EditSectionForm extends Component{
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
+    section: newSectionShape.isRequired,
+    editSectionProperties: PropTypes.func.isRequired,
   };
 
   renderSectionNameInput() {
     return (
       <input
-        value={this.props.name}
-        onChange={val => this.props.handleName(val.target.value)}
+        value={this.props.section.name}
+        onChange={val => this.props.editSectionProperties({name: val.target.value})}
         style={style.sectionNameInput}
       />
     );
@@ -63,8 +58,8 @@ class EditSectionForm extends Component{
       }));
     return (
       <Dropdown
-        value = {this.props.grade}
-        onChange={event => this.props.handleGrade(event.target.value)}
+        value = {this.props.section.grade}
+        onChange={event => this.props.editSectionProperties({grade: event.target.value})}
       >
         {gradeOptions.map((grade, index) => (
           <option key={index} value={grade.value}>{grade.text}</option>
@@ -121,11 +116,11 @@ class EditSectionForm extends Component{
               </a>
             </FieldDescription>
             <Dropdown
-              value = {this.props.extras}
-              onChange={val => this.props.handleExtras(val.target.value)}
+              value={this.props.section.stageExtras}
+              onChange={val => this.props.editSectionProperties({stageExtras: val.target.value === 'true'})}
             >
-              <option value="yes">{i18n.yes()}</option>
-              <option value="no">{i18n.no()}</option>
+              <option value={true}>{i18n.yes()}</option>
+              <option value={false}>{i18n.no()}</option>
             </Dropdown>
           </div>
           <FieldName>
@@ -143,11 +138,11 @@ class EditSectionForm extends Component{
               </a>
             </FieldDescription>
             <Dropdown
-              value = {this.props.pairing}
-              onChange={val => this.props.handlePairing(val.target.value)}
+              value={this.props.section.pairingAllowed}
+              onChange={val => this.props.editSectionProperties({pairingAllowed: val.target.value === 'true'})}
             >
-              <option value="yes">{i18n.yes()}</option>
-              <option value="no">{i18n.no()}</option>
+              <option value={true}>{i18n.yes()}</option>
+              <option value={false}>{i18n.no()}</option>
             </Dropdown>
           </div>
         </div>
@@ -177,7 +172,10 @@ export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
-}))(EditSectionForm);
+  section: state.teacherSections.sectionBeingEdited,
+}), {
+  editSectionProperties,
+})(EditSectionForm);
 
 const FieldName = props => (
   <div

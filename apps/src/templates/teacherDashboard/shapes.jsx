@@ -22,7 +22,7 @@ export const sectionShape = PropTypes.shape(sectionShapeDefinition);
 
 export const newSectionShape = PropTypes.shape({
   ...sectionShapeDefinition,
-  id: undefined,
+  id: PropTypes.number,
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
 });
 
