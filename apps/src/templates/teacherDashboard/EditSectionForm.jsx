@@ -45,7 +45,14 @@ class EditSectionForm extends Component{
   };
 
   render(){
-    const {section, title, validGrades, editSectionProperties} = this.props;
+    const {
+      section,
+      title,
+      validGrades,
+      validAssignments,
+      primaryAssignmentIds,
+      editSectionProperties
+    } = this.props;
     return (
       <div style={style.root}>
         <Heading1>
@@ -61,20 +68,12 @@ class EditSectionForm extends Component{
             onChange={grade => editSectionProperties({grade})}
             validGrades={validGrades}
           />
-          <FieldName>
-            {i18n.course()}
-          </FieldName>
-          <div>
-            <FieldDescription>{i18n.whichCourse()}</FieldDescription>
-            <AssignmentSelector
-              primaryAssignmentIds={this.props.primaryAssignmentIds}
-              assignments={this.props.validAssignments}
-              chooseLaterOption={true}
-              dropdownStyle={style.dropdown}
-              section={section}
-              onChange={ids => editSectionProperties(ids)}
-            />
-          </div>
+          <AssignmentField
+            section={section}
+            onChange={ids => editSectionProperties(ids)}
+            validAssignments={validAssignments}
+            primaryAssignmentIds={primaryAssignmentIds}
+          />
           <LessonExtrasField
             value={section.stageExtras}
             onChange={stageExtras => editSectionProperties({stageExtras})}
@@ -164,6 +163,36 @@ const GradeField = ({value, onChange, validGrades}) => {
 GradeField.propTypes = {
   ...FieldProps,
   validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+const AssignmentField = ({
+  section,
+  onChange,
+  validAssignments,
+  primaryAssignmentIds,
+}) => (
+  <div>
+    <FieldName>
+      {i18n.course()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.whichCourse()}
+    </FieldDescription>
+    <AssignmentSelector
+      section={section}
+      onChange={ids => onChange(ids)}
+      primaryAssignmentIds={primaryAssignmentIds}
+      assignments={validAssignments}
+      chooseLaterOption={true}
+      dropdownStyle={style.dropdown}
+    />
+  </div>
+);
+AssignmentField.propTypes = {
+  section: sectionShape,
+  onChange: PropTypes.func.isRequired,
+  validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
+  primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const LessonExtrasField = ({value, onChange}) => (
