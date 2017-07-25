@@ -558,6 +558,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     refute_nil section.deleted_at
   end
 
+  test 'admin can delete unowned sections' do
+    sign_in create :admin
+    refute @section.deleted_at
+
+    delete :destroy, params: {id: @section.id}
+    assert_response :success
+
+    @section.reload
+    refute_nil @section.deleted_at
+  end
+
   test 'deleting section deletes followers too' do
     sign_in @teacher
     refute_empty @section.followers
