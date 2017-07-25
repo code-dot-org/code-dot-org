@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Heading1, h3Style} from "../../lib/ui/Headings";
-import ProgressButton from '../progress/ProgressButton';
+import ProgressButton from '../ProgressButton';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';

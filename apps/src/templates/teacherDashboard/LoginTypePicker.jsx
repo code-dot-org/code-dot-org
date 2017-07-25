@@ -11,7 +11,7 @@ import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
-import ProgressButton from "../progress/ProgressButton";
+import ProgressButton from "../ProgressButton";
 
 class LoginTypePicker extends Component {
   static propTypes = {

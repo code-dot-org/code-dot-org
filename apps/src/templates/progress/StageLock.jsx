@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import ProgressButton from './ProgressButton';
+import ProgressButton from '../ProgressButton';
 import i18n from "@cdo/locale";
 import StageLockDialog from '@cdo/apps/code-studio/components/progress/StageLockDialog';
 import { openLockDialog, closeLockDialog } from '@cdo/apps/code-studio/stageLockRedux';

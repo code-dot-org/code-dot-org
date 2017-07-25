@@ -4,7 +4,7 @@ import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';

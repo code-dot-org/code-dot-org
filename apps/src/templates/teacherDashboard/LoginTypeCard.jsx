@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import color from '../../util/color';
-import ProgressButton from '../progress/ProgressButton';
+import ProgressButton from '../ProgressButton';
 
 const styles = {
   card: {

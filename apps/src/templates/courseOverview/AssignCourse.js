@@ -4,7 +4,7 @@ import Radium from 'radium';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import AssignCourseConfirm from './AssignCourseConfirm';
 

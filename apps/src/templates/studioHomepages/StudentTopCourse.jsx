@@ -2,7 +2,7 @@ import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '../progress/ProgressButton';
+import ProgressButton from '../ProgressButton';
 
 const styles = {
   card: {

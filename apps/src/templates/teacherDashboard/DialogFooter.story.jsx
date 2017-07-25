@@ -1,6 +1,6 @@
 import React from 'react';
 import DialogFooter from "./DialogFooter";
-import ProgressButton from '../progress/ProgressButton';
+import ProgressButton from '../ProgressButton';
 
 export default storybook => storybook
   .storiesOf('DialogFooter', module)

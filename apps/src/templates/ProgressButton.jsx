@@ -1,6 +1,5 @@
 /**
- * New style button. Eventually we'd like to have this used more broadly (at which
- * point it should be renamed to something more generic)
+ * New style button.
  * This particular button is designed to operate in contexts where we have a solid
  * background. When we're a button on top of an image, we may want something different.
  */

@@ -3,7 +3,7 @@ import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 
 // Many of these styles are also used by our similar SectionTable on the
 // teacher-dashboard page (which is why we export them).

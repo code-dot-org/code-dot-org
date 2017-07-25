@@ -1,7 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '../progress/ProgressButton';
+import ProgressButton from '../ProgressButton';
 
 const styles = {
   container: {
