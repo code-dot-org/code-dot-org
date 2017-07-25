@@ -2,7 +2,6 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
 import { Galleries } from './projectConstants';
-import publishDialog from '../publishDialog/publishDialogRedux';
 
 // Action types
 
@@ -84,7 +83,6 @@ const reducer = combineReducers({
   selectedGallery,
   projectLists,
   hasOlderProjects,
-  publishDialog,
 });
 export default reducer;
 

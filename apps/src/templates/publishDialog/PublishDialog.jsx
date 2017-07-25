@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import Radium from 'radium';
 import Dialog, { Body, styles as dialogStyles } from '../Dialog';
 import PendingButton from '../PendingButton';
 import LegacyButton, { BUTTON_TYPES } from '../LegacyButton';
 import i18n from '@cdo/locale';
+import { hidePublishDialog } from './publishDialogRedux';
 
 class PublishDialog extends Component {
   static propTypes = {
@@ -51,4 +53,13 @@ class PublishDialog extends Component {
     );
   }
 }
-export default Radium(PublishDialog);
+export default connect(state => ({
+  isOpen: state.publishDialog.isOpen,
+  isPublishPending: state.publishDialog.isPublishPending,
+  projectId: state.publishDialog.projectId,
+  projectType: state.publishDialog.projectType,
+}), dispatch => ({
+  onClose() {
+    dispatch(hidePublishDialog());
+  },
+}))(Radium(PublishDialog));

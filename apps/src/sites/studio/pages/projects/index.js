@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider, connect } from 'react-redux';
+import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import PublishDialog from '@cdo/apps/templates/publishDialog/PublishDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
@@ -12,25 +12,13 @@ import projects, {
   setProjectLists,
   prependProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
-import {
+import publishDialogReducer, {
   showPublishDialog,
-  hidePublishDialog,
   publishProject,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
-const ConnectedPublishDialog = connect(state => ({
-  isOpen: state.projects.publishDialog.isOpen,
-  isPublishPending: state.header.publishDialog.isPublishPending,
-  projectId: state.projects.publishDialog.projectId,
-  projectType: state.projects.publishDialog.projectType,
-}), dispatch => ({
-  onClose() {
-    dispatch(hidePublishDialog());
-  },
-}))(PublishDialog);
-
 $(document).ready(() => {
-  registerReducers({projects});
+  registerReducers({projects, publishDialogReducer});
   const store = getStore();
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
@@ -62,7 +50,7 @@ $(document).ready(() => {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ConnectedPublishDialog
+      <PublishDialog
         onConfirmPublish={onConfirmPublish}
       />
     </Provider>,

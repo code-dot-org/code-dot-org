@@ -18,7 +18,6 @@ import {
 } from './headerRedux';
 import {
   showPublishDialog as showPublishDialogAction,
-  hidePublishDialog,
   publishProject as publishProjectAction,
 } from '../templates/publishDialog/publishDialogRedux';
 
@@ -214,15 +213,6 @@ function shareProject() {
   });
 }
 
-const ConnectedPublishDialog = connect(state => ({
-  isOpen: state.header.publishDialog.isOpen,
-  isPublishPending: state.header.publishDialog.isPublishPending,
-  projectId: state.header.publishDialog.projectId,
-  projectType: state.header.publishDialog.projectType,
-}), dispatch => ({
-  onClose: () => dispatch(hidePublishDialog()),
-}))(PublishDialog);
-
 function showPublishDialog() {
   var publishDialog = document.getElementById('publish-dialog');
   if (!publishDialog) {
@@ -233,7 +223,7 @@ function showPublishDialog() {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ConnectedPublishDialog
+      <PublishDialog
         onConfirmPublish={publishProject}
       />
     </Provider>,

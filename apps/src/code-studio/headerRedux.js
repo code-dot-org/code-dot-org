@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import publishDialog from '../templates/publishDialog/publishDialogRedux';
 import clientApi from './initApp/clientApi';
 const channels = clientApi.create('/v3/channels');
 
@@ -47,7 +46,6 @@ function shareDialog(state = initialShareDialogState, action) {
 
 const reducer = combineReducers({
   shareDialog,
-  publishDialog,
 });
 export default reducer;
 

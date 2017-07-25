@@ -1,8 +1,15 @@
 import React from 'react';
+import {createStore, combineReducers} from 'redux';
+import { Provider } from 'react-redux';
 import PublishDialog from './PublishDialog';
+import publishDialog, { showPublishDialog, PUBLISH_REQUEST } from './publishDialogRedux';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
 const PROJECT_TYPE = 'MY_PROJECT_TYPE';
+
+function configureStore() {
+  return createStore(combineReducers({publishDialog}));
+}
 
 export default storybook => {
   return storybook
@@ -12,15 +19,14 @@ export default storybook => {
         name: 'dialog open',
         description: '',
         story: () => {
+          const store = configureStore();
+          store.dispatch(showPublishDialog(PROJECT_ID, PROJECT_TYPE));
           return (
-            <PublishDialog
-              isOpen={true}
-              isPublishPending={false}
-              onClose={storybook.action('close')}
-              onConfirmPublish={storybook.action('publish')}
-              projectId={PROJECT_ID}
-              projectType={PROJECT_TYPE}
-            />
+            <Provider store={store}>
+              <PublishDialog
+                onConfirmPublish={storybook.action('publish')}
+              />
+            </Provider>
           );
         }
       },
@@ -28,15 +34,15 @@ export default storybook => {
         name: 'dialog open with publish pending',
         description: '',
         story: () => {
+          const store = configureStore();
+          store.dispatch(showPublishDialog(PROJECT_ID, PROJECT_TYPE));
+          store.dispatch({type: PUBLISH_REQUEST});
           return (
-            <PublishDialog
-              isOpen={true}
-              isPublishPending={true}
-              onClose={storybook.action('close')}
-              onConfirmPublish={storybook.action('publish')}
-              projectId={PROJECT_ID}
-              projectType={PROJECT_TYPE}
-            />
+            <Provider store={store}>
+              <PublishDialog
+                onConfirmPublish={storybook.action('publish')}
+              />
+            </Provider>
           );
         }
       }
