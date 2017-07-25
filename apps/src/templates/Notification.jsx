@@ -143,14 +143,14 @@ const Notification = React.createClass({
       bullhorn: 'bullhorn'
     };
 
-    const buttonStyle = type !== "course" ? styles.button : [styles.button, styles.courseButton];
+    const buttonStyle = type === NotificationType.course ? [styles.button, styles.courseButton] : styles.button;
 
     if (!this.state.open) {
       return null;
     }
     return (
       <div style={[styles.colors[type], styles.main]}>
-        {type !== 'course' && (
+        {type !== NotificationType.course && (
           <div style={[styles.iconBox, styles.colors[type]]}>
             <FontAwesome icon={icons[type]} style={styles.icon}/>
           </div>

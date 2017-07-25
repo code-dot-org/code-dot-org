@@ -73,7 +73,7 @@ const RecentCourses = React.createClass({
           {hasCourse && (
             <div>
               <Notification
-                type="course"
+                type={Notification.NotificationType.course}
                 notice={i18n.findCourse()}
                 details={i18n.findCourseDescription()}
                 buttonText={i18n.findCourse()}

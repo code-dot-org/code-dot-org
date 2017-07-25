@@ -47,6 +47,7 @@ const styles = {
   },
   actionBox: {
     float: 'right',
+    // Right-align with buttons in SectionTable & courses Notification.
     marginRight: 21
   },
   inputBox: {
