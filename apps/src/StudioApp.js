@@ -521,7 +521,7 @@ StudioApp.prototype.init = function (config) {
         isOpen={true}
         assetUrl={this.assetUrl}
         avatar={this.icon}
-        handleSkip={() => {
+        handleCancel={() => {
           window.location.href = this.skipUrl;
         }}
         cancelButtonLabel={msg.challengeLevelSkip()}
