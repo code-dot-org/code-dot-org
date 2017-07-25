@@ -11,7 +11,9 @@ const stylesGenerator = assetUrl => ({
     borderRadius: 10,
   },
   banner: {
-    background: `top center no-repeat url(${assetUrl('media/dialog/challenge_target.svg')})`,
+    backgroundPosition: 'top center',
+    backgroundRepeat: 'no-repeat',
+    backgroundImage: `url(${assetUrl('media/dialog/challenge_target.svg')})`,
     position: 'relative',
     marginTop: -85,
     height: 135,
