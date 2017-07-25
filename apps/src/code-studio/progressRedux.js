@@ -46,7 +46,7 @@ const initialState = {
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
   isSummaryView: true,
-  hasFullProgress: false
+  hasFullProgress: false,
 };
 
 /**
@@ -242,7 +242,7 @@ export const initProgress = ({currentLevelId, professionalLearningCourse,
   stages,
   peerReviewStage,
   scriptName,
-  isFullProgress
+  isFullProgress,
 });
 
 export const mergeProgress = levelProgress => ({
@@ -381,6 +381,10 @@ export const levelsForLessonId = (state, lessonId) => (
   state.stages.find(stage => stage.id === lessonId).levels.map(
     level => levelWithStatus(state, level)
   )
+);
+
+export const stageExtrasUrl = (state, stageId) => (
+  state.stages.find(stage => stage.id === stageId).stage_extras_level_url
 );
 
 /**
