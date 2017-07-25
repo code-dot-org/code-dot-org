@@ -34,6 +34,7 @@ const sectionsApiPath = '/dashboardapi/sections/';
 class SectionsPage extends Component {
   static propTypes = {
     validScripts: PropTypes.array.isRequired,
+    homepage: PropTypes.bool,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -46,6 +47,10 @@ class SectionsPage extends Component {
     loadClassroomList: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
   };
+
+  defaultProps = {
+    homepage: false,
+  }
 
   state = {
     sectionsLoaded: false,
@@ -135,15 +140,17 @@ class SectionsPage extends Component {
     const showCleverClassroom = experiments.isEnabled('cleverClassroom');
     return (
       <div>
-        <div style={styles.breadcrumb}>
-          <a href="/teacher-dashboard#/">
-            {i18n.teacherHomePage()}
-          </a>
-          <span style={{opacity: 0.5}}>{"\u00a0 \u25b6 \u00a0"}</span>
-          <b style={{color: color.dark_orange}}>
-            {i18n.studentAccountsAndProgress()}
-          </b>
-        </div>
+        {!this.props.homepage &&
+          <div style={styles.breadcrumb}>
+            <a href="/teacher-dashboard#/">
+              {i18n.teacherHomePage()}
+            </a>
+            <span style={{opacity: 0.5}}>{"\u00a0 \u25b6 \u00a0"}</span>
+            <b style={{color: color.dark_orange}}>
+              {i18n.studentAccountsAndProgress()}
+            </b>
+          </div>
+        }
         {sectionsLoaded &&
           <ProgressButton
             className="uitest-newsection"
