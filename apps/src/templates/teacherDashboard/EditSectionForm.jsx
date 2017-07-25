@@ -33,7 +33,6 @@ class EditSectionForm extends Component{
   static propTypes = {
     title: PropTypes.string.isRequired,
     handleSave: PropTypes.func.isRequired,
-    assignmentRef: PropTypes.func.isRequired,
 
     //Comes from redux
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -68,11 +67,12 @@ class EditSectionForm extends Component{
           <div>
             <FieldDescription>{i18n.whichCourse()}</FieldDescription>
             <AssignmentSelector
-              ref={this.props.assignmentRef}
               primaryAssignmentIds={this.props.primaryAssignmentIds}
               assignments={this.props.validAssignments}
               chooseLaterOption={true}
               dropdownStyle={style.dropdown}
+              section={section}
+              onChange={ids => editSectionProperties(ids)}
             />
           </div>
           <LessonExtrasField

@@ -24,19 +24,18 @@ export class AddSectionDialog extends Component {
   onClickEditSave = () => {
     const {section, updateSection, finishEditingSection} = this.props;
 
-    const selectedAssignment = this.assignment.getSelectedAssignment();
     const data = {
       name: section.name,
       login_type: section.loginType,
       grade: section.grade,
       stage_extras: section.stageExtras,
       pairing_allowed: section.pairingAllowed,
-      course_id: selectedAssignment ? selectedAssignment.courseId : null,
+      course_id: section.courseId || null,
     };
 
-    if (selectedAssignment && selectedAssignment.scriptId) {
+    if (section.scriptId) {
       data.script = {
-        id: selectedAssignment.scriptId
+        id: section.scriptId
       };
     }
 
@@ -78,7 +77,6 @@ export class AddSectionDialog extends Component {
           {loginType && /* Second page */
             <EditSectionForm
               title={title}
-              assignmentRef={(element) => this.assignment = element}
               handleSave={this.onClickEditSave}
             />
           }
