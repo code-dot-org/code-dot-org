@@ -131,7 +131,7 @@ it:
             'Maze: Conditionals':
               name: 'Labirinto: Istruzioni Condizionali'
             Songwriting:
-              name: Composizione di Canzoni - Parametri
+              name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
             'Studio: Create a Game':
               name: 'Laboratorio: Crea un Gioco'
             'Studio: Create a Story':
@@ -1449,7 +1449,7 @@ it:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmi della Vita Reale: Piantare un Seme'
             Songwriting:
-              name: Composizione di Canzoni - Parametri
+              name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
             The Big Event:
               name: Il Grande Evento
         afterschool1:
@@ -2980,7 +2980,7 @@ it:
             Scaffolded Project Stage (Loops, Events, Conditionals, Functions):
               name: Scaffolded Project Stage (Loops, Events, Conditionals, Functions)
             Songwriting:
-              name: Composizione di Canzoni - Parametri
+              name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
             'Unplugged: Funky Functions':
               name: 'Unplugged: Funky Functions'
         grade1:

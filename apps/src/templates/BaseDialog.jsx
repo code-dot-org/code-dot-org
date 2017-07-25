@@ -88,7 +88,9 @@ var BaseDialog = React.createClass({
       modalBodyStyle = {
         background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
         height: this.props.fixedHeight,
-        overflow: 'hidden',
+        maxHeight: !this.props.fixedHeight && '80vh',
+        overflowX: 'hidden',
+        overflowY: this.props.fixedHeight ? 'hidden' : 'auto',
         borderRadius: 4,
       };
       bodyStyle = Object.assign({}, bodyStyle, {

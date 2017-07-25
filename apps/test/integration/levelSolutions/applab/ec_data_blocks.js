@@ -253,9 +253,7 @@ export default {
 
       runBeforeClick(assert) {
         $('.droplet-palette-group-header:contains(Data)').click();
-        const actualBlocks = $('.droplet-palette-canvas > g').map(
-          (i, el) => $(el).text().split('(')[0].replace(/\W/g, '')
-        ).toArray();
+        const actualBlocks = $('.droplet-hover-div').map((i, el) => el.dataset.block).toArray();
         const expectedBlocks = [
           "startWebRequest", "setKeyValue", "getKeyValue", "createRecord", "readRecords",
           "updateRecord", "deleteRecord", "getUserId", "drawChart",
@@ -278,9 +276,7 @@ export default {
 
       runBeforeClick(assert) {
         $('.droplet-palette-group-header:contains(Data)').click();
-        const actualBlocks = $('.droplet-palette-canvas > g').map(
-          (i, el) => $(el).text().split('(')[0].replace(/\W/g, '')
-        ).toArray();
+        const actualBlocks = $('.droplet-hover-div').map((i, el) => el.dataset.block).toArray();
         const expectedBlocks = [
           "startWebRequest", "setKeyValue", "getKeyValue", "createRecord", "readRecords",
           "updateRecord", "deleteRecord", "onRecordEvent", "getUserId", "drawChart",

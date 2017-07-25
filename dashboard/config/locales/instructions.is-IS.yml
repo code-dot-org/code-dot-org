@@ -965,22 +965,18 @@
       Alien Defender_instruction: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
       AllTheThings Applab - Turtle move with button_instruction: Bættu við hnappi
         sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
-      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': |-
-        Make
-        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
-        first task is to set the second byte to the 8-bit binary code for 5: 0000
-        0101. Then start entering pixel data.
-      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': |-
-        We
-        start you out with the 4x4 image Maddie created in the video. Your task is
-        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
-        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
-        blue. Row 4 - shades of gray.
-      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': |-
-        We
-        start you with the 4x2 image Maddie was creating, but we've left out the
-        last two squares. Finish off the image by figuring out which two colors are
-        missing and encode them.
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': 'Búðu
+        til stafinn ''A'' í 3x5. Græjan er nú með rangar víddir. Fyrsta verk þitt
+        er að stilla annað bætið á 8-bita tvíundarrununa fyrir töluna 5: 0000 0101.
+        Byrjaðu svo að setja inn díla.'
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': "Þú byrjar
+        með 4x4 myndina sem Maddie bjó til í myndbandinu. Verkefni þitt er að fylla
+        4x4 grindina með litum með 12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð
+        1 - fylla með rauðum litbrigðum. Röð 2 - græn litbrigði. Röð 3 - grá litbrigði."
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': "Þú
+        byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum skilið eftir
+        síðustu tvo reitina. Ljúktu við myndina með því að finna út hvaða tvo liti
+        vantar og kóða þá."
       App Lab test_instruction: prófun
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
@@ -4513,10 +4509,6 @@
         á að vera 100 díla löng.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test Stamp- and Pattern-Agnostic Answer_instruction: Hvort lausn telst rétt
-        ætti að vera óháð vali á mynstri eða límmiða, sem þýðir að þó að þú breytir
-        mynstri eða límmiða þá teljist lausnin rétt svo framarlega sem þú notar eitthvað
-        mynstur og einhvern límmiða. (líkt og með litina)
       Test of comment block_instruction: Dragðu fram kubbinn sem þú vilt nota fyrir
         heiti undirmarkmiðs.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
@@ -6447,6 +6439,9 @@
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_ttscsp_instruction: |-
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       artistDebugVideo1_instruction: Notaðu "endurtaka" lykkjuna til að bæta öldum
         á vatnið.
       artistFunctionsVideo1_instruction: Fylgdu leiðbeiningum fyrir það að búa til
@@ -7169,15 +7164,15 @@
         \r
         See what happens when we start to
         get creative with the bits!
-      courseD_artist_binary_challenge0_instruction: |-
-        Try using nested loops to complete
-        this drawing.
-      courseD_artist_binary_challenge1_instruction: Prófaðu að nota faldaðar lykkjur
+      courseD_artist_binary_challenge0_instruction: Prófaðu að nota faldaðar lykkjur
         til að ljúka þessari teikningu.
-      courseD_artist_binary_challenge2_instruction: Prófaðu að nota faldaðar lykkjur
-        til að ljúka þessari teikningu.
-      courseD_artist_binary_challenge3_instruction: Prófaðu að nota faldaðar lykkjur
-        til að ljúka þessari teikningu.
+      courseD_artist_binary_challenge1_instruction: "Þú mátt aðeins nota hvert tvíundargildi
+        (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að
+        ljúka teikningunni."
+      courseD_artist_binary_challenge2_instruction: Hefurðu nægilegt úthald til að
+        koma þessu merki í fyrra horf?
+      courseD_artist_binary_challenge3_instruction: Hefurðu nægilegt úthald til að
+        koma þessu merki í fyrra horf?
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7379,8 +7374,9 @@
         náist.
       courseD_collector_debugging4_instruction: Lagaðu forritið svo allur fjársjóðurinn
         náist.
-      courseD_collector_debugging5_instruction: "Áskorun: Hér eru allar skipanir sem
-        þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
+      courseD_collector_debugging5_instruction: "Það er búið að setja hér allar skipanir
+        sem þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari
+        þraut."
       courseD_collector_debugging6_instruction: "Áskorun: Hér eru allar skipanir sem
         þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
       courseD_collector_debugging7_instruction: "Áskorun: Hér eru allar skipanir sem
@@ -7422,9 +7418,8 @@
       courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
-      courseD_farmer_condLoops5_instruction: |-
-        Collect all of the corn and lettuce,
-        then grab the pumpkin at the end.
+      courseD_farmer_condLoops5_instruction: Safnaðu öllum maísnum og kálinu og svo
+        graskerinu í lokin.
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
@@ -7706,14 +7701,13 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
-      courseE_bee_functions_challenge1_instruction: |-
-        You are on your own for this
-        challenge. This could "bee" harder than it looks!
-      courseE_bee_functions_challenge2_instruction: |-
-        You are on your own for this
-        challenge!
-      courseE_bee_ramp14_instruction: 'Sæktu blómasafa á meðan það er enn blómasafi,
-        **annars** búðu til hunang. '
+      courseE_bee_functions9b_instruction: Prófaðu þetta nú með býflugunni!
+      courseE_bee_functions_challenge1_instruction: "Þú þarft að leysa þessa þraut
+        á eigin spýtur. Hún gæti leynt á sér!"
+      courseE_bee_functions_challenge2_instruction: "Þú þarft að leysa þessa þraut
+        á eigin spýtur!"
+      courseE_bee_ramp14_instruction: Hjálpaðu býflugunni að fylgja slóðinni til að
+        búa til allt hunangið og safna öllum blómasafanum.
       courseE_bee_ramp17_instruction: Notaðu það sem þú hefur lært til að leysa þessa
         þraut.
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
@@ -7756,8 +7750,10 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn, lettuce,
-        and pumpkin.
+        Help the farmer pick the corn and
+        pumpkins.
+      courseE_farmer_functions2ba_instruction: Hjálpaðu bóndanum að tína maísinn og
+        graskerin með fallinu `maís og grasker`.
       courseE_farmer_functions3_instruction: |-
         What happens when the paths to the
         pumpkins are all different lengths?   \r
@@ -7768,10 +7764,9 @@
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions3c_instruction: |-
-        Which set of blocks helps the farmer
-        check for produce and pick it when it is available? Drag that code into a
-        function, then call your function from inside the `while path ahead` loops
-        (after the `move forward` block).
+        Now, fill-in the function yourself
+        by pulling the blocks from the code and dropping them into the **function
+        definition**.
       courseE_farmer_functions4_instruction: |-
         Great!  Now you have code that will
         work to get pumpkins from any size path.\r
@@ -7801,27 +7796,29 @@
       courseE_farmer_functions6b_instruction: Pick all of the produce.
       courseE_farmer_functions6c_instruction: |-
         What do you need to add this program
-        to collect all of the produce?
+        to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Make a second function that lets the
-        farmer get all of the produce down a path, then brings her back to where she
-        began.
+        Help the farmer find her way down
+        this confusing path and to the pumpkin by turning left at the corn and right
+        at the lettuce.
       courseE_farmer_functions8_instruction: |-
         **Challenge:**  Solve this puzzle with
         as few blocks as possible.
-      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
-        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the\npumpkins
+        using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
-      courseE_farmer_predict1_instruction: Sæktu kál ef það er kál. Annars skal sækja
-        korn.
+      courseE_farmer_functions9b_instruction: Getur þú fundið út mynstrið sem þarf
+        til að leysa þessa þraut?
+      courseE_farmer_predict1_instruction: Tíndu allt kálið (en aðeins á meðan það
+        er eitthvað að tína.)
       courseE_farmer_ramp11_instruction: "Þessi þraut notar líka faldaðar lykkjur.
         Getur þú fundið út hvernig?"
       courseE_farmer_ramp11a_instruction: 'Sæktu kál en aðeins ef það er enn kál. '
       courseE_farmer_ramp12_instruction: Notaðu nú faldaðar lykkjur ("endurtaka" og
         "meðan") til að leysa þessa þraut.
-      courseE_farmer_ramp12a_instruction: Sæktu kál ef það er kál. Annars skal sækja
-        korn.
+      courseE_farmer_ramp12a_instruction: Hjálpaðu bóndanum að fylgja slóðinni rétt
+        til að tína allt kálið.
       courseE_farmer_ramp13_instruction: Sæktu korn ef það er korn, og sæktu kál á
         meðan það er enn kál.
       courseE_farmer_ramp15_instruction: Leystu þessa þraut en aðeins með tiltækum
@@ -8094,12 +8091,14 @@
         from the flowers.
       courseF_bee_functions5a_instruction: Notaðu fallið "færa og gá" til að safna
         öllum safanum.
-      courseF_bee_functions6_instruction: Búðu til fall og kallaðu á það til að safna
-        öllum blómasafanum úr hverju blómi eða búa til allt hunangið í hverju búi.
-      courseF_bee_functions7_instruction: Safnaðu öllum blómasafanum og búðu til allt
-        hunangið!
+      courseF_bee_functions6_instruction: Hjálpaðu býflugunni í gegnum völundarhúsið
+        með því að snúa til vinstri við blóm og hægri við býkúpur.
+      courseF_bee_functions7_instruction: Endurgerðu fallið þitt frá síðustu þraut
+        til að leysa þetta völundarhús.
       courseF_bee_functions8a_instruction: Safnaðu öllum blómasafanum eða búðu til
         allt hunangið!
+      courseF_bee_functionsPre7_instruction: Prófaðu nú að búa til fall til að komast
+        í gegnum völundarhúsið. Hvernig er það öðruvísi en síðast?
       courseF_bee_functions_challenge1_instruction: Búðu til nýtt fall til að vinna
         allan blómasafann og hunangið á meðan það er slóð framundan. Notaðu það til
         að ljúka þrautinni!
