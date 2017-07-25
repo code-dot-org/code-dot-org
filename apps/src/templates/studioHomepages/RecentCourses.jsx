@@ -71,14 +71,16 @@ const RecentCourses = React.createClass({
             />
           )}
           {hasCourse && (
-            <Notification
-              type="course"
-              notice={i18n.findCourse()}
-              details={i18n.findCourseDescription()}
-              buttonText={i18n.findCourse()}
-              buttonLink="/courses"
-              dismissible={false}
-            />
+            <div>
+              <Notification
+                type="course"
+                notice={i18n.findCourse()}
+                details={i18n.findCourseDescription()}
+                buttonText={i18n.findCourse()}
+                buttonLink="/courses"
+                dismissible={false}
+              />
+            </div>
           )}
           {!hasCourse && (
             <SetUpMessage
