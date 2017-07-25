@@ -6,7 +6,12 @@ import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
 
 import i18n from '@cdo/locale';
-import { updateSection } from './teacherSectionsRedux';
+import {
+  isAddingSection,
+  cancelEditingSection,
+  finishEditingSection,
+  updateSection,
+} from './teacherSectionsRedux';
 const initialState = {
   loginType: undefined,
   name: '',
@@ -17,9 +22,10 @@ const initialState = {
 
 export class AddSectionDialog extends Component {
   static propTypes = {
-    handleClose: PropTypes.func,
-    isOpen: PropTypes.bool,
     // Provided by Redux
+    isOpen: PropTypes.bool.isRequired,
+    cancelEditingSection: PropTypes.func.isRequired,
+    finishEditingSection: PropTypes.func.isRequired,
     updateSection: PropTypes.func.isRequired,
   };
 
@@ -28,7 +34,7 @@ export class AddSectionDialog extends Component {
   };
 
   handleClose = () => {
-    this.props.handleClose();
+    this.props.cancelEditingSection();
     this.setState(initialState);
   };
 
@@ -53,7 +59,7 @@ export class AddSectionDialog extends Component {
   };
 
   onClickEditSave = () => {
-    const {updateSection} = this.props;
+    const {updateSection, finishEditingSection} = this.props;
     const {name, loginType, grade, extras, pairing} = this.state;
 
     const selectedAssignment = this.assignment.getSelectedAssignment();
@@ -82,8 +88,7 @@ export class AddSectionDialog extends Component {
       data: JSON.stringify(data),
     }).done(result => {
       updateSection(sectionId, result);
-      // close modal after save
-      this.handleClose();
+      finishEditingSection();
     }).fail((jqXhr, status) => {
       // We may want to handle this more cleanly in the future, but for now this
       // matches the experience we got in angular
@@ -134,7 +139,13 @@ export class AddSectionDialog extends Component {
   }
 }
 
-export default connect(undefined, { updateSection })(AddSectionDialog);
+export default connect(state => ({
+  isOpen: isAddingSection(state.teacherSections),
+}), {
+  cancelEditingSection,
+  finishEditingSection,
+  updateSection,
+})(AddSectionDialog);
 
 const PadAndCenter = ({children}) => (
   <div

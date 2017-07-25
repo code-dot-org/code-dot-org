@@ -5,7 +5,13 @@ import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
-import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
+import {
+  setSections,
+  setValidAssignments,
+  newSection,
+  beginEditingNewSection,
+  beginEditingSection,
+} from './teacherSectionsRedux';
 import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import i18n from '@cdo/locale';
@@ -17,6 +23,7 @@ const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
+const SECTION_FLOW_2017_KEY = 'section-flow-2017';
 
 const styles = {
   breadcrumb: {
@@ -45,13 +52,13 @@ class SectionsPage extends Component {
     setValidAssignments: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
+    beginEditingNewSection: PropTypes.func.isRequired,
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   state = {
     sectionsLoaded: false,
     rosterDialogOpen: false,
-    addSectionDialogOpen: false,
-    editSectionDialogOpen: false,
   };
 
   componentWillMount() {
@@ -110,21 +117,17 @@ class SectionsPage extends Component {
     });
   };
 
-  handleCloseAddSectionDialogs = () => {
-    this.setState({addSectionDialogOpen: false});
-  };
-
   addSection = () => {
-    if (experiments.isEnabled('section-flow-2017')) {
-      this.setState({addSectionDialogOpen: true});
+    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+      this.props.beginEditingNewSection();
     } else {
       return this.props.newSection();
     }
   };
 
   handleEditRequest = (section) => {
-    if (experiments.isEnabled('section-flow-2017')) {
-      this.setState({editSectionDialogOpen : true});
+    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+      this.props.beginEditingSection(section.id);
       this.editor.getWrappedInstance().updateStates(section);
     }
   };
@@ -186,15 +189,8 @@ class SectionsPage extends Component {
           studioUrl={this.props.studioUrl}
           provider={this.provider}
         />
-        <AddSectionDialog
-          isOpen={this.state.addSectionDialogOpen}
-          handleClose={this.handleCloseAddSectionDialogs}
-        />
-        <EditSectionDialog
-          ref = {(element) => this.editor = element}
-          isOpen={this.state.editSectionDialogOpen}
-          handleClose={() => this.setState({editSectionDialogOpen: false})}
-        />
+        <AddSectionDialog/>
+        <EditSectionDialog ref={(element) => this.editor = element}/>
       </div>
     );
   }
@@ -206,4 +202,12 @@ export default connect(state => ({
   studioUrl: state.teacherSections.studioUrl,
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
-}), { newSection, setSections, setValidAssignments, loadClassroomList, importClassroomStarted })(SectionsPage);
+}), {
+  newSection,
+  beginEditingNewSection,
+  beginEditingSection,
+  setSections,
+  setValidAssignments,
+  loadClassroomList,
+  importClassroomStarted,
+})(SectionsPage);
