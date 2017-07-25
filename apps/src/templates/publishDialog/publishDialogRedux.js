@@ -9,7 +9,7 @@ const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
 const SHOW_PUBLISH_DIALOG = 'publishDialog/SHOW_PUBLISH_DIALOG';
 const HIDE_PUBLISH_DIALOG = 'publishDialog/HIDE_PUBLISH_DIALOG';
 
-const PUBLISH_REQUEST = 'shareDialog/PUBLISH_REQUEST';
+export const PUBLISH_REQUEST = 'shareDialog/PUBLISH_REQUEST';
 const PUBLISH_SUCCESS = 'shareDialog/PUBLISH_SUCCESS';
 const PUBLISH_FAILURE = 'shareDialog/PUBLISH_FAILURE';
 

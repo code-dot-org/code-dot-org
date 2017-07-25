@@ -6,6 +6,7 @@ import stageLock from './stageLockRedux';
 import header from './headerRedux';
 import hiddenStage from './hiddenStageRedux';
 import isRtl from './isRtlRedux';
+import publishDialog from '../templates/publishDialog/publishDialogRedux';
 
 registerReducers({
   progress,
@@ -14,6 +15,7 @@ registerReducers({
   header,
   hiddenStage,
   isRtl,
+  publishDialog,
 });
 
 export {getStore};
