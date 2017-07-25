@@ -2315,8 +2315,8 @@ en:
         tag is called a _rule-set_.  You can make a new rule set by copying the pattern
         you see in the rule-set for the `h1` tag.\r\n\r\n* Find the CSS rule-set in
         the style sheet that determines the styles for the h1 tag.\r\n* Using the
-        same pattern, write a new CSS rule-set that will determine the styles for
-        the h3 tag.\r\n* Add code to make the text in all h3 tags a different color."
+        same pattern, write a new CSS rule-set that will determine the style for the
+        h3 tag.\r\n* Add code to set a different color for the h3 tags."
       CSD U2 text style sample_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**What
         is a style sheet?**</summary>\r\nA style sheet is a document that controls
@@ -26759,9 +26759,8 @@ en:
         at least one item to pass this level."
       courseA_collector_loops12_markdown_instruction: "Eureka!  Get as much treasure
         as you can!  \r\n(You do not have to get it all.)"
-      courseA_collector_loops2_markdown_instruction: "Move Laurel to the treasure,
-        then use \r\n![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png)to
-        pick it up.\r\n\r\nGet all three piles to pass this level.\r\n\r\n"
+      courseA_collector_loops2_markdown_instruction: "Get all three piles! Move Laurel
+        to each piece of treasure, then use this block:\r\n  <xml><block type=\"collector_collect\"/></xml>"
       courseA_forVideoTest_artist_markdown_instruction: "Repeat loops work for Artist,
         too!"
       courseA_maze_seq1_markdown_instruction: "*\"Play with these blocks and try
@@ -26870,15 +26869,29 @@ en:
         disappear when you click on them! Try playing with the dog now, then help
         the other animals join in the fun.\r\nYou can also add sounds and score points
         to create a game of Animal Tag!\r\n\r\n![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)"
-      courseB_starWars_prog1_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
-        \r\nBB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!\r\n\r\nWatch
-        out for walls and crates! \r\n\r\n"
-      courseB_starWars_prog2_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)  Now,
-        help BB-8 gather **all** of the glowing scrap metal! \r\n\r\nWatch out for
-        walls and crates!  \r\n\r\n"
-      courseB_starWars_prog3_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
-        Help BB-8 gather all of the glowing scrap metal!  \r\nWatch out for walls
-        and crates!  \r\n\r\n"
+      courseB_starWars_prog1_markdown_instruction: "![Rey](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)_\"Go
+        get the scrap metal, BB-8!\"_\r\n\r\nWatch out for walls and crates. Scrap
+        metal looks like this: ![picture of scrap metal](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseB_starWars_prog10_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Can you get it all?\"_"
+      courseB_starWars_prog11_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep going!\"_"
+      courseB_starWars_prog2_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Get all the metal.\"_"
+      courseB_starWars_prog3_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep going, BB-8!\"_"
+      courseB_starWars_prog4_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Get it, BB-8!\"_"
+      courseB_starWars_prog5_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Can you get it all?\"_"
+      courseB_starWars_prog6_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"You can do it!\"_\r\n"
+      courseB_starWars_prog7_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Go get it!\"_"
+      courseB_starWars_prog8_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep it up, BB-8.\"_\r\n\r\n**Challenge**: Gather all the scrap metal."
+      courseB_starWars_prog9_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"You can do it!\"_"
       courseC_PlayLab_events8_markdown_instruction: "Can you have Waddles (actor
         1) say \"Ouch!\" and play a \"hit\" sound if he runs into Chomp? \r\n\r\nWhen
         you're done, play the game to make that happen.\r\n\r\n![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)"
@@ -26900,7 +26913,7 @@ en:
         Each hole should be 25 pixels long\r\n- Each hole has 25 pixels of space before
         the next hole"
       courseC_artist_loops2a_markdown_instruction: "Now, use a loop to spin your
-        bird around 12 times with a 30 degree turn.\r\n___\r\n\r\n![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)"
+        bird around 12 times with a 30 degree turn."
       courseC_artist_loops3a_markdown_instruction: "So much fun!  \r\n\r\nNow, add
         a bat sticker right after the bird to make an image like the one below.\r\n___\r\n\r\n![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)"
       courseC_artist_loops4a_markdown_instruction: "Edit your code so that you jump
@@ -26972,9 +26985,10 @@ en:
       courseC_collector_loops_challenge2_markdown_instruction: "Let's hunt for treasure
         - using loops! Help the collector by debugging this code. Get all of the treasure!"
       courseC_collector_prog1_markdown_instruction: "**Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level."
+        the Adventurer! Move her around and get as much treasure as you can. Use the
+        `collect` block to pick up the treasure!\r\n\r\nDrag blocks into the workspace
+        and try to figure out how to get treasure.  Get at least one item to pass
+        this level."
       courseC_collector_prog2_markdown_instruction: "Move Laurel to the treasure,
         then use `collect` to pick it up."
       courseC_collector_prog3_markdown_instruction: "*\"Sequence matters!\"* \r\n\r\nThe
@@ -27088,11 +27102,35 @@ en:
         the last few puzzles to complete this level."
       courseC_puppy_loops8courseC_maze_loops8_markdown_instruction: "**Challenge:**
         Combine ideas from the last few puzzles to complete this level."
-      courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
-        BB-8 picks up glowing scrap metal as it rolls. Help BB-8 get it all!  \r\nWatch
-        out for walls and crates!  \r\n"
-      courseC_starWars_loops8_markdown_instruction: "**Challenge:** Combine ideas
-        from the last few puzzles to complete this level."
+      courseC_starWars_loops1_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Go get the scrap metal, BB-8!\"_ \r\n\r\nUse five of the same blocks to
+        get the scrap metal. Scrap metal glows like this: ![](https://images.code.org/5665566ab779d9b63d03cf8ba127a98f-image-1500570606896.gif)"
+      courseC_starWars_loops10_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r\n
+        _\"Go BB-8!\"_\r\n\r\nYou are doing great! Keep it up!"
+      courseC_starWars_loops11_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep going, BB-8!\"_\r\n\r\nYou are almost there! This time, choose any
+        path you like!"
+      courseC_starWars_loops2_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Go BB-8!\"_\r\n\r\nTo get all the scrap metal, try creating a loop that
+        uses only one block inside of a `repeat` block."
+      courseC_starWars_loops4_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep it up, BB-8.\"_\r\n\r\nIn this puzzle, two `repeat` loops will help
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!\r\n"
+      courseC_starWars_loops5_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Go BB-8!\"_\r\n"
+      courseC_starWars_loops6_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Can you get it all?\"_\r\n\r\nLoops even work with more than one block
+        inside!  Can you loop this sequence?"
+      courseC_starWars_loops7_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"You can do it!\"_\r\n\r\nCan you try to get all the scrap metal using just
+        one loop? Try programming it all out then finding the repeating code to put
+        in a loop."
+      courseC_starWars_loops8_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep it up, BB-8.\"_\r\n\r\n**Challenge:** Combine ideas from the last
+        few puzzles to complete this level."
+      courseC_starWars_loops9_markdown_instruction: "![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _\"Keep going!\"_\r\n\r\nUse what you have learned to pick up all of the scrap
+        metal!"
       courseD_artist_binary1_markdown_instruction: "We've provided you with a grid
         of \"pixels\" that you can walk through and make designs by turning on only
         certain squares.\r\n\r\nUse the blocks below to have the artist draw \"01010101\"
@@ -27185,41 +27223,56 @@ en:
         out how to make a picture like this?\r\n\r\n- The first inner loop should
         make an octagon.\r\n- The second inner loop should make a hexagon.\r\n- The
         third inner loop should make a square."
-      courseD_artist_project1_markdown_instruction: "Draw a small shape, between
-        **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
+      courseD_artist_project1_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\r\n\r\nDraw a small shape,
+        between **20 and 50** pixels wide.  It can be any shape that you like.  \r\n<hr/>\r\n\r\nYou
         can try making a polygon, like one of these:  \r\n![](https://images.code.org/14e58b3901ca7c13319cc64f18ae5d82-image-1495765942356.21.06.png)\r\n![](https://images.code.org/8f79d689ea4936a3725a37025f8fda40-image-1495765942357.25.49.png)\r\n![](https://images.code.org/e5d222ae7356af4811aa153640af135e-image-1495765942357.26.09.png)  \r\n\r\n  \r\n  \r\nOr
-        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)"
-      courseD_artist_project1a_markdown_instruction: "<img src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
-        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />This puzzle
-        will give you the chance to start a new drawing project! \r\n\r\nDraw a stair-step
-        pattern that uses turns between 75 and 105 degrees -- but make sure that your
-        left and right turns use the same angle.  \r\n(You will see why later.)"
-      courseD_artist_project2_markdown_instruction: "Now take your shape and draw
-        two or three in a row by jumping forward some number of pixels.  \r\n\r\n-
-        If you jump forward by **less** than the width of your shape, they might overlap\r\n-
+        even an abstract shape, like one of these:  \r\n![](https://images.code.org/8471c095219da3044b3830bebeedefb3-image-1496436883704.32.19.png)\r\n![](https://images.code.org/2fe6ed2db5308f4b34f7632fc6b8a64d-image-1496436883705.40.32.png)\r\n![](https://images.code.org/abb0947f634bc4b712d47516587a6cb8-image-1496436883705.47.21.png)\r\n\r\n"
+      courseD_artist_project1a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Let’s try something new. This time, skate in a zig-zag.\"_\r\n\r\n\r\n<img
+        src=\"https://images.code.org/73b1310fca6cf884ec8fb8b026210212-image-1495839168718.16.10.png\"
+        width=\"200px\" style=\"float: left; margin: 0 15px 15px 0;\" />\r\nDraw a
+        stair-step pattern that uses turns between 75 and 105 degrees -- but make
+        sure that your left and right turns use the same angle.  \r\n(You will see
+        why later.)"
+      courseD_artist_project2_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _“Now, let’s draw more than one.”_\r\n\r\nNow take your shape and draw two
+        or three in a row by jumping forward some number of pixels.  \r\n\r\n- If
+        you jump forward by **less** than the width of your shape, they might overlap\r\n-
         If you jump forward by **more** than the width of your shape, you will get
         a gap\r\n\r\n<hr/>\r\n\r\nYour row might end up straight like with these:\r\n\r\n![](https://images.code.org/cefc818d8636c7ce185738311870ff1d-image-1495820778762.39.25.png)\r\n![](https://images.code.org/80dc77914de15685dc696825dff61723-image-1495820778762.39.43.png)\r\n![](https://images.code.org/00cda078f119b1ddb0af27ae4a44b089-image-1495820778761.39.08.png)\r\n<br/>  <br/>\r\n\r\n\r\nOr,
         your shapes might move around like one of these: \r\n\r\n![](https://images.code.org/0c4066fe7547bc1f4495aacbeecdea6d-image-1496437220447.47.04.png)\r\n![](https://images.code.org/4069376b784c147a8d443d49e22f783f-image-1496437220446.40.15.png)\r\n![](https://images.code.org/02704ab3fb3356f76c544bb64c1a7cce-image-1496437220446.32.04.png)"
-      courseD_artist_project2a_markdown_instruction: "Now, turn around 180 degrees
+      courseD_artist_project2a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Now let’s turn and go back the way we came.\"_\r\n\r\nTurn around 180 degrees
         and draw the exact same stair pattern again!  \r\n\r\n- The rest of this stage
-        will be easier if you put all of your code inside of a loop to make Elsa \r\n<br/>draw,
+        will be easier if you put all of your code inside of a loop to make Elsa  draw,
         turn around 180 degrees, draw, then turn around 180 degrees again.\r\n\r\n<hr/>\r\n\r\nHere
         is an example of stairs that use a 76 degree turn:\r\n\r\n![](https://images.code.org/ceea66fad37e79cc45a850911f90440c-image-1496696286635.16.27.png)"
-      courseD_artist_project3_markdown_instruction: "Next, jump Elsa back to the
-        center using the `jump to 200 over and 200 down` block, and spin her around
-        to draw the line of shapes again and again in a bunch of different directions.   \r\n\r\nWhat
+      courseD_artist_project3_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Let’s make it into a snowflake.\"_\r\n\r\nNext, jump Elsa back to the center
+        using the `jump to 200 over and 200 down` block, and spin her around to draw
+        the line of shapes again and again in a bunch of different directions.   \r\n\r\nWhat
         amazing snowflakes you can make!\r\n<hr/>\r\nTake a look at these examples
         with polygons:  \r\n![](https://images.code.org/b32ebfb3be559bf8a6d017a854e0b97e-image-1495821528995.42.08.png)\r\n![](https://images.code.org/08d7155f6829f82d878dfa57ad5dcaf3-image-1495821528996.42.26.png)\r\n![](https://images.code.org/7d461ee9046871e6993406e558f28176-image-1495821528996.42.58.png)\r\n\r\nAbstract
         shapes might make a snowflake more like one of these:  \r\n![](https://images.code.org/376d7ba20b6bb86e08b1675370e87b92-image-1496695869798.44.00.png)\r\n![](https://images.code.org/4f649cc779920632674afac5acce5c95-image-1496695869798.47.51.png)\r\n![](https://images.code.org/a68f925ffd87241ebc09183acc908b4b-image-1496695869796.31.49.png)"
-      courseD_artist_project3a_markdown_instruction: "Spin that shape around 5 or
-        6 times in a circle.\r\n- If you choose 5 times,  try a turn of 72 degrees\r\n-
+      courseD_artist_project3a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Let’s spin and make it into a snowflake.\"_\r\n\r\nSpin that shape around
+        5 or 6 times in a circle.\r\n- If you choose 5 times,  try a turn of 72 degrees\r\n-
         If you choose 6 times,  try a turn of 60 degrees\r\n<hr/>\r\n\r\nHere's an
         example of Elsa turning a pattern 6 times:\r\n\r\n![](https://images.code.org/b0fe02e728f80ae7a4b731f32371a37b-image-1496697582505.19.34.png)"
-      courseD_artist_project4_markdown_instruction: "What would happen if we layered
-        two different shapes of snowflakes on top of one another with a little turn
-        in between?   \r\nTry it and see what you get!"
-      courseD_artist_project5_markdown_instruction: "Get creative with your shapes
-        and angles to see what kind of new images you can draw!"
+      courseD_artist_project4_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"What happens if we draw snowflakes on top of each other?\"_\r\n\r\nTry
+        layering two different shapes of snowflakes on top of one another with a little
+        turn in between - see what you get! "
+      courseD_artist_project4a_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _\"Now,
+        what should we do? Let’s explore and create our own winter wonderland!\"_\r\n\r\nTry
+        playing around with what you've created. Draw whatever you like!\r\n- What
+        happens if you use two different angles in your stair step pattern?\r\n- What
+        happens if you make your diamond pattern longer or shorter?\r\n- What does
+        it look like to draw two snowflakes on top of one another?\r\n"
+      courseD_artist_project5_markdown_instruction: "![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)
+        _\"Get creative with shapes and angles to see what kind of new snowflakes
+        we can draw!\"_\r\n"
       courseD_artist_ramp11_markdown_instruction: "Great!  Now let's make a square
         using Artist!  The blocks are a little different, but the idea is the same.\r\n___\r\nEach
         side of the square has a length of 200 pixels, and you will need to turn 90
@@ -27305,7 +27358,7 @@ en:
         gets the nectar. Can you use the same kind of pattern to help the bee make
         all of honey?"
       courseD_bee_nestedLoops1_markdown_instruction: "*\"This is going to **BEE**
-        great!\"**\r\n\r\nHelp the bee collect all of the nectar."
+        great!\"*\r\n\r\nHelp the bee collect all of the nectar."
       courseD_bee_nestedLoops2_markdown_instruction: "This time, help the bee collect
         all of the nectar using as few blocks as possible."
       courseD_bee_nestedLoops2_predict1_markdown_instruction: "This time, help the
@@ -27802,35 +27855,23 @@ en:
         some code to the `win game` and `lose game` functions to make the game work
         the way it should. \r\nClick the hints for ideas!"
       courseE_playLab_scaffold1_markdown_instruction: "It is amazing how much you
-        have learned! Let's put it together to make a game, step by step. \r\n\r\nWe've
-        put these blocks in your toolbox. Choose a random background, then pick an
-        actor to be your game's hero.\r\n\r\n![](https://images.code.org/745931ce34b3c47de19c36009e4a9c48-image-1471464938470.14.47
-        PM.png)"
-      courseE_playLab_scaffold2_markdown_instruction: "Now let's get things moving!
-        \r\n\r\nUse event handlers and actions to make your hero move. Get the targets
-        to complete this puzzle.\r\n\r\n___\r\n\r\nWe've added these blocks to your
-        tool box to help you.\r\n\r\n![](https://images.code.org/6216c0559cfae16005ffb53e6532473b-image-1471472994205.23.54%20PM.png)"
-      courseE_playLab_scaffold3_markdown_instruction: "Now that your game has a hero,
-        add two or more additional actors to your game and make them move. \r\n\r\nDo
-        you want to have an actor patrol back and forth or chase your main character?
-        \r\nTry using a these new blocks to bring your game to life!\r\n\r\n![](https://images.code.org/04951f51ad2fda34531c335ef10577ae-image-1497992195771.png)"
-      courseE_playLab_scaffold4_markdown_instruction: "Getting the actors moving
-        is a great step, but we need to do more to make this feel like a real game.
-        A simple way to do this is to add or remove points when actors collide with
-        things. Find some interesting ways to change the score in your game.\r\n<hr/>\r\n\r\nGet
-        the score to show something other than 0 to continue.\r\n\r\n___\r\n\r\n*Don't
-        expect to get this right on the first try. Keep testing your game as you code.
-        You'll not only want a game that works, but one that is fun to play!*\r\n___\r\nWe've
-        added these blocks to your toolbox:\r\n\r\n![](https://images.code.org/ad0df96aa91c89e3d903dce2fe19517f-image-1472070105051.20.55
-        PM.png)"
+        have learned! Let's make a game step by step.\r\n\r\nUsing new blocks in
+        your toolbox, choose a new background, then pick an actor to be in your game."
+      courseE_playLab_scaffold2_markdown_instruction: "Use new blocks like event
+        handlers and actions to make your player move according to the arrows on your
+        keyboard. Get the player to the targets to complete this puzzle."
+      courseE_playLab_scaffold3_markdown_instruction: "Let's add some more characters
+        to your game!\r\n\r\nUse the `set actor` block to add more characters then
+        move to the goal to complete this puzzle."
+      courseE_playLab_scaffold4_markdown_instruction: "Multiple characters and getting
+        the actors moving is a great start to a game, but we need to do more to make
+        this feel like a real game. Let's add a score!\r\n\r\nUse the new blocks
+        like the `when actor touches` to change the score. Score 10 points to complete
+        this puzzle."
       courseE_playLab_scaffold5_markdown_instruction: "Great job! You have all the
         basic components of a working game. Now spend some time making sure the game
         works the way you want. Include a way to win or lose your game, then play
-        until you meet one of those conditions.\r\n___\r\n*Don't forget: Keep testing
-        your game as you code. You'll not only want a game that works, but one that
-        is fun to play!*\r\n___\r\nYour toolbox has been re-organized to make it easier
-        to find what you need. We've also added these blocks (and more):\r\n\r\n![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57
-        PM.png)"
+        until you meet one of those conditions."
       courseE_playLab_scaffold6_markdown_instruction: "You've finished! Now you
         can play your game or share it with your friends and classmates!"
       courseE_playlab_challenge2_markdown_instruction: "Can you figure out how this

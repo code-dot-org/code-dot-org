@@ -14,9 +14,16 @@ export default storybook => {
       },
       {
         name: 'Modified project buttons',
-        description: 'Buttons to make a new Web Lab, Game Lab, Play Lab and Artist project',
+        description: 'Buttons to make a new Web Lab, App Lab, Calc and Eval project',
         story: () => (
-          <NewProjectButtons projectTypes={['weblab', 'gamelab', 'playlab', 'artist']}/>
+          <NewProjectButtons projectTypes={['weblab', 'applab', 'calc', 'eval']}/>
+        )
+      },
+      {
+        name: 'Brand project buttons',
+        description: 'Buttons to make a new Frozen, Starwars, and both Minecraft projects',
+        story: () => (
+          <NewProjectButtons projectTypes={['frozen', 'starwars', 'mc', 'minecraft']}/>
         )
       }
     ]);
