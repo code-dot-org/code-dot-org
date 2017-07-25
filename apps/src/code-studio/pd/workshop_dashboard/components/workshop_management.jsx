@@ -33,7 +33,6 @@ const WorkshopManagement = React.createClass({
 
       let surveyBaseUrl;
 
-      // TODO: Remove the workshop admin permission when we are ready to launch
       if (this.props.subject === '5-day Summer') {
         surveyBaseUrl = "local_summer_workshop_survey_results";
       } else {
