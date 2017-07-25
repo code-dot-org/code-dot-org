@@ -63,10 +63,18 @@ class Section < ActiveRecord::Base
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
+  LOGIN_TYPE_EMAIL = 'email'.freeze
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
   LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
   LOGIN_TYPE_CLEVER = 'clever'.freeze
+  LOGIN_TYPES = [
+    LOGIN_TYPE_EMAIL,
+    LOGIN_TYPE_PICTURE,
+    LOGIN_TYPE_WORD,
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER,
+  ]
 
   TYPES = [
     # Insert non-workshop section types here.
@@ -75,6 +83,10 @@ class Section < ActiveRecord::Base
 
   ADD_STUDENT_EXISTS = 'exists'.freeze
   ADD_STUDENT_SUCCESS = 'success'.freeze
+
+  def self.valid_login_type?(type)
+    LOGIN_TYPES.include? type
+  end
 
   # Override default script accessor to use our cache
   def script
@@ -226,6 +238,14 @@ class Section < ActiveRecord::Base
       grade: grade,
       providerManaged: provider_managed?
     }
+  end
+
+  def self.valid_grades
+    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+  end
+
+  def self.valid_grade?(grade)
+    valid_grades.include? grade
   end
 
   def provider_managed?

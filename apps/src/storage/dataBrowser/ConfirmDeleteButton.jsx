@@ -11,7 +11,7 @@ const ConfirmDeleteButton = React.createClass({
     buttonText: React.PropTypes.string.isRequired,
     confirmText: React.PropTypes.string,
     containerStyle: React.PropTypes.any,
-    onConfirm: React.PropTypes.func.isRequired,
+    onConfirmDelete: React.PropTypes.func.isRequired,
   },
 
   getInitialState() {
@@ -26,7 +26,7 @@ const ConfirmDeleteButton = React.createClass({
 
   handleConfirm() {
     this.setState({open: false});
-    this.props.onConfirm();
+    this.props.onConfirmDelete();
   },
 
   render() {
