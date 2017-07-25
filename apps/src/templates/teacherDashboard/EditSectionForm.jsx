@@ -6,7 +6,10 @@ import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentS
 import { sectionShape, newSectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
-import {editSectionProperties} from './teacherSectionsRedux';
+import {
+  editSectionProperties,
+  cancelEditingSection,
+} from './teacherSectionsRedux';
 
 const style = {
   dropdown: {
@@ -27,7 +30,6 @@ class EditSectionForm extends Component{
   static propTypes = {
     title: PropTypes.string.isRequired,
     handleSave: PropTypes.func.isRequired,
-    handleClose: PropTypes.func.isRequired,
     assignmentRef: PropTypes.func.isRequired,
 
     //Comes from redux
@@ -37,6 +39,7 @@ class EditSectionForm extends Component{
     sections: PropTypes.objectOf(sectionShape).isRequired,
     section: newSectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
+    handleClose: PropTypes.func.isRequired,
   };
 
   renderSectionNameInput() {
@@ -170,6 +173,7 @@ export default connect(state => ({
   section: state.teacherSections.sectionBeingEdited,
 }), {
   editSectionProperties,
+  handleClose: cancelEditingSection,
 })(EditSectionForm);
 
 const FieldName = props => (

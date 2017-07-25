@@ -125,10 +125,9 @@ class SectionsPage extends Component {
     }
   };
 
-  handleEditRequest = (section) => {
+  handleEditRequest = section => {
     if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
       this.props.beginEditingSection(section.id);
-      this.editor.getWrappedInstance().updateStates(section);
     }
   };
 
@@ -190,7 +189,7 @@ class SectionsPage extends Component {
           provider={this.provider}
         />
         <AddSectionDialog/>
-        <EditSectionDialog ref={(element) => this.editor = element}/>
+        <EditSectionDialog/>
       </div>
     );
   }

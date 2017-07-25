@@ -8,7 +8,6 @@ import i18n from '@cdo/locale';
 import {newSectionShape} from './shapes';
 import {
   isAddingSection,
-  cancelEditingSection,
   finishEditingSection,
   updateSection,
 } from './teacherSectionsRedux';
@@ -18,13 +17,8 @@ export class AddSectionDialog extends Component {
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
     section: newSectionShape,
-    cancelEditingSection: PropTypes.func.isRequired,
     finishEditingSection: PropTypes.func.isRequired,
     updateSection: PropTypes.func.isRequired,
-  };
-
-  handleClose = () => {
-    this.props.cancelEditingSection();
   };
 
   onClickEditSave = () => {
@@ -86,7 +80,6 @@ export class AddSectionDialog extends Component {
               title={title}
               assignmentRef={(element) => this.assignment = element}
               handleSave={this.onClickEditSave}
-              handleClose={this.handleClose}
             />
           }
         </PadAndCenter>
@@ -99,7 +92,6 @@ export default connect(state => ({
   isOpen: isAddingSection(state.teacherSections),
   section: state.teacherSections.sectionBeingEdited,
 }), {
-  cancelEditingSection,
   finishEditingSection,
   updateSection,
 })(AddSectionDialog);
