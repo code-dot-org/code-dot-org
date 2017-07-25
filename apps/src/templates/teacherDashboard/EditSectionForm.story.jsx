@@ -24,7 +24,6 @@ export default storybook => storybook
         handleSave={storybook.action('handleSave')}
         handleClose={storybook.action('handleClose')}
         editSectionProperties={storybook.action('editSectionProperties')}
-        assignmentRef={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={{}}
         primaryAssignmentIds={[]}

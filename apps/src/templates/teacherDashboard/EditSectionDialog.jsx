@@ -23,9 +23,6 @@ export class EditSectionDialog extends Component {
   onClickEditSave = () => {
     const {section, finishEditingSection, updateSection} = this.props;
 
-    //Assumes section are already created.
-    const selectedAssignment = this.assignment.getSelectedAssignment();
-
     const data = {
       id: section.id,
       name: section.name,
@@ -33,12 +30,12 @@ export class EditSectionDialog extends Component {
       grade: section.grade,
       stage_extras: section.stageExtras,
       pairing_allowed: section.pairingAllowed,
-      course_id: selectedAssignment ? selectedAssignment.courseId : null,
+      course_id: section.courseId || null,
     };
 
-    if (selectedAssignment && selectedAssignment.scriptId) {
+    if (section.scriptId) {
       data.script = {
-        id: selectedAssignment.scriptId
+        id: section.scriptId
       };
     }
 
@@ -64,7 +61,6 @@ export class EditSectionDialog extends Component {
     return (
       <EditSectionForm
         title={i18n.editSectionDetails()}
-        assignmentRef = {(element) => this.assignment = element}
         handleSave={this.onClickEditSave}
       />
     );
