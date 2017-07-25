@@ -178,6 +178,27 @@ class Script < ActiveRecord::Base
     Script.get_from_cache(Script::ARTIST_NAME)
   end
 
+  # Get the set of scripts that are valid for the current user, ignoring those
+  # that are hidden based on the user's permission.
+  # @param [User] user
+  # @return [AssignableInfo[]]
+  def self.valid_scripts(user)
+    with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
+    cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
+    Rails.cache.fetch(cache_key) do
+      Script.
+          all.
+          select {|script| with_hidden || !script.hidden}
+    end
+  end
+
+  # @param [User] user
+  # @param script_id [String] id of the script we're checking the validity of
+  # @return [Boolean] Whether this is a valid script ID
+  def self.valid_script_id?(user, script_id)
+    valid_scripts(user).any? {|script| script[:id] == script_id.to_i}
+  end
+
   def starting_level
     raise "Script #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level

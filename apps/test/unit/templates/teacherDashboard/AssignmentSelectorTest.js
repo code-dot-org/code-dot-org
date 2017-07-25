@@ -25,7 +25,7 @@ const defaultProps = {
       script_name: "csd",
       category: "Full Courses",
       position: 1,
-      category_priority: -1,
+      category_priority: 0,
       courseId: 29,
       scriptId: null,
       scriptAssignIds: ['null_168'],
@@ -39,7 +39,7 @@ const defaultProps = {
       script_name: "csd1",
       category: "CS Discoveries",
       position: 0,
-      category_priority: 0,
+      category_priority: 7,
       courseId: null,
       scriptId: 168,
       assignId: "null_168",
@@ -52,7 +52,7 @@ const defaultProps = {
       script_name: "flappy",
       category: "Hour of Code",
       position: 4,
-      category_priority: 0,
+      category_priority: 2,
       courseId: null,
       scriptId: 6,
       assignId: "null_6",
@@ -210,9 +210,9 @@ describe('AssignmentSelector', () => {
     );
     assert.equal(wrapper.find('select').length, 1);
     assert.equal(wrapper.find('option').length, 4);
-    // ends up before flappy, because it's in an earlier category
-    assert.equal(wrapper.find('option').at(2).text(), 'Unit 1: Problem Solving');
-    assert.equal(wrapper.find('option').at(3).text(), 'Make a Flappy game');
+    // ends up after flappy, because it's in a later category
+    assert.equal(wrapper.find('option').at(2).text(), 'Make a Flappy game');
+    assert.equal(wrapper.find('option').at(3).text(), 'Unit 1: Problem Solving');
   });
 
   it('shows two dropdowns if section has a course selected', () => {
