@@ -25,6 +25,12 @@ export default storybook => {
         name: 'basic example',
         story: () => (
           <ShareDialog
+            isOpen={true}
+            isOwner={false}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
             hideBackdrop={true}
             i18n={fakei18n}
             shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -40,6 +46,12 @@ export default storybook => {
         description: `The applab version has an advanced sharing dialog with more options`,
         story: () => (
           <ShareDialog
+            isOpen={true}
+            isOwner={false}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
             hideBackdrop={true}
             i18n={fakei18n}
             shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -55,6 +67,12 @@ export default storybook => {
         description: `This feature has not yet shipped.`,
         story: () => (
           <ShareDialog
+            isOpen={true}
+            isOwner={false}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
             hideBackdrop={true}
             i18n={fakei18n}
             shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -71,6 +89,12 @@ export default storybook => {
         description: `We hide social sharing buttons and display a warning for users under 13`,
         story: () => (
           <ShareDialog
+            isOpen={true}
+            isOwner={false}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
             hideBackdrop={true}
             i18n={fakei18n}
             shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -86,6 +110,12 @@ export default storybook => {
         description: `The abusive version shows a warning message`,
         story: () => (
           <ShareDialog
+            isOpen={true}
+            isOwner={false}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
             hideBackdrop={true}
             i18n={fakei18n}
             shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -101,6 +131,12 @@ export default storybook => {
         description: `An icon can be specified for the dialog`,
         story: () => (
           <ShareDialog
+            isOpen={true}
+            isOwner={false}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
             hideBackdrop={true}
             icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
             i18n={fakei18n}
@@ -109,6 +145,46 @@ export default storybook => {
             channelId="some-id"
             canShareSocial={true}
             appType="gamelab"
+            onClickPopup={storybook.action('onClickPopup')}
+          />
+        )
+      }, {
+        name: 'with publish button',
+        story: () => (
+          <ShareDialog
+            isOpen={true}
+            isOwner={true}
+            isPublished={false}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
+            hideBackdrop={true}
+            i18n={fakei18n}
+            shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+            isAbusive={false}
+            channelId="some-id"
+            appType="gamelab"
+            canShareSocial={true}
+            onClickPopup={storybook.action('onClickPopup')}
+          />
+        )
+      }, {
+        name: 'with unpublish button',
+        story: () => (
+          <ShareDialog
+            isOpen={true}
+            isOwner={true}
+            isPublished={true}
+            onClose={storybook.action('close')}
+            onShowPublishDialog={storybook.action('show publish dialog')}
+            onUnpublish={storybook.action('unpublish')}
+            hideBackdrop={true}
+            i18n={fakei18n}
+            shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+            isAbusive={false}
+            channelId="some-id"
+            appType="gamelab"
+            canShareSocial={true}
             onClickPopup={storybook.action('onClickPopup')}
           />
         )
