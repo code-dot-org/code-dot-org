@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Heading1, h3Style} from "../../lib/ui/Headings";
+import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, newSectionShape, assignmentShape } from './shapes';
@@ -12,6 +13,9 @@ import {
 } from './teacherSectionsRedux';
 
 const style = {
+  root: {
+    width: styleConstants['content-width'],
+  },
   dropdown: {
     padding: '0.3em',
   },
@@ -74,7 +78,7 @@ class EditSectionForm extends Component{
   render(){
     const {section, title, editSectionProperties} = this.props;
     return (
-      <div style={{width: 970}}>
+      <div style={style.root}>
         <Heading1>
           {title}
         </Heading1>
