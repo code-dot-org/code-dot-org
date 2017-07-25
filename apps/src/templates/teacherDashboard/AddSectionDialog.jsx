@@ -4,16 +4,16 @@ import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
-
 import i18n from '@cdo/locale';
+import {newSectionShape} from './shapes';
 import {
   isAddingSection,
   cancelEditingSection,
   finishEditingSection,
   updateSection,
 } from './teacherSectionsRedux';
+
 const initialState = {
-  loginType: undefined,
   name: '',
   grade: '',
   extras: 'yes',
@@ -24,6 +24,7 @@ export class AddSectionDialog extends Component {
   static propTypes = {
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
+    section: newSectionShape,
     cancelEditingSection: PropTypes.func.isRequired,
     finishEditingSection: PropTypes.func.isRequired,
     updateSection: PropTypes.func.isRequired,
@@ -36,10 +37,6 @@ export class AddSectionDialog extends Component {
   handleClose = () => {
     this.props.cancelEditingSection();
     this.setState(initialState);
-  };
-
-  handleLoginChoice = (loginType) => {
-    this.setState({loginType});
   };
 
   handleNameChange = (name) => {
@@ -59,13 +56,13 @@ export class AddSectionDialog extends Component {
   };
 
   onClickEditSave = () => {
-    const {updateSection, finishEditingSection} = this.props;
-    const {name, loginType, grade, extras, pairing} = this.state;
+    const {section, updateSection, finishEditingSection} = this.props;
+    const {name, grade, extras, pairing} = this.state;
 
     const selectedAssignment = this.assignment.getSelectedAssignment();
     const data = {
       name: name,
-      login_type: loginType,
+      login_type: section.loginType,
       grade: grade,
       stage_extras: extras === 'yes',
       pairing_allowed: pairing === 'yes',
@@ -98,8 +95,9 @@ export class AddSectionDialog extends Component {
   };
 
   render() {
-    const {isOpen} = this.props;
-    const {name, grade, loginType, extras, pairing} = this.state;
+    const {isOpen, section} = this.props;
+    const {name, grade, extras, pairing} = this.state;
+    const {loginType} = section || {};
     const title = i18n.newSection();
     return (
       <BaseDialog
@@ -111,11 +109,7 @@ export class AddSectionDialog extends Component {
       >
         <PadAndCenter>
           {!loginType && /* First page */
-            <LoginTypePicker
-              title={title}
-              handleLoginChoice={this.handleLoginChoice}
-              handleCancel={this.handleClose}
-            />
+            <LoginTypePicker title={title}/>
           }
           {loginType && /* Second page */
             <EditSectionForm
@@ -141,6 +135,7 @@ export class AddSectionDialog extends Component {
 
 export default connect(state => ({
   isOpen: isAddingSection(state.teacherSections),
+  section: state.teacherSections.sectionBeingEdited,
 }), {
   cancelEditingSection,
   finishEditingSection,

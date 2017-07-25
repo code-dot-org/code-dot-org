@@ -2,7 +2,7 @@ import { PropTypes } from 'react';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { makeEnum } from '@cdo/apps/utils';
 
-export const sectionShape = PropTypes.shape({
+const sectionShapeDefinition = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   // Though we validate valid login types here, the server actually owns the
@@ -16,6 +16,14 @@ export const sectionShape = PropTypes.shape({
   scriptId: PropTypes.number,
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
+};
+
+export const sectionShape = PropTypes.shape(sectionShapeDefinition);
+
+export const newSectionShape = PropTypes.shape({
+  ...sectionShapeDefinition,
+  id: undefined,
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
 });
 
 export const assignmentShape = PropTypes.shape({
