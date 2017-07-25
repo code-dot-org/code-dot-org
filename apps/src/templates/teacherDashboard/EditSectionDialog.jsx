@@ -3,7 +3,12 @@ import { connect } from 'react-redux';
 import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import EditSectionForm from "./EditSectionForm";
-import { updateSection } from './teacherSectionsRedux';
+import {
+  isEditingSection,
+  cancelEditingSection,
+  finishEditingSection,
+  updateSection,
+} from './teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
 const initialState = {
@@ -17,19 +22,15 @@ const initialState = {
 
 export class EditSectionDialog extends Component {
   static propTypes = {
-    handleClose: PropTypes.func,
-    isOpen: PropTypes.bool,
-
     //From Redux
+    isOpen: PropTypes.bool.isRequired,
+    cancelEditingSection: PropTypes.func.isRequired,
+    finishEditingSection: PropTypes.func.isRequired,
     updateSection: PropTypes.func.isRequired,
   };
 
   state = {
     ...initialState,
-  };
-
-  handleClose = () => {
-    this.props.handleClose();
   };
 
   handleNameChange = (name) => {
@@ -49,7 +50,7 @@ export class EditSectionDialog extends Component {
   }
 
   onClickEditSave = () => {
-    const {updateSection} = this.props;
+    const {finishEditingSection, updateSection} = this.props;
 
     //Assumes section are already created.
     const sectionId = this.state.sectionId;
@@ -60,8 +61,8 @@ export class EditSectionDialog extends Component {
       name: this.state.name,
       login_type: this.state.loginType,
       grade: this.state.grade,
-      stage_extras: this.state.extras === 'yes' ? true : false,
-      pairing_allowed: this.state.pairing === 'yes' ? true : false,
+      stage_extras: this.state.extras === 'yes',
+      pairing_allowed: this.state.pairing === 'yes',
       course_id: selectedAssignment ? selectedAssignment.courseId : null,
     };
 
@@ -80,8 +81,7 @@ export class EditSectionDialog extends Component {
       data: JSON.stringify(data),
     }).done(result => {
       updateSection(sectionId, result);
-      // close modal after save
-      this.handleClose();
+      finishEditingSection();
     }).fail((jqXhr, status) => {
       // We may want to handle this more cleanly in the future, but for now this
       // matches the experience we got in angular
@@ -109,7 +109,7 @@ export class EditSectionDialog extends Component {
         title={i18n.editSectionDetails()}
         assignmentRef = {(element) => this.assignment = element}
         handleSave={this.onClickEditSave}
-        handleClose={this.handleClose}
+        handleClose={this.props.cancelEditingSection}
         name={this.state.name}
         handleName={this.handleNameChange}
         grade={this.state.grade}
@@ -139,7 +139,13 @@ export class EditSectionDialog extends Component {
   }
 }
 
-export default connect(() => ({}), { updateSection }, null, { withRef: true })(EditSectionDialog);
+export default connect(state => ({
+  isOpen: isEditingSection(state.teacherSections),
+}), {
+  cancelEditingSection,
+  finishEditingSection,
+  updateSection,
+}, null, { withRef: true })(EditSectionDialog);
 
 const PadAndCenter = ({children}) => (
   <div

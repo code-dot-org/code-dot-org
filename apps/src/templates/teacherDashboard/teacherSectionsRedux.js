@@ -9,6 +9,9 @@ const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
+const EDIT_SECTION_CANCEL = 'teacherDashboard/EDIT_SECTION_CANCEL';
+const EDIT_SECTION_FINISH = 'teacherDashboard/EDIT_SECTION_FINISH';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -34,6 +37,12 @@ export const updateSection = (sectionId, serverSection) => ({
 export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
+// Section dialog actions
+export const beginEditingNewSection = () => ({ type: EDIT_SECTION_BEGIN, sectionId: null });
+export const beginEditingSection = (sectionId) => ({ type: EDIT_SECTION_BEGIN, sectionId });
+export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
+export const finishEditingSection = () => ({ type: EDIT_SECTION_FINISH });
+
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
@@ -45,8 +54,34 @@ const initialState = {
   // that are not in a course)
   primaryAssignmentIds: [],
   // Mapping from sectionId to section object
-  sections: {}
+  sections: {},
+  // We can edit exactly one section at a time.
+  // While editing we store that section's 'in-progress' state separate from
+  // its persisted state in the sections map.
+  sectionBeingEdited: null,
 };
+
+/**
+ * Generate shape for new section
+ * @param id
+ * @param courseId
+ * @returns {sectionShape}
+ */
+function newSectionData(id, courseId) {
+  return {
+    id: id,
+    name: '',
+    loginType: SectionLoginType.word,
+    grade: '',
+    providerManaged: false,
+    stageExtras: false,
+    pairingAllowed: true,
+    studentCount: 0,
+    code: '',
+    courseId: courseId || null,
+    scriptId: null
+  };
+}
 
 export default function teacherSections(state=initialState, action) {
   if (action.type === SET_STUDIO_URL) {
@@ -188,19 +223,7 @@ export default function teacherSections(state=initialState, action) {
       sectionIds: [sectionId, ...state.sectionIds],
       sections: {
         ...state.sections,
-        [sectionId]: {
-          id: sectionId,
-          name: '',
-          loginType: SectionLoginType.word,
-          grade: '',
-          providerManaged: false,
-          stageExtras: false,
-          pairingAllowed: true,
-          studentCount: 0,
-          code: '',
-          courseId: action.courseId || null,
-          scriptId: null
-        }
+        [sectionId]: newSectionData(sectionId, action.courseId)
       }
     };
   }
@@ -215,6 +238,26 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       sectionIds: _.without(state.sectionIds, sectionId),
       sections: _.omit(state.sections, sectionId)
+    };
+  }
+
+  if (action.type === EDIT_SECTION_BEGIN) {
+    const initialSectionData = action.sectionId ?
+      { ...state.sections[action.sectionId] } :
+      newSectionData(null, action.courseId);
+    return {
+      ...state,
+      sectionBeingEdited: initialSectionData,
+    };
+  } else if (action.type === EDIT_SECTION_CANCEL) {
+    return {
+      ...state,
+      sectionBeingEdited: null,
+    };
+  } else if (action.type === EDIT_SECTION_FINISH) {
+    return {
+      ...state,
+      sectionBeingEdited: null,
     };
   }
 
@@ -273,3 +316,19 @@ export const assignmentPaths = (validAssignments, section) => {
   const assignments = assignmentsForSection(validAssignments, section);
   return assignments.map(assignment => assignment ? assignment.path : '');
 };
+
+/**
+ * Ask whether the user is currently adding a new section using
+ * the Add Section dialog.
+ */
+export function isAddingSection(state) {
+  return !!(state.sectionBeingEdited && !state.sectionBeingEdited.id);
+}
+
+/**
+ * Ask whether the user is currently editing an existing section using the
+ * Edit Section dialog.
+ */
+export function isEditingSection(state) {
+  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id);
+}

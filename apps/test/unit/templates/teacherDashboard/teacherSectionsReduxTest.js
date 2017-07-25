@@ -8,10 +8,16 @@ import reducer, {
   updateSection,
   newSection,
   removeSection,
+  beginEditingNewSection,
+  beginEditingSection,
+  cancelEditingSection,
+  finishEditingSection,
   assignmentId,
   assignmentNames,
   assignmentPaths,
   sectionFromServerSection,
+  isAddingSection,
+  isEditingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sections = [
@@ -447,6 +453,62 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
+  describe('beginEditingNewSection', () => {
+    it('populates sectionBeingEdited', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, beginEditingNewSection());
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: null,
+        name: '',
+        loginType: 'word',
+        grade: '',
+        providerManaged: false,
+        stageExtras: false,
+        pairingAllowed: true,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        scriptId: null
+      });
+    });
+  });
+
+  describe('beginEditingSection', () => {
+    it('populates sectionBeingEdited', () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      assert.isNull(stateWithSections.sectionBeingEdited);
+      const state = reducer(stateWithSections, beginEditingSection(12));
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: 12,
+        name: "section2",
+        loginType: "picture",
+        grade: "11",
+        providerManaged: false,
+        code: "DWGMFX",
+        stageExtras: false,
+        pairingAllowed: true,
+        scriptId: 36,
+        courseId: null,
+        studentCount: 1,
+      });
+    });
+  });
+
+  describe('cancelEditingSection', () => {
+    it('clears sectionBeingEdited', () => {
+      const initialState = reducer(initialState, beginEditingNewSection());
+      assert.isNotNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, cancelEditingSection());
+      assert.isNull(state.sectionBeingEdited);
+    });
+  });
+
+  describe.skip('finishEditingSection', () => {
+    it('commits changes', () => {
+      const initialState = reducer(initialState, finishEditingSection());
+    });
+  });
+
   describe('sectionFromServerSection', () => {
     const serverSection = {
       id: 11,
@@ -532,6 +594,52 @@ describe('teacherSectionsRedux', () => {
     it('assignmentPaths returns empty array if unassigned', () => {
       const paths = assignmentPaths(stateWithNewSection, unassignedSection);
       assert.deepEqual(paths, []);
+    });
+  });
+
+  describe('isAddingSection', () => {
+    it('is false in initial state', () => {
+      assert.isFalse(isAddingSection(initialState));
+    });
+
+    it('is true when creating a new section', () => {
+      const state = reducer(initialState, beginEditingNewSection());
+      assert(isAddingSection(state));
+    });
+
+    it('is false when editing an existing section', () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      const state = reducer(stateWithSections, beginEditingSection(12));
+      assert.isFalse(isAddingSection(state));
+    });
+
+    it('is false after editing is cancelled', () => {
+      const initialState = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, cancelEditingSection());
+      assert.isFalse(isAddingSection(state));
+    });
+  });
+
+  describe('isEditingSection', () => {
+    it('is false in initial state', () => {
+      assert.isFalse(isEditingSection(initialState));
+    });
+
+    it('is false when creating a new section', () => {
+      const state = reducer(initialState, beginEditingNewSection());
+      assert.isFalse(isEditingSection(state));
+    });
+
+    it('is true when editing an existing section', () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      const state = reducer(stateWithSections, beginEditingSection(12));
+      assert(isEditingSection(state));
+    });
+
+    it('is false after editing is cancelled', () => {
+      const initialState = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, cancelEditingSection());
+      assert.isFalse(isEditingSection(state));
     });
   });
 });
