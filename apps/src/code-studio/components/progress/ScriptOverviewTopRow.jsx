@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import AssignCourse from '@cdo/apps/templates/courseOverview/AssignCourse';
 
 const styles = {
   buttonRow: {
@@ -31,15 +32,20 @@ const styles = {
 
 const ScriptOverviewTopRow = React.createClass({
   propTypes: {
+    sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    })).isRequired,
     professionalLearningCourse: PropTypes.bool,
     hasLevelProgress: PropTypes.bool.isRequired,
     scriptName: PropTypes.string.isRequired,
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   },
 
   render() {
     const {
+      sectionsInfo,
       professionalLearningCourse,
       hasLevelProgress,
       scriptName,
@@ -49,7 +55,7 @@ const ScriptOverviewTopRow = React.createClass({
 
     return (
       <div style={styles.buttonRow}>
-        {!professionalLearningCourse && (
+        {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div>
             <Button
               href={`/s/${scriptName}/next.next`}
@@ -64,6 +70,13 @@ const ScriptOverviewTopRow = React.createClass({
               style={{marginLeft: 10}}
             />
           </div>
+        )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
+          <AssignCourse
+            sectionsInfo={sectionsInfo}
+            courseId={123}
+            courseName="TODO"
+          />
         )}
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&

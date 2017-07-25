@@ -22,7 +22,9 @@ const styles = {
   dropdown: {
     border: `1px solid ${color.charcoal}`,
     position: 'absolute',
-    marginTop: -10
+    marginTop: -10,
+    // without this, this will be below some content
+    zIndex: 1,
   },
   section: {
     padding: 10,
@@ -48,6 +50,7 @@ const styles = {
  * lets them assign the current course to any of those sections (after accepting
  * a confirmation dialog)
  */
+// TODO: rename and move file
 class AssignCourse extends Component {
   static propTypes = {
     courseId: PropTypes.number.isRequired,
