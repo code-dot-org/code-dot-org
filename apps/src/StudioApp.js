@@ -219,7 +219,10 @@ StudioApp.prototype.configure = function (options) {
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
   this.usingBlockly_ = !this.editCode;
-  this.skipUrl = options.report.fallback_response.success.redirect;
+  if (options.report &&
+      options.report.fallback_response) {
+    this.skipUrl = options.report.fallback_response.success.redirect;
+  }
 
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
