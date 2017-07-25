@@ -9,8 +9,10 @@ import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections from '../../../../templates/teacherDashboard/teacherSectionsRedux';
+import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 
 $(document).ready(showHomepage);
+
 
 function showHomepage() {
   const isRtl = isRtlFromDOM();
@@ -20,7 +22,7 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, oauthClassroom});
 
   ReactDOM.render (
     <Provider store={getStore()}>
@@ -98,6 +100,7 @@ function showHomepage() {
             sections={homepageData.sections}
             codeOrgUrlPrefix={homepageData.codeorgurlprefix}
             isRtl={isRtl}
+            validScripts={homepageData.valid_scripts}
           />
         )}
         {!isTeacher && (

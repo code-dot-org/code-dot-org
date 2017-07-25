@@ -2,9 +2,9 @@ import React from 'react';
 import ContentContainer from '../ContentContainer';
 import SetUpMessage from './SetUpMessage';
 import i18n from "@cdo/locale";
-import SectionTable from '../teacherDashboard/SectionTable';
+import SectionsPage from '../teacherDashboard/SectionsPage';
 import { connect } from 'react-redux';
-import { setSections} from '../teacherDashboard/teacherSectionsRedux';
+import {setValidAssignments, setSections} from '../teacherDashboard/teacherSectionsRedux';
 
 const sectionsApiPath = '/dashboardapi/sections/';
 
@@ -15,20 +15,21 @@ const Sections = React.createClass({
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
+    validScripts: React.PropTypes.array,
 
     //Redux provided
     setSections: React.PropTypes.func.isRequired,
-    //setValidAssignments: React.PropTypes.func.isRequired,
+    setValidAssignments: React.PropTypes.func.isRequired,
   },
 
   componentDidMount(){
-    const { setSections } = this.props;
+    const { setSections, setValidAssignments } = this.props;
     let validCourses;
     let sections;
 
     const onAsyncLoad = () => {
       if (validCourses && sections) {
-        //setValidAssignments(validCourses, validScripts);
+        setValidAssignments(validCourses, this.props.validScripts);
         setSections(sections);
       }
     };
@@ -58,7 +59,9 @@ const Sections = React.createClass({
           isRtl={isRtl}
         >
         {sections.length > 0 && (
-          <SectionTable/>
+          <SectionsPage
+            validScripts={this.props.validScripts}
+          />
         )}
         {sections.length === 0 && isTeacher && (
           <SetUpMessage
@@ -74,4 +77,4 @@ const Sections = React.createClass({
   }
 });
 
-export default connect(state => ({}), { setSections})(Sections);
+export default connect(state => ({}), {setValidAssignments, setSections})(Sections);
