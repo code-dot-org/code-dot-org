@@ -36,6 +36,7 @@ export default class AssignmentSelector extends Component {
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
+    onChange: PropTypes.func,
   };
 
   constructor(props) {
@@ -103,13 +104,19 @@ export default class AssignmentSelector extends Component {
     this.setState({
       selectedPrimaryId,
       selectedSecondaryId
-    });
+    }, this.reportChange);
   };
 
   onChangeSecondary = (event) => {
     this.setState({
       selectedSecondaryId: event.target.value
-    });
+    }, this.reportChange);
+  };
+
+  reportChange = () => {
+    if (typeof this.props.onChange === 'function') {
+      this.props.onChange(this.getSelectedAssignment());
+    }
   };
 
   render() {
