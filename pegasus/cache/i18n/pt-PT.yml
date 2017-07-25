@@ -756,7 +756,7 @@
   dashboard_landing_inspire: Inspire your students with posters, videos, and more.
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_report_bug: Propõe uma nova funcionalidade ou comunica um problema.
   dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: A Hora do Código para todas as idades
   dashboard_hoc_courses_desc: Experimente assistir um destes vídeos de menos de 1
@@ -1211,6 +1211,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Teste Completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste Parte 1 - 25 perguntas
@@ -1998,10 +1999,10 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
-  header_home: Home
+  header_home: Início
   header_courses: Cursos
-  header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_project_gallery: Galeria de projetos
+  header_sections: Turmas
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
@@ -2013,26 +2014,26 @@
   header_educate_inspire: Inspire a Student
   header_educate_community: Online Community
   header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
+  header_about_us: Quem somos
+  header_about_leadership: Administração
+  header_about_donors: Doadores
+  header_about_partners: Parceiros
+  header_about_team: Toda a equipa
+  header_about_news: Imprensa
+  header_about_evaluation: Avaliação
+  header_about_jobs: Empregos
+  header_about_contact: Contacte-nos
+  header_about_faqs: Perguntas frequentes
   header_learn: Learn
   header_teach: Teach
   header_stats: Estatística
   header_help_us: Help Us
   header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_teacher_community: Comunidade de professores
+  header_help_support: Ajuda e suporte
+  header_report_bug: Comunicar um problema
+  header_tutorials: Tutoriais
+  header_documentation: Documentação
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

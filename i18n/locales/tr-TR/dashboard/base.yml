@@ -16,7 +16,7 @@ tr:
         name: 'Görünen İsim'
         name_example: 'Kod adı (Canavar Bilişimci yada Kuş Ahmet gibi)'
         email: 'E-posta'
-        parent_email: 'Parent/guardian email'
+        parent_email: 'Veli e-posta'
         personal_email: "Kişisel e-posta adresi"
         username: 'kullanıcı adı'
         password: 'şifre'
@@ -178,7 +178,7 @@ tr:
       Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Code.org için oturum açma bilgileri'
   section:
     your_section:
       one: 'Bölüm:'
@@ -222,8 +222,8 @@ tr:
   devise:
     registrations:
       user:
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        personal_login_created_email: 'Kişisel bir oturumu başarıyla oluşturuldu. Artık Code.org''da e-posta ve parola ile oturum açabilirsiniz'
+        personal_login_created_username: 'Kişisel bir oturumu başarıyla oluşturuldu. Artık Code.org kullanıcı adınız ve parolanız ile oturum açabilirsiniz'
   nav:
     header:
       finished_hoc: "Kod Saati'ni tamamladım"
@@ -336,7 +336,7 @@ tr:
     no_password_because_sponsored: 'Öğretmenin parolanızı yönetmesi için bkz.'
     create_personal_login: 'Kişisel bir oturum oluşturma'
     create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_username: "Kullanıcı adı (gerçek adınızı kullanmayınız!)"
     create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, alta kendi girişinizi yapın.'
     create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."

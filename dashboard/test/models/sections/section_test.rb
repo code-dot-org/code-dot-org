@@ -321,6 +321,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: nil, name: nil},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -347,6 +348,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: script.id, name: script.name},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -376,6 +378,7 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: script.id, name: script.name},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -400,7 +403,21 @@ class SectionTest < ActiveSupport::TestCase
       script: {id: nil, name: nil},
       studentCount: 0,
       grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
+  end
+
+  test 'valid_grade? accepts K-12 and Other' do
+    assert Section.valid_grade?("K")
+    assert Section.valid_grade?("1")
+    assert Section.valid_grade?("6")
+    assert Section.valid_grade?("12")
+    assert Section.valid_grade?("Other")
+  end
+
+  test 'valid_grade? does not accept invalid numbers and strings' do
+    refute Section.valid_grade?("Something else")
+    refute Section.valid_grade?("56")
   end
 end

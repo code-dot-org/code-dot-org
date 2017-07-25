@@ -67,6 +67,13 @@ var CONFIGS = {
     collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
+    // collectSounds are labeled `get_gem_{1..6}.mp3`
+    collectSounds: new Array(6).fill().map((_, i) => `get_gem_${i+1}.mp3`),
+
+    // Walk sound works, but the current available audio is a bit too harsh for
+    // classroom usage. Temporarily disabling until we get some milder audio
+    //walkSound: 'walk.mp3',
+
     look: '#000',
     transparentTileEnding: true,
     nonDisappearingPegmanHittingObstacle: true,
@@ -235,16 +242,26 @@ exports.load = function (assetUrl, id) {
   skin.wall4Sound = soundAssetUrls(skin, 'wall4.mp3');
 
   // (3) Get properties from config
-  var isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
-  var isSound = /^(.*)\.mp3$/; // something.mp3
-  for (var prop in config) {
-    var val = config[prop];
+  const isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
+  const isSound = /^(.*)\.mp3$/; // something.mp3
+
+  function determineAssetUrl(val) {
     if (isSound.test(val)) {
       val = soundAssetUrls(skin, val);
     } else if (isAsset.test(val)) {
       val = skin.assetUrl(val);
     }
-    skin[prop] = val;
+
+    return val;
+  }
+
+  for (const prop in config) {
+    const val = config[prop];
+    if (Array.isArray(val)) {
+      skin[prop] = val.map(determineAssetUrl);
+    } else {
+      skin[prop] = determineAssetUrl(val);
+    }
   }
 
   return skin;

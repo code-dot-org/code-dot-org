@@ -1,10 +1,10 @@
 co:
   data:
     instructions:
-      2-3 Artist 1 new_instruction: "Hi, I'm an artist. You can write code to make\nme draw almost anything. Use a few blocks to make me draw over the grey lines\nin the picture. (Each line is 100 pixels long)"
-      2-3 Artist 11_instruction: "Give the stop sign a border by making an octagon\nwith 100 pixels sides. \\r\n\\r\n"
-      2-3 Artist 12_instruction: "Create a circle to finish the eyeball!\\r\n\\r\nIf\nthe artist turns 1 degree with each loop, how many times do you need to repeat\nthe code to draw a circle? 180? 360? 500?"
-      2-3 Artist 2 new_instruction: "This house has a half-finished wall. Each side\nis 100, but the half-finished wall is only 50. Complete the wall. "
+      2-3 Artist 1 new_instruction: "Salute, sò un artistu. Mi poi scrive codice per fà mi disignà quasgi tuttu. Adupra qualchi blocchi per fà mi didignà e linee grisge di a figura. (Ogni linea hè longa da 100 pixels)"
+      2-3 Artist 11_instruction: "Fà un contornu per u panellu fendu 8 lati di 100 pixels per latu. Da quantu gradi devi girà ? (indiziu : quantu facenu 360 per 8 ?)"
+      2-3 Artist 12_instruction: "Difinisce u bloccu \"ripete parechje volte\" ch'ellu fia une \"ronda\" da compie l'ochju. Sè ognu muvimentu gira à a diritta d'un gradu, quantu volta devi ripete lu per compie u rebbiu . 180 ? 360 ? 500 ?"
+      2-3 Artist 2 new_instruction: "Sta casa hà un muru finitu à a metà. Ogni latu face 100 pixels, mà u muru \nfinitu à a metà face 50 pixels. Finisci u muru.\n"
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100, but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 3.4_instruction: "The jump block moves the artist without drawing.\nDraw the dashed line using both the `jump forward` and `move forward` blocks.\nEach line is 50 pixels long."
       2-3 Artist 3_instruction: "This hat is 100 pixels high. Draw a hat that is\n70 pixels less."

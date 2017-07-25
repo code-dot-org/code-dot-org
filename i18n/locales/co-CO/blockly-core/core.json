@@ -48,7 +48,7 @@
   "CONTROLS_IF_ELSE_TOOLTIP":"Add a final, catch-all condition to the if block.",
   "CONTROLS_IF_HELPURL":"http://code.google.com/p/blockly/wiki/If_Then",
   "CONTROLS_IF_IF_TOOLTIP":"Add, remove, or reorder sections to reconfigure this if block.",
-  "CONTROLS_IF_MSG_ELSE":"else",
+  "CONTROLS_IF_MSG_ELSE":"osinnò",
   "CONTROLS_IF_MSG_ELSEIF":"else if",
   "CONTROLS_IF_MSG_IF":"if",
   "CONTROLS_IF_TOOLTIP_1":"If a value is true, then do some statements.",

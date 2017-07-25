@@ -27,7 +27,7 @@
 
 class OmniAuthSection < Section
   def self.from_omniauth(code:, type:, owner_id:, students:)
-    oauth_section = where(code: code).first_or_create do |section|
+    oauth_section = where(code: code).first_or_create! do |section|
       section.name = 'New Section'
       section.user_id = owner_id
       section.login_type = type
@@ -37,5 +37,9 @@ class OmniAuthSection < Section
     end
 
     oauth_section
+  end
+
+  def provider_managed?
+    true
   end
 end
