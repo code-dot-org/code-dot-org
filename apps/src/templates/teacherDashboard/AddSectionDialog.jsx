@@ -13,13 +13,6 @@ import {
   updateSection,
 } from './teacherSectionsRedux';
 
-const initialState = {
-  name: '',
-  grade: '',
-  extras: 'yes',
-  pairing: 'yes',
-};
-
 export class AddSectionDialog extends Component {
   static propTypes = {
     // Provided by Redux
@@ -30,42 +23,20 @@ export class AddSectionDialog extends Component {
     updateSection: PropTypes.func.isRequired,
   };
 
-  state = {
-    ...initialState,
-  };
-
   handleClose = () => {
     this.props.cancelEditingSection();
-    this.setState(initialState);
-  };
-
-  handleNameChange = (name) => {
-    this.setState({name});
-  };
-
-  handleGradeChange = (grade) => {
-    this.setState({grade});
-  };
-
-  handleExtrasChange = (extras) => {
-    this.setState({extras});
-  };
-
-  handlePairingChange = (pairing) => {
-    this.setState({pairing});
   };
 
   onClickEditSave = () => {
     const {section, updateSection, finishEditingSection} = this.props;
-    const {name, grade, extras, pairing} = this.state;
 
     const selectedAssignment = this.assignment.getSelectedAssignment();
     const data = {
-      name: name,
+      name: section.name,
       login_type: section.loginType,
-      grade: grade,
-      stage_extras: extras === 'yes',
-      pairing_allowed: pairing === 'yes',
+      grade: section.grade,
+      stage_extras: section.stageExtras,
+      pairing_allowed: section.pairingAllowed,
       course_id: selectedAssignment ? selectedAssignment.courseId : null,
     };
 
@@ -96,7 +67,6 @@ export class AddSectionDialog extends Component {
 
   render() {
     const {isOpen, section} = this.props;
-    const {name, grade, extras, pairing} = this.state;
     const {loginType} = section || {};
     const title = i18n.newSection();
     return (
@@ -117,14 +87,6 @@ export class AddSectionDialog extends Component {
               assignmentRef={(element) => this.assignment = element}
               handleSave={this.onClickEditSave}
               handleClose={this.handleClose}
-              name={name}
-              handleName={this.handleNameChange}
-              grade={grade}
-              handleGrade={this.handleGradeChange}
-              extras={extras}
-              handleExtras={this.handleExtrasChange}
-              pairing={pairing}
-              handlePairing={this.handlePairingChange}
             />
           }
         </PadAndCenter>
