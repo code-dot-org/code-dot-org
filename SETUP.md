@@ -63,7 +63,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 
 
-### Ubuntu 14.04
+### Ubuntu 14.04 ([Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso))
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
@@ -103,12 +103,42 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
 
    first so that nokogiri picks up the built in libxml2 library. See this [stackoverflow answer](http://stackoverflow.com/a/40038954/186771).
+   
+### Ubuntu 17.04 ([Ubuntu 17.04 iso image](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso?_ga=2.206594387.1901865802.1501006113-173469841.1498786046))
+
+1. `sudo apt-get update`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
+    * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
+1. If it is not already installed, install Git with `sudo apt install git`
+1. Install npm with `sudo apt install npm`, then
+    * `sudo add-apt-repository ppa:chris-lea/node.js`
+    * `sudo apt-get update`
+    * `sudo apt-get install nodejs`
+1. Install Ruby 2.2 with rbenv
+     1. Install rbenv with `sudo apt install rbenv` and ruby-build with `sudo apt install ruby-build`
+     1. `rbenv install 2.2.3`
+     1. `rbenv global 2.2.3`
+     1. `rbenv rehash`
+1. Install Node and yarn
+    1. Node: `sudo apt install nodejs-legacy`
+    1. yarn: `sudo npm install -g yarn@0.23.2`
+1. Befor running `bundle install`, make sure to run `sudo apt install ruby2.3-dev`
+1. Finally, configure your mysql to allow for a proper installation
+   1. If you properly left all the default options blank, type `sudo mysql` to start it up
+   1. Type `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';`
+   1. Then `FLUSH PRIVILEGES;`
+   1. And finally `exit;` to close out
+1. Notes: In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
+   1. If, for any reason, you are forced to interrupt `bundle exec rake install` before it completes,
+      cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
+   1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
+   1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation    should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso)
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and either an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso) or an [Ubuntu 17.04 iso image](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso?_ga=2.206594387.1901865802.1501006113-173469841.1498786046). Note: the Ubuntu 17.04 installation path is the most recently tested working version
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
