@@ -46,27 +46,8 @@ class EditSectionForm extends Component{
     handleClose: PropTypes.func.isRequired,
   };
 
-  renderGradeSelector() {
-    const gradeOptions = [""]
-      .concat(this.props.validGrades)
-      .map(grade => ({
-        value: grade,
-        text: grade === 'Other' ? 'Other/Mixed' : grade,
-      }));
-    return (
-      <Dropdown
-        value = {this.props.section.grade}
-        onChange={event => this.props.editSectionProperties({grade: event.target.value})}
-      >
-        {gradeOptions.map((grade, index) => (
-          <option key={index} value={grade.value}>{grade.text}</option>
-        ))}
-      </Dropdown>
-    );
-  }
-
   render(){
-    const {section, title, editSectionProperties} = this.props;
+    const {section, title, validGrades, editSectionProperties} = this.props;
     return (
       <div style={style.root}>
         <Heading1>
@@ -77,12 +58,11 @@ class EditSectionForm extends Component{
             value={section.name}
             onChange={name => editSectionProperties({name})}
           />
-          <FieldName>
-            {i18n.grade()}
-          </FieldName>
-          <div>
-            {this.renderGradeSelector()}
-          </div>
+          <GradeField
+            value={section.grade}
+            onChange={grade => editSectionProperties({grade})}
+            validGrades={validGrades}
+          />
           <FieldName>
             {i18n.course()}
           </FieldName>
@@ -188,6 +168,34 @@ const SectionNameField = ({value, onChange}) => (
   </div>
 );
 SectionNameField.propTypes = FieldProps;
+
+const GradeField = ({value, onChange, validGrades}) => {
+  const gradeOptions = [""]
+    .concat(validGrades)
+    .map(grade => ({
+      value: grade,
+      text: grade === 'Other' ? 'Other/Mixed' : grade,
+    }));
+  return (
+    <div>
+      <FieldName>
+        {i18n.grade()}
+      </FieldName>
+      <Dropdown
+        value={value}
+        onChange={event => onChange(event.target.value)}
+      >
+        {gradeOptions.map((grade, index) => (
+          <option key={index} value={grade.value}>{grade.text}</option>
+        ))}
+      </Dropdown>
+    </div>
+  );
+};
+GradeField.propTypes = {
+  ...FieldProps,
+  validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
+};
 
 const FieldName = props => (
   <div
