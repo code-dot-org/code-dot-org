@@ -11,7 +11,7 @@ import { lessonType } from './progressTypes';
 import HiddenStageToggle from './HiddenStageToggle';
 import StageLock from './StageLock';
 import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import ProgressButton from './ProgressButton';
+import ProgressButton from '../ProgressButton';
 
 const styles = {
   main: {

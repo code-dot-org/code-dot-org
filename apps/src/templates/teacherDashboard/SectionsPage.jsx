@@ -4,7 +4,7 @@ import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
 import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';

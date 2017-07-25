@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from "../progress/ProgressButton";
+import ProgressButton from "../ProgressButton";
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 

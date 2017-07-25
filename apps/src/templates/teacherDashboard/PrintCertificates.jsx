@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 

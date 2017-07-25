@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ProgressButton from "./progress/ProgressButton";
+import ProgressButton from "./ProgressButton";
 import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 

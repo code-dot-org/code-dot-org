@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ProgressButton from './ProgressButton';
+import ProgressButton from '../ProgressButton';
 import i18n from '@cdo/locale';
 
 const styles = {

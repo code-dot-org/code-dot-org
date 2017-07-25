@@ -10,7 +10,7 @@ import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 import i18n from "@cdo/locale";
 
 const styles = {

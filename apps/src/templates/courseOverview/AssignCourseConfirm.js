@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 
 const styles = {
   header: {

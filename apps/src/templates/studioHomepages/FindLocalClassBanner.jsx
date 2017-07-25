@@ -1,7 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
 import GridContainer from './GridContainer';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import ProgressButton from '@cdo/apps/templates/ProgressButton';
 import i18n from "@cdo/locale";
 
 const styles = {
