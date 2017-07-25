@@ -228,6 +228,7 @@ var ShareDialog = React.createClass({
             {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
              <AdvancedShareOptions
                i18n={this.props.i18n}
+               shareUrl={this.props.shareUrl}
                onClickExport={this.props.onClickExport}
                expanded={this.state.showAdvancedOptions}
                onExpand={this.showAdvancedOptions}
