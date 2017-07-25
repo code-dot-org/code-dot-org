@@ -195,6 +195,7 @@ function validateReport(report) {
  * @param {MilestoneReport} report
  */
 reporting.sendReport = function (report) {
+  const appOptions = window.appOptions;
   // The list of report fields we want to send to the server
   const serverFields = [
     'program',
