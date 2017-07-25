@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import EditSectionForm from "./EditSectionForm";
+import PadAndCenter from './PadAndCenter';
 import {
   isEditingSection,
   finishEditingSection,
@@ -90,19 +91,3 @@ export default connect(state => ({
   finishEditingSection,
   updateSection,
 }, null, { withRef: true })(EditSectionDialog);
-
-const PadAndCenter = ({children}) => (
-  <div
-    style={{
-      display: 'flex',
-      flexFlow: 'row',
-      justifyContent: 'center',
-      marginTop: 20,
-      marginBottom: 20,
-    }}
-  >
-    {children}
-  </div>
-);
-PadAndCenter.propTypes = {children: PropTypes.any};
-
