@@ -117,6 +117,8 @@ class ScriptLevel < ActiveRecord::Base
           script_path(script)
         end
       end
+    elsif bonus
+      script_stage_stage_extras_path(script.name, stage.relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end

@@ -15,6 +15,7 @@ export const sectionShape = PropTypes.shape({
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
   grade: PropTypes.string,
+  providerManaged: PropTypes.bool.isRequired,
 });
 
 export const assignmentShape = PropTypes.shape({

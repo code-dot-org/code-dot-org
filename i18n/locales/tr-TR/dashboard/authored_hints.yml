@@ -349,52 +349,52 @@ tr:
       Course 4 SCF 2_authored_hint:
         Course_4_SCF_2_a: Her sekizgenin 40 piksel kenar uzunluğu vardır.
         Course_4_SCF_2_b: Yatay düzlemde her sekizgen arasında 136 piksel atla olmalı.
-        Course_4_SCF_2_c: "İkinci sıra sekizgeni çizdemden önce, sağa 45 derece dön be 96 piksel ilerle.\nDoğru dikey noktada olduktan sonra sanatçıyı geriye döndür ve 408 piksel atla. "
-        Course_4_SCF_2_d: "Tek satırlarda daha az sekizgen olduğuna dikkat edin. Tek satırlar için geriye fazla atlaman gerekmiyecek.\nBude demekki aynı fonksiyonu bütün satırlar için kullanabilirsin."
+        Course_4_SCF_2_c: "İkinci sıra sekizgeni çizmeden önce, sağa 45 derece dön ve 96 piksel ileri atla.\nDoğru dikey noktada bulunduğunuzda sanatçıyı geriye döndür ve geriye doğru 408 piksel atla. "
+        Course_4_SCF_2_d: "Çift sayılı şekil olan satırlarda daha az sekizgen olduğuna dikkat edin. Tek sayılı şekil olan satırlarda geriye daha fazla atlaman gerekmiyecek.\nBuda demek oluyor ki aynı fonksiyonu bütün satırlar için kullanabilirsin."
         Course_4_SCF_2_e: |-
-          ** Çözüm: **! [Çözüm] blokları (https://images.code.org/de5a99b0fb4c079504ff7cca9a249f02-image-1469727175091.png)
+          ** Çözüm: **! [Çözüm Blokları] (https://images.code.org/de5a99b0fb4c079504ff7cca9a249f02-image-1469727175091.png)
       Course 4 SCF 3_authored_hint:
         Course_4_SCF_3_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
-        Course_4_SCF_3_b: 'Kenar uzunlukları counter uzunluğunda olan sekizgenler var. '
-        Course_4_SCF_3_c: '200 den aşağı ikişer ikişer 2 ye kadar giden bir şununla say döngüsü içinden sekizgen fonksiyonu çağrılır. '
+        Course_4_SCF_3_b: 'Bu resim kenar uzunlukları ''sayaç'' (counter) uzunluğunda olan sekizgenlerlerdir. '
+        Course_4_SCF_3_c: 'Her bir sekizgen 200 den aşağı ikişer ikişer geriye 2''ye kadar giden bir ''şununla say döngüsü'' (for loop) içinden çağırılır.'
         Course_4_SCF_3_d: 'Her döngünün sonunda 22.5 derece dönmeyi unutma. '
-        Course_4_SCF_3_e: Sekizgen rengini ve kalem genişliği 'sayaç' değişkeni tarafından kontrol edilir.
+        Course_4_SCF_3_e: Sekizgen rengi ve kalem genişliği 'sayaç' değişkeni tarafından kontrol edilir.
         Course_4_SCF_3_f: |-
           ** Çözüm: **! [Çözüm] blokları (https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       Course 4 SCFL 1_authored_hint:
-        Course_4_SCFL_1_a: 'Hareket seçeneği için bir göz atın:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
-        Course_4_SCFL_1_b: 'İki ''şununla say'' döngüsü kullanmayı deneyin: bir yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma.'
-        Course_4_SCFL_1_c: "Şununla say döngüsü içinde tekrarla döngüsü gerekiyor. Counter değeri kadar merdiven yapılacak.\nÖteki şununla say döngüsü sadece bir döngüsü gerektiriyor. Counter kadar bal yapacak."
+        Course_4_SCFL_1_a: ' Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        Course_4_SCFL_1_b: 'İki ''şununla say'' döngüsü(for loop) kullanmayı deneyin: biri yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma için.'
+        Course_4_SCFL_1_c: "Gittikçe yükselen merdiven basamaklarını çizmek için, 'Şununla say döngüsü' (for loop) içinde birkaç 'sayaç' değerli tekrarla döngüsü gerekiyor. \nÖteki 'şununla say döngüsü' içine ise sadece bir adet 'sayaç' kadar bal yapacak tekrar döngüsü koymalısın."
         Course_4_SCFL_1_d: |-
-          ** Çözüm: **! [Çözüm] blokları (https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
+          ** Çözüm: **! [Çözüm Blokları] (https://images.code.org/1a61eae7e12742c8d850f2bf7e939f72-image-1469726415313.png)
       Course 4 SCFL 1a_authored_hint:
         Course_4_SCFL_1a_a: En az sayıda blok kullanmak için daha ileri gitmen gerkecek.
-        Course_4_SCFL_1a_b: 'Bu seçenek hareketi için bir göz atın:! [] (https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)'
-        Course_4_SCFL_1a_c: Bununla say döngüsü aynı düzeni değişen sayılarla yapmanı sağlar. Sayının 7 den 5 e 1 er birer düşmesi gerekecek.
-        Course_4_SCFL_1a_d: "** Çözüm: **! [Çözüm Blocks\\t] (https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)"
+        Course_4_SCFL_1a_b: ' Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/253d710ff7d1b494fe8fd20cfc92baaf-image-1469726263579.png)'
+        Course_4_SCFL_1a_c: '''Şununla say döngüsü'' (for loop) aynı deseni fakat değişen sayıda basamakla yapmanı sağlar. Sayının 7''den 5''e  birer birer düşmesi gerekecek.'
+        Course_4_SCFL_1a_d: "** Çözüm: **! [Çözüm Blokları\\t] (https://images.code.org/8742b441717ee3ab7cbc91d84f688dbb-image-1469726297064.png)"
       Course 4 SCFL 1b_authored_hint:
-        Course_4_SCFL_1b_a: Şununla say göngüsü kullanmayı dene.
-        Course_4_SCFL_1b_b: 'Bu seçenek hareketi için bir göz atın:! [] (https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)'
+        Course_4_SCFL_1b_a: '''Şununla say döngüsü'' (for loop) kullanmayı dene.'
+        Course_4_SCFL_1b_b: 'Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/1957633c453f4025a3fd6ce0e201398b-image-1469642319721.png)'
         Course_4_SCFL_1b_c: |-
           ** Çözüm: **! [] (https://images.code.org/349a0baf93e00a679cf7ed348f8309b4-image-1469642354856.png)
       Course 4 SCFL 2_authored_hint:
-        Course_4_SCFL_2_a: 'Bu seçenek hareketi için bir göz atın:! [] (https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)'
-        Course_4_SCFL_2_b: Şununla say döngüsünün 3 parçası var.
-        Course_4_SCFL_2_c: Şununla say döngüsünün her yinelemesinde nesne bir şekilde 'sayaç' değişkeni ile ilgilidir.
+        Course_4_SCFL_2_a: 'Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/a69c63a039031254097f19231dd7bf95-image-1469726483169.png)'
+        Course_4_SCFL_2_b: Dikkatli bakarsan 'Şununla say döngüsü' (for loop) her döndüğünde üç noktada durup nesnelerle etkileşim kuruyorsun. 
+        Course_4_SCFL_2_c: Şununla say döngüsünün(for loop) her tekrarında, her nesne bir şekilde 'sayaç' değişkeni ile ilişki kurar. 
         Course_4_SCFL_2_d: |-
-          ** Çözüm: **! [Çözüm] blokları (https://images.code.org/df47aa475c36d0c1664c2fdb16b5613c-image-1469726516185.png)
+          ** Çözüm: **! [Çözüm Blokları ] (https://images.code.org/df47aa475c36d0c1664c2fdb16b5613c-image-1469726516185.png)
       Course 4 SCFL 3_authored_hint:
         Course_4_SCFL_3_a: '''Kalem genişliği'' 1''dir. İlk karenin 50 piksel kenar uzunluğu vardır ve her kare öncekinden 50 piksel daha geniş.'
-        Course_4_SCFL_3_b: Opaklık e her zaman 'counter' / 2 değerindedir.
-        Course_4_SCFL_3_c: Her bir kareyi yaptıktan sonra ileri atla, dön, atlla ve geriye dön!
+        Course_4_SCFL_3_b: Fırçanın opaklığı her zaman 'sayaç'/2 değerindedir.
+        Course_4_SCFL_3_c: Her bir kareyi yaptıktan sonra geri atla, dön, atla ve geriye dön!
         Course_4_SCFL_3_d: |-
           ** Çözüm: **! [Çözüm blokları ] (https://images.code.org/7f14ddfa5cdcbfdfacd8b1e45511d583-image-1469726581880.png)
       Course 4 SCFL 4_authored_hint:
-        Course_4_SCFL_4_a: Renk değişim 'kırmızı, yeşil, mavi renk ayarla' bloğu kullanarak olur.  Kırmızı 'sayaç ' olarak ayarlanır. Yeşil '255 - sayaç', ve mavi 255 sürekli ayarlanır.
-        Course_4_SCFL_4_b: Her bir şekil kenar uzunluğu counter değişkeni kadar olan bir karedir. 5 piksel ile başlayıp 200 piksele kadar 5 er artar.
+        Course_4_SCFL_4_a: Renk değişimi 'kırmızı, yeşil, mavi renk ayarla' bloğu kullanarak olur.  Kırmızı 'sayaç ' olarak ayarlıdır. Yeşil '255 - sayaç', ve mavi 255'te sabittir.
+        Course_4_SCFL_4_b: Her bir şekil kenar uzunluğu 'sayaç' değişkeni kadar olan bir karedir. 5 piksel ile başlayıp 200 piksele kadar 5 er piksel artar.
         Course_4_SCFL_4_c: Sanatçı her bir kare arasında 15 derece döner.
         Course_4_SCFL_4_d: |-
-          ** Çözüm: **! [Çözüm] blokları (https://images.code.org/b85604648076fa7adfc7a30be41d13fa-image-1469726651617.png)
+          ** Çözüm: **! [Çözüm Blokları]  (https://images.code.org/b85604648076fa7adfc7a30be41d13fa-image-1469726651617.png)
       Course 4 SCFL 6_authored_hint:
         Course_4_SCFL_6_a: Renk değişim 'kırmızı, yeşil, mavi renk ayarla' bloğu kullanarak olur.  Kırmızısabit 255 olarak ayarlanır. Yeşil '255 - counter olur.  ve mavi 255 olarak ayarlanır.
         Course_4_SCFL_6_b: Bu kod düşündüğünden daha basit. Şununla say döngüsü içinde rengi değiştir, ilerle ve dön.
@@ -429,22 +429,22 @@ tr:
       Course 4 SCV 4_authored_hint:
         Course_4_SCV_4_a: 3 değişken işine yarayacaktır. Nektar miktarı, bal miktarı ve her döngüde arı ne kadar ilerlesin.
         Course_4_SCV_4_b: 'Ana döngünün içinde 3 döngü kullanman faydalı olacaktır. Birtanesi ileri hareket için diğeri nektar toplamak için ve sonuncusu bal yapmak için. '
-        Course_4_SCV_4_c: 'Bu seçenek hareketi için bir göz atın:! [] (https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)'
+        Course_4_SCV_4_c: ' Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/78f8fb83da67c5b80126555a362b8b20-image-1469641782259.png)'
         Course_4_SCV_4_d: |-
           ** Çözüm: **![Solution] (https://images.code.org/c57fc9df2e24b1f8497b7e4ca9e1f568-image-1469641818826.png)
       Course 4 SCV 5_authored_hint:
-        Course_4_SCV_5_a: |-
-          Bu seçenek hareketi için bir göz atın:! [] (https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
+        Course_4_SCV_5_a: |2-
+           Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/7f6f09c55cf9552a91fc1d33f44a7315-image-1469641639330.png)
         Course_4_SCV_5_b: Döngünün her tekrarında çiçekte 2 nectar daha az var ve arının bir fazla bal yapması gerekiyor.
         Course_4_SCV_5_c: Dış döngünün başlangıcında arı çiçekteki nektar kadar hareket ediyor.
         Course_4_SCV_5_d: |-
           ** Çözüm: **! [Image] çözüm (https://images.code.org/831d8675f6551d79b212da594a9a73f0-image-1469641703833.png)
       Course 4 SCV 6_authored_hint:
         Course_4_SCV_6_a: |-
-          Tek bir tamamlanmış şekli neye benzediğini bir göz atın! [] (https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
+          Tek bir tamamlanmış şeklin neye benzediğini bir göz atın! [] (https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)
         Course_4_SCV_6_b: '8 değişkenleri oluşturman işe yaryacaktır: red1, green1, blue1, red2, green2, blue2, uzunluk ve taraf.'
         Course_4_SCV_6_c: Şeklin 5 tarafıda parçalara bölünmüş (length/sites) uzunluk/kenar sayısı 'zig deniz mavisi (rgb 0,175,200 =) ve zag mor (rgb = 50, 100, 150).
-        Course_4_SCV_6_d: 'Zig için ''360 / kenar kadar sola dönün.  Zag için ''360 ''/'' kenar kadar sağa dönün. '
+        Course_4_SCV_6_d: 'Zig için ''360'' / ''kenarlar'' kadar sola dönün.  Zag için ''360 ''/''kenarlar'' kadar sağa dönün. '
         Course_4_SCV_6_e: 'Şekilden 360 derece dönüş yapma kısmı standart. Şekiller yarı yarıya kesişiyor. Bu sebeple 180/kenar kadar dönmelisin. (Bu durumda sides*2 kadar tekrarlaman gerekecek). '
         Course_4_SCV_6_f: |-
           ** Çözüm: **![Solution] (https://images.code.org/72f0ce970999deffe87bd93af0db959f-image-1469642214408.png)
@@ -537,14 +537,14 @@ tr:
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "Eğer döngü sayıyor ie her seferinde artış miktarı counter değişkenine eklenir. \nSonraki sayıyı elde etmek için ne kadar eklemen gerekiyor?"
       Overworld Avoid Monsters_authored_hint:
-        Overworld Avoid Monsters_a: Yapabilmen için bir çok yol vardır. Kısa olan hangisi?
+        Overworld Avoid Monsters_a: Önünde bir çok yol var. Kısa olan hangisi?
         Overworld Avoid Monsters_b: Kodunuzu basitleştirmek için 'tekrar' (repeat) döngüsü kullanmayı unutmayın.
-        Overworld Avoid Monsters_c: Your goal is to get into the doorway of the house, at the top of the screen.
+        Overworld Avoid Monsters_c: Amacınız, ekranın üstündeki evin giriş kapısından girmek.
       Overworld Chop Tree_authored_hint:
-        Overworld Chop Tree_a: Ağacın önüne ulaşmak için iki kez 'ilerle' (move forward) komutunu kullanmalısın.
-        Overworld Chop Tree_b: The `destroy block` command will destroy the block in the square in front of your character, so make sure your character is facing the right way!
+        Overworld Chop Tree_a: Ağacın önüne ulaşmak için iki kez 'ilerle' komutunu kullanmalısın.
+        Overworld Chop Tree_b: '''yok et'' komutu karakterinizin önündeki alanda bulunan bloğu yok edecek, bu yüzden karakterinizin doğru yolda olduğuna emin olun!'
       Overworld Chop Trees_authored_hint:
-        Overworld Chop Trees_a: You can chop down the trees in any order, but one order requires fewer blocks.
+        Overworld Chop Trees_a: Ağaçları herhangi bir sırada kesebilirsin, ama bunu bir sırada yapmak daha az blok gerektirir.
         Overworld Chop Trees_b: Her bir ağacı parçalamak için `bloğu yoket' (destroy block) kullanın.
         Overworld Chop Trees_c: Eğer yanlış yöne dönüyorsanız, açılır menüyü kullanarak 'dönüş' (turn) komutu ile değiştirin.
       Overworld House Frame Chosen_authored_hint:
@@ -553,10 +553,10 @@ tr:
         Overworld House Frame Chosen_c: Tekrar eden bir döngüye (repeat) birden fazla blok yerleştirebileceğinizi unutmayın.
       Overworld Move to Sheep_authored_hint:
         Overworld Move to Sheep_a: '''İlerle'' (move forward) bloğu araç kutusunun üstünde yer alır.'
-        Overworld Move to Sheep_b: Make sure both `move forward` commands are connected to the `when run` block to complete the puzzle.
+        Overworld Move to Sheep_b: Bulmacayı tamamlamak için, her iki 'ileri git' bloğunun da 'çalıştığı zaman' bloğuna bağlandığından emin olun.
       Overworld Place Wall_authored_hint:
-        Overworld Place Wall_a: In this case, you will want the `place` command first, and then the `move` command.
-        Overworld Place Wall_b: Make sure both blocks are inside of the `repeat` loop, so they will run more than once.
+        Overworld Place Wall_a: Bu durumda, ilk olarak 'yerleştir' komutunu, sonra da 'ilerle' komutunu isteyeceksin.
+        Overworld Place Wall_b: Her iki bloğun 'tekrarla' döngüsünün içinde olduğundan emin ol, böylece birden çok kez çalışacaklar.
         Overworld Place Wall_c: Hata yapmaktan korkmayın! Bulmacayı henüz çözdüğünüzü düşünmeseniz bile, bloklar ekleyin ve ne olacağını görmek için kodu çalıştırın.
       Overworld Plant Crops_authored_hint:
         Overworld Plant Crops_a: Use the `plant crop` command to plant a crop in the square you are standing in.
@@ -1759,7 +1759,7 @@ tr:
         courseC_maze_programming5_c: Çözümde, iki ileri hareket bloğu, bir dönüş bloğu ve iki ileri hareket bloğu daha olacak.
       courseC_maze_programming6_authored_hint:
         courseC_maze_programming6_a: Bu bulmacayı çözmek için iki yol vardır!
-        courseC_maze_programming6_b: parmağınızı kuştan domuza takip edin hangi adımları geçtiniz?
+        courseC_maze_programming6_b: Parmağınızı kuştan domuza takip edin, hangi adımları geçtiniz?
         courseC_maze_programming6_c: Kus baslangicta duvara donukse, dondurmeyi unutma.
       courseC_maze_programming7_authored_hint:
         courseC_maze_programming7_a: Don't forget to use the "Step" button to go through block by block and look for errors.
@@ -2881,8 +2881,9 @@ tr:
         courseE_bee_concept4_c: If you are at a flower, how many times do you have to get nectar? Is this the same number for all flowers?
       courseE_bee_concept5_authored_hint:
         courseE_bee_concept5_a: The flowers follow a rectangular path.  You can trace that rectangle using `while path ahead` even with a different number of squares per side.
-        courseE_bee_concept5_c: |2-
-           Arının alabileceklerini gösteren, dikdörtgen yolun bir resmi var
+        courseE_bee_concept5_c: |2
+           Arının gidebileceği dikdörtgen yolun bir resmi var. 
+          ![](https://images.code.org/b0ab0f9ec823fd8fbc9b032d68fd69d0-image-1493152066638.7.8 Hint Drawing.png)
         courseE_bee_concept5_b: You can check every square for a flower using the `if` block, even if you already know there's not one there.
       courseE_bee_functions1_authored_hint:
         courseE_bee_functions1_a: There is more than one right answer to this puzzle.
@@ -3201,8 +3202,8 @@ tr:
       courseF_artist_for9_authored_hint: [ ]
       courseF_artist_for_challenge1_authored_hint:
         courseF_artist_for_challenge1_a: '''Kalem genişliği'' 1''dir. İlk karenin 50 piksel kenar uzunluğu vardır ve her kare öncekinden 50 piksel daha geniş.'
-        courseF_artist_for_challenge1_b: Opaklık e her zaman 'counter' / 2 değerindedir.
-        courseF_artist_for_challenge1_c: Her bir kareyi yaptıktan sonra ileri atla, dön, atlla ve geriye dön!
+        courseF_artist_for_challenge1_b: Fırçanın opaklığı her zaman 'sayaç'/2 değerindedir.
+        courseF_artist_for_challenge1_c: Her bir kareyi yaptıktan sonra geri atla, dön, atla ve geriye dön!
         courseF_artist_for_challenge1_d: |-
           **Çözümü:**
           
@@ -3467,10 +3468,10 @@ tr:
       courseF_artist_fwp_challenge1_authored_hint: [ ]
       courseF_artist_fwp_challenge2_authored_hint:
         courseF_artist_fwp_challenge1_a: "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
-        courseF_artist_fwp_challenge1_b: 'Kenar uzunlukları counter uzunluğunda olan sekizgenler var. '
-        courseF_artist_fwp_challenge1_c: '200 den aşağı ikişer ikişer 2 ye kadar giden bir şununla say döngüsü içinden sekizgen fonksiyonu çağrılır. '
+        courseF_artist_fwp_challenge1_b: 'Bu resim kenar uzunlukları ''sayaç'' (counter) uzunluğunda olan sekizgenlerlerdir. '
+        courseF_artist_fwp_challenge1_c: 'Her bir sekizgen 200 den aşağı ikişer ikişer geriye 2''ye kadar giden bir ''şununla say döngüsü'' (for loop) içinden çağırılır.'
         courseF_artist_fwp_challenge1_d: 'Her döngünün sonunda 22.5 derece dönmeyi unutma. '
-        courseF_artist_fwp_challenge1_e: Sekizgen rengini ve kalem genişliği 'sayaç' değişkeni tarafından kontrol edilir.
+        courseF_artist_fwp_challenge1_e: Sekizgen rengi ve kalem genişliği 'sayaç' değişkeni tarafından kontrol edilir.
         courseF_artist_fwp_challenge1_f: |-
           ** Çözüm: **! [Çözüm] blokları (https://images.code.org/a82cfea836b95ce6625b08afcc3b7b37-image-1469727289590.png)
       courseF_artist_predict1_authored_hint: [ ]
@@ -3771,9 +3772,9 @@ tr:
         courseF_bee_for9_b: "**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through."
       courseF_bee_for_challenge1_authored_hint: [ ]
       courseF_bee_for_challenge2_authored_hint:
-        courseF_bee_for_challenge2_a: 'Hareket seçeneği için bir göz atın:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
-        courseF_bee_for_challenge2_b: 'İki ''şununla say'' döngüsü kullanmayı deneyin: bir yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma.'
-        courseF_bee_for_challenge2_c: "Şununla say döngüsü içinde tekrarla döngüsü gerekiyor. Counter değeri kadar merdiven yapılacak.\nÖteki şununla say döngüsü sadece bir döngüsü gerektiriyor. Counter kadar bal yapacak."
+        courseF_bee_for_challenge2_a: ' Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        courseF_bee_for_challenge2_b: 'İki ''şununla say'' döngüsü(for loop) kullanmayı deneyin: biri yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma için.'
+        courseF_bee_for_challenge2_c: "Gittikçe yükselen merdiven basamaklarını çizmek için, 'Şununla say döngüsü' (for loop) içinde birkaç 'sayaç' değerli tekrarla döngüsü gerekiyor. \nÖteki 'şununla say döngüsü' içine ise sadece bir adet 'sayaç' kadar bal yapacak tekrar döngüsü koymalısın."
         courseF_bee_for_challenge2_d: |-
           **Çözüm:**
           
@@ -3908,9 +3909,9 @@ tr:
           </block>
           </xml>
       courseF_bee_for_challenge3_authored_hint:
-        courseF_bee_for_challenge2_a: 'Hareket seçeneği için bir göz atın:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
-        courseF_bee_for_challenge2_b: 'İki ''şununla say'' döngüsü kullanmayı deneyin: bir yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma.'
-        courseF_bee_for_challenge2_c: "Şununla say döngüsü içinde tekrarla döngüsü gerekiyor. Counter değeri kadar merdiven yapılacak.\nÖteki şununla say döngüsü sadece bir döngüsü gerektiriyor. Counter kadar bal yapacak."
+        courseF_bee_for_challenge2_a: ' Hareket için bu seçeneğe bir göz atın:! [] (https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)'
+        courseF_bee_for_challenge2_b: 'İki ''şununla say'' döngüsü(for loop) kullanmayı deneyin: biri yukarı tırmanma ve nektar alma ve diğeri aşağı inme ve bal yapma için.'
+        courseF_bee_for_challenge2_c: "Gittikçe yükselen merdiven basamaklarını çizmek için, 'Şununla say döngüsü' (for loop) içinde birkaç 'sayaç' değerli tekrarla döngüsü gerekiyor. \nÖteki 'şununla say döngüsü' içine ise sadece bir adet 'sayaç' kadar bal yapacak tekrar döngüsü koymalısın."
         courseF_bee_for_challenge2_d: |-
           **Çözüm:**
           

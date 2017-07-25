@@ -1,6 +1,6 @@
-import { Direction } from './constants';
+import { Direction } from '../constants';
 import CustomGameLogic from './customGameLogic';
-require('../utils'); // Provides Function.prototype.inherits
+import '@cdo/apps/utils'; // Provides Function.prototype.inherits
 
 /**
  * Custom logic for the Rocket Height levels

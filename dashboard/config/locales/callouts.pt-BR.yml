@@ -120,7 +120,7 @@
       CSD U3 Sprites text_callout: []
       CSD U3 UP_ARROW_callout: []
       CSD U3 Variables Predict Where X_callout:
-        CSD_U3_variables: Change the number here
+        CSD_U3_variables: Altera o número aqui
       CSD U3 Variables Predict Where XY Embed_callout:
         grid: Click here to show the grid.
       CSD U3 Variables Predict Where XY_callout:
@@ -904,6 +904,9 @@
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
+          here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -918,6 +921,7 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
