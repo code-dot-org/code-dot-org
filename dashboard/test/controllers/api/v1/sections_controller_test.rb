@@ -97,9 +97,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "join with invalid section code" do
-    assert_raises(ActiveRecord::RecordNotFound) do
-      post :join, params: {id: 'xxxxxx'}
-    end
+    post :join, params: {id: 'xxxxxx'}
+    assert_response :bad_request
+    json = JSON.parse(@response.body)
+    assert_equal "section_notfound", json['result']
   end
 
   test "join with nobody signed in" do
@@ -115,9 +116,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test "leave with invalid section code" do
-    assert_raises(ActiveRecord::RecordNotFound) do
-      post :leave, params: {id: 'xxxxxx'}
-    end
+    post :leave, params: {id: 'xxxxxx'}
+    assert_response :bad_request
+    json = JSON.parse(@response.body)
+    assert_equal "section_notfound", json['result']
   end
 
   test "leave with nobody signed in" do

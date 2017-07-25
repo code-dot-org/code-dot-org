@@ -49,7 +49,8 @@ const styles = {
     color: color.lighter_gray,
     float: 'right',
     marginTop: 16,
-    marginRight: 14
+    marginRight: 14,
+    cursor: 'pointer'
   },
   iconBox: {
     width: 72,
@@ -99,6 +100,9 @@ const styles = {
       color: color.teal,
       backgroundColor: color.teal
     }
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
@@ -143,35 +147,38 @@ const Notification = React.createClass({
       return null;
     }
     return (
-      <div style={[styles.colors[type], styles.main]}>
-        <div style={[styles.iconBox, styles.colors[type]]}>
-          <FontAwesome icon={icons[type]} style={styles.icon}/>
-        </div>
-        {dismissible && (
-          <FontAwesome
-            icon="times"
-            style={styles.dismiss}
-            onClick={this.toggleContent}
-          />
-        )}
-        <div style={styles.wordBox}>
-          <div style={[styles.colors[type], styles.notice]}>
-            {notice}
+      <div>
+        <div style={[styles.colors[type], styles.main]}>
+          <div style={[styles.iconBox, styles.colors[type]]}>
+            <FontAwesome icon={icons[type]} style={styles.icon}/>
           </div>
-          <div style={styles.details}>
-            {details}
+          {dismissible && (
+            <FontAwesome
+              icon="times"
+              style={styles.dismiss}
+              onClick={this.toggleContent}
+            />
+          )}
+          <div style={styles.wordBox}>
+            <div style={[styles.colors[type], styles.notice]}>
+              {notice}
+            </div>
+            <div style={styles.details}>
+              {details}
+            </div>
           </div>
+          {buttonText && (
+            <ProgressButton
+              href={buttonLink}
+              color={ProgressButton.ButtonColor.gray}
+              text={buttonText}
+              style={styles.button}
+              target={newWindow ? "_blank" : null}
+              onClick={this.onAnnouncementClick}
+            />
+          )}
         </div>
-        {buttonText && (
-          <ProgressButton
-            href={buttonLink}
-            color={ProgressButton.ButtonColor.gray}
-            text={buttonText}
-            style={styles.button}
-            target={newWindow ? "_blank" : null}
-            onClick={this.onAnnouncementClick}
-          />
-        )}
+        <div style={styles.clear}/>
       </div>
     );
   }
