@@ -1,4 +1,4 @@
-import { assert } from '../../../util/configuredChai';
+import { assert, expect } from '../../../util/configuredChai';
 import reducer, {
   setStudioUrl,
   setValidLoginTypes,
@@ -10,6 +10,7 @@ import reducer, {
   removeSection,
   beginEditingNewSection,
   beginEditingSection,
+  editSectionProperties,
   cancelEditingSection,
   finishEditingSection,
   assignmentId,
@@ -458,9 +459,9 @@ describe('teacherSectionsRedux', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingNewSection());
       assert.deepEqual(state.sectionBeingEdited, {
-        id: null,
+        id: undefined,
         name: '',
-        loginType: 'word',
+        loginType: undefined,
         grade: '',
         providerManaged: false,
         stageExtras: false,
@@ -491,6 +492,77 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         studentCount: 1,
       });
+    });
+  });
+
+  describe('editSectionProperties', () => {
+    let editingNewSectionState;
+
+    before(() => {
+      editingNewSectionState = reducer(initialState, beginEditingNewSection());
+    });
+
+    it('throws if not currently editing a section', () => {
+      expect(() => {
+        reducer(initialState, editSectionProperties({name: 'New Name'}));
+      }).to.throw();
+    });
+
+    // Enumerate user-editable section properties
+    [
+      'name',
+      'loginType',
+      'stageExtras',
+      'pairingAllowed',
+      'courseId',
+      'scriptId',
+      'grade',
+    ].forEach(editableProp => {
+      it(`allows editing ${editableProp}`, () => {
+        const state = reducer(
+          editingNewSectionState,
+          editSectionProperties({[editableProp]: 'newValue'})
+        );
+        expect(state.sectionBeingEdited[editableProp]).to.equal('newValue');
+      });
+    });
+
+    // Check some uneditable section properties
+    [
+      'id',
+      'studentCount',
+      'code',
+      'providerManaged',
+    ].forEach(uneditableProp => {
+      it(`does not allow editing ${uneditableProp}`, () => {
+        expect(() => reducer(
+          editingNewSectionState,
+          editSectionProperties({[uneditableProp]: 'newValue'})
+        )).to.throw();
+      });
+    });
+
+    it('can edit multiple props at once', () => {
+      const state = reducer(
+        editingNewSectionState,
+        editSectionProperties({
+          name: 'newName',
+          courseId: 61,
+        })
+      );
+      expect(state.sectionBeingEdited.name).to.equal('newName');
+      expect(state.sectionBeingEdited.courseId).to.equal(61);
+    });
+
+    it('when editing multiple props, throws if any are uneditable', () => {
+      expect(() => reducer(
+        editingNewSectionState,
+        editSectionProperties({
+          name: 'newName',
+          courseId: 61,
+          providerManaged: false, // Uneditable!
+        })
+      )).to.throw();
     });
   });
 

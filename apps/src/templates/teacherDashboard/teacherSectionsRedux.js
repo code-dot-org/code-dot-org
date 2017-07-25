@@ -1,6 +1,18 @@
 import _ from 'lodash';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
+// The only properties that can be updated by the user when creating
+// or editing a section.
+const userEditableSectionProps = [
+  'name',
+  'loginType',
+  'stageExtras',
+  'pairingAllowed',
+  'courseId',
+  'scriptId',
+  'grade',
+];
+
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
@@ -10,6 +22,7 @@ const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
+const EDIT_SECTION_PROPERTIES = 'teacherDashboard/EDIT_SECTION_PROPERTIES';
 const EDIT_SECTION_CANCEL = 'teacherDashboard/EDIT_SECTION_CANCEL';
 const EDIT_SECTION_FINISH = 'teacherDashboard/EDIT_SECTION_FINISH';
 
@@ -39,7 +52,8 @@ export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 // Section dialog actions
 export const beginEditingNewSection = () => ({ type: EDIT_SECTION_BEGIN, sectionId: null });
-export const beginEditingSection = (sectionId) => ({ type: EDIT_SECTION_BEGIN, sectionId });
+export const beginEditingSection = sectionId => ({ type: EDIT_SECTION_BEGIN, sectionId });
+export const editSectionProperties = props => ({ type: EDIT_SECTION_PROPERTIES, props });
 export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
 export const finishEditingSection = () => ({ type: EDIT_SECTION_FINISH });
 
@@ -65,13 +79,14 @@ const initialState = {
  * Generate shape for new section
  * @param id
  * @param courseId
+ * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(id, courseId) {
+function newSectionData(id, courseId, loginType) {
   return {
     id: id,
     name: '',
-    loginType: SectionLoginType.word,
+    loginType: loginType,
     grade: '',
     providerManaged: false,
     stageExtras: false,
@@ -223,7 +238,7 @@ export default function teacherSections(state=initialState, action) {
       sectionIds: [sectionId, ...state.sectionIds],
       sections: {
         ...state.sections,
-        [sectionId]: newSectionData(sectionId, action.courseId)
+        [sectionId]: newSectionData(sectionId, action.courseId, SectionLoginType.word)
       }
     };
   }
@@ -243,18 +258,42 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId ?
-      { ...state.sections[action.sectionId] } :
-      newSectionData(null, action.courseId);
+      {...state.sections[action.sectionId]} :
+      newSectionData(undefined, action.courseId, undefined);
     return {
       ...state,
       sectionBeingEdited: initialSectionData,
     };
-  } else if (action.type === EDIT_SECTION_CANCEL) {
+  }
+
+  if (action.type === EDIT_SECTION_PROPERTIES) {
+    if (!state.sectionBeingEdited) {
+      throw new Error(`Cannot edit section properties; no section is`
+        + ' currently being edited.');
+    }
+
+    for (const key in action.props) {
+      if (!userEditableSectionProps.includes(key)) {
+        throw new Error(`Cannot edit property ${key}; it's not allowed.`);
+      }
+    }
+    return {
+      ...state,
+      sectionBeingEdited: {
+        ...state.sectionBeingEdited,
+        ...action.props,
+      }
+    };
+  }
+
+  if (action.type === EDIT_SECTION_CANCEL) {
     return {
       ...state,
       sectionBeingEdited: null,
     };
-  } else if (action.type === EDIT_SECTION_FINISH) {
+  }
+
+  if (action.type === EDIT_SECTION_FINISH) {
     return {
       ...state,
       sectionBeingEdited: null,
