@@ -123,9 +123,9 @@
       CSD U3 Variables Predict Where X_callout:
         CSD_U3_variables: Buradaki sayıyı değiştir
       CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Izgarayı göstermek için buraya tıklayın.
       CSD U3 Variables TEMPLATE square_callout: []
       CSD U3 Variables make a big square_callout: []
       CSD U3 Variables make a square_callout: []
@@ -558,12 +558,12 @@
       PDAlg Big Game Remix_callout: []
       PDAlg Design Recipe Delete_callout: []
       PS copy - CSD U3 Variables Predict Where XY Embed_callout:
-        grid: Click here to show the grid.
+        grid: Izgarayı göstermek için buraya tıklayın.
       PS copy 2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Mor çiçekler 1 veya 0 nektar olabilir ama bu kodu çalıştırmadan
           bilemessin!
       PS copy CSD U3 Variables Predict Where XY_callout:
-        grid: Click here to show the grid.
+        grid: Izgarayı göstermek için buraya tıklayın.
       Pizza on a Plate_callout:
         4-5_Artist_Patterns_Free_Play_1: Favori blokların hepsi kategoriler altında
           organize edilmiştir. Bu kelimelere tıklayarak blokların hangi kategorilere
@@ -729,8 +729,8 @@
         courseB_maze_seq3_1: Gri bloklar taştan yapılmış ve atılabilir değildir.
       courseB_maze_seq7_callout: []
       courseC_PlayLab_events_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
+          bölümlerine taşımanı sağlar.
       courseC_artist_prog1_callout: []
       courseC_artist_prog2_callout: []
       courseC_collector_loops_challenge2_callout: []
@@ -864,20 +864,20 @@
         courseD_artist_functions8_1: Your blocks to create functions have been moved
           under this label in the toolbox.
       courseE_artist_functions_challenge_callout:
-        courseE_artist_functions_challenge_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
       courseE_artist_functions_challenge1_callout:
-        courseE_artist_functions_challenge1_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge1_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge1_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge1_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
       courseE_artist_functions_challenge2_callout:
-        courseE_artist_functions_challenge2_callout1: Keep this program going by adding
-          more code to the bottom.
-        courseE_artist_functions_challenge2_callout2: If you don't like this design,
-          change it to anything you want!
+        courseE_artist_functions_challenge2_callout1: Altına daha fazla kod ekleyerek
+          bu programı sürdürün.
+        courseE_artist_functions_challenge2_callout2: Bu tasarımı (desing) beğenmediysen,
+          istediğin değişikliği yap!
       courseE_artist_functions_predict1_callout: []
       courseE_artist_predict1_callout: []
       courseE_artist_ramp10_callout: []
@@ -895,6 +895,9 @@
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Bu blokla bir adet hazine toplayabilirsin.  '
       courseE_collector_ramp9_callout: []
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
+          here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -909,6 +912,7 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
@@ -945,8 +949,8 @@
       courseE_maze_ramp_predict1_callout: []
       courseE_multi_maze_ramp5_callout: []
       courseE_playLab_challenge1_callout:
-        courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
-          parts of the game space.
+        courseC_PlayLab_events_challenge1_1: Bu blok aktörleri oyun alanının başka
+          bölümlerine taşımanı sağlar.
       courseE_playLab_scaffold3_callout:
         courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
           götür.
@@ -1029,9 +1033,9 @@
       courseF_bee_functions6_callout:
         courseF_bee_functions6_1: Daha fazla blok için buraya bakmayı unutma!
       courseF_bee_functions_challenge1_callout:
-        courseF_bee_functions_challenge1_1: What code should you put in this function?
-        courseF_bee_functions_challenge1_2: The "check nectar or honey" function can
-          be used here if edit it to make honey multiple times.
+        courseF_bee_functions_challenge1_1: Bu fonksiyona hangi kodu koymalısınız?
+        courseF_bee_functions_challenge1_2: Birden çok kez bal yapmak üzere düzenlerseniz
+          "Nektar veya bal kontrol" fonksiyonunu burada kullanabilirsiniz.
       courseF_bee_functions_challenge2_callout: []
       courseF_bee_fwp1_callout:
         courseF_bee_fwp1_1: You can find `if` statements in here.
@@ -1041,8 +1045,8 @@
       courseF_bee_fwp4_callout:
         courseF_bee_fwp4_1: Press the "edit" button to add a parameter to this function.
       courseF_bee_fwp_challenge2_callout:
-        courseF_bee_fwp_challenge2_callout1: This function will do a good job with
-          corn, but what about the other vegetables?
+        courseF_bee_fwp_challenge2_callout1: Bu işlev mısır ile iyi bir iş çıkaracaktır,
+          ancak diğer sebzelerde nasıl acaba?
       courseF_maze_predict1_callout: []
       courseF_maze_ramp1_callout:
         grade2_CaringForNewPet_0_1: After connecting all the blocks, press "Run" to
@@ -1081,15 +1085,15 @@
       courseF_playlab_variables4_callout: []
       courseF_playlab_variables5_callout: []
       courseF_playlab_variables5c RYAN Copy_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       courseF_playlab_variables5c_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       courseF_playlab_variables6c_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       courseF_playlab_variables7c_callout: []
       courseF_playlab_variables8c_callout: []
       courseF_playlab_variablesTemplate_callout:
-        courseF_playlab_variables5c_1: You will find your variable block in here.
+        courseF_playlab_variables5c_1: Değişken bloğunuzu burada bulabilirsiniz.
       course_playlab_variables2_callout:
         course_playlab_variables2_1: Bu değişkenine nasıl değer atadığını göstermektedir.
           Bloğa bağlı yazı kısmını değiştir ve değişkenin aldığı değeri atamış ol.

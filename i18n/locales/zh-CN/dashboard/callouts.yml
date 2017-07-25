@@ -336,7 +336,7 @@ zh-CN:
       Course 4 Maze 4_callout:
         repeat: 在循环中放入模块来重复执行命令
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that it uses the height parameter.
+        Course_4 _Play_Lab_Params_2_1: 点击“编辑”来更新此函数，以便其可使用高度参数。
       Course 4 Play Lab Params 3_callout:
         edit_function: 单击此处来编辑您的函数。
       Course 4 Play Lab Params 5_callout: [ ]
@@ -346,17 +346,17 @@ zh-CN:
         arrows_move_actor: 使用箭头移动演员
       Course 4 Play Lab Vars 6_callout: [ ]
       Course 4 Play Lab Vars 9_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       Course 4 Play Labs For Loops 5_callout:
-        Course_4_Play_Labs_For_Loops_5: Woah!  My code exploded!  Can you put it back together to solve this puzzle?
+        Course_4_Play_Labs_For_Loops_5: 哇！我的代码爆炸了！你能将它放回去并解决这个难题吗？
       Course 4 Playlab For Loop Freeplay_callout: [ ]
       Course 4 Playlab For Loops 4b_callout:
-        Course_4_Playlab_For_Loops_4b_1: Notice that the `counter` variable has a different name for each character?  That's so each `for` loop can control its own counter.
-        Course_4_Playlab_For_Loops_4b_2: In this puzzle, you are only allowed to change the "increment" of the `for` loops.
+        Course_4_Playlab_For_Loops_4b_1: 你注意到每一个角色的“计数器”变量都有不同的名字吗？所以每一个“计数循环”都可以控制自己的计数器。
+        Course_4_Playlab_For_Loops_4b_2: 在这道关卡中，你只允许修改“计数循环”中的“增量”。
       Course 4 Playlab For Loops 5b_callout: [ ]
       Course 4 Playlab For Loops 6b_callout: [ ]
       Course 4 SCV 6_callout:
-        Course_4_SCV_6: This block allows you to customize your color to almost anything you want to see!  Play around with the numbers to see what happens!
+        Course_4_SCV_6: 这个模块可以让你设置几乎任何你想看到的颜色！尝试调整参数，看看会发生什么！
       Eval Booleans 2_callout:
         Eval Booleans 2 1: Select a number that will make this expression evaluate to true
       Eval Cond 1_callout:
@@ -1091,9 +1091,9 @@ zh-CN:
       grade5_playlab_variables6_callout: [ ]
       grade5_playlab_variables6ask_callout: [ ]
       grade5_playlab_variables_freeplay_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       grade5_playlab_variables_jump1_callout:
-        Course_4_Play_Lab_Vars_9_1: All of your blocks are now organized behind categories! Click on a label to see the pieces inside.
+        Course_4_Play_Lab_Vars_9_1: 现在，你所有的模块都被分别归类在目录里。点击目录标签可查看同一类别的所有模块。
       gradek_adventurer_loops2_callout:
         gradek_adventurer_loops2_1: This number tells you how many of these blocks you can use in this puzzle.
       gradek_artist_loops3_callout:

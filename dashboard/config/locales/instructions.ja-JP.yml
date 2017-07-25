@@ -4188,29 +4188,24 @@
         Create a "safe-down?" function and update the "on-screen?" function so
         that it checks up, down, left, and right.
       SpecialFrozenLevel_instruction: "あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。"
-      Standalone_Artist_1_instruction: "アーティストへようこそ! 初めに、右に向くブロックと前に動くブロックを使って、かんたんな正方形を作ってみよう。それぞれの辺は、100
+      Standalone_Artist_1_instruction: "アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100
         ピクセルの長さだよ。"
-      Standalone_Artist_2_instruction: "各辺150ピクセル、角度は120度と60度のダイヤモンドを描いてみましょう。"
-      Standalone_Artist_3_instruction: "各辺100ピクセル、各角60度の六角形を描いてください。"
-      Standalone_Artist_4_instruction: "今度は繰り返しブロックを使ってみましょう。繰り返しブロックでは、一連のコマンドを繰り返し行うことができます。指定のコマンドを6回繰り返してみましょう。"
-      Standalone_Artist_5.5_instruction: "「繰り返し」ブロックを使って、ダイヤモンドのコードをかんたんにできましたね。この組み合わせを12回繰り返せば、花を描くことができます。ヒント：ひとつのダイヤモンドを書き終えたら、30度向きを変えてみよう。ずっと同じ場所にダイヤモンドを描いても、花は描けないからね。"
-      Standalone_Artist_5_instruction: "何回ダイヤモンドを繰り返すと花が描けるかな？"
-      Standalone_Artist_6_instruction: "このデザインを作るには、六角形のコードを 6 回繰り返します。繰り返しのたびに、どれぐらいの角度、まがればいいかな?
-        ヒント: 円の角度を、繰り返しの回数で割り算すればいいよ。"
-      Standalone_Artist_7_instruction: "関数は、同じプログラムを書くのを省略する、もう一つの方法です。この関数「draw a
-        flower」は、花を描く関数なので、これを使えばいつでも花が描けますよ。これと「まえにジャンプする」ブロックを使って、この花を描いてみてください。ヒント:
-        花は 150 ピクセルずつ離れています。"
-      Standalone_Artist_8_instruction: "「Draw a shape」は、六角形を描くようにプログラムした関数です。コードを実行して、この関数が何をするかみてみてください。そしてこの関数を書き直して、正方形や、三角形や、八角形を描くようにできるかな?"
-      Standalone_Artist_9_instruction: "さあ、あなたの好きな絵を描いてみて！好きなことが出来る、空っぽの関数もあるよ！"
-      Standalone_Artist_v2_instruction: "アーティストへようこそ! 初めに、右に向くブロックと前に動くブロックを使って、かんたんな正方形を作ってみよう。それぞれの辺は、100
+      Standalone_Artist_2_instruction: "「左に まがる 120度」と「左に まがる 60度」で、ダイヤモンドを書くよ。それぞれ「150ピクセル」うごかしてね。"
+      Standalone_Artist_3_instruction: "「前に うごく 100ピクセル」と「右に まがる60度」をつかって、六角形が書けるかな？"
+      Standalone_Artist_4_instruction: "「くりかえし」ブロックは、すきな回数プログラムを、くりかえします。ここに出ているプログラムを「くりかえし」ブロックの中に入れて、6回くりかえすと、どうなるかな？"
+      Standalone_Artist_5.5_instruction: "ダイヤモンドを書くプログラムを、「くりかえし」ブロックで、かんたんに しました。このプログラムを12回くりかえすと花が書けます。ヒント：ひとつのダイヤモンドを書きおえたら、30度まがりましょう。ずっと同じところにダイヤモンドを書いてたらダメだよ。"
+      Standalone_Artist_5_instruction: "ダイヤモンドを書くプログラムがあります。何回くりかえすと花が書けるかな？"
+      Standalone_Artist_6_instruction: "このデザインは、六角形を書くプログラムを 6 回くりかえします。くりかえしのたびに、何度まがればいいかな？ヒント：円の角度を、くりかえしの回数で、わり算すればいいよ。"
+      Standalone_Artist_7_instruction: "関数（かんすう）は、くりかえしと同じように、べんりです。「draw a flower」は、花を書く関数です。「draw
+        a flower」ブロックをつかえば、いっぱつ で、花を書くことが出来ます。これと「前に ジャンプ」ブロックを組み合わせて、3つ花を書いてください。ヒント:
+        花は 150 ピクセルずつ はなれているよ。"
+      Standalone_Artist_8_instruction: "「Draw a shape」は、六角形を書くようにプログラムした関数です。まず実行して、この関数が、どう
+        うごくか、みてみてください。さて、正方形や、三角形や、八角形を書くように、この関数の中のプログラムを書き直すことが出来るかな？"
+      Standalone_Artist_9_instruction: "さあ、あなたの好きな絵を書いてみて！すきなことが出来る、空っぽの関数もあるから、つかってね！"
+      Standalone_Artist_v2_instruction: "アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100
         ピクセルの長さだよ。"
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test Stamp- and Pattern-Agnostic Answer_instruction: |-
-        Answer validation should
-        be pattern- and stamp-agnostic, meaning that changing the patterns or the
-        stamp being drawn should still let you pass just so long as you're drawing
-        _some_ pattern and _some_ stamp. (much like color)
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
@@ -6162,6 +6157,9 @@
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_ttscsp_instruction: |-
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       artistDebugVideo1_instruction: "「リピート」ループを使用して、水を波立たせることができます。"
       artistFunctionsVideo1_instruction: "説明に従って、自分の関数を作ってみましょう。"
       artistLoopsK1_instruction: |-
@@ -7240,9 +7238,9 @@
         Fix the error(s) to collect all
         of the treasure.
       courseD_collector_debugging5_instruction: |-
-        Challenge: All of the commands that
-        you need are already here...now use your debugging skills to figure out how
-        to solve this puzzle.
+        All of the commands that you need
+        are already here...now use your debugging skills to figure out how to solve
+        this puzzle.
       courseD_collector_debugging6_instruction: |-
         Challenge: Use your debugging skills
         to fix the errors and collect all of the treasure.
@@ -7597,14 +7595,16 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
+      courseE_bee_functions9b_instruction: Now try it in Bee!
       courseE_bee_functions_challenge1_instruction: |-
         You are on your own for this
         challenge. This could "bee" harder than it looks!
       courseE_bee_functions_challenge2_instruction: |-
         You are on your own for this
         challenge!
-      courseE_bee_ramp14_instruction: "Get nectar while there is nectar, **else**\nmake
-        the honey. "
+      courseE_bee_ramp14_instruction: |-
+        Help the bee follow the path to gather all
+        of the honey and all of the nectar.
       courseE_bee_ramp17_instruction: Use what you have learned to solve this puzzle.
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
@@ -7643,8 +7643,11 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn, lettuce,
-        and pumpkin.
+        Help the farmer pick the corn and
+        pumpkins.
+      courseE_farmer_functions2ba_instruction: |-
+        Help the farmer pick the corn and
+        pumpkins using the `corn and pumpkin` function.
       courseE_farmer_functions3_instruction: |-
         What happens when the paths to the
         pumpkins are all different lengths?   \r
@@ -7655,10 +7658,9 @@
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions3c_instruction: |-
-        Which set of blocks helps the farmer
-        check for produce and pick it when it is available? Drag that code into a
-        function, then call your function from inside the `while path ahead` loops
-        (after the `move forward` block).
+        Now, fill-in the function yourself
+        by pulling the blocks from the code and dropping them into the **function
+        definition**.
       courseE_farmer_functions4_instruction: |-
         Great!  Now you have code that will
         work to get pumpkins from any size path.\r
@@ -7688,21 +7690,24 @@
       courseE_farmer_functions6b_instruction: Pick all of the produce.
       courseE_farmer_functions6c_instruction: |-
         What do you need to add this program
-        to collect all of the produce?
+        to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Make a second function that lets the
-        farmer get all of the produce down a path, then brings her back to where she
-        began.
+        Help the farmer find her way down
+        this confusing path and to the pumpkin by turning left at the corn and right
+        at the lettuce.
       courseE_farmer_functions8_instruction: |-
         **Challenge:**  Solve this puzzle with
         as few blocks as possible.
-      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
-        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the\npumpkins
+        using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_farmer_functions9b_instruction: |-
+        Can you figure out the pattern that
+        you need to solve this puzzle?
       courseE_farmer_predict1_instruction: |-
-        Pick lettuce if there is lettuce. Otherwise,
-        pick corn.
+        Pick all of the lettuce (only while there
+        is some to pick.)
       courseE_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
@@ -7712,8 +7717,8 @@
         Now use nested loops (`repeat` and `while`)
         to solve this puzzle.
       courseE_farmer_ramp12a_instruction: |-
-        Pick lettuce if there is lettuce. Otherwise,
-        pick corn.
+        Help the farmer correctly travel the path
+        to gather all of the lettuce.
       courseE_farmer_ramp13_instruction: |-
         Pick corn if there is corn, and pick lettuce
         while there is lettuce.
@@ -8029,14 +8034,17 @@
         Use the `move and check` function to
         collect all of the nectar.
       courseF_bee_functions6_instruction: |-
-        Create a function and call it to collect
-        all of the nectar at each flower or make all of the honey at each honeycomb.
+        Help the bee through the maze by turning
+        left at flowers and right at honeycomb.
       courseF_bee_functions7_instruction: |-
-        Collect all the nectar and make all the
-        honey!
+        Rebuild your function from the last puzzle
+        to solve this maze.
       courseF_bee_functions8a_instruction: |-
         Collect all the nectar or make all of
         the honey!
+      courseF_bee_functionsPre7_instruction: |-
+        Now try building a function to solve
+        this maze.  How is it different from last time?
       courseF_bee_functions_challenge1_instruction: |-
         Create a new function to collect
         all the nectar and honey while there is a path ahead. Use it to complete the

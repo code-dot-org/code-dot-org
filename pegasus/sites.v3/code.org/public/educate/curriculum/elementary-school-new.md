@@ -16,7 +16,7 @@ Overview and Professional Development
 
 Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
-All lessons align to all relevant computer science standards, as well as to the ISTE standards. They additionally reinforce concepts and skills taught in other subject areas by integrating national Math, English Language Arts, and Science standards. Read more about our curriculum philosophy <a href="something">here</a>
+All lessons align to all relevant computer science standards, as well as to the ISTE standards. They additionally reinforce concepts and skills taught in other subject areas by integrating national Math, English Language Arts, and Science standards. Read more about our curriculum philosophy. **need to add all the links back to this paragraph**
 
 ## New to Teaching Computer Science?
 
@@ -73,7 +73,7 @@ For students new to computer science, each course begins with a grade-appropriat
 <div class="col-33" style="padding-right: 10px;">
   <a href="<%= CDO.studio_url('/s/course3') %>"><img src="/images/curriculum/course-tile-placeholder.png"></a>
 </div>
-CS Fundamentals Express combines the best of Courses A-F into a single condensed course (for readers and pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple years of content in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat puzzles for students. This is also our recommended option for students studying computer science on their own outside of a classroom.
+CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat puzzles for students. This is also our recommended option for students studying computer science on their own outside of a classroom.
 
 <br>
 <br>
@@ -81,10 +81,10 @@ CS Fundamentals Express combines the best of Courses A-F into a single condensed
 
 
 
-## Looking for Translated Courses for ELL Students?
+## Looking for Translated Courses?
 
 
-We are working on translating the A-F and CSF Express courses to languages beyond English. In the meantime, you can leverage the great courses we already have translated for 25+ languages.[ View Courses 1-4 and Computer Science Fundamentals Accelerated](somewhere)
+We are working on translating the Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using Courses 1-4 and the Accelerated Course **NEED LINK HERE**. These courses cover the same basic concepts and have already been translated into 25+ languages.
 
 [solid-block-header]
 

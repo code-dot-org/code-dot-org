@@ -204,6 +204,7 @@ const ScriptEditor = React.createClass({
             <option value="eval">Eval</option>
             <option value="frozen">Frozen</option>
             <option value="mc">Minecraft Adventurer</option>
+            <option value="minecraft">Minecraft Designer</option>
             <option value="starwars">Star Wars</option>
           </select>
         </label>

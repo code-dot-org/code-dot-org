@@ -1585,17 +1585,17 @@ ja:
       Sam the Butterfly 7_instruction: "Only one last direction to worry about! Create\na \"safe-down?\" function and update the \"on-screen?\" function so that it\nchecks up, down, left, and right."
       Sam the Butterfly Complete_instruction: "Only one last direction to worry about!\nCreate a \"safe-down?\" function and update the \"on-screen?\" function so\nthat it checks up, down, left, and right."
       SpecialFrozenLevel_instruction: "あなたは、マスターアーティストになったわ！じゆうに、ふゆのワンダーランドをつくりましょう。"
-      Standalone_Artist_1_instruction: "アーティストへようこそ! 初めに、右に向くブロックと前に動くブロックを使って、かんたんな正方形を作ってみよう。それぞれの辺は、100 ピクセルの長さだよ。"
-      Standalone_Artist_2_instruction: "各辺150ピクセル、角度は120度と60度のダイヤモンドを描いてみましょう。"
-      Standalone_Artist_3_instruction: "各辺100ピクセル、各角60度の六角形を描いてください。"
-      Standalone_Artist_4_instruction: "今度は繰り返しブロックを使ってみましょう。繰り返しブロックでは、一連のコマンドを繰り返し行うことができます。指定のコマンドを6回繰り返してみましょう。"
-      Standalone_Artist_5.5_instruction: '「繰り返し」ブロックを使って、ダイヤモンドのコードをかんたんにできましたね。この組み合わせを12回繰り返せば、花を描くことができます。ヒント：ひとつのダイヤモンドを書き終えたら、30度向きを変えてみよう。ずっと同じ場所にダイヤモンドを描いても、花は描けないからね。'
-      Standalone_Artist_5_instruction: "何回ダイヤモンドを繰り返すと花が描けるかな？"
-      Standalone_Artist_6_instruction: 'このデザインを作るには、六角形のコードを 6 回繰り返します。繰り返しのたびに、どれぐらいの角度、まがればいいかな? ヒント: 円の角度を、繰り返しの回数で割り算すればいいよ。'
-      Standalone_Artist_7_instruction: '関数は、同じプログラムを書くのを省略する、もう一つの方法です。この関数「draw a flower」は、花を描く関数なので、これを使えばいつでも花が描けますよ。これと「まえにジャンプする」ブロックを使って、この花を描いてみてください。ヒント: 花は 150 ピクセルずつ離れています。'
-      Standalone_Artist_8_instruction: "「Draw a shape」は、六角形を描くようにプログラムした関数です。コードを実行して、この関数が何をするかみてみてください。そしてこの関数を書き直して、正方形や、三角形や、八角形を描くようにできるかな?"
-      Standalone_Artist_9_instruction: "さあ、あなたの好きな絵を描いてみて！好きなことが出来る、空っぽの関数もあるよ！"
-      Standalone_Artist_v2_instruction: "アーティストへようこそ! 初めに、右に向くブロックと前に動くブロックを使って、かんたんな正方形を作ってみよう。それぞれの辺は、100 ピクセルの長さだよ。"
+      Standalone_Artist_1_instruction: "アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100 ピクセルの長さだよ。"
+      Standalone_Artist_2_instruction: "「左に まがる 120度」と「左に まがる 60度」で、ダイヤモンドを書くよ。それぞれ「150ピクセル」うごかしてね。"
+      Standalone_Artist_3_instruction: "「前に うごく 100ピクセル」と「右に まがる60度」をつかって、六角形が書けるかな？"
+      Standalone_Artist_4_instruction: "「くりかえし」ブロックは、すきな回数プログラムを、くりかえします。ここに出ているプログラムを「くりかえし」ブロックの中に入れて、6回くりかえすと、どうなるかな？"
+      Standalone_Artist_5.5_instruction: ダイヤモンドを書くプログラムを、「くりかえし」ブロックで、かんたんに しました。このプログラムを12回くりかえすと花が書けます。ヒント：ひとつのダイヤモンドを書きおえたら、30度まがりましょう。ずっと同じところにダイヤモンドを書いてたらダメだよ。
+      Standalone_Artist_5_instruction: "ダイヤモンドを書くプログラムがあります。何回くりかえすと花が書けるかな？"
+      Standalone_Artist_6_instruction: このデザインは、六角形を書くプログラムを 6 回くりかえします。くりかえしのたびに、何度まがればいいかな？ヒント：円の角度を、くりかえしの回数で、わり算すればいいよ。
+      Standalone_Artist_7_instruction: '関数（かんすう）は、くりかえしと同じように、べんりです。「draw a flower」は、花を書く関数です。「draw a flower」ブロックをつかえば、いっぱつ で、花を書くことが出来ます。これと「前に ジャンプ」ブロックを組み合わせて、3つ花を書いてください。ヒント: 花は 150 ピクセルずつ はなれているよ。'
+      Standalone_Artist_8_instruction: "「Draw a shape」は、六角形を書くようにプログラムした関数です。まず実行して、この関数が、どう うごくか、みてみてください。さて、正方形や、三角形や、八角形を書くように、この関数の中のプログラムを書き直すことが出来るかな？"
+      Standalone_Artist_9_instruction: "さあ、あなたの好きな絵を書いてみて！すきなことが出来る、空っぽの関数もあるから、つかってね！"
+      Standalone_Artist_v2_instruction: "アーティストへようこそ！はじめに、「前に うごく」ブロックと「右に まがる」ブロックで、正方形をかいてみよう。それぞれの辺は、100 ピクセルの長さだよ。"
       StepIntro_instruction: "Here's how to use the \"Step\" button."
       Test Play Lab_instruction: "This is a test play lab level."
       Test of comment block_instruction: "Drag out the subgoal label block you want."

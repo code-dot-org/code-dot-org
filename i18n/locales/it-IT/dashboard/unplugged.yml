@@ -113,8 +113,8 @@ it:
         title: Acchiappa-Sole Funzionale
         desc: Gli studenti creano un algoritmo con variabili e funzioni (porzioni di codice che si possono usare ripetutamente) per creare degli acchiappa-sole usando fili e perline.
       SongwritingParameters:
-        title: Composizione di Canzoni - Parametri
-        desc: Gli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente.
+        title: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
+        desc: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nGli studenti usano il concetto del ritornello di una canzone per imparare come passare dei parametri ad una funzione. Questo permette di personalizzare una funzione senza doverla riscrivere interamente."
       DiceRace:
         title: 'Algoritmi della Vita Reale: Gara con i Dadi'
         desc: Questa lezione tratta degli algoritmi nella vita quotidiana. In questo contesto, gli studenti devono identificare e scrivere l'algoritmo per un gioco con i dadi.
