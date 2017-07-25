@@ -11,7 +11,7 @@ import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
-import ProgressButton from "../ProgressButton";
+import Button from "../Button";
 
 class LoginTypePicker extends Component {
   static propTypes = {
@@ -73,11 +73,11 @@ class LoginTypePicker extends Component {
           </div>
         )}
         <DialogFooter>
-          <ProgressButton
+          <Button
             onClick={handleCancel}
             text="Cancel"
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.gray}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
           />
         </DialogFooter>
       </div>

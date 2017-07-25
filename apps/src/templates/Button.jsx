@@ -112,7 +112,7 @@ const styles = {
   },
 };
 
-const ProgressButton = React.createClass({
+const Button = React.createClass({
   propTypes: {
     className: PropTypes.string,
     href: PropTypes.string,
@@ -157,7 +157,7 @@ const ProgressButton = React.createClass({
   }
 });
 
-ProgressButton.ButtonColor = ButtonColor;
-ProgressButton.ButtonSize = ButtonSize;
+Button.ButtonColor = ButtonColor;
+Button.ButtonSize = ButtonSize;
 
-export default Radium(ProgressButton);
+export default Radium(Button);
