@@ -135,6 +135,12 @@ class Course < ApplicationRecord
     end
   end
 
+  # @param course_id [String] id of the course we're checking the validity of
+  # @return [Boolean] Whether this is a valid course ID
+  def self.valid_course_id?(course_id)
+    valid_courses.any? {|course| course[:id] == course_id.to_i}
+  end
+
   def summarize
     {
       name: name,
