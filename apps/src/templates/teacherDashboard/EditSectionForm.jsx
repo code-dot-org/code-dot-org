@@ -46,16 +46,6 @@ class EditSectionForm extends Component{
     handleClose: PropTypes.func.isRequired,
   };
 
-  renderSectionNameInput() {
-    return (
-      <input
-        value={this.props.section.name}
-        onChange={val => this.props.editSectionProperties({name: val.target.value})}
-        style={style.sectionNameInput}
-      />
-    );
-  }
-
   renderGradeSelector() {
     const gradeOptions = [""]
       .concat(this.props.validGrades)
@@ -83,13 +73,10 @@ class EditSectionForm extends Component{
           {title}
         </Heading1>
         <div>
-          <FieldName>
-            {i18n.sectionName()}
-          </FieldName>
-          <div>
-            <FieldDescription>{i18n.addSectionName()}</FieldDescription>
-            {this.renderSectionNameInput()}
-          </div>
+          <SectionNameField
+            value={section.name}
+            onChange={name => editSectionProperties({name})}
+          />
           <FieldName>
             {i18n.grade()}
           </FieldName>
@@ -180,6 +167,28 @@ export default connect(state => ({
   handleClose: cancelEditingSection,
 })(EditSectionForm);
 
+const FieldProps = {
+  value: PropTypes.any,
+  onChange: PropTypes.func.isRequired,
+};
+
+const SectionNameField = ({value, onChange}) => (
+  <div>
+    <FieldName>
+      {i18n.sectionName()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.addSectionName()}
+    </FieldDescription>
+    <input
+      value={value}
+      onChange={event => onChange(event.target.value)}
+      style={style.sectionNameInput}
+    />
+  </div>
+);
+SectionNameField.propTypes = FieldProps;
+
 const FieldName = props => (
   <div
     style={{
@@ -213,7 +222,4 @@ const YesNoDropdown = ({value, onChange}) => (
     <option value="no">{i18n.no()}</option>
   </Dropdown>
 );
-YesNoDropdown.propTypes = {
-  value: PropTypes.any,
-  onChange: PropTypes.func.isRequired,
-};
+YesNoDropdown.propTypes = FieldProps;
