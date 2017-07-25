@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "game_id": 61,
   "created_at": "2014-09-20T02:48:46.000Z",
-  "level_num": "7",
+  "level_num": "custom",
   "user_id": 156,
   "properties": {
     "skin": "flappy",
@@ -13,7 +13,6 @@
     "scale": "{\"snapRadius\":2}",
     "success_condition": "function successCondition() {\r\n\t        return Flappy.gameState === Flappy.GameStates.OVER;\r\n\t      }",
     "instructions": "Next, try changing the scene by attaching another block to the \"when run\" block.",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -36,7 +35,8 @@
     "disable_if_else_editing": "false",
     "free_play": "false",
     "default_flap": "NORMAL",
-    "shareable": "false"
+    "shareable": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

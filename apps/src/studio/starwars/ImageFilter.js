@@ -1,7 +1,7 @@
 /** @file Wrapper for an SVG filter definition with animation capabilities */
 
-var SVG_NS = require('../constants').SVG_NS;
-var utils = require('../utils');
+import * as utils from '@cdo/apps/utils';
+import { SVG_NS } from '@cdo/apps/constants';
 
 // Unique element ID that increments by 1 each time an element is created
 var uniqueId = 0;
@@ -207,27 +207,5 @@ ImageFilter.makeBellCurveOscillation = function (period, exponent, min, max) {
   var halfPeriod = period / 2;
   return function (t) {
     return min + coefficient * Math.abs(Math.pow((t % period) - halfPeriod, exponent));
-  };
-};
-
-/**
- * Generates a function for a repeating pattern as follows:
- *  * Spend the first 1/3 of the period at {min}
- *  * Spend the second 1/3 of the period doing a linear interpolation from
- *    {min} to {max}
- *  * Spend the final 1/3 of the period at {max}
- *
- * @param {number} period - time units before this pattern repeats
- * @param {number} [min] - Lowest value, default zero
- * @param {number} [max] - Highest value, default one
- */
-ImageFilter.makeRepeatingOneThirdLinearInterpolation = function (period, min, max) {
-  min = utils.valueOr(min, 0);
-  max = utils.valueOr(max, 1);
-
-  var slope = 3 * (max - min) / period;
-  var intercept = 2 * min - max;
-  return function (t) {
-    return Math.min(max, Math.max(min, slope * (t % period) + intercept));
   };
 };

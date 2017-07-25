@@ -14,6 +14,9 @@ const UNLIMITED_NECTAR = 99;
 const EMPTY_HONEY = -98; // Hive with 0 honey
 const EMPTY_NECTAR = 98; // flower with 0 honey
 
+const HONEY_SOUND = 'honey';
+const NECTAR_SOUND = 'nectar';
+
 export default class Bee extends Gatherer {
   constructor(maze, studioApp, config) {
     super(maze, studioApp, config);
@@ -47,6 +50,16 @@ export default class Bee extends Gatherer {
    */
   getCellClass() {
     return BeeCell;
+  }
+
+  /**
+   * @override
+   */
+  loadAudio(skin) {
+    if (skin.beeSound) {
+      this.studioApp_.loadAudio(skin.nectarSound, NECTAR_SOUND);
+      this.studioApp_.loadAudio(skin.honeySound, HONEY_SOUND);
+    }
   }
 
   /**
@@ -436,7 +449,7 @@ export default class Bee extends Gatherer {
         "there was no nectar to be had");
     }
 
-    this.playAudio_('nectar');
+    this.playAudio_(NECTAR_SOUND);
     this.gotNectarAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);
@@ -452,7 +465,7 @@ export default class Bee extends Gatherer {
         "we arent at a hive or dont have nectar");
     }
 
-    this.playAudio_('honey');
+    this.playAudio_(HONEY_SOUND);
     this.madeHoneyAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);

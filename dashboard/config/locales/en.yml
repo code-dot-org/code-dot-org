@@ -212,11 +212,16 @@ en:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Email'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Invite sent'
     added_teacher: '%{name} added as your teacher'
     registered:  "You've registered for %{section_name}."
-
     error:
       signed_in: 'Please signout before proceeding'
       username_not_found: 'Username %{username} not found'
@@ -225,6 +230,7 @@ en:
       section_not_found: "Could not find a section with code '%{section_code}'."
       blank_code: "Please enter a section code"
       cant_join_own_section: "Sorry, you can't join your own section."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
@@ -248,6 +254,7 @@ en:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:

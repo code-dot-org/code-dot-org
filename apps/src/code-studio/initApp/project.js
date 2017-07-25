@@ -558,6 +558,8 @@ var projects = module.exports = {
         return 'playlab';
       case 'weblab':
         return 'weblab';
+      case 'flappy':
+        return 'flappy';
       default:
         return null;
     }
