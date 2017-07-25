@@ -62,7 +62,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 
-### Ubuntu 17.04 ([iso][ubuntu-iso-url])
+### Ubuntu 17.04 ([Download iso][ubuntu-iso-url])
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
@@ -72,7 +72,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     * `sudo add-apt-repository ppa:chris-lea/node.js`
     * `sudo apt-get update`
     * `sudo apt-get install nodejs`
-1. Install Ruby 2.2 with rbenv
+1. Install Ruby 2.2.3 with rbenv
      1. Install rbenv with `sudo apt install rbenv` and ruby-build with `sudo apt install ruby-build`
      1. `rbenv install 2.2.3`
      1. `rbenv global 2.2.3`
@@ -80,6 +80,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Node and yarn
     1. Node: `sudo apt install nodejs-legacy`
     1. yarn: `sudo npm install -g yarn@0.23.2`
+1. Run `gem install bundler -v 1.14.6`. Don't worry about using version 1.10.6 from the overview
 1. Before running `bundle install`, make sure to run `sudo apt install ruby2.3-dev`
 1. Finally, configure your mysql to allow for a proper installation
    1. If you properly left all the default options blank, type `sudo mysql` to start it up
@@ -90,7 +91,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. If, for any reason, you are forced to interrupt `bundle exec rake install` before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
-   1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation    should still work properly regardless
+   1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
 
