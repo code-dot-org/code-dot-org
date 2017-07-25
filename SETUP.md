@@ -62,7 +62,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 
-### Ubuntu 17.04 ([iso](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso?_ga=2.206594387.1901865802.1501006113-173469841.1498786046))
+### Ubuntu 17.04 ([iso][ubuntu-iso-url])
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
@@ -96,7 +96,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 17.04 iso image](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso)
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 17.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -105,7 +105,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. `vagrant up`
   1. `vagrant ssh`
   1. Goto step 2 of the common setup instructions
-* Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Enabling JavaScript builds
 The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
@@ -146,3 +145,5 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew install imagemagick@6`
 - `brew unlink imagemagick`
 - `brew link imagemagick@6 --force`
+
+[ubuntu-iso-url]: http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
