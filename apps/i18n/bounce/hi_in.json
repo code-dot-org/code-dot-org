@@ -81,7 +81,7 @@
   "repeatUntilBlocked": "while path ahead",
   "repeatUntilFinish": "repeat until finish",
   "scoreText": "स्कोर: {playerScore}: {opponentScore}",
-  "setBackground": "सेट {पृष्ठभूमि} दृश्य",
+  "setBackground": "सेट {background} दृश्य",
   "setBackgroundHardcourt": "हार्डकोर्ट का मंजर निर्धारित कऱे",
   "setBackgroundRandom": "निरुद्देश्य मंजर निर्धारित कऱे",
   "setBackgroundRetro": "पूर्वव्यापी मंजर निर्धारित कऱे",
