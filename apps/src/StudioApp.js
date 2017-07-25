@@ -524,12 +524,11 @@ StudioApp.prototype.init = function (config) {
         handleSkip={() => {
           window.location.href = this.skipUrl;
         }}
-        title={msg.challengeLevelTitle()}
-        primaryButtonLabel={msg.challengeLevelStart()}
         cancelButtonLabel={msg.challengeLevelSkip()}
-      >
-        {msg.challengeLevelIntro()}
-      </ChallengeDialog>,
+        primaryButtonLabel={msg.challengeLevelStart()}
+        text={msg.challengeLevelIntro()}
+        title={msg.challengeLevelTitle()}
+      />,
       startDialogDiv);
   }
 

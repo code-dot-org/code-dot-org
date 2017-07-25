@@ -1,5 +1,6 @@
 import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';
+import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Radium from 'radium';
 import React from 'react';
 
@@ -15,6 +16,21 @@ const stylesGenerator = assetUrl => ({
     marginTop: -85,
     height: 135,
   },
+  bannerComplete: {
+    backgroundImage: `url(${assetUrl('media/dialog/challenge_target_complete.svg')})`,
+    backgroundPositionY: -16,
+  },
+  content: {
+    color: '#75699b',
+    position: 'relative',
+    textAlign: 'center',
+    marginBottom: 30,
+  },
+  text: {
+    margin: '0px 40px 20px',
+    textAlign: 'center',
+    fontSize: 18,
+  },
   title: {
     textAlign: 'center',
     position: 'absolute',
@@ -28,17 +44,13 @@ const stylesGenerator = assetUrl => ({
     height: 30,
     lineHeight: '30px',
   },
-  introText: {
-    color: '#75699b',
-    width: '60%',
-    position: 'relative',
-    left: '20%',
-    textAlign: 'center',
-    marginBottom: 30,
-    fontSize: '12pt',
-  },
   primaryButton: {
     float: 'right',
+  },
+  footer: {
+    marginTop: 20,
+    paddingTop: 20,
+    borderTop: '2px solid #ccc',
   },
 });
 
@@ -51,11 +63,14 @@ const ChallengeDialog = Radium(React.createClass({
       React.PropTypes.node,
       React.PropTypes.arrayOf(React.PropTypes.node)
     ]),
+    complete: React.PropTypes.bool,
     isOpen: React.PropTypes.bool,
     handleSkip: React.PropTypes.func,
     handleStart: React.PropTypes.func,
     hideBackdrop: React.PropTypes.bool,
     primaryButtonLabel: React.PropTypes.string,
+    showPuzzleRatingButtons: React.PropTypes.bool,
+    text: React.PropTypes.string,
     title: React.PropTypes.string,
   },
 
@@ -87,12 +102,20 @@ const ChallengeDialog = Radium(React.createClass({
         hideBackdrop={this.props.hideBackdrop}
       >
         <img className="modal-image" src={this.props.avatar} />
-        <div style={styles.banner}>
+        <div
+          style={{
+            ...styles.banner,
+            ...(this.props.complete ? styles.bannerComplete : {})
+          }}
+        >
           <h1 style={styles.title}>
             {this.props.title}
           </h1>
         </div>
-        <div style={styles.introText}>
+        <div style={styles.content}>
+          <div style={styles.text}>
+            {this.props.text}
+          </div>
           {this.props.children}
         </div>
         <LegacyButton type="cancel" onClick={this.handleSkip}>
@@ -105,6 +128,9 @@ const ChallengeDialog = Radium(React.createClass({
         >
           {this.props.primaryButtonLabel}
         </LegacyButton>
+        {this.props.showPuzzleRatingButtons && <div style={styles.footer}>
+          <PuzzleRatingButtons useLegacyStyles/>
+        </div>}
       </BaseDialog>
     );
   },
