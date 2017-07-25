@@ -30,7 +30,6 @@ const style = {
 };
 
 class EditSectionForm extends Component{
-
   static propTypes = {
     title: PropTypes.string.isRequired,
     handleSave: PropTypes.func.isRequired,
@@ -76,44 +75,14 @@ class EditSectionForm extends Component{
               dropdownStyle={style.dropdown}
             />
           </div>
-          <FieldName>
-            {i18n.enableLessonExtras()}
-          </FieldName>
-          <div>
-            <FieldDescription>
-              {i18n.explainLessonExtras()}
-              {' '}
-              <a
-                href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
-                target="_blank"
-              >
-                {i18n.explainLessonExtrasLearnMore()}
-              </a>
-            </FieldDescription>
-            <YesNoDropdown
-              value={section.stageExtras}
-              onChange={stageExtras => editSectionProperties({stageExtras})}
-            />
-          </div>
-          <FieldName>
-            {i18n.enablePairProgramming()}
-          </FieldName>
-          <div>
-            <FieldDescription>
-              {i18n.explainPairProgramming()}
-              {' '}
-              <a
-                href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
-                target="_blank"
-              >
-                {i18n.explainPairProgrammingLearnMore()}
-              </a>
-            </FieldDescription>
-            <YesNoDropdown
-              value={section.pairingAllowed}
-              onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
-            />
-          </div>
+          <LessonExtrasField
+            value={section.stageExtras}
+            onChange={stageExtras => editSectionProperties({stageExtras})}
+          />
+          <PairProgrammingField
+            value={section.pairingAllowed}
+            onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
+          />
         </div>
         <DialogFooter>
           <Button
@@ -196,6 +165,52 @@ GradeField.propTypes = {
   ...FieldProps,
   validGrades: PropTypes.arrayOf(PropTypes.string).isRequired
 };
+
+const LessonExtrasField = ({value, onChange}) => (
+  <div>
+    <FieldName>
+      {i18n.enableLessonExtras()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.explainLessonExtras()}
+      {' '}
+      <a
+        href="https://support.code.org/hc/en-us/articles/228116568-In-the-teacher-dashboard-what-are-stage-extras-"
+        target="_blank"
+      >
+        {i18n.explainLessonExtrasLearnMore()}
+      </a>
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={stageExtras => onChange(stageExtras)}
+    />
+  </div>
+);
+LessonExtrasField.propTypes = FieldProps;
+
+const PairProgrammingField = ({value, onChange}) => (
+  <div>
+    <FieldName>
+      {i18n.enablePairProgramming()}
+    </FieldName>
+    <FieldDescription>
+      {i18n.explainPairProgramming()}
+      {' '}
+      <a
+        href="https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-within-Code-Studio-work-"
+        target="_blank"
+      >
+        {i18n.explainPairProgrammingLearnMore()}
+      </a>
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={pairingAllowed => onChange(pairingAllowed)}
+    />
+  </div>
+);
+PairProgrammingField.propTypes = FieldProps;
 
 const FieldName = props => (
   <div
