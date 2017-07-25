@@ -4,7 +4,7 @@ import {Heading1, h3Style} from "../../lib/ui/Headings";
 import * as styleConstants from '@cdo/apps/styleConstants';
 import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
-import { sectionShape, newSectionShape, assignmentShape } from './shapes';
+import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
@@ -39,7 +39,7 @@ class EditSectionForm extends Component{
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
-    section: newSectionShape.isRequired,
+    section: sectionShape.isRequired,
     editSectionProperties: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
   };

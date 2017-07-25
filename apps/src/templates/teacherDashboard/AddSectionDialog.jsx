@@ -5,7 +5,7 @@ import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
 import i18n from '@cdo/locale';
-import {newSectionShape} from './shapes';
+import {sectionShape} from './shapes';
 import {
   isAddingSection,
   finishEditingSection,
@@ -16,7 +16,7 @@ export class AddSectionDialog extends Component {
   static propTypes = {
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
-    section: newSectionShape,
+    section: sectionShape,
     finishEditingSection: PropTypes.func.isRequired,
     updateSection: PropTypes.func.isRequired,
   };

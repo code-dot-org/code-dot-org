@@ -2,12 +2,12 @@ import { PropTypes } from 'react';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { makeEnum } from '@cdo/apps/utils';
 
-const sectionShapeDefinition = {
+export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
-  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
   studentCount: PropTypes.number.isRequired,
@@ -16,14 +16,6 @@ const sectionShapeDefinition = {
   scriptId: PropTypes.number,
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
-};
-
-export const sectionShape = PropTypes.shape(sectionShapeDefinition);
-
-export const newSectionShape = PropTypes.shape({
-  ...sectionShapeDefinition,
-  id: PropTypes.number,
-  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
 });
 
 export const assignmentShape = PropTypes.shape({

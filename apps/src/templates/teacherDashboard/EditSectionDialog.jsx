@@ -8,14 +8,14 @@ import {
   finishEditingSection,
   updateSection,
 } from './teacherSectionsRedux';
-import {newSectionShape} from './shapes';
+import {sectionShape} from './shapes';
 import i18n from '@cdo/locale';
 
 export class EditSectionDialog extends Component {
   static propTypes = {
     //From Redux
     isOpen: PropTypes.bool.isRequired,
-    section: newSectionShape,
+    section: sectionShape,
     finishEditingSection: PropTypes.func.isRequired,
     updateSection: PropTypes.func.isRequired,
   };
