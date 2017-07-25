@@ -61,6 +61,7 @@ const Sections = React.createClass({
         {sections.length > 0 && (
           <SectionsPage
             validScripts={this.props.validScripts}
+            homepage={true}
           />
         )}
         {sections.length === 0 && isTeacher && (
