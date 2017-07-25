@@ -902,12 +902,16 @@ class Script < ActiveRecord::Base
     }.compact
   end
 
-  # @return {String|nil} path to the course overview page for this script if there
-  #   is one. A script is considered to have a matching course if there is exactly
-  #   one course for this script
-  def course_link
+  # A script is considered to have a matching course if there is exactly one
+  # course for this script
+  def course
     return nil if course_scripts.length != 1
-    course = Course.get_from_cache(course_scripts[0].course_id)
+    Course.get_from_cache(course_scripts[0].course_id)
+  end
+
+  # @return {String|nil} path to the course overview page for this script if there
+  #   is one.
+  def course_link
     course_path(course)
   end
 end
