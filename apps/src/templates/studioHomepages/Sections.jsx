@@ -25,9 +25,7 @@ const Sections = React.createClass({
   },
 
   updateSections(sections) {
-    this.setState({
-      sections: sections
-    });
+    this.setState({sections});
   },
 
   updateSectionsResult(action, result, name) {
@@ -63,6 +61,9 @@ const Sections = React.createClass({
         )}
         {this.state.sectionsAction === "join" && this.state.sectionsResult === "section_notfound" && (
           <JoinSectionNotFoundNotification sectionId={this.state.sectionsResultName}/>
+        )}
+        {this.state.sectionsAction === "join" && this.state.sectionsResult === "fail" && (
+          <JoinSectionFailNotification sectionId={this.state.sectionsResultName}/>
         )}
         {this.state.sectionsAction === "join" && this.state.sectionsResult === "exists" && (
           <JoinSectionExistsNotification sectionName={this.state.sectionsResultName}/>
@@ -134,6 +135,20 @@ const JoinSectionNotFoundNotification = React.createClass({
         type="failure"
         notice={i18n.sectionsNotificationFailure()}
         details={i18n.sectionsNotificationJoinNotFound({sectionId: this.props.sectionId})}
+        dismissible={true}
+      />
+    );
+  }
+});
+
+const JoinSectionFailNotification = React.createClass({
+  propTypes: {sectionId: React.PropTypes.string.isRequired},
+  render() {
+    return (
+      <Notification
+        type="failure"
+        notice={i18n.sectionsNotificationFailure()}
+        details={i18n.sectionsNotificationJoinFail({sectionId: this.props.sectionId})}
         dismissible={true}
       />
     );

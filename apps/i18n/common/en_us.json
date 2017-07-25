@@ -507,6 +507,7 @@
   "sectionsTitle": "Classroom Sections",
   "sectionsNotificationFailure": "Failure",
   "sectionsNotificationJoinExists": "You are already a member of classroom {sectionName}.",
+  "sectionsNotificationJoinFail": "An error occurred attempting to join section {sectionId}.",
   "sectionsNotificationJoinNotFound": "Section {sectionId} does not exist.",
   "sectionsNotificationJoinSuccess": "You joined classroom {sectionName}.",
   "sectionsNotificationLeaveSuccess": "You left classroom {sectionName}.",

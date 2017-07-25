@@ -115,6 +115,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "join with valid section code twice" do
+    student = create :student
+    sign_in student
+    post :join, params: {id: @word_section.code}
+    assert_response :success
+
+    post :join, params: {id: @word_section.code}
+    assert_response :success
+    json = JSON.parse(@response.body)
+    assert_equal "exists", json['result']
+  end
+
   test "leave with invalid section code" do
     post :leave, params: {id: 'xxxxxx'}
     assert_response :bad_request
