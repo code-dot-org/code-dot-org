@@ -41,7 +41,7 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 5,
     marginTop: 80,
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 1.5,
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
