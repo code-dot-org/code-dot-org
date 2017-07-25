@@ -35,11 +35,11 @@ const rowOrder = [
 ];
 
 const freeResponseQuestions = [
-  {text: 'Venue Feedback', key: 'venue_feedback'},
-  {text: 'Things you liked', key: 'things_you_liked'},
-  {text: 'Things you would change', key: 'things_you_would_change'},
-  {text: 'Things the facilitator did well', key: 'things_facilitator_did_well', facilitator_breakdown: true},
-  {text: 'Things the facilitator could improve', key: 'things_facilitator_could_improve', facilitator_breakdown: true}
+  {text: 'Do you have feedback about the venue and the way logistics were run for this workshop?', key: 'venue_feedback'},
+  {text: 'What were the two things you liked most about the activities you did in this workshop and why?', key: 'things_you_liked'},
+  {text: 'What are the two things you would change about the activities you did in this workshop? How would you improve them for future participants?', key: 'things_you_would_change'},
+  {text: 'What were two things your facilitator did well?', key: 'things_facilitator_did_well', facilitator_breakdown: true},
+  {text: 'What were two things your facilitator could do better?', key: 'things_facilitator_could_improve', facilitator_breakdown: true}
 ];
 
 const LocalSummerWorkshopSurveyResults = React.createClass({
