@@ -118,7 +118,7 @@ NoClassroomsFound.propTypes = {
 
 const LoadError = ({error, studioUrl}) =>
   <div>
-    <a href={`${studioUrl}/users/auth/google_oauth2?scope=classroom.courses.readonly,classroom.rosters.readonly`}>
+    <a href={`${studioUrl}/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
     <p style={styles.error}>
