@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ProgressButton from "./ProgressButton";
+import Button from "./Button";
 import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
@@ -163,9 +163,9 @@ const Notification = React.createClass({
           </div>
         </div>
         {buttonText && (
-          <ProgressButton
+          <Button
             href={buttonLink}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={buttonText}
             style={styles.button}
             target={newWindow ? "_blank" : null}

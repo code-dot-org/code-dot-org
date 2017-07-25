@@ -3,7 +3,7 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '@cdo/apps/templates/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   main: {
@@ -117,9 +117,9 @@ const JoinSection = React.createClass({
           style={styles.inputBox}
           placeholder={i18n.joinSectionPlaceholder()}
         />
-        <ProgressButton
+        <Button
           onClick={this.joinSection}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           text={i18n.joinSection()}
           style={styles.button}
         />

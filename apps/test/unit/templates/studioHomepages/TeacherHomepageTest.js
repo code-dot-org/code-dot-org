@@ -229,7 +229,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsSetUpMessage.props().type, 'sections');
     assert.equal(sectionsSetUpMessage.childAt(0).text(), 'Set up your classroom');
     assert.equal(sectionsSetUpMessage.childAt(1).text(), 'Create a new classroom section to start assigning courses and seeing your student progress.');
-    assert.equal(sectionsSetUpMessage.childAt(2).name(), 'ProgressButton');
+    assert.equal(sectionsSetUpMessage.childAt(2).name(), 'Button');
     assert.equal(sectionsSetUpMessage.childAt(2).props().href, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsSetUpMessage.childAt(2).props().text, 'Create section');
   });
@@ -350,7 +350,7 @@ describe('TeacherHomepage', () => {
     const seeMoreCourses = coursesContentContainer.childAt(6).childAt(0);
     assert.equal(seeMoreCourses.name(), 'SeeMoreCourses');
     const viewMoreButton = seeMoreCourses.childAt(0);
-    assert.equal(viewMoreButton.name(), 'ProgressButton');
+    assert.equal(viewMoreButton.name(), 'Button');
     assert.equal(viewMoreButton.props().text, 'View more');
   });
 
@@ -383,7 +383,7 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesSetUpMessage.props().type, 'courses');
     assert.equal(coursesSetUpMessage.childAt(0).text(), 'Start learning');
     assert.equal(coursesSetUpMessage.childAt(1).text(), 'Assign a course to your classroom or start your own course.');
-    assert.equal(coursesSetUpMessage.childAt(2).name(), 'ProgressButton');
+    assert.equal(coursesSetUpMessage.childAt(2).name(), 'Button');
     assert.equal(coursesSetUpMessage.childAt(2).props().href, '/courses');
     assert.equal(coursesSetUpMessage.childAt(2).props().text, 'Find a course');
   });

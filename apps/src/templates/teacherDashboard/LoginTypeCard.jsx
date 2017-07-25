@@ -1,6 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import color from '../../util/color';
-import ProgressButton from '../ProgressButton';
+import Button from '../Button';
 
 const styles = {
   card: {
@@ -94,9 +94,9 @@ class LoginTypeCard extends Component {
             {description}
           </div>
         </div>
-        <ProgressButton
+        <Button
           onClick={onClick}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           text={buttonText}
           style={styles.button}
         />

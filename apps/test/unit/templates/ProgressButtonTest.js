@@ -1,13 +1,13 @@
 import { assert } from '../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
-import ProgressButton from '@cdo/apps/templates/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import color from "@cdo/apps/util/color";
 
-describe('ProgressButton', () => {
+describe('Button', () => {
   it('renders an anchor tag when button has an href', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
       />
@@ -20,7 +20,7 @@ describe('ProgressButton', () => {
 
   it('modifies target if provided', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
         target="_blank"
@@ -35,7 +35,7 @@ describe('ProgressButton', () => {
   it('renders a div when button has an onClick', () => {
     const onClick = () => console.log('clicked');
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         onClick={onClick}
         text="Click me"
         target="_blank"
@@ -49,16 +49,16 @@ describe('ProgressButton', () => {
 
   it('renders bigger if we use a large size', () => {
     const regular = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
       />
     );
     const large = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
-        size={ProgressButton.ButtonSize.large}
+        size={Button.ButtonSize.large}
       />
     );
     assert.strictEqual(regular.props().style.height, 34);
@@ -72,7 +72,7 @@ describe('ProgressButton', () => {
 
   it('renders an orange button by default', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
       />
@@ -82,10 +82,10 @@ describe('ProgressButton', () => {
 
   it('renders a blue button if we set color to blue', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
-        color={ProgressButton.ButtonColor.blue}
+        color={Button.ButtonColor.blue}
       />
     );
     assert.strictEqual(wrapper.props().style.backgroundColor, color.cyan);
@@ -93,10 +93,10 @@ describe('ProgressButton', () => {
 
   it('renders a gray button if we set color to gray', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
-        color={ProgressButton.ButtonColor.gray}
+        color={Button.ButtonColor.gray}
       />
     );
     assert.strictEqual(wrapper.props().style.backgroundColor, color.lightest_gray);
@@ -104,10 +104,10 @@ describe('ProgressButton', () => {
 
   it('renders a white button if we set color to white', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
-        color={ProgressButton.ButtonColor.white}
+        color={Button.ButtonColor.white}
       />
     );
     assert.strictEqual(wrapper.props().style.backgroundColor, color.white);
@@ -115,7 +115,7 @@ describe('ProgressButton', () => {
 
   it('renders with an icon if specified', () => {
     const wrapper = shallow(
-      <ProgressButton
+      <Button
         href="/foo/bar"
         text="Click me"
         icon="lock"
