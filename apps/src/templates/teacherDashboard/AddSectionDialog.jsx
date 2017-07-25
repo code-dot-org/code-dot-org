@@ -4,6 +4,7 @@ import $ from 'jquery';
 import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
+import PadAndCenter from './PadAndCenter';
 import i18n from '@cdo/locale';
 import {sectionShape} from './shapes';
 import {
@@ -93,19 +94,3 @@ export default connect(state => ({
   finishEditingSection,
   updateSection,
 })(AddSectionDialog);
-
-const PadAndCenter = ({children}) => (
-  <div
-    style={{
-      display: 'flex',
-      flexFlow: 'row',
-      justifyContent: 'center',
-      marginTop: 20,
-      marginBottom: 20,
-    }}
-  >
-    {children}
-  </div>
-);
-PadAndCenter.propTypes = {children: PropTypes.any};
-
