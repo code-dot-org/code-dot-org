@@ -17,6 +17,8 @@ const styles = {
     fontColor: 'black',
     fontSize: 14,
     marginLeft: 40,
+  },
+  details: {
     textAlign: 'left',
   },
 };
@@ -53,18 +55,23 @@ export default Radium(React.createClass({
       </p>);
     }
 
-    const showCode = (<details className="show-code">
-      <summary
-        role="button"
-        style={{
-          ...styles.summary,
-          ...(this.props.useChallengeStyles ? styles.challengeSummary : {})
-        }}
+    const showCode = (
+      <details
+        className="show-code"
+        style={this.props.useChallengeStyles ? styles.details : null}
       >
-        <b>{msg.showGeneratedCode()}</b>
-      </summary>
-      {this.props.children}
-    </details>);
+        <summary
+          role="button"
+          style={{
+            ...styles.summary,
+            ...(this.props.useChallengeStyles ? styles.challengeSummary : {})
+          }}
+        >
+          <b>{msg.showGeneratedCode()}</b>
+        </summary>
+        {this.props.children}
+      </details>
+    );
 
     return (
       <div>

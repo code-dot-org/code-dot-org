@@ -65,8 +65,8 @@ const ChallengeDialog = Radium(React.createClass({
     ]),
     complete: React.PropTypes.bool,
     isOpen: React.PropTypes.bool,
-    handleSkip: React.PropTypes.func,
-    handleStart: React.PropTypes.func,
+    handleCancel: React.PropTypes.func,
+    handlePrimary: React.PropTypes.func,
     hideBackdrop: React.PropTypes.bool,
     primaryButtonLabel: React.PropTypes.string,
     showPuzzleRatingButtons: React.PropTypes.bool,
@@ -78,16 +78,14 @@ const ChallengeDialog = Radium(React.createClass({
     return { isOpen: this.props.isOpen === undefined || this.props.isOpen };
   },
 
-  handleStart() {
+  handlePrimary() {
+    this.props.handlePrimary && this.props.handlePrimary();
     this.setState({ isOpen: false });
-    this.props.handleStart && this.props.handleStart();
   },
 
-  handleSkip() {
-    if (!this.state.skipped) {
-      this.props.handleSkip && this.props.handleSkip();
-      this.setState({ skipped: true });
-    }
+  handleCancel() {
+    this.props.handleCancel && this.props.handleCancel();
+    this.setState({ isOpen: false });
   },
 
   render() {
@@ -97,7 +95,7 @@ const ChallengeDialog = Radium(React.createClass({
         isOpen={this.state.isOpen}
         assetUrl={this.props.assetUrl}
         style={styles.dialog}
-        handleClose={this.handleStart}
+        handleClose={this.handlePrimary}
         hideCloseButton={true}
         hideBackdrop={this.props.hideBackdrop}
       >
@@ -118,13 +116,13 @@ const ChallengeDialog = Radium(React.createClass({
           </div>
           {this.props.children}
         </div>
-        <LegacyButton type="cancel" onClick={this.handleSkip}>
+        <LegacyButton type="cancel" onClick={this.handleCancel}>
           {this.props.cancelButtonLabel}
         </LegacyButton>
         <LegacyButton
           type="primary"
           style={styles.primaryButton}
-          onClick={this.handleStart}
+          onClick={this.handlePrimary}
         >
           {this.props.primaryButtonLabel}
         </LegacyButton>
