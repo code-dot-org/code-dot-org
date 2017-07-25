@@ -9,6 +9,7 @@ const defaultProps = {
     id: 11,
     name: 'foo',
     loginType: 'email',
+    providerManaged: false,
     stageExtras: false,
     pairingAllowed: false,
     studentCount: 0,

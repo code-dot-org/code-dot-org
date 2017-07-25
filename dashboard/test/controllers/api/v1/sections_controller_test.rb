@@ -26,6 +26,25 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
   end
 
+  test 'logged out cannot list sections' do
+    get :index
+    assert_response :forbidden
+  end
+
+  test 'students own zero sections' do
+    sign_in @word_user_1
+    get :index
+    assert_response :success
+    assert_equal '[]', @response.body
+  end
+
+  test 'teacher with no sections indexes zero sections' do
+    sign_in create :teacher
+    get :index
+    assert_response :success
+    assert_equal '[]', @response.body
+  end
+
   test 'returns all sections belonging to teacher' do
     sign_in @teacher
 
@@ -37,17 +56,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, json
   end
 
-  test 'students own zero sections' do
-    sign_in @word_user_1
+  # It's easy to accidentally grant admins permission to `index` all sections
+  # in the database - a huge query that we don't want to permit.  Admin users
+  # should therefore only get their own sections when indexing sections,
+  # even though they'll have permission to pull up details for any section.
+  test 'admin can only index own sections' do
+    admin = create :admin
+    create(:section, user: admin, login_type: 'email')
 
+    sign_in admin
     get :index
     assert_response :success
-    assert_equal '[]', @response.body
-  end
-
-  test 'logged out cannot list sections' do
-    get :index
-    assert_response :forbidden
+    expected = admin.sections.map {|section| section.summarize.with_indifferent_access}
+    json = JSON.parse(@response.body)
+    assert_equal expected, json
   end
 
   test 'specifies course_id for sections that have one assigned' do
