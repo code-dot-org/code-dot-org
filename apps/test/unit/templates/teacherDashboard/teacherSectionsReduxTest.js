@@ -459,7 +459,7 @@ describe('teacherSectionsRedux', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingNewSection());
       assert.deepEqual(state.sectionBeingEdited, {
-        id: undefined,
+        id: -1,
         name: '',
         loginType: undefined,
         grade: '',

@@ -259,7 +259,7 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId ?
       {...state.sections[action.sectionId]} :
-      newSectionData(undefined, action.courseId, undefined);
+      newSectionData(-1, action.courseId, undefined);
     return {
       ...state,
       sectionBeingEdited: initialSectionData,
@@ -361,7 +361,7 @@ export const assignmentPaths = (validAssignments, section) => {
  * the Add Section dialog.
  */
 export function isAddingSection(state) {
-  return !!(state.sectionBeingEdited && !state.sectionBeingEdited.id);
+  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id < 0);
 }
 
 /**
@@ -369,5 +369,5 @@ export function isAddingSection(state) {
  * Edit Section dialog.
  */
 export function isEditingSection(state) {
-  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id);
+  return !!(state.sectionBeingEdited && state.sectionBeingEdited.id >= 0);
 }
