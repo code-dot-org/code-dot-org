@@ -276,57 +276,40 @@
         Purple flowers may have either 1 or 0
         nectar. Be careful not to collect nectar from a purple flower if it doesn't
         have any.\r
-      2-3 Bee Conditionals 11_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
-        fly around the yard and collect nectar only from the flowers that have\nsome. "
-      2-3 Bee Conditionals 12_instruction: |-
-        Help me find all of the nectar using
-        as few blocks as possible!
+      2-3 Bee Conditionals 11_instruction: "Brīnums, kas tur ir! \nPalīdzi man lidot
+        apkārt pa dārzu un ievākt visu nektāru no katra zieda, ja tas tur ir."
+      2-3 Bee Conditionals 12_instruction: Palīdzi man iegūt visu nektāru, lietojot
+        pēc iespējas mazāku bloku skaitu!
       2-3 Bee Conditionals 13_instruction: |-
-        There's a lot happening here!\r
-        \r
-        Use
-        what you've learned to collect all of the nectar and then make the honey.
+        Te daudz kas notiek!
+        Lieto visu ko esi iemācījies, lai iegūtu visu nektāru un tad pagatavotu medu.
       2-3 Bee Conditionals 14_instruction: |-
-        Let's put everything together!\r
-        \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  Don't forget to make honey at the end.
-      2-3 Bee Conditionals 15_instruction: |-
-        This stair step pattern should look familiar.  \r
-        \r
-        Can
-        you collect nectar only from the flowers that have some, using as few blocks
-        as possible?
-      2-3 Bee Conditionals 2_instruction: |-
-        I'm a hungry bee! \r
-        Help me collect
-        all of the nectar from the flowers using the fewest number of blocks.
-      2-3 Bee Conditionals 3_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
-        collect the nectar and make the honey using as few blocks as you can.  "
+        Liekam visu kopā!
+        Lieto visu, ko esi iemācījies. lai palīdzētu man iegūt nektāri tikai no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu. Neaizmirsti beigās pagatavot medu.
+      2-3 Bee Conditionals 15_instruction: "Šis kāpņu ceļš šķiet jau redzēts. \nVai
+        vari palīdzēt man iegūt nektāru no tiem ziediem, kur tas ir, lietojot pēc
+        iespējas mazāku bloku skaitu?"
+      2-3 Bee Conditionals 2_instruction: "Esmu izsalkusi bite! \nPalīdzi man iegūt
+        nektāru no ziediem, lietojot pēc iespējas mazāku bloku skaitu."
+      2-3 Bee Conditionals 3_instruction: |-
+        Skaties cik daudz nektāra!
+        Palīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu.
       2-3 Bee Conditionals 4_instruction: |-
         Help me collect all of the nectar from
         the flowers and make all the honey.
       2-3 Bee Conditionals 5_instruction: |-
-        Be careful not to collect nectar from
-        a purple flower if it doesn't have any. \r
-        You must first check if the nectar
-        is equal to 1 using the `if nectar` block.
-      2-3 Bee Conditionals 6_instruction: |-
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      2-3 Bee Conditionals 7_instruction: |-
-        Collect nectar from each flower only if
-        it has any.
+        Esi uzmanīgs, lai neiegūtu nektāru no tukša zieda (tāda, kuram nektāru skaits ir 0).
+        Pirms iegūt nektāru ir jāpārbauda vai skaits ir 1, lietojot "Ja nektārs" bloku.
+      2-3 Bee Conditionals 6_instruction: Pārbaudi šo ziedu ar "Ja" bloku, lai zinātu
+        vai nektārs ir pieejams.
+      2-3 Bee Conditionals 7_instruction: Iegūsti nektāru no katra zieda tikai tad,
+        ja tas tur ir.
       2-3 Bee Conditionals 8_instruction: |-
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      2-3 Bee Conditionals 9_instruction: Collect all the nectar from each flower.
-      2-3 Bee Conditionals Assessment 1_instruction: |-
-        Assessment: Collect all of
-        the nectar. Be careful not to try to collect nectar from a purple flower if
-        it doesn't have any.
+        Šajā laikā ir sarkani un violeti ziedi.
+        Sarkanajam ziedam mēs zinām nektāra skaitu, bet violetajam nē! Iegūsti visu nektāru.
+      2-3 Bee Conditionals 9_instruction: Iegūsti visu nektāru no katra zieda.
+      2-3 Bee Conditionals Assessment 1_instruction: 'Uzdevums: Iegūsti visu nektāru.
+        Uzmanies, lai neiegūtu nektāru no violetā zieda, ja tā tur nav.'
       2-3 Bee Debugging 1_instruction: |-
         These blocks are really bugging me. Fix the
         error(s) to collect all of the nectar.
@@ -391,7 +374,7 @@
         a task.  \r
         \r
         Use the `get 5` function to get 5 nectars at a time.
-      2-3 Bee Functions 3_instruction: Collect all the nectar from each flower.
+      2-3 Bee Functions 3_instruction: Iegūsti visu nektāru no katra zieda.
       2-3 Bee Functions 4_instruction: |-
         The `move and get nectar` function turns
         the bee, collects nectar, and then returns the bee to where it started.  \r
@@ -423,11 +406,8 @@
         Assessment: Create a function
         to turn, move forward and make 3 honey, then return the bee to where it started
         and turn back.
-      2-3 Bee Loops 1_instruction: |-
-        Those flowers look tasty!\r
-        \r
-        Collect nectar
-        from each of the flowers using the fewest blocks possible.
+      2-3 Bee Loops 1_instruction: "Šie ziedi izskatās tik garšīgi! Iegūsti nektāru
+        no katra zieda, lietojot pēc iespējas mazāku bloku skaitu."
       2-3 Bee Loops 10_instruction: |-
         Can you use a while loop inside of two other
         loops to collect all of the nectar?
@@ -437,46 +417,32 @@
       2-3 Bee Loops 12_instruction: |-
         Use while loops to collect all of the nectar
         from the flowers in this field.
-      2-3 Bee Loops 13_instruction: |-
-        Assessment: Collect all of the nectar using
-        the fewest blocks possible.
-      2-3 Bee Loops 1A_instruction: "Hi, I'm a bee. Can you help me collect the\nnectar
-        from these flowers? "
-      2-3 Bee Loops 2_instruction: |-
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
+      2-3 Bee Loops 13_instruction: 'Uzdevums: Iegūsti visu nektāru, lietojot pēc
+        iespējas mazāku bloku skaitu.'
+      2-3 Bee Loops 1A_instruction: Sveicināts! Es esmu bite. Vai vari man palīdzēt
+        iegūt nektāru no šiem ziediem?
+      2-3 Bee Loops 2_instruction: Iegūsti visu nektāru un pagatavo visu medu ar pēc
+        iespējas mazāku bloku skaitu.
       2-3 Bee Loops 2A_instruction: |
         Can you do the same task more easily with a
         loop?
-      2-3 Bee Loops 3_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      2-3 Bee Loops 3_instruction: Iegūsti nektāru no katra zieda un pagatavo medu
+        katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
       2-3 Bee Loops 3A_instruction: Can you use a loop to collect all that nectar?
-      2-3 Bee Loops 3B_instruction: |-
-        Now use the `repeat` block to collect all of
-        the nectar and make all of the honey.
+      2-3 Bee Loops 3B_instruction: Tagad lieto "Atkārtot" bloku, lai iegūtu visu
+        nektāru un pagatavotu visu medu.
       2-3 Bee Loops 4_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible.
-      2-3 Bee Loops 4A_instruction: |-
-        How many times can loops help you in this puzzle?  \r
-        \r
-        Loops
-        are your friend! Use a few of them to complete this puzzle with the fewest
-        blocks possible.
-      2-3 Bee Loops 5_instruction: |-
-        The shape of this path is different than the
-        others. \r
-        \r
-        Can you collect all of the nectar using as few blocks as possible?
-      2-3 Bee Loops 6_instruction: |-
-        Can you find the quickest way for the bee to
-        collect all of the nectar and make all of the honey?
-      2-3 Bee Loops 7_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
+        Cik aizņemta bite!
+        Palīdzi bitei iegūt visu nektāru un pagatavot visu medu ar pēc iespējas mazāku bloku skaitu.
+      2-3 Bee Loops 4A_instruction: Cik reižu cikli var palīdzēt atrisināt šo uzdevumu?
+        Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc
+        iespējas mazāku bloku skaitu.
+      2-3 Bee Loops 5_instruction: "Šī ceļa forma ir citādāka nekā iepriekš! Vai vari
+        iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?"
+      2-3 Bee Loops 6_instruction: Vai vari atrast ātrāko veidu, lai bite iegūtu visu
+        nektāru un pagatavotu visu medu?
+      2-3 Bee Loops 7_instruction: Kāds skaists ziedu lauks! Palīdzi bitei apmeklēt
+        katru ziedu. Vai vari to izdarīt ar mazāk kā 7 blokiem?
       2-3 Bee Loops 8_instruction: |-
         These purple flowers have different amount of
         nectar each time you run the puzzle. \r
@@ -513,14 +479,13 @@
       2-3 Maze 12_instruction: Vai tu vari tikt līdz cūkai, izveidojot ciklu, izmantojot
         tikai vienu "pārvietot uz priekšu" bloku iekš bloka "atkārtot"?
       2-3 Maze 13 (old)_instruction: Palīdzi man tikt līdz cūkai, tagad izmantojot
-        Atkārtot reizes bloku!
+        Atkārtot līdz bloku!
       2-3 Maze 13_instruction: Aizved mani līdz cūkai! Šoreiz tu vari izmantot tikai
         vienu "pārvietot uz priekšu" bloku
       2-3 Maze 14 (old)_instruction: Palīdzi man tikt līdz cūkai, tagad izmantojot
         Atkārtot līdz bloku!
-      2-3 Maze 14_instruction: |-
-        Get me to the sunflower! (Where is that "repeat
-        times" block when I need it?)
+      2-3 Maze 14_instruction: Aizved mani pie saulespuķes! (Kur ir tas "Atkārtot"
+        bloks, kad man to vajag?)
       2-3 Maze 15 (old)_instruction: Palīdzi man tikt līdz cūkai, tagad izmantojot
         Atkārtot līdz bloku!
       2-3 Maze 15_instruction: Šajā uzdevumā, divi "Atkārtot" cikli tev palīdzēs tikt
@@ -529,9 +494,8 @@
         Atkārtot līdz bloku!
       2-3 Maze 16 before_instruction: Vai vari izdomāt ātrāko veidu kā palīdzēt man
         tikt līdz cūkai?
-      2-3 Maze 16_instruction: |-
-        Loops even work with more than one block inside!  Can
-        you loop this sequence to get the zombie to the sunflower?
+      2-3 Maze 16_instruction: '"Atkārtot" cikli strādā pat ar vairākiem blokiem to
+        iekšpusē! Vai vari atkārtot šīs darbības, lai zombijs nokļūtu pie saulespuķes?'
       2-3 Maze 2_instruction: "Šī cūka bužina manas spalvas! Palīdzi man tikt līdz
         viņai!"
       2-3 Maze 3_instruction: Izseko maršrutam un aizved mani līdz tai muļķīgajai
@@ -547,23 +511,17 @@
         5 vienāda veida blokus?
       2-3 Maze Loops 17_instruction: Get me to the sunflower!
       2-3 Maze Loops 18_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!  \r
-        \r
-        Try using one `repeat` loop inside of another to cut down
-        on the amount of code you need.
+        Aizved mani pie saulespuķes, lietojot pēc iespējas mazāk blokus!
+        Pamēģini lietot vienu "Atkārtot" bloku iekš cita, lai samazinātu kopējo bloku skaitu.
       2-3 Maze Loops 19_instruction: |-
-        Let's take this to another level! \r
-        Use
-        loops to get me to the sunflower with the fewest loops possible.
-      2-3 Maze Loops 20_instruction: |-
-        Get me to the sunflower using the fewest number
-        of blocks possible!
-      2-3 Maze Loops 21_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!
-      2-3 Maze Loops Assessment 1_instruction: "Assessment:  Get me to the sunflower\nusing
-        only 5 blocks! "
+        Pacelsim uzdevumu jaunā līmenī!
+        Lieto ciklus, lai aizvestu mani pie saulespuķes ar pēc iespējas mazāku ciklu skaitu.
+      2-3 Maze Loops 20_instruction: Aizved mani pie saulespuķes ar mazāko iespējamo
+        bloku skaitu!
+      2-3 Maze Loops 21_instruction: Aizved mani pie saulespuķes ar mazāko iespējamo
+        bloku skaitu!
+      2-3 Maze Loops Assessment 1_instruction: 'Uzdevums: Aizved mani pie saulespuķes,
+        lietojot tikai 5 blokus!'
       2-3 Maze sq1_instruction: |-
         This pig is ruffling my feathers.  Help me find
         him!
@@ -728,7 +686,8 @@
       4-5 Artist 4_instruction: |-
         How many degrees are in a circle?  Loop the blocks
         to create a circle of colors.
-      4-5 Artist 5_instruction: Kādu leņķi tu izmanto?
+      4-5 Artist 5_instruction: Ar ko aizstāt "???", lai zombijs pabeigtu zīmējumu,
+        izmantojot doto ciklu?
       4-5 Artist 6_instruction: |-
         This equilateral triangle has angles of 60, 60,
         and 60 degrees. Each side is 200 pixels. Complete the drawing.
@@ -946,33 +905,26 @@
         The bee can't tell if this is
         a flower or a honeycomb. Gather nectar only from flowers, but first check
         if it is a flower or a honeycomb.
-      4-5 Bee Conditionals 1_instruction: |-
-        This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      4-5 Bee Conditionals 1_instruction: "Mākonis aizsedz man skatu! \nPaņem nektāru
+        tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
       4-5 Bee Conditionals 2 (copy 1)_instruction: |-
         The bee only wants nectar right
         now. Remember, not all objects are flowers, so check to gather nectar only
         at flowers.
       4-5 Bee Conditionals 2_instruction: |-
-        More clouds! \r
-        \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
-        \r
-        Remember:
-        Not all clouds hide the same thing!
-      4-5 Bee Conditionals 3_instruction: |-
-        Now I just want to make honey. Some of
-        these clouds might have honeycombs under them. Be sure to check each cloud!
+        Vēl vairāk mākoņu!
+        Pirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.
+        Atceries:
+        Ne katrs mākonis slēpj to pašu!
+      4-5 Bee Conditionals 3_instruction: Tagad es gribu pagatavot medu. Daži mākoņi
+        var slēpt bišu sūnas. Pārbaudi katru mākoni!
       4-5 Bee Conditionals 4 (copy 1)_instruction: |-
         The unknown object is either
         a flower or a honeycomb. Use the if/else block to collect nectar if it is
         a flower, else to make honey (because it is a honeycomb).
-      4-5 Bee Conditionals 4_instruction: |-
-        Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
+      4-5 Bee Conditionals 4_instruction: Dažreiz mākonis slēpj ziedu, bet citreiz
+        tas slēpj bišu šūnas. Lieto Ja/darīt/cits bloku, lai iegūtu nektāru (ja atrodies
+        virs zieda), vai arī pagatavotu medu (ja atrodies virs bišu šūnām).
       4-5 Bee Conditionals 5_instruction: |-
         There will be either a flower or a honeycomb
         under each of those clouds!\r
@@ -1092,9 +1044,8 @@
       4-5 Maze 6 (copy 1)_instruction: |-
         Can you solve this puzzle using the fewest
         number of blocks possible?
-      4-5 Maze 6_instruction: |-
-        Get me to the sunflower using the fewest number of
-        blocks possible!
+      4-5 Maze 6_instruction: Aizved mani pie saulespuķes ar mazāko iespējamo bloku
+        skaitu!
       4-5 Maze 7_instruction: |-
         Get the zombie to the sunflower quickly!  Can you
         solve the puzzle in fewer than 11 blocks?
@@ -5475,11 +5426,6 @@
         Each side should be 100 pixels long.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test Stamp- and Pattern-Agnostic Answer_instruction: |-
-        Answer validation should
-        be pattern- and stamp-agnostic, meaning that changing the patterns or the
-        stamp being drawn should still let you pass just so long as you're drawing
-        _some_ pattern and _some_ stamp. (much like color)
       Test of comment block_instruction: Drag out the subgoal label block you want.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
         many shovelfuls of dirt this hole needs.  \\r\nCan you write a program\nthat
@@ -7442,6 +7388,9 @@
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_ttscsp_instruction: |-
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       artistDebugVideo1_instruction: Use the `repeat` loop to add waves to the water.
       artistFunctionsVideo1_instruction: |-
         Follow the instructions to make your own
@@ -8526,9 +8475,9 @@
         Fix the error(s) to collect all
         of the treasure.
       courseD_collector_debugging5_instruction: |-
-        Challenge: All of the commands that
-        you need are already here...now use your debugging skills to figure out how
-        to solve this puzzle.
+        All of the commands that you need
+        are already here...now use your debugging skills to figure out how to solve
+        this puzzle.
       courseD_collector_debugging6_instruction: |-
         Challenge: Use your debugging skills
         to fix the errors and collect all of the treasure.
@@ -8858,7 +8807,7 @@
       courseE_bee_concept5_instruction: |-
         Help the bee collect the nectar from the
         flowers?
-      courseE_bee_functions1_instruction: Collect all the nectar from each flower.
+      courseE_bee_functions1_instruction: Iegūsti visu nektāru no katra zieda.
       courseE_bee_functions10_instruction: |-
         Solve this puzzle by creating a function
         that helps the bee go get all of the honey before returning back to the main
@@ -8888,14 +8837,16 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
+      courseE_bee_functions9b_instruction: Now try it in Bee!
       courseE_bee_functions_challenge1_instruction: |-
         You are on your own for this
         challenge. This could "bee" harder than it looks!
       courseE_bee_functions_challenge2_instruction: |-
         You are on your own for this
         challenge!
-      courseE_bee_ramp14_instruction: "Get nectar while there is nectar, **else**\nmake
-        the honey. "
+      courseE_bee_ramp14_instruction: |-
+        Help the bee follow the path to gather all
+        of the honey and all of the nectar.
       courseE_bee_ramp17_instruction: Use what you have learned to solve this puzzle.
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
       courseE_collector_ramp8_instruction: Help Laurel collect all of the treasure.
@@ -8938,8 +8889,11 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn, lettuce,
-        and pumpkin.
+        Help the farmer pick the corn and
+        pumpkins.
+      courseE_farmer_functions2ba_instruction: |-
+        Help the farmer pick the corn and
+        pumpkins using the `corn and pumpkin` function.
       courseE_farmer_functions3_instruction: |-
         What happens when the paths to the
         pumpkins are all different lengths?   \r
@@ -8950,10 +8904,9 @@
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions3c_instruction: |-
-        Which set of blocks helps the farmer
-        check for produce and pick it when it is available? Drag that code into a
-        function, then call your function from inside the `while path ahead` loops
-        (after the `move forward` block).
+        Now, fill-in the function yourself
+        by pulling the blocks from the code and dropping them into the **function
+        definition**.
       courseE_farmer_functions4_instruction: |-
         Great!  Now you have code that will
         work to get pumpkins from any size path.\r
@@ -8983,21 +8936,24 @@
       courseE_farmer_functions6b_instruction: Pick all of the produce.
       courseE_farmer_functions6c_instruction: |-
         What do you need to add this program
-        to collect all of the produce?
+        to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Make a second function that lets the
-        farmer get all of the produce down a path, then brings her back to where she
-        began.
+        Help the farmer find her way down
+        this confusing path and to the pumpkin by turning left at the corn and right
+        at the lettuce.
       courseE_farmer_functions8_instruction: |-
         **Challenge:**  Solve this puzzle with
         as few blocks as possible.
-      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
-        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the\npumpkins
+        using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
+      courseE_farmer_functions9b_instruction: |-
+        Can you figure out the pattern that
+        you need to solve this puzzle?
       courseE_farmer_predict1_instruction: |-
-        Pick lettuce if there is lettuce. Otherwise,
-        pick corn.
+        Pick all of the lettuce (only while there
+        is some to pick.)
       courseE_farmer_ramp11_instruction: |-
         This puzzle also uses nested loops.  Can
         you figure out how?
@@ -9007,8 +8963,8 @@
         Now use nested loops (`repeat` and `while`)
         to solve this puzzle.
       courseE_farmer_ramp12a_instruction: |-
-        Pick lettuce if there is lettuce. Otherwise,
-        pick corn.
+        Help the farmer correctly travel the path
+        to gather all of the lettuce.
       courseE_farmer_ramp13_instruction: |-
         Pick corn if there is corn, and pick lettuce
         while there is lettuce.
@@ -9326,14 +9282,17 @@
         Use the `move and check` function to
         collect all of the nectar.
       courseF_bee_functions6_instruction: |-
-        Create a function and call it to collect
-        all of the nectar at each flower or make all of the honey at each honeycomb.
+        Help the bee through the maze by turning
+        left at flowers and right at honeycomb.
       courseF_bee_functions7_instruction: |-
-        Collect all the nectar and make all the
-        honey!
+        Rebuild your function from the last puzzle
+        to solve this maze.
       courseF_bee_functions8a_instruction: |-
         Collect all the nectar or make all of
         the honey!
+      courseF_bee_functionsPre7_instruction: |-
+        Now try building a function to solve
+        this maze.  How is it different from last time?
       courseF_bee_functions_challenge1_instruction: |-
         Create a new function to collect
         all the nectar and honey while there is a path ahead. Use it to complete the
@@ -9969,25 +9928,19 @@
       grade3_AboutMyRobot_TeacherIDo_instruction: |-
         Run this puzzle and click on the
         robot to see what happens!
-      grade3_ConditionalsElse_1_instruction: |-
-        This cloud is blocking my view! Check
-        to see if there's a flower under the cloud, and only get nectar if there's
-        a flower. Be careful, it can change!
+      grade3_ConditionalsElse_1_instruction: "Mākonis aizsedz man skatu! \nPaņem nektāru
+        tikai tad, ja zem mākoņa ir paslēpts zieds.\nUzmanies, jo tas var mainīties!"
       grade3_ConditionalsElse_2_instruction: |-
-        More clouds! \r
-        \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
-        \r
-        Remember:
-        Not all clouds hide the same thing!
+        Vēl vairāk mākoņu!
+        Pirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.
+        Atceries:
+        Ne katrs mākonis slēpj to pašu!
       grade3_ConditionalsElse_3_instruction: |-
         Now I just want to make honey. Some
         of these clouds might have honeycombs under them. Be sure to check each cloud!
-      grade3_ConditionalsElse_4_instruction: |-
-        Sometimes this cloud covers a flower,
-        and sometimes it covers a honeycomb! Use the if/else block to collect nectar
-        if it is a flower, else to make honey (because it is a honeycomb).
+      grade3_ConditionalsElse_4_instruction: Dažreiz mākonis slēpj ziedu, bet citreiz
+        tas slēpj bišu šūnas. Lieto Ja/darīt/cits bloku, lai iegūtu nektāru (ja atrodies
+        virs zieda), vai arī pagatavotu medu (ja atrodies virs bišu šūnām).
       grade3_ConditionalsElse_5_instruction: |-
         There will be either a flower or a
         honeycomb under each of those clouds!\r
@@ -10036,57 +9989,45 @@
         Otherwise, make honey (because
         there is a honeycomb).
       grade3_Conditionals_1 BAD_instruction: Use a loop to collect all of the nectar.
-      grade3_Conditionals_1_instruction: |-
-        I'm a hungry bee! \r
-        Help me collect
-        all of the nectar from the flowers using the fewest number of blocks.
+      grade3_Conditionals_1_instruction: "Esmu izsalkusi bite! \nPalīdzi man iegūt
+        nektāru no ziediem, lietojot pēc iespējas mazāku bloku skaitu."
       grade3_Conditionals_10 BAD_instruction: |-
         Gather nectar from the rows of flowers!
         Use a nested loop.
       grade3_Conditionals_10_instruction: |-
-        There's a lot happening here!\r
-        \r
-        Use
-        what you've learned to collect all of the nectar and then make the honey.
+        Te daudz kas notiek!
+        Lieto visu ko esi iemācījies, lai iegūtu visu nektāru un tad pagatavotu medu.
       grade3_Conditionals_11 BAD_instruction: |-
         Assessment: Use a `while` loop to
         collect all of the nectar from these flowers.
       grade3_Conditionals_11_instruction: |-
-        Let's put everything together!\r
-        \r
-        Use
-        what you've learned to help me collect nectar only from flowers that have
-        it, using as few blocks as possible.  Don't forget to make honey at the end.
-      grade3_Conditionals_12_instruction: |-
-        This stair step pattern should look familiar.  \r
-        \r
-        Can
-        you collect nectar only from the flowers that have some, using as few blocks
-        as possible?
+        Liekam visu kopā!
+        Lieto visu, ko esi iemācījies. lai palīdzētu man iegūt nektāri tikai no tiem ziediem, kur tas ir, lietojot pēc iespējas mazāku bloku skaitu. Neaizmirsti beigās pagatavot medu.
+      grade3_Conditionals_12_instruction: "Šis kāpņu ceļš šķiet jau redzēts. \nVai
+        vari palīdzēt man iegūt nektāru no tiem ziediem, kur tas ir, lietojot pēc
+        iespējas mazāku bloku skaitu?"
       grade3_Conditionals_13_instruction: |-
         Assessment: Collect all of the nectar.
         Be careful not to try to collect nectar from a purple flower if it doesn't
         have any.
-      grade3_Conditionals_2_instruction: "Look at all of that nectar!\\r\n\\r\nHelp\nme
-        collect the nectar and make the honey using as few blocks as you can.  "
+      grade3_Conditionals_2_instruction: |-
+        Skaties cik daudz nektāra!
+        Palīdzi man iegūt nektāru un pagatavot medu, lietojot pēc iespējas mazāku bloku skaitu.
       grade3_Conditionals_3_instruction: |-
         Be careful not to collect nectar from a
         purple flower if it doesn't have any. \r
         You must first check if the nectar
         is equal to 1 using the `if nectar` block.
-      grade3_Conditionals_4_instruction: |-
-        Check this flower with an "if" block
-        to see if there is any nectar available.
-      grade3_Conditionals_5_instruction: |-
-        Collect nectar from each flower only if
-        it has any.
+      grade3_Conditionals_4_instruction: Pārbaudi šo ziedu ar "Ja" bloku, lai zinātu
+        vai nektārs ir pieejams.
+      grade3_Conditionals_5_instruction: Iegūsti nektāru no katra zieda tikai tad,
+        ja tas tur ir.
       grade3_Conditionals_6_instruction: |-
-        This field has red and purple flowers.
-        Red flowers have a known nectar amount, but purple flower nectar is unknown.
-        Collect all the nectar.
-      grade3_Conditionals_7_instruction: Collect all the nectar from each flower.
-      grade3_Conditionals_8_instruction: "I wonder what's out there!\\r\n\\r\nHelp\nme
-        fly around the yard and collect nectar only from the flowers that have\nsome. "
+        Šajā laikā ir sarkani un violeti ziedi.
+        Sarkanajam ziedam mēs zinām nektāra skaitu, bet violetajam nē! Iegūsti visu nektāru.
+      grade3_Conditionals_7_instruction: Iegūsti visu nektāru no katra zieda.
+      grade3_Conditionals_8_instruction: "Brīnums, kas tur ir! \nPalīdzi man lidot
+        apkārt pa dārzu un ievākt visu nektāru no katra zieda, ja tas tur ir."
       grade3_Conditionals_9_instruction: |-
         Help me find all of the nectar using as
         few blocks as possible!
@@ -10120,43 +10061,28 @@
         Fix the error(s) to collect all of the nectar and make all of the honey.
       grade3_Loops_1_instruction: "Can you help me collect the nectar from these\nflowers? "
       grade3_Loops_10_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible.
-      grade3_Loops_11_instruction: |-
-        The shape of this path is different than the
-        others. \r
-        \r
-        Can you collect all of the nectar using as few blocks as possible?
-      grade3_Loops_12_instruction: |-
-        Can you find the quickest way for the bee to
-        collect all of the nectar and make all of the honey?
+        Cik aizņemta bite!
+        Palīdzi bitei iegūt visu nektāru un pagatavot visu medu ar pēc iespējas mazāku bloku skaitu.
+      grade3_Loops_11_instruction: "Šī ceļa forma ir citādāka nekā iepriekš! Vai vari
+        iegūt visu nektāru, lietojot pēc iespējas mazāku bloku skaitu?"
+      grade3_Loops_12_instruction: Vai vari atrast ātrāko veidu, lai bite iegūtu visu
+        nektāru un pagatavotu visu medu?
       grade3_Loops_2_instruction: This time, use a loop to gather all of the nectar.
       grade3_Loops_3_instruction: Use a `repeat` loop to collect all of the nectar.
       grade3_Loops_4_instruction: |-
         Now use the `repeat` block to collect all of the
         nectar and make all of the honey.
-      grade3_Loops_5_instruction: |-
-        What a beautiful field of flowers!   Help the
-        bee visit each one.  Can you find a way to do it with fewer than 7 blocks?
-      grade3_Loops_6_instruction: |-
-        How many times can loops help you in this puzzle?  \r
-        \r
-        Loops
-        are your friend! Use a few of them to complete this puzzle with the fewest
-        blocks possible.
-      grade3_Loops_7_instruction: |-
-        Those flowers look tasty!\r
-        \r
-        Collect nectar
-        from each of the flowers using the fewest blocks possible.
-      grade3_Loops_8_instruction: |-
-        Collect all the nectar and make all of the honey
-        using the fewest blocks possible.
-      grade3_Loops_9_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      grade3_Loops_5_instruction: Kāds skaists ziedu lauks! Palīdzi bitei apmeklēt
+        katru ziedu. Vai vari to izdarīt ar mazāk kā 7 blokiem?
+      grade3_Loops_6_instruction: Cik reižu cikli var palīdzēt atrisināt šo uzdevumu?
+        Cikli ir tavi draugi! Lieto dažus no tiem, lai izpildītu šo uzdevumu ar pēc
+        iespējas mazāku bloku skaitu.
+      grade3_Loops_7_instruction: "Šie ziedi izskatās tik garšīgi! Iegūsti nektāru
+        no katra zieda, lietojot pēc iespējas mazāku bloku skaitu."
+      grade3_Loops_8_instruction: Iegūsti visu nektāru un pagatavo visu medu ar pēc
+        iespējas mazāku bloku skaitu.
+      grade3_Loops_9_instruction: Iegūsti nektāru no katra zieda un pagatavo medu
+        katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
       grade3_Loops_TeacherIDo_instruction: |-
         Those flowers look tasty!\r
         \r
@@ -10273,9 +10199,8 @@
       grade3_maze_loops4_instruction: |-
         Get the zombe to the sunflower using the fewest
         number of blocks possible!
-      grade3_maze_loops5_instruction: |-
-        Get me to the sunflower using the fewest blocks
-        possible!
+      grade3_maze_loops5_instruction: Aizved mani pie saulespuķes ar mazāko iespējamo
+        bloku skaitu!
       grade3_maze_nestedLoops1_instruction: |-
         Can you get me to the pig using 5 of
         the same kind of blocks?
@@ -10622,13 +10547,10 @@
         Check to see if there's a flower under the cloud, and only get nectar if
         there's a flower. Be careful, it can change!
       grade4_bee_conditionals_quantum2_instruction: |-
-        More clouds! \r
-        \r
-        Check underneath
-        every cloud to see if it is hiding a flower before you get nectar.  \r
-        \r
-        Remember:
-        Not all clouds hide the same thing!
+        Vēl vairāk mākoņu!
+        Pirms nektāra iegūšanas, paskaties zem katra mākoņa, lai uzzinātu vai tur ir puķe.
+        Atceries:
+        Ne katrs mākonis slēpj to pašu!
       grade4_bee_conditionals_quantum3_instruction: |-
         Now I just want to make honey.
         Some of these clouds might have honeycombs under them. The way we've been
@@ -10649,7 +10571,7 @@
       grade4_bee_functions_instruction: |-
         Have we met before? I'm the farmer! Please
         help me remove this pile of dirt and fill this hole.
-      grade4_bee_functions1_instruction: Collect all the nectar from each flower.
+      grade4_bee_functions1_instruction: Iegūsti visu nektāru no katra zieda.
       grade4_bee_functions10_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
@@ -10819,14 +10741,11 @@
       grade4_review_bee1_instruction: |-
         Now use the `repeat` block to collect all
         of the nectar and make all of the honey.
-      grade4_review_bee2_instruction: |-
-        Collect nectar from each flower and make honey
-        at each honeycomb using the fewest blocks possible.
+      grade4_review_bee2_instruction: Iegūsti nektāru no katra zieda un pagatavo medu
+        katrā bišu šūnā, lietojot pēc iespējas mazāku bloku skaitu.
       grade4_review_bee3_instruction: |-
-        Such a busy bee!\r
-        \r
-        Help bee collect all
-        of the nectar and make all of the honey with the fewest blocks possible.
+        Cik aizņemta bite!
+        Palīdzi bitei iegūt visu nektāru un pagatavot visu medu ar pēc iespējas mazāku bloku skaitu.
       grade4_scaffolded_project1_instruction: |-
         It is amazing how much you have learned!
         Let's put them together to make a game, step by step.
