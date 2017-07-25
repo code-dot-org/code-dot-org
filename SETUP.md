@@ -62,49 +62,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
   1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
 
-
-### Ubuntu 14.04 ([Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso))
-
-1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
-  * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-1. Upgrade npm to 3.10.8 If `npm -v` says less than 3.10.8 then
-  * `sudo add-apt-repository ppa:chris-lea/node.js`
-  * `sudo apt-get update`
-  * `sudo apt-get install nodejs`
-1. Either A. Install Ruby 2.2 from OS packages; B. Setup `rbenv`; or C. Setup `rvm`
-    - A. OS packages (from the [Brightbox Ubuntu PPA](https://www.brightbox.com/docs/ruby/ubuntu/)):
-        - `sudo apt-get install software-properties-common`
-        - `sudo apt-add-repository ppa:brightbox/ruby-ng`
-        - `sudo apt-get update`
-        - `sudo apt-get install ruby2.2 ruby2.2-dev`
-    - B. `rbenv`: ([instructions](https://github.com/sstephenson/rbenv#installation))
-        1. Install `rbenv` and `ruby-build`
-        1. `rbenv install 2.2.3`
-        1. `rbenv global 2.2.3`
-        1. `rbenv rehash`
-    - C. `rvm`. A few folks have had more luck with rvm vs rbenv on linux.
-        1. Install rvm from https://rvm.io/
-        1. `rvm install 2.2.3`
-        1. `rvm use 2.2.3 --default`
-1. Install Node, npm, and yarn
-  1. Option A - [nvm](https://github.com/creationix/nvm)
-    1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
-      - After completion, close your current terminal window and open a new one.
-    1. `nvm install` (this will install the version defined in `.nvmrc`)
-  1. Option B - nodesource repository
-    1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
-    1. `sudo apt-get install -y nodejs`
-  1. Option C - Manual install
-    1. [Nodejs.org](https://nodejs.org/download/)
-  1. Finally, install yarn: `npm install -g yarn@0.23.2`
-1. When running `bundle install`, you may need to run
-
-   `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
-
-   first so that nokogiri picks up the built in libxml2 library. See this [stackoverflow answer](http://stackoverflow.com/a/40038954/186771).
-   
-### Ubuntu 17.04 ([Ubuntu 17.04 iso image](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso?_ga=2.206594387.1901865802.1501006113-173469841.1498786046))
+### Ubuntu 17.04 ([iso](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso?_ga=2.206594387.1901865802.1501006113-173469841.1498786046))
 
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
@@ -122,7 +80,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Node and yarn
     1. Node: `sudo apt install nodejs-legacy`
     1. yarn: `sudo npm install -g yarn@0.23.2`
-1. Befor running `bundle install`, make sure to run `sudo apt install ruby2.3-dev`
+1. Before running `bundle install`, make sure to run `sudo apt install ruby2.3-dev`
 1. Finally, configure your mysql to allow for a proper installation
    1. If you properly left all the default options blank, type `sudo mysql` to start it up
    1. Type `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';`
@@ -138,7 +96,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and either an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso) or an [Ubuntu 17.04 iso image](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso?_ga=2.206594387.1901865802.1501006113-173469841.1498786046). Note: the Ubuntu 17.04 installation path is the most recently tested working version
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 17.04 iso image](http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso)
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
