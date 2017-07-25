@@ -69,10 +69,11 @@ class EditSectionForm extends Component{
   }
 
   render(){
+    const {section, title, editSectionProperties} = this.props;
     return (
       <div style={{width: 970}}>
         <Heading1>
-          {this.props.title}
+          {title}
         </Heading1>
         <div>
           <FieldName>
@@ -115,13 +116,10 @@ class EditSectionForm extends Component{
                 {i18n.explainLessonExtrasLearnMore()}
               </a>
             </FieldDescription>
-            <Dropdown
-              value={this.props.section.stageExtras}
-              onChange={val => this.props.editSectionProperties({stageExtras: val.target.value === 'true'})}
-            >
-              <option value={true}>{i18n.yes()}</option>
-              <option value={false}>{i18n.no()}</option>
-            </Dropdown>
+            <YesNoDropdown
+              value={section.stageExtras}
+              onChange={stageExtras => editSectionProperties({stageExtras})}
+            />
           </div>
           <FieldName>
             {i18n.enablePairProgramming()}
@@ -137,13 +135,10 @@ class EditSectionForm extends Component{
                 {i18n.explainPairProgrammingLearnMore()}
               </a>
             </FieldDescription>
-            <Dropdown
-              value={this.props.section.pairingAllowed}
-              onChange={val => this.props.editSectionProperties({pairingAllowed: val.target.value === 'true'})}
-            >
-              <option value={true}>{i18n.yes()}</option>
-              <option value={false}>{i18n.no()}</option>
-            </Dropdown>
+            <YesNoDropdown
+              value={section.pairingAllowed}
+              onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
+            />
           </div>
         </div>
         <DialogFooter>
@@ -200,3 +195,17 @@ const FieldDescription = props => (
 const Dropdown = props => (
   <select style={style.dropdown} {...props}/>
 );
+
+const YesNoDropdown = ({value, onChange}) => (
+  <Dropdown
+    value={value ? 'yes' : 'no'}
+    onChange={event => onChange('yes' === event.target.value)}
+  >
+    <option value="yes">{i18n.yes()}</option>
+    <option value="no">{i18n.no()}</option>
+  </Dropdown>
+);
+YesNoDropdown.propTypes = {
+  value: PropTypes.any,
+  onChange: PropTypes.func.isRequired,
+};
