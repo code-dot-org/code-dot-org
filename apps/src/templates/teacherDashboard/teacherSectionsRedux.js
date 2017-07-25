@@ -193,6 +193,7 @@ export default function teacherSections(state=initialState, action) {
           name: '',
           loginType: SectionLoginType.word,
           grade: '',
+          providerManaged: false,
           stageExtras: false,
           pairingAllowed: true,
           studentCount: 0,
@@ -233,6 +234,7 @@ export const sectionFromServerSection = serverSection => ({
   name: serverSection.name,
   loginType: serverSection.login_type,
   grade: serverSection.grade,
+  providerManaged: serverSection.providerManaged || false, // TODO: (josh) make this required when /v2/sections API is deprecated
   stageExtras: serverSection.stage_extras,
   pairingAllowed: serverSection.pairing_allowed,
   studentCount: serverSection.studentCount,
