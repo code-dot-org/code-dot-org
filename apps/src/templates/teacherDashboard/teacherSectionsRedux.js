@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
 
 // The only properties that can be updated by the user when creating
 // or editing a section.
@@ -25,6 +26,9 @@ const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 const EDIT_SECTION_PROPERTIES = 'teacherDashboard/EDIT_SECTION_PROPERTIES';
 const EDIT_SECTION_CANCEL = 'teacherDashboard/EDIT_SECTION_CANCEL';
 const EDIT_SECTION_FINISH = 'teacherDashboard/EDIT_SECTION_FINISH';
+const SAVE_SECTION_REQUEST = 'teacherDashboard/SAVE_SECTION_REQUEST';
+const SAVE_SECTION_SUCCESS = 'teacherDashboard/SAVE_SECTION_SUCCESS';
+const SAVE_SECTION_FAILURE = 'teacherDashboard/SAVE_SECTION_FAILURE';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -55,7 +59,35 @@ export const beginEditingNewSection = () => ({ type: EDIT_SECTION_BEGIN, section
 export const beginEditingSection = sectionId => ({ type: EDIT_SECTION_BEGIN, sectionId });
 export const editSectionProperties = props => ({ type: EDIT_SECTION_PROPERTIES, props });
 export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
-export const finishEditingSection = () => ({ type: EDIT_SECTION_FINISH });
+export const finishEditingSection = () => (dispatch, getState) => {
+  dispatch({type: SAVE_SECTION_REQUEST});
+  // Map client sectionShape into server's expected params.
+  // May go away if we resolve conflicts?
+  const section = getState().teacherSections.sectionBeingEdited;
+  const params = {
+    ...section,
+    login_type: section.loginType,
+    stage_extras: section.stageExtras,
+    pairing_allowed: section.pairingAllowed,
+    course_id: section.courseId,
+    script: (section.scriptId ? {id: section.scriptId} : undefined),
+  };
+
+  const creatingNewSection = section.id < 0;
+  $.ajax({
+    url: creatingNewSection ? '/v2/sections' : `/v2/sections/${section.id}/update`,
+    method: 'POST',
+    contentType: 'application/json;charset=UTF-8',
+    data: JSON.stringify(params),
+  }).done(result => {
+    dispatch(updateSection(section.id, result));
+    dispatch({type: SAVE_SECTION_SUCCESS});
+  }).fail((jqXhr, status) => {
+    alert(i18n.unexpectedError());
+    console.error(status);
+    dispatch({type: SAVE_SECTION_FAILURE});
+  });
+};
 
 const initialState = {
   nextTempId: -1,
@@ -73,6 +105,7 @@ const initialState = {
   // While editing we store that section's 'in-progress' state separate from
   // its persisted state in the sections map.
   sectionBeingEdited: null,
+  saveInProgress: false,
 };
 
 /**
@@ -297,6 +330,28 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       sectionBeingEdited: null,
+    };
+  }
+
+  if (action.type === SAVE_SECTION_REQUEST) {
+    return {
+      ...state,
+      saveInProgress: true,
+    };
+  }
+
+  if (action.type === SAVE_SECTION_SUCCESS) {
+    return {
+      ...state,
+      sectionBeingEdited: null,
+      saveInProgress: false,
+    };
+  }
+
+  if (action.type === SAVE_SECTION_FAILURE) {
+    return {
+      ...state,
+      saveInProgress: false,
     };
   }
 
