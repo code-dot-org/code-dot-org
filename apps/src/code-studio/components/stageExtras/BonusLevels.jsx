@@ -26,7 +26,7 @@ class BonusLevel extends React.Component {
         <a href={`?id=${this.props.id}`}>
           <CompletableLevelThumbnail
             size={200}
-            completed={this.props.completed}
+            perfected={this.props.perfected}
           >
             <MazeThumbnail {...this.props}/>
           </CompletableLevelThumbnail>
