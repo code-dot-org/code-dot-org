@@ -1,4 +1,6 @@
+import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
+import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import reducer, {
   setStudioUrl,
   setValidLoginTypes,
@@ -575,9 +577,177 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe.skip('finishEditingSection', () => {
-    it('commits changes', () => {
-      const initialState = reducer(initialState, finishEditingSection());
+  describe('finishEditingSection', () => {
+    let server, store;
+
+    // Fake server responses to reuse in our tests
+    const newSectionDefaults = {
+      id: 13,
+      name: 'New Section',
+      login_type: 'email',
+      grade: undefined,
+      providerManaged: false,
+      stage_extras: false,
+      pairing_allowed: true,
+      student_count: 0,
+      code: 'BCDFGH',
+      course_id: null,
+      script_id: null,
+    };
+
+    function successResponse(customProps = {}) {
+      const editingSectionId = state().sectionBeingEdited.id;
+      const existingSection = sections.find(s => s.id === editingSectionId);
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify({
+          ...(existingSection || newSectionDefaults),
+          id: existingSection ? editingSectionId : 13,
+          ...customProps,
+        })
+      ];
+    }
+
+    const failureResponse = [500, {}, ''];
+
+    function state() {
+      return store.getState().teacherSections;
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      stubRedux();
+      registerReducers({teacherSections: reducer});
+      store = getStore();
+      store.dispatch(setSections(sections));
+    });
+
+    afterEach(function () {
+      restoreRedux();
+      server.restore();
+    });
+
+    it('immediately makes saveInProgress true', () => {
+      store.dispatch(beginEditingNewSection());
+      expect(state().saveInProgress).to.be.false;
+
+      store.dispatch(finishEditingSection());
+      expect(state().saveInProgress).to.be.true;
+    });
+
+    it('makes saveInProgress false after the server responds with success', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', successResponse());
+
+      store.dispatch(finishEditingSection());
+      expect(state().saveInProgress).to.be.true;
+
+      server.respond();
+      expect(state().saveInProgress).to.be.false;
+    });
+
+    it('makes saveInProgress false after the server responds with failure', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', failureResponse);
+
+      store.dispatch(finishEditingSection());
+      expect(state().saveInProgress).to.be.true;
+
+      server.respond();
+      expect(state().saveInProgress).to.be.false;
+    });
+
+    it('clears sectionBeingEdited after the server responds with success', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', successResponse());
+
+      store.dispatch(finishEditingSection());
+      expect(state().sectionBeingEdited).not.to.be.null;
+
+      server.respond();
+      expect(state().sectionBeingEdited).to.be.null;
+    });
+
+    it('keeps sectionBeingEdited after the server responds with failure', () => {
+      store.dispatch(beginEditingNewSection());
+      const originalSectionBeingEdited = state().sectionBeingEdited;
+      expect(originalSectionBeingEdited).not.to.be.null;
+      server.respondWith('POST', '/v2/sections', failureResponse);
+
+      store.dispatch(finishEditingSection());
+      expect(state().sectionBeingEdited).to.equal(originalSectionBeingEdited);
+
+      server.respond();
+      expect(state().sectionBeingEdited).to.equal(originalSectionBeingEdited);
+    });
+
+    it('adds a new section to the sections map on success', () => {
+      const originalSections = state().sections;
+      store.dispatch(beginEditingNewSection());
+      store.dispatch(editSectionProperties({
+        name: 'Aquarius PM Block 2',
+        loginType: 'picture',
+        grade: '3',
+      }));
+      server.respondWith('POST', '/v2/sections', successResponse({
+        name: 'Aquarius PM Block 2',
+        login_type: 'picture',
+        grade: '3',
+      }));
+
+      store.dispatch(finishEditingSection());
+      expect(state().sections).to.equal(originalSections);
+
+      server.respond();
+      expect(state().sections).to.deep.equal({
+        ...originalSections,
+        [13]: {
+          id: 13,
+          name: 'Aquarius PM Block 2',
+          loginType: 'picture',
+          grade: '3',
+          providerManaged: false,
+          stageExtras: false,
+          pairingAllowed: true,
+          studentCount: undefined,
+          code: 'BCDFGH',
+          courseId: null,
+          scriptId: null,
+        }
+      });
+    });
+
+    it('updates an edited section in the section map on success', () => {
+      const sectionId = 12;
+      store.dispatch(beginEditingSection(sectionId));
+      store.dispatch(editSectionProperties({grade: 'K'}));
+
+      // Set up matching server response
+      server.respondWith('POST', `/v2/sections/${sectionId}/update`,
+        successResponse({grade: 'K'}));
+
+      store.dispatch(finishEditingSection());
+      expect(state().sectionBeingEdited).to.have.property('grade', 'K');
+      expect(state().sections[sectionId]).to.have.property('grade', '11');
+
+      server.respond();
+      expect(state().sectionBeingEdited).to.be.null;
+      expect(state().sections[sectionId]).to.have.property('grade', 'K');
+    });
+
+    it('does not modify sections map on failure', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', failureResponse);
+      const originalSections = state().sections;
+
+      store.dispatch(finishEditingSection());
+      server.respond();
+      expect(state().sections).to.equal(originalSections);
     });
   });
 
