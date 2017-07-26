@@ -421,7 +421,7 @@ class Script < ActiveRecord::Base
   end
 
   def self.beta?(name)
-    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name.start_with?('csd')
+    name == 'edit-code' || name == 'coursea-draft' || name == 'courseb-draft' || name == 'coursec-draft' || name == 'coursed-draft' || name == 'coursee-draft' || name == 'coursef-draft' || name == 'csd4' || name == 'csd5' || name == 'csd6'
   end
 
   private def k1?
@@ -494,6 +494,9 @@ class Script < ActiveRecord::Base
   end
 
   def has_banner?
+    # Temporarily remove Course A-F banner (wrong size) - Josh L.
+    false if %w(coursea courseb coursec coursed coursee coursef).include? name
+
     k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(name)
   end
 

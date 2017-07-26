@@ -10,7 +10,7 @@ import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
 const styles = {
@@ -84,9 +84,9 @@ const Courses = React.createClass({
           short={!isSignedOut}
         >
           {isSignedOut && (
-            <ProgressButton
+            <Button
               href= "/users/sign_up"
-              color={ProgressButton.ButtonColor.gray}
+              color={Button.ButtonColor.gray}
               text={i18n.createAccount()}
               style={styles.button}
             />
@@ -204,10 +204,10 @@ const Courses = React.createClass({
         {(!isTeacher && !isSignedOut) && (
           <div>
             <div style={styles.spacer}>.</div>
-            <ProgressButton
+            <Button
               text={i18n.viewMyProjects()}
               href="/projects"
-              color={ProgressButton.ButtonColor.orange}
+              color={Button.ButtonColor.orange}
             />
           </div>
         )}

@@ -6,7 +6,9 @@ import i18n from "@cdo/locale";
 const styles = {
   card: {
     overflow: 'hidden',
-    border: '1px solid gray',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     position: 'relative',
     height: 245,
     width: 473,

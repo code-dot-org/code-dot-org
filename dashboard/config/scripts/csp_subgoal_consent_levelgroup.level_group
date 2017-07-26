@@ -1,0 +1,9 @@
+name 'csp_subgoal_consent_levelgroup'
+title 'Invitation to participate in subgoal labels study'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'csp_subgoal_experiment_consent'
+text 'csp_subgoal_experiment_thanks'
+
