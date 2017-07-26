@@ -285,6 +285,7 @@ class SectionRow extends Component {
     const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
+    const editingLoginType = editing && !section.providerManaged;
 
     let sectionCode = '';
     if (!editing) {
@@ -317,8 +318,8 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.col}>
-          {!editing && section.loginType}
-          {editing && (
+          {!editingLoginType && section.loginType}
+          {editingLoginType && (
             <select
               defaultValue={section.loginType}
               ref={element => this.loginType = element}
