@@ -297,6 +297,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
           title={msg.challengeLevelPerfectTitle()}
           assetUrl={this.studioApp_.assetUrl}
           avatar={icon}
+          complete
           handlePrimary={onContinue}
           primaryButtonLabel={msg.continue()}
           cancelButtonLabel={msg.tryAgain()}
