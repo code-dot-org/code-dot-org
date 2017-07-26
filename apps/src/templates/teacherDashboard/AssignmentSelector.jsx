@@ -37,6 +37,7 @@ export default class AssignmentSelector extends Component {
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,
+    disabled: PropTypes.bool,
   };
 
   constructor(props) {
@@ -120,7 +121,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const { assignments, primaryAssignmentIds, dropdownStyle } = this.props;
+    const { assignments, primaryAssignmentIds, dropdownStyle, disabled } = this.props;
     const { selectedPrimaryId, selectedSecondaryId } = this.state;
 
     let primaryAssignIds = primaryAssignmentIds;
@@ -142,6 +143,7 @@ export default class AssignmentSelector extends Component {
           value={selectedPrimaryId}
           onChange={this.onChangePrimary}
           style={dropdownStyle}
+          disabled={disabled}
         >
           <option key="default" value={noAssignment}/>
           {this.props.chooseLaterOption &&
@@ -169,6 +171,7 @@ export default class AssignmentSelector extends Component {
               value={selectedSecondaryId}
               onChange={this.onChangeSecondary}
               style={dropdownStyle}
+              disabled={disabled}
             >
               <option value={noAssignment}/>
               {secondaryOptions.map(scriptAssignId => (

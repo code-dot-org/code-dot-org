@@ -310,4 +310,28 @@ describe('AssignmentSelector', () => {
       });
     });
   });
+
+  describe('the disabled prop', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          disabled
+        />
+      );
+    });
+
+    it('disables the primary dropdown', () => {
+      const firstDropdown = wrapper.find('select').at(0);
+      expect(firstDropdown).to.have.prop('disabled', true);
+    });
+
+    it('disables the secondary dropdown', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      const secondDropdown = wrapper.find('select').at(1);
+      expect(secondDropdown).to.have.prop('disabled', true);
+    });
+  });
 });
