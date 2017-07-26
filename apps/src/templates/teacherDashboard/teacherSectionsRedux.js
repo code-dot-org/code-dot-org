@@ -22,13 +22,13 @@ const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+// New section flow actions
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
 const EDIT_SECTION_PROPERTIES = 'teacherDashboard/EDIT_SECTION_PROPERTIES';
 const EDIT_SECTION_CANCEL = 'teacherDashboard/EDIT_SECTION_CANCEL';
-const EDIT_SECTION_FINISH = 'teacherDashboard/EDIT_SECTION_FINISH';
-const SAVE_SECTION_REQUEST = 'teacherDashboard/SAVE_SECTION_REQUEST';
-const SAVE_SECTION_SUCCESS = 'teacherDashboard/SAVE_SECTION_SUCCESS';
-const SAVE_SECTION_FAILURE = 'teacherDashboard/SAVE_SECTION_FAILURE';
+const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
+const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
+const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -54,13 +54,13 @@ export const updateSection = (sectionId, serverSection) => ({
 export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
-// Section dialog actions
+// New section flow actions
 export const beginEditingNewSection = () => ({ type: EDIT_SECTION_BEGIN, sectionId: null });
 export const beginEditingSection = sectionId => ({ type: EDIT_SECTION_BEGIN, sectionId });
 export const editSectionProperties = props => ({ type: EDIT_SECTION_PROPERTIES, props });
 export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
 export const finishEditingSection = () => (dispatch, getState) => {
-  dispatch({type: SAVE_SECTION_REQUEST});
+  dispatch({type: EDIT_SECTION_REQUEST});
   // Map client sectionShape into server's expected params.
   // May go away if we resolve conflicts?
   const section = getState().teacherSections.sectionBeingEdited;
@@ -81,11 +81,11 @@ export const finishEditingSection = () => (dispatch, getState) => {
     data: JSON.stringify(params),
   }).done(result => {
     dispatch(updateSection(section.id, result));
-    dispatch({type: SAVE_SECTION_SUCCESS});
+    dispatch({type: EDIT_SECTION_SUCCESS});
   }).fail((jqXhr, status) => {
     alert(i18n.unexpectedError());
     console.error(status);
-    dispatch({type: SAVE_SECTION_FAILURE});
+    dispatch({type: EDIT_SECTION_FAILURE});
   });
 };
 
@@ -326,21 +326,14 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === EDIT_SECTION_FINISH) {
-    return {
-      ...state,
-      sectionBeingEdited: null,
-    };
-  }
-
-  if (action.type === SAVE_SECTION_REQUEST) {
+  if (action.type === EDIT_SECTION_REQUEST) {
     return {
       ...state,
       saveInProgress: true,
     };
   }
 
-  if (action.type === SAVE_SECTION_SUCCESS) {
+  if (action.type === EDIT_SECTION_SUCCESS) {
     return {
       ...state,
       sectionBeingEdited: null,
@@ -348,7 +341,7 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === SAVE_SECTION_FAILURE) {
+  if (action.type === EDIT_SECTION_FAILURE) {
     return {
       ...state,
       saveInProgress: false,
