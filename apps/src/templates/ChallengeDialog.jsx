@@ -3,8 +3,9 @@ import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Radium from 'radium';
 import React from 'react';
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
-const stylesGenerator = assetUrl => ({
+const styles = {
   dialog: {
     top: '20%',
     border: '5px solid #75699b',
@@ -54,11 +55,10 @@ const stylesGenerator = assetUrl => ({
     paddingTop: 20,
     borderTop: '2px solid #ccc',
   },
-});
+};
 
 const ChallengeDialog = Radium(React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func,
     avatar: React.PropTypes.string,
     cancelButtonLabel: React.PropTypes.string,
     children: React.PropTypes.oneOfType([
@@ -91,11 +91,10 @@ const ChallengeDialog = Radium(React.createClass({
   },
 
   render() {
-    const styles = stylesGenerator(this.props.assetUrl);
     return (
       <BaseDialog
         isOpen={this.state.isOpen}
-        assetUrl={this.props.assetUrl}
+        assetUrl={assetUrl}
         style={styles.dialog}
         handleClose={this.handlePrimary}
         hideCloseButton={true}
