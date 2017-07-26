@@ -18,6 +18,10 @@ import {
   editSectionProperties,
 } from './teacherSectionsRedux';
 
+/**
+ * UI for selecting the login type of a class section:
+ * Word, picture, or email logins, or one of several third-party integrations.
+ */
 class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,

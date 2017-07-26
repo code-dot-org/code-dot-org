@@ -6,6 +6,10 @@ import EditSectionForm from "./EditSectionForm";
 import PadAndCenter from './PadAndCenter';
 import {isEditingSection} from './teacherSectionsRedux';
 
+/**
+ * UI for a teacher to edit details of an existing class section.
+ * For adding a new section, see AddSectionDialog.
+ */
 class EditSectionDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired, // From Redux
