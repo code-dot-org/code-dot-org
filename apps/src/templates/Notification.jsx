@@ -69,6 +69,10 @@ const styles = {
     marginLeft: 50,
     marginTop: 15
   },
+  courseButton: {
+    float: 'right',
+    marginRight: 21
+  },
   colors: {
     [NotificationType.information]: {
       borderColor: color.teal,
@@ -91,7 +95,7 @@ const styles = {
       backgroundColor: color.mustardyellow
     },
     [NotificationType.course]: {
-      borderColor: color.charcoal,
+      borderColor: color.border_gray,
       color: color.teal,
       backgroundColor: color.teal
     },
@@ -143,15 +147,19 @@ const Notification = React.createClass({
       bullhorn: 'bullhorn'
     };
 
+    const buttonStyle = type === NotificationType.course ? [styles.button, styles.courseButton] : styles.button;
+
     if (!this.state.open) {
       return null;
     }
     return (
       <div>
         <div style={[styles.colors[type], styles.main]}>
-          <div style={[styles.iconBox, styles.colors[type]]}>
-            <FontAwesome icon={icons[type]} style={styles.icon}/>
-          </div>
+          {type !== NotificationType.course && (
+            <div style={[styles.iconBox, styles.colors[type]]}>
+              <FontAwesome icon={icons[type]} style={styles.icon}/>
+            </div>
+          )}
           {dismissible && (
             <FontAwesome
               icon="times"
@@ -172,7 +180,7 @@ const Notification = React.createClass({
               href={buttonLink}
               color={ProgressButton.ButtonColor.gray}
               text={buttonText}
-              style={styles.button}
+              style={buttonStyle}
               target={newWindow ? "_blank" : null}
               onClick={this.onAnnouncementClick}
             />
