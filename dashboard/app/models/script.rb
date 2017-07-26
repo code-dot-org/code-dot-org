@@ -826,6 +826,8 @@ class Script < ActiveRecord::Base
     summary = {
       id: id,
       name: name,
+      title: localized_title,
+      course_id: course.try(:id),
       hidden: hidden,
       loginRequired: login_required,
       plc: professional_learning_course?,

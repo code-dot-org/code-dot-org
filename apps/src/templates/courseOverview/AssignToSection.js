@@ -52,7 +52,8 @@ const styles = {
  */
 class AssignToSection extends Component {
   static propTypes = {
-    courseId: PropTypes.number.isRequired,
+    courseId: PropTypes.number,
+    scriptId: PropTypes.number,
     assignmentName: PropTypes.string.isRequired,
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -116,7 +117,8 @@ class AssignToSection extends Component {
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
-        course_id: this.props.courseId
+        course_id: this.props.courseId,
+        script_id: this.props.scriptId,
       }),
     }).done(result => {
       this.collapseDropdown();

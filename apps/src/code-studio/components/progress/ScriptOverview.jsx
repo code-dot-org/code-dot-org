@@ -17,7 +17,9 @@ const ScriptOverview = React.createClass({
 
     // redux provided
     perLevelProgress: PropTypes.object.isRequired,
+    scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptTitle: PropTypes.string.isRequired,
     professionalLearningCourse: PropTypes.bool,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
@@ -25,6 +27,7 @@ const ScriptOverview = React.createClass({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })).isRequired,
+    currentCourseId: PropTypes.number,
   },
 
   componentDidMount() {
@@ -35,12 +38,15 @@ const ScriptOverview = React.createClass({
   render() {
     const {
       professionalLearningCourse,
+      scriptId,
       scriptName,
+      scriptTitle,
       viewAs,
       isRtl,
       onOverviewPage,
       excludeCsfColumnInLegend,
       sectionsInfo,
+      currentCourseId,
     } = this.props;
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
@@ -52,7 +58,10 @@ const ScriptOverview = React.createClass({
             sectionsInfo={sectionsInfo}
             professionalLearningCourse={professionalLearningCourse}
             hasLevelProgress={hasLevelProgress}
+            scriptId={scriptId}
             scriptName={scriptName}
+            scriptTitle={scriptTitle}
+            currentCourseId={currentCourseId}
             viewAs={viewAs}
             isRtl={isRtl}
           />
@@ -69,9 +78,12 @@ const ScriptOverview = React.createClass({
 
 export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,
+  scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,
+  scriptTitle: state.progress.scriptTitle,
   professionalLearningCourse: state.progress.professionalLearningCourse,
   viewAs: state.stageLock.viewAs,
   isRtl: state.isRtl,
-  sectionsInfo: sectionsNameAndId(state.sections)
+  sectionsInfo: sectionsNameAndId(state.sections),
+  currentCourseId: state.progress.courseId,
 }))(Radium(ScriptOverview));

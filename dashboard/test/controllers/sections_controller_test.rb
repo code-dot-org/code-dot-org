@@ -192,7 +192,7 @@ class SectionsControllerTest < ActionController::TestCase
   test "update: can set course and script" do
     sign_in @teacher
     section = create(:section, user: @teacher, script_id: Script.flappy_script.id)
-    post :update, params: {
+    post :update, as: :json, params: {
       id: section.id,
       course_id: @course.id,
       script_id: @script_in_course.id
