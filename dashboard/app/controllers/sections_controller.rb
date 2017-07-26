@@ -17,7 +17,7 @@ class SectionsController < ApplicationController
     if script_id
       script = Script.get_from_cache(script_id)
       # If given a course and script, make sure the script is in that course
-      return head :bad_request if course_id && course_id != script.course.try(:id).to_s
+      return head :bad_request if course_id && course_id != script.course.try(:id)
       # If script has a course and no course_id was provided, use default course
       course_id = script.course.try(:id) unless course_id
     end

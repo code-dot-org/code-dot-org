@@ -36,9 +36,12 @@ const ScriptOverviewTopRow = React.createClass({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })).isRequired,
+    currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
     hasLevelProgress: PropTypes.bool.isRequired,
+    scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
+    scriptTitle: PropTypes.string.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     isRtl: PropTypes.bool.isRequired,
   },
@@ -46,9 +49,12 @@ const ScriptOverviewTopRow = React.createClass({
   render() {
     const {
       sectionsInfo,
+      currentCourseId,
       professionalLearningCourse,
       hasLevelProgress,
+      scriptId,
       scriptName,
+      scriptTitle,
       viewAs,
       isRtl
     } = this.props;
@@ -74,8 +80,9 @@ const ScriptOverviewTopRow = React.createClass({
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <AssignToSection
             sectionsInfo={sectionsInfo}
-            courseId={123}
-            assignmentName="TODO"
+            courseId={currentCourseId}
+            scriptId={scriptId}
+            assignmentName={scriptTitle}
           />
         )}
         <div style={isRtl ? styles.left : styles.right}>

@@ -23,7 +23,7 @@
   "assign": "Assign",
   "assignACourse": "Assign a course to your classroom or start your own course.",
   "assignCourse": "Assign Course",
-  "assignConfirm": "Are you sure you want to assign \"{courseName}\" to \"{sectionName}\"?",
+  "assignConfirm": "Are you sure you want to assign \"{assignmentName}\" to \"{sectionName}\"?",
   "assignedTo": "Assigned to",
   "authorizeGoogleClassrooms": "Click here to authorize Google Classroom.",
   "autolock": "Note: Stage auto-locks after 24 hours.",
