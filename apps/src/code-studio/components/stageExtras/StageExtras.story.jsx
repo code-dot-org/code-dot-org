@@ -3,11 +3,10 @@ import StageExtras from './StageExtras';
 import _ from 'lodash';
 
 function generateFakePersonalProjects() {
-  const date = new Date();
   return _.range(5).map(i => (
     {
       name: "Personal " + i,
-      updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
+      updatedAt: Date.now() - i * 60 * 1000,
       projectType: 'gamelab',
       id: 'abcd'
     }
