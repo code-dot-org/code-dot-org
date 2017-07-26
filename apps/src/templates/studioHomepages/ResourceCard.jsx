@@ -1,5 +1,5 @@
 import React from 'react';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 import color from "../../util/color";
 
 const styles = {
@@ -132,9 +132,9 @@ const ResourceCard = React.createClass({
           {description}
         </div>
         <br/>
-        <ProgressButton
+        <Button
           href={link}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           text={buttonText}
           style={isRtl ? styles.rtlButton : styles.button}
         />
