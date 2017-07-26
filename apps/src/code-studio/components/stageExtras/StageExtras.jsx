@@ -1,7 +1,7 @@
 import React from 'react';
 import msg from '@cdo/locale';
 import BonusLevels from './BonusLevels';
-import ProjectWidget from '../../../templates/projects/ProjectWidget.jsx';
+import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
 
 export default class StageExtras extends React.Component {
   static propTypes = {
