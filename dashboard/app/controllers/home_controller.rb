@@ -93,7 +93,12 @@ class HomeController < ApplicationController
       @sections = current_user.sections.map(&:summarize)
       @student_sections = current_user.sections_as_student.map(&:summarize)
       @recent_courses = current_user.recent_courses_and_scripts
-      # @recent_courses are used to generate CourseCards on the homepage. Rather than a CourseCard, student's most recent assignable will be displayed with a StudentTopCourse component. See below re: student_top_course. Thus, student recent_courses should drop the first course.
+
+      # @recent_courses are used to generate CourseCards on the homepage.
+      # Rather than a CourseCard, student's most recent assignable will be
+      # displayed with a StudentTopCourse component. See below
+      # re: student_top_course. Thus, student recent_courses should drop the
+      # first course.
       unless current_user.teacher?
         @recent_courses = current_user.recent_courses_and_scripts.drop(1)
       end
