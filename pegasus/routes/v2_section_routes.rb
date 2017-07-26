@@ -9,6 +9,7 @@ get '/v2/sections' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: Use POST /dashboardapi/sections instead
 post '/v2/sections' do
   only_for 'code.org'
   dont_cache

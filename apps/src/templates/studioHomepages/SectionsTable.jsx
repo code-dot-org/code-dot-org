@@ -73,12 +73,12 @@ export const styles = {
     borderLeftWidth: 1,
     borderLeftColor: color.border_light_gray,
     borderLeftStyle: 'solid',
-    display: 'none'
   },
   colText: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
+    lineHeight: '22px'
   },
   link: {
     color: color.teal,
@@ -91,13 +91,21 @@ export const styles = {
 const SectionsTable = React.createClass({
   propTypes: {
     sections: shapes.sections,
-    isRtl: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    canLeave: PropTypes.bool.isRequired
+    canLeave: PropTypes.bool.isRequired,
+    updateSections: PropTypes.func.isRequired,
+    updateSectionsResult: PropTypes.func.isRequired
   },
 
-  onLeave() {
-    //TODO: Clicking this button should remove the student from that section. Remove display: 'none' from leaveCol styles so the button will appear for students who have permission to leave sections.
+  onLeave(sectionCode, sectionName) {
+    $.post({
+      url: `/api/v1/sections/${sectionCode}/leave`,
+      dataType: "json"
+    }).done(data => {
+      this.props.updateSections(data.sections);
+      this.props.updateSectionsResult("leave", data.result, sectionName);
+    });
   },
 
   render() {
@@ -154,9 +162,16 @@ const SectionsTable = React.createClass({
               key={index}
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
-                <a href={section.linkToProgress} style={styles.link}>
-                  {section.name}
-                </a>
+                {isTeacher && (
+                  <a href={section.linkToProgress} style={styles.link}>
+                    {section.name}
+                  </a>
+                )}
+                {!isTeacher && (
+                  <div>
+                    {section.name}
+                  </div>
+                )}
               </td>
               <td style={{...styles.col, ...styles.courseCol}}>
                 <a href={section.linkToAssigned} style={styles.link}>
@@ -178,12 +193,12 @@ const SectionsTable = React.createClass({
               <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
                 {section.code}
               </td>
-              {!isTeacher && (
+              {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
                   <ProgressButton
                     style={{marginLeft: 5}}
                     text={i18n.leaveSection()}
-                    onClick={this.onLeave}
+                    onClick={this.onLeave.bind(this, section.code, section.name)}
                     color={ProgressButton.ButtonColor.gray}
                   />
                 </td>

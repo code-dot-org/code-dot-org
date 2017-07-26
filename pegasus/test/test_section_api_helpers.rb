@@ -219,7 +219,7 @@ class SectionApiHelperTest < SequelTestCase
           script_name: 'flappy',
           category: 'Hour of Code',
           position: 4,
-          category_priority: 0
+          category_priority: 2
         }
         assert_equal expected, flappy_script
       end
@@ -263,7 +263,7 @@ class SectionApiHelperTest < SequelTestCase
           script_name: 'csp',
           category: 'Full Courses',
           position: 0,
-          category_priority: -1
+          category_priority: 0,
         }
         assert_equal expected, csp_course
       end

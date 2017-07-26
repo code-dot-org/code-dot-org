@@ -1,7 +1,6 @@
 import CustomGameLogic from './customGameLogic';
-import { valueOr } from '../utils';
-import { Direction, Position } from './constants';
-
+import { valueOr } from '@cdo/apps/utils';
+import { Direction, Position } from '../constants';
 
 /**
  * Custom logic for the MSM BigGame

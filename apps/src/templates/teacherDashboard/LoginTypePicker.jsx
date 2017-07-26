@@ -1,23 +1,27 @@
-import React, {Component, PropTypes} from 'react';
-import i18n from '@cdo/locale';
-import experiments from '../../util/experiments';
-import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
-import CardContainer from './CardContainer';
-import LoginTypeCard from './LoginTypeCard';
-
 /**
  * View shown to a teacher when beginning to add students to an empty section.
  * Lets the teacher decide whether to use word/picture logins, have students
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
-class AddInitialStudentsView extends Component {
+import React, {Component, PropTypes} from 'react';
+import i18n from '@cdo/locale';
+import experiments from '../../util/experiments';
+import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
+import CardContainer from './CardContainer';
+import DialogFooter from './DialogFooter';
+import LoginTypeCard from './LoginTypeCard';
+import ProgressButton from "../progress/ProgressButton";
+
+class LoginTypePicker extends Component {
   static propTypes = {
-    sectionName: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    handleLoginChoice: PropTypes.func.isRequired,
+    handleCancel: PropTypes.func.isRequired,
   };
 
   render() {
-    const {sectionName} = this.props;
+    const {title, handleLoginChoice, handleCancel} = this.props;
     const googleClassroom = experiments.isEnabled('googleClassroom');
     const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
     const clever = experiments.isEnabled('clever');
@@ -26,7 +30,7 @@ class AddInitialStudentsView extends Component {
     return (
       <div>
         <Heading1>
-          {i18n.addStudentsToSection({section: sectionName})}
+          {title}
         </Heading1>
         <Heading2>
           {i18n.addStudentsToSectionInstructions()}
@@ -37,9 +41,15 @@ class AddInitialStudentsView extends Component {
           </Heading3>
         )}
         <CardContainer>
-          <PictureLoginCard/>
-          <WordLoginCard/>
-          <EmailLoginCard/>
+          <PictureLoginCard
+            onClick={handleLoginChoice}
+          />
+          <WordLoginCard
+            onClick={handleLoginChoice}
+          />
+          <EmailLoginCard
+            onClick={handleLoginChoice}
+          />
         </CardContainer>
         {anyThirdParty && (
           <div>
@@ -47,77 +57,102 @@ class AddInitialStudentsView extends Component {
               {i18n.addStudentsSyncThirdParty()}
             </Heading3>
             <CardContainer>
-              {googleClassroom && <GoogleClassroomCard/>}
-              {microsoftClassroom && <MicrosoftClassroomCard/>}
-              {clever && <CleverCard/>}
+              {googleClassroom &&
+              <GoogleClassroomCard
+                onClick={handleLoginChoice}
+              />}
+              {microsoftClassroom &&
+              <MicrosoftClassroomCard
+                onClick={handleLoginChoice}
+              />}
+              {clever &&
+              <CleverCard
+                onClick={handleLoginChoice}
+              />}
             </CardContainer>
           </div>
         )}
+        <DialogFooter>
+          <ProgressButton
+            onClick={handleCancel}
+            text="Cancel"
+            size={ProgressButton.ButtonSize.large}
+            color={ProgressButton.ButtonColor.gray}
+          />
+        </DialogFooter>
       </div>
     );
   }
 }
-export default AddInitialStudentsView;
+export default LoginTypePicker;
 
-const PictureLoginCard = () => (
+const PictureLoginCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypePicture()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}
     buttonText={i18n.loginTypePictureButton()}
-    link="#"
     isRtl={false}
+    onClick={() => props.onClick('picture')}
   />
 );
+PictureLoginCard.propTypes = {
+  onClick: PropTypes.func.isRequired
+};
 
-const WordLoginCard = () => (
+const WordLoginCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeWord()}
     subtitle={i18n.loginTypeWordAgeGroup()}
     description={i18n.loginTypeWordDescription()}
     buttonText={i18n.loginTypeWordButton()}
-    link="#"
     isRtl={false}
+    onClick={() => props.onClick('word')}
   />
 );
+WordLoginCard.propTypes = PictureLoginCard.propTypes;
 
-const EmailLoginCard = () => (
+const EmailLoginCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeEmail()}
     subtitle={i18n.loginTypeEmailAgeGroup()}
     description={i18n.loginTypeEmailDescription()}
     buttonText={i18n.loginTypeEmailButton()}
-    link="#"
     isRtl={false}
+    onClick={() => props.onClick('email')}
   />
 );
+EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 
-const GoogleClassroomCard = () => (
+const GoogleClassroomCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeGoogleClassroom()}
     description={i18n.loginTypeGoogleClassroomDescription()}
     buttonText={i18n.loginTypeGoogleClassroomButton()}
-    link="#"
     isRtl={false}
+    onClick={() => props.onClick('google')}
   />
 );
+GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 
-const MicrosoftClassroomCard = () => (
+const MicrosoftClassroomCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeMicrosoftClassroom()}
     description={i18n.loginTypeMicrosoftClassroomDescription()}
     buttonText={i18n.loginTypeMicrosoftClassroomButton()}
-    link="#"
     isRtl={false}
+    onClick={() => props.onClick('microsoft')}
   />
 );
+MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 
-const CleverCard = () => (
+const CleverCard = (props) => (
   <LoginTypeCard
     title={i18n.loginTypeClever()}
     description={i18n.loginTypeCleverDescription()}
     buttonText={i18n.loginTypeCleverButton()}
-    link="#"
     isRtl={false}
+    onClick={() => props.onClick('clever')}
   />
 );
+CleverCard.propTypes = PictureLoginCard.propTypes;

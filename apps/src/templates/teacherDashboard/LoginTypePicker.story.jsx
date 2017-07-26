@@ -1,16 +1,18 @@
 import React from 'react';
 import experiments from '../../util/experiments';
-import AddInitialStudentsView from './AddInitialStudentsView';
+import LoginTypePicker from './LoginTypePicker';
 
 export default storybook => storybook
-  .storiesOf('AddInitialStudentsView', module)
+  .storiesOf('LoginTypePicker', module)
   .add('Basic options', () => {
     experiments.setEnabled('googleClassroom', false);
     experiments.setEnabled('microsoftClassroom', false);
     experiments.setEnabled('clever', false);
     return (
-      <AddInitialStudentsView
-        sectionName="Section Alpha"
+      <LoginTypePicker
+        title="New section"
+        handleLoginChoice={storybook.action('handleLoginChoice')}
+        handleCancel={storybook.action('handleCancel')}
       />
     );
   })
@@ -19,8 +21,10 @@ export default storybook => storybook
     experiments.setEnabled('microsoftClassroom', true);
     experiments.setEnabled('clever', true);
     return (
-      <AddInitialStudentsView
-        sectionName="Section Beta"
+      <LoginTypePicker
+        title="New section"
+        handleLoginChoice={storybook.action('handleLoginChoice')}
+        handleCancel={storybook.action('handleCancel')}
       />
     );
   });
