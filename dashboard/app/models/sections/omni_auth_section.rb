@@ -27,11 +27,14 @@
 
 class OmniAuthSection < Section
   def self.from_omniauth(code:, type:, owner_id:, students:)
-    oauth_section = where(code: code).first_or_create! do |section|
+    oauth_section = with_deleted.where(code: code).first_or_create! do |section|
       section.name = 'New Section'
       section.user_id = owner_id
       section.login_type = type
     end
+
+    oauth_section.restore if oauth_section.deleted?
+
     students.each do |student|
       oauth_section.add_student User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT})
     end
