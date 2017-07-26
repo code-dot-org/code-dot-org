@@ -46,10 +46,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     get :index
     assert_response :success
-    json = JSON.parse(@response.body)
 
     expected = @teacher.sections.map {|section| section.summarize.with_indifferent_access}
-    assert_equal expected, json
+    assert_equal expected, returned_json
   end
 
   # It's easy to accidentally grant admins permission to `index` all sections
@@ -64,8 +63,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     expected = admin.sections.map {|section| section.summarize.with_indifferent_access}
-    json = JSON.parse(@response.body)
-    assert_equal expected, json
+    assert_equal expected, returned_json
   end
 
   test 'specifies course_id for sections that have one assigned' do
@@ -73,9 +71,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     get :index
     assert_response :success
-    json = JSON.parse(@response.body)
 
-    course_id = json.find {|section| section['id'] == @section_with_course.id}['course_id']
+    course_id = returned_json.find {|section| section['id'] == @section_with_course.id}['course_id']
     assert_equal @course.id, course_id
   end
 
@@ -96,6 +93,12 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test 'teacher cannot view nonexistent section details' do
+    sign_in @teacher
+    get :show, params: {id: 1_000_000}
+    assert_response :forbidden
+  end
+
   test 'summarizes section details' do
     sign_in @teacher
 
@@ -109,16 +112,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     get :show, params: {id: @section_with_course.id}
     assert_response :success
-    json = JSON.parse(@response.body)
 
-    assert_equal @course.id, json['course_id']
+    assert_equal @course.id, returned_json['course_id']
   end
 
   test "join with invalid section code" do
     post :join, params: {id: 'xxxxxx'}
     assert_response :bad_request
-    json = JSON.parse(@response.body)
-    assert_equal "section_notfound", json['result']
+    assert_equal "section_notfound", returned_json['result']
   end
 
   test "join with nobody signed in" do
@@ -141,15 +142,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :join, params: {id: @section.code}
     assert_response :success
-    json = JSON.parse(@response.body)
-    assert_equal "exists", json['result']
+    assert_equal "exists", returned_json['result']
   end
 
   test "leave with invalid section code" do
     post :leave, params: {id: 'xxxxxx'}
     assert_response :bad_request
-    json = JSON.parse(@response.body)
-    assert_equal "section_notfound", json['result']
+    assert_equal "section_notfound", returned_json['result']
   end
 
   test "leave with nobody signed in" do
@@ -520,6 +519,58 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     }
     assert_response :success
     assert_equal 0, @teacher.scripts.size
+  end
+
+  test 'logged out cannot delete a section' do
+    delete :destroy, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'student cannot delete a section' do
+    sign_in @student
+    delete :destroy, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test "teacher cannot delete another teacher's section" do
+    sign_in create :teacher
+    delete :destroy, params: {id: @section.id}
+    assert_response :forbidden
+  end
+
+  test 'teacher can delete own section' do
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'word'
+    sign_in teacher
+    refute section.deleted_at
+
+    delete :destroy, params: {id: section.id}
+    assert_response :success
+
+    section.reload
+    refute_nil section.deleted_at
+  end
+
+  test 'admin can delete unowned sections' do
+    sign_in create :admin
+    refute @section.deleted_at
+
+    delete :destroy, params: {id: @section.id}
+    assert_response :success
+
+    @section.reload
+    refute_nil @section.deleted_at
+  end
+
+  test 'deleting section deletes followers too' do
+    sign_in @teacher
+    refute_empty @section.followers
+
+    delete :destroy, params: {id: @section.id}
+    assert_response :success
+
+    @section.reload
+    assert_empty @section.followers
   end
 
   # Parsed JSON returned after the last request, for easy assertions.
