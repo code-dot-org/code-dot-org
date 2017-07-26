@@ -3,6 +3,7 @@ import PersonalRecentProjects from './PersonalRecentProjects.jsx';
 import NewProjectButtons from './NewProjectButtons.jsx';
 import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
+import _ from 'lodash';
 
 const ProjectWidget = React.createClass({
   propTypes: {
@@ -33,8 +34,9 @@ const ProjectWidget = React.createClass({
 // The project widget uses the channels API to populate the personal projects
 // and the data needs to be converted to match the format of the project cards
 // before passing it to PersonalRecentProjects.
-const convertChannelsToProjectData = function (projectLists) {
+const convertChannelsToProjectData = function (projects) {
   // Sort by most recently updated.
+  let projectLists = projects;
   projectLists.sort((a, b) => {
     if (a.updatedAt < b.updatedAt) {
       return 1;
@@ -43,19 +45,18 @@ const convertChannelsToProjectData = function (projectLists) {
     }
   });
 
-  // Get the first 4 that aren't hidden, and have a type and id.
+  // Get the ones that aren't hidden, and have a type and id.
   projectLists = projectLists.filter(project => !project.hidden && project.id && project.projectType);
-  projectLists = projectLists.slice(0,4);
 
-  // Map feild names.
-  const converted = projectLists.map(projectList => ({
-    name: projectList.name,
-    channel: projectList.id,
-    thumbnailUrl: projectList.thumbnailUrl,
-    type: projectList.projectType,
-    updatedAt: projectList.updatedAt
-  }));
-  return converted;
+  return _.range(4).map(i => (
+    {
+      name: projectLists[i].name,
+      channel: projectLists[i].id,
+      thumbnailUrl: projectLists[i].thumbnailUrl,
+      type: projectLists[i].projectType,
+      updatedAt: projectLists[i].updatedAt
+    }
+  ));
 };
 
 export default ProjectWidget;

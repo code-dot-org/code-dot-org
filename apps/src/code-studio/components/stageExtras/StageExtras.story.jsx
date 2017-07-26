@@ -4,8 +4,7 @@ import _ from 'lodash';
 
 function generateFakePersonalProjects() {
   const date = new Date();
-  let personalProjects = [];
-  personalProjects = _.range(5).map(i => (
+  return _.range(5).map(i => (
     {
       name: "Personal " + i,
       updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
@@ -13,7 +12,6 @@ function generateFakePersonalProjects() {
       id: 'abcd'
     }
   ));
-  return personalProjects;
 }
 
 export default storybook => {
