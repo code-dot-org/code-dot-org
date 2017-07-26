@@ -10,14 +10,14 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
     @facilitator_with_course = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
   end
 
-  def self.test_workshop_admin_only(method, action, success_response, params = nil)
+  def self.test_workshop_admin_only(method, action, params = nil)
     test_user_gets_response_for action, user: :student, method: method, params: params, response: :forbidden
     test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: success_response
+    test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: :success
   end
 
   test_redirect_to_sign_in_for :facilitator_courses_form
-  test_workshop_admin_only :get, :facilitator_courses_form, :success
+  test_workshop_admin_only :get, :facilitator_courses_form
 
   test 'find facilitator for non-existent email displays no facilitator error' do
     sign_in @workshop_admin
@@ -45,14 +45,19 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
 
   test 'assign course to facilitator assigns course' do
     sign_in @workshop_admin
-    get :assign_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSE_ECS}
+    assert_creates Pd::CourseFacilitator do
+      get :assign_course, params: {facilitator_id: @facilitator.id, course: Pd::Workshop::COURSE_ECS}
+    end
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator.id}
     assert @facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_ECS), "#{Pd::Workshop::COURSE_ECS} was not assigned to Facilitator - #{@facilitator.email}"
   end
 
   test 'remove course from facilitator removes course' do
     sign_in @workshop_admin
-    get :remove_course, params: {facilitator_id: @facilitator_with_course.id, course: Pd::Workshop::COURSE_CSF}
+    assert_difference 'Pd::CourseFacilitator.count', -1 do
+      get :remove_course, params: {facilitator_id: @facilitator_with_course.id, course: Pd::Workshop::COURSE_CSF}
+    end
     assert_redirected_to action: :facilitator_courses_form, params: {search_term: @facilitator_with_course.id}
+    refute @facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CSF), "#{Pd::Workshop::COURSE_CSF} was not removed from Facilitator - #{@facilitator_with_course.email}"
   end
 end
