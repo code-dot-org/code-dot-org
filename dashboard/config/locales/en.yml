@@ -204,6 +204,8 @@ en:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -267,6 +269,7 @@ en:
         calculate: 'Calculate something'
         applab: 'Make an App Lab app'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "Courses"
       project_gallery: "Project Gallery"
@@ -570,6 +573,11 @@ en:
     gamelab:
       title: "Game Lab (beta)"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ages 13+"
+      cta: "Learn how"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Ages 13+"
       cta: "Learn how"
     frozen:

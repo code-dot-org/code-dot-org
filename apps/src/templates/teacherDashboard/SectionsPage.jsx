@@ -4,7 +4,7 @@ import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
 import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
@@ -147,28 +147,28 @@ class SectionsPage extends Component {
           </b>
         </div>
         {sectionsLoaded &&
-          <ProgressButton
+          <Button
             className="uitest-newsection"
             text={i18n.newSection()}
             style={styles.button}
             onClick={this.addSection}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && showGoogleClassroom &&
-          <ProgressButton
+          <Button
             text={i18n.importFromGoogleClassroom()}
             style={styles.button}
             onClick={this.handleImportOpen}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && showCleverClassroom &&
-          <ProgressButton
+          <Button
             text={i18n.importFromClever()}
             style={styles.button}
             onClick={this.handleImportOpen}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && numSections === 0 &&

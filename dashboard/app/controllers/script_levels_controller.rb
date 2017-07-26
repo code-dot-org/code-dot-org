@@ -144,15 +144,7 @@ class ScriptLevelsController < ApplicationController
       @script = @script_level.script
       @game = @level.game
 
-      view_options(
-        full_width: true,
-        callouts: [],
-        small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
-        has_i18n: @game.has_i18n?,
-        game_display_name: data_t('game.name', @game.name),
-      )
-
-      render 'levels/show'
+      present_level
       return
     end
 

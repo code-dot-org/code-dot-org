@@ -8,7 +8,7 @@ import { fakeLesson } from '@cdo/apps/templates/progress/progressTestHelpers';
 
 
 describe('ProgressLessonTeacherInfo', () => {
-  it('renders a blue ProgressButton if and only if we have a lesson plan', () => {
+  it('renders a blue Button if and only if we have a lesson plan', () => {
     const lessonWithoutPlan = fakeLesson('Maze', 1);
     const lessonWithPlan = {
       ...fakeLesson('Maze', 1),
@@ -31,8 +31,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     ));
 
-    assert.equal(wrapperWithoutPlan.find('ProgressButton').length, 0);
-    assert.equal(wrapperWithPlan.find('ProgressButton').props().color, 'blue');
+    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
+    assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
   });
 
   it('renders our StageLock button when lesson is lockable', () => {
