@@ -71,7 +71,8 @@ const styles = {
 const JoinSection = React.createClass({
   propTypes: {
     enrolledInASection: React.PropTypes.bool.isRequired,
-    updateSections: React.PropTypes.func.isRequired
+    updateSections: React.PropTypes.func.isRequired,
+    updateSectionsResult: React.PropTypes.func.isRequired
   },
 
   getInitialState() {
@@ -97,8 +98,18 @@ const JoinSection = React.createClass({
 
     this.setState(this.getInitialState());
 
-    $.post(`/api/v1/sections/${sectionCode}/join`)
-      .done(data => this.props.updateSections(data.sections));
+    $.post({
+      url: `/api/v1/sections/${sectionCode}/join`,
+      dataType: "json"
+    }).done(data => {
+      const sectionName = data.sections.find(s => s.code === sectionCode.toUpperCase()).name;
+      this.props.updateSections(data.sections);
+      this.props.updateSectionsResult("join", data.result, sectionName);
+    })
+    .fail(data => {
+      const result = (data.responseJSON && data.responseJSON.result) ? data.responseJSON.result : "fail";
+      this.props.updateSectionsResult("join", result, sectionCode.toUpperCase());
+    });
   },
 
   render() {

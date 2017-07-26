@@ -94,12 +94,18 @@ const SectionsTable = React.createClass({
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
-    updateSections: PropTypes.func.isRequired
+    updateSections: PropTypes.func.isRequired,
+    updateSectionsResult: PropTypes.func.isRequired
   },
 
-  onLeave(sectionCode) {
-    $.post(`/api/v1/sections/${sectionCode}/leave`)
-      .done(data => this.props.updateSections(data.sections));
+  onLeave(sectionCode, sectionName) {
+    $.post({
+      url: `/api/v1/sections/${sectionCode}/leave`,
+      dataType: "json"
+    }).done(data => {
+      this.props.updateSections(data.sections);
+      this.props.updateSectionsResult("leave", data.result, sectionName);
+    });
   },
 
   render() {
@@ -192,7 +198,7 @@ const SectionsTable = React.createClass({
                   <ProgressButton
                     style={{marginLeft: 5}}
                     text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(this, section.code)}
+                    onClick={this.onLeave.bind(this, section.code, section.name)}
                     color={ProgressButton.ButtonColor.gray}
                   />
                 </td>
