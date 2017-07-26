@@ -1573,7 +1573,6 @@ class UserTest < ActiveSupport::TestCase
 
   test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
     facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CSD)
     assert_no_difference 'Pd::CourseFacilitator.count' do
       facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
     end
