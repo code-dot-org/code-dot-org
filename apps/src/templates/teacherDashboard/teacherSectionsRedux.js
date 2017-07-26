@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import $ from 'jquery';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import i18n from '@cdo/locale';
 
