@@ -6,6 +6,7 @@ import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import Sections from './Sections';
 import TeacherResources from './TeacherResources';
+import ProjectWidget from '../projects/ProjectWidget';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -30,6 +31,9 @@ const TeacherHomepage = React.createClass({
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
+    $('#projects-widget').appendTo(ReactDOM.findDOMNode(this.refs.projectsWidget)).show();
+
+    ProjectWidget.setupProjectWidget();
   },
 
   render() {
@@ -81,6 +85,9 @@ const TeacherHomepage = React.createClass({
         <TeacherResources
           codeOrgUrlPrefix={codeOrgUrlPrefix}
           isRtl={isRtl}
+        />
+        <ProtectedStatefulDiv
+          ref="projectsWidget"
         />
       </div>
     );

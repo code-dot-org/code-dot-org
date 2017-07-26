@@ -1,8 +1,11 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
+import ProjectWidget from '../projects/ProjectWidget';
 import Sections from './Sections';
 import shapes from './shapes';
+import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
 const StudentHomepage = React.createClass({
@@ -13,6 +16,13 @@ const StudentHomepage = React.createClass({
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
+  },
+
+  componentDidMount() {
+    // The component used here is implemented in legacy HAML/CSS rather than React.
+    $('#projects-widget').appendTo(ReactDOM.findDOMNode(this.refs.projectsWidget)).show();
+
+    ProjectWidget.setupProjectWidget();
   },
 
   render() {
@@ -32,6 +42,10 @@ const StudentHomepage = React.createClass({
           isRtl={false}
           isTeacher={false}
           studentTopCourse={studentTopCourse}
+        />
+
+        <ProtectedStatefulDiv
+          ref="projectsWidget"
         />
 
         <Sections
