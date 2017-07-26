@@ -76,9 +76,9 @@ const styles = {
       backgroundColor: color.teal
     },
     [NotificationType.success]: {
-      borderColor: color.green,
-      color: color.green,
-      backgroundColor: color.green
+      borderColor: color.level_perfect,
+      color: color.level_perfect,
+      backgroundColor: color.level_perfect
     },
     [NotificationType.failure]: {
       borderColor: color.red,
