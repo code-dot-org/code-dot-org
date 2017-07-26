@@ -72,11 +72,10 @@ export class AddSectionDialog extends Component {
       };
     }
 
-    const suffix = '';
     const sectionId = -1; // When it's a new section
 
     $.ajax({
-      url: `/v2/sections${suffix}`,
+      url: `/v2/sections`,
       method: 'POST',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(data),
