@@ -6,6 +6,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   setup do
     @admin = create(:admin)
+    @facilitator = create(:facilitator)
 
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
     @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
@@ -213,7 +214,9 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'grant_permission grants user_permission' do
     sign_in @admin
-    post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
+    assert_creates UserPermission do
+      post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
+    end
     assert_redirected_to permissions_form_path(search_term: @not_admin.id)
     assert @not_admin.reload.permission?(UserPermission::LEVELBUILDER), 'Permission not granted to user'
   end
@@ -250,8 +253,16 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   test 'revoke_permission revokes admin status' do
     sign_in @admin
-    post :revoke_permission, params: {user_id: @admin.id, permission: 'admin'}
+    get :revoke_permission, params: {user_id: @admin.id, permission: 'admin'}
     assert_redirected_to permissions_form_path(search_term: @admin.id)
     refute @admin.reload.admin
+  end
+
+  test 'revoke_permission revokes user_permission' do
+    sign_in @admin
+    assert_difference 'UserPermission.count', -1 do
+      get :revoke_permission, params: {user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
+    end
+    refute @facilitator.reload.permission?(UserPermission::FACILITATOR)
   end
 end
