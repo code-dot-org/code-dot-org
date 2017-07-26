@@ -46,6 +46,13 @@ class EditSectionForm extends Component{
     isSaveInProgress: PropTypes.bool.isRequired,
   };
 
+  onSaveClick = () => {
+    this.props.handleSave().catch(status => {
+      alert(i18n.unexpectedError());
+      console.error(status);
+    });
+  };
+
   render(){
     const {
       section,
@@ -55,7 +62,6 @@ class EditSectionForm extends Component{
       primaryAssignmentIds,
       isSaveInProgress,
       editSectionProperties,
-      handleSave,
       handleClose,
     } = this.props;
     return (
@@ -102,7 +108,7 @@ class EditSectionForm extends Component{
             disabled={isSaveInProgress}
           />
           <Button
-            onClick={handleSave}
+            onClick={this.onSaveClick}
             text={i18n.save()}
             size={Button.ButtonSize.large}
             color={Button.ButtonColor.orange}
