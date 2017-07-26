@@ -1,5 +1,20 @@
 import React from 'react';
 import StageExtras from './StageExtras';
+import _ from 'lodash';
+
+function generateFakePersonalProjects() {
+  const date = new Date();
+  let personalProjects = [];
+  personalProjects = _.range(5).map(i => (
+    {
+      name: "Personal " + i,
+      updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
+      projectType: 'gamelab',
+      id: 'abcd'
+    }
+  ));
+  return personalProjects;
+}
 
 export default storybook => {
   storybook
@@ -15,6 +30,9 @@ export default storybook => {
             {id: 0, type: 'Blockly', name: 'Sample Bonus Level'},
             {id: 1, type: 'Blockly', name: 'Another Bonus Level'},
           ]}
+          showProjectWidget={true}
+          projectList={generateFakePersonalProjects()}
+          projectTypes={['artist', 'playlab']}
         />
       )
     );
