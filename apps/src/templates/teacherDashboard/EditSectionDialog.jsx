@@ -1,39 +1,27 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
+import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import EditSectionForm from "./EditSectionForm";
 import PadAndCenter from './PadAndCenter';
-import {
-  isEditingSection,
-} from './teacherSectionsRedux';
-import i18n from '@cdo/locale';
+import {isEditingSection} from './teacherSectionsRedux';
 
-export class EditSectionDialog extends Component {
+class EditSectionDialog extends Component {
   static propTypes = {
-    //From Redux
-    isOpen: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired, // From Redux
   };
-
-  renderContent() {
-    return (
-      <EditSectionForm
-        title={i18n.editSectionDetails()}
-        handleSave={this.onClickEditSave}
-      />
-    );
-  }
 
   render() {
     return (
       <BaseDialog
         useUpdatedStyles
         fixedWidth={1010}
+        assetUrl={() => ''}
         isOpen={this.props.isOpen}
         uncloseable
-        assetUrl={() => ''}
       >
         <PadAndCenter>
-          {this.renderContent()}
+          <EditSectionForm title={i18n.editSectionDetails()}/>
         </PadAndCenter>
       </BaseDialog>
     );
