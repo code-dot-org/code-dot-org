@@ -1,7 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
 import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
@@ -14,6 +16,7 @@ import {
 } from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   link: tableStyles.link,
@@ -26,6 +29,10 @@ const styles = {
   row: tableStyles.row,
   rightButton: {
     marginLeft: 5
+  },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16,
   },
   nowrap: {
     whiteSpace: 'nowrap'
@@ -109,6 +116,24 @@ ConfirmSave.propTypes = {
   onCancel: PropTypes.func.isRequired,
 };
 
+const ProviderManagedSectionCode = ({provider}) => (
+  <div data-tip={i18n.providerManagedSection({provider})}>
+    {i18n.none()}
+    &nbsp;
+    <i
+      className="fa fa-question-circle"
+      style={styles.sectionCodeNone}
+    />
+    <ReactTooltip
+      role="tooltip"
+      effect="solid"
+    />
+  </div>
+);
+ProviderManagedSectionCode.propTypes = {
+  provider: PropTypes.string.isRequired,
+};
+
 /**
  * A component for displaying and editing information about a particular section
  * in the teacher dashboard.
@@ -117,6 +142,7 @@ class SectionRow extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     lightRow: PropTypes.bool.isRequired,
+    handleEdit: PropTypes.func,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(
@@ -163,7 +189,22 @@ class SectionRow extends Component {
     });
   }
 
-  onClickEdit = () => this.setState({editing: true});
+  onClickEdit = () => {
+    if (experiments.isEnabled('section-flow-2017')) {
+      const section = this.props.sections[this.props.sectionId];
+      const editData = {
+        name: section.name,
+        grade: section.grade,
+        course: section.course_id,
+        extras: section.stageExtras,
+        pairing: section.pairingAllowed,
+        sectionId: this.props.sectionId
+      };
+      this.props.handleEdit(editData);
+    } else {
+      this.setState({editing: true});
+    }
+  };
 
   onClickEditSave = () => {
     const { sections, sectionId, updateSection } = this.props;
@@ -244,6 +285,15 @@ class SectionRow extends Component {
     const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
+
+    let sectionCode = '';
+    if (!editing) {
+      if (section.providerManaged) {
+        sectionCode = <ProviderManagedSectionCode provider={section.loginType}/>;
+      } else {
+        sectionCode = section.code;
+      }
+    }
 
     return (
       <tr
@@ -345,7 +395,7 @@ class SectionRow extends Component {
           }
         </td>
         <td style={styles.col}>
-          {section.code}
+          {sectionCode}
         </td>
         <td style={styles.col}>
           {!editing && !deleting && (

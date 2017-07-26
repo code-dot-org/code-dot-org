@@ -3,7 +3,10 @@
     callouts:
       2-3 Artist 1 new_callout: []
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: EAR
+        2-3_Artist_Debugging_1_a: |-
+          https://studio.code.org/s/course2/stage/11/puzzle/1
+
+          Negli esercizi dell'Artista non c'è il bottone "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
           know until you run the code!
@@ -917,6 +920,9 @@
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
+          here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -931,6 +937,7 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.

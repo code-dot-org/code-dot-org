@@ -71,11 +71,9 @@ progress.showDisabledBubblesAlert = function () {
  * @param {boolean} saveAnswersBeforeNavigation
  * @param {boolean} [signedIn] True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} [stageExtrasEnabled] whether or not the user is in a section
- *   for which stage extras are enabled
  */
 progress.renderStageProgress = function (scriptData, stageData, progressData,
-    currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
+    currentLevelId, saveAnswersBeforeNavigation, signedIn) {
   const store = getStore();
 
   const { name, disablePostMilestone, isHocScript } = scriptData;
@@ -107,9 +105,7 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
 
   ReactDOM.render(
     <Provider store={store}>
-      <StageProgress
-        stageExtrasEnabled={stageExtrasEnabled}
-      />
+      <StageProgress/>
     </Provider>,
     document.querySelector('.progress_container')
   );

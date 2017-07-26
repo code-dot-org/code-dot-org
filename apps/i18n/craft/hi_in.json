@@ -1,11 +1,11 @@
 {
   "absolute": "निरपेक्ष",
-  "at": "at",
+  "at": "पर",
   "blockActionAdd": "जोड़ें",
   "blockActionAttack": "hamla",
   "blockActionClone": "clone blocks",
   "blockActionCloneFiltered": "clone only",
-  "blockActionCollect": "collect",
+  "blockActionCollect": "एकत्र",
   "blockActionCollectAll": "collect all",
   "blockActionDestroyEntity": "गायब",
   "blockActionDetect": "detect",

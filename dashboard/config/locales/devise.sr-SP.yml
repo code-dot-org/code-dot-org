@@ -71,21 +71,21 @@
         one: '1 грешка забрањује овом %{resource} да буде снимљен:'
         other: "%{count} грешака забрањује овом %{resource} да буде снимљен:"
     invitations:
-      send_instructions: An invitation email has been sent to %{email}.
+      send_instructions: "Позивна порука је послата на %{email}."
       invitation_token_invalid: The invitation token provided is not valid!
       updated: Your password was set successfully. You are now signed in.
       no_invitations_remaining: No invitations remaining
       invitation_removed: Your invitation was removed.
       new:
-        header: Send invitation
-        submit_button: Send an invitation
+        header: "Пошаљите позивницу"
+        submit_button: "Пошаљите позивницу"
       edit:
         header: Set your password
-        submit_button: Set my password
+        submit_button: "Постави моју лозинку"
     mailer:
       invitation_instructions:
-        subject: Invitation instructions
-        hello: Hello %{email}
+        subject: "Упутство за позивнице"
+        hello: "Здраво %{email}"
         someone_invited_you: Someone has invited you to %{url}, you can accept it
           through the link below.
         accept: Accept invitation

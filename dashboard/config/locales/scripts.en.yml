@@ -3799,6 +3799,8 @@ en:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -5906,10 +5908,10 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: ''
+          title: 'CS Fundamentals: Express'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5940,7 +5942,7 @@ en:
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
-          title: ''
+          title: 'CS Fundamentals: Pre-reader Express'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
+          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '

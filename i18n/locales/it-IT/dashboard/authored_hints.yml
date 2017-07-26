@@ -57,9 +57,9 @@ it:
         2-3_Artist_Functions_1_a: "https://studio.code.org/s/course3/stage/5/puzzle/1\n\nLe lenti quadrate hanno i lati da 100 pixel, questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare la seconda lente."
         2-3_Artist_Functions_1_b: "https://studio.code.org/s/course3/stage/5/puzzle/1\n\nTieni conto che puoi sempre riscrivere su delle linee già tracciate."
       2-3 Artist Functions 11_authored_hint:
-        2-3_Artist_Functions_11_a: You will need to change not only the number and length of sides within the function, but also the angle the artist turns between each side.
+        2-3_Artist_Functions_11_a: "https://studio.code.org/s/course3/stage/5/puzzle/5\n\nNon basta cambiare il numero e la lunghezza dei lati nella funzione, ma occorre modificare anche l'angolo tra un lato e l'altro."
       2-3 Artist Functions 12_authored_hint:
-        2-3_Artist_Functions_12_a: Try running the code first to see what you need to add.
+        2-3_Artist_Functions_12_a: "https://studio.code.org/s/course3/stage/5/puzzle/7\n\nProva ad eseguire il programma per capire che blocchi devi aggiungere."
       2-3 Artist Functions 2_authored_hint:
         2-3_Artist_Functions_2_a: |-
           https://studio.code.org/s/course3/stage/5/puzzle/2
@@ -75,7 +75,7 @@ it:
       2-3 Artist Functions 3_authored_hint:
         2-3_Artist_Functions_3_a: "https://studio.code.org/s/course3/stage/5/puzzle/3\n\n<b>115 + 45 = 160</b>"
       2-3 Artist Functions 4_authored_hint:
-        2-3_Artist_Functions_4_a: L'artista deve girare di 120 gradi tra ogni quadrato per completare questo disegno.
+        2-3_Artist_Functions_4_a: "https://studio.code.org/s/course3/stage/5/puzzle/4\n\nPer passare da un quadrato all'altro, l'artista deve girare di 120 gradi."
       2-3 Artist Loops New 11_authored_hint:
         2-3_Artist_Loops_New_11_a: |-
           Ricordati che il codice del precedente esercizio era:
@@ -126,15 +126,17 @@ it:
       2-3 Bee Debugging 4_authored_hint:
         2-3_Bee_Debugging_4_a: "https://studio.code.org/s/course2/stage/10/puzzle/4\n\nIn qualche punto del programma l'ape fa qualcosa senza senso? Correggi quei blocchi."
       2-3 Bee Functions 4_authored_hint:
-        2-3_Bee_Functions_4_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_4_a: "https://studio.code.org/s/course3/stage/6/puzzle/4\nhttps://studio.code.org/s/course3/stage/6/puzzle/6\n\n(NDT: ho cambiato il suggerimento perché quello originale non credo abbia senso, senza usare il ciclo, si eccede di un blocco.)\n\nDevi usare un <i>ciclo</i> `ripeti ... volte` per i primi due fiori, mentre il terzo fiore devi gestirlo singolarmente."
       2-3 Bee Functions 6_authored_hint:
-        2-3_Bee_Functions_6_a: You don't have to use a loop with a function. Try moving, using the function, then moving and using the function again.
+        2-3_Bee_Functions_6_a: "https://studio.code.org/s/course3/stage/6/puzzle/4\nhttps://studio.code.org/s/course3/stage/6/puzzle/6\n\n(NDT: ho cambiato il suggerimento perché quello originale non credo abbia senso, senza usare il ciclo, si eccede di un blocco.)\n\nDevi usare un <i>ciclo</i> `ripeti ... volte` per i primi due fiori, mentre il terzo fiore devi gestirlo singolarmente."
       2-3 Bee Functions 8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "https://studio.code.org/s/course3/stage/6/puzzle/7\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       2-3 Bee Functions 9_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          https://studio.code.org/s/course3/stage/6/puzzle/8
+          
+          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
       2-3 Bee Loops 2_authored_hint:
@@ -218,16 +220,16 @@ it:
       4-5 Artist Patterns 5_authored_hint:
         4-5_Artist_Patterns_5_a: "Now, when the artist finished each diamond, he's facing the opposite direction from where he needs to be to start the next one.  \n\nHow many degrees does he need to be turned to set himself straight?"
       4-5 Bee Conditionals 4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       4-5 Bee Conditionals 5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       4-5 Bee Conditionals 6_authored_hint:
-        4-5 Bee Conditionals 6_a: You can solve this puzzle using only the blocks on the workspace.  What order should they go in?
-        4-5 Bee Conditionals 6_b: Make sure that you are checking to see if the flower has more than **0** nectar at least **3** times to solve this puzzle.
+        4-5 Bee Conditionals 6_a: "https://studio.code.org/s/course3/stage/7/puzzle/6\n\nPuoi risolvere l'esercizio usando solo i blocchi che trovi già nell'area di lavoro. In che ordine devi metterli?"
+        4-5 Bee Conditionals 6_b: "https://studio.code.org/s/course3/stage/7/puzzle/6\n\nAssicurati di controllare almeno <b>3</b> volte se il fiore ha più di <b>0</b> dosi di nettare."
       4-5 Bee Debugging 1_authored_hint:
-        4-5_Bee_Debugging_1_a: If you are having trouble figuring out what's not right, try running it to see where things go wrong.
+        4-5_Bee_Debugging_1_a: "https://studio.code.org/s/course3/stage/14/puzzle/1\n\nSe non riesci ad immaginare dov'è l'errore, prova ad eseguire il codice per vedere dove sbaglia."
       4-5 Bee Nested Loops Rows_authored_hint:
-        4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
+        4-5_Bee_Nested_Loops_Rows_a: "https://studio.code.org/s/course3/stage/13/puzzle/10\n\nAffronta questo percorso come se fosse un lungo rettangolo dove l'ape deve muoversi in avanti, girando a sinistra un paio di volte."
       4-5 Maze 10_authored_hint:
         4-5_Maze_10_a: |-
           https://studio.code.org/s/course3/stage/2/puzzle/10
@@ -244,27 +246,31 @@ it:
       4-5 Maze 7_authored_hint:
         4-5_Maze_7_a: "https://studio.code.org/s/course3/stage/2/puzzle/7\n\n<b>Vuoi creare il programma con il minor numero possibile di blocchi?</b><br>\nCerca degli schemi che si ripetono e costruisci la struttura del <i>ciclo</i> `ripeti ... volte`."
       4-5 Nested Loops 12_authored_hint:
-        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+        4-5_Nested_Loops_12_a: "https://studio.code.org/s/course3/stage/11/puzzle/10\n\nLa figura deve essere disegnata 36 volte su 360 gradi.<br>\n<br>\nQuanto fa 360 diviso 36?"
       4-5 Nested Loops 2_authored_hint: [ ]
       4-5 Nested Loops 6_authored_hint:
         4-5_Nested_Loops_6_a: |-
-          Don't forget to make a turn after your inner loop.
+          https://studio.code.org/s/course3/stage/11/puzzle/3
           
-          You'll be looping 6 triangles over 360 degrees.
-          
-          **360 / 6 = ?**
+          Non dimenticarti di girare dopo il <i>ciclo</i> interno.<br>
+          Devi distribuire 6 triangoli su 360 gradi.<br>
+          <b>360 / 6 = ?</b>
       4-5 Nested Loops 7_authored_hint:
         4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
+          https://studio.code.org/s/course3/stage/11/puzzle/7
           
-          **360 / 10 = ?**
+          La figura deve essere disegnata 10 volte su 360 gradi.<br>
+          <br>
+          Quanto fa 360 diviso 10?
       4-5 Nested Loops 8_authored_hint:
         4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
+          https://studio.code.org/s/course3/stage/11/puzzle/9
           
-          **360 / 6 = ?**
+          La figura deve essere disegnata 6 volte su 360 gradi.<br>
+          <br>
+          Quanto fa 360 diviso 6?
       4-5 While Loops 8_authored_hint:
-        4-5_While_Loops_8_a: Each item will need its own `while` loop.
+        4-5_While_Loops_8_a: "https://studio.code.org/s/course3/stage/12/puzzle/8\n\nUsa il blocco \"mentre\" per entrambi."
       Artist Inspiration_authored_hint:
         brush_width: Come prima cosa, assegna lo spessore del pennello a 1 ed il suo colore a blu.
         double_loop: Prova ad inserire un "ciclo con contatore" all'interno di un altro ciclo.
@@ -2258,7 +2264,7 @@ it:
       courseD_bee_conditionals7_predict2_authored_hint:
         courseD_bee_conditionals7_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       courseD_bee_conditionals8_authored_hint:
-        courseD_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        courseD_bee_conditionals8_a: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
         courseD_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
           
@@ -3096,12 +3102,14 @@ it:
         courseE_bee_functions5_c: The `move forward` block can be changed into a `move backward` block. Use this instead of turning all the way around at the end of the paths!
         courseE_bee_functions5_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- move backward\n- turn back to the direction that the bee started from"
       courseE_bee_functions6_authored_hint:
-        courseE_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseE_bee_functions6_a: "https://studio.code.org/s/course3/stage/6/puzzle/7\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
         courseE_bee_functions6_b: It might help in this case to move inside of the function, but not all of your `move` blocks need to be there.
       courseE_bee_functions7_authored_hint:
-        courseE_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions7_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseE_bee_functions7_b: |-
-          Remember to build your code inside of the green function block.
+          https://studio.code.org/s/course3/stage/6/puzzle/8
+          
+          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         courseE_bee_functions7_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.
@@ -3113,10 +3121,10 @@ it:
         courseE_bee_functions9_a: You can use the exact same function for this puzzle as you did in the last puzzle.  All you need to do is create a function that collects all of the nectar when you get to each flower.
         courseE_bee_functions9_b: Even though you know how much nectar some of the flowers have, a `while` loop can make one function work for all of them.
       courseE_bee_functions_challenge1_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_functions_challenge2_authored_hint:
-        courseE_bee_functions_challenge1_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseE_bee_functions_challenge1_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseE_bee_functions_challenge1_b: Remember to build your code inside of the green function block.
       courseE_bee_ramp14_authored_hint:
         courseE_bee_ramp14_a: The bee works just like the farmer in the previous puzzle. Buzz along the path and collect nectar while there is nectar (while nectar > 0) and make all of the honey.
@@ -3932,7 +3940,7 @@ it:
         courseF_bee_conditionals5_c: There are 3 sides of the rectangle with flowers, so the code needs to `repeat 3 times`. In every repeat, the bee will need to continue along the path, `while there is a path ahead`. To continue down the path, the bee will need to `move forward`. While on the path, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`.
       courseF_bee_conditionals7_predict2_authored_hint: [ ]
       courseF_bee_conditionals8_authored_hint:
-        courseF_bee_conditionals8_a: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        courseF_bee_conditionals8_a: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
         courseF_bee_conditionals8_b: |-
           This puzzle is tricky, because you can't check blank squares, nectar, *and* honey with just one single conditional.
           
@@ -4260,14 +4268,14 @@ it:
       courseF_bee_functions5a_authored_hint:
         courseF_bee_functions5a_a: "Your function should check if there's a path to the right, and if there is, travel down the side paths and return the bee back to the main road.  \n\nYou don't need to add that part to your main program."
       courseF_bee_functions6_authored_hint:
-        courseF_bee_functions6_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        courseF_bee_functions6_a: "https://studio.code.org/s/course3/stage/6/puzzle/7\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       courseF_bee_functions7_authored_hint: [ ]
       courseF_bee_functions8a_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseF_bee_functions8a_b: |+
           Remember to build code inside of the function editor.
       courseF_bee_functionsPre7_authored_hint:
-        courseF_bee_functions7_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions7_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseF_bee_functions7_b: |-
           Remember to build code inside of the green function block.
           
@@ -4392,7 +4400,7 @@ it:
           </block>
           </xml>
       courseF_bee_functions_challenge2_recursion_authored_hint:
-        courseF_bee_functions8a_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        courseF_bee_functions8a_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         courseF_bee_functions8a_b: |+
           Remember to build code inside of the function editor.
       courseF_bee_fwp1_authored_hint:
@@ -5180,13 +5188,13 @@ it:
       grade2_puppy_loops7_authored_hint:
         2-3_Maze_Loops_17_a: "https://studio.code.org/s/course2/stage/6/puzzle/6\nhttps://studio.code.org/s/course2/stage/6/puzzle/7\nhttps://studio.code.org/s/course2/stage/6/puzzle/8\n\nSe fai fatica a capire lo schema che si ripete, prova prima a risolvere l'esercizio usando tutti i singoli blocchi, poi cerca di vedere quali sono le parti che si ripetono per inserirle nel blocco `ripeti ... volte`."
       grade3_ConditionalsElse_4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       grade3_ConditionalsElse_5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       grade3_ConditionalsElse_TeacherIDo_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       grade3_Conditionals_10 BAD_authored_hint:
-        4-5_Bee_Nested_Loops_Rows_a: Try treating this puzzle like a long rectangle where the bee needs to move forward, then turn left several times to complete the path.
+        4-5_Bee_Nested_Loops_Rows_a: "https://studio.code.org/s/course3/stage/13/puzzle/10\n\nAffronta questo percorso come se fosse un lungo rettangolo dove l'ape deve muoversi in avanti, girando a sinistra un paio di volte."
       grade3_Conditionals_11_authored_hint:
         2-3_Bee_Conditionals_14_a: "https://studio.code.org/s/course2/stage/13/puzzle/11\n\nFai fatica a trovare la soluzione? Prova a trattare il fiore rosso come se fosse viola!"
         2-3_Bee_Conditionals_14_b: "https://studio.code.org/s/course2/stage/13/puzzle/11\n\nSe consideri il fiore rosso come se fosse viola, allora puoi usare un ulteriore <i>ciclo</i> `ripeti ... volte`."
@@ -5318,7 +5326,7 @@ it:
       grade3_bee_conditionals_quantum4_authored_hint:
         remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if/else`) to solve the challenge."
       grade3_bee_conditionals_quantum5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
         grade3_bee_conditionals_quantum5_a: This puzzle is tricky, because you can't check blank squares, nectar *and* honey with a single conditional.
       grade3_maze_loops1_authored_hint:
         grade3_maze_loops1_a: Try using the "Step" button to find errors.
@@ -5354,24 +5362,28 @@ it:
         grade3_robotFarmer_ConditionalsIntro_9_c: Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times.
       grade4_arist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
+          https://studio.code.org/s/course3/stage/11/puzzle/7
           
-          **360 / 10 = ?**
+          La figura deve essere disegnata 10 volte su 360 gradi.<br>
+          <br>
+          Quanto fa 360 diviso 10?
       grade4_arist_nested_loop_polygons2_authored_hint:
         4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
+          https://studio.code.org/s/course3/stage/11/puzzle/9
           
-          **360 / 6 = ?**
+          La figura deve essere disegnata 6 volte su 360 gradi.<br>
+          <br>
+          Quanto fa 360 diviso 6?
       grade4_arist_nested_loop_triangles2_authored_hint: [ ]
       grade4_arist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
-          Don't forget to make a turn after your inner loop.
+          https://studio.code.org/s/course3/stage/11/puzzle/3
           
-          You'll be looping 6 triangles over 360 degrees.
-          
-          **360 / 6 = ?**
+          Non dimenticarti di girare dopo il <i>ciclo</i> interno.<br>
+          Devi distribuire 6 triangoli su 360 gradi.<br>
+          <b>360 / 6 = ?</b>
       grade4_arist_nested_loop_triangles6_authored_hint:
-        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+        4-5_Nested_Loops_12_a: "https://studio.code.org/s/course3/stage/11/puzzle/10\n\nLa figura deve essere disegnata 36 volte su 360 gradi.<br>\n<br>\nQuanto fa 360 diviso 36?"
       grade4_artist_functions1_authored_hint:
         2-3_Artist_Functions_1_a: "https://studio.code.org/s/course3/stage/5/puzzle/1\n\nLe lenti quadrate hanno i lati da 100 pixel, questo significa che dovrai muoverti in avanti di 175 pixel prima di disegnare la seconda lente."
         2-3_Artist_Functions_1_b: "https://studio.code.org/s/course3/stage/5/puzzle/1\n\nTieni conto che puoi sempre riscrivere su delle linee già tracciate."
@@ -5437,14 +5449,18 @@ it:
         Course_4_Artist_11_b: 'The 2/3 triangle has a **length of 80** and turns right by **120 degrees**. '
       grade4_artist_nested_loop_polygons1_authored_hint:
         4-5_Nested_Loops_7_a: |-
-          This design will loop 10 times over 360 degrees.
+          https://studio.code.org/s/course3/stage/11/puzzle/7
           
-          **360 / 10 = ?**
+          La figura deve essere disegnata 10 volte su 360 gradi.<br>
+          <br>
+          Quanto fa 360 diviso 10?
       grade4_artist_nested_loop_polygons2_authored_hint:
         4-5_Nested_Loops_8_a: |-
-          You will be looping this shape 6 times over 360 degrees.
+          https://studio.code.org/s/course3/stage/11/puzzle/9
           
-          **360 / 6 = ?**
+          La figura deve essere disegnata 6 volte su 360 gradi.<br>
+          <br>
+          Quanto fa 360 diviso 6?
       grade4_artist_nested_loop_triangles2_authored_hint: [ ]
       grade4_artist_nested_loop_triangles3_authored_hint:
         4-5_Nested_Loops_6_a: |-
@@ -5454,7 +5470,7 @@ it:
           
           **6 x ? = 360**
       grade4_artist_nested_loop_triangles6_authored_hint:
-        4-5_Nested_Loops_12_a: "**360 / 36 = ?**"
+        4-5_Nested_Loops_12_a: "https://studio.code.org/s/course3/stage/11/puzzle/10\n\nLa figura deve essere disegnata 36 volte su 360 gradi.<br>\n<br>\nQuanto fa 360 diviso 36?"
       grade4_bee_conditionals_new1a_authored_hint:
         grade4_bee_conditionals_new1a_a: An `if` block will help you out in this puzzle.
       grade4_bee_conditionals_new2_authored_hint:
@@ -5463,9 +5479,9 @@ it:
       grade4_bee_conditionals_new3b_authored_hint:
         grade4_bee_conditionals_new3b_a: An `if/else` statement could really help you out here.
       grade4_bee_conditionals_quantum4_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       grade4_bee_conditionals_quantum5_authored_hint:
-        remember_quantum: "**Remember:** This puzzle changes each time it's run.  \n\nYou'll want to use a conditional block (`if` or `if/else`) to solve the challenge."
+        remember_quantum: "https://studio.code.org/s/course3/stage/7/puzzle/4\nhttps://studio.code.org/s/course3/stage/7/puzzle/5\n\n<b>Attenzione:</b> Lo schema cambia ogni volta che esegui il programma: quindi, per risolvere l'esercizio, devi proprio usare il <i>blocco condizionale</i> `se` oppure `se/altrimenti`."
       grade4_bee_functions1_authored_hint:
         grade4_bee_functions1_a: There is more than one right answer to this puzzle.
       grade4_bee_functions10_authored_hint:
@@ -5480,11 +5496,13 @@ it:
         grade4_bee_functions6_a: Edit the function so that it solves the puzzle without having to change the main program.
         grade4_bee_functions6_b: "Your function should make the bee: \n- turn\n- move forward\n- collect all of the nectar\n- turn around\n- move back to the main path\n- turn back to the direction that the bee started from"
       grade4_bee_functions7_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
+        2-3_Bee_Functions_8_a: "https://studio.code.org/s/course3/stage/6/puzzle/7\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!\n\n![](https://images.code.org/3875224b35889000a0998ca25cfa4ecf-image-1467996493914.gif)"
       grade4_bee_functions8_authored_hint:
-        2-3_Bee_Functions_8_a: "If the puzzle seems challenging, try building your function a little at a time.  \n\nAdd some blocks, then try it out. Add more, then try again.  Soon, you'll get there!"
+        2-3_Bee_Functions_8_a: "https://studio.code.org/s/course3/stage/6/puzzle/8\n\nSe ti sembra troppo difficile, prova a creare la funzione poco per volta.<br>\nAggiungi qualche blocco e prova a vedere cosa fa. Poi aggiungine altri e controlla di nuovo. Velocemente arriverai alla soluzione!"
         2-3_Bee_Functions_8_b: |-
-          Remember to build your code inside of the green function block.
+          https://studio.code.org/s/course3/stage/6/puzzle/8
+          
+          Ricordati di inserire il codice all'interno del blocco verde della funzione.<br>
           
           ![](https://images.code.org/8fe1fae5caf4ede3a9c9bd9f26940cde-image-1467996837459.gif)
         2-3_Bee_Functions_8_c: This function should turn the bee to head him down the path, collect the nectar, make the honey, then turn the bee around and bring him back.

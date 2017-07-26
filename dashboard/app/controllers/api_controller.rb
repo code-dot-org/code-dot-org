@@ -68,8 +68,8 @@ class ApiController < ApplicationController
           oauth_token_expiration: client.expires_in + Time.now.to_i,
         )
       end
-    rescue Google::Apis::ClientError => client_error
-      render status: :forbidden, json: {error: client_error}
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
+      render status: :forbidden, json: {error: error}
     end
   end
 

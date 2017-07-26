@@ -36,6 +36,9 @@ class ProjectsController < ApplicationController
     gumball: {
       name: 'New Gumball Project'
     },
+    flappy: {
+      name: 'New Flappy Project'
+    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },
