@@ -11,6 +11,10 @@ const styles = {
     marginRight: 10,
     float: 'left',
   },
+  challengeRow: {
+    clear: 'both',
+    overflow: 'hidden',
+  },
 };
 
 class BonusLevel extends React.Component {
@@ -19,7 +23,10 @@ class BonusLevel extends React.Component {
   renderWithMazeThumbnail() {
     return (
       <div style={styles.bonusLevel}>
-        <CompletableLevelThumbnail size={200}>
+        <CompletableLevelThumbnail
+          size={200}
+          completed={this.props.completed}
+        >
           <MazeThumbnail {...this.props}/>
         </CompletableLevelThumbnail>
         <a href={`?id=${this.props.id}`}>
@@ -40,9 +47,9 @@ class BonusLevel extends React.Component {
   }
 }
 
-export default function BonusLevels(props) { // eslint-disable-line react/no-multi-comp
+export default function BonusLevels(props) {
   return (
-    <div className="row">
+    <div style={styles.challengeRow}>
       {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
     </div>
   );

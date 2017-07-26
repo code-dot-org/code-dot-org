@@ -297,7 +297,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(user)
     {
       id: id,
       name: level.display_name || level.name,
@@ -305,6 +305,7 @@ class ScriptLevel < ActiveRecord::Base
       map: JSON.parse(level.try(:maze) || '[]'),
       skin: level.try(:skin),
       start_direction: level.try(:start_direction).to_i,
+      completed: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
     }.camelize_keys
   end
 
