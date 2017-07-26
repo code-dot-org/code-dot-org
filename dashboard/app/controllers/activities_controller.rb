@@ -186,18 +186,15 @@ class ActivitiesController < ApplicationController
       level_source_id: level_source.try(:id)
     }
 
-    # Save the activity and user_level synchronously if the level might be saved
-    # to the gallery (for which the activity.id and user_level.id is required).
+    @activity = Activity.create_async!(attributes)
+
+    # Save the user_level synchronously if the level might be saved
+    # to the gallery (for which the user_level.id is required).
     # This is true for levels auto-saved to the gallery, free play levels, and
     # "impressive" levels.
+    free_play = level.try(:free_play) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT
     synchronous_save = passed &&
-        (save_to_gallery || level.try(:free_play) == 'true' ||
-            level.try(:impressive) == 'true' || test_result == ActivityConstants::FREE_PLAY_RESULT)
-    if synchronous_save
-      @activity = Activity.create!(attributes)
-    else
-      @activity = Activity.create_async!(attributes)
-    end
+      (save_to_gallery || free_play || level.try(:impressive) == 'true')
 
     user_level = nil
     if script_level
