@@ -46,10 +46,9 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     get :index
     assert_response :success
-    json = JSON.parse(@response.body)
 
     expected = @teacher.sections.map {|section| section.summarize.with_indifferent_access}
-    assert_equal expected, json
+    assert_equal expected, returned_json
   end
 
   # It's easy to accidentally grant admins permission to `index` all sections
@@ -64,8 +63,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     expected = admin.sections.map {|section| section.summarize.with_indifferent_access}
-    json = JSON.parse(@response.body)
-    assert_equal expected, json
+    assert_equal expected, returned_json
   end
 
   test 'specifies course_id for sections that have one assigned' do
@@ -73,9 +71,8 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     get :index
     assert_response :success
-    json = JSON.parse(@response.body)
 
-    course_id = json.find {|section| section['id'] == @section_with_course.id}['course_id']
+    course_id = returned_json.find {|section| section['id'] == @section_with_course.id}['course_id']
     assert_equal @course.id, course_id
   end
 
@@ -115,16 +112,14 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     get :show, params: {id: @section_with_course.id}
     assert_response :success
-    json = JSON.parse(@response.body)
 
-    assert_equal @course.id, json['course_id']
+    assert_equal @course.id, returned_json['course_id']
   end
 
   test "join with invalid section code" do
     post :join, params: {id: 'xxxxxx'}
     assert_response :bad_request
-    json = JSON.parse(@response.body)
-    assert_equal "section_notfound", json['result']
+    assert_equal "section_notfound", returned_json['result']
   end
 
   test "join with nobody signed in" do
@@ -147,15 +142,13 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     post :join, params: {id: @section.code}
     assert_response :success
-    json = JSON.parse(@response.body)
-    assert_equal "exists", json['result']
+    assert_equal "exists", returned_json['result']
   end
 
   test "leave with invalid section code" do
     post :leave, params: {id: 'xxxxxx'}
     assert_response :bad_request
-    json = JSON.parse(@response.body)
-    assert_equal "section_notfound", json['result']
+    assert_equal "section_notfound", returned_json['result']
   end
 
   test "leave with nobody signed in" do
