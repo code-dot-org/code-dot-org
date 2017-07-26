@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
+import i18n from '@cdo/locale';
 import { sectionShape, assignmentShape } from './shapes';
 import { assignmentId } from './teacherSectionsRedux';
 
@@ -148,7 +149,7 @@ export default class AssignmentSelector extends Component {
           <option key="default" value={noAssignment}/>
           {this.props.chooseLaterOption &&
             <option key="later" value={decideLater}>
-              Decide later
+              {i18n.decideLater()}
             </option>
           }
           {Object.keys(grouped).map((groupName, index) => (
