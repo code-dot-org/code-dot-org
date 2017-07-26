@@ -16,6 +16,7 @@ const Sections = React.createClass({
     isTeacher: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
     validScripts: React.PropTypes.array,
+    teacherHomepage: React.PropTypes.bool,
 
     //Redux provided
     setSections: React.PropTypes.func.isRequired,
@@ -47,33 +48,29 @@ const Sections = React.createClass({
 
   render() {
     const { sections, codeOrgUrlPrefix, isRtl, isTeacher} = this.props;
-    const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
       <div>
         <ContentContainer
           heading={i18n.sectionsTitle()}
-          linkText={i18n.manageSections()}
-          link={editSectionsUrl}
-          showLink={isTeacher}
           isRtl={isRtl}
         >
-        {sections.length > 0 && (
-          <SectionsPage
-            validScripts={this.props.validScripts}
-            homepage={true}
-          />
-        )}
-        {sections.length === 0 && isTeacher && (
-          <SetUpMessage
-            type="sections"
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-          />
-        )}
-      </ContentContainer>
-    </div>
+          {sections.length > 0 && (
+            <SectionsPage
+              validScripts={this.props.validScripts}
+              teacherHomepage={this.props.teacherHomepage}
+            />
+          )}
+          {sections.length === 0 && isTeacher && (
+            <SetUpMessage
+              type="sections"
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+            />
+          )}
+        </ContentContainer>
+      </div>
     );
   }
 });

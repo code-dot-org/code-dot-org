@@ -34,7 +34,7 @@ const sectionsApiPath = '/dashboardapi/sections/';
 class SectionsPage extends Component {
   static propTypes = {
     validScripts: PropTypes.array.isRequired,
-    homepage: PropTypes.bool,
+    teacherHomepage: PropTypes.bool,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -49,7 +49,7 @@ class SectionsPage extends Component {
   };
 
   defaultProps = {
-    homepage: false,
+    teacherHomepage: false,
   }
 
   state = {
@@ -140,7 +140,7 @@ class SectionsPage extends Component {
     const showCleverClassroom = experiments.isEnabled('cleverClassroom');
     return (
       <div>
-        {!this.props.homepage &&
+        {!this.props.teacherHomepage &&
           <div style={styles.breadcrumb}>
             <a href="/teacher-dashboard#/">
               {i18n.teacherHomePage()}
