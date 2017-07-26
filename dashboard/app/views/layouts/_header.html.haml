@@ -105,20 +105,23 @@
   - if script_level
     - uid = params[:puzzle_page] ? "#{script_level.level_id}_#{puzzle_page - 1}" : script_level.level_id.to_s
   - else
-    - uid = 'stage_extras'
+    /A bit of an abuse of uid, we dont have a specific level id in this case, so just use a hardcoded string
+    - uid = SharedConstants::LEVEL_KIND.stage_extras
 
   - script_data = script.summarize_header
+  - stage_data = (@stage || script_level.stage).summarize
+  / Don't include stage_extras_level_url unless enabled. Note: this also means it will never be included on cached pages
+  - stage_data = stage_data.except(:stage_extras_level_url) unless stage_extras_enabled
   -# If caching, we don't know the sign in state, and should be nil
   - signed_in = @public_caching ? 'null' : !current_user.nil?
   :javascript
     //<![CDATA[
     dashboard.header.build(
       #{script_data.to_json},
-      #{(@stage || script_level.stage).summarize.to_json},
+      #{stage_data.to_json},
       #{user_progress},
       "#{uid}",
       #{puzzle_page},
-      #{signed_in},
-      #{stage_extras_enabled || 'null'}
+      #{signed_in}
     )
     //]]>
