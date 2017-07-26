@@ -1,7 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
 import GridContainer from './GridContainer';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
 const styles = {
@@ -73,9 +73,9 @@ const FindLocalClassBanner = React.createClass({
             <div style={styles.description}>
               {i18n.findLocalClassDescription()}
             </div>
-            <ProgressButton
+            <Button
               href={`${codeOrgUrlPrefix}/learn/local`}
-              color={ProgressButton.ButtonColor.gray}
+              color={Button.ButtonColor.gray}
               text={i18n.findLocalClassButton()}
             />
           </div>

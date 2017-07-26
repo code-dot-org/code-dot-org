@@ -1,24 +1,24 @@
 import React from 'react';
-import ProgressButton from './ProgressButton';
+import Button from './Button';
 
 export default storybook => {
 
   storybook
-    .storiesOf('ProgressButton', module)
+    .storiesOf('Button', module)
     .addStoryTable([
       {
-        name:'ProgressButton with href',
+        name:'Button with href',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
             text="Batman & Robin"
           />
         )
       },
       {
-        name:'ProgressButton with onClick',
+        name:'Button with onClick',
         story: () => (
-          <ProgressButton
+          <Button
             onClick={() => console.log('click')}
             text="Batman & Robin"
           />
@@ -28,9 +28,9 @@ export default storybook => {
       {
         name:'gray button',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text="Batman & Robin"
           />
         )
@@ -39,9 +39,9 @@ export default storybook => {
       {
         name:'blue button',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.blue}
+            color={Button.ButtonColor.blue}
             text="Batman & Robin"
           />
         )
@@ -50,9 +50,9 @@ export default storybook => {
       {
         name:'white button',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.white}
+            color={Button.ButtonColor.white}
             text="Batman & Robin"
           />
         )
@@ -61,9 +61,9 @@ export default storybook => {
       {
         name:'red button',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.red}
+            color={Button.ButtonColor.red}
             text="Batman & Robin"
           />
         )
@@ -72,9 +72,9 @@ export default storybook => {
       {
         name: 'large button',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            size={ProgressButton.ButtonSize.large}
+            size={Button.ButtonSize.large}
             text="Continue"
           />
         )
@@ -83,9 +83,9 @@ export default storybook => {
       {
         name:'white button with icon',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.white}
+            color={Button.ButtonColor.white}
             icon="lock"
             text="Assessment Settings"
           />
@@ -95,9 +95,9 @@ export default storybook => {
       {
         name:'blue button with icon',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.blue}
+            color={Button.ButtonColor.blue}
             icon="file-text"
             text="Assessment Settings"
           />
@@ -107,9 +107,9 @@ export default storybook => {
       {
         name:'orange button with styled icon',
         story: () => (
-          <ProgressButton
+          <Button
             href="/foo/bar"
-            color={ProgressButton.ButtonColor.orange}
+            color={Button.ButtonColor.orange}
             icon="caret-down"
             iconStyle={{fontSize: 24, position: 'relative', top: 3}}
             text="Assign Course"

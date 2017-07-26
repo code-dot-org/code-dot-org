@@ -132,16 +132,20 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student adds student to section' do
+    result = nil
     assert_creates(Follower) do
-      @section.add_student @student
+      result = @section.add_student @student
     end
+    assert_equal result, Section::ADD_STUDENT_SUCCESS
     assert @section.students.exists?(@student.id)
   end
 
   test 'add_student is idempotent' do
-    2.times do
-      @section.add_student @student
-    end
+    result = @section.add_student @student
+    assert_equal result, Section::ADD_STUDENT_SUCCESS
+
+    result = @section.add_student @student
+    assert_equal result, Section::ADD_STUDENT_EXISTS
 
     assert_equal 1, @section.followers.count
     assert_equal [@student.id], @section.followers.all.map(&:student_user_id)
@@ -151,11 +155,13 @@ class SectionTest < ActiveSupport::TestCase
     follower = create :follower, section: @section, student_user: @student
     follower.destroy
 
+    result = nil
     assert_no_change('Follower.with_deleted.count') do
       assert_creates(Follower) do
-        @section.add_student @student
+        result = @section.add_student @student
       end
     end
+    assert_equal result, Section::ADD_STUDENT_SUCCESS
     refute follower.reload.deleted?
   end
 
@@ -215,7 +221,8 @@ class SectionTest < ActiveSupport::TestCase
     def verify(actual, expected)
       section = create :section
       actual.each do |name|
-        section.add_student create(:student, name: name)
+        result = section.add_student create(:student, name: name)
+        assert_equal result, Section::ADD_STUDENT_SUCCESS
       end
       result = section.name_safe_students.map(&:name)
       assert_equal expected, result
