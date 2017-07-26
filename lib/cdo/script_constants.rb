@@ -81,14 +81,6 @@ module ScriptConstants
       COURSEE_DRAFT_NAME = 'coursee-draft'.freeze,
       COURSEF_DRAFT_NAME = 'coursef-draft'.freeze,
     ],
-    csf2: [
-      COURSEA_NAME = 'coursea'.freeze,
-      COURSEB_NAME = 'courseb'.freeze,
-      COURSEC_NAME = 'coursec'.freeze,
-      COURSED_NAME = 'coursed'.freeze,
-      COURSEE_NAME = 'coursee'.freeze,
-      COURSEF_NAME = 'coursef'.freeze,
-    ],
     csd: [
       CSD1_NAME = 'csd1'.freeze,
       CSD2_NAME = 'csd2'.freeze,
