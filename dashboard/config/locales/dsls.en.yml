@@ -2797,6 +2797,7 @@ en:
         description here: description here
       csp-novice-congrats: {}
       csp_ap_intro: {}
+      csp_subgoal_experiment_thanks: {}
       csp_unit5_finalassessment_overview:
         description here: description here
         title: title
@@ -3386,6 +3387,7 @@ en:
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
+        csp_subgoal_consent_levelgroup: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -5550,6 +5552,16 @@ en:
         "<pre>sentence</pre>": "<pre>sentence</pre>"
         <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
         What will be displayed after running this code?: What will be displayed after running this code?
+      Destroy me multi test:
+        3 answer: 3 answer
+        4 answer: 4 answer
+        5 answer: 5 answer
+        6 answer: 6 answer
+        Can I choose zero or one?: Can I choose zero or one?
+        description here: description here
+        one answer: one answer
+        title foo foo: title foo foo
+        two answer: two answer
       ECSPD Online U1D1-2 Assessment 2:
         A and B: A and B
         A, B, C, F, and G: A, B, C, F, and G
@@ -7798,6 +7810,18 @@ en:
         I'd like to, but am concerned about the costs: I'd like to, but am concerned about the costs
         No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
         Yes, definitely.: Yes, definitely.
+      csp_subgoal_experiment_consent:
+        Invitation to Participate in Research Study -- Subgoal Labels: Invitation to Participate in Research Study -- Subgoal Labels
+        No Thanks: No Thanks
+        No Thanks.: No Thanks.
+        'Yes, I agree!  I want to participate in the ': 'Yes, I agree!  I want to participate in the '
+        Yes, I agree!  I want to participate in the study: Yes, I agree!  I want to participate in the study
+        Yes, I agree!  Sign me up: Yes, I agree!  Sign me up
+        Yes, I agree! I want to participate in the subgoal labels study: Yes, I agree! I want to participate in the subgoal labels study
+        Yes, I agree! I want to participate in the subgoal labels study.: Yes, I agree! I want to participate in the subgoal labels study.
+        Yes, I agree!<br>I want to participate in the subgoal labels study: Yes, I agree!<br>I want to participate in the subgoal labels study
+        description here: description here
+        title: title
       cspu3_assess1_callfunction:
         <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
         <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
