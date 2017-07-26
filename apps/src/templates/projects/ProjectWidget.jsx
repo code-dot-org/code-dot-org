@@ -36,14 +36,7 @@ const ProjectWidget = React.createClass({
 // before passing it to PersonalRecentProjects.
 const convertChannelsToProjectData = function (projects) {
   // Sort by most recently updated.
-  let projectLists = projects;
-  projectLists.sort((a, b) => {
-    if (a.updatedAt < b.updatedAt) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+  let projectLists = _.sortBy(projects, 'updatedAt').reverse();
 
   // Get the ones that aren't hidden, and have a type and id.
   projectLists = projectLists.filter(project => !project.hidden && project.id && project.projectType);
