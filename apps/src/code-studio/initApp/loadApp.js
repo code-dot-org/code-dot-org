@@ -104,7 +104,7 @@ export function setupApp(appOptions) {
       }
       $(document).trigger('appInitialized');
     },
-    onAttempt: function (report) {
+    onAttempt: function (/*MilestoneReport*/report) {
       fallback = report.pass ?
         appOptions.report.fallback_response.success :
         appOptions.report.fallback_response.failure;
@@ -265,9 +265,7 @@ function tryToUploadShareImageToS3({image, level}) {
   if (level.disableSharing || !image) {
     return;
   }
-  const dataURI = `data:image/png;base64,${decodeURIComponent(image)}`;
-  // Add the frame to the drawing.
-  imageUtils.dataURIToFramedBlob(dataURI, blob => {
+  imageUtils.loadFramedImage(image, blob => {
     files.putFile(SHARE_IMAGE_NAME, blob);
   });
 }

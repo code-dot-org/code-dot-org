@@ -62,7 +62,7 @@ Dashboard::Application.configure do
 
   # Disable this for developers by default, it won't make much sense because we
   # have our own db.
-  CDO.disable_s3_image_uploads = true
+  CDO.disable_s3_image_uploads = CDO.with_default(true).disable_s3_image_uploads
 
   # Set to :debug to see everything in the log.
   config.log_level = :debug

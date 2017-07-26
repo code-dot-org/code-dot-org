@@ -55,6 +55,7 @@ import {
   setInstructionsConstants,
   setFeedback
 } from './redux/instructions';
+import * as imageUtils from './imageUtils';
 
 var copyrightStrings;
 
@@ -954,7 +955,7 @@ StudioApp.prototype.displayMissingBlockHints = function (blocks) {
 };
 
 /**
- * @param {MilestoneResponse} response
+ * @param {LiveMilestoneResponse} response
  */
 StudioApp.prototype.onReportComplete = function (response) {
   this.authoredHintsController_.finishHints(response && response.level_source_id);
@@ -971,6 +972,14 @@ StudioApp.prototype.onReportComplete = function (response) {
 
   if (response.share_failure) {
     trackEvent('Share', 'Failure', response.share_failure.type);
+  }
+
+  // Asynchronously upload image to S3 using presigned url.
+  if (response.level_source_image_url) {
+    return imageUtils.tryToUploadLevelSourceImageToS3(
+      window.appOptions.report.lastReport.image,
+      response.level_source_image_url
+    );
   }
 };
 
@@ -1402,7 +1411,7 @@ StudioApp.prototype.shouldDisplayFeedbackDialog = function (options) {
 /**
  * Runs the tests and returns results.
  * @param {boolean} levelComplete Was the level completed successfully?
- * @param {Object} options
+ * @param {{executionError: ExecutionError, allowTopBlocks: boolean}} options
  * @return {number} The appropriate property of TestResults.
  */
 StudioApp.prototype.getTestResults = function (levelComplete, options) {
@@ -1436,16 +1445,7 @@ StudioApp.prototype.builderForm_ = function (onAttemptCallback) {
 
 /**
 * Report back to the server, if available.
-* @param {object} options - parameter block which includes:
-* {string} app The name of the application.
-* {number} id A unique identifier generated when the page was loaded.
-* {string} level The ID of the current level.
-* {number} result An indicator of the success of the code.
-* {number} testResult More specific data on success or failure of code.
-* {boolean} submitted Whether the (submittable) level is being submitted.
-* {string} program The user program, which will get URL-encoded.
-* {Object} containedLevelResultsInfo Results from the contained level.
-* {function} onComplete Function to be called upon completion.
+* @param {MilestoneReport} options
 */
 StudioApp.prototype.report = function (options) {
 

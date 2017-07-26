@@ -1,6 +1,7 @@
 /**
  * @typedef {Object} ReportOptions
  * @property {FallbackResponse} fallback_response
+ * @property {MilestoneReport} lastReport
  * @property {?} callback
  * @property {?} sublevelCallback
  */
@@ -208,6 +209,7 @@
  * @property {string} save_to_gallery_url - URL to save this submission to the gallery.
  * @property {string} level_source
  * @property {string} level_source_id
+ * @property {string} level_source_image_url
  */
 
 /**
@@ -215,7 +217,7 @@
  * @property {?} script_id
  * @property {?} level_id
  * @property {?} total_lines
- * @property {string} video_info
+ * @property {AutoplayVideo} video_info
  * @property {string} redirect - path to 'next' level in the stage/script sequence.
  * @property {{previous: {position: number, name: string}}} stage_changing
  * @property {boolean} end_of_stage_experience

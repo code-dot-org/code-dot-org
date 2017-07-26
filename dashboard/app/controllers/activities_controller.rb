@@ -102,13 +102,7 @@ class ActivitiesController < ApplicationController
 
     # Store the image only if the image is set, and the image has not been saved
     if params[:image] && level_source.try(:id)
-      level_source_image = LevelSourceImage.find_by(level_source_id: level_source.id)
-      unless level_source_image
-        level_source_image = LevelSourceImage.new(level_source_id: level_source.id)
-        unless level_source_image.save_to_s3(Base64.decode64(params[:image]))
-          level_source_image = nil
-        end
-      end
+      level_source_image = LevelSourceImage.fetch(level_source.id)
     end
 
     test_result = params[:testResult].to_i

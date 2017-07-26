@@ -183,7 +183,7 @@ function validateReport(report) {
 
 /**
  * @callback onComplete
- * @param {MilestoneResponse} response
+ * @param {LiveMilestoneResponse} response
  */
 
 /**
@@ -196,6 +196,7 @@ function validateReport(report) {
  */
 reporting.sendReport = function (report) {
   const appOptions = window.appOptions;
+  appOptions.report.lastReport = report;
   // The list of report fields we want to send to the server
   const serverFields = [
     'program',
@@ -228,7 +229,7 @@ reporting.sendReport = function (report) {
     serverReport.program = window.decodeURIComponent(serverReport.program);
   }
   if (serverReport.image) {
-    serverReport.image = window.decodeURIComponent(serverReport.image);
+    serverReport.image = true;
   }
 
   const progressUpdated = clientState.trackProgress(
@@ -284,7 +285,7 @@ reporting.cancelReport = function () {
 };
 
 /**
- * @param {Report} report
+ * @param {MilestoneReport} report
  * @param {MilestoneResponse[]} milestones
  */
 function milestonePost(report, milestones) {
@@ -321,7 +322,7 @@ function milestonePost(report, milestones) {
 
 /**
  * @param {MilestoneReport} report
- * @param {MilestoneResponse} response
+ * @param {LiveMilestoneResponse} response
  */
 function reportComplete(report, response) {
   lastAjaxRequest = null;

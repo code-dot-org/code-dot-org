@@ -106,3 +106,29 @@ export function canvasToBlob(canvas) {
 export function dataURIToBlob(uri) {
   return imageFromURI(uri).then(canvasFromImage).then(canvasToBlob);
 }
+
+/**
+ * @param {string} image - base64 uri-encoded PNG image
+ * @param {function} callback
+ */
+export function loadFramedImage(image, callback) {
+  const dataURI = `data:image/png;base64,${decodeURIComponent(image)}`;
+  // Add the frame to the drawing.
+  dataURIToFramedBlob(dataURI, callback);
+}
+
+/**
+ * @param {string} image
+ * @param {string} preSignedUrl
+ * @param {function} [callback]
+ */
+export function tryToUploadLevelSourceImageToS3(image, preSignedUrl, callback) {
+  loadFramedImage(image, blob => {
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', preSignedUrl);
+    xhr.send(blob);
+    if (callback) {
+      callback(blob);
+    }
+  });
+}
