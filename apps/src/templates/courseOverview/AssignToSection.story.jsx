@@ -1,9 +1,9 @@
 import React from 'react';
-import AssignCourse from './AssignCourse';
+import AssignToSection from './AssignToSection';
 
 const defaultProps = {
   courseId: 30,
-  courseName: 'Computer Science Principles',
+  assignmentName: 'Computer Science Principles',
   sectionsInfo: [
     {
       id: 11,
@@ -26,12 +26,12 @@ const defaultProps = {
 
 export default storybook => {
   storybook
-    .storiesOf('AssignCourse', module)
+    .storiesOf('AssignToSection', module)
     .addStoryTable([
       {
-        name: 'AssignCourse dropdown',
+        name: 'AssignToSection dropdown',
         story: () => (
-          <AssignCourse
+          <AssignToSection
             {...defaultProps}
           />
         )

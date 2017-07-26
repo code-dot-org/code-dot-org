@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
-import AssignCourse from '@cdo/apps/templates/courseOverview/AssignCourse';
+import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 
 const styles = {
   buttonRow: {
@@ -72,10 +72,10 @@ const ScriptOverviewTopRow = React.createClass({
           </div>
         )}
         {!professionalLearningCourse && viewAs === ViewType.Teacher && (
-          <AssignCourse
+          <AssignToSection
             sectionsInfo={sectionsInfo}
             courseId={123}
-            courseName="TODO"
+            assignmentName="TODO"
           />
         )}
         <div style={isRtl ? styles.left : styles.right}>

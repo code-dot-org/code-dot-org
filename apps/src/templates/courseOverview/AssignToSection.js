@@ -6,7 +6,7 @@ import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import AssignCourseConfirm from './AssignCourseConfirm';
+import ConfirmAssignment from './ConfirmAssignment';
 
 const styles = {
   button: {
@@ -50,11 +50,10 @@ const styles = {
  * lets them assign the current course to any of those sections (after accepting
  * a confirmation dialog)
  */
-// TODO: rename and move file
-class AssignCourse extends Component {
+class AssignToSection extends Component {
   static propTypes = {
     courseId: PropTypes.number.isRequired,
-    courseName: PropTypes.string.isRequired,
+    assignmentName: PropTypes.string.isRequired,
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
@@ -138,7 +137,7 @@ class AssignCourse extends Component {
   }
 
   render() {
-    const { courseId, courseName, sectionsInfo } = this.props;
+    const { courseId, assignmentName, sectionsInfo } = this.props;
     const { dropdownOpen, sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
 
@@ -178,9 +177,9 @@ class AssignCourse extends Component {
           </div>
         )}
         {sectionIndexToAssign !== null && (
-          <AssignCourseConfirm
-            courseName={courseName}
+          <ConfirmAssignment
             sectionName={section.name}
+            assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.updateCourse}
           />
@@ -198,4 +197,4 @@ class AssignCourse extends Component {
   }
 }
 
-export default Radium(AssignCourse);
+export default Radium(AssignToSection);
