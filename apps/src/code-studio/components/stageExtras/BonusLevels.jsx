@@ -23,13 +23,13 @@ class BonusLevel extends React.Component {
   renderWithMazeThumbnail() {
     return (
       <div style={styles.bonusLevel}>
-        <CompletableLevelThumbnail
-          size={200}
-          completed={this.props.completed}
-        >
-          <MazeThumbnail {...this.props}/>
-        </CompletableLevelThumbnail>
         <a href={`?id=${this.props.id}`}>
+          <CompletableLevelThumbnail
+            size={200}
+            completed={this.props.completed}
+          >
+            <MazeThumbnail {...this.props}/>
+          </CompletableLevelThumbnail>
           <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
         </a>
       </div>
