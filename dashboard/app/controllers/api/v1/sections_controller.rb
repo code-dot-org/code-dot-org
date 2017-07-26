@@ -4,10 +4,12 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   load_and_authorize_resource except: [:join, :leave]
 
   rescue_from ActiveRecord::RecordNotFound do |e|
-    if e.model == "Section"
+    if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
       render json: {
-        result: "section_notfound"
+        result: 'section_notfound'
       }, status: :bad_request
+    else
+      head :forbidden
     end
   end
 
@@ -54,6 +56,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     end
 
     render json: section.summarize
+  end
+
+  # DELETE /api/v1/sections/<id>
+  # Delete a section
+  def destroy
+    @section.destroy
+    head :no_content
   end
 
   # POST /api/v1/sections/<id>/join

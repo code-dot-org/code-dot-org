@@ -37,6 +37,7 @@ get '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 
+# DEPRECATED: Use DELETE /dashboardapi/sections/<id> instead
 delete '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
