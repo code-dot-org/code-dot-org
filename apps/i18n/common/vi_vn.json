@@ -620,5 +620,12 @@
   "emailConfirmationTitle": "Please confirm your email",
   "none": "None",
   "projectTypeMinecraft": "Minecraft Designer",
-  "providerManagedSection": "This section is managed by {provider}. Add students there, then re-sync this section."
+  "providerManagedSection": "This section is managed by {provider}. Add students there, then re-sync this section.",
+  "sectionsNotificationFailure": "Couldn't join section",
+  "sectionsNotificationJoinExists": "You have already joined section {sectionName}.",
+  "sectionsNotificationJoinFail": "An error occurred attempting to join section {sectionId}.",
+  "sectionsNotificationJoinNotFound": "Section {sectionId} doesn't exist.",
+  "sectionsNotificationJoinSuccess": "You joined section {sectionName}.",
+  "sectionsNotificationLeaveSuccess": "You left section {sectionName}.",
+  "sectionsNotificationSuccess": "Success!"
 }
