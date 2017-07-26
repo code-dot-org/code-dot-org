@@ -106,7 +106,7 @@ content-type: text/ng-template
         %span{"ng-show" => "student.editing"}
           %select{"ng-model" => "student.gender", "ng-options"=>"k as v for (k,v) in gender_list"}
       %td
-        %span{"ng-if" => "section.login_type !== 'email'"}
+        %span{"ng-if" => "section.login_type === 'word' || section.login_type === 'picture'"}
           %button.btn.btn-white{"ng-click" => "student.showing_password = true",
                                 "ng-hide" => "student.editing || student.showing_password"}
             &#x25BC;
