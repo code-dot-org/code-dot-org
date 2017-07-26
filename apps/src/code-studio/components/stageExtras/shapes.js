@@ -7,4 +7,5 @@ export const bonusLevel = {
   skin: PropTypes.string,
   startDirection: PropTypes.number,
   type: PropTypes.string.isRequired,
+  completed: PropTypes.bool.isRequired,
 };
