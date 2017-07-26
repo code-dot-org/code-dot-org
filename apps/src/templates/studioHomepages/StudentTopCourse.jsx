@@ -7,7 +7,9 @@ import Button from '../Button';
 const styles = {
   card: {
     overflow: 'hidden',
-    border: '1px solid gray',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     position: 'relative',
     height: 200,
     width: styleConstants['content-width'],
@@ -39,7 +41,7 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 5,
     marginTop: 80,
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 1.5,
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
@@ -75,7 +77,7 @@ const StudentTopCourse = React.createClass({
     const { assignableName, lessonName, linkToOverview, linkToLesson } = this.props;
     return (
       <div style={styles.card}>
-        <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
+        <img src={require('@cdo/static/small_purple_icons_fullwidth.png')} style={styles.image}/>
         <div style={styles.name}>
           {i18n.topCourseWelcome({assignableName})}
         </div>

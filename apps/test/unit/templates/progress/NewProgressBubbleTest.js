@@ -176,7 +176,7 @@ describe('NewProgressBubble', () => {
         {...defaultProps}
       />
     );
-    assert.equal(wrapper.find('ReactTooltip div').text(), '<FontAwesome />1. level_name');
+    assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. level_name');
   });
 
   it('uses progression name when no name is specified', () => {
@@ -189,7 +189,7 @@ describe('NewProgressBubble', () => {
         }}
       />
     );
-    assert.equal(wrapper.find('ReactTooltip div').text(), '<FontAwesome />1. progression_name');
+    assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. progression_name');
   });
 
   it('renders a small bubble if smallBubble is true', () => {

@@ -68,6 +68,8 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
         ```
     1. close and reopen your current terminal window
     1. make sure that `ulimit -n` returns 8192
+1. install the Xcode Command Line Tools:
+    1. `xcode-select --install`
 
 ### Ubuntu 14.04
 
