@@ -136,10 +136,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test "join with valid section code twice" do
     student = create :student
     sign_in student
-    post :join, params: {id: @word_section.code}
+    post :join, params: {id: @section.code}
     assert_response :success
 
-    post :join, params: {id: @word_section.code}
+    post :join, params: {id: @section.code}
     assert_response :success
     json = JSON.parse(@response.body)
     assert_equal "exists", json['result']
