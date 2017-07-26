@@ -44,7 +44,7 @@ import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
-import {initializeContainedLevel} from './containedLevels';
+import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning} from './redux/runState';
@@ -860,6 +860,30 @@ StudioApp.prototype.playAudio = function (name, options) {
   var defaultOptions = {volume: 0.5};
   var newOptions = utils.extend(defaultOptions, options);
   Sounds.getSingleton().play(name, newOptions);
+};
+
+/**
+ * Play a win sound, unless there's a contained level. In that case, match
+ * the sound to the correctness of the answer to the contained level.
+ */
+StudioApp.prototype.playAudioOnWin = function () {
+  if (this.hasContainedLevels) {
+    this.playAudio(getValidatedResult() ? 'win' : 'failure');
+    return;
+  }
+  this.playAudio('win');
+};
+
+/**
+ * Play a failure sound, unless there's a contained level. In that case, match
+ * the sound to the correctness of the answer to the contained level.
+ */
+StudioApp.prototype.playAudioOnFailure = function () {
+  if (this.hasContainedLevels) {
+    this.playAudio(getValidatedResult() ? 'win' : 'failure');
+    return;
+  }
+  this.playAudio('failure');
 };
 
 /**
