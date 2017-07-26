@@ -48,14 +48,14 @@ describe('AssignCourse', () => {
       <AssignCourse {...defaultProps}/>
     );
     assert.strictEqual(wrapper.children().length, 1);
-    assert.strictEqual(wrapper.childAt(0).name(), 'ProgressButton');
+    assert.strictEqual(wrapper.childAt(0).name(), 'Button');
   });
 
   it('shows a new section option when clicked', () => {
     const wrapper = shallow(
       <AssignCourse {...defaultProps}/>
     );
-    wrapper.find('ProgressButton').simulate('click');
+    wrapper.find('Button').simulate('click');
     const newSectionLink = wrapper.find('a').at(0);
     assert.strictEqual(newSectionLink.props().href,
       '//test.code.org/teacher-dashboard?newSection=30#/sections');
@@ -66,7 +66,7 @@ describe('AssignCourse', () => {
     const wrapper = shallow(
       <AssignCourse {...defaultProps}/>
     );
-    wrapper.find('ProgressButton').simulate('click');
+    wrapper.find('Button').simulate('click');
     const sections = defaultProps.sectionsInfo;
     assert.strictEqual(wrapper.find('a').length, 1 + sections.length);
     sections.forEach((section, index) => {
@@ -79,7 +79,7 @@ describe('AssignCourse', () => {
     const wrapper = shallow(
       <AssignCourse {...defaultProps}/>
     );
-    wrapper.find('ProgressButton').simulate('click');
+    wrapper.find('Button').simulate('click');
     const firstSection = wrapper.find('a').at(1);
     assert.equal(firstSection.props()['data-section-index'], 0);
     // Enzyme simulate doesn't set target for us automatically, so we fake one.

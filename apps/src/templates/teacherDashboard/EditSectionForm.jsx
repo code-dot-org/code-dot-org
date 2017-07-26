@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import { connect } from 'react-redux';
 import {Heading1, h3Style} from "../../lib/ui/Headings";
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 import { sectionShape, assignmentShape } from './shapes';
 import DialogFooter from './DialogFooter';
@@ -152,17 +152,17 @@ class EditSectionForm extends Component{
           </div>
         </div>
         <DialogFooter>
-          <ProgressButton
+          <Button
             onClick={this.props.handleClose}
             text={i18n.dialogCancel()}
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.gray}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
           />
-          <ProgressButton
+          <Button
             onClick={this.props.handleSave}
             text={i18n.save()}
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.orange}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.orange}
           />
         </DialogFooter>
       </div>
