@@ -64,21 +64,12 @@ export const finishEditingSection = () => (dispatch, getState) => {
   // Map client sectionShape into server's expected params.
   // May go away if we resolve conflicts?
   const section = getState().teacherSections.sectionBeingEdited;
-  const params = {
-    ...section,
-    login_type: section.loginType,
-    stage_extras: section.stageExtras,
-    pairing_allowed: section.pairingAllowed,
-    course_id: section.courseId,
-    script: (section.scriptId ? {id: section.scriptId} : undefined),
-  };
-
   const creatingNewSection = section.id < 0;
   $.ajax({
     url: creatingNewSection ? '/v2/sections' : `/v2/sections/${section.id}/update`,
     method: 'POST',
     contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(params),
+    data: JSON.stringify(serverSectionFromSection(section)),
   }).done(result => {
     dispatch(updateSection(section.id, result));
     dispatch({type: EDIT_SECTION_SUCCESS});
@@ -372,6 +363,24 @@ export const sectionFromServerSection = serverSection => ({
   courseId: serverSection.course_id,
   scriptId: serverSection.script ? serverSection.script.id : null
 });
+
+/**
+ * Map from client sectionShape to well-formatted params for updating the
+ * section on the server via the sections API.
+ * @param {sectionShape} section
+ */
+function serverSectionFromSection(section) {
+  // Lazy: We leave some extra properties on this object (they're ignored by
+  // the server for now) hoping this can eventually become a pass-through.
+  return {
+    ...section,
+    login_type: section.loginType,
+    stage_extras: section.stageExtras,
+    pairing_allowed: section.pairingAllowed,
+    course_id: section.courseId,
+    script: (section.scriptId ? {id: section.scriptId} : undefined),
+  };
+}
 
 const assignmentsForSection = (validAssignments, section) => {
   const assignments = [];
