@@ -30,8 +30,8 @@ describe('PrintCertificates', () => {
   });
 
   it('has a submission button', () => {
-    assert.equal(wrapper.find('ProgressButton').length, 1);
-    assert.equal(wrapper.find('ProgressButton').props().text, 'Print certificates');
+    assert.equal(wrapper.find('Button').length, 1);
+    assert.equal(wrapper.find('Button').props().text, 'Print certificates');
   });
 
   it('loads student names', finish => {
@@ -53,6 +53,6 @@ describe('PrintCertificates', () => {
     };
 
     assert.deepEqual(wrapper.state('names'), []);
-    wrapper.find('ProgressButton').simulate('click');
+    wrapper.find('Button').simulate('click');
   });
 });
