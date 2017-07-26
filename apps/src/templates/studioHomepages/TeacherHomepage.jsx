@@ -72,6 +72,7 @@ const TeacherHomepage = React.createClass({
           isTeacher={true}
           canLeave={false}
           validScripts={validScripts}
+          teacherHomepage={true}
         />
         <RecentCourses
           courses={courses}
