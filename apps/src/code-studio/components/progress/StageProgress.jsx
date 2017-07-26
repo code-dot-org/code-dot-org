@@ -4,10 +4,10 @@ import _ from 'lodash';
 
 import experiments from '@cdo/apps/util/experiments';
 import { stageProgressShape } from './types';
-import StatusProgressDot from './StatusProgressDot.jsx';
+import StatusProgressDot from './StatusProgressDot';
 import color from "../../../util/color";
-import StageExtrasProgressDot from './StageExtrasProgressDot';
-import { levelsForLessonId } from '@cdo/apps/code-studio/progressRedux';
+import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
+import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
 import NewProgressBubble from '@cdo/apps/templates/progress/NewProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 
@@ -20,7 +20,7 @@ const styles = {
     paddingRight: 5,
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
-    borderRadius: 5
+    borderRadius: 5,
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
@@ -34,8 +34,6 @@ const styles = {
  */
 const StageProgress = React.createClass({
   propTypes: {
-    stageExtrasEnabled: PropTypes.bool,
-
     // redux provided
     levels: (...args) => {
       const fn = experiments.isEnabled('progressBubbles') ?
@@ -43,22 +41,20 @@ const StageProgress = React.createClass({
       return fn(...args);
     },
     stageId: PropTypes.number.isRequired,
-  },
-
-  shouldShowStageExtras() {
-    return this.props.stageExtrasEnabled &&
-      experiments.isEnabled('stageExtrasFlag');
+    stageExtrasUrl: PropTypes.string,
+    onStageExtras: PropTypes.bool,
   },
 
   render() {
-    const { levels, stageId } = this.props;
+    const { levels, stageId, stageExtrasUrl, onStageExtras } = this.props;
     const experimentEnabled = experiments.isEnabled('progressBubbles');
 
     const headerStyle = {
       ...styles.headerContainer,
       ...(experimentEnabled && {
         paddingTop: 0,
-        paddingBottom: 0
+        paddingBottom: 0,
+        height: 40,
       })
     };
 
@@ -86,8 +82,11 @@ const StageProgress = React.createClass({
             />
           </div>
         )}
-        {this.shouldShowStageExtras() &&
-          <StageExtrasProgressDot stageId={stageId} />
+        {stageExtrasUrl && experiments.isEnabled('stageExtras') &&
+          <StageExtrasProgressBubble
+            stageExtrasUrl={stageExtrasUrl}
+            onStageExtras={onStageExtras}
+          />
         }
       </div>
     );
@@ -111,6 +110,8 @@ export default connect(state => {
     // different form, the biggest difference being this level includes a status
     levels: experimentEnabled ? levelsForLessonId(state.progress, stageId) :
       currentStage.levels,
-    stageId
+    stageId,
+    stageExtrasUrl: stageExtrasUrl(state.progress, state.progress.currentStageId),
+    onStageExtras: state.progress.currentLevelId === 'stage_extras'
   };
 })(StageProgress);
