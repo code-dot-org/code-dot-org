@@ -56,6 +56,23 @@ export default storybook => storybook
         primaryAssignmentIds={[]}
         sections={{}}
         section={testSection}
+        isSaveInProgress={false}
+      />
+    );
+  })
+  .add('While save is in progress', () => {
+    return (
+      <EditSectionForm
+        title="Edit section details"
+        handleSave={storybook.action('handleSave')}
+        handleClose={storybook.action('handleClose')}
+        editSectionProperties={storybook.action('editSectionProperties')}
+        validGrades={['K', '1', '2', '3']}
+        validAssignments={validAssignments}
+        primaryAssignmentIds={[]}
+        sections={{}}
+        section={testSection}
+        isSaveInProgress={true}
       />
     );
   });
