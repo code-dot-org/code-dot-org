@@ -183,11 +183,13 @@ class User < ActiveRecord::Base
   validates_presence_of :school_info, unless: :school_info_optional?
 
   after_create :associate_with_potential_pd_enrollments
-  after_create :send_new_teacher_email, if: :teacher?
 
-  def send_new_teacher_email
-    TeacherMailer.new_teacher_email(self).deliver_now if teacher?
-  end
+  # after_create :send_new_teacher_email
+  # def send_new_teacher_email
+  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
+  # flag, we send the email from the controller instead. This should ultimately live here, though.
+  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
+  # end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
