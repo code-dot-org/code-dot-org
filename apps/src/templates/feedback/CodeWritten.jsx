@@ -33,15 +33,14 @@ export default Radium(React.createClass({
   },
 
   render() {
-
     const lines = (
-    <p
-      id="num-lines-of-code"
-      className="lines-of-code-message"
-      style={this.props.useChallengeStyles ? styles.challengeLineCounts : null}
-    >
-      {msg.numLinesOfCodeWritten({ numLines: this.props.numLinesWritten })}
-    </p>);
+      <p
+        id="num-lines-of-code"
+        className="lines-of-code-message"
+        style={this.props.useChallengeStyles ? styles.challengeLineCounts : null}
+      >
+        {msg.numLinesOfCodeWritten({ numLines: this.props.numLinesWritten })}
+      </p>);
 
     let totalLines;
     if (this.props.totalNumLinesWritten !== 0) {
@@ -70,8 +69,7 @@ export default Radium(React.createClass({
           <b>{msg.showGeneratedCode()}</b>
         </summary>
         {this.props.children}
-      </details>
-    );
+      </details>);
 
     return (
       <div>

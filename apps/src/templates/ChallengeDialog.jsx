@@ -4,11 +4,12 @@ import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Radium from 'radium';
 import React from 'react';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
+import color from '../util/color';
 
 const styles = {
   dialog: {
     top: '20%',
-    border: '5px solid #75699b',
+    border: `5px solid ${color.purple}`,
     borderRadius: 10,
   },
   banner: {
@@ -24,7 +25,7 @@ const styles = {
     backgroundPositionY: -16,
   },
   content: {
-    color: '#75699b',
+    color: color.purple,
     position: 'relative',
     textAlign: 'center',
     marginBottom: 30,
@@ -39,7 +40,7 @@ const styles = {
     position: 'absolute',
     bottom: 0,
     color: '#fff',
-    backgroundColor: '#75699b',
+    backgroundColor: color.purple,
     border: '3px solid white',
     minWidth: '50%',
     left: '25%',
