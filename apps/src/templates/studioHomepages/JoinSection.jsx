@@ -10,7 +10,6 @@ const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    height: 72,
     width: styleConstants['content-width'],
     backgroundColor: color.white,
     marginTop: 20,
@@ -24,7 +23,7 @@ const styles = {
   },
   heading: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     letterSpacing: -0.2,
     marginTop: 16,
@@ -33,9 +32,9 @@ const styles = {
   },
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 12,
+    fontSize: 14,
     lineHeight: 2.5,
-    marginBottom: 16,
+    marginBottom: 6,
     color: color.charcoal,
   },
   wordBox: {
@@ -45,6 +44,11 @@ const styles = {
     float: 'left',
     borderWidth: 1,
     borderColor: 'red'
+  },
+  actionBox: {
+    float: 'right',
+    // Right-align with buttons in SectionTable & courses Notification.
+    marginRight: 21
   },
   inputBox: {
     float: 'left',
@@ -57,9 +61,11 @@ const styles = {
   button: {
     float: 'left',
     marginTop: 15,
-    marginLeft: 20,
-    marginRight: 25
+    marginLeft: 20
   },
+  clear: {
+    clear: 'both'
+  }
 };
 
 const JoinSection = React.createClass({
@@ -108,21 +114,24 @@ const JoinSection = React.createClass({
             {i18n.joinSectionDescription()}
           </div>
         </div>
-        <input
-          type="text"
-          name="sectionCode"
-          value={this.state.sectionCode}
-          onChange={this.handleChange}
-          onKeyUp={this.handleKeyUp}
-          style={styles.inputBox}
-          placeholder={i18n.joinSectionPlaceholder()}
-        />
-        <ProgressButton
-          onClick={this.joinSection}
-          color={ProgressButton.ButtonColor.gray}
-          text={i18n.joinSection()}
-          style={styles.button}
-        />
+        <div style={styles.actionBox}>
+          <input
+            type="text"
+            name="sectionCode"
+            value={this.state.sectionCode}
+            onChange={this.handleChange}
+            onKeyUp={this.handleKeyUp}
+            style={styles.inputBox}
+            placeholder={i18n.joinSectionPlaceholder()}
+          />
+          <ProgressButton
+            onClick={this.joinSection}
+            color={ProgressButton.ButtonColor.gray}
+            text={i18n.joinSection()}
+            style={styles.button}
+          />
+        </div>
+        <div style={styles.clear}/>
       </div>
     );
   }
