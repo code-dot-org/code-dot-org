@@ -9,8 +9,8 @@ function generateFakePersonalProjects() {
     {
       name: "Personal " + i,
       updatedAt: new Date(date.getTime() - i * 60 * 1000).toISOString(),
-      type: 'gamelab',
-      channel: 'abcd'
+      projectType: 'gamelab',
+      id: 'abcd'
     }
   ));
   return personalProjects;
