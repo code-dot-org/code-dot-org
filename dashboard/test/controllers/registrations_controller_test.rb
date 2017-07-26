@@ -143,6 +143,27 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
+  test "create new teacher sends email" do
+    teacher_params = @default_params.update(user_type: 'teacher')
+    assert_creates(User) do
+      request.cookies[:pm] = 'send_new_teacher_email'
+      post :create, params: {user: teacher_params}
+    end
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal 'Welcome to Code.org!', mail.subject
+    assert mail.body.to_s =~ /Hadi Partovi/
+  end
+
+  test "create new student does not send email" do
+    student_params = @default_params
+
+    assert_creates(User) do
+      post :create, params: {user: student_params}
+    end
+    assert ActionMailer::Base.deliveries.empty?
+  end
+
   test "create as student requires email" do
     @default_params.delete(:email)
 
