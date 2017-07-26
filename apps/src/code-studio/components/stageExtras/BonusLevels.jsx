@@ -1,23 +1,27 @@
 import React from 'react';
 import MazeThumbnail from './MazeThumbnail';
+import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
+import { bonusLevel } from './shapes';
 
-const bonusLevel = {
-  id: React.PropTypes.number.isRequired,
-  map: React.PropTypes.array,
-  name: React.PropTypes.string.isRequired,
-  skin: React.PropTypes.string,
-  startDirection: React.PropTypes.number,
-  type: React.PropTypes.string.isRequired,
+const styles = {
+  bonusLevel: {
+    width: 200,
+    textAlign: 'center',
+    marginRight: 10,
+    float: 'left',
+  },
 };
 
 class BonusLevel extends React.Component {
-  static propTypes = bonusLevel
+  static propTypes = bonusLevel;
 
   renderWithMazeThumbnail() {
     return (
-      <div className="span3 offset1 text-center">
-        <MazeThumbnail {...this.props} scale={0.6} />
+      <div style={styles.bonusLevel}>
+        <CompletableLevelThumbnail size={200}>
+          <MazeThumbnail {...this.props}/>
+        </CompletableLevelThumbnail>
         <a href={`?id=${this.props.id}`}>
           <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
         </a>
