@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from "../progress/ProgressButton";
+import Button from "../Button";
 import {connect} from 'react-redux';
 import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
@@ -162,17 +162,17 @@ const ProjectAppTypeArea = React.createClass({
       <div style={{float: "right", marginRight: 22}}>
         {
           showViewMore &&
-          <ProgressButton
+          <Button
             onClick={this.loadMore}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             icon="plus-circle"
             text="View more"
             style={{marginRight: 20}}
           />
         }
-        <ProgressButton
+        <Button
           href="#top"
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           icon="chevron-circle-up"
           text="Back to top"
         />

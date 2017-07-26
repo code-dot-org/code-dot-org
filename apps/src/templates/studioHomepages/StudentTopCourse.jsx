@@ -2,7 +2,7 @@ import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 const styles = {
   card: {
@@ -90,14 +90,14 @@ const StudentTopCourse = React.createClass({
           </div>
         </div>
         <div style={styles.buttonBox}>
-          <ProgressButton
+          <Button
             href={linkToOverview}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={i18n.viewCourse()}
           />
-          <ProgressButton
+          <Button
             href={linkToLesson}
-            color={ProgressButton.ButtonColor.orange}
+            color={Button.ButtonColor.orange}
             text={i18n.continueLesson()}
             style={styles.lessonButton}
           />

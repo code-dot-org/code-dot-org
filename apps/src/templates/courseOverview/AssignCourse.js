@@ -4,7 +4,7 @@ import Radium from 'radium';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import AssignCourseConfirm from './AssignCourseConfirm';
 
@@ -141,14 +141,14 @@ class AssignCourse extends Component {
 
     return (
       <div>
-        <ProgressButton
+        <Button
           ref={element => this.button = element}
           text={i18n.assignCourse()}
           style={styles.button}
           onClick={this.onClickDropdown}
           icon={dropdownOpen ? "caret-up" : "caret-down"}
           iconStyle={styles.icon}
-          color={ProgressButton.ButtonColor.orange}
+          color={Button.ButtonColor.orange}
         />
 
         {dropdownOpen && (
