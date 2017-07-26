@@ -7,7 +7,7 @@ export default storybook => storybook
   .add('Basic options', () => {
     experiments.setEnabled('googleClassroom', false);
     experiments.setEnabled('microsoftClassroom', false);
-    experiments.setEnabled('clever', false);
+    experiments.setEnabled('cleverClassroom', false);
     return (
       <LoginTypePicker
         title="New section"
@@ -19,7 +19,7 @@ export default storybook => storybook
   .add('All options', () => {
     experiments.setEnabled('googleClassroom', true);
     experiments.setEnabled('microsoftClassroom', true);
-    experiments.setEnabled('clever', true);
+    experiments.setEnabled('cleverClassroom', true);
     return (
       <LoginTypePicker
         title="New section"
