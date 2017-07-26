@@ -3,6 +3,8 @@ import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import ProgressButton from "../progress/ProgressButton";
+import experiments from '@cdo/apps/util/experiments';
+import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 
 const styles = {
   section: {
@@ -61,6 +63,18 @@ const SetUpMessage = React.createClass({
     isTeacher: React.PropTypes.bool.isRequired,
   },
 
+  getInitialState() {
+    return {addSectionDialogOpen: false};
+  },
+
+  addSection(){
+    this.setState({addSectionDialogOpen: true});
+  },
+
+  handleCloseAddSectionDialogs(){
+    this.setState({addSectionDialogOpen: false});
+  },
+
   render() {
     const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
     const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
@@ -99,11 +113,26 @@ const SetUpMessage = React.createClass({
           <div style={isRtl ? styles.rtlDescription : styles.description}>
             {i18n.createNewClassroom()}
           </div>
+          {!experiments.isEnabled('section-flow-2017') &&
+            <ProgressButton
+              href={sectionsUrl}
+              color={ProgressButton.ButtonColor.gray}
+              text={i18n.createSection()}
+              style={isRtl ? styles.rtlButton : styles.button}
+            />
+          }
+          {experiments.isEnabled('section-flow-2017') &&
           <ProgressButton
-            href={sectionsUrl}
+            className="uitest-newsection"
+            text={i18n.newSection()}
+            style={styles.button}
+            onClick={this.addSection}
             color={ProgressButton.ButtonColor.gray}
-            text={i18n.createSection()}
-            style={isRtl ? styles.rtlButton : styles.button}
+          />
+          }
+          <AddSectionDialog
+            isOpen={this.state.addSectionDialogOpen}
+            handleClose={this.handleCloseAddSectionDialogs}
           />
         </div>
       );

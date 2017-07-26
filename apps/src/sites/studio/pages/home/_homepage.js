@@ -8,8 +8,8 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import teacherSections from '../../../../templates/teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
+import teacherSections, {setValidGrades} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 $(document).ready(showHomepage);
 
@@ -23,6 +23,9 @@ function showHomepage() {
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
   registerReducers({teacherSections, oauthClassroom});
+  const store = getStore();
+
+  store.dispatch(setValidGrades(homepageData.valid_grades));
 
   ReactDOM.render (
     <Provider store={getStore()}>
