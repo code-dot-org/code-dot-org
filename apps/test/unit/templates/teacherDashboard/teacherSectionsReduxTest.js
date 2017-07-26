@@ -655,11 +655,29 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(beginEditingNewSection());
       server.respondWith('POST', '/v2/sections', failureResponse);
 
-      store.dispatch(finishEditingSection());
+      store.dispatch(finishEditingSection()).catch(() => {});
       expect(state().saveInProgress).to.be.true;
 
       server.respond();
       expect(state().saveInProgress).to.be.false;
+    });
+
+    it('resolves a returned promise when the server responds with success', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', successResponse());
+
+      const promise = store.dispatch(finishEditingSection());
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('rejects a returned promise when the server responds with failure', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', failureResponse);
+
+      const promise = store.dispatch(finishEditingSection());
+      server.respond();
+      return expect(promise).to.be.rejected;
     });
 
     it('clears sectionBeingEdited after the server responds with success', () => {
@@ -679,7 +697,7 @@ describe('teacherSectionsRedux', () => {
       expect(originalSectionBeingEdited).not.to.be.null;
       server.respondWith('POST', '/v2/sections', failureResponse);
 
-      store.dispatch(finishEditingSection());
+      store.dispatch(finishEditingSection()).catch(() => {});
       expect(state().sectionBeingEdited).to.equal(originalSectionBeingEdited);
 
       server.respond();
@@ -745,7 +763,7 @@ describe('teacherSectionsRedux', () => {
       server.respondWith('POST', '/v2/sections', failureResponse);
       const originalSections = state().sections;
 
-      store.dispatch(finishEditingSection());
+      store.dispatch(finishEditingSection()).catch(() => {});
       server.respond();
       expect(state().sections).to.equal(originalSections);
     });

@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
-import i18n from '@cdo/locale';
 
 // The only properties that can be updated by the user when creating
 // or editing a section.
@@ -62,22 +61,22 @@ export const editSectionProperties = props => ({ type: EDIT_SECTION_PROPERTIES, 
 export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
 export const finishEditingSection = () => (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
-  // Map client sectionShape into server's expected params.
-  // May go away if we resolve conflicts?
-  const section = getState().teacherSections.sectionBeingEdited;
-  const creatingNewSection = section.id < 0;
-  $.ajax({
-    url: creatingNewSection ? '/v2/sections' : `/v2/sections/${section.id}/update`,
-    method: 'POST',
-    contentType: 'application/json;charset=UTF-8',
-    data: JSON.stringify(serverSectionFromSection(section)),
-  }).done(result => {
-    dispatch(updateSection(section.id, result));
-    dispatch({type: EDIT_SECTION_SUCCESS});
-  }).fail((jqXhr, status) => {
-    alert(i18n.unexpectedError());
-    console.error(status);
-    dispatch({type: EDIT_SECTION_FAILURE});
+  const state = getState().teacherSections;
+  const section = state.sectionBeingEdited;
+  return new Promise((resolve, reject) => {
+    $.ajax({
+      url: isAddingSection(state) ? '/v2/sections' : `/v2/sections/${section.id}/update`,
+      method: 'POST',
+      contentType: 'application/json;charset=UTF-8',
+      data: JSON.stringify(serverSectionFromSection(section)),
+    }).done(result => {
+      dispatch(updateSection(section.id, result));
+      dispatch({type: EDIT_SECTION_SUCCESS});
+      resolve();
+    }).fail((jqXhr, status) => {
+      dispatch({type: EDIT_SECTION_FAILURE});
+      reject(status);
+    });
   });
 };
 
