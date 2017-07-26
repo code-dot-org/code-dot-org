@@ -305,7 +305,7 @@ class ScriptLevel < ActiveRecord::Base
       map: JSON.parse(level.try(:maze) || '[]'),
       skin: level.try(:skin),
       start_direction: level.try(:start_direction).to_i,
-      completed: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
+      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
     }.camelize_keys
   end
 
