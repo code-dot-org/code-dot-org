@@ -1,14 +1,14 @@
 import React, {Component, PropTypes} from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
 import PadAndCenter from './PadAndCenter';
-import i18n from '@cdo/locale';
 import {sectionShape} from './shapes';
 import {isAddingSection} from './teacherSectionsRedux';
 
-export class AddSectionDialog extends Component {
+class AddSectionDialog extends Component {
   static propTypes = {
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
@@ -23,17 +23,13 @@ export class AddSectionDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         fixedWidth={1010}
+        assetUrl={() => ''}
         isOpen={isOpen}
         uncloseable
-        assetUrl={() => ''}
       >
         <PadAndCenter>
-          {!loginType && /* First page */
-            <LoginTypePicker title={title}/>
-          }
-          {loginType && /* Second page */
-            <EditSectionForm title={title}/>
-          }
+          {!loginType && <LoginTypePicker title={title}/>}
+          {loginType && <EditSectionForm title={title}/>}
         </PadAndCenter>
       </BaseDialog>
     );
