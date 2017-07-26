@@ -1,5 +1,8 @@
 import React, {PropTypes} from 'react';
 
+/**
+ * A simple component for centering content within a dialog.
+ */
 const PadAndCenter = ({children}) => (
   <div
     style={{

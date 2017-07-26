@@ -22,12 +22,17 @@ const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
-// New section flow actions
+/** Opens section edit UI, might load existing section info */
 const EDIT_SECTION_BEGIN = 'teacherDashboard/EDIT_SECTION_BEGIN';
+/** Makes staged changes to section being edited */
 const EDIT_SECTION_PROPERTIES = 'teacherDashboard/EDIT_SECTION_PROPERTIES';
+/** Abandons changes to section being edited, closes UI */
 const EDIT_SECTION_CANCEL = 'teacherDashboard/EDIT_SECTION_CANCEL';
+/** Reports server request has started */
 const EDIT_SECTION_REQUEST = 'teacherDashboard/EDIT_SECTION_REQUEST';
+/** Reports server request has succeeded */
 const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
+/** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
@@ -54,11 +59,33 @@ export const updateSection = (sectionId, serverSection) => ({
 export const newSection = (courseId=null) => ({ type: NEW_SECTION, courseId });
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
-// New section flow actions
-export const beginEditingNewSection = () => ({ type: EDIT_SECTION_BEGIN, sectionId: null });
+/**
+ * Opens the UI for adding a new section.
+ */
+export const beginEditingNewSection = () => ({type: EDIT_SECTION_BEGIN});
+
+/**
+ * Opens the UI for editing the specified section.
+ * @param {number} sectionId
+ */
 export const beginEditingSection = sectionId => ({ type: EDIT_SECTION_BEGIN, sectionId });
+
+/**
+ * Make staged changes to the section currently being edited.
+ * @param {object} props - set of section properties of update.
+ * @throws if not currently editing, or if trying to set an invalid prop.
+ */
 export const editSectionProperties = props => ({ type: EDIT_SECTION_PROPERTIES, props });
+
+/**
+ * Close the UI for adding/editing a section, abandoning changes.
+ */
 export const cancelEditingSection = () => ({ type: EDIT_SECTION_CANCEL });
+
+/**
+ * Submit staged section changes to the server.
+ * Closes UI and updates section table on success.
+ */
 export const finishEditingSection = () => (dispatch, getState) => {
   dispatch({type: EDIT_SECTION_REQUEST});
   const state = getState().teacherSections;

@@ -30,6 +30,9 @@ const style = {
   }
 };
 
+/**
+ * UI for editing section details: Name, grade, assigned course, etc.
+ */
 class EditSectionForm extends Component{
   static propTypes = {
     title: PropTypes.string.isRequired,

@@ -8,6 +8,10 @@ import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
 import {isAddingSection} from './teacherSectionsRedux';
 
+/**
+ * UI for a teacher to add a new class section.  For editing a section see
+ * EditSectionDialog.
+ */
 class AddSectionDialog extends Component {
   static propTypes = {
     // Provided by Redux
