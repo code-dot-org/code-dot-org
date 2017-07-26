@@ -30,7 +30,7 @@ content-type: text/ng-template
             %label
               .section-title.selection= I18n.t('dashboard_sections_move_to_section')
               %select{ "ng-model" => "selectedSectionCode" }
-                %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id}", value: "{{section.code}}"}
+                %option{"ng-repeat" => "section in sections | filter: {id: '!' + currentSection.id} | filter: teacher_managed_section", value: "{{section.code}}"}
                   {{section.name}}
                 %option{value: "{{otherTeacher}}"}
                   = I18n.t('dashboard_sections_other_section')
