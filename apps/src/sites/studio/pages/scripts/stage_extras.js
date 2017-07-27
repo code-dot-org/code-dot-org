@@ -7,7 +7,6 @@ const config = JSON.parse(script.dataset.extras);
 const showProjectWidget = JSON.parse(script.dataset.widgetVisible);
 const projectTypes = JSON.parse(script.dataset.widgetTypes);
 
-// Get project data if showing the project widget.
 ReactDOM.render(
   <StageExtras
     stageNumber={config.stageNumber}

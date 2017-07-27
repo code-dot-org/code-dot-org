@@ -1,6 +1,5 @@
 import React from 'react';
 import StageExtras from './StageExtras';
-import {generateFakePersonalProjects} from '@cdo/apps/templates/projects/generateFakePersonalProjects';
 
 export default storybook => {
   storybook
@@ -51,7 +50,6 @@ export default storybook => {
             },
           ]}
           showProjectWidget={true}
-          projectList={generateFakePersonalProjects(5)}
           projectTypes={['artist', 'playlab']}
         />
       )
