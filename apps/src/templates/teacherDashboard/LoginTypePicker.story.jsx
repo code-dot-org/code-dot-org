@@ -1,6 +1,6 @@
 import React from 'react';
 import experiments from '../../util/experiments';
-import LoginTypePicker from './LoginTypePicker';
+import {UnconnectedLoginTypePicker as LoginTypePicker} from './LoginTypePicker';
 
 export default storybook => storybook
   .storiesOf('LoginTypePicker', module)
@@ -11,7 +11,7 @@ export default storybook => storybook
     return (
       <LoginTypePicker
         title="New section"
-        handleLoginChoice={storybook.action('handleLoginChoice')}
+        setLoginType={storybook.action('setLoginType')}
         handleCancel={storybook.action('handleCancel')}
       />
     );
@@ -23,7 +23,7 @@ export default storybook => storybook
     return (
       <LoginTypePicker
         title="New section"
-        handleLoginChoice={storybook.action('handleLoginChoice')}
+        setLoginType={storybook.action('setLoginType')}
         handleCancel={storybook.action('handleCancel')}
       />
     );
