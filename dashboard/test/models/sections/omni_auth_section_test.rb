@@ -19,6 +19,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
       owner_id: owner.id,
       students: students,
     )
+    section.reload
     assert_equal 'G-222222', section.code
     assert_equal User.from_omniauth(students.first, {}), section.students.first
 
