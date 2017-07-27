@@ -4,8 +4,14 @@ import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
+import Button from '@cdo/apps/templates/Button';
+import {
+  setSections,
+  setValidAssignments,
+  newSection,
+  beginEditingNewSection,
+  beginEditingSection,
+} from './teacherSectionsRedux';
 import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import i18n from '@cdo/locale';
@@ -17,6 +23,7 @@ const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
+const SECTION_FLOW_2017_KEY = 'section-flow-2017';
 
 const styles = {
   breadcrumb: {
@@ -38,6 +45,7 @@ class SectionsPage extends Component {
     // redux provided
     numSections: PropTypes.number.isRequired,
     studioUrl: PropTypes.string.isRequired,
+    provider: PropTypes.string,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     newSection: PropTypes.func.isRequired,
@@ -45,21 +53,18 @@ class SectionsPage extends Component {
     setValidAssignments: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
+    beginEditingNewSection: PropTypes.func.isRequired,
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   state = {
     sectionsLoaded: false,
     rosterDialogOpen: false,
-    addSectionDialogOpen: false,
-    editSectionDialogOpen: false,
   };
 
   componentWillMount() {
-    if (experiments.isEnabled('googleClassroom')) {
-      this.provider = OAuthSectionTypes.google_classroom;
-    }
-    if (experiments.isEnabled('cleverClassroom')) {
-      this.provider = OAuthSectionTypes.clever;
+    if (experiments.isEnabled('importClassroom')) {
+      this.provider = this.props.provider;
     }
   }
 
@@ -110,22 +115,17 @@ class SectionsPage extends Component {
     });
   };
 
-  handleCloseAddSectionDialogs = () => {
-    this.setState({addSectionDialogOpen: false});
-  };
-
   addSection = () => {
-    if (experiments.isEnabled('section-flow-2017')) {
-      this.setState({addSectionDialogOpen: true});
+    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+      this.props.beginEditingNewSection();
     } else {
       return this.props.newSection();
     }
   };
 
-  handleEditRequest = (section) => {
-    if (experiments.isEnabled('section-flow-2017')) {
-      this.setState({editSectionDialogOpen : true});
-      this.editor.getWrappedInstance().updateStates(section);
+  handleEditRequest = section => {
+    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+      this.props.beginEditingSection(section.id);
     }
   };
 
@@ -133,8 +133,9 @@ class SectionsPage extends Component {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
 
-    const showGoogleClassroom = experiments.isEnabled('googleClassroom');
-    const showCleverClassroom = experiments.isEnabled('cleverClassroom');
+    const newSectionFlow = experiments.isEnabled('section-flow-2017');
+    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
+    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
       <div>
         <div style={styles.breadcrumb}>
@@ -147,28 +148,28 @@ class SectionsPage extends Component {
           </b>
         </div>
         {sectionsLoaded &&
-          <ProgressButton
+          <Button
             className="uitest-newsection"
             text={i18n.newSection()}
             style={styles.button}
             onClick={this.addSection}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && showGoogleClassroom &&
-          <ProgressButton
+          <Button
             text={i18n.importFromGoogleClassroom()}
             style={styles.button}
             onClick={this.handleImportOpen}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && showCleverClassroom &&
-          <ProgressButton
+          <Button
             text={i18n.importFromClever()}
             style={styles.button}
             onClick={this.handleImportOpen}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && numSections === 0 &&
@@ -186,15 +187,8 @@ class SectionsPage extends Component {
           studioUrl={this.props.studioUrl}
           provider={this.provider}
         />
-        <AddSectionDialog
-          isOpen={this.state.addSectionDialogOpen}
-          handleClose={this.handleCloseAddSectionDialogs}
-        />
-        <EditSectionDialog
-          ref = {(element) => this.editor = element}
-          isOpen={this.state.editSectionDialogOpen}
-          handleClose={() => this.setState({editSectionDialogOpen: false})}
-        />
+        <AddSectionDialog handleImportOpen={this.handleImportOpen}/>
+        <EditSectionDialog/>
       </div>
     );
   }
@@ -204,6 +198,15 @@ export const UnconnectedSectionsPage = SectionsPage;
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
   studioUrl: state.teacherSections.studioUrl,
+  provider: state.teacherSections.provider,
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
-}), { newSection, setSections, setValidAssignments, loadClassroomList, importClassroomStarted })(SectionsPage);
+}), {
+  newSection,
+  beginEditingNewSection,
+  beginEditingSection,
+  setSections,
+  setValidAssignments,
+  loadClassroomList,
+  importClassroomStarted,
+})(SectionsPage);

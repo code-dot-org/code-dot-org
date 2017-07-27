@@ -198,7 +198,7 @@ class CourseTest < ActiveSupport::TestCase
     assert_equal csp.id, csp_assign_info[:id]
     assert_equal 'csp', csp_assign_info[:script_name]
     assert_equal 0, csp_assign_info[:position]
-    assert_equal(-1, csp_assign_info[:category_priority])
+    assert_equal(0, csp_assign_info[:category_priority])
 
     # has localized name, category
     assert_equal 'Computer Science Principles', csp_assign_info[:name]

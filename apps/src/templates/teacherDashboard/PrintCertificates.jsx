@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
 
@@ -35,10 +35,10 @@ export default class PrintCertificates extends Component {
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
-        <ProgressButton
+        <Button
           text={i18n.printCertificates()}
           onClick={this.onClickPrintCerts}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
         />
       </form>
     );

@@ -23,6 +23,7 @@ import * as utils from './utils';
 import AbuseError from './code-studio/components/abuse_error';
 import Alert from './templates/alert';
 import AuthoredHints from './authoredHints';
+import ChallengeDialog from './templates/ChallengeDialog';
 import DialogButtons from './templates/DialogButtons';
 import DialogInstructions from './templates/instructions/DialogInstructions';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
@@ -34,6 +35,7 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './templates/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
+import experiments from './util/experiments';
 import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -217,6 +219,10 @@ StudioApp.prototype.configure = function (options) {
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
   this.usingBlockly_ = !this.editCode;
+  if (options.report &&
+      options.report.fallback_response) {
+    this.skipUrl = options.report.fallback_response.success.redirect;
+  }
 
   // TODO (bbuchanan) : Replace this editorless-hack with setting an editor enum
   // or (even better) inject an appropriate editor-adaptor.
@@ -509,6 +515,25 @@ StudioApp.prototype.init = function (config) {
   }
 
   initializeContainedLevel();
+
+  if (experiments.isEnabled('challengeDialog') && config.isChallengeLevel) {
+    const startDialogDiv = document.createElement('div');
+    document.body.appendChild(startDialogDiv);
+    ReactDOM.render(
+      <ChallengeDialog
+        isOpen={true}
+        assetUrl={this.assetUrl}
+        avatar={this.icon}
+        handleCancel={() => {
+          window.location.href = this.skipUrl;
+        }}
+        cancelButtonLabel={msg.challengeLevelSkip()}
+        primaryButtonLabel={msg.challengeLevelStart()}
+        text={msg.challengeLevelIntro()}
+        title={msg.challengeLevelTitle()}
+      />,
+      startDialogDiv);
+  }
 
   this.emit('afterInit');
 };
@@ -2757,6 +2782,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
     isDroplet: !!level.editCode,
     isBlockly: this.isUsingBlockly(),
     hideSource: !!config.hideSource,
+    isChallengeLevel: !!config.isChallengeLevel,
     isEmbedView: !!config.embed,
     isResponsive: this.isResponsiveFromConfig(config),
     isShareView: !!config.share,

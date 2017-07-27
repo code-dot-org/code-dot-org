@@ -5,27 +5,46 @@
  * external service like Microsoft Classroom or Clever.
  */
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import experiments from '../../util/experiments';
 import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
 import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
-import ProgressButton from "../progress/ProgressButton";
+import Button from "../Button";
+import {
+  cancelEditingSection,
+  editSectionProperties,
+} from './teacherSectionsRedux';
+import {OAuthSectionTypes} from "./shapes";
 
+/**
+ * UI for selecting the login type of a class section:
+ * Word, picture, or email logins, or one of several third-party integrations.
+ */
 class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    handleLoginChoice: PropTypes.func.isRequired,
+    handleImportOpen: PropTypes.func.isRequired,
+    // Provided by Redux
+    provider: PropTypes.string,
+    setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
   };
 
+  openImportDialog = () => {
+    this.props.handleCancel(); // close this dialog
+    this.props.handleImportOpen(); // open the roster dialog
+  };
+
   render() {
-    const {title, handleLoginChoice, handleCancel} = this.props;
-    const googleClassroom = experiments.isEnabled('googleClassroom');
-    const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
-    const clever = experiments.isEnabled('clever');
-    const anyThirdParty = googleClassroom || microsoftClassroom || clever;
+    const {title, provider, setLoginType, handleCancel} = this.props;
+    const withGoogle = provider === OAuthSectionTypes.google_classroom;
+    const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
+    const withClever = provider === OAuthSectionTypes.clever;
+    const anyImportOptions = experiments.isEnabled('importClassroom') &&
+      (withGoogle || withMicrosoft || withClever);
 
     return (
       <div>
@@ -35,56 +54,50 @@ class LoginTypePicker extends Component {
         <Heading2>
           {i18n.addStudentsToSectionInstructions()}
         </Heading2>
-        {anyThirdParty && (
+        {anyImportOptions && (
           <Heading3>
             {i18n.addStudentsManageMyOwn()}
           </Heading3>
         )}
         <CardContainer>
-          <PictureLoginCard
-            onClick={handleLoginChoice}
-          />
-          <WordLoginCard
-            onClick={handleLoginChoice}
-          />
-          <EmailLoginCard
-            onClick={handleLoginChoice}
-          />
+          <PictureLoginCard onClick={setLoginType}/>
+          <WordLoginCard onClick={setLoginType}/>
+          <EmailLoginCard onClick={setLoginType}/>
         </CardContainer>
-        {anyThirdParty && (
+        {anyImportOptions && (
           <div>
             <Heading3>
               {i18n.addStudentsSyncThirdParty()}
             </Heading3>
             <CardContainer>
-              {googleClassroom &&
-              <GoogleClassroomCard
-                onClick={handleLoginChoice}
-              />}
-              {microsoftClassroom &&
-              <MicrosoftClassroomCard
-                onClick={handleLoginChoice}
-              />}
-              {clever &&
-              <CleverCard
-                onClick={handleLoginChoice}
-              />}
+              {withGoogle &&
+                <GoogleClassroomCard onClick={this.openImportDialog}/>}
+              {withMicrosoft &&
+                <MicrosoftClassroomCard onClick={this.openImportDialog}/>}
+              {withClever &&
+                <CleverCard onClick={this.openImportDialog}/>}
             </CardContainer>
           </div>
         )}
         <DialogFooter>
-          <ProgressButton
+          <Button
             onClick={handleCancel}
             text="Cancel"
-            size={ProgressButton.ButtonSize.large}
-            color={ProgressButton.ButtonColor.gray}
+            size={Button.ButtonSize.large}
+            color={Button.ButtonColor.gray}
           />
         </DialogFooter>
       </div>
     );
   }
 }
-export default LoginTypePicker;
+export const UnconnectedLoginTypePicker = LoginTypePicker;
+export default connect(state => ({
+  provider: state.teacherSections.provider,
+}), dispatch => ({
+  setLoginType: loginType => dispatch(editSectionProperties({loginType})),
+  handleCancel: () => dispatch(cancelEditingSection()),
+}))(LoginTypePicker);
 
 const PictureLoginCard = (props) => (
   <LoginTypeCard

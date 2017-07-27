@@ -11,6 +11,7 @@ var BaseDialog = React.createClass({
     isOpen: React.PropTypes.bool,
     handleClose: React.PropTypes.func,
     uncloseable: React.PropTypes.bool,
+    hideCloseButton: React.PropTypes.bool,
     handleKeyDown: React.PropTypes.func,
     hideBackdrop: React.PropTypes.bool,
     fullWidth: React.PropTypes.bool,
@@ -20,6 +21,7 @@ var BaseDialog = React.createClass({
     assetUrl: React.PropTypes.func,
     fixedWidth: React.PropTypes.number,
     fixedHeight: React.PropTypes.number,
+    style: React.PropTypes.object,
   },
 
   componentDidMount: function () {
@@ -111,6 +113,7 @@ var BaseDialog = React.createClass({
       modalBodyClassNames = "modal-body dash_modal_body";
       modalBackdropClassNames = "modal-backdrop in";
     }
+    bodyStyle = { ...bodyStyle, ...this.props.style };
     let body = (
       <div
         style={bodyStyle}
@@ -120,7 +123,7 @@ var BaseDialog = React.createClass({
         onKeyDown={this.handleKeyDown}
       >
         <div style={modalBodyStyle} className={modalBodyClassNames}>
-          {!this.props.uncloseable && (this.props.useUpdatedStyles ?
+          {!this.props.uncloseable && !this.props.hideCloseButton && (this.props.useUpdatedStyles ?
             <i className="fa fa-times" style={xCloseStyle} onClick={this.closeDialog}/> :
             <div id="x-close" className="x-close" onClick={this.closeDialog}></div>
           )}
