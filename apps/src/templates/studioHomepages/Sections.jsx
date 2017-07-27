@@ -86,59 +86,69 @@ const Sections = React.createClass({
           isRtl={isRtl}
           description={enrollmentDescription}
         >
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "success" && (
-          <JoinSectionSuccessNotification sectionName={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "leave" && this.state.sectionsResult === "success" && (
-          <LeaveSectionSuccessNotification sectionName={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "section_notfound" && (
-          <JoinSectionNotFoundNotification sectionId={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "fail" && (
-          <JoinSectionFailNotification sectionId={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "exists" && (
-          <JoinSectionExistsNotification sectionName={this.state.sectionsResultName}/>
-        )}
-        {isTeacher && sections.length > 0 && (
-          <SectionsPage
-            validScripts={this.props.validScripts}
+          <SectionNotifications
+            action={this.state.sectionsAction}
+            result={this.state.sectionsResult}
+            nameOrId={this.state.sectionsResultName}
           />
-        )}
-        {isTeacher && sections.length === 0 && (
-          <SetUpMessage
-            type="sections"
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-          />
-        )}
-        {!isTeacher && sections.length > 0 && (
-          <SectionsTable
-            sections={sections}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-            canLeave={canLeave}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-        {!isTeacher && (
-          <JoinSection
-            enrolledInASection={enrolledInASection}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-      </ContentContainer>
-    </div>
+          {isTeacher && sections.length > 0 && (
+            <SectionsPage
+              validScripts={this.props.validScripts}
+            />
+          )}
+          {isTeacher && sections.length === 0 && (
+            <SetUpMessage
+              type="sections"
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+            />
+          )}
+          {!isTeacher && sections.length > 0 && (
+            <SectionsTable
+              sections={sections}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+              canLeave={canLeave}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+          {!isTeacher && (
+            <JoinSection
+              enrolledInASection={enrolledInASection}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+        </ContentContainer>
+      </div>
     );
   }
 });
 export default connect(state => ({}), {setValidAssignments, setSections})(Sections);
 
-  const JoinSectionSuccessNotification = React.createClass({
+const SectionNotifications = ({action, result, nameOrId}) => {
+  if (action === 'join' && result === 'success') {
+    return <JoinSectionSuccessNotification sectionName={nameOrId}/>;
+  } else if (action === 'leave' && result === 'success') {
+    return <LeaveSectionSuccessNotification sectionName={nameOrId}/>;
+  } else if (action === 'join' && result === 'section_notfound') {
+    return <JoinSectionNotFoundNotification sectionId={nameOrId}/>;
+  } else if (action === 'join' && result === 'fail') {
+    return <JoinSectionFailNotification sectionId={nameOrId}/>;
+  } else if (action === 'join' && result === 'exists') {
+    return <JoinSectionExistsNotification sectionName={nameOrId}/>;
+  }
+  return null;
+};
+SectionNotifications.propTypes = {
+  action: PropTypes.string,
+  result: PropTypes.string,
+  nameOrId: PropTypes.string,
+};
+
+const JoinSectionSuccessNotification = React.createClass({
   propTypes: {sectionName: PropTypes.string.isRequired},
   render() {
     return (
