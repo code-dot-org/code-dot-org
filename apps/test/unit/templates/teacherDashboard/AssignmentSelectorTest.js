@@ -1,7 +1,8 @@
-import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import { assert, expect } from '../../../util/configuredChai';
+import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -272,4 +273,65 @@ describe('AssignmentSelector', () => {
     });
   });
 
+  describe('the onChange prop', () => {
+    let wrapper, spy;
+
+    beforeEach(() => {
+      spy = sinon.spy();
+      wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          onChange={spy}
+        />
+      );
+    });
+
+    it(`doesn't get called during construction`, () => {
+      expect(spy).not.to.have.been.called;
+    });
+
+    it('gets called when primary dropdown changes', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      expect(spy).to.have.been.calledOnce
+        .and.to.have.been.calledWith({
+          courseId: 29,
+          scriptId: null,
+        });
+    });
+
+    it('gets called when secondary dropdown changes', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      spy.reset();
+      wrapper.find('select').at(1).simulate('change', {target: {value: 'null_168'}});
+      expect(spy).to.have.been.calledOnce
+        .and.to.have.been.calledWith({
+        courseId: 29,
+        scriptId: 168,
+      });
+    });
+  });
+
+  describe('the disabled prop', () => {
+    let wrapper;
+
+    beforeEach(() => {
+      wrapper = shallow(
+        <AssignmentSelector
+          {...defaultProps}
+          disabled
+        />
+      );
+    });
+
+    it('disables the primary dropdown', () => {
+      const firstDropdown = wrapper.find('select').at(0);
+      expect(firstDropdown).to.have.prop('disabled', true);
+    });
+
+    it('disables the secondary dropdown', () => {
+      wrapper.find('select').at(0).simulate('change', {target: {value: '29_null'}});
+      const secondDropdown = wrapper.find('select').at(1);
+      expect(secondDropdown).to.have.prop('disabled', true);
+    });
+  });
 });
