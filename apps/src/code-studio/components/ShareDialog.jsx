@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
@@ -6,6 +7,7 @@ import SendToPhone from './SendToPhone';
 import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
+import { hideShareDialog } from './shareDialogRedux';
 
 function select(event) {
   event.target.select();
@@ -293,4 +295,9 @@ var ShareDialog = React.createClass({
     );
   }
 });
-module.exports = ShareDialog;
+
+export default connect(state => ({
+  isOpen: state.shareDialog.isOpen,
+}), dispatch => ({
+  onClose: () => dispatch(hideShareDialog()),
+}))(ShareDialog);
