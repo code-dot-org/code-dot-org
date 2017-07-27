@@ -1,0 +1,8 @@
+name 'csp-pre-survey-2017-q11'
+question 'I think computer science is interesting. '
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
