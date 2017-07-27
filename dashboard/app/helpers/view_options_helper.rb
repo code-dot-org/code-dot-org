@@ -14,6 +14,7 @@ module ViewOptionsHelper
     :is_external_project_level,
     :is_channel_backed,
     :is_legacy_share,
+    :is_challenge_level,
     :post_milestone,
     :post_final_milestone,
     :puzzle_ratings_url,

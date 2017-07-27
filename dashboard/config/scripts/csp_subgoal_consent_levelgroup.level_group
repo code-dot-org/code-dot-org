@@ -4,6 +4,6 @@ submittable 'true'
 anonymous 'false'
 
 page
+text 'csp_subgoal_labels_consent_intro'
 level 'csp_subgoal_experiment_consent'
-text 'csp_subgoal_experiment_thanks'
 

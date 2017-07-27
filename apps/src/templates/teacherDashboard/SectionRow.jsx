@@ -193,6 +193,7 @@ class SectionRow extends Component {
     if (experiments.isEnabled('section-flow-2017')) {
       const section = this.props.sections[this.props.sectionId];
       const editData = {
+        id: this.props.sectionId,
         name: section.name,
         grade: section.grade,
         course: section.course_id,
@@ -285,6 +286,7 @@ class SectionRow extends Component {
     const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
+    const editingLoginType = editing && !section.providerManaged;
 
     let sectionCode = '';
     if (!editing) {
@@ -317,8 +319,8 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.col}>
-          {!editing && section.loginType}
-          {editing && (
+          {!editingLoginType && section.loginType}
+          {editingLoginType && (
             <select
               defaultValue={section.loginType}
               ref={element => this.loginType = element}

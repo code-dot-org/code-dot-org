@@ -17,7 +17,7 @@ const styles = {
   },
   check: {
     fontSize: 350,
-    lineHeight: `400px`,
+    lineHeight: '400px',
     color: '#fff',
     opacity: 0.8,
   },
@@ -38,6 +38,7 @@ export default class CompletableLevelThumbnail extends React.Component {
           width: this.props.size,
           height: this.props.size,
           display: 'inline-block',
+          overflow: 'hidden',
         }}
       >
         <div
