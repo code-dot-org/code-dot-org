@@ -93,7 +93,10 @@ class ApiController < ApplicationController
 
   def user_menu
     @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-    render partial: 'shared/user_header'
+    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
+    user_type = request.cookies[cookie_key]
+    sign_in_user = user_type && OpenStruct.new(short_name: 'User', can_pair?: false)
+    render partial: 'shared/user_header', locals: {current_user: sign_in_user}
   end
 
   def user_hero
