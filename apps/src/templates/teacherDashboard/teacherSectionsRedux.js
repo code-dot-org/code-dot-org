@@ -5,6 +5,7 @@ const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
+const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
@@ -13,6 +14,7 @@ const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
+export const setOAuthProvider = provider => ({ type: SET_OAUTH_PROVIDER, provider });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
   validCourses,
@@ -53,6 +55,13 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       studioUrl: action.studioUrl
+    };
+  }
+
+  if (action.type === SET_OAUTH_PROVIDER) {
+    return {
+      ...state,
+      provider: action.provider
     };
   }
 
