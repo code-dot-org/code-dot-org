@@ -273,6 +273,10 @@ Maze.init = function (config) {
     // Load wall sounds.
     studioApp().loadAudio(skin.wallSound, 'wall');
 
+    if (skin.walkSound) {
+      studioApp().loadAudio(skin.walkSound, 'walk');
+    }
+
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
@@ -287,13 +291,7 @@ Maze.init = function (config) {
       studioApp().loadAudio(skin.fillSound, 'fill');
       studioApp().loadAudio(skin.digSound, 'dig');
     }
-    if (skin.harvestSound) {
-      studioApp().loadAudio(skin.harvestSound, 'harvest');
-    }
-    if (skin.beeSound) {
-      studioApp().loadAudio(skin.nectarSound, 'nectar');
-      studioApp().loadAudio(skin.honeySound, 'honey');
-    }
+    Maze.subtype.loadAudio(skin);
   };
 
   config.afterInject = function () {
@@ -1176,6 +1174,8 @@ function scheduleMove(endX, endY, timeForAnimation) {
         skin.goalIdle);
     }
   }
+
+  studioApp().playAudio('walk');
 }
 
 
@@ -1487,7 +1487,7 @@ var scheduleDirtChange = function (options) {
   var previousValue = Maze.map.getValue(row, col) || 0;
 
   Maze.map.setValue(row, col, previousValue + options.amount);
-  Maze.subtype.drawer.updateItemImage(row, col, true);
+  Maze.subtype.scheduleDirtChange(row, col);
   studioApp().playAudio(options.sound);
 };
 

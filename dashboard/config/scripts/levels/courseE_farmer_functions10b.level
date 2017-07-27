@@ -28,11 +28,11 @@
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
     "ideal": "14",
-    "markdown_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
+    "markdown_instructions": "Use your new function twice to solve this puzzle.",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
-    "instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
+    "instructions": "Use your new function twice to solve this puzzle.",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
@@ -41,7 +41,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 18:02:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:24:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 00:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:11:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:15:15 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:16:10 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:17:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 18:02:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:24:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 00:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:11:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:15:15 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:16:10 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:17:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:25:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:07:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -63,7 +63,7 @@
           <block type="harvester_lettuce"/>
         </category>
         <category name="Loops">
-          <block type="harvester_untilAtPumpkin"/>
+          <block type="harvester_untilHasPumpkin"/>
           <block type="harvester_whileHasCrop">
             <title name="LOC">Corn</title>
           </block>
@@ -82,7 +82,7 @@
           <block type="harvester_ifHasCrop">
             <title name="LOC">Corn</title>
           </block>
-          <block type="harvester_untilAtPumpkin"/>
+          <block type="harvester_untilHasPumpkin"/>
           <block type="harvester_whileHasCrop">
             <title name="LOC">Corn</title>
           </block>
@@ -119,7 +119,7 @@
           <mutation/>
           <title name="NAME">navigate</title>
           <statement name="STACK">
-            <block type="harvester_untilAtPumpkin">
+            <block type="harvester_untilHasPumpkin">
               <statement name="DO">
                 <block type="maze_untilBlocked">
                   <statement name="DO">

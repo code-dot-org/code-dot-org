@@ -32,7 +32,7 @@ const EditTableListRow = React.createClass({
             body="Do you really want to delete this entire table? You cannot undo this action."
             buttonText="Delete"
             containerStyle={{whiteSpace: 'normal', width: 103}}
-            onConfirm={this.handleDelete}
+            onConfirmDelete={this.handleDelete}
           />
         </td>
       </tr>

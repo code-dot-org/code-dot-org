@@ -5,6 +5,7 @@ import styleConstants from '../../styleConstants';
 import ProgressButton from "../progress/ProgressButton";
 import experiments from '@cdo/apps/util/experiments';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
+import Button from "../Button";
 
 const styles = {
   section: {
@@ -95,9 +96,9 @@ const SetUpMessage = React.createClass({
               {i18n.setupCoursesStudent()}
             </div>
           )}
-          <ProgressButton
+          <Button
             href="/courses"
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={i18n.findCourse()}
             style={isRtl ? styles.rtlButton : styles.button}
           />
@@ -114,21 +115,21 @@ const SetUpMessage = React.createClass({
             {i18n.createNewClassroom()}
           </div>
           {!experiments.isEnabled('section-flow-2017') &&
-            <ProgressButton
+            <Button
               href={sectionsUrl}
-              color={ProgressButton.ButtonColor.gray}
+              color={Button.ButtonColor.gray}
               text={i18n.createSection()}
               style={isRtl ? styles.rtlButton : styles.button}
             />
           }
           {experiments.isEnabled('section-flow-2017') &&
-          <ProgressButton
-            className="uitest-newsection"
-            text={i18n.newSection()}
-            style={styles.button}
-            onClick={this.addSection}
-            color={ProgressButton.ButtonColor.gray}
-          />
+            <ProgressButton
+              className="uitest-newsection"
+              text={i18n.newSection()}
+              style={styles.button}
+              onClick={this.addSection}
+              color={ProgressButton.ButtonColor.gray}
+            />
           }
           <AddSectionDialog
             isOpen={this.state.addSectionDialogOpen}

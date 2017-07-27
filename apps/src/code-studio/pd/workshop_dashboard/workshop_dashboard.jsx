@@ -16,6 +16,7 @@ import Workshop from './workshop';
 import Header from './header';
 import SurveyResults from './survey_results.jsx';
 import OrganizerSurveyResults from './organizer_survey_results.jsx';
+import LocalSummerWorkshopSurveyResults from './local_summer_workshop_survey_results';
 import WorkshopIndex from './workshop_index';
 import WorkshopFilter from './workshop_filter';
 import WorkshopAttendance from './attendance/workshop_attendance';
@@ -54,6 +55,11 @@ const WorkshopDashboard = (
         path="organizer_survey_results(/:workshopId)"
         breadcrumbs="Organizer Survey Results"
         component={OrganizerSurveyResults}
+      />
+      <Route
+        path="local_summer_workshop_survey_results(/:workshopId)"
+        breadcrumbs="Local Summer Workshop Survey Results"
+        component={LocalSummerWorkshopSurveyResults}
       />
       <Route
         path="workshops/new"

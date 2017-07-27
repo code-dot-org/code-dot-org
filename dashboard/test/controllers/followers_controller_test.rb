@@ -129,6 +129,19 @@ class FollowersControllerTest < ActionController::TestCase
     )
   end
 
+  test 'student_user_new errors when joining a provider_managed section' do
+    sign_in @student
+    section = CleverSection.from_service('1234', @chris.id, [])
+
+    assert_no_difference('Follower.count') do
+      get :student_user_new, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/'
+    expected = I18n.t('follower.error.provider_managed_section', provider: 'Clever')
+    assert_equal(expected, flash[:alert])
+  end
+
   test "student_user_new does not allow joining your own section" do
     sign_in @chris
 

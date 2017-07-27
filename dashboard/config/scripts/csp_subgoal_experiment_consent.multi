@@ -1,0 +1,12 @@
+name 'csp_subgoal_experiment_consent'
+
+right 'Yes, I agree! I want to participate in the subgoal labels study.'
+right 'No Thanks.'
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

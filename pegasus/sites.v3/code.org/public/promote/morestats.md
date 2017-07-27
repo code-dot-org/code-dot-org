@@ -24,6 +24,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 ### Diversity
 
+* [Does Making CS "Count" Make a Difference?] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407) 
 * Girls set AP Computer Science record: [skyrocketing growth](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) outpaces boys 
 * 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04) 
 * Students who learn computer science in high school are   [6 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to major in it. Women: 10x more likely
