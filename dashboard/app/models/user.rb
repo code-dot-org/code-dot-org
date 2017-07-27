@@ -1063,8 +1063,8 @@ class User < ActiveRecord::Base
 
     course_data = courses.map do |course|
       {
-        id: course[:name],
-        name: data_t_suffix('course.name', course[:name], 'title'),
+        name: course[:name],
+        title: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
       }
@@ -1074,8 +1074,8 @@ class User < ActiveRecord::Base
       script_id = user_script[:script_id]
       script = Script.get_from_cache(script_id)
       {
-        id: script[:name],
-        name: data_t_suffix('script.name', script[:name], 'title'),
+        name: script[:name],
+        title: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
       }
