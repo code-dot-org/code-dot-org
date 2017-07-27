@@ -159,6 +159,7 @@ class EditSectionForm extends Component{
             color={ProgressButton.ButtonColor.gray}
           />
           <ProgressButton
+            className="uitest-saveButton"
             onClick={this.props.handleSave}
             text={i18n.save()}
             size={ProgressButton.ButtonSize.large}
