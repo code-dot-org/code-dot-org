@@ -35,27 +35,17 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
 
   def index
-    if request.cookies['pm'] == 'student_homepage'
-      redirect_to '/home'
-    else
-      redirect_to '/courses'
-    end
+    redirect_to '/home'
   end
 
-  # Show /home for teachers.  (And for students if cookie set appropriately.)
-  #
+  # Signed in: render home page
   # Signed out: redirect to code.org
-  # Signed in teacher or have student_homepage cookie: render this page
-  # Signed in student: redirect to studio.code.org/courses
-
   def home
-    if !current_user
-      redirect_to CDO.code_org_url
-    elsif current_user.teacher? || request.cookies['pm'] == 'student_homepage'
+    if current_user
       init_homepage
       render 'home/index'
     else
-      redirect_to '/courses'
+      redirect_to CDO.code_org_url
     end
   end
 
