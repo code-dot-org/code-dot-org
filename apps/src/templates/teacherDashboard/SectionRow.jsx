@@ -193,6 +193,7 @@ class SectionRow extends Component {
     if (experiments.isEnabled('section-flow-2017')) {
       const section = this.props.sections[this.props.sectionId];
       const editData = {
+        id: this.props.sectionId,
         name: section.name,
         grade: section.grade,
         course: section.course_id,
