@@ -7,7 +7,7 @@ import SendToPhone from './SendToPhone';
 import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
-import { hideShareDialog } from './shareDialogRedux';
+import { hideShareDialog, unpublishProject } from './shareDialogRedux';
 import { showPublishDialog } from '../../templates/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/publishDialog/PublishDialog';
 import i18n from '@cdo/locale';
@@ -312,6 +312,13 @@ export default connect(state => ({
     } else {
       dispatch(hideShareDialog());
       dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
+    }
+  },
+  onUnpublish() {
+    if (ownProps.onUnpublish) {
+      ownProps.onUnpublish();
+    } else {
+      dispatch(unpublishProject(ownProps.channelId));
     }
   },
 }))(ShareDialog);

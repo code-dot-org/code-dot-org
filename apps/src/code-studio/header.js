@@ -10,10 +10,7 @@ import progress from './progress';
 import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
-import {
-  showShareDialog,
-  unpublishProject as unpublishProjectAction,
-} from './components/shareDialogRedux';
+import { showShareDialog } from './components/shareDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -189,7 +186,6 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
-          onUnpublish={unpublishProject}
           canShareSocial={canShareSocial}
         />
       </Provider>,
@@ -197,12 +193,6 @@ function shareProject() {
     );
 
     getStore().dispatch(showShareDialog());
-  });
-}
-
-function unpublishProject(projectId) {
-  getStore().dispatch(unpublishProjectAction(projectId)).then(() => {
-    window.dashboard.project.setPublishedAt(null);
   });
 }
 
@@ -220,6 +210,16 @@ function setupReduxSubscribers(store) {
         state.publishDialog.lastPublishedAt
     ) {
       window.dashboard.project.setPublishedAt(state.publishDialog.lastPublishedAt);
+    }
+
+    // Update the project state when a ShareDialog state transition indicates
+    // that a project has just been unpublished.
+    if (
+      lastState.shareDialog &&
+      !lastState.shareDialog.didUnpublish &&
+      state.shareDialog.didUnpublish
+    ) {
+      window.dashboard.project.setPublishedAt(null);
     }
   });
 }
