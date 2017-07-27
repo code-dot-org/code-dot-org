@@ -2,6 +2,8 @@ import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import reducer, {
+  USER_EDITABLE_SECTION_PROPS,
+  PENDING_NEW_SECTION_ID,
   setStudioUrl,
   setValidLoginTypes,
   setValidGrades,
@@ -461,7 +463,7 @@ describe('teacherSectionsRedux', () => {
       assert.isNull(initialState.sectionBeingEdited);
       const state = reducer(initialState, beginEditingNewSection());
       assert.deepEqual(state.sectionBeingEdited, {
-        id: -1,
+        id: PENDING_NEW_SECTION_ID,
         name: '',
         loginType: undefined,
         grade: '',
@@ -511,15 +513,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     // Enumerate user-editable section properties
-    [
-      'name',
-      'loginType',
-      'stageExtras',
-      'pairingAllowed',
-      'courseId',
-      'scriptId',
-      'grade',
-    ].forEach(editableProp => {
+    USER_EDITABLE_SECTION_PROPS.forEach(editableProp => {
       it(`allows editing ${editableProp}`, () => {
         const state = reducer(
           editingNewSectionState,
