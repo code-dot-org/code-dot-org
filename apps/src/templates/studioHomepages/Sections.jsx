@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import SetUpMessage from './SetUpMessage';
 import JoinSection from './JoinSection';
@@ -13,16 +13,16 @@ const sectionsApiPath = '/dashboardapi/sections/';
 
 const Sections = React.createClass({
   propTypes: {
-    sections: React.PropTypes.array,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
-    canLeave: React.PropTypes.bool.isRequired,
-    validScripts: React.PropTypes.array,
+    sections: PropTypes.array,
+    codeOrgUrlPrefix: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
+    canLeave: PropTypes.bool.isRequired,
+    validScripts: PropTypes.array,
 
     //Redux provided
-    setSections: React.PropTypes.func.isRequired,
-    setValidAssignments: React.PropTypes.func.isRequired,
+    setSections: PropTypes.func.isRequired,
+    setValidAssignments: PropTypes.func.isRequired,
   },
 
   componentDidMount(){
@@ -139,7 +139,7 @@ const Sections = React.createClass({
 export default connect(state => ({}), {setValidAssignments, setSections})(Sections);
 
   const JoinSectionSuccessNotification = React.createClass({
-  propTypes: {sectionName: React.PropTypes.string.isRequired},
+  propTypes: {sectionName: PropTypes.string.isRequired},
   render() {
     return (
       <Notification
@@ -153,7 +153,7 @@ export default connect(state => ({}), {setValidAssignments, setSections})(Sectio
 });
 
 const LeaveSectionSuccessNotification = React.createClass({
-  propTypes: {sectionName: React.PropTypes.string.isRequired},
+  propTypes: {sectionName: PropTypes.string.isRequired},
   render() {
     return (
       <Notification
@@ -167,7 +167,7 @@ const LeaveSectionSuccessNotification = React.createClass({
 });
 
 const JoinSectionNotFoundNotification = React.createClass({
-  propTypes: {sectionId: React.PropTypes.string.isRequired},
+  propTypes: {sectionId: PropTypes.string.isRequired},
   render() {
     return (
       <Notification
@@ -181,7 +181,7 @@ const JoinSectionNotFoundNotification = React.createClass({
 });
 
 const JoinSectionFailNotification = React.createClass({
-  propTypes: {sectionId: React.PropTypes.string.isRequired},
+  propTypes: {sectionId: PropTypes.string.isRequired},
   render() {
     return (
       <Notification
@@ -195,7 +195,7 @@ const JoinSectionFailNotification = React.createClass({
 });
 
 const JoinSectionExistsNotification = React.createClass({
-  propTypes: {sectionName: React.PropTypes.string.isRequired},
+  propTypes: {sectionName: PropTypes.string.isRequired},
   render() {
     return (
       <Notification
