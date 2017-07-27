@@ -15,13 +15,14 @@ const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
 const initialState = {
   isOpen: false,
   isUnpublishPending: false,
+  didUnpublish: false,
 };
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_SHARE_DIALOG:
       return {
-        ...state,
+        ...initialState,
         isOpen: true,
       };
     case HIDE_SHARE_DIALOG:
@@ -32,7 +33,10 @@ export default function reducer(state = initialState, action) {
         isUnpublishPending: true,
       };
     case UNPUBLISH_SUCCESS:
-      return initialState;
+      return {
+        ...initialState,
+        didUnpublish: true,
+      };
     case UNPUBLISH_FAILURE:
       return {
         ...state,
