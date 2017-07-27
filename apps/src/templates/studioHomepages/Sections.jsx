@@ -101,9 +101,17 @@ const Sections = React.createClass({
         {this.state.sectionsAction === "join" && this.state.sectionsResult === "exists" && (
           <JoinSectionExistsNotification sectionName={this.state.sectionsResultName}/>
         )}
-        {isTeacher && sections.length === 0 && (
+        {isTeacher && sections.length > 0 && (
           <SectionsPage
             validScripts={this.props.validScripts}
+          />
+        )}
+        {isTeacher && sections.length === 0 && (
+          <SetUpMessage
+            type="sections"
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
+            isTeacher={isTeacher}
           />
         )}
         {!isTeacher && sections.length > 0 && (
@@ -114,14 +122,6 @@ const Sections = React.createClass({
             canLeave={canLeave}
             updateSections={this.updateSections}
             updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-        {sections.length === 0 && isTeacher && (
-          <SetUpMessage
-            type="sections"
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
           />
         )}
         {!isTeacher && (
