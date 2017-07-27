@@ -112,7 +112,18 @@ describe('SectionRow', () => {
       assert.equal(col.text(), 'word');
     });
 
-    it('has a dropdown when editing', () => {
+    it('has text when editing provider-managed section', () => {
+      const wrapper = shallow(
+        <SectionRow
+          {...defaultProps}
+          sectionId={12}
+        />
+      );
+      const col = wrapper.find('td').at(1);
+      assert.equal(col.text(), 'google_classroom');
+    });
+
+    it('has a dropdown when editing non-provider-managed section', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
       );

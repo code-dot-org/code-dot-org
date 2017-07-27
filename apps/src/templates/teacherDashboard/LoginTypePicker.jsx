@@ -5,6 +5,7 @@
  * external service like Microsoft Classroom or Clever.
  */
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import experiments from '../../util/experiments';
 import {Heading1, Heading2, Heading3} from '../../lib/ui/Headings';
@@ -12,16 +13,25 @@ import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import Button from "../Button";
+import {
+  cancelEditingSection,
+  editSectionProperties,
+} from './teacherSectionsRedux';
 
+/**
+ * UI for selecting the login type of a class section:
+ * Word, picture, or email logins, or one of several third-party integrations.
+ */
 class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    handleLoginChoice: PropTypes.func.isRequired,
+    // Provided by Redux
+    setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
   };
 
   render() {
-    const {title, handleLoginChoice, handleCancel} = this.props;
+    const {title, setLoginType, handleCancel} = this.props;
     const googleClassroom = experiments.isEnabled('googleClassroom');
     const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
     const clever = experiments.isEnabled('clever');
@@ -41,15 +51,9 @@ class LoginTypePicker extends Component {
           </Heading3>
         )}
         <CardContainer>
-          <PictureLoginCard
-            onClick={handleLoginChoice}
-          />
-          <WordLoginCard
-            onClick={handleLoginChoice}
-          />
-          <EmailLoginCard
-            onClick={handleLoginChoice}
-          />
+          <PictureLoginCard onClick={setLoginType}/>
+          <WordLoginCard onClick={setLoginType}/>
+          <EmailLoginCard onClick={setLoginType}/>
         </CardContainer>
         {anyThirdParty && (
           <div>
@@ -58,17 +62,11 @@ class LoginTypePicker extends Component {
             </Heading3>
             <CardContainer>
               {googleClassroom &&
-              <GoogleClassroomCard
-                onClick={handleLoginChoice}
-              />}
+                <GoogleClassroomCard onClick={setLoginType}/>}
               {microsoftClassroom &&
-              <MicrosoftClassroomCard
-                onClick={handleLoginChoice}
-              />}
+                <MicrosoftClassroomCard onClick={setLoginType}/>}
               {clever &&
-              <CleverCard
-                onClick={handleLoginChoice}
-              />}
+                <CleverCard onClick={setLoginType}/>}
             </CardContainer>
           </div>
         )}
@@ -84,7 +82,11 @@ class LoginTypePicker extends Component {
     );
   }
 }
-export default LoginTypePicker;
+export const UnconnectedLoginTypePicker = LoginTypePicker;
+export default connect(undefined, dispatch => ({
+  setLoginType: loginType => dispatch(editSectionProperties({loginType})),
+  handleCancel: () => dispatch(cancelEditingSection()),
+}))(LoginTypePicker);
 
 const PictureLoginCard = (props) => (
   <LoginTypeCard
