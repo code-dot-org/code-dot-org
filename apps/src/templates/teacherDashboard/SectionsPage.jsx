@@ -4,8 +4,14 @@ import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import { setSections, setValidAssignments, newSection } from './teacherSectionsRedux';
+import Button from '@cdo/apps/templates/Button';
+import {
+  setSections,
+  setValidAssignments,
+  newSection,
+  beginEditingNewSection,
+  beginEditingSection,
+} from './teacherSectionsRedux';
 import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import i18n from '@cdo/locale';
@@ -17,6 +23,7 @@ const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
+const SECTION_FLOW_2017_KEY = 'section-flow-2017';
 
 const styles = {
   breadcrumb: {
@@ -45,13 +52,13 @@ class SectionsPage extends Component {
     setValidAssignments: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
+    beginEditingNewSection: PropTypes.func.isRequired,
+    beginEditingSection: PropTypes.func.isRequired,
   };
 
   state = {
     sectionsLoaded: false,
     rosterDialogOpen: false,
-    addSectionDialogOpen: false,
-    editSectionDialogOpen: false,
   };
 
   componentWillMount() {
@@ -110,22 +117,19 @@ class SectionsPage extends Component {
     });
   };
 
-  handleCloseAddSectionDialogs = () => {
-    this.setState({addSectionDialogOpen: false});
-  };
-
   addSection = () => {
-    if (experiments.isEnabled('section-flow-2017')) {
-      this.setState({addSectionDialogOpen: true});
+    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+      this.props.beginEditingNewSection();
     } else {
       return this.props.newSection();
     }
   };
 
-  handleEditRequest = (section) => {
-    this.setState({editSectionDialogOpen : true});
-    this.editer.getWrappedInstance().updateStates(section);
-  }
+  handleEditRequest = section => {
+    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+      this.props.beginEditingSection(section.id);
+    }
+  };
 
   render() {
     const { numSections } = this.props;
@@ -145,28 +149,28 @@ class SectionsPage extends Component {
           </b>
         </div>
         {sectionsLoaded &&
-          <ProgressButton
+          <Button
             className="uitest-newsection"
             text={i18n.newSection()}
             style={styles.button}
             onClick={this.addSection}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && showGoogleClassroom &&
-          <ProgressButton
+          <Button
             text={i18n.importFromGoogleClassroom()}
             style={styles.button}
             onClick={this.handleImportOpen}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && showCleverClassroom &&
-          <ProgressButton
+          <Button
             text={i18n.importFromClever()}
             style={styles.button}
             onClick={this.handleImportOpen}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         }
         {sectionsLoaded && numSections === 0 &&
@@ -184,15 +188,8 @@ class SectionsPage extends Component {
           studioUrl={this.props.studioUrl}
           provider={this.provider}
         />
-        <AddSectionDialog
-          isOpen={this.state.addSectionDialogOpen}
-          handleClose={this.handleCloseAddSectionDialogs}
-        />
-        <EditSectionDialog
-          ref = {(element) => this.editer = element}
-          isOpen={this.state.editSectionDialogOpen}
-          handleClose={() => this.setState({editSectionDialogOpen: false})}
-        />
+        <AddSectionDialog/>
+        <EditSectionDialog/>
       </div>
     );
   }
@@ -204,4 +201,12 @@ export default connect(state => ({
   studioUrl: state.teacherSections.studioUrl,
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
-}), { newSection, setSections, setValidAssignments, loadClassroomList, importClassroomStarted })(SectionsPage);
+}), {
+  newSection,
+  beginEditingNewSection,
+  beginEditingSection,
+  setSections,
+  setValidAssignments,
+  loadClassroomList,
+  importClassroomStarted,
+})(SectionsPage);

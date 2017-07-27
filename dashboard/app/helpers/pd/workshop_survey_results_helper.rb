@@ -1,4 +1,40 @@
 module Pd::WorkshopSurveyResultsHelper
+  MULTIPLE_CHOICE_FIELDS_IN_SUMMARY = [
+    :how_much_learned,
+    :how_motivating,
+    :how_clearly_presented,
+    :how_interesting,
+    :how_often_given_feedback,
+    :how_comfortable_asking_questions,
+    :how_often_taught_new_things,
+    :help_quality,
+    :how_much_participated,
+    :how_often_talk_about_ideas_outside,
+    :how_often_lost_track_of_time,
+    :how_excited_before,
+    :overall_how_interested,
+    :more_prepared_than_before,
+    :know_where_to_go_for_help,
+    :suitable_for_my_experience,
+    :would_recommend,
+    :part_of_community,
+    :confident_can_teach,
+    :anticipate_continuing,
+    :received_clear_communication,
+    :believe_all_students
+  ]
+
+  FREE_RESPONSE_FIELDS_IN_SUMMARY = [
+    :venue_feedback,
+    :things_you_liked,
+    :things_you_would_change,
+    :things_facilitator_did_well,
+    :things_facilitator_could_improve,
+    :who_facilitated
+  ]
+
+  FIELDS_IN_SUMMARY = MULTIPLE_CHOICE_FIELDS_IN_SUMMARY + FREE_RESPONSE_FIELDS_IN_SUMMARY
+
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn
   #   into an average of all responses
@@ -41,6 +77,7 @@ module Pd::WorkshopSurveyResultsHelper
       response_hash[:who_facilitated].each {|name| responses_per_facilitator[name] += 1}
 
       response_hash.each do |k, v|
+        next unless FIELDS_IN_SUMMARY.include? k
         # Multiple choice questions
         if questions.key? k
           if v.is_a? Hash
@@ -55,7 +92,7 @@ module Pd::WorkshopSurveyResultsHelper
               sum_hash[k] += v.values.map {|value| questions[k].index(value) + 1}.reduce(:+)
             end
           else
-            next unless v.presence
+            next unless v.presence && questions[k].include?(v)
 
             # Multiple choice answer for the workshop as a whole
             sum_hash[k] += questions[k].index(v) + 1
@@ -87,9 +124,13 @@ module Pd::WorkshopSurveyResultsHelper
       next unless questions.key? k
 
       if v.is_a? Integer
-        if facilitator_specific_options.include?(k) && facilitator_name && facilitator_breakdown
-          # For facilitator specific questions, take the average over all respones for that faciliator
-          sum_hash[k] = (v / responses_per_facilitator[facilitator_name].to_f).round(2)
+        if facilitator_specific_options.include?(k)
+          if facilitator_name && facilitator_breakdown
+            # For facilitator specific questions, take the average over all responses for that facilitator
+            sum_hash[k] = (v / responses_per_facilitator[facilitator_name].to_f).round(2)
+          else
+            sum_hash[k] = (v / responses_per_facilitator.values.reduce(:+).to_f).round(2)
+          end
         else
           # For non facilitator specific answers, take the average over all surveys
           sum_hash[k] = (v / surveys.count.to_f).round(2)

@@ -65,7 +65,11 @@ const ProgressPill = React.createClass({
     if (experiments.isEnabled('progressBubbles')) {
       style = {
         ...style,
-        ...(!multiLevelStep && levelProgressStyle(levels[0], false))
+        ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
+        // After making progressBubbles experiment permanent, we can get rid of
+        // fontSize prop
+        fontSize: 16,
+        minWidth: 70
       };
     }
 

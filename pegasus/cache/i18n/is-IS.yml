@@ -333,9 +333,8 @@
     &ldquo;Tölvunarfræði getur verið lykillinn að bestu tækifærunum í heiminum.&rdquo;
     Satya, aðalframkvæmdastjóri Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Tölvunarfræði valdeflir nemendur í að skapa heim morgundagsins.&rdquo;
+    Satya, forstjóri Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Ef þú kannt að kóða, hefur þú valkosti í lífinu.&rdquo;
     Chris Bosh
@@ -1166,6 +1165,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Framhald: Gagnagrunnar í öppum'
   cspassessment_name: Fullt próf - 50 spurningar
   cspexam1-mWU7ilDYM9_name: Prófhluti 1 - 25 spurningar
@@ -1195,7 +1195,7 @@
   csf2_draft_category_name: "Í þróun: Námskeið A-F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 TF Grundvöllur"
-  csp17_category_name: "'16-'17 TF Grundvöllur"
+  csp17_category_name: Grunnhugtök tölvunarfræði
   cspexams_category_name: "Æfingapróf fyrir Undirstöðuatriði TF"
   research_studies_category_name: Research Studies
   applab_name: Appsmiðja

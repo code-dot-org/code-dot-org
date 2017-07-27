@@ -5,6 +5,7 @@
 # content scoops from staging and levelbuilder, the DTP, and the DTL.
 
 require 'cgi'
+require 'io/console'
 require 'logger'
 require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
@@ -103,12 +104,17 @@ def puts_quit_message
   EOS
 end
 
+def flush_and_gets
+  $stdin.iflush
+  gets
+end
+
 # Prompts the user for their name, setting the global variable @dotd_name and
 # warns them of changing options.
 def ask_for_name
   until @dotd_name != ''
     print 'Who are you? '
-    @dotd_name = gets.chomp
+    @dotd_name = flush_and_gets.chomp
   end
 
   puts <<-EOS.unindent_with_indent(2)
@@ -129,7 +135,7 @@ end
 def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
-    response = gets.strip.downcase
+    response = flush_and_gets.strip.downcase
     puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
       @logger.info(question)
@@ -149,7 +155,7 @@ end
 # Prompts the user to press enter, waiting until this is done.
 def press_enter_to_continue
   puts dim 'Press enter to continue...'
-  gets
+  flush_and_gets
 end
 
 # Prompts the user to wait for thing, pausing until any key is pressed.

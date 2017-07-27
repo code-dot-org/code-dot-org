@@ -567,7 +567,9 @@ Flappy.init = function (config) {
     studioApp().init(config);
 
     var rightButton = document.getElementById('rightButton');
-    dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    if (rightButton) {
+      dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    }
   };
 
   studioApp().setPageConstants(config);
@@ -575,7 +577,11 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        visualizationColumn={<FlappyVisualizationColumn/>}
+        visualizationColumn={
+          <FlappyVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+          />
+        }
         onMount={onMount}
       />
     </Provider>,
@@ -674,7 +680,7 @@ Flappy.runButtonClick = function () {
   studioApp().attempts++;
   Flappy.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !level.isProjectLevel) {
     var rightButtonCell = document.getElementById('right-button-cell');
     rightButtonCell.className = 'right-button-cell-enabled';
   }
