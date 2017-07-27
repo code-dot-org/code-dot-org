@@ -54,6 +54,12 @@ const styles = {
       ':hover': {
         color: color.orange,
         borderColor: color.orange,
+      },
+      ':disabled': {
+        // This color is in Mike's styleguide, but we don't use it anywhere else,
+        // and it might be changed by Mark soon - so just hard-coding the string.
+        backgroundColor: '#FFD27F',
+        boxShadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)',
       }
     },
     [ButtonColor.gray]: {

@@ -2,13 +2,14 @@ import React from 'react';
 import msg from '@cdo/locale';
 import BonusLevels from './BonusLevels';
 import CreateSomething from './CreateSomething';
+import { bonusLevel } from './shapes';
 
 export default class StageExtras extends React.Component {
   static propTypes = {
     stageNumber: React.PropTypes.number.isRequired,
     nextLevelPath: React.PropTypes.string.isRequired,
-    bonusLevels: React.PropTypes.array,
-  }
+    bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+  };
 
   render() {
     const nextMessage = /stage/.test(this.props.nextLevelPath) ?

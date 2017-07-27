@@ -39,7 +39,8 @@ class Ability
       Pd::CourseFacilitator,
       Pd::TeacherApplication,
       :workshop_organizer_survey_report,
-      Pd::WorkshopMaterialOrder
+      Pd::WorkshopMaterialOrder,
+      :pd_workshop_user_management
     ]
 
     if user.persisted?
@@ -130,6 +131,7 @@ class Ability
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
         can :manage, Pd::TeacherApplication
+        can :manage, :pd_workshop_user_management
       end
     end
 
