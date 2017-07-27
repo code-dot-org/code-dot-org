@@ -7,16 +7,17 @@ import { UnconnectedSectionsPage as SectionsPage }
   from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
 const defaultProps = {
-  validScripts: [
-  ],
+  validScripts: [],
   numSections: 3,
   classrooms: null,
+  studioUrl: '',
   newSection: () => {},
   setSections: () => {},
   setValidAssignments: () => {},
   loadClassroomList: () => {},
-  studioUrl: '',
   importClassroomStarted: () => {},
+  beginEditingNewSection: () => {},
+  beginEditingSection: () => {},
 };
 
 describe('SectionsPage', () => {
