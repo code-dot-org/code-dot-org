@@ -1,7 +1,7 @@
 import React from 'react';
 import msg from '@cdo/locale';
 import BonusLevels from './BonusLevels';
-import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 
 export default class StageExtras extends React.Component {
   static propTypes = {
@@ -10,7 +10,6 @@ export default class StageExtras extends React.Component {
     bonusLevels: React.PropTypes.array,
     showProjectWidget: React.PropTypes.bool,
     projectTypes: React.PropTypes.arrayOf(React.PropTypes.string),
-    projectList: React.PropTypes.array
   }
 
   render() {
@@ -29,8 +28,7 @@ export default class StageExtras extends React.Component {
         }
 
         {this.props.showProjectWidget &&
-          <ProjectWidget
-            projectList={this.props.projectList}
+          <ProjectWidgetWithData
             projectTypes={this.props.projectTypes}
           />
         }
