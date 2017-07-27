@@ -35,14 +35,40 @@ class OmniAuthSection < Section
 
     oauth_section.restore if oauth_section.deleted?
 
-    students.each do |student|
-      oauth_section.add_student User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT})
+    oauth_students = students.map do |student|
+      User.from_omniauth(student, {'user_type' => User::TYPE_STUDENT})
     end
 
+    oauth_section.set_exact_student_list(oauth_students)
     oauth_section
+  end
+
+  def set_exact_student_list(target_students)
+    current_student_ids = to_lookup_hash(students)
+    target_student_ids = to_lookup_hash(target_students)
+
+    students_to_add = target_students.select do |student|
+      !current_student_ids.key? student.id
+    end
+
+    students_to_remove = students.select do |student|
+      !target_student_ids.key? student.id
+    end
+
+    students_to_add.each do |student|
+      add_student student
+    end
+
+    students_to_remove.each do |student|
+      followers.find_by(student_user: student).delete
+    end
   end
 
   def provider_managed?
     true
+  end
+
+  private def to_lookup_hash(list)
+    list.pluck(:id).map {|id| [id, nil]}.to_h
   end
 end
