@@ -1,6 +1,7 @@
 import { assert } from '../../../util/configuredChai';
 import reducer, {
   setStudioUrl,
+  setOAuthProvider,
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
@@ -140,6 +141,14 @@ describe('teacherSectionsRedux', () => {
       const action = setStudioUrl('//test-studio.code.org');
       const nextState = reducer(initialState, action);
       assert.equal(nextState.studioUrl, '//test-studio.code.org');
+    });
+  });
+
+  describe('setOAuthProvider', () => {
+    it('sets oauth provider', () => {
+      const action = setOAuthProvider('clever');
+      const nextState = reducer(initialState, action);
+      assert.equal(nextState.provider, 'clever');
     });
   });
 
