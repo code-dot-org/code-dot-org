@@ -5,7 +5,7 @@ import Dialog, { Body, styles as dialogStyles } from '../Dialog';
 import PendingButton from '../PendingButton';
 import LegacyButton, { BUTTON_TYPES } from '../LegacyButton';
 import i18n from '@cdo/locale';
-import { hidePublishDialog } from './publishDialogRedux';
+import { hidePublishDialog, publishProject } from './publishDialogRedux';
 
 class PublishDialog extends Component {
   static propTypes = {
@@ -58,8 +58,21 @@ export default connect(state => ({
   isPublishPending: state.publishDialog.isPublishPending,
   projectId: state.publishDialog.projectId,
   projectType: state.publishDialog.projectType,
-}), dispatch => ({
+}), (dispatch, ownProps) => ({
   onClose() {
-    dispatch(hidePublishDialog());
+    // Allow onClose to be overridden when passed explicitly as a prop
+    if (ownProps.onClose) {
+      ownProps.onClose();
+    } else {
+      dispatch(hidePublishDialog());
+    }
+  },
+  onConfirmPublish(projectId, projectType) {
+    // Allow onConfirmPublish to be overridden when passed explicitly as a prop
+    if (ownProps.onConfirmPublish) {
+      ownProps.onConfirmPublish(projectId, projectType);
+    } else {
+      dispatch(publishProject(projectId, projectType));
+    }
   },
 }))(Radium(PublishDialog));

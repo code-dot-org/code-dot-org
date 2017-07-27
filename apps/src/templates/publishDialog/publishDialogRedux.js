@@ -20,6 +20,8 @@ const initialState = {
   projectId: null,
   projectType: null,
   isPublishPending: false,
+  lastPublishedAt: null,
+  lastPublishedProjectData: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -32,14 +34,25 @@ export default function reducer(state = initialState, action) {
         projectType: action.projectType,
       };
     case HIDE_PUBLISH_DIALOG:
-      return initialState;
+      return {
+        ...state,
+        isOpen: false,
+      };
     case PUBLISH_REQUEST:
       return {
         ...state,
         isPublishPending: true,
       };
     case PUBLISH_SUCCESS:
-      return initialState;
+      // Keep projectId and projectType fields, as these may be used by
+      // subscribers listening for this action type.
+      return {
+        ...state,
+        isOpen: false,
+        isPublishPending: false,
+        lastPublishedAt: action.lastPublishedAt,
+        lastPublishedProjectData: action.lastPublishedProjectData,
+      };
     case PUBLISH_FAILURE:
       return {
         ...state,
@@ -80,8 +93,12 @@ export function publishProject(projectId, projectType) {
           dispatch({type: PUBLISH_FAILURE});
           reject(err);
         } else {
-          dispatch({type: PUBLISH_SUCCESS});
-          resolve(JSON.parse(data));
+          data = JSON.parse(data);
+          dispatch({
+            type: PUBLISH_SUCCESS,
+            lastPublishedAt: data.publishedAt,
+            lastPublishedProjectData: data,
+          });
         }
       });
     });

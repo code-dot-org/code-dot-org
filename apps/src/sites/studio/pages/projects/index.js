@@ -14,12 +14,12 @@ import projects, {
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer, {
   showPublishDialog,
-  publishProject,
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
 $(document).ready(() => {
   registerReducers({projects, publishDialog: publishDialogReducer});
   const store = getStore();
+  setupReduxSubscribers(store);
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={store}>
@@ -50,9 +50,7 @@ $(document).ready(() => {
 
   ReactDOM.render(
     <Provider store={store}>
-      <PublishDialog
-        onConfirmPublish={onConfirmPublish}
-      />
+      <PublishDialog/>
     </Provider>,
     publishConfirm
   );
@@ -71,10 +69,26 @@ function onShowConfirmPublishDialog(projectId, projectType) {
 // once My Projects is moved to React.
 window.onShowConfirmPublishDialog = onShowConfirmPublishDialog.bind(this);
 
-function onConfirmPublish(projectId, projectType) {
-  const store = getStore();
-  store.dispatch(publishProject(projectId, projectType)).then(projectData => {
-    store.dispatch(prependProjects([projectData], projectType));
-    window.setProjectPublishedAt(projectId, projectData.publishedAt);
+function setupReduxSubscribers(store) {
+  let state = {};
+  store.subscribe(() => {
+    let lastState = state;
+    state = store.getState();
+
+    // Update the project state and immediately add it to the public gallery
+    // when a PublishDialog state transition indicates that a project has just
+    // been published.
+    if (
+      lastState.publishDialog &&
+      lastState.publishDialog.lastPublishedAt !==
+        state.publishDialog.lastPublishedAt
+    ) {
+      window.setProjectPublishedAt(
+        state.publishDialog.projectId,
+        state.publishDialog.lastPublishedAt);
+      const projectData = state.publishDialog.lastPublishedProjectData;
+      const projectType = state.publishDialog.projectType;
+      store.dispatch(prependProjects([projectData], projectType));
+    }
   });
 }
