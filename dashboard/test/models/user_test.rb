@@ -1766,6 +1766,11 @@ class UserTest < ActiveSupport::TestCase
     create :user, birthday: nil, provider: 'google_oauth2'
   end
 
+  test 'age validation is bypassed for Clever users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'clever'
+  end
+
   test 'users updating the email field must provide a valid email address' do
     user = create :user
 

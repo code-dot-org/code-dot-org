@@ -1,0 +1,5 @@
+hidden false
+
+stage 'Subgoal Labels Study Opt-In'
+level 'csp_subgoal_consent_levelgroup', progression: 'Click here to participate in the subgoal labels study'
+level 'csp_subgoal_experiment_thanks', progression: 'Thanks'

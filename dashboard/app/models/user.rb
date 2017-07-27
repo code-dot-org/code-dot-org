@@ -184,6 +184,13 @@ class User < ActiveRecord::Base
 
   after_create :associate_with_potential_pd_enrollments
 
+  # after_create :send_new_teacher_email
+  # def send_new_teacher_email
+  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
+  # flag, we send the email from the controller instead. This should ultimately live here, though.
+  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
+  # end
+
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
   # @param school_info_attr the attributes to set and check
@@ -355,8 +362,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  is_google = proc {|user| user.provider == 'google_oauth2'}
-  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
+  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever'}
+  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 

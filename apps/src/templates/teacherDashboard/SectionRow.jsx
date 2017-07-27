@@ -4,7 +4,7 @@ import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
@@ -47,17 +47,17 @@ const styles = {
  */
 export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
-    <ProgressButton
+    <Button
       text={i18n.edit()}
       onClick={onEdit}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
     {canDelete && (
-      <ProgressButton
+      <Button
         style={{marginLeft: 5}}
         text={i18n.delete()}
         onClick={onDelete}
-        color={ProgressButton.ButtonColor.red}
+        color={Button.ButtonColor.red}
       />
     )}
   </div>
@@ -74,16 +74,16 @@ EditOrDelete.propTypes = {
 export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
     <div>{i18n.deleteConfirm()}</div>
-    <ProgressButton
+    <Button
       text={i18n.yes()}
       onClick={onClickYes}
-      color={ProgressButton.ButtonColor.red}
+      color={Button.ButtonColor.red}
     />
-    <ProgressButton
+    <Button
       text={i18n.no()}
       style={styles.rightButton}
       onClick={onClickNo}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
   </div>
 );
@@ -97,17 +97,17 @@ ConfirmDelete.propTypes = {
  */
 export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
-    <ProgressButton
+    <Button
       className="uitest-save"
       text={i18n.save()}
       onClick={onClickSave}
-      color={ProgressButton.ButtonColor.blue}
+      color={Button.ButtonColor.blue}
     />
-    <ProgressButton
+    <Button
       text={i18n.dialogCancel()}
       style={styles.rightButton}
       onClick={onCancel}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
   </div>
 );
@@ -285,6 +285,7 @@ class SectionRow extends Component {
     const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
+    const editingLoginType = editing && !section.providerManaged;
 
     let sectionCode = '';
     if (!editing) {
@@ -317,8 +318,8 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.col}>
-          {!editing && section.loginType}
-          {editing && (
+          {!editingLoginType && section.loginType}
+          {editingLoginType && (
             <select
               defaultValue={section.loginType}
               ref={element => this.loginType = element}

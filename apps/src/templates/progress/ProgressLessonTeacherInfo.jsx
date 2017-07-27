@@ -11,7 +11,7 @@ import { lessonType } from './progressTypes';
 import HiddenStageToggle from './HiddenStageToggle';
 import StageLock from './StageLock';
 import { toggleHidden, isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
-import ProgressButton from './ProgressButton';
+import Button from '../Button';
 
 const styles = {
   main: {
@@ -63,7 +63,7 @@ const ProgressLessonTeacherInfo = React.createClass({
       <div style={styles.main}>
         {lesson.lesson_plan_html_url &&
           <div style={styles.buttonContainer}>
-            <ProgressButton
+            <Button
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
               icon="file-text"
