@@ -44,31 +44,17 @@ class OmniAuthSection < Section
   end
 
   def set_exact_student_list(target_students)
-    current_student_ids = to_lookup_hash(students)
-    target_student_ids = to_lookup_hash(target_students)
-
-    students_to_add = target_students.select do |student|
-      !current_student_ids.key? student.id
-    end
-
-    students_to_remove = students.select do |student|
-      !target_student_ids.key? student.id
-    end
+    students_to_add = target_students - students
+    students_to_remove = students - target_students
 
     students_to_add.each do |student|
       add_student student
     end
 
-    students_to_remove.each do |student|
-      followers.find_by(student_user: student).delete
-    end
+    followers.where(student_user: students_to_remove).destroy_all
   end
 
   def provider_managed?
     true
-  end
-
-  private def to_lookup_hash(list)
-    list.pluck(:id).map {|id| [id, nil]}.to_h
   end
 end
