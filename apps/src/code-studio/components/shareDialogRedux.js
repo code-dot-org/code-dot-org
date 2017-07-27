@@ -1,5 +1,4 @@
-import { combineReducers } from 'redux';
-import clientApi from './initApp/clientApi';
+import clientApi from '../initApp/clientApi';
 const channels = clientApi.create('/v3/channels');
 
 // Action types
@@ -13,12 +12,12 @@ const UNPUBLISH_FAILURE  = 'shareDialog/UNPUBLISH_FAILURE';
 
 // Reducer
 
-const initialShareDialogState = {
+const initialState = {
   isOpen: false,
   isUnpublishPending: false,
 };
 
-function shareDialog(state = initialShareDialogState, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SHOW_SHARE_DIALOG:
       return {
@@ -26,14 +25,14 @@ function shareDialog(state = initialShareDialogState, action) {
         isOpen: true,
       };
     case HIDE_SHARE_DIALOG:
-      return initialShareDialogState;
+      return initialState;
     case UNPUBLISH_REQUEST:
       return {
         ...state,
         isUnpublishPending: true,
       };
     case UNPUBLISH_SUCCESS:
-      return initialShareDialogState;
+      return initialState;
     case UNPUBLISH_FAILURE:
       return {
         ...state,
@@ -43,11 +42,6 @@ function shareDialog(state = initialShareDialogState, action) {
       return state;
   }
 }
-
-const reducer = combineReducers({
-  shareDialog,
-});
-export default reducer;
 
 // Action creators
 

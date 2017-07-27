@@ -8,14 +8,14 @@ import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
 import Dialog from './LegacyDialog';
-import { Provider, connect } from 'react-redux';
+import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import PublishDialog from '../templates/publishDialog/PublishDialog';
 import {
   showShareDialog,
   hideShareDialog,
   unpublishProject as unpublishProjectAction,
-} from './headerRedux';
+} from './components/shareDialogRedux';
 import {
   showPublishDialog as showPublishDialogAction,
   publishProject as publishProjectAction,
@@ -156,12 +156,6 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   }
 };
 
-const ConnectedShareDialog = connect(state => ({
-  isOpen: state.header.shareDialog.isOpen,
-}), dispatch => ({
-  onClose: () => dispatch(hideShareDialog())
-}))(ShareDialog);
-
 function shareProject() {
   dashboard.project.save(function () {
     var shareUrl;
@@ -189,7 +183,7 @@ function shareProject() {
 
     ReactDOM.render(
       <Provider store={getStore()}>
-        <ConnectedShareDialog
+        <ShareDialog
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
