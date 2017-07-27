@@ -39,6 +39,7 @@ export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
+  provider: null,
   validLoginTypes: [],
   validGrades: [],
   sectionIds: [],
