@@ -34,7 +34,7 @@ class LoginTypePicker extends Component {
     const {title, setLoginType, handleCancel} = this.props;
     const googleClassroom = experiments.isEnabled('googleClassroom');
     const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
-    const clever = experiments.isEnabled('clever');
+    const clever = experiments.isEnabled('cleverClassroom');
     const anyThirdParty = googleClassroom || microsoftClassroom || clever;
 
     return (

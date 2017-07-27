@@ -133,8 +133,9 @@ class SectionsPage extends Component {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
 
-    const showGoogleClassroom = this.provider === OAuthSectionTypes.google_classroom;
-    const showCleverClassroom = this.provider === OAuthSectionTypes.clever;
+    const newSectionFlow = experiments.isEnabled('section-flow-2017');
+    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
+    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
       <div>
         <div style={styles.breadcrumb}>
