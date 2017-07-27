@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "game_id": 61,
   "created_at": "2014-09-20T02:48:46.000Z",
-  "level_num": "2",
+  "level_num": "custom",
   "user_id": 156,
   "properties": {
     "skin": "flappy",
@@ -12,7 +12,6 @@
     "success_condition": "function successCondition() {\r\n\t        // this only happens after avatar hits ground, and we spin him because of\r\n\t        // game over\r\n\t        return Flappy.avatarY === 322 && Flappy.avatarX === 110;\r\n\t      }",
     "failure_condition": "function failureCondition() {\r\n\t        var avatarBottom = Flappy.avatarY + 24;\r\n\t        var ground = Flappy.MAZE_HEIGHT - Flappy.GROUND_HEIGHT;\r\n\t        return avatarBottom >= ground && Flappy.gameState === Flappy.GameStates.ACTIVE;\r\n\t      }",
     "instructions": "Now we've added some ground.  Attach a block to the \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy crashes.",
-    "contained_level_names": null,
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
@@ -37,7 +36,8 @@
     "free_play": "false",
     "obstacles": "false",
     "score": "false",
-    "shareable": "false"
+    "shareable": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

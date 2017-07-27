@@ -340,7 +340,7 @@ it:
       4-5 Maze 9_instruction: "Crea un ciclo usando il nuovo blocco \"ripeti fino a che\".<br><br>Esso mi farà \"ripetere\" le azioni \"fino a che\" raggiungo il girasole."
       4-5 Maze Assessment 1_instruction: Questo è un esercizio di riepilogo -- Fammi arrivare al girasole.
       4-5 Maze Conditionals 1_instruction: "Usa il blocco \"ripeti fino a che\" per far arrivare lo zombie fino al girasole."
-      4-5 Maze Conditionals 10_instruction: "Puoi aggiungere solo 3 blocchi per aiutare gli zombie a risolvere un labirinto più complesso? \\r \\r se lo fai bene, puo ' camminare su qualsiasi percorso curvo, non importa quanto sia lungo!"
+      4-5 Maze Conditionals 10_instruction: "https://studio.code.org/s/course3/stage/8/puzzle/10\n\nPuoi aggiungere solo 3 blocchi per aiutare lo zombie a risolvere un labirinto più complesso?<br>\n<br>\nSe lo fai bene, lui potrà camminare su qualsiasi percorso curvo, non importa quanto sia lungo!"
       4-5 Maze Conditionals 2_instruction: "Usa il blocco \"ripeti fino a che\" per far arrivare lo zombie fino al girasole."
       4-5 Maze Conditionals 3_instruction: "Usa il blocco \"se c'è strada\" per decidere quando farmi svoltare. <br><br>Attenzione: in questo caso devi aggiungere solo un blocco! Osserva, però, il modo in cui abbiamo impostato questo programma in modo tale che, la prossima volta, tu riesca a farlo tutto da solo."
       4-5 Maze Conditionals 4_instruction: "Ok, questo è quasi come l'esercizio precedente, ma devi ricordarti come hai usato insieme i blocchi \"se c'è strada\" e \"ripeti fino a che\"."

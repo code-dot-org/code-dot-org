@@ -144,15 +144,7 @@ class ScriptLevelsController < ApplicationController
       @script = @script_level.script
       @game = @level.game
 
-      view_options(
-        full_width: true,
-        callouts: [],
-        small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
-        has_i18n: @game.has_i18n?,
-        game_display_name: data_t('game.name', @game.name),
-      )
-
-      render 'levels/show'
+      present_level
       return
     end
 
@@ -161,7 +153,7 @@ class ScriptLevelsController < ApplicationController
     @stage_extras = {
       stage_number: @stage.relative_position,
       next_level_path: @stage.script_levels.last.next_level_or_redirect_path_for_user(current_user),
-      bonus_levels: @stage.script_levels.select(&:bonus).map(&:summarize_as_bonus),
+      bonus_levels: @stage.script_levels.select(&:bonus).map {|sl| sl.summarize_as_bonus(current_user)},
     }.camelize_keys
 
     render 'scripts/stage_extras'
@@ -357,7 +349,8 @@ class ScriptLevelsController < ApplicationController
     view_options(
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
-      has_i18n: @game.has_i18n?
+      has_i18n: @game.has_i18n?,
+      is_challenge_level: @script_level.challenge,
     )
 
     @@fallback_responses ||= {}

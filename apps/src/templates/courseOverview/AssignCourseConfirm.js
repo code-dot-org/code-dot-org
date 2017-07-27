@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   header: {
@@ -48,16 +48,16 @@ export default class AssignCourseConfirm extends Component {
           {i18n.assignCourseConfirm({courseName, sectionName})}
         </div>
         <div style={{textAlign: 'right'}}>
-          <ProgressButton
+          <Button
             text={i18n.dialogCancel()}
             onClick={onClose}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
-          <ProgressButton
+          <Button
             text={i18n.assign()}
             style={{marginLeft: 5}}
             onClick={onConfirm}
-            color={ProgressButton.ButtonColor.orange}
+            color={Button.ButtonColor.orange}
           />
         </div>
       </BaseDialog>

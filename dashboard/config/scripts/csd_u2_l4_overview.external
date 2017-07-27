@@ -5,13 +5,13 @@ description 'description here'
 markdown <<MARKDOWN
 # Overview
 
-This lesson continues the introduction to HTML tags, this time with headers.  The class practices using header tags to create page and section titles and learns how the different header elements are displayed by default.  Next, the class plans how to organize their content on the personal web pages that will be built across the unit and begins the first page of the project.
+This lesson continues the introduction to HTML tags, this time with headings.  The class practices using heading tags to create page and section titles and learns how the different heading elements are displayed by default.  Next, the class plans how to organize content on the personal web pages that will be built across the unit and begins the first page of the project.
 ## Vocabulary
 
-* **Header** - A title or summary for a document or section of a document.
+* **Heading** - A title or summary for a document or section of a document.
 
 ## Introduced Code
 
-*  **[Header](//docs.code.org/weblab/h/)** - `<h1></h1>`
+*  **[Heading](//docs.code.org/weblab/h/)** - `<h1></h1>`
 
 MARKDOWN

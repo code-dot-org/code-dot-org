@@ -2454,7 +2454,7 @@ sr:
             'Project: Build a Game':
               name: 'Project: Build a Game'
             Velocity:
-              name: Velocity
+              name: Брзина
             The Game Design Process:
               name: The Game Design Process
             Using the Game Design Process:
@@ -3280,7 +3280,7 @@ sr:
             Variables and Animation:
               name: Variables and Animation
             Velocity:
-              name: Velocity
+              name: Брзина
               description_student: After a brief review of how the counter pattern is used to move sprites, the class is introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
               description_teacher: After a brief review of how they used the counter pattern to move sprites in previous lessons, students are introduced to the properties that set velocity and rotation speed directly.   As they use these new properties in different ways, they build up the skills they need to create a basic side scroller game.
             Collision Detection:
@@ -4774,7 +4774,7 @@ sr:
             Other Forms of Input:
               name: Other Forms of Input
             Velocity:
-              name: Velocity
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -4882,7 +4882,7 @@ sr:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
@@ -5026,7 +5026,7 @@ sr:
             'Project: Interactive Card':
               name: 'Project: Interactive Card'
             Velocity:
-              name: Velocity
+              name: Брзина
             Collision Detection:
               name: Collision Detection
             Complex Sprite Movement:
