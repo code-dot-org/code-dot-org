@@ -144,8 +144,7 @@ class AdminUsersController < ApplicationController
     @user = User.find(user_id)
     permission = params[:permission]
     if permission == 'admin'
-      @user.admin = nil
-      @user.save(validate: false)
+      @user.update_attribute(:admin, nil)
     else
       @user.delete_permission permission
     end
