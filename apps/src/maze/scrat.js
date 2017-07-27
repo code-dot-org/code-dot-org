@@ -11,7 +11,7 @@ const TILE_SHAPES = {
   'island_topRight': [1, 1],
   'island_botLeft':  [0, 2],
   'island_botRight': [1, 2],
-  'water': [4, 0],
+  'water': [0, 4],
 
   'lily2': [2, 1],
   'lily3': [3, 1],
@@ -19,8 +19,9 @@ const TILE_SHAPES = {
   'lily5': [3, 2],
 
   'ice': [3, 0],
+  'cracked_ice': [4, 0],
 
-  'empty': [4, 0]
+  'empty': [0, 4]
 };
 
 export default class Scrat extends Subtype {
@@ -40,6 +41,11 @@ export default class Scrat extends Subtype {
   // Returns true if the tile at x,y is a water tile that is in bounds.
   isWater(col, row) {
     return this.maze_.map.getTile(row, col) === SquareType.WALL;
+  }
+
+  // Returns true if the tile at x,y is an obstacle tile that is in bounds.
+  isObstacle(col, row) {
+    return this.maze_.map.getTile(row, col) === SquareType.OBSTACLE;
   }
 
   drawMapTiles(svg) {
@@ -69,7 +75,9 @@ export default class Scrat extends Subtype {
     let tile;
     for (row = 0; row < this.maze_.map.ROWS; row++) {
       for (col = 0; col < this.maze_.map.COLS; col++) {
-        if (!this.isWaterOrOutOfBounds(col, row)) {
+        if (this.isObstacle(col, row)) {
+          tile = 'cracked_ice';
+        } else if (!this.isWaterOrOutOfBounds(col, row)) {
           tile = 'ice';
         } else {
           const adjacentToPath = !this.isWaterOrOutOfBounds(col, row - 1) ||

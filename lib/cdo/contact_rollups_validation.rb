@@ -279,6 +279,16 @@ class ContactRollupsValidation
       min: 0,
       max: 0
     },
+    {
+      # Make sure that we have at least one form submitted recently so we know
+      # replication is still working
+      name: "Check that replication is working and that there are recent "\
+            "form submissions",
+      query: "SELECT count(*) FROM forms
+              WHERE created_at > TIME(NOW() - INTERVAL 4 HOUR);",
+      min: 1,
+      max: 10_000_000
+    }
   ].freeze
 
   def self.validate_contact_rollups

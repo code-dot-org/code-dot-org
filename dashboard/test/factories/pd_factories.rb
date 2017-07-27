@@ -11,18 +11,30 @@ FactoryGirl.define do
       course Pd::Workshop::COURSE_CSP
       subject Pd::Workshop::SUBJECT_CSP_TEACHER_CON
     end
+    trait :local_summer_workshop do
+      course Pd::Workshop::COURSE_CSP
+      subject Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP
+    end
     capacity 10
     transient do
       num_sessions 0
+      num_facilitators 0
       sessions_from Date.today + 9.hours # Start time of the first session, then one per day after that.
+      each_session_hours 6
       num_enrollments 0
       enrolled_and_attending_users 0
       enrolled_unattending_users 0
+      num_completed_surveys 0
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
       evaluator.num_sessions.times do |i|
-        workshop.sessions << build(:pd_session, workshop: workshop, start: evaluator.sessions_from + i.days)
+        workshop.sessions << build(
+          :pd_session,
+          workshop: workshop,
+          start: evaluator.sessions_from + i.days,
+          duration_hours: evaluator.each_session_hours
+        )
       end
       evaluator.num_enrollments.times do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop)
@@ -39,6 +51,25 @@ FactoryGirl.define do
         workshop.enrollments << build(:pd_enrollment, workshop: workshop, user: teacher)
       end
     end
+
+    after(:create) do |workshop, evaluator|
+      workshop.sessions.map(&:save)
+
+      evaluator.num_facilitators.times do
+        workshop.facilitators << (create :facilitator)
+      end
+
+      evaluator.num_completed_surveys.times do
+        enrollment = create :pd_enrollment, workshop: workshop
+        if workshop.teachercon?
+          create :pd_teachercon_survey, pd_enrollment: enrollment
+        elsif workshop.local_summer?
+          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment
+        else
+          raise 'Num_completed_surveys trait unsupported for this workshop type'
+        end
+      end
+    end
   end
 
   factory :pd_ended_workshop, parent: :pd_workshop, class: 'Pd::Workshop' do
@@ -49,9 +80,12 @@ FactoryGirl.define do
   end
 
   factory :pd_session, class: 'Pd::Session' do
+    transient do
+      duration_hours 6
+    end
     association :workshop, factory: :pd_workshop
     start {Date.today + 9.hours}
-    self.end {start + 6.hours}
+    self.end {start + duration_hours.hours}
   end
 
   factory :pd_teacher_application, class: 'Pd::TeacherApplication' do
@@ -121,11 +155,6 @@ FactoryGirl.define do
     form_data {form_data.to_json}
   end
 
-  factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
-    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
-
-    form_data {(build :pd_teachercon_survey_hash).to_json}
-  end
   # The raw attributes as returned by the teacher application form, and saved in Pd::FacilitatorProgramRegistration.application.
   factory :pd_facilitator_program_registration_hash, class: 'Hash' do
     initialize_with do
@@ -157,7 +186,81 @@ FactoryGirl.define do
     end
   end
 
+  factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+
+    after(:build) do |survey|
+      if survey.form_data.presence.nil?
+        enrollment = survey.pd_enrollment
+        workshop = enrollment.workshop
+
+        survey_hash = build :pd_teachercon_survey_hash
+
+        Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+          survey_hash[field] = {}
+        end
+
+        survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+        workshop.facilitators.each do |facilitator|
+          Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+            survey_hash[field][facilitator.name] = 'Free response'
+          end
+        end
+
+        survey.update_form_data_hash(survey_hash)
+      end
+    end
+  end
+
   factory :pd_teachercon_survey_hash, class: 'Hash' do
+    initialize_with do
+      {
+        "personalLearningNeedsMet": "Strongly Agree",
+        "haveIdeasAboutFormative": "Strongly Disagree",
+        "haveIdeasAboutSummative": "Disagree",
+        "haveConcreteIdeas": "Slightly Disagree",
+        "toolsWillHelp": "Slightly Agree",
+        "learnedEnoughToMoveForward": "Agree",
+        "feelConfidentUsingMaterials": "Strongly Agree",
+        "feelConfidentCanHelpStudents": "Agree",
+        "havePlan": "Slightly Agree",
+        "feelComfortableLeading": "Slightly Disagree",
+        "haveLessAnxiety": "Disagree",
+        "whatHelpedMost": "helped learn most",
+        "whatDetracted": "detracted",
+        "receivedClearCommunication": "Strongly Agree",
+        "venueFeedback": "venue feedback",
+        "knowWhereToGoForHelp": "Strongly Disagree",
+        "suitableForMyExperience": "Disagree",
+        "practicingTeachingHelped": "Slightly Disagree",
+        "seeingOthersTeachHelped": "Slightly Agree",
+        "facilitatorsPresentedInformationClearly": "Agree",
+        "facilitatorsProvidedFeedback": "Strongly Agree",
+        "feltComfortableAskingQuestions": "Agree",
+        "morePreparedThanBefore": "Slightly Agree",
+        "lookForwardToContinuing": "Slightly Disagree",
+        "partOfCommunity": "Disagree",
+        "allStudentsShouldTake": "Strongly Disagree",
+        "wouldRecommend": "Disagree",
+        "bestPdEver": "Slightly Disagree",
+        "howMuchParticipated": "A tremendous amount",
+        "howOftenLostTrackOfTime": "Almost always",
+        "howHappyAfter": "Extremely happy",
+        "howExcitedBefore": "Extremely excited",
+        "facilitatorsDidWell": "facilitators did well",
+        "facilitatorsCouldImprove": "facilitators could improve",
+        "likedMost": "liked most",
+        "wouldChange": "would change",
+        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
+        "instructionFocus": "Strongly aligned with A",
+        "teacherResponsibility": "Strongly aligned with A",
+        "teacherTime": "Strongly aligned with A",
+      }.stringify_keys
+    end
+  end
+
+  factory :pd_teachercon_survey_randomized_hash, class: 'Hash' do
     initialize_with do
       {
         "personalLearningNeedsMet": "Strongly Agree",
@@ -250,6 +353,37 @@ FactoryGirl.define do
           "English\/Language Arts"
         ]
       }.stringify_keys
+    end
+  end
+
+  factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
+    association :pd_enrollment, factory: :pd_enrollment, strategy: :create
+
+    after(:build) do |survey|
+      if survey.form_data.nil?
+        enrollment = survey.pd_enrollment
+        workshop = enrollment.workshop
+
+        survey_hash = build :pd_local_summer_workshop_survey_hash
+
+        Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+          survey_hash[field] = {}
+        end
+
+        survey_hash['whoFacilitated'] = workshop.facilitators.map(&:name)
+
+        workshop.facilitators.each do |facilitator|
+          Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
+            if Pd::LocalSummerWorkshopSurvey.options.key? field
+              survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
+            else
+              survey_hash[field][facilitator.name] = 'Free Response'
+            end
+          end
+        end
+
+        survey.update_form_data_hash(survey_hash)
+      end
     end
   end
 

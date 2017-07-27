@@ -216,6 +216,12 @@ export const executeUserCode = function (client, code) {
     createBlockPos: function (x, y, z, prefix) {
       return encodeURIComponent(`${prefix}${x} ${prefix}${y} ${prefix}${z}`);
     },
+    createBlockPosFromVec3: function (vec3, prefix) {
+      return encodeURIComponent(`${prefix}${vec3.x} ${prefix}${vec3.y} ${prefix}${vec3.z}`);
+    },
+    getVec3: function (x, y, z) {
+      return { 'x': `${x}`, 'y': `${y}`, 'z': `${z}` };
+    }
   };
 
   // Register async methods

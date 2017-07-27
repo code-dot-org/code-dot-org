@@ -10,12 +10,23 @@ const styles = {
   headerBanner: {
     height: 260
   },
+  headerBannerShort: {
+    height: 140
+  },
   bannerHeading: {
     fontFamily: '"Gotham 7r", sans-serif',
     color: color.white,
     fontSize: 32,
     marginBottom: 10,
     lineHeight: '40px'
+  },
+  bannerHeadingShort: {
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    fontSize: 32,
+    marginBottom: 10,
+    lineHeight: '40px',
+    marginTop: -20
   },
   bannerSubHeading: {
     fontFamily: '"Gotham 4r", sans-serif',
@@ -38,15 +49,16 @@ const HeaderBanner = React.createClass({
     headingText: React.PropTypes.string,
     subHeadingText: React.PropTypes.string,
     description: React.PropTypes.string,
-    children: React.PropTypes.node
+    children: React.PropTypes.node,
+    short: React.PropTypes.bool
   },
 
   render() {
-    const {headingText, subHeadingText, description} = this.props;
+    const {short, headingText, subHeadingText, description} = this.props;
 
     return (
-      <div style={styles.headerBanner}>
-        <div style={styles.bannerHeading}>
+      <div style={short ? styles.headerBannerShort : styles.headerBanner}>
+        <div style={short ? styles.bannerHeadingShort : styles.bannerHeading}>
           {headingText || <span>&nbsp;</span>}
         </div>
         <div style={styles.bannerSubHeading}>

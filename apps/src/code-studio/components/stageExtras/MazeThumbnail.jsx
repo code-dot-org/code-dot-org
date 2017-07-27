@@ -4,14 +4,17 @@ import skins from "@cdo/apps/maze/skins";
 import {getSubtypeForSkin} from '@cdo/apps/maze/mazeUtils';
 import MazeMap from '@cdo/apps/maze/mazeMap';
 import drawMap from '@cdo/apps/maze/drawMap';
-
-const assetUrl = path => '/blockly/' + path;
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 export default class MazeThumbnail extends React.Component {
   static propTypes = {
     map: React.PropTypes.array.isRequired,
     skin: React.PropTypes.string.isRequired,
     startDirection: React.PropTypes.number.isRequired,
+  }
+
+  static defaultProps = {
+    scale: 1
   }
 
   componentDidMount() {
@@ -28,7 +31,7 @@ export default class MazeThumbnail extends React.Component {
     subtype.createDrawer();
     subtype.initWallMap();
 
-    drawMap(this.refs.svg, skin, subtype, Maze.map);
+    drawMap(this.svg, skin, subtype, Maze.map);
   }
 
   render() {
@@ -37,7 +40,7 @@ export default class MazeThumbnail extends React.Component {
         <svg
           width="400"
           height="400"
-          ref="svg"
+          ref={c => {this.svg = c;}}
         />
       </ProtectedStatefulDiv>
     );

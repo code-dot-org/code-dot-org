@@ -53,9 +53,20 @@ Dashboard::Application.routes.draw do
 
   get 'docs/*docs_route', to: 'docs_proxy#get'
 
-  resources :sections, only: [:show] do
+  # User-facing section routes
+  resources :sections, only: [:show, :update] do
     member do
       post 'log_in'
+    end
+  end
+  # Section API routes (JSON only)
+  concern :section_api_routes do
+    resources :sections, only: [:index, :show, :create, :destroy] do
+      resources :students, only: [:index], controller: 'sections_students'
+      member do
+        post 'join'
+        post 'leave'
+      end
     end
   end
 
@@ -79,6 +90,7 @@ Dashboard::Application.routes.draw do
   devise_scope :user do
     get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
     patch '/dashboardapi/users', to: 'registrations#update'
+    patch '/users/upgrade', to: 'registrations#upgrade'
   end
   devise_for :users, controllers: {
     omniauth_callbacks: 'omniauth_callbacks',
@@ -156,7 +168,7 @@ Dashboard::Application.routes.draw do
 
     # /s/xxx/stage/yyy/puzzle/zzz
     resources :stages, only: [], path: "/stage", param: 'position', format: false do
-      get 'extras', to: 'script_levels#stage_extras', format: false
+      get 'extras', to: 'script_levels#stage_extras', format: false, as: 'stage_extras'
       get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
       resources :script_levels, only: [:show], path: "/puzzle", format: false do
         member do
@@ -328,6 +340,7 @@ Dashboard::Application.routes.draw do
         delete 'attendance/:session_id/enrollment/:enrollment_id', action: 'destroy_by_enrollment', controller: 'workshop_attendance'
 
         get :workshop_survey_report, action: :workshop_survey_report, controller: 'workshop_survey_report'
+        get :local_workshop_survey_report, action: :local_workshop_survey_report, controller: 'workshop_survey_report'
         get :workshop_organizer_survey_report, action: :workshop_organizer_survey_report, controller: 'workshop_organizer_survey_report'
       end
       resources :workshop_summary_report, only: :index
@@ -392,6 +405,11 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
+
+    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
+    # TODO: change remove_course to use http delete method
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
@@ -399,6 +417,9 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/section_assessments/:section_id', to: 'api#section_assessments'
   get '/dashboardapi/section_surveys/:section_id', to: 'api#section_surveys'
   get '/dashboardapi/student_progress/:section_id/:student_id', to: 'api#student_progress'
+  scope 'dashboardapi', module: 'api/v1' do
+    concerns :section_api_routes
+  end
 
   # Wildcard routes for API controller: select all public instance methods in the controller,
   # and all template names in `app/views/api/*`.
@@ -433,6 +454,7 @@ Dashboard::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       concerns :api_v1_pd_routes
+      concerns :section_api_routes
       post 'users/:user_id/using_text_mode', to: 'users#post_using_text_mode'
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
 
@@ -454,4 +476,5 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/v1/schools/:school_district_id/:school_type', to: 'api/v1/schools#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/regional-partners/:school_district_id', to: 'api/v1/regional_partners#index', defaults: {format: 'json'}
   get '/dashboardapi/v1/projects/section/:section_id', to: 'api/v1/projects/section_projects#index', defaults: {format: 'json'}
+  get '/dashboardapi/courses', to: 'courses#index', defaults: {format: 'json'}
 end

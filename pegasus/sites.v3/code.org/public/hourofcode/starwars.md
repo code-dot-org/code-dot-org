@@ -2,6 +2,7 @@
 title: Teacher Resources - Star Wars
 nav: hoc_teacher_resources_nav
 theme: responsive
+style_min: true
 ---
 
 # Star Wars: Building a Galaxy with Code

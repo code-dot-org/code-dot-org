@@ -10,10 +10,6 @@ theme: responsive
 
 The Code.org Computer Science Principles Professional Learning Program is an intensive professional learning program for high school educators who are interested in teaching Code.org’s CS Principles course. This program is designed to prepare educators to provide high quality instruction based on the [CS Principles curriculum](/educate/csp), tools and approach to students in their classrooms. 
 
-We still have a few seats available at TeacherCon Phoenix, our five-day workshop for CS Principles, July 16 - 21. If you are available for those dates, please apply now!
-
-[<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
-
 ## What does a Code.org CS Principles educator do?
 If accepted into the Code.org CS Principles Professional Learning Program, you will:
 
@@ -59,10 +55,6 @@ The CS Principles Professional Learning Program is available in regions served b
 
 ## <a name="apply"></a>How to apply?
 
-We still have a few seats available at TeacherCon Phoenix, our five-day workshop for CS Principles, July 16 - 21. If you are available for those dates, please apply now!
+**Applications for the 2017-18 CS Principles Professional Learning Program are closed.** If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
-[<button>Apply now!</button>](/educate/professional-learning/cs-principles-apply)
-
-Not ready to apply, but interested in joining in 2018-19? Sign up to be added to our contact list. 
-
-[<button>Sign up to learn more</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
+[<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)

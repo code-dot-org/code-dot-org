@@ -1,6 +1,9 @@
 import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
+import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
+import shapes from './shapes';
+import Button from '@cdo/apps/templates/Button';
 
 // Many of these styles are also used by our similar SectionTable on the
 // teacher-dashboard page (which is why we export them).
@@ -9,7 +12,7 @@ export const styles = {
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.border_gray,
-    width: 940
+    width: styleConstants['content-width']
   },
   headerRow: {
     backgroundColor: color.table_header,
@@ -43,29 +46,39 @@ export const styles = {
     paddingLeft: 20,
     paddingRight: 20,
   },
-  col1: {
+  sectionNameCol: {
     width: 310
   },
-  col2: {
+  courseCol: {
     width: 310
   },
-  col3: {
+  teacherCol: {
     lineHeight: '52px',
+    width: 160
+  },
+  studentsCol: {
     width: 110
   },
-  col4: {
+  sectionCodeCol: {
     lineHeight: '52px',
-    width: 210,
+    width: 135,
     borderRightWidth: 0,
   },
-  col4Rtl: {
+  sectionCodeColRtl: {
     lineHeight: '52px',
     width: 210
+  },
+  leaveCol: {
+    width: 110,
+    borderLeftWidth: 1,
+    borderLeftColor: color.border_light_gray,
+    borderLeftStyle: 'solid',
   },
   colText: {
     color: color.charcoal,
     fontFamily: '"Gotham 5r", sans-serif',
     fontSize: 14,
+    lineHeight: '22px'
   },
   link: {
     color: color.teal,
@@ -77,47 +90,66 @@ export const styles = {
 
 const SectionsTable = React.createClass({
   propTypes: {
-    sections: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        linkToProgress: React.PropTypes.string.isRequired,
-        assignedTitle: React.PropTypes.string,
-        linkToAssigned: React.PropTypes.string,
-        numberOfStudents: React.PropTypes.number.isRequired,
-        linkToStudents: React.PropTypes.string.isRequired,
-        sectionCode: React.PropTypes.string.isRequired
-      })
-    ),
-    isRtl: React.PropTypes.bool.isRequired
+    sections: shapes.sections,
+    isRtl: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
+    canLeave: PropTypes.bool.isRequired,
+    updateSections: PropTypes.func.isRequired,
+    updateSectionsResult: PropTypes.func.isRequired
+  },
+
+  onLeave(sectionCode, sectionName) {
+    $.post({
+      url: `/api/v1/sections/${sectionCode}/leave`,
+      dataType: "json"
+    }).done(data => {
+      this.props.updateSections(data.sections);
+      this.props.updateSectionsResult("leave", data.result, sectionName);
+    });
   },
 
   render() {
-    const { sections, isRtl } = this.props;
+    const { sections, isRtl, isTeacher, canLeave } = this.props;
 
     return (
       <table style={styles.table}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={{...styles.col, ...styles.col1}}>
+            <td style={{...styles.col, ...styles.sectionNameCol}}>
               <div style={styles.colText}>
-                {i18n.section()}
+                {i18n.sectionName()}
               </div>
             </td>
-            <td style={{...styles.col, ...styles.col2}}>
+            <td style={{...styles.col, ...styles.courseCol}}>
               <div style={styles.colText}>
                 {i18n.course()}
               </div>
             </td>
-            <td style={{...styles.col, ...styles.col3}}>
-              <div style={styles.colText}>
-                {i18n.students()}
-              </div>
-            </td>
-            <td style={{...styles.col, ...(isRtl? styles.col4Rtl: styles.col4)}}>
+            {isTeacher && (
+              <td style={{...styles.col, ...styles.studentsCol}}>
+                <div style={styles.colText}>
+                  {i18n.students()}
+                </div>
+              </td>
+            )}
+            {!isTeacher && (
+              <td style={{...styles.col, ...styles.teacherCol}}>
+                <div style={styles.colText}>
+                  {i18n.teacher()}
+                </div>
+              </td>
+            )}
+            <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
               <div style={styles.colText}>
                 {i18n.sectionCode()}
               </div>
             </td>
+            {!isTeacher && canLeave && (
+              <td style={{...styles.col, ...styles.leaveCol}}>
+                <div style={styles.colText}>
+                </div>
+              </td>
+            )}
           </tr>
         </thead>
         <tbody>
@@ -129,24 +161,48 @@ const SectionsTable = React.createClass({
               }}
               key={index}
             >
-              <td style={{...styles.col, ...styles.col1}}>
-                <a href={section.linkToProgress} style={styles.link}>
-                  {section.name}
-                </a>
+              <td style={{...styles.col, ...styles.sectionNameCol}}>
+                {isTeacher && (
+                  <a href={section.linkToProgress} style={styles.link}>
+                    {section.name}
+                  </a>
+                )}
+                {!isTeacher && (
+                  <div>
+                    {section.name}
+                  </div>
+                )}
               </td>
-              <td style={{...styles.col, ...styles.col2}}>
+              <td style={{...styles.col, ...styles.courseCol}}>
                 <a href={section.linkToAssigned} style={styles.link}>
                   {section.assignedTitle}
                 </a>
               </td>
-              <td style={{...styles.col, ...styles.col3}}>
-                <a href={section.linkToStudents} style={styles.link}>
-                  {section.numberOfStudents}
-                </a>
+              {isTeacher && (
+                <td style={{...styles.col, ...styles.col3}}>
+                  <a href={section.linkToStudents} style={styles.link}>
+                    {section.numberOfStudents}
+                  </a>
+                </td>
+              )}
+              {!isTeacher && (
+                <td style={{...styles.col, ...styles.col3Student}}>
+                  {section.teacherName}
+                </td>
+              )}
+              <td style={{...styles.col, ...(isRtl? styles.sectionCodeColRtl: styles.sectionCodeCol)}}>
+                {section.code}
               </td>
-              <td style={{...styles.col, ...(isRtl? styles.col4Rtl: styles.col4)}}>
-                {section.sectionCode}
-              </td>
+              {!isTeacher && canLeave && (
+                <td style={{...styles.col, ...styles.leaveCol}}>
+                  <Button
+                    style={{marginLeft: 5}}
+                    text={i18n.leaveSection()}
+                    onClick={this.onLeave.bind(this, section.code, section.name)}
+                    color={Button.ButtonColor.gray}
+                  />
+                </td>
+              )}
             </tr>
           )}
         </tbody>

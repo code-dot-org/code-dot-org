@@ -1,3 +1,7 @@
+/* Despite being in /shared/, this styling is currently only used for the Pegasus
+ * header.
+ */
+
 @import 'color';
 
 #pageheader2-wrapper {
@@ -23,6 +27,13 @@
     #left {
       float: left;
       margin: 0;
+
+      .rtl & {
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding-right: 300px;
+      }
     }
 
     #logo-wrapper {
@@ -52,6 +63,10 @@
       position: relative;
       padding-left: 6px;
 
+      .rtl & {
+        float: right;
+      }
+
       .headerlink {
         display: inline-block;
         font-size: 14px;
@@ -68,6 +83,10 @@
         &:hover, &:active {
           color: $white;
           border-bottom: solid 2px $orange;
+        }
+
+        .rtl & {
+          float: right;
         }
       }
     }

@@ -1,15 +1,17 @@
 import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
-import ProgressButton from "../progress/ProgressButton";
+import styleConstants from '../../styleConstants';
+import Button from "../Button";
 
 const styles = {
   section: {
-    width: 940,
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
     borderStyle: 'dashed',
     borderWidth: 5,
     borderColor: color.border_gray,
+    boxSizing: "border-box"
   },
   heading: {
     paddingLeft: 50,
@@ -79,9 +81,9 @@ const SetUpMessage = React.createClass({
               {i18n.setupCoursesStudent()}
             </div>
           )}
-          <ProgressButton
+          <Button
             href="/courses"
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={i18n.findCourse()}
             style={isRtl ? styles.rtlButton : styles.button}
           />
@@ -97,9 +99,9 @@ const SetUpMessage = React.createClass({
           <div style={isRtl ? styles.rtlDescription : styles.description}>
             {i18n.createNewClassroom()}
           </div>
-          <ProgressButton
+          <Button
             href={sectionsUrl}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={i18n.createSection()}
             style={isRtl ? styles.rtlButton : styles.button}
           />

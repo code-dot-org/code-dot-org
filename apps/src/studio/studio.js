@@ -11,10 +11,10 @@ import * as constants from './constants';
 import * as utils from '../utils';
 import _ from 'lodash';
 import AppView from '../templates/AppView';
-import BigGameLogic from './bigGameLogic';
+import BigGameLogic from './customLogic/bigGameLogic';
 import CollisionMaskWalls from './collisionMaskWalls';
 import Hammer from "../third-party/hammer";
-import ImageFilterFactory from './ImageFilterFactory';
+import GlowFilter from './starwars/GlowFilter';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
@@ -24,8 +24,8 @@ import ObstacleZoneWalls from './obstacleZoneWalls';
 import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RocketHeightLogic from './rocketHeightLogic';
-import SamBatLogic from './samBatLogic';
+import RocketHeightLogic from './customLogic/rocketHeightLogic';
+import SamBatLogic from './customLogic/samBatLogic';
 import Sprite from './Sprite';
 import StudioVisualizationColumn from './StudioVisualizationColumn';
 import ThreeSliceAudio from './ThreeSliceAudio';
@@ -735,7 +735,7 @@ var goalFilterEffect = null;
 Studio.applyGoalEffect = function () {
   if (!goalFilterEffect) {
     var svg = document.getElementById('svgStudio');
-    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+    goalFilterEffect = new GlowFilter(svg);
   }
 
   if (goalFilterEffect) {
@@ -2147,9 +2147,19 @@ Studio.init = function (config) {
     }
   };
 
-  studioApp().setPageConstants(config, {
-    hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/)
-  });
+  // Override Page constants
+  const appSpecificConstants = {
+    hideCoordinateOverlay: !level.toolbox || !level.toolbox.match(/studio_setSpriteXY/),
+  };
+
+  // for hoc2015x, we only have permission to show the Rey avatar for approved
+  // scripts. For all others, we override the avatars with an empty image
+  if (config.skin.avatarAllowedScripts &&
+      !config.skin.avatarAllowedScripts.includes(config.scriptName)) {
+    appSpecificConstants.smallStaticAvatar = config.skin.blankAvatar;
+    appSpecificConstants.failureAvatar = config.skin.blankAvatar;
+  }
+  studioApp().setPageConstants(config, appSpecificConstants);
 
   var visualizationColumn = (
     <StudioVisualizationColumn
@@ -2500,9 +2510,6 @@ Studio.reset = function (first) {
     hasThrownProjectile: false
   };
 
-  // Reset the record of the last direction that the user moved the sprite.
-  Studio.lastMoveSingleDir = Direction.EAST;
-
   // Reset goal successState:
   if (level.goal) {
     level.goal.successState = {};
@@ -2556,6 +2563,7 @@ Studio.reset = function (first) {
       // overridden as soon as we call setSprite
       visible: !level.spritesHiddenToStart
     });
+    Studio.lastMoveSingleDir = spriteStart.direction;
 
     var sprite = i % Studio.startAvatars.length;
 
@@ -2750,7 +2758,8 @@ Studio.runButtonClick = function () {
 Studio.displayFeedback = function () {
   var tryAgainText;
   // For free play, show keep playing, unless it's a big game level
-  if (level.freePlay && !(Studio.customLogic instanceof BigGameLogic)) {
+  if ((level.freePlay || Studio.testResults >= TestResults.MINIMUM_OPTIMAL_RESULT) &&
+      !(Studio.customLogic instanceof BigGameLogic)) {
     tryAgainText = commonMsg.keepPlaying();
   } else {
     tryAgainText = commonMsg.tryAgain();

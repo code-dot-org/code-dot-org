@@ -1,5 +1,4 @@
-login_required 'true'
-hidden 'false'
+login_required true
 
 stage 'Intro to Data'
 level 'U4L01 Student Lesson Introduction'

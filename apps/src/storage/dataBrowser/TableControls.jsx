@@ -69,7 +69,7 @@ const TableControls = React.createClass({
             buttonText="Clear table"
             containerStyle={{width: 103}}
             buttonId="clearTableButton"
-            onConfirm={this.props.clearTable}
+            onConfirmDelete={this.props.clearTable}
             title="Clear table"
           />
 

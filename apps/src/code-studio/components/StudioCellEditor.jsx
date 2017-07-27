@@ -1,8 +1,8 @@
 /**
- * @overview React component to allow for easy editing and creation of
- * Studio Cells
+ * @overview React component to allow for easy editing and creation of Studio Cells
  * @see @cdo/apps/studio/cell
  */
+
 import {
   Direction,
   Emotions,
@@ -10,66 +10,52 @@ import {
   SpriteSpeed,
   SquareType
 } from '@cdo/apps/studio/constants';
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import CellEditor from './CellEditor';
 
-// TODO elijah this list is pulled from
-// @cdo/apps/studio/skins:loadStudio(), where it is hardcoded as the
-// list of avatars for the Code Studio Playlab Skin. The list is
-// duplicated in Grid.jsx for the purposes of displaying the sprites.
-// Ideally, both of these templates would just be referencing a more
+// TODO elijah this list is pulled from @cdo/apps/studio/skins:loadStudio(),
+// where it is hardcoded as the list of avatars for the Code Studio Playlab
+// Skin. The list is duplicated in Grid.jsx for the purposes of displaying the
+// sprites. Ideally, both of these templates would just be referencing a more
 // publically-accessible list in apps code.
-// Even more ideally, this editor would be expanded to support any of
-// our skins, but that will likely require a bit of a refactor in the
-// way we handle skins, and is unjustifiable for now, since the
-// Playlab-skinned levels are currently the only ones we edit with this
-// interface.
-var avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
+//
+// Even more ideally, this editor would be expanded to support any of our skins,
+// but that will likely require a bit of a refactor in the way we handle skins,
+// and is unjustifiable for now, since the Playlab-skinned levels are currently
+// the only ones we edit with this interface.
+const avatarList = ["dog", "cat", "penguin", "dinosaur", "octopus",
     "witch", "bat", "bird", "dragon", "squirrel", "wizard", "alien",
     "ghost", "monster", "robot", "unicorn", "zombie", "knight",
     "ninja", "pirate", "caveboy", "cavegirl", "princess", "spacebot",
     "soccergirl", "soccerboy", "tennisgirl", "tennisboy"];
 
-var CellEditor = React.createClass({
-  propTypes: {
-    cell: React.PropTypes.object.isRequired,
-    row: React.PropTypes.number.isRequired,
-    col: React.PropTypes.number.isRequired,
-    onUpdate: React.PropTypes.func.isRequired,
-  },
+// Use a subset of studio SquareTypes for the tiletypes, since many of them are
+// not used or are used only by non-levelbuilder-editable implementations.
+// Also override the names because 'goal' is prettier than 'spritefinish'
+const usedSquareTypes = {
+  OPEN: SquareType.OPEN,
+  GOAL: SquareType.SPRITEFINISH,
+  START: SquareType.SPRITESTART,
+};
 
-  handleChange: function (event) {
-    var values = {};
-    var nodes = ReactDOM.findDOMNode(this).querySelectorAll('[name]');
-    for (var i = 0, node; (node = nodes[i]); i++) {
-      values[node.name] = isNaN(parseInt(node.value)) ? undefined : Number(node.value);
-    }
-    this.props.onUpdate(values);
-  },
+export default class StudioCellEditor extends CellEditor {
 
-  render: function () {
-    var values = this.props.cell.serialize();
+  /**
+   * @override
+   */
+  getSelectFieldNames() {
+    return super.getSelectFieldNames().concat([
+      'speed', 'size', 'direction', 'emotion', 'sprite'
+    ]);
+  }
 
-    // We want undefined values that are going to be in <selects> to
-    // actually be the STRING 'undefined' rather than the value.
-    ['tileType', 'speed', 'size', 'direction', 'emotion', 'sprite'].forEach(value => {
-      if (values[value] === undefined) {
-        values[value] = 'undefined';
-      }
-    });
-
+  /**
+   * @override
+   */
+  renderFields(values) {
     return (
-      <form className="span4 offset1">
-        <header>
-          <strong>Editing Cell ({this.props.row}, {this.props.col})</strong>
-        </header>
-
-        <label htmlFor="tileType">Tile Type (required):</label>
-        <select name="tileType" value={values.tileType} onChange={this.handleChange}>
-          <option value={SquareType.OPEN}>open</option>
-          <option value={SquareType.SPRITEFINISH}>goal</option>
-          <option value={SquareType.SPRITESTART}>sprite</option>
-        </select>
+      <div>
+        {super.renderTileTypes(values, usedSquareTypes)}
 
         {(values.tileType === SquareType.SPRITESTART) &&
           <div>
@@ -114,9 +100,7 @@ var CellEditor = React.createClass({
             </select>
           </div>
         }
-
-      </form>
+      </div>
     );
-  },
-});
-module.exports = CellEditor;
+  }
+}

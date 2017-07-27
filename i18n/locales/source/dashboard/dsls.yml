@@ -2788,7 +2788,13 @@ en:
       coursef_powerofwords:
         description here: description here
         title: title
+      csd deeper learning timeline:
+        Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
+        description here: description here
       csd-novice-congrats: {}
+      csp deeper learning timeline:
+        Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
+        description here: description here
       csp-novice-congrats: {}
       csp_ap_intro: {}
       csp_unit5_finalassessment_overview:
@@ -2797,6 +2803,15 @@ en:
       csp_unit_assessment_overview:
         description here: description here
         title: title
+      deeper learning:
+        Deeper Learning Description: Deeper Learning Description
+        description here: description here
+      deeper learning recommendations- csd:
+        Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
+        description here: description here
+      deeper learning recommendations- csp:
+        Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
+        description here: description here
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -7397,14 +7412,14 @@ en:
         The bird will make it to the pig.: The bird will make it to the pig.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseC_multi_starWars_predict1:
-        BB-8 will move forward 5 times, which will get it to collect all of the scrap metal: BB-8 will move forward 5 times, which will get it to collect all of the scrap metal
-        BB-8 will move forward only one space: BB-8 will move forward only one space
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
+        BB-8 will move only one space: BB-8 will move only one space
         BB-8 will not move.: BB-8 will not move.
         Correct!: Correct!
         I don't know: I don't know
         Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
-        Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
         The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
+        What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
       courseC_multi_starWars_predict2:
         BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
         BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
@@ -7605,15 +7620,14 @@ en:
       courseE_multi_farmer_predict1:
         Correct!: Correct!
         I don't know: I don't know
-        ? Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
-        : Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
+        ? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Look closely at the code below.  What do you think will happen when you click "Run"? '
         Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
-        The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn: The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn
-        The farmer will go to the sprout and try to pick lettuce no matter what.: The farmer will go to the sprout and try to pick lettuce no matter what.
-        ? The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
-        : The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
-        ? We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
-        : We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
+        ? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
+        The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
       courseE_multi_farmer_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7694,22 +7708,21 @@ en:
       courseF_multi_bee_conditionals1_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
+        ? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
-        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseF_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
         ? Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
         : Incorrect. The `if at flower` block lets the bee get nectar at each flower and make honey if there's not a flower (therefore a honeycomb.).
-        ? Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be one flower or one honeycomb under each cloud. Look carefully at the code below.  What do you think will happen after you click "Run"?
-        : Sometimes a cloud covers a flower, sometimes it covers a honeycomb! Either way, there will only ever be one flower or one honeycomb under each cloud. Look carefully at the code below.  What do you think will happen after you click "Run"?
+        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.: The `if at flower` block lets the bee get nectar at each flower, otherwise it makes honey.
         The bee will get nectar at each flower, otherwise it will make honey.: The bee will get nectar at each flower, otherwise it will make honey.
         The bee will try to get honey from both flowers and honeycomb.: The bee will try to get honey from both flowers and honeycomb.

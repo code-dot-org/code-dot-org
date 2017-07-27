@@ -1,18 +1,19 @@
 import React from 'react';
 import color from "../../util/color";
-import ProgressButton from '../progress/ProgressButton';
+import styleConstants from '../../styleConstants';
+import Button from '../Button';
 
 const styles = {
   container: {
     height: 250,
-    width: 940,
+    width: styleConstants['content-width'],
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
     backgroundColor: color.white,
   },
   tealBar: {
-    width: 940,
+    width: styleConstants['content-width'],
     height: 65,
     backgroundColor: color.teal,
   },
@@ -102,9 +103,9 @@ const Announcement = React.createClass({
         <div style={isRtl? styles.descriptionRtl : styles.description}>
           {description}
         </div>
-        <ProgressButton
+        <Button
           href={link}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           text={buttonText}
           style={isRtl? styles.buttonRtl : styles.button}
         />

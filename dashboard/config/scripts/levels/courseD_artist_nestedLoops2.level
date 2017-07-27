@@ -34,7 +34,7 @@
     "never_autoplay_video": "true",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nest your loops by surrounding your triangle code with another `repeat` loop.\",\"hint_id\":\"courseD_artist_nestedLoops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://cdo-tts.s3.amazonaws.com/sharon22k/180/100/3a0b8ee90afb4ea0483f5c536a35b043/courseD_artist_nestedLoops2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Nest your loops by surrounding your triangle code with another `repeat` loop.\",\"hint_id\":\"courseD_artist_nestedLoops2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3a0b8ee90afb4ea0483f5c536a35b043/courseD_artist_nestedLoops2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to put the `turn` block inside of the loop so that the artist turns after each triangle.\",\"hint_id\":\"courseD_artist_nestedLoops2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/708a78d33894ccceb9ac7050e407a790/courseD_artist_nestedLoops2.mp3\"}]",
     "video_key": "C3_artist_nested_loops",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -42,6 +42,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:44:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

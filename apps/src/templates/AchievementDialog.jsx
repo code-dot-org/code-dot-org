@@ -148,6 +148,7 @@ const AchievementDialog = Radium(React.createClass({
     return (
       <BaseDialog
         useUpdatedStyles
+        fixedHeight={480}
         isOpen={this.state.isOpen}
         handleClose={this.handleClose.bind(this, !this.props.encourageRetry)}
         assetUrl={this.props.assetUrl}

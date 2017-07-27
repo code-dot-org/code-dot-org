@@ -38,3 +38,7 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 	* [Introduction video](https://amara.org/en/videos/MAPGRpEu3h0k/info/star-wars-with-blockly-hour-of-code-introduction/)
 	* [Events video](https://amara.org/en/videos/BUt4bT1vkTwZ/info/star-wars-with-blockly-hour-of-code-events/)
 	* [Conclusion video](https://amara.org/en/videos/MTpUmI9XcUUW/info/star-wars-with-blockly-hour-of-code-closing/)
+
+---
+
+<%= view :starwars_languages %>

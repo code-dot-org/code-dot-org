@@ -94,6 +94,12 @@
   congratulations_on_completing_course2: Parabéns por ter concluído o Curso 2
   congratulations_on_completing_course3: Parabéns por ter concluído o Curso 3
   congratulations_on_completing_course4: Parabéns por ter concluído o Curso 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: Parabéns por ter concluído o Curso Acelerado
   congrats_next_tutorials_title: Passe para o próximo nível
   congrats_next_tutorials_desc: Experimente esses tutoriais menores, de 1 hora, ou
@@ -281,6 +287,12 @@
   just_did_course2: Eu acabei de concluir o Curso 2 - confira! @codeorg
   just_did_course3: Eu acabei de concluir o Curso 3 - confira! @codeorg
   just_did_course4: Eu acabei de concluir o Curso 4 - confira! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: Eu acabei de concluir o Curso Acelerado - confira! @codeorg
   twitter_teach_cs: Nove em cada 10 pessoas concordam que as escolas devem ensinar
     ciência da computação. http://youtu.be/nKIu9yen5nc. Acesse https://code.org/.
@@ -341,6 +353,10 @@
     &ldquo;A ciência da computação leva
     às melhores oportunidades no mundo.&rdquo;
     Satya, CEO da Microsoft
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Se você programa, você pode escolher
     o rumo da sua vida.&rdquo;
@@ -970,6 +986,12 @@
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4: '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: Se não tiver computadores, <a href='%{unplugged_url}'>use essas
     aulas off-line</a> na sua sala de aula.
   dashboard_curriculum: Currículo
@@ -1165,11 +1187,17 @@
   course3_name: Curso 3
   course4_name: Curso 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Curso acelerado
   cspunit1_name: "(antigo) Unidade 1: Informação digital"
   cspunit2_name: "(antigo) Unidade 2: A Internet"
@@ -1189,6 +1217,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Teste completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste, parte 1 - 25 questões
@@ -1284,6 +1313,12 @@
   course2_gradelevel: 6-18 anos de idade
   course3_gradelevel: 8-18 anos de idade
   course4_gradelevel: 10-18 anos de idade
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Alunos a partir do 8º ano
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 10-18 anos de idade
   codeorg_platformtext: Navegadores Web modernos, smartphones, tablets
   codeintl_platformtext: Navegadores modernos, smartphones, tablets
@@ -1422,6 +1457,12 @@
     flexíveis para problemas mais complexos. No final deste curso, os alunos criarão
     histórias interativas e jogos que podem ser compartilhados com outras pessoas.
     Recomendado para alunos do 4º ao 8º ano.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Aprenda os conceitos básicos de Ciência da Computação com
     a programação de arrastar e soltar. Este tutorial se parece com um jogo, é autoexplicativo
     e conta com a participação de Bill Gates, Mark Zuckerberg, Angry Birds e Plants
@@ -1964,10 +2005,10 @@
   infinity_shortcode: inf
   playlab_shortcode: jogue
   artist_shortcode: art
-  header_home: Home
+  header_home: Início
   header_courses: percursos
-  header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_project_gallery: Galeria de projetos
+  header_sections: Turmas
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
@@ -1980,25 +2021,25 @@
   header_educate_community: Online Community
   header_educate_tools: Vídeos e ferramentas
   header_about_us: Quem Somos
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
+  header_about_leadership: Administração
+  header_about_donors: Doadores
+  header_about_partners: Parceiros
+  header_about_team: Toda a equipa
+  header_about_news: Imprensa
+  header_about_evaluation: Avaliação
+  header_about_jobs: Empregos
+  header_about_contact: Contacte-nos
   header_about_faqs: Perguntas Frequentes (FAQ)
   header_learn: Aprenda
   header_teach: Teach
   header_stats: Estatísticas
   header_help_us: Help Us
   header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
-  csp_name: CS Principles
+  header_teacher_community: Comunidade de professores
+  header_help_support: Ajuda e suporte
+  header_report_bug: Comunicar um problema
+  header_tutorials: Tutoriais
+  header_documentation: Documentação
+  csp_name: Princípios da CC - 16-17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses

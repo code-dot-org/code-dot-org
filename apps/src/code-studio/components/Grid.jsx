@@ -81,6 +81,12 @@ var Cell = React.createClass({
         tdStyle.backgroundSize = "800% 800%";
         tdStyle.backgroundPosition = `-${x * CELL_WIDTH}px -${y * CELL_HEIGHT}px`;
       }
+    } else if (this.props.skin === 'bounce') {
+      const images = ['tiles_wall', 'goal', 'ball', 'paddle', 'paddle', 'ball', 'obstacle'];
+      if (cell.tileType_) {
+        const image = images[Math.log2(cell.tileType_)];
+        tdStyle.backgroundImage = `url('/blockly/media/skins/bounce/${image}.png')`;
+      }
     } else {
       classNames.push(karelTiles[cell.tileType_]);
 

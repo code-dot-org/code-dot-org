@@ -19,12 +19,18 @@ const styles = {
     display: 'table',
     width: '100%',
     height: '100%',
-    marginBottom: 12,
     background: color.lightest_gray,
-    borderWidth: 1,
     borderColor: color.border_gray,
     borderStyle: 'solid',
     borderRadius: 2,
+    // When toggling between hidden and not, we change our border size from 1 to 4.
+    // We want to limit how much toggling this changes our sizing, so we add +3
+    // to each of our non-hidden margins
+    borderWidth: 1,
+    marginTop: 3,
+    marginBottom: 15,
+    marginLeft: 3,
+    marginRight: 3
   },
   rightCol: {
     display: 'table-cell',
@@ -42,8 +48,12 @@ const styles = {
     cursor: 'pointer'
   },
   hiddenOrLocked: {
-    background: color.white,
     borderStyle: 'dashed',
+    borderWidth: 4,
+    marginTop: 0,
+    marginBottom: 12,
+    marginLeft: 0,
+    marginRight: 0,
   },
   translucent: {
     opacity: 0.6
@@ -70,7 +80,7 @@ const ProgressLesson = React.createClass({
     currentStageId: PropTypes.number,
     showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    hasSelectedSection: PropTypes.bool.isRequired,
+    showLockIcon: PropTypes.bool.isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonLockedForSection: PropTypes.func.isRequired
   },
@@ -105,7 +115,7 @@ const ProgressLesson = React.createClass({
       levels,
       showTeacherInfo,
       viewAs,
-      hasSelectedSection,
+      showLockIcon,
       lessonIsVisible,
       lessonLockedForSection
     } = this.props;
@@ -152,7 +162,7 @@ const ProgressLesson = React.createClass({
                 style={styles.icon}
               />
             }
-            {hasSelectedSection && lesson.lockable &&
+            {showLockIcon && lesson.lockable &&
               <span data-tip data-for={tooltipId}>
                 <FontAwesome
                   icon={locked ? 'lock' : 'unlock'}
@@ -200,7 +210,7 @@ export default connect(state => ({
   currentStageId: state.progress.currentStageId,
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.stageLock.viewAs,
-  hasSelectedSection: !!state.sections.selectedSectionId,
+  showLockIcon: !!state.sections.selectedSectionId || state.stageLock.viewAs === ViewType.Student,
   lessonLockedForSection: lessonId => lessonIsLockedForAllStudents(lessonId, state),
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs)
 }))(ProgressLesson);

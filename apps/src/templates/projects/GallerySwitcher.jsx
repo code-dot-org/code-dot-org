@@ -2,22 +2,21 @@ import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from "../../util/color";
 import Radium from 'radium';
-import {selectGallery} from './projectsModule.js';
+import {selectGallery} from './projectsRedux.js';
 import {connect} from 'react-redux';
 import {Galleries} from './projectConstants';
 
 const styles = {
   container: {
     marginBottom: 20,
-    width: '100%',
     backgroundColor: color.lightest_gray,
     borderRadius: 5,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.lighter_gray,
     padding: 10,
-    marginLeft: 25,
-    height: 36
+    height: 36,
+    marginLeft: 20
   },
   pill: {
     ':hover': {
@@ -102,7 +101,7 @@ class GallerySwitcher extends Component {
 }
 
 export default connect(state => ({
-  selectedGallery: state.selectedGallery
+  selectedGallery: state.projects.selectedGallery
 }), dispatch => ({
   selectGallery(gallery){
     dispatch(selectGallery(gallery));

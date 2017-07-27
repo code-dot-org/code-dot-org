@@ -5,6 +5,7 @@
 # content scoops from staging and levelbuilder, the DTP, and the DTL.
 
 require 'cgi'
+require 'io/console'
 require 'logger'
 require 'tmpdir'
 require_relative '../lib/cdo/cdo_cli'
@@ -103,12 +104,17 @@ def puts_quit_message
   EOS
 end
 
+def flush_and_gets
+  $stdin.iflush
+  gets
+end
+
 # Prompts the user for their name, setting the global variable @dotd_name and
 # warns them of changing options.
 def ask_for_name
   until @dotd_name != ''
     print 'Who are you? '
-    @dotd_name = gets.chomp
+    @dotd_name = flush_and_gets.chomp
   end
 
   puts <<-EOS.unindent_with_indent(2)
@@ -125,17 +131,18 @@ end
 # response.
 # @param question [String] The question to prompt the user with.
 # @block The block to run if the user responsds affirmatively.
+# @return [Boolean] Whether the block was executed.
 def should_i(question)
   loop do
     print "Should I #{question}? [#{underline 'Y'}es]/#{underline 'S'}kip/#{underline 'Q'}uit: "
-    response = gets.strip.downcase
+    response = flush_and_gets.strip.downcase
     puts ''
     if 'yes'.start_with?(response) # also catches blank/return ;)
       @logger.info(question)
       yield
-      return
+      return true
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
-      return
+      return false
     elsif 'quit'.start_with?(response)
       puts_quit_message
       exit(-1)
@@ -148,7 +155,7 @@ end
 # Prompts the user to press enter, waiting until this is done.
 def press_enter_to_continue
   puts dim 'Press enter to continue...'
-  gets
+  flush_and_gets
 end
 
 # Prompts the user to wait for thing, pausing until any key is pressed.
@@ -184,6 +191,10 @@ def content_push(server_name, environment_name)
   # Notice if the content push fails, and be helpful about fixing the problem.
   unless success
     puts "#{bold 'Uh-oh!'}  It looks like the #{server_name} content push failed!"
+    should_i "retry the #{server_name} content push" do
+      content_push(server_name, environment_name)
+      return
+    end
     should_i "ssh to #{server_name} so you can fix the problem manually" do
       puts <<-EOS.unindent
 
@@ -283,30 +294,22 @@ end
 
 # Asks if the DTT subroutine should be performed, doing so if requested.
 def do_dtt_subroutine
+  view_commits base: 'test', head: 'staging'
   print_dtt_message
   should_i 'DTT' do
-    view_commits base: 'test', head: 'staging'
-    should_i 'merge from staging to test' do
-      should_i 'reset DTT message to in progress' do
-        DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
-      end
-      pr_number = GitHub.create_and_merge_pull_request(
-        base: 'test',
-        head: 'staging',
-        title: 'DTT (Staging > Test)'
-      )
-      url = GitHub.url(pr_number)
-      wait_for "DTT (#{url}) to complete, re-run / investigate failures"
-
-      should_i 'reset DTT message to yes' do
-        DevelopersTopic.set_dtt 'yes'
-      end
-
-      should_i 'update test room status with green commit and timestamp' do
-        new_sha = GitHub.sha 'test'
-        InfraTestTopic.set_green_commit new_sha
-      end
+    DevelopersTopic.set_dtt "in progress (@#{@dotd_name})"
+    pr_number = GitHub.create_and_merge_pull_request(
+      base: 'test',
+      head: 'staging',
+      title: 'DTT (Staging > Test)'
+    )
+    url = GitHub.url(pr_number)
+    print "wait for DTT (#{url}) to complete, re-run / investigate failures then answer following question"
+    should_i 'update test room status with green commit and timestamp' do
+      new_sha = GitHub.sha 'test'
+      InfraTestTopic.set_green_commit new_sha
     end
+    DevelopersTopic.set_dtt 'yes'
   end
 end
 
@@ -352,9 +355,7 @@ def main
     InfraTestTopic.set_green_commit test_sha
   end
 
-  should_i 'reset DTT message to yes' do
-    DevelopersTopic.set_dtt 'yes'
-  end
+  DevelopersTopic.set_dtt 'yes'
 
   should_i 'retrieve recent honeybadger issues' do
     get_honeybadger_issues
@@ -390,9 +391,7 @@ def main
   test_green_commit = InfraTestTopic.green_commit
   if test_green_commit
     should_i "DTP #{test_green_commit}" do
-      should_i 'set DTP message to in progress' do
-        DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
-      end
+      DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
 
       # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
       # request from a commit hash (only a branch name), we create and push a branch.
@@ -405,7 +404,10 @@ def main
           title: "DTP (Test > Production: #{test_green_commit})"
         )
         print_database_changes production_pr_number
-        GitHub.open_url GitHub.url(production_pr_number)
+        dtp_auto_merged = should_i "merge DTP PR#{production_pr_number}" do
+          GitHub.merge_pull_request(production_pr_number, "DTP (Test > Production: #{test_green_commit})")
+        end
+        GitHub.open_url GitHub.url(production_pr_number) unless dtp_auto_merged
 
         should_i 'DTL' do
           # TODO(asher): Remove this wait step if it is truly unnecessary now.
@@ -427,13 +429,9 @@ def main
         end
 
         wait_for 'DTP to finish'
-        should_i 'reset DTP message to yes' do
-          DevelopersTopic.set_dtp 'yes'
-        end
-        should_i 'update Slack#infra-production topic' do
-          sha = GitHub.sha 'production'
-          InfraProductionTopic.set_dtp_commit(sha)
-        end
+        DevelopersTopic.set_dtp 'yes'
+        sha = GitHub.sha 'production'
+        InfraProductionTopic.set_dtp_commit(sha)
 
         puts_after_dtp_tasks
       ensure
