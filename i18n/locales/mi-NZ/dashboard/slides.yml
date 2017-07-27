@@ -747,7 +747,7 @@ mi:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Mēnā e hiahia ana koe ki te taka tiakarete, he maha ngā hipanga nui i taua tūkanga, ā, mō ia hipanga nui he tautuhinga hipanga iti. He rerekē ngā tohutao, nā hātepe rānei. Kei te āhua o te tāwara e hiahiatia ana. he whaitake ngā hipanga katoa, ahakoa te rahi, nā te mea, ki te ngaro tētahi o ngā hipanga, ka raru te katoa. Koina te take me āta tuhi i ngā hipanga katoa, kia rite tonu te huanga i ia wā, ahakoa te kaikawe."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Ā mohoa nei ko tāu he hanga i tētahi hākoritanga, tētahi paki rānei ka tōai i ōna āhuatanga ia te wā ka whakahaerehia. Nā reira, e wātea ana ināianei ki te hanga i tētahi kēmu pāhekoheko e āhei ana koe te tākaro."
@@ -823,7 +823,7 @@ mi:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "I tēnei tauira ka mea atu tātou MĒNĀ he waireka tō te putiputi tawa he nui ake i te 0, tikina atu te waireka. Mā tēnei ka whakahautia tā tātou pī ki te kohikohi i te waireka mēnā rā he waireka. Ana!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Kua rongo kōrero koe mō tētahi papatono patuiro? Koinei te ara e mōhio ai koe he aha e raru ana. Ki te patu i te iro waehere ka tautohu i ngā hapa, ka tangohia hoki."

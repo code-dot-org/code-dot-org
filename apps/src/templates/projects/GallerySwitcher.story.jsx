@@ -1,14 +1,12 @@
 import React from 'react';
 import GallerySwitcher from './GallerySwitcher';
 import {Galleries} from './projectConstants';
-import {selectedGallery, selectGallery} from './projectsModule';
+import projects, {selectGallery} from './projectsRedux';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 
 const createProjectsStore = function () {
-  return createStore(combineReducers({
-    selectedGallery: selectedGallery
-  }));
+  return createStore(combineReducers({projects}));
 };
 
 export default storybook => {

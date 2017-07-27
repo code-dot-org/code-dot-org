@@ -27,21 +27,21 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions_important": "false",
-    "ideal": "23",
     "markdown_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
     "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
-    "contained_level_names": [
-      "courseE_multi_farmer_functions11_predict"
-    ],
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "shape_shift": "false"
+    "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": [
+      "courseE_multi_farmer_functions11_predict"
+    ]
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-15 18:04:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 18:04:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 01:19:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:22:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:30:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:31:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:08:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:36:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -53,8 +53,8 @@
             <block type="procedures_callnoreturn">
               <mutation name="find pumpkin"/>
               <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
+                <block type="procedures_callnoreturn">
+                  <mutation name="wander path"/>
                   <next>
                     <block type="procedures_callnoreturn">
                       <mutation name="find pumpkin"/>
@@ -63,7 +63,17 @@
                           <mutation name="wander path"/>
                           <next>
                             <block type="procedures_callnoreturn">
-                              <mutation name="wander path"/>
+                              <mutation name="find pumpkin"/>
+                              <next>
+                                <block type="procedures_callnoreturn">
+                                  <mutation name="wander path"/>
+                                  <next>
+                                    <block type="procedures_callnoreturn">
+                                      <mutation name="check and pick"/>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
                             </block>
                           </next>
                         </block>
@@ -75,41 +85,26 @@
             </block>
           </next>
         </block>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" x="250px" y="20px">
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">
             <block type="harvester_ifAtCropElse">
               <title name="LOC">Corn</title>
               <statement name="DO">
-                <block type="harvester_whileHasCrop">
-                  <title name="LOC">Corn</title>
-                  <statement name="DO">
-                    <block type="harvester_corn"/>
-                  </statement>
-                </block>
+                <block type="harvester_corn"/>
               </statement>
               <statement name="ELSE">
                 <block type="harvester_ifAtCropElse">
                   <title name="LOC">Lettuce</title>
                   <statement name="DO">
-                    <block type="harvester_whileHasCrop">
-                      <title name="LOC">Lettuce</title>
-                      <statement name="DO">
-                        <block type="harvester_lettuce"/>
-                      </statement>
-                    </block>
+                    <block type="harvester_lettuce"/>
                   </statement>
                   <statement name="ELSE">
                     <block type="harvester_ifAtCrop">
                       <title name="LOC">Pumpkin</title>
                       <statement name="DO">
-                        <block type="harvester_whileHasCrop">
-                          <title name="LOC">Pumpkin</title>
-                          <statement name="DO">
-                            <block type="harvester_pumpkin"/>
-                          </statement>
-                        </block>
+                        <block type="harvester_pumpkin"/>
                       </statement>
                     </block>
                   </statement>
@@ -122,17 +117,21 @@
           <mutation/>
           <title name="NAME">find pumpkin</title>
           <statement name="STACK">
-            <block type="harvester_untilAtCrop">
-              <title name="LOC">Pumpkin</title>
+            <block type="harvester_untilHasPumpkin">
               <statement name="DO">
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                 </block>
               </statement>
+              <next>
+                <block type="maze_turn">
+                  <title name="DIR">turnRight</title>
+                </block>
+              </next>
             </block>
           </statement>
         </block>
-        <block type="procedures_defnoreturn">
+        <block type="procedures_defnoreturn" x="250px" y="300px">
           <mutation/>
           <title name="NAME">wander path</title>
           <statement name="STACK">

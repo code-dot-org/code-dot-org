@@ -1,6 +1,6 @@
 {
-  "basketballLaunchBall":"heittää uusi pallo",
-  "basketballLaunchBallTooltip":"Heittää pallo peliin.",
+  "basketballLaunchBall":"heitä uusi pallo",
+  "basketballLaunchBallTooltip":"Heitä pallo peliin.",
   "basketballSetPaddle":"aseta käsi",
   "basketballSetPaddleSpeedFast":"aseta nopea käsi nopeus",
   "basketballSetPaddleSpeedNormal":"aseta normaali käsi nopeus",
@@ -68,7 +68,7 @@
   "playSoundRubber":"soita kumin ääni",
   "playSoundSlap":"soita läpsähdyksen ääni",
   "playSoundSlapshot":"toista lämärin ääni",
-  "playSoundSwish":"play net swish sound",
+  "playSoundSwish":"soita humahduksen ääni",
   "playSoundTooltip":"Soita valittu ääni.",
   "playSoundWhistle":"toista vihellyksen ääni",
   "playSoundWinPoint":"soita pisteen voittamisen ääni",

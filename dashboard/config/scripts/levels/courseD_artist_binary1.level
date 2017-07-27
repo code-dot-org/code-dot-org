@@ -34,10 +34,15 @@
     "permitted_errors": "0",
     "discard_background": "false",
     "instructions_important": "true",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Replace the \\\"???\\\" in the text block with the binary image you want, in zeroes and ones.\",\"hint_id\":\"courseD_artist_binary1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/acab9c73e485e0cde4d21ea084c0df87/courseD_artist_binary1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The artist will draw a white space for every 1 and a black space for every 0.\",\"hint_id\":\"courseD_artist_binary1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cc0d49e87884141b7e83104d684c70f0/courseD_artist_binary1.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"This is how you can input your binary code:\\n\\n![](https://images.code.org/ec0f974e32c4323fc61cb49b48b8f1c0-image-1500334311345.2_hint.gif)\",\"hint_id\":\"courseD_artist_binary1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ba28c01c39738ef3fe0316e8bcf5930a/courseD_artist_binary1.mp3\"}]",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-12 18:51:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 23:26:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-17 23:32:20 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

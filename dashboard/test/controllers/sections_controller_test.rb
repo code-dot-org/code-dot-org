@@ -13,10 +13,18 @@ class SectionsControllerTest < ActionController::TestCase
     @picture_section = create(:section, user: @teacher, login_type: 'picture')
     @picture_user_1 = create(:follower, section: @picture_section).student_user
 
-    @regular_section = create(:section, user: @teacher, login_type: 'regular')
+    @regular_section = create(:section, user: @teacher, login_type: 'email')
 
     @flappy_section = create(:section, user: @teacher, login_type: 'word', script_id: Script.get_from_cache(Script::FLAPPY_NAME).id)
     @flappy_user_1 = create(:follower, section: @flappy_section).student_user
+  end
+
+  setup do
+    # place in setup instead of setup_all otherwise course ends up being serialized
+    # to a file if levelbuilder_mode is true
+    @course = create(:course)
+    @section_with_course = create(:section, user: @teacher, login_type: 'word', course_id: @course.id)
+    @section_with_course_user_1 = create(:follower, section: @section_with_course).student_user
   end
 
   test "do not show login screen for invalid section code" do
@@ -101,6 +109,16 @@ class SectionsControllerTest < ActionController::TestCase
     assert_redirected_to '/s/flappy'
   end
 
+  test "login to section with a course redirects to course" do
+    post :log_in, params: {
+      id: @section_with_course.code,
+      user_id: @section_with_course_user_1.id,
+      secret_words: @section_with_course_user_1.secret_words
+    }
+
+    assert_redirected_to "/courses/#{@section_with_course.course.name}"
+  end
+
   test "login with show_pairing_dialog shows pairing dialog" do
     post :log_in, params: {
       id: @flappy_section.code,
@@ -136,5 +154,36 @@ class SectionsControllerTest < ActionController::TestCase
     end
 
     assert_redirected_to section_path(id: @picture_section.code)
+  end
+
+  test "update: can update section you own" do
+    sign_in @teacher
+    section_with_script = create(:section, user: @teacher, script_id: Script.flappy_script.id)
+    post :update, params: {
+      id: section_with_script.id,
+      course_id: @course.id
+    }
+    assert_response :success
+    section_with_script.reload
+    assert_equal(@course.id, section_with_script.course_id)
+    assert_nil section_with_script.script_id
+  end
+
+  test "update: cannot update section you dont own" do
+    other_teacher = create(:teacher)
+    sign_in other_teacher
+    post :update, params: {
+      id: @regular_section.id,
+      course_id: @course.id,
+    }
+    assert_response :forbidden
+  end
+
+  test "update: cannot update section if not logged in " do
+    post :update, params: {
+      id: @regular_section.id,
+      course_id: @course.id,
+    }
+    assert_response :redirect
   end
 end

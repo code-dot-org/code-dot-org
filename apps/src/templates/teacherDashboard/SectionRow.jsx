@@ -1,33 +1,45 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import _ from 'lodash';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import color from '@cdo/apps/util/color';
+import Button from '@cdo/apps/templates/Button';
 import { sectionShape, assignmentShape } from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
 import {
-  assignmentId,
-  assignmentName,
-  assignmentPath,
+  assignmentNames,
+  assignmentPaths,
   updateSection,
   removeSection
 } from './teacherSectionsRedux';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   link: tableStyles.link,
   col: tableStyles.col,
+  courseCol: {
+    minWidth: 200,
+  },
   lightRow: tableStyles.lightRow,
   darkRow: tableStyles.darkRow,
   row: tableStyles.row,
   rightButton: {
     marginLeft: 5
   },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16,
+  },
   nowrap: {
     whiteSpace: 'nowrap'
   },
+  currentUnit: {
+    marginTop: 10
+  }
 };
 
 /**
@@ -35,17 +47,17 @@ const styles = {
  */
 export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
-    <ProgressButton
+    <Button
       text={i18n.edit()}
       onClick={onEdit}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
     {canDelete && (
-      <ProgressButton
+      <Button
         style={{marginLeft: 5}}
         text={i18n.delete()}
         onClick={onDelete}
-        color={ProgressButton.ButtonColor.red}
+        color={Button.ButtonColor.red}
       />
     )}
   </div>
@@ -62,16 +74,16 @@ EditOrDelete.propTypes = {
 export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
     <div>{i18n.deleteConfirm()}</div>
-    <ProgressButton
+    <Button
       text={i18n.yes()}
       onClick={onClickYes}
-      color={ProgressButton.ButtonColor.red}
+      color={Button.ButtonColor.red}
     />
-    <ProgressButton
+    <Button
       text={i18n.no()}
       style={styles.rightButton}
       onClick={onClickNo}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
   </div>
 );
@@ -85,22 +97,41 @@ ConfirmDelete.propTypes = {
  */
 export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
-    <ProgressButton
+    <Button
+      className="uitest-save"
       text={i18n.save()}
       onClick={onClickSave}
-      color={ProgressButton.ButtonColor.blue}
+      color={Button.ButtonColor.blue}
     />
-    <ProgressButton
+    <Button
       text={i18n.dialogCancel()}
       style={styles.rightButton}
       onClick={onCancel}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
   </div>
 );
 ConfirmSave.propTypes = {
   onClickSave: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
+};
+
+const ProviderManagedSectionCode = ({provider}) => (
+  <div data-tip={i18n.providerManagedSection({provider})}>
+    {i18n.none()}
+    &nbsp;
+    <i
+      className="fa fa-question-circle"
+      style={styles.sectionCodeNone}
+    />
+    <ReactTooltip
+      role="tooltip"
+      effect="solid"
+    />
+  </div>
+);
+ProviderManagedSectionCode.propTypes = {
+  provider: PropTypes.string.isRequired,
 };
 
 /**
@@ -111,6 +142,7 @@ class SectionRow extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     lightRow: PropTypes.bool.isRequired,
+    handleEdit: PropTypes.func,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(
@@ -118,6 +150,7 @@ class SectionRow extends Component {
     ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
+    primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
@@ -156,7 +189,23 @@ class SectionRow extends Component {
     });
   }
 
-  onClickEdit = () => this.setState({editing: true});
+  onClickEdit = () => {
+    if (experiments.isEnabled('section-flow-2017')) {
+      const section = this.props.sections[this.props.sectionId];
+      const editData = {
+        id: this.props.sectionId,
+        name: section.name,
+        grade: section.grade,
+        course: section.course_id,
+        extras: section.stageExtras,
+        pairing: section.pairingAllowed,
+        sectionId: this.props.sectionId
+      };
+      this.props.handleEdit(editData);
+    } else {
+      this.setState({editing: true});
+    }
+  };
 
   onClickEditSave = () => {
     const { sections, sectionId, updateSection } = this.props;
@@ -223,9 +272,9 @@ class SectionRow extends Component {
       lightRow,
       sections,
       sectionId,
-      validLoginTypes,
       validGrades,
-      validAssignments
+      validAssignments,
+      primaryAssignmentIds
     } = this.props;
     const { editing, deleting } = this.state;
 
@@ -233,10 +282,20 @@ class SectionRow extends Component {
     if (!section) {
       return null;
     }
-    const assignName = assignmentName(validAssignments, section);
-    const assignPath = assignmentPath(validAssignments, section);
+    const assignNames = assignmentNames(validAssignments, section);
+    const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
+    const editingLoginType = editing && !section.providerManaged;
+
+    let sectionCode = '';
+    if (!editing) {
+      if (section.providerManaged) {
+        sectionCode = <ProviderManagedSectionCode provider={section.loginType}/>;
+      } else {
+        sectionCode = section.code;
+      }
+    }
 
     return (
       <tr
@@ -260,13 +319,13 @@ class SectionRow extends Component {
           )}
         </td>
         <td style={styles.col}>
-          {!editing && section.loginType}
-          {editing && (
+          {!editingLoginType && section.loginType}
+          {editingLoginType && (
             <select
               defaultValue={section.loginType}
               ref={element => this.loginType = element}
             >
-              {validLoginTypes.map((type, index) => (
+              {['word', 'picture', 'email'].map((type, index) => (
                 <option key={index} value={type}>{type}</option>
               ))}
             </select>
@@ -285,16 +344,27 @@ class SectionRow extends Component {
             </select>
           )}
         </td>
-        <td style={styles.col}>
-          {!editing && assignName &&
-            <a href={assignPath} style={styles.link}>
-              {assignName}
+        <td style={{...styles.col, ...styles.courseCol}}>
+          {!editing && assignNames[0] &&
+            <a href={assignPaths[0]} style={styles.link}>
+              {assignNames[0]}
             </a>
+          }
+          {!editing && assignNames[1] &&
+            <div style={styles.currentUnit}>
+              {i18n.currentUnit()}
+              <div>
+                <a href={assignPaths[1]} style={styles.link}>
+                  {assignNames[1]}
+                </a>
+              </div>
+            </div>
           }
           {editing && (
             <AssignmentSelector
               ref={element => this.assignment = element}
-              currentAssignId={assignmentId(section.courseId, section.scriptId)}
+              section={section}
+              primaryAssignmentIds={primaryAssignmentIds}
               assignments={validAssignments}
             />
           )}
@@ -322,17 +392,17 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`} style={styles.link}>
-              {section.studentNames.length}
+              {section.studentCount}
             </a>
           }
         </td>
         <td style={styles.col}>
-          {section.code}
+          {sectionCode}
         </td>
         <td style={styles.col}>
           {!editing && !deleting && (
             <EditOrDelete
-              canDelete={section.studentNames.length === 0}
+              canDelete={section.studentCount === 0}
               onEdit={this.onClickEdit}
               onDelete={this.onClickDelete}
             />
@@ -350,8 +420,8 @@ class SectionRow extends Component {
             />
           )}
           <PrintCertificates
-            section={section}
-            assignmentName={assignName}
+            sectionId={section.id}
+            assignmentName={assignNames[0]}
           />
         </td>
       </tr>
@@ -365,5 +435,6 @@ export default connect(state => ({
   validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
+  primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
 }), { updateSection, removeSection })(SectionRow);

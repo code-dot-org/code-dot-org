@@ -66,7 +66,14 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
   }
 
   let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-  progress.renderStageProgress(scriptData, stageData, progressData, currentLevelId, saveAnswersBeforeNavigation, signedIn);
+  progress.renderStageProgress(
+    scriptData,
+    stageData,
+    progressData,
+    currentLevelId,
+    saveAnswersBeforeNavigation,
+    signedIn
+  );
 
   $('.level_free_play').qtip({
     content: {

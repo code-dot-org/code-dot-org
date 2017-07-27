@@ -7,6 +7,7 @@ import {connect} from 'react-redux';
 import processMarkdown from 'marked';
 import renderer from "../../util/StylelessRenderer";
 import TeacherOnlyMarkdown from './TeacherOnlyMarkdown';
+import InlineAudio from './InlineAudio';
 var instructions = require('../../redux/instructions');
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -60,6 +61,22 @@ var styles = {
     textAlign: 'center',
     height: HEADER_HEIGHT,
     lineHeight: HEADER_HEIGHT + 'px'
+  },
+};
+
+var audioStyle = {
+  wrapper: {
+    float: 'right',
+  },
+  button: {
+    height: 24,
+    marginTop: '3px',
+    marginBottom: '3px',
+  },
+  buttonImg: {
+    lineHeight: '24px',
+    fontSize: 15,
+    paddingLeft: 12,
   }
 };
 
@@ -79,7 +96,8 @@ var TopInstructions = React.createClass({
     setInstructionsHeight: React.PropTypes.func.isRequired,
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
-    documentationUrl: React.PropTypes.string
+    documentationUrl: React.PropTypes.string,
+    ttsMarkdownInstructionsUrl:  React.PropTypes.string
   },
 
   /**
@@ -173,11 +191,14 @@ var TopInstructions = React.createClass({
       this.props.noVisualization && styles.noViz,
       this.props.isEmbedView && styles.embedView,
     ];
+    const ttsUrl = this.props.ttsMarkdownInstructionsUrl;
 
     return (
       <div style={mainStyle} className="editor-column">
         <PaneHeader hasFocus={false}>
+
           <div style={styles.paneHeaderOverride}>
+            <InlineAudio src={ttsUrl} style={audioStyle}/>
             {this.props.documentationUrl &&
               <PaneButton
                 iconClass="fa fa-book"
@@ -238,7 +259,8 @@ module.exports = connect(function propsFromStore(state) {
     markdown: state.instructions.longInstructions,
     noVisualization: state.pageConstants.noVisualization,
     collapsed: state.instructions.collapsed,
-    documentationUrl: state.pageConstants.documentationUrl
+    documentationUrl: state.pageConstants.documentationUrl,
+    ttsMarkdownInstructionsUrl: state.pageConstants.ttsMarkdownInstructionsUrl
   };
 }, function propsFromDispatch(dispatch) {
   return {

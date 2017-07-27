@@ -14,6 +14,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', '@cdo'),
   // playground-io ships in ES6 as of 0.3.0
   path.resolve(__dirname, 'node_modules', 'playground-io'),
+  path.resolve(__dirname, 'node_modules', 'chai-as-promised'),
 ];
 
 // Our base config, on which other configs are derived
@@ -141,7 +142,6 @@ var storybookConfig = _.extend({}, baseConfig, {
       IN_STORYBOOK: JSON.stringify(true),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-      BUILD_STYLEGUIDE: JSON.stringify(true),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
     new webpack.IgnorePlugin(/^serialport$/),
@@ -186,7 +186,6 @@ var karmaConfig = _.extend({}, baseConfig, {
       IN_STORYBOOK: JSON.stringify(false),
       'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
       'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-      BUILD_STYLEGUIDE: JSON.stringify(false),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
     }),
   ]
@@ -229,7 +228,6 @@ function create(options) {
         IN_UNIT_TEST: JSON.stringify(false),
         IN_STORYBOOK: JSON.stringify(false),
         'process.env.NODE_ENV': JSON.stringify(envConstants.NODE_ENV || 'development'),
-        BUILD_STYLEGUIDE: JSON.stringify(false),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(piskelDevMode),
       }),
       new webpack.IgnorePlugin(/^serialport$/),

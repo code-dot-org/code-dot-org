@@ -1262,7 +1262,7 @@
           the rest of them cannot be completed. Creating algorithms that others can
           understand is really important. That's why each step has to be written down,
           so no matter who does it, the result is the same.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Até agora, você fez animações ou histórias que fazem exatamente as mesmas
@@ -1401,7 +1401,7 @@
         text: In this example, we're going to say IF the purple flower has nectar
           greater than 0, get nectar. That will tell our bee to keep getting nectar
           as long as it's there. Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Have you ever heard of debugging a program? This is the way you figure

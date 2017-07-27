@@ -741,6 +741,36 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', user.age
   end
 
+  test 'changing oauth user from student to teacher with same email is allowed' do
+    user = create :google_oauth2_student, email: 'email@new.xx'
+
+    assert user.provider == 'google_oauth2'
+
+    user.update!(
+      user_type: User::TYPE_TEACHER,
+      email: 'email@new.xx',
+      hashed_email: User.hash_email('email@new.xx')
+    )
+    assert_equal 'email@new.xx', user.email
+    assert_equal User::TYPE_TEACHER, user.user_type
+  end
+
+  test 'changing oauth user from student to teacher with different email is not allowed' do
+    user = create :google_oauth2_student
+
+    assert user.provider == 'google_oauth2'
+
+    user.update_attributes(
+      user_type: User::TYPE_TEACHER,
+      email: 'email@new.xx',
+      hashed_email: User.hash_email('email@new.xx')
+    )
+    assert !user.save
+    assert_equal user.errors[:base].first, "The email address you provided doesn't match the email address for this account"
+    user.reload
+    assert_not_equal 'email@new.xx', user.email
+  end
+
   test 'changing from student to teacher clears terms_of_service_version' do
     user = create :student, terms_of_service_version: 1
     user.update!(user_type: User::TYPE_TEACHER, email: 'tos@example.com')
@@ -877,6 +907,37 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'Code.org reset password instructions', mail.subject
     student = User.find(student.id)
     old_password = student.encrypted_password
+
+    assert mail.body.to_s =~ /Change my password/
+
+    assert mail.body.to_s =~ /reset_password_token=(.+)"/
+    # HACK: Fix my syntax highlighting "
+    token = $1
+
+    User.reset_password_by_token(
+      reset_password_token: token,
+      password: 'newone',
+      password_confirmation: 'newone'
+    )
+
+    student = User.find(student.id)
+    # password was changed
+    assert old_password != student.encrypted_password
+  end
+
+  test 'send reset password to parent for student without email address' do
+    parent_email = 'parent_reset_email@email.xx'
+    student = create :student, password: 'oldone', email: nil, parent_email: parent_email
+
+    assert User.send_reset_password_instructions(email: parent_email)
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [parent_email], mail.to
+    assert_equal 'Code.org reset password instructions', mail.subject
+    student = User.find(student.id)
+    old_password = student.encrypted_password
+
+    assert mail.body.to_s =~ /Change password for/
 
     assert mail.body.to_s =~ /reset_password_token=(.+)"/
     # HACK: Fix my syntax highlighting "
@@ -1518,11 +1579,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? returns true when permission exists' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     assert user.permission?(UserPermission::FACILITATOR)
   end
 
@@ -1536,11 +1593,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'permission? caches all permissions' do
-    user = create :user
-    UserPermission.create(
-      user_id: user.id, permission: UserPermission::FACILITATOR
-    )
-
+    user = create :facilitator
     user.permission?(UserPermission::LEVELBUILDER)
 
     no_database
@@ -1561,6 +1614,28 @@ class UserTest < ActiveSupport::TestCase
     teacher.permission = UserPermission::LEVELBUILDER
     teacher.revoke_all_permissions
     assert_equal [], teacher.reload.permissions
+  end
+
+  test 'assign_course_as_facilitator assigns course to facilitator' do
+    facilitator = create :facilitator
+    assert_creates Pd::CourseFacilitator do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+    end
+    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
+  end
+
+  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+    assert_no_difference 'Pd::CourseFacilitator.count' do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+    end
+  end
+
+  test 'delete_course_as_facilitator removes facilitator course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    assert_difference 'Pd::CourseFacilitator.count', -1 do
+      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
+    end
   end
 
   test 'should_see_inline_answer? returns true in levelbuilder' do
@@ -1673,6 +1748,34 @@ class UserTest < ActiveSupport::TestCase
     assert user_with_invalid_email.save
   end
 
+  test 'no personal email for under 13 users' do
+    user = create :young_student
+    assert user.no_personal_email?
+  end
+
+  test 'no personal email for users with parent-managed accounts' do
+    parent_managed_student = create(:parent_managed_student)
+    assert parent_managed_student.no_personal_email?
+  end
+
+  test 'no personal email is false for users with email' do
+    student = create :student
+    refute student.no_personal_email?
+
+    teacher = create :teacher
+    refute teacher.no_personal_email?
+  end
+
+  test 'parent_managed_account is true for users with parent email and no hashed email' do
+    parent_managed_student = create(:parent_managed_student)
+    assert parent_managed_student.parent_managed_account?
+  end
+
+  test 'parent_managed_account is false for teacher' do
+    teacher = create :teacher
+    refute teacher.parent_managed_account?
+  end
+
   test 'age is required for new users' do
     e = assert_raises ActiveRecord::RecordInvalid do
       create :user, birthday: nil
@@ -1683,6 +1786,11 @@ class UserTest < ActiveSupport::TestCase
   test 'age validation is bypassed for Google OAuth users' do
     # Users created this way will be asked for their age when they first sign in.
     create :user, birthday: nil, provider: 'google_oauth2'
+  end
+
+  test 'age validation is bypassed for Clever users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'clever'
   end
 
   test 'users updating the email field must provide a valid email address' do
@@ -1912,5 +2020,47 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.full_address
     assert_equal({}, user.properties)
     refute_nil user.purged_at
+  end
+
+  test 'omniauth login stores auth token' do
+    auth = OmniAuth::AuthHash.new(
+      provider: 'google_oauth2',
+      uid: '123456',
+      credentials: {
+        token: 'fake oauth token',
+        expires_at: Time.now.to_i + 3600,
+        refresh_token: 'fake refresh token',
+      },
+      info: {},
+    )
+
+    params = {}
+
+    user = User.from_omniauth(auth, params)
+    assert_equal('fake oauth token', user.oauth_token)
+    assert_equal('fake refresh token', user.oauth_refresh_token)
+  end
+
+  test 'summarize' do
+    user = create :student
+    assert_equal(
+      {
+        id: user.id,
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        hashed_email: user.hashed_email,
+        user_type: user.user_type,
+        gender: user.gender,
+        birthday: user.birthday,
+        total_lines: user.total_lines,
+        secret_words: user.secret_words,
+        secret_picture_name: user.secret_picture.name,
+        secret_picture_path: user.secret_picture.path,
+        location: "/v2/users/#{user.id}",
+        age: user.age,
+      },
+      user.summarize
+    )
   end
 end

@@ -34,6 +34,7 @@ const styles = {
 class SectionTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    onEdit: PropTypes.func
   };
 
   render() {
@@ -41,17 +42,6 @@ class SectionTable extends Component {
 
     return (
       <table style={styles.table}>
-        <colgroup>
-          <col width="200"/>
-          <col width="130"/>
-          <col width="98"/>
-          <col width="130"/>
-          <col/>
-          <col/>
-          <col/>
-          <col/>
-          <col/>
-        </colgroup>
         <thead>
           <tr style={styles.headerRow}>
             <td style={styles.col}>
@@ -104,6 +94,7 @@ class SectionTable extends Component {
               key={sid}
               sectionId={sid}
               lightRow={index % 2 === 0}
+              handleEdit={this.props.onEdit}
             />
           ))}
         </tbody>

@@ -2,6 +2,7 @@
 title: Leadership
 nav: about_nav
 theme: responsive
+style_min: true
 ---
 
 # Leadership
@@ -24,6 +25,6 @@ theme: responsive
 
 <%= view :about_people, people:DB[:cdo_leaders].where(kind_s:'education') %>
 
-### From [Diversity Council](/about/diversity-council)
+### From our [Diversity Advisory Council](/about/diversity-council)
 
 <%= view :about_people, people:DB[:cdo_team].where(kind_s:'diversity_council_short') %>

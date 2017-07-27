@@ -72,7 +72,8 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
-        name 'Facilitator Person'
+        sequence(:name) {|n| "Facilitator Person #{n}"}
+        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
         end
@@ -84,7 +85,8 @@ FactoryGirl.define do
         end
       end
       factory :workshop_organizer do
-        name 'Workshop Organizer Person'
+        sequence(:name) {|n| "Workshop Organizer Person #{n}"}
+        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -133,6 +135,39 @@ FactoryGirl.define do
             create(:follower, section: section, student_user: user)
           end
         end
+        factory :parent_managed_student do
+          sequence(:parent_email) {|n| "testparent#{n}@example.com.xx"}
+          email nil
+          hashed_email nil
+        end
+      end
+
+      factory :student_in_word_section do
+        encrypted_password nil
+        provider 'sponsored'
+
+        after(:create) do |user|
+          word_section = create(:section, login_type: Section::LOGIN_TYPE_WORD)
+          create(:follower, student_user: user, section: word_section)
+          user.reload
+        end
+      end
+
+      factory :student_in_picture_section do
+        encrypted_password nil
+        provider 'sponsored'
+
+        after(:create) do |user|
+          picture_section = create(:section, login_type: Section::LOGIN_TYPE_PICTURE)
+          create(:follower, student_user: user, section: picture_section)
+          user.reload
+        end
+      end
+
+      factory :google_oauth2_student do
+        encrypted_password nil
+        provider 'google_oauth2'
+        sequence(:uid) {|n| n}
       end
 
       factory :old_student do
@@ -161,6 +196,9 @@ FactoryGirl.define do
   factory :section do
     sequence(:name) {|n| "Section #{n}"}
     user {create :teacher}
+    login_type 'email'
+
+    initialize_with {Section.new(attributes)}
   end
 
   factory :game do
@@ -233,6 +271,9 @@ FactoryGirl.define do
   factory :text_match, parent: :level, class: TextMatch do
     game {create(:game, app: "textmatch")}
     properties {{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
+  end
+
+  factory :bounce, parent: :level, class: Bounce do
   end
 
   factory :artist, parent: :level, class: Artist do

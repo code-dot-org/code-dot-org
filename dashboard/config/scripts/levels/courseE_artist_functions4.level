@@ -8,7 +8,7 @@
     "skin": "artist_zombie",
     "embed": "false",
     "instructions": "Now that you can draw a star, try drawing four stars!",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a function!\",\"hint_id\":\"courseD_artist_functions4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ad24244882c8766e05843cefd9a0ad5/courseD_artist_functions4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using a function!\",\"hint_id\":\"courseD_artist_functions4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4ad24244882c8766e05843cefd9a0ad5/courseE_artist_functions4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Drag the `draw a star` function block out of the toolbox to begin building your function. It should have the same code as the previous puzzle, since you are drawing the same star pattern.\",\"hint_id\":\"courseD_artist_functions4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/96898168ef697046fe77bc6471e6a41e/courseE_artist_functions4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use the green `draw a star` block to call this function in your main program. Don't forget to jump forward between each star!\",\"hint_id\":\"courseD_artist_functions4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ecf4eb44a599fc39d40ce2a88259bb81/courseE_artist_functions4.mp3\"}]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -34,10 +34,13 @@
     "ideal": "9",
     "markdown_instructions": "Now that you can draw a star, try drawing four stars!\r\n\r\n- Each branch of the star is 25 pixels long\r\n- Turn 45 degrees between branches\r\n- Jump 100 pixels between each star",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:38:32 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

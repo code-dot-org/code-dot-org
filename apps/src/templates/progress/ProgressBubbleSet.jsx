@@ -7,8 +7,9 @@ import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import ProgressPill from './ProgressPill';
 import color from "@cdo/apps/util/color";
-import { getIconForLevel } from './progressHelpers';
 import i18n from '@cdo/locale';
+import { levelType } from './progressTypes';
+import experiments from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -37,28 +38,31 @@ const styles = {
   container: {
     position: 'relative',
   },
-  pillContainer: {
+  pillContainerOld: {
     // Vertical padding is so that this lines up with other bubbles
     paddingTop: 6,
     paddingBottom: 6,
+    paddingRight: 2
+  },
+  pillContainer: {
+    // Vertical padding is so that this lines up with other bubbles
+    paddingTop: 4,
     paddingRight: 2
   }
 };
 
 const ProgressBubbleSet = React.createClass({
   propTypes: {
-    levels: PropTypes.arrayOf(
-      PropTypes.shape({
-        level: PropTypes.string,
-        url: PropTypes.string
-      })
-    ).isRequired,
+    levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
     style: PropTypes.object,
   },
 
   render() {
     const { levels, disabled, style } = this.props;
+
+    const pillContainerStyle = experiments.isEnabled('progressBubbles') ?
+      styles.pillContainer : styles.pillContainerOld;
 
     return (
       <div style={{...styles.main, ...style}}>
@@ -77,25 +81,21 @@ const ProgressBubbleSet = React.createClass({
             <div
               style={{
                 ...styles.container,
-                ...(level.isUnplugged && styles.pillContainer)
+                ...(level.isUnplugged && pillContainerStyle)
               }}
             >
-              {level.isUnplugged &&
+              {level.isUnplugged && !experiments.isEnabled('progressBubbles') &&
                 <ProgressPill
-                  url={level.url}
-                  status={level.status}
+                  levels={[level]}
                   text={i18n.unpluggedActivity()}
                   fontSize={12}
                 />
               }
-              {!level.isUnplugged &&
+              {!(level.isUnplugged && !experiments.isEnabled('progressBubbles')) &&
                 <ProgressBubble
-                  number={level.levelNumber}
-                  status={level.status}
-                  url={level.url}
+                  level={level}
                   disabled={disabled}
-                  levelName={level.name || level.progression}
-                  levelIcon={getIconForLevel(level)}
+                  smallBubble={false}
                 />
               }
             </div>

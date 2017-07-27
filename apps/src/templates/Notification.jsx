@@ -2,43 +2,46 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ProgressButton from "./progress/ProgressButton";
+import Button from "./Button";
+import styleConstants from '../styleConstants';
+import trackEvent from '../util/trackEvent';
 
 const NotificationType = {
   information: 'information',
   success: 'success',
   failure: 'failure',
-  warning: 'warning'
+  warning: 'warning',
+  course: 'course',
+  bullhorn: 'bullhorn'
 };
 
 const styles = {
   main: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderRadius: 3,
-    height: 68,
-    width: 900,
+    height: 72,
+    width: styleConstants['content-width'],
     backgroundColor: color.white,
-    marginTop: 20,
-    marginBottom: 20
+    marginBottom: 20,
+    float: 'left'
   },
   notice: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 16,
+    fontSize: 18,
     fontWeight: 'bold',
     letterSpacing: -0.2,
     marginTop: 16,
     backgroundColor: color.white,
   },
   details: {
-    fontFamily: 'Gotham-Book',
-    fontSize: 12,
+    fontFamily: '"Gotham 4r", sans-serif',
+    fontSize: 14,
     lineHeight: 2.5,
     marginBottom: 16,
     color: color.charcoal,
   },
   wordBox: {
-    width: 600,
+    width: 640,
     marginLeft: 25,
     float: 'left'
   },
@@ -46,24 +49,29 @@ const styles = {
     color: color.lighter_gray,
     float: 'right',
     marginTop: 16,
-    marginRight: 14
+    marginRight: 14,
+    cursor: 'pointer'
   },
   iconBox: {
-    width: 68,
-    height: 68,
+    width: 72,
+    height: 72,
     backgroundColor: color.lightest_gray,
     float: 'left',
     textAlign: 'center'
   },
   icon: {
-    color: color.white,
-    fontSize: 34,
+    color: 'rgba(255,255,255, .8)',
+    fontSize: 38,
     lineHeight: 2
   },
   button: {
     float: 'left',
     marginLeft: 50,
     marginTop: 15
+  },
+  courseButton: {
+    float: 'right',
+    marginRight: 21
   },
   colors: {
     [NotificationType.information]: {
@@ -72,9 +80,9 @@ const styles = {
       backgroundColor: color.teal
     },
     [NotificationType.success]: {
-      borderColor: color.green,
-      color: color.green,
-      backgroundColor: color.green
+      borderColor: color.level_perfect,
+      color: color.level_perfect,
+      backgroundColor: color.level_perfect
     },
     [NotificationType.failure]: {
       borderColor: color.red,
@@ -86,6 +94,19 @@ const styles = {
       color: color.charcoal,
       backgroundColor: color.mustardyellow
     },
+    [NotificationType.course]: {
+      borderColor: color.border_gray,
+      color: color.teal,
+      backgroundColor: color.teal
+    },
+    [NotificationType.bullhorn]: {
+      borderColor: color.teal,
+      color: color.teal,
+      backgroundColor: color.teal
+    }
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
@@ -96,7 +117,9 @@ const Notification = React.createClass({
     details: React.PropTypes.string.isRequired,
     buttonText: React.PropTypes.string,
     buttonLink: React.PropTypes.string,
-    dismissible: React.PropTypes.bool.isRequired
+    dismissible: React.PropTypes.bool.isRequired,
+    newWindow: React.PropTypes.bool,
+    analyticId: React.PropTypes.string
   },
 
   getInitialState() {
@@ -107,46 +130,63 @@ const Notification = React.createClass({
     this.setState({open: !this.state.open});
   },
 
+  onAnnouncementClick: function () {
+    if (this.props.analyticId) {
+      trackEvent('teacher_announcement','click', this.props.analyticId);
+    }
+  },
+
   render() {
-    const { notice, details, type, buttonText, buttonLink, dismissible } = this.props;
+    const { notice, details, type, buttonText, buttonLink, dismissible, newWindow } = this.props;
     const icons = {
       information: 'info-circle',
       success: 'check-circle',
       failure: 'exclamation-triangle',
-      warning: 'exclamation-triangle'
+      warning: 'exclamation-triangle',
+      course: 'plus',
+      bullhorn: 'bullhorn'
     };
+
+    const buttonStyle = type === NotificationType.course ? [styles.button, styles.courseButton] : styles.button;
 
     if (!this.state.open) {
       return null;
     }
     return (
-      <div style={[styles.colors[type], styles.main]}>
-        <div style={[styles.iconBox, styles.colors[type]]}>
-          <FontAwesome icon={icons[type]} style={styles.icon}/>
-        </div>
-        {dismissible && (
-          <FontAwesome
-            icon="times"
-            style={styles.dismiss}
-            onClick={this.toggleContent}
-          />
-        )}
-        <div style={styles.wordBox}>
-          <div style={[styles.colors[type], styles.notice]}>
-            {notice}
+      <div>
+        <div style={[styles.colors[type], styles.main]}>
+          {type !== NotificationType.course && (
+            <div style={[styles.iconBox, styles.colors[type]]}>
+              <FontAwesome icon={icons[type]} style={styles.icon}/>
+            </div>
+          )}
+          {dismissible && (
+            <FontAwesome
+              icon="times"
+              style={styles.dismiss}
+              onClick={this.toggleContent}
+            />
+          )}
+          <div style={styles.wordBox}>
+            <div style={[styles.colors[type], styles.notice]}>
+              {notice}
+            </div>
+            <div style={styles.details}>
+              {details}
+            </div>
           </div>
-          <div style={styles.details}>
-            {details}
-          </div>
+          {buttonText && (
+            <Button
+              href={buttonLink}
+              color={Button.ButtonColor.gray}
+              text={buttonText}
+              style={buttonStyle}
+              target={newWindow ? "_blank" : null}
+              onClick={this.onAnnouncementClick}
+            />
+          )}
         </div>
-        {buttonText && (
-          <ProgressButton
-            href={buttonLink}
-            color={ProgressButton.ButtonColor.gray}
-            text={buttonText}
-            style={styles.button}
-          />
-        )}
+        <div style={styles.clear}/>
       </div>
     );
   }

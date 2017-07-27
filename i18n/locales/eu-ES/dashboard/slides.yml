@@ -747,7 +747,7 @@ eu:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Txokolatea egin nahi dugunean, pauso handiak eman behar dira hona iristeko. Pauso handi hauetako bakoitza bere azpimultzo txikia du. Gainera, errezeta mota desberdin asko daude, edo algoritmo, txokolatearen zaporea nolakoa nahi dugunaren arabera. Pauso bakoitza inportantea da, txikiak ere. Beraz, pauso bat gabe, gainerakoak ezin dira aurrera eraman. Besteek ulertzen dituzten algoritmoak egitea oso garrantzitsua da. Horregatik idatzi behar dira pauso guztiak."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Orain arte, animazio edo istorio bat egiten aritu zara, exekutatzean behin eta berriro gauza bera egiten duena. Orain , jolas interaktiboa egin dezakezu eta benetan jolastu ahal izango duzu."
@@ -823,7 +823,7 @@ eu:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "Adibide honetan, lore moreak 0 nektar baino gehiago baldin badu, hartu nektarra. Honi esker gure erleak nektarra hartzen jarraituko du lorean badagoen bitartean. Ta-txan!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Entzun al duzu \"programa bat debugeatu\" esaldia? Horrela ikus dezakegu zer doan gaizki. Kodea debugeatzen duzunean, erroreak identifikatu eta konpontzen dituzu."

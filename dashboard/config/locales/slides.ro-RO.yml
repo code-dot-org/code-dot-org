@@ -1293,7 +1293,7 @@
           ceilalti o pot intelege este foarte importanta. De aceea fiecare pas trebuie
           sa fie scris, astfel incat indiferent de cine il utilizeaza, rezultatul
           sa fie acelasi.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Până acum aţi facut o animaţie sau o poveste care face exact acelaşi
@@ -1440,7 +1440,7 @@
         text: In acest exemplu, vom spune ca, daca floarea mov are nectar mai mare
           de 0, obtine nectar. Acest lucru va spune albinelor noastre sa continue
           obtinerea de nectar atata timp cat exista acolo. Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Ai auzit vreodată de depanarea unui program? Este o modalitate de a

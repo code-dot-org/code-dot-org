@@ -75,6 +75,7 @@
   "penUp": "Stift anheben",
   "reinfFeedbackMsg": "Hier ist deine Zeichnung! Dein Bild ist fertig! Arbeite weiter daran oder gehe zur nächsten Aufgabe.",
   "setAlpha": "setze Transparenz",
+  "setCharacter": "set character to {character}",
   "setColour": "setze Farbe",
   "setPattern": "setze Muster",
   "setWidth": "setze Breite",
@@ -90,6 +91,5 @@
   "turnTooltip": "Dreht den Künstler nach links oder rechts um den angegebenen Winkel.",
   "turtleVisibilityTooltip": "Macht den Künstler sichtbar oder unsichtbar.",
   "widthTooltip": "Ändert die Breite des Stiftes.",
-  "wrongColour": "Dein Bild hat die falsche Farbe. Für diese Aufgabe musst du die Farbe auf %1 setzen.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "Dein Bild hat die falsche Farbe. Für diese Aufgabe musst du die Farbe auf %1 setzen."
 }

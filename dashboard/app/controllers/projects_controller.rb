@@ -12,8 +12,17 @@ class ProjectsController < ApplicationController
     artist: {
       name: 'New Artist Project'
     },
+    artist_k1: {
+      name: 'New K1 Artist Project'
+    },
+    frozen: {
+      name: 'New Frozen Project'
+    },
     playlab: {
       name: 'New Play Lab Project'
+    },
+    playlab_k1: {
+      name: 'New K1 Play Lab Project'
     },
     starwars: {
       name: 'New Star Wars Project'
@@ -26,6 +35,9 @@ class ProjectsController < ApplicationController
     },
     gumball: {
       name: 'New Gumball Project'
+    },
+    flappy: {
+      name: 'New Flappy Project'
     },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'

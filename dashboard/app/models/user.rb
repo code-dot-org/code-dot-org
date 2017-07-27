@@ -5,6 +5,7 @@
 #  id                       :integer          not null, primary key
 #  studio_person_id         :integer
 #  email                    :string(255)      default(""), not null
+#  parent_email             :string(255)
 #  encrypted_password       :string(255)      default("")
 #  reset_password_token     :string(255)
 #  reset_password_sent_at   :datetime
@@ -58,6 +59,7 @@
 #  index_users_on_invitation_token                     (invitation_token) UNIQUE
 #  index_users_on_invitations_count                    (invitations_count)
 #  index_users_on_invited_by_id                        (invited_by_id)
+#  index_users_on_parent_email                         (parent_email)
 #  index_users_on_provider_and_uid_and_deleted_at      (provider,uid,deleted_at) UNIQUE
 #  index_users_on_purged_at                            (purged_at)
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
@@ -112,6 +114,9 @@ class User < ActiveRecord::Base
     last_seen_school_info_interstitial
     ui_tip_dismissed_homepage_header
     ui_tip_dismissed_teacher_courses
+    oauth_refresh_token
+    oauth_token
+    oauth_token_expiration
   )
 
   # Include default devise modules. Others available are:
@@ -155,6 +160,12 @@ class User < ActiveRecord::Base
   has_many :workshops, through: :cohorts
   has_many :segments, through: :workshops
 
+  # courses a facilitator is able to teach
+  has_many :courses_as_facilitator,
+    class_name: Pd::CourseFacilitator,
+    foreign_key: :facilitator_id,
+    dependent: :destroy
+
   has_and_belongs_to_many :workshops_as_facilitator,
     class_name: Workshop,
     foreign_key: :facilitator_id,
@@ -176,6 +187,15 @@ class User < ActiveRecord::Base
   belongs_to :school_info
   accepts_nested_attributes_for :school_info, reject_if: :preprocess_school_info
   validates_presence_of :school_info, unless: :school_info_optional?
+
+  after_create :associate_with_potential_pd_enrollments
+
+  # after_create :send_new_teacher_email
+  # def send_new_teacher_email
+  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
+  # flag, we send the email from the controller instead. This should ultimately live here, though.
+  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
+  # end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -213,6 +233,15 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
+  # assign a course to a facilitator that is qualified to teach it
+  def course_as_facilitator=(course)
+    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
+  end
+
+  def delete_course_as_facilitator(course)
+    courses_as_facilitator.find_by(course: course).try(:destroy)
+  end
+
   def delete_permission(permission)
     @permissions = nil
     permission = permissions.find_by(permission: permission)
@@ -229,6 +258,7 @@ class User < ActiveRecord::Base
   # TODO(asher): Determine whether request level caching is sufficient, or
   #   whether a memcache or otherwise should be employed.
   def permission?(permission)
+    return false unless teacher?
     if @permissions.nil?
       # The user's permissions have not yet been cached, so do the DB query,
       # caching the results.
@@ -248,6 +278,7 @@ class User < ActiveRecord::Base
   end
 
   def district_contact?
+    return false unless teacher?
     district_as_contact.present?
   end
 
@@ -346,8 +377,8 @@ class User < ActiveRecord::Base
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
-  is_google = proc {|user| user.provider == 'google_oauth2'}
-  validates :age, presence: true, on: :create, unless: is_google # only do this on create to avoid problems with existing users
+  defer_age = proc {|user| user.provider == 'google_oauth2' || user.provider == 'clever'}
+  validates :age, presence: true, on: :create, unless: defer_age # only do this on create to avoid problems with existing users
   AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
   validates :age, presence: false, inclusion: {in: AGE_DROPDOWN_OPTIONS}, allow_blank: true
 
@@ -355,12 +386,26 @@ class User < ActiveRecord::Base
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, with: USERNAME_REGEX, on: :create, allow_blank: true
   validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: 'errors.blank?'
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :update, if: 'errors.blank? && username_changed?'
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
+
+  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?'
+
+  def email_matches_for_oauth_upgrade
+    if user_type == User::TYPE_TEACHER
+      # The stored email must match the passed email
+      unless hashed_email == hashed_email_was
+        errors.add :base, I18n.t('devise.registrations.user.user_type_change_email_mismatch')
+        errors.add :email_mismatch, "Email mismatch" # only used to check for this error's existence
+      end
+    end
+    true
+  end
 
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
@@ -454,6 +499,11 @@ class User < ActiveRecord::Base
     User.find_by(hashed_email: hashed_email)
   end
 
+  def self.find_by_parent_email(email)
+    return nil if email.blank?
+    User.find_by(parent_email: email)
+  end
+
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
     user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
@@ -465,6 +515,17 @@ class User < ActiveRecord::Base
   validates :email, no_utf8mb4: true
   validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
   validate :email_and_hashed_email_must_be_unique, if: 'email_changed? || hashed_email_changed?'
+  validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
+
+  def requires_email?
+    provider_changed? && provider.nil? && encrypted_password_changed? && encrypted_password.present?
+  end
+
+  def presence_of_hashed_email_or_parent_email
+    if hashed_email.blank? && parent_email.blank?
+      errors.add :email, I18n.t('activerecord.errors.messages.blank')
+    end
+  end
 
   def presence_of_email
     if email.blank?
@@ -509,12 +570,12 @@ class User < ActiveRecord::Base
 
   CLEVER_ADMIN_USER_TYPES = ['district_admin', 'school_admin'].freeze
   def self.from_omniauth(auth, params)
-    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+    omniauth_user = where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = name_from_omniauth auth.info.name
       user.email = auth.info.email
-      user.user_type = params['user_type'] || auth.info.user_type || User::TYPE_STUDENT
+      user.user_type = params['user_type'] || auth.info.user_type
 
       if auth.provider == :the_school_project
         user.username = auth.extra.raw_info.nickname
@@ -543,6 +604,19 @@ class User < ActiveRecord::Base
       end
       user.gender = normalize_gender auth.info.gender
     end
+
+    if auth.credentials
+      if auth.credentials.refresh_token
+        omniauth_user.oauth_refresh_token = auth.credentials.refresh_token
+      end
+
+      omniauth_user.oauth_token = auth.credentials.token
+      omniauth_user.oauth_token_expiration = auth.credentials.expires_at
+
+      omniauth_user.save if omniauth_user.changed?
+    end
+
+    omniauth_user
   end
 
   def oauth?
@@ -573,6 +647,7 @@ class User < ActiveRecord::Base
     return false if provider == User::PROVIDER_MANUAL
     return false if provider == User::PROVIDER_SPONSORED
     return false if oauth?
+    return false if parent_managed_account?
     true
   end
 
@@ -595,6 +670,13 @@ class User < ActiveRecord::Base
     else
       super
     end
+  end
+
+  # True if the account is teacher-managed and has any sections that use word logins.
+  # Will not be true if the user has a password or is only in picture sections
+  def secret_word_account?
+    return false unless teacher_managed_account?
+    sections_as_student.any? {|section| section.login_type == Section::LOGIN_TYPE_WORD}
   end
 
   # overrides Devise::Authenticatable#find_first_by_auth_conditions
@@ -840,13 +922,8 @@ class User < ActiveRecord::Base
     name.split.first # 'first name'
   end
 
-  def self.initial(name)
-    return nil if name.blank?
-    return name.strip[0].upcase
-  end
-
   def initial
-    User.initial(name)
+    UserHelpers.initial(name)
   end
 
   # override the default devise password to support old and new style hashed passwords
@@ -872,6 +949,23 @@ class User < ActiveRecord::Base
     return false
   end
 
+  # Returns an array of users associated with an email address.
+  # Will contain all users that have this email either in
+  # plaintext, hashed, or as a parent email. Empty array
+  # if no associated users are found.
+  def self.associated_users(email)
+    result = []
+    return result if email.blank?
+
+    primary_account = User.find_by_email_or_hashed_email(email)
+    result.push(primary_account) if primary_account
+
+    child_accounts = User.where(parent_email: email)
+    result += child_accounts
+
+    result
+  end
+
   # Override how devise tries to find users by email to reset password
   # to also look for the hashed email. For users who have their email
   # stored hashed (and not in plaintext), we can still allow them to
@@ -886,15 +980,47 @@ class User < ActiveRecord::Base
       return user
     end
 
-    user = find_by_email_or_hashed_email(attributes[:email]) || User.new(email: attributes[:email])
-    if user && user.persisted?
-      user.raw_token = user.send_reset_password_instructions(attributes[:email]) # protected in the superclass
-    else
-      user.errors.add :email, :not_found
-    end
-    user
+    email = attributes[:email]
+    associated_users = User.associated_users(email)
+    return User.new(email: email).send_reset_password_for_users(email, associated_users)
   end
 
+  attr_accessor :child_users
+  def send_reset_password_for_users(email, users)
+    if users.empty?
+      not_found_user = User.new(email: email)
+      not_found_user.errors.add :email, :not_found
+      return not_found_user
+    end
+
+    # Normal case: single user, owner of the email attached to this account
+    if users.length == 1 && (users.first.email == email || users.first.hashed_email == User.hash_email(email))
+      primary_user = users.first
+      primary_user.raw_token = primary_user.send_reset_password_instructions(email) # protected in the superclass
+      return primary_user
+    end
+
+    # One or more users are associated with parent email, generate reset tokens for each one
+    users.each do |user|
+      raw, enc = Devise.token_generator.generate(User, :reset_password_token)
+      user.raw_token = raw
+      user.reset_password_token   = enc
+      user.reset_password_sent_at = Time.now.utc
+      user.save(validate: false)
+    end
+
+    begin
+      # Send the password reset to the parent
+      raw, _enc = Devise.token_generator.generate(User, :reset_password_token)
+      self.child_users = users
+      send_devise_notification(:reset_password_instructions, raw, {to: email})
+    rescue ArgumentError
+      errors.add :base, I18n.t('password.reset_errors.invalid_email')
+      return nil
+    end
+  end
+
+  # Send a password reset email to the user (not to their parent)
   def send_reset_password_instructions(email)
     raw, enc = Devise.token_generator.generate(self.class, :reset_password_token)
 
@@ -1238,6 +1364,26 @@ class User < ActiveRecord::Base
     User.csv_attributes.map {|attr| send(attr)}
   end
 
+  # Format user information for the JSON API
+  def summarize
+    {
+      id: id,
+      name: name,
+      username: username,
+      email: email,
+      hashed_email: hashed_email,
+      user_type: user_type,
+      gender: gender,
+      birthday: birthday,
+      total_lines: total_lines,
+      secret_words: secret_words,
+      secret_picture_name: secret_picture.name,
+      secret_picture_path: secret_picture.path,
+      location: "/v2/users/#{id}",
+      age: age,
+    }
+  end
+
   def self.progress_queue
     AsyncProgressHandler.progress_queue
   end
@@ -1246,7 +1392,7 @@ class User < ActiveRecord::Base
   # require a current password confirmation to edit email and some users don't
   # have passwords
   def can_edit_email?
-    encrypted_password.present?
+    encrypted_password.present? || oauth?
   end
 
   # We restrict certain users from editing their password; in particular, those
@@ -1256,13 +1402,29 @@ class User < ActiveRecord::Base
     encrypted_password.present?
   end
 
+  # Users who might otherwise have orphaned accounts should have the option
+  # to create personal logins (using e-mail/password or oauth) so they can
+  # continue to use our site without losing progress.
+  def can_create_personal_login?
+    teacher_managed_account? # once parent e-mail is added, we should check for it here
+  end
+
   def teacher_managed_account?
     return false unless student?
     # We consider the account teacher-managed if the student can't reasonably log in on their own.
     # In some cases, a student might have a password but no e-mail (from our old UI)
     return false if encrypted_password.present? && hashed_email.present?
+    return false if encrypted_password.present? && parent_email.present?
     # If a user either doesn't have a password or doesn't have an e-mail, then we check for oauth.
     !oauth?
+  end
+
+  def parent_managed_account?
+    student? && parent_email.present? && hashed_email.blank?
+  end
+
+  def no_personal_email?
+    under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
   def section_for_script(script)
@@ -1316,9 +1478,10 @@ class User < ActiveRecord::Base
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
+    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(5).join
+
     self.name = nil
-    # The latter part yields a random string of length five from the characters 0 to 9 and a to z.
-    self.username = "#{SYSTEM_DELETED_USERNAME}_#{rand(36**5).to_s(36)}"
+    self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"
     self.current_sign_in_ip = nil
     self.last_sign_in_ip = nil
     self.email = ''
@@ -1332,5 +1495,13 @@ class User < ActiveRecord::Base
     self.purged_at = Time.zone.now
 
     save!
+  end
+
+  def associate_with_potential_pd_enrollments
+    if teacher?
+      Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
+        enrollment.update(user: self)
+      end
+    end
   end
 end

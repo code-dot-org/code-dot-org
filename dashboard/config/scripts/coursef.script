@@ -1,4 +1,4 @@
-login_required true
+hidden false
 
 stage 'Algorithms: Tangrams'
 level 'TangramAlgorithms'
@@ -102,6 +102,8 @@ level 'courseF_playlab_variables6c'
 level 'courseF_playlab_variables7c'
 level 'courseF_playlab_variables8c'
 level 'courseF_playlab_variables7b'
+bonus 'courseF_playlab_variables_challenge1'
+bonus 'courseF_playlab_variables_challenge2'
 
 stage 'For Loop Fun'
 level 'ForLoopFun'
@@ -141,7 +143,7 @@ bonus 'courseF_artist_for_challenge2'
 stage 'Songwriting with Parameters'
 level 'SongwritingWithParameters'
 
-stage 'Conditionals and Functions in Bee'
+stage 'Functions in Bee'
 level 'courseD_bee_conditionalsVid1'
 level 'courseF_bee_conditionals1_predict1'
 level 'courseF_bee_conditionals2'
@@ -160,6 +162,7 @@ level 'courseF_bee_functions4'
 level 'courseF_bee_functions5a'
 level 'courseF_video_createFunctions'
 level 'courseF_bee_functions6'
+level 'courseF_bee_functionsPre7'
 level 'courseF_bee_functions7'
 level 'courseF_bee_functions8a'
 bonus 'courseF_bee_functions_challenge1'

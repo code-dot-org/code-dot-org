@@ -1,51 +1,46 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
-import StudentResources from './StudentResources';
+import Sections from './Sections';
 import shapes from './shapes';
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
-
-const styles = {
-  userHero: {
-    paddingTop: 10
-  }
-};
 
 const StudentHomepage = React.createClass({
   propTypes: {
-    courses: shapes.courses
-  },
-
-  componentDidMount() {
-    // The component used here is implemented in legacy HAML/CSS rather than React.
-    $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
+    courses: shapes.courses,
+    sections: shapes.sections,
+    studentTopCourse: shapes.studentTopCourse,
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
+    canLeave: React.PropTypes.bool.isRequired,
   },
 
   render() {
-    const { courses } = this.props;
+    const { courses, sections, isRtl, canLeave, studentTopCourse, codeOrgUrlPrefix } = this.props;
 
     return (
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
-        />
-
-        <ProtectedStatefulDiv
-          style={styles.userHero}
-          ref="userHero"
+          short={true}
         />
 
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-          header={i18n.recentCourses()}
+          heading={i18n.myCourses()}
           isRtl={false}
+          isTeacher={false}
+          studentTopCourse={studentTopCourse}
         />
 
-        <StudentResources/>
-
+        <Sections
+          sections={sections}
+          isRtl={isRtl}
+          isTeacher={false}
+          canLeave={canLeave}
+          codeOrgUrlPrefix={codeOrgUrlPrefix}
+        />
       </div>
     );
   }

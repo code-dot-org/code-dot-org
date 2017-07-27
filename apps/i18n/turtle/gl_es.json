@@ -75,6 +75,7 @@
   "penUp": "levante o lapis",
   "reinfFeedbackMsg": "Aquí está o seu debuxo! Continúe a traballar nel, ou siga para o próximo desafío.",
   "setAlpha": "definir alfa",
+  "setCharacter": "set character to {character}",
   "setColour": "definir cor",
   "setPattern": "definir padrón",
   "setWidth": "definir o longo",
@@ -90,6 +91,5 @@
   "turnTooltip": "Vira o artista á dereita ou á esquerda usando o número especificado de graos.",
   "turtleVisibilityTooltip": "Fai que o artista fique visíbel ou invisíbel.",
   "widthTooltip": "Altera o longo do lapis.",
-  "wrongColour": "A súa figura está coa cor errónea. Para este desafío necesita ser %1.",
-  "setCharacter": "set character to {character}"
+  "wrongColour": "A súa figura está coa cor errónea. Para este desafío necesita ser %1."
 }

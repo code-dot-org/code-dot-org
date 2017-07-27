@@ -1,6 +1,8 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
+import LegendSelector from './LegendSelector';
+import $ from 'jquery';
 
 const styles = {
   input: {
@@ -30,7 +32,14 @@ const ScriptEditor = React.createClass({
     studentDetailProgressView: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string
+    wrapupVideo: React.PropTypes.string,
+    excludeCsfColumnInLegend: React.PropTypes.bool,
+    projectWidgetVisible: React.PropTypes.bool,
+    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
+  },
+
+  handleClearProjectWidgetSelectClick() {
+    $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
   },
 
   render() {
@@ -154,6 +163,50 @@ const ScriptEditor = React.createClass({
             defaultValue={this.props.wrapupVideo}
             style={styles.input}
           />
+        </label>
+        <LegendSelector
+          excludeCsf={this.props.excludeCsfColumnInLegend}
+          inputStyle={styles.checkbox}
+        />
+        <h3>Project widget options</h3>
+        <label>
+          Project widget visible
+          <input
+            name="project_widget_visible"
+            type="checkbox"
+            defaultChecked={this.props.projectWidgetVisible}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked this script will have the projects widget (recent projects and new
+            project buttons) visible in stage extras.
+          </p>
+        </label>
+        <label>
+          Project widget new project types
+          <p>
+            Select up to 4 project type options to appear in the 'Start a new project' section. Select
+            <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
+            or shift-click or cmd-click to select multiple.
+          </p>
+          <select
+            name="project_widget_types[]"
+            multiple
+            defaultValue={this.props.projectWidgetTypes}
+            ref={select => this.projectWidgetSelect = select}
+          >
+            <option value="playlab">Play Lab</option>
+            <option value="artist">Artist</option>
+            <option value="applab">App Lab</option>
+            <option value="gamelab">Game Lab</option>
+            <option value="weblab">Web Lab</option>
+            <option value="calc">Calc</option>
+            <option value="eval">Eval</option>
+            <option value="frozen">Frozen</option>
+            <option value="mc">Minecraft Adventurer</option>
+            <option value="minecraft">Minecraft Designer</option>
+            <option value="starwars">Star Wars</option>
+          </select>
         </label>
         <h2>Stages and Levels</h2>
         {this.props.beta && <FlexGroup />}

@@ -827,6 +827,19 @@ en:
       Alien Defender_instruction: "Project Idea: Make a defender game in Play Lab!"
       AllTheThings Applab - Turtle move with button_instruction: "Add a button that
         moves the turtle when clicked.  (Click to see full instructions)"
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': "Make
+        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
+        first task is to set the second byte to the 8-bit binary code for 5: 0000
+        0101. Then start entering pixel data."
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': "We
+        start you out with the 4x4 image Maddie created in the video. Your task is
+        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
+        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
+        blue. Row 4 - shades of gray."
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': "We
+        start you with the 4x2 image Maddie was creating, but we've left out the
+        last two squares. Finish off the image by figuring out which two colors are
+        missing and encode them."
       App Lab test_instruction: "test"
       AppLab_test02_instruction: "One sentence summary of the activity. Click to
         view full instructions."
@@ -1048,6 +1061,8 @@ en:
         commands print true"
       CSD U3 Keypress Watchers_instruction: "Modify the code so that all of the console.log
         commands print true"
+      CSD U3 L5 Freeplay_instruction: "Change the value of petalSize multiple times.
+        How does it change your drawing?"
       CSD U3 Mouse Input Bee 2_instruction: "Do this"
       CSD U3 Random Animation_instruction: "Use randomNumber() to animate Gary's
         mouth."
@@ -5353,6 +5368,8 @@ en:
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script)."
+      allthethings_ttscsp_instruction: "Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)"
       artistDebugVideo1_instruction: "Use the `repeat` loop to add waves to the water."
       artistFunctionsVideo1_instruction: "Follow the instructions to make your own
         function."
@@ -5479,14 +5496,14 @@ en:
       courseA_collector_loops1_instruction: "Move Laurel around and get as much treasure
         as you can!"
       courseA_collector_loops10_instruction: "Help Laurel get all of the treasure
-        from this deep valley."
+        along this path."
       courseA_collector_loops11_instruction: "Help Laurel get all of the treasure
         from this cave."
       courseA_collector_loops12_instruction: "Eureka!  Get as much treasure as you
         can!"
       courseA_collector_loops2_instruction: "Get all three piles to pass this level."
       courseA_collector_loops3_instruction: "How can Laurel get all five piles of
-        treasure using only one `[E-->]` block?"
+        treasure using only one `E ▶` block?"
       courseA_collector_loops4_instruction: "Fix Laurel's path to get all of this
         treasure."
       courseA_collector_loops5_instruction: "Use what you learned to get all of the
@@ -5495,7 +5512,7 @@ en:
         the treasure."
       courseA_collector_loops7_instruction: "What should you add to this code to
         get all of the treasure?"
-      courseA_collector_loops8_instruction: "Write the code to get all of this treasure."
+      courseA_collector_loops8_instruction: "Write code to get all of this treasure."
       courseA_collector_loops9_instruction: "**Challenge:** The treasure goes all
         the way up these stairs!  Write the code to help Laurel get it all."
       courseA_collector_loops_challenge1_instruction: "Can you help me spot some
@@ -5665,17 +5682,15 @@ en:
       courseB_playlab_events_challenge2_template_instruction: "Let's make the animals
         disappear when you click on them! You can also add sounds and score points
         to create a fun game of Animal Tag!"
-      courseB_starWars_prog1_instruction: "Help BB-8 get the scrap metal!"
+      courseB_starWars_prog1_instruction: "\"Go get the scrap metal, BB-8!\""
       courseB_starWars_prog10_instruction: "Help BB-8 gather the glowing scrap metal"
       courseB_starWars_prog11_instruction: "Help BB-8 gather the glowing scrap metal"
-      courseB_starWars_prog2_instruction: "Help BB-8 gather **all** of the glowing
-        scrap metal"
-      courseB_starWars_prog3_instruction: "Help BB-8 gather **all** of the glowing
-        scrap metal"
-      courseB_starWars_prog4_instruction: "Help BB-8 gather the glowing scrap metal"
-      courseB_starWars_prog5_instruction: "Help BB-8 gather the glowing scrap metal"
-      courseB_starWars_prog6_instruction: "Help BB-8 gather the glowing scrap metal"
-      courseB_starWars_prog7_instruction: "Help BB-8 gather the glowing scrap metal"
+      courseB_starWars_prog2_instruction: "Get all the metal."
+      courseB_starWars_prog3_instruction: "Get all the scrap metal"
+      courseB_starWars_prog4_instruction: "Get all the scrap metal"
+      courseB_starWars_prog5_instruction: "Get the scrap metal"
+      courseB_starWars_prog6_instruction: "Get all the scrap metal"
+      courseB_starWars_prog7_instruction: "Go get it!"
       courseB_starWars_prog8_instruction: "**Challenge:** Help BB-8 gather the glowing
         scrap metal"
       courseB_starWars_prog9_instruction: "Help BB-8 gather the glowing scrap metal"
@@ -5696,9 +5711,9 @@ en:
       courseC_PlayLab_events7_instruction: "The `repeat forever` block allows you
         to run code over and over forever.  Use this block to move Chomp the Dino
         (actor 2) up and down by 400 pixels forever."
-      courseC_PlayLab_events8_instruction: "Can you have Waddles (actor 1) say \"Ouch!\"
-        and play a \"hit\" sound if he runs into Chomp? \r\nWhen you're done, play
-        the game to make that happen."
+      courseC_PlayLab_events8_instruction: "Can you have Waddles (actor 1) play a
+        \"hit\" sound and say \"Ouch!\" if he runs into Chomp? \r\nWhen you're done,
+        play the game to make that happen."
       courseC_PlayLab_events9_instruction: "Can you add a block to score a point
         when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
         \r\nPlay the game and move Waddles with the arrows until you score!"
@@ -5707,11 +5722,10 @@ en:
         the game and move Waddles with the arrows until you score."
       courseC_PlayLab_eventsFP_instruction: "Create your own story. When you're
         done, click \"Finish\" to share with friends. See story ideas in the hints."
-      courseC_PlayLab_events_challenge1_instruction: "Here is a new block that is
-        somewhat complicated. Use it to move Waddles back to the start when he runs
-        into the Dinosaur and when he scores a point. This will make your game more
-        challenging and fun!\r\n\r\nPlay the game and move Waddles with the arrows
-        until you score enough points."
+      courseC_PlayLab_events_challenge1_instruction: "Use a new block to make Waddles
+        automatically move back to the start when he runs into the Dinosaur and when
+        he scores a point. \r\nPlay the game and move Waddles with the arrows until
+        you score enough points."
       courseC_PlayLab_events_challenge1_xy_blocks_instruction: "Here is a new block
         that is somewhat complicated. Use it to move Waddles back to the start when
         he runs into the Dinosaur and when he scores a point. This will make your
@@ -5909,18 +5923,17 @@ en:
       courseC_starWars_loops1_predict1_instruction: "BB-8 will pick up any metal
         scraps along the path where he moves. Use 5 of the same block to get BB-8
         to pick up all of the scrap metal in the play area."
-      courseC_starWars_loops2_instruction: "Can you get BB-8 to pick up all of the
-        scrap metal by creating a loop that uses only one block inside of a `repeat`
-        block?"
+      courseC_starWars_loops2_instruction: "To get all the scrap metal, try creating
+        a loop that uses only one block inside of a `repeat` block."
       courseC_starWars_loops4_instruction: "In this puzzle, two `repeat` loops will
         help you get BB-8 to all of the scrap metal with the fewest number of blocks!"
-      courseC_starWars_loops5_instruction: "*Get BB-8 to pick up all the scrap metal
-        as quickly as possible!*"
+      courseC_starWars_loops5_instruction: "Get BB-8 to pick up all the scrap metal
+        as quickly as possible!"
       courseC_starWars_loops6_instruction: "Loops even work with more than one block
         inside!  Can you loop this sequence?"
       courseC_starWars_loops7_instruction: "Can you try to get all the scrap metal
         using just one loop? Try programming it all out then finding the repeating
-        code to place in a loop."
+        code to put in a loop."
       courseC_starWars_loops9_instruction: "Use what you have learned to pick up
         all of the scrap metal!"
       courseD_artist_binary1_instruction: "Use the blocks below to have the artist
@@ -5944,10 +5957,15 @@ en:
       courseD_artist_binaryFP_instruction: "Here's a higher resolution canvas to
         draw on - 16 pixels by 16 pixels!\r\n\r\nSee what happens when we start to
         get creative with the bits!"
-      courseD_artist_binary_challenge1_instruction: "Try using nested loops to complete
+      courseD_artist_binary_challenge0_instruction: "Try using nested loops to complete
         this drawing."
-      courseD_artist_binary_challenge2_instruction: "Try using nested loops to complete
+      courseD_artist_binary_challenge1_instruction: "You can only use each binary
+        value (0 or 1) once each in the puzzle. Try using nested loops to complete
         this drawing."
+      courseD_artist_binary_challenge2_instruction: "Are you persistent enough to
+        restore this logo back to normal?"
+      courseD_artist_binary_challenge3_instruction: "Are you persistent enough to
+        restore this logo back to normal?"
       courseD_artist_functions10_instruction: "This time, use lines of 8 hexagons
         with 25 pixel sides."
       courseD_artist_functions2_instruction: "This time, use the `draw a square`
@@ -6099,9 +6117,9 @@ en:
         of the treasure."
       courseD_collector_debugging4_instruction: "Fix the error(s) to collect all
         of the treasure."
-      courseD_collector_debugging5_instruction: "Challenge: All of the commands that
-        you need are already here...now use your debugging skills to figure out how
-        to solve this puzzle."
+      courseD_collector_debugging5_instruction: "All of the commands that you need
+        are already here...now use your debugging skills to figure out how to solve
+        this puzzle."
       courseD_collector_debugging6_instruction: "Challenge: Use your debugging skills
         to fix the errors and collect all of the treasure."
       courseD_collector_debugging7_instruction: "Challenge: All of the commands that
@@ -6128,7 +6146,7 @@ en:
       courseD_debugging_6_instruction: "Challenge:  Fix the errors to collect all
         of the nectar and make all of the honey."
       courseD_farmer_condLoops1_instruction: "Use conditionals to make sure that
-        you pick all of the corn, and nothing else."
+        you pick corn only when it's there."
       courseD_farmer_condLoops2_instruction: "Help the farmer collect both corn and
         lettuce from the field."
       courseD_farmer_condLoops3_instruction: "*\"Corn, lettuce, AND pumpkins! Help
@@ -6137,8 +6155,8 @@ en:
         in each cluster before moving on to the next bunch."
       courseD_farmer_condLoops4a_instruction: "Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch."
-      courseD_farmer_condLoops5_instruction: "This field has clusters of corn, lettuce,
-        and pumpkins all growing together.  Can you collect them all?"
+      courseD_farmer_condLoops5_instruction: "Collect all of the corn and lettuce,
+        then grab the pumpkin at the end."
       courseD_farmer_condLoops6_instruction: "Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!"
       courseD_farmer_condLoops7_instruction: "Challenge: Collect all of the corn
@@ -6283,8 +6301,12 @@ en:
       courseD_playLab_condFP_instruction: "Now, build your own game to show off to
         your friends!"
       courseE_artist_concept1_instruction: "Recreate this image. "
-      courseE_artist_concept4_instruction: "Recreate this drawing using 13 blocks
-        or fewer."
+      courseE_artist_concept4_instruction: "Recreate this drawing."
+      courseE_artist_concept_challenge1_instruction: "Feel free to use trial and
+        error. You are not expected to get the image perfect the first time.   Want
+        to see more hints?  Click here!"
+      courseE_artist_concept_challenge2_instruction: "Create five pinwheel designs
+        like using the code below."
       courseE_artist_functions1_instruction: "Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r\nThe bridge between the glasses is 75
         pixels long."
@@ -6354,8 +6376,13 @@ en:
         the nectar from each flower."
       courseE_bee_functions9_instruction: "Create a function to collect all of the
         nectar from each flower."
-      courseE_bee_ramp14_instruction: "Get nectar while there is nectar, **else**
-        make the honey. "
+      courseE_bee_functions9b_instruction: "Now try it in Bee!"
+      courseE_bee_functions_challenge1_instruction: "You are on your own for this
+        challenge. This could \"bee\" harder than it looks!"
+      courseE_bee_functions_challenge2_instruction: "You are on your own for this
+        challenge!"
+      courseE_bee_ramp14_instruction: "Help the bee follow the path to gather all
+        of the honey and all of the nectar."
       courseE_bee_ramp17_instruction: "Use what you have learned to solve this puzzle."
       courseE_collector_ramp10_instruction: "Help Laurel collect all of the treasure."
       courseE_collector_ramp8_instruction: "Help Laurel collect all of the treasure."
@@ -6386,17 +6413,18 @@ en:
       courseE_farmer_functions2aALT_instruction: "We're going to check lots of squares
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier."
-      courseE_farmer_functions2b_instruction: "Help the farmer pick the corn, lettuce,
-        and pumpkin."
+      courseE_farmer_functions2b_instruction: "Help the farmer pick the corn and
+        pumpkins."
+      courseE_farmer_functions2ba_instruction: "Help the farmer pick the corn and
+        pumpkins using the `corn and pumpkin` function."
       courseE_farmer_functions3_instruction: "What happens when the paths to the
         pumpkins are all different lengths?   \r\n\r\nGet them all with as few blocks
         as possible."
       courseE_farmer_functions3b_instruction: "Now help the farmer pick the corn,
         lettuce, **and** pumpkin."
-      courseE_farmer_functions3c_instruction: "Which set of blocks helps the farmer
-        check for produce and pick it when it is available? Drag that code into a
-        function, then call your function from inside the `while path ahead` loops
-        (after the `move forward` block)."
+      courseE_farmer_functions3c_instruction: "Now, fill-in the function yourself
+        by pulling the blocks from the code and dropping them into the **function
+        definition**."
       courseE_farmer_functions4_instruction: "Great!  Now you have code that will
         work to get pumpkins from any size path.\r\n\r\nLet's drag that code into
         a function so we can use it in lots of ways...but first use it to solve this
@@ -6415,26 +6443,28 @@ en:
         use it later."
       courseE_farmer_functions6b_instruction: "Pick all of the produce."
       courseE_farmer_functions6c_instruction: "What do you need to add this program
-        to collect all of the produce?"
+        to check whether a sprout is corn or lettuce?"
       courseE_farmer_functions7_instruction: "Use your functions to solve this puzzle."
-      courseE_farmer_functions7b_instruction: "Make a second function that lets the
-        farmer get all of the produce down a path, then brings her back to where she
-        began."
+      courseE_farmer_functions7b_instruction: "Help the farmer find her way down
+        this confusing path and to the pumpkin by turning left at the corn and right
+        at the lettuce."
       courseE_farmer_functions8_instruction: "**Challenge:**  Solve this puzzle with
         as few blocks as possible."
-      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the
-        pumpkin and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the
+        pumpkins using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: "Use conditionals to simplify your program."
-      courseE_farmer_predict1_instruction: "Pick lettuce if there is lettuce. Otherwise,
-        pick corn."
+      courseE_farmer_functions9b_instruction: "Can you figure out the pattern that
+        you need to solve this puzzle?"
+      courseE_farmer_predict1_instruction: "Pick all of the lettuce (only while there
+        is some to pick.)"
       courseE_farmer_ramp11_instruction: "This puzzle also uses nested loops.  Can
         you figure out how?"
       courseE_farmer_ramp11a_instruction: "Pick lettuce only while there is still
         lettuce to pick. "
       courseE_farmer_ramp12_instruction: "Now use nested loops (`repeat` and `while`)
         to solve this puzzle."
-      courseE_farmer_ramp12a_instruction: "Pick lettuce if there is lettuce. Otherwise,
-        pick corn."
+      courseE_farmer_ramp12a_instruction: "Help the farmer correctly travel the path
+        to gather all of the lettuce."
       courseE_farmer_ramp13_instruction: "Pick corn if there is corn, and pick lettuce
         while there is lettuce."
       courseE_farmer_ramp15_instruction: "Solve this puzzle using only the blocks
@@ -6459,6 +6489,10 @@ en:
       courseE_maze_ramp_predict1_instruction: "This code includes a new block. What
         do you think would happen if you press the \"Run\" block?"
       courseE_multi_maze_ramp5_instruction: "Avoid the TNT."
+      courseE_playLab_challenge1_instruction: "Something should happen when you get
+        enough points or when you run out of points. Add some code to the `win game`
+        and `lose game` functions to make the game work the way it should. \r\nClick
+        the hints for ideas!"
       courseE_playLab_exampleProject2_instruction: "Here's all of your code to choose
         a card - try adding some other fun features!"
       courseE_playLab_scaffold1_instruction: "Choose a background and map, and pick
@@ -6474,6 +6508,10 @@ en:
         play until you meet one of those conditions."
       courseE_playLab_scaffold6_instruction: "You've finished! Now you can play
         your game or share it with your friends and classmates!"
+      courseE_playlab_challenge2_instruction: "Can you figure out how this \"Fortune
+        Teller\" app works? Click `MORE` to see your challenges."
+      courseE_playlab_variables_challenge2_instruction: "Can you figure out how this
+        \"Fortune Teller\" app works? Click `MORE` to see your challenges."
       courseE_video_createFunctions_instruction: "We don't have a video for creating
         functions, yet. This is a placeholder."
       courseF_artist_for1_instruction: "Experiment with the `for` loop and play with
@@ -6588,6 +6626,9 @@ en:
       courseF_artist_variables_challenge2_instruction: "You've now learned everything
         you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can
         you stick with it until you figure out the solution?"
+      courseF_artistembed_variables9_instruction: "See what happens when you repeat
+        the code from the last puzzle 30 times instead of only 3!  Feel free to make
+        your lines any color or pattern for some extra zest."
       courseF_bee_conditionals10_instruction: "Collect all of the nectar and make
         all of the honey."
       courseF_bee_conditionals1_predict1_instruction: "Check to see if there's a
@@ -6645,12 +6686,14 @@ en:
         from the flowers."
       courseF_bee_functions5a_instruction: "Use the `move and check` function to
         collect all of the nectar."
-      courseF_bee_functions6_instruction: "Create a function and call it to collect
-        all of the nectar at each flower or make all of the honey at each honeycomb."
-      courseF_bee_functions7_instruction: "Collect all the nectar and make all the
-        honey!"
+      courseF_bee_functions6_instruction: "Help the bee through the maze by turning
+        left at flowers and right at honeycomb."
+      courseF_bee_functions7_instruction: "Rebuild your function from the last puzzle
+        to solve this maze."
       courseF_bee_functions8a_instruction: "Collect all the nectar or make all of
         the honey!"
+      courseF_bee_functionsPre7_instruction: "Now try building a function to solve
+        this maze.  How is it different from last time?"
       courseF_bee_functions_challenge1_instruction: "Create a new function to collect
         all the nectar and honey while there is a path ahead. Use it to complete the
         puzzle!"
@@ -6761,6 +6804,8 @@ en:
         will you get Dog to move in all directions using the arrow keys?  How will
         you add points when Dog tags Cat or Penguin?  How will you subtract points
         when Cat and Penguin touch?"
+      courseF_playlab_variables_challenge3_instruction: "Can you figure out how this
+        \"Fortune Teller\" app works? Click `MORE` to see your challenges."
       courseF_video_createFunctions_instruction: "We don't have a video for creating
         functions, yet. This is a placeholder."
       course_playlab_variables1_instruction: "This is Pirate Pegleg.  He's awfully
@@ -6780,6 +6825,31 @@ en:
       drawings!_instruction: "Draw the equilateral triangle - all the sides are the
         same!"
       eventsIntro_instruction: "Need a better playlab/events combo"
+      flappy_1_instruction: "Attach a block to the \"when click\" block, then press
+        \"Run\". Click or tap the screen to move Flappy to the target."
+      flappy_11_instruction: "Create your own Flappy game. You can change all the
+        visuals and all the rules, even the gravity. When you're done, click Finish
+        to let friends try your game on their phones."
+      flappy_2_instruction: "Now we've added some ground.  Attach a block to the
+        \"when hit the ground\" block.  Your code needs to 'END GAME' when Flappy
+        crashes."
+      flappy_3_instruction: "The \"when run\" block allows you to run code when your
+        game starts.  Try setting the level speed and flapping to the target."
+      flappy_4_instruction: "Flappy will fly through obstacles unless you write code
+        to make him crash. Attach a block to the \"when hit an obstacle\" block. Your
+        code needs to 'END GAME' when Flappy crashes into the first set of pipes."
+      flappy_5_instruction: "Let's add a scoreboard, and count points when Flappy
+        makes it past obstacles. Add to the \"when pass an obstacle\" block, and then
+        score a point by flying Flappy through the first set of pipes."
+      flappy_6_instruction: "See if you can still score a point after making Flappy
+        flap either a smaller or larger amount."
+      flappy_7_instruction: "Next, try changing the scene by attaching another block
+        to the \"when run\" block."
+      flappy_8_instruction: "You can set visuals anytime, not just when the game
+        starts. Try setting a RANDOM scene when other events happen, for example,
+        when passing an obstacle."
+      flappy_9_instruction: "To mix things up, when hitting an obstacle, instead
+        of ending the game try setting the score back to 0."
       frozen circle function in circle_instruction: "Now let's create 20 overlapping
         circles, turning 18 degrees between each circle."
       frozen circle function with parameter_instruction: "Here's a ”Create circle”

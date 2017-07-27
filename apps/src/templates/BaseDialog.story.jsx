@@ -42,6 +42,24 @@ export default storybook => {
         name: 'fullWidth',
         story: () => <ExampleDialogButton fullWidth/>
       }, {
+        name: 'fixedWidth',
+        story: () => (
+          <ExampleDialogButton
+            useUpdatedStyles
+            fixedWidth={300}
+            assetUrl={url => '/blockly/' + url}
+          />
+        )
+      }, {
+        name: 'fixedHeight',
+        story: () => (
+          <ExampleDialogButton
+            useUpdatedStyles
+            fixedHeight={400}
+            assetUrl={url => '/blockly/' + url}
+          />
+        )
+      }, {
         name: 'old style',
         description: `Dialogs with the useDeprecatedGlobalStyles flag
                         rely on global css. Don't do this.`,

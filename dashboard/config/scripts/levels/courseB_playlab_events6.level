@@ -39,7 +39,7 @@
     "timeout_failure_tick": "850",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"You will need these event blocks:\\n\\n![](https://images.code.org/02dcc4efc752dfa4187d0b1268427100-image-1475707266348.40.55.png)\",\r\n  \"hint_id\": \"courseB_playlab_events6_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need these event blocks:\\n\\n![](https://images.code.org/264ba5164e7cfca832cfb673445f9171-image-1501091597388.52.31.png)\",\"hint_id\":\"courseB_playlab_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f260a2b4e89cbc7d06ac4122d1466fd8/courseB_playlab_events6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Use the drop down arrows on the green `when arrow key pressed` event blocks to choose different directions.\\n\\n![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)\",\"hint_id\":\"courseB_playlab_events6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c9370cbedbf9ee9168be6c61b88a4152/courseB_playlab_events6.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Get to all of the flags to pass!\",\"hint_id\":\"courseB_playlab_events6_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/11a0536e54b12c3b86bacac7dfcc4694/courseB_playlab_events6.mp3\"}]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
     "markdown_instructions": "Help your knight get all of the flags!\r\n\r\nTo do this, you'll need to add events to help the knight move up, down, left, and right.",
     "soft_buttons": [
@@ -51,11 +51,13 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseB_playlab_events6_a\",\r\n  \"callout_text\": \"Use the green drop down arrow to change directions.\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -30,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-19 16:02:04 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 16:02:04 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 20:54:23 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-25 17:35:24 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-25 17:36:24 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-25 17:37:11 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"callout_json\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-25 17:42:48 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:49:16 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:51:41 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:53:28 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -87,7 +89,7 @@
     </initialization_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="studio_whenArrow">
+        <block type="studio_whenArrow" id="callMe">
           <title name="VALUE">up</title>
         </block>
         <block type="studio_whenSpriteClicked">

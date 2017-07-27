@@ -1,4 +1,5 @@
 # Get the set of sections owned by the current user
+# DEPRECATED: Use GET /dashboardapi/sections instead
 get '/v2/sections' do
   only_for 'code.org'
   dont_cache
@@ -8,12 +9,15 @@ get '/v2/sections' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: Use POST /dashboardapi/sections instead
 post '/v2/sections' do
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
   forbidden! unless section_id = DashboardSection.create(payload.merge(user: dashboard_user))
-  redirect "/v2/sections/#{section_id}" #, 201 #BUG: JQuery is barfing on the 201
+  section = DashboardSection.fetch_if_teacher(section_id, dashboard_user_id)
+  content_type :json
+  JSON.pretty_generate(section.to_owner_hash)
 end
 
 # Get the set of sections that the current user is enrolled in.
@@ -26,6 +30,7 @@ get '/v2/sections/membership' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: Use GET /dashboardapi/sections/<id> instead
 get '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
@@ -34,6 +39,7 @@ get '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 
+# DEPRECATED: Use DELETE /dashboardapi/sections/<id> instead
 delete '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache
@@ -56,6 +62,7 @@ post '/v2/sections/:id/update' do |id|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/sections/#{id}"))
 end
 
+# DEPRECATED: Use GET /dashboardapi/sections/<id>/students
 get '/v2/sections/:id/students' do |id|
   only_for 'code.org'
   dont_cache
@@ -87,6 +94,7 @@ post '/v2/sections/:id/delete' do |id|
   call(env.merge('REQUEST_METHOD' => 'DELETE', 'PATH_INFO' => "/v2/sections/#{id}/students/#{student_id}"))
 end
 
+# DEPRECATED: Will be removed, do not use.
 get '/v2/sections/:id/teachers' do |id|
   only_for 'code.org'
   dont_cache

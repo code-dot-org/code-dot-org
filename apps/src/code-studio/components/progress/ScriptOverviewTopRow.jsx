@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import SectionSelector from './SectionSelector';
 import i18n from '@cdo/locale';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import Button from '@cdo/apps/templates/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 
@@ -51,16 +51,16 @@ const ScriptOverviewTopRow = React.createClass({
       <div style={styles.buttonRow}>
         {!professionalLearningCourse && (
           <div>
-            <ProgressButton
+            <Button
               href={`/s/${scriptName}/next.next`}
               text={hasLevelProgress ? i18n.continue() : i18n.tryNow()}
-              size={ProgressButton.ButtonSize.large}
+              size={Button.ButtonSize.large}
             />
-            <ProgressButton
+            <Button
               href="//support.code.org"
               text={i18n.getHelp()}
-              color={ProgressButton.ButtonColor.white}
-              size={ProgressButton.ButtonSize.large}
+              color={Button.ButtonColor.white}
+              size={Button.ButtonSize.large}
               style={{marginLeft: 10}}
             />
           </div>

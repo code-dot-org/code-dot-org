@@ -75,6 +75,7 @@
   "penUp":"nehaj risati",
   "reinfFeedbackMsg":"Tukaj je tvoja risba! Lahko jo dopolniš ali pa rešiš naslednjo uganko.",
   "setAlpha":"nastavi prosojnost",
+  "setCharacter":"set character to {character}",
   "setColour":"izberi barvo pisala",
   "setPattern":"določi vzorec",
   "setWidth":"določi debelino pisala",
