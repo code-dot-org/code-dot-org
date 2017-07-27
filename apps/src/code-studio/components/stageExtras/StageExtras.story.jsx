@@ -49,8 +49,7 @@ export default storybook => {
               perfected: true,
             },
           ]}
-          showProjectWidget={true}
-          projectTypes={['artist', 'playlab']}
+          showProjectWidget={false}
         />
       )
     );
