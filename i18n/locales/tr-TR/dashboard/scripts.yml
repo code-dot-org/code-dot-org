@@ -1482,7 +1482,7 @@ tr:
           description_audience: ''
           stages:
             Prep With Your Modules:
-              name: Prep With Your Modules
+              name: Modüllerinizle Hazırlanın
             The TLO:
               name: The TLO
             Welcome Back!:
@@ -2336,7 +2336,7 @@ tr:
             If-else-if and Conditional Logic:
               name: If-else-if ve Koşullu Mantık
             'Building an App: Color Sleuth':
-              name: 'Building an App: Color Sleuth'
+              name: 'Bir Uygulama Oluşturmak: Renk Dedektifi'
             Possibly use later:
               name: Daha sonra kullanılabilir
             Unit 5 Assessment 3:
@@ -2352,7 +2352,7 @@ tr:
             'Building an App: Clicker Game':
               name: 'Bir Uygulama Oluşturma: Tıklama Oyunu'
             'Building an App: Image Scroller':
-              name: 'Bir Uygulama Geliştirme: Resim Kaydırma'
+              name: 'Bir Uygulama Oluşturma: Resim Kaydırma'
             'Building an App: Canvas Painter':
               name: 'Building an App: Canvas Painter'
             Unit 5 Assessment 5 - Practice AP questions:
@@ -3391,7 +3391,7 @@ tr:
             New Home for My Pet:
               name: Evcil Hayvanım İçin Yeni Ev
             Online Internet Safety:
-              name: Online Internet Safety
+              name: Çevrimiçi İnternet Güvenliği
             Online My New Pet Jigsaw:
               name: Online My New Pet Jigsaw
             Puppy Event:
@@ -3753,7 +3753,7 @@ tr:
               description_teacher: Bu ders, CSS stil özelliklerine, daha çok metin olmayan öğelere odaklanarak devam eder. Öğrenciler, bu derse, Dünyanın Tatlıları hakkında bir web sitesini inceleyerek başlarlar. Bu web sitesindeki yeni CSS stillerini inceler ve düzenlerler, sayfaya kendi stilleri eklerler. Tatlılar sayfasında çalıştıktan sonra, öğrenciler, yeni CSS özellikleri hakkındaki bilgilerini, kendi web sitelerini daha fazla biçimlendirmek için kullanırlar.
             Exploring Websites:
               name: Web Sitelerini Keşfetme
-              description_student: This lesson covers the purposes that a website might serve, both for the users and the creators. The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
+              description_student: Bu ders, bir web sitesinin hem kullanıcılar hem de site oluşturanlar için hizmet edebileceği amaçları kapsar. Öğrenciler, ABD'de en çok kullanılan web sitelerini keşfeder ve bu sitelerin hem kullanıcılar için nasıl kullanışlı olabildiğini, hem de site oluşturanlara nasıl hizmet sunabildiğini ele alırlar.
               description_teacher: Her web sitesinin bir amacı vardır, o web sitesini oluşturan kişi bir amaç için oluşturmuştur ve diğerleri onu kullanır. Bu derste öğrenciler, bir web sitesinin, hem kullanıcılar hem de web sitesini oluşturanlar için hizmet ettiği amacı düşünmeye başlarlar. Öğrenciler Abd' de en çok kullanılan bir avuç web sitesi keşfeder ve bu web sitelerinin kullanıcılar için nasıl kullanışlı olduğunu ve onu yaratanlara nasıl hizmet ettiğini çözmeye çalışırlar.
             'Websites for Expression ':
               name: 'Websites for Expression '
@@ -4021,7 +4021,7 @@ tr:
             Puppy Introduction:
               name: Puppy Introduction
             Online Internet Safety:
-              name: Online Internet Safety
+              name: Çevrimiçi İnternet Güvenliği
             Build a Flappy Game:
               name: Bir Kanat Çırpma Oyunu Oluşturmak
             More CS with Run Marco:
@@ -4271,7 +4271,7 @@ tr:
             The TLO:
               name: The TLO
             Prep With Your Modules:
-              name: Prep With Your Modules
+              name: Modüllerinizle Hazırlanın
         csp3-support:
           title: Unit 3 Online Professional Learning Course
           description_audience: ''

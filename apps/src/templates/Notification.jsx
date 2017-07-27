@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ProgressButton from "./progress/ProgressButton";
+import Button from "./Button";
 import styleConstants from '../styleConstants';
 import trackEvent from '../util/trackEvent';
 
@@ -49,7 +49,8 @@ const styles = {
     color: color.lighter_gray,
     float: 'right',
     marginTop: 16,
-    marginRight: 14
+    marginRight: 14,
+    cursor: 'pointer'
   },
   iconBox: {
     width: 72,
@@ -68,6 +69,10 @@ const styles = {
     marginLeft: 50,
     marginTop: 15
   },
+  courseButton: {
+    float: 'right',
+    marginRight: 21
+  },
   colors: {
     [NotificationType.information]: {
       borderColor: color.teal,
@@ -75,9 +80,9 @@ const styles = {
       backgroundColor: color.teal
     },
     [NotificationType.success]: {
-      borderColor: color.green,
-      color: color.green,
-      backgroundColor: color.green
+      borderColor: color.level_perfect,
+      color: color.level_perfect,
+      backgroundColor: color.level_perfect
     },
     [NotificationType.failure]: {
       borderColor: color.red,
@@ -90,7 +95,7 @@ const styles = {
       backgroundColor: color.mustardyellow
     },
     [NotificationType.course]: {
-      borderColor: color.charcoal,
+      borderColor: color.border_gray,
       color: color.teal,
       backgroundColor: color.teal
     },
@@ -99,6 +104,9 @@ const styles = {
       color: color.teal,
       backgroundColor: color.teal
     }
+  },
+  clear: {
+    clear: 'both'
   }
 };
 
@@ -139,39 +147,46 @@ const Notification = React.createClass({
       bullhorn: 'bullhorn'
     };
 
+    const buttonStyle = type === NotificationType.course ? [styles.button, styles.courseButton] : styles.button;
+
     if (!this.state.open) {
       return null;
     }
     return (
-      <div style={[styles.colors[type], styles.main]}>
-        <div style={[styles.iconBox, styles.colors[type]]}>
-          <FontAwesome icon={icons[type]} style={styles.icon}/>
-        </div>
-        {dismissible && (
-          <FontAwesome
-            icon="times"
-            style={styles.dismiss}
-            onClick={this.toggleContent}
-          />
-        )}
-        <div style={styles.wordBox}>
-          <div style={[styles.colors[type], styles.notice]}>
-            {notice}
+      <div>
+        <div style={[styles.colors[type], styles.main]}>
+          {type !== NotificationType.course && (
+            <div style={[styles.iconBox, styles.colors[type]]}>
+              <FontAwesome icon={icons[type]} style={styles.icon}/>
+            </div>
+          )}
+          {dismissible && (
+            <FontAwesome
+              icon="times"
+              style={styles.dismiss}
+              onClick={this.toggleContent}
+            />
+          )}
+          <div style={styles.wordBox}>
+            <div style={[styles.colors[type], styles.notice]}>
+              {notice}
+            </div>
+            <div style={styles.details}>
+              {details}
+            </div>
           </div>
-          <div style={styles.details}>
-            {details}
-          </div>
+          {buttonText && (
+            <Button
+              href={buttonLink}
+              color={Button.ButtonColor.gray}
+              text={buttonText}
+              style={buttonStyle}
+              target={newWindow ? "_blank" : null}
+              onClick={this.onAnnouncementClick}
+            />
+          )}
         </div>
-        {buttonText && (
-          <ProgressButton
-            href={buttonLink}
-            color={ProgressButton.ButtonColor.gray}
-            text={buttonText}
-            style={styles.button}
-            target={newWindow ? "_blank" : null}
-            onClick={this.onAnnouncementClick}
-          />
-        )}
+        <div style={styles.clear}/>
       </div>
     );
   }

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import SetUpMessage from './SetUpMessage';
+import JoinSection from './JoinSection';
+import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import SectionsPage from '../teacherDashboard/SectionsPage';
+import SectionsTable from '../studioHomepages/SectionsTable';
 import { connect } from 'react-redux';
 import {setValidAssignments, setSections} from '../teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
@@ -20,8 +23,8 @@ const Sections = React.createClass({
     teacherHomepage: React.PropTypes.bool,
 
     //Redux provided
-    setSections: React.PropTypes.func.isRequired,
-    setValidAssignments: React.PropTypes.func.isRequired,
+    setSections: PropTypes.func.isRequired,
+    setValidAssignments: PropTypes.func.isRequired,
   },
 
   componentDidMount(){
@@ -47,39 +50,170 @@ const Sections = React.createClass({
     });
   },
 
+  getInitialState() {
+    return {
+      sections: this.props.sections,
+      sectionsAction: null,
+      sectionsResult: null,
+      sectionsResultName: null
+    };
+  },
+
+  updateSections(sections) {
+    this.setState({sections});
+  },
+
+  updateSectionsResult(action, result, name) {
+    this.setState({
+      sectionsAction: action,
+      sectionsResult: result,
+      sectionsResultName: name
+    });
+  },
+
   render() {
-    const { sections, codeOrgUrlPrefix, isRtl, isTeacher} = this.props;
+    const sections = this.state.sections;
+    const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
+    const enrolledInASection = sections.length === 0 ? false : true;
+    const enrollmentDescription = isTeacher ? "" : i18n.enrollmentDescription();
 
     return (
       <div className="sectionsContainer">
         <ContentContainer
           heading={i18n.sectionsTitle()}
           isRtl={isRtl}
+          description={enrollmentDescription}
         >
-          {sections.length > 0 && experiments.isEnabled('section-flow-2017') && (
-            <SectionsPage
-              className="sectionPage"
-              validScripts={this.props.validScripts}
-              teacherHomepage={this.props.teacherHomepage}
-            />
-          )}
-          {sections.length > 0 && !experiments.isEnabled('section-flow-2017') && (
-            <SectionsPage
-              validScripts={this.props.validScripts}
-            />
-          )}
-          {sections.length === 0 && isTeacher && (
-            <SetUpMessage
-              type="sections"
-              codeOrgUrlPrefix={codeOrgUrlPrefix}
-              isRtl={isRtl}
-              isTeacher={isTeacher}
-            />
-          )}
-        </ContentContainer>
-      </div>
+        {this.state.sectionsAction === "join" && this.state.sectionsResult === "success" && (
+          <JoinSectionSuccessNotification sectionName={this.state.sectionsResultName}/>
+        )}
+        {this.state.sectionsAction === "leave" && this.state.sectionsResult === "success" && (
+          <LeaveSectionSuccessNotification sectionName={this.state.sectionsResultName}/>
+        )}
+        {this.state.sectionsAction === "join" && this.state.sectionsResult === "section_notfound" && (
+          <JoinSectionNotFoundNotification sectionId={this.state.sectionsResultName}/>
+        )}
+        {this.state.sectionsAction === "join" && this.state.sectionsResult === "fail" && (
+          <JoinSectionFailNotification sectionId={this.state.sectionsResultName}/>
+        )}
+        {this.state.sectionsAction === "join" && this.state.sectionsResult === "exists" && (
+          <JoinSectionExistsNotification sectionName={this.state.sectionsResultName}/>
+        )}
+        {isTeacher && sections.length > 0 && experiments.isEnabled('section-flow-2017') && (
+          <SectionsPage
+            className="sectionPage"
+            validScripts={this.props.validScripts}
+            teacherHomepage={this.props.teacherHomepage}
+          />
+        )}
+        {sections.length > 0 && !experiments.isEnabled('section-flow-2017') && (
+          <SectionsTable
+            sections={sections}
+            isRtl={isRtl}
+            isTeacher={isTeacher}
+            canLeave={canLeave}
+            updateSections={this.updateSections}
+            updateSectionsResult={this.updateSectionsResult}
+          />
+        )}
+        {isTeacher && sections.length === 0 && (
+          <SetUpMessage
+            type="sections"
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
+            isTeacher={isTeacher}
+          />
+        )}
+        {!isTeacher && sections.length > 0 && (
+          <SectionsTable
+            sections={sections}
+            isRtl={isRtl}
+            isTeacher={isTeacher}
+            canLeave={canLeave}
+            updateSections={this.updateSections}
+            updateSectionsResult={this.updateSectionsResult}
+          />
+        )}
+        {!isTeacher && (
+          <JoinSection
+            enrolledInASection={enrolledInASection}
+            updateSections={this.updateSections}
+            updateSectionsResult={this.updateSectionsResult}
+          />
+        )}
+      </ContentContainer>
+    </div>
+    );
+  }
+});
+export default connect(state => ({}), {setValidAssignments, setSections})(Sections);
+
+  const JoinSectionSuccessNotification = React.createClass({
+  propTypes: {sectionName: PropTypes.string.isRequired},
+  render() {
+    return (
+      <Notification
+        type="success"
+        notice={i18n.sectionsNotificationSuccess()}
+        details={i18n.sectionsNotificationJoinSuccess({sectionName: this.props.sectionName})}
+        dismissible={true}
+      />
     );
   }
 });
 
-export default connect(state => ({}), {setValidAssignments, setSections})(Sections);
+const LeaveSectionSuccessNotification = React.createClass({
+  propTypes: {sectionName: PropTypes.string.isRequired},
+  render() {
+    return (
+      <Notification
+        type="success"
+        notice={i18n.sectionsNotificationSuccess()}
+        details={i18n.sectionsNotificationLeaveSuccess({sectionName: this.props.sectionName})}
+        dismissible={true}
+      />
+    );
+  }
+});
+
+const JoinSectionNotFoundNotification = React.createClass({
+  propTypes: {sectionId: PropTypes.string.isRequired},
+  render() {
+    return (
+      <Notification
+        type="failure"
+        notice={i18n.sectionsNotificationFailure()}
+        details={i18n.sectionsNotificationJoinNotFound({sectionId: this.props.sectionId})}
+        dismissible={true}
+      />
+    );
+  }
+});
+
+const JoinSectionFailNotification = React.createClass({
+  propTypes: {sectionId: PropTypes.string.isRequired},
+  render() {
+    return (
+      <Notification
+        type="failure"
+        notice={i18n.sectionsNotificationFailure()}
+        details={i18n.sectionsNotificationJoinFail({sectionId: this.props.sectionId})}
+        dismissible={true}
+      />
+    );
+  }
+});
+
+const JoinSectionExistsNotification = React.createClass({
+  propTypes: {sectionName: PropTypes.string.isRequired},
+  render() {
+    return (
+      <Notification
+        type="warning"
+        notice={i18n.sectionsNotificationSuccess()}
+        details={i18n.sectionsNotificationJoinExists({sectionName: this.props.sectionName})}
+        dismissible={true}
+      />
+    );
+  }
+});

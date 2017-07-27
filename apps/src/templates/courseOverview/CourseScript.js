@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 const styles = {
   main: {
@@ -40,10 +40,10 @@ export default class CourseScript extends Component {
         <div style={styles.content}>
           <div style={styles.title}>{title}</div>
           <div style={styles.description}>{description}</div>
-          <ProgressButton
+          <Button
             text={i18n.goToUnit()}
             href={`/s/${name}`}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
           />
         </div>
       </div>

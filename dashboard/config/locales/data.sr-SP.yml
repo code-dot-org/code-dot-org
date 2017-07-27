@@ -495,18 +495,18 @@
           the arrow keys to get to the Spacebot and alert everyone else
         studio_playlab_10: Create your own game. When you're done, click Finish to
           let friends try your game on their phones.
-        studio_iceage_hello1: Sid wants to gather everyone for a new adventure. Can
-          you help him say "hello" by dragging the `say` block out into the work area
-          and typing the word "hello" inside?
-        studio_iceage_hello2: Sid (actor 1) found Manny (actor 2) and wants to invite
-          him on the adventure.  Help them greet each other by using the the "actor
-          say" block twice.
-        studio_iceage_move_to_flag: Scrat is looking for his acorn!  Help him go the
-          last 200 pixels using the "move" block.
-        studio_iceage_move_to_actor: Diego (actor 1) is searching for Manny (actor
-          2). Help Diego get 200 pixels down to Manny using the "move actor" block.
-          Next, connect a block to the "when actor touches" event to play a sound
-          when they find each other.
+        studio_iceage_hello1: Сид жели да окупи све за нову авантуру. Да ли можеш
+          да му помогнеш да каже "здраво" тако што превучеш блок "реци" на радну површину
+          и у њега упишеш реч "здраво"?
+        studio_iceage_hello2: Мени (учесник 1) је пронашао Сида (учесник 2) и жели
+          да га позове у авантуру. Помози им да се поздраве коришћењем блока "учесник
+          каже" два пута.
+        studio_iceage_move_to_flag: Скрет тражи свој жир! Помози му да пређе последњих
+          200 пиксела користећи блок "помери".
+        studio_iceage_move_to_actor: Дијего (учесник 1) тражи Менија (учесник 2).
+          Помози Дијегу да се помери 200 пиксела надоле према Менију коришћењем блока
+          "помери учесника". Затим, повежи блок са догађајем "када лик додирује" да
+          се одсвира звук када се сретну.
         studio_iceage_repeat: The "repeat forever" block allows you to run code continuously.
           Can you attach blocks to it to help Granny get some exercise by moving left
           and right repeatedly?
@@ -704,6 +704,8 @@
         CSF_maze_intro_k1_blocks: Intro to Code Studio
         CSF_maze_intro_text_blocks: Intro to Code Studio
         CSF_my_robotic_friends: "Моји роботски пријатељи"
+        CSF_Power_of_Words: Power of Words
+        CSF_Super_Digital_Citizen: Super Digital Citizen
         CSF_stevie_big_project: Stevie and the Big Project
         CSF_unspotted_bugs: Unspotted Bugs
         CSF_zuck_loops_short: Repeat Loops
@@ -720,12 +722,16 @@
         csd_concept_computer: What Makes a Computer, a Computer?
         csd_concept_search: How Search Works
         csd_gamelab_animation_tab: The Animation Tab
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
-        csd_gamelab_velocity: Velocity
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
+        csd_gamelab_velocity: "Брзина"
         csd_weblab_intro_1: Intro to Web Lab - Part 1
         csd_weblab_intro_2: Intro to Web Lab - Part 2
         csd_weblab_css_1: Intro to CSS - Part 1
@@ -808,7 +814,7 @@
         gumball_intro: Gumball Hour of Code - Introduction
         gumball_events: Gumball Hour of Code - Events
         gumball_repeat: Gumball Hour of Code - Repeat statements
-        iceage_intro: Ice Age Hour of Code - Introduction
+        iceage_intro: "Ледено Доба час кода - увод"
         iceage_events: Ice Age Hour of Code - Events
         iceage_repeat: Ice Age Hour of Code - Repeat statements
         mc_2016_intro: Minecraft Hour of Code - Introduction
@@ -820,9 +826,9 @@
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
         run: Притисни "Изврши" дугме да покренеш програм
-        watch_again: Click here to watch the video again
-        gray_block_explanation: Blocks that are grey can't be deleted. Can you solve
-          the puzzle anyway?
+        watch_again: "Кликни овде да поново погледаш видео"
+        gray_block_explanation: "Блокови који су сиви не могу да се обришу. Да ли
+          ипак можеш да решиш мозгалицу?"
         show_code_explanation: Click here to see the code for the program you're making
         instructions_repeat_explanation: The instructions for each puzzle are repeated
           here
@@ -831,7 +837,7 @@
         set_sprite_image: Attach a "set actor to image" block to the "when story starts"
           block to enable an actor for this story
         studio_say_text: Type what you want your actor to say within these quotes
-        jigsaw_click: Click this block!
+        jigsaw_click: "Кликни на овај блок!"
         move_elsa_forward: Drag a "Move Forward" block and snap it below the "When
           Run" block to make Elsa move forward
         turn_elsa: Use the "Turn" block to make Elsa turn. The number in the drop-down
@@ -874,7 +880,7 @@
           и промените величину.
         frozen_snowflake_branch: Користите блок "Направи грану пахуљице"
         frozen_create_square: "Додајте више блокова да направите квадрат"
-        playlab_drag_say: Drag the "say" block here and type "hello"
+        playlab_drag_say: Превуци овде блок "реци" и упиши "здраво"
         playlab_use_twice: Use this block twice and remember to change the actor number
         playlab_move_girl: Use the "move right" block to move Tennis Girl
         playlab_play_sound: Add "play sound" block here

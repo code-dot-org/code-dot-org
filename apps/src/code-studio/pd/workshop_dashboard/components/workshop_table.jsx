@@ -268,11 +268,12 @@ const WorkshopTable = React.createClass({
   },
 
   formatManagement(manageData) {
-    const {id, state} = manageData;
+    const {id, subject, state} = manageData;
 
     return (
       <WorkshopManagement
         workshopId={id}
+        subject={subject}
         viewUrl={`/workshops/${id}`}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
@@ -291,7 +292,7 @@ const WorkshopTable = React.createClass({
       row => _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
         date: row.sessions[0].start,
-        manage: {id: row.id, state: row.state}
+        manage: {id: row.id, subject: row.subject, state: row.state}
       })
     );
 

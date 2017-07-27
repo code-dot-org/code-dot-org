@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import ProgressButton from './ProgressButton';
+import Button from '../Button';
 import i18n from '@cdo/locale';
 
 const styles = {
@@ -35,18 +35,18 @@ const HiddenStageToggle = React.createClass({
     const { hidden, onChange } = this.props;
     return (
       <div style={styles.main} className="uitest-togglehidden">
-        <ProgressButton
+        <Button
           onClick={() => onChange('visible')}
           text={i18n.visible()}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           disabled={!hidden}
           icon="eye"
           style={{...styles.button, ...styles.leftButton}}
         />
-        <ProgressButton
+        <Button
           onClick={() => onChange('hidden')}
           text={i18n.hidden()}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           disabled={hidden}
           icon="eye-slash"
           style={{...styles.button, ...styles.rightButton}}

@@ -7,7 +7,7 @@ sr:
       2-3 Artist 2 new_instruction: "Ова кућа има полу завршен зид. Свака страница је 100, али полу завршена само 50. Завршите зид. "
       2-3 Artist 2_instruction: "This house has a half-finished wall. Each side is\n100, but the half-finished wall is only 50. Complete the wall. "
       2-3 Artist 3.4_instruction: "Блок за скок покреће уметника без цртања. Нацртајте повучену линију користећи и блокове за скок и блокове за цртање."
-      2-3 Artist 3_instruction: "This hat is 100 pixels high. Draw a hat that is\n70 pixels less."
+      2-3 Artist 3_instruction: "Овај шешир је висок 100 пиксела. Нацртај шешир који има 70 пиксела мање."
       2-3 Artist 3new_instruction: "The red hat is 100 pixels tall. Finish drawing\na black hat that is 70 pixels shorter. \\r\n(Note: The width of each hat is\n50 pixels.)"
       2-3 Artist 4_instruction: "Help me complete the house for this cat."
       2-3 Artist 5_instruction: "Замени овај код са \"Понови неколико пута\" блоком како би нацртао/ла исту кућу користећи само 3 блока."

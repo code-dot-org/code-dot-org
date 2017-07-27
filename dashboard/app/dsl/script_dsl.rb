@@ -14,6 +14,7 @@ class ScriptDSL < BaseDSL
     @hidden = true
     @login_required = false
     @hideable_stages = false
+    @exclude_csf_column_in_legend = false
     @student_detail_progress_view = false
     @wrapup_video = nil
   end
@@ -25,6 +26,7 @@ class ScriptDSL < BaseDSL
   boolean :hidden
   boolean :login_required
   boolean :hideable_stages
+  boolean :exclude_csf_column_in_legend
   boolean :student_detail_progress_view
 
   string :wrapup_video
@@ -48,6 +50,7 @@ class ScriptDSL < BaseDSL
       wrapup_video: @wrapup_video,
       login_required: @login_required,
       hideable_stages: @hideable_stages,
+      exclude_csf_column_in_legend: @exclude_csf_column_in_legend,
       student_detail_progress_view: @student_detail_progress_view,
       professional_learning_course: @professional_learning_course,
       peer_reviews_to_complete: @peer_reviews_to_complete
@@ -175,6 +178,7 @@ class ScriptDSL < BaseDSL
     s << 'hidden false' unless script.hidden
     s << 'login_required true' if script.login_required
     s << 'hideable_stages true' if script.hideable_stages
+    s << 'exclude_csf_column_in_legend true' if script.exclude_csf_column_in_legend
     s << 'student_detail_progress_view true' if script.student_detail_progress_view
     s << "wrapup_video '#{script.wrapup_video.key}'" if script.wrapup_video
 

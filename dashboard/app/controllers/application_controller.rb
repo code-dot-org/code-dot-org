@@ -2,6 +2,7 @@ require 'cdo/date'
 require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
+require 'cdo/shared_constants'
 
 class ApplicationController < ActionController::Base
   include LocaleHelper

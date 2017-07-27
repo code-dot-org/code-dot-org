@@ -1,25 +1,27 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import _ from 'lodash';
-import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '../FontAwesome';
 import { getIconForLevel } from './progressHelpers';
 import { levelType } from './progressTypes';
-import { levelProgressStyle, hoverStyle } from './progressStyles';
+import {
+  DOT_SIZE,
+  DIAMOND_DOT_SIZE,
+  SMALL_DOT_SIZE,
+  SMALL_DIAMOND_SIZE,
+  levelProgressStyle,
+  hoverStyle
+} from './progressStyles';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
+import TooltipWithIcon from './TooltipWithIcon';
 
 /**
  * As we do another redesign of our bubbles, this module represents the new version
  * The goal is that the two are interchangeable, and once the redesign is finished
  * we can delete ProgressBubble.jsx and replace it with this.
  */
-
-export const DOT_SIZE = 30;
-const DIAMOND_DOT_SIZE = 22;
-const SMALL_DOT_SIZE = 9;
-const SMALL_DIAMOND_SIZE = 5;
 
 const styles = {
   main: {
@@ -29,7 +31,7 @@ const styles = {
     borderRadius: DOT_SIZE,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
-    fontSize: 12,
+    fontSize: 16,
     letterSpacing: -0.11,
     lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
@@ -72,13 +74,6 @@ const styles = {
   diamondContents: {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
-  },
-  tooltip: {
-    lineHeight: DOT_SIZE + 'px',
-  },
-  tooltipIcon: {
-    paddingRight: 5,
-    paddingLeft: 5
   },
   smallBubbleSpan: {
     // lineHeight is necessary so that small bubbles get properly centered
@@ -124,17 +119,11 @@ const NewProgressBubble = React.createClass({
     }
 
     const tooltip = (
-      <ReactTooltip
-        id={tooltipId}
-        role="tooltip"
-        wrapper="span"
-        effect="solid"
-      >
-        <div style={styles.tooltip}>
-          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-          {tooltipText}
-        </div>
-      </ReactTooltip>
+      <TooltipWithIcon
+        tooltipId={tooltipId}
+        icon={levelIcon}
+        text={tooltipText}
+      />
     );
 
     if (level.isUnplugged && !smallBubble) {
@@ -142,11 +131,12 @@ const NewProgressBubble = React.createClass({
         <ProgressPill
           levels={[level]}
           text={i18n.unpluggedActivity()}
-          fontSize={12}
+          fontSize={16}
           tooltip={tooltip}
         />
       );
     }
+
     // Outer div here is used to make sure our bubbles all take up equivalent
     // amounts of space, whether they're diamonds or circles
     let bubble = (
