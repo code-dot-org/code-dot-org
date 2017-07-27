@@ -4,11 +4,13 @@ import NewProjectButtons from './NewProjectButtons.jsx';
 import ContentContainer from '../ContentContainer.jsx';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const ProjectWidget = React.createClass({
   propTypes: {
     projectList: PropTypes.array,
-    projectTypes: PropTypes.arrayOf(PropTypes.string)
+    projectTypes: PropTypes.arrayOf(PropTypes.string),
+    isLoading: PropTypes.bool
   },
 
   render() {
@@ -20,6 +22,11 @@ const ProjectWidget = React.createClass({
         showLink={true}
         isRtl={false}
       >
+        {this.props.isLoading &&
+          <div style={{height: 280, textAlign: 'center'}}>
+            <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
+          </div>
+        }
         {this.props.projectList.length > 0 &&
           <PersonalRecentProjects
             projectList={convertChannelsToProjectData(this.props.projectList)}
