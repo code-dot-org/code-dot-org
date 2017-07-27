@@ -20,7 +20,7 @@ const styles = {
   }
 };
 
-const AniGifPreview = React.createClass({
+export const ImagePreview = Radium(React.createClass({
   propTypes: {
     url: React.PropTypes.string.isRequired,
     showInstructionsDialog: React.PropTypes.func.isRequired,
@@ -44,7 +44,7 @@ const AniGifPreview = React.createClass({
       </div>
     );
   }
-});
+}));
 
 export default connect(state => ({
   url: state.pageConstants.aniGifURL,
@@ -57,4 +57,4 @@ export default connect(state => ({
       hintsOnly: false
     }));
   }
-}))(Radium(AniGifPreview));
+}))(ImagePreview);
