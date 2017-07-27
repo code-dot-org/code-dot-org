@@ -1071,11 +1071,16 @@ Artist.prototype.executeTuple_ = function () {
  * Handle the tasks to be done after the user program is finished.
  */
 Artist.prototype.finishExecution_ = function () {
+  this.studioApp_.stopLoopingAudio('start');
+
   document.getElementById('spinner').style.visibility = 'hidden';
   if (this.studioApp_.isUsingBlockly()) {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
-  this.checkAnswer();
+
+  if (!this.level.freePlay) {
+    this.checkAnswer();
+  }
 };
 
 /**
@@ -1736,7 +1741,6 @@ Artist.prototype.checkAnswer = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   // Play sound
-  this.studioApp_.stopLoopingAudio('start');
   if (this.testResults === TestResults.FREE_PLAY ||
       this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
     this.studioApp_.playAudio('win');
