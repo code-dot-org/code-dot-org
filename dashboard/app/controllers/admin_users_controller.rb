@@ -126,11 +126,12 @@ class AdminUsersController < ApplicationController
     end
 
     if permission == 'admin'
-      if @user.sections_as_student.count > 0
-        flash[:alert] = "FAILED: user #{@user.email} NOT granted as user has sections_as_students"
-      else
+      begin
         #TODO: update User model to log to #infrasecurity that admin privilege was granted
         @user.update!(admin: true)
+      rescue ActiveRecord::RecordInvalid => invalid
+        flash[:alert] = "FAILED: user #{user_id} could not be assigned admin permission"\
+                        " because #{invalid.record.errors.full_messages.to_sentence}"
       end
     else
       @user.permission = permission

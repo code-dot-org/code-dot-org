@@ -246,7 +246,8 @@ class AdminUsersControllerTest < ActionController::TestCase
     end
     assert_redirected_to permissions_form_path(search_term: follower.student_user.id)
     assert_equal(
-      "FAILED: user #{follower.student_user.email} NOT granted as user has sections_as_students",
+      "FAILED: user #{follower.student_user.id} could not be assigned admin permission because Admin"\
+      " cannot be a followed",
       flash[:alert]
     )
   end
