@@ -8,7 +8,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const ProjectWidget = React.createClass({
   propTypes: {
-    projectList: PropTypes.array,
+    projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     isLoading: PropTypes.bool
   },
