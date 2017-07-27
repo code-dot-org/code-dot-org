@@ -2,9 +2,11 @@ import _ from 'lodash';
 import $ from 'jquery';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 
-// The only properties that can be updated by the user when creating
-// or editing a section.
-const userEditableSectionProps = [
+/**
+ * @const {string[]} The only properties that can be updated by the user
+ * when creating or editing a section.
+ */
+export const USER_EDITABLE_SECTION_PROPS = [
   'name',
   'loginType',
   'stageExtras',
@@ -13,6 +15,9 @@ const userEditableSectionProps = [
   'scriptId',
   'grade',
 ];
+
+/** @const {number} ID for a new section that has not been saved */
+export const PENDING_NEW_SECTION_ID = -1;
 
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
@@ -310,7 +315,7 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId ?
       {...state.sections[action.sectionId]} :
-      newSectionData(-1, action.courseId, undefined);
+      newSectionData(PENDING_NEW_SECTION_ID, action.courseId, undefined);
     return {
       ...state,
       sectionBeingEdited: initialSectionData,
@@ -319,12 +324,12 @@ export default function teacherSections(state=initialState, action) {
 
   if (action.type === EDIT_SECTION_PROPERTIES) {
     if (!state.sectionBeingEdited) {
-      throw new Error(`Cannot edit section properties; no section is`
+      throw new Error('Cannot edit section properties; no section is'
         + ' currently being edited.');
     }
 
     for (const key in action.props) {
-      if (!userEditableSectionProps.includes(key)) {
+      if (!USER_EDITABLE_SECTION_PROPS.includes(key)) {
         throw new Error(`Cannot edit property ${key}; it's not allowed.`);
       }
     }
