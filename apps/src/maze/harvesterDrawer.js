@@ -66,15 +66,6 @@ export default class HarvesterDrawer extends Drawer {
     }
   }
 
-  /**
-   * @override
-   */
-  updateOrCreateText_(prefix, row, col, text) {
-    let textElement = super.updateOrCreateText_(prefix, row, col, text);
-    textElement.setAttribute('class', 'karel-counter-text');
-    return textElement;
-  }
-
   hide(prefix, row, col) {
     const element = this.getOrCreateImage_(prefix, row, col);
     if (element) {

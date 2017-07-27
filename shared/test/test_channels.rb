@@ -130,8 +130,8 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_and_unpublish_channel
-    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 14.years.ago.to_datetime})
-
+    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
@@ -191,7 +191,8 @@ class ChannelsTest < Minitest::Test
 
   def test_publish_permissions
     # only whitelisted project types can be published
-    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 14.years.ago.to_datetime})
+    stub_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
     assert_can_publish('gamelab')
     assert_can_publish('artist')
@@ -208,7 +209,8 @@ class ChannelsTest < Minitest::Test
 
     # users under age 13 cannot publish applab, gamelab or weblab projects,
     # but can publish artist or playlab projects.
-    ChannelsApi.any_instance.stubs(:current_user).returns({birthday: 12.years.ago.to_datetime})
+    stub_user = {name: ' xavier', birthday: 12.years.ago.to_datetime}
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
     assert_cannot_publish('gamelab')
     assert_can_publish('artist')
@@ -288,15 +290,22 @@ class ChannelsTest < Minitest::Test
 
   private
 
+  def timestamp(time)
+    time.strftime('%Y-%m-%d %H:%M:%S.%L')
+  end
+
   def assert_can_publish(project_type)
-    start = DateTime.now - 1
+    start = 1.second.ago
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.ok?
     result = JSON.parse(last_response.body)
-    assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
+    refute_nil result['publishedAt']
+    finish = 1.second.since
+    published = DateTime.parse(result['publishedAt'])
+    assert ((start..finish).cover? published), "(#{timestamp(start)}..#{timestamp(finish)}) covers #{timestamp(published)}"
 
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?

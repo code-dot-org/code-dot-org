@@ -1,4 +1,8 @@
 class Pd::WorkshopMaterialOrdersController < ApplicationController
+  include Pd::PageHelper
+
+  DEFAULT_PAGE_SIZE = 25
+
   load_and_authorize_resource :enrollment, class: 'Pd::Enrollment', find_by: 'code',
     id_param: :enrollment_code
 
@@ -19,8 +23,6 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
 
   # POST /pd/workshop_materials/:enrollment_code
   def create
-    @workshop_material_order.place_order if @workshop_material_order.valid?
-
     if @workshop_material_order.save
       render :thanks
     else
@@ -38,8 +40,28 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
       order_errors: @workshop_material_orders.with_order_errors.count
     }
 
+    # Search emails
+    @workshop_material_orders = @workshop_material_orders.search_emails(params[:email]) if params[:email]
+
+    # filter: [ordered | shipped | errors]
+    if params[:filter]
+      case params[:filter].try(:downcase)
+        when 'ordered'
+          @workshop_material_orders = @workshop_material_orders.successfully_ordered
+        when 'shipped'
+          @workshop_material_orders = @workshop_material_orders.shipped
+        when 'errors'
+          @workshop_material_orders = @workshop_material_orders.with_order_errors
+        else
+          params.delete :filter
+      end
+    end
+
+    @workshop_material_orders = @workshop_material_orders.page(page).per(page_size)
     view_options(full_width: true)
   end
+
+  private
 
   def workshop_material_order_params
     params.require(:pd_workshop_material_order).permit(
@@ -51,5 +73,14 @@ class Pd::WorkshopMaterialOrdersController < ApplicationController
       :zip_code,
       :phone_number
     )
+  end
+
+  def page
+    params[:page] || 1
+  end
+
+  def page_size
+    return DEFAULT_PAGE_SIZE unless params.key? :page_size
+    params[:page_size] == 'All' ? @workshop_material_orders.count : params[:page_size]
   end
 end

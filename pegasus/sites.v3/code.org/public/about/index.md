@@ -3,6 +3,7 @@ title: About Us
 nav: about_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 <%
@@ -22,7 +23,7 @@ theme: responsive
 
 <div class="col-50">
 
-Code.org&reg; is a non-profit dedicated to expanding access to computer science, and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world, and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
+Code.org&reg; is a non-profit dedicated to expanding access to computer science and increasing participation by women and underrepresented minorities. Our vision is that every student in every school should have the opportunity to learn computer science, just like biology, chemistry or algebra. Code.org organizes the annual <a href="http://hourofcode.com"> Hour of Code</a> campaign which has engaged 10% of all students in the world and provides the leading curriculum for K-12 computer science in the largest school districts in the United States. Code.org is supported by generous donors including Microsoft, Facebook, the Infosys Foundation, Google, Omidyar Network, and <a href="/about/donors">many more</a>.
 
 
 </div>
@@ -36,6 +37,8 @@ Code.org&reg; is a non-profit dedicated to expanding access to computer science,
 Code.org increases diversity in computer science by reaching students of all backgrounds where they are — at their skill-level, in their schools, and in ways that inspire them to keep learning. 
 
 For the second year in a row, underrepresented minorities make up 48% of students in our courses. Increasing diversity in computer science is foundational to our work, and <a href="/diversity">we encourage you to read more about our efforts</a>. 
+
+[Source data](https://docs.google.com/document/u/2/d/1gySkItxiJn_vwb8HIIKNXqen184mRtzDX12cux0ZgZk/pub)
 
 
 <br />
@@ -91,12 +94,12 @@ Our work builds upon [decades of effort, by countless organizations and individu
 - [TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](https://www.youtube.com/watch?v=m-U9wzC9xLk)
 
 ## Our commitment to free curriculum and open source technology
-All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for noncommercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+All curriculum resources and tutorials we author will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
 
 <hr/>
 
 ## Code.org Advocacy Coalition
-The [Code.org Advocacy Coalition](/advocacy) is a bipartisan coalition of corporations and nonprofits that work together to help establish federal and state policies to expand and sustain access to K-12 computer science, and to broaden participation and diversity in the field.
+The [Code.org Advocacy Coalition](/advocacy) is a bipartisan coalition of corporations and nonprofits that work together to help establish federal and state policies to expand and sustain access to K-12 computer science and to broaden participation and diversity in the field.
 
 <hr/>
 
@@ -115,9 +118,7 @@ Code’s accomplishments (above) demonstrate our ability to leverage those dolla
 
 Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our leadership team further to better understand our program and to explore options for investing in our work.
 
-[Code.org's 2014 IRS Form 990](/files/irs-form.pdf)
-<br/>
-[Code.org's 2015 IRS Form 990](/files/irs-form-2015.pdf)
+Code.org IRS form 990 for [2014](/files/irs-form.pdf), [2015](/files/irs-form-2015.pdf), and [2016](/files/irs-form-2016.pdf).
 
 <hr/>
 
@@ -138,15 +139,18 @@ Receive [quarterly updates from Code.org by email](http://eepurl.com/wL0XL), or 
 <a href="https://twitter.com/codeorg" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @codeorg</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 <br/><br/>
+
 <script src="//platform.linkedin.com/in.js" type="text/javascript">
   lang: en_US
 </script>
+<!--  FOLLOW BUTTONS FOR GOOGLE PLUS OR TUMBLR ETC
 <script type="IN/FollowCompany" data-id="3129360" data-counter="none"></script>
 <br/>
 <iframe  frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="116" src="https://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=codeorg&color_scheme=dark"></iframe>
 <br/>
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <div class="g-follow" data-annotation="bubble" data-height="24" data-href="//plus.google.com/u/0/113408212816493509628" data-rel="publisher"></div>
+-->
 
 <hr/>
 

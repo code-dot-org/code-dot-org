@@ -39,10 +39,6 @@ content-type: text/ng-template
           'ng-class' => 'tab == "projects" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/projects"}= 'Projects'
 
-      %li{'ng-show' => 'section && section.students.length > 0 && !editingAll(section.students)',
-          'ng-class' => 'tab == "stats" ? "active tab" : "tab"'}
-        %a{'ng-href' => "#/sections/{{section.id}}/stats"}= I18n.t('dashboard_navigation_view_stats')
-
       %li{'ng-show' => 'section && !editingAll(section.students)',
           'ng-class' => 'tab == "manage" ? "active tab" : "tab"'}
         %a{'ng-href' => "#/sections/{{section.id}}/manage"}= I18n.t('dashboard_navigation_manage_students')
@@ -51,7 +47,7 @@ content-type: text/ng-template
         -# Just an invisible element for some padding to keep things looking good when we're not showing tabs.
         &nbsp;
 
-  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage'"}
+  .managebuttons{style: "float:right; margin-bottom: 9px;", "ng-if" => "tab == 'manage' && section.login_type !== 'google_classroom'"}
     %span{"ng-if" => "section.login_type !== 'email'"}
       %button.btn.btn-white{"ng-click" => "new_student()", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_student')
       %button.btn.btn-white{"ng-click" => "bulk_import.editing = true", "ng-disabled" => "bulk_import.editing"}= I18n.t('dashboard_students_add_students')

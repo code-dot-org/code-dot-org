@@ -37,7 +37,9 @@
     "submittable": "false",
     "hide_view_data_button": "true",
     "debugger_disabled": "false",
-    "instructions": "Create and assign a new variable in a single line."
+    "instructions": "Create and assign a new variable in a single line.",
+    "show_debug_watch": "true",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

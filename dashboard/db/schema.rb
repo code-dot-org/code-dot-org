@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529112233) do
+ActiveRecord::Schema.define(version: 20170706223224) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "user_id"
@@ -66,11 +66,13 @@ ActiveRecord::Schema.define(version: 20170529112233) do
   end
 
   create_table "channel_tokens", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.string   "channel",    null: false
-    t.integer  "user_id",    null: false
-    t.integer  "level_id",   null: false
+    t.string   "channel",        null: false
+    t.integer  "storage_app_id"
+    t.integer  "user_id",        null: false
+    t.integer  "level_id",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["storage_app_id"], name: "index_channel_tokens_on_storage_app_id", using: :btree
     t.index ["user_id", "level_id"], name: "index_channel_tokens_on_user_id_and_level_id", unique: true, using: :btree
   end
 
@@ -295,19 +297,18 @@ ActiveRecord::Schema.define(version: 20170529112233) do
 
   create_table "levels", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "game_id"
-    t.string   "name",                                                   null: false
+    t.string   "name",                                                null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "level_num"
     t.integer  "ideal_level_source_id"
-    t.integer  "solution_level_source_id"
     t.integer  "user_id"
-    t.text     "properties",               limit: 65535
+    t.text     "properties",            limit: 65535
     t.string   "type"
     t.string   "md5"
-    t.boolean  "published",                              default: false, null: false
-    t.text     "notes",                    limit: 65535
-    t.text     "audit_log",                limit: 65535
+    t.boolean  "published",                           default: false, null: false
+    t.text     "notes",                 limit: 65535
+    t.text     "audit_log",             limit: 65535
     t.index ["game_id"], name: "index_levels_on_game_id", using: :btree
     t.index ["name"], name: "index_levels_on_name", using: :btree
   end
@@ -351,12 +352,13 @@ ActiveRecord::Schema.define(version: 20170529112233) do
   end
 
   create_table "pd_attendances", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
-    t.integer  "pd_session_id",    null: false
+    t.integer  "pd_session_id",     null: false
     t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "deleted_at"
     t.integer  "pd_enrollment_id"
+    t.integer  "marked_by_user_id",              comment: "User id for the partner or admin who marked this teacher in attendance, or nil if the teacher self-attended."
     t.index ["pd_enrollment_id"], name: "index_pd_attendances_on_pd_enrollment_id", using: :btree
     t.index ["pd_session_id", "teacher_id"], name: "index_pd_attendances_on_pd_session_id_and_teacher_id", unique: true, using: :btree
   end
@@ -479,6 +481,14 @@ ActiveRecord::Schema.define(version: 20170529112233) do
     t.index ["user_id"], name: "index_pd_teacher_applications_on_user_id", unique: true, using: :btree
   end
 
+  create_table "pd_teachercon_surveys", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
+    t.integer  "pd_enrollment_id",               null: false
+    t.text     "form_data",        limit: 65535, null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["pd_enrollment_id"], name: "index_pd_teachercon_surveys_on_pd_enrollment_id", unique: true, using: :btree
+  end
+
   create_table "pd_workshop_material_orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
@@ -565,12 +575,12 @@ ActiveRecord::Schema.define(version: 20170529112233) do
   create_table "plc_course_units", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "plc_course_id"
     t.string   "unit_name"
-    t.string   "unit_description"
+    t.text     "unit_description", limit: 65535
     t.integer  "unit_order"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
     t.integer  "script_id"
-    t.boolean  "started",          default: false, null: false
+    t.boolean  "started",                        default: false, null: false
     t.index ["plc_course_id"], name: "index_plc_course_units_on_plc_course_id", using: :btree
     t.index ["script_id"], name: "index_plc_course_units_on_script_id", using: :btree
   end
@@ -982,6 +992,7 @@ ActiveRecord::Schema.define(version: 20170529112233) do
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci" do |t|
     t.integer  "studio_person_id"
     t.string   "email",                                  default: "",      null: false
+    t.string   "parent_email"
     t.string   "encrypted_password",                     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -1010,6 +1021,7 @@ ActiveRecord::Schema.define(version: 20170529112233) do
     t.boolean  "active",                                 default: true,    null: false
     t.string   "hashed_email"
     t.datetime "deleted_at"
+    t.datetime "purged_at"
     t.string   "secret_words"
     t.text     "properties",               limit: 65535
     t.string   "invitation_token"
@@ -1031,7 +1043,9 @@ ActiveRecord::Schema.define(version: 20170529112233) do
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
     t.index ["invitations_count"], name: "index_users_on_invitations_count", using: :btree
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
+    t.index ["parent_email"], name: "index_users_on_parent_email", using: :btree
     t.index ["provider", "uid", "deleted_at"], name: "index_users_on_provider_and_uid_and_deleted_at", unique: true, using: :btree
+    t.index ["purged_at"], name: "index_users_on_purged_at", using: :btree
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true, using: :btree
     t.index ["school_info_id"], name: "index_users_on_school_info_id", using: :btree
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id", using: :btree

@@ -174,5 +174,13 @@ WorkshopQuality.associatedFields = [
   "venueFeedback",
   "howMuchLearned",
   "howMotivating",
-  "whoFacilitated"
+  "whoFacilitated",
+  "howClearlyPresented",
+  "howInteresting",
+  "howOftenGivenFeedback",
+  "helpQuality",
+  "howComfortableAskingQuestions",
+  "howOftenTaughtNewThings",
+  "thingsFacilitatorDidWell",
+  "thingsFacilitatorCouldImprove",
 ];

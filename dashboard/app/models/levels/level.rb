@@ -2,21 +2,20 @@
 #
 # Table name: levels
 #
-#  id                       :integer          not null, primary key
-#  game_id                  :integer
-#  name                     :string(255)      not null
-#  created_at               :datetime
-#  updated_at               :datetime
-#  level_num                :string(255)
-#  ideal_level_source_id    :integer
-#  solution_level_source_id :integer
-#  user_id                  :integer
-#  properties               :text(65535)
-#  type                     :string(255)
-#  md5                      :string(255)
-#  published                :boolean          default(FALSE), not null
-#  notes                    :text(65535)
-#  audit_log                :text(65535)
+#  id                    :integer          not null, primary key
+#  game_id               :integer
+#  name                  :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  level_num             :string(255)
+#  ideal_level_source_id :integer
+#  user_id               :integer
+#  properties            :text(65535)
+#  type                  :string(255)
+#  md5                   :string(255)
+#  published             :boolean          default(FALSE), not null
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
 #
 # Indexes
 #
@@ -268,15 +267,16 @@ class Level < ActiveRecord::Base
 
   TYPES_WITHOUT_IDEAL_LEVEL_SOURCE = [
     'Applab', # freeplay
+    'Bounce', # no ideal solution
     'ContractMatch', # dsl defined, covered in dsl
     'CurriculumReference', # no user submitted content
     'DSLDefined', # dsl defined, covered in dsl
     'EvaluationMulti', # unknown
-    'EvaluationQuestion', # plc evaluation
     'External', # dsl defined, covered in dsl
     'ExternalLink', # no user submitted content
     'FreeResponse', # no ideal solution
     'FrequencyAnalysis', # widget
+    'Flappy', # no ideal solution
     'Gamelab', # freeplay
     'GoBeyond', # unknown
     'Level', # base class
@@ -285,9 +285,9 @@ class Level < ActiveRecord::Base
     'Match', # dsl defined, covered in dsl
     'Multi', # dsl defined, covered in dsl
     'NetSim', # widget
+    'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
-    'Odometer', # widget
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
@@ -309,7 +309,7 @@ class Level < ActiveRecord::Base
     Studio
     StudioEC
     StarWarsGrid
-  )
+  ).freeze
 
   def self.where_we_want_to_calculate_ideal_level_source
     where('type not in (?)', TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
@@ -332,7 +332,12 @@ class Level < ActiveRecord::Base
     # blockly levels.js. for example, from hourofcode.script:
     # level 'blockly:Maze:2_14'
     # level 'scrat 16'
-    find_by(key_to_params(key))
+    if key.start_with?('blockly:Bounce')
+      level_num = key.split(':')[2]
+      find_by_name("bounce_#{level_num}") || find_by(key_to_params(key))
+    else
+      find_by(key_to_params(key))
+    end
   end
 
   def self.key_to_params(key)
@@ -420,6 +425,17 @@ class Level < ActiveRecord::Base
   end
 
   def icon
+  end
+
+  # Level are either activity levels (default) or concept levels
+  # An activity level is a one where a student has to complete an activity / puzzle.
+  # - This includes programming levels, widget levels, unplugged activities, assessment levels, etc.
+  # - These get circular progress bubbles
+  # A concept level is one that introduces or discusses a concept.
+  # - This includes video levels, external HTML levels, and map levels.
+  # - These get diamond progress bubbles
+  def concept_level?
+    false
   end
 
   # Returns an array of all the contained levels

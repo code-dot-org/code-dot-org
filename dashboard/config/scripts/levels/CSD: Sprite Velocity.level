@@ -9,10 +9,11 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "display_name": "Sprite Velocity"
+    "display_name": "Video: Velocity"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 23:42:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

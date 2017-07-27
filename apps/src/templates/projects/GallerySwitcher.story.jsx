@@ -1,5 +1,13 @@
 import React from 'react';
-import GallerySwitcher, {Galleries} from './GallerySwitcher';
+import GallerySwitcher from './GallerySwitcher';
+import {Galleries} from './projectConstants';
+import projects, {selectGallery} from './projectsRedux';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
+
+const createProjectsStore = function () {
+  return createStore(combineReducers({projects}));
+};
 
 export default storybook => {
   return storybook
@@ -9,11 +17,14 @@ export default storybook => {
         name: 'Gallery Switcher with My Projects selected initially',
         description: '',
         story: () => {
+          const store = createProjectsStore();
+          store.dispatch(selectGallery(Galleries.PRIVATE));
           return (
-            <GallerySwitcher
-              initialGallery={Galleries.PRIVATE}
-              showGallery={storybook.action('showGallery')}
-            />
+            <Provider store={store}>
+              <GallerySwitcher
+                showGallery={storybook.action('showGallery')}
+              />
+            </Provider>
           );
         }
       },
@@ -21,11 +32,14 @@ export default storybook => {
         name: 'Gallery Switcher with Public Gallery selected initially',
         description: '',
         story: () => {
+          const store = createProjectsStore();
+          store.dispatch(selectGallery(Galleries.PUBlIC));
           return (
-            <GallerySwitcher
-              initialGallery={Galleries.PUBLIC}
-              showGallery={storybook.action('showGallery')}
-            />
+            <Provider store={store}>
+              <GallerySwitcher
+                showGallery={storybook.action('showGallery')}
+              />
+            </Provider>
           );
         }
       },

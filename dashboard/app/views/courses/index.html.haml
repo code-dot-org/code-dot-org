@@ -15,6 +15,7 @@
   courses_data[:signedout] = @is_signed_out
   courses_data[:initialtipsdismissed] = current_user ? current_user.ui_tip_dismissed_teacher_courses : nil
   courses_data[:userid] = current_user.try(:id)
+  courses_data[:student_homepage_preview] = request.cookies['pm'] == "student_homepage"
 
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
 
@@ -28,8 +29,23 @@
   = render file: Rails.root.join('..', 'shared', 'haml', 'course_explorer_table.haml')
   = render file: Rails.root.join('..', 'shared', 'haml', 'tool_explorer_table.haml')
   = render partial: 'home/all_courses'
-  -if current_user && !current_user.teacher?
-    #user_hero
+  #user_hero
+    -if current_user && !current_user.teacher?
       = render template: 'api/user_hero'
+  #flashes
+    = show_flashes.html_safe
+
+  .standalone-tools
+    %br/
+    .row
+      = render partial: 'shared/course_wide_block', locals: { id: "applab" }
+      = render partial: 'shared/course_wide_block', locals: { id: "widgets" }
+    %br/
+    .row
+      = render partial: 'shared/course_wide_block', locals: { id: "gamelab" }
+      = render partial: 'shared/course_wide_block', locals: { id: "weblab" }
+    %br/
+
+  = render partial: 'home/section_management'
 
 #courses-container

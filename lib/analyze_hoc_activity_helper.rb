@@ -79,6 +79,9 @@ def rank_tutorials(end_date)
   end
 end
 
+# TODO(asher): This method aggregates different states and cities with the same name into the same
+# bucket count. Fix this, so that (e.g.) Springfield, IL and Springfield, MO don't get added
+# together.
 def analyze_day_fast(date)
   from_where = generate_from_where(date)
   finished_from_where = generate_from_where(date, finished: true)
@@ -122,7 +125,7 @@ def analyze_day_fast(date)
 
   cities = Hash.new(0)
   PEGASUS_REPORTING_DB_READONLY.fetch(
-    "SELECT city, #{WEIGHTED_COUNT} #{from_where} GROUP BY TRIM(CONCAT(city, ' ', state)) ORDER BY count DESC"
+    "SELECT city, #{WEIGHTED_COUNT} #{from_where} GROUP BY city ORDER BY count DESC"
   ).each do |row|
     row[:city] = 'Other' if row[:city].nil_or_empty? || row[:city] == 'Reserved'
     cities[row[:city]] += row[:count].to_i

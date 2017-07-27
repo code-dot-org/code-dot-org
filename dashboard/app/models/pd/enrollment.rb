@@ -30,6 +30,8 @@ require 'cdo/safe_names'
 
 class Pd::Enrollment < ActiveRecord::Base
   include SchoolInfoDeduplicator
+  include Rails.application.routes.url_helpers
+
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   belongs_to :workshop, class_name: 'Pd::Workshop', foreign_key: :pd_workshop_id
@@ -56,7 +58,7 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_presence_of :school_info, unless: :created_before_school_info?
 
   before_validation :autoupdate_user_field
-  after_create :enroll_in_corresponding_online_learning
+  after_save :enroll_in_corresponding_online_learning, if: -> {user_id_changed? || email_changed?}
 
   def self.for_user(user)
     where('email = ? OR user_id = ?', user.email, user.id)
@@ -114,30 +116,22 @@ class Pd::Enrollment < ActiveRecord::Base
   end
 
   # Filters a list of enrollments for survey completion, checking with Pegasus (in batch) to include
-  # new unprocessed surveys that don't yet show up in this model.
+  # new unprocessed surveys that don't yet show up in this model, or checking in with
+  # the Pd::TeacherconSurvey model
   # @param enrollments [Enumerable<Pd::Enrollment>] list of enrollments to filter.
   # @param select_completed [Boolean] if true, return only enrollments with completed surveys,
   #   otherwise return only those without completed surveys. Defaults to true.
   # @return [Enumerable<Pd::Enrollment>]
   def self.filter_for_survey_completion(enrollments, select_completed = true)
     raise 'Expected enrollments to be an Enumerable list of Pd::Enrollment objects' unless
-      enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
+        enrollments.is_a?(Enumerable) && enrollments.all? {|e| e.is_a?(Pd::Enrollment)}
 
-    ids_with_processed_surveys, ids_without_processed_surveys =
-      enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
-
-    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
-      kind: 'PdWorkshopSurvey',
-      source_id: ids_without_processed_surveys
-    ).map do |survey|
-      survey[:source_id].to_i
+    teachercon_enrollments, non_teachercon_enrollments = enrollments.partition do |enrollment|
+      enrollment.workshop.teachercon?
     end
 
-    filtered_ids = select_completed ?
-      ids_with_processed_surveys + ids_with_unprocessed_surveys :
-      ids_without_processed_surveys - ids_with_unprocessed_surveys
-
-    enrollments.select {|e| filtered_ids.include? e.id}
+    filter_for_regular_survey_completion(non_teachercon_enrollments, select_completed) +
+        filter_for_teachercon_survey_completion(teachercon_enrollments, select_completed)
   end
 
   before_create :assign_code
@@ -165,13 +159,17 @@ class Pd::Enrollment < ActiveRecord::Base
   def exit_survey_url
     if [Pd::Workshop::COURSE_ADMIN, Pd::Workshop::COURSE_COUNSELOR].include? workshop.course
       CDO.code_org_url "/pd-workshop-survey/counselor-admin/#{code}", 'https:'
+    elsif workshop.local_summer?
+      pd_new_workshop_survey_url(code)
+    elsif workshop.teachercon?
+      pd_new_teachercon_survey_url(code)
     else
       CDO.code_org_url "/pd-workshop-survey/#{code}", 'https:'
     end
+  end
 
-    # TODO: elijah: once the route is fully ready, add the following codition above
-    #elsif workshop.local_summer?
-    #  pd_new_workshop_survey_url(code)
+  def should_send_exit_survey?
+    !workshop.fit_weekend?
   end
 
   def send_exit_survey
@@ -180,6 +178,8 @@ class Pd::Enrollment < ActiveRecord::Base
       CDO.log.warn "Skipping attempt to send a duplicate workshop survey email. Enrollment: #{id}"
       return
     end
+
+    return unless should_send_exit_survey?
 
     Pd::WorkshopMailer.exit_survey(self).deliver_now
 
@@ -233,6 +233,32 @@ class Pd::Enrollment < ActiveRecord::Base
 
   def check_school_info(school_info_attr)
     deduplicate_school_info(school_info_attr, self)
+  end
+
+  private_class_method def self.filter_for_regular_survey_completion(enrollments, select_completed)
+    ids_with_processed_surveys, ids_without_processed_surveys =
+      enrollments.partition {|e| e.completed_survey_id.present?}.map {|list| list.map(&:id)}
+
+    ids_with_unprocessed_surveys = PEGASUS_DB[:forms].where(
+      kind: 'PdWorkshopSurvey',
+      source_id: ids_without_processed_surveys
+    ).map do |survey|
+      survey[:source_id].to_i
+    end
+
+    filtered_ids = select_completed ?
+                       ids_with_processed_surveys + ids_with_unprocessed_surveys :
+                       ids_without_processed_surveys - ids_with_unprocessed_surveys
+
+    enrollments.select {|e| filtered_ids.include? e.id}
+  end
+
+  private_class_method def self.filter_for_teachercon_survey_completion(teachercon_enrollments, selected_completed)
+    completed_surveys, uncompleted_surveys = teachercon_enrollments.partition do |enrollment|
+      Pd::TeacherconSurvey.exists?(pd_enrollment_id: enrollment.id)
+    end
+
+    selected_completed ? completed_surveys : uncompleted_surveys
   end
 
   private

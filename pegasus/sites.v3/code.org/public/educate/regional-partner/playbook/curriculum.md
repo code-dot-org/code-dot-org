@@ -22,7 +22,7 @@ Use the links below to find our program curriculum guides.
 
 
 ### CS in Algebra
-[CS in Algebra Course 1 Curriculum (PDF)](https://www.dropbox.com/s/j9pv9k1j9ccqyaj/CSinACourseA.pdf?dl=0)<br/>
+[CS in Algebra Course A Curriculum (PDF)](https://curriculum.code.org/algebra/courseA.pdf)<br/>
 
 ### CS Fundamentals
 [Complete Curriculum Guide: Course 1-4](https://code.org/curriculum/docs/k-5/complete_LessStandards.pdf)<br/>

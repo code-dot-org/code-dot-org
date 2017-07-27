@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-06-14T00:42:27.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Tuesday Pedagogy Reflection Part 1\r\n\r\n## Recruiting and Student Needs\r\n\r\nIn the community session this morning you talked about recruiting students and meeting students needs in the region where you work. (If you were not with your region think about what you experienced in this sessions that might apply to your region.)\r\n\r\n* What were common recruiting pain points teachers in your region shared?\r\n* What were common student support needs teachers in your region shared?\r\n* What things did you see today that you want to check in on throughout the year?\r\n* What recruiting goals do you hope to help accomplish in your region by the end of the year?\r\n",
+    "instructions_important": "false",
+    "display_name": "Pedagogy Reflection",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 00:42:33 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 00:56:11 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

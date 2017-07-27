@@ -41,7 +41,15 @@ Each dollar you give is enough to help one child learn an introductory computer 
 
 Our donors include Microsoft, Facebook, Omidyar Network, the Infosys Foundation, Google, Ballmer Family Giving, and more. [See full list](/about/donors)
 
-Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our team further to better understand our programs and to explore options for investing in our work.
+Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our team further to better understand our programs and to explore options for investing in our work. 
+
+## Are you an Amazon.com customer?
+When you do your shopping at [smile.amazon.com](https://smile.amazon.com/ch/46-0858543), and choose [Code.org](https://smile.amazon.com/ch/46-0858543) as your charity, Amazon will match a percentage of all purchases to Code.org.
+
+## Make a donation today
+
+
+
 
 <hr/>
 <a id="creditcard"></a>
@@ -49,8 +57,6 @@ Please [contact us](/contact) if you, your company, or your foundation is intere
 <script type="text/javascript" src="https://form.jotform.com/jsform/40637061509149"></script>
 
 <hr/>
-**Amazon.com customers:**
-Do your shopping at [smile.amazon.com](https://smile.amazon.com/) to donate a % of all purchases to Code.org
 
 [![image](/images/guidestar.png)](http://www.guidestar.org/organizations/46-0858543/code-org.aspx)
 

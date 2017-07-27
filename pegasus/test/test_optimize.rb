@@ -41,7 +41,7 @@ class OptimizeTest < Minitest::Test
     end
 
     get('/images/logo.png')
-    assert_equal 799, last_response.content_length
+    assert_equal 850, last_response.content_length
     refute_equal 10, Rack::Cache::Response.new(*last_response.to_a).max_age
   end
 

@@ -16,15 +16,12 @@ OAUTH_PROVIDERS = %w(
 ).freeze
 
 slice = 0
-updated_count = 0
 
-User.with_deleted.where(provider: OAUTH_PROVIDERS).each_slice(5000) do |users_slice|
-  puts "PROCESSING: slice: #{slice}, updated_count: #{updated_count}"
+User.with_deleted.where(provider: OAUTH_PROVIDERS).
+  find_in_batches(batch_size: 2_000) do |users_slice|
+  puts "PROCESSING: slice: #{slice}."
   ActiveRecord::Base.transaction do
     users_slice.each do |user|
-      # Keep track of how many users we are actually updating.
-      updated_count += 1
-
       # Though not the cleanest, this logic mirrors the logic in User#from_omniauth.
       user_age = user.age
       user.birthday = nil
@@ -32,6 +29,6 @@ User.with_deleted.where(provider: OAUTH_PROVIDERS).each_slice(5000) do |users_sl
       user.save(validate: false)
     end
   end
+  puts "PROCESSED: slice: #{slice}."
   slice += 1
-  puts "PROCESSED: slice: #{slice}, updated_count: #{updated_count}."
 end

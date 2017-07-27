@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Overview
 
+This lesson introduces ordered and unordered lists and the associated  &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; HTML tags.  The class practices using the tags, then goes back to the personal web page project to add a new HTML page that includes the new tags.
 
-Students are introduced to ordered and unordered lists in HTML and work through a few levels in which they use the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags.  They then go back to their project, where they add a new HTML page.  Inside the new page, they write the HTML to display a recipe, top ten list, or any other content that uses the new tags that they have learned.
+## Introduced Code
 
-## New Tags
 
 *  **[Unordered List](//docs.code.org/weblab/ul/)** - `<ul></ul>`
 *  **[List Item](//docs.code.org/weblab/li/)** - `<li></li>`

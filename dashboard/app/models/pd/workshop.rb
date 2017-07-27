@@ -32,15 +32,15 @@ class Pd::Workshop < ActiveRecord::Base
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
   COURSES = [
-    COURSE_CSF = 'CS Fundamentals',
-    COURSE_CSP = 'CS Principles',
-    COURSE_ECS = 'Exploring Computer Science',
-    COURSE_CS_IN_A = 'CS in Algebra',
-    COURSE_CS_IN_S = 'CS in Science',
-    COURSE_CSD = 'CS Discoveries',
-    COURSE_COUNSELOR = 'Counselor',
-    COURSE_ADMIN = 'Admin'
-  ]
+    COURSE_CSF = 'CS Fundamentals'.freeze,
+    COURSE_CSP = 'CS Principles'.freeze,
+    COURSE_ECS = 'Exploring Computer Science'.freeze,
+    COURSE_CS_IN_A = 'CS in Algebra'.freeze,
+    COURSE_CS_IN_S = 'CS in Science'.freeze,
+    COURSE_CSD = 'CS Discoveries'.freeze,
+    COURSE_COUNSELOR = 'Counselor'.freeze,
+    COURSE_ADMIN = 'Admin'.freeze
+  ].freeze
 
   COURSE_NAMES_MAP = {
     COURSE_CSF => 'CS Fundamentals',
@@ -51,7 +51,7 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CSD => 'CS Discoveries',
     COURSE_COUNSELOR => 'Counselor',
     COURSE_ADMIN => 'Administrator'
-  }
+  }.freeze
 
   COURSE_URLS_MAP = {
     COURSE_CSF => CDO.code_org_url('/educate/curriculum/elementary-school'),
@@ -60,46 +60,50 @@ class Pd::Workshop < ActiveRecord::Base
     COURSE_CS_IN_S => CDO.code_org_url('/curriculum/science'),
     COURSE_CS_IN_A => CDO.code_org_url('/educate/algebra'),
     COURSE_ECS => 'http://www.exploringcs.org/'
-  }
+  }.freeze
 
   STATES = [
-    STATE_NOT_STARTED = 'Not Started',
-    STATE_IN_PROGRESS = 'In Progress',
-    STATE_ENDED = 'Ended'
-  ]
+    STATE_NOT_STARTED = 'Not Started'.freeze,
+    STATE_IN_PROGRESS = 'In Progress'.freeze,
+    STATE_ENDED = 'Ended'.freeze
+  ].freeze
 
   SUBJECTS = {
     COURSE_ECS => [
-      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person',
-      SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML',
-      SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch',
-      SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data',
-      SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics',
-      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'
+      SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
+      SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
+      SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
+      SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
+      SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
+      SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up.freeze'
     ],
     COURSE_CS_IN_A => [
-      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person',
-      SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'
+      SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
+      SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
     ],
     COURSE_CS_IN_S => [
-      SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study',
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1',
-      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'
+      SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
+      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
+      SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
     ],
     COURSE_CSP => [
-      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer',
-      SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information',
-      SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming',
-      SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps',
-      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'
+      SUBJECT_CSP_SUMMER_WORKSHOP = '5-day Summer'.freeze,
+      SUBJECT_CSP_WORKSHOP_1 = 'Units 1 and 2: The Internet and Digital Information'.freeze,
+      SUBJECT_CSP_WORKSHOP_2 = 'Units 2 and 3: Processing data, Algorithms, and Programming'.freeze,
+      SUBJECT_CSP_WORKSHOP_3 = 'Units 4 and 5: Big Data, Privacy, and Building Apps'.freeze,
+      SUBJECT_CSP_WORKSHOP_4 = 'Units 5 and 6: Building Apps and AP Assessment Prep'.freeze,
+      SUBJECT_CSP_TEACHER_CON = 'Code.org TeacherCon'.freeze,
+      SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze
     ],
     COURSE_CSD => [
-      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development',
-      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games',
-      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society',
-      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'
+      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development'.freeze,
+      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games'.freeze,
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society'.freeze,
+      SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
+      SUBJECT_CSD_TEACHER_CON = 'Code.org TeacherCon'.freeze,
+      SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze
     ]
-  }
+  }.freeze
 
   # Section types by course
   SECTION_TYPE_MAP = {
@@ -131,12 +135,14 @@ class Pd::Workshop < ActiveRecord::Base
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 => {min_days: 1, max_days: 1, max_hours: 7},
     SUBJECT_CS_IN_A_PHASE_3 => {min_days: 1, max_days: 1, max_hours: 7},
-    SUBJECT_CSP_SUMMER_WORKSHOP => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_SUMMER_WORKSHOP => {max_hours: 33.5},
     SUBJECT_CSP_WORKSHOP_1 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_2 => {min_days: 1, max_days: 1, max_hours: 6},
     SUBJECT_CSP_WORKSHOP_3 => {min_days: 1, max_days: 1, max_hours: 6},
-    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6}
-  }
+    SUBJECT_CSP_WORKSHOP_4 => {min_days: 1, max_days: 1, max_hours: 6},
+    SUBJECT_CSP_TEACHER_CON => {max_hours: 33.5},
+    SUBJECT_CSD_TEACHER_CON => {max_hours: 33.5}
+  }.freeze
 
   WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING = {
     COURSE_CSP => 'CSP Support',
@@ -162,6 +168,9 @@ class Pd::Workshop < ActiveRecord::Base
   belongs_to :section
 
   belongs_to :regional_partner
+
+  before_save :process_location, if: -> {location_address_changed?}
+  auto_strip_attributes :location_name, :location_address
 
   def sessions_must_start_on_separate_days
     if sessions.all(&:valid?)
@@ -344,6 +353,16 @@ class Pd::Workshop < ActiveRecord::Base
     sessions.order(:start).first.start.strftime('%Y')
   end
 
+  # Suppress 3 and 10-day reminders for certain workshops
+  def suppress_reminders?
+    [
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_TEACHER_CON,
+      SUBJECT_CSD_FIT
+    ].include? subject
+  end
+
   def self.send_reminder_for_upcoming_in_days(days)
     # Collect errors, but do not stop batch. Rethrow all errors below.
     errors = []
@@ -357,6 +376,7 @@ class Pd::Workshop < ActiveRecord::Base
         end
       end
       workshop.facilitators.each do |facilitator|
+        next if facilitator == workshop.organizer
         begin
           Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
         rescue => e
@@ -416,19 +436,43 @@ class Pd::Workshop < ActiveRecord::Base
       if account_required_for_attendance?
         next unless enrollment.user
 
-        # Make sure user joined the section
-        next unless section.students.exists?(enrollment.user.id)
+        next unless attending_teachers.include?(enrollment.user)
       end
 
       enrollment.send_exit_survey
     end
   end
 
-  def self.process_location(address)
-    result = Geocoder.search(address).try(:first)
-    return nil unless result
+  def process_location
+    result = nil
 
-    {
+    unless location_address.blank?
+      begin
+        Geocoder.with_errors do
+          # Geocoder can raise a number of errors including SocketError, with a common base of StandardError
+          # See https://github.com/alexreisner/geocoder#error-handling
+          Retryable.retryable(on: StandardError) do
+            result = Geocoder.search(location_address).try(:first)
+          end
+        end
+      rescue StandardError => e
+        # Log geocoding errors to honeybadger but don't fail
+        Honeybadger.notify(e,
+          error_message: 'Error geocoding workshop location_address',
+          context: {
+            pd_workshop_id: id,
+            location_address: location_address
+          }
+        )
+      end
+    end
+
+    unless result
+      self.processed_location = nil
+      return
+    end
+
+    self.processed_location = {
       latitude: result.latitude,
       longitude: result.longitude,
       formatted_address: result.formatted_address
@@ -438,27 +482,20 @@ class Pd::Workshop < ActiveRecord::Base
   # Min number of days a teacher must attend for it to count.
   # @return [Integer]
   def min_attendance_days
-    constraints = TIME_CONSTRAINTS_BY_SUBJECT[subject]
-    if constraints
-      constraints[:min_days]
-    else
-      1
-    end
+    [1, time_constraint(:min_days)].compact.max
   end
 
   # Apply max # days for payment, if applicable, to the number of scheduled days (sessions).
   # @return [Integer] number of payment days, after applying constraints
   def effective_num_days
-    max_days = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_days]}
-    [sessions.count, max_days].compact.min
+    [sessions.count, time_constraint(:max_days)].compact.min
   end
 
   # Apply max # of hours for payment, if applicable, to the number of scheduled session-hours.
   # @return [Integer] number of payment hours, after applying constraints
   def effective_num_hours
     actual_hours = sessions.map(&:hours).reduce(&:+)
-    max_hours = TIME_CONSTRAINTS_BY_SUBJECT[subject].try {|constraints| constraints[:max_hours]}
-    [actual_hours, max_hours].compact.min
+    [actual_hours, time_constraint(:max_hours)].compact.min
   end
 
   # @return [Boolean] true if a Code Studio account and section membership is required for attendance, otherwise false.
@@ -468,6 +505,18 @@ class Pd::Workshop < ActiveRecord::Base
 
   def workshop_starting_date
     sessions.first.try(:start)
+  end
+
+  def workshop_ending_date
+    sessions.last.try(:start)
+  end
+
+  def workshop_date_range_string
+    if workshop_starting_date == workshop_ending_date
+      workshop_starting_date.strftime('%B %e, %Y')
+    else
+      "#{workshop_starting_date.strftime('%B %e, %Y')} - #{workshop_ending_date.strftime('%B %e, %Y')}"
+    end
   end
 
   # @return [String] url for this workshop in the workshop dashboard
@@ -489,6 +538,20 @@ class Pd::Workshop < ActiveRecord::Base
     course == COURSE_CSP && subject == SUBJECT_CSP_SUMMER_WORKSHOP
   end
 
+  def teachercon?
+    [
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSD_TEACHER_CON,
+    ].include?(subject)
+  end
+
+  def fit_weekend?
+    [
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSD_FIT
+    ].include?(subject)
+  end
+
   # Get all enrollments for this workshop with no associated attendances
   def unattended_enrollments
     enrollments.left_outer_joins(:attendances).where(pd_attendances: {id: nil})
@@ -496,5 +559,23 @@ class Pd::Workshop < ActiveRecord::Base
 
   def organizer_or_facilitator?(user)
     organizer == user || facilitators.include?(user)
+  end
+
+  # TODO: Extend this for non teachercon surveys when we get to it
+  def survey_responses
+    if teachercon?
+      Pd::TeacherconSurvey.where(pd_enrollment: enrollments)
+    elsif local_summer?
+      Pd::LocalSummerWorkshopSurvey.where(pd_enrollment: enrollments)
+    else
+      raise 'Not supported for this workshop type'
+    end
+  end
+
+  # Lookup a time constraint by type
+  # @param constraint_type [Symbol] e.g. :min_days, :max_days, or :max_hours
+  # @returns [Number, nil] constraint for the specified subject and type, or nil if none exists
+  def time_constraint(constraint_type)
+    TIME_CONSTRAINTS_BY_SUBJECT[subject].try(:[], constraint_type)
   end
 end

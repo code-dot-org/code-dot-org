@@ -59,7 +59,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "true",
     "encrypted_examples": "ICti52Whgu7iBiq1e2qaZvYu39KWQitYAlXVG5lHuBMEFBNGgrYee3pg6AgN\ntcyY\n",
-    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  We've started you out with a stub that **defines** a function called `right()`.  Start by adding code inside the function definition that will turn the turtle to the right (by turning left three times) when called. \r\n\r\nThen **use** this function in some code to draw a rectangle, as shown below.  Make sure the turtle ends facing the same direction and in the same location it started. *Note that the rectangle below is 2 moveForwards tall and 1 moveForward wide*\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)\r\n\r\n",
+    "markdown_instructions": "# Draw a rectangle with right\r\n\r\nAs you know, in order to turn right we have to call `turnLeft()` three times.  We've started you out with a stub that **defines** a function called `right()`.  Start by adding code inside the function definition that will turn the turtle to the right (by turning left three times) when called. \r\n\r\nThen **use** this function in some code to draw a rectangle, as shown below.  Make sure the turtle ends facing the same direction and in the same location it started. *Note that the rectangle below is 2 moveForwards tall and 1 moveForward wide*\r\n\r\n![](https://images.code.org/fd6e8b4d2218a242bae19ac9c78b5d5f-image-1447799438050.gif)\r\n\r\n**Note**: Your program will still do the same thing. We are just changing the way it is written to demonstrate that you can use functions you've already written as building blocks in new functions.",
     "start_blocks": "function right(){\r\n  \r\n}",
     "never_autoplay_video": "false",
     "examples_required": "false",
@@ -136,10 +136,15 @@
     "fail_on_lint_errors": "false",
     "instructions_important": "false",
     "makerlab_enabled": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 19:25:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"markdown_instructions\",\"log_conditions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

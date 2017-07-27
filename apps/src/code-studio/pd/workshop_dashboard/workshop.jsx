@@ -104,6 +104,13 @@ const Workshop = React.createClass({
           'account_required_for_attendance?'
         ])
       });
+    }).fail(data => {
+      if (data.statusText !== "abort") {
+        this.setState({
+          loadingWorkshop: false,
+          workshop: null
+        });
+      }
     });
   },
 
@@ -397,8 +404,8 @@ const Workshop = React.createClass({
             </p>
             <p>
               Teachers will receive an email with survey link from{' '}
-              <a href="mailto:hadi_partovi@code.org">
-                hadi_partovi@code.org
+              <a href="mailto:survey@code.org">
+                survey@code.org
               </a>.{' '}
               If they do not receive the link ask them to check their spam.
               Many school districts block outside emails.
@@ -450,7 +457,7 @@ const Workshop = React.createClass({
       <div>
         <p>
           Every day of the workshop, your participants must visit the attendance URL to receive
-          professional development credit.
+          professional development credit. The attendance URL will not show up until the day of the session.
         </p>
         <Row>
           <Col md={2}>
@@ -663,7 +670,10 @@ const Workshop = React.createClass({
   render() {
     if (this.state.loadingWorkshop) {
       return <Spinner/>;
+    } else if (!this.state.workshop) {
+      return <p>No workshop found</p>;
     }
+
     return (
       <Grid>
         {this.renderSignupPanel()}

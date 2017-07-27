@@ -208,7 +208,7 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "start_in_animation_tab": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "encrypted_examples": "4pusEBGYlXPTlpSz8y4Fy5Tpvh7WMRzGg6niijHHjRtCuBkXNQlsus9m1ZkI\npFLs\n",
     "contained_level_names": null

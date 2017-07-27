@@ -28,6 +28,9 @@ class SafeNamesTest < Minitest::Test
 
     # Preserves duplicate names
     verify(['John Smith', 'John Smith'], ['John', 'John'])
+
+    # Sorted by name
+    verify(['Beth A', 'Alex Able', 'Cathy', 'Alex Aaron'], ['Alex Aa', 'Alex Ab', 'Beth', 'Cathy'])
   end
 
   private

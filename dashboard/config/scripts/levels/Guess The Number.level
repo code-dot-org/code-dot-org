@@ -49,7 +49,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-10 20:54:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-10 20:57:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-10 20:59:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-10 20:59:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-22 22:59:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-24 22:09:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:09:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:10:53 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:11:14 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:42:21 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:43:07 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:44:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:46:31 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:47:37 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:48:18 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:48:36 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:49:29 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:50:01 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:52:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:53:14 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:48:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:49:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:51:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:53:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:53:36 +0000\",\"changed\":[\"toolbox_blocks\",\"success_condition\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-10 20:54:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-10 20:57:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-10 20:59:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-10 20:59:44 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-22 22:59:39 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-05-24 22:09:06 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:09:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:10:53 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:11:14 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:42:21 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:43:07 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:44:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:46:31 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"disable_if_else_editing\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:47:37 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:48:18 +0000\",\"changed\":[\"initialization_blocks\",\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:48:36 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:49:29 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:50:01 +0000\",\"changed\":[\"toolbox_blocks\",\"start_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:52:11 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 22:53:14 +0000\",\"changed\":[\"toolbox_blocks\",\"use_modal_function_editor\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:48:04 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:49:10 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:51:09 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:53:02 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-05-24 23:53:36 +0000\",\"changed\":[\"toolbox_blocks\",\"success_condition\",\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-13 22:09:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -528,9 +528,6 @@
     <toolbox_blocks>
       <xml>
         <category name="Actions">
-          <block type="studio_setBackground">
-            <title name="VALUE">"cave"</title>
-          </block>
           <block type="studio_setSpriteParams" inline="true">
             <title name="VALUE">"witch"</title>
             <value name="SPRITE">
@@ -538,6 +535,9 @@
                 <title name="NUM">1</title>
               </block>
             </value>
+          </block>
+          <block type="studio_setBackground">
+            <title name="VALUE">"cave"</title>
           </block>
           <block type="studio_moveDistanceParamsSprite" inline="true">
             <title name="DIR">1</title>
@@ -578,9 +578,17 @@
               </block>
             </value>
           </block>
-          <block type="studio_setSpriteSize">
-            <title name="SPRITE">0</title>
-            <title name="VALUE">Studio.SpriteSize.NORMAL</title>
+          <block type="studio_setSpriteSizeParams" inline="true">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="VALUE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
           </block>
           <block type="studio_playSound">
             <title name="SOUND">hit</title>
@@ -632,9 +640,13 @@
             <title name="TEXT">type text here</title>
           </block>
           <block type="text_join_simple" inline="false" inputcount="2"/>
-          <block type="studio_setSpriteEmotion">
-            <title name="SPRITE">0</title>
+          <block type="studio_setSpriteEmotionParams" inline="true">
             <title name="VALUE">0</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
           </block>
           <block type="studio_vanishSprite" inline="true">
             <value name="SPRITE">
@@ -670,6 +682,47 @@
             <value name="SPEED">
               <block type="math_number">
                 <title name="NUM">5</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setSpriteBehavior" inline="true">
+            <title name="VALUE">"chase"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="TARGETSPRITE">
+              <block type="math_number">
+                <title name="NUM">2</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setSpriteXY" inline="true">
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+            <value name="XPOS">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+            <value name="YPOS">
+              <block type="math_number">
+                <title name="NUM">200</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_setMap">
+            <title name="VALUE">random</title>
+          </block>
+          <block type="studio_setMapAndColor" inline="true">
+            <title name="VALUE">random</title>
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#ff0000</title>
               </block>
             </value>
           </block>
@@ -758,12 +811,6 @@
         </category>
         <category name="Logic">
           <block type="controls_if" inline="false"/>
-          <block type="controls_if" inline="false">
-            <mutation else="1"/>
-          </block>
-          <block type="controls_if" inline="false">
-            <mutation elseif="1" else="1"/>
-          </block>
           <block type="logic_compare" inline="true">
             <title name="OP">EQ</title>
           </block>
@@ -773,6 +820,72 @@
           <block type="logic_negate" inline="false"/>
           <block type="logic_boolean">
             <title name="BOOL">TRUE</title>
+          </block>
+          <block type="studio_ifActorHasEmotionParams" inline="true">
+            <title name="EMOTION">1</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorPositionParams" inline="true">
+            <title name="POSITION">x</title>
+            <title name="OPERATOR">EQ</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsVisibleParams" inline="true">
+            <title name="VISIBILITY">false</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsSpriteParams" inline="true">
+            <title name="VALUE">"witch"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorHasEmotionElseParams" inline="true">
+            <title name="EMOTION">1</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorPositionElseParams" inline="true">
+            <title name="POSITION">x</title>
+            <title name="OPERATOR">EQ</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsVisibleElseParams" inline="true">
+            <title name="VISIBILITY">false</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
+          </block>
+          <block type="studio_ifActorIsSpriteElseParams" inline="true">
+            <title name="VALUE">"witch"</title>
+            <value name="SPRITE">
+              <block type="math_number">
+                <title name="NUM">1</title>
+              </block>
+            </value>
           </block>
         </category>
         <category name="Functions" custom="PROCEDURE">
@@ -836,6 +949,22 @@
           </block>
           <block type="studio_endGame">
             <title name="VALUE">win</title>
+          </block>
+          <block type="studio_getScore"/>
+          <block type="controls_if" inline="false">
+            <value name="IF0">
+              <block type="logic_compare" inline="true" movable="false">
+                <title name="OP">EQ</title>
+                <value name="A">
+                  <block type="studio_getScore" movable="false"/>
+                </value>
+                <value name="B">
+                  <block type="math_number" movable="false">
+                    <title name="NUM">5</title>
+                  </block>
+                </value>
+              </block>
+            </value>
           </block>
         </category>
       </xml>

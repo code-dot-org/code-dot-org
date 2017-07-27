@@ -16,7 +16,7 @@ function dmapiValidateType(funcName, varName, varValue, expectedType, opt) {
       properType = (typeof varValue.data === 'number' ||
                     (typeof varValue.data === 'string' && !isNaN(varValue.data)));
     } else if (expectedType === 'array') {
-      properType = varValue.parent === window.Applab.JSInterpreter.interpreter.ARRAY;
+      properType = window.Applab.JSInterpreter.interpreter.isa(varValue.proto, window.Applab.JSInterpreter.interpreter.ARRAY);
     } else {
       properType = (typeof varValue.data === expectedType);
     }

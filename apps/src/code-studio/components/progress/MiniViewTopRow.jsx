@@ -2,9 +2,7 @@ import React, { PropTypes } from 'react';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
 import ProgressDetailToggle from "@cdo/apps/templates/progress/ProgressDetailToggle";
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-
-const progressRedesignEnabled = true;
+import Button from '@cdo/apps/templates/Button';
 
 const styles = {
   main: {
@@ -13,7 +11,7 @@ const styles = {
     color: color.white,
     padding: 15,
     marginBottom: 0,
-    // matches the lineHeight of ProgressButton,
+    // matches the lineHeight of Button,
     height: 34,
     lineHeight: '34px'
   },
@@ -27,7 +25,7 @@ const styles = {
   },
   linesOfCodeText: {
     position: 'absolute',
-    right: progressRedesignEnabled ? 105 : 15
+    right: 105
   },
   toggle: {
     position: 'absolute',
@@ -47,22 +45,20 @@ const MiniViewTopRow = React.createClass({
     const { scriptName, linesOfCodeText } = this.props;
     return (
       <div style={styles.main}>
-        <ProgressButton
+        <Button
           text={i18n.viewUnitOverview()}
           href={`/s/${scriptName}`}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
         />
         <span style={styles.linesOfCodeText}>
           {linesOfCodeText}
         </span>
-        {progressRedesignEnabled &&
-          <div style={styles.toggle}>
-            <ProgressDetailToggle
-              activeColor={color.teal}
-              whiteBorder={true}
-            />
-          </div>
-        }
+        <div style={styles.toggle}>
+          <ProgressDetailToggle
+            activeColor={color.teal}
+            whiteBorder={true}
+          />
+        </div>
       </div>
     );
   }

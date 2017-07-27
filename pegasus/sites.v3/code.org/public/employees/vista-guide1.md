@@ -14,14 +14,14 @@ Help bring these life changing skills to your children and local students!
 
 Learn more about the Hour of Code [here](https://www.hourofcode.com).
 
-[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](https://form.jotform.com/71494745584166)
+[<button>&nbsp;&nbsp;&nbsp;&nbsp;Organizer sign up&nbsp;&nbsp;&nbsp;&nbsp;</button>](https://form.jotform.us/71636083087157)
 
 ## Steps:
 
 As an event organizer, you will project manage the event by owning communications, planning, and coordinating an Hour of Code event for your fellow colleagues. 
 
 1. **[Reach out](#school) to a local youth organization or school.** You should do this 3-4 months prior to the event.
-2. **[Plan](#agenda)** and **[register](https://hourofcode.com)** your event. Discuss with the youth organization or school travel, agenda, and other logistics.
+2. **[Plan](#agenda)** and **[register](https://form.jotform.us/71636437787167)** your event. Discuss with the youth organization or school travel, agenda, and other logistics.
 3. **[Message](#1communication) out to your employees to volunteer.** Let them know about the event and encourage employees to sign up to volunteer. Once you receive employee signups, let them know they have been selected and share important event details and resources.
 5. **Host the event!**
 6. **[Celebrate!](#celebrate)** Share on social media and other marketing channels about the success of your event.
@@ -87,7 +87,7 @@ I am excited to announce that [COMPANY] will be joining Code.org this year to he
 
 
 How you can get involved:
-Join us as [COMPANY]'s Hour of Code event! Sign up to be a volunteer [here](https://form.jotform.com/71494745584166).</br>
+Join us as [COMPANY]'s Hour of Code event! Sign up to be a volunteer [here](https://form.jotform.us/71636083087157).</br>
 We also strongly suggest to **bring your kids**!
 
 Event details: [INSERT]

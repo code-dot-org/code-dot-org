@@ -5,7 +5,7 @@
 #  id               :integer          not null, primary key
 #  plc_course_id    :integer
 #  unit_name        :string(255)
-#  unit_description :string(255)
+#  unit_description :text(65535)
 #  unit_order       :integer
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null

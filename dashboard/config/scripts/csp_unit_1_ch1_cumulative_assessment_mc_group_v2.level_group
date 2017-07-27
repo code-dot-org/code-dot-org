@@ -1,5 +1,5 @@
 name 'CSP Unit 1 Ch1 Cumulative Assessment MC Group v2'
-title 'CS Principles Unit 1 Ch 1 Assessment v2'
+title 'CS Principles Unit 1 Ch 1 Assessment'
 submittable 'true'
 anonymous 'false'
 
@@ -17,6 +17,5 @@ page
 level 'CSPFinal_Question_1'
 level 'CSPFinal_Question_2'
 level 'CSP Unit 1 Ch 1 MC bits to make 512'
-#level 'CB_Question_3'
 level 'CB_Question_3update'
-level 'CB_Question_1'
+level 'U1 Ch1 Assessment question 4 to 8 bit'

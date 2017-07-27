@@ -9,6 +9,7 @@ require 'cdo/only_one'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'robo-DTT failed'.freeze
+ALWAYS_DTT = ARGV[0] && ARGV[0] == 'always_dtt'
 
 def slack_permission?
   no_branches = {DTP: DevelopersTopic.dtp?, DTT: DevelopersTopic.dtt?, DTS: DevelopersTopic.dts?}.
@@ -44,9 +45,11 @@ def new_commits?
 end
 
 def main
-  exit unless slack_permission?
-  exit unless last_dtt_green?
-  exit unless new_commits?
+  unless ALWAYS_DTT
+    return unless slack_permission?
+    return unless last_dtt_green?
+  end
+  return unless new_commits?
 
   DevelopersTopic.set_dtt TOPIC_DTT_IN_PROGRESS
 

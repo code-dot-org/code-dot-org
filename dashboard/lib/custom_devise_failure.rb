@@ -4,15 +4,16 @@ class CustomDeviseFailure < Devise::FailureApp
   include ActionController::Cookies
   include LocaleHelper
 
-  def hashed_email_in_hoc_2016_signups?(hashed_email)
-    PEGASUS_DB[:forms].where(hashed_email: hashed_email, kind: 'HocSignup2016').any?
+  def hashed_email_in_hoc_signups?(hashed_email)
+    hoc_year = DCDO.get("hoc_year", 2017)
+    PEGASUS_DB[:forms].where(hashed_email: hashed_email, kind: "HocSignup#{hoc_year}").any?
   end
 
   def respond
     user_param = request.parameters['user']
     if user_param && user_param['hashed_email']
       hashed_email = user_param['hashed_email']
-      if failed_login? && hashed_email_in_hoc_2016_signups?(hashed_email)
+      if failed_login? && hashed_email_in_hoc_signups?(hashed_email)
         # If the user has a full account as well, don't use the HOC flow
         user = User.find_by(hashed_email: hashed_email)
         unless user

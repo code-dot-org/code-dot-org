@@ -74,7 +74,7 @@ class LevelSourcesController < ApplicationController
   protected
 
   def set_level_source
-    if current_user && current_user.admin?
+    if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
       @level_source = LevelSource.find(params[:id])
     else
       @level_source = LevelSource.where(hidden: false).find(params[:id])

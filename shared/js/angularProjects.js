@@ -80,7 +80,6 @@ var controllers = angular.module('projectsApp.controllers', [])
 
 controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$routeParams', '$location', '$window', 'projectsService',
     function ($scope, $http, $route, $routeParams, $location, $window, projectsService) {
-  $scope.isPublicGalleryEnabled = $('#angular-my-projects-wrapper').attr('data-isPublicGalleryEnabled');
   $scope.projectsLoaded = false;
 
   $scope.projects = projectsService.query();
@@ -124,6 +123,7 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
     }).then(function (response) {
       if (response.data && response.data.publishedAt) {
         project.publishedAt = response.data.publishedAt;
+        window.showNewPublishedProject(response.data, type);
       }
     });
   }

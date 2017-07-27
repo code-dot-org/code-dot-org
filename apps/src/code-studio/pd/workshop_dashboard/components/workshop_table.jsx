@@ -9,6 +9,7 @@ import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
 import FacilitatorsList from './facilitators_list';
 import WorkshopManagement from './workshop_management';
+import Permission from '../../permission';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 import {workshopShape} from '../types.js';
 import {Button} from 'react-bootstrap';
@@ -56,6 +57,8 @@ const WorkshopTable = React.createClass({
     if (this.props.onWorkshopsReceived) {
       this.props.onWorkshopsReceived(this.props.workshops);
     }
+
+    this.permission = new Permission();
   },
 
   componentWillReceiveProps(nextProps) {
@@ -265,17 +268,16 @@ const WorkshopTable = React.createClass({
   },
 
   formatManagement(manageData) {
-    const {id, state} = manageData;
-    const isPlp = window.dashboard.workshop.permission.indexOf('plp') >= 0;
-    const surveyBaseUrl = isPlp ? "/organizer_survey_results" : "/survey_results";
+    const {id, subject, state} = manageData;
 
     return (
       <WorkshopManagement
         workshopId={id}
+        subject={subject}
         viewUrl={`/workshops/${id}`}
         editUrl={state === 'Not Started' ? `/workshops/${id}/edit` : null}
         onDelete={state !== 'Ended' ? this.props.onDelete : null}
-        surveyUrl={state === 'Ended' && surveyBaseUrl ? `${surveyBaseUrl}/${id}` : null}
+        showSurveyUrl={state === 'Ended'}
       />
     );
   },
@@ -290,7 +292,7 @@ const WorkshopTable = React.createClass({
       row => _.merge(row, {
         enrollments: `${row.enrolled_teacher_count} / ${row.capacity}`,
         date: row.sessions[0].start,
-        manage: {id: row.id, state: row.state}
+        manage: {id: row.id, subject: row.subject, state: row.state}
       })
     );
 

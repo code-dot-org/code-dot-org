@@ -7,6 +7,8 @@ require_relative '../../deployment'
 # the GitHub API.
 module GitHub
   REPO = "code-dot-org/code-dot-org".freeze
+  DASHBOARD_DB_DIR = 'dashboard/db/'.freeze
+  PEGASUS_DB_DIR = 'pegasus/migrations/'.freeze
 
   # Configures Octokit with our GitHub access token.
   # @raise [RuntimeError] If CDO.github_access_token is not defined.
@@ -16,6 +18,22 @@ module GitHub
     end
     Octokit.configure do |client|
       client.access_token = CDO.github_access_token
+    end
+  end
+
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_request_files-instance_method
+  # @param pr_number [Integer] The PR number to query.
+  # @return [Array[String]] The filenames part of the pull request living in the dashboard or
+  #   pegasus migrations subdirectory.
+  def self.database_changes(pr_number)
+    # For pagination documentation, see https://github.com/octokit/octokit.rb#pagination.
+    Octokit.auto_paginate = true
+
+    response = Octokit.pull_request_files(REPO, pr_number)
+
+    filenames = response.map {|resource| resource[:filename]}
+    filenames.select do |filename|
+      (filename.start_with? DASHBOARD_DB_DIR) || (filename.start_with? PEGASUS_DB_DIR)
     end
   end
 
@@ -123,14 +141,12 @@ module GitHub
   # @param title [String] The title of the candidate pull request.
   # @raise [RuntimeError] If the environment is not development.
   def self.open_pull_request_in_browser(base:, head:, title:)
-    unless rack_env?(:development)
-      raise "GitHub.open_pull_request_in_browser called on non-dev environment"
-    end
     open_url "https://github.com/#{REPO}/compare/#{base}...#{head}"\
       "?expand=1&title=#{CGI.escape title}"
   end
 
   def self.open_url(url)
+    raise "GitHub.open_url called on non-dev environment" unless rack_env?(:development)
     # Based on http://stackoverflow.com/a/14053693/5000129
     if RbConfig::CONFIG['host_os'] =~ /linux|bsd/
       system "sensible-browser \"#{url}\""

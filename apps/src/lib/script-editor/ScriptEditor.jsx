@@ -1,6 +1,8 @@
 import React from 'react';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
+import LegendSelector from './LegendSelector';
+import $ from 'jquery';
 
 const styles = {
   input: {
@@ -30,7 +32,14 @@ const ScriptEditor = React.createClass({
     studentDetailProgressView: React.PropTypes.bool,
     professionalLearningCourse: React.PropTypes.bool,
     peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string
+    wrapupVideo: React.PropTypes.string,
+    excludeCsfColumnInLegend: React.PropTypes.bool,
+    projectWidgetVisible: React.PropTypes.bool,
+    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
+  },
+
+  handleClearProjectWidgetSelectClick() {
+    $(this.projectWidgetSelect).children('option')['removeAttr']('selected', true);
   },
 
   render() {
@@ -129,7 +138,9 @@ const ScriptEditor = React.createClass({
           </p>
         </label>
         <label>
-          Professional Learning Course
+          Professional Learning Course. When filled out, the course unit associated with
+          this script will be associated with the course named in this box. If the course
+          unit does not exist, and if the course does not exist it will be created.
           <input
             name="professional_learning_course"
             defaultValue={this.props.professionalLearningCourse}
@@ -137,7 +148,8 @@ const ScriptEditor = React.createClass({
           />
         </label>
         <label>
-          Peer Reviews to Complete
+          Peer Reviews to Complete. Currently only supported for professional learning
+          courses
           <input
             name="peer_reviews_to_complete"
             defaultValue={this.props.peerReviewsRequired}
@@ -151,6 +163,50 @@ const ScriptEditor = React.createClass({
             defaultValue={this.props.wrapupVideo}
             style={styles.input}
           />
+        </label>
+        <LegendSelector
+          excludeCsf={this.props.excludeCsfColumnInLegend}
+          inputStyle={styles.checkbox}
+        />
+        <h3>Project widget options</h3>
+        <label>
+          Project widget visible
+          <input
+            name="project_widget_visible"
+            type="checkbox"
+            defaultChecked={this.props.projectWidgetVisible}
+            style={styles.checkbox}
+          />
+          <p>
+            If checked this script will have the projects widget (recent projects and new
+            project buttons) visible in stage extras.
+          </p>
+        </label>
+        <label>
+          Project widget new project types
+          <p>
+            Select up to 4 project type options to appear in the 'Start a new project' section. Select
+            <a onClick={this.handleClearProjectWidgetSelectClick}> none </a>
+            or shift-click or cmd-click to select multiple.
+          </p>
+          <select
+            name="project_widget_types[]"
+            multiple
+            defaultValue={this.props.projectWidgetTypes}
+            ref={select => this.projectWidgetSelect = select}
+          >
+            <option value="playlab">Play Lab</option>
+            <option value="artist">Artist</option>
+            <option value="applab">App Lab</option>
+            <option value="gamelab">Game Lab</option>
+            <option value="weblab">Web Lab</option>
+            <option value="calc">Calc</option>
+            <option value="eval">Eval</option>
+            <option value="frozen">Frozen</option>
+            <option value="mc">Minecraft Adventurer</option>
+            <option value="minecraft">Minecraft Designer</option>
+            <option value="starwars">Star Wars</option>
+          </select>
         </label>
         <h2>Stages and Levels</h2>
         {this.props.beta && <FlexGroup />}

@@ -3,6 +3,7 @@
  */
 import React from "react";
 import ReportTable from "./report_table";
+import Permission from '../../permission';
 import {
   Checkbox,
   Button
@@ -36,6 +37,10 @@ const WorkshopSummaryReport = React.createClass({
       rows: null,
       showFacilitatorDetails: false
     };
+  },
+
+  componentWillMount() {
+    this.permission = new Permission();
   },
 
   componentDidMount() {
@@ -103,10 +108,6 @@ const WorkshopSummaryReport = React.createClass({
     return amount ? `$${Number(amount).toFixed(2)}` : null;
   },
 
-  isWorkshopAdmin() {
-    return window.dashboard.workshop.permission === 'workshop_admin';
-  },
-
   getColumns() {
     let columns = [{
       property: 'organizer_name',
@@ -134,8 +135,8 @@ const WorkshopSummaryReport = React.createClass({
       property: 'subject',
       header: {label: 'Subject'}
     }, {
-      property: 'section_url',
-      header: {label: 'Section URL'},
+      property: 'attendance_url',
+      header: {label: 'Attendance URL'},
       cell: {format: this.formatUrl}
     }, {
       property: 'facilitators',
@@ -175,7 +176,7 @@ const WorkshopSummaryReport = React.createClass({
       });
     }
 
-    if (this.isWorkshopAdmin()) {
+    if (this.permission.isWorkshopAdmin) {
       columns.push({
         property: `pay_period`,
         header: {label: `Pay Period`}

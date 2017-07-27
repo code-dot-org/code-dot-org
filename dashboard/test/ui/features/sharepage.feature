@@ -10,6 +10,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
   Then I press "runButton"
   Then I press "rightButton"
   And I wait to see "#x-close"
+  And I reopen the congrats dialog unless I see the sharing input
   Then I navigate to the share URL
 
   Then ensure Flappy gameState is WAITING
@@ -43,6 +44,7 @@ Scenario: Share and save an artist level to the project gallery
 
   When I press "runButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
+  And I reopen the congrats dialog unless I see the sharing input
   And I press "save-to-gallery-button"
   And I wait until element "#save-to-gallery-button" contains text "Saved"
 
@@ -50,6 +52,16 @@ Scenario: Share and save an artist level to the project gallery
   And I wait until element "table.projects" is visible
   And the project list contains 1 entry
   And the project at index 0 is named "Artist Project"
+
+  # Make sure the published project shows up in the public gallery
+
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  And I wait until element "#public-gallery" is visible
+  And I wait until element ".project_card:contains(Artist Project)" is visible
+  And I sign out
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Artist Project)" is visible
 
 @as_student
 Scenario: Share and save a playlab level to the project gallery
@@ -60,6 +72,7 @@ Scenario: Share and save a playlab level to the project gallery
   When I press "runButton"
   And I press "finishButton"
   And I wait to see a congrats dialog with title containing "Congratulations"
+  And I reopen the congrats dialog unless I see the sharing input
   And I press "save-to-gallery-button"
   And I wait until element "#save-to-gallery-button" contains text "Saved"
 
@@ -67,3 +80,13 @@ Scenario: Share and save a playlab level to the project gallery
   And I wait until element "table.projects" is visible
   And the project list contains 1 entry
   And the project at index 0 is named "Play Lab Project"
+
+  # Make sure the published project shows up in the public gallery
+
+  Then I click selector "#uitest-gallery-switcher div:contains(Public Gallery)"
+  And I wait until element "#public-gallery" is visible
+  And I wait until element ".project_card:contains(Play Lab Project)" is visible
+  And I sign out
+
+  Then I am on "http://studio.code.org/projects/public"
+  And I wait until element ".project_card:contains(Play Lab Project)" is visible

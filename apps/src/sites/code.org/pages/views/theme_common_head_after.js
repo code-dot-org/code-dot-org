@@ -1,3 +1,4 @@
+import 'details-element-polyfill';
 import 'lazysizes';
 import 'lazysizes/plugins/unveilhooks/ls.unveilhooks';
 import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
@@ -19,4 +20,9 @@ $(document).ready(function () {
 });
 
 initHamburger();
-window.loadVideos = loadVideos;
+
+$(window).load(function () {
+  if (document.getElementsByClassName('insert_video_player').length > 0) {
+    loadVideos(window.location.search.indexOf("force_youtube_fallback") !== -1);
+  }
+});

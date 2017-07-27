@@ -3,6 +3,7 @@ display_name 'Lesson Overview'
 markdown <<MARKDOWN
 # Overview
 
+Using the feedback from the last round of testing, teams implement changes that address the needs of their users. Each team tracks and prioritizes the features they want to add and the bugs they need to fix.
 ## Vocabulary
 
 * **Bug** - Part of a program that does not work correctly.

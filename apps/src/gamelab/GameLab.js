@@ -11,13 +11,13 @@ import {
 } from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 var msg = require('@cdo/gamelab/locale');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var apiJavascript = require('./apiJavascript');
 var consoleApi = require('../consoleApi');
 var utils = require('../utils');
 var _ = require('lodash');
 var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../JSInterpreter');
+var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
 var GameLabP5 = require('./GameLabP5');
 var gameLabSprite = require('./GameLabSprite');
@@ -310,8 +310,10 @@ GameLab.prototype.init = function (config) {
     getStore().dispatch(changeInterfaceMode(GameLabInterfaceMode.ANIMATION));
   }
 
-  // Push project-sourced animation metadata into store
-  const initialAnimationList = config.initialAnimationList || this.startAnimations;
+  // Push project-sourced animation metadata into store. Always use the
+  // animations specified by the level definition for embed levels.
+  const initialAnimationList = (config.initialAnimationList && !config.embed) ?
+      config.initialAnimationList : this.startAnimations;
   getStore().dispatch(setInitialAnimationList(initialAnimationList));
 
   ReactDOM.render((
@@ -825,7 +827,7 @@ GameLab.prototype.initInterpreter = function () {
     var func = this.JSInterpreter.findGlobalFunction(eventName);
     if (func) {
       this.eventHandlers[eventName] =
-          codegen.createNativeFunctionFromInterpreterFunction(func);
+          CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(func);
     }
   }, this);
 

@@ -7,19 +7,31 @@ class ScriptTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    Rails.application.config.stubs(:levelbuilder_mode).returns false
     @game = create(:game)
     @script_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
     @levels = (1..5).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
-    Rails.application.config.stubs(:levelbuilder_mode).returns false
+    @course = create(:course)
+    @script_in_course = create(:script, hidden: true)
+    create(:course_script, position: 1, course: @course, script: @script_in_course)
+
+    # ensure that we have freshly generated caches with this course/script
+    Course.clear_cache
+    Script.clear_cache
   end
 
   def populate_cache_and_disconnect_db
     Script.stubs(:should_cache?).returns true
     # Only need to populate cache once per test-suite run
     @@script_cached ||= Script.script_cache_to_cache
-    Script.script_cache_from_cache
+    Script.script_cache
+
+    # Also populate course_cache, as it's used by course_link
+    Course.stubs(:should_cache?).returns true
+    @@course_cached ||= Course.course_cache_to_cache
+    Course.course_cache
 
     # NOTE: ActiveRecord collection association still references an active DB connection,
     # even when the data is already eager loaded.
@@ -462,7 +474,7 @@ class ScriptTest < ActiveSupport::TestCase
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
-    assert_equal nil, script.summarize(false)[:stages]
+    assert_nil script.summarize(false)[:stages]
   end
 
   test 'should generate PLC objects' do
@@ -684,5 +696,76 @@ class ScriptTest < ActiveSupport::TestCase
 
   test '!text_to_speech_enabled? by default' do
     refute create(:script).text_to_speech_enabled?
+  end
+
+  test 'FreeResponse level is listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :free_response
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_equal level, script.text_response_levels.first[:levels].first
+  end
+
+  test 'Multi level is not listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    level = create :multi
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_empty script.text_response_levels
+  end
+
+  test 'contained FreeResponse level is listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    contained_level = create :free_response, name: 'Contained Free Response'
+    level = create :maze, properties: {contained_level_names: [contained_level.name]}
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_equal contained_level, script.text_response_levels.first[:levels].first
+  end
+
+  test 'contained Multi level is not listed in text_response_levels' do
+    script = create :script
+    stage = create :stage, script: script
+    contained_level = create :multi, name: 'Contained Multi'
+    level = create :maze, properties: {contained_level_names: [contained_level.name]}
+    create :script_level, script: script, stage: stage, levels: [level]
+
+    assert_empty script.text_response_levels
+  end
+
+  test "course_link retuns nil if script is in no courses" do
+    script = create :script
+    create :course, name: 'csp'
+
+    assert_nil script.course_link
+  end
+
+  test "course_link returns nil if script is in two courses" do
+    script = create :script
+    course = create :course, name: 'csp'
+    other_course = create :course, name: 'othercsp'
+    create :course_script, position: 1, course: course, script: script
+    create :course_script, position: 1, course: other_course, script: script
+
+    assert_nil script.course_link
+  end
+
+  test "course_link returns course_path if script is in one course" do
+    script = create :script
+    course = create :course, name: 'csp'
+    create :course_script, position: 1, course: course, script: script
+
+    assert_equal '/courses/csp', script.course_link
+  end
+
+  test 'course_link uses cache' do
+    populate_cache_and_disconnect_db
+    Script.stubs(:should_cache?).returns true
+    Course.stubs(:should_cache?).returns true
+    script = Script.get_from_cache(@script_in_course.name)
+    assert_equal "/courses/#{@course.name}", script.course_link
   end
 end

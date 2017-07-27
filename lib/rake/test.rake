@@ -36,7 +36,7 @@ namespace :test do
   task :eyes_ui do
     Dir.chdir(dashboard_dir('test/ui')) do
       ChatClient.log 'Running <b>dashboard</b> UI visual tests...'
-      eyes_features = `grep -lr '@eyes' features`.split("\n")
+      eyes_features = `find features/ -name "*.feature" | xargs grep -lr '@eyes'`.split("\n")
       failed_browser_count = RakeUtils.system_with_chat_logging 'bundle', 'exec', './runner.rb', '-c', 'ChromeLatestWin7,iPhone', '-d', 'test-studio.code.org', '--eyes', '--with-status-page', '-f', eyes_features.join(","), '--parallel', (eyes_features.count * 2).to_s
       if failed_browser_count == 0
         message = '⊙‿⊙ Eyes tests for <b>dashboard</b> succeeded, no changes detected.'
@@ -194,7 +194,7 @@ namespace :test do
 
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     task :dashboard do
-      run_tests_if_changed('dashboard', ['dashboard/**/*', 'lib/**/*', 'shared/**/*']) do
+      run_tests_if_changed('dashboard', ['dashboard/**/*', 'lib/**/*', 'shared/**/*'], ignore: ['dashboard/test/ui/**/*']) do
         TestRunUtils.run_dashboard_tests
       end
     end
@@ -239,12 +239,12 @@ namespace :test do
 end
 task test: ['test:changed']
 
-def run_tests_if_changed(test_name, changed_globs)
+def run_tests_if_changed(test_name, changed_globs, ignore: [])
   base_branch = GitUtils.current_branch_base
   max_identifier_length = 12
   justified_test_name = test_name.ljust(max_identifier_length)
 
-  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs)
+  relevant_changed_files = GitUtils.files_changed_in_branch_or_local(base_branch, changed_globs, ignore_patterns: ignore)
   if relevant_changed_files.empty?
     ChatClient.log "Files affecting #{justified_test_name} tests unmodified from #{base_branch}. Skipping tests."
   else

@@ -12,7 +12,8 @@ module SharedConstants
       assessment: "assessment",
       puzzle: "puzzle",
       unplugged: "unplugged",
-      level: "level"
+      level: "level",
+      stage_extras: "stage_extras",
     }
   ).freeze
 
@@ -31,6 +32,17 @@ module SharedConstants
       dots_disabled: "dots_disabled"
     }
   ).freeze
+
+  # The set of valid login types for a section
+  SECTION_LOGIN_TYPE = OpenStruct.new(
+    {
+      word: 'word',
+      picture: 'picture',
+      email: 'email',
+      google_classroom: 'google_classroom',
+      clever: 'clever',
+    }
+  )
 
   # This is a set of Applab blocks. It is used by dashboard to initialize the
   # default palette when creating a level. It is used by apps to determine
@@ -195,6 +207,7 @@ module SharedConstants
       "analogWrite": null,
       "analogRead": null,
       "boardConnected": null,
+      "var myLed = createLed": null,
 
       // Circuit Playground
       "on": null,

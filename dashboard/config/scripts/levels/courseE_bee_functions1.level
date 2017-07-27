@@ -30,12 +30,16 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There is more than one right answer to this puzzle.\",\"hint_id\":\"courseE_bee_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78051678003b3a6126aecdfdb0bed3ec/courseE_bee_functions1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There is more than one right answer to this puzzle.\",\"hint_id\":\"courseE_bee_functions1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/78051678003b3a6126aecdfdb0bed3ec/courseE_bee_functions1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use a `repeat` loop when collecting nectar to make your code shorter.\",\"hint_id\":\"courseE_bee_functions1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4a7aa44b6da6e0f1db52245ea530b9e1/courseE_bee_functions1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember that left and right turns are from the perspective of the bee.\",\"hint_id\":\"courseE_bee_functions1_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8ca2f623e87046e04258779f6d309ad8/courseE_bee_functions1.mp3\"}]",
     "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-13 03:51:17 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

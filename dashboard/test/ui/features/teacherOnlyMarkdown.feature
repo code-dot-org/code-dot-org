@@ -1,4 +1,3 @@
-@no_circle
 @eyes
 Feature: Teacher Only Markdown
 

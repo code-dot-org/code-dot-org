@@ -829,7 +829,7 @@ function makeDraggable(jqueryElements) {
 
         // Turn off clipping in app space so we can drag the element
         // out of it
-        setAppSpaceClipping(false);
+        designMode.setAppSpaceClipping(false);
       },
       drag: function (event, ui) {
         // draggables are not compatible with CSS transform-scale,
@@ -885,7 +885,7 @@ function makeDraggable(jqueryElements) {
 
         // Turn clipping back on so it's not possible for elements
         // to bleed out of app space
-        setAppSpaceClipping(true);
+        designMode.setAppSpaceClipping(true);
       },
     }).css({
       position: 'absolute',
@@ -947,16 +947,15 @@ function isMouseEventInBounds(mouseEvent) {
  * Sets app space clipping behavior. App space is clipped if clip == true.
  * @param {boolean} clip
  */
-function setAppSpaceClipping(clip) {
+designMode.setAppSpaceClipping = function (clip) {
   var container = $('#designModeViz');
-
   if (clip) {
     // Delay the clipping until we're done the delete/pushback animation
     container.delay(ANIMATION_LENGTH_MS).addClass('clip-content', ANIMATION_LENGTH_MS);
   } else {
     container.removeClass('clip-content');
   }
-}
+};
 
 /**
  * Calculate the current visualization scale factor, as screenWidth / domWidth.
@@ -1028,12 +1027,12 @@ designMode.configureDragAndDrop = function () {
     activate: function (event, ui) {
       // Turn off clipping in app space so we can drag the element
       // into and out of it
-      setAppSpaceClipping(false);
+      designMode.setAppSpaceClipping(false);
     },
     deactivate: function (event, ui) {
       // Turn clipping back on so it's not possible for elements
       // to bleed out of app space
-      setAppSpaceClipping(true);
+      designMode.setAppSpaceClipping(true);
     },
     drop: function (event, ui) {
       var elementType = ui.draggable[0].getAttribute('data-element-type');

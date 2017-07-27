@@ -11,6 +11,7 @@ theme: none
 [together]
 
 ## Lesson Overview
+
 At the root of all computer science is something called an algorithm.  The word “algorithm” may sound like something complicated, but really it’s just a list of instructions that someone can follow to achieve a result.  To provide a solid base for the rest of your students’ computer science education, we’re going to focus on building a secure relationship with algorithms.
 
 [summary]

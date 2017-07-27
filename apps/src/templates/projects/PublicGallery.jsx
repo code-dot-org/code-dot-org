@@ -1,8 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import ProjectCardGrid from './ProjectCardGrid';
 import _ from 'lodash';
-import i18n from "@cdo/locale";
-import color from "../../util/color";
+import {connect} from 'react-redux';
 
 export const publishedProjectPropType = PropTypes.shape({
   channel: PropTypes.string.isRequired,
@@ -14,15 +13,9 @@ export const publishedProjectPropType = PropTypes.shape({
   publishedAt: PropTypes.string.isRequired,
 });
 
-const styles = {
-  link: {
-    color: color.light_teal,
-    paddingLeft: 30
-  }
-};
-
 class PublicGallery extends Component {
   static propTypes = {
+    // from redux state
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(publishedProjectPropType),
       gamelab: PropTypes.arrayOf(publishedProjectPropType),
@@ -32,7 +25,7 @@ class PublicGallery extends Component {
   }
 
   /**
-   * Transform the projectsLists data from the format expected by the
+   * Transform the projectLists data from the format expected by the
    * PublicGallery to the format expected by the ProjectCardGrid.
    * See the PropTypes of each component for a definition of each format.
    */
@@ -59,9 +52,10 @@ class PublicGallery extends Component {
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
         />
-        <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
       </div>
     );
   }
 }
-export default PublicGallery;
+export default connect(state => ({
+  projectLists: state.projects.projectLists,
+}))(PublicGallery);

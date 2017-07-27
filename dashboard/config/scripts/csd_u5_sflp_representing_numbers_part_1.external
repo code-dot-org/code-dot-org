@@ -3,4 +3,11 @@ display_name 'Lesson Overview'
 
 markdown <<MARKDOWN
 # Overview
+
+This lesson introduces the binary number system.  With a set of cards that represent the place values in a binary (base-2) number system, the class turns bits "on" or "off" by turning cards face up and face down, then observes the numbers that result from these different patterns.  Eventually, the pattern is extended to a generic 4-bit system.
+
+## Resources
+
+* [Activity Guide - Number Cards](https://docs.google.com/document/d/19y9hpIHzJQ7uQtwtEJxroE37qbU33Q28BOKobIA0ARg) - Activity Guide ([PDF](https://docs.google.com/document/d/19y9hpIHzJQ7uQtwtEJxroE37qbU33Q28BOKobIA0ARg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/19y9hpIHzJQ7uQtwtEJxroE37qbU33Q28BOKobIA0ARg/export?format=doc))
+* [Number Cards](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/) - Manipulative ([PDF](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1UWJdBo0C7wE3jmSCDVTOSdDtRkxtIBqe4ttN0v5GFXM/export?format=doc))
 MARKDOWN

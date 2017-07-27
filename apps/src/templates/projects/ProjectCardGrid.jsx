@@ -1,15 +1,21 @@
 import React, {PropTypes} from 'react';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
-import {projectPropType} from './projectConstants';
+import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";
+import {connect} from 'react-redux';
+import color from "../../util/color";
+import styleConstants from '../../styleConstants';
 
 const NUM_PROJECTS_ON_PREVIEW = 4;
 const NUM_PROJECTS_IN_APP_VIEW = 12;
 
 const styles = {
   grid: {
-    padding: 10,
-    width: 1000
+    width: styleConstants['content-width']
+  },
+  link: {
+    color: color.light_teal,
+    paddingLeft: 30
   }
 };
 
@@ -21,7 +27,8 @@ const ProjectCardGrid = React.createClass({
       playlab: PropTypes.arrayOf(projectPropType),
       artist: PropTypes.arrayOf(projectPropType),
     }).isRequired,
-    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired
+    galleryType: PropTypes.oneOf(['personal', 'class', 'public']).isRequired,
+    selectedGallery: PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -29,6 +36,12 @@ const ProjectCardGrid = React.createClass({
       showAll: true,
       showApp: ''
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedGallery !== this.props.selectedGallery && nextProps.selectedGallery === Galleries.PUBLIC) {
+      this.setState({showAll: true, showApp: ''});
+    }
   },
 
   onSelectApp(appType) {
@@ -87,6 +100,7 @@ const ProjectCardGrid = React.createClass({
               navigateFunction={this.onSelectApp}
               isDetailView={false}
             />
+            <a href="/gallery" style={styles.link}>{i18n.projectsViewOldGallery()}</a>
           </div>
         }
 
@@ -148,4 +162,6 @@ const ProjectCardGrid = React.createClass({
   }
 });
 
-export default ProjectCardGrid;
+export default connect(state => ({
+  selectedGallery: state.projects.selectedGallery
+}))(ProjectCardGrid);

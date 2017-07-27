@@ -22,6 +22,13 @@ npm install -g grunt-cli yarn@0.23.2
 # Perform first full build
 yarn
 npm run build
+npm rebuild node-sass
+
+# automatically rebuild every time you make changes to source files
+npm run start
+
+# or, if you want it to rebuild even faster, do this instead:
+CHEAP=1 npm run start
 ```
 
 ### Seeing your development version of Apps in Dashboard
@@ -181,7 +188,7 @@ You can add new sections to the styleguide (perhaps for a new component you are
 building) by adding the following code:
 
 ```javascript
-if (BUILD_STYLEGUIDE) {
+if (IN_STORYBOOK) {
   SomeComponent.styleGuideExamples = storybook => {
     return storybook
       .storiesOf('SomeComponent', module)
@@ -193,7 +200,7 @@ if (BUILD_STYLEGUIDE) {
 }
 ```
 
-By wrapping your code in a `BUILD_STYLEGUIDE` check, you can guarantee that it
+By wrapping your code in a `IN_STORYBOOK` check, you can guarantee that it
 won't appear in production builds. See the
 [react-storybook documentation](https://github.com/kadirahq/react-storybook) for
 more information on how to use the `storybook` api.

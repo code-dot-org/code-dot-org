@@ -1,6 +1,7 @@
 import { assert, expect } from 'chai';
 import Multi from '@cdo/apps/code-studio/levels/multi';
 import { writeSourceForLevel } from '@cdo/apps/code-studio/clientState';
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('multi', () => {
   const levelId = 1028;
@@ -16,13 +17,11 @@ describe('multi', () => {
   const emptyLastAttemptString = "";
   const containedMode = false;
 
-  let originalAppOptions;
   before(() => {
-    originalAppOptions = window.appOptions;
-    window.appOptions = {};
+    replaceOnWindow('appOptions', {});
   });
   after(() => {
-    window.appOptions = originalAppOptions;
+    restoreOnWindow('appOptions');
   });
 
   describe('validateAnswers', () => {
@@ -62,13 +61,13 @@ describe('multi', () => {
 
     it('selects nothing if there was no last attempt', () => {
       const multi = new Multi(levelId, id, app, standalone, numAnswers, answers,
-          answersFeedback, emptyLastAttemptString, containedMode);
+        answersFeedback, emptyLastAttemptString, containedMode);
       expect(multi.selectedAnswers).to.be.empty;
     });
 
     it('selects the server-side last attempt when provided', () => {
       const multi = new Multi(levelId, id, app, standalone, numAnswers, answers,
-          answersFeedback, lastAttemptString, containedMode);
+        answersFeedback, lastAttemptString, containedMode);
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
     });
 
@@ -76,7 +75,7 @@ describe('multi', () => {
       window.appOptions.scriptName = scriptName;
       writeSourceForLevel(scriptName, levelId, +new Date(2017, 1, 19), lastAttemptString);
       const multi = new Multi(levelId, id, app, standalone, numAnswers, answers,
-          answersFeedback, emptyLastAttemptString, containedMode);
+        answersFeedback, emptyLastAttemptString, containedMode);
 
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
     });
@@ -85,7 +84,7 @@ describe('multi', () => {
       window.appOptions.scriptName = scriptName;
       writeSourceForLevel(scriptName, levelId, +new Date(2017, 1, 19), otherLastAttemptString);
       const multi = new Multi(levelId, id, app, standalone, numAnswers, answers,
-          answersFeedback, lastAttemptString, containedMode);
+        answersFeedback, lastAttemptString, containedMode);
 
       expect(multi.selectedAnswers).to.include(lastAttemptNum);
     });

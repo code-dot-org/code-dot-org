@@ -6,6 +6,7 @@ class SessionsController < Devise::SessionsController
   def new
     session[:user_return_to] ||= params[:user_return_to]
     @already_hoc_registered = params[:already_hoc_registered]
+    @hide_sign_in_option = true
     if params[:providerNotLinked]
       # This code is only reached through the oauth flow when the user already has an email account.
       # Usually email would not be available for students, this is a special case where oauth fills it in.

@@ -1,19 +1,23 @@
+import $ from 'jquery';
 import React, {PropTypes} from 'react';
 import ProjectCard from './ProjectCard';
-import {projectPropType} from './projectConstants';
+import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
-import ProgressButton from "../progress/ProgressButton";
+import styleConstants from '../../styleConstants';
+import Button from "../Button";
+import {connect} from 'react-redux';
+import {appendProjects, setHasOlderProjects} from './projectsRedux';
 
 const styles = {
   grid: {
     padding: 10,
-    width: 1000
+    width: styleConstants['content-width']
   },
   card: {
     display: "inline-block",
     paddingTop: 10,
     paddingBottom: 20,
-    paddingRight: 18,
+    paddingRight: 16,
     paddingLeft: 10
   },
   labHeading: {
@@ -50,13 +54,29 @@ const ProjectAppTypeArea = React.createClass({
 
     // Only show one project type.
     isDetailView: PropTypes.bool.isRequired,
+
+    // from redux state
+    hasOlderProjects: PropTypes.bool.isRequired,
+
+    // from redux dispatch
+    appendProjects: PropTypes.func.isRequired,
+    setHasOlderProjects: PropTypes.func.isRequired,
   },
 
   getInitialState() {
     return {
       maxNumProjects: this.props.projectList ? this.props.projectList.length : 0,
-      numProjects: this.props.numProjectsToShow
+      numProjects: this.props.numProjectsToShow,
+
+      // Disables the View More button when a network request is pending.
+      disableViewMore: false,
     };
+  },
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      maxNumProjects: nextProps.projectList ? nextProps.projectList.length : 0
+    });
   },
 
   viewMore() {
@@ -68,8 +88,8 @@ const ProjectAppTypeArea = React.createClass({
     return  (
       <div>
         {
-          projectList && projectList.slice(0,max).map((project, index) => (
-            <div key={index} style={styles.card}>
+          projectList && projectList.slice(0,max).map(project => (
+            <div key={project.projectData.channel} style={styles.card}>
               <ProjectCard
                 projectData={project.projectData}
                 currentGallery={galleryType}
@@ -82,25 +102,77 @@ const ProjectAppTypeArea = React.createClass({
   },
 
   loadMore() {
-    this.setState({numProjects: this.state.numProjects + NUM_PROJECTS_TO_ADD});
+    if (this.state.disableViewMore) {
+      return;
+    }
+
+    const newNumProjects = this.state.numProjects + NUM_PROJECTS_TO_ADD;
+    this.setState({numProjects: newNumProjects});
+
+    // Fetch more projects if we do not have enough to show.
+    const {hasOlderProjects} = this.props;
+    if (this.state.maxNumProjects < newNumProjects && hasOlderProjects) {
+      this.setState({disableViewMore: true});
+      this.fetchOlderProjects().always(() => {
+        this.setState({disableViewMore: false});
+      });
+    }
+  },
+
+  /**
+   * Fetch additional projects of the specified type which were published
+   * earlier than the oldest published project currently in our list.
+   * @returns {$.Deferred} Deferred object after the network request has
+   *   completed and the done handler has been run (if successful).
+   */
+  fetchOlderProjects() {
+    const {projectList, labKey: projectType} = this.props;
+    const oldestProject = projectList[projectList.length - 1];
+    const oldestPublishedAt = oldestProject && oldestProject.projectData.publishedAt;
+
+    return $.ajax({
+      method: 'GET',
+      url: `/api/v1/projects/gallery/public/${projectType}/${MAX_PROJECTS_PER_CATEGORY}/${oldestPublishedAt}`,
+      dataType: 'json'
+    }).done(data => {
+      // olderProjects all have an older publishedAt date than oldestProject.
+      const olderProjects = data[projectType];
+
+      // Don't try to fetch projects of this projectType again in the future if we
+      // received fewer than we asked for this time.
+      if (olderProjects.length < MAX_PROJECTS_PER_CATEGORY) {
+        this.props.setHasOlderProjects(false, projectType);
+      }
+
+      // Append any projects we just received to the appropriate list,
+      // ignoring any duplicates. This preserves the newest-to-oldest
+      // ordering of the project list.
+      this.props.appendProjects(olderProjects, projectType);
+    });
   },
 
   renderViewMoreButtons() {
+    // Show the View More button if there are more projects to show on the
+    // client or if there are more we could fetch from the server.
+    const {hasOlderProjects} = this.props;
+    const {maxNumProjects, numProjects} = this.state;
+    const showViewMore = maxNumProjects >= numProjects || hasOlderProjects;
+
     return (
       <div style={{float: "right", marginRight: 22}}>
         {
-          this.state.maxNumProjects >= this.state.numProjects &&
-          <ProgressButton
+          showViewMore &&
+          <Button
             onClick={this.loadMore}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             icon="plus-circle"
             text="View more"
             style={{marginRight: 20}}
           />
         }
-        <ProgressButton
+        <Button
           href="#top"
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           icon="chevron-circle-up"
           text="Back to top"
         />
@@ -125,4 +197,6 @@ const ProjectAppTypeArea = React.createClass({
   }
 });
 
-export default ProjectAppTypeArea;
+export default connect((state, ownProps) => ({
+  hasOlderProjects: state.projects.hasOlderProjects[ownProps.labKey]
+}), { appendProjects, setHasOlderProjects })(ProjectAppTypeArea);

@@ -58,7 +58,7 @@
     "palette_category_at_start": "sprites",
     "all_animations_single_frame": "true",
     "instructions_important": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "start_in_animation_tab": "false",
     "encrypted_examples": "zYD0J5k11KP2a4tlydOrmCxiLKWNqhGRno/9dric58Jbk5APpSADQTSnWaJu\nLRKK\n",
     "contained_level_names": null

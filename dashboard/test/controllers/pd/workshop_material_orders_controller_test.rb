@@ -12,6 +12,7 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
     Geocoder.stubs(:search).returns(
       [OpenStruct.new(
         postal_code: '98101',
+        state_code: 'WA',
         street_number: '1501'
       )]
     )
@@ -61,8 +62,7 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
     assert_response :forbidden
   end
 
-  test 'create saves and places an order' do
-    Pd::WorkshopMaterialOrder.any_instance.expects(:place_order)
+  test 'create saves a new order' do
     sign_in @teacher
     assert_creates Pd::WorkshopMaterialOrder do
       post :create, params: create_params
@@ -72,7 +72,6 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
   end
 
   test 'create renders new with errors on failed save' do
-    Pd::WorkshopMaterialOrder.any_instance.expects(:place_order).never
     sign_in @teacher
 
     bad_params = create_params
@@ -88,6 +87,23 @@ class Pd::WorkshopMaterialOrdersControllerTest < ::ActionController::TestCase
 
   test_user_gets_response_for :admin_index, user: :admin, response: :success
   test_user_gets_response_for :admin_index, user: :teacher, response: :forbidden
+
+  test 'admin index has page header' do
+    sign_in create(:admin)
+    get :admin_index
+    assert_select 'h5.page-header' do
+      assert_select 'a.btn', '<<'
+      assert_select 'a.btn', '<'
+      assert_select 'a.btn', '>'
+      assert_select 'a.btn', '>>'
+
+      assert_select 'span.dropdown', /Show/ do
+        assert_select 'a', '25'
+        assert_select 'a', '50'
+        assert_select 'a', 'All'
+      end
+    end
+  end
 
   private
 

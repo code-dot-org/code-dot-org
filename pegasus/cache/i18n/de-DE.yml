@@ -98,6 +98,12 @@
     Kurs 3
   congratulations_on_completing_course4: Herzlichen Glückwunsch zum Abschluss von
     Kurs 4
+  congratulations_on_completing_coursea: Congratulations on completing Course A
+  congratulations_on_completing_courseb: Congratulations on completing Course B
+  congratulations_on_completing_coursec: Congratulations on completing Course C
+  congratulations_on_completing_coursed: Congratulations on completing Course D
+  congratulations_on_completing_coursee: Congratulations on completing Course E
+  congratulations_on_completing_coursef: Congratulations on completing Course F
   congratulations_on_completing_accelerated: |2+
 
   congrats_next_tutorials_title: Probieren Sie als Nächstes diese Anleitungen
@@ -142,14 +148,15 @@
     interaktiven Kurse zum Selbststudium und unsere auf, spielerischer Basis beruhenden,
     Programmier-Anwendungen bieten eine einfache Einführung ins Programmieren und
     ermutigen Kinder zu Innovation und Kreativität.
-  third_party_tynker_btn_curriculum: Try Tynker's Curriculum for Early Readers
+  third_party_tynker_btn_curriculum: Probiere Tynker Lehr-Programm für Leseanfänger
   third_party_tynker_btn_site: Besuche Tynker
-  third_party_scratchjr_desc: Scratch Jr. is an introductory programming language
-    that enables young children (ages 5-7) to create their own interactive stories
-    and games. Children snap together graphical programming blocks to make characters
-    move, jump, dance, and sing. Children can modify characters in the paint editor,
-    add their own voices and sounds, even insert photos of themselves - then use the
-    programming blocks to make their characters come to life.
+  third_party_scratchjr_desc: Scratch Jr. ist eine einfache Programmiersprache, mit
+    der jüngere Kinder (zwischen 5-7 Jahren) eigene interaktive Geschichten und Spiele
+    erstellen können. Kinder verbinden in dieser Programmiersprache grafische Programmier-Blöcke;
+    damit bewegen sie Figuren, lassen diese hochspringen, tanzen und singen. Kinder
+    können die Figuren auch verändern, eigene Stimmen und Klänge hinzufügen, sogar
+    Fotos von sich selbst einfügen. Mit den Programmier-Blöcken erwecken sie diese
+    Figuren zum Leben.
   third_party_scratchjr_btn_curriculum: Lade Scratch Jr. Curriculum herunter
   third_party_scratchjr_btn_site: Besuche Scratch J.
   third_party_scratch_desc: With Scratch, you can program your own interactive stories,
@@ -157,7 +164,7 @@
     Scratch helps young people learn to think creatively, reason systematically, and
     work collaboratively — essential skills for life in the 21st century.
   third_party_scratch_btn_curriculum: Lade Scratch Jr. Curriculum herunter
-  third_party_scratch_btn_forum: Scratch Educator Forum
+  third_party_scratch_btn_forum: Forum für Scratch-Tutoren
   third_party_scratch_btn_site: Besuche Scratch
   third_party_lightbot_desc: In Lightbot, students must program a robot with commands
     to solve puzzles. Students may play the game in the Browser (requires Flash Player),
@@ -185,7 +192,7 @@
     fun and accessible for beginners. With CodeHS, you can get the help that every
     new programmer needs to work through problems and keep learning. Our tutors are
     everywhere!
-  third_party_codehs_btn_try: Try CodeHS Intro to Computer Science
+  third_party_codehs_btn_try: Einführung in die Informatik - Informationen für Schulen
   third_party_codecademy_desc: Wir überdenken Bildung von Grund auf. Im Internet wurde
     fast alles - Handel, soziale Netzwerke, Gesundheitswesen und vieles mehr neu überdacht.
     Wir machen die Bildung, die die Welt benötigt - Die erste echte heimische Programmierausbildung.
@@ -204,12 +211,12 @@
     4-8
   third_party_desc_10to12_kto3: Ungefähr 10-12 Lektionen, ausgerichtet auf die Jahrgangsstufen
     Kinergarten 3
-  third_party_desc_11_kto5: Approximately 11 lessons, geared toward grades K-5
-  third_party_desc_10to12_kto5: Approximately 10-12 lessons, geared toward grades
-    K-5
-  third_party_desc_40_4to8: More than 40 lessons, geared toward grades 4-8
-  third_party_desc_dozens_kto8: Dozens of lessons for all grades K-8
-  third_party_desc_10to15_3to12: Between 10 & 15 lessons, geared toward grades 3-12
+  third_party_desc_11_kto5: 'Ungefähr 11 Lerneinheiten. Zielgruppe: 5- Klasse'
+  third_party_desc_10to12_kto5: 'Ungefähr 10-12 Lerneinheiten. Zielgruppe: 5- Klasse'
+  third_party_desc_40_4to8: 'Mehr als 40 Lerneinheiten. Zielgruppe: 4-8. Klasse'
+  third_party_desc_dozens_kto8: Zahlreiche weitere Lerneinheiten für alle Stufen,
+    ca. 8. Klasse
+  third_party_desc_10to15_3to12: '10-15 Lerneinheiten. Zielgruppe: 3.-12. Klasse'
   third_party_desc_25to40_3to12: From 25 - 40 lessons, intended for grades 3-12
   third_party_desc_20_2to8: About 20 lessons, geared toward grades 2-8
   third_party_desc_7to22_5to12: Between 7 & 22 lessons, geared toward grades 5-12
@@ -264,7 +271,7 @@
   continue_learning_body: Es gibt unzählige Optionen. Du kannst online lernen, an
     einer örtlichen Schule oder in einem Feriencamp.
   learn_code_studio: Try Code Studio courses
-  learn_next_level: Weiter zum nächsten Code Studio Kurs
+  learn_next_level: Weiter zum nächsten Level
   learn_online: Probiere andere Kurse online
   learn_classes: Finde Kurse in deiner Nähe.
   learn_back_to_minecraft: Lerne mehr mit Minecraft
@@ -274,6 +281,12 @@
   just_did_course2: I just finished Course 2 - check it out! @codeorg
   just_did_course3: I just finished Course 3 - check it out! @codeorg
   just_did_course4: I just finished Course 4 - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! @codeorg
+  just_did_courseb: I just finished Course B - check it out! @codeorg
+  just_did_coursec: I just finished Course C - check it out! @codeorg
+  just_did_coursed: I just finished Course D - check it out! @codeorg
+  just_did_coursee: I just finished Course E - check it out! @codeorg
+  just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
   twitter_teach_cs: Warum unterrichten so wenige Schulen Informatik? Wir können das
     ändern. http://youtu.be/2DxWIxec6yo. Besuche http://code.org/, um mehr zu erfahren.
@@ -301,7 +314,7 @@
   stats_michael: '"Ich habe meine Schüler<b>noch niemals</b> so begeistert lernen
     sehen." – Michael Clark, Lehrer'
   studiobar_title: "<a href='http://studio.code.org'>Code Studio</a> kennenlernen"
-  studiobar_title_nolink: Code Studio kennenlernen
+  studiobar_title_nolink: Entdecke das Code Studio
   studiobar_elementary_title: Grundkurse
   studiobar_elementary_body: Unsere drei neuen Kurse für Grundschüler
   studiobar_hoc_title: Die Hour of Code
@@ -328,6 +341,10 @@
     die Möglichkeit, Informatik zu lernen.“ Sheryl, COO von Facebook"
   homepage_hero_text_satya: "„Informatik eröffnet die besten Chancen auf der Welt.“
     Satya, CEO von Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Computer science empowers
+    students to create the world of tomorrow.&rdquo;
+    Satya, CEO of Microsoft
   homepage_hero_text_bosh: "„Wenn du programmieren kannst, kannst du deinen Lebensweg
     selbst bestimmen.“ Chris Bosh"
   homepage_hero_text_student1: "„Diese Fähigkeiten haben meine Zukunft verändert.
@@ -391,6 +408,7 @@
   homepage_slot_text_title_hoc: Stunde der Code
   homepage_slot_text_blurb_hoc: Jeder kann es lernen. Jetzt beginnen
   homepage_slot_text_link_hoc: Probiere "The Hour of Code" aus
+  homepage_slot_text_link_about_hoc: About the Hour of Code
   homepage_slot_text_link_host: Hour of Code organisieren
   homepage_slot_text_link_hocserved: "# mal genutzt"
   homepage_solot_text_link_volunteer: Bei der Hour of Code mithelfen
@@ -414,7 +432,7 @@
   homepage_slot_text_link_buy: Mitmachen
   homepage_slot_text_link_donate: Spende
   homepage_slot_text_link_shop: T-shirts, Hüte & mehr
-  homepage_header_codestudio: Code Studio Schülerprojekte
+  homepage_header_codestudio: Kreationen der Schüler im Code Studio
   homepage_header_donors: Code.org dankt seinen Unterstützern
   homepage_donors_seall: Alle anzeigen
   homepage_donors_donate: Spenden
@@ -759,11 +777,11 @@
   dashboard_action_print_certificates: Zeugnisse drucken
   dashboard_assessments_view: 'Zeige Bewertungen in:'
   dashboard_assessments_none: Keine Bewertungen
-  dashboard_assessments_none_part2: If you are teaching a Computer Science Principles
-    course, we have assessment questions available as part of Code Studio to help
-    your students prepare for the AP test. To use these assessments, first assign
-    the assessment to your class and then pick it from the drop down above and you'll
-    see your students' answers here.
+  dashboard_assessments_none_part2: If you are teaching a middle or high school course,
+    we have assessment questions available as part of Code Studio to help your students
+    prepare for the AP test. To use these assessments, first assign the course to
+    your class and then pick the course from the drop down above and you'll see your
+    students' answers here.
   dashboard_assessments_summaries: Zusammenfassungen
   dashboard_assessments_answers: Alle Antworten
   dashboard_surveys_answers: Umfragen
@@ -802,6 +820,7 @@
   dashboard_responses_view: 'Textantworten anzeigen in:'
   dashboard_responses_none: Keine Antworten
   dashboard_sections_new_section: Neue Lerngruppe
+  dashboard_sections_new_google_section: Import section from Google Classroom
   dashboard_sections_jumbotron_instruction: Erstellen Sie neue Lerngruppen und fügen
     Sie Schüler hinzu. In Lerngruppen können Schüler in kleinere Gruppen organisiert
     werden, um deren Fortschritte anzuzeigen und ihre Konten zu verwalten.
@@ -809,6 +828,7 @@
   dashboard_sections_table_secret: Login-Typ
   dashboard_sections_table_grade: Note
   dashboard_sections_table_course: Kurs
+  dashboard_sections_table_pairing_allowed: Paarprogrammierung
   dashboard_sections_table_stage_extras: Weiterführende Extras dieser Stufe
   dashboard_sections_table_students: Schüler
   dashboard_sections_table_code: Lerngruppen-Code
@@ -926,6 +946,12 @@
   dashboard_course2: 'Kurs 2:'
   dashboard_course3: 'Kurs 3:'
   dashboard_course4: 'Kurs 4 (beta): '
+  dashboard_coursea: 'Course A: '
+  dashboard_courseb: 'Course B: '
+  dashboard_coursec: 'Course C: '
+  dashboard_coursed: 'Course D: '
+  dashboard_coursee: 'Course E: '
+  dashboard_coursef: 'Course F: '
   dashboard_unplugged: If you don't have computers, <a href='%{unplugged_url}'>try
     these unplugged lessons</a> in your classroom.
   dashboard_curriculum: Lehrplan
@@ -1122,11 +1148,17 @@
   course3_name: Kurs 3
   course4_name: Kurs 4
   coursea-draft_name: Course A
+  coursea_name: Course A
   courseb-draft_name: Course B
+  courseb_name: Course B
   coursec-draft_name: Course C
+  coursec_name: Course C
   coursed-draft_name: Course D
+  coursed_name: Course D
   coursee-draft_name: Course E
+  coursee_name: Course E
   coursef-draft_name: Course F
+  coursef_name: Course F
   accelerated_name: Beschleunigter Kurs
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
@@ -1146,6 +1178,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Vollständiger Test - 50 Fragen
   cspexam1-mWU7ilDYM9_name: Test Teil 1 - 25 Fragen
@@ -1239,6 +1272,12 @@
   course2_gradelevel: 'Alter: 6-18'
   course3_gradelevel: 'Alter: 8-18'
   course4_gradelevel: 'Alter: 10-18'
+  coursea_gradelevel: Grade 5+
+  courseb_gradelevel: Grade 6+
+  coursec_gradelevel: Grade 7+
+  coursed_gradelevel: Ab 8. Klasse
+  coursee_gradelevel: Grade 9+
+  coursef_gradelevel: Grade 10+
   accelerated_gradelevel: 'Alter: 10-18'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
@@ -1372,6 +1411,12 @@
     into programming topics introduced in previous courses to find flexible solutions
     to more complex problems. By the end of this course, students create interactive
     stories and games they can share with anyone. Recommended for grades 4-8.
+  coursea_shortdescription_congrats: ''
+  courseb_shortdescription_congrats: ''
+  coursec_shortdescription_congrats: ''
+  coursed_shortdescription_congrats: ''
+  coursee_shortdescription_congrats: ''
+  coursef_shortdescription_congrats: ''
   codeorg_longdescription: Lerne die Grundlagen der Informatik mit Programmierbausteinen.
     Dies ist eine spielerische, selbstgesteuerte Einführung mit Videolektionen von
     Bill Gates, Mark Zuckerberg, Angry Birds und Plants vs. Zombies. Lerne Wiederholungsschleifen,
@@ -1897,3 +1942,41 @@
   infinity_shortcode: inf
   playlab_shortcode: spielen
   artist_shortcode: art
+  header_home: Home
+  header_courses: Kurse
+  header_project_gallery: Projekt Galerie
+  header_sections: Sektionen
+  header_professional_learning: Professionelles Lernen
+  header_educate_overview: Educator Overview
+  header_educate_elementary: Grundschule
+  header_educate_middle: Mittelschule
+  header_educate_high: High School/Gymnasium
+  header_educate_hoc: Stunde des Codes
+  header_educate_partner: Eine Partnerschaft mit uns
+  header_educate_beyond: Beyond Code.org
+  header_educate_inspire: Inspiriere einen Schüler/eine Schülerin
+  header_educate_community: Online Community
+  header_educate_tools: Hilfsmittel und Videos
+  header_about_us: "Über uns "
+  header_about_leadership: Die Leitung
+  header_about_donors: Sponsoren
+  header_about_partners: Partner
+  header_about_team: Das Team
+  header_about_news: Newsroom
+  header_about_evaluation: Evaluation
+  header_about_jobs: Jobs
+  header_about_contact: Kontaktieren Sie uns
+  header_about_faqs: FAQs
+  header_learn: Lernen
+  header_teach: Unterrichten
+  header_stats: Statistiken
+  header_help_us: Helfen Sie uns
+  header_about: "Über"
+  header_teacher_community: Lehrer Community
+  header_help_support: 'Help and support '
+  header_report_bug: Einen Fehler melden
+  header_tutorials: Einführungen
+  header_documentation: Dokumentation
+  csp_name: CS Principles
+  csd_name: CS Discoveries
+  full_course_category_name: Full Courses

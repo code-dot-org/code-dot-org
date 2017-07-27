@@ -252,7 +252,12 @@ class ContactRollupsValidation
               WHERE form_roles IS NOT NULL
               AND Roles NOT LIKE '%Form Submitter%'",
       min: 0,
-      max: 0
+      # Sometimes validation fails with one contact (out of millions) failing
+      # the check. Running the same query later on same data yields expected
+      # 0 count. Possibly related to reading back immediately after big write?
+      # For the moment relax validation slightly to allow a single record to
+      # fail validation.
+      max: 1
     },
     {
       # Double-check consistency of the complex (but necessary) query
@@ -274,6 +279,16 @@ class ContactRollupsValidation
       min: 0,
       max: 0
     },
+    {
+      # Make sure that we have at least one form submitted recently so we know
+      # replication is still working
+      name: "Check that replication is working and that there are recent "\
+            "form submissions",
+      query: "SELECT count(*) FROM forms
+              WHERE created_at > TIME(NOW() - INTERVAL 4 HOUR);",
+      min: 1,
+      max: 10_000_000
+    }
   ].freeze
 
   def self.validate_contact_rollups

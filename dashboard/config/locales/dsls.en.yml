@@ -2788,13 +2788,31 @@ en:
       coursef_powerofwords:
         description here: description here
         title: title
+      csd deeper learning timeline:
+        Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
+        description here: description here
+      csd-novice-congrats: {}
+      csp deeper learning timeline:
+        Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
+        description here: description here
+      csp-novice-congrats: {}
       csp_ap_intro: {}
+      csp_subgoal_experiment_thanks: {}
       csp_unit5_finalassessment_overview:
         description here: description here
         title: title
       csp_unit_assessment_overview:
         description here: description here
         title: title
+      deeper learning:
+        Deeper Learning Description: Deeper Learning Description
+        description here: description here
+      deeper learning recommendations- csd:
+        Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
+        description here: description here
+      deeper learning recommendations- csp:
+        Recommendations for Ramping up on Lessons: Recommendations for Ramping up on Lessons
+        description here: description here
       duino auduino:
         duino auduino: duino auduino
       duino battery led:
@@ -3326,6 +3344,8 @@ en:
         title: title
       v2 U4L06 Student Lesson Introduction Encryption Vigenere:
         Cracking the Code: Cracking the Code
+      welcome-csd-novice: {}
+      welcome-csp-novice: {}
       wn scratchjr 1:
         Scratch Jr: Scratch Jr
     level_group:
@@ -3367,6 +3387,7 @@ en:
         Unit 5 Self-Assessment: {}
         brendan test survey: {}
         csp_ap_questions: {}
+        csp_subgoal_consent_levelgroup: {}
     match:
       2-3 Big Event Match 1:
         "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png": "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
@@ -3548,7 +3569,7 @@ en:
         Is the dog sprite's x equal to the cat sprite's x?: Is the dog sprite's x equal to the cat sprite's x?
         Is the dog sprite's x greater than the cat sprite's x?: Is the dog sprite's x greater than the cat sprite's x?
         Is the dog sprite's x less than the cat sprite's x?: Is the dog sprite's x less than the cat sprite's x?
-        Match the boolean expression using comparison operators to the English description.: Match the boolean expression using comparison operators to the English description.
+        Match the boolean expression to the English description.: Match the boolean expression to the English description.
         'Matching: Comparison Operators': 'Matching: Comparison Operators'
         dog.rotation &lt; cat.rotation: dog.rotation &lt; cat.rotation
         dog.scale &gt; cat.scale: dog.scale &gt; cat.scale
@@ -4772,8 +4793,8 @@ en:
         Lossy compression: Lossy compression
         Tailored compression: Tailored compression
       CSD Header Size MC:
-        Headers Quick Check: Headers Quick Check
-        Look at the code below and predict how the headers will be displayed.  Choose from one of the three options on the right.: Look at the code below and predict how the headers will be displayed.  Choose from one of the three options on the right.
+        Headings Quick Check: Headings Quick Check
+        Look at the code below and predict how the headings will be displayed.  Choose from one of the three options on the right.: Look at the code below and predict how the headings will be displayed.  Choose from one of the three options on the right.
         https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50 AM.png
         https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08 AM.png
         https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25 AM.png
@@ -5178,14 +5199,14 @@ en:
         'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>': 'HEX: <strong>F</strong> DEC: <strong>13</strong>, BIN: <strong>1110</strong>'
       CSPFinal_Question_8update:
         " ": " "
-        ? 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
-        : 'a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code> <br> <br>'
-        ? 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
-        : 'a. <code style="color: black">01010</code><br>c. <code style="color: black">1110</code><br>b. <code style="color: black">010000</code> <br> <br>'
-        ? 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
-        : 'b. <code style="color: black">010000</code><br> c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code> <br> <br>'
-        ? 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
-        : 'c. <code style="color: black">1110</code><br> a. <code style="color: black">01010</code><br> b. <code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br> <code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code> <br> <br>'
+        ? '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        : '<code style="color: black">&nbsp;01010</code><br><code style="color: black">&nbsp;&nbsp;1110</code><br><code style="color: black">010000</code> <br> <br>'
+        ? '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
+        : '<code style="color: black">010000</code><br> <code style="color: black">&nbsp;&nbsp;1110</code><br> <code style="color: black">&nbsp;01010</code> <br> <br>'
       CSPFinal_Question_9:
         ? At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
         : At one of the lowest levels of abstraction, all digital data can be represented in binary using only combinations of the digits zero and one.
@@ -5531,6 +5552,16 @@ en:
         "<pre>sentence</pre>": "<pre>sentence</pre>"
         <pre>y + z + " and " + x</pre>: <pre>y + z + " and " + x</pre>
         What will be displayed after running this code?: What will be displayed after running this code?
+      Destroy me multi test:
+        3 answer: 3 answer
+        4 answer: 4 answer
+        5 answer: 5 answer
+        6 answer: 6 answer
+        Can I choose zero or one?: Can I choose zero or one?
+        description here: description here
+        one answer: one answer
+        title foo foo: title foo foo
+        two answer: two answer
       ECSPD Online U1D1-2 Assessment 2:
         A and B: A and B
         A, B, C, F, and G: A, B, C, F, and G
@@ -6171,6 +6202,11 @@ en:
         No, that is not even close.: No, that is not even close.
         What is 1 + 1?: What is 1 + 1?
         Yes, you are a genius!: Yes, you are a genius!
+      U1 Ch1 Assessment question 4 to 8 bit:
+        2<sup>1</sup> = 2 times as many values: 2<sup>1</sup> = 2 times as many values
+        2<sup>2</sup> = 4 times as many values: 2<sup>2</sup> = 4 times as many values
+        2<sup>3</sup> = 8 times as many values: 2<sup>3</sup> = 8 times as many values
+        2<sup>4</sup> = 16 times as many values: 2<sup>4</sup> = 16 times as many values
       U1L07 Assessment 1:
         A: A
         B: B
@@ -7388,16 +7424,14 @@ en:
         The bird will make it to the pig.: The bird will make it to the pig.
         This code gets the bird perfectly to the pig.: This code gets the bird perfectly to the pig.
       courseC_multi_starWars_predict1:
-        BB-8 will move forward 5 times, which will get him to collect all of the scrap metal: BB-8 will move forward 5 times, which will get him to collect all of the scrap metal
-        BB-8 will move forward 5 times, which will get it to collect all of the scrap metal: BB-8 will move forward 5 times, which will get it to collect all of the scrap metal
-        BB-8 will move forward only one space: BB-8 will move forward only one space
+        BB-8 will move 5 times and get all of the scrap metal: BB-8 will move 5 times and get all of the scrap metal
+        BB-8 will move only one space: BB-8 will move only one space
         BB-8 will not move.: BB-8 will not move.
         Correct!: Correct!
         I don't know: I don't know
         Incorrect. The repeat block will make the BB-8 move forward 5 times.: Incorrect. The repeat block will make the BB-8 move forward 5 times.
-        Take a close look at the code below. What do you think will happen when you click "Run"?: Take a close look at the code below. What do you think will happen when you click "Run"?
-        The repeat block will `move the bird forward` 5 times, taking him to the pig.: The repeat block will `move the bird forward` 5 times, taking him to the pig.
         The repeat block will make the BB-8 move forward 5 times.: The repeat block will make the BB-8 move forward 5 times.
+        What do you think will happen when you click "Run"?: What do you think will happen when you click "Run"?
       courseC_multi_starWars_predict2:
         BB-8 will collect all of the scrap metal with no problems.: BB-8 will collect all of the scrap metal with no problems.
         BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.: BB-8 will not travel far enough in the first loop in order to get all of the scrap metal.
@@ -7429,23 +7463,17 @@ en:
         I don't know.: I don't know.
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
         'The bee will move to the cloud and try to get nectar, no matter what. ': 'The bee will move to the cloud and try to get nectar, no matter what. '
-        ? The cloud is blocking the view. There could be a flower or honeycomb under this cloud. If there is a flower, the bee will need to collect one nectar. If it is a honeycomb, the bee will need to make one honey. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        : The cloud is blocking the view. There could be a flower or honeycomb under this cloud. If there is a flower, the bee will need to collect one nectar. If it is a honeycomb, the bee will need to make one honey. Take a good look at the code below.  What do you think will happen after you click "Run"?
         ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
         : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect nectar once. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        ? The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect one nectar. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
-        : The cloud is blocking the view. There could be a flower under this cloud. If there is a flower, the bee will need to collect one nectar. If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
       courseD_multi_bee_conditionals7_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
         Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..: Incorrect. Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb..
         Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: Incorrect. The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
-        Look carefully at the code below.  What do you think will happen after you click "Run"?: Look carefully at the code below.  What do you think will happen after you click "Run"?
         ? 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
         : 'Look carefully at the code below.  What do you think will happen after you click "Run"? Remember: there will only ever bee *one* honeycomb or *one* flower behind each cloud.'
         The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.: The `if at flower` block lets the bee get nectar at each flower and honey at each honeycomb.
@@ -7604,15 +7632,14 @@ en:
       courseE_multi_farmer_predict1:
         Correct!: Correct!
         I don't know: I don't know
-        ? Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
-        : Incorrect. The farmer will move forward, then make a choice when she gets to the sprout. If the sprout is lettuce, then she will pick lettuce until it is gone. Else, she will pick corn until it is gone.
+        ? Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : Incorrect. The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        'Look closely at the code below.  What do you think will happen when you click "Run"? ': 'Look closely at the code below.  What do you think will happen when you click "Run"? '
         Nothing. The farmer will remain standing still: Nothing. The farmer will remain standing still
-        The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn: The farmer will go to the sprout and if it is lettuce, she will try to pick lettuce. Otherwise, she will try to pick corn
-        The farmer will go to the sprout and try to pick lettuce no matter what.: The farmer will go to the sprout and try to pick lettuce no matter what.
-        ? The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
-        : The farmer will move forward, then make a choice when she gets to the sprout.  If it is lettuce, then she will pick lettuce until it is gone.  Else, she will pick corn until it is gone.
-        ? We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
-        : We aren't sure what plants we are picking here. This plant could be a lettuce or a corn, so we are using an 'if/else' block to make the program work in either case. What will happen when you press the 'Run' button here?
+        ? The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        : The `if` statement will help the farmer check if there is a path ahead.  If there is, she will move forward.  Else, if there is no path, she will pick as much lettuce as there is and then turn left.
+        The farmer will correctly travel the path, picking all of the lettuce along the way.: The farmer will correctly travel the path, picking all of the lettuce along the way.
+        The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.: The farmer will try to pick lettuce at every space, then run into the wall at the end of the path.
       courseE_multi_farmer_predict2:
         Correct!: Correct!
         I don't know.: I don't know.
@@ -7621,7 +7648,7 @@ en:
         : Incorrect. There is a pumpkin and the 'repeat until at pumpkin' block will make sure that the farmer does not keep going once she reaches the pumpkin.
         ? The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
         : The 'repeat until at pumpkin' block will make sure that the farmer starts walking and does not stop until she reaches the pumpkin. Then she will collect the pumpkin.
-        The farmer will not anywhere because there's no pumpkin in the first place.: The farmer will not anywhere because there's no pumpkin in the first place.
+        The farmer will not walk anywhere because there's no pumpkin in the first place.: The farmer will not walk anywhere because there's no pumpkin in the first place.
         The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.: The farmer will walk only until she gets to the pumpkin, then she will pick the pumpkin.
         The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.: The farmer will walk until she can't walk any further, then try to pick a pumpkin that's not there.
         What do you think will happen in this puzzle when you press 'Run'?: What do you think will happen in this puzzle when you press 'Run'?
@@ -7693,9 +7720,10 @@ en:
       courseF_multi_bee_conditionals1_predict1:
         Correct!: Correct!
         I don't know.: I don't know.
+        ? If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
+        : If there is not a flower the bee should do nothing. Take a good look at the code below.  What do you think will happen after you click "Run"?
         Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.: Incorrect. The `if at flower` block assures that the bee will try to get nectar if there is a flower under the cloud.
-        Take a good look at the code below.  What do you think will happen after you click "Run"?: Take a good look at the code below.  What do you think will happen after you click "Run"?
         The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.: The `if at flower` block assures that the bee will only try to get nectar if there is a flower under the cloud.
         The bee will move to the cloud and only try to get nectar if there is a flower underneath.: The bee will move to the cloud and only try to get nectar if there is a flower underneath.
         'The bee will move to the cloud and then do nothing, no matter what. ': 'The bee will move to the cloud and then do nothing, no matter what. '
@@ -7782,6 +7810,9 @@ en:
         I'd like to, but am concerned about the costs: I'd like to, but am concerned about the costs
         No. I'm definitely not going to take the AP Exam: No. I'm definitely not going to take the AP Exam
         Yes, definitely.: Yes, definitely.
+      csp_subgoal_experiment_consent:
+        No Thanks.: No Thanks.
+        Yes, I agree! I want to participate in the subgoal labels study.: Yes, I agree! I want to participate in the subgoal labels study.
       cspu3_assess1_callfunction:
         <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>: <img src="https://images.code.org/1e6e2ade2c674f2598399750559db179-image-1475364949194.png" width=200>
         <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>: <img src="https://images.code.org/3bbf2c9851d43b7fbf583ca2f12dad2d-image-1475365214242.png" width=150>
@@ -8976,10 +9007,11 @@ en:
         This multiple choice is all about the presidents of the United States.: This multiple choice is all about the presidents of the United States.
         Who was the first president of the USA?: Who was the first president of the USA?
       unique level name here:
-        ? '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
-        : '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png" style="width: 100px; border: 1px solid #f2f2f2">'
-        When run, where will the sprite `my_sprite` be located?: When run, where will the sprite `my_sprite` be located?
+        Question: Question
+        description here: description here
         right answer: right answer
+        title: title
+        wrong answer: wrong answer
       valid contracts multi:
         Pick the best answer to the question.: Pick the best answer to the question.
         Valid Contracts: Valid Contracts

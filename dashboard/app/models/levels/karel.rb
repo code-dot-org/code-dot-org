@@ -2,21 +2,20 @@
 #
 # Table name: levels
 #
-#  id                       :integer          not null, primary key
-#  game_id                  :integer
-#  name                     :string(255)      not null
-#  created_at               :datetime
-#  updated_at               :datetime
-#  level_num                :string(255)
-#  ideal_level_source_id    :integer
-#  solution_level_source_id :integer
-#  user_id                  :integer
-#  properties               :text(65535)
-#  type                     :string(255)
-#  md5                      :string(255)
-#  published                :boolean          default(FALSE), not null
-#  notes                    :text(65535)
-#  audit_log                :text(65535)
+#  id                    :integer          not null, primary key
+#  game_id               :integer
+#  name                  :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  level_num             :string(255)
+#  ideal_level_source_id :integer
+#  user_id               :integer
+#  properties            :text(65535)
+#  type                  :string(255)
+#  md5                   :string(255)
+#  published             :boolean          default(FALSE), not null
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
 #
 # Indexes
 #
@@ -85,28 +84,28 @@ class Karel < Maze
       <block type="maze_forever"></block>
     </category>
     <category name="Harvester">
-      <block type="harvester_ifAtCrop"></block>
-      <block type="harvester_ifAtCropElse"></block>
-      <block type="harvester_untilAtCrop"></block>
       <block type="harvester_ifHasCrop"></block>
+      <block type="harvester_ifHasCropElse"></block>
+      <block type="harvester_untilHasCrop"></block>
       <block type="harvester_whileHasCrop"></block>
+
       <block type="harvester_corn"></block>
       <block type="harvester_pumpkin"></block>
       <block type="harvester_lettuce"></block>
-      <block type="harvester_ifAtCorn"></block>
-      <block type="harvester_ifAtCornElse"></block>
-      <block type="harvester_untilAtCorn"></block>
+
       <block type="harvester_ifHasCorn"></block>
+      <block type="harvester_ifHasCornElse"></block>
+      <block type="harvester_untilHasCorn"></block>
       <block type="harvester_whileHasCorn"></block>
-      <block type="harvester_ifAtPumpkin"></block>
-      <block type="harvester_ifAtPumpkinElse"></block>
-      <block type="harvester_untilAtPumpkin"></block>
+
       <block type="harvester_ifHasPumpkin"></block>
+      <block type="harvester_ifHasPumpkinElse"></block>
+      <block type="harvester_untilHasPumpkin"></block>
       <block type="harvester_whileHasPumpkin"></block>
-      <block type="harvester_ifAtLettuce"></block>
-      <block type="harvester_ifAtLettuceElse"></block>
-      <block type="harvester_untilAtLettuce"></block>
+
       <block type="harvester_ifHasLettuce"></block>
+      <block type="harvester_ifHasLettuceElse"></block>
+      <block type="harvester_untilHasLettuce"></block>
       <block type="harvester_whileHasLettuce"></block>
     </category>
     <category name="Planter">

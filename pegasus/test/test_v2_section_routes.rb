@@ -107,7 +107,8 @@ class V2SectionRoutesTest < SequelTestCase
               "login_type" => "email",
               "grade" => nil,
               "code" => nil,
-              "stage_extras" => false
+              "stage_extras" => false,
+              "pairing_allowed" => true,
             }
           ],
           JSON.parse(@pegasus.last_response.body)

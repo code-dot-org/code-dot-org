@@ -83,6 +83,11 @@ class CsvToSqlTable
   def column_name_to_schema(name)
     i = name.rindex('_')
 
+    if i.nil?
+      ChatClient.log "Bad column name (#{name}) for table (#{@table}), see this " \
+        "<a href='https://drive.google.com/drive/folders/0B0OFfWqnAHxhM0prRGd0UWczMUU'>Google Drive</a> folder."
+    end
+
     if name.ends_with?('!') || name.ends_with?('*')
       type_flag = name[-1..-1]
       name = name[0..-2]
@@ -138,7 +143,7 @@ class GSheetToCsv
 
     begin
       mtime = @file.mtime
-      ctime = File.mtime(@csv_path).utc if File.file?(@csv_path)
+      ctime = File.mtime(@csv_path) if File.file?(@csv_path)
       return mtime.to_s == ctime.to_s
     rescue GoogleDrive::Error => e
       ChatClient.log "<p>Error getting modified time for <b>#{@gsheet_path}<b> from Google Drive.</p><pre><code>#{e.message}</code></pre>", color: 'yellow'

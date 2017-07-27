@@ -18,6 +18,8 @@ var BaseDialog = React.createClass({
     useDeprecatedGlobalStyles: React.PropTypes.bool,
     children: React.PropTypes.node,
     assetUrl: React.PropTypes.func,
+    fixedWidth: React.PropTypes.number,
+    fixedHeight: React.PropTypes.number,
   },
 
   componentDidMount: function () {
@@ -75,21 +77,25 @@ var BaseDialog = React.createClass({
       });
     }
 
+    let wrapperClassNames = "";
     let modalClassNames = "modal";
     let modalBodyClassNames = "modal-body";
     let modalBackdropClassNames = "modal-backdrop";
 
     if (this.props.useUpdatedStyles) {
+      wrapperClassNames = "dashboard-styles";
       modalBodyClassNames = "";
       modalBodyStyle = {
         background: `#fff top center url(${this.props.assetUrl('media/dialog/achievement_background.png')}) no-repeat`,
-        height: 480,
-        overflow: 'hidden',
+        height: this.props.fixedHeight,
+        maxHeight: !this.props.fixedHeight && '80vh',
+        overflowX: 'hidden',
+        overflowY: this.props.fixedHeight ? 'hidden' : 'auto',
         borderRadius: 4,
       };
       bodyStyle = Object.assign({}, bodyStyle, {
-        width: 700,
-        marginLeft: -350,
+        width: this.props.fixedWidth || 700,
+        marginLeft: (-this.props.fixedWidth / 2) || -350,
       });
       xCloseStyle = {
         position: 'absolute',
@@ -128,7 +134,7 @@ var BaseDialog = React.createClass({
     }
 
     return (
-      <div>
+      <div className={wrapperClassNames}>
         <div className={modalBackdropClassNames} onClick={this.closeDialog}></div>
         {body}
       </div>
