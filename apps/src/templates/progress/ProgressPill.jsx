@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
 
@@ -59,19 +58,13 @@ const ProgressPill = React.createClass({
     let style = {
       ...styles.levelPill,
       ...BUBBLE_COLORS[status],
-      ...(url && hoverStyle)
+      ...(url && hoverStyle),
+      ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
+      // After making progressBubbles experiment permanent, we can get rid of
+      // fontSize prop
+      fontSize: 16,
+      minWidth: 70
     };
-
-    if (experiments.isEnabled('progressBubbles')) {
-      style = {
-        ...style,
-        ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
-        // After making progressBubbles experiment permanent, we can get rid of
-        // fontSize prop
-        fontSize: 16,
-        minWidth: 70
-      };
-    }
 
     // If we're passed a tooltip, we also need to reference it from our div
     let tooltipProps = {};
