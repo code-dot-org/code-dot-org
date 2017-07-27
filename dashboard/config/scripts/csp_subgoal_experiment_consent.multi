@@ -4,15 +4,6 @@ right 'Yes, I agree! I want to participate in the subgoal labels study.'
 right 'No Thanks.'
 
 markdown <<MARKDOWN
-By checking `Yes, I agree!` I am agreeing to:
-
-* being occasionally contacted by the researchers
-
-* being randomly selected into one of two groups for the subgoal labels study
-
-* to the best of my ability, having my students use all or most of the version of Unit 3 assigned to me as part of the study
-
-* along with my students, helping to contribute to furthering knowledge about computer science and learning!
 
 MARKDOWN
 
