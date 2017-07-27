@@ -10,14 +10,11 @@ import progress from './progress';
 import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
-import PublishDialog from '../templates/publishDialog/PublishDialog';
 import {
   showShareDialog,
-  hideShareDialog,
   unpublishProject as unpublishProjectAction,
 } from './components/shareDialogRedux';
 import {
-  showPublishDialog as showPublishDialogAction,
   publishProject as publishProjectAction,
 } from '../templates/publishDialog/publishDialogRedux';
 
@@ -195,7 +192,7 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
-          onShowPublishDialog={showPublishDialog}
+          onConfirmPublish={publishProject}
           onUnpublish={unpublishProject}
           canShareSocial={canShareSocial}
         />
@@ -205,29 +202,6 @@ function shareProject() {
 
     getStore().dispatch(showShareDialog());
   });
-}
-
-function showPublishDialog() {
-  var publishDialog = document.getElementById('publish-dialog');
-  if (!publishDialog) {
-    publishDialog = document.createElement('div');
-    publishDialog.setAttribute('id', 'publish-dialog');
-    document.body.appendChild(publishDialog);
-  }
-
-  ReactDOM.render(
-    <Provider store={getStore()}>
-      <PublishDialog
-        onConfirmPublish={publishProject}
-      />
-    </Provider>,
-    publishDialog
-  );
-
-  const projectId = window.dashboard.project.getCurrentId();
-  const projectType = dashboard.project.getStandaloneApp();
-  getStore().dispatch(hideShareDialog());
-  getStore().dispatch(showPublishDialogAction(projectId, projectType));
 }
 
 function publishProject(projectId, projectType) {

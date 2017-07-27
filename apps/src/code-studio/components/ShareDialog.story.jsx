@@ -3,6 +3,7 @@ import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 import ShareDialog from './ShareDialog';
 import shareDialogReducer, { showShareDialog } from './shareDialogRedux';
+import publishDialogReducer from '../../templates/publishDialog/publishDialogRedux';
 
 const fakei18n = {
     t(s) {
@@ -21,7 +22,10 @@ const fakei18n = {
   };
 
 function configureStore() {
-  return createStore(combineReducers({shareDialog: shareDialogReducer}));
+  return createStore(combineReducers({
+    shareDialog: shareDialogReducer,
+    publishDialog: publishDialogReducer,
+  }));
 }
 
 export default storybook => {
@@ -39,7 +43,7 @@ export default storybook => {
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -65,7 +69,7 @@ export default storybook => {
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -91,7 +95,7 @@ export default storybook => {
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -118,7 +122,7 @@ export default storybook => {
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -144,7 +148,7 @@ export default storybook => {
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -170,7 +174,7 @@ export default storybook => {
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
@@ -195,8 +199,7 @@ export default storybook => {
               <ShareDialog
                 isOwner={true}
                 isPublished={false}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -220,8 +223,7 @@ export default storybook => {
               <ShareDialog
                 isOwner={true}
                 isPublished={true}
-                onClose={storybook.action('close')}
-                onShowPublishDialog={storybook.action('show publish dialog')}
+                onConfirmPublish={storybook.action('publish')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
