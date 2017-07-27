@@ -156,7 +156,7 @@ const JoinSectionSuccessNotification = React.createClass({
         type="success"
         notice={i18n.sectionsNotificationSuccess()}
         details={i18n.sectionsNotificationJoinSuccess({sectionName: this.props.sectionName})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -170,7 +170,7 @@ const LeaveSectionSuccessNotification = React.createClass({
         type="success"
         notice={i18n.sectionsNotificationSuccess()}
         details={i18n.sectionsNotificationLeaveSuccess({sectionName: this.props.sectionName})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -184,7 +184,7 @@ const JoinSectionNotFoundNotification = React.createClass({
         type="failure"
         notice={i18n.sectionsNotificationFailure()}
         details={i18n.sectionsNotificationJoinNotFound({sectionId: this.props.sectionId})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -198,7 +198,7 @@ const JoinSectionFailNotification = React.createClass({
         type="failure"
         notice={i18n.sectionsNotificationFailure()}
         details={i18n.sectionsNotificationJoinFail({sectionId: this.props.sectionId})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -212,7 +212,7 @@ const JoinSectionExistsNotification = React.createClass({
         type="warning"
         notice={i18n.sectionsNotificationSuccess()}
         details={i18n.sectionsNotificationJoinExists({sectionName: this.props.sectionName})}
-        dismissible={true}
+        dismissible
       />
     );
   }
