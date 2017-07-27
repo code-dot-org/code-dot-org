@@ -55,7 +55,7 @@ const RecentCourses = React.createClass({
             topFourCourses.map((course, index) =>
             <div key={index}>
               <CourseCard
-                name={course.title}
+                title={course.title}
                 description={course.description}
                 link={course.link}
                 isRtl={isRtl}

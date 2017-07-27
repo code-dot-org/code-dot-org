@@ -46,7 +46,7 @@ const SeeMoreCourses = React.createClass({
             {courses.map((course, index) =>
               <div key={index}>
                 <CourseCard
-                  name={course.name}
+                  title={course.title}
                   description={course.description}
                   link={course.link}
                   isRtl={isRtl}
