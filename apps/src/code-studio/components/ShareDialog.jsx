@@ -8,6 +8,8 @@ import color from "../../util/color";
 import * as applabConstants from '../../applab/constants';
 import * as gamelabConstants from '../../gamelab/constants';
 import { hideShareDialog } from './shareDialogRedux';
+import { showPublishDialog } from '../../templates/publishDialog/publishDialogRedux';
+import PublishDialog from '../../templates/publishDialog/PublishDialog';
 
 function select(event) {
   event.target.select();
@@ -78,6 +80,7 @@ var ShareDialog = React.createClass({
     onClickPopup: React.PropTypes.func.isRequired,
     onClickExport: React.PropTypes.func,
     onClose: React.PropTypes.func.isRequired,
+    onConfirmPublish: React.PropTypes.func.isRequired,
     onShowPublishDialog: React.PropTypes.func.isRequired,
     onUnpublish: React.PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
@@ -189,49 +192,50 @@ var ShareDialog = React.createClass({
     }
     const {isOwner, isPublished} = this.props;
     return (
-      <BaseDialog
-        useDeprecatedGlobalStyles
-        isOpen={this.props.isOpen}
-        handleClose={this.close}
-        hideBackdrop={this.props.hideBackdrop}
-      >
-        <div>
-          {image}
-          <div id="project-share" className={modalClass} style={{position: 'relative'}}>
-            <p className="dialog-title">{this.props.i18n.t('project.share_title')}</p>
-            {this.props.isAbusive &&
-             <AbuseError
-               i18n={{
-                 tos: this.props.i18n.t('project.abuse.tos'),
-                 contact_us: this.props.i18n.t('project.abuse.contact_us')
-               }}
-               className="alert-error"
-               style={styles.abuseStyle}
-               textStyle={styles.abuseTextStyle}
-             />}
-            {showShareWarning &&
-             <p style={styles.shareWarning}>
-               {this.props.i18n.t('project.share_u13_warning')}
-             </p>}
-            <p style={{fontSize: 20}}>
-              {this.props.i18n.t('project.share_copy_link')}
-            </p>
-            <div style={{marginBottom: 10}}>
-              <input
-                type="text"
-                id="sharing-input"
-                onClick={select}
-                readOnly="true"
-                value={this.props.shareUrl}
-                style={{cursor: 'copy', width: 465}}
-              />
-            </div>
-            <div className="social-buttons">
-              <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
-                <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
-                <span>Send to phone</span>
-              </a>
-              {isOwner && !isPublished &&
+      <div>
+        <BaseDialog
+          useDeprecatedGlobalStyles
+          isOpen={this.props.isOpen}
+          handleClose={this.close}
+          hideBackdrop={this.props.hideBackdrop}
+        >
+          <div>
+            {image}
+            <div id="project-share" className={modalClass} style={{position: 'relative'}}>
+              <p className="dialog-title">{this.props.i18n.t('project.share_title')}</p>
+              {this.props.isAbusive &&
+              <AbuseError
+                i18n={{
+                  tos: this.props.i18n.t('project.abuse.tos'),
+                  contact_us: this.props.i18n.t('project.abuse.contact_us')
+                }}
+                className="alert-error"
+                style={styles.abuseStyle}
+                textStyle={styles.abuseTextStyle}
+              />}
+              {showShareWarning &&
+              <p style={styles.shareWarning}>
+                {this.props.i18n.t('project.share_u13_warning')}
+              </p>}
+              <p style={{fontSize: 20}}>
+                {this.props.i18n.t('project.share_copy_link')}
+              </p>
+              <div style={{marginBottom: 10}}>
+                <input
+                  type="text"
+                  id="sharing-input"
+                  onClick={select}
+                  readOnly="true"
+                  value={this.props.shareUrl}
+                  style={{cursor: 'copy', width: 465}}
+                />
+              </div>
+              <div className="social-buttons">
+                <a id="sharing-phone" href="" onClick={this.showSendToPhone}>
+                  <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
+                  <span>Send to phone</span>
+                </a>
+                {isOwner && !isPublished &&
                 <button
                   id="sharing-publish"
                   style={styles.button}
@@ -239,8 +243,8 @@ var ShareDialog = React.createClass({
                 >
                   Publish
                 </button>
-              }
-              {isOwner && isPublished &&
+                }
+                {isOwner && isPublished &&
                 <button
                   id="sharing-unpublish"
                   style={styles.button}
@@ -248,56 +252,65 @@ var ShareDialog = React.createClass({
                 >
                   Unpublish
                 </button>
-              }
-              {this.props.canShareSocial &&
-               <span>
+                }
+                {this.props.canShareSocial &&
+                <span>
                  {this.state.isFacebookAvailable &&
-                  <a
-                    href={facebookShareUrl}
-                    target="_blank"
-                    onClick={this.props.onClickPopup.bind(this)}
-                  >
-                    <i className="fa fa-facebook"></i>
-                  </a>}
-                 {this.state.isTwitterAvailable &&
+                 <a
+                   href={facebookShareUrl}
+                   target="_blank"
+                   onClick={this.props.onClickPopup.bind(this)}
+                 >
+                   <i className="fa fa-facebook"></i>
+                 </a>}
+                  {this.state.isTwitterAvailable &&
                   <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
                     <i className="fa fa-twitter"></i>
                   </a>}
                </span>}
+              </div>
+              {this.state.showSendToPhone &&
+              <SendToPhone
+                channelId={this.props.channelId}
+                appType={this.props.appType}
+                styles={{label:{marginTop: 15, marginBottom: 0}}}
+              />}
+              {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
+              <AdvancedShareOptions
+                i18n={this.props.i18n}
+                onClickExport={this.props.onClickExport}
+                expanded={this.state.showAdvancedOptions}
+                onExpand={this.showAdvancedOptions}
+                channelId={this.props.channelId}
+                embedOptions={embedOptions}
+              />}
+              {/* Awkward that this is called continue-button, when text is
+               close, but id is (unfortunately) used for styling */}
+              <button
+                id="continue-button"
+                style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
+                onClick={this.close}
+              >
+                {this.props.i18n.t('project.close')}
+              </button>
             </div>
-            {this.state.showSendToPhone &&
-             <SendToPhone
-               channelId={this.props.channelId}
-               appType={this.props.appType}
-               styles={{label:{marginTop: 15, marginBottom: 0}}}
-             />}
-            {(this.props.appType === 'applab' || this.props.appType === 'gamelab') &&
-             <AdvancedShareOptions
-               i18n={this.props.i18n}
-               onClickExport={this.props.onClickExport}
-               expanded={this.state.showAdvancedOptions}
-               onExpand={this.showAdvancedOptions}
-               channelId={this.props.channelId}
-               embedOptions={embedOptions}
-             />}
-            {/* Awkward that this is called continue-button, when text is
-            close, but id is (unfortunately) used for styling */}
-            <button
-              id="continue-button"
-              style={{position: 'absolute', right: 0, bottom: 0, margin: 0}}
-              onClick={this.close}
-            >
-              {this.props.i18n.t('project.close')}
-            </button>
           </div>
-        </div>
-      </BaseDialog>
+        </BaseDialog>
+        <PublishDialog
+          onConfirmPublish={this.props.onConfirmPublish}
+        />
+      </div>
+
     );
   }
 });
 
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
-}), dispatch => ({
+}), (dispatch, ownProps) => ({
   onClose: () => dispatch(hideShareDialog()),
+  onShowPublishDialog() {
+    dispatch(hideShareDialog());
+    dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
+  },
 }))(ShareDialog);
