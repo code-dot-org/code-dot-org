@@ -13,9 +13,40 @@ social:
   "og:video:height": ""
   "og:video:type": ""
 ---
+# Research at Code.org
+
+Code.org partners with researchers for a variety of types of studies.  Researchers also conduct conduct their own work using data provided by Code.org (see below) or just on their own using Code.org materials.
+
+## Research, Papers and Reports about Code.org Materials and Programs
+
+[Computational Thinking in Italian Schools: Quantitative Data and Teachers’ Sentiment Analysis after Two Years of "Programma il Futuro" Project -- July, 2017 (ACM Digital Library)](http://dl.acm.org/citation.cfm?id=3059040)
+
+* In two years more than one million [Italian] students have been engaged and have completed a total of 10 million hours of informatics using Code.org materials in schools.  A detailed analysis of quantitative and qualitative data about the project is presented and areas for improvement are identified. One of the most interesting observations appears to corroborate the hypothesis that an exposure to informatics since the early age is important to attract students independently from their gender.
+
+[Hour of Code impact study 2016 (PDF)](/files/HourOfCodeImpactStudy_Jan2017.pdf) 
+
+* Findings show that after completing one Hour of Code activity students report liking computer science more, feel that they are better able to learn computer science, and are better at computer science than their peers.
 
 
-# Anonymized data for research purposes
+Other reports
+
+- [Code.org Evaluation Report 2015-16 (PDF)](/files/EvaluationReport2015-16.pdf)
+- [Hour of Code impact report and teacher survey 2015](/about/evaluation/hourofcode)
+- [Code.org Evaluation Report 2014-15](/about/evaluation/summary)
+
+
+## Research Partnerships
+
+
+* Dr. Briana Morrison - University of Nebraska at Omaha [Subgoal Labels Study in CSP Unit 3](subgoal-labels-study)
+* Dr. Rene Kizilcec - Stanford University - Social Belonging in Computer Science Classrooms
+* Dr. Maya Israel - University of Illinois
+* Dr. Justin Reich & Kevin Robinson - MIT Teaching Systems Lab - Unconscious Bias in Computer Science classrooms
+* Dr. Chris Piech - Stanford University - Using machine learning to identify predictive problem solving pathways for students
+
+***
+
+## Anonymized data for research purposes
 
 Numerous academic organizations have asked to access anonymized course-progress data from our [Code Studio](http://studio.code.org) tutorials in order to research the student learning process and ideas for improving on it.
 
