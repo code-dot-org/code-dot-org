@@ -14,9 +14,6 @@ import {
   showShareDialog,
   unpublishProject as unpublishProjectAction,
 } from './components/shareDialogRedux';
-import {
-  publishProject as publishProjectAction,
-} from '../templates/publishDialog/publishDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -192,7 +189,6 @@ function shareProject() {
           onClickPopup={popupWindow}
           // TODO: Can I not proliferate the use of global references to Applab somehow?
           onClickExport={window.Applab ? window.Applab.exportApp : null}
-          onConfirmPublish={publishProject}
           onUnpublish={unpublishProject}
           canShareSocial={canShareSocial}
         />
@@ -204,18 +200,30 @@ function shareProject() {
   });
 }
 
-function publishProject(projectId, projectType) {
-  getStore().dispatch(publishProjectAction(projectId, projectType))
-    .then(projectData => {
-      window.dashboard.project.setPublishedAt(projectData.publishedAt);
-    });
-}
-
 function unpublishProject(projectId) {
   getStore().dispatch(unpublishProjectAction(projectId)).then(() => {
     window.dashboard.project.setPublishedAt(null);
   });
 }
+
+function setupReduxSubscribers(store) {
+  let state = {};
+  store.subscribe(() => {
+    let lastState = state;
+    state = store.getState();
+
+    // Update the project state when a PublishDialog state transition indicates
+    // that a project has just been published.
+    if (
+      lastState.publishDialog &&
+      lastState.publishDialog.lastPublishedAt !==
+        state.publishDialog.lastPublishedAt
+    ) {
+      window.dashboard.project.setPublishedAt(state.publishDialog.lastPublishedAt);
+    }
+  });
+}
+setupReduxSubscribers(getStore());
 
 function remixProject() {
   if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {

@@ -25,6 +25,7 @@ export default storybook => {
             <Provider store={store}>
               <PublishDialog
                 onConfirmPublish={storybook.action('publish')}
+                onClose={storybook.action('close')}
               />
             </Provider>
           );
@@ -41,6 +42,7 @@ export default storybook => {
             <Provider store={store}>
               <PublishDialog
                 onConfirmPublish={storybook.action('publish')}
+                onClose={storybook.action('close')}
               />
             </Provider>
           );

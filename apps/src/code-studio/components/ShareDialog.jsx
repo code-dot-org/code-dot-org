@@ -81,7 +81,6 @@ var ShareDialog = React.createClass({
     onClickPopup: React.PropTypes.func.isRequired,
     onClickExport: React.PropTypes.func,
     onClose: React.PropTypes.func.isRequired,
-    onConfirmPublish: React.PropTypes.func.isRequired,
     onShowPublishDialog: React.PropTypes.func.isRequired,
     onUnpublish: React.PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
@@ -295,9 +294,7 @@ var ShareDialog = React.createClass({
             </div>
           </div>
         </BaseDialog>
-        <PublishDialog
-          onConfirmPublish={this.props.onConfirmPublish}
-        />
+        <PublishDialog/>
       </div>
 
     );
@@ -309,7 +306,12 @@ export default connect(state => ({
 }), (dispatch, ownProps) => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog() {
-    dispatch(hideShareDialog());
-    dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
+    // Allow onShowPublishDialog to be overridden when passed explicitly as a prop
+    if (ownProps.onShowPublishDialog) {
+      ownProps.onShowPublishDialog();
+    } else {
+      dispatch(hideShareDialog());
+      dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
+    }
   },
 }))(ShareDialog);
