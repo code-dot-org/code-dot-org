@@ -12,7 +12,7 @@ ActiveRecord::Base.connection.create_table(:dummy_forms, temporary: true) do |t|
 end
 
 class DummyFormWithRequiredFields < DummyForm
-  def required_fields
+  def self.required_fields
     [
       :first_field,
       :second_field

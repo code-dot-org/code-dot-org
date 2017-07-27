@@ -138,9 +138,9 @@ module Pd::ProgramRegistrationForm
         merge(LIABILITY_WAIVER_OPTIONS).
         merge(DEMOGRAPHICS_OPTIONS).freeze
     end
-  end
 
-  def required_fields
-    self.class.options.keys
+    def required_fields
+      options.keys
+    end
   end
 end

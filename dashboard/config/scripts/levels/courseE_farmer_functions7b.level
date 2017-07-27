@@ -6,7 +6,7 @@
   "user_id": 285,
   "properties": {
     "skin": "harvester",
-    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":3,\"range\":3,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":4,\"range\":4,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":2,\"range\":2,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
+    "serialized_maze": "[[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":2,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[1],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[2],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":1,\"value\":1,\"range\":1,\"possibleFeatures\":[3],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}],[{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false},{\"tileType\":0,\"possibleFeatures\":[0],\"startsHidden\":false}]]",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -22,75 +22,30 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "start_direction": "0",
+    "start_direction": "1",
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Make a second function that lets the farmer get all of the produce down a path, then brings her back to where she began.",
+    "instructions": "Help the farmer find her way down this confusing path and to the pumpkin by turning left at the corn and right at the lettuce.",
     "instructions_important": "false",
-    "ideal": "25",
-    "markdown_instructions": "Make a second function that lets the farmer get all of the produce down a path, then brings her back to where she began.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the `check and pick` function inside your new function to collect all of the produce.\",\"hint_id\":\"courseE_farmer_functions7b_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8b77459bd8790e239b464885337e2aa1/courseE_farmer_functions7b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each of the side paths are to the left. Your function to take the farmer down these paths will involve checking if there is a path to the left, turning to the left, checking for plants along the path, then turning around and getting back on the main path.\",\"hint_id\":\"courseE_farmer_functions7b_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/db14d5a908fbfcb719e1ea22879eb0b6/courseE_farmer_functions7b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Once the farmer reaches the end of one of the side paths, she will need to return to the main path. To do this, turn right twice, move to the main path using a `while path ahead` block, then turn to the left to face the right way on the main path.\",\"hint_id\":\"courseE_farmer_functions7b_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fed90c77e14fc76753def4e5c42ac605/courseE_farmer_functions7b.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To move along the main path, use the `while path ahead` block. Inside this loop, `move forward` and use your function to harvest side paths if there is a path to the left.\",\"hint_id\":\"courseE_farmer_functions7b_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e34c43429b8d9beebc13b8106e341aac/courseE_farmer_functions7b.mp3\"}]",
+    "ideal": "10",
+    "markdown_instructions": "*\"This harvest is a-MAZE-ing!\"*\r\n\r\nHelp the farmer find her way down this confusing path and to the pumpkin by turning left at the corn and right at the lettuce.  \r\n\r\n*(Don't forget to collect all of the produce along the way!)",
+    "authored_hints": "[]",
     "callout_json": "[]",
     "step_speed": "1",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-14 20:29:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:01:10 +0000\",\"changed\":[\"toolbox_blocks\",\"start_direction\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:03:54 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:05:57 +0000\",\"changed\":[\"toolbox_blocks\",\"ideal\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:11:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:21:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:21:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:22:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:03:37 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
-    <start_blocks>
-      <xml>
-        <block type="when_run" deletable="false" movable="false"/>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">check and pick</title>
-          <statement name="STACK">
-            <block type="harvester_ifAtCropElse">
-              <title name="LOC">Corn</title>
-              <statement name="DO">
-                <block type="harvester_whileHasCrop">
-                  <title name="LOC">Corn</title>
-                  <statement name="DO">
-                    <block type="harvester_corn"/>
-                  </statement>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="harvester_ifAtCropElse">
-                  <title name="LOC">Lettuce</title>
-                  <statement name="DO">
-                    <block type="harvester_whileHasCrop">
-                      <title name="LOC">Lettuce</title>
-                      <statement name="DO">
-                        <block type="harvester_lettuce"/>
-                      </statement>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="harvester_ifAtCrop">
-                      <title name="LOC">Pumpkin</title>
-                      <statement name="DO">
-                        <block type="harvester_whileHasCrop">
-                          <title name="LOC">Pumpkin</title>
-                          <statement name="DO">
-                            <block type="harvester_pumpkin"/>
-                          </statement>
-                        </block>
-                      </statement>
-                    </block>
-                  </statement>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-      </xml>
-    </start_blocks>
     <toolbox_blocks>
       <xml>
         <category name="Actions">
@@ -108,16 +63,11 @@
           <block type="harvester_lettuce"/>
         </category>
         <category name="Loops">
-          <block type="controls_repeat">
-            <title name="TIMES">5</title>
-          </block>
-          <block type="harvester_whileHasCrop" limit="3">
+          <block type="harvester_untilHasPumpkin"/>
+          <block type="harvester_whileHasCrop">
             <title name="LOC">Corn</title>
           </block>
           <block type="maze_untilBlocked"/>
-          <block type="harvester_untilAtCrop">
-            <title name="LOC">Pumpkin</title>
-          </block>
         </category>
         <category name="Conditionals">
           <block type="maze_if">
@@ -129,132 +79,61 @@
           <block type="harvester_ifAtCropElse">
             <title name="LOC">Corn</title>
           </block>
-          <block type="harvester_ifAtCrop">
+          <block type="harvester_ifHasCrop">
             <title name="LOC">Corn</title>
           </block>
-        </category>
-        <category name="Functions" custom="PROCEDURE">
-          <block type="procedures_callnoreturn" limit="1">
-            <mutation name="check and pick"/>
+          <block type="harvester_untilHasPumpkin"/>
+          <block type="harvester_whileHasCrop">
+            <title name="LOC">Corn</title>
           </block>
-          <block type="procedures_defnoreturn" uservisible="false">
-            <mutation/>
-            <title name="NAME">check and pick</title>
-          </block>
+          <block type="maze_untilBlocked"/>
         </category>
+        <category name="Functions" custom="PROCEDURE"/>
       </xml>
     </toolbox_blocks>
     <solution_blocks>
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="maze_untilBlocked">
+            <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="maze_moveForward">
+                <block type="maze_move">
+                  <title name="DIR">moveForward</title>
                   <next>
-                    <block type="procedures_callnoreturn" limit="1">
-                      <mutation name="harvest path"/>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </next>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">harvest path</title>
-          <statement name="STACK">
-            <block type="maze_if">
-              <title name="DIR">isPathLeft</title>
-              <statement name="DO">
-                <block type="maze_turn">
-                  <title name="DIR">turnLeft</title>
-                  <next>
-                    <block type="maze_untilBlocked">
+                    <block type="harvester_ifAtCropElse">
+                      <title name="LOC">Corn</title>
                       <statement name="DO">
-                        <block type="maze_move">
-                          <title name="DIR">moveForward</title>
+                        <block type="harvester_corn">
                           <next>
-                            <block type="procedures_callnoreturn" limit="1">
-                              <mutation name="check and pick"/>
+                            <block type="maze_turn">
+                              <title name="DIR">turnLeft</title>
                             </block>
                           </next>
                         </block>
                       </statement>
-                      <next>
-                        <block type="maze_turn">
-                          <title name="DIR">turnRight</title>
-                          <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnRight</title>
+                      <statement name="ELSE">
+                        <block type="harvester_ifAtCrop">
+                          <title name="LOC">Lettuce</title>
+                          <statement name="DO">
+                            <block type="harvester_lettuce">
                               <next>
-                                <block type="maze_untilBlocked">
-                                  <statement name="DO">
-                                    <block type="maze_move">
-                                      <title name="DIR">moveForward</title>
-                                    </block>
-                                  </statement>
-                                  <next>
-                                    <block type="maze_turn">
-                                      <title name="DIR">turnLeft</title>
-                                    </block>
-                                  </next>
+                                <block type="maze_turn">
+                                  <title name="DIR">turnRight</title>
                                 </block>
                               </next>
                             </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-            </block>
-          </statement>
-        </block>
-        <block type="procedures_defnoreturn">
-          <mutation/>
-          <title name="NAME">check and pick</title>
-          <statement name="STACK">
-            <block type="harvester_ifAtCropElse">
-              <title name="LOC">Corn</title>
-              <statement name="DO">
-                <block type="harvester_whileHasCrop">
-                  <title name="LOC">Corn</title>
-                  <statement name="DO">
-                    <block type="harvester_corn"/>
-                  </statement>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="harvester_ifAtCropElse">
-                  <title name="LOC">Lettuce</title>
-                  <statement name="DO">
-                    <block type="harvester_whileHasCrop">
-                      <title name="LOC">Lettuce</title>
-                      <statement name="DO">
-                        <block type="harvester_lettuce"/>
-                      </statement>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="harvester_ifAtCrop">
-                      <title name="LOC">Pumpkin</title>
-                      <statement name="DO">
-                        <block type="harvester_whileHasCrop">
-                          <title name="LOC">Pumpkin</title>
-                          <statement name="DO">
-                            <block type="harvester_pumpkin"/>
                           </statement>
                         </block>
                       </statement>
                     </block>
-                  </statement>
+                  </next>
                 </block>
               </statement>
+              <next>
+                <block type="harvester_pumpkin"/>
+              </next>
             </block>
-          </statement>
+          </next>
         </block>
       </xml>
     </solution_blocks>

@@ -10,7 +10,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var commonMsg = require('@cdo/locale');
 var flappyMsg = require('./locale');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -567,7 +567,9 @@ Flappy.init = function (config) {
     studioApp().init(config);
 
     var rightButton = document.getElementById('rightButton');
-    dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    if (rightButton) {
+      dom.addClickTouchEvent(rightButton, Flappy.onPuzzleComplete);
+    }
   };
 
   studioApp().setPageConstants(config);
@@ -575,7 +577,11 @@ Flappy.init = function (config) {
   ReactDOM.render(
     <Provider store={getStore()}>
       <AppView
-        visualizationColumn={<FlappyVisualizationColumn/>}
+        visualizationColumn={
+          <FlappyVisualizationColumn
+            showFinishButton={!config.level.isProjectLevel}
+          />
+        }
         onMount={onMount}
       />
     </Provider>,
@@ -654,6 +660,10 @@ Flappy.reset = function (first) {
  */
 // XXX This is the only method used by the templates!
 Flappy.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Flappy.onPuzzleComplete();
+  }
+
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -670,7 +680,7 @@ Flappy.runButtonClick = function () {
   studioApp().attempts++;
   Flappy.execute();
 
-  if (level.freePlay) {
+  if (level.freePlay && !level.isProjectLevel) {
     var rightButtonCell = document.getElementById('right-button-cell');
     rightButtonCell.className = 'right-button-cell-enabled';
   }
@@ -732,7 +742,7 @@ Flappy.execute = function () {
     whenRunButton: {code: generator('when_run')}
   };
 
-  codegen.evalWithEvents({Flappy: api}, events).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents({Flappy: api}, events).hooks.forEach(hook => {
     Flappy[hook.name] = hook.func;
   });
 
@@ -770,7 +780,7 @@ Flappy.onPuzzleComplete = function () {
   // Special case for Flappy level 1 where you have the right blocks, but you
   // don't flap to the goal.  Note: See pivotal item 66362504 for why we
   // check for both TOO_FEW_BLOCKS_FAIL and LEVEL_INCOMPLETE_FAIL here.
-  if (level.id === "1" &&
+  if (level.appSpecificFailError &&
     (Flappy.testResults === TestResults.TOO_FEW_BLOCKS_FAIL ||
      Flappy.testResults === TestResults.LEVEL_INCOMPLETE_FAIL)) {
     // Feedback message is found in level.other1StarError.

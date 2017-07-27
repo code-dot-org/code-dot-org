@@ -23,7 +23,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   setup do
     # Don't actually call the geocoder.
-    Pd::Workshop.stubs(:process_location)
+    Geocoder.stubs(:search).with('Seattle, WA')
   end
 
   # Action: Index
@@ -227,7 +227,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'admins can create workshops' do
     sign_in @admin
 
-    Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
       assert_response :success
@@ -241,7 +240,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   test 'workshop organizers can create workshops' do
     sign_in @organizer
 
-    Pd::Workshop.expects(:process_location)
     assert_creates(Pd::Workshop) do
       post :create, params: {pd_workshop: workshop_params}
       assert_response :success
@@ -297,14 +295,12 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
 
   test 'admins can update any workshop' do
     sign_in @admin
-    Pd::Workshop.expects(:process_location)
     put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
     assert_response :success
   end
 
   test 'organizers can update their workshops' do
     sign_in @organizer
-    Pd::Workshop.expects(:process_location)
     put :update, params: {id: @workshop.id, pd_workshop: workshop_params}
     assert_response :success
   end
@@ -326,14 +322,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     user: -> {@facilitator},
     params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
   )
-
-  test 'updating with the same location_address does not re-process location' do
-    sign_in @organizer
-    params = workshop_params
-    params[:location_address] = @workshop.location_address
-    Pd::Workshop.expects(:process_location).never
-    put :update, params: {id: @workshop.id, pd_workshop: params}
-  end
 
   test 'updating with notify true sends detail change notification emails' do
     sign_in @admin

@@ -1,0 +1,26 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2017-06-03T01:01:33.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "version": "1",
+    "href": "pixelation/pixelation.html",
+    "skip_dialog": true,
+    "markdown_instructions": "# Make your own image of any size\r\n\r\n![](https://images.code.org/01c15fed4f1a2c6c3af531edc35e736e-image-1439596066108.png)\r\n![](https://images.code.org/24efcaa184d1fc852f37c32911b3b87c-image-1439596070178.png)\r\n![](https://images.code.org/c9a5d0fd5ba445b7f6b5744e08b50e49-image-1439596071878.png)\r\n![](https://images.code.org/f14e1b8dd722b0ca5bc54fa96b34f2eb-image-1439596074236.png)\r\n![](https://images.code.org/fe938c0c16453b9d461b4023098079df-image-1439596075744.png)\r\n![](https://images.code.org/02c88a7da51289b2f2d1f64bd8c97b28-image-1439596077514.png)\r\n![](https://images.code.org/309e3157dcfd91956181007f483f8e58-image-1439596079084.png)\r\n\r\n\r\n**Directions:**\r\n\r\n* Encode an image of anything you like using `binary`. Type 0s and 1s below to create an image.\r\n* You might want to do some planning and sketching with graph paper first.\r\n* Get creative! What kind of drawing can you create?",
+    "hex": "false",
+    "instructions": "Encode an image of anything you like using binary. The binary language will be represented with '0' and '1' only.",
+    "instructions_important": "false",
+    "hide_encoding_controls": "false",
+    "v1_initial_width": "8",
+    "v1_initial_height": "8",
+    "v1_hide_sliders": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-03 01:03:21 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Pixelation>

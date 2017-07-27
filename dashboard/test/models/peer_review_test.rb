@@ -326,4 +326,10 @@ class PeerReviewTest < ActiveSupport::TestCase
     @script.update(peer_reviews_to_complete: 2)
     assert_nil PeerReview.get_review_completion_status(@user, @script)
   end
+
+  test 'clear_data clears the data column' do
+    peer_review = create :peer_review, data: 'data'
+    peer_review.clear_data
+    assert_equal PeerReview::SYSTEM_DELETED_DATA, peer_review.data
+  end
 end

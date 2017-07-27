@@ -1,0 +1,28 @@
+professional_learning_course 'CS Principles Facilitator in Training'
+login_required true
+student_detail_progress_view true
+
+stage 'Welcome', flex_category: 'required'
+named_level 'welcome-csp-novice'
+
+stage 'Tuesday'
+level 'csp-tuesday-unit', progression: 'Unit Reflection'
+level 'csp-tuesday-unit2', progression: 'Unit Reflection'
+named_level 'csp-tuesday-pedagogy'
+named_level 'csp-tuesday-facilitation'
+
+stage 'Wednesday'
+level 'csp-wednesday-unit', progression: 'Unit Reflection'
+level 'csp-wednesday-unit2', progression: 'Unit Reflection'
+named_level 'csp-wednesday-pedagogy'
+named_level 'csp-wednesday-facilitation'
+
+stage 'Thursday'
+level 'csp-thursday-unit', progression: 'Unit Reflection'
+level 'csp-thursday-unit2', progression: 'Unit Reflection'
+level 'csp-thursday-pedagogy', progression: 'Pedagogy Reflection'
+level 'csp-thursday-pedagogy2', progression: 'Pedagogy Reflection'
+named_level 'csp-thursday-facilitation'
+
+stage 'Wrap Up'
+named_level 'csp-novice-congrats'

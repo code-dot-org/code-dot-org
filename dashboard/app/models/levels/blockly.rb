@@ -2,21 +2,20 @@
 #
 # Table name: levels
 #
-#  id                       :integer          not null, primary key
-#  game_id                  :integer
-#  name                     :string(255)      not null
-#  created_at               :datetime
-#  updated_at               :datetime
-#  level_num                :string(255)
-#  ideal_level_source_id    :integer
-#  solution_level_source_id :integer
-#  user_id                  :integer
-#  properties               :text(65535)
-#  type                     :string(255)
-#  md5                      :string(255)
-#  published                :boolean          default(FALSE), not null
-#  notes                    :text(65535)
-#  audit_log                :text(65535)
+#  id                    :integer          not null, primary key
+#  game_id               :integer
+#  name                  :string(255)      not null
+#  created_at            :datetime
+#  updated_at            :datetime
+#  level_num             :string(255)
+#  ideal_level_source_id :integer
+#  user_id               :integer
+#  properties            :text(65535)
+#  type                  :string(255)
+#  md5                   :string(255)
+#  published             :boolean          default(FALSE), not null
+#  notes                 :text(65535)
+#  audit_log             :text(65535)
 #
 # Indexes
 #
@@ -49,6 +48,7 @@ class Blockly < Level
     slider_speed
     disable_param_editing
     disable_variable_editing
+    disable_procedure_autopopulate
     use_modal_function_editor
     use_contract_editor
     default_num_example_blocks
@@ -295,7 +295,8 @@ class Blockly < Level
 
       # Blockly expects fn_successCondition and fn_failureCondition to be inside a 'goals' object
       if level_prop['fn_successCondition'] || level_prop['fn_failureCondition']
-        level_prop['goal'] = {fn_successCondition: level_prop['fn_successCondition'], fn_failureCondition: level_prop['fn_failureCondition']}
+        level_prop['goal'] ||= {}
+        level_prop['goal'].merge!({fn_successCondition: level_prop['fn_successCondition'], fn_failureCondition: level_prop['fn_failureCondition']})
         level_prop.delete('fn_successCondition')
         level_prop.delete('fn_failureCondition')
       end

@@ -51,6 +51,7 @@
     "instructions": "Do This",
     "start_blocks": "rect(0,0,30,50);",
     "show_d_pad": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

@@ -143,6 +143,27 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
+  test "create new teacher sends email" do
+    teacher_params = @default_params.update(user_type: 'teacher')
+    assert_creates(User) do
+      request.cookies[:pm] = 'send_new_teacher_email'
+      post :create, params: {user: teacher_params}
+    end
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal 'Welcome to Code.org!', mail.subject
+    assert mail.body.to_s =~ /Hadi Partovi/
+  end
+
+  test "create new student does not send email" do
+    student_params = @default_params
+
+    assert_creates(User) do
+      post :create, params: {user: student_params}
+    end
+    assert ActionMailer::Base.deliveries.empty?
+  end
+
   test "create as student requires email" do
     @default_params.delete(:email)
 
@@ -325,6 +346,88 @@ class RegistrationsControllerTest < ActionController::TestCase
       assigns(:user).errors.full_messages
   end
 
+  test 'upgrade word student to password without secret words fails' do
+    student_without_password = create(:student_in_word_section)
+    sign_in student_without_password
+
+    user_params = {
+      email: 'upgraded@code.org',
+      password: '1234567',
+      password_confirmation: '1234567'
+    }
+
+    post :upgrade, params: {
+      user: user_params
+    }
+
+    student_without_password.reload
+    assert student_without_password.teacher_managed_account?
+    refute student_without_password.provider.nil?
+  end
+
+  test 'upgrade word student to password with secret words succeeds' do
+    student_without_password = create(:student_in_word_section)
+    sign_in student_without_password
+
+    user_params = {
+      email: 'upgraded@code.org',
+      password: '1234567',
+      password_confirmation: '1234567',
+      secret_words: student_without_password.secret_words
+    }
+    post :upgrade, params: {
+      user: user_params
+    }
+
+    student_without_password.reload
+    refute student_without_password.teacher_managed_account?
+    assert student_without_password.provider.nil?
+  end
+
+  test 'upgrade picture student to password succeeds' do
+    student_without_password = create(:student_in_picture_section)
+    sign_in student_without_password
+
+    user_params = {
+      email: 'upgraded@code.org',
+      password: '1234567',
+      password_confirmation: '1234567',
+    }
+    post :upgrade, params: {
+      user: user_params
+    }
+
+    student_without_password.reload
+    refute student_without_password.teacher_managed_account?
+    assert student_without_password.provider.nil?
+  end
+
+  test 'upgrade student to password account with parent email succeeds and sends email' do
+    student_without_password = create(:student_in_picture_section)
+    sign_in student_without_password
+
+    parent_email = 'upgraded_parent@code.org'
+
+    user_params = {
+      parent_email: parent_email,
+      username: 'upgrade_username',
+      password: '1234567',
+      password_confirmation: '1234567',
+    }
+    post :upgrade, params: {
+      user: user_params
+    }
+
+    student_without_password.reload
+    refute student_without_password.teacher_managed_account?
+    assert student_without_password.provider.nil?
+
+    mail = ActionMailer::Base.deliveries.first
+    assert_equal [parent_email], mail.to
+    assert_equal 'Login information for Code.org', mail.subject
+    assert mail.body.to_s =~ /Your child/
+  end
+
   test 'deleting sets deleted at on a user' do
     user = create :user
     sign_in user
@@ -338,6 +441,11 @@ class RegistrationsControllerTest < ActionController::TestCase
   # The next several tests explore profile changes for users with or without
   # passwords.  Examples of users without passwords are users that authenticate
   # via oauth (a third-party account), or students with a picture password.
+
+  # Tech debt note:
+  # These tests make multiple controller calls per-test, which is not fully supported as per http://api.rubyonrails.org/v4.2/classes/ActionController/TestCase.html
+  # Currently this is worked around by calling current_user.reload in registrations_controller.rb, but ideally
+  # these tests should be fixed up to avoid this issue.
 
   test "editing password of student-without-password is not allowed" do
     student_without_password = create :student

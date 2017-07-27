@@ -747,7 +747,7 @@ nn:
       4:
         image: 'notes/C2_paper_airplanes_4.png'
         text: "Når vi skal lage sjokolade er det mange store skritt i prosessen. Og hvert av disse store skrittene består av flere små skritt. Og det er ulike oppskrifter, eller algoritmer, avhengig av hvordan vi vil at sjokoladen skal smak. Hvert skritt er viktig, også de små. Så hvis et skritt mangler kan ikke de andre gjøres ferdige. Å lage algoritmer som andre kan forstå er veldig viktig. Det er derfor hvert skritt må skrives ned, så resultatet blir det sammen uansett hvem som gjør det."
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: 'notes/C2_playlab_createastory_1.png'
         text: "Hittil har du laga ein animasjon eller ei historie som gjer akkurat det samme kvar gong du køyrer den. Nå kan du lage eit interaktivt spel som du faktisk kan spele."
@@ -823,7 +823,7 @@ nn:
       3:
         image: 'notes/C3_bee_conditionals_3.png'
         text: "I dette eksempelet skal vi si; HVIS den lilla blomsten har mer enn 0 nektar, da tar vi nektar. Det vil få bien vår til å fortsette å ta nektar så lenge det er noe igjen å ta. Ta-daaa!"
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: 'notes/C3_debugging_bee_1.png'
         text: "Har du noen gang hørt om å feilsøke i et program? Det er måten du finner ut hva som ikke fungerer. Når du feilsøker koden, kan du finne og fjerne feil."

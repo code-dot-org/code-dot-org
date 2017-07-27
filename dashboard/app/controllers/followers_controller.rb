@@ -5,7 +5,7 @@
 
 class FollowersController < ApplicationController
   before_action :authenticate_user!, except: [:student_user_new, :student_register]
-  before_action :load_section, only: [:create, :student_user_new, :student_register]
+  before_action :load_section, only: [:create, :create_sync, :student_user_new, :student_register]
 
   # join a section as a logged in student
   def create
@@ -52,8 +52,21 @@ class FollowersController < ApplicationController
   # GET /join/XXXXXX
   # if logged in, join the section, if not logged in, present a form to create a new user and log in
   def student_user_new
+    # Though downstream validations would raise an exception, we redirect to the admin directory to
+    # improve user experience.
+    if current_user && current_user.admin?
+      redirect_to admin_directory_path
+      return
+    end
+
     if @section && @section.workshop_section?
       redirect_to controller: 'pd/workshop_enrollment', action: 'join_section', section_code: @section.code
+      return
+    end
+
+    if @section && @section.provider_managed?
+      provider = I18n.t(@section.login_type, scope: 'section.type')
+      redirect_to root_path, alert: I18n.t('follower.error.provider_managed_section', provider: provider)
       return
     end
 

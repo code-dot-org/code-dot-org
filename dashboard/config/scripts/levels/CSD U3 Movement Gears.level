@@ -76,10 +76,12 @@
       "multiplyOperator": null,
       "divideOperator": null
     },
+    "encrypted_examples": "rUEYw3FZFg8Y3hEEKropeclmNYtPRhQFrhnyRvXGQl7j+ue4rMyNILjpQzHT\n1ylI65Q7a0kDMkWQ2fQkJYG9jg==\n",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 18:05:32 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

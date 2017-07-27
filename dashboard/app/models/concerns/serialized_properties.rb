@@ -56,6 +56,8 @@ module SerializedProperties
     end
 
     def define_methods_for_property(property_name)
+      # NOTE: To remove `property_name` from the key space, simply set the value to `nil`. The
+      # `before_save` then removes `property_name` from the key space.
       define_method(property_name) {read_attribute('properties')[property_name]}
       define_method("#{property_name}=") {|value| read_attribute('properties')[property_name] = value}
       define_method("#{property_name}?") {!!JSONValue.value(read_attribute('properties')[property_name])}
@@ -64,6 +66,8 @@ module SerializedProperties
     ENCRYPTED_PROPERTY_REGEX = /^encrypted_/
 
     def define_methods_for_encrypted_property(property_name)
+      # NOTE: To remove `property_name` from the key space, simply set the value to `nil`. The
+      # `before_save` then removes `property_name` from the key space.
       cleartext_property_name = property_name.gsub(ENCRYPTED_PROPERTY_REGEX, '')
 
       define_method(cleartext_property_name) do

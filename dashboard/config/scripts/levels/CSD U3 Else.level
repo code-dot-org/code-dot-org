@@ -103,7 +103,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "EQSPoJUz7baZOoq6rm1a/BZG8h8lQCQ9oDMc6jC0mZzcinlIQP3b9m4wuKW3\njMBc\n",
+    "encrypted_examples": "Lo4F1s/QiV2tcb1TU+DZ37BrsrjoEJuG7eNfd4gOkDv1aj0OmcgUHP4+zks1\nU9cYJ+V/b1xBwK34rTKhtU9caw==\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -112,6 +112,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 17:38:57 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

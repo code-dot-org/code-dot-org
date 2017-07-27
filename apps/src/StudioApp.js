@@ -15,7 +15,7 @@ import * as aceMode from './acemode/mode-javascript_codeorg';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import * as assets from './code-studio/assets';
 import * as blockUtils from './block_utils';
-import * as codegen from './codegen';
+import * as codegen from './lib/tools/jsinterpreter/codegen';
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
@@ -44,6 +44,7 @@ import {assets as assetsApi} from './clientApi';
 import {blocks as makerDropletBlocks} from './lib/kits/maker/dropletConfig';
 import {closeDialog as closeInstructionsDialog} from './redux/instructionsDialog';
 import {getStore} from './redux';
+import {initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning} from './redux/runState';
@@ -506,6 +507,8 @@ StudioApp.prototype.init = function (config) {
   if (config.isLegacyShare && config.hideSource) {
     this.setupLegacyShareView();
   }
+
+  initializeContainedLevel();
 
   this.emit('afterInit');
 };
@@ -1157,7 +1160,7 @@ function resizePinnedBelowVisualizationArea() {
   var visualization = document.getElementById('visualization');
   if (visualization) {
     var parent = $(visualization).parent();
-    if (parent.attr('id') === 'phoneFrame') {
+    if (parent.attr('id') === 'phoneFrameWrapper') {
       // Phone frame itself doesnt have height. Loop through children
       parent.children().each(function () {
         top += $(this).outerHeight(true);
@@ -2286,6 +2289,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     disableIfElseEditing: utils.valueOr(config.level.disableIfElseEditing, false),
     disableParamEditing: utils.valueOr(config.level.disableParamEditing, true),
     disableVariableEditing: utils.valueOr(config.level.disableVariableEditing, false),
+    disableProcedureAutopopulate: utils.valueOr(config.level.disableProcedureAutopopulate, false),
     useModalFunctionEditor: utils.valueOr(config.level.useModalFunctionEditor, false),
     useContractEditor: utils.valueOr(config.level.useContractEditor, false),
     disableExamples: utils.valueOr(config.level.disableExamples, false),

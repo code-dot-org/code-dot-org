@@ -53,6 +53,7 @@
     "project_template_level_name": "CSD U3 abstraction space template",
     "palette_category_at_start": "sprites",
     "pause_animations_by_default": "false",
+    "show_debug_watch": "true",
     "contained_level_names": null
   },
   "published": true,

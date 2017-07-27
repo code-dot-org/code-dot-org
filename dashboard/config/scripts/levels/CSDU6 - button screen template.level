@@ -15,9 +15,9 @@
             "buttonR"
           ],
           "1": [
-            "down",
-            "press",
-            "up"
+            "\"down\"",
+            "\"press\"",
+            "\"up\""
           ]
         }
       }
@@ -65,6 +65,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 21:01:03 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":34,\"changed_by_email\":\"brad@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

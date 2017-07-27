@@ -275,7 +275,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, in_section: true, attended: true)
 
     assert workshop.account_required_for_attendance?
-    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(2)
+    Pd::Enrollment.any_instance.expects(:send_exit_survey).times(1)
 
     workshop.send_exit_surveys
   end
@@ -424,41 +424,88 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
   end
 
-  test 'time constraints' do
-    # TIME_CONSTRAINTS_BY_SUBJECT: SUBJECT_ECS_PHASE_4 => {min_days: 2, max_days: 3, max_hours: 18}
-    workshop_2_3_18 = create :pd_workshop,
-      course: Pd::Workshop::COURSE_ECS,
-      subject: Pd::Workshop::SUBJECT_ECS_PHASE_4,
-      num_sessions: 2
-    assert_equal 2, workshop_2_3_18.min_attendance_days
-    assert_equal 2, workshop_2_3_18.effective_num_days
-    assert_equal 12, workshop_2_3_18.effective_num_hours
+  test 'min_attendance_days with no min_days constraint returns 1' do
+    @workshop.expects(:time_constraint).with(:min_days).returns(nil)
+    assert_equal 1, @workshop.min_attendance_days
+  end
 
-    # Add 2 more sessions for a total of 4. It should cap at 3 days / 18 hours
-    workshop_2_3_18.sessions << [create(:pd_session), create(:pd_session)]
-    assert_equal 3, workshop_2_3_18.effective_num_days
-    assert_equal 18, workshop_2_3_18.effective_num_hours
+  test 'min_attendance_days with min_days constraint returns that constraint' do
+    @workshop.expects(:time_constraint).with(:min_days).returns(100)
+    assert_equal 100, @workshop.min_attendance_days
+  end
 
-    # No entry: min 1, max unlimited
-    workshop_no_constraint = create :pd_workshop, course: Pd::Workshop::COURSE_ADMIN, num_sessions: 2
-    assert_equal 1, workshop_no_constraint.min_attendance_days
-    assert_equal 2, workshop_no_constraint.effective_num_days
-    assert_equal 12, workshop_no_constraint.effective_num_hours
+  test 'effective_num_days with no max_days constraint returns the session count' do
+    @workshop.sessions.expects(:count).returns(10)
+    @workshop.expects(:time_constraint).with(:max_days).returns(nil)
+    assert_equal 10, @workshop.effective_num_days
+  end
+
+  test 'effective_num_days with max_days constraint lower than the session count returns the constraint' do
+    @workshop.sessions.expects(:count).returns(10)
+    @workshop.expects(:time_constraint).with(:max_days).returns(5)
+    assert_equal 5, @workshop.effective_num_days
+  end
+
+  test 'effective_num_days with max_days constraint greater than the session count returns the session count' do
+    @workshop.sessions.expects(:count).returns(10)
+    @workshop.expects(:time_constraint).with(:max_days).returns(50)
+    assert_equal 10, @workshop.effective_num_days
+  end
+
+  test 'effective_num_hours with no max_hours constraint returns the total session hours' do
+    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
+    @workshop.expects(:time_constraint).with(:max_hours).returns(nil)
+    assert_equal 20, @workshop.effective_num_hours
+  end
+
+  test 'effective_num_hours with max_hours constraint lower than the session hours returns the constraint' do
+    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
+    @workshop.expects(:time_constraint).with(:max_hours).returns(15)
+    assert_equal 15, @workshop.effective_num_hours
+  end
+
+  test 'effective_num_hours with max_hours constraint greater than the session hours returns the session hours' do
+    @workshop.sessions.expects(:map).returns([5, 5, 5, 5]) # 20 hours over 4 sessions
+    @workshop.expects(:time_constraint).with(:max_hours).returns(50)
+    assert_equal 20, @workshop.effective_num_hours
+  end
+
+  test 'teacherCon workshops are capped at 33.5 hours' do
+    workshop_csd_teachercon = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    workshop_csp_teachercon = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSD,
+      subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    assert_equal 33.5, workshop_csd_teachercon.effective_num_hours
+    assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
+  end
+
+  test 'csp summer workshops are capped at 33.5 hours' do
+    workshop_csp_summer = create :pd_workshop,
+      course: Pd::Workshop::COURSE_CSP,
+      subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP,
+      num_sessions: 5,
+      each_session_hours: 8
+
+    assert_equal 33.5, workshop_csp_summer.effective_num_hours
   end
 
   test 'errors in teacher reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil)
-    3.times do
-      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
-    end
-    2.times do
-      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
-    end
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times {create :pd_enrollment, workshop: workshop}
+    create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -472,17 +519,13 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in organizer reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email')
-    3.times do
-      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
-    end
-    2.times do
-      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
-    end
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
 
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times {create :pd_enrollment, workshop: workshop}
+    create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -496,17 +539,12 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'errors in facilitator reminders in send_reminder_for_upcoming_in_days do not stop batch' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil).then.returns(nil).then.returns(nil).then.returns(nil).then.raises(RuntimeError, 'bad email').then.returns(nil)
-    3.times do
-      Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail)
-    end
-    2.times do
-      Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail)
-    end
-
+    Pd::WorkshopMailer.expects(:teacher_enrollment_reminder).returns(mock_mail).times(3)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).returns(mock_mail).times(2)
     Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).returns(mock_mail)
 
     workshop = create :pd_workshop, facilitators: [create(:facilitator), create(:facilitator)]
-    3.times {create :pd_enrollment, workshop: workshop}
+    create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
     e = assert_raises RuntimeError do
@@ -517,12 +555,40 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert e.message.include? 'bad email'
   end
 
+  test 'facilitator reminders are skipped when the facilitator is also the organizer' do
+    mock_mail = stub
+    mock_mail.stubs(:deliver_now).returns(nil)
+
+    facilitator = create :facilitator
+    organizer = create :workshop_organizer
+
+    # The organizer is also a facilitator, and should not receive a facilitator reminder email.
+    workshop = create :pd_workshop, organizer: organizer, facilitators: [organizer, facilitator]
+    Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
+
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).with(facilitator, workshop).returns(mock_mail)
+    Pd::WorkshopMailer.expects(:facilitator_enrollment_reminder).with(organizer, workshop).never
+    Pd::WorkshopMailer.expects(:organizer_enrollment_reminder).with(workshop).returns(mock_mail)
+    Pd::Workshop.send_reminder_for_upcoming_in_days(1)
+  end
+
   test 'workshop starting date picks the day of the first session' do
     session = create :pd_session, start: Date.today + 15.days
     session2 = create :pd_session, start: Date.today + 20.days
     @workshop.sessions << session
     @workshop.sessions << session2
     assert_equal session.start, @workshop.workshop_starting_date
+    assert_equal session2.start, @workshop.workshop_ending_date
+  end
+
+  test 'workshop date range string for single session workshop' do
+    workshop = create :pd_workshop, num_sessions: 1
+    assert_equal Date.today.strftime('%B %e, %Y'), workshop.workshop_date_range_string
+  end
+
+  test 'workshop date range string for multi session workshop' do
+    workshop = create :pd_workshop, num_sessions: 2
+    assert_equal "#{Date.today.strftime('%B %e, %Y')} - #{Date.tomorrow.strftime('%B %e, %Y')}", workshop.workshop_date_range_string
   end
 
   test 'workshop_dashboard_url' do
@@ -558,6 +624,76 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert @workshop.organizer_or_facilitator?(facilitator)
     refute @workshop.organizer_or_facilitator?(another_organizer)
     refute @workshop.organizer_or_facilitator?(another_facilitator)
+  end
+
+  test 'process_location is called when location_address changes' do
+    @workshop.expects(:process_location).once
+    @workshop.update!(location_address: '1501 4th Ave, Seattle WA')
+
+    # Changing another field does not process location
+    @workshop.expects(:process_location).never
+    @workshop.update!(location_name: 'Code.org')
+
+    # Setting location_address to the same value does not process location
+    @workshop.expects(:process_location).never
+    @workshop.update!(location_address: '1501 4th Ave, Seattle WA')
+  end
+
+  test 'process_location' do
+    mock_geocoder_result = [
+      OpenStruct.new(
+        latitude: 47.6101003,
+        longitude: -122.33746,
+        formatted_address: '1501 4th Ave, Seattle, WA 98101, USA'
+      )
+    ]
+    expected_processed_location = '{"latitude":47.6101003,"longitude":-122.33746,"formatted_address":"1501 4th Ave, Seattle, WA 98101, USA"}'
+    Honeybadger.expects(:notify).never
+
+    # Normal lookup
+    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').returns(mock_geocoder_result)
+    @workshop.location_address = '1501 4th Ave, Seattle WA'
+    @workshop.process_location
+    assert_equal expected_processed_location, @workshop.processed_location
+
+    # Nonexistent location clears processed_location
+    Geocoder.expects(:search).with('nonexistent location').returns([])
+    @workshop.location_address = 'nonexistent location'
+    @workshop.process_location
+    assert_nil @workshop.processed_location
+
+    # Don't bother looking up blank addresses
+    Geocoder.expects(:search).never
+    @workshop.location_address = ''
+    @workshop.process_location
+    assert_nil @workshop.processed_location
+
+    # Retry on errors
+    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).then.returns(mock_geocoder_result).twice
+    @workshop.location_address = '1501 4th Ave, Seattle WA'
+    @workshop.process_location
+    assert_equal expected_processed_location, @workshop.processed_location
+
+    # Repeated errors are logged to honeybadger
+    Honeybadger.expects(:notify).once
+    Geocoder.expects(:search).with('1501 4th Ave, Seattle WA').raises(SocketError).twice
+    @workshop.location_address = '1501 4th Ave, Seattle WA'
+    @workshop.process_location
+    assert_nil @workshop.processed_location
+  end
+
+  test 'suppress_reminders?' do
+    suppressed = [
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_FIT),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
+      create(:pd_workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_FIT),
+    ]
+
+    refute @workshop.suppress_reminders?
+    suppressed.each do |workshop|
+      assert workshop.suppress_reminders?
+    end
   end
 
   private

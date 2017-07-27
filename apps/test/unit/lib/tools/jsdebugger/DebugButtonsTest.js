@@ -6,7 +6,7 @@ import {expect} from '../../../../util/configuredChai';
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
 
 const EXAMPLE_CODE = `

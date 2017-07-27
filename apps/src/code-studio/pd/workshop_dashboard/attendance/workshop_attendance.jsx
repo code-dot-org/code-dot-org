@@ -9,6 +9,7 @@ import React from 'react';
 import SessionTime from '../components/session_time';
 import Spinner from '../components/spinner';
 import SessionAttendance from './session_attendance';
+import Permission from '../../permission';
 import color from '@cdo/apps/util/color';
 import {
   Row,
@@ -66,10 +67,13 @@ const WorkshopAttendance = React.createClass({
     return this.state.workshopState === 'Ended';
   },
 
+  componentWillMount() {
+    this.permission = new Permission();
+  },
+
   componentDidMount() {
     this.loadSummary();
     this.shouldUseNewAttendance = JSON.parse(window.dashboard.workshop.newAttendance);
-    this.isAdmin = window.dashboard.workshop.permission === "workshop_admin";
   },
 
   loadSummary() {
@@ -147,7 +151,7 @@ const WorkshopAttendance = React.createClass({
   },
 
   renderAdminControls() {
-    if (this.shouldUseNewAttendance || !this.state.accountRequiredForAttendance || !this.isAdmin) {
+    if (this.shouldUseNewAttendance || !this.state.accountRequiredForAttendance || !this.permission.isWorkshopAdmin) {
       return null;
     }
     const toggleClass = this.state.adminOverride ? "fa fa-toggle-on fa-lg" : "fa fa-toggle-off fa-lg";
@@ -173,7 +177,7 @@ const WorkshopAttendance = React.createClass({
       return <Spinner/>;
     }
 
-    const isReadOnly = this.hasWorkshopEnded() && !this.isAdmin;
+    const isReadOnly = this.hasWorkshopEnded() && !this.permission.isWorkshopAdmin;
 
     let intro = null;
     if (isReadOnly) {
@@ -182,7 +186,7 @@ const WorkshopAttendance = React.createClass({
           This workshop has ended. The attendance view is now read-only.
         </p>
       );
-    } else if (this.hasWorkshopEnded() && this.isAdmin) {
+    } else if (this.hasWorkshopEnded() && this.permission.isWorkshopAdmin) {
       intro = (
         <p>
           This workshop has ended. As an admin, you can still update attendance.

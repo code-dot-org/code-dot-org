@@ -75,6 +75,7 @@
   "penUp":"ยกดินสอขึ้น",
   "reinfFeedbackMsg":"นี่เป็นที่ของรูปวาดคุณ! คุณยังจะทำมันต่อ หรือจะเลือกปริศนาต่อไป",
   "setAlpha":"ตั้งค่าอัลฟา",
+  "setCharacter":"set character to {character}",
   "setColour":"ตั้งค่าสี",
   "setPattern":"ตั้งค่ารูปแบบ",
   "setWidth":"ตั้งค่าความกว้าง",

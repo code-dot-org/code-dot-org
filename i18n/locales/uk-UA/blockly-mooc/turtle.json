@@ -75,6 +75,7 @@
   "penUp":"підняти олівець",
   "reinfFeedbackMsg":"Ось готовий малюнок! Продовжуй роботу над ним, або перейди до наступної задачі.",
   "setAlpha":"встановити альфа",
+  "setCharacter":"set character to {character}",
   "setColour":"встановити колір",
   "setPattern":"встановити шаблон",
   "setWidth":"встановити ширину",

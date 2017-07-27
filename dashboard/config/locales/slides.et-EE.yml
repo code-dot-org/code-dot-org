@@ -1207,7 +1207,7 @@
           ei saa sooritada ka ülejäänud toiminguid. On väga tähtis luua algoritme,
           millest teised aru saavad. Seepärast tuleb iga samm kirja panna, nii et
           ükskõik kes seda teeb, oleks tulemus sama.  "
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Seni oled teinud animatsiooni või loo, mis teeb täpselt sama asja iga
@@ -1343,7 +1343,7 @@
         text: Selles näites ütleme, et KUI sinisel lillel on nektarit rohkem kui 0,
           korja nektarit. Seepeale kogub meie mesilane nektarit nii kaua, kuniks ta
           lille juurde jääb.
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Kas oled kunagi kuulnud terminit "debugging" ehk silumine? See on viis,

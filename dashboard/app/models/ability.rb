@@ -61,9 +61,10 @@ class Ability
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
+      can :index, Section, user_id: user.id
 
       if user.teacher?
-        can :read, Section, user_id: user.id
+        can :manage, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
         can :manage, Follower
@@ -175,7 +176,7 @@ class Ability
       end
     end
 
-    if user.persisted? && user.permission?(UserPermission::BLOCK_SHARE)
+    if user.persisted? && user.permission?(UserPermission::RESET_ABUSE)
       # let them change the hidden state
       can :manage, LevelSource
     end

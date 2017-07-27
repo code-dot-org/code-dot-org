@@ -1,5 +1,5 @@
 import {assert} from '../util/configuredChai';
-import JSInterpreter from '@cdo/apps/JSInterpreter';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 var testUtils = require('./../util/testUtils');
 
 var runState = require('@cdo/apps/redux/runState');

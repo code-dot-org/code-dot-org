@@ -24,7 +24,7 @@
 
 ## Tools
 
-- [Grant Permissions](/private/privileges)
+- [Grant Permissions](<%= CDO.studio_url('admin/permissions') %>)
 - [SOLR](http://solr.code.org:8983/solr/#/collection1/query)
 
 

@@ -7,13 +7,14 @@
 - tools << { name: "Pixelation widget", starts: 9, ends: 12, link: "/educate/csp/widgets#pixelation", description: "Learn about graphics foramts with this interactive widget.", long: "The pixelation widget gives students the chance to learn about how images are encoded with pixel data. Then they'll encode their own images in binary.", img: "/shared/images/fill-140x140/courses/logo_pixelation.png" }
 - tools << { name: "Cryptography widgets", starts: 9, ends: 12, link: "/educate/csp/widgets#cryptography", description: "Learn about cryptography with this interactive widget.", long: "These two widgets let students play with some classic schemes for both encrypting and \"cracking\" secret messages.", img: "/shared/images/fill-140x140/courses/logo_cryptography.png" }
 - tools << { name: "Internet simulator", starts: 9, ends: 12, link: "/educate/csp/widgets#internet-simulator", description: "A group of students can learn how the internet works by communciating with each other.", img: "/shared/images/fill-140x140/courses/logo_netsim.png" }
+- tools << { name: "Game Lab (beta)", starts: 9, ends: 12, link: "/educate/gamelab", description: "Create a game or animation.", long: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other.", img: "/shared/images/fill-140x140/courses/logo_gamelab.png" }
 
 .tools.courses{style: "margin-left: 0px; margin-top: 30px"}
   - [0,1].each do |row|
     - if row == 0
-      - tools_for_row = tools[0, 4]
+      - tools_for_row = tools[0, 5]
     - else
-      - tools_for_row = tools[4, 4]
+      - tools_for_row = tools[5, 5]
     .toolsrow{style: "clear: both"}
       - tools_for_row.each_with_index do |tool, index|
         - tool_index = row * 4  + index
@@ -26,7 +27,7 @@
 
     .detailrow{id: "detailrow-#{row}", style: "display: none; position: relative; clear: both; height: 180px; "}
       - tools_for_row.each_with_index do |tool, index|
-        - tool_index = row * 4 + index
+        - tool_index = row * 5 + index
         - width = tool[:layout] == "wide" ? 336 : 140
         - arrow_index = index
         .course.detailcontainer{id: "toolsextra-#{tool_index}", style: "display: none; color: grey; cursor: auto; position: absolute; top: 0px; left: 0px"}

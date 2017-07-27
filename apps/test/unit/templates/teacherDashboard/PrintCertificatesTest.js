@@ -1,0 +1,58 @@
+import { assert } from '../../../util/configuredChai';
+import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import React from 'react';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
+import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+
+const sectionId = 11;
+
+describe('PrintCertificates', () => {
+  throwOnConsoleErrors();
+  throwOnConsoleWarnings();
+
+  const wrapper = shallow(
+    <PrintCertificates
+      sectionId={sectionId}
+      assignmentName="playlab"
+    />
+  );
+
+  it('renders a form', () => {
+    assert(wrapper.is('form'));
+    assert(wrapper.props().action, '/certificates');
+  });
+
+  it('has a hidden input for the assigned script', () => {
+    assert(wrapper.childAt(0).is('input'));
+    assert.equal(wrapper.childAt(0).props().type, 'hidden');
+    assert.equal(wrapper.childAt(0).props().value, 'playlab');
+  });
+
+  it('has a submission button', () => {
+    assert.equal(wrapper.find('Button').length, 1);
+    assert.equal(wrapper.find('Button').props().text, 'Print certificates');
+  });
+
+  it('loads student names', finish => {
+    const xhr = sinon.useFakeXMLHttpRequest();
+    xhr.onCreate = request => {
+      setTimeout(() => {
+        const mockResponse = JSON.stringify([
+          {name: "Student A"},
+          {name: "Student B"},
+          {name: "Student C"},
+        ]);
+        request.respond(200, {'Content-Type': 'application/json'}, mockResponse);
+      }, 0);
+    };
+
+    wrapper.instance().submitForm = () => {
+      assert.deepEqual(wrapper.state('names'), ['Student A', 'Student B', 'Student C']);
+      finish();
+    };
+
+    assert.deepEqual(wrapper.state('names'), []);
+    wrapper.find('Button').simulate('click');
+  });
+});

@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "markdown_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Stage 16 Puzzle 13](/s/csd3/stage/16/puzzle/13) as an example.\r\n",
+    "markdown_instructions": "# User Controls\r\n\r\nNext, you'll want to make sure your user controls are working.  Create a function that makes your sprites respond to user controls as defined in your project guide.  You can use the function in in [Lesson 16 Puzzle 13](/s/csd3/stage/16/puzzle/13) as an example.\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -40,10 +40,13 @@
     "show_debug_watch": "true",
     "encrypted_examples": "GRotR3mz/6hP4ezZSAmEEHhJOQOPDlhm6AdUbtbn++4kqxoQXY36aQHa1WTV\nOgii\n",
     "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "expand_debugger": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-06 17:43:07 +0000\",\"changed\":[\"markdown_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -35,12 +35,14 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   setup do
-    Geocoder.stubs(:search).returns(
-      [OpenStruct.new(
+    @fake_geocoder_response = [
+      OpenStruct.new(
         postal_code: '98101',
+        state_code: 'WA',
         street_number: '1501'
-      )]
-    )
+      )
+    ]
+    Geocoder.stubs(:search).returns(@fake_geocoder_response)
     @mock_mimeo_rest_client = mock('Pd::MimeoRestClient')
     Pd::MimeoRestClient.stubs(:new).returns(@mock_mimeo_rest_client)
   end
@@ -147,46 +149,32 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
   end
 
   test 'address validation fails for incorrect zip code' do
-    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(
-      [OpenStruct.new(
-        postal_code: '98101',
-        street_number: '1501'
-      )]
-    )
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, WA, 99999').returns(@fake_geocoder_response)
 
-    order = build :pd_workshop_material_order, street: '1501 4th Ave', zip_code: '99999'
+    order = build :pd_workshop_material_order, zip_code: '99999'
     refute order.valid?
     assert_equal ["Zip code doesn't match the address. Did you mean 98101?"], order.errors.full_messages
+  end
+
+  test 'address validation fails for incorrect state' do
+    Geocoder.expects(:search).with('1501 4th Ave, Suite 900, Seattle, OR, 98101').returns(@fake_geocoder_response)
+
+    order = build :pd_workshop_material_order, state: 'OR'
+    refute order.valid?
+    assert_equal ["State doesn't match the address. Did you mean WA?"], order.errors.full_messages
   end
 
   test 'address validation fails for PO boxes' do
     Geocoder.expects(:search).with('PO Box 123, Seattle, WA, 98155').returns(
       [OpenStruct.new(
-        postal_code: '98155'
+        postal_code: '98155',
+        state_code: 'WA'
       )]
     )
 
     order = build :pd_workshop_material_order, street: 'PO Box 123', apartment_or_suite: nil, zip_code: '98155'
     refute order.valid?
     assert_equal ['Street must be a valid street address (no PO boxes)'], order.errors.full_messages
-  end
-
-  test 'known user correctable error validation: apartment or suite required' do
-    order_error = {
-      ErrorCode: 'InternalServerError',
-      Message: 'PlaceOrder error occurs for andrew@code.org : '\
-        'The recipient Andrew Oberhardt has address validation issue: '\
-        'Address found, but requires a apartment/suite.'
-    }
-
-    @mock_mimeo_rest_client.expects(:place_order).raises(RestClient::BadRequest)
-    RestClient::BadRequest.any_instance.stubs(:response).returns(stub(code: 400, body: order_error.to_json))
-    Honeybadger.expects(:notify).never
-
-    order = build :pd_workshop_material_order, apartment_or_suite: nil
-    order.place_order
-    refute order.valid?
-    assert_equal ['Apartment or suite is required for this address'], order.errors.full_messages
   end
 
   test 'place_order' do
@@ -300,5 +288,41 @@ class Pd::WorkshopMaterialOrderTest < ActiveSupport::TestCase
     order = build :pd_workshop_material_order, order_id: ORDER_ID, order_status: 'Shipped'
     order.refresh
     assert_nil order.tracking_id
+  end
+
+  test 'order must have a user on creation' do
+    order = build :pd_workshop_material_order, user: nil
+    refute order.valid?
+    assert_equal ['User is required'], order.errors.full_messages
+  end
+
+  test 'existing orders are still valid if the user is deleted' do
+    order = create :pd_workshop_material_order, user: @teacher
+
+    @teacher.destroy
+    order.reload
+    assert order.valid?
+    assert_nil order.user
+  end
+
+  test 'existing orders are not valid if the user association is removed' do
+    order = create :pd_workshop_material_order, user: @teacher
+
+    order.user = nil
+    refute order.valid?
+  end
+
+  test 'search_emails' do
+    included = [
+      create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'included1@example.net')),
+      create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'included2@example.net')),
+      create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'IncludedWithMismatchedCase@example.net'))
+    ]
+
+    # excluded
+    create(:pd_workshop_material_order, enrollment: create(:pd_enrollment, email: 'excluded@example.net'))
+
+    found = Pd::WorkshopMaterialOrder.search_emails('include')
+    assert_equal included.map(&:id).sort, found.pluck(:id).sort
   end
 end

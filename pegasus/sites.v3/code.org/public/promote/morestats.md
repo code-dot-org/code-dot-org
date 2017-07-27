@@ -13,7 +13,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
 * Computer science counts as a core requirement in [95% of BS degrees](https://medium.com/@codeorg/uc-data-confirms-computer-science-is-foundational-e8eb44038e48#.o0jvaeesg) in the University of California system.
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
-* Code.org [updated our position](http:/codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
+* Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 * [More high school students](http://codeorg.tumblr.com/post/145705852158/the-class-students-like-the-most) like computer science classes than other academic subjects.
 * Computing occupations are the [#1 source of new wages](http://codeorg.tumblr.com/post/144206906013/computing-occupations-are-now-the-1-source-of-new) in America (that's [16%](http://codeorg.tumblr.com/post/143085018748/16-of-all-new-wages-in-the-us-are-in-computer) of all new wages).
 * Americans' perceptions of computer science are [changing](http://codeorg.tumblr.com/post/139445414968).
@@ -24,9 +24,13 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 
 ### Diversity
 
+* [Does Making CS "Count" Make a Difference?] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407) 
+* Girls set AP Computer Science record: [skyrocketing growth](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) outpaces boys 
+* 20% more high school girls like computer science [after an Hour of Code](https://medium.com/anybody-can-learn/study-shows-20-more-high-school-girls-like-computer-science-after-an-hour-of-code-2ebb704bf04) 
 * Students who learn computer science in high school are   [6 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to major in it. Women: 10x more likely
 * [Maryland makes a simple policy change to boost diversity in computer science](http://codeorg.tumblr.com/post/121123281798/md) 
-* Reporting on [our efforts](http://codeorg.tumblr.com/post/98856300118/diversity) to increase diversity in computer science
+* Reporting on [our efforts](http://codeorg.tumblr.com/post/98856300118/diversity) to increase diversity in computer science (2014)
+* [Representation of girls and underrepresented minorities in Code.org courses](https://medium.com/@codeorg/girls-and-underrepresented-minorities-are-represented-on-code-org-7fb32b7c4eba) (2017)
 * Code.org's [team diversity](http://codeorg.tumblr.com/post/98703117328/codeorgs-team-diversity-putting-our-money-where): putting our money where our mouth is
 
 ### Momentum

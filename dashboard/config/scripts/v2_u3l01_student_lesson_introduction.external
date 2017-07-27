@@ -1,13 +1,10 @@
 name 'v2 U3L01 Student Lesson Introduction'
+display_name 'Lesson Vocabulary & Resources'
 title 'Why Programming and Programming Languages?'
 css 'unplugged'
 
 markdown <<MARKDOWN
 # Unit 3: Lesson 01 - The Need for Programming Languages
-
-## Background
-
-Algorithms are the way we express solutions to problems in the field of computer science. Once we've identified a problem we seek to create an algorithm that can be used to solve that problem and ideally a whole class of similar problems. The ability to express algorithms in a way that someone else (or a computer) can understand and use them allows us to solve a problem only once and then let that other person or machine worry about actually implementing our solution.
 
 ## Lesson
 

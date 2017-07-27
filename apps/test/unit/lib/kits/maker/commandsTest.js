@@ -9,7 +9,8 @@ import {
   digitalWrite,
   injectBoardController,
   onBoardEvent,
-  pinMode
+  pinMode,
+  createLed,
 } from '@cdo/apps/lib/kits/maker/commands';
 import FakeBoard from '@cdo/apps/lib/kits/maker/FakeBoard';
 
@@ -96,6 +97,13 @@ describe('maker/commands.js', () => {
       expect(boardConnected()).to.be.true;
       stubBoardController.boardConnected.returns(false);
       expect(boardConnected()).to.be.false;
+    });
+  });
+
+  describe('createLed(pin)', () => {
+    it('delegates to makerBoard.createLed', () => {
+      createLed({pin: 0});
+      expect(stubBoardController.createLed).to.have.been.calledWith(0);
     });
   });
 

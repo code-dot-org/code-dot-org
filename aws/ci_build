@@ -19,6 +19,8 @@
 # NOTE: running `touch build-started` (or running the `bin/start-build` script)
 # is an easy way to force a rebuild without needing to make a commit.
 #
+
+require 'active_support/inflector'
 require_relative '../deployment'
 require 'cdo/aws/s3'
 require 'cdo/chat_client'

@@ -117,6 +117,8 @@ class ScriptLevel < ActiveRecord::Base
           script_path(script)
         end
       end
+    elsif bonus
+      script_stage_stage_extras_path(script.name, stage.relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -146,6 +148,7 @@ class ScriptLevel < ActiveRecord::Base
     return false if I18n.locale != I18n.default_locale && level.spelling_bee?
     return false if I18n.locale != I18n.default_locale && stage && stage.spelling_bee?
     return false if locked_or_hidden?(user)
+    return false if bonus
     true
   end
 
@@ -206,19 +209,7 @@ class ScriptLevel < ActiveRecord::Base
     build_script_level_path(self)
   end
 
-  def icon
-    # Assessment levels can be of many different level types (i.e. multiple choice,
-    # blockly, etc.). Regardless of the underlying level type, we want them to
-    # have their own icon. If not an assessment, let the underlying level type
-    # continue to own which icon we use.
-    if assessment
-      'fa-list-ol'
-    else
-      level.icon
-    end
-  end
-
-  def summarize
+  def summarize(include_prev_next=true)
     if level.unplugged?
       kind = LEVEL_KIND.unplugged
     elsif assessment
@@ -238,7 +229,8 @@ class ScriptLevel < ActiveRecord::Base
       activeId: oldest_active_level.id,
       position: position,
       kind: kind,
-      icon: icon,
+      icon: level.icon,
+      is_concept_level: level.concept_level?,
       title: level_display_text,
       url: build_script_level_url(self),
       freePlay: level.try(:free_play) == "true",
@@ -258,25 +250,27 @@ class ScriptLevel < ActiveRecord::Base
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
     end
 
-    # Add a previous pointer if it's not the obvious (level-1)
-    if previous_level
-      if previous_level.stage.absolute_position != stage.absolute_position
-        summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
-      end
-    else
-      # This is the first level in the script
-      summary[:previous] = false
-    end
-
-    # Add a next pointer if it's not the obvious (level+1)
-    if end_of_stage?
-      if next_level
-        summary[:next] = [next_level.stage.absolute_position, next_level.position]
+    if include_prev_next
+      # Add a previous pointer if it's not the obvious (level-1)
+      if previous_level
+        if previous_level.stage.absolute_position != stage.absolute_position
+          summary[:previous] = [previous_level.stage.absolute_position, previous_level.position]
+        end
       else
-        # This is the final level in the script
-        summary[:next] = false
-        if script.wrapup_video
-          summary[:wrapupVideo] = script.wrapup_video.summarize
+        # This is the first level in the script
+        summary[:previous] = false
+      end
+
+      # Add a next pointer if it's not the obvious (level+1)
+      if end_of_stage?
+        if next_level
+          summary[:next] = [next_level.stage.absolute_position, next_level.position]
+        else
+          # This is the final level in the script
+          summary[:next] = false
+          if script.wrapup_video
+            summary[:wrapupVideo] = script.wrapup_video.summarize
+          end
         end
       end
     end
@@ -301,6 +295,18 @@ class ScriptLevel < ActiveRecord::Base
       extra_levels << new_level
     end
     extra_levels
+  end
+
+  def summarize_as_bonus(user)
+    {
+      id: id,
+      name: level.display_name || level.name,
+      type: level.type,
+      map: JSON.parse(level.try(:maze) || '[]'),
+      skin: level.try(:skin),
+      start_direction: level.try(:start_direction).to_i,
+      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
+    }.camelize_keys
   end
 
   def self.cache_find(id)

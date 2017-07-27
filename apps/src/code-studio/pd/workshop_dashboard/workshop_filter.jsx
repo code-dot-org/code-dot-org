@@ -10,6 +10,7 @@ import "react-select/dist/react-select.css";
 import ServerSortWorkshopTable from "./components/server_sort_workshop_table";
 import DatePicker from "./components/date_picker";
 import {DATE_FORMAT} from "./workshopConstants";
+import Permission from "../permission";
 import moment from "moment";
 import {
   Grid,
@@ -75,10 +76,12 @@ const WorkshopFilter = React.createClass({
     };
   },
 
-  componentDidMount() {
-    this.isWorkshopAdmin = window.dashboard.workshop.permission === "workshop_admin";
+  componentWillMount() {
+    this.permission = new Permission();
+  },
 
-    if (this.isWorkshopAdmin) {
+  componentDidMount() {
+    if (this.permission.isWorkshopAdmin) {
       this.loadOrganizers();
     }
   },
@@ -341,7 +344,7 @@ const WorkshopFilter = React.createClass({
           }
           <Clearfix visibleSmBlock />
           {
-            this.isWorkshopAdmin &&
+            this.permission.isWorkshopAdmin &&
             <Col md={6}>
               <FormGroup>
                 <ControlLabel>Organizer</ControlLabel>
@@ -358,7 +361,7 @@ const WorkshopFilter = React.createClass({
             </Col>
           }
           {
-            this.isWorkshopAdmin &&
+            this.permission.isWorkshopAdmin &&
             <Col md={4}>
               <FormGroup>
                 <ControlLabel>Teacher Email</ControlLabel>
@@ -390,7 +393,7 @@ const WorkshopFilter = React.createClass({
             queryParams={filters}
             canDelete
             showStatus
-            showOrganizer={this.isWorkshopAdmin}
+            showOrganizer={this.permission.isWorkshopAdmin}
             generateCaptionFromWorkshops={this.generateCaptionFromWorkshops}
           />
         </Row>

@@ -42,6 +42,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-19 18:17:41 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -68,6 +69,14 @@
                       <statement name="DO">
                         <block type="maze_nectar"/>
                       </statement>
+                      <next>
+                        <block type="bee_ifFlower">
+                          <title name="LOC">atHoneycomb</title>
+                          <statement name="DO">
+                            <block type="maze_honey"/>
+                          </statement>
+                        </block>
+                      </next>
                     </block>
                   </next>
                 </block>

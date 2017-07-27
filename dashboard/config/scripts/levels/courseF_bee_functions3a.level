@@ -16,7 +16,7 @@
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,1,2,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "initial_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,5,0,0,0],[0,0,0,0,5,0,0,0],[0,0,0,0,5,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "final_dirt": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "ideal": "18",
+    "ideal": "17",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "true",
@@ -29,7 +29,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "honey_goal": "0",
-    "markdown_instructions": "Each cloud could be hiding either a flower or a honeycomb!  Write a function that gets nectar if the bee is at a flower, otherwise it gets honey.\r\n\r\nUse your function to solve the puzzle!",
+    "markdown_instructions": "Each cloud could be hiding either one flower or one honeycomb!  Write a function that gets nectar if the bee is at a flower, otherwise it gets honey.\r\n\r\nUse your function to solve the puzzle!",
     "never_autoplay_video": "false",
     "examples_required": "false",
     "fast_get_nectar_animation": "false",
@@ -42,6 +42,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-31 18:58:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-01 00:01:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-06-01 15:27:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -74,6 +75,8 @@
           <block type="maze_honey"/>
         </category>
         <category name="Loops">
+          <block type="maze_untilBlocked">
+    </block>
           <block type="controls_repeat_ext" inline="true">
             <value name="TIMES">
               <block type="math_number">

@@ -4,6 +4,8 @@ import HarvesterDrawer from './harvesterDrawer';
 import mazeMsg from './locale';
 import { HarvesterTerminationValue, TestResults } from '../constants.js';
 
+const HARVEST_SOUND = 'harvest';
+
 export default class Harvester extends Gatherer {
 
   /**
@@ -11,6 +13,15 @@ export default class Harvester extends Gatherer {
    */
   getCellClass() {
     return HarvesterCell;
+  }
+
+  /**
+   * @override
+   */
+  loadAudio(skin) {
+    if (skin.harvestSound) {
+      this.studioApp_.loadAudio(skin.harvestSound, HARVEST_SOUND);
+    }
   }
 
   /**
@@ -128,7 +139,7 @@ export default class Harvester extends Gatherer {
         "there was nothing left to harvest");
     }
 
-    this.playAudio_('harvest');
+    this.playAudio_(HARVEST_SOUND);
     this.gotCropAt(row, col);
 
     this.drawer.updateItemImage(row, col, true);

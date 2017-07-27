@@ -1,5 +1,5 @@
-hidden 'false'
-login_required 'true'
+hidden false
+login_required true
 
 stage 'Unplugged: Video Games and Coordinate Planes'
 level 'VideoGamesCoordinatePlanes'

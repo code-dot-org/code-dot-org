@@ -4,9 +4,9 @@ href 'path/to/html/in/asset/folder'
 markdown <<MARKDOWN
 # Overview
 
-This lesson continues to introduce CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to do more styling of their About Me page.
+This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. The class begins by investigating and modifying the new CSS styles on a Desserts of the World page. Afterwards, everyone applies this new knowledge to their personal websites.
 
-## New Properties
+## Introduced Code
 
 *  **[Background Color](//docs.code.org/weblab/background-color/)** - `background-color: value;`
 *  **[Float](//docs.code.org/weblab/float/)** - `float: value;`

@@ -2,7 +2,7 @@ import * as Immutable from 'immutable';
 import Observer from '../../../Observer';
 import {update as updateWatchExpressions} from '../../../redux/watchedExpressions';
 import CommandHistory from './CommandHistory';
-import JSInterpreter from '../../../JSInterpreter';
+import JSInterpreter from '../jsinterpreter/JSInterpreter';
 import watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import runState from '@cdo/apps/redux/runState';
 

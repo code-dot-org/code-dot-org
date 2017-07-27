@@ -7,7 +7,7 @@ import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
 import msg from '@cdo/locale';
 import weblabMsg from '@cdo/weblab/locale';
-import PaneHeader, {PaneButton} from '../templates/PaneHeader';
+import PaneHeader, {PaneSection, PaneButton} from '../templates/PaneHeader';
 import CompletionButton from '../templates/CompletionButton';
 
 /**
@@ -18,7 +18,6 @@ const WebLabView = React.createClass({
     isProjectLevel: React.PropTypes.bool.isRequired,
     isReadOnlyWorkspace: React.PropTypes.bool.isRequired,
     isInspectorOn: React.PropTypes.bool.isRequired,
-    hideToolbar: React.PropTypes.bool.isRequired,
     onUndo: React.PropTypes.func.isRequired,
     onRedo: React.PropTypes.func.isRequired,
     onRefreshPreview: React.PropTypes.func.isRequired,
@@ -45,92 +44,91 @@ const WebLabView = React.createClass({
   },
 
   render: function () {
-    var iframeStyles = {
+    let iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
+    let iframeStyles = {
       position: 'absolute',
-      width: '100%'
+      width: '100%',
+      height: `calc(100% - ${iframeBottom})`
     };
-    var iframeScrolling;
-    var iframeClass;
-    var iframeBottom = this.props.isProjectLevel ? '20px' : '90px';
-    if (this.props.hideToolbar) {
-      iframeStyles.height = '100%';
-      iframeScrolling = 'yes';
-      iframeClass = '';
-    } else {
-      iframeStyles.height = `calc(100% - ${iframeBottom})`;
-      iframeScrolling = 'no';
-      iframeClass = 'weblab-host';
-    }
 
     return (
       <StudioAppWrapper>
         <InstructionsWithWorkspace>
           <div>
-            {!this.props.hideToolbar &&
-              <PaneHeader hasFocus={true} id="headers">
-                {!this.props.isReadOnlyWorkspace &&
-                  <div>
-                    <PaneButton
-                      iconClass="fa fa-plus-circle"
-                      leftJustified={true}
-                      headerHasFocus={true}
-                      isRtl={false}
-                      onClick={this.props.onAddFileHTML}
-                      label={weblabMsg.addHTMLButton()}
-                    />
-                    <PaneButton
-                      iconClass="fa fa-plus-circle"
-                      leftJustified={true}
-                      headerHasFocus={true}
-                      isRtl={false}
-                      onClick={this.props.onAddFileCSS}
-                      label={weblabMsg.addCSSButton()}
-                    />
-                    <PaneButton
-                      iconClass="fa fa-plus-circle"
-                      leftJustified={true}
-                      headerHasFocus={true}
-                      isRtl={false}
-                      onClick={this.props.onAddFileImage}
-                      label={weblabMsg.addImageButton()}
-                    />
-                  </div>
-                }
+            <PaneHeader hasFocus={true} id="headers">
+              {!this.props.isReadOnlyWorkspace &&
                 <div>
                   <PaneButton
-                    id="versions-header"
-                    iconClass="fa fa-clock-o"
+                    iconClass="fa fa-plus-circle"
                     leftJustified={true}
                     headerHasFocus={true}
                     isRtl={false}
-                    label={msg.showVersionsHeader()}
+                    onClick={this.props.onAddFileHTML}
+                    label={weblabMsg.addHTMLButton()}
                   />
                   <PaneButton
-                    iconClass="fa fa-repeat"
-                    leftJustified={false}
+                    iconClass="fa fa-plus-circle"
+                    leftJustified={true}
                     headerHasFocus={true}
                     isRtl={false}
-                    onClick={this.props.onRefreshPreview}
-                    label={weblabMsg.refreshPreview()}
+                    onClick={this.props.onAddFileCSS}
+                    label={weblabMsg.addCSSButton()}
                   />
                   <PaneButton
-                    iconClass="fa fa-mouse-pointer"
-                    leftJustified={false}
+                    iconClass="fa fa-plus-circle"
+                    leftJustified={true}
                     headerHasFocus={true}
-                    isPressed={this.props.isInspectorOn}
-                    pressedLabel={weblabMsg.toggleInspectorOff()}
                     isRtl={false}
-                    onClick={this.props.onToggleInspector}
-                    label={weblabMsg.toggleInspectorOn()}
+                    onClick={this.props.onAddFileImage}
+                    label={weblabMsg.addImageButton()}
                   />
                 </div>
-              </PaneHeader>
-            }
+              }
+              <div>
+                {!this.props.isReadOnlyWorkspace &&
+                  <div>
+                    <PaneButton
+                      id="versions-header"
+                      iconClass="fa fa-clock-o"
+                      leftJustified={true}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      label={msg.showVersionsHeader()}
+                    />
+                    <PaneButton
+                      iconClass="fa fa-repeat"
+                      leftJustified={false}
+                      headerHasFocus={true}
+                      isRtl={false}
+                      onClick={this.props.onRefreshPreview}
+                      label={weblabMsg.refreshPreview()}
+                    />
+                  </div>
+                }
+                <PaneButton
+                  iconClass="fa fa-mouse-pointer"
+                  leftJustified={false}
+                  headerHasFocus={true}
+                  isPressed={this.props.isInspectorOn}
+                  pressedLabel={weblabMsg.toggleInspectorOff()}
+                  isRtl={false}
+                  onClick={this.props.onToggleInspector}
+                  label={weblabMsg.toggleInspectorOn()}
+                />
+                {this.props.isReadOnlyWorkspace &&
+                  <PaneSection id="workspace-header">
+                    <span id="workspace-header-span">
+                      {msg.readonlyWorkspaceHeader()}
+                    </span>
+                  </PaneSection>
+                }
+              </div>
+            </PaneHeader>
             <iframe
-              className={iframeClass}
+              className="weblab-host"
               src="/weblab/host"
               frameBorder="0"
-              scrolling={iframeScrolling}
+              scrolling="no"
               style={iframeStyles}
             />
             {!this.props.isProjectLevel &&

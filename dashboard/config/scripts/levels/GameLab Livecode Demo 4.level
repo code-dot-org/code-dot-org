@@ -189,7 +189,7 @@
     "text_mode_at_start": "false",
     "submittable": "false",
     "hide_view_data_button": "false",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "debugger_disabled": "false",
     "hide_animation_mode": "false",
     "start_in_animation_tab": "false",

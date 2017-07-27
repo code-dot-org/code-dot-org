@@ -1,9 +1,14 @@
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/chat_client'
 require 'cdo/geocoder'
 require 'cdo/solr'
 require src_dir 'forms'
 
 module SolrHelper
+  # @param [String] The type of SOLR entry whose ID is being queried.
+  # @param [Integer] The DB ID of the entry being queried.
+  # @return [String] The SOLR ID of the entry being queried.
+  # @raises [ArgumentError] If type is not recognized.
   def self.get_solr_id_from_db_id(type, db_id)
     case type
     when 'form'
@@ -11,7 +16,7 @@ module SolrHelper
     when 'user'
       return "user-#{db_id}"
     end
-    return nil
+    raise ArgumentError, "invalid type (#{type})"
   end
 
   def self.update_document_type_form(solr_server, db_id, solr_id)
@@ -46,7 +51,7 @@ module SolrHelper
         solr_form_doc['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
       end
     rescue
-      puts "Form #{db_form[:id]} couldn't be indexed."
+      ChatClient.log "Form #{db_form[:id]} couldn't be indexed."
       return
     end
 
@@ -75,29 +80,21 @@ module SolrHelper
       solr_user_doc['create_ip_location_p'] = "#{location.latitude},#{location.longitude}" if location.latitude && location.longitude
     end
 
-    begin
-      solr_server.update([solr_user_doc])
-    rescue Exception => e
-      puts "EXCEPTION OCCURRED: #{e.message}"
-    end
+    solr_server.update([solr_user_doc])
   end
 
   def self.delete_document(solr_server, type, db_id)
     solr_id = get_solr_id_from_db_id(type, db_id)
     unless solr_id.nil?
-      puts "DELETING SOLR DOCUMENT: #{solr_id}..."
-      begin
-        solr_server.delete_by_id(solr_server, solr_id)
-      rescue Exception => e
-        puts "EXCEPTION OCCURRED: #{e.message}"
-      end
+      ChatClient.log "DELETING SOLR DOCUMENT: #{solr_id}..."
+      solr_server.delete_by_id(solr_id)
     end
   end
 
   def self.update_document(solr_server, type, db_id)
     solr_id = get_solr_id_from_db_id(type, db_id)
     unless solr_id.nil?
-      puts "UPDATING SOLR DOCUMENT: #{solr_id}..."
+      ChatClient.log "UPDATING SOLR DOCUMENT: #{solr_id}..."
       case type
       when 'form'
         SolrHelper.update_document_type_form(solr_server, db_id, solr_id)

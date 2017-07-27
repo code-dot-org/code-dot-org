@@ -266,7 +266,6 @@ class UsersHelperTest < ActionView::TestCase
 
     # No user level exists, no progress
     assert UserLevel.find_by(user: user, level: level).nil?
-    puts summarize_user_progress(script, user)[:levels]
     assert_equal({}, summarize_user_progress(script, user)[:levels])
 
     # now create a non-submitted user level

@@ -91,7 +91,7 @@
     "all_animations_single_frame": "true",
     "pause_animations_by_default": "false",
     "show_debug_watch": "true",
-    "encrypted_examples": "Z3XW9adosYrMPqRg10nQ6xYzYjJjnUleIuWq7oLfq16q8OCmWVT3QV4UTP3Y\nQfa5\n",
+    "encrypted_examples": "N+OyNVSwqMOhaQhcvu/E7nbahSp9vDHWMmN22l0XImZm9oU4WKaZXjnLcbap\nzMFc3325sDF6YpjdKyzTSNPfIw==\n",
     "start_blocks": "var orangeFish = createSprite(400, randomNumber(0, 100));\r\norangeFish.setAnimation(\"orange_fish\");\r\nvar blueFish = createSprite(250, randomNumber(0, 200));\r\nblueFish.setAnimation(\"blue_fish\");\r\nvar greenFish = createSprite(300, randomNumber(200, 300));\r\ngreenFish.setAnimation(\"green_fish\");\r\n\r\nfunction draw() {\r\n  // Draw Background\r\n  background(\"navy\");\r\n  \r\n  // Update Values\r\n  orangeFish.x = orangeFish.x - 2;\r\n  blueFish.x = blueFish.x - 3;\r\n  greenFish.x = greenFish.x - 1;\r\n  \r\n  // Draw Animations\r\n  drawSprites();\r\n}",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -101,6 +101,7 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-22 18:57:17 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

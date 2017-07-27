@@ -34,12 +34,16 @@
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.\\n\",\"hint_id\":\"courseF_artist_variables8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/698b6d0f8bbd3fd5e6072031b554b20a/courseF_artist_variables8.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to start your code for the triangle with the `set length` block, and start it at 150 pixels.\",\"hint_id\":\"courseF_artist_variables8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d9ad46f546c0e9b78b167cc1812f5c19/courseF_artist_variables8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to use the `repeat` loop to draw your triangle.\",\"hint_id\":\"courseF_artist_variables8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/edbf0787efa878d9c62c9a4ebf681292/courseF_artist_variables8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.\\n\",\"hint_id\":\"courseF_artist_variables8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/698b6d0f8bbd3fd5e6072031b554b20a/courseF_artist_variables8.mp3\"}]",
     "instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 16:07:18 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

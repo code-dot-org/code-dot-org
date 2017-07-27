@@ -1252,7 +1252,7 @@
           et trin, kan resten af dem ikke fuldføres. At lave algoritmer, som andre
           kan forstå, er virkelig vigtigt. Det er derfor hvert trin må skrives ned,
           så uanset hvem der følger dem, er resultatet er det samme.
-    C2_playlab_createastory:
+    C2_playlab_createstory:
       1:
         image: notes/C2_playlab_createastory_1.png
         text: Indtil nu har du lavet en animation eller en historie, der gør præcis
@@ -1391,7 +1391,7 @@
         text: In this example, we're going to say IF the purple flower has nectar
           greater than 0, get nectar. That will tell our bee to keep getting nectar
           as long as it's there. Ta-dah!
-    C3_debugging_bee:
+    C3_bee_debugging:
       1:
         image: notes/C3_debugging_bee_1.png
         text: Have you ever heard of debugging a program? This is the way you figure

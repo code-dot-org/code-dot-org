@@ -1,13 +1,16 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HeadingBanner from '../HeadingBanner';
-import TeacherCourses from './TeacherCourses';
-import RecentCoursesCollapsible from './RecentCoursesCollapsible';
+import HeaderBanner from '../HeaderBanner';
+import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
+import RecentCourses from './RecentCourses';
+import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
+import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
 const styles = {
@@ -31,7 +34,7 @@ const styles = {
 
 /**
  * Though named Courses, this component represents a collection of courses and/or
- * scripts. These come from sections the user is in, or from courses/scripts they
+ * scripts, refered to collectively as "assignables". These come from sections the user is in, or from courses/scripts they
  * have recently made progress in.
  * The component is only used on the /courses page, and also does some additional
  * DOM manipulation on mount.
@@ -46,51 +49,77 @@ const Courses = React.createClass({
     studentsCount: React.PropTypes.string.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number
+    userId: React.PropTypes.number,
+    isRtl: React.PropTypes.bool.isRequired,
+    studentHomepagePreview: React.PropTypes.bool
   },
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    if (this.props.isEnglish && this.props.isTeacher) {
-      $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
-      $('.tools').appendTo(ReactDOM.findDOMNode(this.refs.toolExplorer)).show();
-    } else {
-      $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
-      $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
-    }
+    $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
+    $('.standalone-tools').appendTo(ReactDOM.findDOMNode(this.refs.standaloneTools)).show();
+    $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
+    $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
+    $('.hour-of-code-courses-first-row').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesFirstRow)).show();
+    $('.csf-courses').appendTo(ReactDOM.findDOMNode(this.refs.csfCourses)).show();
+    $('.tools-courses').appendTo(ReactDOM.findDOMNode(this.refs.toolsCourses)).show();
+    $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips } = this.props;
+    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl, studentHomepagePreview } = this.props;
+    const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
+    const subHeadingText = i18n.coursesHeadingSubText(
+      {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+    );
+    const headingDescription = isSignedOut ? i18n.coursesHeadingDescription() : null;
 
     return (
       <div>
-        <HeadingBanner
-          headingText={i18n.courses()}
-          subHeadingText={i18n.coursesHeadingSubText(
-            {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
+        <HeaderBanner
+          headingText={headingText}
+          subHeadingText={subHeadingText}
+          description={headingDescription}
+          short={!isSignedOut}
+        >
+          {isSignedOut && (
+            <Button
+              href= "/users/sign_up"
+              color={Button.ButtonColor.gray}
+              text={i18n.createAccount()}
+              style={styles.button}
+            />
           )}
-          showCreateAccount={isSignedOut}
-          description={i18n.coursesHeadingDescription()}
+        </HeaderBanner>
+
+        <ProtectedStatefulDiv
+          ref="flashes"
         />
 
-        {!isTeacher && (
-          <ProtectedStatefulDiv
-            style={styles.userHero}
-            ref="userHero"
-          />
+        {!studentHomepagePreview && (
+          <div>
+            {!isTeacher && (
+              <ProtectedStatefulDiv
+                style={styles.userHero}
+                ref="userHero"
+              />
+            )}
+
+            {(courses && courses.length > 0) && (
+              <RecentCourses
+                courses={courses}
+                showAllCoursesLink={false}
+                heading={i18n.myCourses()}
+                isTeacher={isTeacher}
+                isRtl={isRtl}
+              />
+            )}
+          </div>
         )}
 
-        {courses && courses.length > 0 && (
-          <RecentCoursesCollapsible
-            courses={courses}
-            showAllCoursesLink={false}
-            heading={i18n.myCourses()}
-            isTeacher={isTeacher}
-          />
-        )}
-
-        {isEnglish && isTeacher && (
+        {/* Signed-in teacher in English */}
+        {(isEnglish && isTeacher) && (
           <div>
             <UiTips
               userId={userId}
@@ -120,27 +149,71 @@ const Courses = React.createClass({
 
               <br/>
               <br/>
-              <TeacherCourses codeOrgUrlPrefix={codeOrgUrlPrefix}/>
+              <TeacherAssignablesCatalog
+                codeOrgUrlPrefix={codeOrgUrlPrefix}
+                isRtl={isRtl}
+              />
 
-              {false && (
-                <div>
-                  <div style={styles.heading}>
-                    {i18n.toolExplorerHeading()}
-                  </div>
-                  <div>
-                    {i18n.toolExplorerDescription()}
-                  </div>
-                  <ProtectedStatefulDiv ref="toolExplorer"/>
+              <div>
+                <div style={styles.heading}>
+                  {i18n.standaloneToolsHeading()}
                 </div>
-              )}
+                <div>
+                  {i18n.standaloneToolsDescription()}
+                </div>
+                <ProtectedStatefulDiv ref="standaloneTools"/>
+              </div>
+
             </div>
           </div>
         )}
 
-        {!(isEnglish && isTeacher) && (
+        {/* Signed-in student in English */}
+        {(!isSignedOut && !isTeacher && isEnglish) && (
+          <div>
+            <ProtectedStatefulDiv ref="csfCourses"/>
+            <ProtectedStatefulDiv ref="toolsCourses"/>
+            <ContentContainer
+              heading={i18n.teacherCourseHoc()}
+              description={i18n.teacherCourseHocDescription()}
+              isRtl={isRtl}
+              linkText={i18n.teacherCourseHocLinkText()}
+              link={`${codeOrgUrlPrefix}/learn`}
+              showLink={true}
+            >
+              <ProtectedStatefulDiv ref="hocCoursesFirstRow"/>
+            </ContentContainer>
+          </div>
+        )}
+
+        {/* Anything but a teacher or student in English.
+            That is: signed-out, or a student or teacher in non-English. */}
+        {(isSignedOut || !isEnglish) && (
           <div>
             <ProtectedStatefulDiv ref="allCourses"/>
           </div>
+        )}
+
+        {(!isTeacher && isEnglish) && (
+          <FindLocalClassBanner
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
+          />
+        )}
+
+        {(!isTeacher && !isSignedOut) && (
+          <div>
+            <div style={styles.spacer}>.</div>
+            <Button
+              text={i18n.viewMyProjects()}
+              href="/projects"
+              color={Button.ButtonColor.orange}
+            />
+          </div>
+        )}
+
+        {(!studentHomepagePreview && !isTeacher && !isSignedOut) && (
+          <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>
     );

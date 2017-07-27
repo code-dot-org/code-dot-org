@@ -35,21 +35,27 @@ class HomeController < ApplicationController
   GALLERY_PER_PAGE = 5
 
   def index
-    redirect_to '/courses'
+    if request.cookies['pm'] == 'student_homepage'
+      redirect_to '/home'
+    else
+      redirect_to '/courses'
+    end
   end
 
-  # Show /home for teachers.
+  # Show /home for teachers.  (And for students if cookie set appropriately.)
+  #
   # Signed out: redirect to code.org
+  # Signed in teacher or have student_homepage cookie: render this page
   # Signed in student: redirect to studio.code.org/courses
-  # Signed in teacher: render this page
+
   def home
     if !current_user
       redirect_to CDO.code_org_url
-    elsif current_user.student?
-      redirect_to '/courses'
-    else
+    elsif current_user.teacher? || request.cookies['pm'] == 'student_homepage'
       init_homepage
       render 'home/index'
+    else
+      redirect_to '/courses'
     end
   end
 
@@ -84,28 +90,30 @@ class HomeController < ApplicationController
         current_user.gallery_activities.order(id: :desc).page(params[:page]).per(GALLERY_PER_PAGE)
       @force_race_interstitial = params[:forceRaceInterstitial]
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
-      @recent_courses = current_user.recent_courses_and_scripts.slice(0, 2)
+      @sections = current_user.sections.map(&:summarize)
+      @student_sections = current_user.sections_as_student.map(&:summarize)
+      @recent_courses = current_user.recent_courses_and_scripts
+      # @recent_courses are used to generate CourseCards on the homepage. Rather than a CourseCard, student's most recent assignable will be displayed with a StudentTopCourse component. See below re: student_top_course. Thus, student recent_courses should drop the first course.
+      unless current_user.teacher?
+        @recent_courses = current_user.recent_courses_and_scripts.drop(1)
+      end
 
       if current_user.teacher?
-        base_url = CDO.code_org_url('/teacher-dashboard#/sections/')
-        @sections = current_user.sections.map do |section|
-          if section.script_id
-            course_name = Script.get_from_cache(section.script_id)[:name]
-            course = data_t_suffix('script.name', course_name, 'title')
-            link_to_course = script_url(section.script_id)
-          else
-            course = ""
-            link_to_course = base_url
-          end
-          {
-            id: section.id,
-            name: section.name,
-            linkToProgress: "#{base_url}#{section.id}/progress",
-            course: course,
-            linkToCourse: link_to_course,
-            numberOfStudents: section.students.length,
-            linkToStudents: "#{base_url}#{section.id}/manage",
-            sectionCode: section.code
+        @sections = current_user.sections.map(&:summarize)
+      end
+
+      unless current_user.teacher?
+        script = current_user.primary_script
+        if script
+          script_level = current_user.next_unpassed_progression_level(script)
+        end
+
+        if script && script_level
+          @student_top_course = {
+            assignableName: data_t_suffix('script.name', script[:name], 'title'),
+            lessonName: script_level.stage.localized_title,
+            linkToOverview: script_path(script),
+            linkToLesson: script_next_path(script, 'next')
           }
         end
       end

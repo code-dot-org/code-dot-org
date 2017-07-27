@@ -3,6 +3,7 @@ title: Tools and videos
 nav: educate_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 
@@ -49,6 +50,7 @@ We are building a growing library of educational videos available for re-use by 
 <div style="clear: both;"></div>
 
 ## How the internet works
+<a name="Howtheinternetworks"></a>
 
 <div class="col-50" style="float: left; padding: 10px;">
 
@@ -95,6 +97,14 @@ We are building a growing library of educational videos available for re-use by 
 <% facebook = {:u=>'https://youtu.be/AuYNXgO_f3Y'} %>
 <% twitter = {:url=>'https://youtu.be/AuYNXgO_f3Y', :related=>'codeorg', :text=>'THE INTERNET: Cybersecurity & Crime @codeorg'} %>
 <%=view :display_video_thumbnail, id: "cybersecurity", video_code: "AuYNXgO_f3Y", caption: "THE INTERNET: Cybersecurity & Crime", play_button: 'center',  facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/concept_cybercrime.mp4" %>
+
+</div>
+
+<div class="col-50" style="float: left; padding: 10px;">
+
+<% facebook = {:u=>'https://youtu.be/LVV_93mBfSU'} %>
+<% twitter = {:url=>'https://youtu.be/LVV_93mBfSU', :related=>'codeorg', :text=>'THE INTERNET: How Search Works @codeorg'} %>
+<%=view :display_video_thumbnail, id: "howsearchworks", video_code: "LVV_93mBfSU", caption: "THE INTERNET: How Search Works", play_button: 'center',  facebook: facebook, twitter: twitter, download_path: "//videos.code.org/2015/csp/how_search_works.mp4" %>
 
 </div>
 
@@ -187,6 +197,24 @@ The celebrities and video "cast" members appearing in Code.org tutorial videos r
 App Lab is a JavaScript programming environment for students to make simple apps that live on the web.  Use this standalone tool in your classroom to supplement any CS course. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.
 
 <a href="/educate/applab"><button>Learn more</button></a>
+
+[/col-50]
+
+<div style='clear:both'></div>
+
+# Create a animation or game with Game Lab (beta)
+
+<div class="col-50" style="padding-right: 20px;">
+
+<%= view :display_video_thumbnail, id: "csd_gamelab_draw_1", video_code: "PXn9gKiKKFo", play_button: 'center', download_path: "https://videos.code.org/cs-discoveries/gamelab/gamelab_drawing_1.mp4" %>
+
+</div>
+
+[col-50]
+
+Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Design an animation or game, code with blocks or JavaScript to make it work, then share your app in seconds.
+
+<a href="/educate/gamelab"><button>Learn more</button></a>
 
 [/col-50]
 

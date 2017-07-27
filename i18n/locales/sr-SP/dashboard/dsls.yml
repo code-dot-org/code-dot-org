@@ -12,18 +12,18 @@ sr:
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q4.png: /script_assets/k_1_images/unplugged_images/big_event_1_q4.png
         Match the button combination to the dance moves.: Уклопи дугме комбинацијом на плес потезе.
-        Matching: Уклапанје
+        Matching: Упаривање
       2-3 Binary Match 1:
         /script_assets/2-3_images/unplugged/binary_1_a1.png: /script_assets/2-3_images/unplugged/binary_1_a1.png
         /script_assets/2-3_images/unplugged/binary_1_a2.png: /script_assets/2-3_images/unplugged/binary_1_a2.png
         /script_assets/2-3_images/unplugged/binary_1_a3.png: /script_assets/2-3_images/unplugged/binary_1_a3.png
         /script_assets/2-3_images/unplugged/binary_1_a4.png: /script_assets/2-3_images/unplugged/binary_1_a4.png
         /script_assets/2-3_images/unplugged/binary_1_q.png, 250: /script_assets/2-3_images/unplugged/binary_1_q.png, 250
-        <strong>N</strong>: '<strong>N</strong>'
-        <strong>O</strong>: '<strong>O</strong>'
-        <strong>P</strong>: '<strong>P</strong>'
-        <strong>Q</strong>: '<strong>Q</strong>'
-        Matching: Уклапанје
+        <strong>N</strong>: <strong>N</strong>
+        <strong>O</strong>: <strong>O</strong>
+        <strong>P</strong>: <strong>P</strong>
+        <strong>Q</strong>: <strong>Q</strong>
+        Matching: Упаривање
         Use the key to match each code to its letter: Користи кључ да укомбинујес сваки код његовом писму
       2-3 Graph Paper Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -33,7 +33,7 @@ sr:
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program.: Уклопи координатну мрежу са програмом.
-        Matching: Уклапанје
+        Matching: Упаривање
       2-3 Maze Match 2:
         /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_2_a2.png
@@ -44,7 +44,7 @@ sr:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Превуците блокове да се уклопе.
         Instructions: Упутства
-        Match the puzzles to the blocks: Уклопи пузле са блоковима
+        Match the puzzles to the blocks: Уклопи слагалице са блоковима
         Maze Match: Maze Match
       2-3 Relay Programming Match 1:
         /script_assets/2-3_images/unplugged/graph_paper_2_a1.png: /script_assets/2-3_images/unplugged/graph_paper_2_a1.png
@@ -54,7 +54,7 @@ sr:
         /script_assets/2-3_images/unplugged/graph_paper_2_q2.png: /script_assets/2-3_images/unplugged/graph_paper_2_q2.png
         /script_assets/2-3_images/unplugged/graph_paper_2_q3.png: /script_assets/2-3_images/unplugged/graph_paper_2_q3.png
         Match the grid to the program: Match the grid to the program
-        Matching: Уклапанје
+        Matching: Упаривање
       2-3 artist loops match 1:
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png: /script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png
@@ -90,7 +90,7 @@ sr:
         /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png: /script_assets/2-3_images/bounce/2-3_bounce_match_1_q5.png
         Bounce Matching: Bounce Matching
         Match the events with the actions: Match the events with the actions
-        Matching: Уклапанје
+        Matching: Упаривање
       2-3 flappy match 1:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a1.png
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_a2.png
@@ -100,7 +100,7 @@ sr:
         /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png: /script_assets/2-3_images/flappy/2-3_flappy_match_1_q3.png
         Flappy Matching One: Flappy Matching One
         Match the events with the actions: Match the events with the actions
-        Matching: Уклапанје
+        Matching: Упаривање
       2-3 maze match 1:
         /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_a2.png
@@ -108,42 +108,42 @@ sr:
         /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q1.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q2.png
         /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png: /script_assets/2-3_images/maze/2-3_maze_match_1_q3.png
-        Match the puzzles to the blocks: Уклопи пузле са блоковима
+        Match the puzzles to the blocks: Уклопи слагалице са блоковима
         Maze Match One: Maze Match One
       4-5 Algorithms Match 1:
-        <h4>1)</h4>: '<h4>1)</h4>'
-        <h4>2)</h4>: '<h4>2)</h4>'
-        <h4>3)</h4>: '<h4>3)</h4>'
-        <h4>4)</h4>: '<h4>4)</h4>'
-        <h4>Add Player 1 roll to total score</h4>: '<h4>Add Player 1 roll to total score</h4>'
-        <h4>Compare player scores to see who wins</h4>: '<h4>Compare player scores to see who wins</h4>'
-        <h4>Player 1 rolls die</h4>: '<h4>Player 1 rolls die</h4>'
-        <h4>Set Player 1 score to 0</h4>: '<h4>Set Player 1 score to 0</h4>'
+        <h4>1)</h4>: <h4>1)</h4>
+        <h4>2)</h4>: <h4>2)</h4>
+        <h4>3)</h4>: <h4>3)</h4>
+        <h4>4)</h4>: <h4>4)</h4>
+        <h4>Add Player 1 roll to total score</h4>: <h4>Add Player 1 roll to total score</h4>
+        <h4>Compare player scores to see who wins</h4>: <h4>Compare player scores to see who wins</h4>
+        <h4>Player 1 rolls die</h4>: <h4>Player 1 rolls die</h4>
+        <h4>Set Player 1 score to 0</h4>: <h4>Set Player 1 score to 0</h4>
         Match the steps in the Dice Race game to the order that they should appear in the algorithm.: Match the steps in the Dice Race game to the order that they should appear in the algorithm.
-        Matching: Уклапанје
+        Matching: Упаривање
       4-5 Computational Thinking Match 1:
         /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a1.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a2.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a3.png
         /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png: /script_assets/4-5_images/unplugged/comp_thinking_2_a4.png
-        "<h3>Wheels/side: 2<br/>Windows/side: 0</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 1</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
-        "<h3>Wheels/side: 2<br/>Windows/side: 6</h3>": '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
-        "<h3>Wheels/side: 3<br/>Windows/side: 2</h3>": '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 0</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 1</h3>'
+        '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>': '<h3>Wheels/side: 2<br/>Windows/side: 6</h3>'
+        '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>': '<h3>Wheels/side: 3<br/>Windows/side: 2</h3>'
         Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.: Each of these vehicles has been decomposed into smaller pieces. Match each vehicle with its decomposed list.
-        Matching: Уклапанје
+        Matching: Упаривање
       4-5 Suncatchers Match 1:
         /script_assets/4-5_images/unplugged/suncatchers_1.png: /script_assets/4-5_images/unplugged/suncatchers_1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a1.png: /script_assets/4-5_images/unplugged/suncatchers_1_a1.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a2.png: /script_assets/4-5_images/unplugged/suncatchers_1_a2.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a3.png: /script_assets/4-5_images/unplugged/suncatchers_1_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_1_a4.png: /script_assets/4-5_images/unplugged/suncatchers_1_a4.png
-        <h4>RAMP</h4>: '<h4>RAMP</h4>'
-        <h4>STACK</h4>: '<h4>STACK</h4>'
-        <h4>STAMP</h4>: '<h4>STAMP</h4>'
-        <h4>STAR</h4>: '<h4>STAR</h4>'
+        <h4>RAMP</h4>: <h4>RAMP</h4>
+        <h4>STACK</h4>: <h4>STACK</h4>
+        <h4>STAMP</h4>: <h4>STAMP</h4>
+        <h4>STAR</h4>: <h4>STAR</h4>
         Match each program to the word it makes, using the provided group of skills.: Match each program to the word it makes, using the provided group of skills.
-        Matching: Уклапанје
+        Matching: Упаривање
       4-5 maze match 1:
         /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a1.png
         /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png: /script_assets/4-5_images/maze/4-5_maze_match_1_a2.png
@@ -154,17 +154,17 @@ sr:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         Drag the blocks to match.: Превуците блокове да се уклопе.
         Instructions: Упутства
-        Match the puzzles to the blocks: Уклопи пузле са блоковима
+        Match the puzzles to the blocks: Уклопи слагалице са блоковима
         Maze Match: Maze Match
       K-1 Artist 2 Match 1:
         /script_assets/k_1_images/artist_images/square_above_ball.png: /script_assets/k_1_images/artist_images/square_above_ball.png
         /script_assets/k_1_images/artist_images/square_below_ball.png: /script_assets/k_1_images/artist_images/square_below_ball.png
         /script_assets/k_1_images/artist_images/square_next_ball.png: /script_assets/k_1_images/artist_images/square_next_ball.png
-        <br/><br/>above: '<br/> <br/> iznad'
-        <br/><br/>below: '<br/> <br/> ispod'
-        <br/><br/>next to: '<br/> <br/> pored'
+        <br/><br/>above: <br/> <br/> iznad
+        <br/><br/>below: <br/> <br/> ispod
+        <br/><br/>next to: <br/> <br/> pored
         Is the square next to, above, or below the ball?: Is the square next to, above, or below the ball?
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Artist 2 Match 2:
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
         /script_assets/k_1_images/artist_images/large_square.png: /script_assets/k_1_images/artist_images/large_square.png
@@ -175,7 +175,7 @@ sr:
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         /script_assets/k_1_images/artist_images/small_triangle.png: /script_assets/k_1_images/artist_images/small_triangle.png
         Match the shapes based on type.: Match the shapes based on type.
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Artist 2 Match 3:
         /script_assets/k_1_images/artist_images/large_circle.png: /script_assets/k_1_images/artist_images/large_circle.png
         /script_assets/k_1_images/artist_images/large_rectangle.png: /script_assets/k_1_images/artist_images/large_rectangle.png
@@ -186,7 +186,7 @@ sr:
         /script_assets/k_1_images/artist_images/small_rectangle2.png: /script_assets/k_1_images/artist_images/small_rectangle2.png
         /script_assets/k_1_images/artist_images/small_square.png: /script_assets/k_1_images/artist_images/small_square.png
         Match the shapes based on type.: Match the shapes based on type.
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Artist Loops Match 1:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a1.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_a2.png
@@ -195,7 +195,7 @@ sr:
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q2.png
         /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png: /script_assets/k_1_images/artist_images/K-1_artistloops_match_1_q3.png
         Match the code to the stairs it draws.: Match the code to the stairs it draws.
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Bee Loops Match 1:
         /script_assets/k_1_images/bee_images/4_gnectar.png: /script_assets/k_1_images/bee_images/4_gnectar.png
         /script_assets/k_1_images/bee_images/5_ghoney.png: /script_assets/k_1_images/bee_images/5_ghoney.png
@@ -206,7 +206,7 @@ sr:
         /script_assets/k_1_images/move_blocks/r3_N.png: /script_assets/k_1_images/move_blocks/r3_N.png
         /script_assets/k_1_images/move_blocks/r5_E.png: /script_assets/k_1_images/move_blocks/r5_E.png
         Match the blocks: Match the blocks
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Big Event Match 1:
         /script_assets/k_1_images/unplugged_images/big_event_1_a1.png: /script_assets/k_1_images/unplugged_images/big_event_1_a1.png
         /script_assets/k_1_images/unplugged_images/big_event_1_a2.png: /script_assets/k_1_images/unplugged_images/big_event_1_a2.png
@@ -216,7 +216,7 @@ sr:
         /script_assets/k_1_images/unplugged_images/big_event_1_q2.png: /script_assets/k_1_images/unplugged_images/big_event_1_q2.png
         /script_assets/k_1_images/unplugged_images/big_event_1_q3.png: /script_assets/k_1_images/unplugged_images/big_event_1_q3.png
         Match the button combination to the dance moves.: Уклопи дугме комбинацијом на плес потезе.
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Flappy Match 1:
         /script_assets/k_1_images/flappy_images/click.png: /script_assets/k_1_images/flappy_images/click.png
         /script_assets/k_1_images/flappy_images/end.png: /script_assets/k_1_images/flappy_images/end.png
@@ -225,7 +225,7 @@ sr:
         /script_assets/k_1_images/flappy_images/pass_obstacle.png: /script_assets/k_1_images/flappy_images/pass_obstacle.png
         /script_assets/k_1_images/flappy_images/score.png: /script_assets/k_1_images/flappy_images/score.png
         Match the blocks: Match the blocks
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Happy Maps Match 1:
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q1.png
         /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png: /script_assets/k_1_images/unplugged_images/happy_maps_2_q2.png
@@ -234,7 +234,7 @@ sr:
         /script_assets/k_1_images/unplugged_images/right.png: /script_assets/k_1_images/unplugged_images/right.png
         /script_assets/k_1_images/unplugged_images/up.png: /script_assets/k_1_images/unplugged_images/up.png
         Match the Map to the arrow that gets the Flurb to the treasure: Match the Map to the arrow that gets the Flurb to the treasure
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Maze Match 1:
         /script_assets/images/matching_ani.gif: /script_assets/images/matching_ani.gif
         /script_assets/k_1_images/maze_images/maze_EN.png: /script_assets/k_1_images/maze_images/maze_EN.png
@@ -248,7 +248,7 @@ sr:
         Drag the blocks to match.: Превуците блокове да се уклопе.
         Instructions: Упутства
         Match the puzzles and blocks: Match the puzzles and blocks
-        Matching: Уклапанје
+        Matching: Упаривање
       K-1 Move It Match 1:
         /script_assets/k_1_images/unplugged_images/leftup.png: /script_assets/k_1_images/unplugged_images/leftup.png
         /script_assets/k_1_images/unplugged_images/move_it_2_q1.png: /script_assets/k_1_images/unplugged_images/move_it_2_q1.png
@@ -257,7 +257,7 @@ sr:
         /script_assets/k_1_images/unplugged_images/rightdown.png: /script_assets/k_1_images/unplugged_images/rightdown.png
         /script_assets/k_1_images/unplugged_images/rightrightup.png: /script_assets/k_1_images/unplugged_images/rightrightup.png
         Match the Map to the algorithm that gets the Flurb to the flowers.: Match the Map to the algorithm that gets the Flurb to the flowers.
-        Matching: Уклапанје
+        Matching: Упаривање
       test matching image:
         /script_assets/matches/images/a1.jpg: /script_assets/matches/images/a1.jpg
         /script_assets/matches/images/a2.jpg: /script_assets/matches/images/a2.jpg
@@ -273,13 +273,13 @@ sr:
         Match up all the flowers by colour!: Match up all the flowers by colour!
         Matching Images Two: Matching Images Two
       test matching text:
-        Matching: Уклапанје
-        Some really easy stuff to match.  Drag it around until you get it.: 'Some really easy stuff to match.  Drag it around until you get it.'
+        Matching: Упаривање
+        Some really easy stuff to match.  Drag it around until you get it.: Some really easy stuff to match.  Drag it around until you get it.
         Sydney: Sydney
         Van Minnen: Van Minnen
         What color is the sky?: What color is the sky?
-        What's Brent's last name?: "What's Brent's last name?"
-        What's in the ocean?: "What's in the ocean?"
+        What's Brent's last name?: What's Brent's last name?
+        What's in the ocean?: What's in the ocean?
         Where is Brendan from?: Where is Brendan from?
         blue: плава
         salt: salt
@@ -288,18 +288,18 @@ sr:
         /script_assets/2-3_images/unplugged/algorithms_1_q.png: /script_assets/2-3_images/unplugged/algorithms_1_q.png
         Choose an algorithm for the image provided.: Choose an algorithm for the image provided.
         Multiple Choice: Multiple Choice
-        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: 'Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram'
-        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: 'Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square'
-        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: 'Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle'
-        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: 'Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram'
+        Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram: Start with a square<br/>Put a parallelogram above the square<br/>Put a triangle right of the parallelogram
+        Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square: Start with a square<br/>Put a triangle above the square<br/>Put a triangle below the square
+        Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle: Start with a square<br/>Put a triangle below the square<br/>Put a parallelogram right of the triangle
+        Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram: Start with a square<br/>Put a triangle right of square<br/>Put a parallelogram below square<br/>Put triangle right of parallelogram
       2-3 Algorithms Multi 2:
         /script_assets/2-3_images/unplugged/algorithms_2_a1.png: /script_assets/2-3_images/unplugged/algorithms_2_a1.png
         /script_assets/2-3_images/unplugged/algorithms_2_a2.png: /script_assets/2-3_images/unplugged/algorithms_2_a2.png
         /script_assets/2-3_images/unplugged/algorithms_2_a3.png: /script_assets/2-3_images/unplugged/algorithms_2_a3.png
         /script_assets/2-3_images/unplugged/algorithms_2_a4.png: /script_assets/2-3_images/unplugged/algorithms_2_a4.png
         Multiple Choice: Multiple Choice
-        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: 'Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square'
-        Which image does <em>not</em> follow this algorithm?: 'Which image does <em>not</em> follow this algorithm?'
+        Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square: Start with a triangle<br/>Put a square below the triangle<br/>Put another triangle below the square
+        Which image does <em>not</em> follow this algorithm?: Which image does <em>not</em> follow this algorithm?
       2-3 Binary Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
         /script_assets/2-3_images/unplugged/graph_paper_1_a2.png: /script_assets/2-3_images/unplugged/graph_paper_1_a2.png
@@ -321,7 +321,7 @@ sr:
         /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a3.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png: /script_assets/2-3_images/unplugged/getting_loopy_1_a4.png
         /script_assets/2-3_images/unplugged/getting_loopy_1_q.png: /script_assets/2-3_images/unplugged/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: Како би поједноставио овај програм користећи петље?
         Multiple Choice: Multiple Choice
       2-3 Graph Paper Multi 1:
         /script_assets/2-3_images/unplugged/graph_paper_1_a1.png: /script_assets/2-3_images/unplugged/graph_paper_1_a1.png
@@ -358,7 +358,7 @@ sr:
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png
         /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700: /script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png, 700
         Artist Debugging Multiple Choice One: Artist Debugging Multiple Choice One
-        Why won't this circle go all the way around?: "Why won't this circle go all the way around?"
+        Why won't this circle go all the way around?: Why won't this circle go all the way around?
       2-3 artist functions multi 1:
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png
         /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png: /script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png
@@ -434,7 +434,7 @@ sr:
         1: ': Here are three sentences. Which of the templates below correctly abstracts so that all three match the same pattern as the template?'
         Multiple Choice: Multiple Choice
         Seattle _____ a _____ _____.: Seattle _____ a _____ _____.
-        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: 'Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.'
+        Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.: Seattle is a big city.<br/>Eugene is a medium city<br/>Hillview is a small city.
         _____ is _____ a _____.: _____ is _____ a _____.
         _____ is a _____ city.: _____ is a _____ city.
       4-5 Crowdsourcing Multi 1:
@@ -455,7 +455,7 @@ sr:
         Your address: Your address
         Your birthday: Your birthday
         Your favorite food: Your favorite food
-        Your parent's credit card number: "Your parent's credit card number"
+        Your parent's credit card number: Your parent's credit card number
       4-5 Internet Multi 1:
         /script_assets/4-5_images/unplugged/internet_1_q.png: /script_assets/4-5_images/unplugged/internet_1_q.png
         23.23.224.106: 23.23.224.106
@@ -474,10 +474,10 @@ sr:
         thinkersmith.org: thinkersmith.org
       4-5 Songwriting Multi 1:
         /script_assets/4-5_images/unplugged/songwriting_1_q.png: /script_assets/4-5_images/unplugged/songwriting_1_q.png
-        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: "Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin."
+        Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.: Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Fly's in the buttermilk, <br/>Shoo, fly, shoo, <br/>Skip to my Lou, my darlin.
         Lou, Lou, skip to my Lou,: Lou, Lou, skip to my Lou,
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: 'Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.'
-        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: "Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,"
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.
+        Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,: Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Lou, Lou, skip to my Lou, <br/>Skip to my Lou, my darlin.<br/><br/><p>Fly's in the buttermilk, <br/>Shoo, fly, shoo,
         Multiple Choice: Multiple Choice
         What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?: What is the largest chunk of this song that you can define as the chorus so that the chorus repeats exactly each time it is called?
       4-5 Suncatchers Multi 1:
@@ -486,7 +486,7 @@ sr:
         /script_assets/4-5_images/unplugged/suncatchers_2_a3.png: /script_assets/4-5_images/unplugged/suncatchers_2_a3.png
         /script_assets/4-5_images/unplugged/suncatchers_2_q.png: /script_assets/4-5_images/unplugged/suncatchers_2_q.png
         Multiple Choice: Multiple Choice
-        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: 'Which of the programs below <em>does not</em> make the exact same sequence as Program 1?'
+        Which of the programs below <em>does not</em> make the exact same sequence as Program 1?: Which of the programs below <em>does not</em> make the exact same sequence as Program 1?
       4-5 artist functions multi 1:
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artistfunctions_multi_1_a2.png
@@ -509,7 +509,7 @@ sr:
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a3.png
         /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png: /script_assets/4-5_images/artist/4-5_artistloops_multi_2_a4.png
         Artist Functions Multiple Choice: Artist Functions Multiple Choice
-        "Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50": 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
+        'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50': 'Pick the for loop that represents the following pattern:  5, 10, 15, 20, 25, 30, 35, 40, 45, 50'
       4-5 artist multi 1:
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png
         /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png: /script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png
@@ -530,8 +530,8 @@ sr:
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png
         /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png: /script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png
-        0: "? A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
-        1: ": A purple flower may have either 3, 2 or 1 nectars, but you don't know how many. Which blocks correctly check and collect all of the nectar from a purple flower?"
+        0: '? A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
+        1: ': A purple flower may have either 3, 2 or 1 nectars, but you don''t know how many. Which blocks correctly check and collect all of the nectar from a purple flower?'
         Bee Conditionals Multiple Choice: Bee Conditionals Multiple Choice
         Choose the best blocks.: Choose the best blocks.
       4-5 bee debug multi 1:
@@ -577,19 +577,19 @@ sr:
         Which blocks solve the puzzle?: Which blocks solve the puzzle?
       Baker test of multi can delete:
         2+3: 2+3
-        3 - 7: '3 - 7'
+        3 - 7: 3 - 7
         3+1: 3+1
         3+4: 3+4
         5-1: 5-1
         Test of 2 correct answer multi choice: Test of 2 correct answer multi choice
-        There are two answers here that are correct.  Looks like you can choose either one and be right.: 'There are two answers here that are correct.  Looks like you can choose either one and be right.'
+        There are two answers here that are correct.  Looks like you can choose either one and be right.: There are two answers here that are correct.  Looks like you can choose either one and be right.
         What is 2 + 2?: What is 2 + 2?
       Choose 2 Test:
         Line 2: Line 2
         Line 3: Line 3
         Line 4: Line 4
         Line 5: Line 5
-        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: 'Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers'
+        Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers: Which lines of code should be removed so the program will work as intended? Select <u>two</u> answers
       K-1 Artist 1 Multi 1:
         /script_assets/k_1_images/artist_images/E-S-S.png: /script_assets/k_1_images/artist_images/E-S-S.png
         /script_assets/k_1_images/artist_images/E-S.png: /script_assets/k_1_images/artist_images/E-S.png
@@ -644,13 +644,13 @@ sr:
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png
         /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png: /script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png
         Multiple Choice: Multiple Choice
-        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: 'Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?'
+        Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?: Which animal has the digital footprint that leaves him or her the <strong>most unsafe</strong>?
       K-1 Getting Loopy Multi 1:
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png
         /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png: /script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png
-        How would you simplify this sequence with loops?: How would you simplify this sequence with loops?
+        How would you simplify this sequence with loops?: Како би поједноставио овај програм користећи петље?
         Multiple Choice: Multiple Choice
       K-1 Happy Maps Multi 1:
         /script_assets/k_1_images/unplugged_images/down.png: /script_assets/k_1_images/unplugged_images/down.png
@@ -665,7 +665,7 @@ sr:
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png
         /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png: /script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png
         Multiple Choice: Multiple Choice
-        Which information should you <strong>not</strong> share online?: 'Which information should you <strong>not</strong> share online?'
+        Which information should you <strong>not</strong> share online?: Which information should you <strong>not</strong> share online?
       K-1 Maze Debugging Multi 1:
         /script_assets/k_1_images/maze_images/EESq.png, 700: /script_assets/k_1_images/maze_images/EESq.png, 700
         /script_assets/k_1_images/move_blocks/E.png: /script_assets/k_1_images/move_blocks/E.png
@@ -724,14 +724,14 @@ sr:
         /script_assets/k_1_images/move_blocks/ESSS.png: /script_assets/k_1_images/move_blocks/ESSS.png
         /script_assets/k_1_images/search_images/move.png, 450: /script_assets/k_1_images/search_images/move.png, 450
         Multiple Choice: Multiple Choice
-        Which blocks spell "MOVE"?: 'Which blocks spell "MOVE"?'
+        Which blocks spell "MOVE"?: Which blocks spell "MOVE"?
       K-1 Word Search Multi 2:
         /script_assets/k_1_images/move_blocks/EENN.png: /script_assets/k_1_images/move_blocks/EENN.png
         /script_assets/k_1_images/move_blocks/NENE.png: /script_assets/k_1_images/move_blocks/NENE.png
         /script_assets/k_1_images/move_blocks/NNEE.png: /script_assets/k_1_images/move_blocks/NNEE.png
         /script_assets/k_1_images/search_images/jump.png, 450: /script_assets/k_1_images/search_images/jump.png, 450
         Multiple Choice: Multiple Choice
-        Which blocks spell "JUMP"?: 'Which blocks spell "JUMP"?'
+        Which blocks spell "JUMP"?: Which blocks spell "JUMP"?
       K-1 Word Search Multi 3:
         /script_assets/k_1_images/search_images/square.png, 700: /script_assets/k_1_images/search_images/square.png, 700
         Multiple Choice: Multiple Choice
@@ -744,15 +744,15 @@ sr:
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        Which boy is the <large>helper</large>?: 'Which boy is the <large>helper</large>?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
+        Which boy is the <large>helper</large>?: Which boy is the <large>helper</large>?
       K-1 multi 5:
         /script_assets/multis/driver.jpg: /script_assets/multis/driver.jpg
         /script_assets/multis/driver_helper.jpg: /script_assets/multis/driver_helper.jpg
         /script_assets/multis/helper.jpg: /script_assets/multis/helper.jpg
         Driver and Helper: Driver and Helper
-        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: 'One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.'
-        This time, which boy is the <large>driver</large>?: 'This time, which boy is the <large>driver</large>?'
+        One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.: One of these boys is the <b>driver</b>.  And one is the <b>helper</b>.
+        This time, which boy is the <large>driver</large>?: This time, which boy is the <large>driver</large>?
       Multi Strings Images 1:
         Multi Strings Images 1.blocks1.start_blocks, 350, 100: Multi Strings Images 1.blocks1.start_blocks, 350, 100
         Multi Strings Images 1.blocks2.start_blocks, 350, 100: Multi Strings Images 1.blocks2.start_blocks, 350, 100
@@ -760,7 +760,7 @@ sr:
         Multi Strings Images 1.blocks4.start_blocks, 350, 100: Multi Strings Images 1.blocks4.start_blocks, 350, 100
         Strings and Images Multiple Choice: Strings and Images Multiple Choice
         Which of these Evaluation Blocks will draw the image on the left?: Which of these Evaluation Blocks will draw the image on the left?
-        "https://studio.code.org/script_assets/msm/green-rect.png": https://studio.code.org/script_assets/msm/green-rect.png
+        "https://studio.code.org/script_assets/msm/green-rect.png": 'https://studio.code.org/script_assets/msm/green-rect.png'
       Warmup questions:
         Coding in Racket: Coding in Racket
         Select the best answer to the question.: Select the best answer to the question.

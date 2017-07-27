@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import Button from './Button';
+import LegacyButton from './LegacyButton';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
 import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
@@ -71,7 +71,7 @@ Body.propTypes = {
 export function Confirm(props) {
   let {type, ...other} = props;
   type = type || "primary";
-  return <Button type={type} {...other}>{props.children || locale.dialogOK()}</Button>;
+  return <LegacyButton type={type} {...other}>{props.children || locale.dialogOK()}</LegacyButton>;
 }
 Confirm.propTypes = {
   children: React.PropTypes.node,
@@ -79,7 +79,7 @@ Confirm.propTypes = {
 };
 
 export function Cancel(props) {
-  return <Button type="cancel" {...props}>{props.children || locale.dialogCancel()}</Button>;
+  return <LegacyButton type="cancel" {...props}>{props.children || locale.dialogCancel()}</LegacyButton>;
 }
 Cancel.propTypes = {
   children: React.PropTypes.node,

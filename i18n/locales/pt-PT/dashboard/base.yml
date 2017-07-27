@@ -9,11 +9,15 @@ pt:
     errors:
       messages:
         blank: "é obrigatório"
+        blank_plural: "are required"
+        invalid_plural: "are invalid"
     attributes:
       user:
         name: 'Nome a apresentar'
         name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: 'E-mail'
+        parent_email: 'Parent/guardian email'
+        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
         username: 'Nome de utilizador'
         password: 'Palavra-passe'
         password_confirmation: 'Confirmação da palavra-passe'
@@ -48,7 +52,7 @@ pt:
     submit: 'Adicionar pista'
   appname: "Code.org"
   stage: "Etapa"
-  stage_number: "%{number}.ª ETAPA"
+  stage_number: "Fase %{number}"
   puzzle: "Desafio"
   trophies: "Troféus"
   courses: 'Cursos'
@@ -115,24 +119,24 @@ pt:
   school_info:
     title: 'School Information (optional)'
     school_country: 'School Country'
-    select_school_type: 'School Type'
-    charter: 'Charter'
-    private: 'Private'
-    public: 'Public'
+    select_school_type: 'Tipo de escola'
+    charter: 'Escola por contrato de associação'
+    private: 'Privada'
+    public: 'Pública'
     homeschool: 'Homeschool'
     after_school: 'After School'
     other: 'Outros'
-    state: 'State'
-    district: 'District'
-    other_district_not_listed: 'Other district not listed above'
-    district_name: 'District Name'
-    school: 'School'
+    state: 'Estado'
+    district: 'Distrito'
+    other_district_not_listed: 'Outro distrito'
+    district_name: 'Nome do distrito'
+    school: 'Escola'
     other_school_not_listed: 'Other school not listed above'
-    school_name: 'School Name'
-    school_zip: 'School Zip Code'
-    school_address: 'School Address'
-    school_organization_name: 'School/Organization Name'
-    school_organization_zip: 'School/Organization Zip Code'
+    school_name: 'Nome da escola'
+    school_zip: 'Código postal da escola'
+    school_address: 'Morada da escola'
+    school_organization_name: 'Nome da escola ou organização'
+    school_organization_zip: 'Código postal da escola ou organização'
   signin_form:
     title: 'Já tens uma conta? Inicia sessão'
     login: 'E-mail'
@@ -159,6 +163,8 @@ pt:
       instructions: "Digite seu endereço de e-mail abaixo e enviaremos instruções de redefinição de senha."
       email: 'Endereço de e-mail'
       submit: 'OK'
+    reset_errors:
+      invalid_email: 'It looks like you may have signed up with an invalid email address. Please email support@code.org to receive a password recovery link.'
     change_form:
       title: 'Alterar palavra-passe'
       new_password: 'Nova palavra-passe'
@@ -174,11 +180,13 @@ pt:
       Os tutoriais são divertidos, intuitivos e ensinam os conceitos básicos da informática de forma muito simples. É como se fossem jogos. Aprende a programar com Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs. Zombies! :-)
       
       %{name}
+  parent_mailer:
+    student_associated_subject: 'Login information for Code.org'
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: '%{section_code} with %{teacher_name}'
+      one: 'A tua turma:'
+      other: 'As tuas turmas:'
+    code_with_teacher: '%{section_code} com %{teacher_name}'
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
@@ -200,61 +208,13 @@ pt:
   reports:
     error:
       access_denied: "Não tem acesso às estatísticas desta pessoa"
-  redeem_prizes:
-    title: 'Recolher prémios: %{name}'
-    provider: 'Fornecedor:'
-    code: 'Código:'
-    redeem_header: 'Para resgatar:'
-    donorschoose_register: 'Registre-se como professor no DonorsChoose.org'
-    donorschoose_project: 'Publicar um projeto'
-    donorschoose_how_to: 'Como usar o código'
-    success: 'O teu prémio foi recolhido com êxito, vê o código abaixo.'
-    error: 'O teu prémio não pôde ser recolhido, por favor tenta novamente.'
-    error_us_only: 'O prémio oferecido só é valido para utilizadores dos Estados Unidos.'
-    error_not_earned: 'Ainda não ganhou este prémio.'
-    error_already_redeemed: 'Este prémio já foi levantado.'
-    no_prizes_available: "Infelizmente não temos prémios disponíveis, neste momento."
-    teacher_info_required: "Prémios dos professores requerem o preenchimento do nome e morada da escola:"
-    teacher_email_required: "Prémios dos professores requerem a confirmação do endereço de email:"
-    confirm:
-      title: 'Confirma por favor'
-      'no': 'Não'
-      'yes': 'Sim'
-      msg: 'Tens a certeza de que pretendes reclamar o prémio %{prize_name}?'
-      msg_student: 'Nota: Só podes escolher um tipo de prémio.'
-      msg_publicschool: 'Confirme que é um professor de uma escola pública dos E.U.A.'
-      msg_visit_website: 'Visitar o site'
-    providers:
-      apple_itunes: '$10 iTunes Gift Card'
-      donors_choose: 'DonorsChoose.org $750 credit'
-      donors_choose_bonus: 'DonorsChoose.org $250 credit'
-      dropbox: '10GB de espaço no Dropbox'
-      valve: 'Portal 2 (PC ou Mac)'
-      ea_bejeweled: 'Bejeweled 3 (PC)'
-      ea_fifa: 'FIFA Soccer 13 (PC)'
-      ea_simcity: 'SimCity 4 Deluxe Edition (PC)'
-      ea_pvz: 'Plants vs. Zombies (PC)'
-      skype: '$10 Skype credit'
-    msg:
-      choose: 'Escolhe um prémio:'
-      choose_teacher: 'Click on the logo below to claim your prize:'
-      earned: 'Ganhaste um prémio! (apenas para alunos dos EUA)'
-      not_earned_title: 'Conclua o tutorial e ganhe prémios (apenas para alunos dos E.U.A.)'
-      not_earned: 'Aprenda todos os conceitos das ciências de computação, ganhe os %{num_trophies} troféus e prémios reais. Pode escolher entre 10GB de armazenamento gratuito na Dropbox, 10$ US em crédito Skype, e descarregar jogos gratuitamente. Nota: oferta válida apenas para alunos dos E.U.A. até ao limite de stock.'
-      teacher:
-        earned: '15 ou mais alunos receberam todos os %{num_trophies} troféus. Por este motivo, ganhou um prémio de professor! (apenas para professores dos E.U.A.)'
-        not_earned_title: 'Ensine e ganhe até $1,000 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (apenas para professores dos E.U.A.)'
-        not_earned: 'Para recompensar os professores de ciência da computação, pode ganhar até Us$1.000 em créditos da <a href="http://DonorsChoose.org">DonorsChoose.org</a> para ministrar uma aula introdutória para uma turma de ensino básico. Para ser elegível, é necessário ministrar um curso introdutório para uma turma de pelo menos 15 alunos do ensino básico, e todos os 15 alunos (ou mais) devem completar todos os tutoriais e ganhar todos os %{num_trophies} troféus. Se 7 ou mais alunos que ganharem todos os troféus forem meninas,  a recompensa é de Us$1.000 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Caso contrário, a recompensa é de Us$750 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Os créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> só podem ser utilizados pelos professores nas escolas públicas dos E.U.A.'
-        bonus:
-          not_earned_title: 'Ainda pode ganhar um bónus de $250 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> (apenas professores dos E.U.A.)'
-          earned: '7 ou mais dos alunos que ganharam todos os %{num_trophies} troféus, são meninas. Por isso ganhou um prémio adicional! (apenas para professores dos E.U.A.)'
-          not_earned: 'Se pelo menos 7 dos seus alunos que ganharem todos os %{num_trophies} troféus forem meninas, terá um prémio adicional de $250 em créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a>. Os créditos da <a target="_blank" href="http://DonorsChoose.org">DonorsChoose.org</a> só podem ser utilizados pelos professores de escolas públicas dos E.U.A.'
   crud:
     new_model: 'Novo %{model}'
     show: 'Mostrar'
     edit: 'Editar'
     edit_model: 'Editar %{model}'
     update: 'Atualizar'
+    submit: 'OK'
     destroy: 'Eliminar'
     back: 'Anterior'
     confirm: 'Tens a certeza?'
@@ -262,6 +222,11 @@ pt:
     updated: '% {modelo} foi actualizado com sucesso.'
     destroyed: '%{model} foi apagado com sucesso.'
     access_denied: 'Você não tem acesso a este %{model}.'
+  devise:
+    registrations:
+      user:
+        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
+        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
     header:
       finished_hoc: "Terminei a minha Hora de Código"
@@ -271,13 +236,48 @@ pt:
         artist: 'Desenhar alguma coisa'
         calculate: 'Calculate something'
         applab: 'Criar uma aplicação App Lab'
+        gamelab: 'Make a Game Lab project'
+      home: "Início"
+      courses: "Cursos"
+      project_gallery: "Galeria de projetos"
+      sections: "Turmas"
+      help_support: "Ajuda e suporte"
+      report_bug: "Comunicar um problema"
+      teacher_community: "Comunidade de professores"
+      professional_learning: "Professional Learning"
+      documentation: "Documentação"
+      tutorials: "Tutoriais"
+      educate_overview: "Educator Overview"
+      educate_elementary: "Elementary School"
+      educate_middle: "Middle School"
+      educate_high: "High School"
+      educate_hoc: "Hora de Código"
+      educate_partner: "Partner with Us"
+      educate_beyond: "Beyond Code.org"
+      educate_inspire: "Inspire a Student"
+      educate_community: "Online Community"
+      educate_tools: "Tools and Videos"
+      about_us: "Quem somos"
+      about_leadership: "Administração"
+      about_donors: "Doadores"
+      about_partners: "Parceiros"
+      about_team: "Toda a equipa"
+      about_news: "Imprensa"
+      about_evaluation: "Avaliação"
+      about_jobs: "Empregos"
+      about_contact: "Contacte-nos"
+      about_faqs: "Perguntas frequentes"
+      learn: "Learn"
+      stats: "Estatística"
+      help_us: "Help Us"
+      teach: "Teach"
+      about: "About"
     user:
       classroom: 'Página inicial do Professor'
       district_dashboard: 'Painel do distrito'
       label: 'Olá, %{username}'
       stats: 'Code Studio'
-      settings: 'Definições'
-      prizes: 'Prémios'
+      settings: 'Minha conta'
       logout: 'Terminar sessão'
       signin: 'Iniciar sessão'
       signup: 'Criar uma conta'
@@ -311,7 +311,7 @@ pt:
     user_not_found: 'O professor não foi encontrado.'
     student_teacher_disassociated: 'Você removeu %{teacher_name} como seu professor.'
     panel:
-      answer_viewer: 'Painel do Professor'
+      answer_viewer: 'Painel do professor'
       student: 'Aluno'
       viewing_solution: 'Visualizar solução'
       try_it_yourself: 'Tente você mesmo'
@@ -337,6 +337,13 @@ pt:
     deleted_user: 'deleted user'
     no_password_because_oauth: 'No password because you sign in with a third-party provider.'
     no_password_because_sponsored: 'See your teacher to manage your password.'
+    create_personal_login: 'Create a personal login'
+    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
+    create_personal_login_under_13_username: "Username (don't use your real name!)"
+    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. If I am under 13 years of age, I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
+    create_personal_login_email_note: 'Note: Email addresses are not stored in a form that allows us to contact students. Students will never receive emails from Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'', target=''_blank''>privacy policy</a> for more information.'
   user_level:
     completed: 'Concluído'
     tried: 'Tentado'
@@ -407,6 +414,9 @@ pt:
     announcement_apcsp_recruitment2: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and we'll <a href='%{gift_url}' target='_blank'>send you a gift</a>. Students can also encourage peers across the country in our <a href='%{challenge_url}' target='_blank'>#APCSP video challenge</a>."
     announcement_apcsp_recruitment3: "This year's AP CS Principles exam is poised to break records. Student participation in the exam could dramatically shift diversity in AP Computer Science, but we need your help. Encourage every CS Principles student to take the AP CSP exam and you could win <a href='%{gift_url}' target='_blank'>a gift card, laptop, or other cool prize</a>!  Share <a href='%{video_url}' target='_blank'>this video</a> so your students can hear from their peers around the country who are taking the exam."
     announcement_csp_deadline: "Final call for high school teachers! Take the lead on computer science in your school and apply for our high-quality professional learning programs <strong>at absolutely no cost to you or your school</strong>. Applications close on April 14th."
+    announcement_applab_export: "App Lab, our web-based programming environment, now supports exporting your code! You can start building apps with drag-and-drop JavaScript blocks, then export the code to continue editing in any professional development environment of your choice."
+    announcement_csp_survey: "<b>Congratulations CS Principles teachers!</b><br/>Your CS Principles students taking the AP CS Exam will join over 50,000 other students in the largest AP Exam launch in history. Now, let the voices of your students be heard – remind them to complete the end-of-course survey! You'll be able to review your students' responses and we'll also share an aggregate national report with you."
+    announcement_navigation_redesign: "<b>Upcoming Site Navigation Changes</b><br/>Coming soon this summer, we’re improving navigation across the Code.org site so that you always have access to your top resources from anywhere on the site. As soon as you log in to your teacher account, every page will have a new navigation bar with links to your Homepage, Courses, Project Gallery, Sections, and Professional Learning."
   move_students:
     new_section_dne: "Desculpe, mas não existe secção %{new_section_code}. Por favor insira um código de seção diferente."
     section_code_cant_be_current_section: "A secção atual não pode ser a mesma que a nova seção."
@@ -526,6 +536,11 @@ pt:
     gallery:
       title: "Galeria"
       body: "Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários"
+    gamelab:
+      title: "Game Lab (beta)"
+      body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Maiores de 13 anos"
+      cta: "Saber mais"
     frozen:
       title: "Frozen"
     starwars:
@@ -544,6 +559,14 @@ pt:
       audience: "Maiores de 4 anos"
       body: "Nós compilamos uma lista de lições desconectadas para você usar na sua sala de aula. Agora você pode ensinar os fundamentos da ciência da computação, se você tiver computadores em sua sala de aula ou não! Tente usar essas lições como um curso de stand-alone ou como aulas complementares para qualquer curso de ciência da computação."
       body_short: "Se você não tem computadores, tente essas lições desligadas em sua sala de aula."
+    unplugged_conditionals:
+      title: "Condicionais"
+      body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
+    widgets:
+      title: "Widgets"
+      body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
+      audience: "Maiores de 14 anos"
+      cta: "Saber mais"
   gallery:
     students_drew_these_with_code: "Alunos criaram isso com programação!"
     students_made_these_with_code: "Os alunos criaram isso com programação!"
@@ -565,9 +588,9 @@ pt:
     support: "Obter ajuda"
     support_url: "//support.code.org"
     help_resources: "Ajuda e recursos"
-    help_support: "Suporte"
-    documentation: "Documentation"
-    tutorials: "Tutorials"
+    help_support: "Ajuda e suporte"
+    documentation: "Documentação"
+    tutorials: "Tutoriais"
   multi:
     wrong_title: "Resposta incorreta"
     wrong_body: "A tua resposta não está correta. Não desistas! Volta tentar!"
@@ -645,6 +668,11 @@ pt:
     print: "Imprimir"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     review_terms: "Review updated terms"
+  school_info_interstitial:
+    title: "We want to bring Computer Science to every student - help us track our progress!"
+    message: "Please enter your school information below."
+    message_with_suggestion: "Please verify that the following information is correct, or update as necessary."
+    save: "Guardar"
   race_interstitial:
     title: 'Optional: Help us track our progress toward improving diversity in computer science'
     message: "Please tell us your race (check all that apply)"
@@ -690,6 +718,9 @@ pt:
     delete: "Apagar"
     exit: "Voltar ao curso"
     my_projects: "Os meus projetos"
+    project_gallery: "Galeria de projetos"
+    publish: "Publicar"
+    unpublish: "Unpublish"
     share: "Partilhar"
     share_title: Partilha o teu projeto
     share_copy_link: "Copia a ligação:"
@@ -697,6 +728,7 @@ pt:
     share_u13_warning: "Ask your teacher before sharing. Only share with others in your school."
     embed: "Incorporar"
     advanced_share: "Show advanced options"
+    no_projects: "You currently have no projects. Click on one of the buttons above to start a project."
     close: "Fechar"
     more: "Mais"
     name: "Nome"
@@ -704,6 +736,7 @@ pt:
     project_type: "Tipo de projeto"
     help_text: "Clica em <strong>Desenvolver uma aplicação</strong> ou <strong>Desenhar alguma coisa</strong> para entrares num novo Laboratório de jogos ou fazeres um Projeto de artista!<br/>Podes voltar a trabalhar nos teus projetos quando quiseres."
     need_help: "Precisas de ajuda para começares?"
+    thumbnail_help: "Not seeing the correct thumbnail for your project? Run your app to generate a new thumbnail. Note that it may take a couple hours for the thumbnail to refresh everywhere."
     really_delete: 'Apagar?'
     delete_yes: 'Sim'
     delete_no: 'Não'
@@ -758,20 +791,6 @@ pt:
     no_reviews_at_this_moment_notice: 'There are no peer reviews available at this moment, please check back soon'
     review_submitted: 'Your peer review was submitted'
     review_new_submission: 'Review a new submission'
-  components:
-    icon_library:
-      search_placeholder_text: 'Pesquisa ícones'
-      no_icons_found: 'Nenhum ícone encontrado'
-    playzone:
-      artist_description: 'Faça desenhos e figuras legais com o Artista!'
-      artist_title: 'New Drawing'
-      continue_button: 'Go on to the next Stage'
-      playlab_description: 'Crie uma história ou um jogo no Laboratório!'
-      playlab_title: 'Nova Aplicação'
-      primary_header: 'Parabéns! Terminou %{stageName}!'
-      projects_description: 'Revisit one of your existing projects.'
-      projects_title: 'Abrir um projeto'
-      secondary_header: 'Ask your teacher what to do next'
   flex_category:
     required: 'Visão geral'
     content: 'Conteúdo'
@@ -782,6 +801,32 @@ pt:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
+    csd1_1: 'Chapter 1: The Problem Solving Process'
+    csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd2_1: 'Chapter 1: Web Content and HTML'
+    csd2_2: 'Chapter 2: Styling and CSS'
+    csd3_1: 'Chapter 1: Images and Animations'
+    csd3_2: 'Chapter 2: Building Games'
+    csd4_1: 'Chapter 1: User Centered Design'
+    csd4_2: 'Chapter 2: App Prototyping'
+    csd5_1: 'Chapter 1: Representing Information'
+    csd5_2: 'Chapter 2: Solving Data Problems'
+    csd6_1: 'Chapter 1: Hardware Output'
+    csd6_2: 'Chapter 2: Hardware Input'
+    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_2: 'Chapter 2: Inventing the Internet'
+    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
+    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
+    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
+    csp5_1: 'Chapter 1: Event-Driven Programming'
+    csp5_2: 'Chapter 2: Programming with Data Structures'
+    cspSurvey: 'Survey'
+    cspAssessment: 'Chapter Assessment'
+    csp_ap_1: 'Chapter 1: AP Tech Setup'
+    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
+    csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: 'Reflection Prompts'
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated by Code.org.
@@ -852,6 +897,7 @@ pt:
   locked_stage: 'The contents of this stage are not visible because this stage is currently locked. Your teacher can unlock this stage when it is time to work on it or review your answers.'
   hidden_stage: "Your teacher didn't expect you to be here. Please ask your teacher which lesson you should be on."
   return_course_overview: 'Go to unit overview'
+  view_all_units: 'View all units'
   pd:
     survey:
       number_teachers: 'Number of attending teachers'
@@ -881,3 +927,4 @@ pt:
       things_you_liked_s: 'What were the two things you liked most about the activities you did in this workshop and why?'
       things_you_would_change_s: 'What are the two things you would change about the activities you did in this workshop?'
       anything_else_s: 'Is there anything else you’d like to tell us about your experience at this workshop?'
+  courses_category: 'Full Courses'

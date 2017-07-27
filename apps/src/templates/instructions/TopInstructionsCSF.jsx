@@ -27,7 +27,7 @@ import HintPrompt from './HintPrompt';
 import InlineFeedback from './InlineFeedback';
 import InlineHint from './InlineHint';
 import ChatBubble from './ChatBubble';
-import Button from '../Button';
+import LegacyButton from '../LegacyButton';
 import { Z_INDEX as OVERLAY_Z_INDEX } from '../Overlay';
 import msg from '@cdo/locale';
 
@@ -214,35 +214,36 @@ var TopInstructions = React.createClass({
 
   getInitialState() {
     return {
-      rightColWidth: this.shouldDisplayCollapserButton() ? 90 : 10,
+      rightColWidth: {
+        collapsed: undefined,
+        uncollapsed: undefined,
+        empty: 10
+      },
       promptForHint: false,
       displayScrollButtons: true
     };
   },
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.props.collapsed !== prevProps.collapsed) {
+    if (this.shouldDisplayCollapserButton() && this.getRightColWidth() === undefined) {
       // Update right col width now that we know how much space it needs, and
       // rerender if it has changed. One thing to note is that if we end up
       // resizing our column significantly, it can result in our maxNeededHeight
       // being inaccurate. This isn't that big a deal except that it means when we
       // adjust maxNeededHeight below, it might not be as large as we want.
-      const width = this.shouldDisplayCollapserButton() ?
-          $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true) : 10;
+      const width = $(ReactDOM.findDOMNode(this.refs.collapser)).outerWidth(true);
 
-      if (width !== this.state.rightColWidth) {
-        // setting state in componentDidUpdate will trigger another
-        // re-render and is discouraged; unfortunately in this case we
-        // can't do it earlier in the lifecycle as we need to examine the
-        // actual DOM to determine the desired value. We are careful to
-        // only actually update the state when it has changed, which will
-        // prevent the possibility of an infinite loop and should serve to
-        // minimize excess rerenders.
-        // eslint-disable-next-line react/no-did-update-set-state
-        this.setState({
-          rightColWidth: width
-        });
-      }
+      // setting state in componentDidUpdate will trigger another
+      // re-render and is discouraged; unfortunately in this case we
+      // can't do it earlier in the lifecycle as we need to examine the
+      // actual DOM to determine the desired value. We are careful to
+      // only actually update the state when it has changed, which will
+      // prevent the possibility of an infinite loop and should serve to
+      // minimize excess rerenders.
+      let rightColWidth = Object.assign({}, this.state.rightColWidth);
+      rightColWidth[this.getCurrentRightColWidthProperty()] = width;
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ rightColWidth });
     }
 
     this.adjustMaxNeededHeight();
@@ -530,6 +531,28 @@ var TopInstructions = React.createClass({
     return this.props.feedback ? this.props.failureAvatar : this.props.smallStaticAvatar;
   },
 
+  /**
+   * this.state.rightColWidth contains three key/value pairs, reflecting the
+   * three different possible states for the right column content. This simple
+   * helper method returns the key corresponding to our current state.
+   *
+   * @returns {string} the key to this.state.rightColWidth which represents our
+   *          current state
+   */
+  getCurrentRightColWidthProperty() {
+    if (this.shouldDisplayCollapserButton()) {
+      return this.props.collapsed ?
+        'collapsed' :
+        'uncollapsed';
+    } else {
+      return 'empty';
+    }
+  },
+
+  getRightColWidth() {
+    return this.state.rightColWidth[this.getCurrentRightColWidthProperty()];
+  },
+
   render: function () {
     const resizerHeight = (this.props.collapsed ? 0 : RESIZER_HEIGHT);
     const topInstructionsHeight = this.props.height - resizerHeight;
@@ -590,7 +613,7 @@ var TopInstructions = React.createClass({
             left: this.props.isRtl ? styles.leftColRtl : styles.leftCol
           }}
           leftColWidth={leftColWidth}
-          rightColWidth={this.state.rightColWidth}
+          rightColWidth={this.getRightColWidth() || 0}
           height={this.props.height - resizerHeight}
         >
           <div
@@ -637,9 +660,9 @@ var TopInstructions = React.createClass({
                 />
               }
               {this.props.overlayVisible &&
-                <Button type="primary" onClick={this.props.hideOverlay}>
+                <LegacyButton type="primary" onClick={this.props.hideOverlay}>
                   {msg.dialogOK()}
-                </Button>
+                </LegacyButton>
               }
             </ChatBubble>
             {!this.props.collapsed && this.props.hints && this.props.hints.map((hint) =>

@@ -7,7 +7,7 @@ social:
   "twitter:site": "@codeorg"
   "twitter:url": "https://code.org/"
   "twitter:title": "The Hour of Code is here"
-  "twitter:description": "The Hour of Code is a global movement reaching tens of millions of students in 180+ countries and over 45 languages. Ages 4 to 104."
+  "twitter:description": "Over 400 million Hours of Code have been served in 180+ countries and 45+ languages. Anyone can learn an hour of computer science."
   "twitter:image:src": "http://csedweek.org/images/code-video-thumbnail.jpg"
   "twitter:player": "https://www.youtube.com/embed/rH7AjDMz_dc?iv_load_policy=3&rel=0&autohide=1&showinfo=0"
   "twitter:player:width": 1920
@@ -17,7 +17,9 @@ max_age: 60
 
 - course = File.basename(request.path_info)
 
-- if %w(course1 course2 course3 course4 accelerated).include? course
+
+
+- if %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef accelerated).include? course
   = view :csf_congrats, course: course
 - else
   - redirect "/congrats"

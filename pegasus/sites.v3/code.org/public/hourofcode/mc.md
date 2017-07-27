@@ -3,6 +3,7 @@ title: Teacher Resources - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
+style_min: true
 ---
 
 # MINECRAFT Hour of Code
@@ -19,6 +20,7 @@ theme: responsive
 
 - [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
 - [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
+- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
 ### Extension Activities:
 

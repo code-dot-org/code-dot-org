@@ -1,6 +1,8 @@
 require 'aws-sdk'
 require 'googleauth'
-require 'google/api_client'
+require 'google/api_client/auth/storage'
+require 'google/api_client/auth/storages/file_store'
+require 'google/api_client/auth/installed_app'
 require 'active_support/core_ext/hash/slice'
 require 'active_support/core_ext/module/attribute_accessors'
 

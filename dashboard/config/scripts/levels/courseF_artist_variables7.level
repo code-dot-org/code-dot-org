@@ -29,16 +29,21 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "markdown_instructions": "Let's start this section by drawing a triangle with 150 pixels sides. \r\n\r\nBe sure to use the `length` variable and a repeat loop.",
+    "markdown_instructions": "Let's start this section by drawing a triangle with 150 pixel sides. \r\n\r\nBe sure to use the `length` variable and a repeat loop.",
     "examples_required": "false",
     "never_autoplay_video": "false",
     "discard_background": "false",
     "instructions_important": "false",
     "instructions": "Draw a triangle with 150 pixels sides. ",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Start your code by using the `set length` block. Set the length variable to 150.\",\"hint_id\":\"courseF_artist_variables7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/17e96a5a2a07abc8ed6e4f6eeb668bab/courseF_artist_variables7.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You can use a `repeat` loop to make your code for the triangle simpler.\",\"hint_id\":\"courseF_artist_variables7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e50a6626c1a0ddf616b15dbf016e687c/courseF_artist_variables7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to turn left 120 degrees to make the corners of the triangle.\",\"hint_id\":\"courseF_artist_variables7_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5e9de2a8fdfc1c232488f47c8c77c76c/courseF_artist_variables7.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-18 16:03:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

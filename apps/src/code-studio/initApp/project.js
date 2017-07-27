@@ -530,6 +530,9 @@ var projects = module.exports = {
       case 'gamelab':
         return 'gamelab';
       case 'turtle':
+        if (appOptions.skinId === 'elsa' || appOptions.skinId === 'anna') {
+          return 'frozen';
+        }
         return 'artist';
       case 'calc':
         return 'calc';
@@ -545,16 +548,18 @@ var projects = module.exports = {
           return 'algebra_game';
         } else if (appOptions.skinId === 'hoc2015') {
           return 'starwars';
-        } else if (appOptions.skin === 'iceage') {
+        } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
-        } else if (appOptions.skin === 'infinity') {
+        } else if (appOptions.skinId === 'infinity') {
           return 'infinity';
-        } else if (appOptions.skin === 'gumball') {
+        } else if (appOptions.skinId === 'gumball') {
           return 'gumball';
         }
         return 'playlab';
       case 'weblab':
         return 'weblab';
+      case 'flappy':
+        return 'flappy';
       default:
         return null;
     }
@@ -564,7 +569,9 @@ var projects = module.exports = {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
     // project. See (Turtle|Studio).prepareForRemix().
-    return !['artist', 'playlab'].includes(projects.getStandaloneApp());
+    // If you're viewing somebody else's project, it will always be based on
+    // the standard project level, so that's safe to server-side remix.
+    return !current.isOwner || !['artist', 'playlab'].includes(projects.getStandaloneApp());
   },
 
   /*

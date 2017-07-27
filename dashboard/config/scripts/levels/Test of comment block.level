@@ -38,10 +38,6 @@
       }
     },
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "false",
     "instructions": "Drag out the subgoal label block you want.",
     "markdown_instructions": "##instructions\r\n\r\nDrag out the subgoal label block you want.",
@@ -78,7 +74,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

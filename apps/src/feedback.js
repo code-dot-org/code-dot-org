@@ -27,7 +27,7 @@ module.exports = FeedbackUtils;
 // Globals used in this file:
 //   Blockly
 
-var codegen = require('./codegen');
+var codegen = require('./lib/tools/jsinterpreter/codegen');
 var msg = require('@cdo/locale');
 var dom = require('./dom');
 var FeedbackBlocks = require('./feedbackBlocks');
@@ -147,6 +147,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
       tryAgainText: options.tryAgainText,
+      hideTryAgain: options.hideTryAgain,
       keepPlayingText: options.keepPlayingText,
       continueText: options.continueText,
       showPreviousButton: options.level.showPreviousLevelButton,
@@ -192,7 +193,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var icon;
   if (!options.hideIcon) {
-    icon = canContinue ? this.studioApp_.winIcon : this.studioApp_.failureIcon;
+    icon = canContinue && !options.showFailureIcon ?
+      this.studioApp_.winIcon :
+      this.studioApp_.failureIcon;
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
@@ -628,15 +631,17 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   var buttons = document.createElement('div');
   buttons.id = 'feedbackButtons';
 
-  let tryAgainText = '';
-  if (options.tryAgainText) {
-    tryAgainText = options.tryAgainText;
-  } else if (options.feedbackType === TestResults.FREE_PLAY) {
-    tryAgainText = msg.keepPlaying();
-  } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
-    tryAgainText = msg.tryAgain();
-  } else {
-    tryAgainText = msg.replayButton();
+  let tryAgainText = undefined;
+  if (!options.hideTryAgain) {
+    if (options.tryAgainText) {
+      tryAgainText = options.tryAgainText;
+    } else if (options.feedbackType === TestResults.FREE_PLAY) {
+      tryAgainText = msg.keepPlaying();
+    } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {
+      tryAgainText = msg.tryAgain();
+    } else {
+      tryAgainText = msg.replayButton();
+    }
   }
 
   ReactDOM.render(React.createElement(DialogButtons, {

@@ -14,7 +14,7 @@
   - else
     = f.hidden_field :name
   .edit_container
-  - scriptData = {script: @script ? @script.summarize : {},
+  - scriptData = {script: @script ? @script.summarize(false) : {},
                   i18n: @script ? @script.summarize_i18n : {},
                   beta: params[:beta].present?,
                   levelKeyList: Level.key_list}

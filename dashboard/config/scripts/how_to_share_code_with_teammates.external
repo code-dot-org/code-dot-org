@@ -36,3 +36,15 @@ Now that you have created your functions for the Digital Scene you need to share
 
 <img src="https://images.code.org/81a9d24c25cb5b3bef037b57efea2500-image-1481039300103.47.33 AM.png" style="width:400px">
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+### Recombine Code
+
+Students will need some way of recombining their code. Possible solutions are:
+
+* emailing links to their individual code
+* creating a shared document / spreadsheet into which students can paste links
+
+
+
+MARKDOWN

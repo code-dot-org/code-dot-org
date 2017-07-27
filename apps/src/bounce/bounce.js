@@ -9,7 +9,7 @@ var ReactDOM = require('react-dom');
 var studioApp = require('../StudioApp').singleton;
 var bounceMsg = require('./locale');
 var tiles = require('./tiles');
-var codegen = require('../codegen');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 var api = require('./api');
 var Provider = require('react-redux').Provider;
 var AppView = require('../templates/AppView');
@@ -971,6 +971,9 @@ Bounce.reset = function (first) {
  */
 // XXX This is the only method used by the templates!
 Bounce.runButtonClick = function () {
+  if (level.edit_blocks) {
+    Bounce.onPuzzleComplete();
+  }
   var runButton = document.getElementById('runButton');
   var resetButton = document.getElementById('resetButton');
   // Ensure that Reset button is at least as wide as Run button.
@@ -1053,7 +1056,7 @@ Bounce.execute = function () {
   studioApp().playAudio(Bounce.ballCount > 0 ? 'ballstart' : 'start');
   studioApp().reset(false);
 
-  codegen.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
+  CustomMarshalingInterpreter.evalWithEvents({Bounce: api}, events).hooks.forEach(hook => {
     Bounce[hook.name] = hook.func;
   });
 

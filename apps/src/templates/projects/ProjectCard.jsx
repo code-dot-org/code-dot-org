@@ -10,7 +10,7 @@ const styles = {
   card: {
     border: '1px solid #bbbbbb',
     borderRadius: 2,
-    width: 220,
+    width: 214,
     backgroundColor: color.white
   },
   title: {
@@ -63,7 +63,7 @@ const styles = {
     paddingRight: 8
   },
   thumbnail: {
-    width: 220,
+    width: 214,
     height: 150,
     display: 'flex',
     justifyContent: 'center',
@@ -109,6 +109,7 @@ const ProjectCard = React.createClass({
   propTypes: {
     projectData: React.PropTypes.object.isRequired,
     currentGallery: React.PropTypes.string.isRequired,
+    hideActions: React.PropTypes.bool
   },
 
   getInitialState() {
@@ -163,11 +164,11 @@ const ProjectCard = React.createClass({
   },
 
   renderArrowIcon() {
-  // Only the student can access the menu options when viewing their personal projects.
-    if (this.props.currentGallery === 'personal') {
-     let icon = this.state.actionsOpen ? 'chevron-up' : 'chevron-down';
-     return (
-       <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleActionBox}/>
+    if (!this.props.hideActions) {
+      // Only the student can access the menu options when viewing their personal projects.
+      const icon = this.state.actionsOpen ? 'chevron-up' : 'chevron-down';
+      return (
+        <FontAwesome icon={icon} style={styles.arrowIcon} onClick={this.toggleActionBox}/>
       );
     }
   },
@@ -228,7 +229,7 @@ const ProjectCard = React.createClass({
     const url = `/projects/${type}/${channel}`;
 
     return (
-      <div>
+      <div className="project_card">
         <div style={styles.card}>
           <div style={styles.thumbnail} >
             <a href={url} style={{width: '100%'}}>
@@ -248,11 +249,24 @@ const ProjectCard = React.createClass({
             {this.renderStudentAgeRange(projectData.studentAgeRange)}
           </span>
 
-          <div style={styles.lastEdit}>
-            {this.renderArrowIcon()}
-            {i18n.published()}:&nbsp;
-            <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}> {this.getLastModifiedTimestamp(projectData.publishedAt)}</time>
-          </div>
+          {(this.props.currentGallery !== 'personal' && projectData.publishedAt) &&
+            <div style={styles.lastEdit}>
+              {i18n.published()}:&nbsp;
+              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.publishedAt}>
+                {this.getLastModifiedTimestamp(projectData.publishedAt)}
+              </time>
+            </div>
+          }
+
+          {(this.props.currentGallery === 'personal' && projectData.updatedAt) &&
+            <div style={styles.lastEdit}>
+              {this.renderArrowIcon()}
+              {i18n.projectLastUpdated()}:&nbsp;
+              <time style={styles.bold} className="versionTimestamp" dateTime={projectData.updatedAt}>
+                {this.getLastModifiedTimestamp(projectData.updatedAt)}
+              </time>
+            </div>
+          }
         </div>
 
         {this.renderActionBox(this.checkIfPublished())}

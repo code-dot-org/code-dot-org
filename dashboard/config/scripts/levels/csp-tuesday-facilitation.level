@@ -1,0 +1,23 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2017-06-14T00:38:06.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "markdown_instructions": "# Tuesday Facilitation Practice\r\n\r\n## TLO\r\n\r\nYou have seen 2 Model TLOs (taught by facilitators) and 2 Participant TLOs (taught by teachers). What patterns do you notice about what facilitators do during these sessions (consider the delivery of the lessons and the debriefs separately)?\r\n\r\n* What are facilitators doing during lessons?\r\n* What are facilitators doing during debriefs? What are teachers doing?\r\n* In model lessons, how much time is split between time when facilitators are talking and time when teachers are doing during the lesson? ",
+    "instructions_important": "false",
+    "display_name": "Facilitation Reflection",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 00:38:11 +0000\",\"changed\":[],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"},{\"changed_at\":\"2017-06-14 00:47:15 +0000\",\"changed\":[\"markdown_instructions\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

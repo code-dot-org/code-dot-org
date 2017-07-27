@@ -8,6 +8,9 @@
 #   native: Name of language in the language itself.
 #   fallback: Specifies a Rails-level I18n fallback.
 #   debug: Causes a language to not show up in the production environment.
+#
+# Note that pegasus/helpers.rb contains a list of RTL languages (in the
+# is_rtl function) that should match this list.
 
 "ar": "ar-SA"
 "ar-SA":
@@ -184,7 +187,7 @@
 "hy-AM":
   english: "Armenian"
   native: "Հայերեն"
-  webfonts: "false"  
+  webfonts: "false"
 
 "id": "id-ID"
 "id-ID":
@@ -217,7 +220,7 @@
 "ko-KR":
   english: "Korean"
   native: "한국어"
-  webfonts: false  
+  webfonts: false
 
 "kk": "kk-KZ"
 "kk-KZ":
@@ -317,7 +320,7 @@
   native: "Polski"
 
 "ps": "ps-AF"
-"ps-AF": 
+"ps-AF":
   english: "Pashto"
   native: "پښتو"
   debug: true

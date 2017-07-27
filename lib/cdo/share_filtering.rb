@@ -2,8 +2,8 @@ require 'cdo/regexp'
 require 'cdo/geocoder'
 require 'cdo/web_purify'
 
-USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"']
-PLAYLAB_APP_INDICATOR = 'studio_'
+USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
+PLAYLAB_APP_INDICATOR = 'studio_'.freeze
 
 ShareFailure = Struct.new(:type, :content)
 
@@ -11,10 +11,10 @@ ShareFailure = Struct.new(:type, :content)
 # submitted programs.
 module ShareFiltering
   module FailureType
-    EMAIL = 'email'
-    ADDRESS = 'address'
-    PHONE = 'phone'
-    PROFANITY = 'profanity'
+    EMAIL = 'email'.freeze
+    ADDRESS = 'address'.freeze
+    PHONE = 'phone'.freeze
+    PROFANITY = 'profanity'.freeze
   end
 
   # Searches for a sharing failure given a program and locale.

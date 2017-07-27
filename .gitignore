@@ -10,7 +10,7 @@
 .dropbox
 .tmputils
 .idea/
-crowdin.yaml
+/bin/i18n/crowdin_credentials.yml
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
@@ -45,12 +45,10 @@ npm-debug.log
 /dashboard/public/code-studio
 /dashboard/public/shared
 /dashboard/public/styleguide
-/i18n/code.org/crowdin.yaml
-/i18n/curriculum/crowdin.yaml
-/i18n/hourofcode.com/crowdin.yaml
 /globals.yml
 /levelbuilder_ci_last_run
 /locals.yml
+/log
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
 /rebuild

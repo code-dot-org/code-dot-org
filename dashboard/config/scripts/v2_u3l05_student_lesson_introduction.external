@@ -1,15 +1,10 @@
 name 'v2 U3L05 Student Lesson Introduction'
+display_name 'Lesson Vocabulary & Resources'
 title 'Creating Functions'
 css 'unplugged'
 
 markdown <<MARKDOWN
 # Unit 3: Lesson 05 - Creating Functions
-
-## Background
-
-All programming languages allow a programmer to create new commands for the computer to run.  In JavaScript these new commands are called **functions**. In other programming languages these might instead be called procedures or methods.  When you **define** a function you give a name to a set of actions you want the computer to perform.  When you **call** a function you are telling the computer to run (or execute) that set of actions.
-
-Functions are a way of naming chunks of code that you can call (execute) as many times as needed. Functions are a form of computational abstraction. Abstractions allow us to simplify a process by ignoring the details. They allow us to think about code in larger logical chunks, making it much easier to design and reason about a program.
 
 ## Lesson
 
@@ -21,11 +16,17 @@ Functions are a way of naming chunks of code that you can call (execute) as many
 * **Abstraction:** Pulling out specific differences to make one solution work for multiple problems.
 * **Function:** A piece of code that you can easily call over and over again.
 
-## Resources
+## New Blocks
 
-* Tutorial Video: Defining and Calling Functions<br>
+*  **[Define a function](//docs.code.org/applab/functionParams_none/)** - `function myFunction() {
+    // function body, including optional "return" command.
+}`
+*  **[Call a function](//docs.code.org/applab/callMyFunction/)** - `Call a function`
 
-<iframe width="480" height="270" src="https://www.youtube.com/embed/yPWQfa4CHbw?rel=0" frameborder="0" allowfullscreen></iframe>
 
 <a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Either as a class or individually, students should watch a video introducing the way that functions are defined and called in JavaScript. You may wish to take a minute following the video to address any questions that may have developed from watching the video.
 MARKDOWN

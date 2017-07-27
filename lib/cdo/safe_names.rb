@@ -1,7 +1,9 @@
+require 'active_support/core_ext/object/try'
+require 'active_support/core_ext/object/blank'
 require 'rambling-trie'
 
 module SafeNames
-  # Return a collection of models that represent users in which all names are
+  # Return a sorted collection of models that represent users in which all names are
   # shortened to their first name (if unique) or their first name plus
   # the minimum number of letters in their last name needed to uniquely
   # identify them.
@@ -9,7 +11,7 @@ module SafeNames
   # @param first_last_name_proc [Proc] proc that takes an item in the collection and
   #   returns a tuple of [first_name, last_name]
   # @return [Array<Array<String, Object>>] Array of tuples representing the safe name and associated item
-  #   from the original collection
+  #   from the original collection, sorted by safe name
   def self.get_safe_names(collection, first_last_name_proc)
     # Create a prefix tree of student names
     trie = Rambling::Trie.create
@@ -23,9 +25,10 @@ module SafeNames
       item_descriptions << {full_name: full_name, item: item, first_name: first_name}
     end
 
+    # Determine safe names for each item, map to an array of tuples (safe_name, item), and sort by safe_name
     item_descriptions.map do |item_description|
       [determine_safe_name(trie, item_description), item_description[:item]]
-    end
+    end.sort_by(&:first)
   end
 
   def self.determine_safe_name(trie, item_description)

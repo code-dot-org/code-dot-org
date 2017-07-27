@@ -49,19 +49,20 @@ module ProjectsList
     # PUBLISHED_PROJECT_TYPES, or 'all' to retrieve a list of each project type.
     # @param limit [Integer] Maximum number of projects to retrieve of each type.
     #   Must be between 1 and MAX_LIMIT, inclusive.
-    # @param offset [Integer] Number of projects to skip. Default: 0.
-    #   Must not be specified when requesting all project types.
+    # @param published_before [string] String representing a DateTime before
+    #   which to search for the requested projects. Must not be specified
+    #   when requesting all project types. Optional.
     # @return [Hash<Array<Hash>>] A hash of lists of published projects.
-    def fetch_published_projects(project_type, limit:, offset:)
+    def fetch_published_projects(project_type, limit:, published_before:)
       unless limit && limit.to_i >= 1 && limit.to_i <= MAX_LIMIT
         raise ArgumentError, "limit must be between 1 and #{MAX_LIMIT}"
       end
       if project_type == 'all'
-        raise ArgumentError, 'Cannot specify offset when requesting all project types' if offset
+        raise ArgumentError, 'Cannot specify published_before when requesting all project types' if published_before
         return fetch_published_project_types(PUBLISHED_PROJECT_TYPES, limit: limit)
       end
       raise ArgumentError, "invalid project type: #{project_type}" unless PUBLISHED_PROJECT_TYPES.include?(project_type)
-      fetch_published_project_types([project_type], limit: limit, offset: offset)
+      fetch_published_project_types([project_type], limit: limit, published_before: published_before)
     end
 
     private
@@ -87,53 +88,48 @@ module ProjectsList
       }.with_indifferent_access
     end
 
-    def fetch_published_project_types(project_types, limit:, offset: 0)
+    def project_and_user_fields
+      [
+        :storage_apps__id___id,
+        :storage_apps__storage_id___storage_id,
+        :storage_apps__value___value,
+        :storage_apps__project_type___project_type,
+        :storage_apps__published_at___published_at,
+        :users__name___name,
+        :users__birthday___birthday,
+      ]
+    end
+
+    def fetch_published_project_types(project_types, limit:, published_before: nil)
       users = "dashboard_#{CDO.rack_env}__users".to_sym
       {}.tap do |projects|
         project_types.map do |type|
           projects[type] = PEGASUS_DB[:storage_apps].
-            select_append(Sequel[:storage_apps][:id].as(:channel_id)).
+            select(*project_and_user_fields).
             join(:user_storage_ids, id: :storage_id).
             join(users, id: :user_id).
-            where(state: 'active', project_type: type).
+            where(state: 'active', project_type: type, abuse_score: 0).
+            where {published_before.nil? || published_at < DateTime.parse(published_before)}.
             exclude(published_at: nil).
             order(Sequel.desc(:published_at)).
             limit(limit).
-            offset(offset).
-            map {|project| get_published_project_data project}
+            map {|project_and_user| get_published_project_and_user_data project_and_user}
         end
       end
     end
 
-    def get_published_project_data(project)
-      project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      channel_id = storage_encrypt_channel_id(project[:storage_id], project[:channel_id])
-      {
-        channel: channel_id,
-        name: project_value['name'],
-        thumbnailUrl: make_cacheable(project_value['thumbnailUrl']),
-        # Note that we are using the new :project_type field rather than extracting
-        # it from :value. :project_type might not be present in unpublished projects.
-        type: project[:project_type],
-        publishedAt: project[:published_at],
-        # For privacy reasons, include only the first initial of the student's name.
-        studentName: User.initial(project[:name]),
-        studentAgeRange: student_age_range(project),
-      }.with_indifferent_access
-    end
-
-    def make_cacheable(url)
-      url.sub('/v3/files/', '/v3/files-public/') if url
-    end
-
-    AGE_CUTOFFS = [18, 13, 8, 4].freeze
-
-    # Return the highest age range applicable to the student, e.g.
-    # 18+, 13+, 8+ or 4+
-    def student_age_range(project)
-      age = UserHelpers.age_from_birthday(project[:birthday])
-      age_cutoff = AGE_CUTOFFS.find {|cutoff| cutoff <= age}
-      age_cutoff ? "#{age_cutoff}+" : nil
+    # extracts published project data from a row that is a join of the
+    # storage_apps and user tables. See project_and_user_fields for which
+    # fields it contains.
+    def get_published_project_and_user_data(project_and_user)
+      channel_id = storage_encrypt_channel_id(project_and_user[:storage_id], project_and_user[:id])
+      StorageApps.get_published_project_data(project_and_user, channel_id).merge(
+        {
+          # For privacy reasons, include only the first initial of the student's name.
+          studentName: UserHelpers.initial(project_and_user[:name]),
+          studentAgeRange: UserHelpers.age_range_from_birthday(project_and_user[:birthday]),
+        }
+      ).with_indifferent_access
     end
   end
 end

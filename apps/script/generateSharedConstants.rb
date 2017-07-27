@@ -31,7 +31,11 @@ def generate_constants(shared_const_name)
 end
 
 def main
-  shared_content = [generate_constants('LEVEL_KIND'), generate_constants('LEVEL_STATUS')].join("\n\n")
+  shared_content = [
+    generate_constants('LEVEL_KIND'),
+    generate_constants('LEVEL_STATUS'),
+    generate_constants('SECTION_LOGIN_TYPE')
+  ].join("\n\n")
 
   generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/src/util/sharedConstants.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/src/applab/sharedApplabBlocks.js")
