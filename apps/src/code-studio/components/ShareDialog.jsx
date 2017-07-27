@@ -10,6 +10,7 @@ import * as gamelabConstants from '../../gamelab/constants';
 import { hideShareDialog } from './shareDialogRedux';
 import { showPublishDialog } from '../../templates/publishDialog/publishDialogRedux';
 import PublishDialog from '../../templates/publishDialog/PublishDialog';
+import i18n from '@cdo/locale';
 
 function select(event) {
   event.target.select();
@@ -237,20 +238,18 @@ var ShareDialog = React.createClass({
                 </a>
                 {isOwner && !isPublished &&
                 <button
-                  id="sharing-publish"
                   style={styles.button}
                   onClick={this.publish}
                 >
-                  Publish
+                  {i18n.publish()}
                 </button>
                 }
                 {isOwner && isPublished &&
                 <button
-                  id="sharing-unpublish"
                   style={styles.button}
                   onClick={this.unpublish}
                 >
-                  Unpublish
+                  {i18n.unpublish()}
                 </button>
                 }
                 {this.props.canShareSocial &&

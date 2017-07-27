@@ -49,7 +49,7 @@ $(document).ready(() => {
   const publishConfirm = document.getElementById('publish-confirm');
 
   ReactDOM.render(
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <PublishDialog
         onConfirmPublish={onConfirmPublish}
       />
@@ -72,8 +72,9 @@ function onShowConfirmPublishDialog(projectId, projectType) {
 window.onShowConfirmPublishDialog = onShowConfirmPublishDialog.bind(this);
 
 function onConfirmPublish(projectId, projectType) {
-  getStore().dispatch(publishProject(projectId, projectType)).then(projectData => {
-    getStore().dispatch(prependProjects([projectData], projectType));
+  const store = getStore();
+  store.dispatch(publishProject(projectId, projectType)).then(projectData => {
+    store.dispatch(prependProjects([projectData], projectType));
     window.setProjectPublishedAt(projectId, projectData.publishedAt);
   });
 }

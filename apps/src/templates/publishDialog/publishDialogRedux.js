@@ -70,10 +70,10 @@ export function hidePublishDialog() {
  */
 export function publishProject(projectId, projectType) {
   return dispatch => {
-    dispatch({type: PUBLISH_REQUEST});
     if (!PUBLISHED_PROJECT_TYPES.includes(projectType)) {
       return Promise.reject(`Cannot publish project of type ${projectType}.`);
     }
+    dispatch({type: PUBLISH_REQUEST});
     return new Promise((resolve, reject) => {
       channels.update(`${projectId}/publish/${projectType}`, null, (err, data) => {
         if (err) {
