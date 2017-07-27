@@ -18,7 +18,7 @@ import publishDialogReducer, {
 } from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
 $(document).ready(() => {
-  registerReducers({projects, publishDialogReducer});
+  registerReducers({projects, publishDialog: publishDialogReducer});
   const store = getStore();
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
