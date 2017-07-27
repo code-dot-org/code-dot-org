@@ -1,9 +1,9 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
-import AddInitialStudentsView from './AddInitialStudentsView';
+import LoginTypePicker from './LoginTypePicker';
 import {sectionShape} from './shapes';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 import DialogFooter from "./DialogFooter";
 import {Heading1} from '../../lib/ui/Headings';
 
@@ -13,15 +13,16 @@ class ChangeLoginTypeDialog extends Component {
     handleClose: PropTypes.func,
     sectionId: PropTypes.number.isRequired,
     section: sectionShape.isRequired,
+    hideBackdrop: React.PropTypes.bool,
   };
 
   renderOptions() {
     const {section, handleClose} = this.props;
-    if (section.studentNames.length <= 0) {
+    if (section.studentCount <= 0) {
       // Case 1: No students in the section, we could change to any type;
       //         word, email, oauth, Clever, it's all fair game.
       return (
-        <AddInitialStudentsView
+        <LoginTypePicker
           sectionName="Section name"
           handleLoginChoice={() => {}}
           handleCancel={handleClose}
@@ -34,9 +35,9 @@ class ChangeLoginTypeDialog extends Component {
           description="Change to the word login type if you want students to login with a simple pair of words instead of with a secret picture."
           onCancel={handleClose}
         >
-          <ProgressButton
+          <Button
             href="#"
-            size={ProgressButton.ButtonSize.large}
+            size={Button.ButtonSize.large}
             text="Use word login"
           />
         </LimitedChangeView>
@@ -48,9 +49,9 @@ class ChangeLoginTypeDialog extends Component {
           description="Change to the picture login type if you want students to login with a secret picture instead of with a simple pair of words."
           onCancel={handleClose}
         >
-          <ProgressButton
+          <Button
             href="#"
-            size={ProgressButton.ButtonSize.large}
+            size={Button.ButtonSize.large}
             text="Use picture login"
           />
         </LimitedChangeView>
@@ -71,14 +72,14 @@ class ChangeLoginTypeDialog extends Component {
           description={description}
           onCancel={handleClose}
         >
-          <ProgressButton
+          <Button
             href="#"
-            size={ProgressButton.ButtonSize.large}
+            size={Button.ButtonSize.large}
             text="Use picture login"
           />
-          <ProgressButton
+          <Button
             href="#"
-            size={ProgressButton.ButtonSize.large}
+            size={Button.ButtonSize.large}
             text="Use word login"
             style={{marginLeft: 4}}
           />
@@ -89,7 +90,7 @@ class ChangeLoginTypeDialog extends Component {
 
   render() {
     const {section} = this.props;
-    const useWideDialog = section.studentNames.length <= 0;
+    const useWideDialog = section.studentCount <= 0;
     return (
       <BaseDialog
         useUpdatedStyles
@@ -97,6 +98,7 @@ class ChangeLoginTypeDialog extends Component {
         isOpen={this.props.isOpen}
         handleClose={this.props.handleClose}
         assetUrl={()=>''}
+        hideBackdrop={this.props.hideBackdrop}
       >
         <PadAndCenter>
           {this.renderOptions()}
@@ -120,10 +122,10 @@ const LimitedChangeView = ({description, children, onCancel}) => (
       {description}
     </div>
     <DialogFooter>
-      <ProgressButton
+      <Button
         onClick={onCancel}
-        color={ProgressButton.ButtonColor.gray}
-        size={ProgressButton.ButtonSize.large}
+        color={Button.ButtonColor.gray}
+        size={Button.ButtonSize.large}
         text="Cancel"
       />
       <div>
