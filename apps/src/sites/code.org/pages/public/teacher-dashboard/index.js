@@ -260,7 +260,7 @@ function main() {
     );
 
     $scope.teacher_managed_section = function (section) {
-      return ['email', 'word', 'picture'].indexOf(section.login_type) > -1;
+      return ['email', 'word', 'picture'].includes(section.login_type);
     };
 
     $scope.age_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "21+"];
