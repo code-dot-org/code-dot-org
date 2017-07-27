@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 export default class LoginTypeParagraph extends Component {
   static propTypes = {
@@ -23,10 +23,10 @@ export default class LoginTypeParagraph extends Component {
             A new secret picture will be generated for that student to use when
             they sign in.
           </p>
-          <ProgressButton
+          <Button
             onClick={() => {}}
             text="Change to word login"
-            color={ProgressButton.ButtonColor.white}
+            color={Button.ButtonColor.white}
           />
         </div>
       );
@@ -45,10 +45,10 @@ export default class LoginTypeParagraph extends Component {
             A new pair of secret words will be generated for that student to use when
             they sign in.
           </p>
-          <ProgressButton
+          <Button
             onClick={() => {}}
             text="Change to picture login"
-            color={ProgressButton.ButtonColor.white}
+            color={Button.ButtonColor.white}
           />
         </div>
       );
@@ -66,10 +66,10 @@ export default class LoginTypeParagraph extends Component {
             choosing <strong>Reset password</strong>, entering a new password,
             and clicking <strong>Save</strong>.
           </p>
-          <ProgressButton
+          <Button
             onClick={() => {}}
             text="Change to picture or word login"
-            color={ProgressButton.ButtonColor.white}
+            color={Button.ButtonColor.white}
           />
         </div>
       );

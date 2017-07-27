@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import _ from 'lodash';
 import ChangeLoginTypeDialog from "./ChangeLoginTypeDialog";
 import { Provider } from 'react-redux';
@@ -16,7 +16,11 @@ export default storybook => storybook
         store.dispatch(setSections(sections));
         return (
           <Provider store={store}>
-            <ChangeLoginTypeDialog_Button sectionId={11}/>
+            <ChangeLoginTypeDialog
+              handleClose={storybook.action('close')}
+              hideBackdrop
+              sectionId={11}
+            />
           </Provider>
         );
       }
@@ -29,7 +33,11 @@ export default storybook => storybook
         store.dispatch(setSections(sections));
         return (
           <Provider store={store}>
-            <ChangeLoginTypeDialog_Button sectionId={12}/>
+            <ChangeLoginTypeDialog
+              handleClose={storybook.action('close')}
+              hideBackdrop
+              sectionId={12}
+            />
           </Provider>
         );
       }
@@ -42,7 +50,11 @@ export default storybook => storybook
         store.dispatch(setSections(sections));
         return (
           <Provider store={store}>
-            <ChangeLoginTypeDialog_Button sectionId={307}/>
+            <ChangeLoginTypeDialog
+              handleClose={storybook.action('close')}
+              hideBackdrop
+              sectionId={307}
+            />
           </Provider>
         );
       }
@@ -55,31 +67,16 @@ export default storybook => storybook
         store.dispatch(setSections(sections));
         return (
           <Provider store={store}>
-            <ChangeLoginTypeDialog_Button sectionId={14}/>
+            <ChangeLoginTypeDialog
+              handleClose={storybook.action('close')}
+              hideBackdrop
+              sectionId={14}
+            />
           </Provider>
         );
       }
     },
   ]);
-
-class ChangeLoginTypeDialog_Button extends Component {
-  state = {open: false};
-
-  render() {
-    return (
-      <div>
-        <ChangeLoginTypeDialog
-          isOpen={this.state.open}
-          handleClose={() => this.setState({open: false})}
-          {...this.props}
-        />
-        <button onClick={() => this.setState({open: true})}>
-          Open the example dialog
-        </button>
-      </div>
-    );
-  }
-}
 
 const fakeStudents = num => _.range(num).map(x => ({id: x}));
 const sections = [
