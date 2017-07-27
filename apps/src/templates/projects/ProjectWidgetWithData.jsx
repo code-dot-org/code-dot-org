@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
+import $ from 'jquery';
 
 const ProjectWidgetWithData = React.createClass({
   propTypes: {
@@ -15,7 +16,7 @@ const ProjectWidgetWithData = React.createClass({
   },
 
   componentWillMount() {
-    if (!this.props.projectList) {
+    if (this.state.projectList.length === 0) {
       $.ajax({
         method: 'GET',
         url: `/v3/channels`,
