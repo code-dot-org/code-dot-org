@@ -1,48 +1,82 @@
-var React = require('react');
-var msg = require('@cdo/locale');
+import Radium from 'radium';
+import React from 'react';
+import msg from '@cdo/locale';
 
-var CodeWritten = React.createClass({
+const styles = {
+  summary: {
+    fontSize: 18,
+    lineHeight: '20px',
+    fontWeight: 'normal',
+    outline: 'none',
+    padding: 5,
+  },
+  challengeLineCounts: {
+    fontSize: 16,
+  },
+  challengeSummary: {
+    fontColor: 'black',
+    fontSize: 14,
+    marginLeft: 40,
+  },
+  details: {
+    textAlign: 'left',
+  },
+};
+
+export default Radium(React.createClass({
 
   propTypes: {
     numLinesWritten: React.PropTypes.number.isRequired,
     totalNumLinesWritten: React.PropTypes.number.isRequired,
     children: React.PropTypes.node,
+    useChallengeStyles: React.PropTypes.bool,
   },
 
-  render: function () {
-    var lines, totalLines, showCode;
-    var styles = {
-      summary: {
-        fontSize: '18px',
-        lineHeight: '20px',
-        fontWeight: 'normal',
-        outline: 'none',
-        padding: '5px',
-      }
-    };
+  render() {
+    const lines = (
+      <p
+        id="num-lines-of-code"
+        className="lines-of-code-message"
+        style={this.props.useChallengeStyles ? styles.challengeLineCounts : null}
+      >
+        {msg.numLinesOfCodeWritten({ numLines: this.props.numLinesWritten })}
+      </p>);
 
-    lines = (<p id="num-lines-of-code" className="lines-of-code-message">
-      {msg.numLinesOfCodeWritten({ numLines: this.props.numLinesWritten })}
-    </p>);
-
+    let totalLines;
     if (this.props.totalNumLinesWritten !== 0) {
-      totalLines = (<p id="total-num-lines-of-code" className="lines-of-code-message">
+      totalLines = (
+      <p
+        id="total-num-lines-of-code"
+        className="lines-of-code-message"
+        style={this.props.useChallengeStyles ? styles.challengeLineCounts : null}
+      >
         {msg.totalNumLinesOfCodeWritten({ numLines: this.props.totalNumLinesWritten })}
       </p>);
     }
 
-    showCode = (<details className="show-code">
-      <summary role="button" style={styles.summary}>
-        <b>{msg.showGeneratedCode()}</b>
-      </summary>
-      {this.props.children}
-    </details>);
+    const showCode = (
+      <details
+        className="show-code"
+        style={this.props.useChallengeStyles ? styles.details : null}
+      >
+        <summary
+          role="button"
+          style={{
+            ...styles.summary,
+            ...(this.props.useChallengeStyles ? styles.challengeSummary : {})
+          }}
+        >
+          <b>{msg.showGeneratedCode()}</b>
+        </summary>
+        {this.props.children}
+      </details>);
 
-    return (<div>
-      {lines}
-      {totalLines}
-      {showCode}
-    </div>);
+    return (
+      <div>
+        {lines}
+        {totalLines}
+        {showCode}
+      </div>
+    );
   }
-});
-module.exports = CodeWritten;
+}));

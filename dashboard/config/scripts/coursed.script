@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Algorithms: Graph Paper Programming'
 level 'GraphPaperProgramming'
 
@@ -187,9 +189,11 @@ stage 'Build a Play Lab Game'
 level 'courseD_playLab_cond1'
 level 'courseD_playLab_cond2'
 level 'courseD_playLab_cond3'
+level 'courseD_playLab_cond3a'
 level 'courseD_playLab_cond4'
 level 'courseD_playLab_cond5'
 level 'courseD_playLab_cond6'
+level 'courseD_playLab_cond6a'
 level 'courseD_playLab_condFP'
 
 stage 'Unplugged: Binary'

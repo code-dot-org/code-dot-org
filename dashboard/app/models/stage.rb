@@ -113,12 +113,7 @@ class Stage < ActiveRecord::Base
         flex_category: localized_category,
         lockable: !!lockable,
         levels: cached_script_levels.reject(&:bonus).map {|l| l.summarize(false)},
-        stage_extras_level: {
-          kind: LEVEL_KIND.stage_extras,
-          icon: 'fa-flag',
-          title: "Stage Extras",
-          url: script_stage_stage_extras_url(script.name, stage_position: absolute_position),
-        },
+        stage_extras_level_url: script_stage_stage_extras_url(script.name, stage_position: absolute_position),
         description_student: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_student", default: '')),
         description_teacher: render_codespan_only_markdown(I18n.t("data.script.name.#{script.name}.stages.#{name}.description_teacher", default: ''))
       }

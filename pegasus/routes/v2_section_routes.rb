@@ -9,12 +9,15 @@ get '/v2/sections' do
   JSON.pretty_generate(sections)
 end
 
+# DEPRECATED: Use POST /dashboardapi/sections instead
 post '/v2/sections' do
   only_for 'code.org'
   dont_cache
   unsupported_media_type! unless payload = request.json_body
   forbidden! unless section_id = DashboardSection.create(payload.merge(user: dashboard_user))
-  redirect "/v2/sections/#{section_id}" #, 201 #BUG: JQuery is barfing on the 201
+  section = DashboardSection.fetch_if_teacher(section_id, dashboard_user_id)
+  content_type :json
+  JSON.pretty_generate(section.to_owner_hash)
 end
 
 # Get the set of sections that the current user is enrolled in.
@@ -36,6 +39,7 @@ get '/v2/sections/:id' do |id|
   JSON.pretty_generate(section.to_owner_hash)
 end
 
+# DEPRECATED: Use DELETE /dashboardapi/sections/<id> instead
 delete '/v2/sections/:id' do |id|
   only_for 'code.org'
   dont_cache

@@ -67,6 +67,7 @@
     "browser-process-hrtime": "0.1.2",
     "canvg": "gabelerner/canvg",
     "chai": "3.5.0",
+    "chai-as-promised": "^7.1.1",
     "chai-enzyme": "0.5.0",
     "chai-subset": "1.2.0",
     "chalk": "^1.1.3",

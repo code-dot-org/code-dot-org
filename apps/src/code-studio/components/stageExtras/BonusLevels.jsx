@@ -1,24 +1,35 @@
 import React from 'react';
 import MazeThumbnail from './MazeThumbnail';
+import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
+import { bonusLevel } from './shapes';
 
-const bonusLevel = {
-  id: React.PropTypes.number.isRequired,
-  map: React.PropTypes.array,
-  name: React.PropTypes.string.isRequired,
-  skin: React.PropTypes.string,
-  startDirection: React.PropTypes.number,
-  type: React.PropTypes.string.isRequired,
+const styles = {
+  bonusLevel: {
+    width: 200,
+    textAlign: 'center',
+    marginRight: 10,
+    float: 'left',
+  },
+  challengeRow: {
+    clear: 'both',
+    overflow: 'hidden',
+  },
 };
 
 class BonusLevel extends React.Component {
-  static propTypes = bonusLevel
+  static propTypes = bonusLevel;
 
   renderWithMazeThumbnail() {
     return (
-      <div className="span3 offset1 text-center">
-        <MazeThumbnail {...this.props} scale={0.6} />
+      <div style={styles.bonusLevel}>
         <a href={`?id=${this.props.id}`}>
+          <CompletableLevelThumbnail
+            size={200}
+            perfected={this.props.perfected}
+          >
+            <MazeThumbnail {...this.props}/>
+          </CompletableLevelThumbnail>
           <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
         </a>
       </div>
@@ -36,9 +47,9 @@ class BonusLevel extends React.Component {
   }
 }
 
-export default function BonusLevels(props) { // eslint-disable-line react/no-multi-comp
+export default function BonusLevels(props) {
   return (
-    <div className="row">
+    <div style={styles.challengeRow}>
       {props.bonusLevels.map(bonus => (<BonusLevel key={bonus.id} {...bonus} />))}
     </div>
   );

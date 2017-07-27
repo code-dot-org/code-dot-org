@@ -5908,10 +5908,10 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: ''
+          title: 'CS Fundamentals: Express'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5942,6 +5942,24 @@ en:
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
+          title: 'CS Fundamentals: Pre-reader Express'
+          description_audience: ''
+          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
+          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: Thanks
+            '':
+              name: ''
+            " ":
+              name: " "
           title: ''
           description_audience: ''
           description_short: ''

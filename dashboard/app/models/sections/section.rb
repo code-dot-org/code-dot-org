@@ -63,15 +63,30 @@ class Section < ActiveRecord::Base
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
+  LOGIN_TYPE_EMAIL = 'email'.freeze
   LOGIN_TYPE_PICTURE = 'picture'.freeze
   LOGIN_TYPE_WORD = 'word'.freeze
   LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
   LOGIN_TYPE_CLEVER = 'clever'.freeze
+  LOGIN_TYPES = [
+    LOGIN_TYPE_EMAIL,
+    LOGIN_TYPE_PICTURE,
+    LOGIN_TYPE_WORD,
+    LOGIN_TYPE_GOOGLE_CLASSROOM,
+    LOGIN_TYPE_CLEVER,
+  ]
 
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
   validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+
+  ADD_STUDENT_EXISTS = 'exists'.freeze
+  ADD_STUDENT_SUCCESS = 'success'.freeze
+
+  def self.valid_login_type?(type)
+    LOGIN_TYPES.include? type
+  end
 
   # Override default script accessor to use our cache
   def script
@@ -129,27 +144,30 @@ class Section < ActiveRecord::Base
 
   # Adds the student to the section, restoring a previous enrollment to do so if possible.
   # @param student [User] The student to enroll in this section.
-  # @return [Follower] The newly created follower enrollment.
+  # @return [ADD_STUDENT_EXISTS | ADD_STUDENT_SUCCESS] Whether the student was already
+  #   in the section or has now been added.
   def add_student(student)
     follower = Follower.with_deleted.find_by(section: self, student_user: student)
     if follower
       if follower.deleted?
         follower.restore
+        return ADD_STUDENT_SUCCESS
       end
-      return follower
+      return ADD_STUDENT_EXISTS
     end
 
     Follower.create!(section: self, student_user: student)
+    return ADD_STUDENT_SUCCESS
   end
 
   # Enrolls student in this section (possibly restoring an existing deleted follower) and removes
   # student from old section.
   # @param student [User] The student to enroll in this section.
   # @param old_section [Section] The section from which to remove the student.
-  # @return [Follower | nil] The newly created follower enrollment (possibly nil).
+  # @return [boolean] Whether a new student was added.
   def add_and_remove_student(student, old_section)
     old_follower = old_section.followers.where(student_user: student).first
-    return nil unless old_follower
+    return false unless old_follower
 
     old_follower.destroy
     add_student student
@@ -220,6 +238,14 @@ class Section < ActiveRecord::Base
       grade: grade,
       providerManaged: provider_managed?
     }
+  end
+
+  def self.valid_grades
+    @@valid_grades ||= ['K'] + (1..12).collect(&:to_s) + ['Other']
+  end
+
+  def self.valid_grade?(grade)
+    valid_grades.include? grade
   end
 
   def provider_managed?

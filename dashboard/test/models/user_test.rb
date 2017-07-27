@@ -1616,6 +1616,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'assign_course_as_facilitator assigns course to facilitator' do
+    facilitator = create :facilitator
+    assert_creates Pd::CourseFacilitator do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+    end
+    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
+  end
+
+  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+    assert_no_difference 'Pd::CourseFacilitator.count' do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+    end
+  end
+
+  test 'delete_course_as_facilitator removes facilitator course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    assert_difference 'Pd::CourseFacilitator.count', -1 do
+      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
+    end
+  end
+
   test 'should_see_inline_answer? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -1764,6 +1786,11 @@ class UserTest < ActiveSupport::TestCase
   test 'age validation is bypassed for Google OAuth users' do
     # Users created this way will be asked for their age when they first sign in.
     create :user, birthday: nil, provider: 'google_oauth2'
+  end
+
+  test 'age validation is bypassed for Clever users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'clever'
   end
 
   test 'users updating the email field must provide a valid email address' do
