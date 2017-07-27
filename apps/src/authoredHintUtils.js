@@ -290,7 +290,7 @@ authoredHintUtils.generateAuthoredHints = function (levelBuilderAuthoredHints) {
   }
   return hints.map(function (hint) {
     return {
-      content: processMarkdown(hint.hint_markdown),
+      content: processMarkdown(hint.hint_markdown, { renderer }),
       hintId: hint.hint_id,
       hintClass: hint.hint_class,
       hintType: hint.hint_type,
