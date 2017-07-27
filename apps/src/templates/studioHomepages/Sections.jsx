@@ -5,6 +5,7 @@ import i18n from "@cdo/locale";
 import SectionsPage from '../teacherDashboard/SectionsPage';
 import { connect } from 'react-redux';
 import {setValidAssignments, setSections} from '../teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 const sectionsApiPath = '/dashboardapi/sections/';
 
@@ -50,15 +51,21 @@ const Sections = React.createClass({
     const { sections, codeOrgUrlPrefix, isRtl, isTeacher} = this.props;
 
     return (
-      <div>
+      <div className="sectionsContainer">
         <ContentContainer
           heading={i18n.sectionsTitle()}
           isRtl={isRtl}
         >
-          {sections.length > 0 && (
+          {sections.length > 0 && experiments.isEnabled('section-flow-2017') && (
             <SectionsPage
+              className="sectionPage"
               validScripts={this.props.validScripts}
               teacherHomepage={this.props.teacherHomepage}
+            />
+          )}
+          {sections.length > 0 && !experiments.isEnabled('section-flow-2017') && (
+            <SectionsPage
+              validScripts={this.props.validScripts}
             />
           )}
           {sections.length === 0 && isTeacher && (
