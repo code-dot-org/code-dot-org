@@ -46,6 +46,7 @@ const style = {
 
 const AdvancedShareOptions = Radium(React.createClass({
   propTypes: {
+    shareUrl: React.PropTypes.string.isRequired,
     onClickExport: React.PropTypes.func,
     onExpand: React.PropTypes.func.isRequired,
     expanded: React.PropTypes.bool.isRequired,
@@ -80,7 +81,7 @@ const AdvancedShareOptions = Radium(React.createClass({
   },
 
   renderEmbedTab() {
-    let url = window.location.href.replace('edit', 'embed');
+    let url = `${this.props.shareUrl}/embed`;
     if (this.state.embedWithoutCode) {
       // When embedding without code, we "hide" the real channel id for the
       // project by encoding it with a cipher. This is not meant to be secure,
