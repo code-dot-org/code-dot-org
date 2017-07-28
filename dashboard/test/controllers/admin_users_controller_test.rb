@@ -205,6 +205,33 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :permissions_form
 
+  test 'find user for non-existent email displays no user error' do
+    sign_in @admin
+    post :permissions_form, params: {search_term: 'nonexistent@example.net'}
+    assert_select '.alert-success', 'User Not Found'
+  end
+
+  test 'find user for non-existent id displays no user error' do
+    sign_in @admin
+    post :permissions_form, params: {search_term: -999}
+    assert_select '.alert-success', 'User Not Found'
+  end
+
+  test 'find user warns when multiple users have same email address' do
+    duplicate_user1 = create :user, email: 'test_duplicate_user1@example.com'
+    duplicate_user2 = create :user, email: 'test_duplicate_user2@example.com'
+    duplicate_user2.update_column(:email, 'test_duplicate_user1@example.com')
+    duplicate_user2.update_column(:hashed_email, User.hash_email('test_duplicate_user1@example.com'))
+    sign_in @admin
+    post :permissions_form, params: {search_term: 'test_duplicate_user1@example.com'}
+    assert_select 'td', duplicate_user1.id.to_s
+    assert_select(
+      '.alert-success',
+      "More than one User matches email address.  Showing first result.  "\
+      "Matching User IDs - #{duplicate_user1.id},#{duplicate_user2.id}",
+    )
+  end
+
   test 'grant_permission grants user_permission' do
     sign_in @admin
     assert_creates UserPermission do
