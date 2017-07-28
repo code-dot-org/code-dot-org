@@ -47,6 +47,7 @@ class SectionsPage extends Component {
     // redux provided
     numSections: PropTypes.number.isRequired,
     studioUrl: PropTypes.string.isRequired,
+    provider: PropTypes.string,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     newSection: PropTypes.func.isRequired,
@@ -68,11 +69,8 @@ class SectionsPage extends Component {
   };
 
   componentWillMount() {
-    if (experiments.isEnabled('googleClassroom')) {
-      this.provider = OAuthSectionTypes.google_classroom;
-    }
-    if (experiments.isEnabled('cleverClassroom')) {
-      this.provider = OAuthSectionTypes.clever;
+    if (experiments.isEnabled('importClassroom')) {
+      this.provider = this.props.provider;
     }
   }
 
@@ -141,8 +139,9 @@ class SectionsPage extends Component {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
 
-    const showGoogleClassroom = experiments.isEnabled('googleClassroom');
-    const showCleverClassroom = experiments.isEnabled('cleverClassroom');
+    const newSectionFlow = experiments.isEnabled('section-flow-2017');
+    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
+    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
       <div className={this.props.className}>
         {!this.props.teacherHomepage &&
@@ -196,7 +195,7 @@ class SectionsPage extends Component {
           studioUrl={this.props.studioUrl}
           provider={this.provider}
         />
-        <AddSectionDialog/>
+        <AddSectionDialog handleImportOpen={this.handleImportOpen}/>
         <EditSectionDialog/>
       </div>
     );
@@ -207,6 +206,7 @@ export const UnconnectedSectionsPage = SectionsPage;
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
   studioUrl: state.teacherSections.studioUrl,
+  provider: state.teacherSections.provider,
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
 }), {

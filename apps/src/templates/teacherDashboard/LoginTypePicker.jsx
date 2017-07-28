@@ -17,6 +17,7 @@ import {
   cancelEditingSection,
   editSectionProperties,
 } from './teacherSectionsRedux';
+import {OAuthSectionTypes} from "./shapes";
 
 /**
  * UI for selecting the login type of a class section:
@@ -25,17 +26,25 @@ import {
 class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    handleImportOpen: PropTypes.func.isRequired,
     // Provided by Redux
+    provider: PropTypes.string,
     setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
   };
 
+  openImportDialog = () => {
+    this.props.handleCancel(); // close this dialog
+    this.props.handleImportOpen(); // open the roster dialog
+  };
+
   render() {
-    const {title, setLoginType, handleCancel} = this.props;
-    const googleClassroom = experiments.isEnabled('googleClassroom');
-    const microsoftClassroom = experiments.isEnabled('microsoftClassroom');
-    const clever = experiments.isEnabled('clever');
-    const anyThirdParty = googleClassroom || microsoftClassroom || clever;
+    const {title, provider, setLoginType, handleCancel} = this.props;
+    const withGoogle = provider === OAuthSectionTypes.google_classroom;
+    const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
+    const withClever = provider === OAuthSectionTypes.clever;
+    const anyImportOptions = experiments.isEnabled('importClassroom') &&
+      (withGoogle || withMicrosoft || withClever);
 
     return (
       <div>
@@ -45,7 +54,7 @@ class LoginTypePicker extends Component {
         <Heading2>
           {i18n.addStudentsToSectionInstructions()}
         </Heading2>
-        {anyThirdParty && (
+        {anyImportOptions && (
           <Heading3>
             {i18n.addStudentsManageMyOwn()}
           </Heading3>
@@ -55,18 +64,18 @@ class LoginTypePicker extends Component {
           <WordLoginCard onClick={setLoginType}/>
           <EmailLoginCard onClick={setLoginType}/>
         </CardContainer>
-        {anyThirdParty && (
+        {anyImportOptions && (
           <div>
             <Heading3>
               {i18n.addStudentsSyncThirdParty()}
             </Heading3>
             <CardContainer>
-              {googleClassroom &&
-                <GoogleClassroomCard onClick={setLoginType}/>}
-              {microsoftClassroom &&
-                <MicrosoftClassroomCard onClick={setLoginType}/>}
-              {clever &&
-                <CleverCard onClick={setLoginType}/>}
+              {withGoogle &&
+                <GoogleClassroomCard onClick={this.openImportDialog}/>}
+              {withMicrosoft &&
+                <MicrosoftClassroomCard onClick={this.openImportDialog}/>}
+              {withClever &&
+                <CleverCard onClick={this.openImportDialog}/>}
             </CardContainer>
           </div>
         )}
@@ -83,7 +92,9 @@ class LoginTypePicker extends Component {
   }
 }
 export const UnconnectedLoginTypePicker = LoginTypePicker;
-export default connect(undefined, dispatch => ({
+export default connect(state => ({
+  provider: state.teacherSections.provider,
+}), dispatch => ({
   setLoginType: loginType => dispatch(editSectionProperties({loginType})),
   handleCancel: () => dispatch(cancelEditingSection()),
 }))(LoginTypePicker);
