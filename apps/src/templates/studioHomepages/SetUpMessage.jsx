@@ -2,10 +2,11 @@ import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from "../progress/ProgressButton";
 import experiments from '@cdo/apps/util/experiments';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 import Button from "../Button";
+import { connect } from 'react-redux';
+import { newSection, beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   section: {
@@ -62,18 +63,16 @@ const SetUpMessage = React.createClass({
     codeOrgUrlPrefix: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
+    newSection: React.PropTypes.func.isRequired,
+    beginEditingNewSection: React.PropTypes.func.isRequired,
   },
 
-  getInitialState() {
-    return {addSectionDialogOpen: false};
-  },
-
-  addSection(){
-    this.setState({addSectionDialogOpen: true});
-  },
-
-  handleCloseAddSectionDialogs(){
-    this.setState({addSectionDialogOpen: false});
+  addSection: function () {
+    if (experiments.isEnabled('section-flow-2017')) {
+      this.props.beginEditingNewSection();
+    } else {
+      return this.props.newSection();
+    }
   },
 
   render() {
@@ -123,22 +122,21 @@ const SetUpMessage = React.createClass({
             />
           }
           {experiments.isEnabled('section-flow-2017') &&
-            <ProgressButton
+            <Button
               className="uitest-newsection"
               text={i18n.newSection()}
               style={styles.button}
               onClick={this.addSection}
-              color={ProgressButton.ButtonColor.gray}
+              color={Button.ButtonColor.gray}
             />
           }
-          <AddSectionDialog
-            isOpen={this.state.addSectionDialogOpen}
-            handleClose={this.handleCloseAddSectionDialogs}
-          />
+          <AddSectionDialog/>
         </div>
       );
     }
   }
 });
 
-export default SetUpMessage;
+export default connect(undefined,{newSection,
+  beginEditingNewSection})(SetUpMessage);
+

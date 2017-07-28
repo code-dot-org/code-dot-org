@@ -67,6 +67,9 @@ class EditSectionForm extends Component{
       editSectionProperties,
       handleClose,
     } = this.props;
+    if (!section) {
+      return null;
+    }
     return (
       <div style={style.root}>
         <Heading1>
