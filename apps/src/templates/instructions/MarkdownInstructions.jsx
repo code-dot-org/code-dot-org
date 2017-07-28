@@ -6,6 +6,7 @@ import Radium from 'radium';
 import { ImagePreview } from './AniGifPreview';
 import { connect } from 'react-redux';
 import { convertXmlToBlockly } from './utils';
+import { openDialog } from '@cdo/apps/redux/instructionsDialog';
 
 var styles = {
   standard: {
@@ -33,7 +34,8 @@ const MarkdownInstructions = React.createClass({
     hasInlineImages: React.PropTypes.bool,
     onResize: React.PropTypes.func,
     inTopPane: React.PropTypes.bool,
-    isBlockly: React.PropTypes.bool
+    isBlockly: React.PropTypes.bool,
+    showImageDialog: React.PropTypes.func,
   },
 
   /**
@@ -78,7 +80,7 @@ const MarkdownInstructions = React.createClass({
           <ImagePreview
             url={expandableImg.dataset.url}
             noVisualization={false}
-            showInstructionsDialog={() => {}}
+            showInstructionsDialog={() => this.props.showImageDialog(expandableImg.dataset.url)}
           />, expandableImg);
       });
     }
@@ -133,4 +135,13 @@ export default connect(state => ({
   hasInlineImages: state.instructions.hasInlineImages,
   isBlockly: state.pageConstants.isBlockly,
   noInstructionsWhenCollapsed: state.instructions.noInstructionsWhenCollapsed,
+}), dispatch => ({
+  showImageDialog(imgUrl) {
+    dispatch(openDialog({
+      autoClose: false,
+      imgOnly: true,
+      hintsOnly: false,
+      imgUrl,
+    }));
+  },
 }))(Radium(MarkdownInstructions));
