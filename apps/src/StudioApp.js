@@ -1010,7 +1010,8 @@ StudioApp.prototype.onReportComplete = function (response) {
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = getStore().getState();
-  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const isMarkdownMode = !!reduxState.instructions.longInstructions &&
+    !reduxState.instructionsDialog.imgOnly;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
