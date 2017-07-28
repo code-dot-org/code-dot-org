@@ -1697,6 +1697,9 @@ en:
       OPD-K5 Stage2Overview: {}
       OPD-K5 Stage3Go: {}
       OPD-K5 Stage3Start: {}
+      OPD-K5 Stage3aGo:
+        description here: description here
+        title: title
       OPD-K5 Stage4Go: {}
       OPD-K5 Stage4Start: {}
       OPD-K5 Stage5Go: {}
@@ -2796,6 +2799,11 @@ en:
         Deeper Learning Submissions Deadlines: Deeper Learning Submissions Deadlines
         description here: description here
       csp-novice-congrats: {}
+      csp-pre-survey-2017 preamble 1: {}
+      csp-pre-survey-2017 preamble 2 cs in general: {}
+      csp-pre-survey-2017 preamble 3 this class: {}
+      csp-pre-survey-2017 preamble 4 the future: {}
+      csp-pre-survey-2017 preamble 5 demographics: {}
       csp-pre-survey-2017-q36-preamble: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
@@ -7872,8 +7880,8 @@ en:
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q19:
         Disagree: Disagree
-        Disgree: Disgree
         I am going to like my computer science class.: I am going to like my computer science class.
+        I am going to like this computer science class.: I am going to like this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7890,7 +7898,6 @@ en:
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q20:
         Disagree: Disagree
-        Disgree: Disgree
         I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
@@ -7919,6 +7926,7 @@ en:
       csp-pre-survey-2017-q23:
         Disagree: Disagree
         I think I will be treated with as much respect as other students in a computer science class: I think I will be treated with as much respect as other students in a computer science class
+        I think I will be treated with as much respect as other students in this computer science class: I think I will be treated with as much respect as other students in this computer science class
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7928,6 +7936,7 @@ en:
       csp-pre-survey-2017-q24:
         Disagree: Disagree
         I think I will feel like I can be myself in a computer science class: I think I will feel like I can be myself in a computer science class
+        I think I will feel like I can be myself in this computer science class: I think I will feel like I can be myself in this computer science class
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7937,6 +7946,7 @@ en:
       csp-pre-survey-2017-q25:
         Disagree: Disagree
         I feel like my opinions will be taken seriously in a computer science class: I feel like my opinions will be taken seriously in a computer science class
+        I feel like my opinions will be taken seriously in this computer science class: I feel like my opinions will be taken seriously in this computer science class
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7946,6 +7956,7 @@ en:
       csp-pre-survey-2017-q26:
         Disagree: Disagree
         I feel like it will be hard for people like me to to be accepted in a computer science class.: I feel like it will be hard for people like me to to be accepted in a computer science class.
+        I feel like it will be hard for people like me to to be accepted in this computer science class.: I feel like it will be hard for people like me to to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7963,6 +7974,7 @@ en:
       csp-pre-survey-2017-q28:
         Agree: Agree
         Disagree: Disagree
+        I think learning computer science will help me in my other school subjects.: I think learning computer science will help me in my other school subjects.
         Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8071,7 +8083,6 @@ en:
       csp-pre-survey-2017-q4:
         Agree: Agree
         Disagree: Disagree
-        It is important for me to be good at my school work.: It is important for me to be good at my school work.
         It is important for me to be good at my schoolwork.: It is important for me to be good at my schoolwork.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -8080,6 +8091,7 @@ en:
       csp-pre-survey-2017-q40:
         After school program at my school: After school program at my school
         After school program somewhere else (e.g., Boys and Girls Club, etc.): After school program somewhere else (e.g., Boys and Girls Club, etc.)
+        I did not do any computer science outside of school: I did not do any computer science outside of school
         ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
         : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
         N/A: N/A
