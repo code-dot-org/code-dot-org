@@ -76,28 +76,13 @@ For students new to computer science, each course begins with a grade-appropriat
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursea'), lesson_plans: 'https://curriculum.code.org/csf/coursea', img: CDO.code_org_url('/shared/images/courses/banner_coursea.jpg'), title: 'Course A', ages: 'Ages 5-7', description: 'Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for Kindergarten.'%>
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursea'), lesson_plans: 'https://curriculum.code.org/csf/coursea', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course A', ages: 'Ages 5-7', description: 'Course A is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for Kindergarten.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/s/courseb'), lesson_plans: 'https://curriculum.code.org/csf/courseb', img: CDO.code_org_url('/shared/images/courses/banner_courseb.jpg'), title: 'Course B', ages: 'Ages 6-8', description: 'Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for 1st grade.'%>
-
-[/col-50]
-
-<div style="clear:both"></div>
-<br>
-
-[col-50]
-
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursec'), lesson_plans: 'https://curriculum.code.org/csf/coursec', img: CDO.code_org_url('/shared/images/courses/banner_coursec.jpg'), title: 'Course C', ages: 'Ages 6-9', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 2nd grade.'%>
-
-[/col-50]
-
-[col-50]
-
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursed'), lesson_plans: 'https://curriculum.code.org/csf/coursed', img: CDO.code_org_url('/shared/images/courses/banner_coursed.jpg'), title: 'Course D', ages: 'Ages 7-9', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 3rd grade.' %>
+<%= view :course_wide_block, course: CDO.studio_url('/s/courseb'), lesson_plans: 'https://curriculum.code.org/csf/courseb', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course B', ages: 'Ages 6-8', description: 'Course B is for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for 1st grade.'%>
 
 [/col-50]
 
@@ -106,13 +91,28 @@ For students new to computer science, each course begins with a grade-appropriat
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursee'), lesson_plans: 'https://curriculum.code.org/csf/coursee', img: CDO.code_org_url('/shared/images/courses/banner_coursee.jpg'), title: 'Course E', ages: 'Ages 7-10', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 4th grade.' %>
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursec'), lesson_plans: 'https://curriculum.code.org/csf/coursec', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Ages 6-9', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 2nd grade.'%>
 
 [/col-50]
 
 [col-50]
 
-<%= view :course_wide_block, course: CDO.studio_url('/s/coursef'), lesson_plans: 'https://curriculum.code.org/csf/coursef', img: CDO.code_org_url('/shared/images/courses/banner_coursef.jpg'), title: 'Course F', ages: 'Ages 7-11', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 5th grade.' %>
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursed'), lesson_plans: 'https://curriculum.code.org/csf/coursed', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course D', ages: 'Ages 7-9', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for 3rd grade.' %>
+
+[/col-50]
+
+<div style="clear:both"></div>
+<br>
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursee'), lesson_plans: 'https://curriculum.code.org/csf/coursee', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Ages 7-10', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 4th grade.' %>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursef'), lesson_plans: 'https://curriculum.code.org/csf/coursef', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Ages 7-11', description: 'In this course students will create programs to solve problems and develop interactive games or stories they can share. The course culminates in a multi-day project. Recommended for 5th grade.' %>
 
 [/col-50]
 
