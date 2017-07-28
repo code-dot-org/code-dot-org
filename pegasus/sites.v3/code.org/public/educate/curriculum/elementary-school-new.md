@@ -13,19 +13,17 @@ Overview and Professional Development
 
 [/solid-block-header]
 
-[col-50]
-
-Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
-
-All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy](/educate/curriculum#philosophy).
-
-[/col-50]
-
-<div class="col-50" style="float:right; padding-left: 20px;">
+<div style="width: 40%; padding-right: 20px; float: left;">
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
-<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
+</div>
+
+<div style="width: 60%; float: left;">
+
+Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
 
 </div>
 
@@ -33,13 +31,7 @@ All lessons align to all relevant computer science standards, as well as to the 
 
 # New to Teaching Computer Science?
 
-[col-33]
-
-<img src="/images/fit-300/CSFimages/Teacher_PD_cyan.png"/>
-
-[/col-33]
-
-<div class="col-66" style="padding-left: 20px;">
+<div style="width: 60%; float: left; margin-top: 15px; padding-right: 20px;">
 
 No worries! Most of our teachers have never taught computer science before. 
 
@@ -47,9 +39,13 @@ Try one of our courses yourself to learn ahead of your students. Sign up as a te
 
 We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities. 
 
-<br>
+<br><br>
 <a href="/professional-development-workshops"><button>Find a workshop</button></a>
 
+</div>
+
+<div style="width: 40%; float: left;">
+<img src="/images/fit-370/CSFimages/PD_Review_Cyan.png"/>
 </div>
 
 <div style="clear:both"></div>
@@ -64,7 +60,7 @@ Courses
 
 # Selecting the Right Course For Your Class
 
-<img src="/images/fit-970/CSFimages/CSF_Course_Map_Short.png" style="max-width: 100%"/>
+<img src="/images/fit-970/CSFimages/Course_Map_AF.png" style="max-width: 100%"/>
 
 For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers).
 
