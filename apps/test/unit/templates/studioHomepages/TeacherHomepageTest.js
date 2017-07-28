@@ -227,18 +227,21 @@ describe('TeacherHomepage', () => {
   });
 
   it('if there are no sections, Sections component shows SetUpMessage', () => {
+    registerReducers({teacherSections});
     const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={[]}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
+      <Provider store={getStore()}>
+        <TeacherHomepage
+          announcements={[]}
+          courses={[]}
+          sections={[]}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+        />
+      </Provider>
     );
     // Check if Sections receives correct props.
     const sectionsContainer = wrapper.childAt(3);
-    assert.equal(sectionsContainer.name(),'Sections');
+    assert.equal(sectionsContainer.name(),'Connect(Sections)');
     assert.equal(sectionsContainer.props().sections.length, 0);
     // Check if a ContentContainer is rendered.
     const sectionsContentContainer = sectionsContainer.childAt(0);
@@ -248,8 +251,8 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a sections SetUpMessage is rendered.
-    const sectionsSetUpMessage = sectionsContentContainer.childAt(7).childAt(0);
-    assert.equal(sectionsSetUpMessage.name(), 'SetUpMessage');
+    const sectionsSetUpMessage = sectionsContentContainer.childAt(4).childAt(0);
+    assert.equal(sectionsSetUpMessage.name(), 'Connect(SetUpMessage)');
     assert.equal(sectionsSetUpMessage.props().type, 'sections');
     assert.equal(sectionsSetUpMessage.childAt(0).text(), 'Set up your classroom');
     assert.equal(sectionsSetUpMessage.childAt(1).text(), 'Create a new classroom section to start assigning courses and seeing your student progress.');
