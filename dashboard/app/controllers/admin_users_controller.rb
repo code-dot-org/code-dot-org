@@ -106,7 +106,7 @@ class AdminUsersController < ApplicationController
     search_term = params[:search_term]
     if search_term =~ /^\d+$/
       @user = User.find(search_term)
-    elsif search_term
+    elsif search_term.present?
       users = User.where(hashed_email: User.hash_email(search_term))
       @user = users.first
       if users.count > 1
