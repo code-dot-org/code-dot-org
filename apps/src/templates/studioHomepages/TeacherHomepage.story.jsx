@@ -1,4 +1,7 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+import teacherSections, {setSections, serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
 import TeacherHomepage from './TeacherHomepage';
 
 const announcements = [
@@ -42,6 +45,7 @@ const sections = [
     code: "HPRWHG"
   },
 ];
+const serverSections = sections.map(serverSectionFromSection);
 
 const courses = [
   {
@@ -68,54 +72,80 @@ export default storybook => {
       {
         name: 'Teacher Homepage - no courses, no sections',
         description: 'Teacher Homepage - teacher does not have course progress, nor do they have sections',
-        story: () => (
-          <TeacherHomepage
-            announcements={announcements}
-            sections={[]}
-            courses={[]}
-            codeOrgUrlPrefix="http://localhost:3000/"
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={announcements}
+                sections={[]}
+                courses={[]}
+                codeOrgUrlPrefix="http://localhost:3000/"
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Teacher Homepage - courses, no sections',
         description: 'Teacher Homepage - teacher has course progress, but does not have sections',
-        story: () => (
-          <TeacherHomepage
-            announcements={announcements}
-            sections={[]}
-            courses={courses}
-            codeOrgUrlPrefix="http://localhost:3000/"
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={announcements}
+                sections={[]}
+                courses={courses}
+                codeOrgUrlPrefix="http://localhost:3000/"
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Teacher Homepage - no courses, sections',
         description: 'Teacher Homepage - teacher does not have course progress, but does have sections',
-        story: () => (
-          <TeacherHomepage
-            announcements={announcements}
-            sections={sections}
-            courses={[]}
-            codeOrgUrlPrefix="http://localhost:3000/"
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          store.dispatch(setSections(serverSections));
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={announcements}
+                sections={sections}
+                courses={[]}
+                codeOrgUrlPrefix="http://localhost:3000/"
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Teacher Homepage - courses and sections',
         description: 'Teacher Homepage - teacher does have course progress, and does have sections',
-        story: () => (
-          <TeacherHomepage
-            announcements={announcements}
-            sections={sections}
-            courses={courses}
-            codeOrgUrlPrefix="http://localhost:3000/"
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          const store = createStoreWithReducers();
+          store.dispatch(setSections(serverSections));
+          return (
+            <Provider store={store}>
+              <TeacherHomepage
+                announcements={announcements}
+                sections={sections}
+                courses={courses}
+                codeOrgUrlPrefix="http://localhost:3000/"
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
     ]);
 };
