@@ -13,7 +13,7 @@ Overview and Professional Development
 
 [/solid-block-header]
 
-<div style="width: 40%; padding-right: 20px; float: left;">
+<div class="col-40" style="padding-right: 20px; float: left;">
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
@@ -21,7 +21,7 @@ Overview and Professional Development
 
 </div>
 
-<div style="width: 60%; float: left;">
+<div class="col-60" style="float: left;">
 
 Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
 
@@ -31,7 +31,11 @@ Our Computer Science Fundamentals courses each have about 15 lessons that may be
 
 # New to Teaching Computer Science?
 
-<div style="width: 60%; float: left; margin-top: 15px; padding-right: 20px;">
+<div class="col-40" style="float: left;">
+<img src="/images/fit-370/CSFimages/PD_Review_Cyan.png"/>
+</div>
+
+<div class="col-60" style="float: left; margin-top: 15px; padding-right: 20px;">
 
 No worries! Most of our teachers have never taught computer science before. 
 
@@ -39,13 +43,9 @@ Try one of our courses yourself to learn ahead of your students. Sign up as a te
 
 We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities. 
 
-<br><br>
+<br>
 <a href="/professional-development-workshops"><button>Find a workshop</button></a>
 
-</div>
-
-<div style="width: 40%; float: left;">
-<img src="/images/fit-370/CSFimages/PD_Review_Cyan.png"/>
 </div>
 
 <div style="clear:both"></div>
