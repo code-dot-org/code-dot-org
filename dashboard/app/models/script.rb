@@ -181,7 +181,7 @@ class Script < ActiveRecord::Base
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
-  # @return [AssignableInfo[]]
+  # @return [Script[]]
   def self.valid_scripts(user)
     with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
@@ -190,6 +190,23 @@ class Script < ActiveRecord::Base
           all.
           select {|script| with_hidden || !script.hidden}
     end
+  end
+
+  # Get script and course info for the current user, formatted for passing to
+  # the client for new teacher dashboard UI.
+  # @param [User] user
+  # @return [AssignableInfo[]]
+  def self.valid_assignable_info(user)
+    valid_scripts(user).
+      map do |course_or_script|
+        info = ScriptConstants.assignable_info(course_or_script)
+        info[:name] = I18n.t("#{info[:name]}_name", default: info[:name])
+        info[:name] += " *" if course_or_script[:hidden]
+
+        info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
+
+        info
+      end
   end
 
   # @param [User] user
