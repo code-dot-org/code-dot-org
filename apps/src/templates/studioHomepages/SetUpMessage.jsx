@@ -130,7 +130,7 @@ const SetUpMessage = React.createClass({
               color={Button.ButtonColor.gray}
             />
           }
-          <AddSectionDialog/>
+          <AddSectionDialog handleImportOpen={() => {/* TODO */}}/>
         </div>
       );
     }
