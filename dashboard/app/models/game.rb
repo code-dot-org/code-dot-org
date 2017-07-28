@@ -50,6 +50,7 @@ class Game < ActiveRecord::Base
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
+  SCRATCH = 'scratch'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -188,7 +189,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH].include? app
   end
 
   # True if the app takes responsibility for showing footer info

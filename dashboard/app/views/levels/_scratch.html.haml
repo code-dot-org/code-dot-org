@@ -1,9 +1,23 @@
-#codeApp
-  .loading
-  .slow_load
-    = t(:slow_loading)
-    %br
-    %a{href: 'javascript: location.reload();'}= t(:try_reloading)
+%button#greenflag
+  Green Flag
+%button#stopall
+  Stop All
+%canvas#scratch-stage
+#blocks
+
+:scss
+  #scratch-stage {
+    width: 480px;
+    height: 360px;
+  }
+  #blocks {
+    position: absolute;
+    left: 40%;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
 
 :javascript
   //<![CDATA[
