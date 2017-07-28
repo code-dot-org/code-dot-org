@@ -1,4 +1,7 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import teacherSections from '../teacherDashboard/teacherSectionsRedux';
 import RecentCourses from './RecentCourses';
 
 const courses = [
@@ -53,82 +56,112 @@ export default storybook => {
       {
         name: "Recent Courses - teacher, no courses yet",
         description: "If the teacher does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
-        story: () => (
-          <RecentCourses
-            courses={[]}
-            showAllCoursesLink={true}
-            heading="My Courses"
-            isTeacher={true}
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          return (
+            <Provider store={getStore()}>
+              <RecentCourses
+                courses={[]}
+                showAllCoursesLink={true}
+                heading="My Courses"
+                isTeacher={true}
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: "Recent Courses - student, no courses yet",
         description: "If the student does not have any recent courses, there will be a set up message encouraging them to learn more about courses.",
-        story: () => (
-          <RecentCourses
-            courses={[]}
-            showAllCoursesLink={true}
-            heading="My Courses"
-            isTeacher={false}
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          return (
+            <Provider store={getStore()}>
+              <RecentCourses
+                courses={[]}
+                showAllCoursesLink={true}
+                heading="My Courses"
+                isTeacher={false}
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Recent Courses - teacher, 4 courses ',
         description: ` Recent Courses when the teacher has sections enrolled in 4 courses.`,
-        story: () => (
-          <RecentCourses
-            courses={courses.slice(0,4)}
-            showAllCoursesLink={true}
-            heading="My Courses"
-            isTeacher={true}
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          return (
+            <Provider store={getStore()}>
+              <RecentCourses
+                courses={courses.slice(0,4)}
+                showAllCoursesLink={true}
+                heading="My Courses"
+                isTeacher={true}
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Recent Courses - student, 5 courses ',
         description: ` Recent Courses when the student has progress in 5 courses.`,
-        story: () => (
-          <RecentCourses
-            courses={courses.slice(0,4)}
-            showAllCoursesLink={true}
-            heading="My Courses"
-            isTeacher={false}
-            isRtl={false}
-            studentTopCourse={studentTopCourse}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          return (
+            <Provider store={getStore()}>
+              <RecentCourses
+                courses={courses.slice(0,4)}
+                showAllCoursesLink={true}
+                heading="My Courses"
+                isTeacher={false}
+                isRtl={false}
+                studentTopCourse={studentTopCourse}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Recent Courses - teacher, 7 courses ',
         description: ` Recent Courses when the teacher has sections enrolled in 7 courses. Should see a View More button`,
-        story: () => (
-          <RecentCourses
-            courses={courses}
-            showAllCoursesLink={true}
-            heading="My Courses"
-            isTeacher={true}
-            isRtl={false}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          return (
+            <Provider store={getStore()}>
+              <RecentCourses
+                courses={courses}
+                showAllCoursesLink={true}
+                heading="My Courses"
+                isTeacher={true}
+                isRtl={false}
+              />
+            </Provider>
+          );
+        }
       },
       {
         name: 'Recent Courses - student, 7 courses ',
         description: ` Recent Courses when the student has progress in 7 courses. Should see a View More button`,
-        story: () => (
-          <RecentCourses
-            courses={courses.slice(0,7)}
-            showAllCoursesLink={true}
-            heading="My Courses"
-            isTeacher={false}
-            isRtl={false}
-            studentTopCourse={studentTopCourse}
-          />
-        )
+        story: () => {
+          registerReducers({teacherSections});
+          return (
+            <Provider store={getStore()}>
+              <RecentCourses
+                courses={courses.slice(0,7)}
+                showAllCoursesLink={true}
+                heading="My Courses"
+                isTeacher={false}
+                isRtl={false}
+                studentTopCourse={studentTopCourse}
+              />
+            </Provider>
+          );
+        }
       },
     ]);
 };
