@@ -1075,7 +1075,7 @@ class User < ActiveRecord::Base
   # Return a collection of courses and scripts for the user. First in the list will
   # be courses enrolled in by the user's sections. Following that will be all scripts
   # in which the user has made progress that are not in any of the enrolled courses.
-  def recent_courses_and_scripts
+  def recent_courses_and_scripts(exclude_primary_script)
     courses = section_courses
     course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
 
@@ -1093,15 +1093,21 @@ class User < ActiveRecord::Base
     end
 
     user_script_data = user_scripts.map do |user_script|
-      script_id = user_script[:script_id]
-      script = Script.get_from_cache(script_id)
-      {
-        name: script[:name],
-        title: data_t_suffix('script.name', script[:name], 'title'),
-        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
-        link: script_path(script),
-      }
-    end
+      # Skip this script if we are excluding the primary script and this is the
+      # primary script.
+      if exclude_primary_script && user_script[:script_id] == primary_script[:id]
+        nil
+      else
+        script_id = user_script[:script_id]
+        script = Script.get_from_cache(script_id)
+        {
+          name: script[:name],
+          title: data_t_suffix('script.name', script[:name], 'title'),
+          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+          link: script_path(script),
+        }
+      end
+    end.compact
 
     course_data + user_script_data
   end
