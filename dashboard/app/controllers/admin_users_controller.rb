@@ -116,26 +116,13 @@ class AdminUsersController < ApplicationController
 
   def grant_permission
     user_id = params[:user_id]
-    permission = params[:permission]
     @user = User.find(user_id)
-
     unless @user && @user.teacher?
-      flash[:alert] = "FAILED: user #{user_id} could not be found or was not a teacher"
+      flash[:alert] = "FAILED: user #{user_id} could not be found or is not a teacher"
       redirect_to action: "permissions_form", search_term: user_id
       return
     end
-
-    if permission == 'admin'
-      begin
-        #TODO: update User model to log to #infrasecurity that admin privilege was granted
-        @user.update!(admin: true)
-      rescue ActiveRecord::RecordInvalid => invalid
-        flash[:alert] = "FAILED: user #{user_id} could not be assigned admin permission"\
-                        " because #{invalid.record.errors.full_messages.to_sentence}"
-      end
-    else
-      @user.permission = permission
-    end
+    @user.permission = params[:permission]
     redirect_to permissions_form_path(search_term: user_id)
   end
 
@@ -143,11 +130,7 @@ class AdminUsersController < ApplicationController
     user_id = params[:user_id]
     @user = User.find(user_id)
     permission = params[:permission]
-    if permission == 'admin'
-      @user.update_attribute(:admin, nil)
-    else
-      @user.delete_permission permission
-    end
+    @user.delete_permission permission
     redirect_to permissions_form_path(search_term: user_id)
   end
 end

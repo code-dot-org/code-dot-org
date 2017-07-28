@@ -205,13 +205,6 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :permissions_form
 
-  test 'grant_permission grants admin status' do
-    sign_in @admin
-    post :grant_permission, params: {user_id: @not_admin.id, permission: 'admin'}
-    assert_redirected_to permissions_form_path(search_term: @not_admin.id)
-    assert @not_admin.reload.admin
-  end
-
   test 'grant_permission grants user_permission' do
     sign_in @admin
     assert_creates UserPermission do
@@ -230,33 +223,9 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert [], @user.reload.permissions
     assert_redirected_to permissions_form_path(search_term: @user.id)
     assert_equal(
-      "FAILED: user #{@user.id} could not be found or was not a teacher",
+      "FAILED: user #{@user.id} could not be found or is not a teacher",
       flash[:alert]
     )
-  end
-
-  test 'grant_permission noops and redirects for granting admins to teachers with sections' do
-    sign_in @admin
-    follower = create :follower, student_user: (create :teacher)
-    assert_does_not_create(Follower) do
-      post(
-        :grant_permission,
-        params: {user_id: follower.student_user.id, permission: 'admin'}
-      )
-    end
-    assert_redirected_to permissions_form_path(search_term: follower.student_user.id)
-    assert_equal(
-      "FAILED: user #{follower.student_user.id} could not be assigned admin permission because Admin"\
-      " cannot be a followed",
-      flash[:alert]
-    )
-  end
-
-  test 'revoke_permission revokes admin status' do
-    sign_in @admin
-    get :revoke_permission, params: {user_id: @admin.id, permission: 'admin'}
-    assert_redirected_to permissions_form_path(search_term: @admin.id)
-    refute @admin.reload.admin
   end
 
   test 'revoke_permission revokes user_permission' do

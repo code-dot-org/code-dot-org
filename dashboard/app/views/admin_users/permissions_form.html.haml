@@ -26,11 +26,6 @@
         %th Permission
         %th Granted At
       %tbody
-        -if @user.admin
-          %tr
-            %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :permission => 'admin'
-            %td= 'admin'
-            %td
         - @user.permissions.each do |permission|
           %tr
             %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :permission => permission.permission
@@ -43,6 +38,6 @@
           %td
             %input{:hidden => true, :name => "user_id", :value => @user.id}
             .field
-              = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS + ['admin'])
+              = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS)
           %td
 
