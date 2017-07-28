@@ -130,7 +130,8 @@
 :ruby
   script_data = {
     edit: {
-      userType: current_user.reload.user_type
+      userType: current_user.reload.user_type,
+      isOauth: current_user.oauth?
     }.to_json
   }
 %script{src: minifiable_asset_path('js/devise/registrations/edit.js'), data: script_data}
