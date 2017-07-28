@@ -45,10 +45,13 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {object} progressData
  * @param {string} currentLevelId
  * @param {number} puzzlePage
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
-header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage, signedIn) {
+header.build = function (scriptData, stageData, progressData, currentLevelId,
+    puzzlePage, signedIn, stageExtrasEnabled) {
   scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
@@ -72,7 +75,8 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     progressData,
     currentLevelId,
     saveAnswersBeforeNavigation,
-    signedIn
+    signedIn,
+    stageExtrasEnabled
   );
 
   $('.level_free_play').qtip({
