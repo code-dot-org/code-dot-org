@@ -3,7 +3,7 @@ import ContentContainer from './ContentContainer';
 import CourseCard from './studioHomepages/CourseCard';
 
 const exampleCard = {
-  name: "CSP Unit 2 - Digital Information",
+  title: "CSP Unit 2 - Digital Information",
   description: "Explore how more complex digital information is represented and manipulated through computation and visualization",
   link: "https://curriculum.code.org/csp/unit2/",
 };
@@ -23,14 +23,14 @@ export default storybook => {
             isRtl={false}
           >
             <CourseCard
-              name={exampleCard.name}
+              title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               isRtl={false}
             />
             <CourseCard
-              name={exampleCard.name}
+              title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
@@ -51,14 +51,14 @@ export default storybook => {
             isRtl={false}
           >
             <CourseCard
-              name={exampleCard.name}
+              title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               isRtl={false}
             />
             <CourseCard
-              name={exampleCard.name}
+              title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
@@ -80,14 +80,14 @@ export default storybook => {
             description="These are courses that you have worked on recently"
           >
             <CourseCard
-              name={exampleCard.name}
+              title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
               isRtl={false}
             />
             <CourseCard
-              name={exampleCard.name}
+              title={exampleCard.title}
               description={exampleCard.description}
               image={exampleCard.image}
               link={exampleCard.link}
