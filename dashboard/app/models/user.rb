@@ -160,6 +160,12 @@ class User < ActiveRecord::Base
   has_many :workshops, through: :cohorts
   has_many :segments, through: :workshops
 
+  # courses a facilitator is able to teach
+  has_many :courses_as_facilitator,
+    class_name: Pd::CourseFacilitator,
+    foreign_key: :facilitator_id,
+    dependent: :destroy
+
   has_and_belongs_to_many :workshops_as_facilitator,
     class_name: Workshop,
     foreign_key: :facilitator_id,
@@ -225,6 +231,15 @@ class User < ActiveRecord::Base
 
   def workshop_organizer?
     permission? UserPermission::WORKSHOP_ORGANIZER
+  end
+
+  # assign a course to a facilitator that is qualified to teach it
+  def course_as_facilitator=(course)
+    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
+  end
+
+  def delete_course_as_facilitator(course)
+    courses_as_facilitator.find_by(course: course).try(:destroy)
   end
 
   def delete_permission(permission)
@@ -379,7 +394,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?'
+  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER

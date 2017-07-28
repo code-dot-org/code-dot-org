@@ -11,6 +11,7 @@ var ALLOWED_KEYS = new Set([
   'channelId',
   'hasDataMode',
   'hasDesignMode',
+  'isChallengeLevel',
   'isEmbedView',
   'isResponsive',
   'isIframeEmbed',

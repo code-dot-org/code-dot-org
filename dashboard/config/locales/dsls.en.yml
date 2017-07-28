@@ -2798,6 +2798,7 @@ en:
       csp-novice-congrats: {}
       csp_ap_intro: {}
       csp_subgoal_experiment_thanks: {}
+      csp_subgoal_labels_consent_intro: {}
       csp_unit5_finalassessment_overview:
         description here: description here
         title: title
