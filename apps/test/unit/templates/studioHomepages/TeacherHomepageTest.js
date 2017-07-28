@@ -1,5 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 import { assert, expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
@@ -107,9 +108,22 @@ const moreCourses = [
 ];
 
 describe('TeacherHomepage', () => {
+  let server;
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
+
+  const successResponse = () => [
+    200,
+    {"Content-Type": "application/json"},
+    JSON.stringify({})
+  ];
+  beforeEach(() => {
+    server = sinon.fakeServer.create();
+    server.respondWith('POST', '/dashboardapi/courses', successResponse());
+    server.respondWith('POST', '/dashboardapi/sections', successResponse());
+  });
+  afterEach(() => server.restore());
 
   it('shows a non-extended Header Banner that says Home', () => {
     const wrapper = shallow(
