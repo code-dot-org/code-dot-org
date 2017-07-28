@@ -91,6 +91,17 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
     assert_equal enrollment.id, attendance.enrollment.id
   end
 
+  test 'enrollment user is updated on save' do
+    old_account = create :teacher
+    new_account = create :teacher
+    enrollment = create :pd_enrollment, workshop: @workshop, user: old_account
+    attendance = build :pd_attendance, teacher: new_account, workshop: @workshop,
+      session: @workshop.sessions.first, enrollment: enrollment
+
+    assert attendance.save
+    assert_equal new_account, enrollment.reload.user
+  end
+
   test 'resolve_enrollment' do
     teacher = create :teacher
     enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email
