@@ -42,6 +42,7 @@ class SectionsPage extends Component {
   static propTypes = {
     validScripts: PropTypes.array.isRequired,
     teacherHomepage: PropTypes.bool,
+    className: PropTypes.string,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -143,7 +144,7 @@ class SectionsPage extends Component {
     const showGoogleClassroom = experiments.isEnabled('googleClassroom');
     const showCleverClassroom = experiments.isEnabled('cleverClassroom');
     return (
-      <div>
+      <div className={this.props.className}>
         {!this.props.teacherHomepage &&
           <div style={styles.breadcrumb}>
             <a href="/teacher-dashboard#/">
