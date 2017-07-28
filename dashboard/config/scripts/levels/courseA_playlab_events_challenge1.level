@@ -48,122 +48,20 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "markdown_instructions": "Where are my friends hiding? In this game, clicking on me will show my friend Olive the cat! Clicking Olive will make Robin appear! Can you write code to show the rest of my friends too?\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
-    "instructions": "Where are my friends hiding? Can you write code to show the rest of my friends?",
+    "markdown_instructions": "*\"Where are my friends hiding? In this game, clicking on me will show my friend Olive the cat!\"*\r\n\r\nClicking Olive will make Robin appear! Can you write code to show the rest of the characters too?\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "instructions": "\"Where are my friends hiding? Can you write code to show the rest of my friends?\"",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:02:51 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:06:33 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:07:19 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:07:19 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:08:34 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:09:13 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:09:13 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:09:52 +0000\",\"changed\":[\"initialization_blocks\",\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 16:10:09 +0000\",\"changed\":[\"initialization_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <initialization_blocks>
       <xml>
-        <block type="studio_repeatForever">
-          <statement name="DO">
-            <block type="studio_ifActorIsSpriteElse">
-              <title name="SPRITE">1</title>
-              <title name="VALUE">"hidden"</title>
-              <statement name="DO">
-                <block type="studio_setSpriteEmotion">
-                  <title name="SPRITE">0</title>
-                  <title name="VALUE">3</title>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="studio_ifActorIsSpriteElse">
-                  <title name="SPRITE">7</title>
-                  <title name="VALUE">"hidden"</title>
-                  <statement name="DO">
-                    <block type="studio_setSpriteEmotion">
-                      <title name="SPRITE">0</title>
-                      <title name="VALUE">0</title>
-                    </block>
-                  </statement>
-                  <statement name="ELSE">
-                    <block type="studio_setSpriteEmotion">
-                      <title name="SPRITE">0</title>
-                      <title name="VALUE">1</title>
-                    </block>
-                  </statement>
-                </block>
-              </statement>
-              <next>
-                <block type="studio_ifActorIsVisibleElse">
-                  <title name="SPRITE">7</title>
-                  <title name="VISIBILITY">false</title>
-                  <statement name="ELSE">
-                    <block type="studio_setSpriteEmotion">
-                      <title name="SPRITE">6</title>
-                      <title name="VALUE">1</title>
-                    </block>
-                  </statement>
-                  <next>
-                    <block type="studio_ifActorIsVisibleElse">
-                      <title name="SPRITE">6</title>
-                      <title name="VISIBILITY">false</title>
-                      <statement name="ELSE">
-                        <block type="studio_setSpriteEmotion">
-                          <title name="SPRITE">5</title>
-                          <title name="VALUE">1</title>
-                        </block>
-                      </statement>
-                      <next>
-                        <block type="studio_ifActorIsVisibleElse">
-                          <title name="SPRITE">5</title>
-                          <title name="VISIBILITY">false</title>
-                          <statement name="ELSE">
-                            <block type="studio_setSpriteEmotion">
-                              <title name="SPRITE">4</title>
-                              <title name="VALUE">1</title>
-                            </block>
-                          </statement>
-                          <next>
-                            <block type="studio_ifActorIsVisibleElse">
-                              <title name="SPRITE">4</title>
-                              <title name="VISIBILITY">false</title>
-                              <statement name="ELSE">
-                                <block type="studio_setSpriteEmotion">
-                                  <title name="SPRITE">3</title>
-                                  <title name="VALUE">1</title>
-                                </block>
-                              </statement>
-                              <next>
-                                <block type="studio_ifActorIsVisibleElse">
-                                  <title name="SPRITE">3</title>
-                                  <title name="VISIBILITY">false</title>
-                                  <statement name="ELSE">
-                                    <block type="studio_setSpriteEmotion">
-                                      <title name="SPRITE">2</title>
-                                      <title name="VALUE">1</title>
-                                    </block>
-                                  </statement>
-                                  <next>
-                                    <block type="studio_ifActorIsVisibleElse">
-                                      <title name="SPRITE">2</title>
-                                      <title name="VISIBILITY">false</title>
-                                      <statement name="ELSE">
-                                        <block type="studio_setSpriteEmotion">
-                                          <title name="SPRITE">1</title>
-                                          <title name="VALUE">1</title>
-                                        </block>
-                                      </statement>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </statement>
-        </block>
         <block type="when_run">
           <next>
             <block type="controls_for" inline="true">

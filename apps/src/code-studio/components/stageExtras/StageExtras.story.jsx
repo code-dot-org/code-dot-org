@@ -49,6 +49,7 @@ export default storybook => {
               perfected: true,
             },
           ]}
+          showProjectWidget={false}
         />
       )
     );

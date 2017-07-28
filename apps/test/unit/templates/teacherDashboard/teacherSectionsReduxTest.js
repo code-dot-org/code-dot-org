@@ -5,6 +5,7 @@ import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
   setStudioUrl,
+  setOAuthProvider,
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
@@ -151,6 +152,14 @@ describe('teacherSectionsRedux', () => {
       const action = setStudioUrl('//test-studio.code.org');
       const nextState = reducer(initialState, action);
       assert.equal(nextState.studioUrl, '//test-studio.code.org');
+    });
+  });
+
+  describe('setOAuthProvider', () => {
+    it('sets oauth provider', () => {
+      const action = setOAuthProvider('clever');
+      const nextState = reducer(initialState, action);
+      assert.equal(nextState.provider, 'clever');
     });
   });
 
