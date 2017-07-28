@@ -44,7 +44,7 @@
   should_show_progress = script_level || @stage_extras
 
   sign_in_user = current_user || user_type && OpenStruct.new(short_name: 'User', can_pair?: false)
-
+  show_pairing_dialog = !!session.delete(:show_pairing_dialog)
   require 'cdo/hamburger'
 
 = console if @use_web_console
@@ -85,7 +85,7 @@
                 %i.fa.fa-mobile
             - if !@hide_sign_in_option && signin_button_enabled
               %span#sign_in_or_user
-                = render partial: 'shared/user_header', locals: {current_user: sign_in_user}
+                = render partial: 'shared/user_header', locals: {current_user: sign_in_user, show_pairing_dialog: show_pairing_dialog}
             = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if request.path == "/home" || request.path == "/courses"
