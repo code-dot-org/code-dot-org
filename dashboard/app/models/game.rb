@@ -147,6 +147,10 @@ class Game < ActiveRecord::Base
     @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
+  def self.scratch
+    @@game_scratch ||= find_by_name('Scratch')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -267,6 +271,7 @@ class Game < ActiveRecord::Base
         CurriculumReference:curriculum_reference
         Map:map
         CustomFlappy:flappy
+        Scratch:scratch
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))

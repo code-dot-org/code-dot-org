@@ -1,0 +1,14 @@
+#codeApp
+  .loading
+  .slow_load
+    = t(:slow_loading)
+    %br
+    %a{href: 'javascript: location.reload();'}= t(:try_reloading)
+
+:javascript
+  //<![CDATA[
+  //
+  //]]>
+
+- content_for :body_scripts do
+  %script{src: minifiable_asset_path('js/levels/scratch.js')}

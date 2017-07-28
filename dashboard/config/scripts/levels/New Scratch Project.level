@@ -1,0 +1,31 @@
+<Scratch>
+  <config><![CDATA[{
+  "game_id": 62,
+  "created_at": "2017-07-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "code_functions": {
+      "setDroid": {
+        "category": "Commands"
+      }
+    },
+    "goal_override": {
+      "goalAnimation": null
+    },
+    "edit_code": true,
+    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "is_project_level": "true",
+    "skip_instructions_popup": "true",
+    "never_autoplay_video": "false",
+    "start_blocks": "setBackground(\"Endor\");\r\nsetMap(\"circle\");\r\nsetDroid(\"R2-D2\");\r\nsetDroidSpeed(\"normal\");\r\nplaySound(\"R2-D2random\");\r\nfunction whenUp() {\r\n  goUp();\r\n}\r\nfunction whenDown() {\r\n  goDown();\r\n}\r\nfunction whenLeft() {\r\n  goLeft();\r\n}\r\nfunction whenRight() {\r\n  goRight();\r\n}"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</Scratch>
