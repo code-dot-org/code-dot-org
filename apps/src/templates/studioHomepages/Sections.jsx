@@ -86,71 +86,81 @@ const Sections = React.createClass({
           isRtl={isRtl}
           description={enrollmentDescription}
         >
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "success" && (
-          <JoinSectionSuccessNotification sectionName={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "leave" && this.state.sectionsResult === "success" && (
-          <LeaveSectionSuccessNotification sectionName={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "section_notfound" && (
-          <JoinSectionNotFoundNotification sectionId={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "fail" && (
-          <JoinSectionFailNotification sectionId={this.state.sectionsResultName}/>
-        )}
-        {this.state.sectionsAction === "join" && this.state.sectionsResult === "exists" && (
-          <JoinSectionExistsNotification sectionName={this.state.sectionsResultName}/>
-        )}
-        {isTeacher && numSections > 0 && experiments.isEnabled('section-flow-2017') && (
-          <SectionsPage
-            className="sectionPage"
-            validScripts={this.props.validScripts}
-            teacherHomepage={this.props.teacherHomepage}
+          <SectionNotifications
+            action={this.state.sectionsAction}
+            result={this.state.sectionsResult}
+            nameOrId={this.state.sectionsResultName}
           />
-        )}
-        {numSections > 0 && !experiments.isEnabled('section-flow-2017') && (
-          <SectionsTable
-            sections={sections}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-            canLeave={canLeave}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-        {isTeacher && numSections === 0 && (
-          <SetUpMessage
-            type="sections"
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-          />
-        )}
-        {!isTeacher && numSections > 0 && (
-          <SectionsTable
-            sections={sections}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-            canLeave={canLeave}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-        {!isTeacher && (
-          <JoinSection
-            enrolledInASection={enrolledInASection}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-      </ContentContainer>
-    </div>
+          {isTeacher && numSections > 0 && experiments.isEnabled('section-flow-2017') && (
+            <SectionsPage
+              className="sectionPage"
+              validScripts={this.props.validScripts}
+              teacherHomepage={this.props.teacherHomepage}
+            />
+          )}
+          {numSections > 0 && !experiments.isEnabled('section-flow-2017') && (
+            <SectionsTable
+              sections={sections}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+              canLeave={canLeave}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+          {isTeacher && numSections === 0 && (
+            <SetUpMessage
+              type="sections"
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+            />
+          )}
+          {!isTeacher && numSections > 0 && (
+            <SectionsTable
+              sections={sections}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+              canLeave={canLeave}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+          {!isTeacher && (
+            <JoinSection
+              enrolledInASection={enrolledInASection}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+        </ContentContainer>
+      </div>
     );
   }
 });
 export default connect(state => ({numSections: state.teacherSections.sectionIds.length}), {setValidAssignments, setSections})(Sections);
 
-  const JoinSectionSuccessNotification = React.createClass({
+const SectionNotifications = ({action, result, nameOrId}) => {
+  if (action === 'join' && result === 'success') {
+    return <JoinSectionSuccessNotification sectionName={nameOrId}/>;
+  } else if (action === 'leave' && result === 'success') {
+    return <LeaveSectionSuccessNotification sectionName={nameOrId}/>;
+  } else if (action === 'join' && result === 'section_notfound') {
+    return <JoinSectionNotFoundNotification sectionId={nameOrId}/>;
+  } else if (action === 'join' && result === 'fail') {
+    return <JoinSectionFailNotification sectionId={nameOrId}/>;
+  } else if (action === 'join' && result === 'exists') {
+    return <JoinSectionExistsNotification sectionName={nameOrId}/>;
+  }
+  return null;
+};
+SectionNotifications.propTypes = {
+  action: PropTypes.string,
+  result: PropTypes.string,
+  nameOrId: PropTypes.string,
+};
+
+const JoinSectionSuccessNotification = React.createClass({
   propTypes: {sectionName: PropTypes.string.isRequired},
   render() {
     return (
@@ -158,7 +168,7 @@ export default connect(state => ({numSections: state.teacherSections.sectionIds.
         type="success"
         notice={i18n.sectionsNotificationSuccess()}
         details={i18n.sectionsNotificationJoinSuccess({sectionName: this.props.sectionName})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -172,7 +182,7 @@ const LeaveSectionSuccessNotification = React.createClass({
         type="success"
         notice={i18n.sectionsNotificationSuccess()}
         details={i18n.sectionsNotificationLeaveSuccess({sectionName: this.props.sectionName})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -186,7 +196,7 @@ const JoinSectionNotFoundNotification = React.createClass({
         type="failure"
         notice={i18n.sectionsNotificationFailure()}
         details={i18n.sectionsNotificationJoinNotFound({sectionId: this.props.sectionId})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -200,7 +210,7 @@ const JoinSectionFailNotification = React.createClass({
         type="failure"
         notice={i18n.sectionsNotificationFailure()}
         details={i18n.sectionsNotificationJoinFail({sectionId: this.props.sectionId})}
-        dismissible={true}
+        dismissible
       />
     );
   }
@@ -214,7 +224,7 @@ const JoinSectionExistsNotification = React.createClass({
         type="warning"
         notice={i18n.sectionsNotificationSuccess()}
         details={i18n.sectionsNotificationJoinExists({sectionName: this.props.sectionName})}
-        dismissible={true}
+        dismissible
       />
     );
   }
