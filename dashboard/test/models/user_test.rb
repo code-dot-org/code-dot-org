@@ -1616,6 +1616,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'assign_course_as_facilitator assigns course to facilitator' do
+    facilitator = create :facilitator
+    assert_creates Pd::CourseFacilitator do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+    end
+    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
+  end
+
+  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+    assert_no_difference 'Pd::CourseFacilitator.count' do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+    end
+  end
+
+  test 'delete_course_as_facilitator removes facilitator course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    assert_difference 'Pd::CourseFacilitator.count', -1 do
+      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
+    end
+  end
+
   test 'should_see_inline_answer? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -1764,6 +1786,11 @@ class UserTest < ActiveSupport::TestCase
   test 'age validation is bypassed for Google OAuth users' do
     # Users created this way will be asked for their age when they first sign in.
     create :user, birthday: nil, provider: 'google_oauth2'
+  end
+
+  test 'age validation is bypassed for Clever users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'clever'
   end
 
   test 'users updating the email field must provide a valid email address' do
@@ -1919,11 +1946,13 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_courses_and_scripts
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:name]
+      assert_equal 'csd', courses_and_scripts[0][:name]
+      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:title]
       assert_equal 'CSD short description', courses_and_scripts[0][:description]
       assert_equal '/courses/csd', courses_and_scripts[0][:link]
 
-      assert_equal 'Script Other', courses_and_scripts[1][:name]
+      assert_equal 'other', courses_and_scripts[1][:name]
+      assert_equal 'Script Other', courses_and_scripts[1][:title]
       assert_equal 'other-description', courses_and_scripts[1][:description]
       assert_equal '/s/other', courses_and_scripts[1][:link]
     end
@@ -1935,7 +1964,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_courses_and_scripts
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
   end
 

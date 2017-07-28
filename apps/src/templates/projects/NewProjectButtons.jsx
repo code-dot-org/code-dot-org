@@ -64,6 +64,7 @@ const styles = {
   },
   tile: {
     width: 214,
+    height: 70,
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',

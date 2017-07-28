@@ -1,0 +1,12 @@
+.courseblock-span6.courseblock-wide-large{style: "height: 330px; max-width: 100%;"}
+  #courseblock-header{style: 'position: relative; height: 80px;'}
+    %a{:href=>course, style: 'position: absolute;'}
+      %img{src: img, style: "width: 100%;"}
+    %h3{style: 'position: absolute; color: white; margin-top: 20px; margin-left: 30px;'}= title
+  #courseblock-content{style: 'padding-left: 20px; padding-right: 20px;'}
+    %h4= ages
+    .smalltext= description
+    %a{:href=>course}
+      %button{style: "margin-left: 10px; margin-top: 20px;"} View course
+    %a{:href=>lesson_plans}
+      %button{style: "margin-left: 10px; margin-top: 20px;"} Lesson plans

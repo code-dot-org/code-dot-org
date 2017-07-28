@@ -112,7 +112,18 @@ describe('SectionRow', () => {
       assert.equal(col.text(), 'word');
     });
 
-    it('has a dropdown when editing', () => {
+    it('has text when editing provider-managed section', () => {
+      const wrapper = shallow(
+        <SectionRow
+          {...defaultProps}
+          sectionId={12}
+        />
+      );
+      const col = wrapper.find('td').at(1);
+      assert.equal(col.text(), 'google_classroom');
+    });
+
+    it('has a dropdown when editing non-provider-managed section', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
       );
@@ -276,9 +287,9 @@ describe('SectionRow', () => {
           />
         );
 
-        assert.equal(wrapper.find('ProgressButton').length, 2);
-        assert.equal(wrapper.find('ProgressButton').at(0).props().text, 'Edit');
-        assert.equal(wrapper.find('ProgressButton').at(1).props().text, 'Delete');
+        assert.equal(wrapper.find('Button').length, 2);
+        assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
+        assert.equal(wrapper.find('Button').at(1).props().text, 'Delete');
       });
 
       it('has one button if canDelete is false', () => {
@@ -290,8 +301,8 @@ describe('SectionRow', () => {
           />
         );
 
-        assert.equal(wrapper.find('ProgressButton').length, 1);
-        assert.equal(wrapper.find('ProgressButton').at(0).props().text, 'Edit');
+        assert.equal(wrapper.find('Button').length, 1);
+        assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
       });
     });
 
@@ -315,9 +326,9 @@ describe('SectionRow', () => {
           />
         );
 
-        assert.equal(wrapper.find('ProgressButton').length, 2);
-        assert.equal(wrapper.find('ProgressButton').at(0).props().text, 'Save');
-        assert.equal(wrapper.find('ProgressButton').at(1).props().text, 'Cancel');
+        assert.equal(wrapper.find('Button').length, 2);
+        assert.equal(wrapper.find('Button').at(0).props().text, 'Save');
+        assert.equal(wrapper.find('Button').at(1).props().text, 'Cancel');
       });
     });
 
@@ -342,9 +353,9 @@ describe('SectionRow', () => {
         );
 
         assert.equal(wrapper.childAt(0).text(), 'Delete?');
-        assert.equal(wrapper.find('ProgressButton').length, 2);
-        assert.equal(wrapper.find('ProgressButton').at(0).props().text, 'Yes');
-        assert.equal(wrapper.find('ProgressButton').at(1).props().text, 'No');
+        assert.equal(wrapper.find('Button').length, 2);
+        assert.equal(wrapper.find('Button').at(0).props().text, 'Yes');
+        assert.equal(wrapper.find('Button').at(1).props().text, 'No');
       });
     });
   });

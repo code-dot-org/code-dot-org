@@ -3,6 +3,16 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   before_action :find_follower, only: :leave
   load_and_authorize_resource except: [:join, :leave]
 
+  rescue_from ActiveRecord::RecordNotFound do |e|
+    if e.model == "Section" && %w(join leave).include?(request.filtered_parameters['action'])
+      render json: {
+        result: 'section_notfound'
+      }, status: :bad_request
+    else
+      head :forbidden
+    end
+  end
+
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
   def index
@@ -48,15 +58,23 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: section.summarize
   end
 
+  # DELETE /api/v1/sections/<id>
+  # Delete a section
+  def destroy
+    @section.destroy
+    head :no_content
+  end
+
   # POST /api/v1/sections/<id>/join
   def join
     unless current_user
       render_404
       return
     end
-    @section.add_student current_user
+    result = @section.add_student current_user
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize)
+      sections: current_user.sections_as_student.map(&:summarize),
+      result: result
     }
   end
 
@@ -65,7 +83,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     authorize! :destroy, @follower
     @section.remove_student(current_user, @follower, {notify: true})
     render json: {
-      sections: current_user.sections_as_student.map(&:summarize)
+      sections: current_user.sections_as_student.map(&:summarize),
+      result: "success"
     }
   end
 

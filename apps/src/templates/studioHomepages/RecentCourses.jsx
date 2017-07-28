@@ -29,8 +29,8 @@ const RecentCourses = React.createClass({
 
   render() {
     const { courses, showAllCoursesLink, isTeacher, heading, isRtl, studentTopCourse } = this.props;
-    const topFourCourses = courses.slice(1,5);
-    const moreCourses = courses.slice(5);
+    const topFourCourses = courses.slice(0,4);
+    const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || studentTopCourse;
 
     return (
@@ -55,7 +55,7 @@ const RecentCourses = React.createClass({
             topFourCourses.map((course, index) =>
             <div key={index}>
               <CourseCard
-                name={course.name}
+                title={course.title}
                 description={course.description}
                 link={course.link}
                 isRtl={isRtl}
@@ -71,14 +71,16 @@ const RecentCourses = React.createClass({
             />
           )}
           {hasCourse && (
-            <Notification
-              type="course"
-              notice={i18n.findCourse()}
-              details={i18n.findCourseDescription()}
-              buttonText={i18n.findCourse()}
-              buttonLink="/courses"
-              dismissible={false}
-            />
+            <div>
+              <Notification
+                type={Notification.NotificationType.course}
+                notice={i18n.findCourse()}
+                details={i18n.findCourseDescription()}
+                buttonText={i18n.findCourse()}
+                buttonLink="/courses"
+                dismissible={false}
+              />
+            </div>
           )}
           {!hasCourse && (
             <SetUpMessage

@@ -1,6 +1,11 @@
-import { assert } from '../../../util/configuredChai';
+import sinon from 'sinon';
+import { assert, expect } from '../../../util/configuredChai';
+import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 import reducer, {
+  USER_EDITABLE_SECTION_PROPS,
+  PENDING_NEW_SECTION_ID,
   setStudioUrl,
+  setOAuthProvider,
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
@@ -8,10 +13,17 @@ import reducer, {
   updateSection,
   newSection,
   removeSection,
+  beginEditingNewSection,
+  beginEditingSection,
+  editSectionProperties,
+  cancelEditingSection,
+  finishEditingSection,
   assignmentId,
   assignmentNames,
   assignmentPaths,
   sectionFromServerSection,
+  isAddingSection,
+  isEditingSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const sections = [
@@ -140,6 +152,14 @@ describe('teacherSectionsRedux', () => {
       const action = setStudioUrl('//test-studio.code.org');
       const nextState = reducer(initialState, action);
       assert.equal(nextState.studioUrl, '//test-studio.code.org');
+    });
+  });
+
+  describe('setOAuthProvider', () => {
+    it('sets oauth provider', () => {
+      const action = setOAuthProvider('clever');
+      const nextState = reducer(initialState, action);
+      assert.equal(nextState.provider, 'clever');
     });
   });
 
@@ -447,6 +467,311 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
+  describe('beginEditingNewSection', () => {
+    it('populates sectionBeingEdited', () => {
+      assert.isNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, beginEditingNewSection());
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: PENDING_NEW_SECTION_ID,
+        name: '',
+        loginType: undefined,
+        grade: '',
+        providerManaged: false,
+        stageExtras: false,
+        pairingAllowed: true,
+        studentCount: 0,
+        code: '',
+        courseId: null,
+        scriptId: null
+      });
+    });
+  });
+
+  describe('beginEditingSection', () => {
+    it('populates sectionBeingEdited', () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      assert.isNull(stateWithSections.sectionBeingEdited);
+      const state = reducer(stateWithSections, beginEditingSection(12));
+      assert.deepEqual(state.sectionBeingEdited, {
+        id: 12,
+        name: "section2",
+        loginType: "picture",
+        grade: "11",
+        providerManaged: false,
+        code: "DWGMFX",
+        stageExtras: false,
+        pairingAllowed: true,
+        scriptId: 36,
+        courseId: null,
+        studentCount: 1,
+      });
+    });
+  });
+
+  describe('editSectionProperties', () => {
+    let editingNewSectionState;
+
+    before(() => {
+      editingNewSectionState = reducer(initialState, beginEditingNewSection());
+    });
+
+    it('throws if not currently editing a section', () => {
+      expect(() => {
+        reducer(initialState, editSectionProperties({name: 'New Name'}));
+      }).to.throw();
+    });
+
+    // Enumerate user-editable section properties
+    USER_EDITABLE_SECTION_PROPS.forEach(editableProp => {
+      it(`allows editing ${editableProp}`, () => {
+        const state = reducer(
+          editingNewSectionState,
+          editSectionProperties({[editableProp]: 'newValue'})
+        );
+        expect(state.sectionBeingEdited[editableProp]).to.equal('newValue');
+      });
+    });
+
+    // Check some uneditable section properties
+    [
+      'id',
+      'studentCount',
+      'code',
+      'providerManaged',
+    ].forEach(uneditableProp => {
+      it(`does not allow editing ${uneditableProp}`, () => {
+        expect(() => reducer(
+          editingNewSectionState,
+          editSectionProperties({[uneditableProp]: 'newValue'})
+        )).to.throw();
+      });
+    });
+
+    it('can edit multiple props at once', () => {
+      const state = reducer(
+        editingNewSectionState,
+        editSectionProperties({
+          name: 'newName',
+          courseId: 61,
+        })
+      );
+      expect(state.sectionBeingEdited.name).to.equal('newName');
+      expect(state.sectionBeingEdited.courseId).to.equal(61);
+    });
+
+    it('when editing multiple props, throws if any are uneditable', () => {
+      expect(() => reducer(
+        editingNewSectionState,
+        editSectionProperties({
+          name: 'newName',
+          courseId: 61,
+          providerManaged: false, // Uneditable!
+        })
+      )).to.throw();
+    });
+  });
+
+  describe('cancelEditingSection', () => {
+    it('clears sectionBeingEdited', () => {
+      const initialState = reducer(initialState, beginEditingNewSection());
+      assert.isNotNull(initialState.sectionBeingEdited);
+      const state = reducer(initialState, cancelEditingSection());
+      assert.isNull(state.sectionBeingEdited);
+    });
+  });
+
+  describe('finishEditingSection', () => {
+    let server, store;
+
+    // Fake server responses to reuse in our tests
+    const newSectionDefaults = {
+      id: 13,
+      name: 'New Section',
+      login_type: 'email',
+      grade: undefined,
+      providerManaged: false,
+      stage_extras: false,
+      pairing_allowed: true,
+      student_count: 0,
+      code: 'BCDFGH',
+      course_id: null,
+      script_id: null,
+    };
+
+    function successResponse(customProps = {}) {
+      const editingSectionId = state().sectionBeingEdited.id;
+      const existingSection = sections.find(s => s.id === editingSectionId);
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify({
+          ...(existingSection || newSectionDefaults),
+          id: existingSection ? editingSectionId : 13,
+          ...customProps,
+        })
+      ];
+    }
+
+    const failureResponse = [500, {}, ''];
+
+    function state() {
+      return store.getState().teacherSections;
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      stubRedux();
+      registerReducers({teacherSections: reducer});
+      store = getStore();
+      store.dispatch(setSections(sections));
+    });
+
+    afterEach(function () {
+      restoreRedux();
+      server.restore();
+    });
+
+    it('immediately makes saveInProgress true', () => {
+      store.dispatch(beginEditingNewSection());
+      expect(state().saveInProgress).to.be.false;
+
+      store.dispatch(finishEditingSection());
+      expect(state().saveInProgress).to.be.true;
+    });
+
+    it('makes saveInProgress false after the server responds with success', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', successResponse());
+
+      store.dispatch(finishEditingSection());
+      expect(state().saveInProgress).to.be.true;
+
+      server.respond();
+      expect(state().saveInProgress).to.be.false;
+    });
+
+    it('makes saveInProgress false after the server responds with failure', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', failureResponse);
+
+      store.dispatch(finishEditingSection()).catch(() => {});
+      expect(state().saveInProgress).to.be.true;
+
+      server.respond();
+      expect(state().saveInProgress).to.be.false;
+    });
+
+    it('resolves a returned promise when the server responds with success', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', successResponse());
+
+      const promise = store.dispatch(finishEditingSection());
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('rejects a returned promise when the server responds with failure', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', failureResponse);
+
+      const promise = store.dispatch(finishEditingSection());
+      server.respond();
+      return expect(promise).to.be.rejected;
+    });
+
+    it('clears sectionBeingEdited after the server responds with success', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', successResponse());
+
+      store.dispatch(finishEditingSection());
+      expect(state().sectionBeingEdited).not.to.be.null;
+
+      server.respond();
+      expect(state().sectionBeingEdited).to.be.null;
+    });
+
+    it('keeps sectionBeingEdited after the server responds with failure', () => {
+      store.dispatch(beginEditingNewSection());
+      const originalSectionBeingEdited = state().sectionBeingEdited;
+      expect(originalSectionBeingEdited).not.to.be.null;
+      server.respondWith('POST', '/v2/sections', failureResponse);
+
+      store.dispatch(finishEditingSection()).catch(() => {});
+      expect(state().sectionBeingEdited).to.equal(originalSectionBeingEdited);
+
+      server.respond();
+      expect(state().sectionBeingEdited).to.equal(originalSectionBeingEdited);
+    });
+
+    it('adds a new section to the sections map on success', () => {
+      const originalSections = state().sections;
+      store.dispatch(beginEditingNewSection());
+      store.dispatch(editSectionProperties({
+        name: 'Aquarius PM Block 2',
+        loginType: 'picture',
+        grade: '3',
+      }));
+      server.respondWith('POST', '/v2/sections', successResponse({
+        name: 'Aquarius PM Block 2',
+        login_type: 'picture',
+        grade: '3',
+      }));
+
+      store.dispatch(finishEditingSection());
+      expect(state().sections).to.equal(originalSections);
+
+      server.respond();
+      expect(state().sections).to.deep.equal({
+        ...originalSections,
+        [13]: {
+          id: 13,
+          name: 'Aquarius PM Block 2',
+          loginType: 'picture',
+          grade: '3',
+          providerManaged: false,
+          stageExtras: false,
+          pairingAllowed: true,
+          studentCount: undefined,
+          code: 'BCDFGH',
+          courseId: null,
+          scriptId: null,
+        }
+      });
+    });
+
+    it('updates an edited section in the section map on success', () => {
+      const sectionId = 12;
+      store.dispatch(beginEditingSection(sectionId));
+      store.dispatch(editSectionProperties({grade: 'K'}));
+
+      // Set up matching server response
+      server.respondWith('POST', `/v2/sections/${sectionId}/update`,
+        successResponse({grade: 'K'}));
+
+      store.dispatch(finishEditingSection());
+      expect(state().sectionBeingEdited).to.have.property('grade', 'K');
+      expect(state().sections[sectionId]).to.have.property('grade', '11');
+
+      server.respond();
+      expect(state().sectionBeingEdited).to.be.null;
+      expect(state().sections[sectionId]).to.have.property('grade', 'K');
+    });
+
+    it('does not modify sections map on failure', () => {
+      store.dispatch(beginEditingNewSection());
+      server.respondWith('POST', '/v2/sections', failureResponse);
+      const originalSections = state().sections;
+
+      store.dispatch(finishEditingSection()).catch(() => {});
+      server.respond();
+      expect(state().sections).to.equal(originalSections);
+    });
+  });
+
   describe('sectionFromServerSection', () => {
     const serverSection = {
       id: 11,
@@ -532,6 +857,52 @@ describe('teacherSectionsRedux', () => {
     it('assignmentPaths returns empty array if unassigned', () => {
       const paths = assignmentPaths(stateWithNewSection, unassignedSection);
       assert.deepEqual(paths, []);
+    });
+  });
+
+  describe('isAddingSection', () => {
+    it('is false in initial state', () => {
+      assert.isFalse(isAddingSection(initialState));
+    });
+
+    it('is true when creating a new section', () => {
+      const state = reducer(initialState, beginEditingNewSection());
+      assert(isAddingSection(state));
+    });
+
+    it('is false when editing an existing section', () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      const state = reducer(stateWithSections, beginEditingSection(12));
+      assert.isFalse(isAddingSection(state));
+    });
+
+    it('is false after editing is cancelled', () => {
+      const initialState = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, cancelEditingSection());
+      assert.isFalse(isAddingSection(state));
+    });
+  });
+
+  describe('isEditingSection', () => {
+    it('is false in initial state', () => {
+      assert.isFalse(isEditingSection(initialState));
+    });
+
+    it('is false when creating a new section', () => {
+      const state = reducer(initialState, beginEditingNewSection());
+      assert.isFalse(isEditingSection(state));
+    });
+
+    it('is true when editing an existing section', () => {
+      const stateWithSections = reducer(initialState, setSections(sections));
+      const state = reducer(stateWithSections, beginEditingSection(12));
+      assert(isEditingSection(state));
+    });
+
+    it('is false after editing is cancelled', () => {
+      const initialState = reducer(initialState, beginEditingNewSection());
+      const state = reducer(initialState, cancelEditingSection());
+      assert.isFalse(isEditingSection(state));
     });
   });
 });
