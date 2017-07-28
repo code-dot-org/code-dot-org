@@ -914,6 +914,6 @@ class Script < ActiveRecord::Base
   # @return {String|nil} path to the course overview page for this script if there
   #   is one.
   def course_link
-    course_path(course)
+    course_path(course) if course
   end
 end
