@@ -1,7 +1,13 @@
 import React from 'react';
+import {Provider} from 'react-redux';
 import { assert, expect } from 'chai';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
+import teacherSections, {
+  setSections,
+  serverSectionFromSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 const announcements = [
   {
@@ -20,6 +26,7 @@ const announcements = [
 
 const sections = [
   {
+    id: 11,
     name: "Period 1",
     teacherName: "Ms. Frizzle",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/111111/progress",
@@ -27,9 +34,15 @@ const sections = [
     linkToAssigned: "https://studio.code.org/s/course1",
     numberOfStudents: 1,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/111111/manage",
-    code: "ABCDEF"
+    code: "ABCDEF",
+    loginType: 'picture',
+    stageExtras: false,
+    pairingAllowed: true,
+    courseId: null,
+    scriptId: null,
   },
   {
+    id: 12,
     name: "Period 2",
     teacherName: "Ms. Frizzle",
     linkToProgress: "https://code.org/teacher-dashboard#/sections/222222/progress",
@@ -37,9 +50,15 @@ const sections = [
     linkToAssigned: "https://studio.code.org/s/course2",
     numberOfStudents: 2,
     linkToStudents: "https://code.org/teacher-dashboard#/sections/222222/manage",
-    code: "EEBSKR"
+    code: "EEBSKR",
+    loginType: 'picture',
+    stageExtras: false,
+    pairingAllowed: true,
+    courseId: null,
+    scriptId: null,
   },
 ];
+const serverSections = sections.map(serverSectionFromSection);
 
 const courses = [
   {
@@ -90,7 +109,7 @@ const moreCourses = [
 describe('TeacherHomepage', () => {
 
   it('shows a non-extended Header Banner that says Home', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         courses={[]}
@@ -106,7 +125,7 @@ describe('TeacherHomepage', () => {
   });
 
   it('references ProtectedStatefulDiv for the terms reminder', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         courses={[]}
@@ -120,7 +139,7 @@ describe('TeacherHomepage', () => {
   });
 
   it('shows one announcement', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <TeacherHomepage
         announcements={[announcements[0]]}
         courses={[]}
@@ -140,18 +159,23 @@ describe('TeacherHomepage', () => {
   });
 
   it('if there are sections, Sections component shows a SectionsTable', () => {
+    registerReducers({teacherSections});
+    const store = getStore();
+    store.dispatch(setSections(serverSections));
     const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={[]}
-        sections={sections}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
+      <Provider store={store}>
+        <TeacherHomepage
+          announcements={[]}
+          courses={[]}
+          sections={sections}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+        />
+      </Provider>
     );
     // Check if Sections receives correct props.
     const sectionsContainer = wrapper.childAt(3);
-    assert.equal(sectionsContainer.name(),'Sections');
+    assert.equal(sectionsContainer.name(),'Connect(Sections)');
     assert.equal(sectionsContainer.props().sections.length, 2);
     const section1 = sectionsContainer.props().sections[0];
     assert.equal(section1.name, sections[0].name);
@@ -177,7 +201,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a SectionsTable is rendered.
-    const sectionsTable = sectionsContentContainer.childAt(6).childAt(0);
+    const sectionsTable = sectionsContentContainer.childAt(3).childAt(0);
     assert.equal(sectionsTable.name(), 'SectionsTable');
     assert.equal(sectionsTable.childAt(0).name(), 'thead');
     const column1 = sectionsTable.childAt(0).childAt(0).childAt(0);

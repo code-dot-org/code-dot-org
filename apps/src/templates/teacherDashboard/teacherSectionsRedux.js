@@ -401,7 +401,7 @@ export const sectionFromServerSection = serverSection => ({
  * section on the server via the sections API.
  * @param {sectionShape} section
  */
-function serverSectionFromSection(section) {
+export function serverSectionFromSection(section) {
   // Lazy: We leave some extra properties on this object (they're ignored by
   // the server for now) hoping this can eventually become a pass-through.
   return {

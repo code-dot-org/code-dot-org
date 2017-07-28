@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import $ from 'jquery';
 import ContentContainer from '../ContentContainer';
 import SetUpMessage from './SetUpMessage';
 import JoinSection from './JoinSection';
@@ -76,13 +77,18 @@ const Sections = React.createClass({
     const { numSections } = this.props;
     const sections = this.state.sections;
     const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
+    const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
     const enrolledInASection = sections.length === 0 ? false : true;
     const enrollmentDescription = isTeacher ? "" : i18n.enrollmentDescription();
+    const sectionFlow2017 = experiments.isEnabled('section-flow-2017');
 
     return (
       <div className="sectionsContainer">
         <ContentContainer
           heading={i18n.sectionsTitle()}
+          linkText={i18n.manageSections()}
+          link={editSectionsUrl}
+          showLink={isTeacher && !sectionFlow2017}
           isRtl={isRtl}
           description={enrollmentDescription}
         >
@@ -91,14 +97,14 @@ const Sections = React.createClass({
             result={this.state.sectionsResult}
             nameOrId={this.state.sectionsResultName}
           />
-          {isTeacher && numSections > 0 && experiments.isEnabled('section-flow-2017') && (
+          {isTeacher && numSections > 0 && sectionFlow2017 && (
             <SectionsPage
               className="sectionPage"
               validScripts={this.props.validScripts}
               teacherHomepage={this.props.teacherHomepage}
             />
           )}
-          {numSections > 0 && !experiments.isEnabled('section-flow-2017') && (
+          {numSections > 0 && !sectionFlow2017 && (
             <SectionsTable
               sections={sections}
               isRtl={isRtl}
