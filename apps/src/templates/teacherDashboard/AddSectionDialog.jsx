@@ -14,13 +14,14 @@ import {isAddingSection} from './teacherSectionsRedux';
  */
 class AddSectionDialog extends Component {
   static propTypes = {
+    handleImportOpen: PropTypes.func.isRequired,
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
     section: sectionShape,
   };
 
   render() {
-    const {isOpen, section} = this.props;
+    const {isOpen, section, handleImportOpen} = this.props;
     const {loginType} = section || {};
     const title = i18n.newSection();
     return (
@@ -32,8 +33,15 @@ class AddSectionDialog extends Component {
         uncloseable
       >
         <PadAndCenter>
-          {!loginType && <LoginTypePicker title={title}/>}
-          {loginType && <EditSectionForm title={title}/>}
+          {!loginType &&
+            <LoginTypePicker
+              title={title}
+              handleImportOpen={handleImportOpen}
+            />
+          }
+          {loginType &&
+            <EditSectionForm title={title}/>
+          }
         </PadAndCenter>
       </BaseDialog>
     );
