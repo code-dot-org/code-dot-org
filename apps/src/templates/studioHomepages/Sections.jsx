@@ -15,7 +15,7 @@ const sectionsApiPath = '/dashboardapi/sections/';
 
 const Sections = React.createClass({
   propTypes: {
-    sections: React.PropTypes.array,
+    sections: React.PropTypes.array, // student sections!  Teacher sections are in redux
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
@@ -26,7 +26,7 @@ const Sections = React.createClass({
     //Redux provided
     setSections: PropTypes.func.isRequired,
     setValidAssignments: PropTypes.func.isRequired,
-    numSections: PropTypes.number.isRequired,
+    numTeacherSections: PropTypes.number.isRequired,
   },
 
   componentDidMount(){
@@ -54,15 +54,15 @@ const Sections = React.createClass({
 
   getInitialState() {
     return {
-      sections: this.props.sections,
+      studentSections: this.props.sections,
       sectionsAction: null,
       sectionsResult: null,
       sectionsResultName: null
     };
   },
 
-  updateSections(sections) {
-    this.setState({sections});
+  updateSections(studentSections) {
+    this.setState({studentSections});
   },
 
   updateSectionsResult(action, result, name) {
@@ -74,11 +74,13 @@ const Sections = React.createClass({
   },
 
   render() {
-    const { numSections } = this.props;
-    const sections = this.state.sections;
+    const { numTeacherSections } = this.props;
+    const studentSections = this.state.studentSections;
+    const numStudentSections = studentSections.length;
     const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
+    const isStudent = !isTeacher;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
-    const enrolledInASection = sections.length === 0 ? false : true;
+    const enrolledInASection = studentSections.length > 0;
     const enrollmentDescription = isTeacher ? "" : i18n.enrollmentDescription();
     const sectionFlow2017 = experiments.isEnabled('section-flow-2017');
 
@@ -97,16 +99,20 @@ const Sections = React.createClass({
             result={this.state.sectionsResult}
             nameOrId={this.state.sectionsResultName}
           />
-          {isTeacher && numSections > 0 && sectionFlow2017 && (
+          {isTeacher && numTeacherSections > 0 && sectionFlow2017 && (
             <SectionsPage
               className="sectionPage"
               validScripts={this.props.validScripts}
               teacherHomepage={this.props.teacherHomepage}
             />
           )}
-          {numSections > 0 && !sectionFlow2017 && (
+          {(
+            (isTeacher && numTeacherSections > 0 && !sectionFlow2017)
+            ||
+            (isStudent && numStudentSections > 0)
+          )&& (
             <SectionsTable
-              sections={sections}
+              sections={studentSections}
               isRtl={isRtl}
               isTeacher={isTeacher}
               canLeave={canLeave}
@@ -114,7 +120,7 @@ const Sections = React.createClass({
               updateSectionsResult={this.updateSectionsResult}
             />
           )}
-          {isTeacher && numSections === 0 && (
+          {isTeacher && numTeacherSections === 0 && (
             <SetUpMessage
               type="sections"
               codeOrgUrlPrefix={codeOrgUrlPrefix}
@@ -122,17 +128,7 @@ const Sections = React.createClass({
               isTeacher={isTeacher}
             />
           )}
-          {!isTeacher && numSections > 0 && (
-            <SectionsTable
-              sections={sections}
-              isRtl={isRtl}
-              isTeacher={isTeacher}
-              canLeave={canLeave}
-              updateSections={this.updateSections}
-              updateSectionsResult={this.updateSectionsResult}
-            />
-          )}
-          {!isTeacher && (
+          {isStudent && (
             <JoinSection
               enrolledInASection={enrolledInASection}
               updateSections={this.updateSections}
@@ -144,7 +140,12 @@ const Sections = React.createClass({
     );
   }
 });
-export default connect(state => ({numSections: state.teacherSections.sectionIds.length}), {setValidAssignments, setSections})(Sections);
+export default connect(state => ({
+  numTeacherSections: state.teacherSections.sectionIds.length
+}), {
+  setValidAssignments,
+  setSections
+})(Sections);
 
 const SectionNotifications = ({action, result, nameOrId}) => {
   if (action === 'join' && result === 'success') {
