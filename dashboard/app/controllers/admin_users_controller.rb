@@ -107,7 +107,12 @@ class AdminUsersController < ApplicationController
     if search_term =~ /^\d+$/
       @user = User.find(search_term)
     elsif search_term
-      @user = User.find_by_email_or_hashed_email(search_term)
+      users = User.where(hashed_email: User.hash_email(search_term))
+      @user = users.first
+      if users.count > 1
+        flash[:notice] = "More than one User matches email address.  "\
+                         "Showing first result.  Matching User IDs - #{users.map(&:id).join ','}"
+      end
     end
     unless @user || search_term.blank?
       flash[:notice] = "User Not Found"
