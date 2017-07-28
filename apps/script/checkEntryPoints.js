@@ -68,6 +68,7 @@ const SILENCED = [
   'levels/external',
   'levels/levelGroup',
   'levels/multi',
+  'levels/scratch',
   'levels/textMatch',
   'levels/widget',
   'maze',
