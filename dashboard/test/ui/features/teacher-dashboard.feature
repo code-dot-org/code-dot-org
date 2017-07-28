@@ -85,7 +85,7 @@ Feature: Using the teacher dashboard
 
     When I am on "http://studio.code.org/projects/applab/new"
     And I wait for the page to fully load
-    And I switch to text mode without remembering
+    And I ensure droplet is in text mode
     And I append text to droplet "createCanvas('id', 320, 450);\nsetFillColor('red');\ncircle(160, 225, 160);"
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
@@ -99,7 +99,7 @@ Feature: Using the teacher dashboard
 
     When I am on "http://studio.code.org/projects/gamelab/new"
     And I wait for the page to fully load
-    And I switch to text mode without remembering
+    And I ensure droplet is in text mode
     And I append text to droplet "\nfill('orange');\nellipse(200,200,400,400);"
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
