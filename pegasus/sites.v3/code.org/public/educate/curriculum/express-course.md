@@ -14,7 +14,13 @@ social:
 ---
 # Computer Science Fundamentals - Express
 
-<img src="/images/20-hour-banner.jpg" style="max-width: 100%"/>
+<div class="col-33" style="padding-right: 10px;">
+  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
+  <br><br>
+  <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png"></a>
+</div>
+
+[col-66]
 
 Computer Science Fundamentals Express is a 30 hour course designed for 10-18 year old students. It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
@@ -24,8 +30,9 @@ The Accelerated Course combines the concepts taught in our [elementary school co
 
 All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy](/educate/curriculum#philosophy).
 
-<button>View course</button>
+[/col-66]
 
+<div style="clear:both"></div>
 
 <a id="info-sessions"></a>
 ## New to Teaching Computer Science?
