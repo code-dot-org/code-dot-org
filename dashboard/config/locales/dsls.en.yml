@@ -7880,7 +7880,6 @@ en:
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q19:
         Disagree: Disagree
-        I am going to like my computer science class.: I am going to like my computer science class.
         I am going to like this computer science class.: I am going to like this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
@@ -7925,7 +7924,6 @@ en:
         agree: agree
       csp-pre-survey-2017-q23:
         Disagree: Disagree
-        I think I will be treated with as much respect as other students in a computer science class: I think I will be treated with as much respect as other students in a computer science class
         I think I will be treated with as much respect as other students in this computer science class: I think I will be treated with as much respect as other students in this computer science class
         Neither: Neither
         Slightly agree: Slightly agree
@@ -7935,7 +7933,6 @@ en:
         agree: agree
       csp-pre-survey-2017-q24:
         Disagree: Disagree
-        I think I will feel like I can be myself in a computer science class: I think I will feel like I can be myself in a computer science class
         I think I will feel like I can be myself in this computer science class: I think I will feel like I can be myself in this computer science class
         Neither: Neither
         Slightly agree: Slightly agree
@@ -7945,7 +7942,6 @@ en:
         agree: agree
       csp-pre-survey-2017-q25:
         Disagree: Disagree
-        I feel like my opinions will be taken seriously in a computer science class: I feel like my opinions will be taken seriously in a computer science class
         I feel like my opinions will be taken seriously in this computer science class: I feel like my opinions will be taken seriously in this computer science class
         Neither: Neither
         Slightly agree: Slightly agree
@@ -7955,7 +7951,6 @@ en:
         agree: agree
       csp-pre-survey-2017-q26:
         Disagree: Disagree
-        I feel like it will be hard for people like me to to be accepted in a computer science class.: I feel like it will be hard for people like me to to be accepted in a computer science class.
         I feel like it will be hard for people like me to to be accepted in this computer science class.: I feel like it will be hard for people like me to to be accepted in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
@@ -7975,7 +7970,6 @@ en:
         Agree: Agree
         Disagree: Disagree
         I think learning computer science will help me in my other school subjects.: I think learning computer science will help me in my other school subjects.
-        Learning computer science helps me in my other school subjects.: Learning computer science helps me in my other school subjects.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -8094,7 +8088,6 @@ en:
         I did not do any computer science outside of school: I did not do any computer science outside of school
         ? If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
         : If yes, where did you previously take a computer science class or program outside of school hours? If you have participated in more than one program, please select the program where you have spent most of your time.
-        N/A: N/A
         Online program: Online program
         Other: Other
         Summer program/camp: Summer program/camp
