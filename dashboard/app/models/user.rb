@@ -394,7 +394,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?'
+  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
@@ -1085,7 +1085,8 @@ class User < ActiveRecord::Base
 
     course_data = courses.map do |course|
       {
-        name: data_t_suffix('course.name', course[:name], 'title'),
+        name: course[:name],
+        title: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
       }
@@ -1095,7 +1096,8 @@ class User < ActiveRecord::Base
       script_id = user_script[:script_id]
       script = Script.get_from_cache(script_id)
       {
-        name: data_t_suffix('script.name', script[:name], 'title'),
+        name: script[:name],
+        title: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
       }
