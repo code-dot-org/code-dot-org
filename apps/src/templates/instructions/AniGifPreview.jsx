@@ -53,8 +53,8 @@ export default connect(state => ({
   showInstructionsDialog() {
     dispatch(openDialog({
       autoClose: false,
-      aniGifOnly: true,
-      hintsOnly: false
+      imgOnly: true,
+      hintsOnly: false,
     }));
   }
 }))(ImagePreview);
