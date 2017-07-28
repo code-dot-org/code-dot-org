@@ -394,7 +394,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?'
+  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
