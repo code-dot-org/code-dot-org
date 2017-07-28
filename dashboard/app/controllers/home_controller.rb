@@ -103,7 +103,7 @@ class HomeController < ApplicationController
           }
 
           # Don't include this course in the regular set of recent courses.
-          @recent_courses.reject! {|item| item[:id] == script[:name]}
+          @recent_courses.reject! {|item| item[:name] == script[:name]}
         end
       end
     end
