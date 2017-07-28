@@ -50,8 +50,8 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "contained_level_names": null,
-    "markdown_instructions": "Add a second `move forward` command to reach the sheep."
+    "markdown_instructions": "Add a second `move forward` command to reach the sheep.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

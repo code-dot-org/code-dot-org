@@ -37,13 +37,14 @@
     "free_play": "false",
     "default_flap": "NORMAL",
     "shareable": "false",
-    "markdown_instructions": "See if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
+    "markdown_instructions": "Click the down arrow inside of the `flap a normal amount` block to pick a different flapping power.  \r\n\r\nSee if you can still score a point after making Flappy flap either a smaller or larger amount each time you click.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try connecting the `flap a ____ amount` block to the `when click` event.\",\"hint_id\":\"courseC_flappy_events6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/678b9515d180327ba1c2f9f1c036d81a/courseC_flappy_events6.mp3\"}]",
+    "project_template_level_name": "courseC_flappy_events_template",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-21 18:40:27 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:40:54 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 20:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:42:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:42:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-21 18:40:27 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-21 18:40:54 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"obstacles\",\"ground\",\"score\",\"success_condition\",\"failure_condition\",\"contained_level_names\"],\"changed_by_id\":156,\"changed_by_email\":\"elijah@code.org\"},{\"changed_at\":\"2017-07-27 20:05:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:42:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 21:42:27 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 23:04:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:38:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:39:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:40:24 +0000\",\"changed\":[\"required_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 16:42:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -86,8 +87,32 @@
     </toolbox_blocks>
     <required_blocks>
       <xml>
-        <block type="flappy_flap_height">
-          <title name="VALUE">???</title>
+        <block type="pick_one">
+          <statement name="PICK">
+            <block type="flappy_flap_height">
+              <title name="VALUE">random</title>
+              <next>
+                <block type="flappy_flap_height">
+                  <title name="VALUE">Flappy.FlapHeight.VERY_SMALL</title>
+                  <next>
+                    <block type="flappy_flap_height">
+                      <title name="VALUE">Flappy.FlapHeight.SMALL</title>
+                      <next>
+                        <block type="flappy_flap_height">
+                          <title name="VALUE">Flappy.FlapHeight.LARGE</title>
+                          <next>
+                            <block type="flappy_flap_height">
+                              <title name="VALUE">Flappy.FlapHeight.VERY_LARGE</title>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
         </block>
       </xml>
     </required_blocks>
