@@ -491,6 +491,7 @@ testsContext.keys().forEach(testsContext);
     var watch = options.watch;
 
     return webpackConfig.create({
+      pathinfo: true,
       output: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
