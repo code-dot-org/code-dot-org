@@ -2,7 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import { assert, expect } from 'chai';
 import { mount, shallow } from 'enzyme';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import teacherSections, {
   setSections,
@@ -107,6 +107,9 @@ const moreCourses = [
 ];
 
 describe('TeacherHomepage', () => {
+
+  beforeEach(stubRedux);
+  afterEach(restoreRedux);
 
   it('shows a non-extended Header Banner that says Home', () => {
     const wrapper = shallow(
@@ -262,14 +265,17 @@ describe('TeacherHomepage', () => {
   });
 
   it('if there are less than 4 courses, RecentCourses component shows CourseCards for each course', () => {
+    registerReducers({teacherSections});
     const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={courses}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
+      <Provider store={getStore()}>
+        <TeacherHomepage
+          announcements={[]}
+          courses={courses}
+          sections={[]}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+        />
+      </Provider>
     );
     const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
@@ -303,14 +309,17 @@ describe('TeacherHomepage', () => {
   });
 
   it('if there are more than 4 courses, RecentCourses component shows CourseCards for 4 and a SeeMoreCourses component', () => {
+    registerReducers({teacherSections});
     const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={moreCourses}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
+      <Provider store={getStore()}>
+        <TeacherHomepage
+          announcements={[]}
+          courses={moreCourses}
+          sections={[]}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+        />
+      </Provider>
     );
     const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
@@ -377,14 +386,17 @@ describe('TeacherHomepage', () => {
   });
 
   it('if there are no courses, RecentCourses component shows a SetUpMessage', () => {
+    registerReducers({teacherSections});
     const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={[]}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
+      <Provider store={getStore()}>
+        <TeacherHomepage
+          announcements={[]}
+          courses={[]}
+          sections={[]}
+          codeOrgUrlPrefix="http://localhost:3000/"
+          isRtl={false}
+        />
+      </Provider>
     );
     const recentCourses = wrapper.childAt(4);
     assert.equal(recentCourses.name(),'RecentCourses');
@@ -401,7 +413,7 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a courses SetUpMessage is rendered.
     const coursesSetUpMessage = coursesContentContainer.childAt(5).childAt(0);
-    assert.equal(coursesSetUpMessage.name(), 'SetUpMessage');
+    assert.equal(coursesSetUpMessage.name(), 'Connect(SetUpMessage)');
     assert.equal(coursesSetUpMessage.props().type, 'courses');
     assert.equal(coursesSetUpMessage.childAt(0).text(), 'Start learning');
     assert.equal(coursesSetUpMessage.childAt(1).text(), 'Assign a course to your classroom or start your own course.');
