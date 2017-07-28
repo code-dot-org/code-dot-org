@@ -5378,7 +5378,7 @@ en:
               description_student: 'Learn how computers store pictures using simple ideas like on and off. '
               description_teacher: Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.
             Artist Binary:
-              name: 'Binary in Artist'
+              name: Binary in Artist
               description_student: Direct your own artist to create a binary image using only commands to turn pixels on and off.
               description_teacher: Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs. Students will build binary images in Artist by translating 0s and 1s to offs and ons (or blacks and whites).
             Nested Loops Project in Artist:
@@ -5398,7 +5398,7 @@ en:
             'Algorithms: Tangrams':
               name: 'Algorithms: Tangrams'
             Introduction:
-              name: 'Introduction to Online Puzzles'
+              name: Introduction to Online Puzzles
               description_student: This fast-paced introduction will give you the chance to practice most of the skills that you will need to solve the puzzles in this course.
               description_teacher: In this progression, students will begin with an introduction (or review depending on the experience of your class) of Code.org's online workspace. Students will learn the basic functionality of the interface including the `Run`, `Reset`, and `Step` buttons. Dragging, deleting, and connecting Blockly blocks is also introduced in the beginning video. In the puzzles, students will practice their sequencing and debugging skills in Maze and Artist.
             The Power of Words:
@@ -5446,7 +5446,7 @@ en:
               description_student: Learn how to describe a game from the computer's point of view in this lesson on algorithms.
               description_teacher: In this lesson, students will relate the concept of algorithms back to real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
             Conditionals:
-              name: 'Conditionals in Farmer'
+              name: Conditionals in Farmer
               description_student: You will get to tell the computer what to do under certain conditions in this fun and challenging series.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
@@ -5901,7 +5901,7 @@ en:
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: 'Conditionals & Loops in Maze'
+              name: Conditionals & Loops in Maze
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
