@@ -274,7 +274,7 @@ describe('SectionRow', () => {
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'EditOrDelete');
       assert.equal(col.find('EditOrDelete').props().canDelete, false);
-      assert.equal(col.children().at(1).name(), 'PrintCertificates');
+      assert.equal(col.children().at(1).name(), 'Connect(PrintCertificates)');
     });
 
     describe('EditOrDelete', () => {
@@ -314,7 +314,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'ConfirmSave');
-      assert.equal(col.children().at(1).name(), 'PrintCertificates');
+      assert.equal(col.children().at(1).name(), 'Connect(PrintCertificates)');
     });
 
     describe('ConfirmSave', () => {
@@ -340,7 +340,7 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(8);
       assert.equal(col.children().length, 2);
       assert.equal(col.children().at(0).name(), 'ConfirmDelete');
-      assert.equal(col.children().at(1).name(), 'PrintCertificates');
+      assert.equal(col.children().at(1).name(), 'Connect(PrintCertificates)');
     });
 
     describe('ConfirmDelete', () => {
