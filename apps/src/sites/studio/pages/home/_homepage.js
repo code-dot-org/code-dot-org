@@ -10,6 +10,7 @@ import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 import teacherSections, {setValidGrades} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import urlHelpers, {setPegasusHost} from '@cdo/apps/redux/urlHelpers';
 
 $(document).ready(showHomepage);
 
@@ -22,10 +23,11 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
-  registerReducers({teacherSections, oauthClassroom});
+  registerReducers({teacherSections, oauthClassroom, urlHelpers});
   const store = getStore();
 
   store.dispatch(setValidGrades(homepageData.valid_grades));
+  store.dispatch(setPegasusHost(homepageData.codeorgurlprefix));
 
   ReactDOM.render (
     <Provider store={getStore()}>
