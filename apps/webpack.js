@@ -30,6 +30,7 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
+      http: 'stream-http',
     }
   },
   sassLoader: {
