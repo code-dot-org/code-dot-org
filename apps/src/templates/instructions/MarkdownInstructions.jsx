@@ -74,15 +74,14 @@ const MarkdownInstructions = React.createClass({
     $(thisNode).find('img').load(this.props.onResize);
 
     const expandableImages = thisNode.querySelectorAll('.expandable-image');
-    if (expandableImages) {
-      expandableImages.forEach(expandableImg => {
-        ReactDOM.render(
-          <ImagePreview
-            url={expandableImg.dataset.url}
-            noVisualization={false}
-            showInstructionsDialog={() => this.props.showImageDialog(expandableImg.dataset.url)}
-          />, expandableImg);
-      });
+    for (let i = 0; i < expandableImages.length; i++) {
+      const expandableImg = expandableImages[i];
+      ReactDOM.render(
+        <ImagePreview
+          url={expandableImg.dataset.url}
+          noVisualization={false}
+          showInstructionsDialog={() => this.props.showImageDialog(expandableImg.dataset.url)}
+        />, expandableImg);
     }
   },
 
