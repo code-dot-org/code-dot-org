@@ -134,6 +134,12 @@ testsContext.keys().forEach(testsContext);
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media'
         },
+        {
+          expand: true,
+          cwd: 'node_modules/scratch-blocks/media',
+          src: ['**'],
+          dest: 'build/package/media/scratch-blocks',
+        },
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
         // we include them in our build and access them via static (non-fingerprinted)
@@ -491,7 +497,6 @@ testsContext.keys().forEach(testsContext);
     var watch = options.watch;
 
     return webpackConfig.create({
-      pathinfo: true,
       output: path.resolve(__dirname, OUTPUT_DIR),
       entries: _.mapValues(
         _.extend(
