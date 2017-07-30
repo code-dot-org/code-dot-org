@@ -214,9 +214,12 @@ class Pd::Enrollment < ActiveRecord::Base
     write_attribute :last_name, last_name || ''
   end
 
+  # Maps enrollments to safe names
+  # @return [Array<Array<String, Pd::Enrollment>>] Array of tuples
+  #   representing the safe name and associated enrollment
   def self.get_safe_names
-    first_last_name_proc = ->(enrollment) {[enrollment.first_name, enrollment.last_name]}
-    SafeNames.get_safe_names(all, first_last_name_proc)
+    # Use full name
+    all.map {|enrollment| [enrollment.full_name, enrollment]}
   end
 
   protected
