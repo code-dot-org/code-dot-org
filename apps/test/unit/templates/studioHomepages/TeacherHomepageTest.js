@@ -177,7 +177,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a SectionsTable is rendered.
-    const sectionsTable = sectionsContentContainer.childAt(6).childAt(0);
+    const sectionsTable = sectionsContentContainer.childAt(2).childAt(0);
     assert.equal(sectionsTable.name(), 'SectionsTable');
     assert.equal(sectionsTable.childAt(0).name(), 'thead');
     const column1 = sectionsTable.childAt(0).childAt(0).childAt(0);
@@ -224,7 +224,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a sections SetUpMessage is rendered.
-    const sectionsSetUpMessage = sectionsContentContainer.childAt(7).childAt(0);
+    const sectionsSetUpMessage = sectionsContentContainer.childAt(3).childAt(0);
     assert.equal(sectionsSetUpMessage.name(), 'SetUpMessage');
     assert.equal(sectionsSetUpMessage.props().type, 'sections');
     assert.equal(sectionsSetUpMessage.childAt(0).text(), 'Set up your classroom');
