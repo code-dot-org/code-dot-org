@@ -14,7 +14,6 @@ import urlHelpers, {setPegasusHost} from '@cdo/apps/redux/urlHelpers';
 
 $(document).ready(showHomepage);
 
-
 function showHomepage() {
   const isRtl = isRtlFromDOM();
   const script = document.querySelector('script[data-homepage]');
