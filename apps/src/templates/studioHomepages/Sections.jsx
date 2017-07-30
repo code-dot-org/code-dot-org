@@ -58,33 +58,33 @@ const Sections = React.createClass({
             result={this.state.sectionsResult}
             nameOrId={this.state.sectionsResultName}
           />
-        {sections.length > 0 && (
-          <SectionsTable
-            sections={sections}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-            canLeave={canLeave}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-        {sections.length === 0 && isTeacher && (
-          <SetUpMessage
-            type="sections"
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-          />
-        )}
-        {!isTeacher && (
-          <JoinSection
-            enrolledInASection={enrolledInASection}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
-          />
-        )}
-      </ContentContainer>
-    </div>
+          {sections.length > 0 && (
+            <SectionsTable
+              sections={sections}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+              canLeave={canLeave}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+          {sections.length === 0 && isTeacher && (
+            <SetUpMessage
+              type="sections"
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+            />
+          )}
+          {!isTeacher && (
+            <JoinSection
+              enrolledInASection={enrolledInASection}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+        </ContentContainer>
+      </div>
     );
   }
 });
