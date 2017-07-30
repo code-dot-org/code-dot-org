@@ -5,7 +5,6 @@ import ScriptOverviewTopRow from './ScriptOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
-import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -24,10 +23,8 @@ const ScriptOverview = React.createClass({
   },
 
   componentDidMount() {
-    if (experiments.isEnabled('progressBubbles')) {
-      // get rid of existing legend
-      $(".user-stats-block .key").hide();
-    }
+    // get rid of existing legend
+    $(".user-stats-block .key").hide();
   },
 
   render() {
@@ -55,7 +52,7 @@ const ScriptOverview = React.createClass({
         )}
 
         <ProgressTable/>
-        {experiments.isEnabled('progressBubbles') && onOverviewPage &&
+        {onOverviewPage &&
           <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend}/>
         }
       </div>

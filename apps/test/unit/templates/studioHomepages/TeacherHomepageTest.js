@@ -218,8 +218,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a SectionsTable is rendered.
-    const sectionsTable = sectionsContentContainer.childAt(3).childAt(0);
-    assert.equal(sectionsTable.name(), 'SectionsTable');
+    const sectionsTable = sectionsContentContainer.find('SectionsTable');
     assert.equal(sectionsTable.childAt(0).name(), 'thead');
     const column1 = sectionsTable.childAt(0).childAt(0).childAt(0);
     assert.equal(column1.text(), 'Section Name');
@@ -268,8 +267,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a sections SetUpMessage is rendered.
-    const sectionsSetUpMessage = sectionsContentContainer.childAt(4).childAt(0);
-    assert.equal(sectionsSetUpMessage.name(), 'Connect(SetUpMessage)');
+    const sectionsSetUpMessage = sectionsContainer.find('SetUpMessage');
     assert.equal(sectionsSetUpMessage.props().type, 'sections');
     assert.equal(sectionsSetUpMessage.childAt(0).text(), 'Set up your classroom');
     assert.equal(sectionsSetUpMessage.childAt(1).text(), 'Create a new classroom section to start assigning courses and seeing your student progress.');

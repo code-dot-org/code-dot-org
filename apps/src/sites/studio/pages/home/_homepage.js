@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { isRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
+import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -23,14 +23,14 @@ function showHomepage() {
   const showUiTips = homepageData.showuitips;
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
+
   registerReducers({teacherSections, oauthClassroom, urlHelpers});
   const store = getStore();
-
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setPegasusHost(homepageData.codeorgurlprefix));
 
   ReactDOM.render (
-    <Provider store={getStore()}>
+    <Provider store={store}>
       <div>
         {(isTeacher && showUiTips) && (
           <UiTips

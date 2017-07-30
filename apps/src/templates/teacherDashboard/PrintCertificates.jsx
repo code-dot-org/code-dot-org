@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component, PropTypes} from 'react';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
 
 class PrintCertificates extends Component {

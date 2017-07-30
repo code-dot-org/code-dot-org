@@ -3,7 +3,7 @@ import $ from 'jquery';
 import ContentContainer from '../ContentContainer';
 import SetUpMessage from './SetUpMessage';
 import JoinSection from './JoinSection';
-import Notification from '@cdo/apps/templates/Notification';
+import JoinSectionNotifications from './JoinSectionNotifications';
 import i18n from "@cdo/locale";
 import SectionsPage from '../teacherDashboard/SectionsPage';
 import SectionsTable from '../studioHomepages/SectionsTable';
@@ -74,10 +74,9 @@ const Sections = React.createClass({
   },
 
   render() {
-    const { numTeacherSections } = this.props;
+    const { numTeacherSections, codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
     const studentSections = this.state.studentSections;
     const numStudentSections = studentSections.length;
-    const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
     const isStudent = !isTeacher;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
     const enrolledInASection = studentSections.length > 0;
@@ -94,7 +93,7 @@ const Sections = React.createClass({
           isRtl={isRtl}
           description={enrollmentDescription}
         >
-          <SectionNotifications
+          <JoinSectionNotifications
             action={this.state.sectionsAction}
             result={this.state.sectionsResult}
             nameOrId={this.state.sectionsResultName}
@@ -146,93 +145,3 @@ export default connect(state => ({
   setValidAssignments,
   setSections
 })(Sections);
-
-const SectionNotifications = ({action, result, nameOrId}) => {
-  if (action === 'join' && result === 'success') {
-    return <JoinSectionSuccessNotification sectionName={nameOrId}/>;
-  } else if (action === 'leave' && result === 'success') {
-    return <LeaveSectionSuccessNotification sectionName={nameOrId}/>;
-  } else if (action === 'join' && result === 'section_notfound') {
-    return <JoinSectionNotFoundNotification sectionId={nameOrId}/>;
-  } else if (action === 'join' && result === 'fail') {
-    return <JoinSectionFailNotification sectionId={nameOrId}/>;
-  } else if (action === 'join' && result === 'exists') {
-    return <JoinSectionExistsNotification sectionName={nameOrId}/>;
-  }
-  return null;
-};
-SectionNotifications.propTypes = {
-  action: PropTypes.string,
-  result: PropTypes.string,
-  nameOrId: PropTypes.string,
-};
-
-const JoinSectionSuccessNotification = React.createClass({
-  propTypes: {sectionName: PropTypes.string.isRequired},
-  render() {
-    return (
-      <Notification
-        type="success"
-        notice={i18n.sectionsNotificationSuccess()}
-        details={i18n.sectionsNotificationJoinSuccess({sectionName: this.props.sectionName})}
-        dismissible
-      />
-    );
-  }
-});
-
-const LeaveSectionSuccessNotification = React.createClass({
-  propTypes: {sectionName: PropTypes.string.isRequired},
-  render() {
-    return (
-      <Notification
-        type="success"
-        notice={i18n.sectionsNotificationSuccess()}
-        details={i18n.sectionsNotificationLeaveSuccess({sectionName: this.props.sectionName})}
-        dismissible
-      />
-    );
-  }
-});
-
-const JoinSectionNotFoundNotification = React.createClass({
-  propTypes: {sectionId: PropTypes.string.isRequired},
-  render() {
-    return (
-      <Notification
-        type="failure"
-        notice={i18n.sectionsNotificationFailure()}
-        details={i18n.sectionsNotificationJoinNotFound({sectionId: this.props.sectionId})}
-        dismissible
-      />
-    );
-  }
-});
-
-const JoinSectionFailNotification = React.createClass({
-  propTypes: {sectionId: PropTypes.string.isRequired},
-  render() {
-    return (
-      <Notification
-        type="failure"
-        notice={i18n.sectionsNotificationFailure()}
-        details={i18n.sectionsNotificationJoinFail({sectionId: this.props.sectionId})}
-        dismissible
-      />
-    );
-  }
-});
-
-const JoinSectionExistsNotification = React.createClass({
-  propTypes: {sectionName: PropTypes.string.isRequired},
-  render() {
-    return (
-      <Notification
-        type="warning"
-        notice={i18n.sectionsNotificationSuccess()}
-        details={i18n.sectionsNotificationJoinExists({sectionName: this.props.sectionName})}
-        dismissible
-      />
-    );
-  }
-});

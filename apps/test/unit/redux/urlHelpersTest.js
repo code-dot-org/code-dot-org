@@ -1,6 +1,14 @@
 import {expect} from '../../util/configuredChai';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-import urlHelpers, {setPegasusHost, pegasusUrl} from '@cdo/apps/redux/urlHelpers';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import urlHelpers, {
+  setPegasusHost,
+  pegasusUrl
+} from '@cdo/apps/redux/urlHelpers';
 
 describe('urlHelpers', () => {
   describe('initial state', () => {
@@ -27,6 +35,15 @@ describe('urlHelpers', () => {
       expect(pegasusUrl(store.getState(), '/certificates')).to.equal('https://code.org/certificates');
       store.dispatch(setPegasusHost('garbage://pile'));
       expect(pegasusUrl(store.getState(), '/certificates')).to.equal('garbage://pile/certificates');
+
+      restoreRedux();
+    });
+
+    it('returns relative url if urlHelpers reducer is not registered', () => {
+      stubRedux();
+      const store = getStore();
+
+      expect(pegasusUrl(store.getState(), '/certificates')).to.equal('/certificates');
 
       restoreRedux();
     });
