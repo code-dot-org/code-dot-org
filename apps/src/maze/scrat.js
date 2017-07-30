@@ -118,6 +118,6 @@ export default class Scrat extends Subtype {
     this.maze_.scheduleSheetedMovement({x: start.x, y: start.y}, {x: 0, y: 0 },
       numFrames, timePerFrame, 'celebrate', Direction.NORTH, true);
 
-    this.studioApp_.playAudio('win');
+    this.studioApp_.playAudioOnWin();
   }
 }
