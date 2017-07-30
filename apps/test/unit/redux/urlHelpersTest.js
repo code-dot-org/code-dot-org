@@ -1,6 +1,14 @@
 import {expect} from '../../util/configuredChai';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-import urlHelpers, {setPegasusHost, pegasusUrl} from '@cdo/apps/redux/urlHelpers';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import urlHelpers, {
+  setPegasusHost,
+  pegasusUrl
+} from '@cdo/apps/redux/urlHelpers';
 
 describe('urlHelpers', () => {
   describe('initial state', () => {
