@@ -1,43 +1,67 @@
 import React from 'react';
-import {
-  JoinSectionSuccessNotification,
-  LeaveSectionSuccessNotification,
-  JoinSectionNotFoundNotification,
-  JoinSectionFailNotification,
-  JoinSectionExistsNotification,
-} from './JoinSectionNotifications';
+import JoinSectionNotifications from './JoinSectionNotifications';
 
 export default storybook => storybook
   .storiesOf('JoinSectionNotifications', module)
   .addStoryTable([
     {
-      name: 'JoinSectionSuccessNotification',
+      name: 'Join succeeded',
       story: () => (
-        <JoinSectionSuccessNotification sectionName="Ada Lovelace Homeroom"/>
+        <JoinSectionNotifications
+          action="join"
+          result="success"
+          nameOrId="Ada Lovelace Homeroom"
+        />
       )
     },
     {
-      name: 'LeaveSectionSuccessNotification',
+      name: 'Leave succeeded',
       story: () => (
-        <LeaveSectionSuccessNotification sectionName="Ada Lovelace Homeroom"/>
+        <JoinSectionNotifications
+          action="leave"
+          result="success"
+          nameOrId="Ada Lovelace Homeroom"
+        />
       )
     },
     {
-      name: 'JoinSectionNotFoundNotification',
+      name: 'Section not found',
       story: () => (
-        <JoinSectionNotFoundNotification sectionId="BCDFGH"/>
+        <JoinSectionNotifications
+          action="join"
+          result="section_notfound"
+          nameOrId="BCDFGH"
+        />
       )
     },
     {
-      name: 'JoinSectionFailNotification',
+      name: 'Join failed',
       story: () => (
-        <JoinSectionFailNotification sectionId="BCDFGH"/>
+        <JoinSectionNotifications
+          action="join"
+          result="fail"
+          nameOrId="BCDFGH"
+        />
       )
     },
     {
-      name: 'JoinSectionExistsNotification',
+      name: 'Already a member',
       story: () => (
-        <JoinSectionExistsNotification sectionName="Ada Lovelace Homeroom"/>
+        <JoinSectionNotifications
+          action="join"
+          result="exists"
+          nameOrId="Ada Lovelace Homeroom"
+        />
+      )
+    },
+    {
+      name: 'No notification',
+      story: () => (
+        <JoinSectionNotifications
+          action={null}
+          result={null}
+          nameOrId="Ada Lovelace Homeroom"
+        />
       )
     },
   ]);
