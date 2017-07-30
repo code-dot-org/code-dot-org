@@ -30,5 +30,14 @@ describe('urlHelpers', () => {
 
       restoreRedux();
     });
+
+    it('returns relative url if urlHelpers reducer is not registered', () => {
+      stubRedux();
+      const store = getStore();
+
+      expect(pegasusUrl(store.getState(), '/certificates')).to.equal('/certificates');
+
+      restoreRedux();
+    });
   });
 });
