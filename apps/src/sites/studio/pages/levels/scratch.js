@@ -97,7 +97,7 @@ vm.loadProject(`{
 
 // Instantiate scratch-blocks and attach it to the DOM.
 const workspace = Blockly.inject('blocks', {
-  media: '/blockly/media/scratch/media/',
+  media: '/blockly/media/scratch-blocks/',
   zoom: {
     controls: true,
     wheel: true,
