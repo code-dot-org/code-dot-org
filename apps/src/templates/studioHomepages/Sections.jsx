@@ -53,7 +53,7 @@ const Sections = React.createClass({
           isRtl={isRtl}
           description={enrollmentDescription}
         >
-          <SectionNotifications
+          <JoinSectionNotifications
             action={this.state.sectionsAction}
             result={this.state.sectionsResult}
             nameOrId={this.state.sectionsResultName}
@@ -89,7 +89,7 @@ const Sections = React.createClass({
   }
 });
 
-const SectionNotifications = ({action, result, nameOrId}) => {
+const JoinSectionNotifications = ({action, result, nameOrId}) => {
   if (action === 'join' && result === 'success') {
     return <JoinSectionSuccessNotification sectionName={nameOrId}/>;
   } else if (action === 'leave' && result === 'success') {
@@ -103,7 +103,7 @@ const SectionNotifications = ({action, result, nameOrId}) => {
   }
   return null;
 };
-SectionNotifications.propTypes = {
+JoinSectionNotifications.propTypes = {
   action: React.PropTypes.string,
   result: React.PropTypes.string,
   nameOrId: React.PropTypes.string,
