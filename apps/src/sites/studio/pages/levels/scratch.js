@@ -101,17 +101,12 @@ const workspace = Blockly.inject('blocks', {
   zoom: {
     controls: true,
     wheel: true,
-    startScale: 0.75
+    startScale: 0.75,
   },
   colours: {
-    workspace: '#334771',
-    flyout: '#283856',
-    scrollbar: '#24324D',
-    scrollbarHover: '#0C111A',
-    insertionMarker: '#FFFFFF',
-    insertionMarkerOpacity: 0.3,
-    fieldShadow: 'rgba(255, 255, 255, 0.3)',
-    dragShadowOpacity: 0.6
+    workspace: '#fff',
+    flyout: '#ddd',
+    insertionMarkerOpacity: 0.1,
   }
 });
 Scratch.workspace = workspace;
