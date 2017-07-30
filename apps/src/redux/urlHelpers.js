@@ -26,5 +26,8 @@ export function setPegasusHost(hostname) {
 
 // Selectors
 export function pegasusUrl(state, relativePath) {
-  return `${state.urlHelpers.pegasusHost}${relativePath}`;
+  if (state && state.urlHelpers) {
+    return `${state.urlHelpers.pegasusHost}${relativePath}`;
+  }
+  return relativePath;
 }

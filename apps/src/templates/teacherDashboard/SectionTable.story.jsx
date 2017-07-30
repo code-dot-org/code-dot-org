@@ -1,6 +1,6 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
+import {Provider} from 'react-redux';
+import {combineReducers, createStore} from 'redux';
 import SectionTable from './SectionTable';
 import teacherSections, {
   setValidLoginTypes,

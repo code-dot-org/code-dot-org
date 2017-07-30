@@ -1429,8 +1429,11 @@ class User < ActiveRecord::Base
     under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
+  # Get a section a user is in that is assigned to this script. Look first for
+  # sections they are in as a student, otherwise sections they are the owner of
   def section_for_script(script)
-    sections_as_student.find {|section| section.script_id == script.id}
+    sections_as_student.find {|section| section.script_id == script.id} ||
+      sections.find {|section| section.script_id == script.id}
   end
 
   # Returns the version of our Terms of Service we consider the user as having
