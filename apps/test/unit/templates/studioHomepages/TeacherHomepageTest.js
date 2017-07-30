@@ -270,8 +270,8 @@ describe('TeacherHomepage', () => {
     const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
     assert.equal(course1Card.name(), 'CourseCard');
     assert.equal(course1Card.childAt(0).type(), 'img');
-    assert.equal(course1Card.childAt(1).text(), courses[1].name);
-    expect(course1Card.childAt(2).text()).to.contain(courses[1].description);
+    assert.equal(course1Card.childAt(1).text(), 'Course 1');
+    expect(course1Card.childAt(2).text()).to.contain(courses[0].description);
     expect(course1Card.childAt(2).text()).to.contain('View course');
   });
 
@@ -327,20 +327,20 @@ describe('TeacherHomepage', () => {
     const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
     assert.equal(course1Card.name(), 'CourseCard');
     assert.equal(course1Card.childAt(0).type(), 'img');
-    assert.equal(course1Card.childAt(1).text(), moreCourses[1].name);
-    expect(course1Card.childAt(2).text()).to.contain(moreCourses[1].description);
+    assert.equal(course1Card.childAt(1).text(), 'Course 1');
+    expect(course1Card.childAt(2).text()).to.contain(moreCourses[0].description);
     expect(course1Card.childAt(2).text()).to.contain('View course');
     const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
     assert.equal(course2Card.name(), 'CourseCard');
-    assert.equal(course2Card.childAt(1).text(), moreCourses[2].name);
-    expect(course2Card.childAt(2).text()).to.contain(moreCourses[2].description);
+    assert.equal(course2Card.childAt(1).text(), 'Course 2');
+    expect(course2Card.childAt(2).text()).to.contain(moreCourses[1].description);
     expect(course2Card.childAt(2).text()).to.contain('View course');
     const course3Card = coursesContentContainer.childAt(4).childAt(0).childAt(0);
-    assert.equal(course3Card.childAt(1).text(), moreCourses[3].name);
-    expect(course3Card.childAt(2).text()).to.contain(moreCourses[3].description);
+    assert.equal(course3Card.childAt(1).text(), 'Course 3');
+    expect(course3Card.childAt(2).text()).to.contain(moreCourses[2].description);
     const course4Card = coursesContentContainer.childAt(5).childAt(0).childAt(0);
-    assert.equal(course4Card.childAt(1).text(), moreCourses[4].name);
-    expect(course4Card.childAt(2).text()).to.contain(moreCourses[4].description);
+    assert.equal(course4Card.childAt(1).text(), 'Course 4');
+    expect(course4Card.childAt(2).text()).to.contain(moreCourses[3].description);
     // Check if SeeMoreCourses is rendered.
     const seeMoreCourses = coursesContentContainer.childAt(6).childAt(0);
     assert.equal(seeMoreCourses.name(), 'SeeMoreCourses');
