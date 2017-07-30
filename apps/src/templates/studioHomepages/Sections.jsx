@@ -1,15 +1,18 @@
 import React, {PropTypes} from 'react';
+import {connect} from 'react-redux';
 import $ from 'jquery';
+import i18n from "@cdo/locale";
+import experiments from '@cdo/apps/util/experiments';
 import ContentContainer from '../ContentContainer';
 import SetUpMessage from './SetUpMessage';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
-import i18n from "@cdo/locale";
 import SectionsPage from '../teacherDashboard/SectionsPage';
 import SectionsTable from '../studioHomepages/SectionsTable';
-import { connect } from 'react-redux';
-import {setValidAssignments, setSections} from '../teacherDashboard/teacherSectionsRedux';
-import experiments from '@cdo/apps/util/experiments';
+import {
+  setValidAssignments,
+  setSections
+} from '../teacherDashboard/teacherSectionsRedux';
 
 const sectionsApiPath = '/dashboardapi/sections/';
 
@@ -30,7 +33,7 @@ const Sections = React.createClass({
   },
 
   componentDidMount(){
-    const { setSections, setValidAssignments } = this.props;
+    const {setSections, setValidAssignments} = this.props;
     let validCourses;
     let sections;
 
@@ -74,7 +77,7 @@ const Sections = React.createClass({
   },
 
   render() {
-    const { numTeacherSections, codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
+    const {numTeacherSections, codeOrgUrlPrefix, isRtl, isTeacher, canLeave} = this.props;
     const studentSections = this.state.studentSections;
     const numStudentSections = studentSections.length;
     const isStudent = !isTeacher;
@@ -109,7 +112,7 @@ const Sections = React.createClass({
             (isTeacher && numTeacherSections > 0 && !sectionFlow2017)
             ||
             (isStudent && numStudentSections > 0)
-          )&& (
+          ) && (
             <SectionsTable
               sections={studentSections}
               isRtl={isRtl}

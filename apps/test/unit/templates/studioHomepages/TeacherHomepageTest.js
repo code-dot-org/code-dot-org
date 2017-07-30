@@ -1,9 +1,14 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import { assert, expect } from 'chai';
-import { mount, shallow } from 'enzyme';
-import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {assert, expect} from 'chai';
+import {mount, shallow} from 'enzyme';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import teacherSections, {
   setSections,

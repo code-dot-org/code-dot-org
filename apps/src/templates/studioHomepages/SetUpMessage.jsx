@@ -5,8 +5,11 @@ import styleConstants from '../../styleConstants';
 import experiments from '@cdo/apps/util/experiments';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 import Button from "../Button";
-import { connect } from 'react-redux';
-import { newSection, beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
+import {connect} from 'react-redux';
+import {
+  newSection,
+  beginEditingNewSection
+} from '../teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   section: {
