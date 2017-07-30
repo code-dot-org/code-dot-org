@@ -218,7 +218,8 @@ StudioApp.prototype.configure = function (options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly_ = !this.editCode;
+  this.scratch = options.level && options.level.scratch;
+  this.usingBlockly_ = !this.editCode && !this.scratch;
   if (options.report &&
       options.report.fallback_response) {
     this.skipUrl = options.report.fallback_response.success.redirect;
@@ -1743,8 +1744,10 @@ StudioApp.prototype.configureDom = function (config) {
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
   var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
-  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  if (runButton && resetButton) {
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  }
 
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');

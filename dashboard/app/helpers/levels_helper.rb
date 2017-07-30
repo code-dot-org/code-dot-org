@@ -200,6 +200,8 @@ module LevelsHelper
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
+    elsif @level.is_a? Scratch
+      @app_options = scratch_options
     elsif @level.unplugged?
       @app_options = unplugged_options
     else
@@ -271,6 +273,15 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def scratch_options
+    app_options = {}
+    app_options[:level] = @level.properties.camelize_keys
+    app_options[:level][:scratch] = true
+    app_options[:skin] = {}
     app_options.merge! view_options.camelize_keys
     app_options
   end
