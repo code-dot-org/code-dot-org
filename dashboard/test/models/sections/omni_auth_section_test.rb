@@ -19,6 +19,7 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
       owner_id: owner.id,
       students: students,
     )
+    section.reload
     assert_equal 'G-222222', section.code
     assert_equal User.from_omniauth(students.first, {}), section.students.first
 
@@ -50,5 +51,25 @@ class OmniAuthSectionTest < ActiveSupport::TestCase
       )
       assert_equal section.id, section_3.id
     end
+  end
+
+  test 'set exact student list' do
+    teacher = create :teacher
+    section = create :section, user: teacher, login_type: 'clever'
+
+    students = (0...5).map do
+      create :student
+    end
+
+    section.set_exact_student_list(students)
+    assert_equal students.pluck(:id), section.reload.students.pluck(:id)
+
+    added_students = (0...5).map do
+      create :student
+    end
+    updated_students = students[1...3] + added_students
+
+    section.set_exact_student_list(updated_students)
+    assert_equal updated_students.pluck(:id), section.reload.students.pluck(:id).sort
   end
 end

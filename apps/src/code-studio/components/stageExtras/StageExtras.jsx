@@ -1,13 +1,15 @@
 import React from 'react';
 import msg from '@cdo/locale';
 import BonusLevels from './BonusLevels';
-import CreateSomething from './CreateSomething';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import { bonusLevel } from './shapes';
 
 export default class StageExtras extends React.Component {
   static propTypes = {
     stageNumber: React.PropTypes.number.isRequired,
     nextLevelPath: React.PropTypes.string.isRequired,
+    showProjectWidget: React.PropTypes.bool,
+    projectTypes: React.PropTypes.arrayOf(React.PropTypes.string),
     bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
   };
 
@@ -26,8 +28,11 @@ export default class StageExtras extends React.Component {
           <p>{msg.extrasNoBonusLevels()}</p>
         }
 
-        <h2>{msg.extrasCreateSomething()}</h2>
-        <CreateSomething />
+        {this.props.showProjectWidget &&
+          <ProjectWidgetWithData
+            projectTypes={this.props.projectTypes}
+          />
+        }
         <div className="clear" />
 
         <h2>{msg.continue()}</h2>

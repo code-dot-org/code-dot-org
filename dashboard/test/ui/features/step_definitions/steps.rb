@@ -913,7 +913,7 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
-    And I wait until I am on "http://studio.code.org/courses"
+    And I wait until I am on "http://studio.code.org/home"
   }
 end
 
@@ -945,7 +945,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
     And I click selector "#signup-button"
-    And I wait until I am on "http://studio.code.org/courses"
+    And I wait until I am on "http://studio.code.org/home"
   }
 end
 
