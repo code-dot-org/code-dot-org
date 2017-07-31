@@ -735,7 +735,7 @@ class User < ActiveRecord::Base
   end
 
   def user_progress_by_stage(stage)
-    levels = stage.script_levels.map(&:level_ids).flatten
+    levels = stage.script_levels.pluck(:level_ids).flatten
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
@@ -762,7 +762,7 @@ class User < ActiveRecord::Base
     # TODO(brent): Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
-    levels = script.script_levels.map(&:level_ids).flatten
+    levels = script.script_levels.pluck(:level_ids).flatten
     user_levels_by_level = user_levels.
       where(script_id: script.id, level: levels).
       index_by(&:level_id)
@@ -816,7 +816,7 @@ class User < ActiveRecord::Base
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
   def last_attempt_for_any(levels, script_id: nil)
-    level_ids = levels.map(&:id)
+    level_ids = levels.pluck(:id)
     conditions = {
       user_id: id,
       level_id: level_ids
@@ -1075,7 +1075,7 @@ class User < ActiveRecord::Base
   # in which the user has made progress that are not in any of the enrolled courses.
   def recent_courses_and_scripts
     courses = section_courses
-    course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
+    course_scripts_script_ids = courses.map(&:course_scripts).flatten.pluck(:script_id).uniq
 
     # filter out those that are already covered by a course
     user_scripts = in_progress_and_completed_scripts.
@@ -1442,7 +1442,7 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
-    teachers.map(&:terms_of_service_version).try(:compact).try(:max)
+    teachers.pluck(:terms_of_service_version).try(:compact).try(:max)
   end
 
   # Returns whether the user has accepted the latest major version of the Terms of Service
