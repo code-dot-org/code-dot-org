@@ -176,6 +176,8 @@ es:
       Haz clic en el vínculo de más abajo para registrarte y usar tutoriales de ciencias de la computación en Code.org (conmigo como tu "profesor"): %{link} Los tutoriales son divertidos, visualmente atractivos, y enseñan los conceptos básicos de las ciencias de la computación usando una experiencia sencilla y guiada, similar a un juego. ¡Aprende a programar con Bill Gates, Mark Zuckerberg, Angry Birds y Plantas vs. Zombis! :-) %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -184,6 +186,12 @@ es:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Correo electrónico'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Invitación enviada'
     added_teacher: '%{name} añadido como tu profesor'
@@ -196,6 +204,7 @@ es:
       section_not_found: "No pudimos encontrar una sección con el código '%{section_code}'."
       blank_code: "Introduce un código de sección"
       cant_join_own_section: "Lo sentimos, no te puedes unir a tu propia sección."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Notificación Code.org: %{student_name} ya no está asociado como tu estudiante.'
@@ -219,6 +228,7 @@ es:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -231,6 +241,7 @@ es:
         calculate: 'Calculate something'
         applab: 'Hacer una aplicación para el Laboratorio de Aplicaciones'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Inicio"
       courses: "Cursos"
       project_gallery: "Lista de Proyectos"
@@ -531,8 +542,13 @@ es:
       title: "Galería"
       body: "Ver una galería de aplicaciones y de imágenes de artistas creadas por nuestros usuarios"
     gamelab:
-      title: "Laboratorio de Juego (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Edad 13+"
+      cta: "Cómo hacerlo"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Edad 13+"
       cta: "Cómo hacerlo"
     frozen:

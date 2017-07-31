@@ -214,6 +214,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Bölüm:'
@@ -222,6 +224,12 @@
     confirm:
       remove: Bu bölümü bırakmak istediğinden emin misin?
     remove: Bölümü kaldır
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-posta
+      google_classroom: Google Sınıf
+      clever: Clever
   follower:
     invite_sent: Davetiye gönderildi
     added_teacher: "%{name} öğretmeniniz olarak eklendi"
@@ -235,6 +243,9 @@
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -258,6 +269,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: Kişisel bir oturumu başarıyla oluşturuldu. Artık
           Code.org'da e-posta ve parola ile oturum açabilirsiniz
         personal_login_created_username: Kişisel bir oturumu başarıyla oluşturuldu.
@@ -272,6 +285,7 @@
         calculate: Bir şey hesaplamak
         applab: Uygulama oluşturun
         gamelab: Bir labaratuvar oyunu projesi yap
+        weblab: Make a Web Lab (beta) project
       home: Ana Sayfa
       courses: kurslar
       project_gallery: Proje Galerisi
@@ -375,12 +389,12 @@
       yaptınız."
     no_password_because_sponsored: "Öğretmenin parolanızı yönetmesi için bkz."
     create_personal_login: Kişisel bir oturum oluşturma
-    create_personal_login_under_13_info: If you want to keep using your Code.org account
-      even after the end of the school year, ask your parent/guardian to help you
-      create your own personal login below.
+    create_personal_login_under_13_info: Eğer okul yılı bittiğinde de Code.org hesabını
+      kullanmaya devam etmek istiyorsan, ebeveynlerinden senin kişisel oturum bilgilerini
+      oluşturmaları için yardım iste.
     create_personal_login_under_13_username: Kullanıcı adı (gerçek adınızı kullanmayınız!)
-    create_personal_login_under_13_parent_email: Parent/guardian email address (to
-      recover your password)
+    create_personal_login_under_13_parent_email: Ebeveyn eposta adresi (şifreni kurtarmak
+      için)
     create_personal_login_info: Code.org hesabınızı öğretim yılı bitiminden sonra
       kullanmaya devam etmek istiyorsanız, alta kendi girişinizi yapın.
     create_personal_login_terms: Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}',
@@ -708,9 +722,15 @@
       body: Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı
         görsellerine göz atın
     gamelab:
-      title: Oyun Laboratuvarı (beta)
+      title: Oyun Laboratuvarı
       body: Oyun labı basit animasyonları ve oyunları nesnelerle ve etkilesimli karakterlerle
         beraber programlayabileceğin bir uygulama geliştirme ortamıdır.
+      audience: 13 + Yaş grubu
+      cta: Nasıl olduğunu öğren
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     frozen:
@@ -1051,7 +1071,7 @@
     csp_ap_1: 'Bölüm 1: AP teknik kurulum'
     csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
     csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
-    dlp: Reflection Prompts
+    dlp: Yansıma İstemleri
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil.
