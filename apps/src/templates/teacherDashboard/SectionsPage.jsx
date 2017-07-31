@@ -128,7 +128,7 @@ class SectionsPage extends Component {
     });
   };
 
-  addSection = (courseId, scriptId) => {
+  addSection = () => {
     const { defaultCourseId, defaultScriptId } = this.props;
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
