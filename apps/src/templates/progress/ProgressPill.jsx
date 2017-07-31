@@ -19,8 +19,8 @@ const styles = {
     borderRadius: 20,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingTop: 6,
+    paddingBottom: 6,
     minWidth: 60,
   },
   text: {
