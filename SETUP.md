@@ -67,10 +67,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. `sudo apt-get update`
 1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-1. If it is not already installed, install Git with `sudo apt install git`
 1. Install npm with `sudo apt install npm`, then
-    * `sudo add-apt-repository ppa:chris-lea/node.js`
-    * `sudo apt-get update`
     * `sudo apt-get install nodejs`
 1. Install Ruby 2.2.3 with rbenv
      1. Install rbenv with `sudo apt install rbenv` and ruby-build with `sudo apt install ruby-build`
@@ -88,7 +85,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. Then `FLUSH PRIVILEGES;`
    1. And finally `exit;` to close out
 1. Read the following notes, then go back up to the overview and run the commands there. 
-   1.In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
+	1. In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
    1. If, for any reason, you are forced to interrupt `bundle exec rake install` before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
