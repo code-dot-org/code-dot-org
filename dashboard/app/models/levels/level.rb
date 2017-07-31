@@ -288,6 +288,7 @@ class Level < ActiveRecord::Base
     'Odometer', # widget
     'Pixelation', # widget
     'PublicKeyCryptography', # widget
+    'Scratch', # no ideal solution
     'ScriptCompletion', # unknown
     'StandaloneVideo', # no user submitted content
     'TextCompression', # widget
