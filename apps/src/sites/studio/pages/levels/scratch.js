@@ -38,7 +38,7 @@ const options = {
   containerId: 'codeApp',
   hideSource: false,
   readonlyWorkspace: false,
-  pinWorkspaceToBottom: false,
+  pinWorkspaceToBottom: true,
   ...appOptions,
   level: {
     scratch: true,
