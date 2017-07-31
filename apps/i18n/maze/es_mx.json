@@ -112,5 +112,6 @@
   "word": "Encuentra la palabra",
   "wrongCropError": "No puedo cosechar ese cultivo desde aquí.",
   "yes": "Sí",
-  "youSpelled": "Escribiste"
+  "youSpelled": "Escribiste",
+  "goal": "goal"
 }

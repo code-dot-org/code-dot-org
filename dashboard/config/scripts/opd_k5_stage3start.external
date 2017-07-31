@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Sequencing > Stage Overview
 
-<img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px">
+<img src="https://images.code.org/06b4f5c946f2a47176706352d9dbbb56-image-1434152393531.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 By completing Stage 4, you will:
 

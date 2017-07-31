@@ -112,5 +112,6 @@
   "word": "Trouver le mot",
   "wrongCropError": "Je ne peux pas récolter cette culture de là où je suis.",
   "yes": "Oui",
-  "youSpelled": "Tu as épelé"
+  "youSpelled": "Tu as épelé",
+  "goal": "goal"
 }

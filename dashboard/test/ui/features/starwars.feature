@@ -21,7 +21,7 @@ Feature: Hour of Code 2015 tutorial is completable
     Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/1?noautoplay=true"
     And I rotate to landscape
     Then I wait for the page to fully load
-    When I switch to text mode
+    When I ensure droplet is in text mode
     And I append text to droplet "moveRight();\n"
     And I press "runButton"
     And I wait to see ".modal"
@@ -36,7 +36,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait for the page to fully load
     And I close the instructions overlay if it exists
-    When I switch to text mode
+    When I ensure droplet is in text mode
     And I append text to droplet "moveRight();\n"
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveDown();\n"
@@ -49,7 +49,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait for the page to fully load
     And I close the instructions overlay if it exists
-    When I switch to text mode
+    When I ensure droplet is in text mode
     And I append text to droplet "moveUp();\n"
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveRight();\n"
@@ -92,7 +92,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait for the page to fully load
     And I close the instructions overlay if it exists
-    When I switch to text mode
+    When I ensure droplet is in text mode
     And I append text to droplet "moveDown();\n"
     And I append text to droplet "moveUp();\n"
     And I append text to droplet "moveRight();\n"
@@ -149,7 +149,7 @@ Feature: Hour of Code 2015 tutorial is completable
     And I rotate to landscape
     And I wait for the page to fully load
     And I close the instructions overlay if it exists
-    When I switch to text mode
+    When I ensure droplet is in text mode
     And I append text to droplet "moveUp();\n"
     And I append text to droplet "moveLeft();\n"
     And I append text to droplet "moveDown();\n"

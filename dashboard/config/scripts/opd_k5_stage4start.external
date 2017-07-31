@@ -5,11 +5,10 @@ markdown <<MARKDOWN
 
 This stage builds on your first programming experience by adding the core concept of **loops**.
 
-<img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="margin-right:45px; border-radius:10px;">
+<img src="https://images.code.org/fcd3262b1c25e70426ac90e6f9fa65ac-image-1434152998854.JPG" width="450px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 By completing Stage 5, you will:
 
-- Define "loops" and explain their importance
 - Practice coding simple loops
 - Reflect on classroom application
 
