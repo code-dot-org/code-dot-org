@@ -51,14 +51,28 @@ describe('AssignToSection', () => {
     assert.strictEqual(wrapper.childAt(0).name(), 'Button');
   });
 
-  it('shows a new section option when clicked', () => {
+  it('can create a new section with a courseId', () => {
     const wrapper = shallow(
       <AssignToSection {...defaultProps}/>
     );
     wrapper.find('Button').simulate('click');
     const newSectionLink = wrapper.find('a').at(0);
     assert.strictEqual(newSectionLink.props().href,
-      '//test.code.org/teacher-dashboard?newSection=30#/sections');
+      '//test.code.org/teacher-dashboard?courseId=30#/sections');
+    assert.strictEqual(newSectionLink.text(), 'New section...');
+  });
+
+  it('can create a new section with a courseId and scriptId', () => {
+    const wrapper = shallow(
+      <AssignToSection
+        {...defaultProps}
+        scriptId={112}
+      />
+    );
+    wrapper.find('Button').simulate('click');
+    const newSectionLink = wrapper.find('a').at(0);
+    assert.strictEqual(newSectionLink.props().href,
+      '//test.code.org/teacher-dashboard?courseId=30&scriptId=112#/sections');
     assert.strictEqual(newSectionLink.text(), 'New section...');
   });
 
