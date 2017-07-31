@@ -1,11 +1,11 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
-import { sectionShape, assignmentShape } from './shapes';
+import {sectionShape, assignmentShape} from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
 import {
@@ -14,9 +14,9 @@ import {
   updateSection,
   removeSection
 } from './teacherSectionsRedux';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
-import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
-import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 
 const styles = {
   link: tableStyles.link,
@@ -190,7 +190,7 @@ class SectionRow extends Component {
   }
 
   onClickEdit = () => {
-    if (experiments.isEnabled('section-flow-2017')) {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
       const section = this.props.sections[this.props.sectionId];
       const editData = {
         id: this.props.sectionId,
