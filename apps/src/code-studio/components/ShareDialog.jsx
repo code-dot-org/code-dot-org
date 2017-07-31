@@ -307,19 +307,13 @@ export default connect(state => ({
 }), (dispatch, ownProps) => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog() {
-    // Allow onShowPublishDialog to be overridden when passed explicitly as a prop
-    if (ownProps.onShowPublishDialog) {
-      ownProps.onShowPublishDialog();
-    } else {
-      dispatch(hideShareDialog());
-      dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
-    }
+    dispatch(hideShareDialog());
+    dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
   },
   onUnpublish() {
-    if (ownProps.onUnpublish) {
-      ownProps.onUnpublish();
-    } else {
-      dispatch(unpublishProject(ownProps.channelId));
-    }
+    dispatch(unpublishProject(ownProps.channelId));
   },
-}))(ShareDialog);
+}),(stateProps, dispatchProps, ownProps) => (
+  // Allow stories and tests to override connected props.
+  Object.assign({}, stateProps, dispatchProps, ownProps)
+))(ShareDialog);
