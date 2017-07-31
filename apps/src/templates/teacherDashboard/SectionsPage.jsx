@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
@@ -12,10 +12,10 @@ import {
   beginEditingNewSection,
   beginEditingSection,
 } from './teacherSectionsRedux';
-import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
-import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
+import {loadClassroomList, importClassroomStarted} from './oauthClassroomRedux';
+import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 
@@ -23,7 +23,6 @@ const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
-const SECTION_FLOW_2017_KEY = 'section-flow-2017';
 
 const styles = {
   breadcrumb: {
@@ -116,7 +115,7 @@ class SectionsPage extends Component {
   };
 
   addSection = () => {
-    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingNewSection();
     } else {
       return this.props.newSection();
@@ -124,7 +123,7 @@ class SectionsPage extends Component {
   };
 
   handleEditRequest = section => {
-    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingSection(section.id);
     }
   };
@@ -133,7 +132,7 @@ class SectionsPage extends Component {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
 
-    const newSectionFlow = experiments.isEnabled('section-flow-2017');
+    const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
     const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
     const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
