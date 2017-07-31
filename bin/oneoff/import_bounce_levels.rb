@@ -37,6 +37,10 @@ def sanitize_props(props, name)
   props["goal"] = props["goal"] && props["goal"].to_json
   props["maze"] = props.delete("map").to_json
 
+  props["ballDirection"] = props["ballDirection"] && props["ballDirection"].to_json
+  props["timeoutFailureTick"] = props["timeoutFailureTick"] && props["timeoutFailureTick"].to_json
+  props["useFlagGoal"] = props["useFlagGoal"] && props["useFlagGoal"].to_json
+
   props.transform_keys {|k| k.to_s.underscore}
 end
 
