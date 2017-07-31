@@ -36,6 +36,8 @@ const appOptions = JSON.parse(script.dataset.options);
 
 const options = {
   containerId: 'codeApp',
+  maxVisualizationWidth: 480,
+  vizAspectRatio: 4 / 3,
   hideSource: false,
   readonlyWorkspace: false,
   pinWorkspaceToBottom: true,

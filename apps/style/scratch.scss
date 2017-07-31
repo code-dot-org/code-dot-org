@@ -11,6 +11,27 @@
   width: 250px;
 }
 
+.editor-column {
+  left: 480px;
+
+  html[dir='rtl'] & {
+    right: 480px;
+  }
+}
+
+#visualizationResizeBar {
+  left: 480px;
+  line-height: 360px;
+
+  html[dir='rtl'] & {
+    right: 480px;
+  }
+}
+
+#visualization {
+  height: 360px;
+}
+
 .scratchCategoryMenu {
   background-color: rgba(221, 221, 221, 0.8);
   .categorySelected {
