@@ -262,4 +262,10 @@ class AdminUsersControllerTest < ActionController::TestCase
     end
     refute @facilitator.reload.permission?(UserPermission::FACILITATOR)
   end
+
+  test 'find users with permission finds users'do
+    sign_in @admin
+    get :permissions_form, params: {permission: UserPermission::FACILITATOR}
+    assert_select 'td', text: @facilitator.id.to_s
+  end
 end
