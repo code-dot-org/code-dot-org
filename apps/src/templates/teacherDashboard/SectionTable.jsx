@@ -1,9 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import SectionRow from './SectionRow';
 import i18n from '@cdo/locale';
 import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import styleConstants from '@cdo/apps/styleConstants';
 
 const styles = {
   table: {
@@ -39,9 +41,15 @@ class SectionTable extends Component {
 
   render() {
     const { sectionIds } = this.props;
+    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
+
+    const tableStyle = {
+      ...styles.table,
+      ...(sectionFlow2017 && {width: styleConstants['content-width']}),
+    };
 
     return (
-      <table style={styles.table}>
+      <table style={tableStyle}>
         <thead>
           <tr style={styles.headerRow}>
             <td style={styles.col}>
@@ -49,11 +57,13 @@ class SectionTable extends Component {
                 {i18n.section()}
               </div>
             </td>
-            <td style={styles.col}>
-              <div style={styles.colText}>
-                {i18n.loginType()}
-              </div>
-            </td>
+            {!sectionFlow2017 &&
+              <td style={styles.col}>
+                <div style={styles.colText}>
+                  {i18n.loginType()}
+                </div>
+              </td>
+            }
             <td style={styles.col}>
               <div style={styles.colText}>
                 {i18n.grade()}
@@ -64,16 +74,20 @@ class SectionTable extends Component {
                 {i18n.course()}
               </div>
             </td>
-            <td style={styles.col}>
-              <div style={styles.colText}>
-                {i18n.stageExtras()}
-              </div>
-            </td>
-            <td style={styles.col}>
-              <div style={styles.colText}>
-                {i18n.pairProgramming()}
-              </div>
-            </td>
+            {!sectionFlow2017 &&
+              <td style={styles.col}>
+                <div style={styles.colText}>
+                  {i18n.stageExtras()}
+                </div>
+              </td>
+            }
+            {!sectionFlow2017 &&
+              <td style={styles.col}>
+                <div style={styles.colText}>
+                  {i18n.pairProgramming()}
+                </div>
+              </td>
+            }
             <td style={styles.col}>
               <div style={styles.colText}>
                 {i18n.students()}
