@@ -332,7 +332,12 @@ Artist.prototype.init = function (config) {
 
   var iconPath = '/blockly/media/turtle/' +
     (config.isLegacyShare && config.hideSource ? 'icons_white.png' : 'icons.png');
-  var visualizationColumn = <ArtistVisualizationColumn iconPath={iconPath} />;
+  var visualizationColumn = (
+    <ArtistVisualizationColumn
+      showFinishButton={!!config.level.freePlay}
+      iconPath={iconPath}
+    />
+  );
 
   return Promise.all([
     this.preloadAllStickerImages(),
