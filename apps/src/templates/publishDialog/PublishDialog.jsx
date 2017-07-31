@@ -53,6 +53,9 @@ class PublishDialog extends Component {
     );
   }
 }
+
+export const UnconnectedPublishDialog = PublishDialog;
+
 export default connect(state => ({
   isOpen: state.publishDialog.isOpen,
   isPublishPending: state.publishDialog.isPublishPending,
@@ -65,7 +68,4 @@ export default connect(state => ({
   onConfirmPublish(projectId, projectType) {
     dispatch(publishProject(projectId, projectType));
   },
-}), (stateProps, dispatchProps, ownProps) => (
-  // Allow stories and tests to override connected props.
-  Object.assign({}, stateProps, dispatchProps, ownProps)
-))(Radium(PublishDialog));
+}))(Radium(PublishDialog));

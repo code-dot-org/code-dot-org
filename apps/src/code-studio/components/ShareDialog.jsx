@@ -65,7 +65,7 @@ function checkImageReachability(imageUrl, callback) {
 /**
  * Share Dialog used by projects
  */
-var ShareDialog = React.createClass({
+const ShareDialog = React.createClass({
   propTypes: {
     i18n: React.PropTypes.shape({
       t: React.PropTypes.func.isRequired,
@@ -302,6 +302,8 @@ var ShareDialog = React.createClass({
   }
 });
 
+export const UnconnectedShareDialog = ShareDialog;
+
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
 }), (dispatch, ownProps) => ({
@@ -313,7 +315,4 @@ export default connect(state => ({
   onUnpublish() {
     dispatch(unpublishProject(ownProps.channelId));
   },
-}),(stateProps, dispatchProps, ownProps) => (
-  // Allow stories and tests to override connected props.
-  Object.assign({}, stateProps, dispatchProps, ownProps)
-))(ShareDialog);
+}))(ShareDialog);

@@ -1,15 +1,8 @@
 import React from 'react';
-import {createStore, combineReducers} from 'redux';
-import { Provider } from 'react-redux';
-import PublishDialog from './PublishDialog';
-import publishDialog, { showPublishDialog, PUBLISH_REQUEST } from './publishDialogRedux';
+import { UnconnectedPublishDialog as PublishDialog } from './PublishDialog';
 
 const PROJECT_ID = 'MY_PROJECT_ID';
 const PROJECT_TYPE = 'MY_PROJECT_TYPE';
-
-function configureStore() {
-  return createStore(combineReducers({publishDialog}));
-}
 
 export default storybook => {
   return storybook
@@ -18,35 +11,30 @@ export default storybook => {
       {
         name: 'dialog open',
         description: '',
-        story: () => {
-          const store = configureStore();
-          store.dispatch(showPublishDialog(PROJECT_ID, PROJECT_TYPE));
-          return (
-            <Provider store={store}>
-              <PublishDialog
-                onConfirmPublish={storybook.action('publish')}
-                onClose={storybook.action('close')}
-              />
-            </Provider>
-          );
-        }
+        story: () => (
+          <PublishDialog
+            isOpen={true}
+            isPublishPending={false}
+            projectId={PROJECT_ID}
+            projectType={PROJECT_TYPE}
+            onConfirmPublish={storybook.action('publish')}
+            onClose={storybook.action('close')}
+          />
+        )
       },
       {
         name: 'dialog open with publish pending',
         description: '',
-        story: () => {
-          const store = configureStore();
-          store.dispatch(showPublishDialog(PROJECT_ID, PROJECT_TYPE));
-          store.dispatch({type: PUBLISH_REQUEST});
-          return (
-            <Provider store={store}>
-              <PublishDialog
-                onConfirmPublish={storybook.action('publish')}
-                onClose={storybook.action('close')}
-              />
-            </Provider>
-          );
-        }
+        story: () => (
+          <PublishDialog
+            isOpen={true}
+            isPublishPending={true}
+            projectId={PROJECT_ID}
+            projectType={PROJECT_TYPE}
+            onConfirmPublish={storybook.action('publish')}
+            onClose={storybook.action('close')}
+          />
+        )
       }
     ]);
 };
