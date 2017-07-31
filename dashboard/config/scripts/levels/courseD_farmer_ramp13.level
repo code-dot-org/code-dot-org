@@ -10,7 +10,7 @@
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -31,10 +31,13 @@
     "fast_get_nectar_animation": "false",
     "contained_level_names": [
       "courseD_multi_farmer_ramp13"
-    ]
+    ],
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:22:55 +0000\",\"changed\":[\"start_blocks\",\"never_autoplay_video\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

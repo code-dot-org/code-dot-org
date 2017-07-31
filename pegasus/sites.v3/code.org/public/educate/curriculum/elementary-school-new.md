@@ -17,7 +17,7 @@ Overview and Professional Development
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
-<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 
 </div>
 
@@ -29,7 +29,7 @@ Our Computer Science Fundamentals courses each have about 15 lessons that may be
 
 <div style="clear:both"></div>
 
-# New to Teaching Computer Science?
+# New to teaching computer science?
 
 <div class="col-40" style="float: left;">
 <img src="/images/fit-370/CSFimages/PD_Review_Cyan.png"/>
@@ -58,9 +58,9 @@ Courses
 
 [/solid-block-header]
 
-# Selecting the Right Course For Your Class
+# Selecting the right course for your class
 
-<img src="/images/fit-970/CSFimages/Course_Map_AF.png" style="max-width: 100%"/>
+<img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
 For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers).
 
@@ -115,21 +115,21 @@ For students new to computer science, each course begins with a grade-appropriat
 # Express Course
 
 <div class="col-25" style="padding-right: 10px;">
-  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
-</div>
-
-<div class="col-25" style="padding-right: 10px;">
   <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png"></a>
 </div>
 
-CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat puzzles for students. This is also our recommended option for students studying computer science on their own outside of a classroom.
+<div class="col-25" style="padding-right: 10px;">
+  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
+</div>
+
+CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students. This is also our recommended option for students studying computer science on their own outside of a classroom.
 
 <br>
 <br>
 <br>
 
 
-# Looking for Translated Courses?
+# Looking for translated courses?
 
 We are working on translating the Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using [Courses 1-4 and the Accelerated Course](/educate/curriculum/cs-fundamentals-international). These courses cover the same basic concepts and have already been translated into 25+ languages.
 
@@ -163,7 +163,7 @@ We are working on translating the Courses A-F and the Express Course to language
 
 [solid-block-header]
 
-3rd Party Resources
+Recommended courses from 3rd parties
 
 [/solid-block-header]
 
