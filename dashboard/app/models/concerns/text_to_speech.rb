@@ -138,7 +138,7 @@ module TextToSpeech
       # levels.js-defined levels
       tts_instructions_override || instructions || try(:localized_instructions) || ""
     else
-      TTSSafeRenderer.render(try(:localized_instructions) || "")
+      TextToSpeech.sanitize(try(:localized_instructions) || "")
     end
   end
 
@@ -148,7 +148,7 @@ module TextToSpeech
   end
 
   def tts_markdown_instructions_text
-    tts_markdown_instructions_override || TTSSafeRenderer.render(markdown_instructions || "")
+    tts_markdown_instructions_override || TextToSpeech.sanitize(markdown_instructions || "")
   end
 
   def tts_should_update_markdown_instructions?
@@ -158,7 +158,7 @@ module TextToSpeech
 
   def tts_authored_hints_texts
     JSON.parse(authored_hints || '[]').map do |hint|
-      TTSSafeRenderer.render(hint["hint_markdown"])
+      TextToSpeech.sanitize(hint["hint_markdown"])
     end
   end
 
@@ -170,7 +170,7 @@ module TextToSpeech
     if authored_hints && tts_should_update('authored_hints')
       hints = JSON.parse(authored_hints)
       hints.each do |hint|
-        text = TTSSafeRenderer.render(hint["hint_markdown"])
+        text = TextToSpeech.sanitize(hint["hint_markdown"])
         tts_upload_to_s3(text)
         hint["tts_url"] = tts_url(text)
       end
