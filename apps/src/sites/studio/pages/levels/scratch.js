@@ -1,8 +1,19 @@
+/* global appOptions */
+
 import AudioEngine from 'scratch-audio';
 import Renderer from 'scratch-render';
 import Storage from 'scratch-storage';
 import VM from 'scratch-vm';
 import Blockly from 'scratch-blocks/dist/vertical.js';
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+import { getStore, registerReducers } from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import { singleton as studioApp } from '@cdo/apps/StudioApp';
+import ScratchView from './ScratchView';
 
 const Scratch = window.Scratch = window.Scratch || {};
 
@@ -19,6 +30,35 @@ const getAssetUrl = function (asset) {
   ];
   return assetUrlParts.join('');
 };
+
+registerReducers(commonReducers);
+
+const options = {
+  containerId: 'root',
+  hideSource: false,
+  readonlyWorkspace: false,
+  pinWorkspaceToBottom: false,
+  ...appOptions,
+  level: {
+    scratch: true,
+    editCode: false,
+    ...appOptions.level,
+  },
+};
+
+studioApp().configure(options);
+studioApp().setPageConstants(options, {});
+
+ReactDOM.render(
+  <Provider store={getStore()}>
+    <ScratchView onMount={onMount} />
+  </Provider>,
+  document.querySelector('#root'),
+);
+
+function onMount() {
+  studioApp().init(options);
+}
 
 // Lots of global variables to make debugging easier
 // Instantiate the VM.
@@ -96,7 +136,7 @@ vm.loadProject(`{
   }`);
 
 // Instantiate scratch-blocks and attach it to the DOM.
-const workspace = Blockly.inject('blocks', {
+const workspace = Blockly.inject('codeWorkspace', {
   media: '/blockly/media/scratch-blocks/',
   zoom: {
     controls: true,
