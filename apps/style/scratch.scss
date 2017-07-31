@@ -1,0 +1,10 @@
+.scratchCategoryMenu {
+  background-color: rgba(221, 221, 221, 0.8);
+  .categorySelected {
+    background-color: #57e;
+    color: #fff;
+  }
+  .categorySelected:hover {
+    color: #fff !important;
+  }
+}
