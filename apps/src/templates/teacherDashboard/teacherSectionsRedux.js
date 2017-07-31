@@ -69,7 +69,7 @@ export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 /**
  * Opens the UI for adding a new section.
  */
-export const beginEditingNewSection = () => ({type: EDIT_SECTION_BEGIN});
+export const beginEditingNewSection = (courseId, scriptId) => ({type: EDIT_SECTION_BEGIN, courseId, scriptId});
 
 /**
  * Opens the UI for editing the specified section.
@@ -138,10 +138,11 @@ const initialState = {
  * Generate shape for new section
  * @param id
  * @param courseId
+ * @param scriptId
  * @param loginType
  * @returns {sectionShape}
  */
-function newSectionData(id, courseId, loginType) {
+function newSectionData(id, courseId, scriptId, loginType) {
   return {
     id: id,
     name: '',
@@ -153,7 +154,7 @@ function newSectionData(id, courseId, loginType) {
     studentCount: 0,
     code: '',
     courseId: courseId || null,
-    scriptId: null
+    scriptId: scriptId || null,
   };
 }
 
@@ -304,7 +305,7 @@ export default function teacherSections(state=initialState, action) {
       sectionIds: [sectionId, ...state.sectionIds],
       sections: {
         ...state.sections,
-        [sectionId]: newSectionData(sectionId, action.courseId, SectionLoginType.word)
+        [sectionId]: newSectionData(sectionId, action.courseId, null, SectionLoginType.word)
       }
     };
   }
@@ -325,7 +326,7 @@ export default function teacherSections(state=initialState, action) {
   if (action.type === EDIT_SECTION_BEGIN) {
     const initialSectionData = action.sectionId ?
       {...state.sections[action.sectionId]} :
-      newSectionData(PENDING_NEW_SECTION_ID, action.courseId, undefined);
+      newSectionData(PENDING_NEW_SECTION_ID, action.courseId, action.scriptId, undefined);
     return {
       ...state,
       sectionBeingEdited: initialSectionData,

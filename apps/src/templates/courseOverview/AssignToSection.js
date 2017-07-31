@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import $ from 'jquery';
+import queryString from 'query-string';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -139,7 +140,7 @@ class AssignToSection extends Component {
   }
 
   render() {
-    const { courseId, assignmentName, sectionsInfo } = this.props;
+    const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
     const { dropdownOpen, sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
 
@@ -158,7 +159,8 @@ class AssignToSection extends Component {
         {dropdownOpen && (
           <div style={styles.dropdown}>
             <a
-              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?newSection=${courseId}#/sections`}
+              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
+                queryString.stringify({courseId, scriptId}) + "#/sections"}
               style={styles.section}
             >
               {i18n.newSectionEllipsis()}
