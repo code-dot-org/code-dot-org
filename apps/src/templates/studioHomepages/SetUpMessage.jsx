@@ -1,15 +1,12 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
-import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 import Button from "../Button";
 import {connect} from 'react-redux';
-import {
-  newSection,
-  beginEditingNewSection
-} from '../teacherDashboard/teacherSectionsRedux';
+import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
+import {beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
 
 const styles = {
   section: {
@@ -60,86 +57,82 @@ const styles = {
   }
 };
 
-const SetUpMessage = React.createClass({
-  propTypes: {
-    type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
-    newSection: React.PropTypes.func.isRequired,
-    beginEditingNewSection: React.PropTypes.func.isRequired,
-  },
+const SetUpMessage = ({
+  isRtl,
+  headingText,
+  descriptionText,
+  buttonText,
+  buttonUrl,
+  onClick,
+}) => (
+  <div style={styles.section}>
+    <div style={isRtl ? styles.rtlHeading : styles.heading}>
+      {headingText}
+    </div>
+    <div style={isRtl ? styles.rtlDescription : styles.description}>
+      {descriptionText}
+    </div>
+    <Button
+      href={buttonUrl}
+      onClick={onClick}
+      color={Button.ButtonColor.gray}
+      text={buttonText}
+      style={isRtl ? styles.rtlButton : styles.button}
+    />
+  </div>
+);
+SetUpMessage.propTypes ={
+  isRtl: PropTypes.bool.isRequired,
+  headingText: PropTypes.string.isRequired,
+  descriptionText: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  buttonUrl: PropTypes.string,
+  onClick: PropTypes.func,
+};
 
-  addSection: function () {
-    if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection();
-    } else {
-      return this.props.newSection();
-    }
-  },
+export const CoursesSetUpMessage = ({isRtl, isTeacher}) => (
+  <SetUpMessage
+    type="courses"
+    headingText={i18n.startLearning()}
+    descriptionText={isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()}
+    buttonText={i18n.findCourse()}
+    buttonUrl="/courses"
+    isRtl={isRtl}
+  />
+);
+CoursesSetUpMessage.propTypes = {
+  isRtl: PropTypes.bool.isRequired,
+  isTeacher: PropTypes.bool.isRequired,
+};
 
-  render() {
-    const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
-    const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
-
-    if (type === 'courses') {
-      return (
-        <div style={styles.section} >
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.startLearning()}
-          </div>
-          {isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesTeacher()}
-            </div>
-          )}
-          {!isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesStudent()}
-            </div>
-          )}
-          <Button
-            href="/courses"
-            color={Button.ButtonColor.gray}
-            text={i18n.findCourse()}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
-        </div>
-      );
-    }
-    if (type === 'sections') {
-      return (
-        <div style={styles.section} >
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.setUpClassroom()}
-          </div>
-          <div style={isRtl ? styles.rtlDescription : styles.description}>
-            {i18n.createNewClassroom()}
-          </div>
-          {!experiments.isEnabled(SECTION_FLOW_2017) &&
-            <Button
-              href={sectionsUrl}
-              color={Button.ButtonColor.gray}
-              text={i18n.createSection()}
-              style={isRtl ? styles.rtlButton : styles.button}
-            />
-          }
-          {experiments.isEnabled(SECTION_FLOW_2017) &&
-            <Button
-              className="uitest-newsection"
-              text={i18n.newSection()}
-              style={styles.button}
-              onClick={this.addSection}
-              color={Button.ButtonColor.gray}
-            />
-          }
-          <AddSectionDialog handleImportOpen={() => {/* TODO */}}/>
-        </div>
-      );
-    }
-  }
-});
-
-export default connect(undefined,{newSection,
-  beginEditingNewSection})(SetUpMessage);
-
+export const UnconnectedSectionsSetUpMessage = ({
+  isRtl,
+  codeOrgUrlPrefix,
+  beginEditingNewSection,
+}) => {
+  const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
+  const clickHandlerProp = sectionFlow2017 ?
+    {onClick: beginEditingNewSection} :
+    {buttonUrl: `${codeOrgUrlPrefix}/teacher-dashboard#/sections`};
+  return (
+    <SetUpMessage
+      type="sections"
+      headingText={i18n.setUpClassroom()}
+      descriptionText={i18n.createNewClassroom()}
+      buttonText={i18n.createSection()}
+      isRtl={isRtl}
+      {...clickHandlerProp}
+    />
+  );
+};
+UnconnectedSectionsSetUpMessage.propTypes = {
+  isRtl: PropTypes.bool.isRequired,
+  codeOrgUrlPrefix: PropTypes.string,
+  beginEditingNewSection: PropTypes.func.isRequired,
+};
+export const SectionsSetUpMessage = connect(state => ({
+  codeOrgUrlPrefix: pegasusUrl(state, ''),
+}), {
+  beginEditingNewSection,
+})(UnconnectedSectionsSetUpMessage);
+SectionsSetUpMessage.displayName = 'SectionsSetUpMessage';
