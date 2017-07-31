@@ -49,7 +49,6 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
-  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -2780,8 +2779,6 @@ Studio.displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
-    const showFailureIcon = studioApp().hasContainedLevels &&
-      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2804,7 +2801,6 @@ Studio.displayFeedback = function () {
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
-      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -3354,11 +3350,10 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      (!studioApp().hasContainedLevels || getValidatedResult())) {
-    Studio.playSound({ soundName: 'win' });
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+    studioApp().playAudioOnWin();
   } else {
-    Studio.playSound({ soundName: 'failure' });
+    studioApp().playAudioOnFailure();
   }
 
   if (studioApp().hasContainedLevels && !level.edit_blocks) {

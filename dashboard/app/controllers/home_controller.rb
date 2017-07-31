@@ -34,28 +34,24 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
+  # Signed in: redirect to /home
+  # Signed out: redirect to /courses
   def index
-    if request.cookies['pm'] == 'student_homepage'
+    if current_user
       redirect_to '/home'
     else
       redirect_to '/courses'
     end
   end
 
-  # Show /home for teachers.  (And for students if cookie set appropriately.)
-  #
+  # Signed in: render home page
   # Signed out: redirect to code.org
-  # Signed in teacher or have student_homepage cookie: render this page
-  # Signed in student: redirect to studio.code.org/courses
-
   def home
-    if !current_user
-      redirect_to CDO.code_org_url
-    elsif current_user.teacher? || request.cookies['pm'] == 'student_homepage'
+    if current_user
       init_homepage
       render 'home/index'
     else
-      redirect_to '/courses'
+      redirect_to CDO.code_org_url
     end
   end
 
@@ -93,10 +89,6 @@ class HomeController < ApplicationController
       @sections = current_user.sections.map(&:summarize)
       @student_sections = current_user.sections_as_student.map(&:summarize)
       @recent_courses = current_user.recent_courses_and_scripts
-      # @recent_courses are used to generate CourseCards on the homepage. Rather than a CourseCard, student's most recent assignable will be displayed with a StudentTopCourse component. See below re: student_top_course. Thus, student recent_courses should drop the first course.
-      unless current_user.teacher?
-        @recent_courses = current_user.recent_courses_and_scripts.drop(1)
-      end
 
       if current_user.teacher?
         @sections = current_user.sections.map(&:summarize)
@@ -115,6 +107,9 @@ class HomeController < ApplicationController
             linkToOverview: script_path(script),
             linkToLesson: script_next_path(script, 'next')
           }
+
+          # Don't include this course in the regular set of recent courses.
+          @recent_courses.reject! {|item| item[:name] == script[:name]}
         end
       end
     end

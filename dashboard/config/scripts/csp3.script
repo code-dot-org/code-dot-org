@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'The Need For Programming Languages', flex_category: 'csp3_1'
