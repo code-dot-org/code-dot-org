@@ -35,7 +35,7 @@ const script = document.querySelector('script[data-options]');
 const appOptions = JSON.parse(script.dataset.options);
 
 const options = {
-  containerId: 'root',
+  containerId: 'codeApp',
   hideSource: false,
   readonlyWorkspace: false,
   pinWorkspaceToBottom: false,
@@ -54,7 +54,7 @@ ReactDOM.render(
   <Provider store={getStore()}>
     <ScratchView onMount={onMount} />
   </Provider>,
-  document.querySelector('#root'),
+  document.getElementById(options.containerId),
 );
 
 function onMount() {

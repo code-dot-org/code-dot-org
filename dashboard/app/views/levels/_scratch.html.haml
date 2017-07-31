@@ -1,9 +1,11 @@
-#root
+#codeApp
+  .loading
+  .slow_load
+    = t(:slow_loading)
+    %br
+    %a{href: 'javascript: location.reload();'}= t(:try_reloading)
 
-%button#greenflag
-  Green Flag
-%button#stopall
-  Stop All
+%div{style: 'display: none;'}= render partial: 'levels/reference_area'
 
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/scratch.css'), rel: 'stylesheet', type: 'text/css'}
