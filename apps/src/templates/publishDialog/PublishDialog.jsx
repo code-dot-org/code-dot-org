@@ -61,7 +61,7 @@ export default connect(state => ({
   isPublishPending: state.publishDialog.isPublishPending,
   projectId: state.publishDialog.projectId,
   projectType: state.publishDialog.projectType,
-}), (dispatch, ownProps) => ({
+}), dispatch => ({
   onClose() {
     dispatch(hidePublishDialog());
   },
