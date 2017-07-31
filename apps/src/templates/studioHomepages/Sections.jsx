@@ -72,7 +72,6 @@ const Sections = React.createClass({
             <SectionsSetUpMessage
               codeOrgUrlPrefix={codeOrgUrlPrefix}
               isRtl={isRtl}
-              isTeacher={isTeacher}
             />
           )}
           {!isTeacher && (
