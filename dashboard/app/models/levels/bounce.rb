@@ -87,6 +87,11 @@ class Bounce < Grid
     )
   end
 
+  def self.parse_maze(maze_json, _ = nil)
+    maze_json = maze_json.to_json if maze_json.is_a? Array
+    {'maze' => JSON.parse(maze_json).map {|row| row.map {|cell| Integer(cell['tileType'])}}.to_json}
+  end
+
   def toolbox(type)
     <<-XML.strip_heredoc.chomp
       <block type="bounce_moveLeft"></block>
