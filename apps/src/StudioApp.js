@@ -2352,9 +2352,10 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
 
-  // Never show unused blocks in edit mode
+  // Never show unused blocks or disable autopopulate in edit mode
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
+    options.disableProcedureAutopopulate = false;
   }
 
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
