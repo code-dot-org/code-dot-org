@@ -40,7 +40,8 @@ class ProjectsController < ApplicationController
       name: 'New Flappy Project'
     },
     scratch: {
-      name: 'New Scratch Project'
+      name: 'New Scratch Project',
+      login_required: true,
     },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'

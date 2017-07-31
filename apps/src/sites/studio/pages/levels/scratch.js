@@ -95,6 +95,7 @@ loadAppOptions().then(appOptions => {
   // Attach scratch-blocks events to VM.
   workspace.addChangeListener(vm.blockListener);
   workspace.addChangeListener(vm.variableListener);
+  workspace.addChangeListener(() => dispatchEvent(new Event('workspaceChange')));
   const flyoutWorkspace = workspace.getFlyout().getWorkspace();
   flyoutWorkspace.addChangeListener(vm.flyoutBlockListener);
   flyoutWorkspace.addChangeListener(vm.monitorBlockListener);
@@ -123,37 +124,39 @@ loadAppOptions().then(appOptions => {
     workspace.reportValue(data.id, data.value);
   });
 
+  function filterEvent(e) {
+    return e.target !== document &&
+      e.target !== document.body &&
+      e.target !== window.greenflag &&
+      e.target !== window.stopall;
+  }
+
+  function getCanvasCoordinates(e) {
+    const rect = canvas.getBoundingClientRect();
+    return {
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+      canvasWidth: rect.width,
+      canvasHeight: rect.height,
+    };
+  }
+
   // Feed mouse events as VM I/O events.
   document.addEventListener('mousemove', e => {
-    const rect = canvas.getBoundingClientRect();
-    const coordinates = {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-      canvasWidth: rect.width,
-      canvasHeight: rect.height
-    };
-    Scratch.vm.postIOData('mouse', coordinates);
+    Scratch.vm.postIOData('mouse', getCanvasCoordinates(e));
   });
   canvas.addEventListener('mousedown', e => {
-    const rect = canvas.getBoundingClientRect();
     const data = {
       isDown: true,
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-      canvasWidth: rect.width,
-      canvasHeight: rect.height
+      ...getCanvasCoordinates(e),
     };
     Scratch.vm.postIOData('mouse', data);
     e.preventDefault();
   });
   canvas.addEventListener('mouseup', e => {
-    const rect = canvas.getBoundingClientRect();
     const data = {
       isDown: false,
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-      canvasWidth: rect.width,
-      canvasHeight: rect.height
+      ...getCanvasCoordinates(e),
     };
     Scratch.vm.postIOData('mouse', data);
     e.preventDefault();
@@ -162,7 +165,7 @@ loadAppOptions().then(appOptions => {
   // Feed keyboard events as VM I/O events.
   document.addEventListener('keydown', e => {
     // Don't capture keys intended for Blockly inputs.
-    if (e.target !== document && e.target !== document.body) {
+    if (filterEvent(e)) {
       return;
     }
     Scratch.vm.postIOData('keyboard', {
@@ -176,15 +179,11 @@ loadAppOptions().then(appOptions => {
     // even those that have switched to other targets.
     Scratch.vm.postIOData('keyboard', {
       keyCode: e.keyCode,
-      isDown: false
+      isDown: false,
     });
-    // E.g., prevent scroll.
-    if (e.target !== document && e.target !== document.body) {
-      e.preventDefault();
-    }
   });
 
-  // Run threads
+  // Run threads.
   vm.start();
 
   // Handlers for green flag and stop all.
