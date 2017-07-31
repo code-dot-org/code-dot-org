@@ -13,6 +13,7 @@ def block_test_to_xml(test)
   titles = []
   if test.key? 'titles'
     titles = test['titles'].map do |name, val|
+      val = "???" if test['type'] == "studio_saySprite" && val == "hello"
       "<title name=\"#{name}\">#{val}</title>"
     end
   end
