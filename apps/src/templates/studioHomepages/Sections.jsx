@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentContainer from '../ContentContainer';
 import SectionsTable from './SectionsTable';
-import SetUpMessage from './SetUpMessage';
+import {SectionsSetUpMessage} from './SetUpMessage';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
 import i18n from "@cdo/locale";
@@ -69,8 +69,7 @@ const Sections = React.createClass({
             />
           )}
           {sections.length === 0 && isTeacher && (
-            <SetUpMessage
-              type="sections"
+            <SectionsSetUpMessage
               codeOrgUrlPrefix={codeOrgUrlPrefix}
               isRtl={isRtl}
               isTeacher={isTeacher}
