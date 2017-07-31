@@ -59,17 +59,18 @@ const SetUpMessage = React.createClass({
     codeOrgUrlPrefix: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
+    headingText: React.PropTypes.string.isRequired,
   },
 
   render() {
-    const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
+    const { type, codeOrgUrlPrefix, isRtl, isTeacher, headingText } = this.props;
     const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
       return (
         <div style={styles.section} >
           <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.startLearning()}
+            {headingText}
           </div>
           {isTeacher && (
             <div style={isRtl ? styles.rtlDescription : styles.description}>
@@ -94,7 +95,7 @@ const SetUpMessage = React.createClass({
       return (
         <div style={styles.section} >
           <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.setUpClassroom()}
+            {headingText}
           </div>
           <div style={isRtl ? styles.rtlDescription : styles.description}>
             {i18n.createNewClassroom()}
@@ -111,16 +112,22 @@ const SetUpMessage = React.createClass({
   }
 });
 
-export default SetUpMessage;
-
 export const CoursesSetUpMessage = (props) => {
   return (
-    <SetUpMessage type="courses" {...props}/>
+    <SetUpMessage
+      type="courses"
+      headingText={i18n.startLearning()}
+      {...props}
+    />
   );
 };
 
 export const SectionsSetUpMessage = (props) => {
   return (
-    <SetUpMessage type="sections" {...props}/>
+    <SetUpMessage
+      type="sections"
+      headingText={i18n.setUpClassroom()}
+      {...props}
+    />
   );
 };
