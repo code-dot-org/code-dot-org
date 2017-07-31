@@ -7846,6 +7846,7 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+        When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.: When I encounter a computer science problem without an obvious answer, I will always be able to figure out some way to solve it.
       csp-pre-survey-2017-q15:
         Agree: Agree
         Disagree: Disagree
@@ -7866,6 +7867,7 @@ en:
         Agree: Agree
         Disagree: Disagree
         Kids like me do computer science.: Kids like me do computer science.
+        People like me do computer science.: People like me do computer science.
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
@@ -7879,6 +7881,7 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q19:
+        Agree: Agree
         Disagree: Disagree
         I am going to like this computer science class.: I am going to like this computer science class.
         Neither: Neither
@@ -7895,7 +7898,9 @@ en:
         Slightly disagree: Slightly disagree
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
+        When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.: When I encounter a problem without an obvious answer, I am always able to figure out some way to solve it.
       csp-pre-survey-2017-q20:
+        Agree: Agree
         Disagree: Disagree
         I will feel comfortable in this computer science class.: I will feel comfortable in this computer science class.
         Neither: Neither
@@ -7905,8 +7910,10 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q21:
+        Agree: Agree
         Disagree: Disagree
         I know what I need to do to get good grades in computer science class.: I know what I need to do to get good grades in computer science class.
+        I know what I need to do to get good grades in this computer science class.: I know what I need to do to get good grades in this computer science class.
         Neither: Neither
         Slightly agree: Slightly agree
         Slightly disagree: Slightly disagree
@@ -7914,6 +7921,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q22:
+        Agree: Agree
         Disagree: Disagree
         I expect that at times I'll feel unsure whether I belong in this class.: I expect that at times I'll feel unsure whether I belong in this class.
         Neither: Neither
@@ -7923,6 +7931,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q23:
+        Agree: Agree
         Disagree: Disagree
         I think I will be treated with as much respect as other students in this computer science class: I think I will be treated with as much respect as other students in this computer science class
         Neither: Neither
@@ -7932,6 +7941,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q24:
+        Agree: Agree
         Disagree: Disagree
         I think I will feel like I can be myself in this computer science class: I think I will feel like I can be myself in this computer science class
         Neither: Neither
@@ -7941,6 +7951,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q25:
+        Agree: Agree
         Disagree: Disagree
         I feel like my opinions will be taken seriously in this computer science class: I feel like my opinions will be taken seriously in this computer science class
         Neither: Neither
@@ -7950,6 +7961,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q26:
+        Agree: Agree
         Disagree: Disagree
         I feel like it will be hard for people like me to to be accepted in this computer science class.: I feel like it will be hard for people like me to to be accepted in this computer science class.
         Neither: Neither
@@ -7975,6 +7987,7 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q29:
+        Agree: Agree
         Computer science is important for my future.: Computer science is important for my future.
         Disagree: Disagree
         Neither: Neither
@@ -7992,7 +8005,9 @@ en:
         Strongly agree: Strongly agree
         Strongly disagree: Strongly disagree
       csp-pre-survey-2017-q30:
+        Agree: Agree
         Disagree: Disagree
+        I expect that I will use computer science in my job.: I expect that I will use computer science in my job.
         I will use computer science in my job or career.: I will use computer science in my job or career.
         Neither: Neither
         Slightly agree: Slightly agree
@@ -8001,6 +8016,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q31:
+        Agree: Agree
         Disagree: Disagree
         I want to take more computer science classes in the future: I want to take more computer science classes in the future
         Neither: Neither
@@ -8010,6 +8026,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q32:
+        Agree: Agree
         Disagree: Disagree
         I often take a step back and think about what is most important to me.: I often take a step back and think about what is most important to me.
         Neither: Neither
@@ -8019,6 +8036,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q33:
+        Agree: Agree
         Disagree: Disagree
         Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.: Every person has the same ability to learn computer science, no matter what their gender, skin color, or background.
         Neither: Neither
@@ -8028,6 +8046,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q34:
+        Agree: Agree
         Disagree: Disagree
         Neither: Neither
         Slightly agree: Slightly agree
@@ -8037,6 +8056,7 @@ en:
         Strongly disagree: Strongly disagree
         agree: agree
       csp-pre-survey-2017-q35:
+        Agree: Agree
         Disagree: Disagree
         I worry that the teacher or students in this class could think that I am not as good at computer science as other students.: I worry that the teacher or students in this class could think that I am not as good at computer science as other students.
         Neither: Neither
