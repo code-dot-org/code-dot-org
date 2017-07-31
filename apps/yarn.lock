@@ -8204,15 +8204,15 @@ scandirectory@^2.5.0:
     safefs "^3.1.2"
     taskgroup "^4.0.5"
 
-scratch-audio@latest:
+scratch-audio@v0.1.0-prerelease.1501163867:
   version "0.1.0-prerelease.1501163867"
   resolved "https://registry.yarnpkg.com/scratch-audio/-/scratch-audio-0.1.0-prerelease.1501163867.tgz#c8ecf44f9c42f6ea7dcec3cea01c9727db64c8d3"
 
-scratch-blocks@latest:
+"scratch-blocks@ v0.1.0-prerelease.1501101334":
   version "0.1.0-prerelease.1501101334"
   resolved "https://registry.yarnpkg.com/scratch-blocks/-/scratch-blocks-0.1.0-prerelease.1501101334.tgz#cfa7fd7dd8dc0cd893f92ea9deaeec0c590a9765"
 
-scratch-render@latest:
+scratch-render@v0.1.0-prerelease.1500038694:
   version "0.1.0-prerelease.1500038694"
   resolved "https://registry.yarnpkg.com/scratch-render/-/scratch-render-0.1.0-prerelease.1500038694.tgz#8cbc793ff2f9543e8b32f6968e749effa679977f"
 
@@ -8220,7 +8220,7 @@ scratch-storage@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/scratch-storage/-/scratch-storage-0.2.0.tgz#cabcdeabf55b6a4b77401ef14bc8122aced0f3c5"
 
-scratch-vm@latest:
+scratch-vm@v0.1.0-prerelease.1501105826-prerelease.1501105849:
   version "0.1.0-prerelease.1501105826-prerelease.1501105849"
   resolved "https://registry.yarnpkg.com/scratch-vm/-/scratch-vm-0.1.0-prerelease.1501105826-prerelease.1501105849.tgz#de4fba044203965c59bfd7489314f6a6ddfbfdab"
 
