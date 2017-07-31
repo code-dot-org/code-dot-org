@@ -28,6 +28,27 @@ describe('CoursesSetUpMessage', () => {
       </div>
     ));
   });
+
+  it('renders as expected for a student', () => {
+    const wrapper = mount(
+      <CoursesSetUpMessage isRtl={false} isTeacher={false}/>
+    );
+    assert(wrapper.containsMatchingElement(
+      <div>
+        <div>
+          Start learning
+        </div>
+        <div>
+          Browse Code.org's courses to find your next challenge.
+        </div>
+        <Button
+          href={'/courses'}
+          color={Button.ButtonColor.gray}
+          text={'Find a course'}
+        />
+      </div>
+    ));
+  });
 });
 
 describe('SectionsSetUpMessage', () => {
