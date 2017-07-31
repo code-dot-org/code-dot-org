@@ -24,7 +24,7 @@
         %td= @user.email
         %td= @user.name
         %td= @user.user_type
-        %td= @user.last_sign_in_at.strftime('%F')
+        %td= @user.last_sign_in_at.try(:strftime, '%F')
         %td= @user.sign_in_count
         %td= @user.created_at.strftime('%F')
   = form_tag(action: 'grant_permission') do
@@ -55,6 +55,7 @@
   %button.btn{type: 'submit'}
     %i.fa.fa-search
 -if @users_with_permission
+  = page_header 'users', @users_with_permission, permitted_params: [:permission]
   %table.table.table-hover.table-condensed.table-auto-width
     %thead
       %th ID
@@ -71,6 +72,6 @@
           %td= user.email
           %td= user.name
           %td= user.user_type
-          %td= user.last_sign_in_at.strftime('%F')
+          %td= user.last_sign_in_at.try(:strftime, '%F')
           %td= user.sign_in_count
           %td= user.created_at.strftime('%F')
