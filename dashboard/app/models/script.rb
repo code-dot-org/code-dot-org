@@ -485,6 +485,10 @@ class Script < ActiveRecord::Base
     k5_course? || twenty_hour?
   end
 
+  def csf_international?
+    %w(course1 course2 course3 course4).include? name
+  end
+
   def cs_in_a?
     name.match(Regexp.union('algebra', 'Algebra'))
   end

@@ -13,18 +13,16 @@ Middle School
 
 Our middle school curriculum focuses on a broad introduction to computer science topics. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
 
-<center><h3> [CS Discoveries](#csd) | [CS Fundamentals - Express](#express) | [3rd Party Courses](#thirdparty) </h3></center>
-
 <br>
 <hr>
 
 <a name="csd"></a>
 
-## Computer Science Discoveries
+# <strong>Computer Science Discoveries</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
-<img src="/images/fit-400/csdiscoveries-montage.jpg">
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center' %>
 
 </div>
 
@@ -43,7 +41,7 @@ Computer Science Discoveries is designed for 7-9th grade students and can be tau
 
 <a name="express"></a>
 
-## Computer Science Fundamentals - Express
+# <strong>Computer Science Fundamentals - Express</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
@@ -55,7 +53,7 @@ Computer Science Discoveries is designed for 7-9th grade students and can be tau
 
 For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](https://studio.code.org), but at an accelerated pace designed for students ages 10-18.
 
-[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+[<button>Learn more about curriculum</button>](/educate/curriculum/express-course)
 
 [/col-50]
 
@@ -64,7 +62,7 @@ For a lightweight option that can be integrated as a unit in an existing technol
 <br>
 <hr>
 
-## For Science Classrooms
+# <strong>For Science Classrooms</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
@@ -85,7 +83,7 @@ Code.org has partnered with the award-winning [Project GUTS](http://www.projectg
 <br>
 <hr>
 
-## For Algebra Classrooms
+# <strong>For Algebra Classrooms</strong>
 
 Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. 
 
@@ -94,9 +92,14 @@ Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt 
 <br>
 <hr>
 
+[solid-block-header]
+
+Recommended courses from 3rd parties
+
+[/solid-block-header]
+
 <a name="thirdparty"></a>
 
-## 3rd Party Resources
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 

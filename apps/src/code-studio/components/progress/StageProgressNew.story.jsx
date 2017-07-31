@@ -120,7 +120,6 @@ export default storybook => {
             assessment2,
             assessment3,
           ], 4);
-          // experiments.setEnabled('progressBubbles', true);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
@@ -140,7 +139,6 @@ export default storybook => {
             unplugged,
             assessment1
           ], 0);
-          // experiments.setEnabled('progressBubbles', true);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
@@ -160,7 +158,6 @@ export default storybook => {
             unplugged,
             assessment1
           ], 1);
-          // experiments.setEnabled('progressBubbles', true);
           return (
             <div style={{display: 'inline-block'}} className="header_level">
               <Provider store={store}>
