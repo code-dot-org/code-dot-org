@@ -10,7 +10,7 @@
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -35,11 +35,12 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Instead of using a `repeat` loop to tell the farmer how many times to pick lettuce, now you can use a `while there is lettuce` block.  \",\"hint_id\":\"courseE_farmer_ramp12_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a020a12f0b19243351b87cce5b33f4f3/courseE_farmer_ramp11a.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You only need to move forward once to get to the lettuce.\",\"hint_id\":\"courseE_farmer_ramp12_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a8c42dc9a6647c101d8ea91bd9e6c5ae/courseE_farmer_ramp11a.mp3\"}]",
     "markdown_instructions": "Oh my!  These bundles of lettuce are so close together that the farmer doesn't know how many there are! \r\n\r\n___\r\n\r\nWe've added a new block to the toolbox called the `while there is lettuce` block.  Use this to pick lettuce only while there is still lettuce to pick! \r\n\r\n\r\n",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 21:32:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 20:14:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 21:32:13 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-12 20:14:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:32:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
