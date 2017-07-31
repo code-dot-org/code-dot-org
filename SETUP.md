@@ -88,7 +88,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
    1. Then `FLUSH PRIVILEGES;`
    1. And finally `exit;` to close out
 1. Read the following notes, then go back up to the overview and run the commands there. 
-   1.In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
+	1. In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
    1. If, for any reason, you are forced to interrupt `bundle exec rake install` before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
