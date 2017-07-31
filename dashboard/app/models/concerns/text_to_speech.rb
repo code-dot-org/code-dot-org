@@ -100,6 +100,18 @@ module TextToSpeech
     end
   end
 
+  def self.sanitize(text)
+    # redcarpet doesn't recognize XML blocks as block-level HTML, so any inlined
+    # Blockly blocks are treated as just a stream of raw HTML; that would
+    # normally be fine, except for <title> elements which include text content;
+    # because that text content is just treated as raw text, we end up
+    # including it in our final render.
+    #
+    # to avoid this, we simply and aggressively strip out any xml before passing
+    # the rest to redcarpet, despite the risk of invoking the wrath of Zalgo.
+    TTSSafeRenderer.render(text.gsub(/<xml>.*<\/xml>/m, ''))
+  end
+
   def tts_upload_to_s3(text)
     filename = tts_path(text)
     TextToSpeech.tts_upload_to_s3(text, filename)
