@@ -12,8 +12,9 @@ import {
   assignmentNames,
   assignmentPaths,
   updateSection,
-  removeSection
+  removeSection,
 } from './teacherSectionsRedux';
+import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
@@ -154,6 +155,7 @@ class SectionRow extends Component {
     sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
+    pegasusUrl: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -274,9 +276,11 @@ class SectionRow extends Component {
       sectionId,
       validGrades,
       validAssignments,
-      primaryAssignmentIds
+      primaryAssignmentIds,
+      pegasusUrl,
     } = this.props;
     const { editing, deleting } = this.state;
+    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     const section = sections[sectionId];
     if (!section) {
@@ -297,6 +301,10 @@ class SectionRow extends Component {
       }
     }
 
+    const manageSectionUrl = sectionFlow2017 ?
+      pegasusUrl(`/teacher-dashboard#/sections/${section.id}/`) :
+      `#/sections/${section.id}/`;
+
     return (
       <tr
         style={{
@@ -306,7 +314,7 @@ class SectionRow extends Component {
       >
         <td style={styles.col}>
           {!editing && (
-            <a href={`#/sections/${section.id}/`} style={styles.link}>
+            <a href={manageSectionUrl} style={styles.link}>
               {section.name}
             </a>
           )}
@@ -437,4 +445,5 @@ export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
+  pegasusUrl: url => pegasusUrl(state, url),
 }), { updateSection, removeSection })(SectionRow);
