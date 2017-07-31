@@ -81,13 +81,14 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     1. Node: `sudo apt install nodejs-legacy`
     1. yarn: `sudo npm install -g yarn@0.23.2`
 1. Run `gem install bundler -v 1.14.6`. Don't worry about using version 1.10.6 from the overview
-1. Before running `bundle install`, make sure to run `sudo apt install ruby2.3-dev`
+1. Run `sudo apt install ruby2.3-dev`
 1. Finally, configure your mysql to allow for a proper installation
    1. If you properly left all the default options blank, type `sudo mysql` to start it up
    1. Type `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';`
    1. Then `FLUSH PRIVILEGES;`
    1. And finally `exit;` to close out
-1. Notes: In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
+1. Read the following notes, then go back up to the overview and run the commands there. 
+   1.In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
    1. If, for any reason, you are forced to interrupt `bundle exec rake install` before it completes,
       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
