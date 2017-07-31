@@ -1370,6 +1370,8 @@ StudioApp.prototype.resizeToolboxHeader = function () {
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  } else if (this.scratch) {
+    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
