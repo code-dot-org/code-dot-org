@@ -17,20 +17,6 @@ import { scratchDefaultProject } from './scratchDefaultProject';
 
 const Scratch = window.Scratch = window.Scratch || {};
 
-/**
- * @param {Asset} asset - calculate a URL for this asset.
- * @returns {string} a URL to download a project asset (PNG, WAV, etc.)
- */
-const getAssetUrl = function (asset) {
-  const assetUrlParts = [
-    '/blockly/media/scratch/',
-    asset.assetId,
-    '.',
-    asset.dataFormat,
-  ];
-  return assetUrlParts.join('');
-};
-
 registerReducers(commonReducers);
 
 loadAppOptions().then(appOptions => {
@@ -59,6 +45,14 @@ loadAppOptions().then(appOptions => {
     studioApp().init(options);
   }
 
+  /**
+   * @param {Asset} asset - calculate a URL for this asset.
+   * @returns {string} a URL to download a project asset (PNG, WAV, etc.)
+   */
+  function getAssetUrl(asset) {
+    return studioApp().assetUrl(`media/scratch/${asset.assetId}.${asset.dataFormat}`);
+  }
+
   // Instantiate the VM.
   const vm = new VM();
   Scratch.vm = vm;
@@ -84,7 +78,7 @@ loadAppOptions().then(appOptions => {
 
   // Instantiate scratch-blocks and attach it to the DOM.
   const workspace = Blockly.inject('codeWorkspace', {
-    media: '/blockly/media/scratch-blocks/',
+    media: studioApp().assetUrl('media/scratch-blocks/'),
     zoom: {
       controls: true,
       wheel: true,
