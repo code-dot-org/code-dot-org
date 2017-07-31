@@ -60,19 +60,12 @@ export default connect(state => ({
   projectType: state.publishDialog.projectType,
 }), (dispatch, ownProps) => ({
   onClose() {
-    // Allow onClose to be overridden when passed explicitly as a prop
-    if (ownProps.onClose) {
-      ownProps.onClose();
-    } else {
-      dispatch(hidePublishDialog());
-    }
+    dispatch(hidePublishDialog());
   },
   onConfirmPublish(projectId, projectType) {
-    // Allow onConfirmPublish to be overridden when passed explicitly as a prop
-    if (ownProps.onConfirmPublish) {
-      ownProps.onConfirmPublish(projectId, projectType);
-    } else {
-      dispatch(publishProject(projectId, projectType));
-    }
+    dispatch(publishProject(projectId, projectType));
   },
-}))(Radium(PublishDialog));
+}), (stateProps, dispatchProps, ownProps) => (
+  // Allow stories and tests to override connected props.
+  Object.assign({}, stateProps, dispatchProps, ownProps)
+))(Radium(PublishDialog));
