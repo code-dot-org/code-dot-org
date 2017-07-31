@@ -46,6 +46,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {getStore} from '../redux';
+import mazeReducer from './redux';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -232,6 +233,12 @@ function rotate(data) {
   return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
 }
 
+Maze.getAppReducers = function () {
+  return {
+    maze: mazeReducer
+  };
+};
+
 /**
  * Initialize Blockly and the maze.  Called on page load.
  */
@@ -342,6 +349,7 @@ Maze.init = function (config) {
 
   var visualizationColumn = (
     <MazeVisualizationColumn
+      showCollectorGemCounter={Maze.subtype.isCollector()}
       showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
     />
@@ -1040,7 +1048,7 @@ function animateAction(action, spotlightBlocks, timePerStep) {
           break;
         default:
           timeoutList.setTimeout(function () {
-            studioApp().playAudio('failure');
+            studioApp().playAudioOnFailure();
           }, stepSpeed);
           break;
       }
@@ -1317,7 +1325,7 @@ Maze.scheduleFail = function (forward) {
     timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
         frame);
-      studioApp().playAudio('failure');
+      studioApp().playAudioOnFailure();
     }, stepSpeed * 2);
     timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
@@ -1372,7 +1380,7 @@ Maze.scheduleFail = function (forward) {
       }, stepSpeed * 2);
     }
     timeoutList.setTimeout(function () {
-      studioApp().playAudio('failure');
+      studioApp().playAudioOnFailure();
     }, stepSpeed);
   }
 };
@@ -1435,7 +1443,7 @@ function scheduleDance(victoryDance, timeAlloted) {
   }
 
   if (victoryDance) {
-    studioApp().playAudio('win');
+    studioApp().playAudioOnWin();
   }
 
   var danceSpeed = timeAlloted / 5;

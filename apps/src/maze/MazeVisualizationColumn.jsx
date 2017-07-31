@@ -1,26 +1,29 @@
-var React = require('react');
-var Visualization = require('./Visualization');
-var StepButton = require('./StepButton');
-var SpellingControls = require('./SpellingControls');
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
+import React from 'react';
+import Visualization from './Visualization';
+import StepButton from './StepButton';
+import SpellingControls from './SpellingControls';
+import CollectorGemCounter from './CollectorGemCounter';
+import GameButtons from '../templates/GameButtons';
+import BelowVisualization from '../templates/BelowVisualization';
 
-var MazeVisualizationColumn = function (props) {
+const MazeVisualizationColumn = function (props) {
   return (
     <span>
-      <Visualization/>
+      <Visualization />
       <GameButtons>
-        <StepButton showStepButton={props.showStepButton}/>
+        <StepButton showStepButton={props.showStepButton} />
+        {props.showCollectorGemCounter && <CollectorGemCounter />}
       </GameButtons>
-      {props.searchWord && <SpellingControls searchWord={props.searchWord}/>}
-      <BelowVisualization/>
+      {props.searchWord && <SpellingControls searchWord={props.searchWord} />}
+      <BelowVisualization />
     </span>
   );
 };
 
 MazeVisualizationColumn.propTypes = {
+  showCollectorGemCounter: React.PropTypes.bool,
   showStepButton: React.PropTypes.bool.isRequired,
   searchWord: React.PropTypes.string
 };
 
-module.exports = MazeVisualizationColumn;
+export default MazeVisualizationColumn;

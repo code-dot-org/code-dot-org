@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import $ from 'jquery';
 import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
@@ -12,10 +12,10 @@ import {
   beginEditingNewSection,
   beginEditingSection,
 } from './teacherSectionsRedux';
-import { loadClassroomList, importClassroomStarted } from './oauthClassroomRedux';
-import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
+import {loadClassroomList, importClassroomStarted} from './oauthClassroomRedux';
+import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 
@@ -23,7 +23,6 @@ const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
   [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
-const SECTION_FLOW_2017_KEY = 'section-flow-2017';
 
 const styles = {
   breadcrumb: {
@@ -45,6 +44,7 @@ class SectionsPage extends Component {
     // redux provided
     numSections: PropTypes.number.isRequired,
     studioUrl: PropTypes.string.isRequired,
+    provider: PropTypes.string,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
     newSection: PropTypes.func.isRequired,
@@ -62,11 +62,8 @@ class SectionsPage extends Component {
   };
 
   componentWillMount() {
-    if (experiments.isEnabled('googleClassroom')) {
-      this.provider = OAuthSectionTypes.google_classroom;
-    }
-    if (experiments.isEnabled('cleverClassroom')) {
-      this.provider = OAuthSectionTypes.clever;
+    if (experiments.isEnabled('importClassroom')) {
+      this.provider = this.props.provider;
     }
   }
 
@@ -118,7 +115,7 @@ class SectionsPage extends Component {
   };
 
   addSection = () => {
-    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingNewSection();
     } else {
       return this.props.newSection();
@@ -126,7 +123,7 @@ class SectionsPage extends Component {
   };
 
   handleEditRequest = section => {
-    if (experiments.isEnabled(SECTION_FLOW_2017_KEY)) {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingSection(section.id);
     }
   };
@@ -135,8 +132,9 @@ class SectionsPage extends Component {
     const { numSections } = this.props;
     const { sectionsLoaded } = this.state;
 
-    const showGoogleClassroom = experiments.isEnabled('googleClassroom');
-    const showCleverClassroom = experiments.isEnabled('cleverClassroom');
+    const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
+    const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
+    const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
       <div>
         <div style={styles.breadcrumb}>
@@ -188,7 +186,7 @@ class SectionsPage extends Component {
           studioUrl={this.props.studioUrl}
           provider={this.provider}
         />
-        <AddSectionDialog/>
+        <AddSectionDialog handleImportOpen={this.handleImportOpen}/>
         <EditSectionDialog/>
       </div>
     );
@@ -199,6 +197,7 @@ export const UnconnectedSectionsPage = SectionsPage;
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
   studioUrl: state.teacherSections.studioUrl,
+  provider: state.teacherSections.provider,
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
 }), {

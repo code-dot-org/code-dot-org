@@ -20,6 +20,7 @@ import reducer, {
   processedStages,
   setCurrentStageId,
   stageExtrasUrl,
+  setStageExtrasEnabled,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -296,6 +297,13 @@ describe('progressReduxTest', () => {
 
       const stateDefaultsDetail = reducer(initialState, setStudentDefaultsSummaryView(false));
       assert.strictEqual(stateDefaultsDetail.studentDefaultsSummaryView, false);
+    });
+
+    it('can enable stage extras', () => {
+      assert.strictEqual(initialState.stageExtrasEnabled, false);
+
+      const nextState = reducer(initialState, setStageExtrasEnabled(true));
+      assert.strictEqual(nextState.stageExtrasEnabled, true);
     });
 
     describe('setViewType', () => {
@@ -992,7 +1000,10 @@ describe('progressReduxTest', () => {
 
   describe('stageExtrasUrl', () => {
     it('derives url from state by stageId', () => {
-      const state = reducer(undefined, initProgress(initialPuzzlePageProgress));
+      const stateWithProgress = reducer(undefined,
+        initProgress(initialPuzzlePageProgress));
+      const state = reducer(stateWithProgress, setStageExtrasEnabled(true));
+
 
       assert.strictEqual(stageExtrasUrl(state, state.stages[0].id),
         "//localhost.code.org:3000/s/course3/stage/2/extras");
