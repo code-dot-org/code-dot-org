@@ -17,6 +17,17 @@
   header_contents_options[:loc_prefix] = "header_"
   header_contents_options[:page_mode] = request.cookies['pm']
 
+  sign_in_user = user_type && OpenStruct.new(
+    id: nil,
+    short_name: I18n.t("dashboard_#{user_type}"),
+    can_pair?: false
+  )
+
+  user_header_options = {}
+  user_header_options[:current_user] = sign_in_user
+  user_header_options[:show_pairing_dialog] = false
+  user_header_options[:loc_prefix] = 'user_header_'
+
   require 'cdo/hamburger'
 
   # A note on the use of language_dir_class below:
@@ -45,6 +56,7 @@
 
         #right
           #sign_in_or_user{:style=>'display:block; float: left; margin: .6875em 0 0 30px;'}
+            =view :user_header, user_header_options
           = view :hamburger, hamburger_options
 
       #clear{:style=>'clear:both'}

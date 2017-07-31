@@ -31,16 +31,6 @@ export const initHamburger = function () {
       });
     });
 
-    if (document.getElementById('sign_in_or_user').childElementCount === 0) {
-      $.ajax({
-        type: "GET",
-        url: '/dashboardapi/user_menu',
-        success: function (data) {
-          $('#sign_in_or_user').html(data);
-        }
-      });
-    }
-
     $("#hamburger #report-bug").click(function () {
       trackEvent("help_ui", "report-bug", "hamburger");
     });
