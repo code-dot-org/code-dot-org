@@ -39,6 +39,9 @@ class ProjectsController < ApplicationController
     flappy: {
       name: 'New Flappy Project'
     },
+    scratch: {
+      name: 'New Scratch Project'
+    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },
