@@ -4,7 +4,7 @@ import $ from 'jquery';
 import i18n from "@cdo/locale";
 import experiments from '@cdo/apps/util/experiments';
 import ContentContainer from '../ContentContainer';
-import SetUpMessage from './SetUpMessage';
+import {SectionsSetUpMessage} from './SetUpMessage';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
 import SectionsPage from '../teacherDashboard/SectionsPage';
@@ -124,12 +124,7 @@ const Sections = React.createClass({
             />
           )}
           {isTeacher && numTeacherSections === 0 && (
-            <SetUpMessage
-              type="sections"
-              codeOrgUrlPrefix={codeOrgUrlPrefix}
-              isRtl={isRtl}
-              isTeacher={isTeacher}
-            />
+            <SectionsSetUpMessage isRtl={isRtl}/>
           )}
           {isStudent && (
             <JoinSection
