@@ -111,7 +111,9 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
     window.onShowConfirmPublishDialog(project.id, projectType);
   };
 
-  function setProjectPublishedAt(projectId, publishedAt) {
+  // Make this method available to projects/index.js. This can go away
+  // once this file is moved to React.
+  window.setProjectPublishedAt = function (projectId, publishedAt) {
     for (var i = 0; i < $scope.projects.length; i++) {
       var project = $scope.projects[i];
       if (project.id === projectId) {
@@ -122,11 +124,7 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
 
     // Refresh the UI
     $scope.$apply();
-  }
-
-  // Make this method available to projects/index.js. This can go away
-  // once this file is moved to React.
-  window.setProjectPublishedAt = setProjectPublishedAt.bind(this);
+  };
 
   $scope.unpublishProject = function (project) {
     $http({

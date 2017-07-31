@@ -61,13 +61,11 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
-function onShowConfirmPublishDialog(projectId, projectType) {
-  getStore().dispatch(showPublishDialog(projectId, projectType));
-}
-
 // Make this method available to angularProjects.js. This can go away
 // once My Projects is moved to React.
-window.onShowConfirmPublishDialog = onShowConfirmPublishDialog.bind(this);
+window.onShowConfirmPublishDialog = function (projectId, projectType) {
+  getStore().dispatch(showPublishDialog(projectId, projectType));
+};
 
 function setupReduxSubscribers(store) {
   let state = {};
