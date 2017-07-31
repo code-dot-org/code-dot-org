@@ -671,6 +671,12 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
+  } else if (this.scratch) {
+    const workspace = Blockly.getMainWorkspace();
+    workspace.clear();
+
+    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
+    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
