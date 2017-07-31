@@ -1,6 +1,7 @@
 @import "color";
 @import "font";
 @import "style-constants";
+@import "responsive-visualization";
 
 $common_root: '/blockly/media/common_images/';
 
@@ -452,42 +453,6 @@ html[dir='rtl'] div#visualizationResizeBar {
 #belowVisualization {
   z-index: 1;
   position: relative;
-}
-
-@mixin visualization-width-height-original($width, $height, $visualizationOriginalWidth) {
-  $scale: $width / $visualizationOriginalWidth;
-
-  #visualization.responsive {
-    max-height: $height;
-    max-width: $width;
-  }
-  #visualizationColumn.responsive {
-    max-width: $width;
-  }
-  .small-footer-base.responsive {
-    max-width: $width;
-  }
-  .editor-column {
-    left: $width;
-  }
-  html[dir='rtl'] .editor-column {
-    right: $width;
-  }
-  html[dir='rtl'] body.readonly .editor-column {
-    right: 0px;
-  }
-  div#visualizationResizeBar {
-    left: $width;
-    line-height: $height;
-  }
-  html[dir='rtl'] div#visualizationResizeBar {
-    right: $width;
-  }
-  #visualization.responsive > * {
-    -webkit-transform: scale($scale);
-    -ms-transform: scale($scale);
-    transform: scale($scale);
-  }
 }
 
 @mixin visualization-width($width) {
