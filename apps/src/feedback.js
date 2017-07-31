@@ -280,8 +280,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     return;
   }
 
-  if (experiments.isEnabled('challengeDialog') &&
-      getStore().getState().pageConstants.isChallengeLevel) {
+  if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
     let onContinue = options.onContinue;
