@@ -11,6 +11,7 @@ import {
   ConfirmDelete,
   ConfirmSave
 } from '@cdo/apps/templates/teacherDashboard/SectionRow';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 
 const sections = {
   11: {
@@ -78,6 +79,7 @@ const defaultProps = {
   sections,
   updateSection: () => {},
   removeSection: () => {},
+  pegasusUrl: x => x,
 };
 
 describe('SectionRow', () => {
@@ -103,6 +105,22 @@ describe('SectionRow', () => {
 
       assert.equal(col.find('input').length, 1);
       assert.equal(col.find('input').props().defaultValue, 'my_section');
+    });
+
+    describe(`(${SECTION_FLOW_2017})`, () => {
+      beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
+      afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
+
+      it('has a link to the section when not editing', () => {
+        const wrapper = shallow(
+          <SectionRow
+            {...defaultProps}
+            pegasusUrl={x => `https://code.org${x}`}
+          />
+        );
+        const link = wrapper.find('td a').first();
+        assert.equal(link.prop('href'), 'https://code.org/teacher-dashboard#/sections/11/');
+      });
     });
   });
 
