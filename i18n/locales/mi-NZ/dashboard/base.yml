@@ -182,6 +182,8 @@ mi:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -190,6 +192,12 @@ mi:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Īmēra'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'I tukuna te tono'
     added_teacher: 'i tāpiritia a %{name} hei pouako mōu'
@@ -202,6 +210,7 @@ mi:
       section_not_found: "Kāore i kitea te wāhanga me te waehere '%{section_code}'."
       blank_code: "Tēnā tāurutia tētahi waehere wāhanga"
       cant_join_own_section: "Kia manawanui mai, tē taea e koe te hono atu ki tō wāhanga ake."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Whakamōhiotanga Code.org: Kāore a %{student_name} e whai hononga hei ākonga mōu ināianei.'
@@ -225,6 +234,7 @@ mi:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ mi:
         calculate: 'Calculate something'
         applab: 'Hangaia tētahi taupānga Taiwhanga Taupānga'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "Akoranga"
       project_gallery: "Project Gallery"
@@ -537,8 +548,13 @@ mi:
       title: "Taiwhainga"
       body: "Tirohia tētahi taiwhanga e whakaatu ana i ētahi taupānga, ētahi atahanga rehetoi kua waihangahia e ā mātou kaiwhakamahi"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Pakeke 13+"
+      cta: "Ako me pēhea"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Pakeke 13+"
       cta: "Ako me pēhea"
     frozen:

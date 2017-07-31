@@ -1839,6 +1839,222 @@
         \r
         * Make your header "Animals"
         stand out using the `<h1>` header element.
+      CSD U2 Heading Demo_markdown_instruction: |-
+        # Headings\r
+        \r
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\r
+        <details>\r
+        <summary>**What are headings?**</summary>\r
+        Headings
+        are the different sized section titles throughout a web page. Headings add
+        structure to your web page by breaking it up so its easier for a user to read.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I make different sized headings?**</summary>\r
+        Headings come in 6 different
+        sizes. So far you have primarily used the biggest one: &lt;h1&gt;. The number
+        '1' in the HTML tag designates that this is the biggest heading. The smallest
+        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags, which get smaller as the number gets larger.\r
+        </h1>\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        is HTML?**</summary>\r
+        HTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r
+        </details>\r
+        <details>\r
+        <summary>**What is an HTML
+        element?**</summary>\r
+        An HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
+        style="width:500px">\r
+        </details>\r
+        <details>\r
+        <summary>**What is an
+        HTML tag?**</summary>\r
+        An HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r
+        </details>\r
+        </div>\r
+        \r
+        So far, you've organized your content
+        into paragraphs.  Another way HTML allows you to organize your code is by
+        using **headings**.  A heading is a short piece of text that goes at the top
+        of a section of content, like a title.\r
+        \r
+        Do This:\r
+        * Find the headings
+        in the web page below and use the Inspector Tool to see the code that makes
+        them.\r
+        * Make sure you and your partner agree on what the tags do.\r
+        *
+        Change the code so that "Drawing" and "2 years" match the headings on
+        the rest of the page.
+      CSD U2 Heading Sizes_markdown_instruction: |
+        # Heading Sizes\r
+        \r
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\r
+        <details>\r
+        <summary>**What are headings?**</summary>\r
+        Headings
+        are the different sized section titles throughout a web page. Headings add
+        structure to your web page by breaking it up so its easier for a user to read.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I make different sized headings?**</summary>\r
+        Headings come in 6 different
+        sizes.  The most common heading is &lt;h1&gt; The number 1 in the HTML tag
+        designates that this is the biggest heading. The smallest heading is &lt;h6&gt;.
+        You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags
+        which get smaller as the number gets larger.\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        is HTML?**</summary>\r
+        HTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r
+        </details>\r
+        <details>\r
+        <summary>**What is an HTML
+        element?**</summary>\r
+        An HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
+        style="width:500px">\r
+        </details>\r
+        <details>\r
+        <summary>**What is an
+        HTML tag?**</summary>\r
+        An HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r
+        </details>\r
+        \r
+        </div>\r
+        \r
+        Headings can come in different sizes.  In
+        this page, there are six different sized headings, but they are all mixed
+        up.  Can you and your partner figure out how to fix them?\r
+        \r
+        \r
+        \r
+        Do
+        This:\r
+        * Use the inspector tool to figure out what makes the headings different
+        sizes\r
+        * Make sure you and your partner agree on what the different heading
+        tags do.\r
+        * Change the tags so that the headings are in order from biggest
+        to smallest, and the text says the correct size, as in the picture below.
+        \r
+        \r
+        <img src="https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png" style="width:100px" style="float:left">\r
+      CSD U2 Heading Test_markdown_instruction: |
+        # Headings and Paragraphs\r
+        \r
+        <div
+        style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px" markdown="1">\r
+        <details>\r
+        <summary>**What is
+        a paragraph element?**</summary>\r
+        Paragraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of
+        text from one word to a bunch of sentences. All of your text in your web page
+        should be contained in an HTML element (headings or paragraphs). Paragraphs
+        group together sets of sentences and put some space between that group of
+        text and the next group of text.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I create multiple paragraphs?**</summary>\r
+        Paragraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. To create more than one paragraph you will
+        want multiple sets of opening and closing `<p>` tags. For example\r
+        <pre>\r
+        \t&lt;p&gt;\r
+            \tThis
+        is a paragraph.\r
+            &lt;/p&gt;\r
+        \t&lt;p&gt;\r
+            \tThis is another
+        paragraph.\r
+            &lt;/p&gt;\r
+        </pre>\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        are headings?**</summary>\r
+        Headings are the different sized section titles
+        throughout a web page. Headings add structure to your web page by breaking
+        it up so its easier for a user to read.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I make different sized headings?**</summary>\r
+        Headings come in 6 different
+        sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
+        1 in the HTML tag designates that this is the biggest heading. The smallest
+        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags which get smaller as the number gets larger.\r
+        </h1>\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        is HTML?**</summary>\r
+        HTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r
+        </details>\r
+        <details>\r
+        <summary>**What is an HTML
+        element?**</summary>\r
+        An HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
+        style="width:500px">\r
+        </details>\r
+        <details>\r
+        <summary>**What is an
+        HTML tag?**</summary>\r
+        An HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r
+        </details>\r
+        \r
+        </div>\r
+        \r
+        The author of this page added in
+        a lot of content, but did not think about structure.  All of the text is mashed
+        together.\r
+        \r
+        Do This:\r
+        * Look through the content with your partner
+        and decide what you think the best structure should be.\r
+        * Use your heading
+        and paragraph tags to code the structure into the page.\r
       CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:\n250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Hvernig
         bæti ég við myndum?**</summary>\\r\nMeð\n`<img>` taginu getur þú birt myndir
@@ -3120,8 +3336,8 @@
         styles.\r
           * Choose from `dotted`, `dashed`, `solid`, and `double`\r
         *
-        Put a border on another type of page element, such as one of the headers or
-        the paragraphs.
+        Put a border on another type of page element, such as one of the headings
+        or the paragraphs.
       CSD U2 layout style borderradius_markdown_instruction: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -4017,7 +4233,7 @@
         </details><details>\r
         <summary>**How does
         the code work?**</summary>\r
-        Here is the code that is making the `h1` header
+        Here is the code that is making the `h1` heading
         red:\r
         \r
         <pre>h1 {\r
@@ -4084,8 +4300,8 @@
         \r
         * Find the code
         in the style sheet (click on "style.css" in the files list) that is making
-        the h1 header red.\r
-        * Change the code for the color of the h1 header from
+        the h1 heading red.\r
+        * Change the code for the color of the h1 heading from
         `red` to a different color.
       CSD U2 text style h3_markdown_instruction: |-
         <div style="float: right; height:
@@ -4196,9 +4412,9 @@
         * Find the CSS rule-set in
         the style sheet that determines the styles for the h1 tag.\r
         * Using the
-        same pattern, write a new CSS rule-set that will determine the styles for
-        the h3 tag.\r
-        * Add code to make the text in all h3 tags a different color.
+        same pattern, write a new CSS rule-set that will determine the style for the
+        h3 tag.\r
+        * Add code to set a different color for the h3 tags.
       CSD U2 text style sample_markdown_instruction: |
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
@@ -31040,6 +31256,23 @@
         allowfullscreen></iframe>
 
         What did you think of the video?
+      Overworld Chop Tree_markdown_instruction: |-
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the `destroy` block
+        command to chop it down.
+      Overworld House Frame Chosen_markdown_instruction: |-
+        Build the rest of your
+        house from any material you'd like. The `repeat` command will come in handy.
+      Overworld Move to Sheep_markdown_instruction: |-
+        Add a second `move forward`
+        command to reach the sheep.
+      Overworld Place Wall_markdown_instruction: |-
+        Every house starts with a wall.
+        Build the first part of your house by putting the `place` and `move forward`
+        commands inside the repeat loop.
+      Overworld Shear Sheep_markdown_instruction: |-
+        Sheep-shearing time! Use the `shear`
+        command to gather wool from both sheep.
       PDAlg 13-16 Sam Extension Puzzle_markdown_instruction: |-
         Add a second parameter
         to `onscreen?` for Sam's y coordinate and update the function so it keeps
@@ -52583,6 +52816,15 @@
         object you pass `updateRecord` has an ID that matches a record in the table.\r
         </details>\r
         \r
+      Underground Avoiding Lava_markdown_instruction: |-
+        Lava is hiding beneath some
+        of these blocks, which you'll need to cover up before moving forward. An
+        `if` command will come in handy here. Add a `move forward` command in the
+        correct place to mine these blocks.
+      Underground If Statements_markdown_instruction: |-
+        Now things are getting tricky.
+        Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place
+        cobblestone over any lava you uncover.
       Unit 2 RGB Mapping_markdown_instruction: |
         # RGB Colors\r
         \r
@@ -53956,6 +54198,79 @@
         Færðu Laurel að fjársjóðnum og notaðu `taka` til að taka hann upp.\r
         \r
         Taktu eina fjársjóðshrúgu til að ljúka áfanganum.
+      course1_artist_loops_challenge2_markdown_instruction: Komum í leik! Teiknaðu
+        eins mörg X og þú getur! Nærðu að hafa 3 í röð?
+      course1_artist_loops_challenge3_markdown_instruction: Tíst tíst! Getur þú hjálpað
+        mér að búa til tvö fuglahús?
+      course1_artist_loops_challenge4_markdown_instruction: |-
+        Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?
+      course1_maze_debugging_challenge1_markdown_instruction: |-
+        Debug this level.
+        Remove the extra blocks, and add the missing blocks. Get the bird to the pig!
+      course1_maze_debugging_challenge2_markdown_instruction: |-
+        Debug this level.
+        These are the right blocks, but they're in the wrong order!
+      course1_maze_seq_challenge2_markdown_instruction: "Þú mátt aðeins fara mest
+        fjórum sinnum í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
+      course1_playlab_events_challenge1_markdown_instruction: |-
+        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
+        \r
+        \r
+        Í þessari þraut skaltu gæta þess að smella til að fá vísbendingar! Vísbendingarnar geta leitt þig gegnum verkefnið skref fyrir skref!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      course1_playlab_events_challenge2_markdown_instruction: |-
+        Höldum partí!
+        Láttu hvern vin minn gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað annað mun gerast?\r
+        \r
+        \r
+        \r
+        Gættu þess að smella á vísbendingar í þessari þraut! Vísbendingarnar stinga upp á ýmsu skemmtilegu til að prófa!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      course2_artist_nestedLoops_challenge1_markdown_instruction: |-
+        Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Bæði formin hafa **50 díla hliðar**\r
+        - *Átthyrningarnir* eru gerðir með **45 gráðu** snúningum.\r
+        - *Þríhyrningarnir* eru gerðir með **120 gráðu** snúningum.
+      course2_artist_nestedLoops_challenge2_markdown_instruction: |-
+        Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Fyrsta innri lykkjan á að búa til átthyrning.\r
+        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        - Þriðja innri lykkjan á að búa til ferning.
+      course2_artist_prog_challenge1_markdown_instruction: Teiknaðu klefa fyrir hvert
+        dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
+      course2_artist_prog_challenge2_markdown_instruction: "*Teiknum skínandi stjörnu
+        á næturhimni!*"
+      course2_bee_conditionals_challenge1_markdown_instruction: Safnaðu öllum blómasafanum
+        eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til
+        hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
+      course2_bee_conditionals_challenge2_markdown_instruction: Safnaðu öllum blómasafanum
+        og búðu til allt hunangið. Þú getur safnað öllum blómasafanum í einu blómi
+        með því að nota `meðan blómasafi` lykkju.
+      course2_collector_loops_challenge2_markdown_instruction: Leitum að fjársjóði
+        - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða.
+        Náðu öllum fjársjóðunum!
+      course2_collector_prog_challenge1_markdown_instruction: "*Gáðu vandlega! Getur
+        þú safnað öllum **10** fjársjóðunum?*"
+      course2_collector_prog_challenge2_markdown_instruction: "*Hér má finna **20**
+        fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*"
+      course2_harvester_loops_challenge1_markdown_instruction: Safnaðu öllum maísnum.
+      course2_harvester_loops_challenge2_markdown_instruction: |-
+        Safnaðu öllu kálinu.
+        Forðastu tré og tún!
+      course2_maze_programming_challenge1_markdown_instruction: '*"Svínið er í felum!
+        Getur þú hjálpað mér að finna leið?"*'
+      course2_maze_programming_challenge2_markdown_instruction: Stundum er fleiri
+        en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur
+        en áfram!
+      course2_maze_seq_challenge2_markdown_instruction: "Þú mátt aðeins fara mest
+        fjórum sinnum í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
       course2_playlab_stage17_11_markdown_instruction: |
         Búðu til eigin sögu. Þegar þú hefur klárað hana, getur þú smellt á Ljúka til að leyfa vinum að prófa hana í símunum sínum.\r
         <br/>\r
@@ -54143,6 +54458,14 @@
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseA_playlab_events_challengeClone_markdown_instruction: |-
+        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
+        \r
+        \r
+        Í þessari þraut skaltu gæta þess að smella til að fá vísbendingar! Vísbendingarnar geta leitt þig gegnum verkefnið skref fyrir skref!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
       courseB_artist_loops10_markdown_instruction: |-
         Notaðu það sem þú hefur lært til að teikna mynd af því sem þú heldur að listamaðurinn hafi séð þegar hann kom heim.\r
         \r
@@ -54236,6 +54559,12 @@
         \r
         Gættu þín á veggjum og kössum!\r
         \r
+      courseB_starWars_prog10_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_
+      courseB_starWars_prog11_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going!"_
       courseB_starWars_prog2_markdown_instruction: |
         ![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif) Hjálpaðu nú
         BB-8 að safna **öllum** glóandi brotamálminum!  \r
@@ -54248,6 +54577,26 @@
         að safna öllum glóandi brotamálminum! \r
         Gættu þín á veggjum og kössum! \r
         \r
+      courseB_starWars_prog4_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Get it, BB-8!"_
+      courseB_starWars_prog5_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_
+      courseB_starWars_prog6_markdown_instruction: |
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_\r
+      courseB_starWars_prog7_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go get it!"_
+      courseB_starWars_prog8_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\r
+        \r
+        **Challenge**: Gather all the scrap metal.
+      courseB_starWars_prog9_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_
       courseC_PlayLab_events8_markdown_instruction: |-
         Can you have Waddles (actor
         1) say "Ouch!" and play a "hit" sound if he runs into Chomp? \r
@@ -54403,11 +54752,12 @@
         Náðu öllum fjársjóðunum!
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r
+        the Adventurer! Move her around and get as much treasure as you can. Use the
+        `collect` block to pick up the treasure!\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        Drag blocks into the workspace
+        and try to figure out how to get treasure.  Get at least one item to pass
+        this level.
       courseC_collector_prog2_markdown_instruction: |-
         Move Laurel to the treasure,
         then use `collect` to pick it up.
@@ -54460,6 +54810,76 @@
         þú safnað öllum **10** fjársjóðunum?*"
       courseC_collector_prog_challenge2_markdown_instruction: "*Hér má finna **20**
         fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*"
+      courseC_flappy_events1_markdown_instruction: |-
+        Attach the `flap a normal amount`
+        block to the `when click` event, then press "Run".   \r
+        \r
+        ---\r
+        \r
+        Click
+        or tap on the play space to move Flappy to the target.
+      courseC_flappy_events10_markdown_instruction: |-
+        Create your own Flappy game!
+        \r
+        \r
+        You can change the visuals and the rules...even the gravity! \r
+        When
+        you're done, click "Finish" to share with friends on their phones.
+      courseC_flappy_events2_markdown_instruction: |-
+        The `when run` event allows you
+        to run code as soon as your game starts.  \r
+        \r
+        Try adding a block that
+        sets the level speed when the "Run" button is pressed. \r
+        \r
+        ---\r
+        \r
+        Play
+        the game and flap to the target to continue.
+      courseC_flappy_events3_markdown_instruction: |-
+        Now we've added the ground.
+        \r
+        \r
+        Attach the `end game` block to the `when hit the ground` event. \r
+        \r
+        ---\r
+        \r
+        Play
+        the game and crash the bird into the ground to continue.
+      courseC_flappy_events4_markdown_instruction: |-
+        Flappy will fly right through
+        obstacles unless you write code to make him crash. \r
+        \r
+        Attach a block
+        to the `when hit an obstacle` event so that the game ends when Flappy crashes
+        into the first set of pipes.
+      courseC_flappy_events5_markdown_instruction: |-
+        We've added a scoreboard to
+        count points when Flappy passes obstacles.  \r
+        \r
+        Add a block to the `when
+        pass an obstacle` event that scores a point, then press "Run" to fly Flappy
+        through the first set of pipes.
+      courseC_flappy_events6_markdown_instruction: |-
+        Click the down arrow inside of
+        the `flap a normal amount` block to pick a different flapping power.  \r
+        \r
+        See
+        if you can still score a point after making Flappy flap either a smaller or
+        larger amount each time you click.
+      courseC_flappy_events7_markdown_instruction: |-
+        Next, try changing the scene
+        by attaching a block to the `when run` event.
+      courseC_flappy_events8_markdown_instruction: |-
+        You can set the background under
+        any event, not just when the game starts. \r
+        \r
+        Try setting a **random**
+        scene when other events happen...for example, when passing an obstacle.
+      courseC_flappy_events9_markdown_instruction: |-
+        To mix things up, instead of
+        ending the game when Flappy hits an obstacle, try setting the score back to
+        0.
       courseC_harvester_loops1_markdown_instruction: |-
         Loops can be used to repeat
         more than moves.  \r
@@ -54611,8 +55031,54 @@
         <img src="https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif"
         style="border-radius:6px; float:left; margin: 0 10px 10px 0;"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \r
         Gættu þín á veggjum og kössum!  \r
+      courseC_starWars_loops10_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r
+
+        _"Go BB-8!"_\r
+        \r
+        You are doing great! Keep it up!
+      courseC_starWars_loops11_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going, BB-8!"_\r
+        \r
+        You are almost there! This time, choose any
+        path you like!
+      courseC_starWars_loops2_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_\r
+        \r
+        To get all the scrap metal, try creating a loop that
+        uses only one block inside of a `repeat` block.
+      courseC_starWars_loops4_markdown_instruction: |
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\r
+        \r
+        In this puzzle, two `repeat` loops will help
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!\r
+      courseC_starWars_loops5_markdown_instruction: |
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_\r
+      courseC_starWars_loops6_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_\r
+        \r
+        Loops even work with more than one block
+        inside!  Can you loop this sequence?
+      courseC_starWars_loops7_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_\r
+        \r
+        Can you try to get all the scrap metal using just
+        one loop? Try programming it all out then finding the repeating code to put
+        in a loop.
       courseC_starWars_loops8_markdown_instruction: "**Áskorun:** Notaðu hugmyndir
         úr síðustu þrautum saman til að ljúka þessu stigi."
+      courseC_starWars_loops9_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going!"_\r
+        \r
+        Use what you have learned to pick up all of the scrap
+        metal!
       courseD_artist_binary1_markdown_instruction: |-
         We've provided you with a grid
         of "pixels" that you can walk through and make designs by turning on only
@@ -54870,6 +55336,18 @@
       courseD_artist_project4_markdown_instruction: |-
         Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \r
         Prófaðu það og sjáðu hvað kemur út!
+      courseD_artist_project4a_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?\r
       courseD_artist_project5_markdown_instruction: Virkjaðu sköpunargáfuna með formin
         og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?
       courseD_artist_ramp11_markdown_instruction: |-
@@ -55009,7 +55487,7 @@
         allt hunangið?
       courseD_bee_nestedLoops1_markdown_instruction: |-
         *"This is going to **BEE**
-        great!"**\r
+        great!"*\r
         \r
         Help the bee collect all of the nectar.
       courseD_bee_nestedLoops2_markdown_instruction: |-
@@ -55356,23 +55834,24 @@
       courseD_playLab_cond1_markdown_instruction: |-
         To start our game, Pirate Pegleg
         (actor 1) needs to be able to get around in all directions.   Connect the
-        blocks to the correct events to get Pegleg moving.\r
+        blocks to the correct events to get Pegleg moving.  \r
         \r
-        Get Pegleg to the
-        dragon to solve this puzzle.
-      courseD_playLab_cond2_markdown_instruction: "Time to add points!  Give Pegleg\n(actor
-        1) a point when he makes it to the dragon (actor 2). "
-      courseD_playLab_cond3_markdown_instruction: |-
+        ---\r
+        Get Pegleg
+        to the dragon to solve this puzzle.
+      courseD_playLab_cond2_markdown_instruction: "Time to add points!  \\r\n\\r\nEdit\nthe
+        code to give Pegleg (actor 1) a point when he makes it to the dragon (actor\n2). "
+      courseD_playLab_cond3_markdown_instruction: |
         It's time to use what we've
-        learned about conditionals to make this game amazing. This challenge has two
-        parts:\r
+        learned about conditionals to make this game amazing. \r
         \r
-          1) Use a `repeat forever` loop to make the dragon (actor 2)
-        change between random emotions every second.  \r
-         \r
-          2) Add code so that
-        when Pegleg gets to the dragon, he gets two points *if* the dragon is happy.
-        Otherwise, he should get only one point added to his score.
+        Use a `repeat
+        forever` loop to make the dragon (actor 2) change between random emotions
+        every second.  \r
+      courseD_playLab_cond3a_markdown_instruction: |-
+        Add code so that when Pegleg
+        gets to the dragon, he gets two points *if* the dragon is happy. Otherwise,
+        he should get only one point added to his score.
       courseD_playLab_cond3b_markdown_instruction: Notaðu `endurtaka endalaust` lykkju
         til að láta drekann (leikmann 2) færast stöðugt upp og niður! Settu inn `bíða
         1 sekúndu` kubb á milli `færa upp` og `færa niður` kubbanna fyrir drekann.
@@ -55388,11 +55867,11 @@
         Add
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: |-
+      courseD_playLab_cond6_markdown_instruction: |
         Wow, this game is hard to win!\r
         \r
         Let's
-        customize this game to make it more fun.  This challenge has three parts:\r
+        customize this game to make it more fun.  This challenge has two parts:\r
         ___\r
         \r
         1)  Slow
@@ -55403,11 +55882,13 @@
         beneath the line of octopuses (greater than 225 pixels down).  If he is, set
         the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
         pirate.  \r
+      courseD_playLab_cond6a_markdown_instruction: |-
+        We don't want the pirate to
+        stay in the "safe zone" too long!  \r
         \r
-        3)  We don't want the pirate to stay in the "safe zone"
-        too long! Add code to the `if` statement above so that if the pirate is in
-        the safe zone, the program will wait one second, then deduct a point as long
-        as he stays beneath the octopus line.
+        Add code to the `if` statement
+        above so that if the pirate is in the safe zone, the program will wait one
+        second, then deduct a point as long as he stays beneath the octopus line.
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
       courseE_artist_concept1_markdown_instruction: |-
         Recreate this image. \r
@@ -55638,8 +56119,8 @@
         \r
         Help the farmer get to the pumpkin and pick it.
       courseE_farmer_functions10b_markdown_instruction: |-
-        Figure out which function
-        to use and which one to delete, then solve this puzzle!
+        Use your new function twice
+        to solve this puzzle.
       courseE_farmer_functions11_predict_markdown_instruction: |-
         Figure out which
         function to use and which one to delete, then solve this puzzle!
@@ -55827,73 +56308,33 @@
         Smelltu á vísbendingarnar til að fá hugmyndir!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
-        have learned! Let's put it together to make a game, step by step. \r
+        have learned! Let's make a game step by step.\r
         \r
-        We've
-        put these blocks in your toolbox. Choose a random background, then pick an
-        actor to be your game's hero.\r
-        \r
-        ![](https://images.code.org/745931ce34b3c47de19c36009e4a9c48-image-1471464938470.14.47
-        PM.png)
+        Using new blocks in
+        your toolbox, choose a new background, then pick an actor to be in your game.
       courseE_playLab_scaffold2_markdown_instruction: |-
-        Now let's get things moving!
-        \r
-        \r
-        Use event handlers and actions to make your hero move. Get the targets
-        to complete this puzzle.\r
-        \r
-        ___\r
-        \r
-        We've added these blocks to your
-        tool box to help you.\r
-        \r
-        ![](https://images.code.org/6216c0559cfae16005ffb53e6532473b-image-1471472994205.23.54%20PM.png)
+        Use new blocks like event
+        handlers and actions to make your player move according to the arrows on your
+        keyboard. Get the player to the targets to complete this puzzle.
       courseE_playLab_scaffold3_markdown_instruction: |-
-        Now that your game has a hero,
-        add two or more additional actors to your game and make them move. \r
+        Let's add some more characters
+        to your game!\r
         \r
-        Do
-        you want to have an actor patrol back and forth or chase your main character?
-        \r
-        Try using a these new blocks to bring your game to life!\r
-        \r
-        ![](https://images.code.org/04951f51ad2fda34531c335ef10577ae-image-1497992195771.png)
+        Use the `set actor` block to add more characters then
+        move to the goal to complete this puzzle.
       courseE_playLab_scaffold4_markdown_instruction: |-
-        Getting the actors moving
-        is a great step, but we need to do more to make this feel like a real game.
-        A simple way to do this is to add or remove points when actors collide with
-        things. Find some interesting ways to change the score in your game.\r
-        <hr/>\r
+        Multiple characters and getting
+        the actors moving is a great start to a game, but we need to do more to make
+        this feel like a real game. Let's add a score!\r
         \r
-        Get
-        the score to show something other than 0 to continue.\r
-        \r
-        ___\r
-        \r
-        *Don't
-        expect to get this right on the first try. Keep testing your game as you code.
-        You'll not only want a game that works, but one that is fun to play!*\r
-        ___\r
-        We've
-        added these blocks to your toolbox:\r
-        \r
-        ![](https://images.code.org/ad0df96aa91c89e3d903dce2fe19517f-image-1472070105051.20.55
-        PM.png)
+        Use the new blocks
+        like the `when actor touches` to change the score. Score 10 points to complete
+        this puzzle.
       courseE_playLab_scaffold5_markdown_instruction: |-
         Great job! You have all the
         basic components of a working game. Now spend some time making sure the game
         works the way you want. Include a way to win or lose your game, then play
-        until you meet one of those conditions.\r
-        ___\r
-        *Don't forget: Keep testing
-        your game as you code. You'll not only want a game that works, but one that
-        is fun to play!*\r
-        ___\r
-        Your toolbox has been re-organized to make it easier
-        to find what you need. We've also added these blocks (and more):\r
-        \r
-        ![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57
-        PM.png)
+        until you meet one of those conditions.
       courseE_playLab_scaffold6_markdown_instruction: |-
         You've finished! Now you
         can play your game or share it with your friends and classmates!
@@ -57634,6 +58075,12 @@
          \r
         \r
         \r
+      csp-pre-survey-2017-q36-e_markdown_instruction: |-
+        I worry because of another
+        reason:
+      csp-pre-survey-2017-q38_markdown_instruction: |-
+        If yes, what computer science
+        course(s) had you taken before your current computer science class?
       csp-thursday-facilitation_markdown_instruction: |-
         # Thursday Facilitation Reflection\r
         \r
@@ -58543,6 +58990,232 @@
         submission, they can elevate to an instructor for review. You will always
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+      csp_socialBelonging_control_markdown_instruction: |-
+        \r
+        ## Starting out in Computer
+        Science\r
+        \r
+        Computer science has changed the way we communicate with each
+        other, make art and movies, grow food, and even treat illnesses. Everyone
+        can learn computer science and make a difference.\r
+        \r
+        ***\r
+        \r
+        ## Quotes
+        from students\r
+        \r
+        Still, we understand that taking a computer science course
+        can be difficult at first. Here are a few student quotes describing their
+        strategies and tips for taking this course. **Please read the quotes carefully
+        and respond to the prompt below**. \r
+        \r
+        <div style="background-color:
+        #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:
+        0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size: 70px; margin-bottom:
+        -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p style="line-height:
+        1.5; margin-left: 10px; margin-right: 30px; ">\r
+        In the first week of this
+        class I was falling behind quickly. There was a lot of new information to
+        learn. To keep up, I had to find a better way to study. I tried to find connections
+        between the material and what I already know. That really helped me remember
+        things. I also tried to not overdo it. I started taking small breaks in-between
+        lessons and when I came back I checked if I still remembered what I was studying
+        before. It helped a lot\r
+         </p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">Some days I felt tired and would drift away in my thoughts. It was
+        a real problem because I would miss so much of what we were learning. So I
+        started going to bed a bit earlier and I tried my best to pay attention. At
+        the end of every class our teacher summarized\r
+         what we learned that day
+        and that was really helpful. I started taking more notes because that also
+        kept my mind from wandering. These little tricks got me through the class
+        and I learned more.</p>\r
+        <p style="font-size: 70px; text-align: right;
+        opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I\r
+
+        can be pretty forgetful sometimes and it was a problem in this class. I think
+        it's because we did so much on the computer. For my other classes I take
+        notes on paper and read through them again at home. So the trick that I found
+        helpful in this class was to take notes on paper anyway and to test myself
+        about the concepts. I wasn't sure if it would work at first, but I think
+        it ended up being a big help.</p>\r
+        \r
+        <p style="font-size: 70px; text-align:
+        right; opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size:
+        125%;  font-style: italic; margin-right: 30px; margin-top: -20px">\r
+        Sam
+        J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p style="font-size: 125%">Now
+        consider the strategies and insights for how to learn best that you just read.
+        </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        <p style="font-size: 150%;
+        color: black; font-weight: bolder; line-height: 1.5">What are your own strategies
+        and insights about how to learn best? And, how are they similar or different
+        to the ones that you just heard about from other students? </p>\r
+        \r
+        *Please
+        write a short paragraph. Don't worry about spelling, grammar, or how well
+        written it is.*
+      csp_socialBelonging_intervention_markdown_instruction: |
+        ## Starting out in
+        Computer Science\r
+        \r
+        Computer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        **Everyone can learn computer science and make a difference:** It really does
+        not matter how much or little experience you have with computer science already,
+        or what age, gender, or skin color you have.\r
+        \r
+        ***\r
+        \r
+        ## Quotes from
+        students\r
+        \r
+        Still, we understand that it can be daunting at first to take
+        a computer science course. So here are a few student quotes describing their
+        experiences. **Please read the quotes carefully and respond to the prompt
+        below**. \r
+        \r
+        \r
+        <div style="background-color: #d9eff7; border-radius:
+        40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px; ">\r
+        At the start of the class I worried that I was different from
+        the other students. I wasn't sure I fit in – I \tworried that I couldn’t
+        do it and that the teacher and other students would look down on me. A few
+        days after I started, I realized that almost everyone who takes the class
+        isn’t sure if they fit in at first. It's something everyone goes through.
+        Now it seems ironic – everybody feels different at first, when really we're
+        all going through the same thing.</p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">I loved this computer science class! I've met some cool people and
+        learned a lot. But it was a difficult transition. The first few days I was
+        intimidated and not sure why I should learn computer science. Why would I
+        need it? But then we talked in class about things I’m interested in, like
+        music and design, and I realized that I can learn how to do cool new things.
+        I had the wrong picture in my head about CS, it’s actually very creative!
+        I just had to be patient and find ways to connect the class to what I really
+        care about.</p>\r
+        <p style="font-size: 70px; text-align: right; opacity:
+        0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I didn’t
+        have any experience with code, and I worried that I was not prepared for this
+        class. Other students did some programming at home or in summer camps. On
+        my first day, I was so nervous about getting bad grades and looking stupid.
+        But then, I started to feel better – I talked with other students and enjoyed
+        the class more. I became more comfortable asking for help when I had a problem.
+        It turned out that the students with CS experience had the same issues as
+        me! Hah, it took some time, but now I really feel like I belong in CS class.</p>\r
+        \r
+        <p
+        style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%;  font-style: italic; margin-right:
+        30px; margin-top: -20px">\r
+        Sam J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p
+        style="font-size: 125%"> Each of these students had similar experiences
+        and realizations. </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        \r
+        <p style="font-size:
+        150%; color: black; font-weight: bolder; line-height: 1.5">Why do you think
+        the students worry at first about whether they belong in the class? How did
+        they become comfortable with it over time?</p>\r
+        \r
+        *Please write a short
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
         \r
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy

@@ -188,6 +188,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: "你的學習小組："
@@ -196,6 +198,12 @@
     confirm:
       remove: "你確定要退出這個學習小組？"
     remove: "（移除學習小組）"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "電子信箱"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "已發送邀請"
     added_teacher: "%{name} 已成為你的老師"
@@ -208,6 +216,9 @@
       section_not_found: "找不到代碼是 %{section_code} 的學習小組。"
       blank_code: "請輸入學習小組代碼"
       cant_join_own_section: "抱歉, 你不能加入你自己的學習小組。"
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
@@ -231,6 +242,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -245,6 +258,7 @@
         calculate: Calculate Something
         applab: "製作一個 App Lab app"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: "主頁"
       courses: "課程"
       project_gallery: "專案作品集"
@@ -610,6 +624,12 @@
       title: Game Lab（測試版）
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: "年齡 13+"
+      cta: "學習如何做"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: "年齡 13+"
       cta: "學習如何做"
     frozen:

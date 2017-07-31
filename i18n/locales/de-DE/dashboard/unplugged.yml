@@ -174,7 +174,7 @@ de:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Aktivität ohne Computer
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktivität ohne Computer
         desc: Today you will learn about what to do if someone is being mean online.
@@ -182,7 +182,7 @@ de:
         title: Aktivität ohne Computer
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Aktivität ohne Computer
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Aktivität ohne Computer
@@ -190,3 +190,69 @@ de:
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Real-Life-Algorithmen: Pflanze Samen'
+        desc: Diese Lektion behandelt die Anwendung von Algorithmen im Alltag, zum Beispiel beim Pflanzen eines Samens. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      courseA_unplugged_happyMaps:
+        title: Glücklich Karten
+        desc: Die Schüler erstellen einfache Algorithmen (Gruppen von Anweisungen), um eine Figur mit einem einzigen Befehl durch ein Labyrinth zu steuern.
+      courseA_unplugged_goingPlacesSafely:
+        title: Sicher unterwegs
+        desc: Das Internet ist ein wunderbarer, aber auch gefährlicher Ort. Lehrer erklären, wie Schüler sicher im Internet navigieren.
+      courseABC_unplugged_bigEvent:
+        title: Der große Event
+        desc: Schüler lernen das Programmierkonzept „Ereignis“ kennen. Dies ist eine Aktion, deren Auftreten der Computer ständig überwacht. Der Lehrer drückt auf Tasten auf einer Fernbedienung aus Papier und die Schüler reagieren auf die verschiedenen Tasten.
+      courseB_unplugged_digitalFootprint:
+        title: Dein digitaler Fußabdruck
+        desc: Die Lehrer vermitteln den Schülern, dass man einen digitalen Fußabdruck oder eine Fährte hinterlässt, wenn man Informationen über sich selbst ins Internet stellt, und erläutern mögliche Konsequenzen.
+      courseC_unplugged_buildingAFoundation:
+        title: Grundlagen aufbauen
+        desc: Die Schüler nutzen bereitgestellte Materialien, um eine Struktur zu bauen. Die Struktur muss eine bestimmte Eigenschaft aufweisen (eine bestimmte Höhe erreichen oder ein Gewicht tragen). Dabei wird die Ausdauer beim Lösen schwieriger Aufgaben diskutiert.
+      courseC_unplugged_paperPlanes:
+        title: 'Alltagsalgorithmen: Papierflieger'
+        desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Als Beispiel dienen Papierflieger. Außerdem wird ein umfassenderes Bild der Informatik und der Rolle von Algorithmen vermittelt.
+      courseC_unplugged_gettingLoopy:
+        title: Schöne Schleifen
+        desc: In dieser Lektion wird das Konzept der Programmschleifen (wiederholte Anweisungen) anhand einer Tanzaktivität eingeführt. Schüler lernen eine einfache Choreografie und werden angewiesen, diese zu wiederholen.
+      courseC_unplugged_binaryBracelets:
+        title: Binäre Armbänder
+        desc: Die Schüler erstellen Armbänder als binäre Darstellung der Anfangsbuchstaben ihrer Namen. Dabei lernen die Schüler, dass Daten auf verschiedene Weise repräsentiert und gespeichert werden können.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programmieren auf Millimeterpapier
+        desc: Die Schüler schreiben anhand einer vordefinierten Reihe von Befehlen einen Algorithmus (ein Satz von Anweisungen), mit dem sie ihre Klassenkameraden anweisen, ein Bild zu reproduzieren.
+      courseD_unplugged_relayProgramming:
+        title: Relais-Programmierung
+        desc: Die Schüler machen einen Staffellauf, bei der sie über den Schulhof laufen, um einen Algorithmus basierend auf einem „Millimeterpapier-Programm-Bild“ zu schreiben. Sie können jedes Mal nur eine Anweisung schreiben. Wenn ein Fehler auftritt, müssen sie alle geschriebenen Anweisungen bis zu diesem Punkt löschen.
+      courseD_unplugged_conditionalsCards:
+        title: Bedingungen mit Karten
+        desc: Als Einführung in bedingte Anweisungen spielen die Schüler ein Kartenspiel, für welches sie Regeln wie "Wenn ich eine rote Karte ziehe, bekomme ich einen Punkt" und "Wenn ich eine schwarze Karte ziehe, bekommst du einen Punkt" erstellen.
+      courseD_unplugged_binaryImages:
+        title: Binärbilder
+        desc: Viele Menschen denken bei Binärwerten an die Zahlen 1 und 0. In vorherigen Kursen haben Schüler bereits gelernt, dass Informationen mit verschiedenen binären Techniken repräsentiert werden können.  Diese Lektion entwickelt das Konzept weiter und zeigt, wie Computer auch komplexe Informationen wie Bilder und Farben als Binärcode speichern können.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: In dieser Lektion wird die Verwendung von Algorithmen im täglichen Leben behandelt. Dazu identifizieren und schreiben die Schüler den Algorithmus für ein Würfelrennen.
+      courseE_unplugged_songwritingParameters:
+        title: Songschreiben mit Parametern
+        desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird, ohne dass die gesamte Funktion neu geschrieben werden muss).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Die Schüler senden Nachrichten mithilfe von Papierstücken und simulieren damit unterschiedliche Internet-Übertragungsmethoden.
+      courseE_unplugged_crowdsourcing:
+        title: Crowdsourcing
+        desc: Schüler nutzen Crowdsourcing, eine Problemlösungstechnik, die häufig in Informatik und Technik angewendet wird, um gemeinsam eine Aufgabe zu lösen, die für einzelne Schüler zu schwierig wäre.
+      courseE_unplugged_songwriting:
+        title: Songschreiben mit Parametern
+        desc: Schüler lernen das Konzept des Refrains in einem Lied, um die Weitergabe von Parametern kennen zu lernen (mit denen eine Funktion angepasst wird, ohne dass die gesamte Funktion neu geschrieben werden muss).
+      courseF_unplugged_tangrams:
+        title: Tangram-Algorithmen
+        desc: In dieser Lektion werden wichtige Kenntnisse über Algorithmen vermittelt. Einfache Algorithmen können flexibler genutzt werden. Wenn alle Ergebnisse genau gleich sein sollen, benötigt der Algorithmus mehr Details.
+      courseF_unplugged_envelopeVariables:
+        title: Umschlag-Variablen
+        desc: Variablen bieten in der Informatik unzählige Möglichkeiten.  In dieser Lektion wird erläutert, was Variablen sind und wie sie auf verschiedene Weise verwendet werden können. Diese Aktivität sollte vor oder zusammen mit der Lektion über Abstraktion stattfinden, damit Schüler das Konzept verstehen.
+      courseF_unplugged_forLoopFun:
+        title: '„Zähle mit“-Schleifenspaß'
+        desc: Wir wissen bereits, dass Schleifen uns ermöglichen, Dinge wieder und wieder zu tun. Jetzt lernen wir, wie Schleifen mit integrierten Zusatzfunktionen verwendet werden.
+      courseF_unplugged_songwritingParameters:
+        title: Komponieren mit Parametern
+        desc: 'Eines der nützlichsten Elemente der Informatik ist die Funktion.  Funktionen (manchmal als Prozeduren bezeichnet) sind Miniprogramme, die in größeren Programmen wieder und wieder verwendet werden können. In dieser Lektion lernen Schüler intuitiv, warum die Kombination von einzelnen Codeelementen zu Funktionen so nützlich ist.  '
