@@ -269,6 +269,7 @@ testsContext.keys().forEach(testsContext);
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
         ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
         ['build/package/css/publicKeyCryptography.css', 'style/publicKeyCryptography/publicKeyCryptography.scss'],
+        ['build/package/css/scratch.css', 'style/scratch.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
