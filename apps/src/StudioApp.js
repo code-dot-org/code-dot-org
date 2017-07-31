@@ -35,7 +35,6 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './templates/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
-import experiments from './util/experiments';
 import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -516,7 +515,7 @@ StudioApp.prototype.init = function (config) {
 
   initializeContainedLevel();
 
-  if (experiments.isEnabled('challengeDialog') && config.isChallengeLevel) {
+  if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
     ReactDOM.render(
