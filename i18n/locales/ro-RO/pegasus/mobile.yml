@@ -200,13 +200,25 @@
   just_did_course2: "Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg"
   just_did_course3: "Tocmai am terminat cursul 3 - vizualizeaza-l! @codeorg"
   just_did_course4: "Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
   just_did_accelerated: "Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 din 10 oameni sunt de acord, şcolile ar trebui să înveţe ştiinţa calculatoarelor. http://youtu.be/nKIu9yen5nc. Vizitati https://code.org/."
   twitter_cs_foundational: "Informatica este fundamentală pentru fiecare student. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Învață o Oră de Cod"
@@ -893,6 +905,8 @@
   coursef-draft_name: Course F
   coursef_name: "Course F"
   accelerated_name: "Curs intensiv"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: '(vechi) Unitatea 1: Informaţii digitale'
   cspunit2_name: '(vechi) Unitatea 2: Internet'
   cspunit3_name: '(vechi) Unitate 3: programare'
@@ -934,6 +948,7 @@
   math_category_name: "Matematică"
   hoc_category_name: "Oră de Programare"
   csf_category_name: "Fundamentele CS"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "Principii de CS 15-16"
