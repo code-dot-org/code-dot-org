@@ -91,7 +91,7 @@ const SetUpMessage = React.createClass({
 });
 
 export const CoursesSetUpMessage = (props) => {
-  const {isTeacher} = props;
+  const {isRtl, isTeacher} = props;
   return (
     <SetUpMessage
       type="courses"
@@ -99,17 +99,18 @@ export const CoursesSetUpMessage = (props) => {
       descriptionText={isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()}
       buttonText={i18n.findCourse()}
       buttonUrl="/courses"
-      {...props}
+      isRtl={isRtl}
     />
   );
 };
 
 CoursesSetUpMessage.propTypes = {
+  isRtl: React.PropTypes.bool.isRequired,
   isTeacher: React.PropTypes.bool.isRequired,
 };
 
 export const SectionsSetUpMessage = (props) => {
-  const {codeOrgUrlPrefix} = props;
+  const {isRtl, codeOrgUrlPrefix} = props;
   return (
     <SetUpMessage
       type="sections"
@@ -117,11 +118,12 @@ export const SectionsSetUpMessage = (props) => {
       descriptionText={i18n.createNewClassroom()}
       buttonText={i18n.createSection()}
       buttonUrl={`${codeOrgUrlPrefix}/teacher-dashboard#/sections`}
-      {...props}
+      isRtl={isRtl}
     />
   );
 };
 
 SectionsSetUpMessage.propTypes = {
+  isRtl: React.PropTypes.bool.isRequired,
   codeOrgUrlPrefix: React.PropTypes.string,
 };
