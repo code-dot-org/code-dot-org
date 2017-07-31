@@ -1,5 +1,4 @@
-import clientApi from '../../code-studio/initApp/clientApi';
-const channels = clientApi.create('/v3/channels');
+import { channels as channelsApi } from '../../clientApi';
 
 // Only these project types can be published.
 const PUBLISHED_PROJECT_TYPES = ['applab', 'gamelab', 'playlab', 'artist'];
@@ -88,19 +87,23 @@ export function publishProject(projectId, projectType) {
     }
     dispatch({type: PUBLISH_REQUEST});
     return new Promise((resolve, reject) => {
-      channels.update(`${projectId}/publish/${projectType}`, null, (err, data) => {
-        if (err) {
-          dispatch({type: PUBLISH_FAILURE});
-          reject(err);
-        } else {
-          data = JSON.parse(data);
+      channelsApi.withProjectId(projectId).ajax(
+        'POST',
+        `publish/${projectType}`,
+        xhr => {
+          const data = JSON.parse(xhr.response);
           dispatch({
             type: PUBLISH_SUCCESS,
             lastPublishedAt: data.publishedAt,
             lastPublishedProjectData: data,
           });
-        }
-      });
+        },
+        err => {
+          dispatch({type: PUBLISH_FAILURE});
+          reject(err);
+        },
+        null,
+      );
     });
   };
 }

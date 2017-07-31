@@ -1,5 +1,6 @@
-import clientApi from '../initApp/clientApi';
-const channels = clientApi.create('/v3/channels');
+import {
+  channels as channelsApi,
+} from '../../clientApi';
 
 // Action types
 
@@ -61,15 +62,19 @@ export function unpublishProject(projectId) {
   return dispatch => {
     dispatch({type: UNPUBLISH_REQUEST});
     return new Promise((resolve, reject) => {
-      channels.update(`${projectId}/unpublish`, null, err => {
-        if (err) {
-          dispatch({type: UNPUBLISH_FAILURE});
-          reject(err);
-        } else {
+      channelsApi.withProjectId(projectId).ajax(
+        'POST',
+        'unpublish',
+        () => {
           dispatch({type: UNPUBLISH_SUCCESS});
           resolve();
-        }
-      });
+        },
+        err => {
+          dispatch({type: UNPUBLISH_FAILURE});
+          reject(err);
+        },
+        null
+      );
     });
   };
 }
