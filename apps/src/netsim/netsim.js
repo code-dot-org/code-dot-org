@@ -1358,7 +1358,7 @@ NetSim.prototype.resetShard = function () {
 NetSim.prototype.showInstructionsDialog = function () {
   getStore().dispatch(openInstructionsDialog({
     autoClose: false,
-    aniGifOnly: false,
+    imgOnly: false,
     hintsOnly: false
   }));
 };
