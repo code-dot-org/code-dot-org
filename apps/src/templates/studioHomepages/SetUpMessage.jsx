@@ -55,7 +55,6 @@ const styles = {
 
 const SetUpMessage = React.createClass({
   propTypes: {
-    type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     headingText: React.PropTypes.string.isRequired,
     descriptionText: React.PropTypes.string.isRequired,
@@ -65,7 +64,6 @@ const SetUpMessage = React.createClass({
 
   render() {
     const {
-      type,
       isRtl,
       headingText,
       descriptionText,
@@ -73,42 +71,22 @@ const SetUpMessage = React.createClass({
       buttonUrl,
     } = this.props;
 
-    if (type === 'courses') {
-      return (
-        <div style={styles.section}>
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {headingText}
-          </div>
-          <div style={isRtl ? styles.rtlDescription : styles.description}>
-            {descriptionText}
-          </div>
-          <Button
-            href={buttonUrl}
-            color={Button.ButtonColor.gray}
-            text={buttonText}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
+    return (
+      <div style={styles.section}>
+        <div style={isRtl ? styles.rtlHeading : styles.heading}>
+          {headingText}
         </div>
-      );
-    }
-    if (type === 'sections') {
-      return (
-        <div style={styles.section}>
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {headingText}
-          </div>
-          <div style={isRtl ? styles.rtlDescription : styles.description}>
-            {descriptionText}
-          </div>
-          <Button
-            href={buttonUrl}
-            color={Button.ButtonColor.gray}
-            text={buttonText}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
+        <div style={isRtl ? styles.rtlDescription : styles.description}>
+          {descriptionText}
         </div>
-      );
-    }
+        <Button
+          href={buttonUrl}
+          color={Button.ButtonColor.gray}
+          text={buttonText}
+          style={isRtl ? styles.rtlButton : styles.button}
+        />
+      </div>
+    );
   }
 });
 
