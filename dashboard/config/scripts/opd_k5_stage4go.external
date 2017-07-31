@@ -5,9 +5,9 @@ markdown <<MARKDOWN
 
 In this stage, we saw how adding loops to a program is more efficient when coding repetitive actions. In the next stage, we'll look at coding **if-statements** and other conditionals.  
 
-**Take a moment now to review how loops are introduced in the code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
+**Take a moment now to review how loops are introduced in the Code.org curriculum.** As you explore the resources below, consider how you might implement the suggested activities in your classroom.
 
-<br/><br/>
+---
 
 ## Unplugged Lesson Plans
 
@@ -43,6 +43,7 @@ Explore more online Course C stages:
 - [Lesson 12](https://studio.code.org/s/courseC/stage/12/puzzle/1)
 - [Lesson 13](https://studio.code.org/s/courseC/stage/13/puzzle/1)
 
+---
 
 > ## Reflect
 > How would you explain the concept of loops to your students?<br><br> [Share your thoughts in our forum.](http://forum.code.org/t/teaching-loops-and-efficiency/405/1)

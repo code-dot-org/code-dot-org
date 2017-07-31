@@ -4,7 +4,7 @@ const CLOSE_DIALOG = 'instructionsDialog/CLOSE_DIALOG';
 const initialState = {
   open: false,
   autoClose: false,
-  aniGifOnly: false,
+  imgOnly: false,
   hintsOnly: false
 };
 
@@ -13,14 +13,15 @@ export default function reducer(state = initialState, action) {
     if (state.open === true) {
       throw new Error('dialog is already open');
     }
-    if (action.aniGifOnly && action.hintsOnly) {
-      throw new Error('cant have aniGifOnly and hintsOnly');
+    if (action.imgOnly && action.hintsOnly) {
+      throw new Error('cant have imgOnly and hintsOnly');
     }
     return {
       open: true,
       autoClose: action.autoClose,
-      aniGifOnly: action.aniGifOnly,
-      hintsOnly: action.hintsOnly
+      imgOnly: action.imgOnly,
+      hintsOnly: action.hintsOnly,
+      imgUrl: action.imgUrl,
     };
   }
 
@@ -35,11 +36,12 @@ export default function reducer(state = initialState, action) {
   return state;
 }
 
-export const openDialog = ({autoClose, aniGifOnly, hintsOnly}) => ({
+export const openDialog = ({autoClose, imgOnly, hintsOnly, imgUrl}) => ({
   type: OPEN_DIALOG,
   autoClose,
-  aniGifOnly,
-  hintsOnly
+  imgOnly,
+  hintsOnly,
+  imgUrl,
 });
 
 export const closeDialog = () => ({ type: CLOSE_DIALOG });
