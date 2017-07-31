@@ -58,34 +58,35 @@ const SetUpMessage = React.createClass({
     type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
     codeOrgUrlPrefix: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
     headingText: React.PropTypes.string.isRequired,
+    descriptionText: React.PropTypes.string.isRequired,
+    buttonText: React.PropTypes.string.isRequired,
   },
 
   render() {
-    const { type, codeOrgUrlPrefix, isRtl, isTeacher, headingText } = this.props;
+    const {
+      type,
+      codeOrgUrlPrefix,
+      isRtl,
+      headingText,
+      descriptionText,
+      buttonText,
+    } = this.props;
     const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
       return (
-        <div style={styles.section} >
+        <div style={styles.section}>
           <div style={isRtl ? styles.rtlHeading : styles.heading}>
             {headingText}
           </div>
-          {isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesTeacher()}
-            </div>
-          )}
-          {!isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesStudent()}
-            </div>
-          )}
+          <div style={isRtl ? styles.rtlDescription : styles.description}>
+            {descriptionText}
+          </div>
           <Button
             href="/courses"
             color={Button.ButtonColor.gray}
-            text={i18n.findCourse()}
+            text={buttonText}
             style={isRtl ? styles.rtlButton : styles.button}
           />
         </div>
@@ -93,17 +94,17 @@ const SetUpMessage = React.createClass({
     }
     if (type === 'sections') {
       return (
-        <div style={styles.section} >
+        <div style={styles.section}>
           <div style={isRtl ? styles.rtlHeading : styles.heading}>
             {headingText}
           </div>
           <div style={isRtl ? styles.rtlDescription : styles.description}>
-            {i18n.createNewClassroom()}
+            {descriptionText}
           </div>
           <Button
             href={sectionsUrl}
             color={Button.ButtonColor.gray}
-            text={i18n.createSection()}
+            text={buttonText}
             style={isRtl ? styles.rtlButton : styles.button}
           />
         </div>
@@ -113,13 +114,19 @@ const SetUpMessage = React.createClass({
 });
 
 export const CoursesSetUpMessage = (props) => {
+  const {isTeacher} = props;
   return (
     <SetUpMessage
       type="courses"
       headingText={i18n.startLearning()}
+      descriptionText={isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()}
+      buttonText={i18n.findCourse()}
       {...props}
     />
   );
+};
+CoursesSetUpMessage.propTypes = {
+  isTeacher: React.PropTypes.bool.isRequired,
 };
 
 export const SectionsSetUpMessage = (props) => {
@@ -127,6 +134,8 @@ export const SectionsSetUpMessage = (props) => {
     <SetUpMessage
       type="sections"
       headingText={i18n.setUpClassroom()}
+      descriptionText={i18n.createNewClassroom()}
+      buttonText={i18n.createSection()}
       {...props}
     />
   );
