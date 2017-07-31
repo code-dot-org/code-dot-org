@@ -111,7 +111,7 @@ describe('SectionRow', () => {
       beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
       afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
-      it('has a link to the section when not editing', () => {
+      it('has a link to manage the section', () => {
         const wrapper = shallow(
           <SectionRow
             {...defaultProps}
@@ -251,6 +251,44 @@ describe('SectionRow', () => {
       const col = wrapper.find('td').at(5);
       assert.equal(col.find('input').length, 1);
       assert.equal(col.find('input').props().defaultChecked, true);
+    });
+  });
+
+  describe('students column', () => {
+    it('has a link to manage the section students when not editing', () => {
+      const wrapper = shallow(
+        <SectionRow {...defaultProps}/>
+      );
+      const col = wrapper.find('td').at(6);
+      assert.equal(col.find('a').length, 1);
+      assert.equal(col.find('a').props().href, '#/sections/11/manage');
+    });
+
+    it('has a link to manage the section students when editing', () => {
+      const wrapper = shallow(
+        <SectionRow {...defaultProps}/>
+      );
+      wrapper.setState({editing: true});
+      const col = wrapper.find('td').at(6);
+
+      assert.equal(col.find('a').length, 1);
+      assert.equal(col.find('a').props().href, '#/sections/11/manage');
+    });
+
+    describe(`(${SECTION_FLOW_2017})`, () => {
+      beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
+      afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
+
+      it('has a link to manage the section students', () => {
+        const wrapper = shallow(
+          <SectionRow
+            {...defaultProps}
+            pegasusUrl={x => `https://code.org${x}`}
+          />
+        );
+        const link = wrapper.find('td').at(6).find('a').first();
+        assert.equal(link.prop('href'), 'https://code.org/teacher-dashboard#/sections/11/manage');
+      });
     });
   });
 

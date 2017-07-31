@@ -301,9 +301,13 @@ class SectionRow extends Component {
       }
     }
 
-    const manageSectionUrl = sectionFlow2017 ?
-      pegasusUrl(`/teacher-dashboard#/sections/${section.id}/`) :
+    const manageSectionUrl =
+      (sectionFlow2017 ? pegasusUrl(`/teacher-dashboard`) : '') +
       `#/sections/${section.id}/`;
+
+    const manageStudentsUrl =
+      (sectionFlow2017 ? pegasusUrl('/teacher-dashboard') : '') +
+      `#/sections/${section.id}/manage`;
 
     return (
       <tr
@@ -399,7 +403,7 @@ class SectionRow extends Component {
         </td>
         <td style={styles.col}>
           {persistedSection &&
-            <a href={`#/sections/${section.id}/manage`} style={styles.link}>
+            <a href={manageStudentsUrl} style={styles.link}>
               {section.studentCount}
             </a>
           }
