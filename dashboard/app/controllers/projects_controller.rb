@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
     },
     scratch: {
       name: 'New Scratch Project',
-      login_required: true,
+      levelbuilder_required: true,
     },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
