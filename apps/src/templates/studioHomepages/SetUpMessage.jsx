@@ -56,23 +56,22 @@ const styles = {
 const SetUpMessage = React.createClass({
   propTypes: {
     type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired,
     headingText: React.PropTypes.string.isRequired,
     descriptionText: React.PropTypes.string.isRequired,
     buttonText: React.PropTypes.string.isRequired,
+    buttonUrl: React.PropTypes.string.isRequired,
   },
 
   render() {
     const {
       type,
-      codeOrgUrlPrefix,
       isRtl,
       headingText,
       descriptionText,
       buttonText,
+      buttonUrl,
     } = this.props;
-    const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     if (type === 'courses') {
       return (
@@ -84,7 +83,7 @@ const SetUpMessage = React.createClass({
             {descriptionText}
           </div>
           <Button
-            href="/courses"
+            href={buttonUrl}
             color={Button.ButtonColor.gray}
             text={buttonText}
             style={isRtl ? styles.rtlButton : styles.button}
@@ -102,7 +101,7 @@ const SetUpMessage = React.createClass({
             {descriptionText}
           </div>
           <Button
-            href={sectionsUrl}
+            href={buttonUrl}
             color={Button.ButtonColor.gray}
             text={buttonText}
             style={isRtl ? styles.rtlButton : styles.button}
@@ -121,22 +120,30 @@ export const CoursesSetUpMessage = (props) => {
       headingText={i18n.startLearning()}
       descriptionText={isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()}
       buttonText={i18n.findCourse()}
+      buttonUrl="/courses"
       {...props}
     />
   );
 };
+
 CoursesSetUpMessage.propTypes = {
   isTeacher: React.PropTypes.bool.isRequired,
 };
 
 export const SectionsSetUpMessage = (props) => {
+  const {codeOrgUrlPrefix} = props;
   return (
     <SetUpMessage
       type="sections"
       headingText={i18n.setUpClassroom()}
       descriptionText={i18n.createNewClassroom()}
       buttonText={i18n.createSection()}
+      buttonUrl={`${codeOrgUrlPrefix}/teacher-dashboard#/sections`}
       {...props}
     />
   );
+};
+
+SectionsSetUpMessage.propTypes = {
+  codeOrgUrlPrefix: React.PropTypes.string,
 };
