@@ -8,10 +8,4 @@
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/scratch.css'), rel: 'stylesheet', type: 'text/css'}
 
-:javascript
-  //<![CDATA[
-  var appOptions = #{app_options.to_json};
-  //]]>
-
-- content_for :body_scripts do
-  %script{src: minifiable_asset_path('js/levels/scratch.js')}
+%script{src: minifiable_asset_path('js/levels/scratch.js'), data: {options: app_options.to_json}}

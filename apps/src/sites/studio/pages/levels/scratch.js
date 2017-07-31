@@ -1,5 +1,3 @@
-/* global appOptions */
-
 import AudioEngine from 'scratch-audio';
 import Renderer from 'scratch-render';
 import Storage from 'scratch-storage';
@@ -32,6 +30,9 @@ const getAssetUrl = function (asset) {
 };
 
 registerReducers(commonReducers);
+
+const script = document.querySelector('script[data-options]');
+const appOptions = JSON.parse(script.dataset.options);
 
 const options = {
   containerId: 'root',
