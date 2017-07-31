@@ -5,22 +5,13 @@
   "level_num": "custom",
   "user_id": 1,
   "properties": {
-    "code_functions": {
-      "setDroid": {
-        "category": "Commands"
-      }
-    },
-    "goal_override": {
-      "goalAnimation": null
-    },
-    "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "instructions_important": "false",
     "is_k1": "false",
     "is_project_level": "true",
     "skip_instructions_popup": "true",
     "never_autoplay_video": "false",
-    "start_blocks": "setBackground(\"Endor\");\r\nsetMap(\"circle\");\r\nsetDroid(\"R2-D2\");\r\nsetDroidSpeed(\"normal\");\r\nplaySound(\"R2-D2random\");\r\nfunction whenUp() {\r\n  goUp();\r\n}\r\nfunction whenDown() {\r\n  goDown();\r\n}\r\nfunction whenLeft() {\r\n  goLeft();\r\n}\r\nfunction whenRight() {\r\n  goRight();\r\n}"
+    "start_blocks": "<xml><variables></variables><block type=\"event_whenflagclicked\" x=\"0\" y=\"0\"></block></xml>"
   },
   "published": true,
   "notes": "",

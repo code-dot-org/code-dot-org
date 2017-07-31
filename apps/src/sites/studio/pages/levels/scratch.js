@@ -39,6 +39,7 @@ const options = {
   maxVisualizationWidth: 480,
   vizAspectRatio: 4 / 3,
   hideSource: false,
+  enableShowCode: false,
   readonlyWorkspace: false,
   pinWorkspaceToBottom: true,
   ...appOptions,
