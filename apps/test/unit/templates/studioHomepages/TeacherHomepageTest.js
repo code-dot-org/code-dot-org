@@ -264,17 +264,20 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a CourseCards are rendered for each course.
-    const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
-    assert.equal(course1Card.name(), 'CourseCard');
-    assert.equal(course1Card.childAt(0).type(), 'img');
-    assert.equal(course1Card.childAt(1).text(), courses[0].title);
-    expect(course1Card.childAt(2).text()).to.contain(courses[0].description);
-    expect(course1Card.childAt(2).text()).to.contain('View course');
-    const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
-    assert.equal(course2Card.name(), 'CourseCard');
-    assert.equal(course2Card.childAt(1).text(), courses[1].title);
-    expect(course2Card.childAt(2).text()).to.contain(courses[1].description);
-    expect(course2Card.childAt(2).text()).to.contain('View course');
+    const course1Card = coursesContentContainer.find('CourseCard').first();
+    expect(course1Card.props()).to.deep.equal({
+      title: courses[0].title,
+      description: courses[0].description,
+      link: courses[0].link,
+      isRtl: false,
+    });
+    const course2Card = coursesContentContainer.find('CourseCard').at(1);
+    expect(course2Card.props()).to.deep.equal({
+      title: courses[1].title,
+      description: courses[1].description,
+      link: courses[1].link,
+      isRtl: false,
+    });
   });
 
   it('if there are more than 4 courses, RecentCourses component shows CourseCards for the first 4 and a SeeMoreCourses component', () => {
@@ -325,24 +328,37 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().linkText, 'Find a course');
     assert.equal(coursesContentContainer.props().link, '/courses');
     assert.equal(coursesContentContainer.props().showLink, true);
+
     // Check if a CourseCards are rendered for first 4 courses.
-    const course1Card = coursesContentContainer.childAt(2).childAt(0).childAt(0);
-    assert.equal(course1Card.name(), 'CourseCard');
-    assert.equal(course1Card.childAt(0).type(), 'img');
-    assert.equal(course1Card.childAt(1).text(), moreCourses[0].title);
-    expect(course1Card.childAt(2).text()).to.contain(moreCourses[0].description);
-    expect(course1Card.childAt(2).text()).to.contain('View course');
-    const course2Card = coursesContentContainer.childAt(3).childAt(0).childAt(0);
-    assert.equal(course2Card.name(), 'CourseCard');
-    assert.equal(course2Card.childAt(1).text(), moreCourses[1].title);
-    expect(course2Card.childAt(2).text()).to.contain(moreCourses[1].description);
-    expect(course2Card.childAt(2).text()).to.contain('View course');
-    const course3Card = coursesContentContainer.childAt(4).childAt(0).childAt(0);
-    assert.equal(course3Card.childAt(1).text(), moreCourses[2].title);
-    expect(course3Card.childAt(2).text()).to.contain(moreCourses[2].description);
-    const course4Card = coursesContentContainer.childAt(5).childAt(0).childAt(0);
-    assert.equal(course4Card.childAt(1).text(), moreCourses[3].title);
-    expect(course4Card.childAt(2).text()).to.contain(moreCourses[3].description);
+    const course1Card = coursesContentContainer.find('CourseCard').first();
+    expect(course1Card.props()).to.deep.equal({
+      title: moreCourses[0].title,
+      description: moreCourses[0].description,
+      link: moreCourses[0].link,
+      isRtl: false,
+    });
+    const course2Card = coursesContentContainer.find('CourseCard').at(1);
+    expect(course2Card.props()).to.deep.equal({
+      title: moreCourses[1].title,
+      description: moreCourses[1].description,
+      link: moreCourses[1].link,
+      isRtl: false,
+    });
+    const course3Card = coursesContentContainer.find('CourseCard').at(2);
+    expect(course3Card.props()).to.deep.equal({
+      title: moreCourses[2].title,
+      description: moreCourses[2].description,
+      link: moreCourses[2].link,
+      isRtl: false,
+    });
+    const course4Card = coursesContentContainer.find('CourseCard').at(3);
+    expect(course4Card.props()).to.deep.equal({
+      title: moreCourses[3].title,
+      description: moreCourses[3].description,
+      link: moreCourses[3].link,
+      isRtl: false,
+    });
+
     // Check if SeeMoreCourses is rendered.
     const seeMoreCourses = coursesContentContainer.find('SeeMoreCourses');
     assert.deepEqual(seeMoreCourses.props(), {
