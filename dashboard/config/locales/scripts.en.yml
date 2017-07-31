@@ -5236,7 +5236,7 @@ en:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
+          title: Course A
           description_audience: 'Ages: 4-7'
           description_short: An introduction to computer science for pre-readers.
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -5270,7 +5270,7 @@ en:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Course B
           description_audience: 'Ages: 5-8'
           description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -5308,7 +5308,7 @@ en:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Course C
           description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
@@ -5389,7 +5389,7 @@ en:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
-          title: 'CS Fundamentals: Course D'
+          title: Course D
           description_audience: 'Ages: 7-11'
           description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
           description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
@@ -5496,7 +5496,7 @@ en:
               name: Crowdsourcing
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
+          title: Course E
           description_audience: 'Ages: 8-12'
           description_short: Quickly cover concepts in Course C & D and then go further with functions.
           description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
@@ -5586,7 +5586,7 @@ en:
               description_teacher: This lesson gives students a chance to learn and practice conditionals. It features characters and settings from Minecraft, and students will complete tasks such as mining and building structures using their programs.
             Functions in Bee:
               name: Functions in Bee
-          title: 'CS Fundamentals: Course F'
+          title: Course F
           description_audience: 'Ages: 9-13'
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -5908,7 +5908,7 @@ en:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: 'CS Fundamentals: Express Course'
+          title: Express Course
           description_audience: 'Ages: 9-18'
           description_short: 'An introduction to computer science: combines the best of our elementary school curriculum in a condensed course for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
@@ -5942,7 +5942,7 @@ en:
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
-          title: 'CS Fundamentals: Express for Pre-Readers'
+          title: Express Course for Pre-readers
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
