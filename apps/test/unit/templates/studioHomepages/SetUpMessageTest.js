@@ -5,31 +5,50 @@ import {
   CoursesSetUpMessage,
   SectionsSetUpMessage,
 } from '@cdo/apps/templates/studioHomepages/SetUpMessage';
+import Button from "@cdo/apps/templates/Button";
 
 describe('CoursesSetUpMessage', () => {
   it('renders as expected for a teacher', () => {
-    const coursesSetUpMessage = mount(
+    const wrapper = mount(
       <CoursesSetUpMessage isRtl={false} isTeacher={true}/>
     );
-    assert.equal(coursesSetUpMessage.name(), 'CoursesSetUpMessage');
-    assert.equal(coursesSetUpMessage.childAt(0).text(), 'Start learning');
-    assert.equal(coursesSetUpMessage.childAt(1).text(), 'Assign a course to your classroom or start your own course.');
-    assert.equal(coursesSetUpMessage.childAt(2).name(), 'Button');
-    assert.equal(coursesSetUpMessage.childAt(2).props().href, '/courses');
-    assert.equal(coursesSetUpMessage.childAt(2).props().text, 'Find a course');
+    assert(wrapper.containsMatchingElement(
+      <div>
+        <div>
+          Start learning
+        </div>
+        <div>
+          Assign a course to your classroom or start your own course.
+        </div>
+        <Button
+          href={'/courses'}
+          color={Button.ButtonColor.gray}
+          text={'Find a course'}
+        />
+      </div>
+    ));
   });
 });
 
 describe('SectionsSetUpMessage', () => {
   it('renders as expected for a teacher', () => {
-    const sectionsSetUpMessage = mount(
+    const wrapper = mount(
       <SectionsSetUpMessage isRtl={false} codeOrgUrlPrefix="http://localhost:3000/"/>
     );
-    assert.equal(sectionsSetUpMessage.name(), 'SectionsSetUpMessage');
-    assert.equal(sectionsSetUpMessage.childAt(0).text(), 'Set up your classroom');
-    assert.equal(sectionsSetUpMessage.childAt(1).text(), 'Create a new classroom section to start assigning courses and seeing your student progress.');
-    assert.equal(sectionsSetUpMessage.childAt(2).name(), 'Button');
-    assert.equal(sectionsSetUpMessage.childAt(2).props().href, 'http://localhost:3000//teacher-dashboard#/sections');
-    assert.equal(sectionsSetUpMessage.childAt(2).props().text, 'Create section');
+    assert(wrapper.containsMatchingElement(
+      <div>
+        <div>
+          Set up your classroom
+        </div>
+        <div>
+          Create a new classroom section to start assigning courses and seeing your student progress.
+        </div>
+        <Button
+          href={'http://localhost:3000//teacher-dashboard#/sections'}
+          color={Button.ButtonColor.gray}
+          text={'Create section'}
+        />
+      </div>
+    ));
   });
 });
