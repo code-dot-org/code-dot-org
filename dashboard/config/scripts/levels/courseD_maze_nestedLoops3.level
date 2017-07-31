@@ -14,7 +14,7 @@
     "ideal": "5",
     "step_speed": "3",
     "markdown_instructions": "*\"Zombie hungry!\"*\r\n\r\nGet the zombie to the sunflower using the fewest number of blocks possible.",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -33,11 +33,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-11 19:22:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-11 19:22:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:23:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
