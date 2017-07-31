@@ -25,7 +25,17 @@ class TextToSpeechTest < ActiveSupport::TestCase
     )
     @level_with_raw_html = Level.create(
       {
-        markdown_instructions: 'This should have <br/> no <strong>excess</strong> formatting <xml><block type="move_forward" /></xml>'
+        markdown_instructions: 'This should have <br/> no <strong>excess</strong> formatting'
+      }
+    )
+    @level_with_block_html = Level.create(
+      {
+        markdown_instructions: "This block should get stripped:\n\n<div><p>Test</p></div>"
+      }
+    )
+    @level_with_xml = Level.create(
+      {
+        markdown_instructions: "This block should get stripped:\n\n<xml><block type='maze_turn'><title name='DIR'>turnLeft</title></block></xml>"
       }
     )
   end
@@ -54,7 +64,9 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal @level_with_markdown_instructions_override.tts_path(@level_with_markdown_instructions_override.tts_markdown_instructions_text), 'sharon22k/180/100/25352162fcc2d1e5c4ea3f91b9b39c3f/.mp3'
   end
 
-  test 'sanitize html' do
-    assert_equal @level_with_raw_html.tts_markdown_instructions_text, "This should have  no excess formatting \n"
+  test 'sanitize html and xml' do
+    assert_equal @level_with_raw_html.tts_markdown_instructions_text, "This should have  no excess formatting\n"
+    assert_equal @level_with_block_html.tts_markdown_instructions_text, "This block should get stripped:\n"
+    assert_equal @level_with_xml.tts_markdown_instructions_text, "This block should get stripped:\n"
   end
 end
