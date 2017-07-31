@@ -47,6 +47,7 @@ class Game < ActiveRecord::Base
   MAZE = 'maze'.freeze
   CALC = 'calc'.freeze
   EVAL = 'eval'.freeze
+  PIXELATION = 'pixelation'.freeze
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
@@ -203,6 +204,10 @@ class Game < ActiveRecord::Base
 
   def use_firebase_for_new_project?
     [APPLAB, GAMELAB].include? app
+  end
+
+  def channel_backed?
+    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION].include? app
   end
 
   def self.setup
