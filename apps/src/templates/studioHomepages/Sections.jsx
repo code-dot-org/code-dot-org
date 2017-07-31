@@ -13,6 +13,7 @@ import {
   setValidAssignments,
   setSections
 } from '../teacherDashboard/teacherSectionsRedux';
+import {SECTION_FLOW_2017} from "../../util/experiments";
 
 const sectionsApiPath = '/dashboardapi/sections/';
 
@@ -84,7 +85,7 @@ const Sections = React.createClass({
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
     const enrolledInASection = studentSections.length > 0;
     const enrollmentDescription = isTeacher ? "" : i18n.enrollmentDescription();
-    const sectionFlow2017 = experiments.isEnabled('section-flow-2017');
+    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     return (
       <div className="sectionsContainer">

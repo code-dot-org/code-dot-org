@@ -2,7 +2,7 @@ import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import experiments from '@cdo/apps/util/experiments';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 import Button from "../Button";
 import {connect} from 'react-redux';
@@ -71,7 +71,7 @@ const SetUpMessage = React.createClass({
   },
 
   addSection: function () {
-    if (experiments.isEnabled('section-flow-2017')) {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingNewSection();
     } else {
       return this.props.newSection();
@@ -116,7 +116,7 @@ const SetUpMessage = React.createClass({
           <div style={isRtl ? styles.rtlDescription : styles.description}>
             {i18n.createNewClassroom()}
           </div>
-          {!experiments.isEnabled('section-flow-2017') &&
+          {!experiments.isEnabled(SECTION_FLOW_2017) &&
             <Button
               href={sectionsUrl}
               color={Button.ButtonColor.gray}
@@ -124,7 +124,7 @@ const SetUpMessage = React.createClass({
               style={isRtl ? styles.rtlButton : styles.button}
             />
           }
-          {experiments.isEnabled('section-flow-2017') &&
+          {experiments.isEnabled(SECTION_FLOW_2017) &&
             <Button
               className="uitest-newsection"
               text={i18n.newSection()}
