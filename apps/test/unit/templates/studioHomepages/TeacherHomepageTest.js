@@ -1,6 +1,6 @@
 import React from 'react';
-import { assert, expect } from 'chai';
-import { mount } from 'enzyme';
+import { assert } from 'chai';
+import { mount, shallow } from 'enzyme';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 
 const announcements = [
@@ -51,39 +51,6 @@ const courses = [
     title: "Course 2",
     description: "Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
     link: "https://studio.code.org/s/course2",
-  },
-];
-
-const moreCourses = [
-  {
-    title: "Course 1",
-    description: "Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course1",
-  },
-  {
-    title: "Course 2",
-    description: "Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course2",
-  },
-  {
-    title: "Course 3",
-    description: "Start with Course 3 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course3",
-  },
-  {
-    title: "Course 4",
-    description: "Start with Course 4 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course4",
-  },
-  {
-    title: "Course 5",
-    description: "Start with Course 5 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course5",
-  },
-  {
-    title: "Course 6",
-    description: "Start with Course 6 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course6",
   },
 ];
 
@@ -231,8 +198,8 @@ describe('TeacherHomepage', () => {
     });
   });
 
-  it('if there are less than 4 courses, RecentCourses component shows CourseCards for each course', () => {
-    const wrapper = mount(
+  it('shows RecentCourses component', () => {
+    const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         courses={courses}
@@ -241,160 +208,13 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const recentCourses = wrapper.childAt(4);
-    assert.equal(recentCourses.name(),'RecentCourses');
-    assert.equal(recentCourses.props().showAllCoursesLink, true);
-    assert.equal(recentCourses.props().heading, 'Recent Courses');
-    assert.equal(recentCourses.props().isTeacher, true);
-    assert.equal(recentCourses.props().courses.length, 2);
-    // Check if RecentCourses receives correct props.
-    const course1 = recentCourses.props().courses[0];
-    assert.equal(course1.title, courses[0].title);
-    assert.equal(course1.description, courses[0].description);
-    assert.equal(course1.link, courses[0].link);
-    const course2 = recentCourses.props().courses[1];
-    assert.equal(course2.title, courses[1].title);
-    assert.equal(course2.description, courses[1].description);
-    assert.equal(course2.link, courses[1].link);
-    // Check if a ContentContainer is rendered.
-    const coursesContentContainer = recentCourses.childAt(0);
-    assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
-    assert.equal(coursesContentContainer.props().linkText, 'Find a course');
-    assert.equal(coursesContentContainer.props().link, '/courses');
-    assert.equal(coursesContentContainer.props().showLink, true);
-    // Check if a CourseCards are rendered for each course.
-    const course1Card = coursesContentContainer.find('CourseCard').first();
-    expect(course1Card.props()).to.deep.equal({
-      title: courses[0].title,
-      description: courses[0].description,
-      link: courses[0].link,
-      isRtl: false,
-    });
-    const course2Card = coursesContentContainer.find('CourseCard').at(1);
-    expect(course2Card.props()).to.deep.equal({
-      title: courses[1].title,
-      description: courses[1].description,
-      link: courses[1].link,
-      isRtl: false,
-    });
-  });
-
-  it('if there are more than 4 courses, RecentCourses component shows CourseCards for the first 4 and a SeeMoreCourses component', () => {
-    const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={moreCourses}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
-    );
-    const recentCourses = wrapper.childAt(4);
-    assert.equal(recentCourses.name(),'RecentCourses');
-    assert.equal(recentCourses.props().showAllCoursesLink, true);
-    assert.equal(recentCourses.props().heading, 'Recent Courses');
-    assert.equal(recentCourses.props().isTeacher, true);
-    assert.equal(recentCourses.props().courses.length, 6);
-    // Check if RecentCourses receives correct props.
-    const course1 = recentCourses.props().courses[0];
-    assert.equal(course1.title, moreCourses[0].title);
-    assert.equal(course1.description, moreCourses[0].description);
-    assert.equal(course1.link, moreCourses[0].link);
-    const course2 = recentCourses.props().courses[1];
-    assert.equal(course2.title, moreCourses[1].title);
-    assert.equal(course2.description, moreCourses[1].description);
-    assert.equal(course2.link, moreCourses[1].link);
-    const course3 = recentCourses.props().courses[2];
-    assert.equal(course3.title, moreCourses[2].title);
-    assert.equal(course3.description, moreCourses[2].description);
-    assert.equal(course3.link, moreCourses[2].link);
-    const course4 = recentCourses.props().courses[3];
-    assert.equal(course4.title, moreCourses[3].title);
-    assert.equal(course4.description, moreCourses[3].description);
-    assert.equal(course4.link, moreCourses[3].link);
-    const course5 = recentCourses.props().courses[4];
-    assert.equal(course5.title, moreCourses[4].title);
-    assert.equal(course5.description, moreCourses[4].description);
-    assert.equal(course5.link, moreCourses[4].link);
-    const course6 = recentCourses.props().courses[5];
-    assert.equal(course6.title, moreCourses[5].title);
-    assert.equal(course6.description, moreCourses[5].description);
-    assert.equal(course6.link, moreCourses[5].link);
-    // Check if a ContentContainer is rendered.
-    const coursesContentContainer = recentCourses.childAt(0);
-    assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
-    assert.equal(coursesContentContainer.props().linkText, 'Find a course');
-    assert.equal(coursesContentContainer.props().link, '/courses');
-    assert.equal(coursesContentContainer.props().showLink, true);
-
-    // Check if a CourseCards are rendered for first 4 courses.
-    const course1Card = coursesContentContainer.find('CourseCard').first();
-    expect(course1Card.props()).to.deep.equal({
-      title: moreCourses[0].title,
-      description: moreCourses[0].description,
-      link: moreCourses[0].link,
-      isRtl: false,
-    });
-    const course2Card = coursesContentContainer.find('CourseCard').at(1);
-    expect(course2Card.props()).to.deep.equal({
-      title: moreCourses[1].title,
-      description: moreCourses[1].description,
-      link: moreCourses[1].link,
-      isRtl: false,
-    });
-    const course3Card = coursesContentContainer.find('CourseCard').at(2);
-    expect(course3Card.props()).to.deep.equal({
-      title: moreCourses[2].title,
-      description: moreCourses[2].description,
-      link: moreCourses[2].link,
-      isRtl: false,
-    });
-    const course4Card = coursesContentContainer.find('CourseCard').at(3);
-    expect(course4Card.props()).to.deep.equal({
-      title: moreCourses[3].title,
-      description: moreCourses[3].description,
-      link: moreCourses[3].link,
-      isRtl: false,
-    });
-
-    // Check if SeeMoreCourses is rendered.
-    const seeMoreCourses = coursesContentContainer.find('SeeMoreCourses');
-    assert.deepEqual(seeMoreCourses.props(), {
-      isRtl: false,
-      courses: moreCourses.slice(4)
-    });
-  });
-
-  it('if there are no courses, RecentCourses component shows a CoursesSetUpMessage', () => {
-    const wrapper = mount(
-      <TeacherHomepage
-        announcements={[]}
-        courses={[]}
-        sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
-        isRtl={false}
-      />
-    );
-    const recentCourses = wrapper.childAt(4);
-    assert.equal(recentCourses.name(),'RecentCourses');
-    assert.equal(recentCourses.props().showAllCoursesLink, true);
-    assert.equal(recentCourses.props().heading, 'Recent Courses');
-    assert.equal(recentCourses.props().isTeacher, true);
-    assert.equal(recentCourses.props().courses.length, 0);
-    // Check if a ContentContainer is rendered.
-    const coursesContentContainer = recentCourses.childAt(0);
-    assert.equal(coursesContentContainer.name(), 'ContentContainer');
-    assert.equal(coursesContentContainer.props().heading, 'Recent Courses');
-    assert.equal(coursesContentContainer.props().linkText, 'Find a course');
-    assert.equal(coursesContentContainer.props().link, '/courses');
-    assert.equal(coursesContentContainer.props().showLink, true);
-    // Check if a courses SetUpMessage is rendered.
-    const coursesSetUpMessage = coursesContentContainer.find('CoursesSetUpMessage');
-    assert.deepEqual(coursesSetUpMessage.props(), {
-      isRtl: false,
-      isTeacher: true
+    const recentCourses = wrapper.find('RecentCourses');
+    assert.deepEqual(recentCourses.props(), {
+      showAllCoursesLink: true,
+      heading: "Recent Courses",
+      isTeacher: true,
+      courses: courses,
+      isRtl: false
     });
   });
 });
