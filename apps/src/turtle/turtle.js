@@ -52,6 +52,7 @@ import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
 import {blockAsXmlNode} from '../block_utils';
 import ArtistSkins from './skins';
+import dom from '../dom';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -339,6 +340,14 @@ Artist.prototype.init = function (config) {
     />
   );
 
+  function onMount() {
+    this.studioApp_.init(config);
+    const finishButton = document.getElementById('finishButton');
+    if (finishButton) {
+      dom.addClickTouchEvent(finishButton, this.checkAnswer.bind(this));
+    }
+  }
+
   return Promise.all([
     this.preloadAllStickerImages(),
     this.preloadAllPatternImages()
@@ -347,7 +356,7 @@ Artist.prototype.init = function (config) {
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={visualizationColumn}
-          onMount={this.studioApp_.init.bind(this.studioApp_, config)}
+          onMount={onMount.bind(this)}
         />
       </Provider>,
       document.getElementById(config.containerId)
