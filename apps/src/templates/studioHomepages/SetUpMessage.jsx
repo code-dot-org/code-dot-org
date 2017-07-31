@@ -112,3 +112,15 @@ const SetUpMessage = React.createClass({
 });
 
 export default SetUpMessage;
+
+export const CoursesSetUpMessage = (props) => {
+  return (
+    <SetUpMessage type="courses" {...props}/>
+  );
+};
+
+export const SectionsSetUpMessage = (props) => {
+  return (
+    <SetUpMessage type="sections" {...props}/>
+  );
+};

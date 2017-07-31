@@ -1,5 +1,8 @@
 import React from 'react';
-import SetUpMessage from './SetUpMessage';
+import {
+  CoursesSetUpMessage,
+  SectionsSetUpMessage
+} from './SetUpMessage';
 
 export default storybook => {
   return storybook
@@ -9,8 +12,7 @@ export default storybook => {
         name: 'Set Up Message for Courses for Teachers',
         description: `Information box if the teacher doesn't have any courses yet`,
         story: () => (
-          <SetUpMessage
-            type="courses"
+          <CoursesSetUpMessage
             codeOrgUrlPrefix="http://code.org/"
             isRtl={false}
             isTeacher={true}
@@ -21,8 +23,7 @@ export default storybook => {
         name: 'Set Up Message for Sections for Teachers',
         description: `Information box if the teacher doesn't have any sections yet`,
         story: () => (
-          <SetUpMessage
-            type="sections"
+          <SectionsSetUpMessage
             codeOrgUrlPrefix="http://code.org/"
             isRtl={false}
             isTeacher={true}
@@ -31,10 +32,9 @@ export default storybook => {
       },
       {
         name: 'Set Up Message for Courses for Students',
-        description: `Information box if the teacher doesn't have any courses yet`,
+        description: `Information box if the student doesn't have any courses yet`,
         story: () => (
-          <SetUpMessage
-            type="courses"
+          <CoursesSetUpMessage
             codeOrgUrlPrefix="http://code.org/"
             isRtl={false}
             isTeacher={false}
