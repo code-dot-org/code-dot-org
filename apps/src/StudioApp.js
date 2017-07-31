@@ -1059,7 +1059,8 @@ StudioApp.prototype.onReportComplete = function (response) {
  */
 StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
   const reduxState = getStore().getState();
-  const isMarkdownMode = !!reduxState.instructions.longInstructions;
+  const isMarkdownMode = !!reduxState.instructions.longInstructions &&
+    !reduxState.instructionsDialog.imgOnly;
 
   var instructionsDiv = document.createElement('div');
   instructionsDiv.className = isMarkdownMode ?
@@ -2352,9 +2353,10 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
     showExampleTestButtons: utils.valueOr(config.showExampleTestButtons, false)
   };
 
-  // Never show unused blocks in edit mode
+  // Never show unused blocks or disable autopopulate in edit mode
   if (options.editBlocks) {
     options.showUnusedBlocks = false;
+    options.disableProcedureAutopopulate = false;
   }
 
   ['trashcan', 'varsInGlobals', 'grayOutUndeletableBlocks',
