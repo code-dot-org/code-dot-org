@@ -278,12 +278,14 @@ module LevelsHelper
   end
 
   def scratch_options
-    app_options = {}
+    app_options = {
+      baseUrl: Blockly.base_url,
+      skin: {},
+      app: 'scratch',
+    }
     app_options[:level] = @level.properties.camelize_keys
     app_options[:level][:scratch] = true
     app_options[:level][:editCode] = false
-    app_options[:skin] = {}
-    app_options[:baseUrl] = Blockly.base_url
     app_options.merge! view_options.camelize_keys
     app_options
   end
