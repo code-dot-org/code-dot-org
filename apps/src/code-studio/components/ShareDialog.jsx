@@ -253,19 +253,19 @@ var ShareDialog = React.createClass({
                 }
                 {this.props.canShareSocial &&
                 <span>
-                 {this.state.isFacebookAvailable &&
-                 <a
-                   href={facebookShareUrl}
-                   target="_blank"
-                   onClick={this.props.onClickPopup.bind(this)}
-                 >
-                   <i className="fa fa-facebook"></i>
-                 </a>}
+                  {this.state.isFacebookAvailable &&
+                  <a
+                    href={facebookShareUrl}
+                    target="_blank"
+                    onClick={this.props.onClickPopup.bind(this)}
+                  >
+                    <i className="fa fa-facebook"></i>
+                  </a>}
                   {this.state.isTwitterAvailable &&
                   <a href={twitterShareUrl} target="_blank" onClick={this.props.onClickPopup.bind(this)}>
                     <i className="fa fa-twitter"></i>
                   </a>}
-               </span>}
+                </span>}
               </div>
               {this.state.showSendToPhone &&
               <SendToPhone
