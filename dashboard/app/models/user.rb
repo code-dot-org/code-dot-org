@@ -1092,10 +1092,12 @@ class User < ActiveRecord::Base
       }
     end
 
+    primary_script_id = primary_script[:id]
+
     user_script_data = user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
-      if exclude_primary_script && user_script[:script_id] == primary_script[:id]
+      if exclude_primary_script && user_script[:script_id] == primary_script_id
         nil
       else
         script_id = user_script[:script_id]
