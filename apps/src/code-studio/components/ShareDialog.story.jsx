@@ -1,8 +1,7 @@
 import React from 'react';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import ShareDialog from './ShareDialog';
-import shareDialogReducer, { showShareDialog } from './shareDialogRedux';
+import { UnconnectedShareDialog as ShareDialog } from './ShareDialog';
 import publishDialogReducer from '../../templates/publishDialog/publishDialogRedux';
 
 const fakei18n = {
@@ -21,9 +20,11 @@ const fakei18n = {
     }
   };
 
+// Provide the redux store because the unconnected ShareDialog renders a
+// connected PublishDialog.
+
 function configureStore() {
   return createStore(combineReducers({
-    shareDialog: shareDialogReducer,
     publishDialog: publishDialogReducer,
   }));
 }
@@ -36,13 +37,14 @@ export default storybook => {
         name: 'basic example',
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -61,13 +63,14 @@ export default storybook => {
         description: `The applab version has an advanced sharing dialog with more options`,
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -86,13 +89,14 @@ export default storybook => {
         description: `This feature has not yet shipped.`,
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -112,13 +116,14 @@ export default storybook => {
         description: `We hide social sharing buttons and display a warning for users under 13`,
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -137,13 +142,14 @@ export default storybook => {
         description: `The abusive version shows a warning message`,
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
@@ -162,13 +168,14 @@ export default storybook => {
         description: `An icon can be specified for the dialog`,
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={false}
                 isPublished={false}
                 onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 icon="https://studio.code.org/blockly/media/skins/pvz/static_avatar.png"
@@ -187,14 +194,15 @@ export default storybook => {
         name: 'with publish button',
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={true}
                 isPublished={false}
-                onUnpublish={storybook.action('unpublish')}
+                onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
+                onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
                 shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
@@ -211,12 +219,14 @@ export default storybook => {
         name: 'with unpublish button',
         story: () => {
           const store = configureStore();
-          store.dispatch(showShareDialog());
           return (
             <Provider store={store}>
               <ShareDialog
+                isOpen={true}
                 isOwner={true}
                 isPublished={true}
+                onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
                 hideBackdrop={true}
                 i18n={fakei18n}
