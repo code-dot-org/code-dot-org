@@ -344,11 +344,11 @@ describe('TeacherHomepage', () => {
     assert.equal(course4Card.childAt(1).text(), moreCourses[3].title);
     expect(course4Card.childAt(2).text()).to.contain(moreCourses[3].description);
     // Check if SeeMoreCourses is rendered.
-    const seeMoreCourses = coursesContentContainer.childAt(6).childAt(0);
-    assert.equal(seeMoreCourses.name(), 'SeeMoreCourses');
-    const viewMoreButton = seeMoreCourses.childAt(0);
-    assert.equal(viewMoreButton.name(), 'Button');
-    assert.equal(viewMoreButton.props().text, 'View more');
+    const seeMoreCourses = coursesContentContainer.find('SeeMoreCourses');
+    assert.deepEqual(seeMoreCourses.props(), {
+      isRtl: false,
+      courses: moreCourses.slice(4)
+    });
   });
 
   it('if there are no courses, RecentCourses component shows a CoursesSetUpMessage', () => {
