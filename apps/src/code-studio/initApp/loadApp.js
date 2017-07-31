@@ -1,4 +1,4 @@
-/* global addToHome Applab Blockly Scratch */
+/* global addToHome Applab Blockly */
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -432,7 +432,7 @@ window.apps = {
         let source;
         let appOptions = getAppOptions();
         if (appOptions.level && appOptions.level.scratch) {
-          resolve(Scratch.vm.saveProjectSb3());
+          resolve(appOptions.getCode());
         } else if (window.Blockly) {
           // If we're readOnly, source hasn't changed at all
           source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :

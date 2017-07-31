@@ -19,16 +19,11 @@ const Scratch = window.Scratch = window.Scratch || {};
 
 registerReducers(commonReducers);
 
-loadAppOptions().then(appOptions => {
-  const options = {
-    maxVisualizationWidth: 480,
-    vizAspectRatio: 4 / 3,
-    hideSource: false,
-    enableShowCode: false,
-    readonlyWorkspace: false,
-    pinWorkspaceToBottom: true,
-    ...appOptions,
-  };
+loadAppOptions().then(options => {
+  options.maxVisualizationWidth = 480;
+  options.vizAspectRatio = 4 / 3;
+  options.enableShowCode = false;
+  options.pinWorkspaceToBottom = true;
   window.appOptions = options;
 
   studioApp().configure(options);
@@ -56,6 +51,7 @@ loadAppOptions().then(appOptions => {
   // Instantiate the VM.
   const vm = new VM();
   Scratch.vm = vm;
+  options.getCode = vm.saveProjectSb3.bind(vm);
 
   const storage = new Storage();
   const AssetType = storage.AssetType;
