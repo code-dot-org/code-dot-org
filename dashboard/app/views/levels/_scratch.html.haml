@@ -1,25 +1,12 @@
+#root
+
 %button#greenflag
   Green Flag
 %button#stopall
   Stop All
-%canvas#scratch-stage
-#blocks
 
 %link{href: asset_path('css/common.css'), rel: 'stylesheet', type: 'text/css'}
 %link{href: asset_path('css/scratch.css'), rel: 'stylesheet', type: 'text/css'}
-:scss
-  #scratch-stage {
-    width: 480px;
-    height: 360px;
-  }
-  #blocks {
-    position: absolute;
-    left: 40%;
-    right: 0;
-    top: 50px;
-    bottom: 0;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-  }
 
 :javascript
   //<![CDATA[
