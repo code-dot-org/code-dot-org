@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -55,11 +55,11 @@ const styles = {
 
 const SetUpMessage = React.createClass({
   propTypes: {
-    isRtl: React.PropTypes.bool.isRequired,
-    headingText: React.PropTypes.string.isRequired,
-    descriptionText: React.PropTypes.string.isRequired,
-    buttonText: React.PropTypes.string.isRequired,
-    buttonUrl: React.PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    headingText: PropTypes.string.isRequired,
+    descriptionText: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    buttonUrl: PropTypes.string.isRequired,
   },
 
   render() {
@@ -105,8 +105,8 @@ export const CoursesSetUpMessage = (props) => {
 };
 
 CoursesSetUpMessage.propTypes = {
-  isRtl: React.PropTypes.bool.isRequired,
-  isTeacher: React.PropTypes.bool.isRequired,
+  isRtl: PropTypes.bool.isRequired,
+  isTeacher: PropTypes.bool.isRequired,
 };
 
 export const SectionsSetUpMessage = (props) => {
@@ -124,6 +124,6 @@ export const SectionsSetUpMessage = (props) => {
 };
 
 SectionsSetUpMessage.propTypes = {
-  isRtl: React.PropTypes.bool.isRequired,
-  codeOrgUrlPrefix: React.PropTypes.string,
+  isRtl: PropTypes.bool.isRequired,
+  codeOrgUrlPrefix: PropTypes.string,
 };
