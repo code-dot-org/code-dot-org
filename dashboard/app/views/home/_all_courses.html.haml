@@ -40,7 +40,7 @@
 
   - wide_blocks.each do |script_name|
     %div{id: script_name}
-      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small" }
+      = render partial: 'shared/course_wide_block', locals: { id: script_name, view: "small", showState: show_state }
 
 .csf-courses-header
   .row
