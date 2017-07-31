@@ -99,9 +99,11 @@ class ApiController < ApplicationController
       short_name: 'User',
       can_pair?: false
     )
+    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+
     @user_menu_options = {}
     @user_menu_options[:current_user] = sign_in_user
-    @user_menu_options[:show_pairing_dialog] = !!session.delete(:show_pairing_dialog)
+    @user_menu_options[:show_pairing_dialog] = @show_pairing_dialog
     @user_menu_options[:session_pairings] = session[:pairings]
     @user_menu_options[:loc_prefix] = 'nav.user.'
   end
