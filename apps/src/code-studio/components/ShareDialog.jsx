@@ -147,7 +147,7 @@ const ShareDialog = React.createClass({
   },
 
   publish: function () {
-    this.props.onShowPublishDialog();
+    this.props.onShowPublishDialog(this.props.channelId, this.props.appType);
   },
 
   unpublish: function () {
@@ -306,13 +306,13 @@ export const UnconnectedShareDialog = ShareDialog;
 
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
-}), (dispatch, ownProps) => ({
+}), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
-  onShowPublishDialog() {
+  onShowPublishDialog(projectId, projectType) {
     dispatch(hideShareDialog());
-    dispatch(showPublishDialog(ownProps.channelId, ownProps.appType));
+    dispatch(showPublishDialog(projectId, projectType));
   },
-  onUnpublish() {
-    dispatch(unpublishProject(ownProps.channelId));
+  onUnpublish(projectId) {
+    dispatch(unpublishProject(projectId));
   },
 }))(ShareDialog);
