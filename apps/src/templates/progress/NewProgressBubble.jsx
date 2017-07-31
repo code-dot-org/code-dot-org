@@ -33,8 +33,7 @@ const styles = {
     borderColor: color.lighter_gray,
     fontSize: 16,
     letterSpacing: -0.11,
-    // +2 presumably needed to account for border
-    lineHeight: (DOT_SIZE + 2) + 'px',
+    lineHeight: DOT_SIZE + 'px',
     textAlign: 'center',
     display: 'inline-block',
     marginTop: 3,
@@ -44,7 +43,7 @@ const styles = {
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
     height: DIAMOND_DOT_SIZE,
-    lineHeight: (DIAMOND_DOT_SIZE + 2) + 'px',
+    lineHeight: DIAMOND_DOT_SIZE + 'px',
     marginTop: 7,
     marginBottom: 7,
     borderRadius: 4,
@@ -54,15 +53,16 @@ const styles = {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
-    lineHeight: '20px',
+    lineHeight: SMALL_DOT_SIZE + 'px',
     fontSize: 0,
     marginTop: 0,
-    marginBottom: 4
+    marginBottom: 0
   },
   smallDiamond: {
     width: SMALL_DIAMOND_SIZE,
     height: SMALL_DIAMOND_SIZE,
-    borderRadius: 2,
+    lineHeight: SMALL_DIAMOND_SIZE + 'px',
+    borderRadius: 1,
     fontSize: 0,
     transform: 'rotate(45deg)',
     position: 'relative',
