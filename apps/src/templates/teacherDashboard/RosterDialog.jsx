@@ -118,7 +118,7 @@ NoClassroomsFound.propTypes = {
 
 const LoadError = ({error, studioUrl}) =>
   <div>
-    <a href={`${studioUrl}/users/auth/google_oauth2?scope=classroom.courses.readonly,classroom.rosters.readonly`}>
+    <a href={`${studioUrl}/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
     <p style={styles.error}>
@@ -173,6 +173,7 @@ export default class RosterDialog extends React.Component {
     return (
       <BaseDialog
         useUpdatedStyles
+        fixedHeight={480}
         isOpen={this.props.isOpen}
         handleClose={this.cancel}
         assetUrl={() => ''}

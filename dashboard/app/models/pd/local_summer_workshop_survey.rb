@@ -15,7 +15,17 @@
 #
 
 class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
-  def self.required_fields
+  def self.public_fields
+    (
+      public_required_fields +
+      facilitator_required_fields +
+      [
+        :who_facilitated
+      ]
+    ).freeze
+  end
+
+  def self.public_required_fields
     [
       :received_clear_communication,
       :venue_feedback,
@@ -36,9 +46,16 @@ class Pd::LocalSummerWorkshopSurvey < Pd::WorkshopSurvey
       :best_pd_ever,
       :part_of_community,
       :things_you_liked,
-      :things_you_would_change,
-      :give_permission_to_quote,
+      :things_you_would_change
     ].freeze
+  end
+
+  def self.required_fields
+    (
+      public_required_fields + [
+        :give_permission_to_quote
+      ]
+    ).freeze
   end
 
   def self.demographics_required_fields

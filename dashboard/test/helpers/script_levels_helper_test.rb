@@ -111,7 +111,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
     stubs(:current_user).returns(@teacher)
     script_level_solved_response(response, script_level)
-    assert_nil response[:end_of_stage_experience]
+    assert response[:end_of_stage_experience]
 
     stubs(:current_user).returns(nil)
     script_level_solved_response(response, script_level)

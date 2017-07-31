@@ -39,7 +39,8 @@ class Ability
       Pd::CourseFacilitator,
       Pd::TeacherApplication,
       :workshop_organizer_survey_report,
-      Pd::WorkshopMaterialOrder
+      Pd::WorkshopMaterialOrder,
+      :pd_workshop_user_management
     ]
 
     if user.persisted?
@@ -61,9 +62,10 @@ class Ability
       can :read, Pd::Session
       can :manage, Pd::Enrollment, user_id: user.id
       can :workshops_user_enrolled_in, Pd::Workshop
+      can :index, Section, user_id: user.id
 
       if user.teacher?
-        can :read, Section, user_id: user.id
+        can :manage, Section, user_id: user.id
         can :manage, :teacher
         can :manage, user.students
         can :manage, Follower
@@ -74,9 +76,6 @@ class Ability
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Script do |script|
           !script.professional_learning_course?
-        end
-        can :manage, Section do |section|
-          user.id == section.user_id
         end
         can :manage, SectionHiddenStage do |hidden_stage|
           user.id == hidden_stage.section.user_id
@@ -132,6 +131,7 @@ class Ability
         can :manage, :pd_workshop_summary_report
         can :manage, :pd_teacher_attendance_report
         can :manage, Pd::TeacherApplication
+        can :manage, :pd_workshop_user_management
       end
     end
 

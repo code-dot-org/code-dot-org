@@ -7,16 +7,17 @@ import { UnconnectedSectionsPage as SectionsPage }
   from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
 const defaultProps = {
-  validScripts: [
-  ],
+  validScripts: [],
   numSections: 3,
   classrooms: null,
+  studioUrl: '',
   newSection: () => {},
   setSections: () => {},
   setValidAssignments: () => {},
   loadClassroomList: () => {},
-  studioUrl: '',
   importClassroomStarted: () => {},
+  beginEditingNewSection: () => {},
+  beginEditingSection: () => {},
 };
 
 describe('SectionsPage', () => {
@@ -49,7 +50,7 @@ describe('SectionsPage', () => {
         {...defaultProps}
       />, options
     );
-    assert(requests.some(request => request.url === '/v2/sections/'));
+    assert(requests.some(request => request.url === '/dashboardapi/sections/'));
   });
 
   describe('with sectionFocus experiment', () => {

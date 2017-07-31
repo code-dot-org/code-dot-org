@@ -1,0 +1,56 @@
+%p
+  Hello #{@teacher.name}, and welcome to Code.org!
+%p
+  We’re here to help you get started.
+%h3
+  Step 1: Choose a course
+%p
+  On Code.org,
+  %a{href:"https://studio.code.org/courses"}you’ll find courses for all grade levels
+  \- from pre-readers to seniors in high school, and everyone in between. All our courses
+  are available at no cost. Looking for a quick activity? Try starting with an Hour of Code.
+%h3
+  Step 2: Set up your classroom section
+%p
+  %a{href:"https://studio.code.org/home"}Set up a classroom section
+  to view your student’s progress, print login cards for your students, manage their accounts,
+  and print certificates they can bring home when they finish the course.
+%h3
+  Step 3: Start teaching
+%p
+  Try out one of the lessons yourself! We also have daily lesson plans you can use to guide
+  your students, unplugged activities for your class you can do without a computer, and forums
+  to connect to other teachers.
+
+- if false
+  %h3
+    New to teaching computer science?
+  %p
+    We provide no-cost, high-quality professional development workshops for educators, led
+    by experienced Code.org facilitators in locations across the US. We've prepared over 57,000
+    new teachers to teach CS across grades K-12.
+    %a{href:"https://code.org/educate/professional-learning"}Find a professional development workshop near you.
+
+%form{action:"https://studio.code.org/home"}
+  %input{type: "submit", value: "Get started here!", style: 'width: 230px; height: 50px; border: 0; font-size: 25px; font-weight: bolder; color: white; background-color: #FDC62C; cursor: pointer;'}
+
+%h3
+  Still have questions? Please don’t hesitate to reach out to
+  %a{href:"mailto:support@code.org"}support@code.org
+%p
+  You’re part of a movement of over 500,000 teachers and over 18 million students that have used
+  Code.org globally, making it the most broadly used coding education platform and computer science
+  curriculum in K-12. Thank you for all you do to give our children the opportunity to build their future.
+
+%p
+  Best,
+%p
+  Hadi Partovi
+  %br
+  Founder, Code.org
+
+%p
+  %i
+    Thanks to Microsoft, Facebook, Infosys, Omidyar Network, Google
+    %a{href:"https://code.org/about/donors"}and other generous donors,
+    every student has the opportunity to learn computer science.

@@ -46,6 +46,7 @@ import {
   runAfterPostContainedLevel
 } from '../containedLevels';
 import {getStore} from '../redux';
+import mazeReducer from './redux';
 
 var ExecutionInfo = require('./executionInfo');
 
@@ -232,6 +233,12 @@ function rotate(data) {
   return data[0].map((x, i) => data.map(x => x[data.length - i - 1]));
 }
 
+Maze.getAppReducers = function () {
+  return {
+    maze: mazeReducer
+  };
+};
+
 /**
  * Initialize Blockly and the maze.  Called on page load.
  */
@@ -273,6 +280,10 @@ Maze.init = function (config) {
     // Load wall sounds.
     studioApp().loadAudio(skin.wallSound, 'wall');
 
+    if (skin.walkSound) {
+      studioApp().loadAudio(skin.walkSound, 'walk');
+    }
+
     // todo - longterm, instead of having sound related flags we should just
     // have the skin tell us the set of sounds it needs
     if (skin.additionalSound) {
@@ -287,13 +298,7 @@ Maze.init = function (config) {
       studioApp().loadAudio(skin.fillSound, 'fill');
       studioApp().loadAudio(skin.digSound, 'dig');
     }
-    if (skin.harvestSound) {
-      studioApp().loadAudio(skin.harvestSound, 'harvest');
-    }
-    if (skin.beeSound) {
-      studioApp().loadAudio(skin.nectarSound, 'nectar');
-      studioApp().loadAudio(skin.honeySound, 'honey');
-    }
+    Maze.subtype.loadAudio(skin);
   };
 
   config.afterInject = function () {
@@ -344,6 +349,7 @@ Maze.init = function (config) {
 
   var visualizationColumn = (
     <MazeVisualizationColumn
+      showCollectorGemCounter={Maze.subtype.isCollector()}
       showStepButton={!!(level.step && !level.edit_blocks)}
       searchWord={level.searchWord}
     />
@@ -1042,7 +1048,7 @@ function animateAction(action, spotlightBlocks, timePerStep) {
           break;
         default:
           timeoutList.setTimeout(function () {
-            studioApp().playAudio('failure');
+            studioApp().playAudioOnFailure();
           }, stepSpeed);
           break;
       }
@@ -1176,6 +1182,8 @@ function scheduleMove(endX, endY, timeForAnimation) {
         skin.goalIdle);
     }
   }
+
+  studioApp().playAudio('walk');
 }
 
 
@@ -1317,7 +1325,7 @@ Maze.scheduleFail = function (forward) {
     timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX + deltaX / 4, Maze.pegmanY + deltaY / 4,
         frame);
-      studioApp().playAudio('failure');
+      studioApp().playAudioOnFailure();
     }, stepSpeed * 2);
     timeoutList.setTimeout(function () {
       Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, frame);
@@ -1372,7 +1380,7 @@ Maze.scheduleFail = function (forward) {
       }, stepSpeed * 2);
     }
     timeoutList.setTimeout(function () {
-      studioApp().playAudio('failure');
+      studioApp().playAudioOnFailure();
     }, stepSpeed);
   }
 };
@@ -1435,7 +1443,7 @@ function scheduleDance(victoryDance, timeAlloted) {
   }
 
   if (victoryDance) {
-    studioApp().playAudio('win');
+    studioApp().playAudioOnWin();
   }
 
   var danceSpeed = timeAlloted / 5;
@@ -1487,7 +1495,7 @@ var scheduleDirtChange = function (options) {
   var previousValue = Maze.map.getValue(row, col) || 0;
 
   Maze.map.setValue(row, col, previousValue + options.amount);
-  Maze.subtype.drawer.updateItemImage(row, col, true);
+  Maze.subtype.scheduleDirtChange(row, col);
   studioApp().playAudio(options.sound);
 };
 

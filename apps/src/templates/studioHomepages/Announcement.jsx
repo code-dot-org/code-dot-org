@@ -1,7 +1,7 @@
 import React from 'react';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 const styles = {
   container: {
@@ -103,9 +103,9 @@ const Announcement = React.createClass({
         <div style={isRtl? styles.descriptionRtl : styles.description}>
           {description}
         </div>
-        <ProgressButton
+        <Button
           href={link}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
           text={buttonText}
           style={isRtl? styles.buttonRtl : styles.button}
         />

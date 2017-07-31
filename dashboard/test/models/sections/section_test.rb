@@ -132,16 +132,20 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test 'add_student adds student to section' do
+    result = nil
     assert_creates(Follower) do
-      @section.add_student @student
+      result = @section.add_student @student
     end
+    assert_equal result, Section::ADD_STUDENT_SUCCESS
     assert @section.students.exists?(@student.id)
   end
 
   test 'add_student is idempotent' do
-    2.times do
-      @section.add_student @student
-    end
+    result = @section.add_student @student
+    assert_equal result, Section::ADD_STUDENT_SUCCESS
+
+    result = @section.add_student @student
+    assert_equal result, Section::ADD_STUDENT_EXISTS
 
     assert_equal 1, @section.followers.count
     assert_equal [@student.id], @section.followers.all.map(&:student_user_id)
@@ -151,11 +155,13 @@ class SectionTest < ActiveSupport::TestCase
     follower = create :follower, section: @section, student_user: @student
     follower.destroy
 
+    result = nil
     assert_no_change('Follower.with_deleted.count') do
       assert_creates(Follower) do
-        @section.add_student @student
+        result = @section.add_student @student
       end
     end
+    assert_equal result, Section::ADD_STUDENT_SUCCESS
     refute follower.reload.deleted?
   end
 
@@ -215,7 +221,8 @@ class SectionTest < ActiveSupport::TestCase
     def verify(actual, expected)
       section = create :section
       actual.each do |name|
-        section.add_student create(:student, name: name)
+        result = section.add_student create(:student, name: name)
+        assert_equal result, Section::ADD_STUDENT_SUCCESS
       end
       result = section.name_safe_students.map(&:name)
       assert_equal expected, result
@@ -314,6 +321,14 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: course.id,
+      script: {id: nil, name: nil},
+      studentCount: 0,
+      grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -333,6 +348,14 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: nil,
+      script: {id: script.id, name: script.name},
+      studentCount: 0,
+      grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -355,6 +378,14 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: course.id,
+      script: {id: script.id, name: script.name},
+      studentCount: 0,
+      grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
   end
@@ -372,7 +403,28 @@ class SectionTest < ActiveSupport::TestCase
       numberOfStudents: 0,
       linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
       code: section.code,
+      stage_extras: false,
+      pairing_allowed: true,
+      login_type: "email",
+      course_id: nil,
+      script: {id: nil, name: nil},
+      studentCount: 0,
+      grade: nil,
+      providerManaged: false,
     }
     assert_equal expected, section.summarize
+  end
+
+  test 'valid_grade? accepts K-12 and Other' do
+    assert Section.valid_grade?("K")
+    assert Section.valid_grade?("1")
+    assert Section.valid_grade?("6")
+    assert Section.valid_grade?("12")
+    assert Section.valid_grade?("Other")
+  end
+
+  test 'valid_grade? does not accept invalid numbers and strings' do
+    refute Section.valid_grade?("Something else")
+    refute Section.valid_grade?("56")
   end
 end

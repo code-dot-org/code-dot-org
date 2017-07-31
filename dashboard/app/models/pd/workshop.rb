@@ -96,9 +96,9 @@ class Pd::Workshop < ActiveRecord::Base
       SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze
     ],
     COURSE_CSD => [
-      SUBJECT_CSD_UNITS_1_2 = 'Units 1 and 2: Problem Solving and Web Development'.freeze,
-      SUBJECT_CSD_UNIT_3 = 'Unit 3: Animations and Games'.freeze,
-      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: The Design Process and Data and Society'.freeze,
+      SUBJECT_CSD_UNITS_2_3 = 'Units 2 and 3: Web Development and Animations'.freeze,
+      SUBJECT_CSD_UNIT_3_4 = 'Units 3 and 4: Building Games and User Centered Design'.freeze,
+      SUBJECT_CSD_UNITS_4_5 = 'Units 4 and 5: App Prototyping and Data & Society'.freeze,
       SUBJECT_CSD_UNIT_6 = 'Unit 6: Physical Computing'.freeze,
       SUBJECT_CSD_TEACHER_CON = 'Code.org TeacherCon'.freeze,
       SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze

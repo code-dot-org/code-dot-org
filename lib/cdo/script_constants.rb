@@ -8,17 +8,30 @@ module ScriptConstants
   JIGSAW_NAME = 'jigsaw'.freeze
   ACCELERATED_NAME = 'accelerated'.freeze
 
+  OTHER_CATEGORY_NAME = 'other'.freeze
+
   MINECRAFT_TEACHER_DASHBOARD_NAME = 'Minecraft Adventurer'.freeze
   MINECRAFT_DESIGNER_TEACHER_DASHBOARD_NAME = 'Minecraft Designer'.freeze
   HOC_TEACHER_DASHBOARD_NAME = 'classicmaze'.freeze
 
   # The order here matters. The first category a script appears under will be
   # the category it belongs to in course dropdowns. The order of scripts within
-  # a category will be the order in which they appear in the dropdown.
+  # a category will be the order in which they appear in the dropdown, and the
+  # order of the categories will be their order in the dropdown.
   CATEGORIES = {
     full_course: [
       CSP = 'csp'.freeze,
       CSD = 'csd'.freeze,
+    ],
+    csf: [
+      COURSEA_NAME = 'coursea'.freeze,
+      COURSEB_NAME = 'courseb'.freeze,
+      COURSEC_NAME = 'coursec'.freeze,
+      COURSED_NAME = 'coursed'.freeze,
+      COURSEE_NAME = 'coursee'.freeze,
+      COURSEF_NAME = 'coursef'.freeze,
+      EXPRESS_NAME = 'express'.freeze,
+      PRE_READER_EXPRESS_NAME = 'pre-express'.freeze,
     ],
     hoc: [
       # Note that now multiple scripts can be an 'hour of code' script.
@@ -44,12 +57,21 @@ module ScriptConstants
       BASKETBALL_NAME = 'basketball'.freeze,
       SPORTS_NAME = 'sports'.freeze,
     ],
-    csf: [
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
+    csf_international: [
       COURSE1_NAME = 'course1'.freeze,
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+      TWENTY_HOUR_NAME = '20-hour'.freeze,
+    ],
+    math: [
+      ALGEBRA_NAME = 'algebra'.freeze,
+      ALGEBRA_A_NAME = 'AlgebraA'.freeze,
+      ALGEBRA_B_NAME = 'AlgebraB'.freeze,
+    ],
+    research_studies: [
+      HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
+      FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
     ],
     csf2_draft: [
       COURSEA_DRAFT_NAME = 'coursea-draft'.freeze,
@@ -90,15 +112,6 @@ module ScriptConstants
       CSP_EXAM1_NAME = 'cspexam1-mWU7ilDYM9'.freeze,
       CSP_EXAM2_NAME = 'cspexam2-AKwgAh1ac5'.freeze,
     ],
-    math: [
-      ALGEBRA_NAME = 'algebra'.freeze,
-      ALGEBRA_A_NAME = 'AlgebraA'.freeze,
-      ALGEBRA_B_NAME = 'AlgebraB'.freeze,
-    ],
-    research_studies: [
-      HOC_IMPACT_STUDY_NAME = 'hoc-impact-study'.freeze,
-      FLAPPY_IMPACT_STUDY_NAME = 'flappy-impact-study'.freeze
-    ],
     twenty_hour: [TWENTY_HOUR_NAME],
     flappy: [FLAPPY_NAME],
     minecraft: [
@@ -108,17 +121,6 @@ module ScriptConstants
     tts: [
       TTS_NAME = 'allthettsthings'.freeze
     ],
-  }.freeze
-
-  # By default, categories have an ordering priority of 0 and are ordered alphabetically by name.
-  # This can be used to override that, with lower numbers ordered sooner, and higher numbers
-  # ordered later.
-  CATEGORY_ORDERING_PRIORITY = {
-    # We want full courses to show up first in our list
-    full_course: -1,
-    research_studies: 1,
-    csp: 2,
-    other: 3,
   }.freeze
 
   def self.script_in_category?(category, script)
@@ -141,7 +143,11 @@ module ScriptConstants
   end
 
   def self.category_priority(category)
-    CATEGORY_ORDERING_PRIORITY[category.to_sym] || 0
+    if category == OTHER_CATEGORY_NAME
+      CATEGORIES.keys.length # 'other' goes at the end
+    else
+      CATEGORIES.keys.find_index(category.to_sym)
+    end
   end
 
   def self.teacher_dashboard_name(script)
@@ -169,7 +175,8 @@ module ScriptConstants
   # @return {AssignableInfo} without strings translated
   def self.assignable_info(course_or_script)
     name = ScriptConstants.teacher_dashboard_name(course_or_script[:name])
-    first_category = ScriptConstants.categories(course_or_script[:name])[0] || 'other'
+    first_category = ScriptConstants.categories(course_or_script[:name])[0] ||
+        OTHER_CATEGORY_NAME
     {
       id: course_or_script[:id],
       name: name,

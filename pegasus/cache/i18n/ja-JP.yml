@@ -969,6 +969,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: "ポストAP: アプリ内でのデータベース"
   cspassessment_name: "完全なテスト - 50 の質問"
   cspexam1-mWU7ilDYM9_name: "テストその1 - 25 の質問"
@@ -1004,7 +1005,7 @@
   applab_name: "アプリ ラボ"
   basketball_name: "バスケット ボールのゲームを作る"
   sports_name: Code your own sports game
-  applab_gradelevel: 13才以上対象
+  applab_gradelevel: 13才以上
   applab_shortdescription_congrats: "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才
@@ -1056,7 +1057,7 @@
   codesters_gradelevel: 12-14才
   texasinstruments_gradelevel: 13-16才
   teacherled_gradelevel: 5才以上
-  course1_gradelevel: 4-6 歳対象
+  course1_gradelevel: 4-6 才
   course2_gradelevel: 6-18 才
   course3_gradelevel: 8-18 才
   course4_gradelevel: 10-18 才

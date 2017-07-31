@@ -72,7 +72,8 @@ FactoryGirl.define do
         end
       end
       factory :facilitator do
-        name 'Facilitator Person'
+        sequence(:name) {|n| "Facilitator Person #{n}"}
+        sequence(:email) {|n| "testfacilitator#{n}@example.com.xx"}
         after(:create) do |facilitator|
           facilitator.permission = UserPermission::FACILITATOR
         end
@@ -84,7 +85,8 @@ FactoryGirl.define do
         end
       end
       factory :workshop_organizer do
-        name 'Workshop Organizer Person'
+        sequence(:name) {|n| "Workshop Organizer Person #{n}"}
+        sequence(:email) {|n| "testworkshoporganizer#{n}@example.com.xx"}
         after(:create) do |workshop_organizer|
           workshop_organizer.permission = UserPermission::WORKSHOP_ORGANIZER
         end
@@ -160,6 +162,12 @@ FactoryGirl.define do
           create(:follower, student_user: user, section: picture_section)
           user.reload
         end
+      end
+
+      factory :google_oauth2_student do
+        encrypted_password nil
+        provider 'google_oauth2'
+        sequence(:uid) {|n| n}
       end
 
       factory :old_student do

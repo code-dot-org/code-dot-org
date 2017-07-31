@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
 
@@ -15,20 +14,14 @@ const styles = {
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     display: 'inline-block',
+    fontSize: 13,
     fontFamily: '"Gotham 5r", sans-serif',
     borderRadius: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingTop: 5,
     paddingBottom: 5,
-    minWidth: 60
-  },
-  // Override some styles when progressBubbles is enabled so that it has a
-  // similar style to bubbles, and lines up properly
-  levelPillNew: {
-    borderWidth: 2,
-    paddingTop: 3,
-    paddingBottom: 3,
+    minWidth: 60,
   },
   text: {
     display: 'inline-block',
@@ -51,11 +44,12 @@ const ProgressPill = React.createClass({
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
     text: PropTypes.string,
-    fontSize: PropTypes.number
+    fontSize: PropTypes.number,
+    tooltip: PropTypes.element
   },
 
   render() {
-    const { levels, icon, text, fontSize } = this.props;
+    const { levels, icon, text, fontSize, tooltip } = this.props;
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
@@ -64,20 +58,27 @@ const ProgressPill = React.createClass({
     let style = {
       ...styles.levelPill,
       ...BUBBLE_COLORS[status],
-      ...(url && hoverStyle)
+      ...(url && hoverStyle),
+      ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
+      // After making progressBubbles experiment permanent, we can get rid of
+      // fontSize prop
+      fontSize: 16,
+      minWidth: 70
     };
 
-    if (experiments.isEnabled('progressBubbles')) {
-      style = {
-        ...style,
-        ...styles.levelPillNew,
-        ...(!multiLevelStep && levelProgressStyle(levels[0], false))
-      };
+    // If we're passed a tooltip, we also need to reference it from our div
+    let tooltipProps = {};
+    if (tooltip) {
+      const id = tooltip.props.id;
+      tooltipProps['data-tip'] = true;
+      tooltipProps['data-for'] = id;
+      tooltipProps['aria-describedby'] = id;
     }
 
     return (
       <a href={url}>
         <div
+          {...tooltipProps}
           style={style}
         >
           {icon && <FontAwesome icon={icon}/>}
@@ -92,6 +93,7 @@ const ProgressPill = React.createClass({
               {text}
             </div>
           )}
+          {tooltip}
         </div>
       </a>
     );

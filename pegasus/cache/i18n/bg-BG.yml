@@ -1174,6 +1174,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "Пълен тест - 50 въпроса"
   cspexam1-mWU7ilDYM9_name: "Тест част 1-25 въпроси"
@@ -1928,7 +1929,7 @@
   header_home: "Начало"
   header_courses: "Курсове"
   header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_sections: "Раздели"
   header_professional_learning: Professional Learning
   header_educate_overview: "Въведение за учителя"
   header_educate_elementary: "Начално училище"

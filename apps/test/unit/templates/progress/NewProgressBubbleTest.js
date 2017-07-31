@@ -176,7 +176,7 @@ describe('NewProgressBubble', () => {
         {...defaultProps}
       />
     );
-    assert.equal(wrapper.find('ReactTooltip div').text(), '<FontAwesome />1. level_name');
+    assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. level_name');
   });
 
   it('uses progression name when no name is specified', () => {
@@ -189,7 +189,7 @@ describe('NewProgressBubble', () => {
         }}
       />
     );
-    assert.equal(wrapper.find('ReactTooltip div').text(), '<FontAwesome />1. progression_name');
+    assert.equal(wrapper.find('TooltipWithIcon').props().text, '1. progression_name');
   });
 
   it('renders a small bubble if smallBubble is true', () => {
@@ -201,5 +201,40 @@ describe('NewProgressBubble', () => {
     );
 
     assert.equal(wrapper.find('div').at(1).props().style.width, 9);
+  });
+
+  it('renders a progress pill for unplugged lessons', () => {
+    const unpluggedLevel = {
+      status: LevelStatus.perfect,
+      kind: LevelKind.unplugged,
+      url: '/foo/bar',
+      isUnplugged: true
+    };
+    const wrapper = shallow(
+      <NewProgressBubble
+        {...defaultProps}
+        level={unpluggedLevel}
+        smallBubble={false}
+      />
+    );
+    assert.equal(wrapper.find('ProgressPill').length, 1);
+    assert(!!wrapper.find('ProgressPill').props().tooltip);
+  });
+
+  it('does not render a progress pill for unplugged when small', () => {
+    const unpluggedLevel = {
+      status: LevelStatus.perfect,
+      kind: LevelKind.unplugged,
+      url: '/foo/bar',
+      isUnplugged: true
+    };
+    const wrapper = shallow(
+      <NewProgressBubble
+        {...defaultProps}
+        level={unpluggedLevel}
+        smallBubble={true}
+      />
+    );
+    assert.equal(wrapper.find('ProgressPill').length, 0);
   });
 });

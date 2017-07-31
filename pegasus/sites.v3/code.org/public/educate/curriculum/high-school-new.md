@@ -11,26 +11,24 @@ High School
 
 [/solid-block-header]
 
-For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9 and the second, Computer Science Principles, is broadly available to be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
-
-<center><h3> [CS Discoveries](#csd) | [CS Principles](#csp) | [3rd Party Resources](#thirdparty) </h3></center>
+For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9 and the second, Computer Science Principles, can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide suggestions for teaching AP Computer Science A and additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
 
 <br>
 <hr>
 
 <a name="csd"></a>
 
-## Computer Science Discoveries 
+# <strong>Computer Science Discoveries</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
-<img src="/images/fit-400/csdiscoveries-montage.jpg">
+<%=view :displayvideothumbnail, id: "introcsd", videocode: "2-QpgNHknds", play_button: 'center' %>
 
 </div>
 
 [col-50]
 
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
+Computer Science Discoveries is designed for 7-9th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
@@ -43,7 +41,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 
 <a name="csp"></a>
 
-## Computer Science Principles
+# <strong>Computer Science Principles (normal or AP course)</strong>
 
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
 <% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
@@ -55,8 +53,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 </div>
 
 [col-50]
-
-This course is a rigorous, engaging, and approachable course that explores the foundational ideas of computing so that all students understand how these concepts are transforming the world we live in.
+Designed for 9-12 grade students, Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The curriculum is flexible to be taught as a normal course or as an AP course. CS Principles complements CS Discoveries with a deeper focus on concepts such as how the internet works and the societal impacts of computer science. The course works for beginners and students with experience in our other courses.
 
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
@@ -64,18 +61,10 @@ This course is a rigorous, engaging, and approachable course that explores the f
 
 <div style="clear: both;"></div>
 
-<%= view :three_circles, circles: [
-{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
-{img: '/images/testimonials/fit-150/students-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
-{img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
-
-<br />
-Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, and assessments that cover learning objectives from the [CS Principles Curriculum Framework](https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-computer-science-principles-course-and-exam-description.pdf). Course materials teach this class in the context of learning about the the Internet and programming in the JavaScript language.
-
 <br>
 <hr>
 
-## Computer Science Fundamentals - Express
+# <strong>Computer Science Fundamentals - Express</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
@@ -85,9 +74,9 @@ Code.org's curriculum consists of daily lesson plans, videos, tutorials, tools, 
 
 [col-50]
 
-For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the [Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
+For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a high school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](https://studio.code.org), but at an accelerated pace designed for students ages 10-18.
 
-[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+[<button>Learn more about curriculum</button>](/educate/curriculum/express-course)
 
 [/col-50]
 
@@ -96,11 +85,12 @@ For a lighterweight option that can be integrated as a unit in an existing techn
 <br>
 <hr>
 
-## AP Computer Science A in Java
+<a name="apcsa"></a>
+# <strong>AP Computer Science A in Java</strong>
 
 There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science A course and exam focuses on computing skills related to programming in Java. The new AP Computer Science Principles course complements AP Computer Science A as it aims to broaden participation in the study of computer science.
 
-While Code.org does not have an AP Computer Science A curriculum, there already exists a number of great curricula and programs available to teacher and students.
+While Code.org does not have an AP Computer Science A curriculum, we have recommendations for a number of great curricula and programs available to teacher and students.
 
 [<button>Learn more about AP CS A resources</button>](/educate/curriculum/apcsa)
 
@@ -109,7 +99,11 @@ While Code.org does not have an AP Computer Science A curriculum, there already 
 
 <a name="thirdparty"></a>
 
-## 3rd Party Resources
+[solid-block-header]
+
+Recommended courses from 3rd parties
+
+[/solid-block-header]
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 

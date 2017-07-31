@@ -41,7 +41,17 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
     "Strongly aligned with B",
   ].freeze
 
-  def self.required_fields
+  def self.public_fields
+    (
+      public_required_fields +
+      facilitator_required_fields +
+      [
+        :who_facilitated
+      ]
+    ).freeze
+  end
+
+  def self.public_required_fields
     [
       :personal_learning_needs_met,
       :have_ideas_about_formative,
@@ -81,12 +91,19 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
       :facilitators_could_improve,
       :liked_most,
       :would_change,
-      :give_permission_to_quote,
 
       :instruction_focus,
       :teacher_responsibility,
       :teacher_time,
     ].freeze
+  end
+
+  def self.required_fields
+    (
+      public_required_fields + [
+        :give_permission_to_quote
+      ]
+    ).freeze
   end
 
   def self.facilitator_required_fields

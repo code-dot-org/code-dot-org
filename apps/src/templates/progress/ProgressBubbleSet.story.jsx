@@ -14,6 +14,7 @@ const levels = fakeLevels(5).map((level, index) => ({
   ...level,
   status: statusForLevel[index]
 }));
+levels[0].isConceptLevel = true;
 
 export default storybook => {
   storybook
@@ -54,7 +55,7 @@ export default storybook => {
       },
       {
         name:'first level is unplugged',
-        description: 'Should still get a bubble (not a pill) for unplugged',
+        description: 'Should get a pill for unplugged',
         story: () => (
           <ProgressBubbleSet
             levels={[

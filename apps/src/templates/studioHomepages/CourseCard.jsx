@@ -6,7 +6,9 @@ import i18n from "@cdo/locale";
 const styles = {
   card: {
     overflow: 'hidden',
-    border: '1px solid gray',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     position: 'relative',
     height: 245,
     width: 473,
@@ -18,7 +20,7 @@ const styles = {
     width: 473,
     height: 130
   },
-  name: {
+  title: {
     paddingTop: 10,
     paddingBottom: 5,
     marginTop: 15,
@@ -31,7 +33,7 @@ const styles = {
     paddingLeft: 25,
     paddingRight: 10,
   },
-  nameRtl: {
+  titleRtl: {
     paddingTop: 10,
     paddingBottom: 5,
     marginTop: 15,
@@ -96,21 +98,21 @@ const styles = {
  */
 const CourseCard = React.createClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired
   },
 
   render() {
-    const { name, description, link, isRtl } = this.props;
+    const { title, description, link, isRtl } = this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
       <a href={link} style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
-        <div style={isRtl? styles.nameRtl : styles.name}>
-          {name}
+        <div style={isRtl? styles.titleRtl : styles.title}>
+          {title}
         </div>
         <div style={styles.description}>
           {description}

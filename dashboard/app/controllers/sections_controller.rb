@@ -1,5 +1,5 @@
 class SectionsController < ApplicationController
-  before_action :load_section_by_code, except: :update
+  before_action :load_section_by_code, only: [:log_in, :show]
 
   def show
     @secret_pictures = SecretPicture.all.shuffle

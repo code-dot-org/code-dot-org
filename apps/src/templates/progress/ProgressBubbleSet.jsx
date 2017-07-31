@@ -5,9 +5,7 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
-import ProgressPill from './ProgressPill';
 import color from "@cdo/apps/util/color";
-import i18n from '@cdo/locale';
 import { levelType } from './progressTypes';
 
 const styles = {
@@ -39,8 +37,7 @@ const styles = {
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
-    paddingTop: 6,
-    paddingBottom: 6,
+    paddingTop: 4,
     paddingRight: 2
   }
 };
@@ -54,6 +51,8 @@ const ProgressBubbleSet = React.createClass({
 
   render() {
     const { levels, disabled, style } = this.props;
+
+    const pillContainerStyle = styles.pillContainer;
 
     return (
       <div style={{...styles.main, ...style}}>
@@ -72,23 +71,14 @@ const ProgressBubbleSet = React.createClass({
             <div
               style={{
                 ...styles.container,
-                ...(level.isUnplugged && styles.pillContainer)
+                ...(level.isUnplugged && pillContainerStyle)
               }}
             >
-              {level.isUnplugged &&
-                <ProgressPill
-                  levels={[level]}
-                  text={i18n.unpluggedActivity()}
-                  fontSize={12}
-                />
-              }
-              {!level.isUnplugged &&
-                <ProgressBubble
-                  level={level}
-                  disabled={disabled}
-                  smallBubble={false}
-                />
-              }
+              <ProgressBubble
+                level={level}
+                disabled={disabled}
+                smallBubble={false}
+              />
             </div>
           </div>
         ))}

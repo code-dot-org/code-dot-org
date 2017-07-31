@@ -1,9 +1,12 @@
-import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import {assert} from '../../../util/configuredChai';
+import {
+  throwOnConsoleErrors,
+  throwOnConsoleWarnings
+} from '../../../util/testUtils';
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import {UnconnectedPrintCertificates as PrintCertificates} from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 
 const sectionId = 11;
 
@@ -15,6 +18,7 @@ describe('PrintCertificates', () => {
     <PrintCertificates
       sectionId={sectionId}
       assignmentName="playlab"
+      curriedPegasusUrl={path => `${path}`}
     />
   );
 
@@ -30,8 +34,8 @@ describe('PrintCertificates', () => {
   });
 
   it('has a submission button', () => {
-    assert.equal(wrapper.find('ProgressButton').length, 1);
-    assert.equal(wrapper.find('ProgressButton').props().text, 'Print certificates');
+    assert.equal(wrapper.find('Button').length, 1);
+    assert.equal(wrapper.find('Button').props().text, 'Print certificates');
   });
 
   it('loads student names', finish => {
@@ -53,6 +57,6 @@ describe('PrintCertificates', () => {
     };
 
     assert.deepEqual(wrapper.state('names'), []);
-    wrapper.find('ProgressButton').simulate('click');
+    wrapper.find('Button').simulate('click');
   });
 });
