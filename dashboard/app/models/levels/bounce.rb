@@ -67,7 +67,7 @@ class Bounce < Grid
   end
 
   def self.themes
-    %w(retro basketball soccer hockey football)
+    ["", "retro", "basketball", "soccer", "hockey", "football"]
   end
 
   # List of possible skins, the first is used as a default.
