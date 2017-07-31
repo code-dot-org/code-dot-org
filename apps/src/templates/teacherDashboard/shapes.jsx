@@ -42,4 +42,4 @@ export const loadErrorShape = PropTypes.shape({
   message: PropTypes.string.isRequired,
 });
 
-export const OAuthSectionTypes = makeEnum('google_classroom', 'clever');
+export const OAuthSectionTypes = makeEnum('google_classroom', 'clever', 'microsoft_classroom');
