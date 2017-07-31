@@ -330,19 +330,21 @@ class SectionRow extends Component {
             />
           )}
         </td>
-        <td style={styles.col}>
-          {!editingLoginType && section.loginType}
-          {editingLoginType && (
-            <select
-              defaultValue={section.loginType}
-              ref={element => this.loginType = element}
-            >
-              {['word', 'picture', 'email'].map((type, index) => (
-                <option key={index} value={type}>{type}</option>
-              ))}
-            </select>
-          )}
-        </td>
+        {!sectionFlow2017 &&
+          <td style={styles.col}>
+            {!editingLoginType && section.loginType}
+            {editingLoginType && (
+              <select
+                defaultValue={section.loginType}
+                ref={element => this.loginType = element}
+              >
+                {['word', 'picture', 'email'].map((type, index) => (
+                  <option key={index} value={type}>{type}</option>
+                ))}
+              </select>
+            )}
+          </td>
+        }
         <td style={styles.col}>
           {!editing && section.grade}
           {editing && (
@@ -381,26 +383,30 @@ class SectionRow extends Component {
             />
           )}
         </td>
-        <td style={styles.col}>
-          {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
-          {editing && (
-            <input
-              ref={element => this.stageExtras = element}
-              type="checkbox"
-              defaultChecked={section.stageExtras}
-            />
-          )}
-        </td>
-        <td style={styles.col}>
-          {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
-          {editing && (
-            <input
-              ref={element => this.pairingAllowed = element}
-              type="checkbox"
-              defaultChecked={section.pairingAllowed}
-            />
-          )}
-        </td>
+        {!sectionFlow2017 &&
+          <td style={styles.col}>
+            {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
+            {editing && (
+              <input
+                ref={element => this.stageExtras = element}
+                type="checkbox"
+                defaultChecked={section.stageExtras}
+              />
+            )}
+          </td>
+        }
+        {!sectionFlow2017 &&
+          <td style={styles.col}>
+            {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
+            {editing && (
+              <input
+                ref={element => this.pairingAllowed = element}
+                type="checkbox"
+                defaultChecked={section.pairingAllowed}
+              />
+            )}
+          </td>
+        }
         <td style={styles.col}>
           {persistedSection &&
             <a href={manageStudentsUrl} style={styles.link}>

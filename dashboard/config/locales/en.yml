@@ -571,7 +571,7 @@ en:
       title: "Gallery"
       body: "View a gallery of app and artist images created by our users"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
       audience: "Ages 13+"
       cta: "Learn how"

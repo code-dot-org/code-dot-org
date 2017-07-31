@@ -9,14 +9,10 @@ import {singleton as studioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import experiments from '@cdo/apps/util/experiments';
 import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('The ShowCodeToggle component', () => {
   let config, toggle, containerDiv, codeWorkspaceDiv, server, editor;
-
-  before(() => experiments.setEnabled('saveBlockMode', true));
-  after(() => experiments.setEnabled('saveBlockMode', false));
 
   beforeEach(() => {
     server = sinon.fakeServerWithClock.create();
