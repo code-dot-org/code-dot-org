@@ -104,18 +104,23 @@ class AdminUsersController < ApplicationController
   # get /admin/permissions
   def permissions_form
     search_term = params[:search_term]
-    if search_term =~ /^\d+$/
-      @user = User.find(search_term)
-    elsif search_term.present?
-      users = User.where(hashed_email: User.hash_email(search_term))
-      @user = users.first
-      if users.count > 1
-        flash[:notice] = "More than one User matches email address.  "\
+    permission = params[:permission]
+    if search_term.present?
+      if search_term =~ /^\d+$/
+        @user = User.find(search_term)
+      else
+        users = User.where(hashed_email: User.hash_email(search_term))
+        @user = users.first
+        if users.count > 1
+          flash[:notice] = "More than one User matches email address.  "\
                          "Showing first result.  Matching User IDs - #{users.map(&:id).join ','}"
+        end
       end
-    end
-    unless @user || search_term.blank?
-      flash[:notice] = "User Not Found"
+      unless @user || search_term.blank?
+        flash[:notice] = "User Not Found"
+      end
+    elsif permission.present?
+      @users_with_permission = User.joins(:permissions).where(user_permissions: {permission: permission}).order(:email)
     end
   end
 
