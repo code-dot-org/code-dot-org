@@ -3,8 +3,11 @@ require 'digest/md5'
 require 'cdo/activity_constants'
 
 class AdminUsersController < ApplicationController
+  include Pd::PageHelper
   before_action :authenticate_user!
   before_action :require_admin
+
+  DEFAULT_MANAGE_PAGE_SIZE = 25
 
   def account_repair_form
   end
@@ -121,6 +124,7 @@ class AdminUsersController < ApplicationController
       end
     elsif permission.present?
       @users_with_permission = User.joins(:permissions).where(user_permissions: {permission: permission}).order(:email)
+      @users_with_permission = @users_with_permission.page(page).per(page_size)
     end
   end
 
@@ -142,5 +146,16 @@ class AdminUsersController < ApplicationController
     permission = params[:permission]
     @user.delete_permission permission
     redirect_to permissions_form_path(search_term: user_id)
+  end
+
+  private
+
+  def page
+    params[:page] || 1
+  end
+
+  def page_size
+    return DEFAULT_MANAGE_PAGE_SIZE unless params.key? :page_size
+    params[:page_size] == 'All' ? @users_with_permission.count : params[:page_size]
   end
 end
