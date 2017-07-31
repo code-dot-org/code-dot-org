@@ -124,6 +124,7 @@ class AdminUsersController < ApplicationController
       end
     elsif permission.present?
       @users_with_permission = User.joins(:permissions).where(user_permissions: {permission: permission}).order(:email)
+      @users_with_permission = @users_with_permission.page(page).per(page_size)
     end
   end
 
