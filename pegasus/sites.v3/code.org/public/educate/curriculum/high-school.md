@@ -16,7 +16,7 @@ For high schools, we offer two years of Computer Science courses for beginners. 
 <%= view :solid_block_header, :title=>"Computer Science Discoveries", :subtitle=>"A semester or year-long introductory course designed for grades 7-9" %>
 
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
-<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. Thanks #{get_random_donor_twitter} for supporting @codeorg"} %>
 
 <div class="col-50" style="padding-right: 10px;">
 
@@ -57,7 +57,7 @@ Computer Science Discoveries is a full-year introductory computer science survey
 <%= view :solid_block_header, :title=>"Computer Science Principles", :subtitle=>"A year-long course that can be implemented as AP or non-AP designed for grades 9-12" %>
 
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
-<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
+<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>"Computer Science Principles. Thanks #{get_random_donor_twitter} for supporting @codeorg"} %>
 
 <div style="float:left; padding:10px; width:49%">
 
