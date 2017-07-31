@@ -12,14 +12,14 @@ export const CourseBlocksCsf = React.createClass({
 
   render() {
     if (this.props.isEnglish) {
-      return (<CourseBlocksCsfEn/>);
+      return (<CourseBlocksCsfEnglish/>);
     } else {
-      return (<CourseBlocksCsfNonEn/>);
+      return (<CourseBlocksCsfNonEnglish/>);
     }
   }
 });
 
-const CourseBlocksCsfEn = React.createClass({
+const CourseBlocksCsfEnglish = React.createClass({
   componentDidMount() {
     $('#coursea').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
     $('#courseb').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
@@ -74,7 +74,7 @@ const CourseBlocksCsfEn = React.createClass({
   }
 });
 
-const CourseBlocksCsfNonEn = React.createClass({
+const CourseBlocksCsfNonEnglish = React.createClass({
   componentDidMount() {
     $('#course1').appendTo(ReactDOM.findDOMNode(this.refs.course1)).show();
     $('#course2').appendTo(ReactDOM.findDOMNode(this.refs.course2)).show();
