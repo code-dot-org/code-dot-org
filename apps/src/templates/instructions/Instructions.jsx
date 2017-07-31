@@ -26,7 +26,7 @@ var Instructions = React.createClass({
     instructions: React.PropTypes.string,
     instructions2: React.PropTypes.string,
     renderedMarkdown: React.PropTypes.string,
-    aniGifURL: React.PropTypes.string,
+    imgURL: React.PropTypes.string,
     authoredHints: React.PropTypes.element,
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
@@ -70,10 +70,10 @@ var Instructions = React.createClass({
           <InputOutputTable data={this.props.inputOutputTable}/>
         }
 
-        {this.props.aniGifURL && !this.props.inTopPane &&
-          <img className="aniGif example-image" src={this.props.aniGifURL}/>
+        {this.props.imgURL && !this.props.inTopPane &&
+          <img className="aniGif example-image" src={this.props.imgURL}/>
         }
-        {this.props.aniGifURL && this.props.inTopPane &&
+        {this.props.imgURL && this.props.inTopPane &&
           <AniGifPreview/>
         }
         {this.props.authoredHints}

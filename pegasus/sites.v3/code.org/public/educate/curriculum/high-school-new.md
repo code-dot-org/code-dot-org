@@ -13,18 +13,16 @@ High School
 
 For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9 and the second, Computer Science Principles, can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide suggestions for teaching AP Computer Science A and additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
 
-<center><h3> [CS Discoveries](#csd) | [CS Principles](#csp) | [AP Computer Science A](#apcsa) | [3rd Party Courses](#thirdparty) </h3></center>
-
 <br>
 <hr>
 
 <a name="csd"></a>
 
-## Computer Science Discoveries 
+# <strong>Computer Science Discoveries</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
-<img src="/images/fit-400/csdiscoveries-montage.jpg">
+<%=view :displayvideothumbnail, id: "introcsd", videocode: "2-QpgNHknds", play_button: 'center' %>
 
 </div>
 
@@ -43,7 +41,7 @@ Computer Science Discoveries is designed for 7-9th grade students and can be tau
 
 <a name="csp"></a>
 
-## Computer Science Principles (can be offered as an AP course)
+# <strong>Computer Science Principles (normal or AP course)</strong>
 
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
 <% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
@@ -63,18 +61,10 @@ Designed for 9-12 grade students, Computer Science Principles introduces student
 
 <div style="clear: both;"></div>
 
-<%= view :three_circles, circles: [
-{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
-{img: '/images/testimonials/fit-150/students-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
-{img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
-
-<br />
-
-
 <br>
 <hr>
 
-## Computer Science Fundamentals - Express
+# <strong>Computer Science Fundamentals - Express</strong>
 
 <div class="col-50" style="padding-right: 10px;">
 
@@ -86,7 +76,7 @@ Designed for 9-12 grade students, Computer Science Principles introduces student
 
 For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a high school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](https://studio.code.org), but at an accelerated pace designed for students ages 10-18.
 
-[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
+[<button>Learn more about curriculum</button>](/educate/curriculum/express-course)
 
 [/col-50]
 
@@ -96,7 +86,7 @@ For a lightweight option that can be integrated as a unit in an existing technol
 <hr>
 
 <a name="apcsa"></a>
-## AP Computer Science A in Java
+# <strong>AP Computer Science A in Java</strong>
 
 There are two AP computer science offerings, and students can take either course in any order. The AP Computer Science A course and exam focuses on computing skills related to programming in Java. The new AP Computer Science Principles course complements AP Computer Science A as it aims to broaden participation in the study of computer science.
 
@@ -109,7 +99,11 @@ While Code.org does not have an AP Computer Science A curriculum, we have recomm
 
 <a name="thirdparty"></a>
 
-## 3rd Party Resources
+[solid-block-header]
+
+Recommended courses from 3rd parties
+
+[/solid-block-header]
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 

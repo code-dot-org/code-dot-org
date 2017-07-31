@@ -1,16 +1,8 @@
 import React, { PropTypes } from 'react';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
-import ReactTooltip from 'react-tooltip';
-import FontAwesome from '../FontAwesome';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
-import _ from 'lodash';
-import experiments from '@cdo/apps/util/experiments';
 import NewProgressBubble from './NewProgressBubble';
-import { getIconForLevel } from './progressHelpers';
 import { levelType } from './progressTypes';
-
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 
 export const DOT_SIZE = 30;
 
@@ -54,58 +46,7 @@ const ProgressBubble = React.createClass({
   },
 
   render() {
-    if (experiments.isEnabled('progressBubbles')) {
-      return <NewProgressBubble {...this.props}/>;
-    }
-
-    const level = this.props.level;
-    const number = level.levelNumber;
-    const status = level.status;
-    const url = level.url;
-    const levelName = level.name || level.progression;
-    const levelIcon = getIconForLevel(level);
-
-    const disabled = this.props.disabled || levelIcon === 'lock';
-
-    const style = {
-      ...styles.main,
-      ...(!disabled && styles.enabled),
-      ...(BUBBLE_COLORS[disabled ? LevelStatus.not_tried : status])
-    };
-
-    let href = '';
-    if (!disabled && url) {
-      href = url + location.search;
-    }
-
-    const tooltipId = _.uniqueId();
-    const interior = levelIcon === 'lock' ? <FontAwesome icon="lock"/> : number;
-
-    let bubble = (
-      <div style={style} data-tip data-for={tooltipId} aria-describedby={tooltipId}>
-        {interior}
-        <ReactTooltip
-          id={tooltipId}
-          role="tooltip"
-          wrapper="span"
-          effect="solid"
-        >
-          <FontAwesome icon={levelIcon} style={styles.tooltipIcon}/>
-          {levelName}
-        </ReactTooltip>
-      </div>
-    );
-
-    // If we have an href, wrap in an achor tag
-    if (href) {
-      bubble = (
-        <a href={href}>
-          {bubble}
-        </a>
-      );
-    }
-
-    return bubble;
+    return <NewProgressBubble {...this.props}/>;
   }
 });
 

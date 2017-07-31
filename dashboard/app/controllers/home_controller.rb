@@ -34,8 +34,14 @@ class HomeController < ApplicationController
 
   GALLERY_PER_PAGE = 5
 
+  # Signed in: redirect to /home
+  # Signed out: redirect to /courses
   def index
-    redirect_to '/home'
+    if current_user
+      redirect_to '/home'
+    else
+      redirect_to '/courses'
+    end
   end
 
   # Signed in: render home page

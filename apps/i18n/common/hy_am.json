@@ -615,7 +615,7 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "խաղային տարածք",
   "yes": "այո",
-  "challengeLevelIntro": "Challenge Puzzles are lessons deisgned to push your skills to a new level.",
+  "challengeLevelIntro": "Challenge Puzzles are lessons designed to push your skills to a new level.",
   "challengeLevelPassTitle": "You did it!",
   "challengeLevelPassText": "However, you could've done it with only {idealBlocks, plural, one {1 block} other {# blocks}}. Can you make your program even better?",
   "challengeLevelPerfectTitle": "Challenge Complete!",
