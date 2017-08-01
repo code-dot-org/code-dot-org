@@ -32,35 +32,44 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. Install Homebrew: `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 1. Install Redis: `brew install redis`
 1. Run `brew install https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb enscript gs mysql nvm imagemagick rbenv ruby-build coreutils sqlite phantomjs`
-  1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
-  1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
+    1. If it complains about `Formula.sha1` is disabled, removing https://raw.github.com/quantiverge/homebrew-binary/pdftk/pdftk.rb seems to not have serious side effects (it will cause `PDFMergerTest` to fail).
+    1. If it complains about an old version of `<package>`, run `brew unlink <package>` and run `brew install <package>` again
 1. Set up MySQL
-  1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
-  1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
+    1. Have `launchd` start mysql at login: `ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents`
+    1. Start mysql now: `launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist`
 1. Set up rbenv
-  1. Run `rbenv init`
-  1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
-  1. Pick up those changes: `source ~/.bash_profile`
+    1. Run `rbenv init`
+    1. Add the following to `~/.bash_profile` or your desired shell: `eval "$(rbenv init -)"`. More info [here](https://github.com/rbenv/rbenv#homebrew-on-mac-os-x).
+    1. Pick up those changes: `source ~/.bash_profile`
 1. Install Ruby 2.2.3
-  1. `rbenv install 2.2.3`
-  1. Set the global version of Ruby: `rbenv global 2.2.3`
-  1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
+    1. `rbenv install 2.2.3`
+    1. Set the global version of Ruby: `rbenv global 2.2.3`
+    1. Install shims for all Ruby executables: `rbenv rehash`. More info [here](https://github.com/rbenv/rbenv#rbenv-rehash).
 1. Set up [nvm](https://github.com/creationix/nvm)
-  1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
-  1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+    1. Create nvm's working directory if it doesnt exist: `mkdir ~/.nvm`
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
 
-     ```
-     # Load nvm function into the shell
-     export NVM_DIR=~/.nvm
-     source $(brew --prefix nvm)/nvm.sh
-     ```
+        ```
+        # Load nvm function into the shell
+        export NVM_DIR=~/.nvm
+        source $(brew --prefix nvm)/nvm.sh
+        ```
 
-  1. Pick up those changes: `source ~/.bash_profile`
+    1. Pick up those changes: `source ~/.bash_profile`
 1. Install Node, npm, and yarn
-  1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
-  1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
-  1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
+    1. `nvm install 6.9.0 && nvm alias default 6.9.0` this command should make this version the default version and print something like: `Creating default alias: default -> 6.9.0 (-> v6.9.0)`
+    1. `curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 0.23.2`
+    1. (You can reinstall with your updated version after you clone the repository if necessary) Reinstall node_modules `cd apps; yarn; cd ..`
 1. (El Capitan) Ensure that openssl is linked: `brew link --force openssl`
+1. Prevent future problems related to the `Too many open files` error:
+    1. Add the following to `~/.bash_profile` or your desired shell configuration file:
+        ```
+        ulimit -n 8192
+        ```
+    1. close and reopen your current terminal window
+    1. make sure that `ulimit -n` returns 8192
+1. install the Xcode Command Line Tools:
+    1. `xcode-select --install`
 
 ### Ubuntu 17.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
