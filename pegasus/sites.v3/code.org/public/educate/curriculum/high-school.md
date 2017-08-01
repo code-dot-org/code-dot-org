@@ -20,7 +20,9 @@ For high schools, we offer two years of Computer Science courses for beginners. 
 
 <div class="col-40" style="padding-right: 10px;">
 
-<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
+<% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false', twitter: twitter, facebook: facebook %>
 
 </div>
 
@@ -41,7 +43,7 @@ Computer Science Discoveries is designed for 7-9th grade students and can be tau
 # Computer Science Principles (normal or AP course)
 
 <% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
-<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>'Computer Science Principles @codeorg'} %>
+<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>"Computer Science Principles. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 
 <div class="col-40" style="float:left; padding:10px;">
 
@@ -52,6 +54,9 @@ Computer Science Discoveries is designed for 7-9th grade students and can be tau
 [col-60]
 
 Designed for 9-12 grade students, Computer Science Principles introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The curriculum is flexible to be taught as a normal course or as an AP course. CS Principles complements CS Discoveries with a deeper focus on concepts such as how the internet works and the societal impacts of computer science. The course works for beginners and students with experience in our other courses.
+
+<% facebook = {:u=>'https://youtu.be/DMr1iFYacGQ'} %>
+<% twitter = {:url=>'https://youtu.be/DMr1iFYacGQ', :related=>'codeorg', :text=>"Computer Science Principles. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 
 [<button>Learn more about curriculum</button>](/educate/csp) &nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-principles)
 
