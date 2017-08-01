@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import ScriptOverviewTopRow from './ScriptOverviewTopRow';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
+import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 
 /**
  * Stage progress component used in level header and script overview.
@@ -11,6 +12,7 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 const ScriptOverview = React.createClass({
   propTypes: {
     onOverviewPage: React.PropTypes.bool.isRequired,
+    excludeCsfColumnInLegend: React.PropTypes.bool.isRequired,
 
     // redux provided
     perLevelProgress: React.PropTypes.object.isRequired,
@@ -20,13 +22,19 @@ const ScriptOverview = React.createClass({
     isRtl: React.PropTypes.bool.isRequired,
   },
 
+  componentDidMount() {
+    // get rid of existing legend
+    $(".user-stats-block .key").hide();
+  },
+
   render() {
     const {
       professionalLearningCourse,
       scriptName,
       viewAs,
       isRtl,
-      onOverviewPage
+      onOverviewPage,
+      excludeCsfColumnInLegend
     } = this.props;
 
     const hasLevelProgress = Object.keys(this.props.perLevelProgress).length > 0;
@@ -44,6 +52,9 @@ const ScriptOverview = React.createClass({
         )}
 
         <ProgressTable/>
+        {onOverviewPage &&
+          <ProgressLegend excludeCsfColumn={excludeCsfColumnInLegend}/>
+        }
       </div>
     );
   }

@@ -6,7 +6,7 @@
   "user_id": 19,
   "properties": {
     "skin": "artist",
-    "instructions": "Tweet tweet! Can you help me make two bird houses?",
+    "instructions": "\"Can you help me make two bird houses?\"",
     "x": "75",
     "y": "250",
     "start_direction": "90",
@@ -35,13 +35,15 @@
     "ideal": "11",
     "instructions_important": "false",
     "images": "[\r\n    {\"filename\": \"https://images.code.org/e7b45bd48f227fea808354638e1bb5e8-image-1492450353024.png\", \"position\": [87, 170]},\r\n  {\"filename\": \"https://images.code.org/e7b45bd48f227fea808354638e1bb5e8-image-1492450353024.png\", \"position\": [237, 170]}\r\n]\r\n\r\n",
-    "markdown_instructions": "Tweet! Can you help me make two bird houses?",
+    "markdown_instructions": "**Tweet!**\r\n\r\n*\"Can you help me make two bird houses?\"*",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:24:43 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-01 14:33:05 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -58,19 +60,13 @@
         <block type="simple_move_right"/>
         <block type="simple_move_left"/>
         <block type="simple_move_up_left"/>
-        <block type="simple_move_up_right"/>
         <block type="simple_move_down_left"/>
+        <block type="simple_move_up_right"/>
         <block type="simple_move_down_right"/>
         <block type="controls_repeat_simplified_dropdown">
           <title name="TIMES" config="2-9">???</title>
         </block>
-        <block type="simple_jump_up"/>
-        <block type="simple_jump_down"/>
         <block type="simple_jump_right"/>
-        <block type="simple_jump_left"/>
-        <block type="draw_colour_simple">
-          <title name="COLOUR">#ff0000</title>
-        </block>
       </xml>
     </toolbox_blocks>
     <solution_blocks>

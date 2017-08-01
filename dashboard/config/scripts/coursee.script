@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Algorithms: Dice Race'
 level 'DiceRace'
 
@@ -137,7 +139,6 @@ level 'courseE_playLab_scaffold4'
 level 'courseE_playLab_scaffold5'
 level 'courseE_playLab_scaffold6'
 bonus 'courseE_playLab_challenge1'
-bonus 'courseE_playlab_challenge2'
 
 stage 'Explore Project Ideas', flex_category: 'end_of_course_project'
 named_level 'courseF_video_csMatters'

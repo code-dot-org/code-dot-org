@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
@@ -18,9 +17,9 @@ const StudentHomepage = React.createClass({
     canLeave: React.PropTypes.bool.isRequired,
   },
 
- componentDidMount() {
-    // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
+  componentDidMount() {
+    // The component used here is implemented in legacy HAML/CSS rather than React.
+    $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
@@ -31,6 +30,9 @@ const StudentHomepage = React.createClass({
         <HeaderBanner
           headingText={i18n.homepageHeading()}
           short={true}
+        />
+        <ProtectedStatefulDiv
+          ref="flashes"
         />
 
         <RecentCourses
@@ -49,9 +51,6 @@ const StudentHomepage = React.createClass({
           canLeave={canLeave}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
-
-        <ProtectedStatefulDiv ref="sectionManagement"/>
-
       </div>
     );
   }

@@ -2,7 +2,7 @@
   hour_of_code: Hour of Code（コーディングを学ぶ時間）
   hello: Hello world
   'yes': "はい"
-  'no': "ちがいます"
+  'no': "いいえ"
   select_language: "言語を選択してください"
   upgrade_ie_message: Code.org は、間もなくインターネット エクスプ ローラー 8、9、10 のサポートを終了します。最新のブラウザーにアップグレードしてください。
   upgrade_ie_message_csedweek: CSEdWeek.org は、間もなくインターネット エクスプ ローラー 8、9、10 のサポートを終了します。最新のブラウザーにアップグレードしてください。
@@ -78,12 +78,12 @@
   congratulations_on_completing_course2: "おめでとうございます。コース 2 を修了しました"
   congratulations_on_completing_course3: "おめでとうございます。コース 3 を修了しました"
   congratulations_on_completing_course4: "おめでとうございます。コース 4 を修了しました"
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: "コースA終了おめでとう。"
+  congratulations_on_completing_courseb: "コースB終了おめでとう。"
+  congratulations_on_completing_coursec: "コースC終了おめでとう。"
+  congratulations_on_completing_coursed: "コースD終了おめでとう。"
+  congratulations_on_completing_coursee: "コースE終了おめでとう。"
+  congratulations_on_completing_coursef: "コースF終了おめでとう。"
   congratulations_on_completing_accelerated: "おめでとうございます。上級コースを修了しました"
   congrats_next_tutorials_title: "次のレベルへ進む"
   congrats_next_tutorials_desc: 短めの1時間チュートリアル、または <a href="%{current_path}/next">パートナーのチュートリアル</a>
@@ -221,13 +221,37 @@
   just_did_course2: "コース2 完了 - やったー！@codeorg"
   just_did_course3: "コース 3完了 - やったー！@codeorg"
   just_did_course4: "コース 4 完了 - やっほー！@codeorg"
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: "コースA完了 - やったー！@codeorg"
+  just_did_courseb: "コースB完了 - やったー！@codeorg"
+  just_did_coursec: "コースC完了 - やったー！@codeorg"
+  just_did_coursed: "コースD完了 - やったー！@codeorg"
+  just_did_coursee: "コースE完了 - やったー！@codeorg"
+  just_did_coursef: "コースF完了 - やったー！@codeorg"
   just_did_accelerated: "上級コース完了 - やったー！@codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 10 人のうち 9 人が、学校でコンピュータ ・ サイエンスを教えるべきだと考えています。http://youtu.be/nKIu9yen5nc
     。Https://code.org/ をご覧ください。
   twitter_cs_foundational: "コンピューターサイエンスは、学生が学ぶすべての基本です。https://youtu.be/QvyTEx1wyOY。"
@@ -276,10 +300,7 @@
     &ldquo; &mdash; 女の子を含む &mdash;子どもたちはコンピューターサイエンスを学ぶ機会が必要です。&rdquo;
     シェリル, COO of Facebook
   homepage_hero_text_satya: "「コンピュータサイエンスを学べば世界中であらゆることに挑戦できます。」サティヤ、Microsoft CEO"
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+  homepage_hero_text_satya_new: "「コンピュータ ・ サイエンスは、明日の世界を作る学生を支援する」サティヤ、マイクロソフトCEO"
   homepage_hero_text_bosh: "&ldquo;コードできるということは、あなたの人生の進むべき道を選択できるということです。&rdquo;クリス・ボッシュ"
   homepage_hero_text_student1: |-
     &ldquo;これらのスキルは私の人生を変えました。言うまでもないけど、単純に楽しいです。&rdquo;
@@ -294,7 +315,7 @@
   homepage_hero_text_student5: "&ldquo;コンピューターサイエンスは他の人のためにあるんじゃない。あなたのためにあるのだ。いま、ここから始めよう。&rdquo;ジェラルド先生"
   homepage_hero_text_teacher1: "&ldquo;コーディングは創造性、インスピレーション、革新性が育てられます&mdash;これらは、どのような仕事でも大事なことです」&rdquo;フローレサ先生"
   homepage_hero_text_teacher2: "&ldquo;生徒全員がこのプログラムに興味を持ち、集中して取り組みました。&rdquo;アダム、教師"
-  homepage_hero_text_stat_loc: 250万人の女の子がCode Studioに参加して学んでいます。
+  homepage_hero_text_stat_loc: 850万人の女の子がCode.orgに参加して学んでいます。
   homepage_hero_text_stat_students: "コードスタジオの学生アカウント #student_count  "
   homepage_hero_text_stat_served: 'Hour of Code: #served 提供'
   homepage_slot_text_hoc: Hour of Code
@@ -303,7 +324,7 @@
   homepage_slot_text_studio: "すべてのチュートリアル"
   homepage_slot_text_course4: "コース4"
   homepage_slot_text_shop: "ショップ"
-  homepage_slot_text_flappy: Flappy Code
+  homepage_slot_text_flappy: "フラッピー コード"
   homepage_action_text_hoc: "すべての生徒に、Hour of Codeを"
   homepage_action_text_num_served: "# 人が試しました"
   homepage_action_text_join_us: "参加しませんか"
@@ -336,7 +357,7 @@
   homepage_slot_text_title_hoc: Hour of Code（コーディングを学ぶ時間）
   homepage_slot_text_blurb_hoc: "誰でも学べる！早速始めよう。"
   homepage_slot_text_link_hoc: "「コードの時間」に挑戦する"
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Hour of Code（アウアオブコード）について
   homepage_slot_text_link_host: Hour of Code を主催する
   homepage_slot_text_link_hocserved: "# 人が試しました"
   homepage_solot_text_link_volunteer: Hour of Code のボランティア
@@ -414,14 +435,14 @@
   starwars_javascript_specs: "英語のみ | 最新のブラウザー | 11歳以上向け"
   starwars_blocks_title: "ブロック達"
   starwars_blocks_description: "ドラッグアンドドロップできる、ブロックを使います。"
-  starwars_blocks_specs: "多言語対応 | 最新ブラウザ、スマートフォン、タブレット | 6-106歳向け"
+  starwars_blocks_specs: "多言語対応 | 最新ブラウザ、スマートフォン、タブレット | 6才以上"
   starwars_platform_text: "最新ブラウザ、スマート フォン、タブレット"
   mc_name: MinecraftのHour of Code (アワーオブコード)
   mc_longdescription: "コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！"
   mc_shortdescription: "コードのブロックを使って、スティーブかアレックスにMinecraftの世界を冒険させよう！"
   mc_gradelevel: 6歳以上
   mc_platformtext: "最新ブラウザ、スマート フォン、タブレット"
-  mc_specs: "多言語対応 | 最新ブラウザ、タブレット | 6-106 歳向け"
+  mc_specs: "多言語対応 | 最新ブラウザ、タブレット | 6才以上"
   minecraft_designer: Minecraftデザイナー
   minecraft_adventurer: Minecraftアドベンチャー
   minecraft_tutorials: MinecraftのHour of Codeチュートリアル
@@ -666,7 +687,7 @@
   dashboard_responses_view: "テキスト応答を表示:"
   dashboard_responses_none: "私たちのクラスのほとんどは低学年向けに設計されており、生徒は文字を打ち込んで質問に回答する必要はありません。ここでは文字の応答は表示されません。中学・高校生のコースでは、上のドロップダウンから割り当てられたコースを選択することによって、質問に対する彼らの文章回答を見ることができます。"
   dashboard_sections_new_section: "新しいセクション"
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Google クラスルームからのインポート セクション
   dashboard_sections_jumbotron_instruction: "セクションを新規で作成し、学生を追加します。セクションを使うと生徒を複数の少人数のグループで管理できるので、進捗状況の把握や、アカウントの管理が容易になります。"
   dashboard_sections_table_section: "セクション"
   dashboard_sections_table_secret: "ログインタイプ"
@@ -747,13 +768,13 @@
   dashboard_course1: "コース1"
   dashboard_course2: "コース2"
   dashboard_course3: "コース3"
-  dashboard_course4: "コース4（ベータ）: "
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_course4: "コース4："
+  dashboard_coursea: "コース A："
+  dashboard_courseb: "コース B："
+  dashboard_coursec: "コース C："
+  dashboard_coursed: "コース D："
+  dashboard_coursee: "コース E："
+  dashboard_coursef: "コース F："
   dashboard_unplugged: "コンピューターが無い場合は、 <a href='%{unplugged_url}'> コンピューター不要のレッスン</a>
     を教室で試してください。"
   dashboard_curriculum: "カリキュラム"
@@ -951,6 +972,8 @@
   coursef-draft_name: "コース F"
   coursef_name: "コース F"
   accelerated_name: "上級コース"
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(old) Unit 1: デジタル情報"
   cspunit2_name: "(old) Unit 2: インターネット"
   cspunit3_name: "(old) Unit 3: プログラミング"
@@ -969,6 +992,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP パフォーマンス タスク
   csppostap_name: "ポストAP: アプリ内でのデータベース"
   cspassessment_name: "完全なテスト - 50 の質問"
   cspexam1-mWU7ilDYM9_name: "テストその1 - 25 の質問"
@@ -995,16 +1019,17 @@
   math_category_name: "数値"
   hoc_category_name: Hour of Code（コーディングを学ぶ時間）
   csf_category_name: "コンピューター・サイエンスの基礎"
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: "開発中: コース A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 コンピューター・サイエンス原理"
-  csp17_category_name: "'16-'17 コンピューター・サイエンス原理"
+  csp17_category_name: "コンピューター・サイエンス入門"
   cspexams_category_name: "コンピューター・サイエンス原理実習テスト"
   research_studies_category_name: Research Studies
   applab_name: "アプリ ラボ"
   basketball_name: "バスケット ボールのゲームを作る"
   sports_name: Code your own sports game
-  applab_gradelevel: 13才以上対象
+  applab_gradelevel: 13才以上
   applab_shortdescription_congrats: "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
   codeorg_gradelevel: 4才-104才
   codeintl_gradelevel: 4才-104才
@@ -1034,7 +1059,7 @@
   kodable_gradelevel: "小学校"
   tynkerapp_gradelevel: 5才-13才
   robomindnl_gradelevel: 8才-13才
-  flappy_gradelevel: 4才-104才
+  flappy_gradelevel: 6才以上
   bitsbox_gradelevel: "小学校"
   makeschool_gradelevel: "高校"
   touchdevelop_gradelevel: "高校"
@@ -1046,7 +1071,7 @@
   hourofcode_gradelevel: 4才-104才
   frozen_gradelevel: 8 才以上
   starwars_gradelevel: 6歳以上
-  playlab_gradelevel: 4才-104才
+  playlab_gradelevel: 6才-14才
   infinity_gradelevel: 4才-104才
   artist_gradelevel: 4才-104才
   monstercoding_gradelevel: 5才-13才
@@ -1056,16 +1081,16 @@
   codesters_gradelevel: 12-14才
   texasinstruments_gradelevel: 13-16才
   teacherled_gradelevel: 5才以上
-  course1_gradelevel: 4-6 歳対象
+  course1_gradelevel: 4-6 才
   course2_gradelevel: 6-18 才
   course3_gradelevel: 8-18 才
   course4_gradelevel: 10-18 才
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: 5年生以上
+  courseb_gradelevel: 6年生以上
+  coursec_gradelevel: 7年生以上
   coursed_gradelevel: "中学2年生以上向け"
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
+  coursee_gradelevel: 9年生以上
+  coursef_gradelevel: 10年生以上
   accelerated_gradelevel: 10-18 才
   codeorg_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   codeintl_platformtext: "最新ブラウザ、スマート フォン、タブレット"
@@ -1495,6 +1520,12 @@
   header_report_bug: "バグを報告"
   header_tutorials: "チュートリアル"
   header_documentation: "ドキュメント"
-  csp_name: "'16-'17 コンピューター・サイエンス原理"
+  csp_name: "コンピューター・サイエンス入門"
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
+  full_course_category_name: "すべてのコース"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

@@ -26,6 +26,7 @@ import {
   setIsHocScript,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
+  setStageExtrasEnabled,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -69,10 +70,10 @@ progress.showDisabledBubblesAlert = function () {
  * @param {object} progressData
  * @param {string} currentLevelid
  * @param {boolean} saveAnswersBeforeNavigation
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} [stageExtrasEnabled] whether or not the user is in a section
- *   for which stage extras are enabled
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
 progress.renderStageProgress = function (scriptData, stageData, progressData,
     currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
@@ -104,12 +105,13 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   if (signedIn) {
     progress.showDisabledBubblesAlert();
   }
+  if (stageExtrasEnabled) {
+    store.dispatch(setStageExtrasEnabled(true));
+  }
 
   ReactDOM.render(
     <Provider store={store}>
-      <StageProgress
-        stageExtrasEnabled={stageExtrasEnabled}
-      />
+      <StageProgress/>
     </Provider>,
     document.querySelector('.progress_container')
   );
@@ -134,7 +136,10 @@ progress.renderCourseProgress = function (scriptData) {
   $('.user-stats-block').prepend(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ScriptOverview onOverviewPage={true}/>
+      <ScriptOverview
+        onOverviewPage={true}
+        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
+      />
     </Provider>,
     mountPoint
   );

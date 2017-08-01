@@ -29,16 +29,20 @@
     "impressive": "false",
     "disable_sharing": "false",
     "examples_required": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "instructions_important": "true",
     "discard_background": "false",
     "markdown_instructions": "Great!  Do the same thing with these circles. \r\n\r\n- Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\r\n- Each circle begins just 50 pixels from where the last one ended",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To make a circle:\\n- Repeat 360 times\\n  - Move forward 1 pixel\\n  - Turn left 1 degree\",\"hint_id\":\"courseD_artist_nestedLoops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/69ee6cdb66509a8a76c08c0973edd15b/courseD_artist_nestedLoops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to jump forward by 50 pixels between circles.\",\"hint_id\":\"courseD_artist_nestedLoops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/de32a2755a29a5d538fc120062ce4668/courseD_artist_nestedLoops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use a nested loop to draw your circles 4 times.\",\"hint_id\":\"courseD_artist_nestedLoops4_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1aecf47ce1071ab9ce83e9c5d7826dad/courseD_artist_nestedLoops4.mp3\"}]",
     "step_speed": "0",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:23:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

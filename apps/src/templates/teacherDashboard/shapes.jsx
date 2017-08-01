@@ -7,13 +7,15 @@ export const sectionShape = PropTypes.shape({
   name: PropTypes.string.isRequired,
   // Though we validate valid login types here, the server actually owns the
   // canonical list, and passes us the list of valid login types.
-  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
+  loginType: PropTypes.oneOf(Object.keys(SectionLoginType)),
   stageExtras: PropTypes.bool.isRequired,
   pairingAllowed: PropTypes.bool.isRequired,
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,
   courseId: PropTypes.number,
   scriptId: PropTypes.number,
+  grade: PropTypes.string,
+  providerManaged: PropTypes.bool.isRequired,
 });
 
 export const assignmentShape = PropTypes.shape({
@@ -40,4 +42,4 @@ export const loadErrorShape = PropTypes.shape({
   message: PropTypes.string.isRequired,
 });
 
-export const OAuthSectionTypes = makeEnum('google_classroom', 'clever');
+export const OAuthSectionTypes = makeEnum('google_classroom', 'clever', 'microsoft_classroom');

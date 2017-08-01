@@ -1,0 +1,8 @@
+name 'csp-pre-survey-2017-q1'
+question 'I am very good at school.'
+right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'

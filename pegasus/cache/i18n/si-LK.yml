@@ -271,14 +271,44 @@
   just_did_course2: "මම දැන් දෙවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course3: "මම දැන් තෙවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
   just_did_course4: "මම දැන් සිවුවන පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න! @codeorg"
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: "මම දැන් සීඝ්‍රගාමී පාඨමාලාව නිම කරා - ඔබත් එය උත්සහ කර බලන්න!
     @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: |-
     පුද්ගලයින් 10 දෙනෙකු ගෙන් 9 දෙනෙකු පාසල් තුළ පරිගණක විද්‍යාව ඉගැන්විය යුතු බවට එකඟ වේ.
     http://youtu.be/nKIu9yen5nc. https://code.org/ වෙත පිවිසෙන්නග.
@@ -1166,6 +1196,8 @@
   coursef-draft_name: Course F
   coursef_name: Course F
   accelerated_name: "කඩිනම් පාඨමාලා"
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "ඒකක 1: ඩිජිටල් තොරතුරු"
   cspunit2_name: "පාඩම් අංක 2: අන්තර්ජාලය"
   cspunit3_name: "(පැරණි) 3 වන ඒකකය: ක්‍රමලේඛනය"
@@ -1184,6 +1216,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: "පූර්ණ පරීක්ෂණය - 50 ප්රශ්න"
   cspexam1-mWU7ilDYM9_name: "පරීක්ෂණය 1 වැනි කොටස - ප්‍රශ්න 25"
@@ -1210,6 +1243,7 @@
   math_category_name: "ගණිත"
   hoc_category_name: "පැයේ කේතය"
   csf_category_name: "පරිගණක විද්‍යාවේ මූලිකාංග"
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 පරිගණක විද්‍යාවේ මූලිකාංග"
@@ -1959,3 +1993,9 @@
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

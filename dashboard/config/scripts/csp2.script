@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'Bytes and File Sizes', flex_category: 'csp2_1'
@@ -19,9 +20,9 @@ assessment 'U1L13 Assessment 2', progression: 'Check Your Understanding'
 
 stage 'Encoding B&W Images', flex_category: 'csp2_1'
 level 'v2 U2L3 Student Lesson Summary', progression: 'Lesson Vocabulary & Resources'
-level 'Pixelation - Lesson 14 - Make the Letter A', progression: 'Pixelation'
-level 'Pixelation - Lesson 14 - Fix bit offset', progression: 'Pixelation'
-named_level 'Widget: Black and White Pixelation', progression: 'Widget: Black and White Pixelation'
+level 'Pixelation - Lesson 14 - Make the Letter A', progression: 'Pixelation Widget: Black and White Pixelation'
+level 'Pixelation - Lesson 14 - Fix bit offset', progression: 'Pixelation Widget: Black and White Pixelation'
+named_level 'Widget: Black and White Pixelation', progression: 'Pixelation Widget: Black and White Pixelation'
 assessment 'U1L14 Assessment 1', progression: 'Check Your Understanding'
 assessment 'U1L14 - Assessment 2', progression: 'Check Your Understanding'
 

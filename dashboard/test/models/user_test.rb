@@ -741,6 +741,36 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', user.age
   end
 
+  test 'changing oauth user from student to teacher with same email is allowed' do
+    user = create :google_oauth2_student, email: 'email@new.xx'
+
+    assert user.provider == 'google_oauth2'
+
+    user.update!(
+      user_type: User::TYPE_TEACHER,
+      email: 'email@new.xx',
+      hashed_email: User.hash_email('email@new.xx')
+    )
+    assert_equal 'email@new.xx', user.email
+    assert_equal User::TYPE_TEACHER, user.user_type
+  end
+
+  test 'changing oauth user from student to teacher with different email is not allowed' do
+    user = create :google_oauth2_student
+
+    assert user.provider == 'google_oauth2'
+
+    user.update_attributes(
+      user_type: User::TYPE_TEACHER,
+      email: 'email@new.xx',
+      hashed_email: User.hash_email('email@new.xx')
+    )
+    assert !user.save
+    assert_equal user.errors[:base].first, "The email address you provided doesn't match the email address for this account"
+    user.reload
+    assert_not_equal 'email@new.xx', user.email
+  end
+
   test 'changing from student to teacher clears terms_of_service_version' do
     user = create :student, terms_of_service_version: 1
     user.update!(user_type: User::TYPE_TEACHER, email: 'tos@example.com')
@@ -1586,6 +1616,28 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'assign_course_as_facilitator assigns course to facilitator' do
+    facilitator = create :facilitator
+    assert_creates Pd::CourseFacilitator do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
+    end
+    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
+  end
+
+  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
+    assert_no_difference 'Pd::CourseFacilitator.count' do
+      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
+    end
+  end
+
+  test 'delete_course_as_facilitator removes facilitator course' do
+    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
+    assert_difference 'Pd::CourseFacilitator.count', -1 do
+      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
+    end
+  end
+
   test 'should_see_inline_answer? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
@@ -1734,6 +1786,11 @@ class UserTest < ActiveSupport::TestCase
   test 'age validation is bypassed for Google OAuth users' do
     # Users created this way will be asked for their age when they first sign in.
     create :user, birthday: nil, provider: 'google_oauth2'
+  end
+
+  test 'age validation is bypassed for Clever users' do
+    # Users created this way will be asked for their age when they first sign in.
+    create :user, birthday: nil, provider: 'clever'
   end
 
   test 'users updating the email field must provide a valid email address' do
@@ -1889,11 +1946,13 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_courses_and_scripts
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:name]
+      assert_equal 'csd', courses_and_scripts[0][:name]
+      assert_equal 'Computer Science Discoveries', courses_and_scripts[0][:title]
       assert_equal 'CSD short description', courses_and_scripts[0][:description]
       assert_equal '/courses/csd', courses_and_scripts[0][:link]
 
-      assert_equal 'Script Other', courses_and_scripts[1][:name]
+      assert_equal 'other', courses_and_scripts[1][:name]
+      assert_equal 'Script Other', courses_and_scripts[1][:title]
       assert_equal 'other-description', courses_and_scripts[1][:description]
       assert_equal '/s/other', courses_and_scripts[1][:link]
     end
@@ -1905,7 +1964,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_courses_and_scripts
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
   end
 

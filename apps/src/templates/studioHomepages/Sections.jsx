@@ -1,7 +1,9 @@
 import React from 'react';
 import ContentContainer from '../ContentContainer';
 import SectionsTable from './SectionsTable';
-import SetUpMessage from './SetUpMessage';
+import {SectionsSetUpMessage} from './SetUpMessage';
+import JoinSection from './JoinSection';
+import JoinSectionNotifications from './JoinSectionNotifications';
 import i18n from "@cdo/locale";
 
 const Sections = React.createClass({
@@ -13,9 +15,33 @@ const Sections = React.createClass({
     canLeave: React.PropTypes.bool.isRequired
   },
 
+  getInitialState() {
+    return {
+      sections: this.props.sections,
+      sectionsAction: null,
+      sectionsResult: null,
+      sectionsResultName: null
+    };
+  },
+
+  updateSections(sections) {
+    this.setState({sections});
+  },
+
+  updateSectionsResult(action, result, name) {
+    this.setState({
+      sectionsAction: action,
+      sectionsResult: result,
+      sectionsResultName: name
+    });
+  },
+
   render() {
-    const { sections, codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
+    const sections = this.state.sections;
+    const { codeOrgUrlPrefix, isRtl, isTeacher, canLeave } = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
+    const enrolledInASection = sections.length === 0 ? false : true;
+    const enrollmentDescription = isTeacher ? "" : i18n.enrollmentDescription();
 
     return (
       <div>
@@ -25,25 +51,38 @@ const Sections = React.createClass({
           link={editSectionsUrl}
           showLink={isTeacher}
           isRtl={isRtl}
+          description={enrollmentDescription}
         >
-        {sections.length > 0 && (
-          <SectionsTable
-            sections={sections}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-            canLeave={canLeave}
+          <JoinSectionNotifications
+            action={this.state.sectionsAction}
+            result={this.state.sectionsResult}
+            nameOrId={this.state.sectionsResultName}
           />
-        )}
-        {sections.length === 0 && isTeacher && (
-          <SetUpMessage
-            type="sections"
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
-            isRtl={isRtl}
-            isTeacher={isTeacher}
-          />
-        )}
-      </ContentContainer>
-    </div>
+          {sections.length > 0 && (
+            <SectionsTable
+              sections={sections}
+              isRtl={isRtl}
+              isTeacher={isTeacher}
+              canLeave={canLeave}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+          {sections.length === 0 && isTeacher && (
+            <SectionsSetUpMessage
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+              isRtl={isRtl}
+            />
+          )}
+          {!isTeacher && (
+            <JoinSection
+              enrolledInASection={enrolledInASection}
+              updateSections={this.updateSections}
+              updateSectionsResult={this.updateSectionsResult}
+            />
+          )}
+        </ContentContainer>
+      </div>
     );
   }
 });

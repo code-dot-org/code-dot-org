@@ -55,7 +55,7 @@ describe('ProjectAppTypeArea', () => {
         />
       );
       expect(wrapper.find('ProjectCard')).to.have.length(12);
-      expect(wrapper.find('ProgressButton').first().text()).to.equal('View more');
+      expect(wrapper.find('Button').first().text()).to.equal('View more');
       expect(stubAjax).not.to.have.been.called;
     });
 
@@ -76,13 +76,13 @@ describe('ProjectAppTypeArea', () => {
         />
       );
       expect(wrapper.find('ProjectCard')).to.have.length(12);
-      let viewMoreWrapper = wrapper.find('ProgressButton').first();
+      let viewMoreWrapper = wrapper.find('Button').first();
       expect(viewMoreWrapper.text()).to.equal('View more');
 
       // Each click shows 12 more projects.
       viewMoreWrapper.simulate('click');
       expect(wrapper.find('ProjectCard')).to.have.length(24);
-      viewMoreWrapper = wrapper.find('ProgressButton').first();
+      viewMoreWrapper = wrapper.find('Button').first();
       expect(viewMoreWrapper.text()).to.equal('View more');
       expect(viewMoreWrapper).to.have.length(1);
       expect(stubAjax).not.to.have.been.called;
@@ -90,7 +90,7 @@ describe('ProjectAppTypeArea', () => {
       // Requests more from the server once all projects are displayed.
       viewMoreWrapper.simulate('click');
       expect(wrapper.find('ProjectCard')).to.have.length(30);
-      viewMoreWrapper = wrapper.find('ProgressButton').first();
+      viewMoreWrapper = wrapper.find('Button').first();
       expect(viewMoreWrapper.text()).to.equal('View more');
       expect(stubAjax).to.have.been.calledOnce;
 
@@ -102,14 +102,14 @@ describe('ProjectAppTypeArea', () => {
 
       // Displays additional projects returned from the server.
       expect(wrapper.find('ProjectCard')).to.have.length(36);
-      viewMoreWrapper = wrapper.find('ProgressButton').first();
+      viewMoreWrapper = wrapper.find('Button').first();
       expect(viewMoreWrapper.text()).to.equal('View more');
 
       // Skips fetching projects from the server and hides the View More button
       // once all projects on the server and client are shown.
       viewMoreWrapper.simulate('click');
       expect(wrapper.find('ProjectCard')).to.have.length(40);
-      const otherButtonWrapper = wrapper.find('ProgressButton').first();
+      const otherButtonWrapper = wrapper.find('Button').first();
       expect(otherButtonWrapper.text()).not.to.equal('View more');
       expect(stubAjax).to.have.been.calledOnce;
     });

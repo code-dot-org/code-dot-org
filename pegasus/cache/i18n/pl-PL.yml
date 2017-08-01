@@ -277,13 +277,43 @@
   just_did_course2: Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg
   just_did_course3: Właśnie skończyłem Kurs 3 - sprawdź to! @codeorg
   just_did_course4: Właśnie skończyłem Kurs 4 - sprawdź to! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 na 10 osób zgadza się, że szkoły powinny uczyć informatyki.
     http://youtu.be/nKIu9yen5nc. Odwiedź https://code.org/.
   twitter_cs_foundational: Informatyka jest podstawą w nauce każdego ucznia. https://youtu.be/QvyTEx1wyOY.
@@ -430,7 +460,7 @@
   homepage_slot_text_link_buy: Angażuj się
   homepage_slot_text_link_donate: Ofiaruj darowiznę
   homepage_slot_text_link_shop: Koszulki, czapki i inne
-  homepage_header_codestudio: Twórczość uczniów Code Studio
+  homepage_header_codestudio: Twórczość uczniów w Code Studio (Code.org)
   homepage_header_donors: Code.org dziękuje za wsparcie
   homepage_donors_seall: Zobacz wszystkich
   homepage_donors_donate: Podaruj
@@ -1164,6 +1194,8 @@
   coursef-draft_name: Kurs F
   coursef_name: Kurs F
   accelerated_name: Przyspieszony Kurs
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(stary) Unit 1: Informacje cyfrowe"
   cspunit2_name: "(stary) Unit 2: Internet"
   cspunit3_name: "(stary) Unit 3: Programowanie"
@@ -1182,6 +1214,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post-AP: Bazy Danych w Aplikacjach'
   cspassessment_name: Pełen test - 50 pytań
   cspexam1-mWU7ilDYM9_name: Test Część 1 - 25 pytań
@@ -1208,6 +1241,7 @@
   math_category_name: Matematyka
   hoc_category_name: Godzina Kodowania
   csf_category_name: Podstawy Informatyki
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'W fazie rozwoju: Kursy A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: Podstawy Informatyki '15-'16
@@ -1965,15 +1999,15 @@
   artist_shortcode: art
   header_home: Strona główna
   header_courses: Kursy
-  header_project_gallery: Project Gallery
+  header_project_gallery: Galeria Projektów
   header_sections: Sekcje
-  header_professional_learning: Professional Learning
+  header_professional_learning: Kształcenia Profesjonalne
   header_educate_overview: Przegląd edukatora
   header_educate_elementary: Szkoła podstawowa
   header_educate_middle: Gimnazjum
   header_educate_high: Liceum
   header_educate_hoc: Godzina Kodowania
-  header_educate_partner: Nasz partner
+  header_educate_partner: Współpracuj z nami
   header_educate_beyond: Poza Code.org
   header_educate_inspire: Inspiruj ucznia
   header_educate_community: Społeczność online
@@ -1993,11 +2027,17 @@
   header_stats: Statystyki
   header_help_us: Pomóż nam
   header_about: O programie
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_teacher_community: Społeczność nauczycieli
+  header_help_support: 'Pomoc i wsparcie '
+  header_report_bug: Zgłoś błąd
+  header_tutorials: Samouczki
+  header_documentation: Dokumentacja
   csp_name: Podstawy Informatyki '16-'17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

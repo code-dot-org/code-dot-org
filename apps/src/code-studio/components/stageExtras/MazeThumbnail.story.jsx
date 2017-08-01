@@ -65,16 +65,5 @@ export default storybook => {
           skin="farmer_night"
         />
       ),
-    }, {
-      name: 'Scaled',
-      description: 'This is the MazeThumbnail component, scaled to half-size',
-      story: () => (
-        <MazeThumbnail
-          map={sampleMap}
-          startDirection={1}
-          skin="farmer_night"
-          scale={0.5}
-        />
-      ),
     }]);
 };

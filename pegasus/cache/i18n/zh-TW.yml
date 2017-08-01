@@ -213,13 +213,43 @@
   just_did_course2: "我剛完成了課程 2 - 快來瞧瞧！@codeorg"
   just_did_course3: "我剛完成了課程 3 - 快來瞧瞧！@codeorg"
   just_did_course4: "我剛完成了課程 4 - 快來瞧瞧！@codeorg"
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  just_did_accelerated: "我剛完成了速成課程 - 快來瞧瞧！@codeorg"
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_accelerated: "我剛完成了快速入門課程 - 有空你也來看看吧！@codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: "每 10 人就有 9 人同意學校應該教計算機科學。http://youtu.be/nKIu9yen5nc，造訪 https://code.org/。"
   twitter_cs_foundational: "計算機科學是適合每一個學生學習的基礎觀念。https://youtu.be/QvyTEx1wyOY"
   learn_hoc: "學習一小時的程式設計"
@@ -910,6 +940,8 @@
   coursef-draft_name: "課程 F"
   coursef_name: "課程 F"
   accelerated_name: "速成課程"
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "（舊）單元 1：數位資訊"
   cspunit2_name: "（舊）單元 2：網際網路"
   cspunit3_name: "（舊）單元 3：程式設計"
@@ -928,6 +960,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: Post AP：App 的數據庫
   cspassessment_name: "完整測驗 - 共 50 題"
   cspexam1-mWU7ilDYM9_name: "測驗第一部分：25 題"
@@ -954,6 +987,7 @@
   math_category_name: "運算"
   hoc_category_name: "一小時玩程式"
   csf_category_name: CS 基本原理
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: "開發中：課程 A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-' 16 計算機科學原理"
@@ -1462,3 +1496,9 @@
   csp_name: "'16-' 17 計算機科學原理"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

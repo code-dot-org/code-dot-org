@@ -259,7 +259,8 @@ class ScriptTest < ActiveSupport::TestCase
     visible_scripts = %w{
       20-hour flappy playlab infinity artist course1 course2 course3 course4
       frozen hourofcode algebra cspunit1 cspunit2 cspunit3 cspunit4 cspunit5
-      cspunit6 starwarsblocks
+      cspunit6 starwarsblocks coursea courseb coursec coursed coursee coursef
+      express pre-express
     }.map {|s| Script.find_by_name(s)}
 
     visible_scripts.each do |s|
@@ -474,7 +475,7 @@ class ScriptTest < ActiveSupport::TestCase
     stage = create(:stage, script: script, name: 'Stage 1')
     create(:script_level, script: script, stage: stage)
 
-    assert_equal nil, script.summarize(false)[:stages]
+    assert_nil script.summarize(false)[:stages]
   end
 
   test 'should generate PLC objects' do
@@ -740,7 +741,7 @@ class ScriptTest < ActiveSupport::TestCase
     script = create :script
     create :course, name: 'csp'
 
-    assert_equal nil, script.course_link
+    assert_nil script.course_link
   end
 
   test "course_link returns nil if script is in two courses" do
@@ -750,7 +751,7 @@ class ScriptTest < ActiveSupport::TestCase
     create :course_script, position: 1, course: course, script: script
     create :course_script, position: 1, course: other_course, script: script
 
-    assert_equal nil, script.course_link
+    assert_nil script.course_link
   end
 
   test "course_link returns course_path if script is in one course" do

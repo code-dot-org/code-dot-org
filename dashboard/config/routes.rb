@@ -61,8 +61,12 @@ Dashboard::Application.routes.draw do
   end
   # Section API routes (JSON only)
   concern :section_api_routes do
-    resources :sections, only: [:show, :index] do
+    resources :sections, only: [:index, :show, :create, :destroy] do
       resources :students, only: [:index], controller: 'sections_students'
+      member do
+        post 'join'
+        post 'leave'
+      end
     end
   end
 
@@ -401,6 +405,11 @@ Dashboard::Application.routes.draw do
     post 'attend/:session_code/join', controller: 'workshop_enrollment', action: 'confirm_join_session'
     get 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'upgrade_account'
     post 'attend/:session_code/upgrade', controller: 'session_attendance', action: 'confirm_upgrade_account'
+
+    get 'workshop_user_management/facilitator_courses', controller: 'workshop_user_management', action: 'facilitator_courses_form'
+    post 'workshop_user_management/assign_course', controller: 'workshop_user_management', action: 'assign_course'
+    # TODO: change remove_course to use http delete method
+    get 'workshop_user_management/remove_course', controller: 'workshop_user_management', action: 'remove_course'
   end
 
   get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
