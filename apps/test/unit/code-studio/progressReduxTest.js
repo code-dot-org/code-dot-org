@@ -19,6 +19,8 @@ import reducer, {
   statusForLevel,
   processedStages,
   setCurrentStageId,
+  stageExtrasUrl,
+  setStageExtrasEnabled,
   __testonly__
 } from '@cdo/apps/code-studio/progressRedux';
 
@@ -118,7 +120,8 @@ const stageData = [
       }
     ],
     lesson_plan_html_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher",
-    lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf"
+    lesson_plan_pdf_url: "//localhost.code.org:3000/curriculum/course3/2/Teacher.pdf",
+    stage_extras_level_url: "//localhost.code.org:3000/s/course3/stage/2/extras"
   }
 ];
 
@@ -294,6 +297,13 @@ describe('progressReduxTest', () => {
 
       const stateDefaultsDetail = reducer(initialState, setStudentDefaultsSummaryView(false));
       assert.strictEqual(stateDefaultsDetail.studentDefaultsSummaryView, false);
+    });
+
+    it('can enable stage extras', () => {
+      assert.strictEqual(initialState.stageExtrasEnabled, false);
+
+      const nextState = reducer(initialState, setStageExtrasEnabled(true));
+      assert.strictEqual(nextState.stageExtrasEnabled, true);
     });
 
     describe('setViewType', () => {
@@ -985,6 +995,18 @@ describe('progressReduxTest', () => {
       assert.strictEqual(processed[1].stageNumber, 1);
       assert.strictEqual(processed[2].stageNumber, undefined);
       assert.strictEqual(processed[3].stageNumber, 2);
+    });
+  });
+
+  describe('stageExtrasUrl', () => {
+    it('derives url from state by stageId', () => {
+      const stateWithProgress = reducer(undefined,
+        initProgress(initialPuzzlePageProgress));
+      const state = reducer(stateWithProgress, setStageExtrasEnabled(true));
+
+
+      assert.strictEqual(stageExtrasUrl(state, state.stages[0].id),
+        "//localhost.code.org:3000/s/course3/stage/2/extras");
     });
   });
 

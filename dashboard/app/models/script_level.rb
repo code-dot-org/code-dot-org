@@ -117,6 +117,8 @@ class ScriptLevel < ActiveRecord::Base
           script_path(script)
         end
       end
+    elsif bonus
+      script_stage_stage_extras_path(script.name, stage.relative_position)
     else
       level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
     end
@@ -295,7 +297,7 @@ class ScriptLevel < ActiveRecord::Base
     extra_levels
   end
 
-  def summarize_as_bonus
+  def summarize_as_bonus(user)
     {
       id: id,
       name: level.display_name || level.name,
@@ -303,6 +305,7 @@ class ScriptLevel < ActiveRecord::Base
       map: JSON.parse(level.try(:maze) || '[]'),
       skin: level.try(:skin),
       start_direction: level.try(:start_direction).to_i,
+      perfected: !!UserLevel.find_by(user: user, script: script, level: level).try(:perfect?)
     }.camelize_keys
   end
 

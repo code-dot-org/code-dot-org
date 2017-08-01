@@ -3,6 +3,11 @@ And(/^I wait to see Droplet text mode$/) do
   wait.until {@browser.execute_script("return parseInt($('.droplet-ace').css('left')) > 0;")}
 end
 
+And(/^I wait to see Droplet block mode$/) do
+  wait = Selenium::WebDriver::Wait.new(timeout: 10)
+  wait.until {@browser.execute_script("return $('.droplet-gutter > div').css('display') === 'block';")}
+end
+
 And(/^the Droplet ACE text is "([^"]*)"$/) do |expected_text|
   # Let us expect newlines in the editor
   expected_text.gsub! '\n', "\n"
@@ -35,4 +40,26 @@ When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |block_name, line_numbe
     });
   }
   @browser.execute_script code
+end
+
+When /^I ensure droplet is in text mode$/ do
+  steps 'And I wait to see "#show-code-header"'
+  button_text = @browser.execute_script("return $('#show-code-header').text()")
+  if button_text == 'Show Text'
+    steps <<-STEPS
+      Then I press "show-code-header"
+      And I wait to see Droplet text mode
+    STEPS
+  end
+end
+
+When /^I ensure droplet is in block mode$/ do
+  steps 'And I wait to see "#show-code-header"'
+  button_text = @browser.execute_script("return $('#show-code-header').text()")
+  if button_text == 'Show Blocks'
+    steps <<-STEPS
+      Then I press "show-code-header"
+      And I wait to see Droplet block mode
+    STEPS
+  end
 end

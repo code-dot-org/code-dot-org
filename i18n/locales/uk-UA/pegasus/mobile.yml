@@ -200,13 +200,25 @@
   just_did_course2: "Щойно завершено Курс 2 - подивіться! @codeorg"
   just_did_course3: "Щойно завершено Курс 3 - подивіться! @codeorg"
   just_did_course4: "Щойно завершено Курс 4 - подивіться! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
   just_did_accelerated: "Щойно завершено Прискорений курс - подивіться! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 з 10 людей погоджуються із тим, інформатику потрібно викладати у школах. http://youtu.be/nKIu9yen5nc. Відвідайте https://code.org/."
   twitter_cs_foundational: "Інформатика є основою, яку має вивчати кожен учень.\nhttps://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Вивчати Годину Коду"
@@ -903,6 +915,8 @@
   coursef-draft_name: Курс Д
   coursef_name: "Курс Д"
   accelerated_name: "Прискорений курс"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Розділ 1: Цифрова інформація'
   cspunit2_name: 'Розділ 2: Інтернет'
   cspunit3_name: 'Розділ 3: Програмування'
@@ -944,6 +958,7 @@
   math_category_name: "Математика"
   hoc_category_name: "Година коду"
   csf_category_name: "Основи інформатики"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'В розробці: курси А—Д'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 принципи інформатики"

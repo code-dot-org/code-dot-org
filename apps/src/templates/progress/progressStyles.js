@@ -1,9 +1,12 @@
 import color from "@cdo/apps/util/color";
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
-// Style used when hovering. Once the progressBubbles experiment is not behind
-// a flag we can likely get rid of external references and depend on
-// levelProgressStyle
+export const DOT_SIZE = 30;
+export const DIAMOND_DOT_SIZE = 22;
+export const SMALL_DOT_SIZE = 9;
+export const SMALL_DIAMOND_SIZE = 6;
+
+// Style used when hovering
 export const hoverStyle = {
   ':hover': {
     textDecoration: 'none',
@@ -12,7 +15,6 @@ export const hoverStyle = {
     backgroundColor: color.level_current
   }
 };
-
 
 const statusStyle = {
   [LevelStatus.perfect]: {

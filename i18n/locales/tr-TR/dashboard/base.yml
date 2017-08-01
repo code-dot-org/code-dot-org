@@ -16,7 +16,7 @@ tr:
         name: 'Görünen İsim'
         name_example: 'Kod adı (Canavar Bilişimci yada Kuş Ahmet gibi)'
         email: 'E-posta'
-        parent_email: 'Parent/guardian email'
+        parent_email: 'Veli e-posta'
         personal_email: "Kişisel e-posta adresi"
         username: 'kullanıcı adı'
         password: 'şifre'
@@ -178,7 +178,9 @@ tr:
       Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
   parent_mailer:
-    student_associated_subject: 'Login information for Code.org'
+    student_associated_subject: 'Code.org için oturum açma bilgileri'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Bölüm:'
@@ -187,6 +189,12 @@ tr:
     confirm:
       remove: 'Bu bölümü bırakmak istediğinden emin misin?'
     remove: 'Bölümü kaldır'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'E-posta'
+      google_classroom: 'Google Sınıf'
+      clever: 'Clever'
   follower:
     invite_sent: 'Davetiye gönderildi'
     added_teacher: '%{name} öğretmeniniz olarak eklendi'
@@ -199,6 +207,7 @@ tr:
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: "Lütfen bir bölge kodu girin"
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -222,8 +231,9 @@ tr:
   devise:
     registrations:
       user:
-        personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
-        personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
+        personal_login_created_email: 'Kişisel bir oturumu başarıyla oluşturuldu. Artık Code.org''da e-posta ve parola ile oturum açabilirsiniz'
+        personal_login_created_username: 'Kişisel bir oturumu başarıyla oluşturuldu. Artık Code.org kullanıcı adınız ve parolanız ile oturum açabilirsiniz'
   nav:
     header:
       finished_hoc: "Kod Saati'ni tamamladım"
@@ -234,6 +244,7 @@ tr:
         calculate: 'Bir şey hesaplamak'
         applab: 'Uygulama oluşturun'
         gamelab: 'Bir labaratuvar oyunu projesi yap'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Ana Sayfa"
       courses: "kurslar"
       project_gallery: "Proje Galerisi"
@@ -335,9 +346,9 @@ tr:
     no_password_because_oauth: 'Şifre yok çünkü bir üçüncü taraf sağlayıcı ile giriş yaptınız.'
     no_password_because_sponsored: 'Öğretmenin parolanızı yönetmesi için bkz.'
     create_personal_login: 'Kişisel bir oturum oluşturma'
-    create_personal_login_under_13_info: 'If you want to keep using your Code.org account even after the end of the school year, ask your parent/guardian to help you create your own personal login below.'
-    create_personal_login_under_13_username: "Username (don't use your real name!)"
-    create_personal_login_under_13_parent_email: 'Parent/guardian email address (to recover your password)'
+    create_personal_login_under_13_info: 'Eğer okul yılı bittiğinde de Code.org hesabını kullanmaya devam etmek istiyorsan, ebeveynlerinden senin kişisel oturum bilgilerini oluşturmaları için yardım iste.'
+    create_personal_login_under_13_username: "Kullanıcı adı (gerçek adınızı kullanmayınız!)"
+    create_personal_login_under_13_parent_email: 'Ebeveyn eposta adresi (şifreni kurtarmak için)'
     create_personal_login_info: 'Code.org hesabınızı öğretim yılı bitiminden sonra kullanmaya devam etmek istiyorsanız, alta kendi girişinizi yapın.'
     create_personal_login_terms: "Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}', target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13 yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin izni ile Code.org hizmetlerini kullandığımı onaylıyorum."
     create_personal_login_email_note: Öğrenci elektronik postaları öğrencilerle iletişim kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a> bakınız.
@@ -534,8 +545,13 @@ tr:
       title: "Galeri"
       body: "Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı görsellerine göz atın"
     gamelab:
-      title: "Oyun Laboratuvarı (beta)"
+      title: "Oyun Laboratuvarı"
       body: "Oyun labı basit animasyonları ve oyunları nesnelerle ve etkilesimli karakterlerle beraber programlayabileceğin bir uygulama geliştirme ortamıdır."
+      audience: "13 + Yaş grubu"
+      cta: "Nasıl olduğunu öğren"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "13 + Yaş grubu"
       cta: "Nasıl olduğunu öğren"
     frozen:
@@ -823,7 +839,7 @@ tr:
     csp_ap_1: 'Bölüm 1: AP teknik kurulum'
     csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
     csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
-    dlp: 'Reflection Prompts'
+    dlp: 'Yansıma İstemleri'
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil. 

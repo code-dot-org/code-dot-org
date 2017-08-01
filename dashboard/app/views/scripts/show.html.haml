@@ -45,7 +45,7 @@
   %br/
   %br/
   - if @current_user.try(:teacher?)
-    - if @script.k5_course?
+    - if @script.csf_international?
       %a{href: CDO.code_org_url('/curriculum/docs/k-5/overview')}
         = t('home.all_courses')
       %br/

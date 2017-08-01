@@ -14,6 +14,12 @@ import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
 import mazeMsg from './locale';
 
+import {getStore} from '../redux';
+import {
+  setCollectorCurrentCollected,
+  setCollectorMinRequired
+} from './redux';
+
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
 const COLLECTED_TOO_MANY = 4;
@@ -28,6 +34,27 @@ export default class Collector extends Subtype {
     this.maxBlocks_ = config.level.ideal;
 
     this.minCollected_ = config.level.minCollected;
+    this.store_ = getStore();
+
+    this.store_.dispatch(setCollectorMinRequired(this.minCollected_));
+  }
+
+  reset() {
+    this.store_.dispatch(setCollectorCurrentCollected(0));
+  }
+
+  scheduleDirtChange(row, col) {
+    super.scheduleDirtChange(row, col);
+
+    // Play one of our various collect sounds, looping through them
+    if (this.collectSoundsCount) {
+      this.collectSoundsI = this.collectSoundsI || 0;
+      this.playAudio_('collect' + this.collectSoundsI);
+      this.collectSoundsI += 1;
+      this.collectSoundsI %= this.collectSoundsCount;
+    }
+
+    this.store_.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
   }
 
   /**
@@ -44,6 +71,18 @@ export default class Collector extends Subtype {
     } else {
       this.maze_.executionInfo.queueAction('pickup', id);
       this.maze_.map.setValue(row, col, currVal - 1);
+    }
+  }
+
+  /**
+   * @override
+   */
+  loadAudio(skin) {
+    if (skin.collectSounds) {
+      this.collectSoundsCount = skin.collectSounds.length;
+      skin.collectSounds.forEach((sound, i) => {
+        this.studioApp_.loadAudio(sound, 'collect' + i);
+      });
     }
   }
 
@@ -107,6 +146,17 @@ export default class Collector extends Subtype {
    * @override
    */
   finished() {
+    const minRequired = this.minCollected_ || 1;
+    const collectedEnough = this.getTotalCollected() >= minRequired;
+    const usedFewEnoughBlocks = this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;
+
+    return collectedEnough && usedFewEnoughBlocks;
+  }
+
+  /**
+   * @override
+   */
+  shouldCheckSuccessOnMove() {
     return false;
   }
 

@@ -303,6 +303,11 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal script_levels[3].path, script_levels[0].next_level_or_redirect_path_for_user(student)
   end
 
+  test 'next_level_or_redirect_path_for_user returns to stage extras for bonus levels' do
+    script_level = create :script_level, bonus: true
+    assert_equal "/s/#{script_level.script.name}/stage/1/extras", script_level.next_level_or_redirect_path_for_user(nil)
+  end
+
   test 'end of stage' do
     script = Script.find_by_name('course1')
 

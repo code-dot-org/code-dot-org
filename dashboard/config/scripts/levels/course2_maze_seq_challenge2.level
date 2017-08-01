@@ -1,0 +1,104 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2017-07-27T16:10:52.000Z",
+  "level_num": "custom",
+  "user_id": 19,
+  "properties": {
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,1,1,1,1,2,0],[0,0,1,1,1,1,1,0],[0,0,1,1,1,1,1,0],[0,0,1,4,4,1,1,0],[0,0,1,1,3,4,1,0],[0,0,1,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
+    "skin": "birds",
+    "instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
+    "start_direction": "2",
+    "step_mode": "1",
+    "is_k1": "true",
+    "skip_instructions_popup": "false",
+    "ideal": "11",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "never_autoplay_video": "true",
+    "examples_required": "false",
+    "markdown_instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The shortest path might not work this time.\",\"hint_id\":\"courseB_maze_seq_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bcef130df264f8c9ec840e24aad804ba/course2_maze_seq_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try moving west to start.\",\"hint_id\":\"courseB_maze_seq_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/097b79d1b1677a6144b9833751d2bc3c/course2_maze_seq_challenge2.mp3\"}]",
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
+    "contained_level_names": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-27 16:11:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveNorth" limit="4"/>
+        <block type="maze_moveSouth" limit="4"/>
+        <block type="maze_moveEast" limit="4"/>
+        <block type="maze_moveWest" limit="4"/>
+      </xml>
+    </toolbox_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false" movable="false">
+          <next>
+            <block type="maze_moveWest">
+              <next>
+                <block type="maze_moveWest">
+                  <next>
+                    <block type="maze_moveWest">
+                      <next>
+                        <block type="maze_moveWest">
+                          <next>
+                            <block type="maze_moveSouth">
+                              <next>
+                                <block type="maze_moveSouth">
+                                  <next>
+                                    <block type="maze_moveSouth">
+                                      <next>
+                                        <block type="maze_moveSouth">
+                                          <next>
+                                            <block type="maze_moveEast">
+                                              <next>
+                                                <block type="maze_moveEast"/>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
+  </blocks>
+</Maze>

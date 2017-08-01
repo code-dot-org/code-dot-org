@@ -195,18 +195,30 @@
   learn_classes: "Намерете местни класове"
   learn_back_to_minecraft: "Продължете да учите с Minecraft"
   hoc_is_here: '#HourOfCode идва отново на 5-11 декември. https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Преди малко завърших #HourOfCode - вижте го! @codeorg'
+  just_did_hoc: 'Току-що направих #HourOfCode - вижте го! @codeorg'
   just_did_course1: "Току-що завърших курс 1 - Проверете го! @codeorg"
   just_did_course2: "Току-що завърших курс 2 - Проверете го! @codeorg"
   just_did_course3: "Току-що завърших курс 3 - Проверете го! @codeorg"
   just_did_course4: "Току-що завърших курс 4 - Проверете го! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
   just_did_accelerated: "Току-що завърших ускореният курс - Проверете го! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 от 10 човека са съгласни, че в училищата трябва да се учат компютърни науки. http://youtu.be/nKIu9yen5nc. Посетете https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Научете се да програмирате с \"Часът на кодирането\""
@@ -885,6 +897,8 @@
   coursef-draft_name: Course F
   coursef_name: "Course F"
   accelerated_name: "Ускорен курс"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: '(стар) Урок 1: Цифрова информация'
   cspunit2_name: '(стар) Раздел 2: Интернет'
   cspunit3_name: '(стар) Раздел 3: програмиране'
@@ -926,6 +940,7 @@
   math_category_name: "Математика"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS основи"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "\"15-\" 16 CS принципи"
@@ -1351,7 +1366,7 @@
   header_home: "Начало"
   header_courses: "Курсове"
   header_project_gallery: "Project Gallery"
-  header_sections: "Sections"
+  header_sections: "Раздели"
   header_professional_learning: "Professional Learning"
   header_educate_overview: "Въведение за учителя"
   header_educate_elementary: "Начално училище"

@@ -45,12 +45,13 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {object} progressData
  * @param {string} currentLevelId
  * @param {number} puzzlePage
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} [stageExtrasEnabled] whether or not the user is in a section
- *   for which stage extras are enabled
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
-header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage, signedIn, stageExtrasEnabled) {
+header.build = function (scriptData, stageData, progressData, currentLevelId,
+    puzzlePage, signedIn, stageExtrasEnabled) {
   scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
@@ -274,8 +275,8 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
-  // TODO: Remove this (and the related style) when Game Lab and/or Web Lab are no longer in beta.
-  if ('gamelab' === appOptions.app || 'weblab' === appOptions.app) {
+  // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
+  if ('weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
   }
 

@@ -274,16 +274,50 @@
     https://youtu.be/KsOIlDT145A.
   just_did_hoc: 'Aku telah mengerjakan #HourOfCode – cobalah lihat! @codeorg'
   just_did_course1: Saya baru saja menyelesaikan Kursus 1 - coba lihat! @codeorg
-  just_did_course2: I just finished Course 2 - check it out! @codeorg
-  just_did_course3: I just finished Course 3 - check it out! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
-  just_did_accelerated: I just finished the Accelerated Course - check it out! @codeorg
+  just_did_course2: I just finished Course 2 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_course3: I just finished Course 3 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_accelerated: I just finished the Accelerated Course - check it out! Thanks
+    @Microsoft for supporting @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Mengapa tidak lebih banyak sekolah mengajarkan ilmu komputer?
     Kita dapat memperbaiki ini. http://youtu.be/nKIu9yen5nc. Kunjungi http://code.org/
     untuk mempelajari lebih lanjut.
@@ -1174,6 +1208,8 @@
   coursef-draft_name: Kursus F
   coursef_name: Kursus F
   accelerated_name: Kursus akselerasi
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(Lama) Unit 1: Informasi Digital"
   cspunit2_name: "(lama) Unit 2: Internet"
   cspunit3_name: "(lama) Unit 3: pemrograman"
@@ -1192,6 +1228,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
@@ -1218,6 +1255,7 @@
   math_category_name: Matematika
   hoc_category_name: Jam kode
   csf_category_name: CS Fundamentals
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
@@ -2017,3 +2055,9 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

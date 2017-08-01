@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from "../progress/ProgressButton";
+import Button from "../Button";
 
 const styles = {
   section: {
@@ -53,62 +53,62 @@ const styles = {
   }
 };
 
-const SetUpMessage = React.createClass({
-  propTypes: {
-    type: React.PropTypes.oneOf(['courses', 'sections']).isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
-  },
+const SetUpMessage = ({
+  isRtl,
+  headingText,
+  descriptionText,
+  buttonText,
+  buttonUrl,
+}) => (
+  <div style={styles.section}>
+    <div style={isRtl ? styles.rtlHeading : styles.heading}>
+      {headingText}
+    </div>
+    <div style={isRtl ? styles.rtlDescription : styles.description}>
+      {descriptionText}
+    </div>
+    <Button
+      href={buttonUrl}
+      color={Button.ButtonColor.gray}
+      text={buttonText}
+      style={isRtl ? styles.rtlButton : styles.button}
+    />
+  </div>
+);
+SetUpMessage.propTypes ={
+  isRtl: PropTypes.bool.isRequired,
+  headingText: PropTypes.string.isRequired,
+  descriptionText: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  buttonUrl: PropTypes.string.isRequired,
+};
 
-  render() {
-    const { type, codeOrgUrlPrefix, isRtl, isTeacher } = this.props;
-    const sectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
+export const CoursesSetUpMessage = ({isRtl, isTeacher}) => (
+  <SetUpMessage
+    type="courses"
+    headingText={i18n.startLearning()}
+    descriptionText={isTeacher ? i18n.setupCoursesTeacher() : i18n.setupCoursesStudent()}
+    buttonText={i18n.findCourse()}
+    buttonUrl="/courses"
+    isRtl={isRtl}
+  />
+);
+CoursesSetUpMessage.propTypes = {
+  isRtl: PropTypes.bool.isRequired,
+  isTeacher: PropTypes.bool.isRequired,
+};
 
-    if (type === 'courses') {
-      return (
-        <div style={styles.section} >
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.startLearning()}
-          </div>
-          {isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesTeacher()}
-            </div>
-          )}
-          {!isTeacher && (
-            <div style={isRtl ? styles.rtlDescription : styles.description}>
-              {i18n.setupCoursesStudent()}
-            </div>
-          )}
-          <ProgressButton
-            href="/courses"
-            color={ProgressButton.ButtonColor.gray}
-            text={i18n.findCourse()}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
-        </div>
-      );
-    }
-    if (type === 'sections') {
-      return (
-        <div style={styles.section} >
-          <div style={isRtl ? styles.rtlHeading : styles.heading}>
-            {i18n.setUpClassroom()}
-          </div>
-          <div style={isRtl ? styles.rtlDescription : styles.description}>
-            {i18n.createNewClassroom()}
-          </div>
-          <ProgressButton
-            href={sectionsUrl}
-            color={ProgressButton.ButtonColor.gray}
-            text={i18n.createSection()}
-            style={isRtl ? styles.rtlButton : styles.button}
-          />
-        </div>
-      );
-    }
-  }
-});
-
-export default SetUpMessage;
+export const SectionsSetUpMessage = ({isRtl, codeOrgUrlPrefix}) => (
+  <SetUpMessage
+    type="sections"
+    headingText={i18n.setUpClassroom()}
+    descriptionText={i18n.createNewClassroom()}
+    buttonText={i18n.createSection()}
+    buttonUrl={`${codeOrgUrlPrefix}/teacher-dashboard#/sections`}
+    isRtl={isRtl}
+  />
+);
+SectionsSetUpMessage.propTypes = {
+  isRtl: PropTypes.bool.isRequired,
+  codeOrgUrlPrefix: PropTypes.string,
+};

@@ -1482,7 +1482,7 @@ tr:
           description_audience: ''
           stages:
             Prep With Your Modules:
-              name: Prep With Your Modules
+              name: Modüllerinizle Hazırlanın
             The TLO:
               name: The TLO
             Welcome Back!:
@@ -2336,7 +2336,7 @@ tr:
             If-else-if and Conditional Logic:
               name: If-else-if ve Koşullu Mantık
             'Building an App: Color Sleuth':
-              name: 'Building an App: Color Sleuth'
+              name: 'Bir Uygulama Oluşturmak: Renk Dedektifi'
             Possibly use later:
               name: Daha sonra kullanılabilir
             Unit 5 Assessment 3:
@@ -2352,7 +2352,7 @@ tr:
             'Building an App: Clicker Game':
               name: 'Bir Uygulama Oluşturma: Tıklama Oyunu'
             'Building an App: Image Scroller':
-              name: 'Bir Uygulama Geliştirme: Resim Kaydırma'
+              name: 'Bir Uygulama Oluşturma: Resim Kaydırma'
             'Building an App: Canvas Painter':
               name: 'Building an App: Canvas Painter'
             Unit 5 Assessment 5 - Practice AP questions:
@@ -3391,7 +3391,7 @@ tr:
             New Home for My Pet:
               name: Evcil Hayvanım İçin Yeni Ev
             Online Internet Safety:
-              name: Online Internet Safety
+              name: Çevrimiçi İnternet Güvenliği
             Online My New Pet Jigsaw:
               name: Online My New Pet Jigsaw
             Puppy Event:
@@ -3753,7 +3753,7 @@ tr:
               description_teacher: Bu ders, CSS stil özelliklerine, daha çok metin olmayan öğelere odaklanarak devam eder. Öğrenciler, bu derse, Dünyanın Tatlıları hakkında bir web sitesini inceleyerek başlarlar. Bu web sitesindeki yeni CSS stillerini inceler ve düzenlerler, sayfaya kendi stilleri eklerler. Tatlılar sayfasında çalıştıktan sonra, öğrenciler, yeni CSS özellikleri hakkındaki bilgilerini, kendi web sitelerini daha fazla biçimlendirmek için kullanırlar.
             Exploring Websites:
               name: Web Sitelerini Keşfetme
-              description_student: This lesson covers the purposes that a website might serve, both for the users and the creators. The class explores a handful of the most-used websites in the United States and discusses how each of those sites is useful for users and how it might also serve its creators.
+              description_student: Bu ders, bir web sitesinin hem kullanıcılar hem de site oluşturanlar için hizmet edebileceği amaçları kapsar. Öğrenciler, ABD'de en çok kullanılan web sitelerini keşfeder ve bu sitelerin hem kullanıcılar için nasıl kullanışlı olabildiğini, hem de site oluşturanlara nasıl hizmet sunabildiğini ele alırlar.
               description_teacher: Her web sitesinin bir amacı vardır, o web sitesini oluşturan kişi bir amaç için oluşturmuştur ve diğerleri onu kullanır. Bu derste öğrenciler, bir web sitesinin, hem kullanıcılar hem de web sitesini oluşturanlar için hizmet ettiği amacı düşünmeye başlarlar. Öğrenciler Abd' de en çok kullanılan bir avuç web sitesi keşfeder ve bu web sitelerinin kullanıcılar için nasıl kullanışlı olduğunu ve onu yaratanlara nasıl hizmet ettiğini çözmeye çalışırlar.
             'Websites for Expression ':
               name: 'Websites for Expression '
@@ -3788,6 +3788,8 @@ tr:
               description_student: In the last few days of the unit, the class finalizes their personal websites, working with peers to get feedback, review the rubric, and put the finishing touches on the site. To cap off the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: Unit 2 Online Professional Learning Course
           description_audience: ''
@@ -4021,7 +4023,7 @@ tr:
             Puppy Introduction:
               name: Puppy Introduction
             Online Internet Safety:
-              name: Online Internet Safety
+              name: Çevrimiçi İnternet Güvenliği
             Build a Flappy Game:
               name: Bir Kanat Çırpma Oyunu Oluşturmak
             More CS with Run Marco:
@@ -4271,7 +4273,7 @@ tr:
             The TLO:
               name: The TLO
             Prep With Your Modules:
-              name: Prep With Your Modules
+              name: Modüllerinizle Hazırlanın
         csp3-support:
           title: Unit 3 Online Professional Learning Course
           description_audience: ''
@@ -5180,7 +5182,7 @@ tr:
               description_student: ''
               description_teacher: 'Bu ders hata ayıklama (debugging) adımları için öğrencilere rehberlik edecek. Öğrenciler mantrayı öğrenecekler: "Ne oldu? Ne olması bekleniyordu? Sana ne anlatıyor?"'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
               description_student: ''
               description_teacher: "Öğrenciler bir soruyu cevaplarken veya bir projede çalışırken bir engelle karşılaştıkları zaman, kolayca hayal kırıklığına uğrarlar ve vazgeçerler. Bu ders, öğrencilere, hayal kırıklığının, öğrenmenin önemli bir parçası olduğu düşüncesini anlatır. Burada, hayal kırıklığı, başarısızlığın bir işareti olmaktan ziyade yaratım sürecinin bir adımı olarak anlatılır.\\r\n\\r\nBu dersler bir veya iki sınıf oturumunda yapılabilir.  Eğer daha fazla zamanınız varsa, Mermer Koşusu etkinliginin evresini gözden geçirmekten ve binanın taslağını çizmekten çekinmeyin."
             'Real-life Algorithms: Plant a Seed':
@@ -5200,7 +5202,7 @@ tr:
               description_student: ''
               description_teacher: In this series of online puzzles, students will build on the understanding of algorithms, debugging, and general computer literacy. Featuring characters from the game Angry Birds, students will develop sequential algorithms to get the bird to the pig without crashing into walls or TNT. Debugging puzzles have also been mixed into this stage for added practice with problem solving and critical thinking.
             Going Places Safely:
-              name: Biryerlere Güvenle Gitmek
+              name: 'Digital Citizenship: Going Places Safely'
               description_student: ''
               description_teacher: In collaboration with [r common-sense-media], this lesson helps students learn that many websites ask for information that is private and discusses how to responsibly handle such requests. Students also find out that they can go to exciting places online, but they need to follow certain rules to remain safe.
             'Loops: Happy Loops':
@@ -5232,13 +5234,13 @@ tr:
             'Debugging: Unspotted Bugs':
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
             Your Digital Footprint:
-              name: Dijital İziniz
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -5255,6 +5257,8 @@ tr:
               name: Play Lab' da Olaylar
             More Programming in Maze:
               name: Labirentte Daha Fazla Programlama
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
@@ -5262,7 +5266,7 @@ tr:
         coursec:
           stages:
             Building a Foundation:
-              name: Bir Temel Oluşturma
+              name: 'Persistence: Building a Foundation'
             Programming in Maze:
               name: Labirentte Programlama
             Debugging in Maze:
@@ -5286,11 +5290,13 @@ tr:
             Events in Play Lab:
               name: Play Lab' da Olaylar
             Screen Out the Mean:
-              name: Screen Out the Mean
+              name: 'Digital Citizenship: Screen Out the Mean'
             Binary Bracelets:
-              name: İkilik Bileklikler
+              name: 'Beyond Programming: Binary Bracelets'
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı, hikayelerinizi ve sanatınızı oluşturun.
@@ -5298,7 +5304,7 @@ tr:
         coursed:
           stages:
             Introduction:
-              name: Giriş
+              name: Introduction to Online Puzzles
               description_student: Bu ders, bu kursta ihtiyacınız olan becerilere çalışmanızı sağlayacak.
               description_teacher: 'In this set of puzzles, students will begin with an introduction (or review depending on the experience of your class) of Code.org''s online workspace. There will be videos pointing out the basic functionality of the workspace including the `Run`, `Reset`, and `Step` buttons. Also discussed in these videos: dragging Blockly blocks, deleting Blockly blocks, and connecting Blockly blocks. Next, students will practice their _sequencing_ and _debugging_ skills in maze. From there, students will see new types of puzzles like Collector, Artist, and Harvester when they learn the very basics of _loops_.'
             'Algorithms: Graph Paper Programming':
@@ -5314,7 +5320,7 @@ tr:
               description_student: Döngüler içinde döngüler içinde döngüler. Bu ne anlama geliyor? Bu ders, size, bir döngünün içine başka bir döngüyü yerleştirdiğinizde ne olduğunu öğretecek.
               description_teacher: In this online activity, students will have the opportunity to push their understanding of loops to a whole new level. Playing with the Bee and Plants vs Zombies, students will learn how to program a loop to be inside of another loop. They will also be encouraged to figure out how little changes in either loop will affect their program when they click `Run`.
             Nested Loops in Artist:
-              name: Nested Loops in Artist
+              name: Nested Loops in Frozen
               description_student: Daha fazla iç içe döngüler! Bu kez iç içe döngüler ile bazı HARİKA çizimler yapacaksınız.
               description_teacher: Students will create intricate designs using Artist in today's set of puzzles. By continuing to practice nested loops with new goals, students will see more uses of loops in general. This set of puzzles also offers a lot more potential for creativity with an opportunity for students to create their own design at the end of the stage.
             'Algorithms: Relay Programming':
@@ -5328,7 +5334,7 @@ tr:
               description_student: 'Döngüler kodlama için oldukça kullanışlıdır. Bu ders size yeni bir döngüyü öğretecek: süresince (while) döngüleri!'
               description_teacher: "By the time students reach this lesson, they should already have plenty of practice using `repeat` loops, so now it's time to mix things up. \n\n_While loops_ are loops that continue to repeat commands while a condition is met. While loops are used when the programmer doesn't know the exact number of times commands need to be repeated, but does know what condition needs to be true in order for the loop to continue repeating. For example, students will be working to fill holes and dig dirt in Farmer. They will not know the size of the holes or the height of the mountains of dirt, but the students will know they need to keep filling the holes and digging the dirt as long as the ground is not flat."
             Conditionals with Cards:
-              name: Kartlarla Koşullu Önermeler
+              name: 'If/Else: Conditionals with Cards'
               description_student: Yalnızca kesin şartlar altında puan kazanacağınız bir oyunu oynama zaman geldi!
               description_teacher: |+
                 This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.
@@ -5345,7 +5351,7 @@ tr:
               description_student: Hangi koşulun kullanılacağı her açık net değildir. Bu ders ne yapmanız gerektiğine karar vermenize yardımcı olacak.
               description_teacher: Öğrenciler, süresince döngüleri (while loops) '-e kadar' döngüleri (until loops) ve 'eğer/değilse' (if / else) ifadelerine çalışacaklar. Bu blokların tamamı koşullar için kullanılır. Bu üç koşul ifadesine çalıştıktan sonra, öğrenciler, daha karmaşık ve esnek kod yazmayı öğrenecekler.
             Digital Citizenship:
-              name: Sayısal Vatandaşlık
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
               description_student: Bazı bilgileri çevrim içi paylaşmak güvenli değildir. Bu ders, size, güvenli ve özel bilgiler arasındaki farkı öğrenmenizde yardımcı olacak.
               description_teacher: |-
                 In collaboration with Common Sense Education, this lesson helps students learn to think critically about the user information that some websites request or require. Students learn the difference between private information and personal information, distinguishing what is safe and unsafe to share online.
@@ -5380,7 +5386,7 @@ tr:
             'Algorithms: Tangrams':
               name: 'Algoritmalar: Tangramlar'
             Introduction:
-              name: Giriş
+              name: Introduction to Online Puzzles
               description_student: This fast-paced introduction will give you the chance to practice most of the skills that you will need to solve the puzzles in this course.
               description_teacher: Bu aşamada, öğrenciler Code.org' un çevrim içi çalışma alanına bir giriş ile başlayacaklar (veya sınıfın deneyimine bağlı olarak gözden geçirme). 'Çalıştır', 'Sıfırla' ve 'Atla' butonlarının dahil olduğu arayüzün basit işlevlerini öğrenecekler. Başlangıç videosu aynı zamanda Sürükleme, Silme ve Blockly bloklarını bağlamayı anlatır. Bulmacalarda, öğrenciler, Labirent ve Sanatçı' da hata ayıklama ve dizileri kullanma yeteneklerini geliştirirler.
             The Power of Words:
@@ -5428,7 +5434,7 @@ tr:
               description_student: Bilgisayarın bakış açısına göre bu derste algoritmalar üzerinden bir oyunun nasıl tanımlandığını öğrenin.
               description_teacher: Bu derste, öğrenciler Zar Yarışı oyununu oynayarak, algoritma kavramını gerçek hayat etkinlikleri ile ilişkilendirecekler. Buradaki amaç, gerçek dünyadaki durumları çevrim içi senaryolara dönüştürme veya bunun tam tersini yapma becerileri oluşturmaya başlamak.
             Conditionals:
-              name: Koşullar
+              name: Conditionals in Farmer
               description_student: Bu zorlu ve eğlenceli seride, kesin koşullar altında bilgisayara ne yapacağını söyleyeceksin.
               description_teacher: This lesson introduces students to `while` loops and `if / else` statements. _While loops_ are loops that continue to repeat commands as long as a condition is true. While loops are used when the programmer doesn't know the exact number of times the commands need to be repeated, but the programmer does know what condition needs to be true in order for the loop to continue looping. `If / Else` statements offer flexibility in programming by running entire sections of code only if something is true, otherwise it runs something else.
             Private and Personal Information:
@@ -5471,11 +5477,11 @@ tr:
               description_student: Göstermeye hazır ol! Bitirdiğiniz projeyi akranlarınıza sunma zaman.
               description_teacher: 'Dört ders boyunca, öğrenciler, programlama ortamı olarak Play Lab ya da Sanatçı'' yı kullanarak kendi tasarımlarını kullandıkları bir projeyi oluşturacaklar. Sonunda, öğrenciler, bitirdikleri çalışmalarını kendi akranlarıyla ya da sevdikleriyle özel bir bağlantıyla paylaşabilecekler. Sürecin dört aşamasının tamamının ders rehberi, proje sürecinin ilk aşamasından bulunabilir. [burada](https://curriculum.code.org/csf/coursee/12/).'
             Internet:
-              name: İnternet
+              name: 'Beyond Programming: The Internet'
               description_student: İnternet üzerinde bilginin nasıl seyahat ettiğini hiç merak ettiniz mi? Bu sihir değil! Bu ders, size, internetin nasıl çalıştığının temellerini öğretecek.
               description_teacher: Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.
             Crowdsourcing:
-              name: Kalabalık Kaynaklandırma 'Crowdsourcing'
+              name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
           title: 'CS Fundamentals: Course E'
@@ -5489,7 +5495,7 @@ tr:
               description_student: Burada, tangram olarak adlandıran bulmacaları kullanarak algoritmaları öğreneceksiniz!
               description_teacher: Bu ders bize algoritmaların önemini gösterecek. Bir algoritmayı basit tuttuğunuz sürece onu kullanmanın bir çok yolu vardır. Ancak, eğer herkesin aynı sonuca varmasını istiyorsanız, algoritmanız daha detaylı olmalı. Öğrenciler tangramlarla oynarken, genel ve detaylandırılmış bir algoritma arasındaki farkı öğrenecekler.
             Introduction:
-              name: Giriş
+              name: Introduction to Online Puzzles
               description_student: Bu ders, size, bu kursta öğreneceğiniz bazı şaşırtıcı şeyler hakkında kısa bilgiler verecek!
               description_teacher: 'Bu derste, kursun sonraki bölümlerinde yer alan daha karmaşık kavramlara, öğrencileri hazırlamak için diziler, döngüler ve iç içe döngüler anlatılır. Bu ''ramp up'' dersi, sınıfınızdaki uzmanlar ve yeni başlayanlar arasındaki oyun alanını dengeler. '
             The Power of Words:
@@ -5501,7 +5507,7 @@ tr:
               description_student: En sevdiğiniz video oyunu dününün. Nasıl yapıldığını hiç merak ettiniz mi? Bu bulmacalarda, Ice Age' deki kendi arkadaşlarınızla kendi video oyununuzu geliştireceksiniz!
               description_teacher: In this lesson, students are guided through a story featuring characters from Ice Age. Students will work with events and loops to make characters move on the screen, and will get the chance to create their own game or story after the guided levels.
             Envelope Variables:
-              name: Zarf değişkenleri
+              name: 'Variables: Envelope Variables'
               description_student: 'Zarflar ve değişkenlerin ortak bir yönü var: ikisi de değerli şeyleri tutarlar. Burada değişkenlerin ne olduğunu ve onların yapabileceği harika şeyleri öğreneceksiniz.'
               description_teacher: Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.
             Variables in Artist:
@@ -5513,7 +5519,7 @@ tr:
               description_student: Yakında değişkenleri kullanarak bir oyunda etkileşimli karakterler yapmayı öğreneceksiniz!
               description_teacher: Play Lab' da sahneler oluşturarak bu derste değişkenler ile daha fazla çalışacaklar. Öğrenciler, kullanıcıdan girdi almak ve değişkenlere değer atamak için çalışacaklar, sonra değişkenler ile kendi küçük projelerini oluşturacaklar.
             For Loop Fun:
-              name: Eğlenceli tekrar için
+              name: 'For Loops: For Loop Fun'
               description_student: You're going to have loads of fun learning about `for` loops!
               description_teacher: 'We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic. '
             For Loops in Bee:
@@ -5525,7 +5531,7 @@ tr:
               description_student: Get ready to make your next masterpiece. Here you will be using `for` loops to make some jaw-dropping pictures.
               description_teacher: In this lesson, students continue to practice for loops, this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and for loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
             Songwriting with Parameters:
-              name: Parametrelerle Şarkı Yazmak
+              name: 'Functions: Songwriting with Parameters'
               description_student: You just might release the next big hit single! In this lesson, you will be learning what parameters are and how they make some fantastic songs!
               description_teacher: One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.
             Conditionals and Functions in Bee:
@@ -5869,13 +5875,13 @@ tr:
             Present Your Project:
               name: Projeni sun
             Nested Loops Project in Frozen:
-              name: Nested Loops Project in Frozen
+              name: Nested Loops in Frozen
             'How it Works: The Internet':
-              name: 'How it Works: The Internet'
+              name: 'Beyond Programming: The Internet'
             'Common Sense Education: Digital Citizenship':
-              name: 'Common Sense Education: Digital Citizenship'
+              name: 'Digital Citizenship: Practicing Digital Citizenship'
             'Common Sense Education: Screen Out the Mean':
-              name: 'Common Sense Education: Screen Out the Mean'
+              name: 'Digital Citizenship: Screen Out the Mean'
             Events in Star Wars:
               name: Events in Star Wars
             Events with Flappy:
@@ -5883,29 +5889,29 @@ tr:
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: Labirentte Koşullar ve Döngüler
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: ''
+          title: 'CS Fundamentals: Express'
           description_audience: ''
-          description_short: ''
-          description: ''
+          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
               name: 'Hata Ayıklama: Farkedilmeyen Hatalar'
             'Persistence & Frustration: Stevie and the Marbles':
-              name: 'Persistence & Frustration: Stevie and the Marbles'
+              name: 'Persistence: Stevie and the Big Project'
             'Real-life Algorithms: Plant a Seed':
               name: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
             Learn to Drag and Drop:
               name: Sürükleyip Bırakmayı Öğrenin
             'Online Safety: Your Digital Footprint':
-              name: 'Online Safety: Your Digital Footprint'
+              name: 'Digital Citizenship: My Digital Footprint'
             'Programming: My Robotic Friends':
               name: 'Programlama: Robot dostlarım'
             Programming in Maze:
@@ -5924,6 +5930,34 @@ tr:
               name: Play Lab' da Olaylar
             Spelling Bee:
               name: Heceleme Yarışması
+          title: 'CS Fundamentals: Pre-reader Express'
+          description_audience: ''
+          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
+          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: teşekkürler
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: yeni kademe
+            test satge:
+              name: test satge
           title: ''
           description_audience: ''
           description_short: ''

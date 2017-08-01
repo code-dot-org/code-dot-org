@@ -190,3 +190,73 @@
       courseF_unplugged_powerOfWords:
         title: "不插電活動"
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: "生活中的演算法 - 植物種植"
+        desc: "這課以種植植物為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。"
+      courseA_unplugged_happyMaps:
+        title: "快樂地圖"
+        desc: "學生創建簡單的演算法（一連串的指令）來移動角色走出迷宮。"
+      courseA_unplugged_goingPlacesSafely:
+        title: "安全的到達地點"
+        desc: "網路是個很強大，但有時卻很危險的地方。教師會介紹在網路世界的暢遊的同時，如何保護自己的安全。"
+      courseABC_unplugged_bigEvent:
+        title: "大事件"
+        desc: "學生們將學習編程概念中的事件（events）, 電腦不斷監控著這些操作。老師在紙上按下按鈕，被遙控的學生則依照不同的按鈕作出不同的反應。"
+      courseB_unplugged_digitalFootprint:
+        title: "你的數位足跡"
+        desc: "教師向學生介紹，把關於自己的信息放在網路上會留下數位足跡（或痕跡），從而導致某些後果。"
+      courseC_unplugged_buildingAFoundation:
+        title: "打好基礎"
+        desc: "學生使用所提供的元素建立結構，建立的結構必須達到任務目標（能到達指定的高度或是能承受指定的重量），同時，在問題變得愈來愈複雜時，學生們可以學習互相討論持久性相關的問題。"
+      courseC_unplugged_paperPlanes:
+        title: "生活中的演算法 - 紙飛機"
+        desc: "這課以製作紙飛機為例，展示我們在日常生活中使用的演算法。同時著重於介紹宏觀的計算機科學，以及演算法在當中扮演著何等重要的角色。"
+      courseC_unplugged_gettingLoopy:
+        title: "學習迴圈"
+        desc: "這一課經由舞蹈活動來介紹迴圈（重複一些指令）這個編程概念。學生會學習到簡單的動作，然後依照指示重複這些動作。"
+      courseC_unplugged_binaryBracelets:
+        title: "二進制手環"
+        desc: "學生用二進制表示法創造一個代表他們名字的第一個字母的手環。學生會學到資料可以用一種以上的方法來呈現和儲存。"
+      courseD_unplugged_graphPaperProgramming:
+        title: "方格紙編程"
+        desc: "學生用一組已經定義好的指令來寫出演算法（一連串的指令）以引導同學重建一個圖案。"
+      courseD_unplugged_relayProgramming:
+        title: "接力編程"
+        desc: "學生們進行一場接力比賽，他們要跑到對面，根據「方格紙編程」的圖像寫一條演算法。他們一次只能寫一條指令，如果有什麼地方出錯，他們必須全部擦掉，重新開始。"
+      courseD_unplugged_conditionalsCards:
+        title: "用撲克牌學習條件判斷（Conditionals）"
+        desc: "為了學習關於條件判斷陳述式，學生會玩個撲克牌遊戲，建立一些規則，像是「如果我抽到的是紅色的牌，我就得一分」和「如果我抽到的牌是黑色的，你就得一分」。"
+      courseD_unplugged_binaryImages:
+        title: "二進制圖像"
+        desc: "雖然很多人認為二進制就是一堆的 0 和 1，我們前面的課程教導過學生，訊息是可以用不同的二進制表達法表示。這堂課將更深入這個觀念，並說明電腦如何同樣的以二進制儲存更複雜的訊息（例如圖像和顏色）。"
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: "這課展示我們在日常生活中使用的演算法。其中有個部分，學生會發現並寫出擲骰子比大小遊戲的演算法。"
+      courseE_unplugged_songwritingParameters:
+        title: "用參數寫歌"
+        desc: "學生使用一首歌的副歌的概念，學習怎麼定義和呼叫函式。"
+      courseE_unplugged_internet:
+        title: "網際網路 Internet"
+        desc: "學生用紙條傳遞訊息，從而體驗出各種網路傳輸數據的方式。"
+      courseE_unplugged_crowdsourcing:
+        title: "群眾外包（Crowdsourcing）"
+        desc: "透過使用群眾外包（Crowdsourcing）- 一種在計算機科學常見的解決問題的方式，學生可以學習到以一個教室為單位完成一個任務，比起一個人獨自完成來得更有效率。"
+      courseE_unplugged_songwriting:
+        title: "歌曲創作"
+        desc: "學生使用一首歌的副歌的概念，學習怎麼定義和呼叫函式。"
+      courseF_unplugged_tangrams:
+        title: "七巧板演算法"
+        desc: "這節課向我們展示的演算法的重要性，如果你讓一個演算法保持的愈純綷，你就有很多的方式來應用它。如果你想要確保每個人應用後都得到相同的結果，那麼你的演算法就需要更多的細節。"
+      courseF_unplugged_envelopeVariables:
+        title: "信封變數"
+        desc: "在計算機科學中，變數提供了很大的自由度。這節課有助於解釋什麼是變數，以及我們如何用不同的方法來使用它們。在這節課實施前，需要先（或同時）清楚抽象概念。"
+      courseF_unplugged_forLoopFun:
+        title: "有趣的計數迴圈"
+        desc: "我們知道迴圈可以讓我們不斷重複的做同一件事情，而現在我們要學習如何使用本身有多一些額外的結構的迴圈。"
+      courseF_unplugged_songwritingParameters:
+        title: "用參數寫歌"
+        desc: "在計算機科學世界中，函式（function）可以說是最壯觀的建築物之一。函式，有時候稱為程序，是在龐大的程式中，可以被不斷重複利用的一些程式小片段。這個課程將會幫助學生直觀的了解，把這麼多零碎的代碼組合成函式是非常有用的。
+          \ "

@@ -279,7 +279,7 @@
         title: ''
         desc: ''
       courseA_unplugged_loops:
-        title: Loops Unplugged
+        title: Lykkjur án tölvu
         desc: "Í þessum tíma munt þú læra um lykkjur!"
       courseB_unplugged_MRF:
         title: Verkefni án tölvu
@@ -302,3 +302,114 @@
         title: Verkefni án tölvu
         desc: "Í dag munt þú læra hvað þú getur gert ef einhver kemur illa fram við
           þig á netinu."
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algrím úr raunheimi: Sá fræi'
+        desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
+          og notar fræsáningu sem dæmi. Einnig er horft almennar til tölvunarfræði
+          og hvernig algrím gegna nauðsynlegu hlutverki."
+      courseA_unplugged_happyMaps:
+        title: Krúttleg kort
+        desc: Nemendur búa til einföld algrím (röð leiðbeininga) til að láta einhvern
+          ferðast um völundarhús með einni skipun.
+      courseA_unplugged_goingPlacesSafely:
+        title: Ferðast í öryggi
+        desc: Internetið er öflugur en stundum hættulegur staður. Kennarar kynna hvernig
+          þarf að passa sig þegar farið er um netið.
+      courseABC_unplugged_bigEvent:
+        title: Stórviðburður
+        desc: Nemendur fá kynningu á forritunarhugtakinu "atvik" sem eru aðgerðir
+          sem tölvan er stöðugt að vakta. Kennarinn ýtir á hnapp á pappírsfjarstýringu
+          og nemendur bregðast mismunandi við eftir því á hvaða hnapp var ýtt.
+      courseB_unplugged_digitalFootprint:
+        title: Stafræna fótsporið þitt
+        desc: Kennarinn kynnir fyrir nemendum þá hugmynd að með því að setja upplýsingar
+          um sig á netið búi þeir til stafrænt fótspor eða slóð sem getur haft afleiðingar.
+      courseC_unplugged_buildingAFoundation:
+        title: Að byggja grunn
+        desc: Nemendur byggja hlut með því að nota aðeins gefið efni. Hlutirnir verða
+          að uppfylla kröfur (ná vissri hæð eða þola vissa þyngd) og nemendur ræða
+          þá hugmynd að hvika ekki frá markmiði þó málin flækist.
+      courseC_unplugged_paperPlanes:
+        title: 'Algrím úr raunheimi: Pappírsskutlur'
+        desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi
+          og tekur sem dæmi að búa til pappírsskutlu. Einnig er horft almennar til
+          tölvunarfræði og hvernig algrím gegna nauðsynlegu hlutverki."
+      courseC_unplugged_gettingLoopy:
+        title: Lykkjulæti
+        desc: "Þessi kennslustund kynnir forritunarhugtakið lykkju (endurteknar skipanir)
+          með dansi. Nemendur læra einföld dansspor og fá síðan fyrirmæli um að endurtaka
+          þau."
+      courseC_unplugged_binaryBracelets:
+        title: Stafræn armbönd
+        desc: Nemendur búa til armbönd sem sýna fyrsta stafinn í nafni hvers með gildi
+          hans í tvenndarkerfi. Nemendur læra að það er hægt að tákna og geyma gögn
+          á ýmsa vegu.
+      courseD_unplugged_graphPaperProgramming:
+        title: Forritun rúðublaða
+        desc: Nemendur skrifa algrím (röð leiðbeininga) með fyrirfram ákveðnum skipunum
+          til að stýra bekkjarfélögum í að endurskapa teikningu.
+      courseD_unplugged_relayProgramming:
+        title: Boðhlaupsforritun
+        desc: Nemendur hlaupa boðhlaup þar sem þeir hlaupa yfir lóðina til að skrifa
+          algrím sem byggir á mynd frá "Forritun með rúðublöðum". Þeir mega aðeins
+          skrifa eina skipun í einu og ef það er villa einhversstaðar verða þeir að
+          stroka allt út til baka að þeim stað.
+      courseD_unplugged_conditionalsCards:
+        title: Skilyrði með kortum
+        desc: Nemendur læra um skilyrtar setningar með því að spila á spil og búa
+          til reglur eins og "ef ég dreg rautt spil, fæ ég stig" og "ef ég dreg svart
+          spil, færð þú stig."
+      courseD_unplugged_binaryImages:
+        title: Tvíundarmyndir
+        desc: "Þó margir ímyndi sér að tvíundir takmarkist alfarið við núll og einn,
+          kenndu fyrri námskeið nemendum okkar að það er hægt að nota ýmsar aðrar
+          tvenndir til tákna upplýsingar. Þessi kennslustund gengur skrefi lengra
+          með þá hugmynd þar sem hún sýnir hvernig tölva getur einnig geymt enn flóknari
+          upplýsingar (svo sem myndir og liti) með tvíundarsniði."
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: "Þessi kennslustund dregur fram hvernig við notum algrím í daglegu lífi.
+          Meðal annars munu nemendur greina og skrifa niður algrím fyrir kappleik
+          sem notar teningakast."
+      courseE_unplugged_songwritingParameters:
+        title: Lagasmíð með stikum
+        desc: Nemendur nota hugmyndina um viðlag í söng til að læra um skilgreiningu
+          og notkun falla.
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Nemendur senda skilaboð á pappír til að líkja eftir hinum ýmsu sendingaraðferðum
+          sem notaðar eru á netinu.
+      courseE_unplugged_crowdsourcing:
+        title: Hópvistun
+        desc: Nemendur nota hópvistun (crowdsourcing) til að leysa verkefni saman
+          sem bekkur með meiri árangri en ef nemandi reyndi að glíma við það einn.
+          Þetta er algeng aðferð við að leita lausna í tölvunarfræði.
+      courseE_unplugged_songwriting:
+        title: Lagasmíð
+        desc: Nemendur nota hugmyndina um viðlag í söng til að læra um skilgreiningu
+          og notkun falla.
+      courseF_unplugged_tangrams:
+        title: Tangram algrím
+        desc: "Þessi kennslustund sýnir okkur nokkuð mikilvægt varðandi algrím. Ef
+          algrím er einfalt er hægt að nota það á marga vegu. Ef þú vilt að allir
+          fái sömu niðurstöðuna verður algrímið að vera nákvæmara."
+      courseF_unplugged_envelopeVariables:
+        title: Umslagabreytur
+        desc: Breytur gefa mikið frelsi í tölvunarfræði. Þessi kennslustund hjálpar
+          við að útskýra hvað breytur eru og fjölbreytta notkun þeirra. Notaðu þetta
+          verkefni á undan (eða í tengslum við) kennslustundina um útdrátt til að
+          koma þessari hugmynd enn betur til skila.
+      courseF_unplugged_forLoopFun:
+        title: Fyndnar frá lykkjur
+        desc: Við vitum að með lykkjum getum við gert eitthvað aftur og aftur, en
+          nú ætlum við að læra hvernig við notum lykkjur með innbyggðum viðauka.
+      courseF_unplugged_songwritingParameters:
+        title: Lagasmíð með stikum
+        desc: 'Ein stórkostlegasta einingin í heimi tölvunarfræðinnar er fallið (function).
+          Föll (stundum nefnd stefjur eða aðgerðir) eru smáforrit sem eru notuð aftur
+          og aftur innan í stærra forriti. Þessi kennslustund mun hjálpa nemendum
+          að öðlast skilning á því hvers vegna það er svona gagnlegt að setja kóðabúta
+          í föll.  '

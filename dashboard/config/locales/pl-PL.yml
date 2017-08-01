@@ -21,6 +21,7 @@
         name: Wyświetl Nazwisko
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: Email
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Nazwa użytkownika
         password: Hasło
@@ -212,6 +213,10 @@
       Kursy są zabawne, mają ładną oprawę graficzną i uczą podstawowych pojęć z dziedziny informatyki przy użyciu prostych gier z instrukcjami. Naucz się kodowania od Billa Gatesa, Marka Zuckerberga, Angry Birds i Plants vs. Zombies! :)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -220,6 +225,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: Email
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Zaproszenie wysłane
     added_teacher: "%{name} dodany jako Twój nauczyciel"
@@ -234,6 +245,9 @@
       blank_code: Wprowadź kod sekcji
       cant_join_own_section: Przepraszamy, ale nie możesz przyłączyć się do swojej
         własnej sekcji.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Powiadomienie Code.org: %{student_name} nie jest już powiązany z
@@ -255,32 +269,42 @@
     updated: "%{model} został pomyślnie zaktualizowany."
     destroyed: "%{model} został pomyślnie usunięty."
     access_denied: Nie masz dostępu do tego %{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
-      finished_hoc: Skończyłem moją Godzinę Kodowania (Hour of Code)
+      finished_hoc: Ukończyłem moją Godzinę Kodowania (Hour of Code)
       sign_in_to_save: Zaloguj się, by zapisać postępy
       free_play:
         playlab: Utwórz aplikację w Play Lab
         artist: Narysuj cokolwiek
-        calculate: Calculate Something
+        calculate: Obliczyć coś
         applab: Utwórz aplikację w App Lab
-        gamelab: Make a Game Lab project
+        gamelab: Utwórz projekt w Game Lab
+        weblab: Make a Web Lab (beta) project
       home: Strona główna
       courses: Kursy
-      project_gallery: Project Gallery
+      project_gallery: Galeria Projektów
       sections: Sekcje
-      help_support: Help and support
-      report_bug: Report bug
-      teacher_community: Teacher community
-      professional_learning: Professional Learning
-      documentation: Documentation
-      tutorials: Tutorials
+      help_support: Pomoc i wsparcie
+      report_bug: Zgłoś błąd
+      teacher_community: Społeczność nauczycieli
+      professional_learning: Kształcenia Profesjonalne
+      documentation: Dokumentacja
+      tutorials: Samouczki
       educate_overview: Przegląd edukatora
       educate_elementary: Szkoła podstawowa
       educate_middle: Gimnazjum
       educate_high: Liceum
       educate_hoc: Godzina Kodowania
-      educate_partner: Nasz partner
+      educate_partner: Współpracuj z nami
       educate_beyond: Poza Code.org
       educate_inspire: Inspiruj ucznia
       educate_community: Społeczność online
@@ -369,6 +393,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -720,6 +750,12 @@
         and games with objects and characters that interact with each other.
       audience: Wiek 13+
       cta: Zobacz instrukcję
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: Wiek 13+
+      cta: Zobacz instrukcję
     frozen:
       title: Frosen
     starwars:
@@ -1033,10 +1069,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Szukaj ikony...
-      no_icons_found: Nie znaleziono ikon
   flex_category:
     required: Streszczenie
     content: Treści
@@ -1072,6 +1104,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Uwaga
     leaving_domain: Opuszczasz tę domenę do witryny, która nie jest obsługiwana przez

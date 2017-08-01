@@ -305,7 +305,7 @@
             'Eval: Writing Contracts':
               name: Writing Contracts
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: Loja e Madhe - Animacioni
             'Play Lab: Boolean (Big Game)':
               name: The Big Game - Booleans
             'Play Lab: Booleans':
@@ -315,7 +315,7 @@
             'Play Lab: Defining Functions':
               name: Rocket Height
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Loja e Madhe - Variablat
             'Unplugged: Booleans':
               name: 'Unplugged: Booleans and Logic'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -361,19 +361,19 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Shkenca Kompjuterke Pedagogji
             Introduction to PD:
               name: Hyrje në PD
             K-5 Courses:
-              name: K-5 Courses
+              name: K-5 Kurset
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Koncepti i Programimit: Kushtëzimet'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Koncepti i Programimit: Eventet'
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: 'Koncepti i Programimit: Funksionet'
             'Programming Concept: Loops':
               name: 'Programming Concept: Loops'
             Reflection:
@@ -578,9 +578,9 @@
             Lossy Compression and File Formats:
               name: Lossy Compression and File Formats
             Number Systems:
-              name: Number Systems
+              name: Sistemi Numerik
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovacionet Personale
             Sending Binary Messages:
               name: Sending Binary Messages
             Sending Binary Messages with the Internet Simulator:
@@ -635,7 +635,7 @@
             Strings and Images:
               name: Stringet dhe Figurat
             Your Game - Animation:
-              name: Your Game - Animation
+              name: Loja Yte - Animacioni
             Your Game - Booleans:
               name: Your Game - Booleans
             Your Game - Collision Detection:
@@ -676,9 +676,9 @@
           description_audience: ''
           stages:
             Lesson 14:
-              name: Lesson 14
+              name: Lekcioni 14
             Lesson 15:
-              name: Lesson 15
+              name: Lekcioni 15
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -812,13 +812,13 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Shkenca Kompjuterke Pedagogji
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             Strings and Images:
               name: Stringet dhe Figurat
             Teacher Dashboard:
@@ -1186,7 +1186,7 @@
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1242,7 +1242,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             Planning:
               name: Planning
         ECSPD2:
@@ -1367,7 +1367,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -2205,11 +2205,11 @@
             HTTP and Abstraction:
               name: HTTP and Abstraction
             Number Systems:
-              name: Number Systems
+              name: Sistemi Numerik
             Packets and Making a Reliable Internet:
               name: Packets and Making a Reliable Internet
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovacionet Personale
             Practice PT - The Internet and Society:
               name: Practice PT - The Internet and Society
             Routers and Redundancy:
@@ -4424,6 +4424,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -6499,6 +6501,8 @@
               name: Events in Play Lab
             More Programming in Maze:
               name: More Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6538,6 +6542,8 @@
               name: Byzylykët Binarë
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7144,6 +7150,8 @@
                 practice conditionals. It features characters and settings from Minecraft,
                 and students will complete tasks such as mining and building structures
                 using their programs.
+            Functions in Bee:
+              name: Functions in Bee
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7267,3 +7275,333 @@
           description_audience: brook, dani, mal
           description_short: NA
           description: NA
+        csp1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete your Deeper Learning:
+              name: Complete your Deeper Learning
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CSP Unit 1 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 1 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning:
+              name: Complete Unit 2 Deeper Learning
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CSP Unit 2 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 2 Deeper Learning materials for CSP facilitators
+            in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CSP Unit 3 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 3 Deeper Learning materials for CSP facilitators
+            in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CSP Unit 4 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CSP Unit 5 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csd1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CS Discoveries Unit 1 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 1 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you''ve submitted your own reflections for the unit. '
+        csd6-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Complete Unit 6 Deeper Learning Reflections
+          title: CS Discoveries Unit 6 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 6 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 6 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CS Discoveries Unit 5 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 5 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 5 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CS Discoveries Unit 4 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 4 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 4 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CS Discoveries Unit 3 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 3 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 3 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CS Discoveries Unit 2 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 2 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 2 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        allthettsthings:
+          stages:
+            TTS:
+              name: TTS
+        express:
+          stages:
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programming Unplugged: My Robotic Friends'
+            Introduction:
+              name: Hyrja
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            Internet:
+              name: Internet
+            Digital Citizenship:
+              name: Shtetësi Dixhitale
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            Events in Bounce:
+              name: Events in Bounce
+            Build a Flappy Game:
+              name: Build a Flappy Game
+            Conditionals with Cards:
+              name: Kushtoret me Karta
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Envelope Variables:
+              name: Variablat Zarf
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: Qef me Ciklet For
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: Të shkruarit këngë me Parametra
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+            Events in Star Wars:
+              name: Events in Star Wars
+            Events with Flappy:
+              name: Events with Flappy
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        pre-express:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed':
+              name: 'Algoritmet e jetës-Reale: Mbill një Farë'
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Programming in Maze:
+              name: Programming in Maze
+            'Programming: Star Wars':
+              name: 'Programming: Star Wars'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Collector:
+              name: Loops in Collector
+            Loops in Artist:
+              name: Loops in Artist
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Play Lab:
+              name: Events in Play Lab
+            Spelling Bee:
+              name: Bleta Gërmëzuese
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: Faleminderit
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: new stage
+            test satge:
+              name: test satge
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

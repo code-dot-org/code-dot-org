@@ -306,3 +306,117 @@
       courseF_unplugged_powerOfWords:
         title: Aktywność unplugged (bez komputera)
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algorytmy z życia wzięte: sadź nasiona'
+        desc: Ta lekcja przywołuje sposoby stosowania algorytmów w naszym codziennym
+          życiu, posługując się przykładem sadzenia nasion. Koncentruje się również
+          na rozleglejszym obrazie informatyki i zasadniczej roli, jaką odgrywają
+          algorytmy.
+      courseA_unplugged_happyMaps:
+        title: Szczęśliwe Mapy (Happy Maps)
+        desc: Uczniowie tworzą proste algorytmy (zestawy instrukcji), by przeprowadzić
+          postać przez labirynt posługując się pojedynczym poleceniem.
+      courseA_unplugged_goingPlacesSafely:
+        title: Bezpiecznie dotrzeć na miejsce
+        desc: Internet jest potężny, ale czasami jest to niebezpieczne miejsce. Nauczyciele
+          przedstawiają, jak bezpiecznie nawigować po Internecie.
+      courseABC_unplugged_bigEvent:
+        title: Wielkie Wydarzenie
+        desc: Przybliża się uczniom pojęcie "zdarzeń" (events) w programowaniu, które
+          są działaniami, które komputer stale monitoruje. Nauczyciel będzie naciskał
+          przyciski na papierze a uczniowie będą reagować w zależności od tego, który
+          przycisk został naciśnięty.
+      courseB_unplugged_digitalFootprint:
+        title: Twój cyfrowy ślad
+        desc: Nauczycieli przedstawia uczniom, że umieszczenie informacji o sobie
+          online tworzy cyfrowy ślad lub "szlak", co może mieć konsekwencje.
+      courseC_unplugged_buildingAFoundation:
+        title: Kładąc podwaliny (Building a Foundation)
+        desc: Uczniowie budują struktury przy użyciu tylko dostępnych zasobów. Struktury
+          muszą kończyć zadanie (dotrzeć do pewnej wysokości lub osiągnąć pewną wagę),
+          a uczniowie dyskutują o pomysłach, wytrwałe, gdy sprawy się komplikują.
+      courseC_unplugged_paperPlanes:
+        title: 'Rzeczywiste algorytmy: Papierowe samoloty'
+        desc: Ta lekcja jest poświęcona sposobom wykorzystania algorytmów w naszym
+          codziennym życiu, w szczególności przy tworzeniu papierowych samolotów.
+          Uwaga jest skupiona na znaczeniu algorytmów w informatyce.
+      courseC_unplugged_gettingLoopy:
+        title: Poznając pętle
+        desc: Ta lekcja wprowadza pętlę (instrukcje powtarzania), jedno z pojęć programowania,
+          z wykorzystaniem tańca. Uczniowie poznają prostą choreografię, a następnie
+          są proszeni o powtarzanie jej.
+      courseC_unplugged_binaryBracelets:
+        title: Binarne bransoletki
+        desc: Uczniowie tworzą bransoletki jako binarne reprezentacje pierwszej litery
+          swoich nazwiska. Dowiadują się przy tym, że dane mogą być reprezentowane
+          i przechowywane na wiele sposobów.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programowanie na papierze milimetrowym
+        desc: Uczniowie piszą algorytm (zestaw instrukcji) korzystając ze zbioru wcześniej
+          zdefiniowanych poleceń, aby kierować innymi uczniami przy odtworzeniu rysunku.
+      courseD_unplugged_relayProgramming:
+        title: Programowanie przekaźnika
+        desc: Uczniowie tworzą sztafetę, w której biegną przez trawnik, aby zapisać
+          algorytm oparty na obrazie pochodzącym z "Programowania na papierze". Każdy
+          uczeń może zapisywać tylko jedną instrukcję i jeśli w jakimś punkcie pojawia
+          się błąd, to należy wymazać wszystko do tego punktu.
+      courseD_unplugged_conditionalsCards:
+        title: Warunkowe z kartami
+        desc: 'Aby dowiedzieć się o instrukcjach warunkowych, uczniowie grają w karty
+          i tworzą reguły takie, jak: "Jeśli wyciągnę czerwoną kartę, to zdobywam
+          punkt" a "Jeśli wyciągnę czarną kartę, to ty zdobywasz punkt."'
+      courseD_unplugged_binaryImages:
+        title: Binarne obrazy (Binary Images)
+        desc: Chociaż wiele osób sądzi, że binarne są tylko zera i jedynki, w naszych
+          poprzednich kursach uczniowie mogli się dowiedzieć, że informacja może być
+          reprezentowana na różne binarne sposoby.  Na tej lekcji to pojęcie jest
+          rozwijane jeszcze dalej i ilustrowane jest, jak komputer może przechowywać
+          bardziej złożone informacje (takie jak obrazy i kolory) w postaci binarnej.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Ta lekcja odwołuje się do sposobów korzystania z algorytmów w naszym
+          codziennym życiu. W ramach tego, uczniowie definiują i zapisują algorytm
+          do gry w kości.
+      courseE_unplugged_songwritingParameters:
+        title: Pisanie piosenek z parametrami
+        desc: Uczniowie używają pojęcia refrenu w piosence, aby nauczyć się, jak definiować
+          i wywoływać funkcje.
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Uczniowie przesyłają wiadomości reprezentując różne metody internetowej
+          transmisji przy użyciu kawałków papieru.
+      courseE_unplugged_crowdsourcing:
+        title: Praca w grupie (Crowdsourcing)
+        desc: Uczniowie używają crowdsourcing (działania w grupie), popularną w informatyce
+          technikę rozwiązywania problemów, do ukończenia zadania razem całą klasą,
+          bardziej efektywnie, niż gdyby jeden uczeń próbował wykonać to sam.
+      courseE_unplugged_songwriting:
+        title: Pisanie piosenek
+        desc: Uczniowie używają pojęcia refrenu w piosence, aby nauczyć się, jak definiować
+          i wywoływać funkcje.
+      courseF_unplugged_tangrams:
+        title: Algorytmy na tangramach
+        desc: Ta lekcja demonstruje coś ważnego o algorytmach. Jeśli Twój algorytm
+          jest prosty, to istnieje wiele sposobów jego wykorzystania. Jeśli chcesz
+          mieć pewność, że każdy kończy tak samo, Twój algorytm wymaga więcej szczegółów.
+      courseF_unplugged_envelopeVariables:
+        title: Zmienne w kopertach
+        desc: Zmienne umożliwiają wiele swobody w informatyce.  Ta lekcja służy wyjaśnieniu,
+          czym są zmienne i jak możemy posługiwać się nimi na wiele różnych sposobów.
+          Wykorzystaj tę zajęcia przed (lub w powiązaniu z) lekcją na temat abstrakcji,
+          by naprawdę poznać ideę domu.
+      courseF_unplugged_forLoopFun:
+        title: Zabawa z pętlą "dla"
+        desc: Wiemy, że pętle służą do wykonywania tych samych rzeczy w kółko, ale
+          teraz mamy zamiar dowiedzieć się, jak stosować pętle z wbudowanymi w nie
+          dodatkowymi strukturami.
+      courseF_unplugged_songwritingParameters:
+        title: Pisanie Piosenek z parametrami
+        desc: 'Jedną z najwspanialszych struktur w informatyce jest funkcja.  Funkcje
+          (czasami nazywane procedurami) są mini programami, które można wielokrotnie
+          używać wewnątrz większych programów. Ta lekcja pomoże uczniom intuicyjnie
+          zrozumieć, dlaczego połączenie fragmentów kodu w funkcje jest tak dobrą
+          praktyką.  '

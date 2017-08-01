@@ -12,9 +12,44 @@ export default storybook => {
           stageNumber={1}
           nextLevelPath="#"
           bonusLevels={[
-            {id: 0, type: 'Blockly', name: 'Sample Bonus Level'},
-            {id: 1, type: 'Blockly', name: 'Another Bonus Level'},
+            {
+              id: 23222,
+              name: "courseB_maze_seq_challenge1",
+              type: "Maze",
+              map: [
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 1, 1, 1, 1, 2, 0],
+                [0, 0, 1, 1, 1, 1, 1, 0],
+                [0, 0, 1, 1, 1, 1, 1, 0],
+                [0, 0, 1, 4, 4, 1, 1, 0],
+                [0, 0, 1, 1, 3, 4, 1, 0],
+                [0, 0, 1, 1, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+              ],
+              skin: "birds",
+              startDirection: 2,
+              perfected: false,
+            },
+            {
+              id: 23223,
+              name: "courseB_maze_seq_challenge2",
+              type: "Maze",
+              map: [
+                [0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 1, 1, 1, 4, 1, 3, 0],
+                [0, 1, 1, 0, 1, 1, 4, 0],
+                [0, 1, 0, 1, 1, 0, 1, 0],
+                [0, 1, 1, 1, 0, 1, 1, 0],
+                [0, 1, 1, 0, 1, 1, 1, 0],
+                [0, 2, 1, 1, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0],
+              ],
+              skin: "birds",
+              startDirection: 2,
+              perfected: true,
+            },
           ]}
+          showProjectWidget={false}
         />
       )
     );

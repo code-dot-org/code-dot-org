@@ -68,8 +68,8 @@ class ApiController < ApplicationController
           oauth_token_expiration: client.expires_in + Time.now.to_i,
         )
       end
-    rescue Google::Apis::ClientError => client_error
-      render status: :forbidden, json: {error: client_error}
+    rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => error
+      render status: :forbidden, json: {error: error}
     end
   end
 
@@ -84,16 +84,11 @@ class ApiController < ApplicationController
     course_id = params[:courseId].to_s
 
     query_google_classroom_service do |service|
-      students = service.list_course_students(course_id).students
+      students = service.list_course_students(course_id).students || []
       section = GoogleClassroomSection.from_service(course_id, current_user.id, students)
 
       render json: section.summarize
     end
-  end
-
-  def user_menu
-    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-    render partial: 'shared/user_header'
   end
 
   def user_hero

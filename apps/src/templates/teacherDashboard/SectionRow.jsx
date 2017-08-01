@@ -1,9 +1,11 @@
-import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
+import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import _ from 'lodash';
+import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
-import { sectionShape, assignmentShape } from './shapes';
+import color from '@cdo/apps/util/color';
+import Button from '@cdo/apps/templates/Button';
+import {sectionShape, assignmentShape} from './shapes';
 import AssignmentSelector from './AssignmentSelector';
 import PrintCertificates from './PrintCertificates';
 import {
@@ -12,8 +14,9 @@ import {
   updateSection,
   removeSection
 } from './teacherSectionsRedux';
-import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
-import { styles as tableStyles } from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 
 const styles = {
   link: tableStyles.link,
@@ -26,6 +29,10 @@ const styles = {
   row: tableStyles.row,
   rightButton: {
     marginLeft: 5
+  },
+  sectionCodeNone: {
+    color: color.light_gray,
+    fontSize: 16,
   },
   nowrap: {
     whiteSpace: 'nowrap'
@@ -40,17 +47,17 @@ const styles = {
  */
 export const EditOrDelete = ({canDelete, onEdit, onDelete}) => (
   <div style={styles.nowrap}>
-    <ProgressButton
+    <Button
       text={i18n.edit()}
       onClick={onEdit}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
     {canDelete && (
-      <ProgressButton
+      <Button
         style={{marginLeft: 5}}
         text={i18n.delete()}
         onClick={onDelete}
-        color={ProgressButton.ButtonColor.red}
+        color={Button.ButtonColor.red}
       />
     )}
   </div>
@@ -67,16 +74,16 @@ EditOrDelete.propTypes = {
 export const ConfirmDelete = ({onClickYes, onClickNo}) => (
   <div style={styles.nowrap}>
     <div>{i18n.deleteConfirm()}</div>
-    <ProgressButton
+    <Button
       text={i18n.yes()}
       onClick={onClickYes}
-      color={ProgressButton.ButtonColor.red}
+      color={Button.ButtonColor.red}
     />
-    <ProgressButton
+    <Button
       text={i18n.no()}
       style={styles.rightButton}
       onClick={onClickNo}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
   </div>
 );
@@ -90,23 +97,41 @@ ConfirmDelete.propTypes = {
  */
 export const ConfirmSave = ({onClickSave, onCancel}) => (
   <div style={styles.nowrap}>
-    <ProgressButton
+    <Button
       className="uitest-save"
       text={i18n.save()}
       onClick={onClickSave}
-      color={ProgressButton.ButtonColor.blue}
+      color={Button.ButtonColor.blue}
     />
-    <ProgressButton
+    <Button
       text={i18n.dialogCancel()}
       style={styles.rightButton}
       onClick={onCancel}
-      color={ProgressButton.ButtonColor.gray}
+      color={Button.ButtonColor.gray}
     />
   </div>
 );
 ConfirmSave.propTypes = {
   onClickSave: PropTypes.func.isRequired,
   onCancel: PropTypes.func.isRequired,
+};
+
+const ProviderManagedSectionCode = ({provider}) => (
+  <div data-tip={i18n.providerManagedSection({provider})}>
+    {i18n.none()}
+    &nbsp;
+    <i
+      className="fa fa-question-circle"
+      style={styles.sectionCodeNone}
+    />
+    <ReactTooltip
+      role="tooltip"
+      effect="solid"
+    />
+  </div>
+);
+ProviderManagedSectionCode.propTypes = {
+  provider: PropTypes.string.isRequired,
 };
 
 /**
@@ -117,6 +142,7 @@ class SectionRow extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
     lightRow: PropTypes.bool.isRequired,
+    handleEdit: PropTypes.func,
 
     // redux provided
     validLoginTypes: PropTypes.arrayOf(
@@ -163,7 +189,23 @@ class SectionRow extends Component {
     });
   }
 
-  onClickEdit = () => this.setState({editing: true});
+  onClickEdit = () => {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
+      const section = this.props.sections[this.props.sectionId];
+      const editData = {
+        id: this.props.sectionId,
+        name: section.name,
+        grade: section.grade,
+        course: section.course_id,
+        extras: section.stageExtras,
+        pairing: section.pairingAllowed,
+        sectionId: this.props.sectionId
+      };
+      this.props.handleEdit(editData);
+    } else {
+      this.setState({editing: true});
+    }
+  };
 
   onClickEditSave = () => {
     const { sections, sectionId, updateSection } = this.props;
@@ -235,6 +277,7 @@ class SectionRow extends Component {
       primaryAssignmentIds
     } = this.props;
     const { editing, deleting } = this.state;
+    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     const section = sections[sectionId];
     if (!section) {
@@ -244,6 +287,16 @@ class SectionRow extends Component {
     const assignPaths = assignmentPaths(validAssignments, section);
 
     const persistedSection = !!section.code;
+    const editingLoginType = editing && !section.providerManaged;
+
+    let sectionCode = '';
+    if (!editing) {
+      if (section.providerManaged) {
+        sectionCode = <ProviderManagedSectionCode provider={section.loginType}/>;
+      } else {
+        sectionCode = section.code;
+      }
+    }
 
     return (
       <tr
@@ -266,19 +319,21 @@ class SectionRow extends Component {
             />
           )}
         </td>
-        <td style={styles.col}>
-          {!editing && section.loginType}
-          {editing && (
-            <select
-              defaultValue={section.loginType}
-              ref={element => this.loginType = element}
-            >
-              {['word', 'picture', 'email'].map((type, index) => (
-                <option key={index} value={type}>{type}</option>
-              ))}
-            </select>
-          )}
-        </td>
+        {!sectionFlow2017 &&
+          <td style={styles.col}>
+            {!editingLoginType && section.loginType}
+            {editingLoginType && (
+              <select
+                defaultValue={section.loginType}
+                ref={element => this.loginType = element}
+              >
+                {['word', 'picture', 'email'].map((type, index) => (
+                  <option key={index} value={type}>{type}</option>
+                ))}
+              </select>
+            )}
+          </td>
+        }
         <td style={styles.col}>
           {!editing && section.grade}
           {editing && (
@@ -317,26 +372,30 @@ class SectionRow extends Component {
             />
           )}
         </td>
-        <td style={styles.col}>
-          {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
-          {editing && (
-            <input
-              ref={element => this.stageExtras = element}
-              type="checkbox"
-              defaultChecked={section.stageExtras}
-            />
-          )}
-        </td>
-        <td style={styles.col}>
-          {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
-          {editing && (
-            <input
-              ref={element => this.pairingAllowed = element}
-              type="checkbox"
-              defaultChecked={section.pairingAllowed}
-            />
-          )}
-        </td>
+        {!sectionFlow2017 &&
+          <td style={styles.col}>
+            {!editing && (section.stageExtras ? i18n.yes() : i18n.no())}
+            {editing && (
+              <input
+                ref={element => this.stageExtras = element}
+                type="checkbox"
+                defaultChecked={section.stageExtras}
+              />
+            )}
+          </td>
+        }
+        {!sectionFlow2017 &&
+          <td style={styles.col}>
+            {!editing && (section.pairingAllowed ? i18n.yes() : i18n.no())}
+            {editing && (
+              <input
+                ref={element => this.pairingAllowed = element}
+                type="checkbox"
+                defaultChecked={section.pairingAllowed}
+              />
+            )}
+          </td>
+        }
         <td style={styles.col}>
           {persistedSection &&
             <a href={`#/sections/${section.id}/manage`} style={styles.link}>
@@ -345,7 +404,7 @@ class SectionRow extends Component {
           }
         </td>
         <td style={styles.col}>
-          {section.code}
+          {sectionCode}
         </td>
         <td style={styles.col}>
           {!editing && !deleting && (

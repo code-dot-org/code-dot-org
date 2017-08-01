@@ -23,6 +23,7 @@
         name: Nome para exibição
         name_example: 'Nome a apresentar<br/>(exemplo: João S.)'
         email: E-mail
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Nome de usuário
         password: Senha
@@ -154,7 +155,7 @@
     title: Informações da escola (opcional)
     school_country: School Country
     select_school_type: Tipo de escola
-    charter: Charter
+    charter: Escola por contrato de associação
     private: Privada
     public: Pública
     homeschool: Homeschool
@@ -170,7 +171,7 @@
     school_zip: CEP da escola
     school_address: Endereço da escola
     school_organization_name: Nome da escola ou organização
-    school_organization_zip: School/Organization Zip Code
+    school_organization_zip: Código postal da escola ou organização
   signin_form:
     title: Já tem uma conta? Entre
     login: E-mail
@@ -218,14 +219,24 @@
       Os tutoriais são divertidos, visualmente envolventes, e ensinam os conceitos básicos de ciência da computação de forma simples, como em um jogo. Aprenda a programar com a ajuda de Bill Gates, Mark Zuckerberg, Angry Birds e Plants vs Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
-      one: 'Your section:'
-      other: 'Your sections:'
-    code_with_teacher: "%{section_code} with %{teacher_name}"
+      one: 'A tua turma:'
+      other: 'As tuas turmas:'
+    code_with_teacher: "%{section_code} com %{teacher_name}"
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-mail
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Convite enviado
     added_teacher: "%{name} foi adicionado como seu professor"
@@ -239,6 +250,9 @@
       section_not_found: Não foi possível encontrar uma seção com o código '%{section_code}'.
       blank_code: Insira um código de seção
       cant_join_own_section: Desculpe, você não pode entrar em sua própria seção.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Notificação Code.org: %{student_name} não é mais seu aluno.'
@@ -259,6 +273,15 @@
     updated: "%{model} foi atualizado com sucesso."
     destroyed: "%{model} foi excluído com êxito."
     access_denied: Você não tem acesso a esse %{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Terminei minha Hora do Código
@@ -269,16 +292,17 @@
         calculate: Calculate Something
         applab: Criar um aplicativo do Play Lab
         gamelab: Make a Game Lab project
-      home: Home
+        weblab: Make a Web Lab (beta) project
+      home: Início
       courses: percursos
-      project_gallery: Project Gallery
-      sections: Sections
-      help_support: Suporte
-      report_bug: Report bug
-      teacher_community: Teacher community
+      project_gallery: Galeria de projetos
+      sections: Turmas
+      help_support: Ajuda e suporte
+      report_bug: Comunicar um problema
+      teacher_community: Comunidade de professores
       professional_learning: Professional Learning
-      documentation: Documentation
-      tutorials: Tutorials
+      documentation: Documentação
+      tutorials: Tutoriais
       educate_overview: Educator Overview
       educate_elementary: Elementary School
       educate_middle: Middle School
@@ -290,14 +314,14 @@
       educate_community: Online Community
       educate_tools: Vídeos e ferramentas
       about_us: Quem Somos
-      about_leadership: Leadership
-      about_donors: Donors
-      about_partners: Partners
-      about_team: Full Team
-      about_news: Newsroom
-      about_evaluation: Evaluation
-      about_jobs: Jobs
-      about_contact: Contact Us
+      about_leadership: Administração
+      about_donors: Doadores
+      about_partners: Parceiros
+      about_team: Toda a equipa
+      about_news: Imprensa
+      about_evaluation: Avaliação
+      about_jobs: Empregos
+      about_contact: Contacte-nos
       about_faqs: Perguntas Frequentes (FAQ)
       learn: Aprenda
       stats: Estatísticas
@@ -373,6 +397,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -730,6 +760,12 @@
         and games with objects and characters that interact with each other.
       audience: A partir de 13 anos
       cta: Saiba como
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: A partir de 13 anos
+      cta: Saiba como
     frozen:
       title: Frozen
     starwars:
@@ -764,7 +800,7 @@
       body: Students can explore concepts from our Computer Science Principles course
         hands-on using these digital tools. Use the widgets on their own, or create
         a single-concept lesson for your class.
-      audience: Ages 14+
+      audience: Maiores de 14 anos
       cta: Saiba como
   gallery:
     students_drew_these_with_code: Alunos criaram isso com programação!
@@ -796,9 +832,9 @@
     support: Obter ajuda
     support_url: "//support.code.org"
     help_resources: Ajuda e recursos
-    help_support: Suporte
-    documentation: Documentation
-    tutorials: Tutorials
+    help_support: Ajuda e suporte
+    documentation: Documentação
+    tutorials: Tutoriais
   multi:
     wrong_title: Resposta incorreta
     wrong_body: A resposta que você digitou não está correta. Tente novamente!
@@ -950,8 +986,8 @@
     delete: Excluir
     exit: Voltar ao curso
     my_projects: Meus projetos
-    project_gallery: Project Gallery
-    publish: Publish
+    project_gallery: Galeria de projetos
+    publish: Publicar
     unpublish: Unpublish
     share: Compartilhar
     share_title: Compartilhar seu projeto
@@ -1044,10 +1080,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Procurar um ícone...
-      no_icons_found: Nenhum ícone encontrado
   flex_category:
     required: Visão geral
     content: Conteúdo
@@ -1083,6 +1115,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Aviso
     leaving_domain: Você está deixando este domínio para acessar um site que não é

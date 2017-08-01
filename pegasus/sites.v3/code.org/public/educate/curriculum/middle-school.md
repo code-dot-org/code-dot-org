@@ -1,6 +1,5 @@
 ---
 title: CS Curriculum for grades 6-8
-nav: educate_nav
 video_player: true
 theme: responsive
 ---
@@ -11,99 +10,96 @@ Middle School
 
 [/solid-block-header]
 
-Our current middle school curriculum focuses on a broad introduction to computer science topics. CS Discoveries, our newest course (to be released in Summer 2017), will be a year-long or semester computer science course designed for grades 7-9. In addition, the CS Fundamentals Accelerated course may be used at all grade levels. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
+Our middle school curriculum focuses on a broad introduction to computer science topics. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
 
-<%= view :solid_block_header, :title=>"Computer Science Discoveries", :subtitle=>"A semester or year-long introductory course designed for grades 7-9" %>
+<br>
+<hr>
+
+<a name="csd"></a>
+# Computer Science Discoveries
+
+<div class="col-40" style="padding-right: 10px;">
 
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
-<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>'Computer Science Discoveries @codeorg'} %>
-
-<div class="col-50" style="padding-right: 10px;">
-
-<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<%=view :display_video_thumbnail, id: "intro_csd", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false', twitter: twitter, facebook: facebook%>
 
 </div>
 
-[col-50]
+[col-60]
 
-Computer Science Discoveries is a full-year introductory computer science survey course (can be implemented as two standalone semesters) targeted at upper middle school and lower high school (grades 7-9). The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students are empowered to create authentic artifacts and engage with CS as a medium for creativity, communication, problem solving, and fun.  This course will be piloted in Spring 2017, and will be rolling out Summer 2017.
-
-[/col-50]
-
-<div class="col-50" style="padding-right: 10px; float: right;">
-
-<img src="/images/fit-400/csdiscoveries-montage.jpg">
-
-</div>
-
-[col-50]
-
-## Units of Study
-
-* **Unit 1:** Problem Solving
-* **Unit 2:** Web Development
-* **Unit 3:** Animations and Games
-* **Unit 4:** The Design Process
-* **Unit 5:** Data and Society
-* **Unit 6:** Physical Computing
-
-[/col-50]
-
-<div style="clear: both;"></div>
+Computer Science Discoveries is designed for 7-9th grade students and can be taught as a semester or year long introductory course. The course takes a wide lens on computer science by covering topics such as programming, physical computing, HTML/CSS, and data. Students engage with computer science as a medium for creativity, communication, problem solving, and fun. The course inspires students as they build their own websites, apps, games, and physical computing devices.
 
 [<button>Learn more about curriculum</button>](/educate/csd)&nbsp;&nbsp;[<button>Apply for professional learning</button>](/educate/professional-learning/cs-discoveries)
 
-<%= view :solid_block_header, :title=>"Computer Science Fundamentals - Accelerated", :subtitle=>"A 20-hour course designed for grades 6-12" %>
-
-<img src="/images/code20hr.jpg" style="max-width: 100%">
-
-For a lighterweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program,
-Code.org offers the the 20-hour Accelerated course. The 20-hour Accelerated course covers the core concepts from the first four courses of the
-[Computer Science Fundamentals](https://studio.code.org) progression for elementary school students, but at an accelerated pace designed for students ages 10-18.
-
-[<button>Learn more about curriculum</button>](/educate/curriculum/accelerated-course)
-
-[solid-block-header]
-
-Computer Science in Science
-
-[/solid-block-header]
-
-<img src="<%= CDO.shared_image_url("courses/logo_science.png") %>" style="max-width: 100%">
-
-<div> Code.org has partnered with the award-winning <a href="http://www.projectguts.org/">Project GUTS</a> (Growing Up Thinking Scientifically) to deliver a middle school science program consisting of four instructional modules and professional development for the introduction of computer science concepts into science classrooms within the context of modeling and simulation. The goal of the program is to situate computer science practices and concepts within the context of life, physical, and earth sciences, and to prepare students to pursue formal, year-long courses in computer science during high school. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
-<br><br>
-
-<i>Note: Starting in the 2017-2018 school year, Code.org will not be offering professional development for this course.</i>
-
-</div>
-
-[col-50]
-
-<!--<img src="<%= CDO.code_org_url("/images/testimonials/fit-400/cs-in-science-testimonial-2.png") %>">-->
-
-[/col-50]
+[/col-60]
 
 <div style="clear: both;"></div>
 
-[<button>Learn more about curriculum</button>](<%= CDO.code_org_url('/curriculum/science') %>)
-
-[solid-block-header]
-
-For Algebra Classrooms
-
-[/solid-block-header]
-
-Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. [Computer Science in Algebra Course A](/educate/algebra) is a ~10 hour, block based course available from Code.org. Or visit Bootstrap to explore their longer [Bootstrap:1](http://www.bootstrapworld.org/materials/spring2016/index.shtml) and [Bootstrap:2](http://www.bootstrapworld.org/materials/spring2016/index.shtml) courses which teach more mathematical and programming concepts. By shifting classwork from abstract pencil-and-paper problems to a series of relevant programming problems, these courses demonstrate how algebra applies in the real world, using an exciting, hands-on approach to create something cool.
 <br>
+<hr>
+
+<a name="express"></a>
+
+# Computer Science Fundamentals - Express
+
+<div class="col-40" style="padding-right: 10px;">
+
+<img src="/images/fill-380x215/code20hr.jpg" style="max-width: 100%">
+
+</div>
+
+[col-60]
+
+For a lightweight option that can be integrated as a unit in an existing technology or programming class, or as a middle school after-school program, Code.org offers the the 30-hour Express Course. This course covers all the core concepts from the elementary school curriculum [Computer Science Fundamentals](/educate/curriculum/elementary-school), but at an accelerated pace designed for students ages 10-18.
+
+[<button>Learn more about curriculum</button>](/educate/curriculum/express-course)
+
+[/col-60]
+
+<div style="clear: both;"></div>
+
+<br>
+<hr>
+
+# For Science Classrooms
+
+<div class="col-40" style="padding-right: 10px;">
+
+<img src="<%= CDO.shared_image_url("courses/logo_science.png") %>" style="max-width: 100%">
+
+</div>
+
+[col-60]
+
+Code.org has partnered with the award-winning [Project GUTS](http://www.projectguts.org/) (Growing Up Thinking Scientifically) to help science teachers introduce computer science as a tool to teach modeling and simulation. This curriculum teaches computer science practices and concepts in the context of life, physical and earth sciences. CS in Science is based on a crosswalk identifying areas of overlap between the NGSS and Computer Science Teachers Association K-12 Computer Science Standards.
+
+[<button>Learn more about curriculum</button>](/curriculum/science)
+
+[/col-60]
+
+<div style="clear: both;"></div>
+
+<br>
+<hr>
+
+# For Algebra Classrooms
+
+Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. 
+
+[<button>Learn more about curriculum</button>](/edcuate/algebra)
+
+<br>
+<hr>
 
 [solid-block-header]
 
-Other Resources
+Recommended courses from 3rd parties
 
 [/solid-block-header]
 
-## 3rd Party resources for middle school CS
+<a name="thirdparty"></a>
+
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -120,17 +116,6 @@ Other Resources
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 | [UC Davis C-STEM](http://c-stem.ucdavis.edu/) | Multiple academic year-long courses on computing in math, programming, robotics, and film production. Annual subscription/$800. Software $300/computer lab. Free PDF files.  | $150/day for training held at UC Davis campus. Costs vary for on-site training  |
 
-<br />
+<br>
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
 
-<%= view :course_explorer_blurb %>
-
-## Inspire students
-We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
-
-[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
-
-## Find a guest speaker for your classroom
-Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-
-[<button>Find a guest speaker</button>](/volunteer/local)

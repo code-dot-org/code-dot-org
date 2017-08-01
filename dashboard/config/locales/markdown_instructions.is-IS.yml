@@ -668,38 +668,35 @@
         <img src="https://images.code.org/1cdc8cfbcef2a43f84b11ebdf14aed0c-image-1444061731350.gif"
         style="border: solid 1px black; width: 500px; margin: auto">
       'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_markdown_instruction': "<img\nalign=\"right\"
-        src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"\nhspace=\"20\">\\r\n
-        \           # Task 1: Make a 3x5 letter 'A'\\r\n            Start\nby trying
-        to recreate the 3x5 letter \"A\" depicted (at right) using the pixelation\nwidget.
-        \\r\n          \\r\n            The image is intially setup with the\n*incorrect*
-        dimensions. Your first task is to set the second byte to the 8-bit\nbinary
-        code for 5: 0000 0101. Then you can start entering pixel data to make\nthe
-        A.\\r\n            "
+        src=\"https://code.org/images/cspunit1/letterA.png\" width=\"150\"\nhspace=\"20\">\\r\n#
+        Verkefni 1: Búa til 3x5 staf 'A'\\r\nByrjaðu á að reyna að endurgera 3x5 stafinn
+        \"A\" sem sýndur er (hægra megin) og notaðu til þess græjuna fyrir dílamynstur
+        (pixelation\nwidget). \\r\n \\r\nMyndin er upphaflega gerð með *röngum* víddum.
+        Fyrsta verkefni þitt er að stilla annað bætið á 8-bita tvíundarkóðann fyrir
+        5: 0000 0101. Síðan getur þú byrjar að færa inn gögn fyrir dílana sem eiga
+        að mynda A.\\r\n            "
       'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_markdown_instruction': |
         #
-        Pixelation: Task 3\r
+        Dílamynstur: Verkefni 3\r
         <img src = "https://code.org/images/cspunit1/ColorTask3.png"
         align=right width=200 hspace=20>\r
-        **Directions:**\r
-        We start you out with
-        the 4x4 image Maddie created in the video.\r
+        **Leiðbeiningar:**\r
+        Þú byrjar með 4x4 myndina sem Maddie bjó til í myndbandinu.\r
         \r
-        Your task is to fill a 4x4
-        grid with colors using *12-bits per pixel*. The result should look something
-        like (but not exactly) the image shown at right.  \r
+        Verkefni þitt er að fylla 4x4 með litum með því að nota *12 bita í hverjum díl*. Útkoman ætti að vera í líkingu við myndina hér til hægri.  \r
         \r
-        Here are the requirements:\r
+        Hér eru kröfurnar:\r
         \r
 
-        * Row 1 - fill with shades of red. \r
-         * Row 2 - shades of green. \r
+        * Röð 1 - fylla með litbrigðum af rauðu. \r
+         * Röð 2 - græn litbrigði. \r
          *
-        Row 3 - shades of blue. \r
-         * Row 4 - shades of gray.\r
-      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#\nColor
-        Pixelation: Task 1\n**Directions:**\n\n* We start you with the 4x2 image\nMaddie
-        was creating, but we've left out the last two squares. \n* Finish\noff the
-        image by figuring out which two colors are missing and encode them.\n"
+        Röð 3 - blá litbrigði. \r
+         * Röð 4 - grá litbrigði.\r
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_markdown_instruction': "#\nDílamynstur
+        í lit: Verkefni 1\n**Leiðbeiningar:**\n\n* Þú byrjar með 4x4 myndina sem Maddie
+        var að búa til, en við höfum sleppt síðustu tveimur reitunum. \n* Ljúktu við
+        myndina með því að finna út hvaða liti vantar og kóða þá.\n"
       App Lab test_markdown_instruction: |-
         <a href="https://docs.google.com/document/d/1HgSfQeUI1zxo-3bL-9jhff0jI2um2A-3vwpvy3JAD38"
         target="_blank">Innovation Project</a>
@@ -1424,25 +1421,20 @@
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
         markdown="1">\r
         <details>\r
-        <summary>**How do I switch between files?**</summary>\r
-        Click
-        the name of the file you want to look at in the menu on the left side of the
-        screen.\r
+        <summary>**Hvernig skipti ég á milli skráa?**</summary>\r
+        Smelltu á heiti skrárinnar, sem þú vilt skoða, í valmyndinni vinstra megin á skjánum.\r
         </details>\r
         </div>\r
         \r
-        # Adding Style\r
+        # Að bæta við sniði\r
         \r
-        This Web Lab
-        project is using a new language to add style to the page. With a partner explore
-        both the `index.html` and `style.css` files. Be ready to discuss the following
-        questions.\r
+        Þetta Vefsmiðjuverkefni er að nota nýtt tungumál til að bæta sniði (útliti) við síðuna. Skoðaðu með félaga skrárnar `index.html` og `style.css`. Undirbúðu þig fyrir að ræða eftirfarandi spurningar.\r
         \r
-        * What changes is this new language making to the page?\r
+        * Hvaða breytingar hefur þetta nýja tungumál gert á síðunni?\r
         *
-        How is this language different from HTML?\r
-        * How are the `index.html` and
-        `style.css` files connected?
+        Hvernig er þetta tungumál ólíkt HTML?\r
+        * Hvernig tengjast skrárnar `index.html` og
+        `style.css`?
       CSD U2 Debugging 1_markdown_instruction: |-
         # Villuleit\r
         <div style="float:
@@ -1847,6 +1839,222 @@
         \r
         * Make your header "Animals"
         stand out using the `<h1>` header element.
+      CSD U2 Heading Demo_markdown_instruction: |-
+        # Headings\r
+        \r
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\r
+        <details>\r
+        <summary>**What are headings?**</summary>\r
+        Headings
+        are the different sized section titles throughout a web page. Headings add
+        structure to your web page by breaking it up so its easier for a user to read.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I make different sized headings?**</summary>\r
+        Headings come in 6 different
+        sizes. So far you have primarily used the biggest one: &lt;h1&gt;. The number
+        '1' in the HTML tag designates that this is the biggest heading. The smallest
+        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags, which get smaller as the number gets larger.\r
+        </h1>\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        is HTML?**</summary>\r
+        HTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r
+        </details>\r
+        <details>\r
+        <summary>**What is an HTML
+        element?**</summary>\r
+        An HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
+        style="width:500px">\r
+        </details>\r
+        <details>\r
+        <summary>**What is an
+        HTML tag?**</summary>\r
+        An HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r
+        </details>\r
+        </div>\r
+        \r
+        So far, you've organized your content
+        into paragraphs.  Another way HTML allows you to organize your code is by
+        using **headings**.  A heading is a short piece of text that goes at the top
+        of a section of content, like a title.\r
+        \r
+        Do This:\r
+        * Find the headings
+        in the web page below and use the Inspector Tool to see the code that makes
+        them.\r
+        * Make sure you and your partner agree on what the tags do.\r
+        *
+        Change the code so that "Drawing" and "2 years" match the headings on
+        the rest of the page.
+      CSD U2 Heading Sizes_markdown_instruction: |
+        # Heading Sizes\r
+        \r
+        <div style="float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
+        markdown="1">\r
+        <details>\r
+        <summary>**What are headings?**</summary>\r
+        Headings
+        are the different sized section titles throughout a web page. Headings add
+        structure to your web page by breaking it up so its easier for a user to read.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I make different sized headings?**</summary>\r
+        Headings come in 6 different
+        sizes.  The most common heading is &lt;h1&gt; The number 1 in the HTML tag
+        designates that this is the biggest heading. The smallest heading is &lt;h6&gt;.
+        You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags
+        which get smaller as the number gets larger.\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        is HTML?**</summary>\r
+        HTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r
+        </details>\r
+        <details>\r
+        <summary>**What is an HTML
+        element?**</summary>\r
+        An HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
+        style="width:500px">\r
+        </details>\r
+        <details>\r
+        <summary>**What is an
+        HTML tag?**</summary>\r
+        An HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r
+        </details>\r
+        \r
+        </div>\r
+        \r
+        Headings can come in different sizes.  In
+        this page, there are six different sized headings, but they are all mixed
+        up.  Can you and your partner figure out how to fix them?\r
+        \r
+        \r
+        \r
+        Do
+        This:\r
+        * Use the inspector tool to figure out what makes the headings different
+        sizes\r
+        * Make sure you and your partner agree on what the different heading
+        tags do.\r
+        * Change the tags so that the headings are in order from biggest
+        to smallest, and the text says the correct size, as in the picture below.
+        \r
+        \r
+        <img src="https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png" style="width:100px" style="float:left">\r
+      CSD U2 Heading Test_markdown_instruction: |
+        # Headings and Paragraphs\r
+        \r
+        <div
+        style="float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px" markdown="1">\r
+        <details>\r
+        <summary>**What is
+        a paragraph element?**</summary>\r
+        Paragraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of
+        text from one word to a bunch of sentences. All of your text in your web page
+        should be contained in an HTML element (headings or paragraphs). Paragraphs
+        group together sets of sentences and put some space between that group of
+        text and the next group of text.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I create multiple paragraphs?**</summary>\r
+        Paragraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. To create more than one paragraph you will
+        want multiple sets of opening and closing `<p>` tags. For example\r
+        <pre>\r
+        \t&lt;p&gt;\r
+            \tThis
+        is a paragraph.\r
+            &lt;/p&gt;\r
+        \t&lt;p&gt;\r
+            \tThis is another
+        paragraph.\r
+            &lt;/p&gt;\r
+        </pre>\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        are headings?**</summary>\r
+        Headings are the different sized section titles
+        throughout a web page. Headings add structure to your web page by breaking
+        it up so its easier for a user to read.\r
+        </details>\r
+        <details>\r
+        <summary>**How
+        do I make different sized headings?**</summary>\r
+        Headings come in 6 different
+        sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
+        1 in the HTML tag designates that this is the biggest heading. The smallest
+        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags which get smaller as the number gets larger.\r
+        </h1>\r
+        </details>\r
+        <details>\r
+        <summary>**What
+        is HTML?**</summary>\r
+        HTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r
+        </details>\r
+        <details>\r
+        <summary>**What is an HTML
+        element?**</summary>\r
+        An HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r
+        <img src="https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png"
+        style="width:500px">\r
+        </details>\r
+        <details>\r
+        <summary>**What is an
+        HTML tag?**</summary>\r
+        An HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r
+        </details>\r
+        \r
+        </div>\r
+        \r
+        The author of this page added in
+        a lot of content, but did not think about structure.  All of the text is mashed
+        together.\r
+        \r
+        Do This:\r
+        * Look through the content with your partner
+        and decide what you think the best structure should be.\r
+        * Use your heading
+        and paragraph tags to code the structure into the page.\r
       CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:\n250px;
         width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"\nmarkdown=\"1\">\\r\n<details>\\r\n<summary>**Hvernig
         bæti ég við myndum?**</summary>\\r\nMeð\n`<img>` taginu getur þú birt myndir
@@ -3128,8 +3336,8 @@
         styles.\r
           * Choose from `dotted`, `dashed`, `solid`, and `double`\r
         *
-        Put a border on another type of page element, such as one of the headers or
-        the paragraphs.
+        Put a border on another type of page element, such as one of the headings
+        or the paragraphs.
       CSD U2 layout style borderradius_markdown_instruction: |-
         <div style="float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px"
@@ -3236,19 +3444,15 @@
         * Change the value from `left`
         to `right`.
       CSD U2 layout style freeplay - OLD_markdown_instruction: |-
-        # Personal Web Site\r
+        # Þinn eigin vefur\r
         \r
-        Try
-        out these some new CSS properties on your personal web site.\r
+        Prófaðu eitthvað af þessum nýju CSS eiginleikum í þínum eigin vef.\r
         \r
-        * Add
-        styling of your choice to your web site. Be sure to use at least 3 new CSS
-        properties.\r
+        * Bættu sniði að eigin vali við vefinn þinn. Vertu viss um að nota minnst 3 nýja CSS eiginleika.\r
         \r
-        # Checklist\r
+        # Gátlisti\r
         \r
-        * At least 3 of the following CSS Properties
-        are used:\r
+        * Minnst 3 af eftirfarandi CSS eiginleikum eru notaðir:\r
         \r
          * `background-color`\r
          * `height`\r
@@ -3262,9 +3466,7 @@
         * `margin`\r
         \r
         \r
-        If you’ve used at least 3 of the properties from the
-        checklist, you can explore some additional CSS properties to add to your About
-        Me page.
+        Ef þú hefur notað a. m. k. 3 af eiginleikum í gátlistanum, skaltu kanna fleiri CSS eiginleika og bæta í Um mig vefsíðuna þína.
       CSD U2 layout style freeplay_markdown_instruction: |-
         # Personal Web Site\r
         \r
@@ -3397,7 +3599,7 @@
          * What
         made the image corners rounded?\r
         \r
-        In the next few puzzles, you'll be
+        In the next few levels, you'll be
         changing and adding new styles on this page.
       CSD U2 layout style width_markdown_instruction: |-
         <div style="float: right;
@@ -4031,7 +4233,7 @@
         </details><details>\r
         <summary>**How does
         the code work?**</summary>\r
-        Here is the code that is making the `h1` header
+        Here is the code that is making the `h1` heading
         red:\r
         \r
         <pre>h1 {\r
@@ -4098,8 +4300,8 @@
         \r
         * Find the code
         in the style sheet (click on "style.css" in the files list) that is making
-        the h1 header red.\r
-        * Change the code for the color of the h1 header from
+        the h1 heading red.\r
+        * Change the code for the color of the h1 heading from
         `red` to a different color.
       CSD U2 text style h3_markdown_instruction: |-
         <div style="float: right; height:
@@ -4210,9 +4412,9 @@
         * Find the CSS rule-set in
         the style sheet that determines the styles for the h1 tag.\r
         * Using the
-        same pattern, write a new CSS rule-set that will determine the styles for
-        the h3 tag.\r
-        * Add code to make the text in all h3 tags a different color.
+        same pattern, write a new CSS rule-set that will determine the style for the
+        h3 tag.\r
+        * Add code to set a different color for the h3 tags.
       CSD U2 text style sample_markdown_instruction: |
         <div style="float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px">\r
@@ -6489,17 +6691,13 @@
         <img src="https://images.code.org/9e09a96901b1e5ad9d5869b2b1fd3897-image-1498671940133.45.12
         AM.png" style="float:right;width:150px">\r
         \r
-        # Place Squares in Corners\r
+        # Setja ferninga í horn\r
         \r
-        A
-        big part of using Game Lab is understanding position. Remember you can always
-        turn on the grid or hover with the mouse to help find the x and y position
-        you want.\r
+        Þegar þú notar Leikjasmiðjuna er mikilvægt að skilja staðsetningar. Mundu að þú getur alltaf gert hnitagrindina sýnilega eða sett músina á stað til að finna x og y hnitin sem þú ert að leita eftir.\r
         \r
-        # Do This\r
+        # Gerðu þetta\r
         \r
-        * Place two rectangles exactly in the corners
-        of the screen, just like the picture.
+        * Settu tvo rétthyrninga nákvæmlega í hornin á skjánum eins og sýnt er í myndinni.
       CSD U3 Else_markdown_instruction: |-
         # What If My Condition Isn't True?\r
         \r
@@ -7137,113 +7335,99 @@
             * How
         might you use the different keypress blocks in a game?
       CSD U3 L11 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L12 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L13 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L15 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L16 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L17 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L18 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L19 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
         \r
       CSD U3 L3 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
         \r
         \r
         \r
       CSD U3 L4 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
         \r
         \r
         \r
       CSD U3 L5 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
         \r
         \r
         \r
       CSD U3 L6 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 L7 Freeplay_markdown_instruction: |-
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.
       CSD U3 L9 Freeplay_markdown_instruction: |
-        # Free Play\r
+        # Frjáls æfing\r
         \r
-        Use what you've
-        learned to create whatever you like.  When you're finished, you can click  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
-        PM.png)  to send your creation to a friend, or ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
-        PM.png) to send it to your Projects Gallery.\r
+        Notaðu það sem þú hefur lært til að skapa eitthvað sem þig langar til.  Þegar því er lokið getur þú smellt á  ![](https://images.code.org/2fd36aba2af21d292932b77fb0b9fd0e-image-1498689573973.36.43
+        PM.png)  til að senda vini sköpunarverkið eða á ![](https://images.code.org/1ddae93513aff160349643f1909590e8-image-1498689597186.36.50
+        PM.png) til að senda það í Verkefnagalleríið þitt.\r
       CSD U3 Mouse Input Bee 1_markdown_instruction: |
         <img src="https://images.code.org/d2092b4f2debc336f963d48bd6cf4973-image-1477681020928.gif"
         style="float:right">\r
@@ -13682,7 +13866,7 @@
         *
         On your lists page, give all the list items the same background color.\r
         *
-        Use classes to style at least 2 other elements of your personal website
+        Use classes to style at least two other elements of your personal website
       CSDU2 - PW - Classes on Recipe_markdown_instruction: |-
         # Classes on Recipe Page\r
         \r
@@ -17157,7 +17341,7 @@
         Often you will want to get the text of a UI Element and use
         it to set the text of another element on the screen. Can you get the text
         from the dropdown when the user picks a new input and use it to set the text
-        of the choiceDisplay label.
+        of the "choiceDisplay" label.
       CSDU6 - UI and Inputs - event type testing_markdown_instruction: |-
         # Event Testing:
         \r
@@ -31072,6 +31256,23 @@
         allowfullscreen></iframe>
 
         What did you think of the video?
+      Overworld Chop Tree_markdown_instruction: |-
+        Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the `destroy` block
+        command to chop it down.
+      Overworld House Frame Chosen_markdown_instruction: |-
+        Build the rest of your
+        house from any material you'd like. The `repeat` command will come in handy.
+      Overworld Move to Sheep_markdown_instruction: |-
+        Add a second `move forward`
+        command to reach the sheep.
+      Overworld Place Wall_markdown_instruction: |-
+        Every house starts with a wall.
+        Build the first part of your house by putting the `place` and `move forward`
+        commands inside the repeat loop.
+      Overworld Shear Sheep_markdown_instruction: |-
+        Sheep-shearing time! Use the `shear`
+        command to gather wool from both sheep.
       PDAlg 13-16 Sam Extension Puzzle_markdown_instruction: |-
         Add a second parameter
         to `onscreen?` for Sam's y coordinate and update the function so it keeps
@@ -52615,6 +52816,15 @@
         object you pass `updateRecord` has an ID that matches a record in the table.\r
         </details>\r
         \r
+      Underground Avoiding Lava_markdown_instruction: |-
+        Lava is hiding beneath some
+        of these blocks, which you'll need to cover up before moving forward. An
+        `if` command will come in handy here. Add a `move forward` command in the
+        correct place to mine these blocks.
+      Underground If Statements_markdown_instruction: |-
+        Now things are getting tricky.
+        Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place
+        cobblestone over any lava you uncover.
       Unit 2 RGB Mapping_markdown_instruction: |
         # RGB Colors\r
         \r
@@ -53794,6 +54004,42 @@
         Please sign in to test applab levels (By design, applab levels only work if
         signed in. Normally, we make people sign in, but this is only enforceable
         for a whole script and would be annoying to do for the allthethings script).
+      allthethings_ttscsd_markdown_instruction: |-
+        <img src="https://images.code.org/a8ed6092389aedceceb38a83ac59fae1-image-1490832453029.07.10
+        PM.png" style="float:right;height:150px">\r
+        \r
+        # Gerðu þetta\r
+        \r
+        * Skrifaðu kóða sem teiknar appelsínugula ellipsu aftan við þá grænu.\r
+        * Stærðirnar skipta ekki máli svo framarlega sem græna ellipsan er öll innan í þeirri appelsínugulu.
+      allthethings_ttscsp_markdown_instruction: |
+        \r
+        # Play with different event
+        types\r
+        \r
+        <img src="https://images.code.org/9f013bd84577eb2498061757e18a72f4-image-1444322870272.46.06
+        AM.png" style="float: right">\r
+        If you haven't yet, you should experiment
+        with different event types with your `onEvent` blocks.  The ones that will
+        work best here are mouse-related ones such as:\r
+          * click\r
+          * mousemove\r
+          *
+        movedown\r
+          * mouseup\r
+          * mouseover\r
+        \r
+        *There are some events that
+        capture keystrokes from the keyboard. These are interesting, but they do not
+        work easily with buttons. We'll stick to mouse events for now, and get to
+        keys later.*\r
+        \r
+        **Be sure** to experiment with each of the ones that start
+        with "mouse...".\r
+        \r
+        Once you've have played a little bit, click Finish
+        to move on.\r
+        \r
       artistDebugVideo1_markdown_instruction: |
         <div style="color: #7665a0; font-size:
         1.6em; line-height: 1.4em;" >\r
@@ -53952,6 +54198,79 @@
         Færðu Laurel að fjársjóðnum og notaðu `taka` til að taka hann upp.\r
         \r
         Taktu eina fjársjóðshrúgu til að ljúka áfanganum.
+      course1_artist_loops_challenge2_markdown_instruction: Komum í leik! Teiknaðu
+        eins mörg X og þú getur! Nærðu að hafa 3 í röð?
+      course1_artist_loops_challenge3_markdown_instruction: Tíst tíst! Getur þú hjálpað
+        mér að búa til tvö fuglahús?
+      course1_artist_loops_challenge4_markdown_instruction: |-
+        Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?
+      course1_maze_debugging_challenge1_markdown_instruction: |-
+        Debug this level.
+        Remove the extra blocks, and add the missing blocks. Get the bird to the pig!
+      course1_maze_debugging_challenge2_markdown_instruction: |-
+        Debug this level.
+        These are the right blocks, but they're in the wrong order!
+      course1_maze_seq_challenge2_markdown_instruction: "Þú mátt aðeins fara mest
+        fjórum sinnum í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
+      course1_playlab_events_challenge1_markdown_instruction: |-
+        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
+        \r
+        \r
+        Í þessari þraut skaltu gæta þess að smella til að fá vísbendingar! Vísbendingarnar geta leitt þig gegnum verkefnið skref fyrir skref!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      course1_playlab_events_challenge2_markdown_instruction: |-
+        Höldum partí!
+        Láttu hvern vin minn gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað annað mun gerast?\r
+        \r
+        \r
+        \r
+        Gættu þess að smella á vísbendingar í þessari þraut! Vísbendingarnar stinga upp á ýmsu skemmtilegu til að prófa!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
+      course2_artist_nestedLoops_challenge1_markdown_instruction: |-
+        Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Bæði formin hafa **50 díla hliðar**\r
+        - *Átthyrningarnir* eru gerðir með **45 gráðu** snúningum.\r
+        - *Þríhyrningarnir* eru gerðir með **120 gráðu** snúningum.
+      course2_artist_nestedLoops_challenge2_markdown_instruction: |-
+        Getur þú fundið leið til að búa til svona mynd?\r
+        \r
+        - Fyrsta innri lykkjan á að búa til átthyrning.\r
+        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        - Þriðja innri lykkjan á að búa til ferning.
+      course2_artist_prog_challenge1_markdown_instruction: Teiknaðu klefa fyrir hvert
+        dýr. Þessi þraut hefur margar lausnir. Skemmtu þér við að finna eina!
+      course2_artist_prog_challenge2_markdown_instruction: "*Teiknum skínandi stjörnu
+        á næturhimni!*"
+      course2_bee_conditionals_challenge1_markdown_instruction: Safnaðu öllum blómasafanum
+        eða búðu til allt hunangið. Þú getur aðeins safnað safa í blómum og búið til
+        hunang í býkúpum. Athugaðu í hverjum reit hvort þar sé blóm eða býkúpa.
+      course2_bee_conditionals_challenge2_markdown_instruction: Safnaðu öllum blómasafanum
+        og búðu til allt hunangið. Þú getur safnað öllum blómasafanum í einu blómi
+        með því að nota `meðan blómasafi` lykkju.
+      course2_collector_loops_challenge2_markdown_instruction: Leitum að fjársjóði
+        - með lykkjum! Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða.
+        Náðu öllum fjársjóðunum!
+      course2_collector_prog_challenge1_markdown_instruction: "*Gáðu vandlega! Getur
+        þú safnað öllum **10** fjársjóðunum?*"
+      course2_collector_prog_challenge2_markdown_instruction: "*Hér má finna **20**
+        fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*"
+      course2_harvester_loops_challenge1_markdown_instruction: Safnaðu öllum maísnum.
+      course2_harvester_loops_challenge2_markdown_instruction: |-
+        Safnaðu öllu kálinu.
+        Forðastu tré og tún!
+      course2_maze_programming_challenge1_markdown_instruction: '*"Svínið er í felum!
+        Getur þú hjálpað mér að finna leið?"*'
+      course2_maze_programming_challenge2_markdown_instruction: Stundum er fleiri
+        en leið til að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur
+        en áfram!
+      course2_maze_seq_challenge2_markdown_instruction: "Þú mátt aðeins fara mest
+        fjórum sinnum í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
       course2_playlab_stage17_11_markdown_instruction: |
         Búðu til eigin sögu. Þegar þú hefur klárað hana, getur þú smellt á Ljúka til að leyfa vinum að prófa hana í símunum sínum.\r
         <br/>\r
@@ -53981,11 +54300,10 @@
         \r
         ![](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)
       courseA_artist_loops12_markdown_instruction: |-
-        The artist saw something funny
-        in the distance.  Draw what you think he saw.\r
+        Listamaðurinn sá eitthvað sniðugt langt í burtu.  Teiknaðu það sem þú heldur að hann hafi séð.\r
         \r
         ___\r
-        ###Ideas\r
+        ###Hugmyndir\r
         \r
         ![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r
         ![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r
@@ -54006,18 +54324,16 @@
         \r
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops5_markdown_instruction: |-
-        ##Draw a line seven steps long.
-        This will become our horizon.\r
+        ##Teiknaðu línu sem er sjö skref á lengd.
+        Hún verður sjóndeildarhringurinn okkar.\r
         \r
         ![](https://images.code.org/dc7c4317177f2b94421c5aa589c31ac7-image-1498002771889.gif)
       courseA_artist_loops6_markdown_instruction: |-
-        ##Let's put a nice hill in the
-        back.\r
+        ##Setjum myndarlega hæð aftantil.\r
         \r
         ![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ##Use the `repeat` loop to add
-        waves to the water.\r
+        ##Notaðu `endurtaka` lykkjuna til að bæta bárum á vatnið.\r
         \r
         ![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
@@ -54025,8 +54341,7 @@
         \r
         ![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)
       courseA_artist_loops9_markdown_instruction: |-
-        ##**Challenge:** The stairs down
-        to the dock are broken.  Help me fix them.\r
+        ##**Áskorun:** Tröppurnar niður á bryggjuna eru skemmdar.  Hjálpaðu mér að laga þær.\r
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge2_markdown_instruction: Tíst tíst! Getur þú hjálpað
@@ -54143,6 +54458,14 @@
         \r
         ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)
+      courseA_playlab_events_challengeClone_markdown_instruction: |-
+        Hvar eru vinir mínir að fela sig? Í þessum leik á smellur á mig að sýna köttinn Olive vin minn! Ef smellt er á Olive á Robin að birtast! Getur þú skrifað kóða til að sýna hina vini mína líka?\r
+        \r
+        \r
+        Í þessari þraut skaltu gæta þess að smella til að fá vísbendingar! Vísbendingarnar geta leitt þig gegnum verkefnið skref fyrir skref!\r
+        \r
+        ![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)
       courseB_artist_loops10_markdown_instruction: |-
         Notaðu það sem þú hefur lært til að teikna mynd af því sem þú heldur að listamaðurinn hafi séð þegar hann kom heim.\r
         \r
@@ -54192,10 +54515,9 @@
       courseB_maze_seq_challenge2_markdown_instruction: Leiðréttu þennan áfanga. Þetta
         eru réttu kubbarnir en í rangri röð!
       courseB_playLab_events1_markdown_instruction: |-
-        This game is called "Play Lab".  \r
+        Þessi leikur heitir "Leikjasmiðja".\r
         \r
-        See
-        if you can figure out what each block does.
+        Reyndu að finna út hvað hver kubbur gerir.
       courseB_playlab_events3_markdown_instruction: |
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
@@ -54231,21 +54553,50 @@
         \r
         ![](https://images.code.org/d48437a0b08be90110541e0ef21076e0-image-1497907722000.gif)
       courseB_starWars_prog1_markdown_instruction: |
-        <img src="https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif"
-        style="border-radius:6px; float:left; margin: 0 10px 10px 0;"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \r
-        Gættu þín á veggjum og kössum!  \r
+        ![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
+        \r
+        BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum! \r
+        \r
+        Gættu þín á veggjum og kössum!\r
+        \r
+      courseB_starWars_prog10_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_
+      courseB_starWars_prog11_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going!"_
       courseB_starWars_prog2_markdown_instruction: |
-        <img src="https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif"
-        style="border-radius:6px; float:left; margin: 0 10px 10px 0;"/> Hjálpaðu nú
+        ![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif) Hjálpaðu nú
         BB-8 að safna **öllum** glóandi brotamálminum!  \r
+        \r
         Gættu þín á veggjum og kössum!  \r
         \r
       courseB_starWars_prog3_markdown_instruction: |
-        <img src="https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif"
-        style="border-radius:6px; float:left; margin: 0 10px 10px 0;"/>Hjálpaðu BB-8
-        að safna öllum glóandi brotamálminum!  \r
-        Gættu þín á veggjum og kössum!  \r
+        ![](https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif)
+        Hjálpaðu BB-8
+        að safna öllum glóandi brotamálminum! \r
+        Gættu þín á veggjum og kössum! \r
         \r
+      courseB_starWars_prog4_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Get it, BB-8!"_
+      courseB_starWars_prog5_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_
+      courseB_starWars_prog6_markdown_instruction: |
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_\r
+      courseB_starWars_prog7_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go get it!"_
+      courseB_starWars_prog8_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\r
+        \r
+        **Challenge**: Gather all the scrap metal.
+      courseB_starWars_prog9_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_
       courseC_PlayLab_events8_markdown_instruction: |-
         Can you have Waddles (actor
         1) say "Ouch!" and play a "hit" sound if he runs into Chomp? \r
@@ -54255,14 +54606,9 @@
         \r
         ![](https://images.code.org/a634f249021651f60a1acf37bf78d07d-image-1475342557950.gif)
       courseC_PlayLab_events_challenge1_markdown_instruction: |-
-        Use a new block to
-        make Waddles automatically move back to the start when he runs into the Dinosaur
-        and when he scores a point. This will make your game more challenging and
-        fun!\r
+        Notaðu nýjan kubb til að láta Waddles fara sjálfkrafa aftur á byrjunarreit þegar hann rekst á Risaeðlu og þegar hann skorar stig. Þetta gerir leikinn erfiðari en líka skemmtilegri!\r
         \r
-        Play the game and move Waddles with the arrows until you score
-        enough points. Waddles must be moved to the `middle left` position of the
-        screen to complete this challenge.
+        Spilaðu leikinn og hreyfðu Waddles með örvunum þar til þú skorar nógu mörg stig. Til að ljúka áskoruninni þarf að færa Waddles á miðjan skjáinn vinstra megin.
       courseC_artist_loop1_markdown_instruction: |-
         Frábært!  \r
         \r
@@ -54277,19 +54623,19 @@
         - Bilið á milli hola er 25 dílar
       courseC_artist_loops2a_markdown_instruction: |-
         Notaðu nú lykkju til að snúa fuglinum 12 sinnum um 30 gráður.\r
-        <hr/>\r
+        ___\r
         \r
         ![](https://images.code.org/74e43b8de575692663cde4d04f9b941a-image-1496710809740.58.01.png)
       courseC_artist_loops3a_markdown_instruction: |-
         Þetta er skemmtilegt!  \r
         \r
         Bættu nú við límmiða með leðurblöku rétt á eftir fuglinum til að búa til mynd eins og þá hér fyrir neðan.\r
-        <hr/>\r
+        ___\r
         \r
         ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
         Breyttu kóðanum svo þú hoppir áfram um 75 díla milli þess að setja fuglinn og setja leðurblökuna.\r
-        <hr/>\r
+        ___\r
         \r
         ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
       courseC_artist_loops5_markdown_instruction: |
@@ -54298,14 +54644,14 @@
         \r
       courseC_artist_loops5a_markdown_instruction: |-
         Hvað gerist þegar þú skiptir út öðrum eða báðum límmiðum fyrir aðra veru?\r
-        <hr/>\r
+        ___\r
         ![](https://images.code.org/cadb5e244db64a781bc02b55f2e7ccca-image-1496711397989.08.28.png)
       courseC_artist_loops5b_markdown_instruction: |-
         Hvað gerist þegar þú notar `færa áfram`
         síðan `færa aftur á bak` um 100, 200 eða 400 díla einhvers staðar í lykkjunni?  \r
         -
         Prófaðu að nota `stilla mynstur` kubbinn áður en lykkjan byrjar til að búa til listaverk!\r
-        <hr/>\r
+        ___\r
         ![](https://images.code.org/d523de02389fd23db3029327c03b727d-image-1497039953252.24.18.png)
       courseC_artist_loops6_markdown_instruction: |
         Hvað ætti uppvakningurinn að setja í garðinn? \r
@@ -54318,7 +54664,7 @@
         Bættu þriðja límmiðanum einhvers staðar í lykkjuna! Hvernig lítur þetta út núna?\r
         - Breyttu mynstrinu í penslinum til að gera þetta fjölbreytilegra!\r
         \r
-        <hr/>\r
+        ___\r
         \r
         ![](https://images.code.org/b0f999ef4b9ab6bd9780e9fbac07dc8d-image-1497040845047.39.55.png)
       courseC_artist_loops7a_markdown_instruction: |-
@@ -54326,13 +54672,13 @@
         - Prófaðu að breyta hve oft þú snýrð\r
         - Prófaðu að snúa um 60 gráður 6 sinnum\r
         - Prófaðu að snúa um 20 gráður 18 sinnum\r
-        <hr/>\r
+        ___\r
         Þessi mynd notar sjóræningja, ninju og gíraffa. Þau snúa 18 sinnum um 20 gráður.\r
         \r
         ![](https://images.code.org/99411638acb44e8a7ba5b9696fe11fa4-image-1496714175039.53.24.png)
       courseC_artist_loops8a_markdown_instruction: |-
         Prófaðu nú að skapa eitthvað alfarið þitt eigið.  Hvað gerist þegar þú býrð til tvo aðskilda hringi með ólíkum límmiðum?\r
-        <hr/>\r
+        ___\r
         Vantar þig hugmyndir? Prófaðu búa til svona hönnun.\r
         \r
         ![](https://images.code.org/d8e0ad6294aa5e04e4aab56631a6b50b-image-1496714582863.02.14.png)
@@ -54406,11 +54752,12 @@
         Náðu öllum fjársjóðunum!
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
-        the Adventurer! Move her around and get as much treasure as you can.\r
+        the Adventurer! Move her around and get as much treasure as you can. Use the
+        `collect` block to pick up the treasure!\r
         \r
-        Drag
-        blocks into the workspace and try to figure out how to get treasure.  Get
-        at least one item to pass this level.
+        Drag blocks into the workspace
+        and try to figure out how to get treasure.  Get at least one item to pass
+        this level.
       courseC_collector_prog2_markdown_instruction: |-
         Move Laurel to the treasure,
         then use `collect` to pick it up.
@@ -54463,6 +54810,76 @@
         þú safnað öllum **10** fjársjóðunum?*"
       courseC_collector_prog_challenge2_markdown_instruction: "*Hér má finna **20**
         fjársjóði. Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!*"
+      courseC_flappy_events1_markdown_instruction: |-
+        Attach the `flap a normal amount`
+        block to the `when click` event, then press "Run".   \r
+        \r
+        ---\r
+        \r
+        Click
+        or tap on the play space to move Flappy to the target.
+      courseC_flappy_events10_markdown_instruction: |-
+        Create your own Flappy game!
+        \r
+        \r
+        You can change the visuals and the rules...even the gravity! \r
+        When
+        you're done, click "Finish" to share with friends on their phones.
+      courseC_flappy_events2_markdown_instruction: |-
+        The `when run` event allows you
+        to run code as soon as your game starts.  \r
+        \r
+        Try adding a block that
+        sets the level speed when the "Run" button is pressed. \r
+        \r
+        ---\r
+        \r
+        Play
+        the game and flap to the target to continue.
+      courseC_flappy_events3_markdown_instruction: |-
+        Now we've added the ground.
+        \r
+        \r
+        Attach the `end game` block to the `when hit the ground` event. \r
+        \r
+        ---\r
+        \r
+        Play
+        the game and crash the bird into the ground to continue.
+      courseC_flappy_events4_markdown_instruction: |-
+        Flappy will fly right through
+        obstacles unless you write code to make him crash. \r
+        \r
+        Attach a block
+        to the `when hit an obstacle` event so that the game ends when Flappy crashes
+        into the first set of pipes.
+      courseC_flappy_events5_markdown_instruction: |-
+        We've added a scoreboard to
+        count points when Flappy passes obstacles.  \r
+        \r
+        Add a block to the `when
+        pass an obstacle` event that scores a point, then press "Run" to fly Flappy
+        through the first set of pipes.
+      courseC_flappy_events6_markdown_instruction: |-
+        Click the down arrow inside of
+        the `flap a normal amount` block to pick a different flapping power.  \r
+        \r
+        See
+        if you can still score a point after making Flappy flap either a smaller or
+        larger amount each time you click.
+      courseC_flappy_events7_markdown_instruction: |-
+        Next, try changing the scene
+        by attaching a block to the `when run` event.
+      courseC_flappy_events8_markdown_instruction: |-
+        You can set the background under
+        any event, not just when the game starts. \r
+        \r
+        Try setting a **random**
+        scene when other events happen...for example, when passing an obstacle.
+      courseC_flappy_events9_markdown_instruction: |-
+        To mix things up, instead of
+        ending the game when Flappy hits an obstacle, try setting the score back to
+        0.
       courseC_harvester_loops1_markdown_instruction: |-
         Loops can be used to repeat
         more than moves.  \r
@@ -54614,8 +55031,54 @@
         <img src="https://images.code.org/cb247dd9f435264e2e6d897f245d1596-image-1495736234762.gif"
         style="border-radius:6px; float:left; margin: 0 10px 10px 0;"/> BB-8 tínir upp glóandi brotamálm á hreyfingu. Hjálpaðu BB-8 að ná honum öllum!  \r
         Gættu þín á veggjum og kössum!  \r
+      courseC_starWars_loops10_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)\r
+
+        _"Go BB-8!"_\r
+        \r
+        You are doing great! Keep it up!
+      courseC_starWars_loops11_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going, BB-8!"_\r
+        \r
+        You are almost there! This time, choose any
+        path you like!
+      courseC_starWars_loops2_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_\r
+        \r
+        To get all the scrap metal, try creating a loop that
+        uses only one block inside of a `repeat` block.
+      courseC_starWars_loops4_markdown_instruction: |
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep it up, BB-8."_\r
+        \r
+        In this puzzle, two `repeat` loops will help
+        you get BB-8 to all of the scrap metal with the fewest number of blocks!\r
+      courseC_starWars_loops5_markdown_instruction: |
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Go BB-8!"_\r
+      courseC_starWars_loops6_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Can you get it all?"_\r
+        \r
+        Loops even work with more than one block
+        inside!  Can you loop this sequence?
+      courseC_starWars_loops7_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"You can do it!"_\r
+        \r
+        Can you try to get all the scrap metal using just
+        one loop? Try programming it all out then finding the repeating code to put
+        in a loop.
       courseC_starWars_loops8_markdown_instruction: "**Áskorun:** Notaðu hugmyndir
         úr síðustu þrautum saman til að ljúka þessu stigi."
+      courseC_starWars_loops9_markdown_instruction: |-
+        ![](https://images.code.org/51347264025d71343bb2b5bd6b49813b-image-1500569514703.png)
+        _"Keep going!"_\r
+        \r
+        Use what you have learned to pick up all of the scrap
+        metal!
       courseD_artist_binary1_markdown_instruction: |-
         We've provided you with a grid
         of "pixels" that you can walk through and make designs by turning on only
@@ -54633,20 +55096,15 @@
         ___\r
         **Run
         this code to see how the artist uses binary to draw this pattern.**
-      courseD_artist_binary_challenge1_markdown_instruction: |-
-        You can only use each
-        binary value (0 or 1) once each in the puzzle. Try using nested loops to complete
-        this drawing.
+      courseD_artist_binary_challenge1_markdown_instruction: "Þú mátt aðeins nota
+        hvert tvíundargildi (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar
+        lykkjur til að ljúka teikningunni."
       courseD_artist_binary_challenge2_markdown_instruction: |-
-        There are 256 bits
-        represented on this grid - that means it's easy for a small change to cause
-        big problems. Are you persistent enough to restore this logo back to normal?\r
+        Þessi grind sýnir 256 bita - það þýðir að lítil breyting getur leitt til mikilla vandræða. Hefurðu nægt úthald til að koma þessu lógói aftur í rétt horf?\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_binary_challenge3_markdown_instruction: |-
-        There are 256 bits
-        represented on this grid - that means it's easy for a small change to cause
-        big problems. Are you persistent enough to restore this logo back to normal?\r
+        Þessi grind sýnir 256 bita - það þýðir að lítil breyting getur leitt til mikilla vandræða. Hefurðu nægt úthald til að koma þessu lógói aftur í rétt horf?\r
         \r
         ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
       courseD_artist_functions10_markdown_instruction: |-
@@ -54766,7 +55224,9 @@
         out how to make a picture like this?\r
         \r
         - Both shapes have **50 pixel
-        sides**
+        sides**\r
+        - Between each pair of shapes, you will need to jump forward the
+        length of a side, and turn 45 degrees.
       courseD_artist_nestedLoops9_predict1_markdown_instruction: |-
         **Áskorun:** Getur þú fundið leið til að búa til svona mynd?\r
         \r
@@ -54790,9 +55250,9 @@
       courseD_artist_nestedLoops_challenge2_markdown_instruction: |-
         Getur þú fundið leið til að búa til svona mynd?\r
         \r
-        - Fyrsta innri lykkjan á að búa til átthyrning. ([Sýndu mér hvar](#triggercallout=oct) )\r
-        - Önnur innri lykkjan á að búa til sexhyrning. ([Sýndu mér hvar](#triggercallout=hex) )\r
-        - Þriðja innri lykkjan á að búa til ferning. ([Sýndu mér hvar](#triggercallout=sqr) )
+        - Fyrsta innri lykkjan á að búa til átthyrning.\r
+        - Önnur innri lykkjan á að búa til sexhyrning.\r
+        - Þriðja innri lykkjan á að búa til ferning.
       courseD_artist_project1_markdown_instruction: |-
         Teiknaðu lítið form, á milli **20 og 50** díla breitt.  Það má vera hvaða form sem þú vilt.  \r
         <hr/>\r
@@ -54876,6 +55336,18 @@
       courseD_artist_project4_markdown_instruction: |-
         Hvað mundi gerast ef við legðum tvö mismunandi löguð snjókorn saman annað ofan á hitt og snerum því síðara aðeins? \r
         Prófaðu það og sjáðu hvað kemur út!
+      courseD_artist_project4a_markdown_instruction: |
+        ![](https://images.code.org/109aa2afaa3b7b1ecebff518bacdf3c5-image-1500660008987.png)  _"Now,
+        what should we do? Let’s explore and create our own winter wonderland!"_\r
+        \r
+        Try
+        playing around with what you've created. Draw whatever you like!\r
+        - What
+        happens if you use two different angles in your stair step pattern?\r
+        - What
+        happens if you make your diamond pattern longer or shorter?\r
+        - What does
+        it look like to draw two snowflakes on top of one another?\r
       courseD_artist_project5_markdown_instruction: Virkjaðu sköpunargáfuna með formin
         og hornin. Hvaða alveg nýjar myndir skyldir þú geta skapað?
       courseD_artist_ramp11_markdown_instruction: |-
@@ -55015,7 +55487,7 @@
         allt hunangið?
       courseD_bee_nestedLoops1_markdown_instruction: |-
         *"This is going to **BEE**
-        great!"**\r
+        great!"*\r
         \r
         Help the bee collect all of the nectar.
       courseD_bee_nestedLoops2_markdown_instruction: |-
@@ -55142,21 +55614,21 @@
         lettuce**!  \r
         \r
         Help the farmer harvest the items that are ready for picking.  Each
-        plant will have either one corn or one lettuce.
+        plant will have either **one** corn or one lettuce.
       courseD_farmer_condLoops3_markdown_instruction: |-
-        *"Corn, lettuce, AND pumpkins!
-        Help me harvest them all."*\r
+        *"Maís, kál OG grasker! Hjálpaðu mér að uppskera þetta allt."*\r
         \r
-        Each plant will have either one piece
-        of corn, one head of lettuce, or one pumpkin.
+        Hver jurt hefur annað hvort einn kólf af maís, einn haus af káli eða eitt grasker.
       courseD_farmer_condLoops4_markdown_instruction: |-
-        *"Gosh! Now the crops are
+        *"Gosh! Now the lettuce is
         growing in clusters!"*  \r
         \r
         The farmer wants to pick everything from
         her lettuce garden. Each plant will now have more than one head of lettuce
         on it, so the farmer will need to keep picking while there is still lettuce
-        growing.
+        growing.\r
+        \r
+        ######(Remember: This garden only has lettuce!)
       courseD_farmer_condLoops4a_markdown_instruction: |-
         *"Vá! Nú vaxa jurtirnar í þyrpingum!"* \r
         \r
@@ -55165,8 +55637,8 @@
         *"What a bountiful crop!"*\r
         \r
         This
-        field has clusters of corn, lettuce, and pumpkins all growing together.  Can
-        you collect them all?
+        field has clusters of corn and lettuce growing together -- with one pumpkin
+        at the end.  Can you harvest everything?
       courseD_farmer_condLoops6_markdown_instruction: |-
         *"Let's take this one step
         further!"*\r
@@ -55362,23 +55834,24 @@
       courseD_playLab_cond1_markdown_instruction: |-
         To start our game, Pirate Pegleg
         (actor 1) needs to be able to get around in all directions.   Connect the
-        blocks to the correct events to get Pegleg moving.\r
+        blocks to the correct events to get Pegleg moving.  \r
         \r
-        Get Pegleg to the
-        dragon to solve this puzzle.
-      courseD_playLab_cond2_markdown_instruction: "Time to add points!  Give Pegleg\n(actor
-        1) a point when he makes it to the dragon (actor 2). "
-      courseD_playLab_cond3_markdown_instruction: |-
+        ---\r
+        Get Pegleg
+        to the dragon to solve this puzzle.
+      courseD_playLab_cond2_markdown_instruction: "Time to add points!  \\r\n\\r\nEdit\nthe
+        code to give Pegleg (actor 1) a point when he makes it to the dragon (actor\n2). "
+      courseD_playLab_cond3_markdown_instruction: |
         It's time to use what we've
-        learned about conditionals to make this game amazing. This challenge has two
-        parts:\r
+        learned about conditionals to make this game amazing. \r
         \r
-          1) Use a `repeat forever` loop to make the dragon (actor 2)
-        change between random emotions every second.  \r
-         \r
-          2) Add code so that
-        when Pegleg gets to the dragon, he gets two points *if* the dragon is happy.
-        Otherwise, he should get only one point added to his score.
+        Use a `repeat
+        forever` loop to make the dragon (actor 2) change between random emotions
+        every second.  \r
+      courseD_playLab_cond3a_markdown_instruction: |-
+        Add code so that when Pegleg
+        gets to the dragon, he gets two points *if* the dragon is happy. Otherwise,
+        he should get only one point added to his score.
       courseD_playLab_cond3b_markdown_instruction: Notaðu `endurtaka endalaust` lykkju
         til að láta drekann (leikmann 2) færast stöðugt upp og niður! Settu inn `bíða
         1 sekúndu` kubb á milli `færa upp` og `færa niður` kubbanna fyrir drekann.
@@ -55394,11 +55867,11 @@
         Add
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is.
-      courseD_playLab_cond6_markdown_instruction: |-
+      courseD_playLab_cond6_markdown_instruction: |
         Wow, this game is hard to win!\r
         \r
         Let's
-        customize this game to make it more fun.  This challenge has three parts:\r
+        customize this game to make it more fun.  This challenge has two parts:\r
         ___\r
         \r
         1)  Slow
@@ -55409,11 +55882,13 @@
         beneath the line of octopuses (greater than 225 pixels down).  If he is, set
         the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
         pirate.  \r
+      courseD_playLab_cond6a_markdown_instruction: |-
+        We don't want the pirate to
+        stay in the "safe zone" too long!  \r
         \r
-        3)  We don't want the pirate to stay in the "safe zone"
-        too long! Add code to the `if` statement above so that if the pirate is in
-        the safe zone, the program will wait one second, then deduct a point as long
-        as he stays beneath the octopus line.
+        Add code to the `if` statement
+        above so that if the pirate is in the safe zone, the program will wait one
+        second, then deduct a point as long as he stays beneath the octopus line.
       courseD_playLab_cond6cloneForTest_markdown_instruction: Can we make this work?
       courseE_artist_concept1_markdown_instruction: |-
         Recreate this image. \r
@@ -55424,18 +55899,18 @@
         -
         The pen widths of the hexagons are 1 pixel, 4 pixels, and 8 pixels.
       courseE_artist_concept4_markdown_instruction: |-
-        Recreate this drawing using
-        13 blocks or fewer. Each square has a side length of **20 pixels** and there
-        are **15 squares per row**.
+        Recreate this drawing. \r
+        \r
+        Each
+        square has a side length of **20 pixels** and there are **15 squares per row**.
       courseE_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nHér
         er áskorun!  \\r\n\\r\nÞessi hönnun notar aðeins kubba sem þú hefur þegar
         séð.  Getur þú endurskapað hana?  Prófaðu þig áfram. Það er ekkert atriði
         að þetta heppnist í fyrstu (eða jafnvel sjöttu!) tilraun.\\r\n\\r\nEndurtekna
         formið er næstum eins og það í síðustu þraut, nema hvað lengdin sem er notuð
         í fyrstu lykkjunni er aðeins styttri. "
-      courseE_artist_concept_challenge2_markdown_instruction: |-
-        Create five pinwheel
-        designs like using the code below.
+      courseE_artist_concept_challenge2_markdown_instruction: Búðu til fimm hjóllaga
+        mynstur með kóðanum fyrir neðan.
       courseE_artist_functions1_markdown_instruction: |
         *"Me zombie artist. Me love
         drawing!"*\r
@@ -55604,12 +56079,16 @@
         \r
         Create
         a function that collects all of the nectar from each flower.
-      courseE_bee_functions_challenge1_markdown_instruction: |-
-        You are on your own
-        for this challenge.  This could "bee" harder than it looks!
-      courseE_bee_functions_challenge2_markdown_instruction: |-
-        You are on your own
-        for this challenge!
+      courseE_bee_functions9b_markdown_instruction: |-
+        *"I can't BEE-lieve how full
+        this field is!"*\r
+        \r
+        Look very carefully at this puzzle to see if you
+        can use what you learned to solve it.
+      courseE_bee_functions_challenge1_markdown_instruction: "Þú þarft að leysa þessa
+        þraut á eigin spýtur. Hún gæti leynt á sér!"
+      courseE_bee_functions_challenge2_markdown_instruction: "Þú þarft að leysa þessa
+        þraut á eigin spýtur!"
       courseE_bee_ramp14_markdown_instruction: |
         Sama aðferðin virkar með blómasafa og hunangi! \r
         \r
@@ -55640,8 +56119,8 @@
         \r
         Help the farmer get to the pumpkin and pick it.
       courseE_farmer_functions10b_markdown_instruction: |-
-        Figure out which function
-        to use and which one to delete, then solve this puzzle!
+        Use your new function twice
+        to solve this puzzle.
       courseE_farmer_functions11_predict_markdown_instruction: |-
         Figure out which
         function to use and which one to delete, then solve this puzzle!
@@ -55649,8 +56128,13 @@
         *"Oooh, veggies are cropping
         up everywhere!"*\r
         \r
-        Now help the farmer pick the corn, lettuce, **and**
-        pumpkin.
+        Now help the farmer pick all of the corn on the way
+        to the pumpkin at the end.\r
+        ___\r
+        #####Note: Every square on the path that
+        leads to the pumpkin will either have *one* corn nothing.  You will need to
+        use an `if` statement to check whether there is corn before you try to pick
+        it!
       courseE_farmer_functions2a_markdown_instruction: |-
         *"I feel so functional!"*\r
         \r
@@ -55665,7 +56149,25 @@
         move everything into a function to make it easier.
       courseE_farmer_functions2b_markdown_instruction: |-
         Help the farmer pick the
-        corn, lettuce, and pumpkin.
+        corn and pumpkins.\r
+        ___\r
+        #####Each sprout will either grow *one* corn
+        or nothing.
+      courseE_farmer_functions2ba_markdown_instruction: |-
+        *"I feel so functional!"*\r
+        \r
+        Did
+        you notice that there was repeated code in the last puzzle?  It doesn't work
+        to put it all inside of a loop, but we **can** use functions.  \r
+        \r
+        For
+        this puzzle, we have moved the repeated code into a function called `corn
+        and pumpkin`. Now, all you need to do is put the small `corn and pumpkin`
+        **function call block** into the code where you need it.\r
+        \r
+        ___\r
+        #####Each
+        sprout will either grow *one* corn or nothing.
       courseE_farmer_functions3b_markdown_instruction: |-
         *"Oooh, veggies are cropping
         up everywhere!"*\r
@@ -55673,13 +56175,12 @@
         Now help the farmer pick the corn, lettuce, **and**
         pumpkin.
       courseE_farmer_functions3c_markdown_instruction: |-
-        *"I feel so functional!"*\r
+        Now, fill-in the function
+        yourself by pulling the blocks from the code and dropping them into the **function
+        definition**.  \r
         \r
-        It
-        seems silly to write that much code twice.  Which set of blocks helps the
-        farmer check for produce and pick it when it is available? Drag that code
-        into a function, then call your function from inside the `while path ahead`
-        loops (after the `move forward` block).
+        Don't forget to add the little **function call** blocks
+        to use the function in your program when you're done.
       courseE_farmer_functions4b_markdown_instruction: |-
         Use your new function to
         solve this puzzle.
@@ -55694,17 +56195,33 @@
         handy here.
       courseE_farmer_functions6b_markdown_instruction: Pick all of the produce.
       courseE_farmer_functions6c_markdown_instruction: |-
-        What do you need to add this
-        program to collect all of the produce?
+        *"Lettuce pick all of the
+        produce!"*\r
+        \r
+        Now the sprouts can be either corn **or** lettuce.  What
+        do you need to add to this program to check each sprout before you pick?\r
+        ___\r
+        #####Note:
+        Each sprout will turn into either **one** corn or **one** lettuce.
       courseE_farmer_functions7b_markdown_instruction: |-
-        Make a second function that
-        lets the farmer get all of the produce down a path, then brings her back to
-        where she began.
-      courseE_farmer_functions8b_markdown_instruction: "**Challenge:** Get the farmer\nto
-        the pumpkin and collect all of the lettuce and corn along the way. "
+        *"This harvest is a-MAZE-ing!"*\r
+        \r
+        Help
+        the farmer find her way down this confusing path and to the pumpkin by turning
+        left at the corn and right at the lettuce.  \r
+        \r
+        *(Don't forget to collect
+        all of the produce along the way!)
+      courseE_farmer_functions8b_markdown_instruction: |-
+        **Challenge:** Not all corners
+        are marked in this maze, that means that you will need to use your navigation
+        code more than once to get where you need to go.  \r
+        \r
+        Can you figure out
+        what you need to do?
       courseE_farmer_functions9b_markdown_instruction: |-
-        Collect all of the produce
-        to finish this stage.
+        Take a good look at this
+        puzzle.  Can you figure out the pattern?
       courseE_farmer_predict1_markdown_instruction: |
         Nú er bóndinn að rækta meira en bara kál!  \r
         \r
@@ -55782,125 +56299,67 @@
         \r
         Avoid the TNT.
       courseE_playLab_challenge1_markdown_instruction: |-
-        *The **squirrels** are terrified
-        to see that a **dinosaur** has come to town! Can the brave **knight** keep
-        them all from panicking?*\r
+        *Nú eru **íkornarnir** skelfingu lostnir yfir því að það er **risaeðla** mætt á svæðið! Getur hugrakki **riddarinn** komið í veg fyrir að þeir hlaupi í burtu?*\r
         \r
-        Here is a different kind of game that has
-        already been started for you! Play it to see how it works. \r
+        Hér er öðruvísi leikur sem hefur verið byrjað á fyrir þig! Spilaðu hann til að sjá hvernig hann virkar. \r
         \r
         \r
-        Something
-        should happen when you get enough points or when you run out of points. Add
-        some code to the `win game` and `lose game` functions to make the game work
-        the way it should. \r
-        Click the hints for ideas!
+        Eitthvað ætti að gerast þegar þú færð nógu mörg stig eða þegar þú klárar stigin. Bættu kóða í föllin `vinna leik` og `tapa leik` til að leikurinn virki eins og hann á að gera. \r
+        Smelltu á vísbendingarnar til að fá hugmyndir!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
-        have learned! Let's put it together to make a game, step by step. \r
+        have learned! Let's make a game step by step.\r
         \r
-        We've
-        put these blocks in your toolbox. Choose a random background, then pick an
-        actor to be your game's hero.\r
-        \r
-        ![](https://images.code.org/745931ce34b3c47de19c36009e4a9c48-image-1471464938470.14.47
-        PM.png)
+        Using new blocks in
+        your toolbox, choose a new background, then pick an actor to be in your game.
       courseE_playLab_scaffold2_markdown_instruction: |-
-        Now let's get things moving!
-        \r
-        \r
-        Use event handlers and actions to make your hero move. Get the targets
-        to complete this puzzle.\r
-        \r
-        ___\r
-        \r
-        We've added these blocks to your
-        tool box to help you.\r
-        \r
-        ![](https://images.code.org/6216c0559cfae16005ffb53e6532473b-image-1471472994205.23.54%20PM.png)
+        Use new blocks like event
+        handlers and actions to make your player move according to the arrows on your
+        keyboard. Get the player to the targets to complete this puzzle.
       courseE_playLab_scaffold3_markdown_instruction: |-
-        Now that your game has a hero,
-        add two or more additional actors to your game and make them move. \r
+        Let's add some more characters
+        to your game!\r
         \r
-        Do
-        you want to have an actor patrol back and forth or chase your main character?
-        \r
-        Try using a these new blocks to bring your game to life!\r
-        \r
-        ![](https://images.code.org/04951f51ad2fda34531c335ef10577ae-image-1497992195771.png)
+        Use the `set actor` block to add more characters then
+        move to the goal to complete this puzzle.
       courseE_playLab_scaffold4_markdown_instruction: |-
-        Getting the actors moving
-        is a great step, but we need to do more to make this feel like a real game.
-        A simple way to do this is to add or remove points when actors collide with
-        things. Find some interesting ways to change the score in your game.\r
-        <hr/>\r
+        Multiple characters and getting
+        the actors moving is a great start to a game, but we need to do more to make
+        this feel like a real game. Let's add a score!\r
         \r
-        Get
-        the score to show something other than 0 to continue.\r
-        \r
-        ___\r
-        \r
-        *Don't
-        expect to get this right on the first try. Keep testing your game as you code.
-        You'll not only want a game that works, but one that is fun to play!*\r
-        ___\r
-        We've
-        added these blocks to your toolbox:\r
-        \r
-        ![](https://images.code.org/ad0df96aa91c89e3d903dce2fe19517f-image-1472070105051.20.55
-        PM.png)
+        Use the new blocks
+        like the `when actor touches` to change the score. Score 10 points to complete
+        this puzzle.
       courseE_playLab_scaffold5_markdown_instruction: |-
         Great job! You have all the
         basic components of a working game. Now spend some time making sure the game
         works the way you want. Include a way to win or lose your game, then play
-        until you meet one of those conditions.\r
-        ___\r
-        *Don't forget: Keep testing
-        your game as you code. You'll not only want a game that works, but one that
-        is fun to play!*\r
-        ___\r
-        Your toolbox has been re-organized to make it easier
-        to find what you need. We've also added these blocks (and more):\r
-        \r
-        ![](https://images.code.org/59b92b4c288bd5fc0c3be355c968f3d1-image-1472074578380.27.57
-        PM.png)
+        until you meet one of those conditions.
       courseE_playLab_scaffold6_markdown_instruction: |-
         You've finished! Now you
         can play your game or share it with your friends and classmates!
       courseE_playlab_challenge2_markdown_instruction: |-
-        Can you figure out how this
-        "Fortune Teller" app works? Try adding some of the following features to
-        this game:\r
+        Getur þú fundið út hvernig þetta "Völvu"-app virkar? Prófaðu að bæta einhverju af þessari virkni við leikinn:\r
         \r
-        * Change the "yes" and "no" answers to something more
-        interesting.\r
-        * Let the player ask another question after the actor says
-        the fortune.\r
-        * Give the witch two more things to say when she is in an
-        `angry` or `normal` mood.\r
-        * Give the wizard his own set of fortunes.\r
+        * Breyttu "já" og "nei" svörunum í eitthvað áhugaverðara.\r
+        * Leyfðu spilaranum að spyrja annarrar spurningar eftir að leikmaðurinn segir spádóminn.\r
+        * Bættu við tveimur setningum sem nornin getur sagt þegar hún er í `reiðu` eða `venjulegu` skapi.\r
+        * Láttu galdrakarlinn fá eigin setningar til að spá.\r
         *
-        Make each actor change mood randomly.\r
+        Láttu hvern leikmann skipta um skap af handahófi.\r
         \r
-        Check the hints if you need help
-        with these challenges!
+        Kíktu á vísbendingarnar ef þú þarft hjálp með þessar áskoranir!
       courseE_playlab_variables_challenge2_markdown_instruction: |-
-        Can you figure
-        out how this "Fortune Teller" app works? Try adding some of the following
-        features to this game:\r
+        Getur þú fundið út hvernig þetta "Völvu"-app virkar? Prófaðu að bæta einhverju af þessari virkni við leikinn:\r
         \r
-        * Change the "yes" and "no" answers to something
-        more interesting.\r
-        * Let the player ask another question after the actor
-        says the fortune.\r
-        * Give the witch two more things to say when she is in
-        an `angry` or `normal` mood.\r
-        * Give the wizard his own set of fortunes.\r
+        * Breyttu "já" og "nei" svörunum í eitthvað áhugaverðara.\r
+        * Leyfðu spilaranum að spyrja annarrar spurningar eftir að leikmaðurinn segir spádóminn.\r
+        * Bættu við tveimur setningum sem nornin getur sagt þegar hún er í `reiðu` eða `venjulegu` skapi.\r
+        * Láttu galdrakarlinn fá eigin setningar til að spá.\r
         *
-        Make each actor change mood randomly.\r
+        Láttu hvern leikmann skipta um skap af handahófi.\r
         \r
-        Check the hints if you need help
-        with these challenges!
+        Kíktu á vísbendingarnar ef þú þarft hjálp með þessar áskoranir!
       courseF_artist_for1_markdown_instruction: |
         **Free Play:** Experiment with the
         `for` loop and the `counter` variable.  \r
@@ -56068,7 +56527,7 @@
         jumps 80 pixels over and down between each one.
       courseF_artist_variables7_markdown_instruction: |-
         Let's start this section
-        by drawing a triangle with 150 pixels sides. \r
+        by drawing a triangle with 150 pixel sides. \r
         \r
         Be sure to use the `length`
         variable and a repeat loop.
@@ -56299,6 +56758,13 @@
       courseF_bee_functions5a_markdown_instruction: Búðu nú til `færa og athuga` fall
         sem færir býfluguna að skýi þegar það er slóð til hægri. Notaðu fallið til
         að leysa þessa þraut!
+      courseF_bee_functions6_markdown_instruction: |
+        *"This field is a-MAZE-ing!"*\r
+        \r
+        Build
+        your own function to help the bee through the maze by turning left at flowers
+        and right at honeycomb.  Don't forget to collect nectar and make honey along
+        the way!\r
       courseF_bee_functions7_markdown_instruction: |-
         Búðu til þitt eigið fall sem fer niður hliðarslóð, nær öllum blómasafanum eða býr til allt hunangið, og skilar býflugunni aftur á aðalslóðina. \r
         \r
@@ -56307,6 +56773,14 @@
         Undir þessu skýi gæti verið blóm með óþekkt magn blómasafa eða býkúpa sem þarf óþekkt magn af hunangi. \r
         \r
         Getur þú skrifað forrit sem getur höndlað hvort sem er?
+      courseF_bee_functionsPre7_markdown_instruction: |-
+        Now try building a function
+        to solve this maze.  How is it different from last time?  \r
+        \r
+        Turn left
+        at the honeycomb and right at the flowers.  \r
+        **Note:** Some corners are
+        unmarked!
       courseF_bee_functions_challenge1_markdown_instruction: Búðu til nýtt fall til
         að vinna allan blómasafann og hunangið á meðan það er slóð framundan. Notaðu
         það til að ljúka þrautinni!
@@ -56543,22 +57017,16 @@
         <hr/>\r
         \r
       courseF_playlab_variables_challenge3_markdown_instruction: |-
-        Can you figure
-        out how this "Fortune Teller" app works? Try adding some of the following
-        features to this game:\r
+        Getur þú fundið út hvernig þetta "Völvu"-app virkar? Prófaðu að bæta einhverju af þessari virkni við leikinn:\r
         \r
-        * Change the "yes" and "no" answers to something
-        more interesting.\r
-        * Let the player ask another question after the actor
-        says the fortune.\r
-        * Give the witch two more things to say when she is in
-        an `angry` or `normal` mood.\r
-        * Give the wizard his own set of fortunes.\r
+        * Breyttu "já" og "nei" svörunum í eitthvað áhugaverðara.\r
+        * Leyfðu spilaranum að spyrja annarrar spurningar eftir að leikmaðurinn segir spádóminn.\r
+        * Bættu við tveimur setningum sem nornin getur sagt þegar hún er í `reiðu` eða `venjulegu` skapi.\r
+        * Láttu galdrakarlinn fá eigin setningar til að spá.\r
         *
-        Make each actor change mood randomly.\r
+        Láttu hvern leikmann skipta um skap af handahófi.\r
         \r
-        Check the hints if you need help
-        with these challenges!
+        Kíktu á vísbendingarnar ef þú þarft hjálp með þessar áskoranir!
       course_playlab_variables1_markdown_instruction: |
         Þetta er Pegleg sjóræningi. Það er mjög erfitt að skilja hann þessa dagana! \r
         \r
@@ -56584,43 +57052,34 @@
         Það er einn aukakubbur sem mun láta fuglinn hrapa. \r
         Hentu kubbnum með því að draga hann aftur í verkfærakassann.
       csd-thursday-facilitation_markdown_instruction: |
-        # Thursday Facilitation Reflection\r
+        # Fimmtudagar - þankar um námseflingu\r
         \r
         ##
-        Discussion-Based Sessions\r
+        Lotur byggðar á umræðum\r
         \r
-        You have now seen a couple discussion heavy
-        sessions. Some specific examples include the Community (Wednesday), and Recruitment/Student
-        Needs (Thursday) sessions. What common facilitator strategies were used in
-        these sessions?\r
+        Þú hefur nú séð nokkrar lotur sem byggjast mikið á umræðum. Dæmi um það eru loturnar Samfélag (á miðvikudag) og Nýliðun/Þarfir nemenda (á fimmtudag). Hvaða algengar aðferðir námseflingar voru notaðar í þessum lotum?\r
         \r
-        * What are facilitators doing?\r
-        * What are teachers
-        doing?\r
-      csd-thursday-pedagogy_markdown_instruction: "# Thursday Pedagogy Reflection\nPart
-        1\\r\n\\r\n## Differentiating Instruction\\r\n\\r\nWhat strategies have you\nlearned
-        about for differentiating instruction to meet diverse learning needs\nof students
-        in CS Discoveries? List at least two ideas. "
+        * Hvað eru námseflarnir að gera?\r
+        * Hvað eru kennarar að gera?\r
+      csd-thursday-pedagogy_markdown_instruction: "# Fimmtudagur - þankar um kennslufræði\n1.
+        hluti\\r\n\\r\n## Einstaklingsmiðaðar leiðbeiningar\\r\n\\r\nHvaða aðferðir
+        hefur þú lært um varðandi að miða leiðbeiningar við einstakar þarfir nemenda
+        í CS Discoveries náminu? Teldu upp minnst tvær hugmyndir. "
       csd-thursday-pedagogy2_markdown_instruction: |
-        # Thursday Pedagogy Reflection
-        Part 2\r
+        # Fimmtudagur - þankar um kennslufræði
+        2. hluti\r
         \r
-        ## Recruiting and Student Needs\r
+        ## Nýliðun og þarfir nemenda\r
         \r
-        In the community session
-        this morning you talked about recruiting students and meeting students needs
-        in the region where you work. (If you were not with your region think about
-        what you experienced in this sessions that might apply to your region.)\r
+        Í samfélagslotunni í morgun var rætt um skráningu nýrra nemenda og að mæta þörfum nemenda á því svæði sem þú starfar. (Ef þú varst ekki með þínu svæði þá getur þú hugleitt hvað þú upplifðir í þessum lotum sem gæti átt við á þínu svæði.)\r
         \r
         *
-        What were common recruiting pain points teachers in your region shared?\r
+        Eru einhver sameiginleg vandkvæði varðandi skráningu nemenda sem kennarar á svæðinu hafa lent í?\r
         *
-        What were common student support needs teachers in your region shared?\r
+        Hafa kennarar svæðisins einhverjar sameiginlegar þarfir þegar kemur að stuðningi við nemendur?\r
         *
-        What things did you see today that you want to check in on throughout the
-        year?\r
-        * What recruiting goals do you hope to help accomplish in your region
-        by the end of the year?\r
+        Sástu eitthvað í dag sem þú mundir vilja fylgja eftir allt árið?\r
+        * Hvaða markmið varðandi skráningu vonast þú til að geta hjálpað að ná fyrir lok ársins?\r
       csd-thursday-unit_markdown_instruction: |
         # Fimmtudagur - þankar um eininguna - 1. hluti
         \r
@@ -56734,6 +57193,894 @@
         \r
         * Á hvaða hátt er Vefsmiðjan kennslutæki fremur en verkfæri fagmanna?\r
         * Hvaða stuðningur finnst fyrir nemendur sem vinna í Vefsmiðjunni?\r
+      csd1dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 1,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 1\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 1. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \t* What’s
+        the role of the project(s) in the unit? \r
+        \t* How does the project(s) apply
+        content and skills that were developed during the unit? \r
+        2. Which student
+        practices (PPCCC) are honed the most in this unit through the activities and
+        projects? \r
+        3. What are the core CSTA standards or threads of the K-12 framework
+        in this unit?\r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection
+        \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csd1dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: Before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 1 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 1. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. What does a typical lesson
+        in this unit look like? \r
+        \r
+        2. What is the connection between early lessons
+        and later lessons?\r
+        \r
+        3. Where do you see the Curriculum Values and philosophy
+        emphasized in this unit?\r
+        \t- In what ways does the curriculum support building
+        a positive classroom community?\r
+        \r
+        4. How does the Input-Output-Store-Process
+        model help prepare a student to think more deeply about the way computers
+        help us to solve problems?\r
+        \r
+        \r
+        >## Getting Credit for Completing this
+        Reflection \r
+        \r
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csd1dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 1,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 1 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 1. Your response
+        should clearly address each of the items below: \r
+        \r
+        - How would you respond
+        to a teacher who asks why is the first unit does not use computers?\r
+        \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd2dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 2,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 2\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 2. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \t* What’s
+        the role of the project(s) in the unit? \r
+        \t* How does the project(s) apply
+        content and skills that were developed during the unit? \r
+        \t* What kinds
+        of special considerations come with the unit long project in this unit?\r
+        2.
+        What skills and knowledge should students leave the unit with?\r
+        3. What
+        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        \r
+        \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd2dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 2, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 2 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 2. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. Which lessons are particularly
+        tricky to teach in this unit and why? \r
+        2. How is the content spiraled or
+        scaffolded within the unit? \r
+        3. What connections or hooks into Unit 1 can
+        be used to motivate early lessons in unit 2?\r
+        4. Why teach HTML and CSS
+        before starting with JavaScript in Game Lab? \r
+        5. What two Classroom Practices
+        do you feel are most important in this unit? Why?\r
+        \r
+        >## Getting Credit
+        for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csd2dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 2,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 2 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 2. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. How would you respond
+        to a teacher who says they are just going to put students on the computer
+        and let them go at their own pace?\r
+        2. What’s the philosophy of using Web
+        Lab in this unit? \r
+        \t* In what ways is Web Lab educational rather than
+        professional? \r
+        \t* What kind of supports exist for students working Web
+        Lab?\r
+        \r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection \r
+        \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd3dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 3,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 3\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 3. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \t* What’s
+        the role of the project(s) in the unit? \r
+        \t* How does the project(s) apply
+        content and skills that were developed during the unit? \r
+        2. Which student
+        practices (PPCCC) are honed the most in this unit through the activities and
+        projects? \r
+        3. What are the core CSTA standards or threads of the K-12 framework
+        in this unit?\r
+        \r
+        >## Getting Credit for Completing this Reflection \r
+        \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd3dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 3, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 3 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 3. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. Which lessons are particularly
+        tricky to teach in this unit and why?\r
+        2. Which lessons are particularly
+        foundational in the unit and why?\r
+        3. How is the content spiraled or scaffolded
+        within the unit? \r
+        4. How would you recommend a teacher differentiate instruction
+        in this unit if their students had a wide range of background with programming?\r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd3dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 3,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 3 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 3. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What’s the role
+        of the teacher in this unit, where much of the computer science content is
+        embedded in the levels?\r
+        \t* What’s the philosophy of programming in Game
+        Lab? \r
+        \t* In what ways is Game Lab educational rather than professional?
+        \r
+        \t* What kind of supports exist for students using Game Lab?\r
+        2. What
+        does a teacher need to keep in mind to help their students transition from
+        Web Lab to Game Lab?\r
+        \r
+        \r
+        \r
+        >## Getting Credit for Completing this
+        Reflection \r
+        \r
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csd4dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 4,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 4\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 4. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \t* What’s
+        the role of the project(s) in the unit? \r
+        \t* How does the project(s) apply
+        content and skills that were developed during the unit? \r
+        \t* What kinds
+        of special considerations come with the group project in this unit?\r
+        2.
+        What skills and knowledge should students leave the unit with?\r
+        3. What
+        are the core CSTA standards or threads of the K-12 framework in this unit?\r
+        \r
+        \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd4dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 4, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 4 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 4. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. Which other unit(s) in
+        the curriculum is is most closely tied to (either because it sets up the later
+        unit or builds on an earlier unit)? How is it connected to the other unit(s)?
+        \r
+        2. How is the problem solving process used in this unit? How do students
+        build on that problem solving process throughout the unit?\r
+        3. CS Discoveries
+        is set up to allow for the class to be taught as two separate semesters where
+        Unit 4 may be the first unit of a new course. What is the role of this unit
+        in kicking off semester 2 of the curriculum?\r
+        4. Where do you see the Curriculum
+        Values and philosophy emphasized in this unit?\r
+        \r
+        >## Getting Credit for
+        Completing this Reflection \r
+        \r
+        >- Once you submit your reflection, your
+        response to the prompt above will be shared anonymously and reviewed by your
+        peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csd4dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 4,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 4 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 4. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. App Lab is used
+        in later lessons in this unit. What is the role of App Lab in this unit? How
+        is it different from other times in the curriculum a tool is present?\r
+        \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd5dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 5,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 5\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 5. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \t* What’s
+        the role of the project(s) in the unit? \r
+        \t* How does the project(s) apply
+        content and skills that were developed during the unit? \r
+        2. What skills
+        and knowledge should students leave the unit with?\r
+        3. What are the core
+        CSTA standards or threads of the K-12 framework in this unit?\r
+        \r
+        >## Getting
+        Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csd5dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 5, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 5 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 5. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. Which other unit(s) in
+        the curriculum is is most closely tied to (either because it sets up the later
+        unit or builds on an earlier unit)? How is it connected to the other unit(s)?
+        \r
+        2. Which lessons are particularly tricky to teach in this unit and why?
+        \r
+        3. What is the connection between early lessons and later lessons?\r
+        4.
+        To what depth are students expected to understand binary representation systems?
+        How does the order and structure of the lessons support this understanding?\r
+        \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csd5dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 5,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 5 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 5. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. Chapter 2 of this
+        unit includes some lessons with a spreadsheet tool. \r
+        \t* What skills do
+        students need to develop with this tool?\r
+        \t* How does this tool support
+        their understanding of the CS content in this unit?\r
+        \r
+        >## Getting Credit
+        for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csd6dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 6,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 6\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 6. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \t* What’s
+        the role of the project(s) in the unit? \r
+        \t* How does the project(s) apply
+        content and skills that were developed during the unit? \r
+        2. Which student
+        practices (PPCCC) are honed the most in this unit through the activities and
+        projects? \r
+        3. What are the core CSTA standards or threads of the K-12 framework
+        in this unit?\r
+        \r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection
+        \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csd6dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 6, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 6 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 6. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. Which lessons are particularly
+        tricky to teach in this unit and why? \r
+        2. How is the content spiraled or
+        scaffolded within the unit? \r
+        3. Which lessons are particularly foundational
+        in the unit?\r
+        4. Which programming skills from Unit 3 does this unit rely
+        upon? Which new skills are introduced?\r
+        5. How does the way students program
+        with the Circuit Playground connect back to the Input-Output-Store-Process
+        model from Unit 1?\r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection
+        \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csd6dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 6,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 6 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 6. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What advice do
+        you have for teachers about how to handle the transition from programming
+        in Game Lab to programming in App Lab? \r
+        \t* What’s the philosophy of App
+        Lab with Maker Toolkit? \r
+        \t* Why are we using App Lab with the Maker Toolkit
+        and Circuit playground rather than teaching without them? \r
+        2. In what ways
+        are the tools in the unit educational rather than professional? \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csp-pre-survey-2017-q36-e_markdown_instruction: |-
+        I worry because of another
+        reason:
+      csp-pre-survey-2017-q38_markdown_instruction: |-
+        If yes, what computer science
+        course(s) had you taken before your current computer science class?
       csp-thursday-facilitation_markdown_instruction: |-
         # Thursday Facilitation Reflection\r
         \r
@@ -56881,6 +58228,995 @@
         *
         Á hvaða hátt er Internet-hermirinn kennslutæki fremur en verkfæri fagmanna? \r
         * Hvaða kennslufræðileg nálgun virðist áhrifaríkust með Internet-herminum? \r
+      csp1dlp-assessment_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE:
+        before you start this reflection, make sure you’ve reviewed the lesson in
+        Unit 1, and have a good sense of the the role of assessment across the unit.
+        If you haven’t already reviewed the materials, do that now and come back to
+        this reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 1\r
+        \r
+        For this
+        reflection, you’re going to consider each of the prompts below and craft a
+        written response that demonstrates your understanding of the lessons in Unit
+        1. Your response should clearly address each of the items below: \r
+        \r
+        1.
+        What’s the role of the practice Performance Task(s), or PTs, in the unit?
+        \r
+         - Which PTs are being practiced?\r
+         - How does the practice PT build
+        on what content and skills were developed during the unit? \r
+        2. What summative
+        and formative assessment opportunities are built into the unit? \r
+        \r
+        \r
+        >##
+        Getting Credit for Completing this Reflection \r
+        \r
+        >- Once you submit your
+        reflection, your response to the prompt above will be shared anonymously and
+        reviewed by your peers, and you will review the work done by other facilitators.
+        Reviewers will be looking for thoughtful and thorough answers that demonstrate
+        that you have spent time considering the reflection questions listed above.
+        Reviewers will have an opportunity to give feedback on your submission, and
+        you can respond to that feedback and resubmit.\r
+        - In order to get credit
+        for completing this prompt, two reviewers need to agree that you have responded
+        to the prompts fully. If reviewers don’t feel comfortable making a decision
+        about your task submission, they can elevate to an instructor for review.
+        You will always have a chance to address feedback from your reviewers and
+        resubmit your reflections! Reviewer feedback will show up at the bottom of
+        this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csp1dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 1 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 1. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. What skills and knowledge
+        should students leave the unit with?\r
+         - Which Big Idea(s) are students
+        learning the most about? Where and how are those BI(s) addressed? \r
+         - Which
+        skills or Computational Practices are honed through the activities and projects?
+        \r
+        \r
+        2. What is the connection between early lessons and later lessons?\r
+
+        - How is the content spiraled or scaffolded within the unit? \r
+         - What foundation
+        is being laid early on and how is it leveraged throughout the unit? Why? \r
+
+        - How would you respond to a teacher who says ‘what’s the point’ of lesson
+        4? \r
+        \r
+        3. Which lessons are particularly tricky to teach in this unit
+        and why? \r
+        \r
+        >## Getting Credit for Completing this Reflection \r
+        \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
+         \r
+        \r
+        \r
+      csp1dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 1,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 1 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 1. Your response
+        should clearly address each of the items below: \r
+        \r
+        - Why are we using
+        the Internet Simulator rather than teaching without it? \r
+        - In what ways
+        is the Internet Simulator educational rather than professional? \r
+        - What’s
+        the philosophy of teaching with the Internet Simulator? \r
+        - This is a very
+        Internet Simulator heavy unit. What are strategies for dealing with students
+        who are getting fatigued by the end of the unit? \r
+        - Many classes have technology
+        issues at the start of the year (computers are not ready yet, etc). How would
+        you recommend a teacher approaches the first unit if she’s having issues with
+        technology access?\r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection
+        \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csp2dlp-assessment_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE:
+        before you start this reflection, make sure you’ve reviewed the lesson in
+        Unit 2, and have a good sense of the the role of assessment across the unit.
+        If you haven’t already reviewed the materials, do that now and come back to
+        this reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 2 \r
+        \r
+        For this
+        reflection, you’re going to consider each of the prompts below and craft a
+        written response that demonstrates your understanding of the lessons in Unit
+        2. Your response should clearly address each of the items below: \r
+        \r
+        1.
+        What’s the role of the practice Performance Task(s), or PTs, in the unit?
+        \r
+         - How does the practice Explore PT build on what content and skills were
+        developed during the unit? \r
+        2. What summative and formative assessment
+        opportunities are built into the unit? \r
+        \r
+        \r
+        \r
+        >## Getting Credit
+        for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csp2dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 2, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 2 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 2. Your response should
+        clearly address each of the items below:\r
+        \r
+        1. What skills and knowledge
+        should students leave the unit with?\r
+         - Which Learning Objectives (LOs)
+        under the Big Idea of data are explored in the second chapter of unit 2? These
+        data-related LOs are in the interest of preparing for the Explore Task. How
+        would you explain the lens used to look at data in chapter 2 and the connection
+        to the Explore Task?\r
+         - Which skills or Computational Practices are honed
+        through the activities and projects? \r
+        2. What is the connection between
+        early lessons and later lessons?\r
+         - What connections or hooks into unit
+        1 that can be used to motivate early lessons in unit 2? \r
+         - How would you
+        described the connection between chapter 1 and chapter 2 to a teacher? \r
+
+        - What foundation is being laid early on and how is it leveraged throughout
+        the unit? Why? \r
+        3. Which lessons are particularly tricky to teach in this
+        unit and why? \r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection
+        \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+        \r
+      csp2dlp-tools_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you start
+        this reflection, make sure you’ve reviewed the lesson in Unit 2, and have
+        a good sense of the the role of tools in the lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 2 Tool Philosophy and Use\r
+        \r
+        For this reflection, you’re going to
+        consider each of the prompts below and craft a written response that demonstrates
+        your understanding of the lessons in Unit 2. Your response should clearly
+        address each of the items below: \r
+        \r
+        - Why are we using whatever tools
+        are present in the unit rather than teaching without them? \r
+        - In what ways
+        are the tools in the unit educational rather than professional? \r
+        - What’s
+        the philosophy of teaching with these tools? \r
+        \r
+        \r
+        \r
+        >## Getting Credit
+        for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+      csp3dlp-assessment_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE:
+        before you start this reflection, make sure you’ve reviewed the lesson in
+        Unit 3, and have a good sense of the the role of assessment across the unit.
+        If you haven’t already reviewed the materials, do that now and come back to
+        this reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 3 \r
+        \r
+        For this
+        reflection, you’re going to consider each of the prompts below and craft a
+        written response that demonstrates your understanding of the lessons in Unit
+        3. Your response should clearly address each of the items below: \r
+        \r
+        1.
+        What’s the role of the practice Performance Task(s), or PTs, in the unit?
+        \r
+         - How does the practice Create PT build on what content and skills were
+        developed during the unit? \r
+        2. What summative and formative assessment
+        opportunities are built into the unit? \r
+        \r
+        \r
+        \r
+        \r
+        >## Getting Credit
+        for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csp3dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 3, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 3 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 3. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. What skills and knowledge
+        should students leave the unit with?\r
+         - Which Big Idea(s) are students
+        learning the most about? Where and how are those BI(s) addressed? \r
+         - Which
+        skills or Computational Practices are honed through the activities and projects?
+        \r
+        2. What is the connection between early lessons and later lessons?\r
+
+        - How is the content spiraled or scaffolded within the unit? \r
+         - How would
+        you respond to a teacher who says ‘what’s the point’ of lessons 1 - 3? \r
+
+        - Unit 3 starts with sequencing, functions, and functions with parameters,
+        which is not a typical way of starting a unit on programming (many lead with
+        variables, for example). What are some of the potential reasons and benefits
+        of doing it this way?\r
+         - What foundation is being laid early on and how
+        is it leveraged throughout the unit? Why? \r
+         - Which lessons are particularly
+        tricky to teach in this unit and why? \r
+        3. How would you recommend a teacher
+        differentiate instruction in this unit if her students had a wide range of
+        background with programming?\r
+        \r
+        \r
+        >## Getting Credit for Completing
+        this Reflection \r
+        \r
+        >- Once you submit your reflection, your response
+        to the prompt above will be shared anonymously and reviewed by your peers,
+        and you will review the work done by other facilitators. Reviewers will be
+        looking for thoughtful and thorough answers that demonstrate that you have
+        spent time considering the reflection questions listed above. Reviewers will
+        have an opportunity to give feedback on your submission, and you can respond
+        to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+        \r
+        \r
+      csp3dlp-tools_markdown_instruction: |
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 3, and
+        have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 3 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 3. Your response
+        should clearly address each of the items below:\r
+        \r
+        - Why are we using
+        Applab in Code Studio rather than teaching with another tool? \r
+        - In what
+        ways is Applab educational rather than professional? \r
+        - What’s the role
+        of the teacher in this unit, where much of the cs content is embedded in the
+        levels?\r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection \r
+        \r
+        >-
+        Once you submit your reflection, your response to the prompt above will be
+        shared anonymously and reviewed by your peers, and you will review the work
+        done by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
+         \r
+      csp4dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 4,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 4 \r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 4. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What’s the role
+        of the practice Performance Task(s), or PTs, in the unit? \r
+         - How does
+        the practice Explore PT build on what content and skills were developed during
+        the unit? \r
+        2. What summative and formative assessment opportunities are
+        built into the unit? \r
+        \r
+        \r
+        \r
+        >## Getting Credit for Completing this
+        Reflection \r
+        \r
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csp4dlp-lessons_markdown_instruction: |+
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 4, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 4 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 4. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. What skills and knowledge
+        should students leave the unit with?\r
+         - Which Big Idea(s) are students
+        learning the most about? Where and how are those BI(s) addressed? \r
+         - Which
+        skills or Computational Practices are honed through the activities and projects?
+        \r
+        2. What is the connection between early lessons and later lessons?\r
+
+        - How is the content spiraled or scaffolded within the unit? \r
+         - What foundation
+        is being laid early on and how is it leveraged throughout the unit? Why? \r
+
+        - What recommendations do you have about the optional lessons in this unit?
+        (when and why would a teacher choose to use them?)\r
+        3. How can the material
+        covered in the earlier units be connected to unit 4 topics? (specifically
+        the internet and data) \r
+        4. Which lessons are particularly tricky to teach
+        in this unit and why? \r
+         \r
+        \r
+        >## Getting Credit for Completing this
+        Reflection \r
+        \r
+        >- Once you submit your reflection, your response to the
+        prompt above will be shared anonymously and reviewed by your peers, and you
+        will review the work done by other facilitators. Reviewers will be looking
+        for thoughtful and thorough answers that demonstrate that you have spent time
+        considering the reflection questions listed above. Reviewers will have an
+        opportunity to give feedback on your submission, and you can respond to that
+        feedback and resubmit.\r
+        - In order to get credit for completing this prompt,
+        two reviewers need to agree that you have responded to the prompts fully.
+        If reviewers don’t feel comfortable making a decision about your task submission,
+        they can elevate to an instructor for review. You will always have a chance
+        to address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+      csp4dlp-tools_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you start
+        this reflection, make sure you’ve reviewed the lesson in Unit 4, and have
+        a good sense of the the role of tools in the lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 4 Tool Philosophy and Use\r
+        \r
+        For this reflection, you’re going to
+        consider each of the prompts below and craft a written response that demonstrates
+        your understanding of the lessons in Unit 4. Your response should clearly
+        address each of the items below:\r
+        \r
+        - Why are we using whatever tools
+        are present in the unit rather than teaching without them? \r
+        - In what ways
+        are the tools in the unit educational rather than professional? \r
+        - What’s
+        the philosophy of teaching with these tools? \r
+        \r
+        \r
+        \r
+        >## Getting Credit
+        for Completing this Reflection \r
+        \r
+        >- Once you submit your reflection,
+        your response to the prompt above will be shared anonymously and reviewed
+        by your peers, and you will review the work done by other facilitators. Reviewers
+        will be looking for thoughtful and thorough answers that demonstrate that
+        you have spent time considering the reflection questions listed above. Reviewers
+        will have an opportunity to give feedback on your submission, and you can
+        respond to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+         \r
+      csp5dlp-assessment_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 5,
+        and have a good sense of the the role of assessment across the unit. If you
+        haven’t already reviewed the materials, do that now and come back to this
+        reflection later.**\r
+        \r
+        \r
+        # Assessment in Unit 5\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 5. Your response
+        should clearly address each of the items below: \r
+        \r
+        1. What content that’s
+        covered in unit 5 is required for the create PT? What content is going to
+        be on the fixed-response exam (as shown in the exam reference guide in the
+        course and exam description) but isn’t required for the performance task?
+        \r
+        2. What summative and formative assessment opportunities are built into
+        the unit? \r
+        \r
+        \r
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection
+        \r
+        \r
+        >- Once you submit your reflection, your response to the prompt above
+        will be shared anonymously and reviewed by your peers, and you will review
+        the work done by other facilitators. Reviewers will be looking for thoughtful
+        and thorough answers that demonstrate that you have spent time considering
+        the reflection questions listed above. Reviewers will have an opportunity
+        to give feedback on your submission, and you can respond to that feedback
+        and resubmit.\r
+        - In order to get credit for completing this prompt, two
+        reviewers need to agree that you have responded to the prompts fully. If reviewers
+        don’t feel comfortable making a decision about your task submission, they
+        can elevate to an instructor for review. You will always have a chance to
+        address feedback from your reviewers and resubmit your reflections! Reviewer
+        feedback will show up at the bottom of this page, once it’s available. \r
+
+        \r
+        \r
+        \r
+      csp5dlp-lessons_markdown_instruction: |
+        <br><br>\r
+        \r
+        > **NOTE: before you
+        start this reflection, make sure you’ve reviewed the lesson in Unit 5, and
+        have a good sense of the connections between lessons. If you haven’t already
+        reviewed the materials, do that now and come back to this reflection later.**\r
+        \r
+        \r
+        #
+        Unit 5 Lesson Connections and Philosophy\r
+        \r
+        For this reflection, you’re
+        going to consider each of the prompts below and craft a written response that
+        demonstrates your understanding of the lessons in Unit 5. Your response should
+        clearly address each of the items below: \r
+        \r
+        1. What skills and knowledge
+        should students leave the unit with?\r
+         - Which Big Idea(s) are students
+        learning the most about? Where and how are those BI(s) addressed? \r
+         - Which
+        skills or Computational Practices are honed through the activities and projects?
+        \r
+        2. What is the connection between early lessons and later lessons?\r
+
+        - How is the content spiraled or scaffolded within the unit? \r
+         - What foundation
+        is being laid early on and how is it leveraged throughout the unit? Why? \r
+        3.
+        What advice do you have for teachers about how to handle the transition from
+        turtle (back in unit 3)  to event-driven programming (here in unit 5)? \r
+        4.
+        Which lessons are particularly tricky to teach in this unit and why? \r
+
+        \r
+        \r
+        >## Getting Credit for Completing this Reflection \r
+        \r
+        >- Once
+        you submit your reflection, your response to the prompt above will be shared
+        anonymously and reviewed by your peers, and you will review the work done
+        by other facilitators. Reviewers will be looking for thoughtful and thorough
+        answers that demonstrate that you have spent time considering the reflection
+        questions listed above. Reviewers will have an opportunity to give feedback
+        on your submission, and you can respond to that feedback and resubmit.\r
+        -
+        In order to get credit for completing this prompt, two reviewers need to agree
+        that you have responded to the prompts fully. If reviewers don’t feel comfortable
+        making a decision about your task submission, they can elevate to an instructor
+        for review. You will always have a chance to address feedback from your reviewers
+        and resubmit your reflections! Reviewer feedback will show up at the bottom
+        of this page, once it’s available. \r
+         \r
+        \r
+      csp5dlp-tools_markdown_instruction: |
+        \r
+        \r
+        <br><br>\r
+        \r
+        > **NOTE: before
+        you start this reflection, make sure you’ve reviewed the lesson in Unit 5,
+        and have a good sense of the the role of tools in the lessons. If you haven’t
+        already reviewed the materials, do that now and come back to this reflection
+        later.**\r
+        \r
+        \r
+        # Unit 5 Tool Philosophy and Use\r
+        \r
+        For this reflection,
+        you’re going to consider each of the prompts below and craft a written response
+        that demonstrates your understanding of the lessons in Unit 5. Your response
+        should clearly address each of the items below:\r
+        \r
+        - What’s the philosophy
+        of teaching with Applab? \r
+        - What’s the general cadence and structure of
+        a lesson in unit 5? *(how are the levels in a typical lesson paced out, and
+        what’s the general progression)*\r
+        \r
+        \r
+        \r
+        >## Getting Credit for Completing
+        this Reflection \r
+        \r
+        >- Once you submit your reflection, your response
+        to the prompt above will be shared anonymously and reviewed by your peers,
+        and you will review the work done by other facilitators. Reviewers will be
+        looking for thoughtful and thorough answers that demonstrate that you have
+        spent time considering the reflection questions listed above. Reviewers will
+        have an opportunity to give feedback on your submission, and you can respond
+        to that feedback and resubmit.\r
+        - In order to get credit for completing
+        this prompt, two reviewers need to agree that you have responded to the prompts
+        fully. If reviewers don’t feel comfortable making a decision about your task
+        submission, they can elevate to an instructor for review. You will always
+        have a chance to address feedback from your reviewers and resubmit your reflections!
+        Reviewer feedback will show up at the bottom of this page, once it’s available.
+        \r
+      csp_socialBelonging_control_markdown_instruction: |-
+        \r
+        ## Starting out in Computer
+        Science\r
+        \r
+        Computer science has changed the way we communicate with each
+        other, make art and movies, grow food, and even treat illnesses. Everyone
+        can learn computer science and make a difference.\r
+        \r
+        ***\r
+        \r
+        ## Quotes
+        from students\r
+        \r
+        Still, we understand that taking a computer science course
+        can be difficult at first. Here are a few student quotes describing their
+        strategies and tips for taking this course. **Please read the quotes carefully
+        and respond to the prompt below**. \r
+        \r
+        <div style="background-color:
+        #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:
+        0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size: 70px; margin-bottom:
+        -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p style="line-height:
+        1.5; margin-left: 10px; margin-right: 30px; ">\r
+        In the first week of this
+        class I was falling behind quickly. There was a lot of new information to
+        learn. To keep up, I had to find a better way to study. I tried to find connections
+        between the material and what I already know. That really helped me remember
+        things. I also tried to not overdo it. I started taking small breaks in-between
+        lessons and when I came back I checked if I still remembered what I was studying
+        before. It helped a lot\r
+         </p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">Some days I felt tired and would drift away in my thoughts. It was
+        a real problem because I would miss so much of what we were learning. So I
+        started going to bed a bit earlier and I tried my best to pay attention. At
+        the end of every class our teacher summarized\r
+         what we learned that day
+        and that was really helpful. I started taking more notes because that also
+        kept my mind from wandering. These little tricks got me through the class
+        and I learned more.</p>\r
+        <p style="font-size: 70px; text-align: right;
+        opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I\r
+
+        can be pretty forgetful sometimes and it was a problem in this class. I think
+        it's because we did so much on the computer. For my other classes I take
+        notes on paper and read through them again at home. So the trick that I found
+        helpful in this class was to take notes on paper anyway and to test myself
+        about the concepts. I wasn't sure if it would work at first, but I think
+        it ended up being a big help.</p>\r
+        \r
+        <p style="font-size: 70px; text-align:
+        right; opacity: 0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size:
+        125%;  font-style: italic; margin-right: 30px; margin-top: -20px">\r
+        Sam
+        J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p style="font-size: 125%">Now
+        consider the strategies and insights for how to learn best that you just read.
+        </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        <p style="font-size: 150%;
+        color: black; font-weight: bolder; line-height: 1.5">What are your own strategies
+        and insights about how to learn best? And, how are they similar or different
+        to the ones that you just heard about from other students? </p>\r
+        \r
+        *Please
+        write a short paragraph. Don't worry about spelling, grammar, or how well
+        written it is.*
+      csp_socialBelonging_intervention_markdown_instruction: |
+        ## Starting out in
+        Computer Science\r
+        \r
+        Computer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        **Everyone can learn computer science and make a difference:** It really does
+        not matter how much or little experience you have with computer science already,
+        or what age, gender, or skin color you have.\r
+        \r
+        ***\r
+        \r
+        ## Quotes from
+        students\r
+        \r
+        Still, we understand that it can be daunting at first to take
+        a computer science course. So here are a few student quotes describing their
+        experiences. **Please read the quotes carefully and respond to the prompt
+        below**. \r
+        \r
+        \r
+        <div style="background-color: #d9eff7; border-radius:
+        40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px; ">\r
+        At the start of the class I worried that I was different from
+        the other students. I wasn't sure I fit in – I \tworried that I couldn’t
+        do it and that the teacher and other students would look down on me. A few
+        days after I started, I realized that almost everyone who takes the class
+        isn’t sure if they fit in at first. It's something everyone goes through.
+        Now it seems ironic – everybody feels different at first, when really we're
+        all going through the same thing.</p>\r
+        <p style="font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; ">\r
+        Sofia P. (age 16)\r
+        </p>\r
+        \r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        \r
+        <p
+        style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5">&ldquo;</p>\r
+        <p style="line-height: 1.5; margin-left: 10px; margin-right:
+        30px;">I loved this computer science class! I've met some cool people and
+        learned a lot. But it was a difficult transition. The first few days I was
+        intimidated and not sure why I should learn computer science. Why would I
+        need it? But then we talked in class about things I’m interested in, like
+        music and design, and I realized that I can learn how to do cool new things.
+        I had the wrong picture in my head about CS, it’s actually very creative!
+        I just had to be patient and find ways to connect the class to what I really
+        care about.</p>\r
+        <p style="font-size: 70px; text-align: right; opacity:
+        0.5">&rdquo;</p>\r
+        <p style="text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px">\r
+        Jasmin D. (age 17)\r
+        </p>\r
+        </div>\r
+        <br>\r
+        \r
+        <div
+        style="background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;">\r
+        \r
+        <p style="font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>\r
+        <p
+        style="line-height: 1.5; margin-left: 10px; margin-right: 30px; ">I didn’t
+        have any experience with code, and I worried that I was not prepared for this
+        class. Other students did some programming at home or in summer camps. On
+        my first day, I was so nervous about getting bad grades and looking stupid.
+        But then, I started to feel better – I talked with other students and enjoyed
+        the class more. I became more comfortable asking for help when I had a problem.
+        It turned out that the students with CS experience had the same issues as
+        me! Hah, it took some time, but now I really feel like I belong in CS class.</p>\r
+        \r
+        <p
+        style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>\r
+        <p
+        style="text-align: right; font-size: 125%;  font-style: italic; margin-right:
+        30px; margin-top: -20px">\r
+        Sam J. (age 17)\r
+        </p>\r
+        </div>\r
+        \r
+        ***\r
+        <p
+        style="font-size: 125%"> Each of these students had similar experiences
+        and realizations. </p>\r
+        \r
+        ## Reflect and Summarize: \r
+        \r
+        \r
+        <p style="font-size:
+        150%; color: black; font-weight: bolder; line-height: 1.5">Why do you think
+        the students worry at first about whether they belong in the class? How did
+        they become comfortable with it over time?</p>\r
+        \r
+        *Please write a short
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
+        \r
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as

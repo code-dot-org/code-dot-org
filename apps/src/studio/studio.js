@@ -11,10 +11,10 @@ import * as constants from './constants';
 import * as utils from '../utils';
 import _ from 'lodash';
 import AppView from '../templates/AppView';
-import BigGameLogic from './bigGameLogic';
+import BigGameLogic from './customLogic/bigGameLogic';
 import CollisionMaskWalls from './collisionMaskWalls';
 import Hammer from "../third-party/hammer";
-import ImageFilterFactory from './ImageFilterFactory';
+import GlowFilter from './starwars/GlowFilter';
 import InputPrompt from '../templates/InputPrompt';
 import Item from './Item';
 import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
@@ -24,8 +24,8 @@ import ObstacleZoneWalls from './obstacleZoneWalls';
 import Projectile from './projectile';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RocketHeightLogic from './rocketHeightLogic';
-import SamBatLogic from './samBatLogic';
+import RocketHeightLogic from './customLogic/rocketHeightLogic';
+import SamBatLogic from './customLogic/samBatLogic';
 import Sprite from './Sprite';
 import StudioVisualizationColumn from './StudioVisualizationColumn';
 import ThreeSliceAudio from './ThreeSliceAudio';
@@ -49,7 +49,6 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
-  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -735,7 +734,7 @@ var goalFilterEffect = null;
 Studio.applyGoalEffect = function () {
   if (!goalFilterEffect) {
     var svg = document.getElementById('svgStudio');
-    goalFilterEffect = ImageFilterFactory.makeFilterOfType(skin.goalEffect, svg);
+    goalFilterEffect = new GlowFilter(svg);
   }
 
   if (goalFilterEffect) {
@@ -2780,8 +2779,6 @@ Studio.displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
-    const showFailureIcon = studioApp().hasContainedLevels &&
-      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2804,7 +2801,6 @@ Studio.displayFeedback = function () {
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
-      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -3354,11 +3350,10 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      (!studioApp().hasContainedLevels || getValidatedResult())) {
-    Studio.playSound({ soundName: 'win' });
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+    studioApp().playAudioOnWin();
   } else {
-    Studio.playSound({ soundName: 'failure' });
+    studioApp().playAudioOnFailure();
   }
 
   if (studioApp().hasContainedLevels && !level.edit_blocks) {

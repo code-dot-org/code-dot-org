@@ -319,3 +319,123 @@
       courseF_unplugged_powerOfWords:
         title: Ngohe Momotu
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Hātepe Motuhenga: Whakatōkia he Kano'
+        desc: Mā te whakatō kano hei tauira, ka whakapuakitia i tēnei whakaakoranga
+          ngā hātepe ka whakamahia e tātou i ngā mahi o ia rā. Ka aronuitia te tirohanga
+          whānui ki te pūtaiao rorohiko me te nui o te whaitake o ngā hātepe i ēnei
+          mahi.
+      courseA_unplugged_happyMaps:
+        title: Ngā Mahere Harikoa
+        desc: Mā ngā ākonga ētahi hātepe (he tautuhinga tohutohu) māmā ki te whakaneke
+          i tētahi kiripuaki i waenganui i tētahi rīrapa mā te whakahau kotahi.
+      courseA_unplugged_goingPlacesSafely:
+        title: Te Karore Haumaru
+        desc: He mana nui tō te Ipurangi, heoi anō, he wāhi mōrearea i ētahi wā. Mā
+          ngā pouako e tīmata ki te whakaako i ngā mahi e tika ana kia haumaru ai
+          te haere i te tangata e torotoro haere ana i te Ipurangi.
+      courseABC_unplugged_bigEvent:
+        title: Te Takahanga Nui
+        desc: Ka tūtaki ngā ākonga ki te ariā papatonotanga e kīia nei ko "ngā takahanga",
+          arā, ngā whakahau e auau ana te mātaihia e te rorohiko. Ka pēhi te pouako
+          i ētahi pātene kei tētahi raumamao pepa, ā, ka tauhohe ngā ākonga e ai ki
+          tāna i pēhi ai.
+      courseB_unplugged_digitalFootprint:
+        title: Tō Tapuwae Matihiko
+        desc: Ka whakamāramatia e ngā pouako ki ngā ākonga, kei te waihangahia e rātou
+          ō rātou ake tapuwae matihiko, "huarahi" rānei mā te hoatu mōhiohio whaiaro
+          ki te ipurangi, me ngā rokohanga o taua mahi.
+      courseC_unplugged_buildingAFoundation:
+        title: Te Hanga Tūāpapa
+        desc: Ka hangaia e ngā ākonga tētahi hanga me ngā rauemi kua whakaratoa noa
+          iho. Me tutuki e ngā hanga tētahi mahi (me eke ki tētahi teiteitanga, ki
+          tētahi taumahatanga rānei), ā, ka whakawhiti kōrero ngā ākonga mō te āhua
+          o te tōnakingaki i ngā wā o te uaua.
+      courseC_unplugged_paperPlanes:
+        title: 'Hātepe Motuhenga: Waka Rererangi Pepa'
+        desc: Mā te hanga waka rerengarangi pepa, ka whakapuakitia i tēnei whakaakoranga
+          ngā hātepe ka whakamahia e tātou i ngā mahi o ia rā. Ka aronuitia te tirohanga
+          whānui ki te pūtaiao rorohiko me te nui o te whaitake o ngā hātepe i ēnei
+          mahi.
+      courseC_unplugged_gettingLoopy:
+        title: Kia Koromeke
+        desc: Ko tā tēnei whakaakoranga he whakatakoto i te ariā koromeke (ngā tohutohu
+          kua tōaitia) o te papatonotanga mā tētahi ngohe kanikani. Ka ako ngā ākonga
+          i ētahi nekehanga māmā, kātahi ka whakahautia rātou kia tōaitia.
+      courseC_unplugged_binaryBracelets:
+        title: Kōmore Ā-Rua
+        desc: Ka waihangahia e ngā ākonga ētahi kōmore hei whakaaturanga ā-rua o te
+          pū tuatahi o ō rātou ingoa. E ako ana ngā ākonga i te nui o ngā ara whakaatu
+          me ngā ara rokiroki hoki i te raraunga.
+      courseD_unplugged_graphPaperProgramming:
+        title: Papatono Pepa Kauwhata
+        desc: Mā ngā ākonga tētahi hātepe (he tautuhinga tohutohu) e tuhi me ngā whakahau
+          kua whakamahukitia kētia ki te tohutohu i ō rātou hoa ako ki te tā anō i
+          tētahi tānga.
+      courseD_unplugged_relayProgramming:
+        title: Papatonotanga ā-Tānga
+        desc: He omanga ā-tanga kei te haere. Ka oma whakawhiti ngā ākonga i te pātiki
+          ki te tuhi i tētahi hātepe e ai ki tētahi atahanga "Papatonotanga Pepa Kauwhata".
+          Te tikanga, kotahi anake te tohutohu ka tuhia i ia wā, ā, mēnā rā he hapa,
+          me muku i te katoa o ngā tohutohu kia hoki atu ki te tohutohu nā reira i
+          hapa ai.
+      courseD_unplugged_conditionalsCards:
+        title: Conditionals with Cards
+        desc: Ki te ako e pā ana ki ngā tauākī here, ka tākaro ngā ākonga i tētahi
+          kēmu kāri mā rātou ngā ture e waihanga pēnei i, "Ki te tango ahau i tētahi
+          kāri whero, ka whiwhi ahau i tētahi piro", i tēnei hoki "Ki te tango ahau
+          i tētahi kāri pango, ka whiwhi koe i tētahi piro."
+      courseD_unplugged_binaryImages:
+        title: Ngā Atahanga Tāhūrua
+        desc: He nui te pōhēhē he 0, he 1 noa iho te ā-rua, heoi anō, i ngā whakaakoranga
+          o mua, i ako ngā ākonga ki ngā kōwhiringa tāhūrua rerekē hei whakatauira
+          i te mōhiohio. Ka whakawhanakehia tērā ariā i tēnei whakaakoranga mā te
+          whakaahua i te āheinga o te rorohiko ki te rokiroki i ngā mōhiohio matatini
+          (pēnei i ngā atahanga me ngā tae) me te ā-rua hoki.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Ka whakapuakitia i tēnei whakaakoranga ngā hātepe ka whakamahia e tātou
+          i ngā mahi o ia rā. Ka tautohu, ka tuhituhi hoki ngā ākonga i te hātepe
+          mō te whakataetae mataono.
+      courseE_unplugged_songwritingParameters:
+        title: Te Titowaiata me ngā Tawhā
+        desc: Ka whakamahia e ngā ākonga te ariā o te kōrihi i tētahi waiata ki te
+          ako e pā ana ki ngā taumahi whakamahuki, karanga hoki.
+      courseE_unplugged_internet:
+        title: Te Ipurangi
+        desc: Ka tukuna e ngā ākonga ētahi karere ki te whakatauira i ngā momo aratuka
+          whakawhitinga Ipurangi mā te pepa.
+      courseE_unplugged_crowdsourcing:
+        title: Te Mahi ā-Ohu
+        desc: Ka whakamahi ngā ākonga i te mahi ā-ohu, he huarahi whakaoti-rapanga
+          pūnoa i ngā mahi pūtaiao rorohiko, ki te whakatutuki pai i tētahi mahi ā-akomanga,
+          kaua kē ia ā-ākonga takitahi.
+      courseE_unplugged_songwriting:
+        title: Te Tito Waiata
+        desc: Ka whakamahia e ngā ākonga te ariā o te kōrihi i tētahi waiata ki te
+          ako e pā ana ki ngā taumahi whakamahuki, karanga hoki.
+      courseF_unplugged_tangrams:
+        title: Hātepe Hangawhitu
+        desc: Ka whakaaturia e tēnei whakaakoranga tētahi tino āhuatanga o te hātepe.
+          Mēnā ka noho māmā te momo hātepe, ka nui ake tana whakamahinga. Mēnā e hiahia
+          ana ki ōrite te huanga mā tēnā, mā tēnā, me āmiki kē te hātepe.
+      courseF_unplugged_envelopeVariables:
+        title: Ngā Taurangi Kōpaki
+        desc: Nā te taurangi ka tino wātea ngā mahi i te pūtaiao rorohiko. Mā tēnei
+          whakaakoranga e āwhina ki te whakamārama he aha oti tēnei mea te taurangi,
+          ā, me pēhea hoki tā tātou whakamahi i ngā taurangi. Whakahaerehia tēnei
+          whakaakoranga i mua (i te wā ōrite rānei) i te whakaakoranga whakawaitara
+          kia tino mārama ai.
+      courseF_unplugged_forLoopFun:
+        title: Kia Ngahau te Mahi Koromeke
+        desc: E mōhio ana tātou ko tā te koromeke mahi he tōai, he tōai, he tōai,
+          heoi anō, i konei ka ako tātou ki te whakamahi i ngā koromeke kua whakakahangia.
+      courseF_unplugged_songwritingParameters:
+        title: Te Titowaiata me ngā Tawhā
+        desc: 'Ko tētahi o ngā tino whakamīharotanga o te pūtaiao rorohiko ko te taumahi.
+          He papatono moroiti ngā taumahi (he hātepe i ētahi wā) he rite tonu te whakamahinga
+          o ēnei taumahi i roto i tō papatono matua. Mā tēnei whakaakoranga ka māori
+          noa te mārama ki te pai o te kōmitimiti i ngā kohinga waehere ki ngā taumahi.  '

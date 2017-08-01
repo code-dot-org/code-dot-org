@@ -441,6 +441,12 @@
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: "Скористайтесь розкривним списком, щоб створювати різні
+          сніжинки!"
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: "Скористайтесь розкривним списком, щоб створювати різні
+          сніжинки!"
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: "Всі твої улюблені боки тепер посортовані
           в категорії. Нажми на ці слова, щоб побачити куди все ділось!"
@@ -682,6 +688,13 @@
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: This number tells you how many of these blocks you can use
           in this puzzle.
+      course2_artist_nestedLoops_challenge2_callout: []
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      course2_collector_loops_challenge2_callout: []
+      course2_collector_prog_challenge1_callout: []
+      course2_collector_prog_challenge2_callout: []
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you
           can use in this puzzle.
@@ -737,6 +750,8 @@
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
           away.
       courseB_maze_seq7_callout: []
+      courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
@@ -904,6 +919,9 @@
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
+          here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -918,6 +936,7 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.

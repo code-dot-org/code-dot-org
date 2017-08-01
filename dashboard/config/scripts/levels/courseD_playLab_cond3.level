@@ -43,16 +43,18 @@
       "downButton",
       "upButton"
     ],
-    "instructions": "1) Make the dragon change between random emotions every second.  \r\n2) Make it so when Pegleg gets to the dragon, he gets 2 points if the dragon is happy and 1 otherwise.",
-    "markdown_instructions": "It's time to use what we've learned about conditionals to make this game amazing. This challenge has two parts:\r\n\r\n  1) Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  \r\n \r\n  2) Add code so that when Pegleg gets to the dragon, he gets two points *if* the dragon is happy. Otherwise, he should get only one point added to his score.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.\",\"hint_id\":\"courseD_playLab_cond3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/31df6b617885d906b85fb399810d7e59/courseD_playLab_cond3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to use an `if / else` block for the second half of this challenge. \",\"hint_id\":\"courseD_playLab_cond3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/84127626228cbe26f55e7892c586534a/courseD_playLab_cond3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"`If` the dragon is happy `score point`, `score point`.\\n<br/>\\n \\n`Else` `score point`.\",\"hint_id\":\"courseD_playLab_cond3_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e4696b6d909209936119159f1ea5b869/courseD_playLab_cond3.mp3\"}]",
+    "instructions": "Make the dragon change between random emotions every second.  ",
+    "markdown_instructions": "It's time to use what we've learned about conditionals to make this game amazing. \r\n\r\nUse a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  \r\n",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.\",\"hint_id\":\"courseD_playLab_cond3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/31df6b617885d906b85fb399810d7e59/courseD_playLab_cond3.mp3\"}]",
     "project_template_level_name": "courseD_playLab_condTemplate",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-27 02:10:10 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-27 02:11:13 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -183,24 +185,8 @@
           <title name="SPRITE1">0</title>
           <title name="SPRITE2">1</title>
           <next>
-            <block type="studio_ifActorHasEmotionElse">
-              <title name="SPRITE">1</title>
-              <title name="EMOTION">1</title>
-              <statement name="DO">
-                <block type="studio_changeScore">
-                  <title name="VALUE">1</title>
-                  <next>
-                    <block type="studio_changeScore">
-                      <title name="VALUE">1</title>
-                    </block>
-                  </next>
-                </block>
-              </statement>
-              <statement name="ELSE">
-                <block type="studio_changeScore">
-                  <title name="VALUE">1</title>
-                </block>
-              </statement>
+            <block type="studio_changeScore">
+              <title name="VALUE">1</title>
             </block>
           </next>
         </block>

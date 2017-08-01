@@ -281,3 +281,115 @@
       courseF_unplugged_powerOfWords:
         title: Veikla be kompiuterių
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmai realiame gyvenime: sėklos sodinimas'
+        desc: "Ši pamoka parodo, kur realiame gyvenime yra naudojami algoritmai. Kaip
+          pavyzdys yra naudojamas sėklų sodinimas. Pamokoje taip pat yra kalbama apie
+          platesnę informatikos reikšmę ir kiek svarbūs joje yra algoritmai."
+      courseA_unplugged_happyMaps:
+        title: Laimingieji žemėlapiai
+        desc: Mokiniai sukuria paprastus algoritmus (instrukcijas), kad pajudintų
+          veikėją per labirintą, naudodami vieną komandą.
+      courseA_unplugged_goingPlacesSafely:
+        title: Saugus naršymas internete
+        desc: Internetas yra galina, bet kartais ir pavojinga vieta. Mokytojai moko,
+          kaip būti saugiam naršant internete.
+      courseABC_unplugged_bigEvent:
+        title: Didelis įvykis
+        desc: Mokiniai bus supažindinami su sąvoka „įvykis“ – tai yra veiksmai, kurių
+          kompiuteris laukia, kad jie įvyktų. Mokytoja spaudinės nupieštus mygtukus
+          ant popieriaus, o mokiniai turės reaguoti atitinkamai, priklausomai nuo
+          to, kuris mygtukas bus nuspaustas.
+      courseB_unplugged_digitalFootprint:
+        title: Virtualūs pirštų antspaudai
+        desc: Mokytojai supažindina mokinius su idėja, kad įdedant informaciją į internetą
+          apie save, yra sukuriami virtualūs pirštų antspaudai, pagal kuriuos tą žmogų
+          galima sekti ir tai gali turėti pasėkmių.
+      courseC_unplugged_buildingAFoundation:
+        title: Laiptuota piramidė
+        desc: Students build a structure using only provided supplies. Structures
+          must complete a task (reach a certain height or bear a certain weight),
+          and students discuss the idea of being persistent when things get complicated.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmai realiame gyvenime: popieriniai lėktuvėliai'
+        desc: "Šioje pamokoje bus kalbama apie algoritmus realiame gyvenime. Kaip
+          pavyzdys bus imamas popierinių lėktuvėlių lankstymas. Šioje pamokoje taip
+          pat bus kalbama apie informatiką ir algoritmų svarbą joje."
+      courseC_unplugged_gettingLoopy:
+        title: Kartojimo supratimas
+        desc: "Šioje pamokoje yra mokoma apie kartojimą (žingsnelius, kurie yra kartojami)
+          šokant. Mokiniai išmoks paprastą šokį ir išmoks jį pakartoti tam tikru metu."
+      courseC_unplugged_binaryBracelets:
+        title: Dvejetainės apyrankės
+        desc: Mokiniai susikurs sau apyrankes su savo vardo pirmosios raidės dvejetainiu
+          kodu. Mokiniai sužinos, kad duomenys gali būti pavaizduojami ir išsaugomi
+          daugiau nei vienu būdu.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programavimas ant languoto popieriaus
+        desc: Mokiniai rašo algoritmus (instrukcijas) savo klasės draugams, kuriomis
+          naudodamasis, kitas mokinys turės nupiešti piešinį.
+      courseD_unplugged_relayProgramming:
+        title: Programavimas komandoje
+        desc: Mokiniai dalyvaus estafetėje, kur kiekvienas dalyvis, nubėgęs prie lapo,
+          turės užrašyti vieną algoritmo komandą. Jeigu mokinys algoritme ras klaidą,
+          visas algoritmas turės būti ištrintas ir kuriamas iš naujo.
+      courseD_unplugged_conditionalsCards:
+        title: Sąlyginiai sakiniai su kortomis
+        desc: Tam, kad išmoktų sąlyginius sakinius, mokiniai žais kortų žaidimą ir
+          sukurs taisykles, tokias kaip „jeigu ištrauksiu raudoną kortą, gausiu tašką“
+          arba „jei ištrauksiu juodą kortą, tu gausi tašką“.
+      courseD_unplugged_binaryImages:
+        title: Dvejetainiai vaizdai
+        desc: Though many people think of binary as strictly zeros and ones, our previous
+          courses taught students that information can be represented in a variety
+          of binary options.  This lesson takes that concept one step further as it
+          illustrates how a computer can store even more complex information (such
+          as images and colors) in binary, as well.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: This lesson calls out ways we use algorithms in our daily lives. As
+          part of that, students will identify and write down the algorithm for a
+          dice race game.
+      courseE_unplugged_songwritingParameters:
+        title: Dainų rašymas su parametrais
+        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
+          (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
+      courseE_unplugged_internet:
+        title: Internetas
+        desc: Mokiniai siunčia pranešimus, parašytus ant popieriaus lapo, kurie simbolizuoja
+          įvairius prisijungimo prie interneto būdus.
+      courseE_unplugged_crowdsourcing:
+        title: Komandinis programavimas
+        desc: Students use crowdsourcing, a problem-solving technique common in computer
+          science, to complete a task together as a classroom more efficiently than
+          if a student attempted it alone.
+      courseE_unplugged_songwriting:
+        title: Dainų rašymas su parametrais
+        desc: Mokiniai panaudos priedainio sąvoką dainoje ir išmoks, kas yra parametrai
+          (kurie pakeičia sudėtines komandas, kad jų nereikėtų perrašyti iš naujo).
+      courseF_unplugged_tangrams:
+        title: Tangram Algorithms
+        desc: This lesson shows us something important about algorithms. If you keep
+          an algorithm simple there are lots of ways to use it. If you want to make
+          sure everyone ends up with the same thing, then your algorithm needs more
+          detail.
+      courseF_unplugged_envelopeVariables:
+        title: Envelope Variables
+        desc: Variables allow for a lot of freedom in computer science.  This lesson
+          helps to explain what variables are and how we can use them in many different
+          ways. Use this activity before (or in conjunction with) the lesson on abstraction
+          to really hit the idea home.
+      courseF_unplugged_forLoopFun:
+        title: For Loop Fun
+        desc: We know that loops allow us to do things over and over again, but now
+          we’re going to learn how to use loops with extra structure built right in.
+      courseF_unplugged_songwritingParameters:
+        title: Dainų rašymas su parametrais
+        desc: 'One of the most magnificent structures in the computer science world
+          is the function.  Functions (sometimes called procedures) are mini programs
+          that you can use over and over inside of your bigger program. This lesson
+          will help students intuitively understand why combining chunks of code into
+          functions is such a helpful practice.  '
