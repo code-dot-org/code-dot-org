@@ -43,6 +43,9 @@ When /^I drag droplet block "([^"]*)" to line (\d+)$/ do |block_name, line_numbe
 end
 
 When /^I ensure droplet is in text mode$/ do
+  steps <<-STEPS
+    And I wait to see "#show-code-header"
+  STEPS
   button_text = @browser.execute_script("return $('#show-code-header').text()")
   if button_text == 'Show Text'
     steps <<-STEPS
@@ -53,6 +56,9 @@ When /^I ensure droplet is in text mode$/ do
 end
 
 When /^I ensure droplet is in block mode$/ do
+  steps <<-STEPS
+    And I wait to see "#show-code-header"
+  STEPS
   button_text = @browser.execute_script("return $('#show-code-header').text()")
   if button_text == 'Show Blocks'
     steps <<-STEPS
