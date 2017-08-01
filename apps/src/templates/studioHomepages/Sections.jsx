@@ -14,6 +14,7 @@ import {
   setSections
 } from '../teacherDashboard/teacherSectionsRedux';
 import {SECTION_FLOW_2017} from "../../util/experiments";
+import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 
 const sectionsApiPath = '/dashboardapi/sections/';
 
@@ -125,6 +126,9 @@ const Sections = React.createClass({
           )}
           {isTeacher && numTeacherSections === 0 && (
             <SectionsSetUpMessage isRtl={isRtl}/>
+          )}
+          {isTeacher && numTeacherSections === 0 && sectionFlow2017 && (
+            <AddSectionDialog/>
           )}
           {isStudent && (
             <JoinSection
