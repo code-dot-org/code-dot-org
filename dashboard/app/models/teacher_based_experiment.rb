@@ -28,16 +28,6 @@
 class TeacherBasedExperiment < Experiment
   validates :percentage, inclusion: 0..100
 
-  def self.get_enabled(user: nil, section: nil, script: nil)
-    return Experiment.none unless section
-    user_id = section.user_id % 100
-    Experiment.where(type: TeacherBasedExperiment.to_s).
-      where('(? >= min_user_id AND ? < max_user_id) OR (? < overflow_max_user_id)',
-        user_id, user_id, user_id
-      ).where('earliest_section_at IS NULL OR earliest_section_at < ?', section.first_activity_at).
-      where('latest_section_at IS NULL OR latest_section_at > ?', section.first_activity_at)
-  end
-
   def enabled?(user: nil, section: nil)
     return false unless section
 
