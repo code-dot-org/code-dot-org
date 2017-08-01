@@ -385,13 +385,13 @@ class ScriptLevelsController < ApplicationController
     if !script_sections.empty?
       # if we have sections matching this script id, we consider a stage hidden only if it is hidden in every one
       # of the sections the student belongs to that match this script id
-      all_ids = script_sections.map(&:section_hidden_stages).flatten.pluck(:stage_id)
+      all_ids = script_sections.flat_map(&:section_hidden_stages).pluck(:stage_id)
       counts = all_ids.each_with_object(Hash.new(0)) {|id, hash| hash[id] += 1}
       counts.select {|_, val| val == script_sections.length}.keys
     else
       # if we have no sections matching this script id, we consider a stage hidden if any of those sections
       # hides the stage
-      sections.map(&:section_hidden_stages).flatten.pluck(:stage_id).uniq
+      sections.flat_map(&:section_hidden_stages).pluck(:stage_id).uniq
     end
   end
 
