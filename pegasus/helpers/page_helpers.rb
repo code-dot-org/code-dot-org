@@ -73,6 +73,6 @@ end
 # Returns a random donor's twitter handle.
 def get_random_donor_twitter
   weight = SecureRandom.random_number
-  donor = DB[:cdo_donors].where('((weight_f - ?) >= 0)', weight).first
+  donor = DB[:cdo_donors].where('((twitter_weight_f - ?) >= 0)', weight).first
   return donor[:twitter_s]
 end
