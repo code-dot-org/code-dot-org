@@ -75,5 +75,4 @@ class UserMenuTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'a[href="http://test.host/pairing"]', false
   end
-
 end
