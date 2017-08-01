@@ -34,6 +34,9 @@ const styles = {
     display: 'inline',
     paddingLeft: 25,
     paddingRight: 10,
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   description: {
     paddingLeft: 25,
@@ -79,7 +82,7 @@ const StudentTopCourse = React.createClass({
       <div style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons_fullwidth.png')} style={styles.image}/>
         <div style={styles.name}>
-          {i18n.topCourseWelcome({assignableName})}
+          {assignableName}
         </div>
         <div style={styles.description}>
           <div>
