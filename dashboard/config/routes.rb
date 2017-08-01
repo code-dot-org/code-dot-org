@@ -85,6 +85,14 @@ Dashboard::Application.routes.draw do
       get 'original_image'
     end
   end
+
+  resources :level_sources, path: '/r/', param: :level_source_id_and_user_id, only: [:show, :edit, :update] do
+    member do
+      get 'generate_image'
+      get 'original_image'
+    end
+  end
+
   get '/share/:id', to: redirect('/c/%{id}')
 
   devise_scope :user do
