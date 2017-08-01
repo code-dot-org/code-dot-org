@@ -8,7 +8,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import loadAppOptions from "@cdo/apps/code-studio/initApp/loadApp";
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import { singleton as studioApp } from '@cdo/apps/StudioApp';
@@ -17,9 +16,9 @@ import { scratchDefaultProject } from './scratchDefaultProject';
 
 const Scratch = window.Scratch = window.Scratch || {};
 
-registerReducers(commonReducers);
+export default function init(options) {
+  registerReducers(commonReducers);
 
-loadAppOptions().then(options => {
   options.maxVisualizationWidth = 480;
   options.vizAspectRatio = 4 / 3;
   options.enableShowCode = false;
@@ -95,7 +94,7 @@ loadAppOptions().then(options => {
   vm.start();
 
   options.onInitialize();
-});
+}
 
 /**
  * Register scratch-blocks events with the VM.
