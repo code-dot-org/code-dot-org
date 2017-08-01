@@ -285,6 +285,30 @@
     @codeorg
   just_did_accelerated: Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail
     as! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Aontaíonn naonúr as gach deichniúr - ba chóir do scoileanna ríomheolaíocht
     a mhúineadh. http://youtu.be/nKIu9yen5nc. Féach https://code.org/.
   twitter_cs_foundational: Ba chóir do gach dalta buntús na ríomheolaíochta a fhoghlaim.
@@ -1191,6 +1215,8 @@
   coursef-draft_name: Cúrsa F
   coursef_name: Cúrsa F
   accelerated_name: Cúrsa Luathaithe
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Aonad 1: Faisnéis dhigiteach'
   cspunit2_name: 'Aonad 2: An tIdirlíon'
   cspunit3_name: 'Aonad 3: Ríomhchlárú'
@@ -1236,6 +1262,7 @@
   math_category_name: Matamaitic
   hoc_category_name: An Uair Chódála
   csf_category_name: Buntús na Ríomheolaíochta
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: "Á bhforbairt: Cúrsaí A-F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "'15-'16 Foras Feasa ar an Ríomheolaíocht"

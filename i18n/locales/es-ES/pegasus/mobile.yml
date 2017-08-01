@@ -195,18 +195,30 @@
   learn_classes: "Encontrar clases cerca de ti"
   learn_back_to_minecraft: "Продолжаем учиться с Minecraft"
   hoc_is_here: 'La #HourOfCode viene otra vez del 5 al 11 de diciembre. https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Yo he terminado la Hora de Code; ¡Echa un vistazo! @codeorg'
+  just_did_hoc: 'Hice una hora de codigo - #HourOfCode - !Écha un vistazo! @codeorg'
   just_did_course1: "Acabo de terminar el Curso 1 - echa un vistazo! @codeorg"
   just_did_course2: "Acabo de terminar el Curso 2 - échale un vistazo! @codeorg"
   just_did_course3: "Acabo de terminar el Curso 3 - echa un vistazo! @codeorg"
   just_did_course4: "Acabo de terminar el Curso 4 - échale un vistazo! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
   just_did_accelerated: "Acabo de terminar el Curso Acelerado - echa un vistazo! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "¿Por qué no hay más escuelas que enseñen Ciencias de la Computación? Podemos arreglar esto. http://youtu.be/nKIu9yen5nc. Visita http://code.org/ para obtener más información."
   twitter_cs_foundational: "Las Ciencias de la computación son fundamentales para cualquier estudiante para aprender. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Aprende una hora de código"
@@ -885,6 +897,8 @@
   coursef-draft_name: Curso F
   coursef_name: "Curso F"
   accelerated_name: "Curso acelerado"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Tema 1: Información digital'
   cspunit2_name: 'Tema 2: El Internet'
   cspunit3_name: Principios de CS Unidad 3
@@ -926,6 +940,7 @@
   math_category_name: "Matemáticas"
   hoc_category_name: "Hora del Código"
   csf_category_name: "Fundamentos de CS"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'En desarrollo: Cursos A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Principios de CS"
