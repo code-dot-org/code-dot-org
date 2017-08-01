@@ -191,7 +191,7 @@ class AssignToSection extends Component {
         {errorString && (
           <BaseDialog
             isOpen={true}
-            onClose={this.acknowledgeError}
+            handleClose={this.acknowledgeError}
           >
             {errorString}
           </BaseDialog>
