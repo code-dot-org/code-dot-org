@@ -29,7 +29,7 @@ let lastCaptureTimeMs = 0;
  */
  function shouldCapture() {
   const {isShareView, isEmbedView} = getStore().getState().pageConstants;
-  if (!project.getCurrentId() || !project.isOwner || isShareView || isEmbedView) {
+  if (!project.getCurrentId() || !project.isOwner() || isShareView || isEmbedView) {
     return false;
   }
 
