@@ -54,7 +54,7 @@
   csedweek_map_signup: Etkinliğinizi kaydettirin
   csedweek_map_search_placeholder: Kod Saati etkinlikleri ara
   csedweek_map_search_search: Arama
-  csedweek_map_search_reset: Yeniden başla
+  csedweek_map_search_reset: Varsayılana sıfırla
   csedweek_map_legend_title: Açıklama
   csedweek_map_legend_event: Kod Saati Etkinliği
   csedweek_map_legend_cs_tech_jam: Bilgisayar Bilimi Teknolojisi Yarışı
@@ -92,12 +92,12 @@
   congratulations_on_completing_course2: Kurs 2'yi tamamladığınız için tebrikler
   congratulations_on_completing_course3: Kurs 3'ü tamamladığınız için tebrikler
   congratulations_on_completing_course4: Kurs 4'ü tamamladığınız için tebrikler
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Ders A'yı tamamladığınız için tebrikler
+  congratulations_on_completing_courseb: Ders B'yi tamamladığınız için tebrikler
+  congratulations_on_completing_coursec: Ders C'yi tamamladığınız için tebrikler
+  congratulations_on_completing_coursed: Ders D'yi tamamladığınız için tebrikler
+  congratulations_on_completing_coursee: Ders E'yi tamamladığınız için tebrikler
+  congratulations_on_completing_coursef: Ders F'yi tamamladığınız için tebrikler
   congratulations_on_completing_accelerated: Hızlandırılmış kursu tamamladığınız için
     tebrikler
   congrats_next_tutorials_title: Bir üst seviyeye geç
@@ -272,18 +272,42 @@
   learn_classes: En yakın sınıfı bul
   learn_back_to_minecraft: Minecraft'la öğrenin
   hoc_is_here: Bilgisayar bilimini öğrenin. Bu herşeyi değiştirir. https://youtu.be/xJqSu1IbcHg.
-  just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u ziyaret edin!"
+  just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u kontrol edin"
   just_did_course1: Ders1'i yeni bitirdim.@codeorg ile kontrol et
   just_did_course2: Ders2'yi yeni bitirdim. @codeorg ile kontrol et
   just_did_course3: Ders3'ü yeni bitirdim. @codeorg ile kontrol et
   just_did_course4: Ders4'ü yeni bitirdim. @codeorg ile kontrol et
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: Ders A'yı yeni bitirdim. @codeorg ile kontrol edin!
+  just_did_courseb: Ders B'yi yeni bitirdim. @codeorg ile kontrol edin!
+  just_did_coursec: Ders C'yi yeni bitirdim. @codeorg ile kontrol edin!
+  just_did_coursed: Ders D'yi yeni bitirdim. @codeorg ile kontrol edin!
+  just_did_coursee: Ders E'yi yeni bitirdim. @codeorg ile kontrol edin!
+  just_did_coursef: Ders F'yi yeni bitirdim. @codeorg ile kontrol edin!
   just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim. @codeorg ile kontrol et
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
@@ -338,9 +362,8 @@
   homepage_hero_text_satya: "&ldquo;Bilgisayar bilimi dünyadaki en iyi fırsatların
     önünü açabilir.&rdquo; Satya, Microsoft CEO"
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Bilgisayar bilimi, öğrencilere yarının dünyasını yaratmaya imkan verir.&rdquo;
+    Satya, Microsoft Genel Müdürü
   homepage_hero_text_bosh: |-
     &ldquo;Eğer kod yazıyorsanız, hayatınızın seyrini seçebilirsiniz.&rdquo;
     Chris Bosh
@@ -411,7 +434,7 @@
   homepage_slot_text_title_hoc: Saat Kodu
   homepage_slot_text_blurb_hoc: Herkes öğrenebilir. Bugün başlayın.
   homepage_slot_text_link_hoc: Kodlama Saati'ni Deneyin
-  homepage_slot_text_link_about_hoc: About the Hour of Code
+  homepage_slot_text_link_about_hoc: Kad Saati Hakkında
   homepage_slot_text_link_host: Hour of Code organize edin
   homepage_slot_text_link_hocserved: "# hizmet"
   homepage_solot_text_link_volunteer: "`Hour of Code` için gönüllü"
@@ -814,7 +837,7 @@
   dashboard_responses_view: Yanıtları Görüntüle
   dashboard_responses_none: Cevap yok
   dashboard_sections_new_section: Yeni bölüm
-  dashboard_sections_new_google_section: Import section from Google Classroom
+  dashboard_sections_new_google_section: Google Classroom üzerinden bölüm aktar
   dashboard_sections_jumbotron_instruction: Yeni bölümler oluşturun ve onlara öğrenciler
     ekleyin. Bölümler öğrencileri daha küçük gruplara ayırmanızı sağlar böylece öğrencilerin
     gelişimlerini daha iyi takip edebilir ve hesaplarını yönetebilirsiniz.
@@ -928,12 +951,12 @@
   dashboard_course2: 'Ders 2:'
   dashboard_course3: 'Ders 3:'
   dashboard_course4: 'Ders 4 (beta): '
-  dashboard_coursea: 'Course A: '
-  dashboard_courseb: 'Course B: '
-  dashboard_coursec: 'Course C: '
-  dashboard_coursed: 'Course D: '
-  dashboard_coursee: 'Course E: '
-  dashboard_coursef: 'Course F: '
+  dashboard_coursea: 'Ders A: '
+  dashboard_courseb: 'Ders B: '
+  dashboard_coursec: 'Ders C: '
+  dashboard_coursed: 'Ders D: '
+  dashboard_coursee: 'Ders E: '
+  dashboard_coursef: 'Ders F: '
   dashboard_unplugged: Bilgisayarlarınız yok ise bu bağımsız dersleri sınıfınızda
     kullanın.<a href='%{unplugged_url}'>
   dashboard_curriculum: Ders Programı
@@ -1139,6 +1162,8 @@
   coursef-draft_name: Ders F
   coursef_name: Ders F
   accelerated_name: Hızlandırılmış Kurs
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "Ünite 1: Sayısal bilgi"
   cspunit2_name: "Ünite 2: Internet"
   cspunit3_name: Bilgisayar Bilimleri İlkeleri Ünite 3
@@ -1157,6 +1182,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP (Advanced Placement-İleri Düzey Yerleştirme) Performans Görevleri
   csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
   cspassessment_name: Tam test - 50 soru
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
@@ -1183,6 +1209,7 @@
   math_category_name: Matematik
   hoc_category_name: Saat Kodu
   csf_category_name: Bilgisayar bilimleri temeller
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Geliştirme altında: kurslar A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "' 15 - 16' Bilgisayar bilimleri ilkeleri"
@@ -1246,16 +1273,16 @@
   codesters_gradelevel: 12-14 yaş
   texasinstruments_gradelevel: 13-16 yaş
   teacherled_gradelevel: 5+ yaş
-  course1_gradelevel: 4 yaş üstü (çocuk okuyucular)
+  course1_gradelevel: 4-6 yaş arası
   course2_gradelevel: 6 yaş ve üstü (okuma becerisi gerekir)
   course3_gradelevel: 8 yaş ve üstü (Ders 2 sonrası)
   course4_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
-  coursea_gradelevel: Grade 5+
-  courseb_gradelevel: Grade 6+
-  coursec_gradelevel: Grade 7+
+  coursea_gradelevel: 5. ve üzeri Sınıflar
+  courseb_gradelevel: 6. ve üzeri Sınıflar
+  coursec_gradelevel: 7. ve üzeri Sınıflar
   coursed_gradelevel: 8+ sınıfları
-  coursee_gradelevel: Grade 9+
-  coursef_gradelevel: Grade 10+
+  coursee_gradelevel: 9. ve üzeri Sınıflar
+  coursef_gradelevel: 10. ve üzeri Sınıflar
   accelerated_gradelevel: 10 Yaş ve Üstü (Ders 3 sonrası)
   codeorg_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
   codeintl_platformtext: Modern tarayıcılar, akıllı telefonlar, tabletler
@@ -1913,4 +1940,10 @@
   header_documentation: Belgeler
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   csd_name: CS Discoveries
-  full_course_category_name: Full Courses
+  full_course_category_name: Tüm Dersler
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

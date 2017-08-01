@@ -1,6 +1,6 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { combineReducers, createStore } from 'redux';
+import {Provider} from 'react-redux';
+import {combineReducers, createStore} from 'redux';
 import SectionTable from './SectionTable';
 import teacherSections, {
   setValidLoginTypes,
@@ -8,6 +8,7 @@ import teacherSections, {
   setValidAssignments,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import urlHelpers from '@cdo/apps/redux/urlHelpers';
 
 const serverSections = [
   {
@@ -40,6 +41,40 @@ const serverSections = [
     studentCount: 1,
   },
   {
+    id: 20,
+    location: "/v2/sections/20",
+    name: "imported_section",
+    login_type: "clever",
+    grade: null,
+    providerManaged: true,
+    code: "C-1234567890",
+    stage_extras: true,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
+    studentCount: 5,
+  },
+  {
+    id: 21,
+    location: "/v2/sections/21",
+    name: "imported_section_2",
+    login_type: "google_classroom",
+    grade: "7",
+    providerManaged: true,
+    code: "G-12345",
+    stage_extras: true,
+    pairing_allowed: true,
+    script: {
+      id: 36,
+      name: 'course3'
+    },
+    course_id: null,
+    studentCount: 4,
+  },
+  {
     id: 307,
     location: "/v2/sections/307",
     name: "plc",
@@ -64,7 +99,7 @@ const validCourses = [
     script_name: "csd",
     category: "Full Courses",
     position: 1,
-    category_priority: -1,
+    category_priority: 0,
   },
   {
     id: 30,
@@ -72,7 +107,7 @@ const validCourses = [
     script_name: "csp",
     category: "Full Courses",
     position: 0,
-    category_priority: -1,
+    category_priority: 0,
   }];
 
   const validScripts = [
@@ -80,9 +115,9 @@ const validCourses = [
     id: 1,
     name: "Accelerated Course",
     script_name: "20-hour",
-    category: "CS Fundamentals",
+    category: "CS Fundamentals International",
     position: 0,
-    category_priority: 0,
+    category_priority: 3,
   },
   {
     id: 2,
@@ -90,7 +125,7 @@ const validCourses = [
     script_name: "Hour of Code",
     category: "Hour of Code",
     position: 1,
-    category_priority: 0,
+    category_priority: 2,
   },
   {
     id: 3,
@@ -98,7 +133,7 @@ const validCourses = [
     script_name: "edit-code",
     category: "other",
     position: null,
-    category_priority: 3,
+    category_priority: 15,
   },
   {
     id: 4,
@@ -106,7 +141,7 @@ const validCourses = [
     script_name: "events",
     category: "other",
     position: null,
-    category_priority: 3,
+    category_priority: 15,
   },
   {
     id: 36,
@@ -114,7 +149,7 @@ const validCourses = [
     script_name: "course3",
     category: "CS Fundamentals",
     position: 3,
-    category_priority: 0,
+    category_priority: 3,
   },
   {
     id: 46,
@@ -122,7 +157,7 @@ const validCourses = [
     script_name: "infinity",
     category: "Hour of Code",
     position: 12,
-    category_priority: 0,
+    category_priority: 2,
   }
 ];
 
@@ -133,7 +168,7 @@ export default storybook => {
       {
         name: 'section table',
         story: () => {
-          const store = createStore(combineReducers({teacherSections}));
+          const store = createStore(combineReducers({teacherSections, urlHelpers}));
           store.dispatch(setValidLoginTypes(['word', 'email', 'picture']));
           store.dispatch(setValidGrades(["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"]));
           store.dispatch(setValidAssignments(validCourses, validScripts));

@@ -1,3 +1,5 @@
+hidden false
+
 stage 'Debugging: Unspotted Bugs'
 level 'courseB_video_Unspotted'
 
@@ -32,8 +34,6 @@ skin 'jigsaw'
 level 'blockly:Jigsaw:11'
 skin 'jigsaw'
 level 'blockly:Jigsaw:12'
-skin 'jigsaw'
-assessment 'blockly:Jigsaw:13'
 
 stage 'Programming: Happy Maps'
 level 'UnplugHappyMaps'

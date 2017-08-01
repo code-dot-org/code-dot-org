@@ -1,0 +1,45 @@
+- content_for(:head) do
+  = stylesheet_link_tag 'css/pd', media: 'all'
+
+%h1 Manage Facilitator Courses
+
+#application-container
+  = show_flashes.html_safe
+
+%p Enter an Email or User ID to view and edit a Facilitator's Courses
+= form_tag url_for(action: 'facilitator_courses_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :search_term, params[:search_term], class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+  -if @facilitator
+    %table.table.table-hover.table-condensed.table-auto-width
+      %thead
+        %th ID
+        %th Email
+        %th Name
+      %tbody
+        %tr
+          %td= link_to @facilitator.id, action: :facilitator_courses_form, search_term: @facilitator.id
+          %td= @facilitator.email
+          %td= @facilitator.name
+    = form_tag(action: 'assign_course') do
+      %table.table.table-hover.table-condensed.table-auto-width{:id => 'course-table'}
+        %thead
+          %th Action
+          %th Course
+        %tbody
+          - @facilitator.courses_as_facilitator.each do |course|
+            %tr
+              -# TODO: Change this link to use http delete method.  Previous attempts have not worked because
+              -# 'method: :delete' gets interpreted by link_to as a querystring parameter when there are other params
+              %td= link_to 'Remove', action: :remove_course, course: course.course, facilitator_id: @facilitator.id
+              %td= course.course
+          %tr
+            %td
+              .actions
+                = submit_tag('Assign', id: 'submitAssignCourse')
+            %td
+              %input{:hidden => true, :name => "facilitator_id", :value => @facilitator.id}
+              .field
+                = select_tag :course, options_for_select(Pd::Workshop::COURSES)
+            %td

@@ -30,7 +30,7 @@
   - title = t('upsell.unplugged_conditionals.title')
   - body = t('upsell.unplugged_conditionals.body')
 
-- elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME].include? id
+- elsif [Script::COURSE1_NAME, Script::COURSE2_NAME,Script::COURSE3_NAME, Script::COURSE4_NAME, Script::COURSEA_NAME, Script::COURSEB_NAME, Script::COURSEC_NAME, Script::COURSED_NAME, Script::COURSEE_NAME, Script::COURSEF_NAME].include? id
   - url = script_url(id)
   - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
@@ -57,7 +57,7 @@
     - title = data_t_suffix('script.name', id, 'title')
   - body = data_t_suffix('script.name', id, 'description_short')
 
-- if %w(course1 course2 course3 course4).include?(id)
+- if %w(course1 course2 course3 course4 coursea courseb coursec coursed coursee coursef).include?(id)
   - audience = data_t_suffix('script.name', id, 'description_audience')
 
 - block_class = 'courseblock-tall'

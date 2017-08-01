@@ -48,6 +48,10 @@ const PROJECT_INFO = {
     label: i18n.projectTypeMC(),
     thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_mc.png"
   },
+  'minecraft': {
+    label: i18n.projectTypeMinecraft(),
+    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_minecraft.png"
+  },
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_starwars.png"
@@ -60,6 +64,7 @@ const styles = {
   },
   tile: {
     width: 214,
+    height: 70,
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',

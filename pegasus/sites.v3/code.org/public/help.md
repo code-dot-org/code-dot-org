@@ -39,8 +39,8 @@ Support our work and wear the movement with pride. Our hats have been worn by Pr
 [<button>Shop</button>](/shop)
 
 
-## Make a generous donation
-We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate.
+## Make a generous donation or have Amazon do it for you
+We're working to give *every* student the opportunity to learn computer science — online and in schools where we’ll establish permanent courses and train teachers. One child learns for every dollar you donate. If you shop on Amazon, use [AmazonSmile](/donate/amazonsmile) and choose Code.org as your charity to donate a percent of all your purchases to Code.org.
 
 [<button>Please consider a donation</button>](/donate)
 

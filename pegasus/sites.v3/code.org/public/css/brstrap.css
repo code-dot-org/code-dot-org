@@ -57,6 +57,7 @@
   .col-40 { width: 40%; float:left; }
   .col-45 { width: 45%; float:left; }
   .col-50 { width: 50%; float:left; }
+  .col-60 { width: 60%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
   .col-80 { width: 80%; float:left; }
@@ -93,6 +94,7 @@
   .col-40 { width: 100% }
   .col-45 { width: 100%; float:left; }
   .col-50 { width: 100%; float:left; }
+  .col-60 { width: 100% }
   .col-63 { width: 100%;}
   .col-66 { width: 100%; float:left; }
   .col-66 ul { margin-left: 0px;}

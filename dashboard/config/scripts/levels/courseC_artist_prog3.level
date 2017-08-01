@@ -31,18 +31,19 @@
     "disable_examples": "false",
     "impressive": "false",
     "disable_sharing": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To create this window, just draw a square with 100 pixel sides.\\n\\n- move forward\\n- turn\\n- move forward\\n- turn\\n- move forward\\n- turn\\n- move forward\",\"hint_id\":\"courseC_artist_prog3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d5bdad2a8b3ff48e2fc7d97e8ad8c49b/courseC_artist_prog3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Want to make shorter code? Try using a `repeat` loop in this puzzle.\",\"hint_id\":\"courseC_artist_prog3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/56cdf12330da086f81610243bb9031e9/courseC_artist_prog3.mp3\"}]",
     "discard_background": "false",
     "images": "[\r\n  {\"filename\":\"https://images.code.org/ae2988f82299dd799aa3d9b9c21b5416-image-1475779799097.png\",\"position\":[155,115]}, {\"filename\":\"https://images.code.org/b258e7ca52300618822e751aae13f8ad-image-1493072900479.png\",\"position\":[0,0]}, {\"filename\":\"https://images.code.org/ae2988f82299dd799aa3d9b9c21b5416-image-1475779799097.png\",\"position\":[155,115]}\r\n]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-07 17:37:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-07 17:37:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:14:11 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

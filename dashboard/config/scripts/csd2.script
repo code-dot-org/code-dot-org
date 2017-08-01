@@ -1,6 +1,7 @@
 hidden false
 login_required true
 hideable_stages true
+exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'Exploring Websites', flex_category: 'csd2_1'
@@ -22,13 +23,13 @@ level 'CSD U2 HTML Adding Paragraphs', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Adding Paragraphs pt 2', progression: 'Using HTML Tags'
 level 'CSD U2 HTML Debug Paragraphs', progression: 'Using HTML Tags'
 
-stage 'Headers', flex_category: 'csd2_1'
+stage 'Headings', flex_category: 'csd2_1'
 named_level 'CSD U2 L4 Overview'
 named_level 'CSD U2 Pair Programming Video'
-level 'CSD U2 Header Demo', progression: 'Headers'
-level 'CSD U2 Header Sizes', progression: 'Headers'
-level 'CSD Header Size MC', progression: 'Headers'
-level 'CSD U2 Header Test', progression: 'Headers'
+level 'CSD U2 Heading Demo', progression: 'Headings'
+level 'CSD U2 Heading Sizes', progression: 'Headings'
+level 'CSD Header Size MC', progression: 'Headings'
+level 'CSD U2 Heading Test', progression: 'Headings'
 named_level 'CSD U2 Headers map'
 named_level 'CSD U2 PSP Programming'
 level 'CSD U2 Design Project', progression: 'Your Personal Website'

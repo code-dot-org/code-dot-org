@@ -20,7 +20,7 @@ Scenario: Signed out user in English should see 6 header links
 
 Scenario: Student in English should see 2 header links
   Given I create a student named "Sally Student"
-  Then check that I am on "http://studio.code.org/courses"
+  Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
   And I see "#header-student-courses"
   And element "#header-student-courses" contains text "Courses"
