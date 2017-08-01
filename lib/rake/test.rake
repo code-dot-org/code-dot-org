@@ -215,7 +215,7 @@ namespace :test do
 
     desc 'Runs lib tests if lib might have changed from staging.'
     task :lib do
-      run_tests_if_changed('lib', ['lib/**/*']) do
+      run_tests_if_changed('lib', ['Gemfile', 'lib/**/*']) do
         TestRunUtils.run_lib_tests
       end
     end
