@@ -132,7 +132,7 @@ gem 'gemoji'
 gem 'jbuilder', '~> 2.5'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 2.0'
+gem 'cancancan', '~> 1.15.0'
 gem 'devise', '~> 4.2.0'
 gem 'devise_invitable', '~> 1.6.0'
 
