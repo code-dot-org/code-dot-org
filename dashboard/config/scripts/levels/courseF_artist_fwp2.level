@@ -44,11 +44,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-19 17:54:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
-    "sequencing": 4,
-    "debugging": 3,
-    "for_loops": 4,
-    "variables": 5,
-    "functions_with_params": 3
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1,
+    "functions_with_params": 1
   }
 }]]></config>
   <blocks>
