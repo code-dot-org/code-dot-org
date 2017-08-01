@@ -5910,7 +5910,7 @@ en:
               name: 'Functions: Songwriting with Parameters'
           title: Express Course
           description_audience: 'Ages: 9-18'
-          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum in a condensed course for older students.'
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         pre-express:
           stages:
@@ -5942,7 +5942,7 @@ en:
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
-          title: Express Course for Pre-readers
+          title: Pre-reader Express
           description_audience: 'Ages: 4-8'
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
