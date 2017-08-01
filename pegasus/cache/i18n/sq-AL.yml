@@ -93,12 +93,12 @@
   congratulations_on_completing_course2: Urime në përfundimin e Kursit 2
   congratulations_on_completing_course3: Urime në përfundimin e Kursit 3
   congratulations_on_completing_course4: Urime në përfundimin e Kursit 4
-  congratulations_on_completing_coursea: Congratulations on completing Course A
-  congratulations_on_completing_courseb: Congratulations on completing Course B
-  congratulations_on_completing_coursec: Congratulations on completing Course C
-  congratulations_on_completing_coursed: Congratulations on completing Course D
-  congratulations_on_completing_coursee: Congratulations on completing Course E
-  congratulations_on_completing_coursef: Congratulations on completing Course F
+  congratulations_on_completing_coursea: Urime përfunduat Kursin A
+  congratulations_on_completing_courseb: Urime përfunduat Kursin B
+  congratulations_on_completing_coursec: Urime përfunduat Kursin C
+  congratulations_on_completing_coursed: Urime përfunduat Kursin D
+  congratulations_on_completing_coursee: Urime përfunduat Kursin E
+  congratulations_on_completing_coursef: Urime përfunduat Kursin F
   congratulations_on_completing_accelerated: Urime që përfunduat Kursin e Shpejtuar
   congrats_next_tutorials_title: Më pas provoni këto tutoriale
   congrats_next_tutorials_desc: Provoni këto tutoriale 1 orëshe, më të shkurtrat ose
@@ -274,17 +274,41 @@
   just_did_course2: Unë sapo përfundova kursin 2- kontrollojeni atë ! @codeorg
   just_did_course3: Unë sapo përfundova kursin 3- kontrollojeni atë ! @codeorg
   just_did_course4: Unë sapo përfundova kursin 4- kontrollojeni atë ! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: Unë sa përfundova Kursin A - shikoje! @codeorg
+  just_did_courseb: Unë sa përfundova Kursin B - shikoje! @codeorg
+  just_did_coursec: Unë sa përfundova Kursin C - shikoje! @codeorg
+  just_did_coursed: Unë sa përfundova Kursin D - shikoje! @codeorg
+  just_did_coursee: Unë sa përfundova Kursin E - shikoje! @codeorg
+  just_did_coursef: Unë sa përfundova Kursin F - shikoje! @codeorg
   just_did_accelerated: Unë sapo përfundova kursin e përshpejtuar - kontrollojeni
     atë ! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: '9 nga 10 njerëz janë dakord, shkollat duhet të mësojnë shkencën
     kompjuterike.http://youtu.be/nKIu9yen5nc. Vizito https://code.org/. '
-  twitter_cs_foundational: Computer science is foundational for every student to learn.
+  twitter_cs_foundational: Shkenca kompjuterike është bazë për çdo student ta mësojë.
     https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Meso Orën e Kodimit
   beyond_hoc: Përtej Orës së Kodimit
@@ -519,23 +543,24 @@
   minecraft_download_adventurer: 'Shkarko versionin offline të Aventurave Minecraft '
   minecraft_subtitle: Ora e Kodimit Minecraft
   sports_page_title: Sports Hour of Code
-  sports_og_title: Hour of Code Sports Tutorials
-  sports_og_description: Choose between making a basketball game or mix and match
-    across sports.
+  sports_og_title: Nxit vetveten. Çdokush mund të mësoj.
+  sports_og_description: Kampionët dhe medalistët e arit ju enkurajojnë të provoni
+    Orën e Kodit. Kodoni lojrat e juaja sportive.
   sports_title: Krijo lojën tënde sportive
   sports_watch_video: Shiko videon
-  sports_video_title: Push yourself. Anybody can learn.
+  sports_video_title: Nxit vetveten. Çdokush mund të mësoj.
   sports_select_theme: Select your tutorial theme
   sports_basketball_title: Realizo një lojë basketbolli
   sports_all_sports_title: Përziej dhe përshtat sportet
-  sports_featured_athletes: See featured athletes
-  sports_athletes_title: Featured athletes
-  sports_athlete_Draymond: Draymond Green, Olympic Gold Medalist and NBA Champion,
-    Golden State Warriors
-  sports_athlete_Serena: Serena Williams, Olympic Gold Medalist and Tennis Champion
+  sports_featured_athletes: Shiko sportistët e dhënë
+  sports_athletes_title: Sportistët e dhënë
+  sports_athlete_Draymond: Draymond Green, Olimpiku i Medaljes së Arit dhe Kampion
+    i NBA-së, Luftëtarët e Shtetit të Artë
+  sports_athlete_Serena: Serena Williams, Olimpikja e Medaljes së Artë dhe Kampione
+    Tenisi
   sports_athlete_Russell: Russell Okung, Super Bowl Champion and NFL player, Denver
     Broncos
-  sports_athlete_Sergio: Sergio Ramos, World Cup Champion and Soccer/Futbol Player,
+  sports_athlete_Sergio: Sergio Ramos, Kampion i Kupës Botërore dhe lojtar Futbolli,
     Real Madrid
   sports_athlete_Sue: Sue Bird, Olympic Gold Medalist and WNBA Champion, Seattle Storm
   sports_athlete_Alana: Alana Beard, Gold Medalist and WNBA All-Star, Los Angeles
@@ -566,12 +591,12 @@
   video_title_obama: President Obama on computer science
   video_title_hoc_is_here: Hour of Code is Here - Anybody Can Learn
   video_title_anybody_can_learn: Anybody Can Learn
-  video_title_draymond_green: Hour of Code with Draymond Green
-  video_title_russell_okung: Hour of Code with Russell Okung
-  video_title_real_madrid: Hour of Code with Real Madrid
-  video_title_marco_belinelli: Hour of Code with Marco Belinelli
-  video_title_chris_bosh: Chris Bosh on Computer Science
-  video_1min: 1 min
+  video_title_draymond_green: Ora e Kodit me Draymond Green
+  video_title_russell_okung: Ora e Kodit me Rusell Okung
+  video_title_real_madrid: Ora e Kodit me Real Madritin
+  video_title_marco_belinelli: Ora e Koditit me Marco Belinelli
+  video_title_chris_bosh: Chris Bosh në Shkencat Kompjuterike
+  video_1min: 1 minutë
   video_2min: 2 min
   video_5min: 5 min
   speak_another_language: Speak another language?
@@ -608,15 +633,15 @@
   volunteer_engineer_submission_header_shared: Information shared with teachers on
     volunteer map
   volunteer_engineer_submission_field_name: Emri
-  volunteer_engineer_submission_field_name_placeholder: Full Name
-  volunteer_engineer_submission_field_company: Company (or University)
-  volunteer_engineer_submission_field_company_placeholder: Company (or University)
-  volunteer_engineer_submission_field_experience_level: Experience level
-  volunteer_engineer_submission_field_location: Location
+  volunteer_engineer_submission_field_name_placeholder: Emri i plotë
+  volunteer_engineer_submission_field_company: Firma (ose Universiteti)
+  volunteer_engineer_submission_field_company_placeholder: Firma (ose Universiteti)
+  volunteer_engineer_submission_field_experience_level: Niveli i eksperiencës
+  volunteer_engineer_submission_field_location: Lokacioni
   volunteer_engineer_submission_field_location_desc: If you enter your exact address
     we won't share it, just show you as a pin on map.
-  volunteer_engineer_submission_field_location_placeholder: ZIP code, city and state/country,
-    or street address
+  volunteer_engineer_submission_field_location_placeholder: Kodi postal, qyteti dhe
+    shteti, ose adresa e rrugës
   volunteer_engineer_submission_field_location_flexibility: I can help during the
     Hour of Code by... (select all that apply)
   volunteer_engineer_submission_checkbox_after_hoc: I’m interested in volunteering
@@ -625,27 +650,29 @@
     of Code
   volunteer_engineer_submission_field_linkedin: LinkedIn profile
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
-  volunteer_engineer_submission_field_facebook: Facebook profile
+  volunteer_engineer_submission_field_facebook: Facebook profili
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: Përshkrimi
   volunteer_engineer_submission_field_description_desc: Describe your computer science
     experience and how you would like to participate as a volunteer for local teachers.
-  volunteer_engineer_submission_field_description_placeholder: Description of experience
-    and/or participation
-  volunteer_engineer_submission_header_private: Information kept private and never
-    shared
+  volunteer_engineer_submission_field_description_placeholder: Përshkrimi i eksperiencës
+    dhe/ose pjesmarrjes. Nëse flitni gjuhë ndryshe nga Anglishtja, sigurojeni duke
+    e cekur këtu.
+  volunteer_engineer_submission_header_private: Informata u mbajt private dhe nuk
+    shpërndahet
   volunteer_engineer_submission_field_email: Adresa Email-it
-  volunteer_engineer_submission_field_email_desc: Your email address will never be
-    shared, but we'll send you requests from teachers.
+  volunteer_engineer_submission_field_email_desc: Email adresa yte nuk do të shpërndahet,
+    por do ju dërgojmë kërkesat nga mësuesit.
   volunteer_engineer_submission_field_email_placeholder: Adresa Email-it
-  volunteer_engineer_submission_final_paragraph: You will be listed on a map for local
-    teachers to contact you for the Hour of Code or other volunteer opportunities.
-    Your email and exact address will NEVER be shared by us. But the other information
-    (including approximate location) will be publicly viewable by local teachers.
-  volunteer_engineer_submission_checkbox_contact: 'I agree that teachers can contact
-    me for volunteer opportunities (Note: your email address won''t be shared)'
-  volunteer_engineer_submission_checkbox_age_18_plus: I certify that I am at least
-    18 years old.
+  volunteer_engineer_submission_final_paragraph: Ju do të jeni listuar në hartën e
+    mësuesve lokal për t'ju kontaktuar rreth Orës së Kodit ose mundësive tjera vullnetare.
+    Email-i juaj dhe adresa e saktë ASNJËHERË nuk do të shpërndahet nga ana jonë.
+    Por informata tjetër (duke përfshirë lokacionin e përafërt) do të jetë e shikueshme
+    nga ana e mësuesve lokal.
+  volunteer_engineer_submission_checkbox_contact: 'Unë pranoj mësuesit të më kontaktojnë
+    për mundësit vullnetare (Vërejtje: email adresa yte nuk do të shpërdahet)'
+  volunteer_engineer_submission_checkbox_age_18_plus: Unë vërtetoj që jam të paktën
+    18 vjeç.
   volunteer_engineer_submission_submit: Dorëzo
   volunteer_engineer_submission_thankyou: Thank you for signing up to volunteer. Teachers
     will be using <a href="%{url}">this map</a> to search for and contact volunteers
@@ -655,9 +682,9 @@
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 orë në javë
   volunteer_engineer_submission_commitment_five_hrs_per_week: 5 orë në javë
   volunteer_engineer_submission_commitment_now_and_then: Që tani dhe pastaj
-  volunteer_engineer_submission_commitment_annually: 2-3 times per year
-  volunteer_engineer_submission_commitment_monthly: A couple hours per month
-  volunteer_engineer_submission_commitment_weekly: A couple hours per week
+  volunteer_engineer_submission_commitment_annually: 2-3 herë në vit
+  volunteer_engineer_submission_commitment_monthly: Disa orë në muaj
+  volunteer_engineer_submission_commitment_weekly: Disa orë në javë
   volunteer_engineer_submission_commitment_more: Më shumë
   volunteer_engineer_submission_location_flexibility_onsite: Merr pjesë te një shkollë
   volunteer_engineer_submission_location_flexibility_remote: Trajnim në distancë (mësuesë
@@ -669,20 +696,20 @@
   volunteer_engineer_submission_experience_university_student_or_researcher: Student
     i universitetit (ose studiues)
   volunteer_engineer_submission_experience_software_professional: Profesionist Software-i
-  volunteer_engineer_submission_distance_8: 5 miles
-  volunteer_engineer_submission_distance_16: 10 miles
-  volunteer_engineer_submission_distance_24: 15 miles
-  volunteer_engineer_submission_distance_32: 20 miles
-  volunteer_engineer_submission_num_volunteers_5: 5 volunteers
-  volunteer_engineer_submission_num_volunteers_10: 10 volunteers
-  volunteer_engineer_submission_num_volunteers_25: 25 volunteers
-  volunteer_engineer_submission_num_volunteers_50: 50 volunteers
+  volunteer_engineer_submission_distance_8: 5 milje
+  volunteer_engineer_submission_distance_16: 10 milje
+  volunteer_engineer_submission_distance_24: 15 milje
+  volunteer_engineer_submission_distance_32: 20 milje
+  volunteer_engineer_submission_num_volunteers_5: 5 vullnetarë
+  volunteer_engineer_submission_num_volunteers_10: 10 vullnetarë
+  volunteer_engineer_submission_num_volunteers_25: 25 vullnetarë
+  volunteer_engineer_submission_num_volunteers_50: 50 vullnetarë
   volunteer_engineer_submission_type_task_onsite: I want you to visit my classroom
     for technical help and inspiration
   volunteer_engineer_submission_type_task_remote: I want you to Skype into my classroom
     to say a few words of inspiration to the kids
-  volunteer_engineer_submission_type_task_mentor: I'm looking for a mentor to help
-    prepare me for coding with my students
+  volunteer_engineer_submission_type_task_mentor: Jam duke kërkuar një mentor për
+    të më ndihmuar me kodimin me studentët e mij
   petition_age: Mosha
   dashboard_landing_title: Faqja Kryesore e Mësuesit
   dashboard_landing_welcome: Mirë se vini në panelin e ri dhe të përmirësuar të mësuesve.
@@ -695,7 +722,7 @@
   dashboard_landing_new_beta: E re! Provo kurset tona beta për studentët e K-5.
   dashboard_landing_new_k5courses: E re! Provo kurset tona për studentët e K-5.
   dashboard_landing_useful_links: Linke të tjera të dobishme
-  dashboard_landing_classroom_resources: Resources for your classroom
+  dashboard_landing_classroom_resources: Burimet për klasën e juaj
   dashboard_landing_office_hours: Bëni një pyetje privatisht! Vizitoni orën tonë mujore
     të pyetjeve.
   dashboard_landing_print_certificates: Printo çertifikatat për studentët që mbarojnë
@@ -715,11 +742,11 @@
     të ofruara nga partnerët tanë.</a> Mëso të programosh me robota, krijo faqe zyrtare
     në rrjetet sociale, krijo aplikacionin tënd, ose eksploro gjuhë të tjera si C++,
     Ruby, ose Python!
-  dashboard_landing_inspire: Inspire your students with posters, videos, and more.
-  dashboard_landing_video_library: Use a video from the Video Library of computer
-    science concepts.
+  dashboard_landing_inspire: Inspiro studentët tuaj me posterë, video dhe më shumë.
+  dashboard_landing_video_library: Përdor video nga Libraria e Videove të konceptit
+    të shkencave kompjuterike.
   dashboard_landing_report_bug: Request a feature or report a bug.
-  dashboard_landing_teacher_forum: Join the professional learning community.
+  dashboard_landing_teacher_forum: Bashkangjitu komunitetit të mësimit profesional.
   dashboard_hoc_courses: Ora e Kodimit për të gjitha moshat
   dashboard_hoc_courses_desc: Provo të gjitha këto tutoriale më të shkurtra se 1 orë
     me studentët e tu!
@@ -774,7 +801,7 @@
   dashboard_action_remove_confirm: Heqje?
   dashboard_action_done: Përfunduar
   dashboard_action_required: e domosdoshme
-  dashboard_action_print_certificates: Print certificates
+  dashboard_action_print_certificates: Shtyp Certifikatat
   dashboard_assessments_view: 'View assessments in:'
   dashboard_assessments_none: Most teachers measure their students' progress using
     the "View Progress" tab. If you are interested in giving your students additional
@@ -788,9 +815,9 @@
   dashboard_assessments_summaries: Summaries
   dashboard_assessments_answers: All answers
   dashboard_surveys_answers: Surveys
-  dashboard_percent: Percent
+  dashboard_percent: Përqindje
   dashboard_filter_by_stage: 'Filter by stage:'
-  dashboard_filter_all: All
+  dashboard_filter_all: Të gjitha
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Faqja kryesore e mësuesit
   dashboard_navigation_section_student_progress: Llogaritë dhe Ecuria e Studentit
@@ -821,7 +848,7 @@
   dashboard_progress_student_in_script: Progress information for %{student_name} in
     %{script_name}
   dashboard_progress_pair_programming: pair programming
-  dashboard_responses_view: 'View text responses in:'
+  dashboard_responses_view: 'Shiko përgjigjet e mesazheve në:'
   dashboard_responses_none: No text responses
   dashboard_sections_new_section: Seksion i ri
   dashboard_sections_new_google_section: Import section from Google Classroom
@@ -1160,6 +1187,8 @@
   coursef-draft_name: Course F
   coursef_name: Course F
   accelerated_name: Kurs i Avancuar
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Unit 1: Digital Information'
   cspunit2_name: 'Unit 2: The Internet'
   cspunit3_name: 'Unit 3: Programming'
@@ -1178,6 +1207,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Full Test - 50 questions
   cspexam1-mWU7ilDYM9_name: Test Part 1 - 25 questions
@@ -1204,6 +1234,7 @@
   math_category_name: Matematikë
   hoc_category_name: Ora e Kodimit
   csf_category_name: CS Fundamentals
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
@@ -1968,3 +1999,9 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

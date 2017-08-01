@@ -22,6 +22,7 @@
         name: "Ім'я користувача"
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "Електронна пошта"
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: "ім'я користувача"
         password: "пароль"
@@ -213,6 +214,10 @@
       Уроки - цікаві, візуально привабливі і навчають основних понять комп'ютерних наук за допомогою простого керованого ігрового інтерфейсу. Вивчайте код від Білла Гейтса, Марка Цукерберга, Злих Пташок та Рослин проти Зомбі! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -221,6 +226,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "Електронна пошта"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "Запрошення надіслано"
     added_teacher: "%{name} додано як Вашого учителя"
@@ -235,6 +246,9 @@
       section_not_found: "Не вдалося знайти групу з кодом '%{section_code}'."
       blank_code: "Будь ласка, введіть код групи"
       cant_join_own_section: "На жаль, не можна приєднатись до своєї власної групи."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "Повідомлення Code.org: %{student_name} відтепер не є вашим учнем."
@@ -255,6 +269,15 @@
     updated: "%{model} успішно оновлено."
     destroyed: "%{model} успішно вилучено."
     access_denied: "Ви не маєте доступу до %{model}."
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: "Я вже завершив мою Годину коду"
@@ -265,6 +288,7 @@
         calculate: Calculate Something
         applab: "Створити програму в App Lab"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: "Головна"
       courses: "курси"
       project_gallery: Project Gallery
@@ -370,6 +394,12 @@
     no_password_because_sponsored: "Для керування своїм паролем зверніться до свого
       вчителя."
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -713,6 +743,12 @@
         and games with objects and characters that interact with each other.
       audience: "Вік 13+"
       cta: "Почати навчання"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: "Вік 13+"
+      cta: "Почати навчання"
     frozen:
       title: "Крижане серце"
     starwars:
@@ -1023,10 +1059,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "Шукати значок..."
-      no_icons_found: "Значків не знайдено"
   flex_category:
     required: "Огляд"
     content: "Зміст"
@@ -1062,6 +1094,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: "Відмова від відповідальності"
     leaving_domain: "Ви покидаєте цей домен на сайт, який не керується Code.org."

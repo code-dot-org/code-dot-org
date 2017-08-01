@@ -303,8 +303,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       Course 4 Artist 4_callout:
         repeat_full_circle: Enter in the number of times the zombie has to move to
           make a full circle
@@ -441,6 +441,10 @@
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: Use this drop-down to create different snowflakes!
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: All of your favorite blocks are now organized
           into categories.  Click on these words to see where everything went!
@@ -488,8 +492,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
@@ -528,8 +532,8 @@
         New Artist Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace to add them to your program
         New Artist Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       New Frozen Project_callout:
         snowflake_dropdown: Use this drop-down to create different snowflakes!
       New Maker Lab Project_callout: []
@@ -537,8 +541,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       Ninjacat Demo B_callout:
         Ninjacat Demo B: Click `Run` to try out the game
       Ninjacat Demo No Animate_callout:
@@ -601,8 +605,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       Rocket Height Course A_callout:
         pass_function: This start(function) block lets you pass your function (not
           the value your function returns with some input) into the rocket animation
@@ -622,8 +626,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       TestLab_callout: []
       U3 - Simple Drawing - Ellipse and No Fill_callout: []
       U3 - Simple Drawing - Fill_callout: []
@@ -661,15 +665,15 @@
       aE2_callout:
         aE2_1: Still only two of these and two turns
       aE3_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: "Доступно је само неколико ових"
       aE3alternate_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: "Доступно је само неколико ових"
       aE3alternateB_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: "Доступно је само неколико ових"
       aE4_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: "Доступно је само неколико ових"
       aE5_callout:
-        aE3_1: Only a handful of these available
+        aE3_1: "Доступно је само неколико ових"
       aE6_callout:
         aE6_1: Only 1 move forward and 1 turn block
       aEfreeplay_callout:
@@ -682,6 +686,13 @@
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: This number tells you how many of these blocks you can use
           in this puzzle.
+      course2_artist_nestedLoops_challenge2_callout: []
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      course2_collector_loops_challenge2_callout: []
+      course2_collector_prog_challenge1_callout: []
+      course2_collector_prog_challenge2_callout: []
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you
           can use in this puzzle.
@@ -700,18 +711,18 @@
       courseA_collector_loops3_predict1_callout: []
       courseA_forVideoTest_artist_callout: []
       courseA_maze_seq1_callout:
-        courseA_maze_seq1_1: Click the lightbulb when you need a hint!
+        courseA_maze_seq1_1: "Кликни сијалицу када ти треба савет!"
       courseA_maze_seq2_callout:
         courseA_maze_seqA_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
       courseA_maze_seq4_callout:
-        courseA_maze_seq4_1: These blocks are made of stone.  You can move them, but
-          you can't delete them!
+        courseA_maze_seq4_1: "Ови блокови су направљени од камена. Могу да се померају
+          али не могу да се избришу!"
       courseA_maze_seq4a_callout: []
       courseA_playLab_events2_callout: []
       courseA_playLab_events3_callout: []
       courseA_playLab_events4_callout:
-        courseA_playlab_events4_callout1: This is a callout
+        courseA_playlab_events4_callout1: "Ово је облачић"
       courseA_playLab_events5_callout:
         courseA_playLab_events5_1: Click here to change the direction of the event
           arrow.
@@ -729,7 +740,7 @@
         courseB_collector_loops1_1: Do you see some new blocks in the toolbox?  Don't
           worry, we will show you how to use them later in the stage.
       courseB_maze_seq1_callout:
-        courseB_maze_seq1: Click the lightbulb when you need a hint!
+        courseB_maze_seq1: "Кликни сијалицу када ти треба савет!"
       courseB_maze_seq2_callout:
         courseB_maze_seq2_callout1: Use the step button to go step-by-step through
           the program. This will help you find the bug!
@@ -737,6 +748,8 @@
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
           away.
       courseB_maze_seq7_callout: []
+      courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
@@ -904,6 +917,9 @@
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
+          here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -918,6 +934,7 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
@@ -1078,8 +1095,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       courseF_playlab_variables1a_callout:
         courseF_playlab_variables1a_1: The toolbox has been organized into categories
           to make it easier to find the blocks you need.
@@ -1268,8 +1285,8 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       grade4_playlab_test_callout: []
       grade4_review_artist1_callout: []
       grade5_artist_for_loops1b_callout:
@@ -1396,7 +1413,7 @@
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
         New Play Lab Project_callout2: Hit "Run" to save and run your program
-        sign_in_to_save_project: Want to access your project later? Sign in to save
-          this project to your account!
+        sign_in_to_save_project: "Желиш да поново приступиш свом пројекту касније?
+          Пријави се да га сачуваш на свом налогу!"
       testing code callout_callout:
         testing_code_callout: This makes the sprite move!

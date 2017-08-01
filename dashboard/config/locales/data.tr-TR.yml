@@ -713,12 +713,14 @@
         CSF_collector_repeat_loops: Toplayıcı tekrarlama döngüleri
         CSF_collector_text_blocks: 'Bilgisayar bilimleri Temelleri: Toplayıcı'
         CSF_create_functions: Fonksiyonları Oluşturma
-        CSF_debugging_k1_blocks: Debugging
-        CSF_debugging_text_blocks: Debugging
+        CSF_debugging_k1_blocks: Hata Ayıklama (Debugging)
+        CSF_debugging_text_blocks: Hata Ayıklama (Debugging)
         CSF_EF_cs_matters: Bilgisayar Bilimi Önemlidir
         CSF_maze_intro_k1_blocks: Kod Stüdyosu tanıtımı
         CSF_maze_intro_text_blocks: Kod Stüdyosu tanıtımı
         CSF_my_robotic_friends: Robot dostlarım
+        CSF_Power_of_Words: Kelimelerin Gücü
+        CSF_Super_Digital_Citizen: Süper Dijital Vatandaş
         CSF_stevie_big_project: Stevie ve büyük proje
         CSF_unspotted_bugs: Bulunamamış hatalar
         CSF_zuck_loops_short: Döngüleri yineleyin
@@ -732,14 +734,18 @@
         infinity_playlab_intro: Oyun Laboratuvarı - Giriş
         infinity_playlab_events: Oyun Laboratuvarı - Olaylar
         infinity_playlab_repeat_forever: Oyun Laboratuvarı - Sonsuz Döngü
-        csd_concept_computer: What Makes a Computer, a Computer?
-        csd_concept_search: How Search Works
+        csd_concept_computer: Bir bilgisayarı, bilgisayar yapan nedir?
+        csd_concept_search: Arama nasıl çalışır
         csd_gamelab_animation_tab: Animasyon sekmesi
+        csd_gamelab_conditionals_1: Introduction to Conditionals - Part 1
+        csd_gamelab_conditionals_2: Introduction to Conditionals - Part 2
         csd_gamelab_draw_1: Drawing in Game Lab - Part 1
         csd_gamelab_draw_2: Drawing in Game Lab - Part 2
         csd_gamelab_drawloop: Introduction to the Draw Loop
         csd_gamelab_sprites_1: Introduction to Sprites
         csd_gamelab_sprites_2: Animating Sprites
+        csd_gamelab_variables_1: Introduction to Variables - Part 1
+        csd_gamelab_variables_2: Introduction to Variables - Part 2
         csd_gamelab_velocity: Hız
         csd_weblab_intro_1: Lab - Bölüm 1 Web Tanıtım
         csd_weblab_intro_2: Lab - Bölüm 2 Web Tanıtım

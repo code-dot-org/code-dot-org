@@ -262,21 +262,21 @@
           description_audience: ''
           stages:
             'Calc: Defining Variables':
-              name: Defining Variables and Substitution
+              name: "定义变量和替换"
             'Calc: Evaluation Blocks':
-              name: Evaluation Blocks and Arithmetic Expressions
+              name: "评估模块和算数表达式"
             'Eval: Boolean Operators':
               name: "布尔运算符"
             'Eval: Conditionals':
               name: "条件语句"
             'Eval: Defining Functions':
-              name: Composite Functions
+              name: "组合函数"
             'Eval: Functions':
-              name: Solving Word Problems with the Design Recipe
+              name: "用设计方法来解决单词问题"
             'Eval: Strings and Images':
               name: "字符串和图像"
             'Eval: Writing Contracts':
-              name: Writing Contracts
+              name: "书写约束"
             'Play Lab: Animation (Big Game)':
               name: "大游戏-动画"
             'Play Lab: Boolean (Big Game)':
@@ -296,7 +296,7 @@
             'Unplugged: Conditionals and Piecewise Functions':
               name: "离线：条件和分段函数"
             'Unplugged: Contracts':
-              name: 'Unplugged: Contracts, Domain, and Range'
+              name: "线下活动：约束，领域和范围。"
             'Unplugged: The Design Recipe':
               name: "离线：食谱设计"
             'Unplugged: Video Games and Coordinate Planes':
@@ -316,13 +316,13 @@
             programming language used in Code.org CS in Algebra
           stages:
             Defining Simple Functions:
-              name: Defining Simple Functions
+              name: "定义简单函数"
             Defining Variables:
               name: "定义变量"
             Evaluation Blocks:
               name: "赋值模块"
             Making Pictures:
-              name: Making Pictures
+              name: "制作图片"
             The Design Recipe:
               name: "设计食谱"
         K5PD:
@@ -332,29 +332,29 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: "计算机科学教育"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             K-5 Courses:
               name: K-5 课程
             Next Steps:
               name: "下一步"
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: "编程概念： 条件语句"
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: "编程概念： 事件"
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: "编程概念： 函数"
             'Programming Concept: Loops':
-              name: 'Programming Concept: Loops'
+              name: "编程概念： 循环"
             Reflection:
-              name: Reflection
+              name: "反射"
             Teacher Dashboard:
               name: "教师的仪表板"
             Unplugged lessons:
-              name: Unplugged lessons
+              name: "离线课程"
             Writing computer programs:
-              name: Writing computer programs
+              name: "编写计算机程序"
         netsim:
           title: "互联网模拟器"
           description: ''
@@ -527,37 +527,37 @@
           description_short: Make Black and White Images with the pixelation tool
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: "二进制数"
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: "字节和文件大小"
             Encode a Complex Thing:
-              name: Encode an Experience
+              name: "编码一个体验"
             Encoding B&W Images:
-              name: Encoding B&W Images
+              name: "编码一张黑白图片"
             Encoding Color Images:
               name: "编码彩色图像"
             Encoding Numbers in the Real World:
-              name: Encoding Numbers in the Real World
+              name: "在真实世界中编码数字"
             Encoding and Sending Text:
-              name: Encoding and Sending Text
+              name: "编码并发送文本"
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: "有损压缩和文件格式"
             Number Systems:
               name: "数字系统"
             Personal Innovations:
-              name: Personal Innovations
+              name: "个人发明"
             Sending Binary Messages:
-              name: Sending Binary Messages
+              name: "发送二进制消息"
             Sending Binary Messages with the Internet Simulator:
-              name: Sending Binary Messages with the Internet Simulator
+              name: "在互联网模拟器上发送二进制消息"
             Sending Bits in the Real World:
-              name: Sending Bits in the Real World
+              name: "在真实世界中发送数据位"
             Sending Complex Messages:
-              name: Sending Complex Messages
+              name: "发送复杂消息"
             Sending Formatted Text:
-              name: Sending Formatted Text
+              name: "发送有格式的文本"
             Sending Numbers:
-              name: Sending Numbers
+              name: "发送数字"
             Text Compression:
               name: Text Compression
           description_audience: ''
@@ -568,17 +568,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: "课程概述"
             Evaluation Blocks:
               name: "赋值模块"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teacher Dashboard:
               name: "教师的仪表板"
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: "为什么计算机科学属于代数"
         algPDmiami:
           title: Computer Science in Algebra PD
           description: Teach Algebra through Functional Programming
@@ -588,25 +588,25 @@
             Booleans:
               name: "布尔值"
             Design Recipe Practice:
-              name: Design Recipe Practice
+              name: "设计方法练习"
             Evaluation Blocks:
               name: "赋值模块"
             Luigi's Pizza:
               name: "路易吉的比萨"
             Rocket-Height:
-              name: Rocket-Height
+              name: "火箭高度"
             Sam the Bat:
               name: "山姆拍子"
             Strings and Images:
               name: "字符串和图像"
             Your Game - Animation:
-              name: Your Game - Animation
+              name: "你的游戏-动画"
             Your Game - Booleans:
-              name: Your Game - Booleans
+              name: "你的游戏-布尔运算"
             Your Game - Collision Detection:
-              name: Your Game - Collision Detection
+              name: "你的游戏-碰撞检测"
             Your Game - Player Movement:
-              name: Your Game - Player Movement
+              name: "你的游戏-移动角色"
         text-compression:
           title: Text Compression
           description: Compress text by identifying repeated patterns.
@@ -621,17 +621,17 @@
           description_short: 'Phase 1: Online Introduction for CSP'
           stages:
             Exploring CSP Instructional Materials:
-              name: Exploring CSP Instructional Materials
+              name: "浏览计算机科学教材"
             Growth Mindset:
-              name: Growth Mindset
+              name: "增长思维"
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: "计算机科学的影响"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             What is CSP?:
               name: "什么是计算机职业资格认证"
         CSPLessonSamples:
@@ -650,17 +650,17 @@
           description_short: 'Phase 1: Online Introduction'
           stages:
             Growth Mindset:
-              name: Growth Mindset
+              name: "增长思维"
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: "计算机科学的影响"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             What is ECS?:
-              name: What is ECS?
+              name: "什么是ECS？"
         sciencePD:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -678,7 +678,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -777,9 +777,9 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: "计算机科学教育"
             Course Overview:
-              name: Course Overview
+              name: "课程概述"
             Evaluation Blocks:
               name: "赋值模块"
             Next Steps:
@@ -799,17 +799,17 @@
           logo_image: nextech_logo.png
           stages:
             Growth Mindset:
-              name: Growth Mindset
+              name: "增长思维"
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: "计算机科学的影响"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             What is ECS?:
-              name: What is ECS?
+              name: "什么是ECS？"
         ECSPD-iZone:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -817,17 +817,17 @@
           logo_image: izone_logo.png
           stages:
             Growth Mindset:
-              name: Growth Mindset
+              name: "增长思维"
             Impact of Computer Science:
-              name: Impact of Computer Science
+              name: "计算机科学的影响"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             What is ECS?:
-              name: What is ECS?
+              name: "什么是ECS？"
         algebraPD-NexTech:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -836,17 +836,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: "课程概述"
             Evaluation Blocks:
               name: "赋值模块"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teacher Dashboard:
               name: "教师的仪表板"
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: "为什么计算机科学属于代数"
         algebraPD-iZone:
           title: Computer Science in Algebra PD
           description: 'Phase 1: Online Introduction'
@@ -855,17 +855,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: "课程概述"
             Evaluation Blocks:
               name: "赋值模块"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teacher Dashboard:
               name: "教师的仪表板"
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: "为什么计算机科学属于代数"
         sciencePD-NexTech:
           title: Computer Science in Science PD
           description: 'Phase 1: Online Introduction'
@@ -884,7 +884,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -915,7 +915,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -1043,7 +1043,7 @@
             Luigi's Pizza:
               name: "路易吉的比萨"
             Rocket-Height:
-              name: Rocket-Height
+              name: "火箭高度"
             Sam the Bat:
               name: "山姆拍子"
             Strings and Images:
@@ -1141,7 +1141,7 @@
             Booleans:
               name: "布尔值"
             Course Overview:
-              name: Course Overview
+              name: "课程概述"
             Defining Functions:
               name: "定义函数"
             Defining Variables:
@@ -1153,13 +1153,13 @@
             Next Steps:
               name: "下一步"
             Rocket-Height:
-              name: Rocket-Height
+              name: "火箭高度"
             Strings and Images:
               name: "字符串和图像"
             Teacher Dashboard:
               name: "教师的仪表板"
             Writing Contracts:
-              name: Writing Contracts
+              name: "书写约束"
         cspfacilitator:
           title: 'CS Principles Facilitator Workshop '
           description: Online levels for PD workshop
@@ -1542,7 +1542,7 @@
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ECSPD3-Unit3:
@@ -1558,7 +1558,7 @@
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -1576,7 +1576,7 @@
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -2122,17 +2122,17 @@
           description_audience: ''
           stages:
             Course Overview:
-              name: Course Overview
+              name: "课程概述"
             Evaluation Blocks:
               name: "赋值模块"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Preparing for in-person PD:
-              name: Preparing for in-person PD
+              name: "准备面对面的PD"
             Teacher Dashboard:
               name: "教师的仪表板"
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: "为什么计算机科学属于代数"
         algebraPD3c:
           title: Computer Science in Algebra PD
           description: CS in Algebra end of year reflection
@@ -2156,7 +2156,7 @@
           description_audience: ''
           stages:
             Binary Numbers:
-              name: Binary Numbers
+              name: "二进制数"
             CS Principles Pre-survey:
               name: CS Principles Pre-survey
             Encoding and Sending Formatted Text:
@@ -2168,17 +2168,17 @@
             Packets and Making a Reliable Internet:
               name: Packets and Making a Reliable Internet
             Personal Innovations:
-              name: Personal Innovations
+              name: "个人发明"
             Practice PT - The Internet and Society:
               name: Practice PT - The Internet and Society
             Routers and Redundancy:
               name: Routers and Redundancy
             Sending Binary Messages:
-              name: Sending Binary Messages
+              name: "发送二进制消息"
             Sending Binary Messages with the Internet Simulator:
-              name: Sending Binary Messages with the Internet Simulator
+              name: "在互联网模拟器上发送二进制消息"
             Sending Numbers:
-              name: Sending Numbers
+              name: "发送数字"
             The Internet:
               name: "互联网"
             The Need for Addressing:
@@ -2209,7 +2209,7 @@
           description_audience: ''
           stages:
             Bytes and File Sizes:
-              name: Bytes and File Sizes
+              name: "字节和文件大小"
             Check Your Assumptions:
               name: Check Your Assumptions
             Cleaning Data:
@@ -2221,7 +2221,7 @@
             Encode a Complex Thing:
               name: Encode a Complex Thing
             Encoding B&W Images:
-              name: Encoding B&W Images
+              name: "编码一张黑白图片"
             Encoding Color Images:
               name: "编码彩色图像"
             Finding Trends with Visualizations:
@@ -2231,7 +2231,7 @@
             Intro to Data:
               name: Intro to Data
             Lossy Compression and File Formats:
-              name: Lossy Compression and File Formats
+              name: "有损压缩和文件格式"
             Making Data Visualizations:
               name: Making Data Visualizations
             Practice PT - Tell a Data Story:
@@ -2550,7 +2550,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2605,11 +2605,11 @@
             Evaluation Blocks:
               name: "赋值模块"
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Teacher Dashboard:
               name: "教师的仪表板"
             Why Computer Science belongs in Algebra:
-              name: Why Computer Science belongs in Algebra
+              name: "为什么计算机科学属于代数"
         sciencePD1:
           title: 'CS in Science: Part 1'
           description: In Partnership with Project GUTS
@@ -2627,7 +2627,7 @@
             Introduction to Computational Science:
               name: Introduction to Computational Science
             Introduction to PD:
-              name: Introduction to PD
+              name: "职业发展介绍"
             Introduction to StarLogo Nova:
               name: Introduction to StarLogo Nova
             Post-Survey:
@@ -2682,7 +2682,7 @@
             Running a Constructive Classroom:
               name: Running a Constructive Classroom
             Sending Binary Messages:
-              name: Sending Binary Messages
+              name: "发送二进制消息"
             Strategies for Student Writing:
               name: Strategies for Student Writing
             Supporting Peer Learning:
@@ -3194,7 +3194,7 @@
             Lesson Overviews:
               name: Lesson Overviews
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             Unit 2 Challenge:
               name: Unit 2 Challenge
         ecs-unit3:
@@ -3210,7 +3210,7 @@
             Intro to Unit 3:
               name: Intro to Unit 3
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             Unit 3 Challenge:
               name: Unit 3 Challenge
             Unit 3 Day-by-Day:
@@ -3228,7 +3228,7 @@
             Intro to Unit 4:
               name: Intro to Unit 4
             Teaching Strategies:
-              name: Teaching Strategies
+              name: "教学策略"
             Unit 4 Challenge:
               name: Unit 4 Challenge
             Unit 4 Day-by-Day:
@@ -4383,6 +4383,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -6452,6 +6454,8 @@
               name: Events in Play Lab
             More Programming in Maze:
               name: More Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6491,6 +6495,8 @@
               name: "二进制的手镯"
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7097,6 +7103,8 @@
                 practice conditionals. It features characters and settings from Minecraft,
                 and students will complete tasks such as mining and building structures
                 using their programs.
+            Functions in Bee:
+              name: Functions in Bee
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7220,3 +7228,333 @@
           description_audience: brook, dani, mal
           description_short: NA
           description: NA
+        csp1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete your Deeper Learning:
+              name: Complete your Deeper Learning
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CSP Unit 1 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 1 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning:
+              name: Complete Unit 2 Deeper Learning
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CSP Unit 2 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 2 Deeper Learning materials for CSP facilitators
+            in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CSP Unit 3 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 3 Deeper Learning materials for CSP facilitators
+            in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CSP Unit 4 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CSP Unit 5 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csd1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CS Discoveries Unit 1 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 1 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you''ve submitted your own reflections for the unit. '
+        csd6-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Complete Unit 6 Deeper Learning Reflections
+          title: CS Discoveries Unit 6 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 6 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 6 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CS Discoveries Unit 5 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 5 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 5 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CS Discoveries Unit 4 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 4 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 4 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CS Discoveries Unit 3 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 3 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 3 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CS Discoveries Unit 2 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 2 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 2 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        allthettsthings:
+          stages:
+            TTS:
+              name: TTS
+        express:
+          stages:
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programming Unplugged: My Robotic Friends'
+            Introduction:
+              name: "介绍"
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            Internet:
+              name: "互联网"
+            Digital Citizenship:
+              name: "数字公民"
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            Events in Bounce:
+              name: Events in Bounce
+            Build a Flappy Game:
+              name: Build a Flappy Game
+            Conditionals with Cards:
+              name: "用 扑克牌 的 条件子句"
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Envelope Variables:
+              name: "封装变量"
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: "计数循环的乐趣"
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: "通过输入参数来作曲。"
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+            Events in Star Wars:
+              name: Events in Star Wars
+            Events with Flappy:
+              name: Events with Flappy
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        pre-express:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed':
+              name: "真实算法： 播种一颗种子"
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Programming in Maze:
+              name: Programming in Maze
+            'Programming: Star Wars':
+              name: 'Programming: Star Wars'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Collector:
+              name: Loops in Collector
+            Loops in Artist:
+              name: Loops in Artist
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Play Lab:
+              name: Events in Play Lab
+            Spelling Bee:
+              name: "拼字比赛"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: "感谢"
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: new stage
+            test satge:
+              name: test satge
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

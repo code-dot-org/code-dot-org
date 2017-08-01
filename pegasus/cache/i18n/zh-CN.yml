@@ -221,6 +221,30 @@
   just_did_coursee: "我刚完成了课程E - 来看看！@codeorg"
   just_did_coursef: "我刚完成了课程F - 来看看！@codeorg"
   just_did_accelerated: "我刚完成加速课程- 请查看！@codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
   twitter_cs_foundational: "计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "学习编程一小时"
@@ -262,10 +286,7 @@
   homepage_hero_text_sheryl: "&ldquo;我们的孩子 &mdash; 包括我们的女孩儿 &mdash; 需要学习计算机科学的机会。&rdquo;
     谢丽尔，Facebook 首席运营官说"
   homepage_hero_text_satya: "&ldquo;计算机科学可以打开这个世界里最好的机会&rdquo;萨提亚，微软首席执行官世界。"
-  homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+  homepage_hero_text_satya_new: "&ldquo;计算机科学给予了学生创建未来世界的力量。&rdquo;萨提亚，微软首席执行官。"
   homepage_hero_text_bosh: "&ldquo;如果你学习编程，你就可以选择自己人生的方向&rdquo;克里斯 波什说"
   homepage_hero_text_student1: "&ldquo;这些技能已经改变了我的未来。更不用说，这其实和玩差不多。&rdquo;卢娜，七年级"
   homepage_hero_text_student2: "&ldquo;我从未看到我的孩子们如此兴奋的学习。 &rdquo;麦克老师"
@@ -918,6 +939,8 @@
   coursef-draft_name: "课程 F"
   coursef_name: "课程 F"
   accelerated_name: "加速课程"
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
   cspunit3_name: "（旧版）第3单元︰ 编程"
@@ -936,6 +959,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
   cspassessment_name: "完整测试 - 共50题"
   cspexam1-mWU7ilDYM9_name: "测试部分 1 - 25 个问题"
@@ -962,10 +986,11 @@
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: "开发中：课程A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: 15-16 计算机原理
-  csp17_category_name: 16-17 计算机原理
+  csp17_category_name: "计算机原理"
   cspexams_category_name: "计算机原理练习测试"
   research_studies_category_name: Research Studies
   applab_name: "应用实验室"
@@ -1464,3 +1489,9 @@
   csp_name: "计算机科学原理"
   csd_name: CS Discoveries
   full_course_category_name: "完整课程"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

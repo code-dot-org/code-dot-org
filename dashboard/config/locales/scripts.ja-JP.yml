@@ -5,9 +5,9 @@
         course1:
           title: "コース1"
           description: "コース 1 は、初心者でも作れるようにデザインされています。他の人とのコラボレーションを行う、問題解決スキルを育てる、難しいタスクをやり続ける、といったことを学びます。このコースを終えると、子供達は、個性にあふれたゲームやストーリーを作り、シェアできるようになるでしょう。小学
-            1 年生 (5-7歳) におすすめのコースです。"
+            1 年生 (5-7才) におすすめのコースです。"
           description_short: "コース１は初心者向けです。"
-          description_audience: 4-6 歳対象
+          description_audience: 4-6 才
           stages:
             'Artist: Loops':
               name: "アーティスト：ループ"
@@ -49,7 +49,7 @@
           title: "コース2"
           description: "コース2は、読み書きができてプログラミング経験のない生徒のためのコースです。このコースでは、問題を解くプログラムやインタラクティブなゲームや物語を作ってシェアします。2年生〜5年生向け。"
           description_short: "コース2は読み書きができる生徒のためのコースです。"
-          description_audience: 6さい いじょう(よむことができること)
+          description_audience: 6才以上(読み書きができる)
           stages:
             'Artist: Debugging':
               name: "アーティスト：デバッグ"
@@ -70,7 +70,7 @@
             Conditionals:
               name: "条件"
             Flappy:
-              name: Flappy
+              name: "フラッピー"
             Getting Loopy:
               name: Getting Loopy
             Graph Paper Programming:
@@ -167,64 +167,58 @@
               name: "アーティスト"
         course4:
           title: "コース4"
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description: "コース 4は、 コース 2 と 3 を終了した学生向けです。彼らは、それぞれの挑戦を解決するときにいくつかの概念を結合する方法を学ぶように高められた複雑なパズルに取り組む方法を学びます。このコースを完了した時、学生は、ループのパラメーターを持つ関数を含む、複数なスキルを必要とされるプログラムが作れるようになります。4～8年生にお勧めです。"
           description_short: "コース4を始める前に、コース2とコース3を終わらせてください。"
-          description_audience: 10-18 才
+          description_audience: 9-18 才
           stages:
             Artist:
               name: "アーティスト"
             Artist Binary:
               name: "芸術家　２進法"
             'Artist: For Loops':
-              name: "芸術家：ループ用"
+              name: "アーティスト：ループ"
             'Artist: Functions':
               name: "アーティスト：関数"
             'Artist: Functions with Parameters':
-              name: "芸術家：　変数装置（パラメータ）をつけた関数"
+              name: "アーティスト：パラメータ付き関数"
             'Artist: Variables':
               name: "アーティスト：変数（へんすう）"
             'Bee: For Loops':
               name: "みつばち：ループ"
             'Bee: Functions with Parameters':
-              name: "みつばち：パラメーター（引数）付きの関数"
+              name: "みつばち：パラメーター付き関数"
             Extreme Challenge - Comprehensive:
-              name: Extreme Challenge - Comprehensive
+              name: "エクストリーム チャレンジ - 総合"
             Maze and Bee:
               name: "迷路とみつばち"
             'Play Lab: For Loops':
-              name: 'Play Lab: For Loops'
+              name: "プレイラボ：ループ"
             'Play Lab: Functions with Parameters':
-              name: "ラボを再生する：関数のパラメータを持ちます"
+              name: "プレイラボ：パラメータ付き関数"
             'Play Lab: Variables':
-              name: "ラボ再生：変数"
+              name: "プレイラボ：変数"
             Super Challenge - For Loops:
-              name: Super Challenge - For Loops
+              name: "スーパー チャレンジ - ループ"
             Super Challenge - Functions and Parameters:
-              name: Super Challenge - Functions and Parameters
+              name: "スーパー チャレンジ - 関数とパラメーター"
             Super Challenge - Variables:
-              name: Super Challenge - Variables
+              name: "スーパー チャレンジ - 変数"
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: "アンプラグド: バイナリ"
             'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
+              name: "アンプラグド: 変数"
             'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
+              name: "アンプラグド：ループ"
             'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
+              name: "アンプラグド: マドリブス"
             'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
+              name: "アンプラグド: 作曲"
             'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
+              name: "アンプラグド: タングラム"
         Course4pre:
-          title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
+          title: "コース 4 を始める前に"
+          description: "コース 2 と 3 を終えていない学生のための、概念の簡単な復習。"
+          description_short: "コース 2 と 3 を終えていない学生のための、概念の簡単な復習。"
           description_audience: ''
           stages:
             'Artist: Functions':
@@ -482,13 +476,13 @@
             Studio:
               name: Studio
         flappy:
-          title: Flappy Code
-          description: 10分以内で自分だけのゲームを作ってみませんか？Flappy Codeを試す
+          title: "フラッピー コード"
+          description: 10分以内で自分だけのゲームを作ってみませんか？フラッピー コードを やってみよう！
           description_short: Write your own Flappy game!
           description_audience: ''
           stages:
             Flappy Code:
-              name: Flappy Code
+              name: "フラッピー コード"
         jigsaw:
           title: "ジグソーパズル"
           description: Try our Jigsaw tutorial.
@@ -1083,7 +1077,7 @@
             Farmer:
               name: Farmer
             Flappy:
-              name: Flappy
+              name: "フラッピー"
             Free Response:
               name: Free Response
             Gamelab:
@@ -3138,15 +3132,15 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: "芸術家：ループ用"
+              name: "アーティスト：ループ"
             'Artist: Functions with Parameters':
-              name: "芸術家：　変数装置（パラメータ）をつけた関数"
+              name: "アーティスト：パラメータ付き関数"
             'Artist: Variables':
               name: "アーティスト：変数（へんすう）"
             'Bee: For Loops':
               name: "みつばち：ループ"
             'Bee: Functions with Parameters':
-              name: "みつばち：パラメーター（引数）付きの関数"
+              name: "みつばち：パラメーター付き関数"
             Digital Citizenship:
               name: Digital Citizenship
             Explore project ideas:
@@ -3160,15 +3154,15 @@
             'Final Project - Work Day: Build Project Online':
               name: 'Final Project - Work Day: Build Project Online'
             'Play Lab: Variables':
-              name: "ラボ再生：変数"
+              name: "プレイラボ：変数"
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
+              name: "アンプラグド: 変数"
             'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
+              name: "アンプラグド：ループ"
             'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
+              name: "アンプラグド: 作曲"
         ecs-unit1:
           title: ECS Part 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -3747,7 +3741,7 @@
             Exploring the Neighborhood:
               name: Exploring the Neighborhood
             Flappy:
-              name: Flappy
+              name: "フラッピー"
             Getting Loopy with Puppy:
               name: Getting Loopy with Puppy
             Make a Dog Tag:
@@ -4414,6 +4408,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4755,7 +4751,7 @@
             Pre Hour of Code Survey:
               name: Pre Hour of Code Survey
             Flappy Code:
-              name: Flappy Code
+              name: "フラッピー コード"
             Post Hour of Code Survey:
               name: Post Hour of Code Survey
         coursea-draft:
@@ -4925,7 +4921,7 @@
             Digital Citizenship:
               name: Digital Citizenship
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: "アンプラグド: バイナリ"
             Artist Binary:
               name: "芸術家　２進法"
             Nested Loops in Bee:
@@ -6517,6 +6513,8 @@
               name: Events in Play Lab
             More Programming in Maze:
               name: More Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6556,6 +6554,8 @@
               name: "バイナリブレスレット"
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -6697,7 +6697,7 @@
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: "アンプラグド: バイナリ"
               description_student: 'Learn how computers store pictures using simple
                 ideas like on and off. '
               description_teacher: Though many people think of binary as strictly
@@ -7162,6 +7162,8 @@
                 practice conditionals. It features characters and settings from Minecraft,
                 and students will complete tasks such as mining and building structures
                 using their programs.
+            Functions in Bee:
+              name: Functions in Bee
           title: 'CS Fundamentals: Course F'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7285,3 +7287,333 @@
           description_audience: brook, dani, mal
           description_short: NA
           description: NA
+        csp1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete your Deeper Learning:
+              name: Complete your Deeper Learning
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CSP Unit 1 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 1 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning:
+              name: Complete Unit 2 Deeper Learning
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CSP Unit 2 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 2 Deeper Learning materials for CSP facilitators
+            in training '
+          description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CSP Unit 3 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Unit 3 Deeper Learning materials for CSP facilitators
+            in training '
+          description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CSP Unit 4 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csp5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CSP Unit 5 Deeper Learning
+          description_audience: CS Principles Facilitators in Training
+          description_short: 'Deeper Learning materials for CSP facilitators in training '
+          description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP
+            facilitators in training. Here you will find reflection prompts and guidances
+            for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum.
+            Peer review items are available at the bottom of this page, once you''ve
+            submitted your own reflections for the unit. '
+        csd1-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 1 Deeper Learning Reflections:
+              name: Complete Unit 1 Deeper Learning Reflections
+          title: CS Discoveries Unit 1 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 1 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you''ve submitted your own reflections for the unit. '
+        csd6-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 6 Deeper Learning Reflections:
+              name: Complete Unit 6 Deeper Learning Reflections
+          title: CS Discoveries Unit 6 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 6 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 6 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd5-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 5 Deeper Learning Reflections:
+              name: Complete Unit 5 Deeper Learning Reflections
+          title: CS Discoveries Unit 5 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 5 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 5 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd4-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 4 Deeper Learning Reflections:
+              name: Complete Unit 4 Deeper Learning Reflections
+          title: CS Discoveries Unit 4 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 4 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 4 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd3-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 3 Deeper Learning Reflections:
+              name: Complete Unit 3 Deeper Learning Reflections
+          title: CS Discoveries Unit 3 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 3 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 3 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        csd2-dlp:
+          stages:
+            Deeper Learning Overview:
+              name: Deeper Learning Overview
+            Complete Unit 2 Deeper Learning Reflections:
+              name: Complete Unit 2 Deeper Learning Reflections
+          title: CS Discoveries Unit 2 Deeper Learning
+          description_audience: CS Discoveries Facilitators in Training
+          description_short: 'Deeper Learning materials for CS Discoveries facilitators
+            in training '
+          description: This is Unit 2 of the Deeper Learning Plan for Code.org CS
+            Discoveries facilitators in training. Here you will find reflection prompts
+            and guidances for demonstrating proficiency of Unit 2 of the Code.org
+            CS Discoveries Curriculum. Peer review items are available at the bottom
+            of this page, once you've submitted your own reflections for the unit.
+        allthettsthings:
+          stages:
+            TTS:
+              name: TTS
+        express:
+          stages:
+            'Programming Unplugged: My Robotic Friends':
+              name: 'Programming Unplugged: My Robotic Friends'
+            Introduction:
+              name: "はじめに"
+            'Algorithms: Graph Paper Programming':
+              name: 'Algorithms: Graph Paper Programming'
+            'Algorithms: Relay Programming':
+              name: 'Algorithms: Relay Programming'
+            Debugging in Collector:
+              name: Debugging in Collector
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Artist:
+              name: Loops in Artist
+            Nested Loops Project in Artist:
+              name: Nested Loops Project in Artist
+            Internet:
+              name: "インターネット"
+            Digital Citizenship:
+              name: Digital Citizenship
+            Screen Out the Mean:
+              name: Screen Out the Mean
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+            Events in Bounce:
+              name: Events in Bounce
+            Build a Flappy Game:
+              name: Build a Flappy Game
+            Conditionals with Cards:
+              name: "カードと条件"
+            While Loops in Farmer:
+              name: While Loops in Farmer
+            Conditionals & Loops in Maze:
+              name: Conditionals & Loops in Maze
+            Conditionals in Minecraft:
+              name: Conditionals in Minecraft
+            Conditionals & Loops in Farmer:
+              name: Conditionals & Loops in Farmer
+            Envelope Variables:
+              name: Envelope Variables
+            Variables in Artist:
+              name: Variables in Artist
+            Variables in Play Lab:
+              name: Variables in Play Lab
+            For Loop Fun:
+              name: For Loop Fun
+            For Loops in Bee:
+              name: For Loops in Bee
+            For Loops in Artist:
+              name: For Loops in Artist
+            Songwriting with Parameters:
+              name: "パラメーターで歌や曲をつくる"
+            Functions in Bee:
+              name: Functions in Bee
+            Functions with Parameters in Artist:
+              name: Functions with Parameters in Artist
+            Functions with Parameters in Bee:
+              name: Functions with Parameters in Bee
+            Explore Project Ideas:
+              name: Explore Project Ideas
+            The Design Process:
+              name: The Design Process
+            Build Your Project:
+              name: Build Your Project
+            Revise Your Project:
+              name: Revise Your Project
+            Present Your Project:
+              name: Present Your Project
+            Nested Loops Project in Frozen:
+              name: Nested Loops Project in Frozen
+            'How it Works: The Internet':
+              name: 'How it Works: The Internet'
+            'Common Sense Education: Digital Citizenship':
+              name: 'Common Sense Education: Digital Citizenship'
+            'Common Sense Education: Screen Out the Mean':
+              name: 'Common Sense Education: Screen Out the Mean'
+            Events in Star Wars:
+              name: Events in Star Wars
+            Events with Flappy:
+              name: Events with Flappy
+            'Conditionals: Conditionals with Cards':
+              name: 'Conditionals: Conditionals with Cards'
+            Conditional Loops in Maze:
+              name: Conditional Loops in Maze
+            'Variables: Envelope Variables':
+              name: 'Variables: Envelope Variables'
+            'For Loops: For Loop Fun':
+              name: 'For Loops: For Loop Fun'
+            'Functions: Songwriting with Parameters':
+              name: 'Functions: Songwriting with Parameters'
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        pre-express:
+          stages:
+            'Debugging: Unspotted Bugs':
+              name: 'Debugging: Unspotted Bugs'
+            'Persistence & Frustration: Stevie and the Marbles':
+              name: 'Persistence & Frustration: Stevie and the Marbles'
+            'Real-life Algorithms: Plant a Seed':
+              name: "現実のアルゴリズム：種を植えましょう"
+            Learn to Drag and Drop:
+              name: Learn to Drag and Drop
+            'Online Safety: Your Digital Footprint':
+              name: 'Online Safety: Your Digital Footprint'
+            'Programming: My Robotic Friends':
+              name: 'Programming: My Robotic Friends'
+            Programming in Maze:
+              name: Programming in Maze
+            'Programming: Star Wars':
+              name: 'Programming: Star Wars'
+            'Loops: My Loopy Robotic Friends':
+              name: 'Loops: My Loopy Robotic Friends'
+            Loops in Collector:
+              name: Loops in Collector
+            Loops in Artist:
+              name: Loops in Artist
+            'Events: The Big Event':
+              name: 'Events: The Big Event'
+            Events in Play Lab:
+              name: Events in Play Lab
+            Spelling Bee:
+              name: "つづりみつばち"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: "ありがとう"
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: new stage
+            test satge:
+              name: test satge
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''

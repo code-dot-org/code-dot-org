@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import experiments from '@cdo/apps/util/experiments';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import { renderSectionsPage } from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -193,6 +194,13 @@ function main() {
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionsController'
+      }
+    );
 
     // Angular does not offer a reliable way to wait for the template to load,
     // so do it using a custom event here.
@@ -203,6 +211,14 @@ function main() {
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
                                              function ($scope, $routeParams, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'StudentDetailController'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
@@ -217,11 +233,16 @@ function main() {
 
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
-
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionDetailController'
+      }
+    );
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
 
     // error handling
     $scope.genericError = function (result) {
@@ -236,14 +257,13 @@ function main() {
       }
     });
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.students.$promise.catch($scope.genericError);
 
     $scope.tab = $routeParams.tab;
 
     $scope.section.$promise.then(
       function ( section ){
         if (!$scope.tab) {
-          if ($scope.section.studentCount > 0) {
+          if ($scope.section.students.length > 0) {
             $location.path('/sections/' + $routeParams.id + '/progress');
           } else {
             $location.path('/sections/' + $routeParams.id + '/manage');
@@ -260,6 +280,10 @@ function main() {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
+
+    $scope.teacher_managed_section = function (section) {
+      return ['email', 'word', 'picture'].includes(section.login_type);
+    };
 
     $scope.age_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "21+"];
 
@@ -280,7 +304,7 @@ function main() {
       );
 
       newStudent.$promise.catch($scope.genericError);
-      $scope.students[$scope.students.indexOf(student)] = newStudent;
+      $scope.section.students[$scope.section.students.indexOf(student)] = newStudent;
     };
 
     $scope.save = function (students) {
@@ -305,13 +329,13 @@ function main() {
       if (newStudents && newStudents.length > 0) {
         // remove 'new' students from array
         $.each(newStudents, function (index, student) {
-          $scope.students.splice($scope.students.indexOf(student), 1);
+          $scope.section.students.splice($scope.section.students.indexOf(student), 1);
         });
 
         // add the results from the service to the array
         sectionsService.addStudents({id: $scope.section.id}, newStudents, function (resultStudents) {
           $.each(resultStudents, function (index, student) {
-            $scope.students.unshift(student);
+            $scope.section.students.unshift(student);
           });
         }).$promise.catch($scope.genericError);
       }
@@ -321,7 +345,7 @@ function main() {
         studentsService.update({id: student.id}, student).$promise.then(
           function (result_student) {
             result_student.editing = false;
-            $scope.students[$scope.students.indexOf(student)] = result_student;
+            $scope.section.students[$scope.section.students.indexOf(student)] = result_student;
           }
         ).catch($scope.genericError);
       });
@@ -334,7 +358,7 @@ function main() {
     $scope.del = function (student) { // note -- IE doesn't like it when you name things 'delete'
       sectionsService.removeStudent({id: $scope.section.id, studentId: student.id}).$promise.then(
         function () {
-          $scope.students.splice($scope.students.indexOf(student), 1); // remove from array
+          $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
         }
       ).catch($scope.genericError);
     };
@@ -343,12 +367,12 @@ function main() {
       if (student.id) {
         student.editing = false;
       } else {
-        $scope.students.splice($scope.students.indexOf(student), 1); // remove from array
+        $scope.section.students.splice($scope.section.students.indexOf(student), 1); // remove from array
       }
     };
 
     $scope.new_student = function () {
-      $scope.students.unshift({editing: true});
+      $scope.section.students.unshift({editing: true});
     };
 
     $scope.showMoveStudentsModal = function () {
@@ -366,7 +390,7 @@ function main() {
         var student_name = student_names[i];
         student_name = student_name.trim();
         if (student_name.length > 0) {
-          $scope.students.unshift({editing: true, name: student_name});
+          $scope.section.students.unshift({editing: true, name: student_name});
         }
       }
       $scope.clear_bulk_import();
@@ -403,6 +427,13 @@ function main() {
   }]);
 
   app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'MovingStudentsController'
+      }
+    );
     var self = this;
 
     // 'Other Section' selected
@@ -492,10 +523,16 @@ function main() {
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
                                              function ($scope, $routeParams, $window, $q, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionSigninCardsController'
+      }
+    );
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
 
     // error handling
     $scope.genericError = function (result) {
@@ -503,7 +540,6 @@ function main() {
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.students.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
@@ -521,6 +557,14 @@ function main() {
 
   app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
       function ($scope, $routeParams,  sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionProjectsController'
+      }
+    );
+
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.tab = 'projects';
@@ -550,9 +594,16 @@ function main() {
 
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionProgressController'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
-    $scope.students = sectionsService.allStudents({id: $routeParams.id});
     $scope.progress = sectionsService.progress({id: $routeParams.id});
     $scope.tab = 'progress';
     $scope.page = {zoom: false};
@@ -563,7 +614,6 @@ function main() {
     };
     $scope.section.$promise.catch($scope.genericError);
     $scope.sections.$promise.catch($scope.genericError);
-    $scope.students.$promise.catch($scope.genericError);
     $scope.progress.$promise.catch($scope.genericError);
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
@@ -672,8 +722,8 @@ function main() {
       };
 
       // Put levels on the student object
-      for (var i = 0; i < $scope.students.length; i++) {
-        var student = $scope.students[i];
+      for (var i = 0; i < $scope.section.students.length; i++) {
+        var student = $scope.section.students[i];
 
         // default is no progress
         student.levels = [];
@@ -703,6 +753,14 @@ function main() {
 
   app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionResponsesController'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -770,6 +828,14 @@ function main() {
 
   app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionAssessmentsController'
+      }
+    );
+
     // Some strings.
     var submission_list = {
       submitted:   i18n.dashboard_submission_submitted,

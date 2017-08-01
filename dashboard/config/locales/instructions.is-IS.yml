@@ -965,22 +965,18 @@
       Alien Defender_instruction: 'Hugmynd að verkefni: Búðu til Defender leik í Leikjasmiðjunni!'
       AllTheThings Applab - Turtle move with button_instruction: Bættu við hnappi
         sem hreyfir skjaldbökuna við smell. (Smelltu til að sjá ítarlegar leiðbeiningar)
-      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': |-
-        Make
-        a 3x5 letter 'A'. The widget is setup with the incorrect dimensions. Your
-        first task is to set the second byte to the 8-bit binary code for 5: 0000
-        0101. Then start entering pixel data.
-      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': |-
-        We
-        start you out with the 4x4 image Maddie created in the video. Your task is
-        to fill a 4x4 grid with colors using 12-bits per pixel. Here are the requirements:
-        Row 1 - fill with shades of red. Row 2 - shades of green. Row 3 - shades of
-        blue. Row 4 - shades of gray.
-      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': |-
-        We
-        start you with the 4x2 image Maddie was creating, but we've left out the
-        last two squares. Finish off the image by figuring out which two colors are
-        missing and encode them.
+      'AllTheThings: Pixelation - Lesson 14 - Make the Letter A_instruction': 'Búðu
+        til stafinn ''A'' í 3x5. Græjan er nú með rangar víddir. Fyrsta verk þitt
+        er að stilla annað bætið á 8-bita tvíundarrununa fyrir töluna 5: 0000 0101.
+        Byrjaðu svo að setja inn díla.'
+      'AllTheThings: Pixelation - Lesson 15 - Color Shades 4x4_instruction': "Þú byrjar
+        með 4x4 myndina sem Maddie bjó til í myndbandinu. Verkefni þitt er að fylla
+        4x4 grindina með litum með 12 bitum fyrir hvern díl. Hér eru kröfurnar: Röð
+        1 - fylla með rauðum litbrigðum. Röð 2 - græn litbrigði. Röð 3 - grá litbrigði."
+      'AllTheThings: Pixelation - Lesson 15 - Complete 3-bit color_instruction': "Þú
+        byrjar með 4x2 myndina sem Maddie var að búa til, en við höfum skilið eftir
+        síðustu tvo reitina. Ljúktu við myndina með því að finna út hvaða tvo liti
+        vantar og kóða þá."
       App Lab test_instruction: prófun
       AppLab_test02_instruction: |-
         One sentence summary of the activity. Click to
@@ -4440,6 +4436,9 @@
         only when \"player_score\" becomes greater than a certain number.\\r\n\\r\nFor\nexample:
         \"player_score\" > 6\\r\n\\r\nPlay the game, and make it past level\n4 to
         move to the next puzzle. "
+      RyanTest3_instruction: |-
+        This level has shape-shifting turned on! Refresh to
+        see different variants.
       Sam the Butterfly 1 (copy 1)_instruction: "Þetta fiðrildi heitir Sammi og leiksvæðið
         er garður Samma. Garður Samma er 400 dílar á breidd og 400 díla hár! Eins
         og þú sérð getur Sammi hreyft sig um garðinn og hnitatölurnar efst á skjánum
@@ -4513,10 +4512,6 @@
         á að vera 100 díla löng.
       StepIntro_instruction: Here's how to use the "Step" button.
       Test Play Lab_instruction: This is a test play lab level.
-      Test Stamp- and Pattern-Agnostic Answer_instruction: Hvort lausn telst rétt
-        ætti að vera óháð vali á mynstri eða límmiða, sem þýðir að þó að þú breytir
-        mynstri eða límmiða þá teljist lausnin rétt svo framarlega sem þú notar eitthvað
-        mynstur og einhvern límmiða. (líkt og með litina)
       Test of comment block_instruction: Dragðu fram kubbinn sem þú vilt nota fyrir
         heiti undirmarkmiðs.
       Testing Quantum Farmer_instruction: "Wow, look at that! \\r\n\\r\nI don't know\nhow
@@ -6447,6 +6442,9 @@
         sign in to test applab levels (By design, applab levels only work if signed
         in. Normally, we make people sign in, but this is only enforceable for a whole
         script and would be annoying to do for the allthethings script).
+      allthethings_ttscsp_instruction: |-
+        Debug the program by fixing the logical error
+        within the program. (Click to see full instructions)
       artistDebugVideo1_instruction: Notaðu "endurtaka" lykkjuna til að bæta öldum
         á vatnið.
       artistFunctionsVideo1_instruction: Fylgdu leiðbeiningum fyrir það að búa til
@@ -6502,6 +6500,76 @@
         borðinu.
       collectorSkinVideo2_instruction: Safnaðu einni gullhrúgu til að klára þennan
         áfanga.
+      course1_artist_loops_challenge1_instruction: |-
+        Þú getur teiknað lykkju til að teikna margar línur í röð.\r
+        \r
+        Getur þú teiknað hús? Gefðu því útlit eftir eigin smekk. Reyndu að koma auga á mynstur sem endurtaka sig!
+      course1_artist_loops_challenge2_instruction: Komum í leik! Teiknaðu eins mörg
+        X og þú getur! Nærðu að hafa 3 í röð?
+      course1_artist_loops_challenge3_instruction: Tíst tíst! Getur þú hjálpað mér
+        að búa til tvö fuglahús?
+      course1_artist_loops_challenge4_instruction: |-
+        Kominn tími til að varpa teningunum!
+        Getur þú hjálpað mér að teikna þá?
+      course1_collector_loops_challenge1_instruction: Getur þú hjálpað mér að koma
+        auga á villur? Ég veit í hvaða átt ég vil fara, en ég er ekki viss um skrefin
+        sem þarf að taka.
+      course1_collector_loops_challenge2_instruction: "Í þetta sinn mátt þú að eins
+        nota einn af hverjum örvarkubbi. Náðu öllum fjársjóðnum! "
+      course1_collector_loops_challenge3_instruction: "Í þetta sinn mátt þú að eins
+        nota einn af hverjum örvarkubbi. Náðu öllum fjársjóðnum! "
+      course1_collector_loops_challenge4_instruction: Náum þessum fjársjóði! Hjálpaðu
+        mér að færast eftir hverri röð og koma svo til baka til að byrja þá næstu.
+        Getur þú séð mynstur?
+      course1_maze_debugging_challenge1_instruction: |-
+        Debug this level. Remove the
+        extra blocks and add the missing blocks. Get the bird to the pig!
+      course1_maze_debugging_challenge2_instruction: |-
+        Debug this level. These are
+        the right blocks, but they're in the wrong order!
+      course1_maze_seq_challenge1_instruction: Fylgdu slóðinni og leiddu mig að svínka.
+        Forðastu TNT sprengjuna annars verður fjaðrafok!
+      course1_maze_seq_challenge2_instruction: "Þú mátt aðeins fara mest fjórum sinnum
+        í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
+      course1_playlab_events_challenge1_instruction: Hvar eru vinir mínir að fela
+        sig? Getur þú skrifað kóða svo vinir mínir komi í ljós?
+      course1_playlab_events_challenge2_instruction: Höldum partí! Láttu hvern vin
+        gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað
+        annað mun gerast?
+      course2_artist_nestedLoops_challenge1_instruction: Getur þú fundið út hvernig
+        svona mynd er búin til?
+      course2_artist_nestedLoops_challenge2_instruction: Getur þú fundið út hvernig
+        svona mynd er búin til?
+      course2_artist_prog_challenge1_instruction: |-
+        Teiknaðu bás fyrir hvert dýr.
+        Það eru margar lausnir á þessari þraut svo þú getur haft gaman af. Stysta mögulega lausnin hefur 6 kubba, en notaðu eins marga og þér sýnist!
+      course2_artist_prog_challenge2_instruction: "*Hjálpaðu mér að teikna gulu línurnar
+        á þessum vegi!*"
+      course2_bee_conditionals_challenge1_instruction: Safnaðu öllum blómasafnum eða
+        búðu til allt hunangið.
+      course2_bee_conditionals_challenge2_instruction: Safnaðu öllum blómasafnum eða
+        búðu til allt hunangið.
+      course2_collector_loops_challenge2_instruction: Leitum að fjársjóð - með lykkjum!
+        Hjálpaðu safnaranum með því að fjarlægja villur úr þessum kóða. Náðu öllum
+        fjársjóðnum!
+      course2_collector_prog_challenge1_instruction: Gáðu vandlega! Getur þú safnað
+        öllum *10* fjársjóðunum?
+      course2_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
+        Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      course2_harvester_loops_challenge1_instruction: Safnaðu öllu korninu.
+      course2_harvester_loops_challenge2_instruction: |-
+        Safnaðu öllu kálinu.
+        Forðastu tré og tún!
+      course2_maze_loops_challenge1_instruction: 'Nú vill Scrat prófa að nota lykkjur
+        til að finna akarnið! '
+      course2_maze_programming_challenge1_instruction: '*"Svínið er í felum! Getur
+        þú hjálpað mér að finna leið?"*'
+      course2_maze_programming_challenge2_instruction: Stundum er fleiri en leið til
+        að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
+      course2_maze_seq_challenge1_instruction: Fylgdu slóðinni og leiddu mig að svínka.
+        Forðastu TNT sprengjuna annars verður fjaðrafok!
+      course2_maze_seq_challenge2_instruction: "Þú mátt aðeins fara mest fjórum sinnum
+        í hverja átt. Getur þú fundið leiðina áður en kubbarnir klárast?"
       course2_playlab_stage17_1_instruction: Getur þú látið hundinn Jörund (leikmann
         1) segja "Hæ"?
       course2_playlab_stage17_10_instruction: |-
@@ -6676,6 +6744,9 @@
       courseA_playlab_events_challenge2_instruction: Höldum partí! Láttu hvern vin
         gera eitthvað þegar það er smellt eða slegið á hann. Hvað segja dýrin? Hvað
         annað mun gerast?
+      courseA_playlab_events_challengeClone_instruction: |-
+        Where are my friends hiding?
+        Can you write code to show the rest of my friends?
       courseA_toMakeLoopsVideo_Collector_instruction: "Þú látið innihald lykkju endurtaka
         sig aftur og aftur!"
       courseA_video_events_instruction: Need a better playlab/events combo
@@ -6822,9 +6893,11 @@
         brotamálminum
       courseB_starWars_prog3_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
         brotamálminum
-      courseB_starWars_prog4_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
+      courseB_starWars_prog4_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
+        brotamálminum
       courseB_starWars_prog5_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
-      courseB_starWars_prog6_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
+      courseB_starWars_prog6_instruction: Hjálpaðu BB-8 að safna **öllum** glóandi
+        brotamálminum
       courseB_starWars_prog7_instruction: Hjálpaðu BB-8 að safna glóandi brotamálminum
       courseB_starWars_prog8_instruction: "**Áskorun:** Hjálpaðu BB-8 að safna glóandi
         brotamálminum"
@@ -6853,10 +6926,10 @@
         to run code over and over forever.  Use this block to move Chomp the Dino
         (actor 2) up and down by 400 pixels forever.
       courseC_PlayLab_events8_instruction: |-
-        Can you have Waddles (actor 1) say "Ouch!"
-        and play a "hit" sound if he runs into Chomp? \r
-        When you're done, play
-        the game to make that happen.
+        Can you have Waddles (actor 1) play a
+        "hit" sound and say "Ouch!" if he runs into Chomp? \r
+        When you're done,
+        play the game to make that happen.
       courseC_PlayLab_events9_instruction: |-
         Can you add a block to score a point
         when Waddles the Penguin (actor1) runs into Octavia the Octopus (actor 3)?
@@ -6980,6 +7053,38 @@
         öllum *10* fjársjóðunum?
       courseC_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
         Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      courseC_flappy_events1_instruction: |-
+        Attach the `flap normal amount` block
+        to the `when click` event, then press "Run".    Click or tap on the play
+        space to move Flappy to the target.
+      courseC_flappy_events10_instruction: 'Create your own Flappy game! '
+      courseC_flappy_events2_instruction: |-
+        Try adding a block that sets the level
+        speed when the "Run" button is pressed.  Play the game and flap to the target
+        to continue.
+      courseC_flappy_events3_instruction: |-
+        Attach the `end game` block to the `when
+        hit the ground` event.   Play the game and crash the bird into the ground
+        to continue."
+      courseC_flappy_events4_instruction: |-
+        Attach a block to the `when hit an obstacle`
+        event so that the game ends when Flappy crashes into the first set of pipes.
+      courseC_flappy_events5_instruction: |-
+        Add a block to the `when pass an obstacle`
+        event, then press "Run" to score a point by flying Flappy through the first
+        set of pipes.
+      courseC_flappy_events6_instruction: |-
+        See if you can still score a point after
+        making Flappy flap either a smaller or larger amount each time you click.
+      courseC_flappy_events7_instruction: |-
+        Next, try changing the scene by attaching
+        a block to the `when run` event.
+      courseC_flappy_events8_instruction: |-
+        Try setting a **random** scene when other
+        events happen...for example, when passing an obstacle.
+      courseC_flappy_events9_instruction: |-
+        To mix things up, instead of ending the
+        game when Flappy hits an obstacle, try setting the score back to 0.
       courseC_harvester_loops1_instruction: Use loops to pick all of the pumpkins.
       courseC_harvester_loops10_instruction: |-
         Collect all of the corn and all of
@@ -7169,15 +7274,15 @@
         \r
         See what happens when we start to
         get creative with the bits!
-      courseD_artist_binary_challenge0_instruction: |-
-        Try using nested loops to complete
-        this drawing.
-      courseD_artist_binary_challenge1_instruction: Prófaðu að nota faldaðar lykkjur
+      courseD_artist_binary_challenge0_instruction: Prófaðu að nota faldaðar lykkjur
         til að ljúka þessari teikningu.
-      courseD_artist_binary_challenge2_instruction: Prófaðu að nota faldaðar lykkjur
-        til að ljúka þessari teikningu.
-      courseD_artist_binary_challenge3_instruction: Prófaðu að nota faldaðar lykkjur
-        til að ljúka þessari teikningu.
+      courseD_artist_binary_challenge1_instruction: "Þú mátt aðeins nota hvert tvíundargildi
+        (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að
+        ljúka teikningunni."
+      courseD_artist_binary_challenge2_instruction: Hefurðu nægilegt úthald til að
+        koma þessu merki í fyrra horf?
+      courseD_artist_binary_challenge3_instruction: Hefurðu nægilegt úthald til að
+        koma þessu merki í fyrra horf?
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7379,8 +7484,9 @@
         náist.
       courseD_collector_debugging4_instruction: Lagaðu forritið svo allur fjársjóðurinn
         náist.
-      courseD_collector_debugging5_instruction: "Áskorun: Hér eru allar skipanir sem
-        þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
+      courseD_collector_debugging5_instruction: "Það er búið að setja hér allar skipanir
+        sem þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari
+        þraut."
       courseD_collector_debugging6_instruction: "Áskorun: Hér eru allar skipanir sem
         þú þarft...notaðu nú færni þína í villuleit til að finna lausn á þessari þraut."
       courseD_collector_debugging7_instruction: "Áskorun: Hér eru allar skipanir sem
@@ -7422,9 +7528,8 @@
       courseD_farmer_condLoops4a_instruction: |-
         Help the farmer pick all of the lettuce
         in each cluster before moving on to the next bunch.
-      courseD_farmer_condLoops5_instruction: |-
-        Collect all of the corn and lettuce,
-        then grab the pumpkin at the end.
+      courseD_farmer_condLoops5_instruction: Safnaðu öllum maísnum og kálinu og svo
+        graskerinu í lokin.
       courseD_farmer_condLoops6_instruction: |-
         Can you figure out how to pick the
         pumpkin?  Make sure to collect all of the corn along the way!
@@ -7573,10 +7678,10 @@
         puzzle.
       courseD_playLab_cond2_instruction: "Give Pegleg a point every time he makes\nit
         to the dragon. "
-      courseD_playLab_cond3_instruction: |-
-        1) Make the dragon change between random
-        emotions every second.  \r
-        2) Make it so when Pegleg gets to the dragon,
+      courseD_playLab_cond3_instruction: "Make the dragon change between random emotions\nevery
+        second.  "
+      courseD_playLab_cond3a_instruction: |-
+        Make it so when Pegleg gets to the dragon,
         he gets 2 points if the dragon is happy and 1 otherwise.
       courseD_playLab_cond3b_instruction: |-
         1) Make the dragon change between random
@@ -7591,16 +7696,13 @@
         Add a `repeat forever` loop that continuously
         checks if the score is greater than 5, then ends the game as a win when it
         is.
-      courseD_playLab_cond6_instruction: |-
-        1)  Slow the ninja down before you set
-        him to chase the pirate.  \r
-        \r
-        2)  If the pirate is greater than 225 pixels
-        down, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**
-        the pirate.  \r
-        \r
-        3)  If the pirate is in the safe zone, wait one second,
-        then deduct a point as long as he stays beneath the octopus line.
+      courseD_playLab_cond6_instruction: "1)  Slow the ninja down before you set\nhim
+        to chase the pirate.  \\r\n2)  If the pirate is greater than 225 pixels\ndown,
+        set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase**\nthe
+        pirate.  "
+      courseD_playLab_cond6a_instruction: |-
+        If the pirate is in the safe zone, wait
+        one second, then deduct a point as long as he stays beneath the octopus line.
       courseD_playLab_cond6cloneForTest_instruction: Testing
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
@@ -7706,14 +7808,13 @@
       courseE_bee_functions9_instruction: |-
         Create a function to collect all of the
         nectar from each flower.
-      courseE_bee_functions_challenge1_instruction: |-
-        You are on your own for this
-        challenge. This could "bee" harder than it looks!
-      courseE_bee_functions_challenge2_instruction: |-
-        You are on your own for this
-        challenge!
-      courseE_bee_ramp14_instruction: 'Sæktu blómasafa á meðan það er enn blómasafi,
-        **annars** búðu til hunang. '
+      courseE_bee_functions9b_instruction: Prófaðu þetta nú með býflugunni!
+      courseE_bee_functions_challenge1_instruction: "Þú þarft að leysa þessa þraut
+        á eigin spýtur. Hún gæti leynt á sér!"
+      courseE_bee_functions_challenge2_instruction: "Þú þarft að leysa þessa þraut
+        á eigin spýtur!"
+      courseE_bee_ramp14_instruction: Hjálpaðu býflugunni að fylgja slóðinni til að
+        búa til allt hunangið og safna öllum blómasafanum.
       courseE_bee_ramp17_instruction: Notaðu það sem þú hefur lært til að leysa þessa
         þraut.
       courseE_collector_ramp10_instruction: Help Laurel collect all of the treasure.
@@ -7736,8 +7837,8 @@
       courseE_farmer_functions10_instruction: "No one knows what these sprouts will\nbecome.
         \ Use `if` statements to write the code to check and harvest each one.   "
       courseE_farmer_functions10b_instruction: |-
-        Figure out which function to use
-        and which one to delete, then solve this puzzle!
+        Use your new function twice to solve
+        this puzzle.
       courseE_farmer_functions1a_instruction: |-
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
@@ -7756,8 +7857,10 @@
         for crops in the next few puzzles.  Let's move everything into a function
         to make it easier.
       courseE_farmer_functions2b_instruction: |-
-        Help the farmer pick the corn, lettuce,
-        and pumpkin.
+        Help the farmer pick the corn and
+        pumpkins.
+      courseE_farmer_functions2ba_instruction: Hjálpaðu bóndanum að tína maísinn og
+        graskerin með fallinu `maís og grasker`.
       courseE_farmer_functions3_instruction: |-
         What happens when the paths to the
         pumpkins are all different lengths?   \r
@@ -7768,10 +7871,9 @@
         Now help the farmer pick the corn,
         lettuce, **and** pumpkin.
       courseE_farmer_functions3c_instruction: |-
-        Which set of blocks helps the farmer
-        check for produce and pick it when it is available? Drag that code into a
-        function, then call your function from inside the `while path ahead` loops
-        (after the `move forward` block).
+        Now, fill-in the function yourself
+        by pulling the blocks from the code and dropping them into the **function
+        definition**.
       courseE_farmer_functions4_instruction: |-
         Great!  Now you have code that will
         work to get pumpkins from any size path.\r
@@ -7801,27 +7903,29 @@
       courseE_farmer_functions6b_instruction: Pick all of the produce.
       courseE_farmer_functions6c_instruction: |-
         What do you need to add this program
-        to collect all of the produce?
+        to check whether a sprout is corn or lettuce?
       courseE_farmer_functions7_instruction: Use your functions to solve this puzzle.
       courseE_farmer_functions7b_instruction: |-
-        Make a second function that lets the
-        farmer get all of the produce down a path, then brings her back to where she
-        began.
+        Help the farmer find her way down
+        this confusing path and to the pumpkin by turning left at the corn and right
+        at the lettuce.
       courseE_farmer_functions8_instruction: |-
         **Challenge:**  Solve this puzzle with
         as few blocks as possible.
-      courseE_farmer_functions8b_instruction: "**Challenge:** Get the farmer to the\npumpkin
-        and collect all of the lettuce and corn along the way. "
+      courseE_farmer_functions8b_instruction: "**Challenge:** Collect all of the\npumpkins
+        using the method from the last puzzle. "
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
-      courseE_farmer_predict1_instruction: Sæktu kál ef það er kál. Annars skal sækja
-        korn.
+      courseE_farmer_functions9b_instruction: Getur þú fundið út mynstrið sem þarf
+        til að leysa þessa þraut?
+      courseE_farmer_predict1_instruction: Tíndu allt kálið (en aðeins á meðan það
+        er eitthvað að tína.)
       courseE_farmer_ramp11_instruction: "Þessi þraut notar líka faldaðar lykkjur.
         Getur þú fundið út hvernig?"
       courseE_farmer_ramp11a_instruction: 'Sæktu kál en aðeins ef það er enn kál. '
       courseE_farmer_ramp12_instruction: Notaðu nú faldaðar lykkjur ("endurtaka" og
         "meðan") til að leysa þessa þraut.
-      courseE_farmer_ramp12a_instruction: Sæktu kál ef það er kál. Annars skal sækja
-        korn.
+      courseE_farmer_ramp12a_instruction: Hjálpaðu bóndanum að fylgja slóðinni rétt
+        til að tína allt kálið.
       courseE_farmer_ramp13_instruction: Sæktu korn ef það er korn, og sæktu kál á
         meðan það er enn kál.
       courseE_farmer_ramp15_instruction: Leystu þessa þraut en aðeins með tiltækum
@@ -8094,12 +8198,14 @@
         from the flowers.
       courseF_bee_functions5a_instruction: Notaðu fallið "færa og gá" til að safna
         öllum safanum.
-      courseF_bee_functions6_instruction: Búðu til fall og kallaðu á það til að safna
-        öllum blómasafanum úr hverju blómi eða búa til allt hunangið í hverju búi.
-      courseF_bee_functions7_instruction: Safnaðu öllum blómasafanum og búðu til allt
-        hunangið!
+      courseF_bee_functions6_instruction: Hjálpaðu býflugunni í gegnum völundarhúsið
+        með því að snúa til vinstri við blóm og hægri við býkúpur.
+      courseF_bee_functions7_instruction: Endurgerðu fallið þitt frá síðustu þraut
+        til að leysa þetta völundarhús.
       courseF_bee_functions8a_instruction: Safnaðu öllum blómasafanum eða búðu til
         allt hunangið!
+      courseF_bee_functionsPre7_instruction: Prófaðu nú að búa til fall til að komast
+        í gegnum völundarhúsið. Hvernig er það öðruvísi en síðast?
       courseF_bee_functions_challenge1_instruction: Búðu til nýtt fall til að vinna
         allan blómasafann og hunangið á meðan það er slóð framundan. Notaðu það til
         að ljúka þrautinni!
@@ -8250,6 +8356,41 @@
         Draw the equilateral triangle - all the sides are the
         same!
       eventsIntro_instruction: Need a better playlab/events combo
+      flappy_1_instruction: |-
+        Attach a block to the "when click" block, then press
+        "Run". Click or tap the screen to move Flappy to the target.
+      flappy_11_instruction: |-
+        Create your own Flappy game. You can change all the
+        visuals and all the rules, even the gravity. When you're done, click Finish
+        to let friends try your game on their phones.
+      flappy_2_instruction: |-
+        Now we've added some ground.  Attach a block to the
+        "when hit the ground" block.  Your code needs to 'END GAME' when Flappy
+        crashes.
+      flappy_3_instruction: |-
+        The "when run" block allows you to run code when your
+        game starts.  Try setting the level speed and flapping to the target.
+      flappy_4_instruction: |-
+        Flappy will fly through obstacles unless you write code
+        to make him crash. Attach a block to the "when hit an obstacle" block. Your
+        code needs to 'END GAME' when Flappy crashes into the first set of pipes.
+      flappy_5_instruction: |-
+        Let's add a scoreboard, and count points when Flappy
+        makes it past obstacles. Add to the "when pass an obstacle" block, and then
+        score a point by flying Flappy through the first set of pipes.
+      flappy_6_instruction: |-
+        See if you can still score a point after making Flappy
+        flap either a smaller or larger amount.
+      flappy_7_instruction: |-
+        Next, try changing the scene by attaching another block
+        to the "when run" block.
+      flappy_8_instruction: |-
+        You can set visuals anytime, not just when the game
+        starts. Try setting a RANDOM scene when other events happen, for example,
+        when passing an obstacle.
+      flappy_9_instruction: |-
+        To mix things up, when hitting an obstacle, instead
+        of ending the game try setting the score back to 0.
       frozen circle function in circle_instruction: Gerum nú 20 hringi sem skarast
         og snúum um 18 gráður eftir hvern hring.
       frozen circle function with parameter_instruction: Hér er "búa til hring" kubbur

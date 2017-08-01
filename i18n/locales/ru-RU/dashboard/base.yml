@@ -182,6 +182,8 @@ ru:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Твой раздел:'
@@ -190,6 +192,12 @@ ru:
     confirm:
       remove: 'Вы хотите выйти из раздела?'
     remove: '(удалить раздел)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Электронная почта'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Приглашение отправлено'
     added_teacher: '%{name} добавлен как твой учитель'
@@ -202,6 +210,7 @@ ru:
       section_not_found: "Не удается найти раздел с кодом '%{section_code}'."
       blank_code: "Введите код раздела"
       cant_join_own_section: "К сожалению, вы не можете присоединиться к своему разделу."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Уведомление от Code.org: %{student_name} больше не является вашим учеником.'
@@ -225,6 +234,7 @@ ru:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ ru:
         calculate: 'Calculate something'
         applab: 'Создать приложение'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "На главную"
       courses: "курсы"
       project_gallery: "Галерея проектов"
@@ -537,8 +548,13 @@ ru:
       title: "Галерея"
       body: "Показать галерею приложений и картинок, созданных нашими пользователями"
     gamelab:
-      title: "Игровая Лаборатория (бета)"
+      title: "Игровая лаборатория"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Возраст 13+"
+      cta: "Узнать подробности"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Возраст 13+"
       cta: "Узнать подробности"
     frozen:

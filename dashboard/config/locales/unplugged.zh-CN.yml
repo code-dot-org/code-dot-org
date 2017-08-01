@@ -191,3 +191,74 @@
       courseF_unplugged_powerOfWords:
         title: "不用电脑的活动"
         desc: "今天，你会学习到在互联网上意味着什么，能做什么。"
+      deeper learning description:
+        title: ''
+        desc: "翻译丢失: en-US.data.unplugged.desc"
+      courseAB_unplugged_plantASeed:
+        title: "真实算法： 播种一颗种子"
+        desc: "这节课程以播种种子的行为为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。"
+      courseA_unplugged_happyMaps:
+        title: "快乐地图"
+        desc: "学生们创建简单的算法 (指令集) 通过迷宫使用单个命令，移动角色。"
+      courseA_unplugged_goingPlacesSafely:
+        title: "去安全的地方"
+        desc: "互联网既功能强大又是危险的领域。教师们讲解如何在浏览互联网时保证安全。"
+      courseABC_unplugged_bigEvent:
+        title: "大事件"
+        desc: 学生们将学习编程概念中的"事件"，即计算机不断监控时的行动。老师在纸上按遥控按钮而学生们根据不同的按钮做某些动作，作为回应。
+      courseB_unplugged_digitalFootprint:
+        title: "你的数字足迹"
+        desc: "教师向学生介绍，把关于自己的信息放在网上会留下数字足迹，或者叫做“痕迹”，从而导致某些后果。"
+      courseC_unplugged_buildingAFoundation:
+        title: "打基础"
+        desc: "学生们通过使用所提供的元素建立结构。结构必须完成一项任务 (即达到一定高度或承受一定重量)，同时问题变得复杂的时候，学生们就持久性的思路展开讨论。"
+      courseC_unplugged_paperPlanes:
+        title: "生活中的算法: 纸飞机"
+        desc: "这节课程以制作纸飞机的方法为例，展示我们在日常生活中使用的算法。同时着重介绍计算机科学在宏观上的格局，以及算法如何发挥至关重要的作用。"
+      courseC_unplugged_gettingLoopy:
+        title: "越来越糊涂"
+        desc: "本课通过舞蹈活动介绍循环 (用来重复的指令) 的编程概念。学生们将学习简单的编排，然后跟着老师的指示，再重复它。"
+      courseC_unplugged_binaryBracelets:
+        title: "二进制的手镯"
+        desc: "学生制作手镯，以二进制形式表示他们名字的首字母。学生们会学会数据能以多种方式表示和存储。"
+      courseD_unplugged_graphPaperProgramming:
+        title: "图纸上编程"
+        desc: "学生们使用一组预定义的命令模块写一个算法 (一组指令) 来指导同学们复制一幅图画。"
+      courseD_unplugged_relayProgramming:
+        title: "编程接力"
+        desc: 学生们跑一场接力赛，他们要跑到对面，去根据"方格纸编程"的图象写一条算法。他们一次只能写一条指令，如果有什么地方出错，他们必须全部擦掉，重新开始。
+      courseD_unplugged_conditionalsCards:
+        title: "用 扑克牌 的 条件子句"
+        desc: 为了学习有关条件语句，学生们在玩卡片游戏的同时遵守一些规则，比如"如果我画一张红色的卡片，我得一分"以及"如果我画一张黑色的卡片，你得一分。"
+      courseD_unplugged_binaryImages:
+        title: "二进制图像"
+        desc: "虽然很多人认为作为二进制就是严格的 0 和 1，我们之前的课程教导学生可以在各种二进制选项中表示信息。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息
+          (如图像和颜色)。"
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: "这节课展示我们在日常生活中使用的算法。作为其中的一部分，学生将发现并写出掷骰子比大小游戏的算法。"
+      courseE_unplugged_songwritingParameters:
+        title: "通过输入参数来作曲。"
+        desc: "学生会通过副歌的概念，来学习定义和调用函数。"
+      courseE_unplugged_internet:
+        title: "互联网"
+        desc: "学生用纸条发送消息，从而体现出各种互联网传输数据的方式。"
+      courseE_unplugged_crowdsourcing:
+        title: "众包"
+        desc: "学生采用众包的形式，解决计算机科学中共同的技术问题。以班级为单位一起完成一项任务，这比单个学生独自尝试会更有效率。"
+      courseE_unplugged_songwriting:
+        title: "写歌"
+        desc: "学生会通过副歌的概念，来学习定义和调用函数。"
+      courseF_unplugged_tangrams:
+        title: "七巧板算法"
+        desc: "本课向我们展示算法的重要性。如果你的算法保持简约的风格就有很多的方式来应用它。如果你想要确保所有人都能做到这一点，那么你的算法需要更多的细节。"
+      courseF_unplugged_envelopeVariables:
+        title: "封装变量"
+        desc: "在计算机科学中，变量提供了很多的自由度。 这节课有助于解释变量是什么，以及我们如何通过许多不同的方式使用它们。实践这项课堂活动之前 (或同时进行)，请先将抽象概念理解透彻。"
+      courseF_unplugged_forLoopFun:
+        title: "计数循环的乐趣"
+        desc: "我们知道了循环允许我们把事情重复做好多遍，而现在我们要学习如何在循环中放入正确的结构。"
+      courseF_unplugged_songwritingParameters:
+        title: "通过输入参数来作曲。"
+        desc: "函数是计算机科学世界中最宏伟的建筑物之一。 函数 (有时称为过程) 是迷你程序，你能在更大的程序里反复使用函数。本课将帮助学生直观地理解为什么用函数来合并功能是非常有用的。
+          \ "

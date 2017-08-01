@@ -284,13 +284,43 @@
   just_did_course2: Vejam! Acabei de concluir o curso 2! @codeorg
   just_did_course3: Vejam! Acabei de concluir o curso 3! @codeorg
   just_did_course4: Vejam! Acabei de concluir o curso 4! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Vejam! Acabei de concluir o curso acelerado! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 de 10 pessoas concordam, as escolas devem ensinar ciência da
     computação. http://youtu.be/nKIu9yen5nc. Visite https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -756,7 +786,7 @@
   dashboard_landing_inspire: Inspire your students with posters, videos, and more.
   dashboard_landing_video_library: Use a video from the Video Library of computer
     science concepts.
-  dashboard_landing_report_bug: Request a feature or report a bug.
+  dashboard_landing_report_bug: Propõe uma nova funcionalidade ou comunica um problema.
   dashboard_landing_teacher_forum: Join the professional learning community.
   dashboard_hoc_courses: A Hora do Código para todas as idades
   dashboard_hoc_courses_desc: Experimente assistir um destes vídeos de menos de 1
@@ -1193,6 +1223,8 @@
   coursef-draft_name: Course F
   coursef_name: Course F
   accelerated_name: Curso acelerado
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: 'Unidade 1: Informação Digital'
   cspunit2_name: 'Unidade 2: A Internet'
   cspunit3_name: 'Unidade 3: Programação'
@@ -1211,6 +1243,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
+  csp-ap_name: AP Performance Tasks
   csppostap_name: 'Post AP: Databases in Apps'
   cspassessment_name: Teste Completo - 50 questões
   cspexam1-mWU7ilDYM9_name: Teste Parte 1 - 25 perguntas
@@ -1237,6 +1270,7 @@
   math_category_name: Matemática
   hoc_category_name: Hora de Código
   csf_category_name: CS Fundamentals
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
@@ -1998,10 +2032,10 @@
   infinity_shortcode: inf
   playlab_shortcode: jogar
   artist_shortcode: art
-  header_home: Home
+  header_home: Início
   header_courses: Cursos
-  header_project_gallery: Project Gallery
-  header_sections: Sections
+  header_project_gallery: Galeria de projetos
+  header_sections: Turmas
   header_professional_learning: Professional Learning
   header_educate_overview: Educator Overview
   header_educate_elementary: Elementary School
@@ -2013,26 +2047,32 @@
   header_educate_inspire: Inspire a Student
   header_educate_community: Online Community
   header_educate_tools: Tools and Videos
-  header_about_us: About Us
-  header_about_leadership: Leadership
-  header_about_donors: Donors
-  header_about_partners: Partners
-  header_about_team: Full Team
-  header_about_news: Newsroom
-  header_about_evaluation: Evaluation
-  header_about_jobs: Jobs
-  header_about_contact: Contact Us
-  header_about_faqs: FAQs
+  header_about_us: Quem somos
+  header_about_leadership: Administração
+  header_about_donors: Doadores
+  header_about_partners: Parceiros
+  header_about_team: Toda a equipa
+  header_about_news: Imprensa
+  header_about_evaluation: Avaliação
+  header_about_jobs: Empregos
+  header_about_contact: Contacte-nos
+  header_about_faqs: Perguntas frequentes
   header_learn: Learn
   header_teach: Teach
   header_stats: Estatística
   header_help_us: Help Us
   header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
-  header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_teacher_community: Comunidade de professores
+  header_help_support: Ajuda e suporte
+  header_report_bug: Comunicar um problema
+  header_tutorials: Tutoriais
+  header_documentation: Documentação
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

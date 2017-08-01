@@ -290,14 +290,14 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: Nesta aula, vais aprender mais sobre os ciclos!
       courseB_unplugged_MRF:
         title: Atividade offline
-        desc: In this lesson, you will 'program' your friends!
+        desc: Nesta aula, vais “programar” os teus amigos!
       courseB_unplugged_loopyMRF:
         title: Atividade offline
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Tal como fizeste em “Os meus amigos robótidos”, vais “programar” os
+          teus amigos, mas desta vez com ciclos!
       courseC_Unplugged_ScreenOutTheMean:
         title: Atividade offline
         desc: Today you will learn about what to do if someone is being mean online.
@@ -310,3 +310,122 @@
       courseF_unplugged_powerOfWords:
         title: Atividade offline
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmos da Vida Real: Plante uma Semente'
+        desc: Esta lição apresenta como usamos algoritmos em nossa vida diária, usando
+          o ato de plantar uma semente como exemplo. Também se concentra no quadro
+          geral de ciência da computação e como os algoritmos desempenham um papel
+          fundamental.
+      courseA_unplugged_happyMaps:
+        title: Mapas felizes
+        desc: Estudantes criam um algoritmo simples (conjunto de instruções) para
+          mover a personagem através de um labirinto usando um único comando.
+      courseA_unplugged_goingPlacesSafely:
+        title: Ir a Locais de um modo Seguro
+        desc: A Internet é poderosa, mas às vezes perigosa. Os professores mostram
+          como navegar em segurança pela Internet.
+      courseABC_unplugged_bigEvent:
+        title: O Grande Evento
+        desc: Os alunos são introduzidos ao conceito de "eventos" em programação,
+          que são ações que um computador monitora constantemente. O professor vai
+          apertar os botões de forma remota, e os alunos vão reagir de acordo com
+          o botão pressionado.
+      courseB_unplugged_digitalFootprint:
+        title: Seu rastro digital
+        desc: Os professores informam aos alunos que colocar informações pessoais
+          online cria um rastro digital, ou uma "trilha" que tem consequências.
+      courseC_unplugged_buildingAFoundation:
+        title: Criar uma base
+        desc: Os alunos constroem uma estrutura usando apenas os materiais fornecidos.
+          Essas estruturas devem completar uma tarefa (chegar a uma certa altura ou
+          suportar um determinado peso), e os alunos discutem a ideia de ser persistente
+          quando as coisas ficam complicadas.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmos da Vida Real: Aviões de Papel'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida, especificamente
+          na hora de fazer aviões de papel. Esta lição também apresenta a ciência
+          da computação de forma geral, e como os algoritmos têm um papel essencial.
+      courseC_unplugged_gettingLoopy:
+        title: Repetindo
+        desc: Esta aula introduz o conceito de programação de laços (loops, ou instruções
+          repetidas) por meio de uma atividade de dança. Os alunos vão aprender uma
+          coreografia simples e então serão instruídos a repeti-la.
+      courseC_unplugged_binaryBracelets:
+        title: Pulseiras binárias
+        desc: Os alunos criam pulseiras como representações binárias da primeira letra
+          de seus nomes. Os alunos aprendem que os dados podem ser representados e
+          armazenados de mais de uma forma.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programação em Papel Quadriculado
+        desc: Os alunos escrevem um algoritmo (um conjunto de instruções) usando um
+          conjunto predefinido de comandos para orientar seus colegas de classe na
+          reprodução de um desenho.
+      courseD_unplugged_relayProgramming:
+        title: Programação Relay
+        desc: Os alunos participam de uma corrida de revezamento na qual devem atravessar
+          o pátio para escrever um algoritmo baseado em uma imagem em "papel quadriculado
+          de programação". Eles só podem escrever uma instrução por vez, e, se houver
+          um erro em algum lugar, eles têm que apagar e refazer os passos a partir
+          daquele ponto.
+      courseD_unplugged_conditionalsCards:
+        title: Condicionais com cartas
+        desc: Para aprender sobre estruturas condicionais, o aluno joga um jogo de
+          cartas e cria regras como "se eu comprar uma carta vermelha, eu ganho um
+          ponto", e "se eu comprar uma carta preta, você ganha um ponto".
+      courseD_unplugged_binaryImages:
+        title: Imagens binárias
+        desc: Embora muitas pessoas vejam o binário estritamente como zeros e uns,
+          nossos cursos anteriores ensinaram aos alunos que as informações podem ser
+          representadas por uma grande variedade de opções binárias. Esta aula leva
+          esse conceito um passo adiante, uma vez que demonstra como um computador
+          também pode armazenar informações ainda mais complexas (como imagens e cores)
+          em binário.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Esta lição mostra como usamos algoritmos em nossa vida. Como parte disso,
+          os alunos vão identificar e escrever um algoritmo para um jogo de dados.
+      courseE_unplugged_songwritingParameters:
+        title: Composição de música com parâmetros
+        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
+          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
+          de reescrevê-la).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Os alunos enviam mensagens que representam vários métodos de transmissão
+          de Internet usando pedaços de papel.
+      courseE_unplugged_crowdsourcing:
+        title: Aberto ao público
+        desc: Os alunos usam o crowdsourcing, uma técnica comum de resolução de problemas
+          em ciência da computação, para concluir uma tarefa juntos, em sala de aula,
+          de maneira mais eficiente do que se um aluno tentasse resolver sozinho.
+      courseE_unplugged_songwriting:
+        title: Composição de música com parâmetros
+        desc: Os alunos usam o conceito de refrão em uma música para aprender sobre
+          a passagem de parâmetros (os quais personalizam uma função sem a necessidade
+          de reescrevê-la).
+      courseF_unplugged_tangrams:
+        title: Algoritmos Tangram
+        desc: 'Esta aula nos mostra algo importante sobre os algoritmos: se você o
+          mantiver simples, poderá fazer muitas coisas com ele; se quiser garantir
+          que todos tenham o mesmo resultado no final, seu algoritmo precisará de
+          mais detalhes.'
+      courseF_unplugged_envelopeVariables:
+        title: Variáveis do envelope
+        desc: As variáveis proporcionam muita liberdade na ciência da computação.
+          Esta aula ajuda a explicar o que são variáveis e como podemos usá-las de
+          diversas maneiras diferentes. Faça esta atividade antes ou junto com a aula
+          sobre abstração, para que a ideia realmente faça sentido.
+      courseF_unplugged_forLoopFun:
+        title: Diversão com laços for
+        desc: Sabemos que os laços nos permitem fazer algo repetidas vezes, mas, agora,
+          vamos aprender como usá-los com estruturas adicionais associadas.
+      courseF_unplugged_songwritingParameters:
+        title: Escrevendo uma canção com parâmetros
+        desc: 'Uma das estruturas mais incríveis no mundo da ciência da computação
+          é a função. As funções (chamadas às vezes de procedimentos) são miniprogramas
+          que podem ser usados repetidas vezes dentro do programa maior. Esta aula
+          ajudará os alunos a entender, de maneira intuitiva, por que combinar blocos
+          de códigos em funções é uma prática útil.  '

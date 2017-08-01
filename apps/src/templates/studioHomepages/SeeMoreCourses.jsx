@@ -2,7 +2,7 @@ import React from 'react';
 import i18n from "@cdo/locale";
 import CourseCard from './CourseCard';
 import ContentContainer from '../ContentContainer';
-import ProgressButton from "../progress/ProgressButton";
+import Button from "../Button";
 import shapes from './shapes';
 import color from "../../util/color";
 
@@ -46,7 +46,7 @@ const SeeMoreCourses = React.createClass({
             {courses.map((course, index) =>
               <div key={index}>
                 <CourseCard
-                  name={course.name}
+                  title={course.title}
                   description={course.description}
                   link={course.link}
                   isRtl={isRtl}
@@ -57,9 +57,9 @@ const SeeMoreCourses = React.createClass({
           </ContentContainer>
         )}
         {!this.state.open && (
-          <ProgressButton
+          <Button
             onClick={this.showMoreCourses}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             icon="caret-down"
             text={i18n.viewMore()}
             style={{float: 'right', marginBottom: 20}}

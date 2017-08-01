@@ -46,6 +46,7 @@ export default function initPage(scriptEditorData) {
         professionalLearningCourse={scriptData.professionalLearningCourse}
         peerReviewsRequired={scriptData.peerReviewsRequired}
         wrapupVideo={scriptData.wrapupVideo}
+        excludeCsfColumnInLegend={scriptData.excludeCsfColumnInLegend}
         projectWidgetVisible={scriptData.project_widget_visible}
         projectWidgetTypes={scriptData.project_widget_types}
       />

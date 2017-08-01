@@ -315,3 +315,123 @@
       courseF_unplugged_powerOfWords:
         title: Activitate fără Calculator
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: "[șir gol]"
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmi din viaţa reală: Plantează o sămânţă'
+        desc: Această lecție evidențiază modul în care noi folosim algoritmi în viața
+          de zi cu zi, utilizând drept exemplu plantarea unei semințe. De asemenea,
+          aceasta se concentrează pe imaginea de ansamblu a informaticii și pe modul
+          în care algoritmii joacă un rol esențial.
+      courseA_unplugged_happyMaps:
+        title: Hărţi Fericite
+        desc: Elevii creează algoritmi simpli (seturi de instrucțiuni) pentru a deplasa
+          un personaj printr-un labirint folosind o singură comandă.
+      courseA_unplugged_goingPlacesSafely:
+        title: Mergând în locuri în siguranţă
+        desc: Internet-ul este o forță, dar uneori și un loc periculos. Profesorii
+          arată cum poate fi sigură navigarea pe Internet.
+      courseABC_unplugged_bigEvent:
+        title: Marele eveniment
+        desc: Elevilor li se prezintă conceptul de ”evenimente” în programare, care
+          reprezintă acțiuni pe care calculatorul le monitorizează în mod constant.
+          Profesorul va apăsa butoane pe o telecomandă de hârtie, iar elevii vor reacționa
+          în funcție de butonul care a fost apăsat.
+      courseB_unplugged_digitalFootprint:
+        title: Amprenta ta Digitală
+        desc: Profesorii introduc elevilor ideea că postarea informațiilor online
+          despre ei înșiși creează un "traseu", o amprentă digitală, care are consecințe.
+      courseC_unplugged_buildingAFoundation:
+        title: Construirea unei Fundaţii
+        desc: Elevii construiesc o structură folosind numai rechizitele oferite. Structurile
+          trebuie să finalizeze o sarcină (ating o anumită înălțime sau suportă o
+          anumită greutate) și elevii discută ideea de a fi perseverent când lucrurile
+          devin complicate.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmi din viaţa reală: Avioane de Hârtie'
+        desc: Această lecție evidențiază moduri în care folosim algoritmi în viața
+          de zi cu zi, în mod specific explificând cu realizarea de avioane din hârtie.
+          De asemenea, această lecție se concentrează pe o imagine de ansamblu despre
+          informatică și rolul esențial pe care îl joacă algoritmii.
+      courseC_unplugged_gettingLoopy:
+        title: Transformând în Buclă
+        desc: Această lecție prezintă conceptul în programare de bucle (instrucțiuni
+          repetate) printr-o activitate care implică dansul. Elevii vor învăța o coregrafie
+          simplă, apoi vor fi instruiți să o repete.
+      courseC_unplugged_binaryBracelets:
+        title: Brăţări Binare
+        desc: Elevii creează brățări ca o reprezentare binară a primei litere din
+          numele lor. Elevii învață ca datele pot fi reprezentate și stocate în mai
+          multe feluri.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programare pe Hârtie Milimetrică
+        desc: Elevii scriu un algoritm (un set de instrucțiuni) folosind un set de
+          comenzi predefinite pentru a-i direcționa pe colegii de clasă să reproducă
+          un desen.
+      courseD_unplugged_relayProgramming:
+        title: Programare de releu
+        desc: Elevii aleargă într-o cursă cu ștafetă, în care au de sărit garduri
+          pentru a scrie un algoritm pe baza unei imagini ”Programarea pe hârtie milimetrică”.
+          Ei pot scrie o singură instrucțiune la un moment dat și, dacă este vreo
+          eroare, trebuie să șteargă tot înapoi până la acel punct.
+      courseD_unplugged_conditionalsCards:
+        title: Condiționale cu Carduri
+        desc: 'Pentru a învăța despre declarații condiționale, elevii joacă un joc
+          de cărți și creează reguli precum: ”Dacă trag o carte roșie, obțin un punct”
+          și ”Dacă trag o carte neagră, tu obții un punct.”'
+      courseD_unplugged_binaryImages:
+        title: Imagini binare
+        desc: Deşi mulţi oameni cred că binar înseamnă strict zerouri și unu, cursurile
+          noastre anterioare predate elevilor arată că informaţiile pot fi reprezentate
+          într-o varietate de opţiuni binare.  Această lecţie face un pas mai departe
+          pentru dezvoltarea conceptului, ilustrând cum un computer poate stoca, de
+          asemenea, chiar și informații mai complexe (precum imagini şi culori) în
+          sistem binar.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Această lecție indică modul în care noi folosim algoritmi în viața de
+          zi cu zi. În cadrul acesteia, elevii vor identifica şi nota pe hârtie algoritmul
+          pentru un joc de zaruri.
+      courseE_unplugged_songwritingParameters:
+        title: Compoziții muzicale cu parametri
+        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
+          transmiterea parametrilor (care personalizează o funcție fără a trebui să
+          rescrie întreaga funcție).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Elevii transmit mesaje pe bucăți de hârtie simulând metode variate de
+          transmisie pe Internet.
+      courseE_unplugged_crowdsourcing:
+        title: Obţinând Informaţii/Critici
+        desc: Elevii folosesc crowdsourcing, o tehnica uzuală de rezolvare a problemelor
+          din informatică, pentru a finaliza o sarcină împreună ca o modalitate mai
+          eficientă decât rezolvarea individuală.
+      courseE_unplugged_songwriting:
+        title: Compoziții muzicale cu parametri
+        desc: Elevii folosesc conceptul de cor dintr-un cântec pentru a afla despre
+          transmiterea parametrilor (care personalizează o funcție fără a trebui să
+          rescrie întreaga funcție).
+      courseF_unplugged_tangrams:
+        title: Algoritmi Tangram
+        desc: Această lecţie ne arată ceva important despre algoritmi. Dacă vă păstraţi
+          un algoritm simplu există o mulţime de moduri de a-l folosi. Dacă doriţi
+          să vă asiguraţi că toată lumea termină cu acelaşi lucru, atunci algoritmul
+          dumneavoastră are nevoie de mai multe detalii.
+      courseF_unplugged_envelopeVariables:
+        title: Variabile de tip plic
+        desc: Variabilele permit foarte multă libertate în informatică.  Această lecţie
+          vă ajută să înțelegeți ce sunt variabile şi cum le putem folosi în multe
+          moduri diferite. Utilizați această activitate înainte de (sau în conjuncție
+          cu) lecţia despre abstractizare ca idea să fie întradevăr înțeleasă.
+      courseF_unplugged_forLoopFun:
+        title: Pentru distracția cu bucle
+        desc: "Ştim că repetițiile ne permit să reluăm lucruri iar și iar, dar acum
+          vom învăța cum să folosim bucle cu structură extra încorporată."
+      courseF_unplugged_songwritingParameters:
+        title: Compozitie cu parametri
+        desc: 'Una din cele mai magnifice structuri din lumea informaticii este funcţia.  Funcţiile
+          (uneori numite proceduri) sunt mini-programe pe care le puteţi folosi iar
+          și iar in interiorul programului vostru mai mare. Această lecţie va ajuta
+          elevii să înţeleagă intuitiv de ce combinarea de bucăţi de cod în funcţii
+          este o practică așa de utilă.  '

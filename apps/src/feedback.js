@@ -7,6 +7,7 @@ import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
+import {getValidatedResult} from './containedLevels';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -42,6 +43,7 @@ var authoredHintUtils = require('./authoredHintUtils');
 
 import experiments from './util/experiments';
 import AchievementDialog from './templates/AchievementDialog';
+import ChallengeDialog from './templates/ChallengeDialog';
 import StageAchievementDialog from './templates/StageAchievementDialog';
 
 /**
@@ -193,22 +195,27 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var icon;
   if (!options.hideIcon) {
-    icon = canContinue && !options.showFailureIcon ?
-      this.studioApp_.winIcon :
-      this.studioApp_.failureIcon;
+    if (canContinue && (!this.studioApp_.hasContainedLevels || getValidatedResult())) {
+      icon = this.studioApp_.winIcon;
+    } else {
+      icon = this.studioApp_.failureIcon;
+    }
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
+
+  const actualBlocks = this.getNumCountableBlocks();
+  const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
+  const isPerfect = actualBlocks <= idealBlocks;
+  const showPuzzleRatingButtons =
+      options.response && options.response.puzzle_ratings_enabled;
 
   if (!options.level.freePlay && experiments.isEnabled('gamification')) {
     const container = document.createElement('div');
     const hintsUsed = (options.response.hints_used || 0) +
       authoredHintUtils.currentOpenedHintCount(options.response.level_id);
-    const idealBlocks = this.studioApp_.IDEAL_BLOCK_NUM;
-    const actualBlocks = this.getNumCountableBlocks();
 
     const lastInStage = FeedbackUtils.isLastLevel();
     const stageName = `Stage ${window.appOptions.stagePosition}`;
-    const isPerfect = actualBlocks <= idealBlocks;
 
     const progress = FeedbackUtils.calculateStageProgress(
         isPerfect,
@@ -247,8 +254,6 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       };
     }
 
-    const showPuzzleRatingButtons =
-        options.response && options.response.puzzle_ratings_enabled;
     if (showPuzzleRatingButtons) {
       const prevOnContinue = onContinue;
       onContinue = () => {
@@ -272,6 +277,54 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         showPuzzleRatingButtons={showPuzzleRatingButtons}
         showStageProgress={true}
       />, container);
+    return;
+  }
+
+  if (experiments.isEnabled('challengeDialog') &&
+      getStore().getState().pageConstants.isChallengeLevel) {
+    const container = document.createElement('div');
+    document.body.appendChild(container);
+    let onContinue = options.onContinue;
+    if (showPuzzleRatingButtons) {
+      onContinue = () => {
+        puzzleRatingUtils.cachePuzzleRating(container, {
+          script_id: options.response.script_id,
+          level_id: options.response.level_id,
+        });
+        options.onContinue();
+      };
+    }
+    if (isPerfect) {
+      ReactDOM.render(
+        <ChallengeDialog
+          title={msg.challengeLevelPerfectTitle()}
+          assetUrl={this.studioApp_.assetUrl}
+          avatar={icon}
+          complete
+          handlePrimary={onContinue}
+          primaryButtonLabel={msg.continue()}
+          cancelButtonLabel={msg.tryAgain()}
+          showPuzzleRatingButtons={showPuzzleRatingButtons}
+        >
+          {displayShowCode && this.getShowCodeComponent_(options, true)}
+        </ChallengeDialog>,
+        container);
+    } else {
+      ReactDOM.render(
+        <ChallengeDialog
+          title={msg.challengeLevelPassTitle()}
+          assetUrl={this.studioApp_.assetUrl}
+          avatar={icon}
+          handlePrimary={onContinue}
+          primaryButtonLabel={msg.continue()}
+          cancelButtonLabel={msg.tryAgain()}
+          showPuzzleRatingButtons={showPuzzleRatingButtons}
+          text={msg.challengeLevelPassText({idealBlocks})}
+        >
+          {displayShowCode && this.getShowCodeComponent_(options, true)}
+        </ChallengeDialog>,
+        container);
+    }
     return;
   }
 
@@ -1003,27 +1056,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   return sharingDiv;
 };
 
-/**
- *
- */
 FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
-  var showCodeDiv = document.createElement('div');
+  const showCodeDiv = document.createElement('div');
   showCodeDiv.setAttribute('id', 'show-code');
-
-  var numLinesWritten = this.getNumBlocksUsed();
-  var shouldShowTotalLines =
-    (options.response &&
-      options.response.total_lines &&
-      (options.response.total_lines !== numLinesWritten));
-  var totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
-
-  var generatedCodeProperties = this.getGeneratedCodeProperties_({
-    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
-  });
-
-  ReactDOM.render(<CodeWritten numLinesWritten={numLinesWritten} totalNumLinesWritten={totalNumLinesWritten}>
-    <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
-  </CodeWritten>, showCodeDiv);
+  ReactDOM.render(this.getShowCodeComponent_(options), showCodeDiv);
 
   // If the jQuery details polyfill is available, use it on the
   // newly-created details element. If the details polyfill is not
@@ -1034,6 +1070,30 @@ FeedbackUtils.prototype.getShowCodeElement_ = function (options) {
   }
 
   return showCodeDiv;
+};
+
+FeedbackUtils.prototype.getShowCodeComponent_ = function (options, challenge=false) {
+
+  const numLinesWritten = this.getNumBlocksUsed();
+  const shouldShowTotalLines =
+    (options.response &&
+      options.response.total_lines &&
+      (options.response.total_lines !== numLinesWritten));
+  const totalNumLinesWritten = shouldShowTotalLines ? options.response.total_lines : 0;
+
+  const generatedCodeProperties = this.getGeneratedCodeProperties_({
+    generatedCodeDescription: options.appStrings && options.appStrings.generatedCodeDescription
+  });
+
+  return (
+    <CodeWritten
+      numLinesWritten={numLinesWritten}
+      totalNumLinesWritten={totalNumLinesWritten}
+      useChallengeStyles={challenge}
+    >
+      <GeneratedCode message={generatedCodeProperties.message} code={generatedCodeProperties.code}/>
+    </CodeWritten>
+  );
 };
 
 /**

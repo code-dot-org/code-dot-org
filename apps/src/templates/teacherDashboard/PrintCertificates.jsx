@@ -1,12 +1,17 @@
-import React, { Component, PropTypes } from 'react';
-import ProgressButton from '@cdo/apps/templates/progress/ProgressButton';
+import React, {Component, PropTypes} from 'react';
+import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';
+import {connect} from 'react-redux';
+import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
 
-export default class PrintCertificates extends Component {
+class PrintCertificates extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    assignmentName: PropTypes.string
+    assignmentName: PropTypes.string,
+
+    //provided by Redux
+    curriedPegasusUrl: PropTypes.func.isRequired,
   };
 
   state = {
@@ -25,22 +30,27 @@ export default class PrintCertificates extends Component {
   };
 
   render() {
+    const {curriedPegasusUrl} = this.props;
     return (
       <form
         ref={element => this.certForm = element}
-        action="/certificates"
+        action={curriedPegasusUrl("/certificates")}
         method="POST"
       >
         <input type="hidden" name="script" value={this.props.assignmentName}/>
         {this.state.names.map((name, index) => (
           <input key={index} type="hidden" name="names[]" value={name}/>
         ))}
-        <ProgressButton
+        <Button
           text={i18n.printCertificates()}
           onClick={this.onClickPrintCerts}
-          color={ProgressButton.ButtonColor.gray}
+          color={Button.ButtonColor.gray}
         />
       </form>
     );
   }
 }
+export const UnconnectedPrintCertificates = PrintCertificates;
+export default connect(state => ({
+  curriedPegasusUrl: relativePath => pegasusUrl(state, relativePath)
+}))(PrintCertificates);

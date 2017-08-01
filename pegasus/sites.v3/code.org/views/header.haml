@@ -7,6 +7,7 @@
           %img#logo{:src=>'/images/logo.png'}
       #right
         #sign_in_or_user{:style=>'display:block; float: right; width: 80px; margin: .6875em 0 0 30px;'}
+          =view :sign_in_or_user
         - if page_translated? && !partner_site?
         - else
           .desktop-feature
@@ -20,24 +21,3 @@
     #loc.desktop-feature
       -if banner = @header['banner']
         =view banner
-
-:javascript
-  var headerSetup = false;
-
-  $ = jQuery;
-  $(document).ready(function() {
-    if (headerSetup) {
-      return;
-    }
-    headerSetup = true;
-
-    $.ajax({
-      type: "GET",
-      url: '/dashboardapi/user_menu',
-      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
-      success: function(data) {
-        // data is ur summary
-        $('#sign_in_or_user').html(data);
-      }
-    });
-  });

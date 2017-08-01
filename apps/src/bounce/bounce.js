@@ -1085,9 +1085,9 @@ Bounce.onPuzzleComplete = function () {
   }
 
   if (Bounce.testResults >= TestResults.FREE_PLAY) {
-    studioApp().playAudio('win');
+    studioApp().playAudioOnWin();
   } else {
-    studioApp().playAudio('failure');
+    studioApp().playAudioOnFailure();
   }
 
   if (level.editCode) {

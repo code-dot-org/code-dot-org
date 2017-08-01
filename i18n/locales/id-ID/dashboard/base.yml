@@ -9,15 +9,15 @@ id:
     errors:
       messages:
         blank: "diperlukan"
-        blank_plural: "are required"
-        invalid_plural: "are invalid"
+        blank_plural: "diperlukan"
+        invalid_plural: "tidak benar"
     attributes:
       user:
         name: 'Nama Tampilan'
         name_example: 'Tampilan Nama<br/>(e.g. Cool Coder or Jane S.)'
         email: 'email'
-        parent_email: 'Parent/guardian email'
-        personal_email: "Personal email address <a href=\"%{url}\">(click here if you don't have an email address)</a>"
+        parent_email: 'Email orang tua/wali'
+        personal_email: "Alamat email pribadi <a href=\"%{url}\">(klik di sini jika Anda tidak memiliki sebuah alamat email)</a>"
         username: 'nama pengguna'
         password: 'kata sandi'
         password_confirmation: 'Konfirmasi sandi'
@@ -180,6 +180,8 @@ id:
       
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Sesi Anda:'
@@ -188,6 +190,12 @@ id:
     confirm:
       remove: 'Anda yakin untuk meninggalkan sesi ini?'
     remove: '(hapus sesi)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'email'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Undangan telah dikirim'
     added_teacher: '%{name} telah dicantumkan sebagai nama guru Anda'
@@ -200,6 +208,7 @@ id:
       section_not_found: "Tidak dapat menemuan bagian dengan kode '%{section_code}'."
       blank_code: "Masukan kode bagian"
       cant_join_own_section: "Maaf anda tidak dapat bergabung sesi anda sendiri"
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Pemberitahuan Code.org : %{student_name} tidak lagi terdaftar sebagai siswa Anda.'
@@ -223,6 +232,7 @@ id:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -235,6 +245,7 @@ id:
         calculate: 'Calculate something'
         applab: 'Buat sebuah aplikasi Lab Aplikasi'
         gamelab: 'Buat sebuah proyek Lab Permainan'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Beranda"
       courses: "Kursus"
       project_gallery: "Project Gallery"
@@ -535,8 +546,13 @@ id:
       title: "Galeri"
       body: "Lihat galeri gambarn aplikasi dan seniman yang dibuat oleh pengguna kami"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Usia 13+"
+      cta: "Pelajari caranya"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Usia 13+"
       cta: "Pelajari caranya"
     frozen:
@@ -561,9 +577,9 @@ id:
       title: "Kondisi"
       body: "Learn about algorithms and conditional statements in this “unplugged” activity using a deck of cards."
     widgets:
-      title: "Widgets"
+      title: "Widget"
       body: "Students can explore concepts from our Computer Science Principles course hands-on using these digital tools. Use the widgets on their own, or create a single-concept lesson for your class."
-      audience: "Ages 14+"
+      audience: "Usia 14+"
       cta: "Pelajari caranya"
   gallery:
     students_drew_these_with_code: "Siswa-siswa telah menggambar ini dengan kode!"

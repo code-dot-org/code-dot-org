@@ -323,3 +323,125 @@
       courseF_unplugged_powerOfWords:
         title: Kegiatan tanpa komputer
         desc: Today you will learn about what to do if someone is being mean online.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritma kehidupan nyata: Tanam sebuah Bibit'
+        desc: Pelajaran ini mengenalkan cara kita menggunakan algoritma dalam kehidupan
+          sehari-hari, contohnya menanam benih. Ini juga berfokus pada gambaran yang
+          lebih besar mengenai ilmu komputer dan bagaimana algoritma memainkan peran
+          amat penting.
+      courseA_unplugged_happyMaps:
+        title: Pemetaan bahagia
+        desc: Siswa membuat algoritma sederhana (beberapa set instruksi) untuk memindahkan
+          karakter melalui labirin menggunakan perintah tunggal.
+      courseA_unplugged_goingPlacesSafely:
+        title: Pergi ke tempat-tempat dengan aman
+        desc: Internet adalah sesuatu yang canggih, namun terkadang dapat menjadi
+          tempat yang berbahaya. Guru memperkenalkan bagaimana untuk tetap aman saat
+          melakukan navigasi Internet.
+      courseABC_unplugged_bigEvent:
+        title: Acara besar
+        desc: Para siswa diperkenalkan kepada konsep pemrograman "peristiwa", yang
+          merupakan tindakan-tindakan yang selalu dipantau oleh komputer. Guru akan
+          menekan tombol pada suatu remote dari kertas dan siswa akan bereaksi tergantung
+          pada tombol yang ditekan.
+      courseB_unplugged_digitalFootprint:
+        title: Digital Footprint Kamu
+        desc: Guru-guru memperkenalkan kepada siswa gagasan bahwa meletakkan informasi
+          mengenai dirinya secara daring menciptakan tapak digital atau "jejak" yang
+          memiliki konsekuensi.
+      courseC_unplugged_buildingAFoundation:
+        title: Membangun dasar
+        desc: Para siswa membangun sebuah struktur hanya dengan persediaan yang disediakan.
+          Struktur tersebut harus memenuhi syarat (mencapai ketinggian tertentu atau
+          menanggung berat tertentu), dan para siswa membahas gagasan menjadi gigih
+          saat segala sesuatunya menjadi rumit.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritma kehidupan nyata: Pesawat Kertas'
+        desc: Pelajaran ini mengajarkan cara kita menggunakan algoritma dalam kehidupan
+          sehari-hari, khususnya membuat pesawat kertas. Pelajaran ini juga berfokus
+          pada gambaran yang lebih luas seputar ilmu komputer dan bagaimana algoritma
+          memainkan peranan yang amat penting.
+      courseC_unplugged_gettingLoopy:
+        title: Dapat berulang-ulang
+        desc: Pelajaran ini memperkenalkan konsep pemrograman loop (instruksi berulang)
+          melalui kegiatan menari. Siswa akan belajar koreografi sederhana, kemudian
+          diminta untuk mengulanginya.
+      courseC_unplugged_binaryBracelets:
+        title: Gelang biner
+        desc: Siswa membuat gelang sebagai representasi biner dari huruf pertama dari
+          nama mereka. Siswa belajar bahwa data dapat direpresentasikan dan disimpan
+          pada lebih dari satu cara.
+      courseD_unplugged_graphPaperProgramming:
+        title: Pemrograman grafis diatas kertas
+        desc: Siswa menulis algoritma (satu set instruksi) menggunakan satu set perintah
+          untuk mengarahkan teman-teman sekelas mereka untuk menggambar kembali sebuah
+          gambar.
+      courseD_unplugged_relayProgramming:
+        title: Pemrograman relay
+        desc: Siswa menjalankan perlombaan estafet, dimana mereka lari di halaman
+          untuk menulis sebuah algoritma yang didasarkan pada sebuah gambar "Pemrograman
+          kertas grafik". Mereka hanya dapat menulis satu instruksi pada satu waktu
+          dan jika ada kesalahan di suatu tempat, mereka harus menghapus semua kembali
+          ke titik itu.
+      courseD_unplugged_conditionalsCards:
+        title: Bersyarat dengan kartu
+        desc: Untuk mempelajari tentang pernyataan bersyarat, siswa memainkan permainan
+          kartu dan membuat aturan seperti "Jika saya menarik kartu merah, saya mendapatkan
+          satu poin" dan "Jika saya menarik kartu hitam, Anda mendapatkan satu poin."
+      courseD_unplugged_binaryImages:
+        title: gambar Biner
+        desc: Meskipun banyak orang berpikir bahwa biner hanyalah bilangan nol dan
+          satu, kursus kami sebelumnya mengajarkan siswa bahwa informasi dapat diwakili
+          dalam berbagai pilihan biner.  Pelajaran ini mengambil konsep satu langkah
+          lebih lanjut, menggambarkan bagaimana komputer dapat menyimpan informasi
+          lebih rumit (seperti gambar dan warna) dalam biner, juga.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Pelajaran ini memanggil cara kita menggunakan algoritma dalam kehidupan
+          kita sehari-hari. Sebagai bagian dari itu, siswa akan mengidentifikasi dan
+          menuliskan algoritma untuk game balapan dadu.
+      courseE_unplugged_songwritingParameters:
+        title: Penulisan lagu dengan Parameter
+        desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang
+          melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh
+          fungsi).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Siswa mengirim pesan yang mewakili berbagai metode transmisi internet
+          menggunakan potongan-potongan kertas.
+      courseE_unplugged_crowdsourcing:
+        title: Kerumunan
+        desc: Siswa menggunakan crowdsourcing, teknik pemecahan masalah umum dalam
+          ilmu komputer, untuk menyelesaikan tugas bersama sebagai kelas yang lebih
+          efisien dibandingkan jika siswa berusaha sendiri.
+      courseE_unplugged_songwriting:
+        title: Penulisan lagu dengan Parameter
+        desc: Siswa menggunakan konsep paduan suara dalam lagu untuk belajar tentang
+          melewati parameter (yang menyesuaikan fungsi tanpa harus menulis ulang seluruh
+          fungsi).
+      courseF_unplugged_tangrams:
+        title: Algoritma tangram
+        desc: Pelajaran ini menunjukkan kepada kita sesuatu yang penting tentang algoritma.
+          Jika Anda menyimpan sebuah algoritma sederhana, ada banyak cara untuk menggunakannya.
+          Jika Anda ingin memastikan semua orang berakhir dengan hal yang sama, maka
+          algoritma Anda membutuhkan perincian lebih mendalam.
+      courseF_unplugged_envelopeVariables:
+        title: Sampul Variabel
+        desc: Variabel memungkinkan adanya kebebasan dalam ilmu komputer. Pelajaran
+          ini membantu menjelaskan apakah variabel itu dan cara menggunakan mereka
+          dalam berbagai keadaan.
+      courseF_unplugged_forLoopFun:
+        title: Untuk Loop Fun
+        desc: Kita tahu bahwa loop memungkinkan kita untuk melakukan sesuatu berulang
+          kali, tapi sekarang kita akan belajar bagaimana menggunakan loop dengan
+          struktur tambahan yang dibangun langsung di dalam.
+      courseF_unplugged_songwritingParameters:
+        title: Parameter penulis lagu
+        desc: 'Salah satu struktur yang paling megah di dunia ilmu komputer adalah
+          fungsi. Fungsi (kadang-kadang disebut prosedur) adalah program kecil yang
+          dapat Anda gunakan berulang-ulang dalam program Anda yang lebih besar. Pelajaran
+          ini akan membantu siswa secara intuitif memahami mengapa menggabungkan potongan
+          kode ke dalam fungsi adalah sebuah praktik yang berguna.  '

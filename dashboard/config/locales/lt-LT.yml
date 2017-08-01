@@ -23,6 +23,7 @@
         name: Tavo vardas
         name_example: Tavo vardas<br/>(jį matys tavo mokytoja(-s))
         email: El. pašto adresas
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: Naudotojo vardas
         password: Slaptažodis
@@ -210,6 +211,10 @@
       Pamokėlės yra linksmos, interaktyvios. Programavimo pagrindų galima išmokti tiesiog žaidžiant. Išmokite programuoti padedant Bilui Geitsui, Markui Zuckerbergui žaisdami su Angry Birds ir Plants vs. Zombies! :)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -218,6 +223,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: El. pašto adresas
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Pakvietimas išsiųstas
     added_teacher: "%{name} pridėtas(-a) kaip tavo mokytojas(-a)"
@@ -231,6 +242,9 @@
       section_not_found: Nepavyko rasti grupės su kodu '%{section_code}'.
       blank_code: "Įveskite grupės kodą"
       cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "%{student_name} nebėra Jūsų mokinys."
@@ -251,6 +265,15 @@
     updated: "%{model} buvo sėkmingai atnaujintas."
     destroyed: "%{model} buvo sėkmingai pašalintas."
     access_denied: Neturite prieigos prie šio %{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Aš jau užbaigiau savo „Programavimo valandą“
@@ -261,6 +284,7 @@
         calculate: Calculate Something
         applab: Sukurk programėlę
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Pradžia
       courses: Kursai
       project_gallery: Project Gallery
@@ -364,6 +388,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -702,9 +732,15 @@
       title: Galerija
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     gamelab:
-      title: Game Lab (beta)
+      title: "Žaidimų laboratorija"
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: Amžius 13+
+      cta: Sužinok, kaip
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Amžius 13+
       cta: Sužinok, kaip
     frozen:
@@ -1017,10 +1053,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Ieškoti ikonos...
-      no_icons_found: Nerasta jokių ikonų
   flex_category:
     required: Peržiūra
     content: Turinys
@@ -1056,6 +1088,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Disclaimer
     leaving_domain: You are now leaving this domain, to a site that is not operated

@@ -2,12 +2,14 @@ import React from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import ProgressButton from '../progress/ProgressButton';
+import Button from '../Button';
 
 const styles = {
   card: {
     overflow: 'hidden',
-    border: '1px solid gray',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.border_gray,
     position: 'relative',
     height: 200,
     width: styleConstants['content-width'],
@@ -22,16 +24,20 @@ const styles = {
   },
   name: {
     paddingTop: 10,
-    paddingBottom: 5,
+    paddingBottom: 10,
+    paddingLeft: 25,
+    paddingRight: 25,
     marginTop: 15,
     fontSize: 30,
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
+    width: styleConstants['content-width']-35,
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
-    paddingLeft: 25,
-    paddingRight: 10,
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   description: {
     paddingLeft: 25,
@@ -39,7 +45,7 @@ const styles = {
     paddingTop: 20,
     paddingBottom: 5,
     marginTop: 80,
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 1.5,
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.charcoal,
@@ -75,9 +81,9 @@ const StudentTopCourse = React.createClass({
     const { assignableName, lessonName, linkToOverview, linkToLesson } = this.props;
     return (
       <div style={styles.card}>
-        <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
+        <img src={require('@cdo/static/small_purple_icons_fullwidth.png')} style={styles.image}/>
         <div style={styles.name}>
-          {i18n.topCourseWelcome({assignableName})}
+          {assignableName}
         </div>
         <div style={styles.description}>
           <div>
@@ -88,14 +94,14 @@ const StudentTopCourse = React.createClass({
           </div>
         </div>
         <div style={styles.buttonBox}>
-          <ProgressButton
+          <Button
             href={linkToOverview}
-            color={ProgressButton.ButtonColor.gray}
+            color={Button.ButtonColor.gray}
             text={i18n.viewCourse()}
           />
-          <ProgressButton
+          <Button
             href={linkToLesson}
-            color={ProgressButton.ButtonColor.orange}
+            color={Button.ButtonColor.orange}
             text={i18n.continueLesson()}
             style={styles.lessonButton}
           />

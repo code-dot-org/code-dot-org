@@ -27,6 +27,9 @@ class ProjectsController < ApplicationController
     starwars: {
       name: 'New Star Wars Project'
     },
+    starwarsblocks: {
+      name: 'New Star Wars Blocks Project'
+    },
     iceage: {
       name: 'New Ice Age Project'
     },
@@ -35,6 +38,9 @@ class ProjectsController < ApplicationController
     },
     gumball: {
       name: 'New Gumball Project'
+    },
+    flappy: {
+      name: 'New Flappy Project'
     },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'

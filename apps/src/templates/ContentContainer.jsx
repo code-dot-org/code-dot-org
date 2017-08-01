@@ -28,7 +28,8 @@ const styles = {
   description: {
     paddingRight: 10,
     paddingBottom: 20,
-    fontSize: 16,
+    fontSize: 14,
+    lineHeight: '22px',
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,

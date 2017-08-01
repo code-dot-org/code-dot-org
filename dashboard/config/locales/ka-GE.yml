@@ -23,6 +23,7 @@
         name: "სახელი სისტემაში"
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: "ელექტრონული ფოსტა"
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: "მომხმარებლის სახელი"
         password: "პაროლი"
@@ -213,6 +214,10 @@
       ტუტორიალები სახალისოა და პროგრამირების საფუძვლებს გასწავლით მარტივი, თამაშის მსგავსი მეთედებით. ისწავლეთ კოდის წერა ბილ გეითსისგან, მარკ ცუკერბერგისგან, Angry Birds, და Plants vs. Zombies! თამაშებით! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -221,6 +226,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "ელექტრონული ფოსტა"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "მოწვევა გაგზავნილია"
     added_teacher: "%{name} გიმატებთ, როგორც მასწავლებელს"
@@ -234,6 +245,9 @@
       section_not_found: სექცია კოდით "%{section_code}" ვერ მოიძებნა.
       blank_code: "შეიყვანეთ სექციის კოდი"
       cant_join_own_section: "ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
@@ -254,6 +268,15 @@
     updated: "%{model} წარმატებით განახლდა."
     destroyed: "%{model} წარმატებით წაიშალა."
     access_denied: "თქვენ არ გაქვთ წვდომა ამ %{model}-ზე."
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: მე დავასრულე ჩემი "კოდის ერთი საათი"
@@ -264,6 +287,7 @@
         calculate: Calculate Something
         applab: "აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
       courses: "კურსები"
       project_gallery: Project Gallery
@@ -367,6 +391,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -715,6 +745,12 @@
         and games with objects and characters that interact with each other.
       audience: "ასაკი 13+"
       cta: "ისწავლეთ, როგორ"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: "ასაკი 13+"
+      cta: "ისწავლეთ, როგორ"
     frozen:
       title: "გაყინული"
     starwars:
@@ -1028,10 +1064,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "მოძებნეთ სიმბოლო..."
-      no_icons_found: "სიმბოლო ვერ მოიძებნა"
   flex_category:
     required: "მიმოხილვა"
     content: "შიგთავსი"
@@ -1067,6 +1099,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: "უარყოფა"
     leaving_domain: "თქვენ ახლა ტოვებთ ამ დომენს და გადადიხართ საიტზე, რომელიც არ

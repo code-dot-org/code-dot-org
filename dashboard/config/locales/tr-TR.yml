@@ -17,14 +17,15 @@
     errors:
       messages:
         blank: gerekli
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: gereklidir
+        invalid_plural: geçersiz
     attributes:
       user:
         name: Görünen İsim
         name_example: Kod adı (Canavar Bilişimci yada Kuş Ahmet gibi)
         email: E-posta
-        personal_email: Personal email address
+        parent_email: Veli e-posta
+        personal_email: Kişisel e-posta adresi
         username: kullanıcı adı
         password: "şifre"
         password_confirmation: "Şifre doğrulama"
@@ -211,6 +212,10 @@
       %{link}
       Öğretici bölümler eğlenceli,görsel olarak alımlı,ve bilgisayar biliminin temel konseptini basit,yönlendirerek,oyun-benzeri tecrübeleri kullanarak öğretir.Kodlamayı Bill Gates'den,Mark Zuckerberg'den,Angry Birds'den, ve Bitkilere karşı Zombiler'den öğrenin! :-)
       %{name}
+  parent_mailer:
+    student_associated_subject: Code.org için oturum açma bilgileri
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Bölüm:'
@@ -219,6 +224,12 @@
     confirm:
       remove: Bu bölümü bırakmak istediğinden emin misin?
     remove: Bölümü kaldır
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-posta
+      google_classroom: Google Sınıf
+      clever: Clever
   follower:
     invite_sent: Davetiye gönderildi
     added_teacher: "%{name} öğretmeniniz olarak eklendi"
@@ -232,6 +243,9 @@
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -252,6 +266,15 @@
     updated: "%{model} başarılı bir şekilde güncellendi."
     destroyed: "%{model} başarıyla silindi."
     access_denied: " % {model} 'e erişiminiz yok."
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: Kişisel bir oturumu başarıyla oluşturuldu. Artık
+          Code.org'da e-posta ve parola ile oturum açabilirsiniz
+        personal_login_created_username: Kişisel bir oturumu başarıyla oluşturuldu.
+          Artık Code.org kullanıcı adınız ve parolanız ile oturum açabilirsiniz
   nav:
     header:
       finished_hoc: Kod Saati'ni tamamladım
@@ -262,6 +285,7 @@
         calculate: Bir şey hesaplamak
         applab: Uygulama oluşturun
         gamelab: Bir labaratuvar oyunu projesi yap
+        weblab: Make a Web Lab (beta) project
       home: Ana Sayfa
       courses: kurslar
       project_gallery: Proje Galerisi
@@ -364,17 +388,24 @@
     no_password_because_oauth: "Şifre yok çünkü bir üçüncü taraf sağlayıcı ile giriş
       yaptınız."
     no_password_because_sponsored: "Öğretmenin parolanızı yönetmesi için bkz."
-    create_personal_login: Create a personal login
-    create_personal_login_info: If you want to keep using your Code.org account even
-      after the end of the school year, you can create your own login below.
-    create_personal_login_terms: By creating a personal login, I agree to be bound
-      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
-      service</a>. If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services even without a teacher.
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
-      that allows us to contact students. Students will never receive emails from
-      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login: Kişisel bir oturum oluşturma
+    create_personal_login_under_13_info: Eğer okul yılı bittiğinde de Code.org hesabını
+      kullanmaya devam etmek istiyorsan, ebeveynlerinden senin kişisel oturum bilgilerini
+      oluşturmaları için yardım iste.
+    create_personal_login_under_13_username: Kullanıcı adı (gerçek adınızı kullanmayınız!)
+    create_personal_login_under_13_parent_email: Ebeveyn eposta adresi (şifreni kurtarmak
+      için)
+    create_personal_login_info: Code.org hesabınızı öğretim yılı bitiminden sonra
+      kullanmaya devam etmek istiyorsanız, alta kendi girişinizi yapın.
+    create_personal_login_terms: Kişisel hesap oluşturmakla ben, Code.org'un <a href='%{terms_of_service_url}',
+      target='_blank'> hizmet şartlarına bağlı olmayı kabul ediyorum</a>. Eğer 13
+      yaşının altındaysam, öğretmen olmadan ebeveynlerimin veya yasal vasilerimin
+      izni ile Code.org hizmetlerini kullandığımı onaylıyorum.
+    create_personal_login_email_note: "Öğrenci elektronik postaları öğrencilerle iletişim
+      kurmamıza izin verecek bir formda saklanmıyor. Öğrenciler şifrelerini tekrar
+      almak dışında asla Code.org'dan elektronik posta almazlar. Daha fazla bilgi
+      için <a href='%{privacy_policy_url}', target='_blank'>Güvenlik politikamıza</a>
+      bakınız."
   user_level:
     completed: Tamamlandı
     tried: Denenmiş
@@ -691,9 +722,15 @@
       body: Uygulamanın galerisine veya kullanıcılarımız tarafından oluşturulmuş sanatçı
         görsellerine göz atın
     gamelab:
-      title: Oyun Laboratuvarı (beta)
+      title: Oyun Laboratuvarı
       body: Oyun labı basit animasyonları ve oyunları nesnelerle ve etkilesimli karakterlerle
         beraber programlayabileceğin bir uygulama geliştirme ortamıdır.
+      audience: 13 + Yaş grubu
+      cta: Nasıl olduğunu öğren
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     frozen:
@@ -724,9 +761,9 @@
       body: "\"Bir deste kart kullanarak algoritmaları ve bu koşullu deyimleri öğrenin."
     widgets:
       title: Araçlar
-      body: Students can explore concepts from our Computer Science Principles course
-        hands-on using these digital tools. Use the widgets on their own, or create
-        a single-concept lesson for your class.
+      body: "Öğrenciler bilgisayar bilim ilkelerini bu dijital araçlarla uygulamalı
+        olarak keşfedebilirler. Her öğrenci endi başlarına kullanabilir veya kullanacağınız
+        sınıf için bir ortak tek bir ders oluşturabilirsiniz."
       audience: 14 yaş üzeri
       cta: Nasıl olduğunu öğren
   gallery:
@@ -999,10 +1036,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "Öğe ara..."
-      no_icons_found: "Öğe Bulunamadı"
   flex_category:
     required: Genel Bakış
     content: "İçerik"
@@ -1025,19 +1058,20 @@
     csd5_2: 'Bölüm 2: Veri problemlerini çözme'
     csd6_1: 'Bölüm 1: Donanım çıktısı'
     csd6_2: 'Bölüm 1: Donanım girdisi'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
+    csp1_1: 'Bölüm 1: Bilgiyi Sunma ve Aktarma'
     csp1_2: Interneti icat etme
     csp2_1: Karmaşık bilgileri kodlama ve sıkıştırma
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
-    csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: Survey
-    cspAssessment: Chapter Assessment
-    csp_ap_1: 'Chapter 1: AP Tech Setup'
-    csp_ap_2: 'Chapter 2: AP Explore Performance Task'
-    csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    csp2_2: 'Bölüm 2: Veriyi İşleme ve Görselleştirme'
+    csp3_1: 'Bölüm 1: Programlama Dilleri ve Algoritmalar'
+    csp4_1: 'Bölüm 1: Büyük Verilerin Dünyası ve Şifreleme'
+    csp5_1: 'Bölüm 1: Olay Temelli Programlama'
+    csp5_2: 'Bölüm 2: Programlama ve Veri Yapıları'
+    cspSurvey: Anket
+    cspAssessment: Bölüm Değerlendirme
+    csp_ap_1: 'Bölüm 1: AP teknik kurulum'
+    csp_ap_2: 'Bölüm 2: AP performans görevini keşfet'
+    csp_ap_3: 'Bölüm 2: AP performans görevini yarat'
+    dlp: Yansıma İstemleri
   external_links:
     disclaimer: Yasal uyarı
     leaving_domain: Code.org tarafından işletilen site değil.
@@ -1124,7 +1158,7 @@
   hidden_stage: "Öğretmenin senin burada olmanı beklemiyordu. Lütfen öğretmenine hangi
     derste olman gerektiğini sor."
   return_course_overview: "Ünite genel bakışına git"
-  view_all_units: View all units
+  view_all_units: Tüm üniteleri göster
   pd:
     survey:
       number_teachers: Number of attending teachers
@@ -1173,4 +1207,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: Tüm Dersler

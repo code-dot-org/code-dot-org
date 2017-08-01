@@ -299,7 +299,7 @@
       Counting_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Course 4 Artist 4_callout:
@@ -427,6 +427,10 @@
       Eval Strings Images 5_callout:
         Eval Strings Images 5_callout1: Overlay a triangle by filling in this slot
       Eval Strings Images 7_callout: []
+      Frozen Project Test Toolbox_callout:
+        snowflake_dropdown: "このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!"
+      Frozen Project Toolbox (Old)_callout:
+        snowflake_dropdown: "このドロップダウンリストを使って異なる雪の結晶を作ってみましょう!"
       Geometric Pattern_callout:
         4-5_Artist_Patterns_Free_Play_1: "全部のお気に入りブロックが、種類ごとに分けられました。これらの言葉をクリックすると、どうなったか確認できます。"
       Geometric Sun_callout:
@@ -470,7 +474,7 @@
       Mike Playlab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Modular Arithmetic_callout: []
@@ -505,7 +509,7 @@
       New Artist Project_callout:
         New Artist Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace to add them to your program
-        New Artist Project_callout2: Hit "Run" to save and run your program
+        New Artist Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       New Frozen Project_callout:
@@ -514,7 +518,7 @@
       New Play Lab Project_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Ninjacat Demo B_callout:
@@ -572,7 +576,7 @@
       Rock Paper Scissors_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       Rocket Height Course A_callout:
@@ -593,7 +597,7 @@
       Test Play Lab Project With Walls_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       TestLab_callout: []
@@ -653,6 +657,13 @@
       artistLoopsK2gradek_artist_loops3_callout:
         artistLoopsK2_1: This number tells you how many of these blocks you can use
           in this puzzle.
+      course2_artist_nestedLoops_challenge2_callout: []
+      course2_bee_conditionals_challenge2_callout:
+        courseD_bee_conditionals_challenge2_1: Use this loop to collect all of the
+          nectar (or honey) from one flower (or honeycomb).
+      course2_collector_loops_challenge2_callout: []
+      course2_collector_prog_challenge1_callout: []
+      course2_collector_prog_challenge2_callout: []
       courseA_artist_loops4_callout:
         courseA_artist_loops4_1: This number tells you how many of these blocks you
           can use in this puzzle.
@@ -708,6 +719,8 @@
         courseB_maze_seq3_1: The grey blocks are made of stone and can't be thrown
           away.
       courseB_maze_seq7_callout: []
+      courseB_playlab_events6_callout:
+        courseB_playlab_events6_a: Use the green drop down arrow to change directions.
       courseC_PlayLab_events_challenge1_callout:
         courseC_PlayLab_events_challenge1_1: This block lets you move actors to different
           parts of the game space.
@@ -875,6 +888,9 @@
       courseE_collector_ramp8_callout:
         courseD_collector_ramp8_1: 'Use this block to collect a single piece of treasure.  '
       courseE_collector_ramp9_callout: []
+      courseE_farmer_functions1_callout:
+        courseE_farmer_functions1_1: Your blocks have been organized into categories!  Click
+          here to find your `while` and `until` loops.
       courseE_farmer_functions10b_callout: []
       courseE_farmer_functions11_predict_callout: []
       courseE_farmer_functions1a_callout:
@@ -889,6 +905,7 @@
       courseE_farmer_functions2b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
+      courseE_farmer_functions2ba_callout: []
       courseE_farmer_functions3b_callout:
         courseE_farmer_functions1a_1: This veggie is unknown.  It changes each time
           you run the program.
@@ -1048,7 +1065,7 @@
       courseF_playLab_func2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       courseF_playlab_variables1a_callout:
@@ -1224,11 +1241,11 @@
       grade4_playLab_proj_example1_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
       grade4_playLab_proj_example2_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       grade4_playlab_test_callout: []
@@ -1351,7 +1368,7 @@
       small_actors_playlab_projects_callout:
         New Play Lab Project_callout1: Click the categories to see the blocks in your
           toolbox! Drag blocks to the workspace add them to your program
-        New Play Lab Project_callout2: Hit "Run" to save and run your program
+        New Play Lab Project_callout2: "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。"
         sign_in_to_save_project: Want to access your project later? Sign in to save
           this project to your account!
       testing code callout_callout:

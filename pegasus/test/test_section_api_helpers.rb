@@ -219,7 +219,7 @@ class SectionApiHelperTest < SequelTestCase
           script_name: 'flappy',
           category: 'Hour of Code',
           position: 4,
-          category_priority: 0
+          category_priority: 2
         }
         assert_equal expected, flappy_script
       end
@@ -263,7 +263,7 @@ class SectionApiHelperTest < SequelTestCase
           script_name: 'csp',
           category: 'Full Courses',
           position: 0,
-          category_priority: -1
+          category_priority: 0,
         }
         assert_equal expected, csp_course
       end
@@ -284,20 +284,11 @@ class SectionApiHelperTest < SequelTestCase
         sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
         sections.each do |section|
           if section[:id] == FakeDashboard::SECTION_COURSE[:id]
-            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:courseId]
+            assert_equal FakeDashboard::SECTION_COURSE[:course_id], section[:course_id]
           else
             assert_nil section[:course_id]
           end
         end
-      end
-
-      it 'returns student count but not students' do
-        sections = DashboardSection.fetch_user_sections(FakeDashboard::TEACHER[:id])
-        assert_equal [1, 0, 0], sections.map {|s| s[:studentCount]}
-
-        # Shouldn't return section-specific data -- use the specific API for each.
-        refute sections.any? {|section| section[:students]}
-        refute sections.any? {|section| section[:teachers]}
       end
     end
   end

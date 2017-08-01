@@ -24,6 +24,7 @@
         name: Numele afișat
         name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
         email: E-mail
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: nume de utilizator
         password: parolă
@@ -215,6 +216,10 @@
       Tutorialele sunt distractive, captivante vizual şi te învaţă conceptele de bază din informatică folosind o metodă simplă, ghidată, similară jocului. Învață să codezi de la Bill Gates, Mark Zuckerberg, Angry-Birds și Plants vs. Zombies! :-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -223,6 +228,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-mail
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Invitație trimisă
     added_teacher: "%{name} adăugat(ă) ca și profesorul tău"
@@ -236,6 +247,9 @@
       section_not_found: Nu am găsit o secţiune conţinând codul '%{section_code}'.
       blank_code: Te rugăm să introduci un cod de secţiune
       cant_join_own_section: Ne pare rău, dar nu poţi intra în propria secţiune.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Notificare Code.org: %{student_name} nu mai este asociat ca student
@@ -257,6 +271,15 @@
     updated: "%{model} a fost actualizat cu succes."
     destroyed: "%{model} a fost şters cu succes."
     access_denied: Nu ai acces la această %{model}.
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Am terminat Ora mea de Programare
@@ -267,6 +290,7 @@
         calculate: Calculate Something
         applab: Creează o aplicație
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
       courses: cursuri
       project_gallery: Project Gallery
@@ -371,6 +395,12 @@
       provider.
     no_password_because_sponsored: See your teacher to manage your password.
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -727,6 +757,12 @@
         and games with objects and characters that interact with each other.
       audience: Vârste 13 +
       cta: Află cum
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: Vârste 13 +
+      cta: Află cum
     frozen:
       title: Frozen
     starwars:
@@ -1047,10 +1083,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: Cauta o pictograma...
-      no_icons_found: Nu s-au găsit icons
   flex_category:
     required: Prezentare generală
     content: Conţinut
@@ -1086,6 +1118,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: Act de renuntare
     leaving_domain: Acum parasesti acest domeniu, la un site care nu este operat de

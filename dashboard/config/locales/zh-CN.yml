@@ -9,14 +9,15 @@
     errors:
       messages:
         blank: "必填"
-        blank_plural: are required
-        invalid_plural: are invalid
+        blank_plural: "必填"
+        invalid_plural: "无效"
     attributes:
       user:
         name: "显示名称"
         name_example: "显示的名字<br/>（例如酷码、晓明）"
         email: "电子邮件"
-        personal_email: Personal email address
+        parent_email: "父母/监护人电子邮箱"
+        personal_email: 个人电子邮箱地址 <a href="%{url}">(如果没有电子邮箱请点击这里)</a>
         username: "用户名"
         password: "密码"
         password_confirmation: "密码确认："
@@ -182,6 +183,10 @@
       %{link}
       本教程轻松有趣吸引眼球，它将教导您如何使用一个简单的、 指导性的、 类似游戏经验的计算机科学的基本概念。快来学习从比尔 · 盖茨、 马克 · 扎克伯格到愤怒的小鸟、 植物大战僵尸的代码吧 ！:-)
       %{name}
+  parent_mailer:
+    student_associated_subject: Code.org的登录信息
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: "你的小组："
@@ -190,6 +195,12 @@
     confirm:
       remove: "您确定要离开这个小组吗？"
     remove: "（删除小组）"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "电子邮件"
+      google_classroom: "谷歌教室"
+      clever: Clever
   follower:
     invite_sent: "邀请已发送"
     added_teacher: "添加%{name}为你的老师"
@@ -202,6 +213,9 @@
       section_not_found: "找不到代码 '%{section_code}' 节."
       blank_code: "请输入一节代码"
       cant_join_own_section: "对不起，你不能加入你自己的部分."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
@@ -222,6 +236,13 @@
     updated: "%{model} 已成功更新。"
     destroyed: "成功删除 %{model} 。"
     access_denied: "您没有 %{model} 的权限。"
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: "您已成功创建了个人账号。您现在可以使用电子邮箱和密码登录Code.org"
+        personal_login_created_username: "您已成功创建了个人账号。您现在可以使用用户名和密码登录Code.org"
   nav:
     header:
       finished_hoc: "我已经完成了我的编程一小时项目。"
@@ -232,6 +253,7 @@
         calculate: Calculate Something
         applab: "创建一个游戏实验室应用"
         gamelab: "创建一个游戏实验室项目"
+        weblab: Make a Web Lab (beta) project
       home: "首页"
       courses: "课程"
       project_gallery: "项目集"
@@ -332,17 +354,15 @@
     deleted_user: "已删除的用户"
     no_password_because_oauth: "无需密码，因为你使用第三方账号登录。"
     no_password_because_sponsored: "告诉你的老师来管理你的密码。"
-    create_personal_login: Create a personal login
-    create_personal_login_info: If you want to keep using your Code.org account even
-      after the end of the school year, you can create your own login below.
-    create_personal_login_terms: By creating a personal login, I agree to be bound
-      by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of
-      service</a>. If I am under 13 years of age, I confirm that I have my parent
-      or legal guardian's permission to use the Code.org services even without a teacher.
-    create_personal_login_email_note: 'Note: Email addresses are not stored in a form
-      that allows us to contact students. Students will never receive emails from
-      Code.org except for password recovery. See our <a href=''%{privacy_policy_url}'',
-      target=''_blank''>privacy policy</a> for more information.'
+    create_personal_login: "创建个人账户"
+    create_personal_login_under_13_info: "如果您想在学年结束后依然保留您的账号，请您的父母/监护人帮您在下面创建您自己的账号。"
+    create_personal_login_under_13_username: "用户名(请不要使用您的真名！)"
+    create_personal_login_under_13_parent_email: "父母/监护人电子邮箱地址(用于找回密码)"
+    create_personal_login_info: "如果想将你的Code.org账户在学年完成后也还保留，你需要在下面创建自己的账户。"
+    create_personal_login_terms: "通过创建个人账户，我同意接受Code.org的<a href='%{terms_of_service_url}',
+      target='_blank'>服务条款</a>。如果我在13岁以下，我已经确定了我的父母或法定监护人已经允许我在没有老师的情况下来使用Code.org的服务。"
+    create_personal_login_email_note: "注意：电子邮箱不会用来与学生进行联系。除了密码恢复的邮件，学生永远不会收到从Code.org寄来的任何邮件。更多信息请查看<a
+      href='%{privacy_policy_url}', target='_blank'>隐私政策</a>。"
   user_level:
     completed: "已完成"
     tried: "试过了"
@@ -564,8 +584,14 @@
       title: "作品"
       body: "查看由我们用户创建的应用程序和艺术家图片的作品"
     gamelab:
-      title: "游戏实验室 （测试版）"
+      title: "游戏实验室"
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
+      audience: 13岁以上
+      cta: "了解操作方法"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13岁以上
       cta: "了解操作方法"
     frozen:
@@ -817,10 +843,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "搜索图标..."
-      no_icons_found: "找不到图标"
   flex_category:
     required: "概览"
     content: "内容"
@@ -856,6 +878,7 @@
     csp_ap_1: "第一章：安装"
     csp_ap_2: "第二章：浏览成绩工具"
     csp_ap_3: "第三章：创建性能工具"
+    dlp: "反思提示"
   external_links:
     disclaimer: "免责声明"
     leaving_domain: "你现在正在离开code.org，访问一个不由我们创建的站点。"

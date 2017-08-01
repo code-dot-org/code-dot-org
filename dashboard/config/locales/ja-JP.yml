@@ -16,8 +16,9 @@
     attributes:
       user:
         name: "表示名"
-        name_example: "表示名<br/>( 例: Cool Coder、ジェーン)"
+        name_example: "表示名 <br/> (例えばクールコーダまたはジェーン)"
         email: Eメール
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: "ユーザー名"
         password: "パスワード"
@@ -59,8 +60,8 @@
   courses: "コース"
   unplugged_activity: "コンピューターを使わない活動"
   of: "の"
-  more: "詳細"
-  less: "隠す"
+  more: "くわしく"
+  less: "かくす"
   beta: "ベータ版"
   try_hoc: "ここをクリックしてHour of Codeを試す >>"
   try_k8intro: "コンピュータサイエンスコース （15-25 時間）の入門編"
@@ -114,7 +115,7 @@
     invalid_password: "パスワードを%d文字以上で入力"
     mismatch_password: "入力した 2 つのパスワードが一致しません"
     student_terms: Code.org <a href='http://code.org/tos'> サービス利用規約</a> に拘束されることに同意します。13
-      歳未満の場合、私は親または法定後見人による Code.org サービス使用の許可を得て、フォームを提出することを確認します <br/> <br/>。メール
+      才未満の場合、私は親または法定後見人による Code.org サービス使用の許可を得て、フォームを提出することを確認します <br/> <br/>。メール
       アドレスは、私たちが学生に連絡することができる形式では保存されません。パスワード回復のため以外では、学生がCode.org からメールを受け取ることはありません。詳しくは、
       <a href='http://code.org/privacy'> プライバシー ポリシー</a> を参照してください。
     teacher_terms: Code.org 利用規約に拘束されることに同意します。プライバシーの詳細については、 <a href='http://code.org/privacy'>
@@ -152,7 +153,7 @@
     login_username: Eメールアドレスまたはユーザー名
     password: "パスワード"
     remember: "ログイン情報を保存する"
-    submit: "ログイン"
+    submit: "サインイン"
   signin:
     try_heading: "登録せずにコーディングに挑戦してみたいですか？"
     try_hoc: "最初に 1 時間分のHour of Codeを試す"
@@ -162,7 +163,7 @@
     name: "名前を選ぶ"
     picture: "あなたの秘密の画像を見つけてください"
     words: "あなたの秘密の言葉を入力してください"
-    login: "ログイン"
+    login: "サインイン"
     invalid_login: "ログインに失敗（しっぱい）しました。もう一度（いちど）入力してください。"
     pair_programming: "このコンピューターで、パートナーがいます"
     student_privacy: "あなたのフルネームが表示されない理由について、詳しくは <a href='%{student_privacy_blog}'
@@ -190,6 +191,10 @@
       チュートリアルは、見た目にも楽しい、シンプル、ガイド付きのゲームのような経験を使用してコンピュータサイエンスの基本的な概念を学びます。ビル ・ ゲイツ氏、マーク・ザッカーバーグ氏、アングリーバード、Plants vs. Zombiesからコードを学ぼう ！:-)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: "あなたのセクション:"
@@ -198,6 +203,12 @@
     confirm:
       remove: "本当に、このセクションから離れてよいですか？"
     remove: "(セクションを削除)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: Eメール
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "招待状を送信しました"
     added_teacher: "%{name} あなたの先生として追加"
@@ -210,6 +221,9 @@
       section_not_found: "'%{section_code}' というセクションはありません"
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
@@ -230,16 +244,26 @@
     updated: "%{model} はエラーなく更新しました"
     destroyed: "%{model}は正常に削除されました"
     access_denied: "この %{model} へのアクセスは不要です"
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: Hour of Codeを終了
       sign_in_to_save: "進捗状況を保存するためにサインインする"
       free_play:
-        playlab: "アプリを作る"
-        artist: "絵を描く"
+        playlab: "プレイラボ で作る"
+        artist: "絵をかく"
         calculate: Calculate Something
-        applab: "アプリを作る"
-        gamelab: Make a Game Lab project
+        applab: "アプリラボ で作る"
+        gamelab: "ゲームラボで作る"
+        weblab: Make a Web Lab (beta) project
       home: "ホーム"
       courses: "コース"
       project_gallery: "プロジェクト ギャラリー"
@@ -278,11 +302,11 @@
     user:
       classroom: "先生用ホームページ"
       district_dashboard: "地区のダッシュ ボード"
-      label: "こんにちは  %{username}"
+      label: "やあ %{username}"
       stats: "コード・スタジオ"
       settings: "アカウント"
       logout: "サインアウト"
-      signin: "ログイン"
+      signin: "サインイン"
       signup: "アカウントの作成（さくせい）"
       already_registered: "既にアカウントをお持ちですか?"
       pair_programming: "ペアプログラミング"
@@ -341,6 +365,12 @@
     no_password_because_oauth: "サード パーティ プロバイダーを使用してサインインしたため、パスワードはありません。"
     no_password_because_sponsored: "あなたのパスワードの管理については、あなたの先生に聞いてください。"
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -391,8 +421,8 @@
     test_videos_help: "新しいビデオプレイヤーをテストする。"
     try_beta_courses: New! K-5生徒用のベータコースを試してみましょう
     use_as_teacher: "このサイトを教師として使用"
-    heading_hoc2014: "<h2>Hour of Code</h2> <h1>全年齢対象</h1>"
-    heading_elementary: "<h2>20時間コース</h2> <h1>全年齢の初心者対象</h1>"
+    heading_hoc2014: "<h2>Hour of Code（アウア オブ コード）</h2> <h1>全ねんれい向け</h1>"
+    heading_elementary: "<h2>20時間コース</h2> <h1>コンピュータサイエンス入門 (全ねんれい)</h1>"
     heading_apps: "<h2>お楽しみ</h2><h1>みんなの</h1>"
     heading_tools: "<h2>次のステップへの準備はできましたか?</h2><h1> JavaScript ツール （高校生向け）</h1>"
     heading_legacy: "<h1>全年齢対象のコース</h1>"
@@ -504,7 +534,7 @@
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour
       of Code&reg; は Code.org の商標です"
     copyright: "著作権"
-    more: "表示"
+    more: "見る"
     feedback: "フィードバックする"
     translate: "翻訳にご協力ください"
     support: "サポート"
@@ -577,8 +607,8 @@
       title: "アプリ ラボ"
       body: "アプリラボは、シンプルなアプリケーションを作ることができるプログラミング環境です。アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
       body_short: "アプリをデザインして、ブロックやJavaScriptでコードを書いて作品ができたら、すぐにあなたのアプリを共有することができます。"
-      audience: 13才以上対象
-      cta: "もっと知（し）る"
+      audience: 13才以上
+      cta: "もっと知る"
     hoc:
       title: "古典的な迷路"
       body: "コンピュータサイエンスの基本に挑戦してみてください。もう何百万人も挑戦した人がいます"
@@ -596,11 +626,16 @@
       title: "ギャラリー"
       body: "ユーザーが作成したアプリやアーティストの画像のギャラリーを見る"
     gamelab:
-      title: "ゲーム ラボ(ベータ版)"
-      body: Game Lab is a programming environment where you can make simple animations
-        and games with objects and characters that interact with each other.
-      audience: 13才以上対象
-      cta: "もっと知（し）る"
+      title: "ゲーム ラボ"
+      body: "ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。"
+      audience: 13才以上
+      cta: "もっと知る"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: 13才以上
+      cta: "もっと知る"
     frozen:
       title: "アナと雪の女王"
     starwars:
@@ -616,7 +651,7 @@
       body: "ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。"
     unplugged:
       title: "アンプラグド・レッスン"
-      audience: 6歳以上対象
+      audience: 4才以上
       body: "クラスで使用するためのアンプラグド・レッスンのリストをまとめました。あなたの教室にコンピューターが有るか否かにかかわらず、コンピューターサイエンスの基礎を教えることができます!
         独立したコースとしても、任意のコンピューターサイエンスの補間的なレッスンとしても使うことができます。"
       body_short: "クラスにコンピューターが無い場合は、 アンプラグド・レッスンを試してください。"
@@ -624,12 +659,10 @@
       title: "条件"
       body: "この「コンピュータを使わない」活動では、1組のトランプを使用して、アルゴリズムと条件文を学習します。"
     widgets:
-      title: Widgets
-      body: Students can explore concepts from our Computer Science Principles course
-        hands-on using these digital tools. Use the widgets on their own, or create
-        a single-concept lesson for your class.
+      title: "ウィジェット"
+      body: "これらのデジタル ツールを使用して、学生は実践的なコンピューターサイエンス入門コースを学ぶことができます。ウィジェットを自分で使うか、クラス向けの共通レッスンを作成します。"
       audience: 14才以上
-      cta: "もっと知（し）る"
+      cta: "もっと知る"
   gallery:
     students_drew_these_with_code: "これらの作品は、生徒たちがコードを使って描きました！"
     students_made_these_with_code: "これらの作品は、生徒たちがコードを使って創りました！"
@@ -640,7 +673,7 @@
     want_to_make_your_own: "自分でも創ってみたいですか？"
     how_to_save: "これらのチュートリアルの最終レベルでは、「完了」と「保存」をクリックし、ギャラリーにあなたの作品を保存してください。"
     more: "つづきを読む &rarr;"
-    caption_by_name_age: "作成者： %{name} ( %{age} 歳)"
+    caption_by_name_age: "作成者： %{name} (%{age} 才)"
     caption_time_ago: "%{time_ago} 前"
     header: "ギャラリー"
     header_playlab: "プレイラボ"
@@ -728,8 +761,8 @@
     title: "最新の利用規約とプライバシー ポリシー"
     intro_desc: "下記の通りサービス利用規約、およびプライバシー ポリシーを更新しました。変更は、2016 年 8 月 24 日現在有効です。 最大の変更:
       <i>コード スタジオには、生徒用アカウントのメール アドレスを保存しなくなります。</i>これは私たちにとって大きな決断であり、これが教育技術における学生プライバシーの新しい基準となることを期待します。他の変更点の要約は、電子メールでお送りしました。"
-    intro_instructions: "あなたのクラスの13 歳以下の学生が、コード ・スタジオのすべての最新機能へフル アクセスするためには、新しい条項に同意する必要があります。
-      13 歳以下の学生アカウントを登録する場合、あなたの学校は、コード ・スタジオ等の教育プログラムを含む学校での使用と利用のため、学生の個人情報の収集に親の同意がなされていることが確認されます。"
+    intro_instructions: "あなたのクラスの13 才以下の学生が、コード ・スタジオのすべての最新機能へフル アクセスするためには、新しい条項に同意する必要があります。
+      13才以下の学生アカウントを登録する場合、あなたの学校は、コード ・スタジオ等の教育プログラムを含む学校での使用と利用のため、学生の個人情報の収集に親の同意がなされていることが確認されます。"
     tos: "利用規約"
     privacy: "プライバシー ポリシー"
     privacy_notice: "プライバシーについて"
@@ -760,7 +793,7 @@
     - opt_out: "答えたくない"
     submit: "送信"
     decline: "閉じる"
-  zendesk_too_young_message: ご迷惑致しますが、若い方はこのサポートサイトのログインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をログインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。
+  zendesk_too_young_message: ご迷惑致しますが、若い方はこのサポートサイトのサインインは受け付けできないようになっているため、<a href="http://support.code.org">support.code.org</a>をサインインせずにご利用頂き、もしくは親または先生の方に代わりに連絡して頂くようにをお願い致します。
   progress:
     not_started: "未実施"
     in_progress: "途中"
@@ -778,15 +811,15 @@
     create: "プロジェクトを作る"
     create_a_project: "新しいプロジェクトを作る"
     new: "新しく作る"
-    rename: "名前を変更"
+    rename: "名前をかえる"
     save: "保存"
-    delete: "削除"
+    delete: "削除（さくじょ）"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト ギャラリー"
-    publish: "公開"
-    unpublish: "非公開"
-    share: "共有"
+    publish: "みんなに見せる"
+    unpublish: "見られなくする"
+    share: "シェアする"
     share_title: "プロジェクトを共有"
     share_copy_link: "リンクをコピー:"
     share_embed_description: Web ページにプロジェクトを表示するため、HTML ページに埋め込みコードを貼り付けることができます。
@@ -795,17 +828,17 @@
     advanced_share: "詳細オプションを表示"
     no_projects: "あなたのプロジェクトは現在ありません。上のボタンをクリックしてプロジェクトを開始してください。"
     close: "閉じる"
-    more: "表示"
+    more: "見る"
     name: "名前"
     updated: "更新された"
     project_type: "プロジェクトの種類"
     help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！
       <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
-    need_help: "スタートするのをお手伝いしましょうか？"
+    need_help: "これらのコースで、新しいプロジェクトを はじめよう"
     thumbnail_help: "プロジェクトのサムネイルが正しく表示されませんか? 新しいサムネイルを生成するために、アプリを実行してみてください。サムネイルの更新には、数時間かかることがありますのでご注意ください。"
-    really_delete: "削除しますか？"
+    really_delete: "本当に削除しますか？"
     delete_yes: "はい"
-    delete_no: "ちがいます"
+    delete_no: "いいえ"
     saved: "保存されました"
     not_saved: "保存されていません"
     cancel: "キャンセル"
@@ -859,10 +892,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "アイコンの検索.."
-      no_icons_found: "アイコンが見つかりませんでした。"
   flex_category:
     required: "概要"
     content: "内容"
@@ -898,6 +927,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: "免責事項"
     leaving_domain: "このドメインから離れ、Code.org が運営していないサイトに移動します。"
@@ -1024,4 +1054,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: "すべてのコース"

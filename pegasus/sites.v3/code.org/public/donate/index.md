@@ -43,8 +43,10 @@ Our donors include Microsoft, Facebook, Omidyar Network, the Infosys Foundation,
 
 Please [contact us](/contact) if you, your company, or your foundation is interested in talking with our team further to better understand our programs and to explore options for investing in our work. 
 
-**Are you an Amazon.com customer?**
-When you do your shopping at [smile.amazon.com](https://smile.amazon.com/), and choose [Code.org](https://smile.amazon.com/) as your charity, Amazon will match a percentage of all purchases to Code.org.
+## Are you an Amazon.com customer?
+When you shop on Amazon, you can choose Code.org as your charity and the AmazonSmile foundation will match a percentage of all your purchases to Code.org. Learn how to make Code.org your charity of choice [here](/donate/amazonsmile)!
+
+## Make a donation today
 
 
 

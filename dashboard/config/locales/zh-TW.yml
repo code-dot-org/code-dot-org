@@ -17,6 +17,7 @@
         name: "顯示名稱"
         name_example: "顯示名稱<br/>（例如 Cool Coder 或是 Jane S）"
         email: "電子信箱"
+        parent_email: Parent/guardian email
         personal_email: Personal email address
         username: "用戶名稱"
         password: "密碼"
@@ -185,6 +186,10 @@
       這是一個絕對會引起你注意的有趣課程。透過遊戲式的簡易引導，你將學會有關資訊科學的基本概念。快來跟比爾‧蓋茲(Bill Gates)，馬克‧佐克伯(Mark Zuckerberg)、憤怒鳥(Angry Birds)以及植物大戰殭屍(Plants vs. Zombies)一起學習程式設計吧！ :)
 
       %{name}
+  parent_mailer:
+    student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: "你的學習小組："
@@ -193,6 +198,12 @@
     confirm:
       remove: "你確定要退出這個學習小組？"
     remove: "（移除學習小組）"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "電子信箱"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "已發送邀請"
     added_teacher: "%{name} 已成為你的老師"
@@ -205,6 +216,9 @@
       section_not_found: "找不到代碼是 %{section_code} 的學習小組。"
       blank_code: "請輸入學習小組代碼"
       cant_join_own_section: "抱歉, 你不能加入你自己的學習小組。"
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
@@ -225,6 +239,15 @@
     updated: "%{model} 已更新。"
     destroyed: "%{model} 已刪除。"
     access_denied: "你沒有使用 %{model}的權限。"
+  devise:
+    registrations:
+      user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
+        personal_login_created_email: You created a personal login successfully. You
+          can now log into Code.org with your email and password
+        personal_login_created_username: You created a personal login successfully.
+          You can now log into Code.org with your username and password
   nav:
     header:
       finished_hoc: "我完成了一小時玩程式活動"
@@ -235,6 +258,7 @@
         calculate: Calculate Something
         applab: "製作一個 App Lab app"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: "主頁"
       courses: "課程"
       project_gallery: "專案作品集"
@@ -336,6 +360,12 @@
     no_password_because_oauth: "沒有密碼，因為你使用第三方帳戶登入。"
     no_password_because_sponsored: "告訴你的老師以管理你的密碼。"
     create_personal_login: Create a personal login
+    create_personal_login_under_13_info: If you want to keep using your Code.org account
+      even after the end of the school year, ask your parent/guardian to help you
+      create your own personal login below.
+    create_personal_login_under_13_username: Username (don't use your real name!)
+    create_personal_login_under_13_parent_email: Parent/guardian email address (to
+      recover your password)
     create_personal_login_info: If you want to keep using your Code.org account even
       after the end of the school year, you can create your own login below.
     create_personal_login_terms: By creating a personal login, I agree to be bound
@@ -596,6 +626,12 @@
         and games with objects and characters that interact with each other.
       audience: "年齡 13+"
       cta: "學習如何做"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
+      audience: "年齡 13+"
+      cta: "學習如何做"
     frozen:
       title: "冰雪奇緣"
     starwars:
@@ -846,10 +882,6 @@
       moment, please check back soon
     review_submitted: Your peer review was submitted
     review_new_submission: Review a new submission
-  components:
-    icon_library:
-      search_placeholder_text: "搜尋圖標..."
-      no_icons_found: "找不到圖標"
   flex_category:
     required: "概覽"
     content: "內容"
@@ -885,6 +917,7 @@
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'
+    dlp: Reflection Prompts
   external_links:
     disclaimer: "免責聲明"
     leaving_domain: "你正要離開這個網域，訪問一個不是由 Code.org 創建的網站。"

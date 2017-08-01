@@ -277,24 +277,134 @@
         title: ''
         desc: ''
       courseA_unplugged_loops:
-        title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        title: Bağımsız (Unplugged) Döngüler
+        desc: Bu derste, döngüler hakkında bilgi edineceksiniz!
       courseB_unplugged_MRF:
         title: Bağlantısız Etkinlik
-        desc: In this lesson, you will 'program' your friends!
+        desc: Bu derste arkadaşlarınızı yargılanmayacaksınız!
       courseB_unplugged_loopyMRF:
         title: Bağlantısız Etkinlik
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,
-          but this time with loops!
+        desc: Tıpkı 'Benim Robot Arkadaşlarım'da olduğu gibi, arkadaşlarınızı programlayacaksınız,
+          ama bu kez döngülerle!
       courseC_Unplugged_ScreenOutTheMean:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
       courseD_unplugged_digitalCitizenship:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn what it means to be a Digital Citizen.
+        desc: Bugün, Dijital Vatandaş olmanın ne anlama geldiğini öğreneceksiniz.
       courseE_unplugged_privateInformation:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn the difference between private and personal information!
+        desc: Bugün, özel ve kişisel bilgiler arasındaki farkı öğreneceksiniz!
       courseF_unplugged_powerOfWords:
         title: Bağlantısız Etkinlik
-        desc: Today you will learn about what to do if someone is being mean online.
+        desc: Bugün birisi ortalama çevrimiçi olursa ne yapmanız gerektiğini öğreneceksiniz.
+      deeper learning description:
+        title: ''
+        desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Gerçek-yaşam Algoritmaları: Bir Tohum Ek'
+        desc: Bu derste biz özellikle tohum ekme işlemini kullanarak algoritmanın
+          bizim günlük hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca
+          algoritmaların bilgisayar bilimindeki önemini göreceğiz.
+      courseA_unplugged_happyMaps:
+        title: Mutlu Haritalar
+        desc: "Öğrenciler basit algoritmalar (yönergeler silsilesi) oluşturarak tek
+          bir komutla bir karakteri labirentte hareket ettirirler."
+      courseA_unplugged_goingPlacesSafely:
+        title: Biryerlere Güvenle Gitmek
+        desc: "İnternet güçlü, fakat bazen tehlikeli bir yerdir. Öğretmenler internette
+          gezinirken nasıl güvende olunabileceğine dair bilgi verir."
+      courseABC_unplugged_bigEvent:
+        title: Büyük Olay
+        desc: "Öğrenciler bilgisayar programlamadaki kavramlardan birisi olan Eylemi
+          öğrenecek. Öğretmen kağıttan uzaktan kumanda üzerinde tuşlara basacak ve
+          öğrenciler basılan tuşa göre eylemde bulunacak."
+      courseB_unplugged_digitalFootprint:
+        title: Dijital İziniz
+        desc: "Öğretmenler dijital ayak izi hakkında bilgi verecekler. Kendi hakkında
+          yayımladıkları bilginin nasıl dijital ayak izi yarattığını ve sonuçlarını
+          tartışacaklar."
+      courseC_unplugged_buildingAFoundation:
+        title: Bir Temel Oluşturma
+        desc: "Öğrenciler verilen malzemelerle yapıyı oluşturur. Yapılar görevi tamamlamalı
+          ve öğrenciler işler karmaşıkolduğunda ısrarcı olmayı tartışmalı."
+      courseC_unplugged_paperPlanes:
+        title: 'Gerçek-yaşam Algoritmaları: Kağıt Uçaklar'
+        desc: Bu derste biz özellikle kağıt uçaklar yaparak algoritmanın bizim günlük
+          hayatımızda nasıl kullanıldığını göreceğiz. Bu derste ayrıca algoritmaların
+          bilgisayar bilimindeki önemini göreceğiz.
+      courseC_unplugged_gettingLoopy:
+        title: Döngüselleşme
+        desc: Bu ders dans aktivitesi ile döngülerin(tekrarlanan komutlar) programlama
+          konsepti hakkında bilgilendirme yapar.Öğrenciler  basit planlama yı ve inşa
+          edilenleri tekrar etmeyi öğrenecekler.
+      courseC_unplugged_binaryBracelets:
+        title: "İkilik Bileklikler"
+        desc: "Öğrenciler isimlerinin ilk harfinin ikili temsili şeklinde bilezik
+          oluşturuyor. Öğrenciler verinin farklı biçimlerde temsil edilebileceğini
+          öğrenirler."
+      courseD_unplugged_graphPaperProgramming:
+        title: Grafikli Kağıdıyla Programlama
+        desc: "Öğrenciler bir algoritma (yönergeler kümesi) yazarlar bir dizi komut
+          kullanarak sınfı bir çizim oluşturmaya yönlendirir."
+      courseD_unplugged_relayProgramming:
+        title: Röle Programlama
+        desc: Öğrenciler bayrak yarışı ile koşturup "Grafik kağıdı programlama" algoritma
+          yazıyorlar. Her seferinde yalnız bir komut yazabilirler. Eğer biryerde hata
+          varsa o yere kadarki herşeyi siliyorlar.
+      courseD_unplugged_conditionalsCards:
+        title: Kartlarla Koşullu Önermeler
+        desc: Koşullu ifadeleri öğrenmek için öğrenciler kart oyunu oynayacak. Burada
+          eğer kırmızı kartı çekersem puan alırım, eğer siyah kartı çekersem sen bir
+          puan alırsın gibi kurallar yaratacaklar
+      courseD_unplugged_binaryImages:
+        title: "İkili resimler"
+        desc: Birçok kişi ikili düşünmeyi sadece birler ve sıfırlar olarak görebilir.
+          Bizim desrslerimiz ikili kavramının farklı seçenekleri nasıl temsil edebildiğini
+          gösterdi. Bu ders ise kavramı bir seviye ileri götürdü ve daha karmaşık
+          bilgiler (resimlerdeki renkler gibi) ikili olarak nasıl temsil edilir onu
+          öğretecek.
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Bu ders algoritmaları günlük hayatımızda kullanmamız için bizi yönlendiriyor.Bunun
+          bir parçası olarak,öğrenciler zar yarışı oyunu için algoritmaları tanımlayıp
+          kaydedecekler.
+      courseE_unplugged_songwritingParameters:
+        title: Parametrelerle Şarkı Yazmak
+        desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
+          parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
+      courseE_unplugged_internet:
+        title: "İnternet"
+        desc: "Öğrenciler sayfa parçaları kullanarak,çeşitli internet aktarım metotlarını
+          mesajlar yollayarak gösterecekler."
+      courseE_unplugged_crowdsourcing:
+        title: Kalabalık Kaynaklandırma 'Crowdsourcing'
+        desc: "Öğrenciler kitlesel kaynağı kullanarak problem çözmeyi öğrenecekler.
+          Sınıfça bir işi yapmak tek başına yapmaktan daha kolaydır."
+      courseE_unplugged_songwriting:
+        title: Parametrelerle Şarkı Yazmak
+        desc: "Öğrenciler şarkıdaki koro kavramını kullanarak fonksiyonlara nasıl
+          parametre geçildiğini öğrenirler. (Fonksiyonu yeniden yazmadan özelleştirme)."
+      courseF_unplugged_tangrams:
+        title: Tangram Algoritmaları
+        desc: Bu ders bize algoritmalar hakkında  bazı önemli şeyler gösterdi.Eğer
+          algoritmayı basit tutacaksanız bunun bir çok yolu var.Eğer herkesin aynı
+          şey ile sonlandırdığından emin olmak istiyorsanız,algoritmanız daha çok
+          detaya ihtiyaç duyacaktır.
+      courseF_unplugged_envelopeVariables:
+        title: Zarf değişkenleri
+        desc: Değişkenleri Bilgisayar Biliminde esneklik sağlar.  Bu derste değişkenler
+          nedir ve biz onları nasıl çok farklı şekillerde kullanabilirsiniz onları
+          açıklayacağız.. Önce bu aktiviteyi kullanın ve fikri anlayın.
+      courseF_unplugged_forLoopFun:
+        title: Eğlenceli tekrar için
+        desc: Biliyoruzki döngüler bize bazı şeyleri tekrar ve tekrar yapmamız için
+          olanak sağlıyor,fakat şimdi   ekstra yapıları döngüler ile nasıl doğru kullanacağımızı
+          öğreneceğiz.
+      courseF_unplugged_songwritingParameters:
+        title: Parametrelerle Şarkı Yazmak
+        desc: 'Bilgisayar bilimi dünyasındaki en harika yapılardan birisi de fonksiyonlardır.
+          Fonksiyonlar (ya da bazen method da deriz) asıl büyük programımız içinde
+          tekrar tekrar kullanabildiğimiz mini programlardır. Bu ders öğrencilerin
+          neden bir yığın kodu fonksiyonun içine yerleştirmenin ne kadar yararlı olduğunu
+          kavramalarına yardımcı olacaktır.  '
