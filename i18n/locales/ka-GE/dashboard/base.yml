@@ -182,6 +182,8 @@ ka:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -190,6 +192,12 @@ ka:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'ელექტრონული ფოსტა'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'მოწვევა გაგზავნილია'
     added_teacher: '%{name} გიმატებთ, როგორც მასწავლებელს'
@@ -202,6 +210,7 @@ ka:
       section_not_found: "სექცია კოდით \"%{section_code}\" ვერ მოიძებნა."
       blank_code: "შეიყვანეთ სექციის კოდი"
       cant_join_own_section: "ვწუხთ, მაგრამ თქვენს საკუთარ სექციას ვერ შეუერთდებით."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org-ის შეტყობინება: %{student_name} აღარ არის თქვენი მოსწავლე.'
@@ -225,6 +234,7 @@ ka:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ ka:
         calculate: 'Calculate something'
         applab: 'აპლიკაციის შექმნა აპლიკაციების ლაბორატორიაში'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "კურსები"
       project_gallery: "Project Gallery"
@@ -537,8 +548,13 @@ ka:
       title: "გალერეა"
       body: "ნახეთ ჩვენი მომხმარებლების მეირ შექნილი აპლიკაციებისა და სურათების გალერეა"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "ასაკი 13+"
+      cta: "ისწავლეთ, როგორ"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "ასაკი 13+"
       cta: "ისწავლეთ, როგორ"
     frozen:

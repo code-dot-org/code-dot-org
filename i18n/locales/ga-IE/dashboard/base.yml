@@ -182,6 +182,8 @@ ga:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Do rannán:'
@@ -190,6 +192,12 @@ ga:
     confirm:
       remove: 'An bhfuil tú cinnte gur mhaith leat an rannán seo a fhágáil?'
     remove: '(bain rannán)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Seoladh ríomhphoist'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Seoladh an cuireadh'
     added_teacher: 'Is é/í %{name} do mhúinteoir anois'
@@ -202,6 +210,7 @@ ga:
       section_not_found: "Níor aimsíodh aon rannán le cód '%{section_code}'."
       blank_code: "Cuir isteach cód an rannáin"
       cant_join_own_section: "Ár leithscéal, níl cead agat dul isteach i do rannán féin."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Fógra ó Code.org: D''fhág %{student_name} do rang.'
@@ -225,6 +234,7 @@ ga:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ ga:
         calculate: 'Calculate something'
         applab: 'Déan aip sa Spraotharlann'
         gamelab: 'Déan tionscadal sa tSaotharlann Cluichíochta'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Baile"
       courses: "Cúrsaí"
       project_gallery: "Gailearaí na dTionscadal"
@@ -537,8 +548,13 @@ ga:
       title: "Gailearaí"
       body: "Féach ar phictiúir d'aipeanna agus ar obair ealaíne déanta ag úsáideoirí"
     gamelab:
-      title: "An tSaotharlann Cluichíochta (béite)"
+      title: "An tSaotharlann Cluichíochta"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Aois 13+"
+      cta: "Foghlaim anois"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Aois 13+"
       cta: "Foghlaim anois"
     frozen:

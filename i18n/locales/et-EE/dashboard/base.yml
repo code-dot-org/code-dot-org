@@ -176,6 +176,8 @@ et:
       Kliki lingile, et registreeruda arvutiõpetuse kursustele Code.org-is (koos minuga oma "õpetaja"):%{link} Õpetused on lõbusad, visuaalselt kütkestavad ja õpetavad arvutiõpetuse põhitõdesid kasutades lihtsat, giidiga, mängu-sarnaseid kogemusi. Õpi koodi kirjutama Bill Gatesilt, Mark Zuckerbergilt, Angry birdsilt ja Plants vs Zombielt! :-) %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -184,6 +186,12 @@ et:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'E-post'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Kutse saadetud'
     added_teacher: '%{name} lisatud kui sinu õpetaja'
@@ -196,6 +204,7 @@ et:
       section_not_found: "Ei leidnud jaotist koodiga \"%{section_code}\"."
       blank_code: "Sisestage jaotise kood"
       cant_join_own_section: "Kahjuks te ei saa ühineda iseenda osaga."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org teade: %{student_name} pole enam seotud teiega kui teie õpilane.'
@@ -219,6 +228,7 @@ et:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -231,6 +241,7 @@ et:
         calculate: 'Calculate something'
         applab: 'Loo App Lab rakendus'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "Kursused"
       project_gallery: "Project Gallery"
@@ -531,8 +542,13 @@ et:
       title: "Galerii"
       body: "Vaata meie kasutajate poolt tehtud galeriid, kus on äpid ja pildid tegelaskujudest"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Vanus 13+"
+      cta: "Õpi kuidas"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Vanus 13+"
       cta: "Õpi kuidas"
     frozen:
