@@ -2,7 +2,10 @@ require 'json'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and
-# outputs JS. It is run via `rake build:shared_constants
+# outputs JS. It is run via `rake build:shared_constants`.
+#
+# Many of these constants exist in other files. Changes to this file often should
+# result in changes to these other files.
 
 module SharedConstants
   # Used to communicate different types of levels
