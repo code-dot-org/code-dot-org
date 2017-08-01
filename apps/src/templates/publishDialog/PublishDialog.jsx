@@ -43,7 +43,6 @@ class PublishDialog extends Component {
           <PendingButton
             isPending={this.props.isPublishPending}
             onClick={this.confirm}
-            pendingStyle={BUTTON_TYPES.default.style}
             pendingText={i18n.publishPending()}
             style={[BUTTON_TYPES.primary.style, {float: 'right'}]}
             text={i18n.publish()}
