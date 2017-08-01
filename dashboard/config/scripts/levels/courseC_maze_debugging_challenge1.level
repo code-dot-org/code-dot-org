@@ -35,73 +35,14 @@
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-01 20:36:52 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" movable="false">
-          <next>
-            <block type="maze_moveForward">
-              <next>
-                <block type="maze_turn">
-                  <title name="DIR">turnRight</title>
-                  <next>
-                    <block type="maze_moveForward">
-                      <next>
-                        <block type="maze_moveForward">
-                          <next>
-                            <block type="maze_turn">
-                              <title name="DIR">turnRight</title>
-                              <next>
-                                <block type="maze_moveForward">
-                                  <next>
-                                    <block type="maze_moveForward">
-                                      <next>
-                                        <block type="maze_moveForward">
-                                          <next>
-                                            <block type="maze_moveForward">
-                                              <next>
-                                                <block type="maze_turn">
-                                                  <title name="DIR">turnRight</title>
-                                                  <next>
-                                                    <block type="maze_moveForward">
-                                                      <next>
-                                                        <block type="maze_moveForward">
-                                                          <next>
-                                                            <block type="maze_turn">
-                                                            <title name="DIR">turnRight</title>
-                                                            <next>
-                                                            <block type="maze_moveForward"/>
-                                                            </next>
-                                                            </block>
-                                                          </next>
-                                                        </block>
-                                                      </next>
-                                                    </block>
-                                                  </next>
-                                                </block>
-                                              </next>
-                                            </block>
-                                          </next>
-                                        </block>
-                                      </next>
-                                    </block>
-                                  </next>
-                                </block>
-                              </next>
-                            </block>
-                          </next>
-                        </block>
-                      </next>
-                    </block>
-                  </next>
-                </block>
-              </next>
-            </block>
-          </next>
-        </block>
+        <block type="when_run" deletable="false" movable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
