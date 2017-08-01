@@ -3,12 +3,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
-import RecentCourses from './RecentCourses';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import FindLocalClassBanner from './FindLocalClassBanner';
 import color from "../../util/color";
-import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
@@ -41,7 +39,6 @@ const styles = {
  */
 const Courses = React.createClass({
   propTypes: {
-    courses: shapes.courses,
     isEnglish: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
     isSignedOut: React.PropTypes.bool.isRequired,
@@ -50,25 +47,22 @@ const Courses = React.createClass({
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     showInitialTips: React.PropTypes.bool.isRequired,
     userId: React.PropTypes.number,
-    isRtl: React.PropTypes.bool.isRequired,
-    studentHomepagePreview: React.PropTypes.bool
+    isRtl: React.PropTypes.bool.isRequired
   },
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
     $('.standalone-tools').appendTo(ReactDOM.findDOMNode(this.refs.standaloneTools)).show();
-    $('#user_hero').appendTo(ReactDOM.findDOMNode(this.refs.userHero)).show();
     $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
     $('.hour-of-code-courses-first-row').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesFirstRow)).show();
     $('.csf-courses').appendTo(ReactDOM.findDOMNode(this.refs.csfCourses)).show();
     $('.tools-courses').appendTo(ReactDOM.findDOMNode(this.refs.toolsCourses)).show();
-    $('#section-management').appendTo(ReactDOM.findDOMNode(this.refs.sectionManagement)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
-    const { courses, isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl, studentHomepagePreview } = this.props;
+    const { isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -96,27 +90,6 @@ const Courses = React.createClass({
         <ProtectedStatefulDiv
           ref="flashes"
         />
-
-        {!studentHomepagePreview && (
-          <div>
-            {!isTeacher && (
-              <ProtectedStatefulDiv
-                style={styles.userHero}
-                ref="userHero"
-              />
-            )}
-
-            {(courses && courses.length > 0) && (
-              <RecentCourses
-                courses={courses}
-                showAllCoursesLink={false}
-                heading={i18n.myCourses()}
-                isTeacher={isTeacher}
-                isRtl={isRtl}
-              />
-            )}
-          </div>
-        )}
 
         {/* Signed-in teacher in English */}
         {(isEnglish && isTeacher) && (
@@ -210,10 +183,6 @@ const Courses = React.createClass({
               color={Button.ButtonColor.orange}
             />
           </div>
-        )}
-
-        {(!studentHomepagePreview && !isTeacher && !isSignedOut) && (
-          <ProtectedStatefulDiv ref="sectionManagement"/>
         )}
       </div>
     );

@@ -48,12 +48,14 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "instructions": "Let's have a party! Give each of my friends something to do when you click or tap them. What do the animals say? What else will happen?",
-    "markdown_instructions": "Let's have a party! Give each of my friends something to do when you click or tap them. What do the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "instructions": "\"Let's have a party! Give my friends something to do when you click or tap them.\"",
+    "markdown_instructions": "*\"Let's have a party! Give my friends something to do when you click or tap them.\"*\r\n\r\nWhat will the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19 PM.png)",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 16:06:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

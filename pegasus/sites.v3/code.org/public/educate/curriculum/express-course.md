@@ -14,21 +14,24 @@ social:
 ---
 # Computer Science Fundamentals - Express
 
-<img src="/images/20-hour-banner.jpg" style="max-width: 100%"/>
+<div class="col-33" style="padding-right: 10px;">
+  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
+</div>
 
-Computer Science Fundamentals Express is a 30 hour course designed for 10-18 year old students. It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
+[col-66]
+
+Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students (with an [option for pre-readers](https://studio.code.org/s/pre-express)). It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
 The course teaches the foundational concepts of programming using drag and drop blocks rather than a programming language such as JavaScript or Python. Blocks are an easier way to get started and many top Universities today begin their classes with block based programming.
 
-The Accelerated Course combines the concepts taught in our [elementary school courses](/educate/elementary) in an accelerated fashion designed for older students.
+The Express Course combines the concepts taught in our [elementary school courses](/educate/curriculum/elementary-school) in an accelerated fashion designed for older students. You can download the [complete curriculum for all of our elementary school courses here](https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs).
 
-All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy](/educate/curriculum#philosophy).
+[/col-66]
 
-<button>View course</button>
-
+<div style="clear:both"></div>
 
 <a id="info-sessions"></a>
-## New to Teaching Computer Science?
+# <strong>New to teaching computer science?</strong>
 
 No worries! Most of our teachers have never taught computer science before. 
 
@@ -37,8 +40,37 @@ Try one of our courses yourself to learn ahead of your students. Sign up as a te
 We also offer [free, online, self-paced professional development for teachers.](/educate/professional-development-online)
 
 
-## Looking for a Translated Option for ELL Students?
+# <strong>Looking for a translated course?</strong>
 
-We are working on translating the Computer Science Fundamentals Express courses to languages beyond English. In the meantime, we recommend using [Computer Science Fundamentals Accelerated](https://studio.code.org/s/20-hour). This shorter version of the Express course has already been translated into 25+ languages.
+We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using [Computer Science Fundamentals Accelerated](https://studio.code.org/s/20-hour). This shorter version of the Express course has already been translated into 25+ languages.
 
-## Tanya to put the links to the course and lesson plans here
+# <strong>Examples of student creations</strong>
+
+[col-33]
+
+<center><img src="/images/animated-examples/artist-game-space.gif" width="90%"></center>
+
+<div style="margin-top: 5px;">In this puzzle, the student created a honeycomb pattern.</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/play-lab-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a game with multiple levels in which you play against different characters. Game on!</div>
+
+[/col-33]
+
+[col-33]
+
+<center><img src="/images/animated-examples/flappy-game-space.gif" width="90%"></center>
+
+<div style="margin-left: 15px; margin-top: 5px;">This student created a Flappy Bird game.</div>
+
+[/col-33]
+
+<p style="clear:both">&nbsp;</p>
+
+
+
