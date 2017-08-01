@@ -177,7 +177,7 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a SectionsTable is rendered.
-    const sectionsTable = sectionsContentContainer.childAt(6).childAt(0);
+    const sectionsTable = sectionsContentContainer.childAt(2).childAt(0);
     assert.equal(sectionsTable.name(), 'SectionsTable');
     assert.equal(sectionsTable.childAt(0).name(), 'thead');
     const column1 = sectionsTable.childAt(0).childAt(0).childAt(0);
@@ -202,7 +202,7 @@ describe('TeacherHomepage', () => {
     assert.equal(row2.childAt(3).text(), sections[1].code);
   });
 
-  it('if there are no sections, Sections component shows SetUpMessage', () => {
+  it('if there are no sections, Sections component shows SectionsSetUpMessage', () => {
     const wrapper = mount(
       <TeacherHomepage
         announcements={[]}
@@ -224,9 +224,8 @@ describe('TeacherHomepage', () => {
     assert.equal(sectionsContentContainer.props().link, 'http://localhost:3000//teacher-dashboard#/sections');
     assert.equal(sectionsContentContainer.props().showLink, true);
     // Check if a sections SetUpMessage is rendered.
-    const sectionsSetUpMessage = sectionsContentContainer.childAt(7).childAt(0);
-    assert.equal(sectionsSetUpMessage.name(), 'SetUpMessage');
-    assert.equal(sectionsSetUpMessage.props().type, 'sections');
+    const sectionsSetUpMessage = sectionsContentContainer.childAt(3).childAt(0);
+    assert.equal(sectionsSetUpMessage.name(), 'SectionsSetUpMessage');
     assert.equal(sectionsSetUpMessage.childAt(0).text(), 'Set up your classroom');
     assert.equal(sectionsSetUpMessage.childAt(1).text(), 'Create a new classroom section to start assigning courses and seeing your student progress.');
     assert.equal(sectionsSetUpMessage.childAt(2).name(), 'Button');
@@ -354,7 +353,7 @@ describe('TeacherHomepage', () => {
     assert.equal(viewMoreButton.props().text, 'View more');
   });
 
-  it('if there are no courses, RecentCourses component shows a SetUpMessage', () => {
+  it('if there are no courses, RecentCourses component shows a CoursesSetUpMessage', () => {
     const wrapper = mount(
       <TeacherHomepage
         announcements={[]}
@@ -379,8 +378,7 @@ describe('TeacherHomepage', () => {
     assert.equal(coursesContentContainer.props().showLink, true);
     // Check if a courses SetUpMessage is rendered.
     const coursesSetUpMessage = coursesContentContainer.childAt(5).childAt(0);
-    assert.equal(coursesSetUpMessage.name(), 'SetUpMessage');
-    assert.equal(coursesSetUpMessage.props().type, 'courses');
+    assert.equal(coursesSetUpMessage.name(), 'CoursesSetUpMessage');
     assert.equal(coursesSetUpMessage.childAt(0).text(), 'Start learning');
     assert.equal(coursesSetUpMessage.childAt(1).text(), 'Assign a course to your classroom or start your own course.');
     assert.equal(coursesSetUpMessage.childAt(2).name(), 'Button');

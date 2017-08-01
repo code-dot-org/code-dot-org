@@ -11,7 +11,7 @@ Feature: App Lab Scenarios
 
   Scenario: App Lab Http Image
     # Create an app with an http image.
-    When I switch to text mode
+    When I ensure droplet is in text mode
     And I append text to droplet "image('test123', 'http://example.com')"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > img#test123" is visible
@@ -29,7 +29,7 @@ Feature: App Lab Scenarios
     And Applab HTML has no button
 
   Scenario: Can read and set button text
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('testButton1', 'Peanut Butter');\n"
     And I append text to droplet "button('testButton2', 'Jelly');\n"
     And I append text to droplet "setText('testButton1', getText('testButton2'));\n"
@@ -42,7 +42,7 @@ Feature: App Lab Scenarios
     Given I switch to design mode
     And I drag a TEXT_AREA into the app
     Then I switch to code mode
-    And I switch to text mode
+    And I ensure droplet is in text mode
     And I append text to droplet "setText('text_area1', 'Line 1\\nLine 2\\n\\nLine3');\n"
     And I append text to droplet "for (var i = 0; i < 100; i++) { setText('text_area1', getText('text_area1')); }"
     When I press "runButton"
@@ -54,7 +54,7 @@ Feature: App Lab Scenarios
     And I drag a TEXT_INPUT into the app
     And I drag a TEXT_AREA into the app
     And I switch to code mode
-    And I switch to text mode
+    And I ensure droplet is in text mode
     And I append text to droplet "onEvent('text_input1', 'change', function(event) {\n"
     And I append text to droplet "  console.log(event.targetId + ': ' + getText('text_input1'));\n"
     And I append text to droplet "});\n\n"
