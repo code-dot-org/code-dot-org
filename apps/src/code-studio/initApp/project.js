@@ -551,7 +551,11 @@ var projects = module.exports = {
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
         } else if (appOptions.skinId === 'hoc2015') {
-          return 'starwars';
+          if (appOptions.droplet) {
+            return 'starwars';
+          } else {
+            return 'starwarsblocks';
+          }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
         } else if (appOptions.skinId === 'infinity') {

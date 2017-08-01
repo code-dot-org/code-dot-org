@@ -1739,9 +1739,9 @@ Artist.prototype.checkAnswer = function () {
   this.studioApp_.stopLoopingAudio('start');
   if (this.testResults === TestResults.FREE_PLAY ||
       this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.studioApp_.playAudio('win');
+    this.studioApp_.playAudioOnWin();
   } else {
-    this.studioApp_.playAudio('failure');
+    this.studioApp_.playAudioOnFailure();
   }
 
   if (this.studioApp_.hasContainedLevels && !level.edit_blocks) {

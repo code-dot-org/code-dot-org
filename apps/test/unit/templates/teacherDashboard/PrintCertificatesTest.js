@@ -1,9 +1,12 @@
-import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import {assert} from '../../../util/configuredChai';
+import {
+  throwOnConsoleErrors,
+  throwOnConsoleWarnings
+} from '../../../util/testUtils';
 import React from 'react';
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import {UnconnectedPrintCertificates as PrintCertificates} from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 
 const sectionId = 11;
 
@@ -15,6 +18,7 @@ describe('PrintCertificates', () => {
     <PrintCertificates
       sectionId={sectionId}
       assignmentName="playlab"
+      curriedPegasusUrl={path => `${path}`}
     />
   );
 

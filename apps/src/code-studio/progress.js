@@ -26,6 +26,7 @@ import {
   setIsHocScript,
   setStudentDefaultsSummaryView,
   setCurrentStageId,
+  setStageExtrasEnabled,
 } from './progressRedux';
 import { renderTeacherPanel } from './teacher';
 import experiments from '../util/experiments';
@@ -69,11 +70,13 @@ progress.showDisabledBubblesAlert = function () {
  * @param {object} progressData
  * @param {string} currentLevelid
  * @param {boolean} saveAnswersBeforeNavigation
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
 progress.renderStageProgress = function (scriptData, stageData, progressData,
-    currentLevelId, saveAnswersBeforeNavigation, signedIn) {
+    currentLevelId, saveAnswersBeforeNavigation, signedIn, stageExtrasEnabled) {
   const store = getStore();
 
   const { name, disablePostMilestone, isHocScript } = scriptData;
@@ -101,6 +104,9 @@ progress.renderStageProgress = function (scriptData, stageData, progressData,
   store.dispatch(setIsHocScript(isHocScript));
   if (signedIn) {
     progress.showDisabledBubblesAlert();
+  }
+  if (stageExtrasEnabled) {
+    store.dispatch(setStageExtrasEnabled(true));
   }
 
   ReactDOM.render(
