@@ -16,7 +16,7 @@ Our current middle school curriculum focuses on a broad introduction to computer
 <%= view :solid_block_header, :title=>"Computer Science Discoveries", :subtitle=>"A semester or year-long introductory course designed for grades 7-9" %>
 
 <% facebook = {:u=>'https://youtu.be/2-QpgNHknds'} %>
-<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. Thanks #{get_random_donor_twitter} for supporting @codeorg"} %>
+<% twitter = {:url=>'https://youtu.be/2-QpgNHknds', :related=>'codeorg', :text=>"Computer Science Discoveries. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
 
 <div class="col-50" style="padding-right: 10px;">
 

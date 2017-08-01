@@ -20,7 +20,7 @@ Now even the youngest students can explore the limitless world of computing. Cod
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
 <% donor = get_random_donor_twitter %>
-<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. Thanks #{donor} for supporting @codeorg"} %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{donor} for supporting @codeorg)"} %>
 <%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
 
 
@@ -29,7 +29,7 @@ Now even the youngest students can explore the limitless world of computing. Cod
 <div style="float:left; padding:10px; width:49%">
 
 <% facebook = {:u=>'https://youtu.be/ZRNRVu4DFcs'} %>
-<% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>"Getting Started with Code Studio. Thanks #{donor} for supporting @codeorg"} %>
+<% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>"Getting Started with Code Studio. (Thanks #{donor} for supporting @codeorg)"} %>
 <%=view :display_video_thumbnail, id: "GettingStarted", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
 
 </div>
