@@ -97,6 +97,8 @@ loadAppOptions().then(options => {
   // Handlers for green flag and stop all.
   document.getElementById('greenflag').addEventListener('click', vm.greenFlag.bind(vm));
   document.getElementById('stopall').addEventListener('click', vm.stopAll.bind(vm));
+
+  options.onInitialize();
 });
 
 /**
