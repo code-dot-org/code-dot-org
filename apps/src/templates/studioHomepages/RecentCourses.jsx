@@ -28,7 +28,7 @@ const RecentCourses = React.createClass({
   },
 
   render() {
-    const { courses, showAllCoursesLink, isTeacher, heading, isRtl, studentTopCourse } = this.props;
+    const { courses, isTeacher, heading, isRtl, studentTopCourse } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || studentTopCourse;
@@ -37,9 +37,9 @@ const RecentCourses = React.createClass({
       <div>
         <ContentContainer
           heading={heading}
-          linkText={i18n.findCourse()}
-          link="/courses"
-          showLink={showAllCoursesLink}
+          linkText=""
+          link=""
+          showLink={false}
           isRtl={isRtl}
         >
           {!isTeacher && studentTopCourse && (
