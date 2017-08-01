@@ -33,8 +33,7 @@
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
-    "contained_level_names": null,
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

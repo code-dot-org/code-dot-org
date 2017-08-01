@@ -37,8 +37,8 @@
     "project_template_level_name": "courseC_artist_loopsTemplateA",
     "tts_markdown_instructions_override": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\r\nTry changing how many times you spin\r\nTry a 60 degree turn for 6 times around\r\nTry a 20 degree turn for 18 times around\r\nThis image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Since a circle has 360 degrees in total, the number of degrees in your turn multiplied by the number of times your loop repeats should be equal to 360. Check the suggested rotations to see that this works!\",\"hint_id\":\"courseC_artist_loops7a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/14fef9e79d7f57f168d876a8b9ad1760/courseC_artist_loops7a.mp3\"}]",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
