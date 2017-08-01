@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1404), [Windows](#windows-note-use-an-ubuntu-vm)
+   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1704-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
    - When done, check for correct versions of these dependencies:
 
      ```
@@ -16,7 +16,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      yarn -V         # --> 0.23.2
      ```
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.10.6`
+1. `gem install bundler`
 1. `rbenv rehash`
 1. `cd code-dot-org`
 1. `bundle install` (Problems with rmagick? See [tips](#tips) below.) (OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
@@ -65,30 +65,25 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ### Ubuntu 17.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.3-dev`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-1. Install npm with `sudo apt install npm`, then
-    * `sudo apt-get install nodejs`
+1. Install Node and Nodejs
+    1. Type `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+    1. And then `sudo apt-get install -y nodejs`
 1. Install Ruby 2.2.3 with rbenv
-     1. Install rbenv with `sudo apt install rbenv` and ruby-build with `sudo apt install ruby-build`
      1. `rbenv install 2.2.3`
      1. `rbenv global 2.2.3`
      1. `rbenv rehash`
-1. Install Node and yarn
-    1. Node: `sudo apt install nodejs-legacy`
-    1. yarn: `sudo npm install -g yarn@0.23.2`
-1. Run `gem install bundler -v 1.14.6`. Don't worry about using version 1.10.6 from the overview
-1. Run `sudo apt install ruby2.3-dev`
-1. Finally, configure your mysql to allow for a proper installation
-   1. If you properly left all the default options blank, type `sudo mysql` to start it up
-   1. Type `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';`
-   1. Then `FLUSH PRIVILEGES;`
-   1. And finally `exit;` to close out
+1. Install yarn
+    1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+    1. Then `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=0.23.2-1`
+1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
+   1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. Read the following notes, then go back up to the overview and run the commands there. 
-	1. In the overview sections, where it says to type `rake install`, make sure to instead type `bundle exec rake install`
-   1. If, for any reason, you are forced to interrupt `bundle exec rake install` before it completes,
-      cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
-   1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
+   1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
+      cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
+   1. `rake install` must always be called from the local project's root directory, or it won't work.
    1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
