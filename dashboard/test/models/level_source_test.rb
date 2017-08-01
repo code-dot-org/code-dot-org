@@ -23,4 +23,23 @@ class LevelSourceTest < ActiveSupport::TestCase
     refute level_source.valid?
     assert_equal ['Data is invalid'], level_source.errors.full_messages
   end
+
+  test "encrypt is the reverse of decrypt for valid user and level" do
+    user = create :user
+    encpryted = @level_source.encrypt_level_source_id(user.id)
+    decrypted = LevelSource.decrypt_level_source_id(encpryted)
+    assert_equal @level_source.id, decrypted
+  end
+
+  test "encrypt is the reverse of decrypt for non-valid user and level" do
+    encpryted = @level_source.encrypt_level_source_id(User.last.id + 1)
+    decrypted = LevelSource.decrypt_level_source_id(encpryted)
+    assert_nil decrypted
+  end
+
+  test "encrypt is the reverse of decrypt for nil user and level" do
+    encpryted = @level_source.encrypt_level_source_id(nil)
+    decrypted = LevelSource.decrypt_level_source_id(encpryted)
+    assert_nil decrypted
+  end
 end

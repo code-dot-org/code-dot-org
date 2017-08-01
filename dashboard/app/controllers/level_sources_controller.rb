@@ -1,4 +1,5 @@
 require 'image_lib'
+require 'base64'
 
 class LevelSourcesController < ApplicationController
   include LevelsHelper
@@ -74,6 +75,12 @@ class LevelSourcesController < ApplicationController
   protected
 
   def set_level_source
+    if params[:level_source_id_and_user_id]
+      params[:id] = LevelSource.decrypt_level_source_id(params[:level_source_id_and_user_id])
+    end
+    if params[:id].nil?
+      raise ActiveRecord::RecordNotFound
+    end
     if current_user && current_user.permission?(UserPermission::RESET_ABUSE)
       @level_source = LevelSource.find(params[:id])
     else
