@@ -129,7 +129,7 @@ const styles = {
       color: color.white,
       textShadow: createOutline(color.lighter_gray),
       ':hover': {
-        color: color.white,
+        color: color.level_current,
         backgroundColor: 'transparent'
       }
     },
