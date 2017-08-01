@@ -63,6 +63,7 @@ testsContext.keys().forEach(testsContext);
     'netsim',
     'studio',
     'turtle',
+    'scratch',
     'weblab'
   ];
 
@@ -269,7 +270,6 @@ testsContext.keys().forEach(testsContext);
         ['build/package/css/plc.css', 'style/code-studio/plc.scss'],
         ['build/package/css/pd.css', 'style/code-studio/pd.scss'],
         ['build/package/css/publicKeyCryptography.css', 'style/publicKeyCryptography/publicKeyCryptography.scss'],
-        ['build/package/css/scratch.css', 'style/scratch.scss'],
       ].concat(appsToBuild.map(function (app) {
         return [
           'build/package/css/' + app + '.css', // dst
@@ -421,7 +421,6 @@ testsContext.keys().forEach(testsContext);
     'levels/external':              './src/sites/studio/pages/levels/external.js',
     'levels/levelGroup':            './src/sites/studio/pages/levels/levelGroup.js',
     'levels/multi':                 './src/sites/studio/pages/levels/multi.js',
-    'levels/scratch':               './src/sites/studio/pages/levels/scratch.js',
     'levels/textMatch':             './src/sites/studio/pages/levels/textMatch.js',
     'levels/widget':                './src/sites/studio/pages/levels/widget.js',
     'levels/editors/_blockly':      './src/sites/studio/pages/levels/editors/_blockly.js',
