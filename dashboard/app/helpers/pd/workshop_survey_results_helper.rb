@@ -50,7 +50,7 @@ module Pd::WorkshopSurveyResultsHelper
   # @param facilitator_name Facilitator name to restrict responses for
   # @param facilitator_breakdown Whether to have a facilitator breakdown
   # @returns Hash representing an average of all the respones, or array of free text responses
-  def summarize_workshop_surveys(workshops:, facilitator_name: nil, facilitator_breakdown: true)
+  def summarize_workshop_surveys(workshops:, facilitator_name: nil, facilitator_breakdown: true, include_free_response: true)
     # Works on arrays where everything is either a teachercon survey or workshop survey
     # (but not both)
     surveys = workshops.flat_map(&:survey_responses)
@@ -68,6 +68,8 @@ module Pd::WorkshopSurveyResultsHelper
     sum_hash = Hash.new(0)
     responses_per_facilitator = Hash.new(0)
 
+    fields_to_summarize = include_free_response ? FIELDS_IN_SUMMARY : MULTIPLE_CHOICE_FIELDS_IN_SUMMARY
+
     # Ugly branchy way to compute the summarization for the user
     surveys.each do |response|
       response_hash = facilitator_name ?
@@ -77,7 +79,7 @@ module Pd::WorkshopSurveyResultsHelper
       response_hash[:who_facilitated].each {|name| responses_per_facilitator[name] += 1}
 
       response_hash.each do |k, v|
-        next unless FIELDS_IN_SUMMARY.include? k
+        next unless fields_to_summarize.include? k
         # Multiple choice questions
         if questions.key? k
           if v.is_a? Hash
@@ -144,6 +146,8 @@ module Pd::WorkshopSurveyResultsHelper
 
     sum_hash[:num_enrollments] = workshops.flat_map(&:enrollments).size
     sum_hash[:num_surveys] = surveys.size
+
+    sum_hash.default = nil
 
     sum_hash
   end
