@@ -88,7 +88,11 @@ def main
   end
 
   Level.find_each do |level|
-    next unless level.script_levels.map(&:script).select(&:k5_draft_course?)
+    begin
+      next unless level.script_levels.map(&:script).select(&:k5_draft_course?)
+    rescue ActiveRecord::RecordNotFound
+      next
+    end
 
     level.contained_levels.each_with_index do |contained_level, index|
       next unless contained_level.type == 'Multi'
