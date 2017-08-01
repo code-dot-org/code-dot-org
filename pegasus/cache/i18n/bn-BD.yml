@@ -279,6 +279,30 @@
   just_did_coursee: I just finished Course E - check it out! @codeorg
   just_did_coursef: I just finished Course F - check it out! @codeorg
   just_did_accelerated: " দেখ আমি কেবল অ্যাক্সিলারেটেড  কোর্স শেষ করছে! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 10 জনের মধ্যে 9 মানুষ একমত যে বিদ্যালয় কম্পিউটার বিজ্ঞান শিক্ষা
     দেওয়া উচিত। http://youtu.be/nKIu9yen5nc. Visit https://code.org/.
   twitter_cs_foundational: Computer science is foundational for every student to learn.
@@ -1138,6 +1162,8 @@
   coursef-draft_name: "কোর্স F"
   coursef_name: "কোর্স F"
   accelerated_name: Accelerated Course
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(পুরাতন) ইউনিট ১: ডিজিটাল তথ্য"
   cspunit2_name: "(পুরাতন) ইউনিট ২: ইন্টারনেট"
   cspunit3_name: "সিএস এর মূলনীতি ইউনিট ৩"
@@ -1183,6 +1209,7 @@
   math_category_name: "গণিত"
   hoc_category_name: "এক ঘন্টার কোড"
   csf_category_name: CS Fundamentals
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: CS Principles
