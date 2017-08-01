@@ -69,7 +69,7 @@ JoinSectionFailNotification.propTypes = JoinSectionNotFoundNotification.propType
 
 const JoinSectionExistsNotification = ({sectionName}) => (
   <Notification
-    type="warning"
+    type="success"
     notice={i18n.sectionsNotificationSuccess()}
     details={i18n.sectionsNotificationJoinExists({sectionName})}
     dismissible={true}

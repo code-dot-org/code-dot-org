@@ -15,6 +15,13 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, response["using_text_mode"]
   end
 
+  test_user_gets_response_for(
+    :post_using_text_mode,
+    user: nil,
+    params: {user_id: 'me', using_text_mode: 'true'},
+    response: :forbidden
+  )
+
   test 'a post request to using_text_mode updates using_text_mode' do
     sign_in(@user)
     assert !@user.using_text_mode
