@@ -13,26 +13,21 @@ Elementary School
 
 [/solid-block-header]
 
-<div class="col-50" style="padding-right: 20px; float: left;">
+<div class="col-40" style="padding-right: 20px; float: left;">
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
-<% donor = get_random_donor_twitter %>
-<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{donor} for supporting @codeorg)"} %>
-<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 
 </div>
 
-[col-50]
-
-<% facebook = {:u=>'https://youtu.be/ZRNRVu4DFcs'} %>
-<% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>"Getting Started with Code Studio. (Thanks #{donor} for supporting @codeorg)"} %>
-<%=view :display_video_thumbnail, id: "GettingStarted", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
-[/col-50]
+[col-60]
 
 Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
 
 If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
 
+[/col-60]
 
 <div style="clear:both"></div>
 
