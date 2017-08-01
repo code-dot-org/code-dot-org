@@ -1,93 +1,142 @@
 ---
 title: CS Fundamentals for grades K-5
-nav: educate_nav
 video_player: true
 theme: responsive
 style_min: true
 ---
 
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+
 [solid-block-header]
 
-Computer Science Fundamentals
+Elementary School
 
 [/solid-block-header]
 
-### [No-Cost Teacher Workshops](#teach) | [Curriculum Overview](#overview) | [Other Resources](#other)
-
-Now even the youngest students can explore the limitless world of computing. Code.org’s K-5 courses blend online, self-guided, and self-paced tutorials with “unplugged” activities that require no computer at all! Even kindergarten-aged pre-readers can participate. Our curriculum is available at [no cost](/commitment) for anyone, anywhere in the world to teach. 
-
-<div style="float:left; padding:10px; width:49%">
+<div class="col-40" style="padding-right: 20px; float: left;">
 
 <% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
-<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
-<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
-
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>"Introduction to CS Fundamentals. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"} %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
 
 </div>
 
-<div style="float:left; padding:10px; width:49%">
+[col-60]
 
-<% facebook = {:u=>'https://youtu.be/ZRNRVu4DFcs'} %>
-<% twitter = {:url=>'https://youtu.be/ZRNRVu4DFcs', :related=>'codeorg', :text=>'Getting Started with Code Studio @codeorg'} %>
-<%=view :display_video_thumbnail, id: "GettingStarted", video_code: "ZRNRVu4DFcs", caption: "Getting Started with Code Studio", play_button: 'center', facebook: facebook, twitter: twitter %>
+Our Computer Science Fundamentals courses each have about 15 lessons that may be implemented as one unit or over the course of a semester. Students create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share.
+
+If you like teaching CS Fundamentals, invite other teachers by [sharing this handout](/files/csf-one-pager.pdf).
+
+[/col-60]
+
+<div style="clear:both"></div>
+
+# New to teaching computer science?
+
+<div class="col-40" style="float: left;">
+<img src="/images/fit-370/CSFimages/PD_Review_Cyan.png"/>
+</div>
+
+<div class="col-60" style="float: left; margin-top: 15px; padding-right: 20px;">
+
+No worries! Most of our teachers have never taught computer science before. 
+
+Try one of our courses yourself to learn ahead of your students. Sign up as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need.
+
+We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities. 
+
+<br>
+<a href="/professional-development-workshops"><button>Find a workshop</button></a>
 
 </div>
 
 <div style="clear:both"></div>
 
-[solid-block-header]
-
-<a name="teach"></a> Free Teacher Workshops
-
-[/solid-block-header]
-
-## High quality workshops for teachers, at no cost (US only)
-
-To help teachers implement our courses for grades K-5, Code.org offers high-quality, 1-day workshops for educators and content-area teachers (librarians, tech-ed specialists, etc.). These workshops are led by experienced Code.org facilitators in locations across the United States.
-
-Attendees learn how to use Code.org's courses to introduce computer science basics in a format that's fun and accessible to the youngest learners (grades K-5). Attendees also receive all the supplies they need to teach—at no cost.
-
-<br />
-[<button>Learn more & find a local workshop</button>](/professional-development-workshops)<br />
-
-<img src="/images/k5teacherquotes.png" width="100%"/>
-
-### <strong>No workshop in your area?</strong>
-[Find a CS Fundamentals facilitator](/educate/k5-affiliates-directory) near you or consider completing one of our [online self-paced professional learning courses](/educate/professional-development-online) on your own.
-
-[<button>View the online course</button>](/educate/professional-development-online)<br />
-
-[solid-block-header]
-
-<a name="overview"></a>Curriculum Overview
-
-[/solid-block-header]
-
-## Courses 1 - 4
-
-Our Computer Science (CS) Fundamentals curriculum is implemented within [Code Studio](http://studio.code.org), our online education platform. This curriculum consists of multiple courses, each of which has about 20 lessons that may be implemented as one unit or over the course of a semester. Explore our courses below!
-
-[Download complete curriculum for Courses 1 - 4](/curriculum/docs/k-5/complete.pdf)
-
-<a id="course1"/>
-
-| Course | Ages | Description | Teacher Resources |
-| :------------------:|-----------|-----------|-----------|
-| <a href ="https://studio.code.org/s/course1">Course 1 <img src="<%= CDO.shared_image_url('courses/logo_tall_course1.jpg') %>" width="170"/></a> <br><br>  | Ages 4-6 | <ul><li>Early-readers</li><li>Sequences</li><li>Loops and events</li><li>Meaningful collaboration with others</li><li>Problem-solving and perseverance techniques</li><li>Internet safety</li></ul>  | [Lesson Plans](/curriculum/course1) <br><br> [Sequence](/curriculum/course1/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course1.pdf) <br><br> [Standards](/curriculum/docs/k-5/standards_course1.pdf) <a id="course2"/>|
-| <a href ="https://studio.code.org/s/course2">Course 2 <img src="<%= CDO.shared_image_url('courses/logo_tall_course2.jpg') %>" width="170"/></a> <br><br>  | Ages 6+ | <ul><li>Beginner readers</li><li>Conditionals</li><li>Algorithms</li><li>Binary Code</li><li>Debugging</li><li>Societal impacts of computing</li></ul>| [Lesson Plans](/curriculum/course2) <br><br> [Sequence](/curriculum/course2/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course2.pdf) <br><br> [Standards](/curriculum/docs/k-5/standards_course2.pdf) <a id="course3"/> |
-| <a href ="https://studio.code.org/s/course3">Course 3 <img src="<%= CDO.shared_image_url('courses/logo_tall_course3.jpg') %>" width="170"/></a> <br><br> | Ages 8+ | <ul><li>Pre-req Course 2</li><li>Problem Decomposition</li><li>Functions</li><li>Nested loops and conditionals</li><li>Digital Citizenship</li><li>Internet transmission methods</li></ul> | [Lesson Plans](/curriculum/course3) <br><br> [Sequence](/curriculum/course3/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course3.pdf) <br><br> [Standards](/curriculum/docs/k-5/standards_course3.pdf) <a id="course4"/>|
-| <a href ="https://studio.code.org/s/course4">Course 4 <img src="<%= CDO.shared_image_url('courses/logo_tall_course4.jpg') %>" width="170"/></a> <br><br> | Ages 8+ | <ul><li>Pre-req Course 3</li><li>Algorithmic problem solving</li><li>Abstraction</li><li>Variables</li><li>For loops</li><li>Functions with parameters</li><li>Binary code</li></ul> | [Lesson Plans](/curriculum/course4) <br><br> [Sequence](/curriculum/course4/docs/overview.pdf) <br><br> [Framework](/curriculum/docs/k-5/framework_course4.pdf) <br><br> [Standards](/curriculum/docs/k-5/standards_course4.pdf)|
-| <a id="unplugged"/> <a href ="/curriculum/unplugged">Unplugged<img src="/images/unpluggedcourse.png" width="170"/></a> <br><br> | All Ages | <ul><li>No computer required</li><li>Collaborative activities</li><li>Computational Thinking</li><li>Algorithms</li><li>Loops</li><li>Conditionals</li><li>Variables</li><li>Functions</li></ul> | [Unplugged Activities](/curriculum/unplugged) |
-
 <br>
 
-By the end of each course, students create interactive games or stories that they can share with anyone.
+[solid-block-header]
 
-The courses are flexible, too, so educators can adjust them based on their students’ developmental level and prior experience.
+Courses
 
-All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
+[/solid-block-header]
 
-### <strong>Examples of student creations</strong>
+# Selecting the right course for your class
+
+<img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
+
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the [complete curriculum for Courses A-F here](https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs).
+
+If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).
+
+# Courses A-F
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursea'), lesson_plans: 'https://curriculum.code.org/csf/coursea', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course A', ages: 'Recommended for Kindergarten (Supports pre-readers)', description: 'Teaches basic programming concepts such as loops and events. Lessons also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. At the end of this course, students create their very own custom game or story they can share.
+'%>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/courseb'), lesson_plans: 'https://curriculum.code.org/csf/courseb', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course B', ages: 'Recommended for 1st grade (Supports pre-readers)', description: 'Closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Covers the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create their very own custom game they can share.'%>
+
+[/col-50]
+
+<div style="clear:both"></div>
+<br>
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursec'), lesson_plans: 'https://curriculum.code.org/csf/coursec', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course C', ages: 'Recommended for 2nd grade', description: 'Students will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share.'%>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursed'), lesson_plans: 'https://curriculum.code.org/csf/coursed', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course D', ages: 'Recommended for 3rd grade', description: 'Students develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Beyond coding, students learn about digital citizenship.' %>
+
+[/col-50]
+
+<div style="clear:both"></div>
+<br>
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursee'), lesson_plans: 'https://curriculum.code.org/csf/coursee', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course E', ages: 'Designed for 4th grade', description: 'Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. In the second part of the course, students design and create a capstone project they can share.' %>
+
+[/col-50]
+
+[col-50]
+
+<%= view :course_wide_block, course: CDO.studio_url('/s/coursef'), lesson_plans: 'https://curriculum.code.org/csf/coursef', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Course F', ages: 'Designed for 5th grade', description: 'Students create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course students design and create a capstone project they can share.' %>
+
+[/col-50]
+
+<div style="clear:both"></div>
+
+# Express Course
+
+<div class="col-25" style="padding-right: 10px;">
+  <a href="<%= CDO.studio_url('/s/pre-express') %>"><img src="/images/curriculum/course-tile-pre-reader-express.png"></a>
+</div>
+
+<div class="col-25" style="padding-right: 10px;">
+  <a href="<%= CDO.studio_url('/s/express') %>"><img src="/images/curriculum/course-tile-express.png"></a>
+</div>
+
+CS Fundamentals Express combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). We recommend Courses A-F for most classrooms, but if your school only offers one computer science course or you want to have your students work through multiple courses in a single year, the Express course is a better choice. By removing the ramp up between years, the express course provides a smoother path and doesn’t repeat concepts for students. This is also our recommended option for students studying computer science on their own, outside of a classroom.
+
+<br>
+<br>
+<br>
+
+
+# Looking for translated courses?
+
+We are working on translating Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using [Courses 1-4 and the Accelerated Course](/educate/curriculum/cs-fundamentals-international). These courses cover the same basic concepts and have already been translated into 25+ languages.
+
+# Examples of student creations
 
 [col-33]
 
@@ -115,46 +164,11 @@ All lessons align to all relevant computer science standards, as well as to the 
 
 <p style="clear:both">&nbsp;</p>
 
-### <strong>Teacher Home Page</strong>
-The Code Studio teacher home page makes it easy for teachers to view lesson plans, create student accounts and monitor student progress. Students don't need an email address to have an account in Code Studio. Students can even log in with a picture instead of a text password.
-
-[col-50]
-
-<img src="/images/dashboard_teacher_section.png" width="350"/>
-
-[/col-50]
-
-[col-50]
-
-<img src="/images/dashboard_teacher_progress.png" width="350"/>
-
-[/col-50]
-
-<p style="clear:both">&nbsp;</p>
-
-
-[<button>Go to the Teacher Home Page</button>](https://studio.code.org/users/sign_up?user%5Buser_type%5D=teacher`)<br />
-
-
-### <strong>Tech support & teacher forums</strong>
-Get online assistance while using our curriculum through product FAQs, technical support, and forums where you can communicate with other Code.org teachers! [Learn more here](/educate/support).
-
-## Coming Soon: Courses A - F
-
-<img src="/images/csfundamentalspilot/introducingcoursesa-f.png" width="100%"/>
-
-We have revised Courses 1 - 4 based on the great feedback we've gotten in the last couple of years. In particular, the biggest change we are making
-is to break the content up into 6 courses aligned to each K-5 grade level. The courses will officially be available in August in preparation for the new school year. [Learn more about Courses A-F](/educate/curriculum/cs-fundamentals-a-f).
-
-If you are preparing for the transition from Courses 1 - 4 to Courses A - F, check out our short [transition guide](https://drive.google.com/file/d/0B2rFfrktasxBNUZDc2l5N01HYms/view) and [webinar](https://drive.google.com/open?id=0B2rFfrktasxBYVFCMDhfNVRFTjg) so that you have all the information you need to get started!
-
 [solid-block-header]
 
-<a name="other"></a>Other Resources
+Recommended courses from 3rd parties
 
 [/solid-block-header]
-
-## 3rd Party resources for elementary school computer science
 
 [](If you update the resources here, don't forget to also update /educate/curriculum/3rdparty)
 
@@ -168,17 +182,3 @@ If you are preparing for the transition from Courses 1 - 4 to Courses A - F, che
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
 
-<%= view :course_explorer_blurb %>
-
-## Inspire students
-We have created videos, posters, and other resources you can use any course to explain key concepts of computer science and inspire your students.
-
-[<button>Video library</button>](/educate/videos) &nbsp;&nbsp;[<button>Inspire a student</button>](/educate/inspire)
-
-## Find a guest speaker for your classroom
-Thousands of engineers and individuals passionate about computer science have signed up to volunteer as a mentor or a guest speaker. You can use our map of volunteers to contact local volunteers to visit your classroom, or search in any city to find computer science students or technical professionals who are ready to inspire your students remotely, via video chat.
-
-[<button>Find a guest speaker</button>](/volunteer/local)
-
-## Spread the word!
-Use [this email](/educate/k5/resources) or share this [one-pager](/educate/k5/k5onepager.pdf) with teachers, principals and district administrators.
