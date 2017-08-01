@@ -94,10 +94,6 @@ loadAppOptions().then(options => {
   // Run threads.
   vm.start();
 
-  // Handlers for green flag and stop all.
-  document.getElementById('greenflag').addEventListener('click', vm.greenFlag.bind(vm));
-  document.getElementById('stopall').addEventListener('click', vm.stopAll.bind(vm));
-
   options.onInitialize();
 });
 
@@ -122,21 +118,11 @@ function registerBlockEvents(vm, workspace) {
   });
 
   // Feedback for stacks and blocks running.
-  vm.on('SCRIPT_GLOW_ON', data => {
-    workspace.glowStack(data.id, true);
-  });
-  vm.on('SCRIPT_GLOW_OFF', data => {
-    workspace.glowStack(data.id, false);
-  });
-  vm.on('BLOCK_GLOW_ON', data => {
-    workspace.glowBlock(data.id, true);
-  });
-  vm.on('BLOCK_GLOW_OFF', data => {
-    workspace.glowBlock(data.id, false);
-  });
-  vm.on('VISUAL_REPORT', data => {
-    workspace.reportValue(data.id, data.value);
-  });
+  vm.on('SCRIPT_GLOW_ON', data => workspace.glowStack(data.id, true));
+  vm.on('SCRIPT_GLOW_OFF', data => workspace.glowStack(data.id, false));
+  vm.on('BLOCK_GLOW_ON', data => workspace.glowBlock(data.id, true));
+  vm.on('BLOCK_GLOW_OFF', data => workspace.glowBlock(data.id, false));
+  vm.on('VISUAL_REPORT', data => workspace.reportValue(data.id, data.value));
 }
 
 function getCanvasCoordinates(canvas, event) {
@@ -149,18 +135,15 @@ function getCanvasCoordinates(canvas, event) {
   };
 }
 
-function filterEvent(e) {
-  return e.target !== document &&
-    e.target !== document.body &&
-    e.target !== window.greenflag &&
-    e.target !== window.stopall;
-}
-
 /**
  * Register mouse and keyboard events with the VM.
  * @param vm
+ * @param canvas
  */
 function registerInputEvents(vm, canvas) {
+  const greenFlag = document.getElementById('green-flag');
+  const stopAll = document.getElementById('stop-all');
+
   document.addEventListener('mousemove', e => {
     vm.postIOData('mouse', getCanvasCoordinates(canvas, e));
   });
@@ -185,7 +168,7 @@ function registerInputEvents(vm, canvas) {
 
   document.addEventListener('keydown', e => {
     // Don't capture keys intended for Blockly inputs.
-    if (!filterEvent(e)) {
+    if ([document, document.body, greenFlag, stopAll].includes(e.target)) {
       vm.postIOData('keyboard', {
         keyCode: e.keyCode,
         isDown: true,
@@ -195,11 +178,13 @@ function registerInputEvents(vm, canvas) {
   });
 
   document.addEventListener('keyup', e => {
-    // Always capture up events,
-    // even those that have switched to other targets.
+    // Always capture up events, even those that have switched to other targets.
     vm.postIOData('keyboard', {
       keyCode: e.keyCode,
       isDown: false,
     });
   });
+
+  greenFlag.addEventListener('click', vm.greenFlag.bind(vm));
+  stopAll.addEventListener('click', vm.stopAll.bind(vm));
 }

@@ -19,13 +19,13 @@ export default function ScratchVisualizationColumn() {
           style={styles.scratchStage}
         />
       </ProtectedVisualizationDiv>
-      <button id="greenflag">
+      <button id="green-flag">
         <img
           src={assetUrl('media/scratch-blocks/icons/event_whenflagclicked.svg')}
           width={30}
         />
       </button>
-      <button id="stopall">
+      <button id="stop-all">
         <img
           src={assetUrl('media/scratch-blocks/icons/control_stop.svg')}
           width={30}
