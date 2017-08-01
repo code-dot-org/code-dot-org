@@ -88,7 +88,23 @@ loadAppOptions().then(options => {
   });
   Scratch.workspace = workspace;
 
-  // Attach scratch-blocks events to VM.
+  registerBlockEvents(vm, workspace);
+  registerInputEvents(vm, canvas);
+
+  // Run threads.
+  vm.start();
+
+  // Handlers for green flag and stop all.
+  document.getElementById('greenflag').addEventListener('click', vm.greenFlag.bind(vm));
+  document.getElementById('stopall').addEventListener('click', vm.stopAll.bind(vm));
+});
+
+/**
+ * Register scratch-blocks events with the VM.
+ * @param vm
+ * @param workspace
+ */
+function registerBlockEvents(vm, workspace) {
   workspace.addChangeListener(vm.blockListener);
   workspace.addChangeListener(vm.variableListener);
   workspace.addChangeListener(() => dispatchEvent(new Event('workspaceChange')));
@@ -119,70 +135,69 @@ loadAppOptions().then(options => {
   vm.on('VISUAL_REPORT', data => {
     workspace.reportValue(data.id, data.value);
   });
+}
 
-  function filterEvent(e) {
-    return e.target !== document &&
-      e.target !== document.body &&
-      e.target !== window.greenflag &&
-      e.target !== window.stopall;
-  }
+function getCanvasCoordinates(canvas, event) {
+  const rect = canvas.getBoundingClientRect();
+  return {
+    x: event.clientX - rect.left,
+    y: event.clientY - rect.top,
+    canvasWidth: rect.width,
+    canvasHeight: rect.height,
+  };
+}
 
-  function getCanvasCoordinates(e) {
-    const rect = canvas.getBoundingClientRect();
-    return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-      canvasWidth: rect.width,
-      canvasHeight: rect.height,
-    };
-  }
+function filterEvent(e) {
+  return e.target !== document &&
+    e.target !== document.body &&
+    e.target !== window.greenflag &&
+    e.target !== window.stopall;
+}
 
-  // Feed mouse events as VM I/O events.
+/**
+ * Register mouse and keyboard events with the VM.
+ * @param vm
+ */
+function registerInputEvents(vm, canvas) {
   document.addEventListener('mousemove', e => {
-    Scratch.vm.postIOData('mouse', getCanvasCoordinates(e));
+    vm.postIOData('mouse', getCanvasCoordinates(canvas, e));
   });
+
   canvas.addEventListener('mousedown', e => {
     const data = {
       isDown: true,
-      ...getCanvasCoordinates(e),
+      ...getCanvasCoordinates(canvas, e),
     };
-    Scratch.vm.postIOData('mouse', data);
+    vm.postIOData('mouse', data);
     e.preventDefault();
   });
+
   canvas.addEventListener('mouseup', e => {
     const data = {
       isDown: false,
-      ...getCanvasCoordinates(e),
+      ...getCanvasCoordinates(canvas, e),
     };
-    Scratch.vm.postIOData('mouse', data);
+    vm.postIOData('mouse', data);
     e.preventDefault();
   });
 
-  // Feed keyboard events as VM I/O events.
   document.addEventListener('keydown', e => {
     // Don't capture keys intended for Blockly inputs.
-    if (filterEvent(e)) {
-      return;
+    if (!filterEvent(e)) {
+      vm.postIOData('keyboard', {
+        keyCode: e.keyCode,
+        isDown: true,
+      });
+      e.preventDefault();
     }
-    Scratch.vm.postIOData('keyboard', {
-      keyCode: e.keyCode,
-      isDown: true
-    });
-    e.preventDefault();
   });
+
   document.addEventListener('keyup', e => {
     // Always capture up events,
     // even those that have switched to other targets.
-    Scratch.vm.postIOData('keyboard', {
+    vm.postIOData('keyboard', {
       keyCode: e.keyCode,
       isDown: false,
     });
   });
-
-  // Run threads.
-  vm.start();
-
-  // Handlers for green flag and stop all.
-  document.getElementById('greenflag').addEventListener('click', vm.greenFlag.bind(vm));
-  document.getElementById('stopall').addEventListener('click', vm.stopAll.bind(vm));
-});
+}
