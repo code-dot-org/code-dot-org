@@ -6,6 +6,8 @@ theme: responsive
 style_min: true
 ---
 
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+
 # Computer Science Principles
 
 ## <a name="whatis"></a>What is CS Principles?
@@ -22,7 +24,7 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 <div style="margin-left: 20px;">
 
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "jQm0z894CG0", play_button: 'center', letterbox: 'false' %>
 
 </div>
 
@@ -32,8 +34,13 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 ## <a name="what"></a>Professional Learning
 
- **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
- 
+<%= view :three_circles, circles: [
+{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
+{img: '/images/testimonials/fit-150/students-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
+{img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
+
+**General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
+
 If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)
@@ -45,7 +52,9 @@ If you are still interested in joining in 2018-19, sign up below to be added to 
  * [Code.org 2017-18 AP CS Principles Endorsed Syllabus](/files/CSPSyllabusMay2017.pdf)
  * [Instructions: How to add our authorized syllabus to your AP Course Audit](https://drive.google.com/open?id=0B21d4g64Z62YSVptX3JKcWdiVWlKWVc5MWlXQldkUmVxLXFZ)
 
-&nbsp; &nbsp; &nbsp; [<button>View Lesson Plans</button>](https://curriculum.code.org/csp) &nbsp; &nbsp; <a href="<%= CDO.studio_url('/courses/csp')%>" name="CS Principles Course"><button>View Course on Code.org</button></a>
+<%= view :course_wide_block, course: CDO.studio_url('/courses/csp'), lesson_plans: 'https://curriculum.code.org/csp', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Principles', ages: 'Recommended for Grades 9-12', description: 'Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.'%>
+
+<div style="clear:both"></div>
 
 ## <a name="overview"></a>Curriculum Resources and Features
 

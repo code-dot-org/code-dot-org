@@ -14,7 +14,7 @@ theme: responsive
 ---
 -state = File.basename(request.path_info)
 -facebook = {:u=>'https://code.org/promote' + (state != "thanks" ? "/" + state : "")}
--twitter = {:url=>"https://code.org", :related=>'codeorg', :text=>'9 out of 10 parents agree, every student should have the opportunity to learn computer science.'}
+-twitter = {:url=>"https://code.org/promote", :related=>'codeorg', :text=>"Most schools don't teach computer science. To help, sign the petition. (Thanks #{get_random_donor_twitter} for supporting @codeorg)"}
 
 %script{:src=>"/js/jquery.placeholder.js"}
 %link{:href=>"/css/promote.css", :rel=>"stylesheet"}
