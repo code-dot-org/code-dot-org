@@ -615,6 +615,8 @@
   "withoutHints": "Segítség nélkül!",
   "workspaceHeaderShort": "Munkaterület: ",
   "yes": "Igen",
+  "announcementHeadingCsfAtoF": "Courses 1-4 updated to align with grades K-5",
+  "announcementDescriptionCsfAtoF": "We've tailored the courses to each grade level and re-dubbed them Courses A-F.",
   "challengeLevelIntro": "Challenge Puzzles are lessons designed to push your skills to a new level.",
   "challengeLevelPassTitle": "You did it!",
   "challengeLevelPassText": "However, you could've done it with only {idealBlocks, plural, one {1 block} other {# blocks}}. Can you make your program even better?",
