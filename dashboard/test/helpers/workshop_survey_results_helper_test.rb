@@ -105,6 +105,9 @@ class Pd::WorkshopSurveyResultsHelperTest < ActionView::TestCase
 
     result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_breakdown: false)
     assert_equal 3.67, result_hash[:how_clearly_presented]
+
+    result_hash = summarize_workshop_surveys(workshops: workshops, facilitator_breakdown: false, include_free_response: false)
+    assert_nil result_hash[:things_facilitator_did_well]
   end
 
   test 'averaging across multiple surveys' do
