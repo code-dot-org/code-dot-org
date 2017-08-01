@@ -20,7 +20,6 @@ const styles = {
 const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    showAllCoursesLink: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     heading: PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
@@ -37,9 +36,6 @@ const RecentCourses = React.createClass({
       <div>
         <ContentContainer
           heading={heading}
-          linkText=""
-          link=""
-          showLink={false}
           isRtl={isRtl}
         >
           {!isTeacher && studentTopCourse && (
