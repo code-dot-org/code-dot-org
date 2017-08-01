@@ -221,6 +221,30 @@
   just_did_coursee: "我刚完成了课程E - 来看看！@codeorg"
   just_did_coursef: "我刚完成了课程F - 来看看！@codeorg"
   just_did_accelerated: "我刚完成加速课程- 请查看！@codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
   twitter_cs_foundational: "计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "学习编程一小时"
@@ -915,6 +939,8 @@
   coursef-draft_name: "课程 F"
   coursef_name: "课程 F"
   accelerated_name: "加速课程"
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "（旧）单元 1︰ 数字信息"
   cspunit2_name: "（旧）单元 2︰ 互联网"
   cspunit3_name: "（旧版）第3单元︰ 编程"
@@ -933,7 +959,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
+  csp-ap_name: AP 性能任务
   csppostap_name: 'Post AP: App中的数据库'
   cspassessment_name: "完整测试 - 共50题"
   cspexam1-mWU7ilDYM9_name: "测试部分 1 - 25 个问题"
@@ -960,6 +986,7 @@
   math_category_name: "数学"
   hoc_category_name: "编程一小时"
   csf_category_name: "计算机科学基本原理"
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: "开发中：课程A - F"
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: 15-16 计算机原理
@@ -1462,3 +1489,9 @@
   csp_name: "计算机科学原理"
   csd_name: CS Discoveries
   full_course_category_name: "完整课程"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in
