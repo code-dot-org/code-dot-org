@@ -34,11 +34,14 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You have probably already used a loop to create a zig-zag pattern. If you remember that algorithm, you can make a few additions to it here.\",\"hint_id\":\"courseD_harvester_nested_loops_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/35f63d2d7720e820a0bcb4b3d7a265df/courseD_harvester_nested_loops_challenge1.mp3\"}]",
-    "ideal": "9",
-    "contained_level_names": null
+    "ideal": "10",
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-01 15:44:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

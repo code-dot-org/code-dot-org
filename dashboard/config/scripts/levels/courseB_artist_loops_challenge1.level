@@ -38,8 +38,8 @@
     "markdown_instructions": "*\"It's time to toss the dice! Can you help me draw these?\"*",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
