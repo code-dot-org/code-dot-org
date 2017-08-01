@@ -10,7 +10,7 @@
     "instructions_important": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
@@ -33,10 +33,13 @@
     "ideal": "5",
     "step_speed": "2",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having a hard time seeing where the loops should go, try coding it all out then looking for a pattern.\",\"hint_id\":\"courseF_farmer_ramp11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/010fa616b7e7ad80b94c1e33a714dd06/courseF_farmer_ramp11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"How can you use a `repeat` loop to pick lettuce, instead of dragging out 5 `pick lettuce` blocks?\",\"hint_id\":\"courseF_farmer_ramp11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dd90f583b41a8943113eeecf5d6dc211/courseF_farmer_ramp11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You don't need to use 5 repeat loops to get all of the lettuce.  Instead, drag your lettuce picking repeat loop inside of another loop (along with a `move forward` block, and you'll have it!)\",\"hint_id\":\"courseF_farmer_ramp11_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0e177c3f73d11df79e706869f31da198/courseF_farmer_ramp11.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:42:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

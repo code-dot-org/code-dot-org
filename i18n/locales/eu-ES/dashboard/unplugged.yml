@@ -174,7 +174,7 @@ eu:
         desc: In this lesson, you will 'program' your friends!
       courseB_unplugged_loopyMRF:
         title: Lineaz kanpoko ekintza
-        desc: Just like in 'My Robotic Friends', you will be 'programming' your friends, but this time with loops!
+        desc: Just like in "My Robotic Friends", you will be "programming" your friends, but this time with loops!
       courseC_Unplugged_ScreenOutTheMean:
         title: Lineaz kanpoko ekintza
         desc: Today you will learn about what to do if someone is being mean online.
@@ -182,7 +182,7 @@ eu:
         title: Lineaz kanpoko ekintza
         desc: Today you will learn what it means to be a Digital Citizen.
       courseE_unplugged_privateInformation:
-        title: Lineaz kanpoko ekintza
+        title: 'Common Sense Education: Private and Personal Information '
         desc: Today you will learn the difference between private and personal information!
       courseF_unplugged_powerOfWords:
         title: Lineaz kanpoko ekintza
@@ -190,3 +190,69 @@ eu:
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Bizitza Errealeko Algoritmoak: Hazi bat Landatu'
+        desc: Ikastaro honetan gure egunerokoan algoritmoak nola erabiltzen ditugun azaltzen da, adibidez haziak landatzen ditugunean. Gainera informatikaren ikuspegi zabalagoa azaltzen du, bai eta algoritmoek duten garrantzia.
+      courseA_unplugged_happyMaps:
+        title: Mapa Zoriontsuak
+        desc: Ikasleek algoritmo sinpleak sortuko dituzte pertsonai bat labirinto baten barnean gidatuko dute komando bakar bat erabiliz.
+      courseA_unplugged_goingPlacesSafely:
+        title: Joan segurtasunez
+        desc: Interneta oso boteretsua da, baina leku oso arriskutsua ere. Irakasleek adieraziko dute nola nabigatu modu seguruan interneten.
+      courseABC_unplugged_bigEvent:
+        title: Gertaera Handia
+        desc: Ikasleak "ebentu"-aren programazioaren kontzeptua ikasiko dute, hau da, konputagailu batek uneoro monitorizatzen dituen ekintzak izanik. Irakasleak botoiak zanpatuko ditu eta ikasleak horren araberako erreakzioak edukiko dituzte.
+      courseB_unplugged_digitalFootprint:
+        title: Zure aztarna digitala
+        desc: Irakasleek norberaren informazioaren aztarnat interneten uzteak izan ditzakeen ondorioak zeintzuk izan daitezkeen azalduko die ikasleei.
+      courseC_unplugged_buildingAFoundation:
+        title: Oinarri bat Eraikitzen
+        desc: Ikasleek egitura bat eraiki beharko dute eskainitako baliabideak soilik erabiliz. Egitura horiek ataza bat egin behar dute (altuera batera heldu, edo pisu bat jasan, esaterako) eta ikasleek iraunkortasunaren ideia landu beharko dute atazak zailtzen direnean.
+      courseC_unplugged_paperPlanes:
+        title: 'Bizitza errealeko algoritmoak: paperezko hegazkinak'
+        desc: Lekzio honetan erakusten da nolatan erabiltzen ditugun algoritmoak gure bizitza errealean, espezifikoki paperezko hegazkinak egiterakoan. Lekzio honetan informatikaren irudi zabalagoa ikus dezakegu, eta nola algoritmoak diren bere zati esentzialetako bat.
+      courseC_unplugged_gettingLoopy:
+        title: Iteratzen
+        desc: Ikastaro honek begizta( agindu errepikatuak) kontzeptua dantzaren bidez irakasten digu. Ikasleek koreografia erraz bat ikasiko dute, ondoren errepikatu egin beharko dute.
+      courseC_unplugged_binaryBracelets:
+        title: Eskumuturreko bitarrak
+        desc: Ikasleek eskumuturrekoak sortzen dituzte euren izeneko lehen hizkia era bitarrean adierazteko. Ikasleek datuak hainbat eratan gorde daitezkeela ikasten dute honela.
+      courseD_unplugged_graphPaperProgramming:
+        title: Paperean marraztuz programatu
+        desc: Ikasleek algoritmo bat idatziko dute aurrezarritako komnado batzuen bidez beraien klasekideak zuzentzeko eta irudia erreproduzitzeko.
+      courseD_unplugged_relayProgramming:
+        title: Txandaka programatzen
+        desc: Ikasleak lasterketa bat errepikatzen dute non jolastokia zearkatzen duten "Grafo Papera Programazioan" oinarritutako algoritmoa idatziz. Agindu bakarra idazt dezakete aldiro eta errora bat egonez gero atzera egin behar dute egindakoa ezabatuz.
+      courseD_unplugged_conditionalsCards:
+        title: Baldintzak Txartelekin
+        desc: 'Baldintzen inguruan ikasteko, ikasleak karta joko batean jokatuko dute eta arau batzuk sortuko dituzte. Adibidez: "Karta gorri bat marrazten badut, puntu bat lortzen duzu."'
+      courseD_unplugged_binaryImages:
+        title: Irudi bitarrak
+        desc: Nahiz eta askok pentsatu sistema bitarra bat eta zeroekin bakarri osatuta dagoela, aurreko ikastaroetan gure ikasleei erakutsi genien bezala, informazioa aukera bitar ezberdinez osatua egon daiteke. Ikasgai honetan kontzeptu hori haratago eramango du erakutsiz ordenagailu batek informazio bitar konplexua gordetzeko gai dela (irudi eta kolore bezalakoak).
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: Ikasgai honek algoritmoak eguneroko bizitzan nola erabiltzen ditugun azaltzen du. Bertan ikasleek dado lasterketa baten algoritmoa identifikatu eta idatziko dute.
+      courseE_unplugged_songwritingParameters:
+        title: Abestiak idazten parametroekin
+        desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Ikasleek mezuak bidaltzen dituzte Interneteko transmisio metodo imitatuz paperezko zatiak erabiliz.
+      courseE_unplugged_crowdsourcing:
+        title: Crowdsourcing
+        desc: Ikasleek talde-lana erabiltzen dute, eta hau oso erabilia den teknika bat da informatikan. Ekintza bat klasekoekin burutzea ekintza askoz ere eraginkorragoa bihurtzen du, lana banaka burutu ordez.
+      courseE_unplugged_songwriting:
+        title: Abestiak idazten parametroekin
+        desc: Ikasleek kantu baten leloa erabil dezakete adibide gisa funtzioen erabilpena ulertzeko, baita parametroen pasatzea ulertzeko ere (funtzio baten eraldatzea ahalbidetzen duena, funtzio oso berridatzi beharrik gabe).
+      courseF_unplugged_tangrams:
+        title: Tangram algoritmoak
+        desc: Ikasgai honek algoritmoei buruzko garrantzizkoa den zerbait erakusten digu. Algoritmo bat sinple mantentzen badugu aukera asko daude hau erabiltzeko. Guztiek emaitza berdina lortzeaz ziurtatu nahi baduzu, orduan zure algoritmoak xehetasun gehiago behar ditu.
+      courseF_unplugged_envelopeVariables:
+        title: Gutun-azaleko aldagarriak
+        desc: Aldagaik askatasun handia ematen dute informatika arloan. Ikasgai honek lagunduko digu azaltzen zein aldagaiak dauden eta nola erabili ditzakegun era ezberdinetan. Erabili ikasgai hau abstrakzio ikasgaia baino lehen (edo batera) ideiak nabarmentzeko.
+      courseF_unplugged_forLoopFun:
+        title: Begizta jostarirako
+        desc: Begiztak ekintzak behin eta berriro egiten laguntzen digutela badakigu, baina orain ikasi behar dugu nola erabili begiztak barne egitura batekin.
+      courseF_unplugged_songwritingParameters:
+        title: Abestiak sortzen parametroekin
+        desc: 'Funtzioa da informatika munduan dagoen egitura bikainenetako bat. Funtzioak (batzuetan prozedurak deituak) programa handiago batean behin eta berriro erabil ditzakezun programa txikiak dira. ikasgai honek ikasleei lagunduko die intuitiboki ulertzen zergatik den lagungarria kode zatiak elkartzea funtzioak osatuz.  '

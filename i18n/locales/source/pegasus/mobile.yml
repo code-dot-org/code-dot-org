@@ -207,6 +207,18 @@
   just_did_coursee: "I just finished Course E - check it out! @codeorg"
   just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 out of 10 people agree, schools should teach computer science. http://youtu.be/nKIu9yen5nc. Visit https://code.org/."
   twitter_cs_foundational: "Computer science is foundational for every student to learn. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Learn an Hour of Code"
@@ -219,6 +231,7 @@
   lines_of_code: "OVER <b># LINES OF CODE</b> WRITTEN TO DATE."
   lines_of_code_alt: "<b>#</b> LINES OF CODE WRITTEN BY STUDENTS"
   who_has_done_hoc: 'Who has done the #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "The Hour of Code Leaderboards"
   students_and_lines: "%{students} students have done the Hour of Code and written %{lines} lines of code."
   start_hoc: "Start the Hour of Code now"
@@ -903,6 +916,8 @@
   coursef-draft_name: Course F
   coursef_name: "Course F"
   accelerated_name: "Accelerated Course"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(old) Unit 1: Digital Information"
   cspunit2_name: "(old) Unit 2: The Internet"
   cspunit3_name: "(old) Unit 3: Programming"
@@ -944,6 +959,7 @@
   math_category_name: "Math"
   hoc_category_name: "Hour of Code"
   csf_category_name: "CS Fundamentals"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 CS Principles"
@@ -1404,3 +1420,7 @@
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Hi %{username}"
+  user_header_settings: "Account settings"
+  user_header_logout: "Sign out"
+  user_header_signin: "Sign in"

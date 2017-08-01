@@ -272,7 +272,7 @@
   learn_classes: En yakın sınıfı bul
   learn_back_to_minecraft: Minecraft'la öğrenin
   hoc_is_here: Bilgisayar bilimini öğrenin. Bu herşeyi değiştirir. https://youtu.be/xJqSu1IbcHg.
-  just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u ziyaret edin!"
+  just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u kontrol edin"
   just_did_course1: Ders1'i yeni bitirdim.@codeorg ile kontrol et
   just_did_course2: Ders2'yi yeni bitirdim. @codeorg ile kontrol et
   just_did_course3: Ders3'ü yeni bitirdim. @codeorg ile kontrol et
@@ -284,6 +284,30 @@
   just_did_coursee: Ders E'yi yeni bitirdim. @codeorg ile kontrol edin!
   just_did_coursef: Ders F'yi yeni bitirdim. @codeorg ile kontrol edin!
   just_did_accelerated: Hızlandırılmış Kursu yeni bitirdim. @codeorg ile kontrol et
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: |-
     10 kişiden 9'u okulda bilgisayar bilimleri öğretilmesi konusunda hemfikir.
     http://youtu.be/nKIu9yen5nc. Ziyaret et: https://code.org/.
@@ -1138,6 +1162,8 @@
   coursef-draft_name: Ders F
   coursef_name: Ders F
   accelerated_name: Hızlandırılmış Kurs
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "Ünite 1: Sayısal bilgi"
   cspunit2_name: "Ünite 2: Internet"
   cspunit3_name: Bilgisayar Bilimleri İlkeleri Ünite 3
@@ -1156,7 +1182,7 @@
   csp4_name: 'Unit 4: Big Data and Privacy'
   csp5_name: 'Unit 5: Building Apps'
   csp6_name: 'Unit 6: AP Performance Tasks'
-  csp-ap_name: AP Performance Tasks
+  csp-ap_name: AP (Advanced Placement-İleri Düzey Yerleştirme) Performans Görevleri
   csppostap_name: 'Post-AP: Uygulamalardaki veritabanları'
   cspassessment_name: Tam test - 50 soru
   cspexam1-mWU7ilDYM9_name: Test Bölüm 1 / 25 soru
@@ -1183,6 +1209,7 @@
   math_category_name: Matematik
   hoc_category_name: Saat Kodu
   csf_category_name: Bilgisayar bilimleri temeller
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Geliştirme altında: kurslar A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: "' 15 - 16' Bilgisayar bilimleri ilkeleri"
@@ -1914,3 +1941,9 @@
   csp_name: "' 16 - 17' Bilgisayar bilimleri ilkeleri"
   csd_name: CS Discoveries
   full_course_category_name: Tüm Dersler
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

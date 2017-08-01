@@ -198,6 +198,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: "여러분의 섹션:"
@@ -206,6 +208,12 @@
     confirm:
       remove: "정말로 현재 섹션에서 나가실건가요?"
     remove: "(섹션 삭제)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "이메일"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "초대 메일을 발송하였습니다"
     added_teacher: "%{name} 가 선생님으로 추가되었습니다"
@@ -219,6 +227,9 @@
       section_not_found: "'%{section_code}' 섹션의 코드를 찾을 수 없습니다."
       blank_code: "섹션 코드를 입력하세요."
       cant_join_own_section: "섹션에 참여할 수 없습니다."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다.'
@@ -242,6 +253,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -256,6 +269,7 @@
         calculate: "어떤 것을 계산하기"
         applab: Play Lab 앱 만들기
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: "홈"
       courses: courses
       project_gallery: "프로젝트 갤러리"
@@ -669,6 +683,12 @@
       title: "게임 연구실 (베타)"
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: 13세 이상
+      cta: "방법 알아보기"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13세 이상
       cta: "방법 알아보기"
     frozen:

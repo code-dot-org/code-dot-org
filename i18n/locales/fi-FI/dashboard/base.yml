@@ -182,6 +182,8 @@ fi:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Jakso:'
@@ -190,6 +192,12 @@ fi:
     confirm:
       remove: 'Oletko varma että haluat poistua tältä osiolta?'
     remove: '(poista osio)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Sähköposti'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Kutsu lähetetty'
     added_teacher: '%{name} lisätty opettajaksesi'
@@ -202,6 +210,7 @@ fi:
       section_not_found: "Ryhmää tunnuksella '%{section_code}' ei löytynyt."
       blank_code: "Anna ryhmän tunnus"
       cant_join_own_section: "Et voi liittyä omaan ryhmääsi."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org ilmoitus: oppilasta %{student_name} ei ole enää yhdistetty sinuun.'
@@ -225,6 +234,7 @@ fi:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ fi:
         calculate: 'Calculate something'
         applab: 'Tee sovellus'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Etusivu"
       courses: "Kurssit"
       project_gallery: "Project Gallery"
@@ -537,8 +548,13 @@ fi:
       title: "Galleria"
       body: "Katsele käyttäjiemme tekemiä Taiteilija-kuvia ja kokeile sovelluksia Galleriassa"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Pelilabra"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ikäryhmille 13+"
+      cta: "Lisätietoja"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Ikäryhmille 13+"
       cta: "Lisätietoja"
     frozen:
