@@ -30,6 +30,14 @@ get '/v2/sections/membership' do
   JSON.pretty_generate(sections)
 end
 
+get '/v2/sections/valid_scripts' do
+  only_for 'code.org'
+  dont_cache
+  forbidden! unless dashboard_user_id
+  content_type :json
+  JSON.pretty_generate(DashboardSection.valid_scripts(dashboard_user_id))
+end
+
 # DEPRECATED: Use GET /dashboardapi/sections/<id> instead
 get '/v2/sections/:id' do |id|
   only_for 'code.org'
