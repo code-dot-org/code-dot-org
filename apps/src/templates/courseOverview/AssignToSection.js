@@ -148,7 +148,7 @@ class AssignToSection extends Component {
       <div>
         <Button
           ref={element => this.button = element}
-          text={i18n.assignCourse()}
+          text={(courseId && scriptId) ? i18n.assignUnit() : i18n.assignCourse()}
           style={styles.button}
           onClick={this.onClickDropdown}
           icon={dropdownOpen ? "caret-up" : "caret-down"}
