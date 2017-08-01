@@ -182,6 +182,8 @@ kk:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -190,6 +192,12 @@ kk:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Электронды пошта'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Шақыру жіберілді'
     added_teacher: '%{name} сізді оқытушы ретінде қосты'
@@ -202,6 +210,7 @@ kk:
       section_not_found: "'%{section_code}' кодты секция табылмады."
       blank_code: "Өтінеміз секция кодын еңгізіңіз"
       cant_join_own_section: "Кешіріңіз, сіз өз бөліміңізге қосыла алмайсыз."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org хабарландыруы: енді %{student_name} сіздің оқушыңыз емес.'
@@ -225,6 +234,7 @@ kk:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ kk:
         calculate: 'Calculate something'
         applab: 'Қосымша бағдарлама жасау'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "Курстар"
       project_gallery: "Project Gallery"
@@ -537,8 +548,13 @@ kk:
       title: "Галерея"
       body: "Галереядан біздің қолданушылар жасаған қосымшалар мен кейіпкерлер суретін көріңіз"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "13+ жастағылар үшін"
+      cta: "Қалай жасауды үйрең"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "13+ жастағылар үшін"
       cta: "Қалай жасауды үйрең"
     frozen:

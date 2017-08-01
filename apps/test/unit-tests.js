@@ -7,7 +7,7 @@ function inManifest(path) {
 }
 
 
-var testsContext = require.context("./unit", true, /\.js$/);
+var testsContext = require.context("./unit", true, /\.jsx?$/);
 
 var runnable = testsContext.keys().filter(inManifest);
 

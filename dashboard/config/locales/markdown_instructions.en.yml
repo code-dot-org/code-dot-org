@@ -848,12 +848,12 @@ en:
         computer scientists is finding your mistakes and fix them. In computer science
         we call mistakes **bugs**. The process of finding and fixing those bugs is
         called **debugging**.  Over the next couple levels you are going to work on
-        your debugging skills.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/ed7cb1f2e093b9c36b82bfbf9bbcd76b-image-1474383288840.54.26
-        AM.png\" style=\"float:right;border:black solid 5px;width:200px\">\r\n\r\n*
-        Look at the web page code, and discuss with your partner what is causing the
-        following two bugs:\r\n\t* The header is not big enough.\r\n\t* The second
-        item on the list doesn't have a number.\r\n* Fix all the bugs in the code
-        so that the final result matches the image on the right."
+        your debugging skills.\r\n\r\n# Do This\r\n\r\n<img src=\"https://images.code.org/9c4d90a5a8293c5aee56e6cb81dae689-image-1500915264278.52.56
+        AM.png\" style=\"float:right;border:black solid 5px;\">\r\n\r\n* Look at the
+        web page code, and discuss with your partner what is causing the following
+        two bugs:\r\n\t* The heading is not big enough.\r\n\t* The second item on
+        the list doesn't have a number.\r\n* Fix all the bugs in the code so that
+        the final result matches the image on the right.\r\n"
       CSD U2 Debugging 2_markdown_instruction: "# Debugging\r\n\r\n<div style=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**What is a bug?**</summary>\r\nBugs
@@ -943,11 +943,11 @@ en:
         are marked by opening(`<p>`) and closing(`</p>`) tags. Paragraphs in HTML
         can be any length of text from one word to a bunch of sentences. Paragraphs
         group together sets of sentences and put some space between that group of
-        text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**<span>
-        How do I make multiple paragraphs? </span>**</summary>\r\nHere's an example
-        of several paragraph tags in a row. This code would be placed inside of the
-        body of your web page.\r\n\r\n<pre>\r\n`<p>This is a paragraph. It has two
-        sentences.</p>`\r\n`<p>This is another paragraph.</p>`\r\n</pre>\r\n\r\n</details>\r\n\r\n</div>\r\n\r\n#
+        text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make multiple paragraphs?**</summary>\r\nHere's an example of several
+        paragraph tags in a row. This code would be placed inside of the body of your
+        web page.\r\n\r\n<pre>\r\n`<p>This is a paragraph. It has two sentences.</p>`\r\n`<p>This
+        is another paragraph.</p>`\r\n</pre>\r\n\r\n</details>\r\n\r\n</div>\r\n\r\n#
         Use Paragraph Tags\r\n\r\nThe `<p>` tag or \"paragraph\" tag is placed around
         text to indicate that it is part of a paragraph. Placing text in a paragraph
         tag lets the computer know that it should be displayed differently, usually
@@ -956,13 +956,13 @@ en:
         it with `<p>` and `</p>` tags\r\n* Compare the results with a neighbor. What
         has changed about the way your text is displayed?"
       CSD U2 HTML Adding Paragraphs_markdown_instruction: "# Add Text to the Body\r\n\r\nWhen
-        you start any Web Lab project it will automatically add `<!DOCTYPE>`, `<html>`,
+        you start any Web Lab project, it will automatically add `<!DOCTYPE>`, `<html>`,
         `<head>`, and `<body>` tags to your project. When you add content to your
-        projects you'll need to do it between the `<body>` and `</body>` tags since
+        projects, you'll need to do it between the `<body>` and `</body>` tags because
         it should be part of the body of your webpage.\r\n\r\n# Do This\r\n\r\n* Write
         three separate sentences about any topic you like inside of the body tags
-        of your web page\r\n* Hit \"Refresh and Save\" if you don't see the changes
-        in the preview area\r\n* Compare your work with a neighbor. Make sure you're
+        of your web page.\r\n* Hit \"Refresh and Save\" if you don't see the changes
+        in the preview area.\r\n* Compare your work with a neighbor. Make sure you're
         placing code in the same place.\r\n"
       CSD U2 HTML Debug Paragraphs_markdown_instruction: "<div style=\"float: right;
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
@@ -973,14 +973,18 @@ en:
         text and the next group of text.\r\n</details>\r\n<details>\r\n<summary><strong>Why
         does HTML seem to work even when it's broken?</strong></summary>\r\nHTML
         is read by your web browser to generate web pages. Since people often make
-        little mistakes when writing their web pages, browsers often make a best guess
-        of what you intended to do. Sometimes different browsers even will make different
-        guesses! The only way to ensure your code looks like you intend is make sure
-        you're always using tags correctly.\r\n</details>\r\n</div>\r\n\r\n# Debug:
-        Fix the Broken Tags\r\n\r\nThis simple web page has some issues which are
-        preventing the content from being displayed correctly. Identify and fix the
-        issues. This practice is also called \"debugging\" your code.\r\n\r\n# Do
-        This\r\n\r\n* Fix the broken code so that the web page displays correctly\r\n*
+        little mistakes when writing their web pages, browsers are programmed to make
+        a best guess of what you intended to do. Sometimes different browsers are
+        even programmed to make different guesses! The only way to ensure your code
+        looks like you intend is make sure you're always using tags correctly.\r\n</details>\r\n<details>\r\n<summary><strong>Why
+        does the code sometimes turn pink?</strong></summary>\r\nWeb Lab is programmed
+        to automatically detect some mistakes in HTML.  When it notices a mistake,
+        it turns that code pink.  The mistake might be in pink, or it might be somewhere
+        before the pink code.  You'll need to carefully debug to find your mistake.\r\n</details>\r\n</div>\r\n\r\n#
+        Debug: Fix the Broken Tags\r\n\r\nThis simple web page has some issues which
+        are preventing the content from being displayed correctly. Identify and fix
+        the issues. This practice is also called \"debugging\" your code.\r\n\r\n#
+        Do This\r\n\r\n* Fix the broken code so that the web page displays correctly\r\n*
         Compare the problems you fixed with a neighbor"
       CSD U2 Header Demo_markdown_instruction: "# Headers\r\n\r\n<div style=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
@@ -1111,6 +1115,103 @@ en:
         of a web page. In your investigation with the inspector did you come across
         something that made headers?\r\n\r\n# Do This\r\n\r\n* Make your header \"Animals\"
         stand out using the `<h1>` header element."
+      CSD U2 Heading Demo_markdown_instruction: "# Headings\r\n\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are headings?**</summary>\r\nHeadings
+        are the different sized section titles throughout a web page. Headings add
+        structure to your web page by breaking it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make different sized headings?**</summary>\r\nHeadings come in 6 different
+        sizes. So far you have primarily used the biggest one: &lt;h1&gt;. The number
+        '1' in the HTML tag designates that this is the biggest heading. The smallest
+        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags, which get smaller as the number gets larger.\r\n</h1>\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r\n</details>\r\n<details>\r\n<summary>**What is an HTML
+        element?**</summary>\r\nAn HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nAn HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r\n</details>\r\n</div>\r\n\r\nSo far, you've organized your content
+        into paragraphs.  Another way HTML allows you to organize your code is by
+        using **headings**.  A heading is a short piece of text that goes at the top
+        of a section of content, like a title.\r\n\r\nDo This:\r\n* Find the headings
+        in the web page below and use the Inspector Tool to see the code that makes
+        them.\r\n* Make sure you and your partner agree on what the tags do.\r\n*
+        Change the code so that \"Drawing\" and \"2 years\" match the headings on
+        the rest of the page."
+      CSD U2 Heading Sizes_markdown_instruction: "# Heading Sizes\r\n\r\n<div style=\"float:
+        right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
+        markdown=\"1\">\r\n<details>\r\n<summary>**What are headings?**</summary>\r\nHeadings
+        are the different sized section titles throughout a web page. Headings add
+        structure to your web page by breaking it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make different sized headings?**</summary>\r\nHeadings come in 6 different
+        sizes.  The most common heading is &lt;h1&gt; The number 1 in the HTML tag
+        designates that this is the biggest heading. The smallest heading is &lt;h6&gt;.
+        You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;, and &lt;h5&gt; tags
+        which get smaller as the number gets larger.\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r\n</details>\r\n<details>\r\n<summary>**What is an HTML
+        element?**</summary>\r\nAn HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nAn HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r\n</details>\r\n\r\n</div>\r\n\r\nHeadings can come in different sizes.  In
+        this page, there are six different sized headings, but they are all mixed
+        up.  Can you and your partner figure out how to fix them?\r\n\r\n\r\n\r\nDo
+        This:\r\n* Use the inspector tool to figure out what makes the headings different
+        sizes\r\n* Make sure you and your partner agree on what the different heading
+        tags do.\r\n* Change the tags so that the headings are in order from biggest
+        to smallest, and the text says the correct size, as in the picture below.
+        \r\n\r\n<img src=\"https://images.code.org/762022f97a355dd63dce5ecc8d0127aa-image-1493161154608.58.15
+        PM.png\" style=\"width:100px\" style=\"float:left\">\r\n"
+      CSD U2 Heading Test_markdown_instruction: "# Headings and Paragraphs\r\n\r\n<div
+        style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left:
+        20px; font-size:14px\" markdown=\"1\">\r\n<details>\r\n<summary>**What is
+        a paragraph element?**</summary>\r\nParagraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. Paragraphs in HTML can be any length of
+        text from one word to a bunch of sentences. All of your text in your web page
+        should be contained in an HTML element (headings or paragraphs). Paragraphs
+        group together sets of sentences and put some space between that group of
+        text and the next group of text.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I create multiple paragraphs?**</summary>\r\nParagraphs are marked by opening(`<p>`)
+        and closing(`</p>`) tags as well. To create more than one paragraph you will
+        want multiple sets of opening and closing `<p>` tags. For example\r\n<pre>\r\n\t&lt;p&gt;\r\n    \tThis
+        is a paragraph.\r\n    &lt;/p&gt;\r\n\t&lt;p&gt;\r\n    \tThis is another
+        paragraph.\r\n    &lt;/p&gt;\r\n</pre>\r\n</details>\r\n<details>\r\n<summary>**What
+        are headings?**</summary>\r\nHeadings are the different sized section titles
+        throughout a web page. Headings add structure to your web page by breaking
+        it up so its easier for a user to read.\r\n</details>\r\n<details>\r\n<summary>**How
+        do I make different sized headings?**</summary>\r\nHeadings come in 6 different
+        sizes. So far you have primarily used the biggest one &lt;h1&gt;. The number
+        1 in the HTML tag designates that this is the biggest heading. The smallest
+        heading is &lt;h6&gt;. You can also try the &lt;h2&gt;, &lt;h3&gt;, &lt;h4&gt;,
+        and &lt;h5&gt; tags which get smaller as the number gets larger.\r\n</h1>\r\n</details>\r\n<details>\r\n<summary>**What
+        is HTML?**</summary>\r\nHTML stands for Hypertext Markup Language. HTML is
+        used to add structure to the content of a web page. HTML uses tags to specify
+        where certain structures start and end. These tags are sets of characters
+        not found in the English language so that the content and structure can be
+        differentiated. \r\n</details>\r\n<details>\r\n<summary>**What is an HTML
+        element?**</summary>\r\nAn HTML element is a piece of a website that is marked
+        by a start tag and sometimes closed with an end tag. The element also includes
+        the content inside the tags. For example: \r\n<img src=\"https://images.code.org/fb4df62aa4d879f7021c567be2e28eea-image-1481135855001.png\"
+        style=\"width:500px\">\r\n</details>\r\n<details>\r\n<summary>**What is an
+        HTML tag?**</summary>\r\nAn HTML tag is the special set of characters that
+        tells the machine where the start or end of an HTML element is and what type
+        it is.\r\n</details>\r\n\r\n</div>\r\n\r\nThe author of this page added in
+        a lot of content, but did not think about structure.  All of the text is mashed
+        together.\r\n\r\nDo This:\r\n* Look through the content with your partner
+        and decide what you think the best structure should be.\r\n* Use your heading
+        and paragraph tags to code the structure into the page.\r\n"
       CSD U2 Image Tag 1_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**How do I add images?**</summary>\r\nThe
@@ -1138,7 +1239,7 @@ en:
         text what the image is.\r\n</details>\r\n</div>\r\n\r\n# Images\r\n\r\nA Dog
         vs Cat web page has been started for you. The dog image has already been added
         to the below web page. Use an image tag to add the `cat.jpeg` image to the
-        page below the cat header."
+        page below the cat heading."
       CSD U2 Image Tag 2_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**How do I add images?**</summary>\r\nThe
@@ -1289,11 +1390,11 @@ en:
         height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**<span>
         How do I use the Inspector Tool? </span>**</summary>\r\nThe Inspector Tool
         is a great way to learn more about unfamiliar code in Web Lab. To turn on
-        the Inspector Tool click the <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
+        the Inspector Tool, click <img src=\"https://images.code.org/188579d7c6e7645d0d2edd203a33bd63-image-1480361561351.31.56
         PM.png\" style=\"width:100px\">. You will know that the Inspector Tool is
-        on because the button will turn white and say Inspector: On. Once you turn
-        on the Inspector Tool, you can hover over anything in the preview area and
-        Web Lab will highlight the code that is making that part of the page appear.\r\n</details>\r\n\r\n</div>\r\n\r\n#
+        on because the button will turn white and say \"Inspector: On\". Once you
+        turn on the Inspector Tool, you can hover over anything in the preview area
+        and Web Lab will highlight the code that is making that part of the page appear.\r\n</details>\r\n\r\n</div>\r\n\r\n#
         Explore HTML\r\n\r\nThis is a web page written in HTML, the language of the
         web. You'll learn more about how it works, but first explore it by using
         the Inspector Tool.\r\n\r\n# Do This\r\n\r\n* Click the Tip \"How do I use
@@ -1305,7 +1406,7 @@ en:
         worry if you can't do everything you want today.  You'll have plenty of
         chances to improve your work as you learn more about developing websites.\r\n\r\n#
         Do This\r\n* Use HTML to create the page that you sketched out.  Make sure
-        it includes\r\n * At least **two headers of different sizes**\r\n * At least
+        it includes\r\n * At least **two headings of different sizes**\r\n * At least
         **one paragraph**\r\n* **Reflect** on your page by comparing to your sketch
         and showing it to your partner"
       CSD U2 RGB intro_markdown_instruction: "# RGB Colors\r\n\r\nAll colors, whether
@@ -1620,12 +1721,12 @@ en:
         starting HTML\r\n* You know you’ve found all of the bugs when your page matches
         the <a href=\"https://thimbleprojects.org/danimcavoy/103295/\" target=\"_blank\">
         Target Page</a>."
-      CSD U2 header footer_markdown_instruction: "# Headers and Footer\r\n\r\nEach
-        of your pages needs a header and a footer.\r\n\r\n# Do This\r\n* For each
-        page, make sure it has a navigation bar that links to other pages in your
-        site.  For a review of the navigation bar, go to <a href=\"/s/csd2/stage/9/puzzle/3\"
-        target=\"_new\">Lesson 9 Level 3</a>.\r\n* For each page, make sure it has
-        a section at the bottom that explains the copyright information for your page.\r\n\r\n"
+      CSD U2 header footer_markdown_instruction: "# Navigation Bar and Footer\r\n\r\nEach
+        of your pages needs a navigation bar and a footer.\r\n\r\n# Do This\r\n* For
+        each page, make sure it has a navigation bar that links to other pages in
+        your site.  For a review of the navigation bar, go to <a href=\"/s/csd2/stage/9/puzzle/4\"
+        target=\"_new\">Lesson 9 Level 4</a>.\r\n* For each page, make sure it has
+        a footer at the bottom that explains the copyright information for your page.\r\n\r\n"
       CSD U2 image tag_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n<details>\r\n<summary>**How
         do I add images?**</summary>\r\nThe `<img>` tag allows you to show images
@@ -1815,8 +1916,8 @@ en:
         Find the rules in the style sheet that set image borders color and width.\r\n*
         Change the color and width of your borders.\r\n* Try out some different border
         styles.\r\n  * Choose from `dotted`, `dashed`, `solid`, and `double`\r\n*
-        Put a border on another type of page element, such as one of the headers or
-        the paragraphs."
+        Put a border on another type of page element, such as one of the headings
+        or the paragraphs."
       CSD U2 layout style borderradius_markdown_instruction: "<div style=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**How does the code work?**</summary>\r\nHere
@@ -2045,13 +2146,14 @@ en:
         your project from before.  You'll be linking the two pages by creating a
         **navigation bar** at the top of the page.  Websites usually have the same
         navigation bar across all of their pages so you can get back and forth between
-        things on the site.  You can see an example of a navigation bar on [this page](https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/).\r\n\r\n#
-        Do This\r\n* In your home page (index.html), add two hyperlinks at the top
-        of the page, one to your lists page, and one to the home page.\r\n * *Even
-        though it might seem strange to link a page to itself, it's less confusing
-        if the navigation bar is exactly the same on every page.*\r\n* Copy the code
-        for the navigation bar, then add it to the top of your lists page.\r\n* Test
-        your links in the preview area by clicking on them.\r\n\r\n"
+        things on the site.  You can see an example of a navigation bar on <a href=\"https://studio.code.org/projects/weblab/2KO4FIjN89QPeYnTG_NzLIjroaG8daOY3jRl5uHm1Co/\"
+        target=\"_new\">this page</a>\r\n\r\n# Do This\r\n* In your home page (index.html),
+        add two hyperlinks at the top of the page, one to your lists page, and one
+        to the home page.\r\n * *Even though it might seem strange to link a page
+        to itself, it's less confusing if the navigation bar is exactly the same
+        on every page.*\r\n* Copy the code for the navigation bar, then add it to
+        the top of your lists page.\r\n* Test your links in the preview area by clicking
+        on them.\r\n\r\n"
       CSD U2 new page_markdown_instruction: "# Create a New Page for Your Website.\r\n\r\nHere's
         your project from before.  You'll be adding another page.  Your new page
         can be a top 10 list, a recipe, or anything you like.\r\n\r\n# Do This\r\n*
@@ -2060,7 +2162,7 @@ en:
         workspace.\r\n* Rename the file, either by right clicking it and choosing
         \"Rename\", or by clicking on it when it's already highlighted.  **Make sure
         the name is unique, descriptive and ends in \".html\"**.\r\n* Use HTML to
-        fill out your new page.  It should include:\r\n * a list\r\n * a header\r\n\r\n"
+        fill out your new page.  It should include:\r\n * a list\r\n * a heading\r\n\r\n"
       CSD U2 ordered list_markdown_instruction: "# Ordered Lists\r\n<div style=\"float:
         right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
         markdown=\"1\">\r\n<details>\r\n<summary>**What are the two types of lists?**</summary>\r\n
@@ -2237,7 +2339,7 @@ en:
         the named list, but you will need to use their RGB values.  You can read more
         about using colors in CSS at <a href=\"http://www.w3schools.com/cssref/css_colors_legal.asp\">W3Schools
         - CSS Legal Color Values</a>\r\n</details><details>\r\n<summary>**How does
-        the code work?**</summary>\r\nHere is the code that is making the `h1` header
+        the code work?**</summary>\r\nHere is the code that is making the `h1` heading
         red:\r\n\r\n<pre>h1 {\r\n  color: red;\r\n}</pre>\r\n\r\n* `h1` is the _selector_.  It
         specifies which elements will have to follow the rules inside the curly braces.\r\n*
         `color: red;` is the rule that makes the text inside the `h1` tags red.\r\n
@@ -2265,7 +2367,7 @@ en:
         to give the page a particular style.  The style sheet contains information
         about what each of the HTML elements should look like.\r\n\r\n* Find the code
         in the style sheet (click on \"style.css\" in the files list) that is making
-        the h1 header red.\r\n* Change the code for the color of the h1 header from
+        the h1 heading red.\r\n* Change the code for the color of the h1 heading from
         `red` to a different color."
       CSD U2 text style h3_markdown_instruction: "<div style=\"float: right; height:
         250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\"
@@ -2501,11 +2603,11 @@ en:
         tag to display the images in your website."
       CSD U2 upload images_markdown_instruction: "# Upload Images\r\n\r\nNext, you'll
         need to upload all of your images into your project.\r\n\r\n# Do This\r\n*
-        Download all the images you want onto your computer. Visit <a href=\"/s/csd2/stage/8/puzzle/5\"
-        target=\"_new\">Lesson 8 Level 5</a> for help if you need it.\r\n * Make sure
+        Download all the images you want onto your computer. Visit <a href=\"/s/csd2/stage/7/puzzle/5\"
+        target=\"_new\">Lesson 7 Level 5</a> for help if you need it.\r\n * Make sure
         you have the right to use these images.\r\n * Write down all of the attribution
         information that you need.\r\n * Upload all of the images into your project.  Visit
-        <a href=\"/s/csd2/stage/8/puzzle/6\" target=\"_new\">Lesson 8 Level 6</a>
+        <a href=\"/s/csd2/stage/7/puzzle/5\" target=\"_new\">Lesson 8 Level 6</a>
         if you've forgotten how.\r\n\r\n"
       CSD U3 - Booleans Video_markdown_instruction: "# Boolean Expressions Video"
       CSD U3 - Simple Counter Predict_markdown_instruction: "# The Counter Pattern\r\n\r\nThis
@@ -3938,9 +4040,11 @@ en:
       CSD U3 Random Taller Rectangle_markdown_instruction: "<img src=\"https://images.code.org/02871e5c5d041ea1724e4a02d3697941-image-1492721665345.54.10
         PM.png\" style=\"float:right;height:150px; border: 1px solid #CCC\">\r\n#
         Rectangle Size\r\n\r\nThese `rect` blocks have two more parameters that you
-        can use to control the size.\r\n\r\n# Do This\r\n\r\n* Look at the code and
-        try to figure out how the last two inputs in `rect` work.\r\n* Change the
-        numbers in the second `rect` to make red rectangle longer than the blue one.\r\n"
+        can use to control the size. Notice that the `noStroke()` block turns off
+        the stroke (border) for shapes.\r\n\r\n# Do This\r\n\r\n* Look at the code
+        and try to figure out how the last two inputs in `rect` work.\r\n* Change
+        the numbers in the second `rect` to make red rectangle longer than the blue
+        one.\r\n"
       CSD U3 Random Width Height_markdown_instruction: "# Randomized Shapes\r\n\r\nLet's
         see how we can use randomization in our drawings. Each of the inputs from
         the shape blocks you've seen can be replaced with calls to `randomNumber()`.
@@ -15401,6 +15505,18 @@ en:
         is an example Markdown content header.\n\n## YouTube video\n\n<iframe width=\"560\"
         height=\"315\" src=\"https://www.youtube.com/embed/nKIu9yen5nc\" frameborder=\"0\"
         allowfullscreen></iframe>\n\nWhat did you think of the video?\n"
+      Overworld Chop Tree_markdown_instruction: "Wood is a very important resource.
+        Many things are made from it. Walk to the tree and use the `destroy` block
+        command to chop it down."
+      Overworld House Frame Chosen_markdown_instruction: "Build the rest of your
+        house from any material you'd like. The `repeat` command will come in handy."
+      Overworld Move to Sheep_markdown_instruction: "Add a second `move forward`
+        command to reach the sheep."
+      Overworld Place Wall_markdown_instruction: "Every house starts with a wall.
+        Build the first part of your house by putting the `place` and `move forward`
+        commands inside the repeat loop."
+      Overworld Shear Sheep_markdown_instruction: "Sheep-shearing time! Use the `shear`
+        command to gather wool from both sheep."
       PDAlg 13-16 Sam Extension Puzzle_markdown_instruction: "Add a second parameter
         to `onscreen?` for Sam's y coordinate and update the function so it keeps
         him safe on all four sides."
@@ -25783,6 +25899,13 @@ en:
         so it sets the `success` parameter in the callback function to `false` and
         finishes without changing any records. Be careful to always make sure the
         object you pass `updateRecord` has an ID that matches a record in the table.\r\n</details>\r\n\r\n"
+      Underground Avoiding Lava_markdown_instruction: "Lava is hiding beneath some
+        of these blocks, which you'll need to cover up before moving forward. An
+        `if` command will come in handy here. Add a `move forward` command in the
+        correct place to mine these blocks."
+      Underground If Statements_markdown_instruction: "Now things are getting tricky.
+        Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place
+        cobblestone over any lava you uncover."
       Unit 2 RGB Mapping_markdown_instruction: "# RGB Colors\r\n\r\nAll colors, whether
         they have names or not, can be described by the level of red, green, and blue
         light it takes to make them.  This is called an RGB value (short for Red-Green-Blue).  You
@@ -26720,6 +26843,66 @@ en:
       collectorSkinVideo2_markdown_instruction: "Move Laurel to the treasure, then
         use `collect` to pick it up.\r\n\r\nCollect one pile of treasure to pass this
         level."
+      course1_artist_loops_challenge2_markdown_instruction: "Let's play a game!
+        Draw as many X's as you can! Can you get 3 in a row?"
+      course1_artist_loops_challenge3_markdown_instruction: "**Tweet!**\r\n\r\n*\"Can
+        you help me make two bird houses?\"*"
+      course1_artist_loops_challenge4_markdown_instruction: "*\"It's time to toss
+        the dice! Can you help me draw these?\"*"
+      course1_maze_debugging_challenge1_markdown_instruction: "Debug this level.
+        Remove the extra blocks, and add the missing blocks. Get the bird to the pig!"
+      course1_maze_debugging_challenge2_markdown_instruction: "Debug this level.
+        These are the right blocks, but they're in the wrong order!"
+      course1_maze_seq_challenge2_markdown_instruction: "You can only move up to
+        four times in each direction. Can you find a path before you run out of blocks?"
+      course1_playlab_events_challenge1_markdown_instruction: "*\"Where are my friends
+        hiding? In this game, clicking on me will show my friend Olive the cat!\"*\r\n\r\nClicking
+        Olive will make Robin appear! Can you write code to show the rest of the characters
+        too?\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help
+        you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)"
+      course1_playlab_events_challenge2_markdown_instruction: "*\"Let's have a party!
+        Give my friends something to do when you click or tap them.\"*\r\n\r\nWhat
+        will the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle,
+        make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)"
+      course2_artist_nestedLoops_challenge1_markdown_instruction: "Can you figure
+        out how to make a picture like this?\r\n\r\n- Both shapes have **50 pixel
+        sides.**\r\n- The *octagons* are made with **45 degree** turns.\r\n- The *triangles*
+        are made with **120 degree** turns."
+      course2_artist_nestedLoops_challenge2_markdown_instruction: "Can you figure
+        out how to make a picture like this?\r\n\r\n- The first inner loop should
+        make an octagon.\r\n- The second inner loop should make a hexagon.\r\n- The
+        third inner loop should make a square."
+      course2_artist_prog_challenge1_markdown_instruction: "Draw rooms for each of
+        the animals. There are many different ways to solve this puzzle, so have some
+        fun!"
+      course2_artist_prog_challenge2_markdown_instruction: "*Help me paint the yellow
+        lines on this road!*"
+      course2_bee_conditionals_challenge1_markdown_instruction: "Collect all of the
+        nectar or make all the honey. You can only collect nectar from flowers and
+        make honey from honeycombs. Check any space to see if there is a flower or
+        honeycomb."
+      course2_bee_conditionals_challenge2_markdown_instruction: "Collect all of the
+        nectar and make all the honey. You can collect all of the nectar in one flower
+        by using the `while nectar > 0` loop."
+      course2_collector_loops_challenge2_markdown_instruction: "Let's hunt for treasure
+        - using loops! Help the collector by debugging this code. Get all of the treasure!"
+      course2_collector_prog_challenge1_markdown_instruction: "Look carefully! Can
+        you collect all **10** pieces of treasure?"
+      course2_collector_prog_challenge2_markdown_instruction: "There are **20** pieces
+        of treasure in this cave. Collect at least half to finish the challenge!"
+      course2_harvester_loops_challenge1_markdown_instruction: "Collect all of the
+        corn."
+      course2_harvester_loops_challenge2_markdown_instruction: "Collect all of the
+        lettuce. Avoid the trees and fields!"
+      course2_maze_programming_challenge1_markdown_instruction: "*\"The pig is hiding!
+        Can you help me find a way around?\"*"
+      course2_maze_programming_challenge2_markdown_instruction: "Sometimes there
+        is more than one way to solve the same problem. Sometimes it's faster to
+        go backwards than it is to go forwards!"
+      course2_maze_seq_challenge2_markdown_instruction: "You can only move up to
+        four times in each direction. Can you find a path before you run out of blocks?"
       course2_playlab_stage17_11_markdown_instruction: "Create your own story. When
         you're done, click Finish to let friends try your story on their phones.\r\n<br/>\r\n\r\n<h5>\r\n<details>\r\n<summary><b>Need
         some ideas?</b></summary>\r\n\t<br/>\r\n\t<h5>\r\n\t\t<ul>\r\n        \t<li><strong>Who's
@@ -26751,8 +26934,8 @@ en:
       courseA_artist_loops8_markdown_instruction: "##We need a ladder up to the boat.\r\n\r\n![](https://images.code.org/ee90228fae25ecca1fba589b721f9120-image-1498063066878.gif)"
       courseA_artist_loops9_markdown_instruction: "##**Challenge:** The stairs down
         to the dock are broken.  Help me fix them.\r\n\r\n![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)"
-      courseA_artist_loops_challenge2_markdown_instruction: "Tweet! Can you help
-        me make two bird houses?"
+      courseA_artist_loops_challenge2_markdown_instruction: "**Tweet!**\r\n\r\n*\"Can
+        you help me make two bird houses?\"*"
       courseA_collector_loops1_markdown_instruction: "**Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can.\r\n\r\nDrag
         blocks into the workspace and try to figure out how to get treasure.  Get
@@ -26798,11 +26981,11 @@ en:
         up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
         and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
         buttons are pressed."
-      courseA_playlab_events_challenge1_markdown_instruction: "Where are my friends
-        hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
-        Olive will make Robin appear! Can you write code to show the rest of my friends
-        too?\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will
-        help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+      courseA_playlab_events_challenge1_markdown_instruction: "*\"Where are my friends
+        hiding? In this game, clicking on me will show my friend Olive the cat!\"*\r\n\r\nClicking
+        Olive will make Robin appear! Can you write code to show the rest of the characters
+        too?\r\n\r\nIn this puzzle, make sure to click for hints! The hints will help
+        you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)"
       courseA_playlab_events_challenge1a_markdown_instruction: "Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
@@ -26810,10 +26993,16 @@ en:
         too?\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will
         help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)"
-      courseA_playlab_events_challenge2_markdown_instruction: "Let's have a party!
-        Give each of my friends something to do when you click or tap them. What do
-        the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle, make
-        sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+      courseA_playlab_events_challenge2_markdown_instruction: "*\"Let's have a party!
+        Give my friends something to do when you click or tap them.\"*\r\n\r\nWhat
+        will the animals say? What else will happen?\r\n\r\n\r\n\r\nIn this puzzle,
+        make sure to click for hints! The hints will give you fun things to try!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
+        PM.png)"
+      courseA_playlab_events_challengeClone_markdown_instruction: "Where are my friends
+        hiding? In this game, clicking on me will show my friend Olive the cat! Clicking
+        Olive will make Robin appear! Can you write code to show the rest of my friends
+        too?\r\n\r\n\r\nIn this puzzle, make sure to click for hints! The hints will
+        help you do this project step-by-step!\r\n\r\n![](https://images.code.org/d42103835215d4b070f7f463b5e3073c-image-1494531456899.30.19
         PM.png)"
       courseB_artist_loops10_markdown_instruction: "Use what you have learned to
         draw a picture of what you think the artist saw when he got home.\r\n\r\n___\r\n###Ideas\r\n\r\n![](https://images.code.org/b329e035f02cf0273987a530d4ff93b3-image-1497998147979.gif)\r\n![](https://images.code.org/126edbb030b78586c620fea11bd9c867-image-1497998152966.gif)\r\n![](https://images.code.org/a4fc9deba0ecdae5f434a828708d997b-image-1497998171788.gif)\r\n![](https://images.code.org/55271714dcfc01bf49441cdf3bf17649-image-1497998176661.gif)"
@@ -26821,8 +27010,8 @@ en:
         vine full of flowers.  Can you climb the vine and see where it goes?"
       courseB_artist_loops7_markdown_instruction: "**Challenge:**  It's a hidden
         garden! Let's walk around."
-      courseB_artist_loops_challenge1_markdown_instruction: "It's time to toss the
-        dice! Can you help me draw these?"
+      courseB_artist_loops_challenge1_markdown_instruction: "*\"It's time to toss
+        the dice! Can you help me draw these?\"*"
       courseB_artist_loops_challenge2_markdown_instruction: "Let's play a game!
         Draw as many X's as you can! Can you get 3 in a row?"
       courseB_collector_loops1_markdown_instruction: "**Free Play:** This is Laurel
@@ -26947,8 +27136,8 @@ en:
         will need to turn 60 degrees at the end of each loop to get the image on the
         screen."
       courseC_artist_loopsPrePre1a_markdown_instruction: "Use the `jump to 200 over
-        200 down` to get the artist to the center of the play area, then draw a line
-        50 pixels long with the `move forward 50 pixels` block."
+        200 down` block to get the artist to the center of the play area, then draw
+        a line 50 pixels long with the `move forward 50 pixels` block."
       courseC_artist_loopsTemplateA_markdown_instruction: "Use the `jump to 200 over
         200 down` to get the artist to the center of the play area, then use the `draw
         a sticker` block to make a bird appear. "
@@ -27012,10 +27201,43 @@ en:
         treasure."
       courseC_collector_progB_markdown_instruction: "You're almost done!  \r\n\r\nCollect
         as many coins as you can to finish the stage!"
-      courseC_collector_prog_challenge1_markdown_instruction: "*Look carefully! Can
-        you collect all **10** pieces of treasure?*"
-      courseC_collector_prog_challenge2_markdown_instruction: "*There are **20**
-        pieces of treasure in this cave. Collect at least half to finish the challenge!"
+      courseC_collector_prog_challenge1_markdown_instruction: "Look carefully! Can
+        you collect all **10** pieces of treasure?"
+      courseC_collector_prog_challenge2_markdown_instruction: "There are **20** pieces
+        of treasure in this cave. Collect at least half to finish the challenge!"
+      courseC_flappy_events1_markdown_instruction: "Attach the `flap a normal amount`
+        block to the `when click` event, then press \"Run\".   \r\n\r\n---\r\n\r\nClick
+        or tap on the play space to move Flappy to the target."
+      courseC_flappy_events10_markdown_instruction: "Create your own Flappy game!
+        \r\n\r\nYou can change the visuals and the rules...even the gravity! \r\nWhen
+        you're done, click \"Finish\" to share with friends on their phones."
+      courseC_flappy_events2_markdown_instruction: "The `when run` event allows you
+        to run code as soon as your game starts.  \r\n\r\nTry adding a block that
+        sets the level speed when the \"Run\" button is pressed. \r\n\r\n---\r\n\r\nPlay
+        the game and flap to the target to continue."
+      courseC_flappy_events3_markdown_instruction: "Now we've added the ground.
+        \r\n\r\nAttach the `end game` block to the `when hit the ground` event. \r\n\r\n---\r\n\r\nPlay
+        the game and crash the bird into the ground to continue."
+      courseC_flappy_events4_markdown_instruction: "Flappy will fly right through
+        obstacles unless you write code to make him crash. \r\n\r\nAttach a block
+        to the `when hit an obstacle` event so that the game ends when Flappy crashes
+        into the first set of pipes."
+      courseC_flappy_events5_markdown_instruction: "We've added a scoreboard to
+        count points when Flappy passes obstacles.  \r\n\r\nAdd a block to the `when
+        pass an obstacle` event that scores a point, then press \"Run\" to fly Flappy
+        through the first set of pipes."
+      courseC_flappy_events6_markdown_instruction: "Click the down arrow inside of
+        the `flap a normal amount` block to pick a different flapping power.  \r\n\r\nSee
+        if you can still score a point after making Flappy flap either a smaller or
+        larger amount each time you click."
+      courseC_flappy_events7_markdown_instruction: "Next, try changing the scene
+        by attaching a block to the `when run` event."
+      courseC_flappy_events8_markdown_instruction: "You can set the background under
+        any event, not just when the game starts. \r\n\r\nTry setting a **random**
+        scene when other events happen...for example, when passing an obstacle."
+      courseC_flappy_events9_markdown_instruction: "To mix things up, instead of
+        ending the game when Flappy hits an obstacle, try setting the score back to
+        0."
       courseC_harvester_loops1_markdown_instruction: "Loops can be used to repeat
         more than moves.  \r\n\r\nUse loops to collect all four of the pumpkins."
       courseC_harvester_loops10_markdown_instruction: "Collect all of the corn and
@@ -27579,16 +27801,18 @@ en:
         with graph paper first.\r\n* Get creative! What kind of drawing can you create?"
       courseD_playLab_cond1_markdown_instruction: "To start our game, Pirate Pegleg
         (actor 1) needs to be able to get around in all directions.   Connect the
-        blocks to the correct events to get Pegleg moving.\r\n\r\nGet Pegleg to the
-        dragon to solve this puzzle."
-      courseD_playLab_cond2_markdown_instruction: "Time to add points!  Give Pegleg
-        (actor 1) a point when he makes it to the dragon (actor 2). "
+        blocks to the correct events to get Pegleg moving.  \r\n\r\n---\r\nGet Pegleg
+        to the dragon to solve this puzzle."
+      courseD_playLab_cond2_markdown_instruction: "Time to add points!  \r\n\r\nEdit
+        the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor
+        2). "
       courseD_playLab_cond3_markdown_instruction: "It's time to use what we've
-        learned about conditionals to make this game amazing. This challenge has two
-        parts:\r\n\r\n  1) Use a `repeat forever` loop to make the dragon (actor 2)
-        change between random emotions every second.  \r\n \r\n  2) Add code so that
-        when Pegleg gets to the dragon, he gets two points *if* the dragon is happy.
-        Otherwise, he should get only one point added to his score."
+        learned about conditionals to make this game amazing. \r\n\r\nUse a `repeat
+        forever` loop to make the dragon (actor 2) change between random emotions
+        every second.  \r\n"
+      courseD_playLab_cond3a_markdown_instruction: "Add code so that when Pegleg
+        gets to the dragon, he gets two points *if* the dragon is happy. Otherwise,
+        he should get only one point added to his score."
       courseD_playLab_cond3b_markdown_instruction: "Use a `repeat forever` loop to
         make the dragon (actor 2) move up and down forever! Add a `wait for 1 second`
         block in between the `move up` and `move down` blocks for the dragon."
@@ -27599,15 +27823,16 @@ en:
         a `repeat forever` loop that continuously checks **if** the score is greater
         than 5, then ends the game as a **win** when it is."
       courseD_playLab_cond6_markdown_instruction: "Wow, this game is hard to win!\r\n\r\nLet's
-        customize this game to make it more fun.  This challenge has three parts:\r\n___\r\n\r\n1)  Slow
+        customize this game to make it more fun.  This challenge has two parts:\r\n___\r\n\r\n1)  Slow
         the ninja down before you set him to chase the pirate.  \r\n\r\n2)  Use a
         `repeat forever` loop to check to see if the pirate is in the \"safe zone\"
         beneath the line of octopuses (greater than 225 pixels down).  If he is, set
         the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the
-        pirate.  \r\n\r\n3)  We don't want the pirate to stay in the \"safe zone\"
-        too long! Add code to the `if` statement above so that if the pirate is in
-        the safe zone, the program will wait one second, then deduct a point as long
-        as he stays beneath the octopus line."
+        pirate.  \r\n"
+      courseD_playLab_cond6a_markdown_instruction: "We don't want the pirate to
+        stay in the \"safe zone\" too long!  \r\n\r\nAdd code to the `if` statement
+        above so that if the pirate is in the safe zone, the program will wait one
+        second, then deduct a point as long as he stays beneath the octopus line."
       courseD_playLab_cond6cloneForTest_markdown_instruction: "Can we make this work?"
       courseE_artist_concept1_markdown_instruction: "Recreate this image. \r\n\r\n-
         The hexagons have sides of 50 pixels\r\n- The hexagons are 100 pixels apart\r\n-
@@ -27745,8 +27970,8 @@ en:
         can you place at the end of the outermost loop to draw the whole grid?"
       courseE_farmer_functions1_markdown_instruction: "*\"Have we met before? I'm
         the farmer!\"*\r\n\r\nHelp the farmer get to the pumpkin and pick it."
-      courseE_farmer_functions10b_markdown_instruction: "Figure out which function
-        to use and which one to delete, then solve this puzzle!"
+      courseE_farmer_functions10b_markdown_instruction: "Use your new function twice
+        to solve this puzzle."
       courseE_farmer_functions11_predict_markdown_instruction: "Figure out which
         function to use and which one to delete, then solve this puzzle!"
       courseE_farmer_functions1a_markdown_instruction: "*\"Oooh, veggies are cropping
@@ -28874,6 +29099,10 @@ en:
         You will always have a chance to address feedback from your reviewers and
         resubmit your reflections! Reviewer feedback will show up at the bottom of
         this page, once it’s available. \r\n \r\n\r\n\r\n"
+      csp-pre-survey-2017-q36-e_markdown_instruction: "I worry because of another
+        reason:"
+      csp-pre-survey-2017-q38_markdown_instruction: "If yes, what computer science
+        course(s) had you taken before your current computer science class?"
       csp-thursday-facilitation_markdown_instruction: "# Thursday Facilitation Reflection\r\n\r\n##
         Discussion-Based Sessions\r\n\r\nYou have now seen a couple discussion heavy
         sessions. Some specific examples include the Community (Wednesday), and Recruitment/Student
@@ -29358,6 +29587,117 @@ en:
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r\n"
+      csp_socialBelonging_control_markdown_instruction: "\r\n## Starting out in Computer
+        Science\r\n\r\nComputer science has changed the way we communicate with each
+        other, make art and movies, grow food, and even treat illnesses. Everyone
+        can learn computer science and make a difference.\r\n\r\n***\r\n\r\n## Quotes
+        from students\r\n\r\nStill, we understand that taking a computer science course
+        can be difficult at first. Here are a few student quotes describing their
+        strategies and tips for taking this course. **Please read the quotes carefully
+        and respond to the prompt below**. \r\n\r\n<div style=\"background-color:
+        #d9eff7; border-radius: 40px 40px 40px 5px; color: #000000; width: 80%; padding:
+        0.5px 20px 1px 20px;\">\r\n\r\n<p style=\"font-size: 70px; margin-bottom:
+        -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\r\n<p style=\"line-height:
+        1.5; margin-left: 10px; margin-right: 30px; \">\r\nIn the first week of this
+        class I was falling behind quickly. There was a lot of new information to
+        learn. To keep up, I had to find a better way to study. I tried to find connections
+        between the material and what I already know. That really helped me remember
+        things. I also tried to not overdo it. I started taking small breaks in-between
+        lessons and when I came back I checked if I still remembered what I was studying
+        before. It helped a lot\r\n </p>\r\n<p style=\"font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5\">&rdquo;</p>\r\n<p
+        style=\"text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; \">\r\nSofia P. (age 16)\r\n</p>\r\n\r\n</div>\r\n<br>\r\n\r\n<div
+        style=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\r\n\r\n\r\n<p
+        style=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5\">&ldquo;</p>\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+        30px;\">Some days I felt tired and would drift away in my thoughts. It was
+        a real problem because I would miss so much of what we were learning. So I
+        started going to bed a bit earlier and I tried my best to pay attention. At
+        the end of every class our teacher summarized\r\n what we learned that day
+        and that was really helpful. I started taking more notes because that also
+        kept my mind from wandering. These little tricks got me through the class
+        and I learned more.</p>\r\n<p style=\"font-size: 70px; text-align: right;
+        opacity: 0.5\">&rdquo;</p>\r\n<p style=\"text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px\">\r\nJasmin D. (age 17)\r\n</p>\r\n</div>\r\n<br>\r\n\r\n<div
+        style=\"background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\r\n\r\n<p style=\"font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\r\n<p
+        style=\"line-height: 1.5; margin-left: 10px; margin-right: 30px; \">I\r\n
+        can be pretty forgetful sometimes and it was a problem in this class. I think
+        it's because we did so much on the computer. For my other classes I take
+        notes on paper and read through them again at home. So the trick that I found
+        helpful in this class was to take notes on paper anyway and to test myself
+        about the concepts. I wasn't sure if it would work at first, but I think
+        it ended up being a big help.</p>\r\n\r\n<p style=\"font-size: 70px; text-align:
+        right; opacity: 0.5\">&rdquo;</p>\r\n<p style=\"text-align: right; font-size:
+        125%;  font-style: italic; margin-right: 30px; margin-top: -20px\">\r\nSam
+        J. (age 17)\r\n</p>\r\n</div>\r\n\r\n***\r\n<p style=\"font-size: 125%\">Now
+        consider the strategies and insights for how to learn best that you just read.
+        </p>\r\n\r\n## Reflect and Summarize: \r\n\r\n<p style=\"font-size: 150%;
+        color: black; font-weight: bolder; line-height: 1.5\">What are your own strategies
+        and insights about how to learn best? And, how are they similar or different
+        to the ones that you just heard about from other students? </p>\r\n\r\n*Please
+        write a short paragraph. Don't worry about spelling, grammar, or how well
+        written it is.*"
+      csp_socialBelonging_intervention_markdown_instruction: "## Starting out in
+        Computer Science\r\n\r\nComputer science has changed the way we communicate
+        with each other, make art and movies, grow food, and even treat illnesses.
+        **Everyone can learn computer science and make a difference:** It really does
+        not matter how much or little experience you have with computer science already,
+        or what age, gender, or skin color you have.\r\n\r\n***\r\n\r\n## Quotes from
+        students\r\n\r\nStill, we understand that it can be daunting at first to take
+        a computer science course. So here are a few student quotes describing their
+        experiences. **Please read the quotes carefully and respond to the prompt
+        below**. \r\n\r\n\r\n<div style=\"background-color: #d9eff7; border-radius:
+        40px 40px 40px 5px; color: #000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\r\n\r\n<p
+        style=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5\">&ldquo;</p>\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+        30px; \">\r\nAt the start of the class I worried that I was different from
+        the other students. I wasn't sure I fit in – I \tworried that I couldn’t
+        do it and that the teacher and other students would look down on me. A few
+        days after I started, I realized that almost everyone who takes the class
+        isn’t sure if they fit in at first. It's something everyone goes through.
+        Now it seems ironic – everybody feels different at first, when really we're
+        all going through the same thing.</p>\r\n<p style=\"font-size: 70px; text-align:
+        right; margin-right: 5%; margin-top: -10px; opacity: 0.5\">&rdquo;</p>\r\n<p
+        style=\"text-align: right; font-size: 125%; font-style: italic; margin-right:
+        70px; margin-top: -20px; \">\r\nSofia P. (age 16)\r\n</p>\r\n\r\n</div>\r\n<br>\r\n\r\n<div
+        style=\"background-color: #d9eff7; border-radius: 40px 40px 5px 40px; color:
+        #000000; width: 80%; margin-left: 10%; padding: 0.5px 20px 1px 20px;\">\r\n\r\n\r\n<p
+        style=\"font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity:
+        0.5\">&ldquo;</p>\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+        30px;\">I loved this computer science class! I've met some cool people and
+        learned a lot. But it was a difficult transition. The first few days I was
+        intimidated and not sure why I should learn computer science. Why would I
+        need it? But then we talked in class about things I’m interested in, like
+        music and design, and I realized that I can learn how to do cool new things.
+        I had the wrong picture in my head about CS, it’s actually very creative!
+        I just had to be patient and find ways to connect the class to what I really
+        care about.</p>\r\n<p style=\"font-size: 70px; text-align: right; opacity:
+        0.5\">&rdquo;</p>\r\n<p style=\"text-align: right; font-size: 125%;  font-style:
+        italic; margin-right: 30px; margin-top: -20px\">\r\nJasmin D. (age 17)\r\n</p>\r\n</div>\r\n<br>\r\n\r\n<div
+        style=\"background-color: #d9eff7; border-radius: 40px 40px 40px 5px; color:
+        #000000; width: 80%; padding: 0.5px 20px 1px 20px;\">\r\n\r\n<p style=\"font-size:
+        70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5\">&ldquo;</p>\r\n<p
+        style=\"line-height: 1.5; margin-left: 10px; margin-right: 30px; \">I didn’t
+        have any experience with code, and I worried that I was not prepared for this
+        class. Other students did some programming at home or in summer camps. On
+        my first day, I was so nervous about getting bad grades and looking stupid.
+        But then, I started to feel better – I talked with other students and enjoyed
+        the class more. I became more comfortable asking for help when I had a problem.
+        It turned out that the students with CS experience had the same issues as
+        me! Hah, it took some time, but now I really feel like I belong in CS class.</p>\r\n\r\n<p
+        style=\"font-size: 70px; text-align: right; opacity: 0.5\">&rdquo;</p>\r\n<p
+        style=\"text-align: right; font-size: 125%;  font-style: italic; margin-right:
+        30px; margin-top: -20px\">\r\nSam J. (age 17)\r\n</p>\r\n</div>\r\n\r\n***\r\n<p
+        style=\"font-size: 125%\"> Each of these students had similar experiences
+        and realizations. </p>\r\n\r\n## Reflect and Summarize: \r\n\r\n\r\n<p style=\"font-size:
+        150%; color: black; font-weight: bolder; line-height: 1.5\">Why do you think
+        the students worry at first about whether they belong in the class? How did
+        they become comfortable with it over time?</p>\r\n\r\n*Please write a short
+        paragraph. Don't worry about spelling, grammar, or how well written it is.*\r\n\r\n"
       cspu3_assess1_filltable_markdown_instruction: "Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as
         many or as few rows in the table as you see fit.\r\n\r\n_NOTE: Use a new line
