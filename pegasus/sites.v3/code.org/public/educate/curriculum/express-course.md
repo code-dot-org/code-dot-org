@@ -20,11 +20,11 @@ social:
 
 [col-66]
 
-Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students. It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
+Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year old students (with an [option for pre-readers](https://studio.code.org/s/pre-express)). It can be taught once a week in an after school club, integrated as a unit in a longer technology class, or used as an intro unit in a computer science class. Students learn to create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. They will study programming concepts, computational thinking, digital citizenship, and develop interactive games or stories they can share. 
 
 The course teaches the foundational concepts of programming using drag and drop blocks rather than a programming language such as JavaScript or Python. Blocks are an easier way to get started and many top Universities today begin their classes with block based programming.
 
-The Express Course combines the concepts taught in our [elementary school courses](/educate/elementary) in an accelerated fashion designed for older students.
+The Express Course combines the concepts taught in our [elementary school courses](/educate/curriculum/elementary-school) in an accelerated fashion designed for older students. You can download the [complete curriculum for all of our elementary school courses here](https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs).
 
 [/col-66]
 

@@ -5,9 +5,9 @@
 "@cdo/apps@file:src":
   version "0.0.1"
 
-"@code-dot-org/blockly@1.6.22":
-  version "1.6.22"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.22.tgz#bb6e32f0e509ad94a780e3c61f91765d9985567f"
+"@code-dot-org/blockly@1.6.23":
+  version "1.6.23"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/blockly/-/blockly-1.6.23.tgz#e30a1746f8c0f43aa104c34680ec425cebab6ba6"
 
 "@code-dot-org/bramble@0.1.18":
   version "0.1.18"
@@ -1699,12 +1699,12 @@ chai-as-promised@^7.1.1:
   dependencies:
     check-error "^1.0.2"
 
-chai-enzyme@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/chai-enzyme/-/chai-enzyme-0.5.0.tgz#1ef236796134cee5a848342016987c8ff7615d3f"
+chai-enzyme@0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/chai-enzyme/-/chai-enzyme-0.8.0.tgz#609c552a1dcdb091f435e1e281cc4f2149a33be1"
   dependencies:
-    html "0.0.10"
-    react-element-to-jsx-string "^3.0.0"
+    html "^1.0.0"
+    react-element-to-jsx-string "^5.0.0"
 
 chai-subset@1.2.0:
   version "1.2.0"
@@ -3725,7 +3725,7 @@ glob2base@^0.0.12:
   dependencies:
     find-index "^0.1.1"
 
-glob@3.x, glob@^3.1.13, glob@~3.2.8, glob@~3.2.9:
+glob@3.x, glob@~3.2.8, glob@~3.2.9:
   version "3.2.11"
   resolved "https://registry.yarnpkg.com/glob/-/glob-3.2.11.tgz#4a973f635b9190f715d10987d5c00fd2815ebe3d"
   dependencies:
@@ -4461,12 +4461,11 @@ html2canvas@^0.5.0-beta4:
   version "0.5.0-beta4"
   resolved "https://registry.yarnpkg.com/html2canvas/-/html2canvas-0.5.0-beta4.tgz#8282c62ac5fd78168f5702b5e4877157ca93f39e"
 
-html@0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/html/-/html-0.0.10.tgz#6fdc3ef8668c09a3a198ee3a5aa9e9f2878b95de"
+html@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/html/-/html-1.0.0.tgz#a544fa9ea5492bfb3a2cca8210a10be7b5af1f61"
   dependencies:
     concat-stream "^1.4.7"
-    glob "^3.1.13"
 
 htmlparser2@^3.9.0, htmlparser2@^3.9.1:
   version "3.9.2"
@@ -5758,7 +5757,7 @@ lodash@4.15.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.15.0"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.15.0.tgz#3162391d8f0140aa22cf8f6b3c34d6b7f63d3aa9"
 
-lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.13.1, lodash@^4.14.0, lodash@^4.16.2, lodash@^4.17.4, lodash@^4.2.1, lodash@^4.7.0, lodash@^4.8.0, lodash@^4.8.2:
+lodash@4.x.x, lodash@^4.0.0, lodash@^4.0.1, lodash@^4.14.0, lodash@^4.16.2, lodash@^4.17.4, lodash@^4.2.1, lodash@^4.7.0, lodash@^4.8.0, lodash@^4.8.2:
   version "4.17.4"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
@@ -7354,7 +7353,7 @@ react-addons-create-fragment@^15.1.0, react-addons-create-fragment@^15.3.2:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react-addons-create-fragment/-/react-addons-create-fragment-15.3.2.tgz#0e589c8c7add0e5db5db48367b5167cbed9c5852"
 
-react-addons-test-utils@15.3.0, "react-addons-test-utils@^0.14.8 || ^15.0.1":
+react-addons-test-utils@15.3.0:
   version "15.3.0"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.3.0.tgz#06d7affdbb729a48ebe0e27966d0cd0e82b57298"
 
@@ -7416,16 +7415,15 @@ react-dom@15.3.0:
   version "15.3.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.3.0.tgz#24a6a3df67969656b8a8225fd0d7fcb939d28bdd"
 
-react-element-to-jsx-string@^3.0.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-element-to-jsx-string/-/react-element-to-jsx-string-3.2.0.tgz#27ad7869e84f1d32f3d8a7385e44bc693dc8b7bb"
+react-element-to-jsx-string@^5.0.0:
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/react-element-to-jsx-string/-/react-element-to-jsx-string-5.0.7.tgz#c663a4800a9c712115c0d8519cb0215a46a1f0f2"
   dependencies:
     collapse-white-space "^1.0.0"
     is-plain-object "^2.0.1"
-    lodash "^4.13.1"
-    react-addons-test-utils "^0.14.8 || ^15.0.1"
+    lodash "^4.17.4"
     sortobject "^1.0.0"
-    stringify-object "^2.3.1"
+    stringify-object "2.4.0"
     traverse "^0.6.6"
 
 react-fuzzy@^0.3.3:
@@ -8652,7 +8650,7 @@ string_decoder@~0.10.25, string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
-stringify-object@^2.3.1:
+stringify-object@2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/stringify-object/-/stringify-object-2.4.0.tgz#c62d11023eb21fe2d9b087be039a26df3b22a09d"
   dependencies:

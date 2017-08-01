@@ -1,12 +1,12 @@
 require 'cdo/firehose'
 
-class Api::V1::UsersController < ApplicationController
+class Api::V1::UsersController < Api::V1::JsonApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
 
   def load_user
     user_id = params[:user_id]
-    if user_id != 'me' && user_id.to_i != current_user.id
+    if current_user.nil? || (user_id != 'me' && user_id.to_i != current_user.id)
       raise CanCan::AccessDenied
     end
     @user = current_user
