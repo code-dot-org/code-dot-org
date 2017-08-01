@@ -2,7 +2,7 @@
 =view :old_ie
 =view :jquery
 
-- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env.to_s}")
+- cookie_key = '_user_type' + (rack_env == :production ? '' : "_#{rack_env}")
 - user_type = request.cookies[cookie_key]
 
 %script=view 'google_analytics.js', user_type: user_type

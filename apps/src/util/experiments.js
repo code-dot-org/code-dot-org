@@ -112,3 +112,6 @@ experiments.isEnabled = function (key) {
 
   return enabled;
 };
+
+/** @const {string} New section management flow flag */
+experiments.SECTION_FLOW_2017 = 'section-flow-2017';

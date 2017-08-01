@@ -5,20 +5,33 @@ video_player: true
 theme: responsive
 ---
 
-# Our newest course: CS Discoveries &nbsp;&nbsp; <a href="<%= CDO.studio_url('/courses/csd')%>" name="CS Discoveries Course"><button style="margin-top: 0">View course</button></a>
+<link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
+
+# Our newest course: CS Discoveries
 
 ## <a name="what"></a>What is CS Discoveries?
 
-Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. 
+<div class="col-40" style="padding-right: 20px">
 
-<div style="float:right; margin:20px 0px 20px 20px;">
-
-<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center' %>
+<%=view :display_video_thumbnail, id: "intro_csp", video_code: "2-QpgNHknds", play_button: 'center', letterbox: 'false' %>
 
 <i>Need a video you can use for student recruitment for the course? <a href="https://youtu.be/g4qfsH8bc8s" target="_blank">Click here</a></i>
 
 </div>
 
+[col-60]
+
+Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun. 
+
+[/col-60]
+
+<div style="clear:both"></div>
+
+<div style="float: right; max-width: 100%; margin: 20px 0 20px 20px">
+
+<%= view :course_wide_block, course: CDO.studio_url('/courses/csd'), lesson_plans: 'https://curriculum.code.org/csd', img: CDO.code_org_url('/shared/images/banners/small-purple-icons.png'), title: 'Computer Science Discoveries', ages: 'Recommended for Grades 7-9', description: 'Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.'%>
+
+</div>
 
 ### <a name="equity"></a>Designed with equity in mind
 
