@@ -627,39 +627,15 @@ is:
           What do you have to do to the counter at each flower to equal the amount of nectar you need to collect?
       NEW Course 4 Bee For Loops 8_authored_hint:
         NEW_Course_4_Bee_For_Loops_8_a: "Ef lykkjan þín telur upp á við, þá er aukanum bætt við teljarabreytuna í hverri umferð. \n\nHverju þarft þú að bæta við hverja tölu til að fá næstu tölu á eftir?"
-      Overworld Avoid Monsters_authored_hint:
-        Overworld Avoid Monsters_a: There are multiple paths you can take. Which is the shortest?
-        Overworld Avoid Monsters_b: Remember to use `repeat` loops to simplify your code.
-        Overworld Avoid Monsters_c: Your goal is to get into the doorway of the house, at the top of the screen.
-      Overworld Chop Tree_authored_hint:
-        Overworld Chop Tree_a: You will need to `move forward` twice to be standing in front of the tree.
-        Overworld Chop Tree_b: The `destroy block` command will destroy the block in the square in front of your character, so make sure your character is facing the right way!
-      Overworld Chop Trees_authored_hint:
-        Overworld Chop Trees_a: You can chop down the trees in any order, but one order requires fewer blocks.
-        Overworld Chop Trees_b: Use `destroy block` to chop down each tree.
-        Overworld Chop Trees_c: If you find you are turning in the wrong direction, use the drop down menu on the `turn` commands to change it!
-      Overworld House Frame Chosen_authored_hint:
-        Overworld House Frame Chosen_a: You can change materials using the drop down menu on the `place` command.
-        Overworld House Frame Chosen_b: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
-        Overworld House Frame Chosen_c: Remember you can put more than one command inside of a `repeat` loop.
-      Overworld Move to Sheep_authored_hint:
-        Overworld Move to Sheep_a: The `move forward` block is at the top of the toolbox.
-        Overworld Move to Sheep_b: Make sure both `move forward` commands are connected to the `when run` block to complete the puzzle.
-      Overworld Place Wall_authored_hint:
-        Overworld Place Wall_a: In this case, you will want the `place` command first, and then the `move` command.
-        Overworld Place Wall_b: Make sure both blocks are inside of the `repeat` loop, so they will run more than once.
-        Overworld Place Wall_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
-      Overworld Plant Crops_authored_hint:
-        Overworld Plant Crops_a: Use the `plant crop` command to plant a crop in the square you are standing in.
-        Overworld Plant Crops_b: Both stripes of dark brown land by the water need to be filled with crops.
-        Overworld Plant Crops_c: Remember you can put more than one command inside of a `repeat` loop.
-      Overworld Powered Minecart_authored_hint:
-        Overworld Powered Minecart_a: Use `place rail` to lay rail on the square you are standing in.
-        Overworld Powered Minecart_b: Use `repeat` loops to make your code simpler.
-      Overworld Shear Sheep_authored_hint:
-        Overworld Shear Sheep_a: 'The `shear` command works the same as the `destroy block` command: It will act on the square in front of your character.'
-        Overworld Shear Sheep_b: You will need to turn to complete this puzzle. Remember that turns are from the perspective of your character!
-        Overworld Shear Sheep_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
+      Overworld Avoid Monsters_authored_hint: [ ]
+      Overworld Chop Tree_authored_hint: [ ]
+      Overworld Chop Trees_authored_hint: [ ]
+      Overworld House Frame Chosen_authored_hint: [ ]
+      Overworld Move to Sheep_authored_hint: [ ]
+      Overworld Place Wall_authored_hint: [ ]
+      Overworld Plant Crops_authored_hint: [ ]
+      Overworld Powered Minecart_authored_hint: [ ]
+      Overworld Shear Sheep_authored_hint: [ ]
       Pattern Bee 1_authored_hint:
         conditional_pointer: |-
           Byrjaðu að hugsa um þetta: hvað breytist í hverju skrefi? Hvaða kubb getur þú notað til að *taka ákvörðun* um hvort þú ert á blómi eða býkúpu?
@@ -674,21 +650,10 @@ is:
         turn_at_honeycomb_pointer: Sérðu eitthvað annað, til viðbótar því að búa til hunang, sem þú þarft að gera í hverri býkúpu?
       Quantum Bee - Ryan_authored_hint:
         test_hint: Þetta er vísbending til prufu.
-      Underground Avoiding Lava_authored_hint:
-        Underground Avoiding Lava_a: All of the code is in place to check for lava and deal with it. All you need to do is add movement.
-        Underground Avoiding Lava_b: Should your `move forward` command go inside of the if statement or after?
-      Underground If Statements_authored_hint:
-        Underground If Statements_a: The redstone is in the spaces with red speckles.
-        Underground If Statements_b: Can you use a `repeat` loop to make your code simpler?
-        Underground If Statements_c: Don't forget to check spaces for lava, and place cobblestones. Use an `if` statement!
-      Underground Iron_authored_hint:
-        Underground Iron_a: The iron blocks are the speckled spaces behind the torch! But how are you going to get there?
-        Underground Iron_b: When you are standing at the edge of the lava, use `place cobblestone ahead` to make a safe path. Then, you can walk over it!
-        Underground Iron_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
-      Underground Mining Coal_authored_hint:
-        Underground Mining Coal_a: Remember that the `destroy block` command acts on the space in front of your character.
-        Underground Mining Coal_b: The pieces of wall with black specks in them are coal! Use `destroy block` on these to mine the coal.
-        Underground Mining Coal_c: Use `place torch` to put a torch in a space.
+      Underground Avoiding Lava_authored_hint: [ ]
+      Underground If Statements_authored_hint: [ ]
+      Underground Iron_authored_hint: [ ]
+      Underground Mining Coal_authored_hint: [ ]
       aE1_authored_hint: [ ]
       aE2_authored_hint:
         aE2_a: Taktu eftir að þar sem servíetturnar eru 20 díla langar, þarft þú að hoppa 20 díla áður en þú byrjar á næstu lykkju.
@@ -749,6 +714,307 @@ is:
       artistLoopsKB_authored_hint:
         artistLoopsKB_a: Það ættu að vera 3 kubbar innan í lykkjunni til að leysa þessa þraut.
       artistLoopsKFP_authored_hint: [ ]
+      course1_artist_loops_challenge1_authored_hint:
+        courseA_artist_loops_challenge1_a: |+
+          Þú getur notað svona lykkjur til að búa til veggina og þakið. Prófaðu að endurtaka mismunandi kubba.
+          
+          
+          
+          ![](https://images.code.org/1581a2f599b501103064fc9864aa964d-image-1491863694560.png)
+          
+          Hannaðu þitt eigið eða smelltu á ![](https://images.code.org/53090194cea5dbf35ce9e35205156f5d-image-1491864793265.png) til að fá hugmyndir!
+        courseA_artist_loops_challenge1_b: "![](https://images.code.org/34f3bae38f77f07eaf455188c0b008e5-image-1491864823946.png)"
+        courseA_artist_loops_challenge1_c: "![](https://images.code.org/24b208839971803f3f6cd6ae41da56df-image-1491864839734.png)"
+        courseA_artist_loops_challenge1_d: "![](https://images.code.org/d3ccefffa0cc77bdd4a597cdb49fc85e-image-1491864847347.png)"
+      course1_artist_loops_challenge2_authored_hint:
+        harvey_tictactoe: Þú getur notað `hoppa` kubba til að fara á önnur svæði.
+      course1_artist_loops_challenge3_authored_hint:
+        courseA_artist_loops_challenge2_a: 'Svona kubbar: <xml>  <block type="simple_move_up_left"/></xml> láta listamanninn færast á ská!'
+        courseA_artist_loops_challenge2_b: Þegar hverju fuglahúsi er lokið, áttu að `hoppa` á það næsta!
+        courseA_artist_loops_challenge2_c: Þú þarft MARGA kubba innan í lykkjunni fyrir þessa áskorun.
+      course1_artist_loops_challenge4_authored_hint:
+        courseB_artist_loops_challenge1_a: 'Svona kubbar: <xml>  <block type="simple_move_up_right"/></xml> láta listamanninn færast á ská!'
+        courseB_artist_loops_challenge1_b: Þegar hverjum teningi er lokið, áttu að `hoppa` á þann næsta!
+        courseB_artist_loops_challenge1_c: 'Þú þarft að stundum að `færa` eða `hoppa` yfir sömu línurnar tvisvar. '
+      course1_collector_loops_challenge1_authored_hint:
+        courseA_collector_loops_challenge1_a: Prófaðu að breyta tölunum í hverri lykkju ef eitthvað fer úrskeiðis.
+        courseA_collector_loops_challenge1_b: Þú þarft ekki að nota lykkju ef þú ert að gera eitthvað bara einu sinni.
+        courseA_collector_loops_challenge1_c: Þar eru 6 eðalsteinar hægra megin í hellinum, en þú þarft bara að færa og safna 5 sinnum. Veistu af hverju?
+      course1_collector_loops_challenge2_authored_hint:
+        courseA_collector_loops_challenge2_b: |+
+          Þú þarft bara að nota einn ![](https://images.code.org/803e9ee8b5bc9311a26edf955cd3c03f-image-1491001702274.07.34 PM.png) kubb til að leysa þetta.
+        courseA_collector_loops_challenge2_a: |-
+          Þú getur farið til baka eftir slóðinni áður en þú færir þig suður.
+          
+          ![](https://images.code.org/88c28c76dbea70e20253083d22b5f5fd-image-1491001404225.01.21 PM.png)
+      course1_collector_loops_challenge3_authored_hint:
+        courseB_collector_loops_challenge1_b: |
+          Byrjaðu á að setja skipanirnar `fara suður` og `taka fjársjóð` í lykkju.
+          <xml>
+          <block type="maze_moveSouth"/><next>
+          <block type="collector_collect"/></next>
+          </xml>
+        courseB_collector_loops_challenge1_a: |
+          Mynstrið fyrir fyrir norður er aðeins öðruvísi en mynstrið fyrir suður.
+        courseB_collector_loops_challenge1_c: "Farðu í Austur tvisvar á milli slóða.\n<xml>\n  <block type=\"maze_moveEast\"/><next>\n  <block type=\"maze_moveEast\"/></next>next>\n  </xml>\nÞú getur gert þetta með 14 kubbum. Smelltu á næstu vísbendingu ef þú vilt sjá lausnina. \n"
+        courseB_collector_loops_challenge1_d: |-
+          Prófaðu þetta!
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveNorth"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="maze_moveEast">
+          <next>
+          <block type="controls_repeat_simplified">
+          <title name="TIMES">5</title>
+          <statement name="DO">
+          <block type="maze_moveSouth">
+          <next>
+          <block type="collector_collect"/>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course1_collector_loops_challenge4_authored_hint:
+        courseB_collector_loops_challenge2_a: Ef eitthvað fer úrskeiðis þá skaltu bara byrja aftur. Ekki gefast upp!
+        courseB_collector_loops_challenge2_b: |-
+          Ef þú endurtekur þetta mynstur, mun Laurel ekki rekast á vegginn í hellinum!
+          
+          <xml><block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+        courseB_collector_loops_challenge2_c: Ekki gleyma að nota `endurtaka` lykkju til að safna síðustu fjársjóðshrúgunni!
+        courseB_collector_loops_challenge2_d: |-
+          Prófaðu þessa lausn:
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">4</title>
+          <statement name="DO">
+          <block type="maze_moveEast">
+          <next>
+          <block type="collector_collect">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveWest">
+          <next>
+          <block type="maze_moveSouth"/>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat_simplified_dropdown">
+          <title name="TIMES" config="3-10">6</title>
+          <statement name="DO">
+          <block type="collector_collect"/>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
+      course1_maze_debugging_challenge1_authored_hint:
+        courseA_maze_seq_challenge1_a: Sumar slóðir munu leiða til TNT, ef þú ferð of langt.
+      course1_maze_debugging_challenge2_authored_hint:
+        courseB_maze_seq_challenge2_a: Þú þarft ekki að bæta við eða fjarlægja kubba til að leysa þessa þraut.
+        courseB_maze_seq_challenge2_b: Endurraðaðu kubbunum og farðu eftir miðslóðinni.
+      course1_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge2_a: Prófaðu að telja reitina með puttanum. Mundu að sleppa reitnum þar sem þú byrjar!
+      course1_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge1_a: Það er ekki víst að stysta slóðin virki í þetta sinn.
+        courseB_maze_seq_challenge1_b: Prófaðu að fara fyrst í vestur.
+      course1_playlab_events_challenge1_authored_hint:
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+      course1_playlab_events_challenge2_authored_hint:
+        courseA_playlab_events_challenge2_a: "Þú getur látið fugl syngja.\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tíst</title>\n          </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge2_b: "Þú getur látið vélmenni pípa.\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n\n  </block></xml>"
+        courseA_playlab_events_challenge2_c: |-
+          Þú getur látið reitt skrímsli urra.
+          
+          <xml>  <block type="studio_whenSpriteClicked">
+          <title name="SPRITE">5</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">2</title>
+          <next>
+          <block type="studio_saySprite">
+          <title name="SPRITE">5</title>
+          <title name="TEXT">Roar!</title>
+          <next>
+          <block type="studio_setSpriteEmotion">
+          <title name="SPRITE">5</title>
+          <title name="VALUE">0</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block></xml>
+      course2_artist_nestedLoops_challenge1_authored_hint:
+        courseD_artist_nestedLoops_challenge1_a: Byrjaðu á að nota faldaða lykkju til að búa til fjóra átthyrninga. Snúðu um 45 gráður til teikna átthyrninginn. Hoppaðu og snúðu svo um 90 gráður eftir hvern.
+        courseD_artist_nestedLoops_challenge1_b: Bættu við kóða til að teikna þríhyrning innan í földuðu lykkjunni. Notaðu 120 gráðu snúninga fyrir þríhyrninginn.
+        courseD_artist_nestedLoops_challenge1_c: |-
+          Notaðu faldaða lykkju:
+          - Endurtaktu 8 sinnum
+          - teiknaðu átthyrning
+          - teiknaðu þríhyrning
+          - hoppaðu áfram 50 díla
+          - snúðu til hægri um 90 gráður
+      course2_artist_nestedLoops_challenge2_authored_hint:
+        courseD_artist_nestedLoops_challenge2_a: Til að teikna reglulegan átthyrning, þarf listamaðurinn að snúa 45 gráður í hvert sinn.
+        courseD_artist_nestedLoops_challenge2_b: Til að teikna reglulegan sexhyrning, þarf listamaðurinn að snúa 60 gráður í hvert sinn.
+      course2_artist_prog_challenge1_authored_hint:
+        courseC_artist_prog_challenge1_a: 'Rétthyrningurinn er 200 díla breiður og 100 díla hár. '
+      course2_artist_prog_challenge2_authored_hint:
+        courseC_artist_prog_challenge2_a: "Þú getur sett skipanir innan í `endurtaka` kubb til að endurtaka þær aftur og aftur. Prófaðu það!\n<xml>\n  \n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">6</title>\n            <statement name=\"DO\">\n              <block type=\"draw_move_by_constant_dropdown\">\n                <title name=\"DIR\">moveForward</title>\n                <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                <next>\n                  <block type=\"jump_by_constant_dropdown\">\n                    <title name=\"DIR\">jumpForward</title>\n                    <title name=\"VALUE\" config=\"25,50,100,150,200,300\">25</title>\n                  </block>\n                </next>\n              </block>\n              </statement></block></xml>"
+      course2_bee_conditionals_challenge1_authored_hint:
+        courseD_bee_conditionals_challenge1_a: |-
+          Í þessari þraut gæti hver reitur haft blóm, býkúpu eða ekkert. Það þýðir að þú getur endurtekið `ef/annars` skilyrðið í hverjum reit.
+        courseD_bee_conditionals_challenge1_b: Í þessari þraut gæti hver reitur haft blóm, býkúpu eða ekkert. Það þýðir að þú getur endurtekið `ef/annars` skilyrðið í hverjum reit.
+      course2_bee_conditionals_challenge2_authored_hint:
+        courseD_bee_conditionals_challenge1_b: |-
+          Kubbarnir `ef við blóm` keyra bara ef býflugan er á blómi. Það sama gildir um kóðann innan í `meðan blómasafi > 0`, en munurinn er sá að þessi kóði mun keyra endurtekið þar til enginn blómasafi er eftir.  Prófaðu þetta mynstur:
+          
+          <xml>  <block type="bee_whileNectarAmount">
+          <title name="ARG1">nectarRemaining</title>
+          <title name="OP">&gt;</title>
+          <title name="ARG2">0</title>                    <statement name="DO">
+          <block type="maze_nectar"/>
+          </statement>
+          </block></xml>
+      course2_collector_loops_challenge2_authored_hint:
+        courseC_maze_loops_challenge2_a: Upphaflegi kóðinn mundi virka vel - ef það væri aðeins einn fjársjóður í hverri hrúgu!
+        courseC_maze_loops_challenge2_b: Notaðu lykkjur svo þú klárir ekki `taka` kubbana!
+      course2_collector_prog_challenge1_authored_hint:
+        courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
+      course2_collector_prog_challenge2_authored_hint:
+        courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
+      course2_harvester_loops_challenge1_authored_hint:
+        courseC_harvester_loops_challenge1_a: Ekki láta þér detta í hug að reyna þetta án þess að nota lykkjur!
+        courseC_harvester_loops_challenge1_b: Þú getur endurtekið `færa áfram` og `tína maís` eins oft og þú þarft, síðan notað `snúa til hægri` á hverju horni.
+        courseC_harvester_loops_challenge1_c: |-
+          Besta leiðin til að safna fyrstu fjórum af maís er að nota `endurtaka` kubb innan í öðrum `endurtaka` kubbi. Þú getur líka notað þetta fyrir afganginn af þrautinni!
+          
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="maze_move">
+          <title name="DIR">moveForward</title>
+          <next>
+          <block type="harvester_corn"/>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="maze_turn">
+          <title name="DIR">turnRight</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block></next></block></xml>
+      course2_harvester_loops_challenge2_authored_hint:
+        courseC_harvester_loops_challenge2_a: Ein lausn á þessu lítur út eins og sikksakk mynstur. Önnur eins og spírall! Það er fullt af mismunandi lausnum á svona þraut. Ekki gefast upp!
+        courseC_harvester_loops_challenge2_b: Þú getur endurtekið `færa áfram` og `tína kál` eins oft og þú þarft, síðan snúið á hverju horni.
+        courseC_harvester_loops_challenge2_c: |
+          Þetta sikksakk mynstur má endurtaka tvisvar til að leysa þrautina með bara 20 kubbum!
+          
+          ![](https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png)
+        courseC_harvester_loops_challenge2_d: |-
+          Þetta spíral-mynstur er hægt að kóða með aðeins 18 kubbum!
+          
+          ![](https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png)
+      course2_maze_loops_challenge1_authored_hint:
+        courseC_maze_loops_challenge1_a: Hugsaðu þér að þessi slóð sé gerð úr þremur ólíkum pörtum. Hver þeirra hefur mynstur sem þú getur endurtekið.
+        courseC_maze_loops_challenge1_b: Inn á milli `endurtaka` kubbanna þarft þú að `snúa til vinstri` eða `snúa til hægri` svo Scrat sé tilbúinn fyrir næsta mynstur.
+        courseC_maze_loops_challenge1_c: |-
+          Ef þú kemst svona langt, vantar bara að `snúa til vinstri` og svo `færa áfram` nokkrum sinnum. Ekki gefast upp!
+          
+          ![](https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png)
+      course2_maze_programming_challenge1_authored_hint: [ ]
+      course2_maze_programming_challenge2_authored_hint:
+        courseC_maze_programming_challenge2_a: "*Ef þú sendir mig aftur á bak, þarftu að passa sérstaklega að ég snúi í rétta átt!*"
+        courseC_maze_programming_challenge2_b: Stysta lausnin notar aðeins 5 kubba, en hún notar `endurtaka` kubbinn!
+      course2_maze_seq_challenge1_authored_hint:
+        courseA_maze_seq_challenge2_a: Prófaðu að telja reitina með puttanum. Mundu að sleppa reitnum þar sem þú byrjar!
+      course2_maze_seq_challenge2_authored_hint:
+        courseB_maze_seq_challenge1_a: Það er ekki víst að stysta slóðin virki í þetta sinn.
+        courseB_maze_seq_challenge1_b: Prófaðu að fara fyrst í vestur.
       courseA_artist_loops10_authored_hint:
         courseA_artist_loops10_a: Notaðu hoppa kubbinn til að fara áfram án þessa að teikna línu.
         courseA_artist_loops10_b: Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.
@@ -1010,6 +1276,12 @@ is:
           </block>
           </next>
           </block></xml>
+      courseA_playlab_events_challengeClone_authored_hint:
+        courseA_playlab_events_challenge1_a: "Láttu mörgæsina Waddles birtast þegar þú smellir á Robin!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_b: "Láttu drauginn Boo birtast þegar þú smellir á Waddles!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_c: "Láttu loðskrímslið Jayden birtast þega þú smellir á Boo!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_d: "Láttu vélmennið Spiff birtast þegar þú smellir á skrímslið!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>"
+        courseA_playlab_events_challenge1_e: "Láttu loks galdrakarlinn Wendel birtast þegar þú smellir á Spiff!\n<xml> \n\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
       courseA_toMakeLoopsVideo_Collector_authored_hint: [ ]
       courseB_artist_loops10_authored_hint: [ ]
       courseB_artist_loops2_authored_hint:
@@ -1305,8 +1577,11 @@ is:
         courseB_playlab_events6_a: |-
           You will need these event blocks:
           
-          ![](https://images.code.org/02dcc4efc752dfa4187d0b1268427100-image-1475707266348.40.55.png)
-        courseB_playlab_events6_b: Use the drop down arrows on the green `when arrow key pressed` event blocks to choose different directions.
+          ![](https://images.code.org/264ba5164e7cfca832cfb673445f9171-image-1501091597388.52.31.png)
+        courseB_playlab_events6_b: |-
+          Use the drop down arrows on the green `when arrow key pressed` event blocks to choose different directions.
+          
+          ![](https://images.code.org/b4c76f19fc2d2694c1f731e5f6e786b8-image-1501003990996.gif)
         courseB_playlab_events6_c: Get to all of the flags to pass!
       courseB_playlab_events7_authored_hint:
         courseB_playlab_events7_a: |-
@@ -1734,6 +2009,26 @@ is:
       courseC_collector_prog_challenge2_authored_hint:
         courseC_collector_prog_challenge1_a: Þú getur notað `taka` skipunina oftar til að safna öðrum fjársjóðum.
       courseC_external_events_authored_hint: [ ]
+      courseC_flappy_events1_authored_hint:
+        courseC_flappy_events1_a: "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+      courseC_flappy_events2_authored_hint:
+        courseC_flappy_events2_a: 'The block you need to add is called `set speed`. '
+        courseC_flappy_events2_b: Connect the `set speed` block to the `when run` block to solve this puzzle.
+      courseC_flappy_events3_authored_hint:
+        courseC_flappy_events3_a: If something isn't working correctly, make sure your blocks are connected to the correct events in the workspace.
+      courseC_flappy_events4_authored_hint:
+        courseC_flappy_events4_a: Connect the `end game` block to `when hit an obstacle` to solve this puzzle.
+      courseC_flappy_events5_authored_hint:
+        courseC_flappy_events5_a: You will need to use the `score a point` block to pass this level.
+      courseC_flappy_events6_authored_hint:
+        courseC_flappy_events6_a: Try connecting the `flap a ____ amount` block to the `when click` event.
+      courseC_flappy_events7_authored_hint:
+        courseC_flappy_events7_a: 'You can change the background using the `set scene` block. '
+      courseC_flappy_events8_authored_hint:
+        courseC_flappy_events8_a: Try connecting a second `set scene` block under the `when pass obstacle` event to pass this level.
+      courseC_flappy_events9_authored_hint:
+        courseC_flappy_events9_a: Connect the `set score 0` block to the `when hit an obstacle` event to pass this level.
+      courseC_flappy_events_template_authored_hint: [ ]
       courseC_harvester_loops1_authored_hint:
         courseC_harvester_loops1_a: Eftir að þú hefur fært þig á grasker notar þú `tína grasker` til að taka það.
         courseC_harvester_loops1_b: You can put a `repeat` block around the `pick pumpkin` block to pick more than one pumpkin from a square.
@@ -1930,7 +2225,7 @@ is:
         courseC_maze_programming2_b: Ef fuglinn er ekki að komast til svínsins, þarftu að ganga úr skugga um að allir kubbarnir hafi verið tengdir saman og smella svo aftur á "Keyra".
       courseC_maze_programming3_authored_hint:
         courseC_maze_programming3_a: Try running the code first to see where it goes wrong.
-        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox.\n\nFinally, put your other blocks back in place where they belong.\n"
+        courseC_maze_programming3_b: "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nTo delete a block from the middle of your code, drag all of the blocks underneath it away to the right and let them sit in the workspace for a while.  \n\nClick on the block you want to delete, and drag it back to the toolbox (left of the workspace, labeled \"Blocks\").\n\nFinally, put your other blocks back in place where they belong.\n"
       courseC_maze_programming4_authored_hint:
         courseC_maze_programming4_a: You can turn right or left from the bird's point of view. If you are facing right, turning right will make you point downwards.
         courseC_maze_programming4_b: To follow the path, move forward and turn one way, then move again and turn the opposite way. Move forward one more time to reach the pig.
@@ -1969,7 +2264,7 @@ is:
       courseC_puppy_loops9_authored_hint:
         courseC_puppy_loops9_1: If you repeat the first few actions, you can get me to the pig with just four more blocks!
       courseC_starWars_loops1_authored_hint:
-        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if it rolls over some, it will pick it up automatically.
+        courseC_starWars_loops1_a: BB-8 doesn't need to be told to pick up scrap metal, if he rolls over some, he will pick it up automatically.
         courseC_starWars_loops1_b: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
         courseC_starWars_loops1_c: You will want to `move forward` five times to solve this puzzle.
       courseC_starWars_loops10_authored_hint:
@@ -2257,7 +2552,7 @@ is:
         courseD_bee_conditionals2_c: You don't have to check for honeycombs, there will only be flowers or blank spaces under the clouds.
       courseD_bee_conditionals3_authored_hint:
         courseD_bee_conditionals3_a: Be sure to use an `if` statement to check each space to see if it has either a flower or nothing.
-        courseD_bee_conditionals3_b: You can use a loop to keep the bee moving forward. Use whichever one you like!
+        courseD_bee_conditionals3_b: You can use a `repeat` loop or a `while` loop to keep the bee moving forward. Use whichever one you like!
         courseD_bee_conditionals3_c: Ekki hræðast að gera mistök! Prófaðu að bæta við kubbum og keyra svo kóðann til að sjá hvað gerist jafnvel þó þér finnist þú ekki hafa klárað lausnina.
       courseD_bee_conditionals4_authored_hint:
         courseD_bee_conditionals4_a: You can still treat every space as if there is a cloud over it, even though you can see the whole path.
@@ -2284,7 +2579,7 @@ is:
           
           Only check for nectar and honey at the end of your path.
         courseD_bee_conditionals8_c: How can you make sure to travel to the end every path, no matter how long?
-        courseD_bee_conditionals8_d: Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the one in the bottom right of the square.
+        courseD_bee_conditionals8_d: "Even though there is a cloud right in front of you, you don't have to visit it first. Try starting with the one in the bottom right of the square.  \n\n![](https://images.code.org/166e71553edf23bf13ecd290a8e7e721-image-1501013509361.09.09.png)"
       courseD_bee_conditionals9_authored_hint:
         courseD_bee_conditionals9_a: Í þessari þraut veistu að hver reitur hefur annað hvort blóm eða býkúpu. Það þýðir að þú getur endurtekið `ef/annars` yrðinguna í hverjum reit.
         courseD_bee_conditionals9_b: There are two ways to get to the end of this path with a loop. Which one do you prefer?
@@ -2330,7 +2625,7 @@ is:
           How about the second?
           
           Where does it go wrong?
-        courseD_bee_debugging2_b: Do you see a pattern?  Try using nested loops to solve this puzzle.
+        courseD_bee_debugging2_b: "Do you see a pattern?   \nTry using nested loops to solve this puzzle.\n\n![](https://images.code.org/72fbb8a06937479599b12804f990a0f3-image-1501012383369.50.27.png)"
       courseD_bee_debugging3_authored_hint:
         courseD_bee_debugging3_a: Is there any place where the bee does something that doesn't make sense? What happens when you change those blocks?
         courseD_bee_debugging3_b: Try simplifying the code using nested loops.
@@ -2368,7 +2663,7 @@ is:
       courseD_bee_debugging9_authored_hint:
         courseD_bee_debugging9_a: There are several ways to solve this problem...but they all involve turns!
         courseD_bee_debugging9_b: Figure out how you would solve the puzzle, then move step-by-step to try to make the code match what is in your head.
-        courseD_bee_debugging9_c: Envision a giant stair step over the two flowers. Can you build this with what's in the workspace and toolbox?
+        courseD_bee_debugging9_c: "Envision one of these stair steps to the flowers.   \n\n![](https://images.code.org/d3dfd710961b9ff8571816a97d76ae46-image-1501012931437.59.18.png)\n\nCan you build either of these with what's in the workspace and toolbox?\n\n"
       courseD_bee_debugging9_predict1_authored_hint: [ ]
       courseD_bee_debugging_challenge1_authored_hint:
         courseD_bee_debugging_challenge1_a: Hvers vegna virkar fyrri helmingur þessa forrits? Hugsaðu um hvers vegna býflugan þarf að fara aftur á bak. Hvað safnar hún miklum blómasafa í hvert sinn sem hún fer yfir blóm?
@@ -2396,7 +2691,7 @@ is:
         courseD_bee_nestedLoops1_c: Remember to use the `get nectar` block once you are on a square with a flower.
       courseD_bee_nestedLoops2_authored_hint:
         courseD_bee_nestedLoops2_a: To solve this puzzle, you will need to nest one `repeat` loop inside of another.
-        courseD_bee_nestedLoops2_b: Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern.
+        courseD_bee_nestedLoops2_b: Can't figure out where to put the loops? Try writing the code on paper step-by-step and look for a pattern.
         courseD_bee_nestedLoops2_c: Remember you can put more than one block inside of a loop.
       courseD_bee_nestedLoops2_predict1_authored_hint: [ ]
       courseD_bee_nestedLoops3_authored_hint:
@@ -2411,17 +2706,15 @@ is:
       courseD_bee_nestedLoops7_authored_hint:
         courseD_bee_nestedLoops7_a: You will need to repeat `get nectar` inside of another `repeat` that also has the `move forward` block inside of it.
         courseD_bee_nestedLoops7_b: You will need to use all three of the available `repeat` blocks to solve this puzzle.
-        courseD_bee_nestedLoops7_d: You will need to move forward once before you start your loops.
         courseD_bee_nestedLoops7_c: |
           Nest your blocks three deep, like this:
           
-          - move forward
-          - repeat 3
-          - turn right
+          - repeat 4
           - repeat 3
           - repeat 12
           - get nectar
           - move forward
+          - turn right
       courseD_bee_nestedLoops8_authored_hint:
         courseD_bee_nestedLoops8_a: Try writing your code line by line on a piece of paper and see if you can spot the places where a repeat will make the code shorter!
         courseD_bee_nestedLoops8_b: |-
@@ -2911,8 +3204,9 @@ is:
         courseD_playLab_cond2_a: To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event.
       courseD_playLab_cond3_authored_hint:
         courseD_playLab_cond3_a: You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again.
-        courseD_playLab_cond3_b: 'You will need to use an `if / else` block for the second half of this challenge. '
-        courseD_playLab_cond3_c: "`If` the dragon is happy `score point`, `score point`.\n<br/>\n \n`Else` `score point`."
+      courseD_playLab_cond3a_authored_hint:
+        courseD_playLab_cond3_b: 'You will need to use an `if / else` block for this challenge. '
+        courseD_playLab_cond3_c: "- `If` the dragon is happy \n   - `score point`\n   - `score point`  \n   \n   \n \n- `Else` `score point`"
       courseD_playLab_cond3b_authored_hint:
         courseD_playLab_cond3b_a: Þú verður að bæta kubbum í `endurtaka endalaust` lykkjuna til að láta drekann halda áfram að hreyfast upp og niður
       courseD_playLab_cond4_authored_hint:
@@ -2925,6 +3219,7 @@ is:
       courseD_playLab_cond6_authored_hint:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
         courseD_playLab_cond6_b: You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses.
+      courseD_playLab_cond6a_authored_hint:
         courseD_playLab_cond6_c: Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly.
       courseD_playLab_cond6cloneForTest_authored_hint:
         courseD_playLab_cond6_a: Add the `set masked ninja speed` block to the beginning of the program to help slow the ninja down.
@@ -3102,6 +3397,7 @@ is:
         courseE_bee_functions3_c: Your main program will control all of the movement, the function is just for what happens when the bee reaches a flower.
       courseE_bee_functions4_authored_hint:
         courseE_bee_functions4_a: Your function will already travel down the side paths and return the bee back to the main road.  You don't need to add that part to your program.
+        courseE_bee_functions4_b: Use the green `move and get nectar` block to call this function.
         courseE_bee_functions4_c: You don't need to change the function, just use it in your program.
       courseE_bee_functions5_authored_hint:
         courseE_bee_functions5_a: Edit the function so that it solves the puzzle without having to change the main program.
@@ -3290,13 +3586,11 @@ is:
         courseE_playLab_scaffold1_a: Pull on the dropdown menu of the `when ____ arrow` event to change the direction the block controls.
         courseE_playLab_scaffold1_b: You should have four `when arrow` event blocks, with a direction to move underneath each.
         courseE_playLab_scaffold1_c: When you are done, you should be able to move your hero with the arrow keys!
-      courseE_playLab_scaffold3_authored_hint:
-        courseE_playLab_scaffold3_a: Use a `repeat forever` loop to have extra actors patrol up and down, or left and right for the entire game.
-        courseE_playLab_scaffold3_b: Ef báðir nýju leikmennirnir eru að hoppa á staði sem eru valdir af handahófi, getur verið að lausnin verði ekki samþykkt. Prófaðu að láta annan elta hinn eða hreyfast upp og niður endurtekið.
-        courseE_playLab_scaffold3_c: A `repeat forever` block does not need to be attached to any event block to run.
+      courseE_playLab_scaffold3_authored_hint: [ ]
       courseE_playLab_scaffold4_authored_hint:
         courseE_playLab_scaffold4_a: Use `score point` to add a point, and `remove point` to subtract one.
-        courseE_playLab_scaffold4_b: The `when actor touches` block can help you out here!
+      courseE_playLab_scaffold5_authored_hint:
+        courseE_playLab_scaffold5_a: To finish this level, you need to win or lose. Use a `end game as win` or `end game as loss` block to finish.
       courseE_playlab_challenge2_authored_hint:
         courseE_playlab_challenge2_a: |-
           Leikmaðurinn veit hvað hann á að segja út frá skapinu sem hann er í. Hvað gæti nornin sagt?

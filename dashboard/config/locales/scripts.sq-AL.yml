@@ -305,7 +305,7 @@
             'Eval: Writing Contracts':
               name: Writing Contracts
             'Play Lab: Animation (Big Game)':
-              name: The Big Game - Animation
+              name: Loja e Madhe - Animacioni
             'Play Lab: Boolean (Big Game)':
               name: The Big Game - Booleans
             'Play Lab: Booleans':
@@ -315,7 +315,7 @@
             'Play Lab: Defining Functions':
               name: Rocket Height
             'Play Lab: Defining Variables (Big Game)':
-              name: The Big Game - Variables
+              name: Loja e Madhe - Variablat
             'Unplugged: Booleans':
               name: 'Unplugged: Booleans and Logic'
             'Unplugged: Collision Detection and the Distance Formula':
@@ -361,19 +361,19 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Shkenca Kompjuterke Pedagogji
             Introduction to PD:
               name: Hyrje në PD
             K-5 Courses:
-              name: K-5 Courses
+              name: K-5 Kurset
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             'Programming Concept: Conditionals':
-              name: 'Programming Concept: Conditionals'
+              name: 'Koncepti i Programimit: Kushtëzimet'
             'Programming Concept: Events':
-              name: 'Programming Concept: Events'
+              name: 'Koncepti i Programimit: Eventet'
             'Programming Concept: Functions':
-              name: 'Programming Concept: Functions'
+              name: 'Koncepti i Programimit: Funksionet'
             'Programming Concept: Loops':
               name: 'Programming Concept: Loops'
             Reflection:
@@ -578,9 +578,9 @@
             Lossy Compression and File Formats:
               name: Lossy Compression and File Formats
             Number Systems:
-              name: Number Systems
+              name: Sistemi Numerik
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovacionet Personale
             Sending Binary Messages:
               name: Sending Binary Messages
             Sending Binary Messages with the Internet Simulator:
@@ -635,7 +635,7 @@
             Strings and Images:
               name: Stringet dhe Figurat
             Your Game - Animation:
-              name: Your Game - Animation
+              name: Loja Yte - Animacioni
             Your Game - Booleans:
               name: Your Game - Booleans
             Your Game - Collision Detection:
@@ -676,9 +676,9 @@
           description_audience: ''
           stages:
             Lesson 14:
-              name: Lesson 14
+              name: Lekcioni 14
             Lesson 15:
-              name: Lesson 15
+              name: Lekcioni 15
         ECSPD:
           title: Exploring Computer Science PD
           description: 'Phase 1: Online Introduction'
@@ -812,13 +812,13 @@
           description_audience: ''
           stages:
             Computer Science Pedagogy:
-              name: Computer Science Pedagogy
+              name: Shkenca Kompjuterke Pedagogji
             Course Overview:
               name: Course Overview
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             Strings and Images:
               name: Stringet dhe Figurat
             Teacher Dashboard:
@@ -1186,7 +1186,7 @@
             Evaluation Blocks:
               name: Blloqet e Vlerësimit
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             Rocket-Height:
               name: Rocket-Height
             Strings and Images:
@@ -1242,7 +1242,7 @@
             'Mastering the Basics: Sequencing':
               name: 'Mastering the Basics: Sequencing'
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
             Planning:
               name: Planning
         ECSPD2:
@@ -1367,7 +1367,7 @@
             Introduction to Equity:
               name: Introduction to Equity
             Next Steps:
-              name: Next Steps
+              name: Hapat e ardhshme
         sciencePD2b-iZone:
           title: Computer Science in Science PD Phase 2b
           description: 'Faza e 2-të Online: Studimi i Përzierë Veror'
@@ -2205,11 +2205,11 @@
             HTTP and Abstraction:
               name: HTTP and Abstraction
             Number Systems:
-              name: Number Systems
+              name: Sistemi Numerik
             Packets and Making a Reliable Internet:
               name: Packets and Making a Reliable Internet
             Personal Innovations:
-              name: Personal Innovations
+              name: Inovacionet Personale
             Practice PT - The Internet and Society:
               name: Practice PT - The Internet and Society
             Routers and Redundancy:
@@ -4424,6 +4424,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -6499,6 +6501,8 @@
               name: Events in Play Lab
             More Programming in Maze:
               name: More Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6538,6 +6542,8 @@
               name: Byzylykët Binarë
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7567,6 +7573,34 @@
               name: Events in Play Lab
             Spelling Bee:
               name: Bleta Gërmëzuese
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: Faleminderit
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: new stage
+            test satge:
+              name: test satge
           title: ''
           description_audience: ''
           description_short: ''

@@ -213,6 +213,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -221,6 +223,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: El. pašto adresas
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Pakvietimas išsiųstas
     added_teacher: "%{name} pridėtas(-a) kaip tavo mokytojas(-a)"
@@ -234,6 +242,9 @@
       section_not_found: Nepavyko rasti grupės su kodu '%{section_code}'.
       blank_code: "Įveskite grupės kodą"
       cant_join_own_section: Atsiprašome, bet prie savo grupės prisijungti negalite.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "%{student_name} nebėra Jūsų mokinys."
@@ -257,6 +268,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -271,6 +284,7 @@
         calculate: Calculate Something
         applab: Sukurk programėlę
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Pradžia
       courses: Kursai
       project_gallery: Project Gallery
@@ -718,9 +732,15 @@
       title: Galerija
       body: Peržiūrėkite su menininku sukurtų piešinių galeriją
     gamelab:
-      title: Game Lab (beta)
+      title: "Žaidimų laboratorija"
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: Amžius 13+
+      cta: Sužinok, kaip
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Amžius 13+
       cta: Sužinok, kaip
     frozen:

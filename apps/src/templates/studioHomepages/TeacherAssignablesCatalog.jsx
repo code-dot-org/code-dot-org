@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import ResourceCard from './ResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
-import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
+import {CourseBlocksHoc} from './CourseBlocks';
 
 const styles = {
   horizontalSpacer: {
@@ -71,7 +71,7 @@ const TeacherAssignablesCatalog = React.createClass({
           link={`${codeOrgUrlPrefix}/hourofcode/overview`}
           showLink={true}
         >
-          <ProtectedStatefulDiv ref="hocCourses"/>
+          <CourseBlocksHoc rowCount={2}/>
         </ContentContainer>
       </div>
     );

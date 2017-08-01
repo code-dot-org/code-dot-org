@@ -180,6 +180,8 @@ fa:
       
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -188,6 +190,12 @@ fa:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'ایمیل'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'دعوتنامه ارسال شد'
     added_teacher: '%{name} به عنوان معلم شما افزوده شد'
@@ -200,6 +208,7 @@ fa:
       section_not_found: "قادر به یافتن یک بخش با کد '%{section_code}' نمی باشد."
       blank_code: "لطفا بخش کد را وارد کنید"
       cant_join_own_section: "با عرض پوزش  ، شما نمی توانید ملحق شوید به بخش خود."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'اعلان Code.org: %{student_name} دیگر به عنوان دانش‌آموز شما شناخته نمی‌شود.'
@@ -223,6 +232,7 @@ fa:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -235,6 +245,7 @@ fa:
         calculate: 'Calculate something'
         applab: 'ایجاد یک برنامه'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "مراحل"
       project_gallery: "Project Gallery"
@@ -535,8 +546,13 @@ fa:
       title: "گالری"
       body: "دیدن یگ گالری از برنامه ها و تصاویر هنرمندانه ایجاد شده توسط کاربران ما"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "سنین سیزده به بالا"
+      cta: "یادبگیر چگونه"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "سنین سیزده به بالا"
       cta: "یادبگیر چگونه"
     frozen:

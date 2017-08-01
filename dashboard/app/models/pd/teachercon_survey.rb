@@ -42,11 +42,13 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   ].freeze
 
   def self.public_fields
-    public_required_fields +
+    (
+      public_required_fields +
       facilitator_required_fields +
       [
         :who_facilitated
-      ].freeze
+      ]
+    ).freeze
   end
 
   def self.public_required_fields
@@ -97,9 +99,11 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   end
 
   def self.required_fields
-    public_required_fields + [
-      :give_permission_to_quote
-    ].freeze
+    (
+      public_required_fields + [
+        :give_permission_to_quote
+      ]
+    ).freeze
   end
 
   def self.facilitator_required_fields

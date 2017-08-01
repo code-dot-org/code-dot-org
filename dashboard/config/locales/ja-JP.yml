@@ -193,6 +193,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: "あなたのセクション:"
@@ -201,6 +203,12 @@
     confirm:
       remove: "本当に、このセクションから離れてよいですか？"
     remove: "(セクションを削除)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: Eメール
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "招待状を送信しました"
     added_teacher: "%{name} あなたの先生として追加"
@@ -213,6 +221,9 @@
       section_not_found: "'%{section_code}' というセクションはありません"
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
@@ -236,6 +247,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -245,11 +258,12 @@
       finished_hoc: Hour of Codeを終了
       sign_in_to_save: "進捗状況を保存するためにサインインする"
       free_play:
-        playlab: "アプリを作る"
-        artist: "絵を描く"
+        playlab: "プレイラボ で作る"
+        artist: "絵をかく"
         calculate: Calculate Something
-        applab: "アプリを作る"
-        gamelab: Make a Game Lab project
+        applab: "アプリラボ で作る"
+        gamelab: "ゲームラボで作る"
+        weblab: Make a Web Lab (beta) project
       home: "ホーム"
       courses: "コース"
       project_gallery: "プロジェクト ギャラリー"
@@ -288,7 +302,7 @@
     user:
       classroom: "先生用ホームページ"
       district_dashboard: "地区のダッシュ ボード"
-      label: "こんにちは  %{username}"
+      label: "やあ %{username}"
       stats: "コード・スタジオ"
       settings: "アカウント"
       logout: "サインアウト"
@@ -612,8 +626,14 @@
       title: "ギャラリー"
       body: "ユーザーが作成したアプリやアーティストの画像のギャラリーを見る"
     gamelab:
-      title: "ゲーム ラボ(ベータ版)"
+      title: "ゲーム ラボ"
       body: "ゲーム ラボは、簡単なアニメーションや、オブジェクトとキャラクターがやり取りするゲームを作ることができるプログラミング環境です。"
+      audience: 13才以上
+      cta: "もっと知る"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: 13才以上
       cta: "もっと知る"
     frozen:
@@ -791,15 +811,15 @@
     create: "プロジェクトを作る"
     create_a_project: "新しいプロジェクトを作る"
     new: "新しく作る"
-    rename: "名前を変更"
+    rename: "名前をかえる"
     save: "保存"
-    delete: "削除"
+    delete: "削除（さくじょ）"
     exit: "コースに戻る"
     my_projects: "マイプロジェクト"
     project_gallery: "プロジェクト ギャラリー"
-    publish: "公開"
-    unpublish: "非公開"
-    share: "共有"
+    publish: "みんなに見せる"
+    unpublish: "見られなくする"
+    share: "シェアする"
     share_title: "プロジェクトを共有"
     share_copy_link: "リンクをコピー:"
     share_embed_description: Web ページにプロジェクトを表示するため、HTML ページに埋め込みコードを貼り付けることができます。
@@ -814,11 +834,11 @@
     project_type: "プロジェクトの種類"
     help_text: "下にある <strong>アプリを作る</strong> か <strong>何かを描く</strong> をクリックして、新しいプレイラボかアーティストプロジェクトを作りましょう！
       <br/>いつでも、戻ってきてプロジェクトを再開することができます。"
-    need_help: "スタートするのをお手伝いしましょうか？"
+    need_help: "これらのコースで、新しいプロジェクトを はじめよう"
     thumbnail_help: "プロジェクトのサムネイルが正しく表示されませんか? 新しいサムネイルを生成するために、アプリを実行してみてください。サムネイルの更新には、数時間かかることがありますのでご注意ください。"
-    really_delete: "削除しますか？"
+    really_delete: "本当に削除しますか？"
     delete_yes: "はい"
-    delete_no: "ちがいます"
+    delete_no: "いいえ"
     saved: "保存されました"
     not_saved: "保存されていません"
     cancel: "キャンセル"
@@ -1034,4 +1054,4 @@
         activities you did in this workshop?
       anything_else_s: Is there anything else you’d like to tell us about your experience
         at this workshop?
-  courses_category: Full Courses
+  courses_category: "すべてのコース"
