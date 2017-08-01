@@ -52,7 +52,7 @@
           <next>
             <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="harvester_ifAtCorn">
+                <block type="harvester_ifHasCorn">
                   <statement name="DO">
                     <block type="harvester_corn"/>
                   </statement>
@@ -80,7 +80,7 @@
                                   <next>
                                     <block type="harvester_untilHasPumpkin">
                                       <statement name="DO">
-                                        <block type="harvester_ifAtCorn">
+                                        <block type="harvester_ifHasCorn">
                                           <statement name="DO">
                                             <block type="harvester_corn"/>
                                           </statement>
@@ -99,7 +99,7 @@
                                               <next>
                                                 <block type="harvester_untilHasPumpkin">
                                                   <statement name="DO">
-                                                    <block type="harvester_ifAtCorn">
+                                                    <block type="harvester_ifHasCorn">
                                                       <statement name="DO">
                                                         <block type="harvester_corn"/>
                                                       </statement>
@@ -118,7 +118,7 @@
                                                           <next>
                                                             <block type="harvester_untilHasPumpkin">
                                                             <statement name="DO">
-                                                            <block type="harvester_ifAtCorn">
+                                                            <block type="harvester_ifHasCorn">
                                                             <statement name="DO">
                                                             <block type="harvester_corn"/>
                                                             </statement>
@@ -195,7 +195,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -270,7 +270,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="harvester_ifAtCorn">
+                <block type="harvester_ifHasCorn">
                   <statement name="DO">
                     <block type="harvester_corn"/>
                   </statement>
