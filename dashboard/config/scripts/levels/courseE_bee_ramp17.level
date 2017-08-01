@@ -35,8 +35,8 @@
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Because we don't have a repeat block to do something a certain number of times, what block should we use to get us along the path?\",\"hint_id\":\"courseE_bee_ramp17_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/48f6cd43f546d8d9b0d703ec1eae2733/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you were to solve this puzzle without an until block, where would you see repeated code? How can you use this repeated code to shape how you must use an until block to solve the problem?\",\"hint_id\":\"courseE_bee_ramp17\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bbadf5674dca4fe14127fe971d1e74a7/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet.\",\"hint_id\":\"courseE_bee_ramp17_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/249f9a599d949ae950f131138cdd91b7/courseE_bee_ramp17.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move in a stair step pattern. Try coding that first, then adding the `if/else` statement and `while` loops to check for flowers and honeycombs.\",\"hint_id\":\"courseE_bee_ramp17_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/902ed2999bf83f598d0db5424b73c3ff/courseE_bee_ramp17.mp3\"}]",
     "markdown_instructions": "For the final puzzle in this stage, use what you have learned to collect all of the nectar and make all of the honey.  ",
     "shape_shift": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
