@@ -38,8 +38,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Remember to **add** a parameter.  Don't remove the one that is already there!\",\"hint_id\":\"courseF_artist_fwp4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/945f0362b333a488628677c9a9b9f598/courseF_artist_fwp4.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
