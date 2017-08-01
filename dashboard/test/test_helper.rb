@@ -447,11 +447,16 @@ end
 
 # Mock storage_id to generate random IDs
 def storage_id(_)
-  SecureRandom.random_number 1_000_000
+  SecureRandom.hex
 end
 
 def storage_encrypt_channel_id(storage_id, channel_id)
   "STUB_CHANNEL_ID-#{storage_id}-#{channel_id}"
+end
+
+# Reverse the pseudo-encryption performed by the storage_encrypt_channel_id mock above.
+def storage_decrypt_channel_id(encrypted)
+  encrypted.split('-')[1, 2]
 end
 
 $stub_channel_owner = 33
