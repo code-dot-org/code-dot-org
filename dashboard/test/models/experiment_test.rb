@@ -1,10 +1,6 @@
 require 'test_helper'
 
 class ExperimentTest < ActiveSupport::TestCase
-  setup do
-    Experiment.stubs(:should_cache?).returns false
-  end
-
   test "no experiments" do
     assert_empty Experiment.get_all_enabled(user: create(:user), section: create(:section))
   end
@@ -104,12 +100,5 @@ class ExperimentTest < ActiveSupport::TestCase
     assert_empty Experiment.get_all_enabled(user: facilitator_no)
     assert experiment.enabled?(user: facilitator_yes)
     refute experiment.enabled?(user: facilitator_no)
-  end
-end
-
-class CachedExperimentTest < ExperimentTest
-  setup do
-    Experiment.stubs(:should_cache?).returns true
-    Experiment.update_cache
   end
 end
