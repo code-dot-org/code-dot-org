@@ -492,7 +492,7 @@ class User < ActiveRecord::Base
       errors.add :email, I18n.t('errors.messages.taken')
     elsif hashed_email.present? && other_user = User.find_by_hashed_email(hashed_email) &&
       self != other_user
-      errors.add :hashed_email, I18n.t('errors.messages.taken')
+      errors.add :email, I18n.t('errors.messages.taken')
     end
     # rubocop:enable Lint/UselessAssignment
   end
