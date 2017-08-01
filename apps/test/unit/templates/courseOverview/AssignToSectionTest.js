@@ -113,9 +113,7 @@ describe('AssignToSection', () => {
       <AssignToSection {...defaultProps}/>
     );
     wrapper.setState({errorString: 'Error'});
-    // TODO: this is a bad test (should be assert.equal), and there might also be
-    // an actul bug
-    assert(wrapper.find('BaseDialog').length, 1);
-    assert(wrapper.find('BaseDialog').text(), 'Error');
+    assert.equal(wrapper.find('BaseDialog').length, 1);
+    assert.equal(wrapper.find('BaseDialog').childAt(0).text(), 'Error');
   });
 });
