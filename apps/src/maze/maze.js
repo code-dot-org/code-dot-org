@@ -794,6 +794,7 @@ Maze.execute = function (stepMode) {
         // Detected an infinite loop.  Animate what we have as quickly as
         // possible
         Maze.result = ResultType.TIMEOUT;
+        Maze.executionInfo.queueAction('finish', null);
         stepSpeed = 0;
         break;
       case true:
@@ -809,6 +810,7 @@ Maze.execute = function (stepMode) {
         Maze.result = ResultType.ERROR;
         Maze.testResults = Maze.subtype.getTestResults(
           Maze.executionInfo.terminationValue());
+        Maze.executionInfo.queueAction('finish', null);
         break;
     }
   } catch (e) {
