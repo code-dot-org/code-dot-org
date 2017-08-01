@@ -516,7 +516,7 @@ class Script < ActiveRecord::Base
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    false if %w(coursea courseb coursec coursed coursee coursef).include? name
+    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
 
     k5_course? || %w(csp1 csp2 csp3 cspunit1 cspunit2 cspunit3).include?(name)
   end

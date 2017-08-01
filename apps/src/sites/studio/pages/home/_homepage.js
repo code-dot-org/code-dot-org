@@ -92,12 +92,12 @@ function showHomepage() {
           <TeacherHomepage
             announcements={[
               {
-                heading: i18n.announcementHeadingCspScores(),
+                heading: i18n.announcementHeadingCsfAtoF(),
                 buttonText: i18n.learnMore(),
-                description: i18n.announcementDescriptionCspScores(),
-                link: "http://teacherblog.code.org/post/162400738379/ap-cs-principles-score-distributions-released-from",
+                description: i18n.announcementDescriptionCsfAtoF(),
+                link: " http://teacherblog.code.org/post/163102110459/codeorg-updates-cs-fundamentals-courses-1-4-to",
                 image: "",
-                id: "ap_csp_scores_2017"
+                id: "csf_new_courses_A_F"
               }
             ]}
             courses={homepageData.courses}
