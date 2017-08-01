@@ -54,7 +54,7 @@ class PublishDialog extends Component {
   }
 }
 
-export const UnconnectedPublishDialog = PublishDialog;
+export const UnconnectedPublishDialog = Radium(PublishDialog);
 
 export default connect(state => ({
   isOpen: state.publishDialog.isOpen,
