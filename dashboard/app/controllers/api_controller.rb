@@ -91,23 +91,6 @@ class ApiController < ApplicationController
     end
   end
 
-  def user_menu
-    cookie_key = '_user_type' + (Rails.env.production? ? '' : "_#{Rails.env}")
-    user_type = request.cookies[cookie_key]
-    sign_in_user = current_user || user_type && OpenStruct.new(
-      id: nil,
-      short_name: 'User',
-      can_pair?: false
-    )
-    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-
-    @user_menu_options = {}
-    @user_menu_options[:current_user] = sign_in_user
-    @user_menu_options[:show_pairing_dialog] = @show_pairing_dialog
-    @user_menu_options[:session_pairings] = session[:pairings]
-    @user_menu_options[:loc_prefix] = 'nav.user.'
-  end
-
   def user_hero
     head :not_found unless current_user
   end
