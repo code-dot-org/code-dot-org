@@ -80,7 +80,7 @@ var GameLabVisualizationColumn = React.createClass({
 
   renderGridCheckbox() {
     return (
-      <div onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}>
+      <div style={{textAlign: 'left'}} onClick={() => this.props.toggleShowGrid(!this.props.showGrid)}>
         <i id="grid-checkbox" className="fa fa-square-o" style={{width: 14}} />
         <span style={{marginLeft: 5}}>
           Show grid
