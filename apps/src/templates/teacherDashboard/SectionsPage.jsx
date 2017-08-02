@@ -6,11 +6,10 @@ import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
 import {
-  setSections,
-  setValidAssignments,
   newSection,
   beginEditingNewSection,
   beginEditingSection,
+  asyncLoadSectionData,
 } from './teacherSectionsRedux';
 import {loadClassroomList, importClassroomStarted} from './oauthClassroomRedux';
 import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
@@ -35,11 +34,8 @@ const styles = {
   }
 };
 
-const sectionsApiPath = '/dashboardapi/sections/';
-
 class SectionsPage extends Component {
   static propTypes = {
-    validScripts: PropTypes.array.isRequired,
     teacherHomepage: PropTypes.bool,
     className: PropTypes.string,
 
@@ -49,21 +45,20 @@ class SectionsPage extends Component {
     provider: PropTypes.string,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
+    asyncLoadComplete: PropTypes.bool.isRequired,
     newSection: PropTypes.func.isRequired,
-    setSections: PropTypes.func.isRequired,
-    setValidAssignments: PropTypes.func.isRequired,
     loadClassroomList: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
+    asyncLoadSectionData: PropTypes.func.isRequired,
   };
 
   defaultProps = {
     teacherHomepage: false,
-  }
+  };
 
   state = {
-    sectionsLoaded: false,
     rosterDialogOpen: false,
   };
 
@@ -71,30 +66,6 @@ class SectionsPage extends Component {
     if (experiments.isEnabled('importClassroom')) {
       this.provider = this.props.provider;
     }
-  }
-
-  componentDidMount() {
-    const { validScripts, setValidAssignments, setSections } = this.props;
-    let validCourses;
-    let sections;
-
-    const onAsyncLoad = () => {
-      if (validCourses && sections) {
-        setValidAssignments(validCourses, validScripts);
-        setSections(sections);
-        this.setState({sectionsLoaded: true});
-      }
-    };
-
-    $.getJSON('/dashboardapi/courses').then(response => {
-      validCourses = response;
-      onAsyncLoad();
-    });
-
-    $.getJSON(sectionsApiPath).done(response => {
-      sections = response;
-      onAsyncLoad();
-    });
   }
 
   handleImportOpen = () => {
@@ -111,12 +82,8 @@ class SectionsPage extends Component {
 
     const url = urlByProvider[this.provider];
     $.getJSON(url, { courseId }).then(() => {
-      this.setState({rosterDialogOpen: false, sectionsLoaded: false});
-
-      $.getJSON(sectionsApiPath).done(results => {
-        this.props.setSections(results, true);
-        this.setState({sectionsLoaded: true});
-      });
+      this.setState({rosterDialogOpen: false});
+      this.props.asyncLoadSectionData();
     });
   };
 
@@ -135,8 +102,7 @@ class SectionsPage extends Component {
   };
 
   render() {
-    const { numSections } = this.props;
-    const { sectionsLoaded } = this.state;
+    const { numSections, asyncLoadComplete } = this.props;
 
     const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
     const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
@@ -154,7 +120,7 @@ class SectionsPage extends Component {
             </b>
           </div>
         }
-        {sectionsLoaded &&
+        {asyncLoadComplete &&
           <Button
             className="uitest-newsection"
             text={i18n.newSection()}
@@ -163,7 +129,7 @@ class SectionsPage extends Component {
             color={Button.ButtonColor.gray}
           />
         }
-        {sectionsLoaded && showGoogleClassroom &&
+        {asyncLoadComplete && showGoogleClassroom &&
           <Button
             text={i18n.importFromGoogleClassroom()}
             style={styles.button}
@@ -171,7 +137,7 @@ class SectionsPage extends Component {
             color={Button.ButtonColor.gray}
           />
         }
-        {sectionsLoaded && showCleverClassroom &&
+        {asyncLoadComplete && showCleverClassroom &&
           <Button
             text={i18n.importFromClever()}
             style={styles.button}
@@ -179,12 +145,12 @@ class SectionsPage extends Component {
             color={Button.ButtonColor.gray}
           />
         }
-        {sectionsLoaded && numSections === 0 &&
+        {asyncLoadComplete && numSections === 0 &&
           <div className="jumbotron">
             <p>{i18n.createSectionsInfo()}</p>
           </div>
         }
-        {sectionsLoaded && numSections > 0 && <SectionTable onEdit={this.handleEditRequest}/>}
+        {asyncLoadComplete && numSections > 0 && <SectionTable onEdit={this.handleEditRequest}/>}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
           handleImport={this.handleImport}
@@ -208,12 +174,12 @@ export default connect(state => ({
   provider: state.teacherSections.provider,
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
+  asyncLoadComplete: state.teacherSections.asyncLoadComplete,
 }), {
   newSection,
   beginEditingNewSection,
   beginEditingSection,
-  setSections,
-  setValidAssignments,
   loadClassroomList,
   importClassroomStarted,
+  asyncLoadSectionData,
 })(SectionsPage);

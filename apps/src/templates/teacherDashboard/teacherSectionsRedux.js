@@ -41,6 +41,10 @@ const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
+const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
+const ASYNC_LOAD_SUCCESS = 'teacherSections/ASYNC_LOAD_SUCCESS';
+const ASYNC_LOAD_FAILURE = 'teacherSections/ASYNC_LOAD_FAILURE';
+
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
@@ -114,6 +118,45 @@ export const finishEditingSection = () => (dispatch, getState) => {
   });
 };
 
+export const asyncLoadSectionData = () => (dispatch) => {
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  return Promise.all([
+    fetchSections(),
+    fetchValidCourses(),
+    fetchValidScripts()
+  ]).then(([sections, validCourses, validScripts]) => {
+    dispatch(setValidAssignments(validCourses, validScripts));
+    dispatch(setSections(sections));
+    dispatch({type: ASYNC_LOAD_SUCCESS});
+  }).catch(() => {
+    dispatch({type: ASYNC_LOAD_FAILURE});
+  });
+};
+
+function fetchSections() {
+  return new Promise((resolve, reject) => {
+    $.getJSON('/dashboardapi/sections/')
+      .done(resolve)
+      .fail(reject);
+  });
+}
+
+function fetchValidCourses() {
+  return new Promise((resolve, reject) => {
+    $.getJSON('/dashboardapi/courses')
+      .done(resolve)
+      .fail(reject);
+  });
+}
+
+function fetchValidScripts() {
+  return new Promise((resolve, reject) => {
+    $.getJSON('/v2/sections/valid_scripts')
+      .done(resolve)
+      .fail(reject);
+  });
+}
+
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
@@ -132,6 +175,8 @@ const initialState = {
   // its persisted state in the sections map.
   sectionBeingEdited: null,
   saveInProgress: false,
+  // Track whether we've async-loaded our section and assignment data
+  asyncLoadComplete: false,
 };
 
 /**
@@ -378,6 +423,20 @@ export default function teacherSections(state=initialState, action) {
     return {
       ...state,
       saveInProgress: false,
+    };
+  }
+
+  if (action.type === ASYNC_LOAD_BEGIN) {
+    return {
+      ...state,
+      asyncLoadComplete: false,
+    };
+  }
+
+  if (action.type === ASYNC_LOAD_SUCCESS || action.type === ASYNC_LOAD_FAILURE) {
+    return {
+      ...state,
+      asyncLoadComplete: true,
     };
   }
 

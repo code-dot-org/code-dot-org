@@ -9,7 +9,6 @@
   - if current_user.teacher?
     - homepage_data[:sections] = @sections
     - homepage_data[:isTeacher] = true
-    - homepage_data[:valid_scripts] = Script.valid_assignable_info(current_user)
   - else
     - homepage_data[:sections] = @student_sections
     - homepage_data[:studentTopCourse] = @student_top_course

@@ -24,7 +24,6 @@ const TeacherHomepage = React.createClass({
     announcements: React.PropTypes.array.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    validScripts: React.PropTypes.array
   },
 
   componentDidMount() {
@@ -34,7 +33,7 @@ const TeacherHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, announcements, codeOrgUrlPrefix, isRtl, validScripts } = this.props;
+    const { courses, sections, announcements, codeOrgUrlPrefix, isRtl } = this.props;
 
     return (
       <div>
@@ -71,7 +70,6 @@ const TeacherHomepage = React.createClass({
           isRtl={isRtl}
           isTeacher={true}
           canLeave={false}
-          validScripts={validScripts}
           teacherHomepage={true}
         />
         <RecentCourses
