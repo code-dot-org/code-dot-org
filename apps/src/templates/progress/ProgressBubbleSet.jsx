@@ -35,7 +35,7 @@ const styles = {
     top: (DIAMOND_DOT_SIZE + 4 + 6 - 10) / 2,
   },
   backgroundPill: {
-    // padding has height of 18, border of 2, padding of 6
+    // pill has height of 18, border of 2, padding of 6
     top: (18 + 4 + 12 - 10) / 2,
   },
   backgroundFirst: {
