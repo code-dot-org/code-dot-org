@@ -6,6 +6,7 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   setup do
     @admin = create(:admin)
+    @facilitator = create(:facilitator)
 
     @not_admin = create(:teacher, username: 'notadmin', email: 'not_admin@email.xx')
     @deleted_student = create(:student, username: 'deletedstudent', email: 'deleted_student@email.xx')
@@ -204,61 +205,61 @@ class AdminUsersControllerTest < ActionController::TestCase
 
   generate_admin_only_tests_for :permissions_form
 
-  test 'grant_permission grants admin status' do
+  test 'find user for non-existent email displays no user error' do
     sign_in @admin
-    post :grant_permission, params: {email: @not_admin.email, permission: 'admin'}
-    assert @not_admin.reload.admin
+    post :permissions_form, params: {search_term: 'nonexistent@example.net'}
+    assert_select '.alert-success', 'User Not Found'
+  end
+
+  test 'find user for non-existent id displays no user error' do
+    sign_in @admin
+    post :permissions_form, params: {search_term: -999}
+    assert_select '.alert-success', 'User Not Found'
+  end
+
+  test 'find user warns when multiple users have same email address' do
+    duplicate_user1 = create :user, email: 'test_duplicate_user1@example.com'
+    duplicate_user2 = create :user, email: 'test_duplicate_user2@example.com'
+    duplicate_user2.update_column(:email, 'test_duplicate_user1@example.com')
+    duplicate_user2.update_column(:hashed_email, User.hash_email('test_duplicate_user1@example.com'))
+    sign_in @admin
+    post :permissions_form, params: {search_term: 'test_duplicate_user1@example.com'}
+    assert_select 'td', duplicate_user1.id.to_s
+    assert_select(
+      '.alert-success',
+      "More than one User matches email address.  Showing first result.  "\
+      "Matching User IDs - #{duplicate_user1.id},#{duplicate_user2.id}",
+    )
   end
 
   test 'grant_permission grants user_permission' do
     sign_in @admin
-    post :grant_permission, params: {email: @not_admin.email, permission: UserPermission::LEVELBUILDER}
-    assert [UserPermission::LEVELBUILDER], @not_admin.reload.permissions
+    assert_creates UserPermission do
+      post :grant_permission, params: {user_id: @not_admin.id, permission: UserPermission::LEVELBUILDER}
+    end
+    assert_redirected_to permissions_form_path(search_term: @not_admin.id)
+    assert @not_admin.reload.permission?(UserPermission::LEVELBUILDER), 'Permission not granted to user'
   end
 
   test 'grant_permission noops for student user' do
     sign_in @admin
     post(
       :grant_permission,
-      params: {email: 'test_user@example.com', permission: UserPermission::LEVELBUILDER}
+      params: {user_id: @user.id, permission: UserPermission::LEVELBUILDER}
     )
     assert [], @user.reload.permissions
-    assert_response :redirect
-    assert @response.redirect_url.include?('/admin/permissions')
+    assert_redirected_to permissions_form_path(search_term: @user.id)
     assert_equal(
-      'FAILED: user test_user@example.com could not be found or was not a teacher',
+      "FAILED: user #{@user.id} could not be found or is not a teacher",
       flash[:alert]
     )
   end
 
-  test 'grant_permission noops and redirects for granting admins to teachers with sections' do
+  test 'revoke_permission revokes user_permission' do
     sign_in @admin
-    follower = create :follower, student_user: (create :teacher)
-    assert_does_not_create(Follower) do
-      post(
-        :grant_permission,
-        params: {email: follower.student_user.email, permission: 'admin'}
-      )
+    assert_difference 'UserPermission.count', -1 do
+      get :revoke_permission, params: {user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
     end
-    assert_response :redirect
-    assert @response.redirect_url.include?('/admin/permissions')
-    assert_equal(
-      "FAILED: user #{follower.student_user.email} NOT granted as user has sections_as_students",
-      flash[:alert]
-    )
-  end
-
-  test 'revoke_all_permissions revokes admin status' do
-    sign_in @admin
-    post :revoke_all_permissions, params: {email: @admin.email}
-    refute @admin.reload.admin
-  end
-
-  test 'revoke_all_permissions revokes user permissions' do
-    sign_in @admin
-    @not_admin.permission = UserPermission::RESET_ABUSE
-    @not_admin.permission = UserPermission::PLC_REVIEWER
-    post :revoke_all_permissions, params: {email: @not_admin.email}
-    assert [], @not_admin.reload.permissions
+    refute @facilitator.reload.permission?(UserPermission::FACILITATOR)
   end
 end
