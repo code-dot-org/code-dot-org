@@ -1803,9 +1803,16 @@ Artist.prototype.checkAnswer = function () {
     // Never send up frozen images for now.
     var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
 
+    // Include the feedback image whenever a levelbuilder edits solution blocks.
+    const isEditingSolution = (level.editBlocks === 'solution_blocks');
+
+    const didPassLevel = this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL;
+
     // Get the canvas data for feedback.
-    if (this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      !isFrozen && (level.freePlay || level.impressive)) {
+    if (
+      isEditingSolution ||
+      (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
+    ) {
       reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
     }
 
