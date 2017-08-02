@@ -6,6 +6,7 @@ class LevelSourceTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
 
   setup_all do
+    @user = create :user
     @level = create :level
     @level_source = create(:level_source, level_id: @level.id, data: 'data')
   end
@@ -24,22 +25,27 @@ class LevelSourceTest < ActiveSupport::TestCase
     assert_equal ['Data is invalid'], level_source.errors.full_messages
   end
 
-  test "encrypt is the reverse of decrypt for valid user and level" do
-    user = create :user
-    encpryted = @level_source.encrypt_level_source_id(user.id)
-    decrypted = LevelSource.decrypt_level_source_id(encpryted)
+  test 'decrypt reverses encrypt for valid user' do
+    encrypted = @level_source.encrypt_level_source_id(@user.id)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted)
     assert_equal @level_source.id, decrypted
   end
 
-  test "encrypt is the reverse of decrypt for non-valid user and level" do
-    encpryted = @level_source.encrypt_level_source_id(User.last.id + 1)
-    decrypted = LevelSource.decrypt_level_source_id(encpryted)
+  test 'decrypt returns nil for non-valid user' do
+    encrypted = @level_source.encrypt_level_source_id(User.last.id + 1)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted)
     assert_nil decrypted
   end
 
-  test "encrypt is the reverse of decrypt for nil user and level" do
-    encpryted = @level_source.encrypt_level_source_id(nil)
-    decrypted = LevelSource.decrypt_level_source_id(encpryted)
-    assert_nil decrypted
+  test 'decrypt reverses encrypt for nil user' do
+    encrypted = @level_source.encrypt_level_source_id(nil)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted)
+    assert_equal @level_source.id, decrypted
+  end
+
+  test 'decrypt reverses encrypt always if ignore_missing_user is set' do
+    encrypted = @level_source.encrypt_level_source_id(User.last.id + 1)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted, ignore_missing_user: true)
+    assert_equal @level_source.id, decrypted
   end
 end
