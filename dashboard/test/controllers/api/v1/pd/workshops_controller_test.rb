@@ -549,7 +549,6 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 2, response.first['facilitators'].size
   end
 
-
   private
 
   def tomorrow_at(hour, minute = nil)
