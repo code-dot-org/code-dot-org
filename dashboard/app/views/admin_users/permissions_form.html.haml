@@ -15,7 +15,7 @@
       %th Email
       %th Name
       %th User Type
-      %th Last Sign In
+      %th Recent Sign In
       %th Sign In Count
       %th Created At
     %tbody
@@ -24,7 +24,7 @@
         %td= @user.email
         %td= @user.name
         %td= @user.user_type
-        %td= @user.last_sign_in_at.try(:strftime, '%F')
+        %td= @user.current_sign_in_at.try(:strftime, '%F')
         %td= @user.sign_in_count
         %td= @user.created_at.strftime('%F')
   = form_tag(action: 'grant_permission') do
@@ -62,7 +62,7 @@
       %th Email
       %th Name
       %th User Type
-      %th Last Sign In
+      %th Recent Sign In
       %th Sign In Count
       %th Created At
     %tbody
@@ -72,6 +72,6 @@
           %td= user.email
           %td= user.name
           %td= user.user_type
-          %td= user.last_sign_in_at.try(:strftime, '%F')
+          %td= user.current_sign_in_at.try(:strftime, '%F')
           %td= user.sign_in_count
           %td= user.created_at.strftime('%F')
