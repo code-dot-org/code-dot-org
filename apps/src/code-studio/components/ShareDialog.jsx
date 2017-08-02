@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
+import PendingButton from '../../templates/PendingButton';
 import AdvancedShareOptions from './AdvancedShareOptions';
 import AbuseError from './abuse_error';
 import SendToPhone from './SendToPhone';
@@ -74,8 +75,9 @@ const ShareDialog = React.createClass({
     shareUrl: React.PropTypes.string.isRequired,
     isAbusive: React.PropTypes.bool.isRequired,
     isOpen: React.PropTypes.bool.isRequired,
-    isOwner: React.PropTypes.bool.isRequired,
+    isSignedIn: React.PropTypes.bool.isRequired,
     isPublished: React.PropTypes.bool.isRequired,
+    isUnpublishPending: React.PropTypes.bool.isRequired,
     channelId: React.PropTypes.string.isRequired,
     appType: React.PropTypes.string.isRequired,
     onClickPopup: React.PropTypes.func.isRequired,
@@ -190,7 +192,7 @@ const ShareDialog = React.createClass({
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {isOwner, isPublished} = this.props;
+    const {isSignedIn, isPublished} = this.props;
     return (
       <div>
         <BaseDialog
@@ -235,7 +237,7 @@ const ShareDialog = React.createClass({
                   <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                   <span>Send to phone</span>
                 </a>
-                {isOwner && !isPublished &&
+                {isSignedIn && !isPublished &&
                 <button
                   style={styles.button}
                   onClick={this.publish}
@@ -243,15 +245,17 @@ const ShareDialog = React.createClass({
                   {i18n.publish()}
                 </button>
                 }
-                {isOwner && isPublished &&
-                <button
-                  style={styles.button}
+                {isSignedIn && isPublished &&
+                <PendingButton
+                  isPending={this.props.isUnpublishPending}
                   onClick={this.unpublish}
-                >
-                  {i18n.unpublish()}
-                </button>
+                  pendingText={i18n.unpublishPending()}
+                  style={styles.button}
+                  text={i18n.unpublish()}
+                />
                 }
-                {this.props.canShareSocial &&
+                {/* prevent buttons from overlapping when unpublish is pending */}
+                {this.props.canShareSocial && !this.props.isUnpublishPending &&
                 <span>
                   {this.state.isFacebookAvailable &&
                   <a
@@ -306,6 +310,7 @@ export const UnconnectedShareDialog = ShareDialog;
 
 export default connect(state => ({
   isOpen: state.shareDialog.isOpen,
+  isUnpublishPending: state.shareDialog.isUnpublishPending,
 }), dispatch => ({
   onClose: () => dispatch(hideShareDialog()),
   onShowPublishDialog(projectId, projectType) {
