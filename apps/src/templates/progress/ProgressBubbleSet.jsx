@@ -7,7 +7,6 @@ import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from "@cdo/apps/util/color";
 import { levelType } from './progressTypes';
-import { DOT_SIZE, DIAMOND_DOT_SIZE } from './progressStyles';
 
 const styles = {
   main: {
@@ -18,25 +17,14 @@ const styles = {
     display: 'inline-block',
     position: 'relative'
   },
-  backgroundContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
   background: {
     height: 10,
     backgroundColor: color.lighter_gray,
     position: 'absolute',
     left: 0,
     right: 0,
-    // dot size, plus borders, plus margin, minus our height of "background"
-    top: (DOT_SIZE + 4 + 6 - 10) / 2,
-  },
-  backgroundDiamond: {
-    top: (DIAMOND_DOT_SIZE + 4 + 6 - 10) / 2,
-  },
-  backgroundPill: {
-    // pill has height of 18, border of 2, padding of 6
-    top: (18 + 4 + 12 - 10) / 2,
+    marginTop: (ProgressBubble.height - 10) / 2,
+    marginBottom: (ProgressBubble.height - 10) / 2,
   },
   backgroundFirst: {
     left: 15
@@ -47,14 +35,10 @@ const styles = {
   container: {
     position: 'relative',
   },
-  diamondContainer: {
-    // Height needed only by IE to get diamonds to line up properly
-    height: 36,
-  },
   pillContainer: {
-    marginRight: 2,
-    // Height needed only by IE to get pill to line up properly
-    height: 37,
+    // Vertical padding is so that this lines up with other bubbles
+    paddingTop: 4,
+    paddingRight: 2
   }
 };
 
@@ -68,6 +52,8 @@ const ProgressBubbleSet = React.createClass({
   render() {
     const { levels, disabled, style } = this.props;
 
+    const pillContainerStyle = styles.pillContainer;
+
     return (
       <div style={{...styles.main, ...style}}>
         {levels.map((level, index) => (
@@ -78,18 +64,15 @@ const ProgressBubbleSet = React.createClass({
             <div
               style={[
                 styles.background,
-                level.isConceptLevel && styles.backgroundDiamond,
-                level.isUnplugged && styles.backgroundPill,
                 index === 0 && styles.backgroundFirst,
                 index === levels.length - 1 && styles.backgroundLast
               ]}
             />
             <div
-              style={[
-                styles.container,
-                level.isUnplugged && styles.pillContainer,
-                level.isConceptLevel && styles.diamondContainer,
-              ]}
+              style={{
+                ...styles.container,
+                ...(level.isUnplugged && pillContainerStyle)
+              }}
             >
               <ProgressBubble
                 level={level}
