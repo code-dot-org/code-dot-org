@@ -140,13 +140,13 @@
                   %br/
                   =course[:description2]
             - if course[:link]
-              %a{href: course[:link]}
-                %button
+              %a{href: course[:link], style: "text-decoration: none"}
+                %button.launch{style: "font-size: 12px"}
                   Learn more
             - if course[:course_link]
               &nbsp;
               %a{href: course[:course_link]}
-                %button.course-explorer-gray-button
+                %button.course-explorer-gray-button{style: "font-size: 12px"}
                   View course
         .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course_index}}
           %i.fa.fa-times{"aria-hidden" => "true"}
