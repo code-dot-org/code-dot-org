@@ -23,6 +23,7 @@ export default function init(options) {
   options.vizAspectRatio = 4 / 3;
   options.enableShowCode = false;
   options.pinWorkspaceToBottom = true;
+  options.skin = {};
   window.appOptions = options;
 
   studioApp().configure(options);
@@ -65,11 +66,12 @@ export default function init(options) {
   const audioEngine = new AudioEngine();
   vm.attachAudioEngine(audioEngine);
 
+  // Load the project.
+  let project = scratchDefaultProject;
   if (options.level.lastAttempt) {
-    vm.loadProject(options.level.lastAttempt);
-  } else {
-    vm.loadProject(scratchDefaultProject);
+    project = options.level.lastAttempt;
   }
+  vm.loadProject(project).then(options.onInitialize);
 
   // Instantiate scratch-blocks and attach it to the DOM.
   const workspace = Blockly.inject('codeWorkspace', {
@@ -92,8 +94,6 @@ export default function init(options) {
 
   // Run threads.
   vm.start();
-
-  options.onInitialize();
 }
 
 /**

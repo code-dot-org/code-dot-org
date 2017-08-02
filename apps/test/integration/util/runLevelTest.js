@@ -109,6 +109,7 @@ const appLoaders = {
   jigsaw: require('@cdo/apps/sites/studio/pages/init/loadJigsaw'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   netsim: require('@cdo/apps/sites/studio/pages/init/loadNetSim'),
+  scratch: require('@cdo/apps/sites/studio/pages/init/loadScratch'),
   studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
   turtle: require('@cdo/apps/sites/studio/pages/init/loadArtist'),
   weblab: require('@cdo/apps/sites/studio/pages/init/loadWeblab'),
