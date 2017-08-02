@@ -69,9 +69,13 @@ const WorkshopIndex = React.createClass({
       <div>
         <h1>Your Workshops</h1>
         <ButtonToolbar>
-          <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
-            New Workshop
-          </Button>
+          {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) &&
+            (
+              <Button className="btn-primary" onClick={this.handleNewWorkshopClick}>
+                New Workshop
+              </Button>
+            )
+          }
           {(this.permission.isWorkshopAdmin || this.permission.isOrganizer) && <Button onClick={this.handleAttendanceReportsClick}>Attendance Reports</Button>}
           {this.permission.isPartner && <Button onClick={this.handleOrganizerSurveyResultsClick}>Organizer Survey Results</Button>}
           {this.permission.isFacilitator && <Button onClick={this.handleSurveyResultsClick}>Facilitator Survey Results</Button>}
