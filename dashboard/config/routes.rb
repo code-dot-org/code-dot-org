@@ -86,7 +86,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :level_sources, path: '/r/', param: :level_source_id_and_user_id, only: [:show, :edit, :update] do
+  resources :r_level_sources, controller: :level_sources, path: '/r/', param: :level_source_id_and_user_id, only: [:show, :edit, :update] do
     member do
       get 'generate_image'
       get 'original_image'
