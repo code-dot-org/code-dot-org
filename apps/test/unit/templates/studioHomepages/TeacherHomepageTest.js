@@ -211,7 +211,6 @@ describe('TeacherHomepage', () => {
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       showAllCoursesLink: true,
-      heading: "My Courses",
       isTeacher: true,
       courses: courses,
       isRtl: false
