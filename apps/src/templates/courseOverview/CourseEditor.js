@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
+import ResourcesEditor from './ResourcesEditor';
 
 const styles = {
   input: {
@@ -9,7 +10,7 @@ const styles = {
     color: '#555',
     border: '1px solid #ccc',
     borderRadius: 4
-  },
+  }
 };
 
 export default class CourseEditor extends Component {
@@ -73,7 +74,7 @@ export default class CourseEditor extends Component {
           />
         </label>
         <label>
-          Scripts
+          <h4>Scripts</h4>
           <div>
             The dropdown(s) below represent the orded set of scripts in this course.
             To remove a script, just set the dropdown to the default (first) value.
@@ -83,6 +84,14 @@ export default class CourseEditor extends Component {
             scriptsInCourse={scriptsInCourse}
             scriptNames={scriptNames}
           />
+        </label>
+        <label>
+          <h4>Resources</h4>
+          <div>
+            Select up to three "Resources" buttons you'd like to have show up on
+            the top of the course overview page
+          </div>
+          <ResourcesEditor inputStyle={styles.input}/>
         </label>
       </div>
     );
