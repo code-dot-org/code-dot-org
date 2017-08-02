@@ -646,5 +646,6 @@
   "courseBlocksCsfOlderHeading": "",
   "courseBlocksCsfOlderDescription": "For older students in elementary school classrooms",
   "publishPending": "Publishing...",
-  "unpublish": "Unpublish"
+  "unpublish": "Unpublish",
+  "unpublishPending": "Unpublishing..."
 }
