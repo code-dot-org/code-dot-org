@@ -8,20 +8,19 @@ import { levelProgressStyle, hoverStyle } from './progressStyles';
 const styles = {
   levelPill: {
     textAlign: 'center',
-    justifyContent: 'center',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
     color: color.charcoal,
-    display: 'flex',
-    fontSize: 16,
+    display: 'inline-block',
+    fontSize: 13,
     fontFamily: '"Gotham 5r", sans-serif',
     borderRadius: 20,
     paddingLeft: 10,
     paddingRight: 10,
     paddingTop: 6,
     paddingBottom: 6,
-    minWidth: 70,
+    minWidth: 60,
   },
   text: {
     display: 'inline-block',
@@ -58,19 +57,23 @@ const ProgressPill = React.createClass({
       ...styles.levelPill,
       ...(url && hoverStyle),
       ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
+      // After making progressBubbles experiment permanent, we can get rid of
+      // fontSize prop
+      fontSize: 16,
+      minWidth: 70
     };
 
     // If we're passed a tooltip, we also need to reference it from our div
     let tooltipProps = {};
     if (tooltip) {
-      const id = tooltip.props.tooltipId;
+      const id = tooltip.props.id;
       tooltipProps['data-tip'] = true;
       tooltipProps['data-for'] = id;
       tooltipProps['aria-describedby'] = id;
     }
 
     return (
-      <a href={url} style={{textDecoration: 'none'}}>
+      <a href={url}>
         <div
           {...tooltipProps}
           style={style}
