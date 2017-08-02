@@ -75,7 +75,7 @@ export default function init(options) {
   if (options.level.lastAttempt) {
     project = options.level.lastAttempt;
   }
-  vm.loadProject(project).then(options.onInitialize);
+  vm.loadProject(project).then(() => options.onInitialize());
 
   // Instantiate scratch-blocks and attach it to the DOM.
   const workspace = Blockly.inject('codeWorkspace', {
