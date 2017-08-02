@@ -456,7 +456,10 @@ end
 
 # Reverse the pseudo-encryption performed by the storage_encrypt_channel_id mock above.
 def storage_decrypt_channel_id(encrypted)
-  encrypted.split('-')[1, 2]
+  raise ArgumentError if encrypted.nil?
+  _storage_id, channel_id = encrypted.split('-')[1, 2]
+  raise ArgumentError if channel_id.nil?
+  channel_id.to_i
 end
 
 $stub_channel_owner = 33
