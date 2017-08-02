@@ -282,7 +282,10 @@ function initializeStoreWithProgress(store, scriptData, currentLevelId,
     saveAnswersBeforeNavigation: saveAnswersBeforeNavigation,
     stages: scriptData.stages,
     peerReviewStage: scriptData.peerReviewStage,
+    scriptId: scriptData.id,
     scriptName: scriptData.name,
+    scriptTitle: scriptData.title,
+    courseId: scriptData.course_id,
     isFullProgress: isFullProgress
   }));
 
