@@ -39,8 +39,8 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To draw a side, use the `move forward by 100 pixels` block, and change the 100 to a 200.\",\"hint_id\":\"courseE_artist_ramp8_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f7dee4f33e72fd361059694051cd2495/courseE_artist_ramp8.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.\\n\\nDon't forget to turn afterward!\",\"hint_id\":\"courseE_artist_ramp8_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e71bf27a2e0709a51b0c52ab66f32850/courseE_artist_ramp8.mp3\"},{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Your loop should have two blocks inside of it, the `move forward` and the `turn right by 90 degrees`.\",\"hint_id\":\"courseE_artist_ramp8_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/42c9bd951d7d369c56de484651c82362/courseE_artist_ramp8.mp3\"}]",
     "video_key": "C2_artist_loops",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/ebab39c2931b439520becd8980cf4e1c-image-1490379820506.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

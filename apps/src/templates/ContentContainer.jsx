@@ -87,20 +87,19 @@ const ContentContainer= React.createClass({
     heading: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
-    showLink: React.PropTypes.bool,
     isRtl: React.PropTypes.bool.isRequired,
     description: React.PropTypes.string,
   },
 
   render() {
-    const { heading, link, linkText, showLink, description, isRtl }= this.props;
+    const { heading, link, linkText, description, isRtl }= this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
       <div style={styles.box}>
         <div style={styles.heading}>
           {heading}
-          {showLink &&
+          {link && linkText &&
             <a href={link} style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
               {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
               <div style={styles.linkToViewAll}>
