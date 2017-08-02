@@ -1,9 +1,8 @@
 import React from 'react';
 import ProgressBubble from './ProgressBubble';
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
 import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
-const statuses = Object.keys(BUBBLE_COLORS);
+const statuses = Object.values(LevelStatus);
 
 export default storybook => {
   storybook
