@@ -83,7 +83,7 @@ end
 Each of these activities can either be used alone or with other computer science lessons on related concepts.
 <br/>
 
-<a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Answer Keys</a>
+<a href="https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs" target="_new">Course A-F Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
 <br/>
 
 <table cellpadding="10">
