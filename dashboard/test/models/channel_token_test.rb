@@ -19,7 +19,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
     )
 
     assert_equal(
-      (storage_decrypt_channel_id channel_token.channel).second,
+      (storage_decrypt_channel_id channel_token.channel).second.to_i,
       channel_token.storage_app_id
     )
   end
