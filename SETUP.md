@@ -6,7 +6,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 ## Overview
 
 1. Install OS-specific prerequisites
-   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1404), [Windows](#windows-note-use-an-ubuntu-vm)
+   - See the appropriate section below: [OSX](#os-x-mavericks--yosemite--el-capitan--sierra), [Ubuntu](#ubuntu-1704-download-iso-note-virtual-machine-users-should-check-the-windows-note-below-before-starting), [Windows](#windows-note-use-an-ubuntu-vm)
    - When done, check for correct versions of these dependencies:
 
      ```
@@ -16,7 +16,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      yarn -V         # --> 0.23.2
      ```
 1. `git clone https://github.com/code-dot-org/code-dot-org.git`
-1. `gem install bundler -v 1.10.6`
+1. `gem install bundler`
 1. `rbenv rehash`
 1. `cd code-dot-org`
 1. `bundle install` (Problems with rmagick? See [tips](#tips) below.) (OS X: when running `bundle install`, you may need to also run `xcode-select --install`. See [stackoverflow](http://stackoverflow.com/a/39730475/3991031))
@@ -71,52 +71,35 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 1. install the Xcode Command Line Tools:
     1. `xcode-select --install`
 
-### Ubuntu 14.04
+### Ubuntu 17.04 ([Download iso][ubuntu-iso-url]) Note: Virtual Machine Users should check the Windows Note below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-7-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-9-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript libsqlite3-dev phantomjs build-essential redis-server rbenv ruby-build npm ruby2.3-dev`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
-1. Upgrade npm to 3.10.8 If `npm -v` says less than 3.10.8 then
-    * `sudo add-apt-repository ppa:chris-lea/node.js`
-    * `sudo apt-get update`
-    * `sudo apt-get install nodejs`
-1. Either A. Install Ruby 2.2 from OS packages; B. Setup `rbenv`; or C. Setup `rvm`
-    - A. OS packages (from the [Brightbox Ubuntu PPA](https://www.brightbox.com/docs/ruby/ubuntu/)):
-        - `sudo apt-get install software-properties-common`
-        - `sudo apt-add-repository ppa:brightbox/ruby-ng`
-        - `sudo apt-get update`
-        - `sudo apt-get install ruby2.2 ruby2.2-dev`
-    - B. `rbenv`: ([instructions](https://github.com/sstephenson/rbenv#installation))
-        1. Install `rbenv` and `ruby-build`
-        1. `rbenv install 2.2.3`
-        1. `rbenv global 2.2.3`
-        1. `rbenv rehash`
-    - C. `rvm`. A few folks have had more luck with rvm vs rbenv on linux.
-        1. Install rvm from https://rvm.io/
-        1. `rvm install 2.2.3`
-        1. `rvm use 2.2.3 --default`
-1. Install Node, npm, and yarn
-    1. Option A - [nvm](https://github.com/creationix/nvm)
-        1. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash`
-            - After completion, close your current terminal window and open a new one.
-        1. `nvm install` (this will install the version defined in `.nvmrc`)
-    1. Option B - nodesource repository
-        1. `curl -sL https://deb.nodesource.com/setup_0.12 | sudo -E bash -`
-        1. `sudo apt-get install -y nodejs`
-    1. Option C - Manual install
-        1. [Nodejs.org](https://nodejs.org/download/)
-    1. Finally, install yarn: `npm install -g yarn@0.23.2`
-1. When running `bundle install`, you may need to run
-
-     `bundle config build.nokogiri --use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/usr/include/libxml2`
-
-   first so that nokogiri picks up the built in libxml2 library. See this [stackoverflow answer](http://stackoverflow.com/a/40038954/186771).
+1. Install Node and Nodejs
+    1. Type `curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -`
+    1. And then `sudo apt-get install -y nodejs`
+1. Install Ruby 2.2.3 with rbenv
+     1. `rbenv install 2.2.3`
+     1. `rbenv global 2.2.3`
+     1. `rbenv rehash`
+1. Install yarn
+    1. First, type `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
+    1. Then `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
+    1. And lastly, `sudo apt-get update && sudo apt-get install yarn=0.23.2-1`
+1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
+   1. Type `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
+1. Read the following notes, then go back up to the overview and run the commands there. 
+   1. If, for any reason, you are forced to interrupt the `rake install` command before it completes,
+      cd into dashboard and run `bundle exec rake db:drop` before trying `rake install` again
+   1. `rake install` must always be called from the local project's root directory, or it won't work.
+   1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
 
 ### Windows note: use an Ubuntu VM
 
 Many Windows developers have found that setting up an Ubuntu virtual machine is less painful than getting Ruby and other prerequisites running on Windows.
 
-* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) and an [Ubuntu 14.04 iso image](http://releases.ubuntu.com/14.04.2/ubuntu-14.04.2-desktop-amd64.iso)
+* Option A: Use [VMWare Player](https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0) or [Virtual Box](http://download.virtualbox.org/virtualbox/5.1.24/VirtualBox-5.1.24-117012-Win.exe) and an [Ubuntu 17.04 iso image][ubuntu-iso-url]
   1. Maximum Disk Size should be set to 30.0 GB (the default is 20 GB and it is too small)
   2. Memory Settings for the VM should be 2 GB or higher (Right click the machine -> Settings -> "Memory for this virtual machine"  )
 * Option B: Use vagrant ([install](https://docs.vagrantup.com/v2/installation/)):
@@ -125,7 +108,6 @@ Many Windows developers have found that setting up an Ubuntu virtual machine is 
   1. `vagrant up`
   1. `vagrant ssh`
   1. Goto step 2 of the common setup instructions
-* Option C: Use AWS EC2: [launch Ubuntu 14.04 AMI](https://console.aws.amazon.com/ec2/home?region=ap-northeast-1#launchAmi=ami-d9fdddd8)
 
 ## Enabling JavaScript builds
 The default dashboard install uses a static build of JS, but if you want to make modifications to these you'll want to enable local builds of the JavaScript packages. You'll need to do this once:
@@ -166,3 +148,5 @@ If rmagick doesn't install, check your version of imagemagick, and downgrade if 
 - `brew install imagemagick@6`
 - `brew unlink imagemagick`
 - `brew link imagemagick@6 --force`
+
+[ubuntu-iso-url]: http://releases.ubuntu.com/17.04/ubuntu-17.04-desktop-amd64.iso
