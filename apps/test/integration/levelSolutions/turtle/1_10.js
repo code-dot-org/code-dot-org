@@ -13,6 +13,10 @@ module.exports = {
         result: true,
         testResult: TestResults.FREE_PLAY
       },
+      runBeforeClick: function () {
+        // This is a free-play level: click Finish when drawing is done.
+        addEventListener('artistDrawingComplete', () => $('#finishButton').click());
+      },
       customValidator: function () {
         // don't show block count because our ideal is Infinity
         return studioApp().enableShowCode === true && studioApp().enableShowBlockCount === false;

@@ -1130,7 +1130,9 @@ Artist.prototype.finishExecution_ = function () {
     Blockly.mainBlockSpace.highlightBlock(null);
   }
 
-  if (!this.level.freePlay) {
+  if (this.level.freePlay) {
+    window.dispatchEvent(new Event('artistDrawingComplete'));
+  } else {
     this.checkAnswer();
   }
 };
