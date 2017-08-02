@@ -109,8 +109,16 @@ const SectionsTable = React.createClass({
     });
   },
 
+  sectionHref(section) {
+    const { codeOrgUrlPrefix } = this.props;
+    if (section.numberOfStudents === 0) {
+      return `${codeOrgUrlPrefix}/teacher-dashboard#/sections/${section.id}/manage`;
+    }
+    return section.linkToProgress;
+  },
+
   render() {
-    const { codeOrgUrlPrefix, sections, isRtl, isTeacher, canLeave } = this.props;
+    const { sections, isRtl, isTeacher, canLeave } = this.props;
 
     return (
       <table style={styles.table}>
@@ -163,13 +171,8 @@ const SectionsTable = React.createClass({
               key={index}
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
-                {isTeacher && section.numberOfStudents > 0 &&(
-                  <a href={section.linkToProgress} style={styles.link}>
-                    {section.name}
-                  </a>
-                )}
-                {isTeacher && section.numberOfStudents === 0 &&(
-                  <a href={`${codeOrgUrlPrefix}/teacher-dashboard#/sections/${section.id}/manage`} style={styles.link}>
+                {isTeacher && (
+                  <a href={this.sectionHref(section)} style={styles.link}>
                     {section.name}
                   </a>
                 )}
