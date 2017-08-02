@@ -34,8 +34,13 @@ For more information, visit [http://collegeboard.org/APCSP](http://collegeboard.
 
 ## <a name="what"></a>Professional Learning
 
- **General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
- 
+<%= view :three_circles, circles: [
+{img: '/images/testimonials/fit-150/teachers-1.png', text: '90% of workshop attendees ranked it the best professional development ever.'},
+{img: '/images/testimonials/fit-150/students-1.jpg', text: '"This is my 18th year of teaching and CSP is the best curriculum I have ever implemented."'},
+{img: '/images/testimonials/fit-150/students-2.jpg', text: '"It was absolutely rich and the most meaningful training I have ever attended in 16 years of teaching."'}] %>
+
+**General applications for the 2017-18 CS Principles Professional Learning Program have closed.** However, all of our curriculum is available at no cost for anyone, anywhere to teach even if you have not attended our workshops. You can use the full curriculum or specific lessons.
+
 If you are still interested in joining in 2018-19, sign up below to be added to our contact list. 
 
 [<button>Join our contact list</button>](https://goo.gl/forms/jBWAHg5jvEV8lSV52)

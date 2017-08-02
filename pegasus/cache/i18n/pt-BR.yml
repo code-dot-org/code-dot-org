@@ -282,18 +282,48 @@
   learn_back_to_minecraft: Continue aprendendo com Minecraft
   hoc_is_here: 'A Hora do Código #HourOfCode estará de volta nos dias 5 a 11 de dezembro.
     https://youtu.be/KsOIlDT145A.'
-  just_did_hoc: 'Acabei de concluir a #HourOfCode - Confira! @codeorg'
+  just_did_hoc: 'Fiz o #HourOfCode - Confira! @codeorg'
   just_did_course1: Eu acabei de concluir o Curso 1 - confira! @codeorg
   just_did_course2: Eu acabei de concluir o Curso 2 - confira! @codeorg
   just_did_course3: Eu acabei de concluir o Curso 3 - confira! @codeorg
   just_did_course4: Eu acabei de concluir o Curso 4 - confira! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Eu acabei de concluir o Curso Acelerado - confira! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: Nove em cada 10 pessoas concordam que as escolas devem ensinar
     ciência da computação. http://youtu.be/nKIu9yen5nc. Acesse https://code.org/.
   twitter_cs_foundational: Aprender Ciência da computação é fundamental para todos
@@ -1199,6 +1229,8 @@
   coursef-draft_name: Course F
   coursef_name: Course F
   accelerated_name: Curso acelerado
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: "(antigo) Unidade 1: Informação digital"
   cspunit2_name: "(antigo) Unidade 2: A Internet"
   cspunit3_name: "(antigo) Unidade 3: Programação"
@@ -1245,6 +1277,7 @@
   math_category_name: Matemática
   hoc_category_name: Hora do Código
   csf_category_name: Conceitos básicos da CC
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: Princípios da CC - 15-16
@@ -2043,3 +2076,9 @@
   csp_name: Princípios da CC - 16-17
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in
