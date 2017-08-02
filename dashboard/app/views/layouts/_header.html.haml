@@ -43,19 +43,6 @@
 
   should_show_progress = script_level || @stage_extras
 
-  sign_in_user = current_user || user_type && OpenStruct.new(
-    id: nil,
-    short_name: I18n.t("nav.user.#{user_type}"),
-    can_pair?: false
-  )
-  show_pairing_dialog = !!session.delete(:show_pairing_dialog)
-
-  user_header_options = {}
-  user_header_options[:current_user] = sign_in_user
-  user_header_options[:show_pairing_dialog] = show_pairing_dialog
-  user_header_options[:session_pairings] = session[:pairings]
-  user_header_options[:loc_prefix] = 'nav.user.'
-
   require 'cdo/hamburger'
 
 = console if @use_web_console
@@ -96,7 +83,6 @@
                 %i.fa.fa-mobile
             - if !@hide_sign_in_option && signin_button_enabled
               %span#sign_in_or_user
-                = render file: Rails.root.join('..', 'shared', 'haml', 'user_header.haml'), locals: user_header_options
             = render file: Rails.root.join('..', 'shared', 'haml', 'hamburger.haml'), locals: hamburger_options
 
 - if request.path == "/home" || request.path == "/courses"
