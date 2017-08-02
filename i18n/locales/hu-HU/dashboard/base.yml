@@ -178,6 +178,8 @@ hu:
       A gyakorlatok izgalmasak, látványosak, és a számítógép-tudomány alapvető fogalmait egyszerű, irányított, játékos módon tanítják. Tanulj programozni olyan tanároktól, mint Bill Gates, Mark Zuckerberg, az Angry Birds és a zombik! :-) %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -186,6 +188,12 @@ hu:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Email'
+      google_classroom: 'Google Classroom'
+      clever: 'Okos'
   follower:
     invite_sent: 'Meghívó elküldve'
     added_teacher: '%{name} hozzáadva mint a tanárod'
@@ -198,6 +206,7 @@ hu:
       section_not_found: "Nem található szakasz ezzel a kóddal: '%{section_code}'."
       blank_code: "Add meg a szakasz kódját"
       cant_join_own_section: "Sajnáljuk, de nem csatlakozhatsz a saját szakaszodhoz."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org figyelmeztetés: %{student_name} már nem a diákod a rendszerben.'
@@ -221,6 +230,7 @@ hu:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -233,6 +243,7 @@ hu:
         calculate: 'Calculate something'
         applab: 'Készíts egy App Lab applikációt'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Főmenü"
       courses: "tanfolyamok"
       project_gallery: "Project Gallery"
@@ -533,8 +544,13 @@ hu:
       title: "Galéria"
       body: "Nézd meg a felhasználóink által készített alkalmazás és művész kép galériát"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Kor 13+"
+      cta: "Ismerd meg hogyan"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Kor 13+"
       cta: "Ismerd meg hogyan"
     frozen:
@@ -797,8 +813,8 @@ hu:
     optional_stages: 'Optional Stages'
     main_course: 'Main Course'
     extra_course_content: 'Extra Course Content'
-    csd1_1: 'Chapter 1: The Problem Solving Process'
-    csd1_2: 'Chapter 2: Computers and Problem Solving'
+    csd1_1: '1. fejezet: A probléma-megoldási folyamat'
+    csd1_2: '2. fejezet: Számítógépek és problémamegoldás'
     csd2_1: 'Chapter 1: Web Content and HTML'
     csd2_2: 'Chapter 2: Styling and CSS'
     csd3_1: 'Chapter 1: Images and Animations'
@@ -809,16 +825,16 @@ hu:
     csd5_2: 'Chapter 2: Solving Data Problems'
     csd6_1: 'Chapter 1: Hardware Output'
     csd6_2: 'Chapter 2: Hardware Input'
-    csp1_1: 'Chapter 1: Representing and Transmitting Information'
-    csp1_2: 'Chapter 2: Inventing the Internet'
-    csp2_1: 'Chapter 1: Encoding and Compressing Complex Information'
-    csp2_2: 'Chapter 2: Manipulating and Visualing Data'
-    csp3_1: 'Chapter 1: Programming Languages and Algorithms'
+    csp1_1: '1. fejezet: Az információ ábrázolása és továbbítása'
+    csp1_2: '2. fejezet: Az internet feltalálása'
+    csp2_1: '1. fejezet: Összetett információk kódolása és tömörítése'
+    csp2_2: '2. fejezet: Adatok manipulálása és megjelenítése'
+    csp3_1: '1. fejezet: Programozási nyelvek és algoritmusok'
     csp4_1: 'Chapter 1: The World of Big Data and Encryption'
-    csp5_1: 'Chapter 1: Event-Driven Programming'
-    csp5_2: 'Chapter 2: Programming with Data Structures'
-    cspSurvey: 'Survey'
-    cspAssessment: 'Chapter Assessment'
+    csp5_1: '1. fejezet: Eseményvezérelt programozás'
+    csp5_2: '2. fejezet: Programozás adatszerkezetekkel'
+    cspSurvey: 'Kérdőív'
+    cspAssessment: 'Fejezet végi értékelés'
     csp_ap_1: 'Chapter 1: AP Tech Setup'
     csp_ap_2: 'Chapter 2: AP Explore Performance Task'
     csp_ap_3: 'Chapter 3: AP Create Performance Task'

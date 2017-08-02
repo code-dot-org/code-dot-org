@@ -209,6 +209,8 @@
       ضد الزومبيز! :-)\n\n%{name}\n"
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -217,6 +219,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "البريد الإلكتروني"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "تم إرسال الدعوة"
     added_teacher: "%{name} تم اضافتك كمعلم"
@@ -230,6 +238,9 @@
       section_not_found: "تعذر العثور على جزء للتعليمات البرمجية '%{section_code}'."
       blank_code: "الرجاء إدخال رمز الفرع"
       cant_join_own_section: "عذراً، لا يمكنك الانضمام إلى القسم الخاص بك."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: "إعلام من Code.org: الطالب %{student_name} لم يعد مقترن بك كطالب."
@@ -253,6 +264,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -267,6 +280,7 @@
         calculate: Calculate Something
         applab: "اصنع تطبيقا"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
       courses: "الدروس"
       project_gallery: Project Gallery
@@ -713,6 +727,12 @@
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: "للأعمار 13 +"
+      cta: "تعلم كيف"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: "للأعمار 13 +"
       cta: "تعلم كيف"
     frozen:

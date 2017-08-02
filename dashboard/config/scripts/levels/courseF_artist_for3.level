@@ -32,13 +32,17 @@
     "disable_examples": "false",
     "examples_required": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.\\n\\n![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)\",\"hint_id\":\"courseF_artist_for3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bf9fac196db12dfc086b8ad41cbd5bdd/courseF_artist_for3.mp3\"}]",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "discard_background": "false",
     "instructions_important": "true",
+    "disable_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "No scaffolding should be needed",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:47:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

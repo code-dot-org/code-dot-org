@@ -32,6 +32,11 @@ Feature: Using the teacher dashboard
     But selector "a[href*='/s/allthethings/stage/2/puzzle/2']" doesn't have class "perfect"
 
     When I click selector "a:contains('Section: SectionName')" once I see it
+    And I click selector "#learn-tabs a:contains('Stats')" once I see it
+    And I wait until element "#uitest-stats-tab td:nth(0)" is visible
+    And element "#uitest-stats-tab td:nth(0)" contains text "Sally"
+    And element "#uitest-stats-tab td:nth(2)" contains text "2"
+
     When I click selector "#learn-tabs a:contains('Text Responses')" once I see it
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "allthethings *" option in dropdown "uitest-course-dropdown"

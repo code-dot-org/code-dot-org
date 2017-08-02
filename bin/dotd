@@ -152,6 +152,28 @@ def should_i(question)
   end
 end
 
+def should_i_really(question, confirmation)
+  loop do
+    print "Should I really #{question}? If so, type #{underline confirmation}: "
+    response = flush_and_gets.strip
+    puts ''
+    if response == confirmation
+      @logger.info(question)
+      yield
+      return true
+    end
+    response = response.downcase
+    if !response.empty? && ('skip'.start_with?(response) || 'no'.start_with?(response))
+      return false
+    elsif !response.empty? && 'quit'.start_with?(response)
+      puts_quit_message
+      exit(-1)
+    else
+      puts "Sorry, I didn't understand that.\n\n"
+    end
+  end
+end
+
 # Prompts the user to press enter, waiting until this is done.
 def press_enter_to_continue
   puts dim 'Press enter to continue...'
@@ -390,7 +412,7 @@ def main
   print_dtp_message
   test_green_commit = InfraTestTopic.green_commit
   if test_green_commit
-    should_i "DTP #{test_green_commit}" do
+    should_i_really "DTP #{test_green_commit}", "DTP" do
       DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
 
       # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull

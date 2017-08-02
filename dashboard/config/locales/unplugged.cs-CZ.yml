@@ -297,3 +297,111 @@
       deeper learning description:
         title: ''
         desc: 'translation missing: en-US.data.unplugged.desc'
+      courseAB_unplugged_plantASeed:
+        title: 'Algoritmy ze života: Zasadit semínko'
+        desc: Tato lekce připomíná způsoby, které používají algoritmy v našem každodenním
+          životě, používat jako příklad činnost výsadby semínka. Zaměřuje se také
+          na větší obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      courseA_unplugged_happyMaps:
+        title: "Šťastné mapy"
+        desc: Studenti vytváří jednoduché algoritmy (sady instrukcí) pro pohyb postavy
+          bludištěm pomocí jediného příkazu.
+      courseA_unplugged_goingPlacesSafely:
+        title: Cestování bezpečně
+        desc: Internet je mocný, ale občas nebezpečné místo. Učitelé představit, jak
+          zůstat v bezpečí při procházení Internetu.
+      courseABC_unplugged_bigEvent:
+        title: Velká událost
+        desc: Studenti jsou seznámeni s programovacím pojetím "události", které jsou
+          akce, které počítač neustále sleduje. Učitel stiskne na tlačítkách na papíře
+          vzdáleně a studenti reagují podle toho, které tlačítko bylo stisknuto.
+      courseB_unplugged_digitalFootprint:
+        title: Tvé digitální stopy
+        desc: Učitelé uvedou studentům myšlenku, že uvedením online informace o sobě
+          vytvoří digitální stopu nebo "stopu", která má své důsledky.
+      courseC_unplugged_buildingAFoundation:
+        title: Budování nadace
+        desc: Studenti vytváří strukturu jen s pomocí poskytnutých zásob. Struktury
+          musí dokončit úkol (dosáhnout určité výšky nebo nést určitou hmotnost),
+          a studenti diskutují představu, že je trvalá, když věci se komplikují.
+      courseC_unplugged_paperPlanes:
+        title: 'Algoritmy ze života: Papírová letadla'
+        desc: V této lekci volá, jak používáme algoritmy v našem každodenním životě,
+          konkrétně dělat papírové letadlo. V této lekci se také zaměříme na větší
+          obrázek počítačové vědy a jak algoritmy hrají zásadní roli.
+      courseC_unplugged_gettingLoopy:
+        title: Bláznit
+        desc: Této lekci zavádí programovací koncept cyklů (opakované instrukce) přes
+          taneční aktivitu. Studenti se naučí jednoduchou choreografii, poté jsou
+          instruováni to opakovat.
+      courseC_unplugged_binaryBracelets:
+        title: Binární náramky
+        desc: Studenti vytvoří náramky jako binární reprezentace prvního písmena jejich
+          jména. Studenti se naučí, že údaje mohou být zobrazené a uložené více než
+          jedním způsobem.
+      courseD_unplugged_graphPaperProgramming:
+        title: Programování na milimetrovém papíru
+        desc: Studenti napíší algoritmus (sada instrukcí) s použitím sady předdefinovaných
+          příkazů k řízení svých spolužáků k reprodukci výkresu.
+      courseD_unplugged_relayProgramming:
+        title: "Štafetové programování"
+        desc: Studenti běží štafetový závod, kde kreslí pomlčky přes dvůr, aby napsali
+          algoritmus založený na obrázku "programování s milimetrovým papírem". Mohou
+          psát pouze jednu instrukci v době, a pokud je někde chyba, budou muset vymazat
+          vše zpět do tohoto bodu.
+      courseD_unplugged_conditionalsCards:
+        title: Podmínky s kartami
+        desc: Další informace o podmíněných příkazy, studenti hrají karetní hru a
+          vytváří si pravidla jako "Když jsem nakreslit červenou kartu, dostanu bod"
+          a "Vytáhnu-li černou kartu, dostanu bod."
+      courseD_unplugged_binaryImages:
+        title: Binární obrázky
+        desc: Ačkoli mnoho lidí si myslí binárně, doslovně jako  nuly a jedničky,
+          naše předchozí kurzy učí studenty, že informace lze znázornit v různých
+          binárních volbách.  V této lekci tento koncept posuneme jeden krok dále,
+          jak to ilustruje, jak počítač ukládá rovněž binárně složitější informace
+          (např. obrázky a barvy).
+      courseE_unplugged_diceRace:
+        title: 'Real-Life Algorithms: Dice Race'
+        desc: V této lekci vyhledáváme způsoby,, jak používáme algoritmy v našem každodenním
+          životě. V rámci toho studenti identifikují a zapíší algoritmus pro závodní
+          kostkovou hru.
+      courseE_unplugged_songwritingParameters:
+        title: Psaní písniček s parametry
+        desc: Studenti používají koncept sboru v písni, aby se naučili předávání parametrů
+          (které přizpůsobují funkce bez nutnosti celé funkce přepisovat).
+      courseE_unplugged_internet:
+        title: Internet
+        desc: Studenti si posílají zprávy představující různé metody přenosu Internetu
+          pomocí papíru.
+      courseE_unplugged_crowdsourcing:
+        title: Crowdsourcing
+        desc: Studenti používají crowdsourcing, problém-řešící techniku v informatice,
+          dokončení úkolu společně s třídou je mnohem efektivněji, než když student
+          se o to pokusí sám.
+      courseE_unplugged_songwriting:
+        title: Psaní písniček s parametry
+        desc: Studenti používají koncept sboru v písni, aby se naučili předávání parametrů
+          (které přizpůsobují funkce bez nutnosti celé funkce přepisovat).
+      courseF_unplugged_tangrams:
+        title: Tangram algoritmy
+        desc: Tato lekce nám ukazuje něco důležitého o algoritmech. Pokud se budete
+          držet algoritmus jednoduchý, existuje mnoho způsobů, jak jej použít. Pokud
+          se chcete ujistit, že všichni skončí na stejné věcí, pak algoritmus potřebuje
+          více detailů.
+      courseF_unplugged_envelopeVariables:
+        title: Obálkové proměnné
+        desc: Proměnné umožňují spoustu svobody v informatice.  Tato lekce pomáhá
+          vysvětlit, co jsou proměnné a jak je lze použít mnoha různými způsoby. Použij
+          tuto aktivitu před (nebo spolu s) lekcí abstrakce, aby si se opravdu strefil
+          hit do jádra myšlenky.
+      courseF_unplugged_forLoopFun:
+        title: For cyklus zábavy
+        desc: Víme, že cykly nám umožňují dělat věci znovu a znovu, ale teď se musíme
+          naučit používat cykly s extra strukturou zabudovanou přímo v nich.
+      courseF_unplugged_songwritingParameters:
+        title: Psaní písniček s parametry
+        desc: 'Jednou z nejkrásnějších konstrukcí ve světě informatiky je funkce.  Funkce
+          (někdy volané procedury) jsou mini-programy, které můžete použít znova a
+          znova ve větším programu. Tato lekce vám pomůže studentům intuitivně pochopit,
+          proč kombinace kousky kódu do funkce je užitečnou praxí.  '

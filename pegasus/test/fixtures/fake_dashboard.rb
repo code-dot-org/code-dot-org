@@ -92,6 +92,11 @@ module FakeDashboard
       id: 10,
       name: 'flappy',
       hidden: 0
+    },
+    {
+      id: 45,
+      name: 'allthehiddenthings',
+      hidden: 1
     }
   ]
 
