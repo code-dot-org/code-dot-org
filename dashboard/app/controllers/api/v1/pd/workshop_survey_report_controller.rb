@@ -84,6 +84,9 @@ module Api::V1::Pd
         survey_report[:all_my_local_workshops] = {}
       end
 
+      aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production"))
+      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops['CSP Local Summer Workshops']
+
       respond_to do |format|
         format.json do
           render json: survey_report
