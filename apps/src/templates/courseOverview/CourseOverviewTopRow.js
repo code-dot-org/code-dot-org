@@ -1,22 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-
-// TODO: these two objects might better live elsewhere
-// We want level builders to be able to specify which of these strings is used,
-// but then want to make sure to show tachers the localized version
-export const ResourceType = {
-  curriculum: 'curriculum',
-  teacherForum: 'teacherForum',
-  professionalLearning: 'professionalLearning',
-};
-
-const stringForType = {
-  [ResourceType.curriculum]: i18n.curriculum(),
-  [ResourceType.teacherForum]: i18n.teacherForum(),
-  [ResourceType.professionalLearning]: i18n.professionalLearning(),
-};
+import ResourceType, { stringForType } from './resourceType';
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
@@ -33,18 +18,7 @@ export default class CourseOverviewTopRow extends Component {
   };
 
   render() {
-    const { sectionsInfo, id, title } = this.props;
-    const resources = [
-      {
-        type: ResourceType.curriculum,
-        link: '/href'
-      },
-      {
-        type: ResourceType.teacherForum,
-        link: '/teacher-forum'
-      }
-    ];
-
+    const { sectionsInfo, id, title, resources } = this.props;
     return (
       <div>
         <AssignToSection
