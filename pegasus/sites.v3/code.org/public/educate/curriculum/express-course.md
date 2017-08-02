@@ -24,7 +24,7 @@ Computer Science Fundamentals Express is a 30 hour course designed for 9-18 year
 
 The course teaches the foundational concepts of programming using drag and drop blocks rather than a programming language such as JavaScript or Python. Blocks are an easier way to get started and many top Universities today begin their classes with block based programming.
 
-The Express Course combines the concepts taught in our [elementary school courses](/educate/curriculum/elementary-school) in an accelerated fashion designed for older students. You can download the [complete curriculum for all of our elementary school courses here](https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs).
+The Express Course combines the concepts taught in our [elementary school courses](/educate/curriculum/elementary-school) in an accelerated fashion designed for older students. You can download the [CS Fundamentals curriculum guide here](/files/CSF_CoursesA-F_Curriculum_Guide.pdf).
 
 [/col-66]
 
