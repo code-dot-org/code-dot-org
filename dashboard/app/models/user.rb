@@ -275,7 +275,7 @@ class User < ActiveRecord::Base
   # Revokes all escalated permissions associated with the user, including admin status and any
   # granted UserPermission's.
   def revoke_all_permissions
-    update_attribute(:admin, nil)
+    update_column(:admin, nil)
     UserPermission.where(user_id: id).each(&:destroy)
   end
 
