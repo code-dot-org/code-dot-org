@@ -33,10 +33,10 @@
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You'll be using 3 or more loops here.\\n\\n\",\"hint_id\":\"courseA_collector_loops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c2bff1c978e2ac49dafb0c69c3057c3d/courseA_collector_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Make sure to move south between each path to get to the next row of gems!\",\"hint_id\":\"courseA_collector_loops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a8bfd4db08b3a335edd619efc32056de/courseA_collector_loops_challenge2.mp3\"}]",
     "ideal": "14",
-    "contained_level_names": null,
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
-    "min_collected": "15"
+    "min_collected": "15",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
