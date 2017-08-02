@@ -26,14 +26,13 @@ const styles = {
     width: pegasusContentWidth
   },
   description: {
-    paddingRight: 10,
-    paddingBottom: 20,
     fontSize: 14,
     lineHeight: '22px',
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: 940
+    width: pegasusContentWidth,
+    marginTop: -10,
   },
   linkToViewAll: {
     color: color.teal,
@@ -69,7 +68,7 @@ const styles = {
   },
   clear: {
     clear: 'both',
-    height: 30
+    height: 75
   },
   spacer: {
     width: 20,

@@ -12,6 +12,7 @@ const styles = {
     borderColor: color.border_gray,
     width: styleConstants['content-width'],
     backgroundColor: color.white,
+    marginTop: 25
   },
   mainDashed: {
     borderWidth: 5,
