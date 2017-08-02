@@ -166,3 +166,9 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     margin-bottom: 20px;
   }
 }
+
+.course-explorer-gray-button {
+   background-color: $lightest_gray;
+   border-color: $lighter_gray;
+   color: $charcoal;
+}
