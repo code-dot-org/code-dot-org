@@ -104,7 +104,6 @@ function showHomepage() {
             sections={homepageData.sections}
             codeOrgUrlPrefix={homepageData.codeorgurlprefix}
             isRtl={isRtl}
-            validScripts={homepageData.valid_scripts}
           />
         )}
         {!isTeacher && (

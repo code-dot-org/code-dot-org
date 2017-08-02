@@ -1,22 +1,15 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
 import i18n from "@cdo/locale";
-import experiments from '@cdo/apps/util/experiments';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import ContentContainer from '../ContentContainer';
 import {SectionsSetUpMessage} from './SetUpMessage';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
 import SectionsPage from '../teacherDashboard/SectionsPage';
 import SectionsTable from '../studioHomepages/SectionsTable';
-import {
-  setValidAssignments,
-  setSections
-} from '../teacherDashboard/teacherSectionsRedux';
-import {SECTION_FLOW_2017} from "../../util/experiments";
+import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
-
-const sectionsApiPath = '/dashboardapi/sections/';
 
 const Sections = React.createClass({
   propTypes: {
@@ -25,36 +18,15 @@ const Sections = React.createClass({
     isRtl: React.PropTypes.bool.isRequired,
     isTeacher: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
-    validScripts: React.PropTypes.array,
     teacherHomepage: React.PropTypes.bool,
 
     //Redux provided
-    setSections: PropTypes.func.isRequired,
-    setValidAssignments: PropTypes.func.isRequired,
     numTeacherSections: PropTypes.number.isRequired,
+    asyncLoadSectionData: PropTypes.func.isRequired,
   },
 
   componentDidMount(){
-    const {setSections, setValidAssignments} = this.props;
-    let validCourses;
-    let sections;
-
-    const onAsyncLoad = () => {
-      if (validCourses && sections) {
-        setValidAssignments(validCourses, this.props.validScripts);
-        setSections(sections);
-      }
-    };
-
-    $.getJSON('/dashboardapi/courses').then(response => {
-      validCourses = response;
-      onAsyncLoad();
-    });
-
-    $.getJSON(sectionsApiPath).done(response => {
-      sections = response;
-      onAsyncLoad();
-    });
+    this.props.asyncLoadSectionData();
   },
 
   getInitialState() {
@@ -106,7 +78,6 @@ const Sections = React.createClass({
           {isTeacher && numTeacherSections > 0 && sectionFlow2017 && (
             <SectionsPage
               className="sectionPage"
-              validScripts={this.props.validScripts}
               teacherHomepage={this.props.teacherHomepage}
             />
           )}
@@ -128,7 +99,7 @@ const Sections = React.createClass({
             <SectionsSetUpMessage isRtl={isRtl}/>
           )}
           {isTeacher && numTeacherSections === 0 && sectionFlow2017 && (
-            <AddSectionDialog/>
+            <AddSectionDialog handleImportOpen={() => {}/* TODO */}/>
           )}
           {isStudent && (
             <JoinSection
@@ -145,6 +116,5 @@ const Sections = React.createClass({
 export default connect(state => ({
   numTeacherSections: state.teacherSections.sectionIds.length
 }), {
-  setValidAssignments,
-  setSections
+  asyncLoadSectionData,
 })(Sections);
