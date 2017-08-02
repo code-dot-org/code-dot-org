@@ -6,6 +6,12 @@ import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import FindLocalClassBanner from './FindLocalClassBanner';
+import {
+  CourseBlocksCsf,
+  CourseBlocksTools,
+  CourseBlocksHoc,
+  CourseBlocksAll
+} from './CourseBlocks';
 import color from "../../util/color";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
@@ -32,8 +38,8 @@ const styles = {
 
 /**
  * Though named Courses, this component represents a collection of courses and/or
- * scripts, refered to collectively as "assignables". These come from sections the user is in, or from courses/scripts they
- * have recently made progress in.
+ * scripts, refered to collectively as "assignables". These come from sections
+ * the user is in, or from courses/scripts they have recently made progress in.
  * The component is only used on the /courses page, and also does some additional
  * DOM manipulation on mount.
  */
@@ -53,11 +59,6 @@ const Courses = React.createClass({
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
-    $('.standalone-tools').appendTo(ReactDOM.findDOMNode(this.refs.standaloneTools)).show();
-    $('.all-courses').appendTo(ReactDOM.findDOMNode(this.refs.allCourses)).show();
-    $('.hour-of-code-courses-first-row').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesFirstRow)).show();
-    $('.csf-courses').appendTo(ReactDOM.findDOMNode(this.refs.csfCourses)).show();
-    $('.tools-courses').appendTo(ReactDOM.findDOMNode(this.refs.toolsCourses)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
@@ -111,13 +112,15 @@ const Courses = React.createClass({
             />
 
             <div>
-              <div style={styles.heading}>
-                {i18n.courseExplorerHeading()}
-              </div>
-              <div>
-                {i18n.courseExplorerDescription()}
-              </div>
-              <ProtectedStatefulDiv ref="courseExplorer"/>
+
+              <ContentContainer
+                heading={i18n.courseExplorerHeading()}
+                description={i18n.courseExplorerDescription()}
+                isRtl={isRtl}
+              >
+                <ProtectedStatefulDiv ref="courseExplorer"/>
+              </ContentContainer>
+
               <div style={styles.spacer}>.</div>
 
               <br/>
@@ -127,15 +130,13 @@ const Courses = React.createClass({
                 isRtl={isRtl}
               />
 
-              <div>
-                <div style={styles.heading}>
-                  {i18n.standaloneToolsHeading()}
-                </div>
-                <div>
-                  {i18n.standaloneToolsDescription()}
-                </div>
-                <ProtectedStatefulDiv ref="standaloneTools"/>
-              </div>
+              <ContentContainer
+                heading={i18n.standaloneToolsHeading()}
+                description={i18n.standaloneToolsDescription()}
+                isRtl={isRtl}
+              >
+                <CourseBlocksTools/>
+              </ContentContainer>
 
             </div>
           </div>
@@ -144,17 +145,24 @@ const Courses = React.createClass({
         {/* Signed-in student in English */}
         {(!isSignedOut && !isTeacher && isEnglish) && (
           <div>
-            <ProtectedStatefulDiv ref="csfCourses"/>
-            <ProtectedStatefulDiv ref="toolsCourses"/>
+            <CourseBlocksCsf isEnglish={isEnglish}/>
+
+            <ContentContainer
+              heading={i18n.standaloneToolsHeading()}
+              description={i18n.standaloneToolsDescription()}
+              isRtl={isRtl}
+            >
+              <CourseBlocksTools/>
+            </ContentContainer>
+
             <ContentContainer
               heading={i18n.teacherCourseHoc()}
               description={i18n.teacherCourseHocDescription()}
               isRtl={isRtl}
               linkText={i18n.teacherCourseHocLinkText()}
               link={`${codeOrgUrlPrefix}/learn`}
-              showLink={true}
             >
-              <ProtectedStatefulDiv ref="hocCoursesFirstRow"/>
+              <CourseBlocksHoc rowCount={1}/>
             </ContentContainer>
           </div>
         )}
@@ -162,9 +170,7 @@ const Courses = React.createClass({
         {/* Anything but a teacher or student in English.
             That is: signed-out, or a student or teacher in non-English. */}
         {(isSignedOut || !isEnglish) && (
-          <div>
-            <ProtectedStatefulDiv ref="allCourses"/>
-          </div>
+          <CourseBlocksAll isEnglish={isEnglish}/>
         )}
 
         {(!isTeacher && isEnglish) && (

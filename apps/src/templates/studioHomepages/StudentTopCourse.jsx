@@ -24,16 +24,20 @@ const styles = {
   },
   name: {
     paddingTop: 10,
-    paddingBottom: 5,
+    paddingBottom: 10,
+    paddingLeft: 25,
+    paddingRight: 25,
     marginTop: 15,
     fontSize: 30,
     fontFamily: '"Gotham 4r", sans-serif',
     color: color.white,
+    width: styleConstants['content-width']-35,
     zIndex: 2,
     position: 'absolute',
     display: 'inline',
-    paddingLeft: 25,
-    paddingRight: 10,
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
   },
   description: {
     paddingLeft: 25,
@@ -79,7 +83,7 @@ const StudentTopCourse = React.createClass({
       <div style={styles.card}>
         <img src={require('@cdo/static/small_purple_icons_fullwidth.png')} style={styles.image}/>
         <div style={styles.name}>
-          {i18n.topCourseWelcome({assignableName})}
+          {assignableName}
         </div>
         <div style={styles.description}>
           <div>

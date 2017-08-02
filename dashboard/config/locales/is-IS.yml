@@ -215,6 +215,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Hópur þinn:'
@@ -223,6 +225,12 @@
     confirm:
       remove: Ertu viss um að þú viljir yfirgefa þennan hóp?
     remove: "(fjarlægja hóp)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: Netfang
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Boð send
     added_teacher: "%{name} bætt við sem kennara"
@@ -236,6 +244,9 @@
       section_not_found: Fann ekki hóp með kóðann '%{section_code}'.
       blank_code: Vinsamlegast færðu inn hópkóða
       cant_join_own_section: "Því miður getur þú ekki skráð þig í eiginn hóp."
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Orðsending frá Code.org: %{student_name} er ekki lengur skráð(ur)
@@ -260,6 +271,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -274,6 +287,7 @@
         calculate: Calculate Something
         applab: Búa til forrit í App Lab
         gamelab: Búa til Leikjasmiðjuverkefni
+        weblab: Make a Web Lab (beta) project
       home: Forsíða
       courses: Námskeið
       project_gallery: Verkefnagallerí
@@ -730,9 +744,15 @@
       title: Safn
       body: Skoða safn forrita og mynda sem notendur okkar hafa búið til
     gamelab:
-      title: Leikjasmiðja (beta)
+      title: Leikjasmiðjan
       body: Leikjasmiðja er forritunarumhverfi þar sem þú getur búið til einfaldar
         hreyfimyndir og leiki með hlutum og gagnvirkum leikverum.
+      audience: Aldur 13+
+      cta: Læra hvernig
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Aldur 13+
       cta: Læra hvernig
     frozen:
