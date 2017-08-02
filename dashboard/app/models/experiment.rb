@@ -25,13 +25,14 @@
 #  index_experiments_on_section_id            (section_id)
 #
 
-MAX_CACHE_AGE = (Rails.application.config.experiment_cache_time_seconds).seconds
+MAX_CACHE_AGE = Rails.application.config.experiment_cache_time_seconds.seconds
 
 class Experiment < ApplicationRecord
   belongs_to :script, optional: true
 
   validates :name, presence: true
-  after_create {Experiment.update_cache}
+  after_save {Experiment.update_cache}
+  after_destroy {Experiment.update_cache}
 
   @@experiments = nil
 
@@ -50,12 +51,12 @@ class Experiment < ApplicationRecord
   end
 
   def self.enabled?(user: nil, section: nil, script: nil, experiment_name: nil)
-    !get_all_enabled(
+    get_all_enabled(
       user: user,
       section: section,
       script: script,
       experiment_name: experiment_name
-    ).empty?
+    ).any?
   end
 
   def self.update_cache

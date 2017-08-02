@@ -74,5 +74,5 @@ Dashboard::Application.configure do
   # levels or test levelbuilder functionality.
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
-  config.experiment_cache_time_seconds = 1
+  config.experiment_cache_time_seconds = 0
 end
