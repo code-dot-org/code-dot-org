@@ -53,14 +53,14 @@ describe('RecentCourses', () => {
           courses={[]}
           showAllCoursesLink
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             linkText="Find a course"
             link="/courses"
             showLink
@@ -82,14 +82,14 @@ describe('RecentCourses', () => {
           courses={courses}
           showAllCoursesLink
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             linkText="Find a course"
             link="/courses"
             showLink
@@ -133,14 +133,14 @@ describe('RecentCourses', () => {
           courses={moreCourses}
           showAllCoursesLink
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             linkText="Find a course"
             link="/courses"
             showLink
