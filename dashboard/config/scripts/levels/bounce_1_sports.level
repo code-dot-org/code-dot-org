@@ -1,0 +1,42 @@
+<Bounce>
+  <config><![CDATA[{
+  "game_id": 22,
+  "created_at": "2017-07-25T23:13:53.000Z",
+  "level_num": "custom",
+  "user_id": 156,
+  "properties": {
+    "skin": "sports",
+    "instructions_important": true,
+    "scale": {
+      "snapRadius": 2
+    },
+    "soft_buttons": [
+      "leftButton"
+    ],
+    "use_flag_goal": "true",
+    "theme": "soccer",
+    "instructions": "Get to the flag! Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the flag.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[8,0,0,16,0,0,0,0]]",
+    "contained_level_names": null
+  },
+  "published": true
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="bounce_whenLeft" deletable="false" x="20" y="20"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml id="toolbox" style="display: none;">
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
+      </xml>
+    </toolbox_blocks>
+    <required_blocks>
+      <xml>
+        <block type="bounce_moveLeft"/>
+      </xml>
+    </required_blocks>
+  </blocks>
+</Bounce>
