@@ -19,7 +19,6 @@ const ProjectWidget = React.createClass({
         heading={i18n.projects()}
         linkText={i18n.projectsViewProjectGallery()}
         link="/projects"
-        showLink={true}
         isRtl={false}
       >
         {this.props.isLoading &&

@@ -27,7 +27,6 @@ const Announcements = React.createClass({
           heading={i18n.announcements()}
           linkText={i18n.viewAllAnnouncements()}
           link="http://teacherblog.code.org/"
-          showLink={true}
           isRtl={isRtl}
         >
           <AnnouncementsCarousel>
