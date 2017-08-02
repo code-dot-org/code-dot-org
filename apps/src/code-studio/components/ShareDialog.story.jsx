@@ -41,8 +41,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={false}
+                isSignedIn={false}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -67,8 +68,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={false}
+                isSignedIn={false}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -93,8 +95,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={false}
+                isSignedIn={false}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -120,8 +123,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={false}
+                isSignedIn={false}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -146,8 +150,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={false}
+                isSignedIn={false}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -172,8 +177,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={false}
+                isSignedIn={false}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -198,8 +204,9 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={true}
+                isSignedIn={true}
                 isPublished={false}
+                isUnpublishPending={false}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}
@@ -223,8 +230,35 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isOwner={true}
+                isSignedIn={true}
                 isPublished={true}
+                isUnpublishPending={false}
+                onClose={storybook.action('close')}
+                onShowPublishDialog={storybook.action('show publish dialog')}
+                onUnpublish={storybook.action('unpublish')}
+                hideBackdrop={true}
+                i18n={fakei18n}
+                shareUrl="https://studio.code.org/projects/applab/GmBgH7e811sZP7-5bALAxQ"
+                isAbusive={false}
+                channelId="some-id"
+                appType="gamelab"
+                canShareSocial={true}
+                onClickPopup={storybook.action('onClickPopup')}
+              />
+            </Provider>
+          );
+        }
+      }, {
+        name: 'with unpublish pending',
+        story: () => {
+          const store = configureStore();
+          return (
+            <Provider store={store}>
+              <ShareDialog
+                isOpen={true}
+                isSignedIn={true}
+                isPublished={true}
+                isUnpublishPending={true}
                 onClose={storybook.action('close')}
                 onShowPublishDialog={storybook.action('show publish dialog')}
                 onUnpublish={storybook.action('unpublish')}

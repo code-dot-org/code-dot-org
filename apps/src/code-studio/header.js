@@ -180,7 +180,7 @@ function shareProject() {
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
-          isOwner={dashboard.project.isOwner()}
+          isSignedIn={appOptions.isSignedIn}
           isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
