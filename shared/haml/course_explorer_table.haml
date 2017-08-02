@@ -38,8 +38,7 @@
         <li> <strong>Optional professional learning:</strong> Free 1-week summer workshop, three 1-day mid-year workshops, and online support. </li>
         <li> <strong>Cost to use Curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English only </li>
-      </ul>',
-    prereqs: "No prerequisites needed. This course works for beginners or students with experience in CS Fundamentals or CS Discoveries."
+      </ul>'
   }
 
   courses << {
@@ -58,8 +57,7 @@
         <li> <strong>Optional professional learning:</strong> Free 1-day workshop, in person throughout the US and   line globally. </li>
         <li> <strong>Cost to use Curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English only </li>
-      </ul>',
-    prereqs: "No prerequisites needed. This course works for beginners or students with experience in CS Fundamentals."
+      </ul>'
   }
 
   courses << {
@@ -77,8 +75,7 @@
         <li> <strong>Optional professional learning:</strong> Free 1-day workshop, in person in the US and   line globally. </li>
         <li> <strong>Cost to use curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English, Spanish, +24 more </li>
-      </ul>',
-    prereqs: "Students at every grade level (including pre-readers) can begin CS Fundamentals with no prior programming experience."
+      </ul>'
   }
 
   courses << {
@@ -97,8 +94,7 @@
         <li> <strong>Cost to use curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English</li>
       </ul>',
-    lighter: true,
-    prereqs: "No prerequisites needed."
+    lighter: true
   }
 
   courses << {
@@ -118,8 +114,7 @@
         <li> <strong>Cost to use curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English, Spanish, +24 more </li>
       </ul>',
-    lighter: true,
-    prereqs: "No prerequisites needed."
+    lighter: true
   }
 
 -# Generate the detail containers ahead of time
@@ -144,10 +139,7 @@
                   %br/
                   %br/
                   =course[:description2]
-                - if course[:prereqs]
-                  =course[:prereqs]
             - if course[:link]
-              %br/
               %a{href: course[:link]}
                 %button
                   Learn more
