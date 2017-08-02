@@ -222,6 +222,19 @@ class Pd::Enrollment < ActiveRecord::Base
     all.map {|enrollment| [enrollment.full_name, enrollment]}
   end
 
+  # TODO: Delete school column
+  def school
+    ActiveSupport::Deprecation.warn('School is deprecated. Use school_info or school_name instead.')
+  end
+
+  def school_name
+    school_info.try :effective_school_name
+  end
+
+  def school_district_name
+    school_info.try :effective_school_district_name
+  end
+
   protected
 
   def autoupdate_user_field

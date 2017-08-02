@@ -433,4 +433,23 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     expected = enrollments.map {|e| [e.full_name, e]}
     assert_equal expected, safe_names
   end
+
+  test 'school is deprecated' do
+    enrollment = build :pd_enrollment
+    assert_deprecated 'School is deprecated. Use school_info or school_name instead.' do
+      enrollment.school
+    end
+  end
+
+  test 'school_name calls school_info.effective_school_name' do
+    enrollment = build :pd_enrollment
+    enrollment.school_info.expects(:effective_school_name).returns('effective school name')
+    assert_equal 'effective school name', enrollment.school_name
+  end
+
+  test 'school_district calls school_info.effective_school_district_name' do
+    enrollment = build :pd_enrollment
+    enrollment.school_info.expects(:effective_school_district_name).returns('effective school district name')
+    assert_equal 'effective school district name', enrollment.school_district_name
+  end
 end
