@@ -4,8 +4,8 @@ nav: translate_nav
 theme: responsive
 ---
 
-# Translating Frozen
-Translations for the tutorial progression are done on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
+# Translating Code with Anna and Elsa
+Translations for the [Code with Anna and Elsa](https://studio.code.org/s/frozen) tutorial are done on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
 
 ## Getting set up
 
