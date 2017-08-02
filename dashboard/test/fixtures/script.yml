@@ -243,7 +243,7 @@ cspunit4:
   name: cspunit4
   created_at: 2016-01-28 19:12:01.000000000 Z
   updated_at: 2016-05-12 19:37:08.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   hidden: false
   user_id:
   login_required: true
@@ -253,7 +253,7 @@ cspunit5:
   name: cspunit5
   created_at: 2016-01-28 19:12:03.000000000 Z
   updated_at: 2016-05-12 19:37:09.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   hidden: false
   user_id:
   login_required: true
@@ -263,7 +263,7 @@ cspunit6:
   name: cspunit6
   created_at: 2016-02-26 20:56:25.000000000 Z
   updated_at: 2016-05-12 19:37:09.000000000 Z
-  wrapup_video_id: 
+  wrapup_video_id:
   hidden: false
   user_id:
   login_required: true
@@ -295,6 +295,86 @@ allthethings:
   updated_at: 2015-10-16 22:38:08.000000000 Z
   wrapup_video_id:
   hidden: true
+  user_id:
+  login_required: false
+  properties: '{}'
+coursea:
+  id: 80
+  name: coursea
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+courseb:
+  id: 81
+  name: courseb
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+coursec:
+  id: 82
+  name: coursec
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+coursed:
+  id: 83
+  name: coursed
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+coursee:
+  id: 84
+  name: coursee
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+coursef:
+  id: 85
+  name: coursef
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+express:
+  id: 86
+  name: express
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
+  user_id:
+  login_required: false
+  properties: '{}'
+pre-express:
+  id: 87
+  name: pre-express
+  created_at: 2015-10-16 22:38:12.000000000 Z
+  updated_at: 2015-10-16 22:38:13.000000000 Z
+  wrapup_video_id:
+  hidden: false
   user_id:
   login_required: false
   properties: '{}'

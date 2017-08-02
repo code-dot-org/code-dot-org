@@ -24,7 +24,7 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "examples_required": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To remove a block, pull the other blocks aside to get to the one you're trying to delete, then drag that one off to the trash.\\n\\nDon't forget to put your other blocks back!\\n\\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)\",\"hint_id\":\"courseC_maze_debugging3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/faf8cba15503f067b9e22c920329fc3c/courseC_maze_debugging3.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out what's wrong? Try running the code a couple of times to see what happens.\",\"hint_id\":\"courseC_maze_debugging3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/788f7c187d8a4cb486a3616f73ced6c9/courseC_maze_debugging3.mp3\"}]",
@@ -32,11 +32,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
+    "disable_procedure_autopopulate": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-06 14:42:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-06 14:42:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:13:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -4,6 +4,8 @@ import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
+import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
+import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
 
 const styles = {
   buttonRow: {
@@ -31,25 +33,36 @@ const styles = {
 
 const ScriptOverviewTopRow = React.createClass({
   propTypes: {
+    sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    })).isRequired,
+    currentCourseId: PropTypes.number,
     professionalLearningCourse: PropTypes.bool,
     hasLevelProgress: PropTypes.bool.isRequired,
+    scriptId: PropTypes.number.isRequired,
     scriptName: PropTypes.string.isRequired,
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
+    scriptTitle: PropTypes.string.isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    isRtl: PropTypes.bool.isRequired,
   },
 
   render() {
     const {
+      sectionsInfo,
+      currentCourseId,
       professionalLearningCourse,
       hasLevelProgress,
+      scriptId,
       scriptName,
+      scriptTitle,
       viewAs,
       isRtl
     } = this.props;
 
     return (
       <div style={styles.buttonRow}>
-        {!professionalLearningCourse && (
+        {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div>
             <Button
               href={`/s/${scriptName}/next.next`}
@@ -64,6 +77,15 @@ const ScriptOverviewTopRow = React.createClass({
               style={{marginLeft: 10}}
             />
           </div>
+        )}
+        {!professionalLearningCourse && viewAs === ViewType.Teacher &&
+            experiments.isEnabled(SECTION_FLOW_2017) && (
+          <AssignToSection
+            sectionsInfo={sectionsInfo}
+            courseId={currentCourseId}
+            scriptId={scriptId}
+            assignmentName={scriptTitle}
+          />
         )}
         <div style={isRtl ? styles.left : styles.right}>
           {viewAs === ViewType.Teacher &&

@@ -101,39 +101,41 @@ class AdminUsersController < ApplicationController
     redirect_to :manual_pass_form
   end
 
+  # get /admin/permissions
   def permissions_form
+    search_term = params[:search_term]
+    if search_term =~ /^\d+$/
+      @user = User.find(search_term)
+    elsif search_term.present?
+      users = User.where(hashed_email: User.hash_email(search_term))
+      @user = users.first
+      if users.count > 1
+        flash[:notice] = "More than one User matches email address.  "\
+                         "Showing first result.  Matching User IDs - #{users.map(&:id).join ','}"
+      end
+    end
+    unless @user || search_term.blank?
+      flash[:notice] = "User Not Found"
+    end
   end
 
-  # Grants the indicated permission to the indicated user. Expects params[:email] and
-  # params[:permission] to be populated.
   def grant_permission
-    permission = params[:permission]
-    user = User.find_by_email_or_hashed_email params[:email]
-
-    unless user && user.teacher?
-      flash[:alert] = "FAILED: user #{params[:email]} could not be found or was not a teacher"
-      redirect_to :permissions_form
+    user_id = params[:user_id]
+    @user = User.find(user_id)
+    unless @user && @user.teacher?
+      flash[:alert] = "FAILED: user #{user_id} could not be found or is not a teacher"
+      redirect_to action: "permissions_form", search_term: user_id
       return
     end
-
-    if permission == 'admin'
-      if user.sections_as_student.count > 0
-        flash[:alert] = "FAILED: user #{user.email} NOT granted as user has sections_as_students"
-      else
-        user.update!(admin: true)
-        flash[:alert] = "User #{user.id} granted admin status"
-      end
-    else
-      user.permission = permission
-      flash[:alert] = "User #{user.id} granted #{permission} permission"
-    end
-    redirect_to :permissions_form
+    @user.permission = params[:permission]
+    redirect_to permissions_form_path(search_term: user_id)
   end
 
-  def revoke_all_permissions
-    hashed_email = User.hash_email params[:email]
-    # Though in theory a hashed email specifies a unique account, in practice it may not. As this is
-    # security related, we therefore iterate rather than use find_by_hashed_email.
-    User.with_deleted.where(hashed_email: hashed_email).each(&:revoke_all_permissions)
+  def revoke_permission
+    user_id = params[:user_id]
+    @user = User.find(user_id)
+    permission = params[:permission]
+    @user.delete_permission permission
+    redirect_to permissions_form_path(search_term: user_id)
   end
 end

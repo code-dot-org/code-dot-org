@@ -5,22 +5,21 @@ import color from '@cdo/apps/util/color';
 import { levelType } from './progressTypes';
 import { levelProgressStyle, hoverStyle } from './progressStyles';
 
-import { BUBBLE_COLORS } from '@cdo/apps/code-studio/components/progress/ProgressDot';
-
 const styles = {
   levelPill: {
     textAlign: 'center',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: color.lighter_gray,
+    color: color.charcoal,
     display: 'inline-block',
     fontSize: 13,
     fontFamily: '"Gotham 5r", sans-serif',
     borderRadius: 20,
     paddingLeft: 10,
     paddingRight: 10,
-    paddingTop: 5,
-    paddingBottom: 5,
+    paddingTop: 6,
+    paddingBottom: 6,
     minWidth: 60,
   },
   text: {
@@ -53,11 +52,9 @@ const ProgressPill = React.createClass({
 
     const multiLevelStep = levels.length > 1;
     const url = multiLevelStep ? undefined : levels[0].url;
-    const status = multiLevelStep ? 'multi_level' : levels[0].status;
 
     let style = {
       ...styles.levelPill,
-      ...BUBBLE_COLORS[status],
       ...(url && hoverStyle),
       ...(!multiLevelStep && levelProgressStyle(levels[0], false)),
       // After making progressBubbles experiment permanent, we can get rid of

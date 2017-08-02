@@ -11,7 +11,15 @@ Computer Science Fundamentals - International
 
 [/solid-block-header]
 
-[col-50]
+<div class="col-40" style="padding-right: 20px;">
+
+<% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
+<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
+<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", play_button: 'center', facebook: facebook, twitter: twitter, letterbox: 'false' %>
+
+</div>
+
+[col-60]
 
 Our International Computer Science Fundamentals courses are translated into over 25 languages. The different courses support students aged 4-18. Each course has 10-20 lessons that may be implemented as one unit or over the course of a semester. Students study basic programming concepts and develop interactive games or stories they can share. 
 
@@ -19,15 +27,7 @@ The courses teach the foundational concepts of programming using drag and drop b
 
 All lessons align to all relevant computer science standards, as well as to the <a href="http://www.iste.org/standards/standards-for-students" target="_blank">ISTE standards</a>. They additionally reinforce concepts and skills taught in other subject areas by integrating national <a href="http://www.corestandards.org/Math/" target="_blank">Math</a>, <a href="http://www.corestandards.org/ELA-Literacy/" target="_blank">English Language Arts</a>, and <a href="http://www.nextgenscience.org/next-generation-science-standards" target="_blank">Science</a> standards. Read more about our [curriculum philosophy here](https://code.org/educate/curriculum-philosophy).
 
-[/col-50]
-
-<div style="float:right; padding:10px; width:49%">
-
-<% facebook = {:u=>'https://youtu.be/rNIM1fzJ8u0'} %>
-<% twitter = {:url=>'https://youtu.be/rNIM1fzJ8u0', :related=>'codeorg', :text=>'Introduction to CS Fundamentals @codeorg'} %>
-<%=view :display_video_thumbnail, id: "introK5", video_code: "rNIM1fzJ8u0", caption: "Introduction to CS Fundamentals", play_button: 'center', facebook: facebook, twitter: twitter %>
-
-</div>
+[/col-60]
 
 <div style="clear:both"></div>
 

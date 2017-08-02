@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import CourseScript from './CourseScript';
-import AssignCourse from './AssignCourse';
+import AssignToSection from './AssignToSection';
 
 const styles = {
   description: {
@@ -42,10 +42,10 @@ export default class CourseOverview extends Component {
           {viewAs === ViewType.Student ? descriptionStudent : descriptionTeacher}
         </div>
         {isTeacher && (
-          <AssignCourse
+          <AssignToSection
             sectionsInfo={sectionsInfo}
             courseId={id}
-            courseName={title}
+            assignmentName={title}
           />
         )}
         {scripts.map((script, index) => (
