@@ -88,6 +88,7 @@ class ScriptDSL < BaseDSL
     progression = properties.delete(:progression)
     target = properties.delete(:target)
     challenge = properties.delete(:challenge)
+    experiment = properties.delete(:experiment)
 
     level = {
       name: name,
@@ -105,7 +106,14 @@ class ScriptDSL < BaseDSL
       @current_scriptlevel[:levels] << level
 
       levelprops = {}
+
+      # Experiment levels are inactive unless explicitly marked active, which
+      # is the opposite of normal levels. (Normally if you add a level variant
+      # for an experiment group, you want everyone else to get the other level)
+      active = false if !experiment.nil? && active.nil?
+
       levelprops[:active] = active if active == false
+      levelprops[:experiment] = experiment unless experiment.nil?
       unless levelprops.empty?
         @current_scriptlevel[:properties][:variants] ||= {}
         @current_scriptlevel[:properties][:variants][name] = levelprops
@@ -204,7 +212,7 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level), sl.progression).map {|l| l.indent(2)})
+            s.concat(serialize_level(level, type, sl.active?(level), sl.progression, sl.target, sl.challenge, sl.variants[level.name].try(:[], 'experiment')).map {|l| l.indent(2)})
           end
           s << 'endvariants'
         else
@@ -216,7 +224,7 @@ class ScriptDSL < BaseDSL
     s.join("\n")
   end
 
-  def self.serialize_level(level, type, active = nil, progression = nil, target = nil, challenge = nil)
+  def self.serialize_level(level, type, active = nil, progression = nil, target = nil, challenge = nil, experiment = nil)
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
@@ -229,7 +237,9 @@ class ScriptDSL < BaseDSL
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
     l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
-    l += ', active: false' unless active.nil? || active
+    l += ', active: false' if !experiment && active == false
+    l += ', active: true' if experiment && (active == true || active.nil?)
+    l += ", experiment: '#{experiment}'" if experiment
     l += ", progression: '#{progression}'" if progression
     l += ', target: true' if target
     l += ', challenge: true' if challenge
