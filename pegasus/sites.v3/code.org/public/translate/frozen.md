@@ -1,10 +1,10 @@
 ---
-title: "Translate Frozen Designer"
+title: "Translate Frozen"
 nav: translate_nav
 theme: responsive
 ---
 
-# Translating Frozen Designer
+# Translating Frozen
 Translations for the tutorial progression are done on Crowdin and translations for the video captions are done on Amara. They are both free to join and any volunteer can immediately start translating on either platform.
 
 ## Getting set up
@@ -45,5 +45,5 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 
 ---
 
-<%= view :frozen_designer_languages %>
+<%= view :frozen_languages %>
 ~                                        
