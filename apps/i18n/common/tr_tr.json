@@ -636,5 +636,18 @@
   "whichCourse": "Hangi kursu öğreteceğini bilmiyor musun? Kendi bölümüne bir kurs tayin etmek için kurslar sayfasından bir kurs bul.",
   "withoutHints": "Herhangi bir ipucu kullanmadan!",
   "workspaceHeaderShort": "Çalışma alanı: ",
-  "yes": "Evet"
+  "yes": "Evet",
+  "announcementHeadingCsfAtoF": "Courses 1-4 updated to align with grades K-5",
+  "announcementDescriptionCsfAtoF": "We've tailored the courses to each grade level and re-dubbed them Courses A-F.",
+  "assignConfirm": "Are you sure you want to assign \"{assignmentName}\" to \"{sectionName}\"?",
+  "assignUnit": "Assign Unit",
+  "courseBlocksCsfExpressHeading": "Computer Science Fundamentals Express Courses",
+  "courseBlocksCsfExpressDescription": "A great option for students getting started on their own.  You'll learn the fundamentals of computer science with drag & drop blocks.  Create your own drawings and games.",
+  "courseBlocksCsfYoungHeading": "Computer Science Fundamentals for Elementary Schools",
+  "courseBlocksCsfYoungDescription": "For pre-readers in elementary school classrooms",
+  "courseBlocksCsfOlderHeading": "",
+  "courseBlocksCsfOlderDescription": "For older students in elementary school classrooms",
+  "publishPending": "Publishing...",
+  "unpublish": "Unpublish",
+  "unpublishPending": "Unpublishing..."
 }
