@@ -27,6 +27,9 @@ class ProjectsController < ApplicationController
     starwars: {
       name: 'New Star Wars Project'
     },
+    starwarsblocks: {
+      name: 'New Star Wars Blocks Project'
+    },
     iceage: {
       name: 'New Ice Age Project'
     },

@@ -129,6 +129,43 @@ const REMIX_PROPS = [
   },
 ];
 
+const FROZEN_REMIX_PROPS = [
+  {
+    defaultValues: {
+      initialX: DEFAULT_X,
+      initialY: DEFAULT_Y,
+    },
+    generateBlock: args => blockAsXmlNode('jump_to_xy', {
+      titles: {
+        'XPOS': args.initialX,
+        'YPOS': args.initialY,
+      }
+    }),
+  }, {
+    defaultValues: {
+      startDirection: 180
+    },
+    generateBlock: args => blockAsXmlNode('draw_turn', {
+      titles: {
+        'DIR': 'turnRight',
+      },
+      values: {
+        'VALUE': {
+          type: 'math_number',
+          titleName: 'NUM',
+          titleValue: args.startDirection - 180,
+        },
+      },
+    }),
+  },
+];
+
+const REMIX_PROPS_BY_SKIN = {
+  artist: REMIX_PROPS,
+  anna: FROZEN_REMIX_PROPS,
+  elsa: FROZEN_REMIX_PROPS,
+};
+
 /**
  * An instantiable Artist class
  * @param {StudioApp} studioApp The studioApp instance to build upon.
@@ -372,8 +409,9 @@ Artist.prototype.init = function (config) {
 Artist.prototype.prepareForRemix = function () {
   const blocksDom = Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace);
   const blocksDocument = blocksDom.ownerDocument;
+  const remix_props = REMIX_PROPS_BY_SKIN[this.skin.id] || REMIX_PROPS;
   let next = false;
-  if (REMIX_PROPS.every(group => Object.keys(group.defaultValues).every(prop =>
+  if (remix_props.every(group => Object.keys(group.defaultValues).every(prop =>
         this.level[prop] === undefined ||
             this.level[prop] === group.defaultValues[prop]))) {
     // If all of the level props we need to worry about are undefined or equal
@@ -400,7 +438,7 @@ Artist.prototype.prepareForRemix = function () {
     next.appendChild(block);
   };
 
-  for (let group of REMIX_PROPS) {
+  for (let group of remix_props) {
     let customized = false;
     for (let prop in group.defaultValues) {
       const value = this.level[prop];
@@ -1757,9 +1795,9 @@ Artist.prototype.checkAnswer = function () {
   // Play sound
   if (this.testResults === TestResults.FREE_PLAY ||
       this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
-    this.studioApp_.playAudio('win');
+    this.studioApp_.playAudioOnWin();
   } else {
-    this.studioApp_.playAudio('failure');
+    this.studioApp_.playAudioOnFailure();
   }
 
   if (this.studioApp_.hasContainedLevels && !level.edit_blocks) {

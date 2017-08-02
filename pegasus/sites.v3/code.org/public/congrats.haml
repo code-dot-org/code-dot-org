@@ -30,7 +30,7 @@ max_age: 60
   end
 
   facebook = {:u=>share_url}
-  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t(:just_did_hoc)}
+  twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t('just_did_hoc_donor', donor_twitter: get_random_donor_twitter)}
   twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
 
   company_param = params[:co]

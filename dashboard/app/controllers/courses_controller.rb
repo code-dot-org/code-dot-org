@@ -6,7 +6,6 @@ class CoursesController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @recent_courses = current_user.try(:recent_courses_and_scripts)
         @is_teacher = !!(current_user && current_user.teacher?)
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?

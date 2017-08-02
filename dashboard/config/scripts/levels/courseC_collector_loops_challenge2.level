@@ -26,8 +26,8 @@
     "step_mode": "1",
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
-    "instructions": "Let's hunt for treasure - using loops! Help the collector by debugging this code. Get all of the treasure!",
-    "markdown_instructions": "Let's hunt for treasure - using loops! Help the collector by debugging this code. Get all of the treasure!",
+    "instructions": "Get all of the treasure!",
+    "markdown_instructions": "*\"Let's hunt for treasure - using loops!\"*\r\n\r\nHelp the collector by debugging this code. Get all of the treasure!",
     "callout_json": "[]",
     "ideal": "15",
     "instructions_important": "false",
@@ -35,10 +35,13 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The original code would work great - if there was only one piece of treasure in each pile!\",\"hint_id\":\"courseC_maze_loops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9e51d3ace4ec56180b0934d6997cdc12/courseC_maze_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Use loops so you don't run out of `collect` blocks!\",\"hint_id\":\"courseC_maze_loops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/44ffa79b34664b62bcfc13a057cd1a48/courseC_maze_loops_challenge2.mp3\"}]",
+    "disable_procedure_autopopulate": "false",
+    "shape_shift": "false",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 19:46:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

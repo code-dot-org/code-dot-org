@@ -8,8 +8,9 @@ import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
 import Dialog from './LegacyDialog';
-import {Provider} from 'react-redux';
-import {getStore} from '../redux';
+import { Provider } from 'react-redux';
+import { getStore } from '../redux';
+import { showShareDialog } from './components/shareDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -45,10 +46,13 @@ const PUZZLE_PAGE_NONE = -1;
  * @param {object} progressData
  * @param {string} currentLevelId
  * @param {number} puzzlePage
- * @param {boolean} [signedIn] True/false if we know the sign in state of the
+ * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
+ * @param {boolean} stageExtrasEnabled Whether this user is in a section with
+ *   stageExtras enabled for this script
  */
-header.build = function (scriptData, stageData, progressData, currentLevelId, puzzlePage, signedIn) {
+header.build = function (scriptData, stageData, progressData, currentLevelId,
+    puzzlePage, signedIn, stageExtrasEnabled) {
   scriptData = scriptData || {};
   stageData = stageData || {};
   progressData = progressData || {};
@@ -72,7 +76,8 @@ header.build = function (scriptData, stageData, progressData, currentLevelId, pu
     progressData,
     currentLevelId,
     saveAnswersBeforeNavigation,
-    signedIn
+    signedIn,
+    stageExtrasEnabled
   );
 
   $('.level_free_play').qtip({
@@ -175,6 +180,8 @@ function shareProject() {
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
+          isSignedIn={appOptions.isSignedIn}
+          isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}
@@ -185,8 +192,39 @@ function shareProject() {
       </Provider>,
       dialogDom
     );
+
+    getStore().dispatch(showShareDialog());
   });
 }
+
+function setupReduxSubscribers(store) {
+  let state = {};
+  store.subscribe(() => {
+    let lastState = state;
+    state = store.getState();
+
+    // Update the project state when a PublishDialog state transition indicates
+    // that a project has just been published.
+    if (
+      lastState.publishDialog &&
+      lastState.publishDialog.lastPublishedAt !==
+        state.publishDialog.lastPublishedAt
+    ) {
+      window.dashboard.project.setPublishedAt(state.publishDialog.lastPublishedAt);
+    }
+
+    // Update the project state when a ShareDialog state transition indicates
+    // that a project has just been unpublished.
+    if (
+      lastState.shareDialog &&
+      !lastState.shareDialog.didUnpublish &&
+      state.shareDialog.didUnpublish
+    ) {
+      window.dashboard.project.setPublishedAt(null);
+    }
+  });
+}
+setupReduxSubscribers(getStore());
 
 function remixProject() {
   if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {
@@ -271,8 +309,8 @@ header.showProjectHeader = function () {
       .append($('<div class="project_remix header_button header_button_light">').text(dashboard.i18n.t('project.remix')))
       .append($('<div class="project_new header_button header_button_light">').text(dashboard.i18n.t('project.new')));
 
-  // TODO: Remove this (and the related style) when Game Lab and/or Web Lab are no longer in beta.
-  if ('gamelab' === appOptions.app || 'weblab' === appOptions.app) {
+  // TODO: Remove this (and the related style) when Web Lab is no longer in beta.
+  if ('weblab' === appOptions.app) {
     $('.project_info').append($('<div class="beta-notice">').text(dashboard.i18n.t('beta')));
   }
 

@@ -394,7 +394,7 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password, if: :password_required?
   validates_length_of       :password, within: 6..128, allow_blank: true
 
-  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?'
+  validate :email_matches_for_oauth_upgrade, if: 'oauth? && user_type_changed?', on: :update
 
   def email_matches_for_oauth_upgrade
     if user_type == User::TYPE_TEACHER
@@ -1085,7 +1085,8 @@ class User < ActiveRecord::Base
 
     course_data = courses.map do |course|
       {
-        name: data_t_suffix('course.name', course[:name], 'title'),
+        name: course[:name],
+        title: data_t_suffix('course.name', course[:name], 'title'),
         description: data_t_suffix('course.name', course[:name], 'description_short'),
         link: course_path(course),
       }
@@ -1095,7 +1096,8 @@ class User < ActiveRecord::Base
       script_id = user_script[:script_id]
       script = Script.get_from_cache(script_id)
       {
-        name: data_t_suffix('script.name', script[:name], 'title'),
+        name: script[:name],
+        title: data_t_suffix('script.name', script[:name], 'title'),
         description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
         link: script_path(script),
       }
@@ -1427,8 +1429,11 @@ class User < ActiveRecord::Base
     under_13? || (hashed_email.blank? && email.blank? && parent_email.present?)
   end
 
+  # Get a section a user is in that is assigned to this script. Look first for
+  # sections they are in as a student, otherwise sections they are the owner of
   def section_for_script(script)
-    sections_as_student.find {|section| section.script_id == script.id}
+    sections_as_student.find {|section| section.script_id == script.id} ||
+      sections.find {|section| section.script_id == script.id}
   end
 
   # Returns the version of our Terms of Service we consider the user as having

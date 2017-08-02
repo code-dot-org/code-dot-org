@@ -100,15 +100,12 @@ class Hamburger
     end.freeze
 
     student_entries = [
+      {title: "home", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
       {title: "courses", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
-    end
-    if options[:page_mode] == "student_homepage"
-      student_entries.unshift({title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "hamburger-student-home"})
-    end
-    student_entries.freeze
+    end.freeze
 
     signed_out_entries = [
       {title: "courses", url: CDO.studio_url("/courses")},
@@ -294,14 +291,11 @@ class Hamburger
         {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
       ]
     elsif options[:user_type] == "student"
-      contents = [
+      [
+        {title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "header-student-home"},
         {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
         {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
       ]
-      if options[:page_mode] == "student_homepage"
-        contents.unshift({title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "header-student-home"})
-      end
-      contents
     elsif options[:language] == "en"
       [
         {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/student"), id: "header-en-learn"},
