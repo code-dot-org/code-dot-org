@@ -735,7 +735,7 @@ class User < ActiveRecord::Base
   end
 
   def user_progress_by_stage(stage)
-    levels = stage.script_levels.pluck(:level_ids).flatten
+    levels = stage.script_levels.map(&:level_ids).flatten
     user_levels.where(script: stage.script, level: levels).pluck(:level_id, :best_result).to_h
   end
 
@@ -762,7 +762,7 @@ class User < ActiveRecord::Base
     # TODO(brent): Worth noting in the case that we have the same level appear in
     # the script in multiple places (i.e. via level swapping) there's some potential
     # for strange behavior.
-    levels = script.script_levels.pluck(:level_ids).flatten
+    levels = script.script_levels.map(&:level_ids).flatten
     user_levels_by_level = user_levels.
       where(script_id: script.id, level: levels).
       index_by(&:level_id)
