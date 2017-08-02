@@ -38,6 +38,8 @@ class SectionsPage extends Component {
   static propTypes = {
     teacherHomepage: PropTypes.bool,
     className: PropTypes.string,
+    defaultCourseId: PropTypes.number,
+    defaultScriptId: PropTypes.number,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -68,6 +70,19 @@ class SectionsPage extends Component {
     }
   }
 
+  componentDidMount() {
+    const {
+      defaultCourseId,
+      defaultScriptId
+    } = this.props;
+
+    // If we have a default courseId and/or scriptId, we want to start with our
+    // dialog open. Add a new section with this course/script as default
+    if (defaultCourseId || defaultScriptId) {
+      this.addSection();
+    }
+  }
+
   handleImportOpen = () => {
     this.setState({rosterDialogOpen: true});
     this.props.loadClassroomList(this.provider);
@@ -88,10 +103,13 @@ class SectionsPage extends Component {
   };
 
   addSection = () => {
+    const { defaultCourseId, defaultScriptId } = this.props;
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection();
+      this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
     } else {
-      return this.props.newSection();
+      // This is the only usage of the newSection action, and can be removed once
+      // SECTION_FLOW_2017 is finished
+      return this.props.newSection(defaultCourseId);
     }
   };
 

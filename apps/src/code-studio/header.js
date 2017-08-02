@@ -8,8 +8,9 @@ import popupWindow from './popup-window';
 import ShareDialog from './components/ShareDialog';
 import progress from './progress';
 import Dialog from './LegacyDialog';
-import {Provider} from 'react-redux';
-import {getStore} from '../redux';
+import { Provider } from 'react-redux';
+import { getStore } from '../redux';
+import { showShareDialog } from './components/shareDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -179,6 +180,8 @@ function shareProject() {
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
+          isSignedIn={appOptions.isSignedIn}
+          isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}
@@ -189,8 +192,39 @@ function shareProject() {
       </Provider>,
       dialogDom
     );
+
+    getStore().dispatch(showShareDialog());
   });
 }
+
+function setupReduxSubscribers(store) {
+  let state = {};
+  store.subscribe(() => {
+    let lastState = state;
+    state = store.getState();
+
+    // Update the project state when a PublishDialog state transition indicates
+    // that a project has just been published.
+    if (
+      lastState.publishDialog &&
+      lastState.publishDialog.lastPublishedAt !==
+        state.publishDialog.lastPublishedAt
+    ) {
+      window.dashboard.project.setPublishedAt(state.publishDialog.lastPublishedAt);
+    }
+
+    // Update the project state when a ShareDialog state transition indicates
+    // that a project has just been unpublished.
+    if (
+      lastState.shareDialog &&
+      !lastState.shareDialog.didUnpublish &&
+      state.shareDialog.didUnpublish
+    ) {
+      window.dashboard.project.setPublishedAt(null);
+    }
+  });
+}
+setupReduxSubscribers(getStore());
 
 function remixProject() {
   if (dashboard.project.getCurrentId() && dashboard.project.canServerSideRemix()) {

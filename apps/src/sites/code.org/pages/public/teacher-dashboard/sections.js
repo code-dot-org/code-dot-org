@@ -9,7 +9,6 @@ import teacherSections, {
   setValidGrades,
   setStudioUrl,
   setOAuthProvider,
-  newSection,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
@@ -36,16 +35,23 @@ export function renderSectionsPage(data) {
   store.dispatch(asyncLoadSectionData());
 
   const query = queryString.parse(window.location.search);
-  if (query.newSection) {
-    const courseId = parseInt(query.newSection, 10);
-    store.dispatch(newSection(courseId));
+  let defaultCourseId;
+  let defaultScriptId;
+  if (query.courseId) {
+    defaultCourseId = parseInt(query.courseId, 10);
+  }
+  if (query.scriptId) {
+    defaultScriptId = parseInt(query.scriptId, 10);
   }
 
   $("#sections-page-angular").hide();
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionsPage/>
+      <SectionsPage
+        defaultCourseId={defaultCourseId}
+        defaultScriptId={defaultScriptId}
+      />
     </Provider>,
     element
   );

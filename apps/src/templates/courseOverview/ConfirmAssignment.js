@@ -28,16 +28,16 @@ const styles = {
 /**
  * Confirmation dialog for when assigning a course from the course overview page
  */
-export default class AssignCourseConfirm extends Component {
+export default class ConfirmAssignment extends Component {
   static propTypes = {
     sectionName: PropTypes.string.isRequired,
-    courseName: PropTypes.string.isRequired,
+    assignmentName: PropTypes.string.isRequired,
     onClose: PropTypes.func.isRequired,
     onConfirm: PropTypes.func.isRequired,
   };
 
   render() {
-    const { sectionName, courseName, onClose, onConfirm } = this.props;
+    const { sectionName, assignmentName, onClose, onConfirm } = this.props;
 
     return (
       <BaseDialog isOpen={true} handleClose={onClose}>
@@ -45,7 +45,7 @@ export default class AssignCourseConfirm extends Component {
           {i18n.assignCourse()}
         </div>
         <div style={styles.content}>
-          {i18n.assignCourseConfirm({courseName, sectionName})}
+          {i18n.assignConfirm({assignmentName, sectionName})}
         </div>
         <div style={{textAlign: 'right'}}>
           <Button
