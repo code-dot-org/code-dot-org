@@ -2,11 +2,11 @@ import { assert } from '../../../util/configuredChai';
 import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
-import AssignCourse from '@cdo/apps/templates/courseOverview/AssignCourse';
+import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 
 const defaultProps = {
   courseId: 30,
-  courseName: 'Computer Science Principles',
+  assignmentName: 'Computer Science Principles',
   sectionsInfo: [
     {
       id: 11,
@@ -27,7 +27,7 @@ const defaultProps = {
   ]
 };
 
-describe('AssignCourse', () => {
+describe('AssignToSection', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
@@ -45,26 +45,40 @@ describe('AssignCourse', () => {
 
   it('is initially just a button', () => {
     const wrapper = shallow(
-      <AssignCourse {...defaultProps}/>
+      <AssignToSection {...defaultProps}/>
     );
     assert.strictEqual(wrapper.children().length, 1);
     assert.strictEqual(wrapper.childAt(0).name(), 'Button');
   });
 
-  it('shows a new section option when clicked', () => {
+  it('can create a new section with a courseId', () => {
     const wrapper = shallow(
-      <AssignCourse {...defaultProps}/>
+      <AssignToSection {...defaultProps}/>
     );
     wrapper.find('Button').simulate('click');
     const newSectionLink = wrapper.find('a').at(0);
     assert.strictEqual(newSectionLink.props().href,
-      '//test.code.org/teacher-dashboard?newSection=30#/sections');
+      '//test.code.org/teacher-dashboard?courseId=30#/sections');
+    assert.strictEqual(newSectionLink.text(), 'New section...');
+  });
+
+  it('can create a new section with a courseId and scriptId', () => {
+    const wrapper = shallow(
+      <AssignToSection
+        {...defaultProps}
+        scriptId={112}
+      />
+    );
+    wrapper.find('Button').simulate('click');
+    const newSectionLink = wrapper.find('a').at(0);
+    assert.strictEqual(newSectionLink.props().href,
+      '//test.code.org/teacher-dashboard?courseId=30&scriptId=112#/sections');
     assert.strictEqual(newSectionLink.text(), 'New section...');
   });
 
   it('shows each of the sections when clicked', () => {
     const wrapper = shallow(
-      <AssignCourse {...defaultProps}/>
+      <AssignToSection {...defaultProps}/>
     );
     wrapper.find('Button').simulate('click');
     const sections = defaultProps.sectionsInfo;
@@ -77,7 +91,7 @@ describe('AssignCourse', () => {
 
   it('shows a confirmation dialog when clicking a section', () => {
     const wrapper = shallow(
-      <AssignCourse {...defaultProps}/>
+      <AssignToSection {...defaultProps}/>
     );
     wrapper.find('Button').simulate('click');
     const firstSection = wrapper.find('a').at(1);
@@ -89,17 +103,17 @@ describe('AssignCourse', () => {
     firstSection.simulate('click', {target});
 
     assert.strictEqual(wrapper.state().sectionIndexToAssign, 0);
-    const confirm = wrapper.find('AssignCourseConfirm');
-    assert(confirm.props().courseName, 'Computer Science Principles');
-    assert(confirm.props().sectionName, 'brent_section');
+    const confirm = wrapper.find('ConfirmAssignment');
+    assert.equal(confirm.props().assignmentName, 'Computer Science Principles');
+    assert.equal(confirm.props().sectionName, 'brent_section');
   });
 
   it('shows an error dialog when we have an error', () => {
     const wrapper = shallow(
-      <AssignCourse {...defaultProps}/>
+      <AssignToSection {...defaultProps}/>
     );
     wrapper.setState({errorString: 'Error'});
-    assert(wrapper.find('BaseDialog').length, 1);
-    assert(wrapper.find('BaseDialog').text(), 'Error');
+    assert.equal(wrapper.find('BaseDialog').length, 1);
+    assert.equal(wrapper.find('BaseDialog').childAt(0).text(), 'Error');
   });
 });
