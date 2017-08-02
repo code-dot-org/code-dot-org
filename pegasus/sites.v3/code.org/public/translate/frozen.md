@@ -24,7 +24,7 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. [tutorial instructions](https://crowdin.com/translate/codeorg/318/enus-es#q=MC+HOC+2016)
 1. [tutorial blocks](https://crowdin.com/translate/codeorg/527/enus-es)
 1. [tutorial hints in callout bubbles](https://crowdin.com/translate/codeorg/41/enus-es#q=callout+craft)
-1. [strings about Frozen on Code.org](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft) ##This line need to be changed
+1. [strings about Frozen on Code.org](https://crowdin.com/translate/codeorg/56/enus-es#q=minecraft) 
 1. [video titles](https://crowdin.com/translate/codeorg/41/enus-es#q=mc_2016)
 1. [video notes](https://crowdin.com/translate/codeorg/46/enus-es#q=mc_2016) - These notes are basically a copy of the video captions. They are shown on the second tab, side by side screenshots of the video. These are intended for slow internet users. Since it is very close to the captions, I suggest completing the translation for the video caption on Amara (see below) and then reusing those translations here.
 
