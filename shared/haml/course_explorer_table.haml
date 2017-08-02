@@ -28,6 +28,7 @@
     ends: 12,
     subtitle: "Full year course",
     link: CDO.code_org_url("/educate/csp"),
+    course_link: CDO.studio_url("/courses/csp"),
     img: "/shared/images/teacher-announcement/csp-widgets.png",
     description: 'AP Computer Science Principles is a course designed to prepare students (and teachers) who are new to computer science for the AP CS Principles exam. The course covers many topics including the Internet, Big Data and Privacy, and Programming and Algorithms.
       <ul>
@@ -47,6 +48,7 @@
     ends: 9,
     subtitle: "Semester or full year course",
     link: CDO.code_org_url("/educate/csd"),
+    course_link: CDO.studio_url("/courses/csd"),
     img: "/shared/images/fit-500/courses/logo_csd.jpg",
     description: 'CS Discoveries is an introductory course that empowers students to engage with Computer Science as a medium for creativity, communication, problem solving, and fun.
       <ul>
@@ -72,7 +74,7 @@
         <li> <strong>Length:</strong> 15-20 hours per course, 5 courses </li>
         <li> <strong>Recommended age:</strong> Ages 6-11 (Kindergarten through 5th grade) </li>
         <li> <strong>Prerequisites:</strong> None </li>
-        <li> <strong><strong>Optional professional learning:</strong> Free 1-day workshop, in person in the US and   line globally. </li>
+        <li> <strong>Optional professional learning:</strong> Free 1-day workshop, in person in the US and   line globally. </li>
         <li> <strong>Cost to use curriculum:</strong> None </li>
         <li> <strong>Languages:</strong> English, Spanish, +24 more </li>
       </ul>',
@@ -105,6 +107,7 @@
     ends: 12,
     subtitle: "Condensed version of curriculum in one 30 hour course for older students",
     link: CDO.code_org_url("/educate/curriculum/express-course"),
+    course_link: CDO.studio_url("/s/express"),
     img: "/shared/images/courses/logo_tall_express.jpg",
     description: 'This single condensed 20-hour course covers the core concepts from CS Fundamentals progression at an accelerated pace. The course is designed for students ages 10-18 but is also used successfully in many adult learning programs.
       <ul>
@@ -145,9 +148,14 @@
                   =course[:prereqs]
             - if course[:link]
               %br/
-              %a{href: course[:link], style: "font-size: 12px; padding-left: 0px; color: #00adbc"}
-                Learn more
-                %i.fa.fa-chevron-right
+              %a{href: course[:link]}
+                %button
+                  Learn more
+            - if course[:course_link]
+              &nbsp;
+              %a{href: course[:course_link]}
+                %button.course-explorer-gray-button
+                  View course
         .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course_index}}
           %i.fa.fa-times{"aria-hidden" => "true"}
 
