@@ -80,7 +80,7 @@ class LevelSourcesController < ApplicationController
     reset_abuse_user = current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     level_source_id =
       if params[:level_sopurce_id_and_user_id]
-        LevelSource.decrypt_level_source_id params[:level_source_id_and_user_id], reset_abuse_user
+        LevelSource.deobfuscate_level_source_id params[:level_source_id_and_user_id], reset_abuse_user
       else
         params[:id]
       end
