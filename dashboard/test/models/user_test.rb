@@ -1603,7 +1603,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'revoke_all_permissions revokes admin status' do
-    admin_user = build :admin
+    admin_user = create :admin
     admin_user.revoke_all_permissions
     assert_nil admin_user.reload.admin
   end

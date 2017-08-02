@@ -110,13 +110,13 @@ class AdminUsersController < ApplicationController
     permission = params[:permission]
     if search_term.present?
       if search_term =~ /^\d+$/
-        @user = User.find(search_term)
+        @user = User.find_by(id: search_term)
       else
         users = User.where(hashed_email: User.hash_email(search_term))
         @user = users.first
         if users.count > 1
           flash[:notice] = "More than one User matches email address.  "\
-                         "Showing first result.  Matching User IDs - #{users.map(&:id).join ','}"
+                         "Showing first result.  Matching User IDs - #{users.pluck(:id).join ','}"
         end
       end
       unless @user || search_term.blank?
@@ -130,8 +130,8 @@ class AdminUsersController < ApplicationController
 
   def grant_permission
     user_id = params[:user_id]
-    @user = User.find(user_id)
-    unless @user && @user.teacher?
+    @user = User.find_by(id: user_id)
+    unless @user.try(:teacher?)
       flash[:alert] = "FAILED: user #{user_id} could not be found or is not a teacher"
       redirect_to action: "permissions_form", search_term: user_id
       return
@@ -142,9 +142,9 @@ class AdminUsersController < ApplicationController
 
   def revoke_permission
     user_id = params[:user_id]
-    @user = User.find(user_id)
+    @user = User.find_by(id: user_id)
     permission = params[:permission]
-    @user.delete_permission permission
+    @user.try(:delete_permission, permission)
     redirect_to permissions_form_path(search_term: user_id)
   end
 
