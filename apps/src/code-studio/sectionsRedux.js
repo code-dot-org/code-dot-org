@@ -51,3 +51,13 @@ export default function reducer(state = new SectionData(), action) {
   }
   return state;
 }
+
+/**
+ * Get the name and id of every section
+ */
+export const sectionsNameAndId = state => {
+  return state.sectionIds.map(id => ({
+    id: parseInt(id, 10),
+    name: state.nameById.get(id)
+  }));
+};

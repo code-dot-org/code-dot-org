@@ -200,13 +200,25 @@
   just_did_course2: "Eg fullførte nettopp Kurs 2 - Sjekk det ut! @codeorg"
   just_did_course3: "Eg fullførte nettopp Kurs 3 - Sjekk det ut! @codeorg"
   just_did_course4: "Eg fullførte nettopp Kurs 4 - Sjekk det ut! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
   just_did_accelerated: "Eg fullførte nettopp det Akselererte Kurset - Sjekk det ut! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_course4_donor: "I just finished Course 4 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursea_donor: "I just finished Course A - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_courseb_donor: "I just finished Course B - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursec_donor: "I just finished Course C - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursed_donor: "I just finished Course D - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursee_donor: "I just finished Course E - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_coursef_donor: "I just finished Course F - check it out! Thanks %{donor_twitter} for supporting @codeorg"
+  just_did_accelerated_donor: "I just finished the Accelerated Course - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   twitter_teach_cs: "9 av 10 er enige i at skular bør undervise koding. http://youtu.be/nKIu9yen5nc. Besøk https://code.org/."
   twitter_cs_foundational: "Å lære datateknikk er fundamentalt for alle elever. https://youtu.be/QvyTEx1wyOY."
   learn_hoc: "Prøv Kodetimen"
@@ -893,6 +905,8 @@
   coursef-draft_name: Course F
   coursef_name: "Course F"
   accelerated_name: "Framskunda kurs"
+  express_name: "Express Course"
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: '(gammel) Enhet 1: Digital informasjon'
   cspunit2_name: '(gammel) Enhet 2: Internett'
   cspunit3_name: '(gammel) Enhet 3: Programmering'
@@ -934,6 +948,7 @@
   math_category_name: "Matematikk"
   hoc_category_name: "Kodetimen"
   csf_category_name: "Grunnleggende informatikk"
+  csf_international_category_name: "CS Fundamentals International"
   csf2_draft_category_name: 'Under Development: Courses A - F'
   csd_category_name: "CS Discoveries"
   csp_category_name: "'15-'16 Prinsipper i informatikk"

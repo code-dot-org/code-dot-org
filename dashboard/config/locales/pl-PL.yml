@@ -215,6 +215,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -223,6 +225,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: Email
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Zaproszenie wysłane
     added_teacher: "%{name} dodany jako Twój nauczyciel"
@@ -237,6 +245,9 @@
       blank_code: Wprowadź kod sekcji
       cant_join_own_section: Przepraszamy, ale nie możesz przyłączyć się do swojej
         własnej sekcji.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Powiadomienie Code.org: %{student_name} nie jest już powiązany z
@@ -261,6 +272,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -275,6 +288,7 @@
         calculate: Obliczyć coś
         applab: Utwórz aplikację w App Lab
         gamelab: Utwórz projekt w Game Lab
+        weblab: Make a Web Lab (beta) project
       home: Strona główna
       courses: Kursy
       project_gallery: Galeria Projektów
@@ -734,6 +748,12 @@
       title: Laboratorium Gier (wczesne)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: Wiek 13+
+      cta: Zobacz instrukcję
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Wiek 13+
       cta: Zobacz instrukcję
     frozen:

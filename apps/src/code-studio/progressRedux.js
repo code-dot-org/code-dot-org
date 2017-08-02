@@ -33,6 +33,10 @@ const initialState = {
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
   stages: null,
+  scriptId: null,
+  scriptName: null,
+  scriptTitle: null,
+  courseId: null,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
@@ -68,7 +72,10 @@ export default function reducer(state = initialState, action) {
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
       peerReviewStage: action.peerReviewStage,
+      scriptId: action.scriptId,
       scriptName: action.scriptName,
+      scriptTitle: action.scriptTitle,
+      courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
     };
@@ -242,15 +249,18 @@ export function processedStages(stages, isPlc) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName,
-    isFullProgress}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
+    scriptTitle, courseId, isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
   peerReviewStage,
+  scriptId,
   scriptName,
+  scriptTitle,
+  courseId,
   isFullProgress,
 });
 

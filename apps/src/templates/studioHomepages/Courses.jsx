@@ -161,7 +161,6 @@ const Courses = React.createClass({
               isRtl={isRtl}
               linkText={i18n.teacherCourseHocLinkText()}
               link={`${codeOrgUrlPrefix}/learn`}
-              showLink={true}
             >
               <CourseBlocksHoc rowCount={1}/>
             </ContentContainer>

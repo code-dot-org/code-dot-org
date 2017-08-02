@@ -19,7 +19,6 @@ const ProjectWidget = React.createClass({
         heading={i18n.projects()}
         linkText={i18n.projectsViewProjectGallery()}
         link="/projects"
-        showLink={true}
         isRtl={false}
       >
         {this.props.isLoading &&
@@ -47,8 +46,8 @@ const convertChannelsToProjectData = function (projects) {
 
   // Get the ones that aren't hidden, and have a type and id.
   projectLists = projectLists.filter(project => !project.hidden && project.id && project.projectType);
-
-  return _.range(4).map(i => (
+  const numProjects = Math.min(4, projectLists.length);
+  return _.range(numProjects).map(i => (
     {
       name: projectLists[i].name,
       channel: projectLists[i].id,

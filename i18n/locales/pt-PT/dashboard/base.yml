@@ -182,6 +182,8 @@ pt:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'A tua turma:'
@@ -190,6 +192,12 @@ pt:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'E-mail'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Convite enviado'
     added_teacher: '%{name} foi adicionado como teu professor'
@@ -202,6 +210,7 @@ pt:
       section_not_found: "Não foi possível encontrar uma turma com o código '%{section_code}'."
       blank_code: "Por favor, digita um código de turma"
       cant_join_own_section: "Não podes entrar na tua própria turma."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Notificação de Code.org: %{student_name} deixou de ser seu aluno.'
@@ -225,6 +234,7 @@ pt:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ pt:
         calculate: 'Calculate something'
         applab: 'Criar uma aplicação App Lab'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Início"
       courses: "Cursos"
       project_gallery: "Galeria de projetos"
@@ -537,8 +548,13 @@ pt:
       title: "Galeria"
       body: "Veja uma galeria de aplicativos e imagens artísticas criadas por nossos usuários"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Maiores de 13 anos"
+      cta: "Saber mais"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Maiores de 13 anos"
       cta: "Saber mais"
     frozen:
