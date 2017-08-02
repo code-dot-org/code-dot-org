@@ -11,6 +11,20 @@ class HomeControllerTest < ActionController::TestCase
     Properties.stubs(:get).returns nil
   end
 
+  test "redirect index when signed in" do
+    user = create(:user)
+    sign_in user
+    get :index
+
+    assert_redirected_to '/home'
+  end
+
+  test "redirect index when signed out" do
+    get :index
+
+    assert_redirected_to '/courses'
+  end
+
   test "language is determined from cdo.locale" do
     return  # TODO: get :home, and look for a div that still exists
 

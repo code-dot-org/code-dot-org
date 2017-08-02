@@ -4426,6 +4426,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -6509,6 +6511,8 @@
               name: Play Lab' da Olaylar
             More Programming in Maze:
               name: Labirentte Daha Fazla Programlama
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
@@ -6548,6 +6552,8 @@
               name: "İkilik Bileklikler"
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
@@ -7535,7 +7541,7 @@
             'Conditionals: Conditionals with Cards':
               name: 'Conditionals: Conditionals with Cards'
             Conditional Loops in Maze:
-              name: Conditional Loops in Maze
+              name: Labirentte Koşullar ve Döngüler
             'Variables: Envelope Variables':
               name: 'Variables: Envelope Variables'
             'For Loops: For Loop Fun':
@@ -7576,6 +7582,34 @@
               name: Play Lab' da Olaylar
             Spelling Bee:
               name: Heceleme Yarışması
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: teşekkürler
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: yeni kademe
+            test satge:
+              name: test satge
           title: ''
           description_audience: ''
           description_short: ''

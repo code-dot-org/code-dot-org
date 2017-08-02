@@ -54,19 +54,6 @@ def replace_hostname(url)
   url.gsub(/(\w+)\.(\w+)\.code\.org/, '\1-\2.code.org')
 end
 
-# Get the SCSS color constant for a given status.
-def color_for_status(status)
-  {
-    submitted: 'rgb(118, 101, 160)',    # $level_submitted
-    perfect: 'rgb(14, 190, 14)',        # $level_perfect
-    passed: 'rgb(159, 212, 159)',       # $level_passed
-    attempted: 'rgb(255, 255, 0)',      # $level_attempted
-    not_tried: 'rgb(254, 254, 254)',    # $level_not_tried
-    review_rejected: 'rgb(204, 0, 0)',  # $level_review_rejected
-    review_accepted: 'rgb(11, 142, 11)' # level_review_accepted
-  }[status.to_sym]
-end
-
 # When an individual step fails in a call to steps, one gets no feedback about
 # which step failed. This splits a set of steps into individual steps, and calls
 # each separately, so that when one fails we're told which.
@@ -481,47 +468,10 @@ Then /^mark the current level as completed on the client/ do
   @browser.execute_script 'dashboard.clientState.trackProgress(true, 1, 100, "hourofcode", appOptions.serverLevelId)'
 end
 
-Then /^I verify progress in the header of the current page is "([^"]*)" for level (\d+)/ do |test_result, level|
-  # Sometimes there's a momentary delay loading progress (which updates the color)
-  # so allow a brief wait for the appropriate styling to show up.
-  selector = ".header_level_container .react_stage a:nth(#{level.to_i - 1}) :first-child"
-  steps %{
-    And I wait until element "#{selector}" is in the DOM
-    And I wait up to 5 seconds for element "#{selector}" to have css property "background-color" equal to "#{color_for_status(test_result)}"
-  }
-end
-
-Then /^I open the progress drop down of the current page$/ do
-  steps %{
-    Then I click selector ".header_popup_link"
-    And I wait to see ".user-stats-block"
-  }
-end
-
-Then /^I verify progress in the drop down of the current page is "([^"]*)" for stage (\d+) level (\d+)/ do |test_result, stage, level|
-  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) :first-child"
-  steps %{
-    And I wait until element "#{selector}" is in the DOM
-    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
-  }
-end
-
-Then /^I verify progress for the selector "([^"]*)" is "([^"]*)"/ do |selector, progress|
-  element_has_css(selector, 'background-color', MODULE_PROGRESS_COLOR_MAP[progress.to_sym])
-end
-
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
   steps %{
     Then I am on "http://studio.code.org/s/#{course}"
     And I wait to see ".user-stats-block"
-  }
-end
-
-Then /^I verify progress for stage (\d+) level (\d+) is "([^"]*)"/ do |stage, level, test_result|
-  selector = "tbody tr:nth(#{stage.to_i - 1}) a:contains(#{level.to_i}) :first-child"
-  steps %{
-    And I wait until element "#{selector}" is visible
-    And element "#{selector}" has css property "background-color" equal to "#{color_for_status(test_result)}"
   }
 end
 
@@ -913,7 +863,7 @@ def generate_teacher_student(name, teacher_authorized)
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
-    And I wait until I am on "http://studio.code.org/courses"
+    And I wait until I am on "http://studio.code.org/home"
   }
 end
 
@@ -945,7 +895,7 @@ And(/^I create a student named "([^"]*)"$/) do |name|
     And I type "#{password}" into "#user_password_confirmation"
     And I select the "16" option in dropdown "user_user_age"
     And I click selector "#signup-button"
-    And I wait until I am on "http://studio.code.org/courses"
+    And I wait until I am on "http://studio.code.org/home"
   }
 end
 

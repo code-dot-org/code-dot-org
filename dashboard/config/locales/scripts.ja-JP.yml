@@ -167,64 +167,58 @@
               name: "アーティスト"
         course4:
           title: "コース4"
-          description: Course 4 is designed for students who have taken Course 2 and
-            3. Students will delve deeper into programming topics introduced in previous
-            courses to flexible solutions to more complex problems. By the end of
-            this course, students create interactive stories and games they can share
-            with anyone. Recommended for grades 4-8.
+          description: "コース 4は、 コース 2 と 3 を終了した学生向けです。彼らは、それぞれの挑戦を解決するときにいくつかの概念を結合する方法を学ぶように高められた複雑なパズルに取り組む方法を学びます。このコースを完了した時、学生は、ループのパラメーターを持つ関数を含む、複数なスキルを必要とされるプログラムが作れるようになります。4～8年生にお勧めです。"
           description_short: "コース4を始める前に、コース2とコース3を終わらせてください。"
-          description_audience: 10-18 才
+          description_audience: 9-18 才
           stages:
             Artist:
               name: "アーティスト"
             Artist Binary:
               name: "芸術家　２進法"
             'Artist: For Loops':
-              name: "芸術家：ループ用"
+              name: "アーティスト：ループ"
             'Artist: Functions':
               name: "アーティスト：関数"
             'Artist: Functions with Parameters':
-              name: "芸術家：　変数装置（パラメータ）をつけた関数"
+              name: "アーティスト：パラメータ付き関数"
             'Artist: Variables':
               name: "アーティスト：変数（へんすう）"
             'Bee: For Loops':
               name: "みつばち：ループ"
             'Bee: Functions with Parameters':
-              name: "みつばち：パラメーター（引数）付きの関数"
+              name: "みつばち：パラメーター付き関数"
             Extreme Challenge - Comprehensive:
-              name: Extreme Challenge - Comprehensive
+              name: "エクストリーム チャレンジ - 総合"
             Maze and Bee:
               name: "迷路とみつばち"
             'Play Lab: For Loops':
-              name: 'Play Lab: For Loops'
+              name: "プレイラボ：ループ"
             'Play Lab: Functions with Parameters':
-              name: "ラボを再生する：関数のパラメータを持ちます"
+              name: "プレイラボ：パラメータ付き関数"
             'Play Lab: Variables':
-              name: "ラボ再生：変数"
+              name: "プレイラボ：変数"
             Super Challenge - For Loops:
-              name: Super Challenge - For Loops
+              name: "スーパー チャレンジ - ループ"
             Super Challenge - Functions and Parameters:
-              name: Super Challenge - Functions and Parameters
+              name: "スーパー チャレンジ - 関数とパラメーター"
             Super Challenge - Variables:
-              name: Super Challenge - Variables
+              name: "スーパー チャレンジ - 変数"
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: "アンプラグド: バイナリ"
             'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
+              name: "アンプラグド: 変数"
             'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
+              name: "アンプラグド：ループ"
             'Unplugged: Madlibs':
-              name: 'Unplugged: Madlibs'
+              name: "アンプラグド: マドリブス"
             'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
+              name: "アンプラグド: 作曲"
             'Unplugged: Tangrams':
-              name: 'Unplugged: Tangrams'
+              name: "アンプラグド: タングラム"
         Course4pre:
-          title: Course 4 Prerequisite
-          description: A brief rampup of concepts for students who have not taken
-            Course 2 and 3.
-          description_short: A brief rampup of concepts for students who have not
-            taken Course 2 and 3.
+          title: "コース 4 を始める前に"
+          description: "コース 2 と 3 を終えていない学生のための、概念の簡単な復習。"
+          description_short: "コース 2 と 3 を終えていない学生のための、概念の簡単な復習。"
           description_audience: ''
           stages:
             'Artist: Functions':
@@ -3138,15 +3132,15 @@
           description_audience: Ages 10-110
           stages:
             'Artist: For Loops':
-              name: "芸術家：ループ用"
+              name: "アーティスト：ループ"
             'Artist: Functions with Parameters':
-              name: "芸術家：　変数装置（パラメータ）をつけた関数"
+              name: "アーティスト：パラメータ付き関数"
             'Artist: Variables':
               name: "アーティスト：変数（へんすう）"
             'Bee: For Loops':
               name: "みつばち：ループ"
             'Bee: Functions with Parameters':
-              name: "みつばち：パラメーター（引数）付きの関数"
+              name: "みつばち：パラメーター付き関数"
             Digital Citizenship:
               name: Digital Citizenship
             Explore project ideas:
@@ -3160,15 +3154,15 @@
             'Final Project - Work Day: Build Project Online':
               name: 'Final Project - Work Day: Build Project Online'
             'Play Lab: Variables':
-              name: "ラボ再生：変数"
+              name: "プレイラボ：変数"
             Try programming with Khan Academy:
               name: Try programming with Khan Academy
             'Unplugged: Envelope Variables':
-              name: 'Unplugged: Envelope Variables'
+              name: "アンプラグド: 変数"
             'Unplugged: For Loop Fun':
-              name: 'Unplugged: For Loop Fun'
+              name: "アンプラグド：ループ"
             'Unplugged: Songwriting with Parameters':
-              name: 'Unplugged: Songwriting with Parameters'
+              name: "アンプラグド: 作曲"
         ecs-unit1:
           title: ECS Part 1
           description: 'Unit 1: Human-Computer Interaction'
@@ -4414,6 +4408,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -4925,7 +4921,7 @@
             Digital Citizenship:
               name: Digital Citizenship
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: "アンプラグド: バイナリ"
             Artist Binary:
               name: "芸術家　２進法"
             Nested Loops in Bee:
@@ -6517,6 +6513,8 @@
               name: Events in Play Lab
             More Programming in Maze:
               name: More Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6556,6 +6554,8 @@
               name: "バイナリブレスレット"
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -6697,7 +6697,7 @@
                 of the coding skills they've learned to create an animated game. It's
                 time to get creative and make a game in Play Lab!
             'Unplugged: Binary':
-              name: 'Unplugged: Binary'
+              name: "アンプラグド: バイナリ"
               description_student: 'Learn how computers store pictures using simple
                 ideas like on and off. '
               description_teacher: Though many people think of binary as strictly
@@ -7585,6 +7585,34 @@
               name: Events in Play Lab
             Spelling Bee:
               name: "つづりみつばち"
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: "ありがとう"
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: new stage
+            test satge:
+              name: test satge
           title: ''
           description_audience: ''
           description_short: ''

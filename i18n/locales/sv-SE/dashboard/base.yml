@@ -182,6 +182,8 @@ sv:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Din sektion:'
@@ -190,6 +192,12 @@ sv:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(ta bort sektion)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'E-post'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Inbjuda skickades'
     added_teacher: '%{name} är tillagd som din lärare'
@@ -202,6 +210,7 @@ sv:
       section_not_found: "Kunde inte hitta ett avsnitt med koden \"%{section_code}\"."
       blank_code: "Ange en sektion kod"
       cant_join_own_section: "Tyvärr, du kan inte ansluta till ditt eget avsnitt."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org anmälan: %{student_name} är inte längre associerat som din student.'
@@ -225,6 +234,7 @@ sv:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ sv:
         calculate: 'Calculate something'
         applab: 'Skapa en App'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Hem"
       courses: "kurser"
       project_gallery: "Projektgalleriet"
@@ -537,8 +548,13 @@ sv:
       title: "Galleri"
       body: "Se ett galleri av app och artist bilder som skapats av våra användare"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Ålder 13+"
+      cta: "Läs mer"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Ålder 13+"
       cta: "Läs mer"
     frozen:

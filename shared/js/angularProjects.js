@@ -107,26 +107,24 @@ controllers.controller('ProjectsController', ['$scope', '$http', '$route', '$rou
   };
 
   $scope.showPublishProjectDialog = function (project) {
-    window.onShowConfirmPublishDialog(publishProject.bind(this, project));
+    var projectType = getProjectType(project);
+    window.onShowConfirmPublishDialog(project.id, projectType);
   };
 
-  var PROJECT_TYPES = ['applab', 'gamelab', 'weblab', 'artist', 'playlab'];
-
-  function publishProject(project) {
-    var type = getProjectType(project);
-    if (PROJECT_TYPES.indexOf(type) === -1) {
-      throw 'Cannot publish project of type "' + type + '"';
-    }
-    $http({
-      method:'POST',
-      url: '/v3/channels/' + project.id + '/publish/' + type,
-    }).then(function (response) {
-      if (response.data && response.data.publishedAt) {
-        project.publishedAt = response.data.publishedAt;
-        window.showNewPublishedProject(response.data, type);
+  // Make this method available to projects/index.js. This can go away
+  // once this file is moved to React.
+  window.setProjectPublishedAt = function (projectId, publishedAt) {
+    for (var i = 0; i < $scope.projects.length; i++) {
+      var project = $scope.projects[i];
+      if (project.id === projectId) {
+        project.publishedAt = publishedAt;
+        break;
       }
-    });
-  }
+    }
+
+    // Refresh the UI
+    $scope.$apply();
+  };
 
   $scope.unpublishProject = function (project) {
     $http({

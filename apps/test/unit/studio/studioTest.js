@@ -1,10 +1,9 @@
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
-import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
-import {singleton as StudioApp, stubStudioApp, restoreStudioApp} from '@cdo/apps/StudioApp';
+import {singleton as StudioApp} from '@cdo/apps/StudioApp';
 import instructions from '@cdo/apps/redux/instructions';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import pageConstants from '@cdo/apps/redux/pageConstants';
@@ -370,62 +369,6 @@ describe('studio', function () {
       const newDom = parseElement(newXml);
       expect(newDom.querySelector('block[type="when_run"]')
           .getAttribute('uservisible')).to.not.equal("false");
-    });
-  });
-
-  describe('displayFeedback', () => {
-    const containedLevelResult = {
-      id: 6669,
-      app: 'multi',
-      callback: 'http://localhost-studio.code.org:3000/milestone/2023/16504/6669',
-      result: {
-        response: 1,
-        result: true,
-        errorType: null,
-        submitted: false,
-        valid: true
-      },
-      feedback: 'This is feedback'
-    };
-    let getContainedLevelResultStub;
-    beforeEach(() => {
-      stubStudioApp();
-      getContainedLevelResultStub =
-        sinon.stub(codeStudioLevels, 'getContainedLevelResult')
-             .returns(containedLevelResult);
-      StudioApp().onFeedback = () => {};
-    });
-    afterEach(() => {
-      restoreStudioApp();
-      getContainedLevelResultStub.restore();
-    });
-
-    it('does not override feedback icon for normal levels', () => {
-      StudioApp().hasContainedLevels = false;
-      const displayFeedbackSpy = sinon.spy(StudioApp(), 'displayFeedback');
-
-      Studio.displayFeedback();
-
-      expect(displayFeedbackSpy.getCall(0).args[0].showFailureIcon).to.be.false;
-    });
-
-    it('does not override feedback icon for correct answers to contained levels', () => {
-      StudioApp().hasContainedLevels = true;
-      const displayFeedbackSpy = sinon.spy(StudioApp(), 'displayFeedback');
-
-      Studio.displayFeedback();
-
-      expect(displayFeedbackSpy.getCall(0).args[0].showFailureIcon).to.be.false;
-    });
-
-    it('overrides feedback icon for incorrect answers to contained levels', () => {
-      StudioApp().hasContainedLevels = true;
-      const displayFeedbackSpy = sinon.spy(StudioApp(), 'displayFeedback');
-      containedLevelResult.result.result = false;
-
-      Studio.displayFeedback();
-
-      expect(displayFeedbackSpy.getCall(0).args[0].showFailureIcon).to.be.true;
     });
   });
 

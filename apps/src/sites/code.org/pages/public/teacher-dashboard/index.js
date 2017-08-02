@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import experiments from '@cdo/apps/util/experiments';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import { renderSectionsPage } from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -193,6 +194,13 @@ function main() {
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionsController'
+      }
+    );
 
     // Angular does not offer a reliable way to wait for the template to load,
     // so do it using a custom event here.
@@ -203,6 +211,14 @@ function main() {
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',
                                              function ($scope, $routeParams, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'StudentDetailController'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
@@ -217,7 +233,13 @@ function main() {
 
   app.controller('SectionDetailController', ['$scope', '$routeParams', '$window', '$q', '$location', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $location, sectionsService, studentsService) {
-
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionDetailController'
+      }
+    );
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -258,6 +280,10 @@ function main() {
         $scope.selectedSection = $.grep(sections, function (section) { return (section.id == $routeParams.id);})[0];
       }
     );
+
+    $scope.teacher_managed_section = function (section) {
+      return ['email', 'word', 'picture'].includes(section.login_type);
+    };
 
     $scope.age_list = [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, "21+"];
 
@@ -401,6 +427,13 @@ function main() {
   }]);
 
   app.controller('MovingStudentsController', ['$route', '$scope', '$routeParams', '$q', '$window', '$http', 'sectionsService', function ($route, $scope, $routeParams, $q, $window, $http, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'MovingStudentsController'
+      }
+    );
     var self = this;
 
     // 'Other Section' selected
@@ -490,6 +523,13 @@ function main() {
 
   app.controller('SectionSigninCardsController', ['$scope', '$routeParams', '$window', '$q', 'sectionsService',
                                              function ($scope, $routeParams, $window, $q, sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionSigninCardsController'
+      }
+    );
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -517,6 +557,14 @@ function main() {
 
   app.controller('SectionProjectsController', ['$scope', '$routeParams', 'sectionsService',
       function ($scope, $routeParams,  sectionsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionProjectsController'
+      }
+    );
+
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.tab = 'projects';
@@ -546,6 +594,14 @@ function main() {
 
   app.controller('SectionProgressController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, sectionsService, studentsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionProgressController'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.progress = sectionsService.progress({id: $routeParams.id});
@@ -697,6 +753,14 @@ function main() {
 
   app.controller('SectionResponsesController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionResponsesController'
+      }
+    );
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -764,6 +828,14 @@ function main() {
 
   app.controller('SectionAssessmentsController', ['$scope', '$routeParams', '$window', '$q', '$timeout', '$interval', '$sanitize', 'sectionsService', 'studentsService',
                                              function ($scope, $routeParams, $window, $q, $timeout, $interval, $sanitize, sectionsService, studentsService) {
+    firehoseClient.putRecord(
+      'analysis-events',
+      {
+        study: 'teacher-dashboard-tabbing',
+        event: 'SectionAssessmentsController'
+      }
+    );
+
     // Some strings.
     var submission_list = {
       submitted:   i18n.dashboard_submission_submitted,
