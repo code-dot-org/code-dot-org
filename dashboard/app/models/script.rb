@@ -192,23 +192,6 @@ class Script < ActiveRecord::Base
     end
   end
 
-  # Get script and course info for the current user, formatted for passing to
-  # the client for new teacher dashboard UI.
-  # @param [User] user
-  # @return [AssignableInfo[]]
-  def self.valid_assignable_info(user)
-    valid_scripts(user).
-      map do |course_or_script|
-        info = ScriptConstants.assignable_info(course_or_script)
-        info[:name] = I18n.t("#{info[:name]}_name", default: info[:name])
-        info[:name] += " *" if course_or_script[:hidden]
-
-        info[:category] = I18n.t("#{info[:category]}_category_name", default: info[:category])
-
-        info
-      end
-  end
-
   # @param [User] user
   # @param script_id [String] id of the script we're checking the validity of
   # @return [Boolean] Whether this is a valid script ID
