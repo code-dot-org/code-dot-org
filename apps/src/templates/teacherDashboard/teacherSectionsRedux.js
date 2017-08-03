@@ -121,9 +121,9 @@ export const finishEditingSection = () => (dispatch, getState) => {
 export const asyncLoadSectionData = () => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   return Promise.all([
-    fetchSections(),
-    fetchValidCourses(),
-    fetchValidScripts()
+    fetchJSON('/dashboardapi/sections/'),
+    fetchJSON('/dashboardapi/courses'),
+    fetchJSON('/v2/sections/valid_scripts')
   ]).then(([sections, validCourses, validScripts]) => {
     dispatch(setValidAssignments(validCourses, validScripts));
     dispatch(setSections(sections));
@@ -133,25 +133,9 @@ export const asyncLoadSectionData = () => (dispatch) => {
   });
 };
 
-function fetchSections() {
+function fetchJSON(url) {
   return new Promise((resolve, reject) => {
-    $.getJSON('/dashboardapi/sections/')
-      .done(resolve)
-      .fail(reject);
-  });
-}
-
-function fetchValidCourses() {
-  return new Promise((resolve, reject) => {
-    $.getJSON('/dashboardapi/courses')
-      .done(resolve)
-      .fail(reject);
-  });
-}
-
-function fetchValidScripts() {
-  return new Promise((resolve, reject) => {
-    $.getJSON('/v2/sections/valid_scripts')
+    $.getJSON(url)
       .done(resolve)
       .fail(reject);
   });
