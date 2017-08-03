@@ -12,7 +12,7 @@ FactoryGirl.define do
   end
 
   factory :experiment do
-    name "fancyFeature"
+    sequence(:name) {|n| "fancyFeature#{n}"}
 
     factory :user_based_experiment, class: 'UserBasedExperiment' do
       type "UserBasedExperiment"
