@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Fix Laurel's path to get all of this treasure.",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To change how far the adventurer goes, change the number of times that the loop runs.\",\"hint_id\":\"courseA_collector_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ea00ea5b430d12025a7460bb50eeda3d/courseA_collector_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget that the adventurer needs to walk down and collect the treasure after she finishes the `repeat` loop!\",\"hint_id\":\"courseA_collector_loops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9c5301abe3e3ddbdec17b44a48404009/courseA_collector_loops4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To change how far Laurel goes, change the number of times that the loop runs.\",\"hint_id\":\"courseA_collector_loops4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4aab0aaee091bdf6ac74ec54bebb3398/courseA_collector_loops4.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget that Laurel needs to walk down and collect the treasure after she finishes the <xml><block type=\\\"controls_repeat_simplified_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title></block></xml> loop!\",\"hint_id\":\"courseA_collector_loops4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f078b24ab6c0a506c3693c703f4e4927/courseA_collector_loops4.mp3\"}]",
     "ideal": "6",
     "instructions_important": "false",
     "video_key": "C1_zuck_repeat_loop",
@@ -35,11 +35,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-26 18:40:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 18:40:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:39:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:41:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
