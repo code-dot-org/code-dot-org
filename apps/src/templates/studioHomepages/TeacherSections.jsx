@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
@@ -10,8 +10,8 @@ import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 import shapes from './shapes';
 
-const TeacherSections = React.createClass({
-  propTypes: {
+class TeacherSections extends Component {
+  static propTypes = {
     sections: shapes.sections, // Without experiment
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
@@ -19,11 +19,11 @@ const TeacherSections = React.createClass({
     //Redux provided
     numTeacherSections: PropTypes.number.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
-  },
+  };
 
   componentDidMount(){
     this.props.asyncLoadSectionData();
-  },
+  }
 
   renderNewSectionFlow() {
     const {numTeacherSections, isRtl} = this.props;
@@ -42,7 +42,7 @@ const TeacherSections = React.createClass({
         )}
       </ContentContainer>
     );
-  },
+  }
 
   render() {
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
@@ -71,7 +71,7 @@ const TeacherSections = React.createClass({
       </ContentContainer>
     );
   }
-});
+}
 export const UnconnectedTeacherSections = TeacherSections;
 export default connect(state => ({
   numTeacherSections: state.teacherSections.sectionIds.length
