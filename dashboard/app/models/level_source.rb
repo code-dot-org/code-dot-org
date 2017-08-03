@@ -51,4 +51,24 @@ class LevelSource < ActiveRecord::Base
       end
     end
   end
+
+  # @param [Integer] user_id The ID of the user performing the obfuscation.
+  # @return [String] The obfuscated (with the user_id) level source ID.
+  def obfuscate_level_source_id(user_id)
+    Base64.urlsafe_encode64("#{id}:#{user_id}")
+  end
+
+  # @param [String] obfuscated_level_source_id_user_id The obfuscated (with the user_id)
+  #   level_source ID.
+  # @param [Boolean] ignore_missing_user Whether to ignore the absence of the user specified by the
+  #   user ID when returning the level source ID. Default false.
+  # @return [Integer, nil] The (deobfuscated) level source ID, returns nil if the user specified in
+  #   the obfuscation does not exist.
+  def self.deobfuscate_level_source_id(obfuscated_level_source_id_user_id, ignore_missing_user: false)
+    level_source_id, user_id = Base64.urlsafe_decode64(obfuscated_level_source_id_user_id).split(':')
+    return level_source_id.to_i if ignore_missing_user || user_id.nil? || User.find_by_id(user_id)
+    nil
+  rescue
+    return nil
+  end
 end

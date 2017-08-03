@@ -93,6 +93,7 @@ const SectionsTable = React.createClass({
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
+    codeOrgUrlPrefix: PropTypes.string.isRequired,
     canLeave: PropTypes.bool.isRequired,
     updateSections: PropTypes.func.isRequired,
     updateSectionsResult: PropTypes.func.isRequired
@@ -106,6 +107,14 @@ const SectionsTable = React.createClass({
       this.props.updateSections(data.sections);
       this.props.updateSectionsResult("leave", data.result, sectionName);
     });
+  },
+
+  sectionHref(section) {
+    const { codeOrgUrlPrefix } = this.props;
+    if (section.numberOfStudents === 0) {
+      return `${codeOrgUrlPrefix}/teacher-dashboard#/sections/${section.id}/manage`;
+    }
+    return section.linkToProgress;
   },
 
   render() {
@@ -163,7 +172,7 @@ const SectionsTable = React.createClass({
             >
               <td style={{...styles.col, ...styles.sectionNameCol}}>
                 {isTeacher && (
-                  <a href={section.linkToProgress} style={styles.link}>
+                  <a href={this.sectionHref(section)} style={styles.link}>
                     {section.name}
                   </a>
                 )}

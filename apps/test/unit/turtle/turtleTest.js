@@ -99,6 +99,7 @@ describe('Artist', () => {
 
     beforeEach(() => {
       artist = new Artist();
+      artist.skin = { id: 'artist' };
 
       oldXml = `
         <block type="when_run">

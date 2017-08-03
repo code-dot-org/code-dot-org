@@ -233,6 +233,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
+  def workshop_admin?
+    permission? UserPermission::WORKSHOP_ADMIN
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
@@ -271,9 +275,7 @@ class User < ActiveRecord::Base
   # Revokes all escalated permissions associated with the user, including admin status and any
   # granted UserPermission's.
   def revoke_all_permissions
-    self.admin = nil
-    save(validate: false)
-
+    update_attribute(:admin, nil)
     UserPermission.where(user_id: id).each(&:destroy)
   end
 
@@ -818,7 +820,7 @@ class User < ActiveRecord::Base
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
   def last_attempt_for_any(levels, script_id: nil)
-    level_ids = levels.map(&:id)
+    level_ids = levels.pluck(:id)
     conditions = {
       user_id: id,
       level_id: level_ids
@@ -1075,9 +1077,9 @@ class User < ActiveRecord::Base
   # Return a collection of courses and scripts for the user. First in the list will
   # be courses enrolled in by the user's sections. Following that will be all scripts
   # in which the user has made progress that are not in any of the enrolled courses.
-  def recent_courses_and_scripts
+  def recent_courses_and_scripts(exclude_primary_script)
     courses = section_courses
-    course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
+    course_scripts_script_ids = courses.map(&:course_scripts).flatten.pluck(:script_id).uniq
 
     # filter out those that are already covered by a course
     user_scripts = in_progress_and_completed_scripts.
@@ -1092,16 +1094,24 @@ class User < ActiveRecord::Base
       }
     end
 
+    primary_script_id = primary_script.try(:id)
+
     user_script_data = user_scripts.map do |user_script|
-      script_id = user_script[:script_id]
-      script = Script.get_from_cache(script_id)
-      {
-        name: script[:name],
-        title: data_t_suffix('script.name', script[:name], 'title'),
-        description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
-        link: script_path(script),
-      }
-    end
+      # Skip this script if we are excluding the primary script and this is the
+      # primary script.
+      if exclude_primary_script && user_script[:script_id] == primary_script_id
+        nil
+      else
+        script_id = user_script[:script_id]
+        script = Script.get_from_cache(script_id)
+        {
+          name: script[:name],
+          title: data_t_suffix('script.name', script[:name], 'title'),
+          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+          link: script_path(script),
+        }
+      end
+    end.compact
 
     course_data + user_script_data
   end
@@ -1444,7 +1454,7 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
-    teachers.map(&:terms_of_service_version).try(:compact).try(:max)
+    teachers.pluck(:terms_of_service_version).try(:compact).try(:max)
   end
 
   # Returns whether the user has accepted the latest major version of the Terms of Service

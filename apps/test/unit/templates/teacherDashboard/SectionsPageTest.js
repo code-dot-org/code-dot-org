@@ -5,6 +5,7 @@ import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { UnconnectedSectionsPage as SectionsPage }
   from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 
 const defaultProps = {
   validScripts: [],
@@ -53,47 +54,88 @@ describe('SectionsPage', () => {
     assert(requests.some(request => request.url === '/dashboardapi/sections/'));
   });
 
-  describe('with sectionFocus experiment', () => {
-    it('queries for courses', () => {
-      shallow(
-        <SectionsPage
-          {...defaultProps}
-        />, options
-      );
+  it('queries for courses', () => {
+    shallow(
+      <SectionsPage
+        {...defaultProps}
+      />, options
+    );
 
-      assert.equal(requests.length, 2);
-      assert.equal(requests[0].url, '/dashboardapi/courses');
-    });
+    assert.equal(requests.length, 2);
+    assert.equal(requests[0].url, '/dashboardapi/courses');
+  });
 
-    it('sets sectionsLoaded only after sections and courses are loaded', () => {
+  it('sets sectionsLoaded only after sections and courses are loaded', () => {
+    const wrapper = shallow(
+      <SectionsPage
+        {...defaultProps}
+      />, options
+    );
+    assert.equal(wrapper.state('sectionsLoaded'), false);
+    requests[0].respond(200, {}, '[]');
+    assert.equal(wrapper.state('sectionsLoaded'), false);
+    requests[1].respond(200, {}, '[]');
+    assert.equal(wrapper.state('sectionsLoaded'), true);
+  });
+
+  it('calls setValidAssignments after sections and courses are loaded', () => {
+    const setValidAssignments = sinon.spy();
+    shallow(
+      <SectionsPage
+        {...defaultProps}
+        setValidAssignments={setValidAssignments}
+      />, options
+    );
+
+    // respond to courses
+    requests[0].respond(200, {}, '[]');
+    assert(setValidAssignments.notCalled);
+
+    // respond to sections
+    requests[1].respond(200, {}, '[]');
+    assert(setValidAssignments.called);
+  });
+
+  it('provides default course id when creating new section', () => {
+    const newSectionFunction = sinon.spy();
+    const wrapper = shallow(
+      <SectionsPage
+        {...defaultProps}
+        defaultCourseId={30}
+        defaultScriptId={112}
+        newSection={newSectionFunction}
+      />, options
+    );
+    requests[0].respond(200, {}, '[]');
+    requests[1].respond(200, {}, '[]');
+    assert.equal(wrapper.state('sectionsLoaded'), true);
+
+    const newSectionButton = wrapper.find('Button').first();
+    newSectionButton.simulate('click');
+    assert.deepEqual(newSectionFunction.firstCall.args, [30]);
+  });
+
+  describe('with sections flow experiment', () => {
+    before(() => experiments.setEnabled(SECTION_FLOW_2017, true));
+    after(() => experiments.setEnabled(SECTION_FLOW_2017, true));
+
+    it('provides default courseId and scriptId when creating new section', () => {
+      const newSectionFunction = sinon.spy();
       const wrapper = shallow(
         <SectionsPage
           {...defaultProps}
+          defaultCourseId={30}
+          defaultScriptId={112}
+          beginEditingNewSection={newSectionFunction}
         />, options
       );
-      assert.equal(wrapper.state('sectionsLoaded'), false);
       requests[0].respond(200, {}, '[]');
-      assert.equal(wrapper.state('sectionsLoaded'), false);
       requests[1].respond(200, {}, '[]');
       assert.equal(wrapper.state('sectionsLoaded'), true);
-    });
 
-    it('calls setValidAssignments after sections and courses are loaded', () => {
-      const setValidAssignments = sinon.spy();
-      shallow(
-        <SectionsPage
-          {...defaultProps}
-          setValidAssignments={setValidAssignments}
-        />, options
-      );
-
-      // respond to courses
-      requests[0].respond(200, {}, '[]');
-      assert(setValidAssignments.notCalled);
-
-      // respond to sections
-      requests[1].respond(200, {}, '[]');
-      assert(setValidAssignments.called);
+      const newSectionButton = wrapper.find('Button').first();
+      newSectionButton.simulate('click');
+      assert.deepEqual(newSectionFunction.firstCall.args, [30, 112]);
     });
   });
 });

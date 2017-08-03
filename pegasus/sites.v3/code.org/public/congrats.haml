@@ -31,7 +31,7 @@ max_age: 60
 
   facebook = {:u=>share_url}
   twitter = {:url=>share_url, :related=>'codeorg', :text=>I18n.t('just_did_hoc_donor', donor_twitter: get_random_donor_twitter)}
-  twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc).include? '#HourOfCode'
+  twitter[:hashtags] = 'HourOfCode' unless I18n.t(:just_did_hoc_donor).include? '#HourOfCode'
 
   company_param = params[:co]
   # Do not show company profile sections for the cartoon network, even if someone

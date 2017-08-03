@@ -194,28 +194,28 @@ namespace :test do
 
     desc 'Runs dashboard tests if dashboard might have changed from staging.'
     task :dashboard do
-      run_tests_if_changed('dashboard', ['dashboard/**/*', 'lib/**/*', 'shared/**/*'], ignore: ['dashboard/test/ui/**/*']) do
+      run_tests_if_changed('dashboard', ['Gemfile', 'dashboard/**/*', 'lib/**/*', 'shared/**/*'], ignore: ['dashboard/test/ui/**/*']) do
         TestRunUtils.run_dashboard_tests
       end
     end
 
     desc 'Runs pegasus tests if pegasus might have changed from staging.'
     task :pegasus do
-      run_tests_if_changed('pegasus', ['pegasus/**/*', 'lib/**/*', 'shared/**/*']) do
+      run_tests_if_changed('pegasus', ['Gemfile', 'pegasus/**/*', 'lib/**/*', 'shared/**/*']) do
         TestRunUtils.run_pegasus_tests
       end
     end
 
     desc 'Runs shared tests if shared might have changed from staging.'
     task :shared do
-      run_tests_if_changed('shared', ['shared/**/*', 'lib/**/*']) do
+      run_tests_if_changed('shared', ['Gemfile', 'shared/**/*', 'lib/**/*']) do
         TestRunUtils.run_shared_tests
       end
     end
 
     desc 'Runs lib tests if lib might have changed from staging.'
     task :lib do
-      run_tests_if_changed('lib', ['lib/**/*']) do
+      run_tests_if_changed('lib', ['Gemfile', 'lib/**/*']) do
         TestRunUtils.run_lib_tests
       end
     end
