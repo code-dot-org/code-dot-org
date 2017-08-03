@@ -70,6 +70,14 @@ class ActivitiesControllerTest < ActionController::TestCase
     AsyncProgressHandler.stubs(:progress_queue).returns(@fake_queue)
   end
 
+  # TODO(asher): This probably should be refactored to a more reusable location within our dashboard
+  # testing code.
+  # @return [Integer, nil] The ID of the user signed in (per session warden), or nil if no user is
+  #   signed in.
+  def current_user_id
+    session['warden.user.user.key'].try(:first).try(:first)
+  end
+
   # Ignore any additional keys in 'actual' not found in 'expected'.
   # This allows additional keys to be added to the controller response
   # without having to update all existing test contracts.
@@ -100,10 +108,11 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   def build_try_again_response(options = {})
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     {
       previous_level: build_script_level_path(@script_level_prev),
       message: 'try again',
-      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}",
     }.merge options
   end
 
@@ -135,7 +144,8 @@ class ActivitiesControllerTest < ActionController::TestCase
     end
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
+    expected_response = build_expected_response(level_source: "http://test.host/r/#{obfuscated_level_source_url}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created a user script
@@ -301,9 +311,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     # pretend it succeeded
     assert_response :success
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
       total_lines: 15, # No change
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
@@ -327,9 +338,10 @@ class ActivitiesControllerTest < ActionController::TestCase
     # pretend it succeeded
     assert_response :success
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
       total_lines: 1015, # Pretend it was 1000
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
@@ -379,7 +391,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
+    expected_response = build_expected_response(level_source: "http://test.host/r/#{obfuscated_level_source_url}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created gallery activity and activity for user
@@ -409,7 +422,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
+    expected_response = build_expected_response(level_source: "http://test.host/r/#{obfuscated_level_source_url}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     # created gallery activity and activity for user
@@ -438,7 +452,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
+    expected_response = build_expected_response(level_source: "http://test.host/r/#{obfuscated_level_source_url}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     assert_equal @user, Activity.last.user
@@ -465,7 +480,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
+    expected_response = build_expected_response(level_source: "http://test.host/r/#{obfuscated_level_source_url}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
 
     assert_equal @user, Activity.last.user
@@ -566,8 +582,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}",
       save_to_gallery_url: "/gallery"\
         "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
@@ -608,8 +625,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}",
       save_to_gallery_url: "/gallery"\
         "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
@@ -643,8 +661,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}",
       save_to_gallery_url: "/gallery"\
         "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
@@ -680,8 +699,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}",
       save_to_gallery_url: "/gallery"\
         "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
@@ -717,8 +737,9 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_equal level_source, assigns(:level_source)
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
-      level_source: "http://test.host/c/#{assigns(:level_source).id}",
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}",
       save_to_gallery_url: "/gallery"\
         "?gallery_activity%5Blevel_source_id%5D=#{assigns(:level_source).id}"\
         "&gallery_activity%5Buser_level_id%5D=#{assigns(:user_level).try(:id)}"
@@ -760,7 +781,8 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
-    expected_response = build_expected_response(level_source: "http://test.host/c/#{assigns(:level_source).id}")
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
+    expected_response = build_expected_response(level_source: "http://test.host/r/#{obfuscated_level_source_url}")
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
 
@@ -808,9 +830,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
       total_lines: 0,
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -834,9 +857,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
       total_lines: 10,
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -866,7 +890,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     assert_equal 10, client_state.lines
 
     assert_response :success
-    assert_equal_expected_keys build_try_again_response, JSON.parse(@response.body)
+    assert_equal_expected_keys build_try_again_response(user_id: nil), JSON.parse(@response.body)
   end
 
   test "anonymous milestone with image saves image but does not save to gallery" do
@@ -895,9 +919,10 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
 
+    obfuscated_level_source_url = assigns(:level_source).obfuscate_level_source_id(current_user_id)
     expected_response = build_expected_response(
       total_lines: 10,
-      level_source: "http://test.host/c/#{assigns(:level_source).id}"
+      level_source: "http://test.host/r/#{obfuscated_level_source_url}"
     )
     assert_equal_expected_keys expected_response, JSON.parse(@response.body)
   end
@@ -1085,7 +1110,7 @@ class ActivitiesControllerTest < ActionController::TestCase
     response = JSON.parse(@response.body)
 
     assert_nil response['share_failure']
-    assert response['level_source'].match(/^http:\/\/test.host\/c\//)
+    assert response['level_source'].match(/^http:\/\/test.host\/r\//)
   end
 
   test 'milestone changes to next stage in default script' do
