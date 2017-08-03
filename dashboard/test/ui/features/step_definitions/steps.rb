@@ -47,6 +47,9 @@ def replace_hostname(url)
   if ENV['HOUROFCODE_TEST_DOMAIN']
     url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
   end
+  if ENV['CSEDWEEK_TEST_DOMAIN']
+    url = url.gsub(/\/\/csedweek.org\//, "//" + ENV['CSEDWEEK_TEST_DOMAIN'] + "/")
+  end
 
   # Convert http to https
   url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
