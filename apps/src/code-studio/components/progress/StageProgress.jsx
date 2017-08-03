@@ -11,17 +11,14 @@ import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 const styles = {
   headerContainer: {
     // With our new bubble we don't want any padding above/below
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
+    paddingTop: 0,
+    paddingBottom: 0,
     paddingLeft: 5,
     paddingRight: 5,
     backgroundColor: color.lightest_gray,
     border: `1px solid ${color.lighter_gray}`,
     borderRadius: 5,
     height: 40,
-    marginLeft: 4,
-    marginRight: 4,
   },
   pillContainer: {
     // Vertical padding is so that this lines up with other bubbles
@@ -50,6 +47,7 @@ const StageProgress = React.createClass({
           <div
             key={index}
             style={{
+              display: 'inline-block',
               ...(level.isUnplugged && level.isCurrentLevel && styles.pillContainer)
             }}
           >
