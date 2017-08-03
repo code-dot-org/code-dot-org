@@ -1226,6 +1226,36 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_equal assigns(:level), level
   end
 
+  test "should present experiment level if in the experiment" do
+    sign_in @student
+    experiment = create :single_user_experiment, min_user_id: @student.id
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
+        properties: {'variants': {'maze 1': {'active': false, 'experiment': experiment.name}}}
+      )
+    )
+    assert_equal assigns(:level), level
+  end
+
+  test "should not present experiment level if not in the experiment" do
+    sign_in @student
+    experiment = create :single_user_experiment, min_user_id: @student.id + 1
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
+        properties: {'variants': {'maze 1': {'active': false, 'experiment': experiment.name}}}
+      )
+    )
+    assert_equal assigns(:level), level2
+  end
+
   def put_student_in_section(student, teacher, script)
     section = create :section, user_id: teacher.id, script_id: script.id
     Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
