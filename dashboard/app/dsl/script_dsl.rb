@@ -212,7 +212,7 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level), sl.progression, sl.target, sl.challenge, sl.variants[level.name].try(:[], 'experiment')).map {|l| l.indent(2)})
+            s.concat(serialize_level(level, type, sl.active?(level), sl.progression, sl.target, sl.challenge, sl.experiment(level)).map {|l| l.indent(2)})
           end
           s << 'endvariants'
         else
