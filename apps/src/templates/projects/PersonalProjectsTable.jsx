@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
+import i18n from "@cdo/locale";
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -22,6 +23,9 @@ const styles = {
   },
   tr: {
     border: '1px solid black'
+  },
+  thThumbnail: {
+    width: 62
   }
 };
 
@@ -36,6 +40,7 @@ const PersonalProjectsTable = React.createClass({
       <table style={styles.table}>
         <tbody>
           <tr style={styles.tr}>
+            <th style={styles.thThumbnail}></th>
             <th>Project Name</th>
             <th>App Type</th>
             <th>Last Edited</th>
@@ -50,9 +55,11 @@ const PersonalProjectsTable = React.createClass({
                     src={project.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
                     style={styles.thumbnail}
                   />
+                </td>
+                <td>
                   {project.name}
                 </td>
-                <td>{project.type}</td>
+                <td>{appToString[project.type]}</td>
                 <td>{project.updatedAt}</td>
                 <td style={styles.publishedCell}>
                   {project.isPublished && <FontAwesome icon="circle"/>}
@@ -89,6 +96,14 @@ const convertChannelsToProjectData = function (projects) {
       updatedAt: projectLists[i].updatedAt
     }
   ));
+};
+
+const appToString = {
+  gamelab: i18n.projectTypeGamelab(),
+  applab: i18n.projectTypeApplab(),
+  artist: i18n.projectTypeArtist(),
+  playlab: i18n.projectTypePlaylab(),
+  weblab: i18n.projectTypeWeblab()
 };
 
 export default PersonalProjectsTable;
