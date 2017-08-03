@@ -13,7 +13,7 @@ const WorkshopManagement = React.createClass({
 
   propTypes: {
     workshopId: React.PropTypes.number.isRequired,
-    subject: React.PropTypes.string.isRequired,
+    subject: React.PropTypes.string,
     viewUrl: React.PropTypes.string.isRequired,
     editUrl: React.PropTypes.string,
     onDelete: React.PropTypes.func,
