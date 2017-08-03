@@ -46,6 +46,7 @@ module.exports = function (config) {
       "test/unit-tests.js": ["webpack"],
       "test/code-studio-tests.js": ["webpack", "sourcemap"],
       "test/storybook-tests.js": ["webpack", "sourcemap"],
+      "test/scratch-tests.js": ["webpack"],
     },
 
     webpack: webpackConfig,

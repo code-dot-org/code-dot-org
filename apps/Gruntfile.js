@@ -321,6 +321,7 @@ testsContext.keys().forEach(testsContext);
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/scratch/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/storybook/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
@@ -363,6 +364,21 @@ testsContext.keys().forEach(testsContext);
       }),
       files: [
         {src: ['test/integration-tests.js'], watched: false},
+      ],
+    },
+    scratch: {
+      coverageReporter: {
+        dir: 'coverage/scratch',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'scratch.xml',
+      }),
+      files: [
+        {src: ['test/scratch-tests.js'], watched: false},
       ],
     },
     storybook: {
@@ -804,6 +820,12 @@ testsContext.keys().forEach(testsContext);
     'preconcat',
     'concat',
     'karma:integration'
+  ]);
+
+  grunt.registerTask('scratchTest', [
+    'preconcat',
+    'concat',
+    'karma:scratch',
   ]);
 
   // Note: Be sure if you add additional test types, you also up date test-low-memory.sh

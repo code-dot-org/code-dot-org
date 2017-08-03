@@ -1,6 +1,8 @@
 /* global Scratch */
 
-import { TestResults } from '@cdo/apps/constants.js';
+import * as testUtils from '../util/testUtils';
+import { assert }  from '../util/configuredChai';
+import loadScratch from '@cdo/apps/sites/studio/pages/init/loadScratch';
 
 const project = {
   "targets": [
@@ -260,16 +262,21 @@ const project = {
   }
 };
 
-export default {
-  app: 'scratch',
-  levelDefinition: {
-    scratch: true,
-    lastAttempt: JSON.stringify(project),
-  },
-  tests: [
-    {
-      description: 'Scratch movement test',
-      runBeforeClick: assert => {
+describe('scratch', function () {
+  testUtils.throwOnConsoleErrors();
+  testUtils.throwOnConsoleWarnings();
+  testUtils.setExternalGlobals();
+
+  it('Scratch movement test', function (done) {
+    loadScratch({
+      containerId: 'app',
+      baseUrl: '/base/build/package/',
+      app: 'scratch',
+      level: {
+        scratch: true,
+        lastAttempt: JSON.stringify(project),
+      },
+      onInitialize: () => {
         const vm = Scratch.vm;
 
         assert.equal(vm.runtime.targets[1].x, 0);
@@ -277,27 +284,17 @@ export default {
         assert.equal(vm.runtime.targets[1].direction, 90);
 
         setTimeout(() => {
-          $('#green-flag').click();
+          document.querySelector('#green-flag').click();
 
           setTimeout(() => {
             assert.equal(vm.runtime.targets[1].x, 100);
             assert.equal(vm.runtime.targets[1].y, -100);
             assert.equal(vm.runtime.targets[1].direction, 180);
 
-            // Complete the puzzle.
-            window.appOptions.onAttempt({
-              result: true,
-              testResult: TestResults.FREE_PLAY,
-            });
-
-            window.appOptions.onFeedback();
+            done();
           }, 100);
         }, 0);
       },
-      expected: {
-        result: true,
-        testResult: TestResults.FREE_PLAY,
-      },
-    },
-  ],
-};
+    });
+  });
+});
