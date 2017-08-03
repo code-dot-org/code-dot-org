@@ -56,6 +56,7 @@ class TeacherSections extends Component {
             isRtl={isRtl}
             isTeacher
             canLeave={false}
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
         ) : (
           <SectionsSetUpMessage isRtl={isRtl}/>
