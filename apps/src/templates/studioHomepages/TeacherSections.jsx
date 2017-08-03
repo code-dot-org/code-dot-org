@@ -8,9 +8,11 @@ import OwnedSections from '../teacherDashboard/OwnedSections';
 import SectionsTable from '../studioHomepages/SectionsTable';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
+import shapes from './shapes';
 
 const TeacherSections = React.createClass({
   propTypes: {
+    sections: shapes.sections,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
 
@@ -24,7 +26,7 @@ const TeacherSections = React.createClass({
   },
 
   render() {
-    const {numTeacherSections, codeOrgUrlPrefix, isRtl} = this.props;
+    const {sections, numTeacherSections, codeOrgUrlPrefix, isRtl} = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
     const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
@@ -32,9 +34,8 @@ const TeacherSections = React.createClass({
       <div className="sectionsContainer">
         <ContentContainer
           heading={i18n.sectionsTitle()}
-          linkText={i18n.manageSections()}
-          link={editSectionsUrl}
-          showLink={!sectionFlow2017}
+          linkText={!sectionFlow2017 && i18n.manageSections()}
+          link={!sectionFlow2017 && editSectionsUrl}
           isRtl={isRtl}
         >
           {numTeacherSections > 0 && sectionFlow2017 && (
@@ -42,6 +43,7 @@ const TeacherSections = React.createClass({
           )}
           {(numTeacherSections > 0 && !sectionFlow2017) &&
             <SectionsTable
+              sections={sections}
               isRtl={isRtl}
               isTeacher
               canLeave={false}

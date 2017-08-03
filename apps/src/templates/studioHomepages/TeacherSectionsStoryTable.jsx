@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {setSections, serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '../teacherDashboard/oauthClassroomRedux';
-import Sections from './Sections';
+import TeacherSections from './TeacherSections';
 
 const sections = [
   {
@@ -49,7 +49,7 @@ export default [
       store.dispatch(setSections(serverSections));
       return (
         <Provider store={store}>
-          <Sections
+          <TeacherSections
             sections={sections}
             codeOrgUrlPrefix = "http://code.org/"
             isRtl={false}
@@ -68,70 +68,12 @@ export default [
       const store = createStoreWithReducers();
       return (
         <Provider store={store}>
-          <Sections
+          <TeacherSections
             sections={[]}
             codeOrgUrlPrefix = "http://code.org/"
             isRtl={false}
             isTeacher={true}
             canLeave={false}
-          />
-        </Provider>
-      );
-    }
-  },
-  {
-    name: 'Sections - student, no sections yet',
-    description: 'shows a join sections component with attention-grabbing dashed border',
-    story: () => {
-      registerReducers({teacherSections, oauthClassroom});
-      return (
-        <Provider store={createStoreWithReducers()}>
-          <Sections
-            sections={[]}
-            codeOrgUrlPrefix = "http://code.org/"
-            isRtl={false}
-            isTeacher={false}
-            canLeave={false}
-          />
-        </Provider>
-      );
-    }
-  },
-  {
-    name: 'Sections - student, enrolled in sections but does NOT have permission to leave the sections',
-    description: 'shows a sections table, no column for leave buttons, and a solid border join section component',
-    story: () => {
-      registerReducers({teacherSections, oauthClassroom});
-      const store = createStoreWithReducers();
-      store.dispatch(setSections(serverSections));
-      return (
-        <Provider store={store}>
-          <Sections
-            sections={sections}
-            codeOrgUrlPrefix = "http://code.org/"
-            isRtl={false}
-            isTeacher={false}
-            canLeave={false}
-          />
-        </Provider>
-      );
-    }
-  },
-  {
-    name: 'Sections - student, enrolled in sections and does have permission to leave the sections',
-    description: 'shows a sections table, including a column for leave buttons, and a solid border join section component',
-    story: () => {
-      registerReducers({teacherSections, oauthClassroom});
-      const store = createStoreWithReducers();
-      store.dispatch(setSections(serverSections));
-      return (
-        <Provider store={store}>
-          <Sections
-            sections={sections}
-            codeOrgUrlPrefix = "http://code.org/"
-            isRtl={false}
-            isTeacher={false}
-            canLeave={true}
           />
         </Provider>
       );
