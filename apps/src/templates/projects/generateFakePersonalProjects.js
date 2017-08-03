@@ -13,3 +13,15 @@ export function generateFakePersonalProjects(n) {
     }
   ));
 }
+
+export function generateFakePersonalProjectsForTable(n) {
+  return _.range(n).map(i => (
+    {
+      name: "Personal " + i,
+      updatedAt: 'a day ago',
+      projectType: 'gamelab',
+      id: 'abcd',
+      isPublished: Math.random() >= 0.5
+    }
+  ));
+}
