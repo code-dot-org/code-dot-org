@@ -4,8 +4,8 @@ import sinon from 'sinon';
 import { assert } from '../../../util/configuredChai';
 import { throwOnConsoleErrors, throwOnConsoleWarnings }
   from '../../../util/testUtils';
-import { UnconnectedSectionsPage as SectionsPage }
-  from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import { UnconnectedOwnedSections as OwnedSections }
+  from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 
 const defaultProps = {
@@ -21,14 +21,14 @@ const defaultProps = {
   asyncLoadSectionData: () => {},
 };
 
-describe('SectionsPage', () => {
+describe('OwnedSections', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('provides default course id when creating new section', () => {
     const newSectionFunction = sinon.spy();
     const wrapper = shallow(
-      <SectionsPage
+      <OwnedSections
         {...defaultProps}
         defaultCourseId={30}
         defaultScriptId={112}
@@ -48,7 +48,7 @@ describe('SectionsPage', () => {
     it('provides default courseId and scriptId when creating new section', () => {
       const newSectionFunction = sinon.spy();
       const wrapper = shallow(
-        <SectionsPage
+        <OwnedSections
           {...defaultProps}
           defaultCourseId={30}
           defaultScriptId={112}
