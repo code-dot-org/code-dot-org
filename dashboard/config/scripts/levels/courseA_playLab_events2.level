@@ -46,7 +46,7 @@
     ],
     "timeout_failure_tick": "250",
     "callout_json": "[]",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a block that that lets the dog `say` something.\",\"hint_id\":\"courseA_playLab_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c5f575aed4608322b8d5d9c591661d45/courseA_playLab_events2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Here is the block you should connect to the `when run` block: \\n\\n![](https://images.code.org/ae72d1270ad210cd00fae7e0dfb3549a-image-1478144412134.png)\",\"hint_id\":\"courseA_playLab_events2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d0c0b4f500ae870361b5782acada0ee0/courseA_playLab_events2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Look for a block that that makes the dog say something.\",\"hint_id\":\"courseA_playLab_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/16b34367daef5c24d3547086ebaebd57/courseA_playLab_events2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the code you need to complete this puzzle:\\n\\n<xml>\\n<block type=\\\"when_run\\\" movable=\\\"false\\\" deletable=\\\"false\\\">\\n<next>\\n<block type=\\\"studio_saySpriteChoices\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"VALUE\\\">Hi there.</title>\\n  </block>\\n</next>\\n</block>\\n</xml>\",\"hint_id\":\"courseA_playLab_events2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/374d8d9e05cdaa452f3b376b2c7c2bce/courseA_playLab_events2.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -54,14 +54,14 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 17:56:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:00:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 17:56:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-28 22:00:38 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:08:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 17:45:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run"/>
+        <block type="when_run" movable="false" deletable="false"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

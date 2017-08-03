@@ -30,6 +30,11 @@ var baseConfig = {
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
+      // `scratch-storage` depends on `got`, which depends on a specific feature
+      // of the `http` module. Webpack 1 and 2 provide different implementations
+      // of `http` via `node-libs-browser`. While we're still on Webpack 1,
+      // override resolving of `http` to point to the newer implementation.
+      http: 'stream-http',
     }
   },
   sassLoader: {

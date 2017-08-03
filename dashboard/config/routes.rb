@@ -79,12 +79,24 @@ Dashboard::Application.routes.draw do
   get '/u/:id', to: redirect('/c/%{id}')
   get '/u/:id/:action_id', to: redirect('/c/%{id}/%{action_id}')
 
+  # These links should no longer be created (August 2017), though we will continue to support
+  # existing links. Instead, create /r/ links.
   resources :level_sources, path: '/c/', only: [:show, :edit, :update] do
     member do
       get 'generate_image'
       get 'original_image'
     end
   end
+  # These routes are being created to replace the /c/ routes (August 2017) so as to include the ID
+  # of the sharing user in the URL. Doing so allows us to block showing the level source if the user
+  # deletes themself.
+  resources :obfuscated_level_sources, path: '/r/', controller: :level_sources, param: :level_source_id_and_user_id, only: [:show, :edit, :update] do
+    member do
+      get 'generate_image'
+      get 'original_image'
+    end
+  end
+
   get '/share/:id', to: redirect('/c/%{id}')
 
   devise_scope :user do
@@ -252,7 +264,7 @@ Dashboard::Application.routes.draw do
   post '/admin/manual_pass', to: 'admin_users#manual_pass', as: 'manual_pass'
   get '/admin/permissions', to: 'admin_users#permissions_form', as: 'permissions_form'
   post '/admin/grant_permission', to: 'admin_users#grant_permission', as: 'grant_permission'
-  post '/admin/revoke_all_permissions', to: 'admin_users#revoke_all_permissions', as: 'revoke_all_permissions'
+  get '/admin/revoke_permission', to: 'admin_users#revoke_permission', as: 'revoke_permission'
 
   get '/admin/styleguide', to: redirect('/styleguide/')
 

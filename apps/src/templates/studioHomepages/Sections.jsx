@@ -63,6 +63,7 @@ const Sections = React.createClass({
               sections={sections}
               isRtl={isRtl}
               isTeacher={isTeacher}
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
               canLeave={canLeave}
               updateSections={this.updateSections}
               updateSectionsResult={this.updateSectionsResult}

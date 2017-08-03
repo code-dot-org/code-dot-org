@@ -91,6 +91,7 @@ def parse_options
     options.pegasus_domain = 'test.code.org'
     options.dashboard_domain = 'test-studio.code.org'
     options.hourofcode_domain = 'test.hourofcode.com'
+    options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.html = nil
     options.maximize = nil
@@ -128,6 +129,7 @@ def parse_options
         options.pegasus_domain = 'localhost.code.org:3000'
         options.dashboard_domain = 'localhost-studio.code.org:3000'
         options.hourofcode_domain = 'localhost.hourofcode.com:3000'
+        options.csedweek_domain = 'localhost.csedweek.org:3000'
       end
       opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
         if p == 'localhost:3000'
@@ -145,6 +147,9 @@ def parse_options
       end
       opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
         options.hourofcode = d
+      end
+      opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
+        options.csedweek = d
       end
       opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
         options.realmobile = 'true'
@@ -636,6 +641,7 @@ def run_feature(browser, feature, options)
   run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
   run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
+  run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
   run_environment['MOBILE'] = browser['mobile'] ? "true" : "false"

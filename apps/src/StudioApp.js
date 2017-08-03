@@ -35,7 +35,6 @@ import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './templates/WireframeButtons';
 import annotationList from './acemode/annotationList';
 import color from "./util/color";
-import experiments from './util/experiments';
 import i18n from './code-studio/i18n';
 import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
@@ -218,7 +217,8 @@ StudioApp.prototype.configure = function (options) {
   // NOTE: editCode (which currently implies droplet) and usingBlockly_ are
   // currently mutually exclusive.
   this.editCode = options.level && options.level.editCode;
-  this.usingBlockly_ = !this.editCode;
+  this.scratch = options.level && options.level.scratch;
+  this.usingBlockly_ = !this.editCode && !this.scratch;
   if (options.report &&
       options.report.fallback_response) {
     this.skipUrl = options.report.fallback_response.success.redirect;
@@ -516,7 +516,7 @@ StudioApp.prototype.init = function (config) {
 
   initializeContainedLevel();
 
-  if (experiments.isEnabled('challengeDialog') && config.isChallengeLevel) {
+  if (config.isChallengeLevel) {
     const startDialogDiv = document.createElement('div');
     document.body.appendChild(startDialogDiv);
     ReactDOM.render(
@@ -670,6 +670,12 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     this.editor.setValue(resetValue);
 
     annotationList.clearRuntimeAnnotations();
+  } else if (this.scratch) {
+    const workspace = Blockly.getMainWorkspace();
+    workspace.clear();
+
+    const dom = Blockly.Xml.textToDom(config.level.startBlocks);
+    Blockly.Xml.domToWorkspace(dom, workspace);
   }
   if (config.afterClearPuzzle) {
     promise = config.afterClearPuzzle(config);
@@ -1394,6 +1400,8 @@ StudioApp.prototype.resizeToolboxHeader = function () {
     toolboxWidth = categories.getBoundingClientRect().width;
   } else if (this.isUsingBlockly()) {
     toolboxWidth = Blockly.mainBlockSpaceEditor.getToolboxWidth();
+  } else if (this.scratch) {
+    toolboxWidth = Blockly.getMainWorkspace().getMetrics().toolboxWidth;
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -1768,8 +1776,10 @@ StudioApp.prototype.configureDom = function (config) {
   var runClick = this.runButtonClick.bind(this);
   var clickWrapper = (config.runButtonClickWrapper || runButtonClickWrapper);
   var throttledRunClick = _.debounce(clickWrapper.bind(null, runClick), 250, {leading: true, trailing: false});
-  dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-  dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  if (runButton && resetButton) {
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+  }
 
   // TODO (cpirich): make conditional for applab
   var belowViz = document.getElementById('belowVisualization');

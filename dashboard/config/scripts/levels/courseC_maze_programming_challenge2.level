@@ -25,17 +25,20 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"*If you send me backwards, be extra careful that I turn the correct way!*\",\"hint_id\":\"courseC_maze_programming_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec30030a89c51b8a2697ecedd0004fd3/courseC_maze_programming_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The shortest solution use only 5 blocks, but it uses the `repeat` block!\",\"hint_id\":\"courseC_maze_programming_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3ae5c0b6cca6ccf6146f9495e88a0106/courseC_maze_programming_challenge2.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"*If you send me backwards, be extra careful that I turn the correct way!*\",\"hint_id\":\"courseC_maze_programming_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ec30030a89c51b8a2697ecedd0004fd3/courseC_maze_programming_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The shortest solution uses only 5 blocks, but it uses the `repeat` block!\",\"hint_id\":\"courseC_maze_programming_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/efe67ba669956a7394b9461772edfc8c/courseC_maze_programming_challenge2.mp3\"}]",
     "markdown_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "ideal": "9",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-29 20:25:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 20:25:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-08-02 16:26:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

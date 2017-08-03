@@ -264,16 +264,24 @@
   learn_back_to_minecraft: Nadaljuj učenje z Minecraftom
   hoc_is_here: Learn computer science. It's changing everything.  https://youtu.be/QvyTEx1wyOY.
   just_did_hoc: 'Pravkar sem končal #UraZaKodo! @codeorg'
-  just_did_course1: I just finished Course 1 - check it out! @codeorg
+  just_did_course1: I just finished Course 1 - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_course2: Pravkar sem končal Tečaj 2! @codeorg
   just_did_course3: Pravkar sem končal Tečaj 3! @codeorg
-  just_did_course4: I just finished Course 4 - check it out! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_course4: I just finished Course 4 - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Pravkar sem končal Pospešeni Tečaj! @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
@@ -1959,3 +1967,9 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

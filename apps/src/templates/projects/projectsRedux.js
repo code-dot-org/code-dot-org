@@ -103,12 +103,20 @@ export function selectGallery(projectType = Galleries.PUBLIC) {
  * @param {Array} projects A list of projects which are all older than the
  * the current oldest project, newest first.
  * @param {string} projectType The type of the projects being added.
- * @returns {{projects: Array, projectType: string, type: string}}
+ *   Valid values include applab, gamelab, playlab, or artist.
  */
 export function appendProjects(projects, projectType) {
   return {type: APPEND_PROJECTS, projects, projectType};
 }
 
+/**
+ * Takes a list of projects and adds it to the front of the list of projects of
+ * the specified type.
+ * @param {Array} projects A list of projects which are all newer than the
+ * the current newest project, newest first.
+ * @param {string} projectType The type of the projects being added.
+ *   Valid values include applab, gamelab, playlab, or artist.
+ */
 export function prependProjects(projects, projectType) {
   return {type: PREPEND_PROJECTS, projects, projectType};
 }

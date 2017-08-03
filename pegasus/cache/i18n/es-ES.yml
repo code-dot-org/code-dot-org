@@ -276,12 +276,18 @@
   just_did_course2: Acabo de terminar el Curso 2 - échale un vistazo! @codeorg
   just_did_course3: Acabo de terminar el Curso 3 - echa un vistazo! @codeorg
   just_did_course4: Acabo de terminar el Curso 4 - échale un vistazo! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Acabo de terminar el Curso Acelerado - echa un vistazo! @codeorg
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
@@ -2039,3 +2045,9 @@
   csp_name: "'16-'17 Principios de CS"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

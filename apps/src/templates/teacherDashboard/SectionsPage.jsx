@@ -40,6 +40,8 @@ const sectionsApiPath = '/dashboardapi/sections/';
 class SectionsPage extends Component {
   static propTypes = {
     validScripts: PropTypes.array.isRequired,
+    defaultCourseId: PropTypes.number,
+    defaultScriptId: PropTypes.number,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -68,7 +70,13 @@ class SectionsPage extends Component {
   }
 
   componentDidMount() {
-    const { validScripts, setValidAssignments, setSections } = this.props;
+    const {
+      validScripts,
+      setValidAssignments,
+      setSections,
+      defaultCourseId,
+      defaultScriptId
+    } = this.props;
     let validCourses;
     let sections;
 
@@ -89,6 +97,12 @@ class SectionsPage extends Component {
       sections = response;
       onAsyncLoad();
     });
+
+    // If we have a default courseId and/or scriptId, we want to start with our
+    // dialog open. Add a new section with this course/script as default
+    if (defaultCourseId || defaultScriptId) {
+      this.addSection();
+    }
   }
 
   handleImportOpen = () => {
@@ -115,10 +129,13 @@ class SectionsPage extends Component {
   };
 
   addSection = () => {
+    const { defaultCourseId, defaultScriptId } = this.props;
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection();
+      this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
     } else {
-      return this.props.newSection();
+      // This is the only usage of the newSection action, and can be removed once
+      // SECTION_FLOW_2017 is finished
+      return this.props.newSection(defaultCourseId);
     }
   };
 
