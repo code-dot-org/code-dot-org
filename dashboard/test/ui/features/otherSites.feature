@@ -16,3 +16,4 @@ Examples:
   | http://uk.code.org/learn                                          | uk.code.org learn          |
   | http://ro.code.org/                                               | ro.code.org home           |
   | http://ro.code.org/learn                                          | ro.code.org learn          |
+  | http://code.org/curriculum/unplugged                              | code.org curriculum        |
