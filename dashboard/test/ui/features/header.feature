@@ -18,10 +18,12 @@ Scenario: Signed out user in English should see 6 header links
   And I see "#header-en-projects"
   And element "#header-en-projects" contains text "Project Gallery"
 
-Scenario: Student in English should see 2 header links
+Scenario: Student in English should see 3 header links
   Given I create a student named "Sally Student"
   Then check that I am on "http://studio.code.org/home"
   And I wait to see ".headerlinks"
+  And I see "#header-student-home"
+  And element "#header-student-home" contains text "Home"
   And I see "#header-student-courses"
   And element "#header-student-courses" contains text "Courses"
   And I see "#header-student-projects"
