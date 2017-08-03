@@ -45,9 +45,7 @@ const STUDIO_URL_PREFIX = '//foo-studio.code.org';
  * @param {string} projectName Expected project name
  * @param {string} studentName Expected student name
  * @param {string} appType Expected app type (App Lab, Game Lab, etc)
- * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
- *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
- *   The desired date format which we will show in all browsers is MM/DD/YYYY.
+ * @param {string} lastEdited Expected last edited date (MM/DD/YYYY).
  */
 function assertRowContents(rowElement, thumbnailUrl, projectName, studentName, appType, lastEdited) {
   assertRowThumbnail(rowElement, thumbnailUrl);
@@ -70,9 +68,7 @@ function assertRowThumbnail(rowElement, thumbnailUrl) {
  * @param {string} projectName Expected project name
  * @param {string} studentName Expected student name
  * @param {string} appType Expected app type (App Lab, Game Lab, etc)
- * @param {string} lastEdited Expected last edited date (Month DD, YYYY). Note that this
- *   format is used only in unit tests due to incorrect date formatting in PhantomJS.
- *   The desired date format which we will show in all browsers is MM/DD/YYYY.
+ * @param {string} lastEdited Expected last edited date (MM/DD/YYYY).
  */
 function assertRowContentsWithoutThumbnail(rowElement, projectName, studentName, appType, lastEdited) {
   expect(rowElement.childNodes[COLUMNS_WITHOUT_THUMBNAILS.PROJECT_NAME].innerText).to.equal(projectName);
@@ -112,7 +108,7 @@ describe('SectionProjectsList', () => {
 
     it('is compatible with the time zone of the test browser', () => {
       const date = new Date(STUB_PROJECTS_DATA[0].updatedAt);
-      expect(date.toLocaleDateString()).to.equal('December 29, 2016');
+      expect(date.toLocaleDateString()).to.equal('12/29/2016');
     });
   });
 
@@ -129,20 +125,20 @@ describe('SectionProjectsList', () => {
     expect(rows).to.have.length(5);
 
     assertRowContentsWithoutThumbnail(rows.nodes[0], 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContentsWithoutThumbnail(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContentsWithoutThumbnail(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContentsWithoutThumbnail(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContentsWithoutThumbnail(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContentsWithoutThumbnail(rows.nodes[1], 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContentsWithoutThumbnail(rows.nodes[2], 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContentsWithoutThumbnail(rows.nodes[3], 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContentsWithoutThumbnail(rows.nodes[4], 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
   });
 
     it('initially shows all projects, most recently edited first', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[3], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
 
     const lastEditedHeader = root.find('th').at(COLUMNS.LAST_EDITED);
     expect(lastEditedHeader.node.innerText).to.contain('Last Edited');
@@ -153,10 +149,10 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
+    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[4], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
   });
 
   it('can be sorted by project name', () => {
@@ -169,10 +165,10 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[4], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
+    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[3], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContents(rows.nodes[4], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
 
     // Sort in descending order by project name
     projectNameHeader.simulate('click');
@@ -180,10 +176,10 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
   });
 
   it('can be sorted by student name', () => {
@@ -196,10 +192,10 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[3], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[4], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[2], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
+    assertRowContents(rows.nodes[3], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContents(rows.nodes[4], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
 
     // Sort in descending order by student name
     projectNameHeader.simulate('click');
@@ -207,12 +203,12 @@ describe('SectionProjectsList', () => {
     rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[2], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
+    assertRowContents(rows.nodes[1], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContents(rows.nodes[2], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
     // There is no secondary sort key. When the sort by name is reversed, elements with the same
     // primary sort key do not change in order relative to each other.
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
   });
 
   it('can be sorted by app type', () => {
@@ -225,10 +221,10 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(5);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[4], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
+    assertRowContents(rows.nodes[2], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContents(rows.nodes[3], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[4], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
 
     // Sort in descending order by student name
     appTypeHeader.simulate('click');
@@ -238,10 +234,10 @@ describe('SectionProjectsList', () => {
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
     // There is no secondary sort key. When the sort by name is reversed, elements with the same
     // primary sort key do not change in order relative to each other.
-    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
-    assertRowContents(rows.nodes[3], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[2], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
+    assertRowContents(rows.nodes[3], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContents(rows.nodes[4], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
   });
 
   it('shows the correct list of students in the student filter dropdown', () => {
@@ -264,8 +260,8 @@ describe('SectionProjectsList', () => {
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[2], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
   });
 
   it('can filter by student and then sort by app type', () => {
@@ -282,8 +278,8 @@ describe('SectionProjectsList', () => {
     const rows = root.find('tr');
     expect(rows).to.have.length(3);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
+    assertRowContents(rows.nodes[1], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
+    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
   });
 
   it('shows all students projects if the current students projects all disappear', () => {
@@ -294,7 +290,7 @@ describe('SectionProjectsList', () => {
     let rows = root.find('tr');
     expect(rows).to.have.length(2);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', 'November 30, 2016');
+    assertRowContents(rows.nodes[1], CAT_IMAGE_URL, 'Cats and Kittens', 'Charlie', 'Web Lab', '11/30/2016');
 
     // Remove Charlie's project from the list
     const newProjectsData = Array.from(STUB_PROJECTS_DATA);
@@ -309,9 +305,9 @@ describe('SectionProjectsList', () => {
     expect(select.nodes[0].value).to.equal('_all_students');
     expect(rows).to.have.length(4);
     assertRowContents(rows.nodes[0], null, 'Project Name', 'Student Name', 'Type', 'Last Edited');
-    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', 'January 1, 2017');
-    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', 'December 29, 2016');
-    assertRowContents(rows.nodes[3], null, 'A1 Locksmith', 'Alice', 'App Lab', 'October 29, 2016');
+    assertRowContents(rows.nodes[1], null, 'Dominoes', 'Bob', 'Game Lab', '1/1/2017');
+    assertRowContents(rows.nodes[2], null, 'Antelope Freeway', 'Alice', 'Web Lab', '12/29/2016');
+    assertRowContents(rows.nodes[3], null, 'A1 Locksmith', 'Alice', 'App Lab', '10/29/2016');
 
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
