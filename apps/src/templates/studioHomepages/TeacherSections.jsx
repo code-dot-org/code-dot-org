@@ -48,7 +48,7 @@ const TeacherSections = React.createClass({
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
       return this.renderNewSectionFlow();
     }
-    const {sections, numTeacherSections, codeOrgUrlPrefix, isRtl} = this.props;
+    const {sections, codeOrgUrlPrefix, isRtl} = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
 
     return (
@@ -58,14 +58,12 @@ const TeacherSections = React.createClass({
         link={editSectionsUrl}
         isRtl={isRtl}
       >
-        {numTeacherSections > 0 ? (
+        {sections.length > 0 ? (
           <SectionsTable
             sections={sections}
             isRtl={isRtl}
             isTeacher
             canLeave={false}
-            updateSections={this.updateSections}
-            updateSectionsResult={this.updateSectionsResult}
           />
         ) : (
           <SectionsSetUpMessage isRtl={isRtl}/>
@@ -74,6 +72,7 @@ const TeacherSections = React.createClass({
     );
   }
 });
+export const UnconnectedTeacherSections = TeacherSections;
 export default connect(state => ({
   numTeacherSections: state.teacherSections.sectionIds.length
 }), {

@@ -94,8 +94,8 @@ const SectionsTable = React.createClass({
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
-    updateSections: PropTypes.func.isRequired,
-    updateSectionsResult: PropTypes.func.isRequired
+    updateSections: PropTypes.func,
+    updateSectionsResult: PropTypes.func
   },
 
   onLeave(sectionCode, sectionName) {
