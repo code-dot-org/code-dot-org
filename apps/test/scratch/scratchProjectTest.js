@@ -1,5 +1,6 @@
 /* global Scratch */
 
+import sinon from 'sinon';
 import * as testUtils from '../util/testUtils';
 import { assert }  from '../util/configuredChai';
 import loadScratch from '@cdo/apps/sites/studio/pages/init/loadScratch';
@@ -266,6 +267,7 @@ describe('scratch', function () {
   testUtils.throwOnConsoleErrors();
   testUtils.throwOnConsoleWarnings();
   testUtils.setExternalGlobals();
+  sinon.stub(console, 'log');
 
   it('Scratch movement test', function (done) {
     loadScratch({
