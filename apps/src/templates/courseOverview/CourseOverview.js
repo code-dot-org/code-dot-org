@@ -20,7 +20,7 @@ export default class CourseOverview extends Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })).isRequired,
-    teacherResources: PropTypes.arrayOf(resourceShape),
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired

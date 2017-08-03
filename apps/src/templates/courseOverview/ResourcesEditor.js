@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
 import CourseOverviewTopRow from './CourseOverviewTopRow';
-import ResourceType, { stringForType } from './resourceType';
+import ResourceType, { stringForType, resourceShape } from './resourceType';
 
 const styles = {
   box: {
@@ -14,7 +14,6 @@ const styles = {
 const defaultLinks = {
   '': '',
   [ResourceType.teacherForum]: 'https://forum.code.org/',
-  // TODO: better defaults
   [ResourceType.curriculum]: '/link/to/curriculum',
   [ResourceType.professionalLearning]: '/link/to/professional/learning',
 };
@@ -22,27 +21,19 @@ const defaultLinks = {
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
   };
 
   constructor(props) {
     super(props);
 
-    this.state = {
-      resources: [
-        {
-          type: '',
-          link: ''
-        },
-        {
-          type: '',
-          link: ''
-        },
-        {
-          type: '',
-          link: ''
-        },
-      ]
-    };
+    const resources = [...props.resources];
+    // add empty entries to get to three
+    while (resources.length < 3) {
+      resources.push({type: '', link: ''});
+    }
+
+    this.state = { resources };
   }
 
   handleChangeType = (event, index) => {

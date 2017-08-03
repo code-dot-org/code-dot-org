@@ -11,7 +11,7 @@ export default class CourseOverviewTopRow extends Component {
     })).isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    resources: PropTypes.arrayOf(resourceShape)
+    resources: PropTypes.arrayOf(resourceShape).isRequired,
   };
 
   render() {
