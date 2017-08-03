@@ -43,7 +43,7 @@ describe('SectionsPage', () => {
 
   describe('with sections flow experiment', () => {
     before(() => experiments.setEnabled(SECTION_FLOW_2017, true));
-    after(() => experiments.setEnabled(SECTION_FLOW_2017, true));
+    after(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
     it('provides default courseId and scriptId when creating new section', () => {
       const newSectionFunction = sinon.spy();
