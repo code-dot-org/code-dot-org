@@ -180,7 +180,7 @@ module LevelsHelper
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
       if current_user && @script
-        view_options(authored_hints_used_ids: Set.new(AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).map(&:hint_id)))
+        view_options(authored_hints_used_ids: AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).pluck(:hint_id).uniq)
       end
     end
 
@@ -200,6 +200,8 @@ module LevelsHelper
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
+    elsif @level.is_a? Scratch
+      @app_options = scratch_options
     elsif @level.unplugged?
       @app_options = unplugged_options
     else
@@ -233,7 +235,7 @@ module LevelsHelper
         section.save(validate: false)
       end
       @app_options[:experiments] =
-        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
     end
 
@@ -271,6 +273,19 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def scratch_options
+    app_options = {
+      baseUrl: Blockly.base_url,
+      skin: {},
+      app: 'scratch',
+    }
+    app_options[:level] = @level.properties.camelize_keys
+    app_options[:level][:scratch] = true
+    app_options[:level][:editCode] = false
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -637,7 +652,7 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.all.map(&:key)
+    Video.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs

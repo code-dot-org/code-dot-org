@@ -87,7 +87,7 @@ class Pd::WorkshopSurvey < ActiveRecord::Base
   end
 
   def get_facilitator_names
-    pd_enrollment ? pd_enrollment.workshop.facilitators.map(&:name) : []
+    pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
   end
 
   # Is this the first survey completed by this user? Note that we use

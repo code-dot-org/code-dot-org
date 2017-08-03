@@ -16,7 +16,7 @@ class Pd::CourseFacilitator < ActiveRecord::Base
   belongs_to :facilitator, class_name: 'User'
 
   def self.facilitators_for_course(course)
-    facilitator_ids = Pd::CourseFacilitator.where(course: course).map(&:facilitator_id)
+    facilitator_ids = Pd::CourseFacilitator.where(course: course).pluck(:facilitator_id)
     User.where(id: facilitator_ids).order(:name)
   end
 end

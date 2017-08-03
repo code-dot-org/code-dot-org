@@ -25,15 +25,20 @@
     "definition_highlight": "false",
     "definition_collapse": "false",
     "disable_examples": "false",
-    "authored_hints": "[]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"There are many ways to get to the pig. Use your finger to find a path then program it!\",\"hint_id\":\"courseC_maze_programming_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/73286c77c58585b6c125ea27afd21df9/courseC_maze_programming_challenge1.mp3\"}]",
     "markdown_instructions": "*\"The pig is hiding! Can you help me find a way around?\"*",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "step_speed": "5",
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 15:55:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
