@@ -24,7 +24,7 @@ export default class SectionsPage extends Component {
   }
 }
 
-const Breadcrumb = () => (
+export const Breadcrumb = () => (
   <div
     style={{
       marginTop: 20,
