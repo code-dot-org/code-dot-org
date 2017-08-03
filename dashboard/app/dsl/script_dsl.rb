@@ -212,7 +212,17 @@ class ScriptDSL < BaseDSL
         if sl.levels.count > 1
           s << 'variants'
           sl.levels.each do |level|
-            s.concat(serialize_level(level, type, sl.active?(level), sl.progression, sl.target, sl.challenge, sl.experiment(level)).map {|l| l.indent(2)})
+            s.concat(
+              serialize_level(
+                level,
+                type,
+                sl.active?(level),
+                sl.progression,
+                sl.target,
+                sl.challenge,
+                sl.experiment(level)
+              ).map {|l| l.indent(2)}
+            )
           end
           s << 'endvariants'
         else
@@ -224,7 +234,15 @@ class ScriptDSL < BaseDSL
     s.join("\n")
   end
 
-  def self.serialize_level(level, type, active = nil, progression = nil, target = nil, challenge = nil, experiment = nil)
+  def self.serialize_level(
+    level,
+    type,
+    active = nil,
+    progression = nil,
+    target = nil,
+    challenge = nil,
+    experiment = nil
+  )
     s = []
     if level.key.start_with? 'blockly:'
       s << "skin '#{level.skin}'" if level.try(:skin)
