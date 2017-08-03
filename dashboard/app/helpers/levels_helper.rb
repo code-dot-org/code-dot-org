@@ -770,4 +770,19 @@ module LevelsHelper
   def include_multi_answers?(standalone)
     standalone || current_user.try(:should_see_inline_answer?, @script_level)
   end
+
+  def get_level_source_image(level_image, level_source_id)
+    level_source_image = nil
+    # Store the image only if the image is set, and the image has not been saved
+    if level_image && level_source_id
+      level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
+      unless level_source_image
+        level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
+        unless level_source_image.save_to_s3(Base64.decode64(level_image))
+          level_source_image = nil
+        end
+      end
+    end
+    level_source_image
+  end
 end
