@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
+import { resourceShape } from './resourceType';
 
 const styles = {
   input: {
@@ -22,6 +23,7 @@ export default class CourseEditor extends Component {
     descriptionTeacher: PropTypes.string,
     scriptsInCourse: PropTypes.arrayOf(PropTypes.string).isRequired,
     scriptNames: PropTypes.arrayOf(PropTypes.string).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
   };
 
   render() {
@@ -33,6 +35,7 @@ export default class CourseEditor extends Component {
       descriptionTeacher,
       scriptsInCourse,
       scriptNames,
+      teacherResources,
     } = this.props;
     return (
       <div>
@@ -91,7 +94,7 @@ export default class CourseEditor extends Component {
             Select up to three Teacher Resources buttons you'd like to have show up on
             the top of the course overview page
           </div>
-          <ResourcesEditor inputStyle={styles.input}/>
+          <ResourcesEditor inputStyle={styles.input} resources={teacherResources}/>
         </label>
       </div>
     );
