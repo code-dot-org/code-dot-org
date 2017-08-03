@@ -26,7 +26,7 @@ describe('ProgressPill', () => {
   });
 
   it('renders a provided tooltip', () => {
-    const tooltip = <ReactTooltip id="123"/>;
+    const tooltip = <ReactTooltip tooltipId="123"/>;
 
     const wrapper = shallow(
       <ProgressPill
