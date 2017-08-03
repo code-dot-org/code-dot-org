@@ -11,7 +11,7 @@ import SectionsTable from '../studioHomepages/SectionsTable';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 
-const Sections = React.createClass({
+const StudentSections = React.createClass({
   propTypes: {
     sections: React.PropTypes.array, // student sections!  Teacher sections are in redux
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
@@ -114,4 +114,4 @@ export default connect(state => ({
   numTeacherSections: state.teacherSections.sectionIds.length
 }), {
   asyncLoadSectionData,
-})(Sections);
+})(StudentSections);

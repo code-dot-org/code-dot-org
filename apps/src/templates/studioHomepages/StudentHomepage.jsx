@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
-import Sections from './Sections';
+import StudentSections from './StudentSections';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -44,7 +44,7 @@ const StudentHomepage = React.createClass({
           studentTopCourse={studentTopCourse}
         />
 
-        <Sections
+        <StudentSections
           sections={sections}
           isRtl={isRtl}
           isTeacher={false}
