@@ -212,4 +212,17 @@ describe('TeacherHomepage', () => {
       isRtl: false
     });
   });
+
+  it('shows ProjectWidgetWithData component', () => {
+    const wrapper = shallow(
+      <TeacherHomepage
+        announcements={[]}
+        courses={courses}
+        sections={[]}
+        codeOrgUrlPrefix="http://localhost:3000/"
+        isRtl={false}
+      />
+    );
+    expect(wrapper.find('ProjectWidgetWithData').exists());
+  });
 });
