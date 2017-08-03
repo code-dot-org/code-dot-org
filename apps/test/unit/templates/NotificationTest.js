@@ -25,7 +25,7 @@ const success = {
 };
 
 const failure = {
-  notice: "Lex Luther Attacked Metropolis",
+  notice: "Lex Luthor Attacked Metropolis",
   details: "If you're in the Metropolis area, get to saftey as quickly as possible",
   dismissible: false
 };
