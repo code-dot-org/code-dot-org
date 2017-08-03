@@ -15,6 +15,7 @@ import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import EditSectionDialog from "@cdo/apps/templates/teacherDashboard/EditSectionDialog";
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
+import {SectionsSetUpMessage} from '@cdo/apps/templates/studioHomepages/SetUpMessage';
 
 const defaultProps = {
   numSections: 3,
@@ -113,27 +114,16 @@ describe('OwnedSections', () => {
     beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
     afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
-    it('renders jumbotron when no sections have been created', () => {
+    it('renders SectionsSetUpMessage when no sections have been created', () => {
       const wrapper = shallow(
         <OwnedSections
           {...defaultProps}
           numSections={0}
         />
       );
-      const instance = wrapper.instance();
       expect(wrapper).to.containMatchingElement(
         <div>
-          <div>
-            <Button
-              text="New section"
-              onClick={instance.addSection}
-            />
-            <div className="jumbotron">
-              <p>
-                {i18n.createSectionsInfo()}
-              </p>
-            </div>
-          </div>
+          <SectionsSetUpMessage/>
           <RosterDialog
             isOpen={false}
             studioUrl={defaultProps.studioUrl}

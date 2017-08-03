@@ -7,7 +7,6 @@ import {SectionsSetUpMessage} from './SetUpMessage';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import SectionsTable from '../studioHomepages/SectionsTable';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
-import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
 import shapes from './shapes';
 
 class TeacherSections extends Component {
@@ -26,20 +25,13 @@ class TeacherSections extends Component {
   }
 
   renderNewSectionFlow() {
-    const {numTeacherSections, isRtl} = this.props;
+    const {isRtl} = this.props;
     return (
       <ContentContainer
         heading={i18n.sectionsTitle()}
         isRtl={isRtl}
       >
-        {numTeacherSections > 0 ? (
-          <OwnedSections/>
-        ) : (
-          <div>
-            <SectionsSetUpMessage isRtl={isRtl}/>
-            <AddSectionDialog handleImportOpen={() => {}/* TODO */}/>
-          </div>
-        )}
+        <OwnedSections isRtl={isRtl}/>
       </ContentContainer>
     );
   }
