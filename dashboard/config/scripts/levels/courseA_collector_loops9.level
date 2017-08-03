@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "**Challenge:** The treasure goes all the way up these stairs!  Write the code to help Laurel get it all.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't spot the best places to use loops, try coding it out step-by-step and look for a pattern. \",\"hint_id\":\"courseA_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9761876eae82d3a74e6d00f0fa2c771a/courseA_collector_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Does the code feel really long?  Try putting two of your `repeat` loops inside of another loop to make it much shorter!\",\"hint_id\":\"courseA_collector_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/cd6366be866cafd5322cc1d79da4f0d0/courseA_collector_loops9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't spot the best places to use loops, try coding it out step-by-step and look for a pattern. \",\"hint_id\":\"courseA_collector_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9761876eae82d3a74e6d00f0fa2c771a/courseA_collector_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try putting 2 of your <xml><block type=\\\"controls_repeat_simplified_dropdown\\\"><title name=\\\"TIMES\\\" config=\\\"3-10\\\">???</title></block></xml> loops inside of another loop to make your code shorter!\",\"hint_id\":\"courseA_collector_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6d9745a7f1a44b6d2a11d5eb1bf4430c/courseA_collector_loops9.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "12",
     "ideal": "19",
@@ -36,11 +36,12 @@
     "disable_if_else_editing": "false",
     "tts_instructions_override": "Challenge: The treasure goes all the way up these stairs!  Write the code to help Laurel get it all.",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 20:34:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 20:34:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:41:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 16:43:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -28,17 +28,18 @@
     "fast_get_nectar_animation": "false",
     "instructions": "What should you add to this code to get all of the treasure?",
     "ideal": "10",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out what comes next, try running the code to see where Laurel ends up.\",\"hint_id\":\"courseA_collector_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1bb7d7789a8e9688ee73baa43eeced90/courseA_collector_loops7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"The piece of this code that is missing looks a lot like the other two repeat loops, just moving in a different direction.\",\"hint_id\":\"courseA_collector_loops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bcce95a5d875b3135456104b0467a643/courseA_collector_loops7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out what comes next, try running the code to see where Laurel ends up.\",\"hint_id\":\"courseA_collector_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1bb7d7789a8e9688ee73baa43eeced90/courseA_collector_loops7.mp3\"}]",
     "instructions_important": "false",
     "min_collected": "12",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-26 18:22:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-26 18:44:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-26 18:22:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-26 18:44:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:40:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
