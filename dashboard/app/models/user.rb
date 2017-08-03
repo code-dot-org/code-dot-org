@@ -233,6 +233,10 @@ class User < ActiveRecord::Base
     permission? UserPermission::WORKSHOP_ORGANIZER
   end
 
+  def workshop_admin?
+    permission? UserPermission::WORKSHOP_ADMIN
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
@@ -816,7 +820,7 @@ class User < ActiveRecord::Base
   # Returns the most recent (via updated_at) user_level for any of the specified
   # levels.
   def last_attempt_for_any(levels, script_id: nil)
-    level_ids = levels.map(&:id)
+    level_ids = levels.pluck(:id)
     conditions = {
       user_id: id,
       level_id: level_ids
@@ -1075,7 +1079,7 @@ class User < ActiveRecord::Base
   # in which the user has made progress that are not in any of the enrolled courses.
   def recent_courses_and_scripts(exclude_primary_script)
     courses = section_courses
-    course_scripts_script_ids = courses.map(&:course_scripts).flatten.map(&:script_id).uniq
+    course_scripts_script_ids = courses.map(&:course_scripts).flatten.pluck(:script_id).uniq
 
     # filter out those that are already covered by a course
     user_scripts = in_progress_and_completed_scripts.
@@ -1450,7 +1454,7 @@ class User < ActiveRecord::Base
     if teacher?
       return terms_of_service_version
     end
-    teachers.map(&:terms_of_service_version).try(:compact).try(:max)
+    teachers.pluck(:terms_of_service_version).try(:compact).try(:max)
   end
 
   # Returns whether the user has accepted the latest major version of the Terms of Service

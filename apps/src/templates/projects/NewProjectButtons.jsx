@@ -106,7 +106,7 @@ const NewProjectButtons = React.createClass({
           {
             projectTypes.slice(0,4).map((projectType, index) => (
               <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
-                <a href={"/p/" + projectType + "/new"}>
+                <a href={"/projects/" + projectType + "/new"}>
                   <img style={styles.thumbnail} src={PROJECT_INFO[projectType].thumbnail} />
                   <span style={styles.label}>
                     {PROJECT_INFO[projectType].label}
