@@ -12,7 +12,7 @@ import teacherSections, {
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
-import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
 /**
  * Render our sections table using React
@@ -48,7 +48,7 @@ export function renderSectionsPage(data) {
 
   ReactDOM.render(
     <Provider store={store}>
-      <OwnedSections
+      <SectionsPage
         defaultCourseId={defaultCourseId}
         defaultScriptId={defaultScriptId}
       />

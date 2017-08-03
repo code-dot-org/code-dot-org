@@ -76,10 +76,7 @@ const Sections = React.createClass({
             nameOrId={this.state.sectionsResultName}
           />
           {isTeacher && numTeacherSections > 0 && sectionFlow2017 && (
-            <OwnedSections
-              className="sectionPage"
-              teacherHomepage={this.props.teacherHomepage}
-            />
+            <OwnedSections/>
           )}
           {(
             (isTeacher && numTeacherSections > 0 && !sectionFlow2017)
