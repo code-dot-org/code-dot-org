@@ -12,7 +12,7 @@ import shapes from './shapes';
 
 const TeacherSections = React.createClass({
   propTypes: {
-    sections: shapes.sections,
+    sections: shapes.sections, // Without experiment
     codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
 
@@ -25,40 +25,52 @@ const TeacherSections = React.createClass({
     this.props.asyncLoadSectionData();
   },
 
+  renderNewSectionFlow() {
+    const {numTeacherSections, isRtl} = this.props;
+    return (
+      <ContentContainer
+        heading={i18n.sectionsTitle()}
+        isRtl={isRtl}
+      >
+        {numTeacherSections > 0 ? (
+          <OwnedSections/>
+        ) : (
+          <div>
+            <SectionsSetUpMessage isRtl={isRtl}/>
+            <AddSectionDialog handleImportOpen={() => {}/* TODO */}/>
+          </div>
+        )}
+      </ContentContainer>
+    );
+  },
+
   render() {
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
+      return this.renderNewSectionFlow();
+    }
     const {sections, numTeacherSections, codeOrgUrlPrefix, isRtl} = this.props;
     const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
-    const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     return (
-      <div className="uitest-teacher-sections">
-        <ContentContainer
-          heading={i18n.sectionsTitle()}
-          linkText={!sectionFlow2017 && i18n.manageSections()}
-          link={!sectionFlow2017 && editSectionsUrl}
-          isRtl={isRtl}
-        >
-          {numTeacherSections > 0 && sectionFlow2017 && (
-            <OwnedSections/>
-          )}
-          {(numTeacherSections > 0 && !sectionFlow2017) &&
-            <SectionsTable
-              sections={sections}
-              isRtl={isRtl}
-              isTeacher
-              canLeave={false}
-              updateSections={this.updateSections}
-              updateSectionsResult={this.updateSectionsResult}
-            />
-          }
-          {numTeacherSections === 0 && (
-            <SectionsSetUpMessage isRtl={isRtl}/>
-          )}
-          {numTeacherSections === 0 && sectionFlow2017 && (
-            <AddSectionDialog handleImportOpen={() => {}/* TODO */}/>
-          )}
-        </ContentContainer>
-      </div>
+      <ContentContainer
+        heading={i18n.sectionsTitle()}
+        linkText={i18n.manageSections()}
+        link={editSectionsUrl}
+        isRtl={isRtl}
+      >
+        {numTeacherSections > 0 ? (
+          <SectionsTable
+            sections={sections}
+            isRtl={isRtl}
+            isTeacher
+            canLeave={false}
+            updateSections={this.updateSections}
+            updateSectionsResult={this.updateSectionsResult}
+          />
+        ) : (
+          <SectionsSetUpMessage isRtl={isRtl}/>
+        )}
+      </ContentContainer>
     );
   }
 });
