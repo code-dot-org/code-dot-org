@@ -18,7 +18,7 @@ describe('HeaderBanner', () => {
         </div>
         <div>
           <span>
-
+            &nbsp;
           </span>
         </div>
       </div>
