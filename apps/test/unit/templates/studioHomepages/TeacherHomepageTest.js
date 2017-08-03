@@ -1,5 +1,5 @@
 import React from 'react';
-import { assert } from 'chai';
+import { assert, expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 
@@ -216,5 +216,18 @@ describe('TeacherHomepage', () => {
       courses: courses,
       isRtl: false
     });
+  });
+
+  it('shows ProjectWidgetWithData component', () => {
+    const wrapper = shallow(
+      <TeacherHomepage
+        announcements={[]}
+        courses={courses}
+        sections={[]}
+        codeOrgUrlPrefix="http://localhost:3000/"
+        isRtl={false}
+      />
+    );
+    expect(wrapper.find('ProjectWidgetWithData').exists());
   });
 });
