@@ -69,6 +69,7 @@ describe('TeacherSections', () => {
           isRtl={defaultProps.isRtl}
           isTeacher
           canLeave={false}
+          codeOrgUrlPrefix={defaultProps.codeOrgUrlPrefix}
         />
       </ContentContainer>
     );
