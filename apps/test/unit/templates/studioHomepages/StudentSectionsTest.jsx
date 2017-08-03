@@ -21,6 +21,7 @@ describe('StudentSections', () => {
     initialSections: [],
     isRtl: false,
     canLeave: false,
+    codeOrgUrlPrefix: 'https://code.org',
   };
 
   it('does not render a SectionsTable when not enrolled in any sections', () => {
@@ -69,6 +70,7 @@ describe('StudentSections', () => {
           canLeave={defaultProps.canLeave}
           updateSections={instance.updateSections}
           updateSectionsResult={instance.updateSectionsResult}
+          codeOrgUrlPrefix={defaultProps.codeOrgUrlPrefix}
         />
         <JoinSection
           enrolledInASection={true}
