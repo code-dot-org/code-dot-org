@@ -1,0 +1,35 @@
+@mixin visualization-width-height-original($width, $height, $visualizationOriginalWidth) {
+  $scale: $width / $visualizationOriginalWidth;
+
+  #visualization.responsive {
+    max-height: $height;
+    max-width: $width;
+  }
+  #visualizationColumn.responsive {
+    max-width: $width;
+  }
+  .small-footer-base.responsive {
+    max-width: $width;
+  }
+  .editor-column {
+    left: $width;
+  }
+  html[dir='rtl'] .editor-column {
+    right: $width;
+  }
+  html[dir='rtl'] body.readonly .editor-column {
+    right: 0;
+  }
+  div#visualizationResizeBar {
+    left: $width;
+    line-height: $height;
+  }
+  html[dir='rtl'] div#visualizationResizeBar {
+    right: $width;
+  }
+  #visualization.responsive > * {
+    -webkit-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+  }
+}
