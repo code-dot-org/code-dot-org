@@ -1,5 +1,5 @@
-require 'image_lib'
 require 'base64'
+require 'image_lib'
 
 class LevelSourcesController < ApplicationController
   include LevelsHelper
@@ -79,8 +79,11 @@ class LevelSourcesController < ApplicationController
     # params[:id] (for /c/ links) is set. For the former, deobfuscate the level_source_id.
     reset_abuse_user = current_user && current_user.permission?(UserPermission::RESET_ABUSE)
     level_source_id =
-      if params[:level_sopurce_id_and_user_id]
-        LevelSource.deobfuscate_level_source_id params[:level_source_id_and_user_id], reset_abuse_user
+      if params[:level_source_id_and_user_id]
+        LevelSource.deobfuscate_level_source_id(
+          params[:level_source_id_and_user_id],
+          ignore_missing_user: reset_abuse_user
+        )
       else
         params[:id]
       end
