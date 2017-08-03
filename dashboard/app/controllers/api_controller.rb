@@ -91,6 +91,11 @@ class ApiController < ApplicationController
     end
   end
 
+  def user_menu
+    @show_pairing_dialog = !!session.delete(:show_pairing_dialog)
+    render partial: 'shared/user_header'
+  end
+
   def user_hero
     head :not_found unless current_user
   end

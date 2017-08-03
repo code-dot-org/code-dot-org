@@ -1,0 +1,64 @@
+- if current_user
+  .header_button.header_user.user_menu
+    - if session[:pairings].present?
+      %i.fa.fa-users
+      %span= t('nav.user.label', username: t('nav.user.team'))
+    - else
+      %span.user_name= t('nav.user.label', username: h(current_user.short_name))
+    %span.user_menu_glyph
+      &#x25BC;
+    %div{style: 'position: relative; top: 3px;'}
+      .user_options{style: 'display: none;'}
+        - if current_user.can_pair?
+          - if session[:pairings].present?
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = t('nav.user.pair_programming')
+              .pairing_summary
+                #{t('nav.user.driver')}:
+                = h(current_user.short_name)
+                - session[:pairings].map do |id|
+                  %br
+                  #{t('nav.user.navigator')}:
+                  = h(User.find(id).short_name)
+          - else
+            = link_to '#', {id: 'pairing_link', style: 'display: none'} do
+              %i.fa.fa-user-plus
+              = t('nav.user.pair_programming')
+        = link_to t('nav.user.settings'), edit_user_registration_url
+        = link_to t('nav.user.logout'), destroy_user_session_url
+- else
+  = link_to new_user_session_url, class: 'button-signin', id: 'signin_button'  do
+    .header_button.header_user
+      %span= t('nav.user.signin')
+
+:javascript
+  function hideUserOptions() {
+    $('.user_options').slideUp();
+    $('.user_menu_glyph').html('&#x25BC;');
+    $(document).off('click', hideUserOptions);
+  }
+  $('.user_menu').click(function (e) {
+    if ($('.user_options').is(':hidden')) {
+      e.stopPropagation();
+      $('.user_options').slideDown();
+      $('.user_menu_glyph').html('&#x25B2;');
+      $(document).on('click', hideUserOptions);
+
+      $("#hamburger-icon").removeClass('active');
+      $('#hamburger #hamburger-contents').slideUp();
+    }
+  });
+  $('.user_options').click(function (e) {
+    e.stopPropagation(); // Clicks inside the popup shouldn't close it
+  });
+  $('.user_options a:last').click(function (e) {
+    // this partial can be returned in an API call so it's possible for it to be on non-dashboard pages
+    if (typeof dashboard !== 'undefined') {
+      dashboard.clientState.reset();
+    }
+  });
+
+  if (typeof dashboard !== 'undefined') {
+    dashboard.pairing.init('#{pairing_url}', hideUserOptions, #{@show_pairing_dialog});
+  }
