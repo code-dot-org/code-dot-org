@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import AssignToSection from './AssignToSection';
 import Button from '@cdo/apps/templates/Button';
-import ResourceType, { stringForType } from './resourceType';
+import { stringForType, resourceShape } from './resourceType';
 
 export default class CourseOverviewTopRow extends Component {
   static propTypes = {
@@ -11,16 +11,13 @@ export default class CourseOverviewTopRow extends Component {
     })).isRequired,
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    resources: PropTypes.arrayOf(PropTypes.shape({
-      type: PropTypes.oneOf(Object.values(ResourceType)).isRequired,
-      link: PropTypes.string.isRequired,
-    }))
+    resources: PropTypes.arrayOf(resourceShape)
   };
 
   render() {
     const { sectionsInfo, id, title, resources } = this.props;
     return (
-      <div>
+      <div style={{marginBottom: 10}}>
         <AssignToSection
           sectionsInfo={sectionsInfo}
           courseId={id}
