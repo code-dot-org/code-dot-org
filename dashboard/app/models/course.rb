@@ -51,6 +51,7 @@ class Course < ApplicationRecord
     hash = JSON.parse(serialization)
     course = Course.find_or_create_by!(name: hash['name'])
     course.update_scripts(hash['script_names'])
+    course.update!(properties: hash['properties'])
   rescue Exception => e
     # print filename for better debugging
     new_e = Exception.new("in course: #{path}: #{e.message}")
@@ -73,7 +74,8 @@ class Course < ApplicationRecord
     JSON.pretty_generate(
       {
         name: name,
-        script_names: course_scripts.map(&:script).map(&:name)
+        script_names: course_scripts.map(&:script).map(&:name),
+        properties: properties
       }
     )
   end
