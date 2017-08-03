@@ -25,58 +25,46 @@
 #  index_experiments_on_section_id            (section_id)
 #
 
-MAX_CACHE_AGE = 1.minute
+MAX_CACHE_AGE = Rails.application.config.experiment_cache_time_seconds.seconds
 
 class Experiment < ApplicationRecord
   belongs_to :script, optional: true
 
   validates :name, presence: true
-  after_create {Experiment.update_cache}
+  after_save {Experiment.update_cache}
+  after_destroy {Experiment.update_cache}
 
+  # Accessible for tests
+  cattr_accessor :experiments
   @@experiments = nil
 
-  def self.should_cache?
-    Script.should_cache?
-  end
-
-  def self.get_all_enabled(user: nil, section: nil, script: nil)
-    if Experiment.should_cache?
-      Experiment.get_all_enabled_cached(user: user, section: section, script: script)
-    else
-      Experiment.get_all_enabled_uncached(user: user, section: section, script: script)
-    end
-  end
-
-  def self.get_all_enabled_uncached(user: nil, section: nil, script: nil)
-    experiments = Experiment.descendants.map do |experiment_type|
-      experiment_type.get_enabled(user: user, section: section, script: script)
-    end
-    experiments = experiments.reduce(Experiment.none) do |e1, e2|
-      e1.or(e2)
-    end
-    now = DateTime.now
-    experiments.where('start_at IS NULL OR start_at < ?', now).
-      where('end_at IS NULL OR end_at > ?', now).
-      where('script_id IS NULL OR script_id = ?', script.try(:id))
-  end
-
-  def self.get_all_enabled_cached(user: nil, section: nil, script: nil)
+  def self.get_all_enabled(user: nil, section: nil, script: nil, experiment_name: nil)
     if @@experiments.nil? || @@experiments_loaded < DateTime.now - MAX_CACHE_AGE
-      Experiment.update_cache
+      update_cache
     end
-    now = DateTime.now
     @@experiments.select do |experiment|
       experiment.enabled?(user: user, section: section) &&
-        (experiment.start_at.nil? || experiment.start_at < now) &&
-        (experiment.end_at.nil? || experiment.end_at > now) &&
-        (experiment.script_id.nil? || experiment.script_id == script.try(:id))
+        (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
+        (experiment_name.nil? || experiment.name == experiment_name)
     end
+  end
+
+  def self.enabled?(user: nil, section: nil, script: nil, experiment_name: nil)
+    get_all_enabled(
+      user: user,
+      section: section,
+      script: script,
+      experiment_name: experiment_name
+    ).any?
   end
 
   def self.update_cache
-    return unless Experiment.should_cache?
-    @@experiments = Experiment.all.to_a
-    @@experiments_loaded = DateTime.now
+    now = DateTime.now
+    @@experiments = Experiment.
+      where('start_at IS NULL or start_at < ?', now).
+      where('end_at IS NULL or end_at > ?', now).
+      to_a
+    @@experiments_loaded = now
   end
 
   def percentage
@@ -95,11 +83,3 @@ class Experiment < ApplicationRecord
     end
   end
 end
-
-# Ensure all the subclasses are loaded so that Experiment.descendants above
-# returns all experiment types. Classes are eager loaded in production anyway,
-# but not in development.
-require_dependency 'user_based_experiment'
-require_dependency 'teacher_based_experiment'
-require_dependency 'single_section_experiment'
-require_dependency 'single_user_experiment'

@@ -1523,7 +1523,7 @@
   csp_name: "コンピューター・サイエンス入門"
   csd_name: CS Discoveries
   full_course_category_name: "すべてのコース"
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks #{donor_twitter}
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
     for supporting @codeorg)'
   user_header_label: Hi %{username}
   user_header_settings: Account settings
