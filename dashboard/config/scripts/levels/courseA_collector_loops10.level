@@ -27,7 +27,7 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Help Laurel get all of the treasure along this path.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you can't figure out where to put the loops, try writing the code out step-by-step and look for a pattern.\",\"hint_id\":\"courseA_collector_loops10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7de7960d9db5c6a048d35e284df45541/courseA_collector_loops10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try splitting the problem into 3 parts, and using 3 separate `repeat` loops.\",\"hint_id\":\"courseA_collector_loops10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d81ae15d95d23ceb375efee009e72a14/courseA_collector_loops10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Each `repeat` loop will have two blocks inside of it.\",\"hint_id\":\"courseA_collector_loops10_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/452ec5b2f28a98096c1e9d354faa9086/courseA_collector_loops10.mp3\"}]",
+    "authored_hints": "[]",
     "ideal": "10",
     "instructions_important": "false",
     "min_collected": "9",
@@ -39,7 +39,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 17:06:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 17:18:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 17:06:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-21 17:18:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-03 15:42:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
