@@ -1,9 +1,11 @@
 require 'test_helper'
 
 class ExperimentTest < ActiveSupport::TestCase
+  self.use_transactional_test_case = true
   setup_all do
     @user = create :user
     @section = create :section, first_activity_at: DateTime.now
+    @script = create :script
   end
 
   test "no experiments" do
@@ -73,21 +75,19 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "teacher based experiment is disabled if other script assigned" do
-    script = create :script
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      script_id: script.id + 1
-    assert_empty Experiment.get_all_enabled(section: @section, script: script)
-    refute Experiment.enabled?(section: @section, script: script, experiment_name: experiment.name)
+      script_id: @script.id + 1
+    assert_empty Experiment.get_all_enabled(section: @section, script: @script)
+    refute Experiment.enabled?(section: @section, script: @script, experiment_name: experiment.name)
   end
 
   test "teacher based experiment is enabled if same script assigned" do
-    script = create :script
     experiment = create :teacher_based_experiment,
       percentage: 100,
-      script_id: script.id
-    assert_equal [experiment], Experiment.get_all_enabled(section: @section, script: script)
-    assert Experiment.enabled?(section: @section, script: script, experiment_name: experiment.name)
+      script_id: @script.id
+    assert_equal [experiment], Experiment.get_all_enabled(section: @section, script: @script)
+    assert Experiment.enabled?(section: @section, script: @script, experiment_name: experiment.name)
   end
 
   test "single section experiment is enabled" do
@@ -98,8 +98,7 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "single section experiment is not enabled" do
-    experiment = create :single_section_experiment,
-      section_id: @section.id + 1
+    experiment = create :single_section_experiment
     assert_empty Experiment.get_all_enabled(section: @section)
     refute Experiment.enabled?(section: @section, experiment_name: experiment.name)
   end
