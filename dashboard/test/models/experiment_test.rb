@@ -114,4 +114,18 @@ class ExperimentTest < ActiveSupport::TestCase
     assert experiment.enabled?(user: facilitator_yes)
     refute experiment.enabled?(user: facilitator_no)
   end
+
+  test 'experiment cache contains only active experiments' do
+    now = DateTime.now
+    active_experiments = [
+      create(:single_user_experiment),
+      create(:single_user_experiment, end_at: now + 1.day),
+      create(:single_user_experiment, start_at: now - 1.day),
+      create(:single_user_experiment, start_at: now - 1.day, end_at: now + 1.day),
+    ]
+    create(:single_user_experiment, end_at: now - 1.day)
+    create(:single_user_experiment, start_at: now + 1.day)
+
+    assert_equal active_experiments, Experiment.experiments
+  end
 end

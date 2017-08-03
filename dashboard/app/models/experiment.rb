@@ -34,17 +34,16 @@ class Experiment < ApplicationRecord
   after_save {Experiment.update_cache}
   after_destroy {Experiment.update_cache}
 
+  # Accessible for tests
+  cattr_accessor :experiments
   @@experiments = nil
 
   def self.get_all_enabled(user: nil, section: nil, script: nil, experiment_name: nil)
     if @@experiments.nil? || @@experiments_loaded < DateTime.now - MAX_CACHE_AGE
       update_cache
     end
-    now = DateTime.now
     @@experiments.select do |experiment|
       experiment.enabled?(user: user, section: section) &&
-        (experiment.start_at.nil? || experiment.start_at < now) &&
-        (experiment.end_at.nil? || experiment.end_at > now) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
         (experiment_name.nil? || experiment.name == experiment_name)
     end
@@ -60,8 +59,12 @@ class Experiment < ApplicationRecord
   end
 
   def self.update_cache
-    @@experiments = Experiment.all.to_a
-    @@experiments_loaded = DateTime.now
+    now = DateTime.now
+    @@experiments = Experiment.
+      where('start_at IS NULL or start_at < ?', now).
+      where('end_at IS NULL or end_at > ?', now).
+      to_a
+    @@experiments_loaded = now
   end
 
   def percentage
