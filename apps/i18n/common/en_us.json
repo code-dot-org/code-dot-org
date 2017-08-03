@@ -497,6 +497,7 @@
   "puzzleRatingQuestion": "Did you like this puzzle?",
   "puzzleTitle": "Puzzle {puzzle_number} of {stage_total}",
   "question": "Question",
+  "quickActions": "Quick actions",
   "readonlyWorkspaceHeader": "View only: ",
   "recentCourses": "Recent Courses",
   "recommendedBlockContextualHintTitle": "Try using a block like this to solve the puzzle.",

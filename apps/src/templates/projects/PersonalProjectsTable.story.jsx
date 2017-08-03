@@ -1,6 +1,6 @@
 import React from 'react';
 import PersonalProjectsTable from './PersonalProjectsTable';
-import {generateFakePersonalProjectsForTable} from './generateFakePersonalProjects';
+import {stubFakePersonalProjectData} from './generateFakePersonalProjects';
 
 export default storybook => {
   storybook
@@ -11,7 +11,7 @@ export default storybook => {
         description: 'Table of users personal projects',
         story: () => (
           <PersonalProjectsTable
-            projectList={generateFakePersonalProjectsForTable(5)}
+            projectList={stubFakePersonalProjectData}
           />
         )
       },
