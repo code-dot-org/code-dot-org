@@ -6,6 +6,7 @@ import React from 'react';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import Permission from '../permission';
+import $ from 'jquery';
 
 const FILTER_API_URL = "/api/v1/pd/workshops/filter";
 const defaultFilters = {
