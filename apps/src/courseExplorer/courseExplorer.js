@@ -40,7 +40,7 @@ module.exports.initCourseExplorer = function () {
     toolShowingIndex = -1;
   });
 
-  $('.course.break').click(function () {
+  $('.course.breakable').click(function () {
     const courseIndex = $(this).attr("data-courseindex");
 
     // Show the arrows as inline-block instead of .show()'s default inline
