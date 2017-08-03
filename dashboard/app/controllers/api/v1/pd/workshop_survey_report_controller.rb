@@ -60,7 +60,7 @@ module Api::V1::Pd
       survey_report = Hash.new
 
       survey_report[:facilitator_breakdown] = facilitator_name.nil?
-      survey_report[:facilitator_names] = @workshop.facilitators.map(&:name) if facilitator_name.nil?
+      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
 
       survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name: facilitator_name)
 

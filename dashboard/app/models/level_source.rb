@@ -66,9 +66,7 @@ class LevelSource < ActiveRecord::Base
   #   the obfuscation does not exist.
   def self.deobfuscate_level_source_id(obfuscated_level_source_id_user_id, ignore_missing_user: false)
     level_source_id, user_id = Base64.urlsafe_decode64(obfuscated_level_source_id_user_id).split(':')
-    if ignore_missing_user || user_id.nil? || User.find_by_id(user_id)
-      return level_source_id.to_i
-    end
+    return level_source_id.to_i if ignore_missing_user || user_id.nil? || User.find_by_id(user_id)
     nil
   rescue
     return nil

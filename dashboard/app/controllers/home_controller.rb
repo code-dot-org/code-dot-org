@@ -88,7 +88,12 @@ class HomeController < ApplicationController
       @force_school_info_interstitial = params[:forceSchoolInfoInterstitial]
       @sections = current_user.sections.map(&:summarize)
       @student_sections = current_user.sections_as_student.map(&:summarize)
-      @recent_courses = current_user.recent_courses_and_scripts
+
+      # Students will receive a @student_top_course for their primary script,
+      # so we don't want to include that script (if it exists) in the regular
+      # lists of recent scripts.
+      exclude_primary_script = current_user.student?
+      @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
 
       if current_user.teacher?
         @sections = current_user.sections.map(&:summarize)
@@ -107,9 +112,6 @@ class HomeController < ApplicationController
             linkToOverview: script_path(script),
             linkToLesson: script_next_path(script, 'next')
           }
-
-          # Don't include this course in the regular set of recent courses.
-          @recent_courses.reject! {|item| item[:name] == script[:name]}
         end
       end
     end
