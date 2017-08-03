@@ -125,36 +125,40 @@ class SectionsPage extends Component {
       <div className={this.props.className}>
         {!this.props.teacherHomepage && <Breadcrumb/>}
         {asyncLoadComplete &&
-          <Button
-            className="uitest-newsection"
-            text={i18n.newSection()}
-            style={styles.button}
-            onClick={this.addSection}
-            color={Button.ButtonColor.gray}
-          />
-        }
-        {asyncLoadComplete && showGoogleClassroom &&
-          <Button
-            text={i18n.importFromGoogleClassroom()}
-            style={styles.button}
-            onClick={this.handleImportOpen}
-            color={Button.ButtonColor.gray}
-          />
-        }
-        {asyncLoadComplete && showCleverClassroom &&
-          <Button
-            text={i18n.importFromClever()}
-            style={styles.button}
-            onClick={this.handleImportOpen}
-            color={Button.ButtonColor.gray}
-          />
-        }
-        {asyncLoadComplete && numSections === 0 &&
-          <div className="jumbotron">
-            <p>{i18n.createSectionsInfo()}</p>
+          <div>
+            <Button
+              className="uitest-newsection"
+              text={i18n.newSection()}
+              style={styles.button}
+              onClick={this.addSection}
+              color={Button.ButtonColor.gray}
+            />
+            {showGoogleClassroom &&
+              <Button
+                text={i18n.importFromGoogleClassroom()}
+                style={styles.button}
+                onClick={this.handleImportOpen}
+                color={Button.ButtonColor.gray}
+              />
+            }
+            {showCleverClassroom &&
+              <Button
+                text={i18n.importFromClever()}
+                style={styles.button}
+                onClick={this.handleImportOpen}
+                color={Button.ButtonColor.gray}
+              />
+            }
+            {numSections === 0 &&
+              <div className="jumbotron">
+                <p>{i18n.createSectionsInfo()}</p>
+              </div>
+            }
+            {numSections > 0 &&
+              <SectionTable onEdit={this.handleEditRequest}/>
+            }
           </div>
         }
-        {asyncLoadComplete && numSections > 0 && <SectionTable onEdit={this.handleEditRequest}/>}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
           handleImport={this.handleImport}
