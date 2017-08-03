@@ -538,6 +538,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 3, response['sessions'].count
   end
 
+  # Multi-facilitator special loading for index
+  test 'Loads both facilitators when calling index' do
+    workshop = create :pd_workshop, num_facilitators: 2
+    sign_in(workshop.facilitators.first)
+    get :index
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal 2, response.first['facilitators'].size
+  end
+
   private
 
   def tomorrow_at(hour, minute = nil)
