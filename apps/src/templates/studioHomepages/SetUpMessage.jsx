@@ -126,7 +126,7 @@ export const UnconnectedSectionsSetUpMessage = ({
 }) => {
   const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
   const clickHandlerProp = sectionFlow2017 ?
-    {onClick: () => beginEditingNewSection()} :
+    {onClick: beginEditingNewSection} :
     {buttonUrl: `${codeOrgUrlPrefix}/teacher-dashboard#/sections`};
   return (
     <SetUpMessage
@@ -147,6 +147,6 @@ UnconnectedSectionsSetUpMessage.propTypes = {
 export const SectionsSetUpMessage = connect(state => ({
   codeOrgUrlPrefix: pegasusUrl(state, ''),
 }), {
-  beginEditingNewSection,
+  beginEditingNewSection: () => beginEditingNewSection(),
 })(UnconnectedSectionsSetUpMessage);
 SectionsSetUpMessage.displayName = 'SectionsSetUpMessage';
