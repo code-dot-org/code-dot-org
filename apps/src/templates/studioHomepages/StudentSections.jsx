@@ -7,7 +7,7 @@ import SectionsTable from '../studioHomepages/SectionsTable';
 
 export default class StudentSections extends Component {
   static propTypes = {
-    initialSections: PropTypes.array,
+    initialSections: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
   };
@@ -38,34 +38,32 @@ export default class StudentSections extends Component {
     const enrolledInASection = sections.length > 0;
 
     return (
-      <div className="sectionsContainer">
-        <ContentContainer
-          heading={i18n.sectionsTitle()}
-          isRtl={isRtl}
-          description={i18n.enrollmentDescription()}
-        >
-          <JoinSectionNotifications
-            action={action}
-            result={result}
-            nameOrId={resultName}
-          />
-          {enrolledInASection &&
-            <SectionsTable
-              sections={sections}
-              isRtl={isRtl}
-              isTeacher={false}
-              canLeave={canLeave}
-              updateSections={this.updateSections}
-              updateSectionsResult={this.updateSectionsResult}
-            />
-          }
-          <JoinSection
-            enrolledInASection={enrolledInASection}
+      <ContentContainer
+        heading={i18n.sectionsTitle()}
+        isRtl={isRtl}
+        description={i18n.enrollmentDescription()}
+      >
+        <JoinSectionNotifications
+          action={action}
+          result={result}
+          nameOrId={resultName}
+        />
+        {enrolledInASection &&
+          <SectionsTable
+            sections={sections}
+            isRtl={isRtl}
+            isTeacher={false}
+            canLeave={canLeave}
             updateSections={this.updateSections}
             updateSectionsResult={this.updateSectionsResult}
           />
-        </ContentContainer>
-      </div>
+        }
+        <JoinSection
+          enrolledInASection={enrolledInASection}
+          updateSections={this.updateSections}
+          updateSectionsResult={this.updateSectionsResult}
+        />
+      </ContentContainer>
     );
   }
 }

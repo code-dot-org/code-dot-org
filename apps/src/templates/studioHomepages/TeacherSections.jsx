@@ -31,7 +31,7 @@ const TeacherSections = React.createClass({
     const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
 
     return (
-      <div className="sectionsContainer">
+      <div className="uitest-teacher-sections">
         <ContentContainer
           heading={i18n.sectionsTitle()}
           linkText={!sectionFlow2017 && i18n.manageSections()}
