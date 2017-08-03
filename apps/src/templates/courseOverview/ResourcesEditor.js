@@ -12,11 +12,12 @@ const styles = {
 };
 
 const defaultLinks = {
+  '': '',
   [ResourceType.teacherForum]: 'https://forum.code.org/',
-  // TODO: better default?
-  [ResourceType.curriculum]: 'https://code.org/educate',
+  // TODO: better defaults
+  [ResourceType.curriculum]: '/link/to/curriculum',
+  [ResourceType.professionalLearning]: '/link/to/professional/learning',
 };
-const enterLinkText = 'https://link/here';
 
 export default class ResourcesEditor extends Component {
   static propTypes = {
@@ -45,13 +46,13 @@ export default class ResourcesEditor extends Component {
   }
 
   handleChangeType = (event, index) => {
-    const newResources = _.cloneDeep(this.state.resources);
+    const oldResources = this.state.resources;
+    const newResources = _.cloneDeep(oldResources);
     const type = event.target.value;
     newResources[index].type = type;
 
-    if (type !== '' && (newResources[index].link === '' ||
-        newResources[index].link === enterLinkText)) {
-      newResources[index].link = defaultLinks[type] || enterLinkText;
+    if (oldResources[index].link === defaultLinks[oldResources[index].type]) {
+      newResources[index].link = defaultLinks[type];
     }
 
     this.setState({resources: newResources});

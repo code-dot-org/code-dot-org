@@ -28,6 +28,11 @@ class Course < ApplicationRecord
   end
 
   include SerializedToFileValidation
+  include SerializedProperties
+
+  serialized_attrs %w(
+    teacher_resources
+  )
 
   def to_param
     name
@@ -80,6 +85,14 @@ class Course < ApplicationRecord
   def persist_strings_and_scripts_changes(scripts, course_strings)
     Course.update_strings(name, course_strings)
     update_scripts(scripts) if scripts
+    save!
+  end
+
+  # @param types [Array<string>]
+  # @param links [Array<string>]
+  def update_teacher_resources(types, links)
+    # Only take those pairs in which we have both a type and a link
+    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
     save!
   end
 
@@ -152,7 +165,8 @@ class Course < ApplicationRecord
       scripts: course_scripts.map(&:script).map do |script|
         include_stages = false
         script.summarize(include_stages).merge!(script.summarize_i18n(include_stages))
-      end
+      end,
+      teacher_resources: teacher_resources
     }
   end
 
