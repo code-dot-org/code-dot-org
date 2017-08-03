@@ -26,6 +26,9 @@ describe("WorkshopIndex", () => {
       );
 
       expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(2);
+      expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
+        return button.children().first().text();
+      })).to.deep.equal(['Facilitator Survey Results', 'Filter View']);
     });
 
     it("Organizers and admins have three buttons", () => {
@@ -37,6 +40,9 @@ describe("WorkshopIndex", () => {
         );
 
         expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(3);
+        expect(workshopIndex.find('ButtonToolbar Button').map((button) => {
+          return button.children().first().text();
+        })).to.deep.equal(['New Workshop', 'Attendance Reports', 'Filter View']);
       });
     });
   });
