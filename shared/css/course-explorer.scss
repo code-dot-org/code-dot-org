@@ -83,6 +83,10 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     text-overflow: ellipsis;
     margin-left: 0;
     margin-right: 10px;
+
+    a {
+      color: $gray;
+    }
   }
   div {
     box-sizing: border-box;
