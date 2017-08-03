@@ -72,6 +72,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         results: data,
         thisWorkshop: data['this_workshop'],
         allMyLocalWorkshops: data['all_my_local_workshops'],
+        allWorkshops: data['all_workshops_for_course'],
         facilitatorBreakdown: data['facilitator_breakdown'],
         facilitatorNames: data['facilitator_names']
       });
@@ -100,6 +101,9 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
             {facilitatorColumnHeaders}
             <th>
               All my local summer workshops
+            </th>
+            <th>
+              All workshops
             </th>
           </tr>
         </thead>
@@ -152,6 +156,7 @@ const LocalSummerWorkshopSurveyResults = React.createClass({
         <td>{row['text']}</td>
         {scoreCells}
         <td>{this.renderScore(row, this.state.allMyLocalWorkshops[row['key']])}</td>
+        <td>{this.renderScore(row, this.state.allWorkshops[row['key']])}</td>
       </tr>
     );
   },

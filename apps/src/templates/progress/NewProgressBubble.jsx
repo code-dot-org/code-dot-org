@@ -33,16 +33,20 @@ const styles = {
     borderColor: color.lighter_gray,
     fontSize: 16,
     letterSpacing: -0.11,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
+    // +2 presumably needed to account for border
+    lineHeight: (DOT_SIZE + 2) + 'px',
+    textAlign: 'center',
+    display: 'inline-block',
     marginTop: 3,
     marginBottom: 3,
+    transition: 'background-color .2s ease-out, border-color .2s ease-out, color .2s ease-out',
   },
   largeDiamond: {
     width: DIAMOND_DOT_SIZE,
     height: DIAMOND_DOT_SIZE,
+    lineHeight: (DIAMOND_DOT_SIZE + 2) + 'px',
+    marginTop: 7,
+    marginBottom: 7,
     borderRadius: 4,
     transform: 'rotate(45deg)'
   },
@@ -50,7 +54,10 @@ const styles = {
     width: SMALL_DOT_SIZE,
     height: SMALL_DOT_SIZE,
     borderRadius: SMALL_DOT_SIZE,
+    lineHeight: '20px',
     fontSize: 0,
+    marginTop: 0,
+    marginBottom: 4
   },
   smallDiamond: {
     width: SMALL_DIAMOND_SIZE,
@@ -58,18 +65,20 @@ const styles = {
     borderRadius: 2,
     fontSize: 0,
     transform: 'rotate(45deg)',
-    marginLeft: 1,
-    marginRight: 1,
+    position: 'relative',
+    top: 2
   },
   contents: {
     whiteSpace: 'nowrap',
-    fontSize: 16,
-    lineHeight: '16px',
   },
   diamondContents: {
     // undo the rotation from the parent
     transform: 'rotate(-45deg)'
   },
+  smallBubbleSpan: {
+    // lineHeight is necessary so that small bubbles get properly centered
+    lineHeight: '17px'
+  }
 };
 
 const NewProgressBubble = React.createClass({
@@ -133,10 +142,10 @@ const NewProgressBubble = React.createClass({
     let bubble = (
       <div
         style={{
+          display: 'inline-block',
           // two pixles on each side for border, 2 pixels on each side for margin
           width: (smallBubble ? SMALL_DOT_SIZE : DOT_SIZE) + 8,
-          display: 'flex',
-          justifyContent: 'center'
+          textAlign: 'center',
         }}
       >
         <div
@@ -152,11 +161,13 @@ const NewProgressBubble = React.createClass({
           >
             {levelIcon === 'lock' && <FontAwesome icon="lock"/>}
             {levelIcon !== 'lock' && (
-              <span>
+              <span
+                style={smallBubble ? styles.smallBubbleSpan : undefined}
+              >
                 {/*Text will not show up for smallBubble, but it's presence
                   causes bubble to be properly aligned vertically
                   */}
-                {smallBubble ? '' : number}
+                {smallBubble ? '-' : number}
               </span>
             )}
             {tooltip}
@@ -168,7 +179,7 @@ const NewProgressBubble = React.createClass({
     // If we have an href, wrap in an achor tag
     if (href) {
       bubble = (
-        <a href={href} style={{textDecoration: 'none'}}>
+        <a href={href}>
           {bubble}
         </a>
       );
@@ -177,5 +188,9 @@ const NewProgressBubble = React.createClass({
     return bubble;
   }
 });
+
+// Expose our height, as ProgressBubbleSet needs this to stick the little gray
+// connector between bubbles
+NewProgressBubble.height = DOT_SIZE + styles.main.marginTop + styles.main.marginBottom;
 
 export default Radium(NewProgressBubble);
