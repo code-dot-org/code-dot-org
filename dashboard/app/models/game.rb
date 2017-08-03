@@ -47,9 +47,11 @@ class Game < ActiveRecord::Base
   MAZE = 'maze'.freeze
   CALC = 'calc'.freeze
   EVAL = 'eval'.freeze
+  PIXELATION = 'pixelation'.freeze
   TEXT_COMPRESSION = 'text_compression'.freeze
   LEVEL_GROUP = 'level_group'.freeze
   PUBLIC_KEY_CRYPTOGRAPHY = 'public_key_cryptography'.freeze
+  SCRATCH = 'scratch'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -147,6 +149,10 @@ class Game < ActiveRecord::Base
     @@game_curriculum_reference ||= find_by_name('CurriculumReference')
   end
 
+  def self.scratch
+    @@game_scratch ||= find_by_name('Scratch')
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -184,7 +190,7 @@ class Game < ActiveRecord::Base
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, SCRATCH].include? app
   end
 
   # True if the app takes responsibility for showing footer info
@@ -198,6 +204,10 @@ class Game < ActiveRecord::Base
 
   def use_firebase_for_new_project?
     [APPLAB, GAMELAB].include? app
+  end
+
+  def channel_backed?
+    [APPLAB, GAMELAB, WEBLAB, SCRATCH, PIXELATION].include? app
   end
 
   def self.setup
@@ -267,6 +277,7 @@ class Game < ActiveRecord::Base
         CurriculumReference:curriculum_reference
         Map:map
         CustomFlappy:flappy
+        Scratch:scratch
       ).each_with_index do |game, id|
         name, app, intro_video = game.split ':'
         Game.create!(id: id + 1, name: name, app: app, intro_video: Video.find_by_key(intro_video))
