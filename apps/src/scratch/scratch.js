@@ -14,7 +14,7 @@ import { singleton as studioApp } from '@cdo/apps/StudioApp';
 import ScratchView from './ScratchView';
 import { scratchDefaultProject } from './scratchDefaultProject';
 
-const Scratch = window.Scratch = window.Scratch || {};
+const Scratch = window.__TestInterface__ = {};
 
 export default function init(options) {
   registerReducers(commonReducers);
@@ -31,14 +31,10 @@ export default function init(options) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
-      <ScratchView onMount={onMount} />
+      <ScratchView onMount={() => studioApp().init(options)} />
     </Provider>,
     document.getElementById(options.containerId),
   );
-
-  function onMount() {
-    studioApp().init(options);
-  }
 
   /**
    * @param {Asset} asset - calculate a URL for this asset.
