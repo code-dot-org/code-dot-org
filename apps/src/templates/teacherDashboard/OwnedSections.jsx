@@ -1,7 +1,8 @@
+/** @file Reusable widget to display and manage sections owned by the
+ *        current user. */
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
-import color from "@cdo/apps/util/color";
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -32,8 +33,6 @@ const styles = {
 
 class OwnedSections extends Component {
   static propTypes = {
-    teacherHomepage: PropTypes.bool,
-    className: PropTypes.string,
     defaultCourseId: PropTypes.number,
     defaultScriptId: PropTypes.number,
 
@@ -50,10 +49,6 @@ class OwnedSections extends Component {
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
-  };
-
-  defaultProps = {
-    teacherHomepage: false,
   };
 
   state = {
@@ -122,8 +117,7 @@ class OwnedSections extends Component {
     const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
     const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
-      <div className={this.props.className}>
-        {!this.props.teacherHomepage && <Breadcrumb/>}
+      <div className="uitest-owned-sections">
         {asyncLoadComplete &&
           <div>
             <Button
@@ -191,22 +185,3 @@ export default connect(state => ({
   importClassroomStarted,
   asyncLoadSectionData,
 })(OwnedSections);
-
-const Breadcrumb = (props) => (
-  <div
-    style={{
-      marginTop: 20,
-      marginBottom: 28
-    }}
-  >
-    <a href="/teacher-dashboard#/">
-      {i18n.teacherHomePage()}
-    </a>
-    <span style={{opacity: 0.5}}>
-      {"\u00a0 \u25b6 \u00a0"}
-    </span>
-    <b style={{color: color.dark_orange}}>
-      {i18n.studentAccountsAndProgress()}
-    </b>
-  </div>
-);

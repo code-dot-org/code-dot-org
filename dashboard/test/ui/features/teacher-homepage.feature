@@ -13,5 +13,5 @@ Feature: Using the teacher homepage sections feature
     And I press the first ".uitest-pictureLogin .uitest-button" element
     And I press the first ".uitest-saveButton" element
     And I wait for 2 seconds
-    And I see ".sectionPage"
+    And I see ".uitest-owned-sections"
     And I am on "http://studio.code.org/home?disableExperiments=section-flow-2017"
