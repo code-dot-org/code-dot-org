@@ -87,7 +87,6 @@ Dashboard::Application.routes.draw do
       get 'original_image'
     end
   end
-
   # These routes are being created to replace the /c/ routes (August 2017) so as to include the ID
   # of the sharing user in the URL. Doing so allows us to block showing the level source if the user
   # deletes themself.
