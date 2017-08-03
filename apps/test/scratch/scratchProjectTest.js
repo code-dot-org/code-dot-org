@@ -1,4 +1,4 @@
-/* global Scratch */
+/* global __TestInterface__ */
 
 import sinon from 'sinon';
 import * as testUtils from '../util/testUtils';
@@ -279,7 +279,7 @@ describe('scratch', function () {
         lastAttempt: JSON.stringify(project),
       },
       onInitialize: () => {
-        const vm = Scratch.vm;
+        const vm = __TestInterface__.vm;
 
         assert.equal(vm.runtime.targets[1].x, 0);
         assert.equal(vm.runtime.targets[1].y, 0);
