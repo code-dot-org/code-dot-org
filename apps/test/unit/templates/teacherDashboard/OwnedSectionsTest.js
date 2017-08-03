@@ -25,6 +25,8 @@ describe('OwnedSections', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
+  beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
+
   it('provides default course id when creating new section', () => {
     const newSectionFunction = sinon.spy();
     const wrapper = shallow(
@@ -42,8 +44,8 @@ describe('OwnedSections', () => {
   });
 
   describe('with sections flow experiment', () => {
-    before(() => experiments.setEnabled(SECTION_FLOW_2017, true));
-    after(() => experiments.setEnabled(SECTION_FLOW_2017, false));
+    beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
+    afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
     it('provides default courseId and scriptId when creating new section', () => {
       const newSectionFunction = sinon.spy();
