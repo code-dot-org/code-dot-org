@@ -6,7 +6,7 @@ import color from "../util/color";
 import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
 import locale from '@cdo/locale';
 
-const styles = {
+export const styles = {
   icon: {
     backgroundSize: 100,
     backgroundPosition: 'bottom',

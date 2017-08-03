@@ -51,7 +51,6 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses
           courses={[]}
-          showAllCoursesLink
           isTeacher
           heading="My Courses"
           isRtl={false}
@@ -61,9 +60,6 @@ describe('RecentCourses', () => {
         <div>
           <ContentContainer
             heading="My Courses"
-            linkText="Find a course"
-            link="/courses"
-            showLink
             isRtl={false}
           >
             <CoursesSetUpMessage
@@ -80,7 +76,6 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses
           courses={courses}
-          showAllCoursesLink
           isTeacher
           heading="My Courses"
           isRtl={false}
@@ -90,9 +85,6 @@ describe('RecentCourses', () => {
         <div>
           <ContentContainer
             heading="My Courses"
-            linkText="Find a course"
-            link="/courses"
-            showLink
             isRtl={false}
           >
             <div key={0}>
@@ -131,7 +123,6 @@ describe('RecentCourses', () => {
       const wrapper = shallow(
         <RecentCourses
           courses={moreCourses}
-          showAllCoursesLink
           isTeacher
           heading="My Courses"
           isRtl={false}
@@ -141,9 +132,6 @@ describe('RecentCourses', () => {
         <div>
           <ContentContainer
             heading="My Courses"
-            linkText="Find a course"
-            link="/courses"
-            showLink
             isRtl={false}
           >
             <div key={0}>

@@ -26,14 +26,13 @@ const styles = {
     width: pegasusContentWidth
   },
   description: {
-    paddingRight: 10,
-    paddingBottom: 20,
     fontSize: 14,
     lineHeight: '22px',
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: 940
+    width: pegasusContentWidth,
+    marginTop: -10,
   },
   linkToViewAll: {
     color: color.teal,
@@ -69,7 +68,7 @@ const styles = {
   },
   clear: {
     clear: 'both',
-    height: 30
+    height: 75
   },
   spacer: {
     width: 20,
@@ -87,20 +86,19 @@ const ContentContainer= React.createClass({
     heading: React.PropTypes.string.isRequired,
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
-    showLink: React.PropTypes.bool,
     isRtl: React.PropTypes.bool.isRequired,
     description: React.PropTypes.string,
   },
 
   render() {
-    const { heading, link, linkText, showLink, description, isRtl }= this.props;
+    const { heading, link, linkText, description, isRtl }= this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
 
     return (
       <div style={styles.box}>
         <div style={styles.heading}>
           {heading}
-          {showLink &&
+          {link && linkText &&
             <a href={link} style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
               {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
               <div style={styles.linkToViewAll}>

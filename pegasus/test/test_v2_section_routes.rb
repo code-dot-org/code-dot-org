@@ -303,5 +303,78 @@ class V2SectionRoutesTest < SequelTestCase
       Documents.any_instance.stubs(:dashboard_user_id).
         returns(role.nil? ? nil : role[:id])
     end
+
+    describe 'GET /v2/sections/valid_scripts' do
+      it 'returns 403 "Forbidden" when not signed in' do
+        with_role nil
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 403, @pegasus.last_response.status
+      end
+
+      it 'returns script list when signed in as a student' do
+        with_role FakeDashboard::STUDENT
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal(
+          [
+            {
+              'id' => 10,
+              'name' => 'Make a Flappy game',
+              'script_name' => 'flappy',
+              'category' => 'Hour of Code',
+              'position' => 4,
+              'category_priority' => 2
+            }
+          ],
+          JSON.parse(@pegasus.last_response.body)
+        )
+      end
+
+      it 'returns script list when signed in as a teacher' do
+        with_role FakeDashboard::TEACHER
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal(
+          [
+            {
+              'id' => 10,
+              'name' => 'Make a Flappy game',
+              'script_name' => 'flappy',
+              'category' => 'Hour of Code',
+              'position' => 4,
+              'category_priority' => 2
+            }
+          ],
+          JSON.parse(@pegasus.last_response.body)
+        )
+      end
+
+      it 'returns script list with hidden scripts when signed in as an admin' do
+        with_role FakeDashboard::ADMIN
+        @pegasus.get '/v2/sections/valid_scripts'
+        assert_equal 200, @pegasus.last_response.status
+        assert_equal(
+          [
+            {
+              'id' => 10,
+              'name' => 'Make a Flappy game',
+              'script_name' => 'flappy',
+              'category' => 'Hour of Code',
+              'position' => 4,
+              'category_priority' => 2
+            },
+            {
+              'id' => 45,
+              'name' => 'allthehiddenthings *',
+              'script_name' => 'allthehiddenthings',
+              'category' => 'other',
+              'position' => nil,
+              'category_priority' => 15
+            }
+          ],
+          JSON.parse(@pegasus.last_response.body)
+        )
+      end
+    end
   end
 end
