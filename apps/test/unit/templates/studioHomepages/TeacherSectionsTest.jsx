@@ -13,10 +13,9 @@ import {
 import ContentContainer from "@cdo/apps/templates/ContentContainer";
 import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
 import {SectionsSetUpMessage} from "@cdo/apps/templates/studioHomepages/SetUpMessage";
-import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
 
-describe('SectionsPage', () => {
+describe('TeacherSections', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
@@ -79,30 +78,7 @@ describe('SectionsPage', () => {
     beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
     afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
-    it('renders a SectionsSetUpMessage when no sections are set up', () => {
-      const wrapper = shallow(
-        <TeacherSections
-          {...defaultProps}
-          sections={[]}
-          numTeacherSections={0}
-        />
-      );
-      expect(wrapper).to.containMatchingElement(
-        <ContentContainer
-          heading="Classroom Sections"
-          isRtl={defaultProps.isRtl}
-        >
-          <div>
-            <SectionsSetUpMessage
-              isRtl={defaultProps.isRtl}
-            />
-            <AddSectionDialog/>
-          </div>
-        </ContentContainer>
-      );
-    });
-
-    it('renders a OwnedSections component when the teacher has sections', () => {
+    it('renders an OwnedSections component', () => {
       const wrapper = shallow(
         <TeacherSections
           {...defaultProps}

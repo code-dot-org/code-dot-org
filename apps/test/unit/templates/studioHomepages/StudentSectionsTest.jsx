@@ -13,7 +13,7 @@ import JoinSection from "@cdo/apps/templates/studioHomepages/JoinSection";
 import JoinSectionNotifications from "@cdo/apps/templates/studioHomepages/JoinSectionNotifications";
 import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
 
-describe('SectionsPage', () => {
+describe('StudentSections', () => {
   throwOnConsoleErrors();
   throwOnConsoleWarnings();
 

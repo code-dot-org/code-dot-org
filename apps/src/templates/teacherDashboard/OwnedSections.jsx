@@ -18,6 +18,7 @@ import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
+import {SectionsSetUpMessage} from '../studioHomepages/SetUpMessage';
 
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
@@ -33,6 +34,7 @@ const styles = {
 
 class OwnedSections extends Component {
   static propTypes = {
+    isRtl: PropTypes.bool,
     defaultCourseId: PropTypes.number,
     defaultScriptId: PropTypes.number,
 
@@ -111,14 +113,19 @@ class OwnedSections extends Component {
   };
 
   render() {
-    const { numSections, asyncLoadComplete } = this.props;
+    const { isRtl, numSections, asyncLoadComplete } = this.props;
+    if (!asyncLoadComplete) {
+      return null;
+    }
 
     const newSectionFlow = experiments.isEnabled(SECTION_FLOW_2017);
     const showGoogleClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.google_classroom;
     const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
       <div className="uitest-owned-sections">
-        {asyncLoadComplete &&
+        {newSectionFlow && numSections === 0 ? (
+          <SectionsSetUpMessage isRtl={isRtl}/>
+        ) : (
           <div>
             <Button
               className="uitest-newsection"
@@ -143,16 +150,16 @@ class OwnedSections extends Component {
                 color={Button.ButtonColor.gray}
               />
             }
-            {numSections === 0 &&
+            {numSections > 0 &&
+              <SectionTable onEdit={this.handleEditRequest}/>
+            }
+            {numSections === 0 && !newSectionFlow &&
               <div className="jumbotron">
                 <p>{i18n.createSectionsInfo()}</p>
               </div>
             }
-            {numSections > 0 &&
-              <SectionTable onEdit={this.handleEditRequest}/>
-            }
           </div>
-        }
+        )}
         <RosterDialog
           isOpen={this.state.rosterDialogOpen}
           handleImport={this.handleImport}

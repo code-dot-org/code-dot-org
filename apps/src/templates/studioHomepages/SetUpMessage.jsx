@@ -82,7 +82,7 @@ const SetUpMessage = ({
   </div>
 );
 SetUpMessage.propTypes ={
-  isRtl: PropTypes.bool.isRequired,
+  isRtl: PropTypes.bool,
   headingText: PropTypes.string.isRequired,
   descriptionText: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,
@@ -101,7 +101,7 @@ export const CoursesSetUpMessage = ({isRtl, isTeacher}) => (
   />
 );
 CoursesSetUpMessage.propTypes = {
-  isRtl: PropTypes.bool.isRequired,
+  isRtl: PropTypes.bool,
   isTeacher: PropTypes.bool.isRequired,
 };
 
@@ -112,7 +112,7 @@ export const UnconnectedSectionsSetUpMessage = ({
 }) => {
   const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
   const clickHandlerProp = sectionFlow2017 ?
-    {onClick: beginEditingNewSection} :
+    {onClick: () => beginEditingNewSection()} :
     {buttonUrl: `${codeOrgUrlPrefix}/teacher-dashboard#/sections`};
   return (
     <SetUpMessage
@@ -126,7 +126,7 @@ export const UnconnectedSectionsSetUpMessage = ({
   );
 };
 UnconnectedSectionsSetUpMessage.propTypes = {
-  isRtl: PropTypes.bool.isRequired,
+  isRtl: PropTypes.bool,
   codeOrgUrlPrefix: PropTypes.string,
   beginEditingNewSection: PropTypes.func.isRequired,
 };
