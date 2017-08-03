@@ -426,7 +426,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'get safe names' do
     enrollments = create_list :pd_enrollment, 5
-    safe_names = Pd::Enrollment.where(id: enrollments.map(&:id)).order(:id).get_safe_names
+    safe_names = Pd::Enrollment.where(id: enrollments.pluck(:id)).order(:id).get_safe_names
     assert_equal 5, safe_names.length
 
     # each safe name is a tuple of the full name and the enrollment itself

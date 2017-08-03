@@ -2,11 +2,12 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import $ from 'jquery';
+import queryString from 'query-string';
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import AssignCourseConfirm from './AssignCourseConfirm';
+import ConfirmAssignment from './ConfirmAssignment';
 
 const styles = {
   button: {
@@ -22,7 +23,9 @@ const styles = {
   dropdown: {
     border: `1px solid ${color.charcoal}`,
     position: 'absolute',
-    marginTop: -10
+    marginTop: -10,
+    // without this, this will be below some content
+    zIndex: 1,
   },
   section: {
     padding: 10,
@@ -48,10 +51,11 @@ const styles = {
  * lets them assign the current course to any of those sections (after accepting
  * a confirmation dialog)
  */
-class AssignCourse extends Component {
+class AssignToSection extends Component {
   static propTypes = {
-    courseId: PropTypes.number.isRequired,
-    courseName: PropTypes.string.isRequired,
+    courseId: PropTypes.number,
+    scriptId: PropTypes.number,
+    assignmentName: PropTypes.string.isRequired,
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
@@ -114,7 +118,8 @@ class AssignCourse extends Component {
       method: 'PATCH',
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify({
-        course_id: this.props.courseId
+        course_id: this.props.courseId,
+        script_id: this.props.scriptId,
       }),
     }).done(result => {
       this.collapseDropdown();
@@ -135,7 +140,7 @@ class AssignCourse extends Component {
   }
 
   render() {
-    const { courseId, courseName, sectionsInfo } = this.props;
+    const { courseId, scriptId, assignmentName, sectionsInfo } = this.props;
     const { dropdownOpen, sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
 
@@ -143,7 +148,7 @@ class AssignCourse extends Component {
       <div>
         <Button
           ref={element => this.button = element}
-          text={i18n.assignCourse()}
+          text={(courseId && scriptId) ? i18n.assignUnit() : i18n.assignCourse()}
           style={styles.button}
           onClick={this.onClickDropdown}
           icon={dropdownOpen ? "caret-up" : "caret-down"}
@@ -154,7 +159,8 @@ class AssignCourse extends Component {
         {dropdownOpen && (
           <div style={styles.dropdown}>
             <a
-              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?newSection=${courseId}#/sections`}
+              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
+                queryString.stringify({courseId, scriptId}) + "#/sections"}
               style={styles.section}
             >
               {i18n.newSectionEllipsis()}
@@ -175,9 +181,9 @@ class AssignCourse extends Component {
           </div>
         )}
         {sectionIndexToAssign !== null && (
-          <AssignCourseConfirm
-            courseName={courseName}
+          <ConfirmAssignment
             sectionName={section.name}
+            assignmentName={assignmentName}
             onClose={this.onCloseDialog}
             onConfirm={this.updateCourse}
           />
@@ -185,7 +191,7 @@ class AssignCourse extends Component {
         {errorString && (
           <BaseDialog
             isOpen={true}
-            onClose={this.acknowledgeError}
+            handleClose={this.acknowledgeError}
           >
             {errorString}
           </BaseDialog>
@@ -195,4 +201,4 @@ class AssignCourse extends Component {
   }
 }
 
-export default Radium(AssignCourse);
+export default Radium(AssignToSection);

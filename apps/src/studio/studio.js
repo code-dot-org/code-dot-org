@@ -56,8 +56,8 @@ import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
 import project from '../code-studio/initApp/project';
-import {blockAsXmlNode} from '../block_utils';
-import {parseElement, visitAll} from '../xml';
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import {parseElement} from '../xml';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -2274,11 +2274,7 @@ Studio.prepareForRemix = function () {
   }
 
   whenRun.appendChild(next);
-  visitAll(blocksDom, block => {
-    if (block.getAttribute && block.getAttribute('uservisible')) {
-      block.setAttribute('uservisible', "true");
-    }
-  });
+  cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
