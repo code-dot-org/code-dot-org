@@ -112,6 +112,7 @@ function showHomepage() {
             studentTopCourse={homepageData.studentTopCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
+            codeOrgUrlPrefix={homepageData.codeorgurlprefix}
             isRtl={isRtl}
           />
         )}
