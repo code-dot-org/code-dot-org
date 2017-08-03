@@ -373,11 +373,6 @@ testsContext.keys().forEach(testsContext);
         {src: ['test/storybook-tests.js'], watched: false},
       ],
     },
-    all: {
-      files: [
-        {src: ['test/index.js'], watched: false},
-      ],
-    },
     entry: {
       coverageReporter: {
         dir: 'coverage/entry',
@@ -797,13 +792,6 @@ testsContext.keys().forEach(testsContext);
     'preconcat',
     'concat',
     'karma:integration'
-  ]);
-
-  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
-  grunt.registerTask('test', [
-    'preconcat',
-    'concat',
-    'karma:all'
   ]);
 
   grunt.registerTask('logBuildTimes', function () {
