@@ -78,7 +78,12 @@ class ScriptLevel < ActiveRecord::Base
     levels.sort_by(&:created_at).find do |level|
       experiment_name = experiment(level)
       next false unless experiment_name
-      Experiment.enabled?(experiment_name: experiment_name, user: user, section: section, script: script)
+      Experiment.enabled?(
+        experiment_name: experiment_name,
+        user: user,
+        section: section,
+        script: script
+      )
     end
   end
 
