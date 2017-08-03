@@ -4,7 +4,7 @@ import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
-import Sections from './Sections';
+import TeacherSections from './TeacherSections';
 import TeacherResources from './TeacherResources';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -63,14 +63,10 @@ const TeacherHomepage = React.createClass({
             <div style={styles.clear}/>
           </div>
         )}
-
-        <Sections
+        <TeacherSections
           sections={sections}
           codeOrgUrlPrefix={codeOrgUrlPrefix}
           isRtl={isRtl}
-          isTeacher={true}
-          canLeave={false}
-          teacherHomepage={true}
         />
         <RecentCourses
           courses={courses}
