@@ -43,6 +43,8 @@
       = render partial: "levels/#{@level.class.to_s.underscore}"
     - unless @level.is_a?(StandaloneVideo)
       = render partial: 'levels/reference_area'
+  - elsif @level.is_a?(Scratch)
+    = render partial: 'levels/scratch', locals: {app: @game.app}
   - else
     = render partial: 'levels/blockly'
 

@@ -57,7 +57,7 @@ class Pd::SessionTest < ActiveSupport::TestCase
       create(:pd_session).tap(&:assign_code)
     end
 
-    codes = sessions.map(&:code)
+    codes = sessions.pluck(:code)
     assert codes.all? {|code| code.present? && code.length == 4}
     assert_equal 10, codes.uniq.size
   end

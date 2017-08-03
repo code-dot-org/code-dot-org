@@ -15,16 +15,19 @@ describe('CoursesSetUpMessage', () => {
     assert(wrapper.containsMatchingElement(
       <div>
         <div>
-          Start learning
-        </div>
-        <div>
-          Assign a course to your classroom or start your own course.
+          <div>
+            Start learning
+          </div>
+          <div>
+            Assign a course to your classroom or start your own course.
+          </div>
         </div>
         <Button
           href={'/courses'}
           color={Button.ButtonColor.gray}
           text={'Find a course'}
         />
+        <div/>
       </div>
     ));
   });
@@ -36,16 +39,19 @@ describe('CoursesSetUpMessage', () => {
     assert(wrapper.containsMatchingElement(
       <div>
         <div>
-          Start learning
-        </div>
-        <div>
-          Browse Code.org's courses to find your next challenge.
-        </div>
-        <Button
-          href={'/courses'}
-          color={Button.ButtonColor.gray}
-          text={'Find a course'}
-        />
+          <div>
+            Start learning
+          </div>
+          <div>
+            Browse Code.org's courses to find your next challenge.
+          </div>
+          </div>
+          <Button
+            href={'/courses'}
+            color={Button.ButtonColor.gray}
+            text={'Find a course'}
+          />
+        <div/>
       </div>
     ));
   });
@@ -59,16 +65,19 @@ describe('SectionsSetUpMessage', () => {
     assert(wrapper.containsMatchingElement(
       <div>
         <div>
-          Set up your classroom
-        </div>
-        <div>
-          Create a new classroom section to start assigning courses and seeing your student progress.
+          <div>
+            Set up your classroom
+          </div>
+          <div>
+            Create a new classroom section to start assigning courses and seeing your student progress.
+          </div>
         </div>
         <Button
           href={'http://localhost:3000//teacher-dashboard#/sections'}
           color={Button.ButtonColor.gray}
           text={'Create section'}
         />
+        <div/>
       </div>
     ));
   });

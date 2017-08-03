@@ -31,17 +31,19 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You can use `jump` blocks to move to other spaces.\",\"hint_id\":\"harvey_tictactoe\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/97ffd3615ec2ffbd76da2c293aac2111/harvey_tictactoe.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The code to draw an X is already given to you. All you need to do is repeat the X and jump to the next spot.\",\"hint_id\":\"courseB_artist_loops_challenge2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/53a5e3ef1e2973c95471fecafb2acac1/courseB_artist_loops_challenge2.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You can use `jump` blocks to move to other spaces.\",\"hint_id\":\"courseB_artist_loops_challenge2_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/97ffd3615ec2ffbd76da2c293aac2111/courseB_artist_loops_challenge2.mp3\"}]",
     "ideal": "0",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/0c3a39c9f5802f419d5300ae25af83b1-image-1490792107287.47.39 AM.png\", \"position\": [0, 0]}\r\n]\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "markdown_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-02 15:50:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"predraw_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

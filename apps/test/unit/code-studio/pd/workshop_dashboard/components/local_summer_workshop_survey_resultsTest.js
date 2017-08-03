@@ -21,6 +21,12 @@ describe("Local Summer Workshop Management", () => {
         'num_surveys': '180',
         'received_clear_communication': '5.5',
         'how_much_learned': '4.5'
+      },
+      all_workshops_for_course: {
+        'num_enrollments': '20000',
+        'num_surveys': '18000',
+        'received_clear_communication': '5',
+        'how_much_learned': '3'
       }
     };
   };
@@ -46,6 +52,12 @@ describe("Local Summer Workshop Management", () => {
         'received_clear_communication': '5.5',
         'how_much_learned': '4.5',
         'how_clearly_presented': 5
+      },
+      all_workshops_for_course: {
+        'num_enrollments': '20000',
+        'num_surveys': '18000',
+        'received_clear_communication': '5',
+        'how_much_learned': '3'
       }
     };
   };
@@ -81,7 +93,7 @@ describe("Local Summer Workshop Management", () => {
       expect(server.requests.length).to.equal(1);
       expect(localSummerWorkshopSurveyResults.state('loading')).to.be.false;
       expect(localSummerWorkshopSurveyResults.find('table')).to.have.length(1);
-      expect(localSummerWorkshopSurveyResults.find('table th')).to.have.length(3);
+      expect(localSummerWorkshopSurveyResults.find('table th')).to.have.length(4);
 
       expect(localSummerWorkshopSurveyResults.find('.well')).to.have.length(1);
       expect(localSummerWorkshopSurveyResults.find('.well li')).to.have.length(2);
@@ -106,7 +118,7 @@ describe("Local Summer Workshop Management", () => {
       expect(server.requests.length).to.equal(1);
       expect(localSummerWorkshopSurveyResults.state('loading')).to.be.false;
       expect(localSummerWorkshopSurveyResults.find('table')).to.have.length(1);
-      expect(localSummerWorkshopSurveyResults.find('table th')).to.have.length(5);
+      expect(localSummerWorkshopSurveyResults.find('table th')).to.have.length(6);
 
       expect(localSummerWorkshopSurveyResults.find('.well')).to.have.length(2);
       expect(localSummerWorkshopSurveyResults.find('.well li')).to.have.length(6);
