@@ -175,7 +175,7 @@ class ApplicationController < ActionController::Base
     end
 
     if options[:level_source].try(:id)
-      response[:level_source] = r_level_source_url(level_source_id_and_user_id: options[:level_source].encrypt_level_source_id(current_user.try(:id)))
+      response[:level_source] = obfuscated_level_source_url(level_source_id_and_user_id: options[:level_source].obfuscate_level_source_id(current_user.try(:id)))
       response[:phone_share_url] = send_to_phone_url
       response[:level_source_id] = options[:level_source].id
     end
