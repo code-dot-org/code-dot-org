@@ -24,10 +24,6 @@ const urlByProvider = {
 };
 
 const styles = {
-  breadcrumb: {
-    marginTop: 20,
-    marginBottom: 28
-  },
   button: {
     marginBottom: 20,
     marginRight: 5,
@@ -127,17 +123,7 @@ class SectionsPage extends Component {
     const showCleverClassroom = !newSectionFlow && this.provider === OAuthSectionTypes.clever;
     return (
       <div className={this.props.className}>
-        {!this.props.teacherHomepage &&
-          <div style={styles.breadcrumb}>
-            <a href="/teacher-dashboard#/">
-              {i18n.teacherHomePage()}
-            </a>
-            <span style={{opacity: 0.5}}>{"\u00a0 \u25b6 \u00a0"}</span>
-            <b style={{color: color.dark_orange}}>
-              {i18n.studentAccountsAndProgress()}
-            </b>
-          </div>
-        }
+        {!this.props.teacherHomepage && <Breadcrumb/>}
         {asyncLoadComplete &&
           <Button
             className="uitest-newsection"
@@ -201,3 +187,22 @@ export default connect(state => ({
   importClassroomStarted,
   asyncLoadSectionData,
 })(SectionsPage);
+
+const Breadcrumb = (props) => (
+  <div
+    style={{
+      marginTop: 20,
+      marginBottom: 28
+    }}
+  >
+    <a href="/teacher-dashboard#/">
+      {i18n.teacherHomePage()}
+    </a>
+    <span style={{opacity: 0.5}}>
+      {"\u00a0 \u25b6 \u00a0"}
+    </span>
+    <b style={{color: color.dark_orange}}>
+      {i18n.studentAccountsAndProgress()}
+    </b>
+  </div>
+);
