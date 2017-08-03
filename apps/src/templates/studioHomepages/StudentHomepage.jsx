@@ -44,7 +44,7 @@ const StudentHomepage = React.createClass({
         />
 
         <StudentSections
-          sections={sections}
+          initialSections={sections}
           isRtl={isRtl}
           canLeave={canLeave}
         />

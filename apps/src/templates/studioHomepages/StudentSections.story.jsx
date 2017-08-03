@@ -42,7 +42,7 @@ export default storybook => storybook
       description: 'shows a join sections component with attention-grabbing dashed border',
       story: () => (
         <StudentSections
-          sections={[]}
+          initialSections={[]}
           isRtl={false}
           canLeave={false}
         />
@@ -53,7 +53,7 @@ export default storybook => storybook
       description: 'shows a sections table, no column for leave buttons, and a solid border join section component',
       story: () => (
         <StudentSections
-          sections={sections}
+          initialSections={sections}
           isRtl={false}
           canLeave={false}
         />
@@ -64,7 +64,7 @@ export default storybook => storybook
       description: 'shows a sections table, including a column for leave buttons, and a solid border join section component',
       story: () => (
         <StudentSections
-          sections={sections}
+          initialSections={sections}
           isRtl={false}
           canLeave={true}
         />
