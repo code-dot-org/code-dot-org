@@ -1,37 +1,36 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import ContentContainer from '../ContentContainer';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
 import SectionsTable from '../studioHomepages/SectionsTable';
 
-const StudentSections = React.createClass({
-  propTypes: {
-    sections: React.PropTypes.array, // student sections!  Teacher sections are in redux
-    isRtl: React.PropTypes.bool.isRequired,
-    canLeave: React.PropTypes.bool.isRequired,
-  },
+export default class StudentSections extends Component {
+  static propTypes = {
+    sections: PropTypes.array,
+    isRtl: PropTypes.bool.isRequired,
+    canLeave: PropTypes.bool.isRequired,
+  };
 
-  getInitialState() {
-    return {
-      studentSections: this.props.sections,
+  constructor(props) {
+    super(props);
+    this.state = {
+      studentSections: props.sections,
       sectionsAction: null,
       sectionsResult: null,
       sectionsResultName: null
     };
-  },
+  }
 
-  updateSections(studentSections) {
-    this.setState({studentSections});
-  },
+  updateSections = (studentSections) => this.setState({studentSections});
 
-  updateSectionsResult(action, result, name) {
+  updateSectionsResult = (action, result, name) => {
     this.setState({
       sectionsAction: action,
       sectionsResult: result,
       sectionsResultName: name
     });
-  },
+  };
 
   render() {
     const {isRtl, canLeave} = this.props;
@@ -71,5 +70,4 @@ const StudentSections = React.createClass({
       </div>
     );
   }
-});
-export default StudentSections;
+}
