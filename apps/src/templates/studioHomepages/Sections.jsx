@@ -6,7 +6,7 @@ import ContentContainer from '../ContentContainer';
 import {SectionsSetUpMessage} from './SetUpMessage';
 import JoinSection from './JoinSection';
 import JoinSectionNotifications from './JoinSectionNotifications';
-import SectionsPage from '../teacherDashboard/SectionsPage';
+import OwnedSections from '../teacherDashboard/OwnedSections';
 import SectionsTable from '../studioHomepages/SectionsTable';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import AddSectionDialog from "../teacherDashboard/AddSectionDialog";
@@ -76,7 +76,7 @@ const Sections = React.createClass({
             nameOrId={this.state.sectionsResultName}
           />
           {isTeacher && numTeacherSections > 0 && sectionFlow2017 && (
-            <SectionsPage
+            <OwnedSections
               className="sectionPage"
               teacherHomepage={this.props.teacherHomepage}
             />

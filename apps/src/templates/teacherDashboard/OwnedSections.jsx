@@ -30,7 +30,7 @@ const styles = {
   }
 };
 
-class SectionsPage extends Component {
+class OwnedSections extends Component {
   static propTypes = {
     teacherHomepage: PropTypes.bool,
     className: PropTypes.string,
@@ -174,7 +174,7 @@ class SectionsPage extends Component {
     );
   }
 }
-export const UnconnectedSectionsPage = SectionsPage;
+export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
@@ -190,7 +190,7 @@ export default connect(state => ({
   loadClassroomList,
   importClassroomStarted,
   asyncLoadSectionData,
-})(SectionsPage);
+})(OwnedSections);
 
 const Breadcrumb = (props) => (
   <div
