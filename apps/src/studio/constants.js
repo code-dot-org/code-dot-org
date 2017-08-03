@@ -17,6 +17,15 @@ export const SpriteSize = {
   VERY_LARGE: 2
 };
 
+// NOTE: all class names should be unique. eventhandler naming won't work
+// if we name a projectile class 'left' for example.
+export const EdgeClassNames = [
+  'top',
+  'left',
+  'bottom',
+  'right'
+];
+
 export const Direction = {
   NONE: 0,
   NORTH: 1,
@@ -27,6 +36,13 @@ export const Direction = {
   SOUTHEAST: 6,
   SOUTHWEST: 12,
   NORTHWEST: 9
+};
+
+export const KeyToDirection = {
+  left: Direction.WEST,
+  right: Direction.EAST,
+  up: Direction.NORTH,
+  down: Direction.SOUTH,
 };
 
 export const turnLeft90 = function (direction) {

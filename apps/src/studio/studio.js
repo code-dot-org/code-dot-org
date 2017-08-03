@@ -58,6 +58,7 @@ import {captureThumbnailFromSvg} from '../util/thumbnail';
 import project from '../code-studio/initApp/project';
 import {blockAsXmlNode} from '../block_utils';
 import {parseElement, visitAll} from '../xml';
+import { callHandler } from './utils/commandQueue';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -67,6 +68,7 @@ var CardinalDirections = constants.CardinalDirections;
 var NextTurn = constants.NextTurn;
 var SquareType = constants.SquareType;
 var Emotions = constants.Emotions;
+const EdgeClassNames = constants.EdgeClassNames;
 const turnRight90 = constants.turnRight90;
 const turnLeft90 = constants.turnLeft90;
 
@@ -103,16 +105,6 @@ Studio.GameStates = {
 };
 
 const DRAG_DISTANCE_TO_MOVE_RATIO = 25;
-
-// NOTE: all class names should be unique. eventhandler naming won't work
-// if we name a projectile class 'left' for example.
-
-const EdgeClassNames = [
-  'top',
-  'left',
-  'bottom',
-  'right'
-];
 
 let level;
 let skin;
@@ -975,67 +967,6 @@ var setSvgText = Studio.setSvgText = function (opts) {
   }
 };
 
-/**
- * Execute the code for all of the event handlers that match an event name
- * @param {string} name Name of the handler we want to call
- * @param {boolean} allowQueueExension When true, we allow additional cmds to
- *  be appended to the queue
- * @param {Array} extraArgs Additional arguments passed into the virtual JS
- *  machine for consumption by the student's event-handling code.
- */
-function callHandler(name, allowQueueExtension, extraArgs = []) {
-  if (level.autoArrowSteer) {
-    var moveDir;
-    switch (name) {
-      case 'when-up':
-        moveDir = Direction.NORTH;
-        break;
-      case 'when-down':
-        moveDir = Direction.SOUTH;
-        break;
-      case 'when-left':
-        moveDir = Direction.WEST;
-        break;
-      case 'when-right':
-        moveDir = Direction.EAST;
-        break;
-    }
-    if (moveDir) {
-      Studio.queueCmd(null, 'move', {
-        'spriteIndex': Studio.protagonistSpriteIndex || 0,
-        'dir': moveDir
-      });
-    }
-  }
-
-  Studio.eventHandlers.forEach(function (handler) {
-    if (studioApp().isUsingBlockly()) {
-      // Note: we skip executing the code if we have not completed executing
-      // the cmdQueue on this handler (checking for non-zero length)
-      if (handler.name === name &&
-          (allowQueueExtension || (0 === handler.cmdQueue.length))) {
-        Studio.currentCmdQueue = handler.cmdQueue;
-        try {
-          if (Studio.legacyRuntime) {
-            handler.func(api, Studio.Globals, ...extraArgs);
-          } else {
-            handler.func(...extraArgs);
-          }
-        } catch (e) {
-          // Do nothing
-          console.error(e);
-        }
-        Studio.currentCmdQueue = null;
-      }
-    } else {
-      // TODO (cpirich): support events with parameters
-      if (handler.name === name) {
-        handler.func.apply(null, extraArgs);
-      }
-    }
-  });
-}
-
 Studio.initAutoHandlers = function (map) {
   for (var funcName in map) {
     var func = Studio.JSInterpreter.findGlobalFunction(funcName);
@@ -1179,6 +1110,16 @@ Studio.callApiCode = function (name, func) {
   Studio.executeQueue(name);
 };
 
+function whenArrow(key) {
+  callHandler(`when-${key}`);
+  if (level.autoArrowSteer) {
+    Studio.queueCmd(null, 'move', {
+      'spriteIndex': Studio.protagonistSpriteIndex || 0,
+      'dir': constants.KeyToDirection[key],
+    });
+  }
+}
+
 Studio.onTick = function () {
   Studio.tickCount++;
   var i;
@@ -1220,16 +1161,16 @@ Studio.onTick = function () {
           Studio.keyState[KeyCodes[key]] === "keydown") {
         switch (KeyCodes[key]) {
           case KeyCodes.LEFT:
-            callHandler('when-left');
+            whenArrow('left');
             break;
           case KeyCodes.UP:
-            callHandler('when-up');
+            whenArrow('up');
             break;
           case KeyCodes.RIGHT:
-            callHandler('when-right');
+            whenArrow('right');
             break;
           case KeyCodes.DOWN:
-            callHandler('when-down');
+            whenArrow('down');
             break;
         }
       }
@@ -1240,16 +1181,16 @@ Studio.onTick = function () {
           Studio.btnState[ArrowIds[btn]] === ButtonState.DOWN) {
         switch (ArrowIds[btn]) {
           case ArrowIds.LEFT:
-            callHandler('when-left');
+            whenArrow('left');
             break;
           case ArrowIds.UP:
-            callHandler('when-up');
+            whenArrow('up');
             break;
           case ArrowIds.RIGHT:
-            callHandler('when-right');
+            whenArrow('right');
             break;
           case ArrowIds.DOWN:
-            callHandler('when-down');
+            whenArrow('down');
             break;
         }
       }
@@ -1258,16 +1199,16 @@ Studio.onTick = function () {
     for (var gesture in Studio.gesturesObserved) {
       switch (gesture) {
         case 'left':
-          callHandler('when-left');
+          whenArrow('left');
           break;
         case 'up':
-          callHandler('when-up');
+          whenArrow('up');
           break;
         case 'right':
-          callHandler('when-right');
+          whenArrow('right');
           break;
         case 'down':
-          callHandler('when-down');
+          whenArrow('down');
           break;
       }
       if (0 === Studio.gesturesObserved[gesture]--) {
