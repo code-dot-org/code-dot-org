@@ -58,12 +58,10 @@ const styles = {
   linkBox: {
     display: 'inline',
     float: 'right',
-    textDecoration: 'none'
   },
   linkBoxRtl: {
     display: 'inline',
     float: 'left',
-    textDecoration: 'none',
     paddingLeft: 10,
   },
   clear: {
