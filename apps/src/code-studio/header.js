@@ -182,6 +182,7 @@ function shareProject() {
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
+          thumbnailUrl={dashboard.project.getThumbnailUrl()}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}

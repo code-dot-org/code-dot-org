@@ -980,6 +980,14 @@ var projects = module.exports = {
   },
 
   /**
+   * Returns the URL stored in current.thumbnailUrl.
+   * @returns {string} The thumbnail URL.
+   */
+  getThumbnailUrl() {
+    return current && current.thumbnailUrl;
+  },
+
+  /**
    * Uploads a thumbnail image to the thumbnail path in the files API. If
    * successful, stores a URL to access the thumbnail in current.thumbnailUrl.
    * @param {Blob} pngBlob A Blob in PNG format containing the thumbnail image.
