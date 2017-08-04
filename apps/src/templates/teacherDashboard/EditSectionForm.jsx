@@ -51,7 +51,7 @@ class EditSectionForm extends Component{
 
   onSaveClick = () => {
     this.props.handleSave().catch(status => {
-      alert(i18n.unexpectedError());
+      alert(JSON.stringify(status));
       console.error(status);
     });
   };
