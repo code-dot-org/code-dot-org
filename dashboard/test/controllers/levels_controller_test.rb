@@ -312,7 +312,6 @@ class LevelsControllerTest < ActionController::TestCase
     )
     assert_response :success
     level = assigns(:level)
-    puts "level.properties #{level.properties}"
     assert_equal @program, level.properties['solution_blocks']
     assert_s3_image_url level.properties['solution_image_url']
   end
