@@ -148,11 +148,7 @@ class SectionApiHelperTest < SequelTestCase
   describe DashboardSection do
     before do
       DashboardSection.clear_caches
-      # see http://www.rubydoc.info/github/jeremyevans/sequel/Sequel/Mock/Database
-      @fake_db = Sequel.connect "mock://mysql"
-      @fake_db.server_version = 50616
-      I18n.locale = 'en-US'
-      Dashboard.stubs(:db).returns(@fake_db)
+      FakeDashboard.use_fake_database
     end
 
     describe 'valid grades' do
@@ -165,56 +161,67 @@ class SectionApiHelperTest < SequelTestCase
       end
 
       it 'does not accept invalid numbers and strings' do
-        assert !DashboardSection.valid_grade?("Something else")
-        assert !DashboardSection.valid_grade?("56")
+        refute DashboardSection.valid_grade?("Something else")
+        refute DashboardSection.valid_grade?("56")
       end
     end
 
     describe 'valid scripts' do
       before do
-        # mock scripts (the first query to the db gets the scripts)
-        @fake_db.fetch = [
-          {id: 1, name: 'Foo', hidden: false},
-          {id: 3, name: 'Bar', hidden: false},
-          {id: 4, name: 'mc', hidden: false},
-          {id: 5, name: 'hourofcode', hidden: false},
-          {id: 6, name: 'minecraft', hidden: false},
-          {id: 7, name: 'flappy', hidden: false}
-        ]
+        I18n.locale = 'en-US'
       end
 
-      it 'accepts valid script ids' do
-        assert DashboardSection.valid_script_id?('1')
-        assert DashboardSection.valid_script_id?('3')
+      it 'returns true for valid script ids' do
+        assert DashboardSection.valid_script_id?(FakeDashboard::SCRIPT_FOO[:id].to_s)
+        assert DashboardSection.valid_script_id?(FakeDashboard::SCRIPT_FLAPPY[:id].to_s)
       end
 
-      it 'does not accept invalid script ids' do
-        assert !DashboardSection.valid_script_id?('2')
-        assert !DashboardSection.valid_script_id?('111')
-        assert !DashboardSection.valid_script_id?('invalid!!')
+      it 'returns false for non-valid script ids' do
+        refute DashboardSection.valid_script_id?('2')
+        refute DashboardSection.valid_script_id?('111')
+        refute DashboardSection.valid_script_id?('invalid!!')
       end
 
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Classic Maze"' do
-        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Adventurer'
-        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Designer'
-        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Classic Maze'
+        assert_includes(
+          DashboardSection.valid_scripts.map {|script| script[:name]},
+          'Minecraft Adventurer'
+        )
+        assert_includes(
+          DashboardSection.valid_scripts.map {|script| script[:name]},
+          'Minecraft Designer'
+        )
+        assert_includes(
+          DashboardSection.valid_scripts.map {|script| script[:name]},
+          'Classic Maze'
+        )
         refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'mc'
         refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'hourofcode'
       end
 
       it 'rewrites mc as "Minecraft Adventurer", hourofcode as "Laberinto clásico" in Spanish"' do
         I18n.locale = 'es-ES'
-        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Adventurer'
-        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Minecraft Designer'
-        assert_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'Laberinto clásico'
+        assert_includes(
+          DashboardSection.valid_scripts.map {|script| script[:name]},
+          'Minecraft Adventurer'
+        )
+        assert_includes(
+          DashboardSection.valid_scripts.map {|script| script[:name]},
+          'Minecraft Designer'
+        )
+        assert_includes(
+          DashboardSection.valid_scripts.map {|script| script[:name]},
+          'Laberinto clásico'
+        )
         refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'mc'
         refute_includes DashboardSection.valid_scripts.map {|script| script[:name]}, 'hourofcode'
       end
 
       it 'returns expected info' do
-        flappy_script = DashboardSection.valid_scripts.find {|script| script[:script_name] == 'flappy'}
+        flappy_script = DashboardSection.valid_scripts.
+          find {|script| script[:script_name] == 'flappy'}
         expected = {
-          id: 7,
+          id: 10,
           name: 'Make a Flappy game',
           script_name: 'flappy',
           category: 'Hour of Code',
@@ -227,23 +234,17 @@ class SectionApiHelperTest < SequelTestCase
 
     describe 'valid courses' do
       before do
-        DashboardSection.clear_caches
-        # mock scripts (the first query to the db gets the scripts)
-        @fake_db.fetch = [
-          {id: 1, name: 'csd'},
-          {id: 3, name: 'csp'}
-        ]
+        I18n.locale = 'en-US'
       end
 
-      it 'accepts valid script ids' do
-        assert DashboardSection.valid_course_id?('1')
-        assert DashboardSection.valid_course_id?('3')
+      it 'returns true for valid course ids' do
+        assert DashboardSection.valid_course_id?(FakeDashboard::COURSE_CSP[:id])
       end
 
-      it 'does not accept invalid script ids' do
-        assert !DashboardSection.valid_course_id?('2')
-        assert !DashboardSection.valid_course_id?('111')
-        assert !DashboardSection.valid_course_id?('invalid!!')
+      it 'returns false for non-valid course ids' do
+        refute DashboardSection.valid_course_id?('2')
+        refute DashboardSection.valid_course_id?('111')
+        refute DashboardSection.valid_course_id?('invalid!!')
       end
 
       it 'returns expected info' do
@@ -258,7 +259,7 @@ class SectionApiHelperTest < SequelTestCase
 
         csp_course = DashboardSection.valid_courses.find {|course| course[:script_name] == 'csp'}
         expected = {
-          id: 3,
+          id: 15,
           name: 'CS Principles',
           script_name: 'csp',
           category: 'Full Courses',
