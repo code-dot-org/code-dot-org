@@ -1,7 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
-import teacherSections, {setSections, serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
+import teacherSections, {serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '../teacherDashboard/oauthClassroomRedux';
 import TeacherSections from './TeacherSections';
 
@@ -41,12 +42,12 @@ const serverSections = sections.map(serverSectionFromSection);
 
 export default [
   {
-    name: 'Sections - teacher at least one section',
+    name: 'teacher at least one section',
     description: 'shows a table of sections on the teacher homepage',
     story: () => {
+      withFakeServer({sections: serverSections});
       registerReducers({teacherSections, oauthClassroom});
       const store = createStoreWithReducers();
-      store.dispatch(setSections(serverSections));
       return (
         <Provider store={store}>
           <TeacherSections
@@ -60,9 +61,10 @@ export default [
     }
   },
   {
-    name: 'Sections - teacher, no sections yet',
+    name: 'teacher, no sections yet',
     description: 'shows a set up message if the teacher does not have any sections yet',
     story: () => {
+      withFakeServer();
       registerReducers({teacherSections, oauthClassroom});
       const store = createStoreWithReducers();
       return (
@@ -78,3 +80,17 @@ export default [
     }
   },
 ];
+
+function withFakeServer({courses = [], sections = []} = {}) {
+  const server = sinon.fakeServer.create({
+    autoRespond: true,
+  });
+  const successResponse = (body) => [
+    200,
+    {"Content-Type": "application/json"},
+    JSON.stringify(body)
+  ];
+  server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
+  server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+  server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+}
