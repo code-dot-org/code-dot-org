@@ -33,6 +33,9 @@ def check_for_cdo_keys
     puts <<-EOS.unindent
 
       This script requires CDO.github_access_token and CDO.slack_token.
+      Create your API tokens from these pages:
+      https://github.com/settings/tokens ('public_repo' permission)
+      https://api.slack.com/custom-integrations/legacy-tokens
 
       Please add them to your locals.yml and rerun the script.
 
