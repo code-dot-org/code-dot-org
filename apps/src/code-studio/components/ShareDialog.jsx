@@ -73,6 +73,7 @@ const ShareDialog = React.createClass({
     }).isRequired,
     icon: React.PropTypes.string,
     shareUrl: React.PropTypes.string.isRequired,
+    thumbnailUrl: React.PropTypes.string,
     isAbusive: React.PropTypes.bool.isRequired,
     isOpen: React.PropTypes.bool.isRequired,
     isSignedIn: React.PropTypes.bool.isRequired,
@@ -165,6 +166,13 @@ const ShareDialog = React.createClass({
       modalClass += ' no-modal-icon';
     }
 
+    var thumbnailImageUrl;
+    if (this.props.thumbnailUrl) {
+      thumbnailImageUrl = this.props.thumbnailUrl;
+    } else {
+      thumbnailImageUrl = "https://studio.code.org/blockly/media/projects/project_default.png";
+    }
+
     var facebookShareUrl = "https://www.facebook.com/sharer/sharer.php?u=" +
                            encodeURIComponent(this.props.shareUrl);
     var twitterShareUrl = "https://twitter.com/intent/tweet?url=" +
@@ -219,18 +227,26 @@ const ShareDialog = React.createClass({
               <p style={styles.shareWarning}>
                 {this.props.i18n.t('project.share_u13_warning')}
               </p>}
-              <p style={{fontSize: 20}}>
-                {this.props.i18n.t('project.share_copy_link')}
-              </p>
               <div style={{marginBottom: 10}}>
-                <input
-                  type="text"
-                  id="sharing-input"
-                  onClick={select}
-                  readOnly="true"
-                  value={this.props.shareUrl}
-                  style={{cursor: 'copy', width: 465}}
-                />
+                <div style={{float: 'left', marginRight: 10}}>
+                  <img
+                    style={{width: 100}}
+                    src={thumbnailImageUrl}
+                  />
+                </div>
+                <div>
+                  <p style={{fontSize: 20}}>
+                    {this.props.i18n.t('project.share_copy_link')}
+                  </p>
+                  <input
+                    type="text"
+                    id="sharing-input"
+                    onClick={select}
+                    readOnly="true"
+                    value={this.props.shareUrl}
+                    style={{cursor: 'copy', width: 450}}
+                  />
+                </div>
               </div>
               <div className="social-buttons">
                 <a id="sharing-phone" href="" onClick={this.showSendToPhone}>

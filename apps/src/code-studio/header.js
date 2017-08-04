@@ -172,6 +172,7 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+    const thumbnailUrl = dashboard.project.getThumbnailUrl();
 
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -179,6 +180,7 @@ function shareProject() {
           i18n={i18n}
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
+          thumbnailUrl={thumbnailUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           isSignedIn={appOptions.isSignedIn}
           isPublished={dashboard.project.isPublished()}
