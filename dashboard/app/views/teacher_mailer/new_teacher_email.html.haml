@@ -1,3 +1,7 @@
+- require 'geocoder'
+- location = Geocoder.search(@teacher.ip).try(:first)
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+
 %p
   Hello #{@teacher.name}, and welcome to Code.org!
 %p
@@ -22,7 +26,7 @@
   your students, unplugged activities for your class you can do without a computer, and forums
   to connect to other teachers.
 
-- if false
+- if us_ip
   %h3
     New to teaching computer science?
   %p
