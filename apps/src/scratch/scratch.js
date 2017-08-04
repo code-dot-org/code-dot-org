@@ -2,7 +2,7 @@ import AudioEngine from 'scratch-audio';
 import Renderer from 'scratch-render';
 import Storage from 'scratch-storage';
 import VM from 'scratch-vm';
-import Blockly from 'scratch-blocks/dist/vertical.js';
+import Blockly from 'scratch-blocks';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
