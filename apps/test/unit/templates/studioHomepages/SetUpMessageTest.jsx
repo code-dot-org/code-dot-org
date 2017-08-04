@@ -75,7 +75,7 @@ describe('SectionsSetUpMessage', () => {
         <Button
           href={'http://localhost:3000//teacher-dashboard#/sections'}
           color={Button.ButtonColor.gray}
-          text={'Create section'}
+          text={'Create a section'}
         />
         <div/>
       </div>

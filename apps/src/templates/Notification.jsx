@@ -143,7 +143,6 @@ const Notification = React.createClass({
       success: 'check-circle',
       failure: 'exclamation-triangle',
       warning: 'exclamation-triangle',
-      course: 'plus',
       bullhorn: 'bullhorn'
     };
 
