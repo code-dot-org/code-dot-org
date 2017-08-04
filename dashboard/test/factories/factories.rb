@@ -680,6 +680,9 @@ FactoryGirl.define do
     zip "98101"
   end
 
+  # Default school to public school. More specific factories below
+  factory :school, parent: :public_school
+
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
     id {School.maximum(:id) + 1}
