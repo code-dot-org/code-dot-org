@@ -1235,7 +1235,23 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiment': experiment.name}}}
+        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
+      )
+    )
+    assert_equal assigns(:level), level
+  end
+
+  test "should present experiment level if in one of the experiments" do
+    sign_in @student
+    experiment1 = create :single_user_experiment, min_user_id: @student.id + 1
+    experiment2 = create :single_user_experiment, min_user_id: @student.id
+    level = create :maze, name: 'maze 1'
+    level2 = create :maze, name: 'maze 2'
+    get_show_script_level_page(
+      create(
+        :script_level,
+        levels: [level, level2],
+        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment1.name, experiment2.name]}}}
       )
     )
     assert_equal assigns(:level), level
@@ -1250,7 +1266,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       create(
         :script_level,
         levels: [level, level2],
-        properties: {'variants': {'maze 1': {'active': false, 'experiment': experiment.name}}}
+        properties: {'variants': {'maze 1': {'active': false, 'experiments': [experiment.name]}}}
       )
     )
     assert_equal assigns(:level), level2

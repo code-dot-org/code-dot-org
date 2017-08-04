@@ -88,7 +88,7 @@ class ScriptDSL < BaseDSL
     progression = properties.delete(:progression)
     target = properties.delete(:target)
     challenge = properties.delete(:challenge)
-    experiment = properties.delete(:experiment)
+    experiments = properties.delete(:experiments)
 
     level = {
       name: name,
@@ -110,10 +110,10 @@ class ScriptDSL < BaseDSL
       # Experiment levels are inactive unless explicitly marked active, which
       # is the opposite of normal levels. (Normally if you add a level variant
       # for an experiment group, you want everyone else to get the other level)
-      active = false if !experiment.nil? && active.nil?
+      active = false if !experiments.nil? && active.nil?
 
       levelprops[:active] = active if active == false
-      levelprops[:experiment] = experiment unless experiment.nil?
+      levelprops[:experiments] = experiments unless experiments.nil?
       unless levelprops.empty?
         @current_scriptlevel[:properties][:variants] ||= {}
         @current_scriptlevel[:properties][:variants][name] = levelprops
@@ -220,7 +220,7 @@ class ScriptDSL < BaseDSL
                 sl.progression,
                 sl.target,
                 sl.challenge,
-                sl.experiment(level)
+                sl.experiments(level)
               ).map {|l| l.indent(2)}
             )
           end
@@ -241,7 +241,7 @@ class ScriptDSL < BaseDSL
     progression = nil,
     target = nil,
     challenge = nil,
-    experiment = nil
+    experiments = nil
   )
     s = []
     if level.key.start_with? 'blockly:'
@@ -255,9 +255,9 @@ class ScriptDSL < BaseDSL
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
     l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
-    l += ', active: false' if !experiment && active == false
-    l += ', active: true' if experiment && (active == true || active.nil?)
-    l += ", experiment: '#{experiment}'" if experiment
+    l += ', active: false' if !experiments && active == false
+    l += ', active: true' if experiments && (active == true || active.nil?)
+    l += ", experiments: ['#{experiments.join(', ')}']" if experiments
     l += ", progression: '#{progression}'" if progression
     l += ', target: true' if target
     l += ', challenge: true' if challenge
