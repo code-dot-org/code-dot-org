@@ -382,9 +382,11 @@ def main
 
   DevelopersTopic.set_dtt 'yes'
 
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
-  end if CDO.honeybadger_api_token
+  if CDO.honeybadger_api_token
+    should_i 'retrieve recent honeybadger issues' do
+      get_honeybadger_issues
+    end
+  end
 
   do_dtt_subroutine
 
@@ -465,9 +467,11 @@ def main
     end
   end
 
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
-  end if CDO.honeybadger_api_token
+  if CDO.honeybadger_api_token
+    should_i 'retrieve recent honeybadger issues' do
+      get_honeybadger_issues
+    end
+  end
 
   puts_script_conclusion
 rescue
