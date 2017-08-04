@@ -50,17 +50,8 @@ export const scratchDefaultProject = JSON.stringify({
           "rotationCenterX": 47,
           "rotationCenterY": 55,
           "skinId": 1,
-          "assetId": "09dc888b0b7df19f70d81588ae73420e",
-          "dataFormat": "svg"
-        },
-        {
-          "name": "costume2",
-          "bitmapResolution": 1,
-          "rotationCenterX": 47,
-          "rotationCenterY": 55,
-          "skinId": 0,
-          "assetId": "3696356a03a8d938318876a593572843",
-          "dataFormat": "svg"
+          "assetId": "099ef1e1efb50bd0dc421b0acc6ed8bb",
+          "dataFormat": "png"
         }
       ],
       "sounds": []
