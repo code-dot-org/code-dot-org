@@ -221,13 +221,14 @@ class Pd::Enrollment < ActiveRecord::Base
     all.map {|enrollment| [enrollment.full_name, enrollment]}
   end
 
-  # TODO: Delete school column
+  # TODO: Migrate existing school entries into schoolInfo and delete school column
   def school
     ActiveSupport::Deprecation.warn('School is deprecated. Use school_info or school_name instead.')
+    read_attribute :school
   end
 
   def school_name
-    school_info.try :effective_school_name
+    school_info.try(:effective_school_name) || read_attribute(:school)
   end
 
   def school_district_name

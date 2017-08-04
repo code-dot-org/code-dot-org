@@ -406,16 +406,22 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'school is deprecated' do
-    enrollment = build :pd_enrollment
-    assert_deprecated 'School is deprecated. Use school_info or school_name instead.' do
+    enrollment = build :pd_enrollment, school: 'a school'
+    returned_school = assert_deprecated 'School is deprecated. Use school_info or school_name instead.' do
       enrollment.school
     end
+    assert_equal 'a school', returned_school
   end
 
   test 'school_name calls school_info.effective_school_name' do
     enrollment = build :pd_enrollment
     enrollment.school_info.expects(:effective_school_name).returns('effective school name')
     assert_equal 'effective school name', enrollment.school_name
+  end
+
+  test 'school_name falls back to school if no school info' do
+    enrollment = build :pd_enrollment, school_info: nil, school: 'old format school'
+    assert_equal 'old format school', enrollment.school_name
   end
 
   test 'school_district calls school_info.effective_school_district_name' do
