@@ -13,6 +13,13 @@ class LevelsControllerTest < ActionController::TestCase
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
+
+    # Ensure that we get a real S3 url for the level source image when
+    # requested, and that we never try to upload an image to S3.
+
+    CDO.stubs(:disable_s3_image_uploads).returns(false)
+    LevelSourceImage.any_instance.expects(:save_to_s3).never
+    create(:level_source, :with_image, level: @level, data: @program)
   end
 
   test "should get index" do
@@ -298,6 +305,36 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
     level = assigns(:level)
     assert_equal level.properties[:toolbox_blocks.to_s], @program
+    assert_nil level.properties[:solution_image_url.to_s]
+  end
+
+  test "should update solution image when updating solution blocks" do
+    post :update_blocks, params: {
+      level_id: @level.id,
+      game_id: @level.game.id,
+      type: 'solution_blocks',
+      program: @program,
+      image: 'stub-image-data',
+    }
+    assert_response :success
+    level = assigns(:level)
+    puts "level.properties #{level.properties}"
+    assert_equal level.properties[:solution_blocks.to_s], @program
+    assert_s3_image_url(level.properties[:solution_image_url.to_s])
+  end
+
+  test "should not update solution image when updating toolbox blocks" do
+    post :update_blocks, params: {
+      level_id: @level.id,
+      game_id: @level.game.id,
+      type: 'toolbox_blocks',
+      program: @program,
+      image: 'stub-image-data',
+    }
+    assert_response :success
+    level = assigns(:level)
+    assert_equal level.properties[:toolbox_blocks.to_s], @program
+    assert_nil level.properties[:solution_image_url.to_s]
   end
 
   test "should not update blocks if not levelbuilder" do
@@ -705,5 +742,15 @@ class LevelsControllerTest < ActionController::TestCase
 
     get :embed_blocks, params: {level_id: level, block_type: :solution_blocks}
     assert_response :success
+  end
+
+  private
+
+  # Assert that the url is a real S3 url, and not a placeholder.
+  def assert_s3_image_url(url)
+    assert(
+      %r{#{LevelSourceImage::S3_URL}.*\.png}.match(url),
+      "expected #{url.inspect} to be an S3 URL"
+    )
   end
 end
