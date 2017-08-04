@@ -1,6 +1,4 @@
-import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import styleConstants from '../../styleConstants';
@@ -21,13 +19,6 @@ const CourseBlocksTools = React.createClass({
     isEnglish: React.PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     codeOrgUrlPrefix: React.PropTypes.string.isRequired
-  },
-
-  componentDidMount() {
-    $('#applab').appendTo(ReactDOM.findDOMNode(this.refs.applab)).show();
-    $('#widgets').appendTo(ReactDOM.findDOMNode(this.refs.widgets)).show();
-    $('#gamelab').appendTo(ReactDOM.findDOMNode(this.refs.gamelab)).show();
-    $('#weblab').appendTo(ReactDOM.findDOMNode(this.refs.weblab)).show();
   },
 
   render() {

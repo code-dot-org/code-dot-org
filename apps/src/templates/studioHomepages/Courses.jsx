@@ -2,39 +2,18 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import FindLocalClassBanner from './FindLocalClassBanner';
 import {
-  CourseBlocksCsf,
   CourseBlocksHoc,
   CourseBlocksAll
 } from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
-import color from "../../util/color";
+import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
-
-const styles = {
-  heading: {
-    paddingRight: 10,
-    paddingTop: 10,
-    paddingBottom: 20,
-    fontSize: 24,
-    fontFamily: 'Gotham 3r',
-    zIndex: 2,
-    color: color.charcoal,
-    width: 940
-  },
-  spacer: {
-    height: 50,
-    width: 940,
-    float: 'left',
-    color: color.white
-  }
-};
 
 /**
  * Though named Courses, this component represents a collection of courses and/or
@@ -83,7 +62,6 @@ const Courses = React.createClass({
               href= "/users/sign_up"
               color={Button.ButtonColor.gray}
               text={i18n.createAccount()}
-              style={styles.button}
             />
           )}
         </HeaderBanner>
@@ -92,27 +70,29 @@ const Courses = React.createClass({
           ref="flashes"
         />
 
-        {/* Signed-in teacher in English */}
+        {/* English, teacher */}
         {(isEnglish && isTeacher) && (
           <div>
-            <UiTips
-              userId={userId}
-              tipId={"teacher_courses"}
-              showInitialTips={showInitialTips}
-              tips={
-                [
-                  {
-                    type: "initial",
-                    position: {top: 0, left: 0, position: "relative"},
-                    text: i18n.coursesUiTipsTeacherCourses(),
-                    arrowDirection: "down",
-                    scrollTo: ".courseexplorer"
-                  }
-                ]}
-            />
+
+            {(!isSignedOut &&
+              <UiTips
+                userId={userId}
+                tipId={"teacher_courses"}
+                showInitialTips={showInitialTips}
+                tips={
+                  [
+                    {
+                      type: "initial",
+                      position: {top: 0, left: 0, position: "relative"},
+                      text: i18n.coursesUiTipsTeacherCourses(),
+                      arrowDirection: "down",
+                      scrollTo: ".courseexplorer"
+                    }
+                  ]}
+              />
+            )}
 
             <div>
-
               <ContentContainer
                 heading={i18n.courseExplorerHeading()}
                 description={i18n.courseExplorerDescription()}
@@ -121,14 +101,22 @@ const Courses = React.createClass({
                 <ProtectedStatefulDiv ref="courseExplorer"/>
               </ContentContainer>
 
-              <div style={styles.spacer}>.</div>
-
-              <br/>
-              <br/>
-              <TeacherAssignablesCatalog
-                codeOrgUrlPrefix={codeOrgUrlPrefix}
+              <CourseBlocksGradeBands
+                isEnglish={isEnglish}
                 isRtl={isRtl}
+                codeOrgUrlPrefix={codeOrgUrlPrefix}
               />
+
+              <ContentContainer
+                heading={i18n.teacherCourseHoc()}
+                description={i18n.teacherCourseHocDescription()}
+                isRtl={isRtl}
+                linkText={i18n.teacherCourseHocLinkText()}
+                link={`${codeOrgUrlPrefix}/hourofcode/overview`}
+                showLink={true}
+              >
+                <CourseBlocksHoc rowCount={1}/>
+              </ContentContainer>
 
               <CourseBlocksTools
                 isEnglish={isEnglish}
@@ -139,12 +127,10 @@ const Courses = React.createClass({
           </div>
         )}
 
-        {/* Signed-in student in English */}
-        {(!isSignedOut && !isTeacher && isEnglish) && (
+        {/* English, student.  (Also shown when signed out) */}
+        {(isEnglish && !isTeacher) && (
           <div>
-            <CourseBlocksCsf isEnglish={isEnglish}/>
-
-            <CourseBlocksTools
+            <CourseBlocksGradeBands
               isEnglish={isEnglish}
               isRtl={isRtl}
               codeOrgUrlPrefix={codeOrgUrlPrefix}
@@ -159,19 +145,20 @@ const Courses = React.createClass({
             >
               <CourseBlocksHoc rowCount={1}/>
             </ContentContainer>
+
+            <FindLocalClassBanner
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+              isRtl={isRtl}
+            />
           </div>
         )}
 
-        {/* Anything but a teacher or student in English.
-            That is: signed-out, or a student or teacher in non-English. */}
-        {(isSignedOut || !isEnglish) && (
-          <CourseBlocksAll isEnglish={isEnglish}/>
-        )}
-
-        {(!isTeacher && isEnglish) && (
-          <FindLocalClassBanner
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
+        {/* Non-English */}
+        {(!isEnglish) && (
+          <CourseBlocksAll
+            isEnglish={isEnglish}
             isRtl={isRtl}
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
         )}
       </div>
