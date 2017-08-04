@@ -1943,7 +1943,7 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it returns both courses and scripts" do
-      courses_and_scripts = @student.recent_courses_and_scripts
+      courses_and_scripts = @student.recent_courses_and_scripts(false)
       assert_equal 2, courses_and_scripts.length
 
       assert_equal 'csd', courses_and_scripts[0][:name]
@@ -1961,10 +1961,20 @@ class UserTest < ActiveSupport::TestCase
       script = Script.find_by_name('csd1')
       @student.assign_script(script)
 
-      courses_and_scripts = @student.recent_courses_and_scripts
+      courses_and_scripts = @student.recent_courses_and_scripts(false)
       assert_equal 2, courses_and_scripts.length
 
       assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+    end
+
+    test "it optionally does not return primary course in returned courses" do
+      script = Script.find_by_name('csd1')
+      @student.assign_script(script)
+
+      courses_and_scripts = @student.recent_courses_and_scripts(true)
+      assert_equal 1, courses_and_scripts.length
+
+      assert_equal ['Computer Science Discoveries'], courses_and_scripts.map {|cs| cs[:title]}
     end
   end
 

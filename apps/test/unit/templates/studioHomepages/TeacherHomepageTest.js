@@ -1,22 +1,14 @@
 import React from 'react';
-import { assert } from 'chai';
+import { assert, expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 
-const announcements = [
-  {
-    heading: "Go beyond an Hour of Code",
-    buttonText: "Go Beyond",
-    description: "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-    link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"
-  },
-  {
-    heading: "Check out your new teacher homepage",
-    buttonText: "Learn More",
-    description: "A redesign is underway so you have better access to your top tools and resources. Your sections, courses and links are all readily accessible. Also, there's more teal than ever!",
-    link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"
-  }
-];
+const announcement = {
+  heading: "Go beyond an Hour of Code",
+  buttonText: "Go Beyond",
+  description: "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
+  link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"
+};
 
 const sections = [
   {
@@ -57,7 +49,7 @@ const courses = [
 describe('TeacherHomepage', () => {
 
   it('shows a non-extended Header Banner that says Home', () => {
-    const wrapper = mount(
+    const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         courses={[]}
@@ -66,14 +58,15 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const headerBanner = wrapper.childAt(0);
-    assert.equal(headerBanner.name(),'HeaderBanner');
-    assert.equal(headerBanner.props().headingText, 'Home');
-    assert.equal(headerBanner.props().extended, false);
+    const headerBanner = wrapper.find('HeaderBanner');
+    assert.deepEqual(headerBanner.props(), {
+      headingText: "Home",
+      short: true
+    });
   });
 
-  it('references ProtectedStatefulDiv for the terms reminder', () => {
-    const wrapper = mount(
+  it('references 2 ProtectedStatefulDivs', () => {
+    const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         courses={[]}
@@ -82,28 +75,30 @@ describe('TeacherHomepage', () => {
         isRtl={false}
       />
     );
-    const termsReminderRef = wrapper.childAt(1);
-    assert.equal(termsReminderRef.name(),'ProtectedStatefulDiv');
+    expect(wrapper.find('ProtectedStatefulDiv')).to.have.length(2);
   });
 
-  it('shows one announcement', () => {
-    const wrapper = mount(
+  it('shows an announcement', () => {
+    const wrapper = shallow(
       <TeacherHomepage
-        announcements={[announcements[0]]}
+        announcements={[announcement]}
         courses={[]}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
     );
-    const announcementsContainer = wrapper.childAt(3).childAt(0);
-    assert.equal(announcementsContainer.name(), 'Notification');
-    // Check if Announcements receives correct props.
-    const announcement = announcementsContainer.props();
-    assert.equal(announcement.notice, announcements[0].heading);
-    assert.equal(announcement.buttonText, announcements[0].buttonText);
-    assert.equal(announcement.details, announcements[0].description);
-    assert.equal(announcement.buttonLink, announcements[0].link);
+    const announcementContainer = wrapper.find('Notification');
+    assert.deepEqual(announcementContainer.props(), {
+      type: "bullhorn",
+      notice: announcement.heading,
+      details: announcement.description,
+      dismissible: false,
+      buttonText: announcement.buttonText,
+      buttonLink: announcement.link,
+      newWindow: true,
+      analyticId: announcement.id
+    });
   });
 
   it('if there are sections, Sections component shows a SectionsTable', () => {
@@ -211,10 +206,22 @@ describe('TeacherHomepage', () => {
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       showAllCoursesLink: true,
-      heading: "Recent Courses",
       isTeacher: true,
       courses: courses,
       isRtl: false
     });
+  });
+
+  it('shows ProjectWidgetWithData component', () => {
+    const wrapper = shallow(
+      <TeacherHomepage
+        announcements={[]}
+        courses={courses}
+        sections={[]}
+        codeOrgUrlPrefix="http://localhost:3000/"
+        isRtl={false}
+      />
+    );
+    expect(wrapper.find('ProjectWidgetWithData').exists());
   });
 });

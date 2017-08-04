@@ -6,6 +6,7 @@ import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
 import Sections from './Sections';
 import TeacherResources from './TeacherResources';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -39,7 +40,6 @@ const TeacherHomepage = React.createClass({
       <div>
         <HeaderBanner
           headingText={i18n.homepageHeading()}
-          extended={false}
           short={true}
         />
         <ProtectedStatefulDiv
@@ -74,7 +74,6 @@ const TeacherHomepage = React.createClass({
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-          heading={i18n.recentCourses()}
           isTeacher={true}
           isRtl={isRtl}
         />
@@ -82,6 +81,7 @@ const TeacherHomepage = React.createClass({
           codeOrgUrlPrefix={codeOrgUrlPrefix}
           isRtl={isRtl}
         />
+        <ProjectWidgetWithData/>
       </div>
     );
   }

@@ -22,8 +22,8 @@ const styles = {
   },
   bannerComplete: {
     backgroundImage: `url(${assetUrl('media/dialog/challenge_target_complete.svg')})`,
-    marginTop: -101,
-    height: 151,
+    marginTop: -99,
+    height: 149,
   },
   content: {
     color: color.purple,

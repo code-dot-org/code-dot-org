@@ -153,7 +153,9 @@ class Ability
     # through ProjectsController and their view/edit requirements are defined
     # there.
     ProjectsController::STANDALONE_PROJECTS.each_pair do |project_type_key, project_type_props|
-      if project_type_props[:login_required]
+      if project_type_props[:levelbuilder_required]
+        can :load_project, project_type_key if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+      elsif project_type_props[:login_required]
         can :load_project, project_type_key if user.persisted?
       else
         can :load_project, project_type_key

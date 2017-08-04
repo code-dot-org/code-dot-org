@@ -50,7 +50,7 @@ import {
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {captureThumbnailFromCanvas} from '../util/thumbnail';
-import {blockAsXmlNode} from '../block_utils';
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import ArtistSkins from './skins';
 
 const CANVAS_HEIGHT = 400;
@@ -156,7 +156,16 @@ const FROZEN_REMIX_PROPS = [
         },
       },
     }),
-  },
+  }, {
+    defaultValues: {
+      skin: "elsa",
+    },
+    generateBlock: args => blockAsXmlNode('turtle_setArtist', {
+      titles: {
+        'VALUE': args.skin
+      },
+    }),
+  }
 ];
 
 const REMIX_PROPS_BY_SKIN = {
@@ -446,6 +455,8 @@ Artist.prototype.prepareForRemix = function () {
   }
 
   whenRun.appendChild(next);
+
+  cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);

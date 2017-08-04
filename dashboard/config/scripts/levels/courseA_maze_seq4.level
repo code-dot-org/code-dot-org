@@ -26,7 +26,7 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\"hint_id\":\"courseA_maze_seq4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dfb0b2e1814398280569bc8dcff64283/courseA_maze_seq4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code as it is. When does something go wrong? Which block can you remove?\",\"hint_id\":\"courseA_maze_seq4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/43dd7d195e5dd9497bc11ef6093888db/courseA_maze_seq4.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you are having trouble, try to figure out what the correct path is and then remove the block that doesn't fit.\",\"hint_id\":\"courseA_maze_seq4_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dfb0b2e1814398280569bc8dcff64283/courseA_maze_seq4.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code as it is. Does something go wrong? Which block can you remove? How can you fix it?\",\"hint_id\":\"courseA_maze_seq4_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/597a8018a3575499d74caa8ca1984893/courseA_maze_seq4.mp3\"}]",
     "markdown_instructions": "*\"Something is not quite right.\"* \r\n\r\nREMOVE a block to get the bird to the pig!\r\n\r\n![](https://images.code.org/6af44fb0ba5ac5dd5502e2538f51fb9c-image-1497996162453.gif)",
     "instructions_important": "true",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseA_maze_seq4_1\",\r\n  \"callout_text\": \"These blocks are made of stone.  You can move them, but you can't delete them!\",\r\n  \"element_id\": \"#callMe\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
@@ -34,11 +34,13 @@
     "disable_if_else_editing": "false",
     "shape_shift": "false",
     "tts_markdown_instructions_override": "Something is not quite right.\r\nREMOVE a block to get the bird to the pig!",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-20 22:02:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:12:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-23 18:52:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-20 22:02:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-21 19:12:57 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-23 18:52:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 15:05:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
