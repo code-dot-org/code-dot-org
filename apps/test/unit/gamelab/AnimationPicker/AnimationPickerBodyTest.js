@@ -1,6 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
+import { allowConsoleErrors } from '../../../util/testUtils';
 const gamelabMsg = require('@cdo/gamelab/locale');
 const moduleUnderTest = require('@cdo/apps/gamelab/AnimationPicker/AnimationPickerBody');
 const AnimationPickerBody = moduleUnderTest.default;
@@ -9,6 +10,8 @@ const WarningLabel = moduleUnderTest.WarningLabel;
 const emptyFunction = function () {};
 
 describe('AnimationPickerBody', function () {
+  allowConsoleErrors();
+
   describe('upload warning', function () {
     function shallowRenderWithProps(props) {
       // Provide default props, with the passed ones overriding them
