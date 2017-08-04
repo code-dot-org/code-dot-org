@@ -230,10 +230,8 @@ FactoryGirl.define do
         end
 
         if Pd::TeacherconSurvey::DISAGREES.include?(survey_hash['personalLearningNeedsMet'])
-          survey_hash[:how_could_improve] = 'Rant about how to improve things'
+          survey_hash[:how_could_improve] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Rant about how to improve things'
         end
-
-        puts survey_hash
 
         survey.update_form_data_hash(survey_hash)
       end
