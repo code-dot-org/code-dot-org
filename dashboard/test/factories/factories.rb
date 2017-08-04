@@ -8,7 +8,6 @@ FactoryGirl.define do
 
   factory :course do
     name "my-course-name"
-    properties nil
   end
 
   factory :experiment do
