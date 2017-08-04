@@ -83,7 +83,7 @@ const ContentContainer= React.createClass({
       React.PropTypes.node,
       React.PropTypes.arrayOf(React.PropTypes.node)
     ]),
-    heading: React.PropTypes.string.isRequired,
+    heading: React.PropTypes.string,
     linkText: React.PropTypes.string,
     link: React.PropTypes.string,
     isRtl: React.PropTypes.bool.isRequired,
@@ -96,18 +96,20 @@ const ContentContainer= React.createClass({
 
     return (
       <div style={styles.box}>
-        <div style={styles.heading}>
-          {heading}
-          {link && linkText &&
-            <a href={link} style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
-              {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
-              <div style={styles.linkToViewAll}>
-                {linkText}
-              </div>
-              {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
-            </a>
-          }
-        </div>
+        {(heading || (link && linkText)) && (
+          <div style={styles.heading}>
+            {heading}
+            {link && linkText &&
+              <a href={link} style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
+                {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
+                <div style={styles.linkToViewAll}>
+                  {linkText}
+                </div>
+                {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
+              </a>
+            }
+          </div>
+        )}
         {description && (
           <div style={styles.description}>
             {description}
