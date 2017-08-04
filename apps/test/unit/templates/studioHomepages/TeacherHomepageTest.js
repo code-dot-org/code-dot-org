@@ -120,10 +120,22 @@ describe('TeacherHomepage', () => {
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       showAllCoursesLink: true,
-      heading: "Recent Courses",
       isTeacher: true,
       courses: courses,
       isRtl: false
     });
+  });
+
+  it('shows ProjectWidgetWithData component', () => {
+    const wrapper = shallow(
+      <TeacherHomepage
+        announcements={[]}
+        courses={courses}
+        sections={[]}
+        codeOrgUrlPrefix="http://localhost:3000/"
+        isRtl={false}
+      />
+    );
+    expect(wrapper.find('ProjectWidgetWithData').exists());
   });
 });

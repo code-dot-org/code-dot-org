@@ -81,7 +81,7 @@ describe('SectionsSetUpMessage', () => {
         <Button
           href={pegasus('/teacher-dashboard#/sections')}
           color={Button.ButtonColor.gray}
-          text={'Create section'}
+          text={'Create a section'}
         />
         <div/>
       </div>

@@ -69,7 +69,6 @@ const TeacherHomepage = React.createClass({
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-          heading={i18n.recentCourses()}
           isTeacher={true}
           isRtl={isRtl}
         />
