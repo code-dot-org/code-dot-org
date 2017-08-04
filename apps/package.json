@@ -9,7 +9,7 @@
   },
   "scripts": {
     "lint": "eslint --ext .js,.jsx src test",
-    "test": "npm run lint && grunt test",
+    "test": "./test-low-memory.sh",
     "test-low-memory": "./test-low-memory.sh",
     "test:unit": "grunt unitTest",
     "test:integration": "grunt integrationTest",
