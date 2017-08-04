@@ -14,6 +14,7 @@ import ContentContainer from "@cdo/apps/templates/ContentContainer";
 import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
 import {SectionsSetUpMessage} from "@cdo/apps/templates/studioHomepages/SetUpMessage";
 import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 describe('TeacherSections', () => {
   throwOnConsoleErrors();
@@ -21,7 +22,6 @@ describe('TeacherSections', () => {
 
   const defaultProps = {
     sections: [],
-    codeOrgUrlPrefix: 'https://code.org',
     isRtl: false,
     numTeacherSections: 0,
     asyncLoadSectionData: () => {},
@@ -40,7 +40,7 @@ describe('TeacherSections', () => {
       <ContentContainer
         heading="Classroom Sections"
         linkText="Manage sections"
-        link="https://code.org/teacher-dashboard#/sections"
+        link={pegasus('/teacher-dashboard#/sections')}
         isRtl={defaultProps.isRtl}
       >
         <SectionsSetUpMessage
@@ -61,7 +61,7 @@ describe('TeacherSections', () => {
       <ContentContainer
         heading="Classroom Sections"
         linkText="Manage sections"
-        link="https://code.org/teacher-dashboard#/sections"
+        link={pegasus('/teacher-dashboard#/sections')}
         isRtl={defaultProps.isRtl}
       >
         <SectionsTable
@@ -69,7 +69,6 @@ describe('TeacherSections', () => {
           isRtl={defaultProps.isRtl}
           isTeacher
           canLeave={false}
-          codeOrgUrlPrefix={defaultProps.codeOrgUrlPrefix}
         />
       </ContentContainer>
     );

@@ -10,7 +10,6 @@ export default class StudentSections extends Component {
     initialSections: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     canLeave: PropTypes.bool.isRequired,
-    codeOrgUrlPrefix: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -34,7 +33,7 @@ export default class StudentSections extends Component {
   };
 
   render() {
-    const {isRtl, canLeave, codeOrgUrlPrefix} = this.props;
+    const {isRtl, canLeave} = this.props;
     const {sections, action, result, resultName} = this.state;
     const enrolledInASection = sections.length > 0;
 
@@ -57,7 +56,6 @@ export default class StudentSections extends Component {
             canLeave={canLeave}
             updateSections={this.updateSections}
             updateSectionsResult={this.updateSectionsResult}
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
         }
         <JoinSection

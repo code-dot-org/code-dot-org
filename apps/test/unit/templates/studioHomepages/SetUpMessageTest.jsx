@@ -8,6 +8,7 @@ import {
 } from '@cdo/apps/templates/studioHomepages/SetUpMessage';
 import Button from "@cdo/apps/templates/Button";
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 describe('CoursesSetUpMessage', () => {
   it('renders as expected for a teacher', () => {
@@ -64,7 +65,6 @@ describe('SectionsSetUpMessage', () => {
     const wrapper = mount(
       <SectionsSetUpMessage
         isRtl={false}
-        codeOrgUrlPrefix="http://localhost:3000/"
         beginEditingNewSection={() => {}}
       />
     );
@@ -79,7 +79,7 @@ describe('SectionsSetUpMessage', () => {
           </div>
         </div>
         <Button
-          href={'http://localhost:3000//teacher-dashboard#/sections'}
+          href={pegasus('/teacher-dashboard#/sections')}
           color={Button.ButtonColor.gray}
           text={'Create section'}
         />
@@ -97,7 +97,6 @@ describe('SectionsSetUpMessage', () => {
       const wrapper = mount(
         <SectionsSetUpMessage
           isRtl={false}
-          codeOrgUrlPrefix="http://localhost:3000/"
           beginEditingNewSection={newSectionHandler}
         />
       );

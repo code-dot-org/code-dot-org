@@ -5,8 +5,8 @@ import styleConstants from '../../styleConstants';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import Button from "../Button";
 import {connect} from 'react-redux';
-import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
 import {beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   section: {
@@ -121,13 +121,12 @@ CoursesSetUpMessage.propTypes = {
 
 export const UnconnectedSectionsSetUpMessage = ({
   isRtl,
-  codeOrgUrlPrefix,
   beginEditingNewSection,
 }) => {
   const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
   const clickHandlerProp = sectionFlow2017 ?
     {onClick: beginEditingNewSection} :
-    {buttonUrl: `${codeOrgUrlPrefix}/teacher-dashboard#/sections`};
+    {buttonUrl: pegasus('/teacher-dashboard#/sections')};
   return (
     <SetUpMessage
       type="sections"
@@ -141,12 +140,9 @@ export const UnconnectedSectionsSetUpMessage = ({
 };
 UnconnectedSectionsSetUpMessage.propTypes = {
   isRtl: PropTypes.bool,
-  codeOrgUrlPrefix: PropTypes.string,
   beginEditingNewSection: PropTypes.func.isRequired,
 };
-export const SectionsSetUpMessage = connect(state => ({
-  codeOrgUrlPrefix: pegasusUrl(state, ''),
-}), {
+export const SectionsSetUpMessage = connect(undefined, {
   beginEditingNewSection: () => beginEditingNewSection(),
 })(UnconnectedSectionsSetUpMessage);
 SectionsSetUpMessage.displayName = 'SectionsSetUpMessage';

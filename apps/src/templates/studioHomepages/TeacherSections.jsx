@@ -8,11 +8,11 @@ import OwnedSections from '../teacherDashboard/OwnedSections';
 import SectionsTable from '../studioHomepages/SectionsTable';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
 import shapes from './shapes';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 class TeacherSections extends Component {
   static propTypes = {
     sections: shapes.sections, // Without experiment
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
 
     //Redux provided
@@ -40,8 +40,8 @@ class TeacherSections extends Component {
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
       return this.renderNewSectionFlow();
     }
-    const {sections, codeOrgUrlPrefix, isRtl} = this.props;
-    const editSectionsUrl = `${codeOrgUrlPrefix}/teacher-dashboard#/sections`;
+    const {sections, isRtl} = this.props;
+    const editSectionsUrl = pegasus('/teacher-dashboard#/sections');
 
     return (
       <ContentContainer
@@ -56,7 +56,6 @@ class TeacherSections extends Component {
             isRtl={isRtl}
             isTeacher
             canLeave={false}
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
         ) : (
           <SectionsSetUpMessage isRtl={isRtl}/>
