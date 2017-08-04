@@ -42,8 +42,7 @@ const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
-const ASYNC_LOAD_SUCCESS = 'teacherSections/ASYNC_LOAD_SUCCESS';
-const ASYNC_LOAD_FAILURE = 'teacherSections/ASYNC_LOAD_FAILURE';
+const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
@@ -127,9 +126,10 @@ export const asyncLoadSectionData = () => (dispatch) => {
   ]).then(([sections, validCourses, validScripts]) => {
     dispatch(setValidAssignments(validCourses, validScripts));
     dispatch(setSections(sections));
-    dispatch({type: ASYNC_LOAD_SUCCESS});
-  }).catch(() => {
-    dispatch({type: ASYNC_LOAD_FAILURE});
+  }).catch(err => {
+    console.error(err.message);
+  }).then(() => {
+    dispatch({type: ASYNC_LOAD_END});
   });
 };
 
@@ -137,7 +137,11 @@ function fetchJSON(url) {
   return new Promise((resolve, reject) => {
     $.getJSON(url)
       .done(resolve)
-      .fail(reject);
+      .fail(jqxhr => reject(new Error(`
+        status: ${jqxhr.status}
+        statusText: ${jqxhr.statusText}
+        responseText: ${jqxhr.responseText}
+      `)));
   });
 }
 
@@ -418,7 +422,7 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === ASYNC_LOAD_SUCCESS || action.type === ASYNC_LOAD_FAILURE) {
+  if (action.type === ASYNC_LOAD_END) {
     return {
       ...state,
       asyncLoadComplete: true,
