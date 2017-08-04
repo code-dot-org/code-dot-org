@@ -328,6 +328,7 @@ class User < ActiveRecord::Base
     ['gender.none', '-']
   ].freeze
 
+  attr_accessor :ip
   attr_accessor :login
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
