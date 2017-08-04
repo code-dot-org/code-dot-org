@@ -1,15 +1,13 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {assert} from '../../../util/configuredChai';
-import {
-  CoursesSetUpMessage,
-} from '@cdo/apps/templates/studioHomepages/SetUpMessage';
 import Button from "@cdo/apps/templates/Button";
+import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 
-describe('CoursesSetUpMessage', () => {
+describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = mount(
-      <CoursesSetUpMessage isRtl={false} isTeacher={true}/>
+      <SetUpCourses isRtl={false} isTeacher={true}/>
     );
     assert(wrapper.containsMatchingElement(
       <div>
@@ -33,7 +31,7 @@ describe('CoursesSetUpMessage', () => {
 
   it('renders as expected for a student', () => {
     const wrapper = mount(
-      <CoursesSetUpMessage isRtl={false} isTeacher={false}/>
+      <SetUpCourses isRtl={false} isTeacher={false}/>
     );
     assert(wrapper.containsMatchingElement(
       <div>

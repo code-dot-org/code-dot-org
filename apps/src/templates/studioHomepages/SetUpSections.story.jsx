@@ -4,7 +4,7 @@ import {
 } from './SetUpSections';
 
 export default storybook => storybook
-  .storiesOf('SetUpMessage', module)
+  .storiesOf('SetUpSections', module)
   .addStoryTable([
     {
       name: 'Set Up Message for Sections for Teachers',
