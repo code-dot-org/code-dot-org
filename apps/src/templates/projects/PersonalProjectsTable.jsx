@@ -6,7 +6,7 @@ import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
-import {PROJECT_TYPE_MAP} from './projectConstants';
+import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -88,11 +88,43 @@ const styles = {
   }
 };
 
+// Cell formatters.
+const thumbnailFormatter = function (thumbnailUrl) {
+  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  return (<ImageWithStatus
+    src={thumbnailUrl}
+    width={THUMBNAIL_SIZE}
+    wrapperStyle={styles.thumbnailWrapper}
+  />);
+};
+
+const nameFormatter = function (name, {rowData}) {
+  const url = '/projects/${rowData.type}/${rowData.channel}/';
+  return <a style={styles.link} href={url} target="_blank">{name}</a>;
+};
+
+const isPublishedFormatter = function (isPublished) {
+  return isPublished ? (<FontAwesome icon="circle"/>) : '';
+};
+
+const actionsFormatter = function () {
+  return (<FontAwesome icon="angle-down"/>);
+};
+
+const dateFormatter = function (time) {
+  const date = new Date(time);
+  return date.toLocaleDateString();
+};
+
+const typeFormatter = function (type) {
+  return PROJECT_TYPE_MAP[type];
+};
+
 // Table of user's projects
 // TODO(caleybrock): add an actions component to allow users to modify projects
 const PersonalProjectsTable = React.createClass({
   propTypes: {
-    projectList: PropTypes.array.isRequired
+    projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   },
 
   getInitialState() {
@@ -125,37 +157,6 @@ const PersonalProjectsTable = React.createClass({
     });
   },
 
-  thumbnailFormatter(thumbnailUrl) {
-    thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
-    return (<ImageWithStatus
-      src={thumbnailUrl}
-      width={THUMBNAIL_SIZE}
-      wrapperStyle={styles.thumbnailWrapper}
-    />);
-  },
-
-  nameFormatter(name, {rowData}) {
-    const url = '/projects/${rowData.type}/${rowData.channel}/';
-    return <a style={styles.link} href={url} target="_blank">{name}</a>;
-  },
-
-  isPublishedFormatter(isPublished, {rowData}) {
-    return isPublished ? (<FontAwesome icon="circle"/>) : '';
-  },
-
-  actionsFormatter() {
-    return (<FontAwesome icon="angle-down"/>);
-  },
-
-  dateFormatter(time, {rowData}) {
-    const date = new Date(time);
-    return date.toLocaleDateString();
-  },
-
-  typeFormatter(type) {
-    return PROJECT_TYPE_MAP[type];
-  },
-
   getColumns(sortable) {
     return [
       {
@@ -167,7 +168,7 @@ const PersonalProjectsTable = React.createClass({
           }},
         },
         cell: {
-          format: this.thumbnailFormatter,
+          format: thumbnailFormatter,
           props: {style: {
             ...styles.cell,
             ...styles.cellThumbnail
@@ -184,7 +185,7 @@ const PersonalProjectsTable = React.createClass({
           }},
         },
         cell: {
-          format: this.nameFormatter,
+          format: nameFormatter,
           props: {style: {
             ...styles.cell,
             ...styles.cellName
@@ -199,7 +200,7 @@ const PersonalProjectsTable = React.createClass({
           transforms: [sortable],
         },
         cell: {
-          format: this.typeFormatter,
+          format: typeFormatter,
           props: {style: {
             ...styles.cellType,
             ...styles.cell
@@ -214,7 +215,7 @@ const PersonalProjectsTable = React.createClass({
           transforms: [sortable],
         },
         cell: {
-          format: this.dateFormatter,
+          format: dateFormatter,
           props: {style: styles.cell}
         }
       },
@@ -225,7 +226,7 @@ const PersonalProjectsTable = React.createClass({
           props: {style: styles.headerCell},
         },
         cell: {
-          format: this.isPublishedFormatter,
+          format: isPublishedFormatter,
           props: {style: {
             ...styles.cell,
             ...styles.cellIsPublished
@@ -239,7 +240,7 @@ const PersonalProjectsTable = React.createClass({
           props: {style: styles.headerCell},
         },
         cell: {
-          format: this.actionsFormatter,
+          format: actionsFormatter,
           props: {style: {
             ...styles.cell,
             ...styles.cellAction
@@ -264,7 +265,7 @@ const PersonalProjectsTable = React.createClass({
       columns,
       sortingColumns,
       sort: orderBy,
-    })(convertChannelsToProjectData(this.props.projectList));
+    })(this.props.projectList);
 
     return (
       <Table.Provider
@@ -277,22 +278,5 @@ const PersonalProjectsTable = React.createClass({
     );
   }
 });
-
-// The project table uses the channels API to populate the personal projects
-// and the data needs to be filtered and mapped before displaying.
-const convertChannelsToProjectData = function (projects) {
-  // Get the ones that aren't hidden, and have a type and id.
-  let projectLists = projects.filter(project => !project.hidden && project.id && project.projectType);
-  return projectLists.map(project => (
-    {
-      name: project.name,
-      channel: project.id,
-      thumbnailUrl: project.thumbnailUrl,
-      type: project.projectType,
-      isPublished: project.publishedAt !== null,
-      updatedAt: project.updatedAt
-    }
-  ));
-};
 
 export default PersonalProjectsTable;
