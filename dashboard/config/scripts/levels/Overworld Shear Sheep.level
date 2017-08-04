@@ -46,8 +46,8 @@
     "day_night_cycle_time": "0",
     "level_verification_timeout": "0",
     "use_player": "false",
-    "contained_level_names": null,
-    "markdown_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep."
+    "markdown_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

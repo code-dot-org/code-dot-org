@@ -33,6 +33,9 @@ def check_for_cdo_keys
     puts <<-EOS.unindent
 
       This script requires CDO.github_access_token and CDO.slack_token.
+      Create your API tokens from these pages:
+      https://github.com/settings/tokens ('public_repo' permission)
+      https://api.slack.com/custom-integrations/legacy-tokens
 
       Please add them to your locals.yml and rerun the script.
 
@@ -144,6 +147,28 @@ def should_i(question)
     elsif 'skip'.start_with?(response) || 'no'.start_with?(response)
       return false
     elsif 'quit'.start_with?(response)
+      puts_quit_message
+      exit(-1)
+    else
+      puts "Sorry, I didn't understand that.\n\n"
+    end
+  end
+end
+
+def should_i_really(question, confirmation)
+  loop do
+    print "Should I really #{question}? If so, type #{underline confirmation}: "
+    response = flush_and_gets.strip
+    puts ''
+    if response == confirmation
+      @logger.info(question)
+      yield
+      return true
+    end
+    response = response.downcase
+    if !response.empty? && ('skip'.start_with?(response) || 'no'.start_with?(response))
+      return false
+    elsif !response.empty? && 'quit'.start_with?(response)
       puts_quit_message
       exit(-1)
     else
@@ -357,8 +382,10 @@ def main
 
   DevelopersTopic.set_dtt 'yes'
 
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
+  if CDO.honeybadger_api_token
+    should_i 'retrieve recent honeybadger issues' do
+      get_honeybadger_issues
+    end
   end
 
   do_dtt_subroutine
@@ -390,7 +417,7 @@ def main
   print_dtp_message
   test_green_commit = InfraTestTopic.green_commit
   if test_green_commit
-    should_i "DTP #{test_green_commit}" do
+    should_i_really "DTP #{test_green_commit}", "DTP" do
       DevelopersTopic.set_dtp "in progress (@#{@dotd_name})"
 
       # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
@@ -440,8 +467,10 @@ def main
     end
   end
 
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
+  if CDO.honeybadger_api_token
+    should_i 'retrieve recent honeybadger issues' do
+      get_honeybadger_issues
+    end
   end
 
   puts_script_conclusion

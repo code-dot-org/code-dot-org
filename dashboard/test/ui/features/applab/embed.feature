@@ -8,7 +8,7 @@ Feature: App Lab Embed
     And I wait for the page to fully load
 
   Scenario: App Lab Embed
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible
@@ -28,7 +28,7 @@ Feature: App Lab Embed
     And I wait to see Applab code mode
 
   Scenario: App Lab Embed without Source
-    Given I switch to text mode
+    Given I ensure droplet is in text mode
     And I append text to droplet "button('hello', 'world');"
     And I press "runButton"
     And I wait until element "#divApplab > .screen > button#hello" is visible

@@ -179,11 +179,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_workshop, sessions: [session_on_day(11)]
     create :pd_workshop, sessions: [session_on_day_late(11)]
 
-    start_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].map(&:id)
-    assert_equal start_expected, Pd::Workshop.scheduled_start_in_days(10).all.map(&:id)
+    start_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].pluck(:id)
+    assert_equal start_expected, Pd::Workshop.scheduled_start_in_days(10).pluck(:id)
 
-    end_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].map(&:id)
-    assert_equal end_expected, Pd::Workshop.scheduled_end_in_days(10).all.map(&:id)
+    end_expected = [workshop_in_10_days_early, workshop_in_10_days, workshop_in_10_days_late].pluck(:id)
+    assert_equal end_expected, Pd::Workshop.scheduled_end_in_days(10).pluck(:id)
   end
 
   test 'multiple session scheduled_start_in_days and scheduled_end_in_days' do
@@ -195,11 +195,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_workshop, sessions: [session_on_day(5), session_on_day(10), session_on_day(15)]
     create :pd_workshop, sessions: [session_on_day(11), session_on_day(12)]
 
-    start_expected = [workshop_starting_on_day_10].map(&:id)
-    assert_equal start_expected, Pd::Workshop.scheduled_start_in_days(10).all.map(&:id)
+    start_expected = [workshop_starting_on_day_10].pluck(:id)
+    assert_equal start_expected, Pd::Workshop.scheduled_start_in_days(10).pluck(:id)
 
-    end_expected = [workshop_ending_on_day_10].map(&:id)
-    assert_equal end_expected, Pd::Workshop.scheduled_end_in_days(10).all.map(&:id)
+    end_expected = [workshop_ending_on_day_10].pluck(:id)
+    assert_equal end_expected, Pd::Workshop.scheduled_end_in_days(10).pluck(:id)
   end
 
   test 'should have ended' do
@@ -219,7 +219,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_already_ended.sessions << (build :pd_session, start: Time.zone.now - 51.hours, end: Time.zone.now - 50.hours)
     workshop_already_ended.save!
 
-    assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.all.map(&:id)
+    assert_equal [workshop_should_have_ended.id], Pd::Workshop.should_have_ended.pluck(:id)
   end
 
   test 'process_ended_workshop_async' do
@@ -333,11 +333,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_after = create :pd_workshop, sessions: [create(:pd_session, start: pivot_date + 1.week)]
 
     # on or before
-    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+    assert_equal [workshop_before, workshop_pivot].pluck(:id).sort,
       Pd::Workshop.scheduled_start_on_or_before(pivot_date).pluck(:id).sort
 
     # on or after
-    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+    assert_equal [workshop_pivot, workshop_after].pluck(:id).sort,
       Pd::Workshop.scheduled_start_on_or_after(pivot_date).pluck(:id).sort
 
     # combined
@@ -353,11 +353,11 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_after = create :pd_workshop, ended_at: pivot_date + 1.week
 
     # on or before
-    assert_equal [workshop_before, workshop_pivot].map(&:id).sort,
+    assert_equal [workshop_before, workshop_pivot].pluck(:id).sort,
       Pd::Workshop.end_on_or_before(pivot_date).pluck(:id).sort
 
     # on or after
-    assert_equal [workshop_pivot, workshop_after].map(&:id).sort,
+    assert_equal [workshop_pivot, workshop_after].pluck(:id).sort,
       Pd::Workshop.end_on_or_after(pivot_date).pluck(:id).sort
 
     # combined
@@ -373,9 +373,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_scheduled_start.pluck(:id)
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_scheduled_start(desc: false).pluck(:id)
-    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_scheduled_start(desc: true).pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_scheduled_start.pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_scheduled_start(desc: false).pluck(:id)
+    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_scheduled_start(desc: true).pluck(:id)
   end
 
   test 'order_by_enrollment_count' do
@@ -392,9 +392,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_enrollment_count.pluck(:id)
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_enrollment_count(desc: false).pluck(:id)
-    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_enrollment_count(desc: true).pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_enrollment_count.pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_enrollment_count(desc: false).pluck(:id)
+    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_enrollment_count(desc: true).pluck(:id)
   end
 
   test 'order_by_enrollment_count with duplicates' do
@@ -419,9 +419,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     # save out of order
     workshops.shuffle.each(&:save!)
 
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_state.pluck(:id)
-    assert_equal workshops.map(&:id), Pd::Workshop.order_by_state(desc: false).pluck(:id)
-    assert_equal workshops.reverse.map(&:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_state.pluck(:id)
+    assert_equal workshops.pluck(:id), Pd::Workshop.order_by_state(desc: false).pluck(:id)
+    assert_equal workshops.reverse.pluck(:id), Pd::Workshop.order_by_state(desc: true).pluck(:id)
   end
 
   test 'min_attendance_days with no min_days constraint returns 1' do
@@ -611,7 +611,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       create :pd_enrollment, workshop: @workshop
     end
 
-    assert_equal enrollments.map(&:id).sort, @workshop.unattended_enrollments.all.map(&:id).sort
+    assert_equal enrollments.pluck(:id).sort, @workshop.unattended_enrollments.pluck(:id).sort
   end
 
   test 'organizer_or_facilitator?' do

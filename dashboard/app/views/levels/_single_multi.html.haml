@@ -104,7 +104,7 @@
     - answers = answers_feedback = []
   - else
     -# When LevelGroup-hosted, with students (or teachers doing PD), dont include answers
-    - if include_multi_answers?(standalone)
+    - if contained_mode || include_multi_answers?(standalone)
       - answers = data['answers'].map {|answer| answer['correct'] || false}
 
     - answers_feedback = data['answers'].map {|answer| answer['feedback']}

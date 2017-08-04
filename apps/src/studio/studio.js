@@ -49,7 +49,6 @@ import {
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import {
   getContainedLevelResultInfo,
-  getValidatedResult,
   postContainedLevelAttempt,
   runAfterPostContainedLevel
 } from '../containedLevels';
@@ -57,8 +56,8 @@ import {getStore} from '../redux';
 import Sounds from '../Sounds';
 import {captureThumbnailFromSvg} from '../util/thumbnail';
 import project from '../code-studio/initApp/project';
-import {blockAsXmlNode} from '../block_utils';
-import {parseElement, visitAll} from '../xml';
+import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import {parseElement} from '../xml';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -2275,11 +2274,7 @@ Studio.prepareForRemix = function () {
   }
 
   whenRun.appendChild(next);
-  visitAll(blocksDom, block => {
-    if (block.getAttribute && block.getAttribute('uservisible')) {
-      block.setAttribute('uservisible', "true");
-    }
-  });
+  cleanBlocks(blocksDom);
 
   Blockly.mainBlockSpace.clear();
   Blockly.Xml.domToBlockSpace(Blockly.mainBlockSpace, blocksDom);
@@ -2780,8 +2775,6 @@ Studio.displayFeedback = function () {
   if (!Studio.waitingForReport) {
     const saveToProjectGallery = skin.id === 'studio';
     const {isSignedIn} = getStore().getState().pageConstants;
-    const showFailureIcon = studioApp().hasContainedLevels &&
-      !getValidatedResult();
 
     studioApp().displayFeedback({
       app: 'studio', //XXX
@@ -2804,7 +2797,6 @@ Studio.displayFeedback = function () {
       message: Studio.message,
       appStrings: appStrings,
       disablePrinting: level.disablePrinting,
-      showFailureIcon: showFailureIcon,
     });
   }
 };
@@ -3354,11 +3346,10 @@ Studio.onPuzzleComplete = function () {
       studioApp().getTestResults(levelComplete, { executionError: Studio.executionError });
   }
 
-  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      (!studioApp().hasContainedLevels || getValidatedResult())) {
-    Studio.playSound({ soundName: 'win' });
+  if (Studio.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL) {
+    studioApp().playAudioOnWin();
   } else {
-    Studio.playSound({ soundName: 'failure' });
+    studioApp().playAudioOnFailure();
   }
 
   if (studioApp().hasContainedLevels && !level.edit_blocks) {

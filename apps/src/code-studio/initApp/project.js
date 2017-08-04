@@ -239,7 +239,11 @@ var projects = module.exports = {
    * @returns {boolean}
    */
   isOwner() {
-    return current && current.isOwner;
+    return !!(current && current.isOwner);
+  },
+
+  isPublished() {
+    return !!(current && current.publishedAt);
   },
 
   /**
@@ -547,7 +551,11 @@ var projects = module.exports = {
         if (appOptions.level.useContractEditor) {
           return 'algebra_game';
         } else if (appOptions.skinId === 'hoc2015') {
-          return 'starwars';
+          if (appOptions.droplet) {
+            return 'starwars';
+          } else {
+            return 'starwarsblocks';
+          }
         } else if (appOptions.skinId === 'iceage') {
             return 'iceage';
         } else if (appOptions.skinId === 'infinity') {
@@ -560,6 +568,8 @@ var projects = module.exports = {
         return 'weblab';
       case 'flappy':
         return 'flappy';
+      case 'scratch':
+        return 'scratch';
       default:
         return null;
     }
@@ -986,6 +996,15 @@ var projects = module.exports = {
         reject(`error saving thumbnail image: ${error}`);
       });
     });
+  },
+
+  /**
+   * Set the publishedAt date in our copy of the project data.
+   * @param {string|null} publishedAt
+   */
+  setPublishedAt(publishedAt) {
+    current = current || {};
+    current.publishedAt = publishedAt;
   },
 };
 

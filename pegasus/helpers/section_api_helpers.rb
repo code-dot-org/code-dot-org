@@ -318,15 +318,15 @@ class DashboardSection
   end
 
   # @param script_id [String] id of the script we're checking the validity of
-  # @return [Script|nil] The valid script if we have one, otherwise nil
+  # @return [Boolean] Whether or not script_id is a valid script ID.
   def self.valid_script_id?(script_id)
-    valid_scripts.find {|script| script[:id] == script_id.to_i}
+    valid_scripts.any? {|script| script[:id] == script_id.to_i}
   end
 
   # @param script_id [String] id of the course we're checking the validity of
-  # @return [Course|nil] The valid course if we have one, otherwise nil
+  # @return [Boolean] Wheter or not the course_id is a valid course ID.
   def self.valid_course_id?(course_id)
-    valid_courses.find {|course| course[:id] == course_id.to_i}
+    valid_courses.any? {|course| course[:id] == course_id.to_i}
   end
 
   def self.create(params)

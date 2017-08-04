@@ -20,6 +20,7 @@ const SET_IS_HOC_SCRIPT = 'progress/SET_IS_HOC_SCRIPT';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW = 'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_STAGE_ID = 'progress/SET_CURRENT_STAGE_ID';
+const SET_STAGE_EXTRAS_ENABLED = 'progress/SET_STAGE_EXTRAS_ENABLED';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 const PEER_REVIEW_ID = -1;
@@ -32,6 +33,10 @@ const initialState = {
   // used on multi-page assessments
   saveAnswersBeforeNavigation: null,
   stages: null,
+  scriptId: null,
+  scriptName: null,
+  scriptTitle: null,
+  courseId: null,
 
   // The remaining fields do change after initialization
   // a mapping of level id to result
@@ -47,6 +52,7 @@ const initialState = {
   studentDefaultsSummaryView: true,
   isSummaryView: true,
   hasFullProgress: false,
+  stageExtrasEnabled: false,
 };
 
 /**
@@ -66,7 +72,10 @@ export default function reducer(state = initialState, action) {
       saveAnswersBeforeNavigation: action.saveAnswersBeforeNavigation,
       stages: processedStages(stages, action.professionalLearningCourse),
       peerReviewStage: action.peerReviewStage,
+      scriptId: action.scriptId,
       scriptName: action.scriptName,
+      scriptTitle: action.scriptTitle,
+      courseId: action.courseId,
       currentStageId,
       hasFullProgress: action.isFullProgress
     };
@@ -174,6 +183,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_STAGE_EXTRAS_ENABLED) {
+    return {
+      ...state,
+      stageExtrasEnabled: action.stageExtrasEnabled
+    };
+  }
+
   return state;
 }
 
@@ -233,15 +249,18 @@ export function processedStages(stages, isPlc) {
 
 // Action creators
 export const initProgress = ({currentLevelId, professionalLearningCourse,
-    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptName,
-    isFullProgress}) => ({
+    saveAnswersBeforeNavigation, stages, peerReviewStage, scriptId, scriptName,
+    scriptTitle, courseId, isFullProgress}) => ({
   type: INIT_PROGRESS,
   currentLevelId,
   professionalLearningCourse,
   saveAnswersBeforeNavigation,
   stages,
   peerReviewStage,
+  scriptId,
   scriptName,
+  scriptTitle,
+  courseId,
   isFullProgress,
 });
 
@@ -270,6 +289,8 @@ export const setIsSummaryView = isSummaryView => ({ type: SET_IS_SUMMARY_VIEW, i
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => (
   { type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW, studentDefaultsSummaryView });
 export const setCurrentStageId = stageId => ({ type: SET_CURRENT_STAGE_ID, stageId });
+export const setStageExtrasEnabled = stageExtrasEnabled => (
+  { type: SET_STAGE_EXTRAS_ENABLED, stageExtrasEnabled });
 
 // Selectors
 
@@ -384,7 +405,9 @@ export const levelsForLessonId = (state, lessonId) => (
 );
 
 export const stageExtrasUrl = (state, stageId) => (
-  state.stages.find(stage => stage.id === stageId).stage_extras_level_url
+  state.stageExtrasEnabled
+    ? state.stages.find(stage => stage.id === stageId).stage_extras_level_url
+    : ''
 );
 
 /**

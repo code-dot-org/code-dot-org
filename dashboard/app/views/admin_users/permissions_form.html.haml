@@ -1,28 +1,43 @@
-%h1 Permissions Form
+%h1 Manage User Permissions
 
-%h2 Grant Permission
+#application-container
+  = show_flashes.html_safe
 
-=form_tag(grant_permission_path, method: :post) do
-  email
-  =text_field_tag 'email', ''
-  %br
+%p Enter an Email or User ID to view and edit a User's permissions
+= form_tag url_for(action: 'permissions_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :search_term, params[:search_term], class: 'form-control'
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+-if @user
+  %table.table.table-hover.table-condensed.table-auto-width
+    %thead
+      %th ID
+      %th Email
+      %th Name
+    %tbody
+      %tr
+        %td= link_to @user.id, action: :permissions_form, search_term: @user.id
+        %td= @user.email
+        %td= @user.name
+  = form_tag(action: 'grant_permission') do
+    %table.table.table-hover.table-condensed.table-auto-width{:id => 'permission-table'}
+      %thead
+        %th Action
+        %th Permission
+        %th Granted At
+      %tbody
+        - @user.permissions.each do |permission|
+          %tr
+            %td= link_to 'Revoke', action: :revoke_permission, user_id: @user.id, :permission => permission.permission
+            %td= permission.permission
+            %td= permission.created_at
+        %tr
+          %td
+            .actions
+              = submit_tag('Assign', id: 'submitAssignPermission')
+          %td
+            %input{:hidden => true, :name => "user_id", :value => @user.id}
+            .field
+              = select_tag :permission, options_for_select(UserPermission::VALID_PERMISSIONS)
+          %td
 
-  permission
-  =text_field_tag 'permission', ''
-  %br
-
-  =submit_tag 'Grant Permission'
-
-%h2 Revoke All Permissions
-
-=form_tag(revoke_all_permissions_path, method: :post) do
-  email
-  =text_field_tag 'email', ''
-  %br
-
-  = submit_tag 'Revoke All Permissions'
-
--# TODO(asher).
-%h2 Revoke Permission
-
-Coming soon.

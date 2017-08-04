@@ -273,13 +273,43 @@
   just_did_course2: Právě jsem dokončil kurz 2 - zkus si ho! @codeorg
   just_did_course3: Právě jsem dokončil kurz 3 - zkus si ho! @codeorg
   just_did_course4: Právě jsem dokončil kurz 4 - zkus si ho! @codeorg
-  just_did_coursea: I just finished Course A - check it out! @codeorg
-  just_did_courseb: I just finished Course B - check it out! @codeorg
-  just_did_coursec: I just finished Course C - check it out! @codeorg
-  just_did_coursed: I just finished Course D - check it out! @codeorg
-  just_did_coursee: I just finished Course E - check it out! @codeorg
-  just_did_coursef: I just finished Course F - check it out! @codeorg
+  just_did_coursea: I just finished Course A - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_courseb: I just finished Course B - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursec: I just finished Course C - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursed: I just finished Course D - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursee: I just finished Course E - check it out! Thanks @Microsoft for
+    supporting @codeorg
+  just_did_coursef: I just finished Course F - check it out! Thanks @Microsoft for
+    supporting @codeorg
   just_did_accelerated: Právě jsem dokončil zrychlený kurz - zkus si ho! @codeorg
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg'
+  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
+    for supporting @codeorg
+  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
+    Thanks %{donor_twitter} for supporting @codeorg
   twitter_teach_cs: 9 z 10 lidí souhlasí s tím, že školy by měly učit informatiku.
     http://youtu.be/nKIu9yen5nc. Navštivte https://code.org/.
   twitter_cs_foundational: Studium informatiky je pro každého studenta základní. https://youtu.be/QvyTEx1wyOY.
@@ -1147,6 +1177,8 @@
   coursef-draft_name: Kurz F
   coursef_name: Kurz F
   accelerated_name: Zrychlený kurz
+  express_name: Express Course
+  pre-express_name: Pre-reader Express Course
   cspunit1_name: '1. lekce: Digitální informace'
   cspunit2_name: '2. lekce: Internet'
   cspunit3_name: '3. lekce: Programování'
@@ -1192,6 +1224,7 @@
   math_category_name: Matematika
   hoc_category_name: Hodina kódu
   csf_category_name: Základy informatiky
+  csf_international_category_name: CS Fundamentals International
   csf2_draft_category_name: 'Ve vývoji: Kurzy A - F'
   csd_category_name: 'Under Development: CS Discoveries'
   csp_category_name: Principy informatiky 2015-2016
@@ -1931,3 +1964,9 @@
   csp_name: Principy informatiky 2016-2017
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
+  user_header_label: Hi %{username}
+  user_header_settings: Account settings
+  user_header_logout: Sign out
+  user_header_signin: Sign in

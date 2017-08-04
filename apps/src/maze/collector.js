@@ -14,6 +14,12 @@ import Subtype from './subtype';
 import CollectorDrawer from './collectorDrawer';
 import mazeMsg from './locale';
 
+import {getStore} from '../redux';
+import {
+  setCollectorCurrentCollected,
+  setCollectorMinRequired
+} from './redux';
+
 const TOO_MANY_BLOCKS = 0;
 const COLLECTED_NOTHING = 1;
 const COLLECTED_TOO_MANY = 4;
@@ -28,6 +34,13 @@ export default class Collector extends Subtype {
     this.maxBlocks_ = config.level.ideal;
 
     this.minCollected_ = config.level.minCollected;
+    this.store_ = getStore();
+
+    this.store_.dispatch(setCollectorMinRequired(this.minCollected_));
+  }
+
+  reset() {
+    this.store_.dispatch(setCollectorCurrentCollected(0));
   }
 
   scheduleDirtChange(row, col) {
@@ -40,6 +53,8 @@ export default class Collector extends Subtype {
       this.collectSoundsI += 1;
       this.collectSoundsI %= this.collectSoundsCount;
     }
+
+    this.store_.dispatch(setCollectorCurrentCollected(this.getTotalCollected()));
   }
 
   /**

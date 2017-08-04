@@ -12,8 +12,7 @@ const styles = {
     borderColor: color.border_gray,
     width: styleConstants['content-width'],
     backgroundColor: color.white,
-    marginTop: 20,
-    marginBottom: 20
+    marginTop: 25
   },
   mainDashed: {
     borderWidth: 5,
@@ -23,45 +22,42 @@ const styles = {
   },
   heading: {
     fontFamily: '"Gotham 4r", sans-serif',
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
-    letterSpacing: -0.2,
-    marginTop: 16,
     backgroundColor: color.white,
     color: color.teal
   },
   details: {
     fontFamily: '"Gotham 4r", sans-serif',
     fontSize: 14,
-    lineHeight: 2.5,
-    marginBottom: 6,
+    marginTop: 5,
     color: color.charcoal,
   },
   wordBox: {
-    width: 500,
+    width: styleConstants['content-width']-475,
     marginLeft: 25,
-    marginRight: 20,
+    marginTop: 25,
+    marginBottom: 25,
     float: 'left',
     borderWidth: 1,
     borderColor: 'red'
   },
   actionBox: {
     float: 'right',
-    // Right-align with buttons in SectionTable & courses Notification.
-    marginRight: 21
   },
   inputBox: {
     float: 'left',
-    marginTop: 15,
+    marginTop: 27,
     borderRadius: 0,
     height: 26,
     paddingLeft: 25,
     width: 200
   },
   button: {
-    float: 'left',
-    marginTop: 15,
-    marginLeft: 20
+    float: 'right',
+    marginTop: 28,
+    marginLeft: 20,
+    marginRight: 25
   },
   clear: {
     clear: 'both'
