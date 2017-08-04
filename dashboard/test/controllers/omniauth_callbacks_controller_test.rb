@@ -15,7 +15,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
 
     get :facebook
 
-    assert_equal user.id, session['warden.user.user.key'].first.first
+    assert_equal user.id, signed_in_user_id
   end
 
   test "authorizing with unknown facebook account needs additional information" do

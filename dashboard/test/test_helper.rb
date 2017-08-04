@@ -229,6 +229,13 @@ class ActionController::TestCase
     request.env['cdo.locale'] = 'en-US'
   end
 
+  # As `current_user` is not accessible from controller tests (only from within the controller),
+  # the signed in user is only accessible from the session.
+  # @returns [Integer, nil] The ID of the signed in user, nil if no user is signed in.
+  def signed_in_user_id
+    session['warden.user.user.key'].try(:first).try(:first)
+  end
+
   # override default html document to ask it to raise errors on invalid html
   def html_document
     @html_document ||= if @response.content_type === Mime[:xml]
