@@ -37,7 +37,6 @@
     "instructions": "Use the `actor __ throw` command to have Sid (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy when she gets hit with them.",
     "callout_json": "[]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,16,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Sid wants to let his grandmother, Granny, know that he loves her.   \r\n\r\nUse the `actor __ throw` command to have Sid (actor 1) throw hearts at Granny (actor 2)! \r\nSet Granny's mood to happy when she gets hit with the hearts.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"When do you want to throw hearts at granny?  When an arrow is pressed? When you click on Sid?  When you click on Granny?  The choice is yours!\",\"hint_id\":\"iceage_throw_hearts_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/71304824c05c4c62aa9e1d63523ad200/iceage_throw_hearts.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"To get granny to be happy when she receives a heart, you will need to connect the `set actor 2 mood to happy` block beneath the `when actor 2 touches projectile` event.\",\"hint_id\":\"iceage_throw_hearts_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5dc45f193b493504ae66e4dd71fc021c/iceage_throw_hearts.mp3\"}]",
@@ -67,7 +66,8 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
