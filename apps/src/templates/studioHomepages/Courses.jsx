@@ -8,10 +8,10 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import FindLocalClassBanner from './FindLocalClassBanner';
 import {
   CourseBlocksCsf,
-  CourseBlocksTools,
   CourseBlocksHoc,
   CourseBlocksAll
 } from './CourseBlocks';
+import CourseBlocksTools from './CourseBlocksTools';
 import color from "../../util/color";
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
@@ -130,14 +130,11 @@ const Courses = React.createClass({
                 isRtl={isRtl}
               />
 
-              <ContentContainer
-                heading={i18n.standaloneToolsHeading()}
-                description={i18n.standaloneToolsDescription()}
+              <CourseBlocksTools
+                isEnglish={isEnglish}
                 isRtl={isRtl}
-              >
-                <CourseBlocksTools/>
-              </ContentContainer>
-
+                codeOrgUrlPrefix={codeOrgUrlPrefix}
+              />
             </div>
           </div>
         )}
@@ -147,13 +144,11 @@ const Courses = React.createClass({
           <div>
             <CourseBlocksCsf isEnglish={isEnglish}/>
 
-            <ContentContainer
-              heading={i18n.standaloneToolsHeading()}
-              description={i18n.standaloneToolsDescription()}
+            <CourseBlocksTools
+              isEnglish={isEnglish}
               isRtl={isRtl}
-            >
-              <CourseBlocksTools/>
-            </ContentContainer>
+              codeOrgUrlPrefix={codeOrgUrlPrefix}
+            />
 
             <ContentContainer
               heading={i18n.teacherCourseHoc()}

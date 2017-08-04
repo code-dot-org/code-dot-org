@@ -81,13 +81,13 @@ const styles = {
   },
   button: {
     marginLeft: 20,
-    marginTop: 140,
+    bottom: 20,
     position: 'absolute',
     zIndex: 2,
   },
   rtlButton: {
     marginRight: 175,
-    marginTop: 140,
+    bottom: 20,
     position: 'absolute',
     zIndex: 2,
   }

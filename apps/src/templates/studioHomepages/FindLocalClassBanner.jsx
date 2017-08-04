@@ -39,8 +39,7 @@ const styles = {
     color: color.white
   },
   clear: {
-    clear: 'both',
-    height: 30
+    clear: 'both'
   }
 };
 

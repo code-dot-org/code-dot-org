@@ -2,6 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
+import CourseBlocksTools from './CourseBlockTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
@@ -104,32 +105,6 @@ const CourseBlocksCsfNonEnglish = React.createClass({
   }
 });
 
-export const CourseBlocksTools = React.createClass({
-  componentDidMount() {
-    $('#applab').appendTo(ReactDOM.findDOMNode(this.refs.applab)).show();
-    $('#widgets').appendTo(ReactDOM.findDOMNode(this.refs.widgets)).show();
-    $('#gamelab').appendTo(ReactDOM.findDOMNode(this.refs.gamelab)).show();
-    $('#weblab').appendTo(ReactDOM.findDOMNode(this.refs.weblab)).show();
-  },
-
-  render() {
-    return (
-      <div>
-        <div className="row">
-          <ProtectedStatefulDiv ref="applab"/>
-          <ProtectedStatefulDiv ref="widgets"/>
-        </div>
-        <br/>
-        <br/>
-        <div className="row">
-          <ProtectedStatefulDiv ref="gamelab"/>
-          <ProtectedStatefulDiv ref="weblab"/>
-        </div>
-      </div>
-    );
-  }
-});
-
 export const CourseBlocksHoc = React.createClass({
   propTypes: {
     rowCount: React.PropTypes.number.isRequired
@@ -172,12 +147,13 @@ export const CourseBlocksHoc = React.createClass({
 
 export const CourseBlocksAll = React.createClass({
   propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
+    isEnglish: React.PropTypes.bool.isRequired,
+    isRtl: React.PropTypes.bool.isRequired,
+    codeOrgUrlPrefix: React.PropTypes.string.isRequired
   },
 
   componentDidMount() {
     $('.csf-courses-header').appendTo(ReactDOM.findDOMNode(this.refs.csfCoursesHeader)).show();
-    $('.tools-header').appendTo(ReactDOM.findDOMNode(this.refs.toolsHeader)).show();
     $('.hoc-courses-header').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesHeader)).show();
   },
 
@@ -188,13 +164,11 @@ export const CourseBlocksAll = React.createClass({
           <ProtectedStatefulDiv ref="csfCoursesHeader"/>
         )}
         <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
-
-        <ProtectedStatefulDiv ref="toolsHeader"/>
-        <CourseBlocksTools/>
-
-        <br/>
-        <br/>
-
+        <CourseBlocksTools
+          isEnglish={this.props.isEnglish}
+          isRtl={this.props.isRtl}
+          codeOrgUrlPrefix={this.props.codeOrgUrlPrefix}
+        />
         <ProtectedStatefulDiv ref="hocCoursesHeader"/>
         <CourseBlocksHoc rowCount={2}/>
       </div>
