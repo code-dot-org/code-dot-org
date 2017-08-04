@@ -839,6 +839,8 @@ describe('teacherSectionsRedux', () => {
         expect(state().asyncLoadComplete).to.be.true;
         expect(console.error).to.have.been.calledOnce;
         expect(console.error.getCall(0).args[0])
+          .to.include('url: /dashboardapi/sections')
+          .and
           .to.include('status: 500')
           .and
           .to.include('statusText: Internal Server Error')

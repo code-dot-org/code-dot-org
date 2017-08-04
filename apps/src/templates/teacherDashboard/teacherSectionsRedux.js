@@ -138,6 +138,7 @@ function fetchJSON(url) {
     $.getJSON(url)
       .done(resolve)
       .fail(jqxhr => reject(new Error(`
+        url: ${url}
         status: ${jqxhr.status}
         statusText: ${jqxhr.statusText}
         responseText: ${jqxhr.responseText}
