@@ -99,7 +99,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     sign_in @not_admin
     post :assume_identity, params: {user_id: @admin.id}
     assert_response :forbidden
-    assert_equal @not_admin.id, session['warden.user.user.key'].first.first # no change
+    assert_equal @not_admin.id, signed_in_user_id
   end
 
   test "should not assume_identity if not signed in" do
