@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import CourseBlocksTools from './CourseBlockTools';
+import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
@@ -154,7 +154,6 @@ export const CourseBlocksAll = React.createClass({
 
   componentDidMount() {
     $('.csf-courses-header').appendTo(ReactDOM.findDOMNode(this.refs.csfCoursesHeader)).show();
-    $('.hoc-courses-header').appendTo(ReactDOM.findDOMNode(this.refs.hocCoursesHeader)).show();
   },
 
   render() {
@@ -164,13 +163,22 @@ export const CourseBlocksAll = React.createClass({
           <ProtectedStatefulDiv ref="csfCoursesHeader"/>
         )}
         <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
+
+        <ContentContainer
+          heading={i18n.teacherCourseHoc()}
+          description={i18n.teacherCourseHocDescription()}
+          isRtl={this.props.isRtl}
+          linkText={i18n.teacherCourseHocLinkText()}
+          link={`${this.props.codeOrgUrlPrefix}/learn`}
+        >
+          <CourseBlocksHoc rowCount={1}/>
+        </ContentContainer>
+
         <CourseBlocksTools
           isEnglish={this.props.isEnglish}
           isRtl={this.props.isRtl}
           codeOrgUrlPrefix={this.props.codeOrgUrlPrefix}
         />
-        <ProtectedStatefulDiv ref="hocCoursesHeader"/>
-        <CourseBlocksHoc rowCount={2}/>
       </div>
     );
   }
