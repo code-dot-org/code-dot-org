@@ -56,7 +56,7 @@ class LtiProviderControllerTest < ActionDispatch::IntegrationTest
 
     lti_post :sso, params
 
-    assert_equal user.id, signed_in_user_id
+    assert_equal user.id, session['warden.user.user.key'].first.first
   end
 
   test "LTI sign-in with new user_id and no :role, creates new Student account" do
