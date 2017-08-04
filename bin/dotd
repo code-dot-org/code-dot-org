@@ -384,7 +384,7 @@ def main
 
   should_i 'retrieve recent honeybadger issues' do
     get_honeybadger_issues
-  end
+  end if CDO.honeybadger_api_token
 
   do_dtt_subroutine
 
@@ -467,7 +467,7 @@ def main
 
   should_i 'retrieve recent honeybadger issues' do
     get_honeybadger_issues
-  end
+  end if CDO.honeybadger_api_token
 
   puts_script_conclusion
 rescue
