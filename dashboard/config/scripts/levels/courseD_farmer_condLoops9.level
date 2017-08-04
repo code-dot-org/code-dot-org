@@ -54,7 +54,7 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_untilAtPumpkin"/>
+        <block type="harvester_untilHasPumpkin"/>
         <block type="harvester_whileHasCrop">
           <title name="LOC">Corn</title>
         </block>
@@ -71,10 +71,10 @@
         <block type="maze_if">
           <title name="DIR">isPathForward</title>
         </block>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Lettuce</title>
         </block>
       </xml>
@@ -83,7 +83,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="harvester_untilAtPumpkin">
+            <block type="harvester_untilHasPumpkin">
               <statement name="DO">
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>

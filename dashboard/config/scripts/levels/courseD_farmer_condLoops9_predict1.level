@@ -30,7 +30,7 @@
     "step_speed": "1",
     "markdown_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "instructions_important": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need the `while path ahead` loop this time.\",\"hint_id\":\"courseD_farmer_condLoops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08c7e45309bfe0459747f95c89c2729b/courseD_farmer_condLoops9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You shouldn't need the `while path ahead` loop this time.\",\"hint_id\":\"courseD_farmer_condLoops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/08c7e45309bfe0459747f95c89c2729b/courseD_farmer_condLoops9_predict1.mp3\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
@@ -53,7 +53,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="harvester_untilAtCrop">
+            <block type="harvester_untilHasCrop">
               <title name="LOC">Pumpkin</title>
               <statement name="DO">
                 <block type="maze_move">
@@ -104,10 +104,10 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Lettuce</title>
         </block>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
         <block type="harvester_pumpkin"/>

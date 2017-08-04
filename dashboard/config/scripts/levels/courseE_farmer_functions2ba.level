@@ -58,7 +58,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin" movable="false" editable="false">
               <statement name="DO">
-                <block type="harvester_ifAtCorn" movable="false" editable="false">
+                <block type="harvester_ifHasCorn" movable="false" editable="false">
                   <statement name="DO">
                     <block type="harvester_corn" movable="false" editable="false"/>
                   </statement>
@@ -131,7 +131,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -186,7 +186,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin" editable="false">
               <statement name="DO">
-                <block type="harvester_ifAtCorn" editable="false">
+                <block type="harvester_ifHasCorn" editable="false">
                   <statement name="DO">
                     <block type="harvester_corn" editable="false"/>
                   </statement>
