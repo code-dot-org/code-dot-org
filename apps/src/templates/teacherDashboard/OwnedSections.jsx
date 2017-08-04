@@ -18,7 +18,7 @@ import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
-import {SectionsSetUpMessage} from '../studioHomepages/SetUpMessage';
+import SetUpSections from '../studioHomepages/SetUpSections';
 
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
@@ -124,7 +124,7 @@ class OwnedSections extends Component {
     return (
       <div className="uitest-owned-sections">
         {newSectionFlow && numSections === 0 ? (
-          <SectionsSetUpMessage isRtl={isRtl}/>
+          <SetUpSections isRtl={isRtl}/>
         ) : (
           <div>
             <Button

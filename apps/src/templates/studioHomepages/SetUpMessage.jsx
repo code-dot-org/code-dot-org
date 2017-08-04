@@ -2,11 +2,7 @@ import React, {PropTypes} from 'react';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import Button from "../Button";
-import {connect} from 'react-redux';
-import {beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   section: {
@@ -68,7 +64,7 @@ const styles = {
   }
 };
 
-const SetUpMessage = ({
+export const SetUpMessage = ({
   isRtl,
   headingText,
   descriptionText,
@@ -123,33 +119,3 @@ CoursesSetUpMessage.propTypes = {
   isRtl: PropTypes.bool,
   isTeacher: PropTypes.bool.isRequired,
 };
-
-export const UnconnectedSectionsSetUpMessage = ({
-  isRtl,
-  beginEditingNewSection,
-}) => {
-  const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
-  const clickHandlerProp = sectionFlow2017 ?
-    {onClick: beginEditingNewSection} :
-    {buttonUrl: pegasus('/teacher-dashboard#/sections')};
-  return (
-    <SetUpMessage
-      type="sections"
-      headingText={i18n.setUpClassroom()}
-      descriptionText={i18n.createNewClassroom()}
-      buttonText={i18n.createSection()}
-      className="uitest-sections-set-up-message"
-      buttonClass="uitest-newsection"
-      isRtl={isRtl}
-      {...clickHandlerProp}
-    />
-  );
-};
-UnconnectedSectionsSetUpMessage.propTypes = {
-  isRtl: PropTypes.bool,
-  beginEditingNewSection: PropTypes.func.isRequired,
-};
-export const SectionsSetUpMessage = connect(undefined, {
-  beginEditingNewSection: () => beginEditingNewSection(),
-})(UnconnectedSectionsSetUpMessage);
-SectionsSetUpMessage.displayName = 'SectionsSetUpMessage';

@@ -15,7 +15,7 @@ import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
 import EditSectionDialog from "@cdo/apps/templates/teacherDashboard/EditSectionDialog";
 import SectionTable from '@cdo/apps/templates/teacherDashboard/SectionTable';
-import {SectionsSetUpMessage} from '@cdo/apps/templates/studioHomepages/SetUpMessage';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
 const defaultProps = {
   numSections: 3,
@@ -114,7 +114,7 @@ describe('OwnedSections', () => {
     beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
     afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
-    it('renders SectionsSetUpMessage when no sections have been created', () => {
+    it('renders SetUpSections when no sections have been created', () => {
       const wrapper = shallow(
         <OwnedSections
           {...defaultProps}
@@ -123,7 +123,7 @@ describe('OwnedSections', () => {
       );
       expect(wrapper).to.containMatchingElement(
         <div>
-          <SectionsSetUpMessage/>
+          <SetUpSections/>
           <RosterDialog
             isOpen={false}
             studioUrl={defaultProps.studioUrl}
