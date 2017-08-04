@@ -382,7 +382,6 @@ def main
 
   DevelopersTopic.set_dtt 'yes'
 
-
   if CDO.honeybadger_api_token
     should_i 'retrieve recent honeybadger issues' do
       get_honeybadger_issues
