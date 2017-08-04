@@ -52,36 +52,13 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal teacher, enrollment.user
   end
 
-  test 'required field validations without country' do
-    enrollment = Pd::Enrollment.new
-    refute enrollment.valid?
-    assert_equal [
-      'First name is required',
-      'Last name is required',
-      'Email is required',
-      'School is required',
-      'School info is required'
-    ], enrollment.errors.full_messages
-
-    enrollment.first_name = 'FirstName'
-    enrollment.last_name = 'LastName'
-    enrollment.email = 'teacher@example.net'
-    enrollment.school = 'test school'
-    enrollment.school_info = create(:school_info_without_country)
-    assert enrollment.valid?
-  end
-
   test 'required field validations with country' do
     enrollment = Pd::Enrollment.new
     enrollment.first_name = 'FirstName'
     enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
-    enrollment.school_info = build :school_info_us_public, :with_district, :with_school
+    enrollment.school_info = build :school_info
     assert enrollment.valid?
-
-    enrollment.school = 'test school'
-    refute enrollment.valid?
-    assert_equal ['School is forbidden'], enrollment.errors.full_messages
   end
 
   test 'emails are stored in lowercase and stripped' do
@@ -125,7 +102,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'for_school_district' do
     school_district = create :school_district
-    school_info = create :school_info_without_country, school_district: school_district
+    school_info = create :school_info, school_district: school_district
     enrollment_in_district = create :pd_enrollment, school_info: school_info
     _enrollment_out_of_district = create :pd_enrollment
 
@@ -196,12 +173,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_deprecated 'name is deprecated. Use first_name & last_name instead.' do
       enrollment.name = 'First Last'
     end
-  end
-
-  test 'old enrollments with no school info are still valid' do
-    old_enrollment = create :pd_enrollment
-    old_enrollment.update!(created_at: '2016-08-29', school_info: nil)
-    assert old_enrollment.valid?
   end
 
   test 'school info is required on new enrollments, create and update' do
@@ -451,5 +422,33 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment = build :pd_enrollment
     enrollment.school_info.expects(:effective_school_district_name).returns('effective school district name')
     assert_equal 'effective school district name', enrollment.school_district_name
+  end
+
+  test 'school is forbidden' do
+    enrollment = build :pd_enrollment, school: 'a school'
+    refute enrollment.valid?
+    assert_equal ['School is forbidden'], enrollment.errors.full_messages
+  end
+
+  test 'old enrollments with school are grandfathered in' do
+    old_enrollment = build :pd_enrollment, school: 'a school'
+    old_enrollment.save(validate: false)
+    assert old_enrollment.valid?
+
+    # but they can't be changed
+    old_enrollment.school = 'another school'
+    refute old_enrollment.valid?
+  end
+
+  test 'school info country required on create' do
+    enrollment = build :pd_enrollment, school_info: create(:school_info_without_country)
+    refute enrollment.valid?
+    assert enrollment.errors.full_messages.include? 'School info must have a country'
+  end
+
+  test 'old enrollments with no school info country are grandfathered in' do
+    old_enrollment = build :pd_enrollment, school_info: create(:school_info_without_country)
+    old_enrollment.save(validate: false)
+    assert old_enrollment.valid?
   end
 end
