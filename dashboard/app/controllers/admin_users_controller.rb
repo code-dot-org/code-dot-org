@@ -9,7 +9,15 @@ class AdminUsersController < ApplicationController
 
   DEFAULT_MANAGE_PAGE_SIZE = 25
   # restrict the PII returned by the controller to the view by selecting only these columns from the model
-  USER_ATTRIBUTES_FOR_VIEW = ['users.id', 'email', 'name', 'user_type', 'current_sign_in_at', 'sign_in_count', 'users.created_at']
+  USER_ATTRIBUTES_FOR_VIEW = %w(
+    users.id
+    email
+    name
+    user_type
+    current_sign_in_at
+    sign_in_count
+    users.created_at
+  ).freeze
 
   def account_repair_form
   end
