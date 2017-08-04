@@ -14,7 +14,7 @@ import { singleton as studioApp } from '@cdo/apps/StudioApp';
 import ScratchView from './ScratchView';
 import { scratchDefaultProject } from './scratchDefaultProject';
 
-const Scratch = window.__TestInterface__ = {};
+export const __TestInterface = {};
 
 export default function init(options) {
   registerReducers(commonReducers);
@@ -46,7 +46,7 @@ export default function init(options) {
 
   // Instantiate the VM.
   const vm = new VM();
-  Scratch.vm = vm;
+  __TestInterface.vm = vm;
   options.getCode = vm.saveProjectSb3.bind(vm);
 
   const storage = new Storage();
@@ -60,7 +60,6 @@ export default function init(options) {
   // PhantomJS doesn't support WebGL.
   if (!IN_UNIT_TEST) {
     const renderer = new Renderer(canvas);
-    Scratch.renderer = renderer;
     vm.attachRenderer(renderer);
     const audioEngine = new AudioEngine();
     vm.attachAudioEngine(audioEngine);
@@ -87,7 +86,6 @@ export default function init(options) {
       insertionMarkerOpacity: 0.1,
     }
   });
-  Scratch.workspace = workspace;
 
   registerBlockEvents(vm, workspace);
   registerInputEvents(vm, canvas);
