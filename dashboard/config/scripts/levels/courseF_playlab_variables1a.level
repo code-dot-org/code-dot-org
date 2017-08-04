@@ -55,6 +55,8 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "variables": 1
   }
 }]]></config>
   <blocks>
