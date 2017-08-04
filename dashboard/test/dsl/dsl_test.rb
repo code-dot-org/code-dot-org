@@ -102,11 +102,15 @@ stage 'Stage1'
 level 'Level 1'
 variants
   level 'Level 2a'
-  level 'Level 2b', experiment: 'experiment1'
+  level 'Level 2b', experiments: ['experiment1']
 endvariants
 variants
   level 'Level 3a', active: false
-  level 'Level 3b', experiment: 'experiment2', active: true
+  level 'Level 3b', experiments: ['experiment2'], active: true
+endvariants
+variants
+  level 'Level 4a'
+  level 'Level 4b', experiments: ['experiment3', 'experiment4']
 endvariants
 "
     expected = {
@@ -120,7 +124,7 @@ endvariants
               stage: "Stage1",
               levels: [{name: "Level 2a"}, {name: "Level 2b"}],
               properties: {
-                variants: {"Level 2b" => {active: false, experiment: "experiment1"}}
+                variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
               }
             },
             {
@@ -129,8 +133,15 @@ endvariants
               properties: {
                 variants: {
                   "Level 3a" => {active: false},
-                  "Level 3b" => {experiment: "experiment2"}
+                  "Level 3b" => {experiments: ["experiment2"]}
                 }
+              }
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 4a"}, {name: "Level 4b"}],
+              properties: {
+                variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
               }
             },
           ]
