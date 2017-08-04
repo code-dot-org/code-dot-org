@@ -39,7 +39,6 @@
     "instructions": "Can you help Sid call for his friends when you click on him? ",
     "callout_json": "[]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Can you help Sid call for his friends when you click on him? \r\nOnce you're done, press \"Run\" to play.  Click on Sid to see your code work!",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Add one or more `actor 1 say` blocks to the `when clicked` event to complete this puzzle.\",\"hint_id\":\"iceage_click_hello_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/516fac03413ae6a8b5c55715cb36a875/iceage_click_hello.mp3\"}]",
@@ -67,7 +66,8 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false"
+    "sprites_hidden_to_start": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

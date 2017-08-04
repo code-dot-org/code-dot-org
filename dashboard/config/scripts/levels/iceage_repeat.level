@@ -25,7 +25,6 @@
     "instructions": "Help Granny get some exercise by moving left and right repeatedly.",
     "callout_json": "[{\"localization_key\":\"playlab_add_move\",\"callout_text\":null,\"element_id\":\"[block-id='5']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"top left\",\"adjust\":{\"x\":60,\"y\":40}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "The `repeat forever` block allows you to run code continuously. Can you put blocks inside of it to help Granny get some exercise by moving left and right repeatedly?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use both the `move actor 1 left` and `move actor 1 right` blocks to solve this puzzle.\",\"hint_id\":\"iceage_repeat_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/15b9672dab06a1f35500f9f3656b8b83/iceage_repeat.mp3\"}]",
@@ -55,7 +54,8 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
