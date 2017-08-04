@@ -1,3 +1,7 @@
+- require 'geocoder'
+- location = Geocoder.search(@teacher.current_sign_in_ip).try(:first)
+- us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
+
 %p
   Hello #{@teacher.name}, and welcome to Code.org!
 %p
@@ -22,7 +26,7 @@
   your students, unplugged activities for your class you can do without a computer, and forums
   to connect to other teachers.
 
-- if false
+- if us_ip
   %h3
     New to teaching computer science?
   %p
@@ -31,8 +35,8 @@
     new teachers to teach CS across grades K-12.
     %a{href:"https://code.org/educate/professional-learning"}Find a professional development workshop near you.
 
-%form{action:"https://studio.code.org/home"}
-  %input{type: "submit", value: "Get started here!", style: 'width: 230px; height: 50px; border: 0; font-size: 25px; font-weight: bolder; color: white; background-color: #FDC62C; cursor: pointer;'}
+%a{href:"https://studio.code.org/home", style: 'width: 230px; height: 50px; border: 0; color: white; background-color: #FDC62C; font: bolder 25px Arial; display: block; text-align: center; line-height: 50px; text-decoration: none; border-radius: 5px;'}
+  Get started here!
 
 %h3
   Still have questions? Please don’t hesitate to reach out to
