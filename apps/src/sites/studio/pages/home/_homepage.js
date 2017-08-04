@@ -100,7 +100,6 @@ function showHomepage() {
             ]}
             courses={homepageData.courses}
             sections={homepageData.sections}
-            codeOrgUrlPrefix={homepageData.codeorgurlprefix}
             isRtl={isRtl}
           />
         )}
