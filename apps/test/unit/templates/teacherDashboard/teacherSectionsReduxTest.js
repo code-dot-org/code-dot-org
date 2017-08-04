@@ -784,7 +784,7 @@ describe('teacherSectionsRedux', () => {
       ];
     }
 
-    const failureResponse = [500, {}, ''];
+    const failureResponse = [500, {}, 'CustomErrorBody'];
 
     function state() {
       return store.getState().teacherSections;
@@ -799,9 +799,13 @@ describe('teacherSectionsRedux', () => {
       stubRedux();
       registerReducers({teacherSections: reducer});
       store = getStore();
+
+      // Catch error output for failure test cases
+      sinon.stub(console, 'error');
     });
 
     afterEach(function () {
+      console.error.restore();
       restoreRedux();
       server.restore();
     });
@@ -833,6 +837,13 @@ describe('teacherSectionsRedux', () => {
 
       return promise.then(() => {
         expect(state().asyncLoadComplete).to.be.true;
+        expect(console.error).to.have.been.calledOnce;
+        expect(console.error.getCall(0).args[0])
+          .to.include('status: 500')
+          .and
+          .to.include('statusText: Internal Server Error')
+          .and
+          .to.include('responseText: CustomErrorBody');
       });
     });
 
