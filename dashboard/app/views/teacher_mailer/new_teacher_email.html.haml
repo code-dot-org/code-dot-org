@@ -1,5 +1,5 @@
 - require 'geocoder'
-- location = Geocoder.search(@teacher.ip).try(:first)
+- location = Geocoder.search(@teacher.current_sign_in_ip).try(:first)
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 
 %p
