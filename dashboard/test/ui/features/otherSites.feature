@@ -1,4 +1,5 @@
 @eyes
+@skip
 Feature: Looking at other Pegasus sites with Applitools Eyes
 
 Scenario Outline: Simple page view

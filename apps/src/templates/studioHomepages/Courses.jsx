@@ -179,17 +179,6 @@ const Courses = React.createClass({
             isRtl={isRtl}
           />
         )}
-
-        {(!isTeacher && !isSignedOut) && (
-          <div>
-            <div style={styles.spacer}>.</div>
-            <Button
-              text={i18n.viewMyProjects()}
-              href="/projects"
-              color={Button.ButtonColor.orange}
-            />
-          </div>
-        )}
       </div>
     );
   }
