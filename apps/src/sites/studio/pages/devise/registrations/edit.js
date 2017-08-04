@@ -53,10 +53,11 @@ function onSubmitModal(e) {
 $(document).ready(() => {
   $( "#submit-update").find("input").on("click", function (e) {
     const userType = $('#user_user_type')[0].value;
-    let needToConfirmEmail = !emailModalConfirmed;
-    needToConfirmEmail = needToConfirmEmail && isOauth;
-    needToConfirmEmail = needToConfirmEmail && userType !== initialUserType;
-    needToConfirmEmail = needToConfirmEmail && userType === "teacher";
+    let needToConfirmEmail = !emailModalConfirmed
+      && isOauth
+      && userType !== initialUserType
+      && userType === "teacher"
+    ;
     if (needToConfirmEmail) {
       e.preventDefault();
       showConfirmEmailModal(onCancelModal, onSubmitModal(e));
