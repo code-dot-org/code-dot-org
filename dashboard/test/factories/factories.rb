@@ -571,7 +571,12 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
-  # school info
+  # school info: default to public with district and school
+  # Other variations have factories below
+  factory :school_info, parent: :school_info_us_public do
+    with_district
+    with_school
+  end
 
   # this is the only factory used for testing the deprecated data formats (without country).
   factory :school_info_without_country, class: SchoolInfo do

@@ -439,7 +439,7 @@ FactoryGirl.define do
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
     sequence(:email) {|n| "participant#{n}@example.com.xx"}
-    association :school_info, factory: :school_info_without_country
+    association :school_info
     code {SecureRandom.hex(10)}
 
     trait :from_user do
