@@ -14,7 +14,6 @@
     "instructions": "Scrat is looking for his acorn! Can you help him move the last 200 pixels?",
     "callout_json": "[]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,16,0,0,0,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Scrat is looking for his acorn! Can you help him move the last 200 pixels?",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use the `move actor 1 right by 200 pixels` block to solve this puzzle.\",\"hint_id\":\"iceage_hello3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a59a94c0412beb3b436402f66f53e215/iceage_move_to_flag.mp3\"}]",
@@ -43,7 +42,8 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false"
+    "sprites_hidden_to_start": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

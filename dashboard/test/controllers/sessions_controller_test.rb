@@ -16,7 +16,7 @@ class SessionsControllerTest < ActionController::TestCase
     assert_select '.alert', I18n.t('devise.failure.not_found_in_database', locale: locale)
   end
 
-  test "teachers go to teacher dashboard after signing in" do
+  test "teachers go to homepage after signing in" do
     teacher = create(:teacher)
 
     post :create, params: {
@@ -28,7 +28,7 @@ class SessionsControllerTest < ActionController::TestCase
     }
 
     assert_signed_in_as teacher
-    assert_redirected_to '//test.code.org/teacher-dashboard'
+    assert_redirected_to '/home'
   end
 
   test "students go to learn homepage after signing in" do

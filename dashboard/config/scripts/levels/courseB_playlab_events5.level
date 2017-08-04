@@ -39,7 +39,7 @@
     "timeout_failure_tick": "550",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the event block that controls the right arrow: \\n\\n![](https://images.code.org/d14e2a6cdf78c4ae7d2010113ea8d321-image-1475695765628.29.00.png)\",\r\n  \"hint_id\": \"courseB_playlab_events5_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block that makes the knight run away. \\n\\n![](https://images.code.org/2e4f0701a371a9932a37853294a170fe-image-1475695777801.29.09.png)\",\r\n  \"hint_id\": \"courseB_playlab_events5_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the event block that controls the right arrow: \\n\\n<xml>\\n  <block type=\\\"studio_whenArrow\\\">\\n    <title name=\\\"VALUE\\\">right</title>\\n  </block>\\n  </xml>\",\"hint_id\":\"courseB_playlab_events5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7d694b025faf04cc93cf1d762665b1bd/courseB_playlab_events5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block that makes the knight run away. \\n\\n<xml>\\n<block type=\\\"studio_move\\\">\\n    <title name=\\\"SPRITE\\\">1</title>\\n    <title name=\\\"DIR\\\">2</title>\\n  </block>\\n</xml>\",\"hint_id\":\"courseB_playlab_events5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/6822188cacd3bde386d2db12e404154c/courseB_playlab_events5.mp3\"}]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
     "soft_buttons": [
       "leftButton",
@@ -48,12 +48,15 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 21:36:41 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 18:40:10 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 18:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 21:36:41 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 18:40:10 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 18:40:51 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-08-04 17:26:13 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 3
   }
 }]]></config>
   <blocks>
