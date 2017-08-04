@@ -39,18 +39,21 @@
     "timeout_failure_tick": "250",
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block you should use to add the event:\\n\\n![](https://images.code.org/5ccb483d5a5ccc80692716728d7a0e6e-image-1475698549442.03.08.png)\",\r\n  \"hint_id\": \"courseB_playlab_events3_a\",\r\n  \"hint_type\": \"general\"\r\n },\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block you need to switch Daisy's mood:\\n\\n![](https://images.code.org/209bad7062fa2821a7dcf000072ec7bf-image-1475698952158.22.11.png)\",\r\n  \"hint_id\": \"courseB_playlab_events3_b\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you should use to add the event:\\n\\n<xml>\\n<block type=\\\"studio_whenSpriteClicked\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n  </block>\\n  </xml>\",\"hint_id\":\"courseB_playlab_events3_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/5bece1621cccdb868bfcd77194145d2e/courseB_playlab_events3.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block you need to switch Daisy's mood:\\n\\n<xml>\\n<block type=\\\"studio_setSpriteEmotion\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">random</title>\\n  </block>\\n  </xml>\",\"hint_id\":\"courseB_playlab_events3_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/18a67dd3e656f9b5d5292fe45cba8189/courseB_playlab_events3.mp3\"}]",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
-    "markdown_instructions": "Use an event to make Daisy the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) mood when you click on her.\r\n\r\n",
+    "markdown_instructions": "Use an event to make Daisy the Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png) mood when you click on her.\r\n",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 21:31:46 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 21:33:08 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 21:31:46 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"success_condition\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 21:33:08 +0000\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:20:50 +0000\",\"changed\":[\"toolbox_blocks\",\"required_blocks\",\"solution_blocks\",\"authored_hints\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 3
   }
 }]]></config>
   <blocks>

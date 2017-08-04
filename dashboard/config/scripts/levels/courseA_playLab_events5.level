@@ -52,13 +52,15 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Add events to have Jorge move up and down when the up arrow and down arrow buttons are pressed.",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-13 20:43:31 +0000\",\"changed\":[\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 17:54:42 +0000\",\"changed\":[\"toolbox_blocks\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 4
   }
 }]]></config>
   <blocks>

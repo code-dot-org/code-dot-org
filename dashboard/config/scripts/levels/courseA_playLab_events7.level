@@ -50,13 +50,16 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use this block to control what happens when the actors collide.\\n\\n<xml><block type=\\\"studio_whenSpriteCollided\\\">\\n    <title name=\\\"SPRITE1\\\">1</title>\\n    <title name=\\\"SPRITE2\\\">0</title>\\n  </block></xml>\",\"hint_id\":\"courseA_playLab_events7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a864984b0f11af888795783face216b2/courseA_playLab_events7.mp3\"}]",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-05-10 19:29:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-28 17:58:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 18:00:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "events": 1
   }
 }]]></config>
   <blocks>
