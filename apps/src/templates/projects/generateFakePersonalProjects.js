@@ -18,29 +18,29 @@ export const stubFakePersonalProjectData = [
   {
     name: "Personal Project 1",
     updatedAt: '2015-12-31T23:59:59.999-08:00',
-    projectType: 'gamelab',
-    id: 'abcd1',
-    publishedAt: "2017-05-16T15:22:30.000-07:00"
+    type: 'gamelab',
+    channel: 'abcd1',
+    isPublished: true
   },
   {
     name: "Personal Project 2",
     updatedAt: '2016-11-30T23:59:59.999-08:00',
-    projectType: 'applab',
-    id: 'abcd2',
-    publishedAt: null
+    type: 'applab',
+    channel: 'abcd2',
+    isPublished: false
   },
   {
     name: "Personal Project 3 has a super extra long name let's see how it looks in the table",
     updatedAt: '2016-10-31T23:59:59.999-08:00',
-    projectType: 'artist',
-    id: 'abcd3',
-    publishedAt: "2017-05-16T15:22:30.000-07:00"
+    type: 'artist',
+    channel: 'abcd3',
+    isPublished: true
   },
   {
     name: "Personal Project 4",
     updatedAt: '2016-09-14T23:59:59.999-08:00',
-    projectType: 'playlab',
-    id: 'abcd4',
-    publishedAt: null
+    type: 'playlab',
+    channel: 'abcd4',
+    isPublished: false
   },
 ];
