@@ -4421,6 +4421,8 @@
                 the unit, everyone shares their projects and how they were developed.
               description_teacher: |
                 Students have spent a lot of time throughout the unit working on their Personal Website. In the final couple of days students finalize their websites.  They work with peers to get feedback, put the finishing touches on the websites, review the rubric and reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.
+            Headings:
+              name: Headings
         csp2-support:
           title: CSP Unit 2 Online Support
           description_audience: ''
@@ -6494,6 +6496,8 @@
               name: Events in Play Lab
             More Programming in Maze:
               name: More Programming in Maze
+            Programming with Rey and BB-8:
+              name: Programming with Rey and BB-8
           title: 'CS Fundamentals: Course B'
           description_audience: ''
           description_short: An introduction to computer science for early readers.
@@ -6533,6 +6537,8 @@
               name: Binary Bracelets
             Loops in Artist:
               name: Loops in Artist
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
           title: 'CS Fundamentals: Course C'
           description_audience: ''
           description_short: Learn the basics of computer science and create your
@@ -7562,6 +7568,34 @@
               name: Events in Play Lab
             Spelling Bee:
               name: Spelling Bee
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        subgoal-labels-opt-in:
+          stages:
+            Subgoal Labels Study Opt-In:
+              name: Subgoal Labels Study Opt-In
+            deprecated:
+              name: deprecated
+            other:
+              name: other
+            Thanks:
+              name: Thanks
+            '':
+              name: ''
+            " ":
+              name: " "
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+        csp-pre-survey-test-2017:
+          stages:
+            new stage:
+              name: new stage
+            test satge:
+              name: test satge
           title: ''
           description_audience: ''
           description_short: ''

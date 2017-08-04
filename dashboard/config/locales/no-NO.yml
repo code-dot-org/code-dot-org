@@ -216,6 +216,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -224,6 +226,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-post
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Invitasjon er sendt
     added_teacher: "%{name} er lagt til som din lærer"
@@ -237,6 +245,9 @@
       section_not_found: Kunne ikke finne en seksjon med koden '%{section_code}'.
       blank_code: Vennligst skriv en seksjonskode
       cant_join_own_section: Beklager, du kan ikke bli med i din egen seksjon.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Melding fra Code.org: %{student_name} er ikke lenger tilknyttet
@@ -261,6 +272,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -275,6 +288,7 @@
         calculate: Calculate Something
         applab: Lag en app
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
       courses: kurs
       project_gallery: Project Gallery
@@ -727,6 +741,12 @@
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: Minstealder 13 år
+      cta: Lær hvordan
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Minstealder 13 år
       cta: Lær hvordan
     frozen:

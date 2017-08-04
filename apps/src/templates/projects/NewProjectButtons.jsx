@@ -14,47 +14,47 @@ const DEFAULT_PROJECT_TYPES = [
 const PROJECT_INFO = {
   'playlab': {
     label: i18n.projectTypePlaylab(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_playlab.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
   'artist': {
     label: i18n.projectTypeArtist(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_artist.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
   'applab': {
     label: i18n.projectTypeApplab(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_applab_square.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_applab_square.png"
   },
   'gamelab': {
     label: i18n.projectTypeGamelab(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_gamelab_square.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_gamelab_square.png"
   },
   'weblab': {
     label: i18n.projectTypeWeblab(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_weblab.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_weblab.png"
   },
   'calc': {
     label: i18n.projectTypeCalc(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_calc.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_calc.png"
   },
   'eval': {
     label: i18n.projectTypeEval(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_eval.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_eval.png"
   },
   'frozen': {
     label: i18n.projectTypeFrozen(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_frozen.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_frozen.png"
   },
   'mc': {
     label: i18n.projectTypeMC(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_mc.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_mc.png"
   },
   'minecraft': {
     label: i18n.projectTypeMinecraft(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_minecraft.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_minecraft.png"
   },
   'starwars': {
     label: i18n.projectTypeStarwars(),
-    thumbnail: "http://studio.code.org/shared/images/fill-70x70/courses/logo_starwars.png"
+    thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
   }
 };
 
@@ -106,7 +106,7 @@ const NewProjectButtons = React.createClass({
           {
             projectTypes.slice(0,4).map((projectType, index) => (
               <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
-                <a href={"/p/" + projectType + "/new"}>
+                <a href={"/projects/" + projectType + "/new"}>
                   <img style={styles.thumbnail} src={PROJECT_INFO[projectType].thumbnail} />
                   <span style={styles.label}>
                     {PROJECT_INFO[projectType].label}

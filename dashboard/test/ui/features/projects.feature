@@ -98,7 +98,7 @@ Scenario: Gamelab Flow
   And I wait until element ".project_edit" is visible
   Then I should see title "Code Ninja II: Uncaught Exception - Game Lab"
 
-  And I switch to text mode
+  And I ensure droplet is in text mode
   And I append gamelab code to draw a ninja
   And I press "runButton"
   And I wait for 0.5 seconds

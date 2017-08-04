@@ -7,6 +7,7 @@ import LegacyDialog from './code-studio/LegacyDialog';
 import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
+import {getValidatedResult} from './containedLevels';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -194,9 +195,11 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 
   var icon;
   if (!options.hideIcon) {
-    icon = canContinue && !options.showFailureIcon ?
-      this.studioApp_.winIcon :
-      this.studioApp_.failureIcon;
+    if (canContinue && (!this.studioApp_.hasContainedLevels || getValidatedResult())) {
+      icon = this.studioApp_.winIcon;
+    } else {
+      icon = this.studioApp_.failureIcon;
+    }
   }
   const defaultBtnSelector = defaultContinue ? '#continue-button' : '#again-button';
 
@@ -277,8 +280,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     return;
   }
 
-  if (experiments.isEnabled('challengeDialog') &&
-      getStore().getState().pageConstants.isChallengeLevel) {
+  if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
     let onContinue = options.onContinue;

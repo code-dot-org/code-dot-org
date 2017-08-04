@@ -31,7 +31,7 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"There should be 2 blocks inside of your loop to solve this puzzle.\",\"hint_id\":\"courseA_artist_loops11_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/4001039f4ff2dfcdf56e71dc0c49dce6/courseA_artist_loops11.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try drawing one stair step first, then adding a `repeat` loop.\",\"hint_id\":\"courseA_artist_loops11_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/85fa8c6477b1ea0e2cd2734df75ebc16/courseA_artist_loops11.mp3\"}]",
+    "authored_hints": "[]",
     "markdown_instructions": "##Help me build steps to watch the ship sail away.\r\n\r\n![](https://images.code.org/ed19f00a2350b186fbe86ea805e17925-image-1498065450651.gif)",
     "ideal": "4",
     "instructions_important": "false",
@@ -39,11 +39,12 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "tts_markdown_instructions_override": "Help me build steps to watch the ship sail away.",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-21 17:17:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 17:53:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-21 17:17:52 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-28 17:53:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-03 16:05:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

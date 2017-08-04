@@ -182,6 +182,8 @@ vi:
       %{name}
   parent_mailer:
     student_associated_subject: 'Login information for Code.org'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: 'Your section:'
@@ -190,6 +192,12 @@ vi:
     confirm:
       remove: 'Are you sure you want to leave this section?'
     remove: '(remove section)'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: 'Địa chỉ email'
+      google_classroom: 'Google Classroom'
+      clever: 'Clever'
   follower:
     invite_sent: 'Gửi lời mời'
     added_teacher: '%{name} được thêm như giáo viên của bạn'
@@ -202,6 +210,7 @@ vi:
       section_not_found: "Không thể tìm thấy một phần với mã '%{section_code}'."
       blank_code: "Vui lòng nhập một phần mã"
       cant_join_own_section: "Xin lỗi, bạn không thể tham gia phần riêng của bạn."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Thông báo từ Code.org: %{student_name} không còn trong danh sách là học viên của bạn.'
@@ -225,6 +234,7 @@ vi:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: 'You created a personal login successfully. You can now log into Code.org with your email and password'
         personal_login_created_username: 'You created a personal login successfully. You can now log into Code.org with your username and password'
   nav:
@@ -237,6 +247,7 @@ vi:
         calculate: 'Calculate something'
         applab: 'Tạo một ứng dụng'
         gamelab: 'Make a Game Lab project'
+        weblab: 'Make a Web Lab (beta) project'
       home: "Home"
       courses: "Các khóa học"
       project_gallery: "Project Gallery"
@@ -537,8 +548,13 @@ vi:
       title: "Bộ sưu tập"
       body: "Xem một bộ sưu tập các ứng dụng và họa sĩ thiết kế hình ảnh được tạo bởi người dùng của chúng tôi"
     gamelab:
-      title: "Game Lab (beta)"
+      title: "Game Lab"
       body: "Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other."
+      audience: "Lứa tuổi 13 +"
+      cta: "Học cách làm"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "Lứa tuổi 13 +"
       cta: "Học cách làm"
     frozen:

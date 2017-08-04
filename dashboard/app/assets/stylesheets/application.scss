@@ -962,7 +962,9 @@ $default-modal-width: 640px;
 }
 
 .header_level_container {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header_level {

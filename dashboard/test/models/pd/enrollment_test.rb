@@ -425,12 +425,12 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'get safe names' do
-    # Here just verify all the enrollments are returned with safe names.
-    # The safe name logic itself (in #SafeNames) is tested in #SafeNamesTest
-    enrollments = 5.times.map {create :pd_enrollment}
-    safe_names = Pd::Enrollment.where(id: enrollments.map(&:id)).get_safe_names
+    enrollments = create_list :pd_enrollment, 5
+    safe_names = Pd::Enrollment.where(id: enrollments.pluck(:id)).order(:id).get_safe_names
     assert_equal 5, safe_names.length
-    assert safe_names.all? {|n| n[0].present?}
-    assert_equal enrollments.sort, safe_names.map(&:last).sort
+
+    # each safe name is a tuple of the full name and the enrollment itself
+    expected = enrollments.map {|e| [e.full_name, e]}
+    assert_equal expected, safe_names
   end
 end

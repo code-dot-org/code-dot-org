@@ -179,6 +179,8 @@ zh-CN:
       %{name}
   parent_mailer:
     student_associated_subject: 'Code.org的登录信息'
+  teacher_mailer:
+    new_teacher_subject: 'Welcome to Code.org!'
   section:
     your_section:
       one: '你的小组：'
@@ -187,6 +189,12 @@ zh-CN:
     confirm:
       remove: '您确定要离开这个小组吗？'
     remove: '（删除小组）'
+    type:
+      picture: 'Picture Password'
+      word: 'Secret Words'
+      email: '电子邮件'
+      google_classroom: '谷歌教室'
+      clever: 'Clever'
   follower:
     invite_sent: '邀请已发送'
     added_teacher: '添加%{name}为你的老师'
@@ -199,6 +207,7 @@ zh-CN:
       section_not_found: "找不到代码 '%{section_code}' 节."
       blank_code: "请输入一节代码"
       cant_join_own_section: "对不起，你不能加入你自己的部分."
+      provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
     mail:
       student_disassociated:
         subject: 'Code.org 提醒: %{student_name} 已不再是您的学生。'
@@ -222,6 +231,7 @@ zh-CN:
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: "The email address you provided doesn't match the email address for this account"
         personal_login_created_email: '您已成功创建了个人账号。您现在可以使用电子邮箱和密码登录Code.org'
         personal_login_created_username: '您已成功创建了个人账号。您现在可以使用用户名和密码登录Code.org'
   nav:
@@ -234,6 +244,7 @@ zh-CN:
         calculate: 'Calculate something'
         applab: '创建一个游戏实验室应用'
         gamelab: '创建一个游戏实验室项目'
+        weblab: 'Make a Web Lab (beta) project'
       home: "首页"
       courses: "课程"
       project_gallery: "项目集"
@@ -534,8 +545,13 @@ zh-CN:
       title: "作品"
       body: "查看由我们用户创建的应用程序和艺术家图片的作品"
     gamelab:
-      title: "游戏实验室 （测试版）"
+      title: "游戏实验室"
       body: "游戏实验室是一个编程环境，它能让你做一些物体和角色的简单互动动画和游戏。"
+      audience: "13岁以上"
+      cta: "了解操作方法"
+    weblab:
+      title: "Web Lab (beta)"
+      body: "Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds."
       audience: "13岁以上"
       cta: "了解操作方法"
     frozen:

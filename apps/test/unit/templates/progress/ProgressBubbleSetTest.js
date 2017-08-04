@@ -18,18 +18,4 @@ describe('ProgressBubbleSet', () => {
     );
     assert.equal(wrapper.find('ProgressBubble').length, defaultProps.levels.length);
   });
-
-  it('uses a pill for unplugged levels', () => {
-    const wrapper = shallow(
-      <ProgressBubbleSet
-        {...defaultProps}
-        levels={defaultProps.levels.map((level, index) => ({
-          ...level,
-          isUnplugged: index === 0
-        }))}
-      />
-    );
-    assert.equal(wrapper.find('ProgressPill').length, 1);
-    assert.equal(wrapper.find('ProgressBubble').length, defaultProps.levels.length - 1);
-  });
 });

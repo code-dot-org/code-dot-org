@@ -607,7 +607,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     assert_redirected_to hoc_chapter_path(chapter: 1)
 
     # still logged in
-    assert session['warden.user.user.key'].first.first
+    assert signed_in_user_id
   end
 
   test "reset routing for custom scripts" do

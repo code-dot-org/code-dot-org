@@ -3,16 +3,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { getStore, registerReducers } from '@cdo/apps/redux';
-import Dialog from '@cdo/apps/templates/Dialog';
+import PublishDialog from '@cdo/apps/templates/publishDialog/PublishDialog';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
 import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
-import i18n from '@cdo/locale';
 import { MAX_PROJECTS_PER_CATEGORY, Galleries } from '@cdo/apps/templates/projects/projectConstants';
-import projects, { selectGallery, setProjectLists, prependProjects } from '@cdo/apps/templates/projects/projectsRedux';
+import projects, {
+  selectGallery,
+  setProjectLists,
+  prependProjects,
+} from '@cdo/apps/templates/projects/projectsRedux';
+import publishDialogReducer, {
+  showPublishDialog,
+} from '@cdo/apps/templates/publishDialog/publishDialogRedux';
 
 $(document).ready(() => {
-  registerReducers({projects});
+  registerReducers({projects, publishDialog: publishDialogReducer});
   const store = getStore();
+  setupReduxSubscribers(store);
   const projectsHeader = document.getElementById('projects-header');
   ReactDOM.render(
     <Provider store={store}>
@@ -38,6 +45,15 @@ $(document).ready(() => {
       </Provider>,
       publicGallery);
   });
+
+  const publishConfirm = document.getElementById('publish-confirm');
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog/>
+    </Provider>,
+    publishConfirm
+  );
 });
 
 function showGallery(gallery) {
@@ -45,47 +61,32 @@ function showGallery(gallery) {
   $('#public-gallery-wrapper').toggle(gallery === Galleries.PUBLIC);
 }
 
-function onShowConfirmPublishDialog(callback) {
-  const publishConfirm = document.getElementById('publish-confirm');
-  ReactDOM.render(
-    <Dialog
-      title={i18n.publishToPublicGallery()}
-      body={i18n.publishToPublicGalleryWarning()}
-      confirmText={i18n.publish()}
-      isOpen={true}
-      handleClose={hideDialog}
-      onCancel={hideDialog}
-      onConfirm={onConfirmPublish.bind(this, callback)}
-    />,
-    publishConfirm
-  );
-}
-
 // Make this method available to angularProjects.js. This can go away
 // once My Projects is moved to React.
-window.onShowConfirmPublishDialog = onShowConfirmPublishDialog;
+window.onShowConfirmPublishDialog = function (projectId, projectType) {
+  getStore().dispatch(showPublishDialog(projectId, projectType));
+};
 
-/**
- * Shows a project at the front of the specified list of published projects.
- * @param {Object} projectData The data for a published project, in the format
- *   defined by projectConstants.projectDataPropType.
- * @param {string} projectType Which list of projects to add this project to.
- *   Valid values include applab, gamelab, playlab, or artist.
- */
-function showNewPublishedProject(projectData, projectType) {
-  getStore().dispatch(prependProjects([projectData], projectType));
-}
+function setupReduxSubscribers(store) {
+  let state = {};
+  store.subscribe(() => {
+    let lastState = state;
+    state = store.getState();
 
-// Make this method available to angularProjects.js. This can go away
-// once My Projects is moved to React.
-window.showNewPublishedProject = showNewPublishedProject.bind(this);
-
-function onConfirmPublish(callback) {
-  hideDialog();
-  callback();
-}
-
-function hideDialog() {
-  const publishConfirm = document.getElementById('publish-confirm');
-  ReactDOM.render(<Dialog isOpen={false}/>, publishConfirm);
+    // Update the project state and immediately add it to the public gallery
+    // when a PublishDialog state transition indicates that a project has just
+    // been published.
+    if (
+      lastState.publishDialog &&
+      lastState.publishDialog.lastPublishedAt !==
+        state.publishDialog.lastPublishedAt
+    ) {
+      window.setProjectPublishedAt(
+        state.publishDialog.projectId,
+        state.publishDialog.lastPublishedAt);
+      const projectData = state.publishDialog.lastPublishedProjectData;
+      const projectType = state.publishDialog.projectType;
+      store.dispatch(prependProjects([projectData], projectType));
+    }
+  });
 }

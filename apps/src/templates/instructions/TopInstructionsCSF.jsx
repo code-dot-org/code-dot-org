@@ -650,7 +650,7 @@ var TopInstructions = React.createClass({
                 renderedMarkdown={renderedMarkdown}
                 onResize={this.adjustMaxNeededHeight}
                 inputOutputTable={this.props.collapsed ? undefined : this.props.inputOutputTable}
-                aniGifURL={this.props.aniGifURL}
+                imgURL={this.props.aniGifURL}
                 inTopPane
               />
               {instructions2 &&
@@ -772,7 +772,7 @@ module.exports = connect(function propsFromStore(state) {
     showInstructionsDialog(height) {
       dispatch(openDialog({
         autoClose: false,
-        aniGifOnly: false,
+        imgOnly: false,
         hintsOnly: true
       }));
     }

@@ -208,6 +208,8 @@
       Klik pautan di bawah untuk mendaftar bagi tutorial Sains Komputer di Code.org (dengan saya sebagai "guru"): % {link} tutorial ini adalah menyeronokkan, penglibatan visual, dan mengajar konsep asas sains komputer melalui pendekatan mudah, berpandu, seperti-permainan. Belajar kod dari Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs Zombie! :-) % {nama}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -216,6 +218,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: E-mel
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: Jemputan dihantar
     added_teacher: "%{name} ditambah sebagai guru anda"
@@ -229,6 +237,9 @@
       section_not_found: Tidak dapat mencari bahagian dengan kod '%{section_code}'.
       blank_code: Sila masukkan kod bahagian
       cant_join_own_section: Maaf, anda tidak dapat menyertai bahagian anda sendiri.
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org pemberitahuan: %{student_name} ini tidak lagi dianggap
@@ -253,6 +264,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -267,6 +280,7 @@
         calculate: Calculate Something
         applab: Make an App
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
       courses: kursus-kursus
       project_gallery: Project Gallery
@@ -713,6 +727,12 @@
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: Ages 13+
+      cta: Learn how
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: Ages 13+
       cta: Learn how
     frozen:

@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
-import SetUpMessage from './SetUpMessage';
+import {CoursesSetUpMessage} from './SetUpMessage';
 import SeeMoreCourses from './SeeMoreCourses';
 import StudentTopCourse from './StudentTopCourse';
 import Notification from '@cdo/apps/templates/Notification';
@@ -20,26 +20,21 @@ const styles = {
 const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    showAllCoursesLink: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    heading: PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     studentTopCourse: shapes.studentTopCourse
   },
 
   render() {
-    const { courses, showAllCoursesLink, isTeacher, heading, isRtl, studentTopCourse } = this.props;
-    const topFourCourses = courses.slice(1,5);
-    const moreCourses = courses.slice(5);
+    const { courses, isTeacher, isRtl, studentTopCourse } = this.props;
+    const topFourCourses = courses.slice(0,4);
+    const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || studentTopCourse;
 
     return (
       <div>
         <ContentContainer
-          heading={heading}
-          linkText={i18n.findCourse()}
-          link="/courses"
-          showLink={showAllCoursesLink}
+          heading={i18n.myCourses()}
           isRtl={isRtl}
         >
           {!isTeacher && studentTopCourse && (
@@ -55,7 +50,7 @@ const RecentCourses = React.createClass({
             topFourCourses.map((course, index) =>
             <div key={index}>
               <CourseCard
-                name={course.name}
+                title={course.title}
                 description={course.description}
                 link={course.link}
                 isRtl={isRtl}
@@ -83,8 +78,7 @@ const RecentCourses = React.createClass({
             </div>
           )}
           {!hasCourse && (
-            <SetUpMessage
-              type="courses"
+            <CoursesSetUpMessage
               isRtl={isRtl}
               isTeacher={isTeacher}
             />

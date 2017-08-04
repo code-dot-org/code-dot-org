@@ -215,6 +215,8 @@
       %{name}
   parent_mailer:
     student_associated_subject: Login information for Code.org
+  teacher_mailer:
+    new_teacher_subject: Welcome to Code.org!
   section:
     your_section:
       one: 'Your section:'
@@ -223,6 +225,12 @@
     confirm:
       remove: Are you sure you want to leave this section?
     remove: "(remove section)"
+    type:
+      picture: Picture Password
+      word: Secret Words
+      email: "ই-মেইল"
+      google_classroom: Google Classroom
+      clever: Clever
   follower:
     invite_sent: "আমন্ত্রণ পাঠানো হল।"
     added_teacher: "%{name} আপনার শিক্ষক হিসেবে যুক্ত হলেন।"
@@ -237,6 +245,9 @@
       section_not_found: "কোন শাখা খুঁজে পাওয়া যায়নি এই কোডের '%{section_code}"
       blank_code: "অনুগ্রহ করে একটি শাখা কোড প্রবেশ করান"
       cant_join_own_section: "দুঃখিত, আপনি আপনার নিজের সেকশনে যোগ দিতে পারবেন না।"
+      provider_managed_section: This section is managed by another provider and cannot
+        be joined. Please ask your teacher to add you via %{provider} and re-sync
+        their section.
     mail:
       student_disassociated:
         subject: 'Code.org বিজ্ঞপ্তি: %{student_name} আর আপনার ছাত্র হিসেবে যুক্ত
@@ -261,6 +272,8 @@
   devise:
     registrations:
       user:
+        user_type_change_email_mismatch: The email address you provided doesn't match
+          the email address for this account
         personal_login_created_email: You created a personal login successfully. You
           can now log into Code.org with your email and password
         personal_login_created_username: You created a personal login successfully.
@@ -275,6 +288,7 @@
         calculate: Calculate Something
         applab: "একটি অ্যাপ তৈরি করুন"
         gamelab: Make a Game Lab project
+        weblab: Make a Web Lab (beta) project
       home: Home
       courses: "পাঠ্যতালিকা"
       project_gallery: Project Gallery
@@ -720,6 +734,12 @@
       title: Game Lab (beta)
       body: Game Lab is a programming environment where you can make simple animations
         and games with objects and characters that interact with each other.
+      audience: "বয়সের ১৩+"
+      cta: "শিখুন কিভাবে"
+    weblab:
+      title: Web Lab (beta)
+      body: Web Lab is a programming environment where you can make simple web pages
+        using HTML and CSS. Design your web pages and share your site in seconds.
       audience: "বয়সের ১৩+"
       cta: "শিখুন কিভাবে"
     frozen:

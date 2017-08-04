@@ -27,6 +27,9 @@ class ProjectsController < ApplicationController
     starwars: {
       name: 'New Star Wars Project'
     },
+    starwarsblocks: {
+      name: 'New Star Wars Blocks Project'
+    },
     iceage: {
       name: 'New Ice Age Project'
     },
@@ -38,6 +41,10 @@ class ProjectsController < ApplicationController
     },
     flappy: {
       name: 'New Flappy Project'
+    },
+    scratch: {
+      name: 'New Scratch Project',
+      levelbuilder_required: true,
     },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'

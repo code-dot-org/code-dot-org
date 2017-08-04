@@ -57,7 +57,7 @@ level 'flappy_1'
 stage 'Bounce'
 skin 'bounce'
 level_concept_difficulty '{"sequencing":1,"events":2}'
-level 'blockly:Bounce:1'
+level 'bounce_1'
 
 stage 'Multi'
 level 'K-1 Happy Maps Multi 1'

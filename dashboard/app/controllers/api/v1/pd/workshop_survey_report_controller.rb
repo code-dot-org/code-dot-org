@@ -60,7 +60,7 @@ module Api::V1::Pd
       survey_report = Hash.new
 
       survey_report[:facilitator_breakdown] = facilitator_name.nil?
-      survey_report[:facilitator_names] = @workshop.facilitators.map(&:name) if facilitator_name.nil?
+      survey_report[:facilitator_names] = @workshop.facilitators.pluck(:name) if facilitator_name.nil?
 
       survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name: facilitator_name)
 
@@ -83,6 +83,9 @@ module Api::V1::Pd
       else
         survey_report[:all_my_local_workshops] = {}
       end
+
+      aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production"))
+      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops['CSP Local Summer Workshops']
 
       respond_to do |format|
         format.json do
