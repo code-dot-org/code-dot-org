@@ -18,7 +18,6 @@
       %a{:href=>"//code.org/donate", :title=>'Donate', :style=>"text-decoration:none"}
         %img{:src=>"/images/donate_normal.png"}
       #sign_in_or_user{:style=>'width:550px; display:inline'}
-        =view :sign_in_or_user
       %br
       %br
       %br
@@ -34,3 +33,15 @@
       = view :hoc_count
 
 :javascript
+  $ = jQuery;
+  $(document).ready(function() {
+    $.ajax({
+      type: "GET",
+      url: '/dashboardapi/user_menu',
+      //data: "id=" + id, // appears as $_GET['id'] @ ur backend side
+      success: function(data) {
+        // data is ur summary
+        $('#sign_in_or_user').html(data);
+      }
+    });
+  });

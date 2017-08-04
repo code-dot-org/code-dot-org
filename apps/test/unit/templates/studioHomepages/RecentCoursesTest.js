@@ -52,14 +52,14 @@ describe('RecentCourses', () => {
         <RecentCourses
           courses={[]}
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             isRtl={false}
           >
             <CoursesSetUpMessage
@@ -77,14 +77,14 @@ describe('RecentCourses', () => {
         <RecentCourses
           courses={courses}
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             isRtl={false}
           >
             <div key={0}>
@@ -124,14 +124,14 @@ describe('RecentCourses', () => {
         <RecentCourses
           courses={moreCourses}
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             isRtl={false}
           >
             <div key={0}>
