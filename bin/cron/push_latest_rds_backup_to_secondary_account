@@ -125,7 +125,7 @@ def main
       )
     end
   ensure
-    copied_snapshot.delete
+    copied_snapshot.delete if copied_snapshot
   end
 end
 
