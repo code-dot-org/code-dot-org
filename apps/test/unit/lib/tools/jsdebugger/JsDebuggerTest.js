@@ -3,6 +3,7 @@ import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
+import {allowConsoleErrors} from '../../../../util/testUtils';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
@@ -10,6 +11,8 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('The JSDebugger component', () => {
+  allowConsoleErrors();
+
   let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
 
   beforeEach(() => {
