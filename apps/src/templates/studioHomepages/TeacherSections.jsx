@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import ContentContainer from '../ContentContainer';
-import {SectionsSetUpMessage} from './SetUpMessage';
+import SetUpSections from './SetUpSections';
 import OwnedSections from '../teacherDashboard/OwnedSections';
 import SectionsTable from '../studioHomepages/SectionsTable';
 import {asyncLoadSectionData} from '../teacherDashboard/teacherSectionsRedux';
@@ -58,7 +58,7 @@ class TeacherSections extends Component {
             canLeave={false}
           />
         ) : (
-          <SectionsSetUpMessage isRtl={isRtl}/>
+          <SetUpSections isRtl={isRtl}/>
         )}
       </ContentContainer>
     );

@@ -1199,7 +1199,7 @@ Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_nam
 end
 
 When /^I see the section set up box$/ do
-  steps 'When I wait to see ".uitest-sections-set-up-message"'
+  steps 'When I wait to see ".uitest-set-up-sections"'
 end
 
 When /^I press the new section button$/ do

@@ -12,7 +12,7 @@ import {
 } from '@cdo/apps/templates/studioHomepages/TeacherSections';
 import ContentContainer from "@cdo/apps/templates/ContentContainer";
 import SectionsTable from "@cdo/apps/templates/studioHomepages/SectionsTable";
-import {SectionsSetUpMessage} from "@cdo/apps/templates/studioHomepages/SetUpMessage";
+import SetUpSections from "@cdo/apps/templates/studioHomepages/SetUpSections";
 import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -29,7 +29,7 @@ describe('TeacherSections', () => {
 
   beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
 
-  it('renders a SectionsSetUpMessage when no sections are set up', () => {
+  it('renders SetUpSections when no sections are set up', () => {
     const wrapper = shallow(
       <TeacherSections
         {...defaultProps}
@@ -43,7 +43,7 @@ describe('TeacherSections', () => {
         link={pegasus('/teacher-dashboard#/sections')}
         isRtl={defaultProps.isRtl}
       >
-        <SectionsSetUpMessage
+        <SetUpSections
           isRtl={defaultProps.isRtl}
         />
       </ContentContainer>

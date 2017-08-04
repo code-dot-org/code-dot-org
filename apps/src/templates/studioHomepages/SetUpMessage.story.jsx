@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CoursesSetUpMessage,
-  UnconnectedSectionsSetUpMessage as SectionsSetUpMessage,
 } from './SetUpMessage';
 
 export default storybook => storybook
@@ -24,16 +23,6 @@ export default storybook => storybook
         <CoursesSetUpMessage
           isRtl={false}
           isTeacher={false}
-        />
-      )
-    },
-    {
-      name: 'Set Up Message for Sections for Teachers',
-      description: `Information box if the teacher doesn't have any sections yet`,
-      story: () => (
-        <SectionsSetUpMessage
-          isRtl={false}
-          beginEditingNewSection={storybook.action('beginEditingNewSection')}
         />
       )
     },
