@@ -98,7 +98,7 @@ module ApplicationHelper
   end
 
   def home_url
-    CDO.studio_url("/home")
+    '/home'
   end
 
   def teacher_dashboard_url
