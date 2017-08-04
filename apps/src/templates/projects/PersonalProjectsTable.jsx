@@ -4,7 +4,9 @@ import _ from 'lodash';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import {ImageWithStatus} from '../ImageWithStatus';
-import {Table} from 'reactabular';
+import {Table, sort} from 'reactabular';
+import wrappedSortable from '../tables/wrapped_sortable';
+import orderBy from 'lodash/orderBy';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -77,7 +79,7 @@ const styles = {
     padding: 15
   },
   cellType: {
-    width: 160
+    width: 140
   },
   cellIsPublished: {
     textAlign: 'center'
@@ -102,6 +104,36 @@ const styles = {
 const PersonalProjectsTable = React.createClass({
   propTypes: {
     projectList: PropTypes.array.isRequired
+  },
+
+  getInitialState() {
+    const sortingColumns = {
+      [COLUMNS.LAST_EDITED]: {
+        direction: 'desc',
+        position: 0
+      }
+    };
+    return {sortingColumns};
+  },
+
+  getSortingColumns() {
+    return this.state.sortingColumns || {};
+  },
+
+  // The user requested a new sorting column. Adjust the state accordingly.
+  onSort(selectedColumn) {
+    this.setState({
+      sortingColumns: sort.byColumn({
+        sortingColumns: this.state.sortingColumns,
+        // Custom sortingOrder removes 'no-sort' from the cycle
+        sortingOrder: {
+          FIRST: 'asc',
+          asc: 'desc',
+          desc: 'asc'
+        },
+        selectedColumn
+      })
+    });
   },
 
   thumbnailFormatter(thumbnailUrl) {
@@ -135,7 +167,7 @@ const PersonalProjectsTable = React.createClass({
     return PROJECT_TYPE_MAP[type];
   },
 
-  getColumns() {
+  getColumns(sortable) {
     return [
       {
         property: 'thumbnailUrl',
@@ -175,6 +207,7 @@ const PersonalProjectsTable = React.createClass({
         header: {
           label: i18n.projectType(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: this.typeFormatter,
@@ -189,6 +222,7 @@ const PersonalProjectsTable = React.createClass({
         header: {
           label: i18n.lastEdited(),
           props: {style: styles.headerCell},
+          transforms: [sortable],
         },
         cell: {
           format: this.dateFormatter,
@@ -227,14 +261,30 @@ const PersonalProjectsTable = React.createClass({
   },
 
   render() {
+    const sortableOptions = {
+      // Dim inactive sorting icons in the column headers
+      default: {color: 'rgba(0, 0, 0, 0.2 )'}
+    };
+
+    // Define a sorting transform that can be applied to each column
+    const sortable = wrappedSortable(this.getSortingColumns, this.onSort, sortableOptions);
+    const columns = this.getColumns(sortable);
+    const sortingColumns = this.getSortingColumns();
+
+    const sortedRows = sort.sorter({
+      columns,
+      sortingColumns,
+      sort: orderBy,
+    })(convertChannelsToProjectData(this.props.projectList));
+
     return (
       <Table.Provider
-        columns={this.getColumns()}
+        columns={columns}
         style={styles.table}
       >
         <Table.Header />
 
-        <Table.Body rows={convertChannelsToProjectData(this.props.projectList)} rowKey="channel" />
+        <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>
     );
   }
