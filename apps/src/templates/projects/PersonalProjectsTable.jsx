@@ -1,12 +1,12 @@
 import React, {PropTypes} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import {ImageWithStatus} from '../ImageWithStatus';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
+import {PROJECT_TYPE_MAP} from './projectConstants';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -20,19 +20,6 @@ export const COLUMNS = {
   LAST_EDITED: 3,
   PUBLIC_GALLERY: 4,
   ACTIONS: 5,
-};
-
-/**
- * Map from project type to friendly name.
- * @type {Object}
- */
-const PROJECT_TYPE_MAP = {
-  algebra_game: i18n.projectTypeAlgebra(),
-  applab: i18n.projectTypeApplab(),
-  artist: i18n.projectTypeArtist(),
-  gamelab: i18n.projectTypeGamelab(),
-  playlab: i18n.projectTypePlaylab(),
-  weblab: i18n.projectTypeWeblab(),
 };
 
 const styles = {
@@ -71,7 +58,7 @@ const styles = {
     borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
     padding: 15,
-    width: 300
+    width: 270
   },
   headerCellName: {
     borderWidth: '1px 1px 1px 0px',
@@ -79,7 +66,7 @@ const styles = {
     padding: 15
   },
   cellType: {
-    width: 140
+    width: 120
   },
   cellIsPublished: {
     textAlign: 'center'
@@ -101,6 +88,8 @@ const styles = {
   }
 };
 
+// Table of user's projects
+// TODO(caleybrock): add an actions component to allow users to modify projects
 const PersonalProjectsTable = React.createClass({
   propTypes: {
     projectList: PropTypes.array.isRequired
@@ -142,7 +131,7 @@ const PersonalProjectsTable = React.createClass({
       src={thumbnailUrl}
       width={THUMBNAIL_SIZE}
       wrapperStyle={styles.thumbnailWrapper}
-            />);
+    />);
   },
 
   nameFormatter(name, {rowData}) {
@@ -246,7 +235,7 @@ const PersonalProjectsTable = React.createClass({
       {
         property: 'actions',
         header: {
-          label: i18n.catActions(),
+          label: i18n.quickActions(),
           props: {style: styles.headerCell},
         },
         cell: {
@@ -283,31 +272,25 @@ const PersonalProjectsTable = React.createClass({
         style={styles.table}
       >
         <Table.Header />
-
         <Table.Body rows={sortedRows} rowKey="channel" />
       </Table.Provider>
     );
   }
 });
 
-// The project widget uses the channels API to populate the personal projects
-// and the data needs to be converted to match the format of the project cards
-// before passing it to PersonalRecentProjects.
+// The project table uses the channels API to populate the personal projects
+// and the data needs to be filtered and mapped before displaying.
 const convertChannelsToProjectData = function (projects) {
-  // Sort by most recently updated.
-  let projectLists = _.sortBy(projects, 'updatedAt').reverse();
-
   // Get the ones that aren't hidden, and have a type and id.
-  projectLists = projectLists.filter(project => !project.hidden && project.id && project.projectType);
-  const numProjects = Math.min(4, projectLists.length);
-  return _.range(numProjects).map(i => (
+  let projectLists = projects.filter(project => !project.hidden && project.id && project.projectType);
+  return projectLists.map(project => (
     {
-      name: projectLists[i].name,
-      channel: projectLists[i].id,
-      thumbnailUrl: projectLists[i].thumbnailUrl,
-      type: projectLists[i].projectType,
-      isPublished: projectLists[i].publishedAt !== null,
-      updatedAt: projectLists[i].updatedAt
+      name: project.name,
+      channel: project.id,
+      thumbnailUrl: project.thumbnailUrl,
+      type: project.projectType,
+      isPublished: project.publishedAt !== null,
+      updatedAt: project.updatedAt
     }
   ));
 };
