@@ -1,16 +1,14 @@
 import React from 'react';
-import {
-  CoursesSetUpMessage,
-} from './SetUpMessage';
+import SetUpCourses from './SetUpCourses';
 
 export default storybook => storybook
-  .storiesOf('SetUpMessage', module)
+  .storiesOf('SetUpCourses', module)
   .addStoryTable([
     {
       name: 'Set Up Message for Courses for Teachers',
       description: `Information box if the teacher doesn't have any courses yet`,
       story: () => (
-        <CoursesSetUpMessage
+        <SetUpCourses
           isRtl={false}
           isTeacher={true}
         />
@@ -20,7 +18,7 @@ export default storybook => storybook
       name: 'Set Up Message for Courses for Students',
       description: `Information box if the student doesn't have any courses yet`,
       story: () => (
-        <CoursesSetUpMessage
+        <SetUpCourses
           isRtl={false}
           isTeacher={false}
         />

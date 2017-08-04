@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {beginEditingNewSection} from '../teacherDashboard/teacherSectionsRedux';
-import {SetUpMessage} from './SetUpMessage';
+import SetUpMessage from './SetUpMessage';
 
 class SetUpSections extends Component {
   static propTypes = {
