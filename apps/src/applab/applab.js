@@ -65,6 +65,7 @@ import project from '../code-studio/initApp/project';
 import * as thumbnailUtils from '../util/thumbnail';
 import Sounds from '../Sounds';
 import {makeDisabledConfig} from '../dropletUtils';
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 import {TestResults, ResultType} from '../constants';
 import i18n from '../code-studio/i18n';
@@ -113,7 +114,7 @@ Applab.scale = {
 };
 
 var twitterOptions = {
-  text: applabMsg.shareApplabTwitter(),
+  text: applabMsg.shareApplabTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "ApplabCode"
 };
 
