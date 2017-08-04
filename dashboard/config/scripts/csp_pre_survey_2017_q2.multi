@@ -3,6 +3,7 @@ question 'When I encounter a problem without an obvious answer, I am always able
 right 'Strongly disagree'
 right 'Disagree'
 right 'Slightly disagree'
+right 'Neither'
 right 'Slightly agree'
 right 'Agree'
 right 'Strongly agree'

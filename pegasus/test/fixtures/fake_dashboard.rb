@@ -76,7 +76,7 @@ module FakeDashboard
   # Fake Data: Courses
   #
   COURSES = [
-    {
+    COURSE_CSP = {
       id: 15,
       name: 'csp',
       created_at: '2016-01-01 00:01:02',
@@ -88,12 +88,37 @@ module FakeDashboard
   # Fake Data: Scripts
   #
   SCRIPTS = [
-    {
+    SCRIPT_FOO = {
+      id: 1,
+      name: 'Foo',
+      hidden: 0
+    },
+    SCRIPT_BAR = {
+      id: 3,
+      name: 'Bar',
+      hidden: 0
+    },
+    SCRIPT_MC = {
+      id: 4,
+      name: 'mc',
+      hidden: 0
+    },
+    SCRIPT_HOUROFCODE = {
+      id: 5,
+      name: 'hourofcode',
+      hidden: 0
+    },
+    SCRIPT_MINECRAFT = {
+      id: 6,
+      name: 'minecraft',
+      hidden: 0
+    },
+    SCRIPT_FLAPPY = {
       id: 10,
       name: 'flappy',
       hidden: 0
     },
-    {
+    SCRIPT_ALLTHETHINGS = {
       id: 45,
       name: 'allthehiddenthings',
       hidden: 1

@@ -6,6 +6,8 @@
   "properties": {
     "video_key": "C1_planting_seed"
   },
-  "published": true
+  "published": true,
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </Unplugged>

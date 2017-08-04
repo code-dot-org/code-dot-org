@@ -44,6 +44,7 @@
   "notes": "P8: Efficacy Repairing Puzzle",
   "audit_log": "[{\"changed_at\":\"2017-06-14 17:32:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-07 17:19:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3
   }
 }]]></config>
   <blocks>

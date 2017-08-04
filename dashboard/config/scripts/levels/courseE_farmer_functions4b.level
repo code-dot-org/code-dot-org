@@ -43,6 +43,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-13 22:32:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 19:19:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:25:47 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 19:26:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:16:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:56:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_loops": 3,
+    "repeat_until_while": 1,
+    "functions": 2
   }
 }]]></config>
   <blocks>
@@ -54,7 +58,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="harvester_ifAtCorn">
+                <block type="harvester_ifHasCorn">
                   <statement name="DO">
                     <block type="harvester_corn"/>
                   </statement>
@@ -103,7 +107,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -193,7 +197,7 @@
           <statement name="STACK">
             <block type="harvester_untilHasPumpkin">
               <statement name="DO">
-                <block type="harvester_ifAtCorn">
+                <block type="harvester_ifHasCorn">
                   <statement name="DO">
                     <block type="harvester_corn"/>
                   </statement>

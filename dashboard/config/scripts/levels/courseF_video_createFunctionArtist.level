@@ -11,6 +11,10 @@
     "skip_sound": true
   },
   "published": true,
-  "notes": ""
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "functions_with_params": 3
+  }
 }]]></config>
 </StandaloneVideo>

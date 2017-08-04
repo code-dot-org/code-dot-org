@@ -42,6 +42,9 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-12 22:48:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:49:53 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:56:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:56:33 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:58:01 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 22:58:07 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 22:58:18 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 22:58:37 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 22:59:14 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 22:59:18 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 22:59:52 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 23:00:03 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":182,\"changed_by_email\":\"ryan@code.org\"},{\"changed_at\":\"2017-07-12 23:04:21 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":255,\"changed_by_email\":\"ram@code.org\"},{\"changed_at\":\"2017-07-12 23:36:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-12 23:37:26 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-13 03:01:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-13 11:28:25 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-13 11:28:43 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":285,\"changed_by_email\":\"harvey@pd.code.org\"},{\"changed_at\":\"2017-07-28 22:35:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_until_while": 5,
+    "conditionals": 5
   }
 }]]></config>
   <blocks>
@@ -61,7 +64,7 @@
         <block type="maze_turn">
           <title name="DIR">turnLeft</title>
         </block>
-        <block type="harvester_untilAtPumpkin"/>
+        <block type="harvester_untilHasPumpkin"/>
         <block type="harvester_whileHasCrop">
           <title name="LOC">Corn</title>
         </block>
@@ -80,7 +83,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="harvester_untilAtPumpkin">
+            <block type="harvester_untilHasPumpkin">
               <statement name="DO">
                 <block type="maze_ifElse">
                   <title name="DIR">isPathForward</title>

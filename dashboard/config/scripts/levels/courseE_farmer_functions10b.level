@@ -43,6 +43,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-15 18:02:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-14 01:24:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 00:49:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:11:29 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:15:15 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:16:10 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:17:38 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:25:20 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:07:07 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_until_while": 5,
+    "functions": 3,
+    "conditionals": 5
   }
 }]]></config>
   <blocks>
@@ -76,7 +80,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -126,7 +130,7 @@
                     <block type="maze_move">
                       <title name="DIR">moveForward</title>
                       <next>
-                        <block type="harvester_ifAtCrop">
+                        <block type="harvester_ifHasCrop">
                           <title name="LOC">Lettuce</title>
                           <statement name="DO">
                             <block type="harvester_lettuce">
