@@ -682,7 +682,7 @@ FactoryGirl.define do
 
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    sequence(:id, 333)
+    id {School.maximum(:id) + 1}
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -693,7 +693,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    sequence(:id, 333)
+    id {School.maximum(:id) + 1}
     name "A seattle charter school"
     city "Seattle"
     state "WA"
