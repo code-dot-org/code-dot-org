@@ -3,8 +3,6 @@ require 'test_helper'
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
-  default_update_blocks_params = nil
-
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -18,7 +16,7 @@ class LevelsControllerTest < ActionController::TestCase
 
     enable_level_source_image_s3_urls
 
-    default_update_blocks_params = {
+    @default_update_blocks_params = {
       level_id: @level.id,
       game_id: @level.game.id,
       type: 'toolbox_blocks',
@@ -300,7 +298,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update blocks" do
-    post :update_blocks, params: default_update_blocks_params
+    post :update_blocks, params: @default_update_blocks_params
     assert_response :success
     level = assigns(:level)
     assert_equal @program, level.properties['toolbox_blocks']
@@ -308,7 +306,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update solution image when updating solution blocks" do
-    post :update_blocks, params: default_update_blocks_params.merge(
+    post :update_blocks, params: @default_update_blocks_params.merge(
       type: 'solution_blocks',
       image: 'stub-image-data',
     )
@@ -320,7 +318,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not update solution image when updating toolbox blocks" do
-    post :update_blocks, params: default_update_blocks_params.merge(
+    post :update_blocks, params: @default_update_blocks_params.merge(
       image: 'stub-image-data',
     )
     assert_response :success
@@ -332,7 +330,7 @@ class LevelsControllerTest < ActionController::TestCase
   test "should not update blocks if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
-      post :update_blocks, params: default_update_blocks_params
+      post :update_blocks, params: @default_update_blocks_params
       assert_response :forbidden
     end
   end
@@ -342,7 +340,7 @@ class LevelsControllerTest < ActionController::TestCase
     can_edit = Ability.new(@levelbuilder).can? :edit, level
     assert_equal false, can_edit
 
-    post :update_blocks, params: default_update_blocks_params.merge(
+    post :update_blocks, params: @default_update_blocks_params.merge(
       level_id: level.id,
       game_id: level.game.id,
     )
