@@ -47,12 +47,9 @@ class HomeController < ApplicationController
   # Signed in: render home page
   # Signed out: redirect to sign in
   def home
-    if current_user
-      init_homepage
-      render 'home/index'
-    else
-      redirect_to '/users/sign_in'
-    end
+    authenticate_user!
+    init_homepage
+    render 'home/index'
   end
 
   def gallery_activities
