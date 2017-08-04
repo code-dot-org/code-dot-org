@@ -248,7 +248,6 @@ function zeroPadLeft(string, desiredWidth) {
  * Noop. Will be removed shortly. TODO
  */
 export function throwOnConsoleErrors() {
-  console.log('throwOnConsoleErrors ignored');
 }
 
 /**
