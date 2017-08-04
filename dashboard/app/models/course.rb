@@ -166,9 +166,7 @@ class Course < ApplicationRecord
   end
 
   def self.should_cache?
-    return false if Rails.application.config.levelbuilder_mode
-    return false if ENV['UNIT_TEST'] || ENV['CI']
-    true
+    Script.should_cache?
   end
 
   # generates our course_cache from what is in the Rails cache
