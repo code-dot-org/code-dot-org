@@ -47,7 +47,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
     );
@@ -64,7 +63,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={[]}
         sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
     );
@@ -77,7 +75,6 @@ describe('TeacherHomepage', () => {
         announcements={[announcement]}
         courses={[]}
         sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
     );
@@ -95,13 +92,11 @@ describe('TeacherHomepage', () => {
   });
 
   it('renders a TeacherSections component', () => {
-    const codeOrgUrlPrefix = "http://localhost:3000/";
     const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
         courses={[]}
         sections={sections}
-        codeOrgUrlPrefix={codeOrgUrlPrefix}
         isRtl={false}
       />
     );
@@ -119,7 +114,6 @@ describe('TeacherHomepage', () => {
         announcements={[]}
         courses={courses}
         sections={[]}
-        codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
     );

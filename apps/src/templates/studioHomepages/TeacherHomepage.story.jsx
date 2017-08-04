@@ -81,7 +81,6 @@ export default storybook => {
                 announcements={announcements}
                 sections={[]}
                 courses={[]}
-                codeOrgUrlPrefix="http://localhost:3000/"
                 isRtl={false}
               />
             </Provider>
@@ -100,7 +99,6 @@ export default storybook => {
                 announcements={announcements}
                 sections={[]}
                 courses={courses}
-                codeOrgUrlPrefix="http://localhost:3000/"
                 isRtl={false}
               />
             </Provider>
@@ -120,7 +118,6 @@ export default storybook => {
                 announcements={announcements}
                 sections={sections}
                 courses={[]}
-                codeOrgUrlPrefix="http://localhost:3000/"
                 isRtl={false}
               />
             </Provider>
@@ -140,7 +137,6 @@ export default storybook => {
                 announcements={announcements}
                 sections={sections}
                 courses={courses}
-                codeOrgUrlPrefix="http://localhost:3000/"
                 isRtl={false}
               />
             </Provider>
