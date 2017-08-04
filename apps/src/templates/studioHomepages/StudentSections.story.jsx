@@ -45,7 +45,6 @@ export default storybook => storybook
           initialSections={[]}
           isRtl={false}
           canLeave={false}
-          codeOrgUrlPrefix="https://code.org"
         />
       )
     },
@@ -57,7 +56,6 @@ export default storybook => storybook
           initialSections={sections}
           isRtl={false}
           canLeave={false}
-          codeOrgUrlPrefix="https://code.org"
         />
       )
     },
@@ -69,7 +67,6 @@ export default storybook => storybook
           initialSections={sections}
           isRtl={false}
           canLeave={true}
-          codeOrgUrlPrefix="https://code.org"
         />
       )
     },

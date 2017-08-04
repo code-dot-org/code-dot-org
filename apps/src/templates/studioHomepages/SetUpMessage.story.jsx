@@ -33,7 +33,6 @@ export default storybook => storybook
       story: () => (
         <SectionsSetUpMessage
           isRtl={false}
-          codeOrgUrlPrefix="http://code.org/"
           beginEditingNewSection={storybook.action('beginEditingNewSection')}
         />
       )

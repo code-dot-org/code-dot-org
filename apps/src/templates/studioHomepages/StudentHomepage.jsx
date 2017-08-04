@@ -13,7 +13,6 @@ const StudentHomepage = React.createClass({
     courses: shapes.courses,
     sections: shapes.sections,
     studentTopCourse: shapes.studentTopCourse,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
   },
@@ -24,7 +23,7 @@ const StudentHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, isRtl, canLeave, studentTopCourse, codeOrgUrlPrefix } = this.props;
+    const { courses, sections, isRtl, canLeave, studentTopCourse } = this.props;
 
     return (
       <div>
@@ -48,7 +47,6 @@ const StudentHomepage = React.createClass({
           initialSections={sections}
           isRtl={isRtl}
           canLeave={canLeave}
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
       </div>
     );

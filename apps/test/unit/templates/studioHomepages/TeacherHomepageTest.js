@@ -108,7 +108,6 @@ describe('TeacherHomepage', () => {
     expect(wrapper).to.containMatchingElement(
       <TeacherSections
         sections={sections}
-        codeOrgUrlPrefix={codeOrgUrlPrefix}
         isRtl={false}
       />
     );

@@ -51,7 +51,6 @@ export default [
         <Provider store={store}>
           <TeacherSections
             sections={sections}
-            codeOrgUrlPrefix = "http://code.org/"
             isRtl={false}
             isTeacher={true}
             canLeave={false}
@@ -70,7 +69,6 @@ export default [
         <Provider store={store}>
           <TeacherSections
             sections={[]}
-            codeOrgUrlPrefix = "http://code.org/"
             isRtl={false}
             isTeacher={true}
             canLeave={false}
