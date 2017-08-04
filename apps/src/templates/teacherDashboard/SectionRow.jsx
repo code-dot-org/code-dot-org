@@ -14,10 +14,10 @@ import {
   updateSection,
   removeSection,
 } from './teacherSectionsRedux';
-import {pegasusUrl} from '@cdo/apps/redux/urlHelpers';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   link: tableStyles.link,
@@ -155,7 +155,6 @@ class SectionRow extends Component {
     sections: PropTypes.objectOf(sectionShape).isRequired,
     updateSection: PropTypes.func.isRequired,
     removeSection: PropTypes.func.isRequired,
-    pegasusUrl: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -277,7 +276,6 @@ class SectionRow extends Component {
       validGrades,
       validAssignments,
       primaryAssignmentIds,
-      pegasusUrl,
     } = this.props;
     const { editing, deleting } = this.state;
     const sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
@@ -302,11 +300,11 @@ class SectionRow extends Component {
     }
 
     const manageSectionUrl =
-      (sectionFlow2017 ? pegasusUrl(`/teacher-dashboard`) : '') +
+      (sectionFlow2017 ? pegasus(`/teacher-dashboard`) : '') +
       `#/sections/${section.id}/`;
 
     const manageStudentsUrl =
-      (sectionFlow2017 ? pegasusUrl('/teacher-dashboard') : '') +
+      (sectionFlow2017 ? pegasus('/teacher-dashboard') : '') +
       `#/sections/${section.id}/manage`;
 
     return (
@@ -455,5 +453,4 @@ export default connect(state => ({
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,
   sections: state.teacherSections.sections,
-  pegasusUrl: url => pegasusUrl(state, url),
 }), { updateSection, removeSection })(SectionRow);
