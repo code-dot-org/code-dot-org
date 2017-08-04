@@ -3,6 +3,8 @@ require 'test_helper'
 class LevelsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  default_update_blocks_params = nil
+
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     Level.any_instance.stubs(:write_to_file?).returns(false) # don't write to level files
@@ -20,6 +22,13 @@ class LevelsControllerTest < ActionController::TestCase
     CDO.stubs(:disable_s3_image_uploads).returns(false)
     LevelSourceImage.any_instance.expects(:save_to_s3).never
     create(:level_source, :with_image, level: @level, data: @program)
+
+    default_update_blocks_params = {
+      level_id: @level.id,
+      game_id: @level.game.id,
+      type: 'toolbox_blocks',
+      program: @program,
+    }
   end
 
   test "should get index" do
@@ -296,12 +305,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update blocks" do
-    post :update_blocks, params: {
-      level_id: @level.id,
-      game_id: @level.game.id,
-      type: 'toolbox_blocks',
-      program: @program
-    }
+    post :update_blocks, params: default_update_blocks_params
     assert_response :success
     level = assigns(:level)
     assert_equal level.properties[:toolbox_blocks.to_s], @program
@@ -309,13 +313,10 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update solution image when updating solution blocks" do
-    post :update_blocks, params: {
-      level_id: @level.id,
-      game_id: @level.game.id,
+    post :update_blocks, params: default_update_blocks_params.merge(
       type: 'solution_blocks',
-      program: @program,
       image: 'stub-image-data',
-    }
+    )
     assert_response :success
     level = assigns(:level)
     puts "level.properties #{level.properties}"
@@ -324,28 +325,19 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not update solution image when updating toolbox blocks" do
-    post :update_blocks, params: {
-      level_id: @level.id,
-      game_id: @level.game.id,
-      type: 'toolbox_blocks',
-      program: @program,
+    post :update_blocks, params: default_update_blocks_params.merge(
       image: 'stub-image-data',
-    }
+    )
     assert_response :success
     level = assigns(:level)
-    assert_equal level.properties[:toolbox_blocks.to_s], @program
+    assert_equal @program, level.properties[:toolbox_blocks.to_s]
     assert_nil level.properties[:solution_image_url.to_s]
   end
 
   test "should not update blocks if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
-      post :update_blocks, params: {
-        level_id: @level.id,
-        game_id: @level.game.id,
-        type: 'toolbox_blocks',
-        program: @program
-      }
+      post :update_blocks, params: default_update_blocks_params
       assert_response :forbidden
     end
   end
@@ -355,12 +347,10 @@ class LevelsControllerTest < ActionController::TestCase
     can_edit = Ability.new(@levelbuilder).can? :edit, level
     assert_equal false, can_edit
 
-    post :update_blocks, params: {
+    post :update_blocks, params: default_update_blocks_params.merge(
       level_id: level.id,
       game_id: level.game.id,
-      type: 'toolbox_blocks',
-      program: @program
-    }
+    )
     assert_response :forbidden
   end
 
