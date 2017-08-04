@@ -1,5 +1,6 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {setSections, serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
 import TeacherHomepage from './TeacherHomepage';
@@ -73,6 +74,7 @@ export default storybook => {
         name: 'Teacher Homepage - no courses, no sections',
         description: 'Teacher Homepage - teacher does not have course progress, nor do they have sections',
         story: () => {
+          withFakeServer();
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -91,6 +93,7 @@ export default storybook => {
         name: 'Teacher Homepage - courses, no sections',
         description: 'Teacher Homepage - teacher has course progress, but does not have sections',
         story: () => {
+          withFakeServer({courses});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           return (
@@ -109,6 +112,7 @@ export default storybook => {
         name: 'Teacher Homepage - no courses, sections',
         description: 'Teacher Homepage - teacher does not have course progress, but does have sections',
         story: () => {
+          withFakeServer({sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
           store.dispatch(setSections(serverSections));
@@ -128,9 +132,9 @@ export default storybook => {
         name: 'Teacher Homepage - courses and sections',
         description: 'Teacher Homepage - teacher does have course progress, and does have sections',
         story: () => {
+          withFakeServer({courses, sections: serverSections});
           registerReducers({teacherSections});
           const store = createStoreWithReducers();
-          store.dispatch(setSections(serverSections));
           return (
             <Provider store={store}>
               <TeacherHomepage
@@ -145,3 +149,17 @@ export default storybook => {
       },
     ]);
 };
+
+function withFakeServer({courses = [], sections = []} = {}) {
+  const server = sinon.fakeServer.create({
+    autoRespond: true,
+  });
+  const successResponse = (body) => [
+    200,
+    {"Content-Type": "application/json"},
+    JSON.stringify(body)
+  ];
+  server.respondWith('GET', '/dashboardapi/courses', successResponse(courses));
+  server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+  server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+}

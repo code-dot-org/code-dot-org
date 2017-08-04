@@ -120,7 +120,7 @@ export const finishEditingSection = () => (dispatch, getState) => {
 export const asyncLoadSectionData = () => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   return Promise.all([
-    fetchJSON('/dashboardapi/sections/'),
+    fetchJSON('/dashboardapi/sections'),
     fetchJSON('/dashboardapi/courses'),
     fetchJSON('/v2/sections/valid_scripts')
   ]).then(([sections, validCourses, validScripts]) => {
