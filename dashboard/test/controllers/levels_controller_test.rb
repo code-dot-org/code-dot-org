@@ -16,12 +16,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_in(@levelbuilder)
     @program = '<hey/>'
 
-    # Ensure that we get a real S3 url for the level source image when
-    # requested, and that we never try to upload an image to S3.
-
-    CDO.stubs(:disable_s3_image_uploads).returns(false)
-    LevelSourceImage.any_instance.expects(:save_to_s3).never
-    create(:level_source, :with_image, level: @level, data: @program)
+    enable_level_source_image_s3_urls
 
     default_update_blocks_params = {
       level_id: @level.id,
@@ -308,8 +303,8 @@ class LevelsControllerTest < ActionController::TestCase
     post :update_blocks, params: default_update_blocks_params
     assert_response :success
     level = assigns(:level)
-    assert_equal level.properties[:toolbox_blocks.to_s], @program
-    assert_nil level.properties[:solution_image_url.to_s]
+    assert_equal @program, level.properties['toolbox_blocks']
+    assert_nil level.properties['solution_image_url']
   end
 
   test "should update solution image when updating solution blocks" do
@@ -320,8 +315,8 @@ class LevelsControllerTest < ActionController::TestCase
     assert_response :success
     level = assigns(:level)
     puts "level.properties #{level.properties}"
-    assert_equal level.properties[:solution_blocks.to_s], @program
-    assert_s3_image_url(level.properties[:solution_image_url.to_s])
+    assert_equal @program, level.properties['solution_blocks']
+    assert_s3_image_url level.properties['solution_image_url']
   end
 
   test "should not update solution image when updating toolbox blocks" do
@@ -330,8 +325,8 @@ class LevelsControllerTest < ActionController::TestCase
     )
     assert_response :success
     level = assigns(:level)
-    assert_equal @program, level.properties[:toolbox_blocks.to_s]
-    assert_nil level.properties[:solution_image_url.to_s]
+    assert_equal @program, level.properties['toolbox_blocks']
+    assert_nil level.properties['solution_image_url']
   end
 
   test "should not update blocks if not levelbuilder" do
@@ -742,5 +737,21 @@ class LevelsControllerTest < ActionController::TestCase
       %r{#{LevelSourceImage::S3_URL}.*\.png}.match(url),
       "expected #{url.inspect} to be an S3 URL"
     )
+  end
+
+  # Allow our update_blocks tests to verify that real S3 urls are being
+  # generated when solution images are uploaded. We don't want to actually
+  # upload any S3 images in our tests, so just enable the codepath where an
+  # existing LevelSourceImage is found based on the program contents.
+  def enable_level_source_image_s3_urls
+    # Allow LevelSourceImage to return real S3 urls.
+    CDO.stubs(:disable_s3_image_uploads).returns(false)
+
+    # Make sure there is a LevelSourceImage associated with the program.
+    create(:level_source, :with_image, level: @level, data: @program)
+
+    # Because we cleared disable_s3_image_uploads, there's a chance we'll
+    # accidentally try to upload an image to S3. Make sure this never happens.
+    LevelSourceImage.any_instance.expects(:save_to_s3).never
   end
 end

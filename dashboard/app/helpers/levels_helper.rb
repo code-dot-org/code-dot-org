@@ -771,7 +771,15 @@ module LevelsHelper
     standalone || current_user.try(:should_see_inline_answer?, @script_level)
   end
 
-  def get_level_source_image(level_image, level_source_id)
+  # Finds the existing LevelSourceImage corresponding to the specified level
+  # source id if one exists, otherwise creates and returns a new
+  # LevelSourceImage using the image data in level_image.
+  #
+  # @param level_image [String] A base64-encoded image.
+  # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @returns [LevelSourceImage] A level source image, or nil if one was not
+  # created or found.
+  def find_or_create_level_source_image(level_image, level_source_id)
     level_source_image = nil
     # Store the image only if the image is set, and the image has not been saved
     if level_image && level_source_id
