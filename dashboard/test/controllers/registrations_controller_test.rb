@@ -145,11 +145,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create new teacher with us ip sends email with us content" do
     teacher_params = @default_params.update(user_type: 'teacher')
-    Geocoder.stubs(:search).returns(
-      [OpenStruct.new(
-        country_code: 'US'
-      )]
-    )
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
     assert_creates(User) do
       request.cookies[:pm] = 'send_new_teacher_email'
       post :create, params: {user: teacher_params}
@@ -163,11 +159,7 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create new teacher with non-us ip sends email without us content" do
     teacher_params = @default_params.update(user_type: 'teacher')
-    Geocoder.stubs(:search).returns(
-      [OpenStruct.new(
-        country_code: 'CA'
-      )]
-    )
+    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       request.cookies[:pm] = 'send_new_teacher_email'
       post :create, params: {user: teacher_params}
