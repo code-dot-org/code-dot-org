@@ -33,6 +33,9 @@ def check_for_cdo_keys
     puts <<-EOS.unindent
 
       This script requires CDO.github_access_token and CDO.slack_token.
+      Create your API tokens from these pages:
+      https://github.com/settings/tokens ('public_repo' permission)
+      https://api.slack.com/custom-integrations/legacy-tokens
 
       Please add them to your locals.yml and rerun the script.
 
@@ -379,8 +382,10 @@ def main
 
   DevelopersTopic.set_dtt 'yes'
 
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
+  if CDO.honeybadger_api_token
+    should_i 'retrieve recent honeybadger issues' do
+      get_honeybadger_issues
+    end
   end
 
   do_dtt_subroutine
@@ -462,8 +467,10 @@ def main
     end
   end
 
-  should_i 'retrieve recent honeybadger issues' do
-    get_honeybadger_issues
+  if CDO.honeybadger_api_token
+    should_i 'retrieve recent honeybadger issues' do
+      get_honeybadger_issues
+    end
   end
 
   puts_script_conclusion
