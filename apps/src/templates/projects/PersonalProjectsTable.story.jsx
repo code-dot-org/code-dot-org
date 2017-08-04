@@ -15,5 +15,14 @@ export default storybook => {
           />
         )
       },
+      {
+        name: 'Empty Personal Project Table',
+        description: 'Table when there are 0 personal projects',
+        story: () => (
+          <PersonalProjectsTable
+            projectList={[]}
+          />
+        )
+      },
     ]);
 };
