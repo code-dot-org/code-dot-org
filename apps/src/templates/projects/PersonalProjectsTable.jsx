@@ -46,13 +46,6 @@ const styles = {
     padding: 10,
     fontSize: 14,
   },
-  nameCell: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 10,
-    fontSize: 14,
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
   headerCell: {
     border: '1px solid',
     borderColor: color.border_light_gray,
@@ -60,56 +53,36 @@ const styles = {
     backgroundColor: color.lightest_gray,
     color: color.charcoal
   },
-  headerCellThumbnail: {
-    borderTop: '1px solid',
-    borderLeft: '1px solid',
-    borderBottom: '1px solid',
-    borderRight: '0px solid',
-    borderColor: color.border_light_gray,
-    padding: 0,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal
-  },
   cellThumbnail: {
-    borderTop: '1px solid',
-    borderLeft: '1px solid',
-    borderBottom: '1px solid',
-    borderRight: '0px solid',
+    borderWidth: '1px 0px 1px 1px',
     borderColor: color.border_light_gray,
     width: THUMBNAIL_SIZE,
     minWidth: THUMBNAIL_SIZE,
     padding: 2
   },
-  headerCellName: {
-    borderTop: '1px solid',
-    borderRight: '1px solid',
-    borderBottom: '1px solid',
-    borderLeft: '0px solid',
+  headerCellThumbnail: {
+    borderWidth: '1px 0px 1px 1px',
     borderColor: color.border_light_gray,
-    padding: 20,
-    backgroundColor: color.lightest_gray,
-    color: color.charcoal
+    padding: 0
   },
   cellName: {
-    borderTop: '1px solid',
-    borderRight: '1px solid',
-    borderBottom: '1px solid',
-    borderLeft: '0px solid',
+    borderWidth: '1px 1px 1px 0px',
     borderColor: color.border_light_gray,
-    padding: 20
+    padding: 15,
+    width: 300
+  },
+  headerCellName: {
+    borderWidth: '1px 1px 1px 0px',
+    borderColor: color.border_light_gray,
+    padding: 15
+  },
+  cellType: {
+    width: 160
   },
   cellIsPublished: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 10,
-    fontSize: 14,
     textAlign: 'center'
   },
   cellAction: {
-    border: '1px solid',
-    borderColor: color.border_light_gray,
-    padding: 10,
-    fontSize: 14,
     textAlign: 'center'
   },
   thumbnailWrapper: {
@@ -167,22 +140,34 @@ const PersonalProjectsTable = React.createClass({
       {
         property: 'thumbnailUrl',
         header: {
-          props: {style: styles.headerCellThumbnail},
+          props: {style: {
+            ...styles.headerCell,
+            ...styles.headerCellThumbnail
+          }},
         },
         cell: {
           format: this.thumbnailFormatter,
-          props: {style: styles.cellThumbnail}
+          props: {style: {
+            ...styles.cell,
+            ...styles.cellThumbnail
+          }}
         }
       },
       {
         property: 'name',
         header: {
           label: i18n.projectName(),
-          props: {style: styles.headerCellName},
+          props: {style: {
+            ...styles.headerCell,
+            ...styles.headerCellName
+          }},
         },
         cell: {
           format: this.nameFormatter,
-          props: {style: styles.cellName}
+          props: {style: {
+            ...styles.cell,
+            ...styles.cellName
+          }}
         }
       },
       {
@@ -193,7 +178,10 @@ const PersonalProjectsTable = React.createClass({
         },
         cell: {
           format: this.typeFormatter,
-          props: {style: styles.cell}
+          props: {style: {
+            ...styles.cellType,
+            ...styles.cell
+          }}
         }
       },
       {
@@ -215,7 +203,10 @@ const PersonalProjectsTable = React.createClass({
         },
         cell: {
           format: this.isPublishedFormatter,
-          props: {style: styles.cellIsPublished}
+          props: {style: {
+            ...styles.cell,
+            ...styles.cellIsPublished
+          }}
         }
       },
       {
@@ -226,7 +217,10 @@ const PersonalProjectsTable = React.createClass({
         },
         cell: {
           format: this.actionsFormatter,
-          props: {style: styles.cellAction}
+          props: {style: {
+            ...styles.cell,
+            ...styles.cellAction
+          }}
         }
       }
     ];
@@ -262,7 +256,7 @@ const convertChannelsToProjectData = function (projects) {
       channel: projectLists[i].id,
       thumbnailUrl: projectLists[i].thumbnailUrl,
       type: projectLists[i].projectType,
-      isPublished: projectLists[i].isPublished,
+      isPublished: projectLists[i].publishedAt !== null,
       updatedAt: projectLists[i].updatedAt
     }
   ));

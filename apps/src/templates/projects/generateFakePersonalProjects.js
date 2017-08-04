@@ -32,27 +32,27 @@ export const stubFakePersonalProjectData = [
     updatedAt: '2016-12-31T23:59:59.999-08:00',
     projectType: 'gamelab',
     id: 'abcd1',
-    isPublished: false
+    publishedAt: "2017-05-16T15:22:30.000-07:00"
   },
   {
     name: "Personal Project 2",
     updatedAt: '2016-11-30T23:59:59.999-08:00',
     projectType: 'applab',
     id: 'abcd2',
-    isPublished: true
+    publishedAt: null
   },
   {
     name: "Personal Project 3",
     updatedAt: '2016-10-31T23:59:59.999-08:00',
     projectType: 'artist',
     id: 'abcd3',
-    isPublished: false
+    publishedAt: "2017-05-16T15:22:30.000-07:00"
   },
   {
     name: "Personal Project 4",
     updatedAt: '2016-09-14T23:59:59.999-08:00',
     projectType: 'playlab',
     id: 'abcd4',
-    isPublished: true
+    publishedAt: null
   },
 ];
