@@ -12,6 +12,7 @@ import {
   ConfirmSave
 } from '@cdo/apps/templates/teacherDashboard/SectionRow';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const sections = {
   11: {
@@ -79,7 +80,6 @@ const defaultProps = {
   sections,
   updateSection: () => {},
   removeSection: () => {},
-  pegasusUrl: x => x,
 };
 
 function withSectionFlow2017(block) {
@@ -120,12 +120,11 @@ describe('SectionRow', () => {
         const wrapper = shallow(
           <SectionRow
             {...defaultProps}
-            pegasusUrl={url => `https://code.org${url}`}
           />
         );
         const col = wrapper.find('td').at(0);
         assert.equal(col.find('a').length, 1);
-        assert.equal(col.find('a').props().href, 'https://code.org/teacher-dashboard#/sections/11/');
+        assert.equal(col.find('a').props().href, pegasus('/teacher-dashboard#/sections/11/'));
       });
     });
   });
@@ -323,11 +322,10 @@ describe('SectionRow', () => {
         const wrapper = shallow(
           <SectionRow
             {...defaultProps}
-            pegasusUrl={x => `https://code.org${x}`}
           />
         );
         const link = wrapper.find('td').at(3).find('a').first();
-        assert.equal(link.prop('href'), 'https://code.org/teacher-dashboard#/sections/11/manage');
+        assert.equal(link.prop('href'), pegasus('/teacher-dashboard#/sections/11/manage'));
       });
     });
   });
@@ -379,7 +377,7 @@ describe('SectionRow', () => {
         assert.equal(col.children().length, 2);
         assert.equal(col.children().at(0).name(), 'EditOrDelete');
         assert.equal(col.find('EditOrDelete').props().canDelete, false);
-        assert.equal(col.children().at(1).name(), 'Connect(PrintCertificates)');
+        assert.equal(col.children().at(1).name(), 'PrintCertificates');
       });
 
       describe('EditOrDelete', () => {
@@ -419,7 +417,7 @@ describe('SectionRow', () => {
         const col = wrapper.find('td').at(columnIndex);
         assert.equal(col.children().length, 2);
         assert.equal(col.children().at(0).name(), 'ConfirmSave');
-        assert.equal(col.children().at(1).name(), 'Connect(PrintCertificates)');
+        assert.equal(col.children().at(1).name(), 'PrintCertificates');
       });
 
       describe('ConfirmSave', () => {
@@ -445,7 +443,7 @@ describe('SectionRow', () => {
         const col = wrapper.find('td').at(columnIndex);
         assert.equal(col.children().length, 2);
         assert.equal(col.children().at(0).name(), 'ConfirmDelete');
-        assert.equal(col.children().at(1).name(), 'Connect(PrintCertificates)');
+        assert.equal(col.children().at(1).name(), 'PrintCertificates');
       });
 
       describe('ConfirmDelete', () => {
