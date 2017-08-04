@@ -72,11 +72,13 @@ const SetUpMessage = ({
   isRtl,
   headingText,
   descriptionText,
+  className,
   buttonText,
   buttonUrl,
+  buttonClass,
   onClick,
 }) => (
-  <div style={styles.section}>
+  <div style={styles.section} className={className}>
     <div style={styles.wordBox}>
       <div style={isRtl ? styles.rtlHeading : styles.heading}>
         {headingText}
@@ -88,6 +90,7 @@ const SetUpMessage = ({
     <Button
       href={buttonUrl}
       onClick={onClick}
+      className={buttonClass}
       color={Button.ButtonColor.gray}
       text={buttonText}
       style={isRtl ? styles.rtlButton : styles.button}
@@ -99,8 +102,10 @@ SetUpMessage.propTypes = {
   isRtl: PropTypes.bool,
   headingText: PropTypes.string.isRequired,
   descriptionText: PropTypes.string.isRequired,
+  className: PropTypes.string,
   buttonText: PropTypes.string.isRequired,
   buttonUrl: PropTypes.string,
+  buttonClass: PropTypes.string,
   onClick: PropTypes.func,
 };
 
@@ -133,6 +138,8 @@ export const UnconnectedSectionsSetUpMessage = ({
       headingText={i18n.setUpClassroom()}
       descriptionText={i18n.createNewClassroom()}
       buttonText={i18n.createSection()}
+      className="uitest-sections-set-up-message"
+      buttonClass="uitest-newsection"
       isRtl={isRtl}
       {...clickHandlerProp}
     />
