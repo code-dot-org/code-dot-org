@@ -459,7 +459,10 @@ end
 # TODO(asher, dave): This is worse than atrocious. But it seems to work, so for expediency, it is
 # being done. For various (good?) reasons, these methods were stubbed. But sometimes tests use
 # the non-stubbed version, so we attempt both versions below. Most unfortunately, the type of the
-# return is not the same between these versions.
+# return (an array vs. an integer) is not the same between these versions.
+# The correct approach seems to be to remove this global stub and restrict its usage to the few
+# places that want (require) the stubbed behavior. That said, it isn't obvious to me (asher) at this
+# time that this stub *should* be used anywhere.
 def storage_decrypt_channel_id(encrypted)
   raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
   # pad to a multiple of 4 characters to make a valid base64 string.
