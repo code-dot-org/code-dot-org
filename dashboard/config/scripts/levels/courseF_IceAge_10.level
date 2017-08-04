@@ -67,8 +67,8 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "timeout_after_when_run": "false",
-    "contained_level_names": null,
-    "project_template_level_name": "courseF_IceAge_template"
+    "project_template_level_name": "courseF_IceAge_template",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
