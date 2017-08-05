@@ -1,7 +1,7 @@
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint

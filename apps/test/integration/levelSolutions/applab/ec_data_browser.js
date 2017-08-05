@@ -1,6 +1,6 @@
 import tickWrapper from '../../util/tickWrapper';
 import { TestResults } from '@cdo/apps/constants';
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
 
 const enterKeyEvent = {key: "Enter", keyCode: 13, which: 13};
 

@@ -165,6 +165,7 @@
     "react-select": "^1.0.0-rc.1",
     "react-sticky": "5.0.5",
     "react-storybook-addon-add-stories-group": "0.1.0",
+    "react-test-renderer": "~15.5.4",
     "react-tether": "^0.5.2",
     "react-tooltip": "^3.2.7",
     "react-virtualized": "^9.7.3",

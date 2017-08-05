@@ -2,7 +2,7 @@ import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
 import AutocompleteSelector from '@cdo/apps/templates/watchers/AutocompleteSelector';
 
 describe('AutocompleteSelector', () => {

@@ -1,7 +1,7 @@
 import {assert} from '../util/configuredChai';
 var testUtils = require('./../util/testUtils');
 import React from 'react';
-var ReactTestUtils = require('react-addons-test-utils');
+var ReactTestUtils = require('react-dom/test-utils');
 
 import { StatelessMarkdownInstructions } from '@cdo/apps/templates/instructions/MarkdownInstructions';
 import NonMarkdownInstructions from '@cdo/apps/templates/instructions/NonMarkdownInstructions';

@@ -1,6 +1,6 @@
 import {expect} from '../../util/configuredChai';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
 import CrosshairOverlay, { CROSSHAIR_MARGIN, styles } from '@cdo/apps/templates/CrosshairOverlay';
 
 describe('CrosshairOverlay', () => {
