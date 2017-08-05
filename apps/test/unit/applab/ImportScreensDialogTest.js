@@ -6,6 +6,7 @@ import { shallow } from 'enzyme';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 
 import {expect} from '../../util/configuredChai';
+import {allowConsoleErrors} from '../../util/testUtils';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
@@ -44,6 +45,7 @@ describe("AssetListItem", () => {
 });
 
 describe("ScreenListItem", () => {
+  allowConsoleErrors();
   var item;
 
   it("Will only show the screen's id when it is not replacing an existing screen", () => {
@@ -120,6 +122,7 @@ describe("ScreenListItem", () => {
 });
 
 describe("ImportScreensDialog", () => {
+  allowConsoleErrors();
 
   let dialog, onImport;
 
