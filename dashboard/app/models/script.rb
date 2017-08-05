@@ -181,7 +181,7 @@ class Script < ActiveRecord::Base
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
-  # @return [AssignableInfo[]]
+  # @return [Script[]]
   def self.valid_scripts(user)
     with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"

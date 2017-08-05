@@ -10,7 +10,6 @@ export default storybook => {
         description: `This is the TeacherResources section that will be used on the teacher homepage.`,
         story: () => (
           <TeacherResources
-            codeOrgUrlPrefix="http://localhost:3000/"
             isRtl={false}
           />
         )
