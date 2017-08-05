@@ -12,7 +12,11 @@ export default class Farmer extends Subtype {
   /**
    * @override
    */
-  finished() {
+  succeeded() {
+    if (this.finish) {
+      return super.succeeded();
+    }
+
     return this.isDirtCorrect_();
   }
 

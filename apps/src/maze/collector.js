@@ -142,10 +142,9 @@ export default class Collector extends Subtype {
   }
 
   /**
-   * @return {boolean} Has the user completed this level
    * @override
    */
-  finished() {
+  succeeded() {
     const minRequired = this.minCollected_ || 1;
     const collectedEnough = this.getTotalCollected() >= minRequired;
     const usedFewEnoughBlocks = this.studioApp_.feedback_.getNumCountableBlocks() <= this.maxBlocks_;

@@ -20,7 +20,7 @@ export default class Planter extends Subtype {
   /**
    * @override
    */
-  finished() {
+  succeeded() {
     return this.plantedEverything();
   }
 
