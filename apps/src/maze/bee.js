@@ -99,7 +99,7 @@ export default class Bee extends Gatherer {
    * @return {boolean}
    * @override
    */
-  finished() {
+  succeeded() {
     // nectar/honey goals
     if (this.honey_ < this.honeyGoal_ || this.nectars_.length < this.nectarGoal_) {
       return false;
@@ -109,7 +109,7 @@ export default class Bee extends Gatherer {
       return false;
     }
 
-    return super.finished();
+    return super.succeeded();
   }
 
   /**

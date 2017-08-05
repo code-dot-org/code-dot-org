@@ -146,8 +146,14 @@ export default class Harvester extends Gatherer {
   }
 
   /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @override
+   */
+  succeeeded() {
+    return this.collectedEverything();
+  }
+
+  /**
+   * @override
    */
   onExecutionFinish() {
     const executionInfo = this.maze_.executionInfo;
