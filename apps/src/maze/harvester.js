@@ -155,24 +155,15 @@ export default class Harvester extends Gatherer {
   /**
    * @override
    */
-  onExecutionFinish() {
+  terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
-    if (executionInfo.isTerminated()) {
-      return;
-    }
-    if (this.finished()) {
-      return;
-    }
 
-    // we didn't finish. look to see if we need to give an app specific error
     if (!this.collectedEverything()) {
       executionInfo.terminateWithValue(HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING);
     }
   }
 
   /**
-   * Get the test results based on the termination value.  If there is
-   * no app-specific failure, this returns StudioApp.getTestResults().
    * @override
    */
   getTestResults(terminationValue) {
@@ -193,12 +184,10 @@ export default class Harvester extends Gatherer {
         return testResults;
     }
 
-    return this.studioApp_.getTestResults(false);
+    return super.getTestResults(terminationValue);
   }
 
   /**
-   * Get any app-specific message, based on the termination value,
-   * or return null if none applies.
    * @override
    */
   getMessage(terminationValue) {
@@ -210,7 +199,7 @@ export default class Harvester extends Gatherer {
       case HarvesterTerminationValue.DID_NOT_COLLECT_EVERYTHING:
         return mazeMsg.didNotCollectAllCrops();
       default:
-        return null;
+        return super.getMessage(terminationValue);
     }
   }
 }
