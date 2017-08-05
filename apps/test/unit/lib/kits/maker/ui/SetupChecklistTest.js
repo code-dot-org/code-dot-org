@@ -2,6 +2,7 @@
 import React from 'react';
 import sinon from 'sinon';
 import {expect} from '../../../../../util/configuredChai';
+import {allowConsoleErrors} from '../../../../../util/testUtils';
 import {mount} from 'enzyme';
 import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
@@ -19,14 +20,14 @@ describe('SetupChecklist', () => {
   const FAILURE_ICON = '.fa-times-circle';
 
   beforeEach(() => {
-    sinon.stub(window.console, 'error');
+    // sinon.stub(window.console, 'error');
     sinon.stub(window.location, 'reload');
     checker = new StubSetupChecker();
   });
 
   afterEach(() => {
     window.location.reload.restore();
-    window.console.error.restore();
+    // window.console.error.restore();
   });
 
   it('renders success', () => {
@@ -46,23 +47,45 @@ describe('SetupChecklist', () => {
         });
   });
 
-  it('fails if chrome version is wrong', () => {
-    const error = new Error('test error');
-    checker.detectChromeVersion.rejects(error);
-    const wrapper = mount(
-      <SetupChecklist
-        setupChecker={checker}
-        stepDelay={STEP_DELAY_MS}
-      />
-    );
-    expect(wrapper.find(WAITING_ICON)).to.have.length(5);
-    return yieldUntilDoneDetecting(wrapper)
-        .then(() => {
-          expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-          expect(wrapper.find(WAITING_ICON)).to.have.length(4);
-          expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
-          expect(window.console.error).to.have.been.calledWith(error);
-        });
+  describe('test with expected console.error', () => {
+    allowConsoleErrors();
+
+    it('fails if chrome version is wrong', () => {
+      const error = new Error('test error');
+      checker.detectChromeVersion.rejects(error);
+      const wrapper = mount(
+        <SetupChecklist
+          setupChecker={checker}
+          stepDelay={STEP_DELAY_MS}
+        />
+      );
+      expect(wrapper.find(WAITING_ICON)).to.have.length(5);
+      return yieldUntilDoneDetecting(wrapper)
+          .then(() => {
+            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+            expect(wrapper.find(WAITING_ICON)).to.have.length(4);
+            expect(wrapper.text()).to.include('Your current browser is not supported at this time.');
+            expect(window.console.error).to.have.been.calledWith(error);
+          });
+    });
+
+    it('reloads the page on re-detect if plugin not installed', () => {
+      checker.detectChromeAppInstalled.rejects(new Error('not installed'));
+      const wrapper = mount(
+        <SetupChecklist
+          setupChecker={checker}
+          stepDelay={STEP_DELAY_MS}
+        />
+      );
+      return yieldUntilDoneDetecting(wrapper)
+          .then(() => {
+            expect(wrapper.find(SUCCESS_ICON)).to.have.length(1);
+            expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
+            expect(wrapper.find(WAITING_ICON)).to.have.length(3);
+            wrapper.find(REDETECT_BUTTON).simulate('click');
+            expect(window.location.reload).to.have.been.called;
+          });
+    });
   });
 
   it('does not reload the page on re-detect if successful', () => {
@@ -82,24 +105,6 @@ describe('SetupChecklist', () => {
         .then(() => {
           expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
           expect(window.location.reload).not.to.have.been.called;
-        });
-  });
-
-  it('reloads the page on re-detect if plugin not installed', () => {
-    checker.detectChromeAppInstalled.rejects(new Error('not installed'));
-    const wrapper = mount(
-      <SetupChecklist
-        setupChecker={checker}
-        stepDelay={STEP_DELAY_MS}
-      />
-    );
-    return yieldUntilDoneDetecting(wrapper)
-        .then(() => {
-          expect(wrapper.find(SUCCESS_ICON)).to.have.length(1);
-          expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
-          expect(wrapper.find(WAITING_ICON)).to.have.length(3);
-          wrapper.find(REDETECT_BUTTON).simulate('click');
-          expect(window.location.reload).to.have.been.called;
         });
   });
 

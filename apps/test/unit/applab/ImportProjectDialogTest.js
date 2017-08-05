@@ -3,6 +3,7 @@ import sinon from 'sinon';
 import { shallow } from 'enzyme';
 
 import {expect} from '../../util/configuredChai';
+import { allowConsoleErrors } from '../../util/testUtils';
 
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
@@ -11,6 +12,7 @@ import {
 } from '@cdo/apps/clientApi';
 
 describe("Applab ImportProjectDialog component", function () {
+  allowConsoleErrors();
 
   var form, urlInput, nextButton;
 
