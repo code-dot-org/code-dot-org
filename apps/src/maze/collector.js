@@ -160,11 +160,9 @@ export default class Collector extends Subtype {
   }
 
   /**
-   * Called after user's code has finished executing. Gives us a chance to
-   * terminate with app-specific values, such as unchecked cloud/purple flowers.
    * @override
    */
-  onExecutionFinish() {
+  terminateWithAppSpecificValue() {
     const executionInfo = this.maze_.executionInfo;
 
     if (this.getTotalCollected() === 0) {
@@ -188,9 +186,6 @@ export default class Collector extends Subtype {
   }
 
   /**
-   * Get any app-specific message, based on the termination value,
-   * or return null if none applies.
-   * @return {string|null} message
    * @override
    */
   getMessage(terminationValue) {
@@ -210,14 +205,11 @@ export default class Collector extends Subtype {
           return mazeMsg.collectorCollectedSome({count: this.getTotalCollected()});
         }
       default:
-        return null;
+        return super.getMessage(terminationValue);
     }
   }
 
   /**
-   * Get the test results based on the termination value.  If there is
-   * no app-specific failure, this returns StudioApp.getTestResults().
-   * @return {number} testResult
    * @override
    */
   getTestResults(terminationValue) {
@@ -235,7 +227,7 @@ export default class Collector extends Subtype {
         }
     }
 
-    return this.studioApp_.getTestResults(false);
+    return super.getTestResults(terminationValue);
   }
 
   /**
