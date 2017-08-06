@@ -2,26 +2,13 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
-import ContentContainer from '../ContentContainer';
-import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
-import FindLocalClassBanner from './FindLocalClassBanner';
-import {
-  CourseBlocksHoc,
-  CourseBlocksAll
-} from './CourseBlocks';
-import CourseBlocksTools from './CourseBlocksTools';
-import CourseBlocksGradeBands from './CourseBlocksGradeBands';
+import { CourseBlocksAll } from './CourseBlocks';
+import CoursesTeacherEnglish from './CoursesTeacherEnglish';
+import CoursesStudentEnglish from './CoursesStudentEnglish';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
-/**
- * Though named Courses, this component represents a collection of courses and/or
- * scripts, refered to collectively as "assignables". These come from sections
- * the user is in, or from courses/scripts they have recently made progress in.
- * The component is only used on the /courses page, and also does some additional
- * DOM manipulation on mount.
- */
 const Courses = React.createClass({
   propTypes: {
     isEnglish: React.PropTypes.bool.isRequired,
@@ -37,12 +24,11 @@ const Courses = React.createClass({
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
-    $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
   },
 
   render() {
-    const { isEnglish, isTeacher, codeOrgUrlPrefix, isSignedOut, userId, showInitialTips, isRtl } = this.props;
+    const { isEnglish, isTeacher, isSignedOut, codeOrgUrlPrefix, userId, showInitialTips, isRtl } = this.props;
     const headingText = isSignedOut ? i18n.coursesCodeStudio() : i18n.courses();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -70,93 +56,29 @@ const Courses = React.createClass({
           ref="flashes"
         />
 
-        {/* English, teacher */}
+        {/* English, teacher.  (Also can be shown when signed out.) */}
         {(isEnglish && isTeacher) && (
-          <div>
-
-            {(!isSignedOut &&
-              <UiTips
-                userId={userId}
-                tipId={"teacher_courses"}
-                showInitialTips={showInitialTips}
-                tips={
-                  [
-                    {
-                      type: "initial",
-                      position: {top: 0, left: 0, position: "relative"},
-                      text: i18n.coursesUiTipsTeacherCourses(),
-                      arrowDirection: "down",
-                      scrollTo: ".courseexplorer"
-                    }
-                  ]}
-              />
-            )}
-
-            <div>
-              <ContentContainer
-                heading={i18n.courseExplorerHeading()}
-                description={i18n.courseExplorerDescription()}
-                isRtl={isRtl}
-              >
-                <ProtectedStatefulDiv ref="courseExplorer"/>
-              </ContentContainer>
-
-              <CourseBlocksGradeBands
-                isEnglish={isEnglish}
-                isRtl={isRtl}
-                codeOrgUrlPrefix={codeOrgUrlPrefix}
-              />
-
-              <ContentContainer
-                heading={i18n.teacherCourseHoc()}
-                description={i18n.teacherCourseHocDescription()}
-                isRtl={isRtl}
-                linkText={i18n.teacherCourseHocLinkText()}
-                link={`${codeOrgUrlPrefix}/hourofcode/overview`}
-                showLink={true}
-              >
-                <CourseBlocksHoc rowCount={1}/>
-              </ContentContainer>
-
-              <CourseBlocksTools
-                isEnglish={isEnglish}
-                isRtl={isRtl}
-                codeOrgUrlPrefix={codeOrgUrlPrefix}
-              />
-            </div>
-          </div>
+          <CoursesTeacherEnglish
+            isSignedOut={isSignedOut}
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            showInitialTips={showInitialTips}
+            userId={userId}
+            isRtl={isRtl}
+          />
         )}
 
-        {/* English, student.  (Also shown when signed out) */}
+        {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
-          <div>
-            <CourseBlocksGradeBands
-              isEnglish={isEnglish}
-              isRtl={isRtl}
-              codeOrgUrlPrefix={codeOrgUrlPrefix}
-            />
-
-            <ContentContainer
-              heading={i18n.teacherCourseHoc()}
-              description={i18n.teacherCourseHocDescription()}
-              isRtl={isRtl}
-              linkText={i18n.teacherCourseHocLinkText()}
-              link={`${codeOrgUrlPrefix}/learn`}
-            >
-              <CourseBlocksHoc rowCount={1}/>
-            </ContentContainer>
-
-            <FindLocalClassBanner
-              codeOrgUrlPrefix={codeOrgUrlPrefix}
-              isRtl={isRtl}
-            />
-          </div>
+          <CoursesStudentEnglish
+            codeOrgUrlPrefix={codeOrgUrlPrefix}
+            isRtl={isRtl}
+          />
         )}
 
         {/* Non-English */}
         {(!isEnglish) && (
           <CourseBlocksAll
-            isEnglish={isEnglish}
+            isEnglish={false}
             isRtl={isRtl}
             codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
