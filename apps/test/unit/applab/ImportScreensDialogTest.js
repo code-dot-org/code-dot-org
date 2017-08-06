@@ -4,10 +4,7 @@ import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import {expect} from '../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../util/testUtils';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
@@ -17,7 +14,6 @@ import {
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 
 describe("AssetListItem", () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   var item;
@@ -49,7 +45,6 @@ describe("AssetListItem", () => {
 });
 
 describe("ScreenListItem", () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   var item;
@@ -132,7 +127,6 @@ describe("ScreenListItem", () => {
 });
 
 describe("ImportScreensDialog", () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   let dialog, onImport;
