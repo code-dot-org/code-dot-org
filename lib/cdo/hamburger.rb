@@ -114,8 +114,15 @@ class Hamburger
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
+    # When viewing courses, a signed-out user in English gets the teacher view.
+    if !["teacher", "student"].include?(options[:user_type]) && options[:language] == "en"
+      teach_url = "/courses?view=teacher"
+    else
+      teach_url = "/courses"
+    end
+
     educate_entries = [
-      {title: "educate_overview", url: CDO.code_org_url("/educate"), id: "educate-overview"},
+      {title: "educate_overview", url: CDO.studio_url(teach_url), id: "educate-overview"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
@@ -237,7 +244,7 @@ class Hamburger
 
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
-      url: CDO.code_org_url("/student"),
+      url: CDO.studio_url("/courses"),
       class: visibility[:show_pegasus_options],
       id: "learn"
     }
@@ -298,8 +305,9 @@ class Hamburger
       ]
     elsif options[:language] == "en"
       [
-        {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/student"), id: "header-en-learn"},
-        {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/educate"), id: "header-en-teach"},
+        {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
+        # When signed out, an English user will get the teacher view of /courses.
+        {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
         {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
         {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
         {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
