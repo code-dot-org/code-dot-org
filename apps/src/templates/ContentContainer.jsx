@@ -33,6 +33,7 @@ const styles = {
     color: color.charcoal,
     width: pegasusContentWidth,
     marginTop: -10,
+    marginBottom: 10
   },
   linkToViewAll: {
     color: color.teal,
