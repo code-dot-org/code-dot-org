@@ -647,7 +647,9 @@
   "courseBlocksCsfYoungDescription": "For pre-readers in elementary school classrooms",
   "courseBlocksCsfOlderHeading": "",
   "courseBlocksCsfOlderDescription": "For older students in elementary school classrooms",
+  "curriculum": "Curriculum",
   "publishPending": "Publishing...",
+  "teacherForum": "Teacher forum",
   "unpublish": "Unpublish",
   "unpublishPending": "Unpublishing..."
 }

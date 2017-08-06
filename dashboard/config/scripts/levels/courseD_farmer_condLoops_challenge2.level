@@ -53,10 +53,10 @@
         <block type="maze_turn">
           <title name="DIR">turnRight</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Lettuce</title>
         </block>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
         <block type="harvester_pumpkin"/>
@@ -86,7 +86,7 @@
                         <block type="harvester_corn"/>
                       </statement>
                       <next>
-                        <block type="harvester_ifAtCrop">
+                        <block type="harvester_ifHasCrop">
                           <title name="LOC">Pumpkin</title>
                           <statement name="DO">
                             <block type="maze_turn">
@@ -102,7 +102,7 @@
                             </block>
                           </statement>
                           <next>
-                            <block type="harvester_ifAtCrop">
+                            <block type="harvester_ifHasCrop">
                               <title name="LOC">Lettuce</title>
                               <statement name="DO">
                                 <block type="maze_turn">

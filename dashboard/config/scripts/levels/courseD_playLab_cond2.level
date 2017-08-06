@@ -56,6 +56,8 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-27 02:05:25 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "events": 3
   }
 }]]></config>
   <blocks>

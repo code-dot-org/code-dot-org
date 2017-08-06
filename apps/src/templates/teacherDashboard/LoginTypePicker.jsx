@@ -101,6 +101,7 @@ export default connect(state => ({
 
 const PictureLoginCard = (props) => (
   <LoginTypeCard
+    className="uitest-pictureLogin"
     title={i18n.loginTypePicture()}
     subtitle={i18n.loginTypePictureAgeGroup()}
     description={i18n.loginTypePictureDescription()}

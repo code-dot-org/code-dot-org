@@ -38,8 +38,8 @@
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "markdown_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
-    "contained_level_names": null,
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
