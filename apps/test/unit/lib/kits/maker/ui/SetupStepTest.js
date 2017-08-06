@@ -1,6 +1,8 @@
 /** @file Test SetupStep component */
 import React from 'react';
 import {expect} from '../../../../../util/configuredChai';
+import {allowConsoleErrors} from '../../../../../util/testUtils';
+
 import {mount} from 'enzyme';
 import SetupStep, {
   STEP_STATUSES,
@@ -9,6 +11,8 @@ import SetupStep, {
 } from '@cdo/apps/lib/kits/maker/ui/SetupStep';
 
 describe('SetupStep', () => {
+  allowConsoleErrors();
+
   describe('can render every status', () => {
     // This is the lazy 100% coverage test :D
     STEP_STATUSES.forEach(status => {

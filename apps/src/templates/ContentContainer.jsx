@@ -59,12 +59,10 @@ const styles = {
   linkBox: {
     display: 'inline',
     float: 'right',
-    textDecoration: 'none'
   },
   linkBoxRtl: {
     display: 'inline',
     float: 'left',
-    textDecoration: 'none',
     paddingLeft: 10,
   },
   clear: {
@@ -100,13 +98,17 @@ const ContentContainer= React.createClass({
         <div style={styles.heading}>
           {heading}
           {link && linkText &&
-            <a href={link} style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
-              {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
-              <div style={styles.linkToViewAll}>
-                {linkText}
-              </div>
-              {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
-            </a>
+            <div style={isRtl ? styles.linkBoxRtl : styles.linkBox}>
+              <a href={link}>
+                {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl}/>}
+                <div style={styles.linkToViewAll}>
+                  {linkText}
+                </div>
+              </a>
+              <a href={link} style={{textDecoration:'none'}}>
+                {!isRtl && <FontAwesome icon={icon} style={styles.chevron}/>}
+              </a>
+            </div>
           }
         </div>
         {description && (

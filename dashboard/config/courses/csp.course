@@ -8,5 +8,17 @@
     "csp5",
     "csp-ap",
     "csppostap"
-  ]
+  ],
+  "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "/link/to/curriculum"
+      ],
+      [
+        "professionalLearning",
+        "/link/to/professional/learning"
+      ]
+    ]
+  }
 }

@@ -6,7 +6,8 @@ import {
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
-import {UnconnectedPrintCertificates as PrintCertificates} from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const sectionId = 11;
 
@@ -24,7 +25,7 @@ describe('PrintCertificates', () => {
 
   it('renders a form', () => {
     assert(wrapper.is('form'));
-    assert(wrapper.props().action, '/certificates');
+    assert(wrapper.props().action, pegasus('/certificates'));
   });
 
   it('has a hidden input for the assigned script', () => {

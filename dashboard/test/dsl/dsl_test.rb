@@ -96,6 +96,70 @@ level 'Level 3'
     assert_equal expected, output
   end
 
+  test 'test Script DSL with experiment-based swap' do
+    input_dsl = "
+stage 'Stage1'
+level 'Level 1'
+variants
+  level 'Level 2a'
+  level 'Level 2b', experiments: ['experiment1']
+endvariants
+variants
+  level 'Level 3a', active: false
+  level 'Level 3b', experiments: ['experiment2'], active: true
+endvariants
+variants
+  level 'Level 4a'
+  level 'Level 4b', experiments: ['experiment3', 'experiment4']
+endvariants
+"
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+              properties: {
+                variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
+              }
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 3a"}, {name: "Level 3b"}],
+              properties: {
+                variants: {
+                  "Level 3a" => {active: false},
+                  "Level 3b" => {experiments: ["experiment2"]}
+                }
+              }
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 4a"}, {name: "Level 4b"}],
+              properties: {
+                variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
+              }
+            },
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      hideable_stages: false,
+      exclude_csf_column_in_legend: false,
+      student_detail_progress_view: false,
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
+    }
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
   test 'test Multi DSL' do
     input_dsl = "
 name 'name1'

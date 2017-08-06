@@ -50,10 +50,10 @@
         <block type="controls_repeat_dropdown">
           <title name="TIMES" config="3-10">???</title>
         </block>
-        <block type="harvester_ifAtCropElse">
+        <block type="harvester_ifHasCropElse">
           <title name="LOC">Corn</title>
         </block>
-        <block type="harvester_ifAtCrop">
+        <block type="harvester_ifHasCrop">
           <title name="LOC">Corn</title>
         </block>
         <block type="harvester_whileHasCrop">
