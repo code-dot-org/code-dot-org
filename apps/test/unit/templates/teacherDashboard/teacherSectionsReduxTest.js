@@ -799,13 +799,9 @@ describe('teacherSectionsRedux', () => {
       stubRedux();
       registerReducers({teacherSections: reducer});
       store = getStore();
-
-      // Catch error output for failure test cases
-      sinon.stub(console, 'error');
     });
 
     afterEach(function () {
-      console.error.restore();
       restoreRedux();
       server.restore();
     });
@@ -830,6 +826,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('sets asyncLoadComplete to true after first failure response', () => {
+      console.error.reset(); // Already stubbed in tests
       const promise = store.dispatch(asyncLoadSectionData());
 
       server.respondWith('GET', '/dashboardapi/sections', failureResponse);
