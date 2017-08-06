@@ -134,7 +134,11 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     if current_user.admin? || current_user.workshop_admin?
       @workshops = Pd::Workshop.all
     elsif current_user.workshop_organizer?
-      @workshops = Pd::Workshop.organized_by(current_user)
+      if current_user.facilitator?
+        @workshops = (Pd::Workshop.organized_by(current_user) + Pd::Workshop.facilitated_by(current_user)).uniq
+      else
+        @workshops = Pd::Workshop.organized_by(current_user)
+      end
     elsif current_user.facilitator?
       @workshops = Pd::Workshop.facilitated_by(current_user)
     else
