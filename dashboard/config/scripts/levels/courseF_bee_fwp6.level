@@ -45,6 +45,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-20 20:46:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "for_loops": 4,
+    "variables": 3,
+    "functions_with_params": 2
   }
 }]]></config>
   <blocks>

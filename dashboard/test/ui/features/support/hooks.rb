@@ -25,6 +25,15 @@ After('@as_authorized_taught_student') do
   steps 'When I sign out'
 end
 
+Before('@as_teacher') do
+  steps 'Given I am a teacher'
+end
+
+After('@as_teacher') do
+  check_window_for_js_errors('after @as_teacher')
+  steps 'When I sign out'
+end
+
 # Add After hook as the last one, which results in it being run before
 # sign-out steps etc. change the page the browser is currently on.
 After do

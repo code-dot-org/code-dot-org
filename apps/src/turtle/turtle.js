@@ -1810,15 +1810,7 @@ Artist.prototype.checkAnswer = function () {
       save_to_gallery: level.impressive
     };
 
-    // https://www.pivotaltracker.com/story/show/84171560
-    // Never send up frozen images for now.
-    var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
-
-    // Get the canvas data for feedback.
-    if (this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL &&
-      !isFrozen && (level.freePlay || level.impressive)) {
-      reportData.image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
-    }
+    reportData = this.setReportDataImage_(level, reportData);
 
     this.studioApp_.report(reportData);
   }
@@ -1829,6 +1821,37 @@ Artist.prototype.checkAnswer = function () {
   }
 
   // The call to displayFeedback() will happen later in onReportComplete()
+};
+
+/**
+ * Adds the feedback image to the report data if indicated by the level config.
+ * @param {Object} level Level config.
+ * @param {Object} reportData Original reportData.
+ * @returns {Object} Updated reportData, or original report data if not updated.
+ * @private
+ */
+Artist.prototype.setReportDataImage_ = function (level, reportData) {
+  // https://www.pivotaltracker.com/story/show/84171560
+  // Never send up frozen images for now.
+  var isFrozen = (this.skin.id === 'anna' || this.skin.id === 'elsa');
+
+  // Include the feedback image whenever a levelbuilder edits solution blocks.
+  const isEditingSolution = (level.editBlocks === 'solution_blocks');
+
+  const didPassLevel = this.testResults >= TestResults.TOO_MANY_BLOCKS_FAIL;
+
+  // Get the canvas data for feedback.
+  if (
+    isEditingSolution ||
+    (didPassLevel && !isFrozen && (level.freePlay || level.impressive))
+  ) {
+    const image = encodeURIComponent(this.getFeedbackImage_().split(',')[1]);
+    return {
+      ...reportData,
+      image,
+    };
+  }
+  return reportData;
 };
 
 Artist.prototype.getFeedbackImage_ = function (width, height) {

@@ -40,7 +40,7 @@
     "first_sprite_index": "0",
     "protaganist_sprite_index": "1",
     "project_template_level_name": "courseB_playlab_eventsTemplate",
-    "authored_hints": "[\r\n {\r\n  \"hint_class\": \"content\",\r\n  \"hint_markdown\": \"This is the block to have Daisy say something:\\n\\n![](https://images.code.org/6d8944bb38eac46c02a601660e8a3562-image-1475625777800.02.48.png)\",\r\n  \"hint_id\": \"courseB_playlab_events2_a\",\r\n  \"hint_type\": \"general\"\r\n }\r\n]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"This is the block to have Daisy say something:\\n\\n<xml>\\n  <block type=\\\"studio_saySpriteChoices\\\">\\n    <title name=\\\"SPRITE\\\">0</title>\\n    <title name=\\\"VALUE\\\">Hi there.</title>\\n  </block>\\n  </xml>\",\"hint_id\":\"courseB_playlab_events2_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/05e22e598eb06cc072ddeadb181b6d7c/courseB_playlab_events2.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -49,8 +49,9 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-07-28 22:08:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-07-28 22:08:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-08-04 17:18:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2
   }
 }]]></config>
   <blocks>

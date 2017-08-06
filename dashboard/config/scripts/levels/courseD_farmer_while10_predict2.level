@@ -39,6 +39,10 @@
   "published": true,
   "notes": "Left this so it works either way (two move forwards or one while path).  Better puzzle if not ambiguous, better assessment if it is.",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1,
+    "repeat_until_while": 1
   }
 }]]></config>
   <blocks>

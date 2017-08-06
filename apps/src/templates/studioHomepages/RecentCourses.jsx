@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
-import {CoursesSetUpMessage} from './SetUpMessage';
+import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import StudentTopCourse from './StudentTopCourse';
 import Notification from '@cdo/apps/templates/Notification';
@@ -78,7 +78,7 @@ const RecentCourses = React.createClass({
             </div>
           )}
           {!hasCourse && (
-            <CoursesSetUpMessage
+            <SetUpCourses
               isRtl={isRtl}
               isTeacher={isTeacher}
             />
