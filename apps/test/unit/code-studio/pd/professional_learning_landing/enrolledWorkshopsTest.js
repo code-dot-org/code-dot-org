@@ -2,13 +2,9 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/enrolledWorkshops';
 import {expect} from 'chai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../../util/testUtils';
 
 describe("Tests for the upcoming workshops page", () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   const workshops = [

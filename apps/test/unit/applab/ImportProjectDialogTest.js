@@ -2,19 +2,14 @@ import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
 import {expect} from '../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../util/testUtils';
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
   channels as channelsApi,
 } from '@cdo/apps/clientApi';
 
-
 describe("Applab ImportProjectDialog component", function () {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   var form, urlInput, nextButton;

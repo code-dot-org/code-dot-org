@@ -1,10 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 const gamelabMsg = require('@cdo/gamelab/locale');
 const moduleUnderTest = require('@cdo/apps/gamelab/AnimationPicker/AnimationPickerBody');
 const AnimationPickerBody = moduleUnderTest.default;
@@ -13,7 +10,6 @@ const WarningLabel = moduleUnderTest.WarningLabel;
 const emptyFunction = function () {};
 
 describe('AnimationPickerBody', function () {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   const defaultProps = {

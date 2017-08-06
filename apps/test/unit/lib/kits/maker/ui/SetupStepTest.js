@@ -1,10 +1,7 @@
 /** @file Test SetupStep component */
 import React from 'react';
 import {expect} from '../../../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../../../util/testUtils';
 import {mount} from 'enzyme';
 import SetupStep, {
   STEP_STATUSES,
@@ -13,7 +10,6 @@ import SetupStep, {
 } from '@cdo/apps/lib/kits/maker/ui/SetupStep';
 
 describe('SetupStep', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   describe('can render every status', () => {
