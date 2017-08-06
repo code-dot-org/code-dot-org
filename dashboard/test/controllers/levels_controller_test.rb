@@ -13,6 +13,15 @@ class LevelsControllerTest < ActionController::TestCase
     @levelbuilder = create(:levelbuilder)
     sign_in(@levelbuilder)
     @program = '<hey/>'
+
+    enable_level_source_image_s3_urls
+
+    @default_update_blocks_params = {
+      level_id: @level.id,
+      game_id: @level.game.id,
+      type: 'toolbox_blocks',
+      program: @program,
+    }
   end
 
   test "should get index" do
@@ -289,26 +298,38 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should update blocks" do
-    post :update_blocks, params: {
-      level_id: @level.id,
-      game_id: @level.game.id,
-      type: 'toolbox_blocks',
-      program: @program
-    }
+    post :update_blocks, params: @default_update_blocks_params
     assert_response :success
     level = assigns(:level)
-    assert_equal level.properties[:toolbox_blocks.to_s], @program
+    assert_equal @program, level.properties['toolbox_blocks']
+    assert_nil level.properties['solution_image_url']
+  end
+
+  test "should update solution image when updating solution blocks" do
+    post :update_blocks, params: @default_update_blocks_params.merge(
+      type: 'solution_blocks',
+      image: 'stub-image-data',
+    )
+    assert_response :success
+    level = assigns(:level)
+    assert_equal @program, level.properties['solution_blocks']
+    assert_s3_image_url level.properties['solution_image_url']
+  end
+
+  test "should not update solution image when updating toolbox blocks" do
+    post :update_blocks, params: @default_update_blocks_params.merge(
+      image: 'stub-image-data',
+    )
+    assert_response :success
+    level = assigns(:level)
+    assert_equal @program, level.properties['toolbox_blocks']
+    assert_nil level.properties['solution_image_url']
   end
 
   test "should not update blocks if not levelbuilder" do
     [@not_admin, @admin].each do |user|
       sign_in user
-      post :update_blocks, params: {
-        level_id: @level.id,
-        game_id: @level.game.id,
-        type: 'toolbox_blocks',
-        program: @program
-      }
+      post :update_blocks, params: @default_update_blocks_params
       assert_response :forbidden
     end
   end
@@ -318,12 +339,10 @@ class LevelsControllerTest < ActionController::TestCase
     can_edit = Ability.new(@levelbuilder).can? :edit, level
     assert_equal false, can_edit
 
-    post :update_blocks, params: {
+    post :update_blocks, params: @default_update_blocks_params.merge(
       level_id: level.id,
       game_id: level.game.id,
-      type: 'toolbox_blocks',
-      program: @program
-    }
+    )
     assert_response :forbidden
   end
 
@@ -705,5 +724,31 @@ class LevelsControllerTest < ActionController::TestCase
 
     get :embed_blocks, params: {level_id: level, block_type: :solution_blocks}
     assert_response :success
+  end
+
+  private
+
+  # Assert that the url is a real S3 url, and not a placeholder.
+  def assert_s3_image_url(url)
+    assert(
+      %r{#{LevelSourceImage::S3_URL}.*\.png}.match(url),
+      "expected #{url.inspect} to be an S3 URL"
+    )
+  end
+
+  # Allow our update_blocks tests to verify that real S3 urls are being
+  # generated when solution images are uploaded. We don't want to actually
+  # upload any S3 images in our tests, so just enable the codepath where an
+  # existing LevelSourceImage is found based on the program contents.
+  def enable_level_source_image_s3_urls
+    # Allow LevelSourceImage to return real S3 urls.
+    CDO.stubs(:disable_s3_image_uploads).returns(false)
+
+    # Make sure there is a LevelSourceImage associated with the program.
+    create(:level_source, :with_image, level: @level, data: @program)
+
+    # Because we cleared disable_s3_image_uploads, there's a chance we'll
+    # accidentally try to upload an image to S3. Make sure this never happens.
+    LevelSourceImage.any_instance.expects(:save_to_s3).never
   end
 end

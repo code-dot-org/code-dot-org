@@ -25,6 +25,7 @@ FactoryGirl.define do
       enrolled_and_attending_users 0
       enrolled_unattending_users 0
       num_completed_surveys 0
+      randomized_survey_answers false
     end
     after(:build) do |workshop, evaluator|
       # Sessions, one per day starting today
@@ -62,9 +63,9 @@ FactoryGirl.define do
       evaluator.num_completed_surveys.times do
         enrollment = create :pd_enrollment, workshop: workshop
         if workshop.teachercon?
-          create :pd_teachercon_survey, pd_enrollment: enrollment
+          create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
         elsif workshop.local_summer?
-          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment
+          create :pd_local_summer_workshop_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
         else
           raise 'Num_completed_surveys trait unsupported for this workshop type'
         end
@@ -189,12 +190,26 @@ FactoryGirl.define do
   factory :pd_teachercon_survey, class: 'Pd::TeacherconSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
-    after(:build) do |survey|
+    transient do
+      randomized_survey_answers false
+    end
+
+    after(:build) do |survey, evaluator|
       if survey.form_data.presence.nil?
         enrollment = survey.pd_enrollment
         workshop = enrollment.workshop
 
         survey_hash = build :pd_teachercon_survey_hash
+
+        if evaluator.randomized_survey_answers
+          survey_hash.each do |k, _|
+            if Pd::TeacherconSurvey.options.key? k.underscore.to_sym
+              survey_hash[k] = Pd::TeacherconSurvey.options[k.underscore.to_sym].sample
+            else
+              survey_hash[k] = SecureRandom.hex[0..8]
+            end
+          end
+        end
 
         Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
           survey_hash[field] = {}
@@ -204,8 +219,18 @@ FactoryGirl.define do
 
         workshop.facilitators.each do |facilitator|
           Pd::TeacherconSurvey.facilitator_required_fields.each do |field|
+            if Pd::TeacherconSurvey.options.key? field
+              answers = Pd::TeacherconSurvey.options.key? field
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? answers.sample : answers.last
+            else
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
+            end
             survey_hash[field][facilitator.name] = 'Free response'
           end
+        end
+
+        if Pd::TeacherconSurvey::DISAGREES.include?(survey_hash['personalLearningNeedsMet'])
+          survey_hash[:how_could_improve] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Rant about how to improve things'
         end
 
         survey.update_form_data_hash(survey_hash)
@@ -214,53 +239,6 @@ FactoryGirl.define do
   end
 
   factory :pd_teachercon_survey_hash, class: 'Hash' do
-    initialize_with do
-      {
-        "personalLearningNeedsMet": "Strongly Agree",
-        "haveIdeasAboutFormative": "Strongly Disagree",
-        "haveIdeasAboutSummative": "Disagree",
-        "haveConcreteIdeas": "Slightly Disagree",
-        "toolsWillHelp": "Slightly Agree",
-        "learnedEnoughToMoveForward": "Agree",
-        "feelConfidentUsingMaterials": "Strongly Agree",
-        "feelConfidentCanHelpStudents": "Agree",
-        "havePlan": "Slightly Agree",
-        "feelComfortableLeading": "Slightly Disagree",
-        "haveLessAnxiety": "Disagree",
-        "whatHelpedMost": "helped learn most",
-        "whatDetracted": "detracted",
-        "receivedClearCommunication": "Strongly Agree",
-        "venueFeedback": "venue feedback",
-        "knowWhereToGoForHelp": "Strongly Disagree",
-        "suitableForMyExperience": "Disagree",
-        "practicingTeachingHelped": "Slightly Disagree",
-        "seeingOthersTeachHelped": "Slightly Agree",
-        "facilitatorsPresentedInformationClearly": "Agree",
-        "facilitatorsProvidedFeedback": "Strongly Agree",
-        "feltComfortableAskingQuestions": "Agree",
-        "morePreparedThanBefore": "Slightly Agree",
-        "lookForwardToContinuing": "Slightly Disagree",
-        "partOfCommunity": "Disagree",
-        "allStudentsShouldTake": "Strongly Disagree",
-        "wouldRecommend": "Disagree",
-        "bestPdEver": "Slightly Disagree",
-        "howMuchParticipated": "A tremendous amount",
-        "howOftenLostTrackOfTime": "Almost always",
-        "howHappyAfter": "Extremely happy",
-        "howExcitedBefore": "Extremely excited",
-        "facilitatorsDidWell": "facilitators did well",
-        "facilitatorsCouldImprove": "facilitators could improve",
-        "likedMost": "liked most",
-        "wouldChange": "would change",
-        "givePermissionToQuote": "Yes, I give Code.org permission to quote me and use my name.",
-        "instructionFocus": "Strongly aligned with A",
-        "teacherResponsibility": "Strongly aligned with A",
-        "teacherTime": "Strongly aligned with A",
-      }.stringify_keys
-    end
-  end
-
-  factory :pd_teachercon_survey_randomized_hash, class: 'Hash' do
     initialize_with do
       {
         "personalLearningNeedsMet": "Strongly Agree",
@@ -359,12 +337,26 @@ FactoryGirl.define do
   factory :pd_local_summer_workshop_survey, class: 'Pd::LocalSummerWorkshopSurvey' do
     association :pd_enrollment, factory: :pd_enrollment, strategy: :create
 
-    after(:build) do |survey|
+    transient do
+      randomized_survey_answers false
+    end
+
+    after(:build) do |survey, evaluator|
       if survey.form_data.nil?
         enrollment = survey.pd_enrollment
         workshop = enrollment.workshop
 
         survey_hash = build :pd_local_summer_workshop_survey_hash
+
+        if evaluator.randomized_survey_answers
+          survey_hash.each do |k, _|
+            if Pd::LocalSummerWorkshopSurvey.options.key? k.underscore.to_sym
+              survey_hash[k] = Pd::LocalSummerWorkshopSurvey.options[k.underscore.to_sym].sample
+            else
+              survey_hash[k] = SecureRandom.hex[0..8]
+            end
+          end
+        end
 
         Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
           survey_hash[field] = {}
@@ -375,9 +367,10 @@ FactoryGirl.define do
         workshop.facilitators.each do |facilitator|
           Pd::LocalSummerWorkshopSurvey.facilitator_required_fields.each do |field|
             if Pd::LocalSummerWorkshopSurvey.options.key? field
-              survey_hash[field][facilitator.name] = Pd::LocalSummerWorkshopSurvey.options[field].last
+              answers = Pd::LocalSummerWorkshopSurvey.options[field]
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? answers.sample : answers.last
             else
-              survey_hash[field][facilitator.name] = 'Free Response'
+              survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
             end
           end
         end
