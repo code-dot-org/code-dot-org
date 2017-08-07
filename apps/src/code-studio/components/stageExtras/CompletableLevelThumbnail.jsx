@@ -39,6 +39,7 @@ export default class CompletableLevelThumbnail extends React.Component {
           height: this.props.size,
           display: 'inline-block',
           overflow: 'hidden',
+          border: '1px solid black'
         }}
       >
         <div
