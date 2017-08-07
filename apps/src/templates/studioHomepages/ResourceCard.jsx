@@ -21,7 +21,6 @@ const styles = {
     height: 250,
     width: 310,
     float: 'left',
-    marginBottom: 20,
     background: color.teal
   },
   image: {
