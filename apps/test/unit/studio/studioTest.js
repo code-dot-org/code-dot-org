@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
+import {replaceOnWindow, restoreOnWindow, allowConsoleErrors} from '../../util/testUtils';
 import {expect} from '../../util/configuredChai';
 import {SVG_NS} from '@cdo/apps/constants';
 import Studio, {setSvgText, calculateBubblePosition} from '@cdo/apps/studio/studio';
@@ -373,6 +373,8 @@ describe('studio', function () {
   });
 
   describe("queueCallback method", () => {
+    allowConsoleErrors();
+
     let cb, interpreterFunc, someHook;
     beforeEach(() => {
       const {hooks, interpreter} = CustomMarshalingInterpreter.evalWithEvents(

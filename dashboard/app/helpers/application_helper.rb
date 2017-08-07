@@ -97,6 +97,10 @@ module ApplicationHelper
     CDO.code_org_url
   end
 
+  def home_url
+    '/home'
+  end
+
   def teacher_dashboard_url
     CDO.code_org_url '/teacher-dashboard'
   end
@@ -117,7 +121,7 @@ module ApplicationHelper
   # used by devise to redirect user after signing in
   def signed_in_root_path(resource_or_scope)
     if resource_or_scope.is_a?(User) && resource_or_scope.teacher?
-      return teacher_dashboard_url
+      return home_url
     end
     '/'
   end

@@ -15,20 +15,22 @@ module.exports = function (grunt) {
 
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
-    // create an entry-tests.js file with the right require statement
-    // so that karma + webpack can do their thing. For some reason, you
-    // can't just point the test runner to the file itself as it won't
-    // get compiled.
-    let file = "require('babel-polyfill');\n" +
-      "require('"+path.resolve(process.env.mocha_entry)+"');\n";
-
-    if (fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory()) {
-      file = `
+    const isDirectory = fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory();
+    const loadContext = isDirectory ?
+      `let testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\\.jsx?$/);` :
+      '';
+    const runTests = isDirectory ?
+      'testsContext.keys().forEach(testsContext);' :
+      `require('${path.resolve(process.env.mocha_entry)}');`;
+    const file = `// Auto-generated
 import 'babel-polyfill';
-var testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\.js$/);
-testsContext.keys().forEach(testsContext);
+import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
+${loadContext}
+describe('entry tests', () => {
+  throwOnConsoleErrorsEverywhere();
+  ${runTests}
+});
 `;
-    }
     fs.writeFileSync(
       'test/entry-tests.js',
       file
@@ -394,11 +396,6 @@ testsContext.keys().forEach(testsContext);
       }),
       files: [
         {src: ['test/storybook-tests.js'], watched: false},
-      ],
-    },
-    all: {
-      files: [
-        {src: ['test/index.js'], watched: false},
       ],
     },
     entry: {
@@ -826,13 +823,6 @@ testsContext.keys().forEach(testsContext);
     'preconcat',
     'concat',
     'karma:scratch',
-  ]);
-
-  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
-  grunt.registerTask('test', [
-    'preconcat',
-    'concat',
-    'karma:all'
   ]);
 
   grunt.registerTask('logBuildTimes', function () {

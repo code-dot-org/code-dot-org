@@ -9,6 +9,7 @@ import teacherSections, {
   setValidGrades,
   setStudioUrl,
   setOAuthProvider,
+  asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
@@ -31,6 +32,7 @@ export function renderSectionsPage(data) {
   store.dispatch(setValidLoginTypes(data.valid_login_types));
   store.dispatch(setValidGrades(data.valid_grades));
   store.dispatch(setOAuthProvider(data.provider));
+  store.dispatch(asyncLoadSectionData());
 
   const query = queryString.parse(window.location.search);
   let defaultCourseId;
@@ -47,7 +49,6 @@ export function renderSectionsPage(data) {
   ReactDOM.render(
     <Provider store={store}>
       <SectionsPage
-        validScripts={data.valid_scripts}
         defaultCourseId={defaultCourseId}
         defaultScriptId={defaultScriptId}
       />
