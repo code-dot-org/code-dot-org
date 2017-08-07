@@ -53,6 +53,7 @@ class CoursesController < ApplicationController
   def update
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], i18n_params)
+    course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
     redirect_to course
   end
 

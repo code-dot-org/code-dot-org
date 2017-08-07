@@ -71,6 +71,15 @@ class ProjectsController < ApplicationController
       name: 'New Web Lab Project',
       login_required: true
     },
+    bounce: {
+      name: 'New Bounce Project',
+    },
+    sports: {
+      name: 'New Sports Project',
+    },
+    basketball: {
+      name: 'New Basketball Project',
+    },
     algebra_game: {
       name: 'New Algebra Project'
     },

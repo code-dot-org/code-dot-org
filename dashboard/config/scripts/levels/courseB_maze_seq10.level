@@ -26,16 +26,18 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble, try writing down the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f77a1ec169a93c73e0c324f31c61fb4d/courseB_maze_seq10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to move in two different directions to reach the pig.\",\"hint_id\":\"courseB_maze_seq10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b2d239af2858edf68ef93517d2b6a644/courseB_maze_seq10.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing down the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq10_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/96dcbc7a4554f25203fcd7651c6f941b/courseB_maze_seq10.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need to move in two different directions to reach the pig.\",\"hint_id\":\"courseB_maze_seq10_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b2d239af2858edf68ef93517d2b6a644/courseB_maze_seq10.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-13 21:04:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-30 18:05:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-13 21:04:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-30 18:05:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:16:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "debugging": 3

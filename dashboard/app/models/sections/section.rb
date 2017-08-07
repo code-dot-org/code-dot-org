@@ -63,17 +63,13 @@ class Section < ActiveRecord::Base
 
   SYSTEM_DELETED_NAME = 'system_deleted'.freeze
 
-  LOGIN_TYPE_EMAIL = 'email'.freeze
-  LOGIN_TYPE_PICTURE = 'picture'.freeze
-  LOGIN_TYPE_WORD = 'word'.freeze
-  LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze
-  LOGIN_TYPE_CLEVER = 'clever'.freeze
+  # This list is duplicated as SECTION_LOGIN_TYPE in shared_constants.rb and should be kept in sync.
   LOGIN_TYPES = [
-    LOGIN_TYPE_EMAIL,
-    LOGIN_TYPE_PICTURE,
-    LOGIN_TYPE_WORD,
-    LOGIN_TYPE_GOOGLE_CLASSROOM,
-    LOGIN_TYPE_CLEVER,
+    LOGIN_TYPE_EMAIL = 'email'.freeze,
+    LOGIN_TYPE_PICTURE = 'picture'.freeze,
+    LOGIN_TYPE_WORD = 'word'.freeze,
+    LOGIN_TYPE_GOOGLE_CLASSROOM = 'google_classroom'.freeze,
+    LOGIN_TYPE_CLEVER = 'clever'.freeze
   ]
 
   TYPES = [

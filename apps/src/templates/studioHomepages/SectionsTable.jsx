@@ -4,6 +4,7 @@ import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
 import shapes from './shapes';
 import Button from '@cdo/apps/templates/Button';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 // Many of these styles are also used by our similar SectionTable on the
 // teacher-dashboard page (which is why we export them).
@@ -93,10 +94,9 @@ const SectionsTable = React.createClass({
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,
-    codeOrgUrlPrefix: PropTypes.string.isRequired,
     canLeave: PropTypes.bool.isRequired,
-    updateSections: PropTypes.func.isRequired,
-    updateSectionsResult: PropTypes.func.isRequired
+    updateSections: PropTypes.func,
+    updateSectionsResult: PropTypes.func
   },
 
   onLeave(sectionCode, sectionName) {
@@ -110,9 +110,8 @@ const SectionsTable = React.createClass({
   },
 
   sectionHref(section) {
-    const { codeOrgUrlPrefix } = this.props;
     if (section.numberOfStudents === 0) {
-      return `${codeOrgUrlPrefix}/teacher-dashboard#/sections/${section.id}/manage`;
+      return pegasus(`/teacher-dashboard#/sections/${section.id}/manage`);
     }
     return section.linkToProgress;
   },

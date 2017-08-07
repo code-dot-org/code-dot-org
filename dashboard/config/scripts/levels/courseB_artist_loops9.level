@@ -31,17 +31,18 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember that the jump blocks can be used to move forward without drawing a line.\",\"hint_id\":\"courseB_artist_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/796ecf1da95b33e5098444ace62972b6/courseB_artist_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to move West to solve this puzzle.\",\"hint_id\":\"courseB_artist_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/fef785d4094e411483d215160513fb82/courseB_artist_loops9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseB_artist_loops9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3fb79c1b4cfe0db91bdfaaa8a045ea46/courseB_artist_loops9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember that jump blocks can be used to move without drawing a line.\",\"hint_id\":\"courseB_artist_loops9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f17ea6aacf0e85112193c095d3956f6b/courseB_artist_loops9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to use the W block to solve this puzzle.\",\"hint_id\":\"courseB_artist_loops9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/97293499e9409deffed1d5711803498d/courseB_artist_loops9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out where to put the loop? Try writing the code step-by-step and look for a pattern.\",\"hint_id\":\"courseB_artist_loops9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/3fb79c1b4cfe0db91bdfaaa8a045ea46/courseB_artist_loops9.mp3\"}]",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/0058e4d1db7196777fc090d5b3c95c30-image-1478646586853.png\", \"position\": [0,0]}\r\n]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-14 03:59:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-29 18:49:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-14 03:59:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-29 18:49:04 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:34:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2

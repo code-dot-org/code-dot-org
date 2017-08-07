@@ -11,7 +11,7 @@
       "snapRadius": 2
     },
     "ball_direction": "4.0369465598628835",
-    "instructions": "Now the finish target is on the top. You need to attach blocks to both of the \"when ball hits\" blocks to solve this puzzle.",
+    "instructions": "Attach code to make the ball bounce when it hits the wall so you can solve this puzzle.",
     "maze": "[[1,1,33,1,1,1,1,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,4,1],[1,0,0,0,0,0,0,1],[1,0,0,0,0,0,0,1],[1,0,0,16,0,0,0,1]]",
     "instructions_important": "false",
     "is_k1": "false",
@@ -34,23 +34,41 @@
     "disable_if_else_editing": "false",
     "fail_on_ball_exit": "false",
     "use_flag_goal": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "project_template_level_name": "courseD_bounce_events_template",
+    "markdown_instructions": "Now the basket is at the top.  \r\n\r\nAttach code to make the ball bounce when it hits the wall so you can solve this puzzle.",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"Do you have an event that looks like this?\\n<xml><block type=\\\"bounce_whenWallCollided\\\" deletable=\\\"false\\\"><next><block type=\\\"bounce_bounceBall\\\"></block></next></block></block></xml>\",\"hint_id\":\"courseD_bounce_events6s_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/9b670ad6025fa6944dc1bc30cd0a897e/courseD_bounce_events6s.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you've written the code correctly, you don't have to move the hand to win.\",\"hint_id\":\"courseD_bounce_events6s_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b13d30455eadb7baf66c93c5631af694/courseD_bounce_events6s.mp3\"}]"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-08-04 01:16:04 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:23:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 01:16:04 +0000\",\"changed\":[\"notes\",\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 17:23:11 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"skin\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:02:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:03:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:05:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:19:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-04 22:23:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 00:41:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 00:42:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"authored_hints\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 00:45:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"authored_hints\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-08-05 00:48:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"required_blocks\",\"contained_level_names\",\"authored_hints\",\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="bounce_whenPaddleCollided" deletable="false" x="20" y="20"/>
-        <block type="bounce_whenWallCollided" deletable="false" x="20" y="120"/>
+        <block type="when_run" deletable="false"/>
+        <block type="bounce_whenLeft" deletable="false" y="85px" x="15px">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+        <block type="bounce_whenRight" deletable="false" y="85px" x="200px">
+          <next>
+            <block type="bounce_moveRight"/>
+          </next>
+        </block>
+        <block type="bounce_whenPaddleCollided" deletable="false" y="185px" x="15px"/>
+        <block type="bounce_whenWallCollided" deletable="false" y="185px" x="200px"/>
+        <block type="bounce_whenBallMissesPaddle" deletable="false" y="325px" x="15px"/>
+        <block type="bounce_whenBallInGoal" deletable="false" y="325px" x="200px"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
+        <block type="bounce_moveLeft"/>
+        <block type="bounce_moveRight"/>
         <block type="bounce_bounceBall"/>
         <block type="bounce_playSound"/>
       </xml>
@@ -60,5 +78,30 @@
         <block type="bounce_bounceBall"/>
       </xml>
     </required_blocks>
+    <solution_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+        <block type="bounce_whenLeft" deletable="false">
+          <next>
+            <block type="bounce_moveLeft"/>
+          </next>
+        </block>
+        <block type="bounce_whenRight" deletable="false">
+          <next>
+            <block type="bounce_moveRight"/>
+          </next>
+        </block>
+        <block type="bounce_whenPaddleCollided" deletable="false">
+          <next>
+            <block type="bounce_bounceBall"/>
+          </next>
+        </block>
+        <block type="bounce_whenWallCollided" deletable="false">
+          <next>
+            <block type="bounce_bounceBall"/>
+          </next>
+        </block>
+      </xml>
+    </solution_blocks>
   </blocks>
 </Bounce>
