@@ -70,6 +70,7 @@ class LoginTypeCard extends Component {
     buttonText: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
+    className: PropTypes.string,
   };
 
   render() {
@@ -80,7 +81,7 @@ class LoginTypeCard extends Component {
     };
 
     return (
-      <div style={cardStyle}>
+      <div style={cardStyle} className={this.props.className}>
         <div>
           <div style={styles.title}>
             {title}
@@ -95,6 +96,7 @@ class LoginTypeCard extends Component {
           </div>
         </div>
         <Button
+          className="uitest-button"
           onClick={onClick}
           color={Button.ButtonColor.gray}
           text={buttonText}
