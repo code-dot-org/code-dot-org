@@ -4,6 +4,8 @@ import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
 import { bonusLevel } from './shapes';
 
+const THUMBNAIL_IMAGE_SIZE = 200;
+
 const styles = {
   bonusLevel: {
     width: 200,
@@ -15,6 +17,10 @@ const styles = {
     clear: 'both',
     overflow: 'hidden',
   },
+  solutionImage: {
+    border: '1px solid black',
+    marginBottom: 5,
+  }
 };
 
 class BonusLevel extends React.Component {
@@ -25,7 +31,7 @@ class BonusLevel extends React.Component {
       <div style={styles.bonusLevel}>
         <a href={`?id=${this.props.id}`}>
           <CompletableLevelThumbnail
-            size={200}
+            size={THUMBNAIL_IMAGE_SIZE}
             perfected={this.props.perfected}
           >
             <MazeThumbnail {...this.props}/>
@@ -36,9 +42,27 @@ class BonusLevel extends React.Component {
     );
   }
 
+  renderSolutionImageThumbnail() {
+    return (
+      <div style={styles.bonusLevel}>
+        <a href={`?id=${this.props.id}`}>
+          <img
+            src={this.props.solutionImageUrl}
+            width={THUMBNAIL_IMAGE_SIZE}
+            height={THUMBNAIL_IMAGE_SIZE}
+            style={styles.solutionImage}
+          />
+          <button className="btn btn-large btn-primary">{i18n.tryIt()}</button>
+        </a>
+      </div>
+    );
+  }
+
   render() {
     if (this.props.type === "Maze") {
       return this.renderWithMazeThumbnail();
+    } else if (this.props.solutionImageUrl) {
+      return this.renderSolutionImageThumbnail();
     } else {
       return (
         <a href={`?id=${this.props.id}`}>{this.props.name}</a>
