@@ -2,10 +2,10 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {EnrolledWorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/enrolledWorkshops';
 import {expect} from 'chai';
-import { allowConsoleErrors } from '../../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../../util/testUtils';
 
 describe("Tests for the upcoming workshops page", () => {
-  allowConsoleErrors();
+  throwOnConsoleWarnings();
 
   const workshops = [
     {
@@ -13,6 +13,8 @@ describe("Tests for the upcoming workshops page", () => {
       sessions: [],
       location_name: 'My house',
       location_address: '123 Fake Street',
+      on_map: false,
+      funded: false,
       workshop_type: 'workshopType',
       course: 'course',
       subject: 'subject',
@@ -28,6 +30,8 @@ describe("Tests for the upcoming workshops page", () => {
       sessions: [],
       location_name: 'My house',
       location_address: '123 Fake Street',
+      on_map: false,
+      funded: false,
       workshop_type: 'workshopType',
       course: 'course',
       subject: 'subject',
@@ -43,6 +47,8 @@ describe("Tests for the upcoming workshops page", () => {
       sessions: [],
       location_name: 'My house',
       location_address: '123 Fake Street',
+      on_map: false,
+      funded: false,
       workshop_type: 'workshopType',
       course: 'course',
       subject: 'subject',
