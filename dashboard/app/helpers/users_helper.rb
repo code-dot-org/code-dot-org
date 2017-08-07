@@ -20,6 +20,7 @@ module UsersHelper
     user_data = {}
     merge_user_summary(user_data, user)
     merge_script_progress(user_data, user, script, exclude_level_progress)
+    user_data[:completed] = user.completed?(script)
 
     if script.has_peer_reviews?
       user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
