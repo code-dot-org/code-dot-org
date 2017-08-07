@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import CourseScript from './CourseScript';
-import AssignToSection from './AssignToSection';
+import CourseOverviewTopRow from './CourseOverviewTopRow';
+import { resourceShape } from './resourceType';
 
 const styles = {
   description: {
@@ -19,6 +20,7 @@ export default class CourseOverview extends Component {
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
     })).isRequired,
+    teacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     isTeacher: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     scripts: PropTypes.array.isRequired
@@ -31,6 +33,7 @@ export default class CourseOverview extends Component {
       descriptionStudent,
       descriptionTeacher,
       sectionsInfo,
+      teacherResources,
       isTeacher,
       viewAs,
       scripts
@@ -41,13 +44,14 @@ export default class CourseOverview extends Component {
         <div style={styles.description}>
           {viewAs === ViewType.Student ? descriptionStudent : descriptionTeacher}
         </div>
-        {isTeacher && (
-          <AssignToSection
+        {isTeacher &&
+          <CourseOverviewTopRow
             sectionsInfo={sectionsInfo}
-            courseId={id}
-            assignmentName={title}
+            id={id}
+            title={title}
+            resources={teacherResources}
           />
-        )}
+        }
         {scripts.map((script, index) => (
           <CourseScript
             key={index}

@@ -1,16 +1,13 @@
 import React from 'react';
 import {mount} from 'enzyme';
 import {assert} from '../../../util/configuredChai';
-import {
-  CoursesSetUpMessage,
-  SectionsSetUpMessage,
-} from '@cdo/apps/templates/studioHomepages/SetUpMessage';
 import Button from "@cdo/apps/templates/Button";
+import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 
-describe('CoursesSetUpMessage', () => {
+describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = mount(
-      <CoursesSetUpMessage isRtl={false} isTeacher={true}/>
+      <SetUpCourses isRtl={false} isTeacher={true}/>
     );
     assert(wrapper.containsMatchingElement(
       <div>
@@ -34,7 +31,7 @@ describe('CoursesSetUpMessage', () => {
 
   it('renders as expected for a student', () => {
     const wrapper = mount(
-      <CoursesSetUpMessage isRtl={false} isTeacher={false}/>
+      <SetUpCourses isRtl={false} isTeacher={false}/>
     );
     assert(wrapper.containsMatchingElement(
       <div>
@@ -51,32 +48,6 @@ describe('CoursesSetUpMessage', () => {
             color={Button.ButtonColor.gray}
             text={'Find a course'}
           />
-        <div/>
-      </div>
-    ));
-  });
-});
-
-describe('SectionsSetUpMessage', () => {
-  it('renders as expected for a teacher', () => {
-    const wrapper = mount(
-      <SectionsSetUpMessage isRtl={false} codeOrgUrlPrefix="http://localhost:3000/"/>
-    );
-    assert(wrapper.containsMatchingElement(
-      <div>
-        <div>
-          <div>
-            Set up your classroom
-          </div>
-          <div>
-            Create a new classroom section to start assigning courses and seeing your student progress.
-          </div>
-        </div>
-        <Button
-          href={'http://localhost:3000//teacher-dashboard#/sections'}
-          color={Button.ButtonColor.gray}
-          text={'Create a section'}
-        />
         <div/>
       </div>
     ));

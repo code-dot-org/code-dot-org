@@ -18,6 +18,7 @@ import reducer, {
   editSectionProperties,
   cancelEditingSection,
   finishEditingSection,
+  asyncLoadSectionData,
   assignmentId,
   assignmentNames,
   assignmentPaths,
@@ -769,6 +770,112 @@ describe('teacherSectionsRedux', () => {
       store.dispatch(finishEditingSection()).catch(() => {});
       server.respond();
       expect(state().sections).to.equal(originalSections);
+    });
+  });
+
+  describe('asyncLoadSectionData', () => {
+    let server, store;
+
+    function successResponse(response = []) {
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify(response)
+      ];
+    }
+
+    const failureResponse = [500, {}, 'CustomErrorBody'];
+
+    function state() {
+      return store.getState().teacherSections;
+    }
+
+    beforeEach(function () {
+      // Stub server responses
+      server = sinon.fakeServer.create();
+
+      // Test with a real redux store, not just the reducer, because this
+      // action depends on the redux-thunk extension.
+      stubRedux();
+      registerReducers({teacherSections: reducer});
+      store = getStore();
+    });
+
+    afterEach(function () {
+      restoreRedux();
+      server.restore();
+    });
+
+    it('immediately sets asyncLoadComplete to false', () => {
+      store.dispatch(asyncLoadSectionData());
+      expect(state().asyncLoadComplete).to.be.false;
+    });
+
+    it('sets asyncLoadComplete to true after success responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData());
+
+      expect(server.requests).to.have.length(3);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith('GET', '/dashboardapi/courses', successResponse());
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respond();
+
+      return promise.then(() => {
+        expect(state().asyncLoadComplete).to.be.true;
+      });
+    });
+
+    it('sets asyncLoadComplete to true after first failure response', () => {
+      console.error.reset(); // Already stubbed in tests
+      const promise = store.dispatch(asyncLoadSectionData());
+
+      server.respondWith('GET', '/dashboardapi/sections', failureResponse);
+      server.respond();
+
+      return promise.then(() => {
+        expect(state().asyncLoadComplete).to.be.true;
+        expect(console.error).to.have.been.calledOnce;
+        expect(console.error.getCall(0).args[0])
+          .to.include('url: /dashboardapi/sections')
+          .and
+          .to.include('status: 500')
+          .and
+          .to.include('statusText: Internal Server Error')
+          .and
+          .to.include('responseText: CustomErrorBody');
+      });
+    });
+
+    it('sets sections from server response', () => {
+      const promise = store.dispatch(asyncLoadSectionData());
+      expect(state().sections).to.deep.equal({});
+
+      expect(server.requests).to.have.length(3);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+      server.respondWith('GET', '/dashboardapi/courses', successResponse());
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse());
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().sections)).to.have.length(sections.length);
+      });
+    });
+
+    it('sets validAssignments from server responses', () => {
+      const promise = store.dispatch(asyncLoadSectionData());
+      expect(state().validAssignments).to.deep.equal({});
+
+      expect(server.requests).to.have.length(3);
+      server.respondWith('GET', '/dashboardapi/sections', successResponse());
+      server.respondWith('GET', '/dashboardapi/courses', successResponse(validCourses));
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse(validScripts));
+      server.respond();
+
+      return promise.then(() => {
+        expect(Object.keys(state().validAssignments)).to.have.length(
+          validCourses.length + validScripts.length
+        );
+      });
     });
   });
 

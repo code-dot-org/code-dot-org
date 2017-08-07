@@ -29,14 +29,25 @@ class TeacherBasedExperiment < Experiment
   validates :percentage, inclusion: 0..100
 
   def enabled?(user: nil, section: nil)
-    return false unless section
+    is_teacher = user.try(:teacher?)
+    return false unless section || is_teacher
 
-    user_id = section.user_id % 100
+    if is_teacher
+      user_id = user.id
+      sections = user.sections
+    else
+      user_id = section.user_id
+      sections = [section]
+    end
+    user_id %= 100
+
     return ((user_id >= min_user_id && user_id < max_user_id) ||
         user_id < overflow_max_user_id) &&
-      (earliest_section_at.nil? ||
-        earliest_section_at < section.first_activity_at) &&
-      (latest_section_at.nil? ||
-        latest_section_at > section.first_activity_at)
+      sections.any? do |s|
+        (earliest_section_at.nil? ||
+          earliest_section_at < s.first_activity_at) &&
+        (latest_section_at.nil? ||
+          latest_section_at > s.first_activity_at)
+      end
   end
 end
