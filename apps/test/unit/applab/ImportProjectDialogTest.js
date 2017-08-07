@@ -1,9 +1,8 @@
 import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
-
 import {expect} from '../../util/configuredChai';
-
+import {throwOnConsoleWarnings} from '../../util/testUtils';
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
@@ -11,8 +10,13 @@ import {
 } from '@cdo/apps/clientApi';
 
 describe("Applab ImportProjectDialog component", function () {
+  throwOnConsoleWarnings();
 
   var form, urlInput, nextButton;
+
+  const defaultProps = {
+    onImport: () => {}
+  };
 
   beforeEach(() => {
     sinon.stub(sourcesApi, "ajax");
@@ -31,27 +35,27 @@ describe("Applab ImportProjectDialog component", function () {
   }
 
   it("renders a div with a text input and next button", () => {
-    render(<ImportProjectDialog />);
+    render(<ImportProjectDialog {...defaultProps}/>);
     expect(urlInput).to.have.length(1);
     expect(nextButton).to.have.length(1);
   });
 
   it("renders a warning if there was an error", () => {
-    render(<ImportProjectDialog error={true} />);
+    render(<ImportProjectDialog {...defaultProps} error={true} />);
     expect(form.find('p').last().text()).to.equal(
       "We can't seem to find this project. " +
       "Please make sure you've entered a valid App Lab project URL.");
   });
 
   it("it disables the next button and shows a spinner while the url is fetched", () => {
-    render(<ImportProjectDialog isFetching={true} />);
+    render(<ImportProjectDialog {...defaultProps} isFetching={true} />);
     expect(nextButton.prop('disabled')).to.equal(true);
     expect(nextButton.find('.fa-spin')).to.have.length(1);
   });
 
   it("calls the onImport prop with the url when the next button is clicked", () => {
     var onImport = sinon.spy();
-    render(<ImportProjectDialog onImport={onImport} />);
+    render(<ImportProjectDialog {...defaultProps} onImport={onImport} />);
     urlInput.simulate(
       'change',
       {target: {value: 'some url'}}
