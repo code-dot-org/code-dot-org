@@ -461,26 +461,8 @@ def storage_encrypt_channel_id(storage_id, channel_id)
   "STUB_CHANNEL_ID-#{storage_id}-#{channel_id}"
 end
 
-# Reverse the pseudo-encryption performed by the storage_encrypt_channel_id mock above. Unless we
-# need to be reversing the real encryption performed...
-# TODO(asher, dave): This is worse than atrocious. But it seems to work, so for expediency, it is
-# being done. For various (good?) reasons, these methods were stubbed. But sometimes tests use
-# the non-stubbed version, so we attempt both versions below. Most unfortunately, the type of the
-# return (an array vs. an integer) is not the same between these versions.
-# The correct approach seems to be to remove this global stub and restrict its usage to the few
-# places that want (require) the stubbed behavior. That said, it isn't obvious to me (asher) at this
-# time that this stub *should* be used anywhere.
+# Reverse the pseudo-encryption performed by the storage_encrypt_channel_id mock above.
 def storage_decrypt_channel_id(encrypted)
-  raise ArgumentError, "`encrypted` must be a string" unless encrypted.is_a? String
-  # pad to a multiple of 4 characters to make a valid base64 string.
-  encrypted += '=' * ((4 - encrypted.length % 4) % 4)
-  storage_id, channel_id = storage_decrypt(Base64.urlsafe_decode64(encrypted)).
-    split(':').
-    map(&:to_i)
-  raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
-  raise ArgumentError, "`channel_id` must be an integer > 0" unless channel_id > 0
-  return [storage_id, channel_id]
-rescue
   raise ArgumentError if encrypted.nil?
   _storage_id, channel_id = encrypted.split('-')[1, 2]
   raise ArgumentError if channel_id.nil?
