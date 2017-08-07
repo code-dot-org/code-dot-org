@@ -42,6 +42,8 @@
   "published": true,
   "notes": "",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "for_loops": 4
   }
 }]]></config>
   <blocks>

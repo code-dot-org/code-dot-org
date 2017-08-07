@@ -37,6 +37,8 @@
   "published": true,
   "notes": "P9: Efficacy Repairing Puzzle",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1
   }
 }]]></config>
   <blocks>

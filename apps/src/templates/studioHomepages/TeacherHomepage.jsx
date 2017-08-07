@@ -4,7 +4,7 @@ import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
 import Notification from '../Notification';
 import RecentCourses from './RecentCourses';
-import Sections from './Sections';
+import TeacherSections from './TeacherSections';
 import TeacherResources from './TeacherResources';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
@@ -23,8 +23,7 @@ const TeacherHomepage = React.createClass({
     sections: React.PropTypes.array,
     courses: shapes.courses,
     announcements: React.PropTypes.array.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
   },
 
   componentDidMount() {
@@ -34,7 +33,7 @@ const TeacherHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, announcements, codeOrgUrlPrefix, isRtl } = this.props;
+    const { courses, sections, announcements, isRtl } = this.props;
 
     return (
       <div>
@@ -63,23 +62,17 @@ const TeacherHomepage = React.createClass({
             <div style={styles.clear}/>
           </div>
         )}
-
-        <Sections
+        <TeacherSections
           sections={sections}
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
           isRtl={isRtl}
-          isTeacher={true}
-          canLeave={false}
         />
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-          heading={i18n.recentCourses()}
           isTeacher={true}
           isRtl={isRtl}
         />
         <TeacherResources
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
           isRtl={isRtl}
         />
         <ProjectWidgetWithData/>

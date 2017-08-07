@@ -40,6 +40,8 @@
   "published": true,
   "notes": "P7 Some blocks already attached, a little in the wrong order, need to pull more from the toolbar (Challenge) [length or something to create desire for loops]\r\n",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "debugging": 4
   }
 }]]></config>
   <blocks>

@@ -43,6 +43,9 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-08 17:25:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-08 17:26:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-08 17:28:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-06-08 17:29:16 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:48:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_direction\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:56:05 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:59:44 +0000\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 00:01:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:04:21 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 22:36:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_until_while": 3,
+    "functions": 4
   }
 }]]></config>
   <blocks>
@@ -55,7 +58,7 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_ifHasCropElse">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
                         <block type="harvester_corn">
@@ -67,7 +70,7 @@
                         </block>
                       </statement>
                       <statement name="ELSE">
-                        <block type="harvester_ifAtCrop">
+                        <block type="harvester_ifHasCrop">
                           <title name="LOC">Lettuce</title>
                           <statement name="DO">
                             <block type="harvester_lettuce">
@@ -122,7 +125,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -175,7 +178,7 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_ifHasCropElse">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
                         <block type="harvester_corn">
@@ -187,7 +190,7 @@
                         </block>
                       </statement>
                       <statement name="ELSE">
-                        <block type="harvester_ifAtCrop">
+                        <block type="harvester_ifHasCrop">
                           <title name="LOC">Lettuce</title>
                           <statement name="DO">
                             <block type="harvester_lettuce">

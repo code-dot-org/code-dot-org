@@ -8,11 +8,11 @@
     "instructions_important": "false",
     "display_name": "Headings in HTML",
     "reference": "/csd/headers/index.html",
-    "teacher_markdown": "# Updating the Tags List\r\n\r\nThis map level recaps the tags that students learned throughout this less.  Encourage students to use this resource to update their HTML tags list or poster."
+    "teacher_markdown": "# Updating the Tags List\r\n\r\nThis map level recaps the tags that students learned throughout this lesson.  Encourage students to use this resource to update their HTML tags list or poster."
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-05-26 18:46:04 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-24 16:48:46 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 18:46:04 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-07-24 16:48:46 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-08-04 18:55:58 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
