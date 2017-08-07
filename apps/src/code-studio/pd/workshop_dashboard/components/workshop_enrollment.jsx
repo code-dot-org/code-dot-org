@@ -2,6 +2,7 @@
  * Displays nicely-formatted session time for a workshop.
 */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Table} from 'react-bootstrap';
 import _ from 'lodash';
 import ConfirmationDialog from './confirmation_dialog';
@@ -21,20 +22,20 @@ const styles = {
 
 const WorkshopEnrollment = React.createClass({
   propTypes: {
-    enrollments: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        first_name: React.PropTypes.string.isRequired,
-        last_name: React.PropTypes.string.isRequired,
-        email: React.PropTypes.string.isRequired,
-        district_name: React.PropTypes.string,
-        school: React.PropTypes.string.isRequired,
-        user_id: React.PropTypes.number,
-        attended: React.PropTypes.bool.isRequired,
+    enrollments: PropTypes.arrayOf(
+      PropTypes.shape({
+        first_name: PropTypes.string.isRequired,
+        last_name: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        district_name: PropTypes.string,
+        school: PropTypes.string.isRequired,
+        user_id: PropTypes.number,
+        attended: PropTypes.bool.isRequired,
       })
     ).isRequired,
-    workshopId: React.PropTypes.string.isRequired,
-    accountRequiredForAttendance: React.PropTypes.bool.isRequired,
-    onDelete: React.PropTypes.func.isRequired
+    workshopId: PropTypes.string.isRequired,
+    accountRequiredForAttendance: PropTypes.bool.isRequired,
+    onDelete: PropTypes.func.isRequired
   },
 
   getInitialState() {

@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 import FormController from '../form_components/FormController';
 import Disclaimer from './Disclaimer';
@@ -65,9 +65,9 @@ export default class WorkshopSurvey extends FormController {
 
 WorkshopSurvey.propTypes = {
   ...FormController.propTypes,
-  course: React.PropTypes.string.isRequired,
-  subject: React.PropTypes.string,
-  isFirstSurvey: React.PropTypes.bool.isRequired,
-  pdEnrollmentCode: React.PropTypes.string.isRequired,
-  facilitatorNames: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
+  course: PropTypes.string.isRequired,
+  subject: PropTypes.string,
+  isFirstSurvey: PropTypes.bool.isRequired,
+  pdEnrollmentCode: PropTypes.string.isRequired,
+  facilitatorNames: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

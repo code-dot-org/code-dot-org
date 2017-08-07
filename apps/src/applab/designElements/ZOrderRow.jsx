@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 import FontAwesome from '../../templates/FontAwesome';
 
 var ZOrderRow = React.createClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    onDepthChange: React.PropTypes.func.isRequired,
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    onDepthChange: PropTypes.func.isRequired,
   },
 
   render: function () {

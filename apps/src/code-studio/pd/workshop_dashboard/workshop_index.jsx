@@ -3,6 +3,7 @@
  * Route: /workshops
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Button, ButtonToolbar} from 'react-bootstrap';
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import Permission from '../permission';
@@ -31,7 +32,7 @@ const filterParams = {
 
 const WorkshopIndex = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   componentWillMount() {

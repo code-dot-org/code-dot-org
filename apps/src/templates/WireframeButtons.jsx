@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 
 var project = require('@cdo/apps/code-studio/initApp/project');
@@ -56,9 +57,9 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
  */
 let WireframeButtons = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string,
-    appType: React.PropTypes.string.isRequired,
-    isLegacyShare: React.PropTypes.bool.isRequired,
+    channelId: PropTypes.string,
+    appType: PropTypes.string.isRequired,
+    isLegacyShare: PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {
