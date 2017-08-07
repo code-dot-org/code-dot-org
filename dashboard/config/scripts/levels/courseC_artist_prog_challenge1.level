@@ -38,10 +38,12 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
+    "solution_image_url": "https://d3p74s6bwmy6t9.cloudfront.net/54076e1a8ac6b368fffef1ea2c2f9772=development/2090.png",
     "contained_level_names": null
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-07 09:37:41 -0700\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-07 09:37:55 -0700\",\"changed\":[\"solution_blocks\"],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"},{\"changed_at\":\"2017-08-07 09:49:22 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"dave@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
