@@ -35,7 +35,7 @@ import {
   saveAnimations,
   withAbsoluteSourceUrls
 } from './animationListModule';
-import {getSerializedAnimationList} from './PropTypes';
+import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '../redux/watchedExpressions';
 var reducers = require('./reducers');
 var GameLabView = require('./GameLabView');
