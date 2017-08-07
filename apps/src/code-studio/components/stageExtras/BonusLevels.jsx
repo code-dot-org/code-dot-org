@@ -3,6 +3,7 @@ import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
 import { bonusLevel } from './shapes';
+import color from "../../../util/color";
 
 const THUMBNAIL_IMAGE_SIZE = 200;
 
@@ -18,7 +19,7 @@ const styles = {
     overflow: 'hidden',
   },
   solutionImage: {
-    border: '1px solid black',
+    border: `1px solid ${color.lighter_gray}`,
     marginBottom: 5,
   }
 };
