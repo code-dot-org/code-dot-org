@@ -1,6 +1,6 @@
 import {expect} from '../../util/configuredChai';
 import React from 'react';
-import ReactTestUtils from 'react-dom/test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import { VisualizationOverlay } from '@cdo/apps/templates/VisualizationOverlay';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 
@@ -33,7 +33,7 @@ describe('VisualizationOverlay', function () {
   });
 
   function shallowRender(component) {
-    let renderer = ReactTestUtils.createRenderer();
+    let renderer = new ShallowRenderer();
     renderer.render(component);
     return renderer.getRenderOutput();
   }

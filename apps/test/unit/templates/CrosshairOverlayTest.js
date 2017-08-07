@@ -1,13 +1,13 @@
 import {expect} from '../../util/configuredChai';
 import React from 'react';
-import ReactTestUtils from 'react-dom/test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import CrosshairOverlay, { CROSSHAIR_MARGIN, styles } from '@cdo/apps/templates/CrosshairOverlay';
 
 describe('CrosshairOverlay', () => {
   const TEST_APP_WIDTH = 300, TEST_APP_HEIGHT = 200;
 
   function renderAtMousePosition(x, y) {
-    let renderer = ReactTestUtils.createRenderer();
+    let renderer = new ShallowRenderer();
     renderer.render(
         <CrosshairOverlay
           width={TEST_APP_WIDTH}
