@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import Radium from 'radium';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import Button from "../Button";
@@ -13,50 +14,34 @@ const styles = {
     boxSizing: "border-box"
   },
   wordBox: {
-    width: styleConstants['content-width']-200,
-    float: 'left',
+    width: styleConstants['content-width']-225,
   },
   heading: {
     fontSize: 20,
     fontFamily: 'Gotham 5r',
     fontWeight: 'bold',
     color: color.teal,
-    float: 'left',
     paddingTop: 25,
-    paddingLeft: 25,
-  },
-  rtlHeading: {
-    paddingRight: 50,
-    paddingTop: 80,
-    paddingBottom: 20,
-    fontSize: 20,
-    fontFamily: 'Gotham 5r',
-    color: color.teal,
   },
   description: {
+    fontSize: 14,
+    color: color.charcoal,
     width: styleConstants['content-width']-250,
     paddingTop: 5,
     paddingBottom: 25,
-    paddingLeft: 25,
-    fontSize: 14,
-    color: color.charcoal,
-    float: 'left'
-  },
-  rtlDescription: {
-    paddingRight: 50,
-    paddingTop: 25,
-    paddingBottom: 40,
-    fontSize: 14,
-    color: color.charcoal
   },
   button: {
-    float: 'right',
-    marginRight: 25,
     marginTop: 28,
+    marginLeft: 25,
+    marginRight: 25
   },
-  rtlButton: {
-    marginRight: 50,
-    marginBottom: 80
+  ltr: {
+    float: 'left',
+    paddingLeft: 25,
+  },
+  rtl: {
+    float: 'right',
+    paddingRight: 25,
   },
   clear: {
     clear: 'both'
@@ -74,11 +59,11 @@ const SetUpMessage = ({
   onClick,
 }) => (
   <div style={styles.section} className={className}>
-    <div style={styles.wordBox}>
-      <div style={isRtl ? styles.rtlHeading : styles.heading}>
+    <div style={[styles.wordBox, isRtl ? styles.rtl : styles.ltr, {padding:0}]}>
+      <div style={[styles.heading, isRtl ? styles.rtl : styles.ltr]}>
         {headingText}
       </div>
-      <div style={isRtl ? styles.rtlDescription : styles.description}>
+      <div style={[styles.description, isRtl ? styles.rtl : styles.ltr]}>
         {descriptionText}
       </div>
     </div>
@@ -88,7 +73,7 @@ const SetUpMessage = ({
       className={buttonClass}
       color={Button.ButtonColor.gray}
       text={buttonText}
-      style={isRtl ? styles.rtlButton : styles.button}
+      style={[styles.button, isRtl ? styles.ltr : styles.rtl]}
     />
     <div style={styles.clear}/>
   </div>
@@ -103,4 +88,4 @@ SetUpMessage.propTypes = {
   buttonClass: PropTypes.string,
   onClick: PropTypes.func,
 };
-export default SetUpMessage;
+export default Radium(SetUpMessage);
