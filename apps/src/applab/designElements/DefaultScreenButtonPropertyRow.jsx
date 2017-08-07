@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../../util/color";
 import * as elementUtils from './elementUtils';
 
 var DefaultScreenButtonPropertyRow = React.createClass({
   propTypes: {
-    handleChange: React.PropTypes.func.isRequired,
-    screenId: React.PropTypes.string
+    handleChange: PropTypes.func.isRequired,
+    screenId: PropTypes.string
   },
 
   handleMakeDefault: function (event) {

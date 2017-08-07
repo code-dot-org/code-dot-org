@@ -11,6 +11,7 @@ import EditTableListRow from './EditTableListRow';
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
@@ -30,12 +31,12 @@ const styles = {
 const DataOverview = React.createClass({
   propTypes: {
     // from redux state
-    tableListMap: React.PropTypes.object.isRequired,
-    view: React.PropTypes.oneOf(Object.keys(DataView)),
+    tableListMap: PropTypes.object.isRequired,
+    view: PropTypes.oneOf(Object.keys(DataView)),
 
     // from redux dispatch
-    onShowWarning: React.PropTypes.func.isRequired,
-    onViewChange: React.PropTypes.func.isRequired
+    onShowWarning: PropTypes.func.isRequired,
+    onViewChange: PropTypes.func.isRequired
   },
 
   onTableAdd(tableName) {

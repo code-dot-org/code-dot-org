@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import LegacyButton from './LegacyButton';
 import BaseDialog from './BaseDialog';
@@ -54,7 +55,7 @@ export function Title({children}) {
   );
 }
 Title.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export function Body({children}) {
@@ -65,7 +66,7 @@ export function Body({children}) {
   );
 }
 Body.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export function Confirm(props) {
@@ -74,15 +75,15 @@ export function Confirm(props) {
   return <LegacyButton type={type} {...other}>{props.children || locale.dialogOK()}</LegacyButton>;
 }
 Confirm.propTypes = {
-  children: React.PropTypes.node,
-  type: React.PropTypes.string,
+  children: PropTypes.node,
+  type: PropTypes.string,
 };
 
 export function Cancel(props) {
   return <LegacyButton type="cancel" {...props}>{props.children || locale.dialogCancel()}</LegacyButton>;
 }
 Cancel.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 export function Buttons({children}) {
@@ -111,7 +112,7 @@ export function Footer({children}) {
   );
 }
 Footer.propTypes = {
-  children: React.PropTypes.node,
+  children: PropTypes.node,
 };
 
 
@@ -121,7 +122,7 @@ export var Icon = Radium(function Icon({src}) {
   );
 });
 Icon.propTypes = {
-  src: React.PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 const Dialog = React.createClass({

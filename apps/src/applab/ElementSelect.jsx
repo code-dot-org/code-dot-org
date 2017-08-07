@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import * as elementUtils from './designElements/elementUtils.js';
 
 export default React.createClass({
   propTypes: {
-    onChangeElement: React.PropTypes.func.isRequired,
-    elementIdList: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    selected: React.PropTypes.instanceOf(HTMLElement)
+    onChangeElement: PropTypes.func.isRequired,
+    elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,
+    selected: PropTypes.instanceOf(HTMLElement)
   },
 
   handleChange: function (e) {

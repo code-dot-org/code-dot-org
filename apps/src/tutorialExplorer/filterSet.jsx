@@ -2,15 +2,16 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
 
 const FilterSet = React.createClass({
   propTypes: {
-    filterGroups: React.PropTypes.array.isRequired,
-    onUserInput: React.PropTypes.func.isRequired,
-    selection: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    roboticsButtonUrl: React.PropTypes.string
+    filterGroups: PropTypes.array.isRequired,
+    onUserInput: PropTypes.func.isRequired,
+    selection: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    roboticsButtonUrl: PropTypes.string
   },
 
   render() {

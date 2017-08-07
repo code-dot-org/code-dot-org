@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import FilterChoice from './filterChoice';
 import { getResponsiveValue } from './responsive';
 
@@ -21,11 +22,11 @@ const styles = {
 
 const FilterGroup = React.createClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired,
-    text: React.PropTypes.string.isRequired,
-    filterEntries: React.PropTypes.array.isRequired,
-    selection: React.PropTypes.array.isRequired,
-    onUserInput: React.PropTypes.func.isRequired
+    name: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    filterEntries: PropTypes.array.isRequired,
+    selection: PropTypes.array.isRequired,
+    onUserInput: PropTypes.func.isRequired
   },
 
   render() {
