@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Lightbulb from './Lightbulb';
 
 import { connect } from 'react-redux';
 
 const HintDisplayLightbulb = React.createClass({
   propTypes: {
-    unseenHints: React.PropTypes.arrayOf(React.PropTypes.object),
-    isMinecraft: React.PropTypes.bool
+    unseenHints: PropTypes.arrayOf(PropTypes.object),
+    isMinecraft: PropTypes.bool
   },
 
   getInitialState() {

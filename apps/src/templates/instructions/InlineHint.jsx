@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReadOnlyBlockSpace from '../ReadOnlyBlockSpace';
@@ -10,12 +11,12 @@ import { convertXmlToBlockly } from './utils';
 const InlineHint = React.createClass({
 
   propTypes: {
-    block: React.PropTypes.object, // XML
-    borderColor: React.PropTypes.string,
-    content: React.PropTypes.string.isRequired,
-    ttsUrl: React.PropTypes.string,
-    ttsMessage: React.PropTypes.string,
-    isBlockly: React.PropTypes.bool
+    block: PropTypes.object, // XML
+    borderColor: PropTypes.string,
+    content: PropTypes.string.isRequired,
+    ttsUrl: PropTypes.string,
+    ttsMessage: PropTypes.string,
+    isBlockly: PropTypes.bool
   },
 
   componentDidMount() {

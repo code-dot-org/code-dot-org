@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 /**
@@ -12,9 +13,9 @@ import { connect } from 'react-redux';
  */
 const InstructionsDialogWrapper = React.createClass({
   propTypes: {
-    isOpen: React.PropTypes.bool.isRequired,
-    autoClose: React.PropTypes.bool,
-    showInstructionsDialog: React.PropTypes.func.isRequired
+    isOpen: PropTypes.bool.isRequired,
+    autoClose: PropTypes.bool,
+    showInstructionsDialog: PropTypes.func.isRequired
   },
 
   componentWillReceiveProps(nextProps) {

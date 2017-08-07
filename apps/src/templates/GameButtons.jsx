@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -33,8 +34,8 @@ export const RunButton = Radium(props => (
   </button>
 ));
 RunButton.propTypes = {
-  hidden: React.PropTypes.bool,
-  style: React.PropTypes.object,
+  hidden: PropTypes.bool,
+  style: PropTypes.object,
 };
 RunButton.displayName = 'RunButton';
 
@@ -52,8 +53,8 @@ export const ResetButton = Radium(props => (
   </button>
 ));
 ResetButton.propTypes = {
-  style: React.PropTypes.object,
-  hideText: React.PropTypes.bool,
+  style: PropTypes.object,
+  hideText: PropTypes.bool,
 };
 ResetButton.displayName = 'ResetButton';
 
@@ -77,9 +78,9 @@ export const UnconnectedGameButtons = props => (
   </ProtectedStatefulDiv>
 );
 UnconnectedGameButtons.propTypes = {
-  hideRunButton: React.PropTypes.bool,
-  playspacePhoneFrame: React.PropTypes.bool,
-  children: React.PropTypes.node,
+  hideRunButton: PropTypes.bool,
+  playspacePhoneFrame: PropTypes.bool,
+  children: PropTypes.node,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 

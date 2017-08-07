@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import IconListEntry from './IconListEntry';
 import { aliases } from './icons';
 import i18n from '@cdo/locale';
@@ -8,8 +9,8 @@ import i18n from '@cdo/locale';
  */
 var IconList = React.createClass({
   propTypes: {
-    assetChosen: React.PropTypes.func.isRequired,
-    search: React.PropTypes.string.isRequired
+    assetChosen: PropTypes.func.isRequired,
+    search: PropTypes.string.isRequired
   },
 
   getMatches: function (query) {

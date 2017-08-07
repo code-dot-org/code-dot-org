@@ -3,6 +3,7 @@
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import React from 'react';
+import PropTypes from 'prop-types';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
@@ -24,17 +25,17 @@ import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 const GameLabView = React.createClass({
   propTypes: {
     // Provided manually
-    showFinishButton: React.PropTypes.bool.isRequired,
-    onMount: React.PropTypes.func.isRequired,
+    showFinishButton: PropTypes.bool.isRequired,
+    onMount: PropTypes.func.isRequired,
     // Provided by Redux
-    interfaceMode: React.PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
-    isResponsive: React.PropTypes.bool.isRequired,
-    hideSource: React.PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    allowAnimationMode: React.PropTypes.bool.isRequired,
-    showVisualizationHeader: React.PropTypes.bool.isRequired,
-    isIframeEmbed: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
+    interfaceMode: PropTypes.oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION]).isRequired,
+    isResponsive: PropTypes.bool.isRequired,
+    hideSource: PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    allowAnimationMode: PropTypes.bool.isRequired,
+    showVisualizationHeader: PropTypes.bool.isRequired,
+    isIframeEmbed: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
   },
 
   getChannelId() {

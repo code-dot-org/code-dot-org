@@ -4,11 +4,12 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
 const Image = React.createClass({
   propTypes: {
-    style: React.PropTypes.object.isRequired
+    style: PropTypes.object.isRequired
   },
 
   getInitialState() {

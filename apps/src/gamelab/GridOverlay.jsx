@@ -1,5 +1,6 @@
 /** @file Grid over visualization */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const styles = {
   line: {
@@ -30,11 +31,11 @@ export const styles = {
 const GridOverlay = React.createClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
-    width: React.PropTypes.number,
-    height: React.PropTypes.number,
-    mouseX: React.PropTypes.number,
-    mouseY: React.PropTypes.number,
-    show: React.PropTypes.bool.isRequired
+    width: PropTypes.number,
+    height: PropTypes.number,
+    mouseX: PropTypes.number,
+    mouseY: PropTypes.number,
+    show: PropTypes.bool.isRequired
   },
 
   render() {

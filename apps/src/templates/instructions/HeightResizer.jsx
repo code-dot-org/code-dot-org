@@ -4,8 +4,9 @@
  * which handles any movement.
  */
 
-var React = require('react');
-var Radium = require('radium');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Radium from 'radium';
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
 
@@ -32,13 +33,13 @@ var styles = {
 
 var HeightResizer = React.createClass({
   propTypes: {
-    position: React.PropTypes.number.isRequired,
+    position: PropTypes.number.isRequired,
     /**
      * @param {number} delta - amount we're trying to resize by
      * @returns {number} delta - amount we've actually resized
      */
-    onResize: React.PropTypes.func.isRequired,
-    style: React.PropTypes.object,
+    onResize: PropTypes.func.isRequired,
+    style: PropTypes.object,
   },
 
   getInitialState: function () {

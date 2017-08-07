@@ -4,6 +4,7 @@
  * Supports both Bee and Farmer skins.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 var HarvesterCell = require('@cdo/apps/maze/harvesterCell');
 var PlanterCell = require('@cdo/apps/maze/planterCell');
 var BeeCell = require('@cdo/apps/maze/beeCell');
@@ -22,8 +23,8 @@ var Grid = require('./Grid');
 
 var CellJSON = React.createClass({
   propTypes: {
-    serialization: React.PropTypes.object.isRequired,
-    onChange: React.PropTypes.func.isRequired
+    serialization: PropTypes.object.isRequired,
+    onChange: PropTypes.func.isRequired
   },
 
   componentDidUpdate: function () {
@@ -48,11 +49,11 @@ var CellJSON = React.createClass({
 
 var GridEditor = React.createClass({
   propTypes: {
-    serializedMaze: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)),
-    maze: React.PropTypes.arrayOf(React.PropTypes.array), // maze items can be integers or strings
-    initialDirt: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.number)),
-    skin: React.PropTypes.string.isRequired,
-    onUpdate: React.PropTypes.func.isRequired
+    serializedMaze: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)),
+    maze: PropTypes.arrayOf(PropTypes.array), // maze items can be integers or strings
+    initialDirt: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)),
+    skin: PropTypes.string.isRequired,
+    onUpdate: PropTypes.func.isRequired
   },
 
   getInitialState: function () {

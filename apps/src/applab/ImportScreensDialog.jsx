@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import * as applabConstants from './constants';
@@ -166,8 +167,8 @@ export const ImportScreensDialog = React.createClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
     project: importableProjectShape,
-    onImport: React.PropTypes.func.isRequired,
-    isImporting: React.PropTypes.bool,
+    onImport: PropTypes.func.isRequired,
+    isImporting: PropTypes.bool,
   }),
 
   getDefaultProps() {

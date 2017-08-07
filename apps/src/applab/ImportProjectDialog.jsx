@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
 import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
@@ -27,9 +28,9 @@ const styles = {
 export const ImportProjectDialog = React.createClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
-    onImport: React.PropTypes.func.isRequired,
-    isFetching: React.PropTypes.bool,
-    error: React.PropTypes.bool,
+    onImport: PropTypes.func.isRequired,
+    isFetching: PropTypes.bool,
+    error: PropTypes.bool,
   }),
 
   getInitialState() {
