@@ -2353,7 +2353,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
 
-    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+    if (cmd && cmd.opts && cmd.opts.waitTimeout && !cmd.opts.complete) {
       // Note: not calling waitCallback() or setting complete = true
       window.clearTimeout(cmd.opts.waitTimeout);
     }
