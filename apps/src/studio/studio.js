@@ -4294,9 +4294,9 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnRight90(turnRight90(Studio.lastMoveSingleDir)),
+        dir: Studio.lastMoveSingleDir,
+        backward: true
       });
-      Studio.lastMoveSingleDir = turnRight90(turnRight90(Studio.lastMoveSingleDir));
       break;
     case 'turnRight':
       studioApp().highlight(cmd.id);
@@ -5864,6 +5864,8 @@ Studio.getSkin = function () {
  * @param {Object} opts
  * @param {Direction} opts.dir - The direction in which the sprite should move.
  * @param {number} opts.spriteIndex
+ * @param {boolean} opts.backward - whether the sprite should move toward
+ *        (default) or away from the given direction
  */
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
@@ -5888,6 +5890,11 @@ Studio.moveSingle = function (opts) {
       break;
   }
 
+  if (opts.backward) {
+    deltaX *= -1;
+    deltaY *= -1;
+  }
+
   var projectedX = sprite.x + deltaX;
   var projectedY = sprite.y + deltaY;
 
@@ -5910,10 +5917,10 @@ Studio.moveSingle = function (opts) {
   if (skin.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new GridMoveAndCancel(
-          deltaX, deltaY, skin.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
     } else {
       sprite.addAction(new GridMove(
-          deltaX, deltaY, skin.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
     }
 
     Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);
