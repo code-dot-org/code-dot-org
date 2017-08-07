@@ -1,6 +1,7 @@
 /** @file Centered animated Modulo Clock component for the Crypto widget levels */
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements
@@ -44,7 +45,7 @@ const style = {
 
 const ModuloClock = React.createClass({
   propTypes: {
-    modulus: React.PropTypes.number
+    modulus: PropTypes.number
   },
 
   getInitialState() {

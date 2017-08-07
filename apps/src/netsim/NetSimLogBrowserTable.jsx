@@ -1,5 +1,6 @@
 /** @file Table of log rows displayed in the log browser */
 import React from 'react';
+import PropTypes from 'prop-types';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';
 import moment from 'moment';
@@ -34,11 +35,11 @@ style.prewrapTd = Object.assign({}, style.td, style.prewrap);
  */
 const NetSimLogBrowserTable = React.createClass({
   propTypes: {
-    logRows: React.PropTypes.arrayOf(React.PropTypes.object).isRequired,
-    headerFields: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    renderedRowLimit: React.PropTypes.number,
-    teacherView: React.PropTypes.bool,
-    currentSentByFilter: React.PropTypes.string.isRequired
+    logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
+    headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,
+    renderedRowLimit: PropTypes.number,
+    teacherView: PropTypes.bool,
+    currentSentByFilter: PropTypes.string.isRequired
   },
 
   getInitialState() {

@@ -1,5 +1,6 @@
 /* eslint-disable react/no-danger */
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 var styles = {
   main: {
@@ -27,9 +28,9 @@ var NonMarkdownInstructions = function (props) {
 };
 
 NonMarkdownInstructions.propTypes = {
-  puzzleTitle: React.PropTypes.string.isRequired,
-  instructions: React.PropTypes.string,
-  instructions2: React.PropTypes.string
+  puzzleTitle: PropTypes.string.isRequired,
+  instructions: PropTypes.string,
+  instructions2: PropTypes.string
 };
 
 module.exports = NonMarkdownInstructions;

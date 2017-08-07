@@ -1,5 +1,6 @@
 /** Auto-numbered table of arbitrary components, used for character steps */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {AnyChildren} from './types';
 import {LINE_HEIGHT} from './style';
 
@@ -41,7 +42,7 @@ export default function NumberedSteps({start = 1, children}) {
     </table>);
 }
 NumberedSteps.propTypes = {
-  start: React.PropTypes.number,
+  start: PropTypes.number,
   children: AnyChildren
 };
 
@@ -63,9 +64,9 @@ export function Step(props) {
     </tr>);
 }
 Step.propTypes = {
-  index: React.PropTypes.number,
+  index: PropTypes.number,
   children: AnyChildren,
-  requires: React.PropTypes.bool
+  requires: PropTypes.bool
 };
 Step.defaultProps = {
   index: 0
@@ -82,7 +83,7 @@ export function SubStep({text}) {
   );
 }
 SubStep.propTypes = {
-  text: React.PropTypes.string.isRequired
+  text: PropTypes.string.isRequired
 };
 
 export function Heading({text}) {
@@ -93,7 +94,7 @@ export function Heading({text}) {
   );
 }
 Heading.propTypes = {
-  text: React.PropTypes.string.isRequired
+  text: PropTypes.string.isRequired
 };
 
 export function Subheading({text}) {

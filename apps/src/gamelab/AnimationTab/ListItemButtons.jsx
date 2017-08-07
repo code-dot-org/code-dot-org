@@ -1,5 +1,6 @@
 /** @file controls below an animation thumbnail */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import color from "../../util/color";
 import Radium from 'radium';
@@ -48,13 +49,13 @@ var sliderStyle = {
  */
 const ListItemButtons = React.createClass({
   propTypes: {
-    onCloneClick: React.PropTypes.func.isRequired,
-    onDeleteClick: React.PropTypes.func.isRequired,
-    onLoopingChanged: React.PropTypes.func.isRequired,
-    looping: React.PropTypes.bool.isRequired,
-    onFrameDelayChanged: React.PropTypes.func.isRequired,
-    frameDelay: React.PropTypes.number.isRequired,
-    singleFrameAnimation: React.PropTypes.bool.isRequired
+    onCloneClick: PropTypes.func.isRequired,
+    onDeleteClick: PropTypes.func.isRequired,
+    onLoopingChanged: PropTypes.func.isRequired,
+    looping: PropTypes.bool.isRequired,
+    onFrameDelayChanged: PropTypes.func.isRequired,
+    frameDelay: PropTypes.number.isRequired,
+    singleFrameAnimation: PropTypes.bool.isRequired
   },
 
   getInitialState() {

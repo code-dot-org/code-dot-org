@@ -1,7 +1,8 @@
 /** List item placeholder for adding a new item */
-var React = require('react');
-var color = require("../../util/color");
-var Radium = require('radium');
+import React from 'react';
+import PropTypes from 'prop-types';
+import color from '../../util/color';
+import Radium from 'radium';
 
 var styles = {
   tile: {
@@ -52,8 +53,8 @@ var styles = {
  */
 var NewListItem = React.createClass({
   propTypes: {
-    label: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func.isRequired
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
   },
 
   render: function () {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Visualization from './Visualization';
 import StepButton from './StepButton';
 import SpellingControls from './SpellingControls';
@@ -21,9 +22,9 @@ const MazeVisualizationColumn = function (props) {
 };
 
 MazeVisualizationColumn.propTypes = {
-  showCollectorGemCounter: React.PropTypes.bool,
-  showStepButton: React.PropTypes.bool.isRequired,
-  searchWord: React.PropTypes.string
+  showCollectorGemCounter: PropTypes.bool,
+  showStepButton: PropTypes.bool.isRequired,
+  searchWord: PropTypes.string
 };
 
 export default MazeVisualizationColumn;
