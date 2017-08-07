@@ -251,6 +251,18 @@ export function throwOnConsoleErrors() {
 }
 
 /**
+ * Logs current stack to console. Phantomjs doesn't add the stack property unless
+ * the exception is thrown, thus we need to throw/catch a generic error.
+ */
+function logStack() {
+  try {
+    throw new Error();
+  } catch (e) {
+    console.log(e.stack);
+  }
+}
+
+/**
  * This defaults all tests in this scope to throw an exception/fail when there is
  * a call to console.error. It can be overriden by calling allowConsoleErrors.
  * The expectation is that this should generally be called at the top level in
@@ -270,6 +282,9 @@ export function throwOnConsoleErrorsEverywhere() {
     sinon.stub(console, 'error').callsFake(msg => {
       const prefix = throwingOnErrors ? '' : '[ignoring]';
       console.error.wrappedMethod(prefix, msg);
+      if (throwingOnErrors) {
+        logStack();
+      }
 
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
