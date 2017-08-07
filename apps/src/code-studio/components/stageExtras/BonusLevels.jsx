@@ -8,7 +8,7 @@ const THUMBNAIL_IMAGE_SIZE = 200;
 
 const styles = {
   bonusLevel: {
-    width: 200,
+    width: THUMBNAIL_IMAGE_SIZE,
     textAlign: 'center',
     marginRight: 10,
     float: 'left',
