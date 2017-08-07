@@ -26,17 +26,19 @@
     "disable_examples": "false",
     "never_autoplay_video": "true",
     "examples_required": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"If you're having trouble, try writing down the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f77a1ec169a93c73e0c324f31c61fb4d/courseB_maze_seq9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Remember, you can build your program a block at a time, and test as you build.\",\"hint_id\":\"courseB_maze_seq9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/127adf844e5eaf88bdd2687c0b6e72db/courseB_maze_seq9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There are two ways to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c35bf9f0669bdccc19d3410495c147db/courseB_maze_seq9.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try writing down all of the steps on a piece of paper first.\",\"hint_id\":\"courseB_maze_seq9_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bab2eeecaf82c4bc842a491e76cb4041/courseB_maze_seq9.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Build your program a block at a time and test as you build.\",\"hint_id\":\"courseB_maze_seq9_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2629ff37a17271c59f483b722ef4fd9b/courseB_maze_seq9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"There are two ways to solve this puzzle.\",\"hint_id\":\"courseB_maze_seq9_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c35bf9f0669bdccc19d3410495c147db/courseB_maze_seq9.mp3\"}]",
     "markdown_instructions": "**Challenge:** Move around the TNT to get the bird to the pig.",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 22:56:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 22:56:16 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 21:15:21 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3
   }
