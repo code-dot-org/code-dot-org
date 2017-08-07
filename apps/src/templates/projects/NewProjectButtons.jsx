@@ -55,6 +55,38 @@ const PROJECT_INFO = {
   'starwars': {
     label: i18n.projectTypeStarwars(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_starwars.png"
+  },
+  'starwarsblocks': {
+    label: i18n.projectTypeStarwarsBlocks(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_starwarsblocks.png"
+  },
+  'flappy': {
+    label: i18n.projectTypeFlappy(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_flappy.png"
+  },
+  'sports': {
+    label: i18n.projectTypeSports(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_sports.png"
+  },
+  'basketball': {
+    label: i18n.projectTypeBasketball(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_basketball.png"
+  },
+  'bounce': {
+    label: i18n.projectTypeBounce(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_bounce.png"
+  },
+  'infinity': {
+    label: i18n.projectTypeInfinity(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_infinity.png"
+  },
+  'iceage': {
+    label: i18n.projectTypeIceage(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_iceage.png"
+  },
+  'gumball': {
+    label: i18n.projectTypeGumball(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_gumball.png"
   }
 };
 
