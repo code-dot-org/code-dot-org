@@ -4,9 +4,10 @@
  *  and works with React 0.14.7.
  *  @see https://github.com/tomkp/react-split-pane
  */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var _ = require('lodash');
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
 import Radium from 'radium';
 
 const styles = {
@@ -37,11 +38,11 @@ const styles = {
  */
 var ResizablePanes = Radium(React.createClass({
   propTypes: {
-    style: React.PropTypes.object,
-    columnSizes: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    onChange: React.PropTypes.func.isRequired,
-    children: React.PropTypes.node,
-    lockedColumns: React.PropTypes.arrayOf(React.PropTypes.number)
+    style: PropTypes.object,
+    columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    onChange: PropTypes.func.isRequired,
+    children: PropTypes.node,
+    lockedColumns: PropTypes.arrayOf(PropTypes.number)
   },
 
   getInitialState: function () {

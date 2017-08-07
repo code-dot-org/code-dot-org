@@ -1,13 +1,14 @@
 
-var React = require('react');
-var msg = require('@cdo/locale');
+import React from 'react';
+import PropTypes from 'prop-types';
+import msg from '@cdo/locale';
 
 /**
  * "Rotate your device" overlay.
  */
 var RotateContainer = React.createClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired
+    assetUrl: PropTypes.func.isRequired
   },
 
   render: function () {

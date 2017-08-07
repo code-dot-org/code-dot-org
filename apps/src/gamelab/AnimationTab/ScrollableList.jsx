@@ -1,6 +1,7 @@
 /** @file Vertical scrolling list */
-var React = require('react');
-var Radium = require('radium');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Radium from 'radium';
 
 var staticStyles = {
   root: {
@@ -18,9 +19,9 @@ var staticStyles = {
  */
 var ScrollableList = React.createClass({
   propTypes: {
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    children: React.PropTypes.node,
+    className: PropTypes.string,
+    style: PropTypes.object,
+    children: PropTypes.node,
   },
 
   render: function () {

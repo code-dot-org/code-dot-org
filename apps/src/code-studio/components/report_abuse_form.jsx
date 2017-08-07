@@ -1,7 +1,8 @@
 /* eslint-disable react/no-danger */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var _ = require('lodash');
+import React from 'react';
+import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import _ from 'lodash';
 
 /**
  * A component containing some text/links for projects that have had abuse
@@ -21,11 +22,11 @@ var alert = window.alert;
  */
 var AgeDropdown = React.createClass({
   propTypes: {
-    age: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+    age: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
     ]),
-    style: React.PropTypes.object
+    style: PropTypes.object
   },
 
   render: function () {
@@ -51,14 +52,14 @@ var AgeDropdown = React.createClass({
 
 var ReportAbuseForm = React.createClass({
   propTypes: {
-    i18n: React.PropTypes.object.isRequired,
-    csrfToken: React.PropTypes.string.isRequired,
-    abuseUrl: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string,
-    email: React.PropTypes.string,
-    age: React.PropTypes.oneOfType([
-      React.PropTypes.string,
-      React.PropTypes.number
+    i18n: PropTypes.object.isRequired,
+    csrfToken: PropTypes.string.isRequired,
+    abuseUrl: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    email: PropTypes.string,
+    age: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
     ])
   },
 

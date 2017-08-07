@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SoundList from './SoundList';
 import SoundCategory from './SoundCategory';
 import * as color from "../../util/color";
@@ -63,8 +64,8 @@ const styles = {
  */
 const SoundLibrary = React.createClass({
   propTypes: {
-    alignment: React.PropTypes.string,
-    assetChosen: React.PropTypes.func.isRequired
+    alignment: PropTypes.string,
+    assetChosen: PropTypes.func.isRequired
   },
 
   getInitialState() {

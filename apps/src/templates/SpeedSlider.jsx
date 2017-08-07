@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../util/color";
 import Radium from 'radium';
 import dom from '../dom';
@@ -38,11 +39,11 @@ let trackLength = knobXMax - knobXMin - 5;
  */
 const SpeedSlider = React.createClass({
   propTypes: {
-    hasFocus: React.PropTypes.bool,
-    style: React.PropTypes.object,
-    value: React.PropTypes.number.isRequired,
-    lineWidth: React.PropTypes.number,
-    onChange: React.PropTypes.func.isRequired
+    hasFocus: PropTypes.bool,
+    style: PropTypes.object,
+    value: PropTypes.number.isRequired,
+    lineWidth: PropTypes.number,
+    onChange: PropTypes.func.isRequired
   },
 
   getInitialState() {

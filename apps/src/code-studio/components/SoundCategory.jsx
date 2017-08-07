@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "@cdo/apps/util/color";
 
 const styles = {
@@ -23,9 +24,9 @@ const styles = {
  */
 const SoundCategory = React.createClass({
   propTypes: {
-    displayName: React.PropTypes.string,
-    category: React.PropTypes.string,
-    onSelect: React.PropTypes.func.isRequired
+    displayName: PropTypes.string,
+    category: PropTypes.string,
+    onSelect: PropTypes.func.isRequired
   },
 
   selectCategory() {

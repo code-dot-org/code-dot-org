@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { selectSection, NO_SECTION } from '../../sectionsRedux';
 import i18n from '@cdo/locale';
@@ -15,23 +16,23 @@ const styles = {
 const SectionSelector = React.createClass({
   propTypes: {
     // If false, the first option is "Select Section"
-    requireSelection: React.PropTypes.bool,
+    requireSelection: PropTypes.bool,
     // If true, we'll show even if we don't have any locakable or hidden stages
-    alwaysShow: React.PropTypes.bool,
+    alwaysShow: PropTypes.bool,
     // If true, changing sections results in us hitting the server
-    reloadOnChange: React.PropTypes.bool,
+    reloadOnChange: PropTypes.bool,
 
     // redux provided
-    sections: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        id: React.PropTypes.string.isRequired
+    sections: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired
       })
     ).isRequired,
-    selectedSectionId: React.PropTypes.string,
-    scriptHasLockableStages: React.PropTypes.bool.isRequired,
-    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
-    selectSection: React.PropTypes.func.isRequired,
+    selectedSectionId: PropTypes.string,
+    scriptHasLockableStages: PropTypes.bool.isRequired,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    selectSection: PropTypes.func.isRequired,
   },
 
   handleSelectChange(event) {

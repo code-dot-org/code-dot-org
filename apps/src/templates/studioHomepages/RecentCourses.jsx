@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
@@ -21,7 +22,7 @@ const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
     isTeacher: PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
     studentTopCourse: shapes.studentTopCourse
   },
 

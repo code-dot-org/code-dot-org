@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Button,
   Row,
@@ -64,13 +65,13 @@ const freeResponseQuestions = [
 
 const SurveyResultsHeader = React.createClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    workshops: React.PropTypes.arrayOf(workshopShape),
-    organizerView: React.PropTypes.bool,
-    preselectedWorkshopId: React.PropTypes.string
+    workshops: PropTypes.arrayOf(workshopShape),
+    organizerView: PropTypes.bool,
+    preselectedWorkshopId: PropTypes.string
   },
 
   getInitialState() {

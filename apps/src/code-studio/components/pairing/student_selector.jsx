@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { studentsShape } from './types';
 
 /**
@@ -7,7 +8,7 @@ import { studentsShape } from './types';
 const StudentSelector = React.createClass({
   propTypes: {
     students: studentsShape,
-    handleSubmit: React.PropTypes.func.isRequired
+    handleSubmit: PropTypes.func.isRequired
   },
 
   getInitialState() {

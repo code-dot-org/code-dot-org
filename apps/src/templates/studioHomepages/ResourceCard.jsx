@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from '../Button';
 import color from "../../util/color";
 
@@ -95,13 +96,13 @@ const styles = {
 
 const ResourceCard = React.createClass({
   propTypes: {
-    isJumbo: React.PropTypes.bool,
-    title: React.PropTypes.string.isRequired,
-    description: React.PropTypes.string.isRequired,
-    buttonText: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired
+    isJumbo: PropTypes.bool,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
   * Many of our hints include Blockly blocks. Unfortunately, Blockly
@@ -9,7 +10,7 @@ import React from 'react';
   */
 var ReadOnlyBlockSpace = React.createClass({
   propTypes: {
-    block: React.PropTypes.object.isRequired,
+    block: PropTypes.object.isRequired,
   },
 
   getInitialState: function () {
