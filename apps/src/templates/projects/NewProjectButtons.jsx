@@ -16,7 +16,15 @@ const PROJECT_INFO = {
     label: i18n.projectTypePlaylab(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
   },
+  'playlab_k1': {
+    label: i18n.projectTypePlaylab(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_playlab.png"
+  },
   'artist': {
+    label: i18n.projectTypeArtist(),
+    thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
+  },
+  'artist_k1': {
     label: i18n.projectTypeArtist(),
     thumbnail: "/shared/images/fill-70x70/courses/logo_artist.png"
   },
@@ -100,17 +108,22 @@ const styles = {
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',
-    marginLeft: 10
+    marginLeft: 10,
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
   tilePadding: {
     marginRight: 18,
   },
   thumbnail: {
     borderTopLeftRadius: 2,
-    borderBottomLeftRadius: 2
+    borderBottomLeftRadius: 2,
+    marginRight: 10
   },
   label: {
-    padding: 10
+    paddingRight: 5,
+    color: color.teal
   },
   description: {
     paddingRight: 10,
@@ -137,14 +150,14 @@ const NewProjectButtons = React.createClass({
         <div>
           {
             projectTypes.slice(0,4).map((projectType, index) => (
-              <div key={index} style={[styles.tile, index < 3 && styles.tilePadding]}>
-                <a href={"/projects/" + projectType + "/new"}>
+              <a key={index} href={"/projects/" + projectType + "/new"}>
+                <div style={[styles.tile, index < 3 && styles.tilePadding]}>
                   <img style={styles.thumbnail} src={PROJECT_INFO[projectType].thumbnail} />
-                  <span style={styles.label}>
+                  <div style={styles.label}>
                     {PROJECT_INFO[projectType].label}
-                  </span>
-                </a>
-              </div>
+                  </div>
+                </div>
+              </a>
             ))
           }
         </div>
