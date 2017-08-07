@@ -7,6 +7,7 @@ import ConfirmDeleteButton from './ConfirmDeleteButton';
 import ConfirmImportButton from './ConfirmImportButton';
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
 import applabMsg from '@cdo/applab/locale';
 
 import * as dataStyles from './dataStyles';
@@ -48,10 +49,10 @@ const styles = {
 
 const TableControls = React.createClass({
   propTypes: {
-    clearTable: React.PropTypes.func.isRequired,
-    exportCsv: React.PropTypes.func.isRequired,
-    importCsv: React.PropTypes.func.isRequired,
-    tableName: React.PropTypes.string.isRequired,
+    clearTable: PropTypes.func.isRequired,
+    exportCsv: PropTypes.func.isRequired,
+    importCsv: PropTypes.func.isRequired,
+    tableName: PropTypes.string.isRequired,
   },
 
   render() {

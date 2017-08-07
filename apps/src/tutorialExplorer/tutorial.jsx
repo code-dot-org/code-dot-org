@@ -2,6 +2,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import shapes from './shapes';
 import { getTutorialDetailString } from './util';
 import { getResponsiveValue } from './responsive';
@@ -56,7 +57,7 @@ const styles = {
 const Tutorial = React.createClass({
   propTypes: {
     item: shapes.tutorial.isRequired,
-    tutorialClicked: React.PropTypes.func.isRequired
+    tutorialClicked: PropTypes.func.isRequired
   },
 
   render() {

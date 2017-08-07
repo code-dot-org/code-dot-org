@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ResourceCard from './ResourceCard';
 import ContentContainer from '../ContentContainer';
@@ -16,8 +17,8 @@ const styles = {
 
 const TeacherAssignablesCatalog = React.createClass({
   propTypes: {
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    codeOrgUrlPrefix: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
   },
 
   componentDidMount() {

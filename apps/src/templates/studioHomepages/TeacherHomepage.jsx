@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -20,10 +21,10 @@ const styles = {
 
 const TeacherHomepage = React.createClass({
   propTypes: {
-    sections: React.PropTypes.array,
+    sections: PropTypes.array,
     courses: shapes.courses,
-    announcements: React.PropTypes.array.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
+    announcements: PropTypes.array.isRequired,
+    isRtl: PropTypes.bool.isRequired,
   },
 
   componentDidMount() {

@@ -1,5 +1,6 @@
 /** @file Button that opens the data browser */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import applabMsg from '@cdo/applab/locale';
 import styles from '../templates/ToggleButtonStyles';
@@ -11,7 +12,7 @@ import FontAwesome from '../templates/FontAwesome';
  */
 var ViewDataButton = React.createClass({
   propTypes: {
-    onClick: React.PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired
   },
 
   render: function () {

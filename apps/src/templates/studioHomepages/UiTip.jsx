@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const UiTip = React.createClass({
   propTypes: {
-    index: React.PropTypes.number,
-    position: React.PropTypes.object,
-    text: React.PropTypes.string,
-    arrowDirection: React.PropTypes.string,
-    closeClicked: React.PropTypes.func.isRequired
+    index: PropTypes.number,
+    position: PropTypes.object,
+    text: PropTypes.string,
+    arrowDirection: PropTypes.string,
+    closeClicked: PropTypes.func.isRequired
   },
 
   closeClicked(index) {

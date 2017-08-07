@@ -1,16 +1,17 @@
 import $ from 'jquery';
-var React = require('react');
-var msg = require('@cdo/locale');
+import React from 'react';
+import PropTypes from 'prop-types';
+import msg from '@cdo/locale';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
  */
 var VersionRow = React.createClass({
   propTypes: {
-    versionId: React.PropTypes.string.isRequired,
-    lastModified: React.PropTypes.instanceOf(Date),
-    isLatest: React.PropTypes.bool,
-    onChoose: React.PropTypes.func
+    versionId: PropTypes.string.isRequired,
+    lastModified: PropTypes.instanceOf(Date),
+    isLatest: PropTypes.bool,
+    onChoose: PropTypes.func
   },
 
   getLastModifiedTimestamp: function () {

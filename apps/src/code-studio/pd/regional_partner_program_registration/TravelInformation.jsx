@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   FormGroup,
   ControlLabel
@@ -105,7 +106,7 @@ export default class TravelInformation extends FormComponent {
 
 TravelInformation.propTypes = {
   ...FormComponent.propTypes,
-  teacherconLocation: React.PropTypes.string.isRequired,
+  teacherconLocation: PropTypes.string.isRequired,
 };
 
 TravelInformation.associatedFields = [
