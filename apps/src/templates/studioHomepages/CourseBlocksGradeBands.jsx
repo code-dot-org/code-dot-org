@@ -42,8 +42,8 @@ const CourseBlocksGradeBands = React.createClass({
 
     return (
       <ContentContainer
-        heading={i18n.courseBlocksToolsTitleTeacher()}
-        description={i18n.standaloneToolsDescription()}
+        heading={i18n.courseBlocksGradeBandsHeading()}
+        description={i18n.courseBlocksGradeBandsDescription()}
         isRtl={this.props.isRtl}
       >
         <div style={styles.container}>
