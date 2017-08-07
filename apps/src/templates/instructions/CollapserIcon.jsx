@@ -1,7 +1,8 @@
-var React = require('react');
-var Radium = require('radium');
-var color = require("../../util/color");
-var styleConstants = require('../../styleConstants');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Radium from 'radium';
+import color from '../../util/color';
+import styleConstants from '../../styleConstants';
 
 var styles = {
   showHideButton: {
@@ -34,8 +35,8 @@ var CollapserIcon = function (props) {
 };
 
 CollapserIcon.propTypes = {
-  onClick: React.PropTypes.func.isRequired,
-  collapsed: React.PropTypes.bool.isRequired
+  onClick: PropTypes.func.isRequired,
+  collapsed: PropTypes.bool.isRequired
 };
 
 module.exports = Radium(CollapserIcon);

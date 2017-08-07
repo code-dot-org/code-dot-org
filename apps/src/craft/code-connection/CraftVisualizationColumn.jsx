@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import GameButtons from '../../templates/GameButtons';
 import BelowVisualization from '../../templates/BelowVisualization';
@@ -6,7 +7,7 @@ import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv
 
 export default class CraftVisualizationColumn extends React.Component {
   static propTypes = {
-    showScore: React.PropTypes.bool.isRequired
+    showScore: PropTypes.bool.isRequired
   }
 
   render() {

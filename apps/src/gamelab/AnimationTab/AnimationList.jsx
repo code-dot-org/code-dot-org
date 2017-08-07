@@ -1,5 +1,6 @@
 /** @file Vertical scrolling list of animation sequences */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import color from "../../util/color";
 import * as shapes from '../shapes';
@@ -28,7 +29,7 @@ const AnimationList = React.createClass({
   propTypes: {
     animationList: shapes.AnimationList.isRequired,
     selectedAnimation: shapes.AnimationKey,
-    onNewItemClick: React.PropTypes.func.isRequired
+    onNewItemClick: PropTypes.func.isRequired
   },
 
   render() {

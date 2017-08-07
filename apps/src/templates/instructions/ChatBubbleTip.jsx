@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 
@@ -32,9 +33,9 @@ const ChatBubbleTip = ({ isRtl, color, background }) => {
 };
 
 ChatBubbleTip.propTypes = {
-  color: React.PropTypes.string,
-  background: React.PropTypes.string,
-  isRtl: React.PropTypes.bool.isRequired
+  color: PropTypes.string,
+  background: PropTypes.string,
+  isRtl: PropTypes.bool.isRequired
 };
 
 export default connect(state => {

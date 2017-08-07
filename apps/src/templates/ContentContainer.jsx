@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import styleConstants from '../styleConstants';
@@ -78,15 +79,15 @@ const styles = {
 
 const ContentContainer= React.createClass({
   propTypes: {
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.node,
-      React.PropTypes.arrayOf(React.PropTypes.node)
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node)
     ]),
-    heading: React.PropTypes.string.isRequired,
-    linkText: React.PropTypes.string,
-    link: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired,
-    description: React.PropTypes.string,
+    heading: PropTypes.string.isRequired,
+    linkText: PropTypes.string,
+    link: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired,
+    description: PropTypes.string,
   },
 
   render() {

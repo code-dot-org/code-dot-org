@@ -1,5 +1,6 @@
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 
 const styles = {
@@ -26,10 +27,10 @@ const styles = {
 export default Radium(React.createClass({
 
   propTypes: {
-    numLinesWritten: React.PropTypes.number.isRequired,
-    totalNumLinesWritten: React.PropTypes.number.isRequired,
-    children: React.PropTypes.node,
-    useChallengeStyles: React.PropTypes.bool,
+    numLinesWritten: PropTypes.number.isRequired,
+    totalNumLinesWritten: PropTypes.number.isRequired,
+    children: PropTypes.node,
+    useChallengeStyles: PropTypes.bool,
   },
 
   render() {

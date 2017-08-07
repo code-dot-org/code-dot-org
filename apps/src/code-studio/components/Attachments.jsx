@@ -1,7 +1,8 @@
 /* eslint-disable react/no-is-mounted */
 /* global dashboard */
 
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var assetListStore = require('../assets/assetListStore');
 
@@ -26,8 +27,8 @@ var styles = {
  */
 var Attachments = React.createClass({
   propTypes: {
-    readonly: React.PropTypes.bool,
-    showUnderageWarning: React.PropTypes.bool,
+    readonly: PropTypes.bool,
+    showUnderageWarning: PropTypes.bool,
   },
 
   getInitialState: function () {

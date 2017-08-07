@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
@@ -7,7 +8,7 @@ import i18n from "@cdo/locale";
 
 export const CourseBlocksCsf = React.createClass({
   propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired
   },
 
   render() {
@@ -132,7 +133,7 @@ export const CourseBlocksTools = React.createClass({
 
 export const CourseBlocksHoc = React.createClass({
   propTypes: {
-    rowCount: React.PropTypes.number.isRequired
+    rowCount: PropTypes.number.isRequired
   },
 
   componentDidMount() {
@@ -172,7 +173,7 @@ export const CourseBlocksHoc = React.createClass({
 
 export const CourseBlocksAll = React.createClass({
   propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired
   },
 
   componentDidMount() {

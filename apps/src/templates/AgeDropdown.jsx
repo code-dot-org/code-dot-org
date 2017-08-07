@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
@@ -9,7 +10,7 @@ var React = require('react');
  */
 module.exports = React.createClass({
   propTypes: {
-    style: React.PropTypes.object
+    style: PropTypes.object
   },
 
   render: function () {

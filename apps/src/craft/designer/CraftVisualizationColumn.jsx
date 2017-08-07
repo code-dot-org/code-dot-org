@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import msg from '@cdo/locale';
 import craftMsg from './locale';
 
@@ -9,8 +10,8 @@ import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv
 
 export default React.createClass({
   propTypes: {
-    showFinishButton: React.PropTypes.bool.isRequired,
-    showScore: React.PropTypes.bool.isRequired
+    showFinishButton: PropTypes.bool.isRequired,
+    showScore: PropTypes.bool.isRequired
   },
 
   render() {

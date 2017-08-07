@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
@@ -13,13 +14,13 @@ import Overlay from './Overlay';
  */
 const AppView = React.createClass({
   propTypes: {
-    hideSource: React.PropTypes.bool.isRequired,
-    isResponsive: React.PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
+    hideSource: PropTypes.bool.isRequired,
+    isResponsive: PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: PropTypes.bool.isRequired,
 
     // not provided by redux
-    visualizationColumn: React.PropTypes.element,
-    onMount: React.PropTypes.func.isRequired,
+    visualizationColumn: PropTypes.element,
+    onMount: PropTypes.func.isRequired,
   },
 
   componentDidMount: function () {

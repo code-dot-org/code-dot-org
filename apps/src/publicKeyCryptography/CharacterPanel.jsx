@@ -1,5 +1,6 @@
 /** @file Panel with title, used for each character in crypto widget */
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../util/color";
 import {AnyChildren} from './types';
 
@@ -28,6 +29,6 @@ export default function CharacterPanel({title, children}) {
   );
 }
 CharacterPanel.propTypes = {
-  title: React.PropTypes.string,
+  title: PropTypes.string,
   children: AnyChildren
 };

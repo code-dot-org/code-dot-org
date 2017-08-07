@@ -4,14 +4,15 @@
  * @see @cdo/apps/maze/cell
  */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { SquareType } from '@cdo/apps/maze/tiles';
 
 export default class CellEditor extends React.Component {
   static propTypes = {
-    cell: React.PropTypes.object.isRequired,
-    row: React.PropTypes.number.isRequired,
-    col: React.PropTypes.number.isRequired,
-    onUpdate: React.PropTypes.func.isRequired,
+    cell: PropTypes.object.isRequired,
+    row: PropTypes.number.isRequired,
+    col: PropTypes.number.isRequired,
+    onUpdate: PropTypes.func.isRequired,
   }
 
   constructor(props) {

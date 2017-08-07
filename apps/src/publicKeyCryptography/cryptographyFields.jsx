@@ -1,6 +1,7 @@
 /** @file Input fields specific to the cryptography widget */
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import IntegerDropdown from './IntegerDropdown';
 import {primesInRange, privateKeyList} from './cryptographyMath';
@@ -33,9 +34,9 @@ export function PrivateKeyDropdown(props) {
     />);
 }
 PrivateKeyDropdown.propTypes = {
-  publicModulus: React.PropTypes.number,
-  value: React.PropTypes.number,
-  onChange: React.PropTypes.func.isRequired
+  publicModulus: PropTypes.number,
+  value: PropTypes.number,
+  onChange: PropTypes.func.isRequired
 };
 
 /**
@@ -52,8 +53,8 @@ export function PublicModulusDropdown(props) {
     />);
 }
 PublicModulusDropdown.propTypes = {
-  value: React.PropTypes.number,
-  onChange: React.PropTypes.func.isRequired
+  value: PropTypes.number,
+  onChange: PropTypes.func.isRequired
 };
 
 /**
@@ -72,9 +73,9 @@ export function SecretNumberDropdown(props) {
     />);
 }
 SecretNumberDropdown.propTypes = {
-  publicModulus: React.PropTypes.number,
-  value: React.PropTypes.number,
-  onChange: React.PropTypes.func.isRequired
+  publicModulus: PropTypes.number,
+  value: PropTypes.number,
+  onChange: PropTypes.func.isRequired
 };
 
 /**
@@ -93,9 +94,9 @@ export function GoButton(props) {
     </button>);
 }
 GoButton.propTypes = {
-  className: React.PropTypes.string,
-  onClick: React.PropTypes.func.isRequired,
-  disabled: React.PropTypes.bool
+  className: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool
 };
 
 function Keyword(props) {
@@ -107,8 +108,8 @@ function Keyword(props) {
   return <span style={keywordStyle}>{props.children}</span>;
 }
 Keyword.propTypes = {
-  color: React.PropTypes.string.isRequired,
-  children: React.PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
 };
 
 export function KeywordPublicModulus() {

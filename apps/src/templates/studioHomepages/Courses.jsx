@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
@@ -45,15 +46,15 @@ const styles = {
  */
 const Courses = React.createClass({
   propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
-    isSignedOut: React.PropTypes.bool.isRequired,
-    linesCount: React.PropTypes.string.isRequired,
-    studentsCount: React.PropTypes.string.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number,
-    isRtl: React.PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
+    isSignedOut: PropTypes.bool.isRequired,
+    linesCount: PropTypes.string.isRequired,
+    studentsCount: PropTypes.string.isRequired,
+    codeOrgUrlPrefix: PropTypes.string.isRequired,
+    showInitialTips: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
+    isRtl: PropTypes.bool.isRequired
   },
 
   componentDidMount() {

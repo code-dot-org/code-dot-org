@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 var msg = require('@cdo/locale');
 
 var GameButtons = require('../../templates/GameButtons').default;
@@ -27,7 +28,7 @@ var CraftVisualizationColumn = function (props) {
 };
 
 CraftVisualizationColumn.propTypes = {
-  showFinishButton: React.PropTypes.bool.isRequired
+  showFinishButton: PropTypes.bool.isRequired
 };
 
 module.exports = CraftVisualizationColumn;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from "../../util/color";
@@ -35,9 +36,9 @@ const styles = {
 
 const AnnouncementsCarousel = React.createClass({
   propTypes: {
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.node,
-      React.PropTypes.arrayOf(React.PropTypes.node)
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node)
     ])
   },
 
