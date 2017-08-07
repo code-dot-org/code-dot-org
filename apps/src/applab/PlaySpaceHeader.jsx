@@ -1,6 +1,7 @@
 /** @file Row of controls above the visualization. */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
@@ -12,21 +13,21 @@ import ViewDataButton from './ViewDataButton';
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
-    channelId: React.PropTypes.string.isRequired,
-    hasDataMode: React.PropTypes.bool.isRequired,
-    hasDesignMode: React.PropTypes.bool.isRequired,
-    isEditingProject: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
-    interfaceMode: React.PropTypes.oneOf([
+    channelId: PropTypes.string.isRequired,
+    hasDataMode: PropTypes.bool.isRequired,
+    hasDesignMode: PropTypes.bool.isRequired,
+    isEditingProject: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    isViewDataButtonHidden: PropTypes.bool.isRequired,
+    interfaceMode: PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
       ApplabInterfaceMode.DATA
     ]).isRequired,
-    playspacePhoneFrame: React.PropTypes.bool,
-    screenIds: React.PropTypes.array.isRequired,
-    onScreenCreate: React.PropTypes.func.isRequired,
-    onInterfaceModeChange: React.PropTypes.func.isRequired
+    playspacePhoneFrame: PropTypes.bool,
+    screenIds: PropTypes.array.isRequired,
+    onScreenCreate: PropTypes.func.isRequired,
+    onInterfaceModeChange: PropTypes.func.isRequired
   },
 
   handleViewData: function () {

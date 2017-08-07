@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from '../../../../util/color';
 import EnrollmentUnitAssignment from './enrollmentUnitAssignment';
 
@@ -16,7 +17,7 @@ const styles = {
 
 const PlcEnrollment = React.createClass({
   propTypes: {
-    plcData: React.PropTypes.object
+    plcData: PropTypes.object
   },
 
   renderEnrollmentUnitAssignments() {

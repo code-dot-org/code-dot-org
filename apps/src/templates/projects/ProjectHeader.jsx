@@ -1,12 +1,13 @@
 /** @file Header banner and gallery naviation for the project gallery */
 import React from 'react';
+import PropTypes from 'prop-types';
 import i18n from "@cdo/locale";
 import GallerySwitcher from '@cdo/apps/templates/projects/GallerySwitcher';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 const ProjectHeader = React.createClass({
   propTypes: {
-    showGallery: React.PropTypes.func.isRequired
+    showGallery: PropTypes.func.isRequired
   },
 
   render() {

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
@@ -21,8 +22,8 @@ export function isResponsiveFromState(state) {
  */
 const ProtectedVisualizationDiv = React.createClass({
   propTypes: {
-    isResponsive: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.node,
+    isResponsive: PropTypes.bool.isRequired,
+    children: PropTypes.node,
   },
 
   render() {

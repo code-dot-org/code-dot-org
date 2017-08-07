@@ -3,15 +3,16 @@
 import FontAwesome from './FontAwesome';
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const PendingButton = React.createClass({
   propTypes: {
-    isPending: React.PropTypes.bool.isRequired,
-    onClick: React.PropTypes.func.isRequired,
-    pendingStyle: React.PropTypes.any,
-    pendingText: React.PropTypes.string.isRequired,
-    style: React.PropTypes.any,
-    text: React.PropTypes.string.isRequired,
+    isPending: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+    pendingStyle: PropTypes.any,
+    pendingText: PropTypes.string.isRequired,
+    style: PropTypes.any,
+    text: PropTypes.string.isRequired,
   },
 
   render() {

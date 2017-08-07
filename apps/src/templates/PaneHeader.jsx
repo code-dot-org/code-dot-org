@@ -4,8 +4,9 @@
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
 
-var React = require('react');
-var Radium = require('radium');
+import React from 'react';
+import PropTypes from 'prop-types';
+import Radium from 'radium';
 
 var commonStyles = require('../commonStyles');
 var styleConstants = require('../styleConstants');
@@ -84,9 +85,9 @@ var styles = {
  */
 const PaneHeader = Radium(React.createClass({
   propTypes: {
-    hasFocus: React.PropTypes.bool.isRequired,
-    readOnly: React.PropTypes.bool,
-    style: React.PropTypes.object
+    hasFocus: PropTypes.bool.isRequired,
+    readOnly: PropTypes.bool,
+    style: PropTypes.object
   },
 
   render: function () {
@@ -113,7 +114,7 @@ const PaneHeader = Radium(React.createClass({
  */
 export const PaneSection = Radium(React.createClass({
   propTypes: {
-    style: React.PropTypes.object,
+    style: PropTypes.object,
   },
 
   render() {
@@ -162,18 +163,18 @@ export const PaneButton = Radium(function (props) {
   );
 });
 PaneButton.propTypes = {
-  headerHasFocus: React.PropTypes.bool.isRequired,
-  iconClass: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  isRtl: React.PropTypes.bool.isRequired,
-  leftJustified: React.PropTypes.bool,
-  isPressed: React.PropTypes.bool,
-  pressedLabel: React.PropTypes.string,
-  onClick: React.PropTypes.func,
-  hiddenImage: React.PropTypes.element,
-  isMinecraft: React.PropTypes.bool,
-  id: React.PropTypes.string,
-  style: React.PropTypes.object,
+  headerHasFocus: PropTypes.bool.isRequired,
+  iconClass: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  isRtl: PropTypes.bool.isRequired,
+  leftJustified: PropTypes.bool,
+  isPressed: PropTypes.bool,
+  pressedLabel: PropTypes.string,
+  onClick: PropTypes.func,
+  hiddenImage: PropTypes.element,
+  isMinecraft: PropTypes.bool,
+  id: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default PaneHeader;

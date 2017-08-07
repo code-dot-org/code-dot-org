@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Pairing from './pairing.jsx';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -8,7 +9,7 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
  */
 var PairingDialog = React.createClass({
   propTypes: {
-    source: React.PropTypes.string
+    source: PropTypes.string
   },
 
   getInitialState() {

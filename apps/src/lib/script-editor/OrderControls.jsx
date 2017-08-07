@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { ControlTypes } from './constants';
 import { moveGroup, moveStage, removeGroup, removeStage } from './editorRedux';
@@ -15,11 +16,11 @@ const styles = {
 
 const OrderControls = React.createClass({
   propTypes: {
-    move: React.PropTypes.func.isRequired,
-    remove: React.PropTypes.func.isRequired,
-    type: React.PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
-    position: React.PropTypes.number.isRequired,
-    total: React.PropTypes.number.isRequired
+    move: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired,
+    type: PropTypes.oneOf(Object.keys(ControlTypes)).isRequired,
+    position: PropTypes.number.isRequired,
+    total: PropTypes.number.isRequired
   },
 
   handleMoveUp() {

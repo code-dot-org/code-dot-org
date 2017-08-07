@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -107,9 +108,9 @@ const styles = {
 
 const ProjectCard = React.createClass({
   propTypes: {
-    projectData: React.PropTypes.object.isRequired,
-    currentGallery: React.PropTypes.string.isRequired,
-    hideActions: React.PropTypes.bool
+    projectData: PropTypes.object.isRequired,
+    currentGallery: PropTypes.string.isRequired,
+    hideActions: PropTypes.bool
   },
 
   getInitialState() {

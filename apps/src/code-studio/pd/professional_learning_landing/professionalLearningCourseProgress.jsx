@@ -3,12 +3,13 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import PlcEnrollment from './plcElements/plcEnrollment';
 
 
 const ProfessionalLearningCourseProgress = React.createClass({
   propTypes: {
-    professionalLearningCourseData: React.PropTypes.array
+    professionalLearningCourseData: PropTypes.array
   },
 
   renderProfessionalLearningEnrollments() {

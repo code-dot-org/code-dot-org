@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import SectionSelector from './section_selector.jsx';
 import StudentSelector from './student_selector.jsx';
@@ -11,8 +12,8 @@ import StudentSelector from './student_selector.jsx';
  */
 const Pairing = React.createClass({
   propTypes: {
-    source: React.PropTypes.string,
-    handleClose: React.PropTypes.func
+    source: PropTypes.string,
+    handleClose: PropTypes.func
   },
 
   getInitialState() {
