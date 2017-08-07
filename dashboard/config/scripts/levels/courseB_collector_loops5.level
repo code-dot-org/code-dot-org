@@ -27,18 +27,19 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Add to the code from the last puzzle to get all of the treasure. ",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try using more than one loop to get the job done.\",\"hint_id\":\"courseB_collector_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/457a77084c55ddd5818a30cf48e5ab7e/courseB_collector_loops5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Can't figure out what's wrong? Try running the code a couple of times to see what happens.\",\"hint_id\":\"courseB_collector_loops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/788f7c187d8a4cb486a3616f73ced6c9/courseB_collector_loops5.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use more than one loop to get the job done.\",\"hint_id\":\"courseB_collector_loops5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f7c31f047db3b2f5ae53f9da4e3fdad/courseB_collector_loops5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try running the code a couple of times to see what happens.\",\"hint_id\":\"courseB_collector_loops5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f16864cb2b8b50b44c2817d482221b6c/courseB_collector_loops5.mp3\"}]",
     "ideal": "9",
     "instructions_important": "false",
     "min_collected": "8",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-28 23:36:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-28 23:36:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:43:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "debugging": 2,
