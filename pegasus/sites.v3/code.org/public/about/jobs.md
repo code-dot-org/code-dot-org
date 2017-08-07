@@ -47,32 +47,37 @@ To apply, email resume, cover letter, portfolio, and/or LinkedIn profile to <a h
 
 **Job Summary:**
 
-Code.org is looking for an experienced Executive Assistant to directly support three C-level Leadership Team members. This is a great opportunity to work on our People Ops team across a range of responsibilities. The ideal candidate is an experienced self-starter with great problem solving skills, impeccable judgment and discretion, integrity, initiative, and good organizational skills. S/he will have a demonstrated ability to pay great attention to detail while still meeting tight deadlines. The Executive Assistant must be able to work with limited supervision and to prioritize work effectively. The EA will be the liaison to the board of directors and senior management team. To support this function, the successful candidate will build relationships with members of our team, as well as people outside of the company.
+Code.org is looking for an experienced Executive Assistant (EA) to directly support three C-level Leadership Team members. This is a great opportunity to work on our People Ops team across a range of responsibilities. The ideal candidate is an experienced self-starter with great problem solving skills, impeccable judgment and discretion, integrity, initiative, and good organizational skills. You should have a demonstrated ability to pay great attention to detail while still meeting tight deadlines, and be able to work with limited supervision and to prioritize work effectively. The EA will be the liaison to the Board of Directors and senior management team. To support this function, the successful candidate will build relationships with members of our team, as well as people outside of the company.
 
-Responsibilities of the position may include:
+The primary responsibility of the person filling this role will be to provide outstanding, proactive executive support. 
 
-- Managing individual Leadership Team member’s calendars
-- Coordinating travel and submitting expense reports for Leadership Team members  
-- Assisting in event planning and order catering, as needed
+Typical duties will include: 
+
+- Managing and maintaining appointment schedules by planning and scheduling internal and external meetings, events, and conferences for our CEO, COO, and President
+- Coordinating extensive travel and submitting expense reports for Leadership Team members
+- Liaise with Board of Directors to maintain quarterly meeting schedule and to prepare minutes and presentation materials
+- Assisting team with planning company meetings and events, office management, and ordering supplies, as needed
 - Other duties, as assigned 
+ 
 
 **Experience and Qualifications:**
 
 The ideal candidate has the following qualifications:
 
-- 2-4 years experience in supporting C-level executives 
-- Excellent written and verbal communications skills 
+- 2-4 years experience in supporting C-level executives using sound judgment, discretion, and superior customer service skills
 - Proficiency using Google Apps for email and calendaring
+- Excellent written and verbal communications skills 
 - Proactive problem solver with strong attention to detail
 - Experience and proficiency using the Google suite, Trello, Slack, or other current tech tools 
 
-To apply, please email resume, cover letter, and writing sample and/or social media accounts to <a href="mailto:jobs@code.org">jobs@code.org</a>.
+
+To apply, please email resume and cover letter to <a href="mailto:jobs@code.org">jobs@code.org</a>.
 
 ## <a name="officemanager"href="#officemanager">Office Manager (Seattle, WA)</a>
 
 **Job Summary:**
 
-Code.org is seeking an experienced Office Manager to join our People Ops team. Code.org thrives in our mission-driven, fast-paced culture and our Office Manager will be at the center of helping us ensure that our office is a warm, inviting, creative environment that is supportive of our values and the needs of our employees. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
+Code.org is looking for an experienced Office Manager to join our People Ops team. Code.org thrives in our mission-driven, fast-paced culture and our Office Manager will be at the center of helping us ensure that our office is a warm, inviting, creative environment that is supportive of our values and the needs of our employees. This is a terrific opportunity for the right candidate, with a great deal of responsibility and visibility into the successful operation of an internationally ­recognized non­profit experiencing incredible growth. 
 
 Responsibilities of this position will include:
 
