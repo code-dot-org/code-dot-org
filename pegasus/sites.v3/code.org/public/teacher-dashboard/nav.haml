@@ -9,6 +9,7 @@ content-type: text/ng-template
     %div{'ng-show' => "new_flow()"}
       %span{style: "color: #00adbc; font-size: 18px; font-weight: 'bold';"} &nbsp; &#8249; &nbsp;
       %a{href:'/teacher-dashboard#/', style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}='View All Sections'
+      %div{style: "font-size: 24px; font-weight: 'bolder'; padding: 12px;"}= '{{section.name}}'
     %div{'ng-show' => "!new_flow()"}
       %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
       %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
