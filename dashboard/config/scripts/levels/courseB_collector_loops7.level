@@ -27,18 +27,19 @@
     "flower_type": "redWithNectar",
     "fast_get_nectar_animation": "false",
     "instructions": "Write the code to get all of this treasure.",
-    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.\",\"hint_id\":\"courseB_collector_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57ca2bbf8ea2fd863c6930ff78e4bc0c/courseB_collector_loops7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need 3 different repeat loops to solve this puzzle, and don't forget the extra treasure at the end!\",\"hint_id\":\"courseB_collector_loops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/7c615fae368de458d2a5c45a0610fbfe/courseB_collector_loops7.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having a hard time with the puzzle, try drawing it on paper to help you figure it out.\",\"hint_id\":\"courseB_collector_loops7_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/57ca2bbf8ea2fd863c6930ff78e4bc0c/courseB_collector_loops7.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"You will need 3 repeat loops to solve this puzzle, and don't forget the extra treasure at the end!\",\"hint_id\":\"courseB_collector_loops7_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/99f49ab6a8ceb43936bde79b35c409cb/courseB_collector_loops7.mp3\"}]",
     "ideal": "12",
     "instructions_important": "false",
     "min_collected": "11",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "shape_shift": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-29 15:43:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 15:43:34 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:45:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 4
