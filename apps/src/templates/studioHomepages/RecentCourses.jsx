@@ -74,6 +74,7 @@ const RecentCourses = React.createClass({
                 buttonText={i18n.findCourse()}
                 buttonLink="/courses"
                 dismissible={false}
+                isRtl={isRtl}
               />
             </div>
           )}

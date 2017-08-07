@@ -4,37 +4,43 @@ import Notification from './Notification';
 const information = {
   notice: "Did you know Clark Kent grew up in Kansas?",
   details: "Seriously, Kansas. Earth's greatest hero is from a tiny called Smallville, if you can believe it.",
-  dismissible: true
+  dismissible: true,
+  isRtl: false
 };
 
 const success = {
   notice: "Wonder Woman Saved the Day",
   details: "Things were pretty sketchy there for awhile, but don't worry- she's on top of it.",
-  dismissible: true
+  dismissible: true,
+  isRtl: false
 };
 
 const failure = {
   notice: "Lex Luther Attacked Metropolis",
   details: "If you're in the Metropolis area, get to saftey as quickly as possible",
-  dismissible: false
+  dismissible: false,
+  isRtl: false
 };
 
 const warning = {
   notice: "Batman is on Vacation in the Bahamas",
   details: "Now is probably not the best time to be in Gotham City. Watch your back.",
-  dismissible: true
+  dismissible: true,
+  isRtl: false
 };
 
 const findCourse = {
   notice: "Find a course",
   details: "Try new courses to add them to your homepage.",
-  dismissible: false
+  dismissible: false,
+  isRtl: false
 };
 
 const announcement = {
   notice: "Here is some news",
   details: "Here are the details of the news.",
-  dismissible: false
+  dismissible: false,
+  isRtl: false
 };
 
 export default storybook => {

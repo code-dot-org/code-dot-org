@@ -58,6 +58,7 @@ const TeacherHomepage = React.createClass({
               buttonLink={announcements[0].link}
               newWindow={true}
               analyticId={announcements[0].id}
+              isRtl={isRtl}
             />
             <div style={styles.clear}/>
           </div>
