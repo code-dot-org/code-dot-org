@@ -4,6 +4,7 @@ require 'validates_email_format_of'
 require_relative 'pegasus_form_errors'
 require_relative '../cdo/regexp'
 require_relative '../cdo/geocoder'
+require_relative '../../pegasus/forms/hoc_signup_2017'
 
 module PegasusFormValidation
   private

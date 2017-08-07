@@ -1,4 +1,5 @@
 require 'digest/md5'
+require_relative '../../deployment'
 require lib_dir 'forms/pegasus_form_validation'
 
 include PegasusFormValidation
@@ -17,6 +18,13 @@ def delete_form(kind, secret)
   true
 end
 
+# Inserts or upserts a form (depending on its kind) into the DB.
+# @param [String] kind The kind of form to insert.
+# @param [Hash] data The data with which to populate the form.
+# @param [Hash] options Default {}.
+#   @option [Integer] :parent_id The ID of the parent form.
+# TODO(asher): Fix this method, both the naming of it (to indicate the upsert behavior) and its
+# implementation (not overwriting various fields on update).
 def insert_form(kind, data, options={})
   if dashboard_user
     data[:email_s] ||= dashboard_user[:email]
