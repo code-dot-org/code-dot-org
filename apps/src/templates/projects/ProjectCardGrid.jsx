@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";

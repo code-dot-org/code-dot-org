@@ -1,4 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import ToggleGroup from '../ToggleGroup';
 import color from "@cdo/apps/util/color";
 import { setIsSummaryView, hasGroups } from '@cdo/apps/code-studio/progressRedux';

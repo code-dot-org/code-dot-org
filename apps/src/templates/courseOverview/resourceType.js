@@ -1,4 +1,5 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
 import i18n from '@cdo/locale';
 
 // We want level builders to be able to specify which of these strings is used,

@@ -1,5 +1,6 @@
 import CodeMirror from 'codemirror';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * This component works in conjunction with a json codemirror

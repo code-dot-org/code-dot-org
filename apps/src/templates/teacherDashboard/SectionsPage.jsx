@@ -1,6 +1,7 @@
 /** @file Root component for the (deprecated) teacher
  *        dashboard sections page. */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import OwnedSections from './OwnedSections';

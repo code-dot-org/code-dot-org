@@ -1,4 +1,5 @@
-import {PropTypes} from 'react';
+import PropTypes from 'prop-types';
+
 import $ from 'jquery';
 import designMode from './designMode';
 import * as elementUtils from './designElements/elementUtils';

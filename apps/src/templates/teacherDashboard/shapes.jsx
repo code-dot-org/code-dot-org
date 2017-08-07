@@ -1,4 +1,5 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
 import { makeEnum } from '@cdo/apps/utils';
 

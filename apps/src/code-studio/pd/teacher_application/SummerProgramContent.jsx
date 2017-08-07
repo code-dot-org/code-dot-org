@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {Modal, Button} from 'react-bootstrap';
 
 import {ButtonList, otherString} from '../form_components/button_list.jsx';

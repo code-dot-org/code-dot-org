@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import i18n from "@cdo/locale";
 import ContentContainer from '../ContentContainer';
 import JoinSection from './JoinSection';

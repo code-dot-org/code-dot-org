@@ -1,4 +1,6 @@
-import React, { PropTypes, Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import Radium from 'radium';
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';

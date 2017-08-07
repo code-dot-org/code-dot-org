@@ -1,7 +1,8 @@
 /* Common shapes used for React prop validation.
  */
 
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
 
 const shapes = {
   // Though this shape is called "courses", it's really a set of info about

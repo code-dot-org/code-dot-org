@@ -1,5 +1,6 @@
 /** @file Notifications showing results of the join/leave section operation. */
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 

@@ -2,7 +2,8 @@
  * A react component for rendering a set of buttons that control what the
  * interpreter/debugger are doing. i.e. step in/out/over code and pause/continue
  */
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 

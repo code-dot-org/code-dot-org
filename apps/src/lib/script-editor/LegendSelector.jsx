@@ -1,4 +1,6 @@
-import React, { PropTypes, Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 
 /**

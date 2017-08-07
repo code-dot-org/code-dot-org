@@ -1,4 +1,5 @@
-import { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+
 
 export const bonusLevel = {
   id: PropTypes.number.isRequired,
