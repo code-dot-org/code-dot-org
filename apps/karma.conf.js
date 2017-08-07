@@ -41,11 +41,11 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      "test/index.js": ["webpack", "sourcemap"],
-      "test/integration-tests.js": ["webpack", "sourcemap"],
+      "test/index.js": ["webpack"],
+      "test/integration-tests.js": ["webpack"],
       "test/unit-tests.js": ["webpack"],
-      "test/code-studio-tests.js": ["webpack", "sourcemap"],
-      "test/storybook-tests.js": ["webpack", "sourcemap"],
+      "test/code-studio-tests.js": ["webpack"],
+      "test/storybook-tests.js": ["webpack"],
       "test/scratch-tests.js": ["webpack"],
     },
 
