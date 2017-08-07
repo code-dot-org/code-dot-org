@@ -819,6 +819,7 @@ describe('entry tests', () => {
     'karma:integration'
   ]);
 
+  // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
   grunt.registerTask('scratchTest', [
     'preconcat',
     'concat',
