@@ -261,6 +261,12 @@ export function throwOnConsoleErrorsEverywhere() {
   let firstError = null;
   throwingOnErrors = true;
   beforeEach(function () {
+    // Stash test title so that we can include it in any errors
+    let testTitle;
+    if (this.currentTest) {
+      testTitle = this.currentTest.title;
+    }
+
     sinon.stub(console, 'error').callsFake(msg => {
       const prefix = throwingOnErrors ? '' : '[ignoring]';
       console.error.wrappedMethod(prefix, msg);
@@ -268,7 +274,7 @@ export function throwOnConsoleErrorsEverywhere() {
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (throwingOnErrors && !firstError) {
-        firstError = new Error('Call to console.error: ' + format(msg));
+        firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}`);
       }
     });
   });
@@ -277,7 +283,6 @@ export function throwOnConsoleErrorsEverywhere() {
     if (console.error.restore) {
       console.error.restore();
       if (firstError) {
-        //'Unexpected call to console.error.',
         throw new Error(firstError);
       }
       firstError = null;
