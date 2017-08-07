@@ -95,7 +95,7 @@ const thumbnailFormatter = function (thumbnailUrl) {
     src={thumbnailUrl}
     width={THUMBNAIL_SIZE}
     wrapperStyle={styles.thumbnailWrapper}
-  />);
+          />);
 };
 
 const nameFormatter = function (name, {rowData}) {
