@@ -286,6 +286,9 @@ export function throwOnConsoleErrorsEverywhere() {
         logStack();
       }
 
+      // TODO: temporary logging
+      console.log('is ErrorEvent: ', msg instanceof ErrorEvent);
+
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (throwingOnErrors && !firstError) {
