@@ -225,7 +225,6 @@ FactoryGirl.define do
             else
               survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
             end
-            survey_hash[field][facilitator.name] = 'Free response'
           end
         end
 
