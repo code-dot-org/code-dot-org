@@ -95,6 +95,7 @@ class LevelsController < ApplicationController
     authorize! :update, @level
     blocks_xml = params[:program]
     type = params[:type]
+    set_solution_image_url(@level) if type == 'solution_blocks'
     blocks_xml = Blockly.convert_toolbox_to_category(blocks_xml) if type == 'toolbox_blocks'
     @level.properties[type] = blocks_xml
     @level.log_changes(current_user)
@@ -288,5 +289,14 @@ class LevelsController < ApplicationController
     params[:level][:soft_buttons].delete_if(&:empty?) if params[:level][:soft_buttons].is_a? Array
     permitted_params.concat(Level.permitted_params)
     params[:level].permit(permitted_params)
+  end
+
+  def set_solution_image_url(level)
+    level_source = LevelSource.find_identical_or_create(
+      level,
+      params[:program].strip_utf8mb4
+    )
+    level_source_image = find_or_create_level_source_image(params[:image], level_source.try(:id))
+    @level.properties['solution_image_url'] = level_source_image.s3_url if level_source_image
   end
 end
