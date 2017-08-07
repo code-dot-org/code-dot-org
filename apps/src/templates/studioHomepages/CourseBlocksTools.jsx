@@ -11,6 +11,9 @@ const styles = {
     width: pegasusContentWidth,
     display: "flex",
     justifyContent: "space-between"
+  },
+  regularRow: {
+    marginBottom: 20
   }
 };
 
@@ -69,7 +72,10 @@ const CourseBlocksTools = React.createClass({
           (startIndex, rowIndex) => (
             <div
               key={rowIndex}
-              style={styles.container}
+              style={{
+                ...styles.container,
+                ...(rowIndex === 0 && styles.regularRow)
+              }}
             >
               {cards.slice(startIndex, startIndex + 3).map(
                 (card, cardIndex) => (

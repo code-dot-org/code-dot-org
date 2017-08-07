@@ -39,7 +39,8 @@ const styles = {
     color: color.white
   },
   clear: {
-    clear: 'both'
+    clear: 'both',
+    marginBottom: 60
   }
 };
 
@@ -54,7 +55,6 @@ const FindLocalClassBanner = React.createClass({
 
     return (
       <div>
-        <div style={styles.clear}/>
         <div style={styles.heading}>
           {i18n.findLocalClassHeading()}
         </div>

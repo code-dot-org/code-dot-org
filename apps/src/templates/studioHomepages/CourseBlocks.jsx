@@ -6,6 +6,12 @@ import CourseBlocksTools from './CourseBlocksTools';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
+const styles = {
+  paddedBottom: {
+    marginBottom: 60
+  }
+};
+
 export const CourseBlocksCsf = React.createClass({
   propTypes: {
     isEnglish: React.PropTypes.bool.isRequired
@@ -87,7 +93,7 @@ const CourseBlocksCsfNonEnglish = React.createClass({
 
   render() {
     return (
-      <div>
+      <div style={styles.paddedBottom}>
         <div className="row">
           <ProtectedStatefulDiv ref="course1"/>
           <ProtectedStatefulDiv ref="course2"/>
@@ -130,14 +136,17 @@ export const CourseBlocksHoc = React.createClass({
           <ProtectedStatefulDiv ref="frozen"/>
           <ProtectedStatefulDiv ref="hourofcode"/>
         </div>
-        <br/>
-        <br/>
+
         {this.props.rowCount > 1 && (
-          <div className="row">
-            <ProtectedStatefulDiv ref="flappy"/>
-            <ProtectedStatefulDiv ref="infinity"/>
-            <ProtectedStatefulDiv ref="playlab"/>
-            <ProtectedStatefulDiv ref="artist"/>
+          <div>
+            <br/>
+            <br/>
+            <div className="row">
+              <ProtectedStatefulDiv ref="flappy"/>
+              <ProtectedStatefulDiv ref="infinity"/>
+              <ProtectedStatefulDiv ref="playlab"/>
+              <ProtectedStatefulDiv ref="artist"/>
+            </div>
           </div>
         )}
       </div>
@@ -162,6 +171,7 @@ export const CourseBlocksAll = React.createClass({
         {!this.props.isEnglish && (
           <ProtectedStatefulDiv ref="csfCoursesHeader"/>
         )}
+
         <CourseBlocksCsf isEnglish={this.props.isEnglish}/>
 
         <ContentContainer

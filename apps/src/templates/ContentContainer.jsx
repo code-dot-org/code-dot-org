@@ -14,6 +14,7 @@ const pegasusContentWidth = styleConstants['content-width'];
 const styles = {
   box: {
     width: pegasusContentWidth,
+    marginBottom: 60
   },
   heading: {
     paddingRight: 10,
@@ -66,8 +67,7 @@ const styles = {
     paddingLeft: 10,
   },
   clear: {
-    clear: 'both',
-    height: 75
+    clear: 'both'
   },
   spacer: {
     width: 20,
