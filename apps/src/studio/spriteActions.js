@@ -54,6 +54,8 @@ export class GridMove {
     this.totalSteps_ = totalSteps;
     this.elapsedSteps_ = 0;
 
+    this.direction_ = getDirection(towardDeltaX, towardDeltaY);
+
     /** @private {number} How much of the full distance to travel. */
     this.percentBeforeReverse_ = 0.3;
   }
@@ -70,11 +72,11 @@ export class GridMove {
       this.startY_ = sprite.y;
       sprite.x += this.towardDeltaX_;
       sprite.y += this.towardDeltaY_;
+      sprite.setDirection(this.direction_);
     }
     var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
     sprite.displayX = this.startX_ + this.towardDeltaX_ * normalizedProgress;
     sprite.displayY = this.startY_ + this.towardDeltaY_ * normalizedProgress;
-    sprite.setDirection(getDirection(this.towardDeltaX_, this.towardDeltaY_));
     this.elapsedSteps_++;
   }
 
@@ -86,27 +88,28 @@ export class GridMove {
   isDone() {
     return this.elapsedSteps_ >= this.totalSteps_;
   }
-
-  /**
-   * Move sprite partway toward a desired destination position, but have it
-   * stop and reverse to its original position after a moment, as if it was
-   * bouncing off a wall.
-   * @constructor
-   * @implements {SpriteAction}
-   * @param {number} towardDeltaX - the relative target X position, if the motion
-   *        was completed instead of cancelled (e.g. one grid-space away).
-   * @param {number} towardDeltaY - as above.
-   * @param {number} totalSteps - the number of steps (or frames) to take for the
-   *        animation.
-   */
 }
 
+/**
+ * Move sprite partway toward a desired destination position, but have it
+ * stop and reverse to its original position after a moment, as if it was
+ * bouncing off a wall.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDeltaX - the relative target X position, if the motion
+ *        was completed instead of cancelled (e.g. one grid-space away).
+ * @param {number} towardDeltaY - as above.
+ * @param {number} totalSteps - the number of steps (or frames) to take for the
+ *        animation.
+ */
 export class GridMoveAndCancel {
   constructor(towardDeltaX, towardDeltaY, totalSteps) {
     this.towardDeltaX_ = towardDeltaX;
     this.towardDeltaY_ = towardDeltaY;
     this.totalSteps_ = totalSteps;
     this.elapsedSteps_ = 0;
+
+    this.direction_ = getDirection(towardDeltaX, towardDeltaY);
 
     /** @private {number} How much of the full distance to travel. */
     this.percentBeforeReverse_ = 0.3;
@@ -119,12 +122,14 @@ export class GridMoveAndCancel {
   update(sprite) {
     // Note: The sprite's logical position (sprite.x, sprite.y) never changes
     //       for this action.
+    if (this.elapsedSteps_ === 0) {
+      sprite.setDirection(this.direction_);
+    }
     var normalizedProgress = (this.elapsedSteps_ + 1) / this.totalSteps_;
     var percentOffset = (2 * this.percentBeforeReverse_) *
         (normalizedProgress < 0.5 ? normalizedProgress : (1 - normalizedProgress));
     sprite.displayX = sprite.x + this.towardDeltaX_ * percentOffset;
     sprite.displayY = sprite.y + this.towardDeltaY_ * percentOffset;
-    sprite.setDirection(getDirection(this.towardDeltaX_, this.towardDeltaY_));
     // Could do a forced reversal of animation here, depends on how it looks
     // with the real assets.
     this.elapsedSteps_++;
@@ -138,7 +143,6 @@ export class GridMoveAndCancel {
   isDone() {
     return this.elapsedSteps_ >= this.totalSteps_;
   }
-
 }
 
 /**
