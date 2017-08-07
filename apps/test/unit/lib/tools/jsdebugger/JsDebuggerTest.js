@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/configuredChai';
-import {throwOnConsoleWarnings} from '../../../../util/testUtils';
+import {allowConsoleErrors} from '../../../../util/testUtils';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {getStore, registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
@@ -11,7 +11,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
 describe('The JSDebugger component', () => {
-  throwOnConsoleWarnings();
+  allowConsoleErrors();
 
   let root, jsDebugger, addEventSpy, removeEventSpy, codeApp;
 
@@ -28,7 +28,6 @@ describe('The JSDebugger component', () => {
 
     const runApp = sinon.spy();
     getStore().dispatch(setPageConstants({
-      appType: 'applab',
       showDebugButtons: true,
       showDebugConsole: true,
       showDebugWatch: true,
@@ -71,7 +70,7 @@ describe('The JSDebugger component', () => {
   const debugConsole = () => root.find('#debug-console');
 
   it("renders a div", () => {
-    expect(root.find('div#debug-area')).to.exist;
+    expect(root.find('div#debug-area').isEmpty()).to.be.false;
   });
 
   it("initially has the height of 120px", () => {
@@ -80,7 +79,7 @@ describe('The JSDebugger component', () => {
 
   describe("The header", () => {
     it("contains an icon for closing the debugger", () => {
-      expect(closeIcon()).to.exist;
+      expect(closeIcon().isEmpty()).to.be.false;
     });
   });
 
@@ -95,8 +94,8 @@ describe('The JSDebugger component', () => {
     });
 
     it("will swap out the open/close icons", () => {
-      expect(closeIcon()).not.to.exist;
-      expect(openIcon()).to.exist;
+      expect(closeIcon().isEmpty()).to.be.true;
+      expect(openIcon().isEmpty()).to.be.false;
     });
 
     it("will collapse the debugger by setting the height in the css", () => {
@@ -118,8 +117,8 @@ describe('The JSDebugger component', () => {
       });
 
       it("will again swap out the open/close icons", () => {
-        expect(closeIcon()).to.exist;
-        expect(openIcon()).not.to.exist;
+        expect(closeIcon().isEmpty()).to.be.false;
+        expect(openIcon().isEmpty()).to.be.true;
       });
 
       it("will expand the debugger by setting the height in the css", () => {
