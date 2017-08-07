@@ -62,7 +62,7 @@ describe('The DebugConsole component', () => {
 
   function isVisible(selector) {
     const wrapper = selector();
-    return wrapper.exists() && (
+    return !wrapper.isEmpty() && (
       !wrapper.props().style ||
       wrapper.props().style.display !== 'none'
     );
