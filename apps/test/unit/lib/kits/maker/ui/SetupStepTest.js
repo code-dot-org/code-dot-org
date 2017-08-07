@@ -1,8 +1,7 @@
 /** @file Test SetupStep component */
 import React from 'react';
 import {expect} from '../../../../../util/configuredChai';
-import {allowConsoleErrors} from '../../../../../util/testUtils';
-
+import {throwOnConsoleWarnings} from '../../../../../util/testUtils';
 import {mount} from 'enzyme';
 import SetupStep, {
   STEP_STATUSES,
@@ -11,7 +10,7 @@ import SetupStep, {
 } from '@cdo/apps/lib/kits/maker/ui/SetupStep';
 
 describe('SetupStep', () => {
-  allowConsoleErrors();
+  throwOnConsoleWarnings();
 
   describe('can render every status', () => {
     // This is the lazy 100% coverage test :D
@@ -28,14 +27,6 @@ describe('SetupStep', () => {
         expect(wrapper).not.to.be.null;
       });
     });
-  });
-
-  it('throws if given an invalid status type', () => {
-    expect(() => {
-      mount(
-        <SetupStep stepName="Bad step" stepStatus="Something bogus"/>
-      );
-    }).to.throw(Error);
   });
 
   it('renders nothing when step is hidden', () => {
