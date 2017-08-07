@@ -2,11 +2,9 @@
 import React from 'react';
 import sinon from 'sinon';
 import { shallow } from 'enzyme';
-
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
-
 import {expect} from '../../util/configuredChai';
-import {allowConsoleErrors} from '../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../util/testUtils';
 import Dialog, {Body, Buttons, Confirm, Cancel} from '@cdo/apps/templates/Dialog';
 import {
   ImportScreensDialog,
@@ -16,6 +14,8 @@ import {
 import AssetThumbnail from '@cdo/apps/code-studio/components/AssetThumbnail';
 
 describe("AssetListItem", () => {
+  throwOnConsoleWarnings();
+
   var item;
 
   it("Will only show the filename when it is not replacing an existing asset", () => {
@@ -45,7 +45,8 @@ describe("AssetListItem", () => {
 });
 
 describe("ScreenListItem", () => {
-  allowConsoleErrors();
+  throwOnConsoleWarnings();
+
   var item;
 
   it("Will only show the screen's id when it is not replacing an existing screen", () => {
@@ -54,6 +55,7 @@ describe("ScreenListItem", () => {
         screen={{
             id: 'main_screen',
             willReplace: false,
+            assetsToImport: [],
             assetsToReplace: [],
             canBeImported: true,
             conflictingIds: [],
@@ -70,6 +72,7 @@ describe("ScreenListItem", () => {
         screen={{
             id: 'main_screen',
             willReplace: true,
+            assetsToImport: [],
             assetsToReplace: [],
             canBeImported: true,
             conflictingIds: [],
@@ -81,12 +84,13 @@ describe("ScreenListItem", () => {
     expect(item.text()).to.contain('Importing this will replace your existing screen: "main_screen".');
   });
 
-  it("Will show a warning when replacing another screen", () => {
+  it("Will show a warning when replacing another screen with assets", () => {
     item = shallow(
       <ScreenListItem
         screen={{
             id: 'main_screen',
             willReplace: true,
+            assetsToImport: [],
             assetsToReplace: ['foo.png','bar.png'],
             canBeImported: true,
             conflictingIds: [],
@@ -105,6 +109,7 @@ describe("ScreenListItem", () => {
         screen={{
             id: 'main_screen',
             willReplace: true,
+            assetsToImport: [],
             assetsToReplace: ['foo.png','bar.png'],
             canBeImported: false,
             conflictingIds: ['input1', 'input2'],
@@ -122,7 +127,7 @@ describe("ScreenListItem", () => {
 });
 
 describe("ImportScreensDialog", () => {
-  allowConsoleErrors();
+  throwOnConsoleWarnings();
 
   let dialog, onImport;
 
@@ -151,6 +156,7 @@ describe("ImportScreensDialog", () => {
               screens: [{
                 id: 'main_screen',
                 willReplace: true,
+                assetsToImport: [],
                 assetsToReplace: [],
                 canBeImported: true,
                 conflictingIds: [],
@@ -288,6 +294,7 @@ describe("ImportScreensDialog", () => {
               screens: [{
                 id: 'main_screen',
                 willReplace: false,
+                assetsToImport: [],
                 assetsToReplace: [],
                 canBeImported: false,
                 conflictingIds: ['img2'],
@@ -348,6 +355,7 @@ describe("ImportScreensDialog", () => {
               screens: [{
                 id: 'main_screen',
                 willReplace: true,
+                assetsToImport: [],
                 assetsToReplace: [],
                 canBeImported: true,
                 conflictingIds: [],
