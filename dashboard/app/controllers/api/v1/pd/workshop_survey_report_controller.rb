@@ -38,9 +38,9 @@ module Api::V1::Pd
 
       survey_report = Hash.new
 
-      survey_report[:this_teachercon] = summarize_workshop_surveys(workshops: @workshop)
+      survey_report[:this_teachercon] = summarize_workshop_surveys(workshops: [@workshop])
       survey_report[:all_my_teachercons] = summarize_workshop_surveys(
-        workshops: Pd::Workshop.where(subject: [SUBJECT_CSP_TEACHER_CON, SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user).flat_map(&:survey_responses)
+        workshops: Pd::Workshop.where(subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user).flat_map(&:survey_responses)
       )
 
       respond_to do |format|
