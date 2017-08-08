@@ -548,6 +548,7 @@ export const UnconnectedJsDebugger = Radium(createReactClass({
     );
   }
 }));
+UnconnectedJsDebugger.displayName = 'UnconnectedJsDebugger';
 
 export default connect(
   (state) => ({

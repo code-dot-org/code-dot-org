@@ -108,6 +108,7 @@ const PaneHeader = Radium(createReactClass({
     );
   }
 }));
+PaneHeader.displayName = 'PaneHeader';
 
 /**
  * A section of our Pane Header. Essentially this is just a div with some
