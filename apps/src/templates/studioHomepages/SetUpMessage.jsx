@@ -14,7 +14,9 @@ const styles = {
     boxSizing: "border-box"
   },
   wordBox: {
-    width: styleConstants['content-width']-225,
+    width: styleConstants['content-width']-275,
+    paddingLeft: 25,
+    paddingRight: 25
   },
   heading: {
     fontSize: 20,
@@ -26,7 +28,7 @@ const styles = {
   description: {
     fontSize: 14,
     color: color.charcoal,
-    width: styleConstants['content-width']-250,
+    width: styleConstants['content-width']-275,
     paddingTop: 5,
     paddingBottom: 25,
   },
@@ -37,55 +39,54 @@ const styles = {
   },
   ltr: {
     float: 'left',
-    paddingLeft: 25,
   },
   rtl: {
     float: 'right',
-    paddingRight: 25,
   },
   clear: {
     clear: 'both'
   }
 };
 
-const SetUpMessage = ({
-  isRtl,
-  headingText,
-  descriptionText,
-  className,
-  buttonText,
-  buttonUrl,
-  buttonClass,
-  onClick,
-}) => (
-  <div style={styles.section} className={className}>
-    <div style={[styles.wordBox, isRtl ? styles.rtl : styles.ltr, {padding:0}]}>
-      <div style={[styles.heading, isRtl ? styles.rtl : styles.ltr]}>
-        {headingText}
+const SetUpMessage = React.createClass({
+  propTypes: {
+    isRtl: PropTypes.bool,
+    headingText: PropTypes.string.isRequired,
+    descriptionText: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    buttonText: PropTypes.string.isRequired,
+    buttonUrl: PropTypes.string,
+    buttonClass: PropTypes.string,
+    onClick: PropTypes.func,
+  },
+
+  render() {
+    const { isRtl, headingText, descriptionText, className, buttonText, buttonUrl, buttonClass, onClick } = this.props;
+    const localeStyle = isRtl ? styles.rtl : styles.ltr;
+    const buttonLocaleStyle = isRtl ? styles.ltr : styles.rtl;
+
+    return (
+      <div style={styles.section} className={className}>
+        <div style={[styles.wordBox, localeStyle]}>
+          <div style={[styles.heading, localeStyle]}>
+            {headingText}
+          </div>
+          <div style={[styles.description, localeStyle]}>
+            {descriptionText}
+          </div>
+        </div>
+        <Button
+          href={buttonUrl}
+          onClick={onClick}
+          className={buttonClass}
+          color={Button.ButtonColor.gray}
+          text={buttonText}
+          style={[styles.button, buttonLocaleStyle]}
+        />
+        <div style={styles.clear}/>
       </div>
-      <div style={[styles.description, isRtl ? styles.rtl : styles.ltr]}>
-        {descriptionText}
-      </div>
-    </div>
-    <Button
-      href={buttonUrl}
-      onClick={onClick}
-      className={buttonClass}
-      color={Button.ButtonColor.gray}
-      text={buttonText}
-      style={[styles.button, isRtl ? styles.ltr : styles.rtl]}
-    />
-    <div style={styles.clear}/>
-  </div>
-);
-SetUpMessage.propTypes = {
-  isRtl: PropTypes.bool,
-  headingText: PropTypes.string.isRequired,
-  descriptionText: PropTypes.string.isRequired,
-  className: PropTypes.string,
-  buttonText: PropTypes.string.isRequired,
-  buttonUrl: PropTypes.string,
-  buttonClass: PropTypes.string,
-  onClick: PropTypes.func,
-};
+    );
+  }
+});
+
 export default Radium(SetUpMessage);
