@@ -162,16 +162,22 @@ const ProgressLesson = React.createClass({
                 style={styles.icon}
               />
             }
-            {showLockIcon && lesson.lockable &&
+            {showLockIcon && lesson.lockable && locked &&
+              <FontAwesome
+                icon="lock"
+                style={styles.icon}
+              />
+            }
+            {showLockIcon && lesson.lockable && !locked &&
               <span data-tip data-for={tooltipId}>
                 <FontAwesome
-                  icon={locked ? 'lock' : 'unlock'}
+                  icon="unlock"
                   style={{
                     ...styles.icon,
-                    ...(!locked && styles.unlockedIcon)
+                    ...styles.unlockedIcon
                   }}
                 />
-                {!locked &&
+                {viewAs === ViewType.Teacher &&
                   <ReactTooltip
                     id={tooltipId}
                     role="tooltip"
@@ -181,7 +187,7 @@ const ProgressLesson = React.createClass({
                     {i18n.lockAssessmentLong()}
                   </ReactTooltip>
                 }
-            </span>
+              </span>
             }
             <span>{title}</span>
           </div>
