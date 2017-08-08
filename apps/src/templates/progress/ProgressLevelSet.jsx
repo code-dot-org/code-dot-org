@@ -126,5 +126,5 @@ const ProgressLevelSet = createReactClass({
     );
   }
 });
-
+ProgressLevelSet.displayName = 'ProgressLevelSet';
 export default Radium(ProgressLevelSet);
