@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Ko Flappy doseže oviro, naredi spodaj navedeno.",
   "whenRunButtonClick": "ko se igra začne",
   "whenRunButtonClickTooltip": "Izvedite spodnja dejanja, ko se igra začne.",
-  "yes": "Da"
+  "yes": "Da",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

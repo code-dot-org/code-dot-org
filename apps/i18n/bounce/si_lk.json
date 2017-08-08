@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "බෝලය බිත්තිය හා ඝට්ටනය වු විට පහත ක්‍රියාමාර්ග ක්‍රියාත්මක කරන්න.",
   "whileMsg": "එතෙක්",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

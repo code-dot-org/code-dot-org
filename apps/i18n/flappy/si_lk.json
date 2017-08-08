@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Flappy බාධාවකට ඇතුලු වූ විගසම පහත ක්‍රියාවන් ක්‍රියාත්මක කරන්න.",
   "whenRunButtonClick": "ක්‍රීඩව ආරම්භ වූ විගස",
   "whenRunButtonClickTooltip": "ක්‍රීඩාව ආරම්භ වූ විගසම පහත ක්‍රියාවන් ක්‍රියාත්මක කරන්න.",
-  "yes": "ඔව්"
+  "yes": "ඔව්",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }
