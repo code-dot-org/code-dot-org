@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
+import _ from 'lodash';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const pegasusContentWidth = styleConstants['content-width'];
+const contentWidth = styleConstants['content-width'];
 
 const styles = {
   container: {
-    width: pegasusContentWidth,
+    width: contentWidth,
     display: "flex",
     justifyContent: "space-between"
   },
@@ -17,50 +19,49 @@ const styles = {
   }
 };
 
-const CourseBlocksTools = React.createClass({
-  propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired
-  },
+class CourseBlocksTools extends Component {
+  static propTypes = {
+    isEnglish: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
+  };
+
+  cards = [
+    {
+      heading: i18n.courseBlocksToolsAppLab(),
+      description: i18n.courseBlocksToolsAppLabDescription(),
+      path: 'applab'
+    },
+    {
+      heading: i18n.courseBlocksToolsGameLab(),
+      description: i18n.courseBlocksToolsGameLabDescription(),
+      path: 'gamelab'
+    },
+    {
+      heading: i18n.courseBlocksToolsWebLab(),
+      description: i18n.courseBlocksToolsWebLabDescription(),
+      path: 'weblab'
+    },
+    {
+      heading: i18n.courseBlocksToolsWidgets(),
+      description: i18n.courseBlocksToolsWidgetsDescription(),
+      path: 'widgets'
+    },
+    {
+      heading: i18n.courseBlocksToolsInspire(),
+      description: i18n.courseBlocksToolsInspireDescription(),
+      path: 'inspire'
+    },
+    {
+      heading: i18n.courseBlocksToolsVideo(),
+      description: i18n.courseBlocksToolsVideoDescription(),
+      path: 'videos'
+    },
+  ];
 
   render() {
     const headingText = this.props.isEnglish
       ? i18n.courseBlocksToolsTitleTeacher()
       : i18n.courseBlocksToolsTitleNonEn();
-
-    const cards = [
-      {
-        heading: i18n.courseBlocksToolsAppLab(),
-        description: i18n.courseBlocksToolsAppLabDescription(),
-        path: 'applab'
-      },
-      {
-        heading: i18n.courseBlocksToolsGameLab(),
-        description: i18n.courseBlocksToolsGameLabDescription(),
-        path: 'gamelab'
-      },
-      {
-        heading: i18n.courseBlocksToolsWebLab(),
-        description: i18n.courseBlocksToolsWebLabDescription(),
-        path: 'weblab'
-      },
-      {
-        heading: i18n.courseBlocksToolsWidgets(),
-        description: i18n.courseBlocksToolsWidgetsDescription(),
-        path: 'widgets'
-      },
-      {
-        heading: i18n.courseBlocksToolsInspire(),
-        description: i18n.courseBlocksToolsInspireDescription(),
-        path: 'inspire'
-      },
-      {
-        heading: i18n.courseBlocksToolsVideo(),
-        description: i18n.courseBlocksToolsVideoDescription(),
-        path: 'videos'
-      },
-    ];
 
     return (
       <ContentContainer
@@ -68,8 +69,8 @@ const CourseBlocksTools = React.createClass({
         description={i18n.standaloneToolsDescription()}
         isRtl={this.props.isRtl}
       >
-        {[0,3].map(
-          (startIndex, rowIndex) => (
+        {_.chunk(this.cards, 3).map(
+          (rowCards, rowIndex) => (
             <div
               key={rowIndex}
               style={{
@@ -77,14 +78,14 @@ const CourseBlocksTools = React.createClass({
                 ...(rowIndex === 0 && styles.regularRow)
               }}
             >
-              {cards.slice(startIndex, startIndex + 3).map(
+              {rowCards.map(
                 (card, cardIndex) => (
                   <ResourceCard
                     key={cardIndex}
                     title={card.heading}
                     description={card.description}
                     buttonText={i18n.learnMore()}
-                    link={`${this.props.codeOrgUrlPrefix}/${card.path}`}
+                    link={pegasus(`/${card.path}`)}
                     isRtl={this.props.isRtl}
                     isJumbo = {true}
                   />
@@ -96,6 +97,6 @@ const CourseBlocksTools = React.createClass({
       </ContentContainer>
     );
   }
-});
+}
 
 export default CourseBlocksTools;

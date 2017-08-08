@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import styleConstants from '../styleConstants';
@@ -9,11 +9,11 @@ import styleConstants from '../styleConstants';
 // functionality of a heading and the option to show a link. You can find an
 // example of its use on studio.code.org/home.
 
-const pegasusContentWidth = styleConstants['content-width'];
+const contentWidth = styleConstants['content-width'];
 
 const styles = {
   box: {
-    width: pegasusContentWidth,
+    width: contentWidth,
     marginBottom: 60
   },
   heading: {
@@ -24,7 +24,7 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: pegasusContentWidth
+    width: contentWidth
   },
   description: {
     fontSize: 14,
@@ -32,7 +32,7 @@ const styles = {
     fontFamily: 'Gotham 3r',
     zIndex: 2,
     color: color.charcoal,
-    width: pegasusContentWidth,
+    width: contentWidth,
     marginTop: -10,
     marginBottom: 10
   },
@@ -76,18 +76,18 @@ const styles = {
   }
 };
 
-const ContentContainer= React.createClass({
-  propTypes: {
-    children: React.PropTypes.oneOfType([
-      React.PropTypes.node,
-      React.PropTypes.arrayOf(React.PropTypes.node)
+class ContentContainer extends Component {
+  static propTypes = {
+    children: PropTypes.oneOfType([
+      PropTypes.node,
+      PropTypes.arrayOf(PropTypes.node)
     ]),
-    heading: React.PropTypes.string,
-    linkText: React.PropTypes.string,
-    link: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired,
-    description: React.PropTypes.string,
-  },
+    heading: PropTypes.string,
+    linkText: PropTypes.string,
+    link: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired,
+    description: PropTypes.string,
+  };
 
   render() {
     const { heading, link, linkText, description, isRtl }= this.props;
@@ -129,6 +129,6 @@ const ContentContainer= React.createClass({
       </div>
     );
   }
-});
+}
 
 export default ContentContainer;

@@ -7,7 +7,7 @@ class CoursesController < ApplicationController
     respond_to do |format|
       format.html do
         @is_teacher = (current_user && current_user.teacher?) || (!current_user && params[:view] == 'teacher')
-        @is_english = request.language == 'en' && params[:lang] != 'nonen'
+        @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
       end

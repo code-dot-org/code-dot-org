@@ -1,25 +1,25 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import ResourceCard from './ResourceCard';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const pegasusContentWidth = styleConstants['content-width'];
+const contentWidth = styleConstants['content-width'];
 
 const styles = {
   container: {
-    width: pegasusContentWidth,
+    width: contentWidth,
     display: "flex",
     justifyContent: "space-between"
   }
 };
 
-const CourseBlocksGradeBands = React.createClass({
-  propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired
-  },
+class CourseBlocksGradeBands extends Component {
+  static propTypes = {
+    isEnglish: PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired
+  };
 
   render() {
     const cards = [
@@ -54,9 +54,9 @@ const CourseBlocksGradeBands = React.createClass({
                 title={card.heading}
                 description={card.description}
                 buttonText={i18n.learnMore()}
-                link={`${this.props.codeOrgUrlPrefix}/${card.path}`}
+                link={pegasus(`/${card.path}`)}
                 isRtl={this.props.isRtl}
-                isJumbo = {true}
+                isJumbo={true}
               />
             )
           )}
@@ -64,6 +64,6 @@ const CourseBlocksGradeBands = React.createClass({
       </ContentContainer>
     );
   }
-});
+}
 
 export default CourseBlocksGradeBands;
