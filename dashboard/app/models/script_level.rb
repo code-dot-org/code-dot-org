@@ -173,8 +173,23 @@ class ScriptLevel < ActiveRecord::Base
   def locked_or_hidden?(user)
     return false unless user
     return true if user.hidden_stage?(self)
-    return true if user.level_locked?(self)
+    return true if locked?(user)
     false
+  end
+
+  def locked?(user)
+    return false unless stage.lockable?
+    return false if user.authorized_teacher?
+
+    # All levels in a stage key their lock state off of the last script_level
+    # in the stage, which is an assessment. Thus, to answer the question of
+    # whether the nth level is locked, we must look at the last level
+    last_script_level = stage.script_levels.last
+    user_level = user.user_level_for(last_script_level, last_script_level.oldest_active_level)
+    # There will initially be no user_level for the assessment level, at which
+    # point it is considered locked. As soon as it gets unlocked, we will always
+    # have a user_level
+    user_level.nil? || user_level.locked?(stage)
   end
 
   def previous_level
