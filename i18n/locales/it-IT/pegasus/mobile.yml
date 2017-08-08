@@ -200,14 +200,14 @@
   just_did_course2: "Ho appena completato il Corso 2 - Provalo! Su @codeorg @programmafuturo"
   just_did_course3: "Ho appena completato il Corso 3 - Provalo! Su @codeorg @programmafuturo"
   just_did_course4: "Ho appena completato il Corso 4 - Provalo! Su @codeorg @programmafuturo"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Ho appena completato il Corso Rapido - Provalo! Su @codeorg @programmafuturo"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "OLTRE <b># LINEE DI CODICE</b> SCRITTE FINO AD ORA."
   lines_of_code_alt: "<b>#</b> LINEE DI CODICE SCRITTE DAGLI STUDENTI"
   who_has_done_hoc: 'Chi ha realizzato l''Ora del Codice #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Le classifiche dell'Ora del Codice"
   students_and_lines: "%{students} studenti hanno svolto l'Ora del Codice e scritto %{lines} linee di codice."
   start_hoc: "Inizia l'Ora del Codice adesso"
@@ -1416,3 +1417,7 @@
   csp_name: "'16-'17 principi d'informatica"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Ciao %{username}"
+  user_header_settings: "Il mio account"
+  user_header_logout: "Esci"
+  user_header_signin: "Accedi"
