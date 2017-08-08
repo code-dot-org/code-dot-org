@@ -49,7 +49,8 @@ export default function HeaderBanner({
   short,
   headingText,
   subHeadingText,
-  description
+  description,
+  children,
 }) {
   return (
     <div style={short ? styles.headerBannerShort : styles.headerBanner}>
@@ -64,14 +65,14 @@ export default function HeaderBanner({
           {description}
         </div>
       )}
-      {this.props.children}
+      {children}
     </div>
   );
 }
 HeaderBanner.propTypes = {
   headingText: PropTypes.string,
-    subHeadingText: PropTypes.string,
-    description: PropTypes.string,
-    children: PropTypes.node,
-    short: PropTypes.bool
+  subHeadingText: PropTypes.string,
+  description: PropTypes.string,
+  children: PropTypes.node,
+  short: PropTypes.bool
 };
