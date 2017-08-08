@@ -654,5 +654,6 @@
   "projectTypeBounce": "Bounce",
   "projectTypeInfinity": "Infinity",
   "projectTypeIceage": "Ice Age",
-  "projectTypeGumball": "The Amazing World of Gumball"
+  "projectTypeGumball": "The Amazing World of Gumball",
+  "quickActions": "Quick actions"
 }
