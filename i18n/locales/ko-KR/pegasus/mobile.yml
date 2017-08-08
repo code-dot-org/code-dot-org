@@ -200,14 +200,14 @@
   just_did_course2: "과정2를 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course3: "과정3을 완료했습니다. - @codeorg 를 살펴보세요!"
   just_did_course4: "과정4를 완료했습니다. - @codeorg 를 살펴보세요!"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "속진 과정을 완료했습니다. - @codeorg 를 살펴보세요!"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "지금까지 <b># LINES OF CODE</b> 를 작성했습니다."
   lines_of_code_alt: "<b>#</b> 줄의 코드가 학생들에 의해 작성되었습니다"
   who_has_done_hoc: '누가 #HourOfCode @codeorg 했을까?'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Hour of Code 순위"
   students_and_lines: "%{students}명의 학생들이 Hour of Code 를 수행하였고, %{lines}의 코드를 작성하였습니다."
   start_hoc: "Hour of Code 를 지금 바로! 시작해 보세요!"
@@ -1401,3 +1402,7 @@
   csp_name: "'16 - '17 CS 원리"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "안녕하세요? %{username} 님"
+  user_header_settings: "내 계정"
+  user_header_logout: "로그아웃"
+  user_header_signin: "로그인"

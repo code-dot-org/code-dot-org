@@ -6421,6 +6421,12 @@
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Bounce:
+              name: Hoppe
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -7621,7 +7627,7 @@
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
-              name: Stave-bien
+              name: Stave bien
           title: ''
           description_audience: ''
           description_short: ''

@@ -324,6 +324,8 @@
   lines_of_code: "<b># LINES OF CODE</b> SOR ALATT ÍRT A MAI NAPIG."
   lines_of_code_alt: "<b>#</b> SOR A KÓDBÓL MEGÍRVA TANULÓK ÁLTAL"
   who_has_done_hoc: 'Ki vett már részt a #HourOfCode programon? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: A Kódolás Órája ranglista
   students_and_lines: "%{students} tanuló fejezte be a Kód Óráját, s írt %{lines}
     sort a kódból."
@@ -2013,9 +2015,7 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "Üdv %{username}"
+  user_header_settings: Profilom
+  user_header_logout: Kijelentkezés
+  user_header_signin: Bejelentkezés

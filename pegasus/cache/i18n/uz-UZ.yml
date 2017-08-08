@@ -329,6 +329,8 @@
   lines_of_code: HOZIRGACHA <b># QATORDAN OSHIQ KOD</b> YOZILDI.
   lines_of_code_alt: TALABALAR <b>#</b> QATOR KOD YOZILDI
   who_has_done_hoc: 'Kim #HourOfCode''ni o‘tdi? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Dasturlash soati yetakchilari
   students_and_lines: "%{students} o‘quvchi dasturlash soatini o‘tib, %{lines} qator
     kod yozishdi."
@@ -1989,8 +1991,6 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
   user_header_label: Hi %{username}
   user_header_settings: Account settings
   user_header_logout: Sign out

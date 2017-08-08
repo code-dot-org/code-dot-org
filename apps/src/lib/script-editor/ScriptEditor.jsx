@@ -198,7 +198,9 @@ const ScriptEditor = createReactClass({
             ref={select => this.projectWidgetSelect = select}
           >
             <option value="playlab">Play Lab</option>
+            <option value="playlab_k1">Play Lab K1</option>
             <option value="artist">Artist</option>
+            <option value="artist_k1">Artist K1</option>
             <option value="applab">App Lab</option>
             <option value="gamelab">Game Lab</option>
             <option value="weblab">Web Lab</option>
@@ -208,6 +210,14 @@ const ScriptEditor = createReactClass({
             <option value="mc">Minecraft Adventurer</option>
             <option value="minecraft">Minecraft Designer</option>
             <option value="starwars">Star Wars</option>
+            <option value="starwarsblocks">Star Wars Blocks</option>
+            <option value="flappy">Flappy</option>
+            <option value="sports">Sports</option>
+            <option value="basketball">Basketball</option>
+            <option value="bounce">Bounce</option>
+            <option value="infinity">Infinity</option>
+            <option value="iceage">Ice Age</option>
+            <option value="gumball">Gumball</option>
           </select>
         </label>
         <h2>Stages and Levels</h2>

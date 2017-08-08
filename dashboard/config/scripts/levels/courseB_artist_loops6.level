@@ -31,18 +31,19 @@
     "impressive": "false",
     "disable_sharing": "false",
     "discard_background": "false",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Write the code for one \\\"stair step\\\" first, then see if you can repeat that to draw the others.\",\"hint_id\":\"courseB_artist_loops6_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d3e03e693e60521676f9c66cb1e310f8/courseB_artist_loops6.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.\",\"hint_id\":\"courseB_artist_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f808586f155d8ca1e28c8ed2c8566692/courseB_artist_loops6.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try writing the moves down on a piece of paper and look for a pattern.\",\"hint_id\":\"courseB_artist_loops6_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e66a9adc0d870dcef89d0771a9e48779/courseB_artist_loops6.mp3\"}]",
     "ideal": "4",
     "instructions_important": "false",
     "images": "[\r\n  {\"filename\": \"https://images.code.org/bd4e1ddff37c5efbbbb00dff166948e2-image-1478588910222.png\", \"position\": [0,0]}\r\n]",
     "markdown_instructions": "Behind the bushes there is a beautiful vine full of flowers.  Can you climb the vine and see where it goes?",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false"
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2017-06-29 17:26:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2017-06-29 17:26:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-08-04 22:28:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "repeat_loops": 2
