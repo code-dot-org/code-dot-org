@@ -92,7 +92,7 @@ it:
     hoc_already_signed_up_content: 'Ti sei iscritto per insegnare un''ora di codice! Tu e i tuoi studenti non avete bisogno di accedere a Code Studio per partecipare a questo evento. Per iniziare, <a href="%{learn_url}">scegli un tutorial</a> per la tua classe e condividi il link con loro.<br/><br/>Se ti è piaciuta l''ora di codice e vuoi approfondire, puoi scegliere una password e creare un account Code Studio qui sotto per iscrivere i tuoi studenti in uno dei nostri <a href="%{educate_url}">corsi più estesi</a>.'
     hoc_already_signed_up_content_post_hoc: 'Thank you for hosting an Hour of Code. To sign in to Code Studio, you’ll need to set up a password for your account. This will let you save your progress and manage your classroom. You’ll be able to assign courses to students and track their progress. <a href="%{studio_url}">You can also continue to browse the various stages and puzzles</a> without creating an account.'
     teacher_educator_guide: 'Vedi la guida per l''insegnante'
-    title: "Iscriviti per Code.org"
+    title: "Iscriviti a Code.org"
     school_name: 'Nome della scuola (facoltativo)'
     school_address: 'Indirizzo della scuola (facoltativo)'
     address_placeholder: 'Indirizzo, città, stato, CAP'

@@ -207,7 +207,7 @@
   just_did_coursee: "Ég var að ljúka Námskeiði E - kíktu á það! @codeorg"
   just_did_coursef: "Ég var að ljúka Námskeiði F - kíktu á það! @codeorg"
   just_did_accelerated: "Ég var að ljúka Hraðnámskeiðinu - kíktu á það! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "MEIRA EN <b># LÍNUR AF KÓÐA</b> SKRIFAÐAR TIL ÞESSA."
   lines_of_code_alt: "<b>#</b> LÍNUR AF KÓÐA SKRIFAÐAR AF NEMENDUM"
   who_has_done_hoc: 'Hver hefur lokið #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Topplistar fyrir Klukkustund kóðunar"
   students_and_lines: "%{students} nemendur hafa lokið Klukkustund kóðunar og skrifað %{lines} línur af kóða."
   start_hoc: "Byrjaðu núna Klukkustund kóðunar"
@@ -1411,3 +1412,7 @@
   csp_name: "Grunnhugtök tölvunarfræði"
   csd_name: "CS Discoveries"
   full_course_category_name: "Heil námskeið"
+  user_header_label: "Hæ %{username}"
+  user_header_settings: "Reikningurinn minn"
+  user_header_logout: "Skrá út"
+  user_header_signin: "Innskráning"
