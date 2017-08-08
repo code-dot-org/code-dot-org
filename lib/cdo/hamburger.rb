@@ -305,8 +305,9 @@ class Hamburger
       ]
     elsif options[:language] == "en"
       [
+        # When signed out, "Learn" will take an English user to the student view of /courses.
         {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
-        # When signed out, an English user will get the teacher view of /courses.
+        # When signed out, "Teach" will take an English user to the teacher view of /courses.
         {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
         {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
         {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},

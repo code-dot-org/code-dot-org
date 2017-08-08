@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -8,27 +8,27 @@ import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksGradeBands from './CourseBlocksGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 /**
  * This is the main content for the Courses page for a teacher using English,
  * though it may also be shown for a signed-out user using English.
  */
-const CoursesTeacherEnglish = React.createClass({
-  propTypes: {
-    isSignedOut: React.PropTypes.bool.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number,
-    isRtl: React.PropTypes.bool.isRequired
-  },
+class CoursesTeacherEnglish extends Component {
+  static propTypes = {
+    isSignedOut: PropTypes.bool.isRequired,
+    showInitialTips: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
+    isRtl: PropTypes.bool.isRequired
+  };
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('.courseexplorer').appendTo(ReactDOM.findDOMNode(this.refs.courseExplorer)).show();
-  },
+  }
 
   render() {
-    const { isSignedOut, codeOrgUrlPrefix, showInitialTips, userId, isRtl } = this.props;
+    const { isSignedOut, showInitialTips, userId, isRtl } = this.props;
     return (
       <div>
         {(!isSignedOut &&
@@ -62,7 +62,6 @@ const CoursesTeacherEnglish = React.createClass({
           <CourseBlocksGradeBands
             isEnglish={true}
             isRtl={isRtl}
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
 
           <ContentContainer
@@ -70,7 +69,7 @@ const CoursesTeacherEnglish = React.createClass({
             description={i18n.teacherCourseHocDescription()}
             isRtl={isRtl}
             linkText={i18n.teacherCourseHocLinkText()}
-            link={`${codeOrgUrlPrefix}/hourofcode/overview`}
+            link={pegasus('/hourofcode/overview')}
             showLink={true}
           >
             <CourseBlocksHoc rowCount={1}/>
@@ -79,12 +78,11 @@ const CoursesTeacherEnglish = React.createClass({
           <CourseBlocksTools
             isEnglish={true}
             isRtl={isRtl}
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
         </div>
       </div>
     );
   }
-});
+}
 
 export default CoursesTeacherEnglish;

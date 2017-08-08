@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import { CourseBlocksAll } from './CourseBlocks';
@@ -9,26 +9,25 @@ import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
 
-const Courses = React.createClass({
-  propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired,
-    isTeacher: React.PropTypes.bool.isRequired,
-    isSignedOut: React.PropTypes.bool.isRequired,
-    linesCount: React.PropTypes.string.isRequired,
-    studentsCount: React.PropTypes.string.isRequired,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    showInitialTips: React.PropTypes.bool.isRequired,
-    userId: React.PropTypes.number,
-    isRtl: React.PropTypes.bool.isRequired
-  },
+class Courses extends Component {
+  static propTypes = {
+    isEnglish: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired,
+    isSignedOut: PropTypes.bool.isRequired,
+    linesCount: PropTypes.string.isRequired,
+    studentsCount: PropTypes.string.isRequired,
+    showInitialTips: PropTypes.bool.isRequired,
+    userId: PropTypes.number,
+    isRtl: PropTypes.bool.isRequired
+  };
 
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-  },
+  }
 
   render() {
-    const { isEnglish, isTeacher, isSignedOut, codeOrgUrlPrefix, userId, showInitialTips, isRtl } = this.props;
+    const { isEnglish, isTeacher, isSignedOut, userId, showInitialTips, isRtl } = this.props;
     const headingText = isTeacher ? i18n.coursesHeadingTeacher() : i18n.coursesHeadingStudent();
     const subHeadingText = i18n.coursesHeadingSubText(
       {linesCount: this.props.linesCount, studentsCount: this.props.studentsCount}
@@ -60,7 +59,6 @@ const Courses = React.createClass({
         {(isEnglish && isTeacher) && (
           <CoursesTeacherEnglish
             isSignedOut={isSignedOut}
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
             showInitialTips={showInitialTips}
             userId={userId}
             isRtl={isRtl}
@@ -70,7 +68,6 @@ const Courses = React.createClass({
         {/* English, student.  (Also the default to be shown when signed out.) */}
         {(isEnglish && !isTeacher) && (
           <CoursesStudentEnglish
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
             isRtl={isRtl}
           />
         )}
@@ -80,12 +77,11 @@ const Courses = React.createClass({
           <CourseBlocksAll
             isEnglish={false}
             isRtl={isRtl}
-            codeOrgUrlPrefix={codeOrgUrlPrefix}
           />
         )}
       </div>
     );
   }
-});
+}
 
 export default Courses;
