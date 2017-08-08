@@ -165,6 +165,7 @@ const Button = createReactClass({
     );
   }
 });
+Button.displayName = 'Button';
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;
