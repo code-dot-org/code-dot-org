@@ -75,8 +75,11 @@ class ActivitiesController < ApplicationController
         level_id: @script_level.level.id,
         script_id: @script_level.script.id
       )
+      # Lockable assessments will have no user_level until they get unlocked the first time
+      # TODO: test?
+      nonsubmitted_assessment = user_level.nil? && @script_level.assessment?
       # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if user_level.nil? || user_level.locked?(@script_level.stage) || user_level.try(:readonly_answers?)
+      if nonsubmitted_assessment || user_level.try(:locked?, @script_level.stage) || user_level.try(:readonly_answers?)
         return head 403
       end
     end

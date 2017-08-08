@@ -750,10 +750,15 @@ class User < ActiveRecord::Base
     )
   end
 
-  def user_level_locked?(script_level, level)
+  def level_locked?(script_level)
     return false unless script_level.stage.lockable?
     return false if authorized_teacher?
-    user_level = user_level_for(script_level, level)
+
+    # All levels in a stage key their lock state off of the last script_level
+    # in the stage, which is an assessment. Thus, to answer the question of
+    # whether the nth level is locked, we must look at the last level
+    last_script_level = script_level.stage.script_levels.last
+    user_level = user_level_for(last_script_level, last_script_level.level)
     user_level.nil? || user_level.locked?(script_level.stage)
   end
 
