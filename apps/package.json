@@ -152,7 +152,7 @@
     "pusher-js": "4.1.0",
     "radium": "0.19.4",
     "react": "~15.6.1",
-    "react-bootstrap": "0.30.1",
+    "react-bootstrap": "0.31.2",
     "react-color": "^2.11.7",
     "react-datepicker": "0.37.0",
     "react-dom": "~15.6.1",
