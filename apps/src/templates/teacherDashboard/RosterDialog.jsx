@@ -52,6 +52,7 @@ const styles = {
   error: {
     fontSize: 10,
     color: color.light_gray,
+    display: 'none',
   },
 };
 
