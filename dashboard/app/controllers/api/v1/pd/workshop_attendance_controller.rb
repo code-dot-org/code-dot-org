@@ -61,7 +61,7 @@ class Api::V1::Pd::WorkshopAttendanceController < ApplicationController
       end
 
       # renders a 404 (not found)
-      raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher || enrollment
+      raise ActiveRecord::RecordNotFound.new('teacher required') unless teacher
     end
 
     attendance = Pd::Attendance.find_restore_or_create_by! session: @session, teacher: teacher
