@@ -1,6 +1,7 @@
 import { StaggeredMotion, spring } from 'react-motion';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
@@ -76,7 +77,7 @@ const styles = {
   },
 };
 
-const AchievementDialog = Radium(React.createClass({
+const AchievementDialog = Radium(createReactClass({
   propTypes: {
     achievements: PropTypes.arrayOf(PropTypes.shape({
       check: PropTypes.bool,

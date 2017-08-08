@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var Icon = require('./Icon');
 
 /**
  * A list of icons, maybe filtered by a search query.
  */
-var IconListEntry = React.createClass({
+var IconListEntry = createReactClass({
   propTypes: {
     assetChosen: PropTypes.func.isRequired,
     iconId: PropTypes.string.isRequired,

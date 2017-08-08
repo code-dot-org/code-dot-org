@@ -7,6 +7,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import moment from 'moment';
@@ -51,7 +52,7 @@ const placeholderSession = {
   endTime: '5:00pm'
 };
 
-const WorkshopForm = React.createClass({
+const WorkshopForm = createReactClass({
   contextTypes: {
     router: PropTypes.object.isRequired
   },

@@ -3,12 +3,13 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {Row, Col} from 'react-bootstrap';
 import SessionFormPart from './session_form_part';
 import {DATE_FORMAT, MAX_SESSIONS} from '../workshopConstants';
 
-const SessionListFormPart = React.createClass({
+const SessionListFormPart = createReactClass({
   propTypes: {
     sessions: PropTypes.array.isRequired,
     onChange: PropTypes.func,

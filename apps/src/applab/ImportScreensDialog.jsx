@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import * as applabConstants from './constants';
@@ -90,7 +91,7 @@ const styles = {
 
 // TODO: possibly refactor AssetRow to make it work here instead of
 // or with this component
-export const AssetListItem = Radium(React.createClass({
+export const AssetListItem = Radium(createReactClass({
   propTypes: {
     asset: importableAssetShape,
   },
@@ -121,7 +122,7 @@ function quotedCommaJoin(strings) {
   return strings.map(s => `"${s}"`).join(', ');
 }
 
-export const ScreenListItem = Radium(React.createClass({
+export const ScreenListItem = Radium(createReactClass({
   propTypes: {
     screen: importableScreenShape,
   },
@@ -163,7 +164,7 @@ export const ScreenListItem = Radium(React.createClass({
   }
 }));
 
-export const ImportScreensDialog = React.createClass({
+export const ImportScreensDialog = createReactClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
     project: importableProjectShape,

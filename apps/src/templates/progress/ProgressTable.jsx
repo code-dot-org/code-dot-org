@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import { connect } from 'react-redux';
 import { categorizedLessons } from '@cdo/apps/code-studio/progressRedux';
@@ -14,7 +15,7 @@ const styles = {
   }
 };
 
-const ProgressTable = React.createClass({
+const ProgressTable = createReactClass({
   propTypes: {
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,

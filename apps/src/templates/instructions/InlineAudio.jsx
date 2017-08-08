@@ -2,6 +2,7 @@ import MD5 from 'crypto-js/md5';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import trackEvent from '../../util/trackEvent';
 var color = require("../../util/color");
@@ -79,7 +80,7 @@ const styles = {
   }
 };
 
-const InlineAudio = React.createClass({
+const InlineAudio = createReactClass({
   propTypes: {
     assetUrl: PropTypes.func.isRequired,
     locale: PropTypes.string,

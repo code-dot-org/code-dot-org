@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from '../util/color';
 
 /**
  * Simple boot-strapped style alert.
  */
-var Alert = React.createClass({
+var Alert = createReactClass({
   propTypes: {
     children: PropTypes.element.isRequired,
     type: PropTypes.oneOf(["error", "warning"]).isRequired,

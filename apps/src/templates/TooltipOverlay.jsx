@@ -1,6 +1,7 @@
 /** @file Crosshair and guides over visualization */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import { isPointInBounds } from '../applab/gridUtils';
 
@@ -28,7 +29,7 @@ export const styles = {
  * Should be rendered inside a VisualizationOverlay.
  * @constructor
  */
-let TooltipOverlay = React.createClass({
+let TooltipOverlay = createReactClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: PropTypes.number,

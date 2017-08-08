@@ -3,6 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
@@ -14,7 +15,7 @@ import CompletionButton from '../templates/CompletionButton';
 /**
  * Top-level React wrapper for WebLab
  */
-const WebLabView = React.createClass({
+const WebLabView = createReactClass({
   propTypes: {
     isProjectLevel: PropTypes.bool.isRequired,
     isReadOnlyWorkspace: PropTypes.bool.isRequired,

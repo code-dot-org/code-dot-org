@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import Dialog, {Body} from '../templates/Dialog';
 import {hideAnimationJson} from './actions';
@@ -11,7 +12,7 @@ const style = {
   }
 };
 
-const AnimationJsonViewer = React.createClass({
+const AnimationJsonViewer = createReactClass({
   propTypes: {
     isOpen: PropTypes.bool.isRequired,
     content: PropTypes.string,

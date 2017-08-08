@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import styleConstants from '../../styleConstants';
 
 const styles = {
@@ -14,7 +15,7 @@ const styles = {
   }
 };
 
-const GridContainer = React.createClass({
+const GridContainer = createReactClass({
   propTypes: {
     numColumns: PropTypes.number.isRequired,
     children: PropTypes.arrayOf(PropTypes.node),

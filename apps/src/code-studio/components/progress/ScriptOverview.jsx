@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Radium from 'radium';
 import { connect } from 'react-redux';
@@ -12,7 +13,7 @@ import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 /**
  * Stage progress component used in level header and script overview.
  */
-const ScriptOverview = React.createClass({
+const ScriptOverview = createReactClass({
   propTypes: {
     onOverviewPage: PropTypes.bool.isRequired,
     excludeCsfColumnInLegend: PropTypes.bool.isRequired,

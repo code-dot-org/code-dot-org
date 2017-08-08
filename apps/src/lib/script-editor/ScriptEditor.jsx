@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import LegendSelector from './LegendSelector';
@@ -22,7 +23,7 @@ const styles = {
 /**
  * Component for editing course scripts.
  */
-const ScriptEditor = React.createClass({
+const ScriptEditor = createReactClass({
   propTypes: {
     beta: PropTypes.bool,
     name: PropTypes.string.isRequired,

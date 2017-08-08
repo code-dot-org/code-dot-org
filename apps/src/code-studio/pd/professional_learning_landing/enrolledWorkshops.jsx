@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
 import {Table, Button, Modal} from 'react-bootstrap';
 import moment from 'moment';
 import {DATE_FORMAT, TIME_FORMAT} from '../workshop_dashboard/workshopConstants';
 
-const EnrolledWorkshops = React.createClass({
+const EnrolledWorkshops = createReactClass({
   render() {
     return (
       <WorkshopTableLoader
@@ -25,7 +26,7 @@ const styles = {
   }
 };
 
-const EnrolledWorkshopsTable = React.createClass({
+const EnrolledWorkshopsTable = createReactClass({
   propTypes: {
     workshops: PropTypes.arrayOf(workshopShape)
   },

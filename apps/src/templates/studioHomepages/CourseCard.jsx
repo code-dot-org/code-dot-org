@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -97,7 +98,7 @@ const styles = {
  * A card used on the homepage to display information about a particular course
  * or script for a user.
  */
-const CourseCard = React.createClass({
+const CourseCard = createReactClass({
   propTypes: {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,

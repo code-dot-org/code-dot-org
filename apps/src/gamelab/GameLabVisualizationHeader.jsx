@@ -1,6 +1,7 @@
 /** @file Row of controls above the visualization. */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {changeInterfaceMode} from './actions';
 import {connect} from 'react-redux';
 import {GameLabInterfaceMode} from './constants';
@@ -18,7 +19,7 @@ const styles = {
 /**
  * Controls above the visualization header, including the code/animation toggle.
  */
-const GameLabVisualizationHeader = React.createClass({
+const GameLabVisualizationHeader = createReactClass({
   propTypes: {
     interfaceMode: PropTypes
         .oneOf([GameLabInterfaceMode.CODE, GameLabInterfaceMode.ANIMATION])

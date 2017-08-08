@@ -1,6 +1,7 @@
 /** List item placeholder for adding a new item */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from '../../util/color';
 import Radium from 'radium';
 
@@ -51,7 +52,7 @@ var styles = {
  * List item control (usable in animation or frame lists) for adding
  * a new item - displays as a plus sign in a dashed box.
  */
-var NewListItem = React.createClass({
+var NewListItem = createReactClass({
   propTypes: {
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired

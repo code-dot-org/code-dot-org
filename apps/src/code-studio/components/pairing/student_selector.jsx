@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { studentsShape } from './types';
 
 /**
  * A component for selecting one or more students in a section.
  */
-const StudentSelector = React.createClass({
+const StudentSelector = createReactClass({
   propTypes: {
     students: studentsShape,
     handleSubmit: PropTypes.func.isRequired

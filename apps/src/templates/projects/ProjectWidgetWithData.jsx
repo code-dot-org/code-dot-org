@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ProjectWidget from '@cdo/apps/templates/projects/ProjectWidget';
 import $ from 'jquery';
 
-const ProjectWidgetWithData = React.createClass({
+const ProjectWidgetWithData = createReactClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(PropTypes.string),
     projectList: PropTypes.array

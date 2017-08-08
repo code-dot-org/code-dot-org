@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import $ from 'jquery';
 import _ from 'lodash';
 import SessionAttendanceRow from './session_attendance_row';
@@ -23,7 +24,7 @@ const styles = {
   }
 };
 
-const SessionAttendance = React.createClass({
+const SessionAttendance = createReactClass({
   propTypes: {
     workshopId: PropTypes.number.isRequired,
     course: PropTypes.string.isRequired,

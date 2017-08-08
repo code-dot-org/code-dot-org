@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * A single icon.
  */
-var Icon = React.createClass({
+var Icon = createReactClass({
   propTypes: {
     iconId: PropTypes.string.isRequired
   },

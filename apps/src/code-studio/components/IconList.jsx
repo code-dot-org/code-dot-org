@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import IconListEntry from './IconListEntry';
 import { aliases } from './icons';
 import i18n from '@cdo/locale';
@@ -7,7 +8,7 @@ import i18n from '@cdo/locale';
 /**
  * A component for managing icons.
  */
-var IconList = React.createClass({
+var IconList = createReactClass({
   propTypes: {
     assetChosen: PropTypes.func.isRequired,
     search: PropTypes.string.isRequired

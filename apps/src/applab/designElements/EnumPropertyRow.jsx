@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import * as rowStyle from './rowStyle';
 
-var EnumPropertyRow = React.createClass({
+var EnumPropertyRow = createReactClass({
   propTypes: {
     initialValue: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.string).isRequired,

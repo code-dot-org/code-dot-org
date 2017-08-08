@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import IconList from './IconList';
 import i18n from '@cdo/locale';
 
 /**
  * A component for managing icons.
  */
-var IconLibrary = React.createClass({
+var IconLibrary = createReactClass({
   propTypes: {
     alignment: PropTypes.string,
     assetChosen: PropTypes.func.isRequired

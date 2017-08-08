@@ -1,10 +1,11 @@
 import LegacyButton from './LegacyButton';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import msg from '@cdo/locale';
 import Lightbulb from './Lightbulb';
 
-var DialogButtons = React.createClass({
+var DialogButtons = createReactClass({
   propTypes: {
     assetUrl: PropTypes.func,
     cancelButtonClass: PropTypes.string,

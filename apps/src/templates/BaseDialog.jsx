@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * BaseDialog
@@ -7,7 +8,7 @@ import PropTypes from 'prop-types';
  * semi-transparent backdrop. Can be closed by clicking the x, clicking the
  * backdrop, or pressing esc.
  */
-var BaseDialog = React.createClass({
+var BaseDialog = createReactClass({
   propTypes: {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,

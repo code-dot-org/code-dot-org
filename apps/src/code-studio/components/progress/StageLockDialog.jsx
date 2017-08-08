@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -66,7 +67,7 @@ const styles = {
   }
 };
 
-const StageLockDialog = React.createClass({
+const StageLockDialog = createReactClass({
   propTypes: {
     isOpen: PropTypes.bool.isRequired,
     handleClose: PropTypes.func.isRequired,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 
 var GameButtons = require('../templates/GameButtons').default;
@@ -24,7 +25,7 @@ const styles = {
   }
 };
 
-var GameLabVisualizationColumn = React.createClass({
+var GameLabVisualizationColumn = createReactClass({
   propTypes: {
     finishButton: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,

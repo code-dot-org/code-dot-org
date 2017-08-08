@@ -2,12 +2,13 @@ import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PendingButton from '../../templates/PendingButton';
 import { castValue, displayableValue, editableValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 import _ from 'lodash';
 
-const EditTableRow = React.createClass({
+const EditTableRow = createReactClass({
   propTypes: {
     columnNames: PropTypes.array.isRequired,
     tableName: PropTypes.string.isRequired,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
@@ -36,7 +37,7 @@ const styles = {
   }
 };
 
-const MiniViewTopRow = React.createClass({
+const MiniViewTopRow = createReactClass({
   propTypes: {
     scriptName: PropTypes.string.isRequired,
     // May not have this (i.e if not logged in)

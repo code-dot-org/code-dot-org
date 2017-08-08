@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import clientApi from '@cdo/apps/clientApi';
 var assetsApi = clientApi.assets;
@@ -41,7 +42,7 @@ export const styles = {
   },
 };
 
-var AssetThumbnail = Radium(React.createClass({
+var AssetThumbnail = Radium(createReactClass({
   propTypes: {
     name: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,

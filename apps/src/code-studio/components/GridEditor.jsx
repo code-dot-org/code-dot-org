@@ -5,6 +5,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var HarvesterCell = require('@cdo/apps/maze/harvesterCell');
 var PlanterCell = require('@cdo/apps/maze/planterCell');
 var BeeCell = require('@cdo/apps/maze/beeCell');
@@ -21,7 +22,7 @@ var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
 var BounceCellEditor = require('./BounceCellEditor');
 var Grid = require('./Grid');
 
-var CellJSON = React.createClass({
+var CellJSON = createReactClass({
   propTypes: {
     serialization: PropTypes.object.isRequired,
     onChange: PropTypes.func.isRequired
@@ -47,7 +48,7 @@ var CellJSON = React.createClass({
   }
 });
 
-var GridEditor = React.createClass({
+var GridEditor = createReactClass({
   propTypes: {
     serializedMaze: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)),
     maze: PropTypes.arrayOf(PropTypes.array), // maze items can be integers or strings

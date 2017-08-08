@@ -2,11 +2,12 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * A hidden file input providing upload functionality with event hooks.
  */
-var HiddenUploader = React.createClass({
+var HiddenUploader = createReactClass({
   propTypes: {
     toUrl: PropTypes.string.isRequired,
     allowedExtensions: PropTypes.string,

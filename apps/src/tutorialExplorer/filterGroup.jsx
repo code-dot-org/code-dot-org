@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import FilterChoice from './filterChoice';
 import { getResponsiveValue } from './responsive';
 
@@ -20,7 +21,7 @@ const styles = {
   }
 };
 
-const FilterGroup = React.createClass({
+const FilterGroup = createReactClass({
   propTypes: {
     name: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,

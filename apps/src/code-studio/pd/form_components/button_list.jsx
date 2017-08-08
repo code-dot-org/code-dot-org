@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import _ from 'lodash';
 import {
   Radio,
@@ -11,7 +12,7 @@ import {
 
 const otherString = 'Other: ';
 
-const ButtonList = React.createClass({
+const ButtonList = createReactClass({
   propTypes: {
     type: PropTypes.oneOf(['radio', 'check']).isRequired,
     label: PropTypes.string.isRequired,

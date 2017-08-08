@@ -3,6 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import shapes from './shapes';
 import { getTagString, getTutorialDetailString } from './util';
 import Image from './image';
@@ -105,7 +106,7 @@ const styles = {
   }
 };
 
-const TutorialDetail = React.createClass({
+const TutorialDetail = createReactClass({
   propTypes: {
     showing: PropTypes.bool.isRequired,
     item: shapes.tutorial,

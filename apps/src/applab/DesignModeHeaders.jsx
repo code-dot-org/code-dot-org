@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import applabMsg from '@cdo/applab/locale';
 import msg from '@cdo/locale';
 import commonStyles from '../commonStyles';
@@ -7,7 +8,7 @@ import color from '../util/color';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import SettingsCog from '../lib/ui/SettingsCog';
 
-const DesignModeHeaders = React.createClass({
+const DesignModeHeaders = createReactClass({
   propTypes: {
     handleVersionHistory: PropTypes.func.isRequired,
     onToggleToolbox: PropTypes.func.isRequired,

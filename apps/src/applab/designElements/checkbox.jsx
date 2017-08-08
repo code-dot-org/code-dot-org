@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -8,7 +9,7 @@ import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
-var CheckboxProperties = React.createClass({
+var CheckboxProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -71,7 +72,7 @@ var CheckboxProperties = React.createClass({
   }
 });
 
-var CheckboxEvents = React.createClass({
+var CheckboxEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

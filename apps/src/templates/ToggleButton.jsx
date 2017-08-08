@@ -1,10 +1,11 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import styles from './ToggleButtonStyles';
 
-const ToggleButton = React.createClass({
+const ToggleButton = createReactClass({
   propTypes: {
     id: PropTypes.string,
     className: PropTypes.string,

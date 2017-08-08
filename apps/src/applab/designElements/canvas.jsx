@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import ZOrderRow from './ZOrderRow';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import * as elementUtils from './elementUtils';
 
-var CanvasProperties = React.createClass({
+var CanvasProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -56,7 +57,7 @@ var CanvasProperties = React.createClass({
   }
 });
 
-var CanvasEvents = React.createClass({
+var CanvasEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

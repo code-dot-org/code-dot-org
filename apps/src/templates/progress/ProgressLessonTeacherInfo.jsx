@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
@@ -35,7 +36,7 @@ const styles = {
   }
 };
 
-const ProgressLessonTeacherInfo = React.createClass({
+const ProgressLessonTeacherInfo = createReactClass({
   propTypes: {
     lesson: lessonType.isRequired,
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
 import PendingButton from '../../templates/PendingButton';
@@ -67,7 +68,7 @@ function checkImageReachability(imageUrl, callback) {
 /**
  * Share Dialog used by projects
  */
-const ShareDialog = React.createClass({
+const ShareDialog = createReactClass({
   propTypes: {
     i18n: PropTypes.shape({
       t: PropTypes.func.isRequired,

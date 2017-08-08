@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 
 import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
@@ -25,7 +26,7 @@ const styles = {
   },
 };
 
-export const ImportProjectDialog = React.createClass({
+export const ImportProjectDialog = createReactClass({
 
   propTypes: Object.assign({}, Dialog.propTypes, {
     onImport: PropTypes.func.isRequired,

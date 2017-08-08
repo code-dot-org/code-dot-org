@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
@@ -11,7 +12,7 @@ import EventRow from './EventRow';
 import {ICON_PREFIX_REGEX} from '../constants';
 import * as elementUtils from './elementUtils';
 
-var ImageProperties = React.createClass({
+var ImageProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -96,7 +97,7 @@ var ImageProperties = React.createClass({
   }
 });
 
-var ImageEvents = React.createClass({
+var ImageEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

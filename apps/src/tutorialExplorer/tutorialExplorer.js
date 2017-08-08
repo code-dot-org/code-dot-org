@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
@@ -33,7 +34,7 @@ const styles = {
   }
 };
 
-const TutorialExplorer = React.createClass({
+const TutorialExplorer = createReactClass({
   propTypes: {
     tutorials: PropTypes.array.isRequired,
     filterGroups: PropTypes.array.isRequired,

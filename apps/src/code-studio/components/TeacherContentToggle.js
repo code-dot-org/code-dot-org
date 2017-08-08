@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Radium from 'radium';
 import { connect } from 'react-redux';
@@ -27,7 +28,7 @@ const styles = {
  * container elements for the main content and any other content, and toggles
  * which of those containers is visible as appropriate.
  */
-export const TeacherContentToggle = Radium(React.createClass({
+export const TeacherContentToggle = Radium(createReactClass({
   propTypes: {
     isBlocklyOrDroplet: PropTypes.bool.isRequired,
     // redux provided

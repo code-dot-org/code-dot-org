@@ -1,6 +1,7 @@
 /** @file Dropdown for selecting design mode screens */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "../util/color";
 import commonStyles from '../commonStyles';
@@ -25,7 +26,7 @@ var styles = {
  * for selecting a screen to edit.
  * @type {function}
  */
-var ScreenSelector = React.createClass({
+var ScreenSelector = createReactClass({
   propTypes: {
     // from connect
     currentScreenId: PropTypes.string,

@@ -1,6 +1,7 @@
 /** @file Filtering controls for Log Browser modal */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const style = {
   clear: {
@@ -22,7 +23,7 @@ const style = {
 /**
  * Filter controls for Log Browser Modal
  */
-const NetSimLogBrowserFilters = React.createClass({
+const NetSimLogBrowserFilters = createReactClass({
   propTypes: {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     canSetRouterLogMode: PropTypes.bool,
@@ -67,7 +68,7 @@ const NetSimLogBrowserFilters = React.createClass({
 });
 export default NetSimLogBrowserFilters;
 
-const RouterLogModeDropdown = React.createClass({
+const RouterLogModeDropdown = createReactClass({
   propTypes: {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     isAllRouterLogMode: PropTypes.bool,
@@ -98,7 +99,7 @@ const RouterLogModeDropdown = React.createClass({
   }
 });
 
-const TrafficFilterDropdown = React.createClass({
+const TrafficFilterDropdown = createReactClass({
   propTypes: {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     localAddress: PropTypes.string,
@@ -136,7 +137,7 @@ const TrafficFilterDropdown = React.createClass({
   }
 });
 
-export const SentByDropdown = React.createClass({
+export const SentByDropdown = createReactClass({
   propTypes: {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     currentSentByFilter: PropTypes.string.isRequired,

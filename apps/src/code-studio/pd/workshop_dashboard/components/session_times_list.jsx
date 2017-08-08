@@ -3,9 +3,10 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import SessionTime from './session_time';
 
-const SessionTimesList = React.createClass({
+const SessionTimesList = createReactClass({
   propTypes: {
     sessions: PropTypes.arrayOf(
       PropTypes.shape({

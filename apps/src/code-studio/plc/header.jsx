@@ -4,9 +4,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 
-var PlcHeader = React.createClass({
+var PlcHeader = createReactClass({
   propTypes: {
     unit_name: PropTypes.string,
     unit_view_path: PropTypes.string,

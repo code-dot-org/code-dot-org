@@ -1,6 +1,7 @@
 /** @file Modal dialog for browsing any logs in the simulation. */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Dialog, {Title, Body} from '../templates/Dialog';
 import NetSimLogBrowserFilters from './NetSimLogBrowserFilters';
 import NetSimLogBrowserTable from './NetSimLogBrowserTable';
@@ -15,7 +16,7 @@ const style = {
   }
 };
 
-const NetSimLogBrowser = React.createClass({
+const NetSimLogBrowser = createReactClass({
   propTypes: Object.assign({}, Dialog.propTypes, {
     i18n: PropTypes.objectOf(PropTypes.func).isRequired,
     canSetRouterLogMode: PropTypes.bool,

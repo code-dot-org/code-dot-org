@@ -10,6 +10,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
 import * as dataStyles from './dataStyles';
@@ -26,7 +27,7 @@ const styles = {
   }
 };
 
-const DataProperties = React.createClass({
+const DataProperties = createReactClass({
   propTypes: {
     // from redux state
     view: PropTypes.oneOf(Object.keys(DataView)),

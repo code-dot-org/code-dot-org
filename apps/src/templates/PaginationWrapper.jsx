@@ -1,6 +1,7 @@
 /** Pagination controls */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium, {Style} from 'radium';
 import color from "../util/color";
 import Pagination from "react-bootstrap/lib/Pagination";
@@ -8,7 +9,7 @@ import Pagination from "react-bootstrap/lib/Pagination";
 /**
  * Pagination control for navigating between pages of a list.
  */
-var PaginationWrapper = React.createClass({
+var PaginationWrapper = createReactClass({
   propTypes: {
     totalPages: PropTypes.number.isRequired,
     currentPage: PropTypes.number.isRequired,

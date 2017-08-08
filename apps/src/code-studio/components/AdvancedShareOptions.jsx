@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import * as color from "../../util/color";
 import {CIPHER, ALPHABET} from '../../constants';
@@ -45,7 +46,7 @@ const style = {
   },
 };
 
-const AdvancedShareOptions = Radium(React.createClass({
+const AdvancedShareOptions = Radium(createReactClass({
   propTypes: {
     shareUrl: PropTypes.string.isRequired,
     onClickExport: PropTypes.func,

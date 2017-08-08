@@ -1,5 +1,6 @@
-var React = require('react');
+import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var filesApi = require('@cdo/apps/clientApi').files;
 import AssetThumbnail from './AssetThumbnail';
@@ -7,7 +8,7 @@ import AssetThumbnail from './AssetThumbnail';
 /**
  * A single row in the AssetManager, describing one asset.
  */
-var AssetRow = React.createClass({
+var AssetRow = createReactClass({
   propTypes: {
     name: PropTypes.string.isRequired,
     type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,

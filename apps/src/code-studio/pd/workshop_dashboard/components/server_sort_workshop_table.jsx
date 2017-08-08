@@ -7,10 +7,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import WorkshopTableLoader from './workshop_table_loader';
 import WorkshopTable from './workshop_table';
 
-const ServerSortWorkshopTable = React.createClass({
+const ServerSortWorkshopTable = createReactClass({
   propTypes: {
     queryUrl: PropTypes.string,
     queryParams: PropTypes.object,

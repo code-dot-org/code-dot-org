@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import i18n from './locale';
 
 const styles = {
@@ -16,7 +17,7 @@ const styles = {
   }
 };
 
-const ToggleAllTutorialsButton = React.createClass({
+const ToggleAllTutorialsButton = createReactClass({
   propTypes: {
     showAllTutorials: PropTypes.func.isRequired,
     hideAllTutorials: PropTypes.func.isRequired,

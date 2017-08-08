@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 var color = require("../../util/color");
 var styleConstants = require('../../styleConstants');
@@ -31,7 +32,7 @@ var styles = {
   }
 };
 
-var HeightResizer = React.createClass({
+var HeightResizer = createReactClass({
   propTypes: {
     position: PropTypes.number.isRequired,
     /**

@@ -3,10 +3,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import FilterGroup from './filterGroup';
 import RoboticsButton from './roboticsButton';
 
-const FilterSet = React.createClass({
+const FilterSet = createReactClass({
   propTypes: {
     filterGroups: PropTypes.array.isRequired,
     onUserInput: PropTypes.func.isRequired,

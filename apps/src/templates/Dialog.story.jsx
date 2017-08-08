@@ -1,7 +1,8 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import Dialog, {Icon, Title, Body, Buttons, Cancel, Confirm, Footer} from './Dialog';
 
-const ExampleDialogButton = React.createClass({
+const ExampleDialogButton = createReactClass({
   render() {
     return (
       <div>

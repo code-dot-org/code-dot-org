@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 import DesignToolbox from './DesignToolbox';
 import DesignProperties from './designProperties';
 
-export default React.createClass({
+export default createReactClass({
   propTypes: {
     handleDragStart: PropTypes.func,
     element: PropTypes.instanceOf(HTMLElement),

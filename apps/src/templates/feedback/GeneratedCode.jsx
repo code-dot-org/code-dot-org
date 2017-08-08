@@ -1,8 +1,9 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
-var GeneratedCode = React.createClass({
+var GeneratedCode = createReactClass({
 
   propTypes: {
     message: PropTypes.string.isRequired,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
@@ -18,7 +19,7 @@ const styles = {
   }
 };
 
-const RecentCourses = React.createClass({
+const RecentCourses = createReactClass({
   propTypes: {
     courses: shapes.courses,
     isTeacher: PropTypes.bool.isRequired,

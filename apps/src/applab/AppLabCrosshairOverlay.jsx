@@ -2,10 +2,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import { draggedElementDropPoint } from './gridUtils';
 
-const AppLabCrosshairOverlay = React.createClass({
+const AppLabCrosshairOverlay = createReactClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: PropTypes.number,

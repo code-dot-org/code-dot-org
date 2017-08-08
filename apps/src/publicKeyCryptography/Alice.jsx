@@ -1,6 +1,7 @@
 /** @file The Alice character panel from the crypto widget */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
@@ -18,7 +19,7 @@ import {
 import {computePublicKey} from './cryptographyMath';
 import {COLORS} from './style';
 
-const Alice = React.createClass({
+const Alice = createReactClass({
   propTypes: {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,

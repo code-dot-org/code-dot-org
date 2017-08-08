@@ -1,6 +1,7 @@
 /** @file Vertical scrolling list */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 
 var staticStyles = {
@@ -17,7 +18,7 @@ var staticStyles = {
  * Component displaying a vertical list of tiles that scrolls if it grows
  * beyond its natural height.
  */
-var ScrollableList = React.createClass({
+var ScrollableList = createReactClass({
   propTypes: {
     className: PropTypes.string,
     style: PropTypes.object,

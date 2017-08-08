@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import commonStyles from '../commonStyles';
 import color from "../util/color";
@@ -46,7 +47,7 @@ var styles = {
   }
 };
 
-var Visualization = React.createClass({
+var Visualization = createReactClass({
   propTypes: {
     visualizationHasPadding: PropTypes.bool.isRequired,
     isShareView: PropTypes.bool.isRequired,

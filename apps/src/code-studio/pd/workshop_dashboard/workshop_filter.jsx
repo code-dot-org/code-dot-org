@@ -4,6 +4,7 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import $ from "jquery";
 import _ from "lodash";
 import Select from "react-select";
@@ -48,7 +49,7 @@ const limitOptions = [
 
 const QUERY_API_URL = "/api/v1/pd/workshops/filter";
 
-const WorkshopFilter = React.createClass({
+const WorkshopFilter = createReactClass({
   propTypes: {
     location: PropTypes.shape({
       pathname: PropTypes.string,

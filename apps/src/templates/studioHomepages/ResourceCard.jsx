@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Button from '../Button';
 import color from "../../util/color";
 
@@ -94,7 +95,7 @@ const styles = {
   }
 };
 
-const ResourceCard = React.createClass({
+const ResourceCard = createReactClass({
   propTypes: {
     isJumbo: PropTypes.bool,
     title: PropTypes.string.isRequired,

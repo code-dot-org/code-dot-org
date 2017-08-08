@@ -8,13 +8,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
 import _ from 'lodash';
 import styleConstants from '../../styleConstants';
 import trackEvent from '../../util/trackEvent';
 
-const UiTips = React.createClass({
+const UiTips = createReactClass({
   propTypes: {
     userId: PropTypes.number,
     tipId: PropTypes.string,

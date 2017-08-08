@@ -1,10 +1,11 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import library from './designElements/library';
 
-export default React.createClass({
+export default createReactClass({
   propTypes: {
     imageUrl: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,

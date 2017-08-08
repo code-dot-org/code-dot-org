@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ContentContainer from '../ContentContainer';
 import Announcement from './Announcement';
 import AnnouncementsCarousel from './AnnouncementsCarousel';
 import i18n from "@cdo/locale";
 
-const Announcements = React.createClass({
+const Announcements = createReactClass({
   propTypes: {
     announcements: PropTypes.arrayOf(
       PropTypes.shape({

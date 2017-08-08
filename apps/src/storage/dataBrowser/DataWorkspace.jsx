@@ -5,6 +5,7 @@ import DataTable from './DataTable';
 import Dialog from '../../templates/Dialog';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PaneHeader, { PaneSection, PaneButton } from '../../templates/PaneHeader';
 import { connect } from 'react-redux';
 import { clearWarning } from '../redux/data';
@@ -27,7 +28,7 @@ const styles = {
   }
 };
 
-const DataWorkspace = React.createClass({
+const DataWorkspace = createReactClass({
   propTypes: {
     // from redux state
     isRtl: PropTypes.bool.isRequired,

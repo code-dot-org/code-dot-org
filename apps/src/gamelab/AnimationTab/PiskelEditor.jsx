@@ -3,6 +3,7 @@
 /* global PISKEL_DEVELOPMENT_MODE */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
 import * as shapes from '../shapes';
@@ -22,7 +23,7 @@ const PISKEL_PATH = '/blockly/js/piskel/index.html' +
  * (and never re-rendering!) that iframe, and sending state updates to the
  * iframe.
  */
-const PiskelEditor = React.createClass({
+const PiskelEditor = createReactClass({
   propTypes: {
     // Provided manually
     style: PropTypes.object,

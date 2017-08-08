@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 
@@ -20,7 +21,7 @@ var alert = window.alert;
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
  */
-var AgeDropdown = React.createClass({
+var AgeDropdown = createReactClass({
   propTypes: {
     age: PropTypes.oneOfType([
       PropTypes.string,
@@ -50,7 +51,7 @@ var AgeDropdown = React.createClass({
   }
 });
 
-var ReportAbuseForm = React.createClass({
+var ReportAbuseForm = createReactClass({
   propTypes: {
     i18n: PropTypes.object.isRequired,
     csrfToken: PropTypes.string.isRequired,

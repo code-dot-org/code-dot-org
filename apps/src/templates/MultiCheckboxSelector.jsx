@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import Immutable from 'immutable';
 import color from "../util/color";
@@ -32,7 +33,7 @@ export const styles = {
   },
 };
 
-const MultiCheckboxSelector = Radium(React.createClass({
+const MultiCheckboxSelector = Radium(createReactClass({
   propTypes: {
     header: PropTypes.node,
     selected: PropTypes.array,

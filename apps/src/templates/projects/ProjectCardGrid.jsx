@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {projectPropType, Galleries} from './projectConstants';
 import i18n from "@cdo/locale";
@@ -20,7 +21,7 @@ const styles = {
   }
 };
 
-const ProjectCardGrid = React.createClass({
+const ProjectCardGrid = createReactClass({
   propTypes: {
     projectLists: PropTypes.shape({
       applab: PropTypes.arrayOf(projectPropType),

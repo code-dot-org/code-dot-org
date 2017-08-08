@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import color from "@cdo/apps/util/color";
 import i18n from '@cdo/locale';
@@ -23,7 +24,7 @@ const styles = {
   }
 };
 
-const SummaryProgressTable = React.createClass({
+const SummaryProgressTable = createReactClass({
   propTypes: {
     lessons: PropTypes.arrayOf(lessonType).isRequired,
     levelsByLesson: PropTypes.arrayOf(

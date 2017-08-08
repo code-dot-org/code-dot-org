@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
@@ -120,7 +121,7 @@ const styles = {
   },
 };
 
-const Button = React.createClass({
+const Button = createReactClass({
   propTypes: {
     className: PropTypes.string,
     href: PropTypes.string,

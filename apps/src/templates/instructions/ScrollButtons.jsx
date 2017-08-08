@@ -1,6 +1,7 @@
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 
 import { addMouseUpTouchEvent } from '../../dom';
@@ -63,7 +64,7 @@ const CRAFT_MARGIN = 0;
 /**
  * A pair of buttons for scrolling instructions in CSF
  */
-const ScrollButtons = React.createClass({
+const ScrollButtons = createReactClass({
   propTypes: {
     style: PropTypes.object,
     visible: PropTypes.bool.isRequired,

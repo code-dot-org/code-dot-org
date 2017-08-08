@@ -4,6 +4,7 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import $ from 'jquery';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 
@@ -15,7 +16,7 @@ const styles = {
   }
 };
 
-const SessionAttendanceRow = React.createClass({
+const SessionAttendanceRow = createReactClass({
   propTypes: {
     workshopId: PropTypes.number.isRequired,
     sessionId: PropTypes.number.isRequired,

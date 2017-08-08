@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ProjectCard from './ProjectCard.jsx';
 import {personalProjectDataPropType} from './projectConstants';
 import color from "../../util/color";
@@ -31,7 +32,7 @@ const styles = {
   }
 };
 
-const ProjectCardGrid = React.createClass({
+const ProjectCardGrid = createReactClass({
   propTypes: {
     projectList: PropTypes.arrayOf(personalProjectDataPropType).isRequired
   },

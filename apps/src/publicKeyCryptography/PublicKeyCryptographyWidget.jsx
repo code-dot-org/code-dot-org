@@ -1,6 +1,7 @@
 /** @file Root component for Public Key Cryptography widget */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import CharacterPanel from './CharacterPanel';
 import EqualColumns from './EqualColumns';
 import Alice from './Alice';
@@ -39,7 +40,7 @@ const style = {
 };
 
 /** Root component for Public Key Cryptography widget */
-const PublicKeyCryptographyWidget = React.createClass({
+const PublicKeyCryptographyWidget = createReactClass({
   getInitialState() {
     return {
       animating: false,

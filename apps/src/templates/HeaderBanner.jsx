@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 
 const styles = {
@@ -45,7 +46,7 @@ const styles = {
   }
 };
 
-const HeaderBanner = React.createClass({
+const HeaderBanner = createReactClass({
   propTypes: {
     headingText: PropTypes.string,
     subHeadingText: PropTypes.string,

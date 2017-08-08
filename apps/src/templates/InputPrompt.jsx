@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const fontSize = 18;
 const styles = {
@@ -29,7 +30,7 @@ const styles = {
 /**
  * Simple input dialog to prompt for user input.
  */
-const InputPrompt = React.createClass({
+const InputPrompt = createReactClass({
   propTypes: {
     question: PropTypes.string.isRequired,
     onInputReceived: PropTypes.func.isRequired,

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -12,7 +13,7 @@ import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 import * as gridUtils from '../gridUtils';
 
-const LabelProperties = React.createClass({
+const LabelProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -103,7 +104,7 @@ const LabelProperties = React.createClass({
   }
 });
 
-const LabelEvents = React.createClass({
+const LabelEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

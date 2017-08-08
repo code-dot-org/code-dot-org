@@ -30,8 +30,8 @@ var styles = {
   },
 };
 
-var CodeWorkspace = React.createClass({
-  propTypes: {
+class CodeWorkspace extends React.Component {
+  static propTypes = {
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -42,9 +42,9 @@ var CodeWorkspace = React.createClass({
     isMinecraft: PropTypes.bool.isRequired,
     runModeIndicators: PropTypes.bool.isRequired,
     withSettingsCog: PropTypes.bool,
-  },
+  };
 
-  shouldComponentUpdate: function (nextProps) {
+  shouldComponentUpdate(nextProps) {
     // This component is current semi-protected. We don't want to completely
     // disallow rerendering, since that would prevent us from being able to
     // update styles. However, we do want to prevent property changes that would
@@ -61,9 +61,9 @@ var CodeWorkspace = React.createClass({
     }.bind(this));
 
     return true;
-  },
+  }
 
-  onDebuggerSlide(debuggerHeight) {
+  onDebuggerSlide = (debuggerHeight) => {
     const textbox = this.codeTextbox.getRoot();
     if (textbox.style.bottom) {
       $(textbox).animate(
@@ -82,7 +82,7 @@ var CodeWorkspace = React.createClass({
       textbox.style.bottom = debuggerHeight + 'px';
       utils.fireResizeEvent();
     }
-  },
+  };
 
   renderToolboxHeaders() {
     const {
@@ -134,12 +134,12 @@ var CodeWorkspace = React.createClass({
         {settingsCog}
       </PaneSection>
     ];
-  },
+  }
 
-  onToggleShowCode(usingBlocks) {
+  onToggleShowCode = (usingBlocks) => {
     this.blockCounterEl.style.display =
         (usingBlocks && studioApp.enableShowBlockCount) ? 'inline-block' : 'none';
-  },
+  };
 
   render() {
     var props = this.props;
@@ -215,7 +215,7 @@ var CodeWorkspace = React.createClass({
       </span>
     );
   }
-});
+}
 
 module.exports = connect(state => ({
   editCode: state.pageConstants.isDroplet,

@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import processMarkdown from 'marked';
@@ -167,7 +168,7 @@ const styles = {
   },
 };
 
-var TopInstructions = React.createClass({
+var TopInstructions = createReactClass({
   propTypes: {
     overlayVisible: PropTypes.bool,
     skinId: PropTypes.string,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import TeacherPanel from '../TeacherPanel';
 import SectionSelector from './SectionSelector';
@@ -24,7 +25,7 @@ const styles = {
   }
 };
 
-const ScriptTeacherPanel = React.createClass({
+const ScriptTeacherPanel = createReactClass({
   propTypes: {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hasSections: PropTypes.bool.isRequired,

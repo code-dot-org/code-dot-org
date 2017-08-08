@@ -3,11 +3,12 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Button} from 'react-bootstrap';
 import ConfirmationDialog from './confirmation_dialog';
 import Permission from '../../permission';
 
-const WorkshopManagement = React.createClass({
+const WorkshopManagement = createReactClass({
   contextTypes: {
     router: PropTypes.object.isRequired
   },

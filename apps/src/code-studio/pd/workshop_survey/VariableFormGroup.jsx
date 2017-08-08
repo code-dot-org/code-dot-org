@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import {ButtonList} from '../form_components/button_list';
 import FieldGroup from '../form_components/FieldGroup';
@@ -34,7 +35,7 @@ const styles = {
   },
 };
 
-const ColumnVariableQuestion = React.createClass({
+const ColumnVariableQuestion = createReactClass({
   propTypes: {
     selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
     question: questionPropType,
@@ -101,7 +102,7 @@ const ColumnVariableQuestion = React.createClass({
   }
 });
 
-const RowVariableQuestion = React.createClass({
+const RowVariableQuestion = createReactClass({
   propTypes: {
     selectedValues: PropTypes.arrayOf(PropTypes.string).isRequired,
     question: questionPropType,
@@ -144,7 +145,7 @@ const RowVariableQuestion = React.createClass({
   }
 });
 
-const VariableFormGroup = React.createClass({
+const VariableFormGroup = createReactClass({
   propTypes: {
     sourceLabel: PropTypes.string.isRequired,
     sourceName: PropTypes.string.isRequired,

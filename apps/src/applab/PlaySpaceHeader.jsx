@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import {ApplabInterfaceMode} from './constants';
 import msg from '@cdo/locale';
@@ -11,7 +12,7 @@ import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
 import ViewDataButton from './ViewDataButton';
 
-var PlaySpaceHeader = React.createClass({
+var PlaySpaceHeader = createReactClass({
   propTypes: {
     channelId: PropTypes.string.isRequired,
     hasDataMode: PropTypes.bool.isRequired,

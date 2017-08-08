@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import TeacherAssignablesCatalog from './TeacherAssignablesCatalog';
@@ -44,7 +45,7 @@ const styles = {
  * The component is only used on the /courses page, and also does some additional
  * DOM manipulation on mount.
  */
-const Courses = React.createClass({
+const Courses = createReactClass({
   propTypes: {
     isEnglish: PropTypes.bool.isRequired,
     isTeacher: PropTypes.bool.isRequired,

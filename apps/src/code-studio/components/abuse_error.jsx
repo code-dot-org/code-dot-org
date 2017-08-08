@@ -1,13 +1,14 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * A component containing some text/links for projects that have had abuse
  * reported. This is used in our blocking AbuseBox, in the share dialog, and
  * in our smaller alert in apps.
  */
-var AbuseError = React.createClass({
+var AbuseError = createReactClass({
   propTypes: {
     i18n: PropTypes.shape({
       tos: PropTypes.string.isRequired,

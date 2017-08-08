@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import applabMsg from '@cdo/applab/locale';
 import color from "../util/color";
 import elementLibrary from './designElements/library';
@@ -11,7 +12,7 @@ import DuplicateElementButton from './designElements/DuplicateElementButton';
 
 var nextKey = 0;
 
-var DesignProperties = React.createClass({
+var DesignProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement),
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,

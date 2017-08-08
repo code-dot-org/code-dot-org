@@ -4,13 +4,14 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Button} from 'react-bootstrap';
 import ProfessionalLearningCourseProgress from './professionalLearningCourseProgress';
 import {TwoPartBanner} from './twoPartBanner';
 import {EnrolledWorkshops} from './enrolledWorkshops';
 import _ from 'lodash';
 
-const LandingPage = React.createClass({
+const LandingPage = createReactClass({
   propTypes: {
     lastWorkshopSurveyUrl: PropTypes.string,
     lastWorkshopSurveyCourse: PropTypes.string,

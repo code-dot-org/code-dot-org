@@ -1,6 +1,7 @@
 /** Body of the animation picker dialog */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "../../util/color";
 import {AnimationCategories} from '../constants';
@@ -38,7 +39,7 @@ const animationPickerStyles = {
   }
 };
 
-const AnimationPickerBody = React.createClass({
+const AnimationPickerBody = createReactClass({
   propTypes: {
     is13Plus: PropTypes.bool,
     onDrawYourOwnClick: PropTypes.func.isRequired,

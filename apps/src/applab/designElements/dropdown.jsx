@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import OptionsSelectRow from './OptionsSelectRow';
@@ -12,7 +13,7 @@ import color from "../../util/color";
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
 
-var DropdownProperties = React.createClass({
+var DropdownProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -99,7 +100,7 @@ var DropdownProperties = React.createClass({
   }
 });
 
-var DropdownEvents = React.createClass({
+var DropdownEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

@@ -3,6 +3,7 @@ import ImportProjectDialog from './ImportProjectDialog';
 import ImportScreensDialog from './ImportScreensDialog';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ApplabVisualizationColumn from './ApplabVisualizationColumn';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
@@ -16,7 +17,7 @@ import { connect } from 'react-redux';
 /**
  * Top-level React wrapper for App Lab.
  */
-var AppLabView = React.createClass({
+var AppLabView = createReactClass({
   propTypes: {
     handleVersionHistory: PropTypes.func.isRequired,
     hasDataMode: PropTypes.bool.isRequired,

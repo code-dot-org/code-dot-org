@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -111,7 +112,7 @@ const styles = {
   }
 };
 
-const Notification = React.createClass({
+const Notification = createReactClass({
   propTypes: {
     type: PropTypes.oneOf(Object.keys(NotificationType)).isRequired,
     notice: PropTypes.string.isRequired,

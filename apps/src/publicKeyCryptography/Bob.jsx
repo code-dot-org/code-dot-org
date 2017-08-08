@@ -1,6 +1,7 @@
 /** @file The Bob character panel from the crypto widget */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step} from './NumberedSteps';
 import IntegerField from './IntegerField';
@@ -16,7 +17,7 @@ import {
 } from './cryptographyFields';
 import {COLORS} from './style';
 
-const Bob = React.createClass({
+const Bob = createReactClass({
   propTypes: {
     disabled: PropTypes.bool,
     setPublicModulus: PropTypes.func.isRequired,

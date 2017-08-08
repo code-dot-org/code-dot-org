@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import BackButton from './backButton';
 import { TutorialsSortBy } from './util';
 import { Sticky } from 'react-sticky';
@@ -50,7 +51,7 @@ const styles = {
   }
 };
 
-const FilterHeader = React.createClass({
+const FilterHeader = createReactClass({
   propTypes: {
     onUserInput: PropTypes.func.isRequired,
     sortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired,

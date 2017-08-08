@@ -3,6 +3,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import SectionSelector from './section_selector.jsx';
 import StudentSelector from './student_selector.jsx';
@@ -10,7 +11,7 @@ import StudentSelector from './student_selector.jsx';
 /**
  * A component for managing pair programming.
  */
-const Pairing = React.createClass({
+const Pairing = createReactClass({
   propTypes: {
     source: PropTypes.string,
     handleClose: PropTypes.func

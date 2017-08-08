@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const styles = {
   container: {
@@ -43,7 +44,7 @@ const styles = {
   }
 };
 
-const TwoPartBanner = React.createClass({
+const TwoPartBanner = createReactClass({
   propTypes: {
     textElement: PropTypes.element.isRequired,
     imageUrl: PropTypes.string.isRequired,

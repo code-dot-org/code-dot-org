@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Button from '../Button';
 import i18n from '@cdo/locale';
@@ -28,7 +29,7 @@ const styles = {
   },
 };
 
-const HiddenStageToggle = React.createClass({
+const HiddenStageToggle = createReactClass({
   propTypes: {
     hidden: PropTypes.bool.isRequired,
     onChange: PropTypes.func.isRequired

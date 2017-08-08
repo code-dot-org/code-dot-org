@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import trackEvent from '../../util/trackEvent';
 
 // TODO (brent) - could we also use this instead of what we have in sharing.html.ejs?
@@ -38,7 +39,7 @@ var baseStyles = {
 /**
  * Send-to-phone component used by share project dialog.
  */
-var SendToPhone = React.createClass({
+var SendToPhone = createReactClass({
   propTypes: {
     isLegacyShare: PropTypes.bool.isRequired,
     channelId: PropTypes.string,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
@@ -9,7 +10,7 @@ import renderer from "../../util/StylelessRenderer";
 /**
  * Component for displaying our instructions in the context of a modal dialog
  */
-const DialogInstructions = React.createClass({
+const DialogInstructions = createReactClass({
   propTypes: {
     // redux
     puzzleNumber: PropTypes.number.isRequired,

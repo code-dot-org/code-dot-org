@@ -4,6 +4,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 window.dashboard = window.dashboard || {};
 
 var MenuState = {
@@ -13,7 +14,7 @@ var MenuState = {
   COPYRIGHT: 'COPYRIGHT'
 };
 
-var EncodedParagraph = React.createClass({
+var EncodedParagraph = createReactClass({
   propTypes: {
     text: PropTypes.string,
   },
@@ -28,7 +29,7 @@ var EncodedParagraph = React.createClass({
   }
 });
 
-var SmallFooter = React.createClass({
+var SmallFooter = createReactClass({
   propTypes: {
     // We let dashboard generate our i18n dropdown and pass it along as an
     // encode string of html

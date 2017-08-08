@@ -8,6 +8,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import * as dataStyles from './dataStyles';
 import { valueOr } from '../../utils';
@@ -33,7 +34,7 @@ const styles = {
   }
 };
 
-const ColumnHeader = React.createClass({
+const ColumnHeader = createReactClass({
   propTypes: {
     coerceColumn: PropTypes.func.isRequired,
     columnName: PropTypes.string.isRequired,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import _ from 'lodash';
 import color from '../../util/color';
@@ -43,7 +44,7 @@ const styles = {
   }
 };
 
-const FlexGroup = React.createClass({
+const FlexGroup = createReactClass({
   propTypes: {
     addGroup: PropTypes.func.isRequired,
     addStage: PropTypes.func.isRequired,

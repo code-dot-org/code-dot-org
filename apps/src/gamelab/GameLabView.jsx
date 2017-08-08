@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import {connect} from 'react-redux';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import AnimationTab from './AnimationTab/AnimationTab';
 import StudioAppWrapper from '../templates/StudioAppWrapper';
 import ErrorDialogStack from './ErrorDialogStack';
@@ -22,7 +23,7 @@ import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
 /**
  * Top-level React wrapper for GameLab
  */
-const GameLabView = React.createClass({
+const GameLabView = createReactClass({
   propTypes: {
     // Provided manually
     showFinishButton: PropTypes.bool.isRequired,

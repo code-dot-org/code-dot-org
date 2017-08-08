@@ -6,6 +6,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {
   Row,
@@ -24,7 +25,7 @@ import {
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);
 
-const SessionFormPart = React.createClass({
+const SessionFormPart = createReactClass({
   propTypes: {
     session: PropTypes.shape({
       date: PropTypes.string,

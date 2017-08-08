@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import {connect} from 'react-redux';
@@ -81,7 +82,7 @@ var audioStyle = {
   }
 };
 
-var TopInstructions = React.createClass({
+var TopInstructions = createReactClass({
   propTypes: {
     isEmbedView: PropTypes.bool.isRequired,
     hasContainedLevels: PropTypes.bool,

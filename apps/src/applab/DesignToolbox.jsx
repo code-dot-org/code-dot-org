@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import DesignToolboxElement from './DesignToolboxElement';
 import applabMsg from '@cdo/applab/locale';
 
 var IMAGE_BASE_URL = '/blockly/media/applab/design_toolbox/';
 
-export default React.createClass({
+export default createReactClass({
   propTypes: {
     handleDragStart: PropTypes.func.isRequired,
     isToolboxVisible: PropTypes.bool.isRequired

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
@@ -10,7 +11,7 @@ import EventRow from './EventRow';
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
 
-var TextInputProperties = React.createClass({
+var TextInputProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -92,7 +93,7 @@ var TextInputProperties = React.createClass({
   }
 });
 
-var TextInputEvents = React.createClass({
+var TextInputEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

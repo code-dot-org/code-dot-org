@@ -3,6 +3,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {
   Button,
   Row,
@@ -63,7 +64,7 @@ const freeResponseQuestions = [
   {text: 'Is there anything else you’d like to tell us about your experience at this workshop?', key: 'anything_else_s'},
 ];
 
-const SurveyResultsHeader = React.createClass({
+const SurveyResultsHeader = createReactClass({
   contextTypes: {
     router: PropTypes.object.isRequired
   },

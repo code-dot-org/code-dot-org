@@ -6,6 +6,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import * as utils from '../utils';
@@ -51,7 +52,7 @@ var styles = {
   }
 };
 
-var CodeWorkspaceContainer = React.createClass({
+var CodeWorkspaceContainer = createReactClass({
   propTypes: {
     // redux provided
     hidden: PropTypes.bool.isRequired,

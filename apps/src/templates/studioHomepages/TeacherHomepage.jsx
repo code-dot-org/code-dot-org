@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -19,7 +20,7 @@ const styles = {
   }
 };
 
-const TeacherHomepage = React.createClass({
+const TeacherHomepage = createReactClass({
   propTypes: {
     sections: PropTypes.array,
     courses: shapes.courses,

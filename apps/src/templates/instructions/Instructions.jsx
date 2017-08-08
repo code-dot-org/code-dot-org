@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
@@ -21,7 +22,7 @@ const styles = {
  * the hints or just the anigif (in this case instructions/renderedMarkdown
  * props will be undefined).
  */
-var Instructions = React.createClass({
+var Instructions = createReactClass({
   propTypes: {
     puzzleTitle: PropTypes.string,
     instructions: PropTypes.string,

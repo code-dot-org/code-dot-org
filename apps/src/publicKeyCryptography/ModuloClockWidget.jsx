@@ -2,6 +2,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
@@ -39,7 +40,7 @@ const style = {
 };
 
 /** Root component for Public Key Cryptography widget */
-const ModuloClockWidget = React.createClass({
+const ModuloClockWidget = createReactClass({
   getInitialState() {
     return {
       dividend: 247,

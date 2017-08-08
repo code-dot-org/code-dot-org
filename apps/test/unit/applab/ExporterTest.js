@@ -405,6 +405,8 @@ describe('The Exporter,', function () {
   }
 
   describe("Regression tests", () => {
+    testUtils.allowConsoleErrors(); // Disable when we figure out which dependencies are causing this.
+
     it("should allow screens to be switched programmatically", (done) => {
       runExportedApp(
         `console.log("before switch"); setScreen("screen2"); console.log("after switch");`,

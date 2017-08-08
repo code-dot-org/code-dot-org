@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import * as rowStyle from './rowStyle';
 import {getStore} from '../../redux';
@@ -13,7 +14,7 @@ import {getStore} from '../../redux';
 // unless they pasted within USER_INPUT_DELAY ms of editing the field manually
 var USER_INPUT_DELAY = 1500;
 
-var ImagePickerPropertyRow = React.createClass({
+var ImagePickerPropertyRow = createReactClass({
   propTypes: {
     initialValue: PropTypes.string.isRequired,
     handleChange: PropTypes.func,

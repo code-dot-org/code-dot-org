@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
 import { borderRadius, levelTokenMargin, ControlTypes } from './constants';
@@ -36,7 +37,7 @@ const styles = {
   }
 };
 
-const StageCard = React.createClass({
+const StageCard = createReactClass({
   propTypes: {
     reorderLevel: PropTypes.func.isRequired,
     addLevel: PropTypes.func.isRequired,

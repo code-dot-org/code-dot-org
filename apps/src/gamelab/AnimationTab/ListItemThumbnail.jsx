@@ -1,6 +1,7 @@
 /** Animation or Frame thumbnail */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import _ from 'lodash';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
@@ -43,7 +44,7 @@ const staticStyles = {
 /**
  * Animation or Frame thumbnail.
  */
-const ListItemThumbnail = React.createClass({
+const ListItemThumbnail = createReactClass({
   propTypes: {
     animationProps: shapes.AnimationProps.isRequired,
     singleFrameAnimation: PropTypes.bool.isRequired,

@@ -2,6 +2,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import { getId } from './designElements/elementUtils';
 import { draggedElementDropPoint } from './gridUtils';
@@ -11,7 +12,7 @@ import { ellipsify } from '../utils';
 
 var ELEMENT_ID_TEXT_MAX_CHAR = 12;
 
-export const AppLabTooltipOverlay = React.createClass({
+export const AppLabTooltipOverlay = createReactClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
     width: PropTypes.number,

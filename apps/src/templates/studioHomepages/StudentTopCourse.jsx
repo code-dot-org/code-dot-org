@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -69,7 +70,7 @@ const styles = {
 
 // While this is named a StudentTopCourse, it really refers to the most recent course or script in which the student has progress.
 
-const StudentTopCourse = React.createClass({
+const StudentTopCourse = createReactClass({
   propTypes: {
     isRtl: PropTypes.bool.isRequired,
     assignableName: PropTypes.string.isRequired,

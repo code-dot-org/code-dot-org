@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import { selectSection, NO_SECTION } from '../../sectionsRedux';
 import i18n from '@cdo/locale';
@@ -13,7 +14,7 @@ const styles = {
   }
 };
 
-const SectionSelector = React.createClass({
+const SectionSelector = createReactClass({
   propTypes: {
     // If false, the first option is "Select Section"
     requireSelection: PropTypes.bool,

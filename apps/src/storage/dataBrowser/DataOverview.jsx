@@ -12,6 +12,7 @@ import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import msg from '@cdo/locale';
 import { changeView, showWarning } from '../redux/data';
 import { connect } from 'react-redux';
@@ -28,7 +29,7 @@ const styles = {
   }
 };
 
-const DataOverview = React.createClass({
+const DataOverview = createReactClass({
   propTypes: {
     // from redux state
     tableListMap: PropTypes.object.isRequired,

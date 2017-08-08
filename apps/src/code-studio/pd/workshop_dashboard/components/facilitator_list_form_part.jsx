@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Row, Col, Button} from 'react-bootstrap';
 
 const MAX_FACILITATORS = 10;
@@ -16,7 +17,7 @@ const styles = {
   }
 };
 
-const FacilitatorListFormPart = React.createClass({
+const FacilitatorListFormPart = createReactClass({
   propTypes: {
     availableFacilitators: PropTypes.arrayOf(
       PropTypes.shape({

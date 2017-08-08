@@ -1,6 +1,7 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {EMPTY_IMAGE, PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
 const MARGIN_PX = 2;
@@ -9,7 +10,7 @@ const MARGIN_PX = 2;
  * Render an animated preview of a spritesheet at a given size, scaled with
  * a fixed aspect ratio to fit.
  */
-const AnimationPreview = React.createClass({
+const AnimationPreview = createReactClass({
   propTypes: {
     animationProps: shapes.AnimationProps.isRequired,
     sourceUrl: PropTypes.string, // of spritesheet

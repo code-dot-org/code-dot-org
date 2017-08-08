@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import { Motion, spring } from 'react-motion';
 import color from '../../util/color';
@@ -60,7 +61,7 @@ const styles = {
 /**
  * Component for editing puzzle dots with one or more level variants.
  */
-const LevelToken = React.createClass({
+const LevelToken = createReactClass({
   propTypes: {
     levelKeyList: PropTypes.object.isRequired,
     toggleExpand: PropTypes.func.isRequired,

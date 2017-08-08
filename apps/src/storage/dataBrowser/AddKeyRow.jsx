@@ -5,10 +5,11 @@ import PendingButton from '../../templates/PendingButton';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { castValue } from './dataUtils';
 import * as dataStyles from './dataStyles';
 
-const AddKeyRow = React.createClass({
+const AddKeyRow = createReactClass({
   propTypes: {
     onShowWarning: PropTypes.func.isRequired,
   },

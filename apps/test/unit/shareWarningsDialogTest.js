@@ -122,7 +122,6 @@ describe('ShareWarningsDialog', function () {
       handleTooYoung: function () {}
     });
     var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
 
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];
@@ -148,7 +147,6 @@ describe('ShareWarningsDialog', function () {
       handleTooYoung: function () {}
     });
     var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
 
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];
@@ -174,7 +172,6 @@ describe('ShareWarningsDialog', function () {
       handleTooYoung: function () {}
     });
     var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
 
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];
@@ -204,7 +201,6 @@ describe('ShareWarningsDialog', function () {
       }
     });
     var componentInstance = ReactTestUtils.renderIntoDocument(reactElement);
-    assert.equal(!!componentInstance.isMounted(), true, 'component is mounted');
 
     var shareWarnings = ReactTestUtils.scryRenderedComponentsWithType(
       componentInstance, ShareWarnings)[0];

@@ -1,9 +1,10 @@
 /** @file Row of buttons for switching editor modes. */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ToggleButton from './ToggleButton';
 
-const ToggleGroup = React.createClass({
+const ToggleGroup = createReactClass({
   propTypes: {
     selected: PropTypes.string,
     activeColor: PropTypes.string,

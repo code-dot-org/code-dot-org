@@ -4,8 +4,9 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
-const VisibilitySensor = React.createClass({
+const VisibilitySensor = createReactClass({
   propTypes: {
     onVisible: PropTypes.func,
     onHidden: PropTypes.func,

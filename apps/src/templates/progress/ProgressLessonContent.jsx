@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import ProgressLevelSet from './ProgressLevelSet';
 import ProgressBubbleSet from './ProgressBubbleSet';
@@ -18,7 +19,7 @@ const styles = {
   }
 };
 
-const ProgressLessonContent = React.createClass({
+const ProgressLessonContent = createReactClass({
   propTypes: {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import DesignModeBox from './DesignModeBox';
 import DesignModeHeaders from './DesignModeHeaders';
 import {connect} from 'react-redux';
 
-const DesignWorkspace = React.createClass({
+const DesignWorkspace = createReactClass({
   propTypes: {
     handleVersionHistory: PropTypes.func.isRequired,
     handleDragStart: PropTypes.func,

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "../util/color";
 import * as applabConstants from './constants';
@@ -60,7 +61,7 @@ const styles = {
 };
 
 
-const PhoneFrame = React.createClass({
+const PhoneFrame = createReactClass({
   propTypes: {
     isDark: PropTypes.bool.isRequired,
     screenIds: PropTypes.array.isRequired,

@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const styles = {
   filterChoiceOuter: {
@@ -24,7 +25,7 @@ const styles = {
   }
 };
 
-const FilterChoice = React.createClass({
+const FilterChoice = createReactClass({
   propTypes: {
     onUserInput: PropTypes.func.isRequired,
     groupName: PropTypes.string.isRequired,

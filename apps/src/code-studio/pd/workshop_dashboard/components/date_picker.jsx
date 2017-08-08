@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import ReactDatePicker from 'react-datepicker';
@@ -36,7 +37,7 @@ const styles = {
   }
 };
 
-const DateInputWithIcon = Radium(React.createClass({
+const DateInputWithIcon = Radium(createReactClass({
   propTypes: {
     disabled: PropTypes.bool,
     onClear: PropTypes.func,
@@ -98,7 +99,7 @@ const DateInputWithIcon = Radium(React.createClass({
   }
 }));
 
-const DatePicker = React.createClass({
+const DatePicker = createReactClass({
   propTypes: {
     date: PropTypes.object,
     onChange: PropTypes.func.isRequired,

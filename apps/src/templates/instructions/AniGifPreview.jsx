@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import { openDialog } from '../../redux/instructionsDialog';
@@ -21,7 +22,7 @@ const styles = {
   }
 };
 
-export const ImagePreview = Radium(React.createClass({
+export const ImagePreview = Radium(createReactClass({
   propTypes: {
     url: PropTypes.string.isRequired,
     showInstructionsDialog: PropTypes.func.isRequired,

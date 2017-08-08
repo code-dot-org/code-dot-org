@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import Radium from 'radium';
@@ -36,7 +37,7 @@ const styles = {
 /**
  * Wraps its children to display them in a flexbox layout.
  */
-var ResizablePanes = Radium(React.createClass({
+var ResizablePanes = Radium(createReactClass({
   propTypes: {
     style: PropTypes.object,
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,

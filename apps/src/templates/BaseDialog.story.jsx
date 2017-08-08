@@ -1,7 +1,8 @@
 import React from 'react';
 import BaseDialog from './BaseDialog';
+import createReactClass from 'create-react-class';
 
-var ExampleDialogButton = React.createClass({
+var ExampleDialogButton = createReactClass({
   render() {
     return (
       <div>

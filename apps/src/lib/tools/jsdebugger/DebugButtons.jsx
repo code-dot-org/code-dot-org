@@ -4,6 +4,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
@@ -21,7 +22,7 @@ const DebugButtons = connect(
     stepOut: actions.stepOut,
     togglePause: actions.togglePause,
   }
-)(React.createClass({
+)(createReactClass({
   propTypes: {
     style: PropTypes.object,
 

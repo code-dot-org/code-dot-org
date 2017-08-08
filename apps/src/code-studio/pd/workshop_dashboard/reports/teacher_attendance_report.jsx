@@ -3,6 +3,7 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReportTable from "./report_table";
 import Permission from "../../permission";
 import {Button} from 'react-bootstrap';
@@ -15,7 +16,7 @@ const styles = {
   link: {cursor: 'pointer'}
 };
 
-const TeacherAttendanceReport = React.createClass({
+const TeacherAttendanceReport = createReactClass({
   propTypes: {
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,

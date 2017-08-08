@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
@@ -60,7 +61,7 @@ const styles = {
   }
 };
 
-const ProgressBubbleSet = React.createClass({
+const ProgressBubbleSet = createReactClass({
   propTypes: {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,

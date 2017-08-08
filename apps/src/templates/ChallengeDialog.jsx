@@ -4,6 +4,7 @@ import PuzzleRatingButtons from './PuzzleRatingButtons';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import color from '../util/color';
 
@@ -60,7 +61,7 @@ const styles = {
   },
 };
 
-const ChallengeDialog = Radium(React.createClass({
+const ChallengeDialog = Radium(createReactClass({
   propTypes: {
     avatar: PropTypes.string,
     cancelButtonLabel: PropTypes.string,

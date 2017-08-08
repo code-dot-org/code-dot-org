@@ -5,9 +5,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 
-const Image = React.createClass({
+const Image = createReactClass({
   propTypes: {
     style: PropTypes.object.isRequired
   },

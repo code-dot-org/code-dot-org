@@ -5,6 +5,7 @@
 import _, {orderBy} from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Table, sort} from 'reactabular';
 import color from '@cdo/apps/util/color';
 import SessionTimesList from './session_times_list';
@@ -21,7 +22,7 @@ const styles = {
   }
 };
 
-const WorkshopTable = React.createClass({
+const WorkshopTable = createReactClass({
   propTypes: {
     workshops: PropTypes.shape({
       limit: PropTypes.number,

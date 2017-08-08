@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import styleConstants from '../styleConstants';
@@ -77,7 +78,7 @@ const styles = {
   }
 };
 
-const ContentContainer= React.createClass({
+const ContentContainer= createReactClass({
   propTypes: {
     children: PropTypes.oneOfType([
       PropTypes.node,

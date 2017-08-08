@@ -1,6 +1,7 @@
 /** @file Upload button wrapping a hidden uploader component. */
-var React = require('react');
+import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var HiddenUploader = require('./HiddenUploader.jsx');
 import clientApi from '@cdo/apps/clientApi';
 var assetsApi = clientApi.assets;
@@ -9,7 +10,7 @@ var filesApi = clientApi.files;
 /**
  * A file upload component.
  */
-var AssetUploader = React.createClass({
+var AssetUploader = createReactClass({
   propTypes: {
     onUploadStart: PropTypes.func.isRequired,
     onUploadDone: PropTypes.func.isRequired,

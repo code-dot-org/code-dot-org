@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {createUuid} from '../../utils';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog.jsx';
@@ -28,7 +29,7 @@ const MAX_UPLOAD_SIZE = 101000;
  * As a dialog-type redux-friendly component, the AnimationPicker handles its
  * own display state and can be "rendered" at all times by its parent.
  */
-const AnimationPicker = React.createClass({
+const AnimationPicker = createReactClass({
   propTypes: {
     // Provided externally
     channelId: PropTypes.string.isRequired,

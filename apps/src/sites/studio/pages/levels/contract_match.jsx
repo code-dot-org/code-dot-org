@@ -3,6 +3,7 @@ import { registerGetResult } from '@cdo/apps/code-studio/levels/codeStudioLevels
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 $(window).load(function () {
   $.widget("custom.coloriconselectmenu", $.ui.selectmenu, {
@@ -92,7 +93,7 @@ $(window).load(function () {
    *   - DomainsList
    *     - TypeChooser
    */
-  var ContractForm = React.createClass({
+  var ContractForm = createReactClass({
     getName: function () {
       return this.state.name;
     },
@@ -185,7 +186,7 @@ $(window).load(function () {
     }
   });
 
-  var DomainsList = React.createClass({
+  var DomainsList = createReactClass({
     propTypes: {
       domainTypes: PropTypes.array.isRequired,
       onDomainAdd: PropTypes.func.isRequired,
@@ -217,7 +218,7 @@ $(window).load(function () {
     }
   });
 
-  var TypeChooser = React.createClass({
+  var TypeChooser = createReactClass({
     propTypes: {
       onTypeChange: PropTypes.func.isRequired,
       type: PropTypes.string,

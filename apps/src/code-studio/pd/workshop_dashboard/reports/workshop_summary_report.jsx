@@ -3,6 +3,7 @@
  */
 import React from "react";
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReportTable from "./report_table";
 import Permission from '../../permission';
 import {
@@ -20,7 +21,7 @@ const styles = {
   link: {cursor: 'pointer'}
 };
 
-const WorkshopSummaryReport = React.createClass({
+const WorkshopSummaryReport = createReactClass({
   propTypes: {
     startDate: PropTypes.string.isRequired,
     endDate: PropTypes.string.isRequired,

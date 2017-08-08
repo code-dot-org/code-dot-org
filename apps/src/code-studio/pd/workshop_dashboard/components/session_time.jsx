@@ -3,13 +3,14 @@
 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {
   TIME_FORMAT,
   DATETIME_FORMAT
 } from '../workshopConstants';
 
-const SessionTime = React.createClass({
+const SessionTime = createReactClass({
   propTypes: {
     session: PropTypes.shape({
       start: PropTypes.string.isRequired,

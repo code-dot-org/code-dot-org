@@ -10,10 +10,11 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Spinner from '../components/spinner';
 
-const WorkshopTableLoader = React.createClass({
+const WorkshopTableLoader = createReactClass({
   propTypes: {
     queryUrl: PropTypes.string.isRequired,
     queryParams: PropTypes.object,

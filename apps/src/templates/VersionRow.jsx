@@ -1,12 +1,13 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import msg from '@cdo/locale';
 
 /**
  * A single row in the VersionHistory dialog, describing one version of a project.
  */
-var VersionRow = React.createClass({
+var VersionRow = createReactClass({
   propTypes: {
     versionId: PropTypes.string.isRequired,
     lastModified: PropTypes.instanceOf(Date),

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Tutorial from './tutorial';
 import TutorialDetail from './tutorialDetail';
 import shapes from './shapes';
@@ -17,7 +18,7 @@ const styles = {
   }
 };
 
-const TutorialSet = React.createClass({
+const TutorialSet = createReactClass({
   propTypes: {
     tutorials: PropTypes.arrayOf(shapes.tutorial.isRequired).isRequired,
     filters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,

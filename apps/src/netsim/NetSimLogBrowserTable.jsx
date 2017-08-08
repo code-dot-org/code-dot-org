@@ -1,6 +1,7 @@
 /** @file Table of log rows displayed in the log browser */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import orderBy from 'lodash/orderBy';
 import {Table, sort} from 'reactabular';
 import moment from 'moment';
@@ -33,7 +34,7 @@ style.prewrapTd = Object.assign({}, style.td, style.prewrap);
  * Wraps configuration and sorting behavior around a Reactabular table.
  * @see http://reactabular.js.org
  */
-const NetSimLogBrowserTable = React.createClass({
+const NetSimLogBrowserTable = createReactClass({
   propTypes: {
     logRows: PropTypes.arrayOf(PropTypes.object).isRequired,
     headerFields: PropTypes.arrayOf(PropTypes.string).isRequired,

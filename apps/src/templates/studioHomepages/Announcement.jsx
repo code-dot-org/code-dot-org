@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
@@ -71,7 +72,7 @@ const styles = {
   }
 };
 
-const Announcement = React.createClass({
+const Announcement = createReactClass({
   propTypes: {
     heading: PropTypes.string.isRequired,
     image: PropTypes.string,

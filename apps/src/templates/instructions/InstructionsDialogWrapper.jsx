@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 
 /**
@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
  * into this component, though we're moving towards getting rid of this dialog
  * anyways.
  */
-const InstructionsDialogWrapper = React.createClass({
+const InstructionsDialogWrapper = createReactClass({
   propTypes: {
     isOpen: PropTypes.bool.isRequired,
     autoClose: PropTypes.bool,

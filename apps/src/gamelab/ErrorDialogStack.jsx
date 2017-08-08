@@ -1,6 +1,7 @@
 /** @file Renders error dialogs in sequence, given a stack of errors */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var actions = require('./errorDialogStackModule');
 var connect = require('react-redux').connect;
 var BaseDialog = require('../templates/BaseDialog.jsx');
@@ -8,7 +9,7 @@ var BaseDialog = require('../templates/BaseDialog.jsx');
 /**
  * Renders error dialogs in sequence, given a stack of errors.
  */
-var ErrorDialogStack = React.createClass({
+var ErrorDialogStack = createReactClass({
   propTypes: {
     errors: PropTypes.arrayOf(PropTypes.object).isRequired,
     dismissError: PropTypes.func.isRequired

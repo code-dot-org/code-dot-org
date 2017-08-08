@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import $ from 'jquery';
 import _ from 'lodash';
 import {
@@ -88,7 +89,7 @@ const isUnder1000Chars = (value) => {
   }
 };
 
-const TeacherApplication = React.createClass({
+const TeacherApplication = createReactClass({
   propTypes: {
     regionalPartnerGroup: PropTypes.number,
     regionalPartnerName: PropTypes.string,

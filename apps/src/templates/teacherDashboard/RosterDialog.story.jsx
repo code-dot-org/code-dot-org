@@ -1,8 +1,9 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import RosterDialog from './RosterDialog';
 import { OAuthSectionTypes } from './shapes';
 
-const ExampleDialogButton = React.createClass({
+const ExampleDialogButton = createReactClass({
   render() {
     return (
       <div>

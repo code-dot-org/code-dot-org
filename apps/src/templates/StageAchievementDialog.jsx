@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
@@ -47,7 +48,7 @@ const styles = {
   },
 };
 
-const StageAchievementDialog = Radium(React.createClass({
+const StageAchievementDialog = Radium(createReactClass({
   propTypes: {
     assetUrl: PropTypes.func,
     handleClose: PropTypes.func,

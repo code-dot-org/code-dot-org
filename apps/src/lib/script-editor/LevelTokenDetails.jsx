@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import VirtualizedSelect from 'react-virtualized-select';
 import 'react-virtualized/styles.css';
@@ -55,7 +56,7 @@ const ArrowRenderer = ({onMouseDown}) => {
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
-const LevelTokenDetails = React.createClass({
+const LevelTokenDetails = createReactClass({
   propTypes: {
     levelKeyList: PropTypes.object.isRequired,
     chooseLevelType: PropTypes.func.isRequired,

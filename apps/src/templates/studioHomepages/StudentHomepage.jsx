@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
@@ -9,7 +10,7 @@ import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
-const StudentHomepage = React.createClass({
+const StudentHomepage = createReactClass({
   propTypes: {
     courses: shapes.courses,
     sections: shapes.sections,

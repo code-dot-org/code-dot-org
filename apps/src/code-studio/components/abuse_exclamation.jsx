@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var AbuseError = require('./abuse_error');
 
 /**
  * A big blue box with an exclamation mark on the left and our abuse text on
  * the right.
  */
-export default React.createClass({
+export default createReactClass({
   propTypes: {
     i18n: PropTypes.shape({
       tos: PropTypes.string.isRequired,

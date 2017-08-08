@@ -2,6 +2,7 @@
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 
 // Defines the coordinate scale for SVG elements
@@ -43,7 +44,7 @@ const style = {
   }
 };
 
-const ModuloClock = React.createClass({
+const ModuloClock = createReactClass({
   propTypes: {
     modulus: PropTypes.number
   },

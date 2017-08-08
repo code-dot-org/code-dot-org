@@ -9,6 +9,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {
   Grid,
@@ -39,7 +40,7 @@ const styles = {
   }
 };
 
-const Workshop = React.createClass({
+const Workshop = createReactClass({
   contextTypes: {
     router: PropTypes.object.isRequired
   },

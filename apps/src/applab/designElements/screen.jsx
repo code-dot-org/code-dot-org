@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
@@ -9,7 +10,7 @@ import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 
-var ScreenProperties = React.createClass({
+var ScreenProperties = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,
@@ -63,7 +64,7 @@ var ScreenProperties = React.createClass({
   }
 });
 
-var ScreenEvents = React.createClass({
+var ScreenEvents = createReactClass({
   propTypes: {
     element: PropTypes.instanceOf(HTMLElement).isRequired,
     handleChange: PropTypes.func.isRequired,

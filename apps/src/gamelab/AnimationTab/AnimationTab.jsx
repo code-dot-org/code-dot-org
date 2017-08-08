@@ -1,6 +1,7 @@
 /** @file Root of the animation editor interface mode for GameLab */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import { connect } from 'react-redux';
 import color from "../../util/color";
@@ -58,7 +59,7 @@ const styles = {
 /**
  * Root of the animation editor interface mode for GameLab
  */
-const AnimationTab = React.createClass({
+const AnimationTab = createReactClass({
   propTypes: {
     channelId: PropTypes.string.isRequired,
     onColumnWidthsChange: PropTypes.func.isRequired,

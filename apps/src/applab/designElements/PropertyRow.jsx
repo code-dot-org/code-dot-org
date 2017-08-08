@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 import * as elementUtils from './elementUtils';
@@ -7,7 +8,7 @@ import * as utils from '../../utils';
 
 var LockState = utils.makeEnum('LOCKED', 'UNLOCKED');
 
-var PropertyRow = React.createClass({
+var PropertyRow = createReactClass({
   propTypes: {
     desc: PropTypes.string.isRequired,
     initialValue: PropTypes.oneOfType([

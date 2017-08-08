@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
-const UiTip = React.createClass({
+const UiTip = createReactClass({
   propTypes: {
     index: PropTypes.number,
     position: PropTypes.object,

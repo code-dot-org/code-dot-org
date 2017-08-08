@@ -1,7 +1,8 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import AchievementDialog from './AchievementDialog';
 
-const ExampleDialogButton = React.createClass({
+const ExampleDialogButton = createReactClass({
   render() {
     return (
       <div>

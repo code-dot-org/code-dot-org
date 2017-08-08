@@ -4,8 +4,9 @@ import FontAwesome from './FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
-const PendingButton = React.createClass({
+const PendingButton = createReactClass({
   propTypes: {
     isPending: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,

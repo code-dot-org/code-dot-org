@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import * as elementUtils from './designElements/elementUtils.js';
 
-export default React.createClass({
+export default createReactClass({
   propTypes: {
     onChangeElement: PropTypes.func.isRequired,
     elementIdList: PropTypes.arrayOf(PropTypes.string).isRequired,

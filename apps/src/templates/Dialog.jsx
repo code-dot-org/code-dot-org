@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import LegacyButton from './LegacyButton';
 import BaseDialog from './BaseDialog';
@@ -125,7 +126,7 @@ Icon.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
-const Dialog = React.createClass({
+const Dialog = createReactClass({
   propTypes: Object.assign({}, BaseDialog.propTypes, {
     children: childrenOfType(
       Icon,

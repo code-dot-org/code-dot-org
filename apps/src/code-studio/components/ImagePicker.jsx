@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var AssetManager = require('./AssetManager');
 var color = require("../../util/color");
 var IconLibrary = require('./IconLibrary');
@@ -14,7 +15,7 @@ var extensionFilter = {
 /**
  * A component for managing hosted assets.
  */
-var ImagePicker = React.createClass({
+var ImagePicker = createReactClass({
   propTypes: {
     assetChosen: PropTypes.func,
     assetsChanged: PropTypes.func,

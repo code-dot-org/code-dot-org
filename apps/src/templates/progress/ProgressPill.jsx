@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
@@ -41,7 +42,7 @@ const styles = {
  * a circle with a number inside, it is an ellipse with text (and possibly an
  * icon)
  */
-const ProgressPill = React.createClass({
+const ProgressPill = createReactClass({
   propTypes: {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,

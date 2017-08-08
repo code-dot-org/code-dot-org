@@ -3,9 +3,10 @@
  */
 
 import React from 'react';
+import createReactClass from 'create-react-class';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const Spinner = React.createClass({
+const Spinner = createReactClass({
   render() {
     return <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>;
   }

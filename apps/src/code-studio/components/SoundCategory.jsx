@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "@cdo/apps/util/color";
 
 const styles = {
@@ -22,7 +23,7 @@ const styles = {
 /**
  * A component for displaying a sound category.
  */
-const SoundCategory = React.createClass({
+const SoundCategory = createReactClass({
   propTypes: {
     displayName: PropTypes.string,
     category: PropTypes.string,

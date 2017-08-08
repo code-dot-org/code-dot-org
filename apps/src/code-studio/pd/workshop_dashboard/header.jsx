@@ -4,9 +4,10 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Breadcrumb} from 'react-bootstrap';
 
-const Header = React.createClass({
+const Header = createReactClass({
   contextTypes: {
     router: PropTypes.object.isRequired
   },

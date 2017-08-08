@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 
 const styles = {
@@ -13,7 +14,7 @@ const styles = {
   }
 };
 
-const Lightbulb = React.createClass({
+const Lightbulb = createReactClass({
 
   propTypes: {
     shouldAnimate: PropTypes.bool,

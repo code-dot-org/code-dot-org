@@ -4,6 +4,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
@@ -26,7 +27,7 @@ const styles = {
   }
 };
 
-const StageLock = React.createClass({
+const StageLock = createReactClass({
   propTypes: {
     lesson: lessonType.isRequired,
 

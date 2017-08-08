@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * A dropdown with the set of ages we use across our site (4-20, 21+)
@@ -8,7 +9,7 @@ import PropTypes from 'prop-types';
  * sharing components between dashboard/apps and have any difference between
  * the two version controlled by props.
  */
-module.exports = React.createClass({
+module.exports = createReactClass({
   propTypes: {
     style: PropTypes.object
   },

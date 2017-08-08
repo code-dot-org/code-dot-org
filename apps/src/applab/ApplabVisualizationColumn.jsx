@@ -4,6 +4,7 @@ import * as color from "../util/color";
 import * as applabConstants from './constants';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import Visualization from './Visualization';
 import CompletionButton from '../templates/CompletionButton';
@@ -51,7 +52,7 @@ var styles = {
  * Equivalent of visualizationColumn.html.ejs. Initially only supporting
  * portions used by App Lab
  */
-const ApplabVisualizationColumn = React.createClass({
+const ApplabVisualizationColumn = createReactClass({
   propTypes: {
     isReadOnlyWorkspace: PropTypes.bool.isRequired,
     visualizationHasPadding: PropTypes.bool.isRequired,

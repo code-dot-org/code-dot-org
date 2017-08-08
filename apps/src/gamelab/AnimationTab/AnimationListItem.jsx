@@ -1,6 +1,7 @@
 /** A single list item representing an animation. */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from "../../util/color";
@@ -79,7 +80,7 @@ const styles = {
  * thumbnail, along with the animation name and (if currently selected)
  * controls for deleting or duplicating the animation.
  */
-const AnimationListItem = React.createClass({
+const AnimationListItem = createReactClass({
   propTypes: {
     isSelected: PropTypes.bool,
     animationKey: shapes.AnimationKey.isRequired,

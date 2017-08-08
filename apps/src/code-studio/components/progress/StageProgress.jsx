@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import { connect } from 'react-redux';
 
@@ -35,7 +36,7 @@ const styles = {
 /**
  * Stage progress component used in level header and course overview.
  */
-const StageProgress = React.createClass({
+const StageProgress = createReactClass({
   propTypes: {
     // redux provided
     levels: PropTypes.arrayOf(levelType).isRequired,

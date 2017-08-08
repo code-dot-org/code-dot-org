@@ -12,6 +12,7 @@ import FontAwesome from '../../templates/FontAwesome';
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { changeView, showWarning } from '../redux/data';
 import * as dataStyles from './dataStyles';
 import color from "../../util/color";
@@ -50,7 +51,7 @@ const styles = {
   }
 };
 
-const DataTable = React.createClass({
+const DataTable = createReactClass({
   propTypes: {
     // from redux state
     tableColumns: PropTypes.arrayOf(PropTypes.string).isRequired,

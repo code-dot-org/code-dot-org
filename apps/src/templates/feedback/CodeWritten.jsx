@@ -1,6 +1,7 @@
 import Radium from 'radium';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import msg from '@cdo/locale';
 
 const styles = {
@@ -24,7 +25,7 @@ const styles = {
   },
 };
 
-export default Radium(React.createClass({
+export default Radium(createReactClass({
 
   propTypes: {
     numLinesWritten: PropTypes.number.isRequired,

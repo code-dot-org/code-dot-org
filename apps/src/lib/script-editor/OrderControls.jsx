@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import { ControlTypes } from './constants';
 import { moveGroup, moveStage, removeGroup, removeStage } from './editorRedux';
@@ -14,7 +15,7 @@ const styles = {
   }
 };
 
-const OrderControls = React.createClass({
+const OrderControls = createReactClass({
   propTypes: {
     move: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired,

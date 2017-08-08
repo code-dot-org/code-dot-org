@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {
   SquareType,
   WallTypeMask,
@@ -31,7 +32,7 @@ var karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
 var beeConditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
 var beeFeatures = ['hive', 'flower'];
 
-var Cell = React.createClass({
+var Cell = createReactClass({
   propTypes: {
     cell: PropTypes.object.isRequired,
     row: PropTypes.number.isRequired,
@@ -131,7 +132,7 @@ var Cell = React.createClass({
   }
 });
 
-var Grid = React.createClass({
+var Grid = createReactClass({
   propTypes: {
     cells: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)).isRequired,
     selectedRow: PropTypes.number,

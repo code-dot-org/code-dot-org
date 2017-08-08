@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import Dialog from '../../templates/Dialog';
 import * as dataStyles from './dataStyles';
 
-const ConfirmDeleteButton = React.createClass({
+const ConfirmDeleteButton = createReactClass({
   propTypes: {
     title: PropTypes.string.isRequired,
     body: PropTypes.string.isRequired,

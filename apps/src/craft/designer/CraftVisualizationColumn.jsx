@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import msg from '@cdo/locale';
 import craftMsg from './locale';
 
@@ -8,7 +9,7 @@ import BelowVisualization from '../../templates/BelowVisualization';
 import ArrowButtons from '../../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 
-export default React.createClass({
+export default createReactClass({
   propTypes: {
     showFinishButton: PropTypes.bool.isRequired,
     showScore: PropTypes.bool.isRequired

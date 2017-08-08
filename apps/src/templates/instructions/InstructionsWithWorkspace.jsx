@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 var CodeWorkspaceContainer = require('../CodeWorkspaceContainer');
 var TopInstructions = require('./TopInstructions');
@@ -13,7 +14,7 @@ var instructions = require('../../redux/instructions');
  * Owns maxHeightAvailable for instructions, updating as appropriate on window
  * resize events
  */
-var InstructionsWithWorkspace = React.createClass({
+var InstructionsWithWorkspace = createReactClass({
   propTypes: {
     // props provided via connect
     instructionsHeight: PropTypes.number.isRequired,

@@ -3,6 +3,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var assetListStore = require('../assets/assetListStore');
 
@@ -25,7 +26,7 @@ var styles = {
 /**
  * An attachment list component.
  */
-var Attachments = React.createClass({
+var Attachments = createReactClass({
   propTypes: {
     readonly: PropTypes.bool,
     showUnderageWarning: PropTypes.bool,
@@ -39,9 +40,17 @@ var Attachments = React.createClass({
     assetsApi.getFiles(this.onAssetListReceived);
   },
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  },
+
   onAssetListReceived: function (result) {
     assetListStore.reset(result.files);
-    if (this.isMounted()) {
+    if (this.isMounted_) {
       this.setState({loaded: true});
     }
   },

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import color from "@cdo/apps/util/color";
 import ReactTooltip from 'react-tooltip';
@@ -80,7 +81,7 @@ export const styles = {
   }
 };
 
-const SummaryProgressRow = React.createClass({
+const SummaryProgressRow = createReactClass({
   propTypes: {
     dark: PropTypes.bool.isRequired,
     lesson: lessonType.isRequired,

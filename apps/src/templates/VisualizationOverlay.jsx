@@ -2,6 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 
 /**
@@ -11,7 +12,7 @@ import { connect } from 'react-redux';
  *   Efficiently transforming mouse position into app-space
  * @constructor
  */
-export let VisualizationOverlay = React.createClass({
+export let VisualizationOverlay = createReactClass({
   propTypes: {
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,

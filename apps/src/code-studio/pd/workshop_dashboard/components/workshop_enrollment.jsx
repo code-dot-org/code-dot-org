@@ -3,6 +3,7 @@
 */
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Table} from 'react-bootstrap';
 import _ from 'lodash';
 import ConfirmationDialog from './confirmation_dialog';
@@ -20,7 +21,7 @@ const styles = {
   }
 };
 
-const WorkshopEnrollment = React.createClass({
+const WorkshopEnrollment = createReactClass({
   propTypes: {
     enrollments: PropTypes.arrayOf(
       PropTypes.shape({

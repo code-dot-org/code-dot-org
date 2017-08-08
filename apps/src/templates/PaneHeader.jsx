@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 
 var commonStyles = require('../commonStyles');
@@ -83,7 +84,7 @@ var styles = {
  * A purple pane header that can have be focused (purple), unfocused (light purple)
  * or read only (charcoal).
  */
-const PaneHeader = Radium(React.createClass({
+const PaneHeader = Radium(createReactClass({
   propTypes: {
     hasFocus: PropTypes.bool.isRequired,
     readOnly: PropTypes.bool,
@@ -112,7 +113,7 @@ const PaneHeader = Radium(React.createClass({
  * A section of our Pane Header. Essentially this is just a div with some
  * particular styles applied
  */
-export const PaneSection = Radium(React.createClass({
+export const PaneSection = Radium(createReactClass({
   propTypes: {
     style: PropTypes.object,
   },

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import classNames from 'classnames';
 import {connect} from 'react-redux';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
@@ -12,7 +13,7 @@ import Overlay from './Overlay';
 /**
  * Top-level React wrapper for our standard blockly apps.
  */
-const AppView = React.createClass({
+const AppView = createReactClass({
   propTypes: {
     hideSource: PropTypes.bool.isRequired,
     isResponsive: PropTypes.bool.isRequired,

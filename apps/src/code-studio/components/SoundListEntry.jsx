@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import * as color from "../../util/color";
 
@@ -43,7 +44,7 @@ const styles = {
  * Component for a single sound tile in the Sound Library.
  * Used in App Lab and Game Lab
  */
-const SoundListEntry = React.createClass({
+const SoundListEntry = createReactClass({
   propTypes: {
     assetChosen: PropTypes.func.isRequired,
     soundMetadata: PropTypes.object.isRequired,

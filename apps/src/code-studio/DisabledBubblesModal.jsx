@@ -1,4 +1,5 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 
@@ -20,7 +21,7 @@ const styles = {
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is isable)
  */
-const DisabledBubblesModal = React.createClass({
+const DisabledBubblesModal = createReactClass({
   getInitialState() {
     return {
       open: true
