@@ -66,5 +66,5 @@ const MiniViewTopRow = createReactClass({
     );
   }
 });
-
+MiniViewTopRow.displayName = 'MiniViewTopRow';
 export default MiniViewTopRow;

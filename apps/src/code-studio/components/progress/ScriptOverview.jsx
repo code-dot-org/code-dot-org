@@ -78,6 +78,7 @@ const ScriptOverview = createReactClass({
     );
   }
 });
+ScriptOverview.displayName = 'ScriptOverview';
 
 export default connect(state => ({
   perLevelProgress: state.progress.levelProgress,
