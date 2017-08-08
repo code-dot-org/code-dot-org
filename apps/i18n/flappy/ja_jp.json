@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "フラッピーが障害物にぶつかったとき、次のアクションを実行",
   "whenRunButtonClick": "ゲームの開始時",
   "whenRunButtonClickTooltip": "ゲーム開始時、次のアクションを実行",
-  "yes": "はい"
+  "yes": "はい",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

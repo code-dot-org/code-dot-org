@@ -18,6 +18,7 @@ var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
 var dom = require('../dom');
 var constants = require('./constants');
 var utils = require('../utils');
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
@@ -66,7 +67,7 @@ Flappy.scale = {
 };
 
 var twitterOptions = {
-  text: flappyMsg.shareFlappyTwitter(),
+  text: flappyMsg.shareFlappyTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "FlappyCode"
 };
 

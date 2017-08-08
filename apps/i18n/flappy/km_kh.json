@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Execute the actions below when Flappy enters an obstacle.",
   "whenRunButtonClick": "នៅ​ពេល​ហ្គេម​ចាប់ផ្ដើម",
   "whenRunButtonClickTooltip": "ធ្វើ​សកម្មភាព​ខាង​ក្រោម នៅ​ពេល​ណា​ហ្គេម​ចាប់ផ្ដើម។",
-  "yes": "យល់ព្រម"
+  "yes": "យល់ព្រម",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

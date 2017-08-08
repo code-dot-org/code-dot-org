@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Изврши акције испод кад се лоптица судари са зидом.",
   "whileMsg": "док је",
   "whileTooltip": "Понавлјај затворену акцију док се не досегне циљна тачка.",
-  "yes": "Да"
+  "yes": "Да",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }
