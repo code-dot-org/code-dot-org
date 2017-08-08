@@ -28,13 +28,8 @@
 class SingleSectionExperiment < Experiment
   belongs_to :section
 
-  def self.get_enabled(user: nil, section: nil, script: nil)
-    return Experiment.none unless section
-    Experiment.where(type: SingleSectionExperiment.to_s).
-      where(section_id: section.id)
-  end
-
   def enabled?(user: nil, section: nil)
-    return !section.nil? && section_id == section.id
+    return (!section.nil? && section_id == section.id) ||
+      (user.try(:teacher?) && user.section_ids.include?(section_id))
   end
 end

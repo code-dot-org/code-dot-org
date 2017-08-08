@@ -15,20 +15,22 @@ module.exports = function (grunt) {
 
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
-    // create an entry-tests.js file with the right require statement
-    // so that karma + webpack can do their thing. For some reason, you
-    // can't just point the test runner to the file itself as it won't
-    // get compiled.
-    let file = "require('babel-polyfill');\n" +
-      "require('"+path.resolve(process.env.mocha_entry)+"');\n";
-
-    if (fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory()) {
-      file = `
+    const isDirectory = fs.lstatSync(path.resolve(process.env.mocha_entry)).isDirectory();
+    const loadContext = isDirectory ?
+      `let testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\\.jsx?$/);` :
+      '';
+    const runTests = isDirectory ?
+      'testsContext.keys().forEach(testsContext);' :
+      `require('${path.resolve(process.env.mocha_entry)}');`;
+    const file = `// Auto-generated
 import 'babel-polyfill';
-var testsContext = require.context(${JSON.stringify(path.resolve(process.env.mocha_entry))}, true, /\.js$/);
-testsContext.keys().forEach(testsContext);
+import { throwOnConsoleErrorsEverywhere } from './util/testUtils';
+${loadContext}
+describe('entry tests', () => {
+  throwOnConsoleErrorsEverywhere();
+  ${runTests}
+});
 `;
-    }
     fs.writeFileSync(
       'test/entry-tests.js',
       file
@@ -63,6 +65,7 @@ testsContext.keys().forEach(testsContext);
     'netsim',
     'studio',
     'turtle',
+    'scratch',
     'weblab'
   ];
 
@@ -133,6 +136,12 @@ testsContext.keys().forEach(testsContext);
           src: ['**'],
           //TODO: Would be preferrable to separate Blockly media.
           dest: 'build/package/media'
+        },
+        {
+          expand: true,
+          cwd: 'node_modules/scratch-blocks/media',
+          src: ['**'],
+          dest: 'build/package/media/scratch-blocks',
         },
         // We have to do some weird stuff to get our fallback video player working.
         // video.js expects some of its own files to be served by the application, so
@@ -314,6 +323,7 @@ testsContext.keys().forEach(testsContext);
       files: [
         {pattern: 'test/audio/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/integration/**/*', watched: false, included: false, nocache: true},
+        {pattern: 'test/scratch/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/storybook/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/unit/**/*', watched: false, included: false, nocache: true},
         {pattern: 'test/util/**/*', watched: false, included: false, nocache: true},
@@ -358,6 +368,21 @@ testsContext.keys().forEach(testsContext);
         {src: ['test/integration-tests.js'], watched: false},
       ],
     },
+    scratch: {
+      coverageReporter: {
+        dir: 'coverage/scratch',
+        reporters: [
+          { type: 'html' },
+          { type: 'lcovonly' }
+        ]
+      },
+      junitReporter: Object.assign({}, junitReporterBaseConfig, {
+        outputFile: 'scratch.xml',
+      }),
+      files: [
+        {src: ['test/scratch-tests.js'], watched: false},
+      ],
+    },
     storybook: {
       coverageReporter: {
         dir: 'coverage/storybook',
@@ -371,11 +396,6 @@ testsContext.keys().forEach(testsContext);
       }),
       files: [
         {src: ['test/storybook-tests.js'], watched: false},
-      ],
-    },
-    all: {
-      files: [
-        {src: ['test/index.js'], watched: false},
       ],
     },
     entry: {
@@ -799,11 +819,11 @@ testsContext.keys().forEach(testsContext);
     'karma:integration'
   ]);
 
-  // Note: Be sure if you add additional test types, you also up date test-low-memory.sh
-  grunt.registerTask('test', [
+  // Run Scratch tests in a separate target so `window.Blockly` doesn't collide.
+  grunt.registerTask('scratchTest', [
     'preconcat',
     'concat',
-    'karma:all'
+    'karma:scratch',
   ]);
 
   grunt.registerTask('logBuildTimes', function () {

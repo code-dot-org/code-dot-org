@@ -43,6 +43,11 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-15 18:04:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-07-15 01:19:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:22:20 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:30:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"ideal\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-15 01:31:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:08:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:36:06 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:02 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:37:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_until_while": 1,
+    "functions": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>
@@ -89,19 +94,19 @@
           <mutation/>
           <title name="NAME">check and pick</title>
           <statement name="STACK">
-            <block type="harvester_ifAtCropElse">
+            <block type="harvester_ifHasCropElse">
               <title name="LOC">Corn</title>
               <statement name="DO">
                 <block type="harvester_corn"/>
               </statement>
               <statement name="ELSE">
-                <block type="harvester_ifAtCropElse">
+                <block type="harvester_ifHasCropElse">
                   <title name="LOC">Lettuce</title>
                   <statement name="DO">
                     <block type="harvester_lettuce"/>
                   </statement>
                   <statement name="ELSE">
-                    <block type="harvester_ifAtCrop">
+                    <block type="harvester_ifHasCrop">
                       <title name="LOC">Pumpkin</title>
                       <statement name="DO">
                         <block type="harvester_pumpkin"/>
@@ -172,7 +177,7 @@
             <title name="LOC">Corn</title>
           </block>
           <block type="maze_untilBlocked"/>
-          <block type="harvester_untilAtCrop">
+          <block type="harvester_untilHasCrop">
             <title name="LOC">Pumpkin</title>
           </block>
           <block type="controls_repeat">
@@ -186,10 +191,10 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
-          <block type="harvester_ifAtCrop">
+          <block type="harvester_ifHasCrop">
             <title name="LOC">Corn</title>
           </block>
         </category>

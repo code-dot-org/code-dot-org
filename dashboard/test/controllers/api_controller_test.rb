@@ -1348,6 +1348,79 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
+  test "user menu should open pairing dialog if asked to in the session" do
+    sign_in create(:student)
+
+    session[:show_pairing_dialog] = true
+
+    get :user_menu
+
+    assert assigns(:show_pairing_dialog)
+    refute session[:show_pairing_dialog] # should only show once
+  end
+
+  test "user menu should not open pairing dialog if not asked to in the session" do
+    sign_in create(:student)
+
+    session[:show_pairing_dialog] = nil
+
+    get :user_menu
+
+    refute assigns(:show_pairing_dialog)
+    refute session[:show_pairing_dialog] # should only show once
+  end
+
+  test 'student does not see links to ops dashboard or teacher dashboard' do
+    student = create :student
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="//test.code.org/ops-dashboard"]', 0
+    assert_select 'a[href="//test.code.org/teacher-dashboard"]', 0
+  end
+
+  test 'should show sign in link for signed out user' do
+    sign_out :user
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/users/sign_in"]', 'Sign in'
+  end
+
+  test 'should show sign out link for signed in user' do
+    student = create :student
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/users/sign_out"]', 'Sign out'
+  end
+
+  test 'show link to pair programming when in a section' do
+    student = create(:follower).student_user
+    sign_in student
+
+    assert student.can_pair?
+
+    get :user_menu
+
+    assert_response :success
+    assert_select '#pairing_link'
+  end
+
+  test "don't show link to pair programming when not in a section" do
+    student = create(:student)
+    sign_in student
+
+    get :user_menu
+
+    assert_response :success
+    assert_select 'a[href="http://test.host/pairing"]', false
+  end
+
   test "don't show assessment to teacher who doesn't own that section" do
     script = create :script
 
@@ -1427,6 +1500,11 @@ class ApiControllerTest < ActionController::TestCase
   test 'api routing' do
     # /dashboardapi urls
     assert_routing(
+      {method: "get", path: "/dashboardapi/user_menu"},
+      {controller: "api", action: "user_menu"}
+    )
+
+    assert_routing(
       {method: "get", path: "/dashboardapi/section_progress/2"},
       {controller: "api", action: "section_progress", section_id: '2'}
     )
@@ -1437,6 +1515,11 @@ class ApiControllerTest < ActionController::TestCase
     )
 
     # /api urls
+    assert_recognizes(
+      {controller: "api", action: "user_menu"},
+      {method: "get", path: "/api/user_menu"}
+    )
+
     assert_recognizes(
       {controller: "api", action: "section_progress", section_id: '2'},
       {method: "get", path: "/api/section_progress/2"}

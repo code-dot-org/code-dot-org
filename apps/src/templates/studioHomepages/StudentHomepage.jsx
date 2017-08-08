@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import HeaderBanner from '../HeaderBanner';
 import RecentCourses from './RecentCourses';
-import Sections from './Sections';
+import StudentSections from './StudentSections';
+import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import shapes from './shapes';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
@@ -12,7 +13,6 @@ const StudentHomepage = React.createClass({
     courses: shapes.courses,
     sections: shapes.sections,
     studentTopCourse: shapes.studentTopCourse,
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
   },
@@ -23,7 +23,7 @@ const StudentHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, isRtl, canLeave, studentTopCourse, codeOrgUrlPrefix } = this.props;
+    const { courses, sections, isRtl, canLeave, studentTopCourse } = this.props;
 
     return (
       <div>
@@ -34,22 +34,18 @@ const StudentHomepage = React.createClass({
         <ProtectedStatefulDiv
           ref="flashes"
         />
-
         <RecentCourses
           courses={courses}
           showAllCoursesLink={true}
-          heading={i18n.myCourses()}
           isRtl={false}
           isTeacher={false}
           studentTopCourse={studentTopCourse}
         />
-
-        <Sections
-          sections={sections}
+        <ProjectWidgetWithData/>
+        <StudentSections
+          initialSections={sections}
           isRtl={isRtl}
-          isTeacher={false}
           canLeave={canLeave}
-          codeOrgUrlPrefix={codeOrgUrlPrefix}
         />
       </div>
     );

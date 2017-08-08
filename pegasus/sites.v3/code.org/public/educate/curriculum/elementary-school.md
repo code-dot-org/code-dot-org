@@ -64,7 +64,7 @@ Courses
 
 <img src="/images/fit-970/CSFimages/Course_Map.png" style="max-width: 100%"/>
 
-For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the [complete curriculum for Courses A-F here](https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs).
+For students new to computer science, each course begins with a grade-appropriate entry point and structured ramp-up of concepts. The progression of Courses A-F builds upon each other to ensure continuing students stay interested and learn new things. This allows you to use the same course at any grade level for all students, regardless of their experience. If you’re looking for a more comprehensive course, the Express Course combines the best of Courses A-F into a single condensed course (with a simpler option for pre-readers). You can download the [curriculum guide for Courses A-F here](/files/CSF_CoursesA-F_Curriculum_Guide.pdf).
 
 If you've been teaching Courses 1-4 and want to know how to transition to teaching Courses A-F, check out our [Transition Guide](https://docs.google.com/document/d/1dFgrHiW-ERpNGey7yrNcoxU0LEfH9kFbdeLJn2QyJTA/edit?usp=sharing).
 
@@ -135,6 +135,10 @@ CS Fundamentals Express combines the best of Courses A-F into a single condensed
 # Looking for translated courses?
 
 We are working on translating Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using [Courses 1-4 and the Accelerated Course](/educate/curriculum/cs-fundamentals-international). These courses cover the same basic concepts and have already been translated into 25+ languages.
+
+# Looking for unplugged activities?
+
+If you don't have computers in your classroom, these [unplugged lessons](/educate/curriculum/cs-fundamentals-unplugged) can either be used alone or with other computer science lessons on related concepts.
 
 # Examples of student creations
 

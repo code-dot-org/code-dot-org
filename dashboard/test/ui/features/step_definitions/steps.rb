@@ -47,6 +47,9 @@ def replace_hostname(url)
   if ENV['HOUROFCODE_TEST_DOMAIN']
     url = url.gsub(/\/\/hourofcode.com\//, "//" + ENV['HOUROFCODE_TEST_DOMAIN'] + "/")
   end
+  if ENV['CSEDWEEK_TEST_DOMAIN']
+    url = url.gsub(/\/\/csedweek.org\//, "//" + ENV['CSEDWEEK_TEST_DOMAIN'] + "/")
+  end
 
   # Convert http to https
   url = url.gsub(/^http:\/\//, 'https://') unless url.start_with? 'http://localhost'
@@ -1193,4 +1196,32 @@ end
 Then /^the project at index ([\d]+) is named "([^"]+)"$/ do |index, expected_name|
   actual_name = @browser.execute_script("return $('table.projects td.name').eq(#{index}).text().trim();")
   expect(actual_name).to eq(expected_name)
+end
+
+When /^I see the section set up box$/ do
+  steps 'When I wait to see ".uitest-set-up-sections"'
+end
+
+When /^I press the new section button$/ do
+  steps 'When I press the first ".uitest-newsection" element'
+end
+
+Then /^I should see the new section dialog$/ do
+  steps 'Then I see ".modal"'
+end
+
+When /^I select picture login$/ do
+  steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
+end
+
+When /^I press the save button to create a new section$/ do
+  steps 'When I press the first ".uitest-saveButton" element'
+end
+
+When /^I wait for the dialog to close$/ do
+  steps 'When I wait until element ".modal" is gone'
+end
+
+Then /^I should see the section table$/ do
+  steps 'Then I see ".uitest-owned-sections"'
 end

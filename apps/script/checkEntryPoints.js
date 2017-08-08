@@ -78,6 +78,7 @@ const SILENCED = [
   'raceInterstitial',
   'schoolInfo',
   'schoolInfoInterstitial',
+  'scratch',
   'scriptOverview',
   'signup',
   'studio',

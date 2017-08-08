@@ -87,7 +87,7 @@ Code.org has partnered with the award-winning [Project GUTS](http://www.projectg
 
 Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. 
 
-[<button>Learn more about curriculum</button>](/edcuate/algebra)
+[<button>Learn more about curriculum</button>](/educate/algebra)
 
 <br>
 <hr>
