@@ -146,4 +146,5 @@ var BaseDialog = createReactClass({
     );
   }
 });
+BaseDialog.displayName = 'BaseDialog';
 module.exports = BaseDialog;
