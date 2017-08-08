@@ -27,12 +27,14 @@ class TeacherSections extends Component {
   renderNewSectionFlow() {
     const {isRtl} = this.props;
     return (
-      <ContentContainer
-        heading={i18n.sectionsTitle()}
-        isRtl={isRtl}
-      >
-        <OwnedSections isRtl={isRtl}/>
-      </ContentContainer>
+      <div id="classroom-sections">
+        <ContentContainer
+          heading={i18n.sectionsTitle()}
+          isRtl={isRtl}
+        >
+          <OwnedSections isRtl={isRtl}/>
+        </ContentContainer>
+      </div>
     );
   }
 
