@@ -180,5 +180,6 @@ const NewProgressBubble = createReactClass({
     return bubble;
   }
 });
+NewProgressBubble.displayName = 'NewProgressBubble';
 
 export default Radium(NewProgressBubble);
