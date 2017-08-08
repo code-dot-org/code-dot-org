@@ -96,5 +96,5 @@ const ProgressPill = createReactClass({
     );
   }
 });
-
+ProgressPill.displayName = 'ProgressPill';
 export default Radium(ProgressPill);
