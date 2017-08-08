@@ -333,7 +333,7 @@ class Blockly < Level
 
         if !translated_text.nil? && translated_text != original_text
           hint['hint_markdown'] = translated_text
-          hint["tts_url"] = tts_url(TTSSafeRenderer.render(translated_text))
+          hint["tts_url"] = tts_url(TextToSpeech.sanitize(translated_text))
         end
 
         hint

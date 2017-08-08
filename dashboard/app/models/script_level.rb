@@ -74,8 +74,26 @@ class ScriptLevel < ActiveRecord::Base
     end
   end
 
+  def find_experiment_level(user, section)
+    levels.sort_by(&:created_at).find do |level|
+      experiments(level).any? do |experiment_name|
+        Experiment.enabled?(
+          experiment_name: experiment_name,
+          user: user,
+          section: section,
+          script: script
+        )
+      end
+    end
+  end
+
   def active?(level)
     !variants || !variants[level.name] || variants[level.name]['active'] != false
+  end
+
+  def experiments(level)
+    return [] if !variants || !variants[level.name]
+    variants[level.name]['experiments'] || []
   end
 
   def has_another_level_to_go_to?

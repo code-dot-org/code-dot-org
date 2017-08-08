@@ -42,6 +42,10 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-06-19 18:13:23 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"},{\"changed_at\":\"2017-06-20 17:45:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 3,
+    "for_loops": 2,
+    "variables": 3,
+    "functions_with_params": 3
   }
 }]]></config>
   <blocks>

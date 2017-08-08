@@ -20,7 +20,6 @@
     "instructions": "Write the code to help Scrat get all of the acorns!",
     "callout_json": "[{\"localization_key\":\"arrows_move_actor\",\"callout_text\":null,\"element_id\":\"#rightButton\",\"qtip_config\":{\"position\":{\"my\":\"bottom left\",\"at\":\"top middle\",\"adjust\":{\"x\":0,\"y\":4}}},\"on\":null}]",
     "maze": "[[1,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[1,0,0,0,0,0,1,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Scrat is still looking for acorns! \r\nHelp him scamper around by attaching a `move actor 1` block to each of the events and changing the direction to work for each arrow key. \r\nWhen you’re done, click \"Run\" and try to collect all of the acorns.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Each of the `when ___ arrow` events will need to have a different `move actor 1` command connected to it to solve this puzzle. \",\"hint_id\":\"iceage_move_events_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/0812dcc23696511f5d843dfc5d5c53dc/iceage_move_events.mp3\"}]",
@@ -50,7 +49,8 @@
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
-    "timeout_after_when_run": "false"
+    "timeout_after_when_run": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

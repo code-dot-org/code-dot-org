@@ -87,16 +87,7 @@ class ActivitiesController < ApplicationController
       params[:lines] = MAX_LINES_OF_CODE if params[:lines] > MAX_LINES_OF_CODE
     end
 
-    # Store the image only if the image is set, and the image has not been saved
-    if params[:image] && @level_source.try(:id)
-      @level_source_image = LevelSourceImage.find_by(level_source_id: @level_source.id)
-      unless @level_source_image
-        @level_source_image = LevelSourceImage.new(level_source_id: @level_source.id)
-        unless @level_source_image.save_to_s3(Base64.decode64(params[:image]))
-          @level_source_image = nil
-        end
-      end
-    end
+    @level_source_image = find_or_create_level_source_image(params[:image], @level_source.try(:id))
 
     @new_level_completed = false
     if current_user
