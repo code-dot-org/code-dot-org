@@ -66,5 +66,5 @@ const ProgressLessonContent = createReactClass({
     );
   }
 });
-
+ProgressLessonContent.displayName = 'ProgressLessonContent';
 export default ProgressLessonContent;
