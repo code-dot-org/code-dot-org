@@ -106,5 +106,5 @@ const ProgressBubbleSet = createReactClass({
     );
   }
 });
-
+ProgressBubbleSet.displayName = 'ProgressBubbleSet';
 export default Radium(ProgressBubbleSet);
