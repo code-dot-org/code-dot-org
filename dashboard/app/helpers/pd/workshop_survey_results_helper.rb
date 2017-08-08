@@ -33,9 +33,9 @@ module Pd::WorkshopSurveyResultsHelper
     :who_facilitated
   ]
 
-  LOCAL_WORKSHOP_FIELDS_IN_SUMMARY = LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY + FREE_RESPONSE_FIELDS_IN_SUMMARY
-  TEACHERCON_MULTIPLE_CHOICE_FIELDS = Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys
-  TEACHERCON_FIELDS_IN_SUMMARY = Pd::TeacherconSurvey.public_required_fields + Pd::TeacherconSurvey.facilitator_required_fields
+  LOCAL_WORKSHOP_FIELDS_IN_SUMMARY = (LOCAL_WORKSHOP_MULTIPLE_CHOICE_FIELDS_IN_SUMMARY + FREE_RESPONSE_FIELDS_IN_SUMMARY).freeze
+  TEACHERCON_MULTIPLE_CHOICE_FIELDS = (Pd::TeacherconSurvey.public_required_fields & Pd::TeacherconSurvey.options.keys).freeze
+  TEACHERCON_FIELDS_IN_SUMMARY = (Pd::TeacherconSurvey.public_fields).freeze
 
   # The output is a hash where
   # - Multiple choice answers (aka scored answers) that are not facilitator specific turn
