@@ -190,5 +190,5 @@ const EnrolledWorkshopsTable = createReactClass({
     );
   }
 });
-
+EnrolledWorkshops.displayName = 'EnrolledWorkshops';
 export {EnrolledWorkshops, EnrolledWorkshopsTable};

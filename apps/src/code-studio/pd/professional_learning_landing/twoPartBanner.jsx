@@ -95,5 +95,5 @@ const TwoPartBanner = createReactClass({
     );
   }
 });
-
+TwoPartBanner.displayName = 'TwoPartBanner';
 export {TwoPartBanner};

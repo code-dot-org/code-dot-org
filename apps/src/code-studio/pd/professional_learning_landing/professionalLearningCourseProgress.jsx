@@ -45,5 +45,5 @@ const ProfessionalLearningCourseProgress = createReactClass({
     }
   }
 });
-
+ProfessionalLearningCourseProgress.displayName = 'ProfessionalLearningCourseProgress';
 export default ProfessionalLearningCourseProgress;
