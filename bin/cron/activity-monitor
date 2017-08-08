@@ -147,9 +147,13 @@ class Monitor
   end
 
   def fetch
+    retries ||= 0
     CDO.log.info 'Fetching...'
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
     reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
+  rescue OpenURI::HTTPError
+    retries += 1
+    retry if retries < 3
   end
 end
 
