@@ -251,15 +251,17 @@ export function throwOnConsoleErrors() {
 }
 
 /**
- * Logs current stack to console. Phantomjs doesn't add the stack property unless
- * the exception is thrown, thus we need to throw/catch a generic error.
+ * Gets a stack trace for the current location. Phantomjs doesn't add the stack
+ * property unless the exception is thrown, thus we need to throw/catch a generic error.
  */
-function logStack() {
+function getStack() {
+  let stack;
   try {
     throw new Error();
   } catch (e) {
-    console.log(e.stack);
+    stack = e.stack;
   }
+  return stack;
 }
 
 /**
@@ -282,17 +284,11 @@ export function throwOnConsoleErrorsEverywhere() {
     sinon.stub(console, 'error').callsFake(msg => {
       const prefix = throwingOnErrors ? '' : '[ignoring]';
       console.error.wrappedMethod(prefix, msg);
-      if (throwingOnErrors) {
-        logStack();
-      }
-
-      // TODO: temporary logging
-      console.log('is ErrorEvent: ', msg instanceof ErrorEvent);
 
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (throwingOnErrors && !firstError) {
-        firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}`);
+        firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}\n${getStack()}`);
       }
     });
   });
