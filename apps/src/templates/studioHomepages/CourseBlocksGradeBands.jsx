@@ -26,17 +26,17 @@ class CourseBlocksGradeBands extends Component {
       {
         heading: i18n.courseBlocksGradeBandsK5(),
         description: i18n.courseBlocksGradeBandsK5Description(),
-        path: 'applab'
+        path: '/student/elementary'
       },
       {
         heading: i18n.courseBlocksGradeBands612(),
         description: i18n.courseBlocksGradeBands612Description(),
-        path: 'gamelab'
+        path: '/student/middle-high'
       },
       {
         heading: i18n.courseBlocksGradeBandsUniversity(),
         description: i18n.courseBlocksGradeBandsUniversityDescription(),
-        path: 'weblab'
+        path: '/student/university'
       }
     ];
 
@@ -54,7 +54,7 @@ class CourseBlocksGradeBands extends Component {
                 title={card.heading}
                 description={card.description}
                 buttonText={i18n.learnMore()}
-                link={pegasus(`/${card.path}`)}
+                link={pegasus(card.path)}
                 isRtl={this.props.isRtl}
                 isJumbo={true}
               />
