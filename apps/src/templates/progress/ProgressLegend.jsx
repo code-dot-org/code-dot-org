@@ -54,6 +54,11 @@ const styles = {
   icon: {
     marginRight: 5,
     size: 20,
+  },
+  center: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
 };
 
@@ -131,35 +136,41 @@ export default class ProgressLegend extends Component {
               </div>
             </TD>
             <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.not_tried,
-                  isConceptLevel: true,
-                  name: `${i18n.concept()}: ${i18n.notStarted()}`
-                }}
-                disabled={false}
-              />
+              <div style={styles.center}>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.not_tried,
+                    isConceptLevel: true,
+                    name: `${i18n.concept()}: ${i18n.notStarted()}`
+                  }}
+                  disabled={false}
+                />
+              </div>
             </TD>
             <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.attempted,
-                  isConceptLevel: true,
-                  name: `${i18n.concept()}: ${i18n.inProgress()}`
-                }}
-                disabled={false}
-              />
+              <div style={styles.center}>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.attempted,
+                    isConceptLevel: true,
+                    name: `${i18n.concept()}: ${i18n.inProgress()}`
+                  }}
+                  disabled={false}
+                />
+              </div>
             </TD>
             {!excludeCsfColumn && <TD>N/A</TD>}
             <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.perfect,
-                  isConceptLevel: true,
-                  name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
-                }}
-                disabled={false}
-              />
+              <div style={styles.center}>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.perfect,
+                    isConceptLevel: true,
+                    name: `${i18n.concept()}: ${i18n.completed()} (${i18n.perfect()})`
+                  }}
+                  disabled={false}
+                />
+              </div>
             </TD>
             <TD>N/A</TD>
           </tr>
@@ -184,56 +195,66 @@ export default class ProgressLegend extends Component {
               </div>
             </TD>
             <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.not_tried,
-                  isConceptLevel: false,
-                  name: `${i18n.activity()}: ${i18n.notStarted()}`
-                }}
-                disabled={false}
-              />
-            </TD>
-            <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.attempted,
-                  isConceptLevel: false,
-                  name: `${i18n.activity()}: ${i18n.inProgress()}`
-                }}
-                disabled={false}
-              />
-            </TD>
-            {!excludeCsfColumn &&
-              <TD>
+              <div style={styles.center}>
                 <NewProgressBubble
                   level={{
-                    status: LevelStatus.passed,
+                    status: LevelStatus.not_tried,
                     isConceptLevel: false,
-                    name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
+                    name: `${i18n.activity()}: ${i18n.notStarted()}`
                   }}
                   disabled={false}
                 />
+              </div>
+            </TD>
+            <TD>
+              <div style={styles.center}>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.attempted,
+                    isConceptLevel: false,
+                    name: `${i18n.activity()}: ${i18n.inProgress()}`
+                  }}
+                  disabled={false}
+                />
+              </div>
+            </TD>
+            {!excludeCsfColumn &&
+              <TD>
+                <div style={styles.center}>
+                  <NewProgressBubble
+                    level={{
+                      status: LevelStatus.passed,
+                      isConceptLevel: false,
+                      name: `${i18n.activity()}: ${i18n.completed()} (${i18n.tooManyBlocks()})`
+                    }}
+                    disabled={false}
+                  />
+                </div>
               </TD>
             }
             <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.perfect,
-                  isConceptLevel: false,
-                  name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
-                }}
-                disabled={false}
-              />
+              <div style={styles.center}>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.perfect,
+                    isConceptLevel: false,
+                    name: `${i18n.activity()}: ${i18n.completed()} (${i18n.perfect()})`
+                  }}
+                  disabled={false}
+                />
+              </div>
             </TD>
             <TD>
-              <NewProgressBubble
-                level={{
-                  status: LevelStatus.submitted,
-                  isConceptLevel: false,
-                  name: `${i18n.activity()}: ${i18n.submitted()}`
-                }}
-                disabled={false}
-              />
+              <div style={styles.center}>
+                <NewProgressBubble
+                  level={{
+                    status: LevelStatus.submitted,
+                    isConceptLevel: false,
+                    name: `${i18n.activity()}: ${i18n.submitted()}`
+                  }}
+                  disabled={false}
+                />
+              </div>
             </TD>
           </tr>
 

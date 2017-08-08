@@ -305,6 +305,59 @@ class V2SectionRoutesTest < SequelTestCase
     end
 
     describe 'GET /v2/sections/valid_scripts' do
+      before do
+        @nonadmin_valid_scripts = [
+          {
+            "id" => 1,
+            "name" => "Foo",
+            "script_name" => "Foo",
+            "category" => "other",
+            "position" => nil,
+            "category_priority" => 15
+          },
+          {
+            "id" => 3,
+            "name" => "Bar",
+            "script_name" => "Bar",
+            "category" => "other",
+            "position" => nil,
+            "category_priority" => 15
+          },
+          {
+            "id" => 4,
+            "name" => "Minecraft Adventurer",
+            "script_name" => "mc",
+            "category" => "Hour of Code",
+            "position" => nil,
+            "category_priority" => 2
+          },
+          {
+            "id" => 5,
+            "name" => "Classic Maze",
+            "script_name" => "hourofcode",
+            "category" => "Hour of Code",
+            "position" => nil,
+            "category_priority" => 2
+          },
+          {
+            "id" => 6,
+            "name" => "Minecraft Designer",
+            "script_name" => "minecraft",
+            "category" => "Hour of Code",
+            "position" => nil,
+            "category_priority" => 2
+          },
+          {
+            "id" => 10,
+            "name" => "Make a Flappy game",
+            "script_name" => "flappy",
+            "category" => "Hour of Code",
+            "position" => 4,
+            "category_priority" => 2
+          }
+        ]
+      end
+
       it 'returns 403 "Forbidden" when not signed in' do
         with_role nil
         @pegasus.get '/v2/sections/valid_scripts'
@@ -315,38 +368,14 @@ class V2SectionRoutesTest < SequelTestCase
         with_role FakeDashboard::STUDENT
         @pegasus.get '/v2/sections/valid_scripts'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal(
-          [
-            {
-              'id' => 10,
-              'name' => 'Make a Flappy game',
-              'script_name' => 'flappy',
-              'category' => 'Hour of Code',
-              'position' => 4,
-              'category_priority' => 2
-            }
-          ],
-          JSON.parse(@pegasus.last_response.body)
-        )
+        assert_equal @nonadmin_valid_scripts, JSON.parse(@pegasus.last_response.body)
       end
 
       it 'returns script list when signed in as a teacher' do
         with_role FakeDashboard::TEACHER
         @pegasus.get '/v2/sections/valid_scripts'
         assert_equal 200, @pegasus.last_response.status
-        assert_equal(
-          [
-            {
-              'id' => 10,
-              'name' => 'Make a Flappy game',
-              'script_name' => 'flappy',
-              'category' => 'Hour of Code',
-              'position' => 4,
-              'category_priority' => 2
-            }
-          ],
-          JSON.parse(@pegasus.last_response.body)
-        )
+        assert_equal @nonadmin_valid_scripts, JSON.parse(@pegasus.last_response.body)
       end
 
       it 'returns script list with hidden scripts when signed in as an admin' do
@@ -354,24 +383,14 @@ class V2SectionRoutesTest < SequelTestCase
         @pegasus.get '/v2/sections/valid_scripts'
         assert_equal 200, @pegasus.last_response.status
         assert_equal(
-          [
-            {
-              'id' => 10,
-              'name' => 'Make a Flappy game',
-              'script_name' => 'flappy',
-              'category' => 'Hour of Code',
-              'position' => 4,
-              'category_priority' => 2
-            },
-            {
-              'id' => 45,
-              'name' => 'allthehiddenthings *',
-              'script_name' => 'allthehiddenthings',
-              'category' => 'other',
-              'position' => nil,
-              'category_priority' => 15
-            }
-          ],
+          @nonadmin_valid_scripts << {
+            'id' => 45,
+            'name' => 'allthehiddenthings *',
+            'script_name' => 'allthehiddenthings',
+            'category' => 'other',
+            'position' => nil,
+            'category_priority' => 15
+          },
           JSON.parse(@pegasus.last_response.body)
         )
       end

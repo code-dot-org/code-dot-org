@@ -180,7 +180,7 @@ module LevelsHelper
     if AuthoredHintViewRequest.enabled?
       view_options(authored_hint_view_requests_url: authored_hint_view_requests_path(format: :json))
       if current_user && @script
-        view_options(authored_hints_used_ids: Set.new(AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).map(&:hint_id)))
+        view_options(authored_hints_used_ids: AuthoredHintViewRequest.hints_used(current_user.id, @script.id, @level.id).pluck(:hint_id).uniq)
       end
     end
 
@@ -200,6 +200,8 @@ module LevelsHelper
       @app_options = question_options
     elsif @level.is_a? Widget
       @app_options = widget_options
+    elsif @level.is_a? Scratch
+      @app_options = scratch_options
     elsif @level.unplugged?
       @app_options = unplugged_options
     else
@@ -233,7 +235,7 @@ module LevelsHelper
         section.save(validate: false)
       end
       @app_options[:experiments] =
-        Experiment.get_all_enabled(user: current_user, section: section, script: @script).map(&:name)
+        Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
     end
 
@@ -271,6 +273,19 @@ module LevelsHelper
     app_options = {}
     app_options[:level] ||= {}
     app_options[:level].merge! @level.properties.camelize_keys
+    app_options.merge! view_options.camelize_keys
+    app_options
+  end
+
+  def scratch_options
+    app_options = {
+      baseUrl: Blockly.base_url,
+      skin: {},
+      app: 'scratch',
+    }
+    app_options[:level] = @level.properties.camelize_keys
+    app_options[:level][:scratch] = true
+    app_options[:level][:editCode] = false
     app_options.merge! view_options.camelize_keys
     app_options
   end
@@ -637,7 +652,7 @@ module LevelsHelper
   end
 
   def video_key_choices
-    Video.all.map(&:key)
+    Video.pluck(:key)
   end
 
   # Constructs pairs of [filename, asset path] for a dropdown menu of available ani-gifs
@@ -754,5 +769,28 @@ module LevelsHelper
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
     standalone || current_user.try(:should_see_inline_answer?, @script_level)
+  end
+
+  # Finds the existing LevelSourceImage corresponding to the specified level
+  # source id if one exists, otherwise creates and returns a new
+  # LevelSourceImage using the image data in level_image.
+  #
+  # @param level_image [String] A base64-encoded image.
+  # @param level_source_id [Integer, nil] The id of a LevelSource or nil.
+  # @returns [LevelSourceImage] A level source image, or nil if one was not
+  # created or found.
+  def find_or_create_level_source_image(level_image, level_source_id)
+    level_source_image = nil
+    # Store the image only if the image is set, and the image has not been saved
+    if level_image && level_source_id
+      level_source_image = LevelSourceImage.find_by(level_source_id: level_source_id)
+      unless level_source_image
+        level_source_image = LevelSourceImage.new(level_source_id: level_source_id)
+        unless level_source_image.save_to_s3(Base64.decode64(level_image))
+          level_source_image = nil
+        end
+      end
+    end
+    level_source_image
   end
 end

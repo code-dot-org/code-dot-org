@@ -149,5 +149,7 @@ module Dashboard
     end
 
     config.assets.image_optim = false unless CDO.image_optim
+
+    config.experiment_cache_time_seconds = 60
   end
 end

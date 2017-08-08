@@ -114,7 +114,7 @@ class Pd::TeacherconSurvey < ActiveRecord::Base
   end
 
   def get_facilitator_names
-    pd_enrollment ? pd_enrollment.workshop.facilitators.map(&:name) : []
+    pd_enrollment ? pd_enrollment.workshop.facilitators.pluck(:name) : []
   end
 
   def validate_required_fields

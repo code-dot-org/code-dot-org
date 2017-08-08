@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
-import {CoursesSetUpMessage} from './SetUpMessage';
+import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
 import StudentTopCourse from './StudentTopCourse';
 import Notification from '@cdo/apps/templates/Notification';
@@ -21,13 +21,12 @@ const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
     isTeacher: PropTypes.bool.isRequired,
-    heading: PropTypes.string.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
     studentTopCourse: shapes.studentTopCourse
   },
 
   render() {
-    const { courses, isTeacher, heading, isRtl, studentTopCourse } = this.props;
+    const { courses, isTeacher, isRtl, studentTopCourse } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || studentTopCourse;
@@ -35,7 +34,7 @@ const RecentCourses = React.createClass({
     return (
       <div>
         <ContentContainer
-          heading={heading}
+          heading={i18n.myCourses()}
           isRtl={isRtl}
         >
           {!isTeacher && studentTopCourse && (
@@ -79,7 +78,7 @@ const RecentCourses = React.createClass({
             </div>
           )}
           {!hasCourse && (
-            <CoursesSetUpMessage
+            <SetUpCourses
               isRtl={isRtl}
               isTeacher={isTeacher}
             />

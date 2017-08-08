@@ -2,7 +2,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   include Pd::WorkshopFilters
   include Api::CsvDownload
 
-  load_and_authorize_resource class: 'Pd::Workshop', except: [:k5_public_map_index]
+  load_and_authorize_resource class: 'Pd::Workshop', only: [:show, :update, :create, :destroy, :start, :end, :summary]
+  before_action :load_collection, only: [:index, :filter]
 
   # GET /api/v1/pd/workshops
   def index
@@ -26,6 +27,8 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   def workshops_user_enrolled_in
+    authorize! :workshops_user_enrolled_in, Pd::Workshop
+
     workshops = ::Pd::Enrollment.for_user(current_user).map do |enrollment|
       Api::V1::Pd::WorkshopSerializer.new(enrollment.workshop, scope: {enrollment_code: enrollment.try(:code)}).attributes
     end
@@ -119,6 +122,25 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
   end
 
   private
+
+  def load_collection
+    # We need to do this to get around an annoying CanCanCan issue - when we load a
+    # collection of workshops, only the current user is loaded as a facilitator (if they
+    # are a facilitator). The load_collection action within CanCanCan does not seem to
+    # correctly join workshops and workshop_facilitators. Therefore, we need to write our
+    # own action to do loading
+    authenticate_user!
+
+    if current_user.admin? || current_user.workshop_admin?
+      @workshops = Pd::Workshop.all
+    elsif current_user.workshop_organizer?
+      @workshops = Pd::Workshop.organized_by(current_user)
+    elsif current_user.facilitator?
+      @workshops = Pd::Workshop.facilitated_by(current_user)
+    else
+      raise CanCan::AccessDenied.new
+    end
+  end
 
   def should_notify?
     ActiveRecord::Type::Boolean.new.deserialize(params[:notify])

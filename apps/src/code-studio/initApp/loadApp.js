@@ -431,7 +431,9 @@ window.apps = {
       return new Promise((resolve, reject) => {
         let source;
         let appOptions = getAppOptions();
-        if (window.Blockly) {
+        if (appOptions.level && appOptions.level.scratch) {
+          resolve(appOptions.getCode());
+        } else if (window.Blockly) {
           // If we're readOnly, source hasn't changed at all
           source = Blockly.mainBlockSpace.isReadOnly() ? currentLevelSource :
                    Blockly.Xml.domToText(Blockly.Xml.blockSpaceToDom(Blockly.mainBlockSpace));

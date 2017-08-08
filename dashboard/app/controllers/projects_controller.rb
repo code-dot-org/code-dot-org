@@ -42,6 +42,10 @@ class ProjectsController < ApplicationController
     flappy: {
       name: 'New Flappy Project'
     },
+    scratch: {
+      name: 'New Scratch Project',
+      levelbuilder_required: true,
+    },
     minecraft_codebuilder: {
       name: 'New Minecraft Code Connection Project'
     },
@@ -66,6 +70,15 @@ class ProjectsController < ApplicationController
     weblab: {
       name: 'New Web Lab Project',
       login_required: true
+    },
+    bounce: {
+      name: 'New Bounce Project',
+    },
+    sports: {
+      name: 'New Sports Project',
+    },
+    basketball: {
+      name: 'New Basketball Project',
     },
     algebra_game: {
       name: 'New Algebra Project'

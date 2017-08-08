@@ -568,6 +568,15 @@ var projects = module.exports = {
         return 'weblab';
       case 'flappy':
         return 'flappy';
+      case 'scratch':
+        return 'scratch';
+      case 'bounce':
+        if (appOptions.skinId === 'sports') {
+          return 'sports';
+        } else if (appOptions.skinId === 'basketball') {
+          return 'basketball';
+        }
+        return 'bounce';
       default:
         return null;
     }
