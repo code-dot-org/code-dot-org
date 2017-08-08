@@ -5,7 +5,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
 import color from "../util/color";
 
 const styles = {
@@ -46,35 +45,33 @@ const styles = {
   }
 };
 
-const HeaderBanner = createReactClass({
-  propTypes: {
-    headingText: PropTypes.string,
+export default function HeaderBanner({
+  short,
+  headingText,
+  subHeadingText,
+  description
+}) {
+  return (
+    <div style={short ? styles.headerBannerShort : styles.headerBanner}>
+      <div style={short ? styles.bannerHeadingShort : styles.bannerHeading}>
+        {headingText || <span>&nbsp;</span>}
+      </div>
+      <div style={styles.bannerSubHeading}>
+        {subHeadingText || <span>&nbsp;</span>}
+      </div>
+      {description && (
+        <div style={styles.bannerDescription}>
+          {description}
+        </div>
+      )}
+      {this.props.children}
+    </div>
+  );
+}
+HeaderBanner.propTypes = {
+  headingText: PropTypes.string,
     subHeadingText: PropTypes.string,
     description: PropTypes.string,
     children: PropTypes.node,
     short: PropTypes.bool
-  },
-
-  render() {
-    const {short, headingText, subHeadingText, description} = this.props;
-
-    return (
-      <div style={short ? styles.headerBannerShort : styles.headerBanner}>
-        <div style={short ? styles.bannerHeadingShort : styles.bannerHeading}>
-          {headingText || <span>&nbsp;</span>}
-        </div>
-        <div style={styles.bannerSubHeading}>
-          {subHeadingText || <span>&nbsp;</span>}
-        </div>
-        {description && (
-          <div style={styles.bannerDescription}>
-            {description}
-          </div>
-        )}
-        {this.props.children}
-      </div>
-    );
-  }
-});
-
-export default HeaderBanner;
+};

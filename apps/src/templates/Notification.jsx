@@ -192,7 +192,7 @@ const Notification = createReactClass({
     );
   }
 });
-
+Notification.displayName = 'Notification';
 Notification.NotificationType = NotificationType;
 
 export default Radium(Notification);

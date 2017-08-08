@@ -46,5 +46,6 @@ var ProtectedStatefulDiv = createReactClass({
     return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
   }
 });
+ProtectedStatefulDiv.displayName = 'ProtectedStatefulDiv';
 
 export default Radium(ProtectedStatefulDiv);
