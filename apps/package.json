@@ -150,7 +150,7 @@
     "progress-bar-webpack-plugin": "^1.8.0",
     "prop-types": "~15.5.10",
     "pusher-js": "4.1.0",
-    "radium": "0.18.1",
+    "radium": "0.19.4",
     "react": "~15.6.1",
     "react-bootstrap": "0.30.1",
     "react-color": "^2.11.7",
