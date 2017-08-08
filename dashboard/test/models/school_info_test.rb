@@ -378,4 +378,22 @@ class SchoolInfoTest < ActiveSupport::TestCase
     school_info = build :school_info_us_public
     assert school_info.validation_type == SchoolInfo::VALIDATION_FULL, school_info.validation_type
   end
+
+  test 'effective_school_district_name' do
+    school_district = build :school_district, name: 'Standard District'
+    school_info_standard_district = build :school_info_us_public, school_district: school_district
+    school_info_custom_district = build :school_info_us_public, school_district_other: true, school_district_name: 'Custom District'
+
+    assert_equal 'Standard District', school_info_standard_district.effective_school_district_name
+    assert_equal 'Custom District', school_info_custom_district.effective_school_district_name
+  end
+
+  test 'effective_school_name' do
+    school = build :public_school, name: 'Standard School'
+    school_info_standard_school = build :school_info_us_public, school: school
+    school_info_custom_school = build :school_info_us_public, school_other: true, school_name: 'Custom School'
+
+    assert_equal 'Standard School', school_info_standard_school.effective_school_name
+    assert_equal 'Custom School', school_info_custom_school.effective_school_name
+  end
 end
