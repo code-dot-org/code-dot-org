@@ -27,14 +27,18 @@
     "never_autoplay_video": "true",
     "examples_required": "false",
     "markdown_instructions": "You can only move up to four times in each direction. Can you find a path before you run out of blocks?",
-    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The shortest path might not work this time.\",\"hint_id\":\"courseB_maze_seq_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bcef130df264f8c9ec840e24aad804ba/courseB_maze_seq_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try moving west to start.\",\"hint_id\":\"courseB_maze_seq_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/097b79d1b1677a6144b9833751d2bc3c/courseB_maze_seq_challenge1.mp3\"}]",
+    "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"The shortest path might not work this time.\",\"hint_id\":\"courseB_maze_seq_challenge1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bcef130df264f8c9ec840e24aad804ba/courseB_maze_seq_challenge1.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Try using the <xml><block type=\\\"maze_moveWest\\\"/></xml> block to start.\",\"hint_id\":\"courseB_maze_seq_challenge1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1f3af932a8a863db84bcfd6141e54fe0/courseB_maze_seq_challenge1.mp3\"}]",
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "contained_level_names": null,
+    "disable_procedure_autopopulate": "false",
+    "maze_data": null,
+    "shape_shift": "false"
   },
   "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-08-04 21:18:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

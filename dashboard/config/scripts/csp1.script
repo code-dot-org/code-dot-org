@@ -5,7 +5,7 @@ exclude_csf_column_in_legend true
 student_detail_progress_view true
 
 stage 'CS Principles Pre-survey', lockable: true
-assessment 'CSP pre-assessment survey'
+assessment 'csp-pre-survey-2017-levelgroup'
 
 stage 'Personal Innovations', flex_category: 'csp1_1'
 level 'U1L1 Student Lesson Introduction', progression: 'Lesson Vocabulary & Resources'

@@ -794,6 +794,7 @@ Maze.execute = function (stepMode) {
         // Detected an infinite loop.  Animate what we have as quickly as
         // possible
         Maze.result = ResultType.TIMEOUT;
+        Maze.executionInfo.queueAction('finish', null);
         stepSpeed = 0;
         break;
       case true:
@@ -809,6 +810,7 @@ Maze.execute = function (stepMode) {
         Maze.result = ResultType.ERROR;
         Maze.testResults = Maze.subtype.getTestResults(
           Maze.executionInfo.terminationValue());
+        Maze.executionInfo.queueAction('finish', null);
         break;
     }
   } catch (e) {
@@ -1040,17 +1042,12 @@ function animateAction(action, spotlightBlocks, timePerStep) {
       break;
     case 'finish':
       // Only schedule victory animation for certain conditions:
-      switch (Maze.testResults) {
-        case TestResults.FREE_PLAY:
-        case TestResults.TOO_MANY_BLOCKS_FAIL:
-        case TestResults.ALL_PASS:
-          scheduleDance(true, timePerStep);
-          break;
-        default:
-          timeoutList.setTimeout(function () {
-            studioApp().playAudioOnFailure();
-          }, stepSpeed);
-          break;
+      if (Maze.testResults >= TestResults.MINIMUM_PASS_RESULT) {
+        scheduleDance(true, timePerStep);
+      } else {
+        timeoutList.setTimeout(function () {
+          studioApp().playAudioOnFailure();
+        }, stepSpeed);
       }
       break;
     case 'putdown':

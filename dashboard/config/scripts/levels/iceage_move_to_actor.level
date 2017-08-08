@@ -21,7 +21,6 @@
     "instructions": "Connect a block to the `when actor touches` event to play a sound when Diego finds Manny.",
     "callout_json": "[{\"localization_key\":\"playlab_play_sound\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,16,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
-    "contained_level_names": null,
     "embed": "false",
     "markdown_instructions": "Diego (actor 1) is searching for Manny (actor 2). Can you help bring the two together? Connect a block to the `when actor touches` event to play a sound when they find each other.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"For this puzzle, you can either move Diego down by 200 pixels, or move Manny up by 200 pixels.\",\"hint_id\":\"iceage_move_to_actor_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f0e7fb308a0dec19adffbfae3bb54824/iceage_move_to_actor.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Connect the `play ___ sound` block to the `when actor 1 touches actor 2` event to finish this challenge.\",\"hint_id\":\"iceage_move_to_actor_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/63e089938f7457a77178be1e4f9cbf07/iceage_move_to_actor.mp3\"}]",
@@ -50,7 +49,8 @@
     "edge_collisions": "false",
     "projectile_collisions": "false",
     "allow_sprites_outside_playspace": "false",
-    "sprites_hidden_to_start": "false"
+    "sprites_hidden_to_start": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
