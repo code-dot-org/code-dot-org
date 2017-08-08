@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { connect } from 'react-redux';
 import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
@@ -53,7 +54,6 @@ const RecentCourses = React.createClass({
                 title={course.title}
                 description={course.description}
                 link={course.link}
-                isRtl={isRtl}
               />
               {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
             </div>
@@ -89,4 +89,6 @@ const RecentCourses = React.createClass({
   }
 });
 
-export default RecentCourses;
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(RecentCourses);

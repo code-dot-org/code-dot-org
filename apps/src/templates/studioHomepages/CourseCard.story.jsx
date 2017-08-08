@@ -1,5 +1,5 @@
 import React from 'react';
-import CourseCard from './CourseCard';
+import { UnconnectedCourseCard as CourseCard } from './CourseCard';
 
 const exampleCard = {
   title: "CSP Unit 2 - Digital Information",

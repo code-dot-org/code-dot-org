@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import FontAwesome from './FontAwesome';
 import color from "../util/color";
 import styleConstants from '../styleConstants';
@@ -129,4 +130,6 @@ const ContentContainer= React.createClass({
   }
 });
 
-export default ContentContainer;
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(ContentContainer);

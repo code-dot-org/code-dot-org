@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {isRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import {isRtlFromDOM, isRtlReducer} from '@cdo/apps/code-studio/isRtlRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
@@ -22,7 +22,7 @@ function showHomepage() {
   const userId = homepageData.userid;
   const showInitialTips = !homepageData.initialtipsdismissed;
 
-  registerReducers({teacherSections, oauthClassroom});
+  registerReducers({teacherSections, oauthClassroom, isRtl: isRtlReducer});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
 
