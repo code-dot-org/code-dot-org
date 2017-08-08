@@ -696,6 +696,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     end
   end
 
+  test 'ready_to_close?' do
+    # no sessions, not ready
+    refute @workshop.ready_to_close?
+
+    # 3 sessions, no attendance: not ready
+    workshop = create :pd_workshop, num_sessions: 3
+    refute workshop.ready_to_close?
+
+    # attendance in the first session only: not ready
+    create :pd_attendance, session: workshop.sessions.first
+    refute workshop.ready_to_close?
+
+    # attendance in the last session: ready
+    create :pd_attendance, session: workshop.sessions.last
+    assert workshop.ready_to_close?
+  end
+
   private
 
   def session_on_day(day_offset)
