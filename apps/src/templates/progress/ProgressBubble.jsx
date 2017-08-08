@@ -52,6 +52,7 @@ const ProgressBubble = createReactClass({
     return <NewProgressBubble {...this.props}/>;
   }
 });
+ProgressBubble.displayName = 'ProgressBubble';
 
 // Expose our height, as ProgressBubbleSet needs this to stick the little gray
 // connector between bubbles
