@@ -168,7 +168,7 @@
     "react-storybook-addon-add-stories-group": "0.1.0",
     "react-test-renderer": "~15.6.1",
     "react-tether": "^0.5.2",
-    "react-tooltip": "^3.2.7",
+    "react-tooltip": "^3.3.0",
     "react-virtualized": "^9.7.3",
     "react-virtualized-select": "^3.0.1",
     "reactabular": "^2.0.3",
