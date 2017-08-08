@@ -1,7 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
-
 import Button from '../Button';
 import i18n from '@cdo/locale';
 
@@ -29,34 +27,29 @@ const styles = {
   },
 };
 
-const HiddenStageToggle = createReactClass({
-  propTypes: {
-    hidden: PropTypes.bool.isRequired,
+export default function HiddenStageToggle({ hidden, onChange }) {
+  return (
+    <div style={styles.main} className="uitest-togglehidden">
+      <Button
+        onClick={() => onChange('visible')}
+        text={i18n.visible()}
+        color={Button.ButtonColor.gray}
+        disabled={!hidden}
+        icon="eye"
+        style={{...styles.button, ...styles.leftButton}}
+      />
+      <Button
+        onClick={() => onChange('hidden')}
+        text={i18n.hidden()}
+        color={Button.ButtonColor.gray}
+        disabled={hidden}
+        icon="eye-slash"
+        style={{...styles.button, ...styles.rightButton}}
+      />
+    </div>
+  );
+}
+HiddenStageToggle.propTypes = {
+  hidden: PropTypes.bool.isRequired,
     onChange: PropTypes.func.isRequired
-  },
-  render() {
-    const { hidden, onChange } = this.props;
-    return (
-      <div style={styles.main} className="uitest-togglehidden">
-        <Button
-          onClick={() => onChange('visible')}
-          text={i18n.visible()}
-          color={Button.ButtonColor.gray}
-          disabled={!hidden}
-          icon="eye"
-          style={{...styles.button, ...styles.leftButton}}
-        />
-        <Button
-          onClick={() => onChange('hidden')}
-          text={i18n.hidden()}
-          color={Button.ButtonColor.gray}
-          disabled={hidden}
-          icon="eye-slash"
-          style={{...styles.button, ...styles.rightButton}}
-        />
-      </div>
-    );
-  }
-});
-
-export default HiddenStageToggle;
+};

@@ -68,7 +68,7 @@ const StageLock = createReactClass({
     );
   }
 });
-
+StageLock.displayName = 'StageLock';
 export default connect(state => ({
   sectionId: state.sections.selectedSectionId,
   sectionsAreLoaded: state.sections.sectionsAreLoaded,
