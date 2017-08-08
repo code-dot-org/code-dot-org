@@ -1,0 +1,13 @@
+- student_accounts_percent = "20%"
+- female_students = "9M"
+- teacher_users = "600K"
+- world_students_hoc_percent = "10%"
+- states_policy_change = "20"
+
+- statistics = { student_accounts_percent => "of US students have accounts on Code.org", female_students => "of our students are female", teacher_users => "teachers use Code.org", world_students_hoc_percent => "of the world's students have tried the Hour of Code", states_policy_change => "states changed policy to support computer science education" }
+
+
+-statistics.each do |number, phrase|
+  .col-20
+    %div{:style=>'font-size:45px;'}= "#{number}"
+    %div= "#{phrase}"

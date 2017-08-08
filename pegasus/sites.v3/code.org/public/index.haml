@@ -30,9 +30,12 @@ style_min: true
 #homepage.supreme-container
   = view :homepage_hero, languageFilter: languageFilter
 
-  #petitionexpand{style: "display: block"}
-    - if DB[:cdo_homepage].where(type_s: "petition")
-      = view :petition_expand
+  - if request.language == "en"
+    = view :stats_homepage
+  - else
+    #petitionexpand{style: "display: block"}
+      - if DB[:cdo_homepage].where(type_s: "petition")
+        = view :petition_expand
 
   #user_hero
     .container_responsive
