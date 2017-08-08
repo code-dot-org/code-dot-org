@@ -233,10 +233,10 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level_unlocked = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
 
     student = create :student
-    student.stubs(:user_level_locked?).with(script_level_current, script_level_current.levels.first).returns(false)
-    student.stubs(:user_level_locked?).with(script_level_locked1, script_level_locked1.levels.first).returns(true)
-    student.stubs(:user_level_locked?).with(script_level_locked2, script_level_locked2.levels.first).returns(true)
-    student.stubs(:user_level_locked?).with(script_level_unlocked, script_level_unlocked.levels.first).returns(false)
+    student.stubs(:level_locked?).with(script_level_current).returns(false)
+    student.stubs(:level_locked?).with(script_level_locked1).returns(true)
+    student.stubs(:level_locked?).with(script_level_locked2).returns(true)
+    student.stubs(:level_locked?).with(script_level_unlocked).returns(false)
 
     assert_equal script_level_unlocked, script_level_current.next_progression_level(student)
   end
