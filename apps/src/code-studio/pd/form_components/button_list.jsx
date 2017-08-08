@@ -111,7 +111,7 @@ const ButtonList = createReactClass({
     );
   }
 });
-
+ButtonList.displayName = 'ButtonList';
 export {
   ButtonList,
   otherString
