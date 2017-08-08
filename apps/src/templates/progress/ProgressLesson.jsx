@@ -7,7 +7,7 @@ import { levelType, lessonType } from './progressTypes';
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import i18n from '@cdo/locale';
 import { lessonIsVisible, lessonIsLockedForAllStudents } from './progressHelpers';
-import { LevelStatus } from '@cdo/apps/util/sharedConstants';
+import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import FocusAreaIndicator from './FocusAreaIndicator';
 import ReactTooltip from 'react-tooltip';
@@ -71,6 +71,17 @@ const styles = {
   }
 };
 
+function stageLocked(levels) {
+  // A set of levels is locked if
+  // (a) there is at least one locked level and
+  // (b) all assessment levels are locked
+  const hasLockedLevel = levels.some(level => level.status === LevelStatus.locked);
+  const hasUnlockedAssessment = levels.some(level =>
+    level.kind === LevelKind.assessment && level.status !== LevelStatus.locked);
+
+  return hasLockedLevel && !hasUnlockedAssessment;
+}
+
 const ProgressLesson = React.createClass({
   propTypes: {
     lesson: lessonType.isRequired,
@@ -131,8 +142,9 @@ const ProgressLesson = React.createClass({
       lesson.name;
     const caret = this.state.collapsed ? "caret-right" : "caret-down";
 
-    const locked = lessonLockedForSection(lesson.id) ||
-      levels.every(level => level.status === LevelStatus.locked);
+    // TODO: lessonLockedForSection
+    // TODO: second bit prob belongs in progressHelper
+    const locked = lessonLockedForSection(lesson.id) || stageLocked(levels);
 
     const hiddenOrLocked = hiddenForStudents || locked;
     const tooltipId = _.uniqueId();
