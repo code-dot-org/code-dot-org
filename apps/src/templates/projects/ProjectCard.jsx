@@ -283,5 +283,6 @@ const ProjectCard = createReactClass({
     }
   }
 });
+ProjectCard.displayName = 'ProjectCard';
 
 export default ProjectCard;
