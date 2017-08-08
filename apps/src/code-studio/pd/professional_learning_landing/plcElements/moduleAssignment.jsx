@@ -62,5 +62,5 @@ const ModuleAssignment = createReactClass({
     );
   }
 });
-
+ModuleAssignment.displayName = 'ModuleAssignment';
 export default ModuleAssignment;
