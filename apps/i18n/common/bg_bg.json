@@ -646,5 +646,13 @@
   "whichCourse": "Don't know which course to teach? Find a course from the courses page to assign a course to your section later.",
   "withoutHints": "Без да се използват съвети!",
   "workspaceHeaderShort": "Работна област: ",
-  "yes": "Да"
+  "yes": "Да",
+  "projectTypeStarwarsBlocks": "Star Wars (Blocks)",
+  "projectTypeFlappy": "Flappy",
+  "projectTypeSports": "Sports",
+  "projectTypeBasketball": "Basketball",
+  "projectTypeBounce": "Bounce",
+  "projectTypeInfinity": "Infinity",
+  "projectTypeIceage": "Ice Age",
+  "projectTypeGumball": "The Amazing World of Gumball"
 }

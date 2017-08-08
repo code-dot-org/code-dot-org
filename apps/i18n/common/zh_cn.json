@@ -646,5 +646,13 @@
   "whichCourse": "不知道要教什么课程？在课程页面找到课程，稍后指派给您的小组。",
   "withoutHints": "没使用任何提示！",
   "workspaceHeaderShort": "工作区域",
-  "yes": "是"
+  "yes": "是",
+  "projectTypeStarwarsBlocks": "Star Wars (Blocks)",
+  "projectTypeFlappy": "Flappy",
+  "projectTypeSports": "Sports",
+  "projectTypeBasketball": "Basketball",
+  "projectTypeBounce": "Bounce",
+  "projectTypeInfinity": "Infinity",
+  "projectTypeIceage": "Ice Age",
+  "projectTypeGumball": "The Amazing World of Gumball"
 }

@@ -646,5 +646,13 @@
   "whichCourse": "Hangi kursu öğreteceğini bilmiyor musun? Kendi bölümüne bir kurs tayin etmek için kurslar sayfasından bir kurs bul.",
   "withoutHints": "Herhangi bir ipucu kullanmadan!",
   "workspaceHeaderShort": "Çalışma alanı: ",
-  "yes": "Evet"
+  "yes": "Evet",
+  "projectTypeStarwarsBlocks": "Star Wars (Blocks)",
+  "projectTypeFlappy": "Flappy",
+  "projectTypeSports": "Sports",
+  "projectTypeBasketball": "Basketball",
+  "projectTypeBounce": "Bounce",
+  "projectTypeInfinity": "Infinity",
+  "projectTypeIceage": "Ice Age",
+  "projectTypeGumball": "The Amazing World of Gumball"
 }
