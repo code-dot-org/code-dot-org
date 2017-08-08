@@ -200,14 +200,14 @@
   just_did_course2: " দেখ আমি কেবল কোর্স ২ শেষ করছে! @codeorg"
   just_did_course3: " দেখ আমি কেবল কোর্স ৩ শেষ করছে! @codeorg"
   just_did_course4: " দেখ আমি কেবল কোর্স ৪ শেষ করছে! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: " দেখ আমি কেবল অ্যাক্সিলারেটেড  কোর্স শেষ করছে! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "এ পর্যন্ত <b># LINES OF CODE</b> এরও বেশি লাইন কোড লেখা হয়েছে।"
   lines_of_code_alt: "<b>#</b> লাইন এরও বেশি কোড ছাত্রদের দ্বারা"
   who_has_done_hoc: 'কারা @codeorg #HourOfCode করেছেন?'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Hour of Code শীর্ষ স্থান তালিকা"
   students_and_lines: "%{students} ছাত্র Hour of Code করেছে এবং %{lines} লাইন কোড এরা লেখেছে।"
   start_hoc: "Hour of Code শুরু করুন"
@@ -1401,3 +1402,7 @@
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "হ্যালো %{username}"
+  user_header_settings: "আমার একাউন্ট"
+  user_header_logout: "সাইন আউট"
+  user_header_signin: "সাইন ইন করুন"
