@@ -288,6 +288,10 @@ export function throwOnConsoleErrorsEverywhere() {
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (throwingOnErrors && !firstError) {
+        // It seems that format(msg) might be causing calls to console.error itself
+        // Unstub so that those dont go through our stubbed console.error
+        console.error.restore();
+
         firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}\n${getStack()}`);
       }
     });
