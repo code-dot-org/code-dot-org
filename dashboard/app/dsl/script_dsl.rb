@@ -113,7 +113,7 @@ class ScriptDSL < BaseDSL
       active = false if !experiments.nil? && active.nil?
 
       levelprops[:active] = active if active == false
-      levelprops[:experiments] = experiments unless experiments.nil?
+      levelprops[:experiments] = experiments if experiments.try(:any?)
       unless levelprops.empty?
         @current_scriptlevel[:properties][:variants] ||= {}
         @current_scriptlevel[:properties][:variants][name] = levelprops

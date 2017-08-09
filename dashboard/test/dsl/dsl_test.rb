@@ -109,7 +109,7 @@ variants
   level 'Level 3b', experiments: ['experiment2'], active: true
 endvariants
 variants
-  level 'Level 4a'
+  level 'Level 4a', active: true, experiments: []
   level 'Level 4b', experiments: ['experiment3', 'experiment4']
 endvariants
 "
