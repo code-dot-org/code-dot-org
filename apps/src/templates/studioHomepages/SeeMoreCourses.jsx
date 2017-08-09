@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import CourseCard from './CourseCard';
 import ContentContainer from '../ContentContainer';
@@ -49,7 +50,6 @@ const SeeMoreCourses = React.createClass({
                   title={course.title}
                   description={course.description}
                   link={course.link}
-                  isRtl={isRtl}
                 />
                 {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
               </div>
@@ -70,4 +70,7 @@ const SeeMoreCourses = React.createClass({
   }
 });
 
-export default SeeMoreCourses;
+export const UnconnectedSeeMoreCourses = SeeMoreCourses;
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(SeeMoreCourses);

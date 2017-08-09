@@ -27,7 +27,7 @@ const RecentCourses = React.createClass({
   },
 
   render() {
-    const { courses, isTeacher, isRtl, studentTopCourse } = this.props;
+    const { courses, isTeacher, studentTopCourse } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || studentTopCourse;
@@ -60,7 +60,6 @@ const RecentCourses = React.createClass({
           {moreCourses.length > 0 && (
             <SeeMoreCourses
               courses={moreCourses}
-              isRtl={isRtl}
             />
           )}
           {hasCourse && (
@@ -77,7 +76,6 @@ const RecentCourses = React.createClass({
           )}
           {!hasCourse && (
             <SetUpCourses
-              isRtl={isRtl}
               isTeacher={isTeacher}
             />
           )}
