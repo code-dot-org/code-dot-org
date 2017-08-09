@@ -110,9 +110,7 @@ Scenario:
   When I open my eyes to test "star wars RTL"
   Given I am on "http://studio.code.org/s/starwars/stage/1/puzzle/15/lang/ar-sa?noautoplay=true"
   And I rotate to landscape
-  And I wait to see "#runButton"
-  And I press "x-close"
-  And I close the instructions overlay if it exists
+  And I wait for the page to fully load
   And I see no difference for "star wars RTL"
   And I press "show-code-header"
   And I see no difference for "star wars RTL text mode"
