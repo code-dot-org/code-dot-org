@@ -61,7 +61,7 @@ Scenario: Signed out courses, non-english
   When I open my eyes to test "signed out courses, non-english"
   Given I am on "http://studio.code.org/home/lang/es"
   Then I wait until I am on "http://studio.code.org/users/sign_in"
-  And I wait to see "#headerlinks"
+  And I wait to see ".headerlinks"
   And I see "#header-non-en-courses"
   And I click selector "#header-non-en-courses"
   Then I am on "http://studio.code.org/courses"
