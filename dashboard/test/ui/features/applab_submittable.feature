@@ -7,7 +7,6 @@ Background:
   Then I rotate to landscape
   And I wait to see "#runButton"
 
-@as_taught_student
 Scenario: Submit anything, unsubmit, be able to resubmit.
   # First, submit something.
   When I press "runButton"
