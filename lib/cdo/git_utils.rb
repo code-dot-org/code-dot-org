@@ -58,7 +58,7 @@ module GitUtils
     `git rev-parse HEAD`.strip
   end
 
-  def self.git_revision_branch(branch)
+  def self.git_revision_branch(branch
     `git rev-parse #{branch}`.strip
   end
 
