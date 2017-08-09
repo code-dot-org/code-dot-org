@@ -285,6 +285,7 @@ export function throwOnConsoleErrorsEverywhere() {
         // It seems that format(msg) might be causing calls to console.error itself
         // Unstub so that those dont go through our stubbed console.error
         console.error.restore();
+        console.log('apps change to make sure we actually do an apps build/test');
 
         firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}\n${getStack()}`);
       }
