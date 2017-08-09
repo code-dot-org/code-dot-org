@@ -10,25 +10,9 @@ Scenario: Save Artist Project
   Then I open the topmost blockly category "Brushes"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
 
-  # publish and unpublish the project from the share dialog
-
-  Then I open the project share dialog
-  And the project is unpublished
-  And I publish the project from the share dialog
+  # cannot publish because not signed in
   And I open the project share dialog
-  And the project is published
-
-  Then I reload the project page
-  And I open the project share dialog
-  And the project is published
-
-  Then I unpublish the project from the share dialog
-  And I open the project share dialog
-  And the project is unpublished
-
-  Then I reload the project page
-  And I open the project share dialog
-  And the project is unpublished
+  And the project cannot be published
 
   And I navigate to the share URL
   And I wait until element "#visualization" is visible
@@ -236,6 +220,7 @@ Scenario: Starwars Flow
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
   And I press "runButton"
 
+  # the starwars app type is not publishable
   And I open the project share dialog
   And the project cannot be published
 
