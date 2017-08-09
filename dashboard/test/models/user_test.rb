@@ -1621,6 +1621,7 @@ class UserTest < ActiveSupport::TestCase
     User.stubs(:should_log?).returns(true)
     teacher = create :teacher
 
+    teacher = create :teacher
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1646,11 +1647,12 @@ class UserTest < ActiveSupport::TestCase
       ).
       returns(true)
 
-    @teacher.admin = true
-    @teacher.save
+    teacher.admin = true
+    teacher.save
   end
 
   test 'revoke admin permission logs to infrasecurity' do
+    admin_user = create :admin
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1675,8 +1677,8 @@ class UserTest < ActiveSupport::TestCase
       ).
       returns(true)
 
-    @admin.admin = nil
-    @admin.save
+    admin_user.admin = nil
+    admin_user.save
   end
 
   test 'assign_course_as_facilitator assigns course to facilitator' do
