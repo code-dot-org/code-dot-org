@@ -1,7 +1,7 @@
 import { assert } from '../../../util/configuredChai';
 import React from 'react';
 import { shallow } from 'enzyme';
-import NewProgressBubble from '@cdo/apps/templates/progress/NewProgressBubble';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import color from "@cdo/apps/util/color";
 import { LevelStatus, LevelKind } from '@cdo/apps/util/sharedConstants';
 
@@ -16,10 +16,10 @@ const defaultProps = {
   disabled: false
 };
 
-describe('NewProgressBubble', () => {
+describe('ProgressBubble', () => {
   it('renders an anchor tag when we have a url', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
       />
     );
@@ -29,7 +29,7 @@ describe('NewProgressBubble', () => {
 
   it('does not render an anchor tag when we have no url', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -43,7 +43,7 @@ describe('NewProgressBubble', () => {
 
   it('does not render an anchor tag if we are disabled', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         disabled={true}
       />
@@ -54,7 +54,7 @@ describe('NewProgressBubble', () => {
 
   it('has a green background when we have perfect status', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
       />
     );
@@ -65,7 +65,7 @@ describe('NewProgressBubble', () => {
 
   it('has a white background when we are disabled', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         disabled={true}
       />
@@ -77,7 +77,7 @@ describe('NewProgressBubble', () => {
 
   it('has green border and white background for in progress level', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -92,7 +92,7 @@ describe('NewProgressBubble', () => {
 
   it('has a green border and light green background for too many blocks level', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -107,7 +107,7 @@ describe('NewProgressBubble', () => {
 
   it('has a purple background for submitted level', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -124,7 +124,7 @@ describe('NewProgressBubble', () => {
 
   it('has a red background for review_rejected', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -141,7 +141,7 @@ describe('NewProgressBubble', () => {
 
   it('has a green background for review_accepted', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -158,7 +158,7 @@ describe('NewProgressBubble', () => {
 
   it('renders a diamond for concept levels', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -172,7 +172,7 @@ describe('NewProgressBubble', () => {
 
   it('uses name when specified', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
       />
     );
@@ -181,7 +181,7 @@ describe('NewProgressBubble', () => {
 
   it('uses progression name when no name is specified', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={{
           ...defaultProps.level,
@@ -194,7 +194,7 @@ describe('NewProgressBubble', () => {
 
   it('renders a small bubble if smallBubble is true', () => {
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         smallBubble={true}
       />
@@ -211,7 +211,7 @@ describe('NewProgressBubble', () => {
       isUnplugged: true
     };
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={unpluggedLevel}
         smallBubble={false}
@@ -229,7 +229,7 @@ describe('NewProgressBubble', () => {
       isUnplugged: true
     };
     const wrapper = shallow(
-      <NewProgressBubble
+      <ProgressBubble
         {...defaultProps}
         level={unpluggedLevel}
         smallBubble={true}
