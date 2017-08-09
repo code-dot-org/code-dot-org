@@ -30,11 +30,6 @@ const ScriptOverview = React.createClass({
     currentCourseId: PropTypes.number,
   },
 
-  componentDidMount() {
-    // get rid of existing legend
-    $(".user-stats-block .key").hide();
-  },
-
   render() {
     const {
       professionalLearningCourse,
