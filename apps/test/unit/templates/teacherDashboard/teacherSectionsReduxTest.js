@@ -25,7 +25,15 @@ import reducer, {
   sectionFromServerSection,
   isAddingSection,
   isEditingSection,
+  loadClassroomList,
+  setClassroomList,
+  importClassroomStarted,
+  failedLoad,
+  openRosterDialog,
+  closeRosterDialog,
+  isRosterDialogOpen,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const sections = [
   {
@@ -147,6 +155,17 @@ const validCourses = [
 
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
+  let store;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections: reducer});
+    store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
 
   describe('setStudioUrl', () => {
     it('sets our url', () => {
@@ -582,7 +601,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('finishEditingSection', () => {
-    let server, store;
+    let server;
 
     // Fake server responses to reuse in our tests
     const newSectionDefaults = {
@@ -625,14 +644,10 @@ describe('teacherSectionsRedux', () => {
 
       // Test with a real redux store, not just the reducer, because this
       // action depends on the redux-thunk extension.
-      stubRedux();
-      registerReducers({teacherSections: reducer});
-      store = getStore();
       store.dispatch(setSections(sections));
     });
 
     afterEach(function () {
-      restoreRedux();
       server.restore();
     });
 
@@ -774,7 +789,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('asyncLoadSectionData', () => {
-    let server, store;
+    let server;
 
     function successResponse(response = []) {
       return [
@@ -793,16 +808,9 @@ describe('teacherSectionsRedux', () => {
     beforeEach(function () {
       // Stub server responses
       server = sinon.fakeServer.create();
-
-      // Test with a real redux store, not just the reducer, because this
-      // action depends on the redux-thunk extension.
-      stubRedux();
-      registerReducers({teacherSections: reducer});
-      store = getStore();
     });
 
     afterEach(function () {
-      restoreRedux();
       server.restore();
     });
 
@@ -1010,6 +1018,135 @@ describe('teacherSectionsRedux', () => {
       const initialState = reducer(initialState, beginEditingNewSection());
       const state = reducer(initialState, cancelEditingSection());
       assert.isFalse(isEditingSection(state));
+    });
+  });
+
+  describe('the loadClassroomList action', () => {
+    let server;
+    beforeEach(() => server = sinon.fakeServer.create());
+    afterEach(() => server.restore());
+
+    function successResponse(body = {}) {
+      return [
+        200,
+        {"Content-Type": "application/json"},
+        JSON.stringify(body)
+      ];
+    }
+
+    const failureResponse = [500, {}, 'test-failure-body'];
+
+    it('requests one api for Google Classroom', () => {
+      store.dispatch(loadClassroomList(OAuthSectionTypes.google_classroom));
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url).to.equal('/dashboardapi/google_classrooms');
+      server.respond();
+    });
+
+    it('requests a different api for Clever', () => {
+      store.dispatch(loadClassroomList(OAuthSectionTypes.clever));
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url).to.equal('/dashboardapi/clever_classrooms');
+      server.respond();
+    });
+
+    it('sets the classroom list on success', () => {
+      server.respondWith(
+        'GET', '/dashboardapi/google_classrooms',
+        successResponse({courses: [1, 2, 3]})
+      );
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(store.getState().teacherSections.loadError).to.be.null;
+
+      store.dispatch(loadClassroomList(OAuthSectionTypes.google_classroom));
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(store.getState().teacherSections.loadError).to.be.null;
+
+      server.respond();
+      expect(store.getState().teacherSections.classrooms).to.deep.equal(
+        [1, 2, 3]
+      );
+      expect(store.getState().teacherSections.loadError).to.be.null;
+    });
+
+    it('sets the loadError on failure', () => {
+      server.respondWith(
+        'GET', '/dashboardapi/google_classrooms',
+        failureResponse
+      );
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(store.getState().teacherSections.loadError).to.be.null;
+
+      store.dispatch(loadClassroomList(OAuthSectionTypes.google_classroom));
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(store.getState().teacherSections.loadError).to.be.null;
+
+      server.respond();
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(store.getState().teacherSections.loadError).to.deep.equal({
+        status: 500,
+        message: 'Unknown error.',
+      });
+    });
+  });
+
+  describe('the setClassroomList action', () => {
+    it('sets the classroom list', () => {
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+      store.dispatch(setClassroomList([1, 2, 3]));
+      expect(store.getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+    });
+  });
+
+  describe('the importClassroomStarted action', () => {
+    it('clears the classroom list', () => {
+      store.dispatch(setClassroomList([1, 2, 3]));
+      expect(store.getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+      store.dispatch(importClassroomStarted());
+      expect(store.getState().teacherSections.classrooms).to.be.null;
+    });
+  });
+
+  describe('the failedLoad action', () => {
+    it('sets the loadError property', () => {
+      expect(store.getState().teacherSections.loadError).to.be.null;
+      store.dispatch(failedLoad('test-status', 'test-message'));
+      expect(store.getState().teacherSections.loadError).to.deep.equal({
+        status: 'test-status',
+        message: 'test-message',
+      });
+    });
+  });
+
+  describe('the openRosterDialog action', () => {
+    it('opens the dialog if it was closed', () => {
+      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      store.dispatch(openRosterDialog());
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+    });
+
+    it('does nothing if the dialog was open', () => {
+      store.dispatch(openRosterDialog());
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      store.dispatch(openRosterDialog());
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+    });
+  });
+
+  describe('the closeRosterDialog action', () => {
+    it('closes the dialog if it was open', () => {
+      store.dispatch(openRosterDialog());
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      store.dispatch(closeRosterDialog());
+      expect(isRosterDialogOpen(store.getState())).to.be.false;
+    });
+
+    it('does nothing if the dialog was closed', () => {
+      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      store.dispatch(closeRosterDialog());
+      expect(isRosterDialogOpen(store.getState())).to.be.false;
     });
   });
 });

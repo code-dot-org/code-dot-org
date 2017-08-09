@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
+import { OAuthSectionTypes } from './shapes';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -19,6 +20,15 @@ export const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 export const PENDING_NEW_SECTION_ID = -1;
 
+/** @const {Object} Map oauth section type to relative import URL. */
+const urlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
+  [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+};
+
+//
+// Action keys
+//
 const SET_STUDIO_URL = 'teacherDashboard/SET_STUDIO_URL';
 const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
@@ -44,6 +54,15 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
+const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
+const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
+const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
+const ROSTER_DIALOG_OPEN = 'oauthClassroom/ROSTER_DIALOG_OPEN';
+const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
+
+//
+// Action Creators
+//
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
@@ -146,6 +165,32 @@ function fetchJSON(url) {
   });
 }
 
+export const loadClassroomList = provider => {
+  const url = urlByProvider[provider];
+
+  return dispatch => {
+    $.ajax(url)
+      .success(response => dispatch(setClassroomList(response.courses || [])))
+      .fail(result => {
+        const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
+        dispatch(failedLoad(result.status, message));
+      });
+  };
+};
+
+export const setClassroomList = classrooms => ({ type: SET_CLASSROOM_LIST, classrooms });
+
+export const importClassroomStarted = () => ({ type: IMPORT_CLASSROOM_STARTED });
+
+export const failedLoad = (status, message) => ({ type: FAILED_LOAD, status, message });
+
+export const openRosterDialog = () => ({type: ROSTER_DIALOG_OPEN});
+export const closeRosterDialog = () => ({type: ROSTER_DIALOG_CLOSE});
+
+/**
+ * Initial state of this redux module.
+ * Should represent the overall state shape with reasonable default values.
+ */
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
@@ -166,6 +211,13 @@ const initialState = {
   saveInProgress: false,
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
+  // Whether the roster dialog (used to import sections from google/clever) is open.
+  isRosterDialogOpen: false,
+  // Set of oauth classrooms available for import from a third-party source.
+  // Not populated until the RosterDialog is opened.
+  classrooms: null,
+  // Error that occurred while loading oauth classrooms
+  loadError: null,
 };
 
 /**
@@ -430,12 +482,56 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === SET_CLASSROOM_LIST) {
+    return {
+      ...state,
+      classrooms: action.classrooms.slice(),
+    };
+  }
+
+  if (action.type === IMPORT_CLASSROOM_STARTED) {
+    return {
+      ...state,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === FAILED_LOAD) {
+    return {
+      ...state,
+      loadError: {
+        status: action.status,
+        message: action.message,
+      }
+    };
+  }
+
+  if (action.type === ROSTER_DIALOG_OPEN) {
+    return {
+      ...state,
+      isRosterDialogOpen: true,
+    };
+  } else if (action.type === ROSTER_DIALOG_CLOSE) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+    };
+  }
+
   return state;
 }
 
 // Helpers and Selectors
 
 export const assignmentId = (courseId, scriptId) => `${courseId}_${scriptId}`;
+
+function getRoot(state) {
+  return state.teacherSections; // Global knowledge eww.
+}
+
+export function isRosterDialogOpen(state) {
+  return getRoot(state).isRosterDialogOpen;
+}
 
 /**
  * Maps from the data we get back from the server for a section, to the format

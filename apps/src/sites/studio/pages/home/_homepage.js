@@ -9,7 +9,6 @@ import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 import teacherSections, {
   setValidGrades,
   setOAuthProvider
@@ -27,7 +26,7 @@ function showHomepage() {
   const showInitialTips = !homepageData.initialtipsdismissed;
   const query = queryString.parse(window.location.search);
 
-  registerReducers({teacherSections, oauthClassroom});
+  registerReducers({teacherSections});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));

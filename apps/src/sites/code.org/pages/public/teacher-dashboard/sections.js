@@ -11,7 +11,6 @@ import teacherSections, {
   setOAuthProvider,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
 /**
@@ -25,7 +24,7 @@ import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
  */
 export function renderSectionsPage(data) {
   const element = document.getElementById('sections-page');
-  registerReducers({teacherSections, oauthClassroom});
+  registerReducers({teacherSections});
   const store = getStore();
 
   store.dispatch(setStudioUrl(data.studiourlprefix));
