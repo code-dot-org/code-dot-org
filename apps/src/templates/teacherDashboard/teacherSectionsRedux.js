@@ -56,9 +56,9 @@ const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 export const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 export const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
+const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
 const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
-const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
 const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
 
 //
@@ -195,7 +195,7 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
       .fail(result => {
         const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
         dispatch({
-          type: FAILED_LOAD,
+          type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
           status: result.status,
           message
         });
@@ -520,7 +520,7 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === FAILED_LOAD) {
+  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED) {
     return {
       ...state,
       loadError: {
