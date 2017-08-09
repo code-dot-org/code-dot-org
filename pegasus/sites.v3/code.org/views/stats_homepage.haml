@@ -9,13 +9,13 @@
 
 - statistics = { female_students => "of our students are female", teacher_users => "teachers use Code.org", world_students_hoc_percent => "of the world's students have tried the Hour of Code", states_policy_change => "states changed policy to support computer science" }
 
-.mobile-feature{:style=> 'background:#00adbc; color: #ffffff; padding:10px; font-size: 16px; border-radius:5px;  text-align:center; margin: 20px;'} WE'RE MAKING A DIFFERENCE
+.mobile-feature.make-difference WE'RE MAKING A DIFFERENCE
 
-.col-20{:style=>'padding-top: 50px; padding-bottom: 20px; padding-right: 20px; padding-left: 20px;'}
-  .jumbo{:style=>'font-weight:900; text-align:center;'}= "#{top_statistic_number}"
-  %div{:style=>'font-size: 14px; text-align:center; padding-top:20px;'}= "#{top_statistic_phrase}"
+.col-20.stats-box
+  .jumbo.stats-number= "#{top_statistic_number}"
+  .stats-phrase= "#{top_statistic_phrase}"
 
 -statistics.each do |number, phrase|
-  .col-20.col-mobile-48{:style=>'padding-top: 50px; padding-bottom: 20px; padding-right: 20px; padding-left: 20px;'}
-    .jumbo{:style=>'font-weight:900; text-align:center;'}= "#{number}"
-    %div{:style=>'font-size: 14px; text-align:center; padding-top:20px;'}= "#{phrase}"
+  .col-20.col-mobile-48.stats-box
+    .jumbo.stats-number= "#{number}"
+    .stats-phrase= "#{phrase}"
