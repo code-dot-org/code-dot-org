@@ -1618,6 +1618,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'grant admin permission logs to infrasecurity' do
     teacher = create :teacher
+
+    teacher.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1625,7 +1627,7 @@ class UserTest < ActiveSupport::TestCase
         "user ID: #{teacher.id}, "\
         "email: #{teacher.email}, "\
         "permission: ADMIN",
-        color: 'red'
+        color: 'yellow'
       ).
       returns(true)
 
@@ -1635,6 +1637,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'revoke admin permission logs to infrasecurity' do
     admin_user = create :admin
+
+    admin_user.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1642,7 +1646,7 @@ class UserTest < ActiveSupport::TestCase
         "user ID: #{admin_user.id}, "\
         "email: #{admin_user.email}, "\
         "permission: ADMIN",
-        color: 'red'
+        color: 'yellow'
       ).
       returns(true)
 

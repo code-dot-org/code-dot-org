@@ -248,8 +248,8 @@ class User < ActiveRecord::Base
   end
 
   def log_admin_save
-    # Do not log for development or adhoc environments.
-    return unless [:test, :staging, :levelbuilder, :production].include? rack_env
+    # Do not log for development, test, and adhoc environments.
+    return unless should_log?
 
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
@@ -257,7 +257,12 @@ class User < ActiveRecord::Base
       "user ID: #{id}, "\
       "email: #{email}, "\
       "permission: ADMIN",
-      color: 'red'
+      color: 'yellow'
+  end
+
+  # don't log changes to admin permission in development, test, and ad_hoc environments
+  def should_log?
+    return [:staging, :levelbuilder, :production].include? rack_env
   end
 
   def delete_permission(permission)
