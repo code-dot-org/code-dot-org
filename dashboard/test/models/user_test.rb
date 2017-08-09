@@ -1622,6 +1622,8 @@ class UserTest < ActiveSupport::TestCase
     teacher = create :teacher
 
     teacher = create :teacher
+
+    teacher.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1653,6 +1655,8 @@ class UserTest < ActiveSupport::TestCase
 
   test 'revoke admin permission logs to infrasecurity' do
     admin_user = create :admin
+
+    admin_user.stubs(:should_log?).returns(true)
     ChatClient.
       expects(:message).
       with('infra-security',
