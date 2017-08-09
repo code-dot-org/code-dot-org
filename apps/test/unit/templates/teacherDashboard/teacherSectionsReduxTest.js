@@ -30,8 +30,6 @@ import reducer, {
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importRoster,
-  importClassroomStarted,
-  closeRosterDialog,
   isRosterDialogOpen,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
@@ -1283,30 +1281,6 @@ describe('teacherSectionsRedux', () => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
       });
-    });
-  });
-
-  describe('the importClassroomStarted action', () => {
-    it('clears the classroom list', () => {
-      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
-      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
-      store.dispatch(importClassroomStarted());
-      expect(getState().teacherSections.classrooms).to.be.null;
-    });
-  });
-
-  describe('the closeRosterDialog action', () => {
-    it('closes the dialog if it was open', () => {
-      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
-      expect(isRosterDialogOpen(getState())).to.be.true;
-      store.dispatch(closeRosterDialog());
-      expect(isRosterDialogOpen(getState())).to.be.false;
-    });
-
-    it('does nothing if the dialog was closed', () => {
-      expect(isRosterDialogOpen(getState())).to.be.false;
-      store.dispatch(closeRosterDialog());
-      expect(isRosterDialogOpen(getState())).to.be.false;
     });
   });
 });
