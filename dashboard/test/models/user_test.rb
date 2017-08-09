@@ -2026,6 +2026,7 @@ class UserTest < ActiveSupport::TestCase
     assert_nil user.last_sign_in_ip
     assert_equal '', user.email
     assert_equal '', user.hashed_email
+    assert_nil user.parent_email
     assert_nil user.encrypted_password
     assert_nil user.uid
     assert_nil user.reset_password_token
