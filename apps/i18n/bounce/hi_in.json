@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "जब गेंद दीवार सेे टकराये तब नीचे दिये गएे कार्यों का संचालन करे।",
   "whileMsg": "जबकि",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "हाँ"
+  "yes": "हाँ",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Execute as accións abaixo cando o paxariño acade un obstáculo.",
   "whenRunButtonClick": "Cando o xogo comece",
   "whenRunButtonClickTooltip": "Execute as accións abaixo cando o xogo comece.",
-  "yes": "Si"
+  "yes": "Si",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

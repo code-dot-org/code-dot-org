@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "當像素鳥進入障礙物時，執行以下操作。",
   "whenRunButtonClick": "當遊戲開始時",
   "whenRunButtonClickTooltip": "當遊戲開始時，執行以下動作。",
-  "yes": "確定"
+  "yes": "確定",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

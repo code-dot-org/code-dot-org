@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "當球碰到牆時，執行下面的操作。",
   "whileMsg": "當",
   "whileTooltip": "重複執行區塊內包含的操作，直到完成為止。",
-  "yes": "是"
+  "yes": "是",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

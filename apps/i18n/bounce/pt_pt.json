@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Executar as seguintes ações quando a bola bater na parede.",
   "whileMsg": "enquanto",
   "whileTooltip": "Repete as ações seguintes até a condição de terminação ser alcançada.",
-  "yes": "Sim"
+  "yes": "Sim",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }
