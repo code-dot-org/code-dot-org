@@ -1111,7 +1111,7 @@ describe('teacherSectionsRedux', () => {
         [1, 2, 3]
       );
       expect(getState().teacherSections.loadError).to.be.null;
-      expect(promise).to.be.fulfilled;
+      return expect(promise).to.be.fulfilled;
     });
 
     it('sets the loadError on failure', () => {
@@ -1133,7 +1133,7 @@ describe('teacherSectionsRedux', () => {
         status: 500,
         message: 'Unknown error.',
       });
-      expect(promise).to.be.fulfilled;
+      return expect(promise).to.be.rejected;
     });
   });
 

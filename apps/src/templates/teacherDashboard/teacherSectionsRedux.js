@@ -74,8 +74,6 @@ const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 /** Reports request to import a roster has failed */
 const IMPORT_ROSTER_FAILURE = 'teacherSections/IMPORT_ROSTER_FAILURE';
-const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
-const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
 
 //
 // Action Creators
@@ -233,16 +231,15 @@ export const importRoster = courseId => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
 
-  dispatch({type: IMPORT_CLASSROOM_STARTED});
   dispatch({type: IMPORT_ROSTER_REQUEST});
   return new Promise((resolve, reject) => {
     const url = importUrlByProvider[provider];
     $.getJSON(url, { courseId }).done(importedSection => {
       dispatch({type: IMPORT_ROSTER_SUCCESS});
-      dispatch({type: ROSTER_DIALOG_CLOSE});
       dispatch(asyncLoadSectionData())
         .then(() => dispatch(beginEditingSection(importedSection.id)))
-        .then(resolve);
+        .then(resolve)
+        .catch(reject);
     }).fail(err => {
       dispatch({type: IMPORT_ROSTER_FAILURE});
       reject(err);
@@ -552,7 +549,7 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === IMPORT_CLASSROOM_STARTED) {
+  if (action.type === IMPORT_ROSTER_REQUEST) {
     return {
       ...state,
       classrooms: null,
@@ -569,7 +566,7 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === ROSTER_DIALOG_CLOSE) {
+  if (action.type === IMPORT_ROSTER_SUCCESS) {
     return {
       ...state,
       isRosterDialogOpen: false,
