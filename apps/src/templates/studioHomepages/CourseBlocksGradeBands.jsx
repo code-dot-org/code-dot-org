@@ -15,39 +15,27 @@ const styles = {
   }
 };
 
-class CourseBlocksGradeBands extends Component {
+class CourseBlocksTeacherGradeBands extends Component {
   static propTypes = {
-    isEnglish: PropTypes.bool.isRequired,
+    cards: React.PropTypes.arrayOf(
+      React.PropTypes.shape({
+        heading: React.PropTypes.string.isRequired,
+        description: React.PropTypes.string.isRequired,
+        path: React.PropTypes.string.isRequired
+      })
+    ).isRequired,
     isRtl: PropTypes.bool.isRequired
   };
 
   render() {
-    const cards = [
-      {
-        heading: i18n.courseBlocksGradeBandsK5(),
-        description: i18n.courseBlocksGradeBandsK5Description(),
-        path: '/student/elementary'
-      },
-      {
-        heading: i18n.courseBlocksGradeBands612(),
-        description: i18n.courseBlocksGradeBands612Description(),
-        path: '/student/middle-high'
-      },
-      {
-        heading: i18n.courseBlocksGradeBandsUniversity(),
-        description: i18n.courseBlocksGradeBandsUniversityDescription(),
-        path: '/student/university'
-      }
-    ];
-
     return (
       <ContentContainer
-        heading={i18n.courseBlocksGradeBandsHeading()}
-        description={i18n.courseBlocksGradeBandsDescription()}
+        heading={i18n.courseBlocksGradeBandsContainerHeading()}
+        description={i18n.courseBlocksGradeBandsContainerDescription()}
         isRtl={this.props.isRtl}
       >
         <div style={styles.container}>
-          {cards.slice(0, 3).map(
+          {this.props.cards.slice(0, 3).map(
             (card, cardIndex) => (
               <ResourceCard
                 key={cardIndex}
@@ -66,4 +54,4 @@ class CourseBlocksGradeBands extends Component {
   }
 }
 
-export default CourseBlocksGradeBands;
+export default CourseBlocksTeacherGradeBands;
