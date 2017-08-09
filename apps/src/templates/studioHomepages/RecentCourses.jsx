@@ -36,11 +36,9 @@ const RecentCourses = React.createClass({
       <div>
         <ContentContainer
           heading={i18n.myCourses()}
-          isRtl={isRtl}
         >
           {!isTeacher && studentTopCourse && (
             <StudentTopCourse
-              isRtl={isRtl}
               assignableName={studentTopCourse.assignableName}
               lessonName={studentTopCourse.lessonName}
               linkToOverview={studentTopCourse.linkToOverview}

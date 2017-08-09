@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
@@ -111,4 +112,8 @@ const StudentTopCourse = React.createClass({
   }
 });
 
-export default StudentTopCourse;
+export const UnconnectedStudentTopCourse = StudentTopCourse;
+
+export default connect(state => ({
+  isRtl: state.isRtl
+}))(StudentTopCourse);

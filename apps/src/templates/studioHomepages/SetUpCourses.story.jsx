@@ -1,5 +1,5 @@
 import React from 'react';
-import SetUpCourses from './SetUpCourses';
+import {UnconnectedSetUpCourses as SetUpCourses} from './SetUpCourses';
 
 export default storybook => storybook
   .storiesOf('SetUpCourses', module)
