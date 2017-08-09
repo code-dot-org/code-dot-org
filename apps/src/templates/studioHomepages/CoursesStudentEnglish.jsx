@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import ContentContainer from '../ContentContainer';
 import FindLocalClassBanner from './FindLocalClassBanner';
 import {CourseBlocksHoc} from './CourseBlocks';
-import CourseBlocksGradeBands from './CourseBlocksGradeBands';
+import CourseBlocksStudentGradeBands from './CourseBlocksStudentGradeBands';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -20,10 +20,7 @@ class CoursesStudentEnglish extends Component {
 
     return (
       <div>
-        <CourseBlocksGradeBands
-          isEnglish={true}
-          isRtl={isRtl}
-        />
+        <CourseBlocksStudentGradeBands isRtl={isRtl}/>
 
         <ContentContainer
           heading={i18n.teacherCourseHoc()}

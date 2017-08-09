@@ -5,7 +5,7 @@ import ContentContainer from '../ContentContainer';
 import UiTips from '@cdo/apps/templates/studioHomepages/UiTips';
 import { CourseBlocksHoc } from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
-import CourseBlocksGradeBands from './CourseBlocksGradeBands';
+import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -59,10 +59,7 @@ class CoursesTeacherEnglish extends Component {
             <ProtectedStatefulDiv ref="courseExplorer"/>
           </ContentContainer>
 
-          <CourseBlocksGradeBands
-            isEnglish={true}
-            isRtl={isRtl}
-          />
+          <CourseBlocksTeacherGradeBands isRtl={isRtl}/>
 
           <ContentContainer
             heading={i18n.teacherCourseHoc()}
