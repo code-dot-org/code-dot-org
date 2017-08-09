@@ -972,6 +972,7 @@ When(/^I sign out$/) do
   steps %Q{
     And I am on "http://studio.code.org/users/sign_out"
     And I wait until current URL contains "http://code.org/"
+    And I wait until element ".header_user:contains(Sign in)" is visible
   }
 end
 
