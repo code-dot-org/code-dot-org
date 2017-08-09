@@ -11,7 +11,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       set_locale_cookie(@user.locale)
     end
 
-    if @user.persisted?
+    if just_authorized_google_classroom(@user, request.env['omniauth.params'])
+      # Redirect to open roster dialog on home page if user just authorized access
+      # to Google Classroom courses and rosters
+      redirect_to '/home?open=rosterDialog'
+    elsif @user.persisted?
       # If email is already taken, persisted? will be false because of a validation failure
       sign_in_user
     elsif allows_silent_takeover(@user)
@@ -30,6 +34,13 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   end
 
   private
+
+  def just_authorized_google_classroom(user, params)
+    scopes = (params['scope'] || '').split(',')
+    user.persisted? &&
+      user.provider == 'google_oauth2' &&
+      scopes.include?('classroom.rosters.readonly')
+  end
 
   def silent_takeover(oauth_user)
     # Copy oauth details to primary account
