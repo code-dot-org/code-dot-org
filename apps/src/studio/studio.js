@@ -58,6 +58,7 @@ import {captureThumbnailFromSvg} from '../util/thumbnail';
 import project from '../code-studio/initApp/project';
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
 import {parseElement} from '../xml';
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
@@ -176,7 +177,7 @@ var RESET_TEXT_Y_POSITION = 380;
 var MIN_TIME_BETWEEN_PROJECTILES = 500; // time in ms
 
 var twitterOptions = {
-  text: studioMsg.shareStudioTwitter(),
+  text: studioMsg.shareStudioTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "StudioCode"
 };
 

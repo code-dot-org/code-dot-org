@@ -251,6 +251,20 @@ export function throwOnConsoleErrors() {
 }
 
 /**
+ * Gets a stack trace for the current location. Phantomjs doesn't add the stack
+ * property unless the exception is thrown, thus we need to throw/catch a generic error.
+ */
+function getStack() {
+  let stack;
+  try {
+    throw new Error();
+  } catch (e) {
+    stack = e.stack;
+  }
+  return stack;
+}
+
+/**
  * This defaults all tests in this scope to throw an exception/fail when there is
  * a call to console.error. It can be overriden by calling allowConsoleErrors.
  * The expectation is that this should generally be called at the top level in
@@ -261,6 +275,12 @@ export function throwOnConsoleErrorsEverywhere() {
   let firstError = null;
   throwingOnErrors = true;
   beforeEach(function () {
+    // Stash test title so that we can include it in any errors
+    let testTitle;
+    if (this.currentTest) {
+      testTitle = this.currentTest.title;
+    }
+
     sinon.stub(console, 'error').callsFake(msg => {
       const prefix = throwingOnErrors ? '' : '[ignoring]';
       console.error.wrappedMethod(prefix, msg);
@@ -268,7 +288,11 @@ export function throwOnConsoleErrorsEverywhere() {
       // Store error so we can throw in after. This will ensure we hit a failure
       // even if message was originally thrown in async code
       if (throwingOnErrors && !firstError) {
-        firstError = new Error('Call to console.error: ' + format(msg));
+        // It seems that format(msg) might be causing calls to console.error itself
+        // Unstub so that those dont go through our stubbed console.error
+        console.error.restore();
+
+        firstError = new Error(`Call to console.error from "${testTitle}": ${format(msg)}\n${getStack()}`);
       }
     });
   });
@@ -277,7 +301,6 @@ export function throwOnConsoleErrorsEverywhere() {
     if (console.error.restore) {
       console.error.restore();
       if (firstError) {
-        //'Unexpected call to console.error.',
         throw new Error(firstError);
       }
       firstError = null;
