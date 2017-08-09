@@ -102,7 +102,7 @@ module DeleteAccountsHelper
   def self.clean_and_destroy_pd_content(user_id)
     PeerReview.where(reviewer_id: user_id).each(&:clear_data)
 
-    PdTeacherApplication.where(user_id: user_id).each(&:destroy)
+    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
@@ -118,7 +118,7 @@ module DeleteAccountsHelper
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
   def self.anonymize_user_sections(user_id)
-    Sections.with_deleted.where(user_id: user_id).each(&:clean_data)
+    Section.with_deleted.where(user_id: user_id).each(&:clean_data)
   end
 
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
@@ -126,18 +126,23 @@ module DeleteAccountsHelper
   # (reporting only).
   # @param [Integer] The user ID to purge from Pardot.
   def self.remove_from_pardot(user_id)
-    pardot_ids = PEGASUS_DB[:contact_rollups].
-      select(:pardot_id).
-      where(dashboard_user_id: user_id).
-      map {|contact_rollup| contact_rollup[:pardot_id]}
-    failed_ids = Pardot.delete_prospects(pardot_ids)
-    if failed_ids.any?
-      raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
+    # Though we have the DB tables in all environments, we only sync data from the production
+    # environment with Pardot.
+    if rack_env == :production
+      pardot_ids = PEGASUS_DB[:contact_rollups].
+        select(:pardot_id).
+        where(dashboard_user_id: user_id).
+        map {|contact_rollup| contact_rollup[:pardot_id]}
+      failed_ids = Pardot.delete_prospects(pardot_ids)
+      if failed_ids.any?
+        raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
+      end
     end
 
     PEGASUS_DB[:contact_rollups].where(dashboard_user_id: user_id).delete
-
-    PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
+    if PEGASUS_REPORTING_DB.exists? :contact_rollups_daily
+      PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
+    end
   end
 
   # Removes the SOLR record associated with the user.
