@@ -29,6 +29,11 @@ Then /^the project is (un)?published/ do |negation|
   expect(element_visible?("#share-dialog-unpublish-button")).to eq(published)
 end
 
+Then /^the project cannot be published$/ do
+  expect(element_visible?("#share-dialog-publish-button")).to eq(false)
+  expect(element_visible?("#share-dialog-unpublish-button")).to eq(false)
+end
+
 Then /^I reload the project page/ do
   steps <<-STEPS
     And I reload the page

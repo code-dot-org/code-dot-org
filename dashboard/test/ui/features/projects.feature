@@ -236,8 +236,8 @@ Scenario: Starwars Flow
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
   And I press "runButton"
 
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+  And I open the project share dialog
+  And the project cannot be published
 
   When I navigate to the share URL
   And I wait to see "#footerDiv"
