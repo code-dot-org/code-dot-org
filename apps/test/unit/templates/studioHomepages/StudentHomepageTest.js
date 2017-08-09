@@ -114,6 +114,22 @@ describe('TeacherHomepage', () => {
     expect(wrapper.find('ProjectWidgetWithData').exists());
   });
 
-//TO DO: Test for the Sections component after Brad's refactor of sections.
-
+  it('shows a StudentSections component', () => {
+    const wrapper = shallow(
+      <StudentHomepage
+        courses={courses}
+        studentTopCourse={studentTopCourse}
+        sections={sections}
+        codeOrgUrlPrefix="http://localhost:3000/"
+        isRtl={false}
+        canLeave={false}
+      />
+    );
+    const studentSections = wrapper.find('StudentSections');
+    assert.deepEqual(studentSections.props(), {
+      initialSections: sections,
+      isRtl: false,
+      canLeave: false
+    });
+  });
 });
