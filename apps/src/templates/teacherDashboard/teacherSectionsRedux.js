@@ -55,8 +55,8 @@ const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 export const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
+export const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
 const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
-export const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
 const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
@@ -187,7 +187,7 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
     $.ajax(urlByProvider[provider])
       .success(response => {
         dispatch({
-          type: SET_CLASSROOM_LIST,
+          type: IMPORT_ROSTER_FLOW_LIST_LOADED,
           classrooms: response.courses || []
         });
         resolve();
@@ -504,7 +504,7 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === SET_CLASSROOM_LIST) {
+  if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
     return {
       ...state,
       classrooms: action.classrooms.slice(),

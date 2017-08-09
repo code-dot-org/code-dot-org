@@ -5,7 +5,7 @@ import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
   IMPORT_ROSTER_FLOW_BEGIN,
-  SET_CLASSROOM_LIST,
+  IMPORT_ROSTER_FLOW_LIST_LOADED,
   setStudioUrl,
   setOAuthProvider,
   setValidLoginTypes,
@@ -1148,7 +1148,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('clears the classroom list', () => {
-      store.dispatch({type: SET_CLASSROOM_LIST, classrooms: [1, 2, 3]});
+      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(cancelImportRosterFlow());
       expect(getState().teacherSections.classrooms).to.be.null;
@@ -1157,7 +1157,7 @@ describe('teacherSectionsRedux', () => {
 
   describe('the importClassroomStarted action', () => {
     it('clears the classroom list', () => {
-      store.dispatch({type: SET_CLASSROOM_LIST, classrooms: [1, 2, 3]});
+      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(importClassroomStarted());
       expect(getState().teacherSections.classrooms).to.be.null;
