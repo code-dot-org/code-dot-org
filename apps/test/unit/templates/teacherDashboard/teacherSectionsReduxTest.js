@@ -4,7 +4,7 @@ import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/red
 import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
-  ROSTER_DIALOG_OPEN,
+  IMPORT_ROSTER_FLOW_BEGIN,
   setStudioUrl,
   setOAuthProvider,
   setValidLoginTypes,
@@ -1057,7 +1057,7 @@ describe('teacherSectionsRedux', () => {
 
     it('does nothing if the roster dialog was already open', () => {
       withGoogle();
-      store.dispatch({type: ROSTER_DIALOG_OPEN});
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(isRosterDialogOpen(getState())).to.be.true;
       const promise = store.dispatch(beginImportRosterFlow());
       expect(isRosterDialogOpen(getState())).to.be.true;
@@ -1168,7 +1168,7 @@ describe('teacherSectionsRedux', () => {
 
   describe('the closeRosterDialog action', () => {
     it('closes the dialog if it was open', () => {
-      store.dispatch({type: ROSTER_DIALOG_OPEN});
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(isRosterDialogOpen(getState())).to.be.true;
       store.dispatch(closeRosterDialog());
       expect(isRosterDialogOpen(getState())).to.be.false;

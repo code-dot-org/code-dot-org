@@ -54,11 +54,10 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
-const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
+export const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
-export const ROSTER_DIALOG_OPEN = 'oauthClassroom/ROSTER_DIALOG_OPEN';
 const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
 
 //
@@ -183,7 +182,6 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
   }
 
   dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
-  dispatch({type: ROSTER_DIALOG_OPEN});
   return new Promise((resolve, reject) => {
     $.ajax(urlByProvider[provider])
       .success(response => {
@@ -525,10 +523,11 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
-  if (action.type === ROSTER_DIALOG_OPEN) {
+  if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
     return {
       ...state,
       isRosterDialogOpen: true,
+      classrooms: null,
     };
   } else if (action.type === ROSTER_DIALOG_CLOSE) {
     return {
