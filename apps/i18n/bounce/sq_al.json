@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Kryej veprimet si më poshtë kur një top të përplaset në mur.",
   "whileMsg": "ndërsa",
   "whileTooltip": "Përsërit veprimet e brendshme derisa të arrihet pika  e mbarimit.",
-  "yes": "Po"
+  "yes": "Po",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

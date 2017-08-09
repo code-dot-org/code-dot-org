@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Izvršava dolje navedene akcije kada Flappy uđe u prepreku.",
   "whenRunButtonClick": "na početku igre",
   "whenRunButtonClickTooltip": "Izvršava dolje navedene radnje kada igra započne.",
-  "yes": "Da"
+  "yes": "Da",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Kia kuhu a Flappy ki tētahi taunahua, whakatutukihia ngā mahi o raro iho nei.",
   "whenRunButtonClick": "ina tīmata te kēmu",
   "whenRunButtonClickTooltip": "Kia tīmata te kēmu, whakatutukihia ngā hohenga kei raro iho nei.",
-  "yes": "Āe"
+  "yes": "Āe",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

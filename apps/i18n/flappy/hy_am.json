@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Կատարել գործողությունները ստորեւ, երբ Flappy մտնում է խոչընդոտ.",
   "whenRunButtonClick": "Երբ խաղը սկսվում է",
   "whenRunButtonClickTooltip": "Կատարել գործողությունները ստորեւ, երբ խաղը սկսվում.",
-  "yes": "այո"
+  "yes": "այո",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

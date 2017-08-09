@@ -329,7 +329,7 @@ def do_dtt_subroutine
       title: 'DTT (Staging > Test)'
     )
     url = GitHub.url(pr_number)
-    print "wait for DTT (#{url}) to complete, re-run / investigate failures then answer following question"
+    puts "Wait for DTT (#{url}) to complete and re-run / investigate failures."
     should_i 'update test room status with green commit and timestamp' do
       new_sha = GitHub.sha 'test'
       InfraTestTopic.set_green_commit new_sha

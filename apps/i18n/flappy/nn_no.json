@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Utfør handlingane nedanfor når Flakse passerar ei hindring.",
   "whenRunButtonClick": "når spelet startar",
   "whenRunButtonClickTooltip": "Utfør handlingane nedanfor når spelet startar.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -204,6 +204,10 @@ class Pd::Workshop < ActiveRecord::Base
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
   end
 
+  def self.facilitated_or_organized_by(user)
+    joins(:facilitators).where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id)
+  end
+
   def self.attended_by(teacher)
     joins(sessions: :attendances).where(pd_attendances: {teacher_id: teacher.id}).distinct
   end
