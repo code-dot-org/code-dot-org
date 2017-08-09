@@ -3,6 +3,7 @@ require_relative '../src/database'
 require_relative 'sequel_test_case'
 require 'minitest/autorun'
 require 'mocha/mini_test'
+require_relative '../forms/hoc_signup_2017'
 
 class FormHelpersTest < SequelTestCase
   describe 'delete_form' do
