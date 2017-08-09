@@ -67,7 +67,7 @@ class ScaryChangeDetector
   end
 
   def detect_dropbox_conflicts
-    changes = @all.grep(/'s conflicted copy/)
+    changes = @added.grep(/'s conflicted copy/)
     unless changes.empty?
       puts red <<-EOS
 
