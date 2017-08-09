@@ -5,6 +5,7 @@ import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
   IMPORT_ROSTER_FLOW_BEGIN,
+  SET_CLASSROOM_LIST,
   setStudioUrl,
   setOAuthProvider,
   setValidLoginTypes,
@@ -27,6 +28,7 @@ import reducer, {
   isAddingSection,
   isEditingSection,
   beginImportRosterFlow,
+  cancelImportRosterFlow,
   setClassroomList,
   importClassroomStarted,
   failedLoad,
@@ -1135,6 +1137,22 @@ describe('teacherSectionsRedux', () => {
         message: 'Unknown error.',
       });
       expect(promise).to.be.fulfilled;
+    });
+  });
+
+  describe('the cancelImportRosterFlow action', () => {
+    it('closes the roster dialog if it was open', () => {
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(isRosterDialogOpen(getState())).to.be.true;
+      store.dispatch(cancelImportRosterFlow());
+      expect(isRosterDialogOpen(getState())).to.be.false;
+    });
+
+    it('clears the classroom list', () => {
+      store.dispatch({type: SET_CLASSROOM_LIST, classrooms: [1, 2, 3]});
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+      store.dispatch(cancelImportRosterFlow());
+      expect(getState().teacherSections.classrooms).to.be.null;
     });
   });
 
