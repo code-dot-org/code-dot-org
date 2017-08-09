@@ -13,7 +13,8 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 class TeacherSections extends Component {
   static propTypes = {
     sections: shapes.sections, // Without experiment
-    isRtl: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    queryStringOpen: PropTypes.string,
 
     //Redux provided
     numTeacherSections: PropTypes.number.isRequired,
@@ -25,13 +26,13 @@ class TeacherSections extends Component {
   }
 
   renderNewSectionFlow() {
-    const {isRtl} = this.props;
+    const {isRtl, queryStringOpen} = this.props;
     return (
       <ContentContainer
         heading={i18n.sectionsTitle()}
         isRtl={isRtl}
       >
-        <OwnedSections isRtl={isRtl}/>
+        <OwnedSections isRtl={isRtl} queryStringOpen={queryStringOpen}/>
       </ContentContainer>
     );
   }
