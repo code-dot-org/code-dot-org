@@ -90,8 +90,8 @@ class Hamburger
     loc_prefix = options[:loc_prefix]
 
     teacher_entries = [
-      {title: "home", url: CDO.studio_url("/home")},
-      {title: "courses", url: CDO.studio_url("/courses")},
+      {title: "my_dashboard", url: CDO.studio_url("/home")},
+      {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects")},
       {title: "sections", url: CDO.code_org_url("/teacher-dashboard#/sections"), id: "hamburger-teacher-sections"},
       {title: "professional_learning", url: CDO.studio_url("/my-professional-learning")}
@@ -100,22 +100,29 @@ class Hamburger
     end.freeze
 
     student_entries = [
-      {title: "home", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
-      {title: "courses", url: CDO.studio_url("/courses")},
+      {title: "my_dashboard", url: CDO.studio_url("/home"), id: "hamburger-student-home"},
+      {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects"), id: "hamburger-student-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
     signed_out_entries = [
-      {title: "courses", url: CDO.studio_url("/courses")},
+      {title: "course_catalog", url: CDO.studio_url("/courses")},
       {title: "project_gallery", url: CDO.studio_url("/projects/public"), id: "hamburger-signed-out-projects"}
     ].each do |entry|
       entry[:title] = I18n.t("#{loc_prefix}#{entry[:title]}")
     end.freeze
 
+    # When viewing courses, a signed-out user in English gets the teacher view.
+    if !["teacher", "student"].include?(options[:user_type]) && options[:language] == "en"
+      teach_url = "/courses?view=teacher"
+    else
+      teach_url = "/courses"
+    end
+
     educate_entries = [
-      {title: "educate_overview", url: CDO.code_org_url("/educate"), id: "educate-overview"},
+      {title: "educate_overview", url: CDO.studio_url(teach_url), id: "educate-overview"},
       {title: "educate_elementary", url: CDO.code_org_url("/educate/curriculum/elementary-school")},
       {title: "educate_middle", url: CDO.code_org_url("/educate/curriculum/middle-school")},
       {title: "educate_high", url: CDO.code_org_url("/educate/curriculum/high-school")},
@@ -237,7 +244,7 @@ class Hamburger
 
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
-      url: CDO.code_org_url("/student"),
+      url: CDO.studio_url("/courses"),
       class: visibility[:show_pegasus_options],
       id: "learn"
     }
@@ -284,22 +291,24 @@ class Hamburger
 
     if options[:user_type] == "teacher"
       [
-        {title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
-        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
+        {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-teacher-home"},
+        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-teacher-courses"},
         {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-teacher-projects"},
         {title: I18n.t("#{loc_prefix}sections"), url: CDO.code_org_url("/teacher-dashboard#/sections"), id: "header-teacher-sections"},
         {title: I18n.t("#{loc_prefix}professional_learning"), url: CDO.studio_url("/my-professional-learning"), id: "header-teacher-professional-learning"}
       ]
     elsif options[:user_type] == "student"
       [
-        {title: I18n.t("#{loc_prefix}home"), url: CDO.studio_url("/home"), id: "header-student-home"},
-        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
+        {title: I18n.t("#{loc_prefix}my_dashboard"), url: CDO.studio_url("/home"), id: "header-student-home"},
+        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-student-courses"},
         {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects"), id: "header-student-projects"}
       ]
     elsif options[:language] == "en"
       [
-        {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/student"), id: "header-en-learn"},
-        {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/educate"), id: "header-en-teach"},
+        # When signed out, "Learn" will take an English user to the student view of /courses.
+        {title: I18n.t("#{loc_prefix}learn"), url: CDO.studio_url("/courses"), id: "header-en-learn"},
+        # When signed out, "Teach" will take an English user to the teacher view of /courses.
+        {title: I18n.t("#{loc_prefix}teach"), url: CDO.studio_url("/courses?view=teacher"), id: "header-en-teach"},
         {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-en-stats"},
         {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-en-help"},
         {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-en-about"},
@@ -307,7 +316,7 @@ class Hamburger
       ]
     else
       [
-        {title: I18n.t("#{loc_prefix}courses"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
+        {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
         {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.code_org_url("/projects/public"), id: "header-non-en-projects"}
       ]
     end
