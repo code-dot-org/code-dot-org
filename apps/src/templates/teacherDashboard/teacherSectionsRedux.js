@@ -54,10 +54,11 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
+const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
 const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
-const ROSTER_DIALOG_OPEN = 'oauthClassroom/ROSTER_DIALOG_OPEN';
+export const ROSTER_DIALOG_OPEN = 'oauthClassroom/ROSTER_DIALOG_OPEN';
 const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
 
 //
@@ -165,17 +166,36 @@ function fetchJSON(url) {
   });
 }
 
-export const loadClassroomList = provider => {
-  const url = urlByProvider[provider];
+/**
+ * Start the process of importing a section from a third-paty provider
+ * (like Google Classroom or Clever) by opening the RosterDialog and
+ * loading the list of classrooms available for import.
+ */
+export const beginImportRosterFlow = () => (dispatch, getState) => {
+  const state = getState();
+  const provider = getRoot(state).provider;
+  if (!provider) {
+    return Promise.reject(new Error('Unable to begin import roster flow without a provider'));
+  }
 
-  return dispatch => {
-    $.ajax(url)
-      .success(response => dispatch(setClassroomList(response.courses || [])))
+  if (isRosterDialogOpen(state)) {
+    return Promise.resolve();
+  }
+
+  dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+  dispatch({type: ROSTER_DIALOG_OPEN});
+  return new Promise((resolve, reject) => {
+    $.ajax(urlByProvider[provider])
+      .success(response => {
+        dispatch(setClassroomList(response.courses || []));
+        resolve();
+      })
       .fail(result => {
         const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
         dispatch(failedLoad(result.status, message));
+        reject(new Error(message));
       });
-  };
+  });
 };
 
 export const setClassroomList = classrooms => ({ type: SET_CLASSROOM_LIST, classrooms });
@@ -184,7 +204,6 @@ export const importClassroomStarted = () => ({ type: IMPORT_CLASSROOM_STARTED })
 
 export const failedLoad = (status, message) => ({ type: FAILED_LOAD, status, message });
 
-export const openRosterDialog = () => ({type: ROSTER_DIALOG_OPEN});
 export const closeRosterDialog = () => ({type: ROSTER_DIALOG_CLOSE});
 
 /**
