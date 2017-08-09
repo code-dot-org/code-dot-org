@@ -55,7 +55,8 @@ const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
 export const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
-const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
+const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
+export const SET_CLASSROOM_LIST = 'teacherDashboard/SET_CLASSROOM_LIST';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const FAILED_LOAD = 'teacherDashboard/FAILED_LOAD';
 const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
@@ -195,6 +196,9 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
       });
   });
 };
+
+/** Abandon the import process, closing the RosterDialog. */
+export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 export const setClassroomList = classrooms => ({ type: SET_CLASSROOM_LIST, classrooms });
 
@@ -523,16 +527,24 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === ROSTER_DIALOG_CLOSE) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+    };
+  }
+
   if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
     return {
       ...state,
       isRosterDialogOpen: true,
       classrooms: null,
     };
-  } else if (action.type === ROSTER_DIALOG_CLOSE) {
+  } else if (action.type === IMPORT_ROSTER_FLOW_CANCEL) {
     return {
       ...state,
       isRosterDialogOpen: false,
+      classrooms: null,
     };
   }
 

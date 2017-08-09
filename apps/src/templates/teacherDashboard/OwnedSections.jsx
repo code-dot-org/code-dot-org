@@ -12,6 +12,7 @@ import {
   beginEditingSection,
   asyncLoadSectionData,
   beginImportRosterFlow,
+  cancelImportRosterFlow,
   importClassroomStarted,
   closeRosterDialog,
   isRosterDialogOpen,
@@ -51,6 +52,7 @@ class OwnedSections extends React.Component {
     asyncLoadComplete: PropTypes.bool.isRequired,
     newSection: PropTypes.func.isRequired,
     beginImportRosterFlow: PropTypes.func.isRequired,
+    cancelImportRosterFlow: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
@@ -85,10 +87,6 @@ class OwnedSections extends React.Component {
       }
     }
   }
-
-  handleImportCancel = () => {
-    this.props.closeRosterDialog();
-  };
 
   // TODO: Move this into redux.
   handleImport = courseId => {
@@ -181,7 +179,7 @@ class OwnedSections extends React.Component {
         <RosterDialog
           isOpen={this.props.isRosterDialogOpen}
           handleImport={this.handleImport}
-          handleCancel={this.handleImportCancel}
+          handleCancel={this.props.cancelImportRosterFlow}
           classrooms={this.props.classrooms}
           loadError={this.props.loadError}
           studioUrl={this.props.studioUrl}
@@ -208,6 +206,7 @@ export default connect(state => ({
   beginEditingNewSection,
   beginEditingSection,
   beginImportRosterFlow,
+  cancelImportRosterFlow,
   importClassroomStarted,
   asyncLoadSectionData,
   closeRosterDialog,
