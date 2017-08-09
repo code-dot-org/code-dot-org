@@ -2,7 +2,6 @@
  *        current user. */
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
 import SectionTable from './SectionTable';
 import RosterDialog from './RosterDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -10,12 +9,9 @@ import {
   newSection,
   beginEditingNewSection,
   beginEditingSection,
-  asyncLoadSectionData,
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importRoster,
-  importClassroomStarted,
-  closeRosterDialog,
   isRosterDialogOpen,
 } from './teacherSectionsRedux';
 import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
@@ -24,11 +20,6 @@ import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
 import EditSectionDialog from "./EditSectionDialog";
 import SetUpSections from '../studioHomepages/SetUpSections';
-
-const urlByProvider = {
-  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
-  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
-};
 
 const styles = {
   button: {
@@ -52,14 +43,11 @@ class OwnedSections extends React.Component {
     loadError: loadErrorShape,
     asyncLoadComplete: PropTypes.bool.isRequired,
     newSection: PropTypes.func.isRequired,
+    beginEditingNewSection: PropTypes.func.isRequired,
+    beginEditingSection: PropTypes.func.isRequired,
     beginImportRosterFlow: PropTypes.func.isRequired,
     cancelImportRosterFlow: PropTypes.func.isRequired,
     importRoster: PropTypes.func.isRequired,
-    importClassroomStarted: PropTypes.func.isRequired,
-    beginEditingNewSection: PropTypes.func.isRequired,
-    beginEditingSection: PropTypes.func.isRequired,
-    asyncLoadSectionData: PropTypes.func.isRequired,
-    closeRosterDialog: PropTypes.func.isRequired,
     isRosterDialogOpen: PropTypes.bool.isRequired,
   };
 
@@ -89,24 +77,6 @@ class OwnedSections extends React.Component {
       }
     }
   }
-
-  // TODO: Move this into redux.
-  handleImport = courseId => {
-    const {
-      importClassroomStarted,
-      asyncLoadSectionData,
-      beginEditingSection,
-      closeRosterDialog,
-    } = this.props;
-
-    importClassroomStarted();
-    const url = urlByProvider[this.provider];
-    $.getJSON(url, { courseId }).then(importedSection => {
-      closeRosterDialog();
-      asyncLoadSectionData()
-        .then(() => beginEditingSection(importedSection.id));
-    });
-  };
 
   addSection = () => {
     const { defaultCourseId, defaultScriptId } = this.props;
@@ -210,7 +180,4 @@ export default connect(state => ({
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importRoster,
-  importClassroomStarted,
-  asyncLoadSectionData,
-  closeRosterDialog,
 })(OwnedSections);

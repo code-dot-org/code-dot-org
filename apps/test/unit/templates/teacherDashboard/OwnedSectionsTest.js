@@ -19,14 +19,16 @@ import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
 const defaultProps = {
   numSections: 3,
-  classrooms: null,
   studioUrl: '',
+  classrooms: null,
   asyncLoadComplete: true,
   newSection: () => {},
-  importClassroomStarted: () => {},
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
-  asyncLoadSectionData: () => {},
+  beginImportRosterFlow: () => {},
+  cancelImportRosterFlow: () => {},
+  importRoster: () => {},
+  isRosterDialogOpen: false,
 };
 
 describe('OwnedSections', () => {

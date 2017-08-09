@@ -233,13 +233,13 @@ export const importRoster = courseId => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
 
-  dispatch(importClassroomStarted());
+  dispatch({type: IMPORT_CLASSROOM_STARTED});
   dispatch({type: IMPORT_ROSTER_REQUEST});
   return new Promise((resolve, reject) => {
     const url = importUrlByProvider[provider];
     $.getJSON(url, { courseId }).done(importedSection => {
       dispatch({type: IMPORT_ROSTER_SUCCESS});
-      dispatch(closeRosterDialog());
+      dispatch({type: ROSTER_DIALOG_CLOSE});
       dispatch(asyncLoadSectionData())
         .then(() => dispatch(beginEditingSection(importedSection.id)))
         .then(resolve);
@@ -249,10 +249,6 @@ export const importRoster = courseId => (dispatch, getState) => {
     });
   });
 };
-
-export const importClassroomStarted = () => ({ type: IMPORT_CLASSROOM_STARTED });
-
-export const closeRosterDialog = () => ({type: ROSTER_DIALOG_CLOSE});
 
 /**
  * Initial state of this redux module.
