@@ -58,7 +58,10 @@
         .row.header_row
           .header_left
             .header_logo
-              = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
+              - if current_user
+                = link_to(image_tag('logo.png'), '/home', {id: "logo_home_link"})
+              - else
+                = link_to(image_tag('logo.png'), CDO.code_org_url, {id: "logo_home_link"})
             .project_info.hide_on_mobile
           .header_middle.hide_on_mobile
             - if should_show_progress

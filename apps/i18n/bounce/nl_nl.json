@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Voer de actie hieronder uit wanneer een bal botst met een muur.",
   "whileMsg": "terwijl",
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -3,6 +3,10 @@ require lib_dir 'forms/pegasus_form_validation'
 
 include PegasusFormValidation
 
+# Deletes a form from the DB and from SOLR.
+# @param [String] kind The kind of form to delete.
+# @param [String] secret The secret associated with the form to delete.
+# @return [Boolean] Whether the form was deleted.
 def delete_form(kind, secret)
   form = DB[:forms].where(kind: kind, secret: secret).first
   return false unless form

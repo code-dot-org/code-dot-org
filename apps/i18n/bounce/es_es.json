@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Ejecuta las instrucciones siguientes cuando la pelota choca con una pared.",
   "whileMsg": "mientras",
   "whileTooltip": "Repetir las acciones dentro del bloque hasta alcanzar el punto final.",
-  "yes": "Sí"
+  "yes": "Sí",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

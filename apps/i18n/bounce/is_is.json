@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Gera aðgerðirnar fyrir neðan þegar bolti rekst á vegg.",
   "whileMsg": "meðan",
   "whileTooltip": "Endurtaka innifaldar aðgerðir þar til endapunkti er náð.",
-  "yes": "Já"
+  "yes": "Já",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

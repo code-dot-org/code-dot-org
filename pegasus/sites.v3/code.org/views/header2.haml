@@ -37,8 +37,12 @@
       .content
         #left
           #logo-wrapper
-            %a{:href=>CDO.studio_url("/home")}
-              %img#logo{:src=>'/images/logo.png'}
+            - if current_user
+              %a{:href=>CDO.studio_url("/home")}
+                %img#logo{:src=>'/images/logo.png'}
+            - else
+              %a{:href=>CDO.code_org_url}
+                %img#logo{:src=>'/images/logo.png'}
           #headerlinks.desktop-feature
             - Hamburger.get_header_contents(header_contents_options).each do |entry|
               %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]

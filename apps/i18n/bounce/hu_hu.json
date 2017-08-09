@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Végrehajtja az alábbi parancsokat, ha a labda nekimegy a falnak.",
   "whileMsg": "amíg",
   "whileTooltip": "Ismételjük a közbülső műveleteket amíg végponthoz nem ér.",
-  "yes": "Igen"
+  "yes": "Igen",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }
