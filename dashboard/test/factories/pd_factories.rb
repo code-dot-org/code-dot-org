@@ -225,7 +225,6 @@ FactoryGirl.define do
             else
               survey_hash[field][facilitator.name] = evaluator.randomized_survey_answers ? SecureRandom.hex[0..8] : 'Free Response'
             end
-            survey_hash[field][facilitator.name] = 'Free response'
           end
         end
 
@@ -432,8 +431,7 @@ FactoryGirl.define do
     sequence(:first_name) {|n| "Participant#{n}"}
     last_name 'Codeberg'
     sequence(:email) {|n| "participant#{n}@example.com.xx"}
-    association :school_info, factory: :school_info_without_country
-    school 'Example School'
+    association :school_info
     code {SecureRandom.hex(10)}
 
     trait :from_user do

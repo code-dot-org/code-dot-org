@@ -38,10 +38,21 @@ module Api::V1::Pd
 
       survey_report = Hash.new
 
-      survey_report[:this_teachercon] = summarize_workshop_surveys(workshops: @workshop)
-      survey_report[:all_my_teachercons] = summarize_workshop_surveys(
-        workshops: Pd::Workshop.where(subject: [SUBJECT_CSP_TEACHER_CON, SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user).flat_map(&:survey_responses)
+      survey_report[:this_teachercon] = summarize_workshop_surveys(
+        workshops: [@workshop],
+        facilitator_name: current_user.facilitator? && current_user.name
       )
+      if current_user.facilitator?
+        survey_report[:all_my_teachercons] = summarize_workshop_surveys(
+          workshops: Pd::Workshop.where(subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user),
+          include_free_response: false
+        )
+      elsif current_user.workshop_organizer?
+        survey_report[:all_my_teachercons] = summarize_workshop_surveys(
+          workshops: Pd::Workshop.where(subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]).organized_by(current_user),
+          include_free_response: false
+        )
+      end
 
       respond_to do |format|
         format.json do
@@ -70,7 +81,8 @@ module Api::V1::Pd
             subject: @workshop.subject,
             course: @workshop.course
           ).facilitated_by(current_user),
-          facilitator_name: facilitator_name
+          facilitator_name: facilitator_name,
+          include_free_response: false
         )
       elsif current_user.workshop_organizer?
         survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
@@ -78,7 +90,8 @@ module Api::V1::Pd
             subject: @workshop.subject,
             course: @workshop.course
           ).organized_by(current_user),
-          facilitator_breakdown: false
+          facilitator_breakdown: false,
+          include_free_response: false
         )
       else
         survey_report[:all_my_local_workshops] = {}

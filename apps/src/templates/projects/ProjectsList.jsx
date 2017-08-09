@@ -5,6 +5,7 @@ import commonMsg from '@cdo/locale';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {ImageWithStatus} from '../ImageWithStatus';
+import {PROJECT_TYPE_MAP} from './projectConstants';
 
 const THUMBNAIL_SIZE = 50;
 
@@ -57,19 +58,6 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
   },
-};
-
-/**
- * Map from project type to friendly name.
- * @type {Object}
- */
-const PROJECT_TYPE_MAP = {
-  algebra_game: commonMsg.projectTypeAlgebra(),
-  applab: commonMsg.projectTypeApplab(),
-  artist: commonMsg.projectTypeArtist(),
-  gamelab: commonMsg.projectTypeGamelab(),
-  playlab: commonMsg.projectTypePlaylab(),
-  weblab: commonMsg.projectTypeWeblab(),
 };
 
 function typeFormatter(type) {
