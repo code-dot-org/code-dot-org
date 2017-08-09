@@ -42,7 +42,7 @@ module Pd::Payment
     end
 
     def school
-      enrollment.try(&:school)
+      enrollment.try(&:school_name)
     end
 
     delegate :workshop, to: :workshop_summary
