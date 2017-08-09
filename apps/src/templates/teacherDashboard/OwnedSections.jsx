@@ -12,7 +12,13 @@ import {
   beginEditingSection,
   asyncLoadSectionData,
 } from './teacherSectionsRedux';
-import {loadClassroomList, importClassroomStarted} from './oauthClassroomRedux';
+import {
+  loadClassroomList,
+  importClassroomStarted,
+  openRosterDialog,
+  closeRosterDialog,
+  isRosterDialogOpen,
+} from './oauthClassroomRedux';
 import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
@@ -52,10 +58,9 @@ class OwnedSections extends React.Component {
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
-  };
-
-  state = {
-    rosterDialogOpen: false,
+    openRosterDialog: PropTypes.func.isRequired,
+    closeRosterDialog: PropTypes.func.isRequired,
+    isRosterDialogOpen: PropTypes.bool.isRequired,
   };
 
   componentWillMount() {
@@ -85,25 +90,27 @@ class OwnedSections extends React.Component {
   }
 
   handleImportOpen = () => {
-    this.setState({rosterDialogOpen: true});
+    this.props.openRosterDialog();
     this.props.loadClassroomList(this.provider);
   };
 
   handleImportCancel = () => {
-    this.setState({rosterDialogOpen: false});
+    this.props.closeRosterDialog();
   };
 
+  // TODO: Move this into redux.
   handleImport = courseId => {
     const {
       importClassroomStarted,
       asyncLoadSectionData,
       beginEditingSection,
+      closeRosterDialog,
     } = this.props;
 
     importClassroomStarted();
     const url = urlByProvider[this.provider];
     $.getJSON(url, { courseId }).then(importedSection => {
-      this.setState({rosterDialogOpen: false});
+      closeRosterDialog();
       asyncLoadSectionData()
         .then(() => beginEditingSection(importedSection.id));
     });
@@ -175,7 +182,7 @@ class OwnedSections extends React.Component {
           </div>
         )}
         <RosterDialog
-          isOpen={this.state.rosterDialogOpen}
+          isOpen={this.props.isRosterDialogOpen}
           handleImport={this.handleImport}
           handleCancel={this.handleImportCancel}
           classrooms={this.props.classrooms}
@@ -198,6 +205,7 @@ export default connect(state => ({
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
+  isRosterDialogOpen: isRosterDialogOpen(state),
 }), {
   newSection,
   beginEditingNewSection,
@@ -205,4 +213,6 @@ export default connect(state => ({
   loadClassroomList,
   importClassroomStarted,
   asyncLoadSectionData,
+  openRosterDialog,
+  closeRosterDialog,
 })(OwnedSections);
