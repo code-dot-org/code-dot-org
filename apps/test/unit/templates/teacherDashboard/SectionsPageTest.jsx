@@ -1,15 +1,11 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import SectionsPage, {Breadcrumb} from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 
 describe('SectionsPage', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('renders a Breadcrumb and OwnedSections component', () => {
