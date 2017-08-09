@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Виконати дії, подані нижче, коли м'яч стикається з платформою.",
   "whileMsg": "поки",
   "whileTooltip": "Повторювати вказані дії поки не досягнуто кінцевої точки.",
-  "yes": "Так"
+  "yes": "Так",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

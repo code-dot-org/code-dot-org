@@ -137,15 +137,19 @@ class CourseTest < ActiveSupport::TestCase
     create(:course_script, course: course, position: 0, script: create(:script, name: 'script1'))
     create(:course_script, course: course, position: 1, script: create(:script, name: 'script2'))
 
+    course.teacher_resources = [['curriculum', '/link/to/curriculum']]
+
     summary = course.summarize
 
-    assert_equal [:name, :id, :title, :description_short, :description_student, :description_teacher, :scripts], summary.keys
+    assert_equal [:name, :id, :title, :description_short, :description_student,
+                  :description_teacher, :scripts, :teacher_resources], summary.keys
     assert_equal 'my-course', summary[:name]
     assert_equal 'my-course-title', summary[:title]
     assert_equal 'short description', summary[:description_short]
     assert_equal 'Student description here', summary[:description_student]
     assert_equal 'Teacher description here', summary[:description_teacher]
     assert_equal 2, summary[:scripts].length
+    assert_equal [['curriculum', '/link/to/curriculum']], summary[:teacher_resources]
 
     # spot check that we have fields that show up in Script.summarize(false) and summarize_i18n(false)
     assert_equal 'script1', summary[:scripts][0][:name]
@@ -206,5 +210,12 @@ class CourseTest < ActiveSupport::TestCase
 
     # has script_ids
     assert_equal [csp1.id, csp2.id, csp3.id], csp_assign_info[:script_ids]
+  end
+
+  test "update_teacher_resources" do
+    course = create :course
+    course.update_teacher_resources(['professionalLearning'], ['/link/to/plc'])
+
+    assert_equal [['professionalLearning', '/link/to/plc']], course.teacher_resources
   end
 end

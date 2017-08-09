@@ -82,12 +82,42 @@ class ExperimentTest < ActiveSupport::TestCase
     refute Experiment.enabled?(section: @section, script: @script, experiment_name: experiment.name)
   end
 
+  test "teacher based experiment handles nil section start at" do
+    experiment = create :teacher_based_experiment,
+      percentage: 100,
+      earliest_section_at: DateTime.now - 1.day,
+      latest_section_at: DateTime.now + 1.day,
+      script_id: @script.id + 1
+    section = create :section
+    assert_empty Experiment.get_all_enabled(section: section, script: @script)
+    refute Experiment.enabled?(section: section, script: @script, experiment_name: experiment.name)
+  end
+
   test "teacher based experiment is enabled if same script assigned" do
     experiment = create :teacher_based_experiment,
       percentage: 100,
       script_id: @script.id
     assert_equal [experiment], Experiment.get_all_enabled(section: @section, script: @script)
     assert Experiment.enabled?(section: @section, script: @script, experiment_name: experiment.name)
+  end
+
+  test "teacher is in the same teacher-based experiment as their section" do
+    experiment1 = create :teacher_based_experiment,
+      min_user_id: 0,
+      max_user_id: 50
+    experiment2 = create :teacher_based_experiment,
+      min_user_id: 50,
+      max_user_id: 100
+    teacher = create :teacher, id: 1125
+    student = create :student, id: 1175
+    section = create :section, user: teacher
+    section.add_student(@user)
+
+    assert Experiment.enabled?(experiment_name: experiment1.name, user: teacher)
+    assert Experiment.enabled?(experiment_name: experiment1.name, user: student, section: section)
+
+    refute Experiment.enabled?(experiment_name: experiment2.name, user: teacher)
+    refute Experiment.enabled?(experiment_name: experiment2.name, user: student, section: section)
   end
 
   test "single section experiment is enabled" do
@@ -101,6 +131,11 @@ class ExperimentTest < ActiveSupport::TestCase
     experiment = create :single_section_experiment
     assert_empty Experiment.get_all_enabled(section: @section)
     refute Experiment.enabled?(section: @section, experiment_name: experiment.name)
+  end
+
+  test "teacher is included in single-section experiment" do
+    experiment = create :single_section_experiment
+    assert Experiment.enabled?(experiment_name: experiment.name, user: experiment.section.user)
   end
 
   test 'single user experiment is enabled' do

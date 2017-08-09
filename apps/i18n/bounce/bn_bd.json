@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "বল দেয়ালে আঘাত করলে নিচের কাজগুলো নির্বাহ করুন।",
   "whileMsg": "যখন",
   "whileTooltip": "সমাপ্তি বিন্দুতে না পৌঁছানো পর্যন্ত ঘিরা কাজ পুনরাবৃত্তি করুন।",
-  "yes": "\"হ্যাঁ\""
+  "yes": "\"হ্যাঁ\"",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

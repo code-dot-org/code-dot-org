@@ -21,7 +21,6 @@
   width: 100%;
   color: white;
   padding: 20px;
-  border-radius: 5px;
 }
 
 .educate-h1 {
@@ -36,9 +35,19 @@
 }
 
 .educate-button {
+  background-color: #e7e8ea;
+  border-color: #c6cacd;
+  color: #5b6770;
+  border-radius: 0px;
+  font-size: 12px;
+  min-width: 120px;
   position: absolute;
   bottom: 0;
   margin-bottom: 5%;
+}
+
+.educate-button:hover { 
+  background-color: white;
 }
 
 .resources-h1 {

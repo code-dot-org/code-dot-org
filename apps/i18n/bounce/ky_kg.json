@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Топ дубалгаа тийгенде, төмөнкү аракетти аткар.",
   "whileMsg": "болуп турганда",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

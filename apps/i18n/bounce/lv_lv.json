@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Veikt zemāk esošās darbības, kad bumba saskaras ar sienu.",
   "whileMsg": "kamēr",
   "whileTooltip": "Atārtot slegtās darbības kamēr finiša punkts ir sasniegts.",
-  "yes": "Jā"
+  "yes": "Jā",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

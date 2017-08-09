@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Keď lopta narazí do steny, vykonaj nasledujúce príkazy.",
   "whileMsg": "pokiaľ",
   "whileTooltip": "Opakujte priložené činnosti dokým dosiahnete cieľový bod.",
-  "yes": "Áno"
+  "yes": "Áno",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

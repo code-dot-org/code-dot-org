@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "যখন ফ্লাপি একটা বাধাতে প্রবেশ করবে তখন নীচের কাজ সম্পাদন করুন।",
   "whenRunButtonClick": "যখন খেলা শুরু",
   "whenRunButtonClickTooltip": "যখন খেলা শুরু করে নিচে কর্ম সম্পাদন করে.",
-  "yes": "\"হ্যাঁ\""
+  "yes": "\"হ্যাঁ\"",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

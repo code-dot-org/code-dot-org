@@ -118,7 +118,7 @@ module DeleteAccountsHelper
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
   def self.anonymize_user_sections(user_id)
-    Sections.with_deleted.where(user_id: user_id).each(&:clean_data)
+    Section.with_deleted.where(user_id: user_id).each(&:clean_data)
   end
 
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
