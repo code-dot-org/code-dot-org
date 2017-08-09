@@ -37,6 +37,7 @@ class OwnedSections extends Component {
     isRtl: PropTypes.bool,
     defaultCourseId: PropTypes.number,
     defaultScriptId: PropTypes.number,
+    queryStringOpen: PropTypes.string,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -66,13 +67,20 @@ class OwnedSections extends Component {
   componentDidMount() {
     const {
       defaultCourseId,
-      defaultScriptId
+      defaultScriptId,
+      queryStringOpen,
     } = this.props;
 
     // If we have a default courseId and/or scriptId, we want to start with our
     // dialog open. Add a new section with this course/script as default
     if (defaultCourseId || defaultScriptId) {
       this.addSection();
+    }
+
+    if (experiments.isEnabled('importClassroom')) {
+      if (queryStringOpen === 'rosterDialog') {
+        this.handleImportOpen();
+      }
     }
   }
 

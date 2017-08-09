@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -20,10 +20,11 @@ const styles = {
 
 const TeacherHomepage = React.createClass({
   propTypes: {
-    sections: React.PropTypes.array,
+    sections: PropTypes.array,
     courses: shapes.courses,
-    announcements: React.PropTypes.array.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
+    announcements: PropTypes.array.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    queryStringOpen: PropTypes.string,
   },
 
   componentDidMount() {
@@ -33,7 +34,7 @@ const TeacherHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, announcements, isRtl } = this.props;
+    const { courses, sections, announcements, isRtl, queryStringOpen } = this.props;
 
     return (
       <div>
@@ -65,6 +66,7 @@ const TeacherHomepage = React.createClass({
         <TeacherSections
           sections={sections}
           isRtl={isRtl}
+          queryStringOpen={queryStringOpen}
         />
         <RecentCourses
           courses={courses}
