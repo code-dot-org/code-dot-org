@@ -1,5 +1,5 @@
 import { assert } from '../../../util/configuredChai';
-import {throwOnConsoleWarnings, throwOnConsoleErrors} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import ProgressPill from '@cdo/apps/templates/progress/ProgressPill';
@@ -14,7 +14,6 @@ const unpluggedLevel = {
 
 describe('ProgressPill', () => {
   throwOnConsoleWarnings();
-  throwOnConsoleErrors();
 
   it('can render an unplugged pill', () => {
     shallow(

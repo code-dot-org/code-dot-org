@@ -1,5 +1,5 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
@@ -22,7 +22,6 @@ const defaultProps = {
 };
 
 describe('CourseOverviewTopRow', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('contains an AssignToSection button', () => {
