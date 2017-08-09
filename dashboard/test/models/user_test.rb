@@ -21,6 +21,7 @@ class UserTest < ActiveSupport::TestCase
     }
 
     @admin = create :admin
+    @user = create :user
     @teacher = create :teacher
     @student = create :student
   end
@@ -632,10 +633,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'user is created with secret picture and word' do
-    user = create :user
-    assert user.secret_picture
-    assert user.secret_words
-    assert user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
+    assert @user.secret_picture
+    assert @user.secret_words
+    assert @user.secret_words !~ /SecretWord/ # using the actual word not the object to_s
   end
 
   test 'students have hashed email not plaintext email' do
@@ -1759,11 +1759,9 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'no personal email is false for users with email' do
-    student = create :student
-    refute student.no_personal_email?
+    refute @student.no_personal_email?
 
-    teacher = create :teacher
-    refute teacher.no_personal_email?
+    refute @teacher.no_personal_email?
   end
 
   test 'parent_managed_account is true for users with parent email and no hashed email' do
@@ -1772,8 +1770,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'parent_managed_account is false for teacher' do
-    teacher = create :teacher
-    refute teacher.parent_managed_account?
+    refute @teacher.parent_managed_account?
   end
 
   test 'age is required for new users' do
@@ -2055,25 +2052,24 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
-    user = create :student
     assert_equal(
       {
-        id: user.id,
-        name: user.name,
-        username: user.username,
-        email: user.email,
-        hashed_email: user.hashed_email,
-        user_type: user.user_type,
-        gender: user.gender,
-        birthday: user.birthday,
-        total_lines: user.total_lines,
-        secret_words: user.secret_words,
-        secret_picture_name: user.secret_picture.name,
-        secret_picture_path: user.secret_picture.path,
-        location: "/v2/users/#{user.id}",
-        age: user.age,
+        id: @student.id,
+        name: @student.name,
+        username: @student.username,
+        email: @student.email,
+        hashed_email: @student.hashed_email,
+        user_type: @student.user_type,
+        gender: @student.gender,
+        birthday: @student.birthday,
+        total_lines: @student.total_lines,
+        secret_words: @student.secret_words,
+        secret_picture_name: @student.secret_picture.name,
+        secret_picture_path: @student.secret_picture.path,
+        location: "/v2/users/#{@student.id}",
+        age: @student.age,
       },
-      user.summarize
+      @student.summarize
     )
   end
 end
