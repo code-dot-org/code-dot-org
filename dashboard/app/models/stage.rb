@@ -175,9 +175,9 @@ class Stage < ActiveRecord::Base
   # For a given set of students, determine when the given stage is locked for
   # each student.
   # The design of a lockable stage is that there is (optionally) some number of
-  # non-assessment levels, followed by a single assessment script_level. This
-  # last one is the only one which is truly locked/unlocked. The stage is considered
-  # locked iff the final assessment level is locked. When in this state, the UI
+  # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
+  # only one which is truly locked/unlocked. The stage is considered locked if
+  # and only ifthe final assessment level is locked. When in this state, the UI
   # will show the entire stage as being locked, but if you know the URL of the other
   # levels, you're still able to go to them and submit answers.
   def lockable_state(students)
