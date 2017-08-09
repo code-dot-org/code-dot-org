@@ -11,14 +11,12 @@ import {
   beginEditingNewSection,
   beginEditingSection,
   asyncLoadSectionData,
-} from './teacherSectionsRedux';
-import {
   loadClassroomList,
   importClassroomStarted,
   openRosterDialog,
   closeRosterDialog,
   isRosterDialogOpen,
-} from './oauthClassroomRedux';
+} from './teacherSectionsRedux';
 import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
@@ -202,8 +200,8 @@ export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
   studioUrl: state.teacherSections.studioUrl,
   provider: state.teacherSections.provider,
-  classrooms: state.oauthClassroom.classrooms,
-  loadError: state.oauthClassroom.loadError,
+  classrooms: state.teacherSections.classrooms,
+  loadError: state.teacherSections.loadError,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
   isRosterDialogOpen: isRosterDialogOpen(state),
 }), {

@@ -3,7 +3,6 @@ import {Provider} from 'react-redux';
 import sinon from 'sinon';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {serverSectionFromSection} from '../teacherDashboard/teacherSectionsRedux';
-import oauthClassroom from '../teacherDashboard/oauthClassroomRedux';
 import TeacherSections from './TeacherSections';
 
 const sections = [
@@ -46,7 +45,7 @@ export default [
     description: 'shows a table of sections on the teacher homepage',
     story: () => {
       withFakeServer({sections: serverSections});
-      registerReducers({teacherSections, oauthClassroom});
+      registerReducers({teacherSections});
       const store = createStoreWithReducers();
       return (
         <Provider store={store}>
@@ -65,7 +64,7 @@ export default [
     description: 'shows a set up message if the teacher does not have any sections yet',
     story: () => {
       withFakeServer();
-      registerReducers({teacherSections, oauthClassroom});
+      registerReducers({teacherSections});
       const store = createStoreWithReducers();
       return (
         <Provider store={store}>
