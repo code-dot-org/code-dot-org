@@ -40,6 +40,53 @@ Scenario: Applab Flow
   Then I click selector ".project_share"
   And I wait to see "#x-close"
 
+  # publish the project
+
+  And element "#share-dialog-publish-button" is visible
+  And element "#share-dialog-unpublish-button" is not visible
+  And I click selector "#share-dialog-publish-button"
+  And I wait to see a dialog containing text "Publish to Public Gallery"
+  And element "#x-close" is visible
+  And element "#publish-dialog-publish-button" is visible
+  And I click selector "#publish-dialog-publish-button"
+  And I wait for the dialog to close
+
+  # verify that the unpublish button now appears in the share dialog
+
+  Then I click selector ".project_share"
+  And I wait to see a dialog titled "Share your project"
+  And element "#share-dialog-unpublish-button" is visible
+  And element "#share-dialog-publish-button" is not visible
+
+  # verify that the unpublish button still appears after reloading the page
+
+  And I reload the page
+  And I wait for the page to fully load
+  And element ".project_updated_at" eventually contains text "Saved"
+  Then I click selector ".project_share"
+  And I wait to see a dialog titled "Share your project"
+  And element "#share-dialog-unpublish-button" is visible
+  And element "#share-dialog-publish-button" is not visible
+
+  # unpublish the project, and verify the publish button is now visible
+
+  Then I click selector "#share-dialog-unpublish-button"
+  And I wait for the dialog to close
+  Then I click selector ".project_share"
+  And I wait to see a dialog titled "Share your project"
+  And element "#share-dialog-publish-button" is visible
+  And element "#share-dialog-unpublish-button" is not visible
+
+  # reload the project, and verify the publish button is still visible
+
+  And I reload the page
+  And I wait for the page to fully load
+  And element ".project_updated_at" eventually contains text "Saved"
+  Then I click selector ".project_share"
+  And I wait to see a dialog titled "Share your project"
+  And element "#share-dialog-publish-button" is visible
+  And element "#share-dialog-unpublish-button" is not visible
+
   Then I navigate to the share URL
   And I wait to see "#footerDiv"
   Then I should see title "Code Ninja - App Lab"
