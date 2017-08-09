@@ -18,20 +18,20 @@ const styles = {
   }
 };
 
-const TeacherHomepage = React.createClass({
-  propTypes: {
+export default class TeacherHomepage extends React.Component {
+  static propTypes = {
     sections: PropTypes.array,
     courses: shapes.courses,
     announcements: PropTypes.array.isRequired,
     isRtl: PropTypes.bool.isRequired,
     queryStringOpen: PropTypes.string,
-  },
+  };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-  },
+  }
 
   render() {
     const { courses, sections, announcements, isRtl, queryStringOpen } = this.props;
@@ -81,6 +81,4 @@ const TeacherHomepage = React.createClass({
       </div>
     );
   }
-});
-
-export default TeacherHomepage;
+}

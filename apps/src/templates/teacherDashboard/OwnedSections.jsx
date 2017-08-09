@@ -1,6 +1,6 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import SectionTable from './SectionTable';
@@ -32,7 +32,7 @@ const styles = {
   }
 };
 
-class OwnedSections extends Component {
+class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
     defaultCourseId: PropTypes.number,
