@@ -29,7 +29,6 @@ import reducer, {
   isEditingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
-  setClassroomList,
   importClassroomStarted,
   failedLoad,
   closeRosterDialog,
@@ -1156,17 +1155,9 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('the setClassroomList action', () => {
-    it('sets the classroom list', () => {
-      expect(getState().teacherSections.classrooms).to.be.null;
-      store.dispatch(setClassroomList([1, 2, 3]));
-      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
-    });
-  });
-
   describe('the importClassroomStarted action', () => {
     it('clears the classroom list', () => {
-      store.dispatch(setClassroomList([1, 2, 3]));
+      store.dispatch({type: SET_CLASSROOM_LIST, classrooms: [1, 2, 3]});
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(importClassroomStarted());
       expect(getState().teacherSections.classrooms).to.be.null;

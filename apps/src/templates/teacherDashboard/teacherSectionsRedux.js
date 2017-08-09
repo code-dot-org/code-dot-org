@@ -186,7 +186,10 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
   return new Promise((resolve, reject) => {
     $.ajax(urlByProvider[provider])
       .success(response => {
-        dispatch(setClassroomList(response.courses || []));
+        dispatch({
+          type: SET_CLASSROOM_LIST,
+          classrooms: response.courses || []
+        });
         resolve();
       })
       .fail(result => {
@@ -199,8 +202,6 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
 
 /** Abandon the import process, closing the RosterDialog. */
 export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
-
-export const setClassroomList = classrooms => ({ type: SET_CLASSROOM_LIST, classrooms });
 
 export const importClassroomStarted = () => ({ type: IMPORT_CLASSROOM_STARTED });
 
