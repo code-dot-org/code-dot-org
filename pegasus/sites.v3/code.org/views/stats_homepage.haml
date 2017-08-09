@@ -4,10 +4,18 @@
 - world_students_hoc_percent = "10%"
 - states_policy_change = "20"
 
-- statistics = { student_accounts_percent => "of US students have accounts on Code.org", female_students => "of our students are female", teacher_users => "teachers use Code.org", world_students_hoc_percent => "of the world's students have tried the Hour of Code", states_policy_change => "states changed policy to support computer science education" }
+- top_statistic_number = student_accounts_percent
+- top_statistic_phrase = "of US students have accounts on Code.org"
 
+- statistics = { female_students => "of our students are female", teacher_users => "teachers use Code.org", world_students_hoc_percent => "of the world's students have tried the Hour of Code", states_policy_change => "states changed policy to support computer science" }
+
+.mobile-feature{:style=> 'background:#00adbc; color: #ffffff; padding:10px; font-size: 16px; border-radius:5px;  text-align:center; margin: 20px;'} WE'RE MAKING A DIFFERENCE
+
+.col-20{:style=>'padding-top: 50px; padding-bottom: 20px; padding-right: 20px; padding-left: 20px;'}
+  .jumbo{:style=>'font-weight:900; text-align:center;'}= "#{top_statistic_number}"
+  %div{:style=>'font-size: 14px; text-align:center; padding-top:20px;'}= "#{top_statistic_phrase}"
 
 -statistics.each do |number, phrase|
-  .col-20
-    %div{:style=>'font-size:45px;'}= "#{number}"
-    %div= "#{phrase}"
+  .col-20.col-mobile-48{:style=>'padding-top: 50px; padding-bottom: 20px; padding-right: 20px; padding-left: 20px;'}
+    .jumbo{:style=>'font-weight:900; text-align:center;'}= "#{number}"
+    %div{:style=>'font-size: 14px; text-align:center; padding-top:20px;'}= "#{phrase}"
