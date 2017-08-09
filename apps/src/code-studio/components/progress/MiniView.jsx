@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import { connect } from 'react-redux';
 import ScriptOverview from './ScriptOverview';
 import MiniViewTopRow from './MiniViewTopRow';
@@ -18,7 +21,7 @@ const styles = {
 /**
  * The course progress dropdown you get when you click the arrow in the header.
  */
-const MiniView = React.createClass({
+const MiniView = createReactClass({
   propTypes: {
     linesOfCodeText: PropTypes.string,
 

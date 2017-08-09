@@ -1,5 +1,7 @@
 import msg from '@cdo/locale';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
@@ -24,12 +26,12 @@ const styles = {
  * Depending on props, this button (if it exists) will say "Finish", "Submit",
  * or "Unsubmit"
  */
-var CompletionButton = React.createClass({
+var CompletionButton = createReactClass({
   propTypes: {
-    isProjectLevel: React.PropTypes.bool.isRequired,
-    isSubmittable: React.PropTypes.bool.isRequired,
-    isSubmitted: React.PropTypes.bool.isRequired,
-    playspacePhoneFrame: React.PropTypes.bool
+    isProjectLevel: PropTypes.bool.isRequired,
+    isSubmittable: PropTypes.bool.isRequired,
+    isSubmitted: PropTypes.bool.isRequired,
+    playspacePhoneFrame: PropTypes.bool
   },
 
   render: function () {

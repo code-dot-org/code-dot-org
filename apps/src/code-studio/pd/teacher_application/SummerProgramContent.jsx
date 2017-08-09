@@ -1,10 +1,12 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Modal, Button} from 'react-bootstrap';
 
 import {ButtonList, otherString} from '../form_components/button_list.jsx';
 import {groupTwoOrGroupOneCsdWorkshops, workshopNamePlaceholder} from './applicationConstants';
 
-export default React.createClass({
+export default createReactClass({
 
   displayName: 'SummerProgramContent',
   propTypes: {

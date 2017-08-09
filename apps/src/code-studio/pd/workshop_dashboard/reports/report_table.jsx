@@ -2,6 +2,8 @@
  * Report Table
  */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {orderBy} from 'lodash';
 import {Table, sort} from 'reactabular';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
@@ -13,10 +15,10 @@ const styles = {
   }
 };
 
-const ReportTable = React.createClass({
+const ReportTable = createReactClass({
   propTypes: {
-    columns: React.PropTypes.array.isRequired,
-    rows: React.PropTypes.array.isRequired
+    columns: PropTypes.array.isRequired,
+    rows: PropTypes.array.isRequired
   },
 
   getInitialState() {

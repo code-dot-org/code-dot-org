@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import styleConstants from '../../styleConstants';
 import Button from '../Button';
@@ -70,14 +72,14 @@ const styles = {
   }
 };
 
-const Announcement = React.createClass({
+const Announcement = createReactClass({
   propTypes: {
-    heading: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string,
-    buttonText: React.PropTypes.string,
-    description: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    heading: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    buttonText: PropTypes.string,
+    description: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

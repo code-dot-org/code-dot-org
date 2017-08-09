@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import $ from 'jquery';
 import _ from 'lodash';
 import Spinner from './components/spinner';
@@ -42,10 +44,10 @@ const freeResponseQuestions = [
   {text: 'What were two things your facilitator could do better?', key: 'things_facilitator_could_improve', facilitator_breakdown: true}
 ];
 
-const LocalSummerWorkshopSurveyResults = React.createClass({
+const LocalSummerWorkshopSurveyResults = createReactClass({
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired
     })
   },
 

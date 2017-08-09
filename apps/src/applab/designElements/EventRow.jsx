@@ -1,12 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import * as rowStyle from './rowStyle';
 
-var EventRow = React.createClass({
+var EventRow = createReactClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired,
-    desc: React.PropTypes.string.isRequired,
-    handleInsert: React.PropTypes.func.isRequired
+    name: PropTypes.string.isRequired,
+    desc: PropTypes.string.isRequired,
+    handleInsert: PropTypes.func.isRequired
   },
 
   render: function () {

@@ -1,16 +1,18 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var Icon = require('./Icon');
 
 /**
  * A list of icons, maybe filtered by a search query.
  */
-var IconListEntry = React.createClass({
+var IconListEntry = createReactClass({
   propTypes: {
-    assetChosen: React.PropTypes.func.isRequired,
-    iconId: React.PropTypes.string.isRequired,
-    altMatch: React.PropTypes.string.isRequired,
-    query: React.PropTypes.instanceOf(RegExp).isRequired,
-    search: React.PropTypes.string.isRequired
+    assetChosen: PropTypes.func.isRequired,
+    iconId: PropTypes.string.isRequired,
+    altMatch: PropTypes.string.isRequired,
+    query: PropTypes.instanceOf(RegExp).isRequired,
+    search: PropTypes.string.isRequired
   },
 
   highlightSearch: function (str) {

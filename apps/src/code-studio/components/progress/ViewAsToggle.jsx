@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import commonMsg from '@cdo/locale';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
@@ -22,10 +24,10 @@ const styles = {
  * Toggle that lets us change between seeing a page as a teacher, or as the
  * student sees it
  */
-const ViewAsToggle = React.createClass({
+const ViewAsToggle = createReactClass({
   propTypes: {
-    viewAs: React.PropTypes.oneOf(Object.values(ViewType)).isRequired,
-    setViewType: React.PropTypes.func.isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    setViewType: PropTypes.func.isRequired
   },
 
   componentDidMount() {

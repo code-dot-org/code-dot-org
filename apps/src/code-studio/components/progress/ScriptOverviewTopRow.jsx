@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import SectionSelector from './SectionSelector';
 import i18n from '@cdo/locale';
 import Button from '@cdo/apps/templates/Button';
@@ -31,7 +34,7 @@ const styles = {
   }
 };
 
-const ScriptOverviewTopRow = React.createClass({
+const ScriptOverviewTopRow = createReactClass({
   propTypes: {
     sectionsInfo: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.number.isRequired,

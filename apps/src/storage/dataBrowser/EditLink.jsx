@@ -1,12 +1,14 @@
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import * as dataStyles from './dataStyles';
 
 
-const EditLink = React.createClass({
+const EditLink = createReactClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func.isRequired
+    name: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
   },
 
   render() {

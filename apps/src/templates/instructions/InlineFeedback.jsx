@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import ChatBubble from './ChatBubble';
 
@@ -15,10 +16,10 @@ const InlineFeedback = ({ extra, message, styles, borderColor }) => {
 };
 
 InlineFeedback.propTypes = {
-  borderColor: React.PropTypes.string,
-  extra: React.PropTypes.string,
-  message: React.PropTypes.string.isRequired,
-  styles: React.PropTypes.object,
+  borderColor: PropTypes.string,
+  extra: PropTypes.string,
+  message: PropTypes.string.isRequired,
+  styles: PropTypes.object,
 };
 
 export default Radium(InlineFeedback);

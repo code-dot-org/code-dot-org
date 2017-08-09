@@ -1,5 +1,6 @@
 /** @file Pop-over menu component.  Combine with react-portal to use. */
-import React, {Component, PropTypes, Children} from 'react';
+import React, {Component, Children} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';

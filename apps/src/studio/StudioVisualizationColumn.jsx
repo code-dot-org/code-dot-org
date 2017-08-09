@@ -1,5 +1,6 @@
-var React = require('react');
-var msg = require('@cdo/locale');
+import React from 'react';
+import PropTypes from 'prop-types';
+import msg from '@cdo/locale';
 
 var GameButtons = require('../templates/GameButtons').default;
 var ArrowButtons = require('../templates/ArrowButtons');
@@ -38,7 +39,7 @@ var StudioVisualizationColumn = function (props) {
 };
 
 StudioVisualizationColumn.propTypes = {
-  finishButton: React.PropTypes.bool.isRequired
+  finishButton: PropTypes.bool.isRequired
 };
 
 module.exports = StudioVisualizationColumn;

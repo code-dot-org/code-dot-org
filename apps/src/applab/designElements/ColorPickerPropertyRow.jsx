@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import * as rowStyle from './rowStyle';
 import ColorPicker from 'react-color';
 
-var ColorPickerPropertyRow = React.createClass({
+var ColorPickerPropertyRow = createReactClass({
   propTypes: {
-    initialValue: React.PropTypes.string.isRequired,
-    handleChange: React.PropTypes.func,
-    desc: React.PropTypes.node,
+    initialValue: PropTypes.string.isRequired,
+    handleChange: PropTypes.func,
+    desc: PropTypes.node,
   },
 
   getInitialState: function () {

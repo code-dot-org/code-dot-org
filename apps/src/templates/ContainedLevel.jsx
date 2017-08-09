@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import createReactClass from 'create-react-class';
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
 const styles = {
@@ -8,7 +9,7 @@ const styles = {
   },
 };
 
-const ContainedLevel = React.createClass({
+const ContainedLevel = createReactClass({
   // Note: This component modifies portions of the DOM outside of itself upon
   // mounting. This is generally considered a bad practice, and should not be
   // copied elsewhere.

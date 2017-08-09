@@ -1,20 +1,22 @@
 /** @file Render a gallery image/spritesheet as an animated preview */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {EMPTY_IMAGE, PlayBehavior} from '../constants';
-import * as PropTypes from '../PropTypes';
+import * as shapes from '../shapes';
 const MARGIN_PX = 2;
 
 /**
  * Render an animated preview of a spritesheet at a given size, scaled with
  * a fixed aspect ratio to fit.
  */
-const AnimationPreview = React.createClass({
+const AnimationPreview = createReactClass({
   propTypes: {
-    animationProps: PropTypes.AnimationProps.isRequired,
-    sourceUrl: React.PropTypes.string, // of spritesheet
-    width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    playBehavior: React.PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
+    animationProps: shapes.AnimationProps.isRequired,
+    sourceUrl: PropTypes.string, // of spritesheet
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    playBehavior: PropTypes.oneOf([PlayBehavior.ALWAYS_PLAY, PlayBehavior.NEVER_PLAY])
   },
 
   getInitialState: function () {

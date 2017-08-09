@@ -1,11 +1,13 @@
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import msg from '@cdo/locale';
 import * as dataStyles from './dataStyles';
 
-const AddTableListRow = React.createClass({
+const AddTableListRow = createReactClass({
   propTypes: {
-    onTableAdd: React.PropTypes.func.isRequired,
+    onTableAdd: PropTypes.func.isRequired,
   },
 
   getInitialState() {

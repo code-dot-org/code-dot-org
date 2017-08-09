@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import NewProgressBubble from './NewProgressBubble';
@@ -39,7 +42,7 @@ const styles = {
   }
 };
 
-const ProgressBubble = React.createClass({
+const ProgressBubble = createReactClass({
   propTypes: {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
@@ -49,6 +52,7 @@ const ProgressBubble = React.createClass({
     return <NewProgressBubble {...this.props}/>;
   }
 });
+ProgressBubble.displayName = 'ProgressBubble';
 
 // Expose our height, as ProgressBubbleSet needs this to stick the little gray
 // connector between bubbles

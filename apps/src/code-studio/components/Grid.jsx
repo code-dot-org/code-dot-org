@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {
   SquareType,
   WallTypeMask,
@@ -30,18 +32,18 @@ var karelTiles = ['border', 'path', 'start', 'end', 'obstacle'];
 var beeConditions = ['', 'flower-or-hive', 'flower-or-nothing', 'hive-or-nothing', 'flower-hive-or-nothing'];
 var beeFeatures = ['hive', 'flower'];
 
-var Cell = React.createClass({
+var Cell = createReactClass({
   propTypes: {
-    cell: React.PropTypes.object.isRequired,
-    row: React.PropTypes.number.isRequired,
-    col: React.PropTypes.number.isRequired,
-    selected: React.PropTypes.bool.isRequired,
-    onClick: React.PropTypes.func.isRequired,
-    onMouseDown: React.PropTypes.func.isRequired,
-    onMouseOver: React.PropTypes.func.isRequired,
-    onMouseUp: React.PropTypes.func.isRequired,
-    skin: React.PropTypes.string.isRequired,
-    highlighted: React.PropTypes.bool,
+    cell: PropTypes.object.isRequired,
+    row: PropTypes.number.isRequired,
+    col: PropTypes.number.isRequired,
+    selected: PropTypes.bool.isRequired,
+    onClick: PropTypes.func.isRequired,
+    onMouseDown: PropTypes.func.isRequired,
+    onMouseOver: PropTypes.func.isRequired,
+    onMouseUp: PropTypes.func.isRequired,
+    skin: PropTypes.string.isRequired,
+    highlighted: PropTypes.bool,
   },
 
   render: function () {
@@ -130,14 +132,14 @@ var Cell = React.createClass({
   }
 });
 
-var Grid = React.createClass({
+var Grid = createReactClass({
   propTypes: {
-    cells: React.PropTypes.arrayOf(React.PropTypes.arrayOf(React.PropTypes.object)).isRequired,
-    selectedRow: React.PropTypes.number,
-    selectedCol: React.PropTypes.number,
-    skin: React.PropTypes.string.isRequired,
-    onSelectionChange: React.PropTypes.func.isRequired,
-    setCopiedCells: React.PropTypes.func.isRequired,
+    cells: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)).isRequired,
+    selectedRow: PropTypes.number,
+    selectedCol: PropTypes.number,
+    skin: PropTypes.string.isRequired,
+    onSelectionChange: PropTypes.func.isRequired,
+    setCopiedCells: PropTypes.func.isRequired,
   },
 
   getInitialState: () => ({}),

@@ -4,6 +4,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Immutable from 'immutable';
 import FilterHeader from './filterHeader';
@@ -32,18 +34,18 @@ const styles = {
   }
 };
 
-const TutorialExplorer = React.createClass({
+const TutorialExplorer = createReactClass({
   propTypes: {
-    tutorials: React.PropTypes.array.isRequired,
-    filterGroups: React.PropTypes.array.isRequired,
-    initialFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)).isRequired,
-    hideFilters: React.PropTypes.objectOf(React.PropTypes.arrayOf(React.PropTypes.string)),
-    locale: React.PropTypes.string.isRequired,
-    backButton: React.PropTypes.bool,
-    roboticsButtonUrl: React.PropTypes.string,
-    showSortDropdown: React.PropTypes.bool.isRequired,
-    disabledTutorials: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
-    defaultSortBy: React.PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
+    tutorials: PropTypes.array.isRequired,
+    filterGroups: PropTypes.array.isRequired,
+    initialFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)).isRequired,
+    hideFilters: PropTypes.objectOf(PropTypes.arrayOf(PropTypes.string)),
+    locale: PropTypes.string.isRequired,
+    backButton: PropTypes.bool,
+    roboticsButtonUrl: PropTypes.string,
+    showSortDropdown: PropTypes.bool.isRequired,
+    disabledTutorials: PropTypes.arrayOf(PropTypes.string).isRequired,
+    defaultSortBy: PropTypes.oneOf(Object.keys(TutorialsSortBy)).isRequired
   },
 
   shouldScrollToTop: false,

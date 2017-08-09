@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Table, sort} from 'reactabular';
 import color from "../../util/color";
 import commonMsg from '@cdo/locale';
@@ -84,13 +86,13 @@ function thumbnailFormatter(thumbnailUrl) {
     '';
 }
 
-const ProjectsList = React.createClass({
+const ProjectsList = createReactClass({
   propTypes: {
-    projectsData: React.PropTypes.array.isRequired,
+    projectsData: PropTypes.array.isRequired,
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: React.PropTypes.string.isRequired,
-    showProjectThumbnails: React.PropTypes.bool.isRequired,
+    studioUrlPrefix: PropTypes.string.isRequired,
+    showProjectThumbnails: PropTypes.bool.isRequired,
   },
 
   getInitialState() {

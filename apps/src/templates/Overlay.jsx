@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 
 import { hideOverlay } from '../redux/instructions';
@@ -24,11 +26,11 @@ const craftStyle = {
   opacity: 0.8
 };
 
-const Overlay = React.createClass({
+const Overlay = createReactClass({
   propTypes: {
-    visible: React.PropTypes.bool,
-    hide: React.PropTypes.func,
-    isMinecraft: React.PropTypes.bool,
+    visible: PropTypes.bool,
+    hide: PropTypes.func,
+    isMinecraft: PropTypes.bool,
   },
 
   render() {

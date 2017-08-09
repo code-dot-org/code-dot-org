@@ -1,22 +1,22 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
-const workshopShape = React.PropTypes.shape({
-  id: React.PropTypes.number.isRequired,
-  sessions: React.PropTypes.array.isRequired,
-  location_name: React.PropTypes.string.isRequired,
-  location_address: React.PropTypes.string,
-  on_map: React.PropTypes.bool.isRequired,
-  funded: React.PropTypes.bool.isRequired,
-  course: React.PropTypes.string.isRequired,
-  subject: React.PropTypes.string,
-  enrolled_teacher_count: React.PropTypes.number.isRequired,
-  capacity: React.PropTypes.number.isRequired,
-  facilitators: React.PropTypes.array.isRequired,
-  organizer: React.PropTypes.shape({
-    name: React.PropTypes.string.isRequired,
-    email: React.PropTypes.string.isRequired
+const workshopShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  sessions: PropTypes.array.isRequired,
+  location_name: PropTypes.string.isRequired,
+  location_address: PropTypes.string,
+  on_map: PropTypes.bool.isRequired,
+  funded: PropTypes.bool.isRequired,
+  course: PropTypes.string.isRequired,
+  subject: PropTypes.string,
+  enrolled_teacher_count: PropTypes.number.isRequired,
+  capacity: PropTypes.number.isRequired,
+  facilitators: PropTypes.array.isRequired,
+  organizer: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired
   }).isRequired,
-  enrollment_code: React.PropTypes.string
+  enrollment_code: PropTypes.string
 });
 
 module.exports.workshopShape = workshopShape;

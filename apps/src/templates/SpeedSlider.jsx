@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import color from "../util/color";
 import Radium from 'radium';
 import dom from '../dom';
@@ -36,21 +37,19 @@ let trackLength = knobXMax - knobXMin - 5;
  * SpeedSlider for modifying a value.
  * For a usage example, see JSDebugger.
  */
-const SpeedSlider = React.createClass({
-  propTypes: {
-    hasFocus: React.PropTypes.bool,
-    style: React.PropTypes.object,
-    value: React.PropTypes.number.isRequired,
-    lineWidth: React.PropTypes.number,
-    onChange: React.PropTypes.func.isRequired
-  },
+class SpeedSlider extends React.Component {
+  static propTypes = {
+    hasFocus: PropTypes.bool,
+    style: PropTypes.object,
+    value: PropTypes.number.isRequired,
+    lineWidth: PropTypes.number,
+    onChange: PropTypes.func.isRequired
+  };
 
-  getInitialState() {
-    return {
-      dragStart: undefined,
-      valueStart: undefined
-    };
-  },
+  state = {
+    dragStart: undefined,
+    valueStart: undefined
+  };
 
   componentDidMount() {
     this.isAndroid_ = dom.isAndroid();
@@ -59,7 +58,7 @@ const SpeedSlider = React.createClass({
 
     dom.addMouseDownTouchEvent(this.knob_, this.onKnobMouseDown);
     dom.addMouseDownTouchEvent(this.track_, this.onTrackMouseDown);
-  },
+  }
 
   mouseToSvg_(e) {
     var svgPoint = this.SVG_.createSVGPoint();
@@ -81,18 +80,18 @@ const SpeedSlider = React.createClass({
     }
     var matrix = this.SVG_.getScreenCTM().inverse();
     return svgPoint.matrixTransform(matrix);
-  },
+  }
 
   clampValue(val) {
     return Math.min(Math.max(val, 0), 1);
-  },
+  }
 
   svgPositionToValue(position) {
     position = (position - knobXMin)/trackLength;
     return this.clampValue(position);
-  },
+  }
 
-  onTrackMouseDown(event) {
+  onTrackMouseDown = (event) => {
     const mousePosition = this.mouseToSvg_(event);
     const newValue = this.svgPositionToValue(mousePosition.x);
     this.props.onChange(newValue);
@@ -101,35 +100,35 @@ const SpeedSlider = React.createClass({
       valueStart: newValue
     });
     this.startDragging();
-  },
+  };
 
-  onKnobMouseDown(event) {
+  onKnobMouseDown = (event) => {
     const mousePosition = this.mouseToSvg_(event);
     this.setState({
       dragStart: mousePosition.x,
       valueStart: this.props.value
     });
     this.startDragging();
-  },
+  };
 
-  startDragging() {
+  startDragging = () => {
     this.unbindOnMouseMove = dom.addMouseMoveTouchEvent(document, this.onMouseMove);
     this.unbindStopDragging = dom.addMouseUpTouchEvent(document, this.stopDragging);
-  },
+  };
 
-  onMouseMove(event) {
+  onMouseMove = (event) => {
     const mousePosition = this.mouseToSvg_(event);
     const mouseDelta = mousePosition.x - this.state.dragStart;
     const valueDelta = mouseDelta / trackLength;
     const newValue = this.clampValue(this.state.valueStart + valueDelta);
     this.props.onChange(newValue);
-  },
+  };
 
-  stopDragging(event) {
+  stopDragging = (event) => {
     this.setState(this.getInitialState());
     this.unbindOnMouseMove();
     this.unbindStopDragging();
-  },
+  };
 
   render() {
     const props = this.props;
@@ -198,6 +197,6 @@ const SpeedSlider = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default Radium(SpeedSlider);

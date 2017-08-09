@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from '../../../../util/color';
 
 const styles = {
@@ -35,9 +37,9 @@ const styles = {
   }
 };
 
-const ModuleAssignment = React.createClass({
+const ModuleAssignment = createReactClass({
   propTypes: {
-    moduleAssignmentData: React.PropTypes.object
+    moduleAssignmentData: PropTypes.object
   },
 
   render() {
@@ -60,5 +62,5 @@ const ModuleAssignment = React.createClass({
     );
   }
 });
-
+ModuleAssignment.displayName = 'ModuleAssignment';
 export default ModuleAssignment;

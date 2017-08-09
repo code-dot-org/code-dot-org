@@ -1,4 +1,5 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import NumberedSteps, {Step} from './NumberedSteps';
 
 export default storybook => {
@@ -24,7 +25,7 @@ export default storybook => {
         name: 'Fade effect',
         description: `Steps fade in and out as their requirements are met/unmet`,
         story: () => {
-          const FadeEffectExample = React.createClass({
+          const FadeEffectExample = createReactClass({
             getInitialState() {
               return {};
             },

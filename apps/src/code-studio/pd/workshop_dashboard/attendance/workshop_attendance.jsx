@@ -6,6 +6,8 @@
 
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import SessionTime from '../components/session_time';
 import Spinner from '../components/spinner';
 import SessionAttendance from './session_attendance';
@@ -38,15 +40,15 @@ const styles = {
   }
 };
 
-const WorkshopAttendance = React.createClass({
+const WorkshopAttendance = createReactClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired,
-      sessionId: React.PropTypes.string
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired,
+      sessionId: PropTypes.string
     }).isRequired
   },
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import BaseDialog from './BaseDialog';
 import color from "../util/color";
@@ -46,16 +48,16 @@ const styles = {
   },
 };
 
-const StageAchievementDialog = Radium(React.createClass({
+const StageAchievementDialog = Radium(createReactClass({
   propTypes: {
-    assetUrl: React.PropTypes.func,
-    handleClose: React.PropTypes.func,
-    isOpen: React.PropTypes.bool,
-    newStageProgress: React.PropTypes.number,
-    numStars: React.PropTypes.number,
-    onContinue: React.PropTypes.func,
-    showStageProgress: React.PropTypes.bool,
-    stageName: React.PropTypes.string,
+    assetUrl: PropTypes.func,
+    handleClose: PropTypes.func,
+    isOpen: PropTypes.bool,
+    newStageProgress: PropTypes.number,
+    numStars: PropTypes.number,
+    onContinue: PropTypes.func,
+    showStageProgress: PropTypes.bool,
+    stageName: PropTypes.string,
   },
 
   getInitialState() {

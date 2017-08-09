@@ -4,7 +4,8 @@
  * manage their own accounts via email/oauth, or to sync students with an
  * external service like Microsoft Classroom or Clever.
  */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import experiments from '../../util/experiments';

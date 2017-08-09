@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MazeThumbnail from './MazeThumbnail';
 import CompletableLevelThumbnail from './CompletableLevelThumbnail';
 import i18n from '@cdo/locale';
@@ -56,5 +57,5 @@ export default function BonusLevels(props) {
 }
 
 BonusLevels.propTypes = {
-    bonusLevels: React.PropTypes.arrayOf(React.PropTypes.shape(bonusLevel)),
+    bonusLevels: PropTypes.arrayOf(PropTypes.shape(bonusLevel)),
 };

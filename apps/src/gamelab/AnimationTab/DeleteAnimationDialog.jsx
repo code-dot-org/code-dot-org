@@ -1,12 +1,14 @@
 /** @file controls below a dialog to delete animations */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Dialog, {Body, Buttons, Cancel, Confirm} from '../../templates/Dialog';
 
-const DeleteAnimationDialog = React.createClass({
+const DeleteAnimationDialog = createReactClass({
   propTypes: {
-    onDelete: React.PropTypes.func.isRequired,
-    onCancel: React.PropTypes.func.isRequired,
-    isOpen: React.PropTypes.bool.isRequired
+    onDelete: PropTypes.func.isRequired,
+    onCancel: PropTypes.func.isRequired,
+    isOpen: PropTypes.bool.isRequired
   },
 
   render() {

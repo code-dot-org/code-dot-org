@@ -3,14 +3,16 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 
-var PlcHeader = React.createClass({
+var PlcHeader = createReactClass({
   propTypes: {
-    unit_name: React.PropTypes.string,
-    unit_view_path: React.PropTypes.string,
-    course_view_path: React.PropTypes.string,
-    page_name: React.PropTypes.string
+    unit_name: PropTypes.string,
+    unit_view_path: PropTypes.string,
+    course_view_path: PropTypes.string,
+    page_name: PropTypes.string
   },
 
   render: function () {

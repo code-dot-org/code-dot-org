@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import Instructions from './Instructions';
 import msg from '@cdo/locale';
@@ -8,17 +10,17 @@ import renderer from "../../util/StylelessRenderer";
 /**
  * Component for displaying our instructions in the context of a modal dialog
  */
-const DialogInstructions = React.createClass({
+const DialogInstructions = createReactClass({
   propTypes: {
     // redux
-    puzzleNumber: React.PropTypes.number.isRequired,
-    stageTotal: React.PropTypes.number.isRequired,
-    shortInstructions: React.PropTypes.string.isRequired,
-    shortInstructions2: React.PropTypes.string,
-    longInstructions: React.PropTypes.string,
-    imgURL: React.PropTypes.string,
-    imgOnly: React.PropTypes.bool,
-    hintsOnly: React.PropTypes.bool,
+    puzzleNumber: PropTypes.number.isRequired,
+    stageTotal: PropTypes.number.isRequired,
+    shortInstructions: PropTypes.string.isRequired,
+    shortInstructions2: PropTypes.string,
+    longInstructions: PropTypes.string,
+    imgURL: PropTypes.string,
+    imgOnly: PropTypes.bool,
+    hintsOnly: PropTypes.bool,
   },
   render() {
     const renderedMarkdown = this.props.longInstructions ?

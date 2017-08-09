@@ -1,13 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import WorkshopTableLoader from './components/workshop_table_loader';
 import SurveyResultsHeader from './components/survey_results_header';
 import Permission from '../permission';
 
-const SurveyResults = React.createClass({
+const SurveyResults = createReactClass({
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string
+    params: PropTypes.shape({
+      workshopId: PropTypes.string
     })
   },
 

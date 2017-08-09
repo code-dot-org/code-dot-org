@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import color from "@cdo/apps/util/color";
 import styleConstants from '../../styleConstants';
 import i18n from '@cdo/locale';
@@ -89,7 +92,7 @@ export const styles = {
   }
 };
 
-const SectionsTable = React.createClass({
+const SectionsTable = createReactClass({
   propTypes: {
     sections: shapes.sections,
     isRtl: PropTypes.bool.isRequired,

@@ -1,7 +1,7 @@
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
@@ -15,7 +15,7 @@ describe('AppLabCrosshairOverlay', () => {
   var renderer, stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    renderer = ReactTestUtils.createRenderer();
+    renderer = new ShallowRenderer();
     stubDraggedElementDropPoint = sinon.stub(gridUtils, 'draggedElementDropPoint');
   });
 

@@ -1,5 +1,7 @@
 import $ from 'jquery';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ProjectCard from './ProjectCard';
 import {MAX_PROJECTS_PER_CATEGORY, projectPropType} from './projectConstants';
 import color from "../../util/color";
@@ -42,7 +44,7 @@ const styles = {
 
 const NUM_PROJECTS_TO_ADD = 12;
 
-const ProjectAppTypeArea = React.createClass({
+const ProjectAppTypeArea = createReactClass({
   propTypes: {
     labKey: PropTypes.string.isRequired,
     labName: PropTypes.string.isRequired,

@@ -3,11 +3,13 @@
  * Route: /workshops/new
  */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import WorkshopForm from './components/workshop_form';
 
-const NewWorkshop = React.createClass({
+const NewWorkshop = createReactClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   handleSaved(workshop) {

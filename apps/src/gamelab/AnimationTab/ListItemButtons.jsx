@@ -1,5 +1,6 @@
 /** @file controls below an animation thumbnail */
 import React from 'react';
+import PropTypes from 'prop-types';
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
 import color from "../../util/color";
 import Radium from 'radium';
@@ -7,7 +8,7 @@ import SpeedSlider from '../../templates/SpeedSlider';
 import ItemLoopToggle from './ItemLoopToggle';
 import DeleteAnimationDialog from './DeleteAnimationDialog';
 
-var styles = {
+const styles = {
   root: {
     marginRight: 6,
     marginLeft: 6,
@@ -38,7 +39,7 @@ var styles = {
   }
 };
 
-var sliderStyle = {
+const sliderStyle = {
   float: 'none',
   display: 'block'
 };
@@ -46,36 +47,30 @@ var sliderStyle = {
 /**
  * The delete and duplicate controls beneath an animation or frame thumbnail.
  */
-const ListItemButtons = React.createClass({
-  propTypes: {
-    onCloneClick: React.PropTypes.func.isRequired,
-    onDeleteClick: React.PropTypes.func.isRequired,
-    onLoopingChanged: React.PropTypes.func.isRequired,
-    looping: React.PropTypes.bool.isRequired,
-    onFrameDelayChanged: React.PropTypes.func.isRequired,
-    frameDelay: React.PropTypes.number.isRequired,
-    singleFrameAnimation: React.PropTypes.bool.isRequired
-  },
+class ListItemButtons extends React.Component {
+  static propTypes = {
+    onCloneClick: PropTypes.func.isRequired,
+    onDeleteClick: PropTypes.func.isRequired,
+    onLoopingChanged: PropTypes.func.isRequired,
+    looping: PropTypes.bool.isRequired,
+    onFrameDelayChanged: PropTypes.func.isRequired,
+    frameDelay: PropTypes.number.isRequired,
+    singleFrameAnimation: PropTypes.bool.isRequired
+  };
 
-  getInitialState() {
-    return {
-      isDeleteDialogOpen: false
-    };
-  },
+  state = {
+    isDeleteDialogOpen: false
+  };
 
-  closeDeleteDialog() {
-    this.setState({isDeleteDialogOpen: false});
-  },
+  closeDeleteDialog = () => this.setState({isDeleteDialogOpen: false});
 
-  openDeleteDialog() {
-    this.setState({isDeleteDialogOpen: true});
-  },
+  openDeleteDialog = () => this.setState({isDeleteDialogOpen: true});
 
-  onDeleteItem(evt) {
+  onDeleteItem = (evt) => {
     this.closeDeleteDialog();
     this.props.onDeleteClick();
     evt.stopPropagation();
-  },
+  };
 
   render() {
     const trashTooltip = (<Tooltip id={0}>Delete</Tooltip>);
@@ -117,6 +112,6 @@ const ListItemButtons = React.createClass({
       </div>
     );
   }
-});
+}
 
 module.exports = Radium(ListItemButtons);

@@ -1,6 +1,8 @@
 /** @file Root component for Modulo Clock widget */
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 import ModuloClock from './ModuloClock';
 import IntegerDropdown from './IntegerDropdown';
@@ -38,7 +40,7 @@ const style = {
 };
 
 /** Root component for Public Key Cryptography widget */
-const ModuloClockWidget = React.createClass({
+const ModuloClockWidget = createReactClass({
   getInitialState() {
     return {
       dividend: 247,
@@ -129,6 +131,6 @@ function LabelBelow(props) {
     </div>);
 }
 LabelBelow.propTypes = {
-  label: React.PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   children: AnyChildren
 };

@@ -1,17 +1,19 @@
 /** @file Hidden file input with interface for handling uploads. */
 import $ from 'jquery';
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * A hidden file input providing upload functionality with event hooks.
  */
-var HiddenUploader = React.createClass({
+var HiddenUploader = createReactClass({
   propTypes: {
-    toUrl: React.PropTypes.string.isRequired,
-    allowedExtensions: React.PropTypes.string,
-    onUploadStart: React.PropTypes.func.isRequired,
-    onUploadDone: React.PropTypes.func.isRequired,
-    onUploadError: React.PropTypes.func
+    toUrl: PropTypes.string.isRequired,
+    allowedExtensions: PropTypes.string,
+    onUploadStart: PropTypes.func.isRequired,
+    onUploadDone: PropTypes.func.isRequired,
+    onUploadError: PropTypes.func
   },
 
   componentDidMount: function () {

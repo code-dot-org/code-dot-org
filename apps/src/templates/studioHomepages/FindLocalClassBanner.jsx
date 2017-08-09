@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import GridContainer from './GridContainer';
 import Button from '@cdo/apps/templates/Button';
@@ -44,10 +46,10 @@ const styles = {
   }
 };
 
-const FindLocalClassBanner = React.createClass({
+const FindLocalClassBanner = createReactClass({
   propTypes: {
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    codeOrgUrlPrefix: PropTypes.string.isRequired,
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

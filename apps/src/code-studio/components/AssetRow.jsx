@@ -1,4 +1,6 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var filesApi = require('@cdo/apps/clientApi').files;
 import AssetThumbnail from './AssetThumbnail';
@@ -6,14 +8,14 @@ import AssetThumbnail from './AssetThumbnail';
 /**
  * A single row in the AssetManager, describing one asset.
  */
-var AssetRow = React.createClass({
+var AssetRow = createReactClass({
   propTypes: {
-    name: React.PropTypes.string.isRequired,
-    type: React.PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
-    size: React.PropTypes.number,
-    useFilesApi: React.PropTypes.bool.isRequired,
-    onChoose: React.PropTypes.func,
-    onDelete: React.PropTypes.func.isRequired
+    name: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(['image', 'audio', 'video', 'pdf', 'doc']).isRequired,
+    size: PropTypes.number,
+    useFilesApi: PropTypes.bool.isRequired,
+    onChoose: PropTypes.func,
+    onDelete: PropTypes.func.isRequired
   },
 
   getInitialState: function () {

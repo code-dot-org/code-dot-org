@@ -3,7 +3,9 @@
  * so this can only be used in cases where we have a redux store.
  */
 
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 
@@ -98,7 +100,7 @@ const MIN_CONSOLE_WIDTH = 345;
 /**
  * The parent JsDebugger component.
  */
-export const UnconnectedJsDebugger = Radium(React.createClass({
+export const UnconnectedJsDebugger = Radium(createReactClass({
   propTypes: {
     // from redux
     debugButtons: PropTypes.bool.isRequired,
@@ -546,6 +548,7 @@ export const UnconnectedJsDebugger = Radium(React.createClass({
     );
   }
 }));
+UnconnectedJsDebugger.displayName = 'UnconnectedJsDebugger';
 
 export default connect(
   (state) => ({

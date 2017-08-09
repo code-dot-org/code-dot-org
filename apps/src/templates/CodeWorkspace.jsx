@@ -1,14 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
-var Radium = require('radium');
-var connect = require('react-redux').connect;
-var ProtectedStatefulDiv = require('./ProtectedStatefulDiv');
+import PropTypes from 'prop-types';
+import Radium from 'radium';
+import {connect} from 'react-redux';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-var msg = require('@cdo/locale');
-var commonStyles = require('../commonStyles');
-var color = require("../util/color");
-var utils = require('@cdo/apps/utils');
+import msg from '@cdo/locale';
+import commonStyles from '../commonStyles';
+import color from '../util/color';
+import * as utils from '@cdo/apps/utils';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import SettingsCog from '../lib/ui/SettingsCog';
 import ShowCodeToggle from './ShowCodeToggle';
@@ -29,21 +30,21 @@ var styles = {
   },
 };
 
-var CodeWorkspace = React.createClass({
-  propTypes: {
-    isRtl: React.PropTypes.bool.isRequired,
-    editCode: React.PropTypes.bool.isRequired,
-    readonlyWorkspace: React.PropTypes.bool.isRequired,
-    showDebugger: React.PropTypes.bool.isRequired,
-    style: React.PropTypes.bool,
-    isRunning: React.PropTypes.bool.isRequired,
-    pinWorkspaceToBottom: React.PropTypes.bool.isRequired,
-    isMinecraft: React.PropTypes.bool.isRequired,
-    runModeIndicators: React.PropTypes.bool.isRequired,
-    withSettingsCog: React.PropTypes.bool,
-  },
+class CodeWorkspace extends React.Component {
+  static propTypes = {
+    isRtl: PropTypes.bool.isRequired,
+    editCode: PropTypes.bool.isRequired,
+    readonlyWorkspace: PropTypes.bool.isRequired,
+    showDebugger: PropTypes.bool.isRequired,
+    style: PropTypes.bool,
+    isRunning: PropTypes.bool.isRequired,
+    pinWorkspaceToBottom: PropTypes.bool.isRequired,
+    isMinecraft: PropTypes.bool.isRequired,
+    runModeIndicators: PropTypes.bool.isRequired,
+    withSettingsCog: PropTypes.bool,
+  };
 
-  shouldComponentUpdate: function (nextProps) {
+  shouldComponentUpdate(nextProps) {
     // This component is current semi-protected. We don't want to completely
     // disallow rerendering, since that would prevent us from being able to
     // update styles. However, we do want to prevent property changes that would
@@ -60,9 +61,9 @@ var CodeWorkspace = React.createClass({
     }.bind(this));
 
     return true;
-  },
+  }
 
-  onDebuggerSlide(debuggerHeight) {
+  onDebuggerSlide = (debuggerHeight) => {
     const textbox = this.codeTextbox.getRoot();
     if (textbox.style.bottom) {
       $(textbox).animate(
@@ -81,7 +82,7 @@ var CodeWorkspace = React.createClass({
       textbox.style.bottom = debuggerHeight + 'px';
       utils.fireResizeEvent();
     }
-  },
+  };
 
   renderToolboxHeaders() {
     const {
@@ -133,12 +134,12 @@ var CodeWorkspace = React.createClass({
         {settingsCog}
       </PaneSection>
     ];
-  },
+  }
 
-  onToggleShowCode(usingBlocks) {
+  onToggleShowCode = (usingBlocks) => {
     this.blockCounterEl.style.display =
         (usingBlocks && studioApp.enableShowBlockCount) ? 'inline-block' : 'none';
-  },
+  };
 
   render() {
     var props = this.props;
@@ -214,7 +215,7 @@ var CodeWorkspace = React.createClass({
       </span>
     );
   }
-});
+}
 
 module.exports = connect(state => ({
   editCode: state.pageConstants.isDroplet,

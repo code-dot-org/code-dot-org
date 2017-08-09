@@ -1,5 +1,7 @@
 /** @file Dropdown for selecting design mode screens */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "../util/color";
 import commonStyles from '../commonStyles';
@@ -24,19 +26,19 @@ var styles = {
  * for selecting a screen to edit.
  * @type {function}
  */
-var ScreenSelector = React.createClass({
+var ScreenSelector = createReactClass({
   propTypes: {
     // from connect
-    currentScreenId: React.PropTypes.string,
-    interfaceMode: React.PropTypes.string.isRequired,
-    hasDesignMode: React.PropTypes.bool.isRequired,
-    onScreenChange: React.PropTypes.func.isRequired,
-    onImport: React.PropTypes.func.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
+    currentScreenId: PropTypes.string,
+    interfaceMode: PropTypes.string.isRequired,
+    hasDesignMode: PropTypes.bool.isRequired,
+    onScreenChange: PropTypes.func.isRequired,
+    onImport: PropTypes.func.isRequired,
+    isRunning: PropTypes.bool.isRequired,
 
     // passed explicitly
-    screenIds: React.PropTypes.array.isRequired,
-    onCreate: React.PropTypes.func.isRequired,
+    screenIds: PropTypes.array.isRequired,
+    onCreate: PropTypes.func.isRequired,
   },
 
   handleChange: function (evt) {

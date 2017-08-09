@@ -4,7 +4,9 @@
  * and have the evaluated result show up in an output area, along with any
  * console logs.
  */
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 
 import {KeyCodes} from '../../../constants';
@@ -101,7 +103,7 @@ const DebugConsole = connect(
   },
   null,
   {withRef: true}
-)(React.createClass({
+)(createReactClass({
   propTypes: {
     // from redux
     commandHistory: PropTypes.instanceOf(CommandHistory),

@@ -1,14 +1,16 @@
 import Dialog from '../../templates/Dialog';
 import PendingButton from '../../templates/PendingButton';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import applabMsg from '@cdo/applab/locale';
 import * as dataStyles from './dataStyles';
 
-const ConfirmImportButton = React.createClass({
+const ConfirmImportButton = createReactClass({
   propTypes: {
-    importCsv: React.PropTypes.func.isRequired,
-    containerStyle: React.PropTypes.any,
+    importCsv: PropTypes.func.isRequired,
+    containerStyle: PropTypes.any,
   },
 
   getInitialState() {

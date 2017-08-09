@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import color from "../util/color";
 import AgeDropdown from './AgeDropdown';
@@ -30,12 +32,12 @@ const styles = {
  * it will ask your age. If the app stores data, it will also alert you to
  * that.
  */
-const ShareWarnings = React.createClass({
+const ShareWarnings = createReactClass({
   propTypes: {
-    promptForAge: React.PropTypes.bool.isRequired,
-    showStoreDataAlert: React.PropTypes.bool.isRequired,
-    handleClose: React.PropTypes.func.isRequired,
-    handleTooYoung: React.PropTypes.func.isRequired
+    promptForAge: PropTypes.bool.isRequired,
+    showStoreDataAlert: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    handleTooYoung: PropTypes.func.isRequired
   },
 
   handleOk() {

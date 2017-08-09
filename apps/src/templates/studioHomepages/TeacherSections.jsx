@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import i18n from "@cdo/locale";
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
@@ -13,7 +14,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 class TeacherSections extends Component {
   static propTypes = {
     sections: shapes.sections, // Without experiment
-    isRtl: React.PropTypes.bool.isRequired,
+    isRtl: PropTypes.bool.isRequired,
 
     //Redux provided
     numTeacherSections: PropTypes.number.isRequired,

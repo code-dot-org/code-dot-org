@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -42,7 +45,7 @@ const styles = {
  * If you click the import button, it grabs new descriptions from curriculum
  * builder and shows both sets.
  */
-const StageDescriptions = React.createClass({
+const StageDescriptions = createReactClass({
   propTypes: {
     scriptName: PropTypes.string.isRequired,
     currentDescriptions: PropTypes.arrayOf(

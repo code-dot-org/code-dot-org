@@ -1,5 +1,7 @@
 
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var RotateContainer = require('../templates/RotateContainer');
 var connect = require('react-redux').connect;
 
@@ -7,12 +9,12 @@ var connect = require('react-redux').connect;
  * Wrapper component for all Code Studio app types, which provides rotate
  * container and clear-div but otherwise just renders children.
  */
-var StudioAppWrapper = React.createClass({
+var StudioAppWrapper = createReactClass({
   propTypes: {
-    assetUrl: React.PropTypes.func.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
-    isShareView: React.PropTypes.bool.isRequired,
-    children: React.PropTypes.node,
+    assetUrl: PropTypes.func.isRequired,
+    isEmbedView: PropTypes.bool.isRequired,
+    isShareView: PropTypes.bool.isRequired,
+    children: PropTypes.node,
   },
 
   requiresLandscape: function () {

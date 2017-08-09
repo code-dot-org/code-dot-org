@@ -1,5 +1,7 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import VirtualizedSelect from 'react-virtualized-select';
 import classNames from 'classnames';
 import {LINE_HEIGHT} from './style';
@@ -7,14 +9,14 @@ import 'react-virtualized/styles.css';
 import 'react-select/dist/react-select.css';
 import 'react-virtualized-select/styles.css';
 
-const IntegerDropdown = React.createClass({
+const IntegerDropdown = createReactClass({
   propTypes: {
-    className: React.PropTypes.string,
-    value: React.PropTypes.number,
-    options: React.PropTypes.arrayOf(React.PropTypes.number).isRequired,
-    style: React.PropTypes.object,
-    disabled: React.PropTypes.bool,
-    onChange: React.PropTypes.func.isRequired
+    className: PropTypes.string,
+    value: PropTypes.number,
+    options: PropTypes.arrayOf(PropTypes.number).isRequired,
+    style: PropTypes.object,
+    disabled: PropTypes.bool,
+    onChange: PropTypes.func.isRequired
   },
 
   onChange(selected) {

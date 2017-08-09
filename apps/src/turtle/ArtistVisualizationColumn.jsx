@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
@@ -63,7 +64,7 @@ var ArtistVisualizationColumn = function (props) {
 };
 
 ArtistVisualizationColumn.propTypes = {
-  iconPath: React.PropTypes.string.isRequired
+  iconPath: PropTypes.string.isRequired
 };
 
 module.exports = ArtistVisualizationColumn;

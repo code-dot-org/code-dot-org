@@ -1,5 +1,7 @@
 /** @file Crosshair and guides over visualization */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { isPointInBounds } from '../util/grid';
 export const CROSSHAIR_MARGIN = 6;
 
@@ -16,13 +18,13 @@ export const styles = {
  * Should be rendered inside a VisualizationOverlay.
  * @constructor
  */
-const CrosshairOverlay = React.createClass({
+const CrosshairOverlay = createReactClass({
   propTypes: {
     // width, height, mouseX and mouseY are given in app-space, not screen-space
-    width: React.PropTypes.number,
-    height: React.PropTypes.number,
-    mouseX: React.PropTypes.number,
-    mouseY: React.PropTypes.number
+    width: PropTypes.number,
+    height: PropTypes.number,
+    mouseX: PropTypes.number,
+    mouseY: PropTypes.number
   },
 
   render() {

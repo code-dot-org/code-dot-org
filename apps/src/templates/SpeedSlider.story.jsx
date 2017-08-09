@@ -1,7 +1,8 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import SpeedSlider from './SpeedSlider';
 
-const StorybookHarness = React.createClass({
+const StorybookHarness = createReactClass({
     getInitialState() {
       return {
         value: 0.5

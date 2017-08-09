@@ -1,5 +1,5 @@
 var TestResults = require('@cdo/apps/constants.js').TestResults;
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 

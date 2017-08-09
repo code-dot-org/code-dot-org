@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import OptionsSelectRow from './OptionsSelectRow';
@@ -11,11 +13,11 @@ import color from "../../util/color";
 import EnumPropertyRow from './EnumPropertyRow';
 import * as elementUtils from './elementUtils';
 
-var DropdownProperties = React.createClass({
+var DropdownProperties = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
   },
 
   render: function () {
@@ -98,11 +100,11 @@ var DropdownProperties = React.createClass({
   }
 });
 
-var DropdownEvents = React.createClass({
+var DropdownEvents = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
   },
 
   getChangeEventCode: function () {

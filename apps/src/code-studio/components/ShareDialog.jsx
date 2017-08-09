@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import BaseDialog from '../../templates/BaseDialog';
 import PendingButton from '../../templates/PendingButton';
@@ -66,27 +68,27 @@ function checkImageReachability(imageUrl, callback) {
 /**
  * Share Dialog used by projects
  */
-const ShareDialog = React.createClass({
+const ShareDialog = createReactClass({
   propTypes: {
-    i18n: React.PropTypes.shape({
-      t: React.PropTypes.func.isRequired,
+    i18n: PropTypes.shape({
+      t: PropTypes.func.isRequired,
     }).isRequired,
-    icon: React.PropTypes.string,
-    shareUrl: React.PropTypes.string.isRequired,
-    isAbusive: React.PropTypes.bool.isRequired,
-    isOpen: React.PropTypes.bool.isRequired,
-    isSignedIn: React.PropTypes.bool.isRequired,
-    isPublished: React.PropTypes.bool.isRequired,
-    isUnpublishPending: React.PropTypes.bool.isRequired,
-    channelId: React.PropTypes.string.isRequired,
-    appType: React.PropTypes.string.isRequired,
-    onClickPopup: React.PropTypes.func.isRequired,
-    onClickExport: React.PropTypes.func,
-    onClose: React.PropTypes.func.isRequired,
-    onShowPublishDialog: React.PropTypes.func.isRequired,
-    onUnpublish: React.PropTypes.func.isRequired,
+    icon: PropTypes.string,
+    shareUrl: PropTypes.string.isRequired,
+    isAbusive: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
+    isSignedIn: PropTypes.bool.isRequired,
+    isPublished: PropTypes.bool.isRequired,
+    isUnpublishPending: PropTypes.bool.isRequired,
+    channelId: PropTypes.string.isRequired,
+    appType: PropTypes.string.isRequired,
+    onClickPopup: PropTypes.func.isRequired,
+    onClickExport: PropTypes.func,
+    onClose: PropTypes.func.isRequired,
+    onShowPublishDialog: PropTypes.func.isRequired,
+    onUnpublish: PropTypes.func.isRequired,
     hideBackdrop: BaseDialog.propTypes.hideBackdrop,
-    canShareSocial: React.PropTypes.bool.isRequired,
+    canShareSocial: PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {

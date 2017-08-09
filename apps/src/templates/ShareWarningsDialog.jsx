@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 import ShareWarnings from './ShareWarnings';
 
@@ -34,12 +36,12 @@ const styles = {
 /**
  * Modal for our SharingWarnings.
  */
-const ShareWarningsDialog = React.createClass({
+const ShareWarningsDialog = createReactClass({
   propTypes: {
-    promptForAge: React.PropTypes.bool.isRequired,
-    showStoreDataAlert: React.PropTypes.bool.isRequired,
-    handleClose: React.PropTypes.func.isRequired,
-    handleTooYoung: React.PropTypes.func.isRequired
+    promptForAge: PropTypes.bool.isRequired,
+    showStoreDataAlert: PropTypes.bool.isRequired,
+    handleClose: PropTypes.func.isRequired,
+    handleTooYoung: PropTypes.func.isRequired
   },
 
   getInitialState() {

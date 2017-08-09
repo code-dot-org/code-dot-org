@@ -6,6 +6,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {
   FormControl,
@@ -45,14 +47,14 @@ const styles = {
 
 const INTERVAL = {minutes: 30};
 
-const TimeSelect = React.createClass({
+const TimeSelect = createReactClass({
   propTypes: {
-    id: React.PropTypes.string.isRequired,
-    value: React.PropTypes.string,
-    readOnly: React.PropTypes.bool,
-    onChange: React.PropTypes.func.isRequired,
-    minTime: React.PropTypes.object, // moment
-    maxTime: React.PropTypes.object // moment
+    id: PropTypes.string.isRequired,
+    value: PropTypes.string,
+    readOnly: PropTypes.bool,
+    onChange: PropTypes.func.isRequired,
+    minTime: PropTypes.object, // moment
+    maxTime: PropTypes.object // moment
   },
 
   handleChange(e) {

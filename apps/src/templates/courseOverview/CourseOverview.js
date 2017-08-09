@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import { ViewType } from '@cdo/apps/code-studio/stageLockRedux';
 import CourseScript from './CourseScript';
 import CourseOverviewTopRow from './CourseOverviewTopRow';

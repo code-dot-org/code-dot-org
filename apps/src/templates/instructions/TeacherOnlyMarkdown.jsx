@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import marked from 'marked';
 import renderer from "../../util/StylelessRenderer";
@@ -45,7 +46,7 @@ const TeacherOnlyMarkdown = ({content}) => {
   );
 };
 TeacherOnlyMarkdown.propTypes = {
-  content: React.PropTypes.string
+  content: PropTypes.string
 };
 
 export default connect(state => ({

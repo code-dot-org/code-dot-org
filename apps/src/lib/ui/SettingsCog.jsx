@@ -1,5 +1,6 @@
 /** @file Settings menu cog icon */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import msg from '@cdo/locale';
 import FontAwesome from '../../templates/FontAwesome';

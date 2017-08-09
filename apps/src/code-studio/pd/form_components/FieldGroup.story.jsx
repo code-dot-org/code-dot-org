@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FieldGroup from './FieldGroup';
 
 class TestWrapper extends React.Component {
@@ -37,7 +38,7 @@ class TestWrapper extends React.Component {
 }
 
 TestWrapper.propTypes = {
-  onChange: React.PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired
 };
 
 export default storybook => {

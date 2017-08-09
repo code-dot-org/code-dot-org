@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
 
@@ -13,9 +15,9 @@ var styles = {
 /**
  * A duplicate button that helps replicate elements
  */
-var DuplicateElementButton = React.createClass({
+var DuplicateElementButton = createReactClass({
   propTypes: {
-    handleDuplicate: React.PropTypes.func.isRequired
+    handleDuplicate: PropTypes.func.isRequired
   },
 
   handleDuplicate: function (event) {

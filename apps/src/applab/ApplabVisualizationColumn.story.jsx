@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import {ApplabInterfaceMode} from './constants';
@@ -17,8 +18,8 @@ export default function (storybook) {
     return <Provider store={store}>{children}</Provider>;
   }
   StubProvider.propTypes = {
-    state: React.PropTypes.object.isRequired,
-    children: React.PropTypes.node.isRequired,
+    state: PropTypes.object.isRequired,
+    children: PropTypes.node.isRequired,
   };
 
   const pageConstants = {

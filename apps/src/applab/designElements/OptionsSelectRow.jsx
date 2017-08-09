@@ -1,11 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import * as rowStyle from './rowStyle';
 
-var OptionsSelectRow = React.createClass({
+var OptionsSelectRow = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLSelectElement).isRequired,
-    handleChange: React.PropTypes.func,
-    desc: React.PropTypes.node,
+    element: PropTypes.instanceOf(HTMLSelectElement).isRequired,
+    handleChange: PropTypes.func,
+    desc: PropTypes.node,
   },
 
   getInitialState: function () {

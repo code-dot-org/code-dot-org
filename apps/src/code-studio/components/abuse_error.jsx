@@ -1,20 +1,22 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * A component containing some text/links for projects that have had abuse
  * reported. This is used in our blocking AbuseBox, in the share dialog, and
  * in our smaller alert in apps.
  */
-var AbuseError = React.createClass({
+var AbuseError = createReactClass({
   propTypes: {
-    i18n: React.PropTypes.shape({
-      tos: React.PropTypes.string.isRequired,
-      contact_us: React.PropTypes.string.isRequired
+    i18n: PropTypes.shape({
+      tos: PropTypes.string.isRequired,
+      contact_us: PropTypes.string.isRequired
     }).isRequired,
-    className: React.PropTypes.string,
-    style: React.PropTypes.object,
-    textStyle: React.PropTypes.object
+    className: PropTypes.string,
+    style: PropTypes.object,
+    textStyle: PropTypes.object
   },
   render: function () {
     // It's only OK to use dangerouslySetInnerHTML as long as we're not

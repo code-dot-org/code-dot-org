@@ -1,6 +1,8 @@
 
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 
 /**
@@ -11,10 +13,10 @@ import Radium from 'radium';
  * Useful when React is wrapping external libraries or parts of our UI that are
  * not yet driven by React.
  */
-var ProtectedStatefulDiv = React.createClass({
+var ProtectedStatefulDiv = createReactClass({
   propTypes: {
-    contentFunction: React.PropTypes.func,
-    children: React.PropTypes.node,
+    contentFunction: PropTypes.func,
+    children: PropTypes.node,
   },
 
   shouldComponentUpdate: function () {
@@ -44,5 +46,6 @@ var ProtectedStatefulDiv = React.createClass({
     return <div {..._.omit(this.props, ['contentFunction'])} ref="root"/>;
   }
 });
+ProtectedStatefulDiv.displayName = 'ProtectedStatefulDiv';
 
 export default Radium(ProtectedStatefulDiv);

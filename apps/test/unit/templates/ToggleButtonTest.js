@@ -1,7 +1,7 @@
 import {assert} from '../../util/configuredChai';
 var testUtils = require('./../../util/testUtils');
 var React = require('react');
-var ReactTestUtils = require('react-addons-test-utils');
+import ShallowRenderer from 'react-test-renderer/shallow';
 
 describe('ToggleButton', function () {
 
@@ -11,7 +11,7 @@ describe('ToggleButton', function () {
   var renderer;
 
   beforeEach(function () {
-    renderer = ReactTestUtils.createRenderer();
+    renderer = new ShallowRenderer();
   });
 
   it('generates a "button" element', function () {

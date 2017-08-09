@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import BooleanPropertyRow from './BooleanPropertyRow';
 import ZOrderRow from './ZOrderRow';
@@ -10,11 +12,11 @@ import * as elementUtils from './elementUtils';
 // Prefix used to generate default group ids
 var GROUP_ID_PREFIX = 'radio_group';
 
-var RadioButtonProperties = React.createClass({
+var RadioButtonProperties = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onDepthChange: React.PropTypes.func.isRequired
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onDepthChange: PropTypes.func.isRequired
   },
 
   render: function () {
@@ -78,11 +80,11 @@ var RadioButtonProperties = React.createClass({
   }
 });
 
-var RadioButtonEvents = React.createClass({
+var RadioButtonEvents = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired
   },
 
   getChangeEventCode: function () {

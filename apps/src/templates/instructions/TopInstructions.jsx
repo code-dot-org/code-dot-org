@@ -1,5 +1,7 @@
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 
 import TopInstructionsCSF from './TopInstructionsCSF';
@@ -9,13 +11,13 @@ import TopInstructionsCSP from './TopInstructionsCSP';
  * Simple class allowing us to have differences between CSF and CSP top
  * instructions. Ultimately those might be combined back into one.
  */
-const TopInstructions = React.createClass({
+const TopInstructions = createReactClass({
   propTypes: {
-    hidden: React.PropTypes.bool.isRequired,
-    noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasContainedLevels: React.PropTypes.bool,
-    shortInstructions: React.PropTypes.string,
-    longInstructions: React.PropTypes.string,
+    hidden: PropTypes.bool.isRequired,
+    noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
+    hasContainedLevels: PropTypes.bool,
+    shortInstructions: PropTypes.string,
+    longInstructions: PropTypes.string,
   },
 
   render() {

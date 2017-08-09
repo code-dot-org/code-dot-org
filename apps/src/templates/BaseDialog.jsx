@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * BaseDialog
@@ -6,22 +8,22 @@ import React from 'react';
  * semi-transparent backdrop. Can be closed by clicking the x, clicking the
  * backdrop, or pressing esc.
  */
-var BaseDialog = React.createClass({
+var BaseDialog = createReactClass({
   propTypes: {
-    isOpen: React.PropTypes.bool,
-    handleClose: React.PropTypes.func,
-    uncloseable: React.PropTypes.bool,
-    hideCloseButton: React.PropTypes.bool,
-    handleKeyDown: React.PropTypes.func,
-    hideBackdrop: React.PropTypes.bool,
-    fullWidth: React.PropTypes.bool,
-    useUpdatedStyles: React.PropTypes.bool,
-    useDeprecatedGlobalStyles: React.PropTypes.bool,
-    children: React.PropTypes.node,
-    assetUrl: React.PropTypes.func,
-    fixedWidth: React.PropTypes.number,
-    fixedHeight: React.PropTypes.number,
-    style: React.PropTypes.object,
+    isOpen: PropTypes.bool,
+    handleClose: PropTypes.func,
+    uncloseable: PropTypes.bool,
+    hideCloseButton: PropTypes.bool,
+    handleKeyDown: PropTypes.func,
+    hideBackdrop: PropTypes.bool,
+    fullWidth: PropTypes.bool,
+    useUpdatedStyles: PropTypes.bool,
+    useDeprecatedGlobalStyles: PropTypes.bool,
+    children: PropTypes.node,
+    assetUrl: PropTypes.func,
+    fixedWidth: PropTypes.number,
+    fixedHeight: PropTypes.number,
+    style: PropTypes.object,
   },
 
   componentDidMount: function () {
@@ -144,4 +146,5 @@ var BaseDialog = React.createClass({
     );
   }
 });
+BaseDialog.displayName = 'BaseDialog';
 module.exports = BaseDialog;

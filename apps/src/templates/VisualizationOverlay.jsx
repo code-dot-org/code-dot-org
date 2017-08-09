@@ -1,6 +1,8 @@
 /** @file SVG Visualization Overlay */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 
 /**
@@ -10,14 +12,14 @@ import { connect } from 'react-redux';
  *   Efficiently transforming mouse position into app-space
  * @constructor
  */
-export let VisualizationOverlay = React.createClass({
+export let VisualizationOverlay = createReactClass({
   propTypes: {
-    width: React.PropTypes.number.isRequired,
-    height: React.PropTypes.number.isRequired,
-    areOverlaysVisible: React.PropTypes.bool.isRequired,
-    areRunStateOverlaysVisible: React.PropTypes.bool.isRequired,
-    onMouseMove: React.PropTypes.func,
-    children: React.PropTypes.node,
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    areOverlaysVisible: PropTypes.bool.isRequired,
+    areRunStateOverlaysVisible: PropTypes.bool.isRequired,
+    onMouseMove: PropTypes.func,
+    children: PropTypes.node,
   },
 
   getInitialState: () => ({

@@ -2,13 +2,15 @@
  * List of facilitators for display in the workshop summary.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
-const FacilitatorsList = React.createClass({
+const FacilitatorsList = createReactClass({
   propTypes: {
-    facilitators: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string,
-        email: React.PropTypes.string
+    facilitators: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        email: PropTypes.string
       })
     ).isRequired
   },

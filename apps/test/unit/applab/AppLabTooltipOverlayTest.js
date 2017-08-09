@@ -1,7 +1,8 @@
 import {expect} from '../../util/configuredChai';
 import sinon from 'sinon';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import ReactTestUtils from 'react-dom/test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
 import { AppLabTooltipOverlay } from '@cdo/apps/applab/AppLabTooltipOverlay';
 import TooltipOverlay from '@cdo/apps/templates/TooltipOverlay';
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
@@ -22,7 +23,7 @@ describe('AppLabTooltipOverlay', () => {
   var renderer, result, stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    renderer = ReactTestUtils.createRenderer();
+    renderer = new ShallowRenderer();
     stubDraggedElementDropPoint = sinon.stub(gridUtils, 'draggedElementDropPoint');
   });
 

@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import color from '@cdo/apps/util/color';
@@ -58,7 +61,7 @@ const styles = {
 /**
  * A set of one or more levels that are part of the same progression
  */
-const ProgressLevelSet = React.createClass({
+const ProgressLevelSet = createReactClass({
   propTypes: {
     name: PropTypes.string,
     levels: PropTypes.arrayOf(levelType).isRequired,
@@ -123,5 +126,5 @@ const ProgressLevelSet = React.createClass({
     );
   }
 });
-
+ProgressLevelSet.displayName = 'ProgressLevelSet';
 export default Radium(ProgressLevelSet);

@@ -4,7 +4,10 @@
  * background. When we're a button on top of an image, we may want something different.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import color from "@cdo/apps/util/color";
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -118,7 +121,7 @@ const styles = {
   },
 };
 
-const Button = React.createClass({
+const Button = createReactClass({
   propTypes: {
     className: PropTypes.string,
     href: PropTypes.string,
@@ -162,6 +165,7 @@ const Button = React.createClass({
     );
   }
 });
+Button.displayName = 'Button';
 
 Button.ButtonColor = ButtonColor;
 Button.ButtonSize = ButtonSize;

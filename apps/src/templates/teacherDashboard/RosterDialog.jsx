@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import BaseDialog from '../BaseDialog';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import color from '../../util/color';
@@ -80,10 +81,10 @@ const ClassroomList = ({classrooms, onSelect, selectedId, provider}) => classroo
   <NoClassroomsFound provider={provider}/>
 ;
 ClassroomList.propTypes = {
-  classrooms: React.PropTypes.array.isRequired,
-  onSelect: React.PropTypes.func.isRequired,
-  selectedId: React.PropTypes.string,
-  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  classrooms: PropTypes.array.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  selectedId: PropTypes.string,
+  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const NoClassroomsFound = ({provider}) => {
@@ -113,7 +114,7 @@ const NoClassroomsFound = ({provider}) => {
   }
 };
 NoClassroomsFound.propTypes = {
-  provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+  provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
 };
 
 const LoadError = ({error, studioUrl}) =>
@@ -127,18 +128,18 @@ const LoadError = ({error, studioUrl}) =>
   </div>;
 LoadError.propTypes = {
   error: loadErrorShape,
-  studioUrl: React.PropTypes.string.isRequired,
+  studioUrl: PropTypes.string.isRequired,
 };
 
 export default class RosterDialog extends React.Component {
   static propTypes = {
-    handleImport: React.PropTypes.func,
-    handleCancel: React.PropTypes.func,
-    isOpen: React.PropTypes.bool,
-    classrooms: React.PropTypes.arrayOf(classroomShape),
+    handleImport: PropTypes.func,
+    handleCancel: PropTypes.func,
+    isOpen: PropTypes.bool,
+    classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
-    studioUrl: React.PropTypes.string.isRequired,
-    provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
+    studioUrl: PropTypes.string.isRequired,
+    provider: PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
   }
 
   constructor(props) {

@@ -1,6 +1,7 @@
 import {expect} from '../../util/configuredChai';
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import ShallowRenderer from 'react-test-renderer/shallow';
+import ReactTestUtils from 'react-dom/test-utils';
 import TooltipOverlay, {
     textProvider,
     coordinatesProvider,
@@ -143,7 +144,7 @@ describe('TooltipOverlay', () => {
   });
 
   function shallowRender(x, y, providers=[], above=false) {
-    let renderer = ReactTestUtils.createRenderer();
+    let renderer = new ShallowRenderer();
     renderer.render(
         <TooltipOverlay
           width={TEST_APP_WIDTH}

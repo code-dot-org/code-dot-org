@@ -1,5 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from '@cdo/apps/util/color';
 import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
@@ -64,11 +66,11 @@ const styles = {
   }
 };
 
-const JoinSection = React.createClass({
+const JoinSection = createReactClass({
   propTypes: {
-    enrolledInASection: React.PropTypes.bool.isRequired,
-    updateSections: React.PropTypes.func.isRequired,
-    updateSectionsResult: React.PropTypes.func.isRequired
+    enrolledInASection: PropTypes.bool.isRequired,
+    updateSections: PropTypes.func.isRequired,
+    updateSectionsResult: PropTypes.func.isRequired
   },
 
   getInitialState() {

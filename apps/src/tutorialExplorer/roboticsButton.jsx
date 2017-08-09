@@ -2,6 +2,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { getResponsiveValue } from './responsive';
 import i18n from './locale';
 
@@ -40,9 +42,9 @@ const styles = {
   }
 };
 
-const RoboticsButton = React.createClass({
+const RoboticsButton = createReactClass({
   propTypes: {
-    url: React.PropTypes.string
+    url: PropTypes.string
   },
 
   render() {

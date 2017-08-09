@@ -1,6 +1,7 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import SectionTable from './SectionTable';

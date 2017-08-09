@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import MultiCheckboxSelector from './MultiCheckboxSelector';
 
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };
-ItemComponent.propTypes = {item: React.PropTypes.string};
+ItemComponent.propTypes = {item: PropTypes.string};
 const ComplexItemComponent = function ({style, screen}) {
   return (
     <div style={style}>
@@ -14,10 +15,10 @@ const ComplexItemComponent = function ({style, screen}) {
   );
 };
 ComplexItemComponent.propTypes = {
-  style: React.PropTypes.object,
-  screen: React.PropTypes.shape({
-    id: React.PropTypes.string,
-    name: React.PropTypes.string,
+  style: PropTypes.object,
+  screen: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
   })
 };
 

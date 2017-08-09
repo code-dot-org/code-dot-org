@@ -1,4 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';

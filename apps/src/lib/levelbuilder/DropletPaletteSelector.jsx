@@ -1,12 +1,14 @@
 import CodeMirror from 'codemirror';
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
  * This component works in conjunction with a json codemirror
  * editor instance to render a select dropdown which allows you
  * to choose from a list of blocks which can be added to the editor.
  */
-const DropletPaletteSelector = React.createClass({
+const DropletPaletteSelector = createReactClass({
   propTypes: {
     editor: PropTypes.instanceOf(CodeMirror).isRequired,
     palette: PropTypes.object.isRequired,

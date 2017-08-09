@@ -1,5 +1,7 @@
 import * as color from "../util/color";
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import {singleton as studioApp} from '../StudioApp';
 
@@ -55,7 +57,7 @@ var styles = {
   },
 };
 
-var IFrameEmbedOverlay = React.createClass({
+var IFrameEmbedOverlay = createReactClass({
 
   propTypes: {
     appWidth: PropTypes.number.isRequired,

@@ -1,5 +1,7 @@
 /* eslint-disable react/no-is-mounted */
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var filesApi = require('@cdo/apps/clientApi').files;
 
@@ -33,13 +35,13 @@ const styles = {
 /**
  * A component for managing hosted assets.
  */
-var AssetManager = React.createClass({
+var AssetManager = createReactClass({
   propTypes: {
-    assetChosen: React.PropTypes.func,
-    assetsChanged: React.PropTypes.func,
-    allowedExtensions: React.PropTypes.string,
-    uploadsEnabled: React.PropTypes.bool.isRequired,
-    useFilesApi: React.PropTypes.bool
+    assetChosen: PropTypes.func,
+    assetsChanged: PropTypes.func,
+    allowedExtensions: PropTypes.string,
+    uploadsEnabled: PropTypes.bool.isRequired,
+    useFilesApi: PropTypes.bool
   },
 
   getInitialState: function () {
@@ -54,6 +56,14 @@ var AssetManager = React.createClass({
     api.getFiles(this.onAssetListReceived, this.onAssetListFailure);
   },
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  },
+
   /**
    * Called after the component mounts, when the server responds with the
    * current list of assets.
@@ -61,7 +71,7 @@ var AssetManager = React.createClass({
    */
   onAssetListReceived: function (result) {
     assetListStore.reset(result.files);
-    if (this.isMounted()) {
+    if (this.isMounted_) {
       this.setState({assets: assetListStore.list(this.props.allowedExtensions)});
     }
   },
@@ -72,7 +82,7 @@ var AssetManager = React.createClass({
    * @param xhr
    */
   onAssetListFailure: function (xhr) {
-    if (this.isMounted()) {
+    if (this.isMounted_) {
       this.setState({
         statusMessage: 'Error loading asset list: ' + getErrorMessage(xhr.status)
       });

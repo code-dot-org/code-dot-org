@@ -3,21 +3,23 @@
  * Displays navigation breadcrumbs.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Breadcrumb} from 'react-bootstrap';
 
-const Header = React.createClass({
+const Header = createReactClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    routes: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        breadcrumbs: React.PropTypes.string
+    routes: PropTypes.arrayOf(
+      PropTypes.shape({
+        breadcrumbs: PropTypes.string
       })
     ).isRequired,
-    params: React.PropTypes.object.isRequired,
-    children: React.PropTypes.object.isRequired
+    params: PropTypes.object.isRequired,
+    children: PropTypes.object.isRequired
   },
 
   handleClick(path) {

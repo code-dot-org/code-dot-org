@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import * as color from "../../util/color";
 import {CIPHER, ALPHABET} from '../../constants';
@@ -44,17 +46,17 @@ const style = {
   },
 };
 
-const AdvancedShareOptions = Radium(React.createClass({
+const AdvancedShareOptions = Radium(createReactClass({
   propTypes: {
-    shareUrl: React.PropTypes.string.isRequired,
-    onClickExport: React.PropTypes.func,
-    onExpand: React.PropTypes.func.isRequired,
-    expanded: React.PropTypes.bool.isRequired,
-    i18n: React.PropTypes.object.isRequired,
-    channelId: React.PropTypes.string.isRequired,
-    embedOptions: React.PropTypes.shape({
-      iframeHeight: React.PropTypes.number.isRequired,
-      iframeWidth: React.PropTypes.number.isRequired,
+    shareUrl: PropTypes.string.isRequired,
+    onClickExport: PropTypes.func,
+    onExpand: PropTypes.func.isRequired,
+    expanded: PropTypes.bool.isRequired,
+    i18n: PropTypes.object.isRequired,
+    channelId: PropTypes.string.isRequired,
+    embedOptions: PropTypes.shape({
+      iframeHeight: PropTypes.number.isRequired,
+      iframeWidth: PropTypes.number.isRequired,
     }).isRequired,
   },
 

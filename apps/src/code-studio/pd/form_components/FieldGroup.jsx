@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   ControlLabel,
   FormControl,
@@ -47,10 +48,10 @@ export default class FieldGroup extends React.Component {
 }
 
 FieldGroup.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string.isRequired,
-  required: React.PropTypes.bool,
-  validationState: React.PropTypes.string,
-  children: React.PropTypes.arrayOf(React.PropTypes.node),
-  onChange: React.PropTypes.func,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  required: PropTypes.bool,
+  validationState: PropTypes.string,
+  children: PropTypes.arrayOf(PropTypes.node),
+  onChange: PropTypes.func,
 };

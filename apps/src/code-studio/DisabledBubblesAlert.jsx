@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
@@ -12,7 +15,7 @@ const styles = {
  * Component that displays a small notification at the top of the page when
  * postMilestone is disabled (and thus progress is disabled)
  */
-const DisabledBubblesAlert = React.createClass({
+const DisabledBubblesAlert = createReactClass({
   propTypes: {
     isHocScript: PropTypes.bool.isRequired
   },

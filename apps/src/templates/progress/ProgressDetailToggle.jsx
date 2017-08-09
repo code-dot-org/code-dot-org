@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import ToggleGroup from '../ToggleGroup';
 import color from "@cdo/apps/util/color";
 import { setIsSummaryView, hasGroups } from '@cdo/apps/code-studio/progressRedux';
@@ -49,7 +52,7 @@ const styles = {
  * A toggle that provides a way to switch between detail and summary views of
  * our course progress.
  */
-const ProgressDetailToggle = React.createClass({
+const ProgressDetailToggle = createReactClass({
   propTypes: {
     activeColor: PropTypes.string,
     whiteBorder: PropTypes.bool,

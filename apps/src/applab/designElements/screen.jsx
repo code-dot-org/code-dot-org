@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PropertyRow from './PropertyRow';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
 import ImagePickerPropertyRow from './ImagePickerPropertyRow';
@@ -8,10 +10,10 @@ import DefaultScreenButtonPropertyRow from './DefaultScreenButtonPropertyRow';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
 
-var ScreenProperties = React.createClass({
+var ScreenProperties = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
   },
 
   handleIconColorChange: function (value) {
@@ -62,11 +64,11 @@ var ScreenProperties = React.createClass({
   }
 });
 
-var ScreenEvents = React.createClass({
+var ScreenEvents = createReactClass({
   propTypes: {
-    element: React.PropTypes.instanceOf(HTMLElement).isRequired,
-    handleChange: React.PropTypes.func.isRequired,
-    onInsertEvent: React.PropTypes.func.isRequired,
+    element: PropTypes.instanceOf(HTMLElement).isRequired,
+    handleChange: PropTypes.func.isRequired,
+    onInsertEvent: PropTypes.func.isRequired,
   },
 
   // The screen click event handler code currently receives clicks to any

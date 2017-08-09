@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const styles = {
   main: {
@@ -12,9 +14,9 @@ const styles = {
 /**
  * Simple component for our icon for hints.
  */
-const PromptIcon = React.createClass({
+const PromptIcon = createReactClass({
   propTypes: {
-    src: React.PropTypes.string.isRequired
+    src: PropTypes.string.isRequired
   },
 
   render() {

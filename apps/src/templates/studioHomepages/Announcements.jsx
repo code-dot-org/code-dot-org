@@ -1,21 +1,23 @@
-import React, { PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ContentContainer from '../ContentContainer';
 import Announcement from './Announcement';
 import AnnouncementsCarousel from './AnnouncementsCarousel';
 import i18n from "@cdo/locale";
 
-const Announcements = React.createClass({
+const Announcements = createReactClass({
   propTypes: {
     announcements: PropTypes.arrayOf(
       PropTypes.shape({
-        heading: React.PropTypes.string.isRequired,
-        description: React.PropTypes.string.isRequired,
-        image: React.PropTypes.string,
-        link: React.PropTypes.string.isRequired,
-        buttonText: React.PropTypes.string.isRequired,
+        heading: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        image: PropTypes.string,
+        link: PropTypes.string.isRequired,
+        buttonText: PropTypes.string.isRequired,
       })
     ),
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

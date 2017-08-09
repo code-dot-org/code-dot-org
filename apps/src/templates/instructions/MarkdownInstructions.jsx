@@ -1,6 +1,8 @@
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import Radium from 'radium';
 import { ImagePreview } from './AniGifPreview';
@@ -27,15 +29,15 @@ var styles = {
   }
 };
 
-const MarkdownInstructions = React.createClass({
+const MarkdownInstructions = createReactClass({
   propTypes: {
-    renderedMarkdown: React.PropTypes.string.isRequired,
-    noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
-    hasInlineImages: React.PropTypes.bool,
-    onResize: React.PropTypes.func,
-    inTopPane: React.PropTypes.bool,
-    isBlockly: React.PropTypes.bool,
-    showImageDialog: React.PropTypes.func,
+    renderedMarkdown: PropTypes.string.isRequired,
+    noInstructionsWhenCollapsed: PropTypes.bool.isRequired,
+    hasInlineImages: PropTypes.bool,
+    onResize: PropTypes.func,
+    inTopPane: PropTypes.bool,
+    isBlockly: PropTypes.bool,
+    showImageDialog: PropTypes.func,
   },
 
   /**

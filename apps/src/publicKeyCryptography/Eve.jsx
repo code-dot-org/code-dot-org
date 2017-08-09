@@ -1,5 +1,7 @@
 /** @file The Eve character from the cryptography widget */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../util/color";
 import CharacterPanel from './CharacterPanel';
 import NumberedSteps, {Step, Heading} from './NumberedSteps';
@@ -26,11 +28,11 @@ const tdEquationStyleLHS = Object.assign({}, tdEquationStyleRHS, {
   whiteSpace: 'nowrap'
 });
 
-const Eve = React.createClass({
+const Eve = createReactClass({
   propTypes: {
-    disabled: React.PropTypes.bool,
-    setPublicModulus: React.PropTypes.func.isRequired,
-    runModuloClock: React.PropTypes.func.isRequired
+    disabled: PropTypes.bool,
+    setPublicModulus: PropTypes.func.isRequired,
+    runModuloClock: PropTypes.func.isRequired
   },
 
   getInitialState() {

@@ -3,12 +3,14 @@
  * Wrap a component in this to listen for page visibility.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
-const VisibilitySensor = React.createClass({
+const VisibilitySensor = createReactClass({
   propTypes: {
-    onVisible: React.PropTypes.func,
-    onHidden: React.PropTypes.func,
-    children: React.PropTypes.element
+    onVisible: PropTypes.func,
+    onHidden: PropTypes.func,
+    children: PropTypes.element
   },
 
   componentDidMount() {

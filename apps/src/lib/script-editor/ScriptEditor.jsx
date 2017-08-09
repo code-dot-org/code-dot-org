@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import FlexGroup from './FlexGroup';
 import StageDescriptions from './StageDescriptions';
 import LegendSelector from './LegendSelector';
@@ -21,21 +23,21 @@ const styles = {
 /**
  * Component for editing course scripts.
  */
-const ScriptEditor = React.createClass({
+const ScriptEditor = createReactClass({
   propTypes: {
-    beta: React.PropTypes.bool,
-    name: React.PropTypes.string.isRequired,
-    i18nData: React.PropTypes.object.isRequired,
-    hidden: React.PropTypes.bool,
-    loginRequired: React.PropTypes.bool,
-    hideableStages: React.PropTypes.bool,
-    studentDetailProgressView: React.PropTypes.bool,
-    professionalLearningCourse: React.PropTypes.bool,
-    peerReviewsRequired: React.PropTypes.number,
-    wrapupVideo: React.PropTypes.string,
-    excludeCsfColumnInLegend: React.PropTypes.bool,
-    projectWidgetVisible: React.PropTypes.bool,
-    projectWidgetTypes: React.PropTypes.arrayOf(React.PropTypes.string)
+    beta: PropTypes.bool,
+    name: PropTypes.string.isRequired,
+    i18nData: PropTypes.object.isRequired,
+    hidden: PropTypes.bool,
+    loginRequired: PropTypes.bool,
+    hideableStages: PropTypes.bool,
+    studentDetailProgressView: PropTypes.bool,
+    professionalLearningCourse: PropTypes.bool,
+    peerReviewsRequired: PropTypes.number,
+    wrapupVideo: PropTypes.string,
+    excludeCsfColumnInLegend: PropTypes.bool,
+    projectWidgetVisible: PropTypes.bool,
+    projectWidgetTypes: PropTypes.arrayOf(PropTypes.string)
   },
 
   handleClearProjectWidgetSelectClick() {

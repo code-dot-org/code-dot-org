@@ -1,9 +1,10 @@
 /** @file Button that continues to the next puzzle when clicked */
 import React from 'react';
+import createReactClass from 'create-react-class';
 import i18n from '@cdo/locale';
 import {processResults} from '../code-studio/levels/dialogHelper';
 
-const ContinueButton = React.createClass({
+const ContinueButton = createReactClass({
   getInitialState() {
     return {submitting: false};
   },

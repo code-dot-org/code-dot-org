@@ -1,5 +1,7 @@
 /** Body of the animation picker dialog */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "../../util/color";
 import {AnimationCategories} from '../constants';
@@ -37,13 +39,13 @@ const animationPickerStyles = {
   }
 };
 
-const AnimationPickerBody = React.createClass({
+const AnimationPickerBody = createReactClass({
   propTypes: {
-    is13Plus: React.PropTypes.bool,
-    onDrawYourOwnClick: React.PropTypes.func.isRequired,
-    onPickLibraryAnimation: React.PropTypes.func.isRequired,
-    onUploadClick: React.PropTypes.func.isRequired,
-    playAnimations: React.PropTypes.bool.isRequired
+    is13Plus: PropTypes.bool,
+    onDrawYourOwnClick: PropTypes.func.isRequired,
+    onPickLibraryAnimation: PropTypes.func.isRequired,
+    onUploadClick: PropTypes.func.isRequired,
+    playAnimations: PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -160,5 +162,5 @@ export const WarningLabel = ({children}) => (
     </span>
 );
 WarningLabel.propTypes = {
-  children: React.PropTypes.node
+  children: PropTypes.node
 };

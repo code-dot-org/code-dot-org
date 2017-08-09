@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * @fileoverview Wraps an <img> with a <div> that indicates the status of the

@@ -1,4 +1,6 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import i18n from '@cdo/locale';
 
 var project = require('@cdo/apps/code-studio/initApp/project');
@@ -54,11 +56,11 @@ const APP_TYPE_TO_NEW_PROJECT_URL = {
 /**
  * Shows buttons for wireframe version, including "View code", "Make my own app", and "Send to phone".
  */
-let WireframeButtons = React.createClass({
+let WireframeButtons = createReactClass({
   propTypes: {
-    channelId: React.PropTypes.string,
-    appType: React.PropTypes.string.isRequired,
-    isLegacyShare: React.PropTypes.bool.isRequired,
+    channelId: PropTypes.string,
+    appType: PropTypes.string.isRequired,
+    isLegacyShare: PropTypes.bool.isRequired,
   },
 
   getInitialState: function () {

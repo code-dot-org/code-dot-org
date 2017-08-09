@@ -1,5 +1,6 @@
 /** Button for use in Maker connection status overlays */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '../../../../util/color';
 

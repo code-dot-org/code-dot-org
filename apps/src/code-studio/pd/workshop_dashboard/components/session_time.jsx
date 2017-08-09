@@ -2,17 +2,19 @@
  * Displays nicely-formatted session time for a workshop.
 */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {
   TIME_FORMAT,
   DATETIME_FORMAT
 } from '../workshopConstants';
 
-const SessionTime = React.createClass({
+const SessionTime = createReactClass({
   propTypes: {
-    session: React.PropTypes.shape({
-      start: React.PropTypes.string.isRequired,
-      end: React.PropTypes.string.isRequired
+    session: PropTypes.shape({
+      start: PropTypes.string.isRequired,
+      end: PropTypes.string.isRequired
     }).isRequired
   },
 

@@ -1,9 +1,11 @@
 /** @file A clickable item in the scroll area of the animation picker */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Radium from 'radium';
 import color from "../../util/color";
 import {PlayBehavior} from '../constants';
-import * as PropTypes from '../PropTypes';
+import * as shapes from '../shapes';
 import AnimationPreview from './AnimationPreview';
 
 const THUMBNAIL_SIZE = 105;
@@ -53,14 +55,14 @@ const styles = {
   }
 };
 
-const AnimationPickerListItem = React.createClass({
+const AnimationPickerListItem = createReactClass({
   propTypes: {
-    animationProps: PropTypes.AnimationProps,
-    icon: React.PropTypes.string,
-    label: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func,
-    playAnimations: React.PropTypes.bool,
-    category: React.PropTypes.string
+    animationProps: shapes.AnimationProps,
+    icon: PropTypes.string,
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func,
+    playAnimations: PropTypes.bool,
+    category: PropTypes.string
   },
 
   render() {

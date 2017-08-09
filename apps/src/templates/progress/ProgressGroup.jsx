@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import DetailProgressTable from './DetailProgressTable';
 import SummaryProgressTable from './SummaryProgressTable';
@@ -43,7 +46,7 @@ const styles = {
  * A component that shows a group of lessons. That group has a name and is
  * collapsible. It can show the lessons in either a detail or a summary view.
  */
-const ProgressGroup = React.createClass({
+const ProgressGroup = createReactClass({
   propTypes: {
     groupName: PropTypes.string.isRequired,
     lessons: PropTypes.arrayOf(lessonType).isRequired,

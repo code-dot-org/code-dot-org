@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 /**
   * Many of our hints include Blockly blocks. Unfortunately, Blockly
@@ -7,9 +9,9 @@ import React from 'react';
   * React render method once we're confident that this component is in
   * the DOM.
   */
-var ReadOnlyBlockSpace = React.createClass({
+var ReadOnlyBlockSpace = createReactClass({
   propTypes: {
-    block: React.PropTypes.object.isRequired,
+    block: PropTypes.object.isRequired,
   },
 
   getInitialState: function () {

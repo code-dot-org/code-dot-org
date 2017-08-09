@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
@@ -72,7 +75,7 @@ const styles = {
   },
 };
 
-const NewProgressBubble = React.createClass({
+const NewProgressBubble = createReactClass({
   propTypes: {
     level: levelType.isRequired,
     disabled: PropTypes.bool.isRequired,
@@ -177,5 +180,6 @@ const NewProgressBubble = React.createClass({
     return bubble;
   }
 });
+NewProgressBubble.displayName = 'NewProgressBubble';
 
 export default Radium(NewProgressBubble);

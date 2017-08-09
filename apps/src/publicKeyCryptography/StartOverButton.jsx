@@ -1,11 +1,13 @@
 /** @file Start Over button used in crypto widget */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import i18n from '@cdo/locale';
 import Dialog from '../templates/Dialog';
 
-const StartOverButton = React.createClass({
+const StartOverButton = createReactClass({
   propTypes: {
-    onClick: React.PropTypes.func.isRequired
+    onClick: PropTypes.func.isRequired
   },
 
   getInitialState() {

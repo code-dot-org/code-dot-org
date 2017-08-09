@@ -1,4 +1,6 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import i18n from "@cdo/locale";
 import styleConstants from '../../styleConstants';
 import color from "../../util/color";
@@ -136,7 +138,7 @@ const styles = {
   }
 };
 
-const NewProjectButtons = React.createClass({
+const NewProjectButtons = createReactClass({
   propTypes: {
     projectTypes: PropTypes.arrayOf(PropTypes.string)
   },

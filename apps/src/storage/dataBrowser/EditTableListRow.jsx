@@ -4,12 +4,14 @@ import EditLink from './EditLink';
 import FirebaseStorage from '../firebaseStorage';
 import Radium from 'radium';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import * as dataStyles from './dataStyles';
 
-const EditTableListRow = React.createClass({
+const EditTableListRow = createReactClass({
   propTypes: {
-    onViewChange: React.PropTypes.func.isRequired,
-    tableName: React.PropTypes.string.isRequired
+    onViewChange: PropTypes.func.isRequired,
+    tableName: PropTypes.string.isRequired
   },
 
   handleEdit() {

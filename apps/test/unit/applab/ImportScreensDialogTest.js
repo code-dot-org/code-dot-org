@@ -188,7 +188,7 @@ describe("ImportScreensDialog", () => {
       });
 
       it("passes the selected screens to the onImport prop function", () => {
-        var checkboxSelector = dialog.find('MultiCheckboxSelector');
+        var checkboxSelector = dialog.find(MultiCheckboxSelector);
         const newSelected = [checkboxSelector.prop('items')[0]];
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
@@ -201,7 +201,7 @@ describe("ImportScreensDialog", () => {
     describe("the list of screens", () => {
       let checkboxSelector;
       beforeEach(() => {
-        checkboxSelector = dialog.find('MultiCheckboxSelector');
+        checkboxSelector = dialog.find(MultiCheckboxSelector);
       });
 
       it("should have a Screens header", () => {
@@ -216,7 +216,7 @@ describe("ImportScreensDialog", () => {
         const newSelected = [checkboxSelector.prop('items')[0]];
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
-        checkboxSelector = dialog.find('MultiCheckboxSelector');
+        checkboxSelector = dialog.find(MultiCheckboxSelector);
         expect(checkboxSelector).to.have.prop('selected').to.deep.equal(newSelected);
       });
     });
@@ -241,7 +241,7 @@ describe("ImportScreensDialog", () => {
             }}
         />
       );
-      checkboxSelector = dialog.find('MultiCheckboxSelector');
+      checkboxSelector = dialog.find(MultiCheckboxSelector);
     });
 
     it("the import button passes the selected assets to the onImport prop function", () => {
@@ -267,7 +267,7 @@ describe("ImportScreensDialog", () => {
         const newSelected = [checkboxSelector.prop('items')[0]];
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
-        checkboxSelector = dialog.find('MultiCheckboxSelector');
+        checkboxSelector = dialog.find(MultiCheckboxSelector);
         expect(checkboxSelector).to.have.prop('selected').to.deep.equal(newSelected);
       });
     });
@@ -372,7 +372,7 @@ describe("ImportScreensDialog", () => {
     });
 
     it("should disable the multi checkbox widget", () => {
-      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).to.be.true;
+      expect(dialog.find(MultiCheckboxSelector).prop('disabled')).to.be.true;
     });
   });
 

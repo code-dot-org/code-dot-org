@@ -1,5 +1,7 @@
 import locale from '@cdo/locale';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const MIN_PROGRESS_WIDTH = 22;
 const MAX_PROGRESS_WIDTH = 400;
@@ -41,9 +43,9 @@ const styles = {
   },
 };
 
-const StageProgressBar = React.createClass({
+const StageProgressBar = createReactClass({
   propTypes: {
-    stageProgress: React.PropTypes.number,
+    stageProgress: PropTypes.number,
   },
 
   progressToBarWidth(progress) {

@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {Row, Col, Button} from 'react-bootstrap';
 
 const MAX_FACILITATORS = 10;
@@ -15,25 +17,25 @@ const styles = {
   }
 };
 
-const FacilitatorListFormPart = React.createClass({
+const FacilitatorListFormPart = createReactClass({
   propTypes: {
-    availableFacilitators: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        id: React.PropTypes.number,
-        name: React.PropTypes.string,
-        email: React.PropTypes.string
+    availableFacilitators: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        email: PropTypes.string
       })
     ),
-    facilitators: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        id: React.PropTypes.number,
-        name: React.PropTypes.string,
-        email: React.PropTypes.string
+    facilitators: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        name: PropTypes.string,
+        email: PropTypes.string
       })
     ).isRequired,
-    course: React.PropTypes.string.isRequired,
-    readOnly: React.PropTypes.bool,
-    onChange: React.PropTypes.func
+    course: PropTypes.string.isRequired,
+    readOnly: PropTypes.bool,
+    onChange: PropTypes.func
   },
 
   handleAddClick() {

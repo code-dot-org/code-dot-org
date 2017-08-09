@@ -8,6 +8,8 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import moment from 'moment';
 import {
   Grid,
@@ -38,17 +40,17 @@ const styles = {
   }
 };
 
-const Workshop = React.createClass({
+const Workshop = createReactClass({
   contextTypes: {
-    router: React.PropTypes.object.isRequired
+    router: PropTypes.object.isRequired
   },
 
   propTypes: {
-    params: React.PropTypes.shape({
-      workshopId: React.PropTypes.string.isRequired
+    params: PropTypes.shape({
+      workshopId: PropTypes.string.isRequired
     }).isRequired,
-    route: React.PropTypes.shape({
-      view: React.PropTypes.string
+    route: PropTypes.shape({
+      view: PropTypes.string
     }).isRequired,
   },
 

@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import $ from 'jquery';

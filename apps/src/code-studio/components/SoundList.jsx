@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import SoundListEntry from './SoundListEntry';
 import Sounds from '../../Sounds';
 import {searchAssets} from '../assets/searchAssets';
@@ -15,12 +17,12 @@ const styles = {
 /**
  * A component for managing sounds from soundLibrary.json.
  */
-const SoundList = React.createClass({
+const SoundList = createReactClass({
   propTypes: {
-    assetChosen: React.PropTypes.func.isRequired,
-    search: React.PropTypes.string.isRequired,
-    category: React.PropTypes.string.isRequired,
-    selectedSound: React.PropTypes.object.isRequired
+    assetChosen: PropTypes.func.isRequired,
+    search: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    selectedSound: PropTypes.object.isRequired
   },
 
   componentWillMount() {

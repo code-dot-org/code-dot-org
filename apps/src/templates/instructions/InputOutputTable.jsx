@@ -1,4 +1,5 @@
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * A table of inputs and expected outputs that is only used by Calc and Studio.
@@ -26,8 +27,8 @@ var InputOutputTable = function (props) {
   );
 };
 InputOutputTable.propTypes = {
-  data: React.PropTypes.arrayOf(
-    React.PropTypes.arrayOf(React.PropTypes.number)
+  data: PropTypes.arrayOf(
+    PropTypes.arrayOf(PropTypes.number)
   ).isRequired
 };
 

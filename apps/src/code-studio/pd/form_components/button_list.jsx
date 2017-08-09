@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import _ from 'lodash';
 import {
   Radio,
@@ -10,18 +12,18 @@ import {
 
 const otherString = 'Other: ';
 
-const ButtonList = React.createClass({
+const ButtonList = createReactClass({
   propTypes: {
-    type: React.PropTypes.oneOf(['radio', 'check']).isRequired,
-    label: React.PropTypes.string.isRequired,
-    groupName: React.PropTypes.string.isRequired,
-    answers: React.PropTypes.array.isRequired,
-    includeOther: React.PropTypes.bool,
-    onChange: React.PropTypes.func,
-    selectedItems: React.PropTypes.oneOfType([React.PropTypes.array, React.PropTypes.string]),
-    required: React.PropTypes.bool,
-    validationState: React.PropTypes.string,
-    errorText: React.PropTypes.string,
+    type: PropTypes.oneOf(['radio', 'check']).isRequired,
+    label: PropTypes.string.isRequired,
+    groupName: PropTypes.string.isRequired,
+    answers: PropTypes.array.isRequired,
+    includeOther: PropTypes.bool,
+    onChange: PropTypes.func,
+    selectedItems: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+    required: PropTypes.bool,
+    validationState: PropTypes.string,
+    errorText: PropTypes.string,
   },
 
   handleChange(event) {
@@ -109,7 +111,7 @@ const ButtonList = React.createClass({
     );
   }
 });
-
+ButtonList.displayName = 'ButtonList';
 export {
   ButtonList,
   otherString

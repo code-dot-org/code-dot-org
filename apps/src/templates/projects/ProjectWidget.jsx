@@ -1,4 +1,6 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import PersonalRecentProjects from './PersonalRecentProjects.jsx';
 import NewProjectButtons from './NewProjectButtons.jsx';
 import ContentContainer from '../ContentContainer.jsx';
@@ -6,7 +8,7 @@ import i18n from "@cdo/locale";
 import _ from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const ProjectWidget = React.createClass({
+const ProjectWidget = createReactClass({
   propTypes: {
     projectList: PropTypes.array.isRequired,
     projectTypes: PropTypes.arrayOf(PropTypes.string),

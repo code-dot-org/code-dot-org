@@ -2,7 +2,10 @@
  * An ordered set of progress bubbles.
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import ProgressBubble from './ProgressBubble';
 import color from "@cdo/apps/util/color";
@@ -58,7 +61,7 @@ const styles = {
   }
 };
 
-const ProgressBubbleSet = React.createClass({
+const ProgressBubbleSet = createReactClass({
   propTypes: {
     levels: PropTypes.arrayOf(levelType).isRequired,
     disabled: PropTypes.bool.isRequired,
@@ -103,5 +106,5 @@ const ProgressBubbleSet = React.createClass({
     );
   }
 });
-
+ProgressBubbleSet.displayName = 'ProgressBubbleSet';
 export default Radium(ProgressBubbleSet);

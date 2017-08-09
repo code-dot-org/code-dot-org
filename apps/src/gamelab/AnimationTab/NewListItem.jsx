@@ -1,7 +1,9 @@
 /** List item placeholder for adding a new item */
-var React = require('react');
-var color = require("../../util/color");
-var Radium = require('radium');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+import color from '../../util/color';
+import Radium from 'radium';
 
 var styles = {
   tile: {
@@ -50,10 +52,10 @@ var styles = {
  * List item control (usable in animation or frame lists) for adding
  * a new item - displays as a plus sign in a dashed box.
  */
-var NewListItem = React.createClass({
+var NewListItem = createReactClass({
   propTypes: {
-    label: React.PropTypes.string.isRequired,
-    onClick: React.PropTypes.func.isRequired
+    label: PropTypes.string.isRequired,
+    onClick: PropTypes.func.isRequired
   },
 
   render: function () {

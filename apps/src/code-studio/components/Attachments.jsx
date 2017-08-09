@@ -1,7 +1,9 @@
 /* eslint-disable react/no-is-mounted */
 /* global dashboard */
 
-var React = require('react');
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 var assetsApi = require('@cdo/apps/clientApi').assets;
 var assetListStore = require('../assets/assetListStore');
 
@@ -24,10 +26,10 @@ var styles = {
 /**
  * An attachment list component.
  */
-var Attachments = React.createClass({
+var Attachments = createReactClass({
   propTypes: {
-    readonly: React.PropTypes.bool,
-    showUnderageWarning: React.PropTypes.bool,
+    readonly: PropTypes.bool,
+    showUnderageWarning: PropTypes.bool,
   },
 
   getInitialState: function () {
@@ -38,9 +40,17 @@ var Attachments = React.createClass({
     assetsApi.getFiles(this.onAssetListReceived);
   },
 
+  componentDidMount() {
+    this.isMounted_ = true;
+  },
+
+  componentWillUnmount() {
+    this.isMounted_ = false;
+  },
+
   onAssetListReceived: function (result) {
     assetListStore.reset(result.files);
-    if (this.isMounted()) {
+    if (this.isMounted_) {
       this.setState({loaded: true});
     }
   },

@@ -2,13 +2,15 @@
  * Displays a list of nicely-formatted session times for a workshop.
  */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import SessionTime from './session_time';
 
-const SessionTimesList = React.createClass({
+const SessionTimesList = createReactClass({
   propTypes: {
-    sessions: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        id: React.PropTypes.number.isRequired
+    sessions: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired
       })
     ).isRequired
   },

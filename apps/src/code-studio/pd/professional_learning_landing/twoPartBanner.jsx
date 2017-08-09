@@ -1,6 +1,8 @@
 /** Two section banner for the landing page */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const styles = {
   container: {
@@ -42,11 +44,11 @@ const styles = {
   }
 };
 
-const TwoPartBanner = React.createClass({
+const TwoPartBanner = createReactClass({
   propTypes: {
-    textElement: React.PropTypes.element.isRequired,
-    imageUrl: React.PropTypes.string.isRequired,
-    imagePosition: React.PropTypes.oneOf(['imageLeft', 'imageRight']).isRequired
+    textElement: PropTypes.element.isRequired,
+    imageUrl: PropTypes.string.isRequired,
+    imagePosition: PropTypes.oneOf(['imageLeft', 'imageRight']).isRequired
   },
 
   getImageAlignmentStyle() {
@@ -93,5 +95,5 @@ const TwoPartBanner = React.createClass({
     );
   }
 });
-
+TwoPartBanner.displayName = 'TwoPartBanner';
 export {TwoPartBanner};

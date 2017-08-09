@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import MarkdownInstructions from './MarkdownInstructions';
 import NonMarkdownInstructions from './NonMarkdownInstructions';
 import InputOutputTable from './InputOutputTable';
@@ -20,19 +22,19 @@ const styles = {
  * the hints or just the anigif (in this case instructions/renderedMarkdown
  * props will be undefined).
  */
-var Instructions = React.createClass({
+var Instructions = createReactClass({
   propTypes: {
-    puzzleTitle: React.PropTypes.string,
-    instructions: React.PropTypes.string,
-    instructions2: React.PropTypes.string,
-    renderedMarkdown: React.PropTypes.string,
-    imgURL: React.PropTypes.string,
-    authoredHints: React.PropTypes.element,
-    inputOutputTable: React.PropTypes.arrayOf(
-      React.PropTypes.arrayOf(React.PropTypes.number)
+    puzzleTitle: PropTypes.string,
+    instructions: PropTypes.string,
+    instructions2: PropTypes.string,
+    renderedMarkdown: PropTypes.string,
+    imgURL: PropTypes.string,
+    authoredHints: PropTypes.element,
+    inputOutputTable: PropTypes.arrayOf(
+      PropTypes.arrayOf(PropTypes.number)
     ),
-    inTopPane: React.PropTypes.bool,
-    onResize: React.PropTypes.func,
+    inTopPane: PropTypes.bool,
+    onResize: PropTypes.func,
   },
 
   render: function () {

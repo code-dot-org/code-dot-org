@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import $ from 'jquery';
 import _ from 'lodash';
 import {
@@ -41,15 +43,15 @@ function FieldGroup({ id, label, validationState, required, errorText, ...props 
 }
 
 FieldGroup.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  label: React.PropTypes.string,
-  validationState: React.PropTypes.string,
-  errorText: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  validationState: PropTypes.string,
+  errorText: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element
   ]),
-  required: React.PropTypes.bool,
-  maxLength: React.PropTypes.number
+  required: PropTypes.bool,
+  maxLength: PropTypes.number
 };
 
 const grades = ['Kindergarten'].concat(_.map(_.range(1,13), x => x.toString()));
@@ -87,15 +89,15 @@ const isUnder1000Chars = (value) => {
   }
 };
 
-const TeacherApplication = React.createClass({
+const TeacherApplication = createReactClass({
   propTypes: {
-    regionalPartnerGroup: React.PropTypes.number,
-    regionalPartnerName: React.PropTypes.string,
-    workshopDays: React.PropTypes.string,
-    schoolDistrictData: React.PropTypes.object.isRequired,
-    districtErrorMessageHandler: React.PropTypes.func.isRequired,
-    accountEmail: React.PropTypes.string,
-    hashedAccountEmail: React.PropTypes.string.isRequired
+    regionalPartnerGroup: PropTypes.number,
+    regionalPartnerName: PropTypes.string,
+    workshopDays: PropTypes.string,
+    schoolDistrictData: PropTypes.object.isRequired,
+    districtErrorMessageHandler: PropTypes.func.isRequired,
+    accountEmail: PropTypes.string,
+    hashedAccountEmail: PropTypes.string.isRequired
   },
 
   componentWillMount() {

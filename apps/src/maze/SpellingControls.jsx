@@ -1,6 +1,7 @@
-var React = require('react');
-var msg = require('./locale');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import React from 'react';
+import PropTypes from 'prop-types';
+import msg from './locale';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 var SpellingControls = function (props) {
   return (
@@ -32,7 +33,7 @@ var SpellingControls = function (props) {
 };
 
 SpellingControls.propTypes = {
-  searchWord: React.PropTypes.string.isRequired
+  searchWord: PropTypes.string.isRequired
 };
 
 module.exports = SpellingControls;

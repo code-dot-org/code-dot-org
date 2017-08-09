@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import color from "../../util/color";
 import commonStyles from '../../commonStyles';
 import Radium from 'radium';
@@ -20,10 +22,10 @@ var styles = {
  * A delete button that will also ask for confirmation when shouldConfirm is
  * true.
  */
-var DeleteElementButton = React.createClass({
+var DeleteElementButton = createReactClass({
   propTypes: {
-    shouldConfirm: React.PropTypes.bool.isRequired,
-    handleDelete: React.PropTypes.func.isRequired
+    shouldConfirm: PropTypes.bool.isRequired,
+    handleDelete: PropTypes.func.isRequired
   },
 
   getInitialState: function () {

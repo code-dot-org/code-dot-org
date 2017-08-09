@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 const styles = {
   filterChoiceOuter: {
@@ -23,13 +25,13 @@ const styles = {
   }
 };
 
-const FilterChoice = React.createClass({
+const FilterChoice = createReactClass({
   propTypes: {
-    onUserInput: React.PropTypes.func.isRequired,
-    groupName: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
-    selected: React.PropTypes.bool.isRequired,
-    text: React.PropTypes.string.isRequired
+    onUserInput: PropTypes.func.isRequired,
+    groupName: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    selected: PropTypes.bool.isRequired,
+    text: PropTypes.string.isRequired
   },
 
   handleChange(event) {

@@ -3,6 +3,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import Button from '../Button';
 import i18n from "@cdo/locale";
@@ -25,16 +27,16 @@ const styles = {
   }
 };
 
-const StageLock = React.createClass({
+const StageLock = createReactClass({
   propTypes: {
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: React.PropTypes.string.isRequired,
-    sectionsAreLoaded: React.PropTypes.bool.isRequired,
-    saving: React.PropTypes.bool.isRequired,
-    openLockDialog: React.PropTypes.func.isRequired,
-    closeLockDialog: React.PropTypes.func.isRequired,
+    sectionId: PropTypes.string.isRequired,
+    sectionsAreLoaded: PropTypes.bool.isRequired,
+    saving: PropTypes.bool.isRequired,
+    openLockDialog: PropTypes.func.isRequired,
+    closeLockDialog: PropTypes.func.isRequired,
   },
 
   openLockDialog() {
@@ -66,7 +68,7 @@ const StageLock = React.createClass({
     );
   }
 });
-
+StageLock.displayName = 'StageLock';
 export default connect(state => ({
   sectionId: state.sections.selectedSectionId,
   sectionsAreLoaded: state.sections.sectionsAreLoaded,

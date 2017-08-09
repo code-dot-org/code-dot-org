@@ -1,4 +1,7 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
+
 import Radium from 'radium';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
@@ -39,7 +42,7 @@ const styles = {
  * a circle with a number inside, it is an ellipse with text (and possibly an
  * icon)
  */
-const ProgressPill = React.createClass({
+const ProgressPill = createReactClass({
   propTypes: {
     levels: PropTypes.arrayOf(levelType),
     icon: PropTypes.string,
@@ -93,5 +96,5 @@ const ProgressPill = React.createClass({
     );
   }
 });
-
+ProgressPill.displayName = 'ProgressPill';
 export default Radium(ProgressPill);

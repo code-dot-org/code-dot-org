@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import logToCloud from '../logToCloud';
 import {singleton as studioApp} from '../StudioApp';
 import {PaneButton} from './PaneHeader';

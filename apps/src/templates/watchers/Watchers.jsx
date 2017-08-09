@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import Immutable from 'immutable';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
@@ -80,16 +82,16 @@ const styles = {
 /**
  * A "watchers" window for our debugger.
  */
-export const Watchers = React.createClass({
+export const Watchers = createReactClass({
   propTypes: {
-    debugButtons: React.PropTypes.bool.isRequired,
-    isRunning: React.PropTypes.bool.isRequired,
-    watchedExpressions: React.PropTypes.instanceOf(Immutable.List).isRequired,
-    add: React.PropTypes.func.isRequired,
-    update: React.PropTypes.func.isRequired,
-    remove: React.PropTypes.func.isRequired,
-    style: React.PropTypes.object,
-    appType: React.PropTypes.string.isRequired
+    debugButtons: PropTypes.bool.isRequired,
+    isRunning: PropTypes.bool.isRequired,
+    watchedExpressions: PropTypes.instanceOf(Immutable.List).isRequired,
+    add: PropTypes.func.isRequired,
+    update: PropTypes.func.isRequired,
+    remove: PropTypes.func.isRequired,
+    style: PropTypes.object,
+    appType: PropTypes.string.isRequired
   },
 
   getInitialState: function () {

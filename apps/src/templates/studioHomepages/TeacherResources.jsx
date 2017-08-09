@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ResourceCard from './ResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
@@ -13,9 +15,9 @@ const styles = {
   }
 };
 
-const TeacherResources = React.createClass({
+const TeacherResources = createReactClass({
   propTypes: {
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: PropTypes.bool.isRequired
   },
 
   render() {

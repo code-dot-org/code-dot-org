@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Portal from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';

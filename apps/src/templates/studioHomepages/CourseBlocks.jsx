@@ -1,13 +1,15 @@
 import $ from 'jquery';
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
 import ProtectedStatefulDiv from '../ProtectedStatefulDiv';
 import i18n from "@cdo/locale";
 
-export const CourseBlocksCsf = React.createClass({
+export const CourseBlocksCsf = createReactClass({
   propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired
   },
 
   render() {
@@ -19,7 +21,7 @@ export const CourseBlocksCsf = React.createClass({
   }
 });
 
-const CourseBlocksCsfEnglish = React.createClass({
+const CourseBlocksCsfEnglish = createReactClass({
   componentDidMount() {
     $('#coursea').appendTo(ReactDOM.findDOMNode(this.refs.coursea)).show();
     $('#courseb').appendTo(ReactDOM.findDOMNode(this.refs.courseb)).show();
@@ -74,7 +76,7 @@ const CourseBlocksCsfEnglish = React.createClass({
   }
 });
 
-const CourseBlocksCsfNonEnglish = React.createClass({
+const CourseBlocksCsfNonEnglish = createReactClass({
   componentDidMount() {
     $('#course1').appendTo(ReactDOM.findDOMNode(this.refs.course1)).show();
     $('#course2').appendTo(ReactDOM.findDOMNode(this.refs.course2)).show();
@@ -104,7 +106,7 @@ const CourseBlocksCsfNonEnglish = React.createClass({
   }
 });
 
-export const CourseBlocksTools = React.createClass({
+export const CourseBlocksTools = createReactClass({
   componentDidMount() {
     $('#applab').appendTo(ReactDOM.findDOMNode(this.refs.applab)).show();
     $('#widgets').appendTo(ReactDOM.findDOMNode(this.refs.widgets)).show();
@@ -130,9 +132,9 @@ export const CourseBlocksTools = React.createClass({
   }
 });
 
-export const CourseBlocksHoc = React.createClass({
+export const CourseBlocksHoc = createReactClass({
   propTypes: {
-    rowCount: React.PropTypes.number.isRequired
+    rowCount: PropTypes.number.isRequired
   },
 
   componentDidMount() {
@@ -170,9 +172,9 @@ export const CourseBlocksHoc = React.createClass({
   }
 });
 
-export const CourseBlocksAll = React.createClass({
+export const CourseBlocksAll = createReactClass({
   propTypes: {
-    isEnglish: React.PropTypes.bool.isRequired
+    isEnglish: PropTypes.bool.isRequired
   },
 
   componentDidMount() {

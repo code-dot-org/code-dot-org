@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 
 import Pairing from './pairing.jsx';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
@@ -6,9 +8,9 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 /**
  * Pair programming dialog.
  */
-var PairingDialog = React.createClass({
+var PairingDialog = createReactClass({
   propTypes: {
-    source: React.PropTypes.string
+    source: PropTypes.string
   },
 
   getInitialState() {

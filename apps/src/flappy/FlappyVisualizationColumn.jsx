@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 var msg = require('@cdo/locale');
 
 var GameButtons = require('../templates/GameButtons').default;
@@ -24,7 +25,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
   );
 };
 FlappyVisualizationColumn.propTypes = {
-  showFinishButton: React.PropTypes.bool.isRequired,
+  showFinishButton: PropTypes.bool.isRequired,
 };
 
 module.exports = FlappyVisualizationColumn;

@@ -7,20 +7,22 @@
 // if UiTips goes away.
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import UiTip from './UiTip';
 import Dialog from '../Dialog';
 import _ from 'lodash';
 import styleConstants from '../../styleConstants';
 import trackEvent from '../../util/trackEvent';
 
-const UiTips = React.createClass({
+const UiTips = createReactClass({
   propTypes: {
-    userId: React.PropTypes.number,
-    tipId: React.PropTypes.string,
-    showInitialTips: React.PropTypes.bool,
-    beforeDialog: React.PropTypes.object,
-    afterDialog: React.PropTypes.object,
-    tips: React.PropTypes.array
+    userId: PropTypes.number,
+    tipId: PropTypes.string,
+    showInitialTips: PropTypes.bool,
+    beforeDialog: PropTypes.object,
+    afterDialog: PropTypes.object,
+    tips: PropTypes.array
   },
 
   getInitialState() {

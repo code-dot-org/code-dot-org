@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'; // eslint-disable-line no-unused-vars
+import PropTypes from 'prop-types';
 
 import FormController from '../form_components/FormController';
 import DateConfirm from './DateConfirm';
@@ -63,8 +64,8 @@ export default class FacilitatorProgramRegistration extends FormController {
 
 FacilitatorProgramRegistration.propTypes = {
   ...FormController.propTypes,
-  attendanceDates: React.PropTypes.object.isRequired,
-  course: React.PropTypes.string.isRequired,
-  teachercon: React.PropTypes.number.isRequired,
-  teacherconLocation: React.PropTypes.string.isRequired,
+  attendanceDates: PropTypes.object.isRequired,
+  course: PropTypes.string.isRequired,
+  teachercon: PropTypes.number.isRequired,
+  teacherconLocation: PropTypes.string.isRequired,
 };

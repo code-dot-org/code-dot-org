@@ -1,7 +1,8 @@
 import React from 'react';
+import createReactClass from 'create-react-class';
 import PaginationWrapper from './PaginationWrapper';
 
-const StorybookHarness = React.createClass({
+const StorybookHarness = createReactClass({
   getInitialState() {
     return {
       currentPage: 1

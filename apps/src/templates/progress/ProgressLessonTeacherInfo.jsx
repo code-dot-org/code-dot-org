@@ -4,6 +4,8 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import { connect } from 'react-redux';
 import color from "@cdo/apps/util/color";
 import i18n from "@cdo/locale";
@@ -34,17 +36,17 @@ const styles = {
   }
 };
 
-const ProgressLessonTeacherInfo = React.createClass({
+const ProgressLessonTeacherInfo = createReactClass({
   propTypes: {
     lesson: lessonType.isRequired,
 
     // redux provided
-    sectionId: React.PropTypes.string,
-    scriptAllowsHiddenStages: React.PropTypes.bool.isRequired,
-    hiddenStageState: React.PropTypes.object.isRequired,
-    scriptName: React.PropTypes.string.isRequired,
-    hasNoSections: React.PropTypes.bool.isRequired,
-    toggleHidden: React.PropTypes.func.isRequired
+    sectionId: PropTypes.string,
+    scriptAllowsHiddenStages: PropTypes.bool.isRequired,
+    hiddenStageState: PropTypes.object.isRequired,
+    scriptName: PropTypes.string.isRequired,
+    hasNoSections: PropTypes.bool.isRequired,
+    toggleHidden: PropTypes.func.isRequired
   },
 
   onClickHiddenToggle(value) {

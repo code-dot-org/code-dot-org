@@ -2,9 +2,11 @@
 // PISKEL_DEVELOPMENT_MODE is a build flag.  See Gruntfile.js for how to enable it.
 /* global PISKEL_DEVELOPMENT_MODE */
 import React from 'react';
+import PropTypes from 'prop-types';
+import createReactClass from 'create-react-class';
 import {connect} from 'react-redux';
 import PiskelApi from '@code-dot-org/piskel';
-import * as PropTypes from '../PropTypes';
+import * as shapes from '../shapes';
 import { editAnimation, removePendingFramesAction } from '../animationListModule';
 import { show, Goal } from '../AnimationPicker/animationPickerModule';
 
@@ -21,19 +23,19 @@ const PISKEL_PATH = '/blockly/js/piskel/index.html' +
  * (and never re-rendering!) that iframe, and sending state updates to the
  * iframe.
  */
-const PiskelEditor = React.createClass({
+const PiskelEditor = createReactClass({
   propTypes: {
     // Provided manually
-    style: React.PropTypes.object,
+    style: PropTypes.object,
     // Provided by Redux
-    animationList: PropTypes.AnimationList.isRequired,
-    selectedAnimation: PropTypes.AnimationKey,
-    channelId: React.PropTypes.string.isRequired,
-    editAnimation: React.PropTypes.func.isRequired,
-    allAnimationsSingleFrame: React.PropTypes.bool.isRequired,
-    onNewFrameClick: React.PropTypes.func.isRequired,
-    pendingFrames: React.PropTypes.object,
-    removePendingFrames: React.PropTypes.func.isRequired
+    animationList: shapes.AnimationList.isRequired,
+    selectedAnimation: shapes.AnimationKey,
+    channelId: PropTypes.string.isRequired,
+    editAnimation: PropTypes.func.isRequired,
+    allAnimationsSingleFrame: PropTypes.bool.isRequired,
+    onNewFrameClick: PropTypes.func.isRequired,
+    pendingFrames: PropTypes.object,
+    removePendingFrames: PropTypes.func.isRequired
   },
 
   componentDidMount() {
