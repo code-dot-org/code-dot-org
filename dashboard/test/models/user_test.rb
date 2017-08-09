@@ -1617,35 +1617,37 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'grant admin permission logs to infrasecurity' do
+    teacher = create :teacher
     ChatClient.
       expects(:message).
       with('infra-security',
         "Granting UserPermission: environment: #{rack_env}, "\
-        "user ID: #{@teacher.id}, "\
-        "email: #{@teacher.email}, "\
+        "user ID: #{teacher.id}, "\
+        "email: #{teacher.email}, "\
         "permission: ADMIN",
         color: 'red'
       ).
       returns(true)
 
-    @teacher.admin = true
-    @teacher.save
+    teacher.admin = true
+    teacher.save
   end
 
   test 'revoke admin permission logs to infrasecurity' do
+    admin_user = create :admin
     ChatClient.
       expects(:message).
       with('infra-security',
         "Revoking UserPermission: environment: #{rack_env}, "\
-        "user ID: #{@admin.id}, "\
-        "email: #{@admin.email}, "\
+        "user ID: #{admin_user.id}, "\
+        "email: #{admin_user.email}, "\
         "permission: ADMIN",
         color: 'red'
       ).
       returns(true)
 
-    @admin.admin = nil
-    @admin.save
+    admin_user.admin = nil
+    admin_user.save
   end
 
   test 'assign_course_as_facilitator assigns course to facilitator' do
