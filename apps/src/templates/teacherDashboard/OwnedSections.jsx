@@ -13,6 +13,7 @@ import {
   asyncLoadSectionData,
   beginImportRosterFlow,
   cancelImportRosterFlow,
+  importRoster,
   importClassroomStarted,
   closeRosterDialog,
   isRosterDialogOpen,
@@ -53,6 +54,7 @@ class OwnedSections extends React.Component {
     newSection: PropTypes.func.isRequired,
     beginImportRosterFlow: PropTypes.func.isRequired,
     cancelImportRosterFlow: PropTypes.func.isRequired,
+    importRoster: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
@@ -178,7 +180,7 @@ class OwnedSections extends React.Component {
         )}
         <RosterDialog
           isOpen={this.props.isRosterDialogOpen}
-          handleImport={this.handleImport}
+          handleImport={this.props.importRoster}
           handleCancel={this.props.cancelImportRosterFlow}
           classrooms={this.props.classrooms}
           loadError={this.props.loadError}
@@ -207,6 +209,7 @@ export default connect(state => ({
   beginEditingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
+  importRoster,
   importClassroomStarted,
   asyncLoadSectionData,
   closeRosterDialog,

@@ -20,10 +20,16 @@ export const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 export const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {Object} Map oauth section type to relative import URL. */
+/** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
   [OAuthSectionTypes.google_classroom]: '/dashboardapi/google_classrooms',
   [OAuthSectionTypes.clever]: '/dashboardapi/clever_classrooms',
+};
+
+/** @const {Object} Map oauth section type to relative import URL. */
+const importUrlByProvider = {
+  [OAuthSectionTypes.google_classroom]: '/dashboardapi/import_google_classroom',
+  [OAuthSectionTypes.clever]: '/dashboardapi/import_clever_classroom',
 };
 
 //
@@ -54,10 +60,20 @@ const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
 const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
 
+/** Opens the third-paty roster UI */
 export const IMPORT_ROSTER_FLOW_BEGIN = 'teacherSections/IMPORT_ROSTER_FLOW_BEGIN';
+/** Reports available rosters have been loaded */
 export const IMPORT_ROSTER_FLOW_LIST_LOADED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOADED';
+/** Reports loading available rosters has failed */
 const IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED = 'teacherSections/IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED';
+/** Closes the third-party roster UI, purging available rosters */
 const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
+/** Reports request to import a roster has started */
+const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
+/** Reports request to import a roster has succeeded */
+const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
+/** Reports request to import a roster has failed */
+const IMPORT_ROSTER_FAILURE = 'teacherSections/IMPORT_ROSTER_FAILURE';
 const IMPORT_CLASSROOM_STARTED = 'teacherDashboard/IMPORT_CLASSROOM_STARTED';
 const ROSTER_DIALOG_CLOSE = 'oauthClassroom/ROSTER_DIALOG_CLOSE';
 
@@ -167,7 +183,7 @@ function fetchJSON(url) {
 }
 
 /**
- * Start the process of importing a section from a third-paty provider
+ * Start the process of importing a section from a third-party provider
  * (like Google Classroom or Clever) by opening the RosterDialog and
  * loading the list of classrooms available for import.
  */
@@ -206,6 +222,33 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
 
 /** Abandon the import process, closing the RosterDialog. */
 export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
+
+/**
+ * Import the course with the given courseId from a third-party provider
+ * (like Google Classroom or Clever), creating a new section or updating
+ * an existing one already associated with it.
+ * @param {string} courseId
+ */
+export const importRoster = courseId => (dispatch, getState) => {
+  const state = getState();
+  const provider = getRoot(state).provider;
+
+  dispatch(importClassroomStarted());
+  dispatch({type: IMPORT_ROSTER_REQUEST});
+  return new Promise((resolve, reject) => {
+    const url = importUrlByProvider[provider];
+    $.getJSON(url, { courseId }).done(importedSection => {
+      dispatch({type: IMPORT_ROSTER_SUCCESS});
+      dispatch(closeRosterDialog());
+      dispatch(asyncLoadSectionData())
+        .then(() => dispatch(beginEditingSection(importedSection.id)))
+        .then(resolve);
+    }).fail(err => {
+      dispatch({type: IMPORT_ROSTER_FAILURE});
+      reject(err);
+    });
+  });
+};
 
 export const importClassroomStarted = () => ({ type: IMPORT_CLASSROOM_STARTED });
 

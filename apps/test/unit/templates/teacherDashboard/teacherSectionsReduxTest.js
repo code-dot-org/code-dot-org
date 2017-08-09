@@ -29,6 +29,7 @@ import reducer, {
   isEditingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
+  importRoster,
   importClassroomStarted,
   closeRosterDialog,
   isRosterDialogOpen,
@@ -1151,6 +1152,137 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(cancelImportRosterFlow());
       expect(getState().teacherSections.classrooms).to.be.null;
+    });
+  });
+
+  describe('the importRoster action', () => {
+    let server;
+    const TEST_COURSE_ID = 'test-course-id';
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      // set up some default success responses
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}`, successResponse({}));
+      server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}`, successResponse({}));
+      server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
+      server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+    });
+    afterEach(() => server.restore());
+
+    const successResponse = (body = {}) => [
+      200,
+      {"Content-Type": "application/json"},
+      JSON.stringify(body)
+    ];
+
+    const withGoogle = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.clever));
+
+    it('immediately clears the classroom list', () => {
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      expect(getState().teacherSections.classrooms).to.be.null;
+
+      server.respond();
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('uses one api for Google Classroom', () => {
+      withGoogle();
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url)
+        .to.equal('/dashboardapi/import_google_classroom?courseId=test-course-id');
+
+      server.respond(); // To import request
+      server.respond(); // To sections load
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('uses a different api for Clever', () => {
+      withClever();
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url)
+        .to.equal('/dashboardapi/import_clever_classroom?courseId=test-course-id');
+
+      server.respond(); // To import request
+      server.respond(); // To sections load
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('closes the dialog on success', () => {
+      withClever();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(isRosterDialogOpen(getState())).to.be.true;
+
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      expect(isRosterDialogOpen(getState())).to.be.true;
+
+      server.respond(); // To import request
+      expect(isRosterDialogOpen(getState())).to.be.false;
+
+      server.respond(); // To sections load
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('reloads the section data on success', () => {
+      // Set up custom server sections response
+      server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+
+      withClever();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(getState().teacherSections.sections).to.deep.equal({});
+
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      server.respond(); // To import request
+
+      expect(server.requests).to.have.length(4);
+      expect(server.requests[1].method).to.equal('GET');
+      expect(server.requests[1].url).to.equal('/dashboardapi/sections');
+      expect(server.requests[2].method).to.equal('GET');
+      expect(server.requests[2].url).to.equal('/dashboardapi/courses');
+      expect(server.requests[3].method).to.equal('GET');
+      expect(server.requests[3].url).to.equal('/v2/sections/valid_scripts');
+
+      server.respond(); // To sections load
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(Object.keys(getState().teacherSections.sections))
+          .to.have.length(sections.length);
+      });
+    });
+
+    it('starts editing the new section on success', () => {
+      // Set up custom section import response
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}`, successResponse({
+        id: 1111,
+      }));
+      // Set up custom section load response to simulate the new section
+      server.respondWith('GET', '/dashboardapi/sections', successResponse([
+        ...sections,
+        {id: 1111}
+      ]));
+
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(getState().teacherSections.sectionBeingEdited).to.be.null;
+
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      server.respond(); // To import request
+      server.respond(); // To sections load
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
+        expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
+      });
     });
   });
 
