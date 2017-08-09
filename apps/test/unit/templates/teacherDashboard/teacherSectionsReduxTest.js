@@ -167,6 +167,8 @@ describe('teacherSectionsRedux', () => {
     restoreRedux();
   });
 
+  const getState = () => store.getState();
+
   describe('setStudioUrl', () => {
     it('sets our url', () => {
       const action = setStudioUrl('//test-studio.code.org');
@@ -635,7 +637,7 @@ describe('teacherSectionsRedux', () => {
     const failureResponse = [500, {}, ''];
 
     function state() {
-      return store.getState().teacherSections;
+      return getState().teacherSections;
     }
 
     beforeEach(function () {
@@ -802,7 +804,7 @@ describe('teacherSectionsRedux', () => {
     const failureResponse = [500, {}, 'CustomErrorBody'];
 
     function state() {
-      return store.getState().teacherSections;
+      return getState().teacherSections;
     }
 
     beforeEach(function () {
@@ -1056,18 +1058,18 @@ describe('teacherSectionsRedux', () => {
     it('does nothing if the roster dialog was already open', () => {
       withGoogle();
       store.dispatch({type: ROSTER_DIALOG_OPEN});
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      expect(isRosterDialogOpen(getState())).to.be.true;
       const promise = store.dispatch(beginImportRosterFlow());
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      expect(isRosterDialogOpen(getState())).to.be.true;
       expect(server.requests).to.have.length(0);
       return expect(promise).to.be.fulfilled;
     });
 
     it('opens the roster dialog if it was closed', () => {
       withGoogle();
-      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      expect(isRosterDialogOpen(getState())).to.be.false;
       const promise = store.dispatch(beginImportRosterFlow());
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      expect(isRosterDialogOpen(getState())).to.be.true;
       server.respond();
       return expect(promise).to.be.fulfilled;
     });
@@ -1098,18 +1100,18 @@ describe('teacherSectionsRedux', () => {
         'GET', '/dashboardapi/google_classrooms',
         successResponse({courses: [1, 2, 3]})
       );
-      expect(store.getState().teacherSections.classrooms).to.be.null;
-      expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
 
       const promise = store.dispatch(beginImportRosterFlow());
-      expect(store.getState().teacherSections.classrooms).to.be.null;
-      expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
 
       server.respond();
-      expect(store.getState().teacherSections.classrooms).to.deep.equal(
+      expect(getState().teacherSections.classrooms).to.deep.equal(
         [1, 2, 3]
       );
-      expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
       expect(promise).to.be.fulfilled;
     });
 
@@ -1119,16 +1121,16 @@ describe('teacherSectionsRedux', () => {
         'GET', '/dashboardapi/google_classrooms',
         failureResponse
       );
-      expect(store.getState().teacherSections.classrooms).to.be.null;
-      expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
 
       const promise = store.dispatch(beginImportRosterFlow());
-      expect(store.getState().teacherSections.classrooms).to.be.null;
-      expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
 
       server.respond();
-      expect(store.getState().teacherSections.classrooms).to.be.null;
-      expect(store.getState().teacherSections.loadError).to.deep.equal({
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.deep.equal({
         status: 500,
         message: 'Unknown error.',
       });
@@ -1138,26 +1140,26 @@ describe('teacherSectionsRedux', () => {
 
   describe('the setClassroomList action', () => {
     it('sets the classroom list', () => {
-      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.classrooms).to.be.null;
       store.dispatch(setClassroomList([1, 2, 3]));
-      expect(store.getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
     });
   });
 
   describe('the importClassroomStarted action', () => {
     it('clears the classroom list', () => {
       store.dispatch(setClassroomList([1, 2, 3]));
-      expect(store.getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(importClassroomStarted());
-      expect(store.getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.classrooms).to.be.null;
     });
   });
 
   describe('the failedLoad action', () => {
     it('sets the loadError property', () => {
-      expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
       store.dispatch(failedLoad('test-status', 'test-message'));
-      expect(store.getState().teacherSections.loadError).to.deep.equal({
+      expect(getState().teacherSections.loadError).to.deep.equal({
         status: 'test-status',
         message: 'test-message',
       });
@@ -1167,15 +1169,15 @@ describe('teacherSectionsRedux', () => {
   describe('the closeRosterDialog action', () => {
     it('closes the dialog if it was open', () => {
       store.dispatch({type: ROSTER_DIALOG_OPEN});
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      expect(isRosterDialogOpen(getState())).to.be.true;
       store.dispatch(closeRosterDialog());
-      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      expect(isRosterDialogOpen(getState())).to.be.false;
     });
 
     it('does nothing if the dialog was closed', () => {
-      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      expect(isRosterDialogOpen(getState())).to.be.false;
       store.dispatch(closeRosterDialog());
-      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      expect(isRosterDialogOpen(getState())).to.be.false;
     });
   });
 });
