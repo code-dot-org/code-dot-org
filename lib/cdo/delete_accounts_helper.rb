@@ -102,7 +102,7 @@ module DeleteAccountsHelper
   def self.clean_and_destroy_pd_content(user_id)
     PeerReview.where(reviewer_id: user_id).each(&:clear_data)
 
-    PdTeacherApplication.where(user_id: user_id).each(&:destroy)
+    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
@@ -118,7 +118,7 @@ module DeleteAccountsHelper
   # Cleans all sections owned by the user.
   # @param [Integer] The ID of the user to anonymize the sections of.
   def self.anonymize_user_sections(user_id)
-    Sections.with_deleted.where(user_id: user_id).each(&:clean_data)
+    Section.with_deleted.where(user_id: user_id).each(&:clean_data)
   end
 
   # Removes all information about the user pertaining to Pardot. This encompasses Pardot itself, the
