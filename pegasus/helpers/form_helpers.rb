@@ -79,6 +79,10 @@ def insert_or_upsert_form(kind, data, options={})
   row
 end
 
+# @param [String] kind The kind of the form to be updated.
+# @param [String] secret The secret associated with the form to be updated.
+# @param [Hash] data The data to update.
+# @return [Hash] The hash of values sent to the DB for updating.
 def update_form(kind, secret, data)
   return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
 
