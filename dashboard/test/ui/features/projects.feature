@@ -9,8 +9,27 @@ Scenario: Save Artist Project
   And element ".project_updated_at" eventually contains text "Saved"
   Then I open the topmost blockly category "Brushes"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+
+  # publish and unpublish the project from the share dialog
+
+  Then I open the project share dialog
+  And the project is unpublished
+  And I publish the project from the share dialog
+  And I open the project share dialog
+  And the project is published
+
+  Then I reload the project page
+  And I open the project share dialog
+  And the project is published
+
+  Then I unpublish the project from the share dialog
+  And I open the project share dialog
+  And the project is unpublished
+
+  Then I reload the project page
+  And I open the project share dialog
+  And the project is unpublished
+
   And I navigate to the share URL
   And I wait until element "#visualization" is visible
   Then element "draw-color" is a child of element "when_run"
@@ -121,8 +140,25 @@ Scenario: Gamelab Flow
   And I press "runButton"
   And I wait for 0.5 seconds
 
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+  # publish and unpublish the project from the share dialog
+
+  Then I open the project share dialog
+  And the project is unpublished
+  And I publish the project from the share dialog
+  And I open the project share dialog
+  And the project is published
+
+  Then I reload the project page
+  And I open the project share dialog
+  And the project is published
+
+  Then I unpublish the project from the share dialog
+  And I open the project share dialog
+  And the project is unpublished
+
+  Then I reload the project page
+  And I open the project share dialog
+  And the project is unpublished
 
   # Test the "View code" button, as the owner goes to /edit
   When I navigate to the share URL
