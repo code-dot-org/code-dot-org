@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Kui Flappy väljub takistusest, teosta järgmised toimingud.",
   "whenRunButtonClick": "kui mäng algab",
   "whenRunButtonClickTooltip": "Kui mäng algab, teosta järgmised toimingud.",
-  "yes": "Jah"
+  "yes": "Jah",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

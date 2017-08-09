@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Виконання дій, поданих нижче, коли Пурх входить в перешкоду.",
   "whenRunButtonClick": "коли гра починається",
   "whenRunButtonClickTooltip": "Виконання дій, поданих нижче, коли починається гра.",
-  "yes": "Так"
+  "yes": "Так",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -17,8 +17,8 @@ Teacher Info:
   %tr
     %td District:
     %td
-      = @enrollment.try(:school_info).try(:school_district).try(:name)
+      = @enrollment.school_district_name
   %tr
     %td School:
     %td
-      = @enrollment.school
+      = @enrollment.school_name

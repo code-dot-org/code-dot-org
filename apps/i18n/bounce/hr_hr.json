@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Kad lopta udari u zid, izvršava dolje navedene akcije.",
   "whileMsg": "dok",
   "whileTooltip": "Ponavlja umetnute radnje dok se ne dosegne zadani cilj.",
-  "yes": "Da"
+  "yes": "Da",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

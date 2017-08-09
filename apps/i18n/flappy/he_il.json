@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "בצע את הפעולות הבאות כאשר פלאפי פוגע במכשול.",
   "whenRunButtonClick": "כאשר המשחק מתחיל",
   "whenRunButtonClickTooltip": "בצע את הפעולות להלן כאשר המשחק מתחיל.",
-  "yes": "כן"
+  "yes": "כן",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Esegue le azioni attaccate a questo blocco quando Flappy incontra un ostacolo.",
   "whenRunButtonClick": "quando si clicca su \"Esegui\"",
   "whenRunButtonClickTooltip": "Esegue le azioni attaccate a questo blocco quando si clicca su \"Esegui\".",
-  "yes": "Sì"
+  "yes": "Sì",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

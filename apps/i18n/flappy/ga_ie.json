@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Cuireann seo na gníomhartha ceangailte i bhfeidhm nuair a ghlanann an t-imreoir constaic.",
   "whenRunButtonClick": "nuair a thosaíonn an cluiche",
   "whenRunButtonClickTooltip": "Cuireann seo na gníomhartha ceangailte i bhfeidhm nuair a thosaíonn an cluiche.",
-  "yes": "Tá"
+  "yes": "Tá",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }
