@@ -126,18 +126,23 @@ module DeleteAccountsHelper
   # (reporting only).
   # @param [Integer] The user ID to purge from Pardot.
   def self.remove_from_pardot(user_id)
-    pardot_ids = PEGASUS_DB[:contact_rollups].
-      select(:pardot_id).
-      where(dashboard_user_id: user_id).
-      map {|contact_rollup| contact_rollup[:pardot_id]}
-    failed_ids = Pardot.delete_prospects(pardot_ids)
-    if failed_ids.any?
-      raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
+    # Though we have the DB tables in all environments, we only sync data from the production
+    # environment with Pardot.
+    if rack_env == :production
+      pardot_ids = PEGASUS_DB[:contact_rollups].
+        select(:pardot_id).
+        where(dashboard_user_id: user_id).
+        map {|contact_rollup| contact_rollup[:pardot_id]}
+      failed_ids = Pardot.delete_prospects(pardot_ids)
+      if failed_ids.any?
+        raise "Pardot.delete_prospects failed for Pardot IDs #{failed_ids.join(', ')}."
+      end
     end
 
     PEGASUS_DB[:contact_rollups].where(dashboard_user_id: user_id).delete
-
-    PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
+    if PEGASUS_REPORTING_DB.exists? :contact_rollups_daily
+      PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
+    end
   end
 
   # Removes the SOLR record associated with the user.
