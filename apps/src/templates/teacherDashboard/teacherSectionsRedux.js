@@ -194,7 +194,11 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
       })
       .fail(result => {
         const message = result.responseJSON ? result.responseJSON.error : 'Unknown error.';
-        dispatch(failedLoad(result.status, message));
+        dispatch({
+          type: FAILED_LOAD,
+          status: result.status,
+          message
+        });
         reject(new Error(message));
       });
   });
@@ -204,8 +208,6 @@ export const beginImportRosterFlow = () => (dispatch, getState) => {
 export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 export const importClassroomStarted = () => ({ type: IMPORT_CLASSROOM_STARTED });
-
-export const failedLoad = (status, message) => ({ type: FAILED_LOAD, status, message });
 
 export const closeRosterDialog = () => ({type: ROSTER_DIALOG_CLOSE});
 
