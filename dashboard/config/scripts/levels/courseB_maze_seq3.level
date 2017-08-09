@@ -32,10 +32,9 @@
     "disable_if_else_editing": "false",
     "tts_instructions_override": "Fix the code to get me to the pig!",
     "shape_shift": "false",
-    "contained_level_names": null,
     "markdown_instructions": "*\"Fix the code to get me to the pig!\"*",
     "disable_procedure_autopopulate": "false",
-    "maze_data": null
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

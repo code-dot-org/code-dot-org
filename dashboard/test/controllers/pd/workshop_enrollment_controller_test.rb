@@ -7,6 +7,9 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
     @organizer = create :workshop_organizer
     @facilitator = create :facilitator
     @teacher = create :teacher
+
+    @school_district = create :school_district
+    @school = create :school
   end
 
   setup do
@@ -478,17 +481,17 @@ class Pd::WorkshopEnrollmentControllerTest < ::ActionController::TestCase
       first_name: first_name,
       last_name: last_name,
       email: email,
-      email_confirmation: email,
-      school: 'test enrollment school'
+      email_confirmation: email
     }
   end
 
   def school_info_params
     {
+      country: 'US',
       school_type: 'public',
       school_state: 'WA',
-      school_district_id: create(:school_district).id,
-      school_district_other: false
+      school_district_id: @school_district.id,
+      school_id: @school.id
     }
   end
 end

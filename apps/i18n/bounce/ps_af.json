@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "لاندنۍ کارونه وکړي کله چي توپ په دیوال نښلي.",
   "whileMsg": "کله چي",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

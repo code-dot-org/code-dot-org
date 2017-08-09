@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Suorita alla olevat toiminnot, kun pallo osuu seinään.",
   "whileMsg": "niin kauan kuin",
   "whileTooltip": "Toista sisällä oleva toiminto kunnes saavutetaan loppupiste.",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

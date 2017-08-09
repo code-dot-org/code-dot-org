@@ -9,7 +9,10 @@ import i18n from "@cdo/locale";
 import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
-import teacherSections, {setValidGrades} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections, {
+  setValidGrades,
+  setOAuthProvider
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 $(document).ready(showHomepage);
 
@@ -25,6 +28,7 @@ function showHomepage() {
   registerReducers({teacherSections, oauthClassroom});
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
+  store.dispatch(setOAuthProvider(homepageData.provider));
 
   ReactDOM.render (
     <Provider store={store}>
