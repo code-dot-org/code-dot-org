@@ -239,6 +239,7 @@ const ShareDialog = React.createClass({
                 </a>
                 {isSignedIn && !isPublished &&
                 <button
+                  id="share-dialog-publish-button"
                   style={styles.button}
                   onClick={this.publish}
                 >
@@ -247,6 +248,7 @@ const ShareDialog = React.createClass({
                 }
                 {isSignedIn && isPublished &&
                 <PendingButton
+                  id="share-dialog-unpublish-button"
                   isPending={this.props.isUnpublishPending}
                   onClick={this.unpublish}
                   pendingText={i18n.unpublishPending()}
