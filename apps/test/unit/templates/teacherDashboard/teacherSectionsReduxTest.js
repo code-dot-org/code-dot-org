@@ -30,7 +30,6 @@ import reducer, {
   beginImportRosterFlow,
   cancelImportRosterFlow,
   importClassroomStarted,
-  failedLoad,
   closeRosterDialog,
   isRosterDialogOpen,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -1161,17 +1160,6 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
       store.dispatch(importClassroomStarted());
       expect(getState().teacherSections.classrooms).to.be.null;
-    });
-  });
-
-  describe('the failedLoad action', () => {
-    it('sets the loadError property', () => {
-      expect(getState().teacherSections.loadError).to.be.null;
-      store.dispatch(failedLoad('test-status', 'test-message'));
-      expect(getState().teacherSections.loadError).to.deep.equal({
-        status: 'test-status',
-        message: 'test-message',
-      });
     });
   });
 
