@@ -1114,7 +1114,7 @@ StudioApp.prototype.showInstructionsDialog_ = function (level, autoClose) {
 
   var hideFn = _.bind(function () {
     // Set focus to ace editor when instructions close:
-    if (this.editCode && this.editor && !this.editor.currentlyUsingBlocks) {
+    if (this.editCode && this.currentlyUsingBlocks()) {
       this.editor.aceEditor.focus();
     }
 
@@ -1394,7 +1394,7 @@ StudioApp.prototype.onMouseUpVizResizeBar = function (event) {
 */
 StudioApp.prototype.resizeToolboxHeader = function () {
   var toolboxWidth = 0;
-  if (this.editCode && this.editor && this.editor.paletteEnabled) {
+  if (this.editCode && this.editor && this.editor.session && this.editor.session.paletteEnabled) {
     // If in the droplet editor, set toolboxWidth based on the block palette width:
     var categories = document.querySelector('.droplet-palette-wrapper');
     toolboxWidth = categories.getBoundingClientRect().width;
@@ -1950,6 +1950,13 @@ StudioApp.prototype.setDropletCursorToLine_ = function (line) {
   }
 };
 
+/**
+ * Whether we are currently using droplet in block mode rather than text mode.
+ */
+StudioApp.prototype.currentlyUsingBlocks = function () {
+  return this.editor && this.editor.session && this.editor.session.currentlyUsingBlocks;
+};
+
 StudioApp.prototype.handleEditCode_ = function (config) {
   if (this.hideSource) {
     // In hide source mode, just call afterInject and exit immediately
@@ -1989,7 +1996,17 @@ StudioApp.prototype.handleEditCode_ = function (config) {
 
   var fullDropletPalette = dropletUtils.generateDropletPalette(
     config.level.codeFunctions, config.dropletConfig);
-  this.editor = new droplet.Editor(document.getElementById('codeTextbox'), {
+
+  // Create a child element of codeTextbox to instantiate droplet on, because
+  // droplet sets css properties on its wrapper that would interfere with our
+  // layout otherwise.
+
+  const codeTextbox = document.getElementById('codeTextbox');
+  const dropletCodeTextbox = document.createElement('div');
+  dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  codeTextbox.appendChild(dropletCodeTextbox);
+
+  this.editor = new droplet.Editor(dropletCodeTextbox, {
     mode: 'javascript',
     modeOptions: dropletUtils.generateDropletModeOptions(config),
     palette: fullDropletPalette,
@@ -2082,12 +2099,12 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (hideToolboxIcon && showToolboxHeader) {
     hideToolboxIcon.style.display = 'inline-block';
     const handleTogglePalette = () => {
-      if (this.editor) {
-        this.editor.enablePalette(!this.editor.paletteEnabled);
+      if (this.editor && this.editor.session) {
+        this.editor.enablePalette(!this.editor.session.paletteEnabled);
         showToolboxHeader.style.display =
-            this.editor.paletteEnabled ? 'none' : 'inline-block';
+            this.editor.session.paletteEnabled ? 'none' : 'inline-block';
         hideToolboxIcon.style.display =
-            !this.editor.paletteEnabled ? 'none' : 'inline-block';
+            !this.editor.session.paletteEnabled ? 'none' : 'inline-block';
         this.resizeToolboxHeader();
       }
     };
@@ -2180,7 +2197,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
       if (range) {
         var lineIndex = range.start.row;
         var line = lineIndex + 1; // 1-based line number
-        if (this.editor.currentlyUsingBlocks) {
+        if (this.currentlyUsingBlocks()) {
           options.selector = '.droplet-gutter-line:textEquals("' + line + '")';
           this.setDropletCursorToLine_(lineIndex);
           this.editor.scrollCursorIntoPosition();
@@ -2390,7 +2407,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
  */
 StudioApp.prototype.onDropletToggle = function (autoFocus) {
   autoFocus = utils.valueOr(autoFocus, true);
-  if (!this.editor.currentlyUsingBlocks) {
+  if (!this.currentlyUsingBlocks()) {
     if (autoFocus) {
       this.editor.aceEditor.focus();
     }
