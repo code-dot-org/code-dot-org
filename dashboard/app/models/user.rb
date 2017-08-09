@@ -1501,6 +1501,7 @@ class User < ActiveRecord::Base
     self.last_sign_in_ip = nil
     self.email = ''
     self.hashed_email = ''
+    self.parent_email = nil
     self.encrypted_password = nil
     self.uid = nil
     self.reset_password_token = nil
