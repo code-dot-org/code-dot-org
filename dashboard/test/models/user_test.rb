@@ -1617,8 +1617,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'grant admin permission logs to infrasecurity' do
+
     User.stubs(:should_log?).returns(true)
     teacher = create :teacher
+
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1637,6 +1639,18 @@ class UserTest < ActiveSupport::TestCase
     admin_user = create :admin
 
     User.stubs(:should_log?).returns(true)
+        "user ID: #{@teacher.id}, "\
+        "email: #{@teacher.email}, "\
+        "permission: ADMIN",
+        color: 'red'
+      ).
+      returns(true)
+
+    @teacher.admin = true
+    @teacher.save
+  end
+
+  test 'revoke admin permission logs to infrasecurity' do
     ChatClient.
       expects(:message).
       with('infra-security',
@@ -1654,6 +1668,15 @@ class UserTest < ActiveSupport::TestCase
   test 'grant admin permission does not log in test environment' do
     ChatClient.expects(:message).never
     create :admin
+        "user ID: #{@admin.id}, "\
+        "email: #{@admin.email}, "\
+        "permission: ADMIN",
+        color: 'red'
+      ).
+      returns(true)
+
+    @admin.admin = nil
+    @admin.save
   end
 
   test 'assign_course_as_facilitator assigns course to facilitator' do
