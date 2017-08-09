@@ -207,7 +207,7 @@
   just_did_coursee: "Táim go díreach tar éis Cúrsa E a chríochnú - bain triail as! @codeorg"
   just_did_coursef: "Táim go díreach tar éis Cúrsa F a chríochnú - bain triail as! @codeorg"
   just_did_accelerated: "Táim tar éis an Chúrsa Luathaithe a chríochnú - bain triail as! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "NÍOS MÓ NÁ <b># LÍNE CHÓID</b> SCRÍOFA GO DTÍ SEO."
   lines_of_code_alt: "<b>#</b> LÍNE CHÓID SCRÍOFA AG DALTAÍ"
   who_has_done_hoc: 'Cé a rinne an Uair Chódála? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "An Uair Chódála: Barr na dTáblaí"
   students_and_lines: "Tá an Uair Chódála déanta ag %{students} dalta a scríobh %{lines} líne chóid."
   start_hoc: "Tosaigh an Uair Chódála anois"
@@ -1419,3 +1420,7 @@
   csp_name: "Foras Feasa ar an Ríomheolaíocht"
   csd_name: "CS Discoveries"
   full_course_category_name: "Cúrsaí Iomlána"
+  user_header_label: "Dia dhuit a %{username}"
+  user_header_settings: "Mo chuntas"
+  user_header_logout: "Logáil amach"
+  user_header_signin: "Logáil isteach"

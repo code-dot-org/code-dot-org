@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "تنفيذ الإجراءات أدناه عندما يدخل فلابي عقبة.",
   "whenRunButtonClick": "عند بدء تشغيل اللعبة",
   "whenRunButtonClickTooltip": "تنفيذ الإجراءات أدناه عند بدء تشغيل اللعبة.",
-  "yes": "نعم"
+  "yes": "نعم",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

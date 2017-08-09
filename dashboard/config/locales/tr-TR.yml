@@ -215,7 +215,7 @@
   parent_mailer:
     student_associated_subject: Code.org için oturum açma bilgileri
   teacher_mailer:
-    new_teacher_subject: Welcome to Code.org!
+    new_teacher_subject: Code.org'a Hoşgeldiniz!
   section:
     your_section:
       one: 'Bölüm:'
@@ -225,8 +225,8 @@
       remove: Bu bölümü bırakmak istediğinden emin misin?
     remove: Bölümü kaldır
     type:
-      picture: Picture Password
-      word: Secret Words
+      picture: Görsel Şifre
+      word: Gizli Sözcük
       email: E-posta
       google_classroom: Google Sınıf
       clever: Clever
@@ -243,9 +243,9 @@
       section_not_found: "'%{section_code}' koduyla bir bölge bulunamadı."
       blank_code: Lütfen bir bölge kodu girin
       cant_join_own_section: "Üzgünüm, kendi bölümüne katılamazsın."
-      provider_managed_section: This section is managed by another provider and cannot
-        be joined. Please ask your teacher to add you via %{provider} and re-sync
-        their section.
+      provider_managed_section: Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir
+        ve katılım sağlanamaz. Lütfen öğretmeninden seni eklemesini iste via %{provider}
+        ve bu bölümü yeniden senkronize et.
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -269,8 +269,8 @@
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: The email address you provided doesn't match
-          the email address for this account
+        user_type_change_email_mismatch: Belirttiğiniz e-posta adresi ile bu hesaba
+          ait e-posta adresi uyuşmuyor
         personal_login_created_email: Kişisel bir oturumu başarıyla oluşturuldu. Artık
           Code.org'da e-posta ve parola ile oturum açabilirsiniz
         personal_login_created_username: Kişisel bir oturumu başarıyla oluşturuldu.
@@ -285,7 +285,7 @@
         calculate: Bir şey hesaplamak
         applab: Uygulama oluşturun
         gamelab: Bir labaratuvar oyunu projesi yap
-        weblab: Make a Web Lab (beta) project
+        weblab: Bir Web Lab (beta) projesi üret
       home: Ana Sayfa
       courses: kurslar
       project_gallery: Proje Galerisi
@@ -729,8 +729,8 @@
       cta: Nasıl olduğunu öğren
     weblab:
       title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      body: Web Lab, HTML ve CSS kullanarak basit web sayfaları hazırlayabileceğin
+        bir programlama ortamıdır. Web sayfanı tasarla ve saniyeler içinde paylaş.
       audience: 13 + Yaş grubu
       cta: Nasıl olduğunu öğren
     frozen:

@@ -207,7 +207,7 @@
   just_did_coursee: "Unë sa përfundova Kursin E - shikoje! @codeorg"
   just_did_coursef: "Unë sa përfundova Kursin F - shikoje! @codeorg"
   just_did_accelerated: "Unë sapo përfundova kursin e përshpejtuar - kontrollojeni atë ! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "MBI <b># VIJAT E KODIT</b> SHKRUAR NE KOHE."
   lines_of_code_alt: "<b>#</b> VIJAT E KODIMIT TE SHKRUARA NGA STUDENTET"
   who_has_done_hoc: 'Kush ka kryer #OrënPërKodim? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Tabela e udheheqësve të Orës Së Kodimit"
   students_and_lines: "%{students} studente kane kryer Oren e Kodimit dhe jane shkruar %{lines} rrjeshta me kode."
   start_hoc: "Fillo Orën e Kodimit tani"
@@ -1413,3 +1414,7 @@
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Përshëndetje %{username}"
+  user_header_settings: "Llogaria ime"
+  user_header_logout: "Dil"
+  user_header_signin: "Futu"

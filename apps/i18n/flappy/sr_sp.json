@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Изврши доње акције када Флопи-птица уђе у препреку.",
   "whenRunButtonClick": "када игра почне",
   "whenRunButtonClickTooltip": "Изврши доње акције када игра почне.",
-  "yes": "Да"
+  "yes": "Да",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

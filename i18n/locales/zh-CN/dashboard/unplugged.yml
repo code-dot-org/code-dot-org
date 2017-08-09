@@ -182,7 +182,7 @@ zh-CN:
         title: 不用电脑的活动
         desc: 今天，你将会学到成为一个数字公民意味着什么。
       courseE_unplugged_privateInformation:
-        title: 'Common Sense Education: Private and Personal Information '
+        title: 常识教育： 私人和个人信息 
         desc: 今天，你会学会隐私和个人信息之间的区别！
       courseF_unplugged_powerOfWords:
         title: 不用电脑的活动
@@ -230,7 +230,7 @@ zh-CN:
         title: 二进制图像
         desc: 虽然很多人认为作为二进制就是严格的 0 和 1，我们之前的课程教导学生可以在各种二进制选项中表示信息。 这节课更进一步深入这种概念，因为本课内容演示电脑如何在二进制中也能存储更复杂的信息 (如图像和颜色)。
       courseE_unplugged_diceRace:
-        title: 'Real-Life Algorithms: Dice Race'
+        title: '生活中的算法: 掷骰子比赛'
         desc: 这节课展示我们在日常生活中使用的算法。作为其中的一部分，学生将发现并写出掷骰子比大小游戏的算法。
       courseE_unplugged_songwritingParameters:
         title: 通过输入参数来作曲。

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Izpildīt sekojošas darbīas, kad Flapijs saskaras ar šķērsli.",
   "whenRunButtonClick": "kad spēle sākas",
   "whenRunButtonClickTooltip": "Izpildīt sekojošas darbības, kad spēle sākas.",
-  "yes": "Jā"
+  "yes": "Jā",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

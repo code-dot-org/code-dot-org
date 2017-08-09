@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Utför åtgärderna nedan när en boll krockar med en vägg.",
   "whileMsg": "medan",
   "whileTooltip": "Upprepa de omslutna åtgärderna tills målet nåtts.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }
