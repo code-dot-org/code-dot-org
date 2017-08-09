@@ -1616,6 +1616,38 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.reload.permissions
   end
 
+  test 'grant admin permission logs to infrasecurity' do
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Granting UserPermission: environment: #{rack_env}, "\
+        "user ID: #{@teacher.id}, "\
+        "email: #{@teacher.email}, "\
+        "permission: ADMIN",
+        color: 'red'
+      ).
+      returns(true)
+
+    @teacher.admin = true
+    @teacher.save
+  end
+
+  test 'revoke admin permission logs to infrasecurity' do
+    ChatClient.
+      expects(:message).
+      with('infra-security',
+        "Revoking UserPermission: environment: #{rack_env}, "\
+        "user ID: #{@admin.id}, "\
+        "email: #{@admin.email}, "\
+        "permission: ADMIN",
+        color: 'red'
+      ).
+      returns(true)
+
+    @admin.admin = nil
+    @admin.save
+  end
+
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
     assert_creates Pd::CourseFacilitator do
