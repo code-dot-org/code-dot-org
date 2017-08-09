@@ -102,7 +102,7 @@ module DeleteAccountsHelper
   def self.clean_and_destroy_pd_content(user_id)
     PeerReview.where(reviewer_id: user_id).each(&:clear_data)
 
-    PdTeacherApplication.where(user_id: user_id).each(&:destroy)
+    Pd::TeacherApplication.where(user_id: user_id).each(&:destroy)
   end
 
   # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
