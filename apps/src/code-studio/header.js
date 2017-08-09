@@ -180,8 +180,8 @@ function shareProject() {
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
-          isSignedIn={appOptions.isSignedIn}
-          isPublished={dashboard.project.isPublished()}
+          isSignedIn={!!appOptions.isSignedIn}
+          isPublished={!!dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}
