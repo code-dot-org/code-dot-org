@@ -109,7 +109,7 @@ variants
   level 'Level 3b', experiments: ['experiment2'], active: true
 endvariants
 variants
-  level 'Level 4a'
+  level 'Level 4a', active: true, experiments: []
   level 'Level 4b', experiments: ['experiment3', 'experiment4']
 endvariants
 "
@@ -158,6 +158,29 @@ endvariants
     }
     output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
     assert_equal expected, output
+  end
+
+  test 'serialize variants with experiment-based swap' do
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    level2 = create :maze, name: 'maze 2', level_num: 'custom'
+    script = create :script, hidden: true
+    stage = create :stage, name: 'stage 1', script: script
+    script_level = create(
+      :script_level,
+      levels: [level, level2],
+      properties: {'variants': {'maze 1': {'active': false, 'experiments': ['testExperiment']}}},
+      stage: stage,
+      script: script
+    )
+    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    expected = <<-SCRIPT
+stage 'stage 1'
+variants
+  level 'maze 1', experiments: ['testExperiment']
+  level 'maze 2'
+endvariants
+SCRIPT
+    assert_equal expected, script_text
   end
 
   test 'test Multi DSL' do
