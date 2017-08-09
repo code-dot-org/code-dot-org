@@ -39,7 +39,7 @@ class FormHelpersTest < SequelTestCase
     end
   end
 
-  describe 'insert_form' do
+  describe 'insert_or_upsert_form' do
     def default_data
       {
         email_s: 'fake@example.com',
@@ -57,7 +57,7 @@ class FormHelpersTest < SequelTestCase
     end
 
     it 'inserts a new form' do
-      row = insert_form(
+      row = insert_or_upsert_form(
         'HocSignup2017',
         default_data.merge(email: "#{SecureRandom.hex(8)}@example.com")
       )
@@ -66,7 +66,7 @@ class FormHelpersTest < SequelTestCase
     end
 
     it 'creates a forms_geos entry' do
-      row = insert_form(
+      row = insert_or_upsert_form(
         'HocSignup2017',
         default_data.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
       )
@@ -75,6 +75,6 @@ class FormHelpersTest < SequelTestCase
       assert_equal 1, DB[:form_geos].where(form_id: row[:id]).count
     end
 
-    # TODO(asher): Add additional test to thoroughly test the behavior of insert_form.
+    # TODO(asher): Add additional test to thoroughly test the behavior of insert_or_upsert_form.
   end
 end
