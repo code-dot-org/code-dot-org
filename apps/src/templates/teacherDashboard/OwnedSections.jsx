@@ -11,9 +11,8 @@ import {
   beginEditingNewSection,
   beginEditingSection,
   asyncLoadSectionData,
-  loadClassroomList,
+  beginImportRosterFlow,
   importClassroomStarted,
-  openRosterDialog,
   closeRosterDialog,
   isRosterDialogOpen,
 } from './teacherSectionsRedux';
@@ -51,12 +50,11 @@ class OwnedSections extends React.Component {
     loadError: loadErrorShape,
     asyncLoadComplete: PropTypes.bool.isRequired,
     newSection: PropTypes.func.isRequired,
-    loadClassroomList: PropTypes.func.isRequired,
+    beginImportRosterFlow: PropTypes.func.isRequired,
     importClassroomStarted: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
-    openRosterDialog: PropTypes.func.isRequired,
     closeRosterDialog: PropTypes.func.isRequired,
     isRosterDialogOpen: PropTypes.bool.isRequired,
   };
@@ -72,6 +70,7 @@ class OwnedSections extends React.Component {
       defaultCourseId,
       defaultScriptId,
       queryStringOpen,
+      beginImportRosterFlow,
     } = this.props;
 
     // If we have a default courseId and/or scriptId, we want to start with our
@@ -82,15 +81,10 @@ class OwnedSections extends React.Component {
 
     if (experiments.isEnabled('importClassroom')) {
       if (queryStringOpen === 'rosterDialog') {
-        this.handleImportOpen();
+        beginImportRosterFlow();
       }
     }
   }
-
-  handleImportOpen = () => {
-    this.props.openRosterDialog();
-    this.props.loadClassroomList(this.provider);
-  };
 
   handleImportCancel = () => {
     this.props.closeRosterDialog();
@@ -132,7 +126,12 @@ class OwnedSections extends React.Component {
   };
 
   render() {
-    const { isRtl, numSections, asyncLoadComplete } = this.props;
+    const {
+      isRtl,
+      numSections,
+      asyncLoadComplete,
+      beginImportRosterFlow
+    } = this.props;
     if (!asyncLoadComplete) {
       return null;
     }
@@ -157,7 +156,7 @@ class OwnedSections extends React.Component {
               <Button
                 text={i18n.importFromGoogleClassroom()}
                 style={styles.button}
-                onClick={this.handleImportOpen}
+                onClick={beginImportRosterFlow}
                 color={Button.ButtonColor.gray}
               />
             }
@@ -165,7 +164,7 @@ class OwnedSections extends React.Component {
               <Button
                 text={i18n.importFromClever()}
                 style={styles.button}
-                onClick={this.handleImportOpen}
+                onClick={beginImportRosterFlow}
                 color={Button.ButtonColor.gray}
               />
             }
@@ -188,7 +187,7 @@ class OwnedSections extends React.Component {
           studioUrl={this.props.studioUrl}
           provider={this.provider}
         />
-        <AddSectionDialog handleImportOpen={this.handleImportOpen}/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
@@ -208,9 +207,8 @@ export default connect(state => ({
   newSection,
   beginEditingNewSection,
   beginEditingSection,
-  loadClassroomList,
+  beginImportRosterFlow,
   importClassroomStarted,
   asyncLoadSectionData,
-  openRosterDialog,
   closeRosterDialog,
 })(OwnedSections);

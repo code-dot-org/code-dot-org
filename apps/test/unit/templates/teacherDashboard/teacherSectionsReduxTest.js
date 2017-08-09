@@ -4,6 +4,7 @@ import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/red
 import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
+  ROSTER_DIALOG_OPEN,
   setStudioUrl,
   setOAuthProvider,
   setValidLoginTypes,
@@ -25,11 +26,10 @@ import reducer, {
   sectionFromServerSection,
   isAddingSection,
   isEditingSection,
-  loadClassroomList,
+  beginImportRosterFlow,
   setClassroomList,
   importClassroomStarted,
   failedLoad,
-  openRosterDialog,
   closeRosterDialog,
   isRosterDialogOpen,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -1021,38 +1021,79 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('the loadClassroomList action', () => {
+  describe('the beginImportRosterFlow action', () => {
     let server;
-    beforeEach(() => server = sinon.fakeServer.create());
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      // set up some default success responses
+      server.respondWith(
+        'GET', '/dashboardapi/google_classrooms',
+        successResponse()
+      );
+      server.respondWith(
+        'GET', '/dashboardapi/clever_classrooms',
+        successResponse()
+      );
+    });
     afterEach(() => server.restore());
 
-    function successResponse(body = {}) {
-      return [
-        200,
-        {"Content-Type": "application/json"},
-        JSON.stringify(body)
-      ];
-    }
+    const successResponse = (body = {}) => [
+      200,
+      {"Content-Type": "application/json"},
+      JSON.stringify(body)
+    ];
 
     const failureResponse = [500, {}, 'test-failure-body'];
 
+    const withGoogle = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.clever));
+
+    it('throws if no oauth provider has been set', () => {
+      return expect(store.dispatch(beginImportRosterFlow()))
+        .to.be.rejected;
+    });
+
+    it('does nothing if the roster dialog was already open', () => {
+      withGoogle();
+      store.dispatch({type: ROSTER_DIALOG_OPEN});
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      expect(server.requests).to.have.length(0);
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('opens the roster dialog if it was closed', () => {
+      withGoogle();
+      expect(isRosterDialogOpen(store.getState())).to.be.false;
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(isRosterDialogOpen(store.getState())).to.be.true;
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
     it('requests one api for Google Classroom', () => {
-      store.dispatch(loadClassroomList(OAuthSectionTypes.google_classroom));
+      withGoogle();
+      const promise = store.dispatch(beginImportRosterFlow());
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
       expect(server.requests[0].url).to.equal('/dashboardapi/google_classrooms');
       server.respond();
+      return expect(promise).to.be.fulfilled;
     });
 
     it('requests a different api for Clever', () => {
-      store.dispatch(loadClassroomList(OAuthSectionTypes.clever));
+      withClever();
+      const promise = store.dispatch(beginImportRosterFlow());
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
       expect(server.requests[0].url).to.equal('/dashboardapi/clever_classrooms');
       server.respond();
+      return expect(promise).to.be.fulfilled;
     });
 
     it('sets the classroom list on success', () => {
+      withGoogle();
       server.respondWith(
         'GET', '/dashboardapi/google_classrooms',
         successResponse({courses: [1, 2, 3]})
@@ -1060,7 +1101,7 @@ describe('teacherSectionsRedux', () => {
       expect(store.getState().teacherSections.classrooms).to.be.null;
       expect(store.getState().teacherSections.loadError).to.be.null;
 
-      store.dispatch(loadClassroomList(OAuthSectionTypes.google_classroom));
+      const promise = store.dispatch(beginImportRosterFlow());
       expect(store.getState().teacherSections.classrooms).to.be.null;
       expect(store.getState().teacherSections.loadError).to.be.null;
 
@@ -1069,9 +1110,11 @@ describe('teacherSectionsRedux', () => {
         [1, 2, 3]
       );
       expect(store.getState().teacherSections.loadError).to.be.null;
+      expect(promise).to.be.fulfilled;
     });
 
     it('sets the loadError on failure', () => {
+      withGoogle();
       server.respondWith(
         'GET', '/dashboardapi/google_classrooms',
         failureResponse
@@ -1079,7 +1122,7 @@ describe('teacherSectionsRedux', () => {
       expect(store.getState().teacherSections.classrooms).to.be.null;
       expect(store.getState().teacherSections.loadError).to.be.null;
 
-      store.dispatch(loadClassroomList(OAuthSectionTypes.google_classroom));
+      const promise = store.dispatch(beginImportRosterFlow());
       expect(store.getState().teacherSections.classrooms).to.be.null;
       expect(store.getState().teacherSections.loadError).to.be.null;
 
@@ -1089,6 +1132,7 @@ describe('teacherSectionsRedux', () => {
         status: 500,
         message: 'Unknown error.',
       });
+      expect(promise).to.be.fulfilled;
     });
   });
 
@@ -1120,24 +1164,9 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('the openRosterDialog action', () => {
-    it('opens the dialog if it was closed', () => {
-      expect(isRosterDialogOpen(store.getState())).to.be.false;
-      store.dispatch(openRosterDialog());
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
-    });
-
-    it('does nothing if the dialog was open', () => {
-      store.dispatch(openRosterDialog());
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
-      store.dispatch(openRosterDialog());
-      expect(isRosterDialogOpen(store.getState())).to.be.true;
-    });
-  });
-
   describe('the closeRosterDialog action', () => {
     it('closes the dialog if it was open', () => {
-      store.dispatch(openRosterDialog());
+      store.dispatch({type: ROSTER_DIALOG_OPEN});
       expect(isRosterDialogOpen(store.getState())).to.be.true;
       store.dispatch(closeRosterDialog());
       expect(isRosterDialogOpen(store.getState())).to.be.false;

@@ -23,7 +23,6 @@ const defaultProps = {
   studioUrl: '',
   asyncLoadComplete: true,
   newSection: () => {},
-  loadClassroomList: () => {},
   importClassroomStarted: () => {},
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
