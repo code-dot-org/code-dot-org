@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react';
 import i18n from '@cdo/locale';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
+import Radium from 'radium';
 
 const styles = {
   arrowIcon: {
@@ -38,21 +39,22 @@ const styles = {
   }
 };
 
-export default class ProjectActionBox extends Component {
+class ProjectActionBox extends Component {
   static propTypes = {
-    projectData: PropTypes.object
+    isPublished: PropTypes.bool,
+    style: PropTypes.object
   };
 
   getAvailableActions = function () {
     let actions = [i18n.rename(), i18n.remix()];
-    this.props.projectData.isPublished ?
+    this.props.isPublished ?
     actions.push(i18n.removeFromPublicGallery()) : actions.push(i18n.publishToPublicGallery());
     return actions;
   };
 
   render() {
     return (
-      <div style={styles.actionBox}>
+      <div style={[styles.actionBox, this.props.style]}>
         {(this.getAvailableActions()).map((action, index) => (
           <div key={index} style={styles.actionText}>
             {action}
@@ -66,3 +68,5 @@ export default class ProjectActionBox extends Component {
     );
   }
 }
+
+export default Radium(ProjectActionBox);

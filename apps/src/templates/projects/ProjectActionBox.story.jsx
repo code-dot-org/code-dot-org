@@ -1,6 +1,5 @@
 import React from 'react';
 import ProjectActionBox from './ProjectActionBox';
-import {stubFakePersonalProjectData} from './generateFakePersonalProjects';
 
 export default storybook => {
   storybook
@@ -10,14 +9,18 @@ export default storybook => {
           name: 'Already published project',
           description: 'Personal gallery',
           story: () => (
-            <ProjectActionBox projectData={stubFakePersonalProjectData[0]}/>
+            <ProjectActionBox
+              isPublished={true}
+            />
           )
         },
         {
           name: 'Not yet published project',
           description: 'Personal gallery',
           story: () => (
-            <ProjectActionBox projectData={stubFakePersonalProjectData[1]}/>
+            <ProjectActionBox
+              isPublished={false}
+            />
           )
         },
       ]);
