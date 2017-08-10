@@ -394,6 +394,17 @@ export default class Item extends Collidable {
   }
 
   /**
+   * Whether or not this sprite will turn to face south after
+   * Studio.ticksBeforeFaceSouth ticks of no movement
+   *
+   * @returns {boolean}
+   * @see Studio.onTick
+   */
+  shouldFaceSouthOnIdle() {
+    return this.activity !== constants.BEHAVIOR_GRID_ALIGNED;
+  }
+
+  /**
    * Display our item at its current location
    */
   display() {
