@@ -647,6 +647,7 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Работна површина: ",
   "yes": "Yes",
+  "authorizeGoogleClassroomsText": "Before you can sync Google Classroom, you must give Code.org permission to access your Google Classroom account.",
   "courseBlocksGradeBands612": "Grades 6-12",
   "courseBlocksGradeBands612Description": "Build real working apps, games and websites using blocks, JavaScript, CSS, HTML and more.",
   "courseBlocksGradeBandsContainerDescription": "Browse our catalog of courses from Code.org and 3rd party partners.",
