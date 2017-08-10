@@ -1,5 +1,4 @@
 import React from 'react';
-import _ from 'lodash';
 import ChangeLoginTypeDialog from "./ChangeLoginTypeDialog";
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
@@ -83,7 +82,6 @@ export default storybook => storybook
     },
   ]);
 
-const fakeStudents = num => _.range(num).map(x => ({id: x}));
 const sections = [
   {
     id: 11,
@@ -96,7 +94,7 @@ const sections = [
     pairing_allowed: true,
     script: null,
     course_id: 29,
-    students: []
+    studentCount: 0,
   },
   {
     id: 12,
@@ -112,7 +110,7 @@ const sections = [
       name: 'course3'
     },
     course_id: null,
-    students: fakeStudents(1)
+    studentCount: 1,
   },
   {
     id: 307,
@@ -128,7 +126,7 @@ const sections = [
       name: 'infinity'
     },
     course_id: null,
-    students: fakeStudents(10)
+    studentCount: 10,
   },
   {
     id: 14,
@@ -144,6 +142,6 @@ const sections = [
       name: 'infinity'
     },
     course_id: null,
-    students: fakeStudents(30)
+    studentCount: 30,
   }
 ];
