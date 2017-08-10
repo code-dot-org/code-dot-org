@@ -7,6 +7,7 @@ import {Table, sort} from 'reactabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import orderBy from 'lodash/orderBy';
 import {PROJECT_TYPE_MAP, personalProjectDataPropType} from './projectConstants';
+import QuickActionsCell from './QuickActionsCell';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -71,9 +72,6 @@ const styles = {
   cellIsPublished: {
     textAlign: 'center'
   },
-  cellAction: {
-    textAlign: 'center'
-  },
   thumbnailWrapper: {
     height: THUMBNAIL_SIZE,
     display: 'flex',
@@ -107,8 +105,10 @@ const isPublishedFormatter = function (isPublished) {
   return isPublished ? (<FontAwesome icon="circle"/>) : '';
 };
 
-const actionsFormatter = function () {
-  return (<FontAwesome icon="angle-down"/>);
+const actionsFormatter = function (actions, {rowData}) {
+  return (
+    <QuickActionsCell projectData={rowData} />
+  );
 };
 
 const dateFormatter = function (time) {
@@ -241,10 +241,7 @@ const PersonalProjectsTable = React.createClass({
         },
         cell: {
           format: actionsFormatter,
-          props: {style: {
-            ...styles.cell,
-            ...styles.cellAction
-          }}
+          props: {style: styles.cell}
         }
       }
     ];
