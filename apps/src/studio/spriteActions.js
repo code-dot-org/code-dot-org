@@ -46,15 +46,16 @@ import { valueOr } from '../utils';
  * @param {number} towardDeltaX
  * @param {number} towardDeltaY
  * @param {number} totalSteps
+ * @param {boolean} backward
  */
 export class GridMove {
-  constructor(towardDeltaX, towardDeltaY, totalSteps) {
+  constructor(towardDeltaX, towardDeltaY, totalSteps, backward) {
     this.towardDeltaX_ = towardDeltaX;
     this.towardDeltaY_ = towardDeltaY;
     this.totalSteps_ = totalSteps;
     this.elapsedSteps_ = 0;
 
-    this.direction_ = getDirection(towardDeltaX, towardDeltaY);
+    this.direction_ = getDirection(towardDeltaX, towardDeltaY, backward);
 
     /** @private {number} How much of the full distance to travel. */
     this.percentBeforeReverse_ = 0.3;
@@ -101,15 +102,16 @@ export class GridMove {
  * @param {number} towardDeltaY - as above.
  * @param {number} totalSteps - the number of steps (or frames) to take for the
  *        animation.
+ * @param {boolean} backward
  */
 export class GridMoveAndCancel {
-  constructor(towardDeltaX, towardDeltaY, totalSteps) {
+  constructor(towardDeltaX, towardDeltaY, totalSteps, backward) {
     this.towardDeltaX_ = towardDeltaX;
     this.towardDeltaY_ = towardDeltaY;
     this.totalSteps_ = totalSteps;
     this.elapsedSteps_ = 0;
 
-    this.direction_ = getDirection(towardDeltaX, towardDeltaY);
+    this.direction_ = getDirection(towardDeltaX, towardDeltaY, backward);
 
     /** @private {number} How much of the full distance to travel. */
     this.percentBeforeReverse_ = 0.3;
@@ -151,9 +153,15 @@ export class GridMoveAndCancel {
  * anything like that - you'll always get a diagonal if both x and y are nonzero.
  * @param {number} x
  * @param {number} y
+ * @param {boolean} backward - if true, instead returns the direction away from
+ *        the vector
  * @returns {Direction}
  */
-function getDirection(x, y) {
+function getDirection(x, y, backward) {
+  if (backward) {
+    x *= -1;
+    y *= -1;
+  }
   var dir = Direction.NONE;
   if (x < 0) {
     dir |= Direction.WEST;
