@@ -10,6 +10,7 @@ level 'K-1 Maze Loops 3'
 level '2-3 Maze 1'
 level '4-5 Maze 4'
 level '4-5 Maze Conditionals 3'
+level 'courseC_maze_programming3', challenge: true
 
 stage 'Artist'
 level 'K-1 Artist1 1'
