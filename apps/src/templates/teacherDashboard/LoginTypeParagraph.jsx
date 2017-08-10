@@ -1,14 +1,32 @@
 import React, {Component, PropTypes} from 'react';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '../Button';
+import ChangeLoginTypeDialog from './ChangeLoginTypeDialog';
 
 export default class LoginTypeParagraph extends Component {
   static propTypes = {
-    loginType: PropTypes.oneOf(['picture', 'word', 'email']),
+    sectionId: PropTypes.number.isRequired,
+    loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
+    onLoginTypeChanged: PropTypes.func,
+  };
+
+  state = {
+    isDialogOpen: false,
+  };
+
+  openDialog = () => this.setState({isDialogOpen: true});
+  closeDialog = () => this.setState({isDialogOpen: false});
+  onLoginTypeChanged = () => {
+    this.closeDialog();
+    const callback = this.props.onLoginTypeChanged;
+    if (typeof callback === 'function') {
+      callback();
+    }
   };
 
   render() {
     const {loginType} = this.props;
-    if (loginType === 'picture') {
+    if (loginType === SectionLoginType.picture) {
       return (
         <div>
           <p>
@@ -24,13 +42,19 @@ export default class LoginTypeParagraph extends Component {
             they sign in.
           </p>
           <Button
-            onClick={() => {}}
+            onClick={this.openDialog}
             text="Change to word login"
             color={Button.ButtonColor.white}
           />
+          <ChangeLoginTypeDialog
+            isOpen={this.state.isDialogOpen}
+            handleClose={this.closeDialog}
+            onLoginTypeChanged={this.onLoginTypeChanged}
+            sectionId={this.props.sectionId}
+          />
         </div>
       );
-    } else if (loginType === 'word') {
+    } else if (loginType === SectionLoginType.word) {
       return (
         <div>
           <p>
@@ -46,13 +70,19 @@ export default class LoginTypeParagraph extends Component {
             they sign in.
           </p>
           <Button
-            onClick={() => {}}
+            onClick={this.openDialog}
             text="Change to picture login"
             color={Button.ButtonColor.white}
           />
+          <ChangeLoginTypeDialog
+            isOpen={this.state.isDialogOpen}
+            handleClose={this.closeDialog}
+            onLoginTypeChanged={this.onLoginTypeChanged}
+            sectionId={this.props.sectionId}
+          />
         </div>
       );
-    } else {
+    } else if (loginType === SectionLoginType.email) {
       return (
         <div>
           <p>
@@ -67,12 +97,21 @@ export default class LoginTypeParagraph extends Component {
             and clicking <strong>Save</strong>.
           </p>
           <Button
-            onClick={() => {}}
+            onClick={this.openDialog}
             text="Change to picture or word login"
             color={Button.ButtonColor.white}
           />
+          <ChangeLoginTypeDialog
+            isOpen={this.state.isDialogOpen}
+            handleClose={this.closeDialog}
+            onLoginTypeChanged={this.onLoginTypeChanged}
+            sectionId={this.props.sectionId}
+          />
         </div>
       );
+    } else {
+      // Future work: Special cases for Google Classroom and Clever
+      return null;
     }
   }
 }

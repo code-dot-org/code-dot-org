@@ -155,6 +155,18 @@ export const finishEditingSection = () => (dispatch, getState) => {
   });
 };
 
+/**
+ * Change the login type of the given section.
+ * @param {number} sectionId
+ * @param {SectionLoginType} loginType
+ * @return {function():Promise}
+ */
+export const editSectionLoginType = (sectionId, loginType) => dispatch => {
+  dispatch(beginEditingSection(sectionId));
+  dispatch(editSectionProperties({loginType}));
+  return dispatch(finishEditingSection());
+};
+
 export const asyncLoadSectionData = () => (dispatch) => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   return Promise.all([

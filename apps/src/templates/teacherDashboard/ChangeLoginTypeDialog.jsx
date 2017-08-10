@@ -1,23 +1,37 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {Heading1} from '../../lib/ui/Headings';
 import BaseDialog from '../BaseDialog';
+import Button from '../Button';
 import LoginTypePicker from './LoginTypePicker';
 import {sectionShape} from './shapes';
-import Button from '../Button';
 import DialogFooter from "./DialogFooter";
 import PadAndCenter from './PadAndCenter';
-import {Heading1} from '../../lib/ui/Headings';
+import {editSectionLoginType} from './teacherSectionsRedux';
 
 class ChangeLoginTypeDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool,
-    handleClose: PropTypes.func,
+    handleClose: PropTypes.func.isRequired,
+    onLoginTypeChanged: PropTypes.func.isRequired,
     sectionId: PropTypes.number.isRequired,
     // Used by storybook
     hideBackdrop: PropTypes.bool,
     style: PropTypes.object,
     // Provided by Redux
-    section: sectionShape.isRequired,
+    section: sectionShape,
+    editSectionLoginType: PropTypes.func.isRequired,
+  };
+
+  changeToWord = () => {
+    const {sectionId, editSectionLoginType, onLoginTypeChanged} = this.props;
+    editSectionLoginType(sectionId, SectionLoginType.word).then(onLoginTypeChanged);
+  };
+
+  changeToPicture = () => {
+    const {sectionId, editSectionLoginType, onLoginTypeChanged} = this.props;
+    editSectionLoginType(sectionId, SectionLoginType.picture).then(onLoginTypeChanged);
   };
 
   renderOptions() {
@@ -40,7 +54,7 @@ class ChangeLoginTypeDialog extends Component {
           onCancel={handleClose}
         >
           <Button
-            href="#"
+            onClick={this.changeToWord}
             size={Button.ButtonSize.large}
             text="Use word login"
           />
@@ -54,7 +68,7 @@ class ChangeLoginTypeDialog extends Component {
           onCancel={handleClose}
         >
           <Button
-            href="#"
+            onClick={this.changeToPicture}
             size={Button.ButtonSize.large}
             text="Use picture login"
           />
@@ -77,12 +91,12 @@ class ChangeLoginTypeDialog extends Component {
           onCancel={handleClose}
         >
           <Button
-            href="#"
+            onClick={this.changeToPicture}
             size={Button.ButtonSize.large}
             text="Use picture login"
           />
           <Button
-            href="#"
+            onClick={this.changeToWord}
             size={Button.ButtonSize.large}
             text="Use word login"
             style={{marginLeft: 4}}
@@ -94,6 +108,11 @@ class ChangeLoginTypeDialog extends Component {
 
   render() {
     const {section} = this.props;
+    if (!section) {
+      // It's possible to get here before our async section load is done.
+      return null;
+    }
+
     const useWideDialog = section.studentCount <= 0;
     return (
       <BaseDialog
@@ -117,10 +136,12 @@ export const UnconnectedChangeLoginTypeDialog = ChangeLoginTypeDialog;
 
 export default connect((state, props) => ({
   section: state.teacherSections.sections[props.sectionId]
-}))(ChangeLoginTypeDialog);
+}), {
+  editSectionLoginType,
+})(ChangeLoginTypeDialog);
 
 const LimitedChangeView = ({description, children, onCancel}) => (
-  <div>
+  <div style={{marginLeft: 20, marginRight: 20}}>
     <Heading1>Change student login type?</Heading1>
     <hr/>
     <div>
