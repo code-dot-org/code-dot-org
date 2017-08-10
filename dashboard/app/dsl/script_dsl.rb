@@ -113,7 +113,7 @@ class ScriptDSL < BaseDSL
       active = false if !experiments.nil? && active.nil?
 
       levelprops[:active] = active if active == false
-      levelprops[:experiments] = experiments unless experiments.nil?
+      levelprops[:experiments] = experiments if experiments.try(:any?)
       unless levelprops.empty?
         @current_scriptlevel[:properties][:variants] ||= {}
         @current_scriptlevel[:properties][:variants][name] = levelprops
@@ -167,8 +167,11 @@ class ScriptDSL < BaseDSL
   end
 
   def self.serialize(script, filename)
-    s = []
+    File.write(filename, serialize_to_string(script))
+  end
 
+  def self.serialize_to_string(script)
+    s = []
     # Legacy script IDs
     legacy_script_ids = {
       '20-hour': 1,
@@ -192,8 +195,7 @@ class ScriptDSL < BaseDSL
 
     s << '' unless s.empty?
     s << serialize_stages(script)
-
-    File.write(filename, s.join("\n"))
+    s.join("\n")
   end
 
   def self.serialize_stages(script)
@@ -241,7 +243,7 @@ class ScriptDSL < BaseDSL
     progression = nil,
     target = nil,
     challenge = nil,
-    experiments = nil
+    experiments = []
   )
     s = []
     if level.key.start_with? 'blockly:'
@@ -255,9 +257,9 @@ class ScriptDSL < BaseDSL
       s << "level_concept_difficulty '#{level.summarize_concept_difficulty}'" if level.level_concept_difficulty
     end
     l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
-    l += ', active: false' if !experiments && active == false
-    l += ', active: true' if experiments && (active == true || active.nil?)
-    l += ", experiments: ['#{experiments.join(', ')}']" if experiments
+    l += ', active: false' if experiments.empty? && active == false
+    l += ', active: true' if experiments.any? && (active == true || active.nil?)
+    l += ", experiments: #{experiments.to_json}" if experiments.any?
     l += ", progression: '#{progression}'" if progression
     l += ', target: true' if target
     l += ', challenge: true' if challenge

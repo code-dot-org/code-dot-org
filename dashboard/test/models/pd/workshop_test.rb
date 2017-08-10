@@ -44,6 +44,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.first, @workshop
   end
 
+  test 'facilitated_or_organized_by' do
+    user = create :workshop_organizer
+    user.permission = UserPermission::FACILITATOR
+
+    expected_workshops = [
+      create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, num_facilitators: 1, organizer: user),
+      create(:pd_workshop, facilitators: [user], organizer: user),
+      create(:pd_workshop, organizer: user)
+    ]
+
+    # extra (not included)
+    create :pd_workshop, num_facilitators: 1
+
+    filtered = Pd::Workshop.facilitated_or_organized_by(user)
+    assert_equal 4, filtered.count
+    assert_equal expected_workshops.map(&:id).sort, filtered.pluck(:id).sort
+
+    assert_equal 3, filtered.organized_by(user).count
+    assert_equal 2, filtered.facilitated_by(user).count
+  end
+
   test 'query by attended teacher' do
     # Teachers attend individual sessions in the workshop
     teacher = create :teacher
@@ -694,6 +716,23 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     suppressed.each do |workshop|
       assert workshop.suppress_reminders?
     end
+  end
+
+  test 'ready_to_close?' do
+    # no sessions, not ready
+    refute @workshop.ready_to_close?
+
+    # 3 sessions, no attendance: not ready
+    workshop = create :pd_workshop, num_sessions: 3
+    refute workshop.ready_to_close?
+
+    # attendance in the first session only: not ready
+    create :pd_attendance, session: workshop.sessions.first
+    refute workshop.ready_to_close?
+
+    # attendance in the last session: ready
+    create :pd_attendance, session: workshop.sessions.last
+    assert workshop.ready_to_close?
   end
 
   private
