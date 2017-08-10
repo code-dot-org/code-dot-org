@@ -5970,6 +5970,7 @@ Studio.moveSingle = function (opts) {
   }
 
   if (skin.gridAlignedMovement) {
+    sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new GridMoveAndCancel(
           deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
