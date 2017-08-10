@@ -58,7 +58,7 @@ describe('ResourcesEditor', () => {
       );
       const resource = wrapper.find('Resource').at(0);
       assert.equal(resource.find('select').length, 1);
-      assert.equal(resource.find('option').length, 10);
+      assert.equal(resource.find('option').length, 4);
       assert.equal(resource.find('input').length, 1);
     });
   });
