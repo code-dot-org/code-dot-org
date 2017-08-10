@@ -261,21 +261,26 @@ export default class Sprite extends Item {
     }
   }
 
-  /** @returns {SVGImageElement} */
+  /**
+   * @returns {SVGImageElement}
+   * @override
+   */
   getElement() {
     return this.animation_ ? this.animation_.getElement() : null;
   }
 
-  /** @returns {SVGImageElement} */
+  /**
+   * @returns {SVGImageElement}
+   */
   getLegacyElement() {
     return this.legacyAnimation_ ? this.legacyAnimation_.getElement() : null;
   }
 
   /**
    * Returns the frame of the spritesheet for the current walking direction.
+   * @override
    */
   getDirectionFrame() {
-
     var frameDirTable = this.frameCounts.counterClockwise ?
       constants.frameDirTableWalkingWithIdleCounterclockwise :
       constants.frameDirTableWalkingWithIdleClockwise;
@@ -285,6 +290,7 @@ export default class Sprite extends Item {
 
   /**
    * Create an image element with a clip path
+   * @override
    */
   createElement(parentElement) {
     if (this.animation_) {
@@ -313,7 +319,6 @@ export default class Sprite extends Item {
 
     // Draw the sprite's current location.
     Studio.drawDebugRect("spriteCenter", this.x, this.y, 3, 3);
-
   }
 
   /**
@@ -327,6 +332,7 @@ export default class Sprite extends Item {
 
   /**
    * Remove our element/clipPath/animator
+   * @override
    */
   removeElement() {
     if (this.animation_) {
@@ -339,6 +345,7 @@ export default class Sprite extends Item {
 
   /**
    * Retrieve animation frame duration (frames per tick)
+   * @override
    */
   getAnimationFrameDuration() {
     if (this.dir === Direction.NONE) {
@@ -349,24 +356,8 @@ export default class Sprite extends Item {
   }
 
   /**
-   * Returns true if the item is currently fading away.
-   */
-  isFading() {
-    return !!this.startFadeTime;
-  }
-
-  /**
-   * Returns true if the item has finished fading away.  The caller will usually
-   * then call removeElement to destroy this item's assets.
-   */
-  hasCompletedFade() {
-    var currentTime = new Date().getTime();
-
-    return this.startFadeTime && currentTime > this.startFadeTime + this.fadeTime;
-  }
-
-  /**
    * Display our item at its current location
+   * @override
    */
   display() {
     var currentTime = new Date().getTime();
@@ -450,26 +441,14 @@ export default class Sprite extends Item {
 
   // TODO(ram): make x and y props consistent with Item. In sprites they
   // represent the top left corner, in items they're the center.
+  /**
+   * @override
+   */
   getCenterPos() {
     return {
       x: this.x + this.width / 2,
       y: this.y + this.height / 2,
     };
-  }
-
-  getNextPosition() {
-    var unit = Direction.getUnitVector(this.dir);
-    var speed = this.speed;
-    return {
-      x: this.x + speed * unit.x,
-      y: this.y + speed * unit.y
-    };
-  }
-
-  moveToNextPosition() {
-    var next = this.getNextPosition();
-    this.x = next.x;
-    this.y = next.y;
   }
 
   /** @returns {object} the center x, y coordinates for the next draw */
@@ -480,6 +459,9 @@ export default class Sprite extends Item {
     };
   }
 
+  /**
+   * @override
+   */
   updateAnimationFrameDuration_() {
     if (this.animation_) {
       this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
@@ -488,24 +470,6 @@ export default class Sprite extends Item {
       this.legacyAnimation_.setAnimationFrameDuration(
           this.getAnimationFrameDuration());
     }
-  }
-
-  /**
-   * Sets the speed and changes the animation frame duration to match.
-   * @param {number} speed Number of pixels to move per tick
-   */
-  setSpeed(speed) {
-    this.speed = speed;
-    this.updateAnimationFrameDuration_();
-  }
-
-  /**
-   * Sets the direction and changes the animation frame duration based on direction.
-   * @param {number} direction
-   */
-  setDirection(direction) {
-    this.dir = direction;
-    this.updateAnimationFrameDuration_();
   }
 
   /**
@@ -522,9 +486,9 @@ export default class Sprite extends Item {
   /**
    * Change visible opacity of this collidable sprite.
    * @param {number} newOpacity (between 0 and 1)
+   * @override
    */
   setOpacity(newOpacity) {
-
     if (this.animation_) {
       this.animation_.setOpacity(newOpacity);
     }
@@ -533,6 +497,9 @@ export default class Sprite extends Item {
     }
   }
 
+  /**
+   * @override
+   */
   atEdge(candidate) {
     return candidate.gridX < 0 ||
         (candidate.gridX * Studio.SQUARE_SIZE + this.width) > Studio.MAZE_WIDTH ||
@@ -540,6 +507,9 @@ export default class Sprite extends Item {
         (candidate.gridY * Studio.SQUARE_SIZE + this.height) > Studio.MAZE_HEIGHT;
   }
 
+  /**
+   * @override
+   */
   hasWall(candidate) {
     return Studio.willSpriteTouchWall(
         this,
