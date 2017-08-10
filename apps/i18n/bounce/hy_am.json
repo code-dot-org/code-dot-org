@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Կատարել գործողությունները ստորեւ, երբ է գնդակը բախվում է պատին.",
   "whileMsg": "ժամանակ",
   "whileTooltip": "Կրկնել կից գործողությունները, մինչեւ Սալոնի կետն է հասել:",
-  "yes": "այո"
+  "yes": "այո",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

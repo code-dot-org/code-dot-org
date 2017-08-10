@@ -209,18 +209,18 @@
   learn_classes: "查找本地的课程"
   learn_back_to_minecraft: "通过《我的世界》不断学习"
   hoc_is_here: 12月5日至11日，#HourOfCode又来了。 https://youtu.be/KsOIlDT145A.
-  just_did_hoc: "我刚刚完成了 #HourOfCode —— 大家也来看看吧！@codeorg"
-  just_did_course1: "我刚完成课程1-请查看！@codeorg"
-  just_did_course2: "我刚完成课程2-请查看！@codeorg"
-  just_did_course3: "我刚完成课程3-请查看！@codeorg"
-  just_did_course4: "我刚完成课程4-请查看！@codeorg"
-  just_did_coursea: "我刚完成了课程A - 来看看！@codeorg"
-  just_did_courseb: "我刚完成了课程B - 来看看！@codeorg"
-  just_did_coursec: "我刚完成了课程C - 来看看！@codeorg"
-  just_did_coursed: "我刚完成了课程D - 来看看！@codeorg"
-  just_did_coursee: "我刚完成了课程E - 来看看！@codeorg"
-  just_did_coursef: "我刚完成了课程F - 来看看！@codeorg"
-  just_did_accelerated: "我刚完成加速课程- 请查看！@codeorg"
+  just_did_hoc: "我刚刚完成了 #HourOfCode —— 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_course1: "我刚完成课程1-来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_course2: "我刚完成课程2-来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_course3: "我刚完成课程3-来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_course4: "我刚完成课程4-来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_coursea: "我刚完成了课程A - 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_courseb: "我刚完成了课程B - 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_coursec: "我刚完成了课程C - 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_coursed: "我刚完成了课程D - 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_coursee: "我刚完成了课程E - 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_coursef: "我刚完成了课程F - 来看看吧！感谢 @Microsoft 支持 @codeorg"
+  just_did_accelerated: "我刚完成加速课程- 来看看！谢谢 @Microsoft 支持 @codeorg"
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
   just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
@@ -257,6 +257,8 @@
   lines_of_code: "至今已经写了<b># 行代码</b>。"
   lines_of_code_alt: "学生们写了<b>#</b>行代码"
   who_has_done_hoc: "谁完成了 #HourOfCode? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "编程一小时排行榜"
   students_and_lines: "%{students} 位学生完成了Hour of Code 并且写了 %{lines} 行的代码。"
   start_hoc: "现在就开始“编程一小时”吧"
@@ -1489,9 +1491,17 @@
   csp_name: "计算机科学原理"
   csd_name: CS Discoveries
   full_course_category_name: "完整课程"
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "你好%{username}"
+  user_header_settings: "帐户设置"
+  user_header_logout: "注销"
+  user_header_signin: "登录"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

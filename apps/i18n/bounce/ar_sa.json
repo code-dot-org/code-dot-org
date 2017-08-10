@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "تنفيذ الإجراءات أدناه عندما تصطدم الكرة مع الجدار.",
   "whileMsg": "أكرر طالما",
   "whileTooltip": "تكرار الإجراءات المغلقة حتى الوصول إلى نقطة النهاية.",
-  "yes": "نعم"
+  "yes": "نعم",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

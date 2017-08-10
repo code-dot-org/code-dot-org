@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Когато героят премине препятсвие, компютърът ще изпълни изброените под този блок действия.",
   "whenRunButtonClick": "при стартиране на играта",
   "whenRunButtonClickTooltip": "При стартиране на нова игра, компютърът ще изпълни действията изброени под този блок.",
-  "yes": "Да"
+  "yes": "Да",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

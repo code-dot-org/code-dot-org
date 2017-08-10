@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Quş bir maneəyə girəndə aşağıdakı komandaları icra et.",
   "whenRunButtonClick": "oyun başladıqda",
   "whenRunButtonClickTooltip": "Oyun başladıqda aşağıdakı əmrləri icra et.",
-  "yes": "Bəli"
+  "yes": "Bəli",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

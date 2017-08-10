@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Доп қабырғаға соқтыққан кезде келесі іс-әрекеттерді орындау",
   "whileMsg": "болған кезде ",
   "whileTooltip": "Біріккен іс-әрекеттер аяқталғанша қайталаңыз.",
-  "yes": "Иә"
+  "yes": "Иә",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

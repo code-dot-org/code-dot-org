@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Izvedi spodnja dejanja, ko žoga zadene zid.",
   "whileMsg": "dokler",
   "whileTooltip": "Ponavljaj vključena dejanja, dokler ne dosežeš zaključne točke.",
-  "yes": "Da"
+  "yes": "Da",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

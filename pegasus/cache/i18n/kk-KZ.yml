@@ -326,6 +326,8 @@
   lines_of_code: "<b># ЖОЛДАН АСА КОД </b> ЖАЗЫЛДЫ."
   lines_of_code_alt: "ОҚЫШУЛАРДЫҢ ЖАЗҒАН <b>#</b> ЖОЛ КОДЫ"
   who_has_done_hoc: "Кім code.org сайтында #HourOfCode-ды орындады?"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "Код Жазу Сағатының үздіктер кестесі"
   students_and_lines: "%{students}% оқушы Код Жазу Сағатын бітірді және %{lines} жол
     код жазды."
@@ -1993,9 +1995,17 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "Сәлем %{username}"
+  user_header_settings: "Менің жеке парақшам"
+  user_header_logout: "Шығу"
+  user_header_signin: "Кіру"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

@@ -289,6 +289,8 @@
   lines_of_code: "지금까지 <b># LINES OF CODE</b> 를 작성했습니다."
   lines_of_code_alt: "<b>#</b> 줄의 코드가 학생들에 의해 작성되었습니다"
   who_has_done_hoc: "누가 #HourOfCode @codeorg 했을까?"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Hour of Code 순위
   students_and_lines: "%{students}명의 학생들이 Hour of Code 를 수행하였고, %{lines}의 코드를 작성하였습니다."
   start_hoc: Hour of Code 를 지금 바로! 시작해 보세요!
@@ -1699,9 +1701,17 @@
   csp_name: "'16 - '17 CS 원리"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "안녕하세요? %{username} 님"
+  user_header_settings: "내 계정"
+  user_header_logout: "로그아웃"
+  user_header_signin: "로그인"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

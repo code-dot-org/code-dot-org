@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Top duvarla çarpıştığında aşağıdaki işlemleri yürüt.",
   "whileMsg": "sürece",
   "whileTooltip": "Bitiş noktasına ulaşana kadar blok içindeki işlemleri tekrarla.",
-  "yes": "Evet"
+  "yes": "Evet",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Выполнить указанные ниже действия, когда Порхающая птичка преодолевает препятствие.",
   "whenRunButtonClick": "когда игра начнется",
   "whenRunButtonClickTooltip": "Выполнить указанные ниже действия, когда игра начнется.",
-  "yes": "Да"
+  "yes": "Да",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

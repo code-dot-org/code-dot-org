@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Flappy bir engele giriş yaptığı zaman aşağıdaki eylemleri yürüt.",
   "whenRunButtonClick": "oyun başladığında",
   "whenRunButtonClickTooltip": "Oyun başladığında aşağıdaki eylemleri yürüt.",
-  "yes": "Evet"
+  "yes": "Evet",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

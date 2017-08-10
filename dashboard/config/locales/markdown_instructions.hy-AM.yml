@@ -1710,7 +1710,7 @@
         \r
         Computer
         code is written by humans, and all humans make mistakes. Part of being a good
-        computer scientists is finding your mistakes and fix them. In computer science
+        computer scientist is finding your mistakes and fixing them. In computer science
         we call mistakes **bugs**. The process of finding and fixing those bugs is
         called **debugging**.  Over the next couple levels you are going to work on
         your debugging skills.\r
@@ -13132,14 +13132,14 @@
         Be sure to test your boards by changing the starting value
         of your variables and making sure the board also changes when you run the
         code.\r
-      CSD U3 game interactions_markdown_instruction: |
+      CSD U3 game interactions_markdown_instruction: |-
         # Sprite Interactions\r
         \r
         The
         last step is to create the functions that make your sprites interact in the
         right ways.  You'll need a function for each type of sprite interaction.
-        You can use the `collectItems` in [Lesson 17 Puzzle 17](/s/csd3/stage/17/puzzle/17)
-        and `displaceEnemies` in [Lesson 16 Puzzle 15](/s/csd3/stage/16/puzzle/15)
+        You can use the `collectItems` in [Lesson 21 Puzzle 17](/s/csd3/stage/21/puzzle/17)
+        and `displaceEnemies` in [Lesson 20 Puzzle 15](/s/csd3/stage/20/puzzle/15)
         as examples.\r
         \r
         For each interaction:\r
@@ -13148,7 +13148,7 @@
         * Call the function inside the draw loop\r
         \r
         After
-        you make each function, run the code to test it before making another.\r
+        you make each function, run the code to test it before making another.
       CSD U3 game sprite movement_markdown_instruction: |
         # Sprite Movement Functions\r
         \r
@@ -13163,14 +13163,14 @@
         Create a function that will make the sprite move in that way\r
         * Call the
         function inside the draw loop\r
-      CSD U3 game user controls_markdown_instruction: |
+      CSD U3 game user controls_markdown_instruction: |-
         # User Controls\r
         \r
         Next,
         you'll want to make sure your user controls are working.  Create a function
         that makes your sprites respond to user controls as defined in your project
-        guide.  You can use the function in in [Lesson 16 Puzzle 13](/s/csd3/stage/16/puzzle/13)
-        as an example.\r
+        guide.  You can use the function in in [Lesson 20 Puzzle 13](/s/csd3/stage/20/puzzle/13)
+        as an example.
       CSD U3 game variables_markdown_instruction: |-
         # Create your Variables\r
         \r
@@ -56477,8 +56477,11 @@
         nectar and make all the honey. You can collect all of the nectar in one flower
         by using the `while nectar > 0` loop.
       course2_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       course2_collector_prog_challenge1_markdown_instruction: |-
         Look carefully! Can
         you collect all **10** pieces of treasure?
@@ -56527,6 +56530,202 @@
         \t</h5>\r
         </details>\r
         </h5>\r
+      course3_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nNow
+        for a challenge!  \\r\n\\r\nHere is a design that\nuses only blocks that you
+        have already been shown.  Can you figure out how\nto recreate it?  Feel free
+        to use trial and error. You are not expected to\nget it perfect the first
+        time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the
+        last puzzle, except that the length used in the first\nloop is a little smaller. "
+      course3_artist_functions_challenge1_markdown_instruction: |-
+        Once you define
+        a function, you can call it over and over again - whenever and wherever you
+        want! Try this code to see how it works, then change it to make your own impressive
+        design!
+      course3_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course3_bee_debugging_challenge1_markdown_instruction: |-
+        Watch how the bee gets
+        the nectar. Can you use the same kind of pattern to help the bee make all
+        of the honey?
+      course3_bee_functions_challenge1_markdown_instruction: |-
+        You are on your own
+        for this challenge.  This could "bee" harder than it looks!
+      course3_bee_functions_challenge2_markdown_instruction: |-
+        You are on your own
+        for this challenge!
+      course3_bee_functions_challenge3_markdown_instruction: |-
+        Create a new function
+        to collect all the nectar and honey while there is a path ahead. Use it to
+        complete the puzzle!
+      course3_bee_functions_challenge4_markdown_instruction: |-
+        Use everything you
+        have learned to complete this puzzle!
+      course3_collector_debugging_challenge2_markdown_instruction: |-
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
+      course3_farmer_condLoops_challenge1_markdown_instruction: |-
+        The pumpkins mark
+        the place where you should turn. *Turn right at the pumpkins.* Otherwise keep
+        going forward, but remember to collect all of the lettuce or corn along the
+        way. \r
+        \r
+        **Each hidden crop has only one corn or lettuce.**
+      course3_farmer_condLoops_challenge2_markdown_instruction: |-
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
+      course3_farmer_until_challenge2_markdown_instruction: |-
+        Use If/Else blocks to
+        follow the curvy path. At each corner, use the `remove 1` command in a loop
+        to clear the piles.
+      course3_maze_debugging_challenge1_markdown_instruction: |-
+        *"Am I just going
+        around in circles?"*
+      course3_maze_debugging_challenge2_markdown_instruction: |-
+        *"If I turn too often,
+        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+      course3_maze_until_challenge1_markdown_instruction: |-
+        No hints, just challenge.
+        Get the zombie to the sunflower.
+      course3_playLab_challenge1_markdown_instruction: |-
+        *The **squirrels** are terrified
+        to see that a **dinosaur** has come to town! Can the brave **knight** keep
+        them all from panicking?*\r
+        \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
+        \r
+        \r
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
+      course3_playlab_challenge2_markdown_instruction: |-
+        Can you figure out how this
+        "Fortune Teller" app works? Try adding some of the following features to
+        this game:\r
+        \r
+        * Change the "yes" and "no" answers to something more
+        interesting.\r
+        * Let the player ask another question after the actor says
+        the fortune.\r
+        * Give the witch two more things to say when she is in an
+        `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
+      course4_artist_binary_challenge1_markdown_instruction: |-
+        You can only use each
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
+      course4_artist_binary_challenge2_markdown_instruction: |-
+        There are 256 bits
+        represented on this grid - that means it's easy for a small change to cause
+        big problems. Are you persistent enough to restore this logo back to normal?\r
+        \r
+        ![](https://images.code.org/74e15f513982b47762dd33ebbc21e5e9-image-1498776314610.png)
+      course4_artist_concept_challenge2_markdown_instruction: |-
+        Create five pinwheel
+        designs using the code below.
+      course4_artist_functions_challenge2_markdown_instruction: |-
+        Not only can you
+        jump to some pre-set locations, like the corners of the canvas, you can also
+        use a `jump to` command to get to absolutely any spot you like! Try this code
+        to see how it works, then make the program your own!\r
+        <xml>\r
+          <block
+        type="jump_to_xy">\r
+            <title name="XPOS">???</title>\r
+            <title
+        name="YPOS">???</title>\r
+            </block></xml>
+      course4_artist_fwp_challenge1_markdown_instruction: |-
+        Try running this program,
+        and make changes to see what happens. Can you figure out how it works? (Or
+        delete it and replace it with something totally different)
+      course4_artist_variables_challenge1_markdown_instruction: |-
+        Can you create a
+        `length` variable and use it to create this interesting pattern?
+      course4_artist_variables_challenge2_markdown_instruction: |-
+        <img src="https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png"
+        width="250px"/>\r
+        \r
+        You've now learned everything you need to know to
+        make a pattern like this! This puzzle is meant to be difficult.  Can you stick
+        with it until you figure out the solution?
+      course4_bee_for_challenge1_markdown_instruction: |-
+        Use this for loop to collect
+        all of the nectar. There are a few actions that you will want to `repeat 'counter'
+        times`.
+      course4_bee_fwp_challenge1_markdown_instruction: |-
+        Use one `for loop` in a function
+        to collect all of the corn. The same `for loop` can count to different maximum
+        values by using the `length` parameter.
+      course4_bee_fwp_challenge2_markdown_instruction: |-
+        Let's see if you can handle
+        this one final test! Give it everything you've got!\r
+        \r
+        Use one `for loop`
+        in a function to collect all of the vegetables in the row. Make the `for loop`
+        count to different maximum values by using the `length` parameter. Make your
+        program as short as possible by using a second `for loop` outside the function.\r
+        \r
+        Good
+        luck!
+      course4_collector_nested_loops_challenge2_markdown_instruction: |-
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
+      course4_harvester_nested_loops_challenge1_markdown_instruction: |-
+        *"I need
+        some help on the farm! Help me harvest this corn using only the blocks in
+        your toolbox."*
+      course4_playlab_variables_challenge1_markdown_instruction: |-
+        Use these blocks
+        to make the actors share a knock-knock joke. Change the punchline and setup
+        to tell your own joke!
+      course4_playlab_variables_challenge3_markdown_instruction: |-
+        Can you figure
+        out how this "Fortune Teller" app works? Try adding some of the following
+        features to this game:\r
+        \r
+        * Change the "yes" and "no" answers to something
+        more interesting.\r
+        * Let the player ask another question after the actor
+        says the fortune.\r
+        * Give the witch two more things to say when she is in
+        an `angry` or `normal` mood.\r
+        * Give the wizard his own set of fortunes.\r
+        *
+        Make each actor change mood randomly.\r
+        \r
+        Check the hints if you need help
+        with these challenges!
       courseA_artist_loops10_markdown_instruction: |-
         ##Time to head back to land.
         Help me put down stones so I don't fall in!\r
@@ -56559,10 +56758,11 @@
         \r
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a `repeat` loop to draw
-        this line five times!\r
+        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
+        five times!\r
         \r
-        ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
+        ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
         ##Draw a line seven steps long.
         This will become our horizon.\r
@@ -56574,8 +56774,9 @@
         \r
         ![](https://images.code.org/f64d93b6d9a7d9c3edfce3c227c0dd49-image-1498062074031.gif)
       courseA_artist_loops7_markdown_instruction: |-
-        ##Use the `repeat` loop to add
-        waves to the water.\r
+        ##Use the <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="3-10">???</title></block></xml> loop to add waves
+        to the water.\r
         \r
         ![](https://images.code.org/01c5f6772a8b608a2fca5f6de7e25c67-image-1498062629139.gif)
       courseA_artist_loops8_markdown_instruction: |-
@@ -56587,6 +56788,17 @@
         to the dock are broken.  Help me fix them.\r
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
+      courseA_artist_loops_challenge1_markdown_instruction: |-
+        You can use a loop to
+        draw many lines in a row.\r
+        \r
+        Can you draw a house? Make it look just the
+        way you like it!  Try looking for patterns that repeat!\r
+        \r
+        Here are some
+        ideas:\r
+        \r
+        ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: |-
         **Tweet!**\r
         \r
@@ -56607,6 +56819,14 @@
         Get all three piles! Move Laurel
         to each piece of treasure, then use this block:\r
           <xml><block type="collector_collect"/></xml>
+      courseA_collector_loops3_markdown_instruction: |-
+        How can Laurel get all five
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
+      courseA_collector_loops_challenge1_markdown_instruction: |-
+        *"Can you help me
+        spot some bugs? I know which way I want to go, but I'm not sure how many
+        steps to take."*
       courseA_forVideoTest_artist_markdown_instruction: |-
         Repeat loops work for Artist,
         too!
@@ -56673,21 +56893,23 @@
         the extra blocks, and add the missing blocks. Get the bird to the pig!
       courseA_playLab_events3_markdown_instruction: |-
         Help Jorge the Dog get moving
-        by connecting the ![](https://images.code.org/b3d6215901969328333d6393f8101c5b-image-1478142333199.png)
-        block to the ![](https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
-        event block that is already in the workspace.   \r
+        by connecting the <xml><block type="studio_move">\r
+            <title name="SPRITE">1</title>\r
+            <title
+        name="DIR">8</title>\r
+          </block></xml> block to the <xml><block type="studio_whenArrow">\r
+            <title
+        name="VALUE">left</title>\r
+          </block></xml> event block that is already
+        in the workspace.\r
         \r
-        Get Jorge to the flag
-        to finish this level!
+        Get Jorge to the flag to finish this level!
       courseA_playLab_events4_markdown_instruction: |-
         Now, get Jorge to move right
-        when the ![](https://images.code.org/b99365eb23280f158e6ef570fe1c8a76-image-1478145132820.png)
-        button is clicked.
+        when the right arrow button is clicked.
       courseA_playLab_events5_markdown_instruction: |-
         Add events to have Jorge move
-        up and down when the ![](https://images.code.org/379493b95d158b273f1424538b1c635a-image-1478145402316.png)
-        and ![](https://images.code.org/f490d78efd81c21ab74286aefe7af097-image-1478145385132.png)
-        buttons are pressed.
+        up and down when the up arrow and down arrow buttons are pressed.
       courseA_playlab_events_challenge1_markdown_instruction: |-
         *"Where are my friends
         hiding? In this game, clicking on me will show my friend Olive the cat!"*\r
@@ -56771,20 +56993,22 @@
         at least one item to pass this level.
       courseB_collector_loops2_markdown_instruction: |-
         Move Laurel to the treasure,
-        then use the![](https://images.code.org/005f989a695abd26437801be59a071f5-image-1498067986633.png)to
-        pick it up.\r
+        then use the<xml><block type="collector_collect"/></xml>block to pick it
+        up.\r
         \r
         \r
         Get all four piles to pass this level.
       courseB_collector_loops3_markdown_instruction: |-
         How can Laurel get all five
-        piles of treasure using only one `E ▶` block?
+        piles of treasure using only one <xml><block type="maze_moveEast"/></xml>
+        block?
       courseB_collector_loops3_predict1_markdown_instruction: |-
         How can Laurel collect
         all five piles of gold using only one `E -->` block?
       courseB_collector_prog3_markdown_instruction: |-
         How can Laurel collect all five
         piles of gold using only one `E -->` block?
+      courseB_maze_seq3_markdown_instruction: '*"Fix the code to get me to the pig!"*'
       courseB_maze_seq9_markdown_instruction: |-
         **Challenge:** Move around the TNT
         to get the bird to the pig.
@@ -56809,7 +57033,6 @@
         Use an event to make Daisy the
         Dragon switch to a random ![](https://images.code.org/c365e065614fea592612264f33624c09-image-1475698889081.17.53.png)
         mood when you click on her.\r
-        \r
       courseB_playlab_events4_markdown_instruction: |-
         Knight time!  \r
         \r
@@ -57066,8 +57289,11 @@
         *Help me paint the yellow
         lines on this road!*
       courseC_collector_loops_challenge2_markdown_instruction: |-
-        Let's hunt for treasure
-        - using loops! Help the collector by debugging this code. Get all of the treasure!
+        *"Let's hunt for
+        treasure - using loops!"*\r
+        \r
+        Help the collector by debugging this code.
+        Get all of the treasure!
       courseC_collector_prog1_markdown_instruction: |-
         **Free Play:** This is Laurel
         the Adventurer! Move her around and get as much treasure as you can. Use the
@@ -57259,7 +57485,7 @@
         around in circles?"*
       courseC_maze_debugging_challenge2_markdown_instruction: |-
         *"If I turn too often,
-        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+        I might get dizzy! Help me reach the acorn with only four `turn` commands."*
       courseC_maze_loops2_markdown_instruction: |-
         With the `repeat` block, you can
         loop code over and over.\r
@@ -57434,8 +57660,8 @@
         this code to see how the artist uses binary to draw this pattern.**
       courseD_artist_binary_challenge1_markdown_instruction: |-
         You can only use each
-        binary value (0 or 1) once each in the puzzle. Try using nested loops to complete
-        this drawing.
+        binary value (0 or 1) once each in this puzzle. Try using nested loops to
+        complete this drawing.
       courseD_artist_binary_challenge2_markdown_instruction: |-
         There are 256 bits
         represented on this grid - that means it's easy for a small change to cause
@@ -57887,7 +58113,7 @@
       courseD_bee_debugging_challenge1_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
-        all of honey?
+        all of the honey?
       courseD_bee_debugging_challenge2_markdown_instruction: |-
         Watch how the bees
         gets the nectar. Can you use the same kind of pattern to help the bee make
@@ -57923,6 +58149,57 @@
         Let's hunt for
         treasure - using loops! Help the collector reach at least two piles of treasure
         using only the blocks in your toolbox.
+      courseD_bounce_events1_markdown_instruction: |-
+        Get to the flag! Attach a block
+        to the "when left arrow" block and press "Run" to move the player to the
+        flag.
+      courseD_bounce_events10s_markdown_instruction: |-
+        There is now a hoop at the
+        top.  \r
+        \r
+        Attach the `score point` block to the `when ball in goal` event
+        and the `score opponent point` block to the `when ball misses hand` event
+        to make a game. \r
+        \r
+        ---\r
+        \r
+        See how many points you can score before
+        your opponent scores twice.
+      courseD_bounce_events11s_markdown_instruction: |-
+        Now, you are in control of
+        the ball!  Attach the `throw new ball` block in all of the places where the
+        game needs a new ball.\r
+        \r
+        ---\r
+        \r
+        See how many points you can score
+        before your opponent scores twice!
+      courseD_bounce_events1s_markdown_instruction: |-
+        Get the ball to the hoop!   \r
+        Attach
+        a block to the `when left arrow` event and press "Run" to move the player
+        to the net.
+      courseD_bounce_events2s_markdown_instruction: |-
+        Now, attach a block to the `when
+        right event` so that the hand can get to both baskets.
+      courseD_bounce_events5s_markdown_instruction: |-
+        We're going to send a basketball
+        flying down towards the hand.  Attach a block to the `when ball hits hand`
+        event to ensure the ball reaches the basket.
+      courseD_bounce_events6s_markdown_instruction: |-
+        Now the basket is at the top.  \r
+        \r
+        Attach
+        code to make the ball bounce when it hits the wall so you can solve this puzzle.
+      courseD_bounce_events7s_markdown_instruction: |-
+        Attach sound blocks to make
+        the net swish when you hit the basket and have the whistle blow when the ball
+        misses your hand.  \r
+        \r
+        ---\r
+        \r
+        Bounce the ball until it hits the finish
+        target.
       courseD_collector_debugging1_markdown_instruction: |-
         *"Oh no! I see a problem."*\r
         \r
@@ -57973,14 +58250,15 @@
         Help
         Laurel fix the code to get all the treasure.
       courseD_collector_debugging_challenge2_markdown_instruction: |-
-        Watch how the
-        bees gets the nectar. Can you use the same kind of pattern to help the bee
-        make all of honey?
+        Are you an expert
+        of nested loops? Use what you have learned so far to collect all of the treasure!
       courseD_collector_nested_loops_challenge2_markdown_instruction: |-
-        Let's hunt
-        for treasure - using loops! Help the collector reach at least two piles of
-        treasure using only the blocks in your toolbox. It is possible to collect
-        all 4.
+        *"Let's
+        hunt for treasure - using loops!"* \r
+        \r
+        Help the collector reach at least
+        two piles of treasure using only the blocks in your toolbox. It is possible
+        to collect all 4.
       courseD_collector_ramp10_markdown_instruction: |
         Walk Laurel around this square
         collecting the treasure as you find it.\r
@@ -58100,9 +58378,11 @@
         \r
         **Each hidden crop has only one corn or lettuce.**
       courseD_farmer_condLoops_challenge2_markdown_instruction: |-
-        It's a vegetable
-        maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
-        to complete the level.
+        *"It's a vegetable
+        maze!"* \r
+        \r
+        Turn right at pumpkins, turn left at the lettuce. Collect
+        everything to complete the level.
       courseD_farmer_condLoops_challenge2_clone_markdown_instruction: |-
         It's a vegetable
         maze. Turn right at pumpkins, turn left at the lettuce. Collect everything
@@ -58268,8 +58548,7 @@
         Markdown instructions
       courseD_maze_until_challenge1_markdown_instruction: |-
         No hints, just challenge.
-        Get the zombie to the sunflower.\r
-        Markdown instructions
+        Get the zombie to the sunflower.
       courseD_maze_until_challenge2_markdown_instruction: |-
         No hints, just challenge.
         Get the zombie to the sunflower.\r
@@ -58367,15 +58646,19 @@
         \r
         Each
         square has a side length of **20 pixels** and there are **15 squares per row**.
-      courseE_artist_concept_challenge1_markdown_instruction: "<img src=\"https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png\"\nwidth=\"200px\"/>\\r\n\\r\nNow
-        for a challenge!  \\r\n\\r\nHere is a design that\nuses only blocks that you
-        have already been shown.  Can you figure out how\nto recreate it?  Feel free
-        to use trial and error. You are not expected to\nget it perfect the first
-        time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the
-        last puzzle, except that the length used in the first\nloop is a little smaller. "
+      courseE_artist_concept_challenge1_markdown_instruction: |-
+        <img src="https://images.code.org/6cac10470af71bbb5d75bf5e2669046f-image-1439939145211.png"
+        width="200px"/>\r
+        \r
+        Now for a challenge!  \r
+        \r
+        Here is a design that
+        uses only blocks that you have already been shown.  Can you figure out how
+        to recreate it?  Feel free to use trial and error. You are not expected to
+        get it perfect the first time.
       courseE_artist_concept_challenge2_markdown_instruction: |-
         Create five pinwheel
-        designs like using the code below.
+        designs using the code below.
       courseE_artist_functions1_markdown_instruction: |
         *"Me zombie artist. Me love
         drawing!"*\r
@@ -58707,7 +58990,7 @@
         left at the corn and right at the lettuce.  \r
         \r
         *(Don't forget to collect
-        all of the produce along the way!)
+        all of the produce along the way!)*
       courseE_farmer_functions8b_markdown_instruction: |-
         **Challenge:** Not all corners
         are marked in this maze, that means that you will need to use your navigation
@@ -58718,6 +59001,9 @@
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_clone_markdown_instruction: |-
+        Take a good look at
+        this puzzle.  Can you figure out the pattern?
       courseE_farmer_predict1_markdown_instruction: |
         Help the farmer walk the path
         to find all of the lettuce\r
@@ -58824,15 +59110,21 @@
         to see that a **dinosaur** has come to town! Can the brave **knight** keep
         them all from panicking?*\r
         \r
-        Here is a different kind of game that has
-        already been started for you! Play it to see how it works. \r
+        Rules:\r
+        1. *Touching the squirrels scores
+        you points.*\r
+        2. *Touching the dinosaur takes many points away.*\r
+        \r
+        Here
+        is a different kind of game that has already been started for you! Play it
+        to see how it works. \r
         \r
         \r
-        Something
-        should happen when you get enough points or when you run out of points. Add
-        some code to the `win game` and `lose game` functions to make the game work
-        the way it should. \r
-        Click the hints for ideas!
+        Something should happen when you get enough
+        points or when you run out of points. Add some code to the `win game` and
+        `lose game` functions to make the game work the way it should. \r
+        Click the
+        hints for ideas!
       courseE_playLab_scaffold1_markdown_instruction: |-
         It is amazing how much you
         have learned! Let's make a game step by step.\r
@@ -58899,6 +59191,77 @@
         \r
         Check the hints if you need help
         with these challenges!
+      courseF_IceAge_1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `actor
+        1 say` block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      courseF_IceAge_10_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      courseF_IceAge_11_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      courseF_IceAge_2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1)
+        and wants to invite him on an adventure. Help them greet each other by using
+        the the `actor ___ say` block twice.
+      courseF_IceAge_3_markdown_instruction: |-
+        Scrat is looking for his acorn! Can
+        you help him move the last 200 pixels?
+      courseF_IceAge_4_markdown_instruction: |-
+        Diego (actor 1) is searching for Manny
+        (actor 2). Can you help bring the two together? Connect a block to the `when
+        actor touches` event to play a sound when they find each other.
+      courseF_IceAge_5_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      courseF_IceAge_6_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him?  \r
+        \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      courseF_IceAge_7_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      courseF_IceAge_8_markdown_instruction: |-
+        Here is your code from the last puzzle,
+        as well as the code to move Granny left and right. \r
+        Can you finish the
+        program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      courseF_IceAge_9_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
+      courseF_IceAge_template_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
       courseF_artist_for1_markdown_instruction: |
         **Free Play:** Experiment with the
         `for` loop and the `counter` variable.  \r
@@ -58945,12 +59308,12 @@
         Try
         using some of the code from the last level, but turning 89 degrees to create
         this twisted square spiral.
-      courseF_artist_for_challenge1_markdown_instruction: |
+      courseF_artist_for_challenge1_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing? \r
         \r
         <img src="https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png"
-        width="350px"/>\r
+        width="350px"/>
       courseF_artist_for_challenge2_markdown_instruction: |-
         Can you figure out how
         to re-create this drawing with a single loop? \r
@@ -59259,7 +59622,7 @@
         all of the nectar using as few blocks as possible.
       courseF_bee_conditionals7_predict2_markdown_instruction: |-
         Sometimes a cloud
-        covers a flower, sometimes it covers a honeycomb! \r
+        covers a flower, sometimes it covers a honeycomb!\r
         \r
         Use the `if/else`
         block to collect nectar at flowers and make honey at honeycomb.
@@ -59706,7 +60069,6 @@
         </strong>\r
         \r
         <hr/>\r
-        \r
       courseF_playlab_variables_challenge3_markdown_instruction: |-
         Can you figure
         out how this "Fortune Teller" app works? Try adding some of the following
@@ -59971,7 +60333,7 @@
         <br><br>\r
         \r
         > **NOTE: Before you
-        start this reflection, make sure you’ve reviewed the lesson in Unit 1, and
+        start this reflection, make sure you’ve reviewed the lessons in Unit 1 and
         have a good sense of the connections between lessons. If you haven’t already
         reviewed the materials, do that now and come back to this reflection later.**\r
         \r
@@ -60017,7 +60379,6 @@
         to address feedback from your reviewers and resubmit your reflections! Reviewer
         feedback will show up at the bottom of this page, once it’s available. \r
 
-        \r
         \r
         \r
       csd1dlp-tools_markdown_instruction: |
@@ -64489,6 +64850,77 @@
         * Get
         creative! The image doesn't have to be a perfect square, it can be long and
         skinny.
+      iceage_click_hello_markdown_instruction: |-
+        Can you help Sid call for his friends
+        when you click on him? \r
+        Once you're done, press "Run" to play.  Click
+        on Sid to see your code work!
+      iceage_free_play_markdown_instruction: |-
+        Time to create your own game or story!  \r
+        \r
+        When
+        you're done, click "Finish" to let friends try your game on their phones,
+        tablets, or computers!\r
+        Don't know what to make? Click the hints for details.
+      iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
+        Time to create your
+        own game or story!  \r
+        \r
+        When you're done, click "Finish" to let friends
+        try your game on their phones, tablets, or computers!\r
+        Don't know what
+        to make? Click the hints for details.
+      iceage_hello1_markdown_instruction: |-
+        Sid (actor 1) wants to gather everyone
+        for a new adventure. Can you help him say "Hello!" by dragging the `say`
+        block out and connecting it to the bottom of the `when run` event?   \r
+        \r
+        Don't
+        forget to type "Hello!" inside!
+      iceage_hello2_markdown_instruction: |-
+        Manny (actor 2) found Sid (actor 1) and
+        wants to invite him on an adventure. Help them greet each other by using the
+        the `actor ___ say` block twice.
+      iceage_move_events_markdown_instruction: |-
+        Scrat is still looking for acorns!
+        \r
+        Help him scamper around by attaching a `move actor 1` block to each of
+        the events and changing the direction to work for each arrow key. \r
+        When
+        you’re done, click "Run" and try to collect all of the acorns.
+      iceage_move_to_actor_markdown_instruction: |-
+        Diego (actor 1) is searching for
+        Manny (actor 2). Can you help bring the two together? Connect a block to the
+        `when actor touches` event to play a sound when they find each other.
+      iceage_move_to_flag_markdown_instruction: |-
+        Scrat is looking for his acorn!
+        Can you help him move the last 200 pixels?
+      iceage_repeat_markdown_instruction: |-
+        The `repeat forever` block allows you
+        to run code continuously. Can you put blocks inside of it to help Granny get
+        some exercise by moving left and right repeatedly?
+      iceage_sound_and_points_markdown_instruction: |-
+        Here is your code from the last
+        puzzle, as well as the code to move Granny left and right. \r
+        Can you finish
+        the program to make it so that you both **play a sound** and **score a point**
+        when Sid and Granny collide? \r
+        Press "Run" to play the game.
+      iceage_throw_hearts_markdown_instruction: |-
+        Sid wants to let his grandmother,
+        Granny, know that he loves her.   \r
+        \r
+        Use the `actor __ throw` command
+        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
+        Set Granny's
+        mood to happy when she gets hit with the hearts.
+      iceage_warn_ice_age_markdown_instruction: |-
+        Everyone needs to move faster because
+        an ice storm is coming! \r
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.\r
+        Press "Run" and move Sid to Diego to warn
+        him.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r

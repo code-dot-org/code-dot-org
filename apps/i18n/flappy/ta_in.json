@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Flappy தடங்களை எதிர் கொள்ளும் போது,கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்.",
   "whenRunButtonClick": "விளையாட்டு தொடங்கும் போது",
   "whenRunButtonClickTooltip": "விளையாட்டு தொடங்கும் போது, கீழே கொடுக்கப்பட்டுள்ள செயல்களை செய்து முடிக்கவும்.",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

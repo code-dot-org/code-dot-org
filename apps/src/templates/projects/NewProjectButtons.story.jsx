@@ -25,6 +25,20 @@ export default storybook => {
         story: () => (
           <NewProjectButtons projectTypes={['frozen', 'starwars', 'mc', 'minecraft']}/>
         )
+      },
+      {
+        name: 'More options',
+        description: 'Buttons for Starwars Blocks, Flappy, Sports, Basketball',
+        story: () => (
+          <NewProjectButtons projectTypes={['starwarsblocks', 'flappy', 'sports', 'basketball']}/>
+        )
+      },
+      {
+        name: 'More options',
+        description: 'Buttons for Bounce, Infinity, Ice Age, Gumball',
+        story: () => (
+          <NewProjectButtons projectTypes={['bounce', 'infinity', 'iceage', 'gumball']}/>
+        )
       }
     ]);
 };

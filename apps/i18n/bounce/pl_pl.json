@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Wykonaj poniższe czynności, kiedy piłka uderza w ścianę.",
   "whileMsg": "dopóki",
   "whileTooltip": "Powtarzaj załączone czynności, aż do osiągnięcia końca.",
-  "yes": "Tak"
+  "yes": "Tak",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

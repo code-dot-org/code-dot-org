@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Execute the actions below when a ball collides with a wall.",
   "whileMsg": "while",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

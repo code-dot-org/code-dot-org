@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Выполнить указанные ниже действия, когда шар ударяется о стену.",
   "whileMsg": "пока",
   "whileTooltip": "Повторяет действия до достижения конечной точки.",
-  "yes": "Да"
+  "yes": "Да",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

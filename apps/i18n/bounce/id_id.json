@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Laksanakan aksi-aksi dibawah ini ketika bola bertabrakan dengan dinding.",
   "whileMsg": "Selagi",
   "whileTooltip": "Ulangi perintah sampai tujuan tercapai.",
-  "yes": "Ya"
+  "yes": "Ya",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

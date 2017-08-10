@@ -200,14 +200,14 @@
   just_did_course2: "ახლახან დავასრულე მე–2 კურსი - ნახე! @codeorg"
   just_did_course3: "ახლახან დავასრულე მე–3 კურსი - ნახე! @codeorg"
   just_did_course4: "ახლახან დავასრულე მე–4 კურსი - ნახე! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "ახლახან დავასრულე ინტენსიური კურსი - ნახე! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "დღეისთვის დაიწერა <b>კოდის # ხაზზე</b> მეტი."
   lines_of_code_alt: "მოსწავლეებმა დაწერეს კოდის <b>#</b> ხაზი"
   who_has_done_hoc: 'ვინ დაასრულა #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "კოდის ერთი საათი: ლიდერების დაფა"
   students_and_lines: "%{students} მოსწავლემ გაიარა კოდის ერთი საათი და დაწერა კოდის %{lines} ხაზი."
   start_hoc: "კოდის ერთი საათის დაწყება ახლავე"
@@ -1401,3 +1402,7 @@
   csp_name: "'16-'17 CS საფუძვლები"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "გამარჯობა %{username}"
+  user_header_settings: "ანგარიშის პარამეტრები"
+  user_header_logout: "გასვლა"
+  user_header_signin: "შესვლა"

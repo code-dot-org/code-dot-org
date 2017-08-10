@@ -200,14 +200,14 @@
   just_did_course2: "Я только что закончил(а) курс 2 - посмотрите на @codeorg"
   just_did_course3: "Я только что закончил курс 3 - проверить это! @codeorg"
   just_did_course4: "Я только что закончил(а) курс 4 - посмотрите на @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Я только что закончил(а) ускоренный курс - посмотрите на @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "БОЛЕЕ <b># СТРОК КОДА</b> УЖЕ НАПИСАНО."
   lines_of_code_alt: "<b>#</b> СТРОК КОДА НАПИСАНО УЧЕНИКАМИ"
   who_has_done_hoc: 'Кто выполнил #HourOfCode? @code.org'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Таблица лидеров часа кода"
   students_and_lines: "%{students}% учеников прошли час кода и написали %{lines} строк кода."
   start_hoc: "Приступить к часу кода"
@@ -1401,3 +1402,7 @@
   csp_name: "«16 - 17» Основы информатики"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Привет, %{username}"
+  user_header_settings: "Настройки аккаунта"
+  user_header_logout: "Выйти"
+  user_header_signin: "Вход"

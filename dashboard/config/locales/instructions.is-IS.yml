@@ -4093,11 +4093,23 @@
         beini (router) og kannar notkun beinunar og DNS'
       New Artist Project_instruction: Teiknaðu eitthvað flott! Kóðinn þinn er vistaður
         sem verkefni, sem þú getur haldið áfram með hvenær sem er.
+      New Basketball Project_instruction: |-
+        Create your own Basketball game. You can
+        change all the rules. When you're done, click Finish to let friends try your
+        game on their phones.
+      New Bounce Project_instruction: |-
+        Create your own Bounce game. You can change
+        all the visuals and the rules. When you're done, click Finish to let friends
+        try your game on their phones.
       New Course 4 Artist Functions Level 4_instruction: Notaðu fallið "teikna ferning"
         til að teikna þetta mynstur.
       New Gumball Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Ice Age Project_instruction: Búðu til hvað sem þú vilt og deildu því!
       New Infinity Project_instruction: Búðu til hvað sem þú vilt og deildu því!
+      New Sports Project_instruction: |-
+        Create your own game! You're in charge here:
+        you can change all the rules, mix and match sports, get creative! When you're
+        done, click Finish to let friends try your game on their phones.
       Ninjacat Demo B (copy 1)_instruction: |
         Við skulum byrja á að skoða einfaldan tölvuleik og reyna að skilja hvernig hann virkar. Þú getur notað örvarlyklana til að færa ninjuna til vinstri og hægri og stökkva - reyndu að ná einhyrningnum en forðast drekann!
       Ninjacat Demo B_instruction: Við skulum byrja á að skoða einfaldan tölvuleik
@@ -6488,6 +6500,103 @@
       beeDebugVideo1_instruction: Notaðu `endurtaka` lykkju til að safna öllum blómasafanum.
       birdsDebugVideo1_instruction: Færðu mig eftir slóðinni að kjánalega svíninu.
         Forðastu TNT sprengiefnið annars verður fjaðrafok!
+      bounce_1_instruction: |-
+        Attach a block to the "when left arrow" block and
+        press "Run". Move the paddle using the left arrow to reach the finish target.
+      bounce_10_instruction: |-
+        There is now a goal at the top. Attach the "score
+        point" and "score opponent point" blocks to the "when ball in goal" and
+        "when ball misses paddle" blocks to make a game. See how many points you
+        can score before your opponent scores twice.
+      bounce_10_basketball_instruction: |-
+        Now there is a goal at the top! Attach the
+        "score point" and "score opponent point" blocks to the "when ball in
+        goal" and "when ball misses hand" blocks to make a game. See how many points
+        you can score before your opponent scores twice.
+      bounce_10_sports_instruction: |-
+        Now there is a goal at the top! Attach the "score
+        point" and "score opponent point" blocks to the "when ball in goal" and
+        "when ball misses hand" blocks to make a game. See how many points you can
+        score before your opponent scores twice!
+      bounce_11_instruction: |-
+        You can now attach blocks to the "when run" block.
+        You have to attach the new "launch new ball" block in more than one place.
+        Also, try changing the scene or the speed of the paddle and the ball and see
+        how many points you can score before your opponent scores twice.
+      bounce_11_basketball_instruction: |-
+        You can now attach blocks to the "when
+        run" block. You have to attach the new "throw new ball" block in more than
+        one place. Also, try changing the scene or the speed of the hand and the ball
+        and see how many points you can score before your opponent scores twice!
+      bounce_11_sports_instruction: |-
+        You can now attach blocks to the "when run"
+        block. You have to attach the new "throw new ball" block in more than one
+        place. Also, try changing the scene or the speed of the hand and the ball
+        and see how many points you can score before your opponent scores twice!
+      bounce_12_instruction: |-
+        Create your own Bounce game. You can change all the
+        visuals and the rules. When you're done, click Finish to let friends try
+        your game on their phones.
+      bounce_12_basketball_instruction: |-
+        Create your own Basketball game. You can
+        change all the rules. When you're done, click Finish to let friends try your
+        game on their phones.
+      bounce_12_sports_instruction: |-
+        Create your own game! You're in charge here:
+        you can change all the rules, mix and match sports, get creative! When you're
+        done, click Finish to let friends try your game on their phones.
+      bounce_1_basketball_instruction: |-
+        Attach a block to the "when left arrow"
+        block and press "Run". Move the hand using the left arrow to reach the finish
+        target.
+      bounce_1_sports_instruction: |-
+        Get to the flag! Attach a block to the "when
+        left arrow" block and press "Run" to move the player to the flag.
+      bounce_2_instruction: |-
+        Attach a block to the "when right arrow" and "when
+        left arrow" blocks. Move the paddle to reach both finish targets.
+      bounce_2_basketball_instruction: |-
+        Attach a block to the "when right arrow"
+        and "when left arrow" blocks. Move the hand to reach both finish targets.
+      bounce_2_sports_instruction: |-
+        There are two flags now! Attach a block to the
+        "when left arrow" and "when right arrow" blocks to make your player move
+        in two directions.
+      bounce_3_instruction: |-
+        Now try something similar with the "when up arrow"
+        block. Move the paddle to the finish target at the top.
+      bounce_4_instruction: |-
+        This time you need to add four blocks. Move the paddle
+        to all four finish targets to complete this puzzle.
+      bounce_5_instruction: |-
+        We're going to send a ball flying down towards the
+        paddle. Attach a block to the "when ball hits paddle" block to ensure the
+        ball reaches the finish target.
+      bounce_5_basketball_instruction: |-
+        We're going to send a ball flying down towards
+        the hand. Attach a block to the "when ball hits hand" block to ensure the
+        ball reaches the flag.
+      bounce_5_sports_instruction: |-
+        The hockey puck is going to fly down toward the
+        player! Attach a block to the "when ball hits player" block to hit the flag.
+      bounce_6_instruction: |-
+        Now the finish target is on the top. You need to attach
+        blocks to both of the "when ball hits" blocks to solve this puzzle.
+      bounce_6_basketball_instruction: |-
+        Now the flag is on the top. You need to attach
+        blocks to both of the "when ball hits" blocks to solve this puzzle.
+      bounce_6_sports_instruction: |-
+        Now the flag is on the top. You need to attach
+        blocks to both of the "when ball hits" blocks to solve this puzzle.
+      bounce_7_instruction: |-
+        Attach blocks to each of the "when" blocks. Bounce
+        the ball until it hits the finish target.
+      bounce_7_basketball_instruction: |-
+        Attach blocks to each of the "when" blocks.
+        Bounce the ball until it hits the flag.
+      bounce_7_sports_instruction: |-
+        Attach blocks to each of the "when" blocks.
+        Bounce the ball until it hits the flag.
       brendan hackathon level_instruction: |-
         these are the instructions for my level.  you
         should do this level and have a good time.
@@ -6601,6 +6710,46 @@
       course2_playlab_stage17_9_instruction: |-
         Getur þú bætt við kubbi til að skora stig þegar Waddles rekst á kolkrabbann Oktavíu(leikmann 3)? \r
         Spilaðu leikinn og færðu Waddles með örvarlyklunum þar til þú skorar!
+      course3_artist_concept_challenge1_instruction: Ekki hika við að prófa þig áfram.
+        Það er engin krafa um að þú leysir þetta í fyrstu atrennu. Viltu fá fleiri
+        vísbendingar? Smelltu hér!
+      course3_artist_functions_challenge1_instruction: "Þegar þú hefur einu sinni
+        skilgreint fall, getur þú notað það aftur og aftur - hvar og hvenær sem þú
+        vilt! Prófaðu þennan kóða til að sjá hvernig hann virkar og breyttu honum
+        svo til að búa til þína eigin flottu hönnun!"
+      course3_artist_functions_challenge2_instruction: Prófaðu þennan kóða til að
+        sjá hvernig hann virkar. Breyttu svo forritinu eins og þú vilt!
+      course3_bee_debugging_challenge1_instruction: |-
+        Watch how the bee gets the nectar.
+        Can you use the same kind of pattern to help the bee make all of the honey?
+      course3_bee_functions_challenge1_instruction: "Þú þarft að leysa þessa þraut
+        á eigin spýtur. Hún gæti leynt á sér!"
+      course3_bee_functions_challenge2_instruction: "Þú þarft að leysa þessa þraut
+        á eigin spýtur!"
+      course3_bee_functions_challenge3_instruction: Búðu til nýtt fall til að vinna
+        allan blómasafann og hunangið á meðan það er slóð framundan. Notaðu það til
+        að ljúka þrautinni!
+      course3_bee_functions_challenge4_instruction: Notaðu allt sem þú hefur lært
+        til að ljúka þessari þraut!
+      course3_collector_debugging_challenge2_instruction: Ert þú sérfræðingur í földuðum
+        lykkjum? Notaðu það sem þú hefur lært til að safna öllum fjársjóðnum!
+      course3_farmer_condLoops_challenge1_instruction: |-
+        Snúðu til hægri við graskerin.
+        Safnaðu öllu til að klára áfangann. Hver falin reitur hefur bara eitt af korni eða káli.
+      course3_farmer_condLoops_challenge2_instruction: Safnaðu öllu til að klára áfangann.
+      course3_farmer_until_challenge2_instruction: Notaðu "ef/annars" kubba til að
+        fylgja krókóttum stígnum. Notaðu "fjarlægja 1" kubbinn á hverju horni til
+        að fjarlægja haugana.
+      course3_maze_debugging_challenge1_instruction: '*"Fer ég bara í hringi?"*'
+      course3_maze_debugging_challenge2_instruction: '*"Ef ég snýst of oft, gæti mig
+        svimað! Hjálpaðu mér að ná akarninu með aðeins fjórum "snúa" skipunum."*'
+      course3_maze_until_challenge1_instruction: Engar vísbendingar - bara áskorun.
+        Komdu uppvakningnum til sólblómsins.
+      course3_playLab_challenge1_instruction: |-
+        Eitthvað ætti að gerast þegar þú færð nóg stig eða þegar stigin klárast. Bættu kóða í föllin `vinna leik` og `tapa leik` svo leikurinn virki eins og hann á að gera.\r
+        Smelltu á vísbendingar til að fá hugmyndir!
+      course3_playlab_challenge2_instruction: Getur þú fundið út hvernig appið "Völvan"
+        virkar? Smelltu á `NÁNAR` til að sjá áskoranirnar.
       course3_playlab_stage16_1_instruction: Getur þú látið hundinn segja "Halló heimur"?
       course3_playlab_stage16_2_instruction: Getur þú látið hundinn segja eitthvað
         og síðan látið köttinn segja eitthvað?
@@ -6632,6 +6781,44 @@
         skorar?
       course3_playlab_stage17_7_instruction: Búðu til sögu eftir eigin höfði. Smelltu
         svo á Ljúka til að leyfa vinum að prófa söguna í símum sínum.
+      course4_artist_binary_challenge1_instruction: "Þú mátt aðeins nota hvert tvíundargildi
+        (0 eða 1) einu sinni í þrautinni. Prófaðu að nota faldaðar lykkjur til að
+        ljúka teikningunni."
+      course4_artist_binary_challenge2_instruction: Hefurðu nægilegt úthald til að
+        koma þessu merki í fyrra horf?
+      course4_artist_concept_challenge2_instruction: Búðu til fimm hjóllaga mynstur
+        með kóðanum fyrir neðan.
+      course4_artist_functions_challenge2_instruction: Prófaðu þennan kóða til að
+        sjá hvernig hann virkar. Breyttu svo forritinu eins og þú vilt!
+      course4_artist_fwp_challenge1_instruction: Prófaðu að keyra þetta forrit og
+        gerðu breytingar til að sjá hvaða áhrif það hefur. Geturðu fundið út hvernig
+        það virkar? (Þú getur líka eytt því og búið til eitthvað gjörólíkt)
+      course4_artist_variables_challenge1_instruction: "Þú hefur nú lært sem þú þarft
+        að kunna til að búa til svona mynstur! Þessi þraut á að vera erfið. Getur
+        þú haldið út þar til þú hefur fundið lausn?"
+      course4_artist_variables_challenge2_instruction: "Þú hefur nú lært sem þú þarft
+        að kunna til að búa til svona mynstur! Þessi þraut á að vera erfið. Getur
+        þú haldið út þar til þú hefur fundið lausn?"
+      course4_bee_for_challenge1_instruction: Notaðu þessa "frá" lykkju til að safna
+        öllum blómasafanum. Það eru nokkrar aðgerðir sem þú ættir að endurtaka "teljari"
+        sinnum.
+      course4_bee_fwp_challenge1_instruction: Notaðu eina `frá` lykkju í falli til
+        að safna öllum maísnum. Sama `frá` lykkjan getur talið upp í mismunandi hámarkstölu
+        með því að nota stikann `lengd`.
+      course4_bee_fwp_challenge2_instruction: Notaðu eina `frá` lykkju í falli til
+        að safna öllu grænmetinu í röðinni. Láttu `frá` lykkjuna telja upp í mismunandi
+        hámarksgildi með því að nota stikann `lengd`. Hafðu forritið eins stutt og
+        hægt er með því að nota aðra `frá` lykkju utan við fallið.
+      course4_collector_nested_loops_challenge2_instruction: |-
+        Við skulum leita að fjársjóði
+        - með lykkjum! Hjálpaðu safnaranum að ná minnst tveimur hrúgum af fjársjóði með kubbum í verkfærakassanum. Það er mögulegt að ná öllum 4.
+      course4_harvester_nested_loops_challenge1_instruction: '"Ég þarf aðstoð á býlinu!
+        Hjálpaðu mér að slá þetta korn með kubbunum í verkfærakassanum."'
+      course4_playlab_variables_challenge1_instruction: Notaðu þessa kubba til að
+        láta leikmennina segja bank-bank brandara. Breyttu uppstillingunni og textanum
+        og segðu eigin brandara!
+      course4_playlab_variables_challenge3_instruction: Getur þú fundið út hvernig
+        appið "Völvan" virkar? Smelltu á `NÁNAR` til að sjá áskoranirnar.
       courseA_artist_loops1_instruction: |-
         This is a new type of puzzle called "Artist".
         Play with the level and draw something fun.
@@ -6657,10 +6844,6 @@
         water.
       courseA_artist_loops8_instruction: We need a ladder up to the boat.
       courseA_artist_loops9_instruction: "Áskorun: Lagaðu tröppurnar."
-      courseA_artist_loops_challenge1_instruction: |-
-        Þú getur teiknað lykkju til að teikna margar línur í röð.\r
-        \r
-        Getur þú teiknað hús? Gefðu því útlit eftir eigin smekk. Reyndu að koma auga á mynstur sem endurtaka sig!
       courseA_artist_loops_challenge2_instruction: Tíst tíst! Getur þú hjálpað mér
         að búa til tvö fuglahús?
       courseA_artist_loops_challenge3_instruction: Komum í leik! Teiknaðu eins mörg
@@ -6675,8 +6858,6 @@
         þú getur!
       courseA_collector_loops2_instruction: Náðu öllum þremur hrúgunum til að klára
         þennan áfanga.
-      courseA_collector_loops3_instruction: Hvernig getur Laurel náð öllum fimm fjársjóðshrúgunum
-        með því að nota bara einn `[A-->]` kubb?
       courseA_collector_loops4_instruction: Lagaðu slóð Laurel til að ná öllum þessum
         fjársjóði.
       courseA_collector_loops5_instruction: Notaðu það sem þú hefur lært til að ná
@@ -6825,7 +7006,6 @@
       courseB_maze_seq11_instruction: It's all you!  Get the bird to the pig.
       courseB_maze_seq12_instruction: Náðu nú þessu svíni hvernig sem þú vilt!
       courseB_maze_seq2_instruction: '*"Villa! Lagaðu kóðann svo ég komist til svínsins."*'
-      courseB_maze_seq3_instruction: '*"Lagaðu kóðann svo ég komist til svínsins."*'
       courseB_maze_seq4_instruction: Add 2 blocks to get the bird to the pig.
       courseB_maze_seq5_instruction: Now try this puzzle from the start!
       courseB_maze_seq6_instruction: Farðu í eina átt, svo í aðra, til að koma fuglinum
@@ -7065,7 +7245,7 @@
       courseC_flappy_events3_instruction: |-
         Attach the `end game` block to the `when
         hit the ground` event.   Play the game and crash the bird into the ground
-        to continue."
+        to continue.
       courseC_flappy_events4_instruction: |-
         Attach a block to the `when hit an obstacle`
         event so that the game ends when Flappy crashes into the first set of pipes.
@@ -7476,6 +7656,75 @@
       courseD_bee_nested_loops_challenge2_instruction: Komum í fjársjóðaleit - með
         lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins
         með kubbunum í verkfærakassanum.
+      courseD_bounce_events1_instruction: |-
+        Attach a block to the "when left arrow"
+        block and press "Run" to move the player to the flag.
+      courseD_bounce_events10_instruction: |-
+        There is now a goal at the top. Attach
+        the "score point" and "score opponent point" blocks to the "when ball
+        in goal" and "when ball misses paddle" blocks to make a game. See how many
+        points you can score before your opponent scores twice.
+      courseD_bounce_events10s_instruction: "Attach the `score point` block to the\n`when
+        ball in goal` event and the `score opponent point` block to the `when\nball
+        misses hand` event to make a game. "
+      courseD_bounce_events11_instruction: |-
+        You can now attach blocks to the "when
+        run" block. You have to attach the new "launch new ball" block in more
+        than one place. Also, try changing the scene or the speed of the paddle and
+        the ball and see how many points you can score before your opponent scores
+        twice.
+      courseD_bounce_events11s_instruction: "Attach the `throw new ball` block in\nall
+        of the places where the game needs a new ball. "
+      courseD_bounce_events12_instruction: |-
+        Create your own Bounce game. You can
+        change all the visuals and the rules. When you're done, click Finish to let
+        friends try your game on their phones.
+      courseD_bounce_events12s_instruction: |-
+        Make this game your own. You can change
+        all the visuals and the rules. When you're done, click "Finish" to let
+        friends try your game on their phones.
+      courseD_bounce_events1s_instruction: |-
+        Attach a block to the "when left arrow"
+        block and press "Run" to move the player to the net.
+      courseD_bounce_events2_instruction: |-
+        Attach a block to the "when right arrow"
+        and "when left arrow" blocks. Move the paddle to reach both finish targets.
+      courseD_bounce_events2s_instruction: |-
+        Now, attach a block to the `when right
+        event` so that the hand can get to both baskets.
+      courseD_bounce_events3_instruction: |-
+        Now try something similar with the "when
+        up arrow" block. Move the paddle to the finish target at the top.
+      courseD_bounce_events3s_instruction: |-
+        Now try something similar with the "when
+        up arrow" block. Move the paddle to the finish target at the top.
+      courseD_bounce_events4_instruction: |-
+        This time you need to add four blocks.
+        Move the paddle to all four finish targets to complete this puzzle.
+      courseD_bounce_events4s_instruction: |-
+        This time you need to add four blocks.
+        Move the paddle to all four finish targets to complete this puzzle.
+      courseD_bounce_events5_instruction: |-
+        We're going to send a ball flying down
+        towards the paddle. Attach a block to the "when ball hits paddle" block
+        to ensure the ball reaches the finish target.
+      courseD_bounce_events5s_instruction: |-
+        Attach a block to the `when ball hits
+        hand` event to ensure the ball reaches the basket.
+      courseD_bounce_events6_instruction: |-
+        Now the finish target is on the top. You
+        need to attach blocks to both of the "when ball hits" blocks to solve this
+        puzzle.
+      courseD_bounce_events6s_instruction: |-
+        Attach code to make the ball bounce when
+        it hits the wall so you can solve this puzzle.
+      courseD_bounce_events7_instruction: |-
+        Attach blocks to each of the "when"
+        blocks. Bounce the ball until it hits the finish target.
+      courseD_bounce_events7s_instruction: |-
+        Attach sound blocks to make the net swish
+        when you hit the basket and have the whistle blow when the ball misses your
+        hand. Bounce the ball until it hits the finish target.
       courseD_collector_debugging1_instruction: Lagaðu forritið svo allur fjársjóðurinn
         náist.
       courseD_collector_debugging2_instruction: Lagaðu forritið svo allur fjársjóðurinn
@@ -7917,6 +8166,9 @@
       courseE_farmer_functions9_instruction: Use conditionals to simplify your program.
       courseE_farmer_functions9b_instruction: Getur þú fundið út mynstrið sem þarf
         til að leysa þessa þraut?
+      courseE_farmer_functions9b_clone_instruction: |-
+        Can you figure out the pattern
+        that you need to solve this puzzle?
       courseE_farmer_predict1_instruction: Tíndu allt kálið (en aðeins á meðan það
         er eitthvað að tína.)
       courseE_farmer_ramp11_instruction: "Þessi þraut notar líka faldaðar lykkjur.
@@ -7982,6 +8234,40 @@
       courseE_video_createFunctions_instruction: |-
         We don't have a video for creating
         functions, yet. This is a placeholder.
+      courseF_IceAge_1_instruction: |-
+        Help Sid say "Hello!" by dragging the `actor
+        1 say` block out and connecting it to the bottom of the `when run` event.
+      courseF_IceAge_10_instruction: |-
+        Use the `actor __ throw` command to have Sid
+        (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
+        when she gets hit with them.
+      courseF_IceAge_11_instruction: 'Time to create your own game or story! '
+      courseF_IceAge_2_instruction: |-
+        Help Manny and Sid greet each other by using
+        the the `actor ___ say` block twice.
+      courseF_IceAge_3_instruction: |-
+        Scrat is looking for his acorn! Can you help
+        him move the last 200 pixels?
+      courseF_IceAge_4_instruction: |-
+        Connect a block to the `when actor touches`
+        event to play a sound when Diego finds Manny.
+      courseF_IceAge_5_instruction: |-
+        Help Granny get some exercise by moving left
+        and right repeatedly.
+      courseF_IceAge_6_instruction: "Can you help Sid call for his friends when you\nclick
+        on him? "
+      courseF_IceAge_7_instruction: |-
+        Write the code to help Scrat get all of the
+        acorns!
+      courseF_IceAge_8_instruction: |
+        Can you finish this program to make it so that
+        you both **play a sound** and **score a point** when Sid and Granny collide?
+      courseF_IceAge_9_instruction: |-
+        Change the scene to an icy background and set
+        Sid’s (actor 1) speed to fast.
+      courseF_IceAge_template_instruction: |-
+        Write the code to help Scrat get all
+        of the acorns!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -10212,6 +10498,38 @@
         binary. The binary language will be represented with '0' and '1' only.
       harvey_tictactoe_instruction: Komum í leik! Teiknaðu eins mörg X og þú getur!
         Nærðu að hafa 3 í röð?
+      iceage_click_hello_instruction: "Can you help Sid call for his friends when\nyou
+        click on him? "
+      iceage_free_play_instruction: 'Time to create your own game or story! '
+      iceage_free_playcourseF_IceAge_11_instruction: "Time to create your own game\nor
+        story! "
+      iceage_hello1_instruction: |-
+        Help Sid say "Hello!" by dragging the `say` block
+        out and connecting it to the bottom of the `when run` event.
+      iceage_hello2_instruction: |-
+        Help Manny and Sid greet each other by using the
+        the `actor ___ say` block twice.
+      iceage_move_events_instruction: |-
+        Write the code to help Scrat get all of the
+        acorns!
+      iceage_move_to_actor_instruction: |-
+        Connect a block to the `when actor touches`
+        event to play a sound when Diego finds Manny.
+      iceage_move_to_flag_instruction: |-
+        Scrat is looking for his acorn! Can you help
+        him move the last 200 pixels?
+      iceage_repeat_instruction: |-
+        Help Granny get some exercise by moving left and
+        right repeatedly.
+      iceage_sound_and_points_instruction: "Can you finish this program to make it\nso
+        that you both **play a sound** and **score a point** when Sid and Granny\ncollide? "
+      iceage_throw_hearts_instruction: |-
+        Use the `actor __ throw` command to have
+        Sid (actor 1) throw hearts at Granny (actor 2) and set Granny's mood to happy
+        when she gets hit with them.
+      iceage_warn_ice_age_instruction: |-
+        Change the scene to an icy background and
+        set Sid’s (actor 1) speed to fast.
       jessie-test_instruction: Lots of instructions
       k-1 maze 1_instruction: Getur þú látið mig fara í Vestur til að ná svíninu?
       kikiTesta_instruction: |-

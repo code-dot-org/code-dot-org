@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Provést akce uvedené níže, když Flappy vjede do překážky.",
   "whenRunButtonClick": "když hra začne",
   "whenRunButtonClickTooltip": "Provést akce uvedené níže, když hra začne.",
-  "yes": "Ano"
+  "yes": "Ano",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

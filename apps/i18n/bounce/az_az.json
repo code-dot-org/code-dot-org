@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Top divarla toqquşanda aşağıdakı əmrləri icra et.",
   "whileMsg": "hələ ki,",
   "whileTooltip": "Hasarlanmış əmrləri son nöqtəyə çatana qədər təkrarla.",
-  "yes": "Bəli"
+  "yes": "Bəli",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

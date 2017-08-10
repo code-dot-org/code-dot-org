@@ -45,14 +45,11 @@ class HomeController < ApplicationController
   end
 
   # Signed in: render home page
-  # Signed out: redirect to code.org
+  # Signed out: redirect to sign in
   def home
-    if current_user
-      init_homepage
-      render 'home/index'
-    else
-      redirect_to CDO.code_org_url
-    end
+    authenticate_user!
+    init_homepage
+    render 'home/index'
   end
 
   def gallery_activities

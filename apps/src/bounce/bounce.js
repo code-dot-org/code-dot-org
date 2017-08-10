@@ -19,6 +19,7 @@ var Hammer = require("../third-party/hammer");
 var constants = require('../constants');
 import {getStore} from '../redux';
 var KeyCodes = constants.KeyCodes;
+import {getRandomDonorTwitter} from '../util/twitterHelper';
 
 var SquareType = tiles.SquareType;
 
@@ -68,7 +69,7 @@ Bounce.scale = {
 };
 
 var twitterOptions = {
-  text: bounceMsg.shareBounceTwitter(),
+  text: bounceMsg.shareBounceTwitterDonor({donor: getRandomDonorTwitter()}),
   hashtag: "BounceCode"
 };
 

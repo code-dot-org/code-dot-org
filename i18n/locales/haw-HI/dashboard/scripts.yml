@@ -5179,6 +5179,12 @@ haw:
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Ice Age Play Lab
+            Bounce:
+              name: Bounce
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -5233,10 +5239,10 @@ haw:
               name: Events in Play Lab
               description_student: ''
               description_teacher: In this online activity, students will have the opportunity to learn how to use events in Play Lab and to apply all of the coding skills they've learned to create an animated game. It's time to get creative and make a story in the Play Lab!
-          title: 'CS Fundamentals: Course A'
-          description_audience: ''
-          description_short: In this course you will learn about all about computers. You will learn about programming, algorithms, debugging, loops, and events!
-          description: Course A offers computer science curriculum for beginning readers around the kindergarten age range. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to collaborate with others meaningfully, investigate different problem-solving techniques, persist in the face of difficult tasks, and learn about internet safety. By the end of this course, students create their very own custom game or story from Play Lab that they can share.
+          title: Course A
+          description_audience: 'Ages: 4-7'
+          description_short: An introduction to computer science for pre-readers.
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         courseb:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5267,10 +5273,10 @@ haw:
               name: More Programming in Maze
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
-          description_audience: ''
-          description_short: An introduction to computer science for early readers.
-          description: "Course B was developed with first graders in mind. Tailored to a novice reading level, this course also assumes limited knowledge of shapes and numbers.\\r\n\\r\nAt the moment, Course B closely parallels Course A, but provides more complex unplugged activities and more variety in puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course students will create their very own custom game from Play Lab that they can share with a link."
+          title: Course B
+          description_audience: 'Ages: 5-8'
+          description_short: An introduction to computer science for pre-readers. (Similar to Course A, but with more variety for older students.)
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         coursec:
           stages:
             Building a Foundation:
@@ -5305,10 +5311,10 @@ haw:
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
-          description_audience: ''
+          title: Course C
+          description_audience: 'Ages: 6-10'
           description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "Course C was developed for students in and around the second grade. It uses a limited understanding of shapes and elementary math concepts.\\r\n\\r\nStudents will create programs with loops, events, and conditionals. They will translate their initials into binary, investigate different problem-solving techniques, and discuss how to respond to cyberbullying. By the end of the course, students will create interactive games that they can share. Each concept in Course C is taught from the beginning, graduating toward experiences that allow for growth and creativity to provide all students a rich and novel programming experience."
+          description: Create programs with loops, events, and conditionals. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share.
         coursed:
           stages:
             Introduction:
@@ -5385,10 +5391,10 @@ haw:
               name: Debugging in Collector
               description_student: Have you ever run into problems while coding? In this lesson, you will learn about the secrets of debugging. Debugging is the process of finding and fixing problems in your code.
               description_teacher: In this online activity, students will practice debugging in the "collector" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.
-          title: 'CS Fundamentals: Course D'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "Course D was created for students who read at roughly a third grade level. Angles and mathematical concepts are introduced with helpful videos and hints.\\r\n\\r\nThe course begins with a review of the concepts found in Courses A, B, and C. This review helps introduce or refresh basic ideas such as repeat loops and events. Students will develop their understanding of algorithms, nested loops, while loops, conditionals, and events. Lessons on digital citizenship are also included. This course is crafted to build a strong foundation of basic concepts before opening up to a wide range of new and exciting topics."
+          title: Course D
+          description_audience: 'Ages: 7-11'
+          description_short: Quickly cover concepts from Course C, then go further with algorithms, nested loops, conditionals, and more.
+          description: Learn new coding concepts including algorithms, nested loops, while loops, conditionals, and events. Get an introduction to digital citizenship before   creating your very own game or story that you can share.
         coursee:
           stages:
             'Algorithms: Tangrams':
@@ -5492,10 +5498,10 @@ haw:
               name: 'Beyond Programming: Crowdsourcing'
               description_student: This lesson will teach you about crowdsourcing, the process of building a project with a team.
               description_teacher: In computer science, we face some big, daunting problems. Challenges such as finding large prime numbers or sequencing DNA are almost impossible to do as an individual. Adding the power of others makes these tasks manageable. This lesson will show your students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: Created with fourth grade students in mind, this course begins with a brief review of concepts previously taught in courses C and D. This introduction is intended to inspire beginners and remind the experts of the wonders of computer science. Students will practice coding with algorithms, loops, conditionals, and events before they are introduced to functions. At the end of the course, students will have the opportunity to create a capstone project that they can proudly share with peers and loved ones.
+          title: Course E
+          description_audience: 'Ages: 8-12'
+          description_short: Quickly cover concepts in Course C & D and then go further with functions.
+          description: Start coding with algorithms, loops, conditionals, and events and then you’ll move on functions. In the second part of this course, design and create a capstone project you can share with your friends and family.
         coursef:
           stages:
             'Algorithms: Tangrams':
@@ -5582,10 +5588,10 @@ haw:
               description_teacher: This lesson gives students a chance to learn and practice conditionals. It features characters and settings from Minecraft, and students will complete tasks such as mining and building structures using their programs.
             Functions in Bee:
               name: Functions in Bee
-          title: 'CS Fundamentals: Course F'
-          description_audience: ''
-          description_short: Learn the basics of computer science and create your own art, stories, and games.
-          description: "The last course in CS Fundamentals was tailored to the needs students in the fifth grade.\\r\n\\r\nIn these lessons, students will create programs with different kinds of loops, events, functions, and conditionals. They will also investigate different problem-solving techniques and discuss societal impacts of computing and the internet. By the end of the curriculum, students create interactive stories and games that they can share with their friends and family."
+          title: Course F
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
         csdnovice:
           stages:
             Tuesday:
@@ -5904,10 +5910,10 @@ haw:
               name: 'For Loops: For Loop Fun'
             'Functions: Songwriting with Parameters':
               name: 'Functions: Songwriting with Parameters'
-          title: 'CS Fundamentals: Express'
-          description_audience: ''
-          description_short: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
-          description: 'The Express course covers the core computer science and programming concepts in Courses A-F. '
+          title: Express Course
+          description_audience: 'Ages: 9-18'
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         pre-express:
           stages:
             'Debugging: Unspotted Bugs':
@@ -5937,11 +5943,11 @@ haw:
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
-              name: Sequencing in Spelling Bee
-          title: 'CS Fundamentals: Pre-reader Express'
-          description_audience: ''
-          description_short: The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B.
-          description: 'The Pre-reader Express course covers the core computer science and programming concepts in Courses A-B and is intended for pre-readers. '
+              name: Spelling Bee
+          title: Pre-reader Express
+          description_audience: 'Ages: 4-8'
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
         subgoal-labels-opt-in:
           stages:
             Subgoal Labels Study Opt-In:

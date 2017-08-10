@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "جب ایک دیوار کے ساتھ ایک گیند ٹکرائے مندرجہ ذیل افعال سرانجام دیں",
   "whileMsg": "جب تک",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "جی"
+  "yes": "جی",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Exekutatu beheko ekintzak oztopo batean sartzean.",
   "whenRunButtonClick": "Jokoa hasten denean",
   "whenRunButtonClickTooltip": "Jokoa hasten denean exekutatu ondorengo ekintzak.",
-  "yes": "Bai"
+  "yes": "Bai",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

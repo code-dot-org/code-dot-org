@@ -272,9 +272,9 @@
   "tooManyBlocksFail": "Łamigłówka {puzzleNumber} ukończona. Gratulacje! Można ją też ukończyć z {numBlocks, plural, one {1 block} other {# blocks}}.",
   "toSlotNumber": "to slot number",
   "turnRandom": "skręć losowo",
-  "useArrowKeys": "You don't need to add any blocks! Move with the arrows, and press the space bar or tap the game board to use items.",
+  "useArrowKeys": "Nie musisz dodawać żadnych bloków! Poruszaj się strzałkami i naciśnij spację lub kliknij na planszy, aby użyć przedmiotów.",
   "weather": "pogoda",
-  "weatherTypeClear": "clear",
+  "weatherTypeClear": "wyczyść",
   "weatherTypeRain": "deszcz",
   "weatherTypeThunder": "grzmot"
 }

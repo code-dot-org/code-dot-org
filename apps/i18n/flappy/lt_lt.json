@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Vykdyti pateiktus veiksmus, kai Flappy įeis į kliūtį.",
   "whenRunButtonClick": "kai žaidimas prasideda",
   "whenRunButtonClickTooltip": "Vykdyti žemiau nurodytus veiksmus, kai žaidimas prasideda.",
-  "yes": "Taip"
+  "yes": "Taip",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

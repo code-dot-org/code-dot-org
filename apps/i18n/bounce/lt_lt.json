@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Įvykdyk žemiau nurodytus veiksmus, kai kamuolys atsitrenkia į sieną.",
   "whileMsg": "kol",
   "whileTooltip": "Pakartok sujungtus veiksmus, kol bus pasiektas finišas.",
-  "yes": "Taip"
+  "yes": "Taip",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

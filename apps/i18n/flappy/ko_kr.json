@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "물체를 통과하면 아래 동작을 실행합니다.",
   "whenRunButtonClick": "게임을 시작하면",
   "whenRunButtonClickTooltip": "게임을 시작하면 아래 동작을 실행합니다.",
-  "yes": "예"
+  "yes": "예",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

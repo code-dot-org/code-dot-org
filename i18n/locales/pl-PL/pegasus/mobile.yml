@@ -200,14 +200,14 @@
   just_did_course2: "Właśnie skończyłem Kurs 2 - sprawdź to! @codeorg"
   just_did_course3: "Właśnie skończyłem Kurs 3 - sprawdź to! @codeorg"
   just_did_course4: "Właśnie skończyłem Kurs 4 - sprawdź to! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Właśnie skończyłem Przyśpieszony Kurs - sprawdź to! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "PONAD <b># LINII KODU</b> NAPISANYCH DO TEJ PORY."
   lines_of_code_alt: "<b>#</b>LINIE KODU NAPISANE PRZEZ UCZNIÓW"
   who_has_done_hoc: 'Kto wykonał #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Panel godziny programowania (Hour of Code)"
   students_and_lines: "%{students} uczniów ukończyło godzinę programowania (Hour of Code)  i napisało %{lines} linii kodu."
   start_hoc: "Rozpocznij teraz godzinę programowania (Hour of Code)"
@@ -269,9 +270,9 @@
   homepage_hero_text_satya: |-
     &ldquo;Informatyka może odblokować najlepsze możliwości na świecie.&rdquo; Satya, CEO firmy Microsoft
   homepage_hero_text_satya_new: |-
-    &ldquo;Computer science empowers
-    students to create the world of tomorrow.&rdquo;
-    Satya, CEO of Microsoft
+    &ldquo;Informatyka pozwala
+    uczniom tworzyć świat jutra.&rdquo;
+    Satya, CEO firmy Microsoft
   homepage_hero_text_bosh: |-
     &ldquo;Jeśli programujesz, możesz zaprogramować ścieżkę swojego życia&rdquo; Chris Bosh
   homepage_hero_text_student1: |-
@@ -1410,3 +1411,7 @@
   csp_name: "Podstawy Informatyki '16-'17"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Witaj %{username}"
+  user_header_settings: "Moje konto"
+  user_header_logout: "Wyloguj się"
+  user_header_signin: "Zaloguj się"

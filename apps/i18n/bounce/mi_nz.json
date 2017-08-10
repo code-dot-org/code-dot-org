@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Kia tuki te pōro ki te pātū, whakatutukihia ngā hohenga o raro nei.",
   "whileMsg": "i te",
   "whileTooltip": "Tōaitia ngā hohenga kua pōkaitia kia tae rā anō ki te pito mutunga.",
-  "yes": "Āe"
+  "yes": "Āe",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

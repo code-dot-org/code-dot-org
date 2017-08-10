@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "ボールが壁に当たった場合、下記のアクションを実行",
   "whileMsg": "以下の間",
   "whileTooltip": "終点に到着するまで、封じられた行動を繰り返してください",
-  "yes": "はい"
+  "yes": "はい",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Извршување на активностите под кога топката се судира со лопатката.",
   "whileMsg": "Додека",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes"
+  "yes": "Yes",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

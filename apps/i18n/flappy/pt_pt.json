@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Executar as seguintes ações quando o passarinho entrar num obstáculo.",
   "whenRunButtonClick": "quando o jogo começa",
   "whenRunButtonClickTooltip": "Executar as seguintes ações quando o jogo começar.",
-  "yes": "Sim"
+  "yes": "Sim",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

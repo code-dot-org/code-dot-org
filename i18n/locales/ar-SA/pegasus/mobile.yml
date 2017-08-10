@@ -200,14 +200,14 @@
   just_did_course2: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 2 - تَفَقَّدْ ذَلِك! @codeorg"
   just_did_course3: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 3 - تَفَقَّدْ ذَلِك! @codeorg"
   just_did_course4: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر 4 - تَفَقَّدْ ذَلِك! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "لَقَدْ أكمَلْتُ لِلتَّوّ المُقَرّر المُسَرّع - تَفَقَّدْ ذَلِك! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "فوق <b> # اسطر الكود البرمجي </b> المكتوبة حتى الان."
   lines_of_code_alt: "<b>#</b> اسطر الكود البرمجي التي كتبها الطلاب"
   who_has_done_hoc: 'من الذي اكمل #الساعة_من_البرمجة؟ @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "متصدرين الساعة من البرمجة"
   students_and_lines: "%{students} الطلبة الذين اكملو ساعة من البرمجة وكتبو %{lines} اسطر من الكود البرمجي."
   start_hoc: "ابدأ ساعة من البرمجة الان"
@@ -1401,3 +1402,7 @@
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "مرحباً %{username}"
+  user_header_settings: "حسابي"
+  user_header_logout: "تسجيل الخروج"
+  user_header_signin: "تسجيل الدخول"

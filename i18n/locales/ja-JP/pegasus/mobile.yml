@@ -207,7 +207,7 @@
   just_did_coursee: "コースE完了 - やったー！@codeorg"
   just_did_coursef: "コースF完了 - やったー！@codeorg"
   just_did_accelerated: "上級コース完了 - やったー！@codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "<b># 行</b> 上の日付に書き込まれます。"
   lines_of_code_alt: "<b>#</b>学生によって書かれたコードの行"
   who_has_done_hoc: '#HourOfCode に挑戦したのは誰？ @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Hour of Codeが行われている場所"
   students_and_lines: "学生%{students} がHour of Code を行い、%{lines}行のコードを書きました"
   start_hoc: "Hour of Codeに今すぐ挑戦する"
@@ -1405,3 +1406,7 @@
   csp_name: "コンピューター・サイエンス入門"
   csd_name: "CS Discoveries"
   full_course_category_name: "すべてのコース"
+  user_header_label: "やあ %{username}"
+  user_header_settings: "アカウント"
+  user_header_logout: "サインアウト"
+  user_header_signin: "サインイン"

@@ -67,8 +67,11 @@ var CONFIGS = {
     collectBlock: 'gem_cropped.png',
     corners: 'corners.png',
 
-    // collectSounds are labeled `get_gem_{1..6}.mp3`
-    collectSounds: new Array(6).fill().map((_, i) => `get_gem_${i+1}.mp3`),
+    collectSounds: [
+      'get_gem_2.mp3',
+      'get_gem_4.mp3',
+      'get_gem_6.mp3'
+    ],
 
     // Walk sound works, but the current available audio is a bit too harsh for
     // classroom usage. Temporarily disabling until we get some milder audio

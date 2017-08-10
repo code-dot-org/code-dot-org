@@ -200,14 +200,14 @@
   just_did_course2: "Tocmai am terminat cursul 2 - vizualizeaza-l! @codeorg"
   just_did_course3: "Tocmai am terminat cursul 3 - vizualizeaza-l! @codeorg"
   just_did_course4: "Tocmai am terminat cursul 4 - vizualizeaza-l! @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
   just_did_accelerated: "Tocmai am terminat cursul accelerat - vizualizeaza-l! @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "PESTE <b># LINII DE COD</b> SCRISE PÂNĂ ÎN PREZENT."
   lines_of_code_alt: "<b>#</b> LINII DE COD SCRISE DE STUDENȚI"
   who_has_done_hoc: 'Cine a făcut #OraDeCod? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Clasamentele Orei de Cod"
   students_and_lines: "%{students} studenți au făcut Ora de Cod și au scris %{lines} de linii de cod."
   start_hoc: "Începe Ora de Cod acum"
@@ -1409,3 +1410,7 @@
   csp_name: "Principii de CS 16-17"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Salut %{username}"
+  user_header_settings: "Contul meu"
+  user_header_logout: "Deloghează-te"
+  user_header_signin: "Loghează-te"

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "执行下面的操作当 Flappy 进入一个障碍。",
   "whenRunButtonClick": "当游戏开始后",
   "whenRunButtonClickTooltip": "在游戏开始时执行以下指令。",
-  "yes": "是"
+  "yes": "是",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Utför kommandona nedan när Flappy åker genom ett hinder.",
   "whenRunButtonClick": "när spelet börjar",
   "whenRunButtonClickTooltip": "Utför kommandona nedan när spelet startar.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

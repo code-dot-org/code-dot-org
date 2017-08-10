@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "பந்து சுவரில் மோதும் பொழுது பின்னே உள்ள செயல்களை இயக்கு.",
   "whileMsg": "எப்பொழுது",
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
-  "yes": "ஆம்"
+  "yes": "ஆம்",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

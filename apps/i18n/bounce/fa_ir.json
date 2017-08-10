@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "کارهای زیر را انجام بده وقتی که یک توپ به دیوار میخورد.",
   "whileMsg": "هنگامیکه",
   "whileTooltip": "کارهای بسته شده را تکرار کن تا زمانیکه به نقطه پایان برسی.",
-  "yes": "بله"
+  "yes": "بله",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

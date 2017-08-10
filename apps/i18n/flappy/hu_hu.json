@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Hajtsa végre a lenti műveleteket, ha Flappy átjut egy akadályon.",
   "whenRunButtonClick": "amikor a játék elindul",
   "whenRunButtonClickTooltip": "Végrehajtja a lenti utasításokat, ha a játék elindul.",
-  "yes": "Igen"
+  "yes": "Igen",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

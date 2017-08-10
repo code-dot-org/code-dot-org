@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Executar les accions de sota quan una pilota colpeja una paret.",
   "whileMsg": "mentres",
   "whileTooltip": "Repetiu les accions tancades fins que s'arribi al punt final.",
-  "yes": "Sí"
+  "yes": "Sí",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

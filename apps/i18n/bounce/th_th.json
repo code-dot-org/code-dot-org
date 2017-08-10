@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "ทำคำสั่งด้านล่างเมื่อลูกบอลชนกับกำแพง.",
   "whileMsg": "ในขณะที่",
   "whileTooltip": "ทำซ้ำจนกระทั่งถึงจุดสิ้นสุด",
-  "yes": "ใช่"
+  "yes": "ใช่",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

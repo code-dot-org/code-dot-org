@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Ekzekuto veprimet më poshtë kur Flappy hyn në një pengesë.",
   "whenRunButtonClick": "kur fillon loja",
   "whenRunButtonClickTooltip": "Ekzekuto veprimet më poshtë kur fillon loja.",
-  "yes": "Po"
+  "yes": "Po",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

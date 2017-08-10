@@ -19,7 +19,7 @@
     attributes:
       user:
         name: Wyświetl Nazwisko
-        name_example: Display Name<br/>(e.g. Cool Coder or Jane S.)
+        name_example: Wyświetlane Imię<br/>(np. Super Koder albo Ania S.)
         email: Email
         parent_email: Parent/guardian email
         personal_email: Personal email address
@@ -147,9 +147,9 @@
     field_is_required: jest wymagane
     accept_terms: Musisz wyrazić zgodę, aby utworzyć konto
   school_info:
-    title: School Information (optional)
-    school_country: School Country
-    select_school_type: School Type
+    title: Informacja o Szkole (opcjonalne)
+    school_country: Kraj
+    select_school_type: Typ Szkoły
     charter: Charter
     private: Private
     public: Public
@@ -752,8 +752,9 @@
       cta: Zobacz instrukcję
     weblab:
       title: Web Lab (beta)
-      body: Web Lab is a programming environment where you can make simple web pages
-        using HTML and CSS. Design your web pages and share your site in seconds.
+      body: Web Lap to środowisko programowania, w którym można tworzyć proste strony
+        www za pomocą HTML i CSS. Zaprojektuj swoją stronę www i udostępnij ją w kilka
+        sekund.
       audience: Wiek 13+
       cta: Zobacz instrukcję
     frozen:
@@ -820,7 +821,7 @@
     support: Uzyskaj pomoc
     support_url: "//support.Code.org"
     help_resources: Pomoc i Zasoby
-    help_support: Help and Support
+    help_support: Pomoc i wsparcie
     documentation: Documentation
     tutorials: Tutorials
   multi:

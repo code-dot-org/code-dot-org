@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Spusťte níže uvedené akce, když se míč dotkne zdi.",
   "whileMsg": "dokud",
   "whileTooltip": "Opakuje obsažené akce dokud nedosáhne cíle.",
-  "yes": "Ano"
+  "yes": "Ano",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

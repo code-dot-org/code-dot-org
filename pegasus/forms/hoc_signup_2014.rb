@@ -1,4 +1,5 @@
 require 'honeybadger'
+require_relative '../helpers/hourofcode_helpers'
 
 class HocSignup2014
   def self.normalize(data)

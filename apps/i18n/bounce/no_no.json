@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Gjør det som står nedenfor når en ball treffer en vegg.",
   "whileMsg": "gjenta hvis",
   "whileTooltip": "Gjenta disse handlingene inntil målet er nådd.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

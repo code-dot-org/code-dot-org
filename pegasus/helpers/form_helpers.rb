@@ -1,8 +1,13 @@
 require 'digest/md5'
+require_relative '../../deployment'
 require lib_dir 'forms/pegasus_form_validation'
 
 include PegasusFormValidation
 
+# Deletes a form from the DB and from SOLR.
+# @param [String] kind The kind of form to delete.
+# @param [String] secret The secret associated with the form to delete.
+# @return [Boolean] Whether the form was deleted.
 def delete_form(kind, secret)
   form = DB[:forms].where(kind: kind, secret: secret).first
   return false unless form
@@ -13,7 +18,14 @@ def delete_form(kind, secret)
   true
 end
 
-def insert_form(kind, data, options={})
+# Inserts or upserts a form (depending on its kind) into the DB.
+# @param [String] kind The kind of form to insert.
+# @param [Hash] data The data with which to populate the form.
+# @param [Hash] options Default {}.
+#   @option [Integer] :parent_id The ID of the parent form.
+# TODO(asher): Fix this method, both the naming of it (to indicate the upsert behavior) and its
+# implementation (not overwriting various fields on update).
+def insert_or_upsert_form(kind, data, options={})
   if dashboard_user
     data[:email_s] ||= dashboard_user[:email]
     data[:name_s] ||= dashboard_user[:name]
@@ -44,29 +56,33 @@ def insert_form(kind, data, options={})
 
   # For HOC signups, a duplicate (matching email and name) entry is assumed to be an update rather
   # than an insert.
-  num_rows_updated = 0
-  if (kind =~ /HocSignup/) == 0
+  if kind.start_with? 'HocSignup'
+    row_for_update = row.dup
+    [:created_at, :created_ip, :secret].each {|key| row_for_update.delete key}
     num_rows_updated = DB[:forms].
-      where(email: row[:email], kind: kind, name: row[:name]).
-      update(row)
+      where(kind: kind, email: row_for_update[:email], name: row_for_update[:name]).
+      update(row_for_update)
+    return row_for_update if num_rows_updated > 0
   end
-  # If we didn't perform an update, insert the row into the forms table and
+  # We didn't perform an update, so insert the row into the forms table and
   # create a corresponding form_geos row.
-  if num_rows_updated == 0
-    row[:id] = DB[:forms].insert(row)
+  row[:id] = DB[:forms].insert(row)
 
-    form_geos_row = {
-      form_id: row[:id],
-      created_at: timestamp,
-      updated_at: timestamp,
-      ip_address: request.ip
-    }
-    DB[:form_geos].insert(form_geos_row)
-  end
+  form_geos_row = {
+    form_id: row[:id],
+    created_at: timestamp,
+    updated_at: timestamp,
+    ip_address: request.ip
+  }
+  DB[:form_geos].insert(form_geos_row)
 
   row
 end
 
+# @param [String] kind The kind of the form to be updated.
+# @param [String] secret The secret associated with the form to be updated.
+# @param [Hash] data The data to update.
+# @return [Hash] The hash of values sent to the DB for updating.
 def update_form(kind, secret, data)
   return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
 

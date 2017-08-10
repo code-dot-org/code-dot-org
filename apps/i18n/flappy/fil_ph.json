@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Ipatupad ang mga aksyon sa ibaba kapag may tinamaan ang Flappy na obstacle.",
   "whenRunButtonClick": "kapag nagsimula ang laro",
   "whenRunButtonClickTooltip": "Ipatupad ang mga aksyon sa ibaba kapag nagsisimula ang laro.",
-  "yes": "Oo"
+  "yes": "Oo",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Thực hiện các lệnh dưới đây khi một quả bóng va chạm với một bức tường.",
   "whileMsg": "Lặp khi",
   "whileTooltip": "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả.",
-  "yes": "Đồng ý"
+  "yes": "Đồng ý",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

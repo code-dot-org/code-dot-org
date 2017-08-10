@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Exekutatu ekintza hauek pilota batek hormaren bat jotzean.",
   "whileMsg": "bitartean",
   "whileTooltip": "Bukaerako puntua eskuratu arte barruko ekintzak errepikatu.",
-  "yes": "Bai"
+  "yes": "Bai",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

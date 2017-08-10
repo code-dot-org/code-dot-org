@@ -196,18 +196,18 @@
   learn_back_to_minecraft: "Keep learning with Minecraft"
   hoc_is_here: 'The #HourOfCode is coming again December 5-11. https://youtu.be/KsOIlDT145A.'
   just_did_hoc: 'Jag har precis gjort #HourOfCode/Timme med Kod - kolla! @codeorg'
-  just_did_course1: "I just finished Course 1 - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_course2: "I just finished Course 2 - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_course3: "I just finished Course 3 - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_course4: "I just finished Course 4 - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursea: "I just finished Course A - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_courseb: "I just finished Course B - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursec: "I just finished Course C - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursed: "I just finished Course D - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursee: "I just finished Course E - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_coursef: "I just finished Course F - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_accelerated: "I just finished the Accelerated Course - check it out! Thanks @Microsoft for supporting @codeorg"
-  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter} for supporting @codeorg'
+  just_did_course1: "I just finished Course 1 - check it out! @codeorg"
+  just_did_course2: "I just finished Course 2 - check it out! @codeorg"
+  just_did_course3: "I just finished Course 3 - check it out! @codeorg"
+  just_did_course4: "I just finished Course 4 - check it out! @codeorg"
+  just_did_coursea: "I just finished Course A - check it out! @codeorg"
+  just_did_courseb: "I just finished Course B - check it out! @codeorg"
+  just_did_coursec: "I just finished Course C - check it out! @codeorg"
+  just_did_coursed: "I just finished Course D - check it out! @codeorg"
+  just_did_coursee: "I just finished Course E - check it out! @codeorg"
+  just_did_coursef: "I just finished Course F - check it out! @codeorg"
+  just_did_accelerated: "I just finished the Accelerated Course - check it out! @codeorg"
+  just_did_hoc_donor: 'I just did the #HourOfCode - check it out! (Thanks %{donor_twitter} for supporting @codeorg)'
   just_did_course1_donor: "I just finished Course 1 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course2_donor: "I just finished Course 2 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
   just_did_course3_donor: "I just finished Course 3 - check it out! Thanks %{donor_twitter} for supporting @codeorg"
@@ -231,6 +231,7 @@
   lines_of_code: "ÖVER <b># RADER MED KOD</b> SKRIVET HITTILLS."
   lines_of_code_alt: "<b>#</b> RADER MED KOD SKRIVET AV ELEVER"
   who_has_done_hoc: 'Vilka har gjort en Timme med Kod? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter} for supporting @codeorg)'
   hoc_leaderboards: "Timme med Kod Poängtavla"
   students_and_lines: "%{students} elever har gjort en Timme med Kod och skrivit %{lines} rader med kod."
   start_hoc: "Starta en Timme med Kod nu"
@@ -1411,3 +1412,7 @@
   csp_name: "CS Principles"
   csd_name: "CS Discoveries"
   full_course_category_name: "Full Courses"
+  user_header_label: "Hej %{username}"
+  user_header_settings: "Mitt konto"
+  user_header_logout: "Logga ut"
+  user_header_signin: "Logga in"

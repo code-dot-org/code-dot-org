@@ -6433,6 +6433,12 @@
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Mұзды дәуірі ойын лабораториясы
+            Bounce:
+              name: "Секіру"
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''

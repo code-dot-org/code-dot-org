@@ -6381,6 +6381,12 @@
               name: BB-8 ile Döngüler
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Buz Devri Oyun Laboratuvarı
+            Bounce:
+              name: Sıçrama
+            NewBounce:
+              name: NewBounce
           title: ''
           description_audience: ''
           description_short: ''
@@ -6473,7 +6479,7 @@
                 Ve hareketli bir oyun oluşturmak için, öğrendikleri kodlama becerilerinin
                 tamamını uygulayabilecekler. Şimdi, Play Lab' da bir hikaye oluşturmanın
                 ve yaratıcı olmanın zamanı!
-          title: 'CS Fundamentals: Course A'
+          title: Ders A
           description_audience: ''
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: Course A offers computer science curriculum for beginning readers
@@ -6513,7 +6519,7 @@
               name: Labirentte Daha Fazla Programlama
             Programming with Rey and BB-8:
               name: Programming with Rey and BB-8
-          title: 'CS Fundamentals: Course B'
+          title: Ders B
           description_audience: ''
           description_short: Okumaya yeni başlayanlar için bilgisayar bilimine giriş.
           description: |-
@@ -6554,7 +6560,7 @@
               name: Loops in Artist
             Loops with Rey and BB-8:
               name: Loops with Rey and BB-8
-          title: 'CS Fundamentals: Course C'
+          title: Ders C
           description_audience: ''
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -6730,7 +6736,7 @@
                 ortamında hata ayıklama üzerinde çalışacaklar. Öğrenciler, basit algoritmalar,
                 döngüler ve iç içe döngüler ile bulmacaları çözmek için kod okuma
                 ve düzenleme alıştırması yapacaklar.
-          title: 'CS Fundamentals: Course D'
+          title: Ders D
           description_audience: ''
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -6940,7 +6946,7 @@
                 DNA are almost impossible to do as an individual. Adding the power
                 of others makes these tasks manageable. This lesson will show your
                 students how helpful teamwork can be in the industry of computer science.
-          title: 'CS Fundamentals: Course E'
+          title: Ders E
           description_audience: ''
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.
@@ -7161,7 +7167,7 @@
                 ve yapıları inşa etmek gibi görevleri tamamlarlar.
             Functions in Bee:
               name: Arı fonksiyonları
-          title: 'CS Fundamentals: Course F'
+          title: Ders F
           description_audience: ''
           description_short: Bilgisayar biliminin temellerini öğrenin ve kendi oyunlarınızı,
             hikayelerinizi ve sanatınızı oluşturun.

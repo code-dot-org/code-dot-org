@@ -215,4 +215,12 @@ class SchoolInfo < ActiveRecord::Base
 
     errors.add(:school_district, "is required")
   end
+
+  def effective_school_district_name
+    school_district.try(:name) || school_district_name
+  end
+
+  def effective_school_name
+    school.try(:name) || school_name
+  end
 end

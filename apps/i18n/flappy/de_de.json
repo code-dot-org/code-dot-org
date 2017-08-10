@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Führe die folgenden Aktionen aus, wenn Flappy ein Hindernis überwunden hat.",
   "whenRunButtonClick": "wenn das Spiel beginnt",
   "whenRunButtonClickTooltip": "Führe die folgenden Aktionen aus, wenn das Spiel beginnt.",
-  "yes": "Ja"
+  "yes": "Ja",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

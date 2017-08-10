@@ -6371,6 +6371,12 @@
               name: Loops with BB-8
             D13 no If/While:
               name: D13 no If/While
+            Ice Age Play Lab:
+              name: Laboratorul Joaca Ice Age
+            Bounce:
+              name: Săritură
+            NewBounce:
+              name: NewBounce
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
@@ -7571,7 +7577,7 @@
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
-              name: Albina de Ortografie
+              name: Test de Ortografie
           title: "[șir gol]"
           description_audience: "[șir gol]"
           description_short: "[șir gol]"
