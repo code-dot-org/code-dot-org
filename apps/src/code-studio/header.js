@@ -184,7 +184,7 @@ function shareProject() {
           shareUrl={shareUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
           canPublish={canPublish}
-          isPublished={!!dashboard.project.isPublished()}
+          isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}
           onClickPopup={popupWindow}
