@@ -458,16 +458,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     dom.addClickTouchEvent(saveToProjectGalleryButton, () => {
       $('#save-to-project-gallery-button').prop('disabled', true).text("Saving...");
       project.copy(project.getNewProjectName(), () => {
-        dataURIToBlob(options.feedbackImage)
-          .then(project.saveThumbnail)
-          .then(() => {
-            return new Promise(resolve => {
-              // Save the thumbnail url to the server.
-              project.save(resolve);
-            });
-          }).then(() => {
-            $('#save-to-project-gallery-button').prop('disabled', true).text("Saved!");
-          });
+        FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
+          $('#save-to-project-gallery-button').prop('disabled', true).text("Saved!");
+        });
       }, {shouldPublish: true});
     });
   }
@@ -504,6 +497,23 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+/**
+ * Converts the image data uri to a blob, then saves it to the server as the
+ * thumbnail for the current project.
+ * @param {string} image Image encoded as a data URI.
+ * @returns {Promise} A promise which resolves if successful.
+ */
+FeedbackUtils.saveThumbnail = function (image) {
+  return dataURIToBlob(image)
+    .then(project.saveThumbnail)
+    .then(() => {
+      return new Promise(resolve => {
+        // Save the thumbnail url to the server.
+        project.save(resolve);
+      });
+    });
 };
 
 FeedbackUtils.getAchievements = function (
