@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentSelector';
 
 const defaultProps = {
@@ -64,7 +64,6 @@ const defaultProps = {
 };
 
 describe('AssignmentSelector', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('defaults to one dropdown, no selection when no section is provided', () => {

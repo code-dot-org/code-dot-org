@@ -96,6 +96,10 @@ class ScriptLevel < ActiveRecord::Base
     variants[level.name]['experiments'] || []
   end
 
+  def has_experiment?
+    levels.any? {|level| experiments(level).any?}
+  end
+
   def has_another_level_to_go_to?
     if script.professional_learning_course?
       !end_of_stage?
