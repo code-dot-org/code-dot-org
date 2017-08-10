@@ -214,7 +214,12 @@ const SessionAttendanceRow = React.createClass({
         {
           this.props.showPuzzlesCompleted &&
           <td>
-            {this.props.attendance.puzzles_completed}
+            {
+              // Only show for attended teachers
+              this.props.attendance.attended
+                ? this.props.attendance.puzzles_completed
+                : null
+            }
           </td>
         }
         <td>
