@@ -4,8 +4,7 @@ import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/red
 import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
-  IMPORT_ROSTER_FLOW_BEGIN,
-  IMPORT_ROSTER_FLOW_LIST_LOADED,
+  __testInterface__,
   setStudioUrl,
   setOAuthProvider,
   setValidLoginTypes,
@@ -33,6 +32,11 @@ import reducer, {
   isRosterDialogOpen,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
+
+const {
+  IMPORT_ROSTER_FLOW_BEGIN,
+  IMPORT_ROSTER_FLOW_LIST_LOADED,
+} = __testInterface__;
 
 const sections = [
   {
