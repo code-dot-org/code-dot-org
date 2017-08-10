@@ -5510,7 +5510,7 @@ var createSpeechBubble = function (spriteIndex, text) {
 Studio.stop = function (opts) {
   cancelQueuedMovements(opts.spriteIndex, true);
   cancelQueuedMovements(opts.spriteIndex, false);
-  Studio.sprite[opts.spriteIndex].activity = constants.BEHAVIOR_STOP;
+  Studio.sprite[opts.spriteIndex].setActivity(constants.BEHAVIOR_STOP);
 
   if (!opts.dontResetCollisions) {
     // Reset collisionMasks so the next movement will fire another collision
