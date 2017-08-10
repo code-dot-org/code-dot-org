@@ -493,7 +493,9 @@ Maze.reset = function (first) {
     Maze.displayPegman(Maze.pegmanX, Maze.pegmanY, tiles.directionToFrame(Maze.pegmanD));
 
     const finishIcon = document.getElementById('finish');
-    finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skin.goalIdle);
+    if (finishIcon) {
+      finishIcon.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', skin.goalIdle);
+    }
   }
 
   // Make 'look' icon invisible and promote to top.
