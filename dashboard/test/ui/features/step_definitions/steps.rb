@@ -519,6 +519,13 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   }
 end
 
+Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal-body"
+    And element ".modal-body" contains text "#{expected_text}"
+  }
+end
+
 Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".congrats"
@@ -973,6 +980,10 @@ When(/^I sign out$/) do
     And I am on "http://studio.code.org/users/sign_out"
     And I wait until current URL contains "http://code.org/"
   }
+end
+
+When(/^I am not signed in/) do
+  steps 'element ".header_user:contains(Sign in)" is visible'
 end
 
 When(/^I debug cookies$/) do

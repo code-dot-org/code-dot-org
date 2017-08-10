@@ -694,8 +694,8 @@ class Script < ActiveRecord::Base
         end
       end
 
-      if stage.lockable && stage.script_levels.length > 1
-        raise 'Expect lockable stages to have a single script_level'
+      if stage.lockable && !stage.script_levels.last.assessment?
+        raise 'Expect lockable stages to have an assessment as their last level'
       end
     end
 
