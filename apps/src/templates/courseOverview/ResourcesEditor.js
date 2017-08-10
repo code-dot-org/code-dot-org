@@ -16,6 +16,12 @@ const defaultLinks = {
   [ResourceType.teacherForum]: 'https://forum.code.org/',
   [ResourceType.curriculum]: '/link/to/curriculum',
   [ResourceType.professionalLearning]: '/link/to/professional/learning',
+  [ResourceType.lessonPlans]: '/link/to/lesson/plans',
+  [ResourceType.vocabulary]: '/link/to/vocab',
+  [ResourceType.codeIntroduced]: '/link/to/code/introduced',
+  [ResourceType.standardMappings]: '/link/to/standard/mappings',
+  [ResourceType.allHandouts]: '/link/to/all/handouts',
+  [ResourceType.videos]: '/link/to/videos',
 };
 
 export default class ResourcesEditor extends Component {
