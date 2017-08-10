@@ -59,6 +59,7 @@ export default class TeacherHomepage extends React.Component {
               buttonLink={announcements[0].link}
               newWindow={true}
               analyticId={announcements[0].id}
+              isRtl={isRtl}
             />
             <div style={styles.clear}/>
           </div>
