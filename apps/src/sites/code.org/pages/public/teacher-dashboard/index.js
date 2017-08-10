@@ -326,7 +326,9 @@ function main() {
     // manage students tab.
     $scope.sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
     if ($scope.sectionFlow2017 && $scope.tab === 'manage') {
-     $scope.$on('login-type-react-rendered', () => renderLoginTypeControls());
+     $scope.$on('login-type-react-rendered', () => {
+       $scope.section.$promise.then(section => renderLoginTypeControls(section.login_type));
+     });
      $scope.$on('$destroy', unmountLoginTypeControls);
     }
 
