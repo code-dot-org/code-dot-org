@@ -1,5 +1,5 @@
 import React from 'react';
-import RosterDialog from './RosterDialog';
+import {UnconnectedRosterDialog as RosterDialog} from './RosterDialog';
 import { OAuthSectionTypes } from './shapes';
 
 const ExampleDialogButton = React.createClass({
