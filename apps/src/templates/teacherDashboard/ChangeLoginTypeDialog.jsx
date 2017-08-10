@@ -24,14 +24,6 @@ class ChangeLoginTypeDialog extends Component {
     editSectionLoginType: PropTypes.func.isRequired,
   };
 
-  changeToWord = () => {
-    this.changeLoginType(SectionLoginType.word);
-  };
-
-  changeToPicture = () => {
-    this.changeLoginType(SectionLoginType.picture);
-  };
-
   changeLoginType = newType => {
     const {sectionId, editSectionLoginType, onLoginTypeChanged} = this.props;
     editSectionLoginType(sectionId, newType).then(onLoginTypeChanged);
@@ -56,11 +48,7 @@ class ChangeLoginTypeDialog extends Component {
           description="Change to the word login type if you want students to login with a simple pair of words instead of with a secret picture."
           onCancel={handleClose}
         >
-          <Button
-            onClick={this.changeToWord}
-            size={Button.ButtonSize.large}
-            text="Use word login"
-          />
+          <UseWordLoginButton changeLoginType={this.changeLoginType}/>
         </LimitedChangeView>
       );
     } else if (section.loginType === 'word') {
@@ -70,11 +58,7 @@ class ChangeLoginTypeDialog extends Component {
           description="Change to the picture login type if you want students to login with a secret picture instead of with a simple pair of words."
           onCancel={handleClose}
         >
-          <Button
-            onClick={this.changeToPicture}
-            size={Button.ButtonSize.large}
-            text="Use picture login"
-          />
+          <UsePictureLoginButton changeLoginType={this.changeLoginType}/>
         </LimitedChangeView>
       );
     } else {
@@ -93,15 +77,9 @@ class ChangeLoginTypeDialog extends Component {
           description={description}
           onCancel={handleClose}
         >
-          <Button
-            onClick={this.changeToPicture}
-            size={Button.ButtonSize.large}
-            text="Use picture login"
-          />
-          <Button
-            onClick={this.changeToWord}
-            size={Button.ButtonSize.large}
-            text="Use word login"
+          <UsePictureLoginButton changeLoginType={this.changeLoginType}/>
+          <UseWordLoginButton
+            changelogintype={this.changeLoginType}
             style={{marginLeft: 4}}
           />
         </LimitedChangeView>
@@ -168,3 +146,26 @@ LimitedChangeView.propTypes = {
   onCancel: PropTypes.func.isRequired,
   children: PropTypes.any,
 };
+
+const buttonPropTypes = {
+  changeLoginType: PropTypes.func.isRequired,
+  style: PropTypes.any,
+};
+
+const UsePictureLoginButton = ({changeLoginType}) => (
+  <Button
+    onClick={() => changeLoginType(SectionLoginType.picture)}
+    size={Button.ButtonSize.large}
+    text="Use picture login"
+  />
+);
+UsePictureLoginButton.propTypes = buttonPropTypes;
+const UseWordLoginButton = ({changeLoginType, style}) => (
+  <Button
+    onClick={() => changeLoginType(SectionLoginType.word)}
+    size={Button.ButtonSize.large}
+    text="Use word login"
+    style={style}
+  />
+);
+UseWordLoginButton.propTypes = buttonPropTypes;
