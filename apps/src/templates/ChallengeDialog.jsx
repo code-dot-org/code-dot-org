@@ -109,7 +109,7 @@ const ChallengeDialog = Radium(React.createClass({
             ...(this.props.complete ? styles.bannerComplete : {})
           }}
         >
-          <h1 style={styles.title}>
+          <h1 style={styles.title} id="challengeTitle">
             {this.props.title}
           </h1>
         </div>
@@ -119,13 +119,18 @@ const ChallengeDialog = Radium(React.createClass({
           </div>
           {this.props.children}
         </div>
-        <LegacyButton type="cancel" onClick={this.handleCancel}>
+        <LegacyButton
+          type="cancel"
+          onClick={this.handleCancel}
+          id="challengeCancelButton"
+        >
           {this.props.cancelButtonLabel}
         </LegacyButton>
         <LegacyButton
           type="primary"
           style={styles.primaryButton}
           onClick={this.handlePrimary}
+          id="challengePrimaryButton"
         >
           {this.props.primaryButtonLabel}
         </LegacyButton>
