@@ -5,6 +5,7 @@ import LoginTypePicker from './LoginTypePicker';
 import {sectionShape} from './shapes';
 import Button from '../Button';
 import DialogFooter from "./DialogFooter";
+import PadAndCenter from './PadAndCenter';
 import {Heading1} from '../../lib/ui/Headings';
 
 class ChangeLoginTypeDialog extends Component {
@@ -12,9 +13,11 @@ class ChangeLoginTypeDialog extends Component {
     isOpen: PropTypes.bool,
     handleClose: PropTypes.func,
     sectionId: PropTypes.number.isRequired,
-    section: sectionShape.isRequired,
+    // Used by storybook
     hideBackdrop: PropTypes.bool,
     style: PropTypes.object,
+    // Provided by Redux
+    section: sectionShape.isRequired,
   };
 
   renderOptions() {
@@ -141,19 +144,3 @@ LimitedChangeView.propTypes = {
   onCancel: PropTypes.func.isRequired,
   children: PropTypes.any,
 };
-
-const PadAndCenter = ({children}) => (
-  <div
-    style={{
-      display: 'flex',
-      flexFlow: 'row',
-      justifyContent: 'center',
-      margin: 20,
-      maxHeight: '75vh',
-      overflowY: 'auto',
-    }}
-  >
-    {children}
-  </div>
-);
-PadAndCenter.propTypes = {children: PropTypes.any};
