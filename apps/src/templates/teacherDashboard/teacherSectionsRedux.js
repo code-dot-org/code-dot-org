@@ -165,9 +165,9 @@ export const asyncLoadSectionData = () => (dispatch) => {
   });
 };
 
-function fetchJSON(url) {
+function fetchJSON(url, params) {
   return new Promise((resolve, reject) => {
-    $.getJSON(url)
+    $.getJSON(url, params)
       .done(resolve)
       .fail(jqxhr => reject(new Error(`
         url: ${url}
@@ -229,22 +229,17 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 export const importRoster = courseId => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
-  const importUrl = importUrlByProvider[provider];
+  const importSectionUrl = importUrlByProvider[provider];
+  let sectionId;
 
   dispatch({type: IMPORT_ROSTER_REQUEST});
-  return new Promise((resolve, reject) => {
-    $.getJSON(importUrl, { courseId })
-      .done(importedSection =>
-        dispatch(asyncLoadSectionData())
-          .then(() => dispatch({
-            type: IMPORT_ROSTER_SUCCESS,
-            sectionId: importedSection.id
-          }))
-          .then(resolve)
-          .catch(reject)
-      )
-      .fail(reject);
-  });
+  return fetchJSON(importSectionUrl, { courseId })
+    .then(newSection => sectionId = newSection.id)
+    .then(() => dispatch(asyncLoadSectionData()))
+    .then(() => dispatch({
+      type: IMPORT_ROSTER_SUCCESS,
+      sectionId
+    }));
 };
 
 /**

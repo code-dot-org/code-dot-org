@@ -1159,6 +1159,10 @@ describe('teacherSectionsRedux', () => {
 
     beforeEach(() => {
       server = sinon.fakeServer.create();
+      // We have chained server requests separated by promises in these
+      // tests, so have the fake server respond immediately becaue it's
+      // difficult to trigger the fake responses at the right times.
+      server.respondImmediately = true;
       // set up some default success responses
       server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}`, successResponse({}));
       server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}`, successResponse({}));
@@ -1185,8 +1189,6 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(importRoster(TEST_COURSE_ID));
       expect(getState().teacherSections.classrooms).to.be.null;
 
-      server.respond();
-      server.respond();
       return expect(promise).to.be.fulfilled;
     });
 
@@ -1199,8 +1201,6 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests[0].url)
         .to.equal('/dashboardapi/import_google_classroom?courseId=test-course-id');
 
-      server.respond(); // To import request
-      server.respond(); // To sections load
       return expect(promise).to.be.fulfilled;
     });
 
@@ -1213,8 +1213,6 @@ describe('teacherSectionsRedux', () => {
       expect(server.requests[0].url)
         .to.equal('/dashboardapi/import_clever_classroom?courseId=test-course-id');
 
-      server.respond(); // To import request
-      server.respond(); // To sections load
       return expect(promise).to.be.fulfilled;
     });
 
@@ -1226,10 +1224,6 @@ describe('teacherSectionsRedux', () => {
       const promise = store.dispatch(importRoster(TEST_COURSE_ID));
       expect(isRosterDialogOpen(getState())).to.be.true;
 
-      server.respond(); // To import request
-      expect(isRosterDialogOpen(getState())).to.be.true;
-
-      server.respond(); // To sections load
       return expect(promise).to.be.fulfilled.then(() => {
         expect(isRosterDialogOpen(getState())).to.be.false;
       });
@@ -1244,18 +1238,14 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.sections).to.deep.equal({});
 
       const promise = store.dispatch(importRoster(TEST_COURSE_ID));
-      server.respond(); // To import request
-
-      expect(server.requests).to.have.length(4);
-      expect(server.requests[1].method).to.equal('GET');
-      expect(server.requests[1].url).to.equal('/dashboardapi/sections');
-      expect(server.requests[2].method).to.equal('GET');
-      expect(server.requests[2].url).to.equal('/dashboardapi/courses');
-      expect(server.requests[3].method).to.equal('GET');
-      expect(server.requests[3].url).to.equal('/v2/sections/valid_scripts');
-
-      server.respond(); // To sections load
       return expect(promise).to.be.fulfilled.then(() => {
+        expect(server.requests).to.have.length(4);
+        expect(server.requests[1].method).to.equal('GET');
+        expect(server.requests[1].url).to.equal('/dashboardapi/sections');
+        expect(server.requests[2].method).to.equal('GET');
+        expect(server.requests[2].url).to.equal('/dashboardapi/courses');
+        expect(server.requests[3].method).to.equal('GET');
+        expect(server.requests[3].url).to.equal('/v2/sections/valid_scripts');
         expect(Object.keys(getState().teacherSections.sections))
           .to.have.length(sections.length);
       });
@@ -1277,8 +1267,6 @@ describe('teacherSectionsRedux', () => {
       expect(getState().teacherSections.sectionBeingEdited).to.be.null;
 
       const promise = store.dispatch(importRoster(TEST_COURSE_ID));
-      server.respond(); // To import request
-      server.respond(); // To sections load
       return expect(promise).to.be.fulfilled.then(() => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
