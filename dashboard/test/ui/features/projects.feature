@@ -10,9 +10,9 @@ Scenario: Save Artist Project
   Then I open the topmost blockly category "Brushes"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
 
-  # cannot publish because not signed in
+  When I am not signed in
   And I open the project share dialog
-  And the project cannot be published
+  Then the project cannot be published
 
   And I navigate to the share URL
   And I wait until element "#visualization" is visible
@@ -41,25 +41,23 @@ Scenario: Applab Flow
   And I wait until element ".project_edit" is visible
   Then I should see title "Code Ninja - App Lab"
 
-  # publish and unpublish the project from the share dialog
-
-  Then I open the project share dialog
+  Given I open the project share dialog
   And the project is unpublished
-  And I publish the project from the share dialog
+  When I publish the project from the share dialog
   And I open the project share dialog
-  And the project is published
+  Then the project is published
 
-  Then I reload the project page
+  When I reload the project page
   And I open the project share dialog
-  And the project is published
+  Then the project is published
 
-  Then I unpublish the project from the share dialog
+  When I unpublish the project from the share dialog
   And I open the project share dialog
-  And the project is unpublished
+  Then the project is unpublished
 
-  Then I reload the project page
+  When I reload the project page
   And I open the project share dialog
-  And the project is unpublished
+  Then the project is unpublished
 
   Then I navigate to the share URL
   And I wait to see "#footerDiv"
@@ -124,25 +122,23 @@ Scenario: Gamelab Flow
   And I press "runButton"
   And I wait for 0.5 seconds
 
-  # publish and unpublish the project from the share dialog
-
-  Then I open the project share dialog
+  Given I open the project share dialog
   And the project is unpublished
-  And I publish the project from the share dialog
+  When I publish the project from the share dialog
   And I open the project share dialog
-  And the project is published
+  Then the project is published
 
-  Then I reload the project page
+  When I reload the project page
   And I open the project share dialog
-  And the project is published
+  Then the project is published
 
-  Then I unpublish the project from the share dialog
+  When I unpublish the project from the share dialog
   And I open the project share dialog
-  And the project is unpublished
+  Then the project is unpublished
 
-  Then I reload the project page
+  When I reload the project page
   And I open the project share dialog
-  And the project is unpublished
+  Then the project is unpublished
 
   # Test the "View code" button, as the owner goes to /edit
   When I navigate to the share URL
@@ -221,8 +217,8 @@ Scenario: Starwars Flow
   And I press "runButton"
 
   # the starwars app type is not publishable
-  And I open the project share dialog
-  And the project cannot be published
+  When I open the project share dialog
+  Then the project cannot be published
 
   When I navigate to the share URL
   And I wait to see "#footerDiv"
