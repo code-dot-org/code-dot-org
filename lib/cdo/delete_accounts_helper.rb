@@ -138,7 +138,7 @@ module DeleteAccountsHelper
     end
 
     PEGASUS_DB[:contact_rollups].where(dashboard_user_id: user_id).delete
-    if PEGASUS_REPORTING_DB.exists? :contact_rollups_daily
+    if PEGASUS_REPORTING_DB.table_exists? :contact_rollups_daily
       PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
     end
   end
