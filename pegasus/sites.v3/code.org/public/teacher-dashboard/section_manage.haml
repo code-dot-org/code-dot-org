@@ -168,14 +168,15 @@ content-type: text/ng-template
       %p
         = I18n.t('dashboard_students_reset_word')
 
-  %br/
-  %br/
-  %div.jumbotron{'ng-show' => "section.id && section.login_type === 'email'", style: "line-height: 36px;"}
-    %p
-      = I18n.t('dashboard_students_join_link')
-      %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
-        http:#{CDO.studio_url('/join/{{section.code}}')}
-    %p{'ng-hide' => 'sectionFlow2017'}
-      = I18n.t('dashboard_students_no_email')
+  %div{'ng-show' => "section.id && section.login_type === 'email'"}
+    %br/
+    %br/
+    %div.jumbotron{style: "line-height: 36px;"}
+      %p
+        = I18n.t('dashboard_students_join_link')
+        %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
+          http:#{CDO.studio_url('/join/{{section.code}}')}
+      %p{'ng-hide' => 'sectionFlow2017'}
+        = I18n.t('dashboard_students_no_email')
 
   #login-type-react{'ng-show' => 'sectionFlow2017', 'ng-init' => '$emit("login-type-react-rendered");'}
