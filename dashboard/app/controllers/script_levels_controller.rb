@@ -54,7 +54,8 @@ class ScriptLevelsController < ApplicationController
   def next
     authorize! :read, ScriptLevel
     @script = Script.get_from_cache(params[:script_id])
-    if current_user.try(:completed?, @script) && @script.finish_url
+    configure_caching(@script)
+    if @script.finish_url && current_user.try(:completed?, @script)
       redirect_to @script.finish_url
       return
     end
