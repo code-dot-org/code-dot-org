@@ -128,7 +128,7 @@ export default class Item extends Collidable {
 
     // In this stationary activity case, we don't need to do any of this
     // update logic (facing the actor is handled every frame in display())
-    if (this.activity === 'watchActor') {
+    if (this.activity === constants.BEHAVIOR_WATCH_ACTOR) {
       return;
     }
     if (this.activity === constants.BEHAVIOR_STOP) {
@@ -401,7 +401,7 @@ export default class Item extends Collidable {
     }
 
     // Watch behavior does not change logical position, should update every frame
-    if (this.activity === "watchActor") {
+    if (this.activity === constants.BEHAVIOR_WATCH_ACTOR) {
       this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
     }
 
@@ -425,7 +425,10 @@ export default class Item extends Collidable {
     var speed = this.speed;
     // TODO: Better concept of which actions actually move the actor
     // Projected position should not be in front of you if you are not moving!
-    if (this.activity === constants.BEHAVIOR_STOP || this.activity === "watchActor") {
+    if (
+      this.activity === constants.BEHAVIOR_STOP ||
+      this.activity === constants.BEHAVIOR_WATCH_ACTOR
+    ) {
       speed = 0;
     }
     return {
