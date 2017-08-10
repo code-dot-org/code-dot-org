@@ -1265,7 +1265,7 @@ $workspace-header-button-margin: ($workspace-headers-height - $workspace-header-
   text-align: center;
 }
 
-#save-to-gallery-button {
+#save-to-project-gallery-button, #save-to-legacy-gallery-button {
   background-color: $purple;
   border: 1px solid $purple;
   margin: 0px;

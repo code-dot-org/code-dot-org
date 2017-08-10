@@ -2791,7 +2791,7 @@ Studio.displayFeedback = function () {
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,

@@ -942,7 +942,7 @@ var displayFeedback = function () {
       feedbackImage: Applab.feedbackImage,
       twitter: twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Applab.response && Applab.response.save_to_gallery_url,
+      saveToLegacyGalleryUrl: level.freePlay && Applab.response && Applab.response.save_to_gallery_url,
       message: Applab.message,
       appStrings: {
         reinfFeedbackMsg: applabMsg.reinfFeedbackMsg(),

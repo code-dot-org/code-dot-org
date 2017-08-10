@@ -453,11 +453,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  // set up the Save To Gallery button if necessary
-  var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
-  if (saveToGalleryButton && options.saveToProjectGallery) {
-    dom.addClickTouchEvent(saveToGalleryButton, () => {
-      $('#save-to-gallery-button').prop('disabled', true).text("Saving...");
+  const saveToProjectGalleryButton = feedback.querySelector('#save-to-project-gallery-button');
+  if (saveToProjectGalleryButton) {
+    dom.addClickTouchEvent(saveToProjectGalleryButton, () => {
+      $('#save-to-project-gallery-button').prop('disabled', true).text("Saving...");
       project.copy(project.getNewProjectName(), () => {
         dataURIToBlob(options.feedbackImage)
           .then(project.saveThumbnail)
@@ -467,14 +466,19 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
               project.save(resolve);
             });
           }).then(() => {
-            $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
+            $('#save-to-project-gallery-button').prop('disabled', true).text("Saved!");
           });
       }, {shouldPublish: true});
     });
-  } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
-    dom.addClickTouchEvent(saveToGalleryButton, function () {
-      $.post(options.response.save_to_gallery_url,
-             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+  }
+
+  const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
+  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
+    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
+      $.post(
+        options.saveToLegacyGalleryUrl,
+        () => $('#save-to-legacy-gallery-button').prop('disabled', true).text("Saved!")
+      );
     });
   }
 
