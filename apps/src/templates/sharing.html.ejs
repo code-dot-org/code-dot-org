@@ -40,11 +40,11 @@
         <%= msg.savedToGallery() %>
       </button>
     <% } else if (options.saveToProjectGallery && !options.disableSaveToGallery) { %>
-      <button id="save-to-project-gallery-button" class="launch">
+      <button id="save-to-project-gallery-button">
         <%= msg.saveAndPublish() %>
       </button>
     <% } else if (options.saveToLegacyGalleryUrl && !options.disableSaveToGallery) { %>
-      <button id="save-to-legacy-gallery-button" class="launch">
+      <button id="save-to-legacy-gallery-button">
         <%= msg.saveAndPublish() %>
       </button>
     <% } %>
