@@ -1,7 +1,8 @@
 require 'honeybadger'
+require_relative './form'
 require_relative '../helpers/hourofcode_helpers'
 
-class HocSignup2014
+class HocSignup2014 < Form
   def self.normalize(data)
     Honeybadger.context({data: data})
     result = {}
