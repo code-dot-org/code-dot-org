@@ -23,7 +23,6 @@ const styles = {
   dropdown: {
     border: `1px solid ${color.charcoal}`,
     position: 'absolute',
-    marginTop: -10,
     // without this, this will be below some content
     zIndex: 1,
   },
