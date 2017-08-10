@@ -41,7 +41,10 @@
       </button>
     <% } else if (options.saveToProjectGallery && !options.disableSaveToGallery) { %>
       <button id="save-to-project-gallery-button">
-        <%= msg.saveAndPublish() %>
+        <%= msg.save() %>
+      </button>
+      <button id="publish-to-project-gallery-button">
+          <%= msg.publish() %>
       </button>
     <% } else if (options.saveToLegacyGalleryUrl && !options.disableSaveToGallery) { %>
       <button id="save-to-legacy-gallery-button">
