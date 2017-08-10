@@ -460,8 +460,9 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
    * @param {string} pendingText Button text while operation is pending.
    * @param {string} finishedText Button text after operation completes.
    * @param {boolean} shouldPublish Whether to publish. Default: false.
+   * @param {function} callback Callback function to call on success.
    */
-  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish) {
+  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish, callback) {
     const buttonElement = feedback.querySelector(buttonSelector);
     if (buttonElement) {
       dom.addClickTouchEvent(buttonElement, () => {
@@ -469,17 +470,29 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         project.copy(project.getNewProjectName(), () => {
           FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
             $(buttonSelector).prop('disabled', true).text(finishedText);
-          });
+          }).then(callback);
         }, {shouldPublish});
       });
     }
   }
 
+  const saveButtonSelector = '#save-to-project-gallery-button';
   addSaveProjectButtonHandler(
-    '#save-to-project-gallery-button',
+    saveButtonSelector,
     msg.saving(),
-    msg.savedToGallery(),
-    true
+    msg.savedToGallery()
+  );
+
+  const publishButtonSelector = '#publish-to-project-gallery-button';
+  addSaveProjectButtonHandler(
+    publishButtonSelector,
+    msg.publishPending(),
+    msg.published(),
+    true,
+    () => {
+      // Publishing the project also saves it, so disable the save button.
+      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+    }
   );
 
   const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
