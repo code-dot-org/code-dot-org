@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react';
+import React, {Component, PropTypes} from 'react';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from "../../util/color";
 import ProjectActionBox from './ProjectActionBox';
@@ -26,34 +26,28 @@ const styles = {
   }
 };
 
-//to do - style it to always be in the center
-const QuickActionsCell = React.createClass({
-  propTypes: {
+class QuickActionsCell extends Component {
+  static propTypes = {
     projectData: PropTypes.object
-  },
+  };
 
-  getInitialState() {
-   return {actionsOpen: false};
-  },
+  state = {actionsOpen: false};
 
-  toggleActionBox(event) {
+  toggleActionBox = (event) => {
     if (!this.state.actionsOpen) {
       this.minimizeOnClickAnywhere();
     }
     this.setState({actionsOpen: !this.state.actionsOpen});
-  },
+  };
 
-  minimizeOnClickAnywhere: function (event) {
+  minimizeOnClickAnywhere = (event) => {
     // The first time we click anywhere, hide any open children
     $(document.body).one('click', function (event) {
-      if (event.target === this.refs.actionBox) {
-        return;
-      }
       this.setState({
         actionsOpen: false
       });
     }.bind(this));
-  },
+  };
 
   render() {
     const selectedStyle = this.state.actionsOpen ? styles.selected : styles.nonSelected;
@@ -62,8 +56,9 @@ const QuickActionsCell = React.createClass({
         <div
           style={selectedStyle}
           ref={(icon) => { this.icon = icon; }}
+          onClick={this.toggleActionBox}
         >
-          <FontAwesome icon="angle-down" onClick={this.toggleActionBox} />
+          <FontAwesome icon="angle-down" />
         </div>
         {this.state.actionsOpen &&
           <ProjectActionBox
@@ -75,6 +70,6 @@ const QuickActionsCell = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default QuickActionsCell;
