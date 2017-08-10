@@ -87,7 +87,8 @@ describe('TeacherHomepage', () => {
       buttonText: announcement.buttonText,
       buttonLink: announcement.link,
       newWindow: true,
-      analyticId: announcement.id
+      analyticId: announcement.id,
+      isRtl: false
     });
   });
 
