@@ -126,6 +126,7 @@ module Dashboard
       video-js/*.css
     )
     config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
 
@@ -149,5 +150,7 @@ module Dashboard
     end
 
     config.assets.image_optim = false unless CDO.image_optim
+
+    config.experiment_cache_time_seconds = 60
   end
 end

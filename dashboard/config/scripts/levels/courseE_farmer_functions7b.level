@@ -43,6 +43,9 @@
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2017-07-14 20:29:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions\",\"markdown_instructions\",\"authored_hints\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:01:10 +0000\",\"changed\":[\"toolbox_blocks\",\"start_direction\",\"instructions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:03:54 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:05:57 +0000\",\"changed\":[\"toolbox_blocks\",\"ideal\",\"markdown_instructions\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-14 23:11:28 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:21:04 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:21:47 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 17:22:52 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-26 18:03:37 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\",\"maze_data\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2017-07-28 22:36:49 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"never_autoplay_video\",\"contained_level_names\"],\"changed_by_id\":684,\"changed_by_email\":\"audrey.clark@code.org\"},{\"changed_at\":\"2017-07-31 19:17:15 +0000\",\"changed\":[\"toolbox_blocks\",\"solution_blocks\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":302,\"changed_by_email\":\"mara.downing@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 5,
+    "repeat_until_while": 4,
+    "conditionals": 5
   }
 }]]></config>
   <blocks>
@@ -76,7 +79,7 @@
           <block type="maze_ifElse">
             <title name="DIR">isPathForward</title>
           </block>
-          <block type="harvester_ifAtCropElse">
+          <block type="harvester_ifHasCropElse">
             <title name="LOC">Corn</title>
           </block>
           <block type="harvester_ifHasCrop">
@@ -100,7 +103,7 @@
                 <block type="maze_move">
                   <title name="DIR">moveForward</title>
                   <next>
-                    <block type="harvester_ifAtCropElse">
+                    <block type="harvester_ifHasCropElse">
                       <title name="LOC">Corn</title>
                       <statement name="DO">
                         <block type="harvester_corn">
@@ -112,7 +115,7 @@
                         </block>
                       </statement>
                       <statement name="ELSE">
-                        <block type="harvester_ifAtCrop">
+                        <block type="harvester_ifHasCrop">
                           <title name="LOC">Lettuce</title>
                           <statement name="DO">
                             <block type="harvester_lettuce">

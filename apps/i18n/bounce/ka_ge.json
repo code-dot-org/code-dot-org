@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "შესრულდეს ქვემოთ მოცემული მოქმედებები, როცა ბურთი ეჯახება კედელს.",
   "whileMsg": "სანამ",
   "whileTooltip": "გაიმეორეთ ჩაკეტილი მოქმედება უკანასკნელ წერტილზე მისვლამდე.",
-  "yes": "დიახ"
+  "yes": "დიახ",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

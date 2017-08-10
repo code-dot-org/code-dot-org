@@ -96,6 +96,100 @@ level 'Level 3'
     assert_equal expected, output
   end
 
+  test 'test Script DSL with experiment-based swap' do
+    input_dsl = "
+stage 'Stage1'
+level 'Level 1'
+variants
+  level 'Level 2a'
+  level 'Level 2b', experiments: ['experiment1']
+endvariants
+variants
+  level 'Level 3a', active: false
+  level 'Level 3b', experiments: ['experiment2'], active: true
+endvariants
+variants
+  level 'Level 4a', active: true, experiments: []
+  level 'Level 4b', experiments: ['experiment3', 'experiment4']
+endvariants
+"
+    expected = {
+      id: nil,
+      stages: [
+        {
+          stage: "Stage1",
+          scriptlevels: [
+            {stage: "Stage1", levels: [{name: "Level 1"}]},
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 2a"}, {name: "Level 2b"}],
+              properties: {
+                variants: {"Level 2b" => {active: false, experiments: ["experiment1"]}}
+              }
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 3a"}, {name: "Level 3b"}],
+              properties: {
+                variants: {
+                  "Level 3a" => {active: false},
+                  "Level 3b" => {experiments: ["experiment2"]}
+                }
+              }
+            },
+            {
+              stage: "Stage1",
+              levels: [{name: "Level 4a"}, {name: "Level 4b"}],
+              properties: {
+                variants: {"Level 4b" => {active: false, experiments: ["experiment3", "experiment4"]}}
+              }
+            },
+          ]
+        }
+      ],
+      hidden: true,
+      wrapup_video: nil,
+      login_required: false,
+      hideable_stages: false,
+      exclude_csf_column_in_legend: false,
+      student_detail_progress_view: false,
+      professional_learning_course: nil,
+      peer_reviews_to_complete: nil
+    }
+    output, _ = ScriptDSL.parse(input_dsl, 'test.script', 'test')
+    assert_equal expected, output
+  end
+
+  test 'serialize variants with experiment-based swap' do
+    level = create :maze, name: 'maze 1', level_num: 'custom'
+    level2 = create :maze, name: 'maze 2', level_num: 'custom'
+    level3 = create :maze, name: 'maze 3', level_num: 'custom'
+    script = create :script, hidden: true
+    stage = create :stage, name: 'stage 1', script: script
+    script_level = create(
+      :script_level,
+      levels: [level, level2, level3],
+      properties: {
+        'variants': {
+          'maze 2': {'active': false, 'experiments': ['testExperiment']},
+          'maze 3': {'active': false, 'experiments': ['testExperiment2', 'testExperiment3']},
+        }
+      },
+      stage: stage,
+      script: script
+    )
+    script_text = ScriptDSL.serialize_to_string(script_level.script)
+    expected = <<-SCRIPT
+stage 'stage 1'
+variants
+  level 'maze 1'
+  level 'maze 2', experiments: ["testExperiment"]
+  level 'maze 3', experiments: ["testExperiment2","testExperiment3"]
+endvariants
+SCRIPT
+    assert_equal expected, script_text
+  end
+
   test 'test Multi DSL' do
     input_dsl = "
 name 'name1'

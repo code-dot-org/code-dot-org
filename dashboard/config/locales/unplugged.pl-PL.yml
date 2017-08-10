@@ -286,10 +286,10 @@
         desc: ''
       courseA_unplugged_loops:
         title: Loops Unplugged
-        desc: In this lesson, you will learn about loops!
+        desc: W tej lekcji dowiesz się, jak używać pętli!
       courseB_unplugged_MRF:
         title: Aktywność unplugged (bez komputera)
-        desc: In this lesson, you will 'program' your friends!
+        desc: W tej lekcji "zaprogramujesz" swoich przyjaciół!
       courseB_unplugged_loopyMRF:
         title: Aktywność unplugged (bez komputera)
         desc: Just like in 'My Robotic Friends', you will be 'programming' your friends,

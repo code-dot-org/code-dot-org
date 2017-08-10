@@ -8,11 +8,10 @@ FactoryGirl.define do
 
   factory :course do
     name "my-course-name"
-    properties nil
   end
 
   factory :experiment do
-    name "fancyFeature"
+    sequence(:name) {|n| "fancyFeature#{n}"}
 
     factory :user_based_experiment, class: 'UserBasedExperiment' do
       type "UserBasedExperiment"
@@ -20,7 +19,9 @@ FactoryGirl.define do
     end
     factory :teacher_based_experiment, class: 'TeacherBasedExperiment' do
       type "TeacherBasedExperiment"
-      percentage 50
+      min_user_id 0
+      max_user_id 0
+      overflow_max_user_id 0
       script nil
     end
     factory :single_section_experiment, class: 'SingleSectionExperiment' do
@@ -571,7 +572,12 @@ FactoryGirl.define do
     conditionals_d5_count 4
   end
 
-  # school info
+  # school info: default to public with district and school
+  # Other variations have factories below
+  factory :school_info, parent: :school_info_us_public do
+    with_district
+    with_school
+  end
 
   # this is the only factory used for testing the deprecated data formats (without country).
   factory :school_info_without_country, class: SchoolInfo do
@@ -675,9 +681,12 @@ FactoryGirl.define do
     zip "98101"
   end
 
+  # Default school to public school. More specific factories below
+  factory :school, parent: :public_school
+
   factory :public_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    sequence(:id, 333)
+    id {School.maximum(:id) + 1}
     name "A seattle public school"
     city "Seattle"
     state "WA"
@@ -688,7 +697,7 @@ FactoryGirl.define do
 
   factory :charter_school, class: School do
     # school ids are not auto-assigned, so we have to assign one here
-    sequence(:id, 333)
+    id {School.maximum(:id) + 1}
     name "A seattle charter school"
     city "Seattle"
     state "WA"

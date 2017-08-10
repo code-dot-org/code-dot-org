@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import Button from '../Button';
 import color from "../../util/color";
 
@@ -21,7 +21,6 @@ const styles = {
     height: 250,
     width: 310,
     float: 'left',
-    marginBottom: 20,
     background: color.teal
   },
   image: {
@@ -60,6 +59,7 @@ const styles = {
     paddingBottom: 5,
     marginTop: 50,
     fontSize: 14,
+    lineHeight: "21px",
     fontFamily: '"Gotham 4r", sans-serif',
     position: 'absolute',
     zIndex: 2,
@@ -73,6 +73,7 @@ const styles = {
     paddingBottom: 5,
     marginTop: 50,
     fontSize: 14,
+    lineHeight: "21px",
     fontFamily: '"Gotham 4r", sans-serif',
     position: 'absolute',
     zIndex: 2,
@@ -81,28 +82,28 @@ const styles = {
   },
   button: {
     marginLeft: 20,
-    marginTop: 140,
+    bottom: 20,
     position: 'absolute',
     zIndex: 2,
   },
   rtlButton: {
     marginRight: 175,
-    marginTop: 140,
+    bottom: 20,
     position: 'absolute',
     zIndex: 2,
   }
 };
 
-const ResourceCard = React.createClass({
-  propTypes: {
-    isJumbo: React.PropTypes.bool,
-    title: React.PropTypes.string.isRequired,
-    description: React.PropTypes.string.isRequired,
-    buttonText: React.PropTypes.string.isRequired,
-    link: React.PropTypes.string.isRequired,
-    image: React.PropTypes.string,
-    isRtl: React.PropTypes.bool.isRequired
-  },
+class ResourceCard extends Component {
+  static propTypes = {
+    isJumbo: PropTypes.bool,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+    link: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    isRtl: PropTypes.bool.isRequired
+  };
 
   render() {
 
@@ -141,6 +142,6 @@ const ResourceCard = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default ResourceCard;

@@ -41,6 +41,9 @@ const EDIT_SECTION_SUCCESS = 'teacherDashboard/EDIT_SECTION_SUCCESS';
 /** Reports server request has failed */
 const EDIT_SECTION_FAILURE = 'teacherDashboard/EDIT_SECTION_FAILURE';
 
+const ASYNC_LOAD_BEGIN = 'teacherSections/ASYNC_LOAD_BEGIN';
+const ASYNC_LOAD_END = 'teacherSections/ASYNC_LOAD_END';
+
 export const setStudioUrl = studioUrl => ({ type: SET_STUDIO_URL, studioUrl });
 export const setValidLoginTypes = loginTypes => ({ type: SET_VALID_LOGIN_TYPES, loginTypes });
 export const setValidGrades = grades => ({ type: SET_VALID_GRADES, grades });
@@ -114,6 +117,35 @@ export const finishEditingSection = () => (dispatch, getState) => {
   });
 };
 
+export const asyncLoadSectionData = () => (dispatch) => {
+  dispatch({type: ASYNC_LOAD_BEGIN});
+  return Promise.all([
+    fetchJSON('/dashboardapi/sections'),
+    fetchJSON('/dashboardapi/courses'),
+    fetchJSON('/v2/sections/valid_scripts')
+  ]).then(([sections, validCourses, validScripts]) => {
+    dispatch(setValidAssignments(validCourses, validScripts));
+    dispatch(setSections(sections));
+  }).catch(err => {
+    console.error(err.message);
+  }).then(() => {
+    dispatch({type: ASYNC_LOAD_END});
+  });
+};
+
+function fetchJSON(url) {
+  return new Promise((resolve, reject) => {
+    $.getJSON(url)
+      .done(resolve)
+      .fail(jqxhr => reject(new Error(`
+        url: ${url}
+        status: ${jqxhr.status}
+        statusText: ${jqxhr.statusText}
+        responseText: ${jqxhr.responseText}
+      `)));
+  });
+}
+
 const initialState = {
   nextTempId: -1,
   studioUrl: '',
@@ -132,6 +164,8 @@ const initialState = {
   // its persisted state in the sections map.
   sectionBeingEdited: null,
   saveInProgress: false,
+  // Track whether we've async-loaded our section and assignment data
+  asyncLoadComplete: false,
 };
 
 /**
@@ -382,6 +416,20 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === ASYNC_LOAD_BEGIN) {
+    return {
+      ...state,
+      asyncLoadComplete: false,
+    };
+  }
+
+  if (action.type === ASYNC_LOAD_END) {
+    return {
+      ...state,
+      asyncLoadComplete: true,
+    };
+  }
+
   return state;
 }
 
@@ -412,7 +460,7 @@ export const sectionFromServerSection = serverSection => ({
  * section on the server via the sections API.
  * @param {sectionShape} section
  */
-function serverSectionFromSection(section) {
+export function serverSectionFromSection(section) {
   // Lazy: We leave some extra properties on this object (they're ignored by
   // the server for now) hoping this can eventually become a pass-through.
   return {

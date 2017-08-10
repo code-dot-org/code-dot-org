@@ -307,6 +307,14 @@ class ScriptLevelsController < ApplicationController
       return last_attempt.level if last_attempt
     end
 
+    # Check to see if any of the variants are part of an experiment that we're in
+    if current_user && @script_level.has_experiment?
+      section_as_student = current_user.sections_as_student.find_by(script: @script_level.script) ||
+        current_user.sections_as_student.first
+      experiment_level = @script_level.find_experiment_level(current_user, section_as_student)
+      return experiment_level if experiment_level
+    end
+
     # Otherwise return the oldest active level
     oldest_active = @script_level.oldest_active_level
     raise "No active levels found for scriptlevel #{@script_level.id}" unless oldest_active

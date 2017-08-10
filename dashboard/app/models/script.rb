@@ -181,7 +181,7 @@ class Script < ActiveRecord::Base
   # Get the set of scripts that are valid for the current user, ignoring those
   # that are hidden based on the user's permission.
   # @param [User] user
-  # @return [AssignableInfo[]]
+  # @return [Script[]]
   def self.valid_scripts(user)
     with_hidden = user.permission?(UserPermission::HIDDEN_SCRIPT_ACCESS)
     cache_key = "valid_scripts/#{with_hidden ? 'all' : 'valid'}"
@@ -222,6 +222,7 @@ class Script < ActiveRecord::Base
   # Caching is disabled when editing scripts and levels or running unit tests.
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
+    return false unless Rails.application.config.cache_classes
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -497,6 +498,12 @@ class Script < ActiveRecord::Base
     k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
+  def has_lesson_pdf?
+    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+
+    has_lesson_plan?
+  end
+
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
     return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
@@ -687,8 +694,8 @@ class Script < ActiveRecord::Base
         end
       end
 
-      if stage.lockable && stage.script_levels.length > 1
-        raise 'Expect lockable stages to have a single script_level'
+      if stage.lockable && !stage.script_levels.last.assessment?
+        raise 'Expect lockable stages to have an assessment as their last level'
       end
     end
 

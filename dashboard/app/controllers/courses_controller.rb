@@ -6,7 +6,7 @@ class CoursesController < ApplicationController
   def index
     respond_to do |format|
       format.html do
-        @is_teacher = !!(current_user && current_user.teacher?)
+        @is_teacher = (current_user && current_user.teacher?) || (!current_user && params[:view] == 'teacher')
         @is_english = request.language == 'en'
         @is_signed_out = current_user.nil?
         @force_race_interstitial = params[:forceRaceInterstitial]
@@ -53,6 +53,7 @@ class CoursesController < ApplicationController
   def update
     course = Course.find_by_name!(params[:course_name])
     course.persist_strings_and_scripts_changes(params[:scripts], i18n_params)
+    course.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
     redirect_to course
   end
 

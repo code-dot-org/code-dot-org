@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "Suorita alla olevat toiminnot, kun Flappy saapuu esteelle.",
   "whenRunButtonClick": "kun peli alkaa",
   "whenRunButtonClickTooltip": "Suorita alla olevat toiminnot, kun peli alkaa.",
-  "yes": "Kyllä"
+  "yes": "Kyllä",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

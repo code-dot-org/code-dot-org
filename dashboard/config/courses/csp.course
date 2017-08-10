@@ -8,5 +8,7 @@
     "csp5",
     "csp-ap",
     "csppostap"
-  ]
+  ],
+  "properties": {
+  }
 }

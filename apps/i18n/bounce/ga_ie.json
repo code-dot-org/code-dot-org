@@ -149,5 +149,6 @@
   "whenWallCollidedTooltip": "Cuireann seo na gníomhartha ceangailte i bhfeidhm nuair a bhuaileann liathróid balla.",
   "whileMsg": "chomh fada is atá",
   "whileTooltip": "Athdhéan na horduithe istigh go dtí go mbainfear an críochphointe amach.",
-  "yes": "Tá"
+  "yes": "Tá",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
 }

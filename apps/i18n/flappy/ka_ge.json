@@ -128,5 +128,6 @@
   "whenEnterObstacleTooltip": "შეასრულე ქვემოთ მითითებული მოქმედებები, როცა Flappy წინაღობას გადალახავს.",
   "whenRunButtonClick": "თამაშის დაწყებისას",
   "whenRunButtonClickTooltip": "შეასრულეთ ქვემოთ მოცემული მოქმედებები, როცა თამაში დაიწყება.",
-  "yes": "დიახ"
+  "yes": "დიახ",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
 }

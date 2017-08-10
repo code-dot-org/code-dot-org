@@ -549,6 +549,23 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
     assert_equal 2, response.first['facilitators'].size
   end
 
+  # Facilitators who are also organizers get workshops they facilitated and organized
+  test 'Facilitator-organizers get all their workshops when calling index' do
+    user = create :workshop_organizer
+    user.permission = UserPermission::FACILITATOR
+    expected_workshops = [
+      create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, num_facilitators: 1, organizer: user),
+      create(:pd_workshop, facilitators: [user], organizer: user),
+      create(:pd_workshop, organizer: user)
+    ]
+
+    sign_in(user)
+    get :index
+    response = JSON.parse(@response.body)
+    assert_equal expected_workshops.map(&:id).sort, response.map {|x| x['id']}.sort
+  end
+
   private
 
   def tomorrow_at(hour, minute = nil)

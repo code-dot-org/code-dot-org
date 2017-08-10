@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
 import RecentCourses from '@cdo/apps/templates/studioHomepages/RecentCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
-import {CoursesSetUpMessage} from '@cdo/apps/templates/studioHomepages/SetUpMessage';
+import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import Notification from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
@@ -47,22 +47,22 @@ const moreCourses = [
 
 describe('RecentCourses', () => {
   describe('as a teacher', () => {
-    it('shows a CoursesSetUpMessage when there are no courses', () => {
+    it('shows SetUpCourses when there are no courses', () => {
       const wrapper = shallow(
         <RecentCourses
           courses={[]}
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             isRtl={false}
           >
-            <CoursesSetUpMessage
+            <SetUpCourses
               isRtl={false}
               isTeacher
             />
@@ -77,14 +77,14 @@ describe('RecentCourses', () => {
         <RecentCourses
           courses={courses}
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             isRtl={false}
           >
             <div key={0}>
@@ -124,14 +124,14 @@ describe('RecentCourses', () => {
         <RecentCourses
           courses={moreCourses}
           isTeacher
-          heading="Recent Courses"
+          heading="My Courses"
           isRtl={false}
         />
       );
       expect(wrapper).to.containMatchingElement(
         <div>
           <ContentContainer
-            heading="Recent Courses"
+            heading="My Courses"
             isRtl={false}
           >
             <div key={0}>

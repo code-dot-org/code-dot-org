@@ -197,11 +197,17 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.facilitated_by(facilitator)
-    joins(:facilitators).where(users: {id: facilitator.id}).distinct
+    left_outer_joins(:facilitators).where(users: {id: facilitator.id}).distinct
   end
 
   def self.enrolled_in_by(teacher)
     joins(:enrollments).where(pd_enrollments: {email: teacher.email}).distinct
+  end
+
+  def self.facilitated_or_organized_by(user)
+    left_outer_joins(:facilitators).
+      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
+      distinct
   end
 
   def self.attended_by(teacher)
@@ -577,5 +583,10 @@ class Pd::Workshop < ActiveRecord::Base
   # @returns [Number, nil] constraint for the specified subject and type, or nil if none exists
   def time_constraint(constraint_type)
     TIME_CONSTRAINTS_BY_SUBJECT[subject].try(:[], constraint_type)
+  end
+
+  # The workshop is ready to close if the last session has attendance
+  def ready_to_close?
+    sessions.last.try {|session| session.attendances.any?}
   end
 end

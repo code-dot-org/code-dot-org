@@ -10,8 +10,8 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
 
 const styles = {
-  button: {
-    marginBottom: 10
+  main: {
+    display: 'inline-block',
   },
   icon: {
     fontSize: 24,
@@ -23,7 +23,6 @@ const styles = {
   dropdown: {
     border: `1px solid ${color.charcoal}`,
     position: 'absolute',
-    marginTop: -10,
     // without this, this will be below some content
     zIndex: 1,
   },
@@ -145,11 +144,10 @@ class AssignToSection extends Component {
     const section = sectionsInfo[sectionIndexToAssign];
 
     return (
-      <div>
+      <div style={styles.main}>
         <Button
           ref={element => this.button = element}
           text={(courseId && scriptId) ? i18n.assignUnit() : i18n.assignCourse()}
-          style={styles.button}
           onClick={this.onClickDropdown}
           icon={dropdownOpen ? "caret-up" : "caret-down"}
           iconStyle={styles.icon}

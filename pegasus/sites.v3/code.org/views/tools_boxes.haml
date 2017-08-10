@@ -1,0 +1,11 @@
+%link{:href=>"/css/educate.css", :rel=>"stylesheet"}
+
+#educate-resources-grid
+  - tools_boxes = []
+  - tools_boxes << { title_s: 'App Lab', description_t: 'Start with App Lab:  an introductory programming environment where you can design an app, code with blocks or JavaScript to make it work, then share your app in seconds.', url_s: '/applab' }
+  - tools_boxes << { title_s: 'Game Lab', description_t: 'Ready to go further? Game Lab is a more complex programming environment where you can make animations and games with characters that run, jump, fly and more.', url_s: '/gamelab' }
+  - tools_boxes << { title_s: 'Web Lab', description_t: 'Web Lab is a programming environment where you can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds.', url_s: '/weblab' }
+  - tools_boxes.each do |box|
+    = view :educate_box, item: box, color: "#00adbc"
+
+%div{style: "clear: both"}
