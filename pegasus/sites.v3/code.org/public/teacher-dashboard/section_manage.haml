@@ -157,12 +157,12 @@ content-type: text/ng-template
       %a{'ng-href' => "#/sections/{{section.id}}/print_signin_cards", target: "_blank"}
         = I18n.t('dashboard_students_print_info')
     %br/
-    %div{"ng-show" => "section.login_type === 'picture'"}
+    %div{"ng-show" => "!sectionFlow2017 && section.login_type === 'picture'"}
       %p
         = I18n.t('dashboard_students_secret_picture')
       %p
         = I18n.t('dashboard_students_reset_picture')
-    %div{"ng-show" => "section.login_type === 'word'"}
+    %div{"ng-show" => "!sectionFlow2017 && section.login_type === 'word'"}
       %p
         = I18n.t('dashboard_students_secret_word')
       %p
@@ -175,5 +175,7 @@ content-type: text/ng-template
       = I18n.t('dashboard_students_join_link')
       %a{"ng-href" => CDO.studio_url("/join/{{section.code}}"), target: "_blank"}
         http:#{CDO.studio_url('/join/{{section.code}}')}
-    %p
+    %p{'ng-hide' => 'sectionFlow2017'}
       = I18n.t('dashboard_students_no_email')
+
+  #login-type-react{'ng-show' => 'sectionFlow2017', 'ng-init' => '$emit("login-type-react-rendered");'}
