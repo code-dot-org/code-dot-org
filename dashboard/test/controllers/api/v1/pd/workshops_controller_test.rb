@@ -550,18 +550,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ::ActionController::TestCase
   end
 
   # Facilitators who are also organizers get workshops they facilitated and organized
-  test 'Facilitator-organiers get all their workshops when calling index' do
+  test 'Facilitator-organizers get all their workshops when calling index' do
     user = create :workshop_organizer
     user.permission = UserPermission::FACILITATOR
-    workshop_1 = create :pd_workshop, facilitators: [user]
-    workshop_2 = create :pd_workshop, num_facilitators: 1, organizer: user
-    workshop_3 = create :pd_workshop, facilitators: [user], organizer: user
+    expected_workshops = [
+      create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, num_facilitators: 1, organizer: user),
+      create(:pd_workshop, facilitators: [user], organizer: user),
+      create(:pd_workshop, organizer: user)
+    ]
 
     sign_in(user)
     get :index
     response = JSON.parse(@response.body)
-    assert_equal 3, response.size
-    assert_equal [workshop_1.id, workshop_2.id, workshop_3.id].sort, response.map {|x| x['id']}.sort
+    assert_equal expected_workshops.map(&:id).sort, response.map {|x| x['id']}.sort
   end
 
   private

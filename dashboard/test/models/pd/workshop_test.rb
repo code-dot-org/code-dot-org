@@ -44,6 +44,28 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_equal workshops.first, @workshop
   end
 
+  test 'facilitated_or_organized_by' do
+    user = create :workshop_organizer
+    user.permission = UserPermission::FACILITATOR
+
+    expected_workshops = [
+      create(:pd_workshop, facilitators: [user]),
+      create(:pd_workshop, num_facilitators: 1, organizer: user),
+      create(:pd_workshop, facilitators: [user], organizer: user),
+      create(:pd_workshop, organizer: user)
+    ]
+
+    # extra (not included)
+    create :pd_workshop, num_facilitators: 1
+
+    filtered = Pd::Workshop.facilitated_or_organized_by(user)
+    assert_equal 4, filtered.count
+    assert_equal expected_workshops.map(&:id).sort, filtered.pluck(:id).sort
+
+    assert_equal 3, filtered.organized_by(user).count
+    assert_equal 2, filtered.facilitated_by(user).count
+  end
+
   test 'query by attended teacher' do
     # Teachers attend individual sessions in the workshop
     teacher = create :teacher
