@@ -2,9 +2,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors, throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import i18n from '@cdo/locale';
 import {
   UnconnectedOwnedSections as OwnedSections
@@ -31,7 +29,6 @@ const defaultProps = {
 };
 
 describe('OwnedSections', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));

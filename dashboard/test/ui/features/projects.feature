@@ -9,8 +9,11 @@ Scenario: Save Artist Project
   And element ".project_updated_at" eventually contains text "Saved"
   Then I open the topmost blockly category "Brushes"
   And I drag block matching selector "#draw-color" to block matching selector "#when_run"
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+
+  When I am not signed in
+  And I open the project share dialog
+  Then the project cannot be published
+
   And I navigate to the share URL
   And I wait until element "#visualization" is visible
   Then element "draw-color" is a child of element "when_run"
@@ -37,8 +40,24 @@ Scenario: Applab Flow
   And I click selector ".project_save"
   And I wait until element ".project_edit" is visible
   Then I should see title "Code Ninja - App Lab"
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+
+  Given I open the project share dialog
+  And the project is unpublished
+  When I publish the project from the share dialog
+  And I open the project share dialog
+  Then the project is published
+
+  When I reload the project page
+  And I open the project share dialog
+  Then the project is published
+
+  When I unpublish the project from the share dialog
+  And I open the project share dialog
+  Then the project is unpublished
+
+  When I reload the project page
+  And I open the project share dialog
+  Then the project is unpublished
 
   Then I navigate to the share URL
   And I wait to see "#footerDiv"
@@ -103,8 +122,23 @@ Scenario: Gamelab Flow
   And I press "runButton"
   And I wait for 0.5 seconds
 
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+  Given I open the project share dialog
+  And the project is unpublished
+  When I publish the project from the share dialog
+  And I open the project share dialog
+  Then the project is published
+
+  When I reload the project page
+  And I open the project share dialog
+  Then the project is published
+
+  When I unpublish the project from the share dialog
+  And I open the project share dialog
+  Then the project is unpublished
+
+  When I reload the project page
+  And I open the project share dialog
+  Then the project is unpublished
 
   # Test the "View code" button, as the owner goes to /edit
   When I navigate to the share URL
@@ -182,8 +216,9 @@ Scenario: Starwars Flow
   Then I should see title "Code Ninja III: Revenge of the Semicolon - Play Lab"
   And I press "runButton"
 
-  Then I click selector ".project_share"
-  And I wait to see "#x-close"
+  # the starwars app type is not publishable
+  When I open the project share dialog
+  Then the project cannot be published
 
   When I navigate to the share URL
   And I wait to see "#footerDiv"

@@ -172,14 +172,21 @@ class Stage < ActiveRecord::Base
     }
   end
 
+  # For a given set of students, determine when the given stage is locked for
+  # each student.
+  # The design of a lockable stage is that there is (optionally) some number of
+  # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
+  # only one which is truly locked/unlocked. The stage is considered locked if
+  # and only ifthe final assessment level is locked. When in this state, the UI
+  # will show the entire stage as being locked, but if you know the URL of the other
+  # levels, you're still able to go to them and submit answers.
   def lockable_state(students)
     return unless lockable?
 
-    # assumption that lockable selfs have a single (assessment) level
-    if script_levels.length > 1
-      raise 'Expect lockable stages to have a single script_level'
+    script_level = script_levels.last
+    unless script_level.assessment?
+      raise 'Expect lockable stages to have an assessment as their last level'
     end
-    script_level = script_levels[0]
     return students.map do |student|
       user_level = student.last_attempt_for_any script_level.levels, script_id: script.id
       # user_level_data is provided so that we can get back to our user_level when updating. in some cases we
