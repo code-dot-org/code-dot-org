@@ -8,7 +8,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
-import experiments from '@cdo/apps/util/experiments';
+import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   renderSectionsPage,
@@ -261,6 +261,12 @@ function main() {
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
+
+    $scope.sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
+    if ($scope.sectionFlow2017) {
+      $scope.$on('login-type-react-rendered', () => console.log('render'));
+      $scope.$on('$destroy', () => console.log('unmount'));
+    }
 
     // error handling
     $scope.genericError = function (result) {
