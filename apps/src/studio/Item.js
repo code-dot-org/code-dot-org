@@ -419,17 +419,24 @@ export default class Item extends Collidable {
     };
   }
 
+  /**
+   * Whether or not this sprite should automatically move on each tick.
+   *
+   * @returns {boolean}
+   * @see Studio.onTick
+   */
+  shouldMove() {
+    const standstillBehaviors = [
+      constants.BEHAVIOR_STOP,
+      constants.BEHAVIOR_WATCH_ACTOR
+    ];
+    return !standstillBehaviors.includes(this.activity);
+  }
+
   getNextPosition() {
-    var unit = Direction.getUnitVector(this.dir);
-    var speed = this.speed;
-    // TODO: Better concept of which actions actually move the actor
-    // Projected position should not be in front of you if you are not moving!
-    if (
-      this.activity === constants.BEHAVIOR_STOP ||
-      this.activity === constants.BEHAVIOR_WATCH_ACTOR
-    ) {
-      speed = 0;
-    }
+    const unit = Direction.getUnitVector(this.dir);
+    const speed = this.shouldMove() ? this.speed : 0;
+
     return {
       x: this.x + speed * unit.x,
       y: this.y + speed * unit.y
