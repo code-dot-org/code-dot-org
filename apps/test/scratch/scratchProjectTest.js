@@ -263,7 +263,6 @@ const project = {
 };
 
 describe('scratch', function () {
-  testUtils.throwOnConsoleErrors();
   testUtils.throwOnConsoleWarnings();
   testUtils.setExternalGlobals();
   sinon.stub(console, 'log');

@@ -1,8 +1,5 @@
 import {assert} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
@@ -12,7 +9,6 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 const sectionId = 11;
 
 describe('PrintCertificates', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   const wrapper = shallow(
