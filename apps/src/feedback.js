@@ -453,17 +453,34 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  const saveToProjectGalleryButton = feedback.querySelector('#save-to-project-gallery-button');
-  if (saveToProjectGalleryButton) {
-    dom.addClickTouchEvent(saveToProjectGalleryButton, () => {
-      $('#save-to-project-gallery-button').prop('disabled', true).text("Saving...");
-      project.copy(project.getNewProjectName(), () => {
-        FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
-          $('#save-to-project-gallery-button').prop('disabled', true).text("Saved!");
-        });
-      }, {shouldPublish: true});
-    });
+  /**
+   * Add an event handler to the specified button which saves the project
+   * with thumbnail to the project gallery, and optionally publishes it.
+   * @param {string} buttonSelector Selector for the button html element.
+   * @param {string} pendingText Button text while operation is pending.
+   * @param {string} finishedText Button text after operation completes.
+   * @param {boolean} shouldPublish Whether to publish. Default: false.
+   */
+  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish) {
+    const buttonElement = feedback.querySelector(buttonSelector);
+    if (buttonElement) {
+      dom.addClickTouchEvent(buttonElement, () => {
+        $(buttonSelector).prop('disabled', true).text(pendingText);
+        project.copy(project.getNewProjectName(), () => {
+          FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
+            $(buttonSelector).prop('disabled', true).text(finishedText);
+          });
+        }, {shouldPublish});
+      });
+    }
   }
+
+  addSaveProjectButtonHandler(
+    '#save-to-project-gallery-button',
+    msg.saving(),
+    msg.savedToGallery(),
+    true
+  );
 
   const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
   if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
