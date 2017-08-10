@@ -52,6 +52,7 @@ const styles = {
   error: {
     fontSize: 10,
     color: color.light_gray,
+    display: 'none',
   },
 };
 
@@ -118,6 +119,9 @@ NoClassroomsFound.propTypes = {
 
 const LoadError = ({error, studioUrl}) =>
   <div>
+    <p>
+      {locale.authorizeGoogleClassroomsText()}
+    </p>
     <a href={`${studioUrl}/users/auth/google_oauth2?scope=userinfo.email,userinfo.profile,classroom.courses.readonly,classroom.rosters.readonly`}>
       {locale.authorizeGoogleClassrooms()}
     </a>
