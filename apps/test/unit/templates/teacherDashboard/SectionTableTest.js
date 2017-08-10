@@ -1,5 +1,5 @@
 import { assert, expect } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import React from 'react';
 import { shallow } from 'enzyme';
@@ -7,7 +7,6 @@ import { UnconnectedSectionTable as SectionTable }
   from '@cdo/apps/templates/teacherDashboard/SectionTable';
 
 describe('SectionTable', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('has one SectionRow per passed in section', () => {

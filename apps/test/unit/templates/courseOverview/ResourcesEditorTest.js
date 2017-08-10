@@ -1,12 +1,11 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
 import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 
 describe('ResourcesEditor', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   it('adds empty resources if passed none', () => {

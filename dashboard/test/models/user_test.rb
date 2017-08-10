@@ -1965,13 +1965,25 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it optionally does not return primary course in returned courses" do
-      script = Script.find_by_name('csd1')
-      @student.assign_script(script)
+      student = create :student
+      teacher = create :teacher
 
-      courses_and_scripts = @student.recent_courses_and_scripts(true)
+      course = create :course, name: 'testcourse'
+      course_script1 = create :course_script, course: course, script: (create :script, name: 'testscript1'), position: 1
+      create :course_script, course: course, script: (create :script, name: 'testscript2'), position: 2
+      create :user_script, user: student, script: course_script1.script, started_at: (Time.now - 1.day)
+
+      other_script = create :script, name: 'otherscript'
+      create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
+
+      section = create :section, user_id: teacher.id, course: course
+      Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
+
+      courses_and_scripts = student.recent_courses_and_scripts(true)
+
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
     end
   end
 
@@ -2018,7 +2030,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.valid?
     assert_nil user.name
-    refute_nil user.username =~ /system_deleted_\w{5}/
+    refute_nil user.username =~ /sys_deleted_\w{8}/
     assert_nil user.current_sign_in_ip
     assert_nil user.last_sign_in_ip
     assert_equal '', user.email

@@ -259,7 +259,7 @@ class ScriptDSL < BaseDSL
     l = "#{type} '#{level.key.gsub("'") {"\\'"}}'"
     l += ', active: false' if experiments.empty? && active == false
     l += ', active: true' if experiments.any? && (active == true || active.nil?)
-    l += ", experiments: ['#{experiments.join(', ')}']" if experiments.any?
+    l += ", experiments: #{experiments.to_json}" if experiments.any?
     l += ", progression: '#{progression}'" if progression
     l += ', target: true' if target
     l += ', challenge: true' if challenge

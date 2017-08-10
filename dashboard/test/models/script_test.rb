@@ -629,8 +629,8 @@ class ScriptTest < ActiveSupport::TestCase
     create :level, name: 'LockableAssessment1'
     input_dsl = <<-DSL.gsub(/^\s+/, '')
       stage 'Lockable1', lockable: true
-      level 'Level1';
       assessment 'LockableAssessment1';
+      level 'Level1';
     DSL
     script_data, _ = ScriptDSL.parse(input_dsl, 'a filename')
 
