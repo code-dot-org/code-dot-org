@@ -140,7 +140,7 @@ class User < ActiveRecord::Base
     windowslive
   ).freeze
 
-  SYSTEM_DELETED_USERNAME = 'system_deleted'
+  SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # :user_type is locked. Use the :permissions property for more granular user permissions.
   USER_TYPE_OPTIONS = [
@@ -1486,7 +1486,7 @@ class User < ActiveRecord::Base
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
   def clear_user_and_mark_purged
-    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(5).join
+    random_suffix = (('0'..'9').to_a + ('a'..'z').to_a).sample(8).join
 
     self.name = nil
     self.username = "#{SYSTEM_DELETED_USERNAME}_#{random_suffix}"

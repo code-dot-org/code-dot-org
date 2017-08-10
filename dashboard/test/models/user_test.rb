@@ -2030,7 +2030,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.valid?
     assert_nil user.name
-    refute_nil user.username =~ /system_deleted_\w{5}/
+    refute_nil user.username =~ /sys_deleted_\w{8}/
     assert_nil user.current_sign_in_ip
     assert_nil user.last_sign_in_ip
     assert_equal '', user.email

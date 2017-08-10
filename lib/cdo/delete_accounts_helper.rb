@@ -138,7 +138,7 @@ module DeleteAccountsHelper
     end
 
     PEGASUS_DB[:contact_rollups].where(dashboard_user_id: user_id).delete
-    if PEGASUS_REPORTING_DB.exists? :contact_rollups_daily
+    if PEGASUS_REPORTING_DB.table_exists? :contact_rollups_daily
       PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
     end
   end
@@ -159,7 +159,10 @@ module DeleteAccountsHelper
     return if user.purged_at
 
     # It is important that user.destroy happen first, as `purge_orphaned_students` assumes the
-    # dependent destroys have already been executed.
+    # dependent destroys have already been executed. Further, this assures the user is not able
+    # to access an account in a partially purged state should an exception occur somewhere in this
+    # method.
+    # NOTE: The logic of some of the helper methods assumes `user.destroy` has happened previously.
     user.destroy
     # Note that we do not gate any deletion logic on `user.user_type` as its current state may not
     # be reflective of past state.
@@ -175,8 +178,5 @@ module DeleteAccountsHelper
 
     user.purged_at = Time.zone.now
     user.save(validate: false)
-  rescue Exception => e
-    user.destroy
-    raise e
   end
 end

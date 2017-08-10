@@ -41,7 +41,7 @@ describe('TeacherHomepage', () => {
   });
   afterEach(() => server.restore());
 
-  it('shows a non-extended Header Banner that says Home', () => {
+  it('shows a non-extended Header Banner that says My Dashboard', () => {
     const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
@@ -52,7 +52,7 @@ describe('TeacherHomepage', () => {
     );
     const headerBanner = wrapper.find('HeaderBanner');
     assert.deepEqual(headerBanner.props(), {
-      headingText: "Home",
+      headingText: "My Dashboard",
       short: true
     });
   });
