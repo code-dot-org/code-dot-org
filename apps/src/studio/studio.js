@@ -4263,29 +4263,29 @@ Studio.callCmd = function (cmd) {
     case 'moveRight':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.EAST,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.EAST,
       });
       break;
     case 'moveLeft':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.WEST,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.WEST,
       });
       break;
     case 'moveUp':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.NORTH,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.NORTH,
       });
       break;
     case 'moveDown':
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
-          spriteIndex: Studio.protagonistSpriteIndex || 0,
-          dir: Direction.SOUTH,
+        spriteIndex: Studio.protagonistSpriteIndex || 0,
+        dir: Direction.SOUTH,
       });
       break;
     case 'moveForward':
