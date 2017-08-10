@@ -108,11 +108,9 @@ module DeleteAccountsHelper
   # Anonymizes the user by deleting various pieces of PII and PPII from the User and UserGeo models.
   # @param [User] user to be anonymized.
   def self.anonymize_user(user)
-    user.clear_user_and_mark_purged
-
     UserGeo.where(user_id: user.id).each(&:clear_user_geo)
-
     SignIn.where(user_id: user.id).destroy_all
+    user.clear_user_and_mark_purged
   end
 
   # Cleans all sections owned by the user.
@@ -140,7 +138,7 @@ module DeleteAccountsHelper
     end
 
     PEGASUS_DB[:contact_rollups].where(dashboard_user_id: user_id).delete
-    if PEGASUS_REPORTING_DB.exists? :contact_rollups_daily
+    if PEGASUS_REPORTING_DB.table_exists? :contact_rollups_daily
       PEGASUS_REPORTING_DB[:contact_rollups_daily].where(dashboard_user_id: user_id).delete
     end
   end
@@ -161,7 +159,10 @@ module DeleteAccountsHelper
     return if user.purged_at
 
     # It is important that user.destroy happen first, as `purge_orphaned_students` assumes the
-    # dependent destroys have already been executed.
+    # dependent destroys have already been executed. Further, this assures the user is not able
+    # to access an account in a partially purged state should an exception occur somewhere in this
+    # method.
+    # NOTE: The logic of some of the helper methods assumes `user.destroy` has happened previously.
     user.destroy
     # Note that we do not gate any deletion logic on `user.user_type` as its current state may not
     # be reflective of past state.
@@ -170,10 +171,10 @@ module DeleteAccountsHelper
     DeleteAccountsHelper.delete_project_backed_progress(user.id)
     DeleteAccountsHelper.purge_orphaned_students(user.id)
     DeleteAccountsHelper.clean_and_destroy_pd_content(user.id)
-    DeleteAccountsHelper.anonymize_user(user)
     DeleteAccountsHelper.anonymize_user_sections(user.id)
     DeleteAccountsHelper.remove_from_pardot(user.id)
     DeleteAccountsHelper.remove_from_solr(user.id)
+    DeleteAccountsHelper.anonymize_user(user)
 
     user.purged_at = Time.zone.now
     user.save(validate: false)
