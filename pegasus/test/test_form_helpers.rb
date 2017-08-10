@@ -5,6 +5,14 @@ require 'minitest/autorun'
 require 'mocha/mini_test'
 require_relative '../forms/hoc_signup_2017'
 
+DEFAULT_DATA = {
+  email_s: 'fake@example.com',
+  name_s: 'fake_name',
+  organization_name_s: 'fake_org',
+  event_type_s: 'in_school',
+  hoc_country_s: 'us'
+}.freeze
+
 class FormHelpersTest < SequelTestCase
   describe 'delete_form' do
     DEFAULT_KIND = 'default_kind'.freeze
@@ -40,16 +48,6 @@ class FormHelpersTest < SequelTestCase
   end
 
   describe 'insert_or_upsert_form' do
-    def default_data
-      {
-        email_s: 'fake@example.com',
-        name_s: 'fake_name',
-        organization_name_s: 'fake_org',
-        event_type_s: 'in_school',
-        hoc_country_s: 'us'
-      }
-    end
-
     before do
       stubs(:dashboard_user).returns(nil)
       Pegasus.stubs(:logger).returns(nil)
@@ -59,7 +57,7 @@ class FormHelpersTest < SequelTestCase
     it 'inserts a new form' do
       row = insert_or_upsert_form(
         'HocSignup2017',
-        default_data.merge(email: "#{SecureRandom.hex(8)}@example.com")
+        DEFAULT_DATA.merge(email: "#{SecureRandom.hex(8)}@example.com")
       )
       assert row
       assert_equal 1, DB[:forms].where(secret: row[:secret]).count
@@ -68,7 +66,7 @@ class FormHelpersTest < SequelTestCase
     it 'creates a forms_geos entry' do
       row = insert_or_upsert_form(
         'HocSignup2017',
-        default_data.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
+        DEFAULT_DATA.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
       )
       assert row
       assert row[:id]
@@ -76,5 +74,30 @@ class FormHelpersTest < SequelTestCase
     end
 
     # TODO(asher): Add additional test to thoroughly test the behavior of insert_or_upsert_form.
+  end
+
+  describe 'update_form' do
+    before do
+      stubs(:dashboard_user).returns(nil)
+      Pegasus.stubs(:logger).returns(nil)
+      stubs(:request).returns(stub(ip: '1.2.3.4'))
+    end
+
+    it 'returns nil if form not found' do
+      form = update_form 'HocSignup2017', 'bad_secret', {}
+      assert_nil form
+    end
+
+    it 'updates form' do
+      row = insert_or_upsert_form(
+        'HocSignup2017',
+        DEFAULT_DATA.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
+      )
+
+      form = update_form row[:kind], row[:secret], {name_s: 'non_default_name'}
+      refute_nil form
+      updated_row = DB[:forms].where(kind: row[:kind], secret: row[:secret]).first
+      assert_equal 'non_default_name', updated_row[:name]
+    end
   end
 end
