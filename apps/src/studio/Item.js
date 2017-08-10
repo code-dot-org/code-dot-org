@@ -125,18 +125,23 @@ export default class Item extends Collidable {
     // Draw the item's current location.
     Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
 
-    // In this stationary activity case, we don't need to do any of this
-    // update logic (facing the actor is handled every frame in display())
-    if (this.activity === constants.BEHAVIOR_WATCH_ACTOR) {
+    if (
+      this.activity === constants.BEHAVIOR_WATCH_ACTOR ||
+      this.activity === constants.BEHAVIOR_GRID_ALIGNED
+    ) {
+      // In this stationary activity case, we don't need to do any of this
+      // update logic (facing the actor is handled every frame in display())
       return;
-    }
-    if (this.activity === constants.BEHAVIOR_STOP) {
+    } else if (this.activity === constants.BEHAVIOR_STOP) {
+      // In this stationary activity case, we override the actor's facing and
+      // movement to force a "stop"
       this.setDirection(Direction.NONE);
 
       this.destGridX = undefined;
       this.destGridY = undefined;
       return;
     }
+
     if (!this.visible) {
       return;
     }
@@ -327,7 +332,8 @@ export default class Item extends Collidable {
 
   /**
    * Sets the activity property for this item.
-   * @param {string} type Valid options are: none, watchActor, roam, chase, or flee
+   * @param {string} type Valid options are: none, watchActor, roam, chase,
+   *        flee, or grid
    * @param {number} targetSpriteIndex optional target sprite used with chase and flee
    */
   setActivity(type, targetSpriteIndex) {
@@ -428,7 +434,8 @@ export default class Item extends Collidable {
   shouldMove() {
     const standstillBehaviors = [
       constants.BEHAVIOR_STOP,
-      constants.BEHAVIOR_WATCH_ACTOR
+      constants.BEHAVIOR_WATCH_ACTOR,
+      constants.BEHAVIOR_GRID_ALIGNED
     ];
     return !standstillBehaviors.includes(this.activity);
   }
