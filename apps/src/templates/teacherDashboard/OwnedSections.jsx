@@ -10,11 +10,8 @@ import {
   beginEditingNewSection,
   beginEditingSection,
   beginImportRosterFlow,
-  cancelImportRosterFlow,
-  importRoster,
-  isRosterDialogOpen,
 } from './teacherSectionsRedux';
-import {classroomShape, loadErrorShape, OAuthSectionTypes} from './shapes';
+import {OAuthSectionTypes} from './shapes';
 import i18n from '@cdo/locale';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import AddSectionDialog from "./AddSectionDialog";
@@ -37,18 +34,12 @@ class OwnedSections extends React.Component {
 
     // redux provided
     numSections: PropTypes.number.isRequired,
-    studioUrl: PropTypes.string.isRequired,
     provider: PropTypes.string,
-    classrooms: PropTypes.arrayOf(classroomShape),
-    loadError: loadErrorShape,
     asyncLoadComplete: PropTypes.bool.isRequired,
     newSection: PropTypes.func.isRequired,
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
     beginImportRosterFlow: PropTypes.func.isRequired,
-    cancelImportRosterFlow: PropTypes.func.isRequired,
-    importRoster: PropTypes.func.isRequired,
-    isRosterDialogOpen: PropTypes.bool.isRequired,
   };
 
   componentWillMount() {
@@ -148,15 +139,7 @@ class OwnedSections extends React.Component {
             }
           </div>
         )}
-        <RosterDialog
-          isOpen={this.props.isRosterDialogOpen}
-          handleImport={this.props.importRoster}
-          handleCancel={this.props.cancelImportRosterFlow}
-          classrooms={this.props.classrooms}
-          loadError={this.props.loadError}
-          studioUrl={this.props.studioUrl}
-          provider={this.provider}
-        />
+        <RosterDialog/>
         <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
@@ -167,17 +150,11 @@ export const UnconnectedOwnedSections = OwnedSections;
 
 export default connect(state => ({
   numSections: state.teacherSections.sectionIds.length,
-  studioUrl: state.teacherSections.studioUrl,
   provider: state.teacherSections.provider,
-  classrooms: state.teacherSections.classrooms,
-  loadError: state.teacherSections.loadError,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
-  isRosterDialogOpen: isRosterDialogOpen(state),
 }), {
   newSection,
   beginEditingNewSection,
   beginEditingSection,
   beginImportRosterFlow,
-  cancelImportRosterFlow,
-  importRoster,
 })(OwnedSections);
