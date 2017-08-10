@@ -584,4 +584,9 @@ class Pd::Workshop < ActiveRecord::Base
   def time_constraint(constraint_type)
     TIME_CONSTRAINTS_BY_SUBJECT[subject].try(:[], constraint_type)
   end
+
+  # The workshop is ready to close if the last session has attendance
+  def ready_to_close?
+    sessions.last.try {|session| session.attendances.any?}
+  end
 end
