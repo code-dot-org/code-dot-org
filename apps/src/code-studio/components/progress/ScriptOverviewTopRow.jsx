@@ -12,9 +12,9 @@ export const IN_PROGRESS = 'IN_PROGRESS';
 export const COMPLETED = 'COMPLETED';
 
 const NEXT_BUTTON_TEXT = {
-  NOT_STARTED: i18n.tryNow(),
-  IN_PROGRESS: i18n.continue(),
-  COMPLETED: i18n.printCertificate(),
+  [NOT_STARTED]: i18n.tryNow(),
+  [IN_PROGRESS]: i18n.continue(),
+  [COMPLETED]: i18n.printCertificate(),
 };
 
 const styles = {
