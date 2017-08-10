@@ -1227,10 +1227,12 @@ describe('teacherSectionsRedux', () => {
       expect(isRosterDialogOpen(getState())).to.be.true;
 
       server.respond(); // To import request
-      expect(isRosterDialogOpen(getState())).to.be.false;
+      expect(isRosterDialogOpen(getState())).to.be.true;
 
       server.respond(); // To sections load
-      return expect(promise).to.be.fulfilled;
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(isRosterDialogOpen(getState())).to.be.false;
+      });
     });
 
     it('reloads the section data on success', () => {

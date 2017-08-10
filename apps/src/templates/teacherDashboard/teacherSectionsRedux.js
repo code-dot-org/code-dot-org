@@ -72,8 +72,6 @@ const IMPORT_ROSTER_FLOW_CANCEL = 'teacherSections/IMPORT_ROSTER_FLOW_CANCEL';
 const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
-/** Reports request to import a roster has failed */
-const IMPORT_ROSTER_FAILURE = 'teacherSections/IMPORT_ROSTER_FAILURE';
 
 //
 // Action Creators
@@ -226,24 +224,26 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
  * (like Google Classroom or Clever), creating a new section or updating
  * an existing one already associated with it.
  * @param {string} courseId
+ * @return {function():Promise}
  */
 export const importRoster = courseId => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
+  const importUrl = importUrlByProvider[provider];
 
   dispatch({type: IMPORT_ROSTER_REQUEST});
   return new Promise((resolve, reject) => {
-    const url = importUrlByProvider[provider];
-    $.getJSON(url, { courseId }).done(importedSection => {
-      dispatch({type: IMPORT_ROSTER_SUCCESS});
-      dispatch(asyncLoadSectionData())
-        .then(() => dispatch(beginEditingSection(importedSection.id)))
-        .then(resolve)
-        .catch(reject);
-    }).fail(err => {
-      dispatch({type: IMPORT_ROSTER_FAILURE});
-      reject(err);
-    });
+    $.getJSON(importUrl, { courseId })
+      .done(importedSection =>
+        dispatch(asyncLoadSectionData())
+          .then(() => dispatch({
+            type: IMPORT_ROSTER_SUCCESS,
+            sectionId: importedSection.id
+          }))
+          .then(resolve)
+          .catch(reject)
+      )
+      .fail(reject);
   });
 };
 
@@ -542,17 +542,22 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  //
+  // Roster import action types
+  //
+
+  if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
+    return {
+      ...state,
+      isRosterDialogOpen: true,
+      classrooms: null,
+    };
+  }
+
   if (action.type === IMPORT_ROSTER_FLOW_LIST_LOADED) {
     return {
       ...state,
       classrooms: action.classrooms.slice(),
-    };
-  }
-
-  if (action.type === IMPORT_ROSTER_REQUEST) {
-    return {
-      ...state,
-      classrooms: null,
     };
   }
 
@@ -566,24 +571,26 @@ export default function teacherSections(state=initialState, action) {
     };
   }
 
+  if (action.type === IMPORT_ROSTER_FLOW_CANCEL) {
+    return {
+      ...state,
+      isRosterDialogOpen: false,
+      classrooms: null,
+    };
+  }
+
+  if (action.type === IMPORT_ROSTER_REQUEST) {
+    return {
+      ...state,
+      classrooms: null,
+    };
+  }
+
   if (action.type === IMPORT_ROSTER_SUCCESS) {
     return {
       ...state,
       isRosterDialogOpen: false,
-    };
-  }
-
-  if (action.type === IMPORT_ROSTER_FLOW_BEGIN) {
-    return {
-      ...state,
-      isRosterDialogOpen: true,
-      classrooms: null,
-    };
-  } else if (action.type === IMPORT_ROSTER_FLOW_CANCEL) {
-    return {
-      ...state,
-      isRosterDialogOpen: false,
-      classrooms: null,
+      sectionBeingEdited: {...state.sections[action.sectionId]},
     };
   }
 
