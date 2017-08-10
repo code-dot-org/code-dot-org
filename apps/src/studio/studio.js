@@ -1305,16 +1305,20 @@ Studio.onTick = function () {
       performQueuedMoves(i);
     }
 
+    const sprite = Studio.sprite[i];
+
     // After 5 ticks of no movement, turn sprite forward.
-    if (Studio.tickCount - Studio.sprite[i].lastMove > Studio.ticksBeforeFaceSouth) {
-      Studio.sprite[i].setDirection(Direction.NONE);
+    if (
+      sprite.shouldFaceSouthOnIdle() &&
+      (Studio.tickCount - sprite.lastMove > Studio.ticksBeforeFaceSouth)
+    ) {
+      sprite.setDirection(Direction.NONE);
       Studio.movementAudioOff();
     }
 
     // Display sprite:
     Studio.displaySprite(i);
 
-    var sprite = Studio.sprite[i];
     if (sprite.hasActions()) {
       spritesNeedMoreAnimationFrames = true;
     }
