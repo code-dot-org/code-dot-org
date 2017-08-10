@@ -20,7 +20,6 @@ module UsersHelper
     user_data = {}
     merge_user_summary(user_data, user)
     merge_script_progress(user_data, user, script, exclude_level_progress)
-    user_data[:completed] = user.completed?(script)
 
     if script.has_peer_reviews?
       user_data[:peerReviewsPerformed] = PeerReview.get_peer_review_summaries(user, script).try(:map) do |summary|
@@ -111,6 +110,7 @@ module UsersHelper
       uls = user.user_levels_by_level(script)
       paired_user_level_ids = PairedUserLevel.pairs(uls.values.map(&:id))
       script_levels = script.script_levels
+      user_data[:completed] = user.completed?(script)
       user_data[:levels] = {}
       script_levels.each do |sl|
         sl.level_ids.each do |level_id|
