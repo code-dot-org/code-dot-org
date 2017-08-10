@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {Component, PropTypes} from 'react';
 import color from "../../util/color";
 import GridContainer from './GridContainer';
 import Button from '@cdo/apps/templates/Button';
 import i18n from "@cdo/locale";
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   heading: {
@@ -40,22 +41,20 @@ const styles = {
   },
   clear: {
     clear: 'both',
-    height: 30
+    marginBottom: 60
   }
 };
 
-const FindLocalClassBanner = React.createClass({
-  propTypes: {
-    codeOrgUrlPrefix: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
-  },
+class FindLocalClassBanner extends Component {
+  static propTypes = {
+    isRtl: PropTypes.bool.isRequired
+  };
 
   render() {
-    const { codeOrgUrlPrefix, isRtl } = this.props;
+    const { isRtl } = this.props;
 
     return (
       <div>
-        <div style={styles.clear}/>
         <div style={styles.heading}>
           {i18n.findLocalClassHeading()}
         </div>
@@ -64,7 +63,7 @@ const FindLocalClassBanner = React.createClass({
           isRtl={isRtl}
         >
           <div style={styles.imageItem}>
-            <img src={`${codeOrgUrlPrefix}/shared/images/fill-540x289/misc/beyond-local-map.png`}/>
+            <img src={pegasus('/shared/images/fill-540x289/misc/beyond-local-map.png')}/>
           </div>
           <div style={styles.textItem}>
             <div style={styles.subheading}>
@@ -74,7 +73,7 @@ const FindLocalClassBanner = React.createClass({
               {i18n.findLocalClassDescription()}
             </div>
             <Button
-              href={`${codeOrgUrlPrefix}/learn/local`}
+              href={pegasus('/learn/local')}
               color={Button.ButtonColor.gray}
               text={i18n.findLocalClassButton()}
             />
@@ -84,6 +83,6 @@ const FindLocalClassBanner = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default FindLocalClassBanner;

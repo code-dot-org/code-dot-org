@@ -157,6 +157,7 @@ Feature: Using the teacher dashboard
 
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?enableExperiments=showProjectThumbnails#/sections"
+    And I wait to see ".header_user"
     And I click selector "a:contains('SectionName')" once I see it
     And I click selector "a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible

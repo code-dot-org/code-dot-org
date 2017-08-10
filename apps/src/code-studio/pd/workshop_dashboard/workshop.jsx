@@ -101,7 +101,8 @@ const Workshop = React.createClass({
           'section_code',
           'sessions',
           'state',
-          'account_required_for_attendance?'
+          'account_required_for_attendance?',
+          'ready_to_close?'
         ])
       });
     }).fail(data => {
@@ -558,9 +559,17 @@ const Workshop = React.createClass({
         <ConfirmationDialog
           show={this.state.showEndWorkshopConfirmation}
           onOk={this.handleEndWorkshopConfirmed}
+          okText={this.state.workshop['ready_to_close?'] ? "OK" : "Yes, end this workshop"}
           onCancel={this.handleEndWorkshopCancel}
           headerText="End Workshop and Send Survey"
-          bodyText="Are you sure? Once ended, the workshop cannot be restarted."
+          bodyText={this.state.workshop['ready_to_close?'] ?
+            "Are you sure? Once ended, the workshop cannot be restarted."
+            :
+            "There are still sessions remaining in this workshop. " +
+            "Once a workshop is ended, attendees can no longer mark themselves as attended for the remaining sessions. " +
+            "Are you sure you want to end this workshop?"
+          }
+          width={this.state.workshop['ready_to_close?'] ? 500 : 800}
         />
       </div>
     );

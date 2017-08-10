@@ -1,5 +1,5 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
 import { shallow } from 'enzyme';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
@@ -28,7 +28,6 @@ const defaultProps = {
 };
 
 describe('AssignToSection', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   let windowDashboard;

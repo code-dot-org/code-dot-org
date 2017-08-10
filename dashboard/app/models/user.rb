@@ -750,13 +750,6 @@ class User < ActiveRecord::Base
     )
   end
 
-  def user_level_locked?(script_level, level)
-    return false unless script_level.stage.lockable?
-    return false if authorized_teacher?
-    user_level = user_level_for(script_level, level)
-    user_level.nil? || user_level.locked?(script_level.stage)
-  end
-
   # Returns the next script_level for the next progression level in the given
   # script that hasn't yet been passed, starting its search at the last level we submitted
   def next_unpassed_progression_level(script)
@@ -1501,6 +1494,7 @@ class User < ActiveRecord::Base
     self.last_sign_in_ip = nil
     self.email = ''
     self.hashed_email = ''
+    self.parent_email = nil
     self.encrypted_password = nil
     self.uid = nil
     self.reset_password_token = nil

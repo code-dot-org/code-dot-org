@@ -1,6 +1,5 @@
 import React from 'react';
 import {expect} from '../../util/configuredChai';
-import {allowConsoleErrors} from '../../util/testUtils';
 import {mount} from 'enzyme';
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
 
@@ -9,8 +8,6 @@ const BOGUS_IMAGE_URL = '/nonexistent.png';
 const THUMBNAIL_SIZE = 50;
 
 describe('ImageWithStatus', () => {
-  allowConsoleErrors();
-
   it("shows status loading initially", () => {
     const root = mount(
       <ImageWithStatus

@@ -498,6 +498,12 @@ class Script < ActiveRecord::Base
     k5_course? || k5_draft_course? || %w(msm algebra algebraa algebrab cspunit1 cspunit2 cspunit3 cspunit4 cspunit5 cspunit6 csp1 csp2 csp3 csp4 csp5 csp6 csppostap cspoptional csd1 csd2 csd3 csd4 csd5 csd6 csp-ap csd1-old csd3-old text-compression netsim pixelation frequency_analysis vigenere).include?(name)
   end
 
+  def has_lesson_pdf?
+    return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
+
+    has_lesson_plan?
+  end
+
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
     return false if %w(coursea courseb coursec coursed coursee coursef).include?(name)
@@ -688,8 +694,8 @@ class Script < ActiveRecord::Base
         end
       end
 
-      if stage.lockable && stage.script_levels.length > 1
-        raise 'Expect lockable stages to have a single script_level'
+      if stage.lockable && !stage.script_levels.last.assessment?
+        raise 'Expect lockable stages to have an assessment as their last level'
       end
     end
 

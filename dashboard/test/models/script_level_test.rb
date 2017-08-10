@@ -224,19 +224,15 @@ class ScriptLevelTest < ActiveSupport::TestCase
   test 'calling next_progression_level when next level is locked skips to next unlocked level' do
     script = create(:script, name: 's1')
     stage1 = create(:stage, script: script, absolute_position: 1)
-    stage2 = create(:stage, script: script, absolute_position: 2)
+    stage2 = create(:stage, script: script, absolute_position: 2, lockable: true)
     stage3 = create(:stage, script: script, absolute_position: 3)
 
     script_level_current = create(:script_level, script: script, stage: stage1, position: 1, chapter: 1)
-    script_level_locked1 = create(:script_level, script: script, stage: stage2, position: 1, chapter: 2)
-    script_level_locked2 = create(:script_level, script: script, stage: stage2, position: 2, chapter: 3)
+    create(:script_level, script: script, stage: stage2, position: 1, chapter: 2)
+    create(:script_level, script: script, stage: stage2, position: 2, chapter: 3)
     script_level_unlocked = create(:script_level, script: script, stage: stage3, position: 1, chapter: 4)
 
     student = create :student
-    student.stubs(:user_level_locked?).with(script_level_current, script_level_current.levels.first).returns(false)
-    student.stubs(:user_level_locked?).with(script_level_locked1, script_level_locked1.levels.first).returns(true)
-    student.stubs(:user_level_locked?).with(script_level_locked2, script_level_locked2.levels.first).returns(true)
-    student.stubs(:user_level_locked?).with(script_level_unlocked, script_level_unlocked.levels.first).returns(false)
 
     assert_equal script_level_unlocked, script_level_current.next_progression_level(student)
   end
