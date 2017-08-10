@@ -32,7 +32,7 @@ export default class WordSearch extends Subtype {
    * Returns true if we've spelled the right word.
    * @override
    */
-  finished() {
+  succeeded() {
     return this.visited_ === this.goal_;
   }
 

@@ -10,7 +10,8 @@ DEFAULT_DATA = {
   name_s: 'fake_name',
   organization_name_s: 'fake_org',
   event_type_s: 'in_school',
-  hoc_country_s: 'us'
+  hoc_country_s: 'us',
+  event_location_s: 'fake_location'
 }.freeze
 
 class FormHelpersTest < SequelTestCase
@@ -57,7 +58,7 @@ class FormHelpersTest < SequelTestCase
     it 'inserts a new form' do
       row = insert_or_upsert_form(
         'HocSignup2017',
-        DEFAULT_DATA.merge(email: "#{SecureRandom.hex(8)}@example.com")
+        DEFAULT_DATA.merge(email_s: "#{SecureRandom.hex(8)}@example.com")
       )
       assert row
       assert_equal 1, DB[:forms].where(secret: row[:secret]).count
@@ -73,7 +74,20 @@ class FormHelpersTest < SequelTestCase
       assert_equal 1, DB[:form_geos].where(form_id: row[:id]).count
     end
 
-    # TODO(asher): Add additional test to thoroughly test the behavior of insert_or_upsert_form.
+    it 'updates an existing HOC signup form' do
+      email_s = "#{SecureRandom.hex(8)}@example.com"
+      insert_row = insert_or_upsert_form 'HocSignup2017', DEFAULT_DATA.merge(email_s: email_s)
+      form_id = insert_row[:id]
+      secret = insert_row[:secret]
+
+      insert_or_upsert_form 'HocSignup2017', DEFAULT_DATA.merge(email_s: email_s, hoc_country_s: 'ca')
+
+      updated_form = DB[:forms].where(id: form_id).first
+      assert_equal secret, updated_form[:secret]
+      updated_data = JSON.parse updated_form[:data]
+      assert_equal DEFAULT_DATA[:event_location_s], updated_data['event_location_s']
+      assert_equal 'ca', updated_data['hoc_country_s']
+    end
   end
 
   describe 'update_form' do
