@@ -11,7 +11,7 @@ import FilterSet from './filterSet';
 import TutorialSet from './tutorialSet';
 import ToggleAllTutorialsButton from './toggleAllTutorialsButton';
 import { TutorialsSortBy, mobileCheck } from './util';
-import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from './responsive';
+import { getResponsiveContainerWidth, isResponsiveCategoryInactive, getResponsiveValue } from '../responsive';
 import i18n from './locale';
 import _ from 'lodash';
 import queryString from 'query-string';

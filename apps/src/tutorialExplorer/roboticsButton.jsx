@@ -2,7 +2,7 @@
  */
 
 import React from 'react';
-import { getResponsiveValue } from './responsive';
+import { getResponsiveValue } from '../responsive';
 import i18n from './locale';
 
 const styles = {

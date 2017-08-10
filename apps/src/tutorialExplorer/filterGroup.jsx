@@ -4,7 +4,7 @@
 
 import React from 'react';
 import FilterChoice from './filterChoice';
-import { getResponsiveValue } from './responsive';
+import { getResponsiveValue } from '../responsive';
 
 const styles = {
   filterGroupOuter: {
