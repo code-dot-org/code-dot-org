@@ -200,7 +200,7 @@ variants
 endvariants
 variants
   level 'csp_socialBelonging_control', active: true, experiments: ['']
-  level 'csp_socialBelonging_intervention', active: true, experiments: ['socialBelongingTest']
+  level 'csp_socialBelonging_intervention', experiments: ['socialBelongingTest']
 endvariants
 
 stage 'Anonymous student survey'

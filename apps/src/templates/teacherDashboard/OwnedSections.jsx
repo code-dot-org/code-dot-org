@@ -94,12 +94,18 @@ class OwnedSections extends React.Component {
   };
 
   handleImport = courseId => {
-    this.props.importClassroomStarted();
+    const {
+      importClassroomStarted,
+      asyncLoadSectionData,
+      beginEditingSection,
+    } = this.props;
 
+    importClassroomStarted();
     const url = urlByProvider[this.provider];
-    $.getJSON(url, { courseId }).then(() => {
+    $.getJSON(url, { courseId }).then(importedSection => {
       this.setState({rosterDialogOpen: false});
-      this.props.asyncLoadSectionData();
+      asyncLoadSectionData()
+        .then(() => beginEditingSection(importedSection.id));
     });
   };
 

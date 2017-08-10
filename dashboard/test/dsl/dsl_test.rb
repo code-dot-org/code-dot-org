@@ -163,12 +163,18 @@ endvariants
   test 'serialize variants with experiment-based swap' do
     level = create :maze, name: 'maze 1', level_num: 'custom'
     level2 = create :maze, name: 'maze 2', level_num: 'custom'
+    level3 = create :maze, name: 'maze 3', level_num: 'custom'
     script = create :script, hidden: true
     stage = create :stage, name: 'stage 1', script: script
     script_level = create(
       :script_level,
-      levels: [level, level2],
-      properties: {'variants': {'maze 1': {'active': false, 'experiments': ['testExperiment']}}},
+      levels: [level, level2, level3],
+      properties: {
+        'variants': {
+          'maze 2': {'active': false, 'experiments': ['testExperiment']},
+          'maze 3': {'active': false, 'experiments': ['testExperiment2', 'testExperiment3']},
+        }
+      },
       stage: stage,
       script: script
     )
@@ -176,8 +182,9 @@ endvariants
     expected = <<-SCRIPT
 stage 'stage 1'
 variants
-  level 'maze 1', experiments: ['testExperiment']
-  level 'maze 2'
+  level 'maze 1'
+  level 'maze 2', experiments: ["testExperiment"]
+  level 'maze 3', experiments: ["testExperiment2","testExperiment3"]
 endvariants
 SCRIPT
     assert_equal expected, script_text
