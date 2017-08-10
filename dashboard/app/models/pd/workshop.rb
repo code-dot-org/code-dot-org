@@ -197,7 +197,7 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.facilitated_by(facilitator)
-    joins(:facilitators).where(users: {id: facilitator.id}).distinct
+    left_outer_joins(:facilitators).where(users: {id: facilitator.id}).distinct
   end
 
   def self.enrolled_in_by(teacher)
@@ -205,7 +205,9 @@ class Pd::Workshop < ActiveRecord::Base
   end
 
   def self.facilitated_or_organized_by(user)
-    joins(:facilitators).where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id)
+    left_outer_joins(:facilitators).
+      where('pd_workshops_facilitators.user_id = ? OR organizer_id = ?', user.id, user.id).
+      distinct
   end
 
   def self.attended_by(teacher)
