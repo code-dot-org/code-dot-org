@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import { renderSectionsPage } from './sections';
+import { renderSectionsPage, unmountSectionsPage } from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -204,9 +204,8 @@ function main() {
 
     // Angular does not offer a reliable way to wait for the template to load,
     // so do it using a custom event here.
-    $scope.$on('section-page-rendered', () => {
-      renderSectionsPage(scriptData);
-    });
+    $scope.$on('section-page-rendered', () => renderSectionsPage(scriptData));
+    $scope.$on('$destroy', unmountSectionsPage);
   }]);
 
   app.controller('StudentDetailController', ['$scope', '$routeParams', 'sectionsService',

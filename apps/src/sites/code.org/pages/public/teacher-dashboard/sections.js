@@ -56,3 +56,11 @@ export function renderSectionsPage(data) {
     element
   );
 }
+
+/**
+ * Unmount the React root mounted by renderSectionsPage.
+ */
+export function unmountSectionsPage() {
+  const element = document.getElementById('sections-page');
+  ReactDOM.unmountComponentAtNode(element);
+}
