@@ -13,7 +13,8 @@ class ChangeLoginTypeDialog extends Component {
     handleClose: PropTypes.func,
     sectionId: PropTypes.number.isRequired,
     section: sectionShape.isRequired,
-    hideBackdrop: React.PropTypes.bool,
+    hideBackdrop: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   renderOptions() {
@@ -99,6 +100,7 @@ class ChangeLoginTypeDialog extends Component {
         handleClose={this.props.handleClose}
         assetUrl={()=>''}
         hideBackdrop={this.props.hideBackdrop}
+        style={this.props.style}
       >
         <PadAndCenter>
           {this.renderOptions()}

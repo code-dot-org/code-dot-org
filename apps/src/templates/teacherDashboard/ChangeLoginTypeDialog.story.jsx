@@ -5,6 +5,11 @@ import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
 import teacherSections, { setSections } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
+const unModalForStorybook = {
+  hideBackdrop: true,
+  style: {marginLeft: 0},
+};
+
 export default storybook => storybook
   .storiesOf('ChangeLoginTypeDialog', module)
   .addStoryTable([
@@ -17,8 +22,8 @@ export default storybook => storybook
         return (
           <Provider store={store}>
             <ChangeLoginTypeDialog
+              {...unModalForStorybook}
               handleClose={storybook.action('close')}
-              hideBackdrop
               sectionId={11}
             />
           </Provider>
@@ -34,8 +39,8 @@ export default storybook => storybook
         return (
           <Provider store={store}>
             <ChangeLoginTypeDialog
+              {...unModalForStorybook}
               handleClose={storybook.action('close')}
-              hideBackdrop
               sectionId={12}
             />
           </Provider>
@@ -51,8 +56,8 @@ export default storybook => storybook
         return (
           <Provider store={store}>
             <ChangeLoginTypeDialog
+              {...unModalForStorybook}
               handleClose={storybook.action('close')}
-              hideBackdrop
               sectionId={307}
             />
           </Provider>
@@ -68,8 +73,8 @@ export default storybook => storybook
         return (
           <Provider store={store}>
             <ChangeLoginTypeDialog
+              {...unModalForStorybook}
               handleClose={storybook.action('close')}
-              hideBackdrop
               sectionId={14}
             />
           </Provider>
