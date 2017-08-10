@@ -8,6 +8,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import logToCloud from '@cdo/apps/logToCloud';
+import LoginTypeParagraph from '@cdo/apps/templates/teacherDashboard/LoginTypeParagraph';
 
 /**
  * Render our sections table using React
@@ -58,4 +59,25 @@ export function unmountSyncOauthSectionControl() {
 
 function syncOauthSectionMountPoint() {
   return document.getElementById('react-sync-oauth-section');
+}
+
+/**
+ * Render the login type details and controls for changing login type
+ * at the bottom of the manage students tab.
+ */
+export function renderLoginTypeControls() {
+  ReactDOM.render(
+    <LoginTypeParagraph
+      loginType="picture"
+    />,
+    loginTypeControlsMountPoint()
+  );
+}
+
+export function unmountLoginTypeControls() {
+  ReactDOM.unmountComponentAtNode(loginTypeControlsMountPoint());
+}
+
+function loginTypeControlsMountPoint() {
+  return document.getElementById('login-type-react');
 }

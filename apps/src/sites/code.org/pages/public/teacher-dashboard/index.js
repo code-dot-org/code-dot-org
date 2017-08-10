@@ -15,6 +15,8 @@ import {
   unmountSectionsPage,
   renderSyncOauthSectionControl,
   unmountSyncOauthSectionControl,
+  renderLoginTypeControls,
+  unmountLoginTypeControls
 } from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
@@ -262,12 +264,6 @@ function main() {
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
-    $scope.sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
-    if ($scope.sectionFlow2017) {
-      $scope.$on('login-type-react-rendered', () => console.log('render'));
-      $scope.$on('$destroy', () => console.log('unmount'));
-    }
-
     // error handling
     $scope.genericError = function (result) {
       $window.alert("An unexpected error occurred, please try again. If this keeps happening, try reloading the page.");
@@ -324,6 +320,14 @@ function main() {
         );
       });
       $scope.$on('$destroy', unmountSyncOauthSectionControl);
+    }
+
+    // Section flow 2017: Use React-rendered login type controls on the
+    // manage students tab.
+    $scope.sectionFlow2017 = experiments.isEnabled(SECTION_FLOW_2017);
+    if ($scope.sectionFlow2017 && $scope.tab === 'manage') {
+     $scope.$on('login-type-react-rendered', () => renderLoginTypeControls());
+     $scope.$on('$destroy', unmountLoginTypeControls);
     }
 
     $scope.edit = function (student) {
