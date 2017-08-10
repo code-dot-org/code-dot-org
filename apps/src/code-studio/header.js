@@ -11,6 +11,7 @@ import Dialog from './LegacyDialog';
 import { Provider } from 'react-redux';
 import { getStore } from '../redux';
 import { showShareDialog } from './components/shareDialogRedux';
+import { PUBLISHED_PROJECT_TYPES } from '../templates/publishDialog/publishDialogRedux';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -172,6 +173,8 @@ function shareProject() {
     const appType = dashboard.project.getStandaloneApp();
     const pageConstants = getStore().getState().pageConstants;
     const canShareSocial = !pageConstants.isSignedIn || pageConstants.is13Plus;
+    const canPublish = !!appOptions.isSignedIn &&
+      PUBLISHED_PROJECT_TYPES.includes(appType);
 
     ReactDOM.render(
       <Provider store={getStore()}>
@@ -180,7 +183,7 @@ function shareProject() {
           icon={appOptions.skin.staticAvatar}
           shareUrl={shareUrl}
           isAbusive={dashboard.project.exceedsAbuseThreshold()}
-          isSignedIn={appOptions.isSignedIn}
+          canPublish={canPublish}
           isPublished={dashboard.project.isPublished()}
           channelId={dashboard.project.getCurrentId()}
           appType={appType}

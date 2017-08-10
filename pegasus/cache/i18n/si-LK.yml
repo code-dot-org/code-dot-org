@@ -324,6 +324,8 @@
   lines_of_code: "අද වන විට <b>කේත පේළි #කට</b> අධිකව ලියා ඇත."
   lines_of_code_alt: "කේත පේළි <b>#</b>ක් සිසුන් විසින් ලියා ඇත"
   who_has_done_hoc: "#HourOfCode සම්පුර්ණ කර ඇත්තේ කවුරුන් ද? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Hour of Code ප්‍රමුඛත්ව පුවරු
   students_and_lines: Hour of Code වැඩසටහනට සහභාගී වී, සිසුන් %{students} ක් විසින්
     කේත පේලි %{lines} ක් ලියා ඇත.
@@ -1993,9 +1995,17 @@
   csp_name: "'16-'17 පරිගණක විද්‍යාවේ මූලිකාංග"
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "ආයුබෝවන් %{username}"
+  user_header_settings: "මගේ ගිණුම"
+  user_header_logout: "නික්මෙන්න"
+  user_header_signin: "පුරන්න"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

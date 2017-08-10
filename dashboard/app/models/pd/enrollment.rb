@@ -54,8 +54,9 @@ class Pd::Enrollment < ActiveRecord::Base
   validates_confirmation_of :email
   validates_email_format_of :email, allow_blank: true
 
-  validate :validate_school_name, unless: :created_before_school_info?
+  validate :school_forbidden, if: -> {new_record? || school_changed?}
   validates_presence_of :school_info, unless: :created_before_school_info?
+  validate :school_info_country_required, if: -> {new_record? || school_info_id_changed?}
 
   before_validation :autoupdate_user_field
   after_save :enroll_in_corresponding_online_learning, if: -> {user_id_changed? || email_changed?}
@@ -74,14 +75,12 @@ class Pd::Enrollment < ActiveRecord::Base
     persisted? && created_at < '2016-08-30'
   end
 
-  # enrollment.school is required in the old format (no country) and forbidden in the new format (with country).
-  # To avoid breaking any existing codepaths, use the old format when school_info is absent.
-  def validate_school_name
-    if school_info.try(:country)
-      errors.add(:school, 'is forbidden') if school
-    else
-      errors.add(:school, 'is required') unless school
-    end
+  def school_forbidden
+    errors.add(:school, 'is forbidden') if read_attribute(:school)
+  end
+
+  def school_info_country_required
+    errors.add(:school_info, 'must have a country') unless school_info.try(:country)
   end
 
   def self.for_school_district(school_district)
@@ -220,6 +219,20 @@ class Pd::Enrollment < ActiveRecord::Base
   def self.get_safe_names
     # Use full name
     all.map {|enrollment| [enrollment.full_name, enrollment]}
+  end
+
+  # TODO: Migrate existing school entries into schoolInfo and delete school column
+  def school
+    ActiveSupport::Deprecation.warn('School is deprecated. Use school_info or school_name instead.')
+    read_attribute :school
+  end
+
+  def school_name
+    school_info.try(:effective_school_name) || read_attribute(:school)
+  end
+
+  def school_district_name
+    school_info.try :effective_school_district_name
   end
 
   protected

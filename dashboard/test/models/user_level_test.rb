@@ -215,8 +215,8 @@ class UserLevelTest < ActiveSupport::TestCase
     ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
     ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
 
-    assert_equal true, @user.user_level_locked?(script_level, @level)
-    assert_equal false, teacher.user_level_locked?(script_level, @level)
+    assert_equal true, script_level.locked?(@user)
+    assert_equal false, script_level.locked?(teacher)
 
     assert_equal true, ul_student.locked?(stage)
     assert_equal false, ul_teacher.locked?(stage)

@@ -1,10 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import {sections} from './fakeSectionUtils';
 import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import {
@@ -17,7 +14,6 @@ import OwnedSections from "@cdo/apps/templates/teacherDashboard/OwnedSections";
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 describe('TeacherSections', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   const defaultProps = {

@@ -15,6 +15,9 @@
   courses_data[:initialtipsdismissed] = current_user ? current_user.ui_tip_dismissed_teacher_courses : nil
   courses_data[:userid] = current_user.try(:id)
 
+  @page_title = @is_teacher ? I18n.t('courses_page.title_teacher') : I18n.t('courses_page.title_student')
+
+
 %link{:href=>'/shared/css/course-explorer.css', :rel=>'stylesheet'}
 
 - if (current_user && current_user.show_race_interstitial?) || @force_race_interstitial

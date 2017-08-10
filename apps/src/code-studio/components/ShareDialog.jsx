@@ -75,7 +75,7 @@ const ShareDialog = React.createClass({
     shareUrl: React.PropTypes.string.isRequired,
     isAbusive: React.PropTypes.bool.isRequired,
     isOpen: React.PropTypes.bool.isRequired,
-    isSignedIn: React.PropTypes.bool.isRequired,
+    canPublish: React.PropTypes.bool.isRequired,
     isPublished: React.PropTypes.bool.isRequired,
     isUnpublishPending: React.PropTypes.bool.isRequired,
     channelId: React.PropTypes.string.isRequired,
@@ -192,7 +192,7 @@ const ShareDialog = React.createClass({
         iframeWidth: gamelabConstants.GAME_WIDTH + 32,
       };
     }
-    const {isSignedIn, isPublished} = this.props;
+    const {canPublish, isPublished} = this.props;
     return (
       <div>
         <BaseDialog
@@ -237,16 +237,18 @@ const ShareDialog = React.createClass({
                   <i className="fa fa-mobile-phone" style={{fontSize: 36}}></i>
                   <span>Send to phone</span>
                 </a>
-                {isSignedIn && !isPublished &&
+                {canPublish && !isPublished &&
                 <button
+                  id="share-dialog-publish-button"
                   style={styles.button}
                   onClick={this.publish}
                 >
                   {i18n.publish()}
                 </button>
                 }
-                {isSignedIn && isPublished &&
+                {canPublish && isPublished &&
                 <PendingButton
+                  id="share-dialog-unpublish-button"
                   isPending={this.props.isUnpublishPending}
                   onClick={this.unpublish}
                   pendingText={i18n.unpublishPending()}

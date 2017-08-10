@@ -332,7 +332,7 @@ exports.selectEditorRowColError = function (editor, row, col) {
   if (!editor) {
     return;
   }
-  if (editor.currentlyUsingBlocks) {
+  if (editor.session && editor.session.currentlyUsingBlocks) {
     var style = {color: '#FFFF22'};
     editor.clearLineMarks();
     editor.markLine(row, style);
@@ -361,7 +361,7 @@ exports.selectEditorRowColError = function (editor, row, col) {
  * highlights (including ace_step, ace_error, and anything else)
  */
 exports.clearDropletAceHighlighting = function (editor, allClasses) {
-  if (editor.currentlyUsingBlocks) {
+  if (editor.session && editor.session.currentlyUsingBlocks) {
     editor.clearLineMarks();
   } else {
     editor.aceEditor.getSelection().clearSelection();
@@ -438,7 +438,7 @@ exports.selectCurrentCode = function (interpreter,
     if (start >= 0 && start < userCodeLength && end <= userCodeLength) {
       userCodeRow = exports.aceFindRow(cumulativeLength, 0, cumulativeLength.length, start);
       // Highlight the code being executed in each step:
-      if (editor.currentlyUsingBlocks) {
+      if (editor.session && editor.session.currentlyUsingBlocks) {
         var style = {color: '#FFFF22'};
         editor.clearLineMarks();
         editor.mark({row: userCodeRow, col: start - cumulativeLength[userCodeRow]}, style);

@@ -42,9 +42,11 @@ export function onReady() {
     $.ajax({
       url: $(ev.target).attr('data-user-level-url'),
       method: 'PUT',
-      user_level: {
-        best_result: 1,
-        submitted: false
+      data: {
+        user_level: {
+          best_result: 1,
+          submitted: false
+        }
       }
     }).done(data => {
       // Let's just refresh so that the dots are correct, etc.

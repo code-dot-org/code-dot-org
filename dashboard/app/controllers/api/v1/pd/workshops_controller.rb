@@ -131,14 +131,15 @@ class Api::V1::Pd::WorkshopsController < ::ApplicationController
     # own action to do loading
     authenticate_user!
 
+    unless current_user.admin? || current_user.workshop_admin? ||
+      current_user.workshop_organizer? || current_user.facilitator?
+      raise CanCan::AccessDenied.new
+    end
+
     if current_user.admin? || current_user.workshop_admin?
       @workshops = Pd::Workshop.all
-    elsif current_user.workshop_organizer?
-      @workshops = Pd::Workshop.organized_by(current_user)
-    elsif current_user.facilitator?
-      @workshops = Pd::Workshop.facilitated_by(current_user)
     else
-      raise CanCan::AccessDenied.new
+      @workshops = Pd::Workshop.facilitated_or_organized_by(current_user)
     end
   end
 

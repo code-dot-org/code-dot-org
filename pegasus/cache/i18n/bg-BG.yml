@@ -325,6 +325,8 @@
   lines_of_code: "НАД<b># РЕДА КОД</b> НАПИСАНИ ДО МОМЕНТА."
   lines_of_code_alt: "<b>#</b> РЕДОВЕ КОД, НАПИСАНИ ОТ УЧЕНИЦИ"
   who_has_done_hoc: "Кой приключи #HourOfCode? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: The Hour of Code класации
   students_and_lines: "%{students} ученици са направили Часът на кода и са написали
     %{lines} реда код."
@@ -1997,9 +1999,17 @@
   csp_name: '"15-" 16 CS принципи'
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: "Здравейте %{username}"
+  user_header_settings: "Моят акаунт"
+  user_header_logout: "Изход"
+  user_header_signin: "Вход"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

@@ -323,6 +323,8 @@
   lines_of_code: DOSUD NAPSÁNO PŘES <b># ŘÁDKŮ KÓDU</b>.
   lines_of_code_alt: "<b>#</b> ŘÁDKŮ KÓDU NAPSANÝCH STUDENTY"
   who_has_done_hoc: 'Kdo udělal #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: "Žebříčky Hodiny Kódu"
   students_and_lines: "%{students} studentů absolvovalo Hodinu Kódu a napsalo %{lines}
     řádků kódu."
@@ -1964,9 +1966,17 @@
   csp_name: Principy informatiky 2016-2017
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Ahoj %{username}
+  user_header_settings: Můj účet
+  user_header_logout: Odhlásit se
+  user_header_signin: Přihlásit
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

@@ -325,6 +325,8 @@
   lines_of_code: BU GÜNƏ QƏDƏR <b># SƏTİRDƏN ÇOX KOD</b> YAZILIB.
   lines_of_code_alt: "ŞAGİRDLƏR <b>#</b> SƏTİR KOD YAZIB"
   who_has_done_hoc: "#HourOfCode Kod Saatını kim bitirdi? @codeorg"
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: Kod Saatı liderlər cədvəli
   students_and_lines: "%{students} şagird Kod Saatını başa vurdu və %{lines} sətir
     kod yazdı."
@@ -1008,8 +1010,8 @@
   dashboard_correctness_unsubmitted: Unsubmitted
   dashboard_correctness_correct: Düzgün
   dashboard_correctness_incorrect: Incorrect
-  dashboard_submission_submitted: Submitted
-  dashboard_submission_in_progress: In progress
+  dashboard_submission_submitted: Göndərilib
+  dashboard_submission_in_progress: Tamamlanmayıb
   dashboard_status: Vəziyyət
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
@@ -1953,23 +1955,31 @@
   header_about_evaluation: Qiymətləndirmə
   header_about_jobs: Vakansiyalar
   header_about_contact: Bizimlə əlaqə saxlayın
-  header_about_faqs: FAQs
-  header_learn: Learn
-  header_teach: Teach
+  header_about_faqs: Tez-tez verilən suallar
+  header_learn: "Öyrənin"
+  header_teach: "Öyrədin"
   header_stats: Göstəricilər
-  header_help_us: Help Us
-  header_about: About
-  header_teacher_community: Teacher community
-  header_help_support: 'Help and support '
+  header_help_us: Bizə kömək edin
+  header_about: Haqqımızda
+  header_teacher_community: Müəllim icması
+  header_help_support: 'Kömək və texniki dəstək '
   header_report_bug: Report bug
-  header_tutorials: Tutorials
-  header_documentation: Documentation
+  header_tutorials: Dərsliklər
+  header_documentation: Təlimat və sənədlər
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Salam %{username}
+  user_header_settings: Mənim hesabım
+  user_header_logout: "Çıxın"
+  user_header_signin: Daxil olun
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

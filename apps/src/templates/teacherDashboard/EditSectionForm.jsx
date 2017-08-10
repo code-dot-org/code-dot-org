@@ -27,7 +27,12 @@ const style = {
     boxSizing: 'border-box',
     fontSize: 'large',
     padding: '0.5em',
-  }
+  },
+  scroll: {
+    maxHeight: '58vh',
+    overflowX: 'hidden',
+    overflowY: 'auto',
+  },
 };
 
 /**
@@ -75,7 +80,7 @@ class EditSectionForm extends Component{
         <Heading1>
           {title}
         </Heading1>
-        <div>
+        <div style={style.scroll}>
           <SectionNameField
             value={section.name}
             onChange={name => editSectionProperties({name})}

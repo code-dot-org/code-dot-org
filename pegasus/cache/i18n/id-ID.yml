@@ -334,6 +334,8 @@
   lines_of_code: Sebanyak <b># baris kode</b> telah ditulis sampai saat ini.
   lines_of_code_alt: "<b>#</b> BARIS KODE YANG TELAH DITULIS OLEH SISWA-SISWI"
   who_has_done_hoc: 'Siapakah yang telah menyelesaikan #HourOfCode? @codeorg'
+  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
+    for supporting @codeorg)'
   hoc_leaderboards: 'Papan Prestasi Jam kode '
   students_and_lines: Sebanyak %{students} siswa telah menyelesaikan jam kode dan
     menulis %{lines} baris kode.
@@ -2055,9 +2057,17 @@
   csp_name: CS Principles
   csd_name: CS Discoveries
   full_course_category_name: Full Courses
-  who_has_done_hoc_donor: 'Who has done the #HourOfCode? (Thanks %{donor_twitter}
-    for supporting @codeorg)'
-  user_header_label: Hi %{username}
-  user_header_settings: Account settings
-  user_header_logout: Sign out
-  user_header_signin: Sign in
+  user_header_label: Halo %{username}
+  user_header_settings: Akun saya
+  user_header_logout: Keluar
+  user_header_signin: Masuk
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
+  header_my_dashboard: My Dashboard
+  header_course_catalog: Course Catalog
+  view_all_sections: View All Sections

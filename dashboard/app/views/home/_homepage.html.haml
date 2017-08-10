@@ -5,6 +5,9 @@
 - homepage_data[:valid_grades] = Section.valid_grades
 
 - if current_user
+  - provider = current_user.provider
+  - provider = 'google_classroom' if provider == 'google_oauth2'
+  - homepage_data[:provider] = provider
   - if current_user.teacher?
     - homepage_data[:sections] = @sections
     - homepage_data[:isTeacher] = true

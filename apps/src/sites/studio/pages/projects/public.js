@@ -22,6 +22,7 @@ $(document).ready(() => {
       <div>
         <HeaderBanner
           headingText={i18n.projectGalleryHeader()}
+          short={true}
         />
         <Provider store={getStore()}>
           <PublicGallery />
