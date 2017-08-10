@@ -56,6 +56,7 @@ describe('Notification', () => {
         buttonLink={announcement.link}
         newWindow={true}
         analyticId={announcement.id}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -89,6 +90,7 @@ describe('Notification', () => {
         notice={information.notice}
         details={information.details}
         dismissible={false}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -117,6 +119,7 @@ describe('Notification', () => {
         notice={success.notice}
         details={success.details}
         dismissible={false}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -145,6 +148,7 @@ describe('Notification', () => {
         notice={failure.notice}
         details={failure.details}
         dismissible={false}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -173,6 +177,7 @@ describe('Notification', () => {
         notice={warning.notice}
         details={warning.details}
         dismissible={false}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -204,6 +209,7 @@ describe('Notification', () => {
         buttonText={findCourse.buttonText}
         buttonLink={findCourse.link}
         newWindow={true}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -234,6 +240,7 @@ describe('Notification', () => {
         notice={information.notice}
         details={information.details}
         dismissible={true}
+        isRtl={false}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -242,7 +249,9 @@ describe('Notification', () => {
           <div>
             <FontAwesome icon="info-circle"/>
           </div>
-          <FontAwesome icon="times"/>
+          <div>
+            <FontAwesome icon="times"/>
+          </div>
           <div>
             <div>
               {information.notice}
