@@ -25,13 +25,16 @@ class ChangeLoginTypeDialog extends Component {
   };
 
   changeToWord = () => {
-    const {sectionId, editSectionLoginType, onLoginTypeChanged} = this.props;
-    editSectionLoginType(sectionId, SectionLoginType.word).then(onLoginTypeChanged);
+    this.changeLoginType(SectionLoginType.word);
   };
 
   changeToPicture = () => {
+    this.changeLoginType(SectionLoginType.picture);
+  };
+
+  changeLoginType = newType => {
     const {sectionId, editSectionLoginType, onLoginTypeChanged} = this.props;
-    editSectionLoginType(sectionId, SectionLoginType.picture).then(onLoginTypeChanged);
+    editSectionLoginType(sectionId, newType).then(onLoginTypeChanged);
   };
 
   renderOptions() {
