@@ -6,6 +6,7 @@ import React from 'react';
 
 const PendingButton = React.createClass({
   propTypes: {
+    id: React.PropTypes.string,
     isPending: React.PropTypes.bool.isRequired,
     onClick: React.PropTypes.func.isRequired,
     pendingStyle: React.PropTypes.any,
@@ -20,6 +21,7 @@ const PendingButton = React.createClass({
       this.props.style;
     return (
       <button
+        id={this.props.id}
         style={style}
         onClick={!this.props.isPending && this.props.onClick}
       >

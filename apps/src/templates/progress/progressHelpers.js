@@ -1,5 +1,6 @@
 import { ViewType, fullyLockedStageMapping } from '@cdo/apps/code-studio/stageLockRedux';
 import { isHiddenForSection } from '@cdo/apps/code-studio/hiddenStageRedux';
+import { LevelStatus } from '@cdo/apps/util/sharedConstants';
 
 /**
  * This is conceptually similar to being a selector, except that it operates on
@@ -42,6 +43,22 @@ export function lessonIsLockedForAllStudents(lessonId, state) {
   const currentSection = state.stageLock.stagesBySectionId[currentSectionId];
   const fullyLockedStages = fullyLockedStageMapping(currentSection);
   return !!fullyLockedStages[lessonId];
+}
+
+/**
+ * @param {level[]} levels - A set of levels for a given stage
+ * @returns {boolean} True if we should consider the stage to be locked for the
+ *   current user.
+ */
+export function stageLocked(levels) {
+  // For lockable stages, there is a requirement that they have exactly one LevelGroup,
+  // and that it be the last level in the stage. Because LevelGroup's can have
+  // multiple "pages", and single LevelGroup might appear as multiple levels/bubbles
+  // on the client. However, it is the case that each page in the LG should have
+  // an identical locked/unlocked state.
+  // Given this, we should be able to look at the last level in our collection
+  // to determine whether the LG (and thus the stage) should be considered locked.
+  return levels[levels.length - 1].status === LevelStatus.locked;
 }
 
 /**
