@@ -5,7 +5,7 @@ import experiments from '@cdo/apps/util/experiments';
 import color from "../../../util/color";
 import StageExtrasProgressBubble from '@cdo/apps/templates/progress/StageExtrasProgressBubble';
 import { levelsForLessonId, stageExtrasUrl } from '@cdo/apps/code-studio/progressRedux';
-import NewProgressBubble from '@cdo/apps/templates/progress/NewProgressBubble';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import { levelType } from '@cdo/apps/templates/progress/progressTypes';
 
 const styles = {
@@ -53,7 +53,7 @@ const StageProgress = React.createClass({
               ...(level.isUnplugged && level.isCurrentLevel && styles.pillContainer)
             }}
           >
-            <NewProgressBubble
+            <ProgressBubble
               level={level}
               disabled={false}
               smallBubble={!level.isCurrentLevel}
