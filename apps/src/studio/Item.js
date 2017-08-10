@@ -77,7 +77,6 @@ export default class Item extends Collidable {
    * Returns the frame of the spritesheet for the current walking direction.
    */
   getDirectionFrame() {
-
     // Every other frame, if we aren't yet rendering in the correct direction,
     // assign a new displayDir from state table; only one turn at a time.
 
@@ -443,13 +442,17 @@ export default class Item extends Collidable {
     this.y = next.y;
   }
 
+  updateAnimationFrameDuration_() {
+    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+  }
+
   /**
    * Sets the speed and changes the animation frame duration to match.
    * @param {number} speed Number of pixels to move per tick
    */
   setSpeed(speed) {
     this.speed = speed;
-    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+    this.updateAnimationFrameDuration_();
   }
 
   /**
@@ -459,7 +462,7 @@ export default class Item extends Collidable {
   setDirection(direction) {
     this.dir = direction;
     // Update this because animation speed may change as we alter direction:
-    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+    this.updateAnimationFrameDuration_();
   }
 
   /**
