@@ -1,5 +1,6 @@
 var webpackConfig = require('./webpack').karmaConfig;
 var envConstants = require('./envConstants');
+var tty = require('tty');
 
 var PORT = 9876;
 
@@ -87,7 +88,7 @@ module.exports = function (config) {
 
 
     // enable / disable colors in the output (reporters and logs)
-    colors: true,
+    colors: tty.isatty(process.stdout.fd),
 
 
     // level of logging
