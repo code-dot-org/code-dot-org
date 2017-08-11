@@ -755,6 +755,15 @@ class Script < ActiveRecord::Base
     end
   end
 
+  # @param types [Array<string>]
+  # @param links [Array<string>]
+  def update_teacher_resources(types, links)
+    return if types.nil? || links.nil? || types.length != links.length
+    # Only take those pairs in which we have both a type and a link
+    self.teacher_resources = types.zip(links).select {|type, link| type.present? && link.present?}
+    save!
+  end
+
   def self.rake
     # cf. http://stackoverflow.com/a/9943895
     require 'rake'

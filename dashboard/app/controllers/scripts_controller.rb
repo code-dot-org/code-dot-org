@@ -60,6 +60,7 @@ class ScriptsController < ApplicationController
   def update
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
+      @script.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
       redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
     else
       render action: 'edit'
