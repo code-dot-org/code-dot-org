@@ -619,14 +619,11 @@ var projects = module.exports = {
   /**
    * Saves the project to the Channels API. Calls `callback` on success if a
    * callback function was provided.
-   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
-   *   call to `sourceHandler.getLevelSource`.
    * @param {function} callback Function to be called after saving.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
    */
-  save(...args) {
-    let [sourceAndHtml, callback, forceNewVersion, preparingRemix] = args;
+  save(callback, forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -634,22 +631,31 @@ var projects = module.exports = {
 
     $('.project_updated_at').text(msg.saving());
 
-    if (typeof args[0] === 'function' || !sourceAndHtml) {
-      // If no save data is provided, shift the arguments and ask for the
-      // latest save data ourselves.
-      [callback, forceNewVersion, preparingRemix] = args;
+    let completeAsyncSave = () =>
+      this.getUpdatedSourceAndHtml_(sourceAndHtml =>
+        this.saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion));
 
-      let completeAsyncSave = () =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.save(sourceAndHtml, callback, forceNewVersion));
+    if (preparingRemix) {
+      this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+    } else {
+      completeAsyncSave();
+    }
+  },
 
-      if (preparingRemix) {
-        this.sourceHandler.prepareForRemix().then(completeAsyncSave);
-      } else {
-        completeAsyncSave();
-      }
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {object} sourceAndHtml Project source code to save.
+   * @param {function} callback Function to be called after saving.
+   * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @private
+   */
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
+    if (current && current.isOwner === false) {
       return;
     }
+
+    $('.project_updated_at').text(msg.saving());
 
     if (forceNewVersion) {
       currentSourceVersionId = null;
@@ -705,7 +711,7 @@ var projects = module.exports = {
   toggleMakerEnabled() {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.save(
+        this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
@@ -795,7 +801,7 @@ var projects = module.exports = {
           return;
         }
 
-        this.save(newSources, () => {
+        this.saveSourceAndHtml_(newSources, () => {
           hasProjectChanged = false;
           callCallback();
         });
