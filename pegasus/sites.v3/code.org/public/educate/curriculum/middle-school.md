@@ -3,6 +3,7 @@ title: CS Curriculum for grades 6-8
 video_player: true
 theme: responsive
 ---
+<div style="clear:both; height: 100px;">&nbsp;</div>
 
 [solid-block-header]
 
@@ -10,7 +11,7 @@ Middle School
 
 [/solid-block-header]
 
-Our middle school curriculum focuses on a broad introduction to computer science topics. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
+Our middle school curriculum focuses on a broad introduction to computer science topics. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values).
 
 <br>
 <hr>
@@ -85,7 +86,7 @@ Code.org has partnered with the award-winning [Project GUTS](http://www.projectg
 
 # For Algebra Classrooms
 
-Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design. 
+Code.org has partnered with [Bootstrap](http://www.bootstrapworld.org) to adapt their algebra aligned curriculum to a block based course which teaches algebraic and geometric concepts through computer programming. The lessons focus on concepts like order of operations, the Cartesian plane, function composition and definition, and solving word problems - all within the context of video game design.
 
 [<button>Learn more about curriculum</button>](/educate/algebra)
 
@@ -118,4 +119,3 @@ Recommended courses from 3rd parties
 
 <br>
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1162176811&single=true"><button>See full details and comparison</button></a>
-

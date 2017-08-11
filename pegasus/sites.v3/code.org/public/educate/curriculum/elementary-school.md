@@ -7,6 +7,8 @@ style_min: true
 
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
+<div style="clear:both; height: 100px;">&nbsp;</div>
+
 [solid-block-header]
 
 Elementary School
@@ -39,11 +41,11 @@ If you like teaching CS Fundamentals, invite other teachers by [sharing this han
 
 <div class="col-60" style="float: left; margin-top: 15px; padding-right: 20px;">
 
-No worries! Most of our teachers have never taught computer science before. 
+No worries! Most of our teachers have never taught computer science before.
 
 Try one of our courses yourself to learn ahead of your students. Sign up as a teacher to see the lesson plans, join the teacher forums, and get access to all the resources you need.
 
-We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities. 
+We also offer high-quality, 1-day workshops at no cost to you or your school. Join other teachers in your area for a hands-on intro to computer science, pedagogy, teacher dashboard, and strategies for teaching “unplugged” classroom activities.
 
 <br>
 <a href="/professional-development-workshops"><button>Find a workshop</button></a>
@@ -190,4 +192,3 @@ Recommended courses from 3rd parties
 | [Tynker](https://www.tynker.com/school/lesson-plan) | Free tools, tutorials, and a 6-hr introductory lesson plan. 200+ lessons with assessments: $399/class, $2,000/school | 2-day PD, $2000/day + travel |
 <br />
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=1552205876&single=true"><button>See full details and comparison</button></a>
-

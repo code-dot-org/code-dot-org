@@ -19,6 +19,15 @@
 
   require 'cdo/hamburger'
 
+  banner_pages = [
+    '/educate/curriculum/elementary-school',
+    '/educate/curriculum/middle-school',
+    '/educate/curriculum/high-school',
+    '/student/elementary',
+    '/student/middle-high',
+    '/student/university'
+  ]
+
   # A note on the use of language_dir_class below:
   #
   # Ideally, Pegasus would have <head dir="rtl"> on all pages as the dashboard
@@ -56,5 +65,9 @@
       #loc.desktop-feature
         -if banner = @header['banner']
           =view banner
+
+      - if banner_pages.include?(request.path_info)
+        #header_banner
+          =view :header_banner
 
 #clear{:style=>'clear:both'}
