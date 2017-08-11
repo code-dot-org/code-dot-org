@@ -46,10 +46,10 @@
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null,
     "markdown_instructions": "Here's a game for you to play! To win, get the penguin to run into the octopus. Use your arrow keys to move the penguin around.\r\n\r\nOnce you are done, you will learn how to make this game!",
     "disable_procedure_autopopulate": "false",
-    "instructions": "Here's a game for you to play! To win, get the penguin to run into the octopus. Use your arrow keys to move the penguin around.\r\n\r\nOnce you are done, you will learn how to make this game!"
+    "instructions": "Here's a game for you to play! To win, get the penguin to run into the octopus. Use your arrow keys to move the penguin around.\r\n\r\nOnce you are done, you will learn how to make this game!",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

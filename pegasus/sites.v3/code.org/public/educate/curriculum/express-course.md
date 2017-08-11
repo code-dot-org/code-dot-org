@@ -37,7 +37,9 @@ We also offer [free, online, self-paced professional development for teachers.](
 
 # <strong>Looking for a translated course?</strong>
 
-We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using [Computer Science Fundamentals Accelerated](https://studio.code.org/s/20-hour). This shorter version of the Express course has already been translated into 25+ languages.
+We are working on translating the Computer Science Fundamentals Express course to languages beyond English. In the meantime, we recommend using Computer Science Fundamentals Accelerated. This shorter version of the Express course has already been translated into 25+ languages.
+
+<a href="https://studio.code.org/s/20-hour"><button>View Accelerated</button></a>
 
 # <strong>Examples of student creations</strong>
 
