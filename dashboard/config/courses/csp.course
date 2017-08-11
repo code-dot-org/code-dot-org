@@ -10,5 +10,11 @@
     "csppostap"
   ],
   "properties": {
+    "teacher_resources": [
+      [
+        "curriculum",
+        "https://curriculum.code.org/csp/"
+      ]
+    ]
   }
 }
