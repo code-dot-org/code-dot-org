@@ -5,7 +5,8 @@ import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var GameController = require('../designer/game/GameController');
+import GameController from '../designer/game/GameController';
+import EventType from '../designer/game/Event/EventType';
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
@@ -602,6 +603,7 @@ Craft.executeUserCode = function () {
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
+
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
   let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
@@ -624,7 +626,7 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     shear: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'Player');
+      appCodeOrgAPI.use(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     tillSoil: function (blockID) {
       appCodeOrgAPI.tillSoil(studioApp().highlight.bind(studioApp(), blockID));
