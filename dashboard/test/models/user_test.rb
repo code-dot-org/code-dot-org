@@ -1685,6 +1685,13 @@ class UserTest < ActiveSupport::TestCase
     admin_user.save
   end
 
+  test 'grant admin permission does not log in test environment' do
+    ChatClient.expects(:message).never
+    teacher = create :teacher
+    teacher.admin = true
+    teacher.save
+  end
+
   test 'assign_course_as_facilitator assigns course to facilitator' do
     facilitator = create :facilitator
     assert_creates Pd::CourseFacilitator do
