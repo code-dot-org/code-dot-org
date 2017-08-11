@@ -67,7 +67,7 @@ export default storybook => {
           <Provider store={store}>
             <ShareDialog
               isOpen={true}
-              isSignedIn={false}
+              canPublish={false}
               isPublished={false}
               isUnpublishPending={false}
               onClose={storybook.action('close')}
@@ -258,7 +258,7 @@ export default storybook => {
             <Provider store={store}>
               <ShareDialog
                 isOpen={true}
-                isSignedIn={true}
+                canPublish={true}
                 isPublished={false}
                 isUnpublishPending={false}
                 onClose={storybook.action('close')}
