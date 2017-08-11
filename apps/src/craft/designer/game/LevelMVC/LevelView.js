@@ -1050,7 +1050,8 @@ export default class LevelView {
     }, 200, Phaser.Easing.Linear.None);
 
     tween.onComplete.add(() => {
-      if (this.player.position[0] === playerPosition[0] && this.player.position[1] === playerPosition[1]) {
+      const caughtUpToPlayer = this.player.position[0] === playerPosition[0] && this.player.position[1] === playerPosition[1];
+      if (sprite.alive && caughtUpToPlayer) {
         this.audioPlayer.play("collectedBlock");
         this.player.inventory[blockType] =
           (this.player.inventory[blockType] || 0) + 1;
