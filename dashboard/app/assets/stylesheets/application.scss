@@ -403,6 +403,8 @@ img.video_thumbnail {
 
   .user_menu {
     margin-top: 6px;
+    height: 38px;
+    user-select: none;
 
     .user_name {
       max-width: 120px;
@@ -413,10 +415,28 @@ img.video_thumbnail {
       white-space: nowrap;
     }
 
-    .user_menu_glyph {
-      display: inline-block;
-      float: left;
-      padding-left: 5px;
+    .user_menu_arrow_down,
+    .user_menu_arrow_up {
+      font-size: 30px;
+    }
+
+    .user_options {
+      position: absolute;
+      top: 55px;
+      right: 55px;
+    }
+
+    .user_menu_arrow_down,
+    .user_menu_arrow_up {
+      font-size: 25px;
+    }
+
+    .user_menu_arrow_up {
+      margin-top: -3px;
+    }
+
+    .user_menu_arrow_down {
+      margin-top: -2px;
     }
   }
 
@@ -431,12 +451,6 @@ img.video_thumbnail {
   #hamburger {
     padding-top: 4px;
     padding-left: 20px;
-  }
-
-  .user_menu {
-    .user_options {
-      top: 37px;
-    }
   }
 
   #signin_button .header_button {
@@ -982,7 +996,6 @@ $default-modal-width: 640px;
 
 .header_right {
   position: absolute;
-  float: left;
   right: 16px;
 }
 
