@@ -4,7 +4,9 @@ import StageDescriptions from './StageDescriptions';
 import LegendSelector from './LegendSelector';
 import $ from 'jquery';
 import ResourcesEditor from '@cdo/apps/templates/courseOverview/ResourcesEditor';
-import ResourceType, { resourceShape } from '@cdo/apps/templates/courseOverview/resourceType';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import Button from '@cdo/apps/templates/Button';
+import ResourceType, { resourceShape, stringForType } from '@cdo/apps/templates/courseOverview/resourceType';
 
 const styles = {
   input: {
@@ -231,7 +233,16 @@ const ScriptEditor = React.createClass({
             inputStyle={styles.input}
             resources={this.props.teacherResources}
             maxResources={Object.keys(ResourceType).length}
-            isCourse={false}
+            renderPreview={resources => (
+              <DropdownButton
+                text="Teacher resources"
+                color={Button.ButtonColor.blue}
+              >
+              {resources.map(({type, link}, index) =>
+                <a key={index} href={link}>{stringForType[type]}</a>
+              )}
+              </DropdownButton>
+            )}
           />
         </div>
         <h2>Stages and Levels</h2>
