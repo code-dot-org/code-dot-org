@@ -74,6 +74,11 @@ class Script < ActiveRecord::Base
     }
 
   include SerializedProperties
+  include SerializedProperties
+
+  serialized_attrs %w(
+    teacher_resources
+  )
 
   after_save :generate_plc_objects
 
@@ -120,6 +125,7 @@ class Script < ActiveRecord::Base
     project_widget_visible
     project_widget_types
     exclude_csf_column_in_legend
+    teacher_resources
   )
 
   def self.twenty_hour_script
@@ -846,7 +852,8 @@ class Script < ActiveRecord::Base
       student_detail_progress_view: student_detail_progress_view?,
       project_widget_visible: project_widget_visible?,
       project_widget_types: project_widget_types,
-      excludeCsfColumnInLegend: exclude_csf_column_in_legend?
+      excludeCsfColumnInLegend: exclude_csf_column_in_legend?,
+      teacher_resources: teacher_resources
     }
 
     summary[:stages] = stages.map(&:summarize) if include_stages

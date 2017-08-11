@@ -94,7 +94,12 @@ export default class CourseEditor extends Component {
             Select up to three Teacher Resources buttons you'd like to have show up on
             the top of the course overview page
           </div>
-          <ResourcesEditor inputStyle={styles.input} resources={teacherResources}/>
+          <ResourcesEditor
+            inputStyle={styles.input}
+            resources={teacherResources}
+            maxResources={3}
+            isCourse={true}
+          />
         </label>
       </div>
     );
