@@ -12,10 +12,6 @@ import CardContainer from './CardContainer';
 import DialogFooter from './DialogFooter';
 import LoginTypeCard from './LoginTypeCard';
 import Button from "../Button";
-import {
-  cancelEditingSection,
-  editSectionProperties,
-} from './teacherSectionsRedux';
 import {OAuthSectionTypes} from "./shapes";
 
 /**
@@ -25,11 +21,11 @@ import {OAuthSectionTypes} from "./shapes";
 class LoginTypePicker extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
-    handleImportOpen: PropTypes.func.isRequired,
-    // Provided by Redux
-    provider: PropTypes.string,
+    handleImportOpen: PropTypes.func,
     setLoginType: PropTypes.func.isRequired,
     handleCancel: PropTypes.func.isRequired,
+    // Provided by Redux
+    provider: PropTypes.string,
   };
 
   openImportDialog = () => {
@@ -38,11 +34,18 @@ class LoginTypePicker extends Component {
   };
 
   render() {
-    const {title, provider, setLoginType, handleCancel} = this.props;
+    const {
+      title,
+      provider,
+      setLoginType,
+      handleImportOpen,
+      handleCancel
+    } = this.props;
     const withGoogle = provider === OAuthSectionTypes.google_classroom;
     const withMicrosoft = provider === OAuthSectionTypes.microsoft_classroom;
     const withClever = provider === OAuthSectionTypes.clever;
-    const anyImportOptions = withGoogle || withMicrosoft || withClever;
+    const anyImportOptions = withGoogle || withMicrosoft || withClever &&
+      (typeof handleImportOpen === 'function');
 
     return (
       <div>
@@ -92,9 +95,6 @@ class LoginTypePicker extends Component {
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
   provider: state.teacherSections.provider,
-}), dispatch => ({
-  setLoginType: loginType => dispatch(editSectionProperties({loginType})),
-  handleCancel: () => dispatch(cancelEditingSection()),
 }))(LoginTypePicker);
 
 const PictureLoginCard = (props) => (

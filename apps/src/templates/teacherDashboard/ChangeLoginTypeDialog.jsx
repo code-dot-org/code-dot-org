@@ -36,8 +36,8 @@ class ChangeLoginTypeDialog extends Component {
       //         word, email, oauth, Clever, it's all fair game.
       return (
         <LoginTypePicker
-          sectionName="Section name"
-          handleLoginChoice={() => {}}
+          title="Change login type"
+          setLoginType={this.changeLoginType}
           handleCancel={handleClose}
         />
       );
@@ -88,7 +88,7 @@ class ChangeLoginTypeDialog extends Component {
   }
 
   render() {
-    const {section} = this.props;
+    const {section, isOpen, handleClose, hideBackdrop, style} = this.props;
     if (!section) {
       // It's possible to get here before our async section load is done.
       return null;
@@ -99,11 +99,11 @@ class ChangeLoginTypeDialog extends Component {
       <BaseDialog
         useUpdatedStyles
         fixedWidth={useWideDialog ? 1010 : undefined}
-        isOpen={this.props.isOpen}
-        handleClose={this.props.handleClose}
+        isOpen={isOpen}
+        handleClose={handleClose}
         assetUrl={()=>''}
-        hideBackdrop={this.props.hideBackdrop}
-        style={this.props.style}
+        hideBackdrop={hideBackdrop}
+        style={style}
       >
         <PadAndCenter>
           {this.renderOptions()}
