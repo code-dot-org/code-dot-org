@@ -5,7 +5,7 @@ import trackEvent from '../../util/trackEvent';
 var studioApp = require('../../StudioApp').singleton;
 var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var GameController = require('./game/GameController');
+var GameController = require('../designer/game/GameController');
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
@@ -251,7 +251,7 @@ Craft.init = function (config) {
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
           containerId: 'phaser-game',
-          assetRoot: Craft.skin.assetUrl(''),
+          assetRoot: Craft.skin.assetUrl('designer/'),
           audioPlayer: {
             register: studioApp().registerAudio.bind(studioApp()),
             play: studioApp().playAudio.bind(studioApp())
@@ -450,6 +450,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     groundDecorationPlane: levelConfig.groundDecorationPlane,
     actionPlane: levelConfig.actionPlane,
     fluffPlane: fluffPlane,
+    entities: levelConfig.entities,
     playerStartPosition: levelConfig.playerStartPosition,
     playerStartDirection: levelConfig.playerStartDirection,
     playerName: Craft.getCurrentCharacter(),
@@ -470,16 +471,7 @@ Craft.minAssetsForLevelWithCharacter = function (levelNumber) {
 };
 
 Craft.minAssetsForLevelNumber = function (levelNumber) {
-  switch (levelNumber) {
-    case 1:
-      return ['levelOneAssets'];
-    case 2:
-      return ['levelTwoAssets'];
-    case 3:
-      return ['levelThreeAssets'];
-    default:
-      return ['allAssetsMinusPlayer'];
-  }
+  return ['allAssetsMinusPlayer'];
 };
 
 Craft.afterLoadAssetsForLevel = function (levelNumber) {
@@ -620,16 +612,16 @@ Craft.executeUserCode = function () {
   code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   CustomMarshalingInterpreter.evalWith(code, {
     moveForward: function (blockID) {
-      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.moveForward(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     turnLeft: function (blockID) {
-      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "left");
+      appCodeOrgAPI.turnLeft(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     turnRight: function (blockID) {
-      appCodeOrgAPI.turn(studioApp().highlight.bind(studioApp(), blockID), "right");
+      appCodeOrgAPI.turnRight(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     destroyBlock: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     shear: function (blockID) {
       appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
