@@ -1,14 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import Button from '@cdo/apps/templates/Button';
 import ResourceType, { stringForType, resourceShape } from './resourceType';
 
 const styles = {
   box: {
     marginTop: 10,
+    marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
   },
@@ -35,7 +33,7 @@ export default class ResourcesEditor extends Component {
     inputStyle: PropTypes.object.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
     maxResources: PropTypes.number.isRequired,
-    isCourse: PropTypes.bool.isRequired,
+    renderPreview: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -80,7 +78,7 @@ export default class ResourcesEditor extends Component {
   }
 
   render() {
-    const { resources, isCourse, errorString } = this.state;
+    const { resources, errorString } = this.state;
 
     // avoid showing multiple empty reosurces
     const lastNonEmpty = _.findLastIndex(resources, ({type, link}) => link && type);
@@ -101,24 +99,7 @@ export default class ResourcesEditor extends Component {
         <div style={styles.box}>
           <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
-          {isCourse &&
-            <CourseOverviewTopRow
-              sectionsInfo={[]}
-              id={-1}
-              title="Unused title"
-              resources={resources.filter(x => !!x.type)}
-            />
-          }
-          {!isCourse &&
-            <DropdownButton
-              text="Teacher resources"
-              color={Button.ButtonColor.blue}
-            >
-            {resources.filter(x => !!x.type).map(({type, link}, index) =>
-              <a key={index} href={link}>{stringForType[type]}</a>
-            )}
-            </DropdownButton>
-          }
+          {this.props.renderPreview(resources.filter(x => !!x.type))}
         </div>
       </div>
     );

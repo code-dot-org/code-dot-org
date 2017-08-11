@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import CourseScriptsEditor from './CourseScriptsEditor';
 import ResourcesEditor from './ResourcesEditor';
+import CourseOverviewTopRow from './CourseOverviewTopRow';
 import { resourceShape } from './resourceType';
 
 const styles = {
@@ -88,7 +89,7 @@ export default class CourseEditor extends Component {
             scriptNames={scriptNames}
           />
         </label>
-        <label>
+        <div>
           <h4>Teacher Resources</h4>
           <div>
             Select up to three Teacher Resources buttons you'd like to have show up on
@@ -98,9 +99,16 @@ export default class CourseEditor extends Component {
             inputStyle={styles.input}
             resources={teacherResources}
             maxResources={3}
-            isCourse={true}
+            renderPreview={resources => (
+              <CourseOverviewTopRow
+                sectionsInfo={[]}
+                id={-1}
+                title="Unused title"
+                resources={resources}
+              />
+            )}
           />
-        </label>
+        </div>
       </div>
     );
   }
