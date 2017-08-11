@@ -624,7 +624,7 @@ Craft.executeUserCode = function () {
       appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     shear: function (blockID) {
-      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID));
+      appCodeOrgAPI.destroyBlock(studioApp().highlight.bind(studioApp(), blockID), 'Player');
     },
     tillSoil: function (blockID) {
       appCodeOrgAPI.tillSoil(studioApp().highlight.bind(studioApp(), blockID));
@@ -654,19 +654,23 @@ Craft.executeUserCode = function () {
     },
     placeBlock: function (blockType, blockID) {
       appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-        blockType);
+        blockType,
+        'Player');
     },
     plantCrop: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-        "cropWheat");
+        "cropWheat",
+        'Player');
     },
     placeTorch: function (blockID) {
       appCodeOrgAPI.placeBlock(studioApp().highlight.bind(studioApp(), blockID),
-        "torch");
+        "torch",
+        'Player');
     },
     placeBlockAhead: function (blockType, blockID) {
       appCodeOrgAPI.placeInFront(studioApp().highlight.bind(studioApp(), blockID),
-        blockType);
+        blockType,
+        'Player');
     }
   }, {legacy: true});
   appCodeOrgAPI.startAttempt(function (success, levelModel) {
