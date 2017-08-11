@@ -30,7 +30,7 @@
   
   all_categories['middle_high'] = []
   all_categories['middle_high'] << {tag:"JavaScript", name: I18n.t(:carousel_heading_beyond_javascript)}
-  all_categories['middle_high'] << {tag:"Beginner", name: I18n.t(:carousel_heading_beyond_beginners)}
+  all_categories['middle_high'] << {tag:"BeginnerMid", name: I18n.t(:carousel_heading_beyond_beginners)}
   all_categories['middle_high'] << {tag:"Web", name: I18n.t(:carousel_heading_webpages)}
   all_categories['middle_high'] << {tag:"OtherLang", name: I18n.t(:carousel_heading_beyond_languages)}
   all_categories['middle_high'] << {tag:"MobTabMid", name: I18n.t(:carousel_heading_beyond_devices)}
@@ -38,8 +38,8 @@
   
   all_categories['university'] = []
   all_categories['university'] << {tag:"Univ", name: I18n.t(:carousel_heading_university)}
-  all_categories['university'] << {tag:"Web", name: I18n.t(:carousel_heading_webpages)}
-  all_categories['university'] << {tag:"JavaScript", name: I18n.t(:carousel_heading_beyond_javascript)}
+  all_categories['university'] << {tag:"WebUniv", name: I18n.t(:carousel_heading_webpages)}
+  all_categories['university'] << {tag:"JavaScriptUniv", name: I18n.t(:carousel_heading_beyond_javascript)}
   all_categories['university'] << {tag:"OtherLangUniv", name: I18n.t(:carousel_heading_beyond_languages)}
   all_categories['university'] << {tag:"RobotsUniv", name: I18n.t(:carousel_heading_robots)}
 
@@ -71,7 +71,11 @@
     - id = "collection-" + category[:tag]
     = view :learn_carousel, :heading=>category[:name], :tag=>category[:tag], :tutorials=>tutorials, :id=>id
 
-- if request.locale == "en-US"
+
+- if %w(beyond elementary middle_high university).include? variation
+  %br
+  = I18n.t(:third_party_submission, submission_url: "https://docs.google.com/document/d/1rWq7Bvr72bDjnT7tGXNPcJxizpNLbuEBmal-5vgTXag/pub")
+- elsif request.locale == "en-US"
   %br
   %br
   .footer-banner

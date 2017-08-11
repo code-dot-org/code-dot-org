@@ -245,12 +245,6 @@ function zeroPadLeft(string, desiredWidth) {
 }
 
 /**
- * Noop. Will be removed shortly. TODO
- */
-export function throwOnConsoleErrors() {
-}
-
-/**
  * Gets a stack trace for the current location. Phantomjs doesn't add the stack
  * property unless the exception is thrown, thus we need to throw/catch a generic error.
  */

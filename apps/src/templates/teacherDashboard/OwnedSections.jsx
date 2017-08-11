@@ -1,6 +1,6 @@
 /** @file Reusable widget to display and manage sections owned by the
  *        current user. */
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import SectionTable from './SectionTable';
@@ -32,11 +32,12 @@ const styles = {
   }
 };
 
-class OwnedSections extends Component {
+class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
     defaultCourseId: PropTypes.number,
     defaultScriptId: PropTypes.number,
+    queryStringOpen: PropTypes.string,
 
     // redux provided
     numSections: PropTypes.number.isRequired,
@@ -66,13 +67,20 @@ class OwnedSections extends Component {
   componentDidMount() {
     const {
       defaultCourseId,
-      defaultScriptId
+      defaultScriptId,
+      queryStringOpen,
     } = this.props;
 
     // If we have a default courseId and/or scriptId, we want to start with our
     // dialog open. Add a new section with this course/script as default
     if (defaultCourseId || defaultScriptId) {
       this.addSection();
+    }
+
+    if (experiments.isEnabled('importClassroom')) {
+      if (queryStringOpen === 'rosterDialog') {
+        this.handleImportOpen();
+      }
     }
   }
 
@@ -86,12 +94,18 @@ class OwnedSections extends Component {
   };
 
   handleImport = courseId => {
-    this.props.importClassroomStarted();
+    const {
+      importClassroomStarted,
+      asyncLoadSectionData,
+      beginEditingSection,
+    } = this.props;
 
+    importClassroomStarted();
     const url = urlByProvider[this.provider];
-    $.getJSON(url, { courseId }).then(() => {
+    $.getJSON(url, { courseId }).then(importedSection => {
       this.setState({rosterDialogOpen: false});
-      this.props.asyncLoadSectionData();
+      asyncLoadSectionData()
+        .then(() => beginEditingSection(importedSection.id));
     });
   };
 
