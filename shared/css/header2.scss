@@ -112,6 +112,8 @@
     background-color: transparent;
     border: 2px solid $white;
     margin-top: -4px;
+    height: 38px;
+    user-select: none;
 
     .user_name {
       font-family: 'Gotham 4r', sans-serif;
@@ -123,14 +125,23 @@
       float: left;
     }
 
-    .user_menu_glyph {
-      display: inline-block;
-      float: left;
-      padding-left: 5px;
+    .user_options {
+      position: absolute;
+      top: 55px;
+      right: 55px;
     }
 
-    .user_options {
-      top: 37px;
+    .user_menu_arrow_down,
+    .user_menu_arrow_up {
+      font-size: 25px;
+    }
+
+    .user_menu_arrow_up {
+      margin-top: -3px;
+    }
+
+    .user_menu_arrow_down {
+      margin-top: -2px;
     }
   }
 
