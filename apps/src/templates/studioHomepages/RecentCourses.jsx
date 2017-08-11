@@ -20,13 +20,13 @@ const styles = {
 const RecentCourses = React.createClass({
   propTypes: {
     courses: shapes.courses,
-    isTeacher: PropTypes.bool.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-    topCourse: shapes.topCourse
+    topCourse: shapes.topCourse,
+    isRtl: PropTypes.bool.isRequired,
+    isTeacher: PropTypes.bool.isRequired
   },
 
   render() {
-    const { courses, isTeacher, isRtl, topCourse } = this.props;
+    const { courses, topCourse, isTeacher, isRtl } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || topCourse;
