@@ -42,11 +42,11 @@ class QuickActionsCell extends Component {
 
   minimizeOnClickAnywhere = (event) => {
     // The first time we click anywhere, hide any open children
-    $(document.body).one('click', function (event) {
+    $(document.body).one('click', (event) => {
       this.setState({
         actionsOpen: false
       });
-    }.bind(this));
+    });
   };
 
   render() {
@@ -55,7 +55,7 @@ class QuickActionsCell extends Component {
       <div style={styles.cellContainer}>
         <div
           style={selectedStyle}
-          ref={(icon) => { this.icon = icon; }}
+          ref={icon => this.icon = icon}
           onClick={this.toggleActionBox}
         >
           <FontAwesome icon="angle-down" />
@@ -64,7 +64,7 @@ class QuickActionsCell extends Component {
           <ProjectActionBox
             isPublished={this.props.projectData.isPublished}
             style={styles.actionBox}
-            ref={(actionBox) => { this.actionBox = actionBox; }}
+            ref={actionBox => this.actionBox = actionBox}
           />
         }
       </div>
