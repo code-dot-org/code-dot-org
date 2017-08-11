@@ -105,6 +105,7 @@ function showHomepage() {
               }
             ]}
             courses={homepageData.courses}
+            topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             isRtl={isRtl}
             queryStringOpen={query['open']}
@@ -113,7 +114,7 @@ function showHomepage() {
         {!isTeacher && (
           <StudentHomepage
             courses={homepageData.courses}
-            studentTopCourse={homepageData.studentTopCourse}
+            topCourse={homepageData.topCourse}
             sections={homepageData.sections}
             canLeave={homepageData.canLeave}
             isRtl={isRtl}

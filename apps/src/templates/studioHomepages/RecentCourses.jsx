@@ -3,7 +3,7 @@ import ContentContainer from '../ContentContainer';
 import CourseCard from './CourseCard';
 import SetUpCourses from './SetUpCourses';
 import SeeMoreCourses from './SeeMoreCourses';
-import StudentTopCourse from './StudentTopCourse';
+import TopCourse from './TopCourse';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
@@ -22,14 +22,14 @@ const RecentCourses = React.createClass({
     courses: shapes.courses,
     isTeacher: PropTypes.bool.isRequired,
     isRtl: React.PropTypes.bool.isRequired,
-    studentTopCourse: shapes.studentTopCourse
+    topCourse: shapes.topCourse
   },
 
   render() {
-    const { courses, isTeacher, isRtl, studentTopCourse } = this.props;
+    const { courses, isTeacher, isRtl, topCourse } = this.props;
     const topFourCourses = courses.slice(0,4);
     const moreCourses = courses.slice(4);
-    const hasCourse = courses.length > 0 || studentTopCourse;
+    const hasCourse = courses.length > 0 || topCourse;
 
     return (
       <div>
@@ -37,13 +37,13 @@ const RecentCourses = React.createClass({
           heading={i18n.myCourses()}
           isRtl={isRtl}
         >
-          {!isTeacher && studentTopCourse && (
-            <StudentTopCourse
+          {topCourse && (
+            <TopCourse
               isRtl={isRtl}
-              assignableName={studentTopCourse.assignableName}
-              lessonName={studentTopCourse.lessonName}
-              linkToOverview={studentTopCourse.linkToOverview}
-              linkToLesson={studentTopCourse.linkToLesson}
+              assignableName={topCourse.assignableName}
+              lessonName={topCourse.lessonName}
+              linkToOverview={topCourse.linkToOverview}
+              linkToLesson={topCourse.linkToLesson}
             />
           )}
           {topFourCourses.length > 0 && (
