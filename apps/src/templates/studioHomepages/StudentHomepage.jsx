@@ -36,10 +36,9 @@ const StudentHomepage = React.createClass({
         />
         <RecentCourses
           courses={courses}
-          showAllCoursesLink={true}
-          isRtl={false}
-          isTeacher={false}
           studentTopCourse={studentTopCourse}
+          isTeacher={false}
+          isRtl={false}
         />
         <ProjectWidgetWithData/>
         <StudentSections
