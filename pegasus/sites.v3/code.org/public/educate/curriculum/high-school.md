@@ -1,8 +1,10 @@
 ---
 title: CS Curriculum for grades 9-12
 video_player: true
-theme: responsive 
+theme: responsive
 ---
+
+<div style="clear:both; height: 100px;">&nbsp;</div>
 
 [solid-block-header]
 
@@ -10,7 +12,7 @@ High School
 
 [/solid-block-header]
 
-For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9 and the second, Computer Science Principles, can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide suggestions for teaching AP Computer Science A and additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values). 
+For high schools, we offer two years of Computer Science courses for beginners. The first course, Computer Science Discoveries, is designed for grades 7-9 and the second, Computer Science Principles, can be implemented as an AP course or an introductory course. If you want to go even further with your students, the third party resources below provide suggestions for teaching AP Computer Science A and additional courses in programming, game design, and more. Our curriculum is available at [no cost](/commitment) for anyone, anywhere to teach. You can read more about our [curriculum values here](/educate/curriculum/values).
 
 <br>
 <hr>
@@ -127,4 +129,3 @@ Recommended courses from 3rd parties
 
 <br>
 <a target="_blank" href="https://docs.google.com/spreadsheets/d/1-lbIKCkcVWWTFhcmpZkw8AcGv0iPj-hEqvO0Eu0N1hU/pubhtml?gid=705822074&single=true"><button>See full details and comparison</button></a>
-

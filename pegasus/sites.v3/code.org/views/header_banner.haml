@@ -1,0 +1,15 @@
+:ruby
+  banner_titles = {
+    '/educate/curriculum/elementary-school' => 'Elementary School',
+    '/educate/curriculum/middle-school' => 'Middle School',
+    '/educate/curriculum/high-school' => 'High School',
+    '/student/elementary' => 'Grades K-5',
+    '/student/middle-high' => 'Grades 6-12',
+    '/student/university' => 'University +'
+  }
+
+-# Style for this header-banner should be consistent with the HeaderBanner React component used in dashboard
+
+#header-banner{style: 'height: 140px; background-image: url("/shared/images/banners/teacher-homepage-hero.jpg");'}
+  #banner-title{style: 'font-size: 32px; line-height: 40px; color: white; padding-top: 50px; padding-left: 50px;' }
+    = banner_titles[request.path_info]
