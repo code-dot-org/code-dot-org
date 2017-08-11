@@ -1236,3 +1236,7 @@ end
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
 end
+
+Then /^I scroll the save button into view$/ do
+  @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
+end
