@@ -96,6 +96,7 @@ def update_form(kind, secret, form)
   normalized_email = merged_info[:email_s].to_s.strip.downcase if merged_info.key?(:email_s)
 
   update_form = existing_form.dup
+  [:created_at, :created_ip, :secret].each {|key| update_form.delete key}
 
   update_form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
   update_form[:email] = normalized_email
