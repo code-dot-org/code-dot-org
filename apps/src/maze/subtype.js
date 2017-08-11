@@ -38,8 +38,17 @@ export default class Subtype {
     this.startDirection = config.level.startDirection;
   }
 
-  finished() {
-    return true;
+  /**
+   * Did the user successfully complete this level?
+   * @returns {Boolean} success
+   */
+  succeeded() {
+    if (this.finish) {
+      return (
+        this.maze_.pegmanX === this.finish.x &&
+        this.maze_.pegmanY === this.finish.y
+      );
+    }
   }
 
   /**
@@ -110,16 +119,51 @@ export default class Subtype {
     return false;
   }
 
+  /**
+   * Get any app-specific message, based on the termination value, or return
+   * null if none applies.
+   * @param {Number} terminationValue - from Maze.executionInfo
+   * @returns {(String|null)} message
+   */
   getMessage(terminationValue) {
-    // noop; overridable
+    return null;
   }
 
+  /**
+   * Get the test results based on the termination value.  If there is no
+   * app-specific failure, this returns StudioApp.getTestResults().
+   * @param {Number} terminationValue - from Maze.executionInfo
+   * @returns {Number} testResult
+   */
   getTestResults(terminationValue) {
+    return this.studioApp_.getTestResults(false);
+  }
+
+  /**
+   * Set the termination results to something app-specific, so that getMessage
+   * and getTestResults can return custom values based on the specifc way in
+   * which we terminated
+   * @modifies Maze.executionInfo.terminationValue
+   */
+  terminateWithAppSpecificValue() {
     // noop; overridable
   }
 
+  /**
+   * Called after user's code has finished executing. Gives us a chance to
+   * terminate with app-specific values, such as unchecked cloud/purple flowers.
+   * @see terminateWithAppSpecificValue
+   */
   onExecutionFinish() {
-    // noop; overridable
+    const executionInfo = this.maze_.executionInfo;
+    if (executionInfo.isTerminated()) {
+      return;
+    }
+    if (this.succeeded()) {
+      return;
+    }
+
+    this.terminateWithAppSpecificValue();
   }
 
   isFarmer() {
@@ -150,8 +194,10 @@ export default class Subtype {
 
   // Returns true if the tile at x,y is either a wall or out of bounds
   isWallOrOutOfBounds_(col, row) {
-    return this.maze_.map.getTile(row, col) === SquareType.WALL ||
-        this.maze_.map.getTile(row, col) === undefined;
+    return (
+      this.maze_.map.getTile(row, col) === SquareType.WALL ||
+      this.maze_.map.getTile(row, col) === undefined
+    );
   }
 
   getEmptyTile(x, y, adjacentToPath) {
@@ -211,7 +257,14 @@ export default class Subtype {
    * Draw the given tile at row, col
    */
   drawTile(svg, tileSheetLocation, row, col, tileId) {
-    this.drawer.drawTile(svg, tileSheetLocation, row, col, tileId, this.skin_.tiles);
+    this.drawer.drawTile(
+      svg,
+      tileSheetLocation,
+      row,
+      col,
+      tileId,
+      this.skin_.tiles,
+    );
   }
 
   /**
@@ -235,12 +288,12 @@ export default class Subtype {
       for (let x = 0; x < this.maze_.map.COLS; x++) {
         let cell = this.maze_.map.getTile(y, x);
         if (cell === SquareType.START) {
-          this.start = {x: x, y: y};
+          this.start = { x, y };
         } else if (cell === SquareType.FINISH) {
-          this.finish = {x: x, y: y};
+          this.finish = { x, y };
         } else if (cell === SquareType.STARTANDFINISH) {
-          this.start = {x: x, y: y};
-          this.finish = {x: x, y: y};
+          this.start = { x, y };
+          this.finish = { x, y };
         }
       }
     }

@@ -56,25 +56,25 @@ def insert_or_upsert_form(kind, data, options={})
 
   # For HOC signups, a duplicate (matching email and name) entry is assumed to be an update rather
   # than an insert.
-  num_rows_updated = 0
-  if (kind =~ /HocSignup/) == 0
+  if kind.start_with? 'HocSignup'
+    row_for_update = row.dup
+    [:created_at, :created_ip, :secret].each {|key| row_for_update.delete key}
     num_rows_updated = DB[:forms].
-      where(email: row[:email], kind: kind, name: row[:name]).
-      update(row)
+      where(kind: kind, email: row_for_update[:email], name: row_for_update[:name]).
+      update(row_for_update)
+    return row_for_update if num_rows_updated > 0
   end
-  # If we didn't perform an update, insert the row into the forms table and
+  # We didn't perform an update, so insert the row into the forms table and
   # create a corresponding form_geos row.
-  if num_rows_updated == 0
-    row[:id] = DB[:forms].insert(row)
+  row[:id] = DB[:forms].insert(row)
 
-    form_geos_row = {
-      form_id: row[:id],
-      created_at: timestamp,
-      updated_at: timestamp,
-      ip_address: request.ip
-    }
-    DB[:form_geos].insert(form_geos_row)
-  end
+  form_geos_row = {
+    form_id: row[:id],
+    created_at: timestamp,
+    updated_at: timestamp,
+    ip_address: request.ip
+  }
+  DB[:form_geos].insert(form_geos_row)
 
   row
 end

@@ -21,7 +21,7 @@ describe('StageProgress', () => {
       <StageProgress {...defaultProps}/>
     );
     assert.equal(wrapper.find('Connect(StatusProgressDot)').length, 0);
-    assert.equal(wrapper.find('NewProgressBubble').length, 1);
+    assert.equal(wrapper.find('ProgressBubble').length, 1);
   });
 
   describe('stage extras experiment', () => {

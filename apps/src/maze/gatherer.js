@@ -23,7 +23,7 @@ export default class Gatherer extends Subtype {
    * @return {boolean}
    * @override
    */
-  finished() {
+  succeeded() {
     return this.collectedEverything();
   }
 
