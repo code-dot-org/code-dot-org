@@ -538,7 +538,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
 FeedbackUtils.saveThumbnail = function (image) {
   return dataURIToBlob(image)
     .then(project.saveThumbnail)
-    .then(() => new Promise(resolve => project.save(resolve)));
+    // Don't pass any arguments to project.save().
+    .then(() => project.save());
 };
 
 FeedbackUtils.getAchievements = function (
