@@ -1,7 +1,8 @@
 import {
   HIDDEN_VALUE,
   RANDOM_VALUE,
-  SpriteSpeed
+  SpriteSpeed,
+  BEHAVIOR_WATCH_ACTOR
 } from '../constants';
 import msg from '../locale';
 
@@ -649,7 +650,17 @@ export function loadStarWarsGrid(skin) {
   };
 
   skin.specialItemProperties = {
-    'hazard': { frames: 13, animationFrameDuration: 6, width: 100, height: 100, scale: 1.3, renderOffset: { x: 0, y: -25}, activity: 'watchActor', speed: SpriteSpeed.VERY_SLOW, isHazard: true }
+    hazard: {
+      frames: 13,
+      animationFrameDuration: 6,
+      width: 100,
+      height: 100,
+      scale: 1.3,
+      renderOffset: { x: 0, y: -25 },
+      activity: BEHAVIOR_WATCH_ACTOR,
+      speed: SpriteSpeed.VERY_SLOW,
+      isHazard: true,
+    },
   };
 
   // Spritesheet for animated goal.
