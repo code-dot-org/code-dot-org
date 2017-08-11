@@ -1,6 +1,11 @@
-import {expect} from '../../util/configuredChai';
-import Studio from '@cdo/apps/studio/studio';
+import sinon from 'sinon';
+import _ from 'lodash';
 
+import { expect } from '../../util/configuredChai';
+
+import Studio from '@cdo/apps/studio/studio';
+import Item from '@cdo/apps/studio/Item';
+import Sprite from '@cdo/apps/studio/Sprite';
 import {
   Direction,
   BEHAVIOR_CHASE,
@@ -11,17 +16,64 @@ import {
   BEHAVIOR_GRID_ALIGNED
 } from '@cdo/apps/studio/constants';
 
-import Item from '@cdo/apps/studio/Item';
-
 describe('item', () => {
   before(() => {
     Studio.trackedBehavior = {};
     Studio.trackedBehavior.createdItems = {};
+    Studio.SQUARE_SIZE = 50;
   });
 
   let item;
 
   describe('update', () => {
+    describe('if destination is not yet set', () => {
+      before(() => {
+        // the destination-setting logic uses _.shuffle to semi-randomize the
+        // set of possible destinations. Stub that with something deterministic
+        // to make testing easier
+        sinon.stub(_, 'shuffle').callsFake(ar => ar);
+      });
+
+      let targetSprite;
+      beforeEach(() => {
+        item = new Item({});
+        item.x = 100;
+        item.y = 100;
+
+        item.hasWall = sinon.stub().returns(false);
+
+        targetSprite = new Sprite({});
+        targetSprite.x = 200;
+        targetSprite.y = 200;
+        Studio.sprite = [targetSprite];
+        item.targetSpriteIndex = 0;
+      });
+
+      it('sets an arbitrary direction on wander', () => {
+        item.activity = BEHAVIOR_WANDER;
+        item.update();
+        expect(item.dir).to.equal(Direction.NORTH);
+        expect(item.destGridX).to.equal(2);
+        expect(item.destGridY).to.equal(1);
+      });
+
+      it('moves toward the target on chase', () => {
+        item.activity = BEHAVIOR_CHASE;
+        item.update();
+        expect(item.dir).to.equal(Direction.SOUTH);
+        expect(item.destGridX).to.equal(2);
+        expect(item.destGridY).to.equal(3);
+      });
+
+      it('runs from the target on flee', () => {
+        item.activity = BEHAVIOR_FLEE;
+        item.update();
+        expect(item.dir).to.equal(Direction.NORTH);
+        expect(item.destGridX).to.equal(2);
+        expect(item.destGridY).to.equal(1);
+      });
+    });
+
     describe('if destination is set', () => {
       beforeEach(() => {
         item = new Item({});
