@@ -329,7 +329,7 @@ const ShareDialog = React.createClass({
                 appType={this.props.appType}
                 styles={{label:{marginTop: 15, marginBottom: 0}}}
               />}
-              {isSignedIn && !isPublished && !hasThumbnail &&
+              {canPublish && !isPublished && !hasThumbnail &&
                 <div style={{clear: 'both', marginTop: 10}}>
                   <span style={{fontSize: 12}}>{i18n.thumbnailWarning()}</span>
                 </div>
