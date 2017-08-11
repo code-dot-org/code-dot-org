@@ -303,6 +303,47 @@ export function throwOnConsoleErrorsEverywhere() {
 }
 
 /**
+ * Same as throwOnConsoleErrorsEverywhere, but for warnings
+ */
+let throwingOnWarnings = false;
+export function throwOnConsoleWarningsEverywhere() {
+  let firstWarning = null;
+  throwingOnWarnings = true;
+  beforeEach(function () {
+    // Stash test title so that we can include it in any errors
+    let testTitle;
+    if (this.currentTest) {
+      testTitle = this.currentTest.title;
+    }
+
+    sinon.stub(console, 'warn').callsFake(msg => {
+      const prefix = throwingOnWarnings ? '' : '[ignoring]';
+      console.warn.wrappedMethod(prefix, msg);
+
+      // Store warning so we can throw in after. This will ensure we hit a failure
+      // even if message was originally thrown in async code
+      if (throwingOnWarnings && !firstWarning) {
+        // It seems that format(msg) might be causing calls to console.warn itself
+        // Unstub so that those dont go through our stubbed console.warn
+        console.warn.restore();
+
+        firstWarning = new Error(`Call to console.warn from "${testTitle}": ${format(msg)}\n${getStack()}`);
+      }
+    });
+  });
+
+  afterEach(function () {
+    if (console.warn.restore) {
+      console.warn.restore();
+      if (firstWarning) {
+        throw new Error(firstWarning);
+      }
+      firstWarning = null;
+    }
+  });
+}
+
+/**
  * By default (assuming throwOnConsoleErrorsEverywhere is called), we'll throw an exception
  * and fail the test if there is a call to console.error. This method overrides
  * that and allows console errors (without throwing an exception).
@@ -326,25 +367,22 @@ export function allowConsoleErrors() {
   });
 }
 
-export function throwOnConsoleWarnings() {
-  let firstError = null;
-  beforeEach(function () {
-    sinon.stub(console, 'warn').callsFake(msg => {
-      // Store error so we can throw in after. This will ensure we hit a failure
-      // even if message was originally thrown in async code
-      if (!firstError) {
-        firstError = new Error('Unexpected call to console.warn: ' + msg);
-      }
-    });
+/**
+ * Same as allowConsoleErrors, but for warnings
+ */
+export function allowConsoleWarnings() {
+  beforeEach(() => {
+    throwingOnWarnings = false;
   });
 
-  afterEach(function () {
-    if (firstError) {
-      throw firstError;
-    }
-    console.warn.restore();
-    firstError = null;
+  afterEach(() => {
+    throwingOnWarnings = true;
   });
+}
+
+// TODO(bjvanminnen): No-op to be removed in a future PR
+export function throwOnConsoleWarnings() {
+
 }
 
 const originalWindowValues = {};
