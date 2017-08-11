@@ -8,10 +8,7 @@ import {
   setHasAuthoredHints,
   setInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
-import {
-  enqueueHints,
-  showNextHint,
-} from '@cdo/apps/redux/authoredHints';
+import { enqueueHints, showNextHint } from '@cdo/apps/redux/authoredHints';
 import isRtl, { setRtlFromDOM } from '@cdo/apps/code-studio/isRtlRedux';
 import { setPageConstants } from '@cdo/apps/redux/pageConstants';
 
@@ -33,7 +30,7 @@ import TopInstructionsCSF from './TopInstructionsCSF';
  * @param {boolean} options.tts
  */
 const createCommonStore = function (options = {}) {
-  const store = createStore(combineReducers({...commonReducers, isRtl}));
+  const store = createStore(combineReducers({ ...commonReducers, isRtl }));
   const pageConstants = {};
   const instructionsConstants = {};
 
@@ -74,17 +71,21 @@ const createCommonStore = function (options = {}) {
   }
 
   if (options.avatar) {
-    pageConstants.smallStaticAvatar = "/blockly/media/skins/bee/small_static_avatar.png";
+    pageConstants.smallStaticAvatar =
+      '/blockly/media/skins/bee/small_static_avatar.png';
   }
 
   if (options.failureAvatar) {
-    pageConstants.failureAvatar = "/blockly/media/skins/bee/failure_avatar.png";
+    pageConstants.failureAvatar = '/blockly/media/skins/bee/failure_avatar.png';
   }
 
   if (options.feedback) {
-    store.dispatch(setFeedback({
-      message: "some simple, plaintext feedback, used to indicate that something went wrong"
-    }));
+    store.dispatch(
+      setFeedback({
+        message:
+          'some simple, plaintext feedback, used to indicate that something went wrong',
+      }),
+    );
   }
 
   if (options.subInstructions) {
@@ -113,161 +114,67 @@ const createCommonStore = function (options = {}) {
   return store;
 };
 
+const STORIES = {
+  'Minimal Example': {},
+  'Right-to-Left': {
+    rtl: true,
+  },
+  'Markdown instructions': {
+    longInstructions: true,
+  },
+  'Avatar': {
+    avatar: true,
+  },
+  'Feedback': {
+    feedback: true,
+  },
+  'Feedback with failure avatar': {
+    avatar: true,
+    failureAvatar: true,
+    feedback: true,
+  },
+  'Hints': {
+    hints: true,
+  },
+  'Sub-Instructions': {
+    subInstructions: true,
+  },
+  'Text-to-Speech': {
+    tts: true,
+  },
+  'Full-featured example': {
+    avatar: true,
+    failureAvatar: true,
+    feedback: true,
+    hints: true,
+    longInstructions: true,
+    tts: true,
+  },
+  'Full-featured Right-to-Left example': {
+    avatar: true,
+    failureAvatar: true,
+    feedback: true,
+    hints: true,
+    longInstructions: true,
+    rtl: true,
+    tts: true,
+  },
+};
+
 export default storybook => {
-  return storybook
-    .storiesOf('TopInstructionsCSF', module)
-    .add(
-      'Minimal Example',
-      () => {
-        const store = createCommonStore();
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Right-to-Left',
-      () => {
-        const store = createCommonStore({
-          rtl: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Markdown instructions',
-      () => {
-        const store = createCommonStore({
-          longInstructions: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Avatar',
-      () => {
-        const store = createCommonStore({
-          avatar: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Feedback',
-      () => {
-        const store = createCommonStore({
-          feedback: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Feedback with failure avatar',
-      () => {
-        const store = createCommonStore({
-          avatar: true,
-          failureAvatar: true,
-          feedback: true,
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Hints',
-      () => {
-        const store = createCommonStore({
-          hints: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Sub-Instructions',
-      () => {
-        const store = createCommonStore({
-          subInstructions: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Text-to-Speech',
-      () => {
-        const store = createCommonStore({
-          tts: true
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Full-featured example',
-      () => {
-        const store = createCommonStore({
-          avatar: true,
-          failureAvatar: true,
-          feedback: true,
-          hints: true,
-          longInstructions: true,
-          tts: true,
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      'Full-featured Right-to-Left example',
-      () => {
-        const store = createCommonStore({
-          avatar: true,
-          failureAvatar: true,
-          feedback: true,
-          hints: true,
-          longInstructions: true,
-          rtl: true,
-          tts: true,
-        });
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    ).add(
-      '',
-      () => {
-        const store = createCommonStore();
-        return (
-          <Provider store={store}>
-            <TopInstructionsCSF />
-          </Provider>
-        );
-      }
-    );
+  const stories = storybook
+    .storiesOf('TopInstructionsCSF', module);
+
+  Object.entries(STORIES).forEach(([name, options]) => {
+    stories.add(name, () => {
+      const store = createCommonStore(options);
+      return (
+        <Provider store={store}>
+          <TopInstructionsCSF />
+        </Provider>
+      );
+    });
+  });
+
+  return stories;
 };
