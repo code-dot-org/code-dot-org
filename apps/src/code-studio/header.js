@@ -150,7 +150,7 @@ header.build = function (scriptData, stageData, progressData, currentLevelId,
 };
 
 function shareProject() {
-  dashboard.project.save(function () {
+  dashboard.project.save().then(() => {
     var shareUrl;
     if (appOptions.baseShareUrl) {
       shareUrl = `${appOptions.baseShareUrl}/${dashboard.project.getCurrentId()}`;

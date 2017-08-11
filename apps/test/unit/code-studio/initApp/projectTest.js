@@ -57,13 +57,13 @@ describe('project.js', () => {
         },
       });
       sinon.stub(window.location, 'reload');
-      sinon.stub(project, 'save').callsFake((source, callback) => {
+      sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
         callback();
       });
     });
 
     afterEach(() => {
-      project.save.restore();
+      project.saveSourceAndHtml_.restore();
       window.location.reload.restore();
       restoreOnWindow('appOptions');
     });
@@ -72,8 +72,8 @@ describe('project.js', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
       return project.toggleMakerEnabled().then(() => {
-        expect(project.save).to.have.been.called;
-        expect(project.save.getCall(0).args[0].makerAPIsEnabled).to.be.true;
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).to.be.true;
       });
     });
 
@@ -81,8 +81,8 @@ describe('project.js', () => {
       sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
       return project.toggleMakerEnabled().then(() => {
-        expect(project.save).to.have.been.called;
-        expect(project.save.getCall(0).args[0].makerAPIsEnabled).to.be.false;
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).to.be.false;
       });
     });
 
