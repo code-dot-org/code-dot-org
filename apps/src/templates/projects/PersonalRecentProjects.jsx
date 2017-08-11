@@ -13,11 +13,11 @@ const styles = {
     display: "inline-block",
     paddingTop: 10,
     paddingBottom: 20,
-    paddingRight: 10,
-    paddingLeft: 10
+    paddingRight: 0,
+    paddingLeft: 0
   },
   cardPadding: {
-    paddingRight: 18
+    paddingRight: 35
   },
   description: {
     paddingRight: 10,
