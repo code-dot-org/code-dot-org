@@ -102,9 +102,9 @@ const ScriptOverviewTopRow = React.createClass({
               text={i18n.teacherResources()}
               color={Button.ButtonColor.blue}
             >
-            {resources.map(({type, link}, index) =>
-              <a key={index} href={link}>{stringForType[type]}</a>
-            )}
+              {resources.map(({type, link}, index) =>
+                <a key={index} href={link}>{stringForType[type]}</a>
+              )}
             </DropdownButton>
           </div>
         }
