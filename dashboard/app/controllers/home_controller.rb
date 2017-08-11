@@ -87,7 +87,7 @@ class HomeController < ApplicationController
       @student_sections = current_user.sections_as_student.map(&:summarize)
 
       # Students and teachers will receive a @top_course for their primary script, so we don't want to include that script (if it exists) in the regular lists of recent scripts.
-      exclude_primary_script = current_user.student?
+      exclude_primary_script = current_user
       @recent_courses = current_user.recent_courses_and_scripts(exclude_primary_script)
 
       script = current_user.primary_script
