@@ -54,16 +54,12 @@ def insert_or_upsert_form(kind, data, options={})
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
 
-  # For HOC signups, a duplicate (matching email and name) entry is assumed to be an update rather
-  # than an insert.
-  if kind.start_with? 'HocSignup'
-    row_for_update = row.dup
-    [:created_at, :created_ip, :secret].each {|key| row_for_update.delete key}
-    num_rows_updated = DB[:forms].
-      where(kind: kind, email: row_for_update[:email], name: row_for_update[:name]).
-      update(row_for_update)
-    return row_for_update if num_rows_updated > 0
+  # Depending on the form kind, new data, and existing data, perform an update.
+  existing_form_secret = form_class.update_on_upsert row
+  if existing_form_secret
+    return update_form(row[:kind], existing_form_secret, row)
   end
+
   # We didn't perform an update, so insert the row into the forms table and
   # create a corresponding form_geos row.
   row[:id] = DB[:forms].insert(row)
@@ -93,6 +89,7 @@ def update_form(kind, secret, data)
 
   prev_data = JSON.parse(form[:data], symbolize_names: true)
   symbolized_data = Hash[data.map {|k, v| [k.to_sym, v]}]
+  symbolized_data.merge!(Hash[JSON.parse(symbolized_data[:data]).map {|k, v| [k.to_sym, v]}])
   data = validate_form(kind, prev_data.merge(symbolized_data), Pegasus.logger)
 
   normalized_email = data[:email_s].to_s.strip.downcase if data.key?(:email_s)
