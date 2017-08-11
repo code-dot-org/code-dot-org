@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {Heading1} from '../../lib/ui/Headings';
 import BaseDialog from '../BaseDialog';
@@ -36,7 +37,7 @@ class ChangeLoginTypeDialog extends Component {
       //         word, email, oauth, Clever, it's all fair game.
       return (
         <LoginTypePicker
-          title="Change login type"
+          title={i18n.changeLoginType()}
           setLoginType={this.changeLoginType}
           handleCancel={handleClose}
         />
@@ -45,7 +46,7 @@ class ChangeLoginTypeDialog extends Component {
       // Case 2: Students > 0 and login_type is picture; allow change to word.
       return (
         <LimitedChangeView
-          description="Change to the word login type if you want students to login with a simple pair of words instead of with a secret picture."
+          description={i18n.changeLoginTypeToWord_description()}
           onCancel={handleClose}
         >
           <UseWordLoginButton changeLoginType={this.changeLoginType}/>
@@ -55,7 +56,7 @@ class ChangeLoginTypeDialog extends Component {
       // Case 3: Students > 0 and login_type is word; allow change to picture.
       return (
         <LimitedChangeView
-          description="Change to the picture login type if you want students to login with a secret picture instead of with a simple pair of words."
+          description={i18n.changeLoginTypeToPicture_description()}
           onCancel={handleClose}
         >
           <UsePictureLoginButton changeLoginType={this.changeLoginType}/>
@@ -66,10 +67,8 @@ class ChangeLoginTypeDialog extends Component {
       //         or picture.
       const description = (
         <span>
-          If your students don't have email addresses, you can create accounts
-          for them. Your students will login with a picture if you choose
-          picture login and a simple pair of words if you choose word login.
-          <strong>You cannot undo this action.</strong>
+          {i18n.changeLoginTypeToWordOrPicture_description()}
+          <strong>{i18n.youCannotUndoThisAction()}</strong>
         </span>
       );
       return (
@@ -133,7 +132,7 @@ const LimitedChangeView = ({description, children, onCancel}) => (
         onClick={onCancel}
         color={Button.ButtonColor.gray}
         size={Button.ButtonSize.large}
-        text="Cancel"
+        text={i18n.dialogCancel()}
       />
       <div>
         {children}
@@ -156,7 +155,7 @@ const UsePictureLoginButton = ({changeLoginType}) => (
   <Button
     onClick={() => changeLoginType(SectionLoginType.picture)}
     size={Button.ButtonSize.large}
-    text="Use picture login"
+    text={i18n.loginTypePictureButton()}
   />
 );
 UsePictureLoginButton.propTypes = buttonPropTypes;
@@ -164,7 +163,7 @@ const UseWordLoginButton = ({changeLoginType, style}) => (
   <Button
     onClick={() => changeLoginType(SectionLoginType.word)}
     size={Button.ButtonSize.large}
-    text="Use word login"
+    text={i18n.loginTypeWordButton()}
     style={style}
   />
 );

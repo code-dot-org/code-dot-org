@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
+import i18n from '@cdo/locale';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '../Button';
 import ChangeLoginTypeDialog from './ChangeLoginTypeDialog';
@@ -37,72 +38,45 @@ class LoginTypeParagraph extends Component {
     let paragraph, buttonText;
 
     if (loginType === SectionLoginType.picture) {
-      buttonText = 'Change to word login';
+      buttonText = i18n.changeLoginTypeToWord_button();
       paragraph = (
         <div>
           <p>
-            This section uses picture as its secret type. It means that each
-            of
-            your students has a secret picture used in place of a password to
-            sign
-            in. Students should use the sign in web address given above to
-            sign in.
+            {i18n.loginTypePictureLongDescription()}
           </p>
           <p>
-            You may reset a student's secret picture at any time by
-            choosing <strong>Show secret</strong> and then <strong>Reset
-            secret</strong>.
-            A new secret picture will be generated for that student to use
-            when
-            they sign in.
+            {i18n.loginTypePictureResetDescription()}
           </p>
         </div>
       );
     } else if (loginType === SectionLoginType.word) {
-      buttonText ='Change to picture login';
+      buttonText = i18n.changeLoginTypeToPicture_button();
       paragraph = (
         <div>
           <p>
-            This section uses word as its secret type. It means that each of
-            your students has a secret pair of words used in place of a
-            password to sign
-            in. Students should use the sign in web address given above to
-            sign in.
+            {i18n.loginTypeWordLongDescription()}
           </p>
           <p>
-            You may reset a student's secret words at any time by
-            choosing <strong>Show secret</strong> and then <strong>Reset
-            secret</strong>.
-            A new pair of secret words will be generated for that student to
-            use when
-            they sign in.
+            {i18n.loginTypeWordResetDescription()}
           </p>
         </div>
       );
     } else if (loginType === SectionLoginType.email) {
-      buttonText = 'Change to picture or word login';
+      buttonText = i18n.changeLoginTypeToWordOrPicture_button();
       paragraph = (
         <div>
           <p>
-            This section uses email logins. It means that each of
-            your students manages their own account using their own email
-            and
-            password. Students should sign in through the <strong>Sign
-            in</strong> button
-            found at the top of the page.
+            {i18n.loginTypeEmailLongDescription()}
           </p>
           <p>
-            You may reset a student's password at any time by
-            choosing <strong>Reset password</strong>, entering a new
-            password,
-            and clicking <strong>Save</strong>.
+            {i18n.loginTypeEmailResetDescription()}
           </p>
         </div>
       );
     }
 
     if (studentCount <= 0) {
-      buttonText = 'Change login type';
+      buttonText = i18n.changeLoginType();
     }
 
     if (paragraph && buttonText) {
