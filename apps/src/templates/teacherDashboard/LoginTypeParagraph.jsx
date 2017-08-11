@@ -1,13 +1,16 @@
 import React, {Component, PropTypes} from 'react';
+import {connect} from 'react-redux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import Button from '../Button';
 import ChangeLoginTypeDialog from './ChangeLoginTypeDialog';
+import {sectionShape} from './shapes';
 
-export default class LoginTypeParagraph extends Component {
+class LoginTypeParagraph extends Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
-    loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     onLoginTypeChanged: PropTypes.func,
+    // Provided by Redux
+    section: sectionShape,
   };
 
   state = {
@@ -24,84 +27,98 @@ export default class LoginTypeParagraph extends Component {
     }
   };
 
-  static getContent(loginType) {
-    switch (loginType) {
-      case SectionLoginType.picture:
-        return {
-          paragraph: (
-            <div>
-              <p>
-                This section uses picture as its secret type.  It means that each of
-                your students has a secret picture used in place of a password to sign
-                in.  Students should use the sign in web address given above to sign in.
-              </p>
-              <p>
-                You may reset a student's secret picture at any time by
-                choosing <strong>Show secret</strong> and then <strong>Reset
-                secret</strong>.
-                A new secret picture will be generated for that student to use when
-                they sign in.
-              </p>
-            </div>
-          ),
-          buttonText: 'Change to word login',
-        };
+  /**
+   * Pick content that varies with current login type and section student count.
+   * @param {SectionLoginType} loginType
+   * @param {number} studentCount
+   * @returns {{paragraph:ReactElement, buttonTest: string}}
+   */
+  static getContent(loginType, studentCount) {
+    let paragraph, buttonText;
 
-      case SectionLoginType.word:
-        return {
-          paragraph: (
-            <div>
-              <p>
-                This section uses word as its secret type. It means that each of
-                your students has a secret pair of words used in place of a
-                password to sign
-                in. Students should use the sign in web address given above to
-                sign in.
-              </p>
-              <p>
-                You may reset a student's secret words at any time by
-                choosing <strong>Show secret</strong> and then <strong>Reset
-                secret</strong>.
-                A new pair of secret words will be generated for that student to
-                use when
-                they sign in.
-              </p>
-            </div>
-          ),
-          buttonText: 'Change to picture login',
-        };
-
-      case SectionLoginType.email:
-        return {
-          paragraph: (
-            <div>
-              <p>
-                This section uses email logins. It means that each of
-                your students manages their own account using their own email
-                and
-                password. Students should sign in through the <strong>Sign
-                in</strong> button
-                found at the top of the page.
-              </p>
-              <p>
-                You may reset a student's password at any time by
-                choosing <strong>Reset password</strong>, entering a new
-                password,
-                and clicking <strong>Save</strong>.
-              </p>
-            </div>
-          ),
-          buttonText: 'Change to picture or word login',
-        };
-
-      default:
-        return null;
+    if (loginType === SectionLoginType.picture) {
+      buttonText = 'Change to word login';
+      paragraph = (
+        <div>
+          <p>
+            This section uses picture as its secret type. It means that each
+            of
+            your students has a secret picture used in place of a password to
+            sign
+            in. Students should use the sign in web address given above to
+            sign in.
+          </p>
+          <p>
+            You may reset a student's secret picture at any time by
+            choosing <strong>Show secret</strong> and then <strong>Reset
+            secret</strong>.
+            A new secret picture will be generated for that student to use
+            when
+            they sign in.
+          </p>
+        </div>
+      );
+    } else if (loginType === SectionLoginType.word) {
+      buttonText ='Change to picture login';
+      paragraph = (
+        <div>
+          <p>
+            This section uses word as its secret type. It means that each of
+            your students has a secret pair of words used in place of a
+            password to sign
+            in. Students should use the sign in web address given above to
+            sign in.
+          </p>
+          <p>
+            You may reset a student's secret words at any time by
+            choosing <strong>Show secret</strong> and then <strong>Reset
+            secret</strong>.
+            A new pair of secret words will be generated for that student to
+            use when
+            they sign in.
+          </p>
+        </div>
+      );
+    } else if (loginType === SectionLoginType.email) {
+      buttonText = 'Change to picture or word login';
+      paragraph = (
+        <div>
+          <p>
+            This section uses email logins. It means that each of
+            your students manages their own account using their own email
+            and
+            password. Students should sign in through the <strong>Sign
+            in</strong> button
+            found at the top of the page.
+          </p>
+          <p>
+            You may reset a student's password at any time by
+            choosing <strong>Reset password</strong>, entering a new
+            password,
+            and clicking <strong>Save</strong>.
+          </p>
+        </div>
+      );
     }
+
+    if (studentCount <= 0) {
+      buttonText = 'Change login type';
+    }
+
+    if (paragraph && buttonText) {
+      return {paragraph, buttonText};
+    }
+    return null;
   }
 
   render() {
-    const {loginType} = this.props;
-    const content = LoginTypeParagraph.getContent(loginType);
+    const {section} = this.props;
+    if (!section) {
+      // Render nothing for not-yet-loaded section information
+      return null;
+    }
+
+    const content = LoginTypeParagraph.getContent(section.loginType, section.studentCount);
     if (!content) {
       // Render nothing for not-yet-supported login types.
       return null;
@@ -126,3 +143,8 @@ export default class LoginTypeParagraph extends Component {
     );
   }
 }
+
+export const UnconnectedLoginTypeParagraph = LoginTypeParagraph;
+export default connect((state, props) => ({
+  section: state.teacherSections.sections[props.sectionId],
+}))(LoginTypeParagraph);
