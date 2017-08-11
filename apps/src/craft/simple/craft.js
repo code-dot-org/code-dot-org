@@ -603,6 +603,11 @@ Craft.executeUserCode = function () {
 
   var appCodeOrgAPI = Craft.gameController.codeOrgAPI;
   appCodeOrgAPI.startCommandCollection();
+  appCodeOrgAPI.registerEventCallback(null, event => {
+    if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
+      appCodeOrgAPI.drop(null, 'wool', event.targetIdentifier);
+    }
+  });
 
   // Run user generated code, calling appCodeOrgAPI
   var code = '';
