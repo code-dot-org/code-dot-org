@@ -435,7 +435,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function (event, callback) {
-          this.save(callback);
+          this.save().then(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -617,16 +617,12 @@ var projects = module.exports = {
     currentSources.html = '';
   },
   /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
-   * @param {object?} sourceAndHtml Optional source to be provided, saving us another
-   *   call to `sourceHandler.getLevelSource`.
-   * @param {function} callback Function to be called after saving.
+   * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
+   * @returns {Promise} A promise containing the project data.
    */
-  save(...args) {
-    let [sourceAndHtml, callback, forceNewVersion, preparingRemix] = args;
+  save(forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -634,22 +630,36 @@ var projects = module.exports = {
 
     $('.project_updated_at').text(msg.saving());
 
-    if (typeof args[0] === 'function' || !sourceAndHtml) {
-      // If no save data is provided, shift the arguments and ask for the
-      // latest save data ourselves.
-      [callback, forceNewVersion, preparingRemix] = args;
+    /**
+     * Gets project source from code studio and writes it to the Channels API.
+     * @returns {Promise} A Promise containing the new project data, which
+     * resolves once the data has been written to the server.
+     */
+    const completeAsyncSave = () => new Promise(resolve =>
+      this.getUpdatedSourceAndHtml_(sourceAndHtml =>
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
 
-      let completeAsyncSave = () =>
-        this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-          this.save(sourceAndHtml, callback, forceNewVersion));
+    if (preparingRemix) {
+      return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+    } else {
+      return completeAsyncSave();
+    }
+  },
 
-      if (preparingRemix) {
-        this.sourceHandler.prepareForRemix().then(completeAsyncSave);
-      } else {
-        completeAsyncSave();
-      }
+  /**
+   * Saves the project to the Channels API. Calls `callback` on success if a
+   * callback function was provided.
+   * @param {object} sourceAndHtml Project source code to save.
+   * @param {function} callback Function to be called after saving.
+   * @param {boolean} forceNewVersion If true, explicitly create a new version.
+   * @private
+   */
+  saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion) {
+    if (current && current.isOwner === false) {
       return;
     }
+
+    $('.project_updated_at').text(msg.saving());
 
     if (forceNewVersion) {
       currentSourceVersionId = null;
@@ -705,7 +715,7 @@ var projects = module.exports = {
   toggleMakerEnabled() {
     return new Promise(resolve => {
       this.getUpdatedSourceAndHtml_(sourceAndHtml => {
-        this.save(
+        this.saveSourceAndHtml_(
           {
             ...sourceAndHtml,
             makerAPIsEnabled: !sourceAndHtml.makerAPIsEnabled,
@@ -795,7 +805,7 @@ var projects = module.exports = {
           return;
         }
 
-        this.save(newSources, () => {
+        this.saveSourceAndHtml_(newSources, () => {
           hasProjectChanged = false;
           callCallback();
         });
@@ -807,7 +817,7 @@ var projects = module.exports = {
    */
   rename(newName, callback) {
     this.setName(newName);
-    this.save(callback);
+    this.save().then(callback);
   },
   /**
    * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
@@ -815,7 +825,7 @@ var projects = module.exports = {
   freeze(callback) {
     current.frozen = true;
     current.hidden = true;
-    this.save(function (data) {
+    this.save().then(data => {
       executeCallback(callback, data);
       redirectEditView();
     });
@@ -841,9 +851,10 @@ var projects = module.exports = {
     this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, options);
-      this.save(callback,
-          false /* forceNewVersion */,
-          true /* preparingRemix */);
+      this.save(
+        false /* forceNewVersion */,
+        true /* preparingRemix */
+      ).then(callback);
     }.bind(this));
   },
   copyAssets(srcChannel, callback) {
@@ -886,7 +897,7 @@ var projects = module.exports = {
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(redirectToRemix, false, true);
+      projects.save(false, true).then(redirectToRemix);
     } else if (current.isOwner) {
       this.sourceHandler.prepareForRemix().then(redirectToRemix);
     } else {
@@ -895,7 +906,7 @@ var projects = module.exports = {
   },
   createNew() {
     const url = `${projects.appToProjectUrl()}/new`;
-    projects.save(function () {
+    projects.save().then(() => {
       location.href = url;
     });
   },
