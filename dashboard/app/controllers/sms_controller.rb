@@ -7,11 +7,7 @@ class SmsController < ApplicationController
     if params[:level_source] && params[:phone] && (level_source = LevelSource.find(params[:level_source]))
       send_sms(level_source_url(level_source), params[:phone])
     elsif params[:channel_id] && params[:phone] && ProjectsController::STANDALONE_PROJECTS.include?(params[:type])
-      if params[:type] == 'weblab'
-        url = "https://codeprojects.org/#{params[:channel_id]}"
-      else
-        url = polymorphic_url(["#{params[:type]}_project_share", 'projects'], channel_id: params[:channel_id])
-      end
+      url = polymorphic_url(["#{params[:type]}_project_share", 'projects'], channel_id: params[:channel_id])
       send_sms(url, params[:phone])
     else
       head :not_acceptable
