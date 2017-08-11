@@ -144,15 +144,15 @@ export function get(controller) {
     },
 
     destroyBlock: function (highlightCallback, targetEntity) {
-      controller.addCommand(new DestroyBlockCommand(controller, highlightCallback, targetEntity));
+      controller.addCommand(new DestroyBlockCommand(controller, highlightCallback, targetEntity), targetEntity);
     },
 
-    placeBlock: function (highlightCallback, blockType) {
-      controller.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType));
+    placeBlock: function (highlightCallback, blockType, targetEntity) {
+      controller.addCommand(new PlaceBlockCommand(controller, highlightCallback, blockType, targetEntity), targetEntity);
     },
 
-    placeInFront: function (highlightCallback, blockType) {
-      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType));
+    placeInFront: function (highlightCallback, blockType, targetEntity) {
+      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType, targetEntity), targetEntity);
     },
 
     tillSoil: function (highlightCallback) {
