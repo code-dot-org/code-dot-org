@@ -75,6 +75,7 @@ def insert_or_upsert_form(kind, data, options={})
   row
 end
 
+# WARNING: This method only updates certain fields.
 # @param [String] kind The kind of the form to be updated.
 # @param [String] secret The secret associated with the form to be updated.
 # @param [Hash] data The data to update.
@@ -89,7 +90,9 @@ def update_form(kind, secret, data)
 
   prev_data = JSON.parse(form[:data], symbolize_names: true)
   symbolized_data = Hash[data.map {|k, v| [k.to_sym, v]}]
-  symbolized_data.merge!(Hash[JSON.parse(symbolized_data[:data]).map {|k, v| [k.to_sym, v]}])
+  if symbolized_data[:data]
+    symbolized_data.merge!(Hash[JSON.parse(symbolized_data[:data]).map {|k, v| [k.to_sym, v]}])
+  end
   data = validate_form(kind, prev_data.merge(symbolized_data), Pegasus.logger)
 
   normalized_email = data[:email_s].to_s.strip.downcase if data.key?(:email_s)
