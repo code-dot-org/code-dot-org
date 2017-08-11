@@ -16,7 +16,7 @@ AmazonSmile is a website operated by Amazon with the same products, prices, and 
 
 To learn more about AmazonSmile, check out the [program details](http://smile.amazon.com/gp/chpf/pd/ref=smi_se_saas_lpd_spd).
 
-## How to shop AmazonSmile
+## How to shop AmazonSmile (and browser plugins to make it easy)
 To shop AmazonSmile simply go to [smile.amazon.com](http://smile.amazon.com) from the web browser on your computer or mobile device. You can also download the AmazonSmile extension for your favorite browser:
 
 - [Chrome](https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf?hl=en)
