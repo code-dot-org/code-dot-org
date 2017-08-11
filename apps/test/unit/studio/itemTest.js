@@ -25,10 +25,10 @@ describe('item', () => {
     describe('if destination is set', () => {
       beforeEach(() => {
         item = new Item({});
-        item.x = 0;
-        item.y = 0;
-        item.destGridX = 100;
-        item.destGridY = 100;
+        item.x = 100;
+        item.y = 100;
+        item.destGridX = 200;
+        item.destGridY = 200;
       });
 
       it('clears direction and destination on STOP', () => {
@@ -36,7 +36,7 @@ describe('item', () => {
         item.update();
         expect(item.dir).to.equal(Direction.NONE);
         expect(item.destGridX).to.be.undefined;
-        expect(item.destGridy).to.be.undefined;
+        expect(item.destGridY).to.be.undefined;
       });
 
       it('does nothing on WATCH_ACTOR or GRID_ALIGNED behaviors', () => {
@@ -47,8 +47,8 @@ describe('item', () => {
           item.activity = behavior;
           item.update();
           expect(item.dir).to.be.undefined;
-          expect(item.destGridX).to.equal(100);
-          expect(item.destGridY).to.equal(100);
+          expect(item.destGridX).to.equal(200);
+          expect(item.destGridY).to.equal(200);
         });
       });
     });
@@ -58,8 +58,8 @@ describe('item', () => {
     beforeEach(() => {
       item = new Item({});
       item.dir = Direction.EAST;
-      item.x = 0;
-      item.y = 0;
+      item.x = 100;
+      item.y = 100;
       item.speed = 5;
     });
 
@@ -70,9 +70,9 @@ describe('item', () => {
         BEHAVIOR_WANDER,
       ].forEach(behavior => {
         item.activity = behavior;
-        item.x = 0;
+        item.x = 100;
         item.moveToNextPosition();
-        expect(item.x).to.equal(5);
+        expect(item.x).to.equal(105);
       });
     });
 
@@ -84,7 +84,7 @@ describe('item', () => {
       ].forEach(behavior => {
         item.activity = behavior;
         item.moveToNextPosition();
-        expect(item.x).to.equal(0);
+        expect(item.x).to.equal(100);
       });
     });
   });
