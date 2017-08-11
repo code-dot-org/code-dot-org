@@ -52,7 +52,7 @@ describe('DropdownButton', () => {
     wrapper.find('a').at(1).simulate('click');
     assert(clickSpy.calledOnce);
 
-    // dropdown is clsoed
+    // dropdown is closed
     assert.equal(wrapper.find('a').length, 0);
   });
 });

@@ -21,7 +21,7 @@ const styles = {
     // without this, this will be below some content
     zIndex: 1,
   },
-  section: {
+  anchor: {
     padding: 10,
     color: color.charcoal,
     backgroundColor: color.white,
@@ -35,7 +35,7 @@ const styles = {
       cursor: 'pointer'
     }
   },
-  nonFirstSection: {
+  nonFirstAnchor: {
     borderTop: `1px solid ${color.charcoal}`
   }
 };
@@ -125,8 +125,8 @@ class DropdownButton extends Component {
                 onClick={event => this.onClickChild(event, child.props)}
                 key={index}
                 style={{
-                  ...styles.section,
-                  ...(index > 0 && styles.nonFirstSection)
+                  ...styles.anchor,
+                  ...(index > 0 && styles.nonFirstAnchor)
                 }}
               />
             ))}
