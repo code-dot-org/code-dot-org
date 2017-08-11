@@ -46,10 +46,11 @@ class ProjectActionBox extends Component {
   };
 
   getAvailableActions = function () {
-    let actions = [i18n.rename(), i18n.remix()];
-    this.props.isPublished ?
-    actions.push(i18n.removeFromPublicGallery()) : actions.push(i18n.publishToPublicGallery());
-    return actions;
+    return [
+      i18n.rename(),
+      i18n.remix(),
+      this.props.isPublished ? i18n.removeFromPublicGallery() : i18n.publishToPublicGallery()
+    ];
   };
 
   render() {

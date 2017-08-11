@@ -81,6 +81,11 @@ const styles = {
   },
   bold: {
     fontFamily: '"Gotham 5r", sans-serif'
+  },
+  actionBox: {
+    position: 'absolute',
+    marginLeft: 10,
+    marginTop: -10
   }
 };
 
@@ -221,7 +226,7 @@ const ProjectCard = React.createClass({
         {this.state.actionsOpen &&
           <ProjectActionBox
             isPublished={this.props.projectData.publishedToPublic}
-            style={{position: 'absolute', marginLeft: 10, marginTop: '-10px'}}
+            style={styles.actionBox}
           />
         }
 
