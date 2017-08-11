@@ -5901,17 +5901,16 @@ Studio.yieldGridAlignedTicks = function () {
  *        (default) or away from the given direction
  */
 Studio.turnSingle = function (opts) {
-  const sprite = Studio.sprite[opts.spriteIndex];
-  sprite.lastMove = Studio.tickCount;
-
-  if (skin.gridAlignedMovement) {
-    sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
-    sprite.addAction(new GridTurn(opts.dir, skin.slowExecutionFactor));
-    Studio.yieldGridAlignedTicks();
-  } else {
+  if (!skin.gridAlignedMovement) {
     throw new TypeError("Studio.turnSingle is only valid in grid-aligned mode");
   }
 
+  const sprite = Studio.sprite[opts.spriteIndex];
+  sprite.lastMove = Studio.tickCount;
+  sprite.setActivity(constants.BEHAVIOR_GRID_ALIGNED);
+  sprite.addAction(new GridTurn(opts.dir, skin.slowExecutionFactor));
+
+  Studio.yieldGridAlignedTicks();
   Studio.lastMoveSingleDir = opts.dir;
 };
 
