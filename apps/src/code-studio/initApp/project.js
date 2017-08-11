@@ -435,7 +435,7 @@ var projects = module.exports = {
         }
 
         $(window).on(events.appModeChanged, function (event, callback) {
-          this.save(callback);
+          this.save().then(callback);
         }.bind(this));
 
         // Autosave every AUTOSAVE_INTERVAL milliseconds
@@ -617,13 +617,12 @@ var projects = module.exports = {
     currentSources.html = '';
   },
   /**
-   * Saves the project to the Channels API. Calls `callback` on success if a
-   * callback function was provided.
-   * @param {function} callback Function to be called after saving.
+   * Saves the project to the Channels API.
    * @param {boolean} forceNewVersion If true, explicitly create a new version.
    * @param {boolean} preparingRemix Indicates whether this save is part of a remix.
+   * @returns {Promise} A promise containing the project data.
    */
-  save(callback, forceNewVersion, preparingRemix) {
+  save(forceNewVersion, preparingRemix) {
     // Can't save a project if we're not the owner.
     if (current && current.isOwner === false) {
       return;
@@ -631,14 +630,19 @@ var projects = module.exports = {
 
     $('.project_updated_at').text(msg.saving());
 
-    let completeAsyncSave = () =>
+    /**
+     * Gets project source from code studio and writes it to the Channels API.
+     * @returns {Promise} A Promise containing the new project data, which
+     * resolves once the data has been written to the server.
+     */
+    const completeAsyncSave = () => new Promise(resolve =>
       this.getUpdatedSourceAndHtml_(sourceAndHtml =>
-        this.saveSourceAndHtml_(sourceAndHtml, callback, forceNewVersion));
+        this.saveSourceAndHtml_(sourceAndHtml, resolve, forceNewVersion)));
 
     if (preparingRemix) {
-      this.sourceHandler.prepareForRemix().then(completeAsyncSave);
+      return this.sourceHandler.prepareForRemix().then(completeAsyncSave);
     } else {
-      completeAsyncSave();
+      return completeAsyncSave();
     }
   },
 
@@ -813,7 +817,7 @@ var projects = module.exports = {
    */
   rename(newName, callback) {
     this.setName(newName);
-    this.save(callback);
+    this.save().then(callback);
   },
   /**
    * Freezes and saves the project. Also hides so that it's not available for deleting/renaming in the user's project list.
@@ -821,7 +825,7 @@ var projects = module.exports = {
   freeze(callback) {
     current.frozen = true;
     current.hidden = true;
-    this.save(function (data) {
+    this.save().then(data => {
       executeCallback(callback, data);
       redirectEditView();
     });
@@ -847,9 +851,10 @@ var projects = module.exports = {
     this.setName(newName);
     channels.create(current, function (err, data) {
       this.updateCurrentData_(err, data, options);
-      this.save(callback,
-          false /* forceNewVersion */,
-          true /* preparingRemix */);
+      this.save(
+        false /* forceNewVersion */,
+        true /* preparingRemix */
+      ).then(callback);
     }.bind(this));
   },
   copyAssets(srcChannel, callback) {
@@ -892,7 +897,7 @@ var projects = module.exports = {
     }
     // If the user is the owner, save before remixing on the server.
     if (current.isOwner) {
-      projects.save(redirectToRemix, false, true);
+      projects.save(false, true).then(redirectToRemix);
     } else if (current.isOwner) {
       this.sourceHandler.prepareForRemix().then(redirectToRemix);
     } else {
@@ -901,7 +906,7 @@ var projects = module.exports = {
   },
   createNew() {
     const url = `${projects.appToProjectUrl()}/new`;
-    projects.save(function () {
+    projects.save().then(() => {
       location.href = url;
     });
   },
