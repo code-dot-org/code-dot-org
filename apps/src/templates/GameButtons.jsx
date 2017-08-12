@@ -5,6 +5,7 @@ import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import Radium from 'radium';
+import SkipButton from './SkipButton';
 import { connect } from 'react-redux';
 
 import blankImg from '../../static/common_images/1x1.gif';
@@ -72,6 +73,7 @@ export const UnconnectedGameButtons = props => (
     {!props.playspacePhoneFrame &&
     <ResetButton />
     }
+    <SkipButton />
     {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
     {props.children}
   </ProtectedStatefulDiv>
