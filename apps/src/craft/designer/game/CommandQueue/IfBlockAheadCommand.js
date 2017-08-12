@@ -3,13 +3,13 @@ import CommandQueue from "./CommandQueue.js";
 import BaseCommand from "./BaseCommand.js";
 
 export default class IfBlockAheadCommand extends BaseCommand {
-  constructor(gameController, highlightCallback, blockType, callback) {
-    super(gameController, highlightCallback);
+  constructor(gameController, highlightCallback, blockType, targetEntity, callback) {
+    super(gameController, highlightCallback, targetEntity);
 
     this.blockType = blockType;
     this.ifCodeCallback = callback;
 
-    this.queue = new CommandQueue(this);
+    this.queue = new CommandQueue(gameController);
   }
 
   tick() {

@@ -162,16 +162,16 @@ export function get(controller) {
       controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, blockType, targetEntity), targetEntity);
     },
 
-    tillSoil: function (highlightCallback) {
-      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering'));
+    tillSoil: function (highlightCallback, targetEntity) {
+      controller.addCommand(new PlaceInFrontCommand(controller, highlightCallback, 'watering', targetEntity));
     },
 
-    whilePathAhead: function (highlightCallback, blockType, codeBlock) {
-      controller.addCommand(new WhileCommand(controller, highlightCallback, blockType, codeBlock));
+    whilePathAhead: function (highlightCallback, blockType, targetEntity, codeBlock) {
+      controller.addCommand(new WhileCommand(controller, highlightCallback, blockType, targetEntity, codeBlock), targetEntity);
     },
 
-    ifBlockAhead: function (highlightCallback, blockType, codeBlock) {
-      controller.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, codeBlock));
+    ifBlockAhead: function (highlightCallback, blockType, targetEntity, codeBlock) {
+      controller.addCommand(new IfBlockAheadCommand(controller, highlightCallback, blockType, targetEntity, codeBlock), targetEntity);
     },
     // -1 for infinite repeat
     repeat: function (highlightCallback, codeBlock, iteration, targetEntity) {
