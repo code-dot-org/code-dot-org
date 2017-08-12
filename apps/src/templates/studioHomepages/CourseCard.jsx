@@ -1,4 +1,5 @@
 import React from 'react';
+import Radium from 'radium';
 import color from "../../util/color";
 import FontAwesome from '../FontAwesome';
 import i18n from "@cdo/locale";
@@ -101,15 +102,17 @@ const CourseCard = React.createClass({
     title: React.PropTypes.string.isRequired,
     description: React.PropTypes.string.isRequired,
     link: React.PropTypes.string.isRequired,
-    isRtl: React.PropTypes.bool.isRequired
+    isRtl: React.PropTypes.bool.isRequired,
+    left: React.PropTypes.bool.isRequired,
   },
 
   render() {
-    const { title, description, link, isRtl } = this.props;
+    const { title, description, link, isRtl, left } = this.props;
     const icon = isRtl ? "chevron-left" : "chevron-right";
+    const extraSpace = left ? {marginRight:20} : {marginRight:0};
 
     return (
-      <a href={link} style={styles.card}>
+      <a href={link} style={[styles.card, extraSpace]}>
         <img src={require('@cdo/static/small_purple_icons.png')} style={styles.image}/>
         <div style={isRtl? styles.titleRtl : styles.title}>
           {title}
@@ -131,4 +134,4 @@ const CourseCard = React.createClass({
   }
 });
 
-export default CourseCard;
+export default Radium(CourseCard);

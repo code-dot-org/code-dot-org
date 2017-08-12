@@ -7,15 +7,6 @@ import StudentTopCourse from './StudentTopCourse';
 import Notification from '@cdo/apps/templates/Notification';
 import i18n from "@cdo/locale";
 import shapes from './shapes';
-import color from "../../util/color";
-
-const styles = {
-  spacer: {
-    width: 20,
-    float: 'left',
-    color: color.white
-  }
-};
 
 const RecentCourses = React.createClass({
   propTypes: {
@@ -54,8 +45,8 @@ const RecentCourses = React.createClass({
                 description={course.description}
                 link={course.link}
                 isRtl={isRtl}
+                left={index % 2 === 0}
               />
-              {(index % 2 === 0) && <div style={styles.spacer}>.</div>}
             </div>
             )
           )}
