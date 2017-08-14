@@ -151,8 +151,8 @@ export default class RosterDialog extends React.Component {
   }
 
   importClassroom = () => {
-    const classroom = this.props.classrooms;
-    const selectedName = classroom && classroom.find(classroom => {
+    const classrooms = this.props.classrooms;
+    const selectedName = classrooms && classrooms.find(classroom => {
       return classroom.id === this.state.selectedId;
     }).name;
 
