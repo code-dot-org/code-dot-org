@@ -9,7 +9,7 @@ class AdminUsersController < ApplicationController
 
   DEFAULT_MANAGE_PAGE_SIZE = 25
   # restrict the PII returned by the controller to the view by selecting only these columns from the model
-  USER_ATTRIBUTES_FOR_VIEW = %w(
+  RESTRICTED_USER_ATTRIBUTES_FOR_VIEW = %w(
     users.id
     email
     name
@@ -120,11 +120,11 @@ class AdminUsersController < ApplicationController
     permission = params[:permission]
     if search_term.present?
       if search_term =~ /^\d+$/
-        @user = User.select(USER_ATTRIBUTES_FOR_VIEW).find_by(id: search_term)
+        @user = restricted_users.find_by(id: search_term)
       else
-        users = User.where(hashed_email: User.hash_email(search_term))
-        @user = users.select(USER_ATTRIBUTES_FOR_VIEW).first
-        if users.count > 1
+        users = restricted_users.where(hashed_email: User.hash_email(search_term))
+        @user = users.first
+        if users.many?
           flash[:notice] = "More than one User matches email address.  "\
                          "Showing first result.  Matching User IDs - #{users.pluck(:id).join ','}"
         end
@@ -133,18 +133,17 @@ class AdminUsersController < ApplicationController
         flash[:notice] = "User Not Found"
       end
     elsif permission.present?
-      @users_with_permission = User.
+      @users_with_permission = restricted_users.
                                  joins(:permissions).
                                  where(user_permissions: {permission: permission}).
-                                 order(:email).
-                                 select(USER_ATTRIBUTES_FOR_VIEW)
+                                 order(:email)
       @users_with_permission = @users_with_permission.page(page).per(page_size)
     end
   end
 
   def grant_permission
     user_id = params[:user_id]
-    @user = User.select(USER_ATTRIBUTES_FOR_VIEW).find_by(id: user_id)
+    @user = restricted_users.find_by(id: user_id)
     unless @user.try(:teacher?)
       flash[:alert] = "FAILED: user #{user_id} could not be found or is not a teacher"
       redirect_to action: "permissions_form", search_term: user_id
@@ -156,13 +155,17 @@ class AdminUsersController < ApplicationController
 
   def revoke_permission
     user_id = params[:user_id]
-    @user = User.select(USER_ATTRIBUTES_FOR_VIEW).find_by(id: user_id)
+    @user = restricted_users.find_by(id: user_id)
     permission = params[:permission]
     @user.try(:delete_permission, permission)
     redirect_to permissions_form_path(search_term: user_id)
   end
 
   private
+
+  def restricted_users
+    User.select(RESTRICTED_USER_ATTRIBUTES_FOR_VIEW)
+  end
 
   def page
     params[:page] || 1
