@@ -1,4 +1,4 @@
-Feature: Challenge level shows different UI
+Feature: Challenge level shows different dialogs
 
 Background:
   Given I am on "http://studio.code.org/reset_session"
@@ -6,21 +6,25 @@ Background:
   And I rotate to landscape
   And I wait for the page to fully load
   And I close the instructions overlay if it exists
-  And element ".csf-top-instructions p" contains text "This pig is ruffling my feathers"
-  And I press "challengePrimaryButton"
-  And I wait for the page to fully load
 
-@eyes
-Scenario: Submit a passing solution
-  When I open my eyes to test "challenge level"
-  Then I drag block "7" to block "5"
-  Then I press "runButton"
-  Then I wait until element "#challengeTitle" is visible
-  And element "#challengeTitle" has text "You did it!"
-  Then I press "challengeCancelButton"
-  Then I wait until element ".modal-body" is not visible
-  Then I press "resetButton"
-  Then I drag block "6" to block "2"
-  Then I press "runButton"
-  Then I wait until element "#challengeTitle" is visible
-  And element "#challengeTitle" has text "Challenge Complete!"
+Scenario: Submit passing and perfect solutions
+  Given I wait until element "#challengeTitle" is visible
+  Then element "#challengeTitle" has text "Challenge Puzzle!"
+  Given I press "challengePrimaryButton"
+  And I drag block "7" to block "5"
+  When I press "runButton"
+  And I wait until element "#challengeTitle" is visible
+  Then element "#challengeTitle" has text "You did it!"
+  Given I press "challengeCancelButton"
+  And I wait until element ".modal-body" is not visible
+  And I press "resetButton"
+  And I drag block "6" to block "2"
+  When I press "runButton"
+  And I wait until element "#challengeTitle" is visible
+  Then element "#challengeTitle" has text "Challenge Complete!"
+
+Scenario: Press the skip button
+  Given I press "challengePrimaryButton"
+  When I press "skipButton"
+  And I wait for the page to fully load
+  Then check that I am on "http://studio.code.org/s/allthethings/stage/3/puzzle/1"
