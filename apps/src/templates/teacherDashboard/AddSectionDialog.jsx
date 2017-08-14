@@ -6,7 +6,10 @@ import LoginTypePicker from './LoginTypePicker';
 import EditSectionForm from "./EditSectionForm";
 import PadAndCenter from './PadAndCenter';
 import {sectionShape} from './shapes';
-import {isAddingSection} from './teacherSectionsRedux';
+import {
+  isAddingSection,
+  beginImportRosterFlow
+} from './teacherSectionsRedux';
 
 /**
  * UI for a teacher to add a new class section.  For editing a section see
@@ -14,14 +17,14 @@ import {isAddingSection} from './teacherSectionsRedux';
  */
 class AddSectionDialog extends Component {
   static propTypes = {
-    handleImportOpen: PropTypes.func.isRequired,
     // Provided by Redux
     isOpen: PropTypes.bool.isRequired,
     section: sectionShape,
+    beginImportRosterFlow: PropTypes.func.isRequired,
   };
 
   render() {
-    const {isOpen, section, handleImportOpen} = this.props;
+    const {isOpen, section, beginImportRosterFlow} = this.props;
     const {loginType} = section || {};
     const title = i18n.newSection();
     return (
@@ -36,7 +39,7 @@ class AddSectionDialog extends Component {
           {!loginType &&
             <LoginTypePicker
               title={title}
-              handleImportOpen={handleImportOpen}
+              handleImportOpen={beginImportRosterFlow}
             />
           }
           {loginType &&
@@ -51,4 +54,6 @@ class AddSectionDialog extends Component {
 export default connect(state => ({
   isOpen: isAddingSection(state.teacherSections),
   section: state.teacherSections.sectionBeingEdited,
-}))(AddSectionDialog);
+}), {
+  beginImportRosterFlow
+})(AddSectionDialog);
