@@ -48,6 +48,7 @@
 #  terms_of_service_version :integer
 #  urm                      :boolean
 #  races                    :string(255)
+#  sharing_allowed          :boolean          default(TRUE), not null
 #
 # Indexes
 #
