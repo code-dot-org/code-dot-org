@@ -3,7 +3,7 @@ import {OAuthSectionTypes} from "../../templates/teacherDashboard/shapes";
 import {
   SyncOmniAuthSectionButton,
   READY, IN_PROGRESS, SUCCESS, FAILURE,
-} from './SyncOmniAuthSectionButton';
+} from './SyncOmniAuthSectionControl';
 
 
 export default storybook => {

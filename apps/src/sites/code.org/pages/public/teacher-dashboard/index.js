@@ -10,7 +10,12 @@ import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import { renderSectionsPage, unmountSectionsPage } from './sections';
+import {
+  renderSectionsPage,
+  unmountSectionsPage,
+  renderSyncOauthSectionControl,
+  unmountSyncOauthSectionControl,
+} from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -296,6 +301,17 @@ function main() {
     $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_male};
 
     $scope.bulk_import = {editing: false, students: ''};
+
+    if ($scope.tab === 'manage') {
+      $scope.$on('react-sync-oauth-section-rendered', () => {
+        $scope.section.$promise.then(section =>
+          renderSyncOauthSectionControl({
+            sectionCode: section.code,
+            provider: scriptData.provider
+          }));
+      });
+      $scope.$on('$destroy', unmountSyncOauthSectionControl);
+    }
 
     $scope.edit = function (student) {
       student.editing = true;
