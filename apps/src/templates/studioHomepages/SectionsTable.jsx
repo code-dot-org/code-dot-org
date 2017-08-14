@@ -203,12 +203,14 @@ const SectionsTable = React.createClass({
               </td>
               {!isTeacher && canLeave && (
                 <td style={{...styles.col, ...styles.leaveCol}}>
-                  <Button
-                    style={{marginLeft: 5}}
-                    text={i18n.leaveSection()}
-                    onClick={this.onLeave.bind(this, section.code, section.name)}
-                    color={Button.ButtonColor.gray}
-                  />
+                  {!/^(C|G)-/.test(section.code) &&
+                    <Button
+                      style={{marginLeft: 5}}
+                      text={i18n.leaveSection()}
+                      onClick={this.onLeave.bind(this, section.code, section.name)}
+                      color={Button.ButtonColor.gray}
+                    />
+                  }
                 </td>
               )}
             </tr>
