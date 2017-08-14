@@ -8,6 +8,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
 import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 const styles = {
   main: {
@@ -80,11 +81,11 @@ class AssignToSection extends Component {
     const section = sectionsInfo[sectionIndexToAssign];
 
     let hrefNewSection;
+    const queryParams = queryString.stringify({courseId, scriptId});
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      hrefNewSection = '/home?' + queryString.stringify({courseId, scriptId});
+      hrefNewSection = `/home?${queryParams}`;
     } else {
-      hrefNewSection = `${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
-        queryString.stringify({courseId, scriptId}) + "#/sections";
+      hrefNewSection = pegasus(`/teacher-dashboard?${queryParams}#/sections`);
     }
 
     return (

@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import $ from 'jquery';
 import { SectionLoginType } from '@cdo/apps/util/sharedConstants';
-import queryString from 'query-string';
 import { OAuthSectionTypes } from './shapes';
 
 /**
@@ -41,7 +40,6 @@ const SET_VALID_LOGIN_TYPES = 'teacherDashboard/SET_VALID_LOGIN_TYPES';
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
 const SET_OAUTH_PROVIDER = 'teacherDashboard/SET_OAUTH_PROVIDER';
-const SET_DEFAULT_ASSIGNMENT = 'teacherDashboard/SET_DEFAULT_ASSIGNMENT';
 const SET_SECTIONS = 'teacherDashboard/SET_SECTIONS';
 const UPDATE_SECTION = 'teacherDashboard/UPDATE_SECTION';
 const NEW_SECTION = 'teacherDashboard/NEW_SECTION';
@@ -93,34 +91,6 @@ export const setValidAssignments = (validCourses, validScripts) => ({
   validCourses,
   validScripts
 });
-
-/**
- * Get our query string. Provided as a method so that tests can mock this.
- */
-export function getQueryString_() {
-  return window.location.search;
-}
-
-/**
- * Set the default courseId/scriptId based on query params.
- */
-export const setDefaultAssignment = () => {
-  const query = queryString.parse(exports.getQueryString_());
-  let courseId;
-  let scriptId;
-  if (query.courseId) {
-    courseId = parseInt(query.courseId, 10);
-  }
-  if (query.scriptId) {
-    scriptId = parseInt(query.scriptId, 10);
-  }
-
-  return {
-    type: SET_DEFAULT_ASSIGNMENT,
-    courseId,
-    scriptId
-  };
-};
 
 /**
  * Set the list of sections to display. If `reset` is true, first clear the
@@ -302,8 +272,6 @@ const initialState = {
   saveInProgress: false,
   // Track whether we've async-loaded our section and assignment data
   asyncLoadComplete: false,
-  defaultCourseId: null,
-  defaultScriptId: null,
   // Whether the roster dialog (used to import sections from google/clever) is open.
   isRosterDialogOpen: false,
   // Set of oauth classrooms available for import from a third-party source.
@@ -411,15 +379,6 @@ export default function teacherSections(state=initialState, action) {
       ...state,
       validAssignments,
       primaryAssignmentIds,
-    };
-  }
-
-  if (action.type === SET_DEFAULT_ASSIGNMENT) {
-    const { courseId, scriptId } = action;
-    return {
-      ...state,
-      defaultCourseId: courseId,
-      defaultScriptId: scriptId
     };
   }
 

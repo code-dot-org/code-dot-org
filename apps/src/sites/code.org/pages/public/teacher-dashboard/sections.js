@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import $ from 'jquery';
+import queryString from 'query-string';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
   setValidLoginTypes,
@@ -9,7 +10,7 @@ import teacherSections, {
   setStudioUrl,
   setOAuthProvider,
   asyncLoadSectionData,
-  setDefaultAssignment,
+  newSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
 
@@ -32,8 +33,15 @@ export function renderSectionsPage(data) {
   store.dispatch(setValidGrades(data.valid_grades));
   store.dispatch(setOAuthProvider(data.provider));
   store.dispatch(asyncLoadSectionData());
-  store.dispatch(setDefaultAssignment());
-  console.log('dispatched');
+
+  // Note: this can go away once SECTION_FLOW_2017 is permanent, and we no longer
+  // have teachers editing sections here
+  const query = queryString.parse(window.location.search);
+  let courseId;
+  if (query.courseId) {
+    courseId = parseInt(query.courseId, 10);
+  }
+  store.dispatch(newSection(courseId));
 
   $("#sections-page-angular").hide();
 
