@@ -93,7 +93,7 @@ class OwnedSections extends React.Component {
     this.setState({rosterDialogOpen: false});
   };
 
-  handleImport = courseId => {
+  handleImport = (courseId, courseName) => {
     const {
       importClassroomStarted,
       asyncLoadSectionData,
@@ -102,7 +102,7 @@ class OwnedSections extends React.Component {
 
     importClassroomStarted();
     const url = urlByProvider[this.provider];
-    $.getJSON(url, { courseId }).then(importedSection => {
+    $.getJSON(url, { courseId, courseName }).then(importedSection => {
       this.setState({rosterDialogOpen: false});
       asyncLoadSectionData()
         .then(() => beginEditingSection(importedSection.id));
