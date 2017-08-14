@@ -227,7 +227,12 @@ class GameController {
       this.player.updateMovement();
     }
     this.levelView.update();
-    this.checkSolution();
+
+    // Check for completion every frame for "event" levels. For procedural
+    // levels, only check completion after the player has run all commands.
+    if (this.levelData.isEventLevel || this.player.queue.state > 1) {
+      this.checkSolution();
+    }
   }
 
   addCheatKeys() {
