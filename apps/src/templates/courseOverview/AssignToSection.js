@@ -7,6 +7,7 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import ConfirmAssignment from './ConfirmAssignment';
+import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
 
 const styles = {
   main: {
@@ -79,6 +80,14 @@ class AssignToSection extends Component {
     const { sectionIndexToAssign, errorString } = this.state;
     const section = sectionsInfo[sectionIndexToAssign];
 
+    let hrefNewSection;
+    if (experiments.isEnabled(SECTION_FLOW_2017)) {
+      hrefNewSection = '/home?' + queryString.stringify({courseId, scriptId});
+    } else {
+      hrefNewSection = `${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
+        queryString.stringify({courseId, scriptId}) + "#/sections";
+    }
+
     return (
       <div style={styles.main}>
         <DropdownButton
@@ -88,8 +97,7 @@ class AssignToSection extends Component {
           {[].concat(
             <a
               key={-1}
-              href={`${window.dashboard.CODE_ORG_URL}/teacher-dashboard?` +
-                queryString.stringify({courseId, scriptId}) + "#/sections"}
+              href={hrefNewSection}
             >
               {i18n.newSectionEllipsis()}
             </a>

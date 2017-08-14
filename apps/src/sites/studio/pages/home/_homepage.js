@@ -12,7 +12,8 @@ import {getStore, registerReducers} from '@cdo/apps/redux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 import teacherSections, {
   setValidGrades,
-  setOAuthProvider
+  setOAuthProvider,
+  setDefaultAssignment
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 $(document).ready(showHomepage);
@@ -31,6 +32,7 @@ function showHomepage() {
   const store = getStore();
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setOAuthProvider(homepageData.provider));
+  store.dispatch(setDefaultAssignment());
 
   ReactDOM.render (
     <Provider store={store}>
