@@ -2,9 +2,7 @@ import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
 // Use wildcard import so that we can stub
-import * as teacherSectionsRedux from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-const reducer = teacherSectionsRedux.default;
-const {
+import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
   __testInterface__,
@@ -13,7 +11,6 @@ const {
   setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
-  setDefaultAssignment,
   setSections,
   updateSection,
   newSection,
@@ -34,7 +31,7 @@ const {
   cancelImportRosterFlow,
   importRoster,
   isRosterDialogOpen,
-} = teacherSectionsRedux;
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const {
@@ -267,50 +264,6 @@ describe('teacherSectionsRedux', () => {
       const primaryIds = nextState.primaryAssignmentIds;
       const scriptInCourse = validScripts[4];
       assert(!primaryIds.includes(scriptInCourse.id));
-    });
-  });
-
-  describe('setDefaultAssignment', () => {
-    afterEach(() => {
-      if (teacherSectionsRedux.getQueryString_.restore) {
-        teacherSectionsRedux.getQueryString_.restore();
-      }
-    });
-
-    it('sets defaultCourseId if courseId query param exists', () => {
-      sinon.stub(teacherSectionsRedux, 'getQueryString_').callsFake(() => 'courseId=30');
-
-      const action = setDefaultAssignment();
-      assert.strictEqual(action.courseId, 30);
-      assert.strictEqual(action.scriptId, undefined);
-
-      const state = reducer(initialState, action);
-      assert.strictEqual(state.defaultCourseId, 30);
-      assert.strictEqual(state.defaultScriptId, undefined);
-    });
-
-    it('sets defaultScriptId if courseId query param exists', () => {
-      sinon.stub(teacherSectionsRedux, 'getQueryString_').callsFake(() => 'scriptId=8');
-
-      const action = setDefaultAssignment();
-      assert.strictEqual(action.courseId, undefined);
-      assert.strictEqual(action.scriptId, 8);
-
-      const state = reducer(initialState, action);
-      assert.strictEqual(state.defaultCourseId, undefined);
-      assert.strictEqual(state.defaultScriptId, 8);
-    });
-
-    it('sets both if courseId and scriptId query params exist', () => {
-      sinon.stub(teacherSectionsRedux, 'getQueryString_').callsFake(() => 'courseId=30&scriptId=112');
-
-      const action = setDefaultAssignment();
-      assert.strictEqual(action.courseId, 30);
-      assert.strictEqual(action.scriptId, 112);
-
-      const state = reducer(initialState, action);
-      assert.strictEqual(state.defaultCourseId, 30);
-      assert.strictEqual(state.defaultScriptId, 112);
     });
   });
 
