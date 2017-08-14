@@ -141,13 +141,9 @@ module LevelsHelper
     if @script_level
       view_options(
         stage_position: @script_level.stage.absolute_position,
-        level_position: @script_level.position
+        level_position: @script_level.position,
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user)
       )
-      if current_user
-        view_options(
-          next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user)
-        )
-      end
     end
 
     if @script
