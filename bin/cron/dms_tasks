@@ -14,15 +14,6 @@ require 'cdo/slack'
 REPLICATION_TASK_TYPE = 'reload-target'.freeze
 SECONDS_PER_MINUTE = 60
 
-# A hash of AWS Redshift DB schemas to the groups allowed to access it.
-SCHEMA_PERMISSIONS = {
-  analysis: ['admin', 'reader', 'reader_pii'],
-  dashboard_production: ['admin', 'reader', 'reader_pii'],
-  dashboard_production_pii: ['admin', 'reader_pii'],
-  pegasus: ['admin', 'reader', 'reader_pii'],
-  pegasus_pii: ['admin', 'reader_pii']
-}.freeze
-
 # @param task_name [String] The name of the task.
 # @param task_execution_time_sec [Integer] The most recent execution time (in seconds) for the task.
 # @return [Boolean] Whether the task should be run.
