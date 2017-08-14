@@ -30,6 +30,7 @@ import reducer, {
   cancelImportRosterFlow,
   importRoster,
   isRosterDialogOpen,
+  oauthProvider,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
@@ -182,9 +183,11 @@ describe('teacherSectionsRedux', () => {
 
   describe('setOAuthProvider', () => {
     it('sets oauth provider', () => {
-      const action = setOAuthProvider('clever');
-      const nextState = reducer(initialState, action);
-      assert.equal(nextState.provider, 'clever');
+      expect(oauthProvider(getState())).to.be.null;
+      store.dispatch(setOAuthProvider('clever'));
+      expect(oauthProvider(getState())).to.equal('clever');
+      store.dispatch(setOAuthProvider('google_classroom'));
+      expect(oauthProvider(getState())).to.equal('google_classroom');
     });
   });
 
