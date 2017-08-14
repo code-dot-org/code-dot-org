@@ -82,10 +82,11 @@ class ApiController < ApplicationController
 
   def import_google_classroom
     course_id = params[:courseId].to_s
+    course_name = params[:courseName].to_s
 
     query_google_classroom_service do |service|
       students = service.list_course_students(course_id).students || []
-      section = GoogleClassroomSection.from_service(course_id, current_user.id, students)
+      section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
 
       render json: section.summarize
     end
