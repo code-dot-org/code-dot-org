@@ -66,9 +66,10 @@ const styles = {
   },
 };
 
-// While this is named a StudentTopCourse, it really refers to the most recent course or script in which the student has progress.
+// While this is named TopCourse, it really refers to the most recent course
+// or script in which the student or teacher has progress.
 
-const StudentTopCourse = React.createClass({
+const TopCourse = React.createClass({
   propTypes: {
     isRtl: React.PropTypes.bool.isRequired,
     assignableName: React.PropTypes.string.isRequired,
@@ -111,4 +112,4 @@ const StudentTopCourse = React.createClass({
   }
 });
 
-export default StudentTopCourse;
+export default TopCourse;
