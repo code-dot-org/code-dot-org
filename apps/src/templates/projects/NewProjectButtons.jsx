@@ -108,13 +108,12 @@ const styles = {
     border: '1px solid ' + color.lighter_gray,
     borderRadius: 2,
     float: 'left',
-    marginLeft: 10,
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center'
   },
   tilePadding: {
-    marginRight: 18,
+    marginRight: 35,
   },
   thumbnail: {
     borderTopLeftRadius: 2,

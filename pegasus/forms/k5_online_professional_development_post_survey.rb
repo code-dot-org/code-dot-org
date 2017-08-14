@@ -1,4 +1,6 @@
-class K5OnlineProfessionalDevelopmentPostSurvey
+require_relative './form'
+
+class K5OnlineProfessionalDevelopmentPostSurvey < Form
   AGREEMENT_ANSWERS = (-2..2).map(&:to_s)
   SCALE_ANSWERS = (1..10).map(&:to_s)
   SIMPLE_ANSWERS = %w(

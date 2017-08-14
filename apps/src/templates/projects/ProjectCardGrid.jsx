@@ -14,8 +14,7 @@ const styles = {
     width: styleConstants['content-width']
   },
   link: {
-    color: color.light_teal,
-    paddingLeft: 30
+    color: color.light_teal
   }
 };
 

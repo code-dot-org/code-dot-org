@@ -177,8 +177,8 @@ var TopInstructions = React.createClass({
     })).isRequired,
     hasUnseenHint: React.PropTypes.bool.isRequired,
     showNextHint: React.PropTypes.func.isRequired,
-    hasContainedLevels: React.PropTypes.bool.isRequired,
-    isEmbedView: React.PropTypes.bool.isRequired,
+    hasContainedLevels: React.PropTypes.bool,
+    isEmbedView: React.PropTypes.bool,
     isMinecraft: React.PropTypes.bool.isRequired,
     aniGifURL: React.PropTypes.string,
     height: React.PropTypes.number.isRequired,
@@ -199,7 +199,7 @@ var TopInstructions = React.createClass({
     inputOutputTable: React.PropTypes.arrayOf(
       React.PropTypes.arrayOf(React.PropTypes.number)
     ),
-    noVisualization: React.PropTypes.bool.isRequired,
+    noVisualization: React.PropTypes.bool,
 
     ttsInstructionsUrl: React.PropTypes.string,
     ttsMarkdownInstructionsUrl:  React.PropTypes.string,
@@ -210,6 +210,12 @@ var TopInstructions = React.createClass({
     setInstructionsRenderedHeight: React.PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: React.PropTypes.func.isRequired,
     showInstructionsDialog: React.PropTypes.func.isRequired,
+  },
+
+  defaultProps: {
+    hasContainedLevels: false,
+    isEmbedView: false,
+    noVisualization: false,
   },
 
   getInitialState() {

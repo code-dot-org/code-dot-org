@@ -633,6 +633,7 @@
   "teacherPanel": "Teacher Panel",
   "text": "Text",
   "textVariable": "text",
+  "thumbnailWarning": "Note: You must finish running your app to create a thumbnail, before you can publish your app.",
   "toggleBlocksErrorMsg": "You need to correct an error in your program before it can be shown as blocks.",
   "tooManyBlocks": "too many blocks",
   "tooManyBlocksMsg": "This puzzle can be solved with <x id='START_SPAN'/><x id='END_SPAN'/> blocks.",
