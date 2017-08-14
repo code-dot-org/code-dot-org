@@ -1201,7 +1201,8 @@ function resizePinnedBelowVisualizationArea() {
   var possibleBelowVisualizationElements = [
     'playSpaceHeader',
     'spelling-table-wrapper',
-    'gameButtons'
+    'gameButtons',
+    'skipButton',
   ];
   possibleBelowVisualizationElements.forEach(id => {
     let element = document.getElementById(id);
