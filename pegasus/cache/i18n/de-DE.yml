@@ -1110,6 +1110,11 @@
   carousel_heading_webpages: Lernen Sie, Webseiten zu erstellen
   carousel_heading_robots: Lernen Sie Programmieren mit Robotern
   carousel_heading_ide: Bei Lehrern beliebte Plattformen
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Hinweise für Pädagogen
   teach_led_lesson_plans: Unterrichtspläne von anderen Lehrern
   learn_footer_all_tutorials: Schauen Sie sich die <a href="https://code.org/educate/allhourofcode">umfangreiche
@@ -1120,6 +1125,8 @@
   more_resources_educators: Weitere Quellen für Lehrer und Pädagogen
   beyond_submission: Sie möchten eine Anleitung für „￼Erweitern Sie Ihr Wissen“ einreichen?
     Hier finden Sie die Kriterien und das Teilnahmeformular.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: Teilnehmer
   teachers_notes: Lehrer-Anmerkungen
   teachers_notes_hoc: 'Lehrer: Lesen Sie hier wichtige Hinweise für Pädagogen'
@@ -1983,7 +1990,9 @@
   playlab_shortcode: spielen
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Kurse
+  header_course_catalog: Course Catalog
   header_project_gallery: Projekt Galerie
   header_sections: Sektionen
   header_professional_learning: Professionelles Lernen
@@ -2024,13 +2033,4 @@
   user_header_settings: Mein Account
   user_header_logout: Abmelden
   user_header_signin: Anmelden
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections
