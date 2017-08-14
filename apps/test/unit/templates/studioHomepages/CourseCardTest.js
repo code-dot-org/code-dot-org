@@ -13,6 +13,7 @@ describe('CourseCard', () => {
         description={courses[0].description}
         link={courses[0].link}
         isRtl={false}
+        left={true}
       />
     );
     expect(wrapper).to.containMatchingElement(
@@ -41,6 +42,7 @@ describe('CourseCard', () => {
         description={courses[0].description}
         link={courses[0].link}
         isRtl={true}
+        left={true}
       />
     );
     expect(wrapper).to.containMatchingElement(
