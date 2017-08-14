@@ -7,15 +7,20 @@ if ENV['CI']
   system('git config --global user.name "CircleCI"')
 end
 
-def circle_yml_changed
-  system('git fetch')
-  !`git diff ...origin/#{GitUtils.pr_base_branch_or_default_no_origin} -- circle.yml`.empty?
+def merge_branch
+  "origin/#{GitUtils.pr_base_branch_or_default_no_origin}"
 end
 
-puts "Merging base branch #{GitUtils.pr_base_branch_or_default_no_origin}"
+def circle_yml_changed
+  system('git fetch')
+  !`git diff ...#{merge_branch} -- circle.yml`.empty?
+end
+
+sha = GitUtils.git_revision_branch(merge_branch)
+puts "Merging base branch #{merge_branch} #{sha}"
 
 raise "circle.yml has changed. Please merge latest staging into your branch and try again." if circle_yml_changed
 
-system("git merge --no-edit origin/#{GitUtils.pr_base_branch_or_default_no_origin}")
+system("git merge --no-edit #{merge_branch}")
 
 exit($?.exitstatus)

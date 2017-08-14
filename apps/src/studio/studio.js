@@ -2354,7 +2354,7 @@ Studio.clearEventHandlersKillTickLoop = function () {
   Studio.eventHandlers.forEach(function (handler) {
     var cmd = handler.cmdQueue[0];
 
-    if (cmd && cmd.opts.waitTimeout && !cmd.opts.complete) {
+    if (cmd && cmd.opts && cmd.opts.waitTimeout && !cmd.opts.complete) {
       // Note: not calling waitCallback() or setting complete = true
       window.clearTimeout(cmd.opts.waitTimeout);
     }
@@ -2791,7 +2791,7 @@ Studio.displayFeedback = function () {
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
       // allow users to save freeplay levels to their gallery (impressive non-freeplay levels are autosaved)
-      saveToGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
+      saveToLegacyGalleryUrl: level.freePlay && Studio.response && Studio.response.save_to_gallery_url,
       // save to the project gallery instead of the legacy gallery
       saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: level.disableSaveToGallery || !isSignedIn,
@@ -4295,9 +4295,9 @@ Studio.callCmd = function (cmd) {
       studioApp().highlight(cmd.id);
       Studio.moveSingle({
         spriteIndex: Studio.protagonistSpriteIndex || 0,
-        dir: turnRight90(turnRight90(Studio.lastMoveSingleDir)),
+        dir: Studio.lastMoveSingleDir,
+        backward: true
       });
-      Studio.lastMoveSingleDir = turnRight90(turnRight90(Studio.lastMoveSingleDir));
       break;
     case 'turnRight':
       studioApp().highlight(cmd.id);
@@ -5865,6 +5865,8 @@ Studio.getSkin = function () {
  * @param {Object} opts
  * @param {Direction} opts.dir - The direction in which the sprite should move.
  * @param {number} opts.spriteIndex
+ * @param {boolean} opts.backward - whether the sprite should move toward
+ *        (default) or away from the given direction
  */
 Studio.moveSingle = function (opts) {
   var sprite = Studio.sprite[opts.spriteIndex];
@@ -5889,6 +5891,11 @@ Studio.moveSingle = function (opts) {
       break;
   }
 
+  if (opts.backward) {
+    deltaX *= -1;
+    deltaY *= -1;
+  }
+
   var projectedX = sprite.x + deltaX;
   var projectedY = sprite.y + deltaY;
 
@@ -5911,10 +5918,10 @@ Studio.moveSingle = function (opts) {
   if (skin.gridAlignedMovement) {
     if (wallCollision || playspaceEdgeCollision) {
       sprite.addAction(new GridMoveAndCancel(
-          deltaX, deltaY, skin.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
     } else {
       sprite.addAction(new GridMove(
-          deltaX, deltaY, skin.slowExecutionFactor));
+          deltaX, deltaY, skin.slowExecutionFactor, opts.backward));
     }
 
     Studio.yieldExecutionTicks += (1 + Studio.gridAlignedExtraPauseSteps);

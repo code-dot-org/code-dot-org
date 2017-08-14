@@ -39,8 +39,15 @@
       <button class="saved-to-gallery" disabled>
         <%= msg.savedToGallery() %>
       </button>
-    <% } else if ((options.saveToProjectGallery || options.saveToGalleryUrl) && !options.disableSaveToGallery) { %>
-      <button id="save-to-gallery-button" class="launch">
+    <% } else if (options.saveToProjectGallery && !options.disableSaveToGallery) { %>
+      <button id="save-to-project-gallery-button">
+        <%= msg.save() %>
+      </button>
+      <button id="publish-to-project-gallery-button">
+          <%= msg.publish() %>
+      </button>
+    <% } else if (options.saveToLegacyGalleryUrl && !options.disableSaveToGallery) { %>
+      <button id="save-to-legacy-gallery-button">
         <%= msg.saveAndPublish() %>
       </button>
     <% } %>

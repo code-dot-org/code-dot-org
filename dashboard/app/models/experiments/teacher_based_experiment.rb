@@ -39,10 +39,10 @@ class TeacherBasedExperiment < Experiment
       user_id = section.user_id
       sections = [section]
     end
-    user_id %= 100
+    user_id_modulus = user_id % 100
 
-    return ((user_id >= min_user_id && user_id < max_user_id) ||
-        user_id < overflow_max_user_id) &&
+    return ((user_id_modulus >= min_user_id && user_id_modulus < max_user_id) ||
+        user_id_modulus < overflow_max_user_id) &&
       sections.any? do |s|
         (earliest_section_at.nil? || s.first_activity_at.nil? ||
           earliest_section_at < s.first_activity_at) &&

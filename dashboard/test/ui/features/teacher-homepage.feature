@@ -11,6 +11,7 @@ Feature: Using the teacher homepage sections feature
     Then I should see the new section dialog
 
     When I select picture login
+    And I scroll the save button into view
     And I press the save button to create a new section
     And I wait for the dialog to close
     Then I should see the section table

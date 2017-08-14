@@ -15,6 +15,7 @@ require_relative '../../deployment'
 require 'cdo/only_one'
 require 'cdo/chat_client'
 require 'cdo/user_agent_parser'
+require 'retryable'
 CDO.log.level = Logger::WARN
 
 SECONDS_PER_MSEC = 1000
@@ -149,7 +150,9 @@ class Monitor
   def fetch
     CDO.log.info 'Fetching...'
     reader = Slog::Reader.new(secret: CDO.logentries_secret, hosts: @hosts)
-    reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
+    Retryable.retryable(tries: 3, on: OpenURI::HTTPError) do
+      reader.get(filter: 'tag=activity_start OR tag=activity_finish', start: @start, end: @finish)
+    end
   end
 end
 

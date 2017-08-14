@@ -1,8 +1,5 @@
 import {assert, expect} from '../../../util/configuredChai';
-import {
-  throwOnConsoleErrors,
-  throwOnConsoleWarnings
-} from '../../../util/testUtils';
+import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import React from 'react';
 import {shallow} from 'enzyme';
 import {
@@ -91,7 +88,6 @@ function withSectionFlow2017(block) {
 }
 
 describe('SectionRow', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   describe('name column', () => {

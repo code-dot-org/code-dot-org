@@ -7,43 +7,7 @@ import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import Notification from '@cdo/apps/templates/Notification';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
-
-const courses = [
-  {
-    title: "Course 1",
-    description: "Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course1",
-  },
-  {
-    title: "Course 2",
-    description: "Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course2",
-  },
-];
-
-const moreCourses = [
-  ...courses,
-  {
-    title: "Course 3",
-    description: "Start with Course 3 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course3",
-  },
-  {
-    title: "Course 4",
-    description: "Start with Course 4 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course4",
-  },
-  {
-    title: "Course 5",
-    description: "Start with Course 5 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course5",
-  },
-  {
-    title: "Course 6",
-    description: "Start with Course 6 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course6",
-  },
-];
+import { courses, moreCourses } from './homepagesTestData';
 
 describe('RecentCourses', () => {
   describe('as a teacher', () => {
@@ -69,7 +33,6 @@ describe('RecentCourses', () => {
           </ContentContainer>
         </div>
       );
-
     });
 
     it('shows only cards for each course when there are 4 or less courses', () => {
@@ -112,6 +75,7 @@ describe('RecentCourses', () => {
                 buttonText="Find a course"
                 buttonLink="/courses"
                 dismissible={false}
+                isRtl={false}
               />
             </div>
           </ContentContainer>
@@ -180,6 +144,7 @@ describe('RecentCourses', () => {
                 buttonText="Find a course"
                 buttonLink="/courses"
                 dismissible={false}
+                isRtl={false}
               />
             </div>
           </ContentContainer>
