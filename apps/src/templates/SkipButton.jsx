@@ -19,7 +19,11 @@ class SkipButton extends React.Component {
       return null;
     }
     return (
-      <button id="skipButton" className={LAUNCH_CLASS} onClick={this.onClick.bind(this)}>
+      <button
+        id="skipButton"
+        className={LAUNCH_CLASS}
+        onClick={this.onClick.bind(this)}
+      >
         {msg.skipPuzzle()}
       </button>
     );

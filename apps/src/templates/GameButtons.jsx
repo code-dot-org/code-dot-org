@@ -63,20 +63,19 @@ ResetButton.displayName = 'ResetButton';
  * set of children that we expect to be additional buttons.
  */
 export const UnconnectedGameButtons = props => (
-  <ProtectedStatefulDiv
-    id="gameButtons"
-    style={styles.main}
-  >
-    {!props.playspacePhoneFrame &&
-    <RunButton hidden={props.hideRunButton}/>
-    }
-    {!props.playspacePhoneFrame &&
-    <ResetButton />
-    }
+  <div>
+    <ProtectedStatefulDiv id="gameButtons" style={styles.main}>
+      {!props.playspacePhoneFrame &&
+        <RunButton hidden={props.hideRunButton}/>
+      }
+      {!props.playspacePhoneFrame &&
+        <ResetButton />
+      }
+      {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
+      {props.children}
+    </ProtectedStatefulDiv>
     <SkipButton />
-    {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
-    {props.children}
-  </ProtectedStatefulDiv>
+  </div>
 );
 UnconnectedGameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
