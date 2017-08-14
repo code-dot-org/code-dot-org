@@ -30,12 +30,16 @@ var styles = {
 const MarkdownInstructions = React.createClass({
   propTypes: {
     renderedMarkdown: React.PropTypes.string.isRequired,
-    noInstructionsWhenCollapsed: React.PropTypes.bool.isRequired,
+    noInstructionsWhenCollapsed: React.PropTypes.bool,
     hasInlineImages: React.PropTypes.bool,
     onResize: React.PropTypes.func,
     inTopPane: React.PropTypes.bool,
     isBlockly: React.PropTypes.bool,
     showImageDialog: React.PropTypes.func,
+  },
+
+  defaultProps: {
+    noInstructionsWhenCollapsed: false,
   },
 
   /**
