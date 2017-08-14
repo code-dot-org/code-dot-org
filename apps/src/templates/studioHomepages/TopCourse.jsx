@@ -66,7 +66,8 @@ const styles = {
   },
 };
 
-// While this is named TopCourse, it really refers to the most recent course or script in which the student or teacher has progress.
+// While this is named TopCourse, it really refers to the most recent course
+// or script in which the student or teacher has progress.
 
 const TopCourse = React.createClass({
   propTypes: {
