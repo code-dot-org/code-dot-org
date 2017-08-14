@@ -35,8 +35,6 @@ const styles = {
 class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
-    defaultCourseId: PropTypes.number,
-    defaultScriptId: PropTypes.number,
     queryStringOpen: PropTypes.string,
 
     // redux provided
@@ -52,6 +50,8 @@ class OwnedSections extends React.Component {
     beginEditingNewSection: PropTypes.func.isRequired,
     beginEditingSection: PropTypes.func.isRequired,
     asyncLoadSectionData: PropTypes.func.isRequired,
+    defaultCourseId: PropTypes.number,
+    defaultScriptId: PropTypes.number,
   };
 
   state = {
@@ -66,9 +66,9 @@ class OwnedSections extends React.Component {
 
   componentDidMount() {
     const {
-      defaultCourseId,
-      defaultScriptId,
       queryStringOpen,
+      defaultCourseId,
+      defaultScriptId
     } = this.props;
 
     // If we have a default courseId and/or scriptId, we want to start with our
@@ -198,6 +198,8 @@ export default connect(state => ({
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
+  defaultCourseId:state.teacherSections.defaultCourseId,
+  defaultScriptId:state.teacherSections.defaultScriptId,
 }), {
   newSection,
   beginEditingNewSection,

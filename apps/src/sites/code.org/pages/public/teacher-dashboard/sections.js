@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import queryString from 'query-string';
 import $ from 'jquery';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
@@ -10,6 +9,7 @@ import teacherSections, {
   setStudioUrl,
   setOAuthProvider,
   asyncLoadSectionData,
+  setDefaultAssignment,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import oauthClassroom from '@cdo/apps/templates/teacherDashboard/oauthClassroomRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
@@ -33,25 +33,14 @@ export function renderSectionsPage(data) {
   store.dispatch(setValidGrades(data.valid_grades));
   store.dispatch(setOAuthProvider(data.provider));
   store.dispatch(asyncLoadSectionData());
-
-  const query = queryString.parse(window.location.search);
-  let defaultCourseId;
-  let defaultScriptId;
-  if (query.courseId) {
-    defaultCourseId = parseInt(query.courseId, 10);
-  }
-  if (query.scriptId) {
-    defaultScriptId = parseInt(query.scriptId, 10);
-  }
+  store.dispatch(setDefaultAssignment());
+  console.log('dispatched');
 
   $("#sections-page-angular").hide();
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionsPage
-        defaultCourseId={defaultCourseId}
-        defaultScriptId={defaultScriptId}
-      />
+      <SectionsPage/>
     </Provider>,
     element
   );
