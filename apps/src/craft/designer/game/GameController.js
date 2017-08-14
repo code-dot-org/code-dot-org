@@ -1344,7 +1344,71 @@ class GameController {
     }
     // check the final state to see if its solved
     if (this.levelModel.isSolved()) {
-      this.endLevel(true);
+      const player = this.levelModel.player;
+      if (this.checkHouseBuiltEndAnimation()) {
+        this.resultReported = true;
+        var houseBottomRight = this.levelModel.getHouseBottomRight();
+        var inFrontOfDoor = [houseBottomRight[0] - 1, houseBottomRight[1] + 2];
+        var bedPosition = [houseBottomRight[0], houseBottomRight[1]];
+        var doorPosition = [houseBottomRight[0] - 1, houseBottomRight[1] + 1];
+        this.levelModel.moveTo(inFrontOfDoor);
+        this.levelView.playSuccessHouseBuiltAnimation(
+          player.position,
+          player.facing,
+          player.isOnBlock,
+          this.levelModel.houseGroundToFloorBlocks(houseBottomRight),
+          [bedPosition, doorPosition],
+          () => {
+            this.endLevel(true);
+          },
+          () => {
+            this.levelModel.destroyBlock(bedPosition);
+            this.levelModel.destroyBlock(doorPosition);
+            this.levelModel.computeShadingPlane();
+            this.levelModel.computeFowPlane();
+            this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+            this.levelView.updateFowPlane(this.levelModel.fowPlane);
+          }
+        );
+      } else if (this.checkMinecartLevelEndAnimation()) {
+        this.resultReported = true;
+        this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
+          () => { this.endLevel(true); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
+      } else if (this.checkTntAnimation()) {
+        this.resultReported = true;
+        this.levelView.scaleShowWholeWorld(() => {});
+        var tnt = this.levelModel.getTnt();
+        var wasOnBlock = player.isOnBlock;
+        this.levelView.playDestroyTntAnimation(player.position, player.facing, player.isOnBlock, this.levelModel.getTnt(), this.levelModel.shadingPlane,
+          () => {
+            for (var i in tnt) {
+              if (tnt[i].x === this.levelModel.player.position.x && tnt[i].y === this.levelModel.player.position.y) {
+                this.levelModel.player.isOnBlock = false;
+              }
+              var surroundingBlocks = this.levelModel.getAllBorderingPositionNotOfType(tnt[i], "tnt");
+              this.levelModel.destroyBlock(tnt[i]);
+              for (var b = 1; b < surroundingBlocks.length; ++b) {
+                if (surroundingBlocks[b][0]) {
+                  this.destroyBlockWithoutPlayerInteraction(surroundingBlocks[b][1]);
+                }
+              }
+            }
+            if (!player.isOnBlock && wasOnBlock) {
+              this.levelView.playPlayerJumpDownVerticalAnimation(player.position, player.facing);
+            }
+            this.levelModel.computeShadingPlane();
+            this.levelModel.computeFowPlane();
+            this.levelView.updateShadingPlane(this.levelModel.shadingPlane);
+            this.levelView.updateFowPlane(this.levelModel.fowPlane);
+            this.delayBy(200, () => {
+              this.levelView.playSuccessAnimation(player.position, player.facing, player.isOnBlock, () => {
+                this.endLevel(true);
+              });
+            });
+          });
+      } else {
+        this.endLevel(true);
+      }
     }
     // check the final state to see if its failed
     if (this.levelModel.isFailed()) {
