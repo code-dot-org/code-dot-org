@@ -1,7 +1,6 @@
 import sinon from 'sinon';
 import { assert, expect } from '../../../util/configuredChai';
 import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/redux';
-// Use wildcard import so that we can stub
 import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
