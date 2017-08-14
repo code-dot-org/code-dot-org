@@ -64,6 +64,9 @@
   puzzle: "پازل"
   trophies: "جایزها"
   courses: "مراحل"
+  courses_page:
+    title_student: "در استودیو ی کد یاد بگیرید"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "فعالیت کلاسی"
   of: "از"
   more: "بیشتر"
@@ -283,7 +286,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "مراحل"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support

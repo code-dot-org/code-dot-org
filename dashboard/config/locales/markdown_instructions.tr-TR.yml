@@ -12080,6 +12080,100 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      CSD U5 Pizza 2_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        When people work
+        with data, they know to leave off answers that don't make sense, and that
+        some answers, such as "peppers", "pepppers" and "green peppers", actually
+        meant the same thing. People also put everything that has been misspelled
+        into the correct category. Computers don't know how to do this, so we have
+        to clean the data before the computer is able to use it.\r
+        \r
+        This version
+        of the app has a second column for data to be cleaned.\r
+        \r
+        ## Do this\r
+        *
+        Click "Run" to see the new list of answers to be cleaned.\r
+        * Click on
+        each answer that needs to be cleaned and correct it so that the computer will
+        chart it properly. (You may want to delete some answers entirely.)\r
+        * When
+        you are finished, click "Show Chart" to see the new chart of cleaned answers.
+      CSD U5 Pizza_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        The pizza party data
+        has been put into an app for you, and the answers from another class have
+        been added.  Because this is an app, we can automate the creation of the bar
+        chart from the given data.\r
+        \r
+        ## Do this\r
+        * Click "Run" to see the
+        list of answers that the classes have given.\r
+        * Discuss with a partner what
+        you think the chart of this data will look like.\r
+        * Click "Show Chart"
+        to see for yourself.
+      CSD U5 binary 1_markdown_instruction: |-
+        # 5-Bit Number\r
+        \r
+        When you only
+        had four bits, the highest number that you could make was fifteen.  Now you'll
+        have a chance to work with more bits to make higher numbers.\r
+        \r
+        In this
+        activity, the dots are replaced with numbers, but you still add up everything
+        that's showing to see what number the binary code stands for.  The left-most
+        bit doesn't have a number yet, so you'll have to give it one.\r
+        \r
+        ##
+        Do this\r
+        \r
+        * Click on the bits to turn them on and off, and see the different
+        numbers you can make.\r
+        * Decide what number you want the left most bit to
+        stand for, then click "Edit" to change its value.\r
+        * Once you've decided
+        on its value, try to make the following numbers: 16, 27, 31
+      CSD U5 binary 2_markdown_instruction: |-
+        # 6-Bit Number\r
+        \r
+        For this widget,
+        you'll need to put in the values for all the different bits.\r
+        \r
+        ## Do
+        this\r
+        \r
+        * Click the "Edit" button, then type your values directly into
+        the squares.\r
+        * Once you've decided the value for every bit, the "Save"
+        button.\r
+        * With your new system, make the following numbers: 32, 41, 63
+      CSD U5 binary 3_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers from four to eight bits.  You can use
+        it to try to find the three world records encoded in the binary string below.  The
+        answers are in order in the string.\r
+        \r
+        1. Most canned drinks opened by
+        a parrot in one minute.\r
+        2. Most ice cream scoops balanced on a cone.\r
+        3.
+        Most number of people lifted and thrown in two minutes.\r
+        \r
+        100011 1111001
+        1100\r
+        \r
+        # Do this\r
+        * Try to decode the three numbers from a the binary
+        string\r
+        * Discuss your answers with your partner.\r
+         * Was there any other
+        information you need to be certain your numbers are correct?
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Bunu Yap\r
         \r
@@ -53421,10 +53515,9 @@
             <title
         name="YPOS">???</title>\r
             </block></xml>
-      course3_bee_debugging_challenge1_markdown_instruction: |-
-        Watch how the bee gets
-        the nectar. Can you use the same kind of pattern to help the bee make all
-        of the honey?
+      course3_bee_debugging_challenge1_markdown_instruction: Arıların nasıl nektar
+        topladığını izle. Benzer deseni kullanarak arıların bütün balı yapmasına yardım
+        edebilir misin?
       course3_bee_functions_challenge1_markdown_instruction: Bu meydan okumada tek
         başınasın. Göründüğünden daha zor olabilir!
       course3_bee_functions_challenge2_markdown_instruction: Bu meydan okumada tek
@@ -53449,9 +53542,9 @@
         amacıyla bir döngü içerisinde 'remove1' komutunu kullan.
       course3_maze_debugging_challenge1_markdown_instruction: '*"Ben sadece bir çember
         içinde mi dolaşıyorum?"*'
-      course3_maze_debugging_challenge2_markdown_instruction: |-
-        *"If I turn too often,
-        I might get dizzy! Help me reach the pig with only four `turn` commands."*
+      course3_maze_debugging_challenge2_markdown_instruction: '* "Çok sık dönersem,
+        başım dönebilir! Sadece dört dönüş komutu ile domuza ulaşmama yardım et."
+        *'
       course3_maze_until_challenge1_markdown_instruction: |-
         İpucu yok, sadece meydan okuma.
         Zombiyi ayçiçeğine götür.\r
@@ -53561,9 +53654,8 @@
         \r
         ![](https://images.code.org/6d79b5f8291bd8e11c427bff25f423c2-image-1467935497388.gif)
       courseA_artist_loops4_markdown_instruction: |-
-        Now, use a <xml><block type="controls_repeat_simplified_dropdown"><title
-        name="TIMES" config="2-6">5</title></block></xml> loop to draw this line
-        five times!\r
+        Şimdi, beş kez bu çizgiyi çizmek için bir tane <xml><block type="controls_repeat_simplified_dropdown"><title
+        name="TIMES" config="2-6">5</title></block></xml> döngüsünü kullan!\r
         \r
         ![](https://images.code.org/b2bc7f52ffdac2ad0d8e7c2d798c24df-image-1501875818062.gif)
       courseA_artist_loops5_markdown_instruction: |-
@@ -53588,14 +53680,11 @@
         \r
         ![](https://images.code.org/9d36df1afb6a738ba7bcff8734403ff3-image-1498063282074.gif)
       courseA_artist_loops_challenge1_markdown_instruction: |-
-        You can use a loop to
-        draw many lines in a row.\r
+        Bir satırda bir çok çizgi çizmek için bir döngü kullanabilirsin .\r
         \r
-        Can you draw a house? Make it look just the
-        way you like it!  Try looking for patterns that repeat!\r
+        Bir ev çizebilir misin? İstediğin şekilde görünmesini sağla!  Tekrar eden desenleri bulmaya çalış!\r
         \r
-        Here are some
-        ideas:\r
+        İşte bazı fikirler:\r
         \r
         ![](https://images.code.org/6e59e881e0aa1d31186e81a203655a0b-image-1501785654664.png)
       courseA_artist_loops_challenge2_markdown_instruction: Tweet tweet! İki kuş evi
@@ -53612,10 +53701,9 @@
         \\r \\r \nSeviyeyi geçmek için 3 yığınıda alın."
       courseA_collector_loops3_markdown_instruction: Laurel '[E-->]' sadece bir blok
         kullanarak beş yığını nasıl toplayabilir?
-      courseA_collector_loops_challenge1_markdown_instruction: |-
-        *"Can you help me
-        spot some bugs? I know which way I want to go, but I'm not sure how many
-        steps to take."*
+      courseA_collector_loops_challenge1_markdown_instruction: '*"Bazı hataları bulmama
+        yardım eder misin? Hangi yöne gitmek istediğimi biliyorum, fakat kaç adım
+        atacağımdan emin değilim."*'
       courseA_forVideoTest_artist_markdown_instruction: "'Tekrarla döngüleri' Sanatçı
         için de çalışır!"
       courseA_maze_seq1_markdown_instruction: Bu bloklarla oynayın ve beni kötü domuza
@@ -53663,12 +53751,10 @@
         bloğu ile [] (https://images.code.org/4f2130b2a3053695414a02c3d39ef864-image-1478143461271.png)
         olay bloğunu birleştir.   \r \r Bu seviyeyi bitirmek için Jorge u bayrağa
         ulaştır!
-      courseA_playLab_events4_markdown_instruction: |-
-        Now, get Jorge to move right
-        when the right arrow button is clicked.
-      courseA_playLab_events5_markdown_instruction: |-
-        Add events to have Jorge move
-        up and down when the up arrow and down arrow buttons are pressed.
+      courseA_playLab_events4_markdown_instruction: "Şimdi, sağ ok butonuna tıklandığında
+        Jorge' u sağa hareket ettir."
+      courseA_playLab_events5_markdown_instruction: Yukarı ve aşağı ok tuşlarına basıldığında
+        Jorge' u yukarı ve aşağı hareket ettirmek için olaylar ekleyin.
       courseA_playlab_events_challenge1_markdown_instruction: |
         Büyük hayvan yarışı Zamanı! ▼ bastığınızda aşağı ilerlesin. Kim en hızlı koşar
       courseA_playlab_events_challenge1a_markdown_instruction: |
@@ -53838,7 +53924,7 @@
         \r
         ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
-        Kodu düzenleyin böylece kuş ve yarasa damgalarının arasında 75 piksel ileri atlayarak boşluk bırakacaksınız.\r
+        Kodu düzenleyin böylece kuş ve yarasa damgalarının arasında 75 piksel ileri atlayarak boşluk bırakacaksınız. Bu bulmacada döngünün içine '200 yukarı 200 aşağı atla' koyarak ortada kalabilirsiniz. \r
         ___\r
         \r
         ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -53946,8 +54032,9 @@
         (Each side is 150 pixels)
       courseC_artist_prog_challenge1-doghouse_markdown_instruction: Jorge için bir
         köpek kulübesi yapalım!
-      courseC_artist_prog_challenge1_markdown_instruction: Hayvanların her biri için
-        odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, bol bol eğlen!
+      courseC_artist_prog_challenge1_markdown_instruction: 'Hayvanların her biri için
+        odalar çiz. Bu bulmacayı çözmek için birçok farklı yol var, keşfederek eğlen!
+        Karelerin her kenarı 100 piksel uzunluğundadır. '
       courseC_artist_prog_challenge2_markdown_instruction: "* Bana bu yoldaki sarı
         çizgileri boyamaya yardım et! *"
       courseC_collector_loops_challenge2_markdown_instruction: Döngüleri kullanarak
@@ -54202,6 +54289,13 @@
       courseC_maze_programming_challenge2_markdown_instruction: Bazen aynı sorunu
         çözmek için birden fazla yol vardır. Bazen geriye doğru gitmek ileriye doğru
         gitmekten daha hızlıdır!
+      courseC_playLab_embedded_markdown_instruction: |-
+        Here's a game for you to play!
+        To win, get the penguin to run into the octopus. Use your arrow keys to move
+        the penguin around.\r
+        \r
+        Once you are done, you will learn how to make this
+        game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -54680,10 +54774,9 @@
       courseD_bee_nested_loops_challenge2_markdown_instruction: Haydi döngüler kullanarak
         hazine avı yapalım! Toplayıcıya, yalnızca araç çubuğundaki blokları kullanarak,
         en az iki hazine yığınına ulaşmasına yardım et.
-      courseD_bounce_events1_markdown_instruction: |-
-        Get to the flag! Attach a block
-        to the "when left arrow" block and press "Run" to move the player to the
-        flag.
+      courseD_bounce_events1_markdown_instruction: Bayrağa ulaşın! 'Sol oka basıldığında'
+        bloğuna bir blok ekleyin ve oyuncuyu bayrağa hareket ettirmek için 'Çalıştır'
+        a basın.
       courseD_bounce_events10s_markdown_instruction: |-
         There is now a hoop at the
         top.  \r
@@ -54697,14 +54790,11 @@
         See how many points you can score before
         your opponent scores twice.
       courseD_bounce_events11s_markdown_instruction: |-
-        Now, you are in control of
-        the ball!  Attach the `throw new ball` block in all of the places where the
-        game needs a new ball.\r
+        Şimdi, topun kontrolü sizde! Oyunda yeni bir topa ihtiyaç olan her yere 'yeni top fırlat' bloğunu ekleyin.\r
         \r
         ---\r
         \r
-        See how many points you can score
-        before your opponent scores twice!
+        Rakibiniz iki sayı almadan önce kaç puan alabileceğinizi görün!
       courseD_bounce_events1s_markdown_instruction: |-
         Get the ball to the hoop!   \r
         Attach
@@ -55403,9 +55493,8 @@
       courseE_farmer_functions9b_markdown_instruction: |-
         Take a good look at this
         puzzle.  Can you figure out the pattern?
-      courseE_farmer_functions9b_clone_markdown_instruction: |-
-        Take a good look at
-        this puzzle.  Can you figure out the pattern?
+      courseE_farmer_functions9b_clone_markdown_instruction: Bu bulmacaya iyice göz
+        atın. Bu deseni çözebilir misiniz?
       courseE_farmer_predict1_markdown_instruction: |
         Şimdi çiftçi maruldan daha fazla şey büyüyor!  \r \r bu bulmacada, çiftçi marul veya ** değilse ** Mısır büyütüyor.  eğer marul / değilse' bloğu kullan ve marul topla **değilse **mısır topla. \r \r \r \r
       courseE_farmer_ramp11a_markdown_instruction: |
@@ -55509,31 +55598,22 @@
         \r
         Bu zorluklarla ilgili yardıma ihtiyacın olursa ipuçlarını kontrol et!
       courseF_IceAge_1_markdown_instruction: |-
-        Sid (actor 1) wants to gather everyone
-        for a new adventure. Can you help him say "Hello!" by dragging the `actor
-        1 say` block out and connecting it to the bottom of the `when run` event?   \r
+        Sid (aktör 1) yeni bir macera için herkesi toplamak istiyor. 'Aktör 1 söyle' bloğunu sürükleyerek ve 'çalıştığı zaman' olayının altına bağlayarak, Sid' e "Merhaba!" dedirtebilir misin?   \r
         \r
-        Don't
-        forget to type "Hello!" inside!
+        İçine "Merhaba" yazmayı unutmayın!
       courseF_IceAge_10_markdown_instruction: |-
-        Sid wants to let his grandmother,
-        Granny, know that he loves her.   \r
+        Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \r
         \r
-        Use the `actor __ throw` command
-        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
-        Set Granny's
-        mood to happy when she gets hit with the hearts.
+        Sid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \r
+        Kalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın.
       courseF_IceAge_11_markdown_instruction: |-
-        Time to create your own game or story!  \r
+        Kendi oyununu veya hikayeni oluşturma zamanı!  \r
         \r
-        When
-        you're done, click "Finish" to let friends try your game on their phones,
-        tablets, or computers!\r
-        Don't know what to make? Click the hints for details.
-      courseF_IceAge_2_markdown_instruction: |-
-        Manny (actor 2) found Sid (actor 1)
-        and wants to invite him on an adventure. Help them greet each other by using
-        the the `actor ___ say` block twice.
+        Bitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\r
+        Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın.
+      courseF_IceAge_2_markdown_instruction: Manny (aktör 1), Sid (aktör 2) ' i buldu
+        ve onu bir maceraya davet etmek istiyor. `Aktör ___ söyle` bloğunu iki kez
+        kullanarak onların birbirleriyle selamlaşmalarına yardımcı ol.
       courseF_IceAge_3_markdown_instruction: |-
         Scrat is looking for his acorn! Can
         you help him move the last 200 pixels?
@@ -55541,16 +55621,14 @@
         Diego (actor 1) is searching for Manny
         (actor 2). Can you help bring the two together? Connect a block to the `when
         actor touches` event to play a sound when they find each other.
-      courseF_IceAge_5_markdown_instruction: |-
-        The `repeat forever` block allows you
-        to run code continuously. Can you put blocks inside of it to help Granny get
-        some exercise by moving left and right repeatedly?
+      courseF_IceAge_5_markdown_instruction: "'Sürekli tekrarla' bloğu kodun devamlı
+        çalışmasını sağlar. Granny' nin sağa ve sola tekrar tekrar hareket ederek
+        bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı 'sürekli tekrarla'
+        bloğunun içine koyabilir misin?"
       courseF_IceAge_6_markdown_instruction: |-
-        Can you help Sid call for his friends
-        when you click on him?  \r
+        Sid' e tıkladığında, onun arkadaşlarına seslenmesine yardımcı olur musun?  \r
         \r
-        Once you're done, press "Run" to play.  Click
-        on Sid to see your code work!
+        İşin bittiğinde, oynamak için "Çalıştır" a bas.  Kodun çalıştığını görmek için Sid' e tıkla!
       courseF_IceAge_7_markdown_instruction: |-
         Scrat is still looking for acorns!
         \r
@@ -55566,12 +55644,9 @@
         when Sid and Granny collide? \r
         Press "Run" to play the game.
       courseF_IceAge_9_markdown_instruction: |-
-        Everyone needs to move faster because
-        an ice storm is coming! \r
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.\r
-        Press "Run" and move Sid to Diego to warn
-        him.
+        Herkesin daha hızlı olması gerekiyor çünkü kar fırtınası geliyor! \r
+        Sahneyi buzlu bir arka planla değiştir ve Sid (actor 1) ' in hızını arttır.\r
+        "Çalıştır" a bas ve Sid' i, Diego' yu uyarması için ona doğru hareket ettir.
       courseF_IceAge_template_markdown_instruction: |-
         Scrat is still looking for acorns!
         \r
@@ -55729,7 +55804,33 @@
         from the last puzzle, but this time use the `set length to` block to reset
         the `length` variable to `length`+10 at the end of each loop iteration.\r
         \r
-        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)\r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
         \r
         The
         length of the first side of the triangle is 150 pixels.
@@ -58160,6 +58261,152 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r
+      csp_affirmation_control_markdown_instruction: |-
+        This brief activity allows you
+        to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
         ## Bilgisayar Bilimine Başlarken\r
@@ -60675,12 +60922,10 @@
         Once you're done, press "Run" to play.  Click
         on Sid to see your code work!
       iceage_free_play_markdown_instruction: |-
-        Time to create your own game or story!  \r
+        Kendi oyununu veya hikayeni oluşturma zamanı!  \r
         \r
-        When
-        you're done, click "Finish" to let friends try your game on their phones,
-        tablets, or computers!\r
-        Don't know what to make? Click the hints for details.
+        Bitirdiğinde, arkadaşlarının telefon, tablet veya bilgisayarlarında oyununu denemeleri için 'Bitir' e tıklayın!\r
+        Ne yapacağını bilmiyor musun? Ayrıntılar için ipuçlarına tıklayın.
       iceage_free_playcourseF_IceAge_11_markdown_instruction: |-
         Time to create your
         own game or story!  \r
@@ -60714,10 +60959,10 @@
       iceage_move_to_flag_markdown_instruction: |-
         Scrat is looking for his acorn!
         Can you help him move the last 200 pixels?
-      iceage_repeat_markdown_instruction: |-
-        The `repeat forever` block allows you
-        to run code continuously. Can you put blocks inside of it to help Granny get
-        some exercise by moving left and right repeatedly?
+      iceage_repeat_markdown_instruction: "'Sürekli tekrarla' bloğu kodun devamlı
+        çalışmasını sağlar. Granny' nin sağa ve sola tekrar tekrar hareket ederek
+        bazı alıştırmalar yapmasına yardımcı olmak için kodlarınızı 'sürekli tekrarla'
+        bloğunun içine koyabilir misin?"
       iceage_sound_and_points_markdown_instruction: |-
         Here is your code from the last
         puzzle, as well as the code to move Granny left and right. \r
@@ -60726,20 +60971,14 @@
         when Sid and Granny collide? \r
         Press "Run" to play the game.
       iceage_throw_hearts_markdown_instruction: |-
-        Sid wants to let his grandmother,
-        Granny, know that he loves her.   \r
+        Sid büyükannesi Granny' nin onu sevdiğini bilmesini istiyor.   \r
         \r
-        Use the `actor __ throw` command
-        to have Sid (actor 1) throw hearts at Granny (actor 2)! \r
-        Set Granny's
-        mood to happy when she gets hit with the hearts.
+        Sid (aktör 1)' in,  Granny (aktör 2)' ye kalpler fırlatması için `aktör __ fırlat` komutunu kullanın! \r
+        Kalpler Granny' ye çarptığında, Granny' nin modunu mutlu olarak ayarlayın.
       iceage_warn_ice_age_markdown_instruction: |-
-        Everyone needs to move faster because
-        an ice storm is coming! \r
-        Change the scene to an icy background and set
-        Sid’s (actor 1) speed to fast.\r
-        Press "Run" and move Sid to Diego to warn
-        him.
+        Herkesin daha hızlı olması gerekiyor çünkü kar fırtınası geliyor! \r
+        Sahneyi buzlu bir arka planla değiştir ve Sid (actor 1) ' in hızını arttır.\r
+        "Çalıştır" a bas ve Sid' i, Diego' yu uyarması için ona doğru hareket ettir.
       jessie-test_markdown_instruction: |-
         # Cool\r
         \r

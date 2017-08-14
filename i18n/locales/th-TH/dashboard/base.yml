@@ -56,6 +56,9 @@ th:
   puzzle: "ปริศนา"
   trophies: "ถ้วยรางวัล"
   courses: 'คอร์ส'
+  courses_page:
+    title_student: "เรียนกับ Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'กิจกรรมถอดปลั๊ก'
   of: "ของ"
   more: "เพิ่มเติม"
@@ -249,7 +252,9 @@ th:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "คอร์ส"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

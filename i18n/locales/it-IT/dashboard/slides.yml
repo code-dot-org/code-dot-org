@@ -402,7 +402,7 @@ it:
     C1_bigevent_unplugged:
       1:
         image: 'notes/C1_bigevent_unplugged_1.png'
-        text: "Questa lezione è chiamata il grande evento. Tratta di come controlliamo i nostri programmi e di come cambiare il comportamento di un programma utilizzando gli eventi, come premere un pulsante o fare click con il mouse."
+        text: "Questa lezione è chiamata \"Gli Eventi\". Tratta di come controlliamo i nostri programmi e di come cambiarne il comportamento utilizzando gli eventi, quali ad esempio premere un tasto o cliccare col mouse."
       2:
         image: 'notes/C1_bigevent_unplugged_2.png'
         text: "In questa lezione, sarai controllato da remoto con una foglio interattivo. E' come un videogioco dal vivo."

@@ -56,6 +56,9 @@ uz:
   puzzle: "Jumboq"
   trophies: "Mukofotlar"
   courses: 'Kurslar'
+  courses_page:
+    title_student: "Learn on Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Unplugged Activity'
   of: "ni"
   more: "Ko`p"
@@ -249,7 +252,9 @@ uz:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Kurslar"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"
