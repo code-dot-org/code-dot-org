@@ -28,12 +28,14 @@ class TeacherSections extends React.Component {
   renderNewSectionFlow() {
     const {isRtl, queryStringOpen} = this.props;
     return (
-      <ContentContainer
-        heading={i18n.sectionsTitle()}
-        isRtl={isRtl}
-      >
-        <OwnedSections isRtl={isRtl} queryStringOpen={queryStringOpen}/>
-      </ContentContainer>
+      <div id="classroom-sections">
+        <ContentContainer
+          heading={i18n.sectionsTitle()}
+          isRtl={isRtl}
+        >
+          <OwnedSections isRtl={isRtl} queryStringOpen={queryStringOpen}/>
+        </ContentContainer>
+      </div>
     );
   }
 
