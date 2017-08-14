@@ -54,16 +54,12 @@ def insert_or_upsert_form(kind, data, options={})
   form_class = Object.const_get(kind)
   row[:source_id] = form_class.get_source_id(data) if form_class.respond_to? :get_source_id
 
-  # For HOC signups, a duplicate (matching email and name) entry is assumed to be an update rather
-  # than an insert.
-  if kind.start_with? 'HocSignup'
-    row_for_update = row.dup
-    [:created_at, :created_ip, :secret].each {|key| row_for_update.delete key}
-    num_rows_updated = DB[:forms].
-      where(kind: kind, email: row_for_update[:email], name: row_for_update[:name]).
-      update(row_for_update)
-    return row_for_update if num_rows_updated > 0
+  # Depending on the form kind, new data, and existing data, perform an update.
+  existing_form_secret = form_class.update_on_upsert row
+  if existing_form_secret
+    return update_form(row[:kind], existing_form_secret, row)
   end
+
   # We didn't perform an update, so insert the row into the forms table and
   # create a corresponding form_geos row.
   row[:id] = DB[:forms].insert(row)
@@ -79,38 +75,43 @@ def insert_or_upsert_form(kind, data, options={})
   row
 end
 
+# WARNING: This method only updates certain fields.
 # @param [String] kind The kind of the form to be updated.
 # @param [String] secret The secret associated with the form to be updated.
-# @param [Hash] data The data to update.
+# @param [Hash] form The updated form (to be merged with the existing row).
 # @return [Hash] The hash of values sent to the DB for updating.
-def update_form(kind, secret, data)
-  return nil unless form = DB[:forms].where(kind: kind, secret: secret).first
+def update_form(kind, secret, form)
+  return nil unless existing_form = DB[:forms].where(kind: kind, secret: secret).first
 
   if dashboard_user && !dashboard_user[:admin]
-    data[:email_s] ||= dashboard_user[:email]
-    data[:name_s] ||= dashboard_user[:name]
+    form[:email_s] ||= dashboard_user[:email]
+    form[:name_s] ||= dashboard_user[:name]
   end
 
-  prev_data = JSON.parse(form[:data], symbolize_names: true)
-  symbolized_data = Hash[data.map {|k, v| [k.to_sym, v]}]
-  data = validate_form(kind, prev_data.merge(symbolized_data), Pegasus.logger)
+  existing_data = JSON.parse existing_form[:data], symbolize_names: true
+  form_data = JSON.parse form[:data], symbolize_names: true if form[:data]
+  merged_info = existing_data.merge form.merge(form_data || {})
+  merged_info = validate_form kind, merged_info, Pegasus.logger
 
-  normalized_email = data[:email_s].to_s.strip.downcase if data.key?(:email_s)
+  normalized_email = merged_info[:email_s].to_s.strip.downcase if merged_info.key?(:email_s)
 
-  form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
-  form[:email] = normalized_email
-  form[:name] = data[:name_s].to_s.strip if data.key?(:name_s)
-  form[:data] = data.to_json
-  form[:updated_at] = DateTime.now
-  form[:updated_ip] = request.ip
-  form[:processed_at] = nil
-  form[:indexed_at] = nil
-  form[:review] = nil
-  form[:reviewed_at] = nil
-  form[:reviewed_by] = nil
-  form[:reviewed_ip] = nil
-  form[:hashed_email] = Digest::MD5.hexdigest(normalized_email) if data.key?(:email_s)
-  DB[:forms].where(id: form[:id]).update(form)
+  update_form = existing_form.dup
+  [:created_at, :created_ip, :secret].each {|key| update_form.delete key}
 
-  form
+  update_form[:user_id] = dashboard_user[:id] if dashboard_user && !dashboard_user[:admin]
+  update_form[:email] = normalized_email
+  update_form[:name] = merged_info[:name_s].to_s.strip if merged_info.key?(:name_s)
+  update_form[:data] = merged_info.to_json
+  update_form[:updated_at] = DateTime.now
+  update_form[:updated_ip] = request.ip
+  update_form[:processed_at] = nil
+  update_form[:indexed_at] = nil
+  update_form[:review] = nil
+  update_form[:reviewed_at] = nil
+  update_form[:reviewed_by] = nil
+  update_form[:reviewed_ip] = nil
+  update_form[:hashed_email] = Digest::MD5.hexdigest(normalized_email) if merged_info.key?(:email_s)
+  DB[:forms].where(id: existing_form[:id]).update(update_form)
+
+  update_form
 end

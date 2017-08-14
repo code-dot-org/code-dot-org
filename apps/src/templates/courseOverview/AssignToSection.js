@@ -58,7 +58,6 @@ class AssignToSection extends Component {
         script_id: this.props.scriptId,
       }),
     }).done(result => {
-      this.collapseDropdown();
       this.setState({
         sectionIndexToAssign: null
       });
