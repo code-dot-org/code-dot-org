@@ -66,9 +66,9 @@ class OwnedSections extends React.Component {
 
   componentDidMount() {
     const {
-      queryStringOpen,
       defaultCourseId,
-      defaultScriptId
+      defaultScriptId,
+      queryStringOpen,
     } = this.props;
 
     // If we have a default courseId and/or scriptId, we want to start with our
@@ -198,8 +198,8 @@ export default connect(state => ({
   classrooms: state.oauthClassroom.classrooms,
   loadError: state.oauthClassroom.loadError,
   asyncLoadComplete: state.teacherSections.asyncLoadComplete,
-  defaultCourseId:state.teacherSections.defaultCourseId,
-  defaultScriptId:state.teacherSections.defaultScriptId,
+  defaultCourseId: state.teacherSections.defaultCourseId,
+  defaultScriptId: state.teacherSections.defaultScriptId,
 }), {
   newSection,
   beginEditingNewSection,
