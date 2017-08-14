@@ -98,6 +98,7 @@
   "setSpeed": "definir velocidade",
   "setSpeedTooltip": "Define a velocidade do nível",
   "shareFlappyTwitter": "Vê o Flappy Bird que eu criei. Eu escrevi isto sozinho no @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Partilha o teu jogo:",
   "soundRandom": "aleatório",
   "soundBounce": "saltar",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Executar as seguintes ações quando o passarinho entrar num obstáculo.",
   "whenRunButtonClick": "quando o jogo começa",
   "whenRunButtonClickTooltip": "Executar as seguintes ações quando o jogo começar.",
-  "yes": "Sim",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Sim"
 }

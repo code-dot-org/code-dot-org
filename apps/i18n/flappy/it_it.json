@@ -98,6 +98,7 @@
   "setSpeed": "Imposta la velocità",
   "setSpeedTooltip": "Imposta la velocità con cui Flappy sbatte le ali",
   "shareFlappyTwitter": "Guarda la versione di Flappy che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Condividi il tuo gioco:",
   "soundRandom": "casuale",
   "soundBounce": "rimbalzo",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Esegue le azioni attaccate a questo blocco quando Flappy incontra un ostacolo.",
   "whenRunButtonClick": "quando si clicca su \"Esegui\"",
   "whenRunButtonClickTooltip": "Esegue le azioni attaccate a questo blocco quando si clicca su \"Esegui\".",
-  "yes": "Sì",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Sì"
 }

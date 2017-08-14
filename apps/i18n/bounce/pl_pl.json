@@ -122,6 +122,7 @@
   "setTeam": "Ustaw zespół {team}",
   "setTeamRandom": "Ustaw zespół losowo",
   "shareBounceTwitter": "Sprawdź grę w Odbijanie, którą utworzyłem. Napisałem ją samodzielnie z użyciem @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Podziel się swoją grą:",
   "turnLeft": "skręć w lewo",
   "turnRight": "skręć w prawo",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Wykonaj poniższe czynności, kiedy piłka uderza w ścianę.",
   "whileMsg": "dopóki",
   "whileTooltip": "Powtarzaj załączone czynności, aż do osiągnięcia końca.",
-  "yes": "Tak",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Tak"
 }
