@@ -5,16 +5,16 @@ class GoogleClassroomSectionTest < ActiveSupport::TestCase
     owner = create :teacher
     student_list = Google::Apis::ClassroomV1::ListStudentsResponse.from_json(
       {
-        students: [
-          {userId: '222222222222222', profile: {name: {fullName: 'Sample User'}}},
-          {userId: '333333333333333', profile: {name: {fullName: 'Another Student'}}},
-        ],
+        students: (1..50).map do |i|
+          {userId: i, profile: {name: {fullName: "Sample User #{i}"}}}
+        end
       }.to_json
     ).students
 
     section = GoogleClassroomSection.from_service('101', owner.id, student_list)
     assert section.provider_managed?
     assert_equal 'G-101', section.code
+    assert_equal 50, section.students.count
 
     assert_no_difference 'User.count' do
       # Should find the existing Google Classroom section.
