@@ -17,15 +17,11 @@ import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
 const defaultProps = {
   numSections: 3,
-  classrooms: null,
-  studioUrl: '',
   asyncLoadComplete: true,
   newSection: () => {},
-  loadClassroomList: () => {},
-  importClassroomStarted: () => {},
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
-  asyncLoadSectionData: () => {},
+  beginImportRosterFlow: () => {},
 };
 
 describe('OwnedSections', () => {
@@ -54,11 +50,8 @@ describe('OwnedSections', () => {
             </p>
           </div>
         </div>
-        <RosterDialog
-          isOpen={false}
-          studioUrl={defaultProps.studioUrl}
-        />
-        <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
@@ -81,11 +74,8 @@ describe('OwnedSections', () => {
           />
           <SectionTable onEdit={instance.handleEditRequest}/>
         </div>
-        <RosterDialog
-          isOpen={false}
-          studioUrl={defaultProps.studioUrl}
-        />
-        <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
@@ -121,11 +111,8 @@ describe('OwnedSections', () => {
       expect(wrapper).to.containMatchingElement(
         <div>
           <SetUpSections/>
-          <RosterDialog
-            isOpen={false}
-            studioUrl={defaultProps.studioUrl}
-          />
-          <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+          <RosterDialog/>
+          <AddSectionDialog/>
           <EditSectionDialog/>
         </div>
       );
@@ -148,11 +135,8 @@ describe('OwnedSections', () => {
             />
             <SectionTable onEdit={instance.handleEditRequest}/>
           </div>
-          <RosterDialog
-            isOpen={false}
-            studioUrl={defaultProps.studioUrl}
-          />
-          <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+          <RosterDialog/>
+          <AddSectionDialog/>
           <EditSectionDialog/>
         </div>
       );
