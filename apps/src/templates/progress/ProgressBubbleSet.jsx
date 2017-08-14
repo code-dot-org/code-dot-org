@@ -18,10 +18,6 @@ const styles = {
     display: 'inline-block',
     position: 'relative'
   },
-  backgroundContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
   background: {
     height: 10,
     backgroundColor: color.lighter_gray,

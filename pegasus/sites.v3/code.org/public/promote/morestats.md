@@ -33,6 +33,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ### Miscellaneous
 
 * University computer science graduates [finally surpass](http://bit.ly/CS2003) the 2003 peak.
+* [Exploding demand for computer science in universities](https://www.geekwire.com/2014/analysis-examining-computer-science-education-explosion/)
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade. 
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 
@@ -40,6 +41,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ## Other Code.org Resources
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/1YtTVcpQXoZz0IchihwGOihaCNeqCz2HyLwaXYpyb2SQ/pubhtml) on our 9 model policies for computer science education.
 * Code.org partnered with MassCAN, EDC, ECEP, SageFox, and ECS to create the [State of the States Landscape Report](http://code.org/files/State_of_the_states.pdf) on state-level policies that support equitable K-12 computer science education.
+* [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
 
 
 ## International K-12 computer science

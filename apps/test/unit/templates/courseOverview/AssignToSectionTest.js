@@ -1,7 +1,7 @@
 import { assert } from '../../../util/configuredChai';
-import { throwOnConsoleErrors, throwOnConsoleWarnings } from '../../../util/testUtils';
+import { throwOnConsoleWarnings } from '../../../util/testUtils';
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import AssignToSection from '@cdo/apps/templates/courseOverview/AssignToSection';
 
 const defaultProps = {
@@ -28,7 +28,6 @@ const defaultProps = {
 };
 
 describe('AssignToSection', () => {
-  throwOnConsoleErrors();
   throwOnConsoleWarnings();
 
   let windowDashboard;
@@ -43,16 +42,8 @@ describe('AssignToSection', () => {
     window.dashboard = windowDashboard;
   });
 
-  it('is initially just a button', () => {
-    const wrapper = shallow(
-      <AssignToSection {...defaultProps}/>
-    );
-    assert.strictEqual(wrapper.children().length, 1);
-    assert.strictEqual(wrapper.childAt(0).name(), 'Button');
-  });
-
   it('can create a new section with a courseId', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <AssignToSection {...defaultProps}/>
     );
     wrapper.find('Button').simulate('click');
@@ -63,7 +54,7 @@ describe('AssignToSection', () => {
   });
 
   it('can create a new section with a courseId and scriptId', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <AssignToSection
         {...defaultProps}
         scriptId={112}
@@ -76,21 +67,8 @@ describe('AssignToSection', () => {
     assert.strictEqual(newSectionLink.text(), 'New section...');
   });
 
-  it('shows each of the sections when clicked', () => {
-    const wrapper = shallow(
-      <AssignToSection {...defaultProps}/>
-    );
-    wrapper.find('Button').simulate('click');
-    const sections = defaultProps.sectionsInfo;
-    assert.strictEqual(wrapper.find('a').length, 1 + sections.length);
-    sections.forEach((section, index) => {
-      const link = wrapper.find('a').at(1 + index);
-      assert.strictEqual(link.text(), section.name);
-    });
-  });
-
   it('shows a confirmation dialog when clicking a section', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <AssignToSection {...defaultProps}/>
     );
     wrapper.find('Button').simulate('click');

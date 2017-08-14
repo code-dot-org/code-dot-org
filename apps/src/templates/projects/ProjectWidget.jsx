@@ -14,6 +14,7 @@ const ProjectWidget = React.createClass({
   },
 
   render() {
+    const convertedProjects = convertChannelsToProjectData(this.props.projectList);
     return (
       <ContentContainer
         heading={i18n.projects()}
@@ -26,9 +27,9 @@ const ProjectWidget = React.createClass({
             <FontAwesome icon="spinner" className="fa-pulse fa-3x"/>
           </div>
         }
-        {this.props.projectList.length > 0 &&
+        {convertedProjects.length > 0 &&
           <PersonalRecentProjects
-            projectList={convertChannelsToProjectData(this.props.projectList)}
+            projectList={convertedProjects}
           />
         }
         <NewProjectButtons projectTypes={this.props.projectTypes}/>

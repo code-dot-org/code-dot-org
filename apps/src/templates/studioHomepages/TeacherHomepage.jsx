@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import HeaderBanner from '../HeaderBanner';
@@ -18,22 +18,23 @@ const styles = {
   }
 };
 
-const TeacherHomepage = React.createClass({
-  propTypes: {
-    sections: React.PropTypes.array,
+export default class TeacherHomepage extends React.Component {
+  static propTypes = {
+    sections: PropTypes.array,
     courses: shapes.courses,
-    announcements: React.PropTypes.array.isRequired,
-    isRtl: React.PropTypes.bool.isRequired,
-  },
+    announcements: PropTypes.array.isRequired,
+    isRtl: PropTypes.bool.isRequired,
+    queryStringOpen: PropTypes.string,
+  };
 
   componentDidMount() {
     // The component used here is implemented in legacy HAML/CSS rather than React.
     $('#terms_reminder').appendTo(ReactDOM.findDOMNode(this.refs.termsReminder)).show();
     $('#flashes').appendTo(ReactDOM.findDOMNode(this.refs.flashes)).show();
-  },
+  }
 
   render() {
-    const { courses, sections, announcements, isRtl } = this.props;
+    const { courses, sections, announcements, isRtl, queryStringOpen } = this.props;
 
     return (
       <div>
@@ -58,6 +59,7 @@ const TeacherHomepage = React.createClass({
               buttonLink={announcements[0].link}
               newWindow={true}
               analyticId={announcements[0].id}
+              isRtl={isRtl}
             />
             <div style={styles.clear}/>
           </div>
@@ -65,6 +67,7 @@ const TeacherHomepage = React.createClass({
         <TeacherSections
           sections={sections}
           isRtl={isRtl}
+          queryStringOpen={queryStringOpen}
         />
         <RecentCourses
           courses={courses}
@@ -79,6 +82,4 @@ const TeacherHomepage = React.createClass({
       </div>
     );
   }
-});
-
-export default TeacherHomepage;
+}

@@ -519,6 +519,13 @@ Then /^I wait to see a dialog titled "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   }
 end
 
+Then /^I wait to see a dialog containing text "((?:[^"\\]|\\.)*)"$/ do |expected_text|
+  steps %{
+    Then I wait to see a ".modal-body"
+    And element ".modal-body" contains text "#{expected_text}"
+  }
+end
+
 Then /^I wait to see a congrats dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
   steps %{
     Then I wait to see a ".congrats"
@@ -975,6 +982,10 @@ When(/^I sign out$/) do
   }
 end
 
+When(/^I am not signed in/) do
+  steps 'element ".header_user:contains(Sign in)" is visible'
+end
+
 When(/^I debug cookies$/) do
   puts "DEBUG: url=#{CGI.escapeHTML @browser.current_url.inspect}"
   debug_cookies(@browser.manage.all_cookies)
@@ -1224,4 +1235,8 @@ end
 
 Then /^I should see the section table$/ do
   steps 'Then I see ".uitest-owned-sections"'
+end
+
+Then /^I scroll the save button into view$/ do
+  @browser.execute_script('$(".uitest-saveButton")[0].scrollIntoView(true)')
 end

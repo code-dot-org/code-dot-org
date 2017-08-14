@@ -2,7 +2,7 @@ import sinon from 'sinon';
 import {expect} from '../util/configuredChai';
 import {singleton as studioApp, stubStudioApp, restoreStudioApp, makeFooterMenuItems} from '@cdo/apps/StudioApp';
 import i18n from '@cdo/apps/code-studio/i18n';
-import {throwOnConsoleErrors, throwOnConsoleWarnings} from '../util/testUtils';
+import {throwOnConsoleWarnings} from '../util/testUtils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
@@ -11,7 +11,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 
 describe("StudioApp", () => {
   describe('StudioApp.singleton', () => {
-    throwOnConsoleErrors();
     throwOnConsoleWarnings();
 
     beforeEach(stubStudioApp);
@@ -52,11 +51,19 @@ describe("StudioApp", () => {
         sinon.stub(studioApp(), 'configureDom');
         sinon.stub(assetsApi, 'getFiles').callsFake(cb => cb({files}));
         sinon.spy(listStore, 'reset');
+
+        // init adds a changeListener to Blockly.mainBlockSpaceEditor that calls
+        // updateBlockCount. It appears to sometimes get called in the middle of
+        // other tests once this one is complete. Unfortunately, we don't appear
+        // to have any way of cleaning up our listeners, so we hack around this
+        // by stubbing the method that the listener calls.
+        sinon.stub(studioApp(), 'updateBlockCount').callsFake(() => {});
       });
 
       afterEach(() => {
         assetsApi.getFiles.restore();
         listStore.reset.restore();
+        studioApp().updateBlockCount.restore();
       });
 
       it('will pre-populate assets for levels that use assets', () => {
