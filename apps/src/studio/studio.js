@@ -118,6 +118,9 @@ const EdgeClassNames = [
 let level;
 let skin;
 
+// These skins can be published as projects.
+const PROJECT_SKINS = ['gumball', 'studio'];
+
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
 
@@ -2778,7 +2781,7 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = skin.id === 'studio';
+    const saveToProjectGallery = PROJECT_SKINS.includes(skin.id);
     const {isSignedIn} = getStore().getState().pageConstants;
 
     studioApp().displayFeedback({
