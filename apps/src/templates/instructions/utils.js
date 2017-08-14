@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
 /**
  * @param {ReactComponent} component

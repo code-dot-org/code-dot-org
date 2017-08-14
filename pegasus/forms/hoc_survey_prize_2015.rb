@@ -1,4 +1,6 @@
-class HocSurveyPrize2015
+require_relative './form'
+
+class HocSurveyPrize2015 < Form
   def self.normalize(data)
     result = {}
 
