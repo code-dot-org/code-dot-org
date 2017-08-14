@@ -62,7 +62,7 @@ export default class ResourcesEditor extends Component {
     }
 
     let errorString = '';
-    let types = newResources.map(resource => resource.type).filter(resource => resource);
+    let types = newResources.map(resource => resource.type).filter(Boolean);
     if (types.length !== _.uniq(types).length) {
       errorString = 'Your resource types contains a duplicate';
     }
@@ -80,9 +80,12 @@ export default class ResourcesEditor extends Component {
   render() {
     const { resources, errorString } = this.state;
 
-    // avoid showing multiple empty reosurces
+    // avoid showing multiple empty resources
     const lastNonEmpty = _.findLastIndex(resources, ({type, link}) => link && type);
 
+    // Resources contains maxResources entries. For the empty entries, we want to
+    // show just one, so we slice to the lastNonEmpty +1 to get an empty entry
+    // and +1 more because slice is exclusive.
     return (
       <div>
         {resources.slice(0, lastNonEmpty + 2).map((resource, index) =>

@@ -74,6 +74,24 @@ describe('ResourcesEditor', () => {
     assert.strictEqual(wrapper.find('Resource').length, 3);
   });
 
+  it('shows an error if you duplicate resource types', () => {
+    const wrapper = shallow(
+      <ResourcesEditor
+        {...defaultProps}
+        resources={[
+          { type: ResourceType.curriculum, link: '/foo' }
+        ]}
+      />
+    );
+    const fakeEvent = {
+      target: {
+        value: ResourceType.curriculum
+      }
+    };
+    wrapper.instance().handleChangeType(fakeEvent, 1);
+    assert.strictEqual(wrapper.state('errorString'), 'Your resource types contains a duplicate');
+  });
+
   describe('Resource', () => {
     it('has a type selector and a link input', () => {
       const wrapper = mount(
