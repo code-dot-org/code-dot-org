@@ -467,11 +467,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     if (buttonElement) {
       dom.addClickTouchEvent(buttonElement, () => {
         $(buttonSelector).prop('disabled', true).text(pendingText);
-        project.copy(project.getNewProjectName(), () => {
-          FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
-            $(buttonSelector).prop('disabled', true).text(finishedText);
-          }).then(callback);
-        }, {shouldPublish});
+        project.copy(project.getNewProjectName(), {shouldPublish})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => $(buttonSelector).prop('disabled', true).text(finishedText))
+          .then(callback);
       });
     }
   }
