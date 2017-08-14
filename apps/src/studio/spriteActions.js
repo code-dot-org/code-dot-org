@@ -38,6 +38,33 @@ import { valueOr } from '../utils';
  */
 
 /**
+ * Turn sprite toward a desired direction. Note that although this action can
+ * take place over the course of several steps/ticks, we only set the direction
+ * on the first tick; the sprite's own animation logic will take care of the
+ * rest.
+ * @constructor
+ * @implements {SpriteAction}
+ * @param {number} towardDir
+ * @param {number} totalSteps
+ */
+export class GridTurn {
+  constructor(towardDir, totalSteps) {
+    this.towardDir_ = towardDir;
+    this.totalSteps_ = totalSteps;
+    this.elapsedSteps_ = 0;
+  }
+  update(sprite) {
+    if (this.elapsedSteps_ === 0) {
+      sprite.setDirection(this.towardDir_);
+    }
+    this.elapsedSteps_++;
+  }
+  isDone() {
+    return this.elapsedSteps_ >= this.totalSteps_;
+  }
+}
+
+/**
  * Move sprite by a desired delta over a certain number of steps/ticks.
  * Used to provide discrete grid movement in playlab's continuous interpreted
  * environment.
