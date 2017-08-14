@@ -57,10 +57,17 @@ export const setValidAssignments = (validCourses, validScripts) => ({
 });
 
 /**
+ * Get our query string. Provided as a method so that tests can mock this.
+ */
+export function getQueryString_() {
+  return window.location.search;
+}
+
+/**
  * Set the default courseId/scriptId based on query params.
  */
 export const setDefaultAssignment = () => {
-  const query = queryString.parse(window.location.search);
+  const query = queryString.parse(exports.getQueryString_());
   let courseId;
   let scriptId;
   if (query.courseId) {
