@@ -610,6 +610,10 @@ export function isRosterDialogOpen(state) {
   return getRoot(state).isRosterDialogOpen;
 }
 
+export function oauthProvider(state) {
+  return getRoot(state).provider;
+}
+
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.
