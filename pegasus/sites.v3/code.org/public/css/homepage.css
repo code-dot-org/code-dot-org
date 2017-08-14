@@ -397,4 +397,5 @@ body.modal-open .supreme-container{
   border-radius: 5px;
   text-align: center;
   margin: 20px;
+  text-transform: uppercase;
 }
