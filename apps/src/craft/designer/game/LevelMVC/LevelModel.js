@@ -653,10 +653,19 @@ export default class LevelModel {
       if (!this.actionPlane[blockIndex].isEmpty) {
         result.push("notEmpty");
       }
+      // Only prevent walking into water/lava in "Events" levels.
       if (this.groundPlane[blockIndex].blockType === "water") {
-        result.push("water");
+        if (this.controller.levelData.isEventLevel) {
+          result.push("water");
+        } else {
+          return [true];
+        }
       } else if (this.groundPlane[blockIndex].blockType === "lava") {
-        result.push("lava");
+        if (this.controller.levelData.isEventLevel) {
+          result.push("lava");
+        } else {
+          return [true];
+        }
       }
       var frontEntity = this.getEntityAt(position);
       if (frontEntity !== undefined) {
