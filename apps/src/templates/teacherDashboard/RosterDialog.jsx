@@ -1,8 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import BaseDialog from '../BaseDialog';
 import { classroomShape, loadErrorShape, OAuthSectionTypes } from './shapes';
 import color from '../../util/color';
 import locale from '@cdo/locale';
+import {
+  cancelImportRosterFlow,
+  importRoster,
+  isRosterDialogOpen,
+} from './teacherSectionsRedux';
 
 const styles = {
   title: {
@@ -134,8 +140,9 @@ LoadError.propTypes = {
   studioUrl: React.PropTypes.string.isRequired,
 };
 
-export default class RosterDialog extends React.Component {
+class RosterDialog extends React.Component {
   static propTypes = {
+    // Provided by Redux
     handleImport: React.PropTypes.func,
     handleCancel: React.PropTypes.func,
     isOpen: React.PropTypes.bool,
@@ -143,12 +150,9 @@ export default class RosterDialog extends React.Component {
     loadError: loadErrorShape,
     studioUrl: React.PropTypes.string.isRequired,
     provider: React.PropTypes.oneOf(Object.keys(OAuthSectionTypes)),
-  }
+  };
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  state = {selectedId: null};
 
   importClassroom = () => {
     const classrooms = this.props.classrooms;
@@ -229,3 +233,14 @@ export default class RosterDialog extends React.Component {
     );
   }
 }
+export const UnconnectedRosterDialog = RosterDialog;
+export default connect(state => ({
+  isOpen: isRosterDialogOpen(state),
+  classrooms: state.teacherSections.classrooms,
+  loadError: state.teacherSections.loadError,
+  studioUrl: state.teacherSections.studioUrl,
+  provider: state.teacherSections.provider,
+}), {
+  handleImport: importRoster,
+  handleCancel: cancelImportRosterFlow,
+})(RosterDialog);
