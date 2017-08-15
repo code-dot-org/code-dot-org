@@ -1098,8 +1098,6 @@ class GameController {
         let blockType = block.blockType;
 
         if (block.isDestroyable) {
-          this.levelModel.computeShadingPlane();
-          this.levelModel.computeFowPlane();
           switch (blockType) {
             case "logAcacia":
             case "treeAcacia":
@@ -1125,8 +1123,6 @@ class GameController {
 
           this.levelView.playDestroyBlockAnimation(player.position, player.facing, destroyPosition, blockType, () => {
             commandQueueItem.succeeded();
-            this.updateFowPlane();
-            this.updateShadingPlane();
           });
         } else if (block.isUsable) {
           switch (blockType) {

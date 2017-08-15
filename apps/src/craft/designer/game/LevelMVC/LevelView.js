@@ -912,6 +912,9 @@ export default class LevelView {
       this.toDestroy.push(blockToDestroy);
       this.toDestroy.push(destroyOverlay);
 
+      this.controller.updateShadingPlane();
+      this.controller.updateFowPlane();
+
       this.setSelectionIndicatorPosition(playerPosition[0], playerPosition[1]);
 
       this.audioPlayer.play('dig_wood1');
