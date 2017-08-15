@@ -1129,6 +1129,11 @@
   carousel_heading_webpages: Foghlaim le leathanaigh Ghréasáin a chruthú
   carousel_heading_robots: Foghlaim an ríomhchlárúchán le róbait
   carousel_heading_ide: Ardáin a thaitníonn le múinteoirí
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Nótaí do Mhúinteoirí
   teach_led_lesson_plans: Ceachtanna faoi cheannas múinteoirí
   learn_footer_all_tutorials: Féach <a href="https://code.org/educate/allhourofcode">liosta
@@ -1139,6 +1144,8 @@
   more_resources_educators: Tuilleadh acmhainní do mhúinteoirí
   beyond_submission: Ar mhaith leat do chúrsa teagaisc féin a sholáthar do Thar Uair
     an Chloig? Léigh na critéir agus líon an fhoirm isteach.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: rannpháirtithe
   teachers_notes: Nótaí do Mhúinteoirí
   teachers_notes_hoc: 'A Mhúinteoirí: Léigh na nótaí tábhachtacha seo'
@@ -2032,7 +2039,9 @@
   playlab_shortcode: play
   artist_shortcode: art
   header_home: Baile
+  header_my_dashboard: My Dashboard
   header_courses: Cúrsaí
+  header_course_catalog: Course Catalog
   header_project_gallery: Gailearaí na dTionscadal
   header_sections: Rannáin
   header_professional_learning: Oideachas Proifisiúnta
@@ -2073,13 +2082,4 @@
   user_header_settings: Mo chuntas
   user_header_logout: Logáil amach
   user_header_signin: Logáil isteach
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

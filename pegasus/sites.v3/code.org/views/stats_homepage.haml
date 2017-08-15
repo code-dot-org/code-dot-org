@@ -1,0 +1,27 @@
+:ruby
+  student_accounts_percent = "20%"
+  female_students = "9M"
+  teacher_users = "600K"
+  world_students_hoc_percent = "10%"
+  states_policy_change = "20"
+
+  top_statistic_number = student_accounts_percent
+  top_statistic_phrase = "of US students have accounts on Code.org"
+
+  statistics = {
+    female_students => "of our students are female",
+    teacher_users => "teachers use Code.org",
+    world_students_hoc_percent => "of the world's students have tried the Hour of Code",
+    states_policy_change => "states changed policy to support computer science"
+  }
+
+.mobile-feature.make-difference We're making a difference
+
+.col-20.stats-box
+  .jumbo.stats-number= "#{top_statistic_number}"
+  .stats-phrase= "#{top_statistic_phrase}"
+
+- statistics.each do |number, phrase|
+  .col-20.col-mobile-48.stats-box
+    .jumbo.stats-number= "#{number}"
+    .stats-phrase= "#{phrase}"

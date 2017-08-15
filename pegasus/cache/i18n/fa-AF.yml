@@ -1115,6 +1115,11 @@
   carousel_heading_webpages: "یادگیری ساخت صفحات وب"
   carousel_heading_robots: Learn to program with robots
   carousel_heading_ide: "محیط های برنامه ریزی محبوب در میان معلمان"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "یادداشت های آموزگار"
   teach_led_lesson_plans: Teacher Led Hour of Code Lesson Plans
   learn_footer_all_tutorials: See the <a href="https://code.org/educate/allhourofcode">comprehensive
@@ -1125,6 +1130,8 @@
   more_resources_educators: "منابع بیشتر برای معلمان و آموزگاران"
   beyond_submission: "می خواهید یک آموزش برای فراتر از یک ساعت ثبت کنید? استاندارد
     و فرم ثبت را ببینید."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "شرکت کنندگان"
   teachers_notes: "یادداشت های معلم"
   teachers_notes_hoc: "معلم ها: نکته های مهم آموزگار را اینجا بخوانید"
@@ -1992,7 +1999,9 @@
   playlab_shortcode: "بازی کن"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Courses
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -2033,13 +2042,4 @@
   user_header_settings: Account settings
   user_header_logout: Sign out
   user_header_signin: Sign in
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

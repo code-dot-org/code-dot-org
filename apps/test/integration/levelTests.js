@@ -30,6 +30,8 @@ window.appOptions = {};
 var testUtils = require('../util/testUtils');
 import {setupBlocklyFrame} from './util/testBlockly';
 
+const defaultTimeout = 20000;
+
 // Anatomy of a level test collection. The example itself is uncommented so
 // that you get the benefits of editor syntax highlighting
 // eslint-disable-next-line
@@ -94,8 +96,6 @@ describe('Level tests', function () {
   testUtils.setExternalGlobals();
 
   before(function (done) {
-    this.timeout(15000);
-
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
     loadSource('/base/lib/ace/src-noconflict/ace.js')
@@ -214,6 +214,8 @@ function runTestCollection(item) {
           // can specify a test specific timeout in json file.
           if (testData.timeout !== undefined) {
             this.timeout(testData.timeout);
+          } else {
+            this.timeout(defaultTimeout);
           }
 
           if (testUtils.debugMode()) {

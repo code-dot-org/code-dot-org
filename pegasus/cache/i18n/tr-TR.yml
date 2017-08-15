@@ -272,7 +272,8 @@
   learn_classes: En yakın sınıfı bul
   learn_back_to_minecraft: Minecraft'la öğrenin
   hoc_is_here: Bilgisayar bilimini öğrenin. Bu herşeyi değiştirir. https://youtu.be/xJqSu1IbcHg.
-  just_did_hoc: "#HourOfCode yeni yaptım - @codeorg u kontrol edin"
+  just_did_hoc: "#KodSaati'ni henüz tamamladım - Hadi bir göz at! Destek için teşekkürler
+    @Microsoft @codeorg"
   just_did_course1: Ders1'i yeni bitirdim.@codeorg ile kontrol et
   just_did_course2: Ders2'yi yeni bitirdim. @codeorg ile kontrol et
   just_did_course3: Ders3'ü yeni bitirdim. @codeorg ile kontrol et
@@ -1079,6 +1080,11 @@
   carousel_heading_webpages: Nasıl web sayfası yapılacağını öğrenin
   carousel_heading_robots: Robotlar ile programlamayı öğrenin
   carousel_heading_ide: "Öğretmenler arasında popüler platformlar"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Eğitimci notları
   teach_led_lesson_plans: "Öğretmenler Ders Planlarını Hazırlar"
   learn_footer_all_tutorials: <a href="https://code.org/educate/allhourofcode"> adresinden
@@ -1089,6 +1095,8 @@
   more_resources_educators: "Öğretmenler ve eğitimciler için daha fazla kaynak"
   beyond_submission: '"Kod Saati ve Ötesi" için eğitim programları mı göndermek istiyorsunuz?  Şartlar
     ve başvuru formunu inceleyin.'
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: katılımcılar
   teachers_notes: "Öğretmen notları"
   teachers_notes_hoc: "Öğretmenler için: Önemli eğitimci notlarını buradan okuyabilirsiniz"
@@ -1909,7 +1917,9 @@
   playlab_shortcode: oynat
   artist_shortcode: art
   header_home: Ana Sayfa
+  header_my_dashboard: My Dashboard
   header_courses: kurslar
+  header_course_catalog: Course Catalog
   header_project_gallery: Proje Galerisi
   header_sections: Bölümler
   header_professional_learning: Profesyonel öğrenme
@@ -1950,13 +1960,4 @@
   user_header_settings: Hesabım
   user_header_logout: "Çıkış Yap"
   user_header_signin: Giriş Yap
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

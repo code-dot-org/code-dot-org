@@ -231,16 +231,17 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
  * in question has already been imported, update the existing section already
  * associated with it.
  * @param {string} courseId
+ * @param {string} courseName
  * @return {function():Promise}
  */
-export const importOrUpdateRoster = courseId => (dispatch, getState) => {
+export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
   const importSectionUrl = importUrlByProvider[provider];
   let sectionId;
 
   dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, { courseId })
+  return fetchJSON(importSectionUrl, { courseId, courseName })
     .then(newSection => sectionId = newSection.id)
     .then(() => dispatch(asyncLoadSectionData()))
     .then(() => dispatch({
