@@ -1,8 +1,6 @@
-import DestroyBlockCommand from "../CommandQueue/DestroyBlockCommand.js";
 import PlaceBlockCommand from "../CommandQueue/PlaceBlockCommand.js";
 import PlaceInFrontCommand from "../CommandQueue/PlaceInFrontCommand.js";
 import MoveForwardCommand from "../CommandQueue/MoveForwardCommand.js";
-import TurnCommand from "../CommandQueue/TurnCommand.js";
 import WhileCommand from "../CommandQueue/WhileCommand.js";
 import IfBlockAheadCommand from "../CommandQueue/IfBlockAheadCommand.js";
 import CallbackCommand from "../CommandQueue/CallbackCommand.js";
@@ -128,7 +126,6 @@ export function get(controller) {
     },
 
     turn: function (highlightCallback, direction, targetEntity) {
-
       const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
         controller.turn(callbackCommand, direction === 'right' ? 1 : -1);
       }, targetEntity);
@@ -143,15 +140,18 @@ export function get(controller) {
     },
 
     turnRight: function (highlightCallback, targetEntity) {
-      controller.addCommand(new TurnCommand(controller, highlightCallback, 1, targetEntity));
+      this.turn(highlightCallback, 'right', targetEntity);
     },
 
     turnLeft: function (highlightCallback, targetEntity) {
-      controller.addCommand(new TurnCommand(controller, highlightCallback, -1, targetEntity));
+      this.turn(highlightCallback, 'left', targetEntity);
     },
 
     destroyBlock: function (highlightCallback, targetEntity) {
-      controller.addCommand(new DestroyBlockCommand(controller, highlightCallback, targetEntity), targetEntity);
+      const callbackCommand = new CallbackCommand(controller, highlightCallback, () => {
+        controller.destroyBlock(callbackCommand);
+      }, targetEntity);
+      controller.addCommand(callbackCommand);
     },
 
     placeBlock: function (highlightCallback, blockType, targetEntity) {
