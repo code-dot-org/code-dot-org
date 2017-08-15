@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { getStore } from './redux';
 import React from 'react';
+import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 import ClientState from './code-studio/clientState';
 import LegacyDialog from './code-studio/LegacyDialog';
@@ -8,6 +9,8 @@ import project from './code-studio/initApp/project';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
+import PublishDialog from './templates/publishDialog/PublishDialog';
+import { showPublishDialog } from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -462,14 +465,13 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
    * @param {boolean} shouldPublish Whether to publish. Default: false.
    * @param {function} callback Callback function to call on success.
    */
-  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish, callback) {
+  function addSaveProjectButtonHandler(buttonSelector, pendingText, shouldPublish, callback) {
     const buttonElement = feedback.querySelector(buttonSelector);
     if (buttonElement) {
       dom.addClickTouchEvent(buttonElement, () => {
         $(buttonSelector).prop('disabled', true).text(pendingText);
         project.copy(project.getNewProjectName(), {shouldPublish})
           .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-          .then(() => $(buttonSelector).prop('disabled', true).text(finishedText))
           .then(callback);
       });
     }
@@ -479,18 +481,31 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   addSaveProjectButtonHandler(
     saveButtonSelector,
     msg.saving(),
-    msg.savedToGallery()
+    false,
+    () => {
+      saveButtonSelector.prop('disabled', true).text(msg.savedToGallery());
+    }
   );
+
+  // Keep the code simpler by waiting until after the project has been saved
+  // before we prompt the user to confirm they want to publish it, since the
+  // PublishDialog redux logic assumes the project will exist already.
 
   const publishButtonSelector = '#publish-to-project-gallery-button';
   addSaveProjectButtonHandler(
     publishButtonSelector,
-    msg.publishPending(),
-    msg.published(),
+    msg.saving(),
     true,
     () => {
-      // Publishing the project also saves it, so disable the save button.
+      // The project was saved but not yet published, so disable the Save button.
       $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
+
+      FeedbackUtils.showConfirmPublishDialog();
     }
   );
 
@@ -526,6 +541,26 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+FeedbackUtils.showConfirmPublishDialog = () => {
+  let publishDialog = document.getElementById('legacy-share-publish-dialog');
+  if (!publishDialog) {
+    publishDialog = document.createElement('div');
+    publishDialog.id = 'legacy-share-publish-dialog';
+    document.body.appendChild(publishDialog);
+  }
+
+  const projectId = project.getCurrentId();
+  const projectType = project.getStandaloneApp();
+  const store = getStore();
+  store.dispatch(showPublishDialog(projectId, projectType));
+  ReactDOM.render(
+    <Provider store={store}>
+      <PublishDialog/>
+    </Provider>,
+    publishDialog
+  );
 };
 
 /**
