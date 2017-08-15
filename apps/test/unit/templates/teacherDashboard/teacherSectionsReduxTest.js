@@ -31,6 +31,9 @@ import reducer, {
   importRoster,
   isRosterDialogOpen,
   oauthProvider,
+  sectionCode,
+  sectionProvider,
+  isSectionProviderManaged,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
@@ -1278,6 +1281,69 @@ describe('teacherSectionsRedux', () => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
       });
+    });
+  });
+
+  describe('the sectionCode selector', () => {
+    it('undefined if the section is not found', () => {
+      expect(sectionCode(getState(), 42)).to.be.undefined;
+    });
+
+    it('the section code if the section is found', () => {
+      store.dispatch(setSections(sections));
+      expect(sectionCode(getState(), 11)).to.equal('PMTKVH');
+    });
+  });
+
+  describe('the sectionProvider selector', () => {
+    beforeEach(() => store.dispatch(setOAuthProvider('google_classroom')));
+
+    it('null if the section is not found', () => {
+      expect(sectionProvider(getState(), 42)).to.be.null;
+    });
+
+    it('null if the section is not provider managed', () => {
+      store.dispatch(setSections(sections));
+      expect(sectionProvider(getState(), 11)).to.be.null;
+    });
+
+    it('the current user oauth provider if the section is provider managed', () => {
+      store.dispatch(setSections([
+        {
+          id: 11,
+          name: 'google test section',
+          login_type: 'google_classroom',
+          code: 'G-123456',
+          studentCount: 10,
+          providerManaged: true,
+        },
+      ]));
+      expect(sectionProvider(getState(), 11)).to.equal('google_classroom');
+    });
+  });
+
+  describe('the isSectionProviderManaged selector', () => {
+    it('false if the section is not found', () => {
+      expect(isSectionProviderManaged(getState(), 42)).to.be.false;
+    });
+
+    it('false if the section is not provider managed', () => {
+      store.dispatch(setSections(sections));
+      expect(isSectionProviderManaged(getState(), 11)).to.be.false;
+    });
+
+    it('true if the section is provider managed', () => {
+      store.dispatch(setSections([
+        {
+          id: 11,
+          name: 'google test section',
+          login_type: 'google_classroom',
+          code: 'G-123456',
+          studentCount: 10,
+          providerManaged: true,
+        },
+      ]));
+      expect(isSectionProviderManaged(getState(), 11)).to.be.true;
     });
   });
 });

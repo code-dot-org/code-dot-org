@@ -2,7 +2,11 @@ import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import {OAuthSectionTypes} from '../../templates/teacherDashboard/shapes';
-import {importRoster, oauthProvider} from '../../templates/teacherDashboard/teacherSectionsRedux';
+import {
+  importRoster,
+  sectionCode,
+  sectionProvider
+} from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button, {ButtonColor, ButtonSize} from '../../templates/Button';
 
 const PROVIDER_NAME = {
@@ -22,9 +26,10 @@ export const FAILURE = 'failure';
  */
 class SyncOmniAuthSectionControl extends React.Component {
   static propTypes = {
-    sectionCode: PropTypes.string.isRequired,
+    sectionId: PropTypes.number.isRequired,
     // Provided by Redux
-    provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
+    sectionCode: PropTypes.string,
+    sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
     importRoster: PropTypes.func.isRequired,
   };
 
@@ -38,6 +43,7 @@ class SyncOmniAuthSectionControl extends React.Component {
   }
 
   onClick = () => {
+    const {sectionCode, importRoster} = this.props;
     const {buttonState} = this.state;
     if ([IN_PROGRESS, SUCCESS].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
@@ -54,8 +60,8 @@ class SyncOmniAuthSectionControl extends React.Component {
     // Default case: Button is READY
     this.setState({buttonState: IN_PROGRESS});
     // Section code is the course ID, without the G- or C- prefix.
-    const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
-    this.props.importRoster(courseId)
+    const courseId = sectionCode.replace(/^[GC]-/, '');
+    importRoster(courseId)
       .then(() => {
         this.setState({buttonState: SUCCESS});
         // While we are embedded in an angular page, reloading is the easiest
@@ -67,23 +73,27 @@ class SyncOmniAuthSectionControl extends React.Component {
   };
 
   render() {
-    const supportedType = PROVIDER_NAME.hasOwnProperty(this.props.provider);
-    if (!supportedType) {
+    const {sectionProvider} = this.props;
+    const {buttonState} = this.state;
+    const supportedType = PROVIDER_NAME.hasOwnProperty(sectionProvider);
+    if (!supportedType || !sectionCode) {
+      // Possibly not loaded yet.
       return null;
     }
 
     return (
       <SyncOmniAuthSectionButton
-        provider={this.props.provider}
-        buttonState={this.state.buttonState}
+        provider={sectionProvider}
+        buttonState={buttonState}
         onClick={this.onClick}
       />
     );
   }
 }
 export const UnconnectedSyncOmniAuthSectionControl = SyncOmniAuthSectionControl;
-export default connect(state => ({
-  provider: oauthProvider(state),
+export default connect((state, props) => ({
+  sectionCode: sectionCode(state, props.sectionId),
+  sectionProvider: sectionProvider(state, props.sectionId),
 }), {
   importRoster,
 })(SyncOmniAuthSectionControl);
@@ -111,7 +121,7 @@ export function SyncOmniAuthSectionButton({
 SyncOmniAuthSectionButton.propTypes = {
   provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
   buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, FAILURE]).isRequired,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 };
 
 function buttonText(buttonState, providerName) {

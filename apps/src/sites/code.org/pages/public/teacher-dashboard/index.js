@@ -306,7 +306,7 @@ function main() {
       $scope.$on('react-sync-oauth-section-rendered', () => {
         $scope.section.$promise.then(section =>
           renderSyncOauthSectionControl({
-            sectionCode: section.code,
+            sectionId: section.id,
             provider: scriptData.provider
           }));
       });
