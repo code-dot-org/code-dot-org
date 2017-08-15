@@ -18,6 +18,10 @@ const styles = {
   colText: tableStyles.colText,
   link: {
     color: color.white
+  },
+  headerRowPadding: {
+    paddingTop: 20,
+    paddingBottom: 20,
   }
 };
 
@@ -52,53 +56,53 @@ class SectionTable extends Component {
       <table style={tableStyle}>
         <thead>
           <tr style={styles.headerRow}>
-            <td style={styles.col}>
+            <td style={{...styles.col, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
                 {i18n.section()}
               </div>
             </td>
             {!sectionFlow2017 &&
-              <td style={styles.col}>
+              <td style={{...styles.col, ...styles.headerRowPadding}}>
                 <div style={styles.colText}>
                   {i18n.loginType()}
                 </div>
               </td>
             }
-            <td style={styles.col}>
+            <td style={{...styles.col, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
                 {i18n.grade()}
               </div>
             </td>
-            <td style={styles.col}>
+            <td style={{...styles.col, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
                 {i18n.course()}
               </div>
             </td>
             {!sectionFlow2017 &&
-              <td style={styles.col}>
+              <td style={{...styles.col, ...styles.headerRowPadding}}>
                 <div style={styles.colText}>
                   {i18n.stageExtras()}
                 </div>
               </td>
             }
             {!sectionFlow2017 &&
-              <td style={styles.col}>
+              <td style={{...styles.col, ...styles.headerRowPadding}}>
                 <div style={styles.colText}>
                   {i18n.pairProgramming()}
                 </div>
               </td>
             }
-            <td style={styles.col}>
+            <td style={{...styles.col, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
                 {i18n.students()}
               </div>
             </td>
-            <td style={styles.col}>
+            <td style={{...styles.col, ...styles.headerRowPadding}}>
               <div style={styles.colText}>
                 {i18n.sectionCode()}
               </div>
             </td>
-            <td style={styles.col}>
+            <td style={{...styles.col, ...styles.headerRowPadding}}>
             </td>
           </tr>
         </thead>

@@ -40,6 +40,10 @@ const styles = {
   },
   currentUnit: {
     marginTop: 10
+  },
+  colButton: {
+    paddingTop: 20,
+    paddingLeft: 20,
   }
 };
 
@@ -415,7 +419,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {sectionCode}
         </td>
-        <td style={styles.col}>
+        <td style={styles.col && styles.colButton}>
           {!editing && !deleting && (
             <EditOrDelete
               canDelete={section.studentCount === 0}
