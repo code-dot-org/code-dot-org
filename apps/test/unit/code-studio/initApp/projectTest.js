@@ -1,6 +1,7 @@
 import {expect} from '../../../util/configuredChai';
 import sinon from 'sinon';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
+import * as utils from '@cdo/apps/utils';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
@@ -56,7 +57,7 @@ describe('project.js', () => {
           isProjectLevel: true,
         },
       });
-      sinon.stub(window.location, 'reload');
+      sinon.stub(utils, 'reload');
       sinon.stub(project, 'saveSourceAndHtml_').callsFake((source, callback) => {
         callback();
       });
@@ -64,7 +65,7 @@ describe('project.js', () => {
 
     afterEach(() => {
       project.saveSourceAndHtml_.restore();
-      window.location.reload.restore();
+      utils.reload.restore();
       restoreOnWindow('appOptions');
     });
 
@@ -88,9 +89,9 @@ describe('project.js', () => {
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
-      expect(window.location.reload).not.to.have.been.called;
+      expect(utils.reload).not.to.have.been.called;
       return project.toggleMakerEnabled().then(() => {
-        expect(window.location.reload).to.have.been.called;
+        expect(utils.reload).to.have.been.called;
       });
     });
   });
