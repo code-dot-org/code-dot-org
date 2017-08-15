@@ -421,7 +421,7 @@ var preloadImage = function (url) {
 };
 
 Craft.characterAssetPackName = function (playerName) {
-  return 'player' + playerName;
+  return 'player' + playerName + 'Events';
 };
 
 Craft.getCurrentCharacter = function () {
@@ -509,7 +509,7 @@ Craft.initializeAppLevel = function (levelConfig) {
     fluffPlane: fluffPlane,
     playerStartPosition: levelConfig.playerStartPosition,
     playerStartDirection: levelConfig.playerStartDirection,
-    playerName: Craft.getCurrentCharacter(),
+    playerName: Craft.getCurrentCharacter() + 'Events',
     assetPacks: levelAssetPacks,
     gridDimensions: levelConfig.gridWidth && levelConfig.gridHeight ?
         [levelConfig.gridWidth, levelConfig.gridHeight] :
@@ -565,7 +565,7 @@ Craft.earlyLoadAssetsForLevel = function (levelNumber) {
 
 Craft.niceToHaveAssetsForLevel = function (levelNumber) {
   if (levelNumber === FIRST_CHARACTER_LEVEL) {
-    return ['playerSteve', 'playerAlex'];
+    return ['playerSteveEvents', 'playerAlexEvents'];
   }
   return ['allAssetsMinusPlayer'];
 };
