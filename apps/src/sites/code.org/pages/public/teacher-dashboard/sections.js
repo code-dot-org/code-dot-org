@@ -12,6 +12,8 @@ import teacherSections, {
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
+import logToCloud from '@cdo/apps/logToCloud';
 
 /**
  * Render our sections table using React
@@ -23,6 +25,12 @@ import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
  * @param {object[]} data.valid_scripts
  */
 export function renderSectionsPage(data) {
+  if (experiments.isEnabled(SECTION_FLOW_2017)) {
+    logToCloud.addPageAction(logToCloud.PageAction.PegasusSectionsRedirect, {});
+    window.location = data.studiourlprefix + '/home';
+    return;
+  }
+
   const element = document.getElementById('sections-page');
   registerReducers({teacherSections});
   const store = getStore();
