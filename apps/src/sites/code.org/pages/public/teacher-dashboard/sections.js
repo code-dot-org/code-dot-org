@@ -40,8 +40,8 @@ export function renderSectionsPage(data) {
   let courseId;
   if (query.courseId) {
     courseId = parseInt(query.courseId, 10);
+    store.dispatch(newSection(courseId));
   }
-  store.dispatch(newSection(courseId));
 
   $("#sections-page-angular").hide();
 
