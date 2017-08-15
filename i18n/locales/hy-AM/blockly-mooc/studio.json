@@ -669,6 +669,7 @@
   "setMapBlobs":"հավաքածու Blobs քարտեզ",
   "setMapTooltip":"Փոխում է քարտեզը, որ դեպքի վայր է",
   "shareStudioTwitter":"Ստուգել պատմությունը ես արել: Ես գրել եմ ինքս ինձ հետ @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Կիսեք Ձեր պատմությունը:",
   "showCoordinates":"Ցույց տալ կոորդինատները",
   "showCoordinatesTooltip":"ցույց են տալիս, գլխավոր դերը խաղացող դերասան-ի համակարգում էկրանի վրա",

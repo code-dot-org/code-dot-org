@@ -98,6 +98,7 @@
   "setSpeed": "ezarri abiadura",
   "setSpeedTooltip": "Eszenatokiaren abiadura ezartzen du",
   "shareFlappyTwitter": "Azter ezazu nik sortutako Flappy jokoa. Nik bakarrik idatzi dut @codeorg-ekin",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Partekatu zure jokoa:",
   "soundRandom": "ausazkoa",
   "soundBounce": "errebotatu",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Exekutatu beheko ekintzak oztopo batean sartzean.",
   "whenRunButtonClick": "Jokoa hasten denean",
   "whenRunButtonClickTooltip": "Jokoa hasten denean exekutatu ondorengo ekintzak.",
-  "yes": "Bai",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Bai"
 }

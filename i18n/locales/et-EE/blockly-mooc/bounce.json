@@ -122,6 +122,7 @@
   "setTeam":"Määra võistkond {team}",
   "setTeamRandom":"Määra juhuslik võistkond",
   "shareBounceTwitter":"Vaata mu Põrgatamismängu. Ma tegin selle ise @codeorg abil",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Jaga oma mängu:",
   "turnLeft":"pööra vasakule",
   "turnRight":"pööra paremale",

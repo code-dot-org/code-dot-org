@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "תראה את משחק הקפיצה שהכנתי. כתבתי אותן בעצמי ב @code.org",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "שתף את המשחק שלך:",
   "turnLeft": "פנה שמאלה",
   "turnRight": "פנה ימינה",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "בצע את הפעולות להלן כאשר הכדור מתנגש עם הקיר.",
   "whileMsg": "כאשר",
   "whileTooltip": "חזור על הפעולות עד שנקודת הסיום הושגה.",
-  "yes": "כן",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "כן"
 }

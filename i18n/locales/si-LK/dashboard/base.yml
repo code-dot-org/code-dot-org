@@ -56,6 +56,9 @@ si:
   puzzle: "ප්‍රහේලිකාව"
   trophies: "ඵලකයන්"
   courses: 'පාඨමාලාව'
+  courses_page:
+    title_student: "කොඩ් ස්ටුඩියො ගෙන් ඉගෙන ගන්න"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'අපේනුගත ක්‍රියාකාරකම'
   of: "ගේ"
   more: "වැඩි"
@@ -249,7 +252,9 @@ si:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "පාඨමාලාව"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

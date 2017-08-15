@@ -669,6 +669,7 @@
   "setMapBlobs":"lisa kujundite kaart",
   "setMapTooltip":"Muudab stseeni kaarti",
   "shareStudioTwitter":"Vaata seda lugu, mis ma tegin. Kirjutasin selle ise @codeorgi abiga",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Jaga oma lugu:",
   "showCoordinates":"näita koordinaate",
   "showCoordinatesTooltip":"kuva ekraanil peategelase koordinaadid",

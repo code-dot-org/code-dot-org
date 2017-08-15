@@ -98,6 +98,7 @@
   "setSpeed": "速度を設定",
   "setSpeedTooltip": "速度のレベルを設定",
   "shareFlappyTwitter": "私が作った Flappy ゲームを見てみてください。@codeorg で書きました。",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "あなたのゲームを共有：",
   "soundRandom": "ランダム",
   "soundBounce": "バウンス",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "フラッピーが障害物にぶつかったとき、次のアクションを実行",
   "whenRunButtonClick": "ゲームの開始時",
   "whenRunButtonClickTooltip": "ゲーム開始時、次のアクションを実行",
-  "yes": "はい",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "はい"
 }

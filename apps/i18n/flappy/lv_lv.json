@@ -98,6 +98,7 @@
   "setSpeed": "iestatīt ātrumu",
   "setSpeedTooltip": "Iestata līmeņa ātrumu",
   "shareFlappyTwitter": "Aplūko Flappy spēli, kuru izveidoju. Es uzrakstīju to pats kopā ar @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Iesaki savu speli:",
   "soundRandom": "nejaušs",
   "soundBounce": "atlekt",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Izpildīt sekojošas darbīas, kad Flapijs saskaras ar šķērsli.",
   "whenRunButtonClick": "kad spēle sākas",
   "whenRunButtonClickTooltip": "Izpildīt sekojošas darbības, kad spēle sākas.",
-  "yes": "Jā",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Jā"
 }

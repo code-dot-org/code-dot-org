@@ -98,6 +98,7 @@
   "setSpeed":"defina a velocidade",
   "setSpeedTooltip":"Define a velocidade do nível",
   "shareFlappyTwitter":"Veja o jogo Flappy bird que eu fiz. Eu mesmo programei com a @codeorg",
+  "shareFlappyTwitterDonor":"Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Compartilhe seu jogo:",
   "soundRandom":"aleatório",
   "soundBounce":"quicar",

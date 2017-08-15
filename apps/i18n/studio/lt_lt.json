@@ -669,6 +669,7 @@
   "setMapBlobs": "nustatyk žemėlapį blobs",
   "setMapTooltip": "Pakeičia scenos žemėlapį",
   "shareStudioTwitter": "Pažiūrėk, kokią istoriją sukūriau. Ją parašiau pats su @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Pasidalink savo istorija:",
   "showCoordinates": "rodyti koordinates",
   "showCoordinatesTooltip": "rodyti \"geriečio\" koordinates ekrane",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Pagauk 20 Pelės Droidų. Įdėk komandą „pridėti Pelė Droidas“ į komandos „kai Pelė Droidas pagautas“ vidų, kad galėtum pridėti vieną ar daugiau Pelių Droidų kiekvieną kartą, kai pagauni vieną.",
   "failedMultiplyCharactersTimeoutGotSome": "Sveikiname, tu sukūrei kodą Pelėms Droidams pagaminti. Gali pereiti prie kito galvosūkio arba pamėginti dar kartą, kad gautum 20 Pelių Droidų. Pamėgink lengviau – pradėk su didesniu Pelių Droidų skaičiumi. (Nuspausk ir laikyk klavišus savo klaviatūroje (arba ekrane), kad judėtum greičiau.)",
   "failedChangeSettingTimeout": "Pagauk 3 Sukilimo Pilotus.",
-  "failedChangeSettingSettings": "Pasidaryk žaidimą pagal save! Kad išspręstum šį galvosūkį, tau reikia pakeisti savo robotą ir nustatyti jo greitį.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Pasidaryk žaidimą pagal save! Kad išspręstum šį galvosūkį, tau reikia pakeisti savo robotą ir nustatyti jo greitį."
 }

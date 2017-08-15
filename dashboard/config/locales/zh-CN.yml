@@ -56,6 +56,9 @@
   puzzle: "题目"
   trophies: "奖杯"
   courses: "课程"
+  courses_page:
+    title_student: "在代码工作室学习"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "不用电脑的活动"
   of: "的"
   more: "更多"
@@ -252,7 +255,9 @@
         gamelab: "创建一个游戏实验室项目"
         weblab: "开始一个网站实验室（测试版）项目"
       home: "首页"
+      my_dashboard: My Dashboard
       courses: "课程"
+      course_catalog: Course Catalog
       project_gallery: "项目集"
       sections: "小组"
       help_support: "帮助与支持"

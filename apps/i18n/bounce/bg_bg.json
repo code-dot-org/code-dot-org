@@ -122,6 +122,7 @@
   "setTeam": "Задава екип {team}",
   "setTeamRandom": "Създава случаен екип",
   "shareBounceTwitter": "Вижте Bounce играта, която съм създал. Написах я с @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Споделете играта си:",
   "turnLeft": "завий наляво",
   "turnRight": "завий надясно",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Изпълнява действията по-долу, когато топката се сблъсква със стена.",
   "whileMsg": "докато",
   "whileTooltip": "Повтаря поставените в блока действия, докато целта не бъде достигната.",
-  "yes": "Да",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Да"
 }
