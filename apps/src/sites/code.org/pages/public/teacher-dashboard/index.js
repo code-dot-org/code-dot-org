@@ -308,7 +308,8 @@ function main() {
           renderSyncOauthSectionControl({
             sectionId: section.id,
             provider: scriptData.provider
-          }));
+          })
+        );
       });
       $scope.$on('$destroy', unmountSyncOauthSectionControl);
     }
