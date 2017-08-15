@@ -15,6 +15,7 @@ import {
 export default class AuthoredHints {
   constructor(studioApp) {
     this.studioApp_ = studioApp;
+    this.store_ = getStore();
 
     /**
      * @type {number}
@@ -31,14 +32,14 @@ export default class AuthoredHints {
    * @return {AuthoredHints[]}
    */
   getUnseenHints() {
-    return getStore().getState().authoredHints.unseenHints;
+    return this.store_.getState().authoredHints.unseenHints;
   }
 
   /**
    * @return {AuthoredHints[]}
    */
   getSeenHints() {
-    return getStore().getState().authoredHints.seenHints;
+    return this.store_.getState().authoredHints.seenHints;
   }
 
   /**
@@ -49,10 +50,10 @@ export default class AuthoredHints {
    */
   displayMissingBlockHints(blocks) {
     const newContextualHints = authoredHintUtils.createContextualHintsFromBlocks(blocks);
-    getStore().dispatch(displayMissingBlockHints(newContextualHints));
+    this.store_.dispatch(displayMissingBlockHints(newContextualHints));
 
     if (newContextualHints.length > 0 && this.getUnseenHints().length > 0) {
-      getStore().dispatch(setHasAuthoredHints(true));
+      this.store_.dispatch(setHasAuthoredHints(true));
     }
   }
 
@@ -87,8 +88,8 @@ export default class AuthoredHints {
     this.levelId_ = levelId;
 
     if (hints && hints.length > 0) {
-      getStore().dispatch(enqueueHints(hints, hintsUsedIds));
-      getStore().dispatch(setHasAuthoredHints(true));
+      this.store_.dispatch(enqueueHints(hints, hintsUsedIds));
+      this.store_.dispatch(setHasAuthoredHints(true));
     }
   }
 
@@ -110,7 +111,7 @@ export default class AuthoredHints {
    * @param {AuthoredHint} hint
    */
   recordUserViewedHint_(hint) {
-    getStore().dispatch(showNextHint(hint));
+    this.store_.dispatch(showNextHint(hint));
     authoredHintUtils.recordUnfinishedHint({
       // level info
       scriptId: this.scriptId_,
