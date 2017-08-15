@@ -3,14 +3,12 @@
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 
 %p
-  Hello #{@teacher.name}, and welcome to Code.org!
-%p
-  We’re here to help you get started.
+  Hello #{@teacher.name}, and welcome to Code.org! We’re here to help you get started.
 %h3
   Step 1: Choose a course
 %p
   On Code.org,
-  %a{href:"https://studio.code.org/courses"}you’ll find courses for all grade levels
+  %a{href:"https://studio.code.org/courses?view=teacher"}you’ll find courses for all grade levels
   \- from pre-readers to seniors in high school, and everyone in between. All our courses
   are available at no cost. Looking for a quick activity? Try starting with an Hour of Code.
 %h3
@@ -26,6 +24,9 @@
   your students, unplugged activities for your class you can do without a computer, and forums
   to connect to other teachers.
 
+%a{href:"https://studio.code.org/home", style: 'width: 180px; height: 36px; border: 0; color: white; background-color: #FDC62C; font: bolder 18px Arial; display: block; text-align: center; line-height: 36px; text-decoration: none; border-radius: 5px;'}
+  Get started here
+
 - if us_ip
   %h3
     New to teaching computer science?
@@ -34,9 +35,6 @@
     by experienced Code.org facilitators in locations across the US. We've prepared over 57,000
     new teachers to teach CS across grades K-12.
     %a{href:"https://code.org/educate/professional-learning"}Find a professional development workshop near you.
-
-%a{href:"https://studio.code.org/home", style: 'width: 230px; height: 50px; border: 0; color: white; background-color: #FDC62C; font: bolder 25px Arial; display: block; text-align: center; line-height: 50px; text-decoration: none; border-radius: 5px;'}
-  Get started here!
 
 %h3
   Still have questions? Please don’t hesitate to reach out to
