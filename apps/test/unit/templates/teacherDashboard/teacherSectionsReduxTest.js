@@ -1160,6 +1160,7 @@ describe('teacherSectionsRedux', () => {
   describe('the importRoster action', () => {
     let server;
     const TEST_COURSE_ID = 'test-course-id';
+    const TEST_COURSE_NAME = 'test-course-name';
 
     beforeEach(() => {
       server = sinon.fakeServer.create();
@@ -1168,8 +1169,8 @@ describe('teacherSectionsRedux', () => {
       // difficult to trigger the fake responses at the right times.
       server.respondImmediately = true;
       // set up some default success responses
-      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}`, successResponse({}));
-      server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}`, successResponse({}));
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
+      server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
       server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
       server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
       server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
@@ -1190,7 +1191,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
       expect(getState().teacherSections.classrooms).to.be.null;
 
       return expect(promise).to.be.fulfilled;
@@ -1198,24 +1199,24 @@ describe('teacherSectionsRedux', () => {
 
     it('uses one api for Google Classroom', () => {
       withGoogle();
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
 
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
       expect(server.requests[0].url)
-        .to.equal('/dashboardapi/import_google_classroom?courseId=test-course-id');
+        .to.equal('/dashboardapi/import_google_classroom?courseId=test-course-id&courseName=test-course-name');
 
       return expect(promise).to.be.fulfilled;
     });
 
     it('uses a different api for Clever', () => {
       withClever();
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
 
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
       expect(server.requests[0].url)
-        .to.equal('/dashboardapi/import_clever_classroom?courseId=test-course-id');
+        .to.equal('/dashboardapi/import_clever_classroom?courseId=test-course-id&courseName=test-course-name');
 
       return expect(promise).to.be.fulfilled;
     });
@@ -1225,7 +1226,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(isRosterDialogOpen(getState())).to.be.true;
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
       expect(isRosterDialogOpen(getState())).to.be.true;
 
       return expect(promise).to.be.fulfilled.then(() => {
@@ -1241,7 +1242,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(getState().teacherSections.sections).to.deep.equal({});
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
       return expect(promise).to.be.fulfilled.then(() => {
         expect(server.requests).to.have.length(4);
         expect(server.requests[1].method).to.equal('GET');
@@ -1257,7 +1258,7 @@ describe('teacherSectionsRedux', () => {
 
     it('starts editing the new section on success', () => {
       // Set up custom section import response
-      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}`, successResponse({
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({
         id: 1111,
       }));
       // Set up custom section load response to simulate the new section
@@ -1270,7 +1271,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(getState().teacherSections.sectionBeingEdited).to.be.null;
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
       return expect(promise).to.be.fulfilled.then(() => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
