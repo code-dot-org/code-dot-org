@@ -24,13 +24,18 @@ class SyncOmniAuthSectionControl extends React.Component {
   static propTypes = {
     sectionCode: PropTypes.string.isRequired,
     // Provided by Redux
-    provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
+    provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
     importRoster: PropTypes.func.isRequired,
   };
 
   state = {
     buttonState: READY,
   };
+
+  static reloadPage() {
+    // Extracted so we can stub it in tests
+    window.location.reload();
+  }
 
   onClick = () => {
     const {buttonState} = this.state;
@@ -56,7 +61,7 @@ class SyncOmniAuthSectionControl extends React.Component {
         // While we are embedded in an angular page, reloading is the easiest
         // way to pick up roster changes.  Once everything is React maybe we
         // won't need to do this.
-        window.location.reload();
+        SyncOmniAuthSectionControl.reloadPage();
       })
       .catch(() => this.setState({buttonState: FAILURE}));
   };
@@ -76,6 +81,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     );
   }
 }
+export const UnconnectedSyncOmniAuthSectionControl = SyncOmniAuthSectionControl;
 export default connect(state => ({
   provider: oauthProvider(state),
 }), {
