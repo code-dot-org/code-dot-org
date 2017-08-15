@@ -26,7 +26,7 @@
 #
 
 class GoogleClassroomSection < OmniAuthSection
-  def self.from_service(course_id, owner_id, student_list)
+  def self.from_service(course_id, owner_id, student_list, section_name)
     code = "G-#{course_id}"
 
     students = student_list.map do |student|
@@ -44,6 +44,7 @@ class GoogleClassroomSection < OmniAuthSection
       type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
       owner_id: owner_id,
       students: students,
+      section_name: section_name,
     )
   end
 end
