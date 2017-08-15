@@ -27,20 +27,9 @@ describe('item', () => {
 
   describe('update', () => {
     describe('if destination is not yet set', () => {
-      // the destination-setting logic uses _.shuffle to semi-randomize the
-      // set of possible destinations before sorting them by score. We would
-      // instead like to make it deterministic.
+      let targetSprite;
       let shuffleSpy;
 
-      beforeEach(() => {
-        shuffleSpy = sinon.stub(_, 'shuffle').callsFake(ar => ar);
-      });
-
-      afterEach(() => {
-        _.shuffle.restore();
-      });
-
-      let targetSprite;
       beforeEach(() => {
         item = new Item({});
         item.x = 100;
@@ -53,6 +42,15 @@ describe('item', () => {
         targetSprite.y = 200;
         Studio.sprite = [targetSprite];
         item.targetSpriteIndex = 0;
+
+        // the destination-setting logic uses _.shuffle to semi-randomize the
+        // set of possible destinations before sorting them by score. We would
+        // instead like to make it deterministic.
+        shuffleSpy = sinon.stub(_, 'shuffle').callsFake(ar => ar);
+      });
+
+      afterEach(() => {
+        _.shuffle.restore();
       });
 
       it('sets an arbitrary direction on wander', () => {
