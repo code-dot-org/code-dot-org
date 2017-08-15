@@ -65,6 +65,9 @@
   puzzle: Bulmaca
   trophies: kupalar
   courses: kurslar
+  courses_page:
+    title_student: Code Studio'da Öğrenin
+    title_teacher: Teach with Code Studio
   unplugged_activity: Bağlantısız Etkinlik
   of: "/"
   more: DAHA FAZLA
@@ -287,7 +290,9 @@
         gamelab: Bir labaratuvar oyunu projesi yap
         weblab: Bir Web Lab (beta) projesi üret
       home: Ana Sayfa
+      my_dashboard: My Dashboard
       courses: kurslar
+      course_catalog: Course Catalog
       project_gallery: Proje Galerisi
       sections: Bölümler
       help_support: Yardım ve Destek

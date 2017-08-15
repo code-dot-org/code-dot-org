@@ -5,7 +5,7 @@ import {assert, expect} from '../../../util/configuredChai';
 import {sections} from './fakeSectionUtils';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-import { announcement, courses } from './homepagesTestData';
+import { announcement, courses, topCourse } from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
   let server;
@@ -27,6 +27,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={[]}
+        topCourse={topCourse}
         sections={[]}
         isRtl={false}
       />
@@ -43,6 +44,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={[]}
+        topCourse={topCourse}
         sections={[]}
         isRtl={false}
       />
@@ -55,6 +57,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[announcement]}
         courses={[]}
+        topCourse={topCourse}
         sections={[]}
         isRtl={false}
       />
@@ -78,6 +81,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={[]}
+        topCourse={topCourse}
         sections={sections}
         isRtl={false}
       />
@@ -94,6 +98,7 @@ describe('TeacherHomepage', () => {
     const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
+        topCourse={topCourse}
         courses={courses}
         sections={[]}
         isRtl={false}
@@ -104,6 +109,7 @@ describe('TeacherHomepage', () => {
       showAllCoursesLink: true,
       isTeacher: true,
       courses: courses,
+      topCourse: topCourse,
       isRtl: false
     });
   });
@@ -113,6 +119,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={courses}
+        topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}

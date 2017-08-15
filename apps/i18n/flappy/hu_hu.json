@@ -98,6 +98,7 @@
   "setSpeed": "Sebesség beállítása",
   "setSpeedTooltip": "A szint sebességének beállítása",
   "shareFlappyTwitter": "Nézd, ezt a Flappy Bird játékot csináltam! Én magam írtam a @codeorg oldalon.",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Oszd meg a játékodat:",
   "soundRandom": "véletlen",
   "soundBounce": "ugrál",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Hajtsa végre a lenti műveleteket, ha Flappy átjut egy akadályon.",
   "whenRunButtonClick": "amikor a játék elindul",
   "whenRunButtonClickTooltip": "Végrehajtja a lenti utasításokat, ha a játék elindul.",
-  "yes": "Igen",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Igen"
 }

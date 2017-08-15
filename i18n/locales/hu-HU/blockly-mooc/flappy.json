@@ -98,6 +98,7 @@
   "setSpeed":"Sebesség beállítása",
   "setSpeedTooltip":"A szint sebességének beállítása",
   "shareFlappyTwitter":"Nézd, ezt a Flappy Bird játékot csináltam! Én magam írtam a @codeorg oldalon.",
+  "shareFlappyTwitterDonor":"Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Oszd meg a játékodat:",
   "soundRandom":"véletlen",
   "soundBounce":"ugrál",

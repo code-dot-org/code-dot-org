@@ -56,6 +56,9 @@ et:
   puzzle: "Mõistatus"
   trophies: "Trofeed"
   courses: 'Kursused'
+  courses_page:
+    title_student: "Õpi Code stuudios"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Lahutatud tegevus'
   of: "kohta"
   more: "NÄITA ROHKEM"
@@ -243,7 +246,9 @@ et:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Kursused"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

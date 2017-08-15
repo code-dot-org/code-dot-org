@@ -56,6 +56,9 @@ mt:
   puzzle: "Loghba"
   trophies: "Trofej"
   courses: 'Korsijiet'
+  courses_page:
+    title_student: "Tgħallem fil-Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Attivita bla kompjuter'
   of: "ta'"
   more: "AKTAR"
@@ -243,7 +246,9 @@ mt:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Korsijiet"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

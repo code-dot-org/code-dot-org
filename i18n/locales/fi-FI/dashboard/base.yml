@@ -56,6 +56,9 @@ fi:
   puzzle: "Tehtävä"
   trophies: "Pokaalit"
   courses: 'Kurssit'
+  courses_page:
+    title_student: "Opiskele Code Studio:ssa"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Tietokoneeton tekeminen'
   of: "/"
   more: "LISÄÄ"
@@ -249,7 +252,9 @@ fi:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Etusivu"
+      my_dashboard: "My Dashboard"
       courses: "Kurssit"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Ohjeet ja tuki"

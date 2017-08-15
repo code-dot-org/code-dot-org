@@ -669,6 +669,7 @@
   "setMapBlobs":"set blobs map",
   "setMapTooltip":"Changes the map in the scene",
   "shareStudioTwitter":"Check out the story I made. I wrote it myself with @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"আপনার গল্প শেয়ার করুন:",
   "showCoordinates":"স্থানাংকসমূহ প্রদর্শন করুন",
   "showCoordinatesTooltip":"show the protagonist's coordinates on the screen",

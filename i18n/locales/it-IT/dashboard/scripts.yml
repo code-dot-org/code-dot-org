@@ -43,7 +43,7 @@ it:
             'Studio: Create a Story':
               name: 'Laboratorio: Crea una Storia'
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
         course2:
           title: Corso 2
           description: Il Corso 2 è rivolto a studenti delle scuole elementari che hanno già imparato a leggere e non hanno precedenti esperienze di programmazione. Nel corso gli studenti creano programmi per risolvere problemi e sviluppare giochi interattivi o storie da condividere. Il corso è raccomandato dalla terza elementare.
@@ -85,7 +85,7 @@ it:
             'Studio: Create a Story':
               name: 'Laboratorio: Crea una Storia'
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
             Your Digital Footprint:
               name: La tua Impronta Digitale
         course3:
@@ -1451,7 +1451,7 @@ it:
             Songwriting:
               name: "https://studio.code.org/s/course3/stage/9/puzzle/1\n\nComposizione di Canzoni - Parametri"
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
         afterschool1:
           title: Afterschool 1
           description: Afterschool 1 is designed to for informal classrooms where students vary in age and assessment is not required. This course focuses on learning through entertainment, with varying options for implementation, all in 10 sessions or less. Use alone or with Afterschool Unplugged. Recommended for grades 3-8.
@@ -3020,7 +3020,7 @@ it:
             'Debugging: Unspotted Bugs':
               name: 'Debugging: Unspotted Bugs'
             'Events Unplugged: The Big Event':
-              name: 'Events Unplugged: The Big Event'
+              name: Eventi in modalità tradizionale
         grade5:
           title: Grade 5
           description: Planning Script for CSF 2.0
@@ -3417,7 +3417,7 @@ it:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmi della Vita Reale: Aeroplani di Carta'
             The Big Event:
-              name: Il Grande Evento
+              name: Gli Eventi
         transferring-over:
           title: ''
           description_audience: ''
@@ -3961,7 +3961,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             Fuzz Fiesta:
@@ -3997,7 +3997,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             More Computer Science:
@@ -4027,7 +4027,7 @@ it:
             Loops in Maze:
               name: Loops in Maze
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Puppy Introduction:
               name: Puppy Introduction
             Online Internet Safety:
@@ -5232,7 +5232,7 @@ it:
               description_student: ''
               description_teacher: Returning to loops, students learn to draw images by looping simple sequences of instructions. In the previous plugged lesson, loops were used to traverse a maze and collect treasure. Here, loops are creating patterns. At the end of this stage, students will be given the opportunity to create their own images using loops.
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
               description_student: ''
               description_teacher: Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.
             Events in Play Lab:
@@ -5266,7 +5266,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             More Programming in Maze:
@@ -5298,7 +5298,7 @@ it:
             Loops in Harvester:
               name: Loops in Harvester
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Build a Flappy Game:
               name: Build a Flappy Game
             Events in Play Lab:
@@ -5841,7 +5841,7 @@ it:
             Screen Out the Mean:
               name: Screen Out the Mean
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Build a Star Wars Game:
               name: Build a Star Wars Game
             Events in Bounce:
@@ -5939,7 +5939,7 @@ it:
             Loops in Artist:
               name: Loops in Artist
             'Events: The Big Event':
-              name: 'Events: The Big Event'
+              name: Eventi
             Events in Play Lab:
               name: Events in Play Lab
             Spelling Bee:
@@ -5972,6 +5972,10 @@ it:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
           title: ''
           description_audience: ''
           description_short: ''

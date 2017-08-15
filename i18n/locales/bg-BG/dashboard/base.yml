@@ -56,6 +56,9 @@ bg:
   puzzle: "Пъзел"
   trophies: "Трофеи"
   courses: 'Курсове'
+  courses_page:
+    title_student: "Обучавайте се в Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Ънплъгд дейност'
   of: "на"
   more: "ПОВЕЧЕ"
@@ -247,7 +250,9 @@ bg:
         gamelab: 'Направи Game Lab проект'
         weblab: 'Make a Web Lab (beta) project'
       home: "Начало"
+      my_dashboard: "My Dashboard"
       courses: "Курсове"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Раздели"
       help_support: "Help and support"

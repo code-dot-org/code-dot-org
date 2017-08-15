@@ -669,6 +669,7 @@
   "setMapBlobs": "vendos një hartë pike",
   "setMapTooltip": "Ndryshon hartën në skenë",
   "shareStudioTwitter": "Shiko ngjarjen që bëra unë. E shkruajta vetë me @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Shpërnda historinë tënde:",
   "showCoordinates": "trego koordinatat",
   "showCoordinatesTooltip": "shfaq koordinatat e protagonistëve në ekran",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Ju duhet të merrni 20 Mouse Droids. Përdorni komandën \"shto një Robot Mi\" brenda ngjarjes \"kur merrni Robotin Mi\" për të shtuar dy ose më shumë Robot Mi çdo herë që ju të merrni një të tillë.",
   "failedMultiplyCharactersTimeoutGotSome": "Urime, ju shtuat kodin për të bërë Robotët Mi. Ju mund të shkoni në puzzle-in tjetër ose të përpiqeni përsëri për të marrë 20 Robotët Mi. Provoni ta bëni atë më të lehtë duke shtuar më shumë prej tyre! (Shtypni dhe mbani çelësat në tastierën tuaj (ose ekran) për të lëvizur më shpejt.)",
   "failedChangeSettingTimeout": "Merrni tre Pilot Rebel për të lëvizur.",
-  "failedChangeSettingSettings": "Bëjeni lojën tuaj. Për të kaluar këtë puzzle ju keni nevojë për të ndryshuar robotin tuaj dhe të vendosni shpejtësinë e tij.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Bëjeni lojën tuaj. Për të kaluar këtë puzzle ju keni nevojë për të ndryshuar robotin tuaj dhe të vendosni shpejtësinë e tij."
 }
