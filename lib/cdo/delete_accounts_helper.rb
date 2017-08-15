@@ -158,14 +158,14 @@ module DeleteAccountsHelper
     # students of the other (via `purge_orphaned_students`).
     return if user.purged_at
 
-    # It is important that user.destroy happen first, as `purge_orphaned_students` assumes the
-    # dependent destroys have already been executed. Further, this assures the user is not able
-    # to access an account in a partially purged state should an exception occur somewhere in this
-    # method.
-    # NOTE: The logic of some of the helper methods assumes `user.destroy` has happened previously.
+    user.revoke_all_permissions
+    # NOTE: It is important that user.destroy happen early, as `purge_orphaned_students` assumes the
+    # dependent destroys have already been executed. Further, doing so early assures the user is not
+    # able to access an account in a partially purged state should an exception occur somewhere in
+    # this method.
+    # NOTE: We do not gate any deletion logic on `user.user_type` as its current state may not be
+    # reflective of past state.
     user.destroy
-    # Note that we do not gate any deletion logic on `user.user_type` as its current state may not
-    # be reflective of past state.
     DeleteAccountsHelper.clean_level_source_backed_progress(user.id)
     DeleteAccountsHelper.clean_survey_responses(user.id)
     DeleteAccountsHelper.delete_project_backed_progress(user.id)

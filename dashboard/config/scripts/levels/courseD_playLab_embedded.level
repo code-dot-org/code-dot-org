@@ -46,9 +46,9 @@
     "authored_hints": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "true",
-    "contained_level_names": null,
     "instructions": "Move Pegleg the Pirate with the arrow keys. Get to the dragon to score points, but avoid the ninja! Standing below the line of octopuses will make the ninja stop chasing you, but beware! The longer you stay there, the more points you lose. \r\n\r\nGet 5 points to win!",
-    "disable_procedure_autopopulate": "false"
+    "disable_procedure_autopopulate": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

@@ -136,14 +136,19 @@ CS Fundamentals Express combines the best of Courses A-F into a single condensed
 <br>
 <br>
 
+# International CS Fundamentals: Courses 1-4 and Accelerated
 
-# Looking for translated courses?
+We are working on translating Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using Courses 1-4 and the Accelerated Course. These courses cover the same basic concepts and have already been translated into 25+ languages.
 
-We are working on translating Courses A-F and the Express Course to languages beyond English. In the meantime, we recommend using [Courses 1-4 and the Accelerated Course](/educate/curriculum/cs-fundamentals-international). These courses cover the same basic concepts and have already been translated into 25+ languages.
+<a href="/educate/curriculum/cs-fundamentals-international"><button>View Courses 1-4</button></a>
+&nbsp;&nbsp;
+<a href="/educate/curriculum/cs-fundamentals-international"><button>View Accelerated Course</button></a>
 
 # Looking for unplugged activities?
 
-If you don't have computers in your classroom, these [unplugged lessons](/educate/curriculum/cs-fundamentals-unplugged) can either be used alone or with other computer science lessons on related concepts.
+If you don't have computers in your classroom, these unplugged lessons can either be used alone or with other computer science lessons on related concepts.
+
+<a href="/educate/curriculum/cs-fundamentals-unplugged"><button>View unplugged lessons</button></a>
 
 # Examples of student creations
 

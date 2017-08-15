@@ -77,7 +77,6 @@ export default class Item extends Collidable {
    * Returns the frame of the spritesheet for the current walking direction.
    */
   getDirectionFrame() {
-
     // Every other frame, if we aren't yet rendering in the correct direction,
     // assign a new displayDir from state table; only one turn at a time.
 
@@ -126,18 +125,23 @@ export default class Item extends Collidable {
     // Draw the item's current location.
     Studio.drawDebugRect("itemCenter", this.x, this.y, 3, 3);
 
-    // In this stationary activity case, we don't need to do any of this
-    // update logic (facing the actor is handled every frame in display())
-    if (this.activity === 'watchActor') {
+    if (
+      this.activity === constants.BEHAVIOR_WATCH_ACTOR ||
+      this.activity === constants.BEHAVIOR_GRID_ALIGNED
+    ) {
+      // In this stationary activity case, we don't need to do any of this
+      // update logic (facing the actor is handled every frame in display())
       return;
-    }
-    if (this.activity === constants.BEHAVIOR_STOP) {
+    } else if (this.activity === constants.BEHAVIOR_STOP) {
+      // In this stationary activity case, we override the actor's facing and
+      // movement to force a "stop"
       this.setDirection(Direction.NONE);
 
       this.destGridX = undefined;
       this.destGridY = undefined;
       return;
     }
+
     if (!this.visible) {
       return;
     }
@@ -328,7 +332,8 @@ export default class Item extends Collidable {
 
   /**
    * Sets the activity property for this item.
-   * @param {string} type Valid options are: none, watchActor, roam, chase, or flee
+   * @param {string} type Valid options are: none, watchActor, roam, chase,
+   *        flee, or grid
    * @param {number} targetSpriteIndex optional target sprite used with chase and flee
    */
   setActivity(type, targetSpriteIndex) {
@@ -389,6 +394,17 @@ export default class Item extends Collidable {
   }
 
   /**
+   * Whether or not this sprite will turn to face south after
+   * Studio.ticksBeforeFaceSouth ticks of no movement
+   *
+   * @returns {boolean}
+   * @see Studio.onTick
+   */
+  shouldFaceSouthOnIdle() {
+    return this.activity !== constants.BEHAVIOR_GRID_ALIGNED;
+  }
+
+  /**
    * Display our item at its current location
    */
   display() {
@@ -401,7 +417,7 @@ export default class Item extends Collidable {
     }
 
     // Watch behavior does not change logical position, should update every frame
-    if (this.activity === "watchActor") {
+    if (this.activity === constants.BEHAVIOR_WATCH_ACTOR) {
       this.turnToFaceActor(Studio.protagonistSpriteIndex || 0);
     }
 
@@ -420,14 +436,25 @@ export default class Item extends Collidable {
     };
   }
 
+  /**
+   * Whether or not this sprite should automatically move on each tick.
+   *
+   * @returns {boolean}
+   * @see Studio.onTick
+   */
+  shouldMove() {
+    const standstillBehaviors = [
+      constants.BEHAVIOR_STOP,
+      constants.BEHAVIOR_WATCH_ACTOR,
+      constants.BEHAVIOR_GRID_ALIGNED
+    ];
+    return !standstillBehaviors.includes(this.activity);
+  }
+
   getNextPosition() {
-    var unit = Direction.getUnitVector(this.dir);
-    var speed = this.speed;
-    // TODO: Better concept of which actions actually move the actor
-    // Projected position should not be in front of you if you are not moving!
-    if (this.activity === constants.BEHAVIOR_STOP || this.activity === "watchActor") {
-      speed = 0;
-    }
+    const unit = Direction.getUnitVector(this.dir);
+    const speed = this.shouldMove() ? this.speed : 0;
+
     return {
       x: this.x + speed * unit.x,
       y: this.y + speed * unit.y
@@ -440,13 +467,17 @@ export default class Item extends Collidable {
     this.y = next.y;
   }
 
+  updateAnimationFrameDuration_() {
+    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+  }
+
   /**
    * Sets the speed and changes the animation frame duration to match.
    * @param {number} speed Number of pixels to move per tick
    */
   setSpeed(speed) {
     this.speed = speed;
-    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+    this.updateAnimationFrameDuration_();
   }
 
   /**
@@ -456,7 +487,7 @@ export default class Item extends Collidable {
   setDirection(direction) {
     this.dir = direction;
     // Update this because animation speed may change as we alter direction:
-    this.animation_.setAnimationFrameDuration(this.getAnimationFrameDuration());
+    this.updateAnimationFrameDuration_();
   }
 
   /**

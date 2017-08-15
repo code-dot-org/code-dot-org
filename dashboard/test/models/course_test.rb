@@ -166,14 +166,35 @@ class CourseTest < ActiveSupport::TestCase
 
     serialization = {
       name: 'this-course',
-      script_names: ['script1', 'script2']
-    }.to_json
-    File.stubs(:read).returns(serialization)
+      script_names: ['script1', 'script2'],
+      properties: {
+        teacher_resources: [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']],
+      }
+    }
+
+    File.stubs(:read).returns(serialization.to_json)
 
     Course.load_from_path('file_path')
 
     course = Course.find_by_name!('this-course')
     assert_equal 2, CourseScript.where(course: course).length
+    assert_equal course.teacher_resources, [['curriculum', '/link/to/curriculum'], ['teacherForum', '/link/to/forum']]
+
+    # can also change teacher_resources
+    serialization[:properties][:teacher_resources] = [['curriculum', '/link/to/curriculum']]
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+
+    course = Course.find_by_name!('this-course')
+    assert_equal [['curriculum', '/link/to/curriculum']], course.teacher_resources
+
+    # can remove them completely
+    serialization[:properties] = {}
+    File.stubs(:read).returns(serialization.to_json)
+    Course.load_from_path('file_path')
+
+    course = Course.find_by_name!('this-course')
+    assert_nil course.teacher_resources
   end
 
   test "valid_courses" do

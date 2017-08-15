@@ -453,28 +453,55 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  // set up the Save To Gallery button if necessary
-  var saveToGalleryButton = feedback.querySelector('#save-to-gallery-button');
-  if (saveToGalleryButton && options.saveToProjectGallery) {
-    dom.addClickTouchEvent(saveToGalleryButton, () => {
-      $('#save-to-gallery-button').prop('disabled', true).text("Saving...");
-      project.copy(project.getNewProjectName(), () => {
-        dataURIToBlob(options.feedbackImage)
-          .then(project.saveThumbnail)
-          .then(() => {
-            return new Promise(resolve => {
-              // Save the thumbnail url to the server.
-              project.save(resolve);
-            });
-          }).then(() => {
-            $('#save-to-gallery-button').prop('disabled', true).text("Saved!");
-          });
-      }, {shouldPublish: true});
-    });
-  } else if (saveToGalleryButton && options.response && options.response.save_to_gallery_url) {
-    dom.addClickTouchEvent(saveToGalleryButton, function () {
-      $.post(options.response.save_to_gallery_url,
-             function () { $('#save-to-gallery-button').prop('disabled', true).text("Saved!"); });
+  /**
+   * Add an event handler to the specified button which saves the project
+   * with thumbnail to the project gallery, and optionally publishes it.
+   * @param {string} buttonSelector Selector for the button html element.
+   * @param {string} pendingText Button text while operation is pending.
+   * @param {string} finishedText Button text after operation completes.
+   * @param {boolean} shouldPublish Whether to publish. Default: false.
+   * @param {function} callback Callback function to call on success.
+   */
+  function addSaveProjectButtonHandler(buttonSelector, pendingText, finishedText, shouldPublish, callback) {
+    const buttonElement = feedback.querySelector(buttonSelector);
+    if (buttonElement) {
+      dom.addClickTouchEvent(buttonElement, () => {
+        $(buttonSelector).prop('disabled', true).text(pendingText);
+        project.copy(project.getNewProjectName(), () => {
+          FeedbackUtils.saveThumbnail(options.feedbackImage).then(() => {
+            $(buttonSelector).prop('disabled', true).text(finishedText);
+          }).then(callback);
+        }, {shouldPublish});
+      });
+    }
+  }
+
+  const saveButtonSelector = '#save-to-project-gallery-button';
+  addSaveProjectButtonHandler(
+    saveButtonSelector,
+    msg.saving(),
+    msg.savedToGallery()
+  );
+
+  const publishButtonSelector = '#publish-to-project-gallery-button';
+  addSaveProjectButtonHandler(
+    publishButtonSelector,
+    msg.publishPending(),
+    msg.published(),
+    true,
+    () => {
+      // Publishing the project also saves it, so disable the save button.
+      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+    }
+  );
+
+  const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
+  if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
+    dom.addClickTouchEvent(saveToLegacyGalleryButton, () => {
+      $.post(
+        options.saveToLegacyGalleryUrl,
+        () => $('#save-to-legacy-gallery-button').prop('disabled', true).text("Saved!")
+      );
     });
   }
 
@@ -500,6 +527,19 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   if (feedbackBlocks && feedbackBlocks.div) {
     feedbackBlocks.render();
   }
+};
+
+/**
+ * Converts the image data uri to a blob, then saves it to the server as the
+ * thumbnail for the current project.
+ * @param {string} image Image encoded as a data URI.
+ * @returns {Promise} A promise which resolves if successful.
+ */
+FeedbackUtils.saveThumbnail = function (image) {
+  return dataURIToBlob(image)
+    .then(project.saveThumbnail)
+    // Don't pass any arguments to project.save().
+    .then(() => project.save());
 };
 
 FeedbackUtils.getAchievements = function (
@@ -687,6 +727,8 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
   if (!options.hideTryAgain) {
     if (options.tryAgainText) {
       tryAgainText = options.tryAgainText;
+    } else if (this.studioApp_.hasContainedLevels) {
+      tryAgainText = msg.reviewCode();
     } else if (options.feedbackType === TestResults.FREE_PLAY) {
       tryAgainText = msg.keepPlaying();
     } else if (options.feedbackType < TestResults.MINIMUM_OPTIMAL_RESULT) {

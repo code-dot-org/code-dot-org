@@ -11,8 +11,8 @@ import i18n from "@cdo/locale";
 const StudentHomepage = React.createClass({
   propTypes: {
     courses: shapes.courses,
+    topCourse: shapes.topCourse,
     sections: shapes.sections,
-    studentTopCourse: shapes.studentTopCourse,
     isRtl: React.PropTypes.bool.isRequired,
     canLeave: React.PropTypes.bool.isRequired,
   },
@@ -23,7 +23,7 @@ const StudentHomepage = React.createClass({
   },
 
   render() {
-    const { courses, sections, isRtl, canLeave, studentTopCourse } = this.props;
+    const { courses, sections, isRtl, canLeave, topCourse } = this.props;
 
     return (
       <div>
@@ -36,10 +36,9 @@ const StudentHomepage = React.createClass({
         />
         <RecentCourses
           courses={courses}
-          showAllCoursesLink={true}
-          isRtl={false}
+          topCourse={topCourse}
           isTeacher={false}
-          studentTopCourse={studentTopCourse}
+          isRtl={false}
         />
         <ProjectWidgetWithData/>
         <StudentSections

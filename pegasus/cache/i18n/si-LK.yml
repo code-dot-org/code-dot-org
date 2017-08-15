@@ -1114,6 +1114,11 @@
   carousel_heading_webpages: "වෙබ් පිටු සකසන්න පුරුදු වන්න"
   carousel_heading_robots: "රොබෝවරු සමග වැඩසටහනක් ඉගෙනගන්න "
   carousel_heading_ide: "ගුරුවරුන් අතර ජනප්‍රිය ප්ලැට්ෆෝම්"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "අධ්යාපක සටහන්"
   teach_led_lesson_plans: "ගුරුවරයා මග පෙන්වන පාඩම් සැලසුම්"
   learn_footer_all_tutorials: "සස් "
@@ -1121,6 +1126,8 @@
   more_resources_educators: "ගුරුවරුන් සහ අධ්‍යාපනඥයින් සඳහා තවත් තොරතුරු"
   beyond_submission: "ඔබට යොමු කරන්න  ඕනෙද නිබන්ධන Beyond an Hour සදහා? සම්මතයන්  සහ
     ඉදිරිපත් කිරීමේ පත්‍රිකා බලන්න "
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "සහභාගි වන්නන්"
   teachers_notes: "ගුරුවරයාගේ තුණ්ඩු"
   teachers_notes_hoc: "ගුරුවරුනි :වැදගත්  අධ්යාපක සටහන් මෙතනින් කියවන්න."
@@ -1958,7 +1965,9 @@
   playlab_shortcode: "පරීක්ෂණාගාරය"
   artist_shortcode: "කලාව"
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "පාඨමාලාව"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1999,13 +2008,4 @@
   user_header_settings: "මගේ ගිණුම"
   user_header_logout: "නික්මෙන්න"
   user_header_signin: "පුරන්න"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

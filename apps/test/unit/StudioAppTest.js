@@ -51,11 +51,19 @@ describe("StudioApp", () => {
         sinon.stub(studioApp(), 'configureDom');
         sinon.stub(assetsApi, 'getFiles').callsFake(cb => cb({files}));
         sinon.spy(listStore, 'reset');
+
+        // init adds a changeListener to Blockly.mainBlockSpaceEditor that calls
+        // updateBlockCount. It appears to sometimes get called in the middle of
+        // other tests once this one is complete. Unfortunately, we don't appear
+        // to have any way of cleaning up our listeners, so we hack around this
+        // by stubbing the method that the listener calls.
+        sinon.stub(studioApp(), 'updateBlockCount').callsFake(() => {});
       });
 
       afterEach(() => {
         assetsApi.getFiles.restore();
         listStore.reset.restore();
+        studioApp().updateBlockCount.restore();
       });
 
       it('will pre-populate assets for levels that use assets', () => {

@@ -1,8 +1,9 @@
 require 'cdo/date'
 require 'cdo/activity_constants'
 require 'cdo/aws/s3'
+require_relative './form'
 
-class ProfessionalDevelopmentWorkshop
+class ProfessionalDevelopmentWorkshop < Form
   MINIMUM_ATTENDEE_LEVELS_COUNT = 10
 
   def self.normalize(data)
