@@ -72,11 +72,11 @@ export default class Player extends BaseEntity {
 
       if (levelModel.isPlayerStandingInWater()) {
         levelView.playDrownFailureAnimation(player.position, player.facing, player.isOnBlock, () => {
-          commandQueueItem.failed();
+          this.controller.handleEndState(false);
         });
       } else if (levelModel.isPlayerStandingInLava()) {
         levelView.playBurnInLavaAnimation(player.position, player.facing, player.isOnBlock, () => {
-          commandQueueItem.failed();
+          this.controller.handleEndState(false);
         });
       } else {
         this.controller.delayPlayerMoveBy(this.moveDelayMin, this.moveDelayMax, () => {
