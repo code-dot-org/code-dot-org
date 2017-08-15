@@ -9,6 +9,14 @@ export default class Player extends BaseEntity {
     this.isOnBlock = isOnBlock;
     this.inventory = {};
     this.movementState = -1;
+
+    if (controller.levelData.isEventLevel) {
+      this.moveDelayMin = 0;
+      this.moveDelayMax = 0;
+    } else {
+      this.moveDelayMin = 30;
+      this.moveDelayMax = 200;
+    }
   }
   updateMovement() {
     if (!this.controller.attemptRunning) {
@@ -71,7 +79,7 @@ export default class Player extends BaseEntity {
           commandQueueItem.failed();
         });
       } else {
-        this.controller.delayPlayerMoveBy(0, 0, () => {
+        this.controller.delayPlayerMoveBy(this.moveDelayMin, this.moveDelayMax, () => {
           commandQueueItem.succeeded();
         });
       }
