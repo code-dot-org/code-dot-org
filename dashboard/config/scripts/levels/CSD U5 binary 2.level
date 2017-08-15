@@ -220,10 +220,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
     "markdown_instructions": "# 6-Bit Number\r\n\r\nFor this widget, you'll need to put in the values for all the different bits.\r\n\r\n## Do this\r\n\r\n* Click the \"Edit\" button, then type your values directly into the squares.\r\n* Once you've decided the value for every bit, the \"Save\" button.\r\n* With your new system, make the following numbers: 32, 41, 63",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ]
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
