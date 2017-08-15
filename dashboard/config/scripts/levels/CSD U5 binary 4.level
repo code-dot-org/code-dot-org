@@ -7,10 +7,6 @@
   "properties": {
     "skin": "applab",
     "edit_code": true,
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "embed": "true",
     "markdown_instructions": "# Bit Length\r\n\r\nIf you don't know how many bits long each number is, you won't be able to decode a string of numbers.\r\n\r\nFor example, the following binary string could be decoded many different ways.\r\n\r\n<img src=\"https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png\" style=\"height: 30px;\">\r\n\r\nIf you split the string like this, the string reads 71, 28, 28.\r\n\r\n<img src=\"https://images.code.org/03f40f140dbdbff92af0784911e66fa2-image-1502741759516.png\" style=\"height: 30px;\"> &nbsp;&nbsp; <img src=\"https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png\" style=\"height: 30px;\"> &nbsp;&nbsp; <img src=\"https://images.code.org/b5b34c9ec4d051bd81404756269b1cf0-image-1502741761216.png\" style=\"height: 30px;\">\r\n\r\nIf you split it like this, the string reads 17, 249, 12.\r\n\r\n<img src=\"https://images.code.org/ec9a1533c32a23637f9d1021d318f496-image-1502741540345.png\" style=\"height: 30px;\"> &nbsp;&nbsp;  <img src=\"https://images.code.org/1239b8d5f24df95e6461165b92a41383-image-1502741542720.png\" style=\"height: 30px;\">  &nbsp;&nbsp; <img src=\"https://images.code.org/5e71958697e30b9874ed6f6028a02023-image-1502741545510.png\" style=\"height: 30px;\">\r\n\r\n\r\nTo solve this problem, people agree on a fixed length for every number.  The following string uses the same three numbers, but each number takes up exactly eight bits.\r\n\r\n\r\n<img src=\"https://images.code.org/2c55ec3f4ff236cb4ffa8d9b1b46895f-image-1502742909603.png\" style=\"height: 30px;\">\r\n\r\n# Do this\r\n\r\n* Use the binary widget to decode the string that uses eight bit numbers.\r\n* Check you answer with a partner to see whether you got the same answer.",
     "instructions_important": "false",
@@ -48,7 +44,8 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false"
+    "makerlab_enabled": "false",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
