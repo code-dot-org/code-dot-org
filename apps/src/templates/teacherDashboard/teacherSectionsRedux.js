@@ -230,16 +230,17 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
  * (like Google Classroom or Clever), creating a new section or updating
  * an existing one already associated with it.
  * @param {string} courseId
+ * @param {string} courseName
  * @return {function():Promise}
  */
-export const importRoster = courseId => (dispatch, getState) => {
+export const importRoster = (courseId, courseName) => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
   const importSectionUrl = importUrlByProvider[provider];
   let sectionId;
 
   dispatch({type: IMPORT_ROSTER_REQUEST});
-  return fetchJSON(importSectionUrl, { courseId })
+  return fetchJSON(importSectionUrl, { courseId, courseName })
     .then(newSection => sectionId = newSection.id)
     .then(() => dispatch(asyncLoadSectionData()))
     .then(() => dispatch({
