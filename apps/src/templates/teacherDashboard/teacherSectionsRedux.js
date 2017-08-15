@@ -227,13 +227,14 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 /**
  * Import the course with the given courseId from a third-party provider
- * (like Google Classroom or Clever), creating a new section or updating
- * an existing one already associated with it.
+ * (like Google Classroom or Clever), creating a new section. If the course
+ * in question has already been imported, update the existing section already
+ * associated with it.
  * @param {string} courseId
  * @param {string} courseName
  * @return {function():Promise}
  */
-export const importRoster = (courseId, courseName) => (dispatch, getState) => {
+export const importOrUpdateRoster = (courseId, courseName) => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
   const importSectionUrl = importUrlByProvider[provider];
@@ -609,6 +610,29 @@ function getRoot(state) {
 
 export function isRosterDialogOpen(state) {
   return getRoot(state).isRosterDialogOpen;
+}
+
+export function oauthProvider(state) {
+  return getRoot(state).provider;
+}
+
+export function sectionCode(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).code;
+}
+
+export function sectionName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).name;
+}
+
+export function sectionProvider(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return oauthProvider(state);
+  }
+  return null;
+}
+
+export function isSectionProviderManaged(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
 }
 
 /**

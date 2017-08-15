@@ -13,6 +13,7 @@ import teacherSections, {
   newSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -67,4 +68,33 @@ export function renderSectionsPage(data) {
 export function unmountSectionsPage() {
   const element = document.getElementById('sections-page');
   ReactDOM.unmountComponentAtNode(element);
+}
+
+/**
+ * On the manage students tab of an oauth section, use React to render a button
+ * that will re-sync an OmniAuth section's roster.
+ * @param {number} sectionId
+ * @param {OAuthSectionTypes} provider
+ */
+export function renderSyncOauthSectionControl({sectionId, provider}) {
+  registerReducers({teacherSections});
+  const store = getStore();
+
+  store.dispatch(setOAuthProvider(provider));
+  store.dispatch(asyncLoadSectionData());
+
+  ReactDOM.render(
+    <Provider store={store}>
+      <SyncOmniAuthSectionControl sectionId={sectionId}/>
+    </Provider>,
+    syncOauthSectionMountPoint()
+  );
+}
+
+export function unmountSyncOauthSectionControl() {
+  ReactDOM.unmountComponentAtNode(syncOauthSectionMountPoint());
+}
+
+function syncOauthSectionMountPoint() {
+  return document.getElementById('react-sync-oauth-section');
 }
