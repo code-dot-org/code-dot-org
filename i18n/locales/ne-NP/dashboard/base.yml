@@ -56,6 +56,9 @@ ne:
   puzzle: "पहेली"
   trophies: "ट्रफिहरू"
   courses: 'पाठ्यक्रम'
+  courses_page:
+    title_student: "Learn on Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Unplugged Activity'
   of: "को"
   more: "थप"
@@ -249,7 +252,9 @@ ne:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "पाठ्यक्रम"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

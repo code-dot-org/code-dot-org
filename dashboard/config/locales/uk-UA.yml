@@ -63,6 +63,9 @@
   puzzle: "Завдання"
   trophies: "трофеї"
   courses: "курси"
+  courses_page:
+    title_student: "Навчання у Студії коду"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "Безмашинна вправа"
   of: "з"
   more: "БІЛЬШЕ"
@@ -290,7 +293,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: "Головна"
+      my_dashboard: My Dashboard
       courses: "курси"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support

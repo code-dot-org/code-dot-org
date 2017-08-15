@@ -56,6 +56,9 @@ ko:
   puzzle: "Puzzle"
   trophies: "트로피들"
   courses: 'courses'
+  courses_page:
+    title_student: "Code Studio 배우기"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: '언플러그드 활동'
   of: "중"
   more: "전체단계"
@@ -249,7 +252,9 @@ ko:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "홈"
+      my_dashboard: "My Dashboard"
       courses: "courses"
+      course_catalog: "Course Catalog"
       project_gallery: "프로젝트 갤러리"
       sections: "섹션"
       help_support: "도움말 및 지원"

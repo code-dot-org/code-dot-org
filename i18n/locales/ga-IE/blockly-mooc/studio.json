@@ -669,6 +669,7 @@
   "setMapBlobs":"socraigh léarscáil: blobaí",
   "setMapTooltip":"Athraíonn seo an léarscáil sa radharc",
   "shareStudioTwitter":"Féach an scéal a rinne mé! Scríobh mé ar @codeorg é",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Comhroinn do scéal:",
   "showCoordinates":"taispeáin comhordanáidí",
   "showCoordinatesTooltip":"taispeáin comhordanáidí an aisteora ar an scáileán",

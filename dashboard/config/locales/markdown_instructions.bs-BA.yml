@@ -1771,6 +1771,14 @@
         code not to work as planned.  Some examples are misspelling, putting code
         in the wrong place, using the wrong tag, or forgetting to close a tag.\r
         </details>\r
+        <details>\r
+        <summary>**Why
+        does the inspector sometimes stop working?**</summary>\r
+        Sometimes there
+        are so many bugs in the HTML that the inspector cannot read the code properly
+        and it stops working completely, even on the parts of the code that are correct.  Once
+        the bugs are corrected, the inspector will work again.\r
+        </details>\r
         </div>\r
         \r
         This
@@ -1826,6 +1834,14 @@
         paragraph is inside the "body" element.&lt;/p&gt;\r
            &lt;/body&gt;\r
         </pre>\r
+        </details>\r
+        <details>\r
+        <summary>**Why
+        does the inspector sometimes stop working?**</summary>\r
+        Sometimes there
+        are so many bugs in the HTML that the inspector cannot read the code properly
+        and it stops working completely, even on the parts of the code that are correct.  Once
+        the bugs are corrected, the inspector will work again.\r
         </details>\r
         </div>\r
         \r
@@ -13889,6 +13905,100 @@
         the font size\r
         * Choose a color you like for the title\r
         \r
+      CSD U5 Pizza 2_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        When people work
+        with data, they know to leave off answers that don't make sense, and that
+        some answers, such as "peppers", "pepppers" and "green peppers", actually
+        meant the same thing. People also put everything that has been misspelled
+        into the correct category. Computers don't know how to do this, so we have
+        to clean the data before the computer is able to use it.\r
+        \r
+        This version
+        of the app has a second column for data to be cleaned.\r
+        \r
+        ## Do this\r
+        *
+        Click "Run" to see the new list of answers to be cleaned.\r
+        * Click on
+        each answer that needs to be cleaned and correct it so that the computer will
+        chart it properly. (You may want to delete some answers entirely.)\r
+        * When
+        you are finished, click "Show Chart" to see the new chart of cleaned answers.
+      CSD U5 Pizza_markdown_instruction: |-
+        # Pizza Party\r
+        \r
+        The pizza party data
+        has been put into an app for you, and the answers from another class have
+        been added.  Because this is an app, we can automate the creation of the bar
+        chart from the given data.\r
+        \r
+        ## Do this\r
+        * Click "Run" to see the
+        list of answers that the classes have given.\r
+        * Discuss with a partner what
+        you think the chart of this data will look like.\r
+        * Click "Show Chart"
+        to see for yourself.
+      CSD U5 binary 1_markdown_instruction: |-
+        # 5-Bit Number\r
+        \r
+        When you only
+        had four bits, the highest number that you could make was fifteen.  Now you'll
+        have a chance to work with more bits to make higher numbers.\r
+        \r
+        In this
+        activity, the dots are replaced with numbers, but you still add up everything
+        that's showing to see what number the binary code stands for.  The left-most
+        bit doesn't have a number yet, so you'll have to give it one.\r
+        \r
+        ##
+        Do this\r
+        \r
+        * Click on the bits to turn them on and off, and see the different
+        numbers you can make.\r
+        * Decide what number you want the left most bit to
+        stand for, then click "Edit" to change its value.\r
+        * Once you've decided
+        on its value, try to make the following numbers: 16, 27, 31
+      CSD U5 binary 2_markdown_instruction: |-
+        # 6-Bit Number\r
+        \r
+        For this widget,
+        you'll need to put in the values for all the different bits.\r
+        \r
+        ## Do
+        this\r
+        \r
+        * Click the "Edit" button, then type your values directly into
+        the squares.\r
+        * Once you've decided the value for every bit, the "Save"
+        button.\r
+        * With your new system, make the following numbers: 32, 41, 63
+      CSD U5 binary 3_markdown_instruction: |-
+        # Decoding multiple numbers\r
+        \r
+        Here's
+        a widget that can calculate numbers from four to eight bits.  You can use
+        it to try to find the three world records encoded in the binary string below.  The
+        answers are in order in the string.\r
+        \r
+        1. Most canned drinks opened by
+        a parrot in one minute.\r
+        2. Most ice cream scoops balanced on a cone.\r
+        3.
+        Most number of people lifted and thrown in two minutes.\r
+        \r
+        100011 1111001
+        1100\r
+        \r
+        # Do this\r
+        * Try to decode the three numbers from a the binary
+        string\r
+        * Discuss your answers with your partner.\r
+         * Was there any other
+        information you need to be certain your numbers are correct?
       CSD U5 black white images pixelation 2_markdown_instruction: |-
         # Do This\r
         \r
@@ -29319,7 +29429,7 @@
         to use trial and error. You are not expected to\nget it perfect the first
         time.\\r\n\\r\nThe repeated shape is almost identical\nto the one from the
         last puzzle, except that the length used in the first\nloop is a little smaller. "
-      Course 4 Artist 12_markdown_instruction: |
+      Course 4 Artist 12_markdown_instruction: |-
         <img src="https://images.code.org/70795d84048767ae7fb65883f476b27c-image-1440050836837.01.09.png"
         width="250px"/>\r
         \r
@@ -29327,7 +29437,7 @@
         you need to know to make a pattern like this! If this picture inspires you,
         try to make something similar. Otherwise, create something all your own. \r
         \r
-        <br/>\r
+        <br/>
       Course 4 Artist 13_markdown_instruction: |-
         Still playing?  Here is a blank canvas
         where you can design anything you want!
@@ -57130,7 +57240,9 @@
         ![](https://images.code.org/3aa37f679eabc7a5a337291db614dd98-image-1496711069351.03.49.png)
       courseC_artist_loops4a_markdown_instruction: |-
         Edit your code so that you jump
-        forward by 75 pixels between stamping the bird and the bat.\r
+        forward by 75 pixels between stamping the bird and the bat. In this puzzle,
+        make sure you have `jump to 200 over 200 down` inside of your loop, so you
+        stay in the center!\r
         ___\r
         \r
         ![](https://images.code.org/5b67ed8d878d6c2a5009eee054427fd5-image-1496711253365.05.35.png)
@@ -57262,7 +57374,7 @@
       courseC_artist_prog_challenge1_markdown_instruction: |-
         Draw rooms for each of
         the animals. There are many different ways to solve this puzzle, so have some
-        fun!
+        fun! Each square has a side length of 100 pixels.
       courseC_artist_prog_challenge2_markdown_instruction: |-
         *Help me paint the yellow
         lines on this road!*
@@ -57555,6 +57667,13 @@
         Sometimes there
         is more than one way to solve the same problem. Sometimes it's faster to
         go backwards than it is to go forwards!
+      courseC_playLab_embedded_markdown_instruction: |-
+        Here's a game for you to play!
+        To win, get the penguin to run into the octopus. Use your arrow keys to move
+        the penguin around.\r
+        \r
+        Once you are done, you will learn how to make this
+        game!
       courseC_puppy_loops8_markdown_instruction: |-
         **Challenge:** Combine ideas from
         the last few puzzles to complete this level.
@@ -59343,8 +59462,10 @@
         the `multiplication`block to make this all happen with just one function call.\r
         ___\r
         The
-        `multipication` block looks like this ![](https://images.code.org/55e293447c6b26bbbcf29cda2036706b-image-1481322763779.png)\r
-        \r
+        `multipication` block looks like this <xml><block type="math_arithmetic"
+        inline="true">\r
+              <title name="OP">MULTIPLY</title>\r
+            </block></xml>\r
       courseF_artist_fwp6_markdown_instruction: |-
         **Challenge:** Edit `draw a spiral
         edge` to use `length` and `sides` parameters, then recreate these shapes.\r
@@ -59455,7 +59576,33 @@
         from the last puzzle, but this time use the `set length to` block to reset
         the `length` variable to `length`+10 at the end of each loop iteration.\r
         \r
-        ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png)\r
+        <xml>\r
+        <block
+        type="variables_set" inline="false">\r
+                                <title
+        name="VAR">length</title>\r
+                                <value name="VALUE">\r
+                                  <block
+        type="math_arithmetic" inline="true">\r
+                                    <title
+        name="OP">ADD</title>\r
+                                    <value name="A">\r
+                                      <block
+        type="variables_get">\r
+                                        <title name="VAR">length</title>\r
+                                      </block>\r
+                                    </value>\r
+                                    <value
+        name="B">\r
+                                      <block type="math_number">\r
+                                        <title
+        name="NUM">10</title>\r
+                                      </block>\r
+                                    </value>\r
+                                  </block>\r
+                                </value>\r
+                              </block>\r
+        </xml>\r
         \r
         The
         length of the first side of the triangle is 150 pixels.
@@ -59813,8 +59960,8 @@
         luck!
       courseF_maze_ramp1_markdown_instruction: |-
         For this puzzle, connect all of the
-        blocks from the workspace together below the `when run` event and click "Run"
-        to watch it go!
+        blocks from the workspace together below the <xml><block type="when_run"/></xml>
+        block and click "Run" to watch it go!
       courseF_maze_ramp13_markdown_instruction: |-
         Time for another Angry Birds puzzle
         to pull it all together!\r
@@ -59826,11 +59973,12 @@
         **Challenge:**
         Use what you've learned to get the bird to the pig!
       courseF_maze_ramp2_markdown_instruction: |-
-        Drag a `repeat` block out of the
-        toolbox and attach it to the `when run` event.   \r
+        Drag a <xml><block type="controls_repeat"><title
+        name="TIMES">7</title></block></xml> block out of the toolbox and attach
+        it to the <xml><block type="when_run"/></xml> event.\r
         \r
-        Place the `move forward`
-        block inside to finish your code.
+        Place the <xml><block
+        type="maze_moveForward"/></xml> block inside the loop to finish your code.
       courseF_maze_ramp4_markdown_instruction: |-
         *"Trace the path and lead me to
         the silly pig."* \r
@@ -59846,8 +59994,9 @@
         bad pig. Otherwise I might get angry!"*\r
         \r
         When you have several blocks
-        in a row, try moving them inside of a `repeat` loop.  This will do the same
-        thing with less code!
+        in a row, try moving them inside of a <xml><block type="controls_repeat"><title
+        name="TIMES">???</title></block></xml> loop.  This will do the same thing
+        with less code!
       courseF_maze_ramp7_markdown_instruction: |-
         *"It's time to get angry!"*\r
         \r
@@ -62066,6 +62215,152 @@
         have a chance to address feedback from your reviewers and resubmit your reflections!
         Reviewer feedback will show up at the bottom of this page, once it’s available.
         \r
+      csp_affirmation_control_markdown_instruction: |-
+        This brief activity allows you
+        to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_control2_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what you have learned in this course so far. It is provided
+        to you by your teacher, but *you will not be graded on this.*\r
+        \r
+        Some
+        topics in the course may be interesting to you, others may be less interesting.\r
+        \r
+        <strong>\r
+        &#49;.
+        Write down 1 or 2 topics that are most interesting to you:\r
+        \r
+        </strong>\r
+        \r
+        <input
+        type=text><br>\r
+        <input type=text>\r
+        <br><br>\r
+        \r
+        <strong>\r
+        &#50;.
+        How did you prepare for taking this test? Do you feel more or less prepared
+        to answer questions about the topics that interest you?\r
+        </strong>\r
+        \r
+        *Write
+        a few sentences, focusing on your thoughts and feelings, don't worry about
+        how well written it is.*
+      csp_affirmation_intervention_markdown_instruction: |-
+        This brief activity allows
+        you to reflect about what’s most important to you. It is provided to you by
+        your teacher, but *you will not be graded on this.*\r
+        \r
+        Below is a list
+        of values and qualities. Some of them may be important to you, others may
+        be unimportant. \r
+        \r
+        <strong>\r
+        &#49;. What's most important to you?</strong>
+        (select one or more)\r
+        \r
+        \r
+        <table bordercolor="#FFFFFF" width=75% cellpadding=5
+        cellspacing=10 style="background-color: #d9eff7; border-width: 10px; border-color:
+        #FFFFFF">\r
+          <tr style="border: 5px solid white">\r
+            <td width=25%
+        style="border: 5px solid white;">\r
+            <label><input type="checkbox">
+        Relationships with friends and family\r
+            </label></td>\r
+            <td width=25%
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Sports and athletics\r
+            </label></td>\r
+            <td width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Relationships with
+        friends or family\r
+            </label></td>\r
+            <td  width=25% style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Creativity\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spirituality or religion\r
+            </label></td>\r
+            <td style="border: 5px
+        solid white">\r
+            <label><input type="checkbox"> Sense of humor\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Health and fitness\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Physical attractiveness\r
+            </label></td>\r
+          </tr>\r
+          <tr>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Romantic values\r
+            </label></td>\r
+            <td style="border: 5px solid
+        white">\r
+            <label><input type="checkbox"> Kindness\r
+            </label></td>\r
+            <td
+        style="border: 5px solid white">\r
+            <label><input type="checkbox">
+        Spontaneity, living life in the moment\r
+            </label></td>\r
+            <td style="border:
+        5px solid white">\r
+            <label><input type="checkbox"> Independence\r
+            </label></td>\r
+          </tr>\r
+        </table>\r
+        <br>\r
+        <br>\r
+        \r
+        <strong>\r
+        &#50;.
+        Why are these values important to you? Describe a time in your life when they
+        were really important.\r
+        </strong>\r
+        \r
+        *Write a few sentences. Focus on
+        your thoughts and feelings, don't worry about how well written it is.*
       csp_socialBelonging_control_markdown_instruction: |-
         \r
         ## Starting out in Computer
@@ -62291,7 +62586,6 @@
         \r
         *Please write a short
         paragraph. Don't worry about spelling, grammar, or how well written it is.*\r
-        \r
       cspu3_assess1_filltable_markdown_instruction: |
         Use Top-Down Design strategy
         to fill in the table below. The first line is given to you. You may use as

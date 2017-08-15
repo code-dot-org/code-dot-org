@@ -1,4 +1,6 @@
-class PdWorkshopSurveyCounselorAdmin
+require_relative './form'
+
+class PdWorkshopSurveyCounselorAdmin < Form
   def self.normalize(data)
     result = {}
 

@@ -7233,6 +7233,10 @@
         öllum *10* fjársjóðunum?
       courseC_collector_prog_challenge2_instruction: Hér má finna *20* fjársjóði.
         Safnaðu að minnsta kosti helmingnum til að ljúka þessari áskorun!
+      courseC_flappy_embed_events_instruction: |-
+        This is an example of a finished
+        Flappy game! Play it and see how far you can go. Think about what kind of
+        events you might use in this game.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7387,6 +7391,12 @@
         þú hjálpað mér að finna leið?"*'
       courseC_maze_programming_challenge2_instruction: Stundum er fleiri en leið til
         að leysa þraut. Stundum er fljótlegra að fara aftur á bak heldur en áfram!
+      courseC_playLab_embedded_instruction: |-
+        Here's a game for you to play! To win,
+        get the penguin to run into the octopus. Use your arrow keys to move the penguin
+        around.\r
+        \r
+        Once you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7463,6 +7473,8 @@
         koma þessu merki í fyrra horf?
       courseD_artist_binary_challenge3_instruction: Hefurðu nægilegt úthald til að
         koma þessu merki í fyrra horf?
+      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
+      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -7656,6 +7668,7 @@
       courseD_bee_nested_loops_challenge2_instruction: Komum í fjársjóðaleit - með
         lykkjum! Hjálpaðu safnaranum að ná minnst tveimur fjársjóðshrúgum en aðeins
         með kubbunum í verkfærakassanum.
+      courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
@@ -7956,6 +7969,13 @@
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_embedded_instruction: |-
+        Move Pegleg the Pirate with the arrow
+        keys. Get to the dragon to score points, but avoid the ninja! Standing below
+        the line of octopuses will make the ninja stop chasing you, but beware! The
+        longer you stay there, the more points you lose. \r
+        \r
+        Get 5 points to win!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -7965,6 +7985,11 @@
         vísbendingar? Smelltu hér!
       courseE_artist_concept_challenge2_instruction: Búðu til fimm hjóllaga mynstur
         með kóðanum fyrir neðan.
+      courseE_artist_embed_functions8_instruction: |-
+        Look at this level carefully.
+        What kind of functions do you see a program needing in order to create a design
+        like this. You'll soon make this on your own, so come back here if you need
+        help.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -8206,6 +8231,10 @@
       courseE_playLab_challenge1_instruction: |-
         Eitthvað ætti að gerast þegar þú færð nóg stig eða þegar stigin klárast. Bættu kóða í föllin `vinna leik` og `tapa leik` svo leikurinn virki eins og hann á að gera.\r
         Smelltu á vísbendingar til að fá hugmyndir!
+      courseE_playLab_embedded_instruction: |-
+        This is an example game you can play
+        around with. Move the dog with your arrow keys. When the dog touches one of
+        the cats, he scores a point! Score 5 points to win!
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -8268,6 +8297,12 @@
       courseF_IceAge_template_instruction: |-
         Write the code to help Scrat get all
         of the acorns!
+      courseF_artist_embed_for7_instruction: |-
+        Press Run to see a program in action!
+        This one uses for loops.
+      courseF_artist_embed_variables9_instruction: |-
+        Press Run to see this program
+        in action!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -8525,16 +8560,10 @@
         Getur þú fundið út hvernig?"
       courseF_maze_predict1_instruction: Í þessum kóða er nýr kubbur. Hvað heldur
         þú að muni gerast ef þú ýtir á "Keyra"?
-      courseF_maze_ramp1_instruction: Í þessari þraut þarftu að tengja alla kubbana
-        á vinnusvæðinu við "þegar keyrt" atburðinn og smella svo á "Keyra" til að
-        sjá hvað gerist!
       courseF_maze_ramp13_instruction: Hér er enn ein Angry Birds þraut til að draga
         þetta allt saman!
       courseF_maze_ramp15_instruction: Notaðu það sem þú hefur lært og komdu fuglinum
         til svínsins!
-      courseF_maze_ramp2_instruction: Dragðu "endurtaka" kubb úr verkfærakassanum
-        og tengdu hann við "þegar keyrt" atburðinn. Settu "færa áfram" kubb innan
-        í til að ljúka kóðanum.
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
       courseF_maze_ramp6_instruction: '"Slakaðu á og hjálpaðu mér finna illa svínið.
