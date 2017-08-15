@@ -1,4 +1,5 @@
 import React from 'react';
+import {Well} from 'react-bootstrap';
 
 const FreeResponseSection = React.createClass({
   propTypes: {
@@ -43,7 +44,7 @@ const FreeResponseSection = React.createClass({
         {
           this.props.questions.map((question, i) => {
             return (
-              <div className="well" key={i}>
+              <Well key={i}>
                 <b>
                   {question['text']}
                 </b>
@@ -52,7 +53,7 @@ const FreeResponseSection = React.createClass({
                     this.renderAnswers(this.props.responseData[question['key']]) :
                     this.renderFacilitatorsAndAnswers(this.props.responseData[question['key']])
                 }
-              </div>
+              </Well>
             );
           })
         }
