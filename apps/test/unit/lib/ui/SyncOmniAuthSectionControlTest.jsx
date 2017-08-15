@@ -12,6 +12,11 @@ import {
 describe('SyncOmniAuthSectionControl', () => {
   let updateRoster, testSyncSucceeds, testSyncFails, defaultProps;
 
+  // This component depends on an async action (passed as the 'updateRoster'
+  // prop) to update its state.  We provide a fake updateRoster action in our
+  // tests that we can resolve or reject manually, and our afterEach step
+  // ensures we resolve our promise and 'close the loop' on all async operations
+  // before we end the test case.
   beforeEach(() => {
     sinon.stub(SyncOmniAuthSectionControl, 'reloadPage');
 
@@ -37,9 +42,12 @@ describe('SyncOmniAuthSectionControl', () => {
       updateRoster: updateRoster,
     };
   });
+
   afterEach(() => {
-    testSyncSucceeds && testSyncSucceeds();
-    SyncOmniAuthSectionControl.reloadPage.restore();
+    return (testSyncSucceeds ? testSyncSucceeds() : Promise.resolve())
+      .then(() => {
+        SyncOmniAuthSectionControl.reloadPage.restore();
+      });
   });
 
   it('initially renders in ready state', () => {
