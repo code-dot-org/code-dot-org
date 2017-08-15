@@ -1,6 +1,7 @@
 /* global dashboard, appOptions */
 import $ from 'jquery';
 import msg from '@cdo/locale';
+import * as utils from '../../utils';
 import {CIPHER, ALPHABET} from '../../constants';
 import {files as filesApi} from '../../clientApi';
 
@@ -722,7 +723,7 @@ var projects = module.exports = {
           },
           () => {
             resolve();
-            window.location.reload();
+            utils.reload();
           }
         );
       });
