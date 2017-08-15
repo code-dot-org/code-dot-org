@@ -614,6 +614,21 @@ export function oauthProvider(state) {
   return getRoot(state).provider;
 }
 
+export function sectionCode(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).code;
+}
+
+export function sectionProvider(state, sectionId) {
+  if (isSectionProviderManaged(state, sectionId)) {
+    return oauthProvider(state);
+  }
+  return null;
+}
+
+export function isSectionProviderManaged(state, sectionId) {
+  return !!(getRoot(state).sections[sectionId] || {}).providerManaged;
+}
+
 /**
  * Maps from the data we get back from the server for a section, to the format
  * we want to have in our store.

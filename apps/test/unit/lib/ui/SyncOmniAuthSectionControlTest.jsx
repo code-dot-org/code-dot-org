@@ -30,8 +30,9 @@ describe('SyncOmniAuthSectionControl', () => {
     importRoster = sinon.stub().returns(promise);
 
     defaultProps = {
+      sectionId: 1111,
       sectionCode: 'G-123456',
-      provider: OAuthSectionTypes.google_classroom,
+      sectionProvider: OAuthSectionTypes.google_classroom,
       importRoster: importRoster,
     };
   });
@@ -44,9 +45,8 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps}/>);
     expect(wrapper).to.containMatchingElement(
       <SyncOmniAuthSectionButton
-        provider={defaultProps.provider}
+        provider={defaultProps.sectionProvider}
         buttonState={READY}
-        onClick={wrapper.instance().onClick}
       />
     );
   });
@@ -56,7 +56,7 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(
       <SyncOmniAuthSectionControl
         {...defaultProps}
-        provider={null}
+        sectionProvider={null}
       />
     );
     expect(wrapper).to.be.blank();
@@ -65,10 +65,21 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper2 = shallow(
       <SyncOmniAuthSectionControl
         {...defaultProps}
-        provider={'microsoft_classroom'}
+        sectionProvider={'microsoft_classroom'}
       />
     );
     expect(wrapper2).to.be.blank();
+  });
+
+  it('renders nothing if no section code is given', () => {
+    // This usually means we're still async-loading section data
+    const wrapper = shallow(
+      <SyncOmniAuthSectionControl
+        {...defaultProps}
+        sectionCode={null}
+      />
+    );
+    expect(wrapper).to.be.blank();
   });
 
   it('calls importRoster when clicked', () => {
@@ -106,9 +117,8 @@ describe('SyncOmniAuthSectionControl', () => {
     wrapper.simulate('click');
     expect(wrapper).to.containMatchingElement(
       <SyncOmniAuthSectionButton
-        provider={defaultProps.provider}
+        provider={defaultProps.sectionProvider}
         buttonState={IN_PROGRESS}
-        onClick={wrapper.instance().onClick}
       />
     );
   });
@@ -130,9 +140,8 @@ describe('SyncOmniAuthSectionControl', () => {
     return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
       expect(wrapper).to.containMatchingElement(
         <SyncOmniAuthSectionButton
-          provider={defaultProps.provider}
+          provider={defaultProps.sectionProvider}
           buttonState={SUCCESS}
-          onClick={wrapper.instance().onClick}
         />
       );
     });
@@ -167,9 +176,8 @@ describe('SyncOmniAuthSectionControl', () => {
     return expect(testSyncFails()).to.be.rejected.then(() => {
       expect(wrapper).to.containMatchingElement(
         <SyncOmniAuthSectionButton
-          provider={defaultProps.provider}
+          provider={defaultProps.sectionProvider}
           buttonState={FAILURE}
-          onClick={wrapper.instance().onClick}
         />
       );
     });

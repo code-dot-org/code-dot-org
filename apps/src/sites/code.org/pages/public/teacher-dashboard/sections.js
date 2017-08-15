@@ -68,18 +68,19 @@ export function unmountSectionsPage() {
 /**
  * On the manage students tab of an oauth section, use React to render a button
  * that will re-sync an OmniAuth section's roster.
- * @param {string} sectionCode
+ * @param {number} sectionId
  * @param {OAuthSectionTypes} provider
  */
-export function renderSyncOauthSectionControl({sectionCode, provider}) {
+export function renderSyncOauthSectionControl({sectionId, provider}) {
   registerReducers({teacherSections});
   const store = getStore();
 
   store.dispatch(setOAuthProvider(provider));
+  store.dispatch(asyncLoadSectionData());
 
   ReactDOM.render(
     <Provider store={store}>
-      <SyncOmniAuthSectionControl sectionCode={sectionCode}/>
+      <SyncOmniAuthSectionControl sectionId={sectionId}/>
     </Provider>,
     syncOauthSectionMountPoint()
   );
