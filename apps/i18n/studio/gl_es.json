@@ -669,6 +669,7 @@
   "setMapBlobs": "establece o mapa de manchas",
   "setMapTooltip": "Cambia o mapa da escena",
   "shareStudioTwitter": "Proba a historia que fixen. Escribina eu mesmo coa @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comparte a túa historia:",
   "showCoordinates": "mostrar coordenadas",
   "showCoordinatesTooltip": "Mostrar as coordenadas do protagonista na pantalla",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Necesitas conseguir 20 Droides Rato. Usa o comando \"agregar un Droide Rato\" dentro do evento \"cando consegues Droide Rato\" para agregar dous ou máis Droides Rato cada vez que consegues un.",
   "failedMultiplyCharactersTimeoutGotSome": "Parabéns, engadiches código para facer Droides Rato. Podes ir ao seguinte crebacabezas ou tentar outra vez conseguir 20 Droides Rato. Trata de facelo máis fácil agregando máis! (Preme e mantén premidas as teclas do teu teclado (ou pantalla) para moverte máis lixeiro.)",
   "failedChangeSettingTimeout": "Consegue tres pilotos rebeldes para continuar.",
-  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Crea o teu propio xogo. Para pasar este crebacabezas, necesitas cambiar o teu droide e estabelecer a súa velocidade."
 }

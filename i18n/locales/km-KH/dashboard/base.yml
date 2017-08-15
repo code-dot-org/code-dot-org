@@ -56,6 +56,9 @@ km:
   puzzle: "ល្បែង​ប្រាជ្ញា"
   trophies: "ពាន​រង្វាន់"
   courses: 'វគ្គ​សិក្សា'
+  courses_page:
+    title_student: "Learn on Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Unplugged Activity'
   of: "នៃ"
   more: "បង្ហាញ​ច្រើន"
@@ -249,7 +252,9 @@ km:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "វគ្គ​សិក្សា"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

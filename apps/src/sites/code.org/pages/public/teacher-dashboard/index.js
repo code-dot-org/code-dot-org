@@ -271,6 +271,13 @@ function main() {
       }
     );
 
+    $scope.new_flow = function () {
+      if (experiments.isEnabled('section-flow-2017')) {
+        return true;
+      } else {
+        return false;
+      }
+    };
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.

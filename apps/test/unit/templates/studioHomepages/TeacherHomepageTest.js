@@ -5,26 +5,7 @@ import {assert, expect} from '../../../util/configuredChai';
 import {sections} from './fakeSectionUtils';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
-
-const announcement = {
-  heading: "Go beyond an Hour of Code",
-  buttonText: "Go Beyond",
-  description: "Go Beyond an Hour of Code and explore computer science concepts with your students every week. Code.org offers curriculum, lesson plans, high quality professional learning programs, and tons of great tools for all grade levels - and it's free. No experience required - find the next step that's right for your classroom.",
-  link: "http://teacherblog.code.org/post/160703303174/coming-soon-access-your-top-resources-with-the"
-};
-
-const courses = [
-  {
-    title: "Course 1",
-    description: "Start with Course 1 for early readers. Students will create computer programs that will help them learn to collaborate with others, develop problem-solving skills, and persist through difficult tasks. By the end of this course, students create their very own custom game or story that they can share. Recommended for grades K-1.",
-    link: "https://studio.code.org/s/course1",
-  },
-  {
-    title: "Course 2",
-    description: "Start with Course 2 for students who can read and have no prior programming experience. In this course students will create programs to solve problems and develop interactive games or stories they can share. Recommended for grades 2-5.",
-    link: "https://studio.code.org/s/course2",
-  },
-];
+import { announcement, courses, topCourse } from './homepagesTestData';
 
 describe('TeacherHomepage', () => {
   let server;
@@ -46,6 +27,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={[]}
+        topCourse={topCourse}
         sections={[]}
         isRtl={false}
       />
@@ -62,6 +44,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={[]}
+        topCourse={topCourse}
         sections={[]}
         isRtl={false}
       />
@@ -74,6 +57,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[announcement]}
         courses={[]}
+        topCourse={topCourse}
         sections={[]}
         isRtl={false}
       />
@@ -87,7 +71,8 @@ describe('TeacherHomepage', () => {
       buttonText: announcement.buttonText,
       buttonLink: announcement.link,
       newWindow: true,
-      analyticId: announcement.id
+      analyticId: announcement.id,
+      isRtl: false
     });
   });
 
@@ -96,6 +81,7 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={[]}
+        topCourse={topCourse}
         sections={sections}
         isRtl={false}
       />
@@ -112,6 +98,7 @@ describe('TeacherHomepage', () => {
     const wrapper = shallow(
       <TeacherHomepage
         announcements={[]}
+        topCourse={topCourse}
         courses={courses}
         sections={[]}
         isRtl={false}
@@ -122,6 +109,7 @@ describe('TeacherHomepage', () => {
       showAllCoursesLink: true,
       isTeacher: true,
       courses: courses,
+      topCourse: topCourse,
       isRtl: false
     });
   });
@@ -131,11 +119,12 @@ describe('TeacherHomepage', () => {
       <TeacherHomepage
         announcements={[]}
         courses={courses}
+        topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
       />
     );
-    expect(wrapper.find('ProjectWidgetWithData').exists());
+    expect(wrapper.find('ProjectWidgetWithData').exists()).to.be.true;
   });
 });

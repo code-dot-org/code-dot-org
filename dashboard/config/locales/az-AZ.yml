@@ -64,6 +64,9 @@
   puzzle: Tapmaca
   trophies: kuboklar
   courses: marşrutlar
+  courses_page:
+    title_student: Learn on Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Sərbəst fəaliyyət
   of: "/"
   more: DAHA ÇOX
@@ -290,7 +293,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Ev səhifəsi
+      my_dashboard: My Dashboard
       courses: marşrutlar
+      course_catalog: Course Catalog
       project_gallery: Layihə qalereyası
       sections: Bölmələr
       help_support: Help and support

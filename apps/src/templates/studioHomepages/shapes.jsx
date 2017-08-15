@@ -13,7 +13,7 @@ const shapes = {
       link: PropTypes.string.isRequired,
     })
   ),
-  studentTopCourse: PropTypes.shape({
+  topCourse: PropTypes.shape({
     assignableName: PropTypes.string.isRequired,
     linkToOverview: PropTypes.string.isRequired,
     linkToLesson: PropTypes.string.isRequired,

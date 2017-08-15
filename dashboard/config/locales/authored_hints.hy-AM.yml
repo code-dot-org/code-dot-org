@@ -101,7 +101,46 @@
         2-3_Artist_Loops_New_11_a: |-
           Remember that the code from the last puzzle was:
 
-          ![](https://images.code.org/15288d042780242ec5edeed5204c6ebb-image-1469640792081.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">8</title>
+          <statement name="DO">
+          <block type="draw_colour" inline="true">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE" config="45,60,90,120,180">45</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          <next>
+          <block type="draw_turn_by_constant_dropdown">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE" config="45,60,90,120,180">90</title>
+          <next>
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">50</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
         2-3_Artist_Loops_New_11_b: Your new turn should go at the **end** of the code
           inside the loop.
       2-3 Artist Loops New 12_authored_hint:
@@ -406,7 +445,58 @@
         Course_4_Artist_12_d: |-
           **Solution:**
 
-          ![Image of Solution Blocks](https://images.code.org/03dfe3f862f4bdbee2a1f5865b7d9d50-image-1469641020695.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#843179</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">6</title>
+          <statement name="DO">
+          <block type="controls_repeat">
+          <title name="TIMES">3</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">60</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">60</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="controls_repeat">
+          <title name="TIMES">2</title>
+          <statement name="DO">
+          <block type="draw_move_by_constant">
+          <title name="DIR">moveForward</title>
+          <title name="VALUE">80</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">120</title>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist 6_authored_hint:
         Course_4_Artist_6_a: There are 3 triangles within the 360 degree rotation...how
           many times does 3 go into 360?
@@ -467,7 +557,65 @@
         Course_4_Artist_For_Loops_inspire_c: There are two iterations of the same
           repeat loop inside the `for` loop, but the second repeat turns the opposite
           direction.
-        Course_4_Artist_For_Loops_inspire_d: "**Solution:**  \n\n![Solution](https://images.code.org/418dfd57794706de541f1c162911a6e2-image-1469641233597.png)"
+        Course_4_Artist_For_Loops_inspire_d: "**Solution:**  \n\n<xml>\n  <block type=\"when_run\"
+          deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for_counter\"
+          inline=\"true\" movable=\"false\">\n      <mutation counter=\"counter\"></mutation>\n
+          \       <value name=\"FROM\">\n          <block type=\"math_number\">\n
+          \           <title name=\"NUM\">3</title>\n          </block>\n        </value>\n
+          \       <value name=\"TO\">\n          <block type=\"math_number\">\n            <title
+          name=\"NUM\">10</title>\n          </block>\n        </value>\n        <value
+          name=\"BY\">\n          <block type=\"math_number\">\n            <title
+          name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement
+          name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n
+          \           <value name=\"TIMES\">\n              <block type=\"math_arithmetic\"
+          inline=\"true\">\n                <title name=\"OP\">MINUS</title>\n                <value
+          name=\"A\">\n                  <block type=\"variables_get\">\n                    <title
+          name=\"VAR\">counter</title>\n                  </block>\n                </value>\n
+          \               <value name=\"B\">\n                  <block type=\"math_number\">\n
+          \                   <title name=\"NUM\">1</title>\n                  </block>\n
+          \               </value>\n              </block>\n            </value>\n
+          \           <statement name=\"DO\">\n              <block type=\"draw_move\"
+          inline=\"true\">\n                <title name=\"DIR\">moveForward</title>\n
+          \               <value name=\"VALUE\">\n                  <block type=\"math_number\">\n
+          \                   <title name=\"NUM\">40</title>\n                  </block>\n
+          \               </value>\n                <next>\n                  <block
+          type=\"draw_turn\" inline=\"true\">\n                    <title name=\"DIR\">turnRight</title>\n
+          \                   <value name=\"VALUE\">\n                      <block
+          type=\"math_arithmetic\" inline=\"true\">\n                        <title
+          name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n
+          \                         <block type=\"math_number\">\n                            <title
+          name=\"NUM\">360</title>\n                          </block>\n                        </value>\n
+          \                       <value name=\"B\">\n                          <block
+          type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n
+          \                         </block>\n                        </value>\n                      </block>\n
+          \                   </value>\n                  </block>\n                </next>\n
+          \             </block>\n            </statement>\n            <next>\n              <block
+          type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n
+          \                 <block type=\"math_arithmetic\" inline=\"true\">\n                    <title
+          name=\"OP\">MINUS</title>\n                    <value name=\"A\">\n                      <block
+          type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n
+          \                     </block>\n                    </value>\n                    <value
+          name=\"B\">\n                      <block type=\"math_number\">\n                        <title
+          name=\"NUM\">1</title>\n                      </block>\n                    </value>\n
+          \                 </block>\n                </value>\n                <statement
+          name=\"DO\">\n                  <block type=\"draw_move\" inline=\"true\">\n
+          \                   <title name=\"DIR\">moveForward</title>\n                    <value
+          name=\"VALUE\">\n                      <block type=\"math_number\">\n                        <title
+          name=\"NUM\">40</title>\n                      </block>\n                    </value>\n
+          \                   <next>\n                      <block type=\"draw_turn\"
+          inline=\"true\">\n                        <title name=\"DIR\">turnLeft</title>\n
+          \                       <value name=\"VALUE\">\n                          <block
+          type=\"math_arithmetic\" inline=\"true\">\n                            <title
+          name=\"OP\">DIVIDE</title>\n                            <value name=\"A\">\n
+          \                             <block type=\"math_number\">\n                                <title
+          name=\"NUM\">360</title>\n                              </block>\n                            </value>\n
+          \                           <value name=\"B\">\n                              <block
+          type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n
+          \                             </block>\n                            </value>\n
+          \                         </block>\n                        </value>\n                      </block>\n
+          \                   </next>\n                  </block>\n                </statement>\n
+          \             </block>\n            </next>\n          </block>\n        </statement>\n
+          \     </block>\n    </next>\n  </block>\n</xml>"
       Course 4 Artist Functions Inspiration_authored_hint:
         Course_4_Artist_Functions_Inspiration_a: Start with the code from the last
           puzzle and add an extra `turn right` of three degrees inside the repeat
@@ -476,7 +624,69 @@
           outside of the `repeat loop`, but still inside the `for loop`.
         Course_4_Artist_Functions_Inspiration_c: |-
           **Solution:**
-          ![Solution](https://images.code.org/0c94bcde33a00595aa099fea964ca80e-image-1469641309381.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">14</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">1</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_random"/>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="procedures_callnoreturn">
+          <mutation name="draw a square 20"></mutation>
+          <next>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">20</title>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnRight</title>
+          <title name="VALUE">3</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="draw_turn_by_constant">
+          <title name="DIR">turnLeft</title>
+          <title name="VALUE">100</title>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Functions challenge_authored_hint:
         Course_4_Artist_Functions_challenge_a: Part of understanding how to use functions
           is figuring out which ones you need, and which ones you don't.
@@ -495,7 +705,177 @@
           a right turn of **360/sides**.
         Course_4_Artist_Inspire_d: |-
           **Solution:**
-          ![Blocks for solution](https://images.code.org/35fa852515d73aa8cf6c2bde4f2d46a3-image-1469641128278.png)
+
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#843179</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">sides</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">4</title>
+          </block>
+          </value>
+          <next>
+          <block type="variables_set" inline="false">
+          <title name="VAR">length</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">200</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="controls_repeat_ext" inline="true">
+          <value name="TIMES">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpForward</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnLeft</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          <next>
+          <block type="jump" inline="true">
+          <title name="DIR">jumpForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">length</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="math_number">
+          <title name="NUM">360</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="variables_get">
+          <title name="VAR">sides</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       Course 4 Artist Vars 13_authored_hint:
         Course_4_Artist_Vars_13_a: You need two repeat loops (one inside the other)
           both repeating `sides` times.
@@ -3455,12 +3835,22 @@
         courseC_PlayLab_events1_a: |-
           Attach this block to the `when run` block:
 
-          ![](https://images.code.org/24043f33cb433506679d27acf991b7c1-image-1499792847837.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
       courseC_PlayLab_events2_authored_hint:
         courseC_PlayLab_events2_a: |-
           Attach two of these blocks to the `when run` block:
 
-          ![](https://images.code.org/14e36b6b8486b7d8f8391f1ae52f42c2-image-1499792920559.06.43 AM.png)
+          <xml>
+          <block type="studio_saySpriteChoices">
+          <title name="SPRITE">0</title>
+          <title name="VALUE">Hi there.</title>
+          </block>
+          </xml>
         courseC_PlayLab_events2_b: Use the drop down menu on the block to change which
           actor speaks.
       courseC_PlayLab_events3_authored_hint:
@@ -3471,7 +3861,13 @@
         courseC_PlayLab_events3_c: |-
           Attach this block to the `when run` block:
 
-          ![](https://images.code.org/caf9122bbd49be980553467fa8285fd1-image-1499797089071.17.11 AM.png)
+          <xml>
+          <block type="studio_moveDistance">
+          <title name="SPRITE">0</title>
+          <title name="DIR">2</title>
+          <title name="DISTANCE">25</title>
+          </block>
+          </xml>
       courseC_PlayLab_events4_authored_hint:
         courseC_PlayLab_events4_b: Jorge needs to move right 100 pixels to reach the
           cat.
@@ -3576,18 +3972,31 @@
         courseC_artist_loop1_b: |-
           This is the block you will need to set a pattern:
 
-          ![](https://images.code.org/02064f52d5e4ae2d51dd5c6ce0016a3f-image-1499710835404.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
 
           Choose any pattern you like!
       courseC_artist_loops1a_authored_hint:
         courseC_artist_loops1a_a: |-
           This is the first block you will need:
 
-          ![](https://images.code.org/3ca3d04e24d71fedad4e1e8c384917f6-image-1499710952255.08.14 AM.png)
+          <xml>
+          <block type="jump_to_xy">
+          <title name="XPOS">200</title>
+          <title name="YPOS">200</title>
+          </block>
+          </xml>
         courseC_artist_loops1a_b: |-
           Use this block to draw the sticker!
 
-          ![](https://images.code.org/18d0f4a7b54a384f54beb6186f3da6ba-image-1499710970130.21.47 AM.png)
+          <xml>
+          <block type="sticker">
+          <title name="VALUE">Bird</title>
+          </block>
+          </xml>
       courseC_artist_loops2a_authored_hint:
         courseC_artist_loops2a_a: Inside your loop, you will want to jump to 200 over
           200 down, then draw the bird sticker, then turn 30 degrees.
@@ -3602,7 +4011,12 @@
         courseC_artist_loops4a_a: |-
           Use this block to jump forward:
 
-          ![](https://images.code.org/bf0f269bd051fb3f6f2d53f824c55243-image-1499712635064.49.55 AM.png)
+          <xml>
+          <block type="jump_by_constant">
+          <title name="DIR">jumpForward</title>
+          <title name="VALUE">100</title>
+          </block>
+          </xml>
 
           Don't forget to change how far!
       courseC_artist_loops5_authored_hint:
@@ -3622,7 +4036,11 @@
         courseC_artist_loops5b_a: |-
           Use this block to set the pattern of your lines:
 
-          ![](https://images.code.org/60165c29f939e06454658448461d9942-image-1499719578878.19.44 AM.png)
+          <xml>
+          <block type="draw_line_style_pattern">
+          <title name="VALUE">DEFAULT</title>
+          </block>
+          </xml>
         courseC_artist_loops5b_b: To make a design like the one above, you will want
           to move backward the same distance that you move forward.
       courseC_artist_loops6_authored_hint:
@@ -3728,8 +4146,8 @@
       courseC_artist_prog_challenge1-doghouse_authored_hint:
         courseC_artist_prog7_a: Use 60 degree angles to make the roof.
       courseC_artist_prog_challenge1_authored_hint:
-        courseC_artist_prog_challenge1_a: 'The rectangle is 200 pixels wide and 100
-          pixels tall. '
+        courseC_artist_prog_challenge1_a: You can draw this as a rectangle with a
+          line in the middle or two different squares!
       courseC_artist_prog_challenge2_authored_hint:
         courseC_artist_prog_challenge2_a: "You can put commands inside `repeat` block
           to loop them over and over. Try it!\n<xml>\n  \n          <block type=\"controls_repeat\">\n
@@ -4311,6 +4729,8 @@
           The best tip I have for you is to press `⟲ Start Over` if it starts to get really messy.
 
           There are only few lines wrong in the original program. If one approach fails, back up and try again. There is a solution!
+      courseD_artist_embed_frozen_authored_hint: []
+      courseD_artist_embed_frozen2_authored_hint: []
       courseD_artist_functions10_authored_hint:
         courseD_artist_functions10_b: This drawing is a lot like the last one, except
           the function draws a different kind of line.
@@ -6377,19 +6797,116 @@
         courseF_artist_for10_c: |-
           Want to know how the sample image was done?
 
-          ![](https://images.code.org/fdc5d6c15b357ba9763ac9ea914967a9-image-1475911612774.23.51.png)
+          <xml>
+          <block type="when_run" deletable="false" movable="false">
+          <next>
+          <block type="draw_colour" inline="true" id="draw-color">
+          <value name="COLOUR">
+          <block type="colour_picker">
+          <title name="COLOUR">#ff0000</title>
+          </block>
+          </value>
+          <next>
+          <block type="controls_for_counter" inline="true">
+          <mutation counter="counter"></mutation>
+          <value name="FROM">
+          <block type="math_number">
+          <title name="NUM">15</title>
+          </block>
+          </value>
+          <value name="TO">
+          <block type="math_number">
+          <title name="NUM">175</title>
+          </block>
+          </value>
+          <value name="BY">
+          <block type="math_number">
+          <title name="NUM">2</title>
+          </block>
+          </value>
+          <statement name="DO">
+          <block type="draw_width" inline="false">
+          <value name="WIDTH">
+          <block type="math_arithmetic" inline="true">
+          <title name="OP">DIVIDE</title>
+          <value name="A">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <value name="B">
+          <block type="math_number">
+          <title name="NUM">10</title>
+          </block>
+          </value>
+          </block>
+          </value>
+          <next>
+          <block type="alpha" inline="true" id="alpha">
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          <next>
+          <block type="draw_turn" inline="true">
+          <title name="DIR">turnRight</title>
+          <value name="VALUE">
+          <block type="math_number">
+          <title name="NUM">61</title>
+          </block>
+          </value>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </statement>
+          </block>
+          </next>
+          </block>
+          </next>
+          </block>
+          </xml>
       courseF_artist_for10_predict1_authored_hint: []
       courseF_artist_for2_authored_hint:
         courseF_artist_for2_a: |-
           Use `counter` for the length of your triangles inside your `repeat` loop.
 
-          ![](https://images.code.org/5e9465321a0b7a4d791848a79f3e6715-image-1475908305872.31.26.png)
+          <xml><block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
         courseF_artist_for2_b: Remember to count by 10 within your for loop.
       courseF_artist_for3_authored_hint:
         courseF_artist_for3_a: |-
           To have the `for` loop drive your movement, make sure that you're using `counter` as your distance in the `move forward` block.
 
-          ![](https://images.code.org/15e87fc7fe408cbf1b63e0e8e69b7ffe-image-1475908502078.31.26.png)
+          <xml>
+          <block type="draw_move" inline="true">
+          <title name="DIR">moveForward</title>
+          <value name="VALUE">
+          <block type="variables_get">
+          <title name="VAR">counter</title>
+          </block>
+          </value>
+          </block>
+          </xml>
       courseF_artist_for4_authored_hint:
         courseF_artist_for4_a: "**What is the smallest number you will need?  \nWhat
           is the largest number?  \nHow big is the increase each time?**\n\nThose
@@ -6433,7 +6950,7 @@
           </value>
           <next>
           <block type="controls_for_counter" inline="true">
-          <mutation counter="counter"/>
+          <mutation counter="counter"></mutation>
           <value name="FROM">
           <block type="math_number">
           <title name="NUM">50</title>
@@ -6712,27 +7229,29 @@
       courseF_artist_ramp10_authored_hint:
         courseF_artist_ramp10_a: Don't forget to turn by 60 degrees after each triangle.  Which
           loop do you need to put that instruction inside?
-        courseF_artist_ramp10_b: If your code for a triangle is in a `repeat` loop,
-          this task will be a lot simpler.
+        courseF_artist_ramp10_b: If your code for a triangle is in a <xml><block type="controls_repeat"><title
+          name="TIMES">6</title></block></xml> loop, this task will be a lot simpler.
         courseF_artist_ramp10_c: |-
           You will draw six triangles in total for this design:
 
           ![](https://images.code.org/bc62bed22e90d35e420b0a116ac487ef-image-1500347536221.2_solution2.gif)
       courseF_artist_ramp8_authored_hint:
-        courseF_artist_ramp8_a: To draw a side, use the `move forward by 100 pixels`
+        courseF_artist_ramp8_a: To draw a side, use the <xml><block type="draw_move_by_constant"><title
+          name="DIR">moveForward</title><title name="VALUE">100</title></block></xml>
           block, and change the 100 to a 200.
         courseF_artist_ramp8_b: |-
-          To draw 4 sides, put the `move forward by 100 pixels` block inside of a repeat loop and make sure the loop is set to draw 4 times.
+          To draw 4 sides, put the <xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">200</title></block></xml> block inside of a repeat loop and make sure the loop is set to draw 4 times.
 
           Don't forget to turn afterward!
-        courseF_artist_ramp8_c: Your turn will also go inside of the `repeat` loop.
+        courseF_artist_ramp8_c: Your turn will also go inside of the <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop.
       courseF_artist_ramp9_authored_hint:
         courseF_artist_ramp9_a: How is this similar to a square?  How is it different?
-        courseF_artist_ramp9_b: You can use the drop down menu on the `turn` blocks
+        courseF_artist_ramp9_b: You can use the drop down menu on the turn blocks
           to see which angle you need!
         courseF_artist_ramp9_c: You will want to move forward 100 pixels, then turn
-          right 120 degrees for each side. Can you use a `repeat` loop to make your
-          code shorter?
+          right 120 degrees for each side. Can you use a <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop to make your code shorter?
       courseF_artist_variables10_authored_hint:
         courseF_artist_variables10_a: Have fun with this level! See what little changes
           can do to your code.
@@ -6797,8 +7316,18 @@
           with the `set length` block, and start it at 150 pixels.
         courseF_artist_variables8_c: Make sure to use the `repeat` loop to draw your
           triangle.
-        courseF_artist_variables8_a: |
-          Try putting the set of ![](https://images.code.org/6525bebee31ee15b84a48761b2866f53-image-1477531948829.31.37.png) blocks inside your loop at the end.
+        courseF_artist_variables8_a: "Try putting the set of \n\n<xml>\n<block type=\"variables_set\"
+          inline=\"false\">\n                        <title name=\"VAR\">length</title>\n
+          \                       <value name=\"VALUE\">\n                          <block
+          type=\"math_arithmetic\" inline=\"true\">\n                            <title
+          name=\"OP\">ADD</title>\n                            <value name=\"A\">\n
+          \                             <block type=\"variables_get\">\n                                <title
+          name=\"VAR\">length</title>\n                              </block>\n                            </value>\n
+          \                           <value name=\"B\">\n                              <block
+          type=\"math_number\">\n                                <title name=\"NUM\">10</title>\n
+          \                             </block>\n                            </value>\n
+          \                         </block>\n                        </value>\n                      </block>\n</xml>\n\nblocks
+          inside your loop at the end.\n"
       courseF_artist_variables9_authored_hint:
         courseF_artist_variables9_a: For this puzzle, all you need to do is change
           how many times the loop repeats.
@@ -7466,7 +7995,7 @@
           <title name="DIR">isPathRight</title>
           <statement name="DO">
           <block type="procedures_callnoreturn" id="function">
-          <mutation name="move and check"/>
+          <mutation name="move and check"></mutation>
           </block>
           </statement>
           </block>
@@ -7484,7 +8013,7 @@
           </next>
           </block>
           <block type="procedures_defnoreturn" editable="false">
-          <mutation/>
+          <mutation></mutation>
           <title name="NAME">move and check</title>
           <statement name="STACK">
           <block type="controls_repeat_ext" inline="true">
@@ -7495,7 +8024,7 @@
           </value>
           <statement name="DO">
           <block type="procedures_callnoreturn">
-          <mutation name="check nectar or honey"/>
+          <mutation name="check nectar or honey"></mutation>
           <next>
           <block type="maze_turn">
           <title name="DIR">turnRight</title>
@@ -7521,7 +8050,7 @@
           </statement>
           </block>
           <block type="procedures_defnoreturn" editable="false" usercreated="true">
-          <mutation/>
+          <mutation></mutation>
           <title name="NAME">check nectar or honey</title>
           <statement name="STACK">
           <block type="bee_whileNectarAmount">
@@ -7928,11 +8457,13 @@
       courseF_farmer_ramp11_authored_hint:
         courseF_farmer_ramp11_a: If you're having a hard time seeing where the loops
           should go, try coding it all out then looking for a pattern.
-        courseF_farmer_ramp11_b: How can you use a `repeat` loop to pick lettuce,
-          instead of dragging out 5 `pick lettuce` blocks?
+        courseF_farmer_ramp11_b: How can you use a <xml><block type="controls_repeat"><title
+          name="TIMES">???</title></block></xml> loop to pick lettuce, instead of
+          dragging out 5 <xml><block type="harvester_lettuce"/></xml> blocks?
         courseF_farmer_ramp11_c: You don't need to use 5 repeat loops to get all of
           the lettuce.  Instead, drag your lettuce picking repeat loop inside of another
-          loop (along with a `move forward` block, and you'll have it!)
+          loop (along with a <xml><block type="maze_moveForward"/></xml> block, and
+          you'll have it!)
       courseF_maze_predict1_authored_hint: []
       courseF_maze_ramp1_authored_hint:
         courseF_maze_ramp1_a: If the bird isn't getting to the pig, make sure all
@@ -7953,10 +8484,10 @@
           chunk of code over and over.
       courseF_maze_ramp2_authored_hint:
         courseF_maze_ramp2_a: To use a new block, drag it from the toolbox out into
-          the workspace and connect it to the program that is attached to the `when
-          run` block.
-        courseF_maze_ramp2_b: Make sure the `move forward` block is inside of the
-          loop, so that it is repeated.
+          the workspace and connect it to the program that is attached to the <xml><block
+          type="when_run"/></xml> block.
+        courseF_maze_ramp2_b: Make sure the <xml><block type="maze_moveForward"/></xml>
+          block is inside of the loop, so that it is repeated.
       courseF_maze_ramp4_authored_hint:
         courseF_maze_ramp4_a: You can turn right or left from the bird's point of
           view. If you are facing right, turning right will make you point downwards.
@@ -7970,7 +8501,8 @@
         courseF_maze_ramp5_a: Try using the "Step" button to run your code line by
           line. Can you figure out what you need to do next?
         courseF_maze_ramp5_b: There is more than one way to get to the pig.
-        courseF_maze_ramp5_c: Try using a `repeat` loop for shorter code!
+        courseF_maze_ramp5_c: Try using a <xml><block type="controls_repeat"><title
+          name="TIMES">3</title></block></xml> loop for shorter code!
       courseF_maze_ramp6_authored_hint:
         courseF_maze_ramp6_a: There are two ways to solve this puzzle!
         courseF_maze_ramp6_b: The bird starts facing a wall, so remember to turn before

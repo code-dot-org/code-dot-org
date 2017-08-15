@@ -98,6 +98,7 @@
   "setSpeed": "stel snelheid in",
   "setSpeedTooltip": "Kiest niveau en snelheid",
   "shareFlappyTwitter": "Bekijk het Flappy spel wat ik zelf heb gemaakt met @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Deel je spel met anderen:",
   "soundRandom": "willekeurig",
   "soundBounce": "stuiter",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "De onderstaande acties uitvoeren als Flappy een obstakel raakt.",
   "whenRunButtonClick": "als het spel start",
   "whenRunButtonClickTooltip": "Voer de onderstaande acties uit als het spel start.",
-  "yes": "Ja",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Ja"
 }

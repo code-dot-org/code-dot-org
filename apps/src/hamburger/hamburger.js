@@ -1,8 +1,15 @@
 import $ from 'jquery';
 import trackEvent from '../util/trackEvent';
+import experiments from '@cdo/apps/util/experiments';
 
 export const initHamburger = function () {
   $(function () {
+
+    //Removes sections tab in header for section-flow experiments
+    //Temporary fix until tab can be completely deleted
+    if (experiments.isEnabled('section-flow-2017')) {
+      $('#header-teacher-sections').remove();
+    }
 
     $('#hamburger-icon').click(function (e) {
       $(this).toggleClass( 'active' );

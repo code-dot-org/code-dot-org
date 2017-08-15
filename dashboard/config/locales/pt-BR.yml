@@ -64,6 +64,9 @@
   puzzle: Quebra-cabeça
   trophies: troféus
   courses: percursos
+  courses_page:
+    title_student: Aprenda no Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Atividade off-line
   of: de
   more: MAIS
@@ -294,7 +297,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Início
+      my_dashboard: My Dashboard
       courses: percursos
+      course_catalog: Course Catalog
       project_gallery: Galeria de projetos
       sections: Turmas
       help_support: Ajuda e suporte

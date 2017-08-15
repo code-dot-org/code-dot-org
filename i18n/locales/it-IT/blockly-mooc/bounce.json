@@ -122,6 +122,7 @@
   "setTeam":"Imposta la squadra {team}",
   "setTeamRandom":"Imposta la squadra casuale",
   "shareBounceTwitter":"Guarda la versione di Ping-Pong che ho creato io. L'ho fatto per conto mio @codeorg @programmafuturo",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Condividi il tuo gioco:",
   "turnLeft":"gira a sinistra",
   "turnRight":"gira a destra",
