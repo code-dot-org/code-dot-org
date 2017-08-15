@@ -26,9 +26,9 @@
 #
 
 class OmniAuthSection < Section
-  def self.from_omniauth(code:, type:, owner_id:, students:)
+  def self.from_omniauth(code:, type:, owner_id:, students:, section_name: 'New Section')
     oauth_section = with_deleted.where(code: code).first_or_create! do |section|
-      section.name = 'New Section'
+      section.name = section_name
       section.user_id = owner_id
       section.login_type = type
     end
@@ -40,6 +40,10 @@ class OmniAuthSection < Section
     end
 
     oauth_section.set_exact_student_list(oauth_students)
+
+    oauth_section.name = section_name
+    oauth_section.save! if oauth_section.changed?
+
     oauth_section
   end
 
