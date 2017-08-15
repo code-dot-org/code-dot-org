@@ -1693,24 +1693,26 @@ export default class LevelView {
     let yOffset = 0 - 20 + Math.random() * 40;
 
     frameList = Phaser.Animation.generateFrameNames(framePrefix, frameStart, frameEnd, ".png", 3);
-
-    var distanceBetween = function (position, position2) {
-      return Math.sqrt(Math.pow(position[0] - position2[0], 2) + Math.pow(position[1] - position2[1], 2));
-    };
-    // todo : acquire after animation
     sprite = this.actionPlane.create(xOffset + 40 * x, yOffset + this.actionPlane.yOffset + 40 * y, atlas, "");
-    let collectiblePosition = this.controller.levelModel.spritePositionToIndex([xOffset, yOffset], [sprite.x, sprite.y]);
     var anim = sprite.animations.add("animate", frameList, 10, false);
-    anim.onComplete.add(() => {
-      if (this.controller.levelModel.usePlayer) {
-        if (distanceBetween(this.player.position, collectiblePosition) < 2) {
-          this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType);
-        } else {
-          this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
+
+    if (this.controller.levelData.isEventLevel) {
+      var distanceBetween = function (position, position2) {
+        return Math.sqrt(Math.pow(position[0] - position2[0], 2) + Math.pow(position[1] - position2[1], 2));
+      };
+
+      let collectiblePosition = this.controller.levelModel.spritePositionToIndex([xOffset, yOffset], [sprite.x, sprite.y]);
+      anim.onComplete.add(() => {
+        if (this.controller.levelModel.usePlayer) {
+          if (distanceBetween(this.player.position, collectiblePosition) < 2) {
+            this.playItemAcquireAnimation(this.player.position, this.player.facing, sprite, () => { }, blockType);
+          } else {
+            this.collectibleItems.push([sprite, [xOffset, yOffset], blockType]);
+          }
         }
-      }
-    });
-    this.playScaledSpeed(sprite.animations, "animate");
+      });
+      this.playScaledSpeed(sprite.animations, "animate");
+    }
     return sprite;
   }
 
