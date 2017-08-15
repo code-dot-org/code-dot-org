@@ -98,6 +98,7 @@
   "setSpeed": "ตั้งค่า ความเร็ว",
   "setSpeedTooltip": "ตั้งค่าระดับความเร็ว",
   "shareFlappyTwitter": "ลองเล่นเกมส์ Flappy Bird นี่สิ. เขียนเองกับมือเลยนา ใช้ @codeorg น่ะ",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "แบ่งปันเกมส์ของคุณ:",
   "soundRandom": "สุ่ม",
   "soundBounce": "กระเด้ง",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "รันคำสั่งด้านล่างเมื่อแฟรปปี้เบิร์ดผ่านสิ่งกีดขวาง.",
   "whenRunButtonClick": "เมื่อเกมเริ่ม",
   "whenRunButtonClickTooltip": "รันคำสั่งด้านล่างเมื่อเริ่มเกมส์.",
-  "yes": "ใช่",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "ใช่"
 }

@@ -669,6 +669,7 @@
   "setMapBlobs": "nastav guličkovú mapu",
   "setMapTooltip": "Zmení mapu v scéne",
   "shareStudioTwitter": "Pozri si príbeh, ktorý som urobil. Vytvoril som ho sám s @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Zdieľaj svoj príbeh:",
   "showCoordinates": "zobraziť súradnice",
   "showCoordinatesTooltip": "zobraziť súradnice hlavnej postavy na obrazovke",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Potrebuješ získať 20 Mouse Droidov. Použi príkaz \"pridaj Mouse Droida\" v udalosti \"keď získaš Mouse Droida\" aby si pridal dvoch alebo viac Mouse Droidov vždy, keď jedného získaš.",
   "failedMultiplyCharactersTimeoutGotSome": "Gratulujem, pridal si kód na vytvorenie Mouse Droida. Môžeš ísť na ďalší rébus alebo znova skúsiť dostať 20 Mouse Droidov. Skús si to uľahčiť pridaním viacerých! (Stlač a drž klávesy na svojej klávesnici (alebo obrazovke) aby si sa posúval rýchlejšie.)",
   "failedChangeSettingTimeout": "Dostaň sa k trom Pilotom Rebelov, aby si išiel ďalej.",
-  "failedChangeSettingSettings": "Prispôsob si hru. Aby si prešiel týmto rébusom, potrebuješ si zmeniť droida a nastaviť jeho rýchlosť.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Prispôsob si hru. Aby si prešiel týmto rébusom, potrebuješ si zmeniť droida a nastaviť jeho rýchlosť."
 }

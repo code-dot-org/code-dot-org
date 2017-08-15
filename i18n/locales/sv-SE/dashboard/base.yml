@@ -56,6 +56,9 @@ sv:
   puzzle: "Pussel"
   trophies: "troféer"
   courses: 'kurser'
+  courses_page:
+    title_student: "Lär med Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Ouppkopplad aktivitet'
   of: "av"
   more: "MER"
@@ -249,7 +252,9 @@ sv:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Hem"
+      my_dashboard: "My Dashboard"
       courses: "kurser"
+      course_catalog: "Course Catalog"
       project_gallery: "Projektgalleriet"
       sections: "Avsnitt"
       help_support: "Hjälp och support"

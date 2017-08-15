@@ -64,6 +64,9 @@
   puzzle: Kirakós
   trophies: trófeák
   courses: tanfolyamok
+  courses_page:
+    title_student: Tanulj a Kód Stúdióban
+    title_teacher: Teach with Code Studio
   unplugged_activity: Offline tevékenység
   of: "/"
   more: TÖBB
@@ -284,7 +287,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Főmenü
+      my_dashboard: My Dashboard
       courses: tanfolyamok
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Csoportok
       help_support: Súgó és támogatás

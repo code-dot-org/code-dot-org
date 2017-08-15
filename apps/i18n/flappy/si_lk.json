@@ -98,6 +98,7 @@
   "setSpeed": "වේගය එක් කරන්න",
   "setSpeedTooltip": "ලෙවලය සඳහා වේගයක් එක් කරන්න",
   "shareFlappyTwitter": "මා විසින් නිර්මාණය කරන ලද Flappy game ක්‍රීඩාව ඔබත් උත්සහ කර බලන්න. @codeorg හි සහය සහිතව මා විසින්ම මෙහි කේතයන් ලියා ඇත",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "ඔබගේ ක්‍රීඩාව මිතුරන් අතරේ හුවමාරු කරන්න:",
   "soundRandom": "අහඹු",
   "soundBounce": "ආපසු පනින්න",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Flappy බාධාවකට ඇතුලු වූ විගසම පහත ක්‍රියාවන් ක්‍රියාත්මක කරන්න.",
   "whenRunButtonClick": "ක්‍රීඩව ආරම්භ වූ විගස",
   "whenRunButtonClickTooltip": "ක්‍රීඩාව ආරම්භ වූ විගසම පහත ක්‍රියාවන් ක්‍රියාත්මක කරන්න.",
-  "yes": "ඔව්",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "ඔව්"
 }

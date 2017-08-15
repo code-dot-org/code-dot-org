@@ -5972,6 +5972,10 @@ fil:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
           title: ''
           description_audience: ''
           description_short: ''

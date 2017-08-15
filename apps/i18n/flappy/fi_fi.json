@@ -98,6 +98,7 @@
   "setSpeed": "aseta nopeus",
   "setSpeedTooltip": "Asettaa tason nopeuden",
   "shareFlappyTwitter": "Tutustu Flappy-peliin, jonka tein. Koodasin sen itse @codeorg:illa",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Jaa pelisi:",
   "soundRandom": "satunnainen",
   "soundBounce": "pomppu",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Suorita alla olevat toiminnot, kun Flappy saapuu esteelle.",
   "whenRunButtonClick": "kun peli alkaa",
   "whenRunButtonClickTooltip": "Suorita alla olevat toiminnot, kun peli alkaa.",
-  "yes": "Kyllä",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Kyllä"
 }

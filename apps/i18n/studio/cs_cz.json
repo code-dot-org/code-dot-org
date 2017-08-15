@@ -669,6 +669,7 @@
   "setMapBlobs": "nastavit Blob mapu",
   "setMapTooltip": "Změní mapu na scéně",
   "shareStudioTwitter": "Zkontroluj si příběh, který si udělal. Napsal jsem to sám s @codeorg",
+  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Sdílej svůj příběh:",
   "showCoordinates": "Zobrazit souřadnice",
   "showCoordinatesTooltip": "zobrazí souřadnice hlavní postavy na obrazovce",
@@ -869,6 +870,5 @@
   "failedMultiplyCharactersTimeoutBlockly": "Potřebuješ dostat 20 Myších Droidů. Použij povel \"přidejte Myší Droid\" uvnitř události \"když dostane Myší Droid\" k přidání dvou nebo více Myších Droidů, když dostaneš jednoho.",
   "failedMultiplyCharactersTimeoutGotSome": "Blahopřejeme, přidal jsi kód, abys vytvořil Myší Droidy. Můžeš přejít na další hádanku nebo znova se pokusit dostat 20 Myších Droidů. Zkus to snadněji přidáním více z nich! (Stiskni a podrž klávesy na klávesnici (nebo obrazovce) se pohybovat rychleji.)",
   "failedChangeSettingTimeout": "Dostaň tři Rebel Piloty k posunu dál.",
-  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost.",
-  "shareStudioTwitterDonor": "Check out the story I made. (Thanks {donor} for supporting @codeorg)"
+  "failedChangeSettingSettings": "Udělejte hru po svém. Pro splnění hádanky musíš změnit svého droida a nastavit jeho rychlost."
 }
