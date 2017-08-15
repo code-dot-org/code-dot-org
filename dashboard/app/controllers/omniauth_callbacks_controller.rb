@@ -1,3 +1,5 @@
+require 'cdo/shared_cache'
+
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # GET /users/auth/:provider/callback
   def all
@@ -24,6 +26,15 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Note that @user.email is populated by User.from_omniauth even for students
       redirect_to "/users/sign_in?providerNotLinked=#{@user.provider}&email=#{@user.email}"
     else
+      # This is a new registration
+      # Because some oauth tokens are quite large, we strip the token from the session
+      # variables and pass them through via the cache instead - they are pulled out again
+      # from User::new_with_session
+      oauth_token = @user.attributes['properties']['oauth_token']
+      @user.attributes['properties']['oauth_token'] = nil
+      cache = CDO.shared_cache
+      oauth_cache_key = "oauth_token_#{@user.email}"
+      cache.write(oauth_cache_key, oauth_token) if cache
       session["devise.user_attributes"] = @user.attributes
       redirect_to new_user_registration_url
     end
