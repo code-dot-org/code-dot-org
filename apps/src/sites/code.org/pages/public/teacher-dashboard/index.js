@@ -55,6 +55,13 @@ function main() {
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
 
+  //Removes sections tab in header for section-flow experiments
+  //Temporary fix until tab can be completely deleted
+  if (experiments.isEnabled('section-flow-2017')) {
+    $('#header-teacher-sections').remove();
+    $('#hamburger-teacher-sections').parent().parent().remove();
+  }
+
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
     'ngRoute',
