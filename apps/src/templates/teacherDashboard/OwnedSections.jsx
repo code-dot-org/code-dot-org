@@ -63,8 +63,6 @@ class OwnedSections extends React.Component {
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
       this.props.beginEditingNewSection();
     } else {
-      // This is the only usage of the newSection action, and can be removed once
-      // SECTION_FLOW_2017 is finished
       return this.props.newSection();
     }
   };
