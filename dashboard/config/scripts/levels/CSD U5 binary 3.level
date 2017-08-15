@@ -44,12 +44,9 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "false",
-    "contained_level_names": null,
-    "encrypted_examples": [
-
-    ],
     "markdown_instructions": "# Decoding multiple numbers\r\n\r\nHere's a widget that can calculate numbers from four to eight bits.  You can use it to try to find the three world records encoded in the binary string below.  The answers are in order in the string.\r\n\r\n1. Most canned drinks opened by a parrot in one minute.\r\n2. Most ice cream scoops balanced on a cone.\r\n3. Most number of people lifted and thrown in two minutes.\r\n\r\n![](https://images.code.org/51fe16afb224a2cc4819def434f6ec9d-image-1502735454689.png)\r\n\r\n# Do this\r\n* Try to decode the three numbers from a the binary string\r\n* Discuss your answers with your partner.\r\n * Was there any other information you need to be certain your numbers are correct?\r\n\r\n",
-    "teacher_markdown": "Without knowing the length of each of the numbers, students will not be certain of their answers, but they should be able to at least find one possible solution.  Allow students to discuss any differences in their answers.  They should eventually see that they need to know the bit length of each number to answer the question."
+    "teacher_markdown": "Without knowing the length of each of the numbers, students will not be certain of their answers, but they should be able to at least find one possible solution.  Allow students to discuss any differences in their answers.  They should eventually see that they need to know the bit length of each number to answer the question.",
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
