@@ -49,7 +49,7 @@ describe('AssignToSection', () => {
     wrapper.find('Button').simulate('click');
     const newSectionLink = wrapper.find('a').at(0);
     assert.strictEqual(newSectionLink.props().href,
-      '//test.code.org/teacher-dashboard?courseId=30#/sections');
+      '/home?courseId=30');
     assert.strictEqual(newSectionLink.text(), 'New section...');
   });
 
@@ -63,7 +63,7 @@ describe('AssignToSection', () => {
     wrapper.find('Button').simulate('click');
     const newSectionLink = wrapper.find('a').at(0);
     assert.strictEqual(newSectionLink.props().href,
-      '//test.code.org/teacher-dashboard?courseId=30&scriptId=112#/sections');
+      '/home?courseId=30&scriptId=112');
     assert.strictEqual(newSectionLink.text(), 'New section...');
   });
 
