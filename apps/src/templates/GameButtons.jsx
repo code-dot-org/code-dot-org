@@ -74,17 +74,23 @@ export const UnconnectedGameButtons = props => (
       {" "/* Explicitly insert whitespace so that this behaves like our ejs file*/}
       {props.children}
     </ProtectedStatefulDiv>
-    <SkipButton />
+    {props.showSkipButton &&
+      <SkipButton nextLevelUrl={props.nextLevelUrl} />
+    }
   </div>
 );
 UnconnectedGameButtons.propTypes = {
   hideRunButton: React.PropTypes.bool,
   playspacePhoneFrame: React.PropTypes.bool,
+  nextLevelUrl: React.PropTypes.string,
+  showSkipButton: React.PropTypes.bool,
   children: React.PropTypes.node,
 };
 UnconnectedGameButtons.displayName = 'GameButtons';
 
 export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
+  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
+  nextLevelUrl: state.pageConstants.nextLevelUrl,
+  showSkipButton: state.pageConstants.isChallengeLevel,
 }))(UnconnectedGameButtons);

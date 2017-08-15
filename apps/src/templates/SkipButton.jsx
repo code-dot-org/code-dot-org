@@ -1,13 +1,11 @@
 import React from 'react';
 import msg from '@cdo/locale';
-import { connect } from 'react-redux';
 
 const LAUNCH_CLASS = 'launch';
 
-class SkipButton extends React.Component {
+export default class SkipButton extends React.Component {
   static propTypes = {
     nextLevelUrl: React.PropTypes.string.isRequired,
-    showSkipButton: React.PropTypes.bool.isRequired,
   }
 
   onClick() {
@@ -15,9 +13,6 @@ class SkipButton extends React.Component {
   }
 
   render() {
-    if (!this.props.showSkipButton) {
-      return null;
-    }
     return (
       <button
         id="skipButton"
@@ -29,8 +24,3 @@ class SkipButton extends React.Component {
     );
   }
 }
-
-export default connect(state => ({
-  showSkipButton: state.pageConstants.isChallengeLevel,
-  nextLevelUrl: state.pageConstants.nextLevelUrl,
-}))(SkipButton);
