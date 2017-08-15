@@ -1409,9 +1409,10 @@ class GameController {
       } else {
         this.endLevel(true);
       }
-    }
-    // check the final state to see if its failed
-    if (this.levelModel.isFailed()) {
+    } else if (this.levelModel.isFailed() || !this.levelData.isEventLevel) {
+      // For "Events" levels, check the final state to see if it's failed.
+      // Procedural levels only call `checkSolution` after all code has run, so
+      // fail if we didn't pass the success condition.
       this.endLevel(false);
     }
   }
