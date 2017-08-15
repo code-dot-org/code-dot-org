@@ -186,6 +186,7 @@ gem 'jwt' # single signon for zendesk
 gem 'codemirror-rails' # edit code in textarea
 gem 'marked-rails' # js-based md renderer used for levelbuilder md preview
 
+gem 'shortener'  # URL shortening
 gem 'twilio-ruby' # SMS API for send-to-phone feature
 
 gem 'font-awesome-rails', '~> 4.6.3'
