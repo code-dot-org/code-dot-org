@@ -28,8 +28,6 @@ const styles = {
 class OwnedSections extends React.Component {
   static propTypes = {
     isRtl: PropTypes.bool,
-    defaultCourseId: PropTypes.number,
-    defaultScriptId: PropTypes.number,
     queryStringOpen: PropTypes.string,
 
     // redux provided
@@ -50,17 +48,9 @@ class OwnedSections extends React.Component {
 
   componentDidMount() {
     const {
-      defaultCourseId,
-      defaultScriptId,
       queryStringOpen,
       beginImportRosterFlow,
     } = this.props;
-
-    // If we have a default courseId and/or scriptId, we want to start with our
-    // dialog open. Add a new section with this course/script as default
-    if (defaultCourseId || defaultScriptId) {
-      this.addSection();
-    }
 
     if (experiments.isEnabled('importClassroom')) {
       if (queryStringOpen === 'rosterDialog') {
@@ -70,13 +60,10 @@ class OwnedSections extends React.Component {
   }
 
   addSection = () => {
-    const { defaultCourseId, defaultScriptId } = this.props;
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
-      this.props.beginEditingNewSection(defaultCourseId, defaultScriptId);
+      this.props.beginEditingNewSection();
     } else {
-      // This is the only usage of the newSection action, and can be removed once
-      // SECTION_FLOW_2017 is finished
-      return this.props.newSection(defaultCourseId);
+      return this.props.newSection();
     }
   };
 
