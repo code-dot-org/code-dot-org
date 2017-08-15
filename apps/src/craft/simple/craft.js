@@ -610,6 +610,10 @@ Craft.executeUserCode = function () {
     if (event.eventType === EventType.WhenUsed && event.targetType === 'sheep') {
       appCodeOrgAPI.drop(null, 'wool', event.targetIdentifier);
     }
+    if (event.eventType === EventType.WhenTouched && event.targetType === 'creeper') {
+      appCodeOrgAPI.flashEntity(null, event.targetIdentifier);
+      appCodeOrgAPI.explodeEntity(null, event.targetIdentifier);
+    }
   });
 
   // Run user generated code, calling appCodeOrgAPI
