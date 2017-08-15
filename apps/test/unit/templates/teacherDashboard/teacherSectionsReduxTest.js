@@ -32,6 +32,7 @@ import reducer, {
   isRosterDialogOpen,
   oauthProvider,
   sectionCode,
+  sectionName,
   sectionProvider,
   isSectionProviderManaged,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -1293,6 +1294,17 @@ describe('teacherSectionsRedux', () => {
     it('the section code if the section is found', () => {
       store.dispatch(setSections(sections));
       expect(sectionCode(getState(), 11)).to.equal('PMTKVH');
+    });
+  });
+
+  describe('the sectionName selector', () => {
+    it('undefined if the section is not found', () => {
+      expect(sectionName(getState(), 42)).to.be.undefined;
+    });
+
+    it('the section name if the section is found', () => {
+      store.dispatch(setSections(sections));
+      expect(sectionName(getState(), 11)).to.equal('brent_section');
     });
   });
 

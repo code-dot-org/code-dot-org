@@ -620,6 +620,10 @@ export function sectionCode(state, sectionId) {
   return (getRoot(state).sections[sectionId] || {}).code;
 }
 
+export function sectionName(state, sectionId) {
+  return (getRoot(state).sections[sectionId] || {}).name;
+}
+
 export function sectionProvider(state, sectionId) {
   if (isSectionProviderManaged(state, sectionId)) {
     return oauthProvider(state);
