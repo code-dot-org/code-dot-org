@@ -27,11 +27,17 @@ describe('item', () => {
 
   describe('update', () => {
     describe('if destination is not yet set', () => {
-      before(() => {
-        // the destination-setting logic uses _.shuffle to semi-randomize the
-        // set of possible destinations. Stub that with something deterministic
-        // to make testing easier
-        sinon.stub(_, 'shuffle').callsFake(ar => ar);
+      // the destination-setting logic uses _.shuffle to semi-randomize the
+      // set of possible destinations before sorting them by score. We would
+      // instead like to make it deterministic.
+      let shuffleSpy;
+
+      beforeEach(() => {
+        shuffleSpy = sinon.stub(_, 'shuffle').callsFake(ar => ar);
+      });
+
+      afterEach(() => {
+        _.shuffle.restore();
       });
 
       let targetSprite;
@@ -51,7 +57,18 @@ describe('item', () => {
 
       it('sets an arbitrary direction on wander', () => {
         item.activity = BEHAVIOR_WANDER;
+
+        // Since in the wander case all destinations are possible and all have a
+        // score of one, whichever destination happens to be returned first will
+        // be the coordinates to which we are headed. Since North happens to be
+        // the first direction considered, North will be our final result.
         item.update();
+        expect(shuffleSpy.callCount).to.equal(1);
+
+        const firstDestination = shuffleSpy.firstCall.args[0][0];
+        expect(firstDestination.gridX).to.equal(2);
+        expect(firstDestination.gridY).to.equal(1);
+
         expect(item.dir).to.equal(Direction.NORTH);
         expect(item.destGridX).to.equal(2);
         expect(item.destGridY).to.equal(1);
