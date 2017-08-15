@@ -1013,11 +1013,16 @@ export default class LevelView {
       this.toDestroy.push(explodeAnim);
 
       if (placeBlock) {
+        if (!this.controller.levelData.isEventLevel) {
+          this.playPlayerAnimation("idle", playerPosition, facing, false);
+        }
         this.playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler);
       }
     });
     this.playScaledSpeed(explodeAnim.animations, "explode");
-    completionHandler();
+    if (this.controller.levelData.isEventLevel ^ !placeBlock) {
+      completionHandler();
+    }
   }
 
   playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler) {
