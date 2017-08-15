@@ -1,4 +1,4 @@
-import { TestResults } from '@cdo/apps/constants.js';
+import { TestResults } from '@cdo/apps/constants';
 
 const levelDef = {
   isTestLevel: true,

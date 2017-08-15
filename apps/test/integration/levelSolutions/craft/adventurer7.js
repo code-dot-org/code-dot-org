@@ -1,4 +1,6 @@
-import { TestResults } from '@cdo/apps/constants.js';
+/* global Craft */
+import sinon from 'sinon';
+import { TestResults } from '@cdo/apps/constants';
 
 const levelDef = {
   isTestLevel: true,
@@ -24,13 +26,41 @@ const levelDef = {
     }`,
 };
 
+let spy;
+
 export default {
   app: 'craft',
   skinId: 'craft',
   levelDefinition: levelDef,
   tests: [
     {
-      description: 'Craft Adventurer 7',
+      description: 'Craft Adventurer 7 fail',
+      xml: `
+        <xml>
+          <block type="when_run" deletable="false" movable="false">
+            <next>
+              <block type="craft_turn">
+                <title name="DIR">right</title>
+                <next>
+                  <block type="craft_moveForward"></block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </xml>`,
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL,
+      },
+      runBeforeClick: () => {
+        spy = sinon.spy(Craft.gameController.levelView, 'playDrownFailureAnimation');
+      },
+      customValidator: () => {
+        return spy.called;
+      },
+    },
+    {
+      description: 'Craft Adventurer 7 pass',
       xml: `
         <xml>
           <block type="when_run" deletable="false" movable="false">

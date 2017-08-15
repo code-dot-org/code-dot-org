@@ -1,7 +1,8 @@
-import { TestResults } from '@cdo/apps/constants.js';
+import { TestResults } from '@cdo/apps/constants';
 
 const levelDef = {
   isTestLevel: true,
+  specialLevelType: 'minecart',
   groundPlane: ["grass","grass","houseLeftA","grass","grass","houseRightA","grass","grass","grass","grass","grass","grass","houseBottomA","houseBottomB","houseBottomC","houseBottomD","grass","grass","grass","grass","grass","grass","grass","dirt","grass","grass","grass","grass","grass","grass","grass","grass","grass","dirt","grass","grass","grass","grass","grass","grass","grass","grass","water","dirt","water","water","grass","grass","grass","grass","grass","grass","water","dirt","water","water","water","grass","grass","grass","grass","grass","grass","dirt","grass","grass","grass","grass","grass","grass","grass","grass","grass","dirt","dirt","dirt","dirt","dirt","dirt","dirt","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass","grass"],
   groundDecorationPlane: ["tallGrass","tallGrass","","","","","","tallGrass","","","","flowerOxeeye","","","","","tallGrass","","","","","","","","","","","","tallGrass","flowerDandelion","","tallGrass","","","","","","","","","tallGrass","","","","","","tallGrass","","","","","","","","","","","","","","","","tallGrass","","","tallGrass","","","","","","","","","","","","","","","","","","","","","tallGrass","","","tallGrass","","","","","","","","","tallGrass","flowerRose"],
   actionPlane: ["","","houseLeftA","","","houseRightA","","","","","","","houseBottomA","","houseBottomC","houseBottomD","","","","","","","railsRedstoneTorch","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","treeOak","","","","","","","","","","","","","","","","","","","","","","treeBirch","","","","","","","","","","","","","","","","","","",""],
