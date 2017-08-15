@@ -25,6 +25,7 @@ let makeLevelDefinition = (width, height) => {
 
 const mockGameController = {
   levelEntity: new LevelEntity({}),
+  levelData: {},
 };
 
 describe('LevelModel', () => {
