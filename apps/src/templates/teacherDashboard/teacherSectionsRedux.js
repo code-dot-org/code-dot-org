@@ -227,12 +227,13 @@ export const cancelImportRosterFlow = () => ({type: IMPORT_ROSTER_FLOW_CANCEL});
 
 /**
  * Import the course with the given courseId from a third-party provider
- * (like Google Classroom or Clever), creating a new section or updating
- * an existing one already associated with it.
+ * (like Google Classroom or Clever), creating a new section. If the course
+ * in question has already been imported, update the existing section already
+ * associated with it.
  * @param {string} courseId
  * @return {function():Promise}
  */
-export const importRoster = courseId => (dispatch, getState) => {
+export const importOrUpdateRoster = courseId => (dispatch, getState) => {
   const state = getState();
   const provider = getRoot(state).provider;
   const importSectionUrl = importUrlByProvider[provider];

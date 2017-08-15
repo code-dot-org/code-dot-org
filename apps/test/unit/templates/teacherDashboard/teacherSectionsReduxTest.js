@@ -28,7 +28,7 @@ import reducer, {
   isEditingSection,
   beginImportRosterFlow,
   cancelImportRosterFlow,
-  importRoster,
+  importOrUpdateRoster,
   isRosterDialogOpen,
   oauthProvider,
   sectionCode,
@@ -1163,7 +1163,7 @@ describe('teacherSectionsRedux', () => {
     });
   });
 
-  describe('the importRoster action', () => {
+  describe('the importOrUpdateRoster action', () => {
     let server;
     const TEST_COURSE_ID = 'test-course-id';
 
@@ -1196,7 +1196,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
       expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID));
       expect(getState().teacherSections.classrooms).to.be.null;
 
       return expect(promise).to.be.fulfilled;
@@ -1204,7 +1204,7 @@ describe('teacherSectionsRedux', () => {
 
     it('uses one api for Google Classroom', () => {
       withGoogle();
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID));
 
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
@@ -1216,7 +1216,7 @@ describe('teacherSectionsRedux', () => {
 
     it('uses a different api for Clever', () => {
       withClever();
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID));
 
       expect(server.requests).to.have.length(1);
       expect(server.requests[0].method).to.equal('GET');
@@ -1231,7 +1231,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(isRosterDialogOpen(getState())).to.be.true;
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID));
       expect(isRosterDialogOpen(getState())).to.be.true;
 
       return expect(promise).to.be.fulfilled.then(() => {
@@ -1247,7 +1247,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(getState().teacherSections.sections).to.deep.equal({});
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID));
       return expect(promise).to.be.fulfilled.then(() => {
         expect(server.requests).to.have.length(4);
         expect(server.requests[1].method).to.equal('GET');
@@ -1276,7 +1276,7 @@ describe('teacherSectionsRedux', () => {
       store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
       expect(getState().teacherSections.sectionBeingEdited).to.be.null;
 
-      const promise = store.dispatch(importRoster(TEST_COURSE_ID));
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID));
       return expect(promise).to.be.fulfilled.then(() => {
         expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
         expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);

@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 
 describe('SyncOmniAuthSectionControl', () => {
-  let importRoster, testSyncSucceeds, testSyncFails, defaultProps;
+  let updateRoster, testSyncSucceeds, testSyncFails, defaultProps;
 
   beforeEach(() => {
     sinon.stub(SyncOmniAuthSectionControl, 'reloadPage');
@@ -27,13 +27,13 @@ describe('SyncOmniAuthSectionControl', () => {
         return promise;
       };
     });
-    importRoster = sinon.stub().returns(promise);
+    updateRoster = sinon.stub().returns(promise);
 
     defaultProps = {
       sectionId: 1111,
       sectionCode: 'G-123456',
       sectionProvider: OAuthSectionTypes.google_classroom,
-      importRoster: importRoster,
+      updateRoster: updateRoster,
     };
   });
   afterEach(() => {
@@ -82,10 +82,10 @@ describe('SyncOmniAuthSectionControl', () => {
     expect(wrapper).to.be.blank();
   });
 
-  it('calls importRoster when clicked', () => {
+  it('calls updateRoster when clicked', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl{...defaultProps}/>);
     wrapper.simulate('click');
-    expect(importRoster).to.have.been.calledOnce;
+    expect(updateRoster).to.have.been.calledOnce;
   });
 
   describe('strips the prefix from the sectionCode to generate the course ID', () => {
@@ -97,7 +97,7 @@ describe('SyncOmniAuthSectionControl', () => {
         />
       );
       wrapper.simulate('click');
-      expect(importRoster).to.have.been.calledWith("54321");
+      expect(updateRoster).to.have.been.calledWith("54321");
     });
 
     it('C-', () => {
@@ -108,7 +108,7 @@ describe('SyncOmniAuthSectionControl', () => {
         />
       );
       wrapper.simulate('click');
-      expect(importRoster).to.have.been.calledWith("2468");
+      expect(updateRoster).to.have.been.calledWith("2468");
     });
   });
 
