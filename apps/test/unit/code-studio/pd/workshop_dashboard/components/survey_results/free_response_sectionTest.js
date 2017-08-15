@@ -21,7 +21,7 @@ describe("Free Response Section", () => {
       />
     );
 
-    expect(freeResponseSection.find('.well')).to.have.length(2);
+    expect(freeResponseSection.find('Well')).to.have.length(2);
     expect(freeResponseSection.find('li')).to.have.length(4);
   });
 
@@ -43,7 +43,7 @@ describe("Free Response Section", () => {
       />
     );
 
-    expect(freeResponseSection.find('.well')).to.have.length(2);
+    expect(freeResponseSection.find('Well')).to.have.length(2);
     expect(freeResponseSection.find('ul')).to.have.length(4);
     expect(freeResponseSection.find('li')).to.have.length(12);
     expect(freeResponseSection.find('b')).to.have.length(2);
