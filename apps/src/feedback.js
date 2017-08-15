@@ -456,58 +456,43 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  /**
-   * Add an event handler to the specified button which saves the project
-   * with thumbnail to the project gallery, and optionally publishes it.
-   * @param {string} buttonSelector Selector for the button html element.
-   * @param {string} pendingText Button text while operation is pending.
-   * @param {string} finishedText Button text after operation completes.
-   * @param {boolean} shouldPublish Whether to publish. Default: false.
-   * @param {function} callback Callback function to call on success.
-   */
-  function addSaveProjectButtonHandler(buttonSelector, pendingText, shouldPublish, callback) {
-    const buttonElement = feedback.querySelector(buttonSelector);
-    if (buttonElement) {
-      dom.addClickTouchEvent(buttonElement, () => {
-        $(buttonSelector).prop('disabled', true).text(pendingText);
-        project.copy(project.getNewProjectName(), {shouldPublish})
-          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-          .then(callback);
-      });
-    }
-  }
-
   const saveButtonSelector = '#save-to-project-gallery-button';
-  addSaveProjectButtonHandler(
-    saveButtonSelector,
-    msg.saving(),
-    false,
-    () => {
-      saveButtonSelector.prop('disabled', true).text(msg.savedToGallery());
-    }
-  );
+  const saveButton = feedback.querySelector(saveButtonSelector);
+  if (saveButton) {
+    dom.addClickTouchEvent(saveButton, () => {
+      $(saveButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName())
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => {
+          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+        });
+    });
+  }
 
   // Keep the code simpler by waiting until after the project has been saved
   // before we prompt the user to confirm they want to publish it, since the
   // PublishDialog redux logic assumes the project will exist already.
 
   const publishButtonSelector = '#publish-to-project-gallery-button';
-  addSaveProjectButtonHandler(
-    publishButtonSelector,
-    msg.saving(),
-    true,
-    () => {
-      // The project was saved but not yet published, so disable the Save button.
-      $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+  const publishButton = feedback.querySelector(publishButtonSelector);
+  if (publishButton) {
+    dom.addClickTouchEvent(publishButton, () => {
+      $(publishButtonSelector).prop('disabled', true).text(msg.saving());
+      project.copy(project.getNewProjectName(), {shouldPublish: true})
+        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+        .then(() => {
+          // The project was saved but not yet published, so disable the Save button.
+          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
 
-      // Hide the current dialog since we're about to show the publish dialog
-      feedbackDialog.hideButDontContinue = true;
-      feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
+          // Hide the current dialog since we're about to show the publish dialog
+          feedbackDialog.hideButDontContinue = true;
+          feedbackDialog.hide();
+          feedbackDialog.hideButDontContinue = false;
 
-      FeedbackUtils.showConfirmPublishDialog();
-    }
-  );
+          FeedbackUtils.showConfirmPublishDialog();
+        });
+    });
+  }
 
   const saveToLegacyGalleryButton = feedback.querySelector('#save-to-legacy-gallery-button');
   if (saveToLegacyGalleryButton && options.saveToLegacyGalleryUrl) {
