@@ -7,6 +7,7 @@ var craftMsg = require('./locale');
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import GameController from '../designer/game/GameController';
 import EventType from '../designer/game/Event/EventType';
+import {convertActionPlaneEntitiesToConfig} from '../designer/game/LevelMVC/Utils';
 var dom = require('../../dom');
 var houseLevels = require('./houseLevels');
 var levelbuilderOverrides = require('./levelbuilderOverrides');
@@ -431,6 +432,8 @@ Craft.onHouseSelected = function (houseType) {
 };
 
 Craft.initializeAppLevel = function (levelConfig) {
+  convertActionPlaneEntitiesToConfig(levelConfig);
+
   var houseBlocks = JSON.parse(window.localStorage.getItem('craftHouseBlocks'));
   Craft.foldInCustomHouseBlocks(houseBlocks, levelConfig);
 
