@@ -16,7 +16,7 @@
     "test:entry": "grunt karma:entry",
     "test:interpreter": "js-interpreter-tyrant --run --diff --root ./test/interpreter --interpreter ./test/interpreter/patched-interpreter.js --progress",
     "clean": "grunt clean",
-    "build": "DEV=1 grunt build && grunt logBuildTimes",
+    "build": "DEV=1 node --max_old_space_size=4096 ./node_modules/.bin/grunt build && grunt logBuildTimes",
     "build:blockly": "DEV=1 grunt preconcat && grunt concat",
     "build:dist": "NODE_ENV=production node --max_old_space_size=4096 ./node_modules/.bin/grunt clean build && grunt logBuildTimes",
     "start": "DEV=1 grunt dev; grunt logBuildTimes",

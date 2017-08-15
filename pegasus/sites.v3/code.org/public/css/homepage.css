@@ -377,12 +377,14 @@ body.modal-open .supreme-container{
 .stats-number {
   font-weight: 900;
   text-align: center;
+  color: rgb(77, 87, 95);
 }
 
 .stats-phrase {
   font-size: 14px;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 25px;
+  color: rgb(77, 87, 95);
 }
 
 .stats-box {
@@ -390,12 +392,10 @@ body.modal-open .supreme-container{
 }
 
 .make-difference {
-  background: rgb(0, 173, 188);
-  color: rgb(255, 255, 255);
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
+  font-weight: 900;
+  color: rgb(0, 173, 188);
+  font-size: 20px;
   text-align: center;
-  margin: 20px;
+  margin-top: 20px;
   text-transform: uppercase;
 }
