@@ -1369,7 +1369,7 @@ class GameController {
       } else if (this.checkMinecartLevelEndAnimation()) {
         this.resultReported = true;
         this.levelView.playMinecartAnimation(player.position, player.facing, player.isOnBlock,
-          () => { this.endLevel(true); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
+          () => { this.handleEndState(true); }, this.levelModel.getMinecartTrack(), this.levelModel.getUnpoweredRails());
       } else if (this.checkTntAnimation()) {
         this.resultReported = true;
         this.levelView.scaleShowWholeWorld(() => {});
