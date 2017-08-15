@@ -1,4 +1,4 @@
-import { TestResults } from '@cdo/apps/constants.js';
+import { TestResults } from '@cdo/apps/constants';
 
 const levelDef = {
   isTestLevel: true,
@@ -19,7 +19,18 @@ export default {
   levelDefinition: levelDef,
   tests: [
     {
-      description: 'Craft Adventurer 1',
+      description: 'Craft Adventurer 1 fail',
+      xml: `
+        <xml>
+          <block type="when_run" deletable="false" movable="false"></block>
+        </xml>`,
+      expected: {
+        result: false,
+        testResult: TestResults.APP_SPECIFIC_FAIL,
+      },
+    },
+    {
+      description: 'Craft Adventurer 1 pass',
       xml: `
         <xml>
           <block type="when_run" deletable="false" movable="false">

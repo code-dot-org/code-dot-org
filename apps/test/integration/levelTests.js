@@ -94,7 +94,7 @@ describe('Level tests', function () {
   testUtils.setExternalGlobals();
 
   before(function (done) {
-    this.timeout(15000);
+    this.timeout(20000);
 
     // Load a bunch of droplet sources. We could potentially gate this on level.editCode,
     // but that doesn't get us a lot since everything is run in a single session now.
