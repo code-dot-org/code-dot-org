@@ -193,9 +193,7 @@ function main() {
   var app = angular.module('teacherDashboard.controllers', []);
 
   //helper function for using section-flow-2017 flag
-  const newFlow = function () {
-    return experiments.isEnabled('section-flow-2017');
-  };
+  const newFlow = () => experiments.isEnabled('section-flow-2017');
 
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
