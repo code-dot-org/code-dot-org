@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
+import * as utils from '../../utils';
 import {OAuthSectionTypes} from '../../templates/teacherDashboard/shapes';
 import {
   importOrUpdateRoster,
@@ -39,11 +40,6 @@ class SyncOmniAuthSectionControl extends React.Component {
     buttonState: READY,
   };
 
-  static reloadPage() {
-    // Extracted so we can stub it in tests
-    window.location.reload();
-  }
-
   onClick = () => {
     const {sectionCode, sectionName, updateRoster} = this.props;
     const {buttonState} = this.state;
@@ -69,7 +65,7 @@ class SyncOmniAuthSectionControl extends React.Component {
         // While we are embedded in an angular page, reloading is the easiest
         // way to pick up roster changes.  Once everything is React maybe we
         // won't need to do this.
-        SyncOmniAuthSectionControl.reloadPage();
+        utils.reload();
       })
       .catch(() => this.setState({buttonState: FAILURE}));
   };

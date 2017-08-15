@@ -1,7 +1,8 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
+import {stub} from 'sinon';
 import {expect} from '../../../util/configuredChai';
+import * as utils from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   UnconnectedSyncOmniAuthSectionControl as SyncOmniAuthSectionControl,
@@ -18,7 +19,7 @@ describe('SyncOmniAuthSectionControl', () => {
   // ensures we resolve our promise and 'close the loop' on all async operations
   // before we end the test case.
   beforeEach(() => {
-    sinon.stub(SyncOmniAuthSectionControl, 'reloadPage');
+    stub(utils, 'reload');
 
     const promise = new Promise((resolve, reject) => {
       testSyncSucceeds = () => {
@@ -32,7 +33,7 @@ describe('SyncOmniAuthSectionControl', () => {
         return promise;
       };
     });
-    updateRoster = sinon.stub().returns(promise);
+    updateRoster = stub().returns(promise);
 
     defaultProps = {
       sectionId: 1111,
@@ -45,9 +46,7 @@ describe('SyncOmniAuthSectionControl', () => {
 
   afterEach(() => {
     return (testSyncSucceeds ? testSyncSucceeds() : Promise.resolve())
-      .then(() => {
-        SyncOmniAuthSectionControl.reloadPage.restore();
-      });
+      .then(() => utils.reload.restore());
   });
 
   it('initially renders in ready state', () => {
@@ -160,7 +159,7 @@ describe('SyncOmniAuthSectionControl', () => {
     const wrapper = shallow(<SyncOmniAuthSectionControl {...defaultProps}/>);
     wrapper.simulate('click');
     return expect(testSyncSucceeds()).to.be.fulfilled.then(() => {
-      expect(SyncOmniAuthSectionControl.reloadPage).to.have.been.calledOnce;
+      expect(utils.reload).to.have.been.calledOnce;
     });
   });
 
