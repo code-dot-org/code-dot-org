@@ -91,15 +91,6 @@ describe('SectionRow', () => {
   throwOnConsoleWarnings();
 
   describe('name column', () => {
-    it('has a link to the section when not editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      const col = wrapper.find('td').at(0);
-      assert.equal(col.find('a').length, 1);
-      assert.equal(col.find('a').props().href, '#/sections/11/');
-    });
-
     it('has an input when editing', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
@@ -126,43 +117,12 @@ describe('SectionRow', () => {
   });
 
   describe('login type column', () => {
-    it('has text when not editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      const col = wrapper.find('td').at(1);
-      assert.equal(col.text(), 'word');
-    });
-
     withSectionFlow2017(() => {
       it('does not exist', () => {
         const wrapper = shallow(<SectionRow {...defaultProps}/>);
         const col = wrapper.find('td').at(1);
         expect(col.text()).not.to.equal('word');
       });
-    });
-
-    it('has text when editing provider-managed section', () => {
-      const wrapper = shallow(
-        <SectionRow
-          {...defaultProps}
-          sectionId={12}
-        />
-      );
-      const col = wrapper.find('td').at(1);
-      assert.equal(col.text(), 'google_classroom');
-    });
-
-    it('has a dropdown when editing non-provider-managed section', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(1);
-
-      assert.equal(col.find('select').length, 1);
-      assert.equal(col.find('select').props().defaultValue, 'word');
-      assert.equal(col.find('option').length, 3);
     });
   });
 
@@ -189,7 +149,6 @@ describe('SectionRow', () => {
       });
     };
 
-    tests();
     withSectionFlow2017(() => tests(1));
   });
 
@@ -229,19 +188,10 @@ describe('SectionRow', () => {
       });
     };
 
-    tests();
     withSectionFlow2017(() => tests(2));
   });
 
   describe('stageExtras column', () => {
-    it('has text when not editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      const col = wrapper.find('td').at(4);
-      assert.equal(col.text(), 'No');
-    });
-
     withSectionFlow2017(() => {
       it('does not exist', () => {
         const wrapper = shallow(<SectionRow {...defaultProps}/>);
@@ -249,27 +199,9 @@ describe('SectionRow', () => {
         expect(col.text()).not.to.equal('No');
       });
     });
-
-    it('has a checkbox when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(4);
-      assert.equal(col.find('input').length, 1);
-      assert.equal(col.find('input').props().defaultChecked, false);
-    });
   });
 
   describe('pairingAllowed column', () => {
-    it('has text when not editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      const col = wrapper.find('td').at(5);
-      assert.equal(col.text(), 'Yes');
-    });
-
     withSectionFlow2017(() => {
       it('does not exist', () => {
         const wrapper = shallow(<SectionRow {...defaultProps}/>);
@@ -277,39 +209,9 @@ describe('SectionRow', () => {
         expect(col.text()).not.to.equal('Yes');
       });
     });
-
-    it('has a checkbox when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(5);
-      assert.equal(col.find('input').length, 1);
-      assert.equal(col.find('input').props().defaultChecked, true);
-    });
   });
 
   describe('students column', () => {
-    it('has a link to manage the section students when not editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      const col = wrapper.find('td').at(6);
-      assert.equal(col.find('a').length, 1);
-      assert.equal(col.find('a').props().href, '#/sections/11/manage');
-    });
-
-    it('has a link to manage the section students when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(6);
-
-      assert.equal(col.find('a').length, 1);
-      assert.equal(col.find('a').props().href, '#/sections/11/manage');
-    });
-
     describe(`(${SECTION_FLOW_2017})`, () => {
       beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
       afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
@@ -359,7 +261,6 @@ describe('SectionRow', () => {
       });
     };
 
-    tests();
     withSectionFlow2017(() => tests(4));
   });
 
@@ -459,7 +360,6 @@ describe('SectionRow', () => {
       });
     };
 
-    tests();
     withSectionFlow2017(() => tests(5));
   });
 });
