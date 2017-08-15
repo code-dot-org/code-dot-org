@@ -131,7 +131,7 @@ class FollowersControllerTest < ActionController::TestCase
 
   test 'student_user_new errors when joining a provider_managed section' do
     sign_in @student
-    section = CleverSection.from_service('1234', @chris.id, [])
+    section = CleverSection.from_service('1234', @chris.id, [], 'Test Clever Section')
 
     assert_no_difference('Follower.count') do
       get :student_user_new, params: {section_code: section.code}

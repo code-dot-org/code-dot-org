@@ -98,6 +98,7 @@
   "setSpeed":"встановити швидкість",
   "setSpeedTooltip":"Встановлює швидкість гравця",
   "shareFlappyTwitter":"Подивіться на гру в Пурха, яку я зробив! Я написав її сам разом з @codeorg",
+  "shareFlappyTwitterDonor":"Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Поділитись своєю грою:",
   "soundRandom":"випадковий",
   "soundBounce":"відбитись",

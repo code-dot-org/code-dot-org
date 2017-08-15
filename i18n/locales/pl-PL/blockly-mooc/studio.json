@@ -669,6 +669,7 @@
   "setMapBlobs":"ustaw mapę kleksową",
   "setMapTooltip":"Zmienia mapę na scenie",
   "shareStudioTwitter":"Zapoznaj się z opowieścią, którą wykonałem. Utworzyłem ją sam z @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Udostępnij swoją opowieść:",
   "showCoordinates":"pokaż współrzędne",
   "showCoordinatesTooltip":"pokaż współrzędne bohatera na ekranie",

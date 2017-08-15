@@ -98,6 +98,7 @@
   "setSpeed": "socraigh an luas",
   "setSpeedTooltip": "Socraíonn seo luas an leibhéil",
   "shareFlappyTwitter": "Féach an cluiche Flappy a rinne mé! Scríobh mé ar @codeorg é",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Comhroinn do chluiche:",
   "soundRandom": "randamach",
   "soundBounce": "preabadh",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Cuireann seo na gníomhartha ceangailte i bhfeidhm nuair a ghlanann an t-imreoir constaic.",
   "whenRunButtonClick": "nuair a thosaíonn an cluiche",
   "whenRunButtonClickTooltip": "Cuireann seo na gníomhartha ceangailte i bhfeidhm nuair a thosaíonn an cluiche.",
-  "yes": "Tá",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Tá"
 }

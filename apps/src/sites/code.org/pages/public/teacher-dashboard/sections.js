@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import queryString from 'query-string';
 import $ from 'jquery';
+import queryString from 'query-string';
 import { getStore, registerReducers } from '@cdo/apps/redux';
 import teacherSections, {
   setValidLoginTypes,
@@ -10,8 +10,11 @@ import teacherSections, {
   setStudioUrl,
   setOAuthProvider,
   asyncLoadSectionData,
+  newSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
+import experiments, { SECTION_FLOW_2017 } from '@cdo/apps/util/experiments';
+import logToCloud from '@cdo/apps/logToCloud';
 
 /**
  * Render our sections table using React
@@ -23,6 +26,12 @@ import SectionsPage from '@cdo/apps/templates/teacherDashboard/SectionsPage';
  * @param {object[]} data.valid_scripts
  */
 export function renderSectionsPage(data) {
+  if (experiments.isEnabled(SECTION_FLOW_2017)) {
+    logToCloud.addPageAction(logToCloud.PageAction.PegasusSectionsRedirect, {});
+    window.location = data.studiourlprefix + '/home';
+    return;
+  }
+
   const element = document.getElementById('sections-page');
   registerReducers({teacherSections});
   const store = getStore();
@@ -33,24 +42,20 @@ export function renderSectionsPage(data) {
   store.dispatch(setOAuthProvider(data.provider));
   store.dispatch(asyncLoadSectionData());
 
+  // Note: this can go away once SECTION_FLOW_2017 is permanent, and we no longer
+  // have teachers editing sections here
   const query = queryString.parse(window.location.search);
-  let defaultCourseId;
-  let defaultScriptId;
+  let courseId;
   if (query.courseId) {
-    defaultCourseId = parseInt(query.courseId, 10);
-  }
-  if (query.scriptId) {
-    defaultScriptId = parseInt(query.scriptId, 10);
+    courseId = parseInt(query.courseId, 10);
+    store.dispatch(newSection(courseId));
   }
 
   $("#sections-page-angular").hide();
 
   ReactDOM.render(
     <Provider store={store}>
-      <SectionsPage
-        defaultCourseId={defaultCourseId}
-        defaultScriptId={defaultScriptId}
-      />
+      <SectionsPage/>
     </Provider>,
     element
   );

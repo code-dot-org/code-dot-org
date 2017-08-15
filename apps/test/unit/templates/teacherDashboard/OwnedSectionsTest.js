@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/configuredChai';
 import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import i18n from '@cdo/locale';
 import {
@@ -81,22 +80,6 @@ describe('OwnedSections', () => {
     );
   });
 
-  it('provides default course id when creating new section', () => {
-    const newSectionFunction = sinon.spy();
-    const wrapper = shallow(
-      <OwnedSections
-        {...defaultProps}
-        defaultCourseId={30}
-        defaultScriptId={112}
-        newSection={newSectionFunction}
-      />
-    );
-
-    const newSectionButton = wrapper.find('Button').first();
-    newSectionButton.simulate('click');
-    assert.deepEqual(newSectionFunction.firstCall.args, [30]);
-  });
-
   describe(`(${SECTION_FLOW_2017})`, () => {
     beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
     afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
@@ -140,22 +123,6 @@ describe('OwnedSections', () => {
           <EditSectionDialog/>
         </div>
       );
-    });
-
-    it('provides default courseId and scriptId when creating new section', () => {
-      const newSectionFunction = sinon.spy();
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          defaultCourseId={30}
-          defaultScriptId={112}
-          beginEditingNewSection={newSectionFunction}
-        />
-      );
-
-      const newSectionButton = wrapper.find('Button').first();
-      newSectionButton.simulate('click');
-      assert.deepEqual(newSectionFunction.firstCall.args, [30, 112]);
     });
   });
 });

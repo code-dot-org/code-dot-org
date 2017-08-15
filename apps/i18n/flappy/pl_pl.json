@@ -98,6 +98,7 @@
   "setSpeed": "ustaw prędkości",
   "setSpeedTooltip": "Ustawia prędkość poziomu",
   "shareFlappyTwitter": "Sprawdź grę Flappy, którą wykonałem. Napisałem ją samodzielnie korzystając z @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Udostępnij swoją grę:",
   "soundRandom": "losowy",
   "soundBounce": "odbicie",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Wykonaj czynności poniżej, kiedy Flappy wejdzie do przeszkody.",
   "whenRunButtonClick": "kiedy gra się zaczyna",
   "whenRunButtonClickTooltip": "Wykonaj czynności poniżej, kiedy gra się zaczyna.",
-  "yes": "Tak",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Tak"
 }

@@ -56,6 +56,9 @@ sl:
   puzzle: "Uganka"
   trophies: "Trofeje"
   courses: 'Predavanja'
+  courses_page:
+    title_student: "Learn on Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Dejavnost brez prijave'
   of: "od"
   more: "VEČ"
@@ -249,7 +252,9 @@ sl:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Domov"
+      my_dashboard: "My Dashboard"
       courses: "Predavanja"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

@@ -64,6 +64,9 @@
   puzzle: Quebracabeza
   trophies: Trofeos
   courses: Cursos
+  courses_page:
+    title_student: Aprende no Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Actividade off-line
   of: de
   more: MÁIS
@@ -288,7 +291,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: Cursos
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support

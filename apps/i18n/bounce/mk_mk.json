@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "Проверете  ја Отскокнувачката игра која јас ја напрвив . Јас лично ја  напишав  со @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Споделија твојата игра:",
   "turnLeft": "turn left",
   "turnRight": "turn right",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Извршување на активностите под кога топката се судира со лопатката.",
   "whileMsg": "Додека",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Yes"
 }

@@ -98,6 +98,7 @@
   "setSpeed": "задай скорост",
   "setSpeedTooltip": "Определя скоростта на играта.",
   "shareFlappyTwitter": "Вижте Flappy играта, която създадох. Написах я сам с @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Споделете играта си:",
   "soundRandom": "случаен",
   "soundBounce": "скача",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Когато героят премине препятсвие, компютърът ще изпълни изброените под този блок действия.",
   "whenRunButtonClick": "при стартиране на играта",
   "whenRunButtonClickTooltip": "При стартиране на нова игра, компютърът ще изпълни действията изброени под този блок.",
-  "yes": "Да",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Да"
 }

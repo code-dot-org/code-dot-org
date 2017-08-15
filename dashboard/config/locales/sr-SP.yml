@@ -63,6 +63,9 @@
   puzzle: "Пузла"
   trophies: "трофеји"
   courses: "курсеви"
+  courses_page:
+    title_student: "Научите о Code Studio-ју"
+    title_teacher: Teach with Code Studio
   unplugged_activity: "Активност ван мреже"
   of: "од"
   more: "ВИШЕ"
@@ -286,7 +289,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: "курсеви"
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support

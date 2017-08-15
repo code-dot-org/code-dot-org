@@ -122,6 +122,7 @@
   "setTeam":"Set team {team}",
   "setTeamRandom":"Set team random",
   "shareBounceTwitter":"Mira el Joc de rebot que he fet. L'he escrit jo mateix amb @codeorg",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Comparteix el teu joc:",
   "turnLeft":"gira a l'esquerra",
   "turnRight":"gira a la dreta",

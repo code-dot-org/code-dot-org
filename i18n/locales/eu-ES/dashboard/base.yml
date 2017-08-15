@@ -56,6 +56,9 @@ eu:
   puzzle: "Puzzlea"
   trophies: "garaikurrak"
   courses: 'Mailak'
+  courses_page:
+    title_student: "Ezagutu Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Lineaz kanpoko ekintza'
   of: "-tik"
   more: "GEHIAGO"
@@ -249,7 +252,9 @@ eu:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Mailak"
+      course_catalog: "Course Catalog"
       project_gallery: "Proiektuen galeria"
       sections: "Sections"
       help_support: "Help and support"

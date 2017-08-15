@@ -122,6 +122,7 @@
   "setTeam": "அணியை பொருத்து {team}",
   "setTeamRandom": "ஏதாவது ஒரு அணி பொருத்து",
   "shareBounceTwitter": "நான் செய்த பந்து துள்ளல் விளையாட்டை பார்க்கவும். நானே அதை @codeorg கொண்டு எழுதினேன்",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Share your game:",
   "turnLeft": "இடதுபுறம் திரும்பவும்",
   "turnRight": "வலதுபுறம் திரும்பவும்",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "பந்து சுவரில் மோதும் பொழுது பின்னே உள்ள செயல்களை இயக்கு.",
   "whileMsg": "எப்பொழுது",
   "whileTooltip": "உள்ளடக்கப்பட்ட செயல்களை மீண்டும் செய், புள்ளியை அடையும் வரை.",
-  "yes": "ஆம்",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "ஆம்"
 }

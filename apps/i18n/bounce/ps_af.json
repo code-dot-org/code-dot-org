@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "د توپ وهلو لوبه وګورۍ. چي ما خپله په code.org@ کي جوړه کړي",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Share your game:",
   "turnLeft": "turn left",
   "turnRight": "turn right",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "لاندنۍ کارونه وکړي کله چي توپ په دیوال نښلي.",
   "whileMsg": "کله چي",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "Yes",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Yes"
 }
