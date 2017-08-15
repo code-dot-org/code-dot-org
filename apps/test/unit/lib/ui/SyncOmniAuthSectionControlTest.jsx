@@ -32,6 +32,7 @@ describe('SyncOmniAuthSectionControl', () => {
     defaultProps = {
       sectionId: 1111,
       sectionCode: 'G-123456',
+      sectionName: 'Test Google Classroom Section',
       sectionProvider: OAuthSectionTypes.google_classroom,
       updateRoster: updateRoster,
     };

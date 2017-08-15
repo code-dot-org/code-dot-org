@@ -5,7 +5,8 @@ import {OAuthSectionTypes} from '../../templates/teacherDashboard/shapes';
 import {
   importOrUpdateRoster,
   sectionCode,
-  sectionProvider
+  sectionProvider,
+  sectionName,
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import Button, {ButtonColor, ButtonSize} from '../../templates/Button';
 
@@ -29,6 +30,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     sectionId: PropTypes.number.isRequired,
     // Provided by Redux
     sectionCode: PropTypes.string,
+    sectionName: PropTypes.string,
     sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
     updateRoster: PropTypes.func.isRequired,
   };
@@ -43,7 +45,7 @@ class SyncOmniAuthSectionControl extends React.Component {
   }
 
   onClick = () => {
-    const {sectionCode, updateRoster} = this.props;
+    const {sectionCode, sectionName, updateRoster} = this.props;
     const {buttonState} = this.state;
     if ([IN_PROGRESS, SUCCESS].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
@@ -61,7 +63,7 @@ class SyncOmniAuthSectionControl extends React.Component {
     this.setState({buttonState: IN_PROGRESS});
     // Section code is the course ID, without the G- or C- prefix.
     const courseId = sectionCode.replace(/^[GC]-/, '');
-    updateRoster(courseId)
+    updateRoster(courseId, sectionName)
       .then(() => {
         this.setState({buttonState: SUCCESS});
         // While we are embedded in an angular page, reloading is the easiest
@@ -93,6 +95,7 @@ class SyncOmniAuthSectionControl extends React.Component {
 export const UnconnectedSyncOmniAuthSectionControl = SyncOmniAuthSectionControl;
 export default connect((state, props) => ({
   sectionCode: sectionCode(state, props.sectionId),
+  sectionName: sectionName(state, props.sectionId),
   sectionProvider: sectionProvider(state, props.sectionId),
 }), {
   updateRoster: importOrUpdateRoster,
