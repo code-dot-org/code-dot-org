@@ -65,6 +65,9 @@
   puzzle: Puzzle
   trophies: trofeus
   courses: cursos
+  courses_page:
+    title_student: Aprendre sobre Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Activitat sense connexió
   of: de
   more: MÉS
@@ -293,7 +296,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: cursos
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support

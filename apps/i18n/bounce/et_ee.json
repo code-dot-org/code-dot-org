@@ -122,6 +122,7 @@
   "setTeam": "Määra võistkond {team}",
   "setTeamRandom": "Määra juhuslik võistkond",
   "shareBounceTwitter": "Vaata mu Põrgatamismängu. Ma tegin selle ise @codeorg abil",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Jaga oma mängu:",
   "turnLeft": "pööra vasakule",
   "turnRight": "pööra paremale",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Täida allolevad käsud, kui pall läheb vastu seina.",
   "whileMsg": "tingimusel",
   "whileTooltip": "Korrake lisatud tegevusi kuni lõpppunkt on saavutatud.",
-  "yes": "Jah",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Jah"
 }

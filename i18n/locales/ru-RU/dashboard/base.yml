@@ -56,6 +56,9 @@ ru:
   puzzle: "Головоломка"
   trophies: "трофеи"
   courses: 'курсы'
+  courses_page:
+    title_student: "Учиться в студии кода"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Урок без компьютера'
   of: "из"
   more: "ЕЩЁ"
@@ -249,7 +252,9 @@ ru:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "На главную"
+      my_dashboard: "My Dashboard"
       courses: "курсы"
+      course_catalog: "Course Catalog"
       project_gallery: "Галерея проектов"
       sections: "Секции"
       help_support: "Помощь и поддержка"

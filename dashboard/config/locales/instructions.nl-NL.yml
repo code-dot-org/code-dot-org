@@ -7667,6 +7667,10 @@
       courseC_collector_prog_challenge2_instruction: |-
         There are 20 pieces of treasure
         to be found. Collect at least half to finish this challenge!
+      courseC_flappy_embed_events_instruction: |-
+        This is an example of a finished
+        Flappy game! Play it and see how far you can go. Think about what kind of
+        events you might use in this game.
       courseC_flappy_events1_instruction: |-
         Attach the `flap normal amount` block
         to the `when click` event, then press "Run".    Click or tap on the play
@@ -7827,6 +7831,12 @@
         Sometimes there is more than
         one way to solve the same problem. Sometimes it's faster to go backwards
         than it is to go forwards!
+      courseC_playLab_embedded_instruction: |-
+        Here's a game for you to play! To win,
+        get the penguin to run into the octopus. Use your arrow keys to move the penguin
+        around.\r
+        \r
+        Once you are done, you will learn how to make this game!
       courseC_puppy_loops10_instruction: You are doing great! Keep it up!
       courseC_puppy_loops11_instruction: |-
         You are almost there! This time, choose
@@ -7917,6 +7927,8 @@
       courseD_artist_binary_challenge3_instruction: |-
         Are you persistent enough to
         restore this logo back to normal?
+      courseD_artist_embed_frozen_instruction: Press Run to see a snowflake design!
+      courseD_artist_embed_frozen2_instruction: Press Run to see a snowflake design.
       courseD_artist_functions10_instruction: |-
         This time, use lines of 8 hexagons
         with 25 pixel sides.
@@ -8133,6 +8145,7 @@
         Let's hunt for treasure
         - using loops! Help the collector reach at least two piles of treasure using
         only the blocks in your toolbox.
+      courseD_bounce_embedded_instruction: Write Instructions Here
       courseD_bounce_events1_instruction: |-
         Attach a block to the "when left arrow"
         block and press "Run" to move the player to the flag.
@@ -8464,6 +8477,13 @@
       courseD_playLab_condFP_instruction: |-
         Now, build your own game to show off to
         your friends!
+      courseD_playLab_embedded_instruction: |-
+        Move Pegleg the Pirate with the arrow
+        keys. Get to the dragon to score points, but avoid the ninja! Standing below
+        the line of octopuses will make the ninja stop chasing you, but beware! The
+        longer you stay there, the more points you lose. \r
+        \r
+        Get 5 points to win!
       courseE_artist_concept1_instruction: 'Recreate this image. '
       courseE_artist_concept4_instruction: |-
         Recreate this drawing using 13 blocks
@@ -8475,6 +8495,11 @@
       courseE_artist_concept_challenge2_instruction: |-
         Create five pinwheel designs
         using the code below.
+      courseE_artist_embed_functions8_instruction: |-
+        Look at this level carefully.
+        What kind of functions do you see a program needing in order to create a design
+        like this. You'll soon make this on your own, so come back here if you need
+        help.
       courseE_artist_functions1_instruction: |-
         Help the zombie draw glasses using
         squares with sides of 100 pixels.  \r
@@ -8745,6 +8770,10 @@
         and `lose game` functions to make the game work the way it should. \r
         Click
         the hints for ideas!
+      courseE_playLab_embedded_instruction: |-
+        This is an example game you can play
+        around with. Move the dog with your arrow keys. When the dog touches one of
+        the cats, he scores a point! Score 5 points to win!
       courseE_playLab_exampleProject2_instruction: |-
         Here's all of your code to choose
         a card - try adding some other fun features!
@@ -8810,6 +8839,12 @@
       courseF_IceAge_template_instruction: |-
         Write the code to help Scrat get all
         of the acorns!
+      courseF_artist_embed_for7_instruction: |-
+        Press Run to see a program in action!
+        This one uses for loops.
+      courseF_artist_embed_variables9_instruction: |-
+        Press Run to see this program
+        in action!
       courseF_artist_for1_instruction: |-
         Experiment with the `for` loop and play with
         the `counter` variable.
@@ -9111,20 +9146,12 @@
       courseF_maze_predict1_instruction: |-
         This code includes a new block. What do
         you think would happen if you press the "Run" block?
-      courseF_maze_ramp1_instruction: |-
-        For this puzzle, connect all of the blocks
-        from the workspace together below the `when run` event and click "Run" to
-        watch it go!
       courseF_maze_ramp13_instruction: |-
         Time for another Angry Birds puzzle to pull
         it all together!
       courseF_maze_ramp15_instruction: |-
         Use what you've learned to get the bird
         to the pig!
-      courseF_maze_ramp2_instruction: |-
-        Drag a `repeat` block out of the toolbox and
-        attach it to the `when run` event.   Place the `move forward` block inside
-        to finish your code.
       courseF_maze_ramp4_instruction: Avoid TNT or feathers will fly!
       courseF_maze_ramp5_instruction: Avoid the TNT.
       courseF_maze_ramp6_instruction: |-

@@ -122,6 +122,7 @@
   "setTeam": "Θέσε ομάδα {team}",
   "setTeamRandom": "Θέσε τυχαία ομάδα",
   "shareBounceTwitter": "Κοιτάξτε το παιχνίδι Αναπήδησης που έφτιαξα. Το έγραψα εγώ με το @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Μοιράσου το παιχνίδι σου:",
   "turnLeft": "στρίψε αριστερά",
   "turnRight": "στρίψε δεξιά",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Εκτέλεσε τις παρακάτω ενέργειες όταν η μπάλα συγκρουσθεί με έναν τοίχο.",
   "whileMsg": "όσο",
   "whileTooltip": "Επανάλαβε τις εσωτερικές ενέργειες μέχρι το τελικό σημείο.",
-  "yes": "Ναι",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Ναι"
 }

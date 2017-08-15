@@ -26,7 +26,7 @@
 #
 
 class CleverSection < OmniAuthSection
-  def self.from_service(course_id, owner_id, student_list)
+  def self.from_service(course_id, owner_id, student_list, section_name)
     code = "C-#{course_id}"
 
     students = student_list.map do |student|
@@ -46,6 +46,7 @@ class CleverSection < OmniAuthSection
       type: Section::LOGIN_TYPE_CLEVER,
       owner_id: owner_id,
       students: students,
+      section_name: section_name,
     )
   end
 end

@@ -122,6 +122,7 @@
   "setTeam":"Set team {team}",
   "setTeamRandom":"सेट टीम यादृच्छिक",
   "shareBounceTwitter":"मेरा बनाया गया उछाल का खेल देखे।मैने खुद @codeorg से लिखा है",
+  "shareBounceTwitterDonor":"Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Share your game:",
   "turnLeft":"बाएँ मुड़ें",
   "turnRight":"दाएँ मुड़ें",
