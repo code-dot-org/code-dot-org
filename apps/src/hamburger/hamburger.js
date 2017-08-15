@@ -9,6 +9,7 @@ export const initHamburger = function () {
     //Temporary fix until tab can be completely deleted
     if (experiments.isEnabled('section-flow-2017')) {
       $('#header-teacher-sections').remove();
+      $('#hamburger-teacher-sections').parent().parent().remove();
     }
 
     $('#hamburger-icon').click(function (e) {
