@@ -1,5 +1,6 @@
 import React from 'react';
 import QuestionAveragesTable from './question_averages_table';
+import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
 
 export default storybook => {
   const questions = [
@@ -9,6 +10,7 @@ export default storybook => {
 
   storybook
     .storiesOf('Question Averages Section', module)
+    .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
         name: 'Table for a single facilitator',

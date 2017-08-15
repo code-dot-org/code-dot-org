@@ -1,9 +1,11 @@
 import React from 'react';
 import FreeResponseSection from './free_response_section';
+import reactBootstrapStoryDecorator from '../../../reactBootstrapStoryDecorator';
 
 export default storybook => {
   storybook
     .storiesOf('FreeResponseSection', module)
+    .addDecorator(reactBootstrapStoryDecorator)
     .addStoryTable([
       {
         name: 'Responses for a single facilitator',
