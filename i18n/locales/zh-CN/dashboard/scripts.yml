@@ -950,11 +950,11 @@ zh-CN:
           description_short: Academic Year Support - Semester 1
           stages:
             Decode and Share:
-              name: Decode and Share
+              name: 解码与分享
             Mystery Model:
               name: 神秘的模型
             Welcome Back!:
-              name: Welcome Back!
+              name: 欢迎回来！
         Testing:
           title: Testing
           description: Testing
@@ -980,7 +980,7 @@ zh-CN:
             Cracking the Code:
               name: Cracking the Code
             DNS in the Real World:
-              name: DNS in the Real World
+              name: 真实世界中的域名解析服务（DNS）
             Encryption Algorithms:
               name: Keys and Passwords
             HTTP and Abstraction:
@@ -1492,7 +1492,7 @@ zh-CN:
             The TLO:
               name: The TLO
             Welcome Back!:
-              name: Welcome Back!
+              name: 欢迎回来！
         frequency_analysis:
           title: Frequency Analysis Widget
           description: Use the Frequency Analysis Widget to analyze letter frequencies in an input text compared to expected frequencies for standard English. Use that comparison to explore cracking Shift and Substitution Ciphers.
@@ -4277,7 +4277,7 @@ zh-CN:
           description: ''
           stages:
             Welcome Back!:
-              name: Welcome Back!
+              name: 欢迎回来！
             The TLO:
               name: The TLO
             Prep With Your Modules:
@@ -5972,6 +5972,10 @@ zh-CN:
               name: new stage
             test satge:
               name: test satge
+            CSP pre survey Test:
+              name: CSP pre survey Test
+            CSD pre survey test:
+              name: CSD pre survey test
           title: ''
           description_audience: ''
           description_short: ''

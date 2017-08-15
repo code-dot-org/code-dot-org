@@ -122,6 +122,7 @@
   "setTeam": "Set team {team}",
   "setTeamRandom": "Set team random",
   "shareBounceTwitter": "میری بنای ھوی Bounce گیم چیکھیے۔ میں نے اسے کھد لکھا ھے @codeorg کی مدد سے۔",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Share your game:",
   "turnLeft": "بائیں طرف مڑیں",
   "turnRight": "دائیں طرف مڑیں",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "جب ایک دیوار کے ساتھ ایک گیند ٹکرائے مندرجہ ذیل افعال سرانجام دیں",
   "whileMsg": "جب تک",
   "whileTooltip": "Repeat the enclosed actions until finish point is reached.",
-  "yes": "جی",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "جی"
 }

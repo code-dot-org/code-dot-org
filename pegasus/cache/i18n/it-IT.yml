@@ -1163,6 +1163,11 @@
   carousel_heading_webpages: Impara a costruire pagine web
   carousel_heading_robots: Impara a programmare giocando con un robot
   carousel_heading_ide: Piattaforme didattiche popolari tra gli insegnanti
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: Note per gli insegnanti
   teach_led_lesson_plans: Piani di attività "Gestite dagli Insegnanti" per l'Ora del
     Codice
@@ -1174,6 +1179,8 @@
   more_resources_educators: Ulteriori risorse per insegnanti ed educatori in generale
   beyond_submission: Desideri inviarci un corso da svolgere "Dopo l'Ora del Codice"?
     Leggi i criteri e il modulo di invio.
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: partecipanti
   teachers_notes: Note per gli insegnanti
   teachers_notes_hoc: 'Insegnanti: leggete qui gli avvisi per gli educatori'
@@ -2067,7 +2074,9 @@
   playlab_shortcode: inizia
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: Corsi
+  header_course_catalog: Course Catalog
   header_project_gallery: Progetti
   header_sections: Classi
   header_professional_learning: Professional learning
@@ -2108,13 +2117,4 @@
   user_header_settings: Il mio account
   user_header_logout: Esci
   user_header_signin: Accedi
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

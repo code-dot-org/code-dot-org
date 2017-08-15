@@ -1091,6 +1091,11 @@
   carousel_heading_webpages: "ვებ-გვერდების შექმნის სწავლა"
   carousel_heading_robots: "პროგრამირების სწავლა რობოტებთან ერთად"
   carousel_heading_ide: "მასწავლებლებს შორის პოპულარული პლატფორმები"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "მასწავლებლის ჩანაწერები"
   teach_led_lesson_plans: "კოდის ერთი საათის გაკვეთილების გეგმები მასწავლებლებისთვის"
   learn_footer_all_tutorials: ნახეთ <a href="https://code.org/educate/allhourofcode">
@@ -1100,6 +1105,8 @@
   more_resources_educators: "მეტი რესურსი მასწავლებლებისთვის"
   beyond_submission: "გინდათ კოდის ერთი საათის შემდგომი ტუტორიალის გამოგზავნა? ნახეთ
     კრიტერიუმები და გაგზავნის ფორმა."
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "მონაწილეები"
   teachers_notes: "მასწავლებლის ჩანაწერები"
   teachers_notes_hoc: "მასწავლებლებო: გაეცანით მნიშვნელოვან მინიშნებებს აქ"
@@ -1934,7 +1941,9 @@
   playlab_shortcode: "თამაში"
   artist_shortcode: art
   header_home: Home
+  header_my_dashboard: My Dashboard
   header_courses: "კურსები"
+  header_course_catalog: Course Catalog
   header_project_gallery: Project Gallery
   header_sections: Sections
   header_professional_learning: Professional Learning
@@ -1975,13 +1984,4 @@
   user_header_settings: "ანგარიშის პარამეტრები"
   user_header_logout: "გასვლა"
   user_header_signin: "შესვლა"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

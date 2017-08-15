@@ -98,6 +98,7 @@
   "setSpeed": "жылдамдықты орнату",
   "setSpeedTooltip": "Деңгей жылдамдығын орнату",
   "shareFlappyTwitter": "Мен жасаған Flappy ойынын ойнап көріңіз. Мен бұны @codeorg-та жасадым",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Ойыныңызбен бөлісіңіз:",
   "soundRandom": "кездейсоқ",
   "soundBounce": "кері серпіліс",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Flappy кедергіге арасына кірген кезде төмендегі іс-әрекеттерді орындаңыз.",
   "whenRunButtonClick": "ойын басталғанда",
   "whenRunButtonClickTooltip": "Ойын басталғанда, төмендегі іс-әрекеттерді орындаңыз.",
-  "yes": "Иә",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Иә"
 }

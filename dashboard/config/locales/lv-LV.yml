@@ -64,6 +64,9 @@
   puzzle: Puzle
   trophies: Trofejas
   courses: Kursi
+  courses_page:
+    title_student: Mācies Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Atvienota aktivitāte
   of: 'no'
   more: VAIRĀK
@@ -286,7 +289,9 @@
         gamelab: Make a Game Lab project
         weblab: Make a Web Lab (beta) project
       home: Home
+      my_dashboard: My Dashboard
       courses: Kursi
+      course_catalog: Course Catalog
       project_gallery: Project Gallery
       sections: Sections
       help_support: Help and support

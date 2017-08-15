@@ -122,6 +122,7 @@
   "setTeam": "Team {team} instellen",
   "setTeamRandom": "Willekeurig team instellen",
   "shareBounceTwitter": "Speel hier het Bounce-spel dat ik zelf heb gemaakt. Ik maakte het met @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Deel je spel met anderen:",
   "turnLeft": "Draai linksom",
   "turnRight": "Draai rechtsom",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Voer de actie hieronder uit wanneer een bal botst met een muur.",
   "whileMsg": "terwijl",
   "whileTooltip": "Herhaal de acties totdat je de finish hebt bereikt.",
-  "yes": "Ja",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Ja"
 }

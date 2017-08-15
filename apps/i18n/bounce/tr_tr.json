@@ -122,6 +122,7 @@
   "setTeam": "Takım seçimi{team}",
   "setTeamRandom": "Rastgele takım seçimi",
   "shareBounceTwitter": "Yaptığım Zıplama oyununa bir göz atın. Bunu @codeorg ile kendim yazdım",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Oyununu paylaş:",
   "turnLeft": "sola dön",
   "turnRight": "sağa dön",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Top duvarla çarpıştığında aşağıdaki işlemleri yürüt.",
   "whileMsg": "sürece",
   "whileTooltip": "Bitiş noktasına ulaşana kadar blok içindeki işlemleri tekrarla.",
-  "yes": "Evet",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Evet"
 }

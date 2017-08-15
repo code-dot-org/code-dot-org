@@ -56,6 +56,9 @@ da:
   puzzle: "Opgave"
   trophies: "trofæer"
   courses: 'kurser'
+  courses_page:
+    title_student: "Lære om Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Unplugged aktivitet'
   of: "af"
   more: "MERE"
@@ -249,7 +252,9 @@ da:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Hjem"
+      my_dashboard: "My Dashboard"
       courses: "kurser"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

@@ -3,10 +3,9 @@
     callouts:
       2-3 Artist 1 new_callout: []
       2-3 Artist Debugging 1_callout:
-        2-3_Artist_Debugging_1_a: |-
-          https://studio.code.org/s/course2/stage/11/puzzle/1
-
-          Negli esercizi dell'Artista non c'è il bottone "Fai un passo", ma puoi spostare questo cursore per scegliere la velocità di esecuzione del programma.
+        2-3_Artist_Debugging_1_a: Negli esercizi dell'Artista non c'è il bottone "Fai
+          un passo", ma puoi spostare questo cursore per scegliere la velocità di
+          esecuzione del programma.
       2-3 Bee Conditionals 5_callout:
         Bee_Cond_5_1a: Purple flowers can have either 1 or 0 nectar...but you won't
           know until you run the code!
@@ -386,8 +385,10 @@
       Course 4 Maze 4_callout:
         repeat: Inserisci i blocchi all'interno del ciclo per ripetere le istruzioni
       Course 4 Play Lab Params 2_callout:
-        Course_4 _Play_Lab_Params_2_1: Click "edit" to update this function so that
-          it uses the height parameter.
+        Course_4 _Play_Lab_Params_2_1: |-
+          https://studio.code.org/s/course4/stage/15/puzzle/2
+
+          Clicca su "modifica" per completare questa funzione in modo che possa usare il parametro height.
       Course 4 Play Lab Params 3_callout:
         edit_function: Clicca qui per modificare la tua funzione.
       Course 4 Play Lab Params 5_callout: []
@@ -516,8 +517,10 @@
       Modular Arithmetic_callout: []
       NEW Course 4 Artist Functions 10_callout: []
       NEW Course 4 Artist Functions 3_callout:
-        NEW_Course_4_Artist_Functions_3_1: Click here to edit the new function so
-          that it creates a square.
+        NEW_Course_4_Artist_Functions_3_1: |-
+          https://studio.code.org/s/course4/stage/12/puzzle/3
+
+          Clicca qui per creare un nuova funzione che costruisca un quadrato.
       NEW Course 4 Artist Functions 5_callout:
         edit_function: Clicca qui per modificare la tua funzione.
         function_editor_draw_square: Questa è la definizione della tua funzione. Questi

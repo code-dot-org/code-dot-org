@@ -122,6 +122,7 @@
   "setTeam": "Thiết lập nhóm {team}",
   "setTeamRandom": "Thiết lập nhóm ngẫu nhiên",
   "shareBounceTwitter": "Hãy xem game \"tưng bóng\" mà tôi đã làm nè. Tôi đã tự lập trình nó @codeorg",
+  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Chia sẻ trò chơi của bạn:",
   "turnLeft": "rẽ trái",
   "turnRight": "rẽ phải",
@@ -149,6 +150,5 @@
   "whenWallCollidedTooltip": "Thực hiện các lệnh dưới đây khi một quả bóng va chạm với một bức tường.",
   "whileMsg": "Lặp khi",
   "whileTooltip": "Lặp lại các hành động trong câu lệnh cho đến khi có kết quả.",
-  "yes": "Đồng ý",
-  "shareBounceTwitterDonor": "Check out the Bounce game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Đồng ý"
 }

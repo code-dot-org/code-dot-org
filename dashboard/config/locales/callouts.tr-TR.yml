@@ -1004,7 +1004,8 @@
         courseE_playLab_scaffold3_1: Bir sonraki seviyeye ulaşmak için oyuncuyu bayrağa
           götür.
       courseF_IceAge_1_callout:
-        playlab_drag_say_a: Drag the `actor 1 say` block here and type "Hello!"
+        playlab_drag_say_a: '''Aktör 1 söyle'' bloğunu buraya sürükle ve "Merhaba!"
+          yaz'
       courseF_IceAge_10_callout: []
       courseF_IceAge_11_callout: []
       courseF_IceAge_2_callout:
@@ -1020,7 +1021,7 @@
       courseF_IceAge_8_callout:
         playlab_add_score: ''
       courseF_IceAge_9_callout:
-        playlab_add_blocks_1: Add blocks here
+        playlab_add_blocks_1: Blokları buraya ekle
       courseF_IceAge_template_callout:
         arrows_move_actor: ''
       courseF_artist_embed_variables9_callout: []

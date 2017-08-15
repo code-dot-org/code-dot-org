@@ -669,6 +669,7 @@
   "setMapBlobs":"задать пузырьковую карту",
   "setMapTooltip":"Изменяет карту на сцене",
   "shareStudioTwitter":"Оцени историю, которую я создал. Я написал ее сам с помощью @codeorg",
+  "shareStudioTwitterDonor":"Check out the story I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame":"Поделиться своей игрой:",
   "showCoordinates":"показать координаты",
   "showCoordinatesTooltip":"показать на экране координаты главного героя",
