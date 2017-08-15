@@ -32,10 +32,20 @@ export default class AssetLoader {
       },
       playerSteve: {
         type: 'atlasJSON',
+        pngPath: `${this.assetRoot}images/Steve1013.png`,
+        jsonPath: `${this.assetRoot}images/Steve1013.json`
+      },
+      playerAlex: {
+        type: 'atlasJSON',
+        pngPath: `${this.assetRoot}images/Alex1013.png`,
+        jsonPath: `${this.assetRoot}images/Alex1013.json`
+      },
+      playerSteveEvents: {
+        type: 'atlasJSON',
         pngPath: `${this.assetRoot}images/Steve_2016.png`,
         jsonPath: `${this.assetRoot}images/Steve_2016.json`
       },
-      playerAlex: {
+      playerAlexEvents: {
         type: 'atlasJSON',
         pngPath: `${this.assetRoot}images/DevAlex.png`,
         jsonPath: `${this.assetRoot}images/DevAlex.json`
@@ -482,6 +492,12 @@ export default class AssetLoader {
       ],
       playerAlex: [
         'playerAlex'
+      ],
+      playerSteveEvents: [
+        'playerSteveEvents'
+      ],
+      playerAlexEvents: [
+        'playerAlexEvents'
       ],
       grass: [
         'tallGrass'
