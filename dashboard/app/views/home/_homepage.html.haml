@@ -3,6 +3,7 @@
 - homepage_data[:initialtipsdismissed] = current_user.ui_tip_dismissed_homepage_header
 - homepage_data[:userid] = current_user.id
 - homepage_data[:valid_grades] = Section.valid_grades
+- homepage_data[:topCourse] = @top_course
 
 - if current_user
   - provider = current_user.provider
@@ -13,7 +14,6 @@
     - homepage_data[:isTeacher] = true
   - else
     - homepage_data[:sections] = @student_sections
-    - homepage_data[:studentTopCourse] = @student_top_course
     - homepage_data[:isTeacher] = false
     - if current_user.teacher_managed_account?
       - homepage_data[:canLeave] = false

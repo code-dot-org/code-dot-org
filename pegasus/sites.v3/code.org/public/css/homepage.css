@@ -373,3 +373,29 @@ body.modal-open .supreme-container{
   color: rgb(82, 82, 82);
   border: 1px solid rgb(146,147,148);
 }
+
+.stats-number {
+  font-weight: 900;
+  text-align: center;
+}
+
+.stats-phrase {
+  font-size: 14px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.stats-box {
+  padding: 50px 20px 20px 20px;
+}
+
+.make-difference {
+  background: rgb(0, 173, 188);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px;
+  text-transform: uppercase;
+}
