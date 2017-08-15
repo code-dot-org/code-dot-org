@@ -4,6 +4,7 @@ import sinon from 'sinon';
 import {expect} from '../../../../../util/configuredChai';
 import {allowConsoleErrors} from '../../../../../util/testUtils';
 import {mount} from 'enzyme';
+import * as utils from '@cdo/apps/utils';
 import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
 import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 
@@ -21,12 +22,12 @@ describe('SetupChecklist', () => {
 
   beforeEach(() => {
     // sinon.stub(window.console, 'error');
-    sinon.stub(window.location, 'reload');
+    sinon.stub(utils, 'reload');
     checker = new StubSetupChecker();
   });
 
   afterEach(() => {
-    window.location.reload.restore();
+    utils.reload.restore();
     // window.console.error.restore();
   });
 
@@ -83,7 +84,7 @@ describe('SetupChecklist', () => {
             expect(wrapper.find(FAILURE_ICON)).to.have.length(1);
             expect(wrapper.find(WAITING_ICON)).to.have.length(3);
             wrapper.find(REDETECT_BUTTON).simulate('click');
-            expect(window.location.reload).to.have.been.called;
+            expect(utils.reload).to.have.been.called;
           });
     });
   });
@@ -104,7 +105,7 @@ describe('SetupChecklist', () => {
         .then(() => yieldUntilDoneDetecting(wrapper))
         .then(() => {
           expect(wrapper.find(SUCCESS_ICON)).to.have.length(5);
-          expect(window.location.reload).not.to.have.been.called;
+          expect(utils.reload).not.to.have.been.called;
         });
   });
 

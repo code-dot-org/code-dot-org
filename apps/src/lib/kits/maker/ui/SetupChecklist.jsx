@@ -1,5 +1,6 @@
 /** @file Maker Board setup checker */
 import React, {Component, PropTypes} from 'react';
+import * as utils from '../../../../utils';
 import trackEvent from '../../../../util/trackEvent';
 import SetupChecker from '../util/SetupChecker';
 import {isWindows, isChrome, getChromeVersion} from '../util/browserChecks';
@@ -143,7 +144,7 @@ export default class SetupChecklist extends Component {
     if (this.state[STATUS_APP_INSTALLED] !== SUCCEEDED) {
       // If the Chrome app was not installed last time we checked, but has been
       // installed since, we'll probably need a full page reload to pick it up.
-      window.location.reload();
+      utils.reload();
     } else {
       // Otherwise we should be able to redetect without a page reload.
       this.detect();
