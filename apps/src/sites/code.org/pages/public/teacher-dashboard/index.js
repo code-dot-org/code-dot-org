@@ -192,6 +192,11 @@ function main() {
 
   var app = angular.module('teacherDashboard.controllers', []);
 
+  //helper function for using section-flow-2017 flag
+  const newFlow = function () {
+    return experiments.isEnabled('section-flow-2017');
+  };
+
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
     firehoseClient.putRecord(
@@ -218,6 +223,8 @@ function main() {
       }
     );
 
+    $scope.new_flow = newFlow;
+
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
@@ -239,6 +246,8 @@ function main() {
         event: 'SectionDetailController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -270,14 +279,6 @@ function main() {
         }
       }
     );
-
-    $scope.new_flow = function () {
-      if (experiments.isEnabled('section-flow-2017')) {
-        return true;
-      } else {
-        return false;
-      }
-    };
 
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
@@ -442,6 +443,8 @@ function main() {
     );
     var self = this;
 
+    $scope.new_flow = newFlow;
+
     // 'Other Section' selected
     $scope.otherTeacher = 'Other Teacher';
     $scope.stayEnrolledInCurrentSection = 'true';
@@ -537,6 +540,8 @@ function main() {
       }
     );
 
+    $scope.new_flow = newFlow;
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
@@ -570,6 +575,8 @@ function main() {
         event: 'SectionProjectsController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
@@ -607,6 +614,8 @@ function main() {
         event: 'SectionProgressController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -767,6 +776,8 @@ function main() {
       }
     );
 
+    $scope.new_flow = newFlow;
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -841,6 +852,8 @@ function main() {
         event: 'SectionAssessmentsController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     // Some strings.
     var submission_list = {
