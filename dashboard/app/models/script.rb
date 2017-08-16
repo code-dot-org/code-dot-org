@@ -76,10 +76,6 @@ class Script < ActiveRecord::Base
   include SerializedProperties
   include SerializedProperties
 
-  serialized_attrs %w(
-    teacher_resources
-  )
-
   after_save :generate_plc_objects
 
   def generate_plc_objects
@@ -723,6 +719,7 @@ class Script < ActiveRecord::Base
     script
   end
 
+  # Update strings and serialize changes to .script file
   def update_text(script_params, script_text, metadata_i18n, general_params)
     script_name = script_params[:name]
     begin
@@ -744,6 +741,7 @@ class Script < ActiveRecord::Base
       errors.add(:base, e.to_s)
       return false
     end
+    update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks])
     begin
       # write script to file
       filename = "config/scripts/#{script_params[:name]}.script"
@@ -923,7 +921,8 @@ class Script < ActiveRecord::Base
       peer_reviews_to_complete: script_data[:peer_reviews_to_complete] || nil,
       student_detail_progress_view: script_data[:student_detail_progress_view] || false,
       project_widget_visible: script_data[:project_widget_visible] || false,
-      project_widget_types: script_data[:project_widget_types]
+      project_widget_types: script_data[:project_widget_types],
+      teacher_resources: script_data[:teacher_resources]
     }.compact
   end
 
