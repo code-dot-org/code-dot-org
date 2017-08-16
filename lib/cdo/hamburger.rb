@@ -317,7 +317,7 @@ class Hamburger
     else
       [
         {title: I18n.t("#{loc_prefix}course_catalog"), url: CDO.studio_url("/courses"), id: "header-non-en-courses"},
-        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.code_org_url("/projects/public"), id: "header-non-en-projects"}
+        {title: I18n.t("#{loc_prefix}project_gallery"), url: CDO.studio_url("/projects/public"), id: "header-non-en-projects"}
       ]
     end
   end
