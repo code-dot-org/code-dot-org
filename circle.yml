@@ -85,13 +85,13 @@ dependencies:
     # See notes above rake install for ts and mispipe reasoning
     - ? |
         for i in 1 2; do
-          mispipe "timeout 13m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
+          mispipe "timeout 15m bundle exec rake build" "ts '[%Y-%m-%d %H:%M:%S]'" && break;
           ERR=$?
           echo "rake build failed on attempt $i with error code $ERR";
           (exit $ERR)
         done
       :
-        timeout: 960
+        timeout: 1440
     # Update firebase security rules and config params. If these security rules change in a
     # non-backward-compatible way, this may cause a new test run to make an older one fail.
     - bundle exec rake firebase:ci
