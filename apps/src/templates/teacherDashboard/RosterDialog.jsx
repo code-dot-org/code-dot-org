@@ -6,7 +6,7 @@ import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
   cancelImportRosterFlow,
-  importRoster,
+  importOrUpdateRoster,
   isRosterDialogOpen,
 } from './teacherSectionsRedux';
 
@@ -241,6 +241,6 @@ export default connect(state => ({
   studioUrl: state.teacherSections.studioUrl,
   provider: state.teacherSections.provider,
 }), {
-  handleImport: importRoster,
+  handleImport: importOrUpdateRoster,
   handleCancel: cancelImportRosterFlow,
 })(RosterDialog);

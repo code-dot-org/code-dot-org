@@ -36,11 +36,11 @@ The following links all lead directly to the Spanish tutorial. Replace the "es" 
 1. On the left, you'll see a list of languages. If you don't see your language listed, click "Add a new language". A language with a yellow dot means it's been started but incomplete; please go ahead and complete the translation. A language with a green dot means it's been completed and published.
 1. When you begin you'll see the English track on the left and you can enter your translations on the right. Feel free to edit the timing if necessary. When complete, click the Publish button in the top right.
 1. Complete all 5 video translations then email translations@code.org so that we can upload your translations to YouTube. Please include that you completed the Frozen videos and your language.
-1. The links for the videos are below:
-        * [Introduction](http://amara.org/en/videos/WXMIcXbsmkXJ/info/frozen-hour-of-code-introduction/)
-        * [Introduction to loops](http://amara.org/en/videos/WxHFpeBLk2RB/info/frozen-hour-of-code-introduction-to-loops/)
-        * [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
+1. The links for the videos are below: 
+  * [Introduction](http://amara.org/en/videos/WXMIcXbsmkXJ/info/frozen-hour-of-code-introduction/)
+  * [Introduction to loops](http://amara.org/en/videos/WxHFpeBLk2RB/info/frozen-hour-of-code-introduction-to-loops/)
+  * [Introduction to functions](http://amara.org/en/videos/azkfStUQ1EqG/info/frozen-hour-of-code-introduction-to-functions/)
 
 ---
 
-<%= view :frozen_languages %>                                        
+<%= view :frozen_languages %>

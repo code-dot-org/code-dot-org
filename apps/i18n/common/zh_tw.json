@@ -680,5 +680,9 @@
   "withoutHints": "完全沒有使用提示！",
   "workspaceHeaderShort": "工作區：",
   "yes": "是",
+  "loginTypeSyncButton": "Sync students from {providerName}",
+  "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
+  "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",
+  "loginTypeSyncButton_success": "Sync complete!",
   "reviewCode": "Review Code"
 }
