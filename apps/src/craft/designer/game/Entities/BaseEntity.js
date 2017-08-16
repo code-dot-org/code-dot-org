@@ -126,7 +126,9 @@ export default class BaseEntity {
             }
         };
 
-        frontBlockCheck(this, this.position);
+        if (!this.isOnBlock) {
+            frontBlockCheck(this, this.position);
+        }
         if (prevPosition !== undefined) {
             prevBlockCheck(this, prevPosition);
         }
