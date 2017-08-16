@@ -1,7 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {assert, expect} from '../../../util/configuredChai';
+import {expect} from '../../../util/configuredChai';
 import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import i18n from '@cdo/locale';
 import {
@@ -17,15 +16,11 @@ import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
 const defaultProps = {
   numSections: 3,
-  classrooms: null,
-  studioUrl: '',
   asyncLoadComplete: true,
   newSection: () => {},
-  loadClassroomList: () => {},
-  importClassroomStarted: () => {},
   beginEditingNewSection: () => {},
   beginEditingSection: () => {},
-  asyncLoadSectionData: () => {},
+  beginImportRosterFlow: () => {},
 };
 
 describe('OwnedSections', () => {
@@ -54,11 +49,8 @@ describe('OwnedSections', () => {
             </p>
           </div>
         </div>
-        <RosterDialog
-          isOpen={false}
-          studioUrl={defaultProps.studioUrl}
-        />
-        <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
@@ -81,30 +73,11 @@ describe('OwnedSections', () => {
           />
           <SectionTable onEdit={instance.handleEditRequest}/>
         </div>
-        <RosterDialog
-          isOpen={false}
-          studioUrl={defaultProps.studioUrl}
-        />
-        <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+        <RosterDialog/>
+        <AddSectionDialog/>
         <EditSectionDialog/>
       </div>
     );
-  });
-
-  it('provides default course id when creating new section', () => {
-    const newSectionFunction = sinon.spy();
-    const wrapper = shallow(
-      <OwnedSections
-        {...defaultProps}
-        defaultCourseId={30}
-        defaultScriptId={112}
-        newSection={newSectionFunction}
-      />
-    );
-
-    const newSectionButton = wrapper.find('Button').first();
-    newSectionButton.simulate('click');
-    assert.deepEqual(newSectionFunction.firstCall.args, [30]);
   });
 
   describe(`(${SECTION_FLOW_2017})`, () => {
@@ -121,11 +94,8 @@ describe('OwnedSections', () => {
       expect(wrapper).to.containMatchingElement(
         <div>
           <SetUpSections/>
-          <RosterDialog
-            isOpen={false}
-            studioUrl={defaultProps.studioUrl}
-          />
-          <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+          <RosterDialog/>
+          <AddSectionDialog/>
           <EditSectionDialog/>
         </div>
       );
@@ -148,30 +118,11 @@ describe('OwnedSections', () => {
             />
             <SectionTable onEdit={instance.handleEditRequest}/>
           </div>
-          <RosterDialog
-            isOpen={false}
-            studioUrl={defaultProps.studioUrl}
-          />
-          <AddSectionDialog handleImportOpen={defaultProps.handleImportOpen}/>
+          <RosterDialog/>
+          <AddSectionDialog/>
           <EditSectionDialog/>
         </div>
       );
-    });
-
-    it('provides default courseId and scriptId when creating new section', () => {
-      const newSectionFunction = sinon.spy();
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          defaultCourseId={30}
-          defaultScriptId={112}
-          beginEditingNewSection={newSectionFunction}
-        />
-      );
-
-      const newSectionButton = wrapper.find('Button').first();
-      newSectionButton.simulate('click');
-      assert.deepEqual(newSectionFunction.firstCall.args, [30, 112]);
     });
   });
 });

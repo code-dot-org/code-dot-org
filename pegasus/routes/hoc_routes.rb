@@ -14,7 +14,8 @@ get '/:short_code' do |short_code|
 end
 
 get '/v2/hoc/tutorial-metrics.json' do
-  expires 3600, :public, :must_revalidate
+  only_for 'code.org'
+  forbidden! unless dashboard_user_helper && dashboard_user_helper.admin?
   content_type :json
   JSON.pretty_generate(fetch_hoc_metrics['tutorials'])
 end
