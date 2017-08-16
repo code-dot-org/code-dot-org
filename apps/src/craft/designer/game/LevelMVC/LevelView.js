@@ -1720,8 +1720,8 @@ export default class LevelView {
           }
         }
       });
-      this.playScaledSpeed(sprite.animations, "animate");
     }
+    this.playScaledSpeed(sprite.animations, "animate");
     return sprite;
   }
 
