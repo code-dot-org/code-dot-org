@@ -681,9 +681,16 @@
   "workspaceHeaderShort": "Arbejdsområde: ",
   "yes": "Ja",
   "addStudents": "Add students",
+  "allHandouts": "All handouts",
+  "codeIntroduced": "Code introduced",
+  "lessonPlans": "Lesson Plans",
   "loginTypeSyncButton": "Sync students from {providerName}",
   "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
   "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",
   "loginTypeSyncButton_success": "Sync complete!",
-  "reviewCode": "Review Code"
+  "reviewCode": "Review Code",
+  "standardMappings": "Standard Mappings",
+  "teacherResources": "Teacher resources",
+  "videos": "Videos",
+  "vocabulary": "Vocabulary"
 }
