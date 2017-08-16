@@ -855,13 +855,11 @@ def generate_teacher_student(name, teacher_authorized)
   enroll_in_plc_course(@users["Teacher_#{name}"][:email]) if teacher_authorized
 
   individual_steps %Q{
-    Then I am on "http://code.org/teacher-dashboard#/sections"
-    And I wait until element ".jumbotron" is visible
+    Then I am on "http://studio.code.org/home"
     And I dismiss the language selector
-    And I click selector ".uitest-newsection" once I see it
-    Then execute JavaScript expression "$('input').first().val('SectionName').trigger('input')"
-    Then execute JavaScript expression "$('select').first().val('email').trigger('change')"
-    And I click selector ".uitest-save" once I see it
+
+    Then I create a new section
+
     And I click selector "a:contains('0')" once I see it
     And I save the section url
     Then I sign out
@@ -874,6 +872,20 @@ def generate_teacher_student(name, teacher_authorized)
     And I select the "16" option in dropdown "user_age"
     And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/home"
+  }
+end
+
+And /^I create a new section$/ do
+  individual_steps %Q{
+    When I see the section set up box
+    And I press the new section button
+    Then I should see the new section dialog
+
+    When I select email login
+    And I scroll the save button into view
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
   }
 end
 
@@ -1223,6 +1235,10 @@ end
 
 When /^I select picture login$/ do
   steps 'When I press the first ".uitest-pictureLogin .uitest-button" element'
+end
+
+When /^I select email login$/ do
+  steps 'When I press the first ".uitest-emailLogin .uitest-button" element'
 end
 
 When /^I press the save button to create a new section$/ do
