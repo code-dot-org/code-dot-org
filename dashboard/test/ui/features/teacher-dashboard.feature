@@ -10,7 +10,7 @@ Feature: Using the teacher dashboard
     And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     Then I wait to see ".outerblock"
     Then I click selector "div.title:contains('Student Accounts and Progress')"
-    Then I wait until I am on "http://code.org/teacher-dashboard#/sections"
+    Then I wait until I am on "http://studio.code.org/home"
 
   Scenario: Loading student progress
     Given I create a teacher-associated student named "Sally"
