@@ -249,6 +249,7 @@ Craft.init = function (config) {
       },
       loadAudio: function () {},
       afterInject: function () {
+        // NaN if not set
         var slowMotionURLParam = parseFloat((location.search.split('customSlowMotion=')[1] || '').split('&')[0]);
         Craft.gameController = new GameController({
           Phaser: window.Phaser,
@@ -259,7 +260,7 @@ Craft.init = function (config) {
             play: studioApp().playAudio.bind(studioApp())
           },
           debug: false,
-          customSlowMotion: slowMotionURLParam, // NaN if not set
+          customSlowMotion: config.level.isTestLevel ? 0.5 : slowMotionURLParam,
           /**
            * First asset packs to load while video playing, etc.
            * Won't matter for levels without delayed level initialization
