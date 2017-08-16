@@ -1,4 +1,5 @@
 import React from 'react';
+import color from "../../../util/color";
 
 const styles = {
   wrapper: {
@@ -39,6 +40,7 @@ export default class CompletableLevelThumbnail extends React.Component {
           height: this.props.size,
           display: 'inline-block',
           overflow: 'hidden',
+          border: `1px solid ${color.lighter_gray}`
         }}
       >
         <div
