@@ -651,6 +651,9 @@ export default class LevelModel {
         result.push("notWalkable");
       }
       if (!this.actionPlane[blockIndex].isEmpty) {
+        if (this.player.isOnBlock) {
+          return [true];
+        }
         result.push("notEmpty");
       }
       // Only prevent walking into water/lava in "Events" levels.
