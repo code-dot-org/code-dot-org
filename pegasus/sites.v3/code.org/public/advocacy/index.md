@@ -56,11 +56,13 @@ For more information, please contact advocacy@code.org.
 * <a href="https://www.aztechcouncil.org/">Arizona Technology Council</a>
 * <a href="https://www.ncwit.org/">Association for Computing Machinery</a>
 * <a href="https://www.battelle.org/">Battelle</a>
+* <a href="https://www.childrennow.org/issue-areas/stem-network/">California STEM Network</a>
 * <a href="http://ceasom.org/">CEASOM Regional Partnership</a>
 * <a href="http://www.ccboe.com/">Charles County Public Schools</a>
 * <a href="http://www.codevirginia.org/">CodeVA</a>
 * <a href="https://apstudent.collegeboard.org/apcourse/ap-computer-science-a"_blank">The College Board</a>
 * <a href="http://www.coloradosucceeds.org/">Colorado Succeeds</a>
+* <a href="http://www.coloradotechnology.org/">Colorado Technology Association</a>
 * <a href="https://www.commonsensemedia.org/kids-action">Common Sense Media</a>
 * <a href="http://cra.org/">Computing Research Association</a>
 * <a href="http://ct.org/">Connecticut Technology Council</a>
