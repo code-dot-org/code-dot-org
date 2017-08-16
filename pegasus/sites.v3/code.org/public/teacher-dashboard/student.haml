@@ -9,7 +9,9 @@ content-type: text/ng-template
   #goback{style: "float:left"}
     %div{'ng-show' => "new_flow()"}
       %span{style: "color: #00adbc; font-size: 18px; font-weight: 'bold';"} &nbsp; &#8249; &nbsp;
-      %a{"ng-href" => '/teacher-dashboard#/sections/{{section.id}}', style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}=I18n.t('view_section')
+      %a{"ng-href" => CDO.studio_url("/home/#classroom-sections"), style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}=I18n.t('view_all_sections')
+      %span{style: "color: #00adbc; font-size: 18px; font-weight: 'bold';"} &nbsp; &#8249; &nbsp;
+      %a{href: '/teacher-dashboard#/sections/{{section.id}}', style:"color:#00adbc;font-size:14px;font-family:'Gotham 4r';font-weight:'bold';"}= I18n.t('view_named_section', section_name: '{{section.name}}')
     %div{'ng-show' => "!new_flow()"}
       %a{href: '/teacher-dashboard#/'}= I18n.t('dashboard_navigation_home_page')
       %span{style: "opacity:0.5"} &nbsp; &#9654; &nbsp;
