@@ -60,7 +60,6 @@ class ScriptsController < ApplicationController
   def update
     script_text = params[:script_text]
     if @script.update_text(script_params, script_text, i18n_params, general_params)
-      @script.update_teacher_resources(params[:resourceTypes], params[:resourceLinks])
       redirect_to @script, notice: I18n.t('crud.updated', model: Script.model_name.human)
     else
       render action: 'edit'
@@ -111,6 +110,8 @@ class ScriptsController < ApplicationController
       :student_detail_progress_view,
       :project_widget_visible,
       :exclude_csf_column_in_legend,
+      resourceTypes: [],
+      resourceLinks: [],
       project_widget_types: []
     ).to_h
     h[:peer_reviews_to_complete] = h[:peer_reviews_to_complete].to_i
