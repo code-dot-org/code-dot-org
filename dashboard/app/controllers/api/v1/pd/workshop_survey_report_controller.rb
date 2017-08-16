@@ -42,17 +42,12 @@ module Api::V1::Pd
         workshops: [@workshop],
         facilitator_name: current_user.facilitator? && current_user.name
       )
-      if current_user.facilitator?
-        survey_report[:all_my_teachercons] = summarize_workshop_surveys(
-          workshops: Pd::Workshop.where(subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]).facilitated_by(current_user),
-          include_free_response: false
-        )
-      elsif current_user.workshop_organizer?
-        survey_report[:all_my_teachercons] = summarize_workshop_surveys(
-          workshops: Pd::Workshop.where(subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]).organized_by(current_user),
-          include_free_response: false
-        )
-      end
+      survey_report[:all_my_teachercons] = summarize_workshop_surveys(
+        workshops: Pd::Workshop.where(
+          subject: [Pd::Workshop::SUBJECT_CSP_TEACHER_CON, Pd::Workshop::SUBJECT_CSD_TEACHER_CON]
+        ).facilitated_or_organized_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
+        include_free_response: false
+      )
 
       respond_to do |format|
         format.json do
@@ -79,7 +74,7 @@ module Api::V1::Pd
         workshops: Pd::Workshop.where(
           subject: @workshop.subject,
           course: @workshop.course
-        ).facilitated_or_organized_by(current_user),
+        ).facilitated_or_organized_by(current_user).in_state(Pd::Workshop::STATE_ENDED),
         facilitator_breakdown: false,
         facilitator_name: facilitator_name,
         include_free_response: false
