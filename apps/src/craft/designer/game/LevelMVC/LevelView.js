@@ -2041,6 +2041,7 @@ export default class LevelView {
 
   addResettableTween(sprite) {
     var tween = this.game.add.tween(sprite);
+    tween.timeScale = this.controller.tweenTimeScale;
     this.resettableTweens.push(tween);
     return tween;
   }

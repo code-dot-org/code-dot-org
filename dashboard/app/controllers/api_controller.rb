@@ -86,7 +86,15 @@ class ApiController < ApplicationController
     course_name = params[:courseName].to_s
 
     query_google_classroom_service do |service|
-      students = service.list_course_students(course_id, page_size: 0).students || []
+      students = []
+      next_page_token = nil
+      loop do
+        response = service.list_course_students(course_id, page_token: next_page_token)
+        students.concat response.students || []
+        next_page_token = response.next_page_token
+        break unless next_page_token
+      end
+
       section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
 
       render json: section.summarize
