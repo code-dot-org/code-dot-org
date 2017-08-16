@@ -6,6 +6,8 @@ happyMaps,Algorithms,Happy Maps,4+,https://studio.code.org/s/coursea/stage/5/puz
 ","<ul><li><a href=""http://www.bbc.co.uk/guides/z3whpv4"" target=""_new"">What is an algorithm?</a></li>
 <li><a href=""http://www.tynker.com/blog/articles/ideas-and-tips/how-to-explain-algorithms-to-kids"" target=""_new"">How to explain algorithms to kids</a></li></ul>",https:,studio.code.org,s,coursea,stage,5,puzzle,1,"Course A : Lesson 5 <br/>
 Course 1 : Lesson 1"
+MRF,Algorithms,My Robotic Friends,6+,https://studio.code.org/s/courseb/stage/6/puzzle/1,https://curriculum.code.org/csf/courseb/6,,,,"Gain understanding of the need for precision in coding.
+Learn how to recognize a bug and how to debug the malfunctioning code.","Using a predefined symbol key, your students will figure out how to guide one another to accomplish specific tasks without using any verbal commands. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.",,,,,courseb,,6,,,Course B : Lesson 6
 moveIt,Algorithms,"Move It, Move It",6+,https://studio.code.org/s/course1/stage/2/puzzle/1,https://code.org/curriculum/course1/2/Teacher,https://youtu.be/VGi2bnRFqzM,https://www.youtube.com/watch?v=aV4rqNUG-Jw,,"- Recognize situations where they can create programs to complete tasks
 - Predict moves necessary to get teammate from start to finish
 - Convert movements into symbolic instructions
@@ -67,6 +69,10 @@ Describe how functions and parameters can make programs easier to write",One of 
 internet,Internet,Internet,8+,https://studio.code.org/s/coursee/stage/16/puzzle/1,https://curriculum.code.org/csf/coursee/16,https://youtu.be/mFOUbqYv1Sc,https://www.youtube.com/watch?v=Z6CEAOFZRRk,,"Learn about the complexity of sending messages over the Internet
 Translate URLs into IP Addresses
 Practice creative problem solving","In this lesson, students will pretend to flow through the Internet, all the while learning about Internet connections, URLs, IP Addresses, and the DNS.",,https:,studio.code.org,s,coursee,stage,16,puzzle,1,Course E : Lesson 16 <br/> Course 3 : Lesson 18
+happyLoops,Loops,Happy Loops,4+,https://studio.code.org/s/coursea/stage/8/puzzle/1,https://studio.code.org/csf/coursea/8,,,,"Identify repetitive code and convert a series of multiple actions into a single loop.
+Decode loops into a series of multiple actions.","Loops are a very helpful and powerful tool in programming. To understand how helpful loops can be, students will need to be driven to want an easier way to solve mundane problems.",,,,,coursea,,8,,,Course A: Lesson 8
+MLRF,Loops,My Loopy Robotic Friends,6+,https://studio.code.org/s/courseb/stage/9/puzzle/1,https://studio.code.org/csf/courseb/9,,,,"Identify repetitive code and convert a series of multiple actions into a single loop.
+Decode loops into a series of multiple actions.","Here, students learn the simplicity and utility of loops by “programming” their friends using the language from ""My Robotic Friends."" Once loops are introduced, students will find that they can build bigger structures faster.",,,,,courseb,,9,,,Course B : Lesson 9
 getLoopy,Loops,Getting Loopy,5+,https://studio.code.org/s/coursec/stage/7/puzzle/1,https://curriculum.code.org/csf/coursec/7,https://youtu.be/JoKTqHCni0M,https://www.youtube.com/watch?v=Vo2woYRRogA,,"Repeat actions initiated by the instructor
 Translate a picture program into a live-action dance
 Convert a series of multiple actions into a single loop","Loops are a handy way of describing actions that repeat a certain numbers of times. In this lesson, students will practice converting sets of actions into a single loop.",,https:,studio.code.org,s,coursec,stage,7,puzzle,1,Course C : Lesson 7 <br/> Course 1 : Lesson 12
