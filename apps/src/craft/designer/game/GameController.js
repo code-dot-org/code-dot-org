@@ -1064,9 +1064,7 @@ class GameController {
             commandQueueItem.succeeded();
           });
         } else {
-          this.delayPlayerMoveBy(1200, 1200, () => {
-            commandQueueItem.succeeded();
-          });
+          commandQueueItem.waitForOtherQueue = true;
         }
         setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 0);
       });
