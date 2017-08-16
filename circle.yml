@@ -121,9 +121,7 @@ test:
         " >> locals.yml
 
     # Recompile application.js to pick up override_dashboard/pegasus setting
-    - pushd dashboard
-    - bundle exec rake assets:precompile_application_js
-    - popd
+    - cd dashboard && bundle exec rake assets:precompile_application_js
 
     - bundle exec rake circle:seed_ui_test:
         timeout: 1000
