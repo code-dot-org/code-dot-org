@@ -248,9 +248,6 @@ class User < ActiveRecord::Base
   end
 
   def log_admin_save
-    # Do not log for development, test, and adhoc environments.
-    return unless should_log?
-
     ChatClient.message 'infra-security',
       "#{admin ? 'Granting' : 'Revoking'} UserPermission: "\
       "environment: #{rack_env}, "\
@@ -261,7 +258,7 @@ class User < ActiveRecord::Base
   end
 
   # don't log changes to admin permission in development, test, and ad_hoc environments
-  def should_log?
+  def self.should_log?
     return [:staging, :levelbuilder, :production].include? rack_env
   end
 
@@ -444,7 +441,7 @@ class User < ActiveRecord::Base
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :log_admin_save, if: :admin_changed?
+  before_save :log_admin_save, if: -> {:admin_changed? && User.should_log?}
 
   def make_teachers_21
     return unless teacher?
