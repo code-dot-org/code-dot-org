@@ -5,6 +5,7 @@ export const bonusLevel = {
   map: PropTypes.array,
   name: PropTypes.string.isRequired,
   skin: PropTypes.string,
+  solutionImageUrl: PropTypes.string,
   startDirection: PropTypes.number,
   type: PropTypes.string.isRequired,
   perfected: PropTypes.bool.isRequired,
