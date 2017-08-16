@@ -1278,7 +1278,7 @@ class GameController {
     let START_SPEED_UP = 10;
     let END_SPEED_UP = 20;
 
-    let queueLength = this.queue.getLength();
+    let queueLength = this.levelModel.player.queue.getLength();
     let speedUpRangeMax = END_SPEED_UP - START_SPEED_UP;
     let speedUpAmount = Math.min(Math.max(queueLength - START_SPEED_UP, 0), speedUpRangeMax);
 
