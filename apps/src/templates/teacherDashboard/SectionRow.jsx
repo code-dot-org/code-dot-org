@@ -188,7 +188,7 @@ class SectionRow extends Component {
       alert(i18n.unexpectedError());
       console.error(status);
     });
-  }
+  };
 
   onClickEdit = () => {
     if (experiments.isEnabled(SECTION_FLOW_2017)) {
@@ -408,7 +408,7 @@ class SectionRow extends Component {
         <td style={styles.col}>
           {persistedSection &&
             <a href={manageStudentsUrl} style={styles.link}>
-              {section.studentCount}
+              {section.studentCount <= 0 && sectionFlow2017 ? i18n.addStudents() : section.studentCount}
             </a>
           }
         </td>
