@@ -1249,6 +1249,7 @@ class GameController {
         this.levelModel.destroyBlock(blockIndex);
       }
       if (this.levelModel.placeBlock(blockType)) {
+        this.levelModel.player.updateHidingBlock(this.levelModel.player.position);
         this.levelView.playPlaceBlockAnimation(this.levelModel.player.position, this.levelModel.player.facing, blockType, blockTypeAtPosition, () => {
           this.levelModel.computeShadingPlane();
           this.levelModel.computeFowPlane();
