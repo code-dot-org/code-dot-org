@@ -49,6 +49,13 @@ module Api::V1::Pd
         include_free_response: false
       )
 
+      aggregate_for_all_workshops = JSON.parse(
+        AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production")
+      )
+      survey_report[:all_workshops_for_course] = aggregate_for_all_workshops[
+        @workshop.course == Pd::Workshop::COURSE_CSP ? 'CSP TeacherCon' : 'CSD TeacherCon'
+      ]
+
       respond_to do |format|
         format.json do
           render json: survey_report
