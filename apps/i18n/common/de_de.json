@@ -680,5 +680,9 @@
   "withoutHints": "Ohne Tipps zu benutzen!",
   "workspaceHeaderShort": "Arbeitsbereich: ",
   "yes": "Ja",
+  "loginTypeSyncButton": "Sync students from {providerName}",
+  "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
+  "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",
+  "loginTypeSyncButton_success": "Sync complete!",
   "reviewCode": "Review Code"
 }
