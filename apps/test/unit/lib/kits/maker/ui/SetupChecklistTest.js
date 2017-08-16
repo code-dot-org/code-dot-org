@@ -2,7 +2,6 @@
 import React from 'react';
 import sinon from 'sinon';
 import {expect} from '../../../../../util/configuredChai';
-import {allowConsoleErrors} from '../../../../../util/testUtils';
 import {mount} from 'enzyme';
 import * as utils from '@cdo/apps/utils';
 import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
@@ -21,14 +20,12 @@ describe('SetupChecklist', () => {
   const FAILURE_ICON = '.fa-times-circle';
 
   beforeEach(() => {
-    // sinon.stub(window.console, 'error');
     sinon.stub(utils, 'reload');
     checker = new StubSetupChecker();
   });
 
   afterEach(() => {
     utils.reload.restore();
-    // window.console.error.restore();
   });
 
   it('renders success', () => {
@@ -49,7 +46,8 @@ describe('SetupChecklist', () => {
   });
 
   describe('test with expected console.error', () => {
-    allowConsoleErrors();
+    // Allow console.error calls and squelch actual logging
+    beforeEach(() => console.error.reset());
 
     it('fails if chrome version is wrong', () => {
       const error = new Error('test error');
