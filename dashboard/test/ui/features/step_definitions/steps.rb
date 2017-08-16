@@ -860,7 +860,7 @@ def generate_teacher_student(name, teacher_authorized)
 
     Then I create a new section
 
-    And I click selector "a:contains('0')" once I see it
+    And I click selector "a:contains('Add students')" once I see it
     And I save the section url
     Then I sign out
     And I navigate to the section url
