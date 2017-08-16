@@ -469,7 +469,8 @@ StudioApp.prototype.init = function (config) {
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });
-    Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
+    // Store result so that we can cleanup later in tests
+    this.changeListener = Blockly.mainBlockSpaceEditor.addChangeListener(_.bind(function () {
       this.updateBlockCount();
     }, this));
 
@@ -2906,7 +2907,12 @@ if (IN_UNIT_TEST) {
 
   module.exports.restoreStudioApp = function () {
     instance.removeAllListeners();
+    if (instance.changeListener) {
+      Blockly.removeChangeListener(instance.changeListener);
+    }
     instance = __oldInstance;
     __oldInstance = null;
   };
+
+
 }
