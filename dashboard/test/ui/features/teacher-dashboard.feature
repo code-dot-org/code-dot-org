@@ -23,7 +23,7 @@ Feature: Using the teacher dashboard
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?no_home_redirect=1"
     And I click selector "div.title:contains('Student Accounts and Progress')" once I see it
-    And I click selector "a:contains('SectionName')" once I see it
+    And I click selector "a:contains('New Section')" once I see it
     And I click selector "a:contains('Sally')" once I see it
     And I wait until element "#course-dropdown" is visible
     And I select the "allthethings *" option in dropdown "course-dropdown"
@@ -31,7 +31,7 @@ Feature: Using the teacher dashboard
     Then selector "a[href*='/s/allthethings/stage/2/puzzle/1']" has class "perfect"
     But selector "a[href*='/s/allthethings/stage/2/puzzle/2']" doesn't have class "perfect"
 
-    When I click selector "a:contains('Section: SectionName')" once I see it
+    When I click selector "a:contains('View New Section')" once I see it
     And I click selector "#learn-tabs a:contains('Stats')" once I see it
     And I wait until element "#uitest-stats-tab td:nth(0)" is visible
     And element "#uitest-stats-tab td:nth(0)" contains text "Sally"
@@ -74,7 +74,7 @@ Feature: Using the teacher dashboard
 
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard#/sections"
-    And I click selector "a:contains('SectionName')" once I see it
+    And I click selector "a:contains('New Section')" once I see it
     And I click selector "a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I click selector "a:contains('thumb wars')" once I see it
@@ -158,7 +158,7 @@ Feature: Using the teacher dashboard
     When I sign in as "Teacher_Sally"
     And I am on "http://code.org/teacher-dashboard?enableExperiments=showProjectThumbnails#/sections"
     And I wait to see ".header_user"
-    And I click selector "a:contains('SectionName')" once I see it
+    And I click selector "a:contains('New Section')" once I see it
     And I click selector "a:contains('Projects')" once I see it
     And I wait until element "#projects-list" is visible
     And I wait until the image within element "tr:eq(1)" has loaded
