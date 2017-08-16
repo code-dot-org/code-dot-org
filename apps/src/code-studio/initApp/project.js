@@ -852,16 +852,12 @@ var projects = module.exports = {
     return new Promise((resolve, reject) => {
       channels.create(current, (err, data) => {
         this.updateCurrentData_(err, data, options);
-        if (err) {
-          reject(err);
-          return;
-        }
-        this.save(
-          false /* forceNewVersion */,
-          true /* preparingRemix */
-        ).then(resolve).catch(reject);
+        err ? reject(err) : resolve();
       });
-    });
+    }).then(() => this.save(
+      false /* forceNewVersion */,
+      true /* preparingRemix */
+    ));
   },
   copyAssets(srcChannel, callback) {
     if (!srcChannel) {
