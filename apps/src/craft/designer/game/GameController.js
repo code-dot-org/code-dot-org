@@ -1058,9 +1058,15 @@ class GameController {
         frontEntity.addCommand(useCommand);
         frontEntity.queue.endPushHighPriorityCommands();
         this.levelView.playPlayerAnimation("idle", player.position, player.facing, false);
-        this.delayPlayerMoveBy(0, 0, () => {
-          commandQueueItem.succeeded();
-        });
+        if (this.levelData.isEventLevel) {
+          this.delayPlayerMoveBy(0, 0, () => {
+            commandQueueItem.succeeded();
+          });
+        } else {
+          this.delayPlayerMoveBy(1200, 1200, () => {
+            commandQueueItem.succeeded();
+          });
+        }
         setTimeout(() => { this.levelView.setSelectionIndicatorPosition(player.position[0], player.position[1]); }, 0);
       });
     } else if (isFrontBlockDoor) {
