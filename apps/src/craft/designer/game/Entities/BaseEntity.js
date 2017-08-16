@@ -385,10 +385,9 @@ export default class BaseEntity {
 
     drop(commandQueueItem, itemType) {
         this.controller.addCommandRecord("drop", this.type, commandQueueItem.repeat);
-        var sprite = this.controller.levelView.createMiniBlock(this.position[0], this.position[1], itemType);
-        sprite.sortOrder = this.controller.levelView.yToIndex(this.position[1]) + 2;
-        this.controller.levelView.playScaledSpeed(sprite.animations, "animate");
-        commandQueueItem.succeeded();
+        this.controller.levelView.playItemDropAnimation(this.position, itemType, () => {
+            commandQueueItem.succeeded();
+        });
     }
 
     attack(commandQueueItem) {

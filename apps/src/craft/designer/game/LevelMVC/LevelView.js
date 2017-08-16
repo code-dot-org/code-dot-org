@@ -1019,7 +1019,7 @@ export default class LevelView {
         if (!this.controller.levelData.isEventLevel) {
           this.playPlayerAnimation("idle", playerPosition, facing, false);
         }
-        this.playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler);
+        this.playItemDropAnimation(destroyPosition, blockType, completionHandler);
       }
     });
     this.playScaledSpeed(explodeAnim.animations, "explode");
@@ -1028,12 +1028,18 @@ export default class LevelView {
     }
   }
 
-  playItemDropAnimation(playerPosition, facing, destroyPosition, blockType, completionHandler) {
+  playItemDropAnimation(destroyPosition, blockType, completionHandler) {
     var sprite = this.createMiniBlock(destroyPosition[0], destroyPosition[1], blockType);
     sprite.sortOrder = this.yToIndex(destroyPosition[1]) + 2;
-    this.onAnimationEnd(this.playScaledSpeed(sprite.animations, "animate"), () => {
-      this.playItemAcquireAnimation(playerPosition, facing, sprite, completionHandler, blockType);
-    });
+
+    if (this.controller.levelData.isEventLevel) {
+      completionHandler();
+    } else {
+      this.onAnimationEnd(this.playScaledSpeed(sprite.animations, "animate"), () => {
+        const player = this.controller.levelModel.player;
+        this.playItemAcquireAnimation(player.position, player.facing, sprite, completionHandler, blockType);
+      });
+    }
   }
 
   playScaledSpeed(animationManager, name) {
