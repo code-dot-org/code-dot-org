@@ -3228,6 +3228,8 @@ en:
         bee leaves: bee leaves
       storyline5:
         wrapup: wrapup
+      subgoal v2 U3L04 Student Lesson Introduction:
+        Programming with Simple Commands - Getting Started: Programming with Simple Commands - Getting Started
       test cb level:
         description here: description here
         test cb level: test cb level
@@ -6636,10 +6638,12 @@ en:
       U3L06 Assessment2:
         A collection of commands that can be used in a programming language.: A collection of commands that can be used in a programming language.
         A named memory location.: A named memory location.
+        A way to give <code>input</code> to a function that controls how the function runs.: A way to give <code>input</code> to a function that controls how the function runs.
         A way to give input to a function that controls how the function runs.: A way to give input to a function that controls how the function runs.
         Another name for the purpose of a function.: Another name for the purpose of a function.
         'Multiple Choice: What is a function parameter?': 'Multiple Choice: What is a function parameter?'
         'Para-meter: a measure of the distance between a function''s conception and implementation.': 'Para-meter: a measure of the distance between a function''s conception and implementation.'
+        foo foo foo balh alah: foo foo foo balh alah
       U3L06-API-multichoice:
         Abstract Parameter Interface: Abstract Parameter Interface
         Abstract Programming Inheritance: Abstract Programming Inheritance
