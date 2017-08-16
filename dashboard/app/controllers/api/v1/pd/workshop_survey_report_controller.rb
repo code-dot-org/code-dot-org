@@ -75,27 +75,15 @@ module Api::V1::Pd
 
       survey_report[:this_workshop] = summarize_workshop_surveys(workshops: [@workshop], facilitator_name: facilitator_name)
 
-      if current_user.facilitator?
-        survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-          workshops: Pd::Workshop.where(
-            subject: @workshop.subject,
-            course: @workshop.course
-          ).facilitated_by(current_user),
-          facilitator_name: facilitator_name,
-          include_free_response: false
-        )
-      elsif current_user.workshop_organizer?
-        survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
-          workshops: Pd::Workshop.where(
-            subject: @workshop.subject,
-            course: @workshop.course
-          ).organized_by(current_user),
-          facilitator_breakdown: false,
-          include_free_response: false
-        )
-      else
-        survey_report[:all_my_local_workshops] = {}
-      end
+      survey_report[:all_my_local_workshops] = summarize_workshop_surveys(
+        workshops: Pd::Workshop.where(
+          subject: @workshop.subject,
+          course: @workshop.course
+        ).facilitated_or_organized_by(current_user),
+        facilitator_breakdown: false,
+        facilitator_name: facilitator_name,
+        include_free_response: false
+      )
 
       aggregate_for_all_workshops = JSON.parse(AWS::S3.download_from_bucket('pd-workshop-surveys', "aggregate-workshop-scores-production"))
       survey_report[:all_workshops_for_course] = aggregate_for_all_workshops['CSP Local Summer Workshops']
