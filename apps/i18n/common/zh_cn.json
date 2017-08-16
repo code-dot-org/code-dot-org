@@ -680,6 +680,7 @@
   "withoutHints": "没使用任何提示！",
   "workspaceHeaderShort": "工作区域",
   "yes": "是",
+  "addStudents": "Add students",
   "loginTypeSyncButton": "Sync students from {providerName}",
   "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
   "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",
