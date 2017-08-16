@@ -468,9 +468,8 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
       $(saveButtonSelector).prop('disabled', true).text(msg.saving());
       project.copy(project.getNewProjectName())
         .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-        .then(() => {
-          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
-        });
+        .then(() => $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery()))
+        .catch(err => console.log(err));
     });
   }
 
@@ -497,7 +496,10 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
         project.copy(project.getNewProjectName(), {shouldPublish: true})
           .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
           .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
-          .catch(() => store.dispatch({type: PUBLISH_FAILURE}));
+          .catch(err => {
+            console.log(err);
+            store.dispatch({type: PUBLISH_FAILURE});
+          });
       });
     });
   }

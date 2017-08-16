@@ -849,14 +849,18 @@ var projects = module.exports = {
       current.projectType = this.getStandaloneApp();
     }
     this.setName(newName);
-    return new Promise(resolve => {
-      channels.create(current, function (err, data) {
+    return new Promise((resolve, reject) => {
+      channels.create(current, (err, data) => {
         this.updateCurrentData_(err, data, options);
+        if (err) {
+          reject(err);
+          return;
+        }
         this.save(
           false /* forceNewVersion */,
           true /* preparingRemix */
-        ).then(resolve);
-      }.bind(this));
+        ).then(resolve).catch(reject);
+      });
     });
   },
   copyAssets(srcChannel, callback) {
