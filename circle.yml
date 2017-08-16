@@ -119,10 +119,7 @@ test:
         dashboard_port: 3000
         pegasus_port: 3000
         " >> locals.yml
-
-    # Recompile application.js to pick up override_dashboard/pegasus setting
-    - cd dashboard && bundle exec rake assets:precompile_application_js
-
+    - bundle exec rake circle:recompile_application_js
     - bundle exec rake circle:seed_ui_test:
         timeout: 1000
     - bundle exec rake circle:run_ui_tests:

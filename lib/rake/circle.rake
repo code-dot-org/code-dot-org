@@ -139,6 +139,12 @@ namespace :circle do
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
+
+  task :recompile_application_js do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.rake 'assets:precompile_application_js'
+    end
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
