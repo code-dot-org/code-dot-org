@@ -387,6 +387,11 @@ export default class BaseEntity {
         this.controller.addCommandRecord("drop", this.type, commandQueueItem.repeat);
         this.controller.levelView.playItemDropAnimation(this.position, itemType, () => {
             commandQueueItem.succeeded();
+
+            const playerCommand = this.controller.levelModel.player.queue.currentCommand;
+            if (playerCommand && playerCommand.waitForOtherQueue) {
+              playerCommand.succeeded();
+            }
         });
     }
 
