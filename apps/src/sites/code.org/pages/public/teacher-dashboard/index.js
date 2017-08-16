@@ -10,7 +10,12 @@ import ReactDOM from 'react-dom';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 import experiments from '@cdo/apps/util/experiments';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import { renderSectionsPage, unmountSectionsPage } from './sections';
+import {
+  renderSectionsPage,
+  unmountSectionsPage,
+  renderSyncOauthSectionControl,
+  unmountSyncOauthSectionControl,
+} from './sections';
 
 const script = document.querySelector('script[data-teacherdashboard]');
 const scriptData = JSON.parse(script.dataset.teacherdashboard);
@@ -54,6 +59,13 @@ function main() {
   var i18n = scriptData.i18n;
   var error_string_none_selected = i18n.error_string_none_selected;
   var error_string_other_section = i18n.error_string_other_section;
+
+  //Removes sections tab in header for section-flow experiments
+  //Temporary fix until tab can be completely deleted
+  if (experiments.isEnabled('section-flow-2017')) {
+    $('#header-teacher-sections').remove();
+    $('#hamburger-teacher-sections').parent().parent().remove();
+  }
 
   // Declare app level module which depends on filters, and services
   angular.module('teacherDashboard', [
@@ -192,6 +204,9 @@ function main() {
 
   var app = angular.module('teacherDashboard.controllers', []);
 
+  //helper function for using section-flow-2017 flag
+  const newFlow = () => experiments.isEnabled('section-flow-2017');
+
   app.controller('SectionsController', ['$scope', '$window', 'sectionsService',
       function ($scope, $window, sectionsService) {
     firehoseClient.putRecord(
@@ -218,6 +233,8 @@ function main() {
       }
     );
 
+    $scope.new_flow = newFlow;
+
     $scope.section = sectionsService.get({id: $routeParams.sectionid});
 
     $scope.script_id = parseInt($routeParams.scriptid);
@@ -239,6 +256,8 @@ function main() {
         event: 'SectionDetailController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -271,14 +290,6 @@ function main() {
       }
     );
 
-    $scope.new_flow = function () {
-      if (experiments.isEnabled('section-flow-2017')) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-
     // the ng-select in the nav compares by reference not by value, so we can't just set
     // selectedSection to section, we have to find it in sections.
     $scope.sections.$promise.then(
@@ -296,6 +307,18 @@ function main() {
     $scope.gender_list = {f: i18n.dashboard_students_female, m: i18n.dashboard_students_male};
 
     $scope.bulk_import = {editing: false, students: ''};
+
+    if ($scope.tab === 'manage') {
+      $scope.$on('react-sync-oauth-section-rendered', () => {
+        $scope.section.$promise.then(section =>
+          renderSyncOauthSectionControl({
+            sectionId: section.id,
+            provider: scriptData.provider
+          })
+        );
+      });
+      $scope.$on('$destroy', unmountSyncOauthSectionControl);
+    }
 
     $scope.edit = function (student) {
       student.editing = true;
@@ -442,6 +465,8 @@ function main() {
     );
     var self = this;
 
+    $scope.new_flow = newFlow;
+
     // 'Other Section' selected
     $scope.otherTeacher = 'Other Teacher';
     $scope.stayEnrolledInCurrentSection = 'true';
@@ -537,6 +562,8 @@ function main() {
       }
     );
 
+    $scope.new_flow = newFlow;
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
 
@@ -570,6 +597,8 @@ function main() {
         event: 'SectionProjectsController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     $scope.sections = sectionsService.query();
     $scope.section = sectionsService.get({id: $routeParams.id});
@@ -607,6 +636,8 @@ function main() {
         event: 'SectionProgressController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
@@ -767,6 +798,8 @@ function main() {
       }
     );
 
+    $scope.new_flow = newFlow;
+
     $scope.section = sectionsService.get({id: $routeParams.id});
     $scope.sections = sectionsService.query();
     $scope.tab = 'responses';
@@ -841,6 +874,8 @@ function main() {
         event: 'SectionAssessmentsController'
       }
     );
+
+    $scope.new_flow = newFlow;
 
     // Some strings.
     var submission_list = {

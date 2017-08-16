@@ -224,7 +224,7 @@ class AdminUsersControllerTest < ActionController::TestCase
     duplicate_user2.update_column(:hashed_email, User.hash_email('test_duplicate_user1@example.com'))
     sign_in @admin
     post :permissions_form, params: {search_term: 'test_duplicate_user1@example.com'}
-    assert_select 'td', duplicate_user1.id.to_s
+    assert_select 'td', text: duplicate_user1.id.to_s
     assert_select(
       '.alert-success',
       "More than one User matches email address.  Showing first result.  "\
@@ -261,5 +261,11 @@ class AdminUsersControllerTest < ActionController::TestCase
       get :revoke_permission, params: {user_id: @facilitator.id, permission: UserPermission::FACILITATOR}
     end
     refute @facilitator.reload.permission?(UserPermission::FACILITATOR)
+  end
+
+  test 'find users with permission finds users' do
+    sign_in @admin
+    get :permissions_form, params: {permission: UserPermission::FACILITATOR}
+    assert_select 'td', text: @facilitator.id.to_s
   end
 end

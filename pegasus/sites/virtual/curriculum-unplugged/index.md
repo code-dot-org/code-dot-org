@@ -83,7 +83,7 @@ end
 Each of these activities can either be used alone or with other computer science lessons on related concepts.
 <br/>
 
-<a href="https://drive.google.com/open?id=0B-uvt08wYSQqZ05qU0M1VkxMeWs" target="_new">Course A-F Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
+<a href="https://code.org/files/CSF_CoursesA-F_Curriculum_Guide.pdf" target="_new">Course A-F Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/complete_compressed.pdf" target="_new">Course 1-4 Curriculum Book</a> | <a href="http://code.org/curriculum/docs/k-5/teacherKeyComplete.pdf" target="_new">Course 1-4 Answer Keys</a>
 <br/>
 
 <table cellpadding="10">
@@ -105,21 +105,13 @@ Each of these activities can either be used alone or with other computer science
    <% lessons.each_with_index do |lesson, index|
     	# Get the course number formatted well
 
-     theCourse = lesson[:courseNum_s]
+     theCourse = lesson[:courseLesson_s]
 
 	case theCourse
-	when "course1"
-	    theCourse = "Course 1: Stage "
-	when "course2"
-	    theCourse = "Course 2: Stage "
-	when "course3"
-	    theCourse = "Course 3: Stage "
-	when "course4"
-	    theCourse = "Course 4: Stage "
-	when "20-hour"
-	    theCourse = "Accelerated Course: Stage "
-	else
+	when nil
 	    theCourse = ""
+	else
+	    theCourse = theCourse
 	end
   %>
 
@@ -127,7 +119,7 @@ Each of these activities can either be used alone or with other computer science
     <tr>
       <td rowspan="2" style="color: white; border:1px solid white; text-align: center;"><%= lesson[:mainConcept_s] %></td>
       <td style="border:1px solid #999999;"> <h3><a href="<%= lesson[:lessonURL_t] %>" target="_new"><%= lesson[:name_t] %></a></h3>
-      	<div style="font-size: 11px; line-height: 120%;"><%= "<b>" + theCourse + lesson[:lessonNum_s] + "<br/> (age " + lesson[:age_s] +") </b>" %><br/><br/></div>
+      	<div style="font-size: 11px; line-height: 120%;"><%= "<b>" + theCourse + "<br/> (age " + lesson[:age_s] +") </b>" %><br/><br/></div>
      	<div style="font-size: 12px; line-height: 110%;"><%= lesson[:overview_t] %><br/><br/></div>
         <a href="<%= lesson[:lessonPlan_t] %>" target="_new">Lesson Plan</a>
         <%	if lesson[:teacherVid_t].present? %>
@@ -136,8 +128,10 @@ Each of these activities can either be used alone or with other computer science
 
       </td>
       <td style="border:1px solid #999999;">
+      <% if lesson[:lessonVid_t].present? %>
       <%= youtube_embed(lesson[:lessonVid_t])%>
    		<a href="<%= lesson[:lessonVid_t] %>"><%= lesson[:lessonVid_t] %></a>
+   		<% end %>
 
       </td>
       <td style="border:1px solid #999999;">
