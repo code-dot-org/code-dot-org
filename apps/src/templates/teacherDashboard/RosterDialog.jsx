@@ -6,7 +6,7 @@ import color from '../../util/color';
 import locale from '@cdo/locale';
 import {
   cancelImportRosterFlow,
-  importRoster,
+  importOrUpdateRoster,
   isRosterDialogOpen,
 } from './teacherSectionsRedux';
 
@@ -155,7 +155,12 @@ class RosterDialog extends React.Component {
   state = {selectedId: null};
 
   importClassroom = () => {
-    this.props.handleImport(this.state.selectedId);
+    const classrooms = this.props.classrooms;
+    const selectedName = classrooms && classrooms.find(classroom => {
+      return classroom.id === this.state.selectedId;
+    }).name;
+
+    this.props.handleImport(this.state.selectedId, selectedName);
     this.setState({selectedId: null});
   };
 
@@ -236,6 +241,6 @@ export default connect(state => ({
   studioUrl: state.teacherSections.studioUrl,
   provider: state.teacherSections.provider,
 }), {
-  handleImport: importRoster,
+  handleImport: importOrUpdateRoster,
   handleCancel: cancelImportRosterFlow,
 })(RosterDialog);
