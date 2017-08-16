@@ -85,6 +85,7 @@ class GameController {
     // Phaser "slow motion" modifier we originally tuned animations using
     this.assumedSlowMotion = 1.5;
     this.initialSlowMotion = gameControllerConfig.customSlowMotion || this.assumedSlowMotion;
+    this.tweenTimeScale = 1.5 / this.initialSlowMotion;
 
     this.playerDelayFactor = 1.0;
     this.dayNightCycle = false;
