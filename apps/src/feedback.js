@@ -10,7 +10,12 @@ import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/publishDialog/PublishDialog';
-import { showPublishDialog } from './templates/publishDialog/publishDialogRedux';
+import {
+  showPublishDialog,
+  PUBLISH_REQUEST,
+  PUBLISH_SUCCESS,
+  PUBLISH_FAILURE,
+} from './templates/publishDialog/publishDialogRedux';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -469,28 +474,31 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
     });
   }
 
-  // Keep the code simpler by waiting until after the project has been saved
-  // before we prompt the user to confirm they want to publish it, since the
-  // PublishDialog redux logic assumes the project will exist already.
-
   const publishButtonSelector = '#publish-to-project-gallery-button';
   const publishButton = feedback.querySelector(publishButtonSelector);
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
-      $(publishButtonSelector).prop('disabled', true).text(msg.saving());
-      project.copy(project.getNewProjectName(), {shouldPublish: true})
-        .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
-        .then(() => {
-          // The project was saved but not yet published, so disable the Save button.
-          $(saveButtonSelector).prop('disabled', true).text(msg.savedToGallery());
+      // Hide the current dialog since we're about to show the publish dialog
+      feedbackDialog.hideButDontContinue = true;
+      feedbackDialog.hide();
+      feedbackDialog.hideButDontContinue = false;
 
-          // Hide the current dialog since we're about to show the publish dialog
-          feedbackDialog.hideButDontContinue = true;
-          feedbackDialog.hide();
-          feedbackDialog.hideButDontContinue = false;
+      // project.copy relies on state not in redux, and we want to keep this
+      // badness out of our redux code. Therefore, define what happens when
+      // publish dialog publish button is clicked here, outside of the publish
+      // dialog redux.
+      //
+      // Once project.js is moved onto redux, the remix-and-publish operation
+      // should be moved inside the publish dialog redux.
 
-          FeedbackUtils.showConfirmPublishDialog();
-        });
+      const store = getStore();
+      FeedbackUtils.showConfirmPublishDialog(() => {
+        store.dispatch({type: PUBLISH_REQUEST});
+        project.copy(project.getNewProjectName(), {shouldPublish: true})
+          .then(() => FeedbackUtils.saveThumbnail(options.feedbackImage))
+          .then(() => store.dispatch({type: PUBLISH_SUCCESS}))
+          .catch(() => store.dispatch({type: PUBLISH_FAILURE}));
+      });
     });
   }
 
@@ -528,7 +536,7 @@ FeedbackUtils.prototype.displayFeedback = function (options, requiredBlocks,
   }
 };
 
-FeedbackUtils.showConfirmPublishDialog = () => {
+FeedbackUtils.showConfirmPublishDialog = onConfirmPublish => {
   let publishDialog = document.getElementById('legacy-share-publish-dialog');
   if (!publishDialog) {
     publishDialog = document.createElement('div');
@@ -536,13 +544,13 @@ FeedbackUtils.showConfirmPublishDialog = () => {
     document.body.appendChild(publishDialog);
   }
 
-  const projectId = project.getCurrentId();
-  const projectType = project.getStandaloneApp();
   const store = getStore();
-  store.dispatch(showPublishDialog(projectId, projectType));
+  store.dispatch(showPublishDialog());
   ReactDOM.render(
     <Provider store={store}>
-      <PublishDialog/>
+      <PublishDialog
+        onConfirmPublishOverride={onConfirmPublish}
+      />
     </Provider>,
     publishDialog
   );
