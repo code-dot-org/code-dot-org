@@ -5,7 +5,6 @@ import {throwOnConsoleWarnings} from '../../../util/testUtils';
 import {
   UnconnectedOwnedSections as OwnedSections
 } from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import experiments, {SECTION_FLOW_2017} from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
 import RosterDialog from "@cdo/apps/templates/teacherDashboard/RosterDialog";
 import AddSectionDialog from "@cdo/apps/templates/teacherDashboard/AddSectionDialog";
@@ -25,49 +24,44 @@ const defaultProps = {
 describe('OwnedSections', () => {
   throwOnConsoleWarnings();
 
-  describe(`(${SECTION_FLOW_2017})`, () => {
-    beforeEach(() => experiments.setEnabled(SECTION_FLOW_2017, true));
-    afterEach(() => experiments.setEnabled(SECTION_FLOW_2017, false));
+  it('renders SetUpSections when no sections have been created', () => {
+    const wrapper = shallow(
+      <OwnedSections
+        {...defaultProps}
+        numSections={0}
+      />
+    );
+    expect(wrapper).to.containMatchingElement(
+      <div>
+        <SetUpSections/>
+        <RosterDialog/>
+        <AddSectionDialog/>
+        <EditSectionDialog/>
+      </div>
+    );
+  });
 
-    it('renders SetUpSections when no sections have been created', () => {
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          numSections={0}
-        />
-      );
-      expect(wrapper).to.containMatchingElement(
+  it('renders SectionTable when there are sections', () => {
+    const wrapper = shallow(
+      <OwnedSections
+        {...defaultProps}
+        numSections={3}
+      />
+    );
+    const instance = wrapper.instance();
+    expect(wrapper).to.containMatchingElement(
+      <div>
         <div>
-          <SetUpSections/>
-          <RosterDialog/>
-          <AddSectionDialog/>
-          <EditSectionDialog/>
+          <Button
+            text="New section"
+            onClick={instance.addSection}
+          />
+          <SectionTable onEdit={instance.handleEditRequest}/>
         </div>
-      );
-    });
-
-    it('renders SectionTable when there are sections', () => {
-      const wrapper = shallow(
-        <OwnedSections
-          {...defaultProps}
-          numSections={3}
-        />
-      );
-      const instance = wrapper.instance();
-      expect(wrapper).to.containMatchingElement(
-        <div>
-          <div>
-            <Button
-              text="New section"
-              onClick={instance.addSection}
-            />
-            <SectionTable onEdit={instance.handleEditRequest}/>
-          </div>
-          <RosterDialog/>
-          <AddSectionDialog/>
-          <EditSectionDialog/>
-        </div>
-      );
-    });
+        <RosterDialog/>
+        <AddSectionDialog/>
+        <EditSectionDialog/>
+      </div>
+    );
   });
 });
