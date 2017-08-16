@@ -860,6 +860,7 @@ def generate_teacher_student(name, teacher_authorized)
 
     Then I create a new section
 
+    And I check the pegasus URL
     And I click selector "a:contains('0')" once I see it
     And I save the section url
     Then I sign out
@@ -873,6 +874,11 @@ def generate_teacher_student(name, teacher_authorized)
     And I click selector "input[type=submit]" once I see it
     And I wait until I am on "http://studio.code.org/home"
   }
+end
+
+And /^I check the pegasus URL$/ do
+  pegasus_url = @browser.execute_script('return window.dashboard.CODE_ORG_URL')
+  puts "Pegasus URL is #{pegasus_url}"
 end
 
 And /^I create a new section$/ do
