@@ -1,13 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import _ from 'lodash';
 import color from '@cdo/apps/util/color';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
 import ResourceType, { stringForType, resourceShape } from './resourceType';
 
 const styles = {
   box: {
+    marginTop: 10,
+    marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
+  },
+  error: {
+    color: 'red',
   }
 };
 
@@ -16,24 +20,35 @@ const defaultLinks = {
   [ResourceType.teacherForum]: 'https://forum.code.org/',
   [ResourceType.curriculum]: '/link/to/curriculum',
   [ResourceType.professionalLearning]: '/link/to/professional/learning',
+  [ResourceType.lessonPlans]: '/link/to/lesson/plans',
+  [ResourceType.vocabulary]: '/link/to/vocab',
+  [ResourceType.codeIntroduced]: '/link/to/code/introduced',
+  [ResourceType.standardMappings]: '/link/to/standard/mappings',
+  [ResourceType.allHandouts]: '/link/to/all/handouts',
+  [ResourceType.videos]: '/link/to/videos',
 };
 
 export default class ResourcesEditor extends Component {
   static propTypes = {
     inputStyle: PropTypes.object.isRequired,
     resources: PropTypes.arrayOf(resourceShape).isRequired,
+    maxResources: PropTypes.number.isRequired,
+    renderPreview: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
     const resources = [...props.resources];
-    // add empty entries to get to three
-    while (resources.length < 3) {
+    // add empty entries to get to max
+    while (resources.length < props.maxResources) {
       resources.push({type: '', link: ''});
     }
 
-    this.state = { resources };
+    this.state = {
+      resources,
+      errorString: ''
+    };
   }
 
   handleChangeType = (event, index) => {
@@ -46,7 +61,13 @@ export default class ResourcesEditor extends Component {
       newResources[index].link = defaultLinks[type];
     }
 
-    this.setState({resources: newResources});
+    let errorString = '';
+    let types = newResources.map(resource => resource.type).filter(Boolean);
+    if (types.length !== _.uniq(types).length) {
+      errorString = 'Your resource types contains a duplicate';
+    }
+
+    this.setState({resources: newResources, errorString});
   }
 
   handleChangeLink = (event, index) => {
@@ -57,11 +78,17 @@ export default class ResourcesEditor extends Component {
   }
 
   render() {
-    const { resources } = this.state;
+    const { resources, errorString } = this.state;
 
+    // avoid showing multiple empty resources
+    const lastNonEmpty = _.findLastIndex(resources, ({type, link}) => link && type);
+
+    // Resources contains maxResources entries. For the empty entries, we want to
+    // show just one, so we slice to the lastNonEmpty +1 to get an empty entry
+    // and +1 more because slice is exclusive.
     return (
       <div>
-        {resources.map((resource, index) =>
+        {resources.slice(0, lastNonEmpty + 2).map((resource, index) =>
           <Resource
             key={index}
             id={index + 1}
@@ -73,13 +100,9 @@ export default class ResourcesEditor extends Component {
         )}
 
         <div style={styles.box}>
+          <div style={styles.error}>{errorString}</div>
           <div style={{marginBottom: 5}}>Preview:</div>
-          <CourseOverviewTopRow
-            sectionsInfo={[]}
-            id={-1}
-            title="Unused title"
-            resources={resources.filter(x => !!x.type)}
-          />
+          {this.props.renderPreview(resources.filter(x => !!x.type))}
         </div>
       </div>
     );
@@ -87,9 +110,11 @@ export default class ResourcesEditor extends Component {
 }
 
 const Resource = ({id, resource, inputStyle, handleChangeType, handleChangeLink}) => (
-  <div>
+  <div style={{marginTop: 8}}>
     Resource {id}
-    <div>Type</div>
+    <div>
+      Type
+    </div>
     <select
       name="resourceTypes[]"
       style={inputStyle}
@@ -101,9 +126,10 @@ const Resource = ({id, resource, inputStyle, handleChangeType, handleChangeLink}
         <option value={type} key={index}>{stringForType[type]}</option>
       )}
     </select>
-    <div>Link</div>
+    <div>
+      Link
+    </div>
     <input
-      type="text"
       style={inputStyle}
       name="resourceLinks[]"
       value={resource.link}
