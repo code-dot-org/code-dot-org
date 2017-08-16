@@ -36,7 +36,6 @@ npm-debug.log
 /aws/.shared-built
 /aws/.shared-commit-built
 /bin/cron/log
-/bin/cron/with_pg/Gemfile.lock
 /build-started
 /coverage
 /crontab
