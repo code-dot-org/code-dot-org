@@ -4,6 +4,7 @@ import {stubRedux, restoreRedux, registerReducers, getStore} from '@cdo/apps/red
 import reducer, {
   USER_EDITABLE_SECTION_PROPS,
   PENDING_NEW_SECTION_ID,
+  __testInterface__,
   setStudioUrl,
   setOAuthProvider,
   setValidLoginTypes,
@@ -25,7 +26,22 @@ import reducer, {
   sectionFromServerSection,
   isAddingSection,
   isEditingSection,
+  beginImportRosterFlow,
+  cancelImportRosterFlow,
+  importOrUpdateRoster,
+  isRosterDialogOpen,
+  oauthProvider,
+  sectionCode,
+  sectionName,
+  sectionProvider,
+  isSectionProviderManaged,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
+
+const {
+  IMPORT_ROSTER_FLOW_BEGIN,
+  IMPORT_ROSTER_FLOW_LIST_LOADED,
+} = __testInterface__;
 
 const sections = [
   {
@@ -147,6 +163,19 @@ const validCourses = [
 
 describe('teacherSectionsRedux', () => {
   const initialState = reducer(undefined, {});
+  let store;
+
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({teacherSections: reducer});
+    store = getStore();
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  const getState = () => store.getState();
 
   describe('setStudioUrl', () => {
     it('sets our url', () => {
@@ -158,9 +187,11 @@ describe('teacherSectionsRedux', () => {
 
   describe('setOAuthProvider', () => {
     it('sets oauth provider', () => {
-      const action = setOAuthProvider('clever');
-      const nextState = reducer(initialState, action);
-      assert.equal(nextState.provider, 'clever');
+      expect(oauthProvider(getState())).to.be.null;
+      store.dispatch(setOAuthProvider('clever'));
+      expect(oauthProvider(getState())).to.equal('clever');
+      store.dispatch(setOAuthProvider('google_classroom'));
+      expect(oauthProvider(getState())).to.equal('google_classroom');
     });
   });
 
@@ -582,7 +613,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('finishEditingSection', () => {
-    let server, store;
+    let server;
 
     // Fake server responses to reuse in our tests
     const newSectionDefaults = {
@@ -616,7 +647,7 @@ describe('teacherSectionsRedux', () => {
     const failureResponse = [500, {}, ''];
 
     function state() {
-      return store.getState().teacherSections;
+      return getState().teacherSections;
     }
 
     beforeEach(function () {
@@ -625,14 +656,10 @@ describe('teacherSectionsRedux', () => {
 
       // Test with a real redux store, not just the reducer, because this
       // action depends on the redux-thunk extension.
-      stubRedux();
-      registerReducers({teacherSections: reducer});
-      store = getStore();
       store.dispatch(setSections(sections));
     });
 
     afterEach(function () {
-      restoreRedux();
       server.restore();
     });
 
@@ -774,7 +801,7 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('asyncLoadSectionData', () => {
-    let server, store;
+    let server;
 
     function successResponse(response = []) {
       return [
@@ -787,22 +814,15 @@ describe('teacherSectionsRedux', () => {
     const failureResponse = [500, {}, 'CustomErrorBody'];
 
     function state() {
-      return store.getState().teacherSections;
+      return getState().teacherSections;
     }
 
     beforeEach(function () {
       // Stub server responses
       server = sinon.fakeServer.create();
-
-      // Test with a real redux store, not just the reducer, because this
-      // action depends on the redux-thunk extension.
-      stubRedux();
-      registerReducers({teacherSections: reducer});
-      store = getStore();
     });
 
     afterEach(function () {
-      restoreRedux();
       server.restore();
     });
 
@@ -1010,6 +1030,333 @@ describe('teacherSectionsRedux', () => {
       const initialState = reducer(initialState, beginEditingNewSection());
       const state = reducer(initialState, cancelEditingSection());
       assert.isFalse(isEditingSection(state));
+    });
+  });
+
+  describe('the beginImportRosterFlow action', () => {
+    let server;
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      // set up some default success responses
+      server.respondWith(
+        'GET', '/dashboardapi/google_classrooms',
+        successResponse()
+      );
+      server.respondWith(
+        'GET', '/dashboardapi/clever_classrooms',
+        successResponse()
+      );
+    });
+    afterEach(() => server.restore());
+
+    const successResponse = (body = {}) => [
+      200,
+      {"Content-Type": "application/json"},
+      JSON.stringify(body)
+    ];
+
+    const failureResponse = [500, {}, 'test-failure-body'];
+
+    const withGoogle = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.clever));
+
+    it('throws if no oauth provider has been set', () => {
+      return expect(store.dispatch(beginImportRosterFlow()))
+        .to.be.rejected;
+    });
+
+    it('does nothing if the roster dialog was already open', () => {
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(isRosterDialogOpen(getState())).to.be.true;
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(isRosterDialogOpen(getState())).to.be.true;
+      expect(server.requests).to.have.length(0);
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('opens the roster dialog if it was closed', () => {
+      withGoogle();
+      expect(isRosterDialogOpen(getState())).to.be.false;
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(isRosterDialogOpen(getState())).to.be.true;
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('requests one api for Google Classroom', () => {
+      withGoogle();
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url).to.equal('/dashboardapi/google_classrooms');
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('requests a different api for Clever', () => {
+      withClever();
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url).to.equal('/dashboardapi/clever_classrooms');
+      server.respond();
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('sets the classroom list on success', () => {
+      withGoogle();
+      server.respondWith(
+        'GET', '/dashboardapi/google_classrooms',
+        successResponse({courses: [1, 2, 3]})
+      );
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
+
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
+
+      server.respond();
+      expect(getState().teacherSections.classrooms).to.deep.equal(
+        [1, 2, 3]
+      );
+      expect(getState().teacherSections.loadError).to.be.null;
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('sets the loadError on failure', () => {
+      withGoogle();
+      server.respondWith(
+        'GET', '/dashboardapi/google_classrooms',
+        failureResponse
+      );
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
+
+      const promise = store.dispatch(beginImportRosterFlow());
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.be.null;
+
+      server.respond();
+      expect(getState().teacherSections.classrooms).to.be.null;
+      expect(getState().teacherSections.loadError).to.deep.equal({
+        status: 500,
+        message: 'Unknown error.',
+      });
+      return expect(promise).to.be.rejected;
+    });
+  });
+
+  describe('the cancelImportRosterFlow action', () => {
+    it('closes the roster dialog if it was open', () => {
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(isRosterDialogOpen(getState())).to.be.true;
+      store.dispatch(cancelImportRosterFlow());
+      expect(isRosterDialogOpen(getState())).to.be.false;
+    });
+
+    it('clears the classroom list', () => {
+      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+      store.dispatch(cancelImportRosterFlow());
+      expect(getState().teacherSections.classrooms).to.be.null;
+    });
+  });
+
+  describe('the importOrUpdateRoster action', () => {
+    let server;
+    const TEST_COURSE_ID = 'test-course-id';
+    const TEST_COURSE_NAME = 'test-course-name';
+
+    beforeEach(() => {
+      server = sinon.fakeServer.create();
+      // We have chained server requests separated by promises in these
+      // tests, so have the fake server respond immediately becaue it's
+      // difficult to trigger the fake responses at the right times.
+      server.respondImmediately = true;
+      // set up some default success responses
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
+      server.respondWith('GET', `/dashboardapi/import_clever_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({}));
+      server.respondWith('GET', '/dashboardapi/sections', successResponse([]));
+      server.respondWith('GET', '/dashboardapi/courses', successResponse([]));
+      server.respondWith('GET', '/v2/sections/valid_scripts', successResponse([]));
+    });
+    afterEach(() => server.restore());
+
+    const successResponse = (body = {}) => [
+      200,
+      {"Content-Type": "application/json"},
+      JSON.stringify(body)
+    ];
+
+    const withGoogle = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.google_classroom));
+    const withClever = () => store.dispatch(setOAuthProvider(OAuthSectionTypes.clever));
+
+    it('immediately clears the classroom list', () => {
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_LIST_LOADED, classrooms: [1, 2, 3]});
+      expect(getState().teacherSections.classrooms).to.deep.equal([1, 2, 3]);
+
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      expect(getState().teacherSections.classrooms).to.be.null;
+
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('uses one api for Google Classroom', () => {
+      withGoogle();
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url)
+        .to.equal('/dashboardapi/import_google_classroom?courseId=test-course-id&courseName=test-course-name');
+
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('uses a different api for Clever', () => {
+      withClever();
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+
+      expect(server.requests).to.have.length(1);
+      expect(server.requests[0].method).to.equal('GET');
+      expect(server.requests[0].url)
+        .to.equal('/dashboardapi/import_clever_classroom?courseId=test-course-id&courseName=test-course-name');
+
+      return expect(promise).to.be.fulfilled;
+    });
+
+    it('closes the dialog on success', () => {
+      withClever();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(isRosterDialogOpen(getState())).to.be.true;
+
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      expect(isRosterDialogOpen(getState())).to.be.true;
+
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(isRosterDialogOpen(getState())).to.be.false;
+      });
+    });
+
+    it('reloads the section data on success', () => {
+      // Set up custom server sections response
+      server.respondWith('GET', '/dashboardapi/sections', successResponse(sections));
+
+      withClever();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(getState().teacherSections.sections).to.deep.equal({});
+
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(server.requests).to.have.length(4);
+        expect(server.requests[1].method).to.equal('GET');
+        expect(server.requests[1].url).to.equal('/dashboardapi/sections');
+        expect(server.requests[2].method).to.equal('GET');
+        expect(server.requests[2].url).to.equal('/dashboardapi/courses');
+        expect(server.requests[3].method).to.equal('GET');
+        expect(server.requests[3].url).to.equal('/v2/sections/valid_scripts');
+        expect(Object.keys(getState().teacherSections.sections))
+          .to.have.length(sections.length);
+      });
+    });
+
+    it('starts editing the new section on success', () => {
+      // Set up custom section import response
+      server.respondWith('GET', `/dashboardapi/import_google_classroom?courseId=${TEST_COURSE_ID}&courseName=${TEST_COURSE_NAME}`, successResponse({
+        id: 1111,
+      }));
+      // Set up custom section load response to simulate the new section
+      server.respondWith('GET', '/dashboardapi/sections', successResponse([
+        ...sections,
+        {id: 1111}
+      ]));
+
+      withGoogle();
+      store.dispatch({type: IMPORT_ROSTER_FLOW_BEGIN});
+      expect(getState().teacherSections.sectionBeingEdited).to.be.null;
+
+      const promise = store.dispatch(importOrUpdateRoster(TEST_COURSE_ID, TEST_COURSE_NAME));
+      return expect(promise).to.be.fulfilled.then(() => {
+        expect(getState().teacherSections.sectionBeingEdited).not.to.be.null;
+        expect(getState().teacherSections.sectionBeingEdited.id).to.equal(1111);
+      });
+    });
+  });
+
+  describe('the sectionCode selector', () => {
+    it('undefined if the section is not found', () => {
+      expect(sectionCode(getState(), 42)).to.be.undefined;
+    });
+
+    it('the section code if the section is found', () => {
+      store.dispatch(setSections(sections));
+      expect(sectionCode(getState(), 11)).to.equal('PMTKVH');
+    });
+  });
+
+  describe('the sectionName selector', () => {
+    it('undefined if the section is not found', () => {
+      expect(sectionName(getState(), 42)).to.be.undefined;
+    });
+
+    it('the section name if the section is found', () => {
+      store.dispatch(setSections(sections));
+      expect(sectionName(getState(), 11)).to.equal('brent_section');
+    });
+  });
+
+  describe('the sectionProvider selector', () => {
+    beforeEach(() => store.dispatch(setOAuthProvider('google_classroom')));
+
+    it('null if the section is not found', () => {
+      expect(sectionProvider(getState(), 42)).to.be.null;
+    });
+
+    it('null if the section is not provider managed', () => {
+      store.dispatch(setSections(sections));
+      expect(sectionProvider(getState(), 11)).to.be.null;
+    });
+
+    it('the current user oauth provider if the section is provider managed', () => {
+      store.dispatch(setSections([
+        {
+          id: 11,
+          name: 'google test section',
+          login_type: 'google_classroom',
+          code: 'G-123456',
+          studentCount: 10,
+          providerManaged: true,
+        },
+      ]));
+      expect(sectionProvider(getState(), 11)).to.equal('google_classroom');
+    });
+  });
+
+  describe('the isSectionProviderManaged selector', () => {
+    it('false if the section is not found', () => {
+      expect(isSectionProviderManaged(getState(), 42)).to.be.false;
+    });
+
+    it('false if the section is not provider managed', () => {
+      store.dispatch(setSections(sections));
+      expect(isSectionProviderManaged(getState(), 11)).to.be.false;
+    });
+
+    it('true if the section is provider managed', () => {
+      store.dispatch(setSections([
+        {
+          id: 11,
+          name: 'google test section',
+          login_type: 'google_classroom',
+          code: 'G-123456',
+          studentCount: 10,
+          providerManaged: true,
+        },
+      ]));
+      expect(isSectionProviderManaged(getState(), 11)).to.be.true;
     });
   });
 });

@@ -1,24 +1,16 @@
 /** @file Root component for the (deprecated) teacher
  *        dashboard sections page. */
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import OwnedSections from './OwnedSections';
 
 export default class SectionsPage extends Component {
-  static propTypes = {
-    defaultCourseId: PropTypes.number,
-    defaultScriptId: PropTypes.number,
-  };
-
   render() {
     return (
       <div>
         <Breadcrumb/>
-        <OwnedSections
-          defaultCourseId={this.props.defaultCourseId}
-          defaultScriptId={this.props.defaultScriptId}
-        />
+        <OwnedSections/>
       </div>
     );
   }

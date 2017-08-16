@@ -1,4 +1,6 @@
-class HocHardwarePrizes2014
+require_relative './form'
+
+class HocHardwarePrizes2014 < Form
   def self.normalize(data)
     result = {}
     result[:email_s] = required email_address data[:email_s]

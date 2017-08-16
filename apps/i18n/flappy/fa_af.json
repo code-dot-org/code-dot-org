@@ -98,6 +98,7 @@
   "setSpeed": "تنظیم سرعت",
   "setSpeedTooltip": "سرعت مرحله را تعیین می‌کند",
   "shareFlappyTwitter": "بازی Flappy که من ساخته‌ام را نگاه کن. من خودم با @codeorg آن را نوشته‌ام",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "بازی خود را به اشتراک بگذارید:",
   "soundRandom": "تصادفی",
   "soundBounce": "پریدن",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "هنگامیکه Flappy وارد یک مانع می‌شود، اقدامات زیر را اجرا کن.",
   "whenRunButtonClick": "وقتی که بازی شروع می شود",
   "whenRunButtonClickTooltip": "هنگامیکه بازی شروع می‌شود، اقدامات زیر را اجرا کن.",
-  "yes": "بله",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "بله"
 }

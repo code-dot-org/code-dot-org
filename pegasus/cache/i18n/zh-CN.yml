@@ -209,42 +209,31 @@
   learn_classes: "查找本地的课程"
   learn_back_to_minecraft: "通过《我的世界》不断学习"
   hoc_is_here: 12月5日至11日，#HourOfCode又来了。 https://youtu.be/KsOIlDT145A.
-  just_did_hoc: "我刚刚完成了 #HourOfCode —— 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_course1: "我刚完成课程1-来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_course2: "我刚完成课程2-来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_course3: "我刚完成课程3-来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_course4: "我刚完成课程4-来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_coursea: "我刚完成了课程A - 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_courseb: "我刚完成了课程B - 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_coursec: "我刚完成了课程C - 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_coursed: "我刚完成了课程D - 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_coursee: "我刚完成了课程E - 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_coursef: "我刚完成了课程F - 来看看吧！感谢 @Microsoft 支持 @codeorg"
-  just_did_accelerated: "我刚完成加速课程- 来看看！谢谢 @Microsoft 支持 @codeorg"
+  just_did_hoc: "我刚刚完成了 #HourOfCode —— 来看看吧！ @codeorg"
+  just_did_course1: "我刚完成课程1-来看看吧！ @codeorg"
+  just_did_course2: "我刚完成课程2-来看看吧！ @codeorg"
+  just_did_course3: "我刚完成课程3-来看看吧！ @codeorg"
+  just_did_course4: "我刚完成课程4-来看看吧！ @codeorg"
+  just_did_coursea: "我刚完成了课程A - 来看看吧！ @codeorg"
+  just_did_courseb: "我刚完成了课程B - 来看看吧！ @codeorg"
+  just_did_coursec: "我刚完成了课程C - 来看看吧！ @codeorg"
+  just_did_coursed: "我刚完成了课程D - 来看看吧！ @codeorg"
+  just_did_coursee: "我刚完成了课程E - 来看看吧！ @codeorg"
+  just_did_coursef: "我刚完成了课程F - 来看看吧！ @codeorg"
+  just_did_accelerated: "我刚完成加速课程- 来看看！ @codeorg"
   just_did_hoc_donor: 'I just did the #HourOfCode - check it out! Thanks %{donor_twitter}
     for supporting @codeorg'
-  just_did_course1_donor: I just finished Course 1 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course2_donor: I just finished Course 2 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course3_donor: I just finished Course 3 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_course4_donor: I just finished Course 4 - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursea_donor: I just finished Course A - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_courseb_donor: I just finished Course B - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursec_donor: I just finished Course C - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursed_donor: I just finished Course D - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursee_donor: I just finished Course E - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_coursef_donor: I just finished Course F - check it out! Thanks %{donor_twitter}
-    for supporting @codeorg
-  just_did_accelerated_donor: I just finished the Accelerated Course - check it out!
-    Thanks %{donor_twitter} for supporting @codeorg
+  just_did_course1_donor: "我刚完成课程1 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_course2_donor: "我刚完成课程2 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_course3_donor: "我刚完成课程3 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_course4_donor: "我刚完成课程4 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursea_donor: "我刚完成课程A - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_courseb_donor: "我刚完成课程B - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursec_donor: "我刚完成课程C - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursed_donor: "我刚完成课程D - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursee_donor: "我刚完成课程E - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_coursef_donor: "我刚完成课程F - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
+  just_did_accelerated_donor: "我刚完成加速课程 - 来看看吧！感谢 %{donor_twitter} 支持 @codeorg"
   twitter_teach_cs: 90%的人认为，学校应该开展计算机科学教学活动。http://youtu.be/nKIu9yen5nc。访问 https://code.org/。
   twitter_cs_foundational: "计算机科学是每个学生学习的基础。https://youtu.be/QvyTEx1wyOY。"
   learn_hoc: "学习编程一小时"
@@ -857,6 +846,11 @@
   carousel_heading_webpages: "学习如何制作网页"
   carousel_heading_robots: "学习使用机器人进行编程"
   carousel_heading_ide: "在教师中流行的平台"
+  carousel_heading_desktop: Learn to code on a computer
+  carousel_heading_mobtabelem: For phones and tablets
+  carousel_heading_prereader: For pre-readers
+  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
+  carousel_heading_nointernet: Poor internet? Install these apps on your computer
   educator_notes: "教育家笔记"
   teach_led_lesson_plans: "由老师引导的教案"
   learn_footer_all_tutorials: 查看 <a href="https://code.org/educate/allhourofcode">
@@ -865,6 +859,8 @@
   how_to_teach_hoc: "如何教授代码一小时"
   more_resources_educators: "给教师和教育工作者们的更多资源"
   beyond_submission: "想要提交一小时学编程的教程吗? 请参阅标准和提交表单。"
+  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
+    the criteria and submission form.</a>
   participants: "参与者"
   teachers_notes: "老师的笔记"
   teachers_notes_hoc: "教师：请阅读这些重要的教育者说明"
@@ -1454,7 +1450,9 @@
   playlab_shortcode: "玩"
   artist_shortcode: art
   header_home: "首页"
+  header_my_dashboard: My Dashboard
   header_courses: "课程"
+  header_course_catalog: Course Catalog
   header_project_gallery: "项目集"
   header_sections: "小组"
   header_professional_learning: "专业学习"
@@ -1495,13 +1493,4 @@
   user_header_settings: "帐户设置"
   user_header_logout: "注销"
   user_header_signin: "登录"
-  carousel_heading_desktop: Learn to code on a computer
-  carousel_heading_mobtabelem: For phones and tablets
-  carousel_heading_prereader: For pre-readers
-  carousel_heading_beyondblocks: Go beyond blocks - learn a programming language
-  carousel_heading_nointernet: Poor internet? Install these apps on your computer
-  third_party_submission: Want to submit a tutorial to be listed here? <a href="%{submission_url}">See
-    the criteria and submission form.</a>
-  header_my_dashboard: My Dashboard
-  header_course_catalog: Course Catalog
   view_all_sections: View All Sections

@@ -56,6 +56,9 @@ sq:
   puzzle: "Enigmë"
   trophies: "Trofetë"
   courses: 'Kurset'
+  courses_page:
+    title_student: "Mëso në Code Studio"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'Aktiviteti Unplugged'
   of: "i"
   more: "MË SHUMË"
@@ -249,7 +252,9 @@ sq:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "Kurset"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

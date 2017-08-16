@@ -98,6 +98,7 @@
   "setSpeed": "поставува брзина",
   "setSpeedTooltip": "ја поставува брзината нивото",
   "shareFlappyTwitter": "Проверете ја  Flappy играта  јас  ја направив. Јас ја напишав во @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Споделија твојата игра:",
   "soundRandom": "случајно",
   "soundBounce": "bounce",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Изврши ѓи акциите подолу кога Flappy ќе помине  пречка.",
   "whenRunButtonClick": "Кога играта започнува",
   "whenRunButtonClickTooltip": "Извршување на активностите под кога играта почнува.",
-  "yes": "Yes",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Yes"
 }

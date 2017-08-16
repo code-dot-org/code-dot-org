@@ -56,6 +56,9 @@ ka:
   puzzle: "თავსატეხი"
   trophies: "ჯილდოები"
   courses: 'კურსები'
+  courses_page:
+    title_student: "ისწავლეთ კოდის სტუდიაში"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: 'აქტივობა უკომპიუტეროდ'
   of: "მიეკუთვნება"
   more: "მეტის ნახვა"
@@ -249,7 +252,9 @@ ka:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "Home"
+      my_dashboard: "My Dashboard"
       courses: "კურსები"
+      course_catalog: "Course Catalog"
       project_gallery: "Project Gallery"
       sections: "Sections"
       help_support: "Help and support"

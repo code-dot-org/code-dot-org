@@ -56,6 +56,9 @@ zh-TW:
   puzzle: "關卡"
   trophies: "獎盃"
   courses: '課程'
+  courses_page:
+    title_student: "在 Code Studio 上學習"
+    title_teacher: "Teach with Code Studio"
   unplugged_activity: '不插電活動'
   of: "／"
   more: "更多"
@@ -249,7 +252,9 @@ zh-TW:
         gamelab: 'Make a Game Lab project'
         weblab: 'Make a Web Lab (beta) project'
       home: "主頁"
+      my_dashboard: "My Dashboard"
       courses: "課程"
+      course_catalog: "Course Catalog"
       project_gallery: "專案作品集"
       sections: "學習小組"
       help_support: "幫助與支援"

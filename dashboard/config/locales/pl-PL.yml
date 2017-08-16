@@ -62,6 +62,9 @@
   puzzle: "Łamigłówka"
   trophies: Trofea
   courses: Kursy
+  courses_page:
+    title_student: Ucz się z Code Studio
+    title_teacher: Teach with Code Studio
   unplugged_activity: Aktywność unplugged (bez komputera)
   of: z
   more: WIĘCEJ
@@ -290,7 +293,9 @@
         gamelab: Utwórz projekt w Game Lab
         weblab: Make a Web Lab (beta) project
       home: Strona główna
+      my_dashboard: My Dashboard
       courses: Kursy
+      course_catalog: Course Catalog
       project_gallery: Galeria Projektów
       sections: Sekcje
       help_support: Pomoc i wsparcie

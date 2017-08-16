@@ -98,6 +98,7 @@
   "setSpeed": "thiết lập tốc độc",
   "setSpeedTooltip": "Thiết lập tốc độ màn chơi",
   "shareFlappyTwitter": "Xem game Flappy do tôi tự mình làm tại @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Chia sẻ trò chơi của bạn:",
   "soundRandom": "ngẫu nhiên",
   "soundBounce": "Dòng banh/ tung",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Thực hiện các hành động dưới đây khi Flappy đụng vào vật cản.",
   "whenRunButtonClick": "Khi trò chơi bắt đầu",
   "whenRunButtonClickTooltip": "Thực hiện các hành động dưới đây khi trò chơi bắt đầu.",
-  "yes": "Đồng ý",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Đồng ý"
 }

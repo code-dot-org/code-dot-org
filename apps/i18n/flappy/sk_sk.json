@@ -98,6 +98,7 @@
   "setSpeed": "nastaviť rýchlosť",
   "setSpeedTooltip": "Nastaví úroveň rýchlosti",
   "shareFlappyTwitter": "Pozrite sa na Flappy hru, ktorú som urobil/a. Napísal/a som to sám s pomocou @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "Zdieľaj svoju hru:",
   "soundRandom": "náhodný",
   "soundBounce": "skok",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "Vykonať akcie uvedené nižšie, keď sa Flappy dostane k prekážke.",
   "whenRunButtonClick": "keď začne hra",
   "whenRunButtonClickTooltip": "Vykonať akcie uvedené nižšie, keď hra začne.",
-  "yes": "Áno",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "Áno"
 }

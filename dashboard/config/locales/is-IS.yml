@@ -63,6 +63,9 @@
   puzzle: "Þraut"
   trophies: bikarar
   courses: Námskeið
+  courses_page:
+    title_student: Lærðu í Kóðastúdíóinu
+    title_teacher: Teach with Code Studio
   unplugged_activity: Verkefni án tölvu
   of: af
   more: MEIRA
@@ -289,7 +292,9 @@
         gamelab: Búa til Leikjasmiðjuverkefni
         weblab: Make a Web Lab (beta) project
       home: Forsíða
+      my_dashboard: My Dashboard
       courses: Námskeið
+      course_catalog: Course Catalog
       project_gallery: Verkefnagallerí
       sections: Hópar
       help_support: Aðstoð og þjónusta

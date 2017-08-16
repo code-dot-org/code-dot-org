@@ -98,6 +98,7 @@
   "setSpeed": "تعيين السرعة",
   "setSpeedTooltip": "تعيين سرعة المستوى",
   "shareFlappyTwitter": "هل تريد تجربة لعبة فلابي التي قمت بتصميمها؟ لقد كتبتها بنفسي باستخدام @codeorg",
+  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)",
   "shareGame": "شارك لعبتك:",
   "soundRandom": "عشوائي",
   "soundBounce": "ارتداد",
@@ -128,6 +129,5 @@
   "whenEnterObstacleTooltip": "تنفيذ الإجراءات أدناه عندما يدخل فلابي عقبة.",
   "whenRunButtonClick": "عند بدء تشغيل اللعبة",
   "whenRunButtonClickTooltip": "تنفيذ الإجراءات أدناه عند بدء تشغيل اللعبة.",
-  "yes": "نعم",
-  "shareFlappyTwitterDonor": "Check out the Flappy game I made. (Thanks {donor} for supporting @codeorg)"
+  "yes": "نعم"
 }

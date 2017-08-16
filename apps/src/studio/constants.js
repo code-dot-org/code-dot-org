@@ -418,6 +418,7 @@ export const BEHAVIOR_FLEE = 'flee';
 export const BEHAVIOR_STOP = 'none';
 export const BEHAVIOR_WANDER = 'roam';
 export const BEHAVIOR_WATCH_ACTOR = 'watchActor';
+export const BEHAVIOR_GRID_ALIGNED = 'grid';
 
 // Take the screenshot almost immediately, hopefully catching the
 // title screen and any characters in their initial positions.

@@ -2,7 +2,7 @@ import React from 'react';
 import { assert, expect } from 'chai';
 import { shallow } from 'enzyme';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import { courses, studentTopCourse, sections } from './homepagesTestData';
+import { courses, topCourse, sections } from './homepagesTestData';
 
 describe('StudentHomepage', () => {
 
@@ -10,7 +10,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(
       <StudentHomepage
         courses={[]}
-        studentTopCourse={studentTopCourse}
+        topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
@@ -28,7 +28,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(
       <StudentHomepage
         courses={[]}
-        studentTopCourse={studentTopCourse}
+        topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
@@ -42,7 +42,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(
       <StudentHomepage
         courses={courses}
-        studentTopCourse={studentTopCourse}
+        topCourse={topCourse}
         sections={[]}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
@@ -52,7 +52,7 @@ describe('StudentHomepage', () => {
     const recentCourses = wrapper.find('RecentCourses');
     assert.deepEqual(recentCourses.props(), {
       courses: courses,
-      studentTopCourse: studentTopCourse,
+      topCourse: topCourse,
       isTeacher: false,
       isRtl: false,
     });
@@ -62,7 +62,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(
       <StudentHomepage
         courses={courses}
-        studentTopCourse={studentTopCourse}
+        topCourse={topCourse}
         sections={sections}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
@@ -76,7 +76,7 @@ describe('StudentHomepage', () => {
     const wrapper = shallow(
       <StudentHomepage
         courses={courses}
-        studentTopCourse={studentTopCourse}
+        topCourse={topCourse}
         sections={sections}
         codeOrgUrlPrefix="http://localhost:3000/"
         isRtl={false}
