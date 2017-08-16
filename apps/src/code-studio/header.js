@@ -240,9 +240,9 @@ function remixProject() {
     // page or a script level. In these cases, copy will create a new project
     // for us.
     var newName = "Remix: " + (dashboard.project.getCurrentName() || appOptions.level.projectTemplateLevelName || "My Project");
-    dashboard.project.copy(newName, {shouldNavigate: true}).then(() => {
-      $(".project_name").text(newName);
-    });
+    dashboard.project.copy(newName, {shouldNavigate: true})
+      .then(() => $(".project_name").text(newName))
+      .catch(err => console.log(err));
   }
 }
 
