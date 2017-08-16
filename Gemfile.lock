@@ -620,6 +620,8 @@ GEM
       websocket (~> 1.0)
     sequel (4.45.0)
     sexp_processor (4.7.0)
+    shortener (0.5.5)
+      rails (>= 3.0.7)
     shotgun (0.9.1)
       rack (>= 1.0)
     signet (0.7.3)
@@ -840,6 +842,7 @@ DEPENDENCIES
   seamless_database_pool!
   selenium-webdriver (~> 3.0.3)
   sequel (~> 4.30)
+  shortener
   shotgun
   simplecov (~> 0.9)
   sinatra (~> 2.0.0.beta2)
@@ -864,4 +867,4 @@ DEPENDENCIES
   youtube-dl.rb
 
 BUNDLED WITH
-   1.14.6
+   1.15.3
