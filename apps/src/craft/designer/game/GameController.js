@@ -1275,6 +1275,10 @@ class GameController {
   }
 
   setPlayerActionDelayByQueueLength() {
+    if (!this.levelModel.usePlayer) {
+      return;
+    }
+
     let START_SPEED_UP = 10;
     let END_SPEED_UP = 20;
 

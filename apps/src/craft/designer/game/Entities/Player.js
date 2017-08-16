@@ -18,8 +18,11 @@ export default class Player extends BaseEntity {
       this.moveDelayMax = 200;
     }
   }
+
+  // "Events" levels allow the player to move around with the arrow keys, and
+  // perform actions with the space bar.
   updateMovement() {
-    if (!this.controller.attemptRunning) {
+    if (!this.controller.attemptRunning || !this.controller.levelData.isEventLevel) {
       return;
     }
     const queueIsEmpty = this.queue.isFinished() || !this.queue.isStarted();
