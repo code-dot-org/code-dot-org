@@ -25,27 +25,27 @@ class LevelSourceTest < ActiveSupport::TestCase
     assert_equal ['Data is invalid'], level_source.errors.full_messages
   end
 
-  test 'deobfuscate reverses obfuscate for valid user' do
-    obfuscated = @level_source.obfuscate_level_source_id(@user.id)
-    deobfuscateed = LevelSource.deobfuscate_level_source_id(obfuscated)
-    assert_equal @level_source.id, deobfuscateed
+  test 'decrypt reverses encrypt for valid user' do
+    encrypted = @level_source.encrypt_level_source_id(@user.id)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted)
+    assert_equal @level_source.id, decrypted
   end
 
-  test 'deobfuscate returns nil for non-valid user' do
-    obfuscated = @level_source.obfuscate_level_source_id(User.last.id + 1)
-    deobfuscateed = LevelSource.deobfuscate_level_source_id(obfuscated)
-    assert_nil deobfuscateed
+  test 'decrypt returns nil for non-valid user' do
+    encrypted = @level_source.encrypt_level_source_id(User.last.id + 1)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted)
+    assert_nil decrypted
   end
 
-  test 'deobfuscate reverses obfuscate for nil user' do
-    obfuscated = @level_source.obfuscate_level_source_id(nil)
-    deobfuscateed = LevelSource.deobfuscate_level_source_id(obfuscated)
-    assert_equal @level_source.id, deobfuscateed
+  test 'decrypt reverses encrypt for nil user' do
+    encrypted = @level_source.encrypt_level_source_id(nil)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted)
+    assert_equal @level_source.id, decrypted
   end
 
-  test 'deobfuscate reverses obfuscate always if ignore_missing_user is set' do
-    obfuscated = @level_source.obfuscate_level_source_id(User.last.id + 1)
-    deobfuscateed = LevelSource.deobfuscate_level_source_id(obfuscated, ignore_missing_user: true)
-    assert_equal @level_source.id, deobfuscateed
+  test 'decrypt reverses encrypt always if ignore_missing_user is set' do
+    encrypted = @level_source.encrypt_level_source_id(User.last.id + 1)
+    decrypted = LevelSource.decrypt_level_source_id(encrypted, ignore_missing_user: true)
+    assert_equal @level_source.id, decrypted
   end
 end
