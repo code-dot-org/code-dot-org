@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       description: "Top fail: No turn degrees specified",
-      timeout: 9000,
+      timeout: 15000,
       expected: {
         result: false,
         testResult: TestResults.QUESTION_MARKS_IN_NUMBER_FIELD

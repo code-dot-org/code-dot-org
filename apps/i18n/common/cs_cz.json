@@ -680,6 +680,7 @@
   "withoutHints": "Without using any hints!",
   "workspaceHeaderShort": "Pracovní prostor: ",
   "yes": "Ano",
+  "addStudents": "Add students",
   "loginTypeSyncButton": "Sync students from {providerName}",
   "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
   "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",

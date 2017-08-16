@@ -680,6 +680,7 @@
   "withoutHints": "Sem usar nenhuma dica!",
   "workspaceHeaderShort": "Área de trabalho: ",
   "yes": "Sim",
+  "addStudents": "Add students",
   "loginTypeSyncButton": "Sync students from {providerName}",
   "loginTypeSyncButton_failure": "An error occurred. Click here to try again.",
   "loginTypeSyncButton_inProgress": "Connecting to {providerName}...",

@@ -225,6 +225,24 @@ describe('SectionRow', () => {
         const link = wrapper.find('td').at(3).find('a').first();
         assert.equal(link.prop('href'), pegasus('/teacher-dashboard#/sections/11/manage'));
       });
+
+      it('says "Add students" when there are zero students', () => {
+        const wrapper = shallow(
+          <SectionRow {...defaultProps} sectionId={12}/>
+        );
+
+        const col = wrapper.find('td').at(3);
+        assert.equal(col.text(), "Add students");
+      });
+
+      it('gives the number of students in the section when there are one or more students', () => {
+        const wrapper = shallow(
+          <SectionRow {...defaultProps} sectionId={11}/>
+        );
+
+        const col = wrapper.find('td').at(3);
+        assert.equal(col.text(), "10");
+      });
     });
   });
 
