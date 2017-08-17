@@ -139,6 +139,14 @@ namespace :circle do
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
+
+  task :recompile_assets do
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.system_stream_output 'echo "// EDIT FILE TO REBUILD IT" >> app/assets/javascripts/application.js.erb'
+      RakeUtils.rake 'assets:clean'
+      RakeUtils.rake 'assets:precompile'
+    end
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run

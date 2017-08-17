@@ -105,8 +105,9 @@ test:
   override:
     - bundle exec rake lint:javascript:
         timeout: 7200
-    - bundle exec rake circle:run_tests:
-        timeout: 7200
+# DO NOT MERGE
+#    - bundle exec rake circle:run_tests:
+#        timeout: 7200
     # Apply these settings late so they don't mess up unit tests
     - |
         echo "
@@ -118,6 +119,8 @@ test:
         dashboard_port: 3000
         pegasus_port: 3000
         " >> locals.yml
+    # Recompile assets to get the override urls configured above
+    - bundle exec rake circle:recompile_assets
     - bundle exec rake circle:seed_ui_test:
         timeout: 1000
     - bundle exec rake circle:run_ui_tests:
