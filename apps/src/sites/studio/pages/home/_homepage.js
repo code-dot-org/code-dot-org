@@ -118,7 +118,6 @@ function showHomepage() {
             ]}
             courses={homepageData.courses}
             topCourse={homepageData.topCourse}
-            sections={homepageData.sections}
             isRtl={isRtl}
             queryStringOpen={query['open']}
           />
