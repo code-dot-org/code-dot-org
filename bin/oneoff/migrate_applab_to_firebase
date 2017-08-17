@@ -115,7 +115,8 @@ def fetch_applab_channels
   # definition do not need to be migrated. The check for whether each project is deleted or
   # already migrated is done later against the real db.
   PEGASUS_REPORTING_DB_READONLY[:storage_apps].
-    where(project_type: ['applab', nil]).
+    # Must temporarily change 'applab' to nil here to catch NULL project types.
+    where(project_type: 'applab').
     where(state: 'active').
     # the "level" JSON field in the :value column could be any of:
     # "/p/applab", "/projects/applab", "https://studio.code.org/projects/applab"
