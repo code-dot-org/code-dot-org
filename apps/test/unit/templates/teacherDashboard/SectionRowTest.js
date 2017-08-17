@@ -6,7 +6,6 @@ import {
   UnconnectedSectionRow as SectionRow,
   EditOrDelete,
   ConfirmDelete,
-  ConfirmSave
 } from '@cdo/apps/templates/teacherDashboard/SectionRow';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -38,12 +37,10 @@ const sections = {
     code: "G-1234567",
   }
 };
-const validGrades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "Other"];
 
 const defaultProps = {
   sectionId: 11,
   lightRow: true,
-  validGrades,
   validAssignments: {
     '29_null': {
       id: 29,
@@ -70,9 +67,7 @@ const defaultProps = {
       path: "//localhost-studio.code.org:3000/s/csd1"
     },
   },
-  primaryAssignmentIds: [],
   sections,
-  updateSection: () => {},
   removeSection: () => {},
 };
 
@@ -80,17 +75,6 @@ describe('SectionRow', () => {
   throwOnConsoleWarnings();
 
   describe('name column', () => {
-    it('has an input when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(0);
-
-      assert.equal(col.find('input').length, 1);
-      assert.equal(col.find('input').props().defaultValue, 'my_section');
-    });
-
     it('has a link to the section', () => {
       const wrapper = shallow(
         <SectionRow
@@ -106,31 +90,19 @@ describe('SectionRow', () => {
   describe('grade column', () => {
     const columnIndex = 1;
 
-    it('has text when not editing', () => {
+    it('has grade text', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
       );
       const col = wrapper.find('td').at(columnIndex);
       assert.equal(col.text(), '3');
     });
-
-    it('has a dropdown when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(columnIndex);
-
-      assert.equal(col.find('select').length, 1);
-      assert.equal(col.find('select').props().defaultValue, '3');
-      assert.equal(col.find('option').length, validGrades.length + 1);
-    });
   });
 
   describe('course column', () => {
     const columnIndex = 2;
 
-    it('has a link when not editing', () => {
+    it('has a link', () => {
       const wrapper = shallow(
         <SectionRow {...defaultProps}/>
       );
@@ -140,7 +112,7 @@ describe('SectionRow', () => {
       assert.equal(col.find('a').text(), 'CS Discoveries');
     });
 
-    it('has links to both primary and secondary assignments when not editing', () => {
+    it('has links to both primary and secondary assignments', () => {
       const wrapper = shallow(
         <SectionRow
           {...defaultProps}
@@ -151,16 +123,6 @@ describe('SectionRow', () => {
       assert.equal(col.find('a').length, 2);
       assert.equal(col.find('a').at(0).props().href, '//localhost-studio.code.org:3000/courses/csd');
       assert.equal(col.find('a').at(1).props().href, '//localhost-studio.code.org:3000/s/csd1');
-    });
-
-    it('has an AssignmentSelector when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(columnIndex);
-
-      assert.equal(col.find('AssignmentSelector').length, 1);
     });
   });
 
@@ -217,15 +179,6 @@ describe('SectionRow', () => {
       assert.include(div.text(), 'None');
       assert.equal(div.prop('data-tip'), 'This section is managed by google_classroom. Add students there, then re-sync this section.');
     });
-
-    it('is empty when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(columnIndex);
-      assert.equal(col.text(), '');
-    });
   });
 
   describe('buttons column', () => {
@@ -268,32 +221,6 @@ describe('SectionRow', () => {
 
         assert.equal(wrapper.find('Button').length, 1);
         assert.equal(wrapper.find('Button').at(0).props().text, 'Edit');
-      });
-    });
-
-    it('shows ConfirmSave when editing', () => {
-      const wrapper = shallow(
-        <SectionRow {...defaultProps}/>
-      );
-      wrapper.setState({editing: true});
-      const col = wrapper.find('td').at(columnIndex);
-      assert.equal(col.children().length, 2);
-      assert.equal(col.children().at(0).name(), 'ConfirmSave');
-      assert.equal(col.children().at(1).name(), 'PrintCertificates');
-    });
-
-    describe('ConfirmSave', () => {
-      it('has two buttons', () => {
-        const wrapper = shallow(
-          <ConfirmSave
-            onClickSave={() => {}}
-            onCancel={() => {}}
-          />
-        );
-
-        assert.equal(wrapper.find('Button').length, 2);
-        assert.equal(wrapper.find('Button').at(0).props().text, 'Save');
-        assert.equal(wrapper.find('Button').at(1).props().text, 'Cancel');
       });
     });
 
