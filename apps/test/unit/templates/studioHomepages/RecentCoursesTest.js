@@ -97,38 +97,42 @@ describe('RecentCourses', () => {
         >
           <TopCourse
             isRtl={false}
-          >
-            <div key={0}>
-              <CourseCard
-                title={courses[0].title}
-                description={courses[0].description}
-                link={courses[0].link}
-                isRtl={false}
-              />
-            </div>
-            <div key={1}>
-              <CourseCard
-                title={courses[1].title}
-                description={courses[1].description}
-                link={courses[1].link}
-                isRtl={false}
-              />
-            </div>
-            <div>
-              <Notification
-                type={Notification.NotificationType.course}
-                notice="Find a course"
-                details="Try new courses to add them to your homepage."
-                buttonText="Find a course"
-                buttonLink="/courses"
-                dismissible={false}
-                isRtl={false}
-              />
-            </div>
-          </ContentContainer>
-        </div>
-      );
-    });
+            assignableName={topCourse.assignableName}
+            lessonName={topCourse.lessonName}
+            linkToOverview={topCourse.linkToOverview}
+            linkToLesson={topCourse.linkToLesson}
+          />
+          <div key={0}>
+            <CourseCard
+              title={courses[0].title}
+              description={courses[0].description}
+              link={courses[0].link}
+              isRtl={false}
+            />
+          </div>
+          <div key={1}>
+            <CourseCard
+              title={courses[1].title}
+              description={courses[1].description}
+              link={courses[1].link}
+              isRtl={false}
+            />
+          </div>
+          <div>
+            <Notification
+              type={Notification.NotificationType.course}
+              notice="Find a course"
+              details="Try new courses to add them to your homepage."
+              buttonText="Find a course"
+              buttonLink="/courses"
+              dismissible={false}
+              isRtl={false}
+            />
+          </div>
+        </ContentContainer>
+      </div>
+    );
+  });
 
   it('shows TopCourse, 4 CourseCards and a SeeMoreCourses component when there are more than 4 courses', () => {
     const wrapper = shallow(
@@ -187,41 +191,15 @@ describe('RecentCourses', () => {
           <SeeMoreCourses
             courses={moreCourses.slice(4)}
             isRtl={false}
-          >
-            <div key={0}>
-              <CourseCard
-                title={moreCourses[0].title}
-                description={moreCourses[0].description}
-                link={moreCourses[0].link}
-                isRtl={false}
-              />
-            </div>
-            <div key={1}>
-              <CourseCard
-                title={moreCourses[1].title}
-                description={moreCourses[1].description}
-                link={moreCourses[1].link}
-                isRtl={false}
-              />
-            </div>
-            <div key={2}>
-              <CourseCard
-                title={moreCourses[2].title}
-                description={moreCourses[2].description}
-                link={moreCourses[2].link}
-                isRtl={false}
-              />
-            </div>
-            <div key={3}>
-              <CourseCard
-                title={moreCourses[3].title}
-                description={moreCourses[3].description}
-                link={moreCourses[3].link}
-                isRtl={false}
-              />
-            </div>
-            <SeeMoreCourses
-              courses={moreCourses.slice(4)}
+          />
+          <div>
+            <Notification
+              type={Notification.NotificationType.course}
+              notice="Find a course"
+              details="Try new courses to add them to your homepage."
+              buttonText="Find a course"
+              buttonLink="/courses"
+              dismissible={false}
               isRtl={false}
             />
           </div>
