@@ -300,8 +300,9 @@ let listenedTables = [];
  * - for 'update' events, returns the updated record
  * - for 'delete' events, returns a record containing the id of the deleted record
  * @param {string} tableName Table to listen to.
- * @param {function (Object, RecordListener.EventType)} onRecord Callback to call when
- * a change occurs with the record object (described above) and event type.
+ * @param {function (Object, string)} onRecord Callback to call when
+ * a change occurs with the record object (described above) and event type:
+ * 'create', 'update' or 'delete'.
  * @param {function (string, number)} onError Callback to call with an error to show to the user and
  *   http status code.
  * @param {boolean} includeAll Optional Whether to include child_added events for records
