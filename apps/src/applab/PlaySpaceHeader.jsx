@@ -16,7 +16,6 @@ var PlaySpaceHeader = React.createClass({
     hasDesignMode: React.PropTypes.bool.isRequired,
     isEditingProject: React.PropTypes.bool.isRequired,
     isShareView: React.PropTypes.bool.isRequired,
-    isViewDataButtonHidden: React.PropTypes.bool.isRequired,
     interfaceMode: React.PropTypes.oneOf([
       ApplabInterfaceMode.CODE,
       ApplabInterfaceMode.DESIGN,
@@ -85,7 +84,6 @@ export default connect(function propsFromStore(state) {
     hasDataMode: state.pageConstants.hasDataMode,
     hasDesignMode: state.pageConstants.hasDesignMode,
     isShareView: state.pageConstants.isShareView,
-    isViewDataButtonHidden: state.pageConstants.isViewDataButtonHidden,
     interfaceMode: state.interfaceMode,
     playspacePhoneFrame: state.pageConstants.playspacePhoneFrame
   };
