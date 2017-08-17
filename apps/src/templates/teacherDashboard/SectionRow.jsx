@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
-import _ from 'lodash';
 import ReactTooltip from 'react-tooltip';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -14,7 +13,6 @@ import {
   updateSection,
   removeSection,
 } from './teacherSectionsRedux';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {styles as tableStyles} from '@cdo/apps/templates/studioHomepages/SectionsTable';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
@@ -149,9 +147,6 @@ class SectionRow extends Component {
     handleEdit: PropTypes.func,
 
     // redux provided
-    validLoginTypes: PropTypes.arrayOf(
-      PropTypes.oneOf(_.values(SectionLoginType))
-    ).isRequired,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
     primaryAssignmentIds: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -401,7 +396,6 @@ class SectionRow extends Component {
 export const UnconnectedSectionRow = SectionRow;
 
 export default connect(state => ({
-  validLoginTypes: state.teacherSections.validLoginTypes,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   primaryAssignmentIds: state.teacherSections.primaryAssignmentIds,

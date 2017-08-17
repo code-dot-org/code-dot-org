@@ -6,7 +6,6 @@ import reducer, {
   PENDING_NEW_SECTION_ID,
   __testInterface__,
   setOAuthProvider,
-  setValidLoginTypes,
   setValidGrades,
   setValidAssignments,
   setSections,
@@ -183,14 +182,6 @@ describe('teacherSectionsRedux', () => {
       expect(oauthProvider(getState())).to.equal('clever');
       store.dispatch(setOAuthProvider('google_classroom'));
       expect(oauthProvider(getState())).to.equal('google_classroom');
-    });
-  });
-
-  describe('setValidLoginTypes', () => {
-    it('sets a list of valid login types', () => {
-      const action = setValidLoginTypes(['email', 'password', 'picture']);
-      const nextState = reducer(initialState, action);
-      assert.deepEqual(nextState.validLoginTypes, ['email', 'password', 'picture']);
     });
   });
 
