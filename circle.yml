@@ -69,6 +69,10 @@ dependencies:
         dashboard_enable_pegasus: true
         dashboard_workers: 5
         skip_seed_all: true
+        override_dashboard: \"localhost-studio.code.org\"
+        override_pegasus: \"localhost.code.org\"
+        dashboard_port: 3000
+        pegasus_port: 3000
         " >> locals.yml
     - yarn version -V
     # For install, increase default 10 minute timeout to 16 minutes (960s)
@@ -113,10 +117,6 @@ test:
         use_dynamo_tables: false
         use_dynamo_properties: false
         no_https_store: true
-        override_dashboard: \"localhost-studio.code.org\"
-        override_pegasus: \"localhost.code.org\"
-        dashboard_port: 3000
-        pegasus_port: 3000
         " >> locals.yml
     # Recompile assets to get the override urls configured above
     - bundle exec rake circle:recompile_assets
