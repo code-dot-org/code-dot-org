@@ -9,7 +9,6 @@ import reducer, {
   setValidGrades,
   setValidAssignments,
   setSections,
-  updateSection,
   removeSection,
   beginEditingNewSection,
   beginEditingSection,
@@ -36,6 +35,7 @@ import reducer, {
 import { OAuthSectionTypes } from '@cdo/apps/templates/teacherDashboard/shapes';
 
 const {
+  UPDATE_SECTION,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
 } = __testInterface__;
@@ -293,79 +293,6 @@ describe('teacherSectionsRedux', () => {
       const finalState = reducer(state, action);
       assert.deepEqual(finalState.sectionIds, [308]);
       assert.deepEqual(Object.keys(finalState.sections), ['308']);
-    });
-  });
-
-  describe('updateSection', () => {
-    // create a state that has our sections set, and valid courses/scripts
-    const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
-    const stateWithSections = reducer(stateWithAssigns, setSections(sections));
-
-    const updatedSection = {
-      ...sections[0],
-      // change login type from picture to word
-      login_type: 'word'
-    };
-
-    const newServerSection = {
-      id: 21,
-      location: "/v2/sections/21",
-      name: "brent_section",
-      login_type: "picture",
-      grade: "2",
-      code: "ABCDEF",
-      stage_extras: false,
-      pairing_allowed: true,
-      script: null,
-      course_id: 29,
-      studentCount: 10,
-    };
-
-    it('does not change our list of section ids when updating a persisted section', () => {
-      const action = updateSection(sections[0].id, updatedSection);
-      const state = reducer(stateWithSections, action);
-      assert.strictEqual(state.sectionIds, stateWithSections.sectionIds);
-    });
-
-    it('modifies the given section id', () => {
-      const sectionId = sections[0].id;
-      const action = updateSection(sectionId, updatedSection);
-      const state = reducer(stateWithSections, action);
-
-      assert.strictEqual(stateWithSections.sections[sectionId].loginType, 'picture');
-      assert.strictEqual(state.sections[sectionId].loginType, 'word');
-
-      // Other fields should remain unchanged
-      Object.keys(stateWithSections.sections[sectionId]).forEach(field => {
-        if (field !== 'loginType') {
-          assert.strictEqual(state.sections[sectionId][field],
-            stateWithSections.sections[sectionId][field]);
-        }
-      });
-    });
-
-    it('does not modify other section ids', () => {
-      const action = updateSection(sections[0].id, updatedSection);
-      const state = reducer(stateWithSections, action);
-      const otherSectionId = sections[1].id;
-
-      assert.strictEqual(state.sections[otherSectionId],
-        stateWithSections.sections[otherSectionId]);
-    });
-
-    it(`adds the sectionId of a non-persisted section if it wasn't in the list`, () => {
-      assert.deepEqual(stateWithSections.sectionIds, [11, 12 ,307]);
-
-      const action = updateSection(-1, newServerSection);
-      const state = reducer(stateWithSections, action);
-      assert.deepEqual(state.sectionIds, [21, 11, 12 ,307]);
-    });
-
-    it(`adds the section of a non-persisted section if it wasn't in the list`, () => {
-      const action = updateSection(-1, newServerSection);
-      const state = reducer(stateWithSections, action);
-      assert.strictEqual(state.sections[-1], undefined);
-      assert.strictEqual(state.sections[21].id, 21);
     });
   });
 
@@ -843,11 +770,15 @@ describe('teacherSectionsRedux', () => {
   describe('assignmentNames/assignmentPaths', () => {
     const stateWithAssigns = reducer(initialState, setValidAssignments(validCourses, validScripts));
     const stateWithSections = reducer(stateWithAssigns, setSections(sections));
-    const stateWithUnassignedSection = reducer(stateWithSections, updateSection('12', {
-      ...stateWithSections.sections['12'],
-      courseId: null,
-      scriptId: null,
-    }));
+    const stateWithUnassignedSection = reducer(stateWithSections, {
+      type: UPDATE_SECTION,
+      sectionId: '12',
+      serverSection: {
+        ...sections[1],
+        course_id: null,
+        script: null,
+      }
+    });
 
     const assignedSection = stateWithUnassignedSection.sections["11"];
     const unassignedSection = stateWithUnassignedSection.sections["12"];

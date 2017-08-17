@@ -73,6 +73,7 @@ const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 
 /** @const A few action keys exposed for unit test setup */
 export const __testInterface__ = {
+  UPDATE_SECTION,
   IMPORT_ROSTER_FLOW_BEGIN,
   IMPORT_ROSTER_FLOW_LIST_LOADED,
 };
@@ -95,11 +96,6 @@ export const setValidAssignments = (validCourses, validScripts) => ({
  * @param reset
  */
 export const setSections = (sections, reset = false) => ({ type: SET_SECTIONS, sections, reset });
-export const updateSection = (sectionId, serverSection) => ({
-  type: UPDATE_SECTION,
-  sectionId,
-  serverSection
-});
 export const removeSection = sectionId => ({ type: REMOVE_SECTION, sectionId });
 
 /**
@@ -140,7 +136,11 @@ export const finishEditingSection = () => (dispatch, getState) => {
       contentType: 'application/json;charset=UTF-8',
       data: JSON.stringify(serverSectionFromSection(section)),
     }).done(result => {
-      dispatch(updateSection(section.id, result));
+      dispatch({
+        type: UPDATE_SECTION,
+        sectionId: section.id,
+        serverSection: result,
+      });
       dispatch({type: EDIT_SECTION_SUCCESS});
       resolve();
     }).fail((jqXhr, status) => {
