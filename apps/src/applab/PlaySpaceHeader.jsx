@@ -8,7 +8,6 @@ import {actions} from './redux/applab';
 import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
 import ToggleGroup from '../templates/ToggleGroup';
-import ViewDataButton from './ViewDataButton';
 
 var PlaySpaceHeader = React.createClass({
   propTypes: {
@@ -51,9 +50,7 @@ var PlaySpaceHeader = React.createClass({
       );
     }
 
-    if (this.props.interfaceMode === ApplabInterfaceMode.CODE && !this.shouldHideViewDataButton()) {
-      rightSide = <ViewDataButton onClick={this.handleViewData} />;
-    } else if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
+    if (this.props.interfaceMode === ApplabInterfaceMode.DESIGN &&
         !this.props.playspacePhoneFrame) {
       rightSide = (
         <ScreenSelector
@@ -80,14 +77,6 @@ var PlaySpaceHeader = React.createClass({
   shouldHideToggle: function () {
     return this.props.isShareView || !this.props.hasDesignMode;
   },
-
-  shouldHideViewDataButton: function () {
-    return this.props.isViewDataButtonHidden ||
-        !this.props.hasDesignMode ||
-        this.props.isShareView ||
-        !this.props.isEditingProject ||
-        this.props.hasDataMode;
-  }
 });
 
 export default connect(function propsFromStore(state) {
