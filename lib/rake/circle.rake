@@ -139,6 +139,18 @@ namespace :circle do
       RakeUtils.rake_stream_output 'seed:ui_test'
     end
   end
+
+  task :recompile_assets do
+    if CircleUtils.tagged?(SKIP_UI_TESTS_TAG)
+      ChatClient.log "Commit message: '#{CircleUtils.circle_commit_message}' contains [#{SKIP_UI_TESTS_TAG}], skipping UI tests for this run."
+      next
+    end
+
+    Dir.chdir(dashboard_dir) do
+      RakeUtils.rake 'assets:clean'
+      RakeUtils.rake 'assets:precompile'
+    end
+  end
 end
 
 # @return [Array<String>] names of browser configurations for this test run
