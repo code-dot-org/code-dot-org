@@ -6,13 +6,12 @@ export default storybook => {
     .storiesOf('ResourceCard', module)
     .addStoryTable([
       {
-        name: 'basic resource card',
-        description: `This is an example resource card.`,
+        name: 'tool card',
+        description: `This is an example tool card.`,
         story: () => (
           <ResourceCard
             title= "Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
             isRtl={false}
@@ -20,13 +19,12 @@ export default storybook => {
         )
       },
       {
-        name: 'basic resource card - RTL',
-        description: `This is an example resource card with RTL styling.`,
+        name: 'tool card - RTL',
+        description: `This is an example tool card with RTL styling.`,
         story: () => (
           <ResourceCard
             title= "Teacher Community"
             description="Ask questions about curriculum, share ideas from your lessons, and get help from other teachers"
-            image="teacher-community"
             buttonText= "Connect Today"
             link= "link to teacher community"
             isRtl={true}

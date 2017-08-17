@@ -3,40 +3,38 @@ import Radium from 'radium';
 import Button from '../Button';
 import color from "../../util/color";
 
+// If you want to include an image, you're probably looking for a ImageResourceCard.
+
 const styles = {
   card: {
-    overflow: 'hidden',
-    position: 'relative',
-    height: 200,
-    width: 473,
-    float: 'left',
-    marginBottom: 20,
+    height: 250,
+    width: 310,
     borderStyle: 'solid',
     borderWidth: 1,
     borderColor: color.border_gray,
     background: color.teal
   },
-  image: {
-    position: 'absolute',
-  },
-  textbox: {
-    position: 'absolute',
-    width: 275,
-    padding: 20
-  },
-  title: {
-    fontSize: 18,
+  text: {
+    paddingLeft: 25,
+    paddingRight: 25,
     paddingBottom: 10,
     fontFamily:'"Gotham 4r", sans-serif',
     color: color.white,
-    fontWeight: 'bold'
+  },
+  title: {
+    paddingTop: 25,
+    fontSize: 18,
+    fontWeight: 'bold',
+    width: '100%'
   },
   description: {
     fontSize: 14,
     lineHeight: "21px",
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    height: 80
+    height: 130
+  },
+  button: {
+    marginLeft: 20,
+    marginRight: 20,
   },
   ltr: {
     float: 'left',
@@ -52,49 +50,29 @@ class ResourceCard extends Component {
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
     isRtl: PropTypes.bool.isRequired
   };
 
   render() {
 
-    const { title, description, buttonText, link, image, isRtl } = this.props;
+    const { title, description, buttonText, link, isRtl } = this.props;
     const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    const uncoverImage = isRtl ? {marginRight:160} : {marginRight:0};
-
-    const filenameToImgUrl = {
-      "teacher-community": require('@cdo/static/resource_cards/teachercommunity.png'),
-      "guest-speaker": require('@cdo/static/resource_cards/findguestspeaker.png'),
-      "professional-learning": require('@cdo/static/resource_cards/professionallearning.png'),
-      "standards-framework": require('@cdo/static/resource_cards/standardsandframework.png'),
-      "elementary": require('@cdo/static/resource_cards/elementary.png'),
-      "middleschool": require('@cdo/static/resource_cards/middleschool.png'),
-      "highschool": require('@cdo/static/resource_cards/highschool.png'),
-      "hourofcode": require('@cdo/static/resource_cards/hourofcode.png'),
-      "hourofcode2": require('@cdo/static/resource_cards/hourofcode2.png'),
-    };
-    const imgSrc = filenameToImgUrl[image];
 
     return (
       <div style={[styles.card, localeStyle]}>
-        <div style={styles.image}>
-          <img src={imgSrc}/>
+        <div style={[styles.text, styles.title, localeStyle]}>
+          {title}
         </div>
-        <div style={[styles.textbox, localeStyle, uncoverImage]}>
-          <div style={styles.title}>
-            {title}
-          </div>
-          <div style={styles.description}>
-            {description}
-          </div>
-          <br/>
-          <Button
-            href={link}
-            color={Button.ButtonColor.gray}
-            text={buttonText}
-            style={styles.button}
-          />
+        <div style={[styles.text, styles.description, localeStyle]}>
+          {description}
         </div>
+        <br/>
+        <Button
+          href={link}
+          color={Button.ButtonColor.gray}
+          text={buttonText}
+          style={[styles.button]}
+        />
       </div>
     );
   }

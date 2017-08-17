@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react';
 import Radium from 'radium';
 import ContentContainer from '../ContentContainer';
-import ToolCard from './ToolCard';
+import ResourceCard from './ResourceCard';
 import styleConstants from '../../styleConstants';
 import i18n from "@cdo/locale";
 import _ from 'lodash';
@@ -83,7 +83,7 @@ class CourseBlocksTools extends Component {
             >
               {rowCards.map(
                 (card, cardIndex) => (
-                  <ToolCard
+                  <ResourceCard
                     key={cardIndex}
                     title={card.heading}
                     description={card.description}

@@ -1,6 +1,6 @@
 import React from 'react';
 import Radium from 'radium';
-import ResourceCard from './ResourceCard';
+import ImageResourceCard from './ImageResourceCard';
 import ContentContainer from '../ContentContainer';
 import i18n from "@cdo/locale";
 import color from "../../util/color";
@@ -34,7 +34,7 @@ const TeacherResources = React.createClass({
         heading={i18n.resources()}
         isRtl={isRtl}
       >
-        <ResourceCard
+        <ImageResourceCard
           title={i18n.teacherCommunity()}
           description={i18n.teacherCommunityDescription()}
           image="teacher-community"
@@ -43,7 +43,7 @@ const TeacherResources = React.createClass({
           isRtl={isRtl}
         />
         <div style={[styles.spacer, localeStyle]}>.</div>
-        <ResourceCard
+        <ImageResourceCard
           title={i18n.professionalLearning()}
           description={i18n.professionalLearningDescription()}
           image="professional-learning"
@@ -51,7 +51,7 @@ const TeacherResources = React.createClass({
           link="/my-professional-learning"
           isRtl={isRtl}
         />
-        <ResourceCard
+        <ImageResourceCard
           title={i18n.standardsAndFramework()}
           description={i18n.standardsAndFrameworkDescription()}
           image="standards-framework"
@@ -60,7 +60,7 @@ const TeacherResources = React.createClass({
           isRtl={isRtl}
         />
         <div style={[styles.spacer, localeStyle]}>.</div>
-        <ResourceCard
+        <ImageResourceCard
           title={i18n.findGuestSpeaker()}
           description={i18n.findGuestSpeakerDescription()}
           image="guest-speaker"
